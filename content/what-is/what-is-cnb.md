@@ -29,11 +29,11 @@ Cloud Native Buildpacks are an abstract lifecycle, so they are more a definition
 3. **Build**: Create the runnable artifacts from your applications source code
 4. **Export**: Creates the final OCI-compliant image
 
-Let's walk through this in a specific scenario where we have a Spring Boot app that uses Maven. An implementation of the lifecycle would look something like the following:
+Let's walk through this in a couple of specific scenarios, one where we have a Spring Boot app that uses Maven and another scenario where we have an app written in Ruby. An implementation of the lifecycle would look something like the following:
 
-1. It would detect the `pom.xml` file and determine that we need the Java buildpack
-2. If we've ran a build previously with this buildpack, it will reuse those images that contain components such as the base run image or the JDK.
-3. The buildpack will use Maven to build your application
+1. Each buildpacks `detect` script is ran against our codebase. If a `pom.xml` file is found, we determin that we're building a Java app with Maven. If a `Gemfile` is found, we know we need the Ruby buildpack.
+2. If we've ran a build previously with the buildpack, it will reuse those images that contain components such as the base run image, or the JDK in the case of a Java app or the Ruby runtime for a Ruby application.
+3. In case if a Java app, the buildpack will use Maven to build our JAR. In our case of a Ruby application, the buildpack will use Bundler to pull down all of our application dependencies defined in our `Gemfile`.
 4. All of these layers are then put together into a single container image that is ready to be ran how you choose
 
 ## How Can I Use Them?
