@@ -9,7 +9,7 @@ date:   2020-01-29
 
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../what-is/what-is-cnb).
 
-### Before you begin
+### Before you Begin
 
 - Install [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community). The `pack` CLI requires the Docker daemon, so you'll need to have this installed and running locally. 
 
