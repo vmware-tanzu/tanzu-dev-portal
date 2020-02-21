@@ -42,4 +42,4 @@ Let's walk through this in a couple of specific scenarios, one where we have a S
 
 The easiest way to get started with Cloud Native Buildpacks is to [use the `pack` CLI](https://buildpacks.io/docs/app-journey/), an implementation of the Buildpack lifecycle. The `pack` CLI uses nothing but a local Docker daemon to run the Buildpack lifecycle completely locally.
 
-Alternatively, you can [check out `kpack`](https://github.com/pivotal/kpack), a Kubernetes-native container build service. kpack provides an automated way to watch your source code repositories for changes and automatically build and containerize your application. 
+Alternatively, you can [check out `kpack`](https://github.com/pivotal/kpack), a Kubernetes-native container build service. You tell kpack where your code is and which branch to build, and it will build and containerize your application using Cloud Native Buildpacks, all on your Kubernetes cluster.
