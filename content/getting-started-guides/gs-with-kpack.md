@@ -7,21 +7,21 @@ date:   2020-02-10
 
 ### What is `kpack`?
 
-[`kpack`](https://github.com/pivotal/kpack) is a kubernetes native build services that builds container images on kubernetes using [Cloud Native Buildpacks](../what-is/what-is-cnb). It takes source code repositories (like github) and builds the code into a container image, and uploads it to the container registry of your choice.
+[`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on kubernetes using [Cloud Native Buildpacks](../what-is/what-is-cnb). It takes source code repositories (like github) and builds the code into a container image and uploads it to the container registry of your choice.
 
 ### Before you begin
 
-- Have access to a kubernetes cluster. If you don't you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube). 
+- Have access to a kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube). 
 
 - Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with kubernetes before.
 
 - Follow the documentation for [installing `kpack`](https://github.com/pivotal/kpack/blob/master/docs/install.md/) in your kubernetes cluster.
 
-- Optionally [install `stern`](https://github.com/wercker/stern/releases), an tool that makes it easy to tail the logs during builds.
+- Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds.
 
 ### Initial `kpack` Configuration
 
-A couple things you will need before you get started: is have a code repository with compatible code (I'm using Spring Java in this case) and a container registry (I'm using Google GCR).
+A couple of things you will need before you get started: is have a code repository with compatible code (I'm using Spring Java in this case) and a container registry (I'm using Google GCR).
 
 To make sure my kpack environment is all ready after following the install instructions above, I'll run `kubectl describe clusterbuilder default` and the output looks like this:
 
@@ -116,13 +116,13 @@ Status:
 Events:         <none>
 ```
 
-It lists all the available builders that are configured so that means we're ready to get started.
+It lists all the available builders that are configured, so that means you're ready to get started.
 
 ### Using `kpack`
 
 #### Set up Container Registry Secret
 
-First thing we need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. First we'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
+The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. you'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
 
 ```
 apiVersion: v1
@@ -140,15 +140,15 @@ stringData:
     }
 ```
 
-I've redacted the gcp credentials for obvious reasons, but this is the format. If you're using another registry that uses just username/password you would put that here instead. 
+I've redacted the gcp credentials for obvious reasons, but this is the format. If you're using another registry that uses just username/password, you will put that here instead. There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
 
-Also note the annotation of `build.pivotal.io/docker: us.gcr.io`- it tells kpack which registries to use these credentials for. In this case, any image tagged for `us.gcr.io`.
+Also note the annotation of `build.pivotal.io/docker: us.gcr.io`- it tells kpack which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
 
 
 
 #### Set up Container Registry Service Account
 
-Now we need a service account referencing those credentials. The manifest is pretty simple:
+Now you need a service account referencing those credentials. The manifest is pretty simple:
 
 ```
 apiVersion: v1
@@ -161,7 +161,7 @@ secrets:
 
 #### Create an Image Configuration
 
-Now we're all ready to start building images and pushing them to GCR. Let's create a manifest that builds containers off my application code on github:
+Now you're all ready to start building images and pushing them to GCR. Let's create a manifest that builds containers off my application code on github:
 
 ```
 apiVersion: build.pivotal.io/v1alpha1
@@ -180,7 +180,7 @@ spec:
       revision: master
 ```
 
-You can see the github url, and that we're building off master. Also we configured the desired image tag (including the registry), and included the service account and builders we created. Once we apply this manifest, it will begin building.
+You can see the github URL, and that you're building off master. Also, you configured the desired image tag (including the registry) and included the service account and builders you created. Once you apply this manifest, it will begin building.
 
 Running `kubectl get images` you should see the image created but not complete:
 ```
@@ -190,11 +190,11 @@ petclinic-image                 Unknown
 
 #### Watching the Build
 
-If you run a `kubectl get pods` you'll see a pod created (with a series of init containers) to build the image. Since it includes 6 different containers, it's hard to use `kubectl logs` because you have to know what container to specify at what stage. What's way easier is to use the `stern` tool we mentioned at the begining. 
+If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. Since it includes six different containers, it's hard to use `kubectl logs` because you have to know what container to specify at what stage. What's way easier is to use the `stern` tool mentioned at the begining. 
 
-The pod thats created has a name that starts with `image-name-build-` so in our case `petclinic-image-build`. The command to run to see the logs is `stern petclinic-image-build` and you'll see all the logs go buy during the build and upload.
+The pod that is created has a name that starts with `image-name-build-` so in our case, `petclinic-image-build.` The command to run to see the logs is `stern petclinic-image-build,` and you'll see all the logs pass by during the build and upload.
 
-Once it's complete we can check the image again with `kubectl get iamges`:
+Once it's complete you can recheck the image with `kubectl get images`:
 
 ```
 NAME LATESTIMAGE                                                                                                        READY
