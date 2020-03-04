@@ -5,9 +5,6 @@ tags:
 - kpack
 ---
 
-What Are: Cloud Native Buildpacks 
-===
-
 Cloud Native Buildpacks turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 
 
 ## Why Are They Important? 

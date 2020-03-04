@@ -5,8 +5,6 @@ tags:
 - kpack
 ---
 
-## Getting Started with Cloud Native Buildpacks: The `pack` CLI
-
 ### What is `pack`?
 
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../what-is/what-is-cnb).

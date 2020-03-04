@@ -5,8 +5,6 @@ tags:
 - kpack
 ---
 
-## Getting Started with Cloud Native Buildpacks: Using kpack to automate builds"
-
 ### What is `kpack`?
 
 [`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on kubernetes using [Cloud Native Buildpacks](../what-is/what-is-cnb). It takes source code repositories (like github) and builds the code into a container image and uploads it to the container registry of your choice.
