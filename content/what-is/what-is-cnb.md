@@ -12,7 +12,9 @@ Cloud Native Buildpacks turn your code into OCI-compliant containers. They exami
 
 There are two things to consider when discussing the value of Cloud Native Buildpacks: How the container is created, and how the container is maintained.  
 
-If you’ve created a container using Dockerfiles before, you’ve seen the decisions you need to make. You need to decide which base image to base your container on, which version of that image to use, and ensure it has the proper versions of all the dependencies that your application relies on.  After that, you then need to bring in the additional dependencies  and runtimes, build your application, and then finally slim down your container image to ensure it’s as lean and quick as possible. Cloud Native Buildpacks know how to build and containerize your application. If it's a Java app, it will bring in the JVM. If it's a Ruby app, it will bring in the Ruby runtime.
+If you’ve created a container using Dockerfiles before, you’ve seen the decisions you need to make. You need to decide which base image to base your container on, which version of that image to use, and ensure it has the proper versions of all the dependencies that your application relies on.  After that, you then need to bring in the additional dependencies  and runtimes, build your application, and then finally slim down your container image to ensure it’s as lean and quick as possible. 
+
+Cloud Native Buildpacks know how to build and containerize your application. If it's a Java app, it will bring in the JVM. If it's a Ruby app, it will bring in the Ruby runtime.
 
 ![Image Layers](https://buildpacks.io/docs/concepts/operations/build.svg)
 
@@ -31,13 +33,13 @@ Cloud Native Buildpacks are an abstract lifecycle, so they are more a definition
 
 Let's walk through this in a couple of specific scenarios, one where we have a Spring Boot app that uses Maven and another scenario where we have an app written in Ruby. An implementation of the lifecycle would look something like the following:
 
-1. Each buildpacks `detect` script is ran against our codebase. If a `pom.xml` file is found, we determin that we're building a Java app with Maven. If a `Gemfile` is found, we know we need the Ruby buildpack.
-2. If we've ran a build previously with the buildpack, it will reuse those images that contain components such as the base run image, or the JDK in the case of a Java app or the Ruby runtime for a Ruby application.
-3. In case if a Java app, the buildpack will use Maven to build our JAR. In our case of a Ruby application, the buildpack will use Bundler to pull down all of our application dependencies defined in our `Gemfile`.
-4. All of these layers are then put together into a single container image that is ready to be ran how you choose
+1. Each buildpack's `detect` script is run against our codebase. If a `pom.xml` file is found, we determin that we're building a Java app with Maven. If a `Gemfile` is found, we know we need the Ruby buildpack.
+2. If we've run a build previously with the buildpack, it will reuse those images that contain components such as the base run image, or the JDK in the case of a Java app or the Ruby runtime for a Ruby application.
+3. In the case of a Java app, the buildpack will use Maven to build our JAR. In the case of a Ruby application, the buildpack will use Bundler to pull down all of our application dependencies defined in our `Gemfile`.
+4. All of these layers are then put together into a single container image that is ready to be run how you choose
 
 ## How Can I Use Them?
 
 The easiest way to get started with Cloud Native Buildpacks is to [use the `pack` CLI](https://buildpacks.io/docs/app-journey/), an implementation of the Buildpack lifecycle. The `pack` CLI uses nothing but a local Docker daemon to run the Buildpack lifecycle completely locally.
 
-Alternatively, you can [check out `kpack`](https://github.com/pivotal/kpack), a Kubernetes native container build service. Kpack provides an automated way to watch your source code repositories for changes and automatically build and containerize your application.
+Alternatively, you can [check out `kpack`](https://github.com/pivotal/kpack), a Kubernetes-native container build service. You tell kpack where your code is and which branch to build, and it will build and containerize your application using Cloud Native Buildpacks, all on your Kubernetes cluster.
