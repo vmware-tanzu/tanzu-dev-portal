@@ -1,9 +1,9 @@
 ---
 title:  "Getting Started with Cloud Native Buildpacks: The `pack` CLI"
-date:   2020-01-29
+weight: 2
+tags:
+- kpack
 ---
-
-## Getting Started with Cloud Native Buildpacks: The `pack` CLI
 
 ### What is `pack`?
 
