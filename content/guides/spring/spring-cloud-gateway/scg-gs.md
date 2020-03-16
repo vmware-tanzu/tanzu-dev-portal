@@ -40,7 +40,7 @@ Click **Generate** and you'll download a zip file of the generated code.
 
 #### Building Your Gateway
 
-You can configure a basic route by creating a method that takes in a `RouteLocatorBuilder` and returns a `RouteLocator`. Here's an example of `ScgGettingStartedApplication.java` complete with a custom route:
+You can configure a basic route by creating a method that takes in a `RouteLocatorBuilder` and returns a `RouteLocator`. Here's an example of `src/main/java/com/vmware/scgettingstarted/ScgGettingStartedApplication.java/ScgGettingStartedApplication.java` complete with a custom route:
 
 ```java
 package com.vmware.scggettingstarted;
@@ -70,7 +70,15 @@ public class ScgGettingStartedApplication {
 }
 ```
 
-Take note of the `myRoutes` method. This code will create a route that will take any `GET` request, add a header named `Hello` and a value of `World`, then forward your request to http://httpbin.org. So if our originial request is:
+Take note of the `myRoutes` method. This code will create a route that will take any `GET` request, add a header named `Hello` and a value of `World`, then forward your request to http://httpbin.org.
+
+#### Run Your Gateway
+
+We can run this as a normal Spring application:
+
+`./mvnw spring-boot:run`
+
+Once running, we can send a request to our application to ensure it's running at [http://localhost:8080/get](http://localhost:8080/get). Let's say our request looks like the following:
 
 ```
 > GET /get HTTP/1.1
@@ -80,7 +88,7 @@ Take note of the `myRoutes` method. This code will create a route that will take
 > MyHeader: MyValue
 ```
 
-Spring Cloud Gateway will return the following response. Note that the body of the response is from http://httpbin.orb which is providing a breakdown of the request it received:
+We've sent a `GET` request to our application, adding a custom header of `MyHeader` with a value of `MyValue`. Spring Cloud Gateway will return the following response. Note that the body of the response is from http://httpbin.orb which is providing a breakdown of the request it received:
 
 ```
 < HTTP/1.1 200 OK
@@ -108,13 +116,7 @@ Spring Cloud Gateway will return the following response. Note that the body of t
 }
 ```
 
-#### Run Your Gateway
-
-We can run this as a normal Spring application:
-
-`./mvnw spring-boot:run`
-
-Once running, we can send a request to our application to ensure it's running at [http://localhost:8080/get](http://localhost:8080/get)
+Here we can see the response from httpbin.org, including the `MyHeader` that we sent in our request, as well as the `Hello` header that Spring Cloud Gateway added to our request.
 
 #### Keep Learning
 
