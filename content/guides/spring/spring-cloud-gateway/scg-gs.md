@@ -7,7 +7,7 @@ weight: 1001
 
 Spring Cloud Gateway provides a library for building API Gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross cutting concerns such as security, resiliency, and monitoring. For more information, make sure to check out [What is Spring Cloud Gateway?](/guides/spring/spring-cloud-gateway/scg-what-is/).
 
-In this guide, we'll stand up a bare-bones gateway using Spring Cloud Gateway that will do some light request modification. We'll see the basics of Spring Cloud Gateway, which serve as a great foundation for those just starting out.
+In this guide, you'll stand up a bare-bones gateway using Spring Cloud Gateway that will do some light request modification. You'll see the basics of Spring Cloud Gateway, which serve as a great foundation for those just starting out.
 
 ### Before you Begin
 
@@ -20,11 +20,11 @@ Here's what you'll need:
 
 ### Using Spring Cloud Gateway
 
-Let's get started in building our gateway. As mentioned, since Spring Cloud Gateway is a library built for Spring, there's no infrastructure or networking to setup. Instead, this guild will be looking at the code that goes around defining our gateway.
+Let's get started in building your gateway. As mentioned, since Spring Cloud Gateway is a library built for Spring, there's no infrastructure or networking to set up. Instead, this guide will be looking at the code that goes around defining your gateway.
 
 #### Generating a New Spring Application
 
-The easiest way to get started with a new Spring application is at [start.spring.io](https://start.spring.io/). There's a few personal choices here, such as if you'd like to use Maven or Gradle, but for the sake of consistency, here's the settings we've used to generate our project:
+The easiest way to get started with a new Spring application is at [start.spring.io](https://start.spring.io/). There's a few personal choices here, such as if you'd like to use Maven or Gradle, but for the sake of consistency, here's the settings used in this guide:
 
 **Project**: Maven Project  
 **Language**: Java  
@@ -32,7 +32,7 @@ The easiest way to get started with a new Spring application is at [start.spring
 **Project Group**: com.vmware  
 **Project Artifact**: scg-getting-started
 
-Finally, we'll just need one dependency for our application:
+Finally, you'll just need one dependency for our application:
 
 - Gateway
 
@@ -70,15 +70,15 @@ public class ScgGettingStartedApplication {
 }
 ```
 
-Take note of the `myRoutes` method. This code will create a route that will take any `GET` request, add a header named `Hello` and a value of `World`, then forward your request to http://httpbin.org.
+Take note of the `myRoutes` method. This code will create a route that will take any `GET` request, add a header named `Hello` and a value of `World`, then forward your request to httpbin.org.
 
 #### Run Your Gateway
 
-We can run this as a normal Spring application:
+You can run this as a normal Spring Boot application:
 
 `./mvnw spring-boot:run`
 
-Once running, we can send a request to our application to ensure it's running at [http://localhost:8080/get](http://localhost:8080/get). Let's say our request looks like the following:
+Once running, you can send a request to your application to ensure that it's running at [http://localhost:8080/get](http://localhost:8080/get). Say your request looks like the following:
 
 ```
 > GET /get HTTP/1.1
@@ -88,7 +88,7 @@ Once running, we can send a request to our application to ensure it's running at
 > MyHeader: MyValue
 ```
 
-We've sent a `GET` request to our application, adding a custom header of `MyHeader` with a value of `MyValue`. Spring Cloud Gateway will return the following response. Note that the body of the response is from http://httpbin.orb which is providing a breakdown of the request it received:
+You've sent a `GET` request to your application, adding a custom header of `MyHeader` with a value of `MyValue`. Spring Cloud Gateway will return the following response. Note that the body of the response is from httpbin.org which is providing a breakdown of the request that it received:
 
 ```
 < HTTP/1.1 200 OK
@@ -116,8 +116,8 @@ We've sent a `GET` request to our application, adding a custom header of `MyHead
 }
 ```
 
-Here we can see the response from httpbin.org, including the `MyHeader` that we sent in our request, as well as the `Hello` header that Spring Cloud Gateway added to our request.
+Here you can see the response from httpbin.org, including the `MyHeader` header that you sent in your request, as well as the `Hello` header that Spring Cloud Gateway added to our request.
 
 #### Keep Learning
 
-Check out some of the great guides on the Spring website on how we can leverage the great Spring ecosystem to accomplish things like [hiding our backend services](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway) as well as how you can [secure your services using Spring Cloud Security](https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway).
+Check out some of the great guides on the Spring website on how you can leverage the great Spring ecosystem to accomplish things like [hiding our backend services](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway) as well as how you can [secure your services using Spring Cloud Security](https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway).
