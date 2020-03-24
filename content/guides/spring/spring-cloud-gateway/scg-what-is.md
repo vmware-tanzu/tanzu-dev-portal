@@ -9,11 +9,11 @@ Spring Cloud Gateway provides a library for building API Gateways on top of Spri
 
 An API Gateway can help simplify the communication between a client and a service, whether that be between a user's web browser and a server miles away, or between a frontend application and the backend services that it relies on.
 
-Consider the scenario where you have a web application that relies on three backend services. As each of those services are updated, experience instability, or even the network between them becomes unstable, your web application will need to know where all three services are and what to do if those services move or go down.
+Consider the scenario where you have a web application that relies on three backend services. As each of those services are updated, experience instability, or even have the network between them becomes unstable, your web application will need to know where all three services are and what to do if those services move or go down.
 
 An API Gateway allows you to implement the complexity separately from the client, moving that responsibility from user-side to server-side. All the client needs to know is how to talk to the gateway. It doesn't matter if the backend services move, go offline, or become unstable so long as the gateway knows how to handle these situations.
 
-As luck would have it, Spring Cloud Gateway benefits from the entirety of the Spring ecosystem. Even better, the Spring ecosystem has done a lot of work to handle this sort of complexity. Let's look a deeper at how this works and what the Spring ecosystem brings to your gateway.
+As luck would have it, Spring Cloud Gateway benefits from the entirety of the Spring ecosystem. Even better, the Spring ecosystem has done a lot of work to handle this sort of complexity. From security to stability to monitoring, the Spring ecosystem can do a lot for you and your API Gateway.
 
 ## How Does It Work? 
 
