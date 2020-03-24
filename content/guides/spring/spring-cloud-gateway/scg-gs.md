@@ -20,7 +20,7 @@ Here's what you'll need:
 
 ### Using Spring Cloud Gateway
 
-Let's get started in building your gateway. As mentioned, since Spring Cloud Gateway is a library built for Spring, there's no infrastructure or networking to set up. Instead, this guide will be looking at the code that goes around defining your gateway.
+As mentioned, since Spring Cloud Gateway is a library built for Spring. There's no infrastructure to set up and no networking to configure. Instead, this guide will be looking at the code that goes around defining your gateway.
 
 #### Generating a New Spring Application
 
