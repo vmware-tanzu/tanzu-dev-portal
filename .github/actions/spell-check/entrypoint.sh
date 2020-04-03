@@ -16,7 +16,7 @@ fi
 
 cd $GITHUB_WORKSPACE
 echo "--> Install spellchecker"
-npm install markdown-spellcheck
+npm install spellchecker-cli retext-syntax-urls retext-indefinite-article retext-repeated-words
 
 echo "--> spellcheck markdown files"
-./node_modules/markdown-spellcheck/bin/mdspell -r -n -a --en-us 'content/**/*.md'
+./node_modules/spellchecker-cli/bin/spellchecker -f 'content/**/*.md' -d custom_dict.txt --plugins sspell yntax-urls indefinite-article repeated-words
