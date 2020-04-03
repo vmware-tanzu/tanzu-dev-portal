@@ -5,11 +5,12 @@ on:
       - master
 
 jobs:
-  build:
+  spellcheck:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
+        name: Checkout
         with:
           fetch-depth: 1
       - uses: ./.github/actions/spell-check
