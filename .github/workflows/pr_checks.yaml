@@ -1,4 +1,4 @@
-name: Check and Deploy to Staging
+name: Spell Check
 on:
   push:
     branches-ignore:
