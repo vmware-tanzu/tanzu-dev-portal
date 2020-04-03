@@ -32,7 +32,7 @@ Cloud Native Buildpacks are an abstract lifecycle, so they are more a definition
 
 Let's walk through this in a couple of specific scenarios, one where we have a Spring Boot app that uses Maven and another scenario where we have an app written in Ruby. An implementation of the lifecycle would look something like the following:
 
-1. Each buildpack's `detect` script is run against our codebase. If a `pom.xml` file is found, we determin that we're building a Java app with Maven. If a `Gemfile` is found, we know we need the Ruby buildpack.
+1. Each buildpack's `detect` script is run against our codebase. If a `pom.xml` file is found, we determine that we're building a Java app with Maven. If a `Gemfile` is found, we know we need the Ruby buildpack.
 2. If we've run a build previously with the buildpack, it will reuse those images that contain components such as the base run image, or the JDK in the case of a Java app or the Ruby runtime for a Ruby application.
 3. In the case of a Java app, the buildpack will use Maven to build our JAR. In the case of a Ruby application, the buildpack will use Bundler to pull down all of our application dependencies defined in our `Gemfile`.
 4. All of these layers are then put together into a single container image that is ready to be run how you choose
