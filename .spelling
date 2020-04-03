@@ -1,0 +1,40 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+VMware
+Tanzu
+Buildpacks
+Kubernetes
+kpack
+buildpacks
+minikube
+KubeAcademy
+OCI-compliant
+Dockerfiles
+runtimes
+runtime
+lifecycle
+buildpack's
+codebase
+buildpack
+Bundler
+linkTitle
+repo
+Dev
+pullPolicy
+Helming
+Gradle
+com.vmware
+start.spring.io
+httpbin.org
+httpbin.org.
+frontend
+backend
+nginx
+namespace
+scg-getting-started
+versioned
+spring.io
+http
