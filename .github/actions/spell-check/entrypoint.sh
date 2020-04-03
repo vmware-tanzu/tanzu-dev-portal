@@ -19,4 +19,4 @@ echo "--> Install spellchecker"
 npm install --global spellchecker-cli retext-syntax-urls retext-indefinite-article retext-repeated-words
 
 echo "--> spellcheck markdown files"
-spellchecker -f 'content/**/*.md' -d custom_dict.txt --plugins spell syntax-urls indefinite-article repeated-words
+spellchecker -l en-US -f 'content/**/*.md' -d custom_dict.txt --plugins spell syntax-urls indefinite-article repeated-words
