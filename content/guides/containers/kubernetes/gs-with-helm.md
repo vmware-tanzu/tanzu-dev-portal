@@ -108,7 +108,7 @@ You can see what releases are deployed with helm list.
 NAME  	NAMESPACE	REVISION	UPDATED                            	STATUS  	CHART      	APP VERSION
 my-app	default     	1       	2020-03-09 08:07:53.54657 -0400 EDT	deployed	nginx-5.1.9	1.16.1
 ```
-It shows all the relevant information. Anytime you update an release, the revision number will increment. 
+It shows all the relevant information. Anytime you update a release, the revision number will increment. 
 
 You can clean up by removing the app with uninstall.
 ```
