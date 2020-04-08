@@ -27,4 +27,4 @@ Finally once all of your business logic is broken into their own services, you c
 
 ## Learn More
 
-To learn more, more sure to check out [What Is Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-what-is) as well as our [Getting Started with Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-gs) guide.
+To learn more, more sure to check out [What Is Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-what-is) as well as our [Getting Started with Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-gs) guide. 
