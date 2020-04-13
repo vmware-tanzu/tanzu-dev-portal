@@ -44,3 +44,7 @@ balancer
 http
 localhost:[[:digit:]]*
 localhost:8080
+templating
+GitOps
+repos
+config
