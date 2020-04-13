@@ -7,7 +7,7 @@ date:   2020-02-10
 
 ### What is  Helm?
 
-[Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [What is Helm](/guides/kubernetes/helm-what-is/).
+[Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [What is Helm](/guides/containers/kubernetes/helm-what-is/).
 
 In this guide you'll deploy a simple application using Helm to a Kubernetes cluster.
 
@@ -19,6 +19,9 @@ In this guide you'll deploy a simple application using Helm to a Kubernetes clus
 
 - Follow the documentation for [installing helm](https://helm.sh/docs/intro/install/).
 
+Helm leverages your local Kubernetes context to operate, so it will have whatever permissions the account you're using for `kubectl` does.
+
+_If you read about Helm and come across references for `tiller`, previous versions (before version 3) required an extra component installed on the Kubernetes cluster._
 
 ### Initial Helm Setup
 You're going to need a chart to deploy with Helm, so the easiest thing is to connect to a chart repository with the `helm repo` command.
