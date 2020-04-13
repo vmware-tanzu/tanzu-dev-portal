@@ -44,3 +44,5 @@ balancer
 http
 localhost:[[:digit:]]*
 localhost:8080
+[E,e]venting
+RabbitMQ

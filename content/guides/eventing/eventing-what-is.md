@@ -11,7 +11,7 @@ So what is an event, then? In short, it can be defined as a "change of state". T
 
 This pattern can be very powerful when applied correctly. As mentioned, the biggest gain in this design is it loosens how tightly coupled services and applications are. Event emitters can "fire and forget" their events without worrying when consumers are added or removed from the system.
 
-Since the event emitter doesn't need to know about every consumer, your consumers can come and go as needed. New ways to process these events can be added just by listening on the the message queue. Capacity can also be grown by adding more consumers to the message queue to help process a large influx of events.
+Since the event emitter doesn't need to know about every consumer, your consumers can come and go as needed. New ways to process these events can be added just by listening on the message queue. Capacity can also be grown by adding more consumers to the message queue to help process a large influx of events.
 
 Processing events doesn't stop at a simple action being taken, either. With each event, you not only have the content of the event, but the context as well. How frequently similar events are coming in, how many are generated in a certain time period, where they're coming from. These are all things that give us additional information to provide to our consumers to use.
 
