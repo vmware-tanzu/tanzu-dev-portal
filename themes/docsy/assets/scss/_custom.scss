@@ -1,0 +1,79 @@
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $gray-800;
+	color: white;
+  p,li {
+  	color: $light;
+  }
+}
+
+.bg-gray-dark {
+  background-color: $gray-800; 
+  h1,h2,h3,h4,h5,h6,.h3,.h4,.h2,.h1,.h5,.h6 {
+  	color: white;
+  }
+  p,li {
+  	color: $light;
+  }
+}
+
+p {
+	margin: 1rem 0;
+}
+
+.h3 {
+	line-height: 1.4em;
+}
+
+.td-box--dark p > a,
+a {
+	color: $link;
+	-webkit-font-smoothing: auto;
+}
+
+.gradient-edge-parent {
+	position: relative;
+}
+
+.gradient-edge-left {
+  background-image: -moz-linear-gradient( 90deg, rgb(0,193,213) 0%, rgb(120,190,32) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(0,193,213) 0%, rgb(120,190,32) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(0,193,213) 0%, rgb(120,190,32) 100%);
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.jc-even {
+	justify-content: space-evenly;
+}
+
+.btn-primary {
+	box-shadow: none;
+}
+
+.btn.h4 {
+	font-size: $h4-font-size;
+}
+
+.icon {
+	height: 50px;
+}
+
+.td-sidebar-nav__section-title a {
+	color: white;
+}
+
+.breadcrumb-item a,
+.td-sidebar-nav .td-sidebar-link__page {
+	color: $light;
+}
+
+.breadcrumb-item {
+	font-size: 0.9rem;
+}

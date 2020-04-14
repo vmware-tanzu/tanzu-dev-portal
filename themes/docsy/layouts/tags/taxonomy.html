@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  </head>
+  <body class="td-{{ .Kind }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            {{ partial "sidebar-tags.html" . }}
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            {{ partial "toc.html" . }}
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            {{ partial "version-banner.html" . }}
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+            {{ block "main" . }}
+            
+            {{ range first 1 .Data.Pages }}
+            {{ if not .IsPage }}
+        
+            <div class="td-content">
+                <h1>{{ .Title }}</h1>
+                {{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+                {{ .Content }}
+                    {{ partial "section-index.html" . }}
+                {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+                    {{ partial "feedback.html" .Site.Params.ui.feedback }}
+                    <br />
+                {{ end }}
+                {{ if (.Site.DisqusShortname) }}
+                    <br />
+                    {{ partial "disqus-comment.html" . }}
+                {{ end }}
+                <div class="text-muted mt-5 pt-3 border-top">{{ partial "page-meta-lastmod.html" . }}</div>
+            </div>
+
+
+            {{ end }}
+            {{ end }}
+
+            {{ end }}
+          </main>
+        </div>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
+
