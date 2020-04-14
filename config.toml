@@ -79,8 +79,9 @@ anchor = "smart"
 # Everything below this are Site Params
 
 [params]
-copyright = "VMware Tanzu"
-privacy_policy = "/privacy"
+copyright = "VMware, Inc"
+privacy_policy = "https://www.vmware.com/help/privacy.html"
+terms_of_use = "https://www.vmware.com/help/legal.html"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -147,7 +148,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name = "User mailing list"
-	url = "https://pivotal.io/newsletter-subscription"
+	url = "https://tanzu.vmware.com/newsletter-subscription"
 	icon = "fa fa-envelope"
         desc = "Discussion and help from your fellow users"
 [[params.links.user]]
@@ -173,6 +174,6 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
         desc = "Chat with other project developers"
 [[params.links.developer]]
 	name = "Developer mailing list"
-	url = "https://tanzu.io/mail"
+	url = "https://tanzu.vmware.com/newsletter-subscription"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"
