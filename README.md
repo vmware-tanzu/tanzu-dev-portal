@@ -8,7 +8,7 @@
 ```
 brew install hugo
 cd themes
-git clone https://github.com/google/docsy
+git clone https://github.com/bryanfriedman/docsy
 git submodule update --init --recursive
 cd ..
 hugo server
