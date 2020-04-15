@@ -2,9 +2,10 @@
 title: Cloud Native Buildpacks
 weight: 100
 featured: true
-tags:
+categories:
 - containers
 - kubernetes
+tags:
 - kpack
 - buildpacks
 description: >

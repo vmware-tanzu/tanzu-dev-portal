@@ -1,8 +1,11 @@
 ---
 title:  "Getting Started with Cloud Native Buildpacks: Using kpack to automate builds"
 weight: 3
+categories:
+- containers
 tags:
 - kpack
+- buildpacks
 ---
 
 ### What is `kpack`?

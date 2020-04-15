@@ -1,6 +1,10 @@
 ---
 title:  "Getting Started with Helm: Deploying Apps on Kubernetes"
-date:   2020-02-10
+weight: 2
+categories:
+- kubernetes
+tags:
+- helm
 ---
 
 ## Getting Started with Helm: Deploying Apps on Kubernetes
