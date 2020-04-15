@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+{{ .Render "content" }}
+
+{{ $pages := index .Site.Taxonomies.categories .Params.topic }}
+
+<h2>Guides</h2>
+{{ range where $pages "Section" "guides"  }}
+    <ul>
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    </ul>
+{{ end }}
+
+<h2>Videos</h2>
+{{ range where $pages "Section" "videos" }}
+    <ul>
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    </ul>
+{{ end }}
+
+<h2>Samples</h2>
+{{ range where $pages "Section" "samples" }}
+<ul>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+</ul>
+{{ end }}
+
+<h2>Blogs</h2>
+{{ range where $pages "Section" "blog" }}
+<ul>
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+</ul>
+{{ end }}
+
+{{ end }}
