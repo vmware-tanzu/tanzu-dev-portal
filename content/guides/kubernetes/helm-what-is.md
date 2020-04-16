@@ -1,6 +1,11 @@
 ---
-title:  "What is  Helm?"
-date:   2020-03-07
+title:  "Helm: What Is It?"
+sortTitle: "Helm"
+weight: 1
+categories:
+- kubernetes
+tags:
+- helm
 ---
 
 ## What is  Helm?

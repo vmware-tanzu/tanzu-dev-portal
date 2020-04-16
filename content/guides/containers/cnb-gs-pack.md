@@ -1,8 +1,12 @@
 ---
-title:  "Getting Started with Cloud Native Buildpacks: The `pack` CLI"
+title:  "Cloud Native Buildpacks: Getting Started with the `pack` CLI"
+sortTitle: "Cloud Native Buildpacks"
 weight: 2
+categories:
+- containers
 tags:
-- kpack
+- buildpacks
+
 ---
 
 ### What is `pack`?

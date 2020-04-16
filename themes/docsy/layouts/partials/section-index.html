@@ -1,5 +1,5 @@
 <div class="section-index">
-    {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+    {{ $pages := ((where .Site.Pages "Section" .Section).ByWeight).ByParam "sortTitle" }}
     {{ $parent := .Page }}
     {{ if $parent.Params.no_list }}
     {{/* If no_list is true we don't show a list of subpages */}}

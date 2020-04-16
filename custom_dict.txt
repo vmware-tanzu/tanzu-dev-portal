@@ -48,3 +48,4 @@ templating
 GitOps
 repos
 config
+sortTitle

@@ -20,6 +20,7 @@ enableMissingTranslationPlaceholders = true
 
 [taxonomies]
 featured = "featured"
+pattern = "patterns"
 category = "categories"
 tag = "tags"
 

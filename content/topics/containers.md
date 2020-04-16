@@ -1,10 +1,9 @@
 ---
 title: Containers
 weight: 1
-tags:
-- containers
+topic: containers
 description: >
-    Main guides page about Containers.
+    Main topic page about containers.
 ---
 
 Basic intro on containers...
