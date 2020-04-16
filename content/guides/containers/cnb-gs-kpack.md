@@ -1,5 +1,6 @@
 ---
-title:  "Getting Started with Cloud Native Buildpacks: Using kpack to automate builds"
+title:  "Cloud Native Buildpacks: Getting Started with kpack to automate builds"
+sortTitle: "Cloud Native Buildpacks"
 weight: 3
 categories:
 - containers

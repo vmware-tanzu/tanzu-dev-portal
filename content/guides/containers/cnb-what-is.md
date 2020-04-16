@@ -1,5 +1,6 @@
 ---
-title:  "What Are: Cloud Native Buildpacks"
+title:  "Cloud Native Buildpacks: What Are They?"
+sortTitle: "Cloud Native Buildpacks"
 weight: 1
 categories:
 - containers

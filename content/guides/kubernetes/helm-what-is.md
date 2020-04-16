@@ -1,5 +1,6 @@
 ---
-title:  "What is  Helm?"
+title:  "Helm: What Is It?"
+sortTitle: "Helm"
 weight: 1
 categories:
 - kubernetes

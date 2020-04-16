@@ -1,6 +1,9 @@
 ---
-title:  "Getting Started with Spring Cloud Gateway"
-weight: 1001
+title:  "Spring Cloud Gateway: Getting Started"
+sortTitle: "Spring Cloud Gateway"
+weight: 2
+tags:
+- spring-cloud-gateway
 ---
 
 ### What is Spring Cloud Gateway?
