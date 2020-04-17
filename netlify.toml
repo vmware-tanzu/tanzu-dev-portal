@@ -1,7 +1,7 @@
 # Default build settings
 [build]
   publish = "public"
-  command = "git submodule update -f --init --recursive && npm install postcss-cli && npm install autoprefixer && hugo"
+  command = "git submodule update -f --init --recursive && npm install && hugo"
 
 [build.environment]
-  HUGO_VERSION = "0.65.3"
+  HUGO_VERSION = "0.69.0"
