@@ -51,7 +51,7 @@ You can see a whole list of charts, but here's the first three. They show the na
 ### Time to Deploy a Chart (Create a Release)
 
 Now that you have helm configured with a repo, you can deploy a chart. In helm lingo that's called _creating a release_. In this example, you'll deploy a pretty simple one like nginx. You can supply a name for your app like you're going to do here (my app) or you can use the `--generate-name` CLI option to have helm generate one for you.
-```
+```yaml
 $ helm install my-app bitnami/nginx
 NAME: my-app
 LAST DEPLOYED: Mon Mar 9 07:37:28 2020
@@ -148,7 +148,7 @@ Notice the `NOTES` section changed? It's a template too. You can see [here](http
 
 In this instance you supplied the value via the CLI, but you could have also put it into a `values.yaml` file and used the `--values` CLI option. This is a common practice when you want to supply numerous values to the chart, and/or you want to keep track of what you're deploying by checking the file into a version control system. The easiest way to get started with your values file, is to download the default one from the chart repository, [like this one](https://github.com/bitnami/charts/blob/master/bitnami/nginx/values.yaml) for the nginx chart you deployed. Any value you aren't changing can be deleted from the file as it will be supplied by the default values.
 If you wanted to do that to get the same results as above you'd create a `my-app-values.yaml` file with these contents:
-```
+```yaml
 ## NGINX Service properties
 ##
 service:
@@ -167,7 +167,7 @@ Any time you want to change anything about a release-either a configuration valu
 
 For your nginx chart, you can show this by changing a configuration value. Currently the default image `pullPolicy` for this chart is `IfNotPresent`. You can change that to `Always` via an upgrade.
 
-```
+```yaml
 $ helm upgrade my-app bitnami/nginx --set service.type=ClusterIP,image.pullPolicy=Always
 
 Release "my-app" has been upgraded. Happy Helming!
@@ -184,7 +184,7 @@ Get the NGINX URL:
   kubectl port-forward --namespace blog svc/my-app-nginx 8080:80
 ```
 You can see the revision has been incremented. If you get the nginx pod you can see the change of configuration:
-```
+```yaml
 $ kubectl get pod my-app-nginx-5bd7878597-pc8jp -o yaml
 
 spec:
