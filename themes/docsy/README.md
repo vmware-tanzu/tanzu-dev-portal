@@ -12,12 +12,11 @@ The following are basic prerequisites for using Docsy in your site:
   [release page](https://github.com/gohugoio/hugo/releases), make sure you download the `_extended` version 
   which supports SCSS.
 
-- Install `PostCSS` so that the site build can create the final CSS assets. You can install it locally by running 
+- Install all the required packages so that the site build can create the final assets. You can install it locally by running 
   the following commands from the root directory of your project:
 
   ```
-  sudo npm install -D --save autoprefixer
-  sudo npm install -D --save postcss-cli
+  sudo npm install 
   ```
 
 ## Example and usage
