@@ -2,7 +2,7 @@
 title:  "Cloud Native Buildpacks: What Are They?"
 sortTitle: "Cloud Native Buildpacks"
 weight: 1
-categories:
+topics:
 - containers
 tags:
 - buildpacks

@@ -11,7 +11,7 @@
     <div class="container-fluid td-outer">
       <div class="td-main mt-5 pt-5">
         
-        <h1 id="title">{{ .Title }}</h1>
+        {{ .Render "content" }}
 
         <h2>Guides</h2>
         {{ range where .Data.Pages "Section" "guides" }}

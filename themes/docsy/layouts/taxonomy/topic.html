@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  </head>
+  <body class="td-{{ .Kind }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main mt-5 pt-5">
+        
+        {{ .Render "content" }}
+
+        <h2>Guides</h2>
+        {{ range where .Data.Pages "Section" "guides" }}
+            <ul>
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            </ul>
+        {{ end }}
+
+        <h2>Videos</h2>
+        {{ range where .Data.Pages "Section" "videos" }}
+            <ul>
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            </ul>
+        {{ end }}
+
+        <h2>Samples</h2>
+        {{ range where .Data.Pages "Section" "samples" }}
+        <ul>
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        </ul>
+        {{ end }}
+
+        <h2>Blogs</h2>
+        {{ range where .Data.Pages "Section" "blog" }}
+        <ul>
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        </ul>
+        {{ end }}
+
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
+
