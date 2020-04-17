@@ -2,6 +2,7 @@
 title:  "Spring Cloud Gateway: What Is It?"
 sortTitle: "Spring Cloud Gateway"
 weight: 1
+featured: true
 topics:
 - spring
 - microservices
