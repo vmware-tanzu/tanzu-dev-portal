@@ -2,15 +2,17 @@
 title:  "Helm: Getting Started with Using Helm to Deploy Apps on Kubernetes"
 sortTitle: "Helm"
 weight: 2
-categories:
+topics:
 - kubernetes
 tags:
 - helm
+patterns:
+- deployment
 ---
 
 ## Getting Started with Helm: Deploying Apps on Kubernetes
 
-### What is  Helm?
+### What is Helm?
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [What is Helm](/guides/containers/kubernetes/helm-what-is/).
 
