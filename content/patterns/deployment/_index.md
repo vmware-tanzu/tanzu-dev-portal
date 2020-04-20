@@ -22,4 +22,4 @@ What kind of tools are needed to meet these requirements in those areas? Which u
 
  ![img](/images/patterns/deployment/path-to-prod-3.png)
 
-From a developer's perspective, the items are the left are top of mind because they use them on a daily basis. 
+From a developer's perspective, the items are the left are top of mind because they use them on a daily basis but there are a lot of components on the right-hand size that can be a necessity before going into production. For this pattern, this is where there will be deeper dives on each of these areas and tools, but examples of this pattern where these components are brought together to deliver code from commit to production.
