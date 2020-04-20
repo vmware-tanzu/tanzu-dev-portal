@@ -1,7 +1,7 @@
 ---
 title: Deployment Pattern
+featured: true
 weight: 1
-pattern: deployment
 
 description: >
     Introduction

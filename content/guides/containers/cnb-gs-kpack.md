@@ -2,11 +2,13 @@
 title:  "Cloud Native Buildpacks: Getting Started with kpack to automate builds"
 sortTitle: "Cloud Native Buildpacks"
 weight: 3
-categories:
+topics:
 - containers
 tags:
 - kpack
 - buildpacks
+patterns:
+- deployment
 ---
 
 ### What is `kpack`?
@@ -29,7 +31,8 @@ A couple of things you will need before you get started: is have a code reposito
 
 To make sure my kpack environment is all ready after following the install instructions above, I'll run `kubectl describe clusterbuilder default` and the output looks like this:
 
-```
+```yaml
+
 Name:         default
 Namespace:
 Labels:       <none>
@@ -128,7 +131,7 @@ It lists all the available builders that are configured, so that means you're re
 
 The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. you'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
 
-```
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -154,7 +157,7 @@ Also note the annotation of `build.pivotal.io/docker: us.gcr.io`- it tells kpack
 
 Now you need a service account referencing those credentials. The manifest is pretty simple:
 
-```
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -167,7 +170,7 @@ secrets:
 
 Now you're all ready to start building images and pushing them to GCR. Let's create a manifest that builds containers off my application code on GitHub:
 
-```
+```yaml
 apiVersion: build.pivotal.io/v1alpha1
 kind: Image
 metadata:
