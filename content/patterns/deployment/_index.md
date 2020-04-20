@@ -14,7 +14,7 @@ A deployment pattern generally contains elements from four key areas.
 
  ![img](/images/patterns/deployment/path-to-prod-1.png)
 
-Each of these areas satisfies different requirements based a particular application's needs. For applications like human resource systems, compliance and auditability is crucial, while for a mobile website, continuous integration and rapid deployment are most important.
+Each of these areas satisfies different requirements based a particular application's needs. For applications like human resource systems, compliance and audit is crucial, while for a mobile website, continuous integration and rapid deployment are most important.
 
  ![img](/images/patterns/deployment/path-to-prod-2.png)
 
