@@ -49,3 +49,15 @@ GitOps
 repos
 config
 sortTitle
+[M,m]icroservice[s]
+deployable
+
+# metadata, topics, tags
+img
+sortTitle
+youtube_id
+ci-cd
+api
+kafka
+jpa
+cf-for-k8s
