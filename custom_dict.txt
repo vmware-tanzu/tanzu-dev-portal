@@ -52,4 +52,5 @@ sortTitle
 microservices
 api
 img
-Eventing
+[E,e]venting
+RabbitMQ
