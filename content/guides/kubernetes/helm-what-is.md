@@ -2,10 +2,12 @@
 title:  "Helm: What Is It?"
 sortTitle: "Helm"
 weight: 1
-categories:
+topics:
 - kubernetes
 tags:
 - helm
+patterns:
+- deployment
 ---
 
 ## What is  Helm?
