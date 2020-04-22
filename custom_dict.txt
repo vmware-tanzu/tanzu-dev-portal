@@ -49,8 +49,13 @@ GitOps
 repos
 config
 sortTitle
-[M,m]icroservice[s]
+[M,m]icroservice?[s]
 deployable
+[B,b]ootiful
+multi-microservice
+eventing
+Minibroker
+walkthrough
 
 # metadata, topics, tags
 img
@@ -59,5 +64,8 @@ youtube_id
 ci-cd
 api
 kafka
+JPA
 jpa
 cf-for-k8s
+[K,k]8s
+TAS
