@@ -49,7 +49,8 @@ GitOps
 repos
 config
 sortTitle
-[M,m]icroservice?[s]
+[M,m]icroservice
+[M,m]icroservices
 deployable
 [B,b]ootiful
 multi-microservice
