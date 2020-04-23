@@ -39,10 +39,10 @@ You may contribute content by creating a branch (or fork) and submitting a pull 
 You can use the [Archetypes](https://gohugo.io/content-management/archetypes/) feature of Hugo to create new content as follows:
 
 #### Create a new What Is guide 
-`hugo new guides/spring/spring-boot-what-is -k guide-what-is`
+`hugo new guides/spring/spring-boot-what-is -k guide-what-is.md`
 
 #### Create a new Getting Started guide
-`hugo new guides/spring/spring-boot-gs -k guide-gs`
+`hugo new guides/spring/spring-boot-gs -k guide-gs.md`
 
 #### Create a new blog post
 `hugo new blog/my-post -k blog-post.md`
