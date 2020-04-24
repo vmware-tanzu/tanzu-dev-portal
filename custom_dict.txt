@@ -54,9 +54,11 @@ sortTitle
 deployable
 [B,b]ootiful
 multi-microservice
-eventing
 Minibroker
 walkthrough
+img
+[E,e]venting
+RabbitMQ
 
 # metadata, topics, tags
 img
