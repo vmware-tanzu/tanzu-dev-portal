@@ -1,7 +1,7 @@
 ---
 title:  "Getting Started with Kafka"
-description:
-- Getting Started with Kafka
+description: >
+    Getting Started with Kafka
 summary:
 - How to use Kafka...
 topics:

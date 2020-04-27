@@ -3,10 +3,8 @@ title: Tanzu Demo Videos
 linkTitle: Videos
 description: >
     Demo Videos for Tanzu products.
-menu:
+<!-- menu:
     main:
-        weight: 20
+        weight: 20 -->
 ---
-
-### Videos
 

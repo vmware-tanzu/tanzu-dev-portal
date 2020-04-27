@@ -1,7 +1,7 @@
 ---
 title:  "Bootiful Microservices"
-description:
-- Microservices in Spring
+description: >
+    Microservices in Spring
 summary:
 - Microservices in Spring
 topics:

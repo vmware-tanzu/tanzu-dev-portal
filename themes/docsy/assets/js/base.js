@@ -24,7 +24,45 @@ limitations under the License.
 
         $('.popover-dismiss').popover({
             trigger: 'focus'
-        })
+        });
+
+
+        //Samples filters
+        $(".filters .filter").click(function(){
+            var filter = $(this).attr("filter");
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".filter-item").hide();
+            $(".filter-item[class*=" + filter + "]").show();
+            if (filter == "all") { 
+                $(".filter-item").show();
+            }
+        });
+
+        
+        //Newsletter
+        $(".click-to-show").click(function(){
+            $(this).hide();
+            $(".hidden").slideToggle();
+        });
+        $(".scroll-to-bottom").click(function(){
+            $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+        });
+
+
+
+        //Light/dark toggle
+        $('#toggle-light-dark-mode').click(function(){
+            if ($('html').hasClass('light-mode')) {
+                $('html').removeClass('light-mode');
+                document.getElementById("light-theme").remove();
+                localStorage.setItem("light-dark-mode-storage", "dark");
+            } else {
+                $('html').addClass('light-mode');
+                changeTheme("light");
+                localStorage.setItem("light-dark-mode-storage", "light");
+            }
+        });
+
     });
 
 

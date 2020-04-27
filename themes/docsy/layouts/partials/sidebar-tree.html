@@ -8,7 +8,7 @@
     </button>
   </form>
   {{ end }}
-  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+  <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
     {{ if  (gt (len .Site.Home.Translations) 0) }}
     <div class="nav-item dropdown d-block d-lg-none">
       {{ partial "navbar-lang-selector.html" . }}
@@ -24,7 +24,7 @@
 {{ $active := eq $p.CurrentSection $s }}
 {{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
 {{ $sid := $s.RelPermalink | anchorize }}
-<ul class="td-sidebar-nav__section">
+<ul class="td-sidebar-nav__section collapse {{ if $show }}show{{ end }}">
   <li class="td-sidebar-nav__section-title">
     <a  href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ $s.LinkTitle }}</a>
   </li>

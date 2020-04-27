@@ -1,7 +1,7 @@
 ---
 title: Spring Cloud Stream Demo
-description:
-- Simple Event Driven Microservices with Spring Cloud Stream
+description: >
+    Simple Event Driven Microservices with Spring Cloud Stream
 summary:
 - Simple Event Driven Microservices with Spring Cloud Stream
 topics:

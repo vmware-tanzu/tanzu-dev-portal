@@ -94,9 +94,13 @@
    }
 
   .row {
-       padding-left: 5rem;
-       padding-right: 5rem;
+       // padding-left: 5rem;
+       // padding-right: 5rem;
+       padding-left: 0;
+       padding-right: 0;
        flex-direction: row;
+       max-width: 1140px;
+       margin: 0 auto;
   }
 }
 // Styling for community page link boxes
