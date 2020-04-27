@@ -4,7 +4,7 @@ weight: 1
 tags:
 - spring
 description: >
-    Main topic page about Spring.
+    Main guides page about Spring.
 ---
 
 Basic intro to Spring...
