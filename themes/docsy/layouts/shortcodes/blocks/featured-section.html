@@ -2,18 +2,22 @@
 {{ $col_id := .Get "color" | default .Ordinal }}
 {{ $height := .Get "height" | default "auto"  }}
 <a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
-<section class="row td-box td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }}">
-	<div class="col">
-        <div class="row jc-even">    
-            {{ range first 3 (where .Site.Pages "Params.featured" true) }}
-                <div class="gradient-edge-parent col-lg-4 mb-5 mb-lg-0 td-box--dark p-lg-4 pl-lg-5 ">
-                    <div class='gradient-edge-left'></div>
-                    <h4 class="h4">{{ .LinkTitle }}</h4>
-                    <p class="mb-0 text-light">{{ .Description }}</p>
-                    <p><a href="{{ .Permalink}}">Read now</a></p>
-                </div>
-            {{ end }}
-		</div>
+<section class="featured-section td-box td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }}">
+    <div class='container'>
+    	<div class="col">
+            <div class="row jc-even">    
+                {{ range first 3 (where .Site.Pages "Params.featured" true) }}
+                    <div class="col-lg-4 flex mb-3 mb-lg-0">
+                        <a href="{{ .Permalink}}" class="gradient-edge-parent linked-box col-12  td-box--gray-850 p-4 px-5">
+                            <div class='gradient-edge-left'></div>
+                            <h4 class="h4">{{ .LinkTitle }}</h4>
+                            <p class="mb-0 text-light">{{ .Description }}</p>
+                            <p class="link">Read now</p>
+                        </a>
+                    </div>
+                {{ end }}
+    		</div>
+        </div>
 	</div>
 </section>
 

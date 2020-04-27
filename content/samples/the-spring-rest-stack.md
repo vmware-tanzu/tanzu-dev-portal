@@ -1,7 +1,7 @@
 ---
 title:  "The Spring REST Stack"
-description:
-- RESTful service development with Spring
+description: >
+    RESTful service development with Spring
 summary:
 - Accompanies a talk that Josh Long delivers on RESTful service development with Spring
 topics:

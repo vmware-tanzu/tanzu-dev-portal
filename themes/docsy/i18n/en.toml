@@ -31,6 +31,8 @@ other = "Privacy Policy"
 [footer_terms_of_use]
 other = "Terms of Use"
 
+[footer_california_privacy_rights]
+other = "Your California Privacy Rights"
 
 # Post (blog, articles etc.)
 [post_byline_by]

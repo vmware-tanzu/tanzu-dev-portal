@@ -3,11 +3,10 @@ title: Tanzu Code Samples
 linkTitle: Samples
 description: >
     Code Samples for Tanzu products.
-menu:
+<!-- menu:
     main:
-        weight: 10
+        weight: 10 -->
 ---
 
-### Samples
 
-Visit our [Samples Repo](https://github.com/vmware-tanzu/samples).
+<!-- Visit our [Samples Repo](https://github.com/vmware-tanzu/samples). -->

@@ -41,8 +41,10 @@ $gray-500: #adb5bd !default;
 $gray-600: #888 !default;
 $gray-700: #495057 !default;
 $gray-800: #22343c !default;
+$gray-850: #17242C !default;
 $gray-900: #0f171c !default;
 $black: #000 !default;
+$bright-green: #78be20 !default;
 
 $code-color: $link !default;
 
@@ -56,6 +58,15 @@ $td-sidebar-border-color: $primary !default;
 // if not provided by the user.
 // These colors are all part of the theme palette, but the mix is fairly random to create variation. This can be overridden by the project if needed.
 $td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, $primary-light, $info !default;
+
+$colors: () !default;
+
+$colors: map-merge(
+  (
+    "gray-darkest":  $gray-900
+  ),
+  $colors
+);
 
 $link-color: darken($blue, 15%) !default;
 $link-decoration: none !default;

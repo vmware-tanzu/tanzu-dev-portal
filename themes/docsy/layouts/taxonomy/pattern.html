@@ -9,37 +9,39 @@
       {{ partial "navbar.html" . }}
     </header>
     <div class="container-fluid td-outer">
-      <div class="td-main mt-5 pt-5">
+      <div class="td-main mt-lg-5 pt-lg-5">
+        <div class='container'>
         
-        {{ .Render "content" }}
+            {{ .Render "content" }}
 
-        <h2>Guides</h2>
-        {{ range where .Data.Pages "Section" "guides" }}
+            <h2>Guides</h2>
+            {{ range where .Data.Pages "Section" "guides" }}
+                <ul>
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                </ul>
+            {{ end }}
+
+            <h2>Videos</h2>
+            {{ range where .Data.Pages "Section" "videos" }}
+                <ul>
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                </ul>
+            {{ end }}
+
+            <h2>Samples</h2>
+            {{ range where .Data.Pages "Section" "samples" }}
             <ul>
                 <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
             </ul>
-        {{ end }}
+            {{ end }}
 
-        <h2>Videos</h2>
-        {{ range where .Data.Pages "Section" "videos" }}
+            <h2>Blogs</h2>
+            {{ range where .Data.Pages "Section" "blog" }}
             <ul>
                 <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
             </ul>
-        {{ end }}
-
-        <h2>Samples</h2>
-        {{ range where .Data.Pages "Section" "samples" }}
-        <ul>
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        </ul>
-        {{ end }}
-
-        <h2>Blogs</h2>
-        {{ range where .Data.Pages "Section" "blog" }}
-        <ul>
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        </ul>
-        {{ end }}
+            {{ end }}
+        </div>
 
       </div>
       {{ partial "footer.html" . }}

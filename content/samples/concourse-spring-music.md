@@ -1,7 +1,7 @@
 ---
 title:  "Using Concourse to Deploy Spring Music"
-description:
-- Deploy a multi-microservice application with Concourse.
+description: >
+    Deploy a multi-microservice application with Concourse.
 summary:
 - Deploy a multi-microservice application with Concourse.
 topics:

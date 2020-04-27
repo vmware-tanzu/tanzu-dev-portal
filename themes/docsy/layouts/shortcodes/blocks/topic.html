@@ -1,7 +1,7 @@
 {{ $url_text := .Get "url_text" }}
 {{ $icon_path := .Get "icon_path" }}
-<div class="col-lg-4 mb-5 mb-lg-0 ">
+<div class="topic col-lg-4 mb-0 mb-lg-0 ">
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link " " "-" }}
-  {{ with $url_text }}<a class="btn btn-primary btn-block p-lg-4 mb-3 text-left h4 text-white" href="/topics/{{ $link }}"><img class='icon mr-3' src="{{ $icon_path }}"/> {{ $url_text }}</a>{{ end }}
+  {{ with $url_text }}<a class="py-3 px-4 mb-4 text-left h4 text-white" href="/topics/{{ $link }}"><img class='icon mr-3' src="{{ $icon_path }}"/> {{ $url_text }}</a>{{ end }}
 </div>

@@ -1,7 +1,7 @@
 ---
 title:  "Bootiful Reactive Microservices"
-description:
-- Reactive Microservice workshop in Spring
+description: >
+    Reactive Microservice workshop in Spring
 summary:
 - Reactive Microservice workshop in Spring
 topics:
