@@ -97,6 +97,10 @@ version_menu = "Get Started"
 	url = "/guides"
 
 [[params.versions]]
+	version = "Patterns"
+	url = "/patterns"
+
+[[params.versions]]
 	version = "Samples"
 	url = "/samples"
 
@@ -165,27 +169,32 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "https://tanzu.vmware.com/newsletter-subscription"
 	icon = "fa fa-envelope"
         desc = "Discussion and help from your fellow users"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name ="Twitter"
 	url = "https://twitter.com/VMwareTanzu"
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
 [[params.links.developer]]
+	name = "YouTube"
+	url = "https://www.youtube.com/pivotal"
+	icon = "fab fa-youtube"
+    desc = "Watch video demos of tech in action"
+[[params.links.developer]]
 	name = "Stack Overflow"
 	url = "https://stackoverflow.com/questions/tagged/vmware-tanzu"
 	icon = "fab fa-stack-overflow"
         desc = "Practical questions and curated answers"
-# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
 	url = "https://github.com/vmware-tanzu"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
-[[params.links.developer]]
-	name = "Slack"
-	url = "https://slack.com/vmware-tanzu"
-	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
+#[[params.links.developer]]
+#	name = "Slack"
+#	url = "https://slack.com/vmware-tanzu"
+#	icon = "fab fa-slack"
+#        desc = "Chat with other project developers"
 #[[params.links.developer]]
 #	name = "Developer mailing list"
 #	url = "https://tanzu.vmware.com/newsletter-subscription"

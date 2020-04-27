@@ -5,7 +5,10 @@
 <section class="featured-section td-box td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }}">
     <div class='container'>
     	<div class="col">
-            <div class="row jc-even">    
+            <div class="row jc-even">   
+                <div class="col-12 mb-4">
+                    <h2 class="text-center">Featured</h2>
+                </div> 
                 {{ range first 3 (where .Site.Pages "Params.featured" true) }}
                     <div class="col-lg-4 flex mb-3 mb-lg-0">
                         <a href="{{ .Permalink}}" class="gradient-edge-parent linked-box col-12  td-box--gray-850 p-4 px-5">
