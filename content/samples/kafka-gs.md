@@ -5,10 +5,10 @@ description: >
 summary:
 - How to use Kafka...
 topics:
-- messaging-and-integration
+- Messaging and Integration
 tags:
-- kafka
+- Kafka
 patterns:
-- eventing
+- Eventing
 repo: https://github.com/BrianMMcClain/kafka-getting-started
 ---

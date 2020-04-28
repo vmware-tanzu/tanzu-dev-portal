@@ -2,7 +2,7 @@
 title: Event Streaming
 linkTitle: Event Streaming
 weight: 8
-topic: event-streaming
+topic: Event Streaming
 description: >
     Main topic page about Event Streaming.
 menu:

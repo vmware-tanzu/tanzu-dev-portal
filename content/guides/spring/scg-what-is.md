@@ -2,15 +2,14 @@
 title:  "Spring Cloud Gateway: What Is It?"
 sortTitle: "Spring Cloud Gateway"
 weight: 1
-featured: true
 topics:
-- spring
-- microservices
-- messaging-and-integration
+- Spring
+- Microservices
+- Messaging and Integration
 tags:
-- spring-cloud-gateway
+- Spring Cloud Gateway
 patterns:
-- api
+- API
 ---
 
 Spring Cloud Gateway provides a library for building API Gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross cutting concerns such as security, resiliency, and monitoring.

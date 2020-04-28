@@ -2,7 +2,7 @@
 title: Reactive
 linkTitle: Reactive
 weight: 9
-topic: reactive
+topic: Reactive
 description: >
     Main topic page about Reactive.
 menu:

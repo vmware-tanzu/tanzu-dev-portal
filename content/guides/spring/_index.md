@@ -2,7 +2,7 @@
 title: Spring
 weight: 1
 tags:
-- spring
+- Spring
 description: >
     Main guides page about Spring.
 layout: single

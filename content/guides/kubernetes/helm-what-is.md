@@ -3,11 +3,11 @@ title:  "Helm: What Is It?"
 sortTitle: "Helm"
 weight: 1
 topics:
-- kubernetes
+- Kubernetes
 tags:
-- helm
+- Helm
 patterns:
-- deployment
+- Deployment
 ---
 
 ## What is  Helm?

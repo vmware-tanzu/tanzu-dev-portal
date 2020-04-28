@@ -1,8 +1,7 @@
 ---
 title: Eventing Pattern
 featured: true
-weight: 1
-
+weight: 2
 description: >
     Introduction To Event-Driven Architecture
 ---

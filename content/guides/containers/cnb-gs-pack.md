@@ -3,9 +3,11 @@ title:  "Cloud Native Buildpacks: Getting Started with the `pack` CLI"
 sortTitle: "Cloud Native Buildpacks"
 weight: 2
 topics:
-- containers
+- Containers
 tags:
-- buildpacks
+- Buildpacks
+patterns:
+- Deployment
 
 ---
 

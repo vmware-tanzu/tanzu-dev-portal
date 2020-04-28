@@ -3,13 +3,13 @@ title:  "Spring Cloud Gateway: Getting Started"
 sortTitle: "Spring Cloud Gateway"
 weight: 2
 topics:
-- spring
-- microservices
-- messaging-and-integration
+- Spring
+- Microservices
+- Messaging and Integration
 tags:
-- spring-cloud-gateway
+- Spring Cloud Gateway
 patterns:
-- api
+- API
 ---
 
 ### What is Spring Cloud Gateway?

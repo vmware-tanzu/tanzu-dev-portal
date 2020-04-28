@@ -3,9 +3,11 @@ title:  "Cloud Native Buildpacks: What Are They?"
 sortTitle: "Cloud Native Buildpacks"
 weight: 1
 topics:
-- containers
+- Containers
 tags:
-- buildpacks
+- Buildpacks
+patterns:
+- Deployment
 ---
 
 Cloud Native Buildpacks turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 

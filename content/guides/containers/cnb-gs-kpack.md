@@ -3,12 +3,12 @@ title:  "Cloud Native Buildpacks: Getting Started with kpack to automate builds"
 sortTitle: "Cloud Native Buildpacks"
 weight: 3
 topics:
-- containers
+- Containers
 tags:
 - kpack
-- buildpacks
+- Buildpacks
 patterns:
-- deployment
+- Deployment
 ---
 
 ### What is `kpack`?
