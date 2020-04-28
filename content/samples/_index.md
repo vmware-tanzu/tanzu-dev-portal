@@ -1,11 +1,12 @@
 ---
-title: Tanzu Code Samples
+title: Code Samples
 linkTitle: Samples
 description: >
     Code Samples for Tanzu products.
-<!-- menu:
+menu:
     main:
-        weight: 10 -->
+        parent: "sections"
+        weight: 3
 ---
 
 
