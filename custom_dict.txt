@@ -20,7 +20,6 @@ runtime
 lifecycle
 buildpack's
 codebase
-linkTitle
 Bundler
 [R,r]epo
 Dev
@@ -57,19 +56,17 @@ deployable
 multi-microservice
 Minibroker
 walkthrough
-img
 [E,e]venting
+[R,r]oadmap
 RabbitMQ
-
-# metadata, topics, tags
-img
-sortTitle
-youtube_id
-ci-cd
-api
-kafka
-JPA
-jpa
-cf-for-k8s
+[K,k]ubeapps
+macOS
+README
+RBAC-enabled
+GKE
+HTTPS
+1e49264
 [K,k]8s
 TAS
+JPA
+[S,s]erverless
