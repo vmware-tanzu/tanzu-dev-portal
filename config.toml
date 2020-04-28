@@ -176,7 +176,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
         desc = "Follow us on Twitter to get the latest news!"
 [[params.links.developer]]
 	name = "YouTube"
-	url = "https://www.youtube.com/pivotal"
+	url = "https://www.youtube.com/VMwareTanzu"
 	icon = "fab fa-youtube"
     desc = "Watch video demos of tech in action"
 [[params.links.developer]]
