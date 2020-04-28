@@ -5,6 +5,7 @@ tags:
 - containers
 description: >
     Main guides page about Containers.
+layout: single
 ---
 
 Basic intro on containers...

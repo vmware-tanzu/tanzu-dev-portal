@@ -264,6 +264,12 @@ body.light-mode #toggle-light-dark-mode span {
 
 .guide .td-sidebar-nav__section-title a {
   font-size: 1.2rem;
+  color: white;
+}
+
+.guide .td-sidebar-nav__section-title a.active,
+.guide .td-sidebar-nav__section-title a:hover {
+  font-size: 1.2rem;
   color: $bright-green;
 }
 

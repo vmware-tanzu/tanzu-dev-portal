@@ -2,11 +2,11 @@
 {{ $shouldDelayActive := ge (len .Site.Pages) 2000 }}
 <div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }}">
   {{ if not .Site.Params.ui.sidebar_search_disable }}
-  <form class="td-sidebar__search d-flex align-items-center">
+  <!--<form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
-  </form>
+  </form>-->
   {{ end }}
   <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
     {{ if  (gt (len .Site.Home.Translations) 0) }}
@@ -24,7 +24,7 @@
 {{ $active := eq $p.CurrentSection $s }}
 {{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
 {{ $sid := $s.RelPermalink | anchorize }}
-<ul class="td-sidebar-nav__section collapse {{ if $show }}show{{ end }}">
+<ul class="td-sidebar-nav__section ">
   <li class="td-sidebar-nav__section-title">
     <a  href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ $s.LinkTitle }}</a>
   </li>
