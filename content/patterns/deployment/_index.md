@@ -2,7 +2,6 @@
 title: Deployment Pattern
 featured: true
 weight: 1
-
 description: >
     Introduction to the Deployment Pattern
 ---

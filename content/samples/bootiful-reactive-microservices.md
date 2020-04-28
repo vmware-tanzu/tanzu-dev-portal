@@ -5,13 +5,13 @@ description: >
 summary:
 - Reactive Microservice workshop in Spring
 topics:
-- spring
-- microservices
-- reactive
+- Spring
+- Microservices
+- Reactive
 tags:
-- spring
-- microservices
-- reactive
+- Spring
+- Microservices
+- Reactive
 repo: https://github.com/joshlong/bootiful-reactive-microservices
 ---
 

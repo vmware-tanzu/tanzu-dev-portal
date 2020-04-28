@@ -2,7 +2,7 @@
 title: Kubernetes
 weight: 1
 tags:
-- kubernetes
+- Kubernetes
 description: >
     Main guides page about Kubernetes.
 layout: single

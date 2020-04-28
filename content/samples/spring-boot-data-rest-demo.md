@@ -5,13 +5,13 @@ description: >
 summary:
 - Build a basic Spring Boot application that uses JPA to access a database
 topics:
-- spring
-- messaging-and-integration
+- Spring
+- Messaging and Integration
 tags:
-- spring
-- rest
-- jpa
+- Spring
+- REST
+- JPA
 patterns:
-- api
+- API
 repo: https://github.com/Pivotal-Field-Engineering/spring-boot-data-rest-demo
 ---

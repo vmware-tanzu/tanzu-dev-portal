@@ -2,7 +2,7 @@
 title: Serverless
 linkTitle: Serverless
 weight: 5
-topic: serverless
+topic: Serverless
 description: >
     Main topic page about serverless.
 menu:

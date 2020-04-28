@@ -5,11 +5,11 @@ description: >
 summary:
 - Microservices in Spring
 topics:
-- spring
-- microservices
+- Spring
+- Microservices
 tags:
-- spring
-- microservices
+- Spring
+- Microservices
 repo: https://github.com/joshlong/bootiful-microservices
 ---
 

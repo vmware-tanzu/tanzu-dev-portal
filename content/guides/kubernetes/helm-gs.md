@@ -3,11 +3,11 @@ title:  "Helm: Getting Started with Using Helm to Deploy Apps on Kubernetes"
 sortTitle: "Helm"
 weight: 2
 topics:
-- kubernetes
+- Kubernetes
 tags:
-- helm
+- Helm
 patterns:
-- deployment
+- Deployment
 ---
 
 ## Getting Started with Helm: Deploying Apps on Kubernetes
