@@ -5,6 +5,7 @@ tags:
 - kubernetes
 description: >
     Main guides page about Kubernetes.
+layout: single
 ---
 
 Basic intro on Kubernetes...

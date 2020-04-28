@@ -1,9 +1,10 @@
 ---
-title: Tanzu Guides
+title: Guides
 linkTitle: Guides
 description: >
-    Getting Started Guides for modern app development.
-<!-- menu:
+    Step-by-step guides for modern app development technologies.
+menu:
     main:
-        weight: 1 -->
+        parent: "sections"
+        weight: 1
 ---
