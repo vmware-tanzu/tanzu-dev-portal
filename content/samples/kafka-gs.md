@@ -11,4 +11,9 @@ tags:
 patterns:
 - Eventing
 repo: https://github.com/BrianMMcClain/kafka-getting-started
+readme: false
 ---
+
+### Content can live here...
+
+ ...if there is no README

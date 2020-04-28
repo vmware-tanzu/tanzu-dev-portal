@@ -11,4 +11,5 @@ tags:
 - Spring
 - Concourse
 repo: https://github.com/Pivotal-Field-Engineering/s1p-concourse-spring-music
+readme: true
 ---

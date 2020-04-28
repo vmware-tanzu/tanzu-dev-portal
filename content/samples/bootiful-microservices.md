@@ -11,5 +11,6 @@ tags:
 - Spring
 - Microservices
 repo: https://github.com/joshlong/bootiful-microservices
+readme: true
 ---
 

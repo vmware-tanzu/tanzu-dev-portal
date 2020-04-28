@@ -13,5 +13,6 @@ tags:
 - Microservices
 - Reactive
 repo: https://github.com/joshlong/bootiful-reactive-microservices
+readme: true
 ---
 

@@ -13,6 +13,7 @@ tags:
 patterns:
 - API
 repo: https://github.com/joshlong/the-spring-rest-stack
+readme: true
 ---
 
 
