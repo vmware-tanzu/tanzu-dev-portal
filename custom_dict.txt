@@ -70,3 +70,12 @@ HTTPS
 TAS
 JPA
 img
+
+# metadata, topics, tags
+linkTitle
+sortTitle
+youtube_id
+ci-cd
+kafka
+jpa
+cf-for-k8s
