@@ -14,4 +14,5 @@ tags:
 patterns:
 - api
 repo: https://github.com/Pivotal-Field-Engineering/spring-boot-data-rest-demo
+readme: true
 ---

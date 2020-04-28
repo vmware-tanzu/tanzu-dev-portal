@@ -16,4 +16,5 @@ tags:
 patterns:
 - eventing
 repo: https://github.com/benwilcock/spring-cloud-stream-demo
+readme: true
 ---
