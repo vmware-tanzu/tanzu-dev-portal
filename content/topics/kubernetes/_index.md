@@ -2,6 +2,7 @@
 title: Kubernetes
 weight: 2
 topic: Kubernetes
+icon: kubernetes
 description: >
     Kubernetes main topic description
 menu:

@@ -6,7 +6,13 @@
 	<div class='container'>
 		{{ .Content }}
 		<br/>
-	        {{ partial "boxes-index.html" . }}
+
+		{{ if eq .Data.Plural "topics" }}
+			{{ partial "topics-index.html" . }}
+		{{ else }}
+			{{ partial "boxes-index.html" . }}
+		{{ end }}
+
 		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
 			{{ partial "feedback.html" .Site.Params.ui.feedback }}
 			<br />
