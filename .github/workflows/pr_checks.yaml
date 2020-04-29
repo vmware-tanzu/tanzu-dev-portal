@@ -7,7 +7,6 @@ on:
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
         name: Checkout
@@ -15,3 +14,8 @@ jobs:
           fetch-depth: 1
       - uses: ./.github/actions/spell-check
         name: Spell Check
+  broken-link-check:
+    steps:
+      - uses: marccampbell/hugo-linkcheck-action@v0.1.3
+        name: Hugo Broken Link Check
+    
