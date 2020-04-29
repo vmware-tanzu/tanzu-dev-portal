@@ -70,6 +70,3 @@ HTTPS
 TAS
 JPA
 [S,s]erverless
-
-
-sortTitle
