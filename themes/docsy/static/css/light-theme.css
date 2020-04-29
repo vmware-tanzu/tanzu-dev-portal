@@ -46,3 +46,8 @@ body {
 .light-mode #toggle-light-dark-mode span:before {
    content: "\f185" !important;
 }
+
+input::placeholder {
+   color: #28333c !important;
+}
+

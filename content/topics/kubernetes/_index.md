@@ -1,12 +1,14 @@
 ---
 title: Kubernetes
 weight: 2
-topic: kubernetes
+topic: Kubernetes
+icon: kubernetes
 description: >
-    Main topic page about Kubernetes.
+    Kubernetes main topic description
+menu:
+    main:
+        parent: "topics"
+        weight: 2
 ---
 
-<!-- Basic intro on Kubernetes...
-
-A great place to get started is with [KubeAcademy](https://kube.academy)... -->
-
+#### Learn more about Kubernetes with [KubeAcademy](https://kube.academy).

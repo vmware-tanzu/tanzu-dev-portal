@@ -16,9 +16,11 @@
             </div>
             <div class='container'>
 
+                {{ $guides := where .Data.Pages "Section" "guides" }}
+                {{ if gt (len $guides) 0 }}
                 <div class='flex ai-center icon-title mb-4'><img class="icon mr-2" src="/images/icons/icon-guides.svg"/><h3 class="mb-0">Guides</h3></div>
                 <div class='row'>
-                    {{ range where .Data.Pages "Section" "guides" }}
+                    {{ range $guides }}
                         <div class="col-lg-4 px-lg-2 mb-3">
                             <a class="linked-box td-box--gray-850 px-4 pt-4 pb-3" href="{{ .Permalink }}">
                                 <h6 class="mt-2">{{ .Title }}</h6>
@@ -28,14 +30,18 @@
                         </div>
                     {{ end }}
                 </div>
+                {{ end }}
+
             </div>
         </div>
 
         <div class='container py-5'>
 
+            {{ $videos := where .Data.Pages "Section" "videos" }}
+            {{ if gt (len $videos) 0 }}
             <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-videos.svg"/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
-                {{ range where .Data.Pages "Section" "videos" }}
+                {{ range $videos }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
                         <iframe class="youtube-small" type="text/html" src="//www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe>
                     <!-- <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p> -->
@@ -43,44 +49,39 @@
                     </div>
                 {{ end }}
             </div></div>
+            {{ end }}
 
+    
+        {{ $samples := where .Data.Pages "Section" "samples" }}
+        {{ if gt (len $samples) 0 }}
         <div class='container py-5 border-top'>
-
             <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-code-samples.svg"/><h3 class="mb-0">Code Samples</h3></div>
-
             <div class="col px-lg-0"><div class='row'>
-            
-                {{ range where .Data.Pages "Section" "samples" }}
+                {{ range $samples }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-
                         <a class="fs-90" href="{{ .Permalink }}">{{ .Title }}</a>
                         {{ with .Params.description }}<p class="fs-90">{{ . | markdownify }}</p>{{ end }}
-
                     </div>
                 {{ end }}
-            
             </div></div>
-
         </div>
-
+        {{ end }}
+        
+        {{ $blogs := where .Data.Pages "Section" "blog" }}
+        {{ if gt (len $blogs) 0 }}
         <div class='container py-5 border-top'>
-
             <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div>
-
             <div class="col px-lg-0"><div class='row'>
-            
-                {{ range where .Data.Pages "Section" "blog" }}
+                {{ range $blogs }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-
                         <a class="fs-90" href="{{ .Permalink }}">{{ .Title }}</a>
                         {{ with .Params.description }}<p class="fs-90">{{ . | markdownify }}</p>{{ end }}
-
                     </div>
                 {{ end }}
-            
             </div></div>
-
         </div>
+        {{ end }}
+
       </div>
       {{ partial "footer.html" . }}
     </div>

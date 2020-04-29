@@ -2,9 +2,10 @@
 title: Containers
 weight: 1
 tags:
-- containers
+- Containers
 description: >
     Main guides page about Containers.
+layout: single
 ---
 
 Basic intro on containers...
