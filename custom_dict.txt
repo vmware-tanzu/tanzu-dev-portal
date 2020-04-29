@@ -69,13 +69,7 @@ HTTPS
 [K,k]8s
 TAS
 JPA
-img
+[S,s]erverless
 
-# metadata, topics, tags
-linkTitle
+
 sortTitle
-youtube_id
-ci-cd
-kafka
-jpa
-cf-for-k8s
