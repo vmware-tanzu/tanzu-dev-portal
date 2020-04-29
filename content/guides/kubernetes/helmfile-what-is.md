@@ -5,11 +5,9 @@ author: Paul Czarkowski
 tags: ["kubernetes", "containers", "helm", "helmfile"]
 ---
 
-## What is Helmfile ?
+[Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.
 
-[Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to you entire infrastructure stack.
-
-_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](./gs-with-helm) guide._
+_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](helm-what-is) guide._
 
 In addition to the Templating and Packaging Helm gives you for your Kubernetes manifests, Helmfile provides a way to apply GitOps style CI/CD methodologies over your Helm charts by:
 
@@ -24,7 +22,7 @@ Helmfile uses the same templating system as Helm and in a way lets you template 
 
 Helmfile addresses this issue and more by providing a fairly simple but very powerful declarative specification for deploying Helm charts across many environments.
 
-First and foremost Helm is a **declarative** specification. This means much like Kubernetes manifests or Helm charts you can store them in version control, and perform declarative style actions. much like Kubernetes has `kubectl apply` for kubernetes manifests, Helmfile has `helmfile apply` for Helm charts.
+First and foremost Helm is a **declarative** specification. Like Kubernetes manifests you can store them in version control, and perform declarative style actions. Much like Kubernetes has `kubectl apply` for kubernetes manifests, Helmfile has `helmfile apply` for Helm charts.
 
 Helmfile is very **modular**, you can have one large `helmfile.yaml` that does everything or you can break it down to suit your way of working. This modularity allows you to:
 
@@ -67,7 +65,7 @@ releases:
 
 Values are a list that can be passed in as a file or a list of key/values. These are the helm style values that will be rendered into your chart. Helmfile will treat any file with the `.gotmpl` extension as a template and will render it **before** passing it onto Helm.
 
-If you wanted to load the above into a parent `hemfile.yaml` you could do the following:
+If you wanted to load the above into a parent `helmfile.yaml` you could do the following:
 
 **./helmfile.yaml**
 ```yaml
