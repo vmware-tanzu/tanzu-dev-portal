@@ -56,7 +56,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
     * on mac you should have this installed from the above command, to verify:
         ```
         ytt version
-        ``
+        ```
 
 
 Helm leverages your local Kubernetes context to operate, so it will have whatever permissions the account you're using for `kubectl` does.
