@@ -23,6 +23,7 @@ featured = "featured"
 pattern = "patterns"
 topic = "topics"
 tag = "tags"
+author = "authors"
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -119,15 +120,11 @@ algolia_docsearch = false
 # Enable Lunr.js offline search
 offlineSearch = false
 
-
-
 [menu]
-
   [[menu.main]]
     identifier = "sections"
     name = "Learn"
     weight = 1
-
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.

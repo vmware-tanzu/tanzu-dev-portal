@@ -1,5 +1,5 @@
 ---
-title: "Tanzu Dev Blog"
+title: "Blog"
 linkTitle: "Blog"
 menu:
     main:

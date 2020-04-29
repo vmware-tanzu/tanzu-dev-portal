@@ -67,7 +67,7 @@
         </div>
         {{ end }}
         
-        {{ $blogs := where .Data.Pages "Section" "blogs" }}
+        {{ $blogs := where .Data.Pages "Section" "blog" }}
         {{ if gt (len $blogs) 0 }}
         <div class='container py-5 border-top'>
             <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div>
