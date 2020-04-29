@@ -1,7 +1,7 @@
 ---
 title: "A Place to Build Apps and Build Skills"
 featured: true
-date: 2020-05-07
+date: 2020-04-29
 weight: 1
 authors: 
 - Bryan Friedman
