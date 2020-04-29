@@ -23,13 +23,41 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 ### Before you begin
 > You will need a few tools before begining, these tools will be automated by the script `bin/install-cf.sh` which takes ~10 mins to finish
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-    * on mac `brew install kubectl`
-    * verify install `kubectl version --client`
+    * on mac 
+        ```
+        brew install kubectl
+        # verify install 
+        kubectl version --client
+        ```
 - We will use KinD (Kubernetes in Docker) to instantiate our cluster [Kind install instructions](https://kind.sigs.k8s.io/docs/user/quick-start/) 
-    * on mac `brew install kind`
-    * verify install `kind version`
+    * on mac 
+        ```
+        brew install kind
+        # verify install 
+        kind version
+        ```
 
-- Follow the documentation for [installing helm](https://helm.sh/docs/intro/install/).
+- [`cf cli`](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (v6.50+)
+    * on mac 
+        ```
+        brew install cloudfoundry/tap/cf-cli
+        # verify install 
+        cf version
+        ```
+- [`kapp`](https://k14s.io/#install) (v0.21.0+)
+    * on mac 
+        ```
+        brew tap k14s/tap
+        brew install ytt kapp
+        kapp --version
+        ```
+
+- [`ytt`](https://k14s.io/#install) (v0.26.0+)
+    * on mac you should have this installed from the above command, to verify:
+        ```
+        ytt version
+        ``
+
 
 Helm leverages your local Kubernetes context to operate, so it will have whatever permissions the account you're using for `kubectl` does.
 
