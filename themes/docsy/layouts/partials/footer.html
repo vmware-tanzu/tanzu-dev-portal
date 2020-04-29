@@ -1,0 +1,57 @@
+{{ $links := .Site.Params.links }}
+<footer class="bg-gray-dark py-5 d-print-none">
+<div class='container'>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-4 text-left">
+        <div class="newsletter">
+          <p class="text-white mt-0">Sign up for the developer newsletter</p>
+          <div class='btn click-to-show scroll-to-bottom'>Subscribe</div>
+          <script src="//connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
+          <form id="mktoForm_1609" class="hidden"></form>
+          <script>
+            MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
+            MktoForms2.loadForm("//connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){
+              form.onSuccess(function(values, followUpUrl) {
+                form.getFormElem().hide();
+                $('.confirmation').show();
+                return false;
+              });
+            });
+          </script>
+          <div class='confirmation' style="display:none">Done!</div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8 text-right">
+          {{ with $links }}
+          {{ with index . "developer"}}
+          {{ template "footer-links-block"  . }}
+          {{ end }}
+          {{ end }}
+        <div class='copyright-legal-links mr-3'>
+          {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} VMware, Inc </small>{{ end }}
+          {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
+          {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
+          {{ with .Site.Params.california_privacy_rights }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_california_privacy_rights" }}</a></small>{{ end }}
+        </div>
+        <a id="toggle-light-dark-mode"><span></span></a>
+
+	{{ if not .Site.Params.ui.footer_about_disable }}
+		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
+	{{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+{{ define "footer-links-block" }}
+<ul class="list-inline mb-0">
+  {{ range . }}
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="{{ .name }}" aria-label="{{ .name }}">
+    <a class="text-white" target="_blank" href="{{ .url }}">
+      <i class="{{ .icon }}"></i>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

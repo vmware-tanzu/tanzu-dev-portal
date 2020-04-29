@@ -1,0 +1,37 @@
+{{ $links := .Site.Params.links }}
+
+<section class="td-box td-box--gradient td-box--height-auto">
+	<div class='container flex flex-wrap'>
+		<div class="col-12 col-lg-6 mb-3 mb-lg-0 pl-0">
+			<div class="td-box--gray-darkest p-5 h-100">
+				<h2>Learn and Connect</h2>		
+				<p>Using or want to use {{ .Site.Title }}? Find out more here:
+				{{ with index $links "user"}}
+				{{ template "community-links-list"  . }}
+				{{ end }}
+				</p>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 pl-0">
+			<div class="td-box--gray-darkest p-5 h-100">
+				<h2>Develop and Contribute</h2>
+				<p>If you want to get more involved by contributing to {{ .Site.Title }}, join us here:
+				{{ with index $links "developer"}}
+				{{ template "community-links-list"  . }}
+				{{ end }}
+				</p>
+				<p>You can find out how to contribute to these docs in our <a href="/docs/contribution-guidelines/">Contribution Guidelines</a>.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+{{ define "community-links-list" }}
+<ul>
+ {{ range . }}
+ <li title="{{ .name }}">
+   <a target="_blank" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a> {{ .desc }}
+ </li>
+  {{ end }}
+</ul>
+{{ end }}

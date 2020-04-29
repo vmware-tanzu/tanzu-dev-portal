@@ -3,7 +3,7 @@ title: Tanzu Guides
 linkTitle: Guides
 description: >
     Getting Started Guides for Tanzu products.
-menu:
+<!-- menu:
     main:
-        weight: 1
+        weight: 1 -->
 ---

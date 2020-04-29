@@ -1,0 +1,23 @@
+{
+  "name": "tanzu-dev-portal",
+  "version": "0.1.0",
+  "description": "Tanzu Developer Portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmware-tanzu-private/tanzu-dev-portal.git"
+  },
+  "author": "VMware, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmware-tanzu-private/tanzu-dev-portal/issues"
+  },
+  "homepage": "https://github.com/vmware-tanzu-private/tanzu-dev-portal#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.0"
+  }
+}

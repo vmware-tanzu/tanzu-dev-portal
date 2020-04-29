@@ -4,6 +4,7 @@
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
 VMware
+img
 Tanzu
 [B,b]uildpacks
 [B,b]uildpack
@@ -19,7 +20,6 @@ runtime
 lifecycle
 buildpack's
 codebase
-linkTitle
 Bundler
 [R,r]epo
 Dev
@@ -48,3 +48,25 @@ templating
 GitOps
 repos
 config
+sortTitle
+[M,m]icroservice
+[M,m]icroservices
+deployable
+[B,b]ootiful
+multi-microservice
+Minibroker
+walkthrough
+[E,e]venting
+[R,r]oadmap
+RabbitMQ
+[K,k]ubeapps
+macOS
+README
+RBAC-enabled
+GKE
+HTTPS
+1e49264
+[K,k]8s
+TAS
+JPA
+[S,s]erverless

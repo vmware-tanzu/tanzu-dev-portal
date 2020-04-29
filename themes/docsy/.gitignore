@@ -1,0 +1,7 @@
+.DS_Store
+
+public/
+resources/
+node_modules/
+tech-doc-hugo
+

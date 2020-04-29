@@ -7,7 +7,7 @@ enableRobotsTXT = true
 theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
-enableGitInfo = true
+enableGitInfo = false
 
 # Language settings
 contentDir = "content"
@@ -20,7 +20,8 @@ enableMissingTranslationPlaceholders = true
 
 [taxonomies]
 featured = "featured"
-category = "categories"
+pattern = "patterns"
+topic = "topics"
 tag = "tags"
 
 # Highlighting config
@@ -34,7 +35,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+blog = "/:section/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
 [blackfriday]
@@ -79,15 +80,29 @@ anchor = "smart"
 # Everything below this are Site Params
 
 [params]
-copyright = "VMware Tanzu"
-privacy_policy = "/privacy"
+copyright = "VMware, Inc"
+privacy_policy = "https://www.vmware.com/help/privacy.html"
+terms_of_use = "https://www.vmware.com/help/legal.html"
+california_privacy_rights = "https://www.vmware.com/help/privacy/california-privacy-rights.html"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Releases"
+version_menu = "Get Started"
+
+[[params.versions]]
+	version = "Guides"
+	url = "/guides"
+
+[[params.versions]]
+	version = "Samples"
+	url = "/samples"
+
+[[params.versions]]
+	version = "Videos"
+	url = "/videos"
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
@@ -97,7 +112,7 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
 # current doc set.
-version = "0.0"
+# version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
@@ -147,15 +162,15 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name = "User mailing list"
-	url = "https://pivotal.io/newsletter-subscription"
+	url = "https://tanzu.vmware.com/newsletter-subscription"
 	icon = "fa fa-envelope"
         desc = "Discussion and help from your fellow users"
-[[params.links.user]]
+[[params.links.developer]]
 	name ="Twitter"
 	url = "https://twitter.com/VMwareTanzu"
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]]
+[[params.links.developer]]
 	name = "Stack Overflow"
 	url = "https://stackoverflow.com/questions/tagged/vmware-tanzu"
 	icon = "fab fa-stack-overflow"
@@ -171,8 +186,8 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "https://slack.com/vmware-tanzu"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers"
-[[params.links.developer]]
-	name = "Developer mailing list"
-	url = "https://tanzu.io/mail"
-	icon = "fa fa-envelope"
-        desc = "Discuss development issues around the project"
+#[[params.links.developer]]
+#	name = "Developer mailing list"
+#	url = "https://tanzu.vmware.com/newsletter-subscription"
+#	icon = "fa fa-envelope"
+#       desc = "Discuss development issues around the project"
