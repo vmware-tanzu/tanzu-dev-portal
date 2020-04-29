@@ -45,6 +45,11 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         cf version
         ```
 - [Bosh CLI](https://bosh.io/docs/cli-v2-install/) the install script will use Bosh CLI to generate certificates, keys, and passwords so you don't kill a lot of time generatng them
+    * on mac
+        ```
+        brew install cloudfoundry/tap/bosh-cli
+        ```
+        
 - [kapp](https://k14s.io/#install) (v0.21.0+) will aid the script to deploy cf-for-k8s to your cluster
     * on mac 
         ```
