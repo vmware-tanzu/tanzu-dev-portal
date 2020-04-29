@@ -1,8 +1,13 @@
 ---
-title:  "What is Helmfile ?"
+title:  "Helmfile: What Is It?"
 date:   2020-02-10
 author: Paul Czarkowski
 tags: ["kubernetes", "containers", "helm", "helmfile"]
+sortTitle: "Helm"
+weight: 1
+topics: ["kubernetes"]
+patterns: ["deployment"]
+
 ---
 
 [Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.
