@@ -5,7 +5,7 @@ description: >
 summary:
 - Deploy a multi-microservice application with Concourse.
 topics:
-- CI/CD
+- CI-CD
 - Spring
 tags:
 - Spring

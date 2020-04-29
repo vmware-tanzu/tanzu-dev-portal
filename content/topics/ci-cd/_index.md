@@ -1,8 +1,9 @@
 ---
-title: Continuous Integration and Continuous Delivery
+title: Continuous Integration & Continuous Delivery
 linkTitle: CI/CD
 weight: 6
-topic: CI/CD
+topic: CI-CD
+icon: cicd
 description: >
     Main topic page about CI/CD.
 menu:

@@ -2,6 +2,7 @@
 title: Containers
 weight: 1
 topic: Containers
+icon: containers
 description: >
     Main topic page about containers.
 menu:

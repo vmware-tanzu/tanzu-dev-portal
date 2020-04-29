@@ -128,11 +128,6 @@ offlineSearch = false
     name = "Learn"
     weight = 1
 
-  [[menu.main]]
-    identifier = "topics"
-    name = "Topics"
-    weight = 2
-
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
