@@ -21,7 +21,7 @@ Cloud Foundry increases developer productivity, saving significant time and reso
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
-
+> You will need a few tools before begining, these tools will be automated by the script `bin/install-cf.sh` which takes ~10 mins to finish
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac `brew install kubectl`
     * verify install `kubectl version --client`
