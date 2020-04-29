@@ -1,8 +1,8 @@
 ---
 title: "A Place to Build Apps and Build Skills"
 featured: true
-date: 2020-04-29
 weight: 1
+date: 2020-04-29
 authors: 
 - Bryan Friedman
 ---
@@ -20,7 +20,7 @@ It can sometimes feel like that. Change is hard, and you’re already used to a 
 What it means for you specifically depends on your situation. Are you living in a land of Java servlets and app server configurations? Are you in a world where Windows developers deploy to the GAC and make registry entries? Or maybe you’ve already used containers before, and now you’re curious about Kubernetes but having a hard time seeing how it would make your life as a developer any easier. 
 
 No matter what your experience with modern app development is, we want to help you learn more. In this space, we’ll be collecting and publishing lots of different materials you can immediately use to refine your skills and explore the technology around modern app development.
-
+<!--more-->
 ## Site features
 
 There are plenty of ways to navigate the site and find what you’re looking for. Explore by topic or search for a particular piece of tech you’re interested in. Follow a step-by-step guide, watch a video to see how it’s done, or start with a code sample.

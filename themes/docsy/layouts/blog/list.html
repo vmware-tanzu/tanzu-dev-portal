@@ -2,20 +2,56 @@
 
 {{ partial "hero.html" . }}
 
-<div class="td-content">
+
 	<div class='container'>
-		{{ .Content }}
-		<br/>
-	        {{ partial "guides-index.html" . }}
-		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-			{{ partial "feedback.html" .Site.Params.ui.feedback }}
-			<br />
+
+{{ if .Parent.IsHome }}
+{{ $.Scratch.Set "blog-pages" (where .Site.RegularPages "Section" .Section) }}
+{{ else }}
+{{$.Scratch.Set "blog-pages" .Pages }}
+{{ end }}
+{{ $pag := .Paginate (( $.Scratch.Get "blog-pages").GroupByDate "2006")}}
+{{ $pageGroups := $pag.PageGroups}}
+{{ if eq $pag.PageNumber 1 }}
+{{ end }}
+
+		{{ range $pageGroups }}
+			{{ range .Pages }}
+
+			<div class='container pt-5'>
+				<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+				<p>{{ .Description }}</p>
+	
+				<div class="short-gradient-line mb-4"></div>
+				{{ partial "post-meta.html" . }}
+	
+			</div>
+			
+			<!-- {{ partial "featured-image.html" (dict "p" . "w" 250 "h" 125 "class" "float-left mr-3 pt-1 d-none d-md-block") }} -->
+		
+			<div class="container py-1 border-bottom">
+				<div class="">
+					<p class="pt-0 mt-0">{{ .Summary }}</p>
+					<p class="pt-0"><a href="{{ .RelPermalink }}">{{ T "ui_read_more"}}</a></p>
+				</div>
+		
+				{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+					{{ partial "feedback.html" .Site.Params.ui.feedback }}
+					<br />
+				{{ end }}
+				{{ if (.Site.DisqusShortname) }}
+					<br />
+					{{ partial "disqus-comment.html" . }}
+				{{ end }}
+				<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+			</div>
+
+			{{ end }}
 		{{ end }}
-		{{ if (.Site.DisqusShortname) }}
-			<br />
-			{{ partial "disqus-comment.html" . }}
-		{{ end }}
-		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+
+		<div class="container py-lg-5">
+			{{ template "_internal/pagination.html" . }}
+		</div>
 	</div>
-</div>
+
 {{ end }}

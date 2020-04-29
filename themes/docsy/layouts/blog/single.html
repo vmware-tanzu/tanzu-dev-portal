@@ -8,17 +8,8 @@
 			<p>{{ .Description }}</p>
 
 			<div class="short-gradient-line mb-4"></div>
-      <h4>
-		<!-- {{ .Params.tags }} | -->
-		
-		{{- range $index, $element := .Params.authors }}
-			{{ if gt $index 0 }} & {{ end }}
-			<a href="/authors/{{ urlize . }}">{{ . }}</a>
-		{{ end }}
 
-		|
-        {{ .Date.Format "January 2, 2006" }}
-      </h4>   
+			{{ partial "post-meta.html" . }} 
 
 		</div>
 	</div>

@@ -1,0 +1,11 @@
+<h4>
+    <!-- {{ .Params.tags }} | -->
+
+    {{- range $index, $element := .Params.authors }}
+        {{ if gt $index 0 }} & {{ end }}
+        <a href="/authors/{{ urlize . }}">{{ . }}</a>
+    {{ end }}
+
+    |
+    {{ .Date.Format ($.Param "time_format_blog") }} 
+</h4>   
