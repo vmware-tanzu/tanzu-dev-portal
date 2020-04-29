@@ -13,7 +13,7 @@
 			</li>
 			{{ end }}
 			{{ $p := . }}
-			{{ $url := urls.Parse .URL }}
+			{{ $url := urls.Parse .Permalink }}
 			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
 			{{ range .Site.Menus.main }}
 				{{ if .HasChildren }}
@@ -23,7 +23,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						{{ range .Children }}
-						<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+						<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .Permalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
 						{{ end }}
 					</div>
 				</li>
@@ -33,7 +33,7 @@
 					{{ with .Page }}
 					{{ $active = or $active ( $.IsDescendant .)  }}
 					{{ end }}
-					<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
+					<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .Permalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
 				</li>
 				{{ end }}
 			{{ end }}
