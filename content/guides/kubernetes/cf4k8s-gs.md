@@ -29,7 +29,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         # verify install 
         kubectl version --client
         ```
-- We will use KinD (Kubernetes in Docker) to instantiate our cluster [Kind install instructions](https://kind.sigs.k8s.io/docs/user/quick-start/) 
+- KinD (Kubernetes in Docker) to instantiate your local cluster [Kind install instructions](https://kind.sigs.k8s.io/docs/user/quick-start/) 
     * on mac 
         ```
         brew install kind
@@ -37,14 +37,15 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         kind version
         ```
 
-- [`cf cli`](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (v6.50+)
+- [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (v6.50+) to talk to Cloud Foundry
     * on mac 
         ```
         brew install cloudfoundry/tap/cf-cli
         # verify install 
         cf version
         ```
-- [`kapp`](https://k14s.io/#install) (v0.21.0+)
+- [Bosh CLI](https://bosh.io/docs/cli-v2-install/) the install script will use Bosh CLI to generate certificates, keys, and passwords so you don't kill a lot of time generatng them
+- [kapp](https://k14s.io/#install) (v0.21.0+) will aid the script to deploy cf-for-k8s to your cluster
     * on mac 
         ```
         brew tap k14s/tap
@@ -52,25 +53,23 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         kapp --version
         ```
 
-- [`ytt`](https://k14s.io/#install) (v0.26.0+)
+- [`ytt`](https://k14s.io/#install) (v0.26.0+) will help the script create templates to deploy cf-for-k8s
     * on mac you should have this installed from the above command, to verify:
         ```
         ytt version
         ```
+## Clone the CF for K8s repo
+Clone the repo to preffered location and cd into it.
+```
+git clone https://github.com/cloudfoundry/cf-for-k8s.git
 
-
-Helm leverages your local Kubernetes context to operate, so it will have whatever permissions the account you're using for `kubectl` does.
-
-_If you read about Helm and come across references for `tiller`, previous versions (before version 3) required an extra component installed on the Kubernetes cluster._
+cd cf-for-k8s
+```        
 
 ### Setup your local k8s cluster 
 You will need a 5 node kuberntes cluster with a minimum of 4 CPU, 8GB memory per node
 ```
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-"bitnami" has been added to your repositories
-$ helm repo update
-Hang tight while we grab the latest from your chart repositories...
-...Successfully got an update from the "bitnami" chart repository
+kind create cluster --config=./deploy/kind/cluster.yml
 ```
 Now that you have a repo connected, you need to see what charts you have available to deploy.
 ```
