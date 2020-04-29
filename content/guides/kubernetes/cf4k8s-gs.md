@@ -21,6 +21,7 @@ Cloud Foundry increases developer productivity, saving significant time and reso
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
+
 > You will need a few tools before begining, these tools will be automated by the script `bin/install-cf.sh` which takes ~10 mins to finish
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
@@ -44,13 +45,13 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         # verify install 
         cf version
         ```
-- [Bosh CLI](https://bosh.io/docs/cli-v2-install/) the install script will use Bosh CLI to generate certificates, keys, and passwords so you don't kill a lot of time generatng them
+- [Bosh CLI](https://bosh.io/docs/cli-v2-install/) the `./hack/generate-values.sh` script will use the Bosh CLI to generate certificates, keys, and passwords in the file `./cf-install-values.yml`
     * on mac
         ```
         brew install cloudfoundry/tap/bosh-cli
         ```
-        
-- [kapp](https://k14s.io/#install) (v0.21.0+) will aid the script to deploy cf-for-k8s to your cluster
+
+- [kapp](https://k14s.io/#install) (v0.21.0+) will aid you to deploy cf-for-k8s to your cluster
     * on mac 
         ```
         brew tap k14s/tap
@@ -58,12 +59,13 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         kapp --version
         ```
 
-- [`ytt`](https://k14s.io/#install) (v0.26.0+) will help the script create templates to deploy cf-for-k8s
+- [`ytt`](https://k14s.io/#install) (v0.26.0+) will help create templates to deploy cf-for-k8s
     * on mac you should have this installed from the above command, to verify:
         ```
         ytt version
         ```
-## Clone the CF for K8s repo
+### Clone the CF for K8s repo
+
 Clone the repo to preffered location and cd into it.
 ```
 git clone https://github.com/cloudfoundry/cf-for-k8s.git
@@ -71,42 +73,44 @@ git clone https://github.com/cloudfoundry/cf-for-k8s.git
 cd cf-for-k8s
 ```        
 
-### Setup your local k8s cluster 
-You will need a 5 node kuberntes cluster with a minimum of 4 CPU, 8GB memory per node
+### Setup your local k8s cluster with KinD  
+
+Create your cluster using the the config yaml from the repo above
 ```
 kind create cluster --config=./deploy/kind/cluster.yml
 ```
-Now that you have a repo connected, you need to see what charts you have available to deploy.
+Point your kubeconfig to the cluster you created above
 ```
-$ helm search repo bitnami
-NAME                            	CHART VERSION	APP VERSION            	DESCRIPTION
-bitnami/bitnami-common          	0.0.8        	0.0.8                  	Chart with custom templates used in Bitnami cha...
-bitnami/airflow                 	5.0.3        	1.10.9                 	Apache Airflow is a platform to programmaticall...
-bitnami/apache                  	7.3.9        	2.4.41                 	Chart for Apache HTTP Server
----- Truncated ----
+kubectl cluster-info --context kind-kind
 ```
-You can see a whole list of charts, but here's the first three. They show the name of the chart, the versions, and the descriptions. If you notice there's both a chart version and an app version. This is because a chart may be updated and changed separately from the underlying application it is deploying.
 
-### Time to Deploy a Chart (Create a Release)
+### Generate the yaml used to deploy CF for k8s
 
-Now that you have helm configured with a repo, you can deploy a chart. In helm lingo that's called _creating a release_. In this example, you'll deploy a pretty simple one like nginx. You can supply a name for your app like you're going to do here (my app) or you can use the `--generate-name` CLI option to have helm generate one for you.
-```yaml
-$ helm install my-app bitnami/nginx
-NAME: my-app
-LAST DEPLOYED: Mon Mar 9 07:37:28 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-NOTES:
-Get the NGINX URL:
+In this script you use `vcap.me` as your CF domain with the flag `-d`, if not installing locally you would use the domain you wanted for your Cloud Foundry instance.
 
-  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
-        Watch the status with: 'kubectl get svc --namespace default -w my-app-nginx'
+The `./hack/generate-values.sh` script will generate certificates, keys, passwords, and configuration needed to deploy into `./cf-install-values.yml'
+```
+./hack/generate-values.sh -d vcap.me > ./cf-install-values.yml
+```
 
-  export SERVICE_IP=$(kubectl get svc --namespace default my-app-nginx --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
-  echo "NGINX URL: http://$SERVICE_IP/"
-  ```
+### Time to Deploy CF for k8s 
+
+Deploy CF for k8s using the `./cf-install-values.yml` file created above. 
+
+Also, to successfully install locally you remove superflous requirements using the template `config-optional/remove-resource-requirements.yml`.
+
+Finally, we would like to open up the nodeport in our local k8s cluster for our ingress gateway with `config-optional/use-nodeport-for-ingress.yml`.
+```
+kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f config-optional/remove-resource-requirements.yml -f config-optional/use-nodeport-for-ingress.yml)
+```
+
+---
+
+### Validate the deployment
+
+
+
+
 
 After your release is successfully created, you'll see an output like this with the name, namespace, status, etc. The `NOTES` section has specific information about your install–that's because it's generated by helm using a template too.
 
