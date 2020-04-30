@@ -1,15 +1,5 @@
 #!/bin/bash
 
-if [[ -z "${HUGO_OPTIONS}" ]]; then
-  echo "Set the HUGO_OPTIONS env variable."
-  exit 1
-fi
-
-if [[ -z "${MUFFET_OPTIONS}" ]]; then
-  echo "Set the MUFFET_OPTIONS env variable."
-  exit 1
-fi
-
 LINE='##############################'
 MSGS='####### start action #########'
 
