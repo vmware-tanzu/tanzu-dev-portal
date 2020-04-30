@@ -11,13 +11,15 @@ patterns:
 
 ---
 
-### What is `pack`?
+### What Is `pack`?
 
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../cnb-what-is).
 
-### Before you Begin
+### Before You Begin
 
-- Install [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community). The `pack` CLI requires the Docker daemon, so you'll need to have this installed and running locally. 
+There are a few things you need to do before getting started with `pack`:
+
+- Install [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community). The `pack` CLI requires the Docker daemon, so you'll need to have that installed and running locally. 
 
 - Check out [Containers 101](https://kube.academy/courses/containers-101) on KubeAcademy, particularly if you've never worked with containers or Docker before.
 
@@ -59,9 +61,8 @@ Visit `localhost:8080` in your favorite browser to see the app running.
 
 #### Publish Image to Repository
 
-If you are logged in to a container registry from your local machine via Docker Desktop, you can build your image and publish to a remote registry at the same time using the `--publish` option. Just make sure to clarify the `username` before the app name:
+If you are logged into a container registry from your local machine via Docker Desktop, you can build your image and publish to a remote registry at the same time using the `--publish` option. Just make sure to clarify the `username` before the app name:
 
 ```
 pack build username/myapp -p samples/apps/java-maven --publish
 ```
-
