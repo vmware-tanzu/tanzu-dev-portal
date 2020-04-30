@@ -12,7 +12,7 @@ patterns: ["deployment"]
 
 [Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.
 
-_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](helm-what-is) guide._
+_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](../helm-what-is) guide._
 
 In addition to the Templating and Packaging Helm gives you for your Kubernetes manifests, Helmfile provides a way to apply GitOps style CI/CD methodologies over your Helm charts by:
 
