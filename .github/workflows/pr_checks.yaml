@@ -26,5 +26,4 @@ jobs:
         env:
           HUGO_OPTIONS: "" #"--buildDrafts"
           MUFFET_OPTIONS: "-e 'https?'" # Excludes external links
-  }
     
