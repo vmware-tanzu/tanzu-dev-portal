@@ -14,7 +14,7 @@ patterns:
 
 ### What is Helm?
 
-[Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [What is Helm](/guides/containers/kubernetes/helm-what-is/).
+[Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [What is Helm](../helm-what-is/).
 
 In this guide you'll deploy a simple application using Helm to a Kubernetes cluster.
 

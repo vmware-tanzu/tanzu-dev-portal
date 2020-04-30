@@ -1,7 +1,7 @@
 ---
 title: Eventing Pattern
 featured: true
-weight: 2
+weight: 3
 description: >
     Introduction To Event-Driven Architecture
 ---
@@ -20,4 +20,4 @@ Furthermore, additional metadata could be added to these messages, for example i
 
 ![img](/images/patterns/eventing/eda-03.png)
 
-If you're looking to get started with eventing, make sure to check out the guides below such as [Getting Started With RabbitMQ](/guides/eventing/rabbitmq-gs), [Getting Started With Kafka](/guides/eventing/scs-gs), or if you're a Spring developer, [Getting Started With Spring Cloud Stream](). These guides will walk you through the basics of interacting with some popular message brokers and show what tools are available in these ecosystems. 
+If you're looking to get started with eventing, make sure to check out the guides below such as [Getting Started With RabbitMQ](), [Getting Started With Kafka](), or if you're a Spring developer, [Getting Started With Spring Cloud Stream](). These guides will walk you through the basics of interacting with some popular message brokers and show what tools are available in these ecosystems. 

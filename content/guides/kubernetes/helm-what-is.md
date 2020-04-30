@@ -35,4 +35,4 @@ As of Helm 3, all of the necessary data is stored locally in your helm client co
 
 ## How Can I Use It?
 
-If you're ready to start using helm, check out our guide on [Getting Started With Helm](/guides/containers/kubernetes/gs-with-helm).
+If you're ready to start using helm, check out our guide on [Getting Started With Helm](../helm-gs).
