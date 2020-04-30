@@ -20,8 +20,6 @@ Once you have the site successfully running locally, you may publish it to the s
 
 ```
 npm install
-sudo npm install -D --save autoprefixer
-sudo npm install -D --save postcss-cli
 hugo
 cf push
 ```
