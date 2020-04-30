@@ -9,8 +9,8 @@ https?
 HTTPS?
 localhost:[[:digit:]]*
 localhost:8080
+Kubernetes(-native)?
 [B,b]uildpack(s|'s)?
-[K,k]ubernetes(-native)?
 [M,m]inikube
 [R,r]epos?
 kpack
