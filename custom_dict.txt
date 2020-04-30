@@ -73,5 +73,13 @@ vSphere
 NSX
 TAS
 RabbitMQ
+modularity
+Terraform
+fileshare
+s3
+JSON
+Czarkowski('s)?
+[H,h]elmfiles?
+[T,t]emplating
 
 1e49264
