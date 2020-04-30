@@ -26,7 +26,7 @@ As luck would have it, Spring Cloud Gateway benefits from the entirety of the Sp
 
 ## How Does It Work? 
 
-As mentioned, Spring Cloud Gateway is a library for building an API Gateway, so it just looks like another Spring Boot application. If you're a Spring developer today, you'll find that it's very easy to [get started with Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-gs) in as little as just a few lines of code.
+As mentioned, Spring Cloud Gateway is a library for building an API Gateway, so it just looks like another Spring Boot application. If you're a Spring developer today, you'll find that it's very easy to [get started with Spring Cloud Gateway](../scg-gs) in as little as just a few lines of code.
 
 Spring Cloud Gateway is intended to sit between a requester and a resource that's being requested, intercepting, analyzing, and modifying every request. First this means that you can route requests based on their context. Did a developer include a header indicating an API version? We can route that request to the appropriately versioned backend. Does the request require sticky sessions? The gateway can keep track of each user's session, even if your backend can't.
 
@@ -40,4 +40,4 @@ Since every request is going through your gateway, this means that you get a few
 
 ## How Can I Use It?
 
-Check out our guide on [Getting Started With Spring Cloud Gateway](/guides/spring/spring-cloud-gateway/scg-gs), as well as the [great content on spring.io](https://spring.io/projects/spring-cloud-gateway).
+Check out our guide on [Getting Started With Spring Cloud Gateway](../scg-gs), as well as the [great content on spring.io](https://spring.io/projects/spring-cloud-gateway).
