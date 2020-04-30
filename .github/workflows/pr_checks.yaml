@@ -17,6 +17,14 @@ jobs:
   broken-link-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: marccampbell/hugo-linkcheck-action@v0.1.3
-        name: Hugo Broken Link Check
+      - uses: actions/checkout@v1
+        name: Checkout
+        with:
+          fetch-depth: 1
+      - uses: ./.github/actions/link-check
+        name: Link Check
+        env:
+          HUGO_OPTIONS: "" #"--buildDrafts"
+          MUFFET_OPTIONS: "-e 'https?'" # Excludes external links
+  }
     
