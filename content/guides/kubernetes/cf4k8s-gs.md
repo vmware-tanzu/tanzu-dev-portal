@@ -14,19 +14,21 @@ patterns:
 
 ### What is cf-for-k8s?
 
-[cf-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) Is a new implementation of Cloud Foundry on Kubernetes. 
+[CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) is a new implementation of Cloud Foundry on Kubernetes. 
 
 Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
 
-Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a dev enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint. CF takes care of the depenedencies and can be configured to bind to a db or services, and connects to a marketplace. Operators don't have to worry about wiring the backend, multitenancy is simple to configure, scaling is one command, and it is a secure platform. 
+Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a dev enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint using most popular languages. 
 
-There are many more features to Cloud Foundry and CF for K8s adds a higher level of abstraction and removes the sharp learning curve for teams to adopt Kubernetes, you don't have to build a platform because CF-for-k8s is it. Kubernetes also adds new possibilities to CF it opens up the massive Kubernetes ecosystem, it installs in minutes, and it's light weight.
+CF takes care of the depenedencies and can be configured to bind to a db or services, and connects to a marketplace. Operators don't have to worry about wiring the backend, multitenancy is simple to configure, scaling is one command, and built to be secure. There are many more features to Cloud Foundry. 
+
+CF for K8s adds a higher level of abstraction and removes the sharp learning curve for teams to adopt Kubernetes,  don't build a platform use CF-for-k8s. Kubernetes also adds new possibilities to CF it opens up the massive Kubernetes ecosystem, it installs in minutes, and it's light weight.      
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
 
-> You will need a few tools before begining, these tools will be automated by the script `bin/install-cf.sh` which takes ~10 mins to finish
+> You will need a few tools before begining, many of you might already have, once set up installation takes 10 mins or less.
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
         ```
