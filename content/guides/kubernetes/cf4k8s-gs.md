@@ -14,9 +14,13 @@ patterns:
 
 ### What is cf-for-k8s?
 
-[cf-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization. The software was originally developed by VMware, transferred to Pivotal Software but brought back into VMware at the end of 2019 with VMware's purchase of Pivotal.
+[cf-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) Is a new implementation of Cloud Foundry on Kubernetes. 
 
-Cloud Foundry increases developer productivity, saving significant time and resources while making companies more competitive.
+Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
+
+Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a dev enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint. CF takes care of the depenedencies and can be configured to bind to a db or services, and connects to a marketplace. Operators don't have to worry about wiring the backend, multitenancy is simple to configure, scaling is one command, and it is a secure platform. 
+
+There are many more features to Cloud Foundry and CF for K8s adds a higher level of abstraction and removes the sharp learning curve for teams to adopt Kubernetes, you don't have to build a platform because CF-for-k8s is it. Kubernetes also adds new possibilities to CF it opens up the massive Kubernetes ecosystem, it installs in minutes, and it's light weight.
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
