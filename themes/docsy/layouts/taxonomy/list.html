@@ -1,12 +1,18 @@
 {{ define "main" }}
-<div class="td-content pt-5">
+
+{{ partial "hero.html" . }}
+
+<div class="td-content">
 	<div class='container'>
-		<h1>{{ .Title }}</h1>
-    <br/>
-		
-		{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
 		{{ .Content }}
-	        {{ partial "section-index.html" . }}
+		<br/>
+
+		{{ if eq .Data.Plural "topics" }}
+			{{ partial "topics-index.html" . }}
+		{{ else }}
+			{{ partial "boxes-index.html" . }}
+		{{ end }}
+
 		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
 			{{ partial "feedback.html" .Site.Params.ui.feedback }}
 			<br />
@@ -19,3 +25,4 @@
 	</div>
 </div>
 {{ end }}
+

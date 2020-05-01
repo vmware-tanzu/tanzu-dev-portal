@@ -1,11 +1,14 @@
 ---
 title: Containers
 weight: 1
-topic: containers
+topic: Containers
+icon: containers
 description: >
     Main topic page about containers.
+menu:
+    main:
+        parent: "topics"
+        weight: 3
 ---
 
-<!-- Basic intro on containers... -->
-
-<!-- A great place to get started is with [KubeAcademy](https://kube.academy) and the amazing [Containers 101]("https://kube.academy/courses/containers-101") course. -->
+#### New to containers? Take [Containers 101]("https://kube.academy/courses/containers-101") on [KubeAcademy](https://kube.academy).

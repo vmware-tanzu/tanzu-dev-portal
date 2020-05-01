@@ -1,13 +1,12 @@
-name: Spell Check
+name: Check Spelling and Broken Links
 on:
   push:
     branches-ignore:
       - master
 
 jobs:
-  spellcheck:
+  spell-check:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
         name: Checkout
@@ -15,3 +14,17 @@ jobs:
           fetch-depth: 1
       - uses: ./.github/actions/spell-check
         name: Spell Check
+  broken-link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        name: Checkout
+        with:
+          fetch-depth: 1
+          submodules: true
+      - uses: ./.github/actions/link-check
+        name: Link Check
+        env:
+          HUGO_OPTIONS: "" #"--buildDrafts"
+          MUFFET_OPTIONS: "-v -e 'https?'" # Excludes external links
+    

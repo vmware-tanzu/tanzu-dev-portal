@@ -8,11 +8,12 @@ topics:
 - spring
 - messaging-and-integration
 tags:
-- spring
-- rest
+- Spring
+- REST
 patterns:
-- api
+- API
 repo: https://github.com/joshlong/the-spring-rest-stack
+readme: true
 ---
 
 

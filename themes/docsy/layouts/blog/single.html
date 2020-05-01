@@ -1,33 +1,41 @@
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
-  <head>
-    {{ partial "head.html" . }}
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-  </head>
-  <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} guide" data-section="{{ .Parent.Params.title | lower }}">
-    <header>
-      {{ partial "navbar.html" . }}
-    </header>
-    <div class="container-fluid td-outer">
-      <div class="td-main">
-        <div class="row flex-xl-nowrap container mx-auto">
-          <div class="col-12 col-md-3 col-lg-3 col-xl-3 td-sidebar d-print-none">
-          	<br/>
-            {{ partial "sidebar.html" . }}
-          </div>
-          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
-            {{ partial "toc.html" . }}
-          </div>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5 mt-lg-5 pt-lg-5" role="main">
-          	<br/>
-            {{ partial "version-banner.html" . }}
-            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-            {{ block "main" . }}{{ end }}
-            {{ .Content }}
-          </main>
-        </div>
-      </div>
-      {{ partial "footer.html" . }}
-    </div>
-    {{ partial "scripts.html" . }}
-  </body>
-</html>
+{{ define "main" }}
+
+<div class="td-main ">
+	<div class="bg-gray-dark mt-lg-5 mt-0 pt-lg-5 pb-2">
+		<div class='container'>
+			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<h1>{{ .Title }}</h1>
+			<p>{{ .Description }}</p>
+
+			<div class="short-gradient-line mb-4"></div>
+      <h4>
+		<!-- {{ .Params.tags }} | -->
+		
+		{{- range $index, $element := .Params.authors }}
+			{{ if gt $index 0 }} & {{ end }}
+			<a href="/authors/{{ urlize . }}">{{ . }}</a>
+		{{ end }}
+
+		|
+        {{ .Date.Format "January 2, 2006" }}
+      </h4>   
+
+		</div>
+	</div>
+	<div class="container py-2">
+		<div class="">
+				{{ .Content }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}

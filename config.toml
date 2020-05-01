@@ -23,6 +23,7 @@ featured = "featured"
 pattern = "patterns"
 topic = "topics"
 tag = "tags"
+author = "authors"
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -88,22 +89,6 @@ california_privacy_rights = "https://www.vmware.com/help/privacy/california-priv
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
 
-# Menu title if your navbar has a versions selector to access old versions of your site.
-# This menu appears only if you have at least one [params.versions] set.
-version_menu = "Get Started"
-
-[[params.versions]]
-	version = "Guides"
-	url = "/guides"
-
-[[params.versions]]
-	version = "Samples"
-	url = "/samples"
-
-[[params.versions]]
-	version = "Videos"
-	url = "/videos"
-
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
 # Set this flag to "true" if you want to display the banner.
@@ -135,6 +120,16 @@ algolia_docsearch = false
 # Enable Lunr.js offline search
 offlineSearch = false
 
+[menu]
+  [[menu.main]]
+    identifier = "sections"
+    name = "Learn"
+    weight = 1
+
+# Menu title if your navbar has a versions selector to access old versions of your site.
+# This menu appears only if you have at least one [params.versions] set.
+#version_menu = "Get Started"
+
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.
@@ -153,7 +148,7 @@ footer_about_disable = false
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
@@ -165,27 +160,32 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "https://tanzu.vmware.com/newsletter-subscription"
 	icon = "fa fa-envelope"
         desc = "Discussion and help from your fellow users"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name ="Twitter"
 	url = "https://twitter.com/VMwareTanzu"
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
 [[params.links.developer]]
+	name = "YouTube"
+	url = "https://www.youtube.com/VMwareTanzu"
+	icon = "fab fa-youtube"
+    desc = "Watch video demos of tech in action"
+[[params.links.developer]]
 	name = "Stack Overflow"
 	url = "https://stackoverflow.com/questions/tagged/vmware-tanzu"
 	icon = "fab fa-stack-overflow"
         desc = "Practical questions and curated answers"
-# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
 	url = "https://github.com/vmware-tanzu"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
-[[params.links.developer]]
-	name = "Slack"
-	url = "https://slack.com/vmware-tanzu"
-	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
+#[[params.links.developer]]
+#	name = "Slack"
+#	url = "https://slack.com/vmware-tanzu"
+#	icon = "fab fa-slack"
+#        desc = "Chat with other project developers"
 #[[params.links.developer]]
 #	name = "Developer mailing list"
 #	url = "https://tanzu.vmware.com/newsletter-subscription"

@@ -2,9 +2,10 @@
 title: Spring
 weight: 1
 tags:
-- spring
+- Spring
 description: >
-    Main topic page about Spring.
+    Main guides page about Spring.
+layout: single
 ---
 
 Basic intro to Spring...

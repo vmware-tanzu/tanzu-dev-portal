@@ -5,10 +5,11 @@ description: >
 summary:
 - Deploy a multi-microservice application with Concourse.
 topics:
-- ci-cd
-- spring
+- CI-CD
+- Spring
 tags:
-- spring
-- concourse
+- Spring
+- Concourse
 repo: https://github.com/Pivotal-Field-Engineering/s1p-concourse-spring-music
+readme: true
 ---
