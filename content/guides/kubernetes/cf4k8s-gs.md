@@ -97,6 +97,20 @@ The `./hack/generate-values.sh` script will generate certificates, keys, passwor
 ```
 ./hack/generate-values.sh -d vcap.me > ./cf-install-values.yml
 ```
+Append the app_registry credentials to your DockerHub registry to the bottom of the `./cf-install-values.yml` replacing with your information. You can copy/paste  or use the following command.
+> Note - don't lave out the quotes and enter the repeated username is not a typo, it's the current requirement. 
+
+> Note2 - If you want to use another registry check out the [instructions ](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md)
+
+```
+cat >> cf-install-values.yml << EOL
+app_registry:
+  hostname: https://index.docker.io/v1/
+  repository: "<dockerhub-username>"
+  username: "<dockerhub-username>"
+  password: "<dockerhub-password>"
+EOL
+```
 
 ### Install a metrics-server
 Metrics Server is a scalable source of container resource metrics for Kubernetes built-in autoscaling pipelines, making it easier to debug autoscaling pipelines.
@@ -170,3 +184,14 @@ to delete the KinD cluster
 ```
 kind delete cluster
 ```
+
+
+## Next Steps
+
+Learn more about Kubeapps with the links below:
+
+- [Detailed installation instructions](https://github.com/kubeapps/kubeapps/blob/master/chart/kubeapps/README.md)
+- [Deploying Operators](https://github.com/kubeapps/kubeapps/blob/master/docs/user/operators.md)
+- [Kubeapps Dashboard documentation]([dashboard.md](https://github.com/kubeapps/kubeapps/blob/master/docs/user/dashboard.md))
+- [Kubeapps components](https://github.com/kubeapps/kubeapps/blob/master/docs/architecture/overview.md)
+- [Roadmap](https://github.com/kubeapps/kubeapps/wiki/Roadmap)
