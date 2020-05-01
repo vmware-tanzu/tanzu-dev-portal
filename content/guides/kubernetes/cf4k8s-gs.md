@@ -1,5 +1,5 @@
 ---
-title:  "CF-for-k8s: Getting Started with Deploying CF-for-k8s locally on Kubernetes"
+title:  "CF-for-k8s: Getting Started CF-for-k8s on Kubernetes"
 sortTitle: "cf-for-k8s"
 weight: 2
 topics:
@@ -10,7 +10,7 @@ patterns:
 - deployment
 ---
 
-## Getting Started with CF-for-k8s: Deploying CF-for-k8s developer platform on Kubernetes
+## CF-for-k8s: Getting Started CF-for-k8s on Kubernetes
 
 ### What is cf-for-k8s?
 
@@ -18,17 +18,18 @@ patterns:
 
 Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
 
-Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a dev enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint using most popular languages. 
+Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a developer enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint using most major languages. 
 
 CF takes care of the depenedencies and can be configured to bind to a db or services, and connects to a marketplace. Operators don't have to worry about wiring the backend, multitenancy is simple to configure, scaling is one command, and built to be secure. There are many more features to Cloud Foundry. 
 
-CF for K8s adds a higher level of abstraction and removes the sharp learning curve for teams to adopt Kubernetes,  don't build a platform use CF-for-k8s. Kubernetes also adds new possibilities to CF it opens up the massive Kubernetes ecosystem, it installs in minutes, and it's light weight.      
+CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes,  don't build a platform if you can use CF-for-k8s. Kubernetes also adds new possibilities to CF openning up the massive Kubernetes ecosystem, installing in minutes, and light weight.      
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
 
 > You will need a few tools before begining, many of you might already have, once set up installation takes 10 mins or less.
+
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
         ```
@@ -107,9 +108,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 
 Deploy CF for k8s using the `./cf-install-values.yml` file created above. 
 
-Also, to successfully install locally you remove superflous requirements using the template `config-optional/remove-resource-requirements.yml`.
-
-Finally, we would like to open up the nodeport in our local k8s cluster for our ingress gateway with `config-optional/remove-ingressgateway-service.yml`.
+Also, to successfully install locally you remove superflous requirements using the templates `config-optional/remove-resource-requirements.yml` and `config-optional/remove-ingressgateway-service.yml`.
 ```
 kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f ./config-optional/remove-resource-requirements.yml -f ./config-optional/remove-ingressgateway-service.yml)
 ```
@@ -117,7 +116,6 @@ kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f ./config-opti
 ---
 
 ### Validate the deployment
-
 
 Target your CF CLI to point to the new CF instance
 ```
@@ -147,6 +145,9 @@ cf create-space -o test-org test-space
 cf target -o test-org -s test-space
 ```
 
+---
+### Deploy an application with `cf push`
+
 At last you can push the included sample `test-node-app`
 ```
 cf push test-node-app -p ./tests/smoke/assets/test-node-app
@@ -156,15 +157,14 @@ Or you can push any app you wish just cd into the directory and push the app wit
 cf push APP-NAME
 ```
 
-
-
 ### Delete the cf-for-k8s deployment
-You can delete the cf-for-k8s deployment from your cluster by running the following command.
 
-Assuming that you ran `bin/install.sh...` or `kapp deploy -a cf...`
+You can delete the cf-for-k8s deployment from your cluster by running the following command.
 ```
 kapp delete -a cf
 ```
+
+### Delete your Kind cluster
 
 to delete the KinD cluster
 ```
