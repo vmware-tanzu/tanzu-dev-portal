@@ -8,11 +8,13 @@ tags:
 - {{ replace .Name "-gs" "" }}
 ---
 
-### What is {{ replace (replace .Name "-" " " | title) " Gs" "" }}?
+### What Is {{ replace (replace .Name "-" " " | title) " Gs" "" }}?
 
 ...
 
-### Before you Begin
+### Before You Begin
+
+There are a few things you need to do before getting started with {{ replace (replace .Name "-" " " | title) " Gs" "" }}:
 
 - Step 1
 

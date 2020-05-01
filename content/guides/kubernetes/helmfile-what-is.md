@@ -12,7 +12,7 @@ patterns: ["deployment"]
 
 [Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.
 
-_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](helm-what-is) guide._
+_Note: If you're not familiar with Helm, start with our [Getting Started with Helm](../helm-what-is) guide._
 
 In addition to the Templating and Packaging Helm gives you for your Kubernetes manifests, Helmfile provides a way to apply GitOps style CI/CD methodologies over your Helm charts by:
 
@@ -27,7 +27,7 @@ Helmfile uses the same templating system as Helm and in a way lets you template 
 
 Helmfile addresses this issue and more by providing a fairly simple but very powerful declarative specification for deploying Helm charts across many environments.
 
-First and foremost Helm is a **declarative** specification. Like Kubernetes manifests you can store them in version control, and perform declarative style actions. Much like Kubernetes has `kubectl apply` for kubernetes manifests, Helmfile has `helmfile apply` for Helm charts.
+First and foremost Helm is a **declarative** specification. Like Kubernetes manifests you can store them in version control, and perform declarative style actions. Much like Kubernetes has `kubectl apply` for Kubernetes manifests, Helmfile has `helmfile apply` for Helm charts.
 
 Helmfile is very **modular**, you can have one large `helmfile.yaml` that does everything or you can break it down to suit your way of working. This modularity allows you to:
 
@@ -86,7 +86,7 @@ helmfiles:
   - apps/*/helmfile.yaml.gotmpl
 ```
 
-Thankfully the Helmfile github repository has some really good [documentation](https://github.com/roboll/helmfile#configuration) and [best practices](https://github.com/roboll/helmfile/blob/master/docs/writing-helmfile.md) showing different ways to construct your `helmfile.yaml` files.
+Thankfully the Helmfile GitHub repository has some really good [documentation](https://github.com/roboll/helmfile#configuration) and [best practices](https://github.com/roboll/helmfile/blob/master/docs/writing-helmfile.md) showing different ways to construct your `helmfile.yaml` files.
 
 ## How Can I Use It?
 
