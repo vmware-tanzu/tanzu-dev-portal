@@ -68,9 +68,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 Clone the repo to preffered location and cd into it.
 ```
-git clone https://github.com/cloudfoundry/cf-for-k8s.git
-
-cd cf-for-k8s
+git clone https://github.com/cloudfoundry/cf-for-k8s.git && cd cf-for-k8s
 ```        
 
 ### Setup your local k8s cluster with KinD  
@@ -93,15 +91,21 @@ The `./hack/generate-values.sh` script will generate certificates, keys, passwor
 ./hack/generate-values.sh -d vcap.me > ./cf-install-values.yml
 ```
 
+### Install a metrics-server
+Metrics Server is a scalable source of container resource metrics for Kubernetes built-in autoscaling pipelines, making it easier to debug autoscaling pipelines.
+```
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
+```
+
 ### Time to Deploy CF for k8s 
 
 Deploy CF for k8s using the `./cf-install-values.yml` file created above. 
 
 Also, to successfully install locally you remove superflous requirements using the template `config-optional/remove-resource-requirements.yml`.
 
-Finally, we would like to open up the nodeport in our local k8s cluster for our ingress gateway with `config-optional/use-nodeport-for-ingress.yml`.
+Finally, we would like to open up the nodeport in our local k8s cluster for our ingress gateway with `config-optional/remove-ingressgateway-service.yml`.
 ```
-kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f config-optional/remove-resource-requirements.yml -f config-optional/use-nodeport-for-ingress.yml)
+kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f ./config-optional/remove-resource-requirements.yml -f ./config-optional/remove-ingressgateway-service.yml)
 ```
 
 ---
@@ -116,7 +120,7 @@ cf api --skip-ssl-validation https://api.vcap.me
 
 Set the CF_ADMIN_PASSWORD environment variable to the CF administrative password, stored in the cf_admin_password key in the configuration-values/deployment-values.yml file:
 ```
-CF_ADMIN_PASSWORD="$(bosh interpolate configuration-values/deployment-values.yml --path /cf_admin_password)"
+CF_ADMIN_PASSWORD="$(bosh interpolate ./cf-install-values.yml --path /cf_admin_password)"
 ```
 
 Log into the installation as the admin user
@@ -139,7 +143,7 @@ cf target -o test-org -s test-space
 
 At last you can push the included sample `test-node-app`
 ```
-cf push test-node-app -p ./cf-for-k8s/tests/smoke/assets/test-node-app
+cf push test-node-app -p ./tests/smoke/assets/test-node-app
 ```
 Or you can push any app you wish just cd into the directory and push the app with the following command
 ```
@@ -148,26 +152,15 @@ cf push APP-NAME
 
 
 
-### Rollback
+### Delete the cf-for-k8s deployment
+You can delete the cf-for-k8s deployment from your cluster by running the following command.
 
-What happens if you didn't want that change or it didn't work the way you expected? Remember the revision of the releases? You can rollback to a previous revision. You can do that here with `helm rollback`. If you want you can do a `--dry-run` first to see if the rollback would even work.
+Assuming that you ran `bin/install.sh...` or `kapp deploy -a cf...`
 ```
-$ helm rollback my-app 1 --dry-run
-Rollback was a success! Happy Helming!
-$ helm rollback my-app 1
-Rollback was a success! Happy Helming!
-```
-If you check the pod again, you'll see its back to `IfNotPreset` pullPolicy.
-
-### Get Helming
-
-If you're ready to start trying to deploy more charts, there are a whole bunch of charts available in a number of different repositories. A current list of repositories in a helm install might look like this:
-```
-NAME    	URL
-stable  	https://kubernetes-charts.storage.googleapis.com
-jetstack	https://charts.jetstack.io
-elastic 	https://helm.elastic.co
-bitnami 	https://charts.bitnami.com/bitnami
+kapp delete -a cf
 ```
 
-Happy Helming!
+to delete the KinD cluster
+```
+kind delete cluster
+```
