@@ -1,5 +1,5 @@
 +++
-Type = "tanzu-tv"
+Type = "tanzu-tv-episode"
 Show = "tanzu-tuesdays"
 Description = "Unit Testing Done Right with Jakub Pilimon"
 aliases = ["/0003"]

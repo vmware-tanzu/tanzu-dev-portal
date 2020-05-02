@@ -1,5 +1,5 @@
 +++
-Type = "tanzu-tv"
+Type = "tanzu-tv-episode"
 Show = "tanzu-tuesdays"
 Description = "The threads are revolting! viva la reactive revolution!"
 aliases = ["/0001"]

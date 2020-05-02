@@ -1,5 +1,5 @@
 +++
-Type = "tanzu-tv"
+Type = "tanzu-tv-episode"
 Show = "tanzu-tuesdays"
 Description = "Building Distributed Systems with Spring Boot: From the Ground Up."
 aliases = ["/0002"]

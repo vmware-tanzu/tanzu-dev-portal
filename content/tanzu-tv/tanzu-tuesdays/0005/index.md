@@ -1,5 +1,5 @@
 +++
-Type = "tanzu-tv"
+Type = "tanzu-tv-episode"
 Show = "tanzu-tuesdays"
 Description = "Helm is the go-to package management tool for Kubernetes. Let’s work as a team to build a Helm chart, create a chart repository and deploy our applications to Kubernetes."
 aliases = ["/0005"]

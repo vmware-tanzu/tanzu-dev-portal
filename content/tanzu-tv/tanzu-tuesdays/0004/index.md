@@ -1,13 +1,13 @@
 +++
-Type = "tanzu-tv"
+Type = "tanzu-tv-episode"
 Show = "tanzu-tuesdays"
 Description = ""
 aliases = ["/0004"]
 author = "paulczar"
 hosts = ["bob","tiffany","paulczar"]
 guests = ["nate"]
-Date = "2020-04-28"
 PublishDate = "2020-04-01"
+Date = "2020-04-28"
 episode = "0004"
 episode_image = "tanzu-tv/tanzu-tuesdays/0004/episode.jpg"
 episode_banner = "tanzu-tv/tanzu-tuesdays/0004/episode.jpg"

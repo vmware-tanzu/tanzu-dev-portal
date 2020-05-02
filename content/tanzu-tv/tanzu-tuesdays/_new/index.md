@@ -1,4 +1,6 @@
 +++
+Type = "tanzu-tv-episode"
+Show = "tanzu-tuesdays"
 Description = "Coming Soon!"
 aliases = ["/0000"]
 author = "paulczar"

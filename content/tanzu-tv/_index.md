@@ -1,4 +1,5 @@
 ---
+Type: "tanzu-tv"
 title: "Tanzu TV"
 linkTitle: "Tanzu.TV"
 menu:

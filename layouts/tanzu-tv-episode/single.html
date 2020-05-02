@@ -1,0 +1,271 @@
+{{ define "main" }}
+  <div class="row">
+    <div class="col">
+      <h1>{{ title .Title }}</h1>
+{{- if lt now.Unix .Date.Unix }}
+<h2><a href="https://twitch.tv/{{ .Params.twitch | default "makejarnotwar" }}">Streaming on <i class="fab fa-twitch"></i></a> at 1 PM PT on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h2>
+{{- end }}
+
+<!--      <small>Posted on {{ dateFormat "Monday, Jan 2, 2006" .PublishDate }}</small> -->
+    </div>
+  </div>
+<br><br>
+  {{ if isset .Params "youtube" }}
+  {{ if ne .Params.youtube "" }}
+    <div class = "row youtube_row">
+      <div class = "col">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ . }}" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  {{ else }}
+
+  {{ if isset .Params "episode_banner" }}
+    {{ if ne .Params.episode_banner "" }}
+      <div class = "row">
+      <div class = "col">
+        <img src="{{ .Params.episode_banner | absURL }}" class="img-fluid episode_image"/>
+      </div>
+      </div>
+      <div class = "row">
+      <div class = "col">
+        {{ .Description | markdownify }}
+      </div>
+      </div>
+    {{ end }}
+  {{ else }}
+    <!-- begin square row -->
+    {{- if isset .Params "episode_image" -}}
+      {{- if ne .Params.episode_image "" -}}
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            {{ .Description | markdownify }}
+          </div>
+        </div>
+      {{- end -}}
+      {{- else -}}
+      <div class="row">
+        <div class="col">
+          {{ .Description | markdownify }}
+        </div>
+      </div>
+      {{- end -}}
+    {{ end }}
+    <!-- end square row -->
+    {{ end }}
+    {{ end }}
+    {{- with .Params.podcast_file -}}
+      <div class="row">
+        <div class="col-md-12 player_row">
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="{{ $.Site.Params.media_prefix }}{{ . }}" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+    {{- end -}}
+<br><br>
+  <div class="row">
+    <div class="col">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{ with .Params.guests }}
+        <div class="row">
+          <div class="col">
+            <h2>Guests</h2>
+          </div>
+        </div>
+            {{ range $name := . }}
+              {{ $.Scratch.Set "person" $name }}
+              {{- range where $.Site.Pages "Type" "in" (slice "people") -}}
+                {{- if eq .File.BaseFileName ($.Scratch.Get "person") -}}
+                {{- $.Scratch.Set "guest-exist" "true" -}}
+                <div class="row person_row">
+                  <div class="col-md-3">
+                    {{- if and (isset .Params "thumbnail") (ne .Params.thumbnail "") -}}
+                      {{- if (eq (slicestr .Params.thumbnail 0 4) "http") -}}
+                        <img alt="{{ .Title }}" src="{{ .Params.thumbnail }}" class="img-fluid" width="250px">
+                        {{- else -}}
+                        <img alt="{{ .Title }}" src="{{ .Params.thumbnail | absURL}}" class="img-fluid" width="250px">
+                      {{- end -}}
+                      {{- else -}}
+                      <img alt="{{ .Title }}" src="{{ "img/guest/default-guest.png" | absURL }}" class="img-fluid" width="250px"/>
+                    {{- end -}}
+                  </div>
+                  <div class="col-md-8">
+                    <h2><a href = "{{(printf "%s/%s" .Params.Type .File.BaseFileName) | absURL }}">{{ .Title }}</a></h2>
+                    {{ .Summary | default .Content }}
+                    {{- with .Params.Website -}}
+                      <a href="{{ . }}">
+                        <i class="fas fa-home fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.Twitter -}}
+                      <a href="https://twitter.com/{{ . }}">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.GitHub -}}
+                      <a href="https://github.com/{{ . }}">
+                        <i class="fab fa-github-square fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.LinkedIn -}}
+                      <a href="https://www.linkedin.com/in/{{ . }}">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.Facebook -}}
+                      <a href="https://www.facebook.com/{{ . }}">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.Pinterest -}}
+                      <a href="https://www.pinterest.com/{{ . }}">
+                        <i class="fab fa-pinterest-square fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.Instagram -}}
+                      <a href="https://www.instagram.com/{{ . }}">
+                        <i class="fab fa-instagram fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                    {{- with .Params.YouTube -}}
+                      <a href="https://www.youtube.com/{{ . }}">
+                        <i class="fab fa-youtube-square fa-2x"></i>
+                      </a>
+                    {{- end -}}
+                  </div>
+                  </div>
+                {{- $.Scratch.Set "guest-exist" "false" -}}
+                {{- end -}}
+              {{- end -}}
+              {{- if ne ($.Scratch.Get "guest-exist") "true" -}}
+              {{- if (isset $.Site.Data.guests ($.Scratch.Get "person")) -}}
+                  {{- $p :=  (index $.Site.Data.guests ($.Scratch.Get "person")) -}}
+                    <div class="row person_row">
+                      <div class="col-md-3">
+                        {{- if and (isset $p "thumbnail") (ne $p.thumbnail "") -}}
+                          {{- if (eq (slicestr $p.thumbnail 0 4) "http") -}}
+                            <img alt = "{{ $p.full_name }}" src = "{{ $p.thumbnail}}" class="img-fluid" width = "250px">
+                          {{- else -}}
+                            <img alt = "{{ $p.full_name }}" src = "{{ $p.thumbnail | absURL }}" class="img-fluid" width = "250px">
+                          {{- end -}}
+                        {{- else -}}
+                          <img alt = "{{ $p.full_name }}" src = "{{ "img/guest/default-guest.png" | absURL }}" class="img-fluid" width = "250px" />
+                        {{- end -}}
+                      </div>
+                      <div class= "col-md-8">
+                        <h2>{{ $p.full_name }}</h2>
+                        {{- if isset $p "bio" -}}
+                          <p>{{ $p.bio | markdownify }}</p>
+                        {{ end }}
+                        {{ if isset $p "homepage" }}
+                          <a href = "{{ $p.homepage}}"><i class="fas fa-home fa-2x"></i></a>
+                        {{ end }}
+                        {{ if isset $p "twitter" }}
+                          <a href = "https://twitter.com/{{ $p.Twitter }}"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        {{ end }}
+                        {{ if isset $p "github"}}
+                          <a href = "https://github.com/{{ $p.GitHub}}"><i class="fab fa-github-square fa-2x"></i></a>
+                        {{ end }}
+                        {{ if isset $p "linkedin" }}
+                          <a href = "https://www.linkedin.com/in/{{ $p.LinkedIn}}"><i class="fab fa-linkedin-square fa-2x"></i></a>
+                        {{ end }}
+                        {{ if isset $p "facebook" }}
+                          <a href = "{{ $p.Facebook}}"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        {{ end }}
+                      </div>
+                    </div>
+                {{ else }}
+                    <div class="row person_row">
+                      <div class= "col-md-8">
+                        <h2>{{ $.Scratch.Get "person" }}</h2>
+                      </div>
+                    </div>
+              {{ end }}
+            {{ end }}
+            {{ end }}
+  {{ end }}
+
+  {{ with .Params.hosts }}
+  <div class="row">
+    <div class="col">
+      <h2>Hosts</h2>
+    </div>
+  </div>
+      {{ range $name := . }}
+        {{ $.Scratch.Set "person" $name }}
+        {{- range where $.Site.Pages "Type" "in" (slice "people") -}}
+          {{- if eq .File.BaseFileName ($.Scratch.Get "person") -}}
+          {{- $.Scratch.Set "host-exist" "true" -}}
+          <div class="row person_row">
+            <div class="col-md-3">
+              {{- if and (isset .Params "thumbnail") (ne .Params.thumbnail "") -}}
+                {{- if (eq (slicestr .Params.thumbnail 0 4) "http") -}}
+                  <img alt="{{ .Title }}" src="{{ .Params.thumbnail }}" class="img-fluid" width="250px">
+                  {{- else -}}
+                  <img alt="{{ .Title }}" src="{{ .Params.thumbnail | absURL}}" class="img-fluid" width="250px">
+                {{- end -}}
+                {{- else -}}
+                <img alt="{{ .Title }}" src="{{ "img/host/default-host.png" | absURL }}" class="img-fluid" width="250px"/>
+              {{- end -}}
+            </div>
+            <div class="col-md-8">
+              <h2><a href = "{{(printf "%s/%s" .Params.Type .File.BaseFileName) | absURL }}">{{ .Title }}</a></h2>
+              {{ .Summary | default .Content }}
+              <br>
+              {{- with .Params.Website -}}
+                <a href="{{ . }}">
+                  <i class="fas fa-home fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.Twitter -}}
+                <a href="https://twitter.com/{{ . }}">
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.GitHub -}}
+                <a href="https://github.com/{{ . }}">
+                  <i class="fab fa-github-square fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.LinkedIn -}}
+                <a href="https://www.linkedin.com/in/{{ . }}">
+                  <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.Facebook -}}
+                <a href="https://www.facebook.com/{{ . }}">
+                  <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.Pinterest -}}
+                <a href="https://www.pinterest.com/{{ . }}">
+                  <i class="fab fa-pinterest-square fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.Instagram -}}
+                <a href="https://www.instagram.com/{{ . }}">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              {{- end -}}
+              {{- with .Params.YouTube -}}
+                <a href="https://www.youtube.com/{{ . }}">
+                  <i class="fab fa-youtube-square fa-2x"></i>
+                </a>
+              {{- end -}}
+            </div>
+            </div>
+          {{- $.Scratch.Set "host-exist" "false" -}}
+          {{- end -}}
+        {{- end -}}
+      {{ end }}
+{{ end }}
+{{ end }}
