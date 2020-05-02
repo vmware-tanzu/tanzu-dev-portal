@@ -1,0 +1,53 @@
+{{ define "main" }}
+
+<style>.grid_episode_title > h3 {text-transform: initial;}</style>
+
+<section class="episode-list"  style="padding-left: 15px;padding-right: 15px">
+{{ range where site.RegularPages "Type" "eq" "tanzu-tv-show" }}
+  {{ $.Scratch.Set "show" .Params.ID }}
+  <h2>{{ .Title }}</h2>
+  <h4>{{ .Description }}</h4>
+  <div class = "row">
+
+    {{ range where site.RegularPages "Type" "eq" "tanzu-tv" }}
+      {{ if eq ($.Scratch.Get "show") .Params.Show }}
+          <div class="col-md-4 grid_episode_col">
+            <div class="episode-image-homepage">
+              <a href="{{ .Permalink }}">
+                  <img src="{{ .Params.episode_image | absURL }}" class="img-fluid" width="350" alt="{{ .Title }}" />
+
+
+
+              </a>
+            </div>
+            <div class="grid_episode_detail">
+              <a href="{{ .Permalink }}" class= "grid_episode_title"><h3>{{ title .Title }}</h3></a>
+              {{ if ge (now.Unix) (.Date.Unix) }}
+              <small class = "grid_episode_title">Streamed {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
+              {{ if .Params.YouTube }}
+              <p>Watch on <a href="https://www.youtube.com/watch?v={{ .Params.YouTube }}">YouTube</a>
+              {{ else }}
+              <p>Watch on <a href="https://twitch.tv/{{ .Params.Twitch }}">Twitch</a>
+              {{ end }}
+
+              {{ else }}
+              <small class = "grid_episode_title">Streaming on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
+              <p>Coming soon on <a href="https://twitch.tv/{{ .Params.Twitch }}">Twitch</a>
+
+              {{ end }}
+              </p>
+            </div>
+
+          </div>
+        {{ end }}
+        {{ end }}
+
+
+  </div>
+{{ end }}
+</section>
+
+
+</div>
+</div>
+{{ end }}

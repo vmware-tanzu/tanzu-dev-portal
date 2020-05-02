@@ -1,0 +1,38 @@
+			<p class="mt-0 mb-4">
+        {{ if .Params.twitter -}}
+        <a href='https://twitter.com/{{ .Params.twitter }}'><span class="fab fa-twitter fa-2x"></span></a>
+        {{ end -}}
+        {{ if .Params.website -}}
+        <a href="{{ .Params.Website }}"><span class="fas fa-home fa-2x"></span></a>
+        {{ end -}}
+        {{ if .Params.gitHub }}
+          <a href="https://github.com/{{ .Params.gitHub}}">
+            <i class="fab fa-github-square fa-2x"></i>
+          </a>
+        {{ end }}
+        {{ if .Params.linkedIn }}
+          <a href="https://www.linkedin.com/in/{{ .Params.linkedIn}}">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        {{ end }}
+        {{ if .Params.facebook }}
+          <a href="https://www.facebook.com/{{ .Params.facebook}}">
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        {{ end }}
+        {{ if .Params.pinterest }}
+          <a href="https://www.pinterest.com/{{ .Params.pinterest}}">
+            <i class="fab fa-pinterest-square fa-2x"></i>
+          </a>
+        {{ end }}
+        {{ if .Params.instagram }}
+          <a href="https://www.instagram.com/{{ .Params.instagram}}">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        {{ end }}
+        {{ if .Params.youTube }}
+          <a href="https://www.youtube.com/{{ .Params.youTube}}">
+            <i class="fab fa-youtube-square fa-2x"></i>
+          </a>
+        {{ end }}
+			</p>
