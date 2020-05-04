@@ -78,7 +78,7 @@ git clone https://github.com/cloudfoundry/cf-for-k8s.git && cd cf-for-k8s
 
 ### Setup your local k8s cluster with KinD  
 
-Create your cluster using the the config yaml from the repo above.
+Create your cluster using the config yaml from the repo above.
 ```
 kind create cluster --config=./deploy/kind/cluster.yml
 ```
@@ -174,7 +174,7 @@ Once your app stages you can find it in Cloud Foundry with this command.
 ```
 cf apps
 ```
-The output in the terminal should looks something as folows.
+The output in the terminal should looks something as follows.
 ```
 Getting apps in org test-org / space test-space as admin...
 OK
