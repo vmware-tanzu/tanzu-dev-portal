@@ -20,13 +20,13 @@ Cloud Foundry is an open-source, multi-cloud application platform as a service g
 
 Using Cloud Foundry developers only have to focus on writing and delivering code as CF takes care of the rest. Developers enter `cf push` into the command line and their app will be deployed immediately receiving an endpoint. The CF platform will take care of containerizing the source code into a working app with the required dependencies, can be configured to bind to a database, connect to a market place and much more.
 
-CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes, developers don't have to know Kubernetes they only have to `cf push`. Kubernetes adds new possibilities to CF opening up the massive Kubernetes ecosystem and installs in minutes.       
+The cf-for-k8s platform adds a higher level of abstraction to Kubernetes by removing the sharp learning curve required for teams, developers don't have to know Kubernetes they only have to `cf push`. Kubernetes adds new possibilities to Cloud Foundry opening up the massive Kubernetes ecosystem.
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
 
-> You will need a few tools before beginning, many of you might already have, once set up installation takes 10 mins or less.
+> You will need a few tools before beginning and once set up installation ussually takes 10 mins or less.
 
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
@@ -64,7 +64,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         kapp --version
         ```
 
-- [`ytt`](https://k14s.io/#install) (v0.26.0+) will help create templates to deploy cf-for-k8s
+- [ytt](https://k14s.io/#install) (v0.26.0+) will help create templates to deploy cf-for-k8s
     * on mac you should have this installed from the above command, to verify:
         ```
         ytt version
@@ -89,7 +89,7 @@ kubectl cluster-info --context kind-kind
 
 ### Generate the yaml used to deploy CF for k8s
 
-In this script you use `vcap.me` as your CF domain with the flag `-d`, if not installing locally you would use the domain you wanted for your Cloud Foundry instance.
+In this script you use `vcap.me` as your CF domain with the flag `-d`, this way you can avoid configuring DNS for a domain.
 
 The `./hack/generate-values.sh` script will generate certificates, keys, passwords, and configuration needed to deploy into `./cf-install-values.yml'.
 ```
@@ -118,7 +118,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 
 ### Time to Deploy CF for k8s 
 
-Deploy CF for k8s using the `./cf-install-values.yml` file created above. 
+Deploy cf-for-k8s using the `./cf-install-values.yml` file created above. 
 
 Also, to successfully install locally you remove superfluous requirements using the templates `config-optional/remove-resource-requirements.yml` and `config-optional/remove-ingressgateway-service.yml`.
 ```
@@ -205,7 +205,7 @@ kind delete cluster
 
 Learn more about Cloud Foundry with the links below:
 
-- [CF-for-k8s GitHub](https://github.com/cloudfoundry/cf-for-k8s.git)
+- [cf-for-k8s GitHub](https://github.com/cloudfoundry/cf-for-k8s.git)
 - [cloudfoundry.org](https://www.cloudfoundry.org/)
 - [Online CF Tutorial](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf)
 - [Tanzu Application Service](https://tanzu.vmware.com/application-service)
