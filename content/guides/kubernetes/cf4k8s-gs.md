@@ -14,21 +14,19 @@ patterns:
 
 ### What is cf-for-k8s?
 
-[CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) is a new implementation of Cloud Foundry on Kubernetes. 
+[CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) brings Cloud Foundry to Kubernetes. 
 
 Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
 
-Cloud Foundry on Kubernetes is a very powerful tool for operators and developers. If you are a developer with CF you only concentrate on writting and delivering code. When finished writting code a developer enters `cf push` into the command line and their app will be deployed and immediately receive an endpoint using most major languages. 
+Using Cloud Foundry developers only have to focus on writing and delivering code as CF takes care of the rest. Developers enter `cf push` into the command line and their app will be deployed immediately receiving an endpoint. The CF platform will take care of containerizing the source code into a working app with the required dependencies, can be configured to bind to a database, connect to a market place and much more.
 
-CF takes care of the depenedencies and can be configured to bind to a db or services, and connects to a marketplace. Operators don't have to worry about wiring the backend, multitenancy is simple to configure, scaling is one command, and built to be secure. There are many more features to Cloud Foundry. 
-
-CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes,  don't build a platform if you can use CF-for-k8s. Kubernetes also adds new possibilities to CF openning up the massive Kubernetes ecosystem, installing in minutes, and light weight.      
+CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes, developers don't have to know kubernetes they only have to `cf push`. Kubernetes adds new possibilities to CF opening up the massive Kubernetes ecosystem and installing in minutes.       
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
 
-> You will need a few tools before begining, many of you might already have, once set up installation takes 10 mins or less.
+> You will need a few tools before beginning, many of you might already have, once set up installation takes 10 mins or less.
 
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
@@ -73,7 +71,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
         ```
 ### Clone the CF for K8s repo
 
-Clone the repo to preffered location and cd into it.
+Clone the repo to preferred location and cd into it.
 ```
 git clone https://github.com/cloudfoundry/cf-for-k8s.git && cd cf-for-k8s
 ```        
@@ -84,7 +82,7 @@ Create your cluster using the the config yaml from the repo above
 ```
 kind create cluster --config=./deploy/kind/cluster.yml
 ```
-Point your kubeconfig to the cluster you created above
+Point your kubeconfig to your new cluster
 ```
 kubectl cluster-info --context kind-kind
 ```
@@ -98,9 +96,9 @@ The `./hack/generate-values.sh` script will generate certificates, keys, passwor
 ./hack/generate-values.sh -d vcap.me > ./cf-install-values.yml
 ```
 Append the app_registry credentials to your DockerHub registry to the bottom of the `./cf-install-values.yml` replacing with your information. You can copy/paste  or use the following command.
-> Note - don't lave out the quotes and enter the repeated username is not a typo, it's the current requirement. 
+> Note - The repeated username is not a typo, it's the current requirement and don't forget the quotes.
 
-> Note2 - If you want to use another registry check out the [instructions ](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md)
+> Note2 - To use another registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md)
 
 ```
 cat >> cf-install-values.yml << EOL
@@ -122,7 +120,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 
 Deploy CF for k8s using the `./cf-install-values.yml` file created above. 
 
-Also, to successfully install locally you remove superflous requirements using the templates `config-optional/remove-resource-requirements.yml` and `config-optional/remove-ingressgateway-service.yml`.
+Also, to successfully install locally you remove superfluous requirements using the templates `config-optional/remove-resource-requirements.yml` and `config-optional/remove-ingressgateway-service.yml`.
 ```
 kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f ./config-optional/remove-resource-requirements.yml -f ./config-optional/remove-ingressgateway-service.yml)
 ```
@@ -150,7 +148,7 @@ cf auth admin "$CF_ADMIN_PASSWORD"
 cf enable-feature-flag diego_docker
 ```
 
-A powerful feature provided by CF is multitennacy, where you can create a space for a team, an app or whatever your workflow requires. 
+A powerful feature provided by CF is multi tenancy, where you can create a space for a team, an app or whatever your workflow requires. 
 
 Create and target an organization and space
 ```
@@ -185,13 +183,12 @@ to delete the KinD cluster
 kind delete cluster
 ```
 
+### Next Steps
 
-## Next Steps
+Learn more about Cloud Foundry with the links below:
 
-Learn more about Kubeapps with the links below:
+- [CF-for-k8s GitHub](https://github.com/cloudfoundry/cf-for-k8s.git)
+- [cloudfoundry.org](https://www.cloudfoundry.org/)
+- [Online CF Tutorial](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf)
+- [Tanzu Application Service](https://tanzu.vmware.com/application-service)
 
-- [Detailed installation instructions](https://github.com/kubeapps/kubeapps/blob/master/chart/kubeapps/README.md)
-- [Deploying Operators](https://github.com/kubeapps/kubeapps/blob/master/docs/user/operators.md)
-- [Kubeapps Dashboard documentation]([dashboard.md](https://github.com/kubeapps/kubeapps/blob/master/docs/user/dashboard.md))
-- [Kubeapps components](https://github.com/kubeapps/kubeapps/blob/master/docs/architecture/overview.md)
-- [Roadmap](https://github.com/kubeapps/kubeapps/wiki/Roadmap)
