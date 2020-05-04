@@ -16,11 +16,11 @@ patterns:
 
 [CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) brings Cloud Foundry to Kubernetes. 
 
-Cloud Foundry is an open source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
+Cloud Foundry is an open-source, multi-cloud application platform as a service governed by the Cloud Foundry Foundation, a 501 organization.
 
 Using Cloud Foundry developers only have to focus on writing and delivering code as CF takes care of the rest. Developers enter `cf push` into the command line and their app will be deployed immediately receiving an endpoint. The CF platform will take care of containerizing the source code into a working app with the required dependencies, can be configured to bind to a database, connect to a market place and much more.
 
-CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes, developers don't have to know kubernetes they only have to `cf push`. Kubernetes adds new possibilities to CF opening up the massive Kubernetes ecosystem and installing in minutes.       
+CF for K8s adds a higher level of abstraction by removing the sharp learning curve for teams to adopt Kubernetes, developers don't have to know Kubernetes they only have to `cf push`. Kubernetes adds new possibilities to CF opening up the massive Kubernetes ecosystem and installs in minutes.       
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
@@ -78,11 +78,11 @@ git clone https://github.com/cloudfoundry/cf-for-k8s.git && cd cf-for-k8s
 
 ### Setup your local k8s cluster with KinD  
 
-Create your cluster using the the config yaml from the repo above
+Create your cluster using the the config yaml from the repo above.
 ```
 kind create cluster --config=./deploy/kind/cluster.yml
 ```
-Point your kubeconfig to your new cluster
+Point your kubeconfig to your new cluster.
 ```
 kubectl cluster-info --context kind-kind
 ```
@@ -91,14 +91,14 @@ kubectl cluster-info --context kind-kind
 
 In this script you use `vcap.me` as your CF domain with the flag `-d`, if not installing locally you would use the domain you wanted for your Cloud Foundry instance.
 
-The `./hack/generate-values.sh` script will generate certificates, keys, passwords, and configuration needed to deploy into `./cf-install-values.yml'
+The `./hack/generate-values.sh` script will generate certificates, keys, passwords, and configuration needed to deploy into `./cf-install-values.yml'.
 ```
 ./hack/generate-values.sh -d vcap.me > ./cf-install-values.yml
 ```
 Append the app_registry credentials to your DockerHub registry to the bottom of the `./cf-install-values.yml` replacing with your information. You can copy/paste  or use the following command.
 > Note - The repeated username is not a typo, it's the current requirement and don't forget the quotes.
 
-> Note2 - To use another registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md)
+> Note2 - To use another registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md).
 
 ```
 cat >> cf-install-values.yml << EOL
@@ -129,7 +129,7 @@ kapp deploy -a cf -f <(ytt -f config -f ./cf-install-values.yml -f ./config-opti
 
 ### Validate the deployment
 
-Target your CF CLI to point to the new CF instance
+Target your CF CLI to point to the new CF instance.
 ```
 cf api --skip-ssl-validation https://api.vcap.me
 ```
@@ -139,7 +139,7 @@ Set the CF_ADMIN_PASSWORD environment variable to the CF administrative password
 CF_ADMIN_PASSWORD="$(bosh interpolate ./cf-install-values.yml --path /cf_admin_password)"
 ```
 
-Log into the installation as the admin user
+Log into the installation as the admin user.
 ```
 cf auth admin "$CF_ADMIN_PASSWORD"
 ```
@@ -150,7 +150,7 @@ cf enable-feature-flag diego_docker
 
 A powerful feature provided by CF is multi tenancy, where you can create a space for a team, an app or whatever your workflow requires. 
 
-Create and target an organization and space
+Create and target an organization and space.
 ```
 cf create-org test-org
 cf create-space -o test-org test-space
@@ -160,13 +160,31 @@ cf target -o test-org -s test-space
 ---
 ### Deploy an application with `cf push`
 
-At last you can push the included sample `test-node-app`
+At last you can push the included sample `test-node-app`.
 ```
 cf push test-node-app -p ./tests/smoke/assets/test-node-app
 ```
-Or you can push any app you wish just cd into the directory and push the app with the following command
+
+> Or you can push any app you wish just cd into the directory and push the app with the following command.
+> ```
+> cf push APP-NAME
+> ```
+
+Once your app stages you can find it in Cloud Foundry with this command.
 ```
-cf push APP-NAME
+cf apps
+```
+The output in the terminal should looks something as folows.
+```
+Getting apps in org test-org / space test-space as admin...
+OK
+
+name            requested state   instances   memory   disk   urls
+test-node-app   started           1/1         1G       1G     test-node-app.vcap.me
+```
+To see the pods that have applications on your Cloud Foundry instance look in the `cf-workloads` namespace.
+```
+kubectl get pods -n cf-workloads
 ```
 
 ### Delete the cf-for-k8s deployment
