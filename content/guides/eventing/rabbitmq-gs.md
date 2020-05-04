@@ -31,7 +31,7 @@ To ease the setup of our RabbitMQ node, you’ll run the RabbitMQ container imag
 
 Here, you’ll run the `3-management tag` of the RabbitMQ container image. The `3-management` tag of this image ships with the [management plug-in](https://www.rabbitmq.com/management.html), which will provide an HTTP API and web-based UI for your RabbitMQ server. You’ll tell Docker to run this with an interactive shell with the `-it` option, as well as tell it to automatically remove the container when it exits with the `-rm` option. You’ll also forward a couple of ports (5672 for the RabbitMQ server and 15672 for the HTTP API and web UI) from your local machine to the container, which means that you can connect to it on `localhost`.
 
-To access the web UI, go to http://localhost:15672/. The `username` and `password` are both `guest`. Here you can change settings, add and remove users, as well as view diagnostic information from the server. 
+To access the web UI, go to [http://localhost:15672](http://localhost:15672). The `username` and `password` are both `guest`. Here you can change settings, add and remove users, as well as view diagnostic information from the server. 
 
 ### Building the Emitter
 
