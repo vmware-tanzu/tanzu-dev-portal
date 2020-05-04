@@ -72,7 +72,7 @@ Heptio
 vSphere
 NSX
 TAS
-RabbitMQ
+RabbitMQ('s)?
 modularity
 Terraform
 fileshare
@@ -81,5 +81,8 @@ JSON
 Czarkowski('s)?
 [H,h]elmfiles?
 [T,t]emplating
+natively
+UI
+hostname
 
 1e49264
