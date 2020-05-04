@@ -18,9 +18,9 @@ At a high level, [RabbitMQ](https://www.rabbitmq.com/) is an open source message
 
 ## Before You Begin
 Before you begin, there are a few tools you will need:
-[Docker](https://docs.docker.com/get-docker/). You’ll run your RabbitMQ server in a container to ease the setup. If you’d prefer to run RabbitMQ natively, checkout the documentation on [RabbitMQ’s website](https://www.rabbitmq.com/download.html).
-Your text editor or IDE of choice.
-[JDK 1.8](https://www.oracle.com/java/technologies/javase-downloads.html) or newer.
+- [Docker](https://docs.docker.com/get-docker/). You’ll run your RabbitMQ server in a container to ease the setup. If you’d prefer to run RabbitMQ natively, checkout the documentation on [RabbitMQ’s website](https://www.rabbitmq.com/download.html).
+- Your text editor or IDE of choice.
+- [JDK 1.8](https://www.oracle.com/java/technologies/javase-downloads.html) or newer.
 
 You can see the [completed example on GitHub](https://github.com/BrianMMcClain/rabbitmq-getting-started), including examples in other languages.
 
