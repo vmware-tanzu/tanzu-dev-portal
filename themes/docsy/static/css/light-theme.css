@@ -50,4 +50,8 @@ body {
 input::placeholder {
    color: #28333c !important;
 }
+footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
+.btn {
+   background: #1d428a !important;
+}
 

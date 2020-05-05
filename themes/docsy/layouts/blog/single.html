@@ -1,14 +1,14 @@
 {{ define "main" }}
 
 <div class="td-main ">
-	<div class="bg-gray-dark mt-lg-5 mt-0 pt-lg-5 pb-2">
-		<div class='container'>
+	<div class="mt-lg-5 mt-0 pt-lg-5 pb-2">
+		<div class='container pt-2'>
 			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<br/>
 			<h1>{{ .Title }}</h1>
 			<p>{{ .Description }}</p>
 
-			<div class="short-gradient-line mb-4"></div>
-      <h4>
+      <h5 class=" mb-4">
 		<!-- {{ .Params.tags }} | -->
 		
 		{{- range $index, $element := .Params.authors }}
@@ -16,14 +16,15 @@
 			<a href="/authors/{{ urlize . }}">{{ . }}</a>
 		{{ end }}
 
-		|
         {{ .Date.Format "January 2, 2006" }}
-      </h4>   
+      </h5>   
+			<div class="short-gradient-line  mb-3"></div>
+
 
 		</div>
 	</div>
 	<div class="container py-2">
-		<div class="">
+		<div class="col-lg-9 px-0">
 				{{ .Content }}
 		</div>
 

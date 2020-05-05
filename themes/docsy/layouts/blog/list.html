@@ -1,12 +1,19 @@
 {{ define "main" }}
 
-{{ partial "hero.html" . }}
+<section id="hero" class="no-bg mt-7 pb-4">
+	<div class="container">
+		<div class='flex'>
+			<img class='icon mr-4' src='/images/icons/icon-tanzu.svg'/> <h1 class="h1">Tanzu Developer&nbsp; {{- .Title -}}</h1>
+		</div>
+		<!-- <p>{{- .Params.description}}</p> -->
+	</div>
+</section>
 
-<div class="td-content">
+<div class="td-content mt-0">
 	<div class='container'>
 		{{ .Content }}
 		<br/>
-	        {{ partial "guides-index.html" . }}
+	        {{ partial "blog-index.html" . }}
 		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
 			{{ partial "feedback.html" .Site.Params.ui.feedback }}
 			<br />

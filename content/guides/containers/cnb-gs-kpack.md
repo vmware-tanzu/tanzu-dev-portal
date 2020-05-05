@@ -11,11 +11,9 @@ patterns:
 - Deployment
 ---
 
-### What Is `kpack`?
-
 [`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on Kubernetes using [Cloud Native Buildpacks](../cnb-what-is). It takes source code repositories (like GitHub), builds the code into a container image, and uploads it to the container registry of your choice.
 
-### Before You Begin
+## Before You Begin
 
 There are a few things you need to do before getting started with `kpack`:
 
@@ -27,7 +25,7 @@ There are a few things you need to do before getting started with `kpack`:
 
 - Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds.
 
-### Initial `kpack` Configuration
+## Initial `kpack` Configuration
 
 Among the things you will need before you get started are a code repository with compatible code (I'm using Spring Java in this case) and a container registry (I'm using Google GCR).
 
@@ -127,9 +125,9 @@ Events:         <none>
 
 It lists all the available builders that are configured, so that means you're ready to get started.
 
-### Using `kpack`
+## Using `kpack`
 
-#### Set Up Container Registry Secret
+### Set Up Container Registry Secret
 
 The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
 
@@ -154,7 +152,7 @@ The GCP credentials have been redacted here for obvious reasons, but this is the
 Also note the annotation of `build.pivotal.io/docker: us.gcr.io`; it tells `kpack` which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
 
 
-#### Set Up Container Registry Service Account
+### Set Up Container Registry Service Account
 
 Now you need a service account referencing those credentials. The manifest is pretty simple:
 
@@ -167,7 +165,7 @@ secrets:
   - name: gcr-registry-credential
 ```
 
-#### Create an Image Configuration
+### Create an Image Configuration
 
 Now you're all ready to start building images and pushing them to GCR. To create a manifest that builds containers off the application code on GitHub:
 
@@ -196,7 +194,7 @@ NAME              LATESTIMAGE   READY
 petclinic-image                 Unknown
 ```
 
-#### Watching the Build
+### Watching the Build
 
 If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. Since it includes six different containers, it's hard to use `kubectl logs` because you have to know which container to specify at which stage. It's much easier to use the `stern` tool mentioned at the beginning. 
 
