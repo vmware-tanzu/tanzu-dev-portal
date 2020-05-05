@@ -28,7 +28,7 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 #### Machine Requirements
 
-Currently cf-for-k8s supports kubernetes 1.15.x or 1.16.x, the config yaml file we are using to make our kind cluster will make a cluster with the following requirements, see that your computer can handle them:
+Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file we are using to make our kind cluster will make a cluster with the following requirements, see that your computer can handle them:
 - have a minimum of 1 node
 - have a minimum of 4 CPU, 8GB memory per node
 - have a running metrics-server

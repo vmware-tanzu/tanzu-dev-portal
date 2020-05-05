@@ -11,10 +11,14 @@ ytt
 kapp
 DNS
 cf-for-k8s
+CF-for-k8s
 scalable
 autoscaling
 cd
+kubernetes
+kubectl
 img
+8GB
 https?
 HTTPS?
 localhost:[[:digit:]]*
