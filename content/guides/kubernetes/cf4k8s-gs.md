@@ -35,7 +35,7 @@ Currently cf-for-k8s supports kubernetes 1.15.x or 1.16.x, the config yaml file 
 
 #### Tools required
 
-> You will need a few tools before beginning and once set up installation usually takes 10 mins or less.
+> You will need a few tools before beginning and once set up installation usually takes 10 minutes or less.
 
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
