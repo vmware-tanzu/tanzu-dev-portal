@@ -81,6 +81,10 @@ JSON
 Czarkowski('s)?
 [H,h]elmfiles?
 [T,t]emplating
+serializer
+Kafka
+Quickstart
+natively
 customizable
 scalable
 
