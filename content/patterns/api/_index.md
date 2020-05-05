@@ -7,7 +7,9 @@ description: >
 ---
 
 
-The Application Programming Interface, or API, defines the language that other applications can use to talk to your service. APIs expose your data, as well as define the data structures and formats that they should expect and provide. While “API” does not necessarily mean [REST API](/guides/api/basics-of-rest), in the world of microservices, it’s the most common meaning. Being able to expose your microservice in an easy-to-consume but safe manner—quickly and easily—is a hard balancing act, but knowing the fundamentals can really help.
+The Application Programming Interface, or API, defines the language that other applications can use to talk to your service. APIs expose your data, as well as define the data structures and formats that they should expect and provide. You're probably consuming APIs more than you even realize, even if it is indirectly. If you open up the weather application on your phone, it probably makes an API call for the latest weather. When you order food from your favorite restaurant, it's sending an API call to their backend order service. You know those daily Cat Facts texts that you get sent? Likely that provider is reaching out to an API provided by somebody else to send the text message.
+
+While “API” does not necessarily mean REST API, in the world of microservices, it’s the most common meaning. Being able to expose your microservice in an easy-to-consume but safe manner—quickly and easily—is a hard balancing act, but knowing the fundamentals can really help.
 
 Not only does the development of these services pose certain challenges, but the operation of them does, too. Like most applications, the more you adhere to best practices while writing your code, the easier it will be when it comes time to run it. If you’re new to microservices, there’s been lots of discussion around this very topic and while there are many differing opinions, some  are more agreed upon than others. The [Twelve Factor Application](https://12factor.net/), for example, offers a number of applicable suggestions.
 
