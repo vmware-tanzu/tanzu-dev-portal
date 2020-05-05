@@ -207,7 +207,7 @@ Watch the pipeline complete. Then click into the running job and watch it comple
 
 ![Pipeline run](/images/guides/ci-cd/concourse/concourse-test.gif)
 
-The pipeline and job run details 
+### The pipeline and job run details 
 
 That’s it! Your pipeline is now monitoring your test branch for changes. Whenever a change is made, this pipeline will be kicked off and the tests will be run. Feel free to keep experimenting with this pipeline configuration, and build it to suit your needs. Push more changes to the application and watch Concourse CI trigger a new test run. 
 
