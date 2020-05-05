@@ -48,7 +48,7 @@ Before you get started, you will need to do a number of things.
 * **Set aside 15-20 minutes**: Roughly the time it will take to run through this guide. 
 
 ## Setting up
-To make the installation and configuration of Concourse CI and its pipelines a little easier, a GitHub repo is provided here along with some helpful files. Download it, then cd into that directory. In this guide, commands will assume this as your pwd unless otherwise noted.
+To make the installation and configuration of Concourse CI and its pipelines a little easier, a GitHub repo is provided here along with some helpful files. Download it, then `cd` into that directory. In this guide, commands will assume this as your working directory unless otherwise noted.
 ```
 git clone https://github.com/anthonyvetter/concourse-getting-started.git && cd concourse-getting-started
 ```
