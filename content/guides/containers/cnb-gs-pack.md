@@ -11,11 +11,9 @@ patterns:
 
 ---
 
-### What Is `pack`?
-
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../cnb-what-is).
 
-### Before You Begin
+## Before You Begin
 
 There are a few things you need to do before getting started with `pack`:
 
@@ -25,9 +23,9 @@ There are a few things you need to do before getting started with `pack`:
 
 - Follow the documentation for [installing `pack`](https://buildpacks.io/docs/install-pack/) in your local environment.
 
-### Using `pack`
+## Using `pack`
 
-#### Build Image from Working Directory
+### Build Image from Working Directory
 
 To generate a container image, use `pack build`. The following commands will clone a sample Java repository, change to the app directory, and build the container image from this working directory.
 
@@ -39,7 +37,7 @@ cd samples/apps/java-maven
 pack build myapp
 ```
 
-#### Build Image from Specified Path
+### Build Image from Specified Path
 
 Alternatively, you may point to the app path using the `-p` option:
 
@@ -49,7 +47,7 @@ git clone https://github.com/buildpacks/samples
 pack build myapp -p samples/apps/java-maven
 ```
 
-#### Run Image Locally
+### Run Image Locally
 
 After you've built your image locally, test it out with Docker using the following command: 
 
@@ -59,7 +57,7 @@ docker run --rm -p 8080:8080 myapp
 
 Visit `localhost:8080` in your favorite browser to see the app running.
 
-#### Publish Image to Repository
+### Publish Image to Repository
 
 If you are logged into a container registry from your local machine via Docker Desktop, you can build your image and publish to a remote registry at the same time using the `--publish` option. Just make sure to clarify the `username` before the app name:
 

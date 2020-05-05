@@ -63,6 +63,51 @@ limitations under the License.
             }
         });
 
+        //Open external links in new tab
+        $("a[href^='http']").attr('target', '_blank');
+
+
+        //Open youtube links with class 'lightbox' in lightbox
+        $("a.lightbox[href*=youtube]").click(function() {
+          var href = $(this).attr('href');
+          $(this).attr('href', href + '?autoplay=1&autohide=1&showinfo=0&controls=1');
+          $.fancybox({
+              'padding'   : 0,
+              'href'      : this.href.replace(new RegExp("watch\\?v=", "i"), 'embed/'),
+              'type'      : 'iframe',
+              'width'     : 1000,
+              'height'    : 560,
+              'autoSize'  : false,
+              fitToView   : true
+            });
+
+          return false;
+        });
+
+        //Copy videos index iframe embed URLs to parent for lightbox
+        $(".youtube-container").each(function(){
+            var src = $(this).children(".youtube-small").attr('src').replace("?wmode=transparent&rel=0&modestbranding=1", "");
+            $(this).attr("href", src);
+        });
+
+        //Open youtube embeds in lightbox
+        $(".youtube-container").click(function() {
+          var href = $(this).attr('href');
+          $(this).attr('href', href + '?autoplay=1&autohide=1&showinfo=0&controls=1');
+          $.fancybox({
+              'padding'   : 0,
+              'href'      : this.href,
+              'type'      : 'iframe',
+              'width'     : 1000,
+              'height'    : 560,
+              'autoSize'  : false,
+              fitToView   : true
+            });
+
+          return false;
+        });
+
+
     });
 
 
