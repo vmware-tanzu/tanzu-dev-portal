@@ -6,7 +6,6 @@ description: >
     Introduction to the API Pattern
 ---
 
-# API Pattern
 
 The Application Programming Interface, or API, defines the language that other applications can use to talk to your service. APIs expose your data, as well as define the data structures and formats that they should expect and provide. While “API” does not necessarily mean [REST API](/guides/api/basics-of-rest), in the world of microservices, it’s the most common meaning. Being able to expose your microservice in an easy-to-consume but safe manner—quickly and easily—is a hard balancing act, but knowing the fundamentals can really help.
 
