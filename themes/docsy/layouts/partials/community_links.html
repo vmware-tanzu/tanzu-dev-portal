@@ -1,8 +1,8 @@
 {{ $links := .Site.Params.links }}
 
 <section class="td-box td-box--gradient td-box--height-auto">
-	<div class='container flex flex-wrap'>
-		<div class="col-12 col-lg-6 mb-3 mb-lg-0 pl-0">
+	<div class='container flex flex-wrap jc-between'>
+<!-- 		<div class="col-12 col-lg-6 mb-3 mb-lg-0 pl-0">
 			<div class="td-box--gray-darkest p-5 h-100">
 				<h2>Learn and Connect</h2>		
 				<p>Using or want to use {{ .Site.Title }}? Find out more here:
@@ -11,17 +11,36 @@
 				{{ end }}
 				</p>
 			</div>
+		</div> -->
+		<div class="col-12 col-lg-6 pl-0 mb-5 flush-list">
+			<h3>Develop and Contribute</h3>
+			<p>If you want to get more involved by contributing to {{ .Site.Title }}, join us here:
+			{{ with index $links "developer"}}
+			{{ template "community-links-list"  . }}
+			{{ end }}
+			</p>
+			<p>You can find out how to contribute to these docs in our Contribution Guidelines.</p>
 		</div>
-		<div class="col-12 col-lg-6 pl-0">
-			<div class="td-box--gray-darkest p-5 h-100">
-				<h2>Develop and Contribute</h2>
-				<p>If you want to get more involved by contributing to {{ .Site.Title }}, join us here:
-				{{ with index $links "developer"}}
-				{{ template "community-links-list"  . }}
-				{{ end }}
-				</p>
-				<p>You can find out how to contribute to these docs in our Contribution Guidelines.</p>
-			</div>
+		<div class="col-12 col-lg-5 mb-3 mb-lg-0 pl-0">
+			<div class="p-5 td-box--gray-darkest">
+	      <p class="text-white mt-0">Sign up for the developer newsletter</p>
+	      <script src="//connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
+	      <form id="mktoForm_1609" class="hidden"></form>
+	      <script>
+	        MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
+	        MktoForms2.loadForm("//connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){
+	          form.setValues({ "Function__c": "Developer" });
+	          form.onSuccess(function(values, followUpUrl) {
+	            form.getFormElem().hide();
+	            $('.confirmation').show();
+	            return false;
+	          });
+	        });
+	      </script>
+	      <div class='confirmation' style="display:none">Done!</div>
+	      <br/>
+	      <br/>
+	    </div>
 		</div>
 	</div>
 </section>

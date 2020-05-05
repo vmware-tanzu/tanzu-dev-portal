@@ -23,7 +23,7 @@ No matter what your experience with modern app development is, we want to help y
 
 ## Site features
 
-There are plenty of ways to navigate the site and find what you’re looking for. Explore by topic or search for a particular piece of tech you’re interested in. Follow a step-by-step guide, watch a video to see how it’s done, or start with a code sample.
+There are plenty of ways to navigate the site and find what you’re looking for. Explore by topic or look for a particular piece of tech you’re interested in. Follow a step-by-step guide, watch a video to see how it’s done, or start with a code sample.
 
 If you’re not sure what you’re looking for, [our list of modern application patterns](/patterns) is the best place to start. It’s where you’ll find patterns that you can practically apply to specific use cases. Each one provides an overview along with a list of related resources to get you started with the technology that can enable that pattern.
 

@@ -4,7 +4,7 @@ date:   2020-02-10
 author: Paul Czarkowski
 tags: ["kubernetes", "containers", "helm", "helmfile"]
 sortTitle: "Helm"
-weight: 1
+weight: 3
 topics: ["kubernetes"]
 patterns: ["deployment"]
 
