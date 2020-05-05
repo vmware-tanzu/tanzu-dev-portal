@@ -10,6 +10,7 @@ HTTPS?
 localhost:[0-9]*
 localhost:8080
 Kubernetes(-native)?
+antipatterns?
 [B,b]uildpack(s|'s)?
 [M,m]inikube
 [R,r]epos?
@@ -56,6 +57,7 @@ telco
 analytics
 macOS
 README
+
 RBAC-enabled
 VMs?
 GAC
@@ -72,10 +74,11 @@ Heptio
 vSphere
 NSX
 TAS
-RabbitMQ
+RabbitMQ('s)?
 modularity
 Terraform
 fileshare
+artisanal
 s3
 cd
 performant
@@ -89,6 +92,15 @@ Czarkowski('s)?
 UI
 argocd-k8s
 [A,a]rgo[CD,cd]{2}
+natively
+UI
+hostname
+serializer
+Kafka
+Quickstart
+natively
+customizable
+scalable
 1e49264
 spring-petclinic
 [D,d]ockerfile

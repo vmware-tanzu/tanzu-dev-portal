@@ -22,7 +22,7 @@
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}
-            {{ .Content }}
+            {{ .Render "content" }}
           </main>
         </div>
       </div>
