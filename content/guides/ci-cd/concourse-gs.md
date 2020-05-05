@@ -47,7 +47,7 @@ Before you get started, you will need to do a number of things.
 * **Secure a Slack instance**: One via which you have access to create webhooks and can post messages to a channel.
 * **Set aside 15-20 minutes**: Roughly the time it will take to run through this guide. 
 
-Setting up
+## Setting up
 To make the installation and configuration of Concourse CI and its pipelines a little easier, a GitHub repo is provided here along with some helpful files. Download it, then cd into that directory. In this guide, commands will assume this as your pwd unless otherwise noted.
 ```
 git clone https://github.com/anthonyvetter/concourse-getting-started.git && cd concourse-getting-started
@@ -212,4 +212,3 @@ The pipeline and job run details
 That’s it! Your pipeline is now monitoring your test branch for changes. Whenever a change is made, this pipeline will be kicked off and the tests will be run. Feel free to keep experimenting with this pipeline configuration, and build it to suit your needs. Push more changes to the application and watch Concourse CI trigger a new test run. 
 
 For more information on Concourse CI, check out the [open source project](https://concourse-ci.org/) site. For information about the commercially-supported version, check out the Concourse CI [page](https://tanzu.vmware.com/concourse) on VMware.com.
-
