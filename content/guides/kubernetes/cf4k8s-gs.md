@@ -6,6 +6,7 @@ topics:
 - kubernetes
 tags:
 - cf-for-k8s
+- Kubernetes
 patterns:
 - deployment
 ---
