@@ -10,15 +10,11 @@ patterns:
 - Deployment
 ---
 
-## Getting Started with Helm: Deploying Apps on Kubernetes
-
-### What Is Helm?
-
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [Helm: What Is It?](../helm-what-is/)
 
 In this guide you'll deploy a simple application using Helm to a Kubernetes cluster.
 
-### Before You Begin
+## Before You Begin
 
 There are a few things you need to do before getting started with Helm:
 
@@ -32,7 +28,7 @@ Helm leverages your local Kubernetes context to operate, so it will have whateve
 
 _If you read about Helm and come across references to `tiller`, previous versions (before version 3) required an extra component installed on the Kubernetes cluster._
 
-### Initial Helm Setup
+## Initial Helm Setup
 
 You're going to need a chart to deploy with Helm, so the easiest thing is to connect to a chart repository with the `helm repo` command.
 ```
@@ -53,7 +49,7 @@ bitnami/apache                  	7.3.9        	2.4.41                 	Chart for
 ```
 You can see a whole list of charts, but the output above shows the first three. It shows the name of the chart, the versions, and the descriptions. As you'll see, there's both a chart version and an app version. That's because a chart may be updated and changed separately from the underlying application it is deploying.
 
-### Time to Deploy a Chart (Create a Release)
+## Time to Deploy a Chart (Create a Release)
 
 Now that you have Helm configured with a repo, you can deploy a chart. In Helm lingo that's called _creating a release_. In this example, you'll deploy a pretty simple one, like nginx. You can supply a name for your app like you're going to do here (my app) or you can use the `--generate-name` CLI option to have Helm generate one for you.
 ```yaml
@@ -126,7 +122,7 @@ $ helm uninstall my-app
 release "my-app" uninstalled
 ```
 
-### Changing the Values
+## Changing the Values
 
 Now you have a working nginx app, but maybe you don't want it exposed externally via a load balancer. You can delete this app and redeploy it with `ClusterIP` instead of `LoadBalancer`.
 
@@ -165,8 +161,7 @@ The command to create the release would then be:
 $ helm install my-app bitnami/nginx --values my-app-values.yaml
 ````
 
-
-### Upgrading a Release
+## Upgrading a Release
 Anytime you want to change anything about a release—be it a configuration value for the chart, an upgrade to the chart itself, or the application version—you'll run `helm upgrade`.
 
 For your nginx chart, you can try this by changing a configuration value. Currently the default image `pullPolicy` for this chart is `IfNotPresent`. You can change that to `Always` via an upgrade.
@@ -198,7 +193,7 @@ spec:
 ```
 Why did you have to supply both `service.type` and `image.pullPolicy`? Because if you hadn't supplied both, the service type would have tried to revert to the default. 
 
-### Rollback
+## Rollback
 
 What happens if you didn't want that change or it didn't work the way you expected? Remember the revision of the releases? You can rollback to a previous revision with `helm rollback`. If you want, you can do a `--dry-run` first to see if the rollback would even work.
 ```
@@ -209,7 +204,7 @@ Rollback was a success! Happy Helming!
 ```
 If you check the pod again, you'll see `pullPolicy` is set back to `IfNotPreset`.
 
-### Get Helming
+## Get Helming
 
 If you're ready to start trying to deploy more charts, there are a whole bunch of charts available in a number of different repositories. A current list of repositories in a Helm install might look like this:
 ```
