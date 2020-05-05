@@ -26,7 +26,16 @@ In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
 ### Before you begin
 
-> You will need a few tools before beginning and once set up installation ussually takes 10 mins or less.
+#### Machine Requirements
+
+Currently cf-for-k8s supports kubernetes 1.15.x or 1.16.x, the config yaml file we are using to make our kind cluster will make a cluster with the following requirements, see that your computer can handle them:
+- have a minimum of 1 node
+- have a minimum of 4 CPU, 8GB memory per node
+- have a running metrics-server
+
+#### Tools required
+
+> You will need a few tools before beginning and once set up installation usually takes 10 mins or less.
 
 - You will need `kubectl` to interact with your cluster [kubectl install instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
     * on mac 
@@ -148,7 +157,7 @@ cf auth admin "$CF_ADMIN_PASSWORD"
 cf enable-feature-flag diego_docker
 ```
 
-A powerful feature provided by CF is multi tenancy, where you can create a space for a team, an app or whatever your workflow requires. 
+A powerful feature provided by CF is multi-tenancy, where you can create a space for a team, an app or whatever your workflow requires. 
 
 Create and target an organization and space.
 ```
@@ -174,7 +183,7 @@ Once your app stages you can find it in Cloud Foundry with this command.
 ```
 cf apps
 ```
-The output in the terminal should looks something as follows.
+The output in the terminal should look something as follows.
 ```
 Getting apps in org test-org / space test-space as admin...
 OK
