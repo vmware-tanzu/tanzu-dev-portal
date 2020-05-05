@@ -115,13 +115,13 @@ brew tap argoproj/tap && brew install argoproj/tap/argocd
 ```
 
 **To install the binary**: First, you need to confirm the version of ArgoCD you are running. The script does install the latest stable version, but it’s good to ensure version compatibility. 
-Log in to the ArgoCD UI. In tArgohe upper left-hand corner, you will see the ArgoCD squid, and underneath that, you will see the major version listed. Hovering your cursor over it will show the full version string. 
+Log in to the ArgoCD UI. In the upper left-hand corner, you will see the ArgoCD squid, and underneath that, you will see the major version listed. Hovering your cursor over it will show the full version string. 
 
-![ArgoCD Version](/images/guides/ci-cd/argocd/argocd-getting-started/version.png)
+![ArgoCD Version](/images/guides/ci-cd/argocd/version.png)
 
 Then go to the [releases page](https://github.com/argoproj/argo-cd/releases) on the ArgoCD GitHub site and find the version associated with your ArgoCD version. Under the Assets section, download the argocd version appropriate for your platform.
 
-![ArgoCD Releases](/images/guides/ci-cd/argocd/argocd-getting-started/releases.png)
+![ArgoCD Releases](/images/guides/ci-cd/argocd/releases.png)
 
 Once downloaded, rename the file and move it into your `$PATH`. Modify this command for your platform.
 
