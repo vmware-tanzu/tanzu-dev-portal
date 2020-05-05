@@ -14,7 +14,7 @@ patterns:
 ---
 
 ## What Is RabbitMQ?
-At a high level, [RabbitMQ](https://www.rabbitmq.com/) is an open source message broker. A message broker accepts, translates, and sends messages from a producer (message sender) to a consumer (message receiver). What RabbitMQ excels at is doing this at scale while staying lightweight and easy to deploy.
+At a high level, [RabbitMQ](https://www.rabbitmq.com/) is an open source message broker. A message broker accepts and translates messages from a producer (the message sender) and holds it in a queue so that a consumer (the message receiver) can retrieve it. This allows for multiple producers and consumers to share the same queue without having to directly pass messages between each other. What RabbitMQ excels at is doing this at scale while staying lightweight and easy to deploy.
 
 ## Before You Begin
 Before you begin, there are a few tools you will need:
