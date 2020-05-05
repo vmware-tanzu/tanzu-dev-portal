@@ -1,15 +1,12 @@
 {{ define "main" }}
 
-<a class="td-offset-anchor"></a>
-<section class="td-box td-box--1 position-relative td-box--gray-dark td-box--height-auto">
-	<div class="container text-center">
-		<span class="h4 mb-0">
-<h1>Join the {{ .Site.Title }} community</h1>
-
-<p>{{ .Site.Title }} is built with a number of open source projects that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved.
-</span>
+<section id="hero" class="td-box--gray-dark">
+	<div class="container">
+		<h1 class="h1">Community</h1>
+		<p class="col-lg-7 px-0">{{ .Site.Title }} is built with a number of open source projects that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved.</p>
 	</div>
 </section>
+
 {{ partial "community_links.html" . }}
 
 <div class="td-content">

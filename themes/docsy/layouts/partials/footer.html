@@ -4,23 +4,26 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-4 text-left">
-        <div class="newsletter">
-          <p class="text-white mt-0">Sign up for the developer newsletter</p>
-          <div class='btn click-to-show scroll-to-bottom'>Subscribe</div>
-          <script src="//connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
-          <form id="mktoForm_1609" class="hidden"></form>
-          <script>
-            MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
-            MktoForms2.loadForm("//connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){
-              form.onSuccess(function(values, followUpUrl) {
-                form.getFormElem().hide();
-                $('.confirmation').show();
-                return false;
+        {{ if not (eq .Params.linkTitle "Community") }}
+          <div class="newsletter">
+            <p class="text-white mt-0">Sign up for the developer newsletter</p>
+            <div class='btn click-to-show scroll-to-bottom'>Subscribe</div>
+            <script src="//connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
+            <form id="mktoForm_1609" class="hidden"></form>
+            <script>
+              MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
+              MktoForms2.loadForm("//connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){
+                form.setValues({ "Function__c": "Developer" });
+                form.onSuccess(function(values, followUpUrl) {
+                  form.getFormElem().hide();
+                  $('.confirmation').show();
+                  return false;
+                });
               });
-            });
-          </script>
-          <div class='confirmation' style="display:none">Done!</div>
-        </div>
+            </script>
+            <div class='confirmation' style="display:none">Done!</div>
+          </div>
+        {{ end }}
       </div>
       <div class="col-12 col-lg-8 text-right">
           {{ with $links }}

@@ -10,24 +10,18 @@
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main ">
-        <div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+        <div class="mt-lg-5 mt-0 py-lg-5 py-2">
             <div class='container'>
                 {{ .Render "content" }}
             </div>
         </div>
-        <div class='container py-5'>
+        <div class='border-top container py-5 flex flex-wrap'>
           {{ $blogs := where .Data.Pages "Section" "blog" }}
           {{ if gt (len $blogs) 0 }}
-          <div class='flex ai-center icon-title mb-4'><img class="icon mr-2" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div>
-          <div class='row'>
+          <div class="mb-4 col-lg-2 col-md-2 col-12 px-0 mr-5 mb-5"><div class='flex ai-center icon-title'><img class="icon mr-3" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div></div>
+          <div class='col-lg-8 col-md-8 col-12 px-0'>
               {{ range $blogs }}
-                  <div class="col-lg-4 px-lg-2 mb-3">
-                      <a class="linked-box td-box--gray-850 px-4 pt-4 pb-3" href="{{ .Permalink }}">
-                          <h6 class="mt-2">{{ .Title }}</h6>
-                          <p class="fs-90">{{ .Description }}</p>
-                          <p class='link fs-90'>Read more</p>
-                      </a>
-                  </div>
+                <h5 class="mt-2">{{ .Date.Format "January 2, 2006" }}</h5> <a class="d-block mb-4" href="{{ .Permalink }}">{{ .Title }}</a>
               {{ end }}
           </div>
           {{ end }}
