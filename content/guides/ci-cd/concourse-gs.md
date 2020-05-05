@@ -159,7 +159,7 @@ git push origin test
 The result is that once you deploy the pipeline and push a change to this branch, Concourse CI will pick it up and run its configured automated tests.
 
 ## Deploying a pipeline
-Now that your Concourse CI installation is up and running, it’s time to create your first pipeline. But before you set that pipeline to Concourse CI, take a look at each of the sections to understand what they are doing. Comments are provided within the pipeline YAML as well, to describe each section.
+Now that your Concourse CI installation is up and running, it’s time to create your first pipeline. Go back to the concourse-getting-started folder for the configuration files. But before you set that pipeline to Concourse CI, take a look at each of the sections to understand what they are doing. Comments are provided within the pipeline YAML as well, to describe each section.
 
 ```
 cat pipelines/pipeline.yml
