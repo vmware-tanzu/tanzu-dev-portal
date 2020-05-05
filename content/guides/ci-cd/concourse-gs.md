@@ -195,7 +195,7 @@ When clicking into that pipeline, you will see the jobs and resources depicted a
 
 ![Download Fly](/images/guides/ci-cd/concourse/pipeline.png)
 
-The pipeline 
+### The pipeline 
 
 Back at the CLI, unpause the pipeline using the `unpause-pipeline` command, which can be abbreviated `up`. 
 
