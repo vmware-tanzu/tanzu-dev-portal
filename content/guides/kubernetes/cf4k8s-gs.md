@@ -10,7 +10,6 @@ patterns:
 - deployment
 ---
 
-## CF-for-k8s: Getting Started CF-for-k8s on Kubernetes
 
 ### What is cf-for-k8s?
 
@@ -209,4 +208,3 @@ Learn more about Cloud Foundry with the links below:
 - [cloudfoundry.org](https://www.cloudfoundry.org/)
 - [Online CF Tutorial](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf)
 - [Tanzu Application Service](https://tanzu.vmware.com/application-service)
-
