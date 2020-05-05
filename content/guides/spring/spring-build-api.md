@@ -42,6 +42,8 @@ Once everything is configured, click **Generate** and you’ll download a ZIP fi
 
 Of note, the `pom.xml` file contains all of the configuration on what dependencies your code requires, as well as configuration on how to build it. `SpringBootApiDemo.java` is where your application will start and contains the code to start everything a Spring application needs. In this example, you’ll be creating two files: One to define the Item object and one to build the REST API. 
 
+### The Item Object
+
 The best place to start is defining what an Item is. In the same directory as the `SpringBootApiDemo.java` file, create a new file named “Item.java”. Consider the code below for what this definition looks like:
 
 ```java
@@ -88,6 +90,8 @@ public class Item {
 
 None of this code is specific to Spring, and in fact if you’re a Java developer, this is probably even routine. This code creates a new class with four fields (`id`, `name`, `price`, and `count`), a constructor, and a handful of getters and setters. Since the item ID and name will never be changed, only the price and count have setter.
 
+### The REST API
+
 Now it’s time to build the API. In the same directory you’ve created the `Item.java` file, create one more file named `InventoryController.java`. This is the class that will be what’s referred to in Spring as a `RestController`. In fact, that’s the exact annotation you’ll add to your class to tell Spring that this is a `RestController`.
 
 ```java
@@ -123,6 +127,8 @@ private Item findItem(Long id) {
 
 This code uses the [Java Stream interface](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html) to iterate over all of the items in the `ArrayList`, returning the `Item` that it matches by the ID. If no item with the given ID is found, it instead returns `null`.
 
+### Get All Of The Items
+
 With this helper code complete, it’s time to start building the actual API! Since there’s already a collection of items in an inventory, why not start by implementing the `GET /items` endpoint to get all of the items?
 
 ```java
@@ -150,6 +156,8 @@ $ curl localhost:8080/items
 
 Congratulations! You’ve just built your first REST endpoint using Spring Boot! There’s a few more to implement, but luckily you’ll see the more complicated endpoints aren’t much harder than this one. Next, take a look at the `GET /items/{id}` endpoint. This endpoint will return a single item if it exists, or a `404` if it does not exist.
 
+### Get An Individual Item
+
 ```java
 @GetMapping("/items/{id}")
 public Item getItem(@PathVariable("id") Long id) {
@@ -172,6 +180,8 @@ $ curl localhost:8080/items/1
 
 {"id":1,"name":"Keyboard","price":29.99,"count":76}
 ```
+
+### Creating A New Item
 
 So you can get the items from the inventory, but what if you want to add a new item? You’ll need some information from the developer, such as the item name:
 
@@ -203,6 +213,8 @@ $ curl -XPOST http://localhost:8080/items -H "Content-Type: application/json" -d
 ```
 
 This `cURL` request specifically sets the `Content-Type` header to let your application know that it’s being sent JSON, so make sure your client of choice is doing the same. 
+
+### Update An Existing Item
 
 What good is an inventory system that can’t update the count of an item in an inventory though? Next, take a look at the `PUT /items/{id}` method. Unlike the `POST` request, this `PUT` request tells your REST API that you want to update an existing item:
 
@@ -247,6 +259,8 @@ $ curl -XPUT http://localhost:8080/items/1 -d '{"count": 175, "price": 27.99}' -
 $ curl http://localhost:8080/items/1
 {"id":1,"name":"Keyboard","price":27.99,"count":175}
 ```
+
+### Deleting An Item
 
 All that remains is the `DELETE /items/{id}` endpoint. This code is actually a bit simpler, but take a look:
 
