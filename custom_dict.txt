@@ -10,6 +10,7 @@ HTTPS?
 localhost:[0-9]*
 localhost:8080
 Kubernetes(-native)?
+antipatterns?
 [B,b]uildpack(s|'s)?
 [M,m]inikube
 [R,r]epos?
@@ -56,6 +57,7 @@ telco
 analytics
 macOS
 README
+
 RBAC-enabled
 VMs?
 GAC
@@ -76,6 +78,7 @@ RabbitMQ('s)?
 modularity
 Terraform
 fileshare
+artisanal
 s3
 JSON
 Czarkowski('s)?
