@@ -99,7 +99,7 @@ natively
 customizable
 scalable
 unpause
-webhooks
+webhook(s)?
 localhost
 programmatically
 YAML

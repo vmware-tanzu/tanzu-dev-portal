@@ -179,7 +179,7 @@ vim pipelines/credentials.yml # replace vim with your favorite text editor
 
 That’s because using a credentials file provides just a simple translation done at the time when the pipeline is set. Which is not a big deal when it's just URLs, but when these files contain access tokens, private SSH keys, passwords, and the like, you will want a more secure system.
 
-Now you will set the pipeline onto your Concourse CI deployment by using fly and the `set-pipeline` command, which can be abbreviated sp. Here the `-c` flag denotes which configuration file you will use for your pipeline. The `-p` flag will be the name of your pipeline in Concourse CI and the `-l` flag will tell Concourse CI where to load variables from. Once it is run, type `y` to accept the configuration changes.
+Now you will set the pipeline onto your Concourse CI deployment by using fly and the `set-pipeline` command, which can be abbreviated `sp`. Here the `-c` flag denotes which configuration file you will use for your pipeline. The `-p` flag will be the name of your pipeline in Concourse CI and the `-l` flag will tell Concourse CI where to load variables from. Once it is run, type `y` to accept the configuration changes.
 
 ```
 fly -t demo set-pipeline -c pipelines/pipeline.yml -p petclinic-tests -l pipelines/credentials.yml
