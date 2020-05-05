@@ -7,7 +7,7 @@
 img
 https?
 HTTPS?
-localhost:[[:digit:]]*
+localhost:[0-9]*
 localhost:8080
 Kubernetes(-native)?
 [B,b]uildpack(s|'s)?
@@ -72,7 +72,7 @@ Heptio
 vSphere
 NSX
 TAS
-RabbitMQ
+RabbitMQ('s)?
 modularity
 Terraform
 fileshare
@@ -81,6 +81,9 @@ JSON
 Czarkowski('s)?
 [H,h]elmfiles?
 [T,t]emplating
+natively
+UI
+hostname
 serializer
 Kafka
 Quickstart
