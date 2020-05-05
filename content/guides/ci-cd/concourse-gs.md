@@ -42,7 +42,7 @@ Intrigued? What follows here is a guide to get started with Concourse CI. You wi
 ## Prerequisites
 Before you get started, you will need to do a number of things.
 * **Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and [enable Kubernetes](https://docs.docker.com/docker-for-mac/#kubernetes)**: Other methods of deploying a local Kubernetes cluster like [KIND](https://kind.sigs.k8s.io/docs/user/quick-start/) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) may also work. Cloud-based or other production Kubernetes deployments should work, too. This guide was written using Docker Desktop; other methods will require modification of commands and have not been fully tested for use in this guide.
-* **Install [Helm 3](https://helm.sh/docs/intro/install/)**: Concourse CI can be installed with Helm 2, but the commands provided in this guide assume Helm 3.
+* **Install [Helm 3](https://helm.sh/docs/intro/install/)**: Concourse CI can be installed with Helm 2, but the commands provided in this guide assume Helm 3. If you're not familiar with Helm, try the [what is Helm](../../kubernetes/helm-what-is/) post.
 * **Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**: This is the local client application you will use for interacting with your Kubernetes cluster. It is also how Helm will reach and interact with your cluster.
 * **Secure a Slack instance**: One via which you have access to create webhooks and can post messages to a channel.
 * **Set aside 15-20 minutes**: Roughly the time it will take to run through this guide. 
@@ -173,9 +173,9 @@ You will notice there are a few `((variables))` contained within the pipeline; y
 vim pipelines/credentials.yml # replace vim with your favorite text editor
 ```
 
-**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
+>**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
 
-**Another note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
+>**Another note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
 
 That’s because using a credentials file provides just a simple translation done at the time when the pipeline is set. Which is not a big deal when it's just URLs, but when these files contain access tokens, private SSH keys, passwords, and the like, you will want a more secure system.
 
