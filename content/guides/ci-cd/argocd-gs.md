@@ -14,7 +14,7 @@ patterns:
 
 ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. While the continuous delivery (CD) space is seen by some as crowded these days, ArgoCD does bring some interesting capabilities to the table.
 
-Unlike other tools, ArgoCD is lightweight and easy to configure. It is purpose-built to deploy applications to Kubernetes and so doesn’t have the UI overhead of many tools built to deploy to multiple locations. 
+Unlike other tools, ArgoCD is lightweight and easy to configure. It is purpose-built to deploy applications to Kubernetes so it doesn’t have the UI overhead of many tools built to deploy to multiple locations. 
 
 It was also built with a [GitOps](http://gitops) flow in mind. That means everything ArgoCD sees as its source of truth is stored in a repository, which makes permissions and access control easier to handle since no one can change files locally to impact the behavior of ArgoCD. It also increases security by not storing any of these configuration files locally. 
 
@@ -240,4 +240,3 @@ kubectl port-forward svc/spring-petclinic -n default 9090:8080
 And there you have it! You have a running application deployed to Kubernetes with ArgoCD. For further learning, try setting up your own environment using the optional steps provided throughout this guide. Find out how to set up automated triggers, and maybe configure ArgoCD with your own custom Kubernetes application. Finally, look at adding ArgoCD into your CI/CD pipeline and deploying applications into external Kubernetes environments. 
 
 For further learning, the [Operator Manual](https://argoproj.github.io/argo-cd/operator-manual/) from ArgoCD is a terrific resource. If you want to look at developing a third-party integration for ArgoCD, see the Developer [Guides](https://argoproj.github.io/argo-cd/developer-guide/). 
-
