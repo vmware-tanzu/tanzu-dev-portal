@@ -1,5 +1,5 @@
 ---
-title:  "Using Spring Boot to build an API"
+title:  "Spring Boot: Building an API"
 sortTitle: "Spring Boot"
 weight: 2
 topics:
@@ -14,7 +14,7 @@ patterns:
 - API
 ---
 
-Spring Boot is a framework built on top of Spring which focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will focus on how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo)
+Spring Boot is a framework built on top of Spring which focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will focus on how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo).
 ## The Design
 
 For this example, you’ll build an API to interact with an inventory system. The inventory tracks every item in a fictitious shop, as well as the price and count of each item. Before writing the code, take a few moments to consider the design of the API. The design is, after all, the user experience for the developer, and ensuring it’s clear and simple is just as important as it is when building a frontend user interface.
@@ -27,7 +27,7 @@ If you’re familiar with the basics of REST, much of this should look pretty mu
 - `PUT /items/{id}`: An inventory system would be pretty useless if you couldn’t change the price or count of any of the items. In this case, this endpoint expects a JSON object, containing either the price, count, or both.
 - `DELETE /items/{id}`: Finally, not every product is carried forever. You could simply keep the count at zero, but to keep the inventory clean, deleting it from the database will prove to be useful.
 
-Great! With all of the endpoints planned out, we can begin implementation!
+Great! With all of the endpoints planned out, you can begin implementation!
 
 ## Building the Application
 
@@ -134,7 +134,7 @@ public ArrayList<Item> getInventory() {
 }
 ```
 
-There’s two points to be made. First, this code explicitly tells Spring that this is the code to run when a `GET` request is sent to `/items` by annotating this method with `@GetMapping(“/items”)`. Second, you’ll notice that there’s no code to serialize the `ArrayList` that is our inventory. Spring will see that it’s an `ArrayList` of `Item` object, inspect all of the fields that are defined in an `Item`, and then send a response containing a JSON array. This code alone is enough to start sending requests and getting responses if you’d like to see it in action for yourself. Since this code was generated with Maven in mind, it can be ran with:
+There’s two points to be made. First, this code explicitly tells Spring that this is the code to run when a `GET` request is sent to `/items` by annotating this method with `@GetMapping(“/items”)`. Second, you’ll notice that there’s no code to serialize the `ArrayList` that is the inventory. Spring will see that it’s an `ArrayList` of `Item` object, inspect all of the fields that are defined in an `Item`, and then send a response containing a JSON array. This code alone is enough to start sending requests and getting responses if you’d like to see it in action for yourself. Since this code was generated with Maven in mind, it can be run with:
 
 ```
 ./mvnw spring-boot:run
@@ -148,7 +148,7 @@ $ curl localhost:8080/items
 [{"id":1,"name":"Keyboard","price":29.99,"count":76},{"id":2,"name":"Mouse","price":19.99,"count":43},{"id":3,"name":"Monitor","price":79.99,"count":7},{"id":4,"name":"PC","price":749.99,"count":2},{"id":5,"name":"Headphones","price":19.99,"count":14}]
 ```
 
-Congratulations! You’ve just built your first REST endpoint using Spring Boot! There’s a few more to implement, but luckily you’ll see the more complicated endpoints aren’t much harder than this one. Next, take a look at the `GET /items/{id}` endpoint. This endpoint will return a single item if it exists, or a `404` if it does not exists.
+Congratulations! You’ve just built your first REST endpoint using Spring Boot! There’s a few more to implement, but luckily you’ll see the more complicated endpoints aren’t much harder than this one. Next, take a look at the `GET /items/{id}` endpoint. This endpoint will return a single item if it exists, or a `404` if it does not exist.
 
 ```java
 @GetMapping("/items/{id}")
@@ -173,7 +173,7 @@ $ curl localhost:8080/items/1
 {"id":1,"name":"Keyboard","price":29.99,"count":76}
 ```
 
-So you can get the items from the inventory, what if you want to add a new item? You’ll need some information from the developer, such as the item name
+So you can get the items from the inventory, but what if you want to add a new item? You’ll need some information from the developer, such as the item name:
 
 ```java
 @PostMapping("/items")
@@ -188,13 +188,13 @@ public Item createItem(@RequestBody Item req) {
 }
 ```
 
-If a `GET` request used the `@GetMapping` annotation, then you probably guess that a `POST` request uses the `@PostMappint` annotation. Since this is responding to a different HTTP verb, there’s no issue mapping to the same path that was mapped to earlier. What probably isn’t expected is the method arguments:
+If a `GET` request used the `@GetMapping` annotation, then you probably guessed that a `POST` request uses the `@PostMapping` annotation. Since this is responding to a different HTTP verb, there’s no issue mapping to the same path that was mapped to earlier. What probably isn’t expected is the method arguments:
 
 ```
 @RequestBody Item req
 ```
 
-The `@RequestBody` annotation tells Spring that we want to load the body of the `POST` request into the `req` variable, and that it should expect an object that can be deserialized to an `Item` object. This is another nice feature of Spring, where this translation between JSON and Java objects is automatically handled for you. The rest of the code creates a new `Item` (since IDs cannot be changed), saves it to the inventory, and returns the newly created object. Once again, restart your application and give it a try:
+The `@RequestBody` annotation tells Spring that you want to load the body of the `POST` request into the `req` variable, and that it should expect an object that can be deserialized to an `Item` object. This is another nice feature of Spring, where this translation between JSON and Java objects is automatically handled for you. The rest of the code creates a new `Item` (since IDs cannot be changed), saves it to the inventory, and returns the newly created object. Once again, restart your application and give it a try:
 
 ```
 $ curl -XPOST http://localhost:8080/items -H "Content-Type: application/json" -d '{"name": "Speakers", "price": 49.99, "count": 30}'
@@ -202,9 +202,9 @@ $ curl -XPOST http://localhost:8080/items -H "Content-Type: application/json" -d
 {"id":6,"name":"Speakers","price":49.99,"count":30}
 ```
 
-This `cURL` request specifically sets the `Content-Type` header to let our application know that it’s being sent JSON, so make sure your client of choice is doing the same. 
+This `cURL` request specifically sets the `Content-Type` header to let your application know that it’s being sent JSON, so make sure your client of choice is doing the same. 
 
-What good is an inventory system that can’t update the count of an item in an inventory though? Next, take a look at the `PUT /items/{id}` method. Unlike the `POST` request, this `PUT` request tells our REST API that we want to update an existing item:
+What good is an inventory system that can’t update the count of an item in an inventory though? Next, take a look at the `PUT /items/{id}` method. Unlike the `POST` request, this `PUT` request tells your REST API that you want to update an existing item:
 
 ```java
 @PutMapping("/items/{id}")
@@ -233,7 +233,7 @@ public Item updateItem(@PathVariable("id") Long id, @RequestBody Map<String, Str
 }
 ```
 
-As you may have guessed, since this is responding to a `PUT` call, this method has the `@PutMapping(“/items/{id}` annotation. The arguments for this method also combine what we’ve seen in two different endpoints, with the `@PathVariable` annotation pulling the `id` from the request path, and the `@RequestBody` annotation pulling the request body. You’ll also notice that the request body is being read as a `Map<String, String>` this time. You  _could_ also read this as an `Item` object, but remember that you don’t know if the request will define a price, a count, or both. Instead, Spring will read in the JSON as a `Map`, with both keys and values of type `String`.
+As you may have guessed, since this is responding to a `PUT` call, this method has the `@PutMapping(“/items/{id}` annotation. The arguments for this method also combine what you've seen in two different endpoints, with the `@PathVariable` annotation pulling the `id` from the request path, and the `@RequestBody` annotation pulling the request body. You’ll also notice that the request body is being read as a `Map<String, String>` this time. You  _could_ also read this as an `Item` object, but remember that you don’t know if the request will define a price, a count, or both. Instead, Spring will read in the JSON as a `Map`, with both keys and values of type `String`.
 
 As with the item lookup, if the item doesn’t even exist, a `404` is returned. Otherwise, the code will inspect each key of the `Map<String, String>` object, and if it finds a key of either “price” or “count”, it will update the item that it looked up using the `id` provided in the request path. Finally, the newly updated item is returned back to the requester. Give it a try for yourself by getting an item, updating, and getting it again to make sure the changes took place:
 
@@ -308,7 +308,7 @@ public void getInventoryShouldReturnAllItems() throws Exception {
 }
 ```
 
-These tests are fairly verbose, which helps keep it clear exactly that the tests are actually checking. This one sends a `GET` request to `/items` and ensures that the response is a JSON Array with a length of 5. Consider another one that’s more complicated and take a look at the test for `POST /items`.
+These tests are fairly verbose, which helps keep it clear exactly what the tests are actually checking. This one sends a `GET` request to `/items` and ensures that the response is a JSON Array with a length of 5. Consider another one that’s more complicated and take a look at the test for `POST /items`.
 
 ```java
 @Test
