@@ -17,7 +17,8 @@ Spring Cloud Stream is a framework for building highly scalable, event-driven mi
 
 ## Why Is It Important?
 The components that abstract away the communication with message brokers, referred to as “binders,” allow developers to focus on code that emits and consumes messages without having to write code for a specific broker. Because of this, that also means migrating from one message broker to another can be as simple as the dependencies of your code.
-Finally, since Spring Cloud Stream is a part of the Spring framework, that means that you can easily test your code as well. Spring provides methods running tests without the need to specifically connect to a message broker, which makes it fit in nicely with your current CI process.
+
+Since Spring Cloud Stream is a part of the Spring framework, you can easily test your code as well. Spring provides methods for running tests without the need to specifically connect to a message broker, which allows it to fit in nicely with your current CI process.
 
 ## How Does It Work?
 
@@ -36,4 +37,4 @@ In this scenario, you can see that there are two logical bindings—one for inpu
 Out of the box, Spring Cloud Stream will automatically create channels if they don’t already exist and use auto-generated names if they aren’t provided, and will serialize your data the best it can. This is all configurable and customizable, however, and as is the case with much of Spring, it makes the best decisions that it can given the data it has.  
 ## How Can I Use It?
 
-Make sure to check out [Getting Started with Spring Cloud Stream]() for a more in-depth walkthrough of Spring Cloud Stream, as well as this great [Quick Start doc on Spring.io](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/current/reference/html/spring-cloud-stream.html#_quick_start). Finally, you can find many code examples in the [Spring Cloud GitHub](https://github.com/spring-cloud/spring-cloud-stream-samples/).
+Make sure to check out [Getting Started with Spring Cloud Stream](/guides/spring/scs-gs) for a more in-depth walkthrough of Spring Cloud Stream, as well as this great [Quick Start doc on Spring.io](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/current/reference/html/spring-cloud-stream.html#_quick_start). Finally, you can find many code examples in the [Spring Cloud GitHub](https://github.com/spring-cloud/spring-cloud-stream-samples/).
