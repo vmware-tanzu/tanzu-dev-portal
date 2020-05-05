@@ -12,13 +12,11 @@ patterns:
 - API
 ---
 
-### What Is Spring Cloud Gateway?
-
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring. For more information, make sure to check out [What is Spring Cloud Gateway?](../scg-what-is)
 
 In this guide, you'll stand up a bare-bones gateway using Spring Cloud Gateway, which will do some light request modification. You'll see the basics of Spring Cloud Gateway, which will serve as a great foundation for those just starting out.
 
-### Before You Begin
+## Before You Begin
 
 There are a few things you need to do before getting started with Spring Cloud Gateway:
 
@@ -27,11 +25,11 @@ There are a few things you need to do before getting started with Spring Cloud G
 - [JDK 1.8](https://www.oracle.com/java/technologies/javase-downloads.html) or newer
 - [Gradle 4+](https://gradle.org/install/) or [Maven 3.2+](https://maven.apache.org/download.cgi)
 
-### Using Spring Cloud Gateway
+## Using Spring Cloud Gateway
 
 Since Spring Cloud Gateway is a library built for Spring, there's no infrastructure to set up and no networking to configure. Instead, this guide will be looking at the code that goes around defining your gateway.
 
-#### Generating a New Spring Application
+### Generating a New Spring Application
 
 The easiest way to get started with a new Spring application is at [start.spring.io](https://start.spring.io/). There are a few personal choices here—such as if you'd like to use Maven or Gradle—but for the sake of consistency, here are the settings used in this guide:
 
@@ -47,7 +45,7 @@ Finally, you'll just need one dependency for our application:
 
 Click "Generate" and you'll download a zip file of the generated code.
 
-#### Building Your Gateway
+### Building Your Gateway
 
 You can configure a basic route by creating a method that takes in a `RouteLocatorBuilder` and returns a `RouteLocator`. Here's an example of `src/main/java/com/vmware/scgettingstarted/ScgGettingStartedApplication.java/ScgGettingStartedApplication.java` complete with a custom route:
 
@@ -81,7 +79,7 @@ public class ScgGettingStartedApplication {
 
 Take note of the `myRoutes` method. This code will create a route that will take any `GET` request, add a header named `Hello` and a value of `World`, then forward your request to httpbin.org.
 
-#### Run Your Gateway
+### Run Your Gateway
 
 You can run this as a normal Spring Boot application:
 
@@ -127,6 +125,6 @@ You've sent a `GET` request to your application, adding a custom header of `MyHe
 
 Here you can see the response from httpbin.org, including the `MyHeader` header that you sent in your request, as well as the `Hello` header that Spring Cloud Gateway added to your request.
 
-#### Keep Learning
+### Keep Learning
 
 Check out some of the great guides on the Spring website to learn how you can leverage the amazing Spring ecosystem to accomplish things like [hiding your backend services](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway) as well as how you can [secure your services using Spring Cloud Security](https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway).
