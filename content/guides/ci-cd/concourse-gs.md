@@ -191,7 +191,7 @@ Pipelines start “paused,” meaning they won’t start running until you tell 
 
 The main Concourse CI UI showing your pipeline set
 
-When clicking into that pipeline, you will see the jobs and resources depicted as connected entities. The jobs are the big grey boxes; the resources used by the jobs are the smaller, black boxes.
+When clicking into that pipeline, you will see the jobs and resources depicted as connected entities. The jobs are the big gray boxes; the resources used by the jobs are the smaller, black boxes.
 
 ![Download Fly](/images/guides/ci-cd/concourse/pipeline.png)
 
