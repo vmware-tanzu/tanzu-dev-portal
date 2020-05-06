@@ -347,4 +347,4 @@ This test will send a `POST` to `/items` with the data `"{"name": "Speakers", "p
 
 ## Learn More
 
-The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/), which are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/api/basics-of-rest).
+The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/), which are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/microservices/basics-of-rest).
