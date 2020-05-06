@@ -5,10 +5,10 @@
         <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}</span>
 	</a>
-	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
-		<ul class="navbar-nav mt-2 mt-lg-0">
+	<div class="td-navbar-nav-hamburger" id="main_navbar">
+		<ul class="navbar-nav mt-lg-0 ai-center">
 			{{ if  .Site.Params.versions }}
-			<li class="nav-item dropdown d-none d-lg-block mr-4 mb-2 mb-lg-0">
+			<li class="nav-item dropdown d-none d-lg-block mr-4 mb-0">
 				{{ partial "navbar-version-selector.html" . }}
 			</li>
 			{{ end }}
@@ -17,7 +17,7 @@
 			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
 			{{ range .Site.Menus.main }}
 				{{ if .HasChildren }}
-				<li class="nav-item dropdown d-none d-lg-block mr-4 mb-2 mb-lg-0">
+				<li class="nav-item dropdown d-lg-block mr-4 mb-0">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{{ .Name }}
 					</a>
@@ -28,7 +28,7 @@
 					</div>
 				</li>
 				{{ else }}
-				<li class="nav-item mr-4 mb-2 mb-lg-0">
+				<li class="nav-item mr-4 mb-0">
 					{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
 					{{ with .Page }}
 					{{ $active = or $active ( $.IsDescendant .)  }}
@@ -37,18 +37,25 @@
 				</li>
 				{{ end }}
 			{{ end }}
+			<li class="nav-item ml-2 mb-0">
+        <a id="toggle-light-dark-mode"><span></span></a>
+			</li>
 
-
-
-			{{ if  (gt (len .Site.Home.Translations) 0) }}
+<!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}
 			<li class="nav-item dropdown d-none d-lg-block">
 				{{ partial "navbar-lang-selector.html" . }}
 			</li>
-	
-
-			{{ end }}
+			{{ end }} -->
 		</ul>
+
+		<div id="menu-toggle">
+			<span>
+        <div id="menu-bars"><div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div></div>
+        <svg id="menu-close" viewBox="0 0 18.33 18.33" xmlns="http://www.w3.org/2000/svg"><line class="a" x1="1" x2="17.33" y1="1" y2="17.33"></line><line class="a" x1="17.33" x2="1" y1="1" y2="17.33"></line></svg>
+      </span>
+		</div>
+
 	</div>
-	<div class="navbar-nav d-none d-lg-block">{{ partial "search-input.html" . }}</div>
+	<!-- <div class="navbar-nav d-none d-lg-block">{{ partial "search-input.html" . }}</div> -->
 </div>
 </nav>
