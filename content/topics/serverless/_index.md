@@ -12,4 +12,4 @@ menu:
         weight: 5
 ---
 
-In a serverless computing model, there is no infrastructure to manage; developers just bring code and everything else is taken care of. Serverless workloads also typically follow an [event-driven architecture](../patterns/event-driven) that triggers functions or managed services, and a scale-to-zero model where resources are only consumed when in use.
+In a serverless computing model, there is no infrastructure to manage; developers just bring code and everything else is taken care of. Serverless workloads also typically follow an [event-driven architecture](/patterns/eventing) that triggers functions or managed services, and a scale-to-zero model where resources are only consumed when in use.
