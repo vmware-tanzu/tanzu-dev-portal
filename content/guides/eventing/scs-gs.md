@@ -78,11 +78,11 @@ Here, a bean of type `Consumer` is created, and since this is the only bean of t
 
 This will compile and start the code and then attach it to the RabbitMQ servers you set up using Docker Compose, which will be listening at `localhost:5672`. Since this code only listens for messages, you’ll still need a way to send them. For that, you can use the RabbitMQ Management UI, which can be reached at http://localhost:15672/ with the username `guest` and password `guest`. Once logged in, choose “Exchanges” from the top navigation. You’ll notice a whole list of exchanges, but one should stand out: Spring Cloud Stream automatically set up an exchange for us, named `toUpper-in-0` !
 
-
+![img](/images/guides/spring/scs-gs-01.png)
 
 Click on the `toUpper-in-0` exchange and you’ll be taken to a collection of information about it, as well as a way to easily publish messages to it. Expand the “Publish Message” section if it’s not  expanded already, type in the message of your choice, and click “Publish Message.”
 
-
+![img](/images/guides/spring/scs-gs-02.png)
 
 Watch the terminal running your code and you’ll see your message written to the console, but all in capital letters:
 
