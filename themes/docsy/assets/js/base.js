@@ -63,8 +63,10 @@ limitations under the License.
             }
         });
 
-        //Open external links in new tab
+        //Open external links/rss in new tab, tvc links in same tab
         $("a[href^='http']").attr('target', '_blank');
+        $("a[href*='tanzu.vmware.com']").attr('target', '_self');
+        $("a[href*='rss']").attr('target', '_blank');
 
 
         //Open youtube links with class 'lightbox' in lightbox
@@ -105,6 +107,13 @@ limitations under the License.
             });
 
           return false;
+        });
+
+
+        //Toggle mobile menu
+        $("#menu-toggle").click(function(){
+          $(".td-navbar .td-navbar-nav-hamburger").toggleClass("open");
+          $(".td-navbar .td-navbar-nav-hamburger .navbar-nav .nav-item").toggle();
         });
 
 

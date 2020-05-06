@@ -1,3 +1,4 @@
+.td-outer,
 body {
    background-color: white !important;
    color: #28333c !important;
@@ -8,6 +9,12 @@ body {
  body .dropdown-toggle::after {
    content: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-999.png) !important;
 }
+@media (max-width: 991.98px) {
+ body .td-navbar .td-navbar-nav-hamburger .dropdown-toggle::after {
+    content: "" !important;
+ }   
+}
+
  body .td-sidebar, body .td-box--dark, body .td-box--gray-850, body .td-navbar, body .td-main {
    background-color: white !important;
 }
@@ -34,6 +41,14 @@ body {
  body .guide .td-sidebar-nav__section-title a, body .linked-box .link, body .td-box--gray-850 p > a, body .td-box--gray-darkest p > a, body .td-box--dark p > a, body a, body p.link {
    color: #1d428a !important;
 }
+@media (max-width: 991.98px) {
+   body .td-navbar .td-navbar-nav-hamburger .navbar-nav a[href*='/'] {
+      color: #1d428a !important;
+   }
+   body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
+      stroke: #28333c !important;
+   }
+}
  body .text-light {
    color: #61717d !important;
 }
@@ -54,4 +69,30 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn {
    background: #1d428a !important;
 }
-
+#hero.guides-hero {
+  background-image: url(/images/backgrounds/background-guides-light.svg) !important;
+}
+#hero.patterns-hero {
+   background-image: url(/images/backgrounds/background-patterns-light.svg) !important;
+}
+#hero.samples-hero {
+   background-image: url(/images/backgrounds/background-samples-light.svg) !important;
+}
+#hero.videos-hero {
+   background-image: url(/images/backgrounds/background-video-light.svg) !important;
+}
+#hero.community-hero {
+   background-image: url(/images/backgrounds/background-community-light.svg) !important;
+}
+@media(max-width: 991px) {
+  body #hero.guides-hero,
+  body #hero.patterns-hero,
+  body #hero.samples-hero,
+  body #hero.videos-hero,
+  body #hero.community-hero {
+   background-image: none !important;
+  }
+}
+#menu-toggle .menu-bar {
+   background: #28333c !important;
+}
