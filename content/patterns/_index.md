@@ -2,7 +2,7 @@
 title: Patterns
 linkTitle: Patterns
 description: >
-    Modern app development patterns
+    Modern application patterns and related resources.
 menu:
     main:
         parent: "sections"

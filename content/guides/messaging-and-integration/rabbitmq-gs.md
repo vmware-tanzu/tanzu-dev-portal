@@ -4,7 +4,6 @@ sortTitle: "RabbitMQ"
 weight: 2
 topics:
 - Event Streaming
-- RabbitMQ
 - Messaging and Integration
 tags:
 - RabbitMQ

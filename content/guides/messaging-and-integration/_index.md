@@ -2,8 +2,10 @@
 title: Messaging and Integration
 weight: 1
 tags:
-- Spring
+- Messaging and Integration
 description: >
-    Main guides page about messaging and integration.
+    Messaging services can receive and sort a large number of messages while serving consumers at scale. 
 layout: single
 ---
+
+Messaging services such as [Kafka](../guides/messaging-and-integration/kafka-gs) or [RabbitMQ](../guides/messaging-and-integration/rabbitmq-gs/) can receive and sort a large number of messages while serving consumers at scale. 

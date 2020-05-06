@@ -2,11 +2,11 @@
 title:  "Helmfile: What Is It?"
 date:   2020-02-10
 author: Paul Czarkowski
-tags: ["kubernetes", "containers", "helm", "helmfile"]
+tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]
 sortTitle: "Helm"
 weight: 3
-topics: ["kubernetes"]
-patterns: ["deployment"]
+topics: ["Kubernetes"]
+patterns: ["Deployment"]
 
 ---
 

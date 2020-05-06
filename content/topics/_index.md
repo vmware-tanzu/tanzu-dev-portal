@@ -2,7 +2,7 @@
 title: Topics
 linkTitle: Topics
 description: >
-    Topics relating to modern app development technologies.
+    Popular topics related to modern app development.
 menu:
     main:
         identifier: topics

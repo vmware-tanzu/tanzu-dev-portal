@@ -3,12 +3,12 @@ title:  "CF-for-k8s: Getting Started CF-for-k8s on Kubernetes"
 sortTitle: "cf-for-k8s"
 weight: 2
 topics:
-- kubernetes
+- Kubernetes
 tags:
 - cf-for-k8s
 - Kubernetes
 patterns:
-- deployment
+- Deployment
 ---
 
 

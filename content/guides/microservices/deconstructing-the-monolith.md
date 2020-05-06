@@ -4,7 +4,6 @@ sortTitle: "Breaking Down a Monolith"
 weight: 2
 topics:
 - Microservices
-- API
 tags:
 - Microservices
 - API
