@@ -6,9 +6,9 @@ summary:
 - Simple Event Driven Microservices with Spring Cloud Stream
 topics:
 - Messaging and Integration
-- Eventing
+- Event Streaming
 tags:
-- Eventing
+- Event Streaming
 - Spring Cloud Stream
 - Spring
 patterns:

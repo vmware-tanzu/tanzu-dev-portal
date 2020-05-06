@@ -4,7 +4,6 @@ sortTitle: "Kafka"
 weight: 1
 topics:
 - Event Streaming
-- Kafka
 - Messaging and Integration
 tags:
 - Kafka

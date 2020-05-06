@@ -3,7 +3,7 @@ title:  "Kubeapps: Getting Started"
 sortTitle: "Kubeapps"
 weight: 3
 topics:
-- kubernetes
+- Kubernetes
 tags:
 - Kubeapps
 patterns:

@@ -1,9 +1,10 @@
 ---
-title: Eventing Pattern
+title: Event-Driven Architecture
 featured: true
 weight: 3
 description: >
-    Introduction To Event-Driven Architecture
+    Asynchronously emitting and consuming events at scale. A look at different messaging services and frameworks. 
+
 ---
 
 As applications become more and more distributed, many are looking to more event-based systems. Rather than services communicating directly with each other, polling for new work to do and generating a bunch of chatter, applications are instead publishing a change in state to a message broker which services can listen on. These changes in state are often referred to as “events”.
@@ -20,4 +21,4 @@ Furthermore, additional metadata could be added to these messages, for example i
 
 ![img](/images/patterns/eventing/eda-03.png)
 
-If you're looking to get started with eventing, make sure to check out the guides below such as [Getting Started With RabbitMQ](), [Getting Started With Kafka](), or if you're a Spring developer, [Getting Started With Spring Cloud Stream](). These guides will walk you through the basics of interacting with some popular message brokers and show what tools are available in these ecosystems. 
+If you're looking to get started with eventing, make sure to check out the guides below such as [Getting Started With RabbitMQ](/guides/messaging-and-integration/rabbitmq-gs), [Getting Started With Kafka](/guides/messaging-and-integration/kafka-gs), or if you're a Spring developer, [Getting Started With Spring Cloud Stream](/guides/event-streaming/scs-gs). These guides will walk you through the basics of interacting with some popular message brokers and show what tools are available in these ecosystems. 

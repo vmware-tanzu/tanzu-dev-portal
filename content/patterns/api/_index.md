@@ -1,9 +1,9 @@
 ---
-title: API Pattern
+title: APIs
 featured: true
 weight: 1
 description: >
-    Introduction to the API Pattern
+    API design, implementation, and operation. Everything from the basics of REST to building an API from scratch.
 ---
 
 

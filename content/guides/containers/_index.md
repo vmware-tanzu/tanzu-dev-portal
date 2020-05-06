@@ -4,10 +4,8 @@ weight: 1
 tags:
 - Containers
 description: >
-    Main guides page about Containers.
+    Containers are a popular way of packaging apps and dependencies for easy portability across environments.
 layout: single
 ---
 
-Basic intro on containers...
-
-A great place to get started is with [KubeAcademy](https://kube.academy) and the amazing [Containers 101]("https://kube.academy/courses/containers-101") course.
+Containers are one of the most common ways to package applications and their dependencies to make them reliably portable across different environments. [The Open Container Initiative (OCI)](https://www.opencontainers.org/) is the standard that most container systems follow. To learn more, try the [Containers 101](https://kube.academy/courses/containers-101) course on [KubeAcademy](https://kube.academy).
