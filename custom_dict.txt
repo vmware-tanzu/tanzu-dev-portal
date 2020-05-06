@@ -132,3 +132,12 @@ failover
 spring-petclinic
 [D,d]ockerfile
 OCI
+CloudEvents
+Knative
+SDK
+[S,s]kaffold
+stateful
+Netty(-based)?
+WebFlux
+Finchley
+

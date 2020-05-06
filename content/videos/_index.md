@@ -1,8 +1,8 @@
 ---
-title: Tanzu Demo Videos
+title: Videos
 linkTitle: Videos
 description: >
-    Demo Videos for Tanzu products.
+    Video demos of modern app development technologies.
 menu:
     main:
         parent: "sections"
