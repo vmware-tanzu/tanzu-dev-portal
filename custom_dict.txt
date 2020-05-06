@@ -4,7 +4,21 @@
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
 
+DockerHub
+kubeconfig
+yaml
+ytt
+kapp
+DNS
+cf-for-k8s
+CF-for-k8s
+scalable
+autoscaling
+cd
+kubernetes
+kubectl
 img
+8GB
 https?
 HTTPS?
 localhost:[0-9]*
