@@ -112,5 +112,12 @@ Quickstart
 natively
 customizable
 scalable
-
+unpause
+webhook(s)?
+localhost
+programmatically
+YAML
+spring-petclinic
+cd
+kubectl
 1e49264
