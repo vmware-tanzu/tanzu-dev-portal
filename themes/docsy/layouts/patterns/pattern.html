@@ -14,68 +14,70 @@
             <div class='container'>
                 {{ .Render "content" }}
             </div>
-            <div class='container'>
-
-                {{ $guides := where .Data.Pages "Section" "guides" }}
-                {{ if gt (len $guides) 0 }}
-                <div class='flex ai-center icon-title mb-4'><img class="icon mr-2" src="/images/icons/icon-guides.svg"/><h3 class="mb-0">Guides</h3></div>
-                <div class='row'>
-                    {{ range $guides }}
-                        <div class="col-lg-4 px-lg-2 mb-3">
-                            <a class="linked-box td-box--gray-850 px-4 pt-4 pb-3" href="{{ .Permalink }}">
-                                <h6 class="mt-2">{{ .Title }}</h6>
-                                <p class="fs-90">{{ .Description }}</p>
-                                <p class='link fs-90'>Read more</p>
-                            </a>
-                        </div>
-                    {{ end }}
-                </div>
-                {{ end }}
-
-            </div>
         </div>
 
-        <div class='container py-5'>
+        <br/>
 
-            {{ $videos := where .Data.Pages "Section" "videos" }}
-            {{ if gt (len $videos) 0 }}
-            <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-videos.svg"/><h3 class="mb-0">Videos</h3></div>
-            <div class="col px-lg-0"><div class='row'>
-                {{ range $videos }}
-                    <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-                        <iframe class="youtube-small" type="text/html" src="//www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe>
-                    <!-- <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p> -->
-                        <p class="text-white">{{- .Title -}}</p>
+        {{ $guides := where .Data.Pages "Section" "guides" }}
+        {{ if gt (len $guides) 0 }}
+        <div class='container py-5 border-bottom'>
+            <div class='flex ai-center icon-title mb-4'><img class="icon mr-3" src="/images/icons/icon-guides.svg"/><h3 class="mb-0">Guides</h3></div>
+            <div class='col px-lg-0'><div class='row'>
+                {{ range $guides }}
+                    <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
+                        <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .Permalink }}">
+                            <h4 class="mt-2">{{ .Title }}</h4>
+                            <p>{{ .Description }}</p>
+                            <p class='link'>Read more</p>
+                        </a>
                     </div>
                 {{ end }}
             </div></div>
             {{ end }}
+        </div>
 
-    
-        {{ $samples := where .Data.Pages "Section" "samples" }}
-        {{ if gt (len $samples) 0 }}
-        <div class='container py-5 border-top'>
-            <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-code-samples.svg"/><h3 class="mb-0">Code Samples</h3></div>
+
+        {{ $videos := where .Data.Pages "Section" "videos" }}
+        {{ if gt (len $videos) 0 }}
+        <div class='container py-5 border-bottom'>
+            <div class='flex ai-center icon-title mb-5'><img class="icon mr-3" src="/images/icons/icon-videos.svg"/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
-                {{ range $samples }}
+                {{ range $videos }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-                        <a class="fs-90" href="{{ .Permalink }}">{{ .Title }}</a>
-                        {{ with .Params.description }}<p class="fs-90">{{ . | markdownify }}</p>{{ end }}
+                        <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="//www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
+                        <p><a class="text-white lightbox" href="https://youtube.com/watch?v={{ .Params.youtube_id }}">{{- .Title -}}</a></p>
                     </div>
                 {{ end }}
             </div></div>
         </div>
         {{ end }}
+
+    
+        {{ $samples := where .Data.Pages "Section" "samples" }}
+        {{ if gt (len $samples) 0 }}
+        <div class='container py-5 border-bottom'>
+            <div class='flex ai-center icon-title mb-5'><img class="icon mr-3" src="/images/icons/icon-code-samples.svg"/><h3 class="mb-0">Code Samples</h3></div>
+            <div class="col px-lg-0"><div class='row'>
+                {{ range $samples }}
+                    <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                        <a class='h4' href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
+                    </div>
+                {{ end }}
+            </div></div>
+        </div>
+        {{ end }}
+
         
         {{ $blogs := where .Data.Pages "Section" "blog" }}
         {{ if gt (len $blogs) 0 }}
-        <div class='container py-5 border-top'>
-            <div class='flex ai-center icon-title mb-5'><img class="icon mr-2" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div>
+        <div class='container py-5 border-bottom'>
+            <div class='flex ai-center icon-title mb-5'><img class="icon mr-3" src="/images/icons/icon-blog.svg"/><h3 class="mb-0">Blogs</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $blogs }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-                        <a class="fs-90" href="{{ .Permalink }}">{{ .Title }}</a>
-                        {{ with .Params.description }}<p class="fs-90">{{ . | markdownify }}</p>{{ end }}
+                        <a class='h4' href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
                     </div>
                 {{ end }}
             </div></div>
