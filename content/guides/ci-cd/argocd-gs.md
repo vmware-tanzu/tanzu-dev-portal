@@ -22,7 +22,7 @@ And it’s fast! After using it I am sure you will agree that ArgoCD is very per
 
 In this guide, you will install ArgoCD onto Kubernetes. Then you will configure ArgoCD to pull Kubernetes configuration files from GitHub, and a Docker image to run from Docker Hub. Then you will “sync” that image to another Kubernetes cluster. 
 
-Ready to get started? Here we go!
+Ready to get started? Here you go!
 
 ## Prerequisites
 Before you get started, you will need to do a number of things.
@@ -37,17 +37,17 @@ Once you have these config files, the next step is to create two Kubernetes clus
 
 You will use [Minikube](https://minikube.sigs.k8s.io/docs/) to create these clusters. Other options may work, but Minikube is an easy tool for creating multiple clusters without too much troubleshooting when it comes to managing ingress and external connections.
 
-First, start the Kubernetes cluster on which we will install ArgoCD.
-
-```
-minikube start -p argocd-k8s
-```
-
-Then, start the target Kubernetes cluster.
+First, start the target Kubernetes cluster.
 
 ```
 minikube start -p target-k8s
 ```
+
+Then, start the cluster on which you will install ArgoCD.
+```
+minikube start -p argocd-k8s
+```
+
 
 In the next section, you will be working on the `argocd-k8s` cluster to complete the install of ArgoCD. Because of the order you created these clusters in, your `kubectl context` should already be pointed at this cluster, but it’s good to be sure. The following will confirm that your context is set correctly. 
 
@@ -58,7 +58,7 @@ kubectl config use-context argocd-k8s
 ## Optional: Download the git repo
 As the “[Getting Started](https://argoproj.github.io/argo-cd/getting_started/)” documentation from ArgoCD will show, the install process is very straightforward (much of this guide uses commands found there). Even so, you will still need some configuration files to get your pipeline to start delivering applications to production. 
 
-Rather than creating everything from scratch, I have created the environment for you. I encourage you to look through these files and understand their function. If you have some experience with Kubernetes configuration files, they will be fairly straightforward. 
+Rather than creating everything from scratch, the environment has been created for you. Look through these files and understand their function. If you have some experience with Kubernetes configuration files, they will be fairly straightforward. 
 
 To make this viewing easier, you may decide to clone the repo locally. You will not be changing these files in this guide, as ArgoCD pulls them directly from the repository.
 
@@ -80,7 +80,7 @@ The second—and mostly final step—is to apply this script from the ArgoCD tea
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-This command will complete quickly, but pods will still be spinning up on the back end. These need to be in a running state before we can move forward. Use the watch command to ensure the pods are running and ready. 
+This command will complete quickly, but pods will still be spinning up on the back end. These need to be in a running state before you can move forward. Use the watch command to ensure the pods are running and ready. 
 
 ```
 watch kubectl get pods -n argocd
@@ -94,7 +94,7 @@ Once the pods are ready, ArgoCD will be running. But it will not be accessible f
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
 
-Once run, your ArgoCD cluster will be available at [https://localhost:8080](https://localhost:8080). Since we didn’t deploy any certificates, you will need to accept your browser’s certificate exception. The `port-forward` command will also now be running in the foreground of your terminal. Open another terminal window or tab and cd back into the working directory.
+Once run, your ArgoCD cluster will be available at [https://localhost:8080](https://localhost:8080). Since you didn’t deploy any certificates, you will need to accept your browser’s certificate exception. The `port-forward` command will also now be running in the foreground of your terminal. Open another terminal window or tab and cd back into the working directory.
 
 In the UI, you will not be able to log in yet. ArgoCD uses the unique name of its server pod as a default password, so every installation will be different. Pretty clever! The following command will list the pods and format the output to provide just the line you want. It will have the format `argocd-server-<number>-<number>`.
 
@@ -152,7 +152,7 @@ argocd cluster add target-k8s
 This will add an ArgoCD service account onto the cluster, which will allow ArgoCD to deploy applications to it. 
 
 ## Optional: The demo application 
-For an application to deploy, we are going to be using [spring-petclinic](https://github.com/spring-projects/spring-petclinic). It’s an application that is pretty easy to understand, and packaged into a container to run on Kubernetes. I have packaged it already in my public [DockerHub](https://hub.docker.com/repository/docker/anthonyvetter/spring-petclinic) repo. No steps are required in this guide to package your own. You will configure ArgoCD to pull this image. 
+For an application to deploy, you are going to be using [spring-petclinic](https://github.com/spring-projects/spring-petclinic). It’s an application that is pretty easy to understand, and packaged into a container to run on Kubernetes. It's been packaged already on a public [DockerHub](https://hub.docker.com/repository/docker/anthonyvetter/spring-petclinic) repo. No steps are required in this guide to package your own. You will configure ArgoCD to pull this image. 
 
 **Optional steps**: You may, at some point, want to create your own container to pull from your own registry. It is recommended that you run through this guide once as-is so you understand how things work in ArgoCD. But if you are ready to package your own application, these are the steps.
 
@@ -207,9 +207,9 @@ Once this completes, you can see the status and configuration of your app by run
 argocd app list
 ```
 
-Notice the `STATUS: OutOfSync` and `HEALTH: Missing`. That’s because ArgoCD creates applications with manual triggers by default. Automated triggers are available and are straightforward to configure, but in this guide , you will stick with manual triggers in order to go through the process slowly. 
+Notice the `STATUS: OutOfSync` and `HEALTH: Missing`. That’s because ArgoCD creates applications with manual triggers by default. Automated triggers are available and are [straightforward to configure](https://argoproj.github.io/argo-cd/user-guide/auto_sync/), but in this guide , you will stick with manual triggers in order to go through the process slowly. 
 
-“Sync” is the terminology ArgoCD  uses to describe the application on your target cluster as being up to date with the sources ArgoCD is pulling from. We have set up ArgoCD to monitor my GitHub repository with the configuration files as well as my spring-petclinic container image in Docker Hub. Once the initial sync is completed, a change to either of these sources will cause the status in ArgoCD to change to `OutOfSync`. 
+“Sync” is the terminology ArgoCD  uses to describe the application on your target cluster as being up to date with the sources ArgoCD is pulling from. You have set up ArgoCD to monitor the GitHub repository with the configuration files as well as the spring-petclinic container image in Docker Hub. Once the initial sync is completed, a change to either of these sources will cause the status in ArgoCD to change to `OutOfSync`. 
 
 For a more detailed view of your application configuration, run:
 
@@ -231,12 +231,12 @@ kubectl config use-context target-k8s
 
 **Note**: Since the argocd CLI client uses your kubectl context to connect to your cluster, any argocd commands you run from this point won’t work. You will need to change contexts back to your argocd-k8s cluster to manage ArgoCD. 
 
-Now simply forward the port as you did for the ArgoCD UI. Once completed, spring-petclinic will be available at [https://localhost:9090](https://localhost:9090). 
+Now simply forward the port as you did for the ArgoCD UI. Once completed, spring-petclinic will be available at [http://localhost:9090](http://localhost:9090). 
 
 ```
 kubectl port-forward svc/spring-petclinic -n default 9090:8080
 ```
 
-And there you have it! You have a running application deployed to Kubernetes with ArgoCD. For further learning, try setting up your own environment using the optional steps provided throughout this guide. Find out how to set up automated triggers, and maybe configure ArgoCD with your own custom Kubernetes application. Finally, look at adding ArgoCD into your CI/CD pipeline and deploying applications into external Kubernetes environments. 
+And there you have it! You have a running application deployed to Kubernetes with ArgoCD. For further learning, try setting up your own environment using the optional steps provided throughout this guide. Find out how to set up [automated triggers](https://argoproj.github.io/argo-cd/user-guide/auto_sync/), and maybe configure ArgoCD with your own custom Kubernetes application. Finally, look at adding ArgoCD into your CI/CD pipeline and deploying applications into external Kubernetes environments. 
 
 For further learning, the [Operator Manual](https://argoproj.github.io/argo-cd/operator-manual/) from ArgoCD is a terrific resource. If you want to look at developing a third-party integration for ArgoCD, see the Developer [Guides](https://argoproj.github.io/argo-cd/developer-guide/). 
