@@ -1,9 +1,9 @@
 ---
 title:  "Getting Started with Kafka"
 description: >
-    Getting Started with Kafka
+    An example of how to connect to, send, and receive messages from Kafka.
 summary:
-- How to use Kafka...
+- An example of how to connect to, send, and receive messages from Kafka.
 topics:
 - Messaging and Integration
 tags:
@@ -11,7 +11,7 @@ tags:
 patterns:
 - Eventing
 repo: https://github.com/BrianMMcClain/kafka-getting-started
-readme: false
+readme: true
 ---
 
 ### Content can live here...
