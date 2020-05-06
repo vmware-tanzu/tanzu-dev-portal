@@ -7,13 +7,9 @@ summary:
 topics:
 - Messaging and Integration
 tags:
-- Kafka
+- RabbitMQ
 patterns:
 - Eventing
 repo: https://github.com/BrianMMcClain/rabbitmq-getting-started
 readme: true
 ---
-
-### Content can live here...
-
- ...if there is no README

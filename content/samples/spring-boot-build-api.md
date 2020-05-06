@@ -5,17 +5,15 @@ description: >
 summary:
 - Building a REST API with Spring Boot
 topics:
+- Spring
 - Microservices
+- Messaging and Integration
 tags:
 - Spring
 - Spring Boot
 - Microservices
 patterns:
-- Messaging and Integration
+- API
 repo: https://github.com/BrianMMcClain/spring-boot-api-demo
 readme: true
 ---
-
-### Content can live here...
-
- ...if there is no README

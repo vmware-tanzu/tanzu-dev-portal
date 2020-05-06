@@ -13,7 +13,3 @@ patterns:
 repo: https://github.com/BrianMMcClain/kafka-getting-started
 readme: true
 ---
-
-### Content can live here...
-
- ...if there is no README
