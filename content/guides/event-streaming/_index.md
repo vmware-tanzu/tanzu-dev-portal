@@ -1,5 +1,5 @@
 ---
-title: Eventing
+title: Event Streaming
 weight: 1
 tags:
 - Spring

@@ -1,6 +1,6 @@
 ---
 title: Kubernetes
-weight: 2
+weight: 1
 tags:
 - Kubernetes
 description: >
