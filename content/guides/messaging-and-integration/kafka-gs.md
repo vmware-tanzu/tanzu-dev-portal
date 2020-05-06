@@ -1,14 +1,14 @@
 ---
 title:  "Kafka: Getting Started"
 sortTitle: "Kafka"
-weight: 2
+weight: 1
 topics:
-- Eventing
+- Event Streaming
 - Kafka
 - Messaging and Integration
 tags:
 - Kafka
-- Eventing
+- Event Streaming
 patterns:
 - Eventing
 ---

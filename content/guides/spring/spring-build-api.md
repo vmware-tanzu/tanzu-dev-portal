@@ -5,7 +5,6 @@ weight: 2
 topics:
 - Spring
 - Microservices
-- API
 tags:
 - Spring Boot
 - REST
@@ -15,11 +14,12 @@ patterns:
 ---
 
 Spring Boot is a framework built on top of Spring which focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will focus on how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo).
+
 ## The Design
 
 For this example, you’ll build an API to interact with an inventory system. The inventory tracks every item in a fictitious shop, as well as the price and count of each item. Before writing the code, take a few moments to consider the design of the API. The design is, after all, the user experience for the developer, and ensuring it’s clear and simple is just as important as it is when building a frontend user interface.
 
-If you’re familiar with the basics of REST, much of this should look pretty much as you would expect. If you’re a bit newer, or just want a refresher, make sure to check out [Basics of REST](/guides/api/basics-of-rest), which will discuss different aspects of REST, such as verbs, status codes, and more. For this API, there will be just a handful of endpoints and verbs supported.
+If you’re familiar with the basics of REST, much of this should look pretty much as you would expect. If you’re a bit newer, or just want a refresher, make sure to check out [Basics of REST](/guides/microservices/basics-of-rest), which will discuss different aspects of REST, such as verbs, status codes, and more. For this API, there will be just a handful of endpoints and verbs supported.
 
 - `GET /items/{id}`: Probably the endpoint that first comes to mind is actually getting information about an item in the inventory. This endpoint will take in an item ID (for example, `/items/1`), look it up by that ID, and return all the relevant information about that specific item.
 - `GET /items`: If providing an ID returns one item, explicitly omitting an ID could return _all_ items. In a production application, a lot of care should be taken when implementing operations that return an entire database worth of content. It’s expensive to both gather that information from the database as well as transmit it to the requester. In this case, the database will only contain a few items, so it’s not too expensive to perform.
@@ -341,4 +341,4 @@ public void postWithoutIdShouldCreate() throws Exception {
 This test will send a `POST` to `/items` with the data `"{"name": "Speakers", "price": 39.99, "count": 33}"`, setting the `Content-Type` header to `application/json`. It then ensures that the response has a status code of `201` (with `status().isCreated()`, which is equal to `201`), as well as check that all of the fields that are returned are what you would expect.
 
 ## Learn More
-The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) that are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/api/basics-of-rest).
+The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) that are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/microservices/basics-of-rest).
