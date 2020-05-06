@@ -319,4 +319,4 @@ This is one pattern that can be leveraged for scenarios where you only need one 
 
 This overview has only scratched the surface of the capabilities of RabbitMQ;  there are many more docs that lay out  [how to route and deliver messages](https://www.rabbitmq.com/getstarted.html), as well as how to [build and configure bigger, more robust and reliable clusters](https://www.rabbitmq.com/clustering.html). The [official RabbitMQ documentation](https://www.rabbitmq.com/documentation.html) is very thorough and covers both operation and development using RabbitMQ 
 
-Additionally, if you’re a Spring developer, make sure to check out [Getting Started With Spring Cloud Stream](/guides/eventing/scs-gs), which is a very powerful way of implementing messaging using the message broker of your choice.
+Additionally, if you’re a Spring developer, make sure to check out [Getting Started With Spring Cloud Stream](/guides/event-streaming/scs-gs), which is a very powerful way of implementing messaging using the message broker of your choice.
