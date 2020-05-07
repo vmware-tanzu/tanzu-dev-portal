@@ -9,6 +9,7 @@ topics:
 - Messaging and Integration
 tags:
 - Spring
+- Spring Boot
 - REST
 - JPA
 patterns:

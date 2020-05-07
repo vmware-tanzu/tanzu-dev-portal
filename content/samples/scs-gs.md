@@ -5,12 +5,14 @@ description: >
 summary:
 - Simple Event Driven Microservices with Spring Cloud Stream
 topics:
+- Spring
 - Messaging and Integration
 - Event Streaming
 tags:
+- Spring
 - Event Streaming
 - Spring Cloud Stream
-- Spring
+
 patterns:
 - Eventing
 repo: https://github.com/benwilcock/spring-cloud-stream-demo

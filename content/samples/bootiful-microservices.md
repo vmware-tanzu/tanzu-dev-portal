@@ -10,6 +10,7 @@ topics:
 tags:
 - Spring
 - Microservices
+- Spring Boot
 repo: https://github.com/joshlong/bootiful-microservices
 readme: true
 ---
