@@ -2,7 +2,7 @@
 title: Code Samples
 linkTitle: Samples
 description: >
-    Sample code using modern app development technologies and patterns.
+    Explore sample code that uses modern app development technologies and patterns.
 menu:
     main:
         parent: "sections"

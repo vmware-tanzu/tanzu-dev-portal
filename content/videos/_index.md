@@ -2,7 +2,7 @@
 title: Videos
 linkTitle: Videos
 description: >
-    Video demos of modern app development technologies.
+    Watch video demos of modern app development technologies.
 menu:
     main:
         parent: "sections"
