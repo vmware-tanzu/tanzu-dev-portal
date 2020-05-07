@@ -1,3 +1,14 @@
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PMT66RC');
+</script>
+{{ end }}
+
 <script>
   var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
   changeTheme(savedTheme);
@@ -37,9 +48,9 @@
 {{- template "_internal/google_news.html" . -}}
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
-{{ if eq (getenv "HUGO_ENV") "production" }}
+<!-- {{ if eq (getenv "HUGO_ENV") "production" }}
 {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
+{{ end }} -->
 {{ partialCached "head-css.html" . "asdf" }}
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

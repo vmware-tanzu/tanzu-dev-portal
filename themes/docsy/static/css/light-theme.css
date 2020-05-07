@@ -18,29 +18,77 @@ body {
  body .td-sidebar, body .td-box--dark, body .td-box--gray-850, body .td-navbar, body .td-main {
    background-color: white !important;
 }
- body .td-sidebar-nav a.td-sidebar-link__page.active, body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
+
+body .td-navbar {
+  border-bottom: 1px solid #d9e4ea;
+}
+
+body .border-bottom {
+  border-color: #d9e4ea !important;
+}
+
+main .highlight pre, main .highlight div,
+.highlight,
+pre,
+p code, li > code, table code,
+body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
    background-color: #f4f8fa !important;
 }
+
+body .bg-gray-dark.border {
+  border: none !important;
+}
+
+body .td-sidebar-nav a.td-sidebar-link__page.active {
+  background-color: #1d428a !important;
+  color: white !important;
+}
+
+.guide .td-sidebar-nav__section-title a.active, .guide .td-sidebar-nav__section-title a:hover {
+  color: #78be20 !important;
+}
+
+pre, .highlight,
+body p code, body li > code, body table code,
+body.guide .td-sidebar-nav__section-title a, 
+ body .text-white,
+p code, li > code, table code,
 .mktoForm .mktoRadioList>label, .mktoForm .mktoCheckboxList>label,
- body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li {
+ body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li {
    color: #28333c !important;
 }
- body .text-white {
-   color: #28333c !important;
-}
+
+ body .topic a,
  body .topic .text-white {
    background-color: #f4f8fa !important;
    color: #1d428a !important;
 }
+
+body a.bg-gray-dark.border:hover,
+body a.td-box--gray-darkest:hover,
+body .topic a:hover {
+  background: #d9e4ea !important;
+}
+
+footer li.list-inline-item .text-white {
+  color: #798893 !important;
+}
+
  body .td-sidebar, body .topic a {
    border-color: #d9e4ea !important;
 }
  body .border-top {
    border-color: #d9e4ea !important;
 }
- body .guide .td-sidebar-nav__section-title a, body .linked-box .link, body .td-box--gray-850 p > a, body .td-box--gray-darkest p > a, body .td-box--dark p > a, body a, body p.link {
+body a code,
+ body .linked-box .link, body .td-box--gray-850 p > a, body .td-box--gray-darkest p > a, body .td-box--dark p > a, body a, body p.link {
    color: #1d428a !important;
 }
+
+body a.btn {
+  color: white !important;
+}
+
 @media (max-width: 991.98px) {
    body .td-navbar .td-navbar-nav-hamburger .navbar-nav a[href*='/'] {
       color: #1d428a !important;
@@ -52,14 +100,19 @@ body {
  body .text-light {
    color: #61717d !important;
 }
+pre,
  body p code, body li > code, body table code {
-   color: white !important;
+   border: 1px solid #d9e4ea;
+}
+.light-mode #toggle-light-dark-mode {
+  background: #798893 !important;
 }
 .light-mode #toggle-light-dark-mode span {
    transform: translateX(0) !important;
 }
 .light-mode #toggle-light-dark-mode span:before {
    content: "\f185" !important;
+   color: #798893 !important;
 }
 
 input::placeholder {
@@ -90,7 +143,7 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
   body #hero.samples-hero,
   body #hero.videos-hero,
   body #hero.community-hero {
-   background-image: none !important;
+   background-image: url(/images/backgrounds/header-mobile-light.svg) !important;
   }
 }
 #menu-toggle .menu-bar {
