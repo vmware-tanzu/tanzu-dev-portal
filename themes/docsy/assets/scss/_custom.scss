@@ -490,19 +490,19 @@ body.light-mode #toggle-light-dark-mode span {
     min-height: auto;
   }
   &.guides-hero {
-    background-image: url(/images/backgrounds/background-guides.svg);
+    background-image: url(/developer/images/backgrounds/background-guides.svg);
   }
   &.patterns-hero {
-    background-image: url(/images/backgrounds/background-patterns.svg);
+    background-image: url(/developer/images/backgrounds/background-patterns.svg);
   }
   &.samples-hero {
-    background-image: url(/images/backgrounds/background-samples.svg);
+    background-image: url(/developer/images/backgrounds/background-samples.svg);
   }
   &.videos-hero {
-    background-image: url(/images/backgrounds/background-video.svg);
+    background-image: url(/developer/images/backgrounds/background-video.svg);
   }
   &.community-hero {
-    background-image: url(/images/backgrounds/background-community.svg);
+    background-image: url(/developer/images/backgrounds/background-community.svg);
   }
   @media(max-width: 991px) {
     &.guides-hero,
@@ -510,7 +510,7 @@ body.light-mode #toggle-light-dark-mode span {
     &.samples-hero,
     &.videos-hero,
     &.community-hero {
-      background-image: url(/images/backgrounds/header-mobile.svg) !important;
+      background-image: url(/developer/images/backgrounds/header-mobile.svg) !important;
       background-position: right -50px bottom;
       padding-bottom: 160px;
     }
