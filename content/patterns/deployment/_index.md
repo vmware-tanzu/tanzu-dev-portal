@@ -3,7 +3,7 @@ title: Deployment and Packaging
 featured: true
 weight: 1
 description: >
-    From commit to production—how code gets from a laptop to running live in production.
+    From commit to production—see how code gets from a laptop to running live in production.
 ---
 
 There are seemingly infinite ways to get code from a developer into production. In the simplest example, a website hosted on GitHub pages has a single step—a developer commits code—and the changes are reflected in production. In most applications, however, there are many more steps between the developer and the results being live in production, and they can vary from application to application. There numerous are different ways to assemble a deployment pattern.

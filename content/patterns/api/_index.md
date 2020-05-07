@@ -3,7 +3,7 @@ title: APIs
 featured: true
 weight: 1
 description: >
-    API design, implementation, and operation. Everything from the basics of REST to building an API from scratch.
+    Learn API design, implementation, operation—everything from the basics of REST to building an API from scratch.
 ---
 
 
