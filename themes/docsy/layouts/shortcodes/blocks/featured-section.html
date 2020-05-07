@@ -11,7 +11,7 @@
                 </div> 
                 {{ range first 3 (where .Site.Pages "Params.featured" true) }}
                     <div class="col-lg-4 flex mb-3 mb-lg-0">
-                        <a href="{{ .Permalink}}" class="gradient-edge-parent linked-box col-12  td-box--gray-850 p-4 px-5">
+                        <a href="{{ .RelPermalink}}" class="gradient-edge-parent linked-box col-12  td-box--gray-850 p-4 px-5">
                             <div class='gradient-edge-left'></div>
                             <h5 class="mb-3">{{ .Section | singularize }}</h5>
                             <h4 class="h4">{{ .LinkTitle }}</h4>
