@@ -33,17 +33,42 @@ If you are interested in contributing content and you're reading this, you proba
 
 You may contribute content by creating a branch (or fork) and submitting a pull request. There a few options to help get you started:
 
+### Taxonomies
+
+#### Topics
+
+#### Patterns
+
+#### Tags
+
+#### Authors
+
+#### Featured Content
+Content may be tagged as `featured: true` along with a `weight` in the front matter to appear in the Featured section on the home page.
+
 ### Hugo Archetypes
 You can use the [Archetypes](https://gohugo.io/content-management/archetypes/) feature of Hugo to create new content as follows:
 
-#### Create a new What Is guide 
-`hugo new guides/spring/spring-boot-what-is -k guide-what-is.md`
+#### Create a new Guide
+Use one of the following commands to create either a "What Is...?" or "Getting Started" guide. Guides should be written in second person (the "you" voice).
 
-#### Create a new Getting Started guide
-`hugo new guides/spring/spring-boot-gs -k guide-gs.md`
+`hugo new guides/spring/spring-boot-what-is.md -k guide-what-is`
+`hugo new guides/spring/spring-boot-gs.md -k guide-gs`
 
 #### Create a new blog post
-`hugo new blog/my-post -k blog-post.md`
+The following command will create a blog post. Blog posts require a title, date, and author (see more about authors in the Taxonomy section above). If you use a future date for publishing, you will need to use the `-F` flag to see the post when running `hugo` or `hugo server` to build the site on your local machine.
+
+`hugo new blog/my-post.md -k blog-post`
+
+#### Create a new Code Sample
+The following command will create a code sample. Along with a title, description, and other taxonomy metadata in the front matter, code sample pages require the full URL to a public GitHub repository in the `repo` parameter and a boolean value for `readme` that will determine whether to fetch (at build-time) and render the README content from that repo (`true`) or to render the content of the page itself instead (`false`).
+
+`hugo new samples/my-sample.md -k sample`
+
+#### Create a new Video
+Your video should be uploaded to the VMwareTanzu YouTubechannel first. For help with this reach out in the #tanzu-dev-portal channel. Once on YouTube, run the following command and make sure to set `youtube_id` in the front matter to the string that appears after `/watch?v=` in the video's URL, along with a title, description, and other taxonomy metadata.
+
+`hugo new videos/my-video.md -k video`
 
 ### Netlify CMS
 If you're not familiar with writing Markdown or submitting pull requests, you may request access to Netlify CMS which provides a web-based interface for writing content. Please reach out in the #tanzu-dev-portal channel on Slack.
