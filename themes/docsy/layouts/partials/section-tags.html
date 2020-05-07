@@ -1,4 +1,4 @@
-{{ $pages := ((where .Site.Pages "Section" .Section).ByWeight).ByParam "sortTitle" }}
+{{ $pages := ((where .Site.Pages "Section" .Section).ByWeight).ByParam "title" }}
 {{ $scratch := newScratch }}
 
 {{/* Loop through section pages to get tags and add to variable */}}
@@ -9,7 +9,7 @@
 {{ end }}
 
 {{/* Loop through new var to print unique section tags */}}
-{{ range $scratch.Get "tagsVar" | uniq }}
+{{ range sort ($scratch.Get "tagsVar") | uniq }}
 	<li class="filter" filter="{{ . | lower }}">{{ . }}</li>
 {{ end }}
 
