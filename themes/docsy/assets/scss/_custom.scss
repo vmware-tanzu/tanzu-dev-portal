@@ -92,8 +92,10 @@ img {
   margin: 30px 0;
 }
 
-img.desaturated {
+.td-content img.desaturated {
   filter: saturate(0);
+  padding: 0;
+  margin: 0;
 }
 
 .h3 {
@@ -220,7 +222,7 @@ footer {
     display: inline-block;
   }
   .icon {
-    height: 45px;
+    height: 47px;
   }
   .tvc-link {
     margin-right: 7.5rem !important;
@@ -234,8 +236,11 @@ footer {
     .d-inline-block {
       display: block !important;
     }
-    .copyright-legal-links .ml-1 {
-      margin-left: 0 !important;
+    .copyright-legal-links {
+      display: block;
+      .ml-1 {
+        margin-left: 0 !important;
+      }
     }
     .tvc-link {
       margin-right: 0 !important;
@@ -615,7 +620,7 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
-.section-index {
+.flex-1 {
   flex: 1;
 }
 

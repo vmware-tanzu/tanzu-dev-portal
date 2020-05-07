@@ -1,6 +1,6 @@
 <div class='flex container flex-wrap'>
 
-    <div class='sidebar col-lg-2 col-0 pl-0 pr-3'>
+    <div class='sidebar col-lg-3 col-0 pl-0 pr-3'>
         <h3>Filter</h3>
         <br/>
         <ul class='filters'>
@@ -9,7 +9,7 @@
         </ul>
     </div>
 
-    <div class="section-index">
+    <div class="section-index flex-1">
         {{ $pages := ((where .Site.Pages "Section" .Section).ByWeight).ByParam "sortTitle" }}
         {{ $parent := .Page }}
         {{ if $parent.Params.no_list }}
