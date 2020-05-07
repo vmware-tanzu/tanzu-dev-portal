@@ -107,7 +107,7 @@
 
         &.navbar-expand > .container {
             flex-direction: column;
-            align-items: unset;
+            align-items: unset !important;
         }
 
         .navbar-brand {
@@ -156,7 +156,7 @@
 
             .navbar-nav {
                 flex-direction: column;
-                align-items: unset;
+                align-items: unset !important;
                 padding: 0 10px;
 
                 .nav-item {

@@ -6,7 +6,7 @@
 		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}</span>
 	</a>
 	<div class="td-navbar-nav-hamburger" id="main_navbar">
-		<ul class="navbar-nav mt-lg-0 ai-center">
+		<ul class="navbar-nav mt-lg-0 align-items-center">
 			{{ if  .Site.Params.versions }}
 			<li class="nav-item dropdown d-none d-lg-block mr-4 mb-0">
 				{{ partial "navbar-version-selector.html" . }}

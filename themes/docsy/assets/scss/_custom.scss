@@ -1,8 +1,3 @@
-// html,
-// body {
-//   overflow-x: hidden;
-// }
-
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -49,6 +44,19 @@ body {
 
 .h5, h5 {
   letter-spacing: 1px;
+  -webkit-font-smoothing: auto;
+}
+
+blockquote {
+  border-left: 3px solid $quote-bar-blue;
+  padding-left: 35px;
+  margin: 40px 0;
+  @media (min-width: 768px) {
+    h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before {
+      margin-top: 0;
+      height: 0;
+    }
+  }
 }
 
 .fs-90 {
@@ -78,12 +86,23 @@ img {
   border: 0;
 }
 
+.td-content img:not(.icon) {
+  background: white;
+  padding: 40px;
+  margin: 30px 0;
+}
+
 img.desaturated {
   filter: saturate(0);
 }
 
 .h3 {
 	line-height: 1.4em;
+}
+
+.h2,h2,
+.h3,h3 {
+  padding-top: 1rem;
 }
 
 .bg-gray-dark p.link,
@@ -164,14 +183,6 @@ a {
 
 .jc-even {
 	justify-content: space-evenly;
-}
-
-.jc-between {
-  justify-content: space-between;
-}
-
-.ai-center {
-  align-items: center;
 }
 
 .btn-primary {
@@ -465,6 +476,9 @@ body.light-mode #toggle-light-dark-mode span {
   min-height: 300px;
   padding: 80px 0;
   box-sizing: border-box;
+  p {
+    color: white;
+  }
   &.no-bg {
     background-image: none;
     min-height: auto;
@@ -485,12 +499,40 @@ body.light-mode #toggle-light-dark-mode span {
     background-image: url(/images/backgrounds/background-community.svg);
   }
   @media(max-width: 991px) {
-    background-image: none !important;
+    &.guides-hero,
+    &.patterns-hero,
+    &.samples-hero,
+    &.videos-hero,
+    &.community-hero {
+      background-image: url(/images/backgrounds/header-mobile.svg) !important;
+      background-position: right -50px bottom;
+      padding-bottom: 160px;
+    }
+  }
+  @media(max-width: 480px) {
+    &.guides-hero,
+    &.patterns-hero,
+    &.samples-hero,
+    &.videos-hero,
+    &.community-hero {
+      background-size: 130%;
+    }
+  }
+  @media(max-width: 390px) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    &.guides-hero,
+    &.patterns-hero,
+    &.samples-hero,
+    &.videos-hero,
+    &.community-hero {
+      background-size: 170%;
+    }
   }
   @media(max-width: 390px) {
     .flex {
       flex-direction: column;
-      align-items: start;
+      align-items: start !important;
       .icon {
         margin-bottom: 20px;
       }
@@ -499,8 +541,8 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 
-#hero p {
-  color: white;
+.github-imported-sample h1 {
+  display: none;
 }
 
 .container-fluid {
@@ -574,7 +616,7 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 .section-index {
-  flex: 1 0 0;
+  flex: 1;
 }
 
 .container .container {
