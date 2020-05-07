@@ -32,7 +32,7 @@ limitations under the License.
             var filter = $(this).attr("filter");
             $(this).addClass("active").siblings().removeClass("active");
             $(".filter-item").hide();
-            $(".filter-item[class*=" + filter + "]").show();
+            $(".filter-item[class*='" + filter + "']").show();
             if (filter == "all") { 
                 $(".filter-item").show();
             }

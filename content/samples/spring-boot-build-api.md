@@ -7,11 +7,11 @@ summary:
 topics:
 - Spring
 - Microservices
-- Messaging and Integration
 tags:
 - Spring
-- Spring Boot
 - Microservices
+- Spring Boot
+- REST
 patterns:
 - API
 repo: https://github.com/BrianMMcClain/spring-boot-api-demo

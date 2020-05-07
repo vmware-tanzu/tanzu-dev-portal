@@ -2,12 +2,9 @@
 title: Code Samples
 linkTitle: Samples
 description: >
-    Code Samples for Tanzu products.
+    Explore sample code that uses modern app development technologies and patterns.
 menu:
     main:
         parent: "sections"
         weight: 3
 ---
-
-
-<!-- Visit our [Samples Repo](https://github.com/vmware-tanzu/samples). -->

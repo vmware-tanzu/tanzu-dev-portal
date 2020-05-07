@@ -11,8 +11,9 @@ topics:
 - Event Streaming
 tags:
 - Spring
-- Streams
-- Events
+- Microservices
+- Event Streaming
+- Spring Cloud Stream
 patterns:
 - Eventing
 repo: https://github.com/benwilcock/spring-cloud-stream-demo

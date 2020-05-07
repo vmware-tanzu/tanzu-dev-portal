@@ -5,10 +5,12 @@ description: >
 summary:
 - Accompanies a talk that Josh Long delivers on RESTful service development with Spring
 topics:
-- spring
-- messaging-and-integration
+- Spring
+- Microservices
 tags:
 - Spring
+- Microservices
+- Spring Boot
 - REST
 patterns:
 - API

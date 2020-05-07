@@ -19,7 +19,7 @@
 		<div class="github-imported-sample">
 			{{ if .Params.readme }}
 				{{ $user_repo := (urls.Parse .Params.repo).Path }}
-				{{ $resp := getJSON (print "https://api.github.com/repos" $user_repo "/readme") | default "Hello" }}
+				{{ $resp := getJSON (print "https://api.github.com/repos" $user_repo "/readme") }}
 				<!-- RegEx replace removes any image references which could be broken -->
 				{{ $resp.content | base64Decode | replaceRE "\\!\\[(.*)\\]\\((.*)\\)" "IMAGE" | markdownify }}
 			{{ else }}
