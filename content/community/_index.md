@@ -1,5 +1,5 @@
 ---
-title: "Tanzu Dev Community"
+title: "Community"
 linkTitle: "Community"
 menu:
     main:
