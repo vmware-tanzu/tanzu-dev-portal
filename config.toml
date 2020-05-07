@@ -165,22 +165,22 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	name ="Twitter"
 	url = "https://twitter.com/VMwareTanzu"
 	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
+        desc = "Follow us on Twitter for all the latest news."
 [[params.links.developer]]
 	name = "YouTube"
 	url = "https://www.youtube.com/VMwareTanzu"
 	icon = "fab fa-youtube"
-    desc = "Watch video demos of tech in action"
+    desc = "See demos of modern app technologies in action."
 [[params.links.developer]]
 	name = "Stack Overflow"
 	url = "https://stackoverflow.com/questions/tagged/vmware-tanzu"
 	icon = "fab fa-stack-overflow"
-        desc = "Practical questions and curated answers"
+        desc = "Ask practical questions and get curated answers."
 [[params.links.developer]]
 	name = "GitHub"
 	url = "https://github.com/vmware-tanzu"
 	icon = "fab fa-github"
-        desc = "Development takes place here!"
+        desc = "Explore our open source projects and sample code."
 #[[params.links.developer]]
 #	name = "Slack"
 #	url = "https://slack.com/vmware-tanzu"
