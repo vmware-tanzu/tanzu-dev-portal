@@ -3,10 +3,35 @@
 <div class='container'>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-lg-4 text-left">
+
+      <div class="col-12 col-lg-8">
+        <a class="tvc-link h4" href="https://tanzu.vmware.com"><img class="icon mr-2" src="/images/icons/icon-tanzu.svg"/> VMware Tanzu</a>
+
+        <div class='copyright-legal-links mt-3'>
+          {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} VMware, Inc </small>{{ end }}
+          {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
+          {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
+          {{ with .Site.Params.california_privacy_rights }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_california_privacy_rights" }}</a></small>{{ end }}
+          <small id="teconsent" class="ml-1 d-inline-block"></small>
+        </div>
+
+        <div>
+          {{ with $links }}
+          {{ with index . "developer"}}
+          {{ template "footer-links-block"  . }}
+          {{ end }}
+          {{ end }}
+        </div>
+
+<!--       	{{ if not .Site.Params.ui.footer_about_disable }}
+      		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
+      	{{ end }} -->
+      </div>
+
+      <div class="col-12 col-lg-4">
         {{ if not (eq .Params.linkTitle "Community") }}
           <div class="newsletter mb-5">
-            <p class="text-white mt-0">Sign up for the developer newsletter</p>
+            <p class="text-white">Sign up for the developer newsletter</p>
             <div class='btn click-to-show scroll-to-bottom'>Subscribe</div>
             <script src="//connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
             <form id="mktoForm_1609" class="hidden"></form>
@@ -25,27 +50,7 @@
           </div>
         {{ end }}
       </div>
-      <div class="col-12 col-lg-8 text-right">
-        <a class="tvc-link h4 d-inline-block " href="https://tanzu.vmware.com"><img class="icon mr-2" src="/images/icons/icon-tanzu.svg"/> VMware Tanzu</a>
-        <div class='d-inline-block'>
-          {{ with $links }}
-          {{ with index . "developer"}}
-          {{ template "footer-links-block"  . }}
-          {{ end }}
-          {{ end }}
-        </div>
-        <div class='copyright-legal-links'>
-          {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} VMware, Inc </small>{{ end }}
-          {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
-          {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
-          {{ with .Site.Params.california_privacy_rights }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_california_privacy_rights" }}</a></small>{{ end }}
-          <small id="teconsent" class="ml-1 d-inline-block"></small>
-        </div>
 
-	{{ if not .Site.Params.ui.footer_about_disable }}
-		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
-	{{ end }}
-      </div>
     </div>
   </div>
 </div>
