@@ -35,11 +35,11 @@ With all of the endpoints planned out, we can now begin implementation!
 One of the easiest ways to start a Spring Boot application is to use [start.spring.io](https://start.spring.io/). It will allow you to define the configuration and choose the dependencies specific to your application, then generate all of the boilerplate that surrounds a Spring application. This application assumes that it will be built and run with [Maven](http://maven.apache.org/) as well as the default choice of Java and Spring Boot version. What you choose for the group, artifact, name, and description fields doesn’t matter; what does matter is that you add the **Spring Web** dependency.
 
 
-![img](/images/guides/spring/spring-build-api-01.png)
+![img](/images/guides/spring/screenshots/spring-build-api-01.png)
 
 Once everything is configured, click **Generate** to download a ZIP file containing all of the code for your new project. Extract it and open it with your editor of choice, and you’ll find a handful of files. Most of these will be untouched since all of the code will be added to new files, but it’s important to see what’s generated out of the box.
 
-![img](/images/guides/spring/spring-build-api-02.png)
+![img](/images/guides/spring/screenshots/spring-build-api-02.png)
 
 Notably, the `pom.xml` file contains all of the configuration on what dependencies your code requires, as well as configuration on how to build it. `SpringBootApiDemo.java` is where your application will start; it contains the code to start everything a Spring application needs. In this example, you’ll be creating two files: one to define the Item object, and one to build the REST API.
 
