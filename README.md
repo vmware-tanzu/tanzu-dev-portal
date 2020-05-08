@@ -70,5 +70,8 @@ Your video should be uploaded to the VMwareTanzu YouTubechannel first. For help 
 
 `hugo new videos/my-video.md -k video`
 
+### Images
+All images are stored under `static/images`. Images should be placed in the directory that matches the content that they'll be displayed in (ie. a Spring guide would have images in `static/images/guides/spring`). Finally, an image placed in `diagrams` will have a border added around it for visibility. If the image is not a diagram, they should be placed in `screenshots`.
+
 ### Netlify CMS
 If you're not familiar with writing Markdown or submitting pull requests, you may request access to Netlify CMS which provides a web-based interface for writing content. Please reach out in the #tanzu-dev-portal channel on Slack.
