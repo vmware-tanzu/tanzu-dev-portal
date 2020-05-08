@@ -1,5 +1,6 @@
-baseURL = "https://tanzu-dev-bryanf.netlify.app/developer/"
+baseURL = "/"
 title = "VMware Tanzu"
+publishDir = "public/developer"
 
 enableRobotsTXT = true
 
