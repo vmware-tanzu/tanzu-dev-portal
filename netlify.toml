@@ -5,7 +5,7 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.69.2"
-  HUGO_ENV = "production"
+  HUGO_ENV = "test"
 
 [context.deploy-preview]
   command = "git submodule update -f --init --recursive && npm install && hugo -b $DEPLOY_PRIME_URL"
