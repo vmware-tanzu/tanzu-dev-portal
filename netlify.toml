@@ -1,6 +1,6 @@
 # Default build settings
 [context.production]
-  publish = "public/developer"
+  publish = "developer/public"
   command = "git submodule update -f --init --recursive && npm install && hugo"
 
 [context.production.environment]
