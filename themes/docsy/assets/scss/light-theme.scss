@@ -123,27 +123,28 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
    background: #1d428a !important;
 }
 #hero.guides-hero {
-  background-image: url(/developer/images/backgrounds/background-guides-light.svg) !important;
-}
-#hero.patterns-hero {
-   background-image: url(/developer/images/backgrounds/background-patterns-light.svg) !important;
-}
-#hero.samples-hero {
-   background-image: url(/developer/images/backgrounds/background-samples-light.svg) !important;
-}
-#hero.videos-hero {
-   background-image: url(/developer/images/backgrounds/background-video-light.svg) !important;
-}
-#hero.community-hero {
-   background-image: url(/developer/images/backgrounds/background-community-light.svg) !important;
-}
+   background-image: url({{ "/images/backgrounds/background-guides-light.svg" | relURL }});
+ }
+ #hero.patterns-hero {
+   background-image: url({{ "/images/backgrounds/background-patterns-light.svg" | relURL }});
+ }
+ #hero.samples-hero {
+   background-image: url({{ "/images/backgrounds/background-samples-light.svg" | relURL }});
+ }
+ #hero.videos-hero {
+   background-image: url({{ "/images/backgrounds/background-video-light.svg" | relURL }});
+ }
+ #hero.community-hero {
+   background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }});
+ }
+
 @media(max-width: 991px) {
   body #hero.guides-hero,
   body #hero.patterns-hero,
   body #hero.samples-hero,
   body #hero.videos-hero,
   body #hero.community-hero {
-   background-image: url(/developer/images/backgrounds/header-mobile-light.svg) !important;
+   background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
 #menu-toggle .menu-bar {

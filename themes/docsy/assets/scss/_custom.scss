@@ -1,3 +1,15 @@
+@import "support/functions";
+@import "variables_project";
+@import "variables";
+@import "support/mixins";
+
+@import "../vendor/bootstrap/scss/bootstrap";
+
+@import "../vendor/Font-Awesome/scss/fontawesome.scss";
+@import "../vendor/Font-Awesome/scss/solid.scss";
+@import "../vendor/Font-Awesome/scss/brands.scss";
+@import "../vendor/Font-Awesome/scss/regular.scss";
+
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -490,19 +502,19 @@ body.light-mode #toggle-light-dark-mode span {
     min-height: auto;
   }
   &.guides-hero {
-    background-image: url(/developer/images/backgrounds/background-guides.svg);
+    background-image: url({{ "/images/backgrounds/background-guides.svg" | relURL }});
   }
   &.patterns-hero {
-    background-image: url(/developer/images/backgrounds/background-patterns.svg);
+    background-image: url({{ "/images/backgrounds/background-patterns.svg" | relURL }});
   }
   &.samples-hero {
-    background-image: url(/developer/images/backgrounds/background-samples.svg);
+    background-image: url({{ "/images/backgrounds/background-samples.svg" | relURL }});
   }
   &.videos-hero {
-    background-image: url(/developer/images/backgrounds/background-video.svg);
+    background-image: url({{ "/images/backgrounds/background-video.svg" | relURL }});
   }
   &.community-hero {
-    background-image: url(/developer/images/backgrounds/background-community.svg);
+    background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
   }
   @media(max-width: 991px) {
     &.guides-hero,
