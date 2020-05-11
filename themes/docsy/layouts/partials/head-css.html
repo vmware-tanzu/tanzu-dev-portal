@@ -4,15 +4,11 @@
 {{ $scssLight := "scss/light-theme.scss" }}
 {{ if .Site.IsServer }}
 {{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
-{{ $cssMain := resources.Get $scssMain | toCSS (dict "enableSourceMap" true) }}
-{{ $cssCustom := resources.Get $scssCustom | resources.ExecuteAsTemplate "custom.scss" . | toCSS (dict "enableSourceMap" true) }}
-{{ $css := slice $cssMain $cssCustom | resources.Concat "style.css" }}
+{{ $css := resources.Get $scssMain | resources.ExecuteAsTemplate "css/main.css" . | toCSS (dict "enableSourceMap" true) }}
 {{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" true) }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 {{ else }}
-{{ $cssMain := resources.Get $scssMain | toCSS (dict "enableSourceMap" false) }}
-{{ $cssCustom := resources.Get $scssCustom | resources.ExecuteAsTemplate "custom.scss" . | toCSS (dict "enableSourceMap" false) }}
-{{ $css := slice $cssMain $cssCustom | resources.Concat "css/main.css" | postCSS | minify | fingerprint }}
+{{ $css := resources.Get $scssMain | resources.ExecuteAsTemplate "css/main.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
 {{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS }}
 <link rel="preload" href="{{ $css.RelPermalink }}" as="style">
 <link rel="preload" href="{{ $cssLight.RelPermalink }}" as="style">
