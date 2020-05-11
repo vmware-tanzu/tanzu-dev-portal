@@ -86,8 +86,7 @@ img {
   border: 0;
 }
 
-.guide img:not(.icon),
-.td-content img:not(.icon) {
+img[src*='diagram'] {
   background: white;
   padding: 40px;
   margin: 30px 0;
