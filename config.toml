@@ -2,7 +2,6 @@ baseURL = ""
 title = "VMware Tanzu"
 publishDir = "public/developer"
 canonifyURLs = false
-relativeURLs = true
 
 enableRobotsTXT = true
 
