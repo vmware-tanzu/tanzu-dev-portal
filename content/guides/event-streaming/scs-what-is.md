@@ -30,7 +30,7 @@ Spring Cloud Stream introduces three main components that allow developers to ut
 
 Consider the following scenario of an application that has one input and one output:
 
-![img](/images/guides/spring/scs-what-is-01.png)
+![img](/images/guides/spring/diagrams/scs-what-is-01.png)
 
 In this scenario, you can see that there are two logical bindings—one for input and another for output—that communicate with the binder. The binder then handles communication with the message broker directly. All of this happens outside of your code, so rather than connecting to the broker, creating the channels, and defining how everything gets routed, Spring will abstract away as much as possible.
 

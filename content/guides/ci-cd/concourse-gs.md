@@ -18,7 +18,7 @@ How can you make sure your code is ready to be integrated into a release? Contin
 
 But what if there was a better system? One that was built for cloud native development paradigms on the foundation of a stateless architecture where all pipelines are built and treated as code? That’s where Concourse CI comes in.
 
-![Concourse dashboard](/images/guides/ci-cd/concourse/overview.png)
+![Concourse dashboard](/images/guides/ci-cd/concourse/screenshots/overview.png)
 
 An example Concourse CI dashboard showing the status of many pipelines
 
@@ -109,7 +109,7 @@ You can access the cluster by logging in using the credentials set in the `value
 ### Installing fly
 Fly is the local client application developers and Concourse CI administrators use as their primary way to interact with the cluster from the command line. To install fly, download the binary from your Concourse CI cluster directly by clicking the link appropriate for your system, as shown here. 
 
-![Download Fly](/images/guides/ci-cd/concourse/download-fly.png)
+![Download Fly](/images/guides/ci-cd/concourse/screenshots/download-fly.png)
 
 The Concourse CI interface upon a new installation showing download links for the fly client application
 
@@ -187,13 +187,13 @@ fly -t demo set-pipeline -c pipelines/pipeline.yml -p petclinic-tests -l pipelin
 
 Pipelines start “paused,” meaning they won’t start running until you tell them to, which you can do from the UI or the fly CLI tool. But before you unpause, take a look at the UI to confirm your pipeline has been created successfully.
 
-![Concourse Pipeline](/images/guides/ci-cd/concourse/dashboard.png)
+![Concourse Pipeline](/images/guides/ci-cd/concourse/screenshots/dashboard.png)
 
 The main Concourse CI UI showing your pipeline set
 
 When clicking into that pipeline, you will see the jobs and resources depicted as connected entities. The jobs are the big gray boxes; the resources used by the jobs are the smaller, black boxes.
 
-![Download Fly](/images/guides/ci-cd/concourse/pipeline.png)
+![Download Fly](/images/guides/ci-cd/concourse/screenshots/pipeline.png)
 
 ### The pipeline 
 
@@ -205,7 +205,7 @@ fly -t demo unpause-pipeline -p petclinic-tests
 
 Watch the pipeline complete. Then click into the running job and watch it complete in more detail.
 
-![Pipeline run](/images/guides/ci-cd/concourse/concourse-test.gif)
+![Pipeline run](/images/guides/ci-cd/concourse/screenshots/concourse-test.gif)
 
 ### The pipeline and job run details 
 
