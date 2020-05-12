@@ -149,4 +149,13 @@ TCP
 MDN
 ok
 youtube
+[O,o]bservability
+Log4j2
+IaaS
+EFK
+Logstash
+[0-9]*ms
+STDOUT
+Zipkin
+Jaeger
 9HsWsoDd1fM
