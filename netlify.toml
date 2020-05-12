@@ -18,3 +18,8 @@
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.69.2"
+
+[[redirects]]
+  from = "/"
+  to = "/developer"
+  status = 302

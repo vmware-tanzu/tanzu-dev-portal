@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "/developer"
 title = "VMware Tanzu"
 publishDir = "public/developer"
 canonifyURLs = false
