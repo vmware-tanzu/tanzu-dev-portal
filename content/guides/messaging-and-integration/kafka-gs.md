@@ -148,10 +148,18 @@ Finally, the consumer begins polling Kafka for new messages. For each new messag
 
 ## Running the Example
 
-With Kafka running from earlier in the example, all that’s left is to run the emitter and the consumer. Open two terminals, one in the `java/emitter` directory and one in the `java/consumer` directory, and under both run:
+With Kafka running from earlier in the example, all that’s left is to run the emitter and the consumer. Open two terminals, one in the `java/emitter` directory and one in the `java/consumer` directory. To run the consumer, you can run the following:
 
 ```
-./mvnw spring-boot:run
+./mvnw clean package
+java -jar target/kafka-getting-started-consumer-0.0.1-SNAPSHOT.jar
+```
+
+Likewise, you can run the emitter with the following command:
+
+```
+./mvnw clean package
+java -jar target/kafka-getting-started-emitter-0.0.1-SNAPSHOT.jar
 ```
 
 After a few moments, both will be running. You’ll be greeted with a prompt for input from the emitter, and you can start sending messages to Kafka!
