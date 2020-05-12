@@ -15,6 +15,10 @@ hugo server
 ```
 _Note: You may have to `brew upgrade` if you get this error: "parse failed: template: partials/head.html:3: function "hugo" not defined"_
 
+You may wish to explicitly set `baseURL` to http://localhost:1313/developer in order to mimic what happens in production at https://tanzu.vmware.com/developer. Use the following command to do this:
+
+`hugo server -b http://localhost:1313/developer`
+
 ### Publish to PWS
 Once you have the site successfully running locally, you may publish it to the staging site running on PWS as follows.
 
