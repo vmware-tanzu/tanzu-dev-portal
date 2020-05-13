@@ -8,6 +8,8 @@ tags:
 - Helm
 patterns:
 - Deployment
+team:
+- Tyler Britten
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [Helm: What Is It?](../helm-what-is/)

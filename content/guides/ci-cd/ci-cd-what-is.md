@@ -8,6 +8,8 @@ tags:
 - CI-CD
 patterns:
 - Deployment
+team:
+- Nate Schutta
 ---
 
 Modern distributed architectures together with cloud environments offer a powerful toolkit for delivering applications that quickly deliver business value. No industry is immune to disruption, however, and you can no longer afford a plodding release cycle with nebulous review boards and heavyweight gates that slow development to a crawl. You need to move fast but you cannot afford to break things. You need deployment pipelines.

@@ -13,6 +13,8 @@ tags:
 - Microservices
 - Reactive
 - Spring Boot
+team:
+- Josh Long
 repo: https://github.com/joshlong/bootiful-reactive-microservices
 readme: true
 ---

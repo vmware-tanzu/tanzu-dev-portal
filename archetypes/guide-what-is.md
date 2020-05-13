@@ -6,6 +6,9 @@ categories:
 - 
 tags:
 - {{ replace .Name "-what-is" "" }}
+# Author(s)
+team:
+-
 ---
 
 Intro text...

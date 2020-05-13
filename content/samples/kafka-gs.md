@@ -10,6 +10,8 @@ tags:
 - Kafka
 patterns:
 - Eventing
+team:
+- Brian McClain
 repo: https://github.com/BrianMMcClain/kafka-getting-started
 readme: true
 ---

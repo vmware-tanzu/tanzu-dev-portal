@@ -14,6 +14,8 @@ tags:
 - REST
 patterns:
 - API
+team:
+- Josh Long
 repo: https://github.com/joshlong/the-spring-rest-stack
 readme: true
 ---

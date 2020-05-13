@@ -10,6 +10,8 @@ tags:
 - Spring Cloud Stream
 patterns:
 - Eventing
+team:
+- Brian McClain
 ---
 
 
