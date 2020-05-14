@@ -79,6 +79,8 @@ Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file 
         ```
         ytt version
         ```
+- [DockerHub](https://hub.docker.com/) is the image registry used in this guide if you don't have an account please make one, unless you are a more advanced user and want to have your own registry skip this step.
+
 ### Clone the CF for K8s repo
 
 Clone the repo to preferred location and cd into it.
