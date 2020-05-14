@@ -1,5 +1,5 @@
 ---
-title: Getting Started with CF-for-k8s
+title: Getting Started with Cloud Foundry for Kubernetes
 description: Deploying CF-for-k8s for your cluster and installing, scaling, and deleting an application.
 topics:
 - Kubernetes
@@ -9,5 +9,7 @@ tags:
 - Cloud Foundry
 patterns:
 - Deployment
-youtube_id: 
+team:
+- Ivan Tarin
+youtube_id: wyB28RS4UUs
 ---

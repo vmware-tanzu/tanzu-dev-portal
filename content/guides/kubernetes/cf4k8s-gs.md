@@ -218,3 +218,6 @@ Learn more about Cloud Foundry with the links below:
 - [cf-for-k8s GitHub](https://github.com/cloudfoundry/cf-for-k8s.git)
 - [cloudfoundry.org](https://www.cloudfoundry.org/)
 - [Online CF Tutorial](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf)
+
+#### Watch the Video
+{{< youtube wyB28RS4UUs >}}
