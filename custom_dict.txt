@@ -128,7 +128,6 @@ YAML
 cd
 kubectl
 failover
-1e49264
 spring-petclinic
 [D,d]ockerfile
 OCI
@@ -149,4 +148,3 @@ TCP
 MDN
 ok
 youtube
-9HsWsoDd1fM
