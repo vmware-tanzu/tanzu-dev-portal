@@ -29,11 +29,7 @@ It's easy to generate logs from your applications. In fact, it's so easy that on
 
 That still leaves gathering, sorting, indexing, and analyzing  your logs, which is no small task. This becomes even more important in the world of containerized workloads, where containers can start and stop in a matter of moments, taking the local logs with them. Similar to discussing metrics, there's a lot of ways to solve this problem, and it's important to find the right solution for your environment. If you're running on an application platform, it may automatically collect logs for you. IaaS providers may provide a service that you can send your logs to. You may even need to stand up your own infrastructure.
 
-Luckily, there's a number of open-source solutions that you can leverage. The "EFK stack" for example is a very popular combination of technologies:
-
-- **[Elasticsearch](https://www.elastic.co/):** Distributed indexing and search engine
-- **[Fluentd](https://www.fluentd.org/):** Unified layer for collecting logs. Another popular solution for this is [Logstash](https://www.elastic.co/logstash)
-- **[Kibana](https://www.elastic.co/kibana):** Visualize the aggregated logs
+Logging can be thought to have three responsibilities: collection, indexing, and visualization. For those that do need to stand up their own solution, there's a wide ecosystem of open-source technologies that can be used. For example, the "EFK stack" ([Elasticsearch](https://www.elastic.co/), [Fluentd](https://www.fluentd.org/), and [Kibana](https://www.elastic.co/kibana)) is popular for solving this exact problem.
 
 ### Tracing
 
@@ -42,3 +38,9 @@ Many applications today are made up of several smaller services, meaning one req
 Of these three topics discussed, tracing is generally the hardest to implement. While metrics and logging can somewhat rely on standards, such as writing logs to STDOUT or offering an open way of pulling metrics, tracing relies on instrumentation of every service. In a polyglot system, this means that your tracing solution of choice also needs to provide client libraries for each language.
 
 There's a number of popular open-source solutions out there, including [Zipkin](https://zipkin.io/) and [Jaeger](https://www.jaegertracing.io/), so make sure to look around and see which solution fits your use case best.
+
+### Putting It Together
+
+There's quite a bit that's been covered here and you may be wondering where to start. If you have applications in production today, give some thought of what's giving you the most trouble. What sort of insight would give you the best idea of why your services aren't performing as they should? If you're in the process of creating a new service, what do you expect the problem spots may be?
+
+Log aggregation can be a great first step that's may require little to no code changes, and setting up the EFK stack is a great first step. If you're a Spring developer, you can even try out Spring Wavefront for free. If you're looking to dig a bit deeper, you could even begin looking into getting started with Jaeger.

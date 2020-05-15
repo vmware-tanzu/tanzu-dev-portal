@@ -154,6 +154,7 @@ Log4j2
 IaaS
 EFK
 Logstash
+Kibana
 [0-9]*ms
 STDOUT
 Zipkin
