@@ -2,11 +2,10 @@
     {{ $pages := ((where .Site.Pages "Section" "team").ByWeight) }}
     
     <div class="flex justify-content-between">
-        <div class="col-lg-12 px-0 ">
+        <div class="col-lg-12 px-0 advocates">
          {{ range $pages }}
             {{ if in .Params.roles "advocate" }}
-             <div class="item mb-3 gradient-edge-parent" >
-                 <div class='gradient-edge-top'></div>
+             <div class="item mb-4 gradient-edge-parent" >
                  <div class='border p-4 bg-gray-dark '> 
 	                {{ partial "team-member.html" (dict "context" . "display" "summary") }}
                  </div>

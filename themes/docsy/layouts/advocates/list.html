@@ -4,10 +4,30 @@
 
 <div class="td-content">
 	<div class='container'>
-		{{ .Content }}
-		<br/>
 		
-		{{ partial "advocates-index.html" . }}
+		<div class="row">
+		{{ $cols := split .Content "<!--split-->" }}
+		{{ range $cols }}
+			<div class="col-5 mx-2">
+			{{ . | markdownify }}
+			</div>
+		{{ end }}
+		</div>
+
+		<div class="row">
+			<div class="col-1">
+				<img class="icon icon-md mb-3 d-block d-lg-inline-block mr-4" src="/developer/images/icons/icon-tanzu.svg">
+			</div>
+			<div class="col-11">
+				<h3>Contact us</h3>
+				{{- .Params.contact | markdownify -}}
+			</div>
+		</div>
+
+		<div class="border-top mt-8">
+			<h2 class="mt-6 mb-4">Our Advocates</h2>
+			{{ partial "advocates-index.html" . }}	
+		</div>
 
 		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
 			{{ partial "feedback.html" .Site.Params.ui.feedback }}

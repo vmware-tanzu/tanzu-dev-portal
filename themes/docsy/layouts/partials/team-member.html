@@ -5,17 +5,15 @@
     </div>
     <div class="col-lg-8 col-md-8">
         {{ if eq .display "summary" }}
-        <h1><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h1>
+        <h2><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
         {{ else }}
         <h1>{{ .context.Params.name }}</h1>
         {{ end }}
-        <p class="mt-2 mb-1 text-white">{{ .context.Params.description }}</p>
         <p class="mt-0 mb-1">{{- .context.Params.location -}}</p>
         {{ if .context.Params.skills }}
-        <p class="mt-0 mb-3">Expertise: <i>{{ delimit .context.Params.skills ", " -}}</i></p>
+        <p class="mt-0 mb-4 text-white">Expertise: <i>{{ delimit .context.Params.skills ", " -}}</i></p>
         {{ end }}
         <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
-        <div class="short-gradient-line mb-4"></div>
         <!--{{ with .context.Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
         {{ if eq .display "summary" }}
         {{ .context.Summary }}

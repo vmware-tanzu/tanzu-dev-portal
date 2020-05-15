@@ -489,7 +489,17 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
+.advocates .social {
+  color: $light;
+  font-size: .9rem;
+  margin-right: .8rem;
+}
 
+.advocates .social:hover {
+  color: $blue;
+  font-size: .9rem;
+  margin-right: .8rem;
+}
 
 
 .youtube-container {
