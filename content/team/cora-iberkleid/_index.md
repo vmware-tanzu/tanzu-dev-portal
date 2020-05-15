@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/cora2.jpg"
 roles: ["advocate"]
 skills: ["Spring", "Kubernetes"]
-location: ""
+location: "New York, NY"
 
 # Social Media 
 twitter: "ciberkleid"

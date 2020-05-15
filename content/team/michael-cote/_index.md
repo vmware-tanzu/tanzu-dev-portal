@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/cote.jpg"
 roles: ["advocate"]
 skills: ["Digital Transformation", "DevOps"]
-location: ""
+location: "Austin, TX"
 
 # Social Media 
 twitter: "cote"

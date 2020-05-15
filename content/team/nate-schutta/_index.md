@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/nate.jpg"
 roles: ["advocate"]
 skills: ["Architecture", "Domain-Driven Design", "Microservices", "Usability", "Refactoring", "Spring", "Kubernetes", "Cloud Native Computing", "Architect as a Service"]
-location: ""
+location: "Minnesota"
 
 # Social Media 
 twitter: "ntschutta"

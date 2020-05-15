@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/tiffany.jpg"
 roles: ["advocate","author"]
 skills: ["Kubernetes"]
-location: ""
+location: "Seattle, WA"
 
 # Social Media 
 twitter: "tiffanyfayj"

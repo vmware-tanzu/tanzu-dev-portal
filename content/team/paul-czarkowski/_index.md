@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/paul-czarkowski.jpg"
 roles: ["advocate","author"]
 skills: ["Spring", "Kubernetes"]
-location: ""
+location: "Austin, TX"
 
 # Social Media 
 twitter: "pczarkowski"

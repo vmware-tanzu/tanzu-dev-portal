@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/jakub.jpg"
 roles: ["advocate"]
 skills: ["Architecture", "Domain-Driven Design", "Unit testing", "Refactoring", "Spring"]
-location: ""
+location: "Poland"
 
 # Social Media 
 twitter: "JakubPilimon"

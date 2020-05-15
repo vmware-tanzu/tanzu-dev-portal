@@ -4,7 +4,7 @@ description: "Developer Advocacy Manager"
 photo: "/images/team/advocates/tasha.jpg"
 roles: ["advocate","author"]
 skills: []
-location: ""
+location: "Pittsburgh, PA"
 
 # Social Media 
 twitter: "TashaIsenberg"

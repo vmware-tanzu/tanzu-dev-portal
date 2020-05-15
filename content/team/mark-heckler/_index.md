@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/mheckler.jpg"
 roles: ["advocate"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
-location: ""
+location: "St. Louis, MO"
 
 # Social Media 
 twitter: "mkheck"

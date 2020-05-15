@@ -4,7 +4,7 @@ description: "Developer Advocate"
 photo: "/images/team/advocates/mgray.png"
 roles: ["advocate"]
 skills: ["Spring", "kotlin", "TDD", "Security", "Services", "functional", "Kubernetes"]
-location: ""
+location: "Santa Monica, CA"
 
 # Social Media 
 twitter: "mariogray"
