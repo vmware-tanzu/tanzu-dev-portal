@@ -8,6 +8,7 @@
         <h2><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
         {{ else }}
         <h1>{{ .context.Params.name }}</h1>
+        <p class="mt-2 mb-1 text-white">{{ .context.Params.description }}</p>
         {{ end }}
         <p class="mt-0 mb-1">{{- .context.Params.location -}}</p>
         {{ if .context.Params.skills }}
