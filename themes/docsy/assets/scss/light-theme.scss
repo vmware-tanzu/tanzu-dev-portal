@@ -123,19 +123,19 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
    background: #1d428a !important;
 }
 #hero.guides-hero {
-   background-image: url({{ "/images/backgrounds/background-guides-light.svg" | relURL }});
+   background-image: url({{ "/images/backgrounds/background-guides-light.svg" | relURL }}) !important;
  }
  #hero.patterns-hero {
-   background-image: url({{ "/images/backgrounds/background-patterns-light.svg" | relURL }});
+   background-image: url({{ "/images/backgrounds/background-patterns-light.svg" | relURL }}) !important;
  }
  #hero.samples-hero {
-   background-image: url({{ "/images/backgrounds/background-samples-light.svg" | relURL }});
+   background-image: url({{ "/images/backgrounds/background-samples-light.svg" | relURL }}) !important;
  }
  #hero.videos-hero {
-   background-image: url({{ "/images/backgrounds/background-video-light.svg" | relURL }});
+   background-image: url({{ "/images/backgrounds/background-video-light.svg" | relURL }}) !important;
  }
  #hero.community-hero {
-   background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }});
+   background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }}) !important;
  }
 
 @media(max-width: 991px) {
