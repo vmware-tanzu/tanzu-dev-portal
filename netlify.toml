@@ -1,20 +1,25 @@
 # Default build settings
 [context.production]
   publish = "public"
-  command = "git submodule update -f --init --recursive && npm install && hugo"
+  command = "git submodule update -f --init --recursive && npm install && hugo -b https://tanzu.vmware.com/developer"
 
 [context.production.environment]
   HUGO_VERSION = "0.69.2"
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "git submodule update -f --init --recursive && npm install && hugo -b $DEPLOY_PRIME_URL"
+  command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.69.2"
 
 [context.branch-deploy]
-  command = "git submodule update -f --init --recursive && npm install && hugo -b $DEPLOY_PRIME_URL"
+  command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.69.2"
+
+[[redirects]]
+  from = "/"
+  to = "/developer"
+  status = 302

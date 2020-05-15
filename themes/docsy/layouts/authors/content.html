@@ -1,7 +1,7 @@
 <div class="td-content">
 	<div class="row">
 		<div class="col-lg-2 col-md-2 mr-5 mb-5">
-			<img class='desaturated' src='{{ .Params.photo | default (print "/images/authors/" (urlize .Params.name) ".jpg") }}'/>
+			<img class='desaturated' src='{{ .Params.photo | default (print "/images/authors/" (urlize .Params.name) ".jpg" | relURL) }}'/>
 		</div>
 		<div class="col-lg-8 col-md-8">
 			<h1>{{ .Params.name }}</h1>

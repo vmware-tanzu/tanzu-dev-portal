@@ -19,7 +19,7 @@
 
 			  link.type = "text/css";
 			  link.rel = "stylesheet";
-			  link.href = "/developer/css/light-theme.css";
+			  link.href = {{ printf "%s" "/css/light-theme.css" | relURL }};
 			  link.id = "light-theme"
 
 			  head.prepend(link);
@@ -41,8 +41,8 @@
 {{ end -}}
 {{ partialCached "favicons.html" . }}
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-<meta content='/developer/images/TAN-DevSite-OG.png' property='og:image'>
-<meta content='/developer/images/TAN-DevSite-OG.png' name='twitter:image'>
+<meta content='{{ "/images/TAN-DevSite-OG.png" | relURL }}' property='og:image'>
+<meta content='{{ "/images/TAN-DevSite-OG.png" | relURL }}' name='twitter:image'>
 <meta content='summary_large_image' name='twitter:card'>
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/google_news.html" . -}}
