@@ -13,7 +13,7 @@
 		
 		{{- range $index, $element := .Params.authors }}
 			{{ if gt $index 0 }} & {{ end }}
-			<a href="/authors/{{ urlize . }}">{{ . }}</a>
+			<a href='{{ print "/authors/" (urlize .) | relURL }}'>{{ . }}</a>
 		{{ end }}
 
         {{ .Date.Format "January 2, 2006" }}

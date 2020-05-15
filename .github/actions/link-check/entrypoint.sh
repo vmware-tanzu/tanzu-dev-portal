@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOCAL_HOST="http://localhost:1313"
+LOCAL_HOST="http://localhost:1313/developer"
 MAX_WAIT_TIME=600 # 5 min
 
 echo "--> Start hugo server"

@@ -25,6 +25,6 @@ jobs:
       - uses: ./.github/actions/link-check
         name: Link Check
         env:
-          HUGO_OPTIONS: "" #"--buildDrafts"
+          HUGO_OPTIONS: "-b http://localhost:1313/developer" #"--buildDrafts"
           MUFFET_OPTIONS: "-v -e 'https?'" # Excludes external links
     
