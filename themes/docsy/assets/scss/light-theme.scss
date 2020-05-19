@@ -27,6 +27,7 @@ body .border-bottom {
   border-color: #d9e4ea !important;
 }
 
+.person .card, .person .highlight,
 main .highlight pre, main .highlight div,
 .highlight,
 pre,
@@ -48,6 +49,7 @@ body .td-sidebar-nav a.td-sidebar-link__page.active {
   color: #78be20 !important;
 }
 
+.person .card, .person .highlight,
 pre, .highlight,
 body p code, body li > code, body table code,
 body.guide .td-sidebar-nav__section-title a, 
@@ -64,6 +66,7 @@ p code, li > code, table code,
    color: #1d428a !important;
 }
 
+.person .card:hover, .person .highlight:hover,
 body a.bg-gray-dark.border:hover,
 body a.td-box--gray-darkest:hover,
 body .topic a:hover {
@@ -74,6 +77,7 @@ footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
 
+.person .card, .person .highlight,
  body .td-sidebar, body .topic a {
    border-color: #d9e4ea !important;
 }
