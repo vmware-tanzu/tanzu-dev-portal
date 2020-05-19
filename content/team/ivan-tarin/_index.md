@@ -5,6 +5,7 @@ photo: "/images/team/ivan-tarin.jpg"
 roles: ["author"]
 skills: []
 location: "Denver, CO"
+weight: 1
 
 # Social Media 
 twitter: "IvanTarin2"

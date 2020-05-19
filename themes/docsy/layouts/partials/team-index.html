@@ -1,22 +1,8 @@
 
 <div class="section-index">
-    {{ $pages := ((where .Site.Pages "Section" .Section).ByWeight) }}
+    {{ $pages := sort (where .Site.Pages "Section" "team") "Params.name" }}
     {{ $parent := .Page }}
-    {{ if $parent.Params.no_list }}
-    {{/* If no_list is true we don't show a list of subpages */}}
-    {{ else if $parent.Params.simple_list }}
-    {{/* If simple_list is true we show a bulleted list of subpages */}}
-        <ul>
-            {{ range $pages }}
-                {{ if eq .Parent $parent }}
-                    <li><a href="{{ .RelPermalink }}">{{- .Params.name -}}</a></li>
-                {{ end }}
-            {{ end }}
-        </ul>
-    {{ else }}
-    {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
-    <!-- <hr class="panel-line"> -->
-        <!-- <div class="col"> --><div class="row">
+    <div class="row">
         {{ range $pages }}
             {{ if eq .Parent $parent }}
                 {{ if .Params.name }}
@@ -35,11 +21,9 @@
                             </div>
                         </div>
                     </div> 
-                
                 </div>
                 {{ end }}
             {{ end }}
         {{ end }}
-       <!--  </div> --></div>
-    {{ end }}
+    </div>
 </div>
