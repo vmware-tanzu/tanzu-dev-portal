@@ -5,6 +5,7 @@ photo: ""
 roles: ["author"]
 skills: []
 location: "Los Angeles, CA"
+weight: 2
 
 # Social Media 
 twitter: "bryanfriedman"

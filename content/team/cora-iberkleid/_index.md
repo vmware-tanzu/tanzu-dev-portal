@@ -5,6 +5,7 @@ photo: "/images/team/advocates/cora2.jpg"
 roles: ["advocate"]
 skills: ["Spring", "Kubernetes"]
 location: "New York, NY"
+weight: 1
 
 # Social Media 
 twitter: "ciberkleid"

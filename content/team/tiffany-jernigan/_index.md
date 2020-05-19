@@ -5,6 +5,7 @@ photo: "/images/team/advocates/tiffany.jpg"
 roles: ["advocate","author"]
 skills: ["Kubernetes"]
 location: "Seattle, WA"
+weight: 1
 
 # Social Media 
 twitter: "tiffanyfayj"

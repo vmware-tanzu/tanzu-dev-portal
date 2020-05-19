@@ -5,6 +5,7 @@ photo: "/images/team/advocates/thumb_bob.jpg"
 roles: ["advocate"]
 skills: ["Spring", "Kubernetes"]
 location: "San Francisco, CA"
+weight: 1
 
 # Social Media 
 twitter: "bob_brindley"

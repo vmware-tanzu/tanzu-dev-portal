@@ -5,6 +5,7 @@ photo: "/images/team/tyler-britten.jpg"
 roles: ["author"]
 skills: ["Kubernetes"]
 location: "Philadelphia, PA"
+weight: 1
 
 # Social Media 
 twitter: ""

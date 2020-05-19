@@ -5,6 +5,7 @@ photo: "/images/team/advocates/paul-czarkowski.jpg"
 roles: ["advocate","author"]
 skills: ["Spring", "Kubernetes"]
 location: "Austin, TX"
+weight: 1
 
 # Social Media 
 twitter: "pczarkowski"

@@ -5,6 +5,7 @@ photo: "/images/team/advocates/mgray.png"
 roles: ["advocate"]
 skills: ["Spring", "kotlin", "TDD", "Security", "Services", "functional", "Kubernetes"]
 location: "Santa Monica, CA"
+weight: 1
 
 # Social Media 
 twitter: "mariogray"
