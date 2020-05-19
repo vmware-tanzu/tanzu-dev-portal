@@ -1,5 +1,1 @@
-{{ if or (strings.HasPrefix .Destination ".") (strings.HasPrefix .Destination "#") (strings.HasPrefix .Destination "mailto:") }}
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>
-{{ else }}
-<a href="{{ .Destination | safeURL | relURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>
-{{ end }}
+{{ if or (strings.HasPrefix .Destination ".") (strings.HasPrefix .Destination "#") (strings.HasPrefix .Destination "mailto:") }}<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>{{ else }}<a href="{{ .Destination | safeURL | relURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>{{ end }}
