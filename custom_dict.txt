@@ -4,7 +4,7 @@
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
 
-[0-9]*GB
+[0-9]*(GB|ms)
 https?|HTTPS?
 localhost(:[0-9]*)?
 
@@ -44,6 +44,7 @@ modularity
 namespace
 natively
 no-brainer
+[O,o]bservability
 ok
 orchestrator
 performant
@@ -85,9 +86,11 @@ Finchley
 Gradle
 [H,h]elmfiles?
 init
+Jaeger
 [K,k]8s
 kapp
 Kafka
+Kibana
 Knative
 kpack(-hosted)?
 KubeAcademy
@@ -95,6 +98,7 @@ KubeAcademy
 kubectl
 kubeconfig
 Kubernetes(-native)?
+Log4j2
 macOS
 [M,m]inikube
 MockMvc
@@ -106,6 +110,7 @@ RabbitMQ('s)?
 RSocket(-based)?
 [S,s]kaffold
 spring-petclinic
+STDOUT
 Tanzu(Developer)?
 Terraform
 Vaadin
@@ -113,6 +118,7 @@ vSphere
 WebFlux
 WebSocket
 ytt
+Zipkin
 Zuul
 
 # Companies / Conferences
@@ -129,11 +135,13 @@ VMware(-hosted|'s|Tanzu)?
 APIs?
 CLI
 DNS
+EFK
 FP
 GAC
 GCP
 GCR
 GKE
+IaaS
 JVM
 JPA
 JSON
