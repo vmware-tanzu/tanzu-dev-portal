@@ -17,7 +17,6 @@ instagram: ""
 youtube: ""
 ---
 
-
-Tasha runs the Advocacy Team like a well oiled machine. [Contact](mailto:tisenberg@vmware.com) her to talk about having an advocate work with you.
+Tasha runs the Advocacy team like a well-oiled machine. [Contact](mailto:tisenberg@vmware.com) her to talk about having an advocate work with you.
 
 <!--more-->

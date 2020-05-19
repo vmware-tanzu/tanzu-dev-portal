@@ -17,7 +17,7 @@ instagram: ""
 youtube: ""
 ---
 
-Michael Coté focuses studies how large organizations get better at building software to run better and grow their business. His books Monolithic Transformation and The Business Bottleneck cover this topic. He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including Software Defined Talk. Cf. cote.io, and is @cote in Twitter. Texas Forever!
+Michael Coté studies how large organizations get better at building software to run more efficiently and grow their business. He covers this topic in his books, _Monolithic Transformation_ (O’Reilly Media, 2009) and _The Business Bottleneck_ (O’Reilly Media, 2020). He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including “Software Defined Talk.” Cf. cote.io, and is [@cote](https://twitter.com/cote) on Twitter. Texas forever!
 
 <!--more-->
 
@@ -29,9 +29,9 @@ Michael Coté focuses studies how large organizations get better at building sof
 
 <!-- {{< slideshare id="230546348" >}} -->
 
-#### Creating a DevOps culture, whatever that means
+#### Creating a DevOps Culture, Whatever That Means
 
 * [slides](https://noti.st/cote/KPk3sa/creating-a-devops-culture-whatever-that-means#s8r8VOc)
 
-#### Rethinking enterprise architecture for DevOps, Agile, and cloud native organizations
+#### Rethinking Enterprise Architecture for DevOps, Agile, and Cloud Native Organizations
 {{< youtube id="2UquXJsbr9M" class="youtube-video-shortcode" >}}

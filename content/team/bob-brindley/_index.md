@@ -19,6 +19,6 @@ youtube: ""
 
 Bob Brindley travels the world spreading the good word according to Tanzu and Spring to any and all that will hear.
 
-He has been a developer advocate for 5 years and still smells terrific.
+He has been a developer advocate for five years and still smells terrific.
 
 <!--more-->

@@ -1,7 +1,10 @@
 <div class="row team-member">
     <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <!--<img class='mr-3' src='{{ .context.Params.thumbnail | default "/images/people/nobody.jpg" }}'/>-->
+        {{ if eq .display "summary" }}
         <a href="{{ .context.RelPermalink }}"><img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/></a>
+        {{ else }}
+        <img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/>
+        {{ end }}
     </div>
     <div class="col-lg-8 col-md-8">
         {{ if eq .display "summary" }}
