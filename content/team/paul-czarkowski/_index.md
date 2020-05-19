@@ -17,7 +17,7 @@ instagram: ""
 youtube: ""
 ---
 
-Paul Czarkowski is a long time practitioner of the dark arts of Devops. Hailing from Australia he moved to Austin Texas to help build and run one of the largest and most successful online games. Now at VMWare, Paul works to improve the Operator experience by taking Cloud Native software development concepts and applying them to Operations to create platforms that reduce toil and improve software delivery.
+Paul Czarkowski is a long time practitioner of the dark arts of Devops. Hailing from Australia he moved to Austin Texas to help build and run one of the largest and most successful online games. Now at VMware, Paul works to improve the Operator experience by taking Cloud Native software development concepts and applying them to Operations to create platforms that reduce toil and improve software delivery.
 
 <!--more-->
 
@@ -39,10 +39,10 @@ Paul can speak or host workshops on the following topics, both from VMware Produ
 
 Paul will talk through how Kubernetes enables a new Cloud Native way of operating software, part devops, part SRE, all awesome! As Paul introduces the audience to the concepts of Cloud Native Operations he will put it to action and build out a cloud native CI/CD stack and show deploying and upgrading an application from source all the way to production on Kubernetes.
 
-{{< youtube oYcGzEo15n4 >}}
+{{< youtube id="oYcGzEo15n4" class="youtube-video-shortcode" >}}
 
 #### Hacking Helm
 
 Helm is the best way to build, package, and run Kubernetes manifests. However it has been considered by some as a fairly insecure way to deploy software, mostly due to its server component Tiller. Let’s put that to the test and hack (and then protect from those hacks) Helm.
 
-{{< youtube QL-OztkJ4V8 >}}
+{{< youtube id="QL-OztkJ4V8" class="youtube-video-shortcode" >}}

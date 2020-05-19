@@ -1,6 +1,6 @@
 ---
 name: Tony Vetter
-description: "Senior Product Marketing Manager"
+description: "Sr. Product Marketing Manager"
 photo: "/images/team/tony-vetter.jpg"
 roles: ["author"]
 skills: []

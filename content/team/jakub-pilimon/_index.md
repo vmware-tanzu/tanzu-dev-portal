@@ -48,7 +48,7 @@ Jakub can host a modelling session or architecture review using:
 
 Tired of fancy abstractions without actual down to earth implementation? In this talk we will go through both benefits and problems by implementing a real example of event-sourced model. This is a full-time live coding and we will develop features in parallel - one of us in a classic ORM-based way and the other one using event sourcing. We are going to tackle the problems step by step in both solutions from various perspectives. From the point of view of the stakeholders our software should have quick time to market, ability to do complex data reporting and fast way to extend and to deploy new features. On the other hand, our fellow developers would be interested in learning curve when it comes to event sourcing and how it differs in turns of e.g. unit testing. At the end of each step it will be clear what kind of problems/benefits we have using one of two models. The talk is going to cover a broad set of buzzwords like: event sourcing, CQRS, distributed systems, spring cloud stream, eventual consistency, unit testing and zero downtime deployments.
 
-{{< youtube r7AGQsM7ncA >}}
+{{< youtube id="r7AGQsM7ncA" class="youtube-video-shortcode" >}}
 
 #### Refactoring and Getting Rid of Big Ball Of Mud
 
@@ -58,7 +58,7 @@ Most of us also know what good design is. We talk a lot about Domain-Driven Desi
 Here’s the challenge: how to apply this thinking to your current systems. How do we modernize the app? How do convince people we should modernize it? How do we overcome the lack of testing? Or lack of business knowledge?
 Attend this session to answer these questions and more. You’ll learn about techniques that have proven to work in companies like yours.
 
-{{< youtube toqfiv4o7jA >}}
+{{< youtube id="toqfiv4o7jA" class="youtube-video-shortcode" >}}
 
 
 #### Unit Testing Done Right
@@ -67,4 +67,4 @@ Attend this session to answer these questions and more. You’ll learn about tec
 
 In this talk, we’ll tackle some of the testing gotchas. There will be live coding, architecture rants, some slides and (hopefully) much fun. Both senior and junior developers should find something interesting in that testing example.
 
-{{< youtube SeYre-Mgb14 >}}
+{{< youtube id="SeYre-Mgb14" class="youtube-video-shortcode" >}}

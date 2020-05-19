@@ -1,11 +1,11 @@
-<div class="row">
-    <div class="col-lg-2 col-md-2 mr-5 mb-5">
+<div class="row team-member">
+    <div class="col-lg-3 col-md-3 mr-4 mb-5">
         <!--<img class='mr-3' src='{{ .context.Params.thumbnail | default "/images/people/nobody.jpg" }}'/>-->
-        <img class='desaturated' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/>
+        <a href="{{ .context.RelPermalink }}"><img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/></a>
     </div>
     <div class="col-lg-8 col-md-8">
         {{ if eq .display "summary" }}
-        <h2><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
+        <h2 class='pt-0'><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
         {{ else }}
         <h1>{{ .context.Params.name }}</h1>
         <p class="mt-2 mb-1 text-white">{{ .context.Params.description }}</p>
@@ -19,7 +19,9 @@
         {{ if eq .display "summary" }}
         {{ .context.Summary }}
         {{ else }}
-        {{ .context.Content }}
+        <div class='team-body-copy'>
+            {{ .context.Content }}
+        </div>
         {{ end }}
         
 

@@ -27,7 +27,7 @@ As an engineer and an MBA, Mark has worked with key players in the manufacturing
 
 Below are a few recent sessions Mark has delivered. For more options, please visit his [Current Abstracts repo on Github](https://github.com/mkheck/current-abstracts).
 
-### Supercharge Application Security with Spring Security, OpenID Connect, & OAuth2
+#### Supercharge Application Security with Spring Security, OpenID Connect, & OAuth2
 
 Topics: Spring, Security, OpenID Connect, OAuth2
 
@@ -37,17 +37,17 @@ Defense is a multi-faceted topic, and your systems' security is central to it al
 
 This session is a live-coding "lock it down" exploration of how to secure your apps & assets now and maintain their security over time using 100% open source software.
 
-{{< youtube 8VJNjMD9TG8 >}}
+{{< youtube id="8VJNjMD9TG8" class="youtube-video-shortcode" >}}
 
-### Game of Streams, extended edition (@ NYJAVASIG)
+#### Game of Streams, extended edition (@ NYJAVASIG)
 
 Most mission-critical systems have distributed elements or are entirely distributed, resulting in a number of challenges: performance, scalability, reliability, resilience...the eight fallacies of distributed computing are alive and well!
 
 Messaging platforms are often used to solve these problems and increase the "ilities", but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, & Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to *really* use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire, maximum altitude.  All examples coded *live & in real-time*.
 
-{{< youtube mmH4M6gS0pY >}}
+{{< youtube id="mmH4M6gS0pY" class="youtube-video-shortcode" >}}
 
-### Building Reactive Pipelines: How to Go from Scalable Apps to (Ridiculously) Scalable Systems
+#### Building Reactive Pipelines: How to Go from Scalable Apps to (Ridiculously) Scalable Systems
 
 Topics: Spring, Reactor, reactive programming, Java, Kotlin, Spring Cloud Stream, messaging, RabbitMQ, Kafka
 
@@ -61,9 +61,9 @@ In this session, Mark discusses and demonstrates:
 
 Mark codes all examples using 100% open-source software, live and in real time.
 
-{{< youtube x4PImMjPa7k >}}
+{{< youtube id="x4PImMjPa7k" class="youtube-video-shortcode" >}}
 
-### Construyendo Pipelines Reactivos: Como ir de aplicaciones escalables a sistemas RIDICULAMENTE escalables
+#### Construyendo Pipelines Reactivos: Como ir de aplicaciones escalables a sistemas RIDICULAMENTE escalables
 
 Temas: Spring, Reactor, programación reactiva, Java, Kotlin, Spring Cloud Stream, mensajería, RabbitMQ, Kafka
 
@@ -79,7 +79,7 @@ Como Spring Cloud Stream utiliza Reactor para proveer pipelines enteramente reac
 
 El ponente escribirá en código todos los ejemplos usando software de código abierto en vivo y en tiempo real! Esta no está una presentación abstracta, vengas para ganar conocimiento real y practical!
 
-{{< youtube DfdlDuGONwk >}}
+{{< youtube id="DfdlDuGONwk" class="youtube-video-shortcode" >}}
 
 ### Spring Boot: Up & Running!
 

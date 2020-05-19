@@ -37,7 +37,7 @@ Nate has a variety of talks and workshops on the following topics:
 Nate can also lead architectural reviews as well as provide guidance on the cloud native journey.
 ## Highlights
 
-### Responsible Microservices
+#### Responsible Microservices
 
 These days, you can’t swing a dry erase marker without hitting someone talking about microservices. Developers are studying Eric Evan’s prescient book Domain Driven Design. Teams are refactoring monolithic apps, looking for bounded contexts and defining a ubiquitous language. And while there have been countless articles, videos, and talks to help you convert to microservices, few have spent any appreciable time asking if a given application should be a microservice. In this talk, I will show you a set of factors you can apply to help you decide if something deserves to be a microservice or not. We’ll also look at what we need to do to maintain a healthy micro(services)biome.
 
@@ -45,16 +45,16 @@ There are many good reasons to use a microservices architecture. But there are n
 
 Responsible Microservices is based on my blog series [Should that be a Microservice? Keep These Six Factors in Mind](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind) found on the [VMware Tanzu blog](https://tanzu.vmware.com/blog).
 
-{{< youtube txBCrsVryiU >}}
+{{< youtube id="txBCrsVryiU" class="youtube-video-shortcode" >}}
 
-### Paved Roads
+#### Paved Roads
 
 As we migrate towards distributed applications, it is more than just our architectures that are changing, so too are the structures of our teams. The Inverse Conway Maneuver tells us small, autonomous teams are needed to produce small, autonomous services. Architects are spread thin and can’t be involved with every decision. Today, we must empower our teams but we need to ensure our teams are making good choices. How do we do that? How do you put together a cohesive architecture around distributed teams? This talk will discuss creating “paved roads”, well worn paths that we know works and we can support. We will also explore the importance of fitness functions to help our teams adopt appropriate designs.
 
-### Architecting Cloud Native Applications
+#### Architecting Cloud Native Applications
 
 By now your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that means to your application portfolio. Should everything be a microservice? Wait, what is a microservices anyway? How do you deal with massively distributed applications? What do you do with your legacy portfolio? In this presentation, we will walk through how the cloud impacts are applications and what we can do to successfully move our organizations forward.
-#### Topics
+##### Topics
 * Cloud native culture
 * Domain driven design
 * The importance of paved roads
@@ -63,13 +63,13 @@ By now your organization has planted a flag in “the Cloud” and it is up to y
 
 **Please note Architecting Cloud Native Applications can also be delivered as a workshop from 3 hours to 2 days.**
 
-### Developer To Architect
+#### Developer To Architect
 
 Becoming a software architect is a longed-for career upgrade for many software developers. While the job title suggests a work day focused on technical decision-making, the reality is quite different. In this workshop, software architect Nathaniel Schutta constructs a real world job description in which communication trumps coding.
 
 Discover the skill sets needed to juggle multiple priorities, meetings, and time demandsLearn why your best team leadership tool is not a hammer, but a shared cup of coffeeHear the best ways to give and take criticismUnderstand the necessity of writing effective email and formal architecture documentsGet tips for delivering confident career-building presentations to any audienceReview essential techniques for stakeholder management and relationship buildingExplore the critical needs for architecture reviews and an effective process for conducting themThrough lecture and small group exercises, Nathaniel will help you understand what it means to be a successful architect. Working through various problems, attendees will have opportunities to think through architectural decisions and patterns, discuss the importance of non functional requirements and why architects cannot afford to practice resume driven design.
 
-#### What you'll learn
+##### What you'll learn
 * Discover the skill sets needed to juggle multiple priorities, meetings, and time demands
 * Learn why your best team leadership tool is not a hammer but a shared cup of coffee
 * Hear the best ways to give and take criticism

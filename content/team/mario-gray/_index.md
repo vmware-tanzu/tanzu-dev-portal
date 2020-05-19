@@ -17,7 +17,7 @@ instagram: ""
 youtube: ""
 ---
 
-Mr. Gray is a Principal Technologist at VMWare with over 20 years of experience in software development, software architecture. He is co-author of Apress’s Pro Spring Integration. He’s helped organizations large and small build service-based architectures in a number of different runtimes and platforms over the decades, but adopting Spring in 2004, and using it whenever possible since, was a no-brainer that culminated in joining the Spring team in 2017. As a Spring Developer Advocate, Mario loves to engage and inspire developers and businesses in the Pivotal ecosystem.
+Mr. Gray is a Principal Technologist at VMware with over 20 years of experience in software development, software architecture. He is co-author of Apress’s Pro Spring Integration. He’s helped organizations large and small build service-based architectures in a number of different runtimes and platforms over the decades, but adopting Spring in 2004, and using it whenever possible since, was a no-brainer that culminated in joining the Spring team in 2017. As a Spring Developer Advocate, Mario loves to engage and inspire developers and businesses in the Pivotal ecosystem.
 
 <!--more-->
 
@@ -41,16 +41,16 @@ tutorial explains several common Redis Operations
 and includes detailed examples of interacting
 with Redis-bound data and REST applications.
 
-{{< youtube _lTwaivWHzk >}}
+{{< youtube id="_lTwaivWHzk" class="youtube-video-shortcode" >}}
 
 
 #### Bootiful Testing with TDD
 
 Join us for an exploration of testing a reactive Spring Boot 2.x application. Test driven development gives us the confidence necessary to improve our code faster, safely. But how do you test components and services, as well as integrations across distributed systems, while maintaining fast feedback loops, and how do you do all of this within the context of reactive Java? In this talk, we'll look at how to test imperative components, reactive data flows, and mocks. We’ll examine how to take advantage of test slices, and how to test web applications. We'll look at how to ensure that API producers and consumers work well together using consumer driven contract testing without sacrificing the testing pyramid for end-to-end integration tests. And we’ll do it all within the co
 
-{{< youtube 1W5_tOiwEAc >}}
+{{< youtube id="1W5_tOiwEAc" class="youtube-video-shortcode" >}}
 
-{{< youtube qVlTBCl-j9o >}}
+{{< youtube id="qVlTBCl-j9o" class="youtube-video-shortcode" >}}
 
 #### 
 

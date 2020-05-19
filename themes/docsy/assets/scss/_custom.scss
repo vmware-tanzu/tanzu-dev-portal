@@ -481,7 +481,7 @@ body.light-mode #toggle-light-dark-mode span {
   }
   .location {
    font-size: .8rem;
-   font-style: italic;
+   // font-style: italic;
   }
   p {
     margin: 0;
@@ -489,7 +489,7 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 .advocates .social {
-  color: $light;
+  // color: $light;
   font-size: .9rem;
   margin-right: .8rem;
 }
@@ -498,6 +498,52 @@ body.light-mode #toggle-light-dark-mode span {
   color: $blue;
   font-size: .9rem;
   margin-right: .8rem;
+}
+
+#advocates-index {
+  .td-content {
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+#advocates-index,
+.team-member {
+  .social .fa-2x {
+    font-size: 1.4em;
+  }  
+}
+
+.team-body-copy {
+  h4 {
+    margin-top: 2rem;
+  }
+}
+
+#team-index {
+  .td-content .section-index {
+    .row {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
+
+.youtube-video-shortcode {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 2rem 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 }
 
 
