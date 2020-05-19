@@ -7,5 +7,8 @@ tags:
 - 
 patterns:
 - 
+# Author(s)
+team:
+-
 youtube_id: 
 ---

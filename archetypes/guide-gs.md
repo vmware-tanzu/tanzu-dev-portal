@@ -6,6 +6,9 @@ categories:
 - 
 tags:
 - {{ replace .Name "-gs" "" }}
+# Author(s)
+team:
+-
 ---
 
 ### What Is {{ replace (replace .Name "-" " " | title) " Gs" "" }}?

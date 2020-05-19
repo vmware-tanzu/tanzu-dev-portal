@@ -48,6 +48,15 @@ limitations under the License.
             $("html, body").animate({ scrollTop: $(document).height() }, "slow");
         });
 
+        // Team Index Page
+        //// Make social links works inside clickable div
+        $("div.person div.card").click(function() {
+            window.location = $(this).find("a").attr("href");
+        });
+        $('div.card a').click(function(e) {
+            e.stopPropagation();
+        });
+
 
 
         //Light/dark toggle

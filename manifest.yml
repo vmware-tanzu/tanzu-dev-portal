@@ -3,5 +3,5 @@ applications:
 - name: tanzu-dev-portal
   memory: 64M
   instances: 1
-  path: public
+  path: public/developer
   buildpack: staticfile_buildpack

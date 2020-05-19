@@ -16,6 +16,8 @@ tags:
 - Spring Cloud Stream
 patterns:
 - Eventing
+team:
+- Ben Wilcock
 repo: https://github.com/benwilcock/spring-cloud-stream-demo
 readme: true
 ---

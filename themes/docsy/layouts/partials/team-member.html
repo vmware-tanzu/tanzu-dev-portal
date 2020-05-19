@@ -1,0 +1,33 @@
+<div class="row team-member">
+    <div class="col-lg-3 col-md-3 mr-4 mb-5">
+        {{ if eq .display "summary" }}
+        <a href="{{ .context.RelPermalink }}"><img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/></a>
+        {{ else }}
+        <img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/>
+        {{ end }}
+    </div>
+    <div class="col-lg-8 col-md-8">
+        {{ if eq .display "summary" }}
+        <h2 class='pt-0'><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
+        {{ else }}
+        <h1>{{ .context.Params.name }}</h1>
+        <p class="mt-2 mb-1 text-white">{{ .context.Params.description }}</p>
+        {{ end }}
+        <p class="mt-0 mb-1">{{- .context.Params.location -}}</p>
+        {{ if .context.Params.skills }}
+        <p class="mt-0 mb-4 text-white">Expertise: <i>{{ delimit .context.Params.skills ", " -}}</i></p>
+        {{ end }}
+        <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+        <!--{{ with .context.Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
+        {{ if eq .display "summary" }}
+        {{ .context.Summary }}
+        {{ else }}
+        <div class='team-body-copy'>
+            {{ .context.Content }}
+        </div>
+        {{ end }}
+        
+
+
+    </div>
+</div>

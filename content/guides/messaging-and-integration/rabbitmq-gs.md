@@ -10,6 +10,8 @@ tags:
 - Event Streaming
 patterns:
 - Eventing
+team:
+- Brian McClain
 ---
 
 ## What Is RabbitMQ?

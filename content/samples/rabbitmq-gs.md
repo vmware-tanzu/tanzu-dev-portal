@@ -10,6 +10,8 @@ tags:
 - RabbitMQ
 patterns:
 - Eventing
+team:
+- Brian McClain
 repo: https://github.com/BrianMMcClain/rabbitmq-getting-started
 readme: true
 ---

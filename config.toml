@@ -25,7 +25,7 @@ featured = "featured"
 pattern = "patterns"
 topic = "topics"
 tag = "tags"
-author = "authors"
+team = "team"
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -127,6 +127,11 @@ offlineSearch = false
     identifier = "sections"
     name = "Learn"
     weight = 1
+
+  [[menu.main]]
+    identifier = "community"
+    name = "Community"
+    weight = 50
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.

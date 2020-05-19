@@ -8,6 +8,8 @@ tags:
 - Kubeapps
 patterns:
 - Deployment
+team: 
+- Tiffany Jernigan
 ---
 
 > This getting started guide is a copy of [Get Started with Kubeapps](https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md) in the [kubeapps/kubeapps repository](https://github.com/kubeapps/kubeapps) inclusive of commit [1e49264](https://github.com/kubeapps/kubeapps/commit/1e49264088094dfd327d2a24b62cda470cc547d0) on April 20, 2020.

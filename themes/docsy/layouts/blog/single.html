@@ -8,16 +8,8 @@
 			<h1>{{ .Title }}</h1>
 			<!--<p>{{ .Description }}</p>-->
 
-      <h5 class=" mb-4">
-		<!-- {{ .Params.tags }} | -->
-		
-		{{- range $index, $element := .Params.authors }}
-			{{ if gt $index 0 }} & {{ end }}
-			<a href='{{ print "/authors/" (urlize .) | relURL }}'>{{ . }}</a>
-		{{ end }}
-
-        {{ .Date.Format "January 2, 2006" }}
-      </h5>   
+			{{ partial "byline" (dict "context" . "withdate" "true") }}
+			
 			<div class="short-gradient-line  mb-3"></div>
 
 

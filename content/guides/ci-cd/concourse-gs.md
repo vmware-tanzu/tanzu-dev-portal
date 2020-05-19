@@ -9,7 +9,8 @@ tags:
 - Concourse
 patterns:
 - Deployment
-
+team:
+- Tony Vetter
 ---
 
 Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration, Continuous Deployment, Continuous Delivery, artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.

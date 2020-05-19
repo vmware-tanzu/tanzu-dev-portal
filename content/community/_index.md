@@ -1,7 +1,8 @@
 ---
 title: "Community"
-linkTitle: "Community"
+linkTitle: "Overview"
 menu:
     main:
-        weight: 50
+        parent: "community"
+        weight: 1
 ---

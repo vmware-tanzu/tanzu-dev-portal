@@ -11,5 +11,7 @@ tags:
 - Kubernetes
 patterns:
 - Deployment
+team:
+- Cora Iberkleid
 youtube_id: EVHHyiypiY0
 ---

@@ -5,7 +5,8 @@ description: >
     Meet the VMware Tanzu Developer Center.
 date: 2020-05-07
 weight: 1
-authors: 
+# Author(s)
+team: 
 - Bryan Friedman
 ---
 

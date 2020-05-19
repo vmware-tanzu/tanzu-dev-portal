@@ -25,16 +25,7 @@
                     <div class='gradient-edge-top'></div>
                     <div class='border p-4 bg-gray-dark '>
                         <a class="h3" href="{{ .RelPermalink }}">{{- .Title -}}</a>
-                          <h5 class="mb-4">
-                            <!-- {{ .Params.tags }} | -->
-                            
-                            {{- range $index, $element := .Params.authors }}
-                                {{ if gt $index 0 }} & {{ end }}
-                                <a href='{{ print "/authors/" (urlize .) | relURL }}'>{{ . }}</a>
-                            {{ end }}
-
-                            {{ .Date.Format "January 2, 2006" }}
-                          </h5>   
+                        {{ partial "byline" (dict "context" . "withdate" true) }}
 
                         <p>{{ .Content | markdownify | truncate 1400 }}</p>
                         <p><a href="{{ .RelPermalink }}">Read more</a></p>

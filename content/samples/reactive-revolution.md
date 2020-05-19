@@ -8,6 +8,8 @@ topics:
 tags:
 - Spring
 - Reactive
+team:
+- Josh Long
 repo: https://github.com/joshlong/reactive-revolution
 readme: false
 ---

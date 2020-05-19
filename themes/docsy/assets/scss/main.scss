@@ -39,7 +39,7 @@
     padding: 80px 0;
     box-sizing: border-box;
     p {
-      color: white;
+      // color: white;
     }
     &.no-bg {
       background-image: none;
@@ -59,6 +59,12 @@
     }
     &.community-hero {
       background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
+    }
+    &.team-hero,
+    &.advocates-hero {
+      background-color: transparent !important;
+      min-height: 200px;
+      padding-bottom: 0;
     }
     @media(max-width: 991px) {
       &.guides-hero,

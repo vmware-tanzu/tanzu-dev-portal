@@ -9,7 +9,8 @@ tags:
 - ArgoCD
 patterns:
 - Deployment
-
+team:
+- Tony Vetter
 ---
 
 ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. While the continuous delivery (CD) space is seen by some as crowded these days, ArgoCD does bring some interesting capabilities to the table.
