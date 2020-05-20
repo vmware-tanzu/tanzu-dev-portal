@@ -10,6 +10,8 @@ tags:
 - Spring Cloud Gateway
 patterns:
 - API
+team:
+- Brian McClain
 ---
 
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring.

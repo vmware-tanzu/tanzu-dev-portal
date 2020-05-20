@@ -35,20 +35,7 @@ Alternatively to PWS, PRs and commits are also automatically staged by Netlify.
 
 If you are interested in contributing content and you're reading this, you probably already have access to do so. If you don't have access for some reason, please reach out in the #tanzu-dev-portal channel on Slack.
 
-You may contribute content by creating a branch (or fork) and submitting a pull request. There a few options to help get you started:
-
-### Taxonomies
-
-#### Topics
-
-#### Patterns
-
-#### Tags
-
-#### Authors
-
-#### Featured Content
-Content may be tagged as `featured: true` along with a `weight` in the front matter to appear in the Featured section on the home page.
+You may contribute content by creating a branch (or fork) and submitting a pull request. Content should be written in Markdown with metadata included in the front matter. Here are some guidelines to get you started:
 
 ### Hugo Archetypes
 You can use the [Archetypes](https://gohugo.io/content-management/archetypes/) feature of Hugo to create new content as follows:
@@ -76,6 +63,55 @@ Your video should be uploaded to the VMwareTanzu YouTubechannel first. For help 
 
 ### Images
 All images are stored under `static/images`. Images should be placed in the directory that matches the content that they'll be displayed in (ie. a Spring guide would have images in `static/images/guides/spring`). Finally, an image placed in `diagrams` will have a border added around it for visibility. If the image is not a diagram, they should be placed in `screenshots`.
+
+### Taxonomies
+Hugo defines [Taxonomies](https://gohugo.io/content-management/taxonomies/) that may be used in the front matter of Markdown documents. This site uses the following taxonomies
+
+#### Team
+Use the `team` taxonomy to attribute one or more authors to a piece of content.
+
+#### Topics
+Topics should always be included in the `topics` section of the front matter, must be one of the following nine options and must appear exactly as follows:
+
+- CI-CD
+- Containers
+- Event Streaming
+- Kubernetes
+- Messaging and Integration
+- Microservices
+- Reactive
+- Serverless
+- Spring
+
+#### Patterns
+Patterns may be added in a `patterns` section of the front matter and must refer to the title of an existing section within the `patterns` directory under `content`.
+
+#### Tags
+Tags may appear in a `tags` section of the front matter. Usually tags refer to a specific technology within a topic such as `Spring Boot` within `Spring`.
+
+#### Featured Content
+Content may be tagged as `featured: true` along with a `weight` in the front matter to appear in the Featured section on the home page. Only three will appear at once.
+
+### Shortcodes
+
+Hugo allows the use of [shortcodes](https://gohugo.io/content-management/shortcodes/) in Markdown files to render specific templates for content like YouTube videos and Tweets. Use them as follows to add to your content.
+
+#### YouTube
+
+```{{< youtube id="YOUR_VIDEO_ID" class="youtube-video-shortcode" >}}```
+
+`YOUR_VIDEO_ID` should be replaced with the 11-character GUID from your video which appears after the `?v=` parameter in the URL. Please be sure to include the class as shown.
+
+#### Twitter
+
+```{{< tweet YOUR_TWEET_ID >}}```
+
+`YOUR_TWEET_ID` should be replaced with the ID that appears after `/status/` in the tweet's URL.
+
+### Markdown Tricks
+
+- For an &ndash; (--) use two hyphens in a row 
+- For an &mdash; (---) use three hyphens in a row 
 
 ### Netlify CMS
 If you're not familiar with writing Markdown or submitting pull requests, you may request access to Netlify CMS which provides a web-based interface for writing content. Please reach out in the #tanzu-dev-portal channel on Slack.

@@ -1,8 +1,8 @@
 baseURL = "/"
 title = "VMware Tanzu Developer"
 publishDir = "public/developer"
+contentDir = "content"
 canonifyURLs = false
-
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
@@ -11,13 +11,6 @@ theme = ["docsy"]
 # Will give values to .Lastmod etc.
 enableGitInfo = false
 
-# Language settings
-contentDir = "content"
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-# Useful when translating.
-enableMissingTranslationPlaceholders = true
-
 #disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [taxonomies]
@@ -25,27 +18,11 @@ featured = "featured"
 pattern = "patterns"
 topic = "topics"
 tag = "tags"
-author = "authors"
-
-# Highlighting config
-pygmentsCodeFences = true
-pygmentsUseClasses = false
-# Use the new Chroma Go highlighter in Hugo.
-pygmentsUseClassic = false
-#pygmentsOptions = "linenos=table"
-# See https://help.farbox.com/pygments.html
-pygmentsStyle = "tango"
+team = "team"
 
 # Configure how URLs look like per section.
 [permalinks]
 blog = "/:section/:slug/"
-
-## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
-[blackfriday]
-plainIDAnchors = true
-hrefTargetBlank = true
-angledQuotes = false
-latexDashes = true
 
 # Image processing configuration.
 [imaging]
@@ -58,8 +35,13 @@ anchor = "smart"
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
 #id = "UA-00000000-0"
 
-# Language configuration
+# Language settings
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
 
+# Language configuration
 #[languages]
 #[languages.en]
 #title = "Goldydocs"
@@ -75,21 +57,31 @@ anchor = "smart"
 #time_format_default = "02.01.2006"
 #time_format_blog = "02.01.2006"
 
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  # Highlighting config
+  [markup.highlight]
+    codeFences = true
+    noClasses = false
+#    lineNos = true
+#    style = "monokai"
 
 # Everything below this are Site Params
 
 [params]
+# Date and RSS settings
+time_format_blog = "Monday, January 02, 2006"
+time_format_default = "January 2, 2006"
+# Sections to publish in the main RSS feed.
+rss_sections = ["blog"]
+
 copyright = "VMware, Inc"
 privacy_policy = "https://www.vmware.com/help/privacy.html"
 terms_of_use = "https://www.vmware.com/help/legal.html"
 california_privacy_rights = "https://www.vmware.com/help/privacy/california-privacy-rights.html"
-
-# First one is picked as the Twitter card image if not set on page.
-# images = ["images/project-illustration.png"]
 
 # Flag used in the "version-banner" partial to decide whether to display a 
 # banner on every page indicating that this is an archived version of the docs.
@@ -115,7 +107,6 @@ archived_version = false
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 #gcs_engine_id = "011737558837375720776:fsdu1nryfng"
-
 # Enable Algolia DocSearch
 algolia_docsearch = false
 
@@ -127,6 +118,11 @@ offlineSearch = false
     identifier = "sections"
     name = "Learn"
     weight = 1
+
+  [[menu.main]]
+    identifier = "community"
+    name = "Community"
+    weight = 50
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.

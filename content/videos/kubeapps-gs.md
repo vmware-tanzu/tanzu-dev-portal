@@ -9,5 +9,7 @@ tags:
 - Helm
 patterns:
 - Deployment
+team:
+- Tiffany Jernigan
 youtube_id: 9HsWsoDd1fM
 ---

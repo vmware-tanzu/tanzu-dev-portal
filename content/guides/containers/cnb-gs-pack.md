@@ -8,7 +8,8 @@ tags:
 - Buildpacks
 patterns:
 - Deployment
-
+team:
+- Bryan Friedman
 ---
 
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../cnb-what-is).

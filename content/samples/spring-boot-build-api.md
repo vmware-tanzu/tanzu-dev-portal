@@ -14,6 +14,8 @@ tags:
 - REST
 patterns:
 - API
+team:
+- Brian McClain
 repo: https://github.com/BrianMMcClain/spring-boot-api-demo
 readme: true
 ---

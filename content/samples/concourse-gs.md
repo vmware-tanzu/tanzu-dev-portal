@@ -8,6 +8,8 @@ tags:
 - Concourse
 patterns:
 - Deployment
+team:
+- Tony Vetter
 repo: https://github.com/anthonyvetter/concourse-getting-started
 readme: true
 ---
