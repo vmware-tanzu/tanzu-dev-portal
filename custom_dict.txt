@@ -22,11 +22,11 @@ biome
 [B,b]ootiful
 (non-)?cacheable
 codebase
-config
+[C,c]onfig
 customizable
 deployable
 DevOps(-related)?
-devs
+dev(s)?
 [E,e]venting
 failover
 fiancé
@@ -47,7 +47,9 @@ no-brainer
 [O,o]bservability
 ok
 orchestrator
+overcomplicate
 performant
+preload
 podcaster
 programmatically
 Quickstart
@@ -71,10 +73,12 @@ unpause
 versioned
 walkthrough
 webhooks?
+whiteboard(ed|ing)
 
 # Tech (projects, products, commands)
 Activiti
 [A,a]rgo(CD|cd)(-k8s)?
+auth
 [B,b]uildpack(s|'s)?
 Bundler
 cd
@@ -84,6 +88,7 @@ CloudEvents
 DockerHub
 Finchley
 Gradle
+Grafana
 [H,h]elmfiles?
 init
 Jaeger
@@ -97,7 +102,7 @@ KubeAcademy
 [K,k]ubeapps
 kubectl
 kubeconfig
-Kubernetes(-native)?
+Kubernetes(-native|-specific)?
 Log4j2
 macOS
 [M,m]inikube
@@ -129,6 +134,7 @@ EMC
 Heptio
 RedMonk
 SpringOne
+[U,u]ber
 VMware(-hosted|'s|Tanzu)?
 
 # Acronyms
@@ -145,6 +151,7 @@ IaaS
 JVM
 JPA
 JSON
+LDAP
 MDN
 ok
 youtube
@@ -162,7 +169,7 @@ RBAC(-enabled)?
 SRE
 TCP
 UI
-UR[I,L]
+UR[I,L](s)?
 VMs?
 YAML|yaml
 
