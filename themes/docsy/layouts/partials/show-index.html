@@ -1,0 +1,25 @@
+<div class="section-index">
+    {{ $pages := sort (where .Site.Pages "Section" "tanzu-tv") }}
+    {{ $parent := .Page }}
+    <div class="flex justify-content-between">
+        <div class="col-lg-12 px-0 pb-5 mb-5 shows">
+        {{ range $pages }}
+            {{ if eq .Parent $parent }}
+            <div class="row mb-4" >
+                <div class='col-5 px-0' style="background:#304250;"> 
+                    <div class="p-5">
+                        {{ if and .Params.streaming .Params.teaser }}<a class="teaser btn mb-5 py-1" href="{{ .RelPermalink }}">{{ .Params.teaser }}</a>{{ end }}
+                        <h1>{{ .Title }}</h1>
+                        <p class="lead text-white">{{ .Description }}</p>
+                        <a class="btn mt-2 py-3 px-4" href="{{ .RelPermalink }}">View Episodes</a>
+                    </div>
+                </div>
+                <div class='col-7 px-0'>
+                    <img src="{{ .Params.image | relURL }}" />
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+        </div>
+    </div>
+</div>

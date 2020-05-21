@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+{{ $class := replace .Page.Section "." "-" | lower }}
+<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-5 pb-5">
+  	<div class="container">
+		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+    <h1 class="h1"> {{- .Title -}}</h1>
+		<div class="lead"><p class="mb-5">{{- .Params.description}}</p></div>
+   
+    {{ if .Params.streaming }}
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+   
+      var episodeDates = [], episodeTimes = [], episodeLengths = [];
+      {{ range .Data.Pages }}  
+        var epDate = new Date("{{ .Params.Date }}");
+        episodeDates.push(epDate.toLocaleDateString());
+        episodeTimes.push(epDate.toLocaleTimeString());
+        episodeLengths.push({{ .Params.minutes }});
+      {{ end }}
+
+      var currentDate = (new Date(Date.now())).toLocaleDateString();
+      var index = episodeDates.indexOf(currentDate);
+      if (index > -1) {
+        var startTime = (new Date(episodeDates[index] + " " + episodeTimes[index])).getTime();
+        var endTime = startTime + (episodeLengths[index] * 60 * 1000);
+        var currentTime = (new Date(Date.now())).getTime();
+        
+        if (currentTime < endTime && currentTime > startTime) {
+          
+          new Twitch.Embed("twitch-embed", {
+              width: 1130,
+              height: 480,
+              channel: "makejarnotwar",
+          });
+          
+        }
+
+      }
+
+    </script>
+    {{ end }}
+    
+   </div>
+
+</section>
+
+<div class='container'>
+  {{ .Content }}
+  {{ partial "episode-index.html" . }}
+</div>
+
+{{ end }}
+

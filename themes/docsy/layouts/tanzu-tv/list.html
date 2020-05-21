@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "hero.html" . }}
+
+<div class='container'>
+  {{ .Content }}
+  {{ partial "show-index.html" . }}
+</div>
+
+{{ end }}
+

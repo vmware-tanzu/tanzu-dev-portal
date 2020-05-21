@@ -711,3 +711,15 @@ body.light-mode #toggle-light-dark-mode span {
     max-width: 1160px;
   }
 }
+
+.shows .teaser {
+  border-radius: 40px;
+  background: $bright-green;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.episodes .teaser {
+  margin-bottom: 0;
+  color: $bright-green;
+}
