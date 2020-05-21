@@ -2,7 +2,7 @@
 title: "Developing Locally for the Cloud"
 featured: true
 description: >
-    Things to keep in mind when developing apps to run on the cloud
+    Develop apps to run on the cloud right on your laptop.
 date: 2020-05-21
 weight: 1
 patterns:
