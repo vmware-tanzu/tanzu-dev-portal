@@ -179,6 +179,11 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	url = "https://github.com/vmware-tanzu"
 	icon = "fab fa-github"
         desc = "Explore our open source projects and sample code."
+[[params.links.developer]]
+	name = "Twitch"
+	url = "https://twitch.com/makejarnotwar"
+	icon = "fab fa-twitch"
+        desc = "Watch our modern app development live stream."
 #[[params.links.developer]]
 #	name = "Slack"
 #	url = "https://slack.com/vmware-tanzu"
