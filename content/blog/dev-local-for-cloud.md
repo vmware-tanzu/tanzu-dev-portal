@@ -2,7 +2,7 @@
 title: "Developing Locally for the Cloud"
 featured: true
 description: >
-    Meet the VMware Tanzu Developer Center.
+    Things to keep in mind when developing apps to run on the cloud
 date: 2020-05-21
 weight: 1
 patterns:
