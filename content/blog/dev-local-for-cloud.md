@@ -4,7 +4,8 @@ featured: true
 description: >
     Meet the VMware Tanzu Developer Center.
 date: 2020-05-21
-weight: 1
+patterns:
+- Deployment
 # Author(s)
 team: 
 - David Dieruf
@@ -35,7 +36,7 @@ With Docker running, your desktop now has the key ingredients of cloud native de
 ## Running the app locally
 I try to keep things as simple as possible. After years of fighting overgrown, poorly designed environments, I've learned to use things as they were intended. That means using a technology for its core purpose and nothing more.
 
-When developing locally, the key is to find a balance between things that help recreate production and the simplicity of working on your desktop. Minkube or KIND are powerful tools. If your app needs to communicate with the cluster API, these tools are essential to local development. If your app's home will be in a cluster but it doesn't rely on anything Kubernetes-specific, then why overcomplicate local development? A simple, running Docker process and its CLI for interaction will get the job done.
+When developing locally, the key is to find a balance between things that help recreate production and the simplicity of working on your desktop. Minikube or KIND are powerful tools. If your app needs to communicate with the cluster API, these tools are essential to local development. If your app's home will be in a cluster but it doesn't rely on anything Kubernetes-specific, then why overcomplicate local development? A simple, running Docker process and its CLI for interaction will get the job done.
 
 So, what magical thing combines these basic ingredients to recreate production? Docker Compose. At its core, Docker Compose provides a way to software-define an app's local environment. In a single YAML file you get DNS, networking, container builds, and environment variables.
 
@@ -109,7 +110,7 @@ When I am in this type of scenario, I try to take an objective point of view. No
 ### App observability
 Too many times this is an afterthought to production. Yet it turns out everything was available to you way before those executives started breathing down your neck.
 
-An example would be using Grafana for app observability. It gives you the option to pre-load a dashboard and data source as the container instance is starting. With it in place, you can see exactly what the metrics look like as you manipulate the environment. Better yet, you can run small manipulations one at a time to learn what the traces look like—all locally!
+An example would be using Grafana for app observability. It gives you the option to preload a dashboard and data source as the container instance is starting. With it in place, you can see exactly what the metrics look like as you manipulate the environment. Better yet, you can run small manipulations one at a time to learn what the traces look like—all locally!
 
 That way, the next time you get the dreaded "app's down" message, you can fire up that prod dashboard and get right to the issue.
 ## Next steps
