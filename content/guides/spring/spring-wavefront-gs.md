@@ -12,7 +12,7 @@ patterns:
 - Observability
 ---
 
-Recently, [Wavefront](https://www.wavefront.com/) expanded it's offerings to [include a free tier](https://tanzu.vmware.com/content/blog/byo-spring-boot-apps-tanzu-observability-for-free-no-sign-up-needed). If you're unfamiliar, Wavefront provides a SaaS-based platform for real-time metrics, monitoring, and alerting. It has integrations for many languages, frameworks, and platforms. Simply put, you send Wavefront your metrics, it handles visualization and analysis. Additionally, [Wavefront for Spring Boot](https://docs.wavefront.com/wavefront_springboot.html)
+Recently, [VMware Tanzu Observability by Wavefront](https://www.wavefront.com/) expanded it's offerings to [include a free tier](https://tanzu.vmware.com/content/blog/byo-spring-boot-apps-tanzu-observability-for-free-no-sign-up-needed). If you're unfamiliar, Wavefront provides a SaaS-based platform for real-time metrics, monitoring, and alerting. It has integrations for many languages, frameworks, and platforms. Simply put, you send Wavefront your metrics, it handles visualization and analysis. Additionally, [Wavefront for Spring Boot](https://docs.wavefront.com/wavefront_springboot.html)
 
 ## Before You Begin
 
@@ -119,4 +119,4 @@ You'll then see all of the requests to all of the owners that you sent traffic t
 
 ## Keep Learning
 
-You can find much more information in the [Wavefront documentation](https://docs.wavefront.com/micrometer.html). If you're looking to learn more about Micrometer and how you can instrument your Spring applications, make sure to check out the [Micrometer concepts](https://micrometer.io/docs/concepts) and the different types of tools provided to you for better insight into your code.
+You can find much more information in the [Wavefront documentation](https://docs.wavefront.com/micrometer.html). If you're looking to learn more about Micrometer and how you can instrument your Spring applications, make sure to check out the [Micrometer concepts](https://micrometer.io/docs/concepts) and the different tools provided to you for better insight into your code. Finally, if you're looking to learn more about Wavefront for Spring Boot, the [official documentation](https://docs.wavefront.com/wavefront_springboot.html) provides a lot of great information.
