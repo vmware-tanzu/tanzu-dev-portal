@@ -4,6 +4,7 @@ featured: true
 description: >
     Meet the VMware Tanzu Developer Center.
 date: 2020-05-21
+weight: 1
 patterns:
 - Deployment
 # Author(s)
