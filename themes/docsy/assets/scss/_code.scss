@@ -9,11 +9,6 @@
         padding: 0;
         background-color: $gray-900;
 
-        pre, div {
-            // background-color: inherit !important;
-            background-color: $gray-900 !important;
-        }
-
         pre {
             margin: 0;
             border: none;
@@ -39,12 +34,9 @@
 
 
     // Code blocks
-    pre {
+    pre, .chroma {
         word-wrap: normal;
-        background-color: $gray-900;
         padding: $spacer;
-        color: white;
-     
 
         > code {
             padding: 0;

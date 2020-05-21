@@ -714,7 +714,7 @@ body.light-mode #toggle-light-dark-mode span {
 
 /* SYNTAX HIGHLIGHTING */
 
-/* Background */ .chroma { color: #f8f8f2; background-color: #f4f8fa !important }
+/* Background */ .chroma, pre, code { color: #f8f8f2; background-color: #1e0010 }
 /* Other .chroma .x {  } */
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }

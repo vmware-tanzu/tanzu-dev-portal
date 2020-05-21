@@ -157,9 +157,9 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 
 /* SYNTAX HIGHLIGHTING */
 
-/* Background */ .chroma { color: #f8f8f2 !important; background-color: #272822 !important }
+/* Background */ .chroma, pre, code { color: #1e0010 !important; background-color: #f4f8fa !important }
 /* Other .chroma .x {  } */
-/* Error */ .chroma .err { color: #960050 !important; background-color: #1e0010 !important }
+/* Error */ .chroma .err { color: #960050 !important; background-color: #f4f8fa !important }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc !important }
