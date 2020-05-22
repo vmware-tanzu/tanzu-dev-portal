@@ -40,6 +40,7 @@ lifecycle
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related)?
+middleware
 [M,m]inibroker
 namespace
 natively
@@ -67,6 +68,7 @@ symposia
 telco
 [T,t]emplat(ed|ing)
 [T,t]o[D,d]o
+toolchain
 unpause
 versioned
 walkthrough
@@ -105,6 +107,7 @@ MockMvc
 msgpack(ed)?
 Netty(-based)?
 nginx
+Paketo
 pullPolicy
 RabbitMQ('s)?
 RSocket(-based)?
