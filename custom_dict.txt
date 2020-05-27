@@ -153,6 +153,10 @@ JPA
 JSON
 LDAP
 MDN
+ok
+youtube
+integrations
+SaaS-based
 NFJS
 NSX
 OCI(-compliant)?

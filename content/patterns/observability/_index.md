@@ -43,4 +43,4 @@ There's a number of popular open-source solutions out there, including [Zipkin](
 
 There's quite a bit that's been covered here and you may be wondering where to start. If you have applications in production today, give some thought of what's giving you the most trouble. What sort of insight would give you the best idea of why your services aren't performing as they should? If you're in the process of creating a new service, what do you expect the problem spots may be?
 
-Log aggregation can be a great first step that's may require little to no code changes, and setting up the EFK stack is a great first step. If you're a Spring developer, you can even try out Spring Wavefront for free. If you're looking to dig a bit deeper, you could even begin looking into getting started with Jaeger.
+Log aggregation can be a great first step that's may require little to no code changes, and setting up the EFK stack is a great first step. If you're a Spring developer, you can even [try out Wavefront for Spring Boot](guides/spring/spring-wavefront-gs/) for free. If you're looking to dig a bit deeper, you could even begin looking into getting started with Jaeger.
