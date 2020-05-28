@@ -36,7 +36,9 @@ GitOps
 Helming
 hostname
 [I,i]ntegrations
+kitesurfing
 lifecycle
+Livelessons
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related)?
@@ -156,6 +158,11 @@ JPA
 JSON
 LDAP
 MDN
+MVB(-awarded)?
+ok
+youtube
+integrations
+SaaS-based
 NFJS
 NSX
 OCI(-compliant)?
@@ -179,7 +186,9 @@ Czarkowski('s)?
 Gibb
 Iberkleid
 Jakub
+Jernigan
 Madhav
+Pilimon
 Sathe
 Schutta
 Vetter
