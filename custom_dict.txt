@@ -84,6 +84,7 @@ Bundler
 cd
 (CF|cf)(-for-k8s)?
 CloudEvents
+CRD
 [D,d]ockerfiles?
 DockerHub
 Finchley
@@ -93,6 +94,7 @@ Grafana
 init
 Jaeger
 [K,k]8s
+Kaniko
 kapp
 Kafka
 Kibana
@@ -117,6 +119,7 @@ RSocket(-based)?
 spring-petclinic
 STDOUT
 Tanzu(Developer)?
+Tekton('s)?
 Terraform
 Vaadin
 vSphere
