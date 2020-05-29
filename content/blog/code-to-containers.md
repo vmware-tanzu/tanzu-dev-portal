@@ -99,7 +99,8 @@ All you need to do is initialize the go module with a simple `go mod init` comma
 ## Cloud Foundry on Kubernetes
  
 Both the `docker build` and `pack build` commands get you a container image, but neither gets you a running copy of your application. Cloud Foundry leverages buildpacks too, but it also manages the deployment of the images as well via the [cf-for-k8s](../../guides/kubernetes/cf4k8s-gs/) project. For this example here, once you’re setup, a simple `cf push myapp` would take your go application, build it, push it, and also deploy it. In the end you would have a single instance of your application running without having to know anything about Dockerfiles, buildpacks, or Kubernetes.
-Using These Tools in Your Pipeline to Production
+
+## Using These Tools in Your Pipeline to Production
 
 In these examples, you ran these commands manually, which is great to get started but isn't scalable. The key to speeding up your code moving to production is automatically building your images no matter which tool you choose. 
 
