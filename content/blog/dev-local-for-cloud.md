@@ -4,7 +4,6 @@ featured: true
 description: >
     Develop apps to run on the cloud right on your laptop.
 date: 2020-05-21
-weight: 1
 patterns:
 - Deployment
 # Author(s)

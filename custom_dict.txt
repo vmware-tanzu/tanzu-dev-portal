@@ -4,7 +4,7 @@
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
 
-[0-9]*(GB|ms)
+[0-9]*(GB|MB|KB|ms)
 https?|HTTPS?
 localhost(:[0-9]*)?
 
@@ -89,9 +89,11 @@ cd
 (CF|cf)(-for-k8s)?
 CloudEvents
 [D,d]ockerfiles?
+[D,d]ebian
 DockerHub
 Finchley
 Gradle
+[G,g]olang
 Grafana
 [H,h]elmfiles?
 init
@@ -107,6 +109,7 @@ KubeAcademy
 kubectl
 kubeconfig
 Kubernetes(-native|-specific)?
+[L,l]inux
 Log4j2
 macOS
 [M,m]inikube
