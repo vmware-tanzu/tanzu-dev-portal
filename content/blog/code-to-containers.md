@@ -66,7 +66,7 @@ EXPOSE 8080
 
 The `FROM` is a language-specific image. We’re creating a directory, copying our application into the image, and then using go to compile the binary. The last line `EXPOSE` tells your container runtime which port this image exposes.
 
-When you run a `docker build . -t myrepo/myimage` with just these two short text files, you end up with a 829MB image- that’s rather large.
+When you run a `docker build . -t myrepo/myimage` with just these two short text files, you end up with an 829MB image- that’s rather large.
 
 ### Multistage Dockerfiles
 The reason the resulting image is so large is that the source image is large too, but for good reason. The golang image is 810MB as it contains a lot more operating system components to successfully be able to compile all sorts of golang programs. The nice thing about go is that the resulting binary is portable. So you can use one image to build the binary, and then copy it to a new, smaller image that doesn’t need all the extra build components, as shown in this example:
@@ -94,11 +94,11 @@ There are a whole bunch of other tricks to building Dockerfiles and it really de
 ## Cloud-Native Buildpacks
 If your goal is just to get your code into a running image without being concerned about all the details in the last section, buildpacks might be right for you. [Cloud-Native Buildpacks](../guides/containers/cnb-what-is.md) are designed to identify your code and automatically build and image. Here’s an [example](../guides/containers/cnb-gs-pack.md) using java, but we can do the same for our go app here.
 
-All you need to do is initialize the go module with a simple `go mod init` command. Now you can use the `pack` cli to build our app by running `pack build myrepo/myimage.` The resulting image will be a reasonable 82MB, and you didn’t even need to write a single line of Dockerfile. Buildpacks also have a lot of other advantages for automating image builds and updated existing ones to provide more secure, scalable image building. 
+All you need to do is initialize the go module with a simple `go mod init` command. Now you can use the `pack` CLI to build our app by running `pack build myrepo/myimage.` The resulting image will be a reasonable 82MB, and you didn’t even need to write a single line of Dockerfile. Buildpacks also have a lot of other advantages for automating image builds and updated existing ones to provide more secure, scalable image building. 
 
 ## Cloud Foundry on Kubernetes
  
-Both the `docker build` and `pack build` commands get you a container image, but neither gets you a running copy of your application. Cloud Foundry leverages buildpacks too, but it also manages the deployment of the images as well via the [cf-on-k8s](../guides/kubernetes/cf4k8s-gs.md) project. For this example here, once you’re setup, a simple `cf push myapp` would take your go application, build it, push it, and also deploy it. In the end you would have a single instance of your application running without having to know anything about Dockerfiles, buildpacks, or Kubernetes.
+Both the `docker build` and `pack build` commands get you a container image, but neither gets you a running copy of your application. Cloud Foundry leverages buildpacks too, but it also manages the deployment of the images as well via the [cf-for-k8s](../guides/kubernetes/cf4k8s-gs.md) project. For this example here, once you’re setup, a simple `cf push myapp` would take your go application, build it, push it, and also deploy it. In the end you would have a single instance of your application running without having to know anything about Dockerfiles, buildpacks, or Kubernetes.
 Using These Tools in Your Pipeline to Production
 
 In these examples, you ran these commands manually, which is great to get started but isn't scalable. The key to speeding up your code moving to production is automatically building your images no matter which tool you choose. 
