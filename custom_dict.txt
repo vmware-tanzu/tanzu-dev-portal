@@ -130,6 +130,7 @@ Paketo
 pullPolicy
 RabbitMQ('s)?
 Resilience4J
+Riak
 RSocket(-based)?
 [S,s]kaffold
 spring-petclinic
