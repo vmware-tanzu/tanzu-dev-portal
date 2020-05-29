@@ -42,7 +42,7 @@
     var twitch = document.getElementById("twitch");
     var youtube = document.getElementById("youtube");
     var currentTime = Date.now();
-    var episodeTime = new Date("{{ .Params.Date }}").getTime();
+    var episodeTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
     if (episodeTime < currentTime) {
       twitch.style.display = "none";
       youtube.style.display = "flex";
