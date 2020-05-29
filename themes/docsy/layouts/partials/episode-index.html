@@ -1,5 +1,5 @@
 <div class="section-index">
-    {{ $pages := sort (where .Site.Pages "Section" "tanzu-tv") }}
+    {{ $pages := sort (where .Site.Pages "Section" "tv") }}
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
     <div class='container episodes'>
@@ -41,7 +41,7 @@
 
         {{ end }}
 
-        <div class="col px-lg-0 pt-5 border-top mb-5">
+        <div class="col px-lg-0 pt-5 {{ if .Params.Streaming }}border-top{{ end }} mb-5">
             {{ if .Params.Streaming }}
             <h3 class="mb-4">Watch Past Events</h3>
             {{ end }}

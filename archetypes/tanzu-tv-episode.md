@@ -1,5 +1,5 @@
 ---
-type: "tanzu-tv-episode"
+type: "tv-episode"
 Description: "Coming Soon!"
 aliases: ["/0000"]
 hosts: ["Bob Brindley","Tiffany Jernigan","Paul Czarkowski"]
@@ -10,10 +10,10 @@ episode: "0001"
 # 320x180 for image / banner
 # once streamed, replace with youtube from below command
 # wget -O episode.jpg https://img.youtube.com/vi/<youtube-id>/mqdefault.jpg
-episode_image: "/images/tanzu-tv/episodes/show/0000.jpg"
-episode_banner: "/images/tanzu-tv/episodes/show/0000.jpg"
+episode_image: "/images/tv/episodes/show/0000.jpg"
+episode_banner: "/images/tv/episodes/show/0000.jpg"
 explicit: "no"
-images: ["/images/tanzu-tv/episodes/show/0000.jpg"]
+images: ["/images/tv/episodes/show/0000.jpg"]
 title: "Coming Soon"
 youtube: ""
 truncate: ""
