@@ -92,19 +92,19 @@ Now if you build using this Dockerfile, your image is only 13MB. Much better! Yo
 There are a whole bunch of other tricks to building Dockerfiles and it really depends on your comfort with them and what you’re trying to accomplish.
 
 ## Cloud-Native Buildpacks
-If your goal is just to get your code into a running image without being concerned about all the details in the last section, buildpacks might be right for you. [Cloud-Native Buildpacks](../guides/containers/cnb-what-is.md) are designed to identify your code and automatically build and image. Here’s an [example](../guides/containers/cnb-gs-pack.md) using java, but we can do the same for our go app here.
+If your goal is just to get your code into a running image without being concerned about all the details in the last section, buildpacks might be right for you. [Cloud-Native Buildpacks](../../guides/containers/cnb-what-is.md) are designed to identify your code and automatically build and image. Here’s an [example](../../guides/containers/cnb-gs-pack.md) using java, but we can do the same for our go app here.
 
 All you need to do is initialize the go module with a simple `go mod init` command. Now you can use the `pack` CLI to build our app by running `pack build myrepo/myimage.` The resulting image will be a reasonable 82MB, and you didn’t even need to write a single line of Dockerfile. Buildpacks also have a lot of other advantages for automating image builds and updated existing ones to provide more secure, scalable image building. 
 
 ## Cloud Foundry on Kubernetes
  
-Both the `docker build` and `pack build` commands get you a container image, but neither gets you a running copy of your application. Cloud Foundry leverages buildpacks too, but it also manages the deployment of the images as well via the [cf-for-k8s](../guides/kubernetes/cf4k8s-gs.md) project. For this example here, once you’re setup, a simple `cf push myapp` would take your go application, build it, push it, and also deploy it. In the end you would have a single instance of your application running without having to know anything about Dockerfiles, buildpacks, or Kubernetes.
+Both the `docker build` and `pack build` commands get you a container image, but neither gets you a running copy of your application. Cloud Foundry leverages buildpacks too, but it also manages the deployment of the images as well via the [cf-for-k8s](../../guides/kubernetes/cf4k8s-gs.md) project. For this example here, once you’re setup, a simple `cf push myapp` would take your go application, build it, push it, and also deploy it. In the end you would have a single instance of your application running without having to know anything about Dockerfiles, buildpacks, or Kubernetes.
 Using These Tools in Your Pipeline to Production
 
 In these examples, you ran these commands manually, which is great to get started but isn't scalable. The key to speeding up your code moving to production is automatically building your images no matter which tool you choose. 
 
-For the case of Dockerfiles or Cloud Foundry, the most common approach is to use a [Continuous Integration](../guides/ci-cd/ci-cd-what-is.md) tool like Jenkins or [Concourse](../guides/ci-cd/concourse-gs.md) to automatically run these commands on each code commit.
+For the case of Dockerfiles or Cloud Foundry, the most common approach is to use a [Continuous Integration](../../guides/ci-cd/ci-cd-what-is.md) tool like Jenkins or [Concourse](../../guides/ci-cd/concourse-gs.md) to automatically run these commands on each code commit.
 
-For buildpacks, there’s a tool called [`kpack`](../guides/containers/cnb-gs-kpack.md) which can run on Kubernetes and help automate the building of your images. It supports multiple source formats and can push to any standard container registry.
+For buildpacks, there’s a tool called [`kpack`](../../guides/containers/cnb-gs-kpack.md) which can run on Kubernetes and help automate the building of your images. It supports multiple source formats and can push to any standard container registry.
 
 Try out some of these different approaches to running your application and see which works the best for different applications.
