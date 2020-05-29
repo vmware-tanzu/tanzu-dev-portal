@@ -5,16 +5,18 @@
     <div class='container episodes'>
 
         {{ if .Params.streaming }}
-        <div class="col px-lg-0">
-            <h3 class="ml-3 my-4">Upcoming Events</h3>
-            <div class="row">
+        <div class="col px-0">
+            <h3 class="mt-5 mb-4">Upcoming Events</h3>
+            <div class="row justify-content-between mb-5">
             {{ range sort $pages "Params.Date" "asc" }}     
                 {{ if and (eq .Parent $parent) (gt now .Params.PublishDate) }}
                 {{ $.Scratch.Set "upcoming" true }}
-                <div data-episode-date="{{ .Params.Date }}" class="upcoming col-lg-6 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0">
-                    <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
-                    <p class="teaser">Streaming {{ .Params.Date.Format "January 2" }} on Twitch</p>
-                    <h3><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></h3>
+                {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
+                    <div class="col-lg-11 col-12 px-0">
+                        <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
+                        <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on Twitch</p>
+                        <h3 class="pt-2"><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></h3>
+                    </div>
                 </div>
                 {{ end }}
             {{ end }}    
@@ -35,20 +37,24 @@
             }
 	    });
         </script>
+
+
         {{ end }}
 
-        <div class="col px-lg-0 pt-5 border-top">
+        <div class="col px-lg-0 pt-5 border-top mb-5">
             {{ if .Params.Streaming }}
-            <h3 class="ml-3 mb-4">Watch Past Events</h3>
+            <h3 class="mb-4">Watch Past Events</h3>
             {{ end }}
             <div class="row">
             {{ range sort $pages "Params.episode" "desc" }}
                 {{ if eq .Parent $parent }}
-                <div data-episode-date="{{ .Params.Date }}" class="previous col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-                    <!--<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>-->
-                    <!--<p><a class="text-white lightbox" href="https://youtube.com/watch?v={{ .Params.youtube_id }}">{{- .Title -}}</a></p>-->
-                    <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_image | relURL }}"></a>
-                    <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                {{ printf "<div class=\"previous col-lg-4 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
+                    <div class="col-lg-11 col-12 px-0">
+                        <!--<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>-->
+                        <!--<p><a class="text-white lightbox" href="https://youtube.com/watch?v={{ .Params.youtube_id }}">{{- .Title -}}</a></p>-->
+                        <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_image | relURL }}"></a>
+                        <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                    </div>
                 </div>
                 {{ end }}
             {{ end }}

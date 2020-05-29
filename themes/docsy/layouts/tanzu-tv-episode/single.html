@@ -1,35 +1,39 @@
 {{ define "main" }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-lg-5 mt-0 mb-5 pt-lg-5 pt-2 pb-1">
+<section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-7 pt-4 pb-5">
 	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-    <h1 class="h1"> {{ .Parent.Title -}}</h1>
-    <div class="lead"><p class="mb-5">{{- .Parent.Params.description}}</p></div>
+    <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
+    <div class="lead"><p>{{- .Parent.Params.description}}</p></div>
    </div>
 </section>
 
 <!-- IF UPCOMING -->
 <div class='container'>
-  <div id="twitch" class="row justify-content-center">
-    <div class="col-5 mb-5">
-      <h1 class="h1"> {{- .Title -}}</h1>
+  <div id="twitch" class="row justify-content-center mt-5 pt-3">
+    <div class="col-lg-5 col-12 mb-5 pl-0">
+      <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
       <div>
-        <a href="https://www.twitch.tv/{{ .Params.twitch }}"><img class="float-left" src='{{ "/images/icons/play-button.png" | relURL }}'></a>
-        <div class="float-left ml-3">
+        <a class="play-icon float-left" href="https://www.twitch.tv/{{ .Params.twitch }}"></a>
+        <div class="float-left ml-3 pl-1">
           <a href="https://www.twitch.tv/{{ .Params.twitch }}">Watch on Twitch</a><br/>
           <span class="text-white">{{ .Params.Date.Local.Format "3 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
         </div>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4 col-12 px-0">
       <img src="{{ .Params.episode_banner | relURL }}">
     </div>
   </div>
   <!-- ELSE IF ON YOUTUBE -->
-  <div id="youtube" class="row justify-content-center mb-5">
-    <h1 class="h1 mb-3"> {{- .Title -}}</h1>
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/{{ .Params.youtube }}" frameborder="0" allowfullscreen></iframe>
+  <div id="youtube" class="row justify-content-center mt-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h2 class="mb-4"> {{- .Title -}}</h2>
+      <div class="youtube-video-shortcode">
+        <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 
   <!-- END -->
@@ -51,7 +55,7 @@
   </script>
 
   <div class="row justify-content-center">
-    <div class="col-9">
+    <div class="col-lg-9 col-12 px-0 mt-5">
       <h3>In this episode</h3>
       {{ .Content }}
     </div>
@@ -59,11 +63,11 @@
 
   {{ with .Params.guests }}
   <div class="row justify-content-center">
-    <div class="col-9">
+    <div class="col-lg-9 col-12 px-0 mt-5">
       <h3 class="mb-3">Guests</h3>
       {{ range . }}
         {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="border-bottom mb-4">
+          <div class="border-bottom mb-4 pb-5">
           {{ partial "team-member.html" (dict "context" . "display" "tv") }}
           </div>
         {{ end }}
@@ -73,8 +77,8 @@
   {{ end }}
 
   {{ with .Params.hosts }}
-  <div class="row justify-content-center">
-    <div class="col-9">
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0 mt-5">
       <h3 class="mb-3">Hosts</h3>
       {{ range . }}
         {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}

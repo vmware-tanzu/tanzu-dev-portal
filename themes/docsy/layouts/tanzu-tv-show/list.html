@@ -1,11 +1,11 @@
 {{ define "main" }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-5 pb-5">
+<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-5">
   	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-    <h1 class="h1"> {{- .Title -}}</h1>
-		<div class="lead"><p class="mb-5">{{- .Params.description}}</p></div>
+    <h1 class="h1 mt-4 pt-2"> {{- .Title -}}</h1>
+		<div class="lead"><p>{{- .Params.description}}</p></div>
    
     {{ if .Params.streaming }}
     <div id="twitch-embed"></div>
