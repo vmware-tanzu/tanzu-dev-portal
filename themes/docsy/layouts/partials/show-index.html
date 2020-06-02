@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class='col-lg-7 col-12 px-0 bg-primary text-center pt-4 pt-lg-0'>
-                    <img src="{{ .Params.image | relURL }}" />
+                    <a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}" /></a>
                 </div>
             </div>
             {{ end }}
