@@ -106,6 +106,7 @@ Jsonnet
 [K,k]8s
 kapp
 Kafka
+kata
 Kibana
 Knative
 kpack(-hosted)?
@@ -113,7 +114,7 @@ KubeAcademy
 [K,k]ubeapps
 kubectl
 kubeconfig
-Kubernetes(-native|-specific)?
+Kubernetes(-native|-specific|-centric)?
 [L,l]inux
 [L,l]og4j2?
 macOS
@@ -136,6 +137,7 @@ RSocket(-based)?
 spring-petclinic
 STDOUT
 Tanzu(Developer)?
+Tekton
 Terraform(-ing)?
 Vaadin
 vSphere
