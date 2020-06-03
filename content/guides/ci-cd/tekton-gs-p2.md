@@ -13,7 +13,7 @@ team:
 - Brian McClain
 ---
 
-In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll also learn how to use a pre-existing `Task` and integrate it with our own resources and parameters by using Cloud Native Buildpacks.
+In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll also learn how to use a preexisting `Task` and integrate it with our own resources and parameters by using Cloud Native Buildpacks.
 
 ## Before You Begin
 
