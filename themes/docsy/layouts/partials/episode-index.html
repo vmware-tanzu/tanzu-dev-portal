@@ -13,9 +13,14 @@
                 {{ $.Scratch.Set "upcoming" true }}
                 {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
                     <div class="col-lg-11 col-12 px-0">
-                        <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
+                        {{ $.Scratch.Set "episodeLink" .RelPermalink }}
+                        {{ if (isset .Params "register") | and (not (eq .Params.register "")) }}
+                            {{ $.Scratch.Set "episodeLink" .Params.register }}
+                        {{ end }}
+                        {{ $episodeLink := $.Scratch.Get "episodeLink" }}
+                        <a href="{{ $episodeLink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
                         <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on Twitch</p>
-                        <h3 class="pt-2"><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></h3>
+                        <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
                     </div>
                 </div>
                 {{ end }}
