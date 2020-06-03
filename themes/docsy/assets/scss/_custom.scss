@@ -121,6 +121,10 @@ a {
   }
 }
 
+.auto {
+  -webkit-font-smoothing: auto;
+}
+
 .td-box--gray-850 {
   background: $gray-850;
 }
@@ -196,10 +200,39 @@ a {
   text-transform: uppercase;
   color: white;
   border-radius: 4px;
-  padding: 8px 25px;
-  font-size: 11px;
+  padding: 10px 25px;
+  font-size: 12px;
+  &.btn-small {
+    padding: 8px 25px;
+    font-size: 11px;
+  }
   letter-spacing: 1px;
   -webkit-font-smoothing: auto;
+}
+
+.play-icon {
+  background: $link;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: block;
+  position: relative;
+  transition: all .2s;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    top: 38%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 12px;
+    border-color: transparent transparent transparent white;
+  }
+  &:hover {
+    background: $link-hover-color;
+  }
 }
 
 .dropdown-toggle::after {
@@ -413,6 +446,7 @@ body.light-mode #toggle-light-dark-mode span {
 
 .breadcrumb-item {
 	font-size: 0.9rem;
+  opacity: 0.5;
 }
 
 .td-home .td-default main section:first-of-type {
@@ -712,11 +746,45 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
+.shows .teaser {
+  border-radius: 40px;
+  background: $bright-green;
+  font-size: .8em;
+  font-weight: 500;
+  padding: 2px 20px 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.episodes .teaser {
+  margin-bottom: 0;
+  color: $bright-green;
+}
+
+body.tv-episode {
+  .team-member {
+    div[class*='col'] {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      @media(max-width: 767px) {
+        padding-left: 0;
+      }
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
 /* SYNTAX HIGHLIGHTING */
 
-/* Background */ .chroma, pre, code { color: #f8f8f2; background-color: #1e0010 }
+/* Background */ .chroma, pre, code { color: #f8f8f2; background-color: #0f171c }
 /* Other .chroma .x {  } */
-/* Error */ .chroma .err { color: #F59E8F; background-color: #1e0010 }
+/* Error */ .chroma .err { color: #F59E8F; background-color: #0f171c }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
@@ -797,4 +865,3 @@ body.light-mode #toggle-light-dark-mode span {
 /* GenericUnderline .chroma .gl {  } */
 /* Text .chroma . {  } */
 /* TextWhitespace .chroma .w {  } */
-

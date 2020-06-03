@@ -27,6 +27,7 @@ body .border-bottom {
   border-color: #d9e4ea !important;
 }
 
+body .bg-primary,
 .person .card, .person .highlight,
 main .highlight pre, main .highlight div,
 .highlight,
@@ -157,7 +158,7 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 
 /* SYNTAX HIGHLIGHTING */
 
-/* Background */ .chroma, pre, code { color: #1e0010 !important; background-color: #f4f8fa !important }
+/* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
 /* Other .chroma .x {  } */
 /* Error */ .chroma .err { color: #DB2100 !important; background-color: #f4f8fa !important }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
