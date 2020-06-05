@@ -91,6 +91,7 @@ Bundler
 cd
 (CF|cf)(-for-k8s)?
 CloudEvents
+ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
 DockerHub
@@ -128,6 +129,7 @@ NoSQL
 OAuth2?
 OpenID
 Paketo
+PropertySources
 pullPolicy
 RabbitMQ('s)?
 Resilience4J
