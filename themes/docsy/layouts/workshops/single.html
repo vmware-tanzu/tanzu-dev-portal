@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="td-main ">
+	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+		<div class='container'>
+			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<h1>{{ .Title }}</h1>
+			<p>{{ .Description }}</p>
+			<p>Approximate time: {{ .Params.length }} minutes</p>
+			<div class="short-gradient-line mb-4"></div>
+			<!-- {{ .Params.tags }} -->
+
+			<a href="{{ .Params.laburl }}"  class="btn"><span class="fa fa-cog"></span> Start Workshop</a>
+
+		</div>
+	</div>
+	<div class="container py-5">
+			{{ with $img := .Params.logo }}
+		<img src={{ $img | safeURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+		{{end}}
+		<div class="github-imported-sample">
+				{{ .Content }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}
