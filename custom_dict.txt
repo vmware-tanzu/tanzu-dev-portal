@@ -83,6 +83,7 @@ whiteboard(ed|ing)
 
 # Tech (projects, products, commands)
 Activiti
+AMQP
 AppSec
 [A,a]rgo(CD|cd)(-k8s)?
 auth
