@@ -22,6 +22,13 @@
 	          form.setValues({ "Function__c": "Developer" });
 	          form.onSuccess(function(values, followUpUrl) {
 	            form.getFormElem().hide();
+							window.dataLayer = window.dataLayer || [];
+							window.dataLayer.push({
+									'event' : 'ctaSubmitted',  
+									'eventCategory': 'Subscription',  
+									'eventAction': 'Form Submitted', 
+									'eventLabel': 'Newsletter'
+							});
 	            $('.confirmation').show();
 	            return false;
 	          });
