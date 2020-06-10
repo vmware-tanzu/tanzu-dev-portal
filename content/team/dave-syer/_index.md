@@ -9,7 +9,7 @@ weight: 1
 
 # Social Media
 twitter: "david_syer"
-website: "http://spencer.gibb.us/"
+website: ""
 facebook: ""
 linkedin: ""
 github: "https://github.com/dsyer"
