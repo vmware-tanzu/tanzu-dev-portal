@@ -1,5 +1,5 @@
 ---
-title:  "Tekton: Getting Started - Part 2"
+title:  "Getting Started with Tekton Part 2: Building a Container"
 sortTitle: "Tekton 2"
 weight: 2
 topics:
@@ -13,17 +13,17 @@ team:
 - Brian McClain
 ---
 
-In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll also learn how to use a preexisting `Task` and integrate it with our own resources and parameters by using Cloud Native Buildpacks.
+In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll learn how to use a preexisting `Task` and provide parameters to build your code using [Cloud Native Buildpacks](https://buildpacks.io/).
 
 ## Before You Begin
 
-If you followed [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you're all set! This guide assumes that you'll pick up where that guide left off, using the same Tekton installation on top of Minikube, with the same secrets, service accounts, and other resources defined. If you haven't ran through part one yet, make sure you start there. 
+If you went through the lessons in [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you're all set! This guide picks up where that guide left off, using the same Tekton installation on top of Minikube, with the same secrets, service accounts, and other resources defined. If you haven't gone through part one yet, make sure you start there. 
 
 ## Building a Container with Kaniko
 
-Since Tekton is a tool for automating CI/CD pipelines, you probably expect to be able to create and publish container images. For this example, you'll use [Kaniko](https://github.com/GoogleContainerTools/kaniko), a tool used to build container images from a Dockerfile on top of Kubernetes. Kaniko provides it's own container image that you can use as a base, adding your own code and Dockerfile, and Kaniko will build and publish a container image based on your Dockerfile.
+Since Tekton is a tool for automating CI/CD pipelines, you probably want to learn how to create and publish container images. For this example, you'll use [Kaniko](https://github.com/GoogleContainerTools/kaniko), a tool used to build container images from a Dockerfile on top of Kubernetes. Kaniko provides its own container image that you can use as a base. By adding your own code and Dockerfile, Kaniko will build and publish a container image based on that Dockerfile.
 
-You can see the complete example [here on GitHub](https://github.com/BrianMMcClain/tekton-examples/blob/master/kaniko-task.yml).
+You can see the complete example [here on GitHub](https://github.com/BrianMMcClain/tekton-examples/blob/main/kaniko-task.yml).
 
 First, since you'll be pushing the resulting container image to Docker Hub, you'll need to create a service account that uses the secret that you created earlier:
 
@@ -36,7 +36,7 @@ secrets:
   - name: dockercreds
 ```
 
-Next, you'll need to define one input for the code that will be built, and one output that defines where to publish the container image:
+Next, you'll need to define one input for the code that will be built, and one output for where to publish the container image:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -47,14 +47,14 @@ spec:
   type: git
   params:
     - name: revision
-      value: master
+      value: main
     - name: url
       value: https://github.com/BrianMMcClain/sinatra-hello-world
 ```
 
-This introduces a new concept, a `PipelineResource`, which defines an input into, or an output from, a `Task`. If you want to learn more about, make sure to check out the [`PipelineResource` documentation](https://github.com/tektoncd/pipeline/blob/master/docs/resources.md). This `PipelineResource` is of type `git`, which points to the master branch of the code to build on GitHub. It also gives it the name `sinatra-hello-world-git`, which is what will be used to reference it later on in the example.
+This introduces a new concept—a `PipelineResource`, e—which defines an input into, or an output from, a `Task`. If you want to learn more, make sure to check out the [`PipelineResource` documentation](https://github.com/tektoncd/pipeline/blob/master/docs/resources.md). This `PipelineResource` is of type `git`, which points to the branch named `main` of the code to build on GitHub. It also gives it the name "sinatra-hello-world-git", which is what you’ll use to reference it later on in the example.
 
-You'll need one `PipelineResource`, one to define where to publish the container image:
+You'll need one other `PipelineResource` to define where to publish the container image:
 
 ```yaml
 apiVersion: tekton.dev/v1alpha1
@@ -68,11 +68,12 @@ spec:
       value: <DOCKER_USERNAME>/sinatra-hello-world-tekton-demo
 ```
 
-This `PipelineResource` is of type `image`, as in a container image. It's also been given the name `sinatra-hello-world-tekton-demo-image`. In this case, it simply takes the image name and tag. Since no full URL is provided, it's assumed that it will be published to Docker Hub, but you can also point to your own container registry.
+This `PipelineResource` is of type `image`, as in a container image. It's also been given the name "sinatra-hello-world-tekton-demo-image". In this case, it simply takes the image name and tag. Since no full URL is provided, it's assumed that it will be published to Docker Hub, but you can also point to your own container registry.
 
-**NOTE:** Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
 
-With your input and output defined, it's finally time to create the `Task` that will build the container. Take some time to carefully read this through:
+> **NOTE:** Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
+
+With your input and output defined, it's time to create the `Task` that will build the container. Take some time to carefully read this through:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -113,20 +114,20 @@ spec:
         - --context=$(params.pathToContext)
 ```
 
-Here, a new `Task` named `build-docker-image-from-git-source` is created. The best way to understand this is to walk through the `spec` piece-by-piece.
+Here, a new `Task` named "build-docker-image-from-git-source" is created. The best way to understand this is to walk through the spec step by step.
 
-First, there are two `params` that the Task will expect:
+First, there are two `params` that the `Task` will expect:
 
-1. `pathToDockerFile`: Where the Dockerfile is in your code, defaulting to the root directory.
-2. `pathToContext`: The directory that Kaniko should look for your code in. If no alternative directory is provided, it assumes that the root directory of your code is the build context.
+1. `pathToDockerFile` — Where the Dockerfile is in your code, defaulting to the root directory.
+2. `pathToContext` — The directory in which Kaniko should look for your code. If no alternative directory is provided, it assumes that the root directory of your code is the build context.
 
-Next, it defines two `resources` that it expects. It expects one `input` (which it will refer to as `docker-source`) of type `git`. It also expects one `output` (referred to as `builtImage`) of type `image`. As a reminder, a `Task` is simply outlining what inputs and output it expects, but it's not yet defining them. You may expect that these will match the two `PipelineResource` objects that were defined earlier, and you'd be right. The final piece of YAML that you'll define later will tie the two together.
+Next, it defines two `resources` that it expects. It expects one `input` (which it will refer to as "docker-source") of type `git`. It also expects one output (referred to as `builtImage`) of type `image`. As a reminder, a `Task` is simply outlining what inputs and output it expects, but it's not yet defining them. You might expect that these will match the two `PipelineResource` objects that were defined earlier, and you'd be right. The final piece of YAML that you'll define later will tie the two together.
 
-Finally, the `Task` needs to define what `steps` to take. Since Kaniko contains all of the logic it needs inside the container image, there's just a single step. Using the Kaniko container image, this step runs the `/kaniko/executor` image with three flags: `--dockerfile`, `--destination`, and `--context`. Each of these flags take in the information defined in the `params` and `resources` sections.
+Finally, the `Task` needs to define what `steps` to take. Since Kaniko contains all the logic it needs inside the container image, there's just a single step. Using the Kaniko container image, this step runs the `/kaniko/executor` command with three flags: `--dockerfile`, `--destination`, and `--context.` Each of these flags takes in the information defined in the `params` and `resources` sections.
 
-Phew, that was a lot to digest. Take a moment and make sure you understand each of these sections. At a high level, this `Task` takes two parameters with two inputs and runs one executable.
+Phew, that was a lot to digest. Take a moment to make sure you understand each of these sections. At a high level, this Task takes two parameters with two inputs and runs one executable.
 
-Now there's one final piece, which is the `TaskRunner` to run this `Task`:
+There's one final piece, which is the `TaskRunner` to run this `Task`:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -151,20 +152,20 @@ spec:
           name: sinatra-hello-world-tekton-demo-image
 ```
 
-This `TaskRun` object says that you want to run the `build-docker-image-from-git-source` `Task` that you just defined and provide the two `PipelineResource` objects that you defined as `resources`. This is how Tekton knows that it should use the `sinatra-hello-world-git` `PipelineResource` for the `docker-source` for example.
+This `TaskRun` object says that you want to run the `build-docker-image-from-git-source` `Task` that you just defined and provide the two `PipelineResource` objects that you defined as resources. This is how Tekton knows that it should use the `sinatra-hello-world-git` `PipelineResource` for the `docker-source`.
 
-One other thing to notice is that the `pathToDockerFile` parameter was defined, despite being the same as the default value. This is done to show how `params` are defined in `TaskRun` objects, but also note that `pathToContext` is omitted. If `params` have a default value, they do not necessarily need to be defined in your `TaskRun`.
+One other thing to notice is that the `pathToDockerFile` parameter was defined, despite being the same as the default value. This is done to show how `params` are defined in `TaskRun` objects, but note as well that `pathToContext` is omitted. If `params` have a default value, they do not necessarily need to be defined in your `TaskRun`.
 
 If you want an easy way apply this all at once, you can store your Docker Hub username in a Bash variable:
 
 ```bash
-export DOCKER_USERNAME=DOCKERHUB_USERNAME
+export DOCKER_USERNAME=<DOCKERHUB_USERNAME>
 ```
 
 Then you can run the following one-liner to apply all of the objects at once:
 
 ```bash
-wget -O - https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/master/kaniko-task.yml | sed -e "s/\<DOCKER_USERNAME\>/$DOCKER_USERNAME/" | kubectl apply -f -
+wget -O - https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/main/kaniko-task.yml | sed -e "s/\<DOCKER_USERNAME\>/$DOCKER_USERNAME/" | kubectl apply -f -
 ```
 
 Once applied, make sure to check the status of the `TaskRun` using the Tekton CLI:
@@ -226,7 +227,7 @@ If all goes well, once the logs finish, you should see your new image up in Dock
 
 ## Cloud-Native Buildpacks
 
-So far, you've been defining your own tasks and steps to run. One of the benefits of Tekton's design however is that since each component is shareable through YAML files, you can plug in a `Task` developed by someone else. For this example, you'll be bringing in a `Task` that's already defined, specifically one to [use Cloud Native Buildpacks](https://github.com/tektoncd/catalog/tree/master/buildpacks). If you're unfamiliar with Cloud Native Buildpacks, make sure to check out [Cloud Native Buildpacks: What Are They?](https://tanzu.vmware.com/developer/guides/containers/cnb-what-is/).
+So far, you've been defining your own tasks and steps to run. However, one of the benefits of Tekton's design is that since each component is shareable through YAML files, you can plug in a `Task` developed by someone else. For this example, you'll be bringing in a `Task` that's already defined, specifically one to [use Cloud Native Buildpacks](https://github.com/tektoncd/catalog/tree/master/buildpacks). If you're unfamiliar with Cloud Native Buildpacks, make sure to check out [Cloud Native Buildpacks: What Are They?](/guides/containers/cnb-what-is/).
 
 To install the `Task`, you can use `kubectl apply`, passing the URL to the YAML directly:
 
@@ -234,7 +235,7 @@ To install the `Task`, you can use `kubectl apply`, passing the URL to the YAML 
 kubectl apply -f https://raw.githubusercontent.com/tektoncd/catalog/master/buildpacks/buildpacks-v3.yaml
 ```
 
-Much like how you can use the Tekton CLI to describe a `TaskRun`, you can also use to describe a `Task` to see what resources, parameters, and steps it defines:
+Much like how you can use the Tekton CLI to describe a `TaskRun`, you can also use it to describe a `Task` to see what resources, parameters, and steps it defines:
 
 ```bash
 tkn task describe buildpacks-v3
@@ -279,7 +280,7 @@ NAME                               STARTED        DURATION    STATUS
 build-spring-api-with-buildpacks   18 hours ago   7 minutes   Succeeded
 ```
 
-Here you can see this `Task` expects an input resource of type `git` and an output resource of type `image`. You can define these just as you did in the previous example. For this one, you'll be building a different application, [this one being built in Spring](https://github.com/BrianMMcClain/spring-boot-api-demo). Start by creating the Service Account to authenticate against Docker Hub, the input `git` resource, and the output `image` resource:
+Here you can see this `Task` expects an input resource of type `git` and an output resource of type `image`. You can define these just as you did in the previous example. For this example, you'll be building a different application, [in Spring](https://github.com/BrianMMcClain/spring-boot-api-demo). Start by creating the Service Account to authenticate against Docker Hub, the input `git` resource, and the output `image` resource:
 
 ```yaml
 ---
@@ -299,7 +300,7 @@ spec:
   type: git
   params:
     - name: revision
-      value: master
+      value: main
     - name: url
       value: https://github.com/BrianMMcClain/spring-boot-api-demo
 
@@ -315,7 +316,7 @@ spec:
       value: <DOCKER_USERNAME>/spring-api-tekton-demo
 ```
 
-This should all look familiar to the previous example. The service account uses the secret defined at the beginning of the guide, the `git` `PipelineResource` points to the code that you'll be building, and the `image` `PipelineResource` will tell Tekton where to send the resulting image.
+This should all look familiar from the previous example. The service account uses the secret defined at the beginning of the guide, the `git` `PipelineResource` points to the code that you'll be building, and the image `PipelineResource` will tell Tekton where to send the resulting image.
 
 Finally, define the `TaskRun` to tie it all together:
 
@@ -343,18 +344,18 @@ spec:
         name: spring-api-tekton-demo
 ```
 
-As you may have expected, this denotes your two `PipelineResource` objects as the input and output resources. It also declare that you'll be using the `cloudfoundry/cnb:bionic` image for the buildpack builder.
+As you might have expected, this denotes your two `PipelineResource` objects as the input and output resources. It also declares that you'll be using the `cloudfoundry/cnb:bionic` image for the buildpack builder.
 
-Much like with the previous example, you can apply this all at once by first storing your Docker Hub username in a Bash variable:
+As with the previous example, you can apply this all at once by first storing your Docker Hub username in a Bash variable:
 
 ```bash
-export DOCKER_USERNAME=DOCKERHUB_USERNAME
+export DOCKER_USERNAME=<DOCKERHUB_USERNAME>
 ```
 
-Then, you can apply the YAML directly:
+Then you can apply the YAML directly:
 
 ```bash
-wget -O - https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/master/cnb-spring-api-demo.yml | sed -e "s/\<DOCKER_USERNAME\>/$DOCKER_USERNAME/" | kubectl apply -f -
+wget -O - https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/main/cnb-spring-api-demo.yml | sed -e "s/\<DOCKER_USERNAME\>/$DOCKER_USERNAME/" | kubectl apply -f -
 ```
 
 Check the status with `tkn taskrun describe`:
@@ -417,8 +418,8 @@ You can also follow along with the logs with `tkn taskrun logs`:
 tkn taskrun logs build-spring-api-with-buildpacks -f
 ```
 
-Once complete, you'll see your newly created container image up in Docker Hub! Note that there was never a Dockerfile created or any other set of instructions on how to build this container. Instead, Cloud Native Buildpacks take a look at your code and determine what it needs in terms of runtime, dependencies, etc. 
+Once complete, you'll see your newly created container image up in Docker Hub! Note that there was never a Dockerfile created or any other set of instructions on how to build this container. Instead, Cloud Native Buildpacks looked at your code and determined what it needed in terms of runtime, dependencies, etc.
 
 ## Keep Learning
 
-There's still more to learn, and the best place to go next is the [official documentation](https://github.com/tektoncd/pipeline#-tekton-pipelines). There's also some great [examples](https://github.com/tektoncd/pipeline/tree/master/examples) for those looking to get some hands-on learning.
+There's still more to learn, and the best place to go next is the [official documentation](https://github.com/tektoncd/pipeline#-tekton-pipelines). There are also some great [examples](https://github.com/tektoncd/pipeline/tree/master/examples) for those looking to get some hands-on learning.
