@@ -1,5 +1,5 @@
 ---
-title:  "Tekton: Getting Started - Part 1"
+title:  "Getting Started with Tekton Part 1: Hello World"
 sortTitle: "Tekton 1"
 weight: 2
 topics:
@@ -13,7 +13,7 @@ team:
 - Brian McClain
 ---
 
-[Tekton](https://github.com/tektoncd/pipeline) provides a set of open-source Kubernetes resources to build and run [CI/CD](/guides/ci-cd/ci-cd-what-is/) pipelines, such as parameterized tasks, inputs and outputs, as well as runtime definitions. This guide will walk you through setting up Tekton on Minikube as well as setting up your first task.
+[Tekton](https://github.com/tektoncd/pipeline) provides a set of open source Kubernetes resources to build and run [CI/CD](/guides/ci-cd/ci-cd-what-is/) pipelines, such as parameterized tasks, inputs and outputs, as well as runtime definitions. This guide will walk you through setting up Tekton on Minikube as well as setting up your first task.
 
 ## Before You Begin
 
@@ -25,7 +25,7 @@ There's just a few things you'll need before you get started:
 
 ## Setting Up Tekton
 
-While Tekton can run on any Kubernetes cluster, this guide will walk through with the assumption that you will be using Minikube. If you'd prefer to run Tekton differently, make sure to reference the [Installation Guide](https://github.com/tektoncd/pipeline/blob/master/docs/install.md).
+While Tekton can run on any Kubernetes cluster, this guide assumes you will be using Minikube. If you'd prefer to run Tekton differently, make sure to reference the [Installation Guide](https://github.com/tektoncd/pipeline/blob/master/docs/install.md).
 
 First, create a Minikube cluster with 4GB of memory and 10GB of storage:
 
@@ -53,7 +53,7 @@ tekton-pipelines-webhook-69796f78cf-b28z4      1/1     Running             0    
 tekton-pipelines-controller-6d55778887-df59t   1/1     Running             0          13s
 ```
 
-Finally, in a couple of the examples, you'll be pushing up container images to Docker Hub, so create a secret that Tekton can use to log into Docker Hub with, substituting the placeholder values with your own:
+Finally, in a couple of the examples, you'll be pushing up container images to Docker Hub, so create a secret that Tekton can use to log in to Docker Hub with, substituting the placeholder values with your own:
 
 ```bash
 kubectl create secret docker-registry dockercreds --docker-server=https://index.docker.io/v1/ --docker-username=<DOCKERHUB_USERNAME> --docker-password=<DOCKERHUB_PASSWORD> --docker-email <DOCKERHUB_EMAIL>
@@ -79,13 +79,13 @@ spec:
         - "Hello World"
 ```
 
-Take a moment to digest this a bit. While a `task` can become much more complex than this, this specific task has no inputs, no outputs, and just a single step. That step (named `echo`) uses the [Ubuntu image from Docker Hub](https://hub.docker.com/_/ubuntu), and executes the following command:
+Take a moment to digest this part. While a `task` can become much more complex, this specific task has no inputs, no outputs, and just a single step. That step (named `echo`) uses the [Ubuntu image from Docker Hub](https://hub.docker.com/_/ubuntu), and executes the following command:
 
 `echo "Hello World"`
 
-Tekton automatically stores logs of all tasks that are ran, so even though the container that will run this will tasks will quickly go away, you can reference the results of that task after the fact.
+Tekton automatically stores the output of all tasks that are run, so even though the container that will run these tasks will quickly go away, you can reference the results of that task after the fact.
 
-In order to actually run this task though, you need to create one more resource, a `TaskRun`. `TaskRun` resources define how to run specific tasks. Consider the following for this example:
+However, in order to actually run the task, you need to create one more resource, a `TaskRun`. This resource defines how to run specific tasks. Consider the following for this example:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -97,22 +97,22 @@ spec:
     name: echo-hello-world
 ```
 
-Again, keeping the example as simple as possible, `TaskRun` definitions _could_ fill in any parameters required by a `Task`, but in this case since the tasks to run takes no parameters, it simply refers to it by name: `echo-hello-world`.
+Again, keeping the example as simple as possible, `TaskRun` definitions **could** fill in any parameters required by a task, but in this case, since the task that is being run takes no parameters, this resource only defines the task that it is going to run: `echo-hello-world`.
 
-As with any Kubernetes CRD, this can all be defined in one file, which you can find all put together on [GitHub](https://github.com/BrianMMcClain/tekton-examples/blob/master/hello-task.yml), and use to apply these two examples directly:
+As with any Kubernetes custom resources definition (CRD), this can all be done in one file, which you can find on [GitHub](https://github.com/BrianMMcClain/tekton-examples/blob/main/hello-task.yml), and use to apply these two examples directly:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/master/hello-task.yml
+kubectl apply -f https://raw.githubusercontent.com/BrianMMcClain/tekton-examples/main/hello-task.yml
 ```
 
-Even if ran quickly, if you run `kubectl get pods`, you'll see this task probably already completed:
+If you run `kubectl get pods` — even if you do so quickly — you'll likely see this task already completed:
 
 ```bash
 NAME                                  READY   STATUS      RESTARTS   AGE
 echo-hello-world-task-run-pod-vm6f5   0/1     Completed   0          12s
 ```
 
-As mentioned though, Tekton stores the results of a `TaskRun`, and that's where the [Tekton CLI](https://github.com/tektoncd/cli) comes in. First, checkout Tekton's description of your `TaskRun`:
+But as previously mentioned, Tekton stores the results of a `TaskRun`, and that's where the [Tekton CLI](https://github.com/tektoncd/cli) comes in. First, check out Tekton's description of your `TaskRun`:
 
 ```bash
 tkn taskrun describe echo-hello-world-task-run
@@ -154,7 +154,7 @@ STARTED          DURATION    STATUS
 No sidecars
 ```
 
-This is a bit bare since the task has no inputs, outputs, or resources. What's important though is that the `Status` is set to `Succeeded`. Great! Next, take a look of the output from the output of that `TaskRun`:
+Since the task has no inputs, outputs, or resources, the above is a bit bare. What's important is that the `Status` is set to `Succeeded`. Great! Next, take a look at the output of that `TaskRun`:
 
 ```bash
 tkn taskrun logs echo-hello-world-task-run
@@ -164,8 +164,8 @@ tkn taskrun logs echo-hello-world-task-run
 [echo] Hello World
 ```
 
-Just as you may expected, the output of the `echo` task was `Hello World`. 
+Just as you would expect, the output of the `echo` task was "Hello World".
 
 ## Keep Learning
 
-In [part two of this guide](/guides/ci-cd/tekton-gs-p2/), you'll learn about inputs into and outputs from tasks, as well as how you can use Cloud Native Buildpacks with Tekton. If you want to dive deeper into what has already been covered, you can give the [official documentation](https://github.com/tektoncd/pipeline#-tekton-pipelines) a read to learn more!
+In [part two of this guide](/guides/ci-cd/tekton-gs-p2/), you'll learn about inputs into and outputs from tasks, as well as how you can use Cloud Native Buildpacks with Tekton. If you want to dive deeper into what has already been covered, give the [official documentation](https://github.com/tektoncd/pipeline#-tekton-pipelines) a read to learn more!
