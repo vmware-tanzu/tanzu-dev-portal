@@ -32,7 +32,7 @@
         {{ if not (eq .Params.title "Community") }}
           <div class="newsletter mb-5">
             <p class="text-white">Sign up for the developer newsletter</p>
-            <div class='btn click-to-show scroll-to-bottom'>Subscribe</div>
+            <div class='btn btn-small click-to-show scroll-to-bottom'>Subscribe</div>
             <script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
             <form id="mktoForm_1609" class="hidden"></form>
             <script>
@@ -41,6 +41,13 @@
                 form.setValues({ "Function__c": "Developer" });
                 form.onSuccess(function(values, followUpUrl) {
                   form.getFormElem().hide();
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                      'event' : 'ctaSubmitted',  
+                      'eventCategory': 'Subscription',  
+                      'eventAction': 'Form Submitted', 
+                      'eventLabel': 'Newsletter'
+                  });
                   $('.confirmation').show();
                   return false;
                 });

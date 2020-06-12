@@ -4,7 +4,7 @@
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
 
-[0-9]*(GB|ms)
+[0-9]*(GB|MB|KB|m?s)
 https?|HTTPS?
 localhost(:[0-9]*)?
 
@@ -26,20 +26,24 @@ codebase
 customizable
 deployable
 DevOps(-related)?
-dev(s)?
+[D,d]ev(s)?
 [E,e]venting
 failover
 fiancé
 fileshare
+firewalling
 getters
 GitOps
 Helming
 hostname
 [I,i]ntegrations
+kitesurfing
 lifecycle
+Livelessons
 [M,m]odelling
 modularity
-([M,m]|multi-m)icroservice(s)?(-related)?
+([M,m]|multi-m)icroservice(s)?(-related|-based)?
+middleware
 [M,m]inibroker
 namespace
 natively
@@ -62,13 +66,15 @@ runnable
 scalable
 screencaster
 [S,s]erverless
-servlets
+[S,s]ervlets?
 (de)*serialize[d,r]
 stateful
 symposia
 telco
 [T,t]emplat(ed|ing)
+Thunderdome
 [T,t]o[D,d]o
+toolchain
 unpause
 versioned
 walkthrough
@@ -77,6 +83,8 @@ whiteboard(ed|ing)
 
 # Tech (projects, products, commands)
 Activiti
+AMQP
+AppSec
 [A,a]rgo(CD|cd)(-k8s)?
 auth
 [B,b]uildpack(s|'s)?
@@ -85,18 +93,24 @@ cd
 (CF|cf)(-for-k8s)?
 CloudEvents
 CRD
+ConfigurationProperties
+[D,d]ebian
 [D,d]ockerfiles?
 DockerHub
 Finchley
+[G,g]olang
 Gradle
 Grafana
 [H,h]elmfiles?
 init
 Jaeger
+JHipster
+Jsonnet
 [K,k]8s
 Kaniko
 kapp
 Kafka
+kata
 Kibana
 Knative
 kpack(-hosted)?
@@ -104,16 +118,25 @@ KubeAcademy
 [K,k]ubeapps
 kubectl
 kubeconfig
-Kubernetes(-native|-specific)?
-Log4j2
+Kubernetes(-native|-specific|-centric)?
+[L,l]inux
+[L,l]og4j2?
 macOS
 [M,m]inikube
 MockMvc
 msgpack(ed)?
+Neo4j
 Netty(-based)?
 nginx
+NoSQL
+OAuth2?
+OpenID
+Paketo
+PropertySources
 pullPolicy
 RabbitMQ('s)?
+Resilience4J
+Riak
 RSocket(-based)?
 [S,s]kaffold
 spring-petclinic
@@ -121,6 +144,7 @@ STDOUT
 Tanzu(Developer)?
 Tekton('s)?
 Terraform
+Terraform(-ing)?
 Vaadin
 vSphere
 WebFlux
@@ -134,6 +158,7 @@ Apress
 deliverAgile
 DZone
 EMC
+HashiCorp
 Heptio
 RedMonk
 SpringOne
@@ -147,15 +172,21 @@ DNS
 EFK
 FP
 GAC
-GCP
-GCR
+GC(L|P|R)
 GKE
 IaaS
-JVM
+JMX
 JPA
 JSON
+JVM
 LDAP
 MDN
+MVB(-awarded)?
+MVC
+ok
+youtube
+integrations
+SaaS-based
 NFJS
 NSX
 OCI(-compliant)?
@@ -176,13 +207,19 @@ YAML|yaml
 Brindley
 Coté
 Czarkowski('s)?
+Dubois
 Gibb
 Iberkleid
 Jakub
+Jernigan
+Julien
 Madhav
+Pilimon
 Sathe
 Schutta
+Syer
 Vetter
+Viktor
 
 # Twitter Handles
 anthonyjvetter

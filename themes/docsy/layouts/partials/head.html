@@ -41,8 +41,12 @@
 {{ end -}}
 {{ partialCached "favicons.html" . }}
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-<meta content='{{ "/images/TAN-DevSite-OG.png" | relURL }}' property='og:image'>
-<meta content='{{ "/images/TAN-DevSite-OG.png" | relURL }}' name='twitter:image'>
+{{ $ogImage := "/images/TAN-DevSite-OG.png" }}
+{{ if eq .Section "tv" }}
+{{ $ogImage = "/images/OG-TanzuTV.jpg" }}
+{{ end }}
+<meta content='{{ $ogImage | relURL }}' property='og:image'>
+<meta content='{{ $ogImage | relURL }}' name='twitter:image'>
 <meta content='summary_large_image' name='twitter:card'>
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/google_news.html" . -}}

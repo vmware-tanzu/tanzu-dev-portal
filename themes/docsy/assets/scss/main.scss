@@ -66,6 +66,14 @@
       min-height: 200px;
       padding-bottom: 0;
     }
+    &.tanzu-tv-hero {
+      background-color: transparent !important;
+      min-height: 165px;
+      padding-bottom: 0;
+    }
+    &.tv-episode-hero {
+      min-height: 100px;
+    }
     @media(max-width: 991px) {
       &.guides-hero,
       &.patterns-hero,
