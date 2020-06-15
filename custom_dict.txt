@@ -230,6 +230,7 @@ tiffanyfayj
 # Tags
 img
 youtube
+slideshare
 
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
