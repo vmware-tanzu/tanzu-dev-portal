@@ -92,6 +92,7 @@ Bundler
 cd
 (CF|cf)(-for-k8s)?
 CloudEvents
+CRD
 ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
@@ -106,6 +107,7 @@ Jaeger
 JHipster
 Jsonnet
 [K,k]8s
+Kaniko
 kapp
 Kafka
 kata
@@ -140,7 +142,8 @@ RSocket(-based)?
 spring-petclinic
 STDOUT
 Tanzu(Developer)?
-Tekton
+Tekton('s)?
+Terraform
 Terraform(-ing)?
 Vaadin
 vSphere
@@ -227,6 +230,7 @@ tiffanyfayj
 # Tags
 img
 youtube
+slideshare
 
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
