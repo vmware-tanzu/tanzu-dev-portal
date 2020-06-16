@@ -1,6 +1,6 @@
 ---
 type: "tv"
-title: "Watch Now"
+title: "Tanzu.TV Shows"
 linkTitle: "Tanzu.TV"
 menu:
     main:
