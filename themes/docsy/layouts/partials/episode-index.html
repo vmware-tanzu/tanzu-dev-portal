@@ -6,9 +6,9 @@
 
         {{ if .Params.streaming }}
         <div class="col px-0">
-            <h3 class="mt-5 mb-4">Upcoming Events</h3>
+            <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
             <div class="row justify-content-between mb-5">
-            {{ range sort $pages "Params.Date" "asc" }}     
+            {{ range sort $pages "Params.Date" "asc" }}
                 {{ if and (eq .Parent $parent) (gt now .Params.PublishDate) }}
                 {{ $.Scratch.Set "upcoming" true }}
                 {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
@@ -24,10 +24,10 @@
                     </div>
                 </div>
                 {{ end }}
-            {{ end }}    
+            {{ end }}
             {{ if eq ($.Scratch.Get "upcoming") false }}
                 <div class="col-lg-6 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0">
-                <p>Check back soon for more upcoming events.</p>
+                <p>Check back soon for more upcoming episodes.</p>
                 </div>
             {{ end }}
             </div>
@@ -48,7 +48,7 @@
 
         <div class="col px-lg-0 pt-5 {{ if .Params.Streaming }}border-top{{ end }} mb-5">
             {{ if .Params.Streaming }}
-            <h3 class="mb-4">Watch Past Events</h3>
+            <h3 class="mb-4">Watch Past Episodes</h3>
             {{ end }}
             <div class="row">
             {{ range sort $pages "Params.episode" "desc" }}
