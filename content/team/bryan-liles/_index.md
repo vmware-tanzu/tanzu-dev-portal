@@ -2,7 +2,7 @@
 name: Bryan Liles
 description: "Senior Staff Engineer"
 photo: "/images/team/bryan-liles.jpg"
-roles: ["advocate","author"]
+roles: ["author"]
 skills: ["Kubernetes"]
 location: "Baltimore, MD"
 weight: 1
