@@ -33,8 +33,6 @@ Alternatively to PWS, PRs and commits are also automatically staged by Netlify.
 
 ## Contributing Content
 
-If you are interested in contributing content and you're reading this, you probably already have access to do so. If you don't have access for some reason, please reach out in the #tanzu-dev-portal channel on Slack.
-
 You may contribute content by creating a branch (or fork) and submitting a pull request. Content should be written in Markdown with metadata included in the front matter. Here are some guidelines to get you started:
 
 ### Hugo Archetypes
@@ -112,6 +110,3 @@ Hugo allows the use of [shortcodes](https://gohugo.io/content-management/shortco
 
 - For an &ndash; (--) use two hyphens in a row 
 - For an &mdash; (---) use three hyphens in a row 
-
-### Netlify CMS
-If you're not familiar with writing Markdown or submitting pull requests, you may request access to Netlify CMS which provides a web-based interface for writing content. Please reach out in the #tanzu-dev-portal channel on Slack.

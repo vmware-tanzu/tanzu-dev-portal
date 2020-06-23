@@ -28,6 +28,7 @@ deployable
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
+Endnotes
 failover
 fiancé
 fileshare
@@ -49,6 +50,7 @@ namespace
 natively
 no-brainer
 [O,o]bservability
+old-checkout-desc
 ok
 orchestrator
 overcomplicate
@@ -69,6 +71,7 @@ screencaster
 [S,s]ervlets?
 (de)*serialize[d,r]
 stateful
+suboptimal
 symposia
 telco
 [T,t]emplat(ed|ing)
@@ -92,20 +95,24 @@ Bundler
 cd
 (CF|cf)(-for-k8s)?
 CloudEvents
+CRD
 ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
 DockerHub
 Finchley
+Github
 [G,g]olang
 Gradle
 Grafana
 [H,h]elmfiles?
 init
+InfoQ
 Jaeger
 JHipster
 Jsonnet
 [K,k]8s
+Kaniko
 kapp
 Kafka
 kata
@@ -140,7 +147,8 @@ RSocket(-based)?
 spring-petclinic
 STDOUT
 Tanzu(Developer)?
-Tekton
+Tekton('s)?
+Terraform
 Terraform(-ing)?
 Vaadin
 vSphere
@@ -194,10 +202,12 @@ RBAC(-enabled)?
 [s,S]3
 [S,J]DK
 SRE
+TBD
 TCP
 UI
 UR[I,L](s)?
 VMs?
+XKCD
 YAML|yaml
 
 # Names
@@ -210,6 +220,7 @@ Iberkleid
 Jakub
 Jernigan
 Julien
+Liles
 Madhav
 Pilimon
 Sathe
@@ -217,16 +228,20 @@ Schutta
 Syer
 Vetter
 Viktor
+Junio
+Hamano
 
 # Twitter Handles
 anthonyjvetter
 IvanTarin2
 starbuxman
 tiffanyfayj
+12SwitchRestoresSansCheckOuts
 
 # Tags
 img
 youtube
+slideshare
 
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk

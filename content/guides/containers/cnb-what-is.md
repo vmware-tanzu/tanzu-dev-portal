@@ -22,11 +22,11 @@ If you’ve created a container using Dockerfiles before, you’re already famil
 
 Cloud Native Buildpacks know how to build and containerize your application. If it's a Java app, they will bring in the JVM. If it's a Ruby app, they will bring in the Ruby runtime.
 
-![Image Layers](https://buildpacks.io/docs/concepts/operations/build.svg)
+![Image Layers](/images/guides/containers/diagrams/cnb-1.png)
 
 Your container also needs to be maintained. Throughout the entire stack—from the base image to dependencies to your application runtime—it's important to keep things up to date and secure. Since Cloud Native Buildpacks separate out the base image, the runtime, and your application into different layers, they're very quick to update only the layers that changed.
 
-![Image Rebase](https://buildpacks.io/docs/concepts/operations/rebase.svg)
+![Image Rebase](/images/guides/containers/diagrams/cnb-2.png)
 
 ## How Do They Work? 
 

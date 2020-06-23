@@ -9,7 +9,7 @@ weight: 1
 
 # Social Media 
 twitter: "tiffanyfayj"
-website: "https://tech.paulcz.net"
+website: ""
 facebook: ""
 linkedin: ""
 github: "tiffanyfay"
