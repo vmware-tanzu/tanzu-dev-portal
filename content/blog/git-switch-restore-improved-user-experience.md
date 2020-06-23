@@ -183,7 +183,7 @@ To help you get started with `git switch` and `git restore`, here's a mapping fr
 
 ### #12SwitchRestoresSansCheckOuts Challenge
 
-Here's my challenge to you: start using `git switch` and `git restore`! To make things fun, once you've used them 12 times or more, post a screenshot as proof with the tag [#12SwitchRestoresSansCheckOuts](https://twitter.com/search?q=%2333SwitchRestoresSansCheckOuts). Here's my take on it. TBD
+Here's my challenge to you: start using `git switch` and `git restore`! To make things fun, once you've used them 12 times or more, post a screenshot as proof with the tag [#12SwitchRestoresSansCheckOuts](https://twitter.com/search?q=%2333SwitchRestoresSansCheckOuts). Here's [my take on it](https://twitter.com/rctay/status/1275486248333795328).
 
 If you've feedback on these commands, feel free to drop an email to the Git mailing list where development happens; see [this note](https://github.com/git/git/blob/todo/MaintNotes) for details.
 
