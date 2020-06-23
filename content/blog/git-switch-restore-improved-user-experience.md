@@ -11,7 +11,7 @@ team:
   - Ray Chuan Tay
 ---
 
-If you're like me, you've worked with Git for some time, you might have a couple of commands committed to your memory—from `git commit` for recording your changes, to `git log` for sensing "where" you are.
+If you're like me and you've worked with Git for some time, you might have a couple of commands committed to your memory—from `git commit` for recording your changes, to `git log` for sensing "where" you are.
 
 I have found `git checkout` to be a command that I reach for pretty frequently, as it performs more than one operation. But a single command doing more than one thing might produce a suboptimal user experience for someone learning Git. I can almost picture an [XKCD](http://xkcd.com) strip:
 
@@ -25,7 +25,7 @@ Even if you have the commands memorized, there have likely been times when you h
 
 Let's take a look at what `git checkout` can do, and an alternative (or two) that can make for a friendlier user experience in Git.
 
-## Quick, what does `git checkout` do?
+### Quick, what does `git checkout` do?
 
 Perhaps you were trying something out and made some changes to the files in your local Git repository, and you now want to discard those changes. You can do so by calling `git checkout` with one file path or more:
 
@@ -45,7 +45,7 @@ In other words, `git checkout <filepath>` sets `<filepath>` to its contents in t
 [^checkout-overwrites-index]: Note that the changes will be staged after running the command - or to use Git parlance, the index is overwritten.
 [^content-trees]: I used "contents of files", when it is more accurate to talk about the "working tree" as something separate from the index. The ["Three Trees" section](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified#_the_three_trees) of the freely available Pro Git book explains what they are (with diagrams!)
 
-## Branches
+### Branches
 
 Say you want to return to a branch that you had been working on previously—`wip`. You can run the below to set it to be the branch you're on and "checkout" [^old-checkout-desc] its files:
 
@@ -70,7 +70,7 @@ Let's add that our list of what `git checkout` does:
 
 However, instead of saying "setting the branch we're on," it's more accurate to say that `git checkout` sets `HEAD` to point to `<branch>`. As the concept of `HEAD` is pretty important, let's take a look at what `HEAD` is before continuing our exploration of `git checkout`.
 
-## What is HEAD?
+### What is HEAD?
 
 One of Git's roles is to track content, and it helps us to know what changes we have. But how does Git determine when a file has changed?
 
@@ -80,7 +80,7 @@ One of Git's roles is to track content, and it helps us to know what changes we 
 
 [^head-simple]: When determining what has changed, `HEAD` isn't the only factor—it depends on how you ask Git for changes. For example, `git diff` uses the index as the point of comparison, so even if your files didn't match their content in `HEAD` but had been staged, you'd get an empty output. It's also important to note that Git doesn't deal with changes or deltas; each commit is a complete snapshot of your files.
 
-## Detached HEAD
+### Detached HEAD
 
 In addition to setting `HEAD` to point to a named branch, you can also point it to a commit, which brings us to another `git checkout` operation. For example, let's say you see a page to be laid out weirdly, even though you remember it being pixel-perfect when you last worked on it about a week ago, with commit `f7884`. To confirm your hypothesis, you can explore your project's state as-of commit `f7884` and set the contents of the files in your Git repository correspondingly via:
 
@@ -100,7 +100,7 @@ If you were to switch away to another branch, and not point a reference to your 
 
 [^git-checkout]: The [detached HEAD](https://git-scm.com/docs/git-checkout#_detached_head) section of the `git checkout` documentation gives some commands you can use to "recover" from this situation.
 
-## An alternative (or two)
+### An alternative (or two)
 
 Phew, there are quite a few things that `git checkout` can do!
 
@@ -124,13 +124,13 @@ Enter `git restore` and `git switch`.
 Now let's run through the three operations again to see how these two commands are used.
 
 [^git-growth]:
-  In a [2011 interview on Geek Time](https://www.youtube.com/watch?v=qs_xS1Y6nGc&t=12m48s) by the Google Open Source Programs Office, Junio C Hamano, the maintainer of Git, responds to the criticism that Git is hard to use:
+    In a [2011 interview on Geek Time](https://www.youtube.com/watch?v=qs_xS1Y6nGc&t=12m48s) by the Google Open Source Programs Office, Junio C Hamano, the maintainer of Git, responds to the criticism that Git is hard to use:
 
-  "Another thing is because the system wasn’t really designed, but grew organically. So somebody came up with an idea of doing one thing. 'Oh, this is a good idea, a good feature; let’s add it to this command as this option name'. And the option name he chooses just gets stuck, but after a few months, somebody else notices, 'Oh, this is a similar mode of operation with that existing command.'"
+    "Another thing is because the system wasn’t really designed, but grew organically. So somebody came up with an idea of doing one thing. 'Oh, this is a good idea, a good feature; let’s add it to this command as this option name'. And the option name he chooses just gets stuck, but after a few months, somebody else notices, 'Oh, this is a similar mode of operation with that existing command.'"
 
-  (This author bears **some** blame for expanding the plethora of options `git checkout` takes, having [contributed the `-B` option](https://github.com/git/git/commit/02ac98374eefbe4a46d4b53a8a78057ad8ad39b7), the "forced" counterpart to `git checkout -b <branch>`.)
+    (This author bears **some** blame for expanding the plethora of options `git checkout` takes, having [contributed the `-B` option](https://github.com/git/git/commit/02ac98374eefbe4a46d4b53a8a78057ad8ad39b7), the "forced" counterpart to `git checkout -b <branch>`.)
 
-  A summary of the interview can be found on the [Google Open Source blog](https://opensource.googleblog.com/2011/03/geek-time-with-junio-c-hamano.html). ([Via an InfoQ post also on the introduction of git switch and restore](https://www.infoq.com/news/2019/08/git-2-23-switch-restore/).)
+    A summary of the interview can be found on the [Google Open Source blog](https://opensource.googleblog.com/2011/03/geek-time-with-junio-c-hamano.html). ([Via an InfoQ post also on the introduction of git switch and restore](https://www.infoq.com/news/2019/08/git-2-23-switch-restore/).)
 
 1. _When given a file path, `git checkout <filepath>` sets one or more `<filepath>` to its contents in the index._
 
@@ -166,11 +166,11 @@ Now let's run through the three operations again to see how these two commands a
 $ git switch --detach <commit>
 ```
 
-## Sign me up - where can I use them?
+### Sign me up - where can I use them?
 
 Both `git switch` and `git restore` were introduced in Git v2.23 [released in August 2019](https://github.com/git/git/blob/master/Documentation/RelNotes/2.23.0.txt#L61), so you should be able to use them on a machine with an up-to-date installation of Git, without having to install an additional piece of software. Indeed, you may already have encountered references to `git switch` and `git restore` in the documentation for `git checkout`, and in the advice printed by Git when entering detached `HEAD` state, among others.
 
-## A Rosetta Stone
+### A Rosetta Stone
 
 To help you get started with `git switch` and `git restore`, here's a mapping from a `git checkout` invocation you may already be using in your daily workflow to a `git switch` or `git restore` invocation:
 
@@ -181,17 +181,17 @@ To help you get started with `git switch` and `git restore`, here's a mapping fr
 | `git checkout <branch>`                                                 | `<branch>`      | All files in repo            | `git switch <branch>`                    |
 | `git checkout <commit>`<br>`git checkout --detach <commit>`             | `<commit>`      | All files in repo            | `git switch --detach <commit>`           |
 
-## #12SwitchRestoresSansCheckOuts Challenge
+### #12SwitchRestoresSansCheckOuts Challenge
 
 Here's my challenge to you: start using `git switch` and `git restore`! To make things fun, once you've used them 12 times or more, post a screenshot as proof with the tag [#12SwitchRestoresSansCheckOuts](https://twitter.com/search?q=%2333SwitchRestoresSansCheckOuts). Here's my take on it. TBD
 
-If you've feedback on these commands, feel free to drop an email to the Git mailing list where development happens; refer to this note for [details](https://github.com/git/git/blob/todo/MaintNotes).
+If you've feedback on these commands, feel free to drop an email to the Git mailing list where development happens; see [this note](https://github.com/git/git/blob/todo/MaintNotes) for details.
 
 I hope this improved user experience will be a part of your daily workflow—better yet, of your muscle memory.
 
-## Further reading
+### Further reading
 
 - The [documentation page](https://git-scm.com/docs/git-checkout) for `git checkout` has a full list of the options it takes; it's also where [detached HEAD](https://git-scm.com/docs/git-checkout#_detached_head) is explained.
 - The Github blog covers this same topic their [Highlights from Git 2.23](https://github.blog/2019-08-16-highlights-from-git-2-23/) post.
 
-## Endnotes
+### Endnotes
