@@ -147,10 +147,7 @@ limitations under the License.
         $('html, body').animate(
             { scrollTop: $(targetId).offset().top - headerHeight },
             0,
-            'linear',
-            function(){ 
-                //window.location.href = anchorDest; 
-            }
+            'linear'
         );
     }
 
