@@ -126,21 +126,33 @@ limitations under the License.
 
         // Handle in-page anchor links with fixed header
         $('a[href^="#"]').click(function(e) {
-            var headerHeight = 80;
-            var strId = this.hash.replace(":","\\:");
-            var anchorDest = this.href;
+            window.location.href = this.href;
             e.preventDefault();
-            $('html, body').animate(
-                { scrollTop: $(strId).offset().top - headerHeight },
-                0,
-                'linear',
-                function(){ 
-                    window.location.href = anchorDest; 
-                });
+            scrollToTarget(this.hash);
+        });
+
+        // Scroll to the right place when loading in-page anchor links
+        $(window).on('load', function(e){
+            var target = window.location.hash;
+            if (target) {
+                scrollToTarget(target);
+            }
         });
 
     });
 
+    function scrollToTarget(target) {
+        var headerHeight = 80;
+        var targetId = target.replace(":","\\:");
+        $('html, body').animate(
+            { scrollTop: $(targetId).offset().top - headerHeight },
+            0,
+            'linear',
+            function(){ 
+                //window.location.href = anchorDest; 
+            }
+        );
+    }
 
     function bottomPos(element) {
         return element.offset().top + element.outerHeight();
