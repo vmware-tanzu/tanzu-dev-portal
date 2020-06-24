@@ -118,13 +118,26 @@ limitations under the License.
           return false;
         });
 
-
         //Toggle mobile menu
         $("#menu-toggle").click(function(){
           $(".td-navbar .td-navbar-nav-hamburger").toggleClass("open");
           $(".td-navbar .td-navbar-nav-hamburger .navbar-nav .nav-item").toggle();
         });
 
+        // Handle in-page anchor links with fixed header
+        $('a[href^="#"]').click(function(e) {
+            var headerHeight = 80;
+            var strId = this.hash.replace(":","\\:");
+            var anchorDest = this.href;
+            e.preventDefault();
+            $('html, body').animate(
+                { scrollTop: $(strId).offset().top - headerHeight },
+                0,
+                'linear',
+                function(){ 
+                    window.location.href = anchorDest; 
+                });
+        });
 
     });
 
