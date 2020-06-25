@@ -9,34 +9,18 @@
    
     {{ if .Params.streaming }}
     <div id="twitch-embed"></div>
+
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script type="text/javascript">
    
-      var episodeDates = [], episodeTimes = [], episodeLengths = [];
-      {{ range .Data.Pages }}  
-        var epDate = new Date("{{ .Params.Date }}");
-        episodeDates.push(epDate.toLocaleDateString());
-        episodeTimes.push(epDate.toLocaleTimeString());
-        episodeLengths.push({{ .Params.minutes }});
-      {{ end }}
-
-      var currentDate = (new Date(Date.now())).toLocaleDateString();
-      var index = episodeDates.indexOf(currentDate);
-      if (index > -1) {
-        var startTime = (new Date(episodeDates[index] + " " + episodeTimes[index])).getTime();
-        var endTime = startTime + (episodeLengths[index] * 60 * 1000);
-        var currentTime = (new Date(Date.now())).getTime();
+      var check = isTvShowLive("{{ .Title }}");
+      if (check) {
         
-        if (currentTime < endTime && currentTime > startTime) {
-          
-          new Twitch.Embed("twitch-embed", {
-              width: 1130,
-              height: 480,
-              channel: "makejarnotwar",
-          });
-          
-        }
-
+        new Twitch.Embed("twitch-embed", {
+            width: 1130,
+            height: 480,
+            channel: "makejarnotwar",
+        });
       }
 
     </script>
