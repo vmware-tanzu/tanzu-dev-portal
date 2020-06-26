@@ -14,8 +14,8 @@ team:
 
 # A Container Is a Linux Namespace and Networking Basics
 
-![open source image @freddygthatsme https://unsplash.com/photos/1i1zPbkQJNg
-](./static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg?raw=true)
+![open source image @freddygthatsme see sources
+](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
 
 
 Understanding the way containers communicate will make your life easier in many ways. Technologies like Kubernetes and Docker abstract away details that make containers special, but can also abstract away intuition and understanding. Without that knowledge, challenges arise—educated problem-solving adds confidence to decision-making!   
@@ -120,7 +120,7 @@ Veth devices are always created in interconnected pairs where packets transmitte
 In our example, we are creating two veth pairs. The jelly namespace will connect to the veth-jelly end of the cable, and the other cable end should attach to a bridge that will create the network for our namespaces. We create the same cable and connect it to the bridge on the pb side.
 
 
-![pb&jelly diagram](static/images/blogs/container-net-basics/containers.png?raw=true)
+![pb&jelly diagram](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/containers.png)
 
 
 To create both veth pairs, use the command:
