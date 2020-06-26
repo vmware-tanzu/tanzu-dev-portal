@@ -15,7 +15,7 @@ team:
 # A Container Is a Linux Namespace and Networking Basics
 
 ![open source image @freddygthatsme https://unsplash.com/photos/1i1zPbkQJNg
-](static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
+](./static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
 
 
 Understanding the way containers communicate will make your life easier in many ways. Technologies like Kubernetes and Docker abstract away details that make containers special, but can also abstract away intuition and understanding. Without that knowledge, challenges arise—educated problem-solving adds confidence to decision-making!   
