@@ -41,7 +41,7 @@ function changeTheme(mode) {
 
       link.type = "text/css";
       link.rel = "stylesheet";
-      link.href = {{ printf "%s" "/css/light-theme.css" | relURL }};
+      link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
       link.id = "light-theme"
 
       head.prepend(link);
