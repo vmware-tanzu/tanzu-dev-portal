@@ -120,10 +120,6 @@ Veth devices are always created in interconnected pairs where packets transmitte
 In our example, we are creating two veth pairs. The jelly namespace will connect to the veth-jelly end of the cable, and the other cable end should attach to a bridge that will create the network for our namespaces. We create the same cable and connect it to the bridge on the pb side.
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![pb&jelly diagram](static/images/blogs/container-net-basics/containers.png)
 
 
