@@ -13,7 +13,7 @@
 {{ if .Site.IsServer }}
 <script src="{{ $jsLiveTv.RelPermalink }}"></script>
 {{ else }}
-{{ $js := $js | minify | fingerprint }}
+{{ $jsLiveTv := $jsLiveTv | minify | fingerprint }}
 <script src="{{ $jsLiveTv.RelPermalink }}" integrity="{{ $jsLiveTv.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 
