@@ -1,15 +1,15 @@
 ---
 name: Olga Maciaszek-Sharma
-description: "Spring Cloud Maintaner"
+description: "Spring Cloud Team"
 photo: "/images/team/olga-maciaszek-sharma.jpg"
 roles: ["advocate","author"]
 skills: ["Spring", "Kubernetes"]
-location: "Austin, TX"
+location: "Warsaw, Poland"
 weight: 1
 
 # Social Media
-twitter: "pczarkowski"
-website: "https://tech.paulcz.net"
+twitter: "OLGA_MACIASZEK"
+website: ""
 facebook: ""
 linkedin: ""
 github: ""

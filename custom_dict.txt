@@ -157,6 +157,10 @@ WebSocket
 ytt
 Zipkin
 Zuul
+LoadBalancer
+OpenFeign
+OSS
+RestAssured
 
 # Companies / Conferences
 Apress
@@ -230,6 +234,7 @@ Vetter
 Viktor
 Junio
 Hamano
+Maciaszek-Sharma
 
 # Twitter Handles
 anthonyjvetter
@@ -237,6 +242,7 @@ IvanTarin2
 starbuxman
 tiffanyfayj
 12SwitchRestoresSansCheckOuts
+OLGA_MACIASZEK
 
 # Tags
 img
