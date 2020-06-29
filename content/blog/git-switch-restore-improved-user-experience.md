@@ -189,6 +189,8 @@ If you've feedback on these commands, feel free to drop an email to the Git mail
 
 I hope this improved user experience will be a part of your daily workflow—better yet, of your muscle memory.
 
+*Many thanks to [Dave Barnes](https://github.com/davebarnes97) and [Liza](https://github.com/lizanys) for reading early versions of this post!*
+
 ### Further reading
 
 - The [documentation page](https://git-scm.com/docs/git-checkout) for `git checkout` has a full list of the options it takes; it's also where [detached HEAD](https://git-scm.com/docs/git-checkout#_detached_head) is explained.
