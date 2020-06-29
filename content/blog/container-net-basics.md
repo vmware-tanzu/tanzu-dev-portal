@@ -89,7 +89,7 @@ ip link list
 
 ```
 
-This should print out the devices that are available; any networking device that has a driver loaded can be classified as an available device. In the output, you mihght see devices like `lo` and `enp0s2`. The `ip link` command will also output two lines for each device, the link status, and the characteristics.
+This should print out the devices that are available; any networking device that has a driver loaded can be classified as an available device. In the output, you might see devices like `lo` and `enp0s2`. The `ip link` command will also output two lines for each device, the link status, and the characteristics.
 
 ![screenshot of output
 ](/images/blogs/container-net-basics/screenshot-ip-output.png)
@@ -175,7 +175,7 @@ ip link
 
 ### Assign IP Addresses to Each Namespace
 
-Since we keep using `ip` commands, you might be wondering what the IPV4 addresses are. Let's quickly retrace our steps to make sense of it all.  
+Since we keep using `ip` commands, you might be wondering what the IPv4 addresses are. Let's quickly retrace our steps to make sense of it all.  
 
 You began by creating two namespaces, then a virtual ethernet cable. Then you connected the devices to the cable. 
 
@@ -370,7 +370,7 @@ Here is a breakdown of the above flag:
 *   -s specifies the source address 
 *   -j is the action being performed
 
-Now enable packet forwarding with ipv4 ip forwarding:
+Now enable packet forwarding with IPv4 ip forwarding:
 
 ```
 
@@ -395,7 +395,7 @@ You were able to create two containers and a virtual network from scratch! You h
 Keep a lookout on the VMware Tanzu Developer website for upcoming articles and guides on containers and be sure to visit the [container section](https://tanzu.vmware.com/developer/topics/containers/). A great resource to learn more about container networking is [the Container Network Interface](https://github.com/containernetworking/cni), where you can learn how the community is standardizing container networking standards. And if you are inspired you can contribute or create your own plugin!
 
 
-## TLDR or Troubleshooting help
+## TL;DR or Troubleshooting help
 
 If you just want to run a script and check the status after or get stuck check out this [script](https://github.com/everythingeverywhere/networking-basics).
 
@@ -411,4 +411,4 @@ If you just want to run a script and check the status after or get stuck check o
 
 [Linux man pages online](https://www.man7.org/linux/man-pages)
 
-[Introo to Container Networking](https://rancher.com/learning-paths/introduction-to-container-networking/)
+[Intro to Container Networking](https://rancher.com/learning-paths/introduction-to-container-networking/)

@@ -54,8 +54,10 @@ old-checkout-desc
 ok
 orchestrator
 overcomplicate
+pb&jelly
 performant
 preload
+prepending
 podcaster
 programmatically
 Quickstart
@@ -80,6 +82,7 @@ Thunderdome
 toolchain
 unpause
 versioned
+veth-jelly
 walkthrough
 webhooks?
 whiteboard(ed|ing)
@@ -100,12 +103,14 @@ ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
 DockerHub
+[E,e]thernet(s)?
 Finchley
 Github
 [G,g]olang
 Gradle
 Grafana
 [H,h]elmfiles?
+Homebrew
 init
 InfoQ
 Jaeger
@@ -126,10 +131,12 @@ kubeconfig
 Kubernetes(-native|-specific|-centric)?
 [L,l]inux
 [L,l]og4j2?
-macOS
+[M,m]acOS
 [M,m]inikube
 MockMvc
 msgpack(ed)?
+Multipass
+[N,n]amespace(s)?
 Neo4j
 Netty(-based)?
 nginx
@@ -138,14 +145,17 @@ OAuth2?
 OpenID
 Paketo
 PropertySources
+POSTROUTING
 pullPolicy
 RabbitMQ('s)?
 Resilience4J
 Riak
+rkt
 RSocket(-based)?
 [S,s]kaffold
 spring-petclinic
 STDOUT
+sudo
 Tanzu(Developer)?
 Tekton('s)?
 Terraform
@@ -154,6 +164,7 @@ Vaadin
 vSphere
 WebFlux
 WebSocket
+[V,v]eth
 ytt
 Zipkin
 Zuul
@@ -165,6 +176,7 @@ RestAssured
 # Companies / Conferences
 Apress
 deliverAgile
+CoreOS
 DZone
 EMC
 HashiCorp
@@ -176,7 +188,9 @@ VMware(-hosted|'s|Tanzu)?
 
 # Acronyms
 APIs?
+brd1
 CLI
+CNI
 DNS
 EFK
 FP
@@ -184,6 +198,7 @@ GAC
 GC(L|P|R)
 GKE
 IaaS
+(IP|ip)(v6|v4|s)?
 JMX
 JPA
 JSON
@@ -193,6 +208,7 @@ MDN
 MVB(-awarded)?
 MVC
 ok
+pb('s)?
 youtube
 integrations
 SaaS-based
@@ -219,6 +235,7 @@ Brindley
 Coté
 Czarkowski('s)?
 Dubois
+freddygthatsme
 Gibb
 Iberkleid
 Jakub
