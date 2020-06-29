@@ -12,8 +12,6 @@ team:
 - Ivan Tarin
 ---
 
-# A Container Is a Linux Namespace and Networking Basics
-
 ![open source image @freddygthatsme see sources
 ](/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
 
