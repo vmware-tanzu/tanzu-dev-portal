@@ -92,7 +92,7 @@ ip link list
 This should print out the devices that are available; any networking device that has a driver loaded can be classified as an available device. In the output, you mihght see devices like `lo` and `enp0s2`. The `ip link` command will also output two lines for each device, the link status, and the characteristics.
 
 ![screenshot of output
-](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
+](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/screenshot-ip-output.png)
 
 ### Create Your Namespaces
 
