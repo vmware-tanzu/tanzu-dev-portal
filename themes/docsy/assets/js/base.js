@@ -126,9 +126,11 @@ limitations under the License.
 
         // Handle in-page anchor links with fixed header
         $('a[href^="#"]').click(function(e) {
-            window.location.href = this.href;
-            e.preventDefault();
-            scrollToTarget(this.hash);
+            if (this.hash.length > 1) { // don't do this for empty # links
+                window.location.href = this.href;
+                e.preventDefault();
+                scrollToTarget(this.hash);
+            }
         });
 
         // Scroll to the right place when loading in-page anchor links
@@ -139,10 +141,12 @@ limitations under the License.
             }
         });
 
-    });
+    });  
 
     function scrollToTarget(target) {
-        var headerHeight = 80;
+        var headerHeight = 80; 
+        if (document.getElementById("live-notify").style.display == "block")
+            headerHeight = headerHeight + 40;
         var targetId = target.replace(":","\\:");
         $('html, body').animate(
             { scrollTop: $(targetId).offset().top - headerHeight },
@@ -150,6 +154,14 @@ limitations under the License.
             'linear'
         );
     }
+
+    var check = isTvShowLive();
+    if (check) {
+        document.getElementsByClassName("td-main")[0].style.marginTop = 40;
+        document.getElementById("live-show-name").innerHTML = liveShowName;
+        document.getElementById("live-notify").href = liveShowLink;
+        document.getElementById("live-notify").style.display = "block";
+    }   
 
     function bottomPos(element) {
         return element.offset().top + element.outerHeight();
