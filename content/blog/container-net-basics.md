@@ -4,7 +4,7 @@ title: "A Container Is a Linux Namespace and Networking Basics"
 featured: true
 description: >
     Demystify containers and cover some networking basics
-date: 2020-29-21
+date: 2020-29-6
 patterns:
 - Deployment
 # Author(s)
@@ -15,7 +15,7 @@ team:
 # A Container Is a Linux Namespace and Networking Basics
 
 ![open source image @freddygthatsme see sources
-](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
+](../../static/images/blogs/container-net-basics/freddy-g-1i1zPbkQJNg-unsplash.jpg)
 
 
 Understanding the way containers communicate will make your life easier in many ways. Technologies like Kubernetes and Docker abstract away details that make containers special, but can also abstract away intuition and understanding. Without that knowledge, challenges arise—educated problem-solving adds confidence to decision-making!   
@@ -92,7 +92,7 @@ ip link list
 This should print out the devices that are available; any networking device that has a driver loaded can be classified as an available device. In the output, you mihght see devices like `lo` and `enp0s2`. The `ip link` command will also output two lines for each device, the link status, and the characteristics.
 
 ![screenshot of output
-](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/screenshot-ip-output.png)
+](../../static/images/blogs/container-net-basics/screenshot-ip-output.png)
 
 ### Create Your Namespaces
 
@@ -122,7 +122,7 @@ Veth devices are always created in interconnected pairs where packets transmitte
 In our example, we are creating two veth pairs. The jelly namespace will connect to the veth-jelly end of the cable, and the other cable end should attach to a bridge that will create the network for our namespaces. We create the same cable and connect it to the bridge on the pb side.
 
 
-![pb&jelly diagram](https://raw.githubusercontent.com/everythingeverywhere/tanzu-dev-portal/main/static/images/blogs/container-net-basics/containers.png)
+![pb&jelly diagram](../../static/images/blogs/container-net-basics/containers.png)
 
 
 To create both veth pairs, use the command:
@@ -397,22 +397,18 @@ Keep a lookout on the VMware Tanzu Developer website for upcoming articles and g
 
 ## TLDR or Troubleshooting help
 
-If you just want to run a script and check the status after or get stuck check out this script
-
-[https://github.com/everythingeverywhere/networking-basics](https://github.com/everythingeverywhere/networking-basics)
+If you just want to run a script and check the status after or get stuck check out this [script](https://github.com/everythingeverywhere/networking-basics).
 
 ### Sources:
 
-Image from @freddygthatsme https://unsplash.com/photos/1i1zPbkQJNg
+[Image from @freddygthatsme](https://unsplash.com/photos/1i1zPbkQJNg)
 
-CNI Spec
+[CNI Spec](https://github.com/containernetworking/cni/blob/master/SPEC.md) 
 
-https://github.com/containernetworking/cni/blob/master/SPEC.md 
+[Using network namespaces and a virtual switch to isolate servers](https://ops.tips/blog/using-network-namespaces-and-bridge-to-isolate-servers/)
 
-https://ops.tips/blog/using-network-namespaces-and-bridge-to-isolate-servers/
+[Linux Switching – Interconnecting Namespaces](https://www.opencloudblog.com/?p=66)
 
-https://www.opencloudblog.com/?p=66
+[Linux man pages online](https://www.man7.org/linux/man-pages)
 
-https://www.man7.org/linux/man-pages
-
-https://rancher.com/learning-paths/introduction-to-container-networking/
+[Introo to Container Networking](https://rancher.com/learning-paths/introduction-to-container-networking/)
