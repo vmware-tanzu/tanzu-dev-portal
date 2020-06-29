@@ -46,9 +46,9 @@ If you do not have access to a Linux operating system or don’t want to use wha
 
 
 
-*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-macos](https://multipass.run/docs/installing-on-macos))
-*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-linux](https://multipass.run/docs/installing-on-linux))
-*   [Multipass Windows Install]([https://multipass.run/docs/installing-on-windows](https://multipass.run/docs/installing-on-windows))
+*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-macos](https://multipass.run/docs/installing-on-macos)
+*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-linux](https://multipass.run/docs/installing-on-linux)
+*   [Multipass Windows Install]([https://multipass.run/docs/installing-on-windows](https://multipass.run/docs/installing-on-windows)
 
 To install using Homebrew:
 
@@ -401,7 +401,7 @@ If you just want to run a script and check the status after or get stuck check o
 
 [https://github.com/everythingeverywhere/networking-basics](https://github.com/everythingeverywhere/networking-basics)
 
-**Sources: **
+### Sources:
 
 Image from @freddygthatsme https://unsplash.com/photos/1i1zPbkQJNg
 
