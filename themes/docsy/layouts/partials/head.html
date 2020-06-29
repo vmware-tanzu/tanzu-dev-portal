@@ -9,25 +9,14 @@
 </script>
 {{ end }}
 
-<script>
-  var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
-  changeTheme(savedTheme);
-  function changeTheme(mode) {
-      if (mode === "light") {
-			  var head = document.head;
-			  var link = document.createElement("link");
+{{ $jsHead := resources.Get "js/head.js" | resources.ExecuteAsTemplate "js/head.js" . }}
+{{ if .Site.IsServer }}
+<script src="{{ $jsHead.RelPermalink }}"></script>
+{{ else }}
+{{ $jsHead := $jsHead | minify | fingerprint }}
+<script src="{{ $jsHead.RelPermalink }}" integrity="{{ $jsHead.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
 
-			  link.type = "text/css";
-			  link.rel = "stylesheet";
-			  link.href = {{ printf "%s" "/css/light-theme.css" | relURL }};
-			  link.id = "light-theme"
-
-			  head.prepend(link);
-				
-				document.documentElement.classList.add('light-mode')
-      } 
-  }
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{ hugo.Generator }}
