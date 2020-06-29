@@ -46,9 +46,10 @@ If you do not have access to a Linux operating system or don’t want to use wha
 
 
 
-*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-macos]
-*   [Multipass MacOS Install]([https://multipass.run/docs/installing-on-linux]
-*   [Multipass Windows Install]([https://multipass.run/docs/installing-on-windows]
+*   [Multipass MacOS Install](https://multipass.run/docs/installing-on-macos)
+*   [Multipass MacOS Install](https://multipass.run/docs/installing-on-linux)
+*   [Multipass Windows Install](https://multipass.run/docs/installing-on-windows)
+
 To install using Homebrew:
 
 ```
