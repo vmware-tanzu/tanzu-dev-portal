@@ -122,7 +122,7 @@ Veth devices are always created in interconnected pairs where packets transmitte
 In our example, we are creating two veth pairs. The jelly namespace will connect to the veth-jelly end of the cable, and the other cable end should attach to a bridge that will create the network for our namespaces. We create the same cable and connect it to the bridge on the pb side.
 
 
-![pb&jelly diagram](../../static/images/blogs/container-net-basics/containers.png)
+![pb&jelly diagram](/images/blogs/container-net-basics/containers.png)
 
 
 To create both veth pairs, use the command:
