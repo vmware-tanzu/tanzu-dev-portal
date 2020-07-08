@@ -1,6 +1,7 @@
 ---
 title: Kubernetes
 weight: 2
+featured: true
 topic: Kubernetes
 icon: kubernetes
 description: >
