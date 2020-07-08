@@ -4,6 +4,7 @@ description: >
   Create your first Spring Boot application and deploy it to Kubernetes
 summary:
   - Create your first Spring Boot application and deploy it to Kubernetes
+type: workshop
 topics:
   - Spring
   - Microservices
