@@ -80,6 +80,7 @@ telco
 Thunderdome
 [T,t]o[D,d]o
 toolchain
+unencrypted
 unpause
 versioned
 veth-jelly
@@ -93,6 +94,7 @@ AMQP
 AppSec
 [A,a]rgo(CD|cd)(-k8s)?
 auth
+base64(-encoded)?
 [B,b]uildpack(s|'s)?
 Bundler
 cd
@@ -104,6 +106,7 @@ ConfigurationProperties
 [D,d]ockerfiles?
 DockerHub
 [E,e]thernet(s)?
+etcd
 Finchley
 Github
 [G,g]olang
@@ -203,6 +206,7 @@ JMX
 JPA
 JSON
 JVM
+KMS
 LDAP
 MDN
 MVB(-awarded)?
@@ -224,6 +228,7 @@ RBAC(-enabled)?
 SRE
 TBD
 TCP
+TLS
 UI
 UR[I,L](s)?
 VMs?
