@@ -24,8 +24,6 @@ team:
 - Chris Splinter
 ---
 
-> This blog was written by Chris Splinter who works for DataStax, focusing on open source solutions in the Apache Cassandra ecosystem. As a former automation engineer, Chris is focused on developers and making it easier to build applications through APIs, frameworks, and tools. You can find him on [LinkedIn](https://www.linkedin.com/in/csplinter/).
-
 You can start to build modern, cloud native apps today using the latest innovations from Spring, Cassandra and Kubernetes. This blog will show you code samples and a fully working demo to get you up to speed in minutes with these open-source technologies.
 
 ## Context
@@ -449,3 +447,5 @@ We hope that this blog post provides relevant hands-on material that you can tak
 - [Join the Cassandra mailing list and Slack](https://cassandra.apache.org/community/)
 - [Ask questions](https://community.datastax.com/)
 - [Run Cassandra in the cloud](http://astra.datastax.com/)
+
+> This blog was written by Chris Splinter who works for DataStax, focusing on open source solutions in the Apache Cassandra ecosystem. As a former automation engineer, Chris is focused on developers and making it easier to build applications through APIs, frameworks, and tools. You can find him on [LinkedIn](https://www.linkedin.com/in/csplinter/).
