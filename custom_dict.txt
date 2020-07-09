@@ -23,6 +23,7 @@ biome
 (non-)?cacheable
 codebase
 [C,c]onfig
+COVID-19
 customizable
 deployable
 DevOps(-related)?
@@ -41,6 +42,7 @@ hostname
 kitesurfing
 lifecycle
 Livelessons
+liveness
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
@@ -58,6 +60,7 @@ pb&jelly
 performant
 preload
 prepending
+pre-release
 podcaster
 programmatically
 Quickstart
@@ -93,14 +96,18 @@ Activiti
 AMQP
 AppSec
 [A,a]rgo(CD|cd)(-k8s)?
+Astra
 auth
 base64(-encoded)?
 [B,b]uildpack(s|'s)?
 Bundler
+cass-operator
 cd
 (CF|cf)(-for-k8s)?
+classpath
 CloudEvents
 CRD
+ConfigMap(s)?
 ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
@@ -124,6 +131,7 @@ Kaniko
 kapp
 Kafka
 kata
+keyspace
 Kibana
 Knative
 kpack(-hosted)?
@@ -131,7 +139,7 @@ KubeAcademy
 [K,k]ubeapps
 kubectl
 kubeconfig
-Kubernetes(-native|-specific|-centric)?
+Kubernetes(-native|-specific|-centric|-based)?
 [L,l]inux
 [L,l]og4j2?
 [M,m]acOS
@@ -178,6 +186,8 @@ RestAssured
 
 # Companies / Conferences
 Apress
+DataStax('s|Examples)?
+LinkedIn
 deliverAgile
 CoreOS
 DZone
@@ -194,6 +204,8 @@ APIs?
 brd1
 CLI
 CNI
+CQL
+DAO
 DNS
 EFK
 FP
@@ -212,6 +224,7 @@ MDN
 MVB(-awarded)?
 MVC
 ok
+POJO(s)?
 pb('s)?
 youtube
 integrations
@@ -222,6 +235,7 @@ OCI(-compliant)?
 OOP
 ORM(-based)?
 OWASP
+POJP
 RBAC(-enabled)?
 [s,S]3
 [S,J]DK
@@ -248,6 +262,7 @@ Jernigan
 Julien
 Liles
 Madhav
+Neumann
 Pilimon
 Sathe
 Schutta
