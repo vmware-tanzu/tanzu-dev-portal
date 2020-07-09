@@ -1,6 +1,6 @@
 ---
 title: Event-Driven Architecture
-featured: true
+featured: false
 weight: 3
 description: >
     Learn how asynchronously emitting and consuming events at scale works and take a look at different messaging services and frameworks. 
