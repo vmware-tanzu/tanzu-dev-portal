@@ -23,6 +23,7 @@ biome
 (non-)?cacheable
 codebase
 [C,c]onfig
+COVID-19
 customizable
 deployable
 DevOps(-related)?
