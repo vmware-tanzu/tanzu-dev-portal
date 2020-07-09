@@ -1,6 +1,6 @@
 ---
 title: "Git Switch and Restore: an Improved User Experience"
-featured: true
+featured: false
 description: >
   A look at how the two commands expands Git's vocabulary to specifically deal with a single aspect of the repository.
 date: 2020-06-23
