@@ -91,7 +91,7 @@ spec:
 
 Here, a new pod named `secret-as-file` is created from the [nginx Docker image](https://hub.docker.com/_/nginx). 
 
-> NOTE: The nginx container image is used here simply because it's an easily accesable long-running process, this would look the same for your own container image. 
+> NOTE: The nginx container image is used here simply because it's an easily accessible long-running process, this would look the same for your own container image. 
 
 There are two sections to point out, the first being the `volumes` section, which defines a new volume. Kubernetes has [many different types of volumes to choose from](https://kubernetes.io/docs/concepts/storage/volumes/#types-of-volumes), but for this case you’re specifically interested in creating a [volume of type `secret`](https://kubernetes.io/docs/concepts/storage/volumes/#secret). These volumes are backed by `tmpfs`, a RAM-based file system, rather than written to a persistent disk. Secret volumes require you to define the secret to mount (in the `secretName` field), and for each key in your secret, it creates a file that contains the key’s value. You can see this in action by applying this YAML and then listing the files at the `mountPath`:
 
