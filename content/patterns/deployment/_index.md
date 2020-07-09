@@ -1,6 +1,6 @@
 ---
 title: Deployment and Packaging
-featured: false
+featured: true
 weight: 1
 description: >
     From commit to production—see how code gets from a laptop to running live in production.
