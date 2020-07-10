@@ -3,6 +3,7 @@ on:
   push:
     branches-ignore:
       - main
+      - pr/*
   pull_request:
     branches:
       - main
