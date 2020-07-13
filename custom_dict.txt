@@ -83,6 +83,7 @@ telco
 Thunderdome
 [T,t]o[D,d]o
 toolchain
+unencrypted
 unpause
 versioned
 veth-jelly
@@ -97,6 +98,7 @@ AppSec
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
+base64(-encoded)?
 [B,b]uildpack(s|'s)?
 Bundler
 cass-operator
@@ -111,6 +113,7 @@ ConfigurationProperties
 [D,d]ockerfiles?
 DockerHub
 [E,e]thernet(s)?
+etcd
 Finchley
 Github
 [G,g]olang
@@ -148,6 +151,7 @@ Multipass
 Neo4j
 Netty(-based)?
 nginx
+NGINX
 NoSQL
 OAuth2?
 OpenID
@@ -215,6 +219,7 @@ JMX
 JPA
 JSON
 JVM
+KMS
 LDAP
 MDN
 MVB(-awarded)?
@@ -238,6 +243,7 @@ RBAC(-enabled)?
 SRE
 TBD
 TCP
+TLS
 UI
 UR[I,L](s)?
 VMs?
