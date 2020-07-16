@@ -2,7 +2,7 @@
 
 <div class="td-main ">
 
-<iframe id="myIframe" width="100%" height="3000" style="border:none;position:relative;top:80px;" src="about:blank"></iframe>
+<iframe id="myIframe" width="100%" height="1000" style="border:none;position:relative;top:80px;" src="about:blank"></iframe>
 </div>
 <script>
 function getsite(){
@@ -14,6 +14,12 @@ const url = atob(data.replace(/_/g, '/').replace(/-/g, '+'))
 console.log(url)
 document.getElementById('myIframe').setAttribute('src', url);
 }
+function iframesize(){
+ const vsize = window.innerHeight - 80;
+ console.log(window.innerHeight)
+ document.getElementById('myIframe').setAttribute('height', vsize);
+}
+iframesize()
 getsite()
 </script>
 {{ end }}
