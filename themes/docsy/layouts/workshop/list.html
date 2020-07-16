@@ -24,7 +24,6 @@ async function attempt() {
     }
 	  });
   const myJson = await response.json()
-  console.log(myJson)
   if (myJson.available >= 1) {
     return true
   } else if (myJson.space < 1){
@@ -44,6 +43,7 @@ function processResult(res) {
 function errorHandler(err) {
   document.getElementById('myButton').innerHTML = workshopInUseMessage
 }
+console.log(document.location.search.substring)
 </script>
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
@@ -54,7 +54,7 @@ function errorHandler(err) {
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
-			<a href="https://pgtm-tbritten.uc.r.appspot.com/api/workshop/{{ .Params.portal_num }}/{{ .Params.lab }}" class="btn disabled" role="button" id="myButton" ><span class="fa fa-hourglass-half"></span> Checking for available Workshops..</a>
+			<a href="https://pgtm-tbritten.uc.r.appspot.com/api/workshop-live/{{ .Params.portal_num }}/{{ .Params.lab }}" class="" role="button" id="myButton" ><span class="fa fa-hourglass-half"></span> Checking for available Workshops..</a>
 
 		</div>
 	</div>

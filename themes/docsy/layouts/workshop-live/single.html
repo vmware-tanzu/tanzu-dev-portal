@@ -1,6 +1,19 @@
 {{ define "main" }}
+
 <div class="td-main ">
 
-<iframe id="iframe" width="100%" height="3000" style="border:none;" src="https://lab-spring-boot-k8s-gs-ui.eduk8s.bmcclain.com/workshops/session/lab-spring-boot-k8s-gs-w01-s001/activate/?token=Ifuscqh50EGKTakzm4DObloNVnSP7Cyj&index_url=https%3A%2F%2Ftanzu.vmware.com%2Fdeveloper%2F"></iframe>
+<iframe id="myIframe" width="100%" height="3000" style="border:none;" src="about:blank"></iframe>
 </div>
+<script>
+function getsite(){
+const urlParams = new URLSearchParams(window.location.search);
+const ws = urlParams.get('ws')
+const data = decodeURIComponent(ws)
+console.log(data)
+const url = atob(data.replace(/_/g, '/').replace(/-/g, '+'))
+console.log(url)
+document.getElementById('myIframe').setAttribute('src', url);
+}
+getsite()
+</script>
 {{ end }}
