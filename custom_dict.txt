@@ -131,6 +131,7 @@ Jaeger
 JHipster
 Jsonnet
 [K,k]8s
+[K,k]9s
 Kaniko
 kapp
 Kafka
@@ -279,6 +280,7 @@ Viktor
 Junio
 Hamano
 Maciaszek-Sharma
+Wilcock('s)?
 
 # Twitter Handles
 anthonyjvetter
@@ -287,6 +289,7 @@ starbuxman
 tiffanyfayj
 12SwitchRestoresSansCheckOuts
 OLGA_MACIASZEK
+benbravo73
 
 # Tags
 img
