@@ -93,6 +93,7 @@ whiteboard(ed|ing)
 
 # Tech (projects, products, commands)
 Activiti
+adoptopenjdk
 AMQP
 AppSec
 [A,a]rgo(CD|cd)(-k8s)?
@@ -108,12 +109,14 @@ classpath
 CloudEvents
 CRD
 ConfigMap(s)?
+ConfigurationMap(s)?
 ConfigurationProperties
 [D,d]ebian
 [D,d]ockerfiles?
 DockerHub
 [E,e]thernet(s)?
 etcd
+filesystem
 Finchley
 Github
 [G,g]olang
@@ -121,6 +124,7 @@ Gradle
 Grafana
 [H,h]elmfiles?
 Homebrew
+HyperKit
 init
 InfoQ
 Jaeger
@@ -144,6 +148,7 @@ Kubernetes(-native|-specific|-centric|-based)?
 [L,l]inux
 [L,l]og4j2?
 [M,m]acOS
+Microk8s
 [M,m]inikube
 MockMvc
 msgpack(ed)?
@@ -174,6 +179,7 @@ Tekton('s)?
 Terraform
 Terraform(-ing)?
 Vaadin
+VirtualBox
 vSphere
 WebFlux
 WebSocket
