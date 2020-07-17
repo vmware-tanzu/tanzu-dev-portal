@@ -191,6 +191,8 @@ LoadBalancer
 OpenFeign
 OSS
 RestAssured
+k14s
+Velero
 
 # Companies / Conferences
 Apress
