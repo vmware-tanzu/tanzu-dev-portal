@@ -192,7 +192,7 @@ OpenFeign
 OSS
 RestAssured
 k14s
-velero
+Velero
 
 # Companies / Conferences
 Apress
