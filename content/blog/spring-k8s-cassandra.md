@@ -1,7 +1,7 @@
 ---
 title: "Save Your Stack: Build Cloud Native Apps with Spring, Kubernetes and Cassandra"
 featured: true
-weight: 3
+weight: 2
 description: >
     Build modern, cloud native apps today using the latest innovations from Spring, Cassandra and Kubernetes
 date: 2020-07-08

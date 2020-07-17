@@ -1,8 +1,7 @@
 
 ---
 title: "A Container Is a Linux Namespace and Networking Basics"
-featured: true
-weight: 2
+featured: false
 description: >
     Demystify containers and cover some networking basics
 date: 2020-06-29
