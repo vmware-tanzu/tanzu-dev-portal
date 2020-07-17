@@ -274,7 +274,7 @@ Viktor
 Junio
 Hamano
 Maciaszek-Sharma
-Wilcock('s)
+Wilcock('s)?
 
 # Twitter Handles
 anthonyjvetter
