@@ -12,4 +12,4 @@ menu:
         weight: 1
 ---
 
-Learn nore about how Tanzu and Python perfectly complement each other with our handy [Python developer guides](/guides/python).
+Python is one of the world's most popular programming languages, thanks in no small part to its sheer versatility. People use Python for all sorts of coding tasks from Artificial Intelligence and Data Analysis to DevOps Scripting, Websites, and building Microservices. It's a real Swiss Army Knife amongst programming languages! Learn nore about how Tanzu and Python perfectly complement each other with our handy [Python guides](/guides/python).

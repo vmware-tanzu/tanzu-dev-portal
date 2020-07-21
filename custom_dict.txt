@@ -208,6 +208,8 @@ RedMonk
 SpringOne
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
+Heroku('s)
+Google('s)
 
 # Acronyms
 APIs?
