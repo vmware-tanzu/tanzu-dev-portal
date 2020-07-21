@@ -10,6 +10,7 @@ localhost(:[0-9]*)?
 
 # Missing or Made-up Words
 Agile-ific
+amongst
 analytics
 antipatterns?
 [A,a]rchitecting
@@ -107,6 +108,7 @@ cd
 (CF|cf)(-for-k8s)?
 classpath
 CloudEvents
+Cloudfoundry
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
@@ -118,12 +120,13 @@ DockerHub
 etcd
 filesystem
 Finchley
-Github
+[G,g]ithub
 [G,g]olang
 Gradle
 Grafana
 [H,h]elmfiles?
 Homebrew
+Httpie
 HyperKit
 init
 InfoQ
@@ -162,6 +165,7 @@ NoSQL
 OAuth2?
 OpenID
 Paketo
+Procfile
 PropertySources
 POSTROUTING
 pullPolicy
@@ -208,6 +212,8 @@ RedMonk
 SpringOne
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
+Heroku('s)
+Google('s)
 
 # Acronyms
 APIs?
