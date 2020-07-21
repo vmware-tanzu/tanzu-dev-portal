@@ -16,7 +16,7 @@ team:
 
 ---
 
-Buildpacks are a great way to turn your Python code into Docker containers. They're  open-source, safe, easy to use, and secure. And because buildpacks remove the need for a `Dockerfile`, they dramatically simplify the maintenance of your container images --- particularly useful if you have multiple images to maintain. They're no 'flash-in-the-pan' either. Developed by Heroku in 2011, and also used in Cloudfoundry, buildpacks have built and run millions of production workloads!
+Buildpacks are a great way to turn your Python code into Docker containers. They're  open-source, safe, easy to use, and secure. And because buildpacks remove the need for a `Dockerfile`, they dramatically simplify the maintenance of your container images --- particularly useful if you have multiple images to maintain. They're no 'flash-in-the-pan' either. Developed by Heroku in 2011, and also used in Cloud Foundry, buildpacks have built and run millions of production workloads!
 
 For Python developers, there are currently two implementations of the Buildpack standard which provide Python compatible buildpacks. One is from Google and the other is from Heroku. In this guide, you'll learn how to use Heroku's Python buildpack to create a container image for a sample Python application.
 
@@ -40,7 +40,7 @@ Follow the steps below to quickly create a container image for a Python applicat
 
 ### Get The Sample Python Application
 
-Download the sample Python application from github and make the sample application's folder your current working directory as follows:
+Download the sample Python application from Github and make the sample application's folder your current working directory as follows:
 
 ```bash
 $> git clone https://github.com/benwilcock/buildpacks-python-demo.git
