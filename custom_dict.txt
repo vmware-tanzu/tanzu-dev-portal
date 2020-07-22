@@ -15,6 +15,7 @@ analytics
 antipatterns?
 [A,a]rchitecting
 artisanal
+async
 autoscaling
 Aviv
 (back|front)end
@@ -34,6 +35,7 @@ Endnotes
 failover
 fiancé
 fileshare
+FinTech
 firewalling
 getters
 GitOps
@@ -44,6 +46,7 @@ kitesurfing
 lifecycle
 Livelessons
 liveness
+matchings
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
@@ -52,12 +55,14 @@ middleware
 namespace
 natively
 no-brainer
+nullable
 [O,o]bservability
 old-checkout-desc
 ok
 orchestrator
 overcomplicate
 pb&jelly
+precompiled
 performant
 preload
 prepending
@@ -93,14 +98,20 @@ webhooks?
 whiteboard(ed|ing)
 
 # Tech (projects, products, commands)
+2G
+3G
 Activiti
 adoptopenjdk
+Alpine(-based)?
+amd64
 AMQP
+ARM64
 AppSec
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
 base64(-encoded)?
+Blazor
 [B,b]uildpack(s|'s)?
 Bundler
 cass-operator
@@ -109,6 +120,7 @@ cd
 classpath
 CloudEvents
 Cloudfoundry
+CoreCLR
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
@@ -167,6 +179,8 @@ OpenID
 Paketo
 Procfile
 PropertySources
+[P,p]roto
+Protobuf
 POSTROUTING
 pullPolicy
 RabbitMQ('s)?
@@ -174,6 +188,7 @@ Resilience4J
 Riak
 rkt
 RSocket(-based)?
+SameSite
 [S,s]kaffold
 spring-petclinic
 STDOUT
@@ -226,8 +241,10 @@ DNS
 EFK
 FP
 GAC
+GC
 GC(L|P|R)
 GKE
+gRPC
 IaaS
 (IP|ip)(v6|v4|s)?
 JMX
@@ -236,6 +253,7 @@ JSON
 JVM
 KMS
 LDAP
+LTS
 MDN
 MVB(-awarded)?
 MVC
@@ -262,6 +280,7 @@ TLS
 UI
 UR[I,L](s)?
 VMs?
+x64
 XKCD
 YAML|yaml
 
