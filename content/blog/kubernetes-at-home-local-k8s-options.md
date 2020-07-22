@@ -300,3 +300,5 @@ Again, you’ll see the frontend application running from the mounted directory 
 ## Thinking Ahead
 
 You’ve now learned three different ways to accomplish the same goal: Develop code that relies on the Kubernetes API locally. Although each solution takes a slightly different approach—some providing helping tools baked in their own solution,  others choosing not to deviate from the standard toolkit of Kubernetes—each one allows you to iterate and test your code easily and quickly. Give them a try and see which one best fits your needs!
+
+> Acknowledgement: This blog was inspired by research done by Denny Herbrich. Denny is a part of the Platform Engineering team at VMware, and you can find him on [LinkedIn](https://www.linkedin.com/in/denny-herbrich/) as well as [Medium](https://medium.com/@denny.herbrich).
