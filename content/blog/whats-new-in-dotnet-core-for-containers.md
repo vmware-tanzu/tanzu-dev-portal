@@ -4,11 +4,14 @@ featured: true
 weight: 3
 description: >
     Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads 
-date: 2020-07-17
+date: 2020-07-22
 topics:
-- Kubernetes
+- Containers
+- Microservices
 tags:
-- Kubernetes
+- Containers
+- Microservices
+- .NET
 patterns:
 - Deployment
 # Author(s)
