@@ -91,9 +91,22 @@ limitations under the License.
               'autoSize'  : false,
               fitToView   : true
             });
+            return false;
+            });
 
-          return false;
-        });
+        // open dev portal auth in lightbox
+        $("a#workshopButton").click(function() {
+            var href = $(this).attr('href');
+            $.fancybox({
+                'padding'   : 0,
+                'href'      : href,
+                'type'      : 'iframe',
+                'width'     : 400,
+                'height'    : 400,
+                fitToView   : true
+              });
+              return false;
+            });
 
         //Copy videos index iframe embed URLs to parent for lightbox
         $(".youtube-container").each(function(){

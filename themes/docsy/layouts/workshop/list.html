@@ -34,17 +34,17 @@ async function attempt() {
 }
 function processResult(res) {
   if (res){
-  	document.getElementById('myButton').innerHTML = '<span class="fa fa-cog"></span> Start Workshop'
-	document.getElementById('myButton').className = 'btn'
+  	document.getElementById('workshopButton').innerHTML = '<span class="fa fa-cog"></span> Start Workshop'
+	document.getElementById('workshopButton').className = 'btn lightbox'
 	} else {
-	document.getElementById('myButton').innerHTML = workshopInUseMessage
+	document.getElementById('workshopButton').innerHTML = workshopInUseMessage
 	}
 }
 function errorHandler(err) {
-  document.getElementById('myButton').innerHTML = workshopInUseMessage
+  document.getElementById('workshopButton').innerHTML = workshopInUseMessage
 }
-console.log(document.location.search.substring)
 </script>
+
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
 		<div class='container'>
@@ -54,7 +54,7 @@ console.log(document.location.search.substring)
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
-			<a href="https://pgtm-tbritten.uc.r.appspot.com/api/workshop-live/{{ .Params.portal_num }}/{{ .Params.lab }}" class="disabled" role="button" id="myButton" ><span class="fa fa-hourglass-half"></span> Checking for available Workshops..</a>
+			<a href="https://pgtm-tbritten.uc.r.appspot.com//api/workshop-live/{{ .Params.portal_num }}/{{ .Params.lab }}" class="lightbox" role="button" id="workshopButton" target=“_blank” ><span class="fa fa-hourglass-half"></span> Checking for available Workshops..</a>
 
 		</div>
 	</div>
