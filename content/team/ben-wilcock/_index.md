@@ -1,6 +1,6 @@
 ---
 name: Ben Wilcock
-description: "Snr Technical Marketing Manager"
+description: "Technical Marketing Manager"
 photo: "/images/team/ben.jpg"
 roles: ["author"]
 skills: ["Spring", "Python", "Kubernetes", "Cloud Foundry"]
