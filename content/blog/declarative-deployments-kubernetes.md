@@ -60,13 +60,13 @@ A sample application, including step-by-step instructions, source code and Kuber
 
 #### Pros:
 * Zero downtime during the update process
-* Ability to control the rate of a new container rollout
+* Ability to control the rate of a new container roll-out
 
 #### Cons:
 * During the update, two versions of the container are running at the same time
 
 #### How does it work:
-* Deployment creates a new ReplicaSet and the respective Pods
+* Deployment creates a new Replica Set and the respective Pods
 * Deployment replaces the old containers with the previous application version with the new ones
 * Deployment allows you to control the range of available and excess Pods
 
@@ -177,7 +177,7 @@ spec:
 * Allows precise control of switching to the new application version
 
 #### Cons:
-* Requires 2x capacity while both blue and green versions are up 
+* Requires twice the capacity while both blue and green versions are up 
 * Manual intervention for switching versions
 
 #### How does it work :
