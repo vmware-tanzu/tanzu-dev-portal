@@ -99,6 +99,7 @@ webhooks?
 whiteboard(ed|ing)
 defacto
 Dockerfile-built
+Hashicorp
 
 # Tech (projects, products, commands)
 2G
