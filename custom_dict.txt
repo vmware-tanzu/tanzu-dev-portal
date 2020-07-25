@@ -97,10 +97,14 @@ veth-jelly
 walkthrough
 webhooks?
 whiteboard(ed|ing)
+defacto
+Dockerfile-built
+Hashicorp
 
 # Tech (projects, products, commands)
 2G
 3G
+PropertySources
 Activiti
 adoptopenjdk
 Alpine(-based)?
