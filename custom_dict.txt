@@ -81,6 +81,7 @@ screencaster
 [S,s]erverless
 [S,s]ervlets?
 (de)*serialize[d,r]
+Sox
 stateful
 suboptimal
 symposia
@@ -191,6 +192,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 spring-petclinic
+Steeltoe
 STDOUT
 sudo
 Tanzu(Developer)?
@@ -261,6 +263,7 @@ ok
 POJO(s)?
 pb('s)?
 youtube
+IIS
 integrations
 SaaS-based
 NFJS
@@ -288,6 +291,7 @@ YAML|yaml
 Brindley
 Coté
 Czarkowski('s)?
+Dieruf
 Dubois
 freddygthatsme
 Gibb
