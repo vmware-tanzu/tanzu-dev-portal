@@ -97,6 +97,8 @@ veth-jelly
 walkthrough
 webhooks?
 whiteboard(ed|ing)
+defacto
+Dockerfile-built
 
 # Tech (projects, products, commands)
 2G
