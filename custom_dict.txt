@@ -81,6 +81,7 @@ screencaster
 [S,s]erverless
 [S,s]ervlets?
 (de)*serialize[d,r]
+Sox
 stateful
 suboptimal
 symposia
@@ -96,10 +97,14 @@ veth-jelly
 walkthrough
 webhooks?
 whiteboard(ed|ing)
+defacto
+Dockerfile-built
+Hashicorp
 
 # Tech (projects, products, commands)
 2G
 3G
+PropertySources
 Activiti
 adoptopenjdk
 Alpine(-based)?
@@ -191,6 +196,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 spring-petclinic
+Steeltoe
 STDOUT
 sudo
 Tanzu(Developer)?
@@ -261,6 +267,7 @@ ok
 POJO(s)?
 pb('s)?
 youtube
+IIS
 integrations
 SaaS-based
 NFJS
@@ -288,6 +295,7 @@ YAML|yaml
 Brindley
 Coté
 Czarkowski('s)?
+Dieruf
 Dubois
 freddygthatsme
 Gibb
