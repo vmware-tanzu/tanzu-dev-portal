@@ -73,11 +73,9 @@ limitations under the License.
                 $('html').addClass('light-mode');
                 changeTheme("light");
                 localStorage.setItem("light-dark-mode-storage", "light");
-                if (iframe && iframe.contentWindow) {
-                    iframe.contentWindow.postMessage('light', '*');
                   }
             }
-        });
+        );
 
         //Open external links/rss in new tab, tvc links in same tab
         $("a[href^='http']").attr('target', '_blank');

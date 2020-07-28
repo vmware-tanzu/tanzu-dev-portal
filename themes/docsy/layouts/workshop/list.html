@@ -9,7 +9,17 @@
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
-			<iframe id="auth-iframe" width="500" height="50" style="border:none;position:relative;" src="http://localhost:8000/workshop/{{ .Params.portal_num }}/{{ .Params.lab }}"></iframe>	
+			<iframe id="auth-iframe" width="700" height="50" style="border:none;position:relative;" scrolling="no" src="http://localhost:8000/workshop/{{ .Params.portal_num }}/{{ .Params.lab }}">
+			</iframe>	
+				<script type="text/javascript">
+					var iframe = document.getElementById('auth-iframe')
+					iframe.onload = function() {
+					var mode = localStorage.getItem("light-dark-mode-storage") || "dark";
+					if (mode === "light") {
+							iframe.contentWindow.postMessage('light', '*');
+					}
+					}
+				</script>
 		</div>
 	</div>
 	<div class="container py-5">
