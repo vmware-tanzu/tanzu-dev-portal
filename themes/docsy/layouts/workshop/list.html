@@ -13,6 +13,7 @@
 			</iframe>	
 				<script type="text/javascript">
 					var iframe = document.getElementById('auth-iframe')
+					iframe.src = iframe.src + "?url=" + window.location.href 
 					iframe.onload = function() {
 					var mode = localStorage.getItem("light-dark-mode-storage") || "dark";
 					if (mode === "light") {
