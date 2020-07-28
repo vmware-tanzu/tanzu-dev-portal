@@ -61,14 +61,21 @@ limitations under the License.
 
         //Light/dark toggle
         $('#toggle-light-dark-mode').click(function(){
+            var iframe = document.getElementById('auth-iframe');
             if ($('html').hasClass('light-mode')) {
                 $('html').removeClass('light-mode');
                 document.getElementById("light-theme").remove();
                 localStorage.setItem("light-dark-mode-storage", "dark");
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage('dark', '*');
+                  }
             } else {
                 $('html').addClass('light-mode');
                 changeTheme("light");
                 localStorage.setItem("light-dark-mode-storage", "light");
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage('light', '*');
+                  }
             }
         });
 
@@ -92,20 +99,6 @@ limitations under the License.
               fitToView   : true
             });
             return false;
-            });
-
-        // open dev portal auth in lightbox
-        $("a#workshopButton").click(function() {
-            var href = $(this).attr('href');
-            $.fancybox({
-                'padding'   : 0,
-                'href'      : href,
-                'type'      : 'iframe',
-                'width'     : 400,
-                'height'    : 400,
-                fitToView   : true
-              });
-              return false;
             });
 
         //Copy videos index iframe embed URLs to parent for lightbox

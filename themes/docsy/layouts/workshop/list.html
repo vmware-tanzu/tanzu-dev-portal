@@ -1,49 +1,4 @@
 {{ define "main" }}
-<script>
-const workshopInUseMessage =  '<span class="fa fa-unlink"></span> All Workshops in use. Please Try again later'
-var t = 500;
-var max = 10;
-
-function rejectDelay(reason) {
-  return new Promise((resolve, reject) => {
-    setTimeout(reject.bind(null, reason), t);
-  });
-}
-
-var p = Promise.reject();
-for (var i = 0; i < max; i++) {
-  p = p.catch(attempt).catch(rejectDelay);
-}
-p = p.then(processResult).catch(errorHandler);
-
-async function attempt() {
-  const response = await fetch('https://pgtm-tbritten.uc.r.appspot.com/api/available/{{ .Params.portal_num }}/{{ .Params.lab }}', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-	  });
-  const myJson = await response.json()
-  if (myJson.available >= 1) {
-    return true
-  } else if (myJson.space < 1){
-    return false;
-  } else {
-    throw "NO SESSIONS"
-  }
-}
-function processResult(res) {
-  if (res){
-  	document.getElementById('workshopButton').innerHTML = '<span class="fa fa-cog"></span> Start Workshop'
-	document.getElementById('workshopButton').className = 'btn lightbox'
-	} else {
-	document.getElementById('workshopButton').innerHTML = workshopInUseMessage
-	}
-}
-function errorHandler(err) {
-  document.getElementById('workshopButton').innerHTML = workshopInUseMessage
-}
-</script>
 
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
@@ -54,8 +9,7 @@ function errorHandler(err) {
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
-			<a href="https://pgtm-tbritten.uc.r.appspot.com//api/workshop-live/{{ .Params.portal_num }}/{{ .Params.lab }}" class="lightbox" role="button" id="workshopButton" target=“_blank” ><span class="fa fa-hourglass-half"></span> Checking for available Workshops..</a>
-
+			<iframe id="auth-iframe" width="500" height="50" style="border:none;position:relative;" src="http://localhost:8000/workshop/{{ .Params.portal_num }}/{{ .Params.lab }}"></iframe>	
 		</div>
 	</div>
 	<div class="container py-5">
