@@ -2,8 +2,11 @@ name: Check Spelling and Broken Links
 on:
   push:
     branches-ignore:
-      - master
-
+      - main
+      - pr/*
+  pull_request:
+    branches:
+      - main
 jobs:
   spell-check:
     runs-on: ubuntu-latest

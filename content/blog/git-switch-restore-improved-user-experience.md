@@ -1,6 +1,6 @@
 ---
 title: "Git Switch and Restore: an Improved User Experience"
-featured: true
+featured: false
 description: >
   A look at how the two commands expands Git's vocabulary to specifically deal with a single aspect of the repository.
 date: 2020-06-23
@@ -188,6 +188,8 @@ Here's my challenge to you: start using `git switch` and `git restore`! To make 
 If you've feedback on these commands, feel free to drop an email to the Git mailing list where development happens; see [this note](https://github.com/git/git/blob/todo/MaintNotes) for details.
 
 I hope this improved user experience will be a part of your daily workflow—better yet, of your muscle memory.
+
+*Many thanks to [Dave Barnes](https://github.com/davebarnes97) and [Liza](https://github.com/lizanys) for reading early versions of this post!*
 
 ### Further reading
 
