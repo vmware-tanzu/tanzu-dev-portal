@@ -2,14 +2,15 @@
 title:  "Production Python With Cloud Foundry: Getting Started"
 sortTitle: "Python Cloud Foundry"
 weight: 2
-categories:
+topics:
 - Python
 - Containers
 tags:
-- cloud-foundry
-- python
-- buildpacks
-# Author(s)
+- Cloud-foundry
+- Python
+- Buildpacks
+patterns:
+- Deployment
 team:
 - Ben Wilcock
 ---
@@ -266,7 +267,7 @@ Most Cloud Foundry installations include a Python Buildpack. But did you know th
 
 Did you know that you can run Cloud Foundry directly on top of Kubernetes? That means you can get the same smooth `cf push` experience on your Kubernetes cluster. Just think, less YAML, less `kubectl`, less stress! You can get started with our [CF for K8s guide][cf-on-k8s].
 
-And if you'd prefer to see the Cloud Foundry in action without actually following the steps above, check out the accompanying YouTube video guide:
+And if you'd prefer to see the Cloud Foundry in action without actually following the steps above, check out our video guide:
 
 {{< youtube qLg2xtQ5kTA >}}
 
