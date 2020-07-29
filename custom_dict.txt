@@ -23,6 +23,7 @@ balancers?
 biome
 [B,b]ootiful
 (non-)?cacheable
+cfapps
 codebase
 [C,c]onfig
 COVID-19
@@ -31,6 +32,7 @@ deployable
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
+[D,d]ev[R,r]el
 Endnotes
 failover
 fiancé
@@ -60,8 +62,11 @@ nullable
 old-checkout-desc
 ok
 orchestrator
+org(s)?
 overcomplicate
 pb&jelly
+passcode
+PASSCODE
 precompiled
 performant
 preload
@@ -70,6 +75,7 @@ pre-release
 podcaster
 programmatically
 Quickstart
+quokka
 README
 [R,r]ebase
 [R,r]epos?
@@ -80,6 +86,8 @@ scalable
 screencaster
 [S,s]erverless
 [S,s]ervlets?
+sso
+SSO
 (de)*serialize[d,r]
 Sox
 stateful
