@@ -77,6 +77,7 @@ programmatically
 Quickstart
 quokka
 README
+realtime
 [R,r]ebase
 [R,r]epos?
 [R,r]oadmap
@@ -152,6 +153,7 @@ Grafana
 [H,h]elmfiles?
 Homebrew
 Httpie
+HTTPie
 HyperKit
 init
 InfoQ
@@ -211,6 +213,8 @@ Tanzu(Developer)?
 Tekton('s)?
 Terraform
 Terraform(-ing)?
+URL(s)?
+url
 Vaadin
 VirtualBox
 vSphere

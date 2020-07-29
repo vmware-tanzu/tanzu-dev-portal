@@ -19,7 +19,7 @@ In this guide, you'll learn how to get a Python application into production in s
 
 ### What Is Cloud Foundry?
 
-Cloud Foundry is an open-source platform that simplifies the lives of developers. Cloud Foundry's ['Application Runtime'][cfar] takes your application code --- written in Python or a number of other languages or frameworks --- and runs it on any cloud, including Azure, AWS, GCP, Kubernetes, or even VSphere VMs.
+Cloud Foundry is an open-source platform that simplifies the lives of developers. Cloud Foundry's ['Application Runtime'][cfar] takes your application code --- written in Python or a number of other languages or frameworks --- and runs it on any cloud, including Azure, AWS, GCP, Kubernetes, or even vSphere VMs.
 
 A unique feature of Cloud Foundry is its smooth developer experience. Using a single command you can have your code running in a safe, secure, and stable environment in seconds. Once running, Cloud Foundry takes care of everything else including log streaming, health monitoring, scaling, networking, load-balancing, and makes everyday chores like starting and stopping applications a breeze. 
 
