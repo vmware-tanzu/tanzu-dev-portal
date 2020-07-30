@@ -1,5 +1,5 @@
 ---
-title:  "Python Buildpacks: Getting Started"
+title:  "Building Python Containers: Getting Started"
 sortTitle: "Python Buildpacks"
 weight: 2
 topics:
@@ -16,7 +16,9 @@ team:
 
 ---
 
-Buildpacks are a great way to turn your Python code into Docker containers. They're  open-source, safe, easy to use, and secure. And because buildpacks remove the need for a `Dockerfile`, they dramatically simplify the maintenance of your container images --- particularly useful if you have multiple images to maintain. They're no 'flash-in-the-pan' either. Developed by Heroku in 2011, and also used in Cloud Foundry, buildpacks have built and run millions of production workloads!
+Packaging your application code into Docker containers is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.
+
+And because buildpacks completely remove the need for a `Dockerfile`, they dramatically simplify the maintenance of your container images --- particularly useful if you have multiple images to maintain. They're no 'flash-in-the-pan' either. Developed by Heroku in 2011, and also used in Cloud Foundry, buildpacks have built and run millions of production workloads!
 
 For Python developers, there are currently two implementations of the Buildpack standard which provide Python compatible buildpacks. One is from Google and the other is from Heroku. In this guide, you'll learn how to use Heroku's Python buildpack to create a container image for a sample Python application.
 
@@ -43,9 +45,8 @@ Follow the steps below to quickly create a container image for a Python applicat
 Download the sample Python application from Github and make the sample application's folder your current working directory as follows:
 
 ```bash
-$> git clone https://github.com/benwilcock/buildpacks-python-demo.git
-
-$> cd buildpacks-python-demo
+> git clone https://github.com/benwilcock/buildpacks-python-demo.git
+> cd buildpacks-python-demo
 ```
 
 In the folder you will notice three text files, `web.py`, `requirements.txt`, and `Procfile`.
@@ -90,7 +91,7 @@ web: FLASK_APP=web.py python3 -m flask run --host=0.0.0.0 --port=$PORT
 There are many implementations of the [Buildpacks][bp-website] standard. These implementations are called 'builders'. To discover the very latest list of suggested builders, use the `pack suggest-builders` command as follows: 
 
 ```bash
-$> pack suggest-builders
+> pack suggest-builders
 
 Suggested builders:
 	Google:                gcr.io/buildpacks/builder:v1                 Ubuntu 18 base image with buildpacks for .NET, Go, Java, Node.js, and Python
@@ -106,7 +107,7 @@ As you can see, both [Heroku][heroku-python-bp] and [Google Cloud Platform][goog
 Copy the name of the builder that you want to set as your default from the list above --- in this case it's `heroku/buildpacks:18` --- and use the `pack set-default-builder` command to set this buildpack as the default as shown below:
 
 ```bash
-$> pack set-default-builder heroku/buildpacks:18
+> pack set-default-builder heroku/buildpacks:18
 Builder heroku/buildpacks:18 is now the default builder
 ```
 
@@ -115,7 +116,7 @@ Builder heroku/buildpacks:18 is now the default builder
 To run the builder and create your Python application container image, use the command `pack build`. Be sure to also specify an image name for the container in the format "&lt;repository&gt;/&lt;container-name&gt;:&lt;tag&gt;" as shown in the following example:
 
 ```bash
-$> pack build benwilcock/python-sample:1.0.0
+> pack build benwilcock/python-sample:1.0.0
 ```
 
 The process of building the image will now begin. The first time you do this, you will notice that docker is downloading a series of container image 'layers.' This is because buildpacks are also containers, so they must first be pulled by Docker before the buildpack can be run locally. Once these images are in your cache, the process is much quicker. The output looks something like this:
@@ -157,7 +158,7 @@ Successfully built image benwilcock/python-sample:1.0.0
 When you see the words "Successfully built image" the process is complete. Your new container image will now be available in your local Docker image repository. You can list the images in your local repository with the command `docker images`.
 
 ```bash
-%> docker images
+> docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 benwilcock/python-sample    1.0.0               59843a212207        40 years ago        651MB
 ```
@@ -169,13 +170,13 @@ benwilcock/python-sample    1.0.0               59843a212207        40 years ago
 Testing the container is no more difficult than running the image with the `docker run` command as follows:
 
 ```bash
-$> docker run -d -ePORT=8080 -p8080:8080 --name python-sample benwilcock/python-sample:1.0.0
+> docker run -d -ePORT=8080 -p8080:8080 --name python-sample benwilcock/python-sample:1.0.0
 ```
 
 Now the container image of your application is running in the background, simply query the `http://localhost:8080` endpoint, either using a command-line tool like [Httpie][httpie] as shown below, or a regular web browser.
 
 ```bash
-$> http localhost:8080/
+> http localhost:8080/
 ```
 
 Your application will respond with the legend "Hello, World!" like so:
@@ -197,8 +198,8 @@ And you're done! You built your sample Python application into an OCI compliant 
 You can stop and remove the container from Docker as follows:
 
 ```bash
-$> docker stop python-sample
-$> docker rm python-sample
+> docker stop python-sample
+> docker rm python-sample
 ```
 
 ### Keep Learning

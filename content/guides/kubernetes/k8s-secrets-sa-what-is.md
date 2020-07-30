@@ -30,7 +30,7 @@ metadata:
   name: mysecret
 type: Opaque
 data:
-  username: bXl1c2VybmFtZQo= #Base64 encoded value of "mysuername"
+  username: bXl1c2VybmFtZQo= #Base64 encoded value of "myusername"
   password: bXlwYXNzd29yZAo= #Base64 encoded value of "mypassword"
 ```
 
