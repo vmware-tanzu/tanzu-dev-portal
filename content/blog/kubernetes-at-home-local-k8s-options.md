@@ -1,7 +1,6 @@
 ---
 title: "Kubernetes at Home: Local k8s Options"
-featured: true
-weight: 3
+featured: false
 description: >
     Compare various options for developing on top of Kubernetes locally using Minikube, kind, and Docker Desktop.
 date: 2020-07-17

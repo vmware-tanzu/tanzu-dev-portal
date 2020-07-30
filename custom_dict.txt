@@ -81,6 +81,7 @@ realtime
 [R,r]ebase
 [R,r]epos?
 [R,r]oadmap
+rollout
 runtimes?
 runnable
 scalable
