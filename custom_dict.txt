@@ -81,6 +81,7 @@ realtime
 [R,r]ebase
 [R,r]epos?
 [R,r]oadmap
+rollout
 runtimes?
 runnable
 scalable
@@ -308,6 +309,7 @@ Brindley
 Coté
 Czarkowski('s)?
 Dieruf
+Dobrin
 Dubois
 freddygthatsme
 Gibb
