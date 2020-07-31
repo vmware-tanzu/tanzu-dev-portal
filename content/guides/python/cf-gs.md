@@ -15,11 +15,17 @@ team:
 - Ben Wilcock
 ---
 
-In this guide, you'll learn how to get a Python application into production in seconds using the open-source [Cloud Foundry][cloud-foundry] platform. You don't __*have*__ to use production to follow this tutorial, but that's where your users meet your code and where you get recognition for all your hard work. As [Josh Long](/team/josh-long) says, "production is the best place on the internet." Getting there quickly and regularly is a huge win for you and your team. So, let's go!
+In this guide, you'll learn how to get a Python application into production in seconds. 
+
+Production is super important. It's where your users meet your code and where you get recognition for all the hard work you've put in. Production is where your company competes, and where it gets rewarded for all the risks it's taken --- large and small.
+
+Getting code into production quickly and regularly is life changing for developers like yourself. It opens the door to true agility --- a huge win for you, your team, and your company. But if the path to production is littered with roadblocks, getting your applications out there will be tiring and time consuming. 
+
+That's where Cloud Foundry comes in. 
 
 ### What Is Cloud Foundry?
 
-Cloud Foundry is an open-source platform that simplifies the lives of developers. Cloud Foundry's ['Application Runtime'][cfar] takes your application code --- written in Python or a number of other languages or frameworks --- and runs it on any cloud, including Azure, AWS, GCP, Kubernetes, or even vSphere VMs.
+[Cloud Foundry][cloud-foundry] is an open-source platform that simplifies the lives of developers. Cloud Foundry's ['Application Runtime'][cfar] takes your application code --- written in Python or a number of other languages or frameworks --- and runs it on any cloud, including Azure, AWS, GCP, Kubernetes, or even vSphere VMs.
 
 A unique feature of Cloud Foundry is its smooth developer experience. Using a single command you can have your code running in a safe, secure, and stable environment in seconds. Once running, Cloud Foundry takes care of everything else including log streaming, health monitoring, scaling, networking, load-balancing, and makes everyday chores like starting and stopping applications a breeze. 
 
