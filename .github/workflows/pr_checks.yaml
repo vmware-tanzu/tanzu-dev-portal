@@ -1,9 +1,5 @@
 name: Check Spelling and Broken Links
 on:
-  push:
-    branches-ignore:
-      - main
-      - pr/*
   pull_request:
     branches:
       - main
