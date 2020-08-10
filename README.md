@@ -2,7 +2,7 @@
 
 ## Building the Site
 
-The VMware Tanzu Developer Portal uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. 
+The VMware Tanzu Developer Portal uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
 
 ### Run locally
 
@@ -18,6 +18,13 @@ _Note: You may have to `brew upgrade` if you get this error: "parse failed: temp
 You may wish to explicitly set `baseURL` to http://localhost:1313/developer in order to mimic what happens in production at https://tanzu.vmware.com/developer. Use the following command to do this:
 
 `hugo server -b http://localhost:1313/developer`
+
+### Run tests locally
+
+> Note: requires Docker
+
+1. Install [act](https://github.com/nektos/act#installation)
+2. Run `act pull_request`
 
 ### Publish to PWS
 Once you have the site successfully running locally, you may publish it to the staging site running on PWS as follows.
@@ -108,5 +115,5 @@ Hugo allows the use of [shortcodes](https://gohugo.io/content-management/shortco
 
 ### Markdown Tricks
 
-- For an &ndash; (--) use two hyphens in a row 
-- For an &mdash; (---) use three hyphens in a row 
+- For an &ndash; (--) use two hyphens in a row
+- For an &mdash; (---) use three hyphens in a row
