@@ -2,11 +2,12 @@
 title:  "{{ replace (replace .Name "-" " " | title) " Gs" "" -}}: Getting Started"
 sortTitle: "{{ replace (replace .Name "-" " " | title) " Gs" "" }}"
 weight: 2
-categories:
+topics:
 - 
 tags:
 - {{ replace .Name "-gs" "" }}
-# Author(s)
+patterns:
+-
 team:
 -
 ---

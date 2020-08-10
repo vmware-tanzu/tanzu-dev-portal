@@ -5,7 +5,7 @@
   	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
     <h1 class="h1 mt-4 pt-2"> {{- .Title -}}</h1>
-		<div class="lead"><p>{{- .Params.description}}</p></div>
+		<div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
 
     {{ if .Params.streaming }}
     <div id="twitch-embed"></div>

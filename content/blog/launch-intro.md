@@ -1,6 +1,6 @@
 ---
 title: "A Place to Build Apps and Build Skills"
-featured: true
+featured: false
 description: >
     Meet the VMware Tanzu Developer Center.
 date: 2020-05-07
