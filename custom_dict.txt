@@ -231,6 +231,11 @@ OSS
 RestAssured
 k14s
 Velero
+Rockstar
+JSR-352
+EE
+JBatch
+InfoSec
 
 # Companies / Conferences
 Apress
@@ -248,6 +253,8 @@ SpringOne
 VMware(-hosted|'s|Tanzu)?
 Heroku('s)
 Google('s)
+DevOpsDaysKC
+JavaOne
 
 # Acronyms
 APIs?
@@ -331,6 +338,8 @@ Junio
 Hamano
 Maciaszek-Sharma
 Wilcock('s)?
+DaShaun
+Minella
 
 # Twitter Handles
 anthonyjvetter
