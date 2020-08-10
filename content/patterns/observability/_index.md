@@ -1,6 +1,6 @@
 ---
 title: Observability
-featured: true
+featured: false
 weight: 1
 description: >
     Observability allows developers and operators a better look into their applications, and can help pinpoint an issue when something goes wrong.

@@ -1,6 +1,6 @@
 ---
 title: APIs
-featured: true
+featured: false
 weight: 1
 description: >
     Learn API design, implementation, operation—everything from the basics of REST to building an API from scratch.
