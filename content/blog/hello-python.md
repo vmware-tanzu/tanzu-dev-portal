@@ -151,3 +151,5 @@ With this configuration, a file is created from the ConfigMap named `config.cfg`
 In putting together this post, I was reminded of what an enjoyable experience it is to write in Python. I was also very happy to see how easily we can use it to leverage more modern technologies, such as Kubernetes and Cloud Native Buildpacks. Indeed, Python is lightweight, and can result in fairly slim container images.  Flask, meanwhile, proves to be a great framework for developing modern applications. 
 
 Of course, there would be a lot more to consider if we were writing a production application, such as logging, metrics, a proper web server to back our code, and much more. But it makes sense that Python has had such a hold on the software community, and it’s exciting to see that it’s only getting stronger. If, like me, you want to learn more, I suggest checking out some of the other content that [Ben](/team/ben-wilcock) has been making, such as [running Python in production](/guides/python/cf-gs/). For even more Python content, make sure to check out the Python section of the [Python topic page](/topics/python/) for guides and videos!
+
+{{< youtube JS_YIn49xuw >}}
