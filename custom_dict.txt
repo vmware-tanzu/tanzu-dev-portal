@@ -151,6 +151,7 @@ Finchley
 [G,g]olang
 Gradle
 Grafana
+gotchas
 [H,h]elmfiles?
 Homebrew
 Httpie
@@ -199,6 +200,8 @@ PropertySources
 Protobuf
 POSTROUTING
 pullPolicy
+pyenv
+PipX
 RabbitMQ('s)?
 Resilience4J
 Riak
@@ -218,6 +221,7 @@ URL(s)?
 url
 Vaadin
 VirtualBox
+virtualenv
 vSphere
 WebFlux
 WebSocket
