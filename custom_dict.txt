@@ -201,6 +201,7 @@ Protobuf
 POSTROUTING
 pullPolicy
 pyenv
+PipX
 RabbitMQ('s)?
 Resilience4J
 Riak
