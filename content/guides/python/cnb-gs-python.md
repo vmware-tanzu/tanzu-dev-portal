@@ -1,7 +1,9 @@
 ---
 title:  "Building Python Containers: Getting Started"
+featured: true
 sortTitle: "Python Buildpacks"
 weight: 2
+description: "Use Buildpacks to packaging your Python application code into Docker containers."
 topics:
 - Python
 - Containers
