@@ -247,7 +247,9 @@ DZone
 EMC
 HashiCorp
 Heptio
-RedMonk
+JetBrains
+Octoverse
+RedMonk('s)?
 SpringOne
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
