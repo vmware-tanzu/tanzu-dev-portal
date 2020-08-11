@@ -1,7 +1,7 @@
 ---
 title: "Hello Python, My Old Friend: Revisiting Python in a Cloud-Native Climate"
 featured: true
-weight: 1
+weight: 2
 description: >
     How does Python look in the cloud-native world of today?
 date: 2020-08-11
