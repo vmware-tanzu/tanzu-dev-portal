@@ -1,7 +1,9 @@
 ---
-title:  "Running Python In Production: Getting Started"
+title:  "Running Python In Production Like A Pro: Getting Started"
+featured: true
 sortTitle: "Python Cloud Foundry"
 weight: 2
+description: "Get your code into production in double-quick time. No meetings. No managers. Just push & go!"
 topics:
 - Python
 - Containers
