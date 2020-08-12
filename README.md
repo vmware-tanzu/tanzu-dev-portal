@@ -69,7 +69,7 @@ Hugo defines [Taxonomies](https://gohugo.io/content-management/taxonomies/) that
 Use the `team` taxonomy to attribute one or more authors to a piece of content.
 
 #### Topics
-Topics should always be included in the `topics` section of the front matter, must be one of the following nine options and must appear exactly as follows:
+Topics should always be included in the `topics` section of the front matter, must be one of the following options and must appear exactly as follows:
 
 - CI-CD
 - Containers
