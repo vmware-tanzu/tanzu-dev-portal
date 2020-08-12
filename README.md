@@ -77,6 +77,7 @@ Topics should always be included in the `topics` section of the front matter, mu
 - Kubernetes
 - Messaging and Integration
 - Microservices
+- Python
 - Reactive
 - Serverless
 - Spring
