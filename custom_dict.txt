@@ -186,6 +186,7 @@ MockMvc
 msgpack(ed)?
 Multipass
 [N,n]amespace(s)?
+[N,n]ano
 Neo4j
 Netty(-based)?
 nginx
@@ -198,9 +199,11 @@ Procfile
 PropertySources
 [P,p]roto
 Protobuf
+pre-installed
 POSTROUTING
 pullPolicy
 [P,p]yenv
+pyenv-installer
 PipX
 RabbitMQ('s)?
 Resilience4J
