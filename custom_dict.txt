@@ -200,7 +200,7 @@ PropertySources
 Protobuf
 POSTROUTING
 pullPolicy
-pyenv
+[P,p]yenv
 PipX
 RabbitMQ('s)?
 Resilience4J

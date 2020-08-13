@@ -24,7 +24,7 @@ So in this guide, you'll learn how to install many different versions of Python 
 
 ### Before You Begin
 
-There's a lot of different OS and package management choices out there.  But in the [Python Survey][survey] mentioned earlier, Linux was shown to be the most popular OS. [Ubuntu 20.04][ubuntu] has been chosen as the baseline for this guide because it's the latest LTS of the most popular Linux distro. Ubuntu is also used in the [Windows Subsystem for Linux][wsl], so it's available to most Windows 10 based developers. On Mac OS, most of the tools shown here can be added via Homebrew.
+There's a lot of different OS and package management choices out there.  But in the [Python Survey][survey] mentioned earlier, Linux was shown to be the most popular OS. [Ubuntu 20.04][ubuntu] has been chosen as the baseline for this guide because it's the latest LTS of the most popular Linux distribution. Ubuntu is also used in the [Windows Subsystem for Linux][wsl], so it's available to most Windows 10 based developers. On Mac OS, most of the tools shown here can be added via Homebrew.
 
 When following this guide, it helps if you're starting from a clean system. That way, any existing or additional Python installs can't cause issues or confusion as you follow the steps below. If your system isn't clean, try following this guide in a new Ubuntu virtual machine first, just so you know what to expect.
 
