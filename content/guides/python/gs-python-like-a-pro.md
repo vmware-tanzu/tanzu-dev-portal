@@ -3,7 +3,7 @@ title:  "Managing Your Python Developer Environment Like A Pro: Installing Pytho
 featured: true
 sortTitle: "Python Like A Pro - Installing Python"
 weight: 2
-description: "Create a stress free development environment for all your Python projects."
+description: "Install multiple versions of Python and switch between them with ease."
 topics:
 - Python
 tags:
@@ -16,35 +16,25 @@ team:
 ---
 ### Why do you need this guide?
 
-The [2019 Python Developers Survey][survey] found that 66% of Python developers get their Python interpreter either from their operating system or from a downloaded installer. They also found that the vast majority use Python3, but 10% still actively use Python2.
+As a professional Python developer, you'll be asked to work on a wide variety of projects. The tools you'll use to do that work may need to change on a project-by-project basis. One day you may be maintaining some legacy code written in Python 2; the next day, you may be prototyping in the very latest version of Python 3.
 
-This is fine. [Python 2 is no longer supported][sunset], but many of those still using Python2 will have requirements that they can't satisfy any other way --- such as maintaining legacy code. 
+And here lies the problem. The [2019 Python Developers Survey][survey] found that 66% of Python developers get their Python interpreter either from their operating system or from a downloaded installer. For these developers, switching between Python versions is not easy and could result in a broken system.
 
-As a professional Python developer, you'll be called upon to work on a wide variety of projects. So successfully juggling old and new versions of Python --- on the same machine, at the same time --- is an important skill to master. 
-
-In this guide, you'll learn which tools help you control your Python development environment, so that it doesn't control you!
+So in this guide, you'll learn how to install many different versions of Python at the same time and discover how to switch between them with ease.
 
 ### Before You Begin
 
-There's a vast array of different OS and packaging choices out there. In this guide, you'll see how to control a Linux environment. In the [Python Survey][survey], this OS was shown to be the most popular amongst Python Developers. [Ubuntu 20.04 LTS][ubuntu] is used because it's the latest line of the most popular Linux distro and forms the basis of the [Windows Subsystem for Linux][wsl], which is available to most Windows 10 users. On Mac OS, most of the tools shown can be added either directly or via Homebrew.
+There's a lot of different OS and package management choices out there.  But in the [Python Survey][survey] mentioned earlier, Linux was shown to be the most popular OS. [Ubuntu 20.04][ubuntu] has been chosen as the baseline for this guide because it's the latest LTS of the most popular Linux distro. Ubuntu is also used in the [Windows Subsystem for Linux][wsl], so it's available to most Windows 10 based developers. On Mac OS, most of the tools shown here can be added via Homebrew.
 
-When following this guide, it helps if you're starting from a fresh Python system. That way, your existing Python installs can't cause issues or confusion as you follow the steps below. If your system isn't clean, try these steps on a new Ubuntu virtual machine first, so you know what to expect.
+When following this guide, it helps if you're starting from a clean system. That way, any existing or additional Python installs can't cause issues or confusion as you follow the steps below. If your system isn't clean, try following this guide in a new Ubuntu virtual machine first, just so you know what to expect.
 
-If you'd prefer to watch a video on this topic, scroll down to the bottom of the page.
+Finally, if you'd prefer to watch a video on this guide, scroll down to the bottom of the page and hit 'play.'
 
 ### Installing Python Like A Pro
 
-Getting a great Python developer environment will make your life so much easier.
+Having the ability to install and switch between Python versions in seconds --- without affecting your operating system --- will make your job much easier. Fortunately, there's a tool that can help.
 
-#### What You Should NOT Do
-
-Don't use your 'system' version of Python and don't use the Python installer. For the casual hack, these options are okay, but if you want to do Python 'like a pro,' you should probably avoid these techniques. Neither of them allows you to switch easily between Python versions, and the more Python code you write as your career progresses, the more likely it is that you'll need to switch between versions.
-
-This issue or advice isn't unique to Python, by the way. Java has precisely the same challenges.
-
-#### What You Should Do
-
-Seek out [pyenv][pyenv]. Pyenv is an open-source command-line tool that's easy to install and takes care of the messy business of installing and managing multiple Python versions.
+[Pyenv][pyenv] is an open-source command-line tool that's easy to install and takes care of the messy business of installing and managing multiple Python versions.
 
 Pyenv lets you:
 
@@ -54,12 +44,14 @@ Pyenv lets you:
  - override your Python version with an environment variable.
  - search for commands present in multiple versions of Python at once.
 
+Follow the steps below to install the `pyenv` tool on your system.
+
 #### Step 1: Getting Your System Ready
 
 Ubuntu 20.04 ships with version 3.8.2 of Python pre-installed as the 'system' version of Python. You'll want to keep this, but it's helpful to make it respond to all `python` commands. By default, it will only respond to `python3`. To fix this, you can install the `python-is-python3` command like so:
 
 ```bash
-sudo apt install python-is-python3`
+sudo apt install python-is-python3
 ```
 
 If you're not using Ubuntu 20.04, your system may already respond to the command `python`.
@@ -102,10 +94,10 @@ If this command reports, `"Congratulations! You are ready to build pythons!"` th
 
 #### Step 3: Installing Python 3.8.5
 
-First of all, to see the full list of available Python versions --- there are a lot --- type the following command.
+First of all, to see the full list of the available Python versions --- there are a lot --- type the following command.
 
 ```bash
-pyenv versions
+pyenv install --list
 ```
 
 Let's install the very latest version of Python --- which is 3.8.5 --- using the following command:
@@ -114,21 +106,44 @@ Let's install the very latest version of Python --- which is 3.8.5 --- using the
 pyenv install 3.8.5
 ```
 
-Pyenv will now download, build, and install the requested version of Python. To activate this version globally throughout your system type:
+Pyenv will now download, build, and install the requested version of Python. 
+
+#### Step 4: Switching Between Python Versions
+
+Now that Python 3.8.5 is installed, let's take a look at the Python versions that `pyenv` reports are available for use:
+
+```bash
+pyenv versions
+```
+
+Your versions list might look something like this:
+
+```bash
+* system (set by /home/ben/.pyenv/version)
+  3.8.5
+```
+
+The `*` next to 'system' tells you that the system version of Python is currently the global default. To change the global default to the 3.8.5 release that you just installed, type:
 
 ```bash
 pyenv global 3.8.5
 ```
 
-#### Step 4: Switching Back To 'System' Python 
+To check which version of Python your system is now using globally, ask Python for its version number like so:
 
-To switch back to your system version of Python, you can use the special 'system' keyword to switch back to your default version like this:
+```bash
+python -V
+```
+
+The answer should be 'Python 3.8.5.'
+
+To switch back to your system version of Python, you can use the special 'system' keyword like this:
 
 ```bash
 pyenv global system
 ```
 
-And that's it. You can now install and switch between many different versions of Python like a pro!
+And that's it. You can now install and switch between many different versions of Python any time you like!
 
 ### Keep Learning
 
@@ -136,9 +151,9 @@ To find out more about what pyenv can do for you, check out the [website][pyenv]
 
 Need to bundle your Python apps into rock-solid professional-grade Docker containers? Try our simple [Python buildpack guide][cnb].
 
-If you prefer a video, you can watch how to install Python like a pro below:
+Here's the video to accompany this guide:
 
-{{< youtube nXbe6Hmb_k0 >}}
+{{< youtube nXbe6Hmb_k0>}}
 
 ---
 [survey]: https://www.jetbrains.com/lp/python-developers-survey-2019/
@@ -148,3 +163,4 @@ If you prefer a video, you can watch how to install Python like a pro below:
 [pyenv]: https://github.com/pyenv/pyenv
 [pyenv-installer]: https://github.com/pyenv/pyenv-installer
 [pyenv-prereqs]: https://github.com/pyenv/pyenv/wiki/Common-build-problems
+[cnb]: /guides/python/cnb-gs-python
