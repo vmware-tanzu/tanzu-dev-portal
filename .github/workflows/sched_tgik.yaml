@@ -29,7 +29,7 @@ jobs:
       - name: Check for modified files
         id: git-check
         run: |
-          git status
+          git add --all
           echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
       - name: Commit files
         if: steps.git-check.outputs.modified == 'true'
