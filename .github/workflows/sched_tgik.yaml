@@ -2,8 +2,6 @@ name: Get Latest TGIK Episodes
 on:
   schedule:
     - cron: '0 19 * * 3'
-    branches:
-      - tgik
 jobs:
   get-episodes:
     runs-on: ubuntu-latest
