@@ -9,5 +9,5 @@ LABEL "com.github.actions.description"="Fetch TGIK Episodes"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="green"
 
-RUN pip install
+RUN pip install -r requirements.txt
 CMD [ "python", "./main.py" ]
