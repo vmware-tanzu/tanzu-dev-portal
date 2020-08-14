@@ -9,6 +9,7 @@ IMAGES_PATH = os.environ["IMAGES_PATH"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
 
+
 TITLE_PREFIX = "TGI Kubernetes"
 TITLE_SUFFIX = ":"
 
@@ -69,6 +70,7 @@ def writeNewEpisodeFiles(videos):
 latestExistingEpisode = getLatestExistingEpisodeNumber()
 videos = getNewEpisodesInPlaylist(PLAYLIST_ID, latestExistingEpisode)
 writeNewEpisodeFiles(videos)
+os.system("ls " + EPISODES_PATH)
 
 
 
