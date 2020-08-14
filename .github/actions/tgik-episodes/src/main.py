@@ -70,7 +70,6 @@ def writeNewEpisodeFiles(videos):
 latestExistingEpisode = getLatestExistingEpisodeNumber()
 videos = getNewEpisodesInPlaylist(PLAYLIST_ID, latestExistingEpisode)
 writeNewEpisodeFiles(videos)
-os.system("ls " + EPISODES_PATH)
 
 
 

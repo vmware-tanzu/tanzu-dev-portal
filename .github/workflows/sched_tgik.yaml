@@ -28,7 +28,9 @@ jobs:
           TEMPLATE_FILE: ".github/actions/tgik-episodes/src/template.md"
       - name: Check for modified files
         id: git-check
-        run: echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
+        run: |
+          git status
+          echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
       - name: Commit files
         if: steps.git-check.outputs.modified == 'true'
         run: |
