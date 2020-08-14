@@ -29,14 +29,14 @@ jobs:
         id: git-check
         run: echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
       - name: Commit files
-        if: steps.git-check.outputs.modified == "true"
+        if: ${{ steps.git-check.outputs.modified == "true" }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Add changes" -a
           git push
       - name: Create PR
-        if: steps.git-check.outputs.modified == "true"
+        if: ${{ steps.git-check.outputs.modified == "true" }}
         uses: smartinspereira/auto-create-pr-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
