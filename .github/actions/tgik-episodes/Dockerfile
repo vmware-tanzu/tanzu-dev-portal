@@ -9,6 +9,10 @@ LABEL "com.github.actions.description"="Fetch TGIK Episodes"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="green"
 
-RUN ls
+WORKDIR /app
+
+COPY src/requirements.txt ./
 RUN pip install -r requirements.txt
+COPY src /app
+
 CMD [ "python", "./main.py" ]
