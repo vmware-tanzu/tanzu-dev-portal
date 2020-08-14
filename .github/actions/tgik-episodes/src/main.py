@@ -7,8 +7,8 @@ API_KEY = os.environ["API_KEY"]
 EPISODES_PATH = os.environ["EPISODES_PATH"]
 IMAGES_PATH = os.environ["IMAGES_PATH"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
+TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
 
-TEMPLATE_FILE = "template.md"
 TITLE_PREFIX = "TGI Kubernetes"
 TITLE_SUFFIX = ":"
 

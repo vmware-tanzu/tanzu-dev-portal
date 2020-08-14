@@ -25,6 +25,7 @@ jobs:
           PLAYLIST_ID: "PL7bmigfV0EqQzxcNpmcdTJ9eFRPBe-iZa"
           EPISODES_PATH: "content/tv/tgik/"
           IMAGES_PATH: "static/images/tv/episodes/tgik/"
+          TEMPLATE_FILE: ".github/actions/tgik-episodes/src/template.md"
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
