@@ -1,0 +1,33 @@
+name: Get Latest TGIK Episodes
+on:
+  schedule:
+    - cron: '0 19 * * 3'
+    branches:
+      - tgik
+jobs:
+  get-episodes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.PA_TOKEN }}
+      - uses: ./.github/actions/tgik-episodes
+        name: Get Latest TGIK Episodes (creates local changes)
+        env:
+          API_KEY: ${{ secrets.YT_API_KEY }}
+          PLAYLIST_ID: "PL7bmigfV0EqQzxcNpmcdTJ9eFRPBe-iZa"
+          EPISODES_PATH: "content/tv/tgik/"
+          IMAGES_PATH: "static/images/tv/episodes/tgik/"
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+      - uses: ad-m/github-push-action@tgik
+        name: Push Changes
+#      - uses: repo-sync/pull-request@v2
+#        name: Pull Request
+#        if: 
+#            ...
