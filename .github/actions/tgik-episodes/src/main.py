@@ -5,7 +5,7 @@ from jinja2 import Template
 
 API_KEY = os.environ["API_KEY"]
 EPISODES_PATH = os.environ["EPISODES_PATH"]
-IMAGES_PATH = os.environ["IMAGES_PATH"]
+IMAGES_REL_PATH = os.environ["IMAGES_REL_PATH"]
 IMG_PATH_PREFIX = os.environ["IMG_PATH_PREFIX"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
