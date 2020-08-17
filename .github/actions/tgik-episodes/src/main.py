@@ -6,6 +6,7 @@ from jinja2 import Template
 API_KEY = os.environ["API_KEY"]
 EPISODES_PATH = os.environ["EPISODES_PATH"]
 IMAGES_PATH = os.environ["IMAGES_PATH"]
+IMG_PATH_PREFIX = os.environ["IMG_PATH_PREFIX"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
 
@@ -22,7 +23,6 @@ def getLatestExistingEpisodeNumber():
         except:
             pass
     return max(episodes)
-
 
 def getEpisodeNumberFromTitle(title):
   return int(title.split(TITLE_SUFFIX)[0][len(TITLE_PREFIX):])
@@ -58,10 +58,10 @@ def writeNewEpisodeFiles(videos):
     templateEnv = jinja2.Environment(loader=templateLoader)
     template = templateEnv.get_template(TEMPLATE_FILE)
     for video in videos:
-        imageFilename = IMAGES_PATH + video["episode"] + ".jpg"
+        imageFilename = IMG_PATH_PREFIX + IMAGES_REL_PATH + video["episode"] + ".jpg"
         markdownFilename = EPISODES_PATH + video["episode"] + ".md"
         urllib.request.urlretrieve(video["imageUrl"], imageFilename)
-        video["image"] = imageFilename
+        video["image"] = imageFilename[len("IMAGES_REL_PATH"):]
         outputText = template.render(video=video)
         f = open(markdownFilename, "w")
         f.write(outputText)
