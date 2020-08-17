@@ -61,7 +61,7 @@ def writeNewEpisodeFiles(videos):
         imageFilename = IMG_PATH_PREFIX + IMAGES_REL_PATH + video["episode"] + ".jpg"
         markdownFilename = EPISODES_PATH + video["episode"] + ".md"
         urllib.request.urlretrieve(video["imageUrl"], imageFilename)
-        video["image"] = imageFilename[len("IMG_PATH_PREFIX"):]
+        video["image"] = IMAGES_REL_PATH + video["episode"] + ".jpg"
         outputText = template.render(video=video)
         f = open(markdownFilename, "w")
         f.write(outputText)
