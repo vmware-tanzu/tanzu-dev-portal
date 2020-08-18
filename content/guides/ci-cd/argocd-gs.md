@@ -17,7 +17,7 @@ ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. 
 
 Unlike other tools, ArgoCD is lightweight and easy to configure. It is purpose-built to deploy applications to Kubernetes so it doesn’t have the UI overhead of many tools built to deploy to multiple locations. 
 
-It was also built with a [GitOps](http://gitops) flow in mind. That means everything ArgoCD sees as its source of truth is stored in a repository, which makes permissions and access control easier to handle since no one can change files locally to impact the behavior of ArgoCD. It also increases security by not storing any of these configuration files locally. 
+It was also built with a [GitOps](https://www.weave.works/technologies/gitops/) flow in mind. That means everything ArgoCD sees as its source of truth is stored in a repository, which makes permissions and access control easier to handle since no one can change files locally to impact the behavior of ArgoCD. It also increases security by not storing any of these configuration files locally. 
 
 And it’s fast! After using it I am sure you will agree that ArgoCD is very performant. It feels like a native, local application even though it's running distributed microservices on Kubernetes. 
 
