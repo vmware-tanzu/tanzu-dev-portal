@@ -1,9 +1,9 @@
 ---
-title:  "Managing Your Python Developer Environment Like A Pro: Installing Python"
+title:  "Python Like A Pro: Installing Python"
 featured: true
 sortTitle: "Python Like A Pro - Installing Python"
 weight: 2
-description: "Install multiple versions of Python and switch between them with ease."
+description: "Learn how to install multiple versions of Python and switch between them with ease."
 topics:
 - Python
 tags:
