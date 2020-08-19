@@ -223,6 +223,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 spring-petclinic
+Stacker
 Steeltoe
 STDOUT
 sudo
