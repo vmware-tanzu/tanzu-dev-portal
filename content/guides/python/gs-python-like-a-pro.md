@@ -1,5 +1,5 @@
 ---
-title:  "Python Like A Pro: Installing Python"
+title:  "Python Like A Pro: Installing Python & Switching Versions"
 featured: true
 sortTitle: "Python Like A Pro - Installing Python"
 weight: 2

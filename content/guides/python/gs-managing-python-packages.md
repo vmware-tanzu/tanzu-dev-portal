@@ -1,5 +1,5 @@
 ---
-title:  "Python Like A Pro: Managing Python Project Dependencies"
+title:  "Python Like A Pro: Managing Project Packages"
 featured: true
 sortTitle: "Python Like A Pro - Project Dependencies"
 weight: 2
