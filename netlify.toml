@@ -27,6 +27,7 @@
   to = "/developer"
   status = 302
 
+[[redirects]]
   from = "/*"
   to = "/developer/something.html"
   status = 404
