@@ -1,9 +1,9 @@
 ---
-title:  "Building Python Docker Containers Like A Pro: Getting Started"
+title:  "Python Like A Pro: Building Docker Containers"
 featured: true
 sortTitle: "Python Buildpacks"
 weight: 2
-description: "Package your Python applications into Docker containers in no time with Buildpacks."
+description: "Package your Python apps into Docker images in no time with Buildpacks."
 topics:
 - Python
 - Containers
