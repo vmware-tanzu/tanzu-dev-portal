@@ -1,5 +1,5 @@
 ---
-title: "Managing Python Dependencies Like A Pro"
+title: "Python Like A Pro: Managing Project Packages"
 description: Python's package management system is a blessing for regular system users, but can be a bit of a curse of Python developers. Managing multiple dependencies and versions turns out to be surprisingly error-prone without the right tools or workflows in place. In this video, Ben Wilcock takes you through how the `pyenv virtualenv' plugin can help you manage your Python project dependencies like a pro!
 topics:
 - Python

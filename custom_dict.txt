@@ -152,6 +152,7 @@ Finchley
 Gradle
 Grafana
 gotchas
+Gunicorn
 [H,h]elmfiles?
 Homebrew
 Httpie
@@ -203,6 +204,8 @@ pre-installed
 POSTROUTING
 pullPolicy
 [P,p]yenv
+[P,p]yenv-virtualenv
+[V,v]irtualenv
 pyenv-installer
 PipX
 RabbitMQ('s)?
