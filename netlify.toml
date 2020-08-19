@@ -26,3 +26,7 @@
   from = "/"
   to = "/developer"
   status = 302
+
+  from = "/*"
+  to = "/developer/something.html"
+  status = 404
