@@ -6,7 +6,7 @@ function isTvShowLive(showName) {
         var epDate = new Date("{{ .Params.Date }}");
         episodeDates.push(epDate.toLocaleDateString());
         episodeTimes.push(epDate.toLocaleTimeString());
-        episodeLengths.push({{ .Params.minutes }});
+        episodeLengths.push({{ default 0 .Params.minutes }});
         episodeShowNames.push("{{ .Parent.Title }}");
         episodeLinks.push("{{ .Parent.Permalink | relURL }}");
       {{ end }}
@@ -28,7 +28,6 @@ function isTvShowLive(showName) {
           liveShowLink = episodeLinks[index];
         }
       }
-
       return isLive;
 }
 

@@ -158,9 +158,13 @@ limitations under the License.
     var check = isTvShowLive();
     if (check) {
         document.getElementsByClassName("td-main")[0].style.marginTop = 40;
-        document.getElementById("live-show-name").innerHTML = liveShowName;
-        document.getElementById("live-notify").href = liveShowLink;
-        document.getElementById("live-notify").style.display = "block";
+        var liveShowElement = document.getElementById("live-show-name");
+        if (liveShowElement != null) liveShowElement.innerHTML = liveShowName;
+        var liveNotify = document.getElementById("live-notify");
+        if (liveNotify != null) {
+            liveNotify.href = liveShowLink;
+            liveNotify.style.display = "block";
+        }
     }   
 
     function bottomPos(element) {
