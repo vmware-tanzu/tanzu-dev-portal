@@ -12,37 +12,41 @@
 
         {{ if ($.Scratch.Get "upcoming") true }}
             {{ if .Params.streaming }}
-            <div class="col px-0">
-                <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
-                <div class="row justify-content-between mb-5">
-                {{ range sort $pages "Params.Date" "asc" }}
-                    {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
-                    {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
-                        <div class="col-lg-11 col-12 px-0">
-                            {{ $.Scratch.Set "episodeLink" .RelPermalink }}
-                            {{ if (isset .Params "register") | and (not (eq .Params.register "")) }}
-                                {{ $.Scratch.Set "episodeLink" .Params.register }}
-                            {{ end }}
-                            {{ $episodeLink := $.Scratch.Get "episodeLink" }}
-                            <a href="{{ $episodeLink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
-                            <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on Twitch</p>
-                            <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
-                        </div>
-                    </div>
-                    {{ end }}
+                {{ $streamName := "YouTube" }}
+                {{ if isset .Params "twitch" }}
+                    {{ $streamName := "Twitch" }}
                 {{ end }}
+                <div class="col px-0">
+                    <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
+                    <div class="row justify-content-between mb-5">
+                    {{ range sort $pages "Params.Date" "asc" }}
+                        {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
+                        {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
+                            <div class="col-lg-11 col-12 px-0">
+                                {{ $.Scratch.Set "episodeLink" .RelPermalink }}
+                                {{ if (isset .Params "register") | and (not (eq .Params.register "")) }}
+                                    {{ $.Scratch.Set "episodeLink" .Params.register }}
+                                {{ end }}
+                                {{ $episodeLink := $.Scratch.Get "episodeLink" }}
+                                <a href="{{ $episodeLink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
+                                <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on {{ $streamName }}</p>
+                                <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
+                            </div>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+                    </div>
                 </div>
-            </div>
-            <script type="text/javascript">
-            var upcoming = document.querySelectorAll(".upcoming");
-            var currentTime = Date.now();
-            upcoming.forEach(episode => {
-                var episodeTime = new Date(episode.dataset.episodeDate).getTime();
-                if (episodeTime < currentTime) {
-                    episode.style.display = "none";
-                }
-            });
-            </script>
+                <script type="text/javascript">
+                var upcoming = document.querySelectorAll(".upcoming");
+                var currentTime = Date.now();
+                upcoming.forEach(episode => {
+                    var episodeTime = new Date(episode.dataset.episodeDate).getTime();
+                    if (episodeTime < currentTime) {
+                        episode.style.display = "none";
+                    }
+                });
+                </script>
             {{ end }}
         {{ end }}
 
