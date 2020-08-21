@@ -9,6 +9,7 @@ https?|HTTPS?
 localhost(:[0-9]*)?
 
 # Missing or Made-up Words
+affordances
 Agile-ific
 amongst
 analytics
@@ -19,6 +20,7 @@ async
 autoscaling
 Aviv
 (back|front)end
+[B,b]ackfill
 balancers?
 biome
 [B,b]ootiful
@@ -32,13 +34,16 @@ deployable
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
+defacto
 [D,d]ev[R,r]el
+egoless
 Endnotes
 failover
 fiancé
 fileshare
 FinTech
 firewalling
+frictionless
 getters
 GitOps
 Helming
@@ -64,9 +69,10 @@ ok
 orchestrator
 org(s)?
 overcomplicate
+overengineer(ing)?
 pb&jelly
-passcode
-PASSCODE
+passcode|PASSCODE
+pickab(le|ility)?
 precompiled
 performant
 preload
@@ -74,12 +80,15 @@ prepending
 pre-release
 podcaster
 programmatically
+pushable
 Quickstart
 quokka
 README
 realtime
 [R,r]ebase
+refactorings?
 [R,r]epos?
+revertibility
 [R,r]oadmap
 rollout
 runtimes?
@@ -88,8 +97,7 @@ scalable
 screencaster
 [S,s]erverless
 [S,s]ervlets?
-sso
-SSO
+sso|SSO
 (de)*serialize[d,r]
 Sox
 stateful
@@ -102,14 +110,13 @@ Thunderdome
 toolchain
 unencrypted
 unpause
+unpushed
+unreleasable
 versioned
 veth-jelly
 walkthrough
 webhooks?
 whiteboard(ed|ing)
-defacto
-Dockerfile-built
-Hashicorp
 
 # Tech (projects, products, commands)
 2G
@@ -141,7 +148,7 @@ ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 [D,d]ebian
-[D,d]ockerfiles?
+[D,d]ockerfile(s|-built)?
 DockerHub
 [E,e]thernet(s)?
 etcd
@@ -216,6 +223,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 spring-petclinic
+Stacker
 Steeltoe
 STDOUT
 sudo
@@ -334,6 +342,7 @@ freddygthatsme
 Gibb
 Herbrich
 Iberkleid
+Isenberg
 Jakub
 Jernigan
 Julien
