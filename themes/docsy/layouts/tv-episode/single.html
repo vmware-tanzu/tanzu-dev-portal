@@ -10,20 +10,23 @@
 </section>
 
 <!-- IF UPCOMING -->
-{{ $streamUrl := (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
-{{ $streamName := "YouTube" }}
+{{ $.Scratch.Set "streamName" "" }}
+{{ $.Scratch.Set "streamUrl" "#" }}
 {{ if isset .Params "twitch" }} 
-  {{ $streamUrl := (print "https://www.twitch.tv/" .Params.twitch) }}
-  {{ $streamName := "Twitch" }}
+  {{ $.Scratch.Set "streamUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
+  {{ $.Scratch.Set "streamName" "on Twitch" }}
+{{ else if isset .Params "youtube" }}
+  {{ $.Scratch.Set "streamUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
+  {{ $.Scratch.Set "streamName" "on YouTube" }}
 {{ end }}
 <div class='container'>
   <div id="twitch" class="row justify-content-center mt-5 pt-3">
     <div class="col-lg-5 col-12 mb-5 pl-0">
       <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
       <div>
-        <a class="play-icon float-left" href="{{ $streamUrl }}"></a>
+        <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
         <div class="float-left ml-3 pl-1">
-          <a href="{{ $streamUrl }}">Watch on {{ $streamName }}</a><br/>
+          <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
           <span class="text-white">{{ .Params.Date.Local.Format "3 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
         </div>
       </div>
