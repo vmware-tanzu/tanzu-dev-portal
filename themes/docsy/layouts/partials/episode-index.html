@@ -16,8 +16,8 @@
                 {{ if isset .Params "twitch" }}
                     {{ $streamName := "Twitch" }}
                 {{ end }}
-                <div class="col px-0">
-                    <h3 id="upcoming" class="mt-5 mb-4">Upcoming Episodes</h3>
+                <div id="upcoming" class="col px-0">
+                    <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
                     <div class="row justify-content-between mb-5">
                     {{ range sort $pages "Params.Date" "asc" }}
                         {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
