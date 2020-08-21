@@ -17,7 +17,7 @@
                     {{ $streamName := "Twitch" }}
                 {{ end }}
                 <div class="col px-0">
-                    <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
+                    <h3 id="upcoming" class="mt-5 mb-4">Upcoming Episodes</h3>
                     <div class="row justify-content-between mb-5">
                     {{ range sort $pages "Params.Date" "asc" }}
                         {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
@@ -40,12 +40,17 @@
                 <script type="text/javascript">
                 var upcoming = document.querySelectorAll(".upcoming");
                 var currentTime = Date.now();
+                var episodesLeft = upcoming.length;
                 upcoming.forEach(episode => {
                     var episodeTime = new Date(episode.dataset.episodeDate).getTime();
                     if (episodeTime < currentTime) {
                         episode.style.display = "none";
+                        episodesLeft--;
                     }
                 });
+                if (episodesLeft == 0) {
+                    document.getElementById("upcoming").style.display = "none";
+                }
                 </script>
             {{ end }}
         {{ end }}
