@@ -215,6 +215,13 @@ Learn more about buildpacks right here on the Tanzu Developer website with these
 
 Find out more about what the `pack` tool can do by using the `--help` command and browsing the [Buildpacks.io][bp-website] website. 
 
+If you liked this guide, you might find these others in our 'Python Like A Pro' series useful:
+
+- [Install Python Like A Pro!][gs-pyenv]
+- [Managing Python Project Dependencies Like A Pro!][gs-pyenv-venv]
+- [Managing Python Global Packages Like A Pro][gs-pipx]
+- [Run Python In Production Like A Pro!][gs-cf]
+
 And if you'd prefer to see the buildpack in action without actually following the steps above, check out the accompanying YouTube video guide:
 
 {{< youtube JS_YIn49xuw >}}
@@ -227,3 +234,9 @@ And if you'd prefer to see the buildpack in action without actually following th
 [google-buildpacks]: https://github.com/GoogleCloudPlatform/buildpacks
 [httpie]: https://httpie.org/
 [bp-github]: https://github.com/buildpacks
+
+[gs-pyenv]: /guides/python/gs-python-like-a-pro
+[gs-pyenv-venv]: /guides/python/gs-managing-python-packages
+[gs-pipx]: /guides/python/gs-python-installing-global-packages
+[gs-cnb]: /guides/python/cnb-gs-python
+[gs-cf]: /guides/python/cf-gs
