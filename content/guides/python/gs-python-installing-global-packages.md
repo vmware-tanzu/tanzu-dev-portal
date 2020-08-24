@@ -18,7 +18,7 @@ team:
 
 There are loads of super-useful Python-based tools available in the [Python Package Installer][pip] --- also known as 'pip'. [MyPy][mypy] the static type checker, [Flake8][flake8] the awesome code linter, [Black][black] the 'uncompromising code formatter,' and [Glances][glances] the 'eye on your system,' are all great examples. These are Python packages that are useful globally, across all your Python projects, and beyond! 
 
-But, as detailed in [pip's cli tools documentation][pip-cli-tools-docs], "_installing packages and their dependencies to the same global environment can cause version conflicts, and break dependencies that the operating system has on Python packages_."
+But, as detailed in [pip's CLI tools documentation][pip-cli-tools-docs], "_installing packages and their dependencies to the same global environment can cause version conflicts, and break dependencies that the operating system has on Python packages_."
 
 Unsurprisingly, the bright folks in 'python-land' have a solution to this problem --- in the form of [PipX][pipx]. PipX is a tool that allows the installation of Python packages in an isolated environment. Because PipX isolates them, their installation won't disrupt each other or your system. 
 
