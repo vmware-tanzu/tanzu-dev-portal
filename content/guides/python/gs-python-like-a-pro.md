@@ -108,6 +108,13 @@ pyenv install 3.8.5
 
 Pyenv will now download, build, and install the requested version of Python. 
 
+Finally, tell `pyenv` to rehash its list of 'shims' to make sure the new version of Python you just added is ready for use. Shims are the programs `pyenv` uses to redirect your Python calls. Rehashing instructs `pyenv` to install shims for all Python binaries known to `pyenv`.
+
+```bash
+pyenv rehash
+```
+
+
 #### Step 4: Switching Between Python Versions
 
 Now that Python 3.8.5 is installed, let's take a look at the Python versions that `pyenv` reports are available for use:
