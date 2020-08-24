@@ -1,5 +1,5 @@
 ---
-title:  "Python Like A Pro: Installing Python & Switching Versions"
+title:  "Python Like A Pro: Installing Python"
 featured: true
 sortTitle: "Python Like A Pro - Installing Python"
 weight: 2
@@ -156,7 +156,12 @@ And that's it. You can now install and switch between many different versions of
 
 To find out more about what pyenv can do for you, check out the [website][pyenv] or try `pyenv --help`. To get help on a specific command type `pyenv <command> --help`.
 
-Need to bundle your Python apps into rock-solid professional-grade Docker containers? Try our simple [Python buildpack guide][cnb].
+If you liked this guide, you might find these others in our 'Python Like A Pro' series useful:
+
+- [Managing Python Project Dependencies Like A Pro!][gs-pyenv-venv]
+- [Managing Python Global Packages Like A Pro][gs-pipx]
+- [Build Python Docker Containers Like A Pro!][gs-cnb]
+- [Run Python In Production Like A Pro!][gs-cf]
 
 Here's the video to accompany this guide:
 
@@ -171,3 +176,9 @@ Here's the video to accompany this guide:
 [pyenv-installer]: https://github.com/pyenv/pyenv-installer
 [pyenv-prereqs]: https://github.com/pyenv/pyenv/wiki/Common-build-problems
 [cnb]: /guides/python/cnb-gs-python
+
+[gs-pyenv]: /guides/python/gs-python-like-a-pro
+[gs-pyenv-venv]: /guides/python/gs-managing-python-packages
+[gs-pipx]: /guides/python/gs-python-installing-global-packages
+[gs-cnb]: /guides/python/cnb-gs-python
+[gs-cf]: /guides/python/cf-gs

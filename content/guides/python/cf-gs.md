@@ -281,6 +281,13 @@ Did you know that can push Docker images directly to Cloud Foundry? You use the 
 
 Did you know that you can run Cloud Foundry directly on top of Kubernetes? That means you can get the same smooth `cf push` experience on your Kubernetes cluster. Just think, less YAML, less `kubectl`, less stress! You can get started with our [CF for K8s guide][cf-on-k8s].
 
+If you liked this guide, you might find these others in our 'Python Like A Pro' series useful:
+
+- [Install Python Like A Pro!][gs-pyenv]
+- [Managing Python Project Dependencies Like A Pro!][gs-pyenv-venv]
+- [Managing Python Global Packages Like A Pro][gs-pipx]
+- [Build Python Docker Containers Like A Pro!][gs-cnb]
+
 And if you'd prefer to see Cloud Foundry in action without actually following the steps above, check out our video guide:
 
 {{< youtube qLg2xtQ5kTA >}}
@@ -295,3 +302,9 @@ And if you'd prefer to see Cloud Foundry in action without actually following th
 [python-cnb-guide]: /guides/python/cnb-gs-python
 [httpie]: https://httpie.org/
 [pws]: https://run.pivotal.io/
+
+[gs-pyenv]: /guides/python/gs-python-like-a-pro
+[gs-pyenv-venv]: /guides/python/gs-managing-python-packages
+[gs-pipx]: /guides/python/gs-python-installing-global-packages
+[gs-cnb]: /guides/python/cnb-gs-python
+[gs-cf]: /guides/python/cf-gs
