@@ -8,22 +8,28 @@
 		<div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
 
     {{ if .Params.streaming }}
-    <div id="twitch-embed"></div>
+      <div id="twitch-embed"></div>
 
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script type="text/javascript">
 
-      var check = isTvShowLive("{{ .Title }}");
-      if (check) {
+        var check = isTvShowLive("{{ .Title }}");
+        if (check) {
 
-        new Twitch.Embed("twitch-embed", {
-            width: 1130,
-            height: 480,
-            channel: "vmwaretanzu",
-        });
-      }
+          if (liveShowStream == "twitch") {
+            new Twitch.Embed("twitch-embed", {
+                width: 1130,
+                height: 480,
+                channel: "vmwaretanzu",
+            });
+          } else {
+            document.write("<div class='youtube-video-shortcode'>");
+            document.write("<iframe src='https://www.youtube.com/embed/" + liveShowStream + "' frameborder='0' allowfullscreen></iframe>");
+            document.write("</div>");
+          }
+        }
 
-    </script>
+      </script>
     {{ end }}
 
    </div>
