@@ -1,9 +1,9 @@
 ---
-title:  "Python Like A Pro: Managing Project Packages"
+title:  "Python Like A Pro: Managing Project Dependencies"
 featured: true
 sortTitle: "Python Like A Pro - Project Dependencies"
 weight: 2
-description: "Learn how to isolate your Python dependencies using Virtual Environments."
+description: "Learn how to isolate your Python dependencies using pyenv-virtualenv."
 topics:
 - Python
 tags:
@@ -170,7 +170,12 @@ In step 3, run your app in Gunicorn as before, but this time, you'll notice that
 
 To discover more of what `pyenv` can do for you, check out the [pyenv website][pyenv] or try `pyenv --help`. To get help on a specific command in pyenv type `pyenv <command> --help`.
 
-Do you need to bundle your Python applications into rock-solid professional-grade Docker containers? If you do, try our simple [Python buildpack guide][pbpg].
+If you liked this guide, you might find these others in our 'Python Like A Pro' series useful:
+
+- [Install Python Like A Pro!][gs-pyenv]
+- [Managing Python Global Packages Like A Pro][gs-pipx]
+- [Build Python Docker Containers Like A Pro!][gs-cnb]
+- [Run Python In Production Like A Pro!][gs-cf]
 
 Here’s the video to accompany this guide:
 
@@ -185,3 +190,9 @@ Here’s the video to accompany this guide:
 [pip]: https://pip.pypa.io/en/stable/
 [gunicorn]: https://gunicorn.org/
 [flask]: https://palletsprojects.com/p/flask/
+
+[gs-pyenv]: /guides/python/gs-python-like-a-pro
+[gs-pyenv-venv]: /guides/python/gs-managing-python-packages
+[gs-pipx]: /guides/python/gs-python-installing-global-packages
+[gs-cnb]: /guides/python/cnb-gs-python
+[gs-cf]: /guides/python/cf-gs

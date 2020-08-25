@@ -154,6 +154,8 @@ DockerHub
 etcd
 filesystem
 Finchley
+Flake8
+formatter
 [G,g]ithub
 [G,g]olang
 Gradle
@@ -185,6 +187,7 @@ KubeAcademy
 kubectl
 kubeconfig
 Kubernetes(-native|-specific|-centric|-based)?
+linter
 [L,l]inux
 [L,l]og4j2?
 [M,m]acOS
@@ -193,6 +196,7 @@ Microk8s
 MockMvc
 msgpack(ed)?
 Multipass
+MyPy
 [N,n]amespace(s)?
 [N,n]ano
 Neo4j
@@ -214,7 +218,7 @@ pullPolicy
 [P,p]yenv-virtualenv
 [V,v]irtualenv
 pyenv-installer
-PipX
+[P,p]ip[X,x]('s)?
 RabbitMQ('s)?
 Resilience4J
 Riak
@@ -239,6 +243,7 @@ virtualenv
 vSphere
 WebFlux
 WebSocket
+WSL
 [V,v]eth
 ytt
 Zipkin
@@ -378,3 +383,4 @@ slideshare
 
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
+CKtaKhKOo-Y

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, re, pyyoutube, jinja2, urllib.request
+import os, re, pyyoutube, jinja2, urllib.request, requests, json
 from jinja2 import Template
 
 API_KEY = os.environ["API_KEY"]
@@ -32,21 +32,32 @@ def getNewEpisodesInPlaylist(playlistId, above):
     list = api.get_playlist_items(playlist_id=playlistId,count=None)
     episodes = []
 
+    YT_API_BASE_URL = "https://www.googleapis.com/youtube/v3/videos"
+    YT_API_QS = "?part=snippet%2CliveStreamingDetails&key=" + API_KEY
+
     for item in list.items:
         videoId = item.snippet.resourceId.videoId
-        videoList = api.get_video_by_id(video_id=videoId,parts=["snippet"])
-        videoInfo = videoList.items[0].snippet
-        episodeNumber = getEpisodeNumberFromTitle(videoInfo.title)
+        response = requests.get(YT_API_BASE_URL + YT_API_QS + "&id=" + videoId)
+        videoList = json.loads(response.text)
+        videoInfo = videoList["items"][0]["snippet"]
+        liveInfo = {}
+
+        try:
+            liveInfo = videoList["items"][0]["liveStreamingDetails"]
+        except:
+            liveInfo["scheduledStartTime"] = ""
+
+        episodeNumber = getEpisodeNumberFromTitle(videoInfo["title"])
         video = {
             "videoId": videoId,
-            "title": videoInfo.title,
-            "description": videoInfo.description,
-            "imageUrl": videoInfo.thumbnails.medium.url,
-            "publishDate": videoInfo.publishedAt,
+            "title": videoInfo["title"],
+            "description": videoInfo["description"],
+            "imageUrl": videoInfo["thumbnails"]["medium"]["url"],
+            "date": liveInfo["scheduledStartTime"],
             "episode": str(episodeNumber).zfill(4),
-            "live": videoInfo.liveBroadcastContent
+            #"live": videoInfo["liveBroadcastContent"]
         }
-        if (episodeNumber > above):
+        if (episodeNumber > above-5): # Do the last 5 episodes all the time to make sure we update them
             episodes.append(video)
             print("Saving episode " + video["episode"] + "...")
         else:

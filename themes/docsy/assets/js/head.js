@@ -1,14 +1,15 @@
-var liveShowName, liveShowLink;
+var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
 
-  var episodeShowNames = [], episodeLinks = [], episodeDates = [], episodeTimes = [], episodeLengths = [];
-      {{ range where (where .Site.Pages "Type" "tv-episode") "Date.YearDay" "ge" now.YearDay }}  
+  var episodeShowNames = [], episodeLinks = [], episodeDates = [], episodeTimes = [], episodeLengths = [], episodeStreams = [];
+      {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" now.Unix }}
         var epDate = new Date("{{ .Params.Date }}");
         episodeDates.push(epDate.toLocaleDateString());
         episodeTimes.push(epDate.toLocaleTimeString());
         episodeLengths.push({{ default 0 .Params.minutes }});
         episodeShowNames.push("{{ .Parent.Title }}");
         episodeLinks.push("{{ .Parent.Permalink | relURL }}");
+        {{ if isset .Params "twitch" }}episodeStreams.push("twitch");{{ else }}episodeStreams.push("{{ .Params.youtube }}");{{ end }}
       {{ end }}
       var currentDate = (new Date(Date.now())).toLocaleDateString();
       var index = episodeDates.indexOf(currentDate);
@@ -26,6 +27,7 @@ function isTvShowLive(showName) {
         if (isLive) {
           liveShowName = episodeShowNames[index];
           liveShowLink = episodeLinks[index];
+          liveShowStream = episodeStreams[index];
         }
       }
       return isLive;
