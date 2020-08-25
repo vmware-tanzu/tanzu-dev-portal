@@ -1,11 +1,11 @@
 ---
-title: "Try It With Tanzu"
+title: "Code"
 type: "tv-show"
 streaming: true
 noPast: true
-id: "try-it-with-tanzu"
+id: "code"
 description: Watch the Spring Developer Advocates live code complex technical topics each week.
 teaser: Live Every Wednesday at 12pm PT
-image: "/images/tv/shows/try-it-with-tanzu.jpg"
+image: "/images/tv/shows/code.jpg"
 weight: 1
 ---
