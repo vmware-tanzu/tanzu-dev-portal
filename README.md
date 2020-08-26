@@ -2,18 +2,26 @@
 
 ## Building the Site
 
-The VMware Tanzu Developer Portal uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. 
+The VMware Tanzu Developer Portal uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
 
 ### Run locally
 
+To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use the following commands:
+
 ```
-brew install hugo
+wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
+tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz" 
+mv ./hugo /usr/local/bin/
+```
+
+Now you're ready to build locally:
+
+```
 git clone https://github.com/vmware-tanzu-private/tanzu-dev-portal
 cd tanzu-dev-portal
 git submodule update --init --recursive
 hugo server
 ```
-_Note: You may have to `brew upgrade` if you get this error: "parse failed: template: partials/head.html:3: function "hugo" not defined"_
 
 You may wish to explicitly set `baseURL` to http://localhost:1313/developer in order to mimic what happens in production at https://tanzu.vmware.com/developer. Use the following command to do this:
 
