@@ -12,10 +12,6 @@ weight: 2
 
 Each week our fearless team of Spring Developer Advocates will be tackling real world scenarios and complex technical topics and will be live coding solutions to them. This is your chance to learn tips, tools, and techniques from world class Spring developers.
 
-<table>
-  <tr>
-    <td><a href="/team/josh-long/"><img src="/images/team/advocates/joshlong.jpg"></a>
-    <td><a href="/team/jakub-pilimon/"><img src="/images/team/advocates/jakub.jpg"></a>
-    <td><a href="/team/mark-heckler/"><img src="/images/team/advocates/mheckler.jpg"></a>
-    <td><a href="/team/mario-gray/"><img src="/images/team/advocates/mgray.png"></a>
-</table>
+| | | | |
+| --- | --- | --- | --- |
+| ![/team/josh-long/](/images/team/advocates/joshlong.jpg) | ![/team/jakub-pilimon/](/images/team/advocates/jakub.jpg) | ![/team/mark-heckler/](/images/team/advocates/mheckler.jpg) | ![/team/mario-gray/](/images/team/advocates/mgray.png) |
