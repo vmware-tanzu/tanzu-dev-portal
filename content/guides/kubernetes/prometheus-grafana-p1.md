@@ -1,6 +1,6 @@
 ---
-title:  "Gathering Metrics from Kubernetes with Prometheus and Grafana"
-sortTitle: "Prometheus Grafana P1"
+title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
+sortTitle: "Prometheus and Grafana: Gathering Metrics from Kubernetes"
 weight: 2
 topics:
 - kubernetes
@@ -30,8 +30,11 @@ Luckily, there’s a comprehensive [Helm chart for Prometheus](https://github.co
 You may already have the Helm Stable charts repository added locally, but if not, you can add it using the `helm repo add` command followed by the `helm repo update` command to pull in the latest metadata:
 
 ```bash
-$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
-$ helm repo update
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+```
+
+```bash
+helm repo update
 ```
 
 Before you install Prometheus, check out the [configuration options](https://github.com/helm/charts/tree/master/stable/prometheus#configuration) you have, because there are a lot of them. In this example, it’s assumed that you’ll be installing with the default configuration into a Kubernetes cluster with no specific requirements. As you can see, there are options for everything from how each component is exposed (i.e., the type of ingress used, if it’s behind a load balancer, etc.) to how data is stored and more. If this was a production installation, you’d want to thoroughly sort out these options, but for the purposes of this demo, you can install Prometheus with the default configuration using the `helm install` command:
@@ -70,8 +73,11 @@ Great! The above command forwards all traffic to port 9090 on your machine to th
 Much like Prometheus, Grafana has a great [Helm chart](https://hub.helm.sh/charts/bitnami/grafana) for installing it. Again, you’ll see a plethora of configuration options to tweak the installation to your needs, but for this demo, you can just install it with the default configuration to see it in action. You'll first need to add the Bitnami Helm repository and run the `helm repo update` command:
 
 ```bash
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-$ helm repo update
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+```bash
+helm repo update
 ```
 
 Then, install the Helm chart:
@@ -117,4 +123,4 @@ To import this dashboard, mouse over the “Dashboards” section on the left-ha
 
 ## What’s Next?
 
-The great news is that any data gathered from Prometheus can be used in Grafana. That means any pod with the [proper annotations](https://github.com/helm/charts/tree/master/stable/prometheus#scraping-pod-metrics-via-annotations) will automatically get scraped by Prometheus. Many languages and frameworks have [libraries that support exposing metrics](https://prometheus.io/docs/instrumenting/clientlibs/) that Prometheus can gather, including [Spring](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus). Make sure to check out the libraries available for your language of choice!
+The great news is that any data gathered from Prometheus can be used in Grafana. That means any pod with the [proper annotations](https://github.com/helm/charts/tree/master/stable/prometheus#scraping-pod-metrics-via-annotations) will automatically get scraped by Prometheus. Many languages and frameworks have [libraries that support exposing metrics](https://prometheus.io/docs/instrumenting/clientlibs/) that Prometheus can gather, including [Spring](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus). Make sure to check out the libraries available for your language of choice! Additionally, if you're looking to learn more about observability and how to get better insight into your applications, make sure to check out our [growing collection of guides](/patterns/observability/).
