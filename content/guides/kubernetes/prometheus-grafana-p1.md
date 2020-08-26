@@ -22,7 +22,8 @@ If only it was that simple. Running in production means keeping a close eye on h
 Two open source tools that can help with this are Prometheus and Grafana. Prometheus excels at gathering metrics from a wide array of sources, while Grafana is the go-to tool for visualizing complex time-series data. These two tools working in tandem are very powerful, and are very easy to install and use!
 
 In this guide, you’ll be setting up Prometheus and Grafana on an existing Kubernetes cluster, as well as setting up a dashboard in Grafana to visualize the data gathered from that cluster. You can use any Kubernetes installation of your choosing, whether it’s hosted on a cloud provider or even something like [Minikube](https://minikube.sigs.k8s.io/docs/) running on your local machine.
-## Installing the Prometheus Helm Chart
+
+## Installing Prometheus
 
 Luckily, there’s a comprehensive [Helm chart for Prometheus](https://github.com/helm/charts/tree/master/stable/prometheus) with an extensive list of configuration options. If you’re not familiar with Helm, make sure to check out [Helm: What Is it?](/guides/kubernetes/helm-what-is/) and [Getting Started With Helm](/guides/kubernetes/helm-gs/). For this walkthrough, you’ll be keeping things fairly straightforward, so if you’ve used Helm before, or are just starting to learn, you will have seen most of what’s in this guide.
 
