@@ -259,6 +259,7 @@ JSR-352
 EE
 JBatch
 InfoSec
+12pm
 
 # Companies / Conferences
 Apress

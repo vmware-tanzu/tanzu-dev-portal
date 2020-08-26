@@ -64,7 +64,9 @@
 
         <div class="col px-lg-0 pt-5 {{ if $noUpcoming }} border-top{{ end }} mb-5">
             {{ if .Params.streaming }}
+            {{ if not .Params.noPast }}
             <h3 class="mb-4">Watch Past Episodes</h3>
+            {{ end }}
             {{ end }}
             <div class="row">
             {{ range sort $pages "Params.episode" "desc" }}
