@@ -66,10 +66,17 @@ Great! The above command forwards all traffic to port 9090 on your machine to th
 
 ## Installing Grafana
 
-Much like Prometheus, Grafana has a great [Helm chart](https://github.com/helm/charts/tree/master/stable/grafana) for installing it. Again, you’ll see a plethora of configuration options to tweak the installation to your needs, but for this demo, you can just install it with the default configuration to see it in action: 
+Much like Prometheus, Grafana has a great [Helm chart](https://hub.helm.sh/charts/bitnami/grafana) for installing it. Again, you’ll see a plethora of configuration options to tweak the installation to your needs, but for this demo, you can just install it with the default configuration to see it in action. You'll first need to add the Bitnami Helm repository and run the `helm repo update` command:
 
 ```bash
-helm install grafana stable/grafana
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm repo update
+```
+
+Then, install the Helm chart:
+
+```bash
+helm install grafana bitnami/grafana
 ```
 
 After a few moments, you’ll see a new pod created:
@@ -81,7 +88,7 @@ grafana-66c98bcb86-xpd5t                         1/1     Running   0          2d
 There’s one additional step you’ll need to take. The Grafana Helm chart generates a random password for you and stores it as a secret in Kubernetes. You can retrieve this password by running the following command:
 
 ```bash
-kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+echo "$(kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 --decode)"
 ```
 
 Note the password, as you’ll be needing it shortly. Like the Prometheus install, you may have different requirements or capabilities for exposing services outside of your Kubernetes cluster, but you can again use the `kubectl port-forward` command. Open a new terminal and run:
