@@ -2,7 +2,7 @@
 title: "Code"
 type: "tv-show"
 streaming: true
-noPast: true
+# noPast: true
 id: "code"
 description: Every Wednesday at 12pm PT our Developer Advocates code live.
 teaser: Live Every Wednesday at 12pm PT
