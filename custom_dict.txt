@@ -210,6 +210,7 @@ OAuth2?
 OpenID
 Paketo
 Procfile
+[P,p]rometheus
 PropertySources
 [P,p]roto
 Protobuf
