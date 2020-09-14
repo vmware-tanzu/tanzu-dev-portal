@@ -348,6 +348,7 @@ YAML|yaml
 # Names
 Brindley
 Coté
+Clozel
 Czarkowski('s)?
 Dieruf
 Dobrin
@@ -364,6 +365,7 @@ Liles
 Madhav
 Neumann
 Pilimon
+Renfro
 Sathe
 Schutta
 Syer
