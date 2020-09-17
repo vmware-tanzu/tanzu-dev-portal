@@ -324,6 +324,7 @@ NSX
 OCI(-compliant)?
 OOP
 ORM(-based)?
+OSS
 OWASP
 POJP
 RBAC(-enabled)?
