@@ -181,7 +181,7 @@ Jaeger
 JBatch
 JHipster
 Jsonnet
-[K,k][8,9,14]s
+[K,k](8|9|14)s
 Kaniko
 kapp
 Kafka
@@ -233,6 +233,7 @@ pullPolicy
 pyenv-installer
 [P,p]ip[X,x]('s)?
 RabbitMQ('s)?
+ReplicaSet(s)?
 Resilience4J
 RestAssured
 Riak
