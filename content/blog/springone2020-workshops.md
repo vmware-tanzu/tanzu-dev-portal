@@ -8,7 +8,6 @@ date: 2020-09-17
 topics:
 - Spring
 - Kubernetes
-- SpringOne
 tags:
 - SpringOne
 - Workshops
