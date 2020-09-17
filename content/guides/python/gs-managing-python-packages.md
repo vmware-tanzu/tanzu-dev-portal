@@ -1,6 +1,5 @@
 ---
 title:  "Python Like A Pro: Managing Project Dependencies"
-featured: true
 sortTitle: "Python Like A Pro - Project Dependencies"
 weight: 2
 description: "Learn how to isolate your Python dependencies using pyenv-virtualenv."

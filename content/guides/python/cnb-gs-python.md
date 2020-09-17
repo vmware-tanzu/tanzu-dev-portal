@@ -1,6 +1,5 @@
 ---
 title:  "Python Like A Pro: Building Docker Containers"
-featured: true
 sortTitle: "Python Buildpacks"
 weight: 2
 description: "Package your Python apps into Docker images in no time with Buildpacks."
