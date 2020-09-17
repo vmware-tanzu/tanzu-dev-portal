@@ -1,0 +1,4 @@
+Jinja2==2.11.2
+python-youtube==0.6.0
+urllib3==1.25.10
+requests==2.24.0

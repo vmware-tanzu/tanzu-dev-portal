@@ -20,5 +20,5 @@ npm install --global spellchecker-cli retext-syntax-urls retext-indefinite-artic
 
 echo "--> spellcheck markdown files"
 IGNORE_REGEX="[0-9a-f]{7} (?=.*[0-9])[0-9A-Za-z_\-]{11}" # GitHub hashes and YouTube IDs
-IGNORE_FILES="!(content/team/mark-heckler/_index.md)" # Too much spanish
+IGNORE_FILES="!(content/team/mark-heckler/_index.md) !(content/tv/tgik/*.md)" # Too much spanish, don't worry about TGIK episodes for now
 spellchecker -q --no-suggestions -l en-US -f 'content/**/*.md' $IGNORE_FILES -i $IGNORE_REGEX --frontmatter-keys title Title description Description -d custom_dict.txt --plugins frontmatter spell syntax-urls indefinite-article repeated-words

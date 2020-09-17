@@ -1,0 +1,41 @@
+name: Get Latest TGIK Episodes
+on:
+  schedule:
+    - cron: "0 16 * * 2,3,5"
+  workflow_dispatch:
+jobs:
+  get-episodes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.PA_TOKEN }}
+      - name: Checkout TGIK Branch
+        run: |
+          git checkout -B tgik
+          if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git tgik;then git fetch && \
+          git branch --set-upstream-to=origin/tgik tgik && git pull; else \
+          git push --set-upstream origin tgik; fi
+      - uses: ./.github/actions/tgik-episodes
+        name: Get Latest TGIK Episodes (creates local changes)
+        env:
+          API_KEY: ${{ secrets.YT_API_KEY }}
+          PLAYLIST_ID: "PL7bmigfV0EqQzxcNpmcdTJ9eFRPBe-iZa"
+          EPISODES_PATH: "content/tv/tgik/"
+          IMG_PATH_PREFIX: "static/"
+          IMAGES_REL_PATH: "images/tv/episodes/tgik/"
+          TEMPLATE_FILE: ".github/actions/tgik-episodes/src/template.md"
+      - name: Check for modified files
+        id: git-check
+        run: |
+          git add --all
+          echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
+      - name: Commit files
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+          git push

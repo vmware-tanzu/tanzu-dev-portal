@@ -6,20 +6,28 @@
 [context.production.environment]
   HUGO_VERSION = "0.69.2"
   HUGO_ENV = "production"
+  TZ='America/Los_Angeles'
 
 [context.deploy-preview]
   command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.69.2"
+  TZ='America/Los_Angeles'
 
 [context.branch-deploy]
   command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.69.2"
+  TZ='America/Los_Angeles'
 
 [[redirects]]
   from = "/"
   to = "/developer"
   status = 302
+
+[[redirects]]
+  from = "/*"
+  to = "/developer/404.html"
+  status = 404
