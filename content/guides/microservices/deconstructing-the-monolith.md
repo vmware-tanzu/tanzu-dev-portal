@@ -46,11 +46,11 @@ Microservices give you a natural indirection layer insulating you from external 
 Polyglot Tech Stacks
 Monoliths forced a standardized, often lowest common denominator, technology stack regardless of the fit to purpose. Microservices give you the freedom to choose the right language or database for the business requirements rather than force a one size fits all solution.
 Facilitate Legal Compliance
-Our applications often deal with sensitive data which means compliance with various laws and regulations. Credit cards and personally identifiable information must be safeguarded. Creating a separate microservice to handle the legally entangled aspects of your application can be simpler and faster than attempting to rewire the monolith. 
+Our applications often deal with sensitive data which means compliance with various laws and regulations. Credit cards and personally identifiable information must be safeguarded. Creating a separate microservice to handle the legally entangled aspects of your application can be simpler and faster than attempting to rewire the monolith.
 
-> Microservices are not an excuse to use your favorite esoteric language or technology. You must [weigh the pros and cons](https://www.makejarnotwar.com/episode/0004/) of any design choice and do not dismiss the cost of maintaining multiple disparate stacks.
+> Microservices are not an excuse to use your favorite esoteric language or technology. You must [weigh the pros and cons](https://www.vmwaretanzu.com/episode/0004/) of any design choice and do not dismiss the cost of maintaining multiple disparate stacks.
 
-If you’d like to learn more about these principles, peruse the blog series [Should that be a Microservice?](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind) on the [VMware Tanzu blog](https://tanzu.vmware.com/blog). 
+If you’d like to learn more about these principles, peruse the blog series [Should that be a Microservice?](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind) on the [VMware Tanzu blog](https://tanzu.vmware.com/blog).
 
 ## Identifying Bounded Contexts
 By now, developers are (re)familiarizing themselves with domain driven design and the quest for the bounded contexts in their systems. But it can be daunting to know how to start. [Event Storming](https://tanzu.vmware.com/content/podcasts/domain-driven-design-event-storming-with-jakub-pilimon) is a collaborative technique designed to help you discover bounded contexts and vertical slices of an application. It facilitates decomposition of the monolith giving you an opportunity to model new flows and ideas. [Event Storming](https://www.eventstorming.com/book/) is a group activity requiring little more than sticky notes, sharpies, some painters tape and a large wall.

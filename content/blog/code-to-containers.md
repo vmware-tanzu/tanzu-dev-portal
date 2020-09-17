@@ -1,10 +1,9 @@
 ---
 title: "From Commit to Container"
-featured: true
+featured: false
 description: >
     Building Containers from your code.
 date: 2020-05-29
-weight: 1
 topics:
 - Containers
 tags:
