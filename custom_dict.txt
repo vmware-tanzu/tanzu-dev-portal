@@ -9,6 +9,7 @@ https?|HTTPS?
 localhost(:[0-9]*)?
 
 # Missing or Made-up Words
+12pm
 affordances
 Agile-ific
 amongst
@@ -48,6 +49,7 @@ getters
 GitOps
 Helming
 hostname
+InfoSec
 [I,i]ntegrations
 kitesurfing
 lifecycle
@@ -94,6 +96,7 @@ revertibility
 rollout
 runtimes?
 runnable
+SaaS-based
 scalable
 screencaster
 [S,s]erverless
@@ -101,6 +104,7 @@ screencaster
 sso|SSO
 (de)*serialize[d,r]
 Sox
+Spock
 stateful
 suboptimal
 symposia
@@ -138,6 +142,7 @@ base64(-encoded)?
 Blazor
 [B,b]uildpack(s|'s)?
 Bundler
+Carvel
 cass-operator
 cd
 (CF|cf)(-for-k8s)?
@@ -149,6 +154,7 @@ CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
+Dataflow
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
@@ -172,10 +178,10 @@ HyperKit
 init
 InfoQ
 Jaeger
+JBatch
 JHipster
 Jsonnet
-[K,k]8s
-[K,k]9s
+[K,k](8|9|14)s
 Kaniko
 kapp
 Kafka
@@ -192,9 +198,11 @@ Kubernetes(-native|-specific|-centric|-based)?
 linter
 [L,l]inux
 [L,l]og4j2?
+LoadBalancer
 [M,m]acOS
 Microk8s
 [M,m]inikube
+Mockito
 MockMvc
 msgpack(ed)?
 Multipass
@@ -207,6 +215,8 @@ nginx
 NGINX
 NoSQL
 OAuth2?
+Octant
+OpenFeign
 OpenID
 Paketo
 Procfile
@@ -223,8 +233,11 @@ pullPolicy
 pyenv-installer
 [P,p]ip[X,x]('s)?
 RabbitMQ('s)?
+ReplicaSet(s)?
 Resilience4J
+RestAssured
 Riak
+Rockstar
 rkt
 RSocket(-based)?
 SameSite
@@ -239,34 +252,17 @@ Tekton('s)?
 Terraform
 Terraform(-ing)?
 URL(s)?
-url
 Vaadin
+Velero
 VirtualBox
 virtualenv
 vSphere
 WebFlux
 WebSocket
-WSL
 [V,v]eth
 ytt
 Zipkin
 Zuul
-LoadBalancer
-OpenFeign
-OSS
-RestAssured
-k14s
-Velero
-Rockstar
-JSR-352
-EE
-JBatch
-InfoSec
-12pm
-Dataflow
-Spock
-jUnit
-Mockito
 
 # Companies / Conferences
 Apress
@@ -275,20 +271,20 @@ DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CoreOS
+DevOpsDaysKC
 DZone
 EMC
+Google('s)
 HashiCorp
 Heptio
+Heroku('s)
+JavaOne
 JetBrains
 Octoverse
 RedMonk('s)?
-SpringOne
+SpringOne(2020)?
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
-Heroku('s)
-Google('s)
-DevOpsDaysKC
-JavaOne
 
 # Acronyms
 APIs?
@@ -298,6 +294,7 @@ CNI
 CQL
 DAO
 DNS
+EE
 EFK
 FP
 GAC
@@ -310,6 +307,7 @@ IaaS
 JMX
 JPA
 JSON
+JSR-352
 JVM
 KMS
 LDAP
@@ -320,15 +318,13 @@ MVC
 ok
 POJO(s)?
 pb('s)?
-youtube
 IIS
-integrations
-SaaS-based
 NFJS
 NSX
 OCI(-compliant)?
 OOP
 ORM(-based)?
+OSS
 OWASP
 POJP
 RBAC(-enabled)?
@@ -340,7 +336,9 @@ TCP
 TLS
 UI
 UR[I,L](s)?
+url
 VMs?
+WSL
 x64
 XKCD
 YAML|yaml

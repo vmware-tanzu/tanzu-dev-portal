@@ -1,6 +1,5 @@
 ---
 title:  "Python Like A Pro: Run In Production"
-featured: true
 sortTitle: "Python On Cloud Foundry"
 weight: 2
 description: "Get your Python code into production faster. No meetings, no managers, just 'push' & go!"
