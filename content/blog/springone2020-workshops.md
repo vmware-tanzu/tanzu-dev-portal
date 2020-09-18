@@ -115,13 +115,13 @@ Here is a full rundown of the self-paced workshops featured at SpringOne 2020:
 
 
 
-## Self-Paced Workshops Are Coming to Tanzu Developer!
+## Self-Paced Workshops Are Coming to Tanzu Developer Center!
 
-Now that SpringOne 2020 has come and gone, the SpringOne self-paced workshops are being moved to their new home at [Tanzu Developer](https://tanzu.vmware.com/developer/)! It is a perfect fit. As its name implies, [Tanzu Developer](https://tanzu.vmware.com/developer/) is developer-focused (no marketing jargon allowed); its sole purpose is to train developers and enable them on their journey forward. The [Tanzu Developer](https://tanzu.vmware.com/developer/) already has blogs, videos, an integrated community, and a learning portal, and features weekly live streams and recordings via [Tanzu.TV](https://tanzu.vmware.com/developer/tv/). 
+Now that SpringOne 2020 has come and gone, the SpringOne self-paced workshops are being moved to their new home at [Tanzu Developer Center](https://tanzu.vmware.com/developer/)! It is a perfect fit. As its name implies, [Tanzu Developer Center](https://tanzu.vmware.com/developer/) is developer-focused (no marketing jargon allowed); its sole purpose is to train developers and enable them on their journey forward. The [Tanzu Developer Center](https://tanzu.vmware.com/developer/) already has blogs, videos, an integrated community, and a learning portal, and features weekly live streams and recordings via [Tanzu.TV](https://tanzu.vmware.com/developer/tv/). 
 
 Not only are you getting the workshops from SpringOne 2020, but more workshops are being made as we speak! 
 
 ![SpringOne2020 workshops end](/images/blogs/springone2020-workshops/overview.png "SpringOne2020 workshops end")
 
 
-To be notified as soon as the workshops are made available, [subscribe Tanzu Developer.](https://tanzu.vmware.com/developer/community/) 
+To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer Newsletter.](https://tanzu.vmware.com/developer/community/) 
