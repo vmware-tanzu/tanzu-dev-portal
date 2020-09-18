@@ -28,6 +28,7 @@ biome
 (non-)?cacheable
 cfapps
 codebase
+[C,c]omms
 [C,c]onfig
 COVID-19
 customizable
@@ -51,6 +52,7 @@ Helming
 hostname
 InfoSec
 [I,i]ntegrations
+[I,i]nterservice
 kitesurfing
 lifecycle
 Livelessons
