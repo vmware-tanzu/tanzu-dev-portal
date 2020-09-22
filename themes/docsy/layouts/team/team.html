@@ -47,6 +47,25 @@
               {{ end }}
           </div>
   
+          {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (humanize .Data.Term | title)) }}
+          {{ $hosts := where (where .Site.Pages "Dir" "tv/code/") "Params.hosts" "intersect" (slice (humanize .Data.Term | title)) }}
+          {{ $shows := (append $guests $hosts).ByDate.Reverse }}
+          {{ if gt (len $shows) 0 }}
+          <div class='container py-5 border-top'>
+              <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
+              <div class="col px-lg-0"><div class='row'>
+                  {{ range $shows }}
+                      <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                          {{ if (not (isset .Params "youtube")) | or (eq .Params.youtube "") }}<a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_image | relURL }}"></a>
+                          {{ else }}<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
+                          {{ end }}
+                          <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
+                      </div>
+                  {{ end }}
+              </div></div>
+          </div>
+          {{ end }}
+
   
           {{ $videos := where .Data.Pages "Section" "videos" }}
           {{ if gt (len $videos) 0 }}
