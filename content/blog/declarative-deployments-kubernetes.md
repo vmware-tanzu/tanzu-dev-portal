@@ -3,8 +3,6 @@ title: "Declarative Deployments in Kubernetes: What Options Do I Have?"
 description: >
     Compare various options for declarative deployment of microservices in Kubernetes.
 date: 2020-07-30
-featured: true
-weight: 2
 topics:
 - Kubernetes
 tags:
