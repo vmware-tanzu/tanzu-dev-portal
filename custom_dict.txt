@@ -10,7 +10,6 @@ localhost(:[0-9]*)?
 
 # Missing or Made-up Words
 12pm
-addon(s)?
 affordances
 Agile-ific
 amongst
@@ -152,7 +151,6 @@ cd
 classpath
 CloudEvents
 Cloudfoundry
-ClusterIssuer
 CoreCLR
 CRD
 ConfigMap(s)?
@@ -191,7 +189,6 @@ kapp
 Kafka
 kata
 keyspace
-keychain
 Kibana
 Knative
 kpack(-hosted)?
@@ -223,7 +220,6 @@ OAuth2?
 Octant
 OpenFeign
 OpenID
-OpenSSL
 Paketo
 Procfile
 [P,p]rometheus
@@ -249,7 +245,6 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 spring-petclinic
-SSL
 Stacker
 Steeltoe
 STDOUT
@@ -294,7 +289,6 @@ SpringOne(2020)?
 VMware(-hosted|'s|Tanzu)?
 
 # Acronyms
-v3
 APIs?
 brd1
 CLI
