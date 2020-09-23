@@ -39,3 +39,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "Add changes" -a
           git push
+      - name: Cleanup tgik branch
+        if: steps.git-check.outputs.modified == 'false'
+        run: |
+          git push origin --delete tgik
