@@ -15,7 +15,7 @@
                 {{ .Render "content" }}
             </div>
         </div>
-          
+
           {{ $blogs := where .Data.Pages "Section" "blog" }}
           {{ if gt (len $blogs) 0 }}
           <div class='border-top container py-5 flex flex-wrap'>
@@ -47,8 +47,10 @@
               {{ end }}
           </div>
   
-          {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (humanize .Data.Term | title)) }}
-          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (humanize .Data.Term | title)) }}
+          {{ .Scratch.Set "memberName" "" }}
+          {{ with .Site.GetPage (print "/team/" .Data.Term) }}{{ .Scratch.Set "memberName" .Params.name }}{{ end }}
+          {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (.Scratch.Get "memberName")) }}
+          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
           {{ if gt (len $shows) 0 }}
           <div class='container py-5 border-top'>
