@@ -48,7 +48,7 @@
           </div>
   
           {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (humanize .Data.Term | title)) }}
-          {{ $hosts := where (where .Site.Pages "Dir" "tv/code/") "Params.hosts" "intersect" (slice (humanize .Data.Term | title)) }}
+          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (humanize .Data.Term | title)) }}
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
           {{ if gt (len $shows) 0 }}
           <div class='container py-5 border-top'>
