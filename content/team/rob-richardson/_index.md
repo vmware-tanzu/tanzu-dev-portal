@@ -6,6 +6,7 @@ roles: ["guest"]
 skills: []
 location: ""
 weight: 1
+external: true
 
 # Social Media
 twitter: "rob_rich"
