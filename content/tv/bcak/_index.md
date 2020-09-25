@@ -11,4 +11,6 @@ weight: 4
 draft: false
 ---
 
-Interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
+Interviews and discussions with open source committers, thought leaders, friends and interesting people in the software space.
+
+No preparation, no live coding, no slides just a conversation with "cool", smart people. An "Inside the Actors Studio" but for technologists if we may be so bold.
