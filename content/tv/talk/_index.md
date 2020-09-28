@@ -4,11 +4,15 @@ type: "tv-show"
 streaming: true
 noPast: true
 id: "code"
-description: Every Wednesday at 12pm PT our Developer Advocates code live.
-teaser: Live Every Wednesday at 12pm PT
-image: "/images/tv/shows/code.jpg"
-weight: 2
-draft: true
+description: Daily Interviews and discussions about cloud native, software modernization at 11am CET
+teaser: Daily at 11am CET
+image: "/images/tv/shows/talk.png"
+weight: 4
+draft: false
 ---
 
 Interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
+
+Streams daily at 11am CET on [twitch.tv/vmwaretanzu](https://twitch.tv/vmwaretanzu)
+
+![tanzu talk show graphic](/images/tv/shows/talk.png)

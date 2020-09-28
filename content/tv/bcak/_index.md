@@ -14,3 +14,5 @@ draft: false
 Interviews and discussions with open source committers, thought leaders, friends and interesting people in the software space.
 
 No preparation, no live coding, no slides just a conversation with "cool", smart people. An "Inside the Actors Studio" but for technologists if we may be so bold.
+
+Streams every Second Monday at 10 am PT on [twitch.tv/vmwaretanzu](https://twitch.tv/vmwaretanzu)
