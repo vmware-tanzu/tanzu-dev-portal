@@ -264,6 +264,7 @@ Velero
 VirtualBox
 virtualenv
 vSphere
+Vue
 WebFlux
 WebSocket
 [V,v]eth
