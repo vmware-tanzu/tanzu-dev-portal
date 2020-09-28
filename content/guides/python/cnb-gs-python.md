@@ -204,7 +204,7 @@ You can stop and remove the container from Docker as follows:
 
 ### Keep Learning
 
-Learn more about buildpacks right here on the Tanzu Developer website with these great guides:
+Learn more about buildpacks right here on the Tanzu Developer Center with these great guides:
 
 - [Buildpacks: What Are They?](/guides/containers/cnb-what-is)
 
