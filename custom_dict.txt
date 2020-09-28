@@ -8,6 +8,11 @@
 https?|HTTPS?
 localhost(:[0-9]*)?
 
+# Times / Dates / timezones / etc
+[0-9]*(am|pm|AM|PM)
+(AM|am|PM|pm)
+(?:[APMCEI][ESD]T|UTC)
+
 # Missing or Made-up Words
 12pm
 addon(s)?
@@ -264,6 +269,7 @@ Velero
 VirtualBox
 virtualenv
 vSphere
+Vue
 WebFlux
 WebSocket
 [V,v]eth
@@ -367,6 +373,7 @@ Isenberg
 Jakub
 Jernigan
 Julien
+Kousen
 Liles
 Madhav
 Neumann
