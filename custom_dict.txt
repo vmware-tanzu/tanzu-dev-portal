@@ -8,6 +8,11 @@
 https?|HTTPS?
 localhost(:[0-9]*)?
 
+# Times / Dates / timezones / etc
+[0-9]*(am|pm|AM|PM)
+(AM|am|PM|pm)
+(?:[APMCEI][ESD]T|UTC)
+
 # Missing or Made-up Words
 12pm
 addon(s)?

@@ -15,4 +15,4 @@ Interviews and discussions about cloud native, software modernization, and news 
 
 Streams daily at 11am CET on [twitch.tv/vmwaretanzu](https://twitch.tv/vmwaretanzu)
 
-![tanzu talk show graphic](/images/tv/shows/talk.png)
+![Tanzu Talk show graphic](/images/tv/shows/talk.png)
