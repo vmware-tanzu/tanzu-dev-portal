@@ -14,6 +14,7 @@ localhost(:[0-9]*)?
 (?:[APMCEI][ESD]T|UTC)
 
 # Missing or Made-up Words
+1:1s
 12pm
 addon(s)?
 affordances
@@ -46,6 +47,7 @@ defacto
 [D,d]ev[R,r]el
 egoless
 Endnotes
+expensed
 failover
 fiancé
 fileshare
@@ -56,13 +58,16 @@ getters
 GitOps
 Helming
 hostname
+ideate
 InfoSec
 [I,i]ntegrations
 [I,i]nterservice
+Kanban
 kitesurfing
 lifecycle
 Livelessons
 liveness
+Low-fi
 matchings
 [M,m]odelling
 modularity
@@ -114,13 +119,17 @@ sso|SSO
 Sox
 Spock
 stateful
+[S,s]tandups?
 suboptimal
 symposia
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
+timebox
 [T,t]o[D,d]o
+TODOs?
 toolchain
+tooltip
 unencrypted
 unpause
 unpushed
@@ -129,6 +138,7 @@ uptime
 versioned
 veth-jelly
 walkthrough
+waypoints
 webhooks?
 whiteboard(ed|ing)
 
@@ -167,6 +177,7 @@ Dataflow
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
+donut
 [E,e]thernet(s)?
 etcd
 filesystem
@@ -200,6 +211,7 @@ keychain
 Kibana
 Knative
 kpack(-hosted)?
+Krisp
 KubeAcademy
 [K,k]ubeapps
 kubectl
@@ -253,6 +265,7 @@ rkt
 RSocket(-based)?
 SameSite
 [S,s]kaffold
+Snapchat
 spring-petclinic
 SSL
 Stacker
@@ -263,6 +276,7 @@ Tanzu(Developer)?
 Tekton('s)?
 Terraform
 Terraform(-ing)?
+Trello
 URL(s)?
 Vaadin
 Velero
@@ -318,6 +332,7 @@ GKE
 gRPC
 IaaS
 (IP|ip)(v6|v4|s)?
+IPM
 JMX
 JPA
 JSON
@@ -358,15 +373,27 @@ XKCD
 YAML|yaml
 
 # Names
+Abbie
+Amaro
+Anneliese
+Asiedu-Ampem
+Biville
 Brindley
+Buschmann
 Coté
 Clozel
 Czarkowski('s)?
+Desgber
 Dieruf
 Dobrin
+Dolan
 Dubois
+Florent
 freddygthatsme
+Galystan
+Gereon
 Gibb
+Hayk
 Herbrich
 Iberkleid
 Isenberg
@@ -376,7 +403,9 @@ Julien
 Kousen
 Liles
 Madhav
+Nana
 Neumann
+Palo
 Pilimon
 Renfro
 Sathe
@@ -408,3 +437,6 @@ slideshare
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
 CKtaKhKOo-Y
+
+# Emoji
+ℹ
