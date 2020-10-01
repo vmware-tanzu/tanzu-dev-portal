@@ -36,6 +36,7 @@ cfapps
 codebase
 [C,c]omms
 [C,c]onfig
+cortado
 COVID-19
 customizable
 deployable
@@ -47,6 +48,7 @@ defacto
 egoless
 Endnotes
 failover
+favourite(s)?
 fiancé
 fileshare
 FinTech
@@ -366,6 +368,7 @@ Dieruf
 Dobrin
 Dubois
 freddygthatsme
+Gerhard('s)?
 Gibb
 Herbrich
 Iberkleid
@@ -374,6 +377,7 @@ Jakub
 Jernigan
 Julien
 Kousen
+Lazu
 Liles
 Madhav
 Neumann
