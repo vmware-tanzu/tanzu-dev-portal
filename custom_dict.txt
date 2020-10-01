@@ -37,6 +37,7 @@ cfapps
 codebase
 [C,c]omms
 [C,c]onfig
+cortado
 COVID-19
 customizable
 deployable
@@ -49,6 +50,7 @@ egoless
 Endnotes
 expensed
 failover
+favourite(s)?
 fiancé
 fileshare
 FinTech
@@ -392,6 +394,7 @@ Florent
 freddygthatsme
 Galystan
 Gereon
+Gerhard('s)?
 Gibb
 Hayk
 Herbrich
@@ -401,6 +404,7 @@ Jakub
 Jernigan
 Julien
 Kousen
+Lazu
 Liles
 Madhav
 Nana
