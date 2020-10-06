@@ -32,6 +32,7 @@ Aviv
 balancers?
 biome
 [B,b]ootiful
+Bugsville
 (non-)?cacheable
 cfapps
 codebase
