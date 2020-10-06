@@ -2,7 +2,7 @@
 title: "Tanzu Talk"
 type: "tv-show"
 streaming: true
-noPast: true
+# noPast: true
 id: "code"
 description: Daily Interviews and discussions about cloud native, software modernization at 11am CET
 teaser: Daily at 11am CET

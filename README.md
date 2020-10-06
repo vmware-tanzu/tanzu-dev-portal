@@ -79,6 +79,7 @@ Use the `team` taxonomy to attribute one or more authors to a piece of content.
 #### Topics
 Topics should always be included in the `topics` section of the front matter, must be one of the following options and must appear exactly as follows:
 
+- Agile
 - CI-CD
 - Containers
 - Event Streaming
