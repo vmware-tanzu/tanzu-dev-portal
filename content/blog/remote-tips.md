@@ -8,7 +8,7 @@ topics:
 - Agile
 patterns:
 team: 
-- Remote Navigator Team
+- VMware Pivotal Labs
 ---
 
 ![Remote Workspace with Cat](/images/blogs/remote-tips/remote-workspace.jpg)
