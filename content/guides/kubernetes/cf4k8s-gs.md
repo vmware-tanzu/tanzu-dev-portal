@@ -17,7 +17,7 @@ team:
 
 ### What is cf-for-k8s?
 
-> Updated October 2020: CF CLI v7 and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.
+> Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.
 
 [CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) brings Cloud Foundry to Kubernetes. 
 
@@ -41,8 +41,8 @@ Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file 
 
 > You will need a few tools before beginning and once set up installation usually takes 10 minutes or less.
 
-> **CF CLI version requirement changed to v7+**
-- [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (v7+) to talk to Cloud Foundry
+> **CF CLI version requirement changed to version 7+**
+- [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (version 7+) to talk to Cloud Foundry
     * on mac 
         ```
         brew install cloudfoundry/tap/cf-cli
@@ -114,7 +114,7 @@ The `./hack/generate-values.sh` script will generate certificates, keys, passwor
 ```
 Append the app_registry credentials to your DockerHub registry to the bottom of the `./cf-install-values.yml` replacing with your information. You can copy/paste  or use the following command.
 
-> The repeated username is a requirement for dockerhub, this setting changes with some container registries. Also, don't forget to add the quotes.
+> The repeated username is a requirement for DockerHub, this setting changes with some container registries. Also, don't forget to add the quotes.
 
 >To use another container registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md).
 
@@ -122,9 +122,9 @@ Append the app_registry credentials to your DockerHub registry to the bottom of 
 cat >> cf-install-values.yml << EOL
 app_registry:
   hostname: https://index.docker.io/v1/
-  repository: "<dockerhub-username>"
-  username: "<dockerhub-username>"
-  password: "<dockerhub-password>"
+  repository: "<DockerHub-username>"
+  username: "<DockerHub-username>"
+  password: "<DockerHub-password>"
 EOL
 ```
 
@@ -151,7 +151,7 @@ ytt -f config -f ./cf-install-values.yml > ./cf-for-k8s-rendered.yml
 
 You are ready to deploy cf-for-k8s using the `./cf-for-k8s-rendered.yml` file created above. Once you deploy it should take around 10 minutes to finish. 
 
-> The deployment has a timer and will exit with an timeout error if it takes too long. Assuming all previous steps were followed correctly enter the deployment command again to finish if it exits early.
+> The deployment has a timer and will exit with a timeout error if it takes too long. Assuming all previous steps were followed correctly enter the deployment command again to finish if it exits early.
 
 ```
 kapp deploy -a cf -f ./cf-for-k8s-rendered.yml -y
@@ -221,7 +221,7 @@ To see the pods that have applications on your Cloud Foundry instance look in th
 kubectl get pods -n cf-workloads
 ```
 
-You can now play with cf for k8s and deploy other apps and observe how it affects the Kubernetees infrastructure. Try other cf commands like `cf delete test-node-app` and see what changes, enjoy you new cf for k8s instance.
+You can now play with cf for k8s and deploy other apps and observe how it affects the Kubernetes infrastructure. Try other cf commands like `cf delete test-node-app` and see what changes, enjoy you new cf for k8s instance.
 
 ### Delete the cf-for-k8s deployment
 
