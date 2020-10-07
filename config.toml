@@ -4,6 +4,7 @@ publishDir = "public/developer"
 contentDir = "content"
 canonifyURLs = false
 enableRobotsTXT = true
+removePathAccents = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
