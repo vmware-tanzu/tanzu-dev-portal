@@ -116,3 +116,33 @@ I think the big one is my wife getting used to me talking at home all day while 
 #### Ryan Hall (Engineer, Remote USA)
 
 ![Ryan Hall (Engineer, Remote USA)](/images/guides/agile/remote-physical-space/ryan-hall.jpg)
+
+<script>
+    $(document).ready(function () {
+        // Take all images in the "remote-physical-space", and wrap them in
+        // an <a> tag with appropriate attributes.
+        // We do this instead of using HTML in the .md file because:
+        // 1. It keeps the .md file nice and understandable
+        // 2. The src of markdown images may be modified by Hugo at build time.
+        //    Therefore, it should be used as a source of truth for paths, rather
+        //    than hardcoding path in some HTML.
+        $('img')
+            .filter(function(_, element) {
+                return $(element).attr('src').indexOf('remote-physical-space') !== -1;
+            })
+            .wrap(function() {
+                var element = $(this);
+                var src = element.attr('src');
+                var title = element.attr('alt');
+
+                return $('<a></a>')
+                    .attr('href', src)
+                    .attr('title', title)
+                    .attr('rel', 'gallery');
+            });
+
+        // Make all those "<a>" tags part of a lightbox gallery
+        $("a[rel='gallery']").fancybox();
+    });
+
+</script>

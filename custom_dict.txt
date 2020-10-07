@@ -32,6 +32,7 @@ Aviv
 balancers?
 biome
 [B,b]ootiful
+Bugsville
 (non-)?cacheable
 cfapps
 codebase
@@ -124,6 +125,7 @@ stateful
 [S,s]tandups?
 suboptimal
 symposia
+telecom
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
@@ -155,6 +157,7 @@ amd64
 AMQP
 ARM64
 AppSec
+AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
@@ -176,6 +179,7 @@ ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 Dataflow
+DATEV('s)?
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
@@ -199,7 +203,9 @@ HTTPie
 HyperKit
 init
 InfoQ
+J2EE
 Jaeger
+JavaEE
 JBatch
 JHipster
 Jsonnet
@@ -303,6 +309,7 @@ CoreOS
 DevOpsDaysKC
 DZone
 EMC
+Garmin
 Google('s)
 HashiCorp
 Heptio
@@ -310,10 +317,12 @@ Heroku('s)
 JavaOne
 JetBrains
 Octoverse
+OneMagnify
 RedMonk('s)?
 SpringOne(2020)?
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
+VMworld
 
 # Acronyms
 v3
@@ -379,6 +388,7 @@ Abbie
 Amaro
 Anneliese
 Asiedu-Ampem
+Beda
 Biville
 Brindley
 Buschmann
