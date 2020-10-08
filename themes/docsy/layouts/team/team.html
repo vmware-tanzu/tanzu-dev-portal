@@ -18,8 +18,7 @@
 
           {{ $blogs := where .Data.Pages "Section" "blog" }}
           {{ if gt (len $blogs) 0 }}
-          <div class='border-top container py-5 flex flex-wrap'>
-
+          <div id="blogs" class='border-top container py-5 flex flex-wrap'>
             <div class="mb-4 col-lg-2 col-md-2 col-12 px-0 mr-5 mb-5"><div class='flex align-items-center icon-title'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div></div>
             <div class='col-lg-8 col-md-8 col-12 px-0'>
                 {{ range $blogs }}
@@ -31,7 +30,7 @@
 
           {{ $guides := where .Data.Pages "Section" "guides" }}
           {{ if gt (len $guides) 0 }}
-          <div class='container py-5 border-top'>
+          <div id="guides" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-4'><img class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
                   {{ range $guides }}
@@ -53,7 +52,7 @@
           {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
           {{ if gt (len $shows) 0 }}
-          <div class='container py-5 border-top'>
+          <div id="tanzu-tv" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
               <div class="col px-lg-0"><div class='row'>
                   {{ range $shows }}
@@ -71,7 +70,7 @@
   
           {{ $videos := where .Data.Pages "Section" "videos" }}
           {{ if gt (len $videos) 0 }}
-          <div class='container py-5 border-top'>
+          <div id="videos" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
               <div class="col px-lg-0"><div class='row'>
                   {{ range $videos }}
