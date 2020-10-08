@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "{{ video.title }}"
-description: "{{ video.title }}"
+title: "{{ video.title | e }}"
+description: "{{ video.title | e }}"
 episode: "{{ video.episode }}"
 aliases: ["{{ '%04d' % (video.episode | int ) }}"]
 publishdate: "2020-04-01T00:00:00-07:00"
