@@ -1,5 +1,8 @@
 name: Create Automated Youtube PR
-on: push
+on:
+  push:
+    branches:
+      - "youtube-*"
 
 jobs:
   create-pr:

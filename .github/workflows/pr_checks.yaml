@@ -2,7 +2,7 @@ name: Check Spelling and Broken Links
 on:
   pull_request:
     branches:
-      - "youtube-*"
+      - main
 jobs:
   spell-check:
     runs-on: ubuntu-latest
