@@ -1,6 +1,7 @@
 ---
 title: "Need Help Working Remotely? Check Out Our Tips"
-featured: false
+featured: true
+weight: 1
 description: >
     Tips for working remotely.
 date: 2020-10-07
