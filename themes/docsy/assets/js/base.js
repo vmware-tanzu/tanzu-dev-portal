@@ -145,8 +145,9 @@ limitations under the License.
 
     function scrollToTarget(target) {
         var headerHeight = 80; 
-        if (document.getElementById("live-notify").style.display == "block")
-            headerHeight = headerHeight + 40;
+        if (document.getElementById("live-notify") != null)
+            if (document.getElementById("live-notify").style.display == "block")
+                headerHeight = headerHeight + 40;
         var targetId = target.replace(":","\\:");
         $('html, body').animate(
             { scrollTop: $(targetId).offset().top - headerHeight },
