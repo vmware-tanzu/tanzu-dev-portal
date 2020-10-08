@@ -29,7 +29,10 @@ jobs:
           TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
           TITLE_PREFIX: "Tanzu Talk"
           TITLE_SUFFIX: ", "
-
+      - name: Cleanup tanzu-talk branch on failure
+        if: ${{ failure() }}
+        run: |
+          git push origin --delete tanzu-talk
       - name: Check for modified files
         id: git-check
         run: |
