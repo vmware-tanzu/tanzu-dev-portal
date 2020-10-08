@@ -23,7 +23,7 @@ There are undoubtedly more challenges left for us to face in our new, all-remote
 
 Our remote working tips cover a wide range of topics, from general considerations to specific advice for high-collaboration teams:
 
-[Building relationships](https://tanzu.vmware.com/developer/guides/agile/remote-tips-building-relationships/) – How to create virtual spaces and use them to socialize, how to be more inclusive, expressive, and kind; and how to build empathy are just some of the challenges that are heightened by a remote environment. 
+[Building relationships](/guides/agile/remote-tips-building-relationships/) – How to create virtual spaces and use them to socialize, how to be more inclusive, expressive, and kind; and how to build empathy are just some of the challenges that are heightened by a remote environment. 
 
 [Easing facilitation](https://tanzu.vmware.com/developer/guides/agile/remote-tips-facillitation/) – From setting team working agreements and ground rules to keeping participants engaged and included to making the best use of your tools, good facilitation is key to remote working success.
 
