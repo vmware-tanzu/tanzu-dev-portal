@@ -1,9 +1,9 @@
 ---
-title: "VMware Pivotal Labs offers some tips for overcoming the challenges many are facing from transitioning to remote work due to COVID-19"
+title: "Need Help Working Remotely? Check Out Our Tips"
 featured: true
 weight: 1
 description: >
-    Tips for working remotely.
+    VMware Pivotal Labs offers some tips for overcoming the challenges many are facing from transitioning to remote work due to COVID-19
 date: 2020-10-07
 topics:
 - Agile
