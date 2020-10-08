@@ -25,13 +25,13 @@ Our remote working tips cover a wide range of topics, from general consideration
 
 [Building relationships](/guides/agile/remote-tips-building-relationships/) – How to create virtual spaces and use them to socialize, how to be more inclusive, expressive, and kind; and how to build empathy are just some of the challenges that are heightened by a remote environment. 
 
-[Easing facilitation](https://tanzu.vmware.com/developer/guides/agile/remote-tips-facillitation/) – From setting team working agreements and ground rules to keeping participants engaged and included to making the best use of your tools, good facilitation is key to remote working success.
+[Easing facilitation](/guides/agile/remote-tips-facillitation/) – From setting team working agreements and ground rules to keeping participants engaged and included to making the best use of your tools, good facilitation is key to remote working success.
 
-[Leveraging physical space](https://tanzu.vmware.com/developer/guides/agile/remote-tips-physical-space/) – How important is physical space in an all-remote working environment? More important than ever before, it turns out, which is why we offer a gallery of practitioner setups for inspiration.
+[Leveraging physical space](/guides/agile/remote-tips-physical-space/) – How important is physical space in an all-remote working environment? More important than ever before, it turns out, which is why we offer a gallery of practitioner setups for inspiration.
 
-[Battling fatigue](https://tanzu.vmware.com/developer/guides/agile/remote-tips-remote-is-exhausing/) – Working remotely is exhausting. We suggest ways that you can create a stimulating and inspiring work environment, complete with ways to look after yourself (and others), including by setting routines.
+[Battling fatigue](/guides/agile/remote-tips-remote-is-exhausing/) – Working remotely is exhausting. We suggest ways that you can create a stimulating and inspiring work environment, complete with ways to look after yourself (and others), including by setting routines.
 
-[Using the tools](https://tanzu.vmware.com/developer/guides/agile/remote-tips-tools-and-tips/) – Whether you’re still agreeing on the tool stack or helping your customers get up to speed on Zoom, as we’ve learned firsthand, the tools you and your team use have never had such a big impact. 
+[Using the tools](/guides/agile/remote-tips-tools-and-tips/) – Whether you’re still agreeing on the tool stack or helping your customers get up to speed on Zoom, as we’ve learned firsthand, the tools you and your team use have never had such a big impact. 
 
 ## A word on our process
 
