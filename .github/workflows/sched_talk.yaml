@@ -12,12 +12,12 @@ jobs:
         with:
           fetch-depth: 1
           token: ${{ secrets.PA_TOKEN }}
-      - name: Checkout tanzu-talk Branch
+      - name: Create tanzu-talk Branch
         run: |
-          git checkout -B tanzu-talk
-          if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git tanzu-talk;then git fetch && \
-          git branch --set-upstream-to=origin/tanzu-talk tanzu-talk && git pull; else \
-          git push --set-upstream origin tanzu-talk; fi
+          git checkout -B youtube-tanzu-talk-${{ github.run_id }}
+          # if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git tanzu-talk;then git fetch && \
+          # git branch --set-upstream-to=origin/tanzu-talk tanzu-talk && git pull; else \
+          # git push --set-upstream origin tanzu-talk; fi
       - uses: ./.github/actions/youtube-episodes
         name: Get Latest tanzu-talk Episodes (creates local changes)
         env:
@@ -29,7 +29,6 @@ jobs:
           TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
           TITLE_PREFIX: "Tanzu Talk"
           TITLE_SUFFIX: ", "
-
       - name: Check for modified files
         id: git-check
         run: |
@@ -41,8 +40,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Add changes" -a
-          git push
-      - name: Cleanup tanzu-talk branch
-        if: steps.git-check.outputs.modified == 'false'
-        run: |
-          git push origin --delete tanzu-talk
+          git push origin youtube-tanzu-talk-${{ github.run_id }}
