@@ -185,6 +185,7 @@ DATEV('s)?
 [D,d]ockerfile(s|-built)?
 DockerHub
 donut
+ElasticSearch
 [E,e]thernet(s)?
 etcd
 filesystem
@@ -275,6 +276,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 Snapchat
+SpringBoot
 spring-petclinic
 SSL
 Stacker
@@ -285,6 +287,7 @@ Tanzu(Developer)?
 Tekton('s)?
 Terraform
 Terraform(-ing)?
+TestContainers
 Trello
 URL(s)?
 Vaadin
