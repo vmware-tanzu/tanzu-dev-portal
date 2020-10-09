@@ -57,6 +57,7 @@ fileshare
 FinTech
 firewalling
 frictionless
+geospatial
 getters
 GitOps
 Helming
@@ -427,12 +428,14 @@ Pilimon
 Renfro
 Sathe
 Schutta
+Stéphane
 Syer
 Vetter
 Viktor
 Junio
 Hamano
 Maciaszek-Sharma
+Nicoll
 Wilcock('s)?
 DaShaun
 Minella
