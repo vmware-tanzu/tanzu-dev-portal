@@ -265,6 +265,7 @@ pullPolicy
 [V,v]irtualenv
 pyenv-installer
 [P,p]ip[X,x]('s)?
+PubSub
 RabbitMQ('s)?
 ReplicaSet(s)?
 Resilience4J
