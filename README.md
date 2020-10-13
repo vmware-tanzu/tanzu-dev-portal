@@ -1,13 +1,22 @@
-# VMware Tanzu Developer Portal
+# VMware Tanzu Developer Center
 
 ## Building the Site
 
-The VMware Tanzu Developer Portal uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
+The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
 
 ### Run locally
 
-To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use the following commands:
+To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use one of the following two commands:
 
+Using `brew`:
+```
+wget "https://github.com/Homebrew/homebrew-core/blob/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
+brew install hugo.rb
+# To keep this version around if you upgrade
+brew pin hugo
+```
+
+Or to directly download:
 ```
 wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
 tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz" 
@@ -79,6 +88,7 @@ Use the `team` taxonomy to attribute one or more authors to a piece of content.
 #### Topics
 Topics should always be included in the `topics` section of the front matter, must be one of the following options and must appear exactly as follows:
 
+- Agile
 - CI-CD
 - Containers
 - Event Streaming

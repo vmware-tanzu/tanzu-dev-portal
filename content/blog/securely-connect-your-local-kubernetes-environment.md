@@ -4,7 +4,7 @@ description: >
     Learn how to configure your local Kubernetes environment to work with secure ingress and reproducible URLs, so that development is made easier.
 date: 2020-09-22
 featured: true
-weight: 2
+weight: 3
 topics:
 - Kubernetes
 tags:

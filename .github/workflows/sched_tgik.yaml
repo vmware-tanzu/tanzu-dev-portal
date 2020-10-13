@@ -14,11 +14,11 @@ jobs:
           token: ${{ secrets.PA_TOKEN }}
       - name: Checkout TGIK Branch
         run: |
-          git checkout -B tgik
-          if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git tgik;then git fetch && \
-          git branch --set-upstream-to=origin/tgik tgik && git pull; else \
-          git push --set-upstream origin tgik; fi
-      - uses: ./.github/actions/tgik-episodes
+          git checkout -B youtube-tgik
+          if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git youtube-tgik;then git fetch && \
+          git branch --set-upstream-to=origin/youtube-tgik youtube-tgik && git pull; else \
+          git push --set-upstream origin youtube-tgik; fi
+      - uses: ./.github/actions/youtube-episodes
         name: Get Latest TGIK Episodes (creates local changes)
         env:
           API_KEY: ${{ secrets.YT_API_KEY }}
@@ -26,7 +26,10 @@ jobs:
           EPISODES_PATH: "content/tv/tgik/"
           IMG_PATH_PREFIX: "static/"
           IMAGES_REL_PATH: "images/tv/episodes/tgik/"
-          TEMPLATE_FILE: ".github/actions/tgik-episodes/src/template.md"
+          TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
+          TITLE_PREFIX: "TGI Kubernetes"
+          TITLE_SUFFIX: ":"
+
       - name: Check for modified files
         id: git-check
         run: |
@@ -42,4 +45,4 @@ jobs:
       - name: Cleanup tgik branch
         if: steps.git-check.outputs.modified == 'false'
         run: |
-          git push origin --delete tgik
+          git push origin --delete youtube-tgik

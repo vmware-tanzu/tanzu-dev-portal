@@ -74,7 +74,7 @@ limitations under the License.
 
         //Open external links/rss in new tab, tvc links in same tab
         $("a[href^='http']").attr('target', '_blank');
-        $("a[href*='tanzu.vmware.com']").attr('target', '_self');
+        $("a[href*='tanzu.vmware.com/developer']").attr('target', '_self');
         $("a[href*='rss']").attr('target', '_blank');
 
 
@@ -145,8 +145,9 @@ limitations under the License.
 
     function scrollToTarget(target) {
         var headerHeight = 80; 
-        if (document.getElementById("live-notify").style.display == "block")
-            headerHeight = headerHeight + 40;
+        if (document.getElementById("live-notify") != null)
+            if (document.getElementById("live-notify").style.display == "block")
+                headerHeight = headerHeight + 40;
         var targetId = target.replace(":","\\:");
         $('html, body').animate(
             { scrollTop: $(targetId).offset().top - headerHeight },

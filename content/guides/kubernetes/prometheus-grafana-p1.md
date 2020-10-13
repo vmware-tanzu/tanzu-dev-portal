@@ -25,7 +25,7 @@ In this guide, you’ll be setting up Prometheus and Grafana on an existing Kube
 
 ## Installing Prometheus
 
-Luckily, there’s a comprehensive [Helm chart for Prometheus](https://github.com/helm/charts/tree/master/stable/prometheus) with an extensive list of configuration options. If you’re not familiar with Helm, make sure to check out [Helm: What Is it?](/guides/kubernetes/helm-what-is/) and [Getting Started With Helm](/guides/kubernetes/helm-gs/). For this walkthrough, you’ll be keeping things fairly straightforward, so if you’ve used Helm before, or are just starting to learn, you will have seen most of what’s in this guide.
+Luckily, there’s a comprehensive [Helm chart for Prometheus](https://github.com/bitnami/charts/tree/master/bitnami/kube-prometheus) with an extensive list of configuration options. If you’re not familiar with Helm, make sure to check out [Helm: What Is it?](/guides/kubernetes/helm-what-is/) and [Getting Started With Helm](/guides/kubernetes/helm-gs/). For this walkthrough, you’ll be keeping things fairly straightforward, so if you’ve used Helm before, or are just starting to learn, you will have seen most of what’s in this guide.
 
 To install Prometheus, you first need to add the Bitnami Helm repository by using the `helm repo add` command followed by the `helm repo update` command to pull in the latest metadata:
 
@@ -40,7 +40,7 @@ helm repo update
 Before you install Prometheus, check out the [configuration options](https://github.com/bitnami/charts/tree/master/bitnami/kube-prometheus#parameters) you have, because there are a lot of them. In this example, it’s assumed that you’ll be installing with the default configuration into a Kubernetes cluster with no specific requirements. As you can see, there are options for everything from how each component is exposed (i.e., the type of ingress used, if it’s behind a load balancer, etc.) to how data is stored and more. If this was a production installation, you’d want to thoroughly sort out these options, but for the purposes of this demo, you can install Prometheus with the default configuration using the `helm install` command:
 
 ```bash
-helm install prometheus bitnami/prometheus-operator
+helm install prometheus bitnami/kube-prometheus
 ```
 
 After a few moments, you’ll see a few new pods created:
@@ -56,7 +56,7 @@ prometheus-prometheus-prometheus-oper-prometheus-0       3/3     Running   1    
 There are a few ways you can access Prometheus, but it largely depends on how your Kubernetes cluster is configured. As the Prometheus documentation points out, traditionally you would expose the server through a reverse proxy, such as nginx. But since the default configuration of the Prometheus Helm chart only exposes it to other pods in the Kubernetes cluster, you can instead take advantage of the `kubectl port-forward` command. Open a new terminal and keep it open after running the following:
 
 ```bash
-kubectl port-forward --namespace default svc/prometheus-prometheus-oper-prometheus 9090:9090
+kubectl port-forward --namespace default svc/prometheus-kube-prometheus-prometheus 9090:9090
 ```
 
 Great! The above command forwards all traffic to port 9090 on your machine to the `prometheus-server` pod, which you can see by visiting [http://localhost:9090](http://localhost:9090).
@@ -96,7 +96,7 @@ With this command running, you can now access Grafana at [http://localhost:3000]
 
 If you mouse over the cogwheel on the left-hand side of the Grafana screen, you’ll be prompted with several configuration options. Choose “Data Sources,” followed by “Add data source.” Here, you’ll see a long list of data sources that Grafana knows how to talk to automatically, and luckily Prometheus is on that list. Choose “Prometheus” and you’ll be brought to the configuration screen for your new data source.
 
-If you didn’t change the default configuration when installing Prometheus, you’ll only need to give it a name of your choosing, as well as the URL where Prometheus is running. Since both are running in the same cluster, you can connect Grafana to Prometheus using the internal DNS to Kubernetes by providing it the service name that Prometheus is connected to: `http://prometheus-prometheus-oper-prometheus.default.svc.cluster.local:9090`
+If you didn’t change the default configuration when installing Prometheus, you’ll only need to give it a name of your choosing, as well as the URL where Prometheus is running. Since both are running in the same cluster, you can connect Grafana to Prometheus using the internal DNS to Kubernetes by providing it the service name that Prometheus is connected to: `http://prometheus-kube-prometheus-prometheus.default.svc.cluster.local:9090`
 
 ![Adding a new Grafana data source](/images/guides/kubernetes/prometheus-grafana/prometheus-002.png)
 
