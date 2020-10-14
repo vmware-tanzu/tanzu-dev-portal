@@ -3,7 +3,7 @@ title: "Debugging a Kubernetes Workload with Octant"
 featured: true
 weight: 1
 description: >
-    Octant is a tool designed to enable developers without a deep knowledge of Kubernetes to become productive as quickly as possible. This post will walk through an NGINX deployment with a faulty NGINX configuration to demonstrate how common pitfalls can be identified using Octant.
+    Walk through an NGINX deployment with a faulty NGINX configuration to demonstrate how common pitfalls can be identified using Octant.
 date: 2020-10-14
 topics:
 - Kubernetes
