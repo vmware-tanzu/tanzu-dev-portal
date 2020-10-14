@@ -266,6 +266,7 @@ pullPolicy
 [V,v]irtualenv
 pyenv-installer
 [P,p]ip[X,x]('s)?
+PubSub
 RabbitMQ('s)?
 ReplicaSet(s)?
 Resilience4J
@@ -312,6 +313,7 @@ LinkedIn
 deliverAgile
 CoreOS
 DevOpsDaysKC
+Documentum
 DZone
 EMC
 Garmin
@@ -323,8 +325,10 @@ JavaOne
 JetBrains
 Octoverse
 OneMagnify
+PMC
 RedMonk('s)?
 SpringOne(2020)?
+UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
@@ -397,11 +401,13 @@ Beda
 Biville
 Brindley
 Buschmann
+Cao
 Coté
 Clozel
 Czarkowski('s)?
 Desgber
 Dieruf
+Dieu
 Dobrin
 Dolan
 Dubois
@@ -427,6 +433,7 @@ Neumann
 Palo
 Pilimon
 Renfro
+Ruckle
 Sathe
 Schutta
 Stéphane
