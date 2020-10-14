@@ -6,7 +6,7 @@ topics:
 tags:
 - Spring
 patterns:
-- APIs
+- API
 team:
 - Mark Heckler
 youtube_id: Spzug_SjJnM
