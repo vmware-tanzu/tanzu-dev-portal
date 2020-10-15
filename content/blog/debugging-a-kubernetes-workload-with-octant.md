@@ -4,7 +4,7 @@ featured: true
 weight: 1
 description: >
     Walk through an NGINX deployment with a faulty NGINX configuration to demonstrate how common pitfalls can be identified using Octant.
-date: 2020-10-14
+date: 2020-10-15
 topics:
 - Kubernetes
 tags:
@@ -24,7 +24,7 @@ Octant is a tool designed to enable developers without a deep knowledge of Kuber
 Before you get started, here are the  tools you’ll need:
 
 - An existing cluster through [KinD](https://kind.sigs.k8s.io/docs/user/quick-start/), [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/), or a cloud provider
-- An installation of [Octant](https://github.com/vmware-tanzu/octant/releases) 0.15 or above
+- An installation of [Octant](https://github.com/vmware-tanzu/octant/releases) 0.16.1 or above
 - Some knowledge of NGINX  (helpful but not required)
 
 ## Create an NGINX Deployment
