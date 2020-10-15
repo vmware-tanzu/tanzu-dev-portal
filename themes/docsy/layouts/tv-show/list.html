@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+<script>sendAmplitudeEventOnLoad('show viewed', {'show name': '{{ .Title }}', 'referrer': document.referrer});</script>
+
 {{ $class := replace .Page.Section "." "-" | lower }}
 <section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-5">
   	<div class="container">
@@ -13,7 +15,7 @@
       <script src="https://embed.twitch.tv/embed/v1.js"></script>
       <script type="text/javascript">
 
-        var check = isTvShowLive("{{ .Title }}");
+        var check = isTvShowLive("{{ .Title }}"); 
         if (check) {
 
           if (liveShowStream == "twitch") {

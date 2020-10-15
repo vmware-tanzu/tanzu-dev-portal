@@ -29,6 +29,7 @@
 									'eventAction': 'Form Submitted', 
 									'eventLabel': 'Newsletter'
 							});
+							window.dataLayer.push({'event': 'logEvent', 'eventType': 'newsletter subscribed', 'eventProperties': {'page name': '{{ .Title }}', 'source': 'community'} });
 	            $('.confirmation').show();
 	            return false;
 	          });

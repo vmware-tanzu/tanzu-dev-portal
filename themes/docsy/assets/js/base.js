@@ -201,5 +201,29 @@ limitations under the License.
         });
     });
 
+    // Amplitude Click Events
+    $(function() {
+   
+        //Toggle mobile menu
+        $(".topic a").click(function(){
+            var topicName = this.innerHTML.substring(this.innerHTML.indexOf(">")+2).toLowerCase();
+            dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'explore'} });
+        });
+
+        $("a.dropdown-item[href*='/topic']").click(function(){
+            var topicName = this.innerHTML.toLowerCase();
+            dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'menu'} });
+        });
+
+        $("#sample-gh").click(function(){
+            var sampleName = this.title;
+            dataLayer.push({'event': 'logEvent', 'eventType': 'sample github clicked', 'eventProperties': {'sample name': sampleName} });
+        });
+        $("#sample-zip").click(function(){
+            var sampleName = this.title;
+            dataLayer.push({'event': 'logEvent', 'eventType': 'sample download clicked', 'eventProperties': {'sample name': sampleName} });
+        });
+
+    });
 
 }(jQuery));

@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+<script>sendAmplitudeEventOnLoad('blog post viewed', {'blog post title': '{{ .Title }}', 'blog post publish date': '{{ .Date }}', 'blog post length': '{{ .Content | len }}' ,'blog post author': '{{ .Params.team }}', 'referrer': document.referrer});</script>
 <div class="td-main ">
 	<div class="mt-lg-5 mt-md-5 mt-4 pt-lg-5 pt-md-5 pb-2">
 		<div class='container pt-2'>

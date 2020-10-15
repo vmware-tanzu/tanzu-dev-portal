@@ -50,3 +50,7 @@ function changeTheme(mode) {
       document.documentElement.classList.add('light-mode')
     } 
 }
+
+function sendAmplitudeEventOnLoad(eventType, eventProperties) {
+  $(window).on('load', function(e){dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});});
+}

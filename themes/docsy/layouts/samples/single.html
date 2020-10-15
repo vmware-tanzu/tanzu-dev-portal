@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+<script>sendAmplitudeEventOnLoad('sample viewed', {'sample name': '{{ .Title }}', 'referrer': document.referrer});</script>
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
 		<div class='container'>
@@ -10,8 +10,8 @@
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
 
-			<a href="{{ .Params.repo }}/archive/master.zip" class="btn"><span class="fas fa-download"></span> Download ZIP</a>
-			<a href="{{ .Params.repo }}"  class="btn"><span class="fab fa-github"></span> View on GitHub</a>
+			<a href="{{ .Params.repo }}/archive/master.zip" title="{{ .Title }}" id="sample-zip" class="btn"><span class="fas fa-download"></span> Download ZIP</a>
+			<a href="{{ .Params.repo }}" title="{{ .Title }}" id="sample-gh" class="btn"><span class="fab fa-github"></span> View on GitHub</a>
 
 		</div>
 	</div>
