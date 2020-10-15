@@ -39,6 +39,7 @@ codebase
 [C,c]omms
 [C,c]onfig
 cortado
+counterintuitive
 COVID-19
 customizable
 deployable
