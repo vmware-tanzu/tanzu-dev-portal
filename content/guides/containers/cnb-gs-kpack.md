@@ -13,6 +13,7 @@ team:
 - Tyler Britten
 ---
 
+
 [`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on Kubernetes using [Cloud Native Buildpacks](../cnb-what-is). It takes source code repositories (like GitHub), builds the code into a container image, and uploads it to the container registry of your choice.
 
 ## Before You Begin
@@ -40,7 +41,137 @@ Among the things you will need before you get started are a code repository with
 
 To make sure your `kpack` environment is ready after following the install instructions above, run `kubectl describe clusterbuilder default` so the output looks like this:
 
-{{% code file="smart/file/name/with/path.html" download="download.html" copy="true" %}}
+
+Ensure the kpack controller and webhook pods are `Running`
+
+```
+kubectl get pods --namespace kpack --watch
+```
+
+## Using `kpack`
+
+### Set Up Container Registry Secret
+
+The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. 
+
+You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
+
+```
+kubectl apply -f gcr-registry-credentials.yaml
+``` 
+
+{{%expand "gcr-registry-credentials.yaml" %}}
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: gcr-registry-credentials
+  annotations:
+    kpack.io/docker: us.gcr.io
+type: kubernetes.io/basic-auth
+stringData:
+  username: _json_key
+  password: |
+    {
+        <GCP JSON Credentials Go Here>
+    }
+```
+{{% /expand%}}
+
+{{%expand "dockerhub-registry-credentials.yaml" %}}
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dockerhub-registry-credentials
+  annotations:
+    kpack.io/docker: https://index.docker.io/v1/
+type: kubernetes.io/basic-auth
+stringData:
+  username: <username>
+  password: <password>
+```
+{{% /expand%}}
+
+There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
+
+Also note the annotation of `kpack.io/docker`; it tells `kpack` which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
+
+
+### Set Up Container Registry Service Account
+
+Now you need a service account referencing those credentials. The manifest is pretty simple:
+
+```
+kubectl apply -f gcr-registry-credentials.yaml
+``` 
+
+{{%expand "gcr-registry-service-account.yaml" %}}
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gcr-registry-service-account
+secrets:
+  - name: gcr-registry-credentials
+```
+{{% /expand%}}
+
+{{%expand "dockerhub-service-account.yaml" %}}
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dockerhub-service-account
+secrets:
+  - name: dockerhub-registry-credentials
+```
+{{% /expand%}}
+
+
+### Create your Store
+
+A store is a repository of [buildpacks](http://buildpacks.io/) packaged into [buildpackages](https://buildpacks.io/docs/buildpack-author-guide/package-a-buildpack/) that kpack uses to build images. 
+You can add more languages by including more buildpacks you create or from [Packeto Buildpacks](https://github.com/paketo-buildpacks) we have only included a few bellow.
+
+The store will be referenced by a builder resource.
+
+```
+kubectl apply -f tutorial-build/store.yaml 
+```
+
+{{% expand "store.yaml" %}}
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStore
+metadata:
+  name: default
+spec:
+  sources:
+  - image: gcr.io/paketo-buildpacks/java
+  - image: gcr.io/paketo-buildpacks/graalvm
+  - image: gcr.io/paketo-buildpacks/java-azure
+  - image: gcr.io/paketo-buildpacks/nodejs
+  - image: gcr.io/paketo-buildpacks/dotnet-core
+  - image: gcr.io/paketo-buildpacks/go
+  - image: gcr.io/paketo-buildpacks/php
+  - image: gcr.io/paketo-buildpacks/nginx
+  ```
+{{% /expand%}}  
+
+### Apply a Cluster Stack 
+
+A [stack](https://buildpacks.io/docs/concepts/components/stack/) provides the buildpack lifecycle with build-time and run-time environments in the form of images.
+
+The [pack CLI](https://github.com/buildpacks/pack) command: `pack suggest-stacks` will display a list of recommended stacks that can be used. We recommend starting with the `io.buildpacks.stacks.bionic` base stack. 
+
+```
+kubectl apply -f stack.yaml
+```
+
+{{% expand "stack.yaml" %}}
+```yaml
 apiVersion: kpack.io/v1alpha1
 kind: ClusterStack
 metadata:
@@ -51,46 +182,108 @@ spec:
     image: "paketobuildpacks/build:base-cnb"
   runImage:
     image: "paketobuildpacks/run:base-cnb"
-{{% /code %}}
-
-The GCP credentials have been redacted here for obvious reasons, but this is the format. If you're using another registry that uses just username/password, you will put that here instead. There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
-
-Also note the annotation of `build.pivotal.io/docker: us.gcr.io`; it tells `kpack` which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
-
-
-### Set Up Container Registry Service Account
-
-Now you need a service account referencing those credentials. The manifest is pretty simple:
-
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: gcr-registry-service-account
-secrets:
-  - name: gcr-registry-credential
 ```
+{{% /expand%}}
+
+
+
+### Apply a Builder
+
+A builder is an image that bundles all the bits and information on how to build your apps, like 
+- A buildpack
+- An implementation of the lifecycle
+- A build-time environment that platforms may use to execute the lifecycle.
+
+Kpack will push the builder image to your registry.
+
+```
+kubectl apply -f builder.yaml 
+```
+
+{{% expand "builder.yaml" %}}
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata:
+  name: my-builder
+  namespace: default
+spec:
+  serviceAccount: tutorial-service-account
+  tag: index.docker.io/docker-hub-repo/
+  stack:
+    name: base
+    kind: ClusterStack
+  store:
+    name: default
+    kind: ClusterStore
+  order:
+  - group:
+    - id: paketo-buildpacks/java
+  - group:
+    - id: paketo-buildpacks/java-azure
+  - group:
+    - id: paketo-buildpacks/graalvm
+  - group:
+    - id: paketo-buildpacks/nodejs
+  - group:
+    - id: paketo-buildpacks/dotnet-core
+  - group:
+    - id: paketo-buildpacks/go
+  - group:
+    - id: paketo-buildpacks/php
+  - group:
+    - id: paketo-buildpacks/nginx
+```
+{{% /expand %}}
+
+
 
 ### Create an Image Configuration
 
-Now you're all ready to start building images and pushing them to GCR. To create a manifest that builds containers off the application code on GitHub:
+Now you're all ready to start building images and pushing them to your registry. To create a manifest that builds containers off the application code on GitHub:
 
+```
+kubectl apply -f gcr-image.yaml
+``` 
+
+{{% expand "gcr-image.yaml" %}}
 ```yaml
 apiVersion: build.pivotal.io/v1alpha1
 kind: Image
 metadata:
   name: petclinic-image
 spec:
-  tag: us.gcr.io/pgtm-tbritten/spring-petclinic
+  tag: us.gcr.io/project/spring-petclinic
   serviceAccount: gcr-registry-service-account
   builder:
     name: default
-    kind: ClusterBuilder
+    kind: Builder
   source:
     git:
-      url: https://github.com/tybritten-org/spring-petclinic
-      revision: master
+      url: https://github.com/spring-projects/spring-petclinic
+      revision: 82cb521d636b282340378d80a6307a08e3d4a4c4
 ```
+{{% /expand %}}
+
+{{% expand "docherhub-image.yaml" %}}
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: tutorial-image
+  namespace: default
+spec:
+  tag: index.docker.io/docker-hub-repo/app
+  serviceAccount: tutorial-service-account
+  builder:
+    name: my-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/spring-projects/spring-petclinic
+      revision: 82cb521d636b282340378d80a6307a08e3d4a4c4
+```
+{{% /expand %}}
 
 You can see the GitHub URL, and that you're building off master. Also, you configured the desired image tag (including the registry) and included the service account and builders you created. Once you apply this manifest, it will begin building.
 
