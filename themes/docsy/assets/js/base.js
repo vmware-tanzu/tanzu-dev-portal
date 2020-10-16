@@ -242,9 +242,6 @@ limitations under the License.
                     scrollDepth = .75;
                 else if (percentScrolled == 1)
                     scrollDepth = 1;
-                
-                console.log("scrollDepth: " + scrollDepth);
-                console.log("scrollDepthCurrent: " + scrollDepthCurrent);
 
                 if (scrollDepthCurrent < scrollDepth) {
                     scrollDepthCurrent = scrollDepth;
