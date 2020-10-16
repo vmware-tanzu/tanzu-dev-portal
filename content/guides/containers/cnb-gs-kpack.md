@@ -23,9 +23,16 @@ There are a few things you need to do before getting started with `kpack`:
 
 - Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
+- Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds. 
+  - Command to install with Homewbrew on Mac OS `brew install stern`
+
+- Have the [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) to interact with your cluster. 
+  - Command to install with Homebrew on Mac OS `brew install kubectl` 
+
+- Accessible Docker V2 Registry, [DockerHub](https://hub.docker.com/) will suffice it is free and creating an account is easy.
+
 - Follow the documentation for [installing `kpack`](https://github.com/pivotal/kpack/blob/master/docs/install.md/) in your Kubernetes cluster.
 
-- Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds.
 
 ## Initial `kpack` Configuration
 
@@ -33,121 +40,18 @@ Among the things you will need before you get started are a code repository with
 
 To make sure your `kpack` environment is ready after following the install instructions above, run `kubectl describe clusterbuilder default` so the output looks like this:
 
-```yaml
-
-Name:         default
-Namespace:
-Labels:       <none>
-Annotations:  kubectl.kubernetes.io/last-applied-configuration:
-                {"apiVersion":"build.pivotal.io/v1alpha1","kind":"ClusterBuilder","metadata":{"annotations":{},"name":"default"},"spec":{"image":"cloudfou...
-API Version:  build.pivotal.io/v1alpha1
-Kind:         ClusterBuilder
-Metadata:
-  Creation Timestamp:  2020-02-14T14:37:47Z
-  Generation:          1
-  Resource Version:    212182
-  Self Link:           /apis/build.pivotal.io/v1alpha1/clusterbuilders/default
-  UID:                 c019e370-cd32-4a32-b3c0-982c7d99d672
-Spec:
-  Image:          cloudfoundry/cnb:bionic
-  Update Policy:  polling
-Status:
-  Builder Metadata:
-    Id:       org.cloudfoundry.azureapplicationinsights
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.procfile
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.jmx
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.go
-    Version:  v0.0.2
-    Id:       org.cloudfoundry.springboot
-    Version:  v1.2.9
-    Id:       org.cloudfoundry.jvmapplication
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.springautoreconfiguration
-    Version:  v1.1.8
-    Id:       org.cloudfoundry.buildsystem
-    Version:  v1.2.9
-    Id:       org.cloudfoundry.archiveexpanding
-    Version:  v1.0.102
-    Id:       org.cloudfoundry.jdbc
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.openjdk
-    Version:  v1.2.11
-    Id:       org.cloudfoundry.googlestackdriver
-    Version:  v1.1.8
-    Id:       org.cloudfoundry.nodejs
-    Version:  v2.0.0
-    Id:       org.cloudfoundry.distzip
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.tomcat
-    Version:  v1.3.9
-    Id:       org.cloudfoundry.dotnet-core
-    Version:  v0.0.4
-    Id:       org.cloudfoundry.debug
-    Version:  v1.2.8
-    Id:       org.cloudfoundry.dep
-    Version:  0.0.89
-    Id:       org.cloudfoundry.go-compiler
-    Version:  0.0.83
-    Id:       org.cloudfoundry.go-mod
-    Version:  0.0.84
-    Id:       org.cloudfoundry.node-engine
-    Version:  0.0.146
-    Id:       org.cloudfoundry.npm
-    Version:  0.0.87
-    Id:       org.cloudfoundry.yarn
-    Version:  0.0.99
-    Id:       org.cloudfoundry.dotnet-core-aspnet
-    Version:  0.0.97
-    Id:       org.cloudfoundry.dotnet-core-build
-    Version:  0.0.55
-    Id:       org.cloudfoundry.dotnet-core-conf
-    Version:  0.0.98
-    Id:       org.cloudfoundry.dotnet-core-runtime
-    Version:  0.0.106
-    Id:       org.cloudfoundry.dotnet-core-sdk
-    Version:  0.0.99
-    Id:       org.cloudfoundry.icu
-    Version:  0.0.25
-    Id:       org.cloudfoundry.node-engine
-    Version:  0.0.133
-  Conditions:
-    Last Transition Time:  2020-02-14T14:37:48Z
-    Status:                True
-    Type:                  Ready
-  Latest Image:            index.docker.io/cloudfoundry/cnb@sha256:83270cf59e8944be0c544e45fd45a5a1f4526d7936d488d2de8937730341618d
-  Observed Generation:     1
-  Stack:
-    Id:         io.buildpacks.stacks.bionic
-    Run Image:  index.docker.io/cloudfoundry/run@sha256:9e366d007db857d7bcde2edb0439cf8159cb9ddb9655bee21ba479c06ae8f42d
-Events:         <none>
-```
-
-It lists all the available builders that are configured, so that means you're ready to get started.
-
-## Using `kpack`
-
-### Set Up Container Registry Secret
-
-The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
-
-```yaml
-apiVersion: v1
-kind: Secret
+{{% code file="smart/file/name/with/path.html" download="download.html" copy="true" %}}
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStack
 metadata:
-  name: gcr-registry-credentials
-  annotations:
-    build.pivotal.io/docker: us.gcr.io
-type: kubernetes.io/basic-auth
-stringData:
-  username: _json_key
-  password: |
-    {
-        <GCP JSON Credentials Go Here>
-    }
-```
+  name: base
+spec:
+  id: "io.buildpacks.stacks.bionic"
+  buildImage:
+    image: "paketobuildpacks/build:base-cnb"
+  runImage:
+    image: "paketobuildpacks/run:base-cnb"
+{{% /code %}}
 
 The GCP credentials have been redacted here for obvious reasons, but this is the format. If you're using another registry that uses just username/password, you will put that here instead. There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
 
