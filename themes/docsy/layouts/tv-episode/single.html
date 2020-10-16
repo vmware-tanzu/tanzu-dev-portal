@@ -41,7 +41,7 @@
       <h2 class="mb-4"> {{- .Title -}}</h2>
       {{ if .Params.youtube }}
       <div class="youtube-video-shortcode">
-        <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" frameborder="0" allowfullscreen></iframe>
+        <iframe id="episode-embed" src="https://www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
       </div>
       {{ else }}
       <div>
@@ -110,5 +110,62 @@
   {{ end }}
 
 </div>
+
+<script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var played = false;
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('episode-embed', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+    });
+  }
+  function onPlayerReady(event) {
+    //console.log("Player ready");//event.target.getDuration();
+  }
+  function logPlayerStatus(playerStatus) {  
+    if (playerStatus == -1) {
+      //console.log("unstarted");
+    } else if (playerStatus == 0) {
+      //console.log("ended");
+    } else if (playerStatus == 1) {
+      if (!played) {
+        dataLayer.push({'event': 'logEvent', 'eventType': 'episode played', 'eventProperties': {'show name': '{{ .Parent.Title }}', 'episode title': '{{ .Title }}', 'episode number': '{{ .Params.episode }}', 'episode view type': episodeType }});
+      }
+      played = true;
+      //console.log("playing");
+    } else if (playerStatus == 2) {
+      //console.log("paused");
+    } else if (playerStatus == 3) {
+      //console.log("buffering");
+    } else if (playerStatus == 5) {
+      //console.log("video cued");
+    }
+  }
+  function onPlayerStateChange(event) {
+    logPlayerStatus(event.data);
+  }
+
+  /*
+  // Tie to player status? Start when clicked? Stop when stopped?
+  var pollInterval = 300000; // 5 minutes
+  var ytTracker = setInterval(trackPlayback, pollInterval);
+  function trackPlayback() {
+    console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
+  }
+  function stopTracker() {
+    clearInterval(ytTracker);
+  }
+  */
+</script>
+
 
 {{ end }}

@@ -5,6 +5,7 @@
   </head>
   <body class="td-{{ .Kind }} td-topic">
     {{ partial "required-gtm-no-script.html" . }}
+    <script>sendAmplitudeEventOnLoad('pattern viewed', {'pattern name': '{{ .Title }}', 'referrer': document.referrer});</script>
     <header>
       {{ partial "navbar.html" . }}
     </header>

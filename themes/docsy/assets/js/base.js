@@ -201,10 +201,10 @@ limitations under the License.
         });
     });
 
-    // Amplitude Click Events
+    // Amplitude Events
     $(function() {
    
-        //Toggle mobile menu
+        // Track topic clicks - menu vs. explore section
         $(".topic a").click(function(){
             var topicName = this.innerHTML.substring(this.innerHTML.indexOf(">")+2).toLowerCase();
             dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'explore'} });
@@ -215,6 +215,7 @@ limitations under the License.
             dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'menu'} });
         });
 
+        // Track sample clicks - code download vs visit repo
         $("#sample-gh").click(function(){
             var sampleName = this.title;
             dataLayer.push({'event': 'logEvent', 'eventType': 'sample github clicked', 'eventProperties': {'sample name': sampleName} });
@@ -222,6 +223,75 @@ limitations under the License.
         $("#sample-zip").click(function(){
             var sampleName = this.title;
             dataLayer.push({'event': 'logEvent', 'eventType': 'sample download clicked', 'eventProperties': {'sample name': sampleName} });
+        });
+
+        // Track scroll depth on guides
+        var scrollDepthCurrent;
+        var doneScrolling = false;
+        $(window).scroll(function() {
+            if ($('body.guide').length > 0 || $('div.blog').length > 0) {
+                var totalScrollHeight = document.querySelector("body").scrollHeight-window.innerHeight;
+                var percentScrolled = window.scrollY / totalScrollHeight;
+                var scrollDepth;
+                if (percentScrolled < .25)
+                    scrollDepth = 0;
+                else if (percentScrolled >=.25 && percentScrolled < .5)
+                    scrollDepth = .25;
+                else if (percentScrolled >=.5 && percentScrolled < .75)
+                    scrollDepth = .5;
+                else if (percentScrolled >=.75 && percentScrolled < 1)
+                    scrollDepth = .75;
+                else if (percentScrolled == 1)
+                    scrollDepth = 1;
+                
+                if (scrollDepthCurrent != scrollDepth && !doneScrolling) {
+                    scrollDepthCurrent = scrollDepth;
+                    if (scrollDepthCurrent == 1)
+                        doneScrolling = true;
+                    var pageTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                    var pageCategory;
+                    if ($('body.guide').length > 0)
+                        pageCategory = "guide";
+                    else if ($('div.blog').length > 0)
+                        pageCategory = "blog";
+                    dataLayer.push({'event': 'logEvent', 'eventType': 'page scrolled', 'eventProperties': {'scroll depth': scrollDepth*100, 'page title': pageTitle, 'page category': pageCategory} });
+                    //console.log(scrollDepth);
+                }
+            }
+        });
+
+        // Track how far into VOD TV episode before leaving
+        var percentageCompletedCurrent;
+        var doneWatching = false;
+        $(window).on("unload", function(){
+            if ($('body.tv-episode').length > 0) {
+
+                var pageTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                var elapsedPercentage = player.getCurrentTime()/player.getDuration();
+                var percentageCompleted;
+                if (elapsedPercentage < .25)
+                    percentageCompleted = 0;
+                else if (elapsedPercentage >=.25 && elapsedPercentage < .5)
+                    percentageCompleted = .25;
+                else if (elapsedPercentage >=.5 && elapsedPercentage < .75)
+                    percentageCompleted = .5;
+                else if (elapsedPercentage >=.75 && elapsedPercentage < 1)
+                    percentageCompleted = .75;
+                else if (elapsedPercentage == 1)
+                    percentageCompleted = 1;
+
+                if (percentageCompletedCurrent != percentageCompleted && !doneWatching) {
+                    percentageCompletedCurrent = percentageCompleted;
+                    if (percentageCompletedCurrent == 1)
+                        doneWatching = true;
+                    var showTitle = $('h1').innerHTML;
+                    var episodeTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                    var episodeType = "vod";
+                    dataLayer.push({'event': 'logEvent', 'eventType': 'episode session ended', 'eventProperties': {'percentage complete': percentageCompleted*100, 'show title': showTitle, 'episode title': episodeTitle, 'episode type': episodeType} });
+                    //console.log(percentageCompleted);
+                }
+                //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
+            }
         });
 
     });
