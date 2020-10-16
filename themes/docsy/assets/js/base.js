@@ -226,8 +226,7 @@ limitations under the License.
         });
 
         // Track scroll depth on guides
-        var scrollDepthCurrent;
-        var doneScrolling = false;
+        var scrollDepthCurrent = -1;
         $(window).scroll(function() {
             if ($('body.guide').length > 0 || $('div.blog').length > 0) {
                 var totalScrollHeight = document.querySelector("body").scrollHeight-window.innerHeight;
@@ -244,10 +243,11 @@ limitations under the License.
                 else if (percentScrolled == 1)
                     scrollDepth = 1;
                 
-                if (scrollDepthCurrent != scrollDepth && !doneScrolling) {
+                console.log("scrollDepth: " + scrollDepth);
+                console.log("scrollDepthCurrent: " + scrollDepthCurrent);
+
+                if (scrollDepthCurrent < scrollDepth) {
                     scrollDepthCurrent = scrollDepth;
-                    if (scrollDepthCurrent == 1)
-                        doneScrolling = true;
                     var pageTitle = document.title.substring(0,document.title.indexOf("|")-1);
                     var pageCategory;
                     if ($('body.guide').length > 0)
@@ -261,8 +261,7 @@ limitations under the License.
         });
 
         // Track how far into VOD TV episode before leaving
-        var percentageCompletedCurrent;
-        var doneWatching = false;
+        var percentageCompletedCurrent = -1;
         $(window).on("unload", function(){
             if ($('body.tv-episode').length > 0) {
 
@@ -280,10 +279,8 @@ limitations under the License.
                 else if (elapsedPercentage == 1)
                     percentageCompleted = 1;
 
-                if (percentageCompletedCurrent != percentageCompleted && !doneWatching) {
+                if (percentageCompletedCurrent < percentageCompleted) {
                     percentageCompletedCurrent = percentageCompleted;
-                    if (percentageCompletedCurrent == 1)
-                        doneWatching = true;
                     var showTitle = $('h1').innerHTML;
                     var episodeTitle = document.title.substring(0,document.title.indexOf("|")-1);
                     var episodeType = "vod";
