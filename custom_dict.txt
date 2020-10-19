@@ -450,6 +450,8 @@ Minella
 Venkat
 Subramaniam
 Pratik
+Viktor
+Gamov
 
 # Twitter Handles
 anthonyjvetter
