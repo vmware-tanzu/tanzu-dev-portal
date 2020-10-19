@@ -39,10 +39,7 @@ There are a few things you need to do before getting started with `kpack`:
 
 Among the things you will need before you get started are a code repository with compatible code (I'm using Spring Java in this case) and a container registry (I'm using Google GCR).
 
-To make sure your `kpack` environment is ready after following the install instructions above, run `kubectl describe clusterbuilder default` so the output looks like this:
-
-
-Ensure the kpack controller and webhook pods are `Running`
+To make sure your `kpack` environment is ready after following the install instructions above, run.
 
 ```
 kubectl get pods --namespace kpack --watch
@@ -54,13 +51,13 @@ kubectl get pods --namespace kpack --watch
 
 The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. 
 
-You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
-
-```
-kubectl apply -f gcr-registry-credentials.yaml
-``` 
+You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`.
 
 {{%expand "gcr-registry-credentials.yaml" %}}
+Save and apply your secret
+```
+kubectl apply -f gcr-registry-credentials.yaml
+```
 
 ```yaml
 apiVersion: v1
@@ -80,6 +77,11 @@ stringData:
 {{% /expand%}}
 
 {{%expand "dockerhub-registry-credentials.yaml" %}}
+Save and apply your secret
+```
+kubectl apply -f dockerhub-registry-credentials.yaml
+```
+
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -89,25 +91,26 @@ metadata:
     kpack.io/docker: https://index.docker.io/v1/
 type: kubernetes.io/basic-auth
 stringData:
-  username: <username>
-  password: <password>
+  username: "<username>"
+  password: "<password>"
 ```
 {{% /expand%}}
 
-There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
+For more details see the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
 
-Also note the annotation of `kpack.io/docker`; it tells `kpack` which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
+Also note the annotation of `kpack.io/docker`; it tells `kpack` which registries to use these credentials for. In the case of `gcr-registry-credentials.yaml`, any image tagged for `us.gcr.io.`
 
 
 ### Set Up Container Registry Service Account
 
-Now you need a service account referencing those credentials. The manifest is pretty simple:
+Now you need a service account referencing those credentials in your secret. The manifest is pretty simple:
 
+{{%expand "gcr-registry-service-account.yaml" %}}
+Apply your new service account.
 ```
 kubectl apply -f gcr-registry-credentials.yaml
 ``` 
 
-{{%expand "gcr-registry-service-account.yaml" %}}
 ```yaml
 apiVersion: v1
 kind: ServiceAccount
@@ -115,17 +118,26 @@ metadata:
   name: gcr-registry-service-account
 secrets:
   - name: gcr-registry-credentials
+imagePullSecrets:
+- name: gcr-registry-credentials
 ```
 {{% /expand%}}
 
 {{%expand "dockerhub-service-account.yaml" %}}
+Apply your new service account.
+```
+kubectl apply -f dockerhub-registry-credentials.yaml
+``` 
+
 ```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: dockerhub-service-account
 secrets:
-  - name: dockerhub-registry-credentials
+- name: dockerhub-registry-credentials
+imagePullSecrets:
+- name: dockerhub-registry-credentials
 ```
 {{% /expand%}}
 
@@ -138,7 +150,7 @@ You can add more languages by including more buildpacks you create or from [Pack
 The store will be referenced by a builder resource.
 
 ```
-kubectl apply -f tutorial-build/store.yaml 
+kubectl apply -f store.yaml 
 ```
 
 {{% expand "store.yaml" %}}
@@ -201,6 +213,10 @@ kubectl apply -f builder.yaml
 ```
 
 {{% expand "builder.yaml" %}}
+- Change `spec.serviceAccount` to your service account's name.
+- Change `spec.tag` to your registry address appending `/builder` or a name of your choosing to hold your builder.
+
+
 ```yaml
 apiVersion: kpack.io/v1alpha1
 kind: Builder
@@ -208,8 +224,8 @@ metadata:
   name: my-builder
   namespace: default
 spec:
-  serviceAccount: tutorial-service-account
-  tag: index.docker.io/docker-hub-repo/
+  serviceAccount: dockerhub-registry-service-account
+  tag: index.docker.io/<docker-hub-repo>/<builder>
   stack:
     name: base
     kind: ClusterStack
@@ -242,18 +258,25 @@ spec:
 
 Now you're all ready to start building images and pushing them to your registry. To create a manifest that builds containers off the application code on GitHub:
 
+{{% expand "gcr-image.yaml" %}}
+Applying your image yaml will enable automation to build your new image.
+This build will take a few minutes and will be subsequently faster each time you run as it has a cache.
 ```
 kubectl apply -f gcr-image.yaml
-``` 
+```  
 
-{{% expand "gcr-image.yaml" %}}
+- Change `spec.tag` to your registry address appending `/app` or a name of your choosing to hold your app.
+- Change `spec.serviceAccount` to your service account's name.
+- At `spec.source.git.url` is the source code repo being used to build the app.
+- The `spec.source.git.revision` is the commit tag used to build, a change here will trigger a new build!
+
 ```yaml
 apiVersion: build.pivotal.io/v1alpha1
 kind: Image
 metadata:
   name: petclinic-image
 spec:
-  tag: us.gcr.io/project/spring-petclinic
+  tag: us.gcr.io/<project>/<spring-petclinic>
   serviceAccount: gcr-registry-service-account
   builder:
     name: default
@@ -265,16 +288,27 @@ spec:
 ```
 {{% /expand %}}
 
-{{% expand "docherhub-image.yaml" %}}
+{{% expand "dockerhub-image.yaml" %}}
+Applying your image yaml will enable automation to build your new image.
+This build will take a few minutes and will be subsequently faster each time you run as it has a cache. 
+```
+kubectl apply -f dockerhub-image.yaml
+``` 
+
+- Change `spec.tag` to your registry address appending `/app` or a name of your choosing to hold your app.
+- Change `spec.serviceAccount` to your service account's name.
+- At `spec.source.git.url` is the source code being used to build the app.
+- The `spec.source.git.revision` is the commit used to build, a change here will trigger a new build!
+
 ```yaml
 apiVersion: kpack.io/v1alpha1
 kind: Image
 metadata:
-  name: tutorial-image
+  name: petclinic-image
   namespace: default
 spec:
-  tag: index.docker.io/docker-hub-repo/app
-  serviceAccount: tutorial-service-account
+  tag: index.docker.io/<docker-hub-repo>/app
+  serviceAccount: dockerhub-service-account
   builder:
     name: my-builder
     kind: Builder
@@ -306,5 +340,5 @@ NAME LATESTIMAGE                                                                
 petclinic-image   us.gcr.io/pgtm-tbritten/spring-petclinic@sha256:<sha hash>   True
 ```
 
-You can now run `docker pull us.gcr.io/pgtm-tbritten/spring-petclinic` to download the completed image. Or you can create a Kubernetes manifest to run the image.
+You can now run `docker pull us.gcr.io/<project>/<spring-petclinic>` to download the completed image. Or you can create a Kubernetes manifest to run the image.
 
