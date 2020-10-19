@@ -339,6 +339,7 @@ VMworld
 
 
 # Acronyms
+3D
 v3
 APIs?
 brd1
