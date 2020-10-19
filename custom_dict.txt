@@ -27,7 +27,7 @@ artisanal
 async
 autoscaling
 Aviv
-(back|front)end
+(back|front)end(s)?
 [B,b]ackfill
 balancers?
 biome
@@ -74,11 +74,13 @@ Livelessons
 liveness
 Low-fi
 matchings
+Masala
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
 middleware
 [M,m]inibroker
+Mini-Wheats
 namespace
 natively
 no-brainer
@@ -131,6 +133,7 @@ telecom
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
+Tikka
 timebox
 [T,t]o[D,d]o
 TODOs?
@@ -176,12 +179,14 @@ CloudEvents
 Cloudfoundry
 ClusterIssuer
 CoreCLR
+CORS
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 Dataflow
 DATEV('s)?
+Devoops
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
@@ -291,6 +296,7 @@ Terraform
 Terraform(-ing)?
 TestContainers
 Trello
+TRS-80
 URL(s)?
 Vaadin
 Velero
@@ -312,6 +318,7 @@ DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CoreOS
+DevNexus
 DevOpsDaysKC
 Documentum
 DZone
@@ -325,6 +332,7 @@ JavaOne
 JetBrains
 Octoverse
 OneMagnify
+Pluralsight
 PMC
 RedMonk('s)?
 SpringOne(2020)?
@@ -332,6 +340,7 @@ UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
+
 
 # Acronyms
 v3
@@ -434,6 +443,7 @@ Palo
 Pilimon
 Renfro
 Ruckle
+Sanderson
 Sathe
 Schutta
 Stéphane
@@ -449,6 +459,11 @@ DaShaun
 Minella
 Venkat
 Subramaniam
+Pratik
+Pratik's
+Viktor
+Gamov
+Rudd
 
 # Twitter Handles
 anthonyjvetter
