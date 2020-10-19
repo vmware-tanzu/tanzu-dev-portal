@@ -74,6 +74,7 @@ Livelessons
 liveness
 Low-fi
 matchings
+Masala
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
@@ -131,6 +132,7 @@ telecom
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
+Tikka
 timebox
 [T,t]o[D,d]o
 TODOs?
@@ -182,6 +184,7 @@ ConfigurationMap(s)?
 ConfigurationProperties
 Dataflow
 DATEV('s)?
+Devoops
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
@@ -312,6 +315,7 @@ DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CoreOS
+DevNexus
 DevOpsDaysKC
 Documentum
 DZone
@@ -332,6 +336,7 @@ UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
+
 
 # Acronyms
 v3
@@ -450,6 +455,10 @@ Minella
 Venkat
 Subramaniam
 Pratik
+Pratik's
+Viktor
+Gamov
+Rudd
 
 # Twitter Handles
 anthonyjvetter
