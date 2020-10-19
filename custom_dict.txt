@@ -27,7 +27,7 @@ artisanal
 async
 autoscaling
 Aviv
-(back|front)end
+(back|front)end(s)?
 [B,b]ackfill
 balancers?
 biome
@@ -80,6 +80,7 @@ modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
 middleware
 [M,m]inibroker
+Mini-Wheats
 namespace
 natively
 no-brainer
@@ -178,6 +179,7 @@ CloudEvents
 Cloudfoundry
 ClusterIssuer
 CoreCLR
+CORS
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
@@ -294,6 +296,7 @@ Terraform
 Terraform(-ing)?
 TestContainers
 Trello
+TRS-80
 URL(s)?
 Vaadin
 Velero
@@ -329,6 +332,7 @@ JavaOne
 JetBrains
 Octoverse
 OneMagnify
+Pluralsight
 PMC
 RedMonk('s)?
 SpringOne(2020)?
@@ -439,6 +443,7 @@ Palo
 Pilimon
 Renfro
 Ruckle
+Sanderson
 Sathe
 Schutta
 Stéphane
