@@ -343,6 +343,7 @@ VMworld
 
 
 # Acronyms
+3D
 v3
 APIs?
 brd1
@@ -464,6 +465,10 @@ Pratik's
 Viktor
 Gamov
 Rudd
+Sletten
+Dalia
+Abo
+Sheasha
 
 # Twitter Handles
 anthonyjvetter
