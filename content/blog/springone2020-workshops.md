@@ -1,23 +1,19 @@
 ---
 title: "Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home"
 featured: true
-weight: 2
-=======
 weight: 3
 description: >
     Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home
-date: 2020-08-11
+date: 2020-09-17
 topics:
 - Spring
 - Kubernetes
-- SpringOne
 tags:
-- springone
-- springone workshops
-- spring one 
-- containers
+- SpringOne
+- Workshops
+- Containers
 - API
-- spring cloud gateway
+- Spring Cloud Gateway
 - Kubernetes
 # Author(s)
 team: 
