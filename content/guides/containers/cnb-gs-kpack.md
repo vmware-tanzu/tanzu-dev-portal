@@ -11,6 +11,7 @@ patterns:
 - Deployment
 team:
 - Tyler Britten
+- Ivan Tarin
 ---
 
 
@@ -329,7 +330,9 @@ petclinic-image                 Unknown
 
 ### Watching the Build
 
-If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. Since it includes six different containers, it's hard to use `kubectl logs` because you have to know which container to specify at which stage. It's much easier to use the `stern` tool mentioned at the beginning. 
+If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. 
+
+Since it includes six different containers, it's hard to use `kubectl logs` because you have to know which container to specify at which stage. It's much easier to use the `stern` tool mentioned at the beginning. 
 
 The pod that is created has a name that starts with `image-name-build`; so in this case, `petclinic-image-build.` The command to run to see the logs is `stern petclinic-image-build,` and you'll see all the logs pass by during the build and upload.
 
@@ -342,3 +345,40 @@ petclinic-image   us.gcr.io/pgtm-tbritten/spring-petclinic@sha256:<sha hash>   T
 
 You can now run `docker pull us.gcr.io/<project>/<spring-petclinic>` to download the completed image. Or you can create a Kubernetes manifest to run the image.
 
+**As mentioned in the previous section on image configuration, the `spec.source.git.revision` is the commit used to build, try changing it to trigger a new build!**
+
+### Bonus - Deploy your app to Kubernetes
+
+Kpack is best used in conjunction with a CI/CD tool, but if you want to deploy your app to Kubernetes now you can very easily.
+
+You will reuse your secret with your registry and pull from the repository that holds the container image.  You created this repo in the *Create an Image Configuration* section and can be found at  `spec.tag` place it after `--image=$DH_USERNAME/app` .
+
+Create a deployment with the image kpack made with your source code
+```
+kubectl create deployment kpack-demo --image=<registry-name>/<app-repo>      
+```    
+
+To verify deployment
+```
+kubectl get deployments                                          
+```
+
+Expose the Pod to the public internet using the kubectl expose command:
+```
+kubectl expose deployment kpack-demo --type=LoadBalancer --port=8080
+```
+
+The `--type=LoadBalancer` flag exposes your Service outside of the cluster.
+The application code inside the image `k8s.gcr.io/echoserver` only listens on TCP port 8080.
+
+To verify your service
+```
+kubectl get services                
+```
+
+On cloud providers that support load balancers, an external IP address would be provisioned to access the Service. 
+
+On minikube, the LoadBalancer type makes the Service accessible using:
+```
+minikube service kpack-demo                                         
+```
