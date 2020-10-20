@@ -7,7 +7,7 @@ topics:
 tags:
 - Agile
 team:
-- Remote Navigator Team
+- VMware Pivotal Labs
 ---
 
 ## Setting team working agreements and ground rules

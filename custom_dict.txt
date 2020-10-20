@@ -27,7 +27,7 @@ artisanal
 async
 autoscaling
 Aviv
-(back|front)end
+(back|front)end(s)?
 [B,b]ackfill
 balancers?
 biome
@@ -39,6 +39,7 @@ codebase
 [C,c]omms
 [C,c]onfig
 cortado
+counterintuitive
 COVID-19
 customizable
 deployable
@@ -57,6 +58,7 @@ fileshare
 FinTech
 firewalling
 frictionless
+geospatial
 getters
 GitOps
 Helming
@@ -72,11 +74,13 @@ Livelessons
 liveness
 Low-fi
 matchings
+Masala
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
 middleware
 [M,m]inibroker
+Mini-Wheats
 namespace
 natively
 no-brainer
@@ -126,9 +130,11 @@ stateful
 [S,s]tandups?
 suboptimal
 symposia
+telecom
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
+Tikka
 timebox
 [T,t]o[D,d]o
 TODOs?
@@ -158,6 +164,7 @@ amd64
 AMQP
 ARM64
 AppSec
+AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
@@ -175,15 +182,19 @@ CloudEvents
 Cloudfoundry
 ClusterIssuer
 CoreCLR
+CORS
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 Dataflow
+DATEV('s)?
+Devoops
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
 donut
+ElasticSearch
 [E,e]thernet(s)?
 etcd
 filesystem
@@ -203,7 +214,9 @@ HTTPie
 HyperKit
 init
 InfoQ
+J2EE
 Jaeger
+JavaEE
 JBatch
 JHipster
 Jsonnet
@@ -263,6 +276,7 @@ pullPolicy
 [V,v]irtualenv
 pyenv-installer
 [P,p]ip[X,x]('s)?
+PubSub
 RabbitMQ('s)?
 ReplicaSet(s)?
 Resilience4J
@@ -274,6 +288,7 @@ RSocket(-based)?
 SameSite
 [S,s]kaffold
 Snapchat
+SpringBoot
 spring-petclinic
 SSL
 Stacker
@@ -284,7 +299,9 @@ Tanzu(Developer)?
 Tekton('s)?
 Terraform
 Terraform(-ing)?
+TestContainers
 Trello
+TRS-80
 URL(s)?
 Vaadin
 Velero
@@ -306,9 +323,12 @@ DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CoreOS
+DevNexus
 DevOpsDaysKC
+Documentum
 DZone
 EMC
+Garmin
 Google('s)
 HashiCorp
 Heptio
@@ -316,12 +336,19 @@ Heroku('s)
 JavaOne
 JetBrains
 Octoverse
+OneMagnify
+Pluralsight
+PMC
 RedMonk('s)?
 SpringOne(2020)?
+UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
+VMworld
+
 
 # Acronyms
+3D
 v3
 APIs?
 brd1
@@ -389,11 +416,13 @@ Beda
 Biville
 Brindley
 Buschmann
+Cao
 Coté
 Clozel
 Czarkowski('s)?
 Desgber
 Dieruf
+Dieu
 Dobrin
 Dolan
 Dubois
@@ -419,19 +448,32 @@ Neumann
 Palo
 Pilimon
 Renfro
+Ruckle
+Sanderson
 Sathe
 Schutta
+Stéphane
 Syer
 Vetter
 Viktor
 Junio
 Hamano
 Maciaszek-Sharma
+Nicoll
 Wilcock('s)?
 DaShaun
 Minella
 Venkat
 Subramaniam
+Pratik
+Pratik's
+Viktor
+Gamov
+Rudd
+Sletten
+Dalia
+Abo
+Sheasha
 
 # Twitter Handles
 anthonyjvetter
