@@ -114,7 +114,7 @@ Using very similar code to the Spring Microservices workshop in Getting Started 
 
 Here is a full rundown of the self-paced workshops featured at SpringOne 2020: 
 
-![SpringOne2020](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne2020 workshops list")
+![SpringOne2020](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne workshops list")
 ![SpringOne2020 workshops list](/images/blogs/springone2020-workshops/workshops-2.png "SpringOne2020 workshops list")
 
 
