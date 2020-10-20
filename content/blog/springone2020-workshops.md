@@ -16,7 +16,7 @@ tags:
 - containers
 - API
 - spring cloud gateway
-- kubernetes
+- Kubernetes
 # Author(s)
 team: 
 - Ivan Tarin
@@ -45,7 +45,7 @@ A total of 10 self-paced workshops covering a range of open source technology—
 *   Tekton Fundamentals
 
 
-Each of these workshops has an environment prepared and ready,** **which is quite refreshing when you are accustomed to spending 15-30 minutes setting up to follow a tutorial. The workshop environment is also native to the technology being used. For example, you can interact with actual Kubernetes clusters in a Kubernetes workshop or work in a real Java 11 environment in Spring workshops. Finally, all the tools you need are built into the workshop, such as an IDE or Kubernetes tools like Octant to name a few.
+Each of these workshops has an environment prepared and ready, which is quite refreshing when you are accustomed to spending 15-30 minutes setting up to follow a tutorial. The workshop environment is also native to the technology being used. For example, you can interact with actual Kubernetes clusters in a Kubernetes workshop or work in a real Java 11 environment in Spring workshops. Finally, all the tools you need are built into the workshop, such as an IDE or Kubernetes tools like Octant to name a few.
 
 In this screenshot from Getting Started with Spring Boot on Kubernetes, you can see the code editor utilized in it and some of the other workshops.
 
@@ -54,7 +54,7 @@ In this screenshot from Getting Started with Spring Boot on Kubernetes, you can 
 
 In Getting Started with Octant, you use the open-source Kubernetes tool Octant to inspect your Kubernetes cluster. Many developers use [Octant](https://octant.dev/) to reveal the objects running in their Kubernetes clusters.
 
-![SpringOne2020 octant example](/images/blogs/springone2020-workshops/octant-redact.png "SpringOne2020 octant example")
+![SpringOne2020 Octant example](/images/blogs/springone2020-workshops/octant-redact.png "SpringOne2020 Octant example")
 
 ## Kubernetes Fundamentals
 
@@ -67,17 +67,17 @@ The screenshot below from the Kubernetes Fundamentals workshop provides an examp
 
 The Kubernetes Fundamentals workshop, a hands-on introduction to using Kubernetes, was by far the most popular workshop at SpringOne 2020. It not only provides you with a real Kubernetes cluster to interact with, but access to the Kubernetes Dashboard!
 
-![SpringOne2020 kubernetes dashboard example](/images/blogs/springone2020-workshops/kubernetes-dashboard.png "SpringOne2020 kubernetes dashboard example")
+![SpringOne2020 Kubernetes dashboard example](/images/blogs/springone2020-workshops/Kubernetes-dashboard.png "SpringOne2020 Kubernetes dashboard example")
   
 
 By the second step, you are already deploying a blog application to your Kubernetes cluster!
 
-![SpringOne2020 kubernetes blog example](/images/blogs/springone2020-workshops/kubernetes-blog.png "SpringOne2020 kubernetes blog example")
+![SpringOne2020 Kubernetes blog example](/images/blogs/springone2020-workshops/Kubernetes-blog.png "SpringOne2020 Kubernetes blog example")
 
 
 Kubernetes Fundamentals covers many other concepts, such as service networking and exposing those services, as well as linking a database, persistent volumes, and even application health. You’ll even learn best practices for deployments with ReplicaSets.
 
-![SpringOne2020 kubernetes replicaset example](/images/blogs/springone2020-workshops/replica-redact.png "SpringOne2020 kubernetes replicaset example")
+![SpringOne2020 Kubernetes replicaset example](/images/blogs/springone2020-workshops/replica-redact.png "SpringOne2020 Kubernetes replicaset example")
 
 
 ## Container Basics 
@@ -112,7 +112,7 @@ Using very similar code to the Spring Microservices workshop in Getting Started 
 
 Here is a full rundown of the self-paced workshops featured at SpringOne 2020: 
 
-![SpringOne2020 çt](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne2020 workshops list")
+![SpringOne2020](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne2020 workshops list")
 ![SpringOne2020 workshops list](/images/blogs/springone2020-workshops/workshops-2.png "SpringOne2020 workshops list")
 
 

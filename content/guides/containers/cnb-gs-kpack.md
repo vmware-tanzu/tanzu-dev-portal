@@ -26,7 +26,7 @@ There are a few things you need to do before getting started with `kpack`:
 - Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
 - Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds. 
-  - Command to install with Homewbrew on Mac OS `brew install stern`
+  - Command to install with Homebrew on Mac OS `brew install stern`
 
 - Have the [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) to interact with your cluster. 
   - Command to install with Homebrew on Mac OS `brew install kubectl` 
@@ -146,7 +146,7 @@ imagePullSecrets:
 ### Create your Store
 
 A store is a repository of [buildpacks](http://buildpacks.io/) packaged into [buildpackages](https://buildpacks.io/docs/buildpack-author-guide/package-a-buildpack/) that kpack uses to build images. 
-You can add more languages by including more buildpacks you create or from [Packeto Buildpacks](https://github.com/paketo-buildpacks) we have only included a few bellow.
+You can add more languages by including more buildpacks you create or from [Paketo Buildpacks](https://github.com/paketo-buildpacks) we have only included a few bellow.
 
 The store will be referenced by a builder resource.
 
