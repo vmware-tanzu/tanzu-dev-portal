@@ -1,7 +1,7 @@
 ---
 title: "Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home"
 featured: true
-weight: 3
+weight: 1
 description: >
     Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home
 date: 2020-09-17

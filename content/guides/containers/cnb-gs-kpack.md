@@ -11,7 +11,9 @@ patterns:
 - Deployment
 team:
 - Tyler Britten
+- Ivan Tarin
 ---
+
 
 [`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on Kubernetes using [Cloud Native Buildpacks](../cnb-what-is). It takes source code repositories (like GitHub), builds the code into a container image, and uploads it to the container registry of your choice.
 
@@ -23,115 +25,40 @@ There are a few things you need to do before getting started with `kpack`:
 
 - Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
+- Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds. 
+  - Command to install with Homebrew on Mac OS `brew install stern`
+
+- Have the [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) to interact with your cluster. 
+  - Command to install with Homebrew on Mac OS `brew install kubectl` 
+
+- Accessible Docker V2 Registry, [DockerHub](https://hub.docker.com/) will suffice it is free and creating an account is easy.
+
 - Follow the documentation for [installing `kpack`](https://github.com/pivotal/kpack/blob/master/docs/install.md/) in your Kubernetes cluster.
 
-- Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds.
 
 ## Initial `kpack` Configuration
 
 Among the things you will need before you get started are a code repository with compatible code (I'm using Spring Java in this case) and a container registry (I'm using Google GCR).
 
-To make sure your `kpack` environment is ready after following the install instructions above, run `kubectl describe clusterbuilder default` so the output looks like this:
+To make sure your `kpack` environment is ready after following the install instructions above, run.
 
-```yaml
-
-Name:         default
-Namespace:
-Labels:       <none>
-Annotations:  kubectl.kubernetes.io/last-applied-configuration:
-                {"apiVersion":"build.pivotal.io/v1alpha1","kind":"ClusterBuilder","metadata":{"annotations":{},"name":"default"},"spec":{"image":"cloudfou...
-API Version:  build.pivotal.io/v1alpha1
-Kind:         ClusterBuilder
-Metadata:
-  Creation Timestamp:  2020-02-14T14:37:47Z
-  Generation:          1
-  Resource Version:    212182
-  Self Link:           /apis/build.pivotal.io/v1alpha1/clusterbuilders/default
-  UID:                 c019e370-cd32-4a32-b3c0-982c7d99d672
-Spec:
-  Image:          cloudfoundry/cnb:bionic
-  Update Policy:  polling
-Status:
-  Builder Metadata:
-    Id:       org.cloudfoundry.azureapplicationinsights
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.procfile
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.jmx
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.go
-    Version:  v0.0.2
-    Id:       org.cloudfoundry.springboot
-    Version:  v1.2.9
-    Id:       org.cloudfoundry.jvmapplication
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.springautoreconfiguration
-    Version:  v1.1.8
-    Id:       org.cloudfoundry.buildsystem
-    Version:  v1.2.9
-    Id:       org.cloudfoundry.archiveexpanding
-    Version:  v1.0.102
-    Id:       org.cloudfoundry.jdbc
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.openjdk
-    Version:  v1.2.11
-    Id:       org.cloudfoundry.googlestackdriver
-    Version:  v1.1.8
-    Id:       org.cloudfoundry.nodejs
-    Version:  v2.0.0
-    Id:       org.cloudfoundry.distzip
-    Version:  v1.1.9
-    Id:       org.cloudfoundry.tomcat
-    Version:  v1.3.9
-    Id:       org.cloudfoundry.dotnet-core
-    Version:  v0.0.4
-    Id:       org.cloudfoundry.debug
-    Version:  v1.2.8
-    Id:       org.cloudfoundry.dep
-    Version:  0.0.89
-    Id:       org.cloudfoundry.go-compiler
-    Version:  0.0.83
-    Id:       org.cloudfoundry.go-mod
-    Version:  0.0.84
-    Id:       org.cloudfoundry.node-engine
-    Version:  0.0.146
-    Id:       org.cloudfoundry.npm
-    Version:  0.0.87
-    Id:       org.cloudfoundry.yarn
-    Version:  0.0.99
-    Id:       org.cloudfoundry.dotnet-core-aspnet
-    Version:  0.0.97
-    Id:       org.cloudfoundry.dotnet-core-build
-    Version:  0.0.55
-    Id:       org.cloudfoundry.dotnet-core-conf
-    Version:  0.0.98
-    Id:       org.cloudfoundry.dotnet-core-runtime
-    Version:  0.0.106
-    Id:       org.cloudfoundry.dotnet-core-sdk
-    Version:  0.0.99
-    Id:       org.cloudfoundry.icu
-    Version:  0.0.25
-    Id:       org.cloudfoundry.node-engine
-    Version:  0.0.133
-  Conditions:
-    Last Transition Time:  2020-02-14T14:37:48Z
-    Status:                True
-    Type:                  Ready
-  Latest Image:            index.docker.io/cloudfoundry/cnb@sha256:83270cf59e8944be0c544e45fd45a5a1f4526d7936d488d2de8937730341618d
-  Observed Generation:     1
-  Stack:
-    Id:         io.buildpacks.stacks.bionic
-    Run Image:  index.docker.io/cloudfoundry/run@sha256:9e366d007db857d7bcde2edb0439cf8159cb9ddb9655bee21ba479c06ae8f42d
-Events:         <none>
 ```
-
-It lists all the available builders that are configured, so that means you're ready to get started.
+kubectl get pods --namespace kpack --watch
+```
 
 ## Using `kpack`
 
 ### Set Up Container Registry Secret
 
-The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`:
+The first thing you need to do is tell `kpack` how to access the container registry to upload the completed images when they're done. 
+
+You'll need a secret with credentials to access GCR, so you'll create a manifest like this and apply it with `kubectl apply -f`.
+
+{{%expand "gcr-registry-credentials.yaml" %}}
+Save and apply your secret
+```
+kubectl apply -f gcr-registry-credentials.yaml
+```
 
 ```yaml
 apiVersion: v1
@@ -139,7 +66,7 @@ kind: Secret
 metadata:
   name: gcr-registry-credentials
   annotations:
-    build.pivotal.io/docker: us.gcr.io
+    kpack.io/docker: us.gcr.io
 type: kubernetes.io/basic-auth
 stringData:
   username: _json_key
@@ -148,15 +75,42 @@ stringData:
         <GCP JSON Credentials Go Here>
     }
 ```
+{{% /expand%}}
 
-The GCP credentials have been redacted here for obvious reasons, but this is the format. If you're using another registry that uses just username/password, you will put that here instead. There are more details in the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
+{{%expand "dockerhub-registry-credentials.yaml" %}}
+Save and apply your secret
+```
+kubectl apply -f dockerhub-registry-credentials.yaml
+```
 
-Also note the annotation of `build.pivotal.io/docker: us.gcr.io`; it tells `kpack` which registries to use these credentials for. In this case, any image tagged for `us.gcr.io.`
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dockerhub-registry-credentials
+  annotations:
+    kpack.io/docker: https://index.docker.io/v1/
+type: kubernetes.io/basic-auth
+stringData:
+  username: "<username>"
+  password: "<password>"
+```
+{{% /expand%}}
+
+For more details see the [`kpack` secrets documentation.](https://github.com/pivotal/kpack/blob/master/docs/secrets.md) 
+
+Also note the annotation of `kpack.io/docker`; it tells `kpack` which registries to use these credentials for. In the case of `gcr-registry-credentials.yaml`, any image tagged for `us.gcr.io.`
 
 
 ### Set Up Container Registry Service Account
 
-Now you need a service account referencing those credentials. The manifest is pretty simple:
+Now you need a service account referencing those credentials in your secret. The manifest is pretty simple:
+
+{{%expand "gcr-registry-service-account.yaml" %}}
+Apply your new service account.
+```
+kubectl apply -f gcr-registry-credentials.yaml
+``` 
 
 ```yaml
 apiVersion: v1
@@ -164,12 +118,158 @@ kind: ServiceAccount
 metadata:
   name: gcr-registry-service-account
 secrets:
-  - name: gcr-registry-credential
+  - name: gcr-registry-credentials
+imagePullSecrets:
+- name: gcr-registry-credentials
 ```
+{{% /expand%}}
+
+{{%expand "dockerhub-service-account.yaml" %}}
+Apply your new service account.
+```
+kubectl apply -f dockerhub-registry-credentials.yaml
+``` 
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dockerhub-service-account
+secrets:
+- name: dockerhub-registry-credentials
+imagePullSecrets:
+- name: dockerhub-registry-credentials
+```
+{{% /expand%}}
+
+
+### Create your Store
+
+A store is a repository of [buildpacks](http://buildpacks.io/) packaged into [buildpackages](https://buildpacks.io/docs/buildpack-author-guide/package-a-buildpack/) that kpack uses to build images. 
+You can add more languages by including more buildpacks you create or from [Paketo Buildpacks](https://github.com/paketo-buildpacks) we have only included a few bellow.
+
+The store will be referenced by a builder resource.
+
+```
+kubectl apply -f store.yaml 
+```
+
+{{% expand "store.yaml" %}}
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStore
+metadata:
+  name: default
+spec:
+  sources:
+  - image: gcr.io/paketo-buildpacks/java
+  - image: gcr.io/paketo-buildpacks/graalvm
+  - image: gcr.io/paketo-buildpacks/java-azure
+  - image: gcr.io/paketo-buildpacks/nodejs
+  - image: gcr.io/paketo-buildpacks/dotnet-core
+  - image: gcr.io/paketo-buildpacks/go
+  - image: gcr.io/paketo-buildpacks/php
+  - image: gcr.io/paketo-buildpacks/nginx
+  ```
+{{% /expand%}}  
+
+### Apply a Cluster Stack 
+
+A [stack](https://buildpacks.io/docs/concepts/components/stack/) provides the buildpack lifecycle with build-time and run-time environments in the form of images.
+
+The [pack CLI](https://github.com/buildpacks/pack) command: `pack suggest-stacks` will display a list of recommended stacks that can be used. We recommend starting with the `io.buildpacks.stacks.bionic` base stack. 
+
+```
+kubectl apply -f stack.yaml
+```
+
+{{% expand "stack.yaml" %}}
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStack
+metadata:
+  name: base
+spec:
+  id: "io.buildpacks.stacks.bionic"
+  buildImage:
+    image: "paketobuildpacks/build:base-cnb"
+  runImage:
+    image: "paketobuildpacks/run:base-cnb"
+```
+{{% /expand%}}
+
+
+
+### Apply a Builder
+
+A builder is an image that bundles all the bits and information on how to build your apps, like 
+- A buildpack
+- An implementation of the lifecycle
+- A build-time environment that platforms may use to execute the lifecycle.
+
+Kpack will push the builder image to your registry.
+
+```
+kubectl apply -f builder.yaml 
+```
+
+{{% expand "builder.yaml" %}}
+- Change `spec.serviceAccount` to your service account's name.
+- Change `spec.tag` to your registry address appending `/builder` or a name of your choosing to hold your builder.
+
+
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata:
+  name: my-builder
+  namespace: default
+spec:
+  serviceAccount: dockerhub-registry-service-account
+  tag: index.docker.io/<docker-hub-repo>/<builder>
+  stack:
+    name: base
+    kind: ClusterStack
+  store:
+    name: default
+    kind: ClusterStore
+  order:
+  - group:
+    - id: paketo-buildpacks/java
+  - group:
+    - id: paketo-buildpacks/java-azure
+  - group:
+    - id: paketo-buildpacks/graalvm
+  - group:
+    - id: paketo-buildpacks/nodejs
+  - group:
+    - id: paketo-buildpacks/dotnet-core
+  - group:
+    - id: paketo-buildpacks/go
+  - group:
+    - id: paketo-buildpacks/php
+  - group:
+    - id: paketo-buildpacks/nginx
+```
+{{% /expand %}}
+
+
 
 ### Create an Image Configuration
 
-Now you're all ready to start building images and pushing them to GCR. To create a manifest that builds containers off the application code on GitHub:
+Now you're all ready to start building images and pushing them to your registry. To create a manifest that builds containers off the application code on GitHub:
+
+{{% expand "gcr-image.yaml" %}}
+Applying your image yaml will enable automation to build your new image.
+This build will take a few minutes and will be subsequently faster each time you run as it has a cache.
+```
+kubectl apply -f gcr-image.yaml
+```  
+
+- Change `spec.tag` to your registry address appending `/app` or a name of your choosing to hold your app.
+- Change `spec.serviceAccount` to your service account's name.
+- At `spec.source.git.url` is the source code repo being used to build the app.
+- The `spec.source.git.revision` is the commit tag used to build, a change here will trigger a new build!
 
 ```yaml
 apiVersion: build.pivotal.io/v1alpha1
@@ -177,16 +277,48 @@ kind: Image
 metadata:
   name: petclinic-image
 spec:
-  tag: us.gcr.io/pgtm-tbritten/spring-petclinic
+  tag: us.gcr.io/<project>/<spring-petclinic>
   serviceAccount: gcr-registry-service-account
   builder:
     name: default
-    kind: ClusterBuilder
+    kind: Builder
   source:
     git:
-      url: https://github.com/tybritten-org/spring-petclinic
-      revision: master
+      url: https://github.com/spring-projects/spring-petclinic
+      revision: 82cb521d636b282340378d80a6307a08e3d4a4c4
 ```
+{{% /expand %}}
+
+{{% expand "dockerhub-image.yaml" %}}
+Applying your image yaml will enable automation to build your new image.
+This build will take a few minutes and will be subsequently faster each time you run as it has a cache. 
+```
+kubectl apply -f dockerhub-image.yaml
+``` 
+
+- Change `spec.tag` to your registry address appending `/app` or a name of your choosing to hold your app.
+- Change `spec.serviceAccount` to your service account's name.
+- At `spec.source.git.url` is the source code being used to build the app.
+- The `spec.source.git.revision` is the commit used to build, a change here will trigger a new build!
+
+```yaml
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: petclinic-image
+  namespace: default
+spec:
+  tag: index.docker.io/<docker-hub-repo>/app
+  serviceAccount: dockerhub-service-account
+  builder:
+    name: my-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/spring-projects/spring-petclinic
+      revision: 82cb521d636b282340378d80a6307a08e3d4a4c4
+```
+{{% /expand %}}
 
 You can see the GitHub URL, and that you're building off master. Also, you configured the desired image tag (including the registry) and included the service account and builders you created. Once you apply this manifest, it will begin building.
 
@@ -198,7 +330,9 @@ petclinic-image                 Unknown
 
 ### Watching the Build
 
-If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. Since it includes six different containers, it's hard to use `kubectl logs` because you have to know which container to specify at which stage. It's much easier to use the `stern` tool mentioned at the beginning. 
+If you run a `kubectl get pods`, you'll see a pod created (with a series of init containers) to build the image. 
+
+Since it includes six different containers, it's hard to use `kubectl logs` because you have to know which container to specify at which stage. It's much easier to use the `stern` tool mentioned at the beginning. 
 
 The pod that is created has a name that starts with `image-name-build`; so in this case, `petclinic-image-build.` The command to run to see the logs is `stern petclinic-image-build,` and you'll see all the logs pass by during the build and upload.
 
@@ -209,5 +343,42 @@ NAME LATESTIMAGE                                                                
 petclinic-image   us.gcr.io/pgtm-tbritten/spring-petclinic@sha256:<sha hash>   True
 ```
 
-You can now run `docker pull us.gcr.io/pgtm-tbritten/spring-petclinic` to download the completed image. Or you can create a Kubernetes manifest to run the image.
+You can now run `docker pull us.gcr.io/<project>/<spring-petclinic>` to download the completed image. Or you can create a Kubernetes manifest to run the image.
 
+**As mentioned in the previous section on image configuration, the `spec.source.git.revision` is the commit used to build, try changing it to trigger a new build!**
+
+### Bonus - Deploy your app to Kubernetes
+
+Kpack is best used in conjunction with a CI/CD tool, but if you want to deploy your app to Kubernetes now you can very easily.
+
+You will reuse your secret with your registry and pull from the repository that holds the container image.  You created this repo in the *Create an Image Configuration* section and can be found at  `spec.tag` place it after `--image=$DH_USERNAME/app` .
+
+Create a deployment with the image kpack made with your source code
+```
+kubectl create deployment kpack-demo --image=<registry-name>/<app-repo>      
+```    
+
+To verify deployment
+```
+kubectl get deployments                                          
+```
+
+Expose the Pod to the public internet using the kubectl expose command:
+```
+kubectl expose deployment kpack-demo --type=LoadBalancer --port=8080
+```
+
+The `--type=LoadBalancer` flag exposes your Service outside of the cluster.
+The application code inside the image `k8s.gcr.io/echoserver` only listens on TCP port 8080.
+
+To verify your service
+```
+kubectl get services                
+```
+
+On cloud providers that support load balancers, an external IP address would be provisioned to access the Service. 
+
+On minikube, the LoadBalancer type makes the Service accessible using:
+```
+minikube service kpack-demo                                         
+```

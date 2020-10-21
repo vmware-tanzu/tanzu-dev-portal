@@ -111,6 +111,7 @@ realtime
 [R,r]ebase
 refactorings?
 [R,r]epos?
+replicaset
 revertibility
 [R,r]oadmap
 rollout
@@ -144,6 +145,7 @@ unpause
 unpushed
 unreleasable
 uptime
+V2
 versioned
 veth-jelly
 walkthrough
@@ -169,6 +171,7 @@ auth
 base64(-encoded)?
 Blazor
 [B,b]uildpack(s|'s)?
+buildpackages
 Bundler
 Carvel
 cass-operator
@@ -227,6 +230,8 @@ keychain
 Kibana
 Knative
 kpack(-hosted)?
+kpack
+Kpack
 Krisp
 KubeAcademy
 [K,k]ubeapps
