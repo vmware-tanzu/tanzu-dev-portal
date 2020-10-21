@@ -194,6 +194,7 @@ Devoops
 [D,d]ockerfile(s|-built)?
 DockerHub
 donut
+EclipseLink
 ElasticSearch
 [E,e]thernet(s)?
 etcd
@@ -216,9 +217,11 @@ init
 InfoQ
 J2EE
 Jaeger
+Jakarta
 JavaEE
 JBatch
 JHipster
+JPA
 Jsonnet
 [K,k](8|9|14)s
 Kaniko
