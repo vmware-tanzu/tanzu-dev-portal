@@ -103,26 +103,24 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
     updateEpisodes = []
     for episode in episodes:
         print("---> episode: " + episode["title"] + ":")
-        if getEpisodeNumberFromTitle(episode["title"]) == 0:
-            above+=1
-            episode["episode"] = str(above)
-        else:
-            episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"]))
+        episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"]))
 
-        if (not episode["date"]) or (episode["episode"] == 0):
-            video["draft"] = "true"
-
-        if int(episode["episode"]) in range(above-4, above+1): # Do the last 5 episodes all the time to make sure we update them
+        if (episode["videoId"] in existingVideoIDs) and (int(episode["episode"]) in range(above-4, above+1)): # Do the last 5 episodes all the time to make sure we update them
             updateEpisodes.append(episode)
             print("----> Updating as #" + episode["episode"] + "...")
-        elif int(episode["episode"]) > above: # create new episodes
+        elif (episode["videoId"] not in existingVideoIDs) and (int(episode["episode"]) > above): # create new episodes
             updateEpisodes.append(episode)
             print("----> Saving as #" + episode["episode"] + "...")
         elif episode["videoId"] not in existingVideoIDs:
+            if (not episode["date"]) or (episode["episode"] == 0):
+                video["draft"] = "true"            
+            if episode["episode"] == "0":
+                above+=1
+                episode["episode"] = str(above)
             updateEpisodes.append(episode)
             print("----> Adding Youtube Video to #" + episode["episode"] + "...")
         else:
-            print("----> Skipping episode #" + episode["episode"] + " (already have it)...")
+            print("----> Skipping episode (already have it)...")
     return updateEpisodes
 
 def writeNewEpisodeFiles(videos):
