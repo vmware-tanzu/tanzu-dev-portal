@@ -12,9 +12,6 @@ IMG_PATH_PREFIX = os.environ["IMG_PATH_PREFIX"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
 
-TITLE_PREFIX = os.environ["TITLE_PREFIX"] #"TGI Kubernetes"
-TITLE_SUFFIX = os.environ["TITLE_SUFFIX"] #":"
-
 def loadHugoFrontMatter(file):
     with open(file, 'r') as f:
         content = f.read().splitlines()
