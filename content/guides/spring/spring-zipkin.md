@@ -120,7 +120,7 @@ With Zipkin already running, it’s now time to start up both the frontend and t
 ./mvnw spring-boot:run
 ```
 
-This will start the frontend on port 8080 as well as start the backend on port 8082. Once both applications are up and running, send a request or two to the frontend application located at http://localhost:8080. For each request, you should be greeted with the phrase, “Hello from the backend!” After you’ve sent some traffic to the application, you can reach Zipkin running at http://localhost:9411/zipkin/?serviceName=backend, click “Run Query,” and will be greeted with all   your application’s recent traces:
+This will start the frontend on port 8080 as well as start the backend on port 8082. Once both applications are up and running, send a request or two to the frontend application located at [http://localhost:8080](http://localhost:8080). For each request, you should be greeted with the phrase, “Hello from the backend!” After you’ve sent some traffic to the application, you can reach Zipkin running at [http://localhost:9411/zipkin/?serviceName=backend](http://localhost:9411/zipkin/?serviceName=backend), click “Run Query,” and will be greeted with all   your application’s recent traces:
 
 ![List of traces in Zipkin](/images/guides/spring/screenshots/zipkin-spring-1.png)
 
