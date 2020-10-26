@@ -155,6 +155,8 @@ walkthrough
 waypoints
 webhooks?
 whiteboard(ed|ing)
+[O,o]makase
+Teppanyaki
 
 # Tech (projects, products, commands)
 2G
@@ -324,6 +326,7 @@ ytt
 [Z,z]ipkin
 Zuul
 
+
 # Companies / Conferences
 Apress
 Bitnami
@@ -482,6 +485,10 @@ Sletten
 Dalia
 Abo
 Sheasha
+m'étonner
+Turnquist
+Violeta
+Georgiva
 
 # Twitter Handles
 anthonyjvetter
