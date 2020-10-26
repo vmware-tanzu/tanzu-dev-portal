@@ -122,15 +122,15 @@ With Zipkin already running, it’s now time to start up both the frontend and t
 
 This will start the frontend on port 8080 as well as start the backend on port 8082. Once both applications are up and running, send a request or two to the frontend application located at http://localhost:8080. For each request, you should be greeted with the phrase, “Hello from the backend!” After you’ve sent some traffic to the application, you can reach Zipkin running at http://localhost:9411/zipkin/?serviceName=backend, click “Run Query,” and will be greeted with all   your application’s recent traces:
 
-![List of traces in Zipkin](/images/guides/spring/screenshots/spring-zipkin-1.png)
+![List of traces in Zipkin](/images/guides/spring/screenshots/zipkin-spring-1.png)
 
 By clicking on one of these traces, you can dig further into the entire flow of a request. This is great for troubleshooting issues in large, complex distributed applications where figuring out exactly where a request is slowing down can be a real challenge:
 
-![Individual Zipkin trace](/images/guides/spring/screenshots/spring-zipkin-2.png)
+![Individual Zipkin trace](/images/guides/spring/screenshots/zipkin-spring-2.png)
 
 Zipkin also allows you to visualize the services on which your application depends. If you click on the “Dependencies” page on the left-hand panel, you’ll be shown this visualization for your application:
 
-![Zipkin dependency graph](/images/guides/spring/screenshots/spring-zipkin-3.png)
+![Zipkin dependency graph](/images/guides/spring/screenshots/zipkin-spring-3.png)
 
 While simple for this use case, you can imagine how useful this feature will be as your application’s needs for external services grows.
 
