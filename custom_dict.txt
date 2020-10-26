@@ -28,6 +28,7 @@ async
 autoscaling
 Aviv
 (back|front)end(s)?
+Backend
 [B,b]ackfill
 balancers?
 biome
@@ -58,6 +59,7 @@ fileshare
 FinTech
 firewalling
 frictionless
+Frontend
 geospatial
 getters
 GitOps
@@ -99,6 +101,7 @@ precompiled
 performant
 preload
 prepending
+pre-built
 pre-programmed
 pre-release
 podcaster
@@ -168,6 +171,7 @@ AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
+Autowired
 base64(-encoded)?
 Blazor
 [B,b]uildpack(s|'s)?
@@ -289,6 +293,7 @@ Rockstar
 rkt
 RSocket(-based)?
 SameSite
+serviceName=backend
 [S,s]kaffold
 Snapchat
 SpringBoot
@@ -316,7 +321,7 @@ WebFlux
 WebSocket
 [V,v]eth
 ytt
-Zipkin
+[Z,z]ipkin
 Zuul
 
 # Companies / Conferences
