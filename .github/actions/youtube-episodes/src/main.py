@@ -53,11 +53,12 @@ def getExistingEpisodes():
         maxEpisode = 0
     return episodes, maxEpisode, youtubeIDs
 
-def getEpisodeNumberFromTitle(title):
-    try:
-        number = int(title.split(TITLE_SUFFIX)[0][len(TITLE_PREFIX):])
-    except:
-        return 0
+def getEpisodeNumberFromTitle(title, existingEpisodes):
+    number = 0
+    for episode in existingEpisodes:
+        if episode["title"].replace('"', '') == title.replace('"', ''):
+            number = episode["episode"]
+            break
     return number
 
 def fuzzyDate(date):
@@ -87,7 +88,7 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
         except:
             liveInfo["scheduledStartTime"] = None
 
-        episodeDate = fuzzyDate(videoInfo["title"]) or fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
+        episodeDate = fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
 
         video = {
             "videoId": videoId,
@@ -100,14 +101,17 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
 
     print ("==> Comparing Youtube Videos with Episode List")
     episodes = sorted(episodes, key=itemgetter('date'), reverse=False)
+
     updateEpisodes = []
+    new = above
     for episode in episodes:
-        print("---> episode: " + episode["title"] + ":")
-        if getEpisodeNumberFromTitle(episode["title"]) == 0:
-            above+=1
-            episode["episode"] = str(above)
+        if getEpisodeNumberFromTitle(episode["title"], existingEpisodes) == 0:
+            new+=1
+            episode["episode"] = str(new)
         else:
-            episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"]))
+            episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"], existingEpisodes))
+
+        print("---> episode: " + episode["episode"] + " - " + episode["title"] + ":")
 
         if (not episode["date"]) or (episode["episode"] == 0):
             video["draft"] = "true"
