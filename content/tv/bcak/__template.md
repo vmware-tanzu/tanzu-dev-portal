@@ -10,7 +10,7 @@ Description: "Nate Schutta and GUEST_NAME have a conversation"
 hosts: ["Nate Schutta"]
 guests: ["GUEST_NAME"]
 PublishDate: "2020-04-07T00:00:00-07:00"
-Date: "2020-09-28T10:00:00-07:00"
+Date: "2020-11-01T10:00:00-08:00"
 minutes: 120
 episode: "0"
 
