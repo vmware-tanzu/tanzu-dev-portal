@@ -50,10 +50,10 @@ def getExistingEpisodes():
         maxEpisode = 0
     return episodes, maxEpisode, youtubeIDs
 
-def getEpisodeNumberFromTitle(title, existingEpisodes):
+def getEpisodeNumberFromId(id, existingEpisodes):
     number = 0
     for episode in existingEpisodes:
-        if episode["title"].replace('"', '') == title.replace('"', ''):
+        if episode["youtube"] == id:
             number = episode["episode"]
             break
     return number
@@ -102,11 +102,11 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
     updateEpisodes = []
     new = above
     for episode in episodes:
-        if getEpisodeNumberFromTitle(episode["title"], existingEpisodes) == 0:
+        if getEpisodeNumberFromId(episode["videoId"], existingEpisodes) == 0:
             new+=1
             episode["episode"] = str(new)
         else:
-            episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"], existingEpisodes))
+            episode["episode"] = str(getEpisodeNumberFromId(episode["videoId"], existingEpisodes))
 
         print("---> episode: " + episode["episode"] + " - " + episode["title"] + ":")
 
