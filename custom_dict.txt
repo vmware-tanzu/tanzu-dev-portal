@@ -50,6 +50,7 @@ DevOps(-related)?
 defacto
 [D,d]ev[R,r]el
 egoless
+[E,e]nablement
 Endnotes
 expensed
 failover
@@ -437,6 +438,7 @@ Dieu
 Dobrin
 Dolan
 Dubois
+Fewell
 Florent
 freddygthatsme
 Galystan
