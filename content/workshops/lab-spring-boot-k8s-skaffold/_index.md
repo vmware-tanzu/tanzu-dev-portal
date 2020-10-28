@@ -1,22 +1,28 @@
 ---
-title: "Getting Started with Spring Boot on Kubernetes"
+title: "Spring Boot Skaffold on Kubernetes"
 description: >
-  Spring Boot is a great way to write an application in Java. This workshop shows you how to create a Spring Boot application and run it in Kubernetes with as little fuss and bother as possible. And there’s no YAML. To do this, we need to do three things: Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
+  "This lab shows you how to work with Skaffold to reduce the toil of developing and pushing applications to Kubernetes. To do this we need to do two things:
+
+  1. Configure the Skaffold tool in a few lines of YAML
+  
+  2. Deploy the image as a container in Kubernetes"
 summary:
-  - Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
+  - Use Skaffold to create a Spring Boot application and deploy it to Kubernetes
 type: workshop
 topics:
   - Spring
   - Microservices
   - Kubernetes
+  - Skaffold
 tags:
   - Spring
   - Microservices
   - Kubernetes
   - Spring Boot
+  - Skaffold
 length: 15
-lab: lab-spring-boot-k8s-probes
+lab: lab-spring-boot-k8s-skaffold
 logo: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMywgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTAgNDU3LjgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMCA0NTcuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM2REIzM0Y7fQo8L3N0eWxlPgo8dGl0bGU+aWNvbi1zcHJpbmctYm9vdDwvdGl0bGU+CjxnIGlkPSJMYXllcl8yXzFfIj4KCTxnIGlkPSJMYXllcl8xLTIiPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDMuNSwyMDEuNEw0MDMsMjcuNUMzOTQuMywxMi40LDM3Mi45LDAsMzU1LjQsMEgxNTQuNmMtMTcuNCwwLTM4LjksMTIuNC00Ny42LDI3LjVMNi42LDIwMS40CgkJCWMtOC43LDE1LjEtOC43LDM5LjgsMCw1NC45bDEwMC40LDE3NGM4LjcsMTUuMSwzMC4xLDI3LjUsNDcuNiwyNy41aDIwMC45YzE3LjQsMCwzOC44LTEyLjQsNDcuNi0yNy41bDEwMC40LTE3NAoJCQlDNTEyLjIsMjQxLjIsNTEyLjIsMjE2LjUsNTAzLjUsMjAxLjR6IE0yMzMuMyw5Ni4yYzAtMTEuNCw5LjMtMjAuNywyMC43LTIwLjdjMTEuNCwwLDIwLjcsOS4zLDIwLjcsMjAuN3YxMjMuNwoJCQljMCwxMS40LTkuMywyMC43LTIwLjcsMjAuN2MtMTEuNCwwLTIwLjctOS4zLTIwLjctMjAuN2wwLDBWOTYuMnogTTI1NCwzNjAuM2MtNzcuNCwwLTE0MC40LTYzLTE0MC40LTE0MC40CgkJCWMwLjEtNDQuNCwyMS4xLTg2LjEsNTYuNy0xMTIuN2M4LjItNi4xLDE5LjctNC40LDI1LjgsMy44czQuNCwxOS43LTMuOCwyNS44bDAsMGMtNDUuOSwzNC4xLTU1LjUsOTktMjEuNCwxNDQuOQoJCQlzOTksNTUuNSwxNDQuOSwyMS40YzI2LjMtMTkuNSw0MS44LTUwLjQsNDEuOC04My4yYy0wLjEtMzIuOS0xNS43LTYzLjgtNDIuMi04My40Yy04LjItNi05LjktMTcuNi0zLjktMjUuOHMxNy42LTkuOSwyNS44LTMuOQoJCQljMzUuOSwyNi41LDU3LDY4LjUsNTcuMSwxMTMuMUMzOTQuNCwyOTcuNCwzMzEuNCwzNjAuMywyNTQsMzYwLjN6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==
 ---
 
-Create your first Spring Boot application and deploy it to Kubernetes
+Use Skaffold to create a Spring Boot application and deploy it to Kubernetes
