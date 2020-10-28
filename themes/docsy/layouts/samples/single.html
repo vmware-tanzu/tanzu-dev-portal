@@ -1,5 +1,5 @@
 {{ define "main" }}
-<script>sendAmplitudeEventOnLoad('sample viewed', {'sample name': '{{ .Title }}', 'referrer': document.referrer});</script>
+{{ partial "amplitude.html" (dict "context" . "event" "sample viewed") }}
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
 		<div class='container'>

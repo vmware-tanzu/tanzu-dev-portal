@@ -54,3 +54,6 @@ function changeTheme(mode) {
 function sendAmplitudeEventOnLoad(eventType, eventProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});});
 }
+function sendAmplitudeEvent(eventType, eventProperties) {
+  dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
+}

@@ -5,7 +5,7 @@
   </head>
   <body class="td-{{ .Kind }} td-topic">
     {{ partial "required-gtm-no-script.html" . }}
-    <script>sendAmplitudeEventOnLoad('topic viewed', {'topic name': '{{ .Title | lower }}', 'referrer': document.referrer});</script>
+    {{ partial "amplitude.html" (dict "context" . "event" "topic viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>

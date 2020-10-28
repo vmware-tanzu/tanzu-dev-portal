@@ -4,7 +4,7 @@
   </head>
   <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} guide" data-section="{{ .Parent.Params.title | lower }}">
     {{ partial "required-gtm-no-script.html" . }}
-    <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .Parent.Params.title | lower }}', 'guide title': '{{ .Title }}', 'guide author': '{{ .Params.team }}'});</script>
+    {{ partial "amplitude.html" (dict "context" . "event" "guide viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>

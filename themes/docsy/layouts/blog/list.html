@@ -1,5 +1,5 @@
 {{ define "main" }}
-<script>sendAmplitudeEventOnLoad('blog viewed');</script>
+{{ partial "amplitude.html" (dict "context" . "event" "blog viewed") }}
 <section id="hero" class="no-bg mt-7 pb-4">
 	<div class="container">
 		<div class='flex'>

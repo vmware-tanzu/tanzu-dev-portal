@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<script>sendAmplitudeEventOnLoad('show viewed', {'show name': '{{ .Title }}', 'referrer': document.referrer});</script>
+{{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
 <section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-5">

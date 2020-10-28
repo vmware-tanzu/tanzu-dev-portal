@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<script>sendAmplitudeEventOnLoad('tanzu.tv viewed', {'referrer': document.referrer});</script>
+{{ partial "amplitude.html" (dict "context" . "event" "tanzu.tv viewed") }}
 
 {{ partial "hero.html" . }}
 

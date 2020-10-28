@@ -207,22 +207,22 @@ limitations under the License.
         // Track topic clicks - menu vs. explore section
         $(".topic a").click(function(){
             var topicName = this.innerHTML.substring(this.innerHTML.indexOf(">")+2).toLowerCase();
-            dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'explore'} });
+            sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'explore', 'url path': window.location.pathname});
         });
 
         $("a.dropdown-item[href*='/topic']").click(function(){
             var topicName = this.innerHTML.toLowerCase();
-            dataLayer.push({'event': 'logEvent', 'eventType': 'topic clicked', 'eventProperties': {'topic name': topicName, 'source': 'menu'} });
+            sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'menu', 'url path': window.location.pathname});
         });
 
         // Track sample clicks - code download vs visit repo
         $("#sample-gh").click(function(){
             var sampleName = this.title;
-            dataLayer.push({'event': 'logEvent', 'eventType': 'sample github clicked', 'eventProperties': {'sample name': sampleName} });
+            sendAmplitudeEvent('sample github clicked', {'sample name': sampleName, 'url path': window.location.pathname});
         });
         $("#sample-zip").click(function(){
             var sampleName = this.title;
-            dataLayer.push({'event': 'logEvent', 'eventType': 'sample download clicked', 'eventProperties': {'sample name': sampleName} });
+            sendAmplitudeEvent('sample download clicked', {'sample name': sampleName, 'url path': window.location.pathname});
         });
 
         // Track scroll depth on guides
@@ -251,7 +251,7 @@ limitations under the License.
                         pageCategory = "guide";
                     else if ($('div.blog').length > 0)
                         pageCategory = "blog";
-                    dataLayer.push({'event': 'logEvent', 'eventType': 'page scrolled', 'eventProperties': {'scroll depth': scrollDepth*100, 'page title': pageTitle, 'page category': pageCategory} });
+                        sendAmplitudeEvent('page scrolled', {'scroll depth': scrollDepth*100, 'page title': pageTitle, 'page category': pageCategory, 'url path': window.location.pathname});
                     //console.log(scrollDepth);
                 }
             }
@@ -281,7 +281,7 @@ limitations under the License.
                     var showTitle = $('h1').innerHTML;
                     var episodeTitle = document.title.substring(0,document.title.indexOf("|")-1);
                     var episodeType = "vod";
-                    dataLayer.push({'event': 'logEvent', 'eventType': 'episode session ended', 'eventProperties': {'percentage complete': percentageCompleted*100, 'show title': showTitle, 'episode title': episodeTitle, 'episode type': episodeType} });
+                    sendAmplitudeEvent('episode session ended', {'percentage complete': percentageCompleted*100, 'show title': showTitle, 'episode title': episodeTitle, 'episode type': episodeType, 'url path': window.location.pathname});
                     //console.log(percentageCompleted);
                 }
                 //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
