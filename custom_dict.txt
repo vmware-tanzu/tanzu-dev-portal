@@ -28,6 +28,7 @@ async
 autoscaling
 Aviv
 (back|front)end(s)?
+Backend
 [B,b]ackfill
 balancers?
 biome
@@ -58,6 +59,7 @@ fileshare
 FinTech
 firewalling
 frictionless
+Frontend
 geospatial
 getters
 GitOps
@@ -99,6 +101,7 @@ precompiled
 performant
 preload
 prepending
+pre-built
 pre-programmed
 pre-release
 podcaster
@@ -111,6 +114,7 @@ realtime
 [R,r]ebase
 refactorings?
 [R,r]epos?
+replicaset
 revertibility
 [R,r]oadmap
 rollout
@@ -144,12 +148,15 @@ unpause
 unpushed
 unreleasable
 uptime
+V2
 versioned
 veth-jelly
 walkthrough
 waypoints
 webhooks?
 whiteboard(ed|ing)
+[O,o]makase
+Teppanyaki
 
 # Tech (projects, products, commands)
 2G
@@ -166,9 +173,11 @@ AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
+Autowired
 base64(-encoded)?
 Blazor
 [B,b]uildpack(s|'s)?
+buildpackages
 Bundler
 Carvel
 cass-operator
@@ -191,6 +200,7 @@ Devoops
 [D,d]ockerfile(s|-built)?
 DockerHub
 donut
+EclipseLink
 ElasticSearch
 [E,e]thernet(s)?
 etcd
@@ -213,9 +223,11 @@ init
 InfoQ
 J2EE
 Jaeger
+Jakarta
 JavaEE
 JBatch
 JHipster
+JPA
 Jsonnet
 [K,k](8|9|14)s
 Kaniko
@@ -227,6 +239,8 @@ keychain
 Kibana
 Knative
 kpack(-hosted)?
+kpack
+Kpack
 Krisp
 KubeAcademy
 [K,k]ubeapps
@@ -281,6 +295,7 @@ Rockstar
 rkt
 RSocket(-based)?
 SameSite
+serviceName=backend
 [S,s]kaffold
 Snapchat
 SpringBoot
@@ -308,8 +323,9 @@ WebFlux
 WebSocket
 [V,v]eth
 ytt
-Zipkin
+[Z,z]ipkin
 Zuul
+
 
 # Companies / Conferences
 Apress
@@ -469,6 +485,10 @@ Sletten
 Dalia
 Abo
 Sheasha
+m'étonner
+Turnquist
+Violeta
+Georgiva
 
 # Twitter Handles
 anthonyjvetter
