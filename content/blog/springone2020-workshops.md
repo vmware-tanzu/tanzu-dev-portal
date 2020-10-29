@@ -1,26 +1,28 @@
 ---
 title: "Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home"
 featured: true
-weight: 1
+weight: 2
 description: >
     Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home
-date: 2020-09-17
+date: 2020-08-11
 topics:
 - Spring
 - Kubernetes
-tags:
 - SpringOne
-- Workshops
-- Containers
+tags:
+- springone
+- springone workshops
+- spring one 
+- containers
 - API
-- Spring Cloud Gateway
-- Kubernetes
+- spring cloud gateway
+- kubernetes
 # Author(s)
 team: 
 - Ivan Tarin
 ---
 
-SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). 
+SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer](https://tanzu.vmware.com/developer/) website. 
 
 
 ![SpringOne 2020 Workshops and Training](/images/blogs/springone2020-workshops/workshops-and-training.png "SpringOne2020")
@@ -52,7 +54,7 @@ In this screenshot from Getting Started with Spring Boot on Kubernetes, you can 
 
 In Getting Started with Octant, you use the open-source Kubernetes tool Octant to inspect your Kubernetes cluster. Many developers use [Octant](https://octant.dev/) to reveal the objects running in their Kubernetes clusters.
 
-![SpringOne2020 Octant example](/images/blogs/springone2020-workshops/octant-redact.png "SpringOne2020 octant example")
+![SpringOne2020 octant example](/images/blogs/springone2020-workshops/octant-redact.png "SpringOne2020 octant example")
 
 ## Kubernetes Fundamentals
 
@@ -65,7 +67,7 @@ The screenshot below from the Kubernetes Fundamentals workshop provides an examp
 
 The Kubernetes Fundamentals workshop, a hands-on introduction to using Kubernetes, was by far the most popular workshop at SpringOne 2020. It not only provides you with a real Kubernetes cluster to interact with, but access to the Kubernetes Dashboard!
 
-![SpringOne2020 Kubernetes dashboard example](/images/blogs/springone2020-workshops/kubernetes-dashboard.png "SpringOne2020 Kubernetes dashboard example")
+![SpringOne2020 kubernetes dashboard example](/images/blogs/springone2020-workshops/kubernetes-dashboard.png "SpringOne2020 kubernetes dashboard example")
   
 
 By the second step, you are already deploying a blog application to your Kubernetes cluster!
@@ -110,18 +112,17 @@ Using very similar code to the Spring Microservices workshop in Getting Started 
 
 Here is a full rundown of the self-paced workshops featured at SpringOne 2020: 
 
-![SpringOne2020 workshops list 1](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne2020 workshops list")
-![SpringOne2020 workshops list 2](/images/blogs/springone2020-workshops/workshops-2.png "SpringOne2020 workshops list")
+![SpringOne2020 workshops list](/images/blogs/springone2020-workshops/workshops-2.png "SpringOne2020 workshops list")
 
 
 
-## Self-Paced Workshops Are Coming to Tanzu Developer Center!
+## Self-Paced Workshops Are Coming to Tanzu Developer!
 
-Now that SpringOne 2020 has come and gone, the SpringOne self-paced workshops are being moved to their new home at [Tanzu Developer Center](https://tanzu.vmware.com/developer/)! It is a perfect fit. As its name implies, [Tanzu Developer Center](https://tanzu.vmware.com/developer/) is developer-focused (no marketing jargon allowed); its sole purpose is to train developers and enable them on their journey forward. The [Tanzu Developer Center](https://tanzu.vmware.com/developer/) already has blogs, videos, an integrated community, and a learning portal, and features weekly live streams and recordings via [Tanzu.TV](https://tanzu.vmware.com/developer/tv/). 
+Now that SpringOne 2020 has come and gone, the SpringOne self-paced workshops are being moved to their new home at [Tanzu Developer](https://tanzu.vmware.com/developer/)! It is a perfect fit. As its name implies, [Tanzu Developer](https://tanzu.vmware.com/developer/) is developer-focused (no marketing jargon allowed); its sole purpose is to train developers and enable them on their journey forward. The [Tanzu Developer](https://tanzu.vmware.com/developer/) already has blogs, videos, an integrated community, and a learning portal, and features weekly live streams and recordings via [Tanzu.TV](https://tanzu.vmware.com/developer/tv/). 
 
 Not only are you getting the workshops from SpringOne 2020, but more workshops are being made as we speak! 
 
 ![SpringOne2020 workshops end](/images/blogs/springone2020-workshops/overview.png "SpringOne2020 workshops end")
 
 
-To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer Newsletter.](https://tanzu.vmware.com/developer/community/) 
+To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer.](https://tanzu.vmware.com/developer/community/) 
