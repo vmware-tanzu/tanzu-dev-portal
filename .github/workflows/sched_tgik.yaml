@@ -27,9 +27,6 @@ jobs:
           IMG_PATH_PREFIX: "static/"
           IMAGES_REL_PATH: "images/tv/episodes/tgik/"
           TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
-          TITLE_PREFIX: "TGI Kubernetes"
-          TITLE_SUFFIX: ":"
-
       - name: Check for modified files
         id: git-check
         run: |
