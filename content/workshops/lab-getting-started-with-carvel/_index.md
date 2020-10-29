@@ -2,7 +2,6 @@
 title: "Getting Started with Carvel (formerly k14s)"
 description: >
   Introducing Carvel, Simple and Composable Tools for Application Deployment.
-type: "workshop-live"
 summary:
   - Introducing Carvel, Simple and Composable Tools for Application Deployment.
 type: workshop
