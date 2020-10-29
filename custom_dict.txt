@@ -44,10 +44,11 @@ counterintuitive
 COVID-19
 customizable
 deployable
+developer developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
-defacto
+defacto de facto
 [D,d]ev[R,r]el
 egoless
 Endnotes
@@ -179,7 +180,7 @@ Blazor
 [B,b]uildpack(s|'s)?
 buildpackages
 Bundler
-Carvel
+Carvel Carvel's
 cass-operator
 cd
 (CF|cf)(-for-k8s)?
@@ -189,7 +190,7 @@ Cloudfoundry
 ClusterIssuer
 CoreCLR
 CORS
-CRD
+CRD CRDs
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
