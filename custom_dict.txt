@@ -44,12 +44,13 @@ counterintuitive
 COVID-19
 customizable
 deployable
-developer developer-centric
+developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
-defacto 
-de facto
+de
+facto
+
 [D,d]ev[R,r]el
 egoless
 Endnotes
