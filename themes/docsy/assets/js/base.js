@@ -225,7 +225,12 @@ limitations under the License.
             sendAmplitudeEvent('sample download clicked', {'sample name': sampleName, 'url path': window.location.pathname});
         });
 
-        // Track scroll depth on guides
+        // Link Clicks (Guides, Tanzu.TV, Blog, Patterns, Videos)
+        $("body.guide a, body.guides a, body.tanzu-tv a, body.tv-show a, body.tv-episode a, body.blog a, body.pattern a, a.youtube-container").click(function(){
+            sendAmplitudeEvent('link clicked', {'link title': this.innerHTML, 'link url': this.href, 'url path': window.location.pathname});
+        });
+
+        // Track scroll depth on guides and blogs
         var scrollDepthCurrent = -1;
         $(window).scroll(function() {
             if ($('body.guide').length > 0 || $('div.blog').length > 0) {

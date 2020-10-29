@@ -55,5 +55,16 @@ function sendAmplitudeEventOnLoad(eventType, eventProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});});
 }
 function sendAmplitudeEvent(eventType, eventProperties) {
+  // Clear out persisted properties from previous/onload events
+  var event = dataLayer.find(element => element["event"] == "logEvent");
+  var existingProps = Object.keys(event["eventProperties"]);
+  var newProps = Object.keys(eventProperties);
+  var difference = existingProps.filter(x => !newProps.includes(x));
+  var removeProps = {};
+  difference.forEach(element => {
+    var newObject = {};
+    removeProps[element] = undefined;
+  });
+  Object.assign(eventProperties, removeProps);
   dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
 }
