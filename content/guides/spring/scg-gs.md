@@ -49,7 +49,7 @@ Click "Generate" and you'll download a zip file of the generated code.
 
 ### Building Your Gateway
 
-You can configure a basic route by creating a method that takes in a `RouteLocatorBuilder` and returns a `RouteLocator`. Here's an example of `src/main/java/com/vmware/scgettingstarted/ScgGettingStartedApplication.java/ScgGettingStartedApplication.java` complete with a custom route:
+You can configure a basic route by creating a method that takes in a `RouteLocatorBuilder` and returns a `RouteLocator`. Here's an example of `src/main/java/com/vmware/scgettingstarted/ScgGettingStartedApplication.java` complete with a custom route:
 
 ```java
 package com.vmware.scggettingstarted;

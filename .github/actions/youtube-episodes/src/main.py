@@ -12,9 +12,6 @@ IMG_PATH_PREFIX = os.environ["IMG_PATH_PREFIX"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
 
-TITLE_PREFIX = os.environ["TITLE_PREFIX"] #"TGI Kubernetes"
-TITLE_SUFFIX = os.environ["TITLE_SUFFIX"] #":"
-
 def loadHugoFrontMatter(file):
     with open(file, 'r') as f:
         content = f.read().splitlines()
@@ -53,11 +50,12 @@ def getExistingEpisodes():
         maxEpisode = 0
     return episodes, maxEpisode, youtubeIDs
 
-def getEpisodeNumberFromTitle(title):
-    try:
-        number = int(title.split(TITLE_SUFFIX)[0][len(TITLE_PREFIX):])
-    except:
-        return 0
+def getEpisodeNumberFromId(id, existingEpisodes):
+    number = 0
+    for episode in existingEpisodes:
+        if episode["youtube"] == id:
+            number = episode["episode"]
+            break
     return number
 
 def fuzzyDate(date):
@@ -87,7 +85,7 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
         except:
             liveInfo["scheduledStartTime"] = None
 
-        episodeDate = fuzzyDate(videoInfo["title"]) or fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
+        episodeDate = fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
 
         video = {
             "videoId": videoId,
@@ -100,14 +98,17 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
 
     print ("==> Comparing Youtube Videos with Episode List")
     episodes = sorted(episodes, key=itemgetter('date'), reverse=False)
+
     updateEpisodes = []
+    new = above
     for episode in episodes:
-        print("---> episode: " + episode["title"] + ":")
-        if getEpisodeNumberFromTitle(episode["title"]) == 0:
-            above+=1
-            episode["episode"] = str(above)
+        if getEpisodeNumberFromId(episode["videoId"], existingEpisodes) == 0:
+            new+=1
+            episode["episode"] = str(new)
         else:
-            episode["episode"] = str(getEpisodeNumberFromTitle(episode["title"]))
+            episode["episode"] = str(getEpisodeNumberFromId(episode["videoId"], existingEpisodes))
+
+        print("---> episode: " + episode["episode"] + " - " + episode["title"] + ":")
 
         if (not episode["date"]) or (episode["episode"] == 0):
             video["draft"] = "true"

@@ -27,7 +27,8 @@ artisanal
 async
 autoscaling
 Aviv
-(back|front)end
+(back|front)end(s)?
+Backend
 [B,b]ackfill
 balancers?
 biome
@@ -39,6 +40,7 @@ codebase
 [C,c]omms
 [C,c]onfig
 cortado
+counterintuitive
 COVID-19
 customizable
 deployable
@@ -57,6 +59,8 @@ fileshare
 FinTech
 firewalling
 frictionless
+Frontend
+geospatial
 getters
 GitOps
 Helming
@@ -72,11 +76,13 @@ Livelessons
 liveness
 Low-fi
 matchings
+Masala
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
 middleware
 [M,m]inibroker
+Mini-Wheats
 namespace
 natively
 no-brainer
@@ -95,6 +101,7 @@ precompiled
 performant
 preload
 prepending
+pre-built
 pre-programmed
 pre-release
 podcaster
@@ -107,6 +114,7 @@ realtime
 [R,r]ebase
 refactorings?
 [R,r]epos?
+replicaset
 revertibility
 [R,r]oadmap
 rollout
@@ -125,9 +133,11 @@ stateful
 [S,s]tandups?
 suboptimal
 symposia
+telecom
 telco
 [T,t]emplat(ed|ing)
 Thunderdome
+Tikka
 timebox
 [T,t]o[D,d]o
 TODOs?
@@ -138,12 +148,15 @@ unpause
 unpushed
 unreleasable
 uptime
+V2
 versioned
 veth-jelly
 walkthrough
 waypoints
 webhooks?
 whiteboard(ed|ing)
+[O,o]makase
+Teppanyaki
 
 # Tech (projects, products, commands)
 2G
@@ -156,12 +169,15 @@ amd64
 AMQP
 ARM64
 AppSec
+AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
+Autowired
 base64(-encoded)?
 Blazor
 [B,b]uildpack(s|'s)?
+buildpackages
 Bundler
 Carvel
 cass-operator
@@ -172,15 +188,20 @@ CloudEvents
 Cloudfoundry
 ClusterIssuer
 CoreCLR
+CORS
 CRD
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 Dataflow
+DATEV('s)?
+Devoops
 [D,d]ebian
 [D,d]ockerfile(s|-built)?
 DockerHub
 donut
+EclipseLink
+ElasticSearch
 [E,e]thernet(s)?
 etcd
 filesystem
@@ -200,9 +221,13 @@ HTTPie
 HyperKit
 init
 InfoQ
+J2EE
 Jaeger
+Jakarta
+JavaEE
 JBatch
 JHipster
+JPA
 Jsonnet
 [K,k](8|9|14)s
 Kaniko
@@ -214,6 +239,8 @@ keychain
 Kibana
 Knative
 kpack(-hosted)?
+kpack
+Kpack
 Krisp
 KubeAcademy
 [K,k]ubeapps
@@ -258,6 +285,7 @@ pullPolicy
 [V,v]irtualenv
 pyenv-installer
 [P,p]ip[X,x]('s)?
+PubSub
 RabbitMQ('s)?
 ReplicaSet(s)?
 Resilience4J
@@ -267,8 +295,10 @@ Rockstar
 rkt
 RSocket(-based)?
 SameSite
+serviceName=backend
 [S,s]kaffold
 Snapchat
+SpringBoot
 spring-petclinic
 SSL
 Stacker
@@ -279,7 +309,9 @@ Tanzu(Developer)?
 Tekton('s)?
 Terraform
 Terraform(-ing)?
+TestContainers
 Trello
+TRS-80
 URL(s)?
 Vaadin
 Velero
@@ -291,8 +323,9 @@ WebFlux
 WebSocket
 [V,v]eth
 ytt
-Zipkin
+[Z,z]ipkin
 Zuul
+
 
 # Companies / Conferences
 Apress
@@ -301,9 +334,12 @@ DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CoreOS
+DevNexus
 DevOpsDaysKC
+Documentum
 DZone
 EMC
+Garmin
 Google('s)
 HashiCorp
 Heptio
@@ -311,12 +347,19 @@ Heroku('s)
 JavaOne
 JetBrains
 Octoverse
+OneMagnify
+Pluralsight
+PMC
 RedMonk('s)?
 SpringOne(2020)?
+UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
+VMworld
+
 
 # Acronyms
+3D
 v3
 APIs?
 brd1
@@ -384,11 +427,13 @@ Beda
 Biville
 Brindley
 Buschmann
+Cao
 Coté
 Clozel
 Czarkowski('s)?
 Desgber
 Dieruf
+Dieu
 Dobrin
 Dolan
 Dubois
@@ -414,19 +459,36 @@ Neumann
 Palo
 Pilimon
 Renfro
+Ruckle
+Sanderson
 Sathe
 Schutta
+Stéphane
 Syer
 Vetter
 Viktor
 Junio
 Hamano
 Maciaszek-Sharma
+Nicoll
 Wilcock('s)?
 DaShaun
 Minella
 Venkat
 Subramaniam
+Pratik
+Pratik's
+Viktor
+Gamov
+Rudd
+Sletten
+Dalia
+Abo
+Sheasha
+m'étonner
+Turnquist
+Violeta
+Georgiva
 
 # Twitter Handles
 anthonyjvetter

@@ -7,7 +7,7 @@ topics:
 tags:
 - Agile
 team:
-- Remote Navigator Team
+- VMware Pivotal Labs
 ---
 
 ## Agreeing on the tool stack
