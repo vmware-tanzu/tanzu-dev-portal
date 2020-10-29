@@ -38,6 +38,7 @@ Bugsville
 cfapps
 codebase
 [C,c]omms
+Composable
 [C,c]onfig
 cortado
 counterintuitive
@@ -50,7 +51,7 @@ DevOps(-related)?
 [E,e]venting
 de
 facto
-
+defacto
 [D,d]ev[R,r]el
 egoless
 Endnotes
@@ -182,8 +183,7 @@ Blazor
 [B,b]uildpack(s|'s)?
 buildpackages
 Bundler
-Carvel 
-Carvel's
+Carvel('s)?
 cass-operator
 cd
 (CF|cf)(-for-k8s)?
