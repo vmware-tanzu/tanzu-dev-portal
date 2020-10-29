@@ -1,7 +1,5 @@
 ---
 title: "What’s New in .NET Core for Containers and Microservices"
-featured: true
-weight: 1
 description: >
     Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads 
 date: 2020-07-22
