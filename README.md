@@ -38,22 +38,14 @@ You may wish to explicitly set `baseURL` to http://localhost:1313/developer in o
 
 ### Run tests locally
 
-> Note: requires Docker
+> Note: requires Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
 
-1. Install [act](https://github.com/nektos/act#installation)
+1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
 2. Run `act pull_request`
 
-### Publish to PWS
-Once you have the site successfully running locally, you may publish it to the staging site running on PWS as follows.
+### Publish to Staging
 
-```
-npm install
-hugo
-cf push
-```
-_Note: You may need to upgrade to latest version of npm._
-
-Alternatively to PWS, PRs and commits are also automatically staged by Netlify.
+After running and testing locally, opened Pull Requests will be automatically staged by Netlify.
 
 ## Contributing Content
 
