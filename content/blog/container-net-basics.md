@@ -1,4 +1,3 @@
-
 ---
 title: "A Container Is a Linux Namespace and Networking Basics"
 featured: false

@@ -1,7 +1,8 @@
 ---
-title:  "Building Python Containers: Getting Started"
+title:  "Python Like A Pro: Building Docker Containers"
 sortTitle: "Python Buildpacks"
 weight: 2
+description: "Package your Python apps into Docker images in no time with Buildpacks."
 topics:
 - Python
 - Containers
@@ -13,7 +14,6 @@ patterns:
 - Deployment
 team:
 - Ben Wilcock
-
 ---
 
 Packaging your application code into Docker containers is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.
@@ -204,7 +204,7 @@ You can stop and remove the container from Docker as follows:
 
 ### Keep Learning
 
-Learn more about buildpacks right here on the Tanzu Developer website with these great guides:
+Learn more about buildpacks right here on the Tanzu Developer Center with these great guides:
 
 - [Buildpacks: What Are They?](/guides/containers/cnb-what-is)
 
@@ -213,6 +213,13 @@ Learn more about buildpacks right here on the Tanzu Developer website with these
 - [Getting Started With Automated Builds Using `kpack`](/guides/containers/cnb-gs-kpack)
 
 Find out more about what the `pack` tool can do by using the `--help` command and browsing the [Buildpacks.io][bp-website] website. 
+
+If you liked this guide, you might find these others in our 'Python Like A Pro' series useful:
+
+- [Install Python Like A Pro!][gs-pyenv]
+- [Managing Python Project Dependencies Like A Pro!][gs-pyenv-venv]
+- [Managing Python Global Packages Like A Pro][gs-pipx]
+- [Run Python In Production Like A Pro!][gs-cf]
 
 And if you'd prefer to see the buildpack in action without actually following the steps above, check out the accompanying YouTube video guide:
 
@@ -226,3 +233,9 @@ And if you'd prefer to see the buildpack in action without actually following th
 [google-buildpacks]: https://github.com/GoogleCloudPlatform/buildpacks
 [httpie]: https://httpie.org/
 [bp-github]: https://github.com/buildpacks
+
+[gs-pyenv]: /guides/python/gs-python-like-a-pro
+[gs-pyenv-venv]: /guides/python/gs-managing-python-packages
+[gs-pipx]: /guides/python/gs-python-installing-global-packages
+[gs-cnb]: /guides/python/cnb-gs-python
+[gs-cf]: /guides/python/cf-gs
