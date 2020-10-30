@@ -1,4 +1,8 @@
-{{ if eq (getenv "HUGO_ENV") "production" }}
+
+<!-- Initialize GTM data layer -->
+<script>
+  dataLayer = [];
+</script>
 <!-- Google Tag Manager -->
 <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -7,7 +11,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PMT66RC');
 </script>
-{{ end }}
 
 {{ $jsHead := resources.Get "js/head.js" | resources.ExecuteAsTemplate "js/head.js" . }}
 {{ if .Site.IsServer }}

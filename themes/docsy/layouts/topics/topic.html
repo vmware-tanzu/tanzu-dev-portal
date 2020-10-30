@@ -5,6 +5,7 @@
   </head>
   <body class="td-{{ .Kind }} td-topic">
     {{ partial "required-gtm-no-script.html" . }}
+    {{ partial "amplitude.html" (dict "context" . "event" "topic viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>

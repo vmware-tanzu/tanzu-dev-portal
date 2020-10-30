@@ -3,8 +3,9 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} td-topic">
+  <body class="td-{{ .Kind }} td-topic pattern">
     {{ partial "required-gtm-no-script.html" . }}
+    {{ partial "amplitude.html" (dict "context" . "event" "pattern viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>
