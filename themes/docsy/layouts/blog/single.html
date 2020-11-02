@@ -1,6 +1,6 @@
 {{ define "main" }}
-
-<div class="td-main ">
+{{ partial "amplitude.html" (dict "context" . "event" "blog post viewed") }}
+<div class="td-main blog">
 	<div class="mt-lg-5 mt-md-5 mt-4 pt-lg-5 pt-md-5 pb-2">
 		<div class='container pt-2'>
 			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}

@@ -29,6 +29,7 @@
 									'eventAction': 'Form Submitted', 
 									'eventLabel': 'Newsletter'
 							});
+							sendAmplitudeEventOnLoad('newsletter subscribed', {'page name': '{{ .Title }}', 'source': 'community', 'url path': window.location.pathname});
 	            $('.confirmation').show();
 	            return false;
 	          });
