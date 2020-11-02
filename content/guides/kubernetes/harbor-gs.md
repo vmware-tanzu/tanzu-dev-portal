@@ -1,5 +1,5 @@
 ---
-title:  "Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt"
+title:  "Harbor: Installing on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt"
 sortTitle: "Harbor"
 weight: 2
 topics:
@@ -12,8 +12,6 @@ patterns:
 team:
 - Tony Vetter
 ---
-
-# Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt
 
 Running a private container image registry has been a staple in many enterprise environments for years. These registries allow full control over access, updates, and the software platform itself. And while your organization may have an official image registry, having your own can also be a benefit!
 
