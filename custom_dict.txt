@@ -54,8 +54,10 @@ facto
 defacto
 [D,d]ev[R,r]el
 egoless
+[E,e]nablement
 Endnotes
 expensed
+expirations
 failover
 favourite(s)?
 fiancé
@@ -75,6 +77,7 @@ InfoSec
 [I,i]nterservice
 Kanban
 kitesurfing
+letsencrypt-staging
 lifecycle
 Livelessons
 liveness
@@ -147,6 +150,7 @@ timebox
 TODOs?
 toolchain
 tooltip
+UI-based
 unencrypted
 unpause
 unpushed
@@ -179,6 +183,7 @@ Astra
 auth
 Autowired
 base64(-encoded)?
+Bitnami('s)?
 Blazor
 [B,b]uildpack(s|'s)?
 buildpackages
@@ -213,6 +218,7 @@ filesystem
 Finchley
 Flake8
 formatter
+[G,g]mail
 [G,g]ithub
 [G,g]olang
 Gradle
@@ -231,6 +237,7 @@ Jaeger
 Jakarta
 JavaEE
 JBatch
+Jetstack
 JHipster
 JPA
 Jsonnet
@@ -369,6 +376,7 @@ v3
 APIs?
 brd1
 CLI
+CNCF
 CNI
 CQL
 DAO
@@ -442,6 +450,7 @@ Dieu
 Dobrin
 Dolan
 Dubois
+Fewell
 Florent
 freddygthatsme
 Galystan

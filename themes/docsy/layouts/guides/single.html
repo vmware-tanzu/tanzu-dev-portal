@@ -4,6 +4,7 @@
   </head>
   <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} guide" data-section="{{ .Parent.Params.title | lower }}">
     {{ partial "required-gtm-no-script.html" . }}
+    {{ partial "amplitude.html" (dict "context" . "event" "guide viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>
