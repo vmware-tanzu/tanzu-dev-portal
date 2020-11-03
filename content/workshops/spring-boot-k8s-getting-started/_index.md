@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Getting Started with Spring Boot on Kubernetes"
 description: >
   Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
