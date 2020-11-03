@@ -2,7 +2,7 @@
 title: Workshops
 linkTitle: Workshops
 description: >
-    Get Hands on with Tanzu Workshops
+    Get hands-on with self-paced workshops.
 menu:
     main:
         parent: "sections"
