@@ -20,7 +20,7 @@ team:
 - Ivan Tarin
 ---
 
-SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). 
+SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). _UPDATE: These workshops are available to [try out now](../../workshops)!_
 
 
 ![SpringOne 2020 Workshops and Training](/images/blogs/springone2020-workshops/workshops-and-training.png "SpringOne2020")
@@ -43,7 +43,7 @@ A total of 10 self-paced workshops covering a range of open source technology—
 *   Tekton Fundamentals
 
 
-Each of these workshops has an environment prepared and ready,** **which is quite refreshing when you are accustomed to spending 15-30 minutes setting up to follow a tutorial. The workshop environment is also native to the technology being used. For example, you can interact with actual Kubernetes clusters in a Kubernetes workshop or work in a real Java 11 environment in Spring workshops. Finally, all the tools you need are built into the workshop, such as an IDE or Kubernetes tools like Octant to name a few.
+Each of these workshops has an environment prepared and ready, which is quite refreshing when you are accustomed to spending 15-30 minutes setting up to follow a tutorial. The workshop environment is also native to the technology being used. For example, you can interact with actual Kubernetes clusters in a Kubernetes workshop or work in a real Java 11 environment in Spring workshops. Finally, all the tools you need are built into the workshop, such as an IDE or Kubernetes tools like Octant to name a few.
 
 In this screenshot from Getting Started with Spring Boot on Kubernetes, you can see the code editor utilized in it and some of the other workshops.
 
@@ -123,5 +123,6 @@ Not only are you getting the workshops from SpringOne 2020, but more workshops a
 
 ![SpringOne2020 workshops end](/images/blogs/springone2020-workshops/overview.png "SpringOne2020 workshops end")
 
-
 To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer Newsletter.](https://tanzu.vmware.com/developer/community/) 
+
+_UPDATE: These workshops are available to [try out now](../../workshops)!_
