@@ -121,6 +121,7 @@ replicaset
 revertibility
 [R,r]oadmap
 rollout
+rom-com
 runtimes?
 runnable
 SaaS-based
