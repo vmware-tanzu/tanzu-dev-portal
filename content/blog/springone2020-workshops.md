@@ -20,7 +20,7 @@ team:
 - Ivan Tarin
 ---
 
-SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). _UPDATE: These workshops are available to [try out now](../../workshops)!_
+SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). _UPDATE: These workshops are available to [try out now](/workshops)!_
 
 
 ![SpringOne 2020 Workshops and Training](/images/blogs/springone2020-workshops/workshops-and-training.png "SpringOne2020")
@@ -125,4 +125,4 @@ Not only are you getting the workshops from SpringOne 2020, but more workshops a
 
 To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer Newsletter.](https://tanzu.vmware.com/developer/community/) 
 
-_UPDATE: These workshops are available to [try out now](../../workshops)!_
+_UPDATE: These workshops are available to [try out now](/workshops)!_
