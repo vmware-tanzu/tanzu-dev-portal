@@ -6,7 +6,6 @@ summary:
   - An introduction to Octant, a Graphical UI to your Kubernetes clusters.
 type: workshop
 topics:
-  - Octant
   - Kubernetes
 tags:
   - Octant

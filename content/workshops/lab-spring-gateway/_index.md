@@ -7,12 +7,10 @@ summary:
 type: workshop
 topics:
   - Spring
-  - Spring Cloued Gateway
   - Microservices
-  - Spring Boot
 tags:
   - Spring
-  - Spring Cloued Gateway
+  - Spring Cloud Gateway
   - Microservices
   - Spring Boot
 length: 15-30

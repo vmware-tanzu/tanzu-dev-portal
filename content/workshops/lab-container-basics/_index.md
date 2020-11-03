@@ -7,7 +7,6 @@ summary:
 type: workshop
 topics:
   - Containers
-  - Docker
 tags:
   - Containers
   - Docker

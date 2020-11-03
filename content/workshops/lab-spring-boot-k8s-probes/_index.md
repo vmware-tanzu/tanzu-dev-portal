@@ -9,7 +9,6 @@ topics:
   - Spring
   - Microservices
   - Kubernetes
-  - Probes
 tags:
   - Spring
   - Microservices

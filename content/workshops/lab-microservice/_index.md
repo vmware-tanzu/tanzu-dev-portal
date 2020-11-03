@@ -8,7 +8,6 @@ type: workshop
 topics:
   - Spring
   - Microservices
-  - Spring Boot
 tags:
   - Spring
   - Microservices

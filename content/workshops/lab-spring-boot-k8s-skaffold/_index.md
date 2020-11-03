@@ -9,7 +9,6 @@ topics:
   - Spring
   - Microservices
   - Kubernetes
-  - Skaffold
 tags:
   - Spring
   - Microservices

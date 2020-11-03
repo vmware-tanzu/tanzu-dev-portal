@@ -6,9 +6,7 @@ summary:
   - Introducing Carvel, Simple and Composable Tools for Application Deployment.
 type: workshop
 topics:
-  - Carvel
   - Kubernetes
-  - Development
 tags:
   - Carvel
   - Kubernetes
