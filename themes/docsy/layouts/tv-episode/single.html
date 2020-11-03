@@ -20,7 +20,7 @@
   {{ $.Scratch.Set "streamName" "on YouTube" }}
 {{ end }}
 <div class='container'>
-  <div id="twitch" class="row justify-content-center mt-5 pt-3">
+  <div id="live" class="row justify-content-center mt-5 pt-3">
     <div class="col-lg-5 col-12 mb-5 pl-0">
       <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
       <div>
@@ -36,12 +36,12 @@
     </div>
   </div>
   <!-- ELSE IF PREVIOUS -->
-  <div id="youtube" class="row justify-content-center mt-5">
+  <div id="vod" class="row justify-content-center mt-5">
     <div class="col-lg-9 col-12 px-0">
       <h2 class="mb-4"> {{- .Title -}}</h2>
       {{ if .Params.youtube }}
       <div class="youtube-video-shortcode">
-        <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" frameborder="0" allowfullscreen></iframe>
+        <iframe id="episode-embed" src="https://www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
       </div>
       {{ else }}
       <div>
@@ -54,20 +54,24 @@
   <!-- END -->
 
   <script type="text/javascript">
-    var twitch = document.getElementById("twitch");
-    var youtube = document.getElementById("youtube");
+    var live = document.getElementById("live");
+    var vod = document.getElementById("vod");
+    var episodeType = "";
     var currentTime = Date.now();
     var episodeTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
     if (episodeTime < currentTime) {
-      twitch.style.display = "none";
-      youtube.style.display = "flex";
+      live.style.display = "none";
+      vod.style.display = "flex";
+      episodeType = "vod";
     }
     else {
-      twitch.style.display = "flex";
-      youtube.style.display = "none";
+      live.style.display = "flex";
+      vod.style.display = "none";
+      episodeType = "live";
     }
-
   </script>
+
+  {{ partial "amplitude.html" (dict "context" . "event" "episode viewed") }}
 
   <div class="row justify-content-center mb-5">
     <div class="col-lg-9 col-12 px-0 mt-5">
@@ -107,5 +111,7 @@
   {{ end }}
 
 </div>
+
+{{ partial "amplitude.html" (dict "context" . "event" "episode played") }}
 
 {{ end }}

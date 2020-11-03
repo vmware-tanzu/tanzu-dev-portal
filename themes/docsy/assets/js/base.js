@@ -205,5 +205,98 @@ limitations under the License.
         });
     });
 
+    // Amplitude Events
+    $(function() {
+   
+        // Track topic clicks - menu vs. explore section
+        $(".topic a").click(function(){
+            var topicName = this.innerHTML.substring(this.innerHTML.indexOf(">")+2).toLowerCase();
+            sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'explore', 'url path': window.location.pathname});
+        });
+
+        $("a.dropdown-item[href*='/topic']").click(function(){
+            var topicName = this.innerHTML.toLowerCase();
+            sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'menu', 'url path': window.location.pathname});
+        });
+
+        // Track sample clicks - code download vs visit repo
+        $("#sample-gh").click(function(){
+            var sampleName = this.title;
+            sendAmplitudeEvent('sample github clicked', {'sample name': sampleName, 'url path': window.location.pathname});
+        });
+        $("#sample-zip").click(function(){
+            var sampleName = this.title;
+            sendAmplitudeEvent('sample download clicked', {'sample name': sampleName, 'url path': window.location.pathname});
+        });
+
+        // Link Clicks (Guides, Tanzu.TV, Blog, Patterns, Videos)
+        $("body.guide a, body.guides a, body.tanzu-tv a, body.tv-show a, body.tv-episode a, body.blog a, body.pattern a, a.youtube-container").click(function(){
+            sendAmplitudeEvent('link clicked', {'link title': this.innerHTML, 'link url': this.href, 'url path': window.location.pathname});
+        });
+
+        // Track scroll depth on guides and blogs
+        var scrollDepthCurrent = -1;
+        $(window).scroll(function() {
+            if ($('body.guide').length > 0 || $('div.blog').length > 0) {
+                var totalScrollHeight = document.querySelector("body").scrollHeight-window.innerHeight;
+                var percentScrolled = window.scrollY / totalScrollHeight;
+                var scrollDepth;
+                if (percentScrolled < .25)
+                    scrollDepth = 0;
+                else if (percentScrolled >=.25 && percentScrolled < .5)
+                    scrollDepth = .25;
+                else if (percentScrolled >=.5 && percentScrolled < .75)
+                    scrollDepth = .5;
+                else if (percentScrolled >=.75 && percentScrolled < 1)
+                    scrollDepth = .75;
+                else if (percentScrolled == 1)
+                    scrollDepth = 1;
+
+                if (scrollDepthCurrent < scrollDepth) {
+                    scrollDepthCurrent = scrollDepth;
+                    var pageTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                    var pageCategory;
+                    if ($('body.guide').length > 0)
+                        pageCategory = "guide";
+                    else if ($('div.blog').length > 0)
+                        pageCategory = "blog";
+                        sendAmplitudeEvent('page scrolled', {'scroll depth': scrollDepth*100, 'page title': pageTitle, 'page category': pageCategory, 'url path': window.location.pathname});
+                    //console.log(scrollDepth);
+                }
+            }
+        });
+
+        // Track how far into VOD TV episode before leaving
+        var percentageCompletedCurrent = -1;
+        $(window).on("unload", function(){
+            if ($('body.tv-episode').length > 0) {
+
+                var pageTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                var elapsedPercentage = player.getCurrentTime()/player.getDuration();
+                var percentageCompleted;
+                if (elapsedPercentage < .25)
+                    percentageCompleted = 0;
+                else if (elapsedPercentage >=.25 && elapsedPercentage < .5)
+                    percentageCompleted = .25;
+                else if (elapsedPercentage >=.5 && elapsedPercentage < .75)
+                    percentageCompleted = .5;
+                else if (elapsedPercentage >=.75 && elapsedPercentage < 1)
+                    percentageCompleted = .75;
+                else if (elapsedPercentage == 1)
+                    percentageCompleted = 1;
+
+                if (percentageCompletedCurrent < percentageCompleted) {
+                    percentageCompletedCurrent = percentageCompleted;
+                    var showTitle = $('h1').innerHTML;
+                    var episodeTitle = document.title.substring(0,document.title.indexOf("|")-1);
+                    var episodeType = "vod";
+                    sendAmplitudeEvent('episode session ended', {'percentage complete': percentageCompleted*100, 'show title': showTitle, 'episode title': episodeTitle, 'episode type': episodeType, 'url path': window.location.pathname});
+                    //console.log(percentageCompleted);
+                }
+                //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
+            }
+        });
+
+    });
 
 }(jQuery));
