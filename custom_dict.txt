@@ -402,6 +402,8 @@ KMS
 LDAP
 LTS
 MDN
+MTTD
+MTTR
 MVB(-awarded)?
 MVC
 ok
