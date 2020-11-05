@@ -38,15 +38,19 @@ Bugsville
 cfapps
 codebase
 [C,c]omms
+Composable
 [C,c]onfig
 cortado
 counterintuitive
 COVID-19
 customizable
 deployable
+developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
 [E,e]venting
+de
+facto
 defacto
 [D,d]ev[R,r]el
 egoless
@@ -121,6 +125,7 @@ replicaset
 revertibility
 [R,r]oadmap
 rollout
+rom-com
 runtimes?
 runnable
 SaaS-based
@@ -184,7 +189,7 @@ Blazor
 [B,b]uildpack(s|'s)?
 buildpackages
 Bundler
-Carvel
+Carvel('s)?
 cass-operator
 cd
 (CF|cf)(-for-k8s)?
@@ -194,7 +199,8 @@ Cloudfoundry
 ClusterIssuer
 CoreCLR
 CORS
-CRD
+CRD 
+CRDs
 ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties

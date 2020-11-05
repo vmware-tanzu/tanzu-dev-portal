@@ -37,6 +37,7 @@ var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
 changeTheme(savedTheme);
 function changeTheme(mode) {
     if (mode === "light") {
+      var iframe = document.getElementById('auth-iframe');
       var head = document.head;
       var link = document.createElement("link");
 
@@ -46,7 +47,9 @@ function changeTheme(mode) {
       link.id = "light-theme"
 
       head.prepend(link);
-      
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage('light', '*');
+      }
       document.documentElement.classList.add('light-mode')
     } 
 }

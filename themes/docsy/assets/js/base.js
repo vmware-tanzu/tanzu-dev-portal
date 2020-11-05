@@ -61,20 +61,25 @@ limitations under the License.
 
         //Light/dark toggle
         $('#toggle-light-dark-mode').click(function(){
+            var iframe = document.getElementById('auth-iframe');
             if ($('html').hasClass('light-mode')) {
                 $('html').removeClass('light-mode');
                 document.getElementById("light-theme").remove();
                 localStorage.setItem("light-dark-mode-storage", "dark");
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage('dark', '*');
+                  }
             } else {
                 $('html').addClass('light-mode');
                 changeTheme("light");
                 localStorage.setItem("light-dark-mode-storage", "light");
+                  }
             }
-        });
+        );
 
         //Open external links/rss in new tab, tvc links in same tab
         $("a[href^='http']").attr('target', '_blank');
-        $("a[href*='tanzu.vmware.com/developer']").attr('target', '_self');
+        $("a[href^='https://tanzu.vmware.com/developer']").attr('target', '_self');
         $("a[href*='rss']").attr('target', '_blank');
 
 
@@ -91,9 +96,8 @@ limitations under the License.
               'autoSize'  : false,
               fitToView   : true
             });
-
-          return false;
-        });
+            return false;
+            });
 
         //Copy videos index iframe embed URLs to parent for lightbox
         $(".youtube-container").each(function(){

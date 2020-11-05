@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<div class="td-main ">
+	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+		<div class='container'>
+			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<h1>{{ .Title }}</h1>
+			<p>{{ .Description }}</p>
+			<p>Approximate time: {{ .Params.length }} minutes</p>
+			<div class="short-gradient-line mb-4"></div>
+			<!-- {{ .Params.tags }} -->
+			<iframe id="auth-iframe" width="100%" height="75" style="border:none;position:relative;" scrolling="no" src="https://workshop-auth.esp.vmware.com/workshop/tanzu_devportal/{{ .Params.lab }}">
+			</iframe>	
+				<script type="text/javascript">
+					var iframe = document.getElementById('auth-iframe')
+					iframe.src = iframe.src + "?url=" + window.location.href 
+					iframe.onload = function() {
+					var mode = localStorage.getItem("light-dark-mode-storage") || "dark";
+					if (mode === "light") {
+							iframe.contentWindow.postMessage('light', '*');
+					}
+					}
+				</script>
+		</div>
+	</div>
+	<div class="container py-5">
+			{{ with $img := .Params.logo }}
+		<img src={{ $img | safeURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+		{{end}}
+		<div class="github-imported-sample">
+				{{ .Content }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}
