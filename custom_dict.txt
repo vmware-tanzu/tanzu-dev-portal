@@ -375,6 +375,7 @@ VMworld
 3D
 v3
 APIs?
+APM
 brd1
 CLI
 CNCF
@@ -402,6 +403,8 @@ KMS
 LDAP
 LTS
 MDN
+MTTD
+MTTR
 MVB(-awarded)?
 MVC
 ok
