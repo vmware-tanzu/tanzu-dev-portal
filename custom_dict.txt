@@ -44,6 +44,7 @@ cortado
 counterintuitive
 COVID-19
 customizable
+[D,d]e-referenced
 deployable
 developer-centric
 DevOps(-related)?
@@ -102,7 +103,9 @@ org(s)?
 overcomplicate
 overengineer(ing)?
 pb&jelly
+parallelizing
 passcode|PASSCODE
+Petstore
 pickab(le|ility)?
 precompiled
 performant
@@ -177,6 +180,7 @@ Alpine(-based)?
 amd64
 AMQP
 ARM64
+ApiResponse
 AppSec
 AppServer
 [A,a]rgo(CD|cd)(-k8s)?
@@ -242,6 +246,7 @@ Jetstack
 JHipster
 JPA
 Jsonnet
+JSON-to-Java
 [K,k](8|9|14)s
 Kaniko
 kapp
@@ -281,6 +286,8 @@ NGINX
 NoSQL
 OAuth2?
 Octant
+OpenAPI
+OpenAPITools
 OpenFeign
 OpenID
 OpenSSL
@@ -308,6 +315,7 @@ Rockstar
 rkt
 RSocket(-based)?
 SameSite
+Semver
 serviceName=backend
 [S,s]kaffold
 Snapchat
@@ -318,6 +326,7 @@ Stacker
 Steeltoe
 STDOUT
 sudo
+swagger-cli
 Tanzu(Developer)?
 Tekton('s)?
 Terraform
