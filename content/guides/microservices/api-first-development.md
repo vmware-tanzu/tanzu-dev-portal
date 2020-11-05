@@ -343,13 +343,13 @@ npm install -g @apidevtools/swagger-cli
 
 # Our example
 # Start file: apifirst_openapi.yaml
-# De-referenced files: order.yaml and response.yaml
+# Dereferenced files: order.yaml and response.yaml
 > swagger-cli bundle -o apifirst_openapi_bundled.yaml -t yaml apifirst_openapi.yaml
 > swagger-cli validate apifirst_openapi_bundled.yaml 
 
 ```
 
-The bundled file is available [here](/images/guides/microservices/api-first/apifirst_openapi_bundled.yaml) and you can observe the de-referenced component objects, for example ApiResponse:
+The bundled file is available [here](/images/guides/microservices/api-first/apifirst_openapi_bundled.yaml) and you can observe the dereferenced component objects, for example ApiResponse:
 ```yaml
    ApiResponse:
       properties:
@@ -424,13 +424,13 @@ To generate client-side artifacts, for example in Java, you can use the paramete
 https://github.com/OpenAPITools/openapi-generator/blob/master/docs/generators/java.md
 ```
 
-The API generator automatically generates a user-friendly webpage (Swagger UI), which you can leverage right away after starting the Spring Boot application. 
+The API generator automatically generates a user-friendly web page (Swagger UI), which you can leverage right away after starting the Spring Boot application. 
 
 ![Swagger UI](/images/guides/microservices/api-first/api-first-swaggerui1.png)
 
 This allows for quick execution of the API -- the web-form allows for data to be entered directly and for the API to be tested quickly by any user without special tools or technology skill sets.
 
-![Swagger UI TryIt](/images/guides/microservices/api-first/api-first-swaggerui2.png)
+![Swagger UI Try It](/images/guides/microservices/api-first/api-first-swaggerui2.png)
 
 ## Step 6: Implement Business Logic
 

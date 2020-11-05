@@ -102,7 +102,9 @@ org(s)?
 overcomplicate
 overengineer(ing)?
 pb&jelly
+parallelizing
 passcode|PASSCODE
+Petstore
 pickab(le|ility)?
 precompiled
 performant
@@ -177,6 +179,7 @@ Alpine(-based)?
 amd64
 AMQP
 ARM64
+ApiResponse
 AppSec
 AppServer
 [A,a]rgo(CD|cd)(-k8s)?
@@ -281,6 +284,8 @@ NGINX
 NoSQL
 OAuth2?
 Octant
+OpenAPI
+OpenAPITools
 OpenFeign
 OpenID
 OpenSSL
@@ -308,6 +313,7 @@ Rockstar
 rkt
 RSocket(-based)?
 SameSite
+Semver
 serviceName=backend
 [S,s]kaffold
 Snapchat
@@ -318,6 +324,7 @@ Stacker
 Steeltoe
 STDOUT
 sudo
+swagger-cli
 Tanzu(Developer)?
 Tekton('s)?
 Terraform
