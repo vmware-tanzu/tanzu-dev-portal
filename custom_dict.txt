@@ -44,6 +44,7 @@ cortado
 counterintuitive
 COVID-19
 customizable
+[D,d]e-referenced
 deployable
 developer-centric
 DevOps(-related)?
@@ -245,6 +246,7 @@ Jetstack
 JHipster
 JPA
 Jsonnet
+JSON-to-Java
 [K,k](8|9|14)s
 Kaniko
 kapp

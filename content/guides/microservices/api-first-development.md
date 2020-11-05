@@ -217,7 +217,7 @@ The path parameters define the shape of the API via URIs. Each URI definition ha
 
 * **post**, **put**, **get**, etc - Definition of the respective operation in this path, what the API expects
 * **summary**, **description** - A short summary and description of what the operation does and its behavior
-* **operationId** - Uniques string to identify the operation
+* **operationId** - Unique string to identify the operation
 * **tags** - Tags used for logical grouping of operations by resources or other qualifiers
 * **security** - Contains a declaration of which security mechanisms can be used for this operation
 * **requestBody** - The request body applicable for this operation, supported only in HTTP methods
@@ -343,13 +343,13 @@ npm install -g @apidevtools/swagger-cli
 
 # Our example
 # Start file: apifirst_openapi.yaml
-# Dereferenced files: order.yaml and response.yaml
+# De-referenced files: order.yaml and response.yaml
 > swagger-cli bundle -o apifirst_openapi_bundled.yaml -t yaml apifirst_openapi.yaml
 > swagger-cli validate apifirst_openapi_bundled.yaml 
 
 ```
 
-The bundled file is available [here](/images/guides/microservices/api-first/apifirst_openapi_bundled.yaml) and you can observe the dereferenced component objects, for example ApiResponse:
+The bundled file is available [here](/images/guides/microservices/api-first/apifirst_openapi_bundled.yaml) and you can observe the de-referenced component objects, for example ApiResponse:
 ```yaml
    ApiResponse:
       properties:
@@ -383,7 +383,7 @@ This allows the decoupling of teams working on code generation and implementatio
 ## Step 5: Generate Client/Server Scaffolding for Spring Boot
 
 To jump-start the API development process, a command-line tool can be used to generate artifacts for both the client and server side. This guide demonstrates the process for Spring Boot as an example:
-* server-side - project scaffolding, including Spring Boot artifacts for controller, model and api, as well as configuration and the Maven POM file
+* server-side - project scaffolding, including Spring Boot artifacts for controller, model and API, as well as configuration and the Maven POM file
 * client-side - model to be used by the client, in their language of choice
 
 The example below uses the [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator) from [OpenAPITools](https://openapitools.org/).
