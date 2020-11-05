@@ -12,14 +12,12 @@
   command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.69.2"
   TZ='America/Los_Angeles'
 
 [context.branch-deploy]
   command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.69.2"
   TZ='America/Los_Angeles'
 
 [[redirects]]
