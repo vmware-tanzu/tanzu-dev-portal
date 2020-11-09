@@ -1,0 +1,5 @@
+name: link-check
+description: tests hyperlinks
+runs:
+  using: "docker"
+  image: "Dockerfile"

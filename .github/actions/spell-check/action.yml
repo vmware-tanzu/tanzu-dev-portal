@@ -1,0 +1,5 @@
+name: spell-check
+description: tests spelling
+runs:
+  using: "docker"
+  image: "Dockerfile"
