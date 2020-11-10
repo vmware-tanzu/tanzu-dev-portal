@@ -429,6 +429,7 @@ OSS
 OWASP
 POJP
 RBAC(-enabled)?
+ROI
 [s,S]3
 [S,J]DK
 SRE
@@ -452,11 +453,13 @@ Asiedu-Ampem
 Beda
 Biville
 Brindley
+Brodi
 Buschmann
 Cao
 Coté
 Clozel
 Czarkowski('s)?
+Damasceno
 Desgber
 Dieruf
 Dieu
@@ -466,10 +469,13 @@ Dubois
 Fewell
 Florent
 freddygthatsme
+Gabriella
+Gabry
 Galystan
 Gereon
 Gerhard('s)?
 Gibb
+Glênio
 Hayk
 Herbrich
 Iberkleid
