@@ -10,7 +10,7 @@
             {{ end }}
         {{ end }}
 
-        {{ if ($.Scratch.Get "upcoming") true }}
+        {{ if eq ($.Scratch.Get "upcoming") true }}
             {{ if .Params.streaming }}
                 <div class="col px-0">
                     <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
@@ -58,7 +58,7 @@
         {{ end }}
 
         {{ $noUpcoming := false }}
-        {{ if (or (($.Scratch.Get "upcoming") true) .Params.streaming) }}
+        {{ if (or (eq ($.Scratch.Get "upcoming") true) .Params.streaming) }}
             {{ $noUpcoming := true }}
         {{ end }}
 
