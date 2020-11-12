@@ -9,7 +9,13 @@
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
-			<iframe id="auth-iframe" width="100%" height="75" style="border:none;position:relative;" scrolling="no" src="https://workshop-auth.esp.vmware.com/workshop/tanzu_devportal/{{ .Params.lab }}">
+			{{ $workshops_url := "" }}
+			{{ if eq (getenv "HUGO_ENV") "production" }}
+				{{ $.Scratch.Set "workshops_url" .Site.Params.workshops_url_prod }} 
+			{{ else }}
+				{{ $.Scratch.Set "workshops_url" .Site.Params.workshops_url_staging }}
+			{{ end }}
+			<iframe id="auth-iframe" width="100%" height="75" style="border:none;position:relative;" scrolling="no" src='{{ $.Scratch.Get "workshops_url" }}{{ .Params.lab }}'>
 			</iframe>	
 				<script type="text/javascript">
 					var iframe = document.getElementById('auth-iframe')
@@ -23,6 +29,9 @@
 				</script>
 		</div>
 	</div>
+
+	{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
+
 	<div class="container py-5">
 			{{ with $img := .Params.logo }}
 		<img src={{ $img | safeURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>

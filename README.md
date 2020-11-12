@@ -36,17 +36,16 @@ You may wish to explicitly set `baseURL` to http://localhost:1313/developer in o
 
 `hugo server -b http://localhost:1313/developer`
 
-### Publish to PWS
-Once you have the site successfully running locally, you may publish it to the staging site running on PWS as follows.
+### Run tests locally
 
-```
-npm install
-hugo
-cf push
-```
-_Note: You may need to upgrade to latest version of npm._
+> Note: requires Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
 
-Alternatively to PWS, PRs and commits are also automatically staged by Netlify.
+1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
+2. Run `act pull_request`
+
+### Publish to Staging
+
+After running and testing locally, opened Pull Requests will be automatically staged by Netlify.
 
 ## Contributing Content
 
@@ -127,5 +126,5 @@ Hugo allows the use of [shortcodes](https://gohugo.io/content-management/shortco
 
 ### Markdown Tricks
 
-- For an &ndash; (--) use two hyphens in a row 
-- For an &mdash; (---) use three hyphens in a row 
+- For an &ndash; (--) use two hyphens in a row
+- For an &mdash; (---) use three hyphens in a row
