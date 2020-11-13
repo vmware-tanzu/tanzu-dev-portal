@@ -71,6 +71,7 @@ geospatial
 getters
 GitOps
 Helming
+hermeticism
 hostname
 ideate
 InfoSec
@@ -154,6 +155,7 @@ timebox
 [T,t]o[D,d]o
 TODOs?
 toolchain
+toolkits
 tooltip
 UI-based
 unencrypted
