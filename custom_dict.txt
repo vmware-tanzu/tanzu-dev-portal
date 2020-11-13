@@ -178,6 +178,7 @@ PropertySources
 Activiti
 adoptopenjdk
 Alpine(-based)?
+Ansible
 amd64
 AMQP
 ARM64
@@ -202,9 +203,10 @@ classpath
 CloudEvents
 Cloudfoundry
 ClusterIssuer
+Clojure
 CoreCLR
 CORS
-CRD 
+CRD
 CRDs
 ConfigMap(s)?
 ConfigurationMap(s)?
@@ -296,6 +298,7 @@ OpenFeign
 OpenID
 OpenSSL
 Paketo
+Packer
 Procfile
 [P,p]rometheus
 PropertySources
@@ -493,6 +496,7 @@ Florent
 freddygthatsme
 Fu
 Gabbi
+Gandhi
 Gabriella
 Gabry
 Galystan
@@ -501,6 +505,7 @@ Gereon
 Gerhard('s)?
 Gibb
 Glênio
+Grygleski
 Hayk
 Herbrich
 Hockin
@@ -554,6 +559,7 @@ Pratik
 Pratik's
 Viktor
 Gamov
+Raju
 Renner
 Rudd
 Sletten
