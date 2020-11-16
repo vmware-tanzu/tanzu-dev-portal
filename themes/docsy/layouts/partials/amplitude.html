@@ -62,7 +62,7 @@
                 //console.log("ended");
             } else if (playerStatus == 1) {
                 if (!played) {
-                    sendAmplitudeEvent('episode played', {'show name': '{{ .Parent.Title }}', 'episode title': '{{ .Title }}', 'episode number': '{{ .Params.episode }}', 'episode view type': episodeType });
+                    sendAmplitudeEvent('episode played', {'show name': '{{ .context.Parent.Title }}', 'episode title': '{{ .context.Title }}', 'episode number': '{{ .context.Params.episode }}', 'episode view type': episodeType });
                 }
                 played = true;
                 //console.log("playing");
