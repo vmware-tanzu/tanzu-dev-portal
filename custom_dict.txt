@@ -264,6 +264,7 @@ kpack(-hosted)?
 kpack
 Kpack
 Krisp
+ksqlDB
 KubeAcademy
 [K,k]ubeapps
 kubectl
@@ -434,6 +435,7 @@ ok
 POJO(s)?
 pb('s)?
 IIS
+JAAS
 NFJS
 NSX
 OCI(-compliant)?
