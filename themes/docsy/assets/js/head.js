@@ -71,3 +71,9 @@ function sendAmplitudeEvent(eventType, eventProperties) {
   Object.assign(eventProperties, removeProps);
   dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
 }
+function sendAmplitudeUserPropsOnLoad(userProperties) {
+  $(window).on('load', function(e){dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});});
+}
+function sendAmplitudeUserProps(userProperties) {
+  dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});
+}
