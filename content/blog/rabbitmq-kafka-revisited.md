@@ -46,7 +46,7 @@ A similar thing can be accomplished with RabbitMQ with the help of some other pi
 
 ## Security and Operations
 
-As noted in the initial post, RabbitMQ ships with a useful administration interface to manage users and queues, while Kafka relies on TLS and JAAS. Whether you choose RabbitMQ or Kafka will of course depend on your specific requirements and your use case, but most security scenarios can have a proper conclusion with either technology. 
+As noted in the initial post, RabbitMQ ships with a useful administration interface to manage users and queues, while Kafka relies on [TLS](https://www.rabbitmq.com/ssl.html) and [JAAS](https://www.rabbitmq.com/access-control.html). Whether you choose RabbitMQ or Kafka will of course depend on your specific requirements and your use case, but most security scenarios can have a proper conclusion with either technology. 
 
 It’s important to note the rise of Kubernetes over the last few years and how it affects the operations of services. Substantial work has been done to allow infrastructure operators to run both RabbitMQ and Kafka on Kubernetes. The [RabbitMQ operator](https://www.rabbitmq.com/kubernetes/operator/operator-overview.html) and [Kafka Helm chart](https://bitnami.com/stack/kafka/helm) both have very fine control over how these services are configured as well as how to run them on Kubernetes specifically. This makes it extremely easy to get up and running with both of them configured and clustered out of the box.
 
