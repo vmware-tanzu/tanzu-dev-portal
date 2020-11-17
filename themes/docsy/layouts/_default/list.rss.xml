@@ -18,8 +18,6 @@
     {{ else }}
       {{ if and (eq $.Section "tv") $.Parent.IsHome }}
         {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" "tv-episode" )) }}
-      {{ else if and (eq $.Section "workshops") $.Parent.IsHome }}
-        {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.Pages "Type" "workshop" )) }}
       {{ else if $.Parent.IsHome }}
         {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" $.Section )) }}
       {{ else }}
