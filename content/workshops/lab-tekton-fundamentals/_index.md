@@ -1,5 +1,6 @@
 ---
 title: "Tekton Fundamentals"
+draft: true
 description: >
   Workshop on learning the fundamentals of using Tekton for CI/CD
 summary:
