@@ -1,10 +1,15 @@
 ---
 title: "TGIK"
 type: "tv-show"
-streaming: true
+streaming: "youtube"
 id: "tgik"
-description: "TGI Kubernetes is a weekly live video stream all about Kubernetes."
-teaser: Live Every Friday at 1pm PT
 image: "/images/tv/shows/tgik.png"
 weight: 2
+# Text that appears on show index page under show name
+description: TGI Kubernetes is a weekly live video stream all about Kubernetes.
+# Text that appears highlighted in green on show index page above show name
+teaser: Live Every Friday at 1pm PT
+# Text that shows on show page under show name
+subheader: Live discussion about Kubernetes on YouTube, every Friday at 1pm PT.
+# Any content below here shows up above episode index
 ---

@@ -8,9 +8,9 @@
             <div class="row mb-5" >
                 <div class='col-lg-5 col-12 pl-0 bg-primary'> 
                     <div class="p-5">
-                        {{ if and .Params.streaming .Params.teaser }}<a class="teaser btn btn-small mb-5 mt-2" href="{{ .RelPermalink }}">{{ .Params.teaser }}</a>{{ end }}
+                        {{ if (and (isset .Params "streaming") (isset .Params "teaser")) }}<a class="teaser btn btn-small mb-4 mt-2" href="{{ .RelPermalink }}">{{ .Params.teaser }}</a>{{ end }}
                         <h1>{{ .Title }}</h1>
-                        <p class="lead mt-0">{{ .Description | markdownify }}</p>
+                        <p class="lead my-0">{{ .Description | markdownify }}</p>
                         <a class="btn mt-3" href="{{ .RelPermalink }}">View Episodes</a>
                     </div>
                 </div>
