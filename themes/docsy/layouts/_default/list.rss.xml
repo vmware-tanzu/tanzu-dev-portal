@@ -16,7 +16,9 @@
       {{ $sections := .Site.Params.rss_sections | default (slice "blog") }}
       {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" "in" $sections )) }}
     {{ else }}
-      {{ if $.Parent.IsHome }}
+      {{ if and (eq $.Section "tv") $.Parent.IsHome }}
+        {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" "tv-episode" )) }}
+      {{ else if $.Parent.IsHome }}
         {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" $.Section )) }}
       {{ else }}
         {{ .Scratch.Set "rss_pages" (first 50 $.Pages) }}
@@ -24,7 +26,11 @@
     {{ end }}
     {{ range (.Scratch.Get "rss_pages")  }}
     <item>
+      {{ if (ne .Section "tv") }}
       <title>{{ .Section | title }}: {{ .Title }}</title>
+      {{ else }}
+      <title>{{ .Parent.Title | title }}: {{ .Title }}</title>
+      {{ end }}
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
