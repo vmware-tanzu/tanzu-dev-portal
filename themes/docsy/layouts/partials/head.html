@@ -28,11 +28,12 @@
 {{ else }}
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
+<link rel="canonical" href="{{ .Permalink }}" />
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 {{ partialCached "favicons.html" . }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Params.name }}{{ . }} | {{ end }}{{ with .Title }}{{ . }} | {{ end }}{{ if not (.Parent.IsHome) }}{{ with .Section }}{{ if (ne . "tv")}}{{ . | humanize }}{{ else }}Tanzu.TV{{ end }} | {{ end }}{{ end }}{{ .Site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Params.name }}{{ . }} | {{ end }}{{ with .Params.seotitle }}{{.}}{{else}}{{.Title}}{{end}} | {{ if not (.Parent.IsHome) }}{{ with .Section }}{{ if (ne . "tv")}}{{ . | humanize }}{{ else }}Tanzu.TV{{ end }} | {{ end }}{{ end }}{{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . | chomp }}{{ else }}{{if .IsPage}}{{ .Summary | chomp }}{{ else }}{{ with .Site.Params.description | chomp }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
 {{ $ogImage := "images/TAN-DevSite-OG.png" }}
 {{ if eq .Section "tv" }}
