@@ -10,7 +10,7 @@
 		<div class="lead"><p>{{ with .Params.streaming }}<span class="fab fa-{{. | lower }} px-2 text-white"></span>{{ end }}{{- .Params.subheader | default .Params.description | markdownify }}</p></div>
 
     {{ if (isset .Params "streaming") }}
-    <a class="btn px-2" href="{{ .RelPermalink }}">Watch on {{ .Params.streaming }}</a>
+    <a class="btn px-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
     
       <div id="twitch-embed"></div>
 
