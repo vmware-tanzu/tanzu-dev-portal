@@ -1,8 +1,11 @@
 ---
-title: "Revisited: Understanding When to Use RabbitMQ or Apache Kafka"
+title: "Understanding the Differences Between RabbitMQ vs Kafka"
+seotitle: "RabbitMQ vs Kafka - Which Messaging System is Better?"
 description: >
-    Revisiting the comparison between RabbitMQ and Apache Kafka
+    Which is better RabbitMQ or Kafka? This article will outline the functionality offered by both messaging systems and help you make an informed decision when choosing a platform.
 date: 2020-11-16
+aliases:
+- /blog/revisited-understanding-when-to-use-rabbitmq-or-apache-kafka/
 topics:
 - Event Streaming
 - Messaging and Integration
