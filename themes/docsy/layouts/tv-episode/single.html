@@ -44,10 +44,17 @@
         <iframe id="episode-embed" src="https://www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
       </div>
       {{ else }}
+      {{ if .Params.register }}
+      <div>
+        <a href="{{ .Params.register }}">
+        <img src="{{ .Params.episode_banner | relURL }}"></a><br>
+      </div>
+      {{ else }}
       <div>
         <a href="https://www.twitch.tv/{{ .Params.twitch }}">
         <img src="{{ .Params.episode_banner | relURL }}"></a><br>
       </div>
+      {{ end }}
       {{ end }}
     </div>
   </div>
