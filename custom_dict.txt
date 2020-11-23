@@ -148,7 +148,7 @@ stateful
 suboptimal
 symposia
 telecom
-telco[s]
+telco(s)*
 [T,t]emplat(ed|ing)
 Thunderdome
 Tikka
