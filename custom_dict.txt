@@ -49,6 +49,7 @@ deployable
 developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
+differentiators
 [E,e]venting
 de
 facto
@@ -147,7 +148,7 @@ stateful
 suboptimal
 symposia
 telecom
-telco
+telco(s)*
 [T,t]emplat(ed|ing)
 Thunderdome
 Tikka
@@ -378,6 +379,7 @@ Documentum
 DZone
 EMC
 Garmin
+Gartner('s)
 Google('s)
 HashiCorp
 Heptio
@@ -406,6 +408,7 @@ v3
 APIs?
 APM
 brd1
+CIO
 CLI(s|'s)?
 CNCF
 CNI
