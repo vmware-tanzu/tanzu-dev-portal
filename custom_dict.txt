@@ -580,6 +580,9 @@ Georgiva
 Xing
 Xu
 Zou
+Bai
+Alexey
+Nesterov
 
 # Twitter Handles
 anthonyjvetter
