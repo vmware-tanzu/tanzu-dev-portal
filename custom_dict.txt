@@ -167,6 +167,7 @@ uptime
 V2
 versioned
 veth-jelly
+virtualized
 walkthrough
 waypoints
 webhooks?
@@ -231,6 +232,7 @@ filesystem
 Finchley
 Flake8
 formatter
+GemFire
 [G,g]mail
 [G,g]ithub
 [G,g]olang
@@ -303,6 +305,7 @@ OpenID
 OpenSSL
 Paketo
 Packer
+Postgres
 Procfile
 [P,p]rometheus
 PropertySources
@@ -381,6 +384,7 @@ EMC
 Garmin
 Gartner('s)
 Google('s)
+Groupon
 HashiCorp
 Heptio
 Heroku('s)
@@ -413,6 +417,7 @@ CLI(s|'s)?
 CNCF
 CNI
 CQL
+CRM
 DAO
 DNS
 EE
@@ -423,7 +428,7 @@ GC
 GC(L|P|R)
 GKE
 gRPC
-IaaS
+(I|P)aaS
 (IP|ip)(v6|v4|s)?
 IPM
 JMX
@@ -496,6 +501,7 @@ Dieruf
 Dieu
 Dobrin
 Dolan
+Dre
 Dubois
 Eads
 Fewell
@@ -512,6 +518,7 @@ Gereon
 Gerhard('s)?
 Gibb
 Glênio
+Glithero
 Grygleski
 Hayk
 Herbrich
@@ -536,6 +543,7 @@ Neumann
 Pacak
 Palo
 Pilimon
+Pulkit
 Ren
 Renaud
 Renfro
