@@ -1,6 +1,7 @@
 ---
 title: "Under the Microscope: Software Observability in a Distributed Architecture"
-featured: false
+featured: true
+weight: 1
 description: >
     Building Containers from your code.
 date: 2020-11-04
