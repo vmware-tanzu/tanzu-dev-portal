@@ -34,7 +34,7 @@
 
 	<div class="container py-5">
 			{{ with $img := .Params.logo }}
-		<img src={{ $img | safeURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+		<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
 		{{end}}
 		<div class="github-imported-sample">
 				{{ .Content }}
