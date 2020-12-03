@@ -30,7 +30,6 @@ Thanks to [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current
 <dependency>
     <groupId>io.micrometer</groupId>
     <artifactId>micrometer-registry-prometheus</artifactId>
-    <version>1.5.4</version>
 </dependency>
 ```
 
