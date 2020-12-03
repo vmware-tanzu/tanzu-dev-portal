@@ -60,7 +60,7 @@ Add these two dependencies to your `pom.xml` file:
 <dependency>
     <groupId>com.wavefront</groupId>
     <artifactId>wavefront-spring-boot-starter</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.2</version>
 </dependency>
 <dependency>
     <groupId>org.springframework.cloud</groupId>
