@@ -219,7 +219,7 @@ limitations under the License.
             sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'menu', 'url path': window.location.pathname});
         });
 
-        // Track featured clicks
+        // Track featured link clicks on home page
         $("a.featured-link").click(function(){
             var linkTitle = $('h4' , this).text();
             sendAmplitudeEvent('featured link clicked', {'link title': linkTitle, 'link url': this.href, 'url path': window.location.pathname});
