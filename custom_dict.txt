@@ -453,7 +453,7 @@ IIS
 JAAS
 NFJS
 NSX
-non-JV
+non-JVM
 OCI(-compliant)?
 OOP
 OPA
