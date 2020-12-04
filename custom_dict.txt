@@ -49,6 +49,7 @@ deployable
 developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
+differentiators
 [E,e]venting
 de
 facto
@@ -147,7 +148,7 @@ stateful
 suboptimal
 symposia
 telecom
-telco
+telco(s)*
 [T,t]emplat(ed|ing)
 Thunderdome
 Tikka
@@ -166,6 +167,7 @@ uptime
 V2
 versioned
 veth-jelly
+virtualized
 walkthrough
 waypoints
 webhooks?
@@ -230,6 +232,7 @@ filesystem
 Finchley
 Flake8
 formatter
+GemFire
 [G,g]mail
 [G,g]ithub
 [G,g]olang
@@ -268,6 +271,7 @@ kpack(-hosted)?
 kpack
 Kpack
 Krisp
+ksqlDB
 KubeAcademy
 [K,k]ubeapps
 kubectl
@@ -301,6 +305,7 @@ OpenID
 OpenSSL
 Paketo
 Packer
+Postgres
 Procfile
 [P,p]rometheus
 PropertySources
@@ -377,7 +382,9 @@ Documentum
 DZone
 EMC
 Garmin
+Gartner('s)
 Google('s)
+Groupon
 HashiCorp
 Heptio
 Heroku('s)
@@ -405,10 +412,12 @@ v3
 APIs?
 APM
 brd1
+CIO
 CLI(s|'s)?
 CNCF
 CNI
 CQL
+CRM
 DAO
 DNS
 EE
@@ -419,7 +428,7 @@ GC
 GC(L|P|R)
 GKE
 gRPC
-IaaS
+(I|P)aaS
 (IP|ip)(v6|v4|s)?
 IPM
 JMX
@@ -439,6 +448,7 @@ ok
 POJO(s)?
 pb('s)?
 IIS
+JAAS
 NFJS
 NSX
 OCI(-compliant)?
@@ -491,6 +501,7 @@ Dieruf
 Dieu
 Dobrin
 Dolan
+Dre
 Dubois
 Eads
 Fewell
@@ -507,6 +518,10 @@ Gereon
 Gerhard('s)?
 Gibb
 Glênio
+<<<<<<< HEAD
+=======
+Glithero
+>>>>>>> upstream/main
 Grygleski
 Hayk
 Herbrich
@@ -531,6 +546,7 @@ Neumann
 Pacak
 Palo
 Pilimon
+Pulkit
 Ren
 Renaud
 Renfro
@@ -575,6 +591,9 @@ Georgiva
 Xing
 Xu
 Zou
+Bai
+Alexey
+Nesterov
 
 # Twitter Handles
 anthonyjvetter

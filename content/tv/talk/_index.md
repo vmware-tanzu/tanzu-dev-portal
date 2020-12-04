@@ -1,18 +1,17 @@
 ---
 title: "Tanzu Talk"
 type: "tv-show"
-streaming: true
+streaming: "twitch"
 # noPast: true
-id: "code"
-description: Daily Interviews and discussions about cloud native, software modernization at 11am CET
-teaser: Daily at 11am CET
+id: "talk"
 image: "/images/tv/shows/talk.png"
 weight: 4
-draft: false
+# Text that appears on show index page under show name
+description: See interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
+# Text that appears highlighted in green on show index page above show name
+teaser: Live Daily at 11am CET
+# Text that shows on show page under show name
+subheader: Daily interviews and discussions about cloud native software on Twitch, every weekday at 11am CET.
+# Any content below here shows up above episode index
 ---
-
-Interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
-
-Streams daily at 11am CET on [twitch.tv/vmwaretanzu](https://twitch.tv/vmwaretanzu)
-
 ![Tanzu Talk show graphic](/images/tv/shows/talk.png)

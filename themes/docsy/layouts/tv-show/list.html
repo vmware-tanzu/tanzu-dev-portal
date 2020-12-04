@@ -3,13 +3,15 @@
 {{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-5">
+<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-4">
   	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
     <h1 class="h1 mt-4 pt-2"> {{- .Title -}}</h1>
-		<div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
+		<div class="lead"><p>{{ with .Params.streaming }}<span class="fab fa-{{. | lower }} px-2 text-white"></span>{{ end }}{{- .Params.subheader | default .Params.description | markdownify }}</p></div>
 
-    {{ if .Params.streaming }}
+    {{ if (isset .Params "streaming") }}
+    <a class="btn px-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
+    
       <div id="twitch-embed"></div>
 
       <script src="https://embed.twitch.tv/embed/v1.js"></script>

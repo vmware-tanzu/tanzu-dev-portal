@@ -59,6 +59,15 @@ blockquote {
   }
 }
 
+.lead {
+  p {
+    margin-top: 0;
+  }
+  span {
+    font-size: $h3-font-size;
+  }
+}
+
 .fs-90 {
   font-size: 90%;
 }
@@ -746,7 +755,7 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
-.shows .teaser {
+.shows .teaser, .episodes .countdown  {
   border-radius: 40px;
   background: $bright-green;
   font-size: .8em;
@@ -756,9 +765,24 @@ body.light-mode #toggle-light-dark-mode span {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.episodes .countdown {
+  position:absolute;
+  top:20px;
+  right:20px;
+  padding: 8px;
+}
+
 .episodes .teaser {
   margin-bottom: 0;
   color: $bright-green;
+}
+
+.episodes .upcoming {
+  position:relative;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0
 }
 
 body.tv-episode {

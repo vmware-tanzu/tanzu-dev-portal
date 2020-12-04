@@ -219,6 +219,12 @@ limitations under the License.
             sendAmplitudeEvent('topic clicked', {'topic name': topicName, 'source': 'menu', 'url path': window.location.pathname});
         });
 
+        // Track featured link clicks on home page
+        $("a.featured-link").click(function(){
+            var linkTitle = $('h4' , this).text();
+            sendAmplitudeEvent('featured link clicked', {'link title': linkTitle, 'link url': this.href, 'url path': window.location.pathname});
+        });
+
         // Track sample clicks - code download vs visit repo
         $("#sample-gh").click(function(){
             var sampleName = this.title;
@@ -231,7 +237,11 @@ limitations under the License.
 
         // Link Clicks (Guides, Tanzu.TV, Blog, Patterns, Videos)
         $("body.guide a, body.guides a, body.tanzu-tv a, body.tv-show a, body.tv-episode a, body.blog a, body.pattern a, a.youtube-container").click(function(){
-            sendAmplitudeEvent('link clicked', {'link title': this.innerHTML, 'link url': this.href, 'url path': window.location.pathname});
+            var linkTitle = this.innerHTML;
+            if (linkTitle.includes('navbar-logo')) linkTitle = "Home"
+            else if (linkTitle.startsWith('<')) linkTitle = this.innerText;
+            if (!this.href.endsWith("#"))
+                sendAmplitudeEvent('link clicked', {'link title': linkTitle, 'link url': this.href, 'url path': window.location.pathname});
         });
 
         // Track scroll depth on guides and blogs

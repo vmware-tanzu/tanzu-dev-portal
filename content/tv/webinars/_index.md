@@ -1,7 +1,7 @@
 ---
 title: "Tanzu Webinars"
 type: "tv-show"
-streaming: true
+# streaming: "twitch"
 id: "webinars"
 description: "Live or on-demand online seminars"
 image: "/images/tv/shows/tanzu-webinars.png"

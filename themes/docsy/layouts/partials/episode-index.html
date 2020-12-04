@@ -11,9 +11,9 @@
         {{ end }}
 
         {{ if eq ($.Scratch.Get "upcoming") true }}
-            {{ if .Params.streaming }}
+            {{ if (isset .Params "streaming") }}
                 <div class="col px-0">
-                    <h3 class="mt-5 mb-4">Upcoming Episodes</h3>
+                    <h3 class="mt-4 mb-4">Upcoming Episodes</h3>
                     <div class="row justify-content-between mb-5">
                         {{ range sort $pages "Params.Date" "asc" }}
                         {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
@@ -24,13 +24,22 @@
                             {{ $.Scratch.Set "streamName" "on YouTube" }}
                         {{ end }}
                         {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
-                            <div class="col-lg-11 col-12 px-0">
+                            <script>
+                                var upcomingEpisodes = document.querySelectorAll('div.upcoming');
+                                var upcomingEpisode = upcomingEpisodes[upcomingEpisodes.length - 1];
+                                var currentDate = Date.now();
+                                var epDate = (new Date(upcomingEpisode.dataset.episodeDate)).getTime();
+                                var diffTime = Math.abs(epDate - currentDate);
+                                var diffDays = Math.ceil(diffTime / (1000 * 3600 * 24));                                
+                            </script>
+                            <div class="col-lg-11 col-12 px-0" style='position:relative;'>
                                 {{ $.Scratch.Set "episodeLink" .RelPermalink }}
                                 {{ if (isset .Params "register") | and (not (eq .Params.register "")) }}
                                     {{ $.Scratch.Set "episodeLink" .Params.register }}
                                 {{ end }}
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
-                                <a href="{{ $episodeLink }}"><img src="{{ .Params.episode_banner | relURL }}"></a>
+
+                                <a href="{{ $episodeLink }}"><img class="upcoming" src="{{ .Params.episode_banner | relURL }}"><span class="countdown btn btn-small mb-4 mt-2">Live in <script>document.write(diffDays);</script>&nbsp;Days</span></a>
                                 <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
                                 <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
                             </div>
@@ -58,12 +67,12 @@
         {{ end }}
 
         {{ $noUpcoming := false }}
-        {{ if (or (eq ($.Scratch.Get "upcoming") true) .Params.streaming) }}
+        {{ if (or (eq ($.Scratch.Get "upcoming") true) (isset .Params "streaming")) }}
             {{ $noUpcoming := true }}
         {{ end }}
 
-        <div class="col px-lg-0 pt-5 {{ if $noUpcoming }} border-top{{ end }} mb-5">
-            {{ if .Params.streaming }}
+        <div class="col px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5">
+            {{ if (isset .Params "streaming") }}
             {{ if not .Params.noPast }}
             <h3 class="mb-4">Watch Past Episodes</h3>
             {{ end }}

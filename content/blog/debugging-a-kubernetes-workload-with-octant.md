@@ -1,7 +1,5 @@
 ---
 title: "Debugging a Kubernetes Workload with Octant"
-featured: true
-weight: 1
 description: >
     Walk through an NGINX deployment with a faulty NGINX configuration to demonstrate how common pitfalls can be identified using Octant.
 date: 2020-10-15
