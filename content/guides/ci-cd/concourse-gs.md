@@ -13,9 +13,9 @@ team:
 - Tony Vetter
 ---
 
-Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration, Continuous Deployment, Continuous Delivery, artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.
+Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration (CI), Continuous Deployment (CD), Continuous Delivery (CD again), artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.
 
-How can you make sure your code is ready to be integrated into a release? Continuous Integration (CI) is not a new concept for most developers, and—once the system is implemented—is rarely thought about deeply again. Even when it’s agreed that the current implementation is non-optimal, the CI system runs in the background, churning away. For the most part, it “just works.”
+How can you make sure your code is ready to be integrated into a release? Continuous Integration (CI) is not a new concept for most developers, and—once the system is implemented, it is rarely thought about deeply again. Even when it’s agreed that the current implementation is non-optimal, the CI system runs in the background, churning away. For the most part, it “just works.”
 
 But what if there was a better system? One that was built for cloud native development paradigms on the foundation of a stateless architecture where all pipelines are built and treated as code? That’s where Concourse CI comes in.
 
@@ -43,7 +43,7 @@ Intrigued? What follows here is a guide to get started with Concourse CI. You wi
 ## Prerequisites
 Before you get started, you will need to do a number of things.
 * **Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and [enable Kubernetes](https://docs.docker.com/docker-for-mac/#kubernetes)**: Other methods of deploying a local Kubernetes cluster like [KIND](https://kind.sigs.k8s.io/docs/user/quick-start/) or [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) may also work. Cloud-based or other production Kubernetes deployments should work, too. This guide was written using Docker Desktop; other methods will require modification of commands and have not been fully tested for use in this guide.
-* **Install [Helm 3](https://helm.sh/docs/intro/install/)**: Concourse CI can be installed with Helm 2, but the commands provided in this guide assume Helm 3. If you're not familiar with Helm, try the [what is Helm](../../kubernetes/helm-what-is/) post.
+* **Install [Helm 3](https://helm.sh/docs/intro/install/)**: Helm 3 will be used to install Concourse CI.
 * **Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**: This is the local client application you will use for interacting with your Kubernetes cluster. It is also how Helm will reach and interact with your cluster.
 * **Secure a Slack instance**: One via which you have access to create webhooks and can post messages to a channel.
 * **Set aside 15-20 minutes**: Roughly the time it will take to run through this guide. 
@@ -54,6 +54,11 @@ To make the installation and configuration of Concourse CI and its pipelines a l
 git clone https://github.com/anthonyvetter/concourse-getting-started.git && cd concourse-getting-started
 ```
 In this repository are three directories: `install`, `pipelines`, and `test-scripts`. You will explore the `pipelines` and `test-scripts` directories later on in this guide. They contain a helpful starter pipeline you will push to our Concourse CI cluster, as well as some unit test scripts. The `install` directory contains an abbreviated version of the Concourse CI `values.yml` file, and a (very) small BASH script for exposing access to Concourse CI locally. Let’s get into that next.
+
+Next, define a variable for your username of your GitHub account.
+```
+export GH_USERNAME=your-github-username
+```
 
 ### Installation
 Let’s get started by installing Concourse CI onto Kubernetes. This installation will be abbreviated; it’s intended for demonstration and learning purposes only. Full installation instructions using Helm can be found [via the Concourse CI team](https://github.com/concourse/concourse-chart) from which the installation instructions in this guide borrow heavily.
@@ -137,12 +142,14 @@ fly -t demo sync
 Notice you can abbreviate `--target` with `-t`, making commands shorter to type. There are many abbreviations in fly like this. You will use these abbreviations throughout this guide.
 
 ## Creating the demo application
-For this guide, you will use [spring-petclinic](https://github.com/spring-projects/spring-petclinic) as an application to test against in your pipeline, which is a small Java application written in Spring. But there are no specific dependencies on this application other than the test scripts running Maven testing jobs. To follow along, [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this application ([linked here](https://github.com/spring-projects/spring-petclinic)) into your own GitHub repository or provide your own application and modify the test scripts as needed (they are very rudimentary).
+For this guide, you will use [spring-petclinic](https://github.com/spring-projects/spring-petclinic) as an application to test against in your pipeline, which is a small Java application written in Spring. But there are no specific dependencies on this application other than the test scripts running Maven testing jobs. 
+
+To follow along, [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this application ([linked here](https://github.com/spring-projects/spring-petclinic)) into your own GitHub repository or provide your own application and modify the test scripts as needed (they are very rudimentary).
 
 Next, clone the repository locally and place it anywhere on your system. Then `cd` into the directory.
 
 ```
-git clone https://github.com/anthonyvetter/spring-petclinic.git && cd spring-petclinic
+git clone https://github.com/$GH_USERNAME/spring-petclinic.git && cd spring-petclinic
 ```
 
 Next, you need to create a test branch. You can mimic an example GitOps flow where a new feature or bug fix is pulled into this branch for testing; the automated system takes it from there. 
@@ -163,10 +170,10 @@ The result is that once you deploy the pipeline and push a change to this branch
 Now that your Concourse CI installation is up and running, it’s time to create your first pipeline. Go back to the concourse-getting-started folder for the configuration files. But before you set that pipeline to Concourse CI, take a look at each of the sections to understand what they are doing. Comments are provided within the pipeline YAML as well, to describe each section.
 
 ```
-cat pipelines/pipeline.yml
+cat pipelines/pipeline.yml | less
 ```
 
-This pipeline is going to pull in your demo application from your repository. Then it is going to pull in test scripts from a separate repository. And finally, it is going to run those tests, one at a time, in a dedicated container, all the while reporting out status via Slack. Review the comments in the file to understand the function of each section. 
+This pipeline is going to pull in your demo application from your repository. Then it will pull in test scripts from a separate repository. And finally, it will run those tests, one at a time, in a dedicated container, all the while reporting out status via Slack. Review the comments in the file to understand the function of each section. 
 
 You will notice there are a few `((variables))` contained within the pipeline; you will define those next. The `credentials.yml` file contains those variable assignments. Open the file and fill in the variables for your environment. Again, the comments in the file will help you understand the function of each line.   
 
