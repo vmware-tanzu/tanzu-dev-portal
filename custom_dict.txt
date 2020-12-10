@@ -306,6 +306,7 @@ OpenSSL
 Paketo
 Packer
 Postgres
+Pomodoro
 Procfile
 [P,p]rometheus
 PropertySources
@@ -400,6 +401,7 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+ThoughtWorks
 UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
@@ -451,6 +453,7 @@ IIS
 JAAS
 NFJS
 NSX
+non-JVM
 OCI(-compliant)?
 OOP
 OPA
@@ -493,7 +496,8 @@ Buschmann
 Cao
 Coté
 Clozel
-Czarkowski('s)?
+(pc|C)zarkowski('s)?
+DaShaun
 Damasceno
 Debroy
 Desgber
@@ -523,6 +527,7 @@ Grygleski
 Hayk
 Herbrich
 Hockin
+Hinojosa
 Iberkleid
 Isenberg
 Ivanov
