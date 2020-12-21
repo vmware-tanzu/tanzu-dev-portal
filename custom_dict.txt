@@ -139,6 +139,7 @@ scalable
 screencaster
 [S,s]erverless
 [S,s]ervlets?
+SmartTV
 sso|SSO
 (de)*serialize[d,r]
 Sox
@@ -182,6 +183,7 @@ PropertySources
 Activiti
 adoptopenjdk
 Alpine(-based)?
+Alexa
 Ansible
 amd64
 AMQP
@@ -238,6 +240,7 @@ GemFire
 [G,g]olang
 Gradle
 Grafana
+Grails
 Grasso
 gotchas
 Gunicorn
@@ -248,6 +251,7 @@ HTTPie
 HyperKit
 init
 InfoQ
+IntelliJ
 J2EE
 Jaeger
 Jakarta
@@ -336,6 +340,7 @@ SIG-Network
 SIG-Runtime
 SIG-Security
 SIG-Storage
+Siri
 [S,s]kaffold
 Snapchat
 SpringBoot
@@ -420,6 +425,7 @@ CNCF
 CNI
 CQL
 CRM
+CTO
 DAO
 DNS
 EE
@@ -437,6 +443,7 @@ JMX
 JPA
 JSON
 JSR-352
+JST
 JVM
 KMS
 LDAP
@@ -450,6 +457,7 @@ ok
 POJO(s)?
 pb('s)?
 IIS
+IoT
 JAAS
 NFJS
 NSX
@@ -461,6 +469,7 @@ ORM(-based)?
 OSS
 OWASP
 POJP
+PWAs
 RBAC(-enabled)?
 ROI
 [s,S]3
@@ -471,6 +480,7 @@ TBD
 TCP
 TLS
 UI
+UIs
 UR[I,L](s)?
 url
 VMs?
@@ -494,6 +504,7 @@ Brindley
 Brodi
 Buschmann
 Cao
+Carducci
 Coté
 Clozel
 (pc|C)zarkowski('s)?
@@ -558,6 +569,7 @@ Sanderson
 Sathe
 Schimanski
 Schutta
+Sevilla
 Sloka
 Smythe
 Stéphane
