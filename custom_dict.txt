@@ -80,6 +80,8 @@ ideate
 InfoSec
 [I,i]ntegrations
 [I,i]nterservice
+Jiu
+Jitsu
 jumpstart
 Kanban
 kitesurfing
@@ -303,6 +305,7 @@ linter
 LoadBalancer
 MacBook
 [M,m]acOS
+Mesos
 Microk8s
 [M,m]inikube
 Mockito
