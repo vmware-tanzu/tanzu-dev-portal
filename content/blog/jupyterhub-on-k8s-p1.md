@@ -65,7 +65,7 @@ Removing: /Users/kraustvmware.com/Library/Logs/Homebrew/python@3.8... (3 files, 
 Pruned 1 symbolic links from /usr/local
 ```
 
-3. Download a kind cluster configuration manifest or create your own. This is my conf:
+3. Download a kind cluster configuration manifest or create your own. This is my config:
 
 ```bash
 ❯ cat multinode-conf.yaml
@@ -147,7 +147,7 @@ On a Linux machine, generate a random hex string to be used as a security token 
   c46350ed823f94.......20dff86cc63a570d3be
 ```
 
-Confirm the existence of the “standard” storage class, which will be used for each JupyterHub-spawned instance persistent volume (PV). This will allow each user to have a 10GB PV so that their work will persist through restarts of their instance or pod and be mounted to their home directory.  
+Confirm the existence of the “standard” storage class, which will be used for the persistent volume for each instance spawned by JupyterHub. This will allow each user to have a 10GB persistent volume so that their work will persist through restarts of their instance or pod and be mounted to their home directory.  
 
 ```bash
 ❯ kubectl get storageclass                                      
@@ -158,7 +158,7 @@ standard (default)   rancher.io/local-path   Delete          WaitForFirstConsume
 
 Modify the configuration of a Helm chart. This is done at deployment time with a values YAML file. To simplify your experience, we have already created a [configuration YAML](https://raw.githubusercontent.com/tkrausjr/k8s-manifests/master/jupyter-hub/scipy-jhub-values-kind.yaml) file for the JupyterHub Helm package, which you can download and edit. We have preconfigured this values file to configure several things for your JupyterHub installation:
 
-- Thanks to the new Docker image pull changes on Docker Hub, you will need to configure an imagePullSecret with your Docker Hub account to pull the required images. Read more about it [here](https://docs.docker.com/docker-hub/download-rate-limit/).
+- Thanks to the new Docker image pull changes on Docker Hub, you will need to configure an `imagePullSecret` with your Docker Hub account to pull the required images. Read more about it [here](https://docs.docker.com/docker-hub/download-rate-limit/).
 - Change the default interface to the newer [Jupyter Lab](https://jupyter.org/#:~:text=JupyterLab%20is%20a%20web%2Dbased,scientific%20computing%2C%20and%20machine%20learning.) interface. This recent improvement provides some aesthetic and functional benefits, such as providing a terminal interface to your Jupyter Notebook instance to do things like git checkouts.
 
 ```bash
@@ -215,7 +215,7 @@ proxy:
   secretToken: "c86a373144e4e8b1341fa5661cdc70f165856ba48eb54028eb844d41f1f2aeb4d4a0cca29b9548d52cb9b4c2fb901aa00537a9d37451a6f77953add34039ca56" ## <<Change the token to your random hex string from Step 1>>
 ```
 
-**Note**: We have chosen the latest version of the jupyter/scipy-notebook, which comes with all the required libraries for the machine learning and data science use cases we will demonstrate in the second post of this two-part series. Specifically, the scipy-notebook comes preinstalled with pandas, matplotlib, scikit-learn, beautifulsoup, and seaborn. For a list of the Docker images that the Jupyter team maintains, you can look [here](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html).
+**Note**: We have chosen the latest version of the `jupyter/scipy-notebook`, which comes with all the required libraries for the machine learning and data science use cases we will demonstrate in the second post of this two-part series. Specifically, the `scipy-notebook` comes preinstalled with pandas, matplotlib, scikit-learn, beautifulsoup, and seaborn. For a list of the Docker images that the Jupyter team maintains, you can look [here](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html).
 
 Create a dedicated Kubernetes namespace to house the JupyterHub Kubernetes components:  
 
@@ -252,7 +252,7 @@ directly instead.
 
 **Note**: This installation will take a while to pull down all the images required to use JupyterHub and bootstrap the installation process.
 
-You can monitor and troubleshoot the JupyterHub installation by watching the pod creations in the jupyter namespace.
+You can monitor and troubleshoot the JupyterHub installation by watching the pod creations in the `jupyter` namespace.
 
 ```bash
 ❯  kubectl get po -n jupyter -w                        
@@ -268,7 +268,7 @@ user-scheduler-67f756d5d6-4gb6b   1/1     Running   0          90s
 user-scheduler-67f756d5d6-f4z4c   1/1     Running   0          90s
 ```
 
-You can also monitor for errors by putting a watch on Kubernetes events happening during the installation of the Helm release inside the jupyter namespace.  
+You can also monitor for errors by putting a watch on Kubernetes events happening during the installation of the Helm release inside the `jupyter` namespace.  
 
 ```bash
 ❯  kubectl get events -n jupyter -w
@@ -304,7 +304,7 @@ release "jhub-scipy" uninstalled
 
 ## Jupyter Hub Access
 
-To verify that your Jupyter Hub deployment is successful, the following Kubernetes objects should be running in the jupyter namespace:  
+To verify that your Jupyter Hub deployment is successful, the following Kubernetes objects should be running in the `jupyter` namespace:  
 
 ```bash
 ❯  kubectl get deploy,po,svc,pvc -n jupyter     

@@ -18,14 +18,14 @@ team:
 
 In a [previous post](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-1), we discussed the advantages of running JupyterHub on Kubernetes. We also showed you how to install a local Kubernetes cluster using kind on your Mac, as well as how to install the JupyterHub Helm chart on a Kubernetes cluster. 
 
-In this post, we will focus on the experience of the developers, who are going to be leveraging our service to develop new models using scikit-learn or perform calculations and transformations of large datasets using pandas. To illustrate the value that Jupyter Notebooks and JupyterHub provide in a multiuser environment, we will clone a Git repository containing two example Jupyter Notebooks that we can work with.
+In this post, we will focus on the experience of the developers, who are going to be leveraging our service to develop new models using `scikit-learn` or perform calculations and transformations of large datasets using pandas. To illustrate the value that Jupyter Notebooks and JupyterHub provide in a multiuser environment, we will clone a Git repository containing two example Jupyter Notebooks that we can work with.
 
 ## Using JupyterHub
 
 Each user that accesses JupyterHub will have their own workspace complete with a single-user Jupyter Notebook server, which uses the JupyterLab Interface. To demonstrate the capabilities of JupyterHub and Python, we will check out the following sample notebooks that we have written and executed:
 
 - **industry-revenue-analysis.ipynb** – Analysis of historical financial data organized by industry that leverages the pandas library
-- **ml-stock-predictor-knn-v4.ipynb** – Machine learning (ML) based on revenue data from public financial statements that leverages the scikit-learn library for Python
+- **ml-stock-predictor-knn-v4.ipynb** – Machine learning (ML) based on revenue data from public financial statements that leverages the `scikit-learn` library for Python
 
 **Note:** Each time a user logs into the JupyterHub web page, an additional pod will be instantiated for that user and a 10GB persistent volume will be mapped to the user’s home directory.  
 
@@ -59,7 +59,7 @@ git clone https://github.com/tkrausjr/data-science-demos.git data-science
 
 To jumpstart your data science learning, two sample notebooks are in the data science directory created by your git clone operation in the previous step. The repos and sample datasets are here: https://github.com/tkrausjr/finance-analysis.git.
  
-1. Open the  "/data-science/jupyter-hub/" directory.  
+1. Open the `/data-science/jupyter-hub` directory.  
 
 ![](/images/blogs/jupyter-hub-on-k8s-p2/terminal-dir.png)
 
@@ -72,8 +72,8 @@ This notebook aims to classify companies as high growth or low growth according 
 - Clean up the data frame and calculate and create new columns representing year-over-year sales growth. In our classification problem, the annual revenue growth becomes the features or attributes that will be put into our ML model.
 - Filter out the highest-growth companies by labeling them with a 0 or 1 to represent low growth or high growth, respectively. In supervised learning we have to label our data so the algorithm can determine upon which answers it should base its learning.
 - Visualize and explore the data with the pandas and seaborn libraries.
-- Train, test, and split the data with the scikit-learn library.
-- Run a KNN ML model against the dataset and evaluate it using the scikit-learn library. 
+- Train, test, and split the data with the `scikit-learn` library.
+- Run a KNN ML model against the dataset and evaluate it using the `scikit-learn` library. 
 
 ![](/images/blogs/jupyter-hub-on-k8s-p2/graph-1.png)
 
@@ -129,5 +129,4 @@ In this post, we have shown how deploying JupyterHub on top of Kubernetes provid
 - Data persistence for data scientists’ work to be persisted to a dynamically created persistent volume so they either can log out and back in to JupyterHub and resume where they left off or have their work survive a pod failure.
 - A way to provide data scientists with a lower-cost alternative to more expensive compute options for certain tasks, such as data cleanup, exploration, and model development.
 
-Hopefully you now better understand how a JupyterHub implementation running on Kubernetes can provide a scalable, simple, and powerful platform for data science teams to work with. If you are new to Jupyter Notebooks in general, I would recommend experimenting with the sample notebooks used in this post or walking through a Jupyter Notebook tutorial that goes into more detail on developing in Jupyter Notebooks with pandas, numpy, or scikit-learn.
-
+Hopefully you now better understand how a JupyterHub implementation running on Kubernetes can provide a scalable, simple, and powerful platform for data science teams to work with. If you are new to Jupyter Notebooks in general, I would recommend experimenting with the sample notebooks used in this post or walking through a Jupyter Notebook tutorial that goes into more detail on developing in Jupyter Notebooks with `pandas`, `numpy`, or `scikit-learn`.
