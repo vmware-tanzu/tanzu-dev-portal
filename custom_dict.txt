@@ -385,6 +385,7 @@ CoreOS
 DevNexus
 DevOpsDaysKC
 Documentum
+DockerCon
 DZone
 EMC
 Garmin
@@ -399,6 +400,7 @@ JetBrains
 KubeCon
 Octoverse
 OneMagnify
+OpenSource
 Pluralsight
 PMC
 Rakuten
@@ -617,6 +619,7 @@ tiffanyfayj
 12SwitchRestoresSansCheckOuts
 OLGA_MACIASZEK
 benbravo73
+kendrickcoleman
 
 # Tags
 img
