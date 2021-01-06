@@ -16,6 +16,7 @@ localhost(:[0-9]*)?
 # Missing or Made-up Words
 1:1s
 12pm
+4x
 addon(s)?
 affordances
 Agile-ific
@@ -60,6 +61,7 @@ defacto
 egoless
 [E,e]nablement
 Endnotes
+executables
 expensed
 expirations
 failover
@@ -253,6 +255,7 @@ GitLab
 [G,g]mail
 [G,g]ithub
 [G,g]olang
+GraalVM
 Gradle
 Grafana
 Grails
@@ -269,6 +272,7 @@ InfoQ
 IntelliJ
 J2EE
 Jaeger
+JaFU
 Jakarta
 JavaEE
 JBatch
@@ -289,6 +293,7 @@ keyspace
 keychain
 Kibana
 Knative
+KoFu
 kpack(-hosted)?
 kpack
 Kpack
@@ -308,6 +313,7 @@ MacBook
 Mesos
 Microk8s
 [M,m]inikube
+MiXiT
 Mockito
 MockMvc
 msgpack(ed)?
@@ -407,6 +413,7 @@ CoreOS
 DevNexus
 DevOpsDaysKC
 Documentum
+DockerCon
 DZone
 EMC
 Garmin
@@ -421,6 +428,7 @@ JetBrains
 KubeCon
 Octoverse
 OneMagnify
+OpenSource
 Pluralsight
 PMC
 Rakuten
@@ -451,6 +459,7 @@ CSV(s)?
 CTO
 DAO
 DNS
+DSLs
 EE
 EFK
 FP
@@ -535,6 +544,7 @@ Clozel
 DaShaun
 Damasceno
 Debroy
+Deleuze
 Desgber
 Dieruf
 Dieu
@@ -593,6 +603,7 @@ Sanderson
 Sathe
 Schimanski
 Schutta
+Sébastien
 Sevilla
 Sloka
 Smythe
@@ -641,6 +652,7 @@ tiffanyfayj
 12SwitchRestoresSansCheckOuts
 OLGA_MACIASZEK
 benbravo73
+kendrickcoleman
 
 # Tags
 img
