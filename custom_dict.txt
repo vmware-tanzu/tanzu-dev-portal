@@ -16,6 +16,7 @@ localhost(:[0-9]*)?
 # Missing or Made-up Words
 1:1s
 12pm
+4x
 addon(s)?
 affordances
 Agile-ific
@@ -58,6 +59,7 @@ defacto
 egoless
 [E,e]nablement
 Endnotes
+executables
 expensed
 expirations
 failover
@@ -139,6 +141,7 @@ scalable
 screencaster
 [S,s]erverless
 [S,s]ervlets?
+SmartTV
 sso|SSO
 (de)*serialize[d,r]
 Sox
@@ -182,6 +185,7 @@ PropertySources
 Activiti
 adoptopenjdk
 Alpine(-based)?
+Alexa
 Ansible
 amd64
 AMQP
@@ -236,8 +240,10 @@ GemFire
 [G,g]mail
 [G,g]ithub
 [G,g]olang
+GraalVM
 Gradle
 Grafana
+Grails
 Grasso
 gotchas
 Gunicorn
@@ -248,8 +254,10 @@ HTTPie
 HyperKit
 init
 InfoQ
+IntelliJ
 J2EE
 Jaeger
+JaFU
 Jakarta
 JavaEE
 JBatch
@@ -267,6 +275,7 @@ keyspace
 keychain
 Kibana
 Knative
+KoFu
 kpack(-hosted)?
 kpack
 Kpack
@@ -284,6 +293,7 @@ LoadBalancer
 [M,m]acOS
 Microk8s
 [M,m]inikube
+MiXiT
 Mockito
 MockMvc
 msgpack(ed)?
@@ -336,6 +346,7 @@ SIG-Network
 SIG-Runtime
 SIG-Security
 SIG-Storage
+Siri
 [S,s]kaffold
 Snapchat
 SpringBoot
@@ -380,6 +391,7 @@ CoreOS
 DevNexus
 DevOpsDaysKC
 Documentum
+DockerCon
 DZone
 EMC
 Garmin
@@ -394,6 +406,7 @@ JetBrains
 KubeCon
 Octoverse
 OneMagnify
+OpenSource
 Pluralsight
 PMC
 Rakuten
@@ -420,8 +433,10 @@ CNCF
 CNI
 CQL
 CRM
+CTO
 DAO
 DNS
+DSLs
 EE
 EFK
 FP
@@ -437,6 +452,7 @@ JMX
 JPA
 JSON
 JSR-352
+JST
 JVM
 KMS
 LDAP
@@ -450,6 +466,7 @@ ok
 POJO(s)?
 pb('s)?
 IIS
+IoT
 JAAS
 NFJS
 NSX
@@ -461,6 +478,7 @@ ORM(-based)?
 OSS
 OWASP
 POJP
+PWAs
 RBAC(-enabled)?
 ROI
 [s,S]3
@@ -471,6 +489,7 @@ TBD
 TCP
 TLS
 UI
+UIs
 UR[I,L](s)?
 url
 VMs?
@@ -494,12 +513,14 @@ Brindley
 Brodi
 Buschmann
 Cao
+Carducci
 Coté
 Clozel
 (pc|C)zarkowski('s)?
 DaShaun
 Damasceno
 Debroy
+Deleuze
 Desgber
 Dieruf
 Dieu
@@ -558,6 +579,8 @@ Sanderson
 Sathe
 Schimanski
 Schutta
+Sébastien
+Sevilla
 Sloka
 Smythe
 Stéphane
@@ -605,6 +628,7 @@ tiffanyfayj
 12SwitchRestoresSansCheckOuts
 OLGA_MACIASZEK
 benbravo73
+kendrickcoleman
 
 # Tags
 img
