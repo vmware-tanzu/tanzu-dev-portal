@@ -19,7 +19,7 @@ team:
 - Brian McClain
 ---
 
-Three years ago, a colleague of mine wrote a post to help readers [understand when to use RabbitMQ and when to use Apache Kafka](https://tanzu.vmware.com/content/blog/understanding-when-to-use-rabbitmq-or-apache-kafka), which many found to be very useful. While the two solutions take very different approaches architecturally and can solve very different problems, many find themselves comparing them for overlapping solutions. In an increasingly distributed environment where more and more services need to communicate with each other, RabbitMQ and Kafka have both come to be popular services that facilitate that communication.
+Three years ago, a colleague of mine wrote a post to help readers understand when to use RabbitMQ and when to use Apache Kafka, which many found to be very useful. While the two solutions take very different approaches architecturally and can solve very different problems, many find themselves comparing them for overlapping solutions. In an increasingly distributed environment where more and more services need to communicate with each other, RabbitMQ and Kafka have both come to be popular services that facilitate that communication.
 
 It has been three years since that post was published, however, which in technology can be lifetime. We thought this would be a great opportunity to revisit how RabbitMQ and Kafka have changed, check if their strengths have shifted, and see how they fit into today’s use case.
 
