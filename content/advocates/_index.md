@@ -26,11 +26,11 @@ menu:
 
 - Conduct deep-dive, technical workshops for technical staff (devs, ops, product managers, testers, security, and all of the intersections of these disciplines)
 - Lead or support executive briefings, meetings, executive dinners, etc.
-- Explain VMware/Pivotal/Tanzu  and provide related use case stories to audiences
+- Explain VMware Tanzu and provide related use case stories to audiences
 - Provide input to vision, campaigns, and content both inside and outside of VMware
 - Participate in casual conversational meetings, such as over lunch or dinner
 - Host or speak at meetups (CF, CN, Spring, JUG, DevOps, management/executives)
-- Provide a conduit for you to have an impact on VMware/Tanzu products
+- Provide a conduit for you to have an impact on VMware Tanzu products
 - Help you tell a story across many mediums
 
-_Virtually or in person, VMware/Tanzu specific or Open source ecosystem._ 
+_Virtually or in person, VMware Tanzu specific or Open source ecosystem._ 
