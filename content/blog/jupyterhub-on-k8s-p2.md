@@ -3,7 +3,7 @@ title: "Data Science with Python & JupyterHub on Kubernetes - Part 2"
 featured: false
 description: >
     Using JupyterHub on Kubernetes
-date: 2021-01-07
+date: 2021-01-08
 topics:
 - Python
 tags:

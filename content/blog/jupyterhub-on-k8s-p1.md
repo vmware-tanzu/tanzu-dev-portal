@@ -4,7 +4,7 @@ featured: true
 weight: 1
 description: >
     Setting up JupyterHub on Kubernetes
-date: 2021-01-06
+date: 2021-01-07
 topics:
 - Python
 tags:
