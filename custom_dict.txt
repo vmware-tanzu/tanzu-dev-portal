@@ -21,11 +21,12 @@ addon(s)?
 affordances
 Agile-ific
 amongst
-analytics
+[A,a]nalytics
 antipatterns?
 [A,a]rchitecting
 artisanal
 async
+authenticator
 [A,a]utoscaling
 Aviv
 (back|front)end(s)?
@@ -45,6 +46,7 @@ cortado
 counterintuitive
 COVID-19
 customizable
+dataset
 [D,d]e-referenced
 deployable
 developer-centric
@@ -80,6 +82,9 @@ ideate
 InfoSec
 [I,i]ntegrations
 [I,i]nterservice
+Jiu
+Jitsu
+jumpstart
 Kanban
 kitesurfing
 letsencrypt-staging
@@ -96,6 +101,7 @@ middleware
 [M,m]inibroker
 Mini-Wheats
 Multitenant
+[M,m]ultiuser
 namespace
 natively
 no-brainer
@@ -107,6 +113,7 @@ orchestrator
 org(s)?
 overcomplicate
 overengineer(ing)?
+oversample
 pb&jelly
 parallelizing
 passcode|PASSCODE
@@ -119,6 +126,7 @@ prepending
 pre-built
 pre-programmed
 pre-release
+preconfigured
 podcaster
 programmatically
 pushable
@@ -139,6 +147,7 @@ runnable
 SaaS-based
 scalable
 screencaster
+seaborn
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -162,6 +171,7 @@ toolchain
 toolkits
 tooltip
 UI-based
+undersample
 unencrypted
 unpause
 unpushed
@@ -175,6 +185,7 @@ walkthrough
 waypoints
 webhooks?
 whiteboard(ed|ing)
+workspaces
 [O,o]makase
 Teppanyaki
 
@@ -196,6 +207,7 @@ AppServer
 [A,a]rgo(CD|cd)(-k8s)?
 Astra
 auth
+autosave
 Autowired
 base64(-encoded)?
 Bitnami('s)?
@@ -220,6 +232,7 @@ ConfigMap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 containerd
+CSI
 Dataflow
 DATEV('s)?
 Devoops
@@ -232,11 +245,13 @@ ElasticSearch
 [E,e]thernet(s)?
 etcd
 Falco
+FC
 filesystem
 Finchley
 Flake8
 formatter
 GemFire
+GitLab
 [G,g]mail
 [G,g]ithub
 [G,g]olang
@@ -266,6 +281,9 @@ JHipster
 JPA
 Jsonnet
 JSON-to-Java
+Jupyter
+JupyterHub
+JupyterLab
 [K,k](8|9|14)s
 Kaniko
 kapp
@@ -290,7 +308,9 @@ linter
 [L,l]inux
 [L,l]og4j2?
 LoadBalancer
+MacBook
 [M,m]acOS
+Mesos
 Microk8s
 [M,m]inikube
 MiXiT
@@ -303,6 +323,7 @@ MyPy
 [N,n]ano
 Neo4j
 Netty(-based)?
+NFS
 nginx
 NGINX
 NoSQL
@@ -327,6 +348,7 @@ POSTROUTING
 pullPolicy
 [P,p]yenv
 [P,p]yenv-virtualenv
+Python3
 [V,v]irtualenv
 pyenv-installer
 [P,p]ip[X,x]('s)?
@@ -433,6 +455,7 @@ CNCF
 CNI
 CQL
 CRM
+CSV(s)?
 CTO
 DAO
 DNS
@@ -454,6 +477,7 @@ JSON
 JSR-352
 JST
 JVM
+KNN
 KMS
 LDAP
 LTS

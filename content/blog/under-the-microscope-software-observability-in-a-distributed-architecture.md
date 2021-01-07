@@ -1,6 +1,6 @@
 ---
 title: "Under the Microscope: Software Observability in a Distributed Architecture"
-featured: true
+featured: false
 weight: 1
 description: >
    The importance of observability in distributed systems.
