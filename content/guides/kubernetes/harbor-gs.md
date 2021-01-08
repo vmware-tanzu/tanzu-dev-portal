@@ -11,6 +11,7 @@ patterns:
 - Deployment
 team:
 - Tony Vetter
+- Paul Czarkowski
 ---
 
 Running a private container image registry has been a staple in many enterprise environments for years. These registries allow full control over access, updates, and the software platform itself. And while your organization may have an official image registry, having your own can also be a benefit!
