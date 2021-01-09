@@ -1,7 +1,7 @@
 ---
-title:  "Remote Tips: Remote is exhausting"
-sortTitle: "Remote Tips: Remote is exhausting"
-weight: 5
+title:  "Remote Tips: Remote is Exhausting"
+linkTitle:  "Remote is Exhausting"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:

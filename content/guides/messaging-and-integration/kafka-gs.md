@@ -1,7 +1,6 @@
 ---
-title:  "Kafka: Getting Started"
-sortTitle: "Kafka"
-weight: 1
+title:  "Getting Started with Kafka"
+linkTitle: "Kafka"
 topics:
 - Event Streaming
 - Messaging and Integration

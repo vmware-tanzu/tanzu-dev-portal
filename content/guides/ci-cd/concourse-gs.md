@@ -1,7 +1,6 @@
 ---
-title:  "Concourse: Getting Started with Concourse CI"
-sortTitle: "Concourse CI"
-weight: 2
+title:  "Getting Started with Concourse Continuous Integration"
+linkTitle: "Concourse CI"
 topics:
 - CI-CD
 tags:

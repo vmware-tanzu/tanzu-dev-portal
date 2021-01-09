@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Tekton Part 2: Building a Container"
-sortTitle: "Tekton 2"
+linkTitle: "Building a Container with Tekton"
+parent: "Tekton"
 weight: 2
 topics:
 - CI-CD

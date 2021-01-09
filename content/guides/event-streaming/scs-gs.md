@@ -1,7 +1,6 @@
 ---
-title:  "Spring Cloud Stream: Getting Started"
-sortTitle: "Spring Cloud Stream"
-weight: 2
+title: "Getting Started with Spring Cloud Stream"
+parent: "Spring Cloud Stream"
 topics:
 - Event Streaming
 - Messaging and Integration

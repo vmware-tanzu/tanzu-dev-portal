@@ -1,7 +1,7 @@
 ---
 title: "Remote Tips: Physical Space"
-sortTitle: "Remote Tips: Physical Space"
-weight: 3
+linkTitle: "Physical Space"
+parent: "Remote Tips"
 topics:
   - Agile
 tags:

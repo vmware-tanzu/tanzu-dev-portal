@@ -1,7 +1,7 @@
 ---
 title:  "Remote Tips: Facilitation"
-sortTitle: "Remote Tips: Facilitation"
-weight: 2
+linkTitle: "Facilitation"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:

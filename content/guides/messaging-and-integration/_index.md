@@ -1,10 +1,12 @@
 ---
 title: Messaging and Integration
+linkTitle: Messaging/Integration
 weight: 1
 tags:
 - Messaging and Integration
 description: >
     Messaging services can receive and sort a large number of messages while serving consumers at scale. 
+icon: messaging
 layout: single
 ---
 

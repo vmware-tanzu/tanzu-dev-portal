@@ -1,7 +1,6 @@
 ---
-title:  "Spring Cloud Gateway: Getting Started"
-sortTitle: "Spring Cloud Gateway"
-weight: 2
+title: "Getting Started with Spring Cloud Gateway"
+parent: "Spring Cloud Gateway"
 topics:
 - Spring
 - Microservices

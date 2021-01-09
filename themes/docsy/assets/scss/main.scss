@@ -32,6 +32,30 @@
     @import url($web-font-path);
 }
 
+.guide .td-sidebar-nav__subsection-title a:after {
+  padding-left: 5px;
+  content: url({{ "/images/icons/arrow-right.svg" | relURL }});
+}
+
+.guide .td-sidebar-nav__subsection-title a.active:after,
+.guide .td-sidebar-nav__subsection-title a.selected:after {
+  content: url({{ "/images/icons/arrow-down.svg" | relURL }});
+}
+
+.guide .td-sidebar-nav h5 {
+  margin-top: 30px;
+}
+
+.guide .td-sidebar-nav h5 a {
+  font-size: .75rem;
+  color: white;
+}
+
+.guide .td-sidebar-nav h5 a:before {
+  padding-right: 10px;
+  content: url({{ "/images/icons/arrow-left-white.svg" | relURL }});
+}
+
 #hero {
     background-repeat: no-repeat;
     background-position: right;

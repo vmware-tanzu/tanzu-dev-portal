@@ -1,18 +1,13 @@
 ---
-title: "Need Help Working Remotely? Check Out Our Tips"
-featured: true
-weight: 2
-description: >
-    VMware Pivotal Labs offers some tips for overcoming the challenges many are facing from transitioning to remote work due to COVID-19
-date: 2020-10-07
+title: "Remote Tips"
+subsection: "Remote Tips"
 topics:
 - Agile
-patterns:
-team: 
+tags:
+- Agile
+team:
 - VMware Pivotal Labs
 ---
-
-![Remote Workspace with Cat](/images/blogs/remote-tips/remote-workspace.jpg)
 
 The transition to working remotely due to COVID-19 has proven to be quite a challenge—including for those of us at VMware Pivotal Labs. While remotely communicating and collaborating using digital tools is not new to us, doing so in an entirely distributed environment for the foreseeable future is. 
 

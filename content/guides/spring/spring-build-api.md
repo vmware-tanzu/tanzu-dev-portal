@@ -1,7 +1,7 @@
 ---
-title:  "Spring Boot: Building an API"
-sortTitle: "Spring Boot"
-weight: 2
+title:  "Building an API with Spring Boot"
+linkTitle: "Spring Boot"
+subsection: "Spring Boot"
 topics:
 - Spring
 - Microservices

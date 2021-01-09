@@ -1,7 +1,6 @@
 ---
-title:  "CF-for-k8s: Getting Started with Cloud Foundry for Kubernetes"
-sortTitle: "cf-for-k8s"
-weight: 2
+title:  "Getting Started with Cloud Foundry for Kubernetes"
+linkTitle: "Cloud Foundry for Kubernetes"
 topics:
 - Kubernetes
 tags:

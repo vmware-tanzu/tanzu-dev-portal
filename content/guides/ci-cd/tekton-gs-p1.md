@@ -1,7 +1,8 @@
 ---
 title:  "Getting Started with Tekton Part 1: Hello World"
-sortTitle: "Tekton 1"
-weight: 2
+linkTitle: "Getting Started with Tekton"
+parent: "Tekton"
+weight: 1
 topics:
 - CI-CD
 tags:

@@ -1,6 +1,6 @@
 ---
-title:  "Understanding API-First Development"
-sortTitle: "Understanding API-First Development"
+title: "Understanding API-First Development"
+linkTitle: "API-First Development"
 weight: 3
 topics:
 - Spring

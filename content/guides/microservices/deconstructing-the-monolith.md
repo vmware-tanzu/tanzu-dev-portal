@@ -1,6 +1,5 @@
 ---
-title:  "Breaking Down a Monolith"
-sortTitle: "Breaking Down a Monolith"
+title: "Breaking Down a Monolith"
 weight: 2
 topics:
 - Microservices

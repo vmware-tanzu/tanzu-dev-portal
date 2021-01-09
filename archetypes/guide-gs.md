@@ -1,6 +1,5 @@
 ---
 title:  "{{ replace (replace .Name "-" " " | title) " Gs" "" -}}: Getting Started"
-sortTitle: "{{ replace (replace .Name "-" " " | title) " Gs" "" }}"
 weight: 2
 topics:
 - 

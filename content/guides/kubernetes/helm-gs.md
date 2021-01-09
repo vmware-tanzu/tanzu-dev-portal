@@ -1,7 +1,6 @@
 ---
-title:  "Helm: Getting Started with Using Helm to Deploy Apps on Kubernetes"
-sortTitle: "Helm"
-weight: 2
+title:  "Getting Started with Helm"
+parent: "Helm"
 topics:
 - Kubernetes
 tags:

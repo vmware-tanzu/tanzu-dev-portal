@@ -1,6 +1,5 @@
 ---
 title:  "{{ replace (replace .Name "-" " " | title) " What Is" "" }}: What Is It?"
-sortTitle: "{{ replace (replace .Name "-" " " | title) " What Is" "" }}"
 weight: 1
 categories:
 - 
