@@ -1,8 +1,9 @@
 ---
 title: "Under the Microscope: Software Observability in a Distributed Architecture"
 featured: false
+weight: 1
 description: >
-    Building Containers from your code.
+   The importance of observability in distributed systems.
 date: 2020-11-04
 topics:
 - Microservices
@@ -44,7 +45,7 @@ Without observability, we were limited in our understanding of the underlying is
 
 Now that we have an idea of what observability is and why it is essential, let’s walk through how to achieve it.
 
-## How Do You  Achieve Observability?
+## How Do You Achieve Observability?
 
 To achieve observability, start by instrumenting services as much as possible. Doing so is easier today than ever before. Not only are there myriad commercial products available, there are handy open source products like Prometheus, Grafana, Zipkin, and others. There is no excuse for not instrumenting your systems.
 

@@ -18,7 +18,7 @@ episode_banner: "/images/tv/episodes/bcak/0.jpg"
 episode_image: "/images/tv/episodes/bcak/0.jpg"
 
 explicit: "no"
-title: "Between Chair and Keyboard with guest GUEST_NAME"
+title: "The one with GUEST_NAME"
 youtube: "YT_ID"
 truncate: ""
 twitch: "vmwaretanzu"
