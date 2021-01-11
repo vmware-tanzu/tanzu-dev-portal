@@ -44,7 +44,7 @@ Before you get started, you’ll need to do the following:
 
 - **About 30 minutes**:  It could take more time than that; it will depend on how long the Let’s Encrypt servers take to issue certificates. But in most of my testing for writing this post, it took about 30 minutes.
 
-- *Optional - buy a domain name*: You can use `.xip.io` addresses to avoid needing to buy a domain. Otherwise you will need a domain name that you control in order to configure DNS. This guide uses a Google-managed domain and DNS zone, but instructions can be modified for other providers.
+- *Optional - buy a domain name*: You can use `.xip.io` (a [service](http://xip.io) that provides dynamic DNS based on IP address) addresses to avoid needing to buy a domain. Otherwise you will need a domain name that you control in order to configure DNS. This guide uses a Google-managed domain and DNS zone, but instructions can be modified for other providers.
 
 ## Prepare the Environment
 
