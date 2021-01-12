@@ -46,6 +46,8 @@ Before you get started, you’ll need to do the following:
 
 - *Optional - buy a domain name*: You can use `.xip.io` (a [service](http://xip.io) that provides dynamic DNS based on IP address) addresses to avoid needing to buy a domain. Otherwise you will need a domain name that you control in order to configure DNS. This guide uses a Google-managed domain and DNS zone, but instructions can be modified for other providers.
 
+> Note: If you use `.xip.io` you may experience issues using the `letsencrypt-prod` ClusterIssuer later in the demo as it often hits the Lets Encrypt rate limits.  The first staging certificate step will work fine. If you hit the rate limit, often you can just wait a few hours and it'll eventually work. For best results use Google DNS with your own domain, or set up a wildcard DNS for your domain pointing at your Ingress IP.
+
 ## Prepare the Environment
 
 Create a Kubernetes cluster.  In GKE this can be as simple as running:
@@ -208,7 +210,6 @@ apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-staging
-  namespace: cert-manager
 spec:
   acme:
     email: $EMAIL_ADDRESS
@@ -318,6 +319,8 @@ Once you ensure that you can log in and that Harbor is working as intended, you 
 
 ## Set Up Let's Encrypt Production Certificates
 
+> Reminder, if using `.xip.io` you may encounter rate limit issues with Lets Encrypt causing major delays in the certificate issuance.
+
 Similar to how you set up the Let's Encrypt staging certificate, you now need to create the `ClusterIssuer` for production certificates. First, `echo` the following to create the file.
 
 ```bash
@@ -326,7 +329,6 @@ apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
-  namespace: cert-manager
 spec:
   acme:
     email: $EMAIL_ADDRESS
