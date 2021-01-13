@@ -22,6 +22,8 @@ A container image registry needs to be accessible to many online services to be 
 
 In this guide, you will deploy Harbor to Kubernetes as the actual image registry application. You will also use Project Contour to manage ingress to your Kubernetes cluster.
 
+{{< youtube id="SXSqrgYKO4s" class="youtube-video-shortcode" >}}
+
 ## Harbor and Contour
 
 [Harbor](https://goharbor.io) is a powerful registry for containers and Helm charts. It is fully open source and backed by the [Cloud Native Computing Foundation (CNCF)](https://landscape.cncf.io/selected=harbor). But getting it up and running, with automated TLS certificate renewal in particular, can be a challenge—especially with the multiple services Harbor uses that require east-west and north-south network communication.
