@@ -2,7 +2,7 @@
 title:  "Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes"
 linkTitle: "Prometheus and Grafana"
 parent: "Spring Boot"
-weight: 2
+weight: 3
 topics:
 - spring
 tags:
