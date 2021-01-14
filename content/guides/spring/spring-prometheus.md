@@ -4,14 +4,14 @@ linkTitle: "Prometheus and Grafana"
 parent: "Spring Boot"
 weight: 3
 topics:
-- spring
+- Spring
 tags:
-- spring
-- observability
-- prometheus
-- grafana
+- Spring
+- Observability
+- Prometheus
+- Grafana
 patterns:
-- observability
+- Observability
 team:
 - Brian McClain
 ---
