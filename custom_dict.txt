@@ -49,9 +49,11 @@ customizable
 dataset
 [D,d]e-referenced
 deployable
+deserializing
 developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
+diehard
 differentiators
 [E,e]venting
 de
@@ -178,6 +180,7 @@ unpushed
 unreleasable
 uptime
 V2
+validators
 versioned
 veth-jelly
 virtualized
@@ -299,6 +302,7 @@ kpack
 Kpack
 Krisp
 ksqlDB
+kube-apiserver
 KubeAcademy
 [K,k]ubeapps
 kubectl
@@ -459,7 +463,7 @@ CSV(s)?
 CTO
 DAO
 DNS
-DSLs
+DSL(s)?
 EE
 EFK
 FP
@@ -528,7 +532,7 @@ Amaro
 Anneliese
 Aravena
 Asiedu-Ampem
-Beda
+Beda('s)?
 Belamaric
 Biville
 Bongiovanni
@@ -614,6 +618,7 @@ Templeton
 Vetter
 Viktor
 Junio
+Hadlow
 Hamano
 Maciaszek-Sharma
 Nicoll
@@ -663,6 +668,10 @@ slideshare
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
 CKtaKhKOo-Y
+8PpgqEqkQWA
 
 # Emoji
 ℹ
+
+# CVE ID
+CVE-[0-9]{4}-[0-9]+
