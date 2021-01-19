@@ -1,7 +1,6 @@
 ---
 title: "Digital Transformation: The Coder’s Business Codex"
-featured: true
-weight: 3
+featured: false
 description: >
     Coté demystifies what the term "digital transformation" means for developers.
 date: 2020-11-23
