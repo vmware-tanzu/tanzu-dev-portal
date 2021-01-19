@@ -1,9 +1,10 @@
 ---
 title: "The Hate for YAML: The Hammer or the Nail?"
-featured: false
+featured: true
+weight: 1
 description: >
     YAML gets a lot of hate, but is it more nuanced than that?
-date: 2021-01-14
+date: 2021-01-19
 topics:
 - Kubernetes
 tags:
@@ -155,7 +156,7 @@ Beda also points out a common trap that some can fall into: mixing up config and
 
 He references a short, but relevant, piece by Mike Hadlow titled [The Configuration Complexity Clock](http://mikehadlow.blogspot.com/2012/05/configuration-complexity-clock.html) in which Hadlow walks through, from start to finish, what happens in a case such as this, and expands on it. Basically, if you create your own configuration DSL, you’ve traded a common general purpose language with a widely known skill set for something that nobody knows. You’ve also traded a potential fleet of testing tools for ones you now need to write yourself. Meanwhile, if you hide concepts, you’re potentially limiting features on one hand. On the other hand, if you’re embracing them, you’re no better off than you were at the start.
 
-Beda instead advocates embracing the tools that have emerged organically from the Kubernetes community itself. He also points out the benefit of taking a Unix-like toolchain mindset of breaking down a problem into smaller chunks and feeding each one into the next. If an individual doesn’t like a piece of the chain, they can replace it with a similar solution of their own.
+Beda instead advocates embracing the tools that have emerged organically from the Kubernetes community itself. He also points out the benefit of taking a Unix-like toolchain mindset of breaking down a problem into smaller chunks and feeding each one into the next. If an individual doesn’t like a piece of the chain, they can replace it with a similar solution of their own. For example, [Carvel](https://carvel.dev/) aims to accomplish this approach, providing a collection of single-purpose, composable tools that you can chain together. If you'd like to learn more about Carvel, there's a great [TGIK episode](/tv/tgik/142/) that covers the different tools and how they can work together. 
 
 So what’s the verdict? Is YAML the worst thing in the world? Is the hate overblown? Well, it’s your opinion and yours alone, just be sure to really reflect on why, exactly, you hold that opinion. Beda’s talk made me realize just how nuanced the common jokes about the pain of YAML really are, so if you have a spare half hour, be sure to [watch it](https://www.youtube.com/watch?v=8PpgqEqkQWA). Even if you’re a diehard YAML advocate, he still does a great job of putting into words the things that likely haven't even crossed many people’s minds. 
 

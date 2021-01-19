@@ -40,7 +40,7 @@ Bugsville
 cfapps
 codebase
 [C,c]omms
-Composable
+[C,c]omposable
 [C,c]onfig
 cortado
 counterintuitive
@@ -515,6 +515,7 @@ SIG
 SRE
 TBD
 TCP
+TGIK
 TLS
 UI
 UIs
