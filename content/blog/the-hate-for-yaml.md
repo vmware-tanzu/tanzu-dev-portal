@@ -40,7 +40,7 @@ foo:
 baz: b
 ```
 
-It’s easy to spot the difference in such a small example, but potentially even easier to overlook two missing spaces when this YAML is hundreds or thousands of lines long. This can of course be mitigated with tools such as schema validators.
+It’s easy to spot the difference in such a small example, but potentially even easier to overlook two missing spaces when this YAML is hundreds or thousands of lines long. To be fair, this issue isn't completely unique to YAML. In JSON for example, you could easily place a key in a wrong node, or misspell a key in an array of objects. Both of these can of course be mitigated with tools such as schema validators.
 
 There is some behavior that isn’t as obvious, though. Take the following YAML, for example:
 
@@ -138,7 +138,7 @@ This is a play on a fairly old trick that utilizes recursion to expand a rather 
 
 Beda did mention there was a second wolf in this conversation, and with it comes the nuance of YAML’s use in the context of Kubernetes.
 
-First and foremost, YAML that describes objects in Kubernetes is incredibly verbose. Another word that could be used is “explicit.” In machine-to-machine communication, explicitness is great. It doesn’t matter if it’s 100 lines of YAML or 1,000, the difference when being parsed and passed around to different machines and APIs, all while making sure those APIs are responsible for making too many assumptions, is completely negligible. That YAML has to come from somewhere, though, and often that “somewhere” is actually “someone.” Such explicitness means an additional burden of complexity for the user.
+First and foremost, Kubernetes resources can be complex, and in turn make the YAML very verbose. Another word that could be used is “explicit.” In machine-to-machine communication, explicitness is great. It doesn’t matter if it’s 100 lines of YAML or 1,000, the difference when being parsed and passed around to different machines and APIs, all while making sure those APIs are responsible for making too many assumptions, is completely negligible. That YAML has to come from somewhere, though, and often that “somewhere” is actually “someone.” Such explicitness means an additional burden of complexity for the user.
 
 Kubernetes also does _a lot_. In fact, it can solve so many problems that it can actually make the simpler problems harder. Beda gives a great analogy referencing a popular word processor that often received complaints for being too “bloated.” People would say, “It has all of these features and I only ever use 20 percent of them.” Beda describes the research the development team undertook to figure out how users leveraged those features: They concluded that while any individual user would only leverage a small percentage of features—say, 10 percent—different collections of users would leverage a different 10 percent, and most features actually received significant usage. 
 
