@@ -1,6 +1,7 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
 linkTitle: "Prometheus and Grafana"
+subsection: "Prometheus and Grafana"
 topics:
 - Kubernetes
 tags:
@@ -12,6 +13,7 @@ patterns:
 - Observability
 team:
 - Brian McClain
+draft: true
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and everything seems to be running great. Your work is done, right?

@@ -1,8 +1,8 @@
 <h5 class=" mb-4">
 {{- range $index, $element := .context.Params.team }}
     {{ $page := index (where $.context.Site.Pages "Params.name" .) 0 }}
+    {{ if gt $index 0 }} & {{ end }}
     {{ if $page }}
-        {{ if gt $index 0 }} & {{ end }}
         <a href='{{ (print "/team/" . | urlize) | relURL }}'>{{ . }}</a>
     {{ else}}
         {{ . }}

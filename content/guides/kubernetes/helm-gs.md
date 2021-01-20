@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Helm"
 parent: "Helm"
+weight: 1
 topics:
 - Kubernetes
 tags:
