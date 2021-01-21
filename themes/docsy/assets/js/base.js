@@ -313,4 +313,52 @@ limitations under the License.
 
     });
 
+    //Header search
+    $("header li .search-icon").click(function(){
+        window.dataLayer.push({'event': 'logEvent', 'eventType': 'Clicked search icon', 'eventProperties': {'url path': window.location.pathname} });
+
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+    });
+
+    $("header li .search-icon").keypress(function (e) {
+        if (e.which == 13) {
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+        }
+    });
+
+    $(".search-hide").click(function(){
+        $('#search-nav').slideToggle();
+        $(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+    });
+
+    // $( "header .fa-search" ).click(function() {
+    //   if (!$('header .search').hasClass("expanded")) {
+    //     $('header .search').addClass('expanded');
+    //       $( "header .search" ).animate({
+    //         width: 228
+    //       }, 700, function() {
+    //         $('header .gsc-input input.gsc-input,header #searchheaderinput').css('width','185px');
+    //         setTimeout("$('#searchheaderinput').focus();");
+
+    //       });          
+    //   } else {
+    //     $('header .gsc-input input.gsc-input,header #searchheaderinput').css('width','0');
+    //     $('header .gse').hide();
+    //     $('header .search').removeClass('expanded');
+    //     $( "header .search" ).animate({
+    //       width: 35
+    //     }, 700, function() {
+    //     });
+    //   }
+    // });
+
+
 }(jQuery));

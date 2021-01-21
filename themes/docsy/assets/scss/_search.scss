@@ -15,3 +15,128 @@
     font-family: "Font Awesome 5 Free", $font-family-base;
     font-weight: 900;
 }
+
+/* Search */
+/* line 2773, app/assets/stylesheets/global.scss */
+.search {
+    text-align: left;
+    text-transform: none;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* line 2782, app/assets/stylesheets/global.scss */
+  .search .search-icon:focus {
+    outline: none;
+  }
+  
+  /* line 2785, app/assets/stylesheets/global.scss */
+  .search .search-icon svg:nth-child(2) {
+    display: none;
+  }
+  
+  /* line 2789, app/assets/stylesheets/global.scss */
+  .search .search-icon.close svg:first-child {
+    display: none;
+  }
+  
+  /* line 2792, app/assets/stylesheets/global.scss */
+  .search .search-icon.close svg:nth-child(2) {
+    display: block;
+  }
+  
+  /* line 2799, app/assets/stylesheets/global.scss */
+  .search-icon,
+  #search-nav svg {
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* line 2803, app/assets/stylesheets/global.scss */
+  .search-icon .b,
+  #search-nav svg .b {
+    fill: #28333c;
+  }
+  
+  /* line 2810, app/assets/stylesheets/global.scss */
+  #searchbodyform input,
+  #searchheaderform input {
+    background: transparent;
+    border-radius: 0;
+    padding: 0 0 0 23px;
+    height: 26px;
+    margin: 2px 0 0;
+    font-size: 16px;
+    border: none;
+    color: #61717d;
+  }
+  
+  /* line 2820, app/assets/stylesheets/global.scss */
+  #searchbodyform input:focus,
+  #searchheaderform input:focus {
+    outline: none !important;
+  }
+  
+  /* line 2824, app/assets/stylesheets/global.scss */
+  #searchbodyform #searchbodysubmit,
+  #searchbodyform #searchheadersubmit,
+  #searchheaderform #searchbodysubmit,
+  #searchheaderform #searchheadersubmit {
+    display: none;
+  }
+  
+  /* line 2831, app/assets/stylesheets/global.scss */
+  #search-nav {
+    background: white;
+    position: absolute;
+    top: 88px;
+    width: 100%;
+    padding: 18px 0 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: -1;
+  }
+  
+  /* line 2845, app/assets/stylesheets/global.scss */
+  #search-nav svg {
+    right: 20px;
+    position: absolute;
+    top: 4px;
+  }
+  
+  @media (max-width: 1000px) {
+    /* line 2831, app/assets/stylesheets/global.scss */
+    #search-nav {
+      display: none !important;
+    }
+  }
+  
+  /* line 2855, app/assets/stylesheets/global.scss */
+  #searchheaderform {
+    width: 98%;
+    display: inline-block;
+  }
+  
+  /* line 2860, app/assets/stylesheets/global.scss */
+  #searchheaderform .fa-search {
+    display: inline-block;
+    float: right;
+  }
+  
+  /* line 2865, app/assets/stylesheets/global.scss */
+  #searchheaderform input {
+    padding: 2px 0 0 0;
+    font-size: 17px;
+    color: #999999;
+    font-weight: 300;
+    width: 100%;
+  }
+  
+  /* line 2873, app/assets/stylesheets/global.scss */
+  #searchheaderform ::placeholder {
+    color: #999999;
+  }

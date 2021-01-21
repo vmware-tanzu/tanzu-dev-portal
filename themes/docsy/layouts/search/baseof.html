@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="td-{{ .Kind }}" id="advocates-index">
+    {{ partial "required-gtm-no-script.html" . }}
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      
+      <div id="search">
+        <form id="searchbodyform" action="#" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+            <input type="text" name="q" id="searchbodyinput" autocomplete="off" placeholder="Search" />
+            <input type="submit" value="Search" id="searchbodysubmit" data-disable-with="" />
+        </form>
+        
+        <div id='search-results-info'></div>
+        
+        <div id='search-results-container'></div>
+        
+        <script src='/developer/js/search.js'></script>
+    </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
+
