@@ -40,7 +40,7 @@
 
 			<li class="search remove-menu search_icon">
 				<div class="search-icon relative z-1" tabindex="0">
-					<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg id="search-svg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="6.08696" cy="6.08696" r="5.33696" stroke="white" stroke-width="1.5"/>
 						<path d="M9.13049 10.3478L14.0001 15.2173" stroke="white" stroke-width="1.5"/>
 					</svg>
@@ -66,10 +66,10 @@
 		</div>
 	</div>
 
-	<div id="search-nav" role="search" style="display: none;">
+	<div id="search-nav" role="search">
 		<div class="container relative">
-		<form id="searchheaderform" action="/search" accept-charset="UTF-8" method="get" __bizdiag="111607584" __biza="WJ__"><input name="utf8" type="hidden" value="✓">
-		<input type="text" name="q" id="searchheaderinput" autocomplete="off" placeholder="Search for documentation, articles, and posts...">
+		<form id="searchheaderform" action='{{ "/search" | relURL }}' accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+		<input type="text" name="q" id="searchheaderinput" autocomplete="off" placeholder="Search for guides, videos, code samples, posts, and more...">
 		<input type="submit" value="" id="searchheadersubmit" data-disable-with="">
 		</form>
 		
@@ -80,6 +80,5 @@
 		</div>
 		</div>
 	</div>
-	<!-- <div class="navbar-nav d-none d-lg-block">{{ partial "search-input.html" . }}</div> -->
 </div>
 </nav>

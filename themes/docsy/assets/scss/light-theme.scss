@@ -156,6 +156,10 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
    background: #28333c !important;
 }
 
+#search-svg circle, #search-svg path {
+  stroke: #999;
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
