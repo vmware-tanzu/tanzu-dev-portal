@@ -5,7 +5,6 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
   </head>
   <body class="td-{{ .Kind }} workshop">
-    {{ partial "required-gtm-no-script.html" . }}
     <header>
       {{ partial "navbar.html" . }}
     </header>
