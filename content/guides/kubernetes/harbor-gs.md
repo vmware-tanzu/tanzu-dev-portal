@@ -86,7 +86,7 @@ helm repo update
 Next, run `helm install` to finish the installation. Here you will install Bitnami's image for Contour. This chart includes defaults that will work out of the box for this guide. And since it comes from Bitnami, you can trust that the image has been thoroughly tested and scanned.
 
 ```
-helm install ingress bitnami/contour -n projectcontour
+helm install ingress bitnami/contour -n projectcontour --version 3.3.1
 ```
 
 Now simply wait for the Pods to become `READY`.
@@ -207,7 +207,7 @@ Notice that this is of `kind: ClusterIssuer`. That means this certificate issuer
 Finally, this sets up a “challenge record" in the `solvers` section, which allows Let's Encrypt to verify that the certificate it is issuing is really controlled by you.
 
 ```bash
-cat << EOF > letsencrypt-staging.yml
+cat << EOF > letsencrypt-staging.yaml
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
@@ -228,7 +228,7 @@ EOF
 Now `apply` the file.
 
 ```bash
-kubectl apply -f letsencrypt-staging.yml
+kubectl apply -f letsencrypt-staging.yaml
 ```
 
 The process of creating the cluster issuer should be fairly quick, but you can confirm it completed successfully by running the following and ensuring the cluster issuer was issued.
@@ -287,7 +287,7 @@ EOF
 Now install Harbor using this values file.
 
 ```bash
-helm install harbor bitnami/harbor -f harbor-values.yaml -n harbor --version 9.2.2
+helm install harbor bitnami/harbor -f harbor-values.yaml -n harbor --version 9.4.4
 ```
 
 And wait for the Pods to become `<READY>`. This may take a minute or two.
@@ -368,7 +368,7 @@ Run `helm delete` then `helm install` to uninstall and reinstall Harbor:
 
 ```bash
 helm delete -n harbor harbor
-helm install harbor bitnami/harbor -f harbor-values.yaml -n harbor --version 9.2.2
+helm install harbor bitnami/harbor -f harbor-values.yaml -n harbor --version 9.4.4
 ```
 
 wait for the new Pods to become `<READY>`. This may take a minute or two.

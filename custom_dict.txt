@@ -445,6 +445,11 @@ UAA
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
+[D,d]ockerhub
+[D,d]ockerhub-[\w|-]+
+[R,r]eddit
+Proxy-ing
+Proxying
 
 
 # Acronyms
