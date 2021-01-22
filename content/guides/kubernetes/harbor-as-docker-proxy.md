@@ -47,7 +47,7 @@ We'll explore both options below.
 
 ## Prerequisites
 
-Before you get started, you'll need Harbor (ideally version 2.1.3 or newer) installed somewhere. If you don't already have it installed, we've made it incredibly easy for your with our [Getting Started with Harbor](/developer/guides/kubernetes/harbor-gs/) Guide.
+Before you get started, you'll need Harbor (ideally version 2.1.3 or newer) installed somewhere. If you don't already have it installed, we've made it incredibly easy for your with our [Getting Started with Harbor](../harbor-gs/) Guide.
 
 Once you have a Harbor registry installed, log into it's Web UI as an Admin user.
 
