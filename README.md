@@ -19,7 +19,7 @@ brew pin hugo
 Or to directly download:
 ```
 wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
-tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz" 
+tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz"
 mv ./hugo /usr/local/bin/
 ```
 
@@ -28,20 +28,17 @@ Now you're ready to build locally:
 ```
 git clone https://github.com/vmware-tanzu-private/tanzu-dev-portal
 cd tanzu-dev-portal
-git submodule update --init --recursive
-hugo server
+make preview
 ```
 
-You may wish to explicitly set `baseURL` to http://localhost:1313/developer in order to mimic what happens in production at https://tanzu.vmware.com/developer. Use the following command to do this:
-
-`hugo server -b http://localhost:1313/developer`
+A preview of the dev portal will be available at: [http://localhost:1313/developer](http://localhost:1313/developer).
 
 ### Run tests locally
 
 > Note: requires Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
 
 1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
-2. Run `act pull_request`
+2. Run `make test`
 
 ### Publish to Staging
 
@@ -57,23 +54,44 @@ You can use the [Archetypes](https://gohugo.io/content-management/archetypes/) f
 #### Create a new Guide
 Use one of the following commands to create either a "What Is...?" or "Getting Started" guide. Guides should be written in second person (the "you" voice).
 
-`hugo new guides/spring/spring-boot-what-is.md -k guide-what-is`
-`hugo new guides/spring/spring-boot-gs.md -k guide-gs`
+To create a *What Is* Guide `guides/spring/spring-boot-what-is.md` run:
+
+```
+make guide.wi.spring.spring-boot-what-is
+```
+
+to create a *Getting Started* Guide `guides/spring/spring-boot-gs.md` run:
+
+```
+make guide.gs.spring.spring-boot-gs
+```
+
 
 #### Create a new blog post
 The following command will create a blog post. Blog posts require a title, date, and author (see more about authors in the Taxonomy section above). If you use a future date for publishing, you will need to use the `-F` flag to see the post when running `hugo` or `hugo server` to build the site on your local machine.
 
-`hugo new blog/my-post.md -k blog-post`
+To create a blog post `blog/my-post.md`
+```
+make blog.my-post
+```
 
 #### Create a new Code Sample
 The following command will create a code sample. Along with a title, description, and other taxonomy metadata in the front matter, code sample pages require the full URL to a public GitHub repository in the `repo` parameter and a boolean value for `readme` that will determine whether to fetch (at build-time) and render the README content from that repo (`true`) or to render the content of the page itself instead (`false`).
 
-`hugo new samples/my-sample.md -k sample`
+To create a code sample `samples/my-sample.md`:
+
+```
+make sample.my-sample
+```
 
 #### Create a new Video
 Your video should be uploaded to the VMwareTanzu YouTubechannel first. For help with this reach out in the #tanzu-dev-portal channel. Once on YouTube, run the following command and make sure to set `youtube_id` in the front matter to the string that appears after `/watch?v=` in the video's URL, along with a title, description, and other taxonomy metadata.
 
-`hugo new videos/my-video.md -k video`
+To create a new video `videos/my-video.md`:
+
+```
+make video.my-video
+```
 
 ### Images
 All images are stored under `static/images`. Images should be placed in the directory that matches the content that they'll be displayed in (ie. a Spring guide would have images in `static/images/guides/spring`). Finally, an image placed in `diagrams` will have a border added around it for visibility. If the image is not a diagram, they should be placed in `screenshots`.
