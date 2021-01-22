@@ -91,30 +91,32 @@ if (query) {
 	//Page Controls
 
 	var totalPages = Math.ceil(response.searchInformation.totalResults / 10);
+	if (totalPages > 1) {
 
-	var currentPage = Math.floor(start / 10 + 1);
+		var currentPage = Math.floor(start / 10 + 1);
 
-	var pageControls = "<div class='gsc-results'><div class='gsc-cursor-box gs-bidi-start-align' dir='ltr'><div class='gsc-cursor'>";
+		var pageControls = "<div class='gsc-results'><div class='gsc-cursor-box gs-bidi-start-align' dir='ltr'><div class='gsc-cursor'>";
 
 
-	//Page change controls, 10 max.
+		//Page change controls, 10 max.
 
-	for (var x = 1; x <= totalPages && x<=10; x++) {
-		
-		pageControls += "<div class='gsc-cursor-page";
-		
-		if (x === currentPage)
+		for (var x = 1; x <= totalPages && x<=10; x++) {
+			
+			pageControls += "<div class='gsc-cursor-page";
+			
+			if (x === currentPage)
 
-			pageControls += " gsc-cursor-current-page";
-		
-			var pageLinkStart = x * 10 - 9;
-		
-			pageControls+="'><a href='?start="+pageLinkStart+"&q="+query+tbm+"'>"+x+"</a></div>";
+				pageControls += " gsc-cursor-current-page";
+			
+				var pageLinkStart = x * 10 - 9;
+			
+				pageControls+="'><a href='?start="+pageLinkStart+"&q="+query+tbm+"'>"+x+"</a></div>";
+			}
+
+			pageControls += "</div></div></div>";
+
+			document.getElementById("searchResults").innerHTML += pageControls;
 		}
-
-		pageControls += "</div></div></div>";
-
-		document.getElementById("searchResults").innerHTML += pageControls;
 	}
 
 
@@ -165,7 +167,9 @@ if (query) {
 
 	}
 
-
+	// ------ FILTER LINKS ------
+	
+	// All Results
 	var allText = document.createElement("span");
 	allText.innerHTML = "All Results";
 	allLink.appendChild(allText);	
@@ -176,135 +180,70 @@ if (query) {
 		window.location.search = filterLink;
 	}
 
+	// Blog Filter
+	var blogLink = document.createElement("div");
+	blogLink.setAttribute("id","blog-link");
+	blogLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
+	searchLinks.appendChild(blogLink);	
 
-	var pivioLink = document.createElement("div");
-	pivioLink.setAttribute("id","pivio-link");
-	pivioLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
-	searchLinks.appendChild(pivioLink);	
+	var blogText = document.createElement("span");
+	blogText.innerHTML = "Blogs";
+	blogLink.appendChild(blogText);	
 
-	var pivioText = document.createElement("span");
-	pivioText.innerHTML = "Pivotal.io";
-	pivioLink.appendChild(pivioText);	
+	blogLink.onclick = blogClick;
 
-	pivioLink.onclick = pivioClick;
-
-	function pivioClick() {
-		window.location.search = filterLink + '&tbm=pivio';
-	}
-	 
-
-	var cntntLink = document.createElement("div");
-	cntntLink.setAttribute("id","cntnt-link");
-	cntntLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
-	searchLinks.appendChild(cntntLink);	
-
-	var cntntText = document.createElement("span");
-	cntntText.innerHTML = "Blog &amp; Resources";
-	cntntLink.appendChild(cntntText);	
-
-	cntntLink.onclick = cntntClick;
-
-	function cntntClick() {
-		window.location.search = filterLink + '&tbm=cntnt';
+	function blogClick() {
+		window.location.search = filterLink + '&tbm=blog';
 	}
 
+	// Guide Filter
+	var guideLink = document.createElement("div");
+	guideLink.setAttribute("id","guides-link");
+	guideLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
+	searchLinks.appendChild(guideLink);	
 
-	var docsLink = document.createElement("div");
-	docsLink.setAttribute("id","docs-link");
-	docsLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
-	searchLinks.appendChild(docsLink);
+	var guidesText = document.createElement("span");
+	guidesText.innerHTML = "Guides";
+	guideLink.appendChild(guidesText);	
 
-	var docsText = document.createElement("span");
-	docsText.innerHTML = "Documentation";
-	docsLink.appendChild(docsText);		
+	guideLink.onclick = guideClick;
 
-	docsLink.onclick = docsClick;
-
-	function docsClick() {
-		window.location.search = filterLink + '&tbm=docs';
+	function guideClick() {
+		window.location.search = filterLink + '&tbm=guides';
 	}
 
+	// Tanzu.TV Filter
+	var ttvLink = document.createElement("div");
+	ttvLink.setAttribute("id","ttv-link");
+	ttvLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
+	searchLinks.appendChild(ttvLink);	
 
-	var kbLink = document.createElement("div");
-	kbLink.setAttribute("id","kb-link");
-	kbLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
-	searchLinks.appendChild(kbLink);
+	var ttvText = document.createElement("span");
+	ttvText.innerHTML = "Tanzu.TV";
+	ttvLink.appendChild(ttvText);	
 
-	var kbText = document.createElement("span");
-	kbText.innerHTML = "Community";
-	kbLink.appendChild(kbText);			
+	ttvLink.onclick = ttvClick;
 
-	kbLink.onclick = kbClick;
-
-	function kbClick() {
-		window.location.search = filterLink + '&tbm=kb';
+	function ttvClick() {
+		window.location.search = filterLink + '&tbm=ttv';
 	}
 
-
-	var ntwrkLink = document.createElement("div");
-	ntwrkLink.setAttribute("id","ntwrk-link");
-	ntwrkLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
-	searchLinks.appendChild(ntwrkLink);	
-
-	var ntwrkText = document.createElement("span");
-	ntwrkText.innerHTML = "Downloads";
-	ntwrkLink.appendChild(ntwrkText);	
-
-	ntwrkLink.onclick = ntwrkClick;
-
-	function ntwrkClick() {
-		window.location.search = filterLink + '&tbm=ntwrk';
-	}
-
-
-	if (window.location.search.indexOf('pivio') > -1) {
-
-		document.getElementById("pivio-link").classList.add('active-tab');
-
-		var pivioFilter = "&siteSearch=tanzu.vmware.com/developer&siteSearchFilter=i"
-
-		search(pivioFilter);
-
-	} else if (window.location.search.indexOf('cntnt') > -1) {
-
-		document.getElementById("cntnt-link").classList.add('active-tab');
-
-		var cntntFilter = "&siteSearch=tanzu.vmware.com/developer/blog&siteSearchFilter=i"
-
-		search(cntntFilter);
-
-	} else if (window.location.search.indexOf('docs') > -1) {
-
-		document.getElementById("docs-link").classList.add('active-tab');
-
-		var docsFilter = "&siteSearch=docs.pivotal.io&siteSearchFilter=i"
-
-		search(docsFilter);
-
-	} else if (window.location.search.indexOf('kb') > -1) {
-
-		document.getElementById("kb-link").classList.add('active-tab');
-
-		var kbFilter = "&siteSearch=community.pivotal.io&siteSearchFilter=i"
-
-		search(kbFilter);
-
-	} else if (window.location.search.indexOf('ntwrk') > -1) {
-
-		document.getElementById("ntwrk-link").classList.add('active-tab');
-
-		var ntwrkFilter = "&siteSearch=network.pivotal.io&siteSearchFilter=i"
-
-		search(ntwrkFilter);
-
+	// Filter results if one is selected
+	if (window.location.search.indexOf('blog') > -1) {
+		document.getElementById("blog-link").classList.add('active-tab');
+		var blogFilter = "&siteSearch=tanzu.vmware.com/developer/blog&siteSearchFilter=i"
+		search(blogFilter);
+	} else if (window.location.search.indexOf('guides') > -1) {
+		document.getElementById("guides-link").classList.add('active-tab');
+		var guidesFilter = "&siteSearch=tanzu.vmware.com/developer/guides&siteSearchFilter=i"
+		search(guidesFilter);
+	} else if (window.location.search.indexOf('ttv') > -1) {
+		document.getElementById("ttv-link").classList.add('active-tab');
+		var ttvFilter = "&siteSearch=tanzu.vmware.com/developer/tv&siteSearchFilter=i"
+		search(ttvFilter);
 	} else {
-
 		document.getElementById("all-link").classList.add('active-tab');
-
-		var noFilter = '';
-
+		var noFilter = '&siteSearch=tanzu.vmware.com/developer';
 		search(noFilter);
-
 	}
-
 }//end if query
