@@ -82,13 +82,17 @@
     position: absolute;
     top: 4px;
 }
-  
-  @media (max-width: 1000px) {
+
+// Mobile search
+@media (max-width: 1000px) {
     #search-nav {
       display: none !important;
     }
+    .search {
+      display: none !important;
+    }
 }
-  
+
 #searchheaderform {
     width: 98%;
     display: inline-block;

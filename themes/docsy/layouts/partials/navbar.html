@@ -11,6 +11,7 @@
 			<li class="nav-item dropdown d-none d-lg-block mr-4 mb-0">
 				{{ partial "navbar-version-selector.html" . }}
 			</li>
+
 			{{ end }}
 			{{ $p := . }}
 			{{ $url := urls.Parse .RelPermalink }}
@@ -38,6 +39,10 @@
 				{{ end }}
 			{{ end }}
 
+			<li class="nav-item mr-4 mb-0 mobile-search-link" style="display: none;">
+				<a class="nav-link" href="{{ "/search" | relURL }}"><span>Search</span></a>
+			</li>
+			
 			<li class="search remove-menu search_icon">
 				<div class="search-icon relative z-1" tabindex="0">
 					<svg id="search-svg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,6 +61,7 @@
 				{{ partial "navbar-lang-selector.html" . }}
 			</li>
 			{{ end }} -->
+
 		</ul>
 
 		<div id="menu-toggle">
