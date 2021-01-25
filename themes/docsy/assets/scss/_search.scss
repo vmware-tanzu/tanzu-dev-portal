@@ -408,6 +408,36 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
   .cse .gsc-results .gsc-cursor-page.gsc-cursor-current-page, .gsc-results .gsc-cursor-page.gsc-cursor-current-page {
     text-shadow: none !important;
   }
+
+  .gsc-cursor-box {
+    margin-top: 2.5rem;    
+  }
+
+  .gsc-cursor-page a {
+    font-weight: normal;
+    color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+  }
+
+  .gsc-cursor-box a:hover {
+    color: white;
+    background-color: #49AFD9;
+    border-color: #49AFD9;
+  }
+
+  .gsc-cursor-current-page a,
+  .gsc-cursor-current-page a:hover {
+    color: white;
+    background-color: #22343C;
+    border-color: #485764;
+  }
+
   
   .gsc-webResult.gsc-result,
   .gsc-results .gsc-imageResult {

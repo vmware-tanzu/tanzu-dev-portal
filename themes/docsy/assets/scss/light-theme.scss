@@ -201,6 +201,24 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
   color: #1D428A !important;
 }
 
+.gsc-cursor-page a {
+  color: #1D428A !important;
+  border: 1px solid #1D428A !important;
+}
+
+.gsc-cursor-box a:hover {
+  color: white !important;
+  background-color: #1D428A !important;
+  border-color: #1D428A !important;
+}
+
+.gsc-cursor-current-page a,
+.gsc-cursor-current-page a:hover {
+  color: #61717D !important;
+  background-color: #F4F8FA !important;
+  border-color: #D9E4EA !important;
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
