@@ -228,6 +228,38 @@ if (query) {
 		window.location.search = filterLink + '&tbm=ttv';
 	}
 
+	// Videos Filter
+	var videosLink = document.createElement("div");
+	videosLink.setAttribute("id","videos-link");
+	videosLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
+	searchLinks.appendChild(videosLink);	
+
+	var videosText = document.createElement("span");
+	videosText.innerHTML = "Videos";
+	videosLink.appendChild(videosText);	
+
+	videosLink.onclick = videosClick;
+
+	function videosClick() {
+		window.location.search = filterLink + '&tbm=videos';
+	}
+
+	// Samples Filter
+	var samplesLink = document.createElement("div");
+	samplesLink.setAttribute("id","samples-link");
+	samplesLink.setAttribute("class","gsc-tabHeader gsc-inline-block");
+	searchLinks.appendChild(samplesLink);	
+
+	var samplesText = document.createElement("span");
+	samplesText.innerHTML = "Samples";
+	samplesLink.appendChild(samplesText);	
+
+	samplesLink.onclick = samplesClick;
+
+	function samplesClick() {
+		window.location.search = filterLink + '&tbm=samples';
+	}
+
 	// Filter results if one is selected
 	if (window.location.search.indexOf('blog') > -1) {
 		document.getElementById("blog-link").classList.add('active-tab');
@@ -241,9 +273,17 @@ if (query) {
 		document.getElementById("ttv-link").classList.add('active-tab');
 		var ttvFilter = "&siteSearch=tanzu.vmware.com/developer/tv&siteSearchFilter=i"
 		search(ttvFilter);
+	} else if (window.location.search.indexOf('videos') > -1) {
+		document.getElementById("videos-link").classList.add('active-tab');
+		var videosFilter = "&siteSearch=tanzu.vmware.com/developer/videos&siteSearchFilter=i"
+		search(videosFilter);
+	} else if (window.location.search.indexOf('samples') > -1) {
+		document.getElementById("samples-link").classList.add('active-tab');
+		var samplesFilter = "&siteSearch=tanzu.vmware.com/developer/samples&siteSearchFilter=i"
+		search(samplesFilter);
 	} else {
 		document.getElementById("all-link").classList.add('active-tab');
 		var noFilter = '&siteSearch=tanzu.vmware.com/developer';
 		search(noFilter);
-	}
+	} 
 }//end if query
