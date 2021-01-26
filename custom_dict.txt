@@ -440,6 +440,7 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+Theia
 ThoughtWorks
 UAA
 [U,u]ber
@@ -559,6 +560,7 @@ Desgber
 Dieruf
 Dieu
 Dobrin
+Dokuka
 Dolan
 Dre
 Dubois
@@ -594,12 +596,14 @@ Julien
 Kousen
 Lazu
 Liles
+Lippert
 Lubomir
 Lum
 Madhav
 Muzz
 Nana
 Neumann
+Oleh
 Pacak
 Palo
 Pilimon
@@ -662,6 +666,7 @@ IvanTarin2
 starbuxman
 tiffanyfayj
 12SwitchRestoresSansCheckOuts
+olehdokuka
 OLGA_MACIASZEK
 benbravo73
 kendrickcoleman
