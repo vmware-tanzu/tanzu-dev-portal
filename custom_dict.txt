@@ -440,6 +440,7 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+Theia
 ThoughtWorks
 UAA
 [U,u]ber
@@ -594,6 +595,7 @@ Julien
 Kousen
 Lazu
 Liles
+Lippert
 Lubomir
 Lum
 Madhav
