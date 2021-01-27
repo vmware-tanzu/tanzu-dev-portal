@@ -69,6 +69,8 @@ enableMissingTranslationPlaceholders = true
     noClasses = false
 #    lineNos = true
 #    style = "monokai"
+  [markup.tableOfContents]
+    endLevel = 2
 
 # Everything below this are Site Params
 
