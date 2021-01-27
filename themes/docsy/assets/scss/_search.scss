@@ -347,7 +347,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
     text-shadow: none !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 17px !important;
+    font-size: 17px;
     margin: 0 0 5px 0;
   }
   
@@ -402,6 +402,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
   
   .gs-result .gs-title,
   .gs-result .gs-title * {
+    font-size: 20px;
     text-decoration: none !important;
   }
   
@@ -509,6 +510,10 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
   
   .gsc-table-result {
     border-collapse: collapse;
+  }
+  
+  .gsc-table-result td {
+    padding-bottom: 40px;
   }
   
   body#search #searchbodyinput,
