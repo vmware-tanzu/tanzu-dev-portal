@@ -12,7 +12,7 @@ patterns:
 - APIs
 ---
 
-[Spring REST Docs](https://spring.io/projects/spring-restdocs#overview) provides a useful and always update-to-date way to document an application's RESTful services by combining hand-written documentation created with [AsciiDoctor](https://asciidoctor.org) and auto-generated snippets created by [Spring MVC unit tests](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#unit-testing-spring-mvc). 
+[Spring REST Docs](https://spring.io/projects/spring-restdocs#overview) provides a useful and always update-to-date way to document an application's RESTful services by combining hand-written documentation created with [Asciidoctor](https://asciidoctor.org) and auto-generated snippets created by [Spring MVC unit tests](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#unit-testing-spring-mvc). 
 
 The `@AutoConfigureRestDocs` [annotation](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-autoconfigured-rest-docs) in Spring Boot allows you to leverage Spring REST Docs in your tests. This guide explains how to configure Spring REST Docs and use it in combination with [JUnit](https://junit.org/junit5/) for unit testing. 
 
@@ -29,7 +29,7 @@ Java 7 and Spring Framework 4.2 are the minimum requirements, and you will need 
 </dependency>
 ```
 
-The following two plugins are configured to process asciidoctor files and include the documentation during application packaging.
+The following two plugins are configured to process Asciidoctor files and include the documentation during application packaging.
 
 ```xml
 <build>
@@ -183,7 +183,7 @@ public void testEventSyncFoundEventsWithAsOf() throws Exception {
 ```
 
 ## Generate document snippets
-When the unit test is executed, the documentation snippets are generated. In the above example, the documentation snippets are generated in the directory `target/generated-snippets/test-event-sync-found-events-with-as-of/1` and the snippets include the following asciidoctor documentation:
+When the unit test is executed, the documentation snippets are generated. In the above example, the documentation snippets are generated in the directory `target/generated-snippets/test-event-sync-found-events-with-as-of/1` and the snippets include the following Asciidoctor documentation:
 
 * `curl-request.adoc`
 * `http-request.adoc`
@@ -191,8 +191,8 @@ When the unit test is executed, the documentation snippets are generated. In the
 * `path-parameters.adoc`
 * `request-parameters.adoc`
 
-## Integrate and use the generated asciidoctor snippets
-Create an `index.adoc` file under directory `src/main/asciidoc/`. In this file, you will use the asciidoctor "include" macro to include the above generated asciidoctor snippets, as shown below.
+## Integrate and use the generated Asciidoctor snippets
+Create an `index.adoc` file under directory `src/main/asciidoc/`. In this file, you will use the Asciidoctor "include" macro to include the above generated Asciidoctor snippets, as shown below.
 
 ```
 To sync up with asOf time, you will:

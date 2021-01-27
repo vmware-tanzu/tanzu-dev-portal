@@ -42,7 +42,7 @@ A Spring Config Server instance needs a place to store configuration information
 
 *`{profile}`, which maps to `spring.profiles.active` on the client (comma-separated list).
 
-*`{label}`, which is a server side feature labelling a "versioned" set of config files.
+*`{label}`, which is a server side feature labeling a "versioned" set of config files.
 
 A repository loads configuration files from a `spring.config.name` based on the `{application}` parameter, and `spring.profiles.active` based on the `{profiles}` parameter. Active profiles take precedence over defaults.
 
@@ -75,7 +75,7 @@ You can share a set of configuration information with all your applications.
 The Spring Config Server includes an [overrides feature](https://cloud.spring.io/spring-cloud-config/reference/html/#property-overrides) that lets an operator provide configuration properties to all applications. The overridden properties cannot be accidentally changed by the application with the normal Spring Boot hooks.
 
 ## Client-Side Usage
-To make use of [Spring Config Server in a client application](https://cloud.spring.io/spring-cloud-config/reference/html/#_client_side_usage), you build your Spring Boot application so it depends on `spring-cloud-config-client`. The easiest way to add the dependency is with a Spring Boot starter `org.springframework.cloud:spring-cloud-starter-config`. There is also a parent pom and BOM (spring-cloud-starter-parent) for Maven users and a Spring IO version management properties file for Gradle and Spring CLI users.
+To make use of [Spring Config Server in a client application](https://cloud.spring.io/spring-cloud-config/reference/html/#_client_side_usage), you build your Spring Boot application so it depends on `spring-cloud-config-client`. The easiest way to add the dependency is with a Spring Boot starter `org.springframework.cloud:spring-cloud-starter-config`. There is also a parent POM and BOM (spring-cloud-starter-parent) for Maven users and a Spring IO version management properties file for Gradle and Spring CLI users.
 
 ## Keep Learning
 A great way to get started learning about and using Spring Cloud Config is the [Centralized Configuration Guide](https://spring.io/guides/gs/centralized-configuration/). This guide takes about 15 minutes, stepping through the process of setting up a Config Server and consuming configuration information from a client. It also illustrates how to refresh configuration without restarting the client.

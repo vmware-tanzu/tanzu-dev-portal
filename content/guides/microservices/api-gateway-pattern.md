@@ -38,7 +38,7 @@ There are other advantages in terms of centralization and control: rate limiting
 * Clients do not have to know the locations of specific services.
 * If there are client-specific policies to be applied, it is easy to apply them in a single place rather than in multiple places. An example of such a scenario is the cross-origin access policy.
 * The optimal API is provided for each client.
-* The number of requests/roundtrips is reduced.
+* The number of requests/round-trips is reduced.
 * It simplifies the client implementation by moving the aggregation logic into the API gateway.
 
 ### Drawbacks

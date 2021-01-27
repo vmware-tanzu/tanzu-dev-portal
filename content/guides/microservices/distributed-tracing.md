@@ -56,7 +56,7 @@ Drawn out as a sequence diagram, this single user-initiated request might look s
 
 The goal of distributed tracing is to maintain enough context so that you (or a tool) can collect sufficient data from distributed trace logs to reconstitute or _reverse_ a sequence diagram from the available data for any given initiating request.
 
-Ideally, with the right metadata, tools, and libraries, you will be able to determine how much time was spent at each step in the sequence diagram, whether anything went wrong during those times, and dive into the detailed trace output for each step in the sequence. All of this should be available to you while being able to rollup or collapse the individual steps in the request so you can examine the entire request.
+Ideally, with the right metadata, tools, and libraries, you will be able to determine how much time was spent at each step in the sequence diagram, whether anything went wrong during those times, and dive into the detailed trace output for each step in the sequence. All of this should be available to you while being able to roll up or collapse the individual steps in the request so you can examine the entire request.
 
 ## Implementation in Java
 There is nothing preventing you from creating your own code to solve this problem, however, the usual caveats apply when discussing large projects that reinvent the wheel. Keep in mind that your goal is to spend as much time as possible building applications, not building tools to support applications when such tools already exist.
@@ -71,13 +71,13 @@ Using these tools, the larger, outermost request (we referred to this as the ori
 You can learn more about using Zipkin in the guide: [Getting Started with Zipkin and Spring Boot](https://tanzu.vmware.com/developer/guides/spring/spring-zipkin/).
 
 ## Implementation in .NET
-The same general rules apply to .NET, maintain the trace and span context at the request inbound and outbound level, and emit log information to **stdout** decorated with that information.
+The same general rules apply to .NET, maintain the trace and span context at the request inbound and outbound level, and emit log information to **STDOUT** decorated with that information.
 
 You can use the extension points available in **WCF**, **ASP.NET** or the **Web API** to trap inbound and outbound requests, which would allow you to not only create and maintain trace and span contexts, but also do things like emit logs with elapsed time calculations per-span, which can then be rolled up by external tools.
 
 There is a [.NET client library for Zipkin](https://github.com/openzipkin/zipkin4net) that can be used if you're interested in working with Zipkin.
 
-Projects like [SteelToe](https://steeltoe.io/) now utilize Zipkin.
+Projects like [Steeltoe](https://steeltoe.io/) now utilize Zipkin.
 
 ## Implementation in Node
 Once again, the same high-level rules apply. The goal is to emit information with enough context so that correlations can be determined by some monitoring or analysis tool. There are a number of frameworks available in Node that facilitate this kind of instrumentation.

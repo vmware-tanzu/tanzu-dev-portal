@@ -90,7 +90,7 @@ There are potential impacts to application performance when this filter is activ
 `logback.access.enabled=false`
 ## Keep Learning
 
-You can find out more by reading the [Spring Boot documentation on logging](https://docs.spring.io/spring-boot/docs/2.1.8.RELEASE/reference/html/boot-features-logging.html) or the full [Logback manual](http://logback.qos.ch/manual/index.html).  
+You can find out more by reading the [Spring Boot documentation on logging](https://docs.spring.io/spring-boot/docs/2.1.8.RELEASE/reference/html/boot-features-logging.html) or the full [logback manual](http://logback.qos.ch/manual/index.html).  
 
 Logging has three elements: collection, indexing, and visualization. This guide explains the first element, collection. For indexing and visualization, there’s a wide ecosystem of open-source technologies that can be used. For example, the “EFK stack” (Elasticsearch, Fluentd, and Kibana) is popular for solving this problem. 
 
