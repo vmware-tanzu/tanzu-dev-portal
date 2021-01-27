@@ -339,26 +339,4 @@ limitations under the License.
         $('#mega-menus').toggleClass('no-border');
     });
 
-    // $( "header .fa-search" ).click(function() {
-    //   if (!$('header .search').hasClass("expanded")) {
-    //     $('header .search').addClass('expanded');
-    //       $( "header .search" ).animate({
-    //         width: 228
-    //       }, 700, function() {
-    //         $('header .gsc-input input.gsc-input,header #searchheaderinput').css('width','185px');
-    //         setTimeout("$('#searchheaderinput').focus();");
-
-    //       });          
-    //   } else {
-    //     $('header .gsc-input input.gsc-input,header #searchheaderinput').css('width','0');
-    //     $('header .gse').hide();
-    //     $('header .search').removeClass('expanded');
-    //     $( "header .search" ).animate({
-    //       width: 35
-    //     }, 700, function() {
-    //     });
-    //   }
-    // });
-
-
 }(jQuery));
