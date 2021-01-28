@@ -1,5 +1,5 @@
 ---
-title:  "Using Harbor to eliminate dockerhub rate limits"
+title:  "How to use Harbor Registry to Eliminate Docker Hub Rate Limits"
 sortTitle: "Harbor"
 weight: 2
 topics:
@@ -12,6 +12,9 @@ patterns:
 team:
 - Paul Czarkowski
 ---
+
+{{< youtube id="KSH2Hzk-E7U" class="youtube-video-shortcode" >}}
+<div align="center"><i><a href="https://www.youtube.com/watch?v=KSH2Hzk-E7U&feature=youtu.be">Watch Paul Walk through this guide on Tanzu.TV Shortcuts.</a></i></div>
 
 On August 24 2020 [Docker](https://docker.com) announced they would be implementing [Rate Limits on the Docker Hub](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/) and they were [implemented on November 2 2020](https://www.docker.com/blog/what-you-need-to-know-about-upcoming-docker-hub-rate-limiting/) thus ending our free ride of unlimited Docker Image pulls.
 
