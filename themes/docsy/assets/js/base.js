@@ -283,4 +283,30 @@ limitations under the License.
 
     });
 
+    //Header search
+    $("header li .search-icon").click(function(){
+        window.dataLayer.push({'event': 'logEvent', 'eventType': 'Clicked search icon', 'eventProperties': {'url path': window.location.pathname} });
+
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+    });
+
+    $("header li .search-icon").keypress(function (e) {
+        if (e.which == 13) {
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+        }
+    });
+
+    $(".search-hide").click(function(){
+        $('#search-nav').slideToggle();
+        $(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+    });
+
 }(jQuery));
