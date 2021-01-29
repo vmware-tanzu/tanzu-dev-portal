@@ -1,7 +1,7 @@
 ---
-title:  "Wavefront for Spring Boot: Getting Started"
-sortTitle: "Wavefront for Spring Boot: Getting Started"
-weight: 2
+title:  "Getting Started with Wavefront for Spring Boot"
+linkTitle: "Wavefront for Spring Boot"
+parent: "Spring Boot"
 topics:
 - Spring
 tags:

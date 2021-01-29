@@ -1,10 +1,9 @@
 ---
-title:  "Helmfile: What Is It?"
-date:   2020-02-10
-tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]
-sortTitle: "Helm"
-weight: 3
+title:  "What is Helmfile?"
+linkTitle: "Helmfile"
+parent: "Helm"
 topics: ["Kubernetes"]
+tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]
 patterns: ["Deployment"]
 team:
 - Paul Czarkowski

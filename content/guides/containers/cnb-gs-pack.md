@@ -1,6 +1,7 @@
 ---
 title:  "Cloud Native Buildpacks: Getting Started with the `pack` CLI"
-sortTitle: "Cloud Native Buildpacks"
+linkTitle: "Getting Started with `pack`"
+parent: "Cloud Native Buildpacks"
 weight: 2
 topics:
 - Containers

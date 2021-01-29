@@ -1,7 +1,6 @@
 ---
-title:  "CI/CD: What is it?"
-sortTitle: "CI/CD"
-weight: 1
+title: "What is CI/CD?"
+weight: -1
 topics:
 - CI-CD
 tags:

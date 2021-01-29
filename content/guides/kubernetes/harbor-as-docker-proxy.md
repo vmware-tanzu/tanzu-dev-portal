@@ -1,6 +1,7 @@
 ---
 title:  "How to use Harbor Registry to Eliminate Docker Hub Rate Limits"
-sortTitle: "Harbor"
+linkTitle: "Eliminate Docker Hub Rate Limits"
+parent: Harbor
 weight: 2
 topics:
 - Kubernetes

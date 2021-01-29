@@ -1,7 +1,7 @@
 ---
 title:  "Remote Tips: Building Relationships"
-sortTitle: "Remote Tips: Building Relationships"
-weight: 1
+linkTitle: "Building Relationships"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:

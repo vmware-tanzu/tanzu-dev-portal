@@ -1,16 +1,17 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes"
-sortTitle: "Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes"
-weight: 2
+linkTitle: "Prometheus and Grafana"
+parent: "Spring Boot"
+weight: 5
 topics:
-- spring
+- Spring
 tags:
-- spring
-- observability
-- prometheus
-- grafana
+- Spring
+- Observability
+- Prometheus
+- Grafana
 patterns:
-- observability
+- Observability
 team:
 - Brian McClain
 ---

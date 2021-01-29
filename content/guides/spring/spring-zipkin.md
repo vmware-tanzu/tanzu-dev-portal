@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Zipkin and Spring Boot"
-sortTitle: "Spring Zipkin"
+linkTitle: "Zipkin"
+parent: "Spring Boot"
 topics:
 - Spring
 - Microservices

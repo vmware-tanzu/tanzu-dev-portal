@@ -1,7 +1,6 @@
 ---
-title:  "RabbitMQ: Getting Started"
-sortTitle: "RabbitMQ"
-weight: 2
+title:  "Getting Started with RabbitMQ"
+linkTitle: "RabbitMQ"
 topics:
 - Event Streaming
 - Messaging and Integration

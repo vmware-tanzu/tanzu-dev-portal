@@ -1,13 +1,13 @@
 ---
-title:  "{{ replace (replace .Name "-" " " | title) " Gs" "" -}}: Getting Started"
-sortTitle: "{{ replace (replace .Name "-" " " | title) " Gs" "" }}"
+title:  "Getting Started with {{ replace (replace .Name "-" " " | title) " Gs" "" -}}"
+linkTitle: "Getting Started with {{ replace (replace .Name "-" " " | title) " Gs" "" -}}"
+parent: {{ replace (replace .Name "-" " " | title) " Gs" "" -}}
 weight: 2
 topics:
 - 
 tags:
-- {{ replace .Name "-gs" "" }}
-patterns:
--
+- {{ replace (replace .Name "-" " " | title) " Gs" "" }}
+# Author(s)
 team:
 -
 ---

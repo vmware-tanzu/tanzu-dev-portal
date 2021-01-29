@@ -1,5 +1,5 @@
 
-	<h1>{{ .Title }}</h1>
+	<h1>{{ .Title | markdownify }}</h1>
 	{{ partial "byline" (dict "context" . "withdate" false) }}
 	<!--{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
 	{{ .Content }}

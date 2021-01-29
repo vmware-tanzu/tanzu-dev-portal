@@ -22,21 +22,20 @@
     &__section {
         li {
             list-style: none;
+            margin-bottom: 0;
         }
-
-        ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        @include media-breakpoint-up(md) {
-            & > ul {
-                padding-left: .5rem;
-            }
-        }
-
 
         padding-left: 0;
+    }
+
+    &__subsection {
+        li {
+            list-style: none;
+            margin-bottom: 0;
+        }
+
+        padding-left: 1.5rem;
+
     }
 
     &__section-title {
@@ -66,19 +65,14 @@
 
         padding: .7rem 1.2rem;
         font-size: 0.9rem;
-        border-radius: 4px 0 0 4px;
         &:hover {
             color: $blue;
             text-decoration: none;
         }
 
-        &.td-sidebar-link__page.active {
-            background: $primary;
-        }
-
         &.active {
             font-weight: $font-weight-normal;
-            color: white;
+            color: $bright-green;
         }
     }
 
@@ -98,7 +92,6 @@
         padding-top: 4rem;
         background-color: $td-sidebar-bg-color;
         padding-right: 1rem;
-        border-right: 1px solid $td-sidebar-border-color;
     }
 
 

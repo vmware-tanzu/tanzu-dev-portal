@@ -1,7 +1,7 @@
 ---
-title:  "Remote Tips: Tools and tips"
-sortTitle: "Remote Tips: Tools and tips"
-weight: 6
+title:  "Remote Tips: Tools and Tips"
+linkTitle: "Tools and Tips"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:

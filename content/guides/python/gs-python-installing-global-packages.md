@@ -1,7 +1,6 @@
 ---
-title:  "Python Like A Pro: Managing Global Packages"
-sortTitle: "Python Like A Pro - Global Packages"
-weight: 2
+title: "Python Like A Pro: Managing Global Packages"
+linkTitle: "Managing Python Global Packages"
 description: "Learn how to isolate your global Python packages using PipX."
 topics:
 - Python

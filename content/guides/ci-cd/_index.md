@@ -5,6 +5,7 @@ tags:
 - CI-CD
 description: >
     Continuous integration and delivery automate the software development lifecycle as much as possible.
+icon: cicd
 layout: single
 ---
 

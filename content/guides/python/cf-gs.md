@@ -1,7 +1,6 @@
 ---
-title:  "Python Like A Pro: Run In Production"
-sortTitle: "Python On Cloud Foundry"
-weight: 2
+title: "Python Like A Pro: Run In Production"
+linkTitle: "Python On Cloud Foundry"
 description: "Get your Python code into production faster. No meetings, no managers, just 'push' & go!"
 topics:
 - Python

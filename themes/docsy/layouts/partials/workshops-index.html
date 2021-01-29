@@ -10,7 +10,7 @@
     </div>
 
     <div class="section-index flex-1">
-        {{ $pages := ((where .Site.Pages "Section" .Section).ByWeight).ByParam "sortTitle" }}
+        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
         {{ $parent := .Page }}
         {{ if $parent.Params.no_list }}
         {{/* If no_list is true we don't show a list of subpages */}}
