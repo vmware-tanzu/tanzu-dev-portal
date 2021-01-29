@@ -1,29 +1,27 @@
 var searchresultscontainermain = document.getElementById('search-results-container');
+if (searchresultscontainermain != null) {
+	var searchLinks = document.createElement("div");
+	searchLinks.setAttribute("class","search-links");
+	searchresultscontainermain.appendChild(searchLinks);	
 
-var searchLinks = document.createElement("div");
-searchLinks.setAttribute("class","search-links");
-searchresultscontainermain.appendChild(searchLinks);	
+	var searchresultscontainer = document.createElement("div");
+	searchresultscontainer.setAttribute("class","searchresultscontainer");
+	searchresultscontainermain.appendChild(searchresultscontainer);	
 
-var searchresultscontainer = document.createElement("div");
-searchresultscontainer.setAttribute("class","searchresultscontainer");
-searchresultscontainermain.appendChild(searchresultscontainer);	
+	var searchResults = document.createElement("div");
+	searchResults.setAttribute("id","searchResults");
+	searchresultscontainer.appendChild(searchResults);	
 
-var searchResults = document.createElement("div");
-searchResults.setAttribute("id","searchResults");
-searchresultscontainer.appendChild(searchResults);	
+	var searchResultsMore = document.createElement("div");
+	searchResultsMore.setAttribute("id","searchResultsMore");
+	searchresultscontainer.appendChild(searchResultsMore);	
 
-var searchResultsMore = document.createElement("div");
-searchResultsMore.setAttribute("id","searchResultsMore");
-searchresultscontainer.appendChild(searchResultsMore);	
-
-
-var cssElm = document.createElement("link");
-cssElm.setAttribute("rel","stylesheet");
-cssElm.setAttribute("media","all");
-cssElm.setAttribute("type","text/css");
-document.body.appendChild(cssElm);	
-
-
+	var cssElm = document.createElement("link");
+	cssElm.setAttribute("rel","stylesheet");
+	cssElm.setAttribute("media","all");
+	cssElm.setAttribute("type","text/css");
+	document.body.appendChild(cssElm);	
+}
 
 var searchEngineID = "3hzywhss5ik"
 var searchResultsText = "Search results for "
