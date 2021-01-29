@@ -4,6 +4,7 @@ linkTitle: "Tekton"
 subsection: "Tekton"
 topics:
 - CI-CD
+- Kubernetes
 tags:
 - CI-CD
 - Kubernetes
