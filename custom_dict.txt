@@ -28,12 +28,13 @@ appender
 artisanal
 async
 authenticator
+autocompletion
 [A,a]utoscaling
 Aviv
 (back|front)end(s)?
 Backend
 [B,b]ackfill
-balancers?
+balancer(')?(s)?
 biome
 [B,b]ootiful
 Bugsville
@@ -78,10 +79,13 @@ frictionless
 Frontend
 geospatial
 getters
+ghostEmail
+ghostPassword
+ghostUsername
 GitOps
 Helming
 hermeticism
-hostname
+hostname(s)?
 ideate
 InfoSec
 [I,i]ntegrations
@@ -149,6 +153,7 @@ revertibility
 [R,r]oadmap
 rollout
 rom-com
+rootPassword
 runtimes?
 runnable
 SaaS-based
@@ -256,6 +261,7 @@ Finchley
 Flake8
 formatter
 GemFire
+GCS
 GitLab
 [G,g]mail
 [G,g]ithub
@@ -273,6 +279,7 @@ Homebrew
 HSQLDB
 Httpie|HTTPie
 HyperKit
+IAM
 init
 InfoQ
 IntelliJ
@@ -319,6 +326,7 @@ MacBook
 MapRepository
 Mesos
 Microk8s
+Minio
 [M,m]inikube
 MiXiT
 Mockito
@@ -394,7 +402,7 @@ Trello
 TRS-80
 URL(s)?
 Vaadin
-Velero
+Velero('s)?
 VirtualBox
 [V,v]irtualenv
 vSphere
@@ -483,6 +491,7 @@ EE
 EFK
 ETL
 FC
+EOF
 FP
 GAC
 GC
