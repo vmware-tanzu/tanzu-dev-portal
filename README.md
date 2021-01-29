@@ -54,7 +54,7 @@ You can use the [Archetypes](https://gohugo.io/content-management/archetypes/) f
 #### Create a new Guide
 Use one of the following commands to create either a "What Is...?" or "Getting Started" guide. Guides should be written in second person (the "you" voice).
 
-To create a *What Is* Guide `guides/spring/spring-boot-what-is.md` run:
+To create a *What Is* Guide `guides/spring/what-is-spring-boot.md` run:
 
 ```
 make guide.wi.spring.spring-boot-what-is
@@ -92,6 +92,13 @@ To create a new video `videos/my-video.md`:
 ```
 make video.my-video
 ```
+
+### Guides Navigation
+There are three special front matter fields that can be used in Guides to control how they appear in the sidebar tree navigation. The left side navigation can contain two levels worth of content with each entry capable of containing articles contained underneath. To define what appears where, use the following fields:
+
+* `subsection`: defines a Guide as a subsection that can contain one or more guides under it
+* `parent`: defines the parent subsection for a Guide that should appear under it
+* `linkTitle`: This is a native, Hugo-supported field to specify a "short" title. This is what will appear in the sidebar tree menu, but the `title` will still appear on the page (and for SEO purposes).
 
 ### Images
 All images are stored under `static/images`. Images should be placed in the directory that matches the content that they'll be displayed in (ie. a Spring guide would have images in `static/images/guides/spring`). Finally, an image placed in `diagrams` will have a border added around it for visibility. If the image is not a diagram, they should be placed in `screenshots`.
