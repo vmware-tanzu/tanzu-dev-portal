@@ -206,9 +206,9 @@ spec:
 A builder is an image that bundles all the bits and information on how to build your apps, like 
 - A buildpack
 - An implementation of the lifecycle
-- A build-time environment that platforms may use to execute the lifecycle.
+- A build-time environment that platforms may use to execute the lifecycle
 
-Kpack will push the builder image to your registry.
+kpack will push the builder image to your registry.
 
 ```
 kubectl apply -f builder.yaml 
@@ -350,7 +350,7 @@ You can now run `docker pull us.gcr.io/<project>/<spring-petclinic>` to download
 
 ### Bonus - Deploy your app to Kubernetes
 
-Kpack is best used in conjunction with a CI/CD tool, but if you want to deploy your app to Kubernetes now you can very easily.
+kpack is best used in conjunction with a CI/CD tool, but if you want to deploy your app to Kubernetes now you can very easily.
 
 You will reuse your secret with your registry and pull from the repository that holds the container image.  You created this repo in the *Create an Image Configuration* section and can be found at  `spec.tag` place it after `--image=$DH_USERNAME/app` .
 

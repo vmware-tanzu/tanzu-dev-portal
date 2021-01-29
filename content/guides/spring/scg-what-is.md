@@ -1,5 +1,5 @@
 ---
-title:  "Spring Cloud Gateway: What Is It?"
+title:  "What Is Spring Cloud Gateway?"
 linkTitle: "Spring Cloud Gateway"
 subsection: "Spring Cloud Gateway"
 topics:
