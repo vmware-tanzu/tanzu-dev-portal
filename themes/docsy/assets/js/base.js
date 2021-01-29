@@ -315,8 +315,6 @@ limitations under the License.
 
     //Header search
     $("header li .search-icon").click(function(){
-        window.dataLayer.push({'event': 'logEvent', 'eventType': 'Clicked search icon', 'eventProperties': {'url path': window.location.pathname} });
-
         $('#search-nav').slideToggle();
         //$(this).toggleClass('close');
         $('#searchheaderform input').focus();
