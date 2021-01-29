@@ -41,7 +41,7 @@ Bugsville
 cfapps
 codebase
 [C,c]omms
-Composable
+[C,c]omposable
 [C,c]onfig
 cortado
 counterintuitive
@@ -52,9 +52,11 @@ de
 [D,d]e-referenced
 decrypt(ed)?
 deployable
+deserializing
 developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
+diehard
 differentiators
 donut
 [E,e]venting
@@ -185,6 +187,7 @@ unpushed
 unreleasable
 uptime
 V2
+validators
 versioned
 veth-jelly
 virtualized
@@ -300,6 +303,7 @@ KoFu
 kpack(-hosted)?
 Krisp
 ksqlDB
+kube-apiserver
 KubeAcademy
 [K,k]ubeapps
 kubectl
@@ -438,10 +442,16 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+Theia
 ThoughtWorks
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
+[D,d]ockerhub
+[D,d]ockerhub-[\w|-]+
+[R,r]eddit
+Proxy-ing
+Proxying
 
 
 # Acronyms
@@ -468,7 +478,7 @@ CTO
 DAO
 DDL
 DNS
-DSLs
+DSL(s)?
 EE
 EFK
 ETL
@@ -522,6 +532,7 @@ SIG
 SRE
 TBD
 TCP
+TGIK
 TLS
 UAA
 UI(s)?
@@ -544,7 +555,7 @@ Anneliese
 Aravena
 Asiedu-Ampem
 Bai
-Beda
+Beda('s)?
 Belamaric
 Biville
 Bongiovanni
@@ -559,13 +570,13 @@ Coté
 Dalia
 Damasceno
 DaShaun
-DaShaun
 Debroy
 Deleuze
 Desgber
 Dieruf
 Dieu
 Dobrin
+Dokuka
 Dolan
 Dre
 Dubois
@@ -587,6 +598,7 @@ Gibb
 Glênio
 Glithero
 Grygleski
+Hadlow
 Hamano
 Hayk
 Herbrich
@@ -604,6 +616,7 @@ Junio
 Kousen
 Lazu
 Liles
+Lippert
 Lubomir
 Lum
 Maciaszek-Sharma
@@ -614,12 +627,12 @@ Nana
 Nesterov
 Neumann
 Nicoll
+Oleh
 Pacak
 Palo
 (pc|C)zarkowski('s)?
 Pilimon
-Pratik
-Pratik's
+Pratik('s)?
 Pulkit
 Raju
 Ren
@@ -648,7 +661,6 @@ Turnquist
 Venkat
 Vetter
 Viktor
-Viktor
 Violeta
 Wilcock('s)?
 Wittrock
@@ -663,6 +675,7 @@ benbravo73
 freddygthatsme
 IvanTarin2
 kendrickcoleman
+olehdokuka
 OLGA_MACIASZEK
 starbuxman
 tiffanyfayj
@@ -675,6 +688,10 @@ youtube
 # When YouTube IDs start with _ it messes up the Markdown parser
 lTwaivWHzk
 CKtaKhKOo-Y
+8PpgqEqkQWA
 
 # Emoji
 ℹ
+
+# CVE ID
+CVE-[0-9]{4}-[0-9]+

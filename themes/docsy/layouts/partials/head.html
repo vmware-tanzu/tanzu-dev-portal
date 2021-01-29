@@ -3,13 +3,28 @@
 <script>
   dataLayer = [];
 </script>
+<!-- OneTrust -->
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<meta content='b9242434-9feb-47be-a894-3a9e658fdd50' name='onetrust-data-domain'>
+<meta content='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.js' name='microsites-utag'>
+{{ else }}
+<meta content='b9242434-9feb-47be-a894-3a9e658fdd50-test' name='onetrust-data-domain'>
+<meta content='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/qa/utag.js' name='microsites-utag'>
+{{ end }}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src='https://www.vmware.com/files/templates/inc/utag_data.js'></script>
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<script src='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.sync.js'></script>
+{{ else }}
+<script src='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/qa/utag.sync.js'></script>
+{{ end }}
+<script>
+  function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } }
+</script>
 <!-- Google Tag Manager -->
 <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PMT66RC');
+  function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); }
+  if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
 </script>
 
 {{ $jsHead := resources.Get "js/head.js" | resources.ExecuteAsTemplate "js/head.js" . }}
@@ -51,10 +66,6 @@
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }} -->
 {{ partialCached "head-css.html" . "asdf" }}
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
 {{ if .Site.Params.offlineSearch }}
 <script
   src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
