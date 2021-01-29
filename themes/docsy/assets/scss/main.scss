@@ -56,6 +56,15 @@
   content: url({{ "/images/icons/arrow-left-white.svg" | relURL }});
 }
 
+.guide a.linked-box {
+  min-height: 200px;
+  height: auto;
+}
+
+.relative {
+  position: relative;
+}
+
 #hero {
     background-repeat: no-repeat;
     background-position: right;

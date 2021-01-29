@@ -46,4 +46,37 @@ limitations under the License.
         });
     });
 
+    $(function () {
+        // Handle in-page anchor links with fixed header
+        $('a[href^="#"]').click(function(e) {
+            if (this.hash.length > 1) { // don't do this for empty # links
+                window.location.href = this.href;
+                e.preventDefault();
+                scrollToTarget(this.hash);
+            }
+        });
+
+        // Scroll to the right place when loading in-page anchor links
+        $(window).on('load', function(e){
+            var target = window.location.hash;
+            if (target) {
+                scrollToTarget(target);
+            }
+        });
+    });
+
+    function scrollToTarget(target) {
+        var headerHeight = 80; 
+        if (document.getElementById("live-notify") != null)
+            if (document.getElementById("live-notify").style.display == "block")
+                headerHeight = headerHeight + 40;
+        var targetId = target.replace(":","\\:");
+        $('html, body').animate(
+            { scrollTop: $(targetId).offset().top - headerHeight },
+            0,
+            'linear'
+        );
+    }
+
+
 }(jQuery));

@@ -4,7 +4,6 @@ title: "Coming Soon"
 aliases: ["/0000"]
 episode: "0000"
 hosts:
-- Bob Brindley
 - Tiffany Jernigan
 - Paul Czarkowski
 guests:

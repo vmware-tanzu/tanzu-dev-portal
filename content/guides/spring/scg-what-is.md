@@ -1,5 +1,4 @@
 ---
-title:  "Spring Cloud Gateway: What Is It?"
 linkTitle: "Spring Cloud Gateway"
 subsection: "Spring Cloud Gateway"
 topics:

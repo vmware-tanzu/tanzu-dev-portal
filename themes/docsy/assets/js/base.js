@@ -128,37 +128,7 @@ limitations under the License.
           $(".td-navbar .td-navbar-nav-hamburger .navbar-nav .nav-item").toggle();
         });
 
-        // Handle in-page anchor links with fixed header
-        $('a[href^="#"]').click(function(e) {
-            if (this.hash.length > 1) { // don't do this for empty # links
-                window.location.href = this.href;
-                e.preventDefault();
-                scrollToTarget(this.hash);
-            }
-        });
-
-        // Scroll to the right place when loading in-page anchor links
-        $(window).on('load', function(e){
-            var target = window.location.hash;
-            if (target) {
-                scrollToTarget(target);
-            }
-        });
-
     });  
-
-    function scrollToTarget(target) {
-        var headerHeight = 80; 
-        if (document.getElementById("live-notify") != null)
-            if (document.getElementById("live-notify").style.display == "block")
-                headerHeight = headerHeight + 40;
-        var targetId = target.replace(":","\\:");
-        $('html, body').animate(
-            { scrollTop: $(targetId).offset().top - headerHeight },
-            0,
-            'linear'
-        );
-    }
 
     var check = isTvShowLive();
     if (check) {
@@ -311,6 +281,30 @@ limitations under the License.
             }
         });
 
+    });
+
+    //Header search
+    $("header li .search-icon").click(function(){
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+    });
+
+    $("header li .search-icon").keypress(function (e) {
+        if (e.which == 13) {
+        $('#search-nav').slideToggle();
+        //$(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
+        }
+    });
+
+    $(".search-hide").click(function(){
+        $('#search-nav').slideToggle();
+        $(this).toggleClass('close');
+        $('#searchheaderform input').focus();
+        $('#mega-menus').toggleClass('no-border');
     });
 
 }(jQuery));

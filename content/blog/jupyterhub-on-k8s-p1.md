@@ -1,7 +1,7 @@
 ---
 title: "Data Science with Python & JupyterHub on Kubernetes - Part 1"
 featured: true
-weight: 1
+weight: 3
 description: >
     Setting up JupyterHub on Kubernetes
 date: 2021-01-07
@@ -350,4 +350,4 @@ To access the JupyterHub web UI from your Mac, use your web browser and enter yo
 
 ![JupyterHub login screen](/images/blogs/jupyter-hub-on-k8s/p1-jh-login.png)
  
-Congratulations! You are now ready to consume the service you have created and developed using Python Jupyter Notebooks running on JupyterHub on Kubernetes. In Part 2 of this series, we will focus on how to use JupyterHub and use Jupyter Notebooks on Kubernetes.
+Congratulations! You are now ready to consume the service you have created and developed using Python Jupyter Notebooks running on JupyterHub on Kubernetes. In [Part 2 of this series](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-2/), we will focus on how to use JupyterHub and use Jupyter Notebooks on Kubernetes.
