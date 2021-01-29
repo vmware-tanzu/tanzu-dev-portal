@@ -32,14 +32,14 @@
 {{ $active := eq $p $s }} 
 {{ $sid := $s.RelPermalink | anchorize }}
   <li class="td-sidebar-nav__section-title" id="{{ $sid }}">
-    <a href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $s.LinkTitle }}</a>
+    <a href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $s.LinkTitle | markdownify }}</a>
   </li>
 {{ else }} <!-- Subsection -->
 {{ $active := eq $p $c }}
 {{ $sid := $p.RelPermalink | anchorize }}
   <li class="td-sidebar-nav__subsection-title" id="{{ $sid }}">
     {{ $selected := eq $c.Params.parent $p.Params.subsection }}
-    <a href="{{ $p.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }}{{ if $selected}} selected{{ end }} td-sidebar-link td-sidebar-link__subsection">{{ $p.LinkTitle }}</a>
+    <a href="{{ $p.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }}{{ if $selected}} selected{{ end }} td-sidebar-link td-sidebar-link__subsection">{{ $p.LinkTitle | markdownify }}</a>
   </li>
 {{ end }}
 {{ $show := or (eq $ss $c.Params.parent) (eq $ss $c.Params.subsection) }}
@@ -56,7 +56,7 @@
       {{ $active := or (eq . $p) (eq . $c) }}
       {{ $sid := .RelPermalink | anchorize }}
       <li class="collapse {{ if $show }}show{{ end }}" id="{{ $sid }}">
-        <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle  }}</a>
+        <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
       </li>
       {{ end }}
       {{ else }}
