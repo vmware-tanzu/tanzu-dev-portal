@@ -214,6 +214,7 @@ amd64
 AMQP
 ARM64
 ApiResponse
+ApplicationEvent
 AppSec
 AppServer
 [A,a]rgo(CD|cd)(-k8s)?
@@ -588,6 +589,7 @@ Dobrin
 Dokuka
 Dolan
 Dre
+Drotbohm
 Dubois
 Eads
 Fewell
