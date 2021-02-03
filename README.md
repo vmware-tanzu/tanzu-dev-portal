@@ -10,7 +10,7 @@ To install the latest version of `hugo` you can use `brew install hugo` if you a
 
 Using `brew`:
 ```
-wget "https://github.com/Homebrew/homebrew-core/blob/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
+wget "https://raw.githubusercontent.com/Homebrew/homebrew-core/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
 brew install hugo.rb
 # To keep this version around if you upgrade
 brew pin hugo
