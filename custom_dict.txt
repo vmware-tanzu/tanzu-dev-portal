@@ -281,10 +281,11 @@ Finchley
 Flake8
 formatter
 fullnameOverride
+GemFire
 getAppFromExternalRepository(=false)?
 [G,g]it[L,l]ab('s|-managed)?
-[G,g]mail
 [G,g]ithub
+[G,g]mail
 [G,g]olang
 GraalVM
 Gradle
