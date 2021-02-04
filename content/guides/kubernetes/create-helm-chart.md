@@ -4,6 +4,7 @@ linkTitle: "Creating a Helm Chart"
 description: This tutorial walks you through the process of creating your first ever Helm chart, explaining what goes inside these packages and the tools you use to develop them.
 parent: "Helm"
 weight: 2
+date: 2018-10-05
 topics:
 - Kubernetes
 tags:

@@ -3,6 +3,7 @@ title: "Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Ap
 linkTitle: "Kafka with MongoDB"
 parent: Kafka
 description: This article explains how to integrate Apache Kafka with MongoDB to create scalable, fault-tolerant messaging infrastructure on Kubernetes.
+date: 2020-07-29
 topics:
 - Event Streaming
 - Messaging and Integration

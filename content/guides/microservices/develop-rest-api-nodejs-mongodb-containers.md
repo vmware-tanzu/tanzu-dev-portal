@@ -3,6 +3,7 @@ title: Develop a REST API with Bitnami's Node.js and MongoDB Containers
 linkTitle: Develop Node.js REST API
 parent: "Basics of REST"
 weight: 1
+date: 2020-03-24
 topics:
 - Microservices
 tags:

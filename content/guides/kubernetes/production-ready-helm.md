@@ -1,6 +1,6 @@
 ---
 title: "Best Practices for Creating Production-Ready Helm Charts"
-linkTitle: "Production-Ready Helm Charts"
+linkTitle: "Best Practices for Production"
 description: This tutorial will show you which are the best practices that any chart developer should follow.
 parent: "Helm"
 weight: 3

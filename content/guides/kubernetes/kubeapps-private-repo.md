@@ -1,8 +1,9 @@
 ---
 title:  "Deploy Custom Applications from a Private Helm Repository Using Kubeapps"
-linkTitle: "Deploy Custom Application to Private Repository"
+linkTitle: "Deploy Custom Application from Private Repository"
 parent: Kubeapps
 description: This tutorial shows you how to create a private project in Harbor, push a customized Helm chart to your registry and create an application repository to have your chart ready from the Kubeapps UI to be deployed.
+date: 2020-06-15
 topics:
 - Kubernetes
 tags:

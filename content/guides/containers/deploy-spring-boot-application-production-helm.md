@@ -4,6 +4,7 @@ linkTitle: "Spring Boot Production"
 parent: "Bitnami"
 weight: 4
 description: This tutorial walks you through the process of deploying a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart.
+date: 2019-05-13
 topics:
 - Containers
 - Kubernetes
@@ -18,7 +19,7 @@ team:
 
 Bitnami provides ready-to-run [Helm charts](https://github.com/bitnami/charts) that can be directly deployed on [Kubernetes](https://kubernetes.io/) and also infrastructure charts that can help you deploy your custom applications. That is the case of the [Bitnami Tomcat Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/tomcat) that with some tweaks can be used to run Java applications in production easily.
 
-This tutorial walks you through the process of deploying a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart. It uses the resulting image created in the [Deploy locally a Spring Boot application using Bitnami containers](https://docs.bitnami.com/tutorials/deploy-locally-spring-boot-application-docker/) guide as an example. While the Bitnami Tomcat Helm chart will be modified to get the application container from the DockerHub registry, create a secret to secure the application pod and connect it to a MariaDB pod.
+This tutorial walks you through the process of deploying a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart. It uses the resulting image created in the [Deploy locally a Spring Boot application using Bitnami containers](../deploy-locally-spring-boot-application-docker) guide as an example. While the Bitnami Tomcat Helm chart will be modified to get the application container from the DockerHub registry, create a secret to secure the application pod and connect it to a MariaDB pod.
 
 ## Assumptions and prerequisites
 
@@ -39,7 +40,7 @@ The following are the steps you will complete in this guide:
 * Step 3: Create a secret to secure the deployment
 * Step 4: Deploy the example application in Kubernetes
 
-> Learn how to create a Spring Boot Docker container image in the [Deploy locally a Spring Boot application using Bitnami containers](https://docs.bitnami.com/tutorials/deploy-locally-spring-boot-application-docker/) guide.
+> Learn how to create a Spring Boot Docker container image in the [Deploy locally a Spring Boot application using Bitnami containers](../deploy-locally-spring-boot-application-docker) guide.
 
 ## Step 1: Create the Helm chart
 

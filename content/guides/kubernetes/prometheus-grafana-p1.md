@@ -13,7 +13,6 @@ patterns:
 - Observability
 team:
 - Brian McClain
-draft: true
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and everything seems to be running great. Your work is done, right?

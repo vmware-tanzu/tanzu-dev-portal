@@ -3,6 +3,7 @@ title:  "Create a Continuous Integration Pipeline with GitLab and Kubernetes"
 linkTitle: "GitLab Auto DevOps"
 subsection: GitLab Auto DevOps
 description: Configure a CI/CD pipeline using GitLab and a Kubernetes cluster
+date: 2019-09-18
 topics:
 - CI-CD
 tags:

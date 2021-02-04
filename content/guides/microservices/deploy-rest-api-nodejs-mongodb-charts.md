@@ -3,6 +3,7 @@ title: Deploy a REST API on Kubernetes with Bitnami's Helm Charts
 linkTitle: Deploy Node.js REST API
 parent: "Basics of REST"
 weight: 2
+date: 2020-03-25
 topics:
 - Microservices
 tags:

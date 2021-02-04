@@ -3,6 +3,7 @@ title:  "Customize GitLab's Default Auto DevOps Pipeline with Bitnami's Helm Cha
 linkTitle: "Customize Default Pipeline"
 parent: GitLab Auto DevOps
 description: Enhance and customize GitLab's Auto DevOps CI/CD pipeline with Bitnami's Helm charts
+date: 2020-01-15
 topics:
 - CI-CD
 tags:
