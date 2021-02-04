@@ -21,7 +21,7 @@ As maintainers of a collection of more than [45 Helm charts](https://github.com/
 
 ## Use non-root containers
 
-Ensuring that a container is able to perform only a very limited set of operations is vital for production deployments. This is possible thanks to the **use of non-root containers, which are executed by a user different from *root*.** Although creating a non-root container is a bit more complex than a root container (especially regarding filesystem permissions), it is absolutely worth it. Also, in environments like Openshift, [using non-root containers is mandatory](https://engineering.bitnami.com/articles/running-non-root-containers-on-openshift.html).
+Ensuring that a container is able to perform only a very limited set of operations is vital for production deployments. This is possible thanks to the **use of non-root containers, which are executed by a user different from *root*.** Although creating a non-root container is a bit more complex than a root container (especially regarding filesystem permissions), it is absolutely worth it. Also, in environments like OpenShift, [using non-root containers is mandatory](https://engineering.bitnami.com/articles/running-non-root-containers-on-openshift.html).
 
 In order to make your Helm chart work with non-root containers, add the [*securityContext*](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) section to your *yaml* files.
 
@@ -56,7 +56,7 @@ securityContext:
   runAsUser: 1001
 ```
 
-With these changes, the chart will work as non-root in platforms like GKE, Minikube or Openshift.
+With these changes, the chart will work as non-root in platforms like GKE, Minikube or OpenShift.
 
 ## Do not persist the configuration
 

@@ -1,8 +1,7 @@
 ---
 title:  "Best Practices for Securing and Hardening Container Images"
 linkTitle: "Container Security Best Practices"
-weight: 1
-description: In this tutorial you will learn how Bitnami applies best practices, such as image tagging, non-root configuration, and arbitrary UIDs assignment, to its containers.
+description: Learn how Bitnami applies security best practices to its containers.
 topics:
 - Containers
 tags:
@@ -69,7 +68,7 @@ By default, Docker containers are run as *root* users. This means that you can d
 
 With a non-root container, you can't do any of this. A non-root container must be configured only for its main purpose, for example, run the NGINX server.
 
-A non-root container is a container in which the user executing the processes is not the *root* user but a unprivileged user, like *1001*. This is usually modified through the `USER` instruction in the Dockerfile.
+A non-root container is a container in which the user executing the processes is not the *root* user but an unprivileged user, like *1001*. This is usually modified through the `USER` instruction in the Dockerfile.
 
 ### Advantages of non-root containers
 
@@ -87,7 +86,7 @@ Non-root containers also have some disadvantages when used for local development
 
 * Write failures on persistent volumes in Kubernetes: Data persistence in Kubernetes is configured using persistent volumes. Kubernetes mounts these volumes with the *root* user as the owner; therefore, non-root containers don't have permissions to write to the persistent directory.
 
-* Issues with specific utilities or services: Some utilities (eg. Git) or servers (eg. PostgreSQL) run additional checks to find the user in the */etc/passwd* file. These checks will fail for non-root container images.
+* Issues with specific utilities or services: Some utilities (e.g. Git) or servers (e.g. PostgreSQL) run additional checks to find the user in the */etc/passwd* file. These checks will fail for non-root container images.
 
 To learn more about these issues, as well as potential solutions for each, [refer to our detailed blog post on this topic](https://engineering.bitnami.com/articles/running-non-root-containers-on-openshift.html).
 
@@ -95,7 +94,7 @@ Bitnami non-root containers fix the above issues:
 
 * For Kubernetes, Bitnami Helm charts use an *initContainer* for changing the volume permissions properly. As the image runs as non-root by default, it is necessary to adjust the ownership of the persistent volume so that the container can write data to it.
 By default, the charts are configured to use Kubernetes Security Context to automatically change the ownership of the volume. However, this feature does not work in all Kubernetes distributions. As an alternative, the charts support using an *initContainer* to change the ownership of the volume before mounting it in the final destination. [See an example of this in action from the Bitnami RabbitMQ chart](https://github.com/bitnami/charts/blob/9353a76a4ddda6bf1da78328496fb649c951e80d/bitnami/rabbitmq/templates/statefulset.yaml#L58) you can see how this *initContainer* is used.
-* For specific utilities, Bitnami ships the [*libnss-wrapper* package](https://packages.debian.org/sid/libnss-wrapper), which defines custom userspace files to ensure the software acts correctly. [See an example of this in action from the Bitnami PostgreSQL image](https://github.com/bitnami/bitnami-docker-postgresql/blob/master/12/debian-10/rootfs/opt/bitnami/scripts/libpostgresql.sh#L25).
+* For specific utilities, Bitnami ships the [*libnss-wrapper* package](https://packages.debian.org/sid/libnss-wrapper), which defines custom user space files to ensure the software acts correctly. [See an example of this in action from the Bitnami PostgreSQL image](https://github.com/bitnami/bitnami-docker-postgresql/blob/master/12/debian-10/rootfs/opt/bitnami/scripts/libpostgresql.sh#L25).
 
 ### Use non-root containers as root containers
 
@@ -178,4 +177,4 @@ To learn more about the topics discussed in this guide, use the links below:
 * [Why non-root containers are important for security](https://engineering.bitnami.com/articles/why-non-root-containers-are-important-for-security.html)
 * [Best practices writing a Dockerfile](https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html)
 * [How Bitnami continuously scans container images to fix CVE-reported security issues](https://engineering.bitnami.com/articles/how-bitnami-continuously-scans-container-images-to-fix-cve-reported-security-issues.html)
-* [Running non-root containers on Openshift](https://engineering.bitnami.com/articles/running-non-root-containers-on-openshift.html)
+* [Running non-root containers on OpenShift](https://engineering.bitnami.com/articles/running-non-root-containers-on-openshift.html)

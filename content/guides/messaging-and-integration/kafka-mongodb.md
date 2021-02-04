@@ -9,6 +9,7 @@ topics:
 tags:
 - Kafka
 - MongoDB
+- Bitnami
 - Event Streaming
 - Kubernetes
 patterns:
@@ -117,7 +118,7 @@ The next step is to create a container image with the MongoDB Connector for Apac
 
 ## Step 3: Deploy Apache Kafka and Kafka Connect on Kubernetes
 
-The next step is to deploy Apache Kafka and the custom Kafka Connect container on Kubernetes. Although you can do this as two separate deployments, an easier way is to combine the two steps into one using the Bitnami Kafka Helm chart. This chart supports an *extraDeploy* parameter whih lets you deploy a set of extra objects with your Apache Kafka deployment.
+The next step is to deploy Apache Kafka and the custom Kafka Connect container on Kubernetes. Although you can do this as two separate deployments, an easier way is to combine the two steps into one using the Bitnami Kafka Helm chart. This chart supports an *extraDeploy* parameter which lets you deploy a set of extra objects with your Apache Kafka deployment.
 
 * Begin by creating the following *values.yml* file holding the values that will be supplied to the Helm chart. Replace the KAFKA-USERNAME and KAFKA-PASSWORD with a custom username and password for Kafka client authentication. Replace the DOCKER-USERNAME placeholder with your Docker account username and the MONGODB-USER-PASSWORD placeholder with the password set for the MongoDB *user* account in [Step 1](#step-1-deploy-mongodb-on-kubernetes).
 
@@ -245,10 +246,7 @@ The next step is to deploy Apache Kafka and the custom Kafka Connect container o
 
   ![Running pods](/images/guides/messaging-and-integration/kafka-mongodb/pods.png)
 
-  <Note tip>
-
-  See the [complete list of parameters supported by the Bitnami Apache Kafka Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/kafka#parameters).
-  </Note>
+  > See the [complete list of parameters supported by the Bitnami Apache Kafka Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/kafka#parameters).
 
 ## Step 4: Test the integration
 

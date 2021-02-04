@@ -29,10 +29,7 @@ This article assumes that you have a Kubernetes cluster running with Helm v3.x a
 
 ## Step 1: Deploy MongoDB on Kubernetes
 
-<Note tip>
-
-If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-deploy-spring-cloud-data-flow-on-kubernetes).
-</Note>
+> If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-deploy-spring-cloud-data-flow-on-kubernetes).
 
 The first step is to deploy a MongoDB service on Kubernetes. The simplest way to do this is with [Bitnami's MongoDB Helm chart](https://github.com/helm/charts/tree/master/stable/mongodb). Follow the steps below:
 
@@ -56,10 +53,7 @@ The first step is to deploy a MongoDB service on Kubernetes. The simplest way to
 
   ![MongoDB deployment](/images/guides/spring/scdf-mongodb/mongodb.png)
 
-  <Note tip>
-
-  See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
-  </Note>
+  > See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
 
 ## Step 2: Deploy Spring Cloud Data Flow on Kubernetes
 
@@ -73,10 +67,7 @@ The next step is to deploy Spring Cloud Data Flow on the same cluster using Bitn
 
   Wait for a few minutes until the chart is deployed.
 
-  <Note tip>
-
-  See the [complete list of parameters supported by the Bitnami Spring Cloud Data Flow Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow#parameters).
-  </Note>
+  > See the [complete list of parameters supported by the Bitnami Spring Cloud Data Flow Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow#parameters).
 
 * Forward the Spring Cloud Data Flow server port:
 
@@ -88,7 +79,7 @@ The next step is to deploy Spring Cloud Data Flow on the same cluster using Bitn
 * Browse to http://IP-ADDRESS:8080/dashboard, where IP-ADDRESS should be the IP address of the *kubectl* host. You will see the Spring Cloud Data Flow dashboard.
 * On the "Applications" page, click the "Add Application(s)" button.
 * Select the option to "Bulk import application coordinates from an HTTP URI location".
-* Select the "Stream Apps (RabbitMQ/Docker)" category. The import URL will be pre-filled for you.
+* Select the "Stream Apps (RabbitMQ/Docker)" category. The import URL will be prefilled for you.
 * Click "Import the application(s)" to start the import process.
 
   ![Import process](/images/guides/spring/scdf-mongodb/import-apps.png)

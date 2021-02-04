@@ -165,7 +165,7 @@ Then, configure your Kubernetes cluster in GitLab by following these steps:
 
 ## Step 5: Enable Auto DevOps for the project
 
-Once the Kubernetes integration is complete and a runner is active, enable Auto DevOps for the project. Auto DevOps provides a pre-configured CI/CD pipeline which can be used to quickly get started with building, testing and deploying your project. [Learn more about Auto DevOps in GitLab](https://docs.gitlab.com/ee/topics/autodevops/).
+Once the Kubernetes integration is complete and a runner is active, enable Auto DevOps for the project. Auto DevOps provides a preconfigured CI/CD pipeline which can be used to quickly get started with building, testing and deploying your project. [Learn more about Auto DevOps in GitLab](https://docs.gitlab.com/ee/topics/autodevops/).
 
 To enable Auto DevOps for the project:
 * Navigate to the project's "Settings -> CI/CD" page.

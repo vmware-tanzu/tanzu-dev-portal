@@ -32,10 +32,7 @@ This guide assumes that:
 
 * Your application is a Node.js application and the application code is hosted in a GitLab repository. [Obtain the sample application's code and the Dockerfile to build it](https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-gitlab-kubernetes/#step-6-commit-test-and-repeat).
 
-  <Note>
-
-  Other programming languages or frameworks will require a different chart, but the broad steps to configure and integrate a custom Helm chart with GitLab's Auto DevOps will remain the same. 
-  </Note>
+  > Other programming languages or frameworks will require a different chart, but the broad steps to configure and integrate a custom Helm chart with GitLab's Auto DevOps will remain the same. 
 
 * You have [Git](https://git-scm.com/) and [*kubectl*](https://docs.bitnami.com/kubernetes/get-started-kubernetes#step-3-install-kubectl-command-line) installed and configured to work with your GitLab CE installation and Kubernetes cluster respectively.
 
@@ -75,19 +72,16 @@ For the Bitnami Node.js chart, the parameters passed via the *HELM_UPGRADE_EXTRA
 
 You can also view the [complete list of parameters supported by the chart](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).
 
-<Note warning>
-
-Using a LoadBalancer service type will typically assign a static IP address for the deployment. Depending on your cloud provider's policies, you may incur additional charges for this static IP address.
-</Note>
+> Using a LoadBalancer service type will typically assign a static IP address for the deployment. Depending on your cloud provider's policies, you may incur additional charges for this static IP address.
 
 ## Step 2: Commit code and test the pipeline
 
 At this point, you are ready to commit some code to the project and have GitLab test and deploy it using the Bitnami Helm chart. This tutorial assumes that you have a simple "Hello, world" application in Node.js, together with a Dockerfile to build it. If you don't, you can [obtain the sample application's code and a Dockerfile to build it](https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-gitlab-kubernetes/#step-6-commit-test-and-repeat).
 
-* Commit a change to the application - for example, update the message "Hello world" in the *server.js* file to "Yahooo world" - and push the change to GitLab:
+* Commit a change to the application - for example, update the message "Hello world" in the *server.js* file to "Yahoo world" - and push the change to GitLab:
 
   ```plaintext
-  sed -i 's/Hello world/Yahooo world/g' server.js
+  sed -i 's/Hello world/Yahoo world/g' server.js
   git add .
   git commit -m "Modified message text"
   git push origin master

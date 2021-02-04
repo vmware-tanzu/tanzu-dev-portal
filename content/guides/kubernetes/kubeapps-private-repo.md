@@ -16,7 +16,7 @@ team:
 - Raquel Campuzano
 ---
 
-[Kubeapps](https://github.com/kubeapps/kubeapps/) is a web-based UI for deploying and managing applications in Kubernetes clusters. Kubeapps includes a built-in catalog of Helm charts and operators continuously maintained and up to date. Now Kubeapps also provides support for private Helm respositories with private Docker images. There is an option of associating Docker credentials to an application repository so that Kubeapps can ensure they are used to pull any matching private images within a chart. This option is really useful for enterprise development team since it allows them to have more granular access control as well as a known good source of images. 
+[Kubeapps](https://github.com/kubeapps/kubeapps/) is a web-based UI for deploying and managing applications in Kubernetes clusters. Kubeapps includes a built-in catalog of Helm charts and operators continuously maintained and up to date. Now Kubeapps also provides support for private Helm repositories with private Docker images. There is an option of associating Docker credentials to an application repository so that Kubeapps can ensure they are used to pull any matching private images within a chart. This option is really useful for enterprise development team since it allows them to have more granular access control as well as a known good source of images. 
 
 Kubeapps officially supports the following Helm repositories:
 
@@ -37,7 +37,7 @@ This guide assumes that:
 * You have a Docker environment installed and configured. Learn more about [installing Docker](https://docs.docker.com/engine/install/).
 * You have a Docker Hub account. [Register for a free account](https://hub.docker.com/).
 * You have a Kubernetes cluster. Check out our [Getting Started with Kubernetes guides](https://docs.bitnami.com/kubernetes/) for an easy way to get started with one.
-* You have administrator access to a pre-existing installation of [Harbor](https://github.com/bitnami/charts/tree/master/bitnami/harbor).
+* You have administrator access to a preexisting installation of [Harbor](https://github.com/bitnami/charts/tree/master/bitnami/harbor).
 * You have [Helm installed in your cluster](https://docs.bitnami.com/kubernetes/get-started-kubernetes/#step-4-install-helm). 
 * You have [Kubeapps installed in your cluster](https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md) and are logged into the Kubeapps UI with admin credentials. 
 
@@ -135,7 +135,7 @@ Once it is created, remember to copy the token in a safe place or export it to f
 
   You will see an output message similar to this: "Successfully packaged chart". 
 
-* From the Harbor UI, navigate to the "Helm Charts" tab and click "Upload". Browse the resultant *.tgz* file of your packaged chart and click "Upload". You will see your Helm Chart uploaded in a few minutes:
+* From the Harbor UI, navigate to the "Helm Charts" tab and click "Upload". Browse the resultant *tgz* file of your packaged chart and click "Upload". You will see your Helm Chart uploaded in a few minutes:
 
   ![Harbor Helm chart uploaded](/images/guides/kubernetes/kubeapps-private-repo/harbor-helm-chart.png)
 
@@ -155,7 +155,7 @@ Now that you have both the Ghost image and its Helm chart available in your Harb
   * Application repository name
   * URL: private repository URL
   * Repository Authorization: select the "Basic Auth" option and enter as "Username" the name you gave to the Robot Account created in Harbor, and as "Password", the token you obtain at the time of the creation. This way, Kubeapps will be able to see the charts you have pulled into your Harbor repository.
-  * Associate Docker Registry Credentials: click "Add New Credentials" to add the credentials that will allow Kubernetes to to pull images from your private repository. Add the values below, then click "Submit" 
+  * Associate Docker Registry Credentials: click "Add New Credentials" to add the credentials that will allow Kubernetes to pull images from your private repository. Add the values below, then click "Submit" 
    
     * Secret name
     * Server: Harbor's server domain
