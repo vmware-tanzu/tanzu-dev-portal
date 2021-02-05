@@ -1,6 +1,7 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
 linkTitle: "Prometheus and Grafana"
+subsection: "Prometheus and Grafana"
 topics:
 - Kubernetes
 tags:
