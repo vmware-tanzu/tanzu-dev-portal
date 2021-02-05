@@ -1,7 +1,7 @@
 ---
 title: "Understanding API-First Development"
 linkTitle: "API-First Development"
-weight: 3
+weight: 4
 topics:
 - Spring
 - Microservices

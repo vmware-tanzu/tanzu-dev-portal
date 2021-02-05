@@ -1,6 +1,6 @@
 ---
 title: "Breaking Down a Monolith"
-weight: 2
+weight: 3
 topics:
 - Microservices
 tags:

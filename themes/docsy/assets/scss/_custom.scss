@@ -85,6 +85,10 @@ blockquote {
   border-bottom: none !important;
 }
 
+.table thead th {
+  vertical-align: middle;
+}
+
 p {
 	margin: 1rem 0;
 }
@@ -564,7 +568,7 @@ body.light-mode #toggle-light-dark-mode span {
   }  
 }
 
-.team-body-copy {
+.team-body-copy, .guide {
   h4 {
     margin-top: 2rem;
   }
