@@ -12,7 +12,7 @@ Once you understand what [containers](/guides/containers/what-are-containers) an
 
 ## What is Docker?
 
-Docker is an open source container platform that uses OS-level virtualization to package your software in units called containers. Containers are isolated from each other and are designed to be easily portable. You can build, run and distribute applications in Docker containers to run on Linux, Windows, Macs and almost anywhere else--both on-prem and in the cloud. The Docker environment also includes a container runtime as well as build and image management.
+Docker is an open source container platform that uses OS-level virtualization to package your software in units called containers. Containers are isolated from each other and are designed to be easily portable. You can build, run and distribute applications in Docker containers to run on Linux, Windows, Macs and almost anywhere else--both on-premises and in the cloud. The Docker environment also includes a container runtime as well as build and image management.
 
 ## Docker Containers 
 

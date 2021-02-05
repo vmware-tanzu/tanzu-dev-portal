@@ -1190,3 +1190,10 @@ ZDNet
 ZOP
 Zou
 Zuul
+IngressRoute
+reproducibility
+microservices-oriented
+antifragility
+Auditable
+debuggable
+McLuckie
