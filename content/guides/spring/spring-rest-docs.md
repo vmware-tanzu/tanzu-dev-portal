@@ -9,7 +9,7 @@ tags:
 - Spring Boot
 - Testing
 patterns:
-- APIs
+- API
 ---
 
 [Spring REST Docs](https://spring.io/projects/spring-restdocs#overview) provides a useful and always update-to-date way to document an application's RESTful services by combining hand-written documentation created with [Asciidoctor](https://asciidoctor.org) and auto-generated snippets created by [Spring MVC unit tests](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#unit-testing-spring-mvc). 
