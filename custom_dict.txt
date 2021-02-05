@@ -22,11 +22,13 @@ affordances
 Agile-ific
 amongst
 [A,a]nalytics
+antifragility
 antipatterns?
 appender
 [A,a]rchitecting
 artisanal
 async
+[A,a]uditable
 authenticator
 autocompletion
 [A,a]utoscaling
@@ -34,7 +36,7 @@ Aviv
 (back|front)end(s)?
 Backend
 [B,b]ackfill
-balancer(')?(s)?
+[B,b]alancer(')?(s)?
 biome
 [B,b]ootiful
 Bugsville
@@ -51,6 +53,7 @@ customizable
 dataset
 de
 [D,d]e-referenced
+debuggable
 decrypt(ed)?
 deployable
 deserializing
@@ -148,7 +151,7 @@ realtime
 [R,r]ebase
 refactorings?
 [R,r]epos?
-replicaset
+reproducibility
 revertibility
 [R,r]oadmap
 rollout
@@ -158,6 +161,7 @@ runtimes?
 runnable
 SaaS-based
 scalable
+schemas
 screencaster
 seaborn
 [S,s]erverless
@@ -283,6 +287,7 @@ HyperKit
 IAM
 init
 InfoQ
+IngressRoute
 IntelliJ
 J2EE
 Jaeger
@@ -327,6 +332,7 @@ MacBook
 MapRepository
 Mesos
 Microk8s
+microservices-oriented
 Minio
 [M,m]inikube
 MiXiT
@@ -632,6 +638,7 @@ Lubomir
 Lum
 Maciaszek-Sharma
 Madhav
+McLuckie
 Minella
 Muzz
 Nana

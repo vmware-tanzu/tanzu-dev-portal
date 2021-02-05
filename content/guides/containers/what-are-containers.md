@@ -15,13 +15,16 @@ Containers are an abstraction of the application layer, while virtual machines (
 To increase security and isolation, containers can run in lightweight virtual machines. The infrastructure (networks, servers, and storage) required to support containers is more easily managed using virtualization, and therefore the two technologies are complementary.
 
 Container standards are controlled by the [Open Container Initiative](https://opencontainers.org/). The OCI currently has specifications for the container runtime and the container image. 
+
 ## The Container Runtime
-The container runtime is software that executes containers and manages running container images. It partitions a Linux (or other) kernel to run isolated processes with specific resource limits for CPU, memory, etc. A runtime also helps isolate application processes by using two Linux kernel primitives: [control groups \(cgroups\)](http://man7.org/linux/man-pages/man7/cgroups.7.html) and [namespaces](http://man7.org/linux/man-pages/man7/namespaces.7.html). Cgroups limit resources to a set of processes running on a Linux host, and namespaces isolate processes from one another. Although Docker is the most popular example of a container runtime, there are others, such as rkt.
+
+The container runtime is software that executes containers and manages running container images. It partitions a Linux (or other) kernel to run isolated processes with specific resource limits for CPU, memory, etc. A runtime also helps isolate application processes by using two Linux kernel primitives: [control groups \(cgroups\)](http://man7.org/linux/man-pages/man7/cgroups.7.html) and [namespaces](http://man7.org/linux/man-pages/man7/namespaces.7.html). It is cgroups that limit resources to a set of processes running on a Linux host, while namespaces isolate these processes from one another. Although Docker is the most popular example of a container runtime, there are others, such as rkt.
 
 A running container is the set of processes \(typically an application\) that the container runtime supports, ensuring the necessary constructs in the kernel are created to limit resource consumption and provide isolation.
 
 ## How Do Containers Help?
-Containers operate at a higher level of abstraction than VMs. They improve **application portability, server elasticity, and server resource utilization**. A container runtime can schedule multiple containers on a shared operating system, benefitting both infrastructure operators and application developers.
+
+Containers operate at a higher level of abstraction than VMs. They improve **application portability, server elasticity, and server resource utilization**. A container runtime can schedule multiple containers on a shared operating system, benefiting both infrastructure operators and application developers.
 
 **Benefits for Operations, Infrastructure, and IT Teams**
 

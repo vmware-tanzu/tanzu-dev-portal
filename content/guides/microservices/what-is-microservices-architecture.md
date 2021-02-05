@@ -1,6 +1,7 @@
 ---
-title:  "What is Microservices Architecture?"
+title: "What is Microservices Architecture?"
 linkTitle: "What are Microservices?"
+subsection: "What are Microservices?"
 weight: 1
 topics:
 - Microservices
