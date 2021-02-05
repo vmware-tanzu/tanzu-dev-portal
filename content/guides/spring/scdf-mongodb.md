@@ -1,7 +1,7 @@
 ---
 title: Integrate Spring Cloud Data Flow Applications with a Scalable MongoDB Deployment on Kubernetes
 linkTitle: Spring Cloud Data Flow with MongoDB on Kubernetes
-description: Integrate a Spring Cloud Data Flow application with a MongoDB database service running on a Kubernetes cluster
+description: Integrate a Spring Cloud Data Flow app with a MongoDB service running on Kubernetes.
 date: 2020-09-04
 topics:
 - Spring

@@ -1,7 +1,7 @@
 ---
 title: "Creating Your First Helm Chart"
 linkTitle: "Creating a Helm Chart"
-description: This tutorial walks you through the process of creating your first ever Helm chart, explaining what goes inside these packages and the tools you use to develop them.
+description: Create your first ever Helm chart and learn what goes inside these packages.
 parent: "Helm"
 weight: 2
 date: 2018-10-05
@@ -20,7 +20,7 @@ So, you've got your [Kubernetes cluster up and running](https://docs.bitnami.com
 
 For a typical cloud-native application with a 3-tier architecture, the diagram below illustrates how it might be described in terms of [Kubernetes objects](http://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/). In this example, each tier consists of a [Deployment](http://kubernetes.io/docs/user-guide/deployments/) and [Service](http://kubernetes.io/docs/user-guide/services/) object, and may additionally define [ConfigMap](http://kubernetes.io/docs/user-guide/configmap/) or [Secret](http://kubernetes.io/docs/user-guide/secrets/) objects. Each of these objects are typically defined in separate YAML files, and are fed into the *kubectl* command line tool.
 
-![3-tier application architecture on Kubernetes](/images/guides/kubernetes/create-helm-chart/three-tier-kubernetes-architecture.png)
+![3-tier application architecture on Kubernetes](/images/guides/kubernetes/create-helm-chart/diagrams/three-tier-kubernetes-architecture.png)
 
 A Helm chart encapsulates each of these YAML definitions, provides a mechanism for configuration at deploy-time and allows you to define metadata and documentation that might be useful when sharing the package. Helm can be useful in different scenarios:
 

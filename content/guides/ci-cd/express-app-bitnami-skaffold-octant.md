@@ -1,7 +1,7 @@
 ---
 title: "Continuously Develop and Monitor an Express Application on Kubernetes with Bitnami, Skaffold and Octant"
 linkTitle: "Skaffold and Octant"
-description: This tutorial describes how to perform continuous development and testing of an Express application on Kubernetes using Skaffold with Bitnami containers and Helm charts. It also explains how to use Octant to monitor and inspect the application workload in the cluster environment.
+description: Continuously develop, test, and monitor an Express app with Bitnami, Skaffold and Octant
 date: 2020-01-30
 topics:
 - CI-CD

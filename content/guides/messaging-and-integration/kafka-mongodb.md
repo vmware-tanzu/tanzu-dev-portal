@@ -2,7 +2,7 @@
 title: "Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Apache Kafka and MongoDB"
 linkTitle: "Kafka with MongoDB"
 parent: Kafka
-description: This article explains how to integrate Apache Kafka with MongoDB to create scalable, fault-tolerant messaging infrastructure on Kubernetes.
+description: Integrate Kafka with MongoDB to create scalable, fault-tolerant messaging on Kubernetes
 date: 2020-07-29
 topics:
 - Event Streaming
@@ -73,7 +73,7 @@ The first step is to deploy a MongoDB service on Kubernetes. The simplest way to
       roles: [ { role: "dbOwner", db: "mydb" } ]
     }
   )
-  ```bash
+  ```
 
 * Exit the MongoDB CLI and terminate the client pod.
 

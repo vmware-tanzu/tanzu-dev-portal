@@ -3,7 +3,7 @@ title: "Move a Custom Spring Boot Application to Production Using Bitnami Helm C
 linkTitle: "Spring Boot Production"
 parent: "Bitnami"
 weight: 4
-description: This tutorial walks you through the process of deploying a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart.
+description: Deploy a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart.
 date: 2019-05-13
 topics:
 - Containers

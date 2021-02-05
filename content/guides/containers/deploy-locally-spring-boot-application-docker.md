@@ -3,7 +3,7 @@ title: "Deploy Locally a Spring Boot Application Using Bitnami Containers"
 linkTitle: "Spring Boot Local"
 parent: "Bitnami"
 weight: 3
-description: In this tutorial, you will learn how to use a Bitnami Tomcat container image as a framework for deploying locally a sample Spring Boot application that uses the Bitnami MariaDB container image as a database.
+description: Locally deploy a Spring Boot app that connects to a database using the Bitnami MariaDB container image.
 topics:
 - Containers
 - Kubernetes

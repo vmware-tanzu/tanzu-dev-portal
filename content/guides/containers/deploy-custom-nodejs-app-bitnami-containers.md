@@ -3,7 +3,7 @@ title: "Deploy a Custom Node.js Application using Bitnami Containers"
 linkTitle: "Node.js"
 parent: "Bitnami"
 weight: 2
-description: This guide walks you through the process of creating an optimized and secure Docker image of a custom application using a Bitnami base container, then testing it and publishing it online. It also guides you through the steps to follow when you update your application and need to rebuild and republish it for your users.
+description: Create, test, and publish a secure Docker image for a Node.js application using Bitnami.
 topics:
 - Containers
 - Kubernetes

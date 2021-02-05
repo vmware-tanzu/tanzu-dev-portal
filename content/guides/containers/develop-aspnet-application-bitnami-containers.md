@@ -3,7 +3,7 @@ title: "Develop and Publish an ASP.NET Web Application using Bitnami Containers"
 linkTitle: "ASP.NET"
 parent: "Bitnami"
 weight: 1
-description: This guide walks you through the process of creating a secure Docker image of a custom ASP.NET Web application using a Bitnami base container, then testing it and publishing it online.
+description: Create, test, and publish a secure Docker image for an ASP.NET Web application using Bitnami.
 date: 2020-09-03
 topics:
 - Containers

@@ -226,7 +226,7 @@ Your REST API is now active and configured to use MongoDB. You can now proceed t
   
 At this point, you have a working Node.js REST API integrated with a MongoDB database. However, it's currently only available on your local machine and only while the containers are running. This is fine for local development, but becomes a bottleneck when you want to make it available to others for review and testing. 
 
-That's where the [second part of this series](https://docs.bitnami.com/tutorials/deploy-rest-api-nodejs-mongodb-charts/) comes in. Continue adding features to your API and once you're happy with it, proceed to the concluding article and learn how to make your REST API available to a larger group by containerizing it, deploying it on Kubernetes and connecting it to a MongoDB service also running on Kubernetes. 
+That's where the [second part of this series](/guides/microservices/deploy-rest-api-nodejs-mongodb-charts/) comes in. Continue adding features to your API and once you're happy with it, proceed to the concluding article and learn how to make your REST API available to a larger group by containerizing it, deploying it on Kubernetes and connecting it to a MongoDB service also running on Kubernetes. 
 
 ## Useful links
 
