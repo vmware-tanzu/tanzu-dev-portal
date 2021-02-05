@@ -7,7 +7,7 @@ topics:
 tags:
 - Spring Batch
 patterns:
-- APIs
+- API
 ---
 
 
