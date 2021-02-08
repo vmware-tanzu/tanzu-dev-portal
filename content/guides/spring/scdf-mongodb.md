@@ -176,4 +176,4 @@ To learn more about the topics discussed in this guide, use the links below:
 * [Bitnami Spring Cloud Data Flow Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow)
 * [Bitnami MongoDB Helm chart](https://github.com/helm/charts/tree/master/stable/mongodb)
 * [Spring Cloud Data Flow documentation](https://dataflow.spring.io/docs/)
-* [Spring Cloud Stream guide](https://tanzu.vmware.com/developer/guides/event-streaming/scs-what-is/)
+* [Spring Cloud Stream guide](/guides/event-streaming/scs-what-is/)
