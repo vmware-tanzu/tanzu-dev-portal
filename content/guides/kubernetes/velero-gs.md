@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Velero
-linkTitle: Velero
+linkTitle: Getting Started with Velero
+parent: Velero
 topics:
 - Kubernetes
 tags:
