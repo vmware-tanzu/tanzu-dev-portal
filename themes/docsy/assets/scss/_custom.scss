@@ -425,44 +425,52 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
-#register .mktoForm {
-  .mktoFormRow:nth-child(3) {
-    display: block;
+#register {
+  .mktoForm {
+    .mktoFormRow:nth-child(3) {
+      display: block;
+    }
+    .mktoFormCol,
+    .mktoFieldWrap {
+      width: 100%;
+    }
+    ::placeholder {
+      color: white;
+    }
+    select,
+    input:not([type="checkbox"]) {
+      width: 100% !important;
+      border: 0 !important;
+      background: transparent;
+      border-bottom: 1px solid white !important;
+      font-size: 16px;
+      color: white;
+      padding-left: 0 !important;
+      padding-bottom: 5px !important;
+      margin-top: 5px !important;
+      height: 46px;
+      font-family:'Metropolis';
+    }
+    .mktoButtonRow {
+      margin-bottom: 60px;
+    }
+    select {
+      background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-white.png) no-repeat transparent right 10px center !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 0;
+      display: block;
+    }
+    input[type=text]:focus, input[type=url]:focus, input[type=email]:focus, input[type=tel]:focus, select.mktoField:focus {
+      outline: none !important;
+      border-bottom: 1px solid $link !important;
+    }
   }
-  .mktoFormCol,
-  .mktoFieldWrap {
-    width: 100%;
-  }
-  ::placeholder {
-    color: white;
-  }
-  select,
-  input:not([type="checkbox"]) {
-    width: 100% !important;
-    border: 0 !important;
-    background: transparent;
-    border-bottom: 1px solid white !important;
-    font-size: 16px;
-    color: white;
-    padding-left: 0 !important;
-    padding-bottom: 5px !important;
-    margin-top: 5px !important;
-    height: 46px;
-    font-family:'Metropolis';
-  }
-  .mktoButtonRow {
-    margin-bottom: 60px;
-  }
-  select {
-    background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-white.png) no-repeat transparent right 10px center !important;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 0;
-    display: block;
-  }
-  input[type=text]:focus, input[type=url]:focus, input[type=email]:focus, input[type=tel]:focus, select.mktoField:focus {
-    outline: none !important;
-    border-bottom: 1px solid $link !important;
+  .confirmation {
+    max-width: 290px;
+    .zoom-link {
+      word-break: break-all;
+    }
   }
 }
 
