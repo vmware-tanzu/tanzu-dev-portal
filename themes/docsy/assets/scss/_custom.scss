@@ -426,6 +426,9 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 #register .mktoForm {
+  .mktoFormRow:nth-child(3) {
+    display: block;
+  }
   .mktoFormCol,
   .mktoFieldWrap {
     width: 100%;
