@@ -438,7 +438,7 @@ body.light-mode #toggle-light-dark-mode span {
       color: white;
     }
     select,
-    input:not([type="checkbox"]) {
+    input:not([type="checkbox"]):not([type="radio"]) {
       width: 100% !important;
       border: 0 !important;
       background: transparent;
