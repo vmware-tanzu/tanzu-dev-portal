@@ -42,7 +42,11 @@
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
 
                                 <a href="{{ $episodeLink }}"><img class="upcoming" src="{{ .Params.episode_banner | relURL }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
-                                <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
+                                {{ if .Params.no_streaming_label }}
+                                    <p></p>
+                                {{ else }}
+                                    <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
+                                {{ end }}
                                 <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
                             </div>
                         </div>
