@@ -247,6 +247,7 @@ cass-operator
 cd
 (CF|cf)(-for-k8s)?
 cfapps
+cgroups
 ChartMuseum
 chartPath
 classpath
