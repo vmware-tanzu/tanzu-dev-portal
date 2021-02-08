@@ -1,7 +1,8 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
 linkTitle: "Prometheus and Grafana"
-subsection: "Prometheus and Grafana"
+parent: Kubernetes Monitoring
+weight: 1
 topics:
 - Kubernetes
 tags:
