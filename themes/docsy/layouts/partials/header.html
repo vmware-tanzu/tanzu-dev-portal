@@ -1,0 +1,49 @@
+<div className="method-template">
+    <div className="row method-template__header mt-5 mb-5">
+        <div className="col-lg-5 col-md-12">
+            <img
+                    src={{.image.publicURL}}
+                    className="method-template__img-container"
+                    alt="cover"
+            />
+        </div>
+        <div className="col-lg-7 col-md-12">
+            <h1 className="mt-3" style="display: 'inline-block'">
+                {{ .title}}
+            </h1>
+            {{ .remote }}
+            <span
+                    className="tag tag-small tag--remote ml-3"
+                    style="border: '0'"
+            >
+                Remote
+                </span>
+            )}
+            <div className="method-template__review-date">
+                Last Updated {reviewDate}
+            </div>
+            <h6 className="mt-4 mb-3">What is this method?</h6>
+            <p>{{ .summary }}</p>
+            <div className="row mt-5">
+                <div className="col">
+                    <h6>Phases</h6>
+                    <div className="row ml-0">
+                        {tags.map(tag => (
+                        <Tag key={tag} tag={tag}/>
+                        ))}
+                    </div>
+                </div>
+                <div className="col">
+                    <h6>Suggested Time</h6>
+                    {{.time}}
+                </div>
+                <div className="col">
+                    <h6>Participants</h6>
+                    {{.participants}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div className="container-fluid">
+    </div>
+</div>

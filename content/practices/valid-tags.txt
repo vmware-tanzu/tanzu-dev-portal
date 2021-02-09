@@ -1,0 +1,13 @@
+### special tags ###
+all methods
+draft
+example tag
+
+### content tags ###
+Scoping
+Kickoff
+Discovery
+Framing
+Inception
+Transition
+Modernization

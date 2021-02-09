@@ -11,7 +11,7 @@ lastmod: "2019-12-09"
 why:
 - Align business leaders and technical practitioners. Use this approach to break down a system of systems, and develop a notional architectural plan that maps future goals with the way the system “wants to behave.” We’ve found this to be especially important for critical systems modernization. - Inform decisions on how to organize development teams, and prioritize work from both a business and technical perspective. It’s also helpful as a “catch-all” way to define a path between the status quo and the desired state.
 when:
-- Jumpstart application modernization initiatives in an iterative fashion. This is the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization), a short consulting engagement that quickly reviews current business functionality and plans “to be” architecture. Our experts practice the Swift method to discover architecture, boundaries, points of risk or concern, and then map a direction to move from current state to future state. 
+- Jumpstart application modernization initiatives in an iterative fashion. This is the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization), which can be a short consulting engagement that quickly reviews current business functionality and plans “to be” architecture. Our experts practice the Swift method to discover architecture, boundaries, points of risk or concern, and then map a direction to move from current state to future state. 
 
 what: 
 - Post-It arrow flags
@@ -39,7 +39,7 @@ what:
 
 1. Prioritize the thin slices, with an eye to balancing business value, technical risk, and effort. The goal is to incrementally move the system toward behaving “the way it wants to;” the implementation of each successive slice gets us that much closer to this goal.
 
-1. The thin slices become actionable when captured in the backlog as MVPs (Minimum Viable Products) or collections of stories. VMware Tanzu Labs will partner with the customer team to identify and prioritize the thin slices, with an eye to balancing business value, technical risk, and effort.
+1. The thin slices become actionable when captured in the backlog as MVPs (Minimum Viable Products) or collections of stories. In some cases, VMware Tanzu Labs will partner with the customer team to identify and prioritize the thin slices, with an eye to balancing business value, technical risk, and effort.
    {{% callout %}}
    Tip: In order to determine the right MVPs for your system you have to consider thin vertical end to end slices where these domains interact with one another. The MVPs map a path from ["strangling the monolith"](https://tanzu.vmware.com/content/blog/strangling-a-monolith-by-focusing-on-roi) and leveraging tactical patterns to interact with the new domains and services.
    {{% /callout %}}
@@ -68,8 +68,8 @@ A good facilitator should be able to drive out how a system should be designed b
 This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
 
 ### Related Practices
-
 Swift Method contains many activities, including:
+
 - [Event Storming](/practices/event-storming)
 - [Boris](/practices/boris)
 
