@@ -45,14 +45,13 @@ This allows the developer to reuse `deployment.yaml` files which are often
 already in place in production environments. At this point there is a high level
 of parity between development, staging, and production environments. However, a
 new challenge arises: how does the developer efficiently update the application
-running on their development cluster every time the code is updated? 
+running on their development cluster every time the code is updated?
 
 The Kubernetes community and the broader Cloud Native ecosystem offers a variety
 of tools that improve the development workflow. Each tool attempts to solve one
 of these problems: 1) Running Kubernetes in the developer's local environment,
 and 2) Continuously building, pushing, and deploying containers as the developer
-changes source code. To learn more about the available tools, see the
-[Options](../tooling-and-approaches) document.
+changes source code.
 
 ## Local vs Remote Cluster
 
@@ -71,8 +70,7 @@ The following tools provide developers with a local Kubernetes environment:
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 As the development model matures, on-prem or hosted clusters are used together
-with [CI/CD tooling](../deployment-and-lifecycle/tooling-and-approaches.md) to
-standardize environments and workflows.
+with CI/CD tooling to standardize environments and workflows.
 
 ## Kubeconfig & Multiple Clusters
 
