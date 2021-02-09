@@ -137,6 +137,7 @@ parallelizing
 passcode|PASSCODE
 Petstore
 pickab(le|ility)?
+pre(-)?
 precompiled
 performant
 prefilled
