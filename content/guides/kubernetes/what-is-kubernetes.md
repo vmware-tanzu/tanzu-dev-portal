@@ -37,7 +37,7 @@ In addition to scheduling deployment and automating the management of containeri
 Kubernetes uses various resource constructs to work with containers. These resources help define simple tasks such as how many instances of a container to run at all times, how to trigger auto-scaling, how to route ingress traffic to a set of container images, or how to define a load balancer to distribute traffic between multiple container images. 
 
 ## Keep learning
-If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](https://tanzu.vmware.com/developer/guides/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Kubernetes 101](https://kube.academy/courses/kubernetes-101) course on [KubeAcademy](https://kube.academy/).
+If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](/guides/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Kubernetes 101](https://kube.academy/courses/kubernetes-101) course on [KubeAcademy](https://kube.academy/).
 
 After you feel comfortable with Kubernetes concepts, you can also learn about combining the Docker container platform with Kubernetes to develop [microservices](/topics/microservices).
 
