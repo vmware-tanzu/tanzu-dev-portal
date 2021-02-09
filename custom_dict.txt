@@ -20,6 +20,7 @@ localhost(:[0-9]*)?
 addon(s)?
 affordances
 Agile-ific
+air-gapped
 amongst
 [A,a]nalytics
 antifragility
@@ -37,6 +38,7 @@ Aviv
 Backend
 [B,b]ackfill
 [B,b]alancer(')?(s)?
+benchmarking
 biome
 [B,b]ootiful
 bootup
@@ -89,6 +91,7 @@ ghostUsername
 GitOps
 Helming
 hermeticism
+hoc
 hostname(s)?
 ideate
 InfoSec
@@ -152,6 +155,7 @@ README
 realtime
 [R,r]ebase
 refactorings?
+replumb
 [R,r]epos?
 reproducibility
 revertibility
@@ -198,6 +202,7 @@ unencrypted
 unpause
 unpushed
 unreleasable
+untrusted
 upgradability
 uptime
 V2
@@ -222,6 +227,7 @@ Alexa
 Ansible
 amd64
 AMQP
+Anchore
 ARM64
 ApiResponse
 ApplicationEvent
@@ -232,6 +238,7 @@ AppServer
 Artifactory
 Asciidoctor
 Astra
+auditd
 [A,a]uth
 autosave
 Autowired
@@ -245,6 +252,7 @@ Bundler
 Carvel('s)?
 cass-operator
 cd
+CentOS
 (CF|cf)(-for-k8s)?
 cfapps
 cgroups
@@ -273,6 +281,7 @@ Devoops
 distros
 [D,d]ockerfile(s|-built)?
 DockerHub
+DoSec
 dotnetsdk
 EclipseLink
 ElasticSearch
@@ -284,6 +293,7 @@ Falco
 filesystem
 Finchley
 Flake8
+[F,f]luentd
 formatter
 fullnameOverride
 GemFire
@@ -435,6 +445,8 @@ SIG-(Network|Runtime|Security|Storage)
 Siri
 [S,s]kaffold
 Snapchat
+Sonobuoy('s)?
+Splunk
 SqlServer
 SpringBootTest
 spring-petclinic
@@ -449,6 +461,7 @@ sudo
 svc
 swagger-cli
 Sysdig
+systemd
 Tanzu(Developer)?
 targetPort
 TaskRepository
@@ -458,6 +471,7 @@ TestContainers
 tgz
 Thanos
 Trello
+Trivy
 TRS-80
 URL(s)?
 Vaadin
@@ -603,9 +617,11 @@ MTTR
 MVB(-awarded)?
 MVC
 NFJS
+NIST
 non-JVM
 NSX
 OCI(-compliant)?
+OIDC
 ok
 OOP
 OPA
