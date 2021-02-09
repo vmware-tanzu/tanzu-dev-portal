@@ -121,6 +121,7 @@ nullable
 old-checkout-desc
 ok
 [O,o]makase
+on-prem
 orchestrator
 org(s)?
 overcomplicate
@@ -252,7 +253,7 @@ ClusterIP
 Clojure
 CMD
 CoreCLR
-ConfigMap(s)?
+[C,c]onfig[M,m]ap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 containerd
@@ -269,6 +270,7 @@ distros
 [D,d]ockerfile(s|-built)?
 DockerHub
 dotnetsdk
+dnsutil
 EclipseLink
 ElasticSearch
 [E,e]thernet(s)?
@@ -334,7 +336,9 @@ kube-apiserver
 KubeAcademy
 [K,k]ubeapps
 kubectl
-kubeconfig
+kubectx
+[K,k]ubeconfig
+KUBECONFIG
 Kubernetes(-native|-specific|-centric|-based|-related)?
 labelset
 lego
@@ -448,6 +452,7 @@ TaskRepository
 Tekton('s)?
 Terraform(-ing)?
 TestContainers
+Tiltfile
 tgz
 Thanos
 Trello
@@ -483,12 +488,14 @@ NODE_ENV
 WORKDIR
 
 # Companies / Conferences
+Ardanlabs
 Alibaba
 Apress
 DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CodeFresh
+CoffeeOps
 CoreOS
 DevNexus
 DevOpsDaysKC
@@ -768,6 +775,7 @@ olehdokuka
 OLGA_MACIASZEK
 starbuxman
 tiffanyfayj
+johnharris85
 
 # Tags
 img

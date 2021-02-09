@@ -288,7 +288,7 @@ docker_build('hello-world','.')
 k8s_resource('hello-world', port_forwards=9000)
 ```
 
-It is possible to configure your `default_registry` in in your Tiltfile, but
+It is possible to configure your `default_registry` in your Tiltfile, but
 VMware recommends keeping configuration in a separate file to simplify
 on-boarding for developers.
 
