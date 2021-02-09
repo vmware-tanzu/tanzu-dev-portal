@@ -577,6 +577,7 @@ KUBECONFIG
 [k,K]ubectl
 kubectx
 [k,K]ubelet(-probe)?
+[k,K]ubelet(-probe)?
 kubelet(s)?
 kubeseal
 Kube2IAM

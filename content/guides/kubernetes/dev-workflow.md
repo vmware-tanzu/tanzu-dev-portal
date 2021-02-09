@@ -1,11 +1,11 @@
 ---
-title:  "Developer Workflow"
+title: "Developer Workflow"
 subsection: "Developer Workflow"
 weight: 2
 topics:
-- Kubernetes
+  - Kubernetes
 team:
-- John Harris
+  - John Harris
 ---
 
 The developer workflow typically involves writing code, executing automated
@@ -84,10 +84,10 @@ commands to navigate contexts.
 kubectl config view # Show Merged kubeconfig settings.
 
 # use multiple kubeconfig files at the same time and view merged config
-KUBECONFIG=~/.kube/config:~/.kube/kubconfig2 
+KUBECONFIG=~/.kube/config:~/.kube/kubconfig2
 
 
-kubectl config get-contexts                # display list of contexts 
+kubectl config get-contexts                # display list of contexts
 kubectl config current-context             # display the current-context
 kubectl config use-context my-cluster-name # set the default context to my-cluster-name
 
