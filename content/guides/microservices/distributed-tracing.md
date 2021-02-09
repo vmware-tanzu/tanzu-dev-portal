@@ -68,7 +68,7 @@ There are already tools and libraries that solve this problem in the **Spring Cl
 
 Using these tools, the larger, outermost request (we referred to this as the originator or _origination ID_ above) is called the **trace**, and individual steps within this request are called **spans**. Additional information and metadata can be attached to a **span** through the use of **tags**.
 
-You can learn more about using Zipkin in the guide: [Getting Started with Zipkin and Spring Boot](https://tanzu.vmware.com/developer/guides/spring/spring-zipkin/).
+You can learn more about using Zipkin in the guide: [Getting Started with Zipkin and Spring Boot](/guides/spring/spring-zipkin/).
 
 ## Implementation in .NET
 The same general rules apply to .NET, maintain the trace and span context at the request inbound and outbound level, and emit log information to **STDOUT** decorated with that information.
@@ -90,6 +90,6 @@ If you can avoid installing an agent then you should do so. There are plenty of 
 ## Keep Learning
 Distributed tracing is essential for troubleshooting microservices applications, so it’s worth the effort to learn about it. What you will discover is that the vast majority of modern distributed tracing solutions are either based on, or inspired by, the [Google Dapper Whitepaper](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf).
 
-To learn more about observability in cloud native environments, visit our [Observability pattern](https://tanzu.vmware.com/developer/patterns/observability/). And be sure and read the guide [Getting Started with Zipkin and Spring Boot](https://tanzu.vmware.com/developer/guides/spring/spring-zipkin/) if you’re implementing microservices in the Spring environment.
+To learn more about observability in cloud native environments, visit our [Observability pattern](/patterns/observability/). And be sure and read the guide [Getting Started with Zipkin and Spring Boot](/guides/spring/spring-zipkin/) if you’re implementing microservices in the Spring environment.
 
 
