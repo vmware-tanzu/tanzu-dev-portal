@@ -50,7 +50,7 @@ running on their development cluster every time the code is updated?
 The Kubernetes community and the broader Cloud Native ecosystem offers a variety
 of tools that improve the development workflow. Each tool attempts to solve one
 of these problems: 1) Running Kubernetes in the developer's local environment,
-and 2) Continously building, pushing, and deploying containers as the developer
+and 2) Continuously building, pushing, and deploying containers as the developer
 changes source code. To learn more about the available tools, see the
 [Options](../tooling-and-approaches) document.
 
