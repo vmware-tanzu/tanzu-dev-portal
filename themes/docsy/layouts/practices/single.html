@@ -1,0 +1,118 @@
+{{ define "main" }}
+{{ partial "amplitude.html" (dict "context" . "event" "sample viewed") }}
+
+<div class="practices">
+    <div class="td-main">
+        <div class="bg-gray-dark mt-lg-5 mt-0 pt-lg-5 pb-lg-0 py-2">
+            <div class='container'>
+                {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <img
+                                src="/images/practices/{{.Page.Params.image}}"
+                                className="method-template__img-container"
+                                alt="cover"
+                        />
+                    </div>
+                    <div class="col-lg-9 pl-5 pl-lg-5 mb-3">
+                        <h1>{{ .Title }}</h1>
+                        <p>{{ .Params.description }}</p>
+                        <div class="section-index basic-info">
+                            <div class="row">
+                                <div class="col-lg-4 pr-md-2 pr-lg-2 mb-3 logistics">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h5 class="mt-3">Phases</h5>
+                                    <ul class="tags">
+                                        {{ range .Params.tags }}
+                                        <li>{{ . }}</li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 px-md-4 px-lg-4 mb-3 logistics">
+                                    <i class="fas fa-clock"></i>
+                                    <h5 class="mt-3">Suggested Time</h5>
+                                    <p>{{ .Params.length }}</p>
+                                </div>
+                                <div class="col-lg-4 px-md-4 px-lg-4 mb-3 logistics">
+                                    <i class="fas fa-users"></i>
+                                    <h5 class="mt-3">Participants</h5>
+                                    <p>{{ .Params.participants }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+
+                <!--            <a href="{{ .Params.repo }}/archive/master.zip" title="{{ .Title }}" id="sample-zip" class="btn"><span-->
+                <!--                    class="fas fa-download"></span> Download ZIP</a>-->
+                <!--            <a href="{{ .Params.repo }}" title="{{ .Title }}" id="sample-gh" class="btn"><span-->
+                <!--                    class="fab fa-github"></span> View on GitHub</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="container border-bottom gradient-edge-parent">
+        <div class="gradient-edge-top"></div>
+        <div class="row">
+            <div class="col-lg-4 px-2 px-lg-2 mb-1">
+                {{ partial "practices/info-box" (dict "context" . "title" "Why do it?" "info" .Params.why ) }}
+            </div>
+            <div class="col-lg-4 px-2 px-lg-2 mb-1">
+                {{ partial "practices/info-box" (dict "context" . "title" "When to do it?" "info" .Params.when ) }}
+            </div>
+            <div class="col-lg-4 px-2 px-lg-2 mb-1">
+                {{ partial "practices/info-box" (dict "context" . "title" "What supplies are needed?" "info" .Params.what ) }}
+            </div>
+        </div>
+        {{ if .Params.remote }}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 px-2 px-lg-2 mb-3">
+                    <h4 class="mt-3">How to use this method remotely?</h4>
+                    <p>There is currently a remote template available in Miro. Here you will find step
+                        instructions on how to conduct this practice remotely including general tips and
+                        info.
+                        <br/><br/>
+                        Disclaimer: In case you are not able to use Miro during your current
+                        engagement, please open the template using your Miro VMware account, take a
+                        print
+                        screen and copy it over to the tool you are using.
+                    </p>
+                </div>
+                <div class="col-lg-4 px-2 px-lg-2 mb-3">
+                    <h4 class="mt-3">1.
+                        Open Miro. In the side menu, select 'Templates'</h4>
+                    <p>{{"![Open Miro. In the side menu, select 'Templates'](/images/practices/remote-1.png)"| markdownify}}</p>
+                </div>
+                <div class="col-lg-4 px-2 px-lg-2 mb-3">
+                    <h4 class="mt-3">2. Search for Tanzu - Solution Prioritization Template and click to
+                        ADD</h4>
+                    <p>{{"![Search for the template and click ADD](/images/practices/remote-2.png)"| markdownify}}</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="container py-4">
+        <div class="github-imported-sample col-9 steps">
+            {{ if .Params.readme }}
+            {{ $user_repo := (urls.Parse .Params.repo).Path }}
+            {{ $resp := getJSON (print "https://api.github.com/repos" $user_repo "/readme") }}
+            <!-- RegEx replace removes any image references which could be broken -->
+            {{ $resp.content | base64Decode | replaceRE "\\!\\[(.*)\\]\\((.*)\\)" "IMAGE" | markdownify }}
+            {{ else }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+        {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+        {{ partial "feedback.html" .Site.Params.ui.feedback }}
+        <br/>
+        {{ end }}
+        {{ if (.Site.DisqusShortname) }}
+        <br/>
+        {{ partial "disqus-comment.html" . }}
+        {{ end }}
+        <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+    </div>
+</div>
+{{ end }}
