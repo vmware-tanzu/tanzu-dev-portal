@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <img
-                                src="/images/practices/{{.Page.Params.image}}"
+                                src={{(print "/images/practices/" .Page.Params.image) | relURL }}
                                 className="method-template__img-container"
                                 alt="cover"
                         />
