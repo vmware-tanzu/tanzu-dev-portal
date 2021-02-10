@@ -30,13 +30,17 @@ what:
 ### Sample Agenda & Prompts
 1. After [Event Storming](/practices/event-storming/content), using one color of sticky notes create one for each bounded context. Place on the board in a blob.
 
-   > Tip: Create a legend identifying the bounded context, topic/queue, external system, UI.
+   {{< callout >}}
+   Tip: Create a legend identifying the bounded context, topic/queue, external system, UI.
+   {{< /callout >}}
 
    ![Example of Boris legend with stickies](/images/practices/boris/legend.jpeg)
 
 1. Discuss a thin slice of the flow and map out how each of the bounded contexts communicate with one another to complete the flow. Start with the happy path then move to unhappy paths.
 
-   > Tip: If mapping more than one slice through the system, use different colored arrows for each. From a happy path perspective, how should the “to be” bounded contexts communicate with each other? From a non-happy path perspective, how should the “to be” system communicate with each other during a failure?
+   {{< callout >}}
+   Tip: If mapping more than one slice through the system, use different colored arrows for each. From a happy path perspective, how should the “to be” bounded contexts communicate with each other? From a non-happy path perspective, how should the “to be” system communicate with each other during a failure?
+   {{</ callout >}}
 
    If the event message payload is discussed, push to use the smallest message possible with the least number of unique keys to identify a unique bounded context through a synchronous web service lookup (“lean events, rich APIs”)
 1. Draw a line from system to system as they talk, using different colors for **synchronous** and **asynchronous** communication. Add arrows to indicate if it is pushing or pulling.
