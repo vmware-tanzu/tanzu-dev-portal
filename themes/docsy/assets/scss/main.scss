@@ -93,6 +93,9 @@
     &.community-hero {
       background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
     }
+    &.practices-hero {
+      background-image: url({{ "/images/backgrounds/background-practices.svg" | relURL }});
+    }
     &.team-hero,
     &.advocates-hero {
       background-color: transparent !important;
@@ -112,6 +115,7 @@
       &.patterns-hero,
       &.samples-hero,
       &.videos-hero,
+      &.practices-hero,
       &.community-hero {
         background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
         background-position: right -50px bottom;
@@ -123,6 +127,7 @@
       &.patterns-hero,
       &.samples-hero,
       &.videos-hero,
+      &.practices-hero,
       &.community-hero {
         background-size: 130%;
       }
@@ -134,6 +139,7 @@
       &.patterns-hero,
       &.samples-hero,
       &.videos-hero,
+      &.practices-hero,
       &.community-hero {
         background-size: 170%;
       }
