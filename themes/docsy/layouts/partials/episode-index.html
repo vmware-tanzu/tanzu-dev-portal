@@ -48,6 +48,9 @@
                                     <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
                                 {{ end }}
                                 <h3 class="pt-2"><a class="text-white" href="{{ $episodeLink }}">{{- .Title -}}</a></h3>
+                                {{ if .Params.subtitle }}
+                                    <p class="teaser auto mt-1">{{ .Params.subtitle }}</p>
+                                {{ end }}
                             </div>
                         </div>
                         {{ end }}

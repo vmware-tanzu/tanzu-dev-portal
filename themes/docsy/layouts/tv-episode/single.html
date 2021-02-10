@@ -5,8 +5,10 @@
 	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
     <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
-    {{ if .Parent.Params.description_single }}
-      <div class="lead"><p>{{- .Parent.Params.description_single | markdownify }}</p></div>
+    {{ if .Params.description_episode }}
+      <div class="lead"><p>{{ .Params.description_episode | markdownify }}</p></div>
+    {{ else if .Parent.Params.description_episodes }}
+      <div class="lead"><p>{{- .Parent.Params.description_episodes | markdownify }}</p></div>
     {{ else }}
       <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
     {{ end }}
