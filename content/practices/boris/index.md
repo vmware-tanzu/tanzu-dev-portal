@@ -28,7 +28,7 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. After [Event Storming](/practices/event-storming/content), using one color of sticky notes create one for each bounded context. Place on the board in a blob.
+1. After [Event Storming](/practices/event-storming), using one color of sticky notes create one for each bounded context. Place on the board in a blob.
 
    {{< callout >}}
    Tip: Create a legend identifying the bounded context, topic/queue, external system, UI.
@@ -86,17 +86,17 @@ SNAP is used to quickly document the outcomes of a Boris in real-time. Informati
 
 #### Facilitator Notes & Tips
 
-Boris, [Event Storming](/practices/event-storming/content) and other techniques are part of the [Swift Method](/practices/swift-method/content) that we use for identifying the “real” problems in a large scale system and discover the North Star direction for your modernized system. Let the solution present itself through rhetorical questions. Practice a fine balance between driving to a solution vs organic evolution of the target architecture. Do not pre-optimize during the Boris exercise.
+Boris, [Event Storming](/practices/event-storming) and other techniques are part of the [Swift Method](/practices/swift-method) that we use for identifying the “real” problems in a large scale system and discover the North Star direction for your modernized system. Let the solution present itself through rhetorical questions. Practice a fine balance between driving to a solution vs organic evolution of the target architecture. Do not pre-optimize during the Boris exercise.
 
 ##### Challenges Playbook
 
-***Challenge: It isn’t clear when to move from [Event Storming](/practices/event-storming/content) to Boris to SNAP.***
+***Challenge: It isn’t clear when to move from [Event Storming](/practices/event-storming) to Boris to SNAP.***
 
 Once the room has slowed down putting business events up and have had at least one round of explicitly putting up pain points, you can try identifying the aggregate boundaries. If this proves difficult, you can step back and see if there are more events that might inform things.
 
 Boris and SNAP are often done in parallel, with SNAP as a form of cataloging the conversation that’s happening organically around the Boris diagram.
 
-***Challenge: Sometimes we don’t have a clear bounded context at the end of an [Event Storming](/practices/event-storming/content) session.***
+***Challenge: Sometimes we don’t have a clear bounded context at the end of an [Event Storming](/practices/event-storming) session.***
 
 This might mean you’re too zoomed in (you’re only looking at one process or part of a process inside a bounded context) or too zoomed out (you’ve mapped all or a large part of your whole company). Ask the room if this is true, and you can usually zoom in with the room you have at the moment. If you feel like you’re too zoomed in, you may need to come back for a second session with more stakeholders of the surrounding events.
 
@@ -106,7 +106,7 @@ This might be ok as long as the bounded context’s internal engineering and bus
 
 ***Challenge: Many folks in the room aren’t engaged, or the conversation is only happening between one or two people.***
 
-Ask folks to put away their laptops and phones. Set expectations on involvement early. Run rounds of the [Event Storming](/practices/event-storming/content) or Boris where you’re calling specific segments of your audience to layer on their particular perspective if whole-group mobbing is causing some voices to get lost. Remember, if you did the prep work to specifically identify why each person is in the room, you need something from each of them. You can use those identified reasons as a way to call on folks that aren’t participating to add a specific kind of information.
+Ask folks to put away their laptops and phones. Set expectations on involvement early. Run rounds of the [Event Storming](/practices/event-storming) or Boris where you’re calling specific segments of your audience to layer on their particular perspective if whole-group mobbing is causing some voices to get lost. Remember, if you did the prep work to specifically identify why each person is in the room, you need something from each of them. You can use those identified reasons as a way to call on folks that aren’t participating to add a specific kind of information.
 
 ***Challenge: It’s difficult to know who all we need for each phase of the process.***
 
@@ -120,11 +120,11 @@ Also acknowledge that it will take several sessions to go through the “I do, w
 
 ### Related Practices
 
-Boris is an activity within the [Swift Method](/practices/swift-method/content).
+Boris is an activity within the [Swift Method](/practices/swift-method).
 
 ## Preceding
 
-[Event Storming](/practices/event-storming/content)
+[Event Storming](/practices/event-storming)
 
 ## Following
 
@@ -132,7 +132,7 @@ None at the moment
 
 ### Real World Examples
 
-See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of Boris and the [Swift Method](/practices/swift-method/content) of modernization for an Uber Eats-style application
+See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of Boris and the [Swift Method](/practices/swift-method) of modernization for an Uber Eats-style application
 
 ### Recommended Reading
 

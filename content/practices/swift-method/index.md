@@ -24,15 +24,15 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. [Event Storm](/practices/event-storming/content) the system, using language that business and technical people understand.
+1. [Event Storm](/practices/event-storming) the system, using language that business and technical people understand.
 
-1. Conduct a [Boris](/practices/boris/content) exercise that models the relationships between capabilities in a system. Conduct a SNAP that documents the technical capabilities identified during Boris in real time.
+1. Conduct a [Boris](/practices/boris) exercise that models the relationships between capabilities in a system. Conduct a SNAP that documents the technical capabilities identified during Boris in real time.
 
     ![SNAP analysis](/images/practices/boris/snap.jpg)
 
 1. Identify thin slices of modernization.
 
-   Thin slices are short domain event flows. Vertical slices are identified by choosing short, domain event flows in the core domain and leveraging the services coming out of [Boris](/practices/boris/content) to produce those events. Think of them as the architectural components required to produce those events. Thin slices are informed by [Event Storming](/practices/event-storming/content), [Boris](/practices/boris/content) and SNAP activities.
+   Thin slices are short domain event flows. Vertical slices are identified by choosing short, domain event flows in the core domain and leveraging the services coming out of [Boris](/practices/boris) to produce those events. Think of them as the architectural components required to produce those events. Thin slices are informed by [Event Storming](/practices/event-storming), [Boris](/practices/boris) and SNAP activities.
    {{% callout %}}
    Tip: A vertical slice touches every layer of the architecture but implements only a sliver of functionality. For example, the vertical slice, “Allow a user to login with a password,” might add username and password fields to a user interface, implement server-side logic, and update the last login field on the database record. Slicing vertically is one of the toughest mind shifts to make for a team new to agile because it requires developers to interact with areas of the app with which they may be less familiar.
    {{% /callout %}}
@@ -65,17 +65,17 @@ what:
 
 A good facilitator should be able to drive out how a system should be designed based on supporting the business capabilities from a DDD perspective.
 
-This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris/content) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
+This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
 
 ### Related Practices
 
 Swift Method contains many activities, including:
-- [Event Storming](/practices/event-storming/content)
-- [Boris](/practices/boris/content)
+- [Event Storming](/practices/event-storming)
+- [Boris](/practices/boris)
 
 ### Real World Examples
 
-See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris/content) and the Swift Method of modernization for an Uber Eats-style application
+See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris) and the Swift Method of modernization for an Uber Eats-style application
 
 ![Visual of the Swift Method's various steps and how they flow into one another](/images/practices/swift-method/example-1.png)
 
