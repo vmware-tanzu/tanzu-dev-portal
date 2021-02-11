@@ -143,13 +143,17 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
  #hero.community-hero {
    background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }}) !important;
  }
+ #hero.practices-hero {
+   background-image: url({{ "/images/backgrounds/background-practices-light.svg" | relURL }}) !important;
+ }
 
 @media(max-width: 991px) {
   body #hero.guides-hero,
   body #hero.patterns-hero,
   body #hero.samples-hero,
   body #hero.videos-hero,
-  body #hero.community-hero {
+  body #hero.community-hero,
+  body #hero.practices-hero {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }

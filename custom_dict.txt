@@ -26,6 +26,7 @@ antipatterns?
 appender
 [A,a]rchitecting
 artisanal
+aspirational
 async
 authenticator
 autocompletion
@@ -38,8 +39,13 @@ balancer(')?(s)?
 biome
 [B,b]ootiful
 bootup
+Boris
+Brandolini
+Brandolini's
 Bugsville
 (non-)?cacheable
+callout
+[C,c]hangemaker(s)
 checkboxes
 codebase
 [C,c]omms
@@ -48,7 +54,10 @@ codebase
 cortado
 counterintuitive
 COVID-19
+Crowdsource
+Crowdsourced
 customizable
+DDD
 dataset
 de
 [D,d]e-referenced
@@ -70,6 +79,7 @@ Endnotes
 executables
 expensed
 expirations
+ExploreDDD
 facto
 failover
 favourite(s)?
@@ -79,6 +89,7 @@ FinTech
 firewalling
 frictionless
 Frontend
+[G,g]amestorming
 geospatial
 getters
 ghostEmail
@@ -103,6 +114,7 @@ Livelessons
 liveness
 Low-fi
 m'étonner
+Macanufo
 matchings
 Masala
 [M,m]odelling
@@ -114,11 +126,13 @@ Mini-Wheats
 minimalistic
 Multitenant
 [M,m]ultiuser
+MVP(s)
 namespace
 natively
 no-brainer
 nullable
 [O,o]bservability
+OKR(s)
 old-checkout-desc
 ok
 [O,o]makase
@@ -139,6 +153,7 @@ prefilled
 preload
 prepending
 pre-built
+pre-optimize
 pre-programmed
 pre-release
 preconfigured
@@ -149,6 +164,7 @@ Quickstart
 quokka
 README
 realtime
+rearchitect(ing)
 [R,r]ebase
 refactorings?
 [R,r]epos?
@@ -205,6 +221,7 @@ veth-jelly
 virtualized
 walkthrough
 waypoints
+WeBeFoods
 webhooks?
 whiteboard(ed|ing)
 [W,w]hitepaper
