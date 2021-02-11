@@ -83,7 +83,7 @@ You can install Contour directly from the manifests provided by the project, how
       service/envoy     LoadBalancer   100.66.114.136   a36c85343e9284c1cb4236d844c31aab-1691151764.us-east-2.elb.amazonaws.com   80:30825/TCP,443:30515/TCP   2m18s
     ```
 
-    1. Save the Ingress `EXTERNAL-IP` for later use as a [xip.io](xip.io) dynamic DNS host.
+    1. Save the Ingress `EXTERNAL-IP` for later use as a [xip.io](http://xip.io) dynamic DNS host.
 
     > Note: Since this is deployed in Amazon Web Services I had to resolve the hostname using the `host` command, but in other clouds you will probably get an IP address.
 
