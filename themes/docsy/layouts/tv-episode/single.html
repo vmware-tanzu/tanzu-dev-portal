@@ -150,13 +150,27 @@
   </div>
   {{ end }}
 
-  {{ if .Params.contact }}
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9 col-12 px-0">
-      <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a></p>
+  {{ if and (.Params.contact) (.Params.code_of_conduct) }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href="/developer/code-of-conduct">Code of Conduct</a></p>
+      </div>
     </div>
-  </div>
+  {{ else if .Params.contact}}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a></p>
+      </div>
+    </div>
+  {{ else if .Params.code_of_conduct }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p><a href="/developer/code-of-conduct">Code of Conduct</a></p>
+      </div>
+    </div>
   {{ end }}
+
+
 
 </div>
 
