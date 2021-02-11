@@ -1,6 +1,4 @@
 {{ define "main" }}
-{{ partial "amplitude.html" (dict "context" . "event" "sample viewed") }}
-
 <div class="practices">
     <div class="td-main">
         <div class="bg-gray-dark mt-lg-5 mt-0 pt-lg-5 pb-lg-0 py-2">
@@ -97,15 +95,8 @@
         </div>
     </div>
     <div class="container py-4">
-        <div class="github-imported-sample col-9 steps">
-            {{ if .Params.readme }}
-            {{ $user_repo := (urls.Parse .Params.repo).Path }}
-            {{ $resp := getJSON (print "https://api.github.com/repos" $user_repo "/readme") }}
-            <!-- RegEx replace removes any image references which could be broken -->
-            {{ $resp.content | base64Decode | replaceRE "\\!\\[(.*)\\]\\((.*)\\)" "IMAGE" | markdownify }}
-            {{ else }}
+        <div class="col-9 steps">
             {{ .Content }}
-            {{ end }}
         </div>
         {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
         {{ partial "feedback.html" .Site.Params.ui.feedback }}
