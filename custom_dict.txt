@@ -70,6 +70,7 @@ DevOps(-related)?
 diehard
 differentiators
 donut
+dropdown
 [E,e]venting
 [D,d]ev[R,r]el
 egoless
@@ -135,6 +136,7 @@ OKR(s)
 old-checkout-desc
 ok
 [O,o]makase
+on-prem
 orchestrator
 org(s)?
 overcomplicate
@@ -246,6 +248,8 @@ Artifactory
 Asciidoctor
 Astra
 [A,a]uth
+AutoBuild
+AutoDeploy
 autosave
 Autowired
 base64(-encoded)?
@@ -435,6 +439,7 @@ Rockstar
 Route53
 rkt
 RSocket(-based)?
+SaaS
 SameSite
 securityContext
 Semver
