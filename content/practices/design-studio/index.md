@@ -29,7 +29,7 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. Leveraging any user journeys, personas, or scenarios your team has made, define what problem you are trying to solve and for whom. What are the biggest pain points?
+1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. What are the biggest pain points?
 
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections. The goal is to create lots of small ideas instead of detailed solutions.
 
@@ -76,7 +76,7 @@ The top ideas that came out of the design studio will be carried forward and syn
 None at the moment
 
 ## Preceding
-- Coming soon: Personas
+- [Personas](/practices/personas)
 - [Journey Map](/practices/journey-map)
 - [Scenario Writing](/practices/scenario-writing)
 

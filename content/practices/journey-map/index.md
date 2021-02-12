@@ -26,7 +26,7 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. Identify which users journey the team is mapping. Leverage existing Personas and if multiple choose the most important one to start
+1. Identify which users journey the team is mapping. Leverage existing [Personas](/practices/personas) and if multiple choose the most important one to start
 
 1. Map alone, together (10 minutes)
    - Have each person create a user journey in front of them, separating each step into individual sticky notes. This looks like a horizontal timeline of no-more-than 10 sticky notes
@@ -62,7 +62,8 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 
 #### Facilitator Notes & Tips
 
-- Create one Journey Map per Persona. If there are other Personas to consider, map them as touch points from a single Personas perspective.
+- Create one Journey Map per Persona. If there are other [Personas](/practices/personas)
+ to consider, map them as touch points from a single [Personas](/practices/personas) perspective.
 - To understand more detail and complexity consider using a Service Blueprint to map a product/service’s “backstage actions” and “support processes” to an individual customer journey.
 
 ### Related Practices
@@ -72,7 +73,7 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 None at the moment
 
 ## Preceding
-- Coming soon: Personas
+- [Personas](/practices/personas)
 - [Research Synthesis](/practices/research-synthesis)
 
 ## Following
