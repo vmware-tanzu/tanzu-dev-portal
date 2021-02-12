@@ -3,9 +3,18 @@ title:  "Getting Started with Contour - To Ingress and Beyond"
 linkTitle: "Getting Started with Contour - To Ingress and Beyond"
 parent: Contour to Ingress and Beyond
 weight: 2
-topics: []
+topics:
+- Kubernetes
+- Tanzu
 tags:
-- Contour to Ingress and Beyond
+- Kubernetes
+- Tanzu
+- Contour
+- Ingress
+- httproxy
+- istio
+- service mesh
+- network
 # Author(s)
 team:
 - Paul Czarkowski
