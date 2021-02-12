@@ -59,13 +59,13 @@ The goal is to walk away from research with actionable insights and an understan
 
 #### Facilitator Notes & Tips
 
-As needed, build on the Persona data you've captured to-date. Take any new user insights and validate or invalidate the assumptions you have about your existing personas or create a new persona if you find new information that will support it.
+As needed, build on the Persona data you've captured to-date. Take any new user insights and validate or invalidate the assumptions you have about your existing [personas](/practices/personas) or create a new persona if you find new information that will support it.
 
 Try using Trello (or something like it) to track your assumptions
 
 It's also helpful to share out findings at the subsequent iteration planning meeting (IPM, similar to SCRUM Sprint planning) so that the entire team - including anyone who wasn't present during the actual research sessions - can benefit from what was learned.
 
-You can alternately create your categories from the questions you are asking to your identified personas. These categories only tend to work for users of the same persona (i.e. do not mix user interviews with stakeholder interviews while synthesizing)
+You can alternately create your categories from the questions you are asking to your identified [personas](/practices/personas). These categories only tend to work for users of the same persona (i.e. do not mix user interviews with stakeholder interviews while synthesizing)
 
 ### Related Practices
 

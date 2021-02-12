@@ -18,7 +18,7 @@ when:
 what:
 - Whiteboard
 - Dry erase markers
-- Personas
+- "[Personas](/practices/personas)"
 - Tape
 
 ---
@@ -44,7 +44,7 @@ what:
    Tip: If you have your persona available, you can use it in this section instead of making one from scratch
    {{% /callout %}}
 
-You can lead the team in creating a well-formed persona using the Personas activity
+You can lead the team in creating a well-formed persona using the [Personas](/practices/personas) activity
 1. Next, define the **goal** of the scenario. What you write should answer these questions:
 
    - What is the user trying to accomplish?
@@ -84,7 +84,7 @@ How sheep farmers will purchase sheep via the internet with the new product
 None at the moment
  
 ## Preceding
-- Coming soon: Personas
+- [Personas](/practices/personas)
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Insight Prioritization](/practices/insight-prioritization)  
 

@@ -74,7 +74,7 @@ None at the moment
 
 ## Preceding
 - [Molecule Map](/practices/molecule-map)
-- Coming soon: Personas
+- [Personas](/practices/personas)
 
 ## Following
 
