@@ -903,6 +903,38 @@ body.tv-episode {
   margin-right: 10px;
 }
 
+.checklist-item {
+  padding: 2rem 2rem 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+  border-left: 3px solid var(--MAIN-ANCHOR-color);
+}
+
+.checklist-item > input[type="checkbox"] {
+  margin-right: 1em;
+  margin-top: 5px;
+}
+
+.checklist-item h4 {
+  margin: 0;
+}
+
+table {
+  border: 1px solid #eaeaea;
+  table-layout: auto;
+  margin: 20px 0px;
+}
+th {
+  background: #ffffffda;
+  padding: 0.5rem;
+  color: black;
+  border: 1px solid black;
+}
+td {
+  padding: 0.5rem;
+  border: 1px solid #eaeaea;
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #f8f8f2; background-color: #0f171c }

@@ -1,7 +1,7 @@
 ---
 title:  "Getting Started with Kubeapps"
-linkTitle: "Kubeapps"
-subsection: Kubeapps
+parent: "Packaging"
+weight: 6
 topics:
 - Kubernetes
 tags:

@@ -1,0 +1,10 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="checklist-item">
+    <input type="checkbox">
+    <div>
+      <h4>{{ .Get "title" }}</h4>
+      <p>
+        {{ .Inner }}
+      </p>
+    </div>
+  </div>

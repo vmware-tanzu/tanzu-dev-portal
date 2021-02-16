@@ -1,9 +1,9 @@
 ---
 title:  "What Is Helm?"
-linkTitle: "Helm"
-subsection: "Helm"
+parent: "Packaging"
 topics:
 - Kubernetes
+weight: 1
 tags:
 - Helm
 patterns:
