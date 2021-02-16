@@ -98,3 +98,27 @@ kubectl config set-context --current --namespace=ggckad-s2
 Additionally, useful tooling such as
 [kubectx](https://github.com/ahmetb/kubectx) can help developers navigate
 between contexts.
+
+## Popular Tooling & Approaches
+
+### Skaffold
+
+[Skaffold](https://github.com/GoogleContainerTools/skaffold) is a project from Google that bundles multiple steps (build, tag, test, deploy) into a single command.
+The tool can watch for changes and re-run the steps as needed.
+Skaffold is configurable with pluggable integrations for each step.
+It also assists with debugging by aggregating and tailing logs.
+In addition to aiding development workflows, Skaffold can also serve double duty as the basis for executing CI/CD pipelines.
+
+### Tilt
+
+[Tilt](https://github.com/windmilleng/tilt) is a CLI+GUI project backed by a startup (Windmill Engineering).
+Like Skaffold, Tilt supports pluggable templating solutions (Helm, Kustomize, etc).
+However, unlike other tools which only present the developer with aggregated logs, Tilt also shows a summarized view of all their running applications.
+This is done by displaying a web view of each application, or showing a high-level status for each service (success/error).
+The Tilt team also provides a method of sharing snapshots of one's development environment with teammates via TiltCloud.
+
+Tilt is able to speed up build processes by avoiding in-container builds during development through copying source files (and injecting restart scripts).
+This process is more seamless for interpreted languages than for compiled languages where more workarounds are needed.
+
+Tilt represents a step forward in development workflow tools because it focuses on optimizing feedback loops within a Developer's own environment as well as across a team.
+However, Tilt is still an early stage project and the direction of the startup behind the project is not yet clear.
