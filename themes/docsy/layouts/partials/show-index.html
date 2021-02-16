@@ -1,25 +1,119 @@
 <div class="section-index">
     {{ $pages := sort (where .Site.Pages "Section" "tv") }}
     {{ $parent := .Page }}
-    <div class="flex justify-content-between flex-wrap">
-        <div class="col-lg-12 px-0 pb-5 mb-5 shows">
-        {{ range $pages }}
-            {{ if eq .Parent $parent }}
-            <div class="row mb-5" >
-                <div class='col-lg-5 col-12 pl-0 bg-primary'> 
-                    <div class="p-5">
-                        {{ if (and (isset .Params "streaming") (isset .Params "teaser")) }}<a class="teaser btn btn-small mb-4 mt-2" href="{{ .RelPermalink }}">{{ .Params.teaser }}</a>{{ end }}
-                        <h1>{{ .Title }}</h1>
-                        <p class="lead my-0">{{ .Description | markdownify }}</p>
-                        <a class="btn mt-3" href="{{ .RelPermalink }}">View Episodes</a>
-                    </div>
-                </div>
-                <div class='col-lg-7 col-12 px-0 bg-primary text-center pt-4 pt-lg-0'>
-                    <a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}" /></a>
-                </div>
+    {{ $tanzutuesdays := sort (where .Site.RegularPages "Parent.Title" "Tanzu Tuesdays") }}
+    {{ $tgik := sort (where .Site.RegularPages "Parent.Title" "TGIK") }}
+    {{ $code := sort (where .Site.RegularPages "Parent.Title" "Code") }}
+    {{ $bcak := sort (where .Site.RegularPages "Parent.Title" "Between Chair and Keyboard") }}
+    {{ $talk := sort (where .Site.RegularPages "Parent.Title" "Tanzu Talk") }}
+    {{ $springonetour := sort (where .Site.RegularPages "Parent.Title" "SpringOne Tour") }}
+    {{ $springlive := sort (where .Site.RegularPages "Parent.Title" "Spring Live") }}
+    {{ $webinars := sort (where .Site.RegularPages "Parent.Title" "Tanzu Webinars") }}
+
+    <div>
+        <div class="px-0 mb-5 shows">
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Tanzu Tuesdays</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Every Tuesday at 1pm PT</h5>
             </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $tanzutuesdays }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
             {{ end }}
-        {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Code</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Every Wednesday at 12pm PT</h5>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $code }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>TGIK</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Every Friday at 1pm PT</h5>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $tgik}}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Between Chair and Keyboard</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Most Mondays at 10am PT</h5>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $bcak }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Tanzu Talk</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Daily at 11am CET</h5>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $talk }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>SpringOne Tour</h4> </a>
+                <h5 class='text-uppercase text-white'>Live Every Month</h5>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $springonetour }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Spring Live</h4> </a>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $springlive }}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>Tanzu Webinars</h4> </a>
+            </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+            {{ range first 3 $webinars}}
+                <a class='col-4-thumbnail rounded overflow-hidden mb-4' href="{{ .RelPermalink }}">
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    <div class='video-description'>{{.Title}}</div>
+                </a>
+            {{ end }}
+            </div>
+
         </div>
     </div>
 </div>
