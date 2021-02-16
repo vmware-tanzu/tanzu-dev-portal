@@ -5,6 +5,7 @@ streaming: "twitch"
 # noPast: true
 id: "talk"
 image: "/images/tv/shows/talk.png"
+og_image: "/images/og/TanzuTV-TanzuTalk.png"
 weight: 4
 # Text that appears on show index page under show name
 description: See interviews and discussions about cloud native, software modernization, and news in the Tanzu community.

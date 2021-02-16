@@ -28,6 +28,7 @@ antipatterns?
 appender
 [A,a]rchitecting
 artisanal
+aspirational
 async
 authenticator
 autocompletion
@@ -39,9 +40,14 @@ Backend
 balancer(')?(s)?
 biome
 [B,b]ootiful
+Booternetes
 bootup
+Boris
+Brandolini('s)?
 Bugsville
 (non-)?cacheable
+callout
+[C,c]hangemaker(s)
 checkboxes
 codebase
 [C,c]omms
@@ -50,7 +56,10 @@ codebase
 cortado
 counterintuitive
 COVID-19
+Crowdsource
+Crowdsourced
 customizable
+DDD
 dataset
 de
 [D,d]e-referenced
@@ -64,6 +73,7 @@ diehard
 differentiators
 donut
 durations
+dropdown
 [E,e]venting
 [D,d]ev[R,r]el
 egoless
@@ -73,6 +83,7 @@ env
 executables
 expensed
 expirations
+ExploreDDD
 facto
 failover
 favourite(s)?
@@ -82,6 +93,7 @@ FinTech
 firewalling
 frictionless
 Frontend
+[G,g]amestorming
 geospatial
 getters
 ghostEmail
@@ -92,6 +104,7 @@ Helming
 hermeticism
 High-Cardinality
 hostname(s)?
+HumanOps
 ideate
 InfoSec
 [I,i]ntegrations
@@ -109,6 +122,10 @@ Livelessons
 Low-fi
 m'étonner
 machine-centric
+Livestream
+Low-fi
+m'étonner
+Macanufo
 matchings
 Masala
 [M,m]odelling
@@ -121,10 +138,12 @@ minimalistic
 Multitenant
 [M,m]ultiuser
 (multi-)?namespace
+MVP(s)
 natively
 no-brainer
 nullable
 [O,o]bservability
+OKR(s)
 old-checkout-desc
 ok
 [O,o]makase
@@ -149,6 +168,7 @@ prepending
 pre-built
 pre-defined
 pre-exist(s)?
+pre-optimize
 pre-programmed
 pre-release
 preStop
@@ -162,6 +182,7 @@ quokka
 README
 [R,r]eadiness([P,p]robe)?
 realtime
+rearchitect(ing)
 [R,r]ebase
 refactorings?
 [R,r]epos?
@@ -222,6 +243,7 @@ veth-jelly
 virtualized
 walkthrough
 waypoints
+WeBeFoods
 webhooks?
 whiteboard(ed|ing)
 [W,w]hitepaper
@@ -248,6 +270,8 @@ Artifactory
 Asciidoctor
 Astra
 [A,a]uth
+AutoBuild
+AutoDeploy
 autosave
 Autowired
 base64(-encoded)?
@@ -461,6 +485,7 @@ Rockstar
 Route53
 rkt
 RSocket(-based)?
+SaaS
 SameSite
 securityContext
 Semver
@@ -540,7 +565,7 @@ CodeFresh
 CoffeeOps
 CoreOS
 DevNexus
-DevOpsDaysKC
+DevOpsDays(KC)?
 Documentum
 DockerCon
 DZone
@@ -570,6 +595,7 @@ SpringOne(2020)?
 Skyscanner
 Soluto('s)?
 Styra
+TechRepublic
 Theia
 ThoughtWorks
 [U,u]ber
@@ -578,6 +604,8 @@ VMworld
 [D,d]ockerhub
 [D,d]ockerhub-[\w|-]+
 [R,r]eddit
+Proxy-ing
+Proxying
 ZDNet
 
 # Acronyms
@@ -616,6 +644,8 @@ EFK
 EOF
 ETL
 FC
+EMEA
+EOF
 FIPS(-enabled|-approved)?
 FP
 GAC
@@ -728,6 +758,7 @@ Dubois
 Eads
 Fewell
 Florent
+Foxwell
 Fu
 Gabbi
 Gabriella
@@ -773,6 +804,7 @@ Nesterov
 Neumann
 Nicoll
 Oleh
+Oded
 Pacak
 Palo
 (pc|C)zarkowski('s)?
@@ -794,6 +826,7 @@ Schutta
 Sébastien
 Sevilla
 Sheasha
+Shopen
 Sletten
 Sloka
 Smythe
