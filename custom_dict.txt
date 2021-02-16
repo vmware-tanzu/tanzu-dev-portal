@@ -38,10 +38,10 @@ Backend
 balancer(')?(s)?
 biome
 [B,b]ootiful
+Booternetes
 bootup
 Boris
-Brandolini
-Brandolini's
+Brandolini('s)?
 Bugsville
 (non-)?cacheable
 callout
@@ -99,6 +99,7 @@ GitOps
 Helming
 hermeticism
 hostname(s)?
+HumanOps
 ideate
 InfoSec
 [I,i]ntegrations
@@ -112,6 +113,7 @@ letsencrypt-staging
 [L,l]ifecycle
 Livelessons
 liveness
+Livestream
 Low-fi
 m'étonner
 Macanufo
@@ -513,7 +515,7 @@ deliverAgile
 CodeFresh
 CoreOS
 DevNexus
-DevOpsDaysKC
+DevOpsDays(KC)?
 Documentum
 DockerCon
 DZone
@@ -542,6 +544,7 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+TechRepublic
 Theia
 ThoughtWorks
 [U,u]ber
@@ -550,6 +553,8 @@ VMworld
 [D,d]ockerhub
 [D,d]ockerhub-[\w|-]+
 [R,r]eddit
+Proxy-ing
+Proxying
 ZDNet
 
 # Acronyms
@@ -587,6 +592,8 @@ EFK
 EOF
 ETL
 FC
+EMEA
+EOF
 FIPS(-enabled|-approved)?
 FP
 GAC
@@ -693,6 +700,7 @@ Dubois
 Eads
 Fewell
 Florent
+Foxwell
 Fu
 Gabbi
 Gabriella
@@ -738,6 +746,7 @@ Nesterov
 Neumann
 Nicoll
 Oleh
+Oded
 Pacak
 Palo
 (pc|C)zarkowski('s)?
@@ -759,6 +768,7 @@ Schutta
 Sébastien
 Sevilla
 Sheasha
+Shopen
 Sletten
 Sloka
 Smythe
