@@ -3,7 +3,6 @@ path: "/methods/template"
 title: "_Template"
 hidden: "true"
 tags: [] # examples: ["Discovery", "Kickoff",]
-hidden: "true"
 length: "60-120 mins"
 participants: "A, B and C"
 image: "default-cover.png"
