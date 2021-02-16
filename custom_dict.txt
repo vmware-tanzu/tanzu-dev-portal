@@ -93,12 +93,12 @@ deserializing
 developer-centric
 DevOps(-related)?
 [D,d]ev(s)?
+[D,d]ev[R,r]el
 diehard
 differentiators
 donut
 dropdown
 durations
-[D,d]ev[R,r]el
 echoserver
 eCommerce
 egoless
@@ -756,7 +756,7 @@ TaskRepository
 Tekton('s)?
 Terraform(-ing)?
 TestContainers
-Tiltfile
+Tilt(file|Cloud)?
 tgz
 Thanos
 Tilt(file|Cloud)?
@@ -829,6 +829,7 @@ Apdex
 Apress
 AquaSecurity
 Datadog
+Apdex
 DataStax('s|Examples)?
 deliverAgile
 CodeFresh
