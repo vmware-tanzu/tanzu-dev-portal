@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Kubeapps"
 linkTitle: "Kubeapps"
+subsection: Kubeapps
 topics:
 - Kubernetes
 tags:

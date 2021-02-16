@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Kafka"
 linkTitle: "Kafka"
+subsection: Kafka
 topics:
 - Event Streaming
 - Messaging and Integration

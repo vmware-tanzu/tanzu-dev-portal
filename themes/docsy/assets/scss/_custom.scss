@@ -425,6 +425,55 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
+#register {
+  .mktoForm {
+    .mktoFormRow:nth-child(3) {
+      display: block;
+    }
+    .mktoFormCol,
+    .mktoFieldWrap {
+      width: 100%;
+    }
+    ::placeholder {
+      color: white;
+    }
+    select,
+    input:not([type="checkbox"]):not([type="radio"]) {
+      width: 100% !important;
+      border: 0 !important;
+      background: transparent;
+      border-bottom: 1px solid white !important;
+      font-size: 16px;
+      color: white;
+      padding-left: 0 !important;
+      padding-bottom: 5px !important;
+      margin-top: 5px !important;
+      height: 46px;
+      font-family:'Metropolis';
+    }
+    .mktoButtonRow {
+      margin-bottom: 60px;
+    }
+    select {
+      background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-white.png) no-repeat transparent right 10px center !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 0;
+      display: block;
+    }
+    input[type=text]:focus, input[type=url]:focus, input[type=email]:focus, input[type=tel]:focus, select.mktoField:focus {
+      outline: none !important;
+      border-bottom: 1px solid $link !important;
+    }
+  }
+  .confirmation {
+    max-width: 290px;
+    .zoom-link {
+      word-break: break-all;
+    }
+  }
+}
+
 .icon, .td-content img.icon {
 	height: 50px;
 }
@@ -783,6 +832,15 @@ body.light-mode #toggle-light-dark-mode span {
   color: $bright-green;
 }
 
+.-text-bright-green {
+  color: $bright-green !important;
+}
+
+.icon-gift {
+  height: 24px;
+  margin-right: 10px;
+}
+
 .episodes .upcoming {
   position:relative;
   top:0;
@@ -792,6 +850,16 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 body.tv-episode {
+  .fancybox-inner {
+    background: $gray-800;
+  }
+  .fancybox-close {
+    top: 15px;
+    right: 11px;
+    &:before {
+      content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyOSAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjAuNDk0OTc1IiB5MT0iMC41MDUwMjUiIHgyPSIyOC40OTUiIHkyPSIyOC41MDUiIHN0cm9rZT0iI0FEQkJDNCIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KPGxpbmUgeDE9IjAuNDk0OTc1IiB5MT0iMC41MDUwMjUiIHgyPSIyOC40OTUiIHkyPSIyOC41MDUiIHN0cm9rZT0iI0FEQkJDNCIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KPGxpbmUgeDE9IjI4LjQ5NSIgeTE9IjEuNDk0OTciIHgyPSIwLjQ5NDk3NSIgeTI9IjI5LjQ5NSIgc3Ryb2tlPSIjQURCQkM0IiBzdHJva2Utd2lkdGg9IjEuNCIvPgo8bGluZSB4MT0iMjguNDk1IiB5MT0iMS40OTQ5NyIgeDI9IjAuNDk0OTc1IiB5Mj0iMjkuNDk1IiBzdHJva2U9IiNBREJCQzQiIHN0cm9rZS13aWR0aD0iMS40Ii8+Cjwvc3ZnPgo=);
+    }
+  }
   .team-member {
     div[class*='col'] {
       &:first-child {
