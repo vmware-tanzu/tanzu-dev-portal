@@ -7,10 +7,12 @@
   	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
     <h1 class="h1 mt-4 pt-2"> {{- .Title -}}</h1>
-		<div class="lead"><p>{{ with .Params.streaming }}<span class="fab fa-{{. | lower }} px-2 text-white"></span>{{ end }}{{- .Params.subheader | default .Params.description | markdownify }}</p></div>
+		<div class="lead"><p>{{ if not .Params.notwitchicon }}{{ with .Params.streaming }}<span class="fab fa-{{. | lower }} px-2 text-white"></span>{{ end }}{{ end }}{{- .Params.subheader | default .Params.description | markdownify }}</p></div>
 
     {{ if (isset .Params "streaming") }}
-    <a class="btn px-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
+      {{ if not .Params.notwitchicon }}
+        <a class="btn px-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
+      {{ end }}
     
       <div id="twitch-embed"></div>
 
