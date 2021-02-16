@@ -39,6 +39,7 @@ balancer(')?(s)?
 biome
 [B,b]ootiful
 Booternetes
+bootup
 Boris
 Brandolini('s)?
 Bugsville
