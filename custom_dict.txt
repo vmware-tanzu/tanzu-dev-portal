@@ -101,6 +101,8 @@ dropdown
 durations
 echoserver
 eCommerce
+[E,e]venting
+[D,d]ev[R,r]el
 egoless
 [E,e]nablement
 Endnotes
@@ -570,6 +572,8 @@ ksqlDB
 KubeAcademy
 kubeadm
 KubeadmConfigSpec
+[k,K]ubelet(-probe)?
+KubeAcademy
 [K,k]ubeapps
 [k,K]ubebuilder
 [K,k]ubeconfig
