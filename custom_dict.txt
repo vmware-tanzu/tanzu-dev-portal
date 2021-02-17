@@ -569,6 +569,7 @@ APM
 BKPR
 BOM
 brd1
+CEST
 CIO
 CLI(s|'s)?
 CNCF
