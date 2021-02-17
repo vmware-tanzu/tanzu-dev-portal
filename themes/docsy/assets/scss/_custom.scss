@@ -909,19 +909,22 @@ body.tv-episode {
 
 .col-4-thumbnail {
   padding: 0;
+  background-color: #324F61;
   transform: scale(1);
   transition: transform .25s;
-  background-color: #324F61;
-  flex: 0 0 31.5%;
-
-  &:hover {
-    transform: scale(1.05);
-    opacity: 1;
-
-    .thumbnail-gradient {
-      opacity: 0;
+  
+  @media (min-width: 992px) {
+    flex: 0 0 31.5%;
+    &:hover {
+      transform: scale(1.05);
+      opacity: 1;
+  
+      .thumbnail-gradient {
+        opacity: 0;
+      }
     }
   }
+
 
   img {
     width: 100%;
