@@ -1,6 +1,6 @@
 ---
 title: "Calico Reference Architecture"
-linkTitle: "Calico Reference Architrecture"
+linkTitle: "Calico Reference Architecture"
 description: "A reference architecture for running the Calico CNI in Kubernetes"
 parent: "Container Networking"
 weight: 1600

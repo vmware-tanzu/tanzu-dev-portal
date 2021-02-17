@@ -3,9 +3,9 @@ title: "Container Networking"
 subsection: "Container Networking"
 weight: 1500
 topics:
-  - Kubernetes
+- Kubernetes
 team:
-  - Josh Rosso
+- Josh Rosso
 ---
 
 Kubernetes uses the [container network

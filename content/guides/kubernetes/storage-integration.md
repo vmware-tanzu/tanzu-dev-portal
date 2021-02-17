@@ -2,9 +2,9 @@
 title: "Storage Integration"
 weight: 2
 topics:
-  - Kubernetes
+- Kubernetes
 team:
-  - Josh Rosso
+- Josh Rosso
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it
