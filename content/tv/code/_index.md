@@ -5,6 +5,7 @@ streaming: "twitch"
 # noPast: true
 id: "code"
 image: "/images/tv/shows/code.jpg"
+og_image: "/images/og/TanzuTV-Code.png"
 weight: 2
 # Text that appears on show index page under show name
 description: Watch our Developer Advocates code live every week.

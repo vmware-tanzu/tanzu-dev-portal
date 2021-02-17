@@ -26,6 +26,7 @@ antipatterns?
 appender
 [A,a]rchitecting
 artisanal
+aspirational
 async
 authenticator
 autocompletion
@@ -37,9 +38,14 @@ Backend
 balancer(')?(s)?
 biome
 [B,b]ootiful
+Booternetes
 bootup
+Boris
+Brandolini('s)?
 Bugsville
 (non-)?cacheable
+callout
+[C,c]hangemaker(s)
 checkboxes
 codebase
 [C,c]omms
@@ -48,7 +54,10 @@ codebase
 cortado
 counterintuitive
 COVID-19
+Crowdsource
+Crowdsourced
 customizable
+DDD
 dataset
 de
 [D,d]e-referenced
@@ -61,6 +70,7 @@ DevOps(-related)?
 diehard
 differentiators
 donut
+dropdown
 [E,e]venting
 [D,d]ev[R,r]el
 egoless
@@ -69,6 +79,7 @@ Endnotes
 executables
 expensed
 expirations
+ExploreDDD
 facto
 failover
 favourite(s)?
@@ -78,6 +89,7 @@ FinTech
 firewalling
 frictionless
 Frontend
+[G,g]amestorming
 geospatial
 getters
 ghostEmail
@@ -87,6 +99,7 @@ GitOps
 Helming
 hermeticism
 hostname(s)?
+HumanOps
 ideate
 InfoSec
 [I,i]ntegrations
@@ -100,8 +113,10 @@ letsencrypt-staging
 [L,l]ifecycle
 Livelessons
 liveness
+Livestream
 Low-fi
 m'étonner
+Macanufo
 matchings
 Masala
 [M,m]odelling
@@ -113,14 +128,17 @@ Mini-Wheats
 minimalistic
 Multitenant
 [M,m]ultiuser
+MVP(s)
 namespace
 natively
 no-brainer
 nullable
 [O,o]bservability
+OKR(s)
 old-checkout-desc
 ok
 [O,o]makase
+on-prem
 orchestrator
 org(s)?
 overcomplicate
@@ -137,6 +155,7 @@ prefilled
 preload
 prepending
 pre-built
+pre-optimize
 pre-programmed
 pre-release
 preconfigured
@@ -147,6 +166,7 @@ Quickstart
 quokka
 README
 realtime
+rearchitect(ing)
 [R,r]ebase
 refactorings?
 [R,r]epos?
@@ -203,6 +223,7 @@ veth-jelly
 virtualized
 walkthrough
 waypoints
+WeBeFoods
 webhooks?
 whiteboard(ed|ing)
 [W,w]hitepaper
@@ -229,6 +250,8 @@ Artifactory
 Asciidoctor
 Astra
 [A,a]uth
+AutoBuild
+AutoDeploy
 autosave
 Autowired
 base64(-encoded)?
@@ -418,6 +441,7 @@ Rockstar
 Route53
 rkt
 RSocket(-based)?
+SaaS
 SameSite
 securityContext
 Semver
@@ -491,7 +515,7 @@ deliverAgile
 CodeFresh
 CoreOS
 DevNexus
-DevOpsDaysKC
+DevOpsDays(KC)?
 Documentum
 DockerCon
 DZone
@@ -520,6 +544,7 @@ RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
 Styra
+TechRepublic
 Theia
 ThoughtWorks
 [U,u]ber
@@ -528,6 +553,8 @@ VMworld
 [D,d]ockerhub
 [D,d]ockerhub-[\w|-]+
 [R,r]eddit
+Proxy-ing
+Proxying
 ZDNet
 
 # Acronyms
@@ -565,6 +592,8 @@ EFK
 EOF
 ETL
 FC
+EMEA
+EOF
 FIPS(-enabled|-approved)?
 FP
 GAC
@@ -671,6 +700,7 @@ Dubois
 Eads
 Fewell
 Florent
+Foxwell
 Fu
 Gabbi
 Gabriella
@@ -716,6 +746,7 @@ Nesterov
 Neumann
 Nicoll
 Oleh
+Oded
 Pacak
 Palo
 (pc|C)zarkowski('s)?
@@ -737,6 +768,7 @@ Schutta
 Sébastien
 Sevilla
 Sheasha
+Shopen
 Sletten
 Sloka
 Smythe

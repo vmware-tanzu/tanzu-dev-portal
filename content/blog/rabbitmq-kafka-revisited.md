@@ -69,4 +69,4 @@ Deciding whether to use RabbitMQ or Kafka was never easy, and with both technolo
 
 ## Learn More
 
-If you’re new to messaging services, a great place to start learning is with our resources for [event-driven architecture](/patterns/eventing/). If you’re a Spring developer, make sure to check out our guides to get started with [RabbitMQ](/guides/messaging-and-integration/rabbitmq-gs), [Kafka](/guides/messaging-and-integration/kafka-gs/), and [Spring Cloud Stream](https://tanzu.vmware.com/developer/guides/event-streaming/scs-gs/).
+If you’re new to messaging services, a great place to start learning is with our resources for [event-driven architecture](/patterns/eventing/). If you’re a Spring developer, make sure to check out our guides to get started with [RabbitMQ](/guides/messaging-and-integration/rabbitmq-gs), [Kafka](/guides/messaging-and-integration/kafka-gs/), and [Spring Cloud Stream](/guides/event-streaming/scs-gs/).
