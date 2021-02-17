@@ -88,12 +88,14 @@
                         </p>
                     </div>
                     <div class="col-lg-4 px-2 px-lg-2 mb-3">
-                        <h4 class="mt-3">2. Search for Tanzu - {{ .Title }} Template and click to
-                            ADD</h4>
+                        <h4 class="mt-3">2. Search for "Tanzu" to see all, or
+                            <a href="{{ .Params.miro_template_url }}" title="Miro Template">
+                                click here</a> to use this template</h4>
                         <p>
-                            <img src='{{"/images/practices/remote-2.png" | relURL }}'
-                                 alt="Search for the template and click ADD"
-                            />
+                            <a href="{{ .Params.miro_template_url }}" title="Miro Template">
+                                <img src='{{"/images/practices/remote-2.png" | relURL }}'
+                                 alt="Search for the template and click ADD"/>
+                            </a>
                         </p>
                     </div>
                 </div>

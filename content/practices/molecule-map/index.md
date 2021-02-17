@@ -8,7 +8,7 @@ image: "molecule-map/cover.png"
 description: "Quickly generate many possible solutions after identifying who the user is and what problem they have"
 lastmod: "2019-03-04"
 remote: true
-
+miro_template_url: "https://miro.com/miroverse/molecule-map/"
 why:
 - Molecule maps help team members understand that there are multiple possible solutions to a user’s need, and that solutions are best understood alongside their relationship to these users and needs
 

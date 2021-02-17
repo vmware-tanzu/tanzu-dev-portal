@@ -26,16 +26,17 @@ what:
 ### Sample Agenda & Prompts
 1. Write the following prompts on the whiteboard:
         
-- *"We believe..."*
-- *"We value..."*
-- *"We respect..."*
-- *"We ____________..."*
+   - *"We believe..."*
+   - *"We value..."*
+   - *"We respect..."*
+   - *"We ____________..."*
 
 1. Set a timer for 6 minutes and have the team silently generate value statements using the prompts on the board. Each value statement should be on its own sticky note.
 
    {{% callout %}}
    Tip: You can play some light background music (ideally instrumental) to help relax the atmosphere during generation
    {{% /callout %}}
+
 1. Go around the room individually and ask each team member to share a value statement and their thinking behind it (especially if it’s not obvious). Collect any similar value statements from other team members and place the groups/themes in rows on the whiteboard
 
    ![Illustration of team value sticky notes clustered into groups](/images/practices/team-values/step-3.png)

@@ -28,19 +28,20 @@ what:
 ### Sample Agenda & Prompts
 1. Draw these rows on the whiteboard:
 
-   |Row Name                           |Steps 1 to n|
-   |:----------------------------------|:-|
-   |Physical Evidence                   |
-   |Customer Actions                    |
-   |Frontstage                          |
-   |Backstage - eg. services, databases |
-   |<Any other points, eg. sensors>     |
+   |*Row Name* | *Steps 1 to n* |
+   |----------------------------------|----|
+   |Physical Evidence                   | ? | 
+   |Customer Actions                    | ? | 
+   |Frontstage                          | ? | 
+   |Backstage - eg. services, databases | ? | 
+   |<Any other points, eg. sensors>     | ? | 
 
    The customer/user actions row is always directly under physical evidence row. It is the user we are targeting; they are the “hero”.
 
    {{% callout %}}
    Tip: All projects/products are different, so you can always add different rows to the table as needed. See "Facilitator Notes & Tips" for a list possibilities.
    {{% /callout %}}
+   
 1. Move column by column through time, filling in cells with:
 
    **Physical Evidence** — What does the user first see? The physical evidence is not the interface they see, it is a monitor or cell phone.
@@ -75,18 +76,18 @@ Service blueprints are especially useful for:
 - Many mediums of interaction, controlling physical products, customer service
 
 Optional rows
-- _Time_ - some services are provided at different times or have steps that take varying amounts of time to complete
-- _Thoughts/Emotions_ - understanding emotions of fear/anxiety provides context to customer decisions      
-- _Phases_ - services can unfold over time; e.g. rent, use, return
-- _Split up Backstage_ - breaking backend technology into Employees, Data, Apps, Infrastructure, Name of Dept/Team can clarify various domains of the service      
-- _Photos / Sketches_ - the team can visualize a step using pictures or drawings
-- _Challenges_ - the team can discuss difficulties within the existing process      
-- _Ideas_ - the team can generate solutions that solve pains
+   - _Time_ - some services are provided at different times or have steps that take varying amounts of time to complete
+   - _Thoughts/Emotions_ - understanding emotions of fear/anxiety provides context to customer decisions      
+   - _Phases_ - services can unfold over time; e.g. rent, use, return
+   - _Split up Backstage_ - breaking backend technology into Employees, Data, Apps, Infrastructure, Name of Dept/Team can clarify various domains of the service      
+   - _Photos / Sketches_ - the team can visualize a step using pictures or drawings
+   - _Challenges_ - the team can discuss difficulties within the existing process      
+   - _Ideas_ - the team can generate solutions that solve pains
 
 Optional lines to draw between rows
-1. _The line of interaction_ - this is the point at which customers and the service interact
-1. _The line of visibility_ - beyond this line, the customer can no longer see into the service
-1. _The line of internal interaction_ - this is where the business itself stops, and partners step in
+   - _The line of interaction_ - this is the point at which customers and the service interact
+   -  _The line of visibility_ - beyond this line, the customer can no longer see into the service
+   -  _The line of internal interaction_ - this is where the business itself stops, and partners step in
 
 ### Related Practices
 
@@ -107,6 +108,6 @@ Coming soon!
 
 ### Recommended Reading
 
-<a href="https://www.cooper.com/journal/2014/08/service-blueprints-laying-the-foundation" target="_blank">Service Blueprints: Laying the Foundation</a> by Izac Ross of Cooper
+<a href="https://www.izacross.com/thoughts/blueprintfoundations" target="_blank">Service Blueprints: Laying the Foundation</a> by Izac Ross of Cooper
 
 
