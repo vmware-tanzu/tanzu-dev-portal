@@ -867,6 +867,37 @@ td {
   border: 1px solid #eaeaea;
 }
 
+div.aside-info > div.aside-title {
+  background: #1D428A;
+}
+
+div.aside-warning > div.aside-title {
+  background: #c53030;
+}
+
+div.aside-tip > div.aside-title {
+  background: #78BE20;
+}
+
+div.aside div.aside-title {
+    height: 30px;
+    /* To center the line vertically */
+    line-height: 30px;
+    color: #fff;
+    padding-left: 1em;
+    font-size: 1em;
+}
+
+div.aside div.aside-title i {
+    margin-right: 5px;
+}
+
+div.aside div.aside-content {
+    padding: 5px 20px;
+    background: #0f171c;
+    /* background-color: black; */
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #f8f8f2; background-color: #0f171c }
