@@ -124,6 +124,23 @@ input::placeholder {
    color: #1B2A32 !important;
 }
 
+body.tv-episode .fancybox-inner {
+    background-color: white !important;
+}
+
+body.tv-episode #register .mktoForm select, body.tv-episode #register .mktoForm input:not([type=checkbox]):not([type=radio]) {
+  border-bottom: 1px solid black!important;
+  color: black!important;
+}
+
+body.tv-episode #register .mktoForm select {
+  background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-999.png) no-repeat transparent right 10px center !important
+}
+
+.episodes .teaser {
+  color: #78be20!important;
+}
+
 footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn {
    background: #1d428a !important;
@@ -143,13 +160,17 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
  #hero.community-hero {
    background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }}) !important;
  }
+ #hero.practices-hero {
+   background-image: url({{ "/images/backgrounds/background-practices-light.svg" | relURL }}) !important;
+ }
 
 @media(max-width: 991px) {
   body #hero.guides-hero,
   body #hero.patterns-hero,
   body #hero.samples-hero,
   body #hero.videos-hero,
-  body #hero.community-hero {
+  body #hero.community-hero,
+  body #hero.practices-hero {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }

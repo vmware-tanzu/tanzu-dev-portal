@@ -5,6 +5,7 @@ streaming: "twitch"
 #noPast: true
 id: "bcak"
 image: "/images/tv/shows/bcak.jpg"
+og_image: "/images/og/TanzuTV-ChairKeyboard.png"
 weight: 4
 # Text that appears on show index page under show name
 description: Nate Schutta hosts discussions with interesting people in software.

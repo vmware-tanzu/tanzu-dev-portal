@@ -117,7 +117,7 @@ jupyter-worker2         Ready    <none>   2m1s    v1.19.1
 
 ## HELM Install
 
-Before we can install the JupyterHub Helm chart, we need to ensure Helm is installed. If you don’t already have it, follow the instructions below for OS X or reference this [Getting Started Guide](https://tanzu.vmware.com/developer/guides/kubernetes/helm-gs/). 
+Before we can install the JupyterHub Helm chart, we need to ensure Helm is installed. If you don’t already have it, follow the instructions below for OS X or reference this [Getting Started Guide](/guides/kubernetes/helm-gs/). 
 
 On your Mac, download and install the [Helm CLI](https://github.com/helm/helm/releases) if you haven't already done so.
 

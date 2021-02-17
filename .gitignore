@@ -1,11 +1,12 @@
 # Hugo default output directory
 /public
 /resources
+/serve
 
 # Node
 /node_modules
 
 ## OS Files
 .DS_Store
-
 .vscode/
+.idea

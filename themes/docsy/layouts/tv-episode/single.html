@@ -5,7 +5,13 @@
 	<div class="container">
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
     <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
-    <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
+    {{ if .Params.description_episode }}
+      <div class="lead"><p>{{ .Params.description_episode | markdownify }}</p></div>
+    {{ else if .Parent.Params.description_episodes }}
+      <div class="lead"><p>{{- .Parent.Params.description_episodes | markdownify }}</p></div>
+    {{ else }}
+      <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
+    {{ end }}
    </div>
 </section>
 
@@ -21,19 +27,26 @@
 {{ end }}
 <div class='container'>
   <div id="live" class="row justify-content-center mt-5 pt-3">
-    <div class="col-lg-5 col-12 mb-5 pl-0">
-      <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
-      <div>
-        <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
-        <div class="float-left ml-3 pl-1">
-          <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
-          <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+    {{ if .Params.banner_only }}
+      <div class="col-lg-9 col-12 px-0">
+        <img src="{{ .Params.episode_banner | relURL }}">
+      </div>
+    {{ else }}
+      <div class="col-lg-5 col-12 mb-5 pl-0">
+        <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
+        <div>
+          <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
+          <div class="float-left ml-3 pl-1">
+            <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
+            <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-4 col-12 px-0">
-      <img src="{{ .Params.episode_banner | relURL }}">
-    </div>
+      <div class="col-lg-4 col-12 px-0">
+        <img src="{{ .Params.episode_banner | relURL }}">
+      </div>
+    {{ end }}
+
   </div>
   <!-- ELSE IF PREVIOUS -->
   <div id="vod" class="row justify-content-center mt-5">
@@ -82,7 +95,12 @@
 
   <div class="row justify-content-center mb-5">
     <div class="col-lg-9 col-12 px-0 mt-5">
-      <h3>In this episode</h3>
+      {{ if not .Params.no_episode_title }}
+        <h3>In this episode</h3>
+      {{ end }}
+      {{ if .Params.calendar }}
+        <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
+      {{ end }}
       {{ .Content }}
     </div>
   </div>
@@ -116,6 +134,43 @@
     </div>
   </div>
   {{ end }}
+
+  {{ with .Params.speakers }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Speakers</h3>
+      {{ range . }}
+        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          <div class="mb-4">
+          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if and (.Params.contact) (.Params.code_of_conduct) }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ else if .Params.contact}}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a></p>
+      </div>
+    </div>
+  {{ else if .Params.code_of_conduct }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p><a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ end }}
+
+
 
 </div>
 
