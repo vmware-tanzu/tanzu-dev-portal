@@ -99,6 +99,10 @@ limitations under the License.
             return false;
             });
 
+        $(".lightbox").fancybox({
+            'padding'   : 0
+        });  
+
         //Copy videos index iframe embed URLs to parent for lightbox
         $(".youtube-container").each(function(){
             var src = $(this).children(".youtube-small").attr('src').replace("?wmode=transparent&rel=0&modestbranding=1", "");

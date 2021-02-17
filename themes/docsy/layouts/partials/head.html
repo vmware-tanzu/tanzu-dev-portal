@@ -51,8 +51,12 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Params.name }}{{ . }} | {{ end }}{{ with .Params.seotitle }}{{.}} | {{else}}{{with .Title}}{{.}} | {{end}}{{end}} {{ if not (.Parent.IsHome) }}{{ with .Section }}{{ if (ne . "tv")}}{{ . | humanize }}{{ else }}Tanzu.TV{{ end }} | {{ end }}{{ end }}{{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . | chomp }}{{ else }}{{if .IsPage}}{{ .Summary | chomp }}{{ else }}{{ with .Site.Params.description | chomp }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
 {{ $ogImage := "images/TAN-DevSite-OG.png" }}
-{{ if eq .Section "tv" }}
-{{ $ogImage = "images/OG-TanzuTV.jpg" }}
+{{ if .Params.og_image }}
+{{ $ogImage = trim .Params.og_image "/" }}
+{{ else if .Params.episode_image }}
+{{ $ogImage = trim .Params.episode_image "/" }}
+{{ else if eq .Section "tv" }}
+{{ $ogImage = "images/og/TanzuTV.png" }}
 {{ end }}
 <meta content='{{ $ogImage | absURL }}' property='og:image'>
 <meta content='{{ $ogImage | absURL }}' name='twitter:image'>
