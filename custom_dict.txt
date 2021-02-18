@@ -17,6 +17,7 @@ samplehost(:[0-9]*)?
 # Missing or Made-up Words
 1:1s
 12pm
+2x2
 4x
 [2,4,5]xx
 addon(s)?
@@ -30,6 +31,7 @@ appender
 artisanal
 aspirational
 async
+Attribution-NonCommercial-ShareAlike
 authenticator
 autocompletion
 [A,a]utoscaling
@@ -56,6 +58,7 @@ codebase
 cortado
 counterintuitive
 COVID-19
+critiquers
 Crowdsource
 Crowdsourced
 customizable
@@ -64,6 +67,7 @@ dataset
 de
 [D,d]e-referenced
 decrypt(ed)?
+de-duplicate
 deployable
 deserializing
 developer-centric
@@ -106,12 +110,15 @@ High-Cardinality
 hostname(s)?
 HumanOps
 ideate
+ideation
 InfoSec
 [I,i]ntegrations
 [I,i]nterservice
 interpolator
+Irizarry
 Jiu
 Jitsu
+judgement
 jumpstart
 Kanban
 kitesurfing
@@ -232,6 +239,7 @@ uncomment
 undersample
 unencrypted
 unpause
+Unported
 unpushed
 unreleasable
 upgradability
@@ -241,7 +249,7 @@ validators
 versioned
 veth-jelly
 virtualized
-walkthrough
+[W,w]alkthrough
 waypoints
 WeBeFoods
 webhooks?
@@ -419,6 +427,7 @@ minideb
 [M,m]inikube
 Minio
 MinIO
+[M,m]itigations
 MiXiT
 Mockito
 MockMvc
@@ -520,6 +529,7 @@ TestContainers
 Tilt(file|Cloud)?
 tgz
 Thanos
+[T,t]imebox
 Trello
 TRS-80
 URL(s)?
@@ -615,12 +625,14 @@ ZDNet
 [s,S]3
 3D
 AAAA
+A3
 api
 APIs?
 APM
 BKPR
 BOM
 brd1
+CEST
 CIO
 CLI(s|'s)?
 CNCF
@@ -709,6 +721,7 @@ UAA
 UI(s)?
 UR[I,L](s)?
 url
+UX
 v3
 VMs?
 VCS
@@ -783,6 +796,7 @@ Hockin
 Iberkleid
 Isenberg
 Ivanov
+Izac
 Jakub
 Jarvinen
 Jernigan
@@ -812,6 +826,7 @@ Pilimon
 Pratik('s)?
 Pulkit
 Raju
+Reinertsen
 Ren
 Renaud
 Renfro
@@ -843,6 +858,7 @@ Viktor
 Violeta
 Wilcock('s)?
 Wittrock
+Wujec('s)
 Xing
 Xu
 Zou
