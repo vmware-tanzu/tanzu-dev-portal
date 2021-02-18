@@ -215,7 +215,7 @@ data:
 
 Feign is a declarative web service client. In order to communicate with
 `employee-service` from `department-service` we need to create an interface and
-use the @FeignClient annotation. In the `@FeignClient` annotation the String
+use the `@FeignClient` annotation. In the `@FeignClient` annotation the String
 value `"employee"` is an arbitrary client name, which is used to create a Ribbon
 load balancer. The name of the bean in the application context is the fully
 qualified name of the interface. At run-time, `employee` will be resolved with a
