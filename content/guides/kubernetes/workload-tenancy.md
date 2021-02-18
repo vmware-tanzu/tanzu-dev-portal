@@ -104,7 +104,7 @@ overcommit resources. An example of overcommitting is where you set a limit
 higher than a request, which means the container can use more than is requested,
 unless the host comes under contention.
 
-![Guaranteed Pods](/images/guides/kubernetes/workload-tenancy/guarenteed-pods.png)
+![Guaranteed Pods](/images/guides/kubernetes/workload-tenancy/guaranteed-pods.png)
 
 **Pros:**
 * Improved stability

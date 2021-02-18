@@ -906,7 +906,7 @@ automatically by creating a proxy to the `sealed-secret-controller` via the
 kubeseal --fetch-cert
 ```
 
-![Sealed Secret Overview](/images/guides/kubernetes/platform-security/sealed-secret-overvew.png)
+![Sealed Secret Overview](/images/guides/kubernetes/platform-security/sealed-secret-overview.png)
 
 This cert can be stored locally or in alternative external locations if this
 flow is not realistic for all developer workstations.
