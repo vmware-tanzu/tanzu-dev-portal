@@ -3,7 +3,7 @@ title: "Admission Control"
 linkTitle: "Admission Control"
 description: "Considerations for implementing admission control in Kubernetes"
 parent: "Platform Security"
-weight: 1600
+weight: 1
 keywords:
 - Kubernetes
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Observability"
 subsection: "Observability"
-weight: 1500
+weight: 5
 topics:
 - Kubernetes
 team:

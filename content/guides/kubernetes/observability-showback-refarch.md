@@ -2,7 +2,7 @@
 title: "Showback Reference Architecture"
 linkTitle: "Showback Reference Architecture"
 description: "Considerations for showback in large Kubernetes environments"
-weight: 1600
+weight: 2000
 parent: "Observability"
 keywords:
   - Kubernetes

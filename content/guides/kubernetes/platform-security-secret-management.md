@@ -3,7 +3,7 @@ title: "Secret Management"
 linkTitle: "Secret Management"
 description: "Approaches and best practices for secret management in Kubernetes"
 parent: "Platform Security"
-weight: 1600
+weight: 3
 keywords:
 - Kubernetes
 ---
