@@ -7,7 +7,6 @@ participants: "Core team"
 image: "default-cover.png"
 description: "Help the team understand the circumstances surrounding the problem they’re attempting to solve"
 lastmod: "2019-04-06"
-remote: true
 
 why:
 - This activity allows the team to tell a story about either the user's current, potentially frustrating experience with the core problem or their future, ideally positive experience after the team’s solution is in place. Doing this provides structure in advance of exploratory research—drawing out areas to probe—or leverages what the team has learned to support solution sketching.

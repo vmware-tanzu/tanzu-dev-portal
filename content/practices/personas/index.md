@@ -8,6 +8,7 @@ image: "personas/cover.png"
 description: "Create a provisional representation of a user based on existing knowledge and assumptions"
 lastmod: "2019-02-03"
 remote: true
+miro_template_url: "https://miro.com/miroverse/personas"
 
 why:
 - The provisional persona anchors the discussions we have during the Kickoff and allows the core team to make smart decisions about who to target for exploratory research during the Discovery phase of the project.

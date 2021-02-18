@@ -29,7 +29,7 @@ what:
    {{% callout %}}
    Example: "A form of technical debt we don't often think of is the distance between the language used by domain experts and the one used in the codebase."
    {{% /callout %}}
-
+ 
    {{% callout %}}
    Example: "Our goal today is to get ahead of this debt by creating a shared understanding of terminology for our team that focuses on understanding, not semantics."
    {{% /callout %}}
@@ -37,7 +37,8 @@ what:
    {{% callout %}}
    Tip: You can also present any anti-goals that may help steer the team away from rabbit holes. This is optional.
    {{% /callout %}}
-![Visual of the gap between the app's vocabulary and new business vocabulary](/images/practices/ubiquitous-language/step-1.png)
+ 
+   ![Visual of the gap between the app's vocabulary and new business vocabulary](/images/practices/ubiquitous-language/step-1.png)
 
 1. Give everyone 10 minutes (or less) to individually write down as many terms as they can, 1 term per sticky note
 

@@ -41,7 +41,8 @@ what:
    {{% callout %}}
    Tip: If appropriate, you can include stakeholders during this step. Use your judgement.
    {{% /callout %}}
-![Sticky notes representing team value clustered on a digital whiteboard](/images/practices/product-valuation/step-1.png)
+   
+   ![Sticky notes representing team value clustered on a digital whiteboard](/images/practices/product-valuation/step-1.png)
 
 1. **Identify Assumptions** (still no numbers)
 
@@ -70,17 +71,23 @@ what:
 
 1. **Calculate Your Value & A Range**
 
-   Plug your numbers into a spreadsheet to calculate the end valuation, as well as a range. The range is very important for building trust because it allows you to be transparent about how accurate your estimate is.
-
-   Visit <a href="https://docs.google.com/spreadsheets/d/1GX3pCBlVHck1XytiLz5ItCn4nGmZg3UkMMqJtlnq7PE/edit#gid=1251939525" target="_blank">this spreadsheet</a> to see example calculations.
-
-   ![Screenshot of an example calculation in a spreadsheet](/images/practices/product-valuation/step-4.png)
+   Plug your numbers into a spreadsheet to calculate the end valuation, as well as a range. The range is very important for building trust because it allows you to be transparent about how accurate your estimate is. 
+   
+   Here's an example:
+  
+   ![Screenshot of an example calculation in a spreadsheet Step 1](/images/practices/product-valuation/api1.png)
+   
+   ![Screenshot of an example calculation in a spreadsheet Step 2](/images/practices/product-valuation/api2.png)
+   
+   ![Screenshot of an example calculation in a spreadsheet Step 3](/images/practices/product-valuation/api3.png)
+   
+   ![Screenshot of an example calculation in a spreadsheet Step 2](/images/practices/product-valuation/step-4.png)
 
 1. **Calculate Your ROI**
 
    Generate the return on investment in your team by dividing the product value you’ve calculated by the amount invested in your team.
 
-   Visit <a href="https://miro.com/app/board/o9J_kvKjPQo=/?moveToWidget=3074457347260874876&cot=13" target="_blank">this part of the Miro board</a> for more helpful notes or <a href="https://docs.google.com/spreadsheets/d/1GX3pCBlVHck1XytiLz5ItCn4nGmZg3UkMMqJtlnq7PE/edit#gid=1251939525" target="_blank">go here to see example calculations</a>.
+   Visit <a href="https://miro.com/app/board/o9J_kvKjPQo=/?moveToWidget=3074457347260874876&cot=13" target="_blank">this part of the Miro board</a> for more helpful notes. 
 
    ![Screenshot of example ROI calculation in a spreadsheet](/images/practices/product-valuation/step-5.png)
 
