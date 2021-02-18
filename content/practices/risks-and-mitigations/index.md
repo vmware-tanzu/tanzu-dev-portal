@@ -8,6 +8,7 @@ image: "risks-and-mitigations/cover.png"
 description: "Surface risks and how the team might mitigate them"
 lastmod: "2019-02-24"
 remote: true
+miro_template_url: "https://miro.com/miroverse/risks-and-mitigations"
 
 why:
 - We do this to create a forum where people feel comfortable sharing fears and concerns in order to proactively mitigate issues we think may arise. This session results in a list of prioritized action items that the team can use to get ahead of any risks.
@@ -41,7 +42,8 @@ what:
    {{% callout %}}
    Tip: Walk around the groups and move each group forward if they are moving faster than others
    {{% /callout %}}
-![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)
+   
+   ![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)
 
 1. Instruct each team to choose the top 2 risks from the high risk section that they would like to share out
 

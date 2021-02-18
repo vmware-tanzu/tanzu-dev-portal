@@ -8,6 +8,7 @@ image: "default-cover.png"
 description: "Map out business, product, and project stakeholders that may impact or interact with the core team"
 lastmod: "2019-02-25"
 remote: true
+miro_template_url: "https://miro.com/miroverse/stakeholder-map"
 
 why:
 - Sometimes projects involve large numbers of stakeholders in varying departments, and they need to be identified.
@@ -40,11 +41,16 @@ what:
 
 1. Organize the sticky notes on the whiteboard before starting activity, placing the core team in the center, surrounded by clustered departments and project sponsors
 
-> Note: A core team member is someone who will be working on the project full-time
+   {{% callout %}}   
+   Note: A core team member is someone who will be working on the project full-time
+   {{% /callout %}}   
 
-> Tip: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
+   {{% callout %}}   
+   Tip: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
+   {{% /callout %}}   
 
-Make sure people have name tags beforehand, it helps when calling on people
+   Make sure people have name tags beforehand, it helps when calling on people
+  
 1. Walk through each "straw man" group and ask participants how they could support the core team
 
 1. Create circles for departments and teams and connect people and/or teams with lines and directional arrows

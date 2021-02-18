@@ -8,6 +8,7 @@ image: "goals-anti-goals/cover.png"
 description: "Identify and prioritize key product, business, project, and/or consulting engagement goals and anti-goals (non-goals)"
 lastmod: "2019-02-24"
 remote: true
+miro_template_url: "https://miro.com/miroverse/goals-and-anti-goals/"
 
 why:
 - Goals help the team decide where to focus their time and efforts. By developing them hand-in-hand with stakeholders, we can align ourselves around shared goals and avoid any unnecessary or unwanted surprises down the road.

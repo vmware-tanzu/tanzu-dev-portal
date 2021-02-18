@@ -3,11 +3,10 @@ path: "/methods/research-synthesis"
 title: "Research Synthesis"
 tags: ["Discovery", "Framing", "Remote"]
 length: "30 min - 1 hour per interview"
-participants: "?"
+participants: "Interviewers, researchers, observers, note-takers"
 image: "default-cover.png"
 description: "Help sort through generative or evaluative research data using an affinity diagram"
 lastmod: "2019-04-9"
-remote: true
 
 why:
 - We use the output of this activity to identify patterns in collected research data, improve our understanding of users, and identify action items we can take (including any re-testing to confirm any inconclusive findings). These findings can either validate or invalidate assumptions we’ve made about our persona (i.e. demographics, behaviors, concerns, motivators, etc). Output also supports conversations on the why of behaviors and what actions to take.

@@ -7,7 +7,6 @@ participants: "Core team"
 image: "default-cover.png"
 description: "Prioritize any insights that were uncovered during research so the team can use them to make informed product decisions"
 lastmod: "2019-02-05"
-remote: true
 
 why:
 - Insight Prioritization helps us understand "what are the first set of problems that need solving?". It looks at insights—"aha!" moments where critical thinking results in a meaningful conclusion—in order to help provide color to our problem space and eventual solutions.

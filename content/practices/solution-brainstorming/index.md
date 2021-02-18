@@ -7,7 +7,6 @@ participants: "Core team"
 image: "default-cover.png"
 description: "Extract solutions that could potentially address the identified problem(s)"
 lastmod: "2019-02-05"
-remote: true
 
 why:
 - We do this activity so that the entire team—product managers, designers, and engineers—is able to put their ideas down on paper and contribute to the overall solution, enhancing our shared responsibility for the success of the product. After all, no single discipline has a monopoly on good ideas!

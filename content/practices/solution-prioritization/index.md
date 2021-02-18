@@ -7,7 +7,6 @@ participants: "Core team members (PM, designer, engineers)"
 image: "solution-prioritization/cover.png"
 description: "Determine which solutions to explore first"
 lastmod: "2019-02-01"
-remote: true
 why:
 - Unless you have a systematic way to approach your pile of solutions, you may find yourself overwhelmed with opportunities. Solution Prioritization lets you walk away with a clear idea of the relative priority / complexity of your many groomed ideas as well as the ones you plan to start with first.
 

@@ -7,7 +7,6 @@ participants: "Core Team"
 image: "default-cover.png"
 description: "A tool to understand and organize solutions so they can be prioritized effectively."
 lastmod: "2018-09-14"
-remote: true
 
 why:
 - Unless you have a systematic way to approach your pile of solutions, you may find yourself overwhelmed with opportunities. It helps to break them down into smaller features and/or group them into larger epics before prioritizing. This activity is also a great way to de-duplicate the similar ideas that people may have generated from different "How might we…?” prompts.

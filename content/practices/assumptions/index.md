@@ -7,7 +7,6 @@ length: "30 - 60 mins"
 participants: "Core team, stakeholders (optional)"
 image: "assumptions/cover.png"
 description: "Create a list of assumptions and identify which are the riskiest"
-remote: true
 why:  
 - We do this because if we do not identify and address our implicit assumptions, we may make uninformed decisions about the project or product's direction. The output of this exercise can be used to generate user research questions.
 what:

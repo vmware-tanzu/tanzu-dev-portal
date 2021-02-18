@@ -7,7 +7,6 @@ participants: "Core team"
 image: "default-cover.png"
 description: "Prioritize problems that were discovered during research so the team can focus on the most important ones"
 lastmod: "2019-01-23"
-remote: true
 
 why:
 - Problem Prioritization helps us understand "what are the first set of problems that need solving?". We do this by factoring in the intersection of all the things that are important to the business and the users. This exercise gives us the ability to focus our solution generation on a specific problem.
