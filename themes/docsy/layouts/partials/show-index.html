@@ -1,8 +1,7 @@
 <div class="section-index">
-    {{ $pages := sort ( where (where .Site.Pages "Section" "tv" ) ".Kind" "==" "section" ) }}
     <div>
         <div class="px-0 mb-5 shows">
-        {{ range $pages }}
+        {{ range sort .Sections }}
             <div class="row flex justify-content-between align-items-baseline mb-3" >
                 <a href="{{ .RelPermalink }}"><h4>{{ .Title }}</h4></a>
                 <h5 class='text-uppercase text-white'>{{ .Params.teaser }} </h5>
