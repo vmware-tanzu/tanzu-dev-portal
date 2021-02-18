@@ -921,8 +921,6 @@ body.tv-episode {
   
       .video-description {
         background-color: #45667B;
-        height: 130px;
-
       }
       .thumbnail-gradient {
         opacity: 0;
@@ -950,6 +948,7 @@ body.tv-episode {
   color: white !important;
   padding: 20px 25px;
   transition: background-color .25s;
+  height: 130px;
 }
 
 /* SYNTAX HIGHLIGHTING */
