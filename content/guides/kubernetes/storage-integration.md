@@ -85,11 +85,13 @@ is deployed to your cluster and interacts with the cloud-provider's APIs. The
 storage driver (CSI-plugin) often runs outside of the CCM, but can require the
 CCM to function correctly. In the case of vSphere, you install 3 components.
 
-| Component                   | Name                       | Type        |
+{{< table "table" >}}
+| Component | Name | Type |
 | --------------------------- | -------------------------- | ----------- |
-| Cloud Controller Manager    | `vsphere-cloud-controller` | Deployment  |
-| Storage Controller          | `vsphere-csi-controller`   | Statefulset |
-| Storage Driver (CSI-plugin) | `vsphere-csi-node`         | Daemonset   |
+| Cloud Controller Manager | `vsphere-cloud-controller` | Deployment |
+| Storage Controller | `vsphere-csi-controller` | Statefulset |
+| Storage Driver (CSI-plugin) | `vsphere-csi-node` | Daemonset |
+{{</ table >}}
 
 With these components installed, a 4 node Kubernetes cluster (assuming 1 master)
 would look as follows.

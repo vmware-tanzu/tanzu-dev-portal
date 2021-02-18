@@ -338,6 +338,7 @@ scheduled to it. The node is also under memory pressure, which means it will
 begin the [eviction
 process.](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/#evicting-end-user-pods)
 
+{{< table "table" >}}
 | Eviction Order | QoS        | Priority | Utilization | Usage / Request | Pod Label |
 | -------------- | ---------- | -------- | ----------- | --------------- | --------- |
 | 1              | BestEffort | 1        | 2%          | N/A             | D         |
@@ -347,7 +348,7 @@ process.](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/#e
 | 5              | Burstable  | 3        | N/A         | 2               | F         |
 | 6              | Burstable  | 2        | N/A         | 0.5             | E         |
 | 7              | Guaranteed | 1        | N/A         | 1               | G         |
-
+{{</ table >}}
 **Table 3: Eviction prioritization of pods from Figure 7**
 
 Table 3 outlines the details of each pod illustrated in Figure 7, and the order
@@ -719,12 +720,13 @@ function makes the following assumptions:
 - allocatable constraints (eviction threshold, kybe & system reserved) == 0
 - number of failures is 1
 
+{{< table "table" >}}
 | # of nodes (n) | maxUtilization(n) |
 | -------------- | ----------------- |
 | 2              | 50%               |
 | 3              | 66%               |
 | 10             | 90%               |
-
+{{</ table >}}
 **Table 4: Example calculations of maximum node utilization with function from Figure 22**
 
 ##### Full Function
@@ -738,6 +740,7 @@ output for this function.
 ![Maximum Node Utilization](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-23.png)
 **Figure 23: Full function for maximum utilization of nodes while accounting for an arbitrary number of node failures (f) and node allocatable constraints.**
 
+{{< table "table" >}}
 | # of nodes (n) | max # of node failures | node allocatable constraints | max utilization of nodes |
 | -------------- | ---------------------- | ---------------------------- | ------------------------ |
 | 2              | 1                      | 0                            | 50%                      |
@@ -746,7 +749,7 @@ output for this function.
 | 2              | 1                      | 0.2                          | 40%                      |
 | 3              | 1                      | 0.3                          | 56%                      |
 | 10             | 2                      | 0.5                          | 75%                      |
-
+{{</ table >}}
 **Table 5: Example calculation of maximum node utilization with function from Figure 23**
 
 ## Tying it All Together

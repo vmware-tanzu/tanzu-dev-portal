@@ -95,7 +95,7 @@ The `calico-kube-controller` is responsible for recognizing changes in
 Kubernetes objects that impact routing. The controller contains multiple
 controllers inside of it, watching changes in the following:
 
-- Network Policies (used to program iptables for network access enforcement)
+- Network Policies (used to program IPtables for network access enforcement)
 - Pods (e.g. labels)
 - Namespaces (used to determine if enforcement is needed for the new namespace)
 - Service Accounts (used for setting up Calico
@@ -671,10 +671,12 @@ based on your routing configuration:
 
 The following table shows 2 sets of example calculation:
 
-| Network MTU                                                                                                    | Native MTU | IP-in-IP MTU | VXLAN MTU |
+{{< table "table" >}}
+| Network MTU | Native MTU | IP-in-IP MTU | VXLAN MTU |
 | -------------------------------------------------------------------------------------------------------------- | ---------- | ------------ | --------- |
-| 1500                                                                                                           | 1500       | 1480         | 1450      |
-| 9001 ([AWS Jumbo](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/network_mtu.html#jumbo_frame_instances)) | 9001       | 8981         | 8951      |
+| 1500 | 1500 | 1480 | 1450 |
+| 9001 ([AWS Jumbo](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/network_mtu.html#jumbo_frame_instances)) | 9001 | 8981 | 8951 |
+{{</ table >}}
 
 To set the MTU, the `calico-config` configmap can be set as follows:
 

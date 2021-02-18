@@ -74,13 +74,14 @@ them to prioritize the pods in the cluster.
 With the above assumptions, we can define the following priority classes for
 your entire application needs.
 
+{{< table "table" >}}
 | PriorityClass Name | Value   | preemptionPolicy     | globalDefault |
 | ------------------ | ------- | -------------------- | ------------- |
 | cat-1              | 10000   | None                 | true          |
 | cat-2              | 20000   | PreemptLowerPriority | false         |
 | cat-3              | 30000   | PreemptLowerPriority | false         |
 | cluster-service    | 1000000 | PreemptLowerPriority | false         |
-
+{{</ table >}}
 **_Table 1: Sample PriorityClass Allocation_**
 
 {{% aside title="Maximum value of priority classes" type="warning" %}}
@@ -102,13 +103,14 @@ that provide common services, such as logging and monitoring.
 Lets assume the scenario where your cluster has pods defined with following
 budgets.
 
+{{< table "table" >}}
 | Application | Disruption Budget |
 | ----------- | ----------------- |
 | Blue Pod    | Min Available : 3 |
 | Purple Pod  | Min Available : 3 |
 | Green Pod   | Min Available : 2 |
 | Red Pod     | Min Available : 2 |
-
+{{</ table >}}
 **_Table 2: Scenario Disruption Budget_**
 
 Now, let's assume your cluster is full and you need to put another `cat-3`
