@@ -85,12 +85,13 @@ The Kubernetes API can be queried with the `kubectl` client to list specific
 components with specific labels.  There are three operators that can be used to
 perform these queries: `=`, `==`, and `!=`.  
 
+{{< table "table" >}}
 | Operator | Description |
 | -------- | ----------- |
 | =        | equal to or is |
 | ==       | equal to or is |
 | !=       | not equal to or is not |
-
+{{< table />}}
 #### Label Query Examples
 
 Find all components in Kubernetes that are related to running MySQL
@@ -122,7 +123,7 @@ locating and managing components easier in the long run.
 Some recommended labels per the
 [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
  include:
-
+{{< table "table" >}}
 | Key | Description | Example |
 | --- | --- | --- |
 | name | The name of the application | mysql |
@@ -131,9 +132,11 @@ Some recommended labels per the
 | component | The component within the architecture | database |
 | part-of | The name of a parent application this application is part of | wordpress |
 | managed-by | The tool being used to manage the operation of an application | noc |
+{{< table />}}
 
 VMware recommends you extend the above labels with the following, where relevant.
 
+{{< table "table" >}}
 | Key | Description | Example |
 | --- | --- | --- |
 | tier | The tier in the overall application architecture | frontend |
@@ -144,3 +147,4 @@ VMware recommends you extend the above labels with the following, where relevant
 | repository | A URL to the repository that contains this application's source code | "github.com/kubernetes/kubernetes" |
 | managed-by | The tool being used to manage the operation of an application | helm |
 | business-unit | The business unit who owns this application | "finance" |
+{{< table />}}
