@@ -3,6 +3,7 @@ title: "Cluster Tuning Guide"
 linkTitle: "Cluster Tuning Guide"
 description: "A workflow for tuning Kubernetes clusters"
 parent: "Workload Tenancy"
+weight: 1800
 keywords:
 - Kubernetes
 ---

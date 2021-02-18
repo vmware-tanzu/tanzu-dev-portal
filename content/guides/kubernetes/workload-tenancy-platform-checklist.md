@@ -5,7 +5,7 @@ description: "A checklist for Kubernetes platform considerations"
 parent: "Workload Tenancy"
 keywords:
 - Kubernetes
-weight: 1501
+weight: 100
 ---
 
 This list is a starting place for considerations about the Kubernetes platform

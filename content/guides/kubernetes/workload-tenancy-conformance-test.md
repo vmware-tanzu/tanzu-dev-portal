@@ -3,6 +3,7 @@ title: "Automated Cluster Acceptance Testing"
 linkTitle: "Cluster Acceptance Testing"
 description: "Using Sonobuoy for cluster conformance testing"
 parent: "Workload Tenancy"
+weight: 1400
 keywords:
 - Kubernetes
 ---

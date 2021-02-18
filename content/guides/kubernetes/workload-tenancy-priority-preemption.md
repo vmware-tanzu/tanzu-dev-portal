@@ -3,7 +3,7 @@ title: "Pod Priority and Preemption"
 linkTitle: "Pod Priority and Preemption"
 description: "Guidance on pod priority and preemption"
 parent: "Workload Tenancy"
-weight: 1600
+weight: 2000
 keywords:
 - Kubernetes
 ---
@@ -124,7 +124,8 @@ not pick that pod due to the disruption budget requirement. Removing any blue
 pod will cause a violation.
 {{% /aside %}}
 
-The scheduling will run with 2 passes. If the first attempt failed with
+The scheduling will run with 2 passes. If the first attempt
+ failed with
 `fitError` which is an indication from scheduler that it could not find the
 best fit for the pod under the current situations, the Kubernetes scheduler will
 attempt to run the 2 passes as long as the new pod priority class has
