@@ -813,7 +813,7 @@ body.light-mode #toggle-light-dark-mode span {
 .shows .teaser, .episodes .countdown  {
   border-radius: 40px;
   background: $bright-green;
-  font-size: .8em;
+  font-size: .75em;
   font-weight: 500;
   padding: 2px 20px 1px;
   -webkit-font-smoothing: antialiased;
@@ -822,9 +822,9 @@ body.light-mode #toggle-light-dark-mode span {
 
 .episodes .countdown {
   position:absolute;
-  top:20px;
-  right:20px;
-  padding: 8px;
+  top:2px;
+  right:10px;
+  padding: 3px 15px;
 }
 
 .episodes .teaser {
@@ -894,7 +894,7 @@ body.tv-episode {
 #live-notify .btn {
   border-radius: 40px;
   background: white;
-  font-size: .8em;
+  font-size: .75em;
   font-weight: 500;
   padding: 2px 10px 1px;
   -webkit-font-smoothing: antialiased;
