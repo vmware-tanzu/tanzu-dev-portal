@@ -18,18 +18,8 @@
                         <div class='video-description'>{{.Title}}</div>
                     {{ end }}
                     {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
-                    <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span>
-                    <script>
-                        var upcomingEpisodes = document.querySelectorAll('div.upcoming');
-                        var upcomingEpisode = upcomingEpisodes[upcomingEpisodes.length - 1];
-                        var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
-                        var epDate = (new Date(upcomingEpisode.dataset.episodeDate)).getTime();
-                        var diffTime = Math.abs(epDate - currentDate);
-                        var diffDays = Math.floor(diffTime / (1000 * 3600 * 24)); 
-                        var whenLive = "in " + diffDays + " days";
-                        if (diffDays == 0) whenLive = "today";
-                        
-                    </script>
+                    <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
+                    
                 </a>
             {{ end }}
             </div>
@@ -37,4 +27,24 @@
 
         </div>
     </div>
+    <script>
+        // document.write(whenLive)
+        var upcomingEpisodes = document.querySelectorAll('div.upcoming');
+        upcomingEpisodes.forEach(function(value) {
+            var epDate = (new Date(value.dataset.episodeDate)).getTime();
+            var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
+            
+            if ((epDate - currentDate) > 0) {
+                var diffTime = Math.abs(epDate - currentDate);
+                var diffDays = Math.floor(diffTime / (1000 * 3600 * 24)); 
+                var whenLive = "in " + diffDays + " days";
+                if (diffDays == 0) whenLive = "today";
+                console.log(diffDays);
+                value.nextElementSibling.innerHTML = "Live " + whenLive;
+            }
+            else {
+                value.nextElementSibling.style.display = 'none';
+            }
+        });
+    </script>
 </div>
