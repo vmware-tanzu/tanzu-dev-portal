@@ -23,10 +23,10 @@ tool. Instead, it focuses on _what_ to monitor.
 The sections below outline _conditions_ that platform operators must monitor when
 operating Kubernetes. For each condition, the guide provides the following:
 
-- _Threshold_: The magnitude that must be exceeded to generate an alert.
-- _Severity_: The severity of the condition, given the threshold is met.
-- _Metrics_: The available metrics to monitor.
-- _Notes_: Additional information applicable to the condition.
+- _Threshold:_ The magnitude that must be exceeded to generate an alert.
+- _Severity:_ The severity of the condition, given the threshold is met.
+- _Metrics:_ The available metrics to monitor.
+- _Notes:_ Additional information applicable to the condition.
 
 If the condition is true and above the given threshold, the monitoring system
 should generate an alert with the given severity.
@@ -39,17 +39,17 @@ point for their monitoring implementation.
 
 ### Member Down
 
-- _Threshold_: 3 minutes
-- _Severity_: Critical
-- _Notes_: A single member failure does not have a direct impact on the
+- _Threshold:_ 3 minutes
+- _Severity:_ Critical
+- _Notes:_ A single member failure does not have a direct impact on the
   Kubernetes cluster. However, it increases the risk of experiencing etcd quorum
   loss if additional members fail.  
 
 ### Majority of Members Down
 
-- _Threshold_: 3 minutes
-- _Severity_: Critical
-- _Notes_: When the majority of members are down, the cluster loses quorum and
+- _Threshold:_ 3 minutes
+- _Severity:_ Critical
+- _Notes:_ When the majority of members are down, the cluster loses quorum and
   cannot accept writes. Existing workloads on the Kubernetes cluster continue to
   function, but any operations that require writing to etcd are not possible.
   These operations include deploying new applications, scaling existing
@@ -57,29 +57,29 @@ point for their monitoring implementation.
 
 ### No Leader
 
-- _Threshold_: 1 minute
-- _Severity_: Critical
-- _Metrics_: `etcd_server_has_leader`
-- _Notes_: The cluster cannot accept writes without a leader. Existing workloads
+- _Threshold:_ 1 minute
+- _Severity:_ Critical
+- _Metrics:_ `etcd_server_has_leader`
+- _Notes:_ The cluster cannot accept writes without a leader. Existing workloads
   on the Kubernetes cluster continue to function, but any operations that
   require writing to etcd are not possible. These operations include deploying
   new applications, scaling existing workloads, adding new nodes, etc.
 
 ### Increased GRPC Request Failures
 
-- _Threshold_: >5% failure reate for 5 minutes 
-- _Severity_: Critical
-- _Metrics_: `grpc_server_handled_total`
-- _Notes_: An increase in the number of GRPC request failures can impact the
+- _Threshold:_ >5% failure reate for 5 minutes 
+- _Severity:_ Critical
+- _Metrics:_ `grpc_server_handled_total`
+- _Notes:_ An increase in the number of GRPC request failures can impact the
   operation of the Kubernetes cluster. The `--metrics` etcd command line flag
   must be set to `extensive` for etcd to generate request-related metrics.
 
 ### Slow GRPC Requests
 
-- _Threshold_: 99th percentile response time >150 milliseconds for 10 minutes
-- _Severity_: Critical
-- _Metrics_: `grpc_server_handling_seconds_bucket`
-- _Notes_: An increase in latency of GRPC requests can impact the operation of
+- _Threshold:_ 99th percentile response time >150 milliseconds for 10 minutes
+- _Severity:_ Critical
+- _Metrics:_ `grpc_server_handling_seconds_bucket`
+- _Notes:_ An increase in latency of GRPC requests can impact the operation of
   the Kubernetes cluster. The `--metrics` etcd command line flag must be set to
   `extensive` for etcd to generate latency-related metrics.
 
@@ -87,47 +87,46 @@ point for their monitoring implementation.
 
 ### API Server Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Notes_: The loss of a single API server does not have an immediate impact on
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Notes:_ The loss of a single API server does not have an immediate impact on
   the cluster’s operations. However, it increases the risk of a control plane
   outage if additional API servers fail.
 
 ### API Server Pod Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: Assumes the API server runs as a pod. A single API server pod that is
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Notes:_ Assumes the API server runs as a pod. A single API server pod that is
   not ready does not have an impact on the cluster’s operations. However, it
   increases the risk of a control plane outage if additional API servers fail.
 
 ### High Request Latency
 
-- _Threshold_: 99th percentile response time >4 seconds for 10 minutes
-- _Severity_: Critical
-- _Metrics_: `apiserver_request_duration_seconds_sum`,
+- _Threshold:_ 99th percentile response time >4 seconds for 10 minutes
+- _Severity:_ Critical
+- _Metrics:_ `apiserver_request_duration_seconds_sum`,
   `apiserver_request_duration_seconds_count`,
   `apiserver_request_duration_seconds_bucket`
-- _Notes_: An increase in the request latency can impact the operation of the
+- _Notes:_ An increase in the request latency can impact the operation of the
   Kubernetes cluster. This abnormal increase should be investigated and
   remediated.
 
 ### High Error Rate
 
-- _Threshold_: >3% failure rate for 10 minutes
-- _Severity_: Critical
-- _Metrics_: `apiserver_request_total`
-- _Notes_: An increase in the request error rate can impact the operation of the
+- _Threshold:_ >3% failure rate for 10 minutes
+- _Severity:_ Critical
+- _Metrics:_ `apiserver_request_total`
+- _Notes:_ An increase in the request error rate can impact the operation of the
   Kubernetes cluster. This abnormal increase should be investigated and
   remediated.
 
 ### Client Certificate Expiring
 
-- _Threshold_: Expiration within 24 hours
-- _Severity_: Critical
-- _Metrics_: `apiserver_client_certificate_expiration_seconds_count`
-- _Notes_:
+- _Threshold:_ Expiration within 24 hours
+- _Severity:_ Critical
+- _Metrics:_ `apiserver_client_certificate_expiration_seconds_count`
 
 ## Kubernetes Controller Manager
 
@@ -141,20 +140,20 @@ managers fail.
 
 ### Controller Manager Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
 
 ### Controller Manager Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Controller Manager Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## Kubernetes Scheduler
 
@@ -167,28 +166,28 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 ### Scheduler Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
 
 ### Scheduler Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Scheduler Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## Node
 
 ### Kubelet Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Notes_: If the kubelet is down, it is deemed not ready. Nodes that are not
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Notes:_ If the kubelet is down, it is deemed not ready. Nodes that are not
   ready cannot accept pods. The platform evicts Pods running on a not-ready Node
   if the Node remains in that condition for longer than the pod eviction
   timeout.
@@ -196,56 +195,56 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 ### Node Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Warning
-- _Metrics_: `kube_node_status_condition`
-- _Notes_: Nodes that are not ready cannot accept pods. The platform evicts Pods
+- _Threshold:_ 15 minutes
+- _Severity:_ Warning
+- _Metrics:_ `kube_node_status_condition`
+- _Notes:_ Nodes that are not ready cannot accept pods. The platform evicts Pods
   running on a not-ready Node if the Node remains in that condition for longer
   than the pod eviction timeout.
 
 
 ### Node Unreachable
 
-- _Threshold_: 15 minutes
-- _Severity_: Warning
-- _Metrics_: `kube_node_spec_taint` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: Nodes that are unreachable cannot accept pods. The platform evicts
+- _Threshold:_ 15 minutes
+- _Severity:_ Warning
+- _Metrics:_ `kube_node_spec_taint` (via [kube-state-metrics](#kube-state-metrics))
+- _Notes:_ Nodes that are unreachable cannot accept pods. The platform evicts
   Pods running on an unreachable Node if the Node remains in that condition for
   longer than the pod eviction timeout.
 
 
 ### Too Many Pods
 
-- _Threshold_: 95% pod count capacity
-- _Severity_: Warning
-- _Metrics_: `kubelet_running_pod_count`, `kube_node_status_capacity_pods`
+- _Threshold:_ 95% pod count capacity
+- _Severity:_ Warning
+- _Metrics:_ `kubelet_running_pod_count`, `kube_node_status_capacity_pods`
 
 ### File System Utilization
 
-- _Severity_: Critical
-- _Metrics_: `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via [kube-state-metrics](#kube-state-metrics))
+- _Severity:_ Critical
+- _Metrics:_ `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via [kube-state-metrics](#kube-state-metrics))
   kube-state-metrics), `node_filesystem_files_free` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Persistent Volume Usage
 
-- _Threshold_: <3% available
-- _Severity_: Critical
-- _Metrics_: `kubelet_volume_stats_available_bytes`, `kubelet_volume_stats_capacity_bytes`
+- _Threshold:_ <3% available
+- _Severity:_ Critical
+- _Metrics:_ `kubelet_volume_stats_available_bytes`, `kubelet_volume_stats_capacity_bytes`
 
 ### Clock Skew Detected
 
-- _Threshold_: Clock Skew >50 milliseconds
-- _Severity_: Critical
-- _Metrics_: `node_timex_offset_seconds` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: Kubernetes does not tolerate clock skew between nodes in the cluster.
+- _Threshold:_ Clock Skew >50 milliseconds
+- _Severity:_ Critical
+- _Metrics:_ `node_timex_offset_seconds` (via [kube-state-metrics](#kube-state-metrics))
+- _Notes:_ Kubernetes does not tolerate clock skew between nodes in the cluster.
 
 ### AppArmor Disabled
 
-- _Severity_: Critical
+- _Severity:_ Critical
 
 ### SELinux Disabled (for RHEL nodes)
 
-- _Severity_: Critical
+- _Severity:_ Critical
 
 ## Kube-proxy
 
@@ -258,20 +257,20 @@ communicate with other pods using Service IPs.
 
 ### kube-proxy Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
 
 ### kube-proxy Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### kube-proxy Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## kube-state-metrics
 
@@ -287,63 +286,63 @@ repository](https://github.com/kubernetes/kube-state-metrics).
 
 ### Pod Crash Looping
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total`
-- _Notes_: Pods stuck in a crash-loop for extended periods of time indicate an
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total`
+- _Notes:_ Pods stuck in a crash-loop for extended periods of time indicate an
   issue with the application.
 
 ### Pod Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase`
-- _Notes_: Pods stuck in the not-ready condition for extended periods of time
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase`
+- _Notes:_ Pods stuck in the not-ready condition for extended periods of time
   indicate an issue with the application.
 
 ### Deployment Rollout Stuck
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_deployment_spec_replicas`,
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_deployment_spec_replicas`,
   `kube_deployment_status_replicas_available` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: The number of ready pods of a given Deployment does not match the
+- _Notes:_ The number of ready pods of a given Deployment does not match the
   number of desired replicas.
 
 ### DaemonSet Rollout Stuck
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_daemonset_status_number_ready`,
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_daemonset_status_number_ready`,
   `kube_daemonset_status_desired_number_scheduled` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: The number of ready pods of a given DaemonSet does not match the
+- _Notes:_ The number of ready pods of a given DaemonSet does not match the
   number of nodes in the cluster.
 
 ### StatefulSet Rollout Stuck
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_statefulset_status_replicas_ready`,
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_statefulset_status_replicas_ready`,
   `kube_statefulset_status_replicas` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes_: The number of ready pods of a given StatefulSet does not match the
+- _Notes:_ The number of ready pods of a given StatefulSet does not match the
   number of desired replicas.
 
 ### Elevated List Errors
 
-- _Threshold_: >10% error rate for 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_state_metrics_list_total`
-- _Notes_: If kube-state-metrics is experiencing an elevated error rate in list
+- _Threshold:_ >10% error rate for 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_state_metrics_list_total`
+- _Notes:_ If kube-state-metrics is experiencing an elevated error rate in list
   operations, it will not be able to expose metrics about Kubernetes objects
   correctly.
 
 
 ### Elevated Watch Errors
 
-- _Threshold_: >10% error rate for 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_state_metrics_watch_total`
-- _Notes_: If kube-state-metrics is experiencing an elevated error rate in watch
+- _Threshold:_ >10% error rate for 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_state_metrics_watch_total`
+- _Notes:_ If kube-state-metrics is experiencing an elevated error rate in watch
   operations, it will not be able to expose metrics about Kubernetes objects
   correctly.
 
@@ -355,18 +354,18 @@ proper functioning of the Service resource in Kubernetes.
 
 ### CoreDNS is Down
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_:
-- _Notes_: When CoreDNS is down, applications are unable to use DNS for service
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_
+- _Notes:_ When CoreDNS is down, applications are unable to use DNS for service
   discovery.
 
 ### High Response Latency
 
-- _Threshold_: >20ms latency
-- _Severity_: Critical
-- _Metrics_: `coredns_dns_request_duration_seconds`
-- _Notes_: An increase in the response latency of DNS queries can impact
+- _Threshold:_ >20ms latency
+- _Severity:_ Critical
+- _Metrics:_ `coredns_dns_request_duration_seconds`
+- _Notes:_ An increase in the response latency of DNS queries can impact
   application performance. The increase in latency might indicate the need to
   scale out the CoreDNS deployment.
 
@@ -374,61 +373,61 @@ proper functioning of the Service resource in Kubernetes.
 
 ### Pod Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes_: Nodes with a not-ready CNI plugin are unable to start new pods.
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
+- _Notes:_ Nodes with a not-ready CNI plugin are unable to start new pods.
   Network connectivity of existing pods might also be impacted.
 
 ### Pod Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: kube_pod_container_status_restarts_total (via kube-state-metrics)
-- _Notes_: Nodes with a not-ready CNI plugin are unable to start new pods.
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ kube_pod_container_status_restarts_total (via kube-state-metrics)
+- _Notes:_ Nodes with a not-ready CNI plugin are unable to start new pods.
   Network connectivity of existing pods might also be impacted.
 
 ## Ingress Controller
 
 ### Pod Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes_: Applications exposed via the Ingress API are not accessible if
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
+- _Notes:_ Applications exposed via the Ingress API are not accessible if
   Ingress controller pods are unavailable.
 
 ### Pod Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via kube-state-metrics)
-- _Notes_: Applications exposed via the Ingress API are not accessible if
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Notes:_ Applications exposed via the Ingress API are not accessible if
   Ingress controller pods are unavailable.
 
 ### Count of Healthy Pods not equal to number of ingress nodes
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Notes_: Only applicable if deploying Ingress Controller as a DaemonSet that
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Notes:_ Only applicable if deploying Ingress Controller as a DaemonSet that
   selects specific nodes.
 
 ## Log Forwarder
 
 ### Pod Not Ready
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes_: Application and platform logs are not forwarded to the centralized
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
+- _Notes:_ Application and platform logs are not forwarded to the centralized
   logging system if the log forwarding pods are unavailable.
 
 ### Pod Crash Loop
 
-- _Threshold_: 15 minutes
-- _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via kube-state-metrics)
-- _Notes_: Application and platform logs are not forwarded to the centralized
+- _Threshold:_ 15 minutes
+- _Severity:_ Critical
+- _Metrics:_ `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Notes:_ Application and platform logs are not forwarded to the centralized
   logging system if the log forwarding pods are unavailable.
 
 ## Monitoring System
