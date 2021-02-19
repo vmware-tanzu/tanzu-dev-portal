@@ -29,7 +29,7 @@
     </div>
     <script>
         var upcomingEpisodes = document.querySelectorAll('div.upcoming');
-        upcomingEpisodes.forEach(function(value) {
+        upcomingEpisodes.forEach(function(value, i) {
             var epDate = (new Date(value.dataset.episodeDate)).getTime();
             var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
             
@@ -40,6 +40,8 @@
                 if (diffDays == 0) whenLive = "today";
                 console.log(diffDays);
                 value.nextElementSibling.innerHTML = "Live " + whenLive;
+                var elementPosition = value.parentNode 
+                value.parentNode.style.order = -1-i;
             }
             else {
                 value.nextElementSibling.style.display = 'none';
