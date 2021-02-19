@@ -97,7 +97,7 @@ point for their monitoring implementation.
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
+- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: Assumes the API server runs as a pod. A single API server pod that is
   not ready does not have an impact on the cluster’s operations. However, it
   increases the risk of a control plane outage if additional API servers fail.
@@ -148,13 +148,13 @@ managers fail.
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Controller Manager Not Ready
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
+- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## Kubernetes Scheduler
 
@@ -174,13 +174,13 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Scheduler Not Ready
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via kube-state-metrics)
+- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## Node
 
@@ -208,7 +208,7 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold_: 15 minutes
 - _Severity_: Warning
-- _Metrics_: `kube_node_spec_taint` (via kube-state-metrics)
+- _Metrics_: `kube_node_spec_taint` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: Nodes that are unreachable cannot accept pods. The platform evicts
   Pods running on an unreachable Node if the Node remains in that condition for
   longer than the pod eviction timeout.
@@ -223,8 +223,8 @@ the risk of losing scheduling functionality if additional schedulers fail.
 ### File System Utilization
 
 - _Severity_: Critical
-- _Metrics_: `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via
-  kube-state-metrics), `node_filesystem_files_free` (via node-exporter)
+- _Metrics_: `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via [kube-state-metrics](#kube-state-metrics))
+  kube-state-metrics), `node_filesystem_files_free` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Persistent Volume Usage
 
@@ -236,7 +236,7 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold_: Clock Skew >50 milliseconds
 - _Severity_: Critical
-- _Metrics_: `node_timex_offset_seconds` (via node-exporter)
+- _Metrics_: `node_timex_offset_seconds` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: Kubernetes does not tolerate clock skew between nodes in the cluster.
 
 ### AppArmor Disabled
@@ -265,13 +265,13 @@ communicate with other pods using Service IPs.
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics]) 
+- _Metrics_: `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
 
 ### kube-proxy Not Ready
 
 - _Threshold_: 15 minutes
 - _Severity_: Critical
-- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics])                    
+- _Metrics_: `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
 
 ## kube-state-metrics
 
@@ -306,7 +306,7 @@ repository](https://github.com/kubernetes/kube-state-metrics).
 - _Threshold_: 15 minutes
 - _Severity_: Critical
 - _Metrics_: `kube_deployment_spec_replicas`,
-  `kube_deployment_status_replicas_available` (via kube-state-metrics)
+  `kube_deployment_status_replicas_available` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: The number of ready pods of a given Deployment does not match the
   number of desired replicas.
 
@@ -315,7 +315,7 @@ repository](https://github.com/kubernetes/kube-state-metrics).
 - _Threshold_: 15 minutes
 - _Severity_: Critical
 - _Metrics_: `kube_daemonset_status_number_ready`,
-  `kube_daemonset_status_desired_number_scheduled` (via kube-state-metrics)
+  `kube_daemonset_status_desired_number_scheduled` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: The number of ready pods of a given DaemonSet does not match the
   number of nodes in the cluster.
 
@@ -324,7 +324,7 @@ repository](https://github.com/kubernetes/kube-state-metrics).
 - _Threshold_: 15 minutes
 - _Severity_: Critical
 - _Metrics_: `kube_statefulset_status_replicas_ready`,
-  `kube_statefulset_status_replicas` (via kube-state-metrics)
+  `kube_statefulset_status_replicas` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes_: The number of ready pods of a given StatefulSet does not match the
   number of desired replicas.
 
