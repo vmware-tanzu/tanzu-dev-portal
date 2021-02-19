@@ -190,7 +190,7 @@ will show the originally sent data from `kubectl`, meaning the dbuser and dbkey
 will be readable without decoding in the latter example. However, since
 `encoding` is not a security measure, we consider these equal.
 
-![Secret Default Behavior](/images/guides/kubernetes/platform-security/secret-default-behavior.png)
+![Secret Default Behavior](/images/guides/kubernetes/platform-security/diagrams/secret-default-behavior.png)
 
 ### Encryption at Rest (Static Key)
 
@@ -207,7 +207,7 @@ The Kubernetes API server supports encrypting secrets at rest. This is achieved
 by providing the Kubernetes API server with an encryption key, which it will use
 to encrypt all secret objects before sending them to etcd.
 
-![Encryption at rest](/images/guides/kubernetes/platform-security/secret-encryption-at-rest.png)
+![Encryption at rest](/images/guides/kubernetes/platform-security/diagrams/secret-encryption-at-rest.png)
 
 The supported encryption providers are
 
@@ -431,7 +431,7 @@ encrypted by a KEK, they can be stored with the data itself, preventing the
 `kube-apiserver` from needing to be aware of many keys. Architecturally, the
 flow of envelope encryption would look as follows.
 
-![Secret Encryption with KMS](/images/guides/kubernetes/platform-security/secret-encryption-at-rest-kms.png)
+![Secret Encryption with KMS](/images/guides/kubernetes/platform-security/diagrams/secret-encryption-at-rest-kms.png)
 
 There can be some variance in how the above works, based on a KMS provider, but
 generally this demonstrates how envelope encryption functions. There are
@@ -543,7 +543,7 @@ pointed at a `vault-agent-injector`. As pods are created, based on annotations,
 the vault-agent-injector adds an `initContainer` (used for retrieval of the
 initial secret) and a sidecar container to keep secrets updated, if needed.
 
-![Vault Agent Injection](/images/guides/kubernetes/platform-security/vault-agent-injection.png)
+![Vault Agent Injection](/images/guides/kubernetes/platform-security/diagrams/vault-agent-injection.png)
 
 To facilitate mutation via the `vault-agent-injector`, a
 `MutatingWebhookConfiguration` is added, as follows.
@@ -906,7 +906,7 @@ automatically by creating a proxy to the `sealed-secret-controller` via the
 kubeseal --fetch-cert
 ```
 
-![Sealed Secret Overview](/images/guides/kubernetes/platform-security/sealed-secret-overview.png)
+![Sealed Secret Overview](/images/guides/kubernetes/platform-security/diagrams/sealed-secret-overview.png)
 
 This cert can be stored locally or in alternative external locations if this
 flow is not realistic for all developer workstations.
@@ -973,7 +973,7 @@ subsequent section.
 
 Once applied, the flow and storage looks as follows.
 
-![Sealed Secret Flow](/images/guides/kubernetes/platform-security/sealed-secret-flow.png)
+![Sealed Secret Flow](/images/guides/kubernetes/platform-security/diagrams/sealed-secret-flow.png)
 
 The Secret object, made by the `sealed-secret-controller` is owned by its
 corresponding `SealedSecret` CRD.

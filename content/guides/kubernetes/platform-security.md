@@ -659,7 +659,7 @@ without modifying the API server, Kubernetes offers an Admission webook
 functionality. In this model, Kubernetes offers selected inbound request to an
 external service that can approve or deny the request.
 
-![Kubernetes Admission Flow](/images/guides/kubernetes/platform-security/k8s-admission-flow.png)
+![Kubernetes Admission Flow](/images/guides/kubernetes/platform-security/diagrams/k8s-admission-flow.png)
 
 Writing an admission webhook controller in code enables you to do complex logic
 and access Kubernetes objects structurally, through a language's type system.
@@ -690,7 +690,7 @@ object and the response is the same object with the
 [AdmissionResponse](https://godoc.org/k8s.io/api/admission/v1beta1#AdmissionResponse)
 filled in.
 
-![Admission Flow with OPA](/images/guides/kubernetes/platform-security/k8s-admission-flow-opa.png)
+![Admission Flow with OPA](/images/guides/kubernetes/platform-security/diagrams/k8s-admission-flow-opa.png)
 
 While this unified model is great, it can be harder to do complex logic in rego
 over a general purpose language.

@@ -141,7 +141,7 @@ stability of the cluster. By default, pods do not have resource limits and their
 consumption of resources is unbounded. This is problematic because a pod is free
 to consume all available resources on a node.
 
-![No limits or requests](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-1.png)
+![No limits or requests](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-1.png)
 **Figure 1: BestEffort pod (no limits or requests)**
 
 #### Quality-of-Service
@@ -160,7 +160,7 @@ pod with a QoS of BestEffort. The green bar represents utilization and the
 dotted line indicates it is a variable quantity. In this case, utilization is
 unbounded and free to consume all available CPU and memory.
 
-![Best Effort Pod](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-2.png)
+![Best Effort Pod](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-2.png)
 **Figure 2: Two replicas of a BestEffort pod**
 
 #### Compressible vs. Incompressible Resources
@@ -208,7 +208,7 @@ and node daemons could potentially crash Docker and all other containers on the
 node. This setting is configurable and discussed later in the
 [Live Restore](#live-restore) section.
 
-![Pod with limit](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-3.png)
+![Pod with limit](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-3.png)
 **Figure 3: Pod with limit**
 
 #### Resource Limits
@@ -266,7 +266,7 @@ function and allow the scheduler to optimize utilization.
 
 #### Burstable Pods
 
-![Burstable Pod](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-4.png)
+![Burstable Pod](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-4.png)
 **Figure 4: Burstable pod (request < limit)**
 
 A pod with a QoS of _burstable_ has at least a resource request assigned to it.
@@ -277,7 +277,7 @@ indicated by having requests and limits specified and the request lower than the
 limit. The darker shade of green indicates the amount of resource that is
 indicated by the request.
 
-![Scheduler Node](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-5.png)
+![Scheduler Node](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-5.png)
 **Figure 5: Node from scheduler’s point-of-view**
 
 The Kubernetes scheduler considers resource requests when evaluating whether a
@@ -306,7 +306,7 @@ amount of overcommit depends on your application requirements.
 A QoS of _guaranteed_ is assigned to pods where the request is equal to the
 limit.
 
-![Guaranteed Pods](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-6.png)
+![Guaranteed Pods](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-6.png)
 **Figure 6: Two replicas of Pod A scheduled across two nodes**
 
 Figure 6 shows two replicas of Pod A across two nodes, each pod with a QoS of
@@ -330,7 +330,7 @@ highly-utilized.
 
 #### Pod Eviction Order
 
-![Node under memory pressure](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-7.png)
+![Node under memory pressure](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-7.png)
 **Figure 7: Node under memory pressure**
 
 Figure 7 shows a node with multiple pods (all of varying QoS classifications)
@@ -403,13 +403,13 @@ of concern.
 The following example is an illustration of the example given in the Kubernetes
 [documentation](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pdb-example).
 
-![Cluster prior to draining](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-8.png)
+![Cluster prior to draining](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-8.png)
 **Figure 8: Cluster prior to node draining**
 
 Figure 8 shows a 3-node cluster with its respective Deployment and PDB objects.
 There is also an unrelated pod, Pod X, deployed to node 1.
 
-![Cluster during draining](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-9.png)
+![Cluster during draining](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-9.png)
 **Figure 9: Cluster during node draining with pods rescheduled**
 
 When a voluntary disruption occurs, such as a cluster manager draining a node in
@@ -419,14 +419,14 @@ operation. Figure 9 shows the state of a cluster during a node draining
 operation that was allowed by Kubernetes because the deployment’s PDB would not
 have been violated.
 
-![Cordoned Node](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-10.png)
+![Cordoned Node](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-10.png)
 **Figure 10: Cluster with node cordoned and rescheduled pods running**
 
 Once a node is drained, its state is considered to be “cordoned”. Figure 10
 shows the Kubernetes cluster after a node is successfully cordoned and its pods
 have been rescheduled.
 
-![Cordoned Node](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-11.png)
+![Cordoned Node](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-11.png)
 **Figure 11: Cluster with node cordoned and rescheduled pods running**
 
 As mentioned earlier, if a voluntary disruption is attempted on a cluster that
@@ -532,7 +532,7 @@ is one in which a grace period must pass before kubelet begins to evict pods.
 
 #### Visualizing Eviction Thresholds
 
-![Unbound Utilization](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-12.png)
+![Unbound Utilization](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-12.png)
 **Figure 12: Unbounded utilization of workloads and daemons**
 
 A node’s resources are consumed by Kubernetes workloads or by system daemons.
@@ -540,7 +540,7 @@ Figure 12 illustrates this concept by showing workload and daemon utilization
 increasing from left-to-right. A fully utilized resource would be indicated by
 these two bars filling the rectangle.
 
-![Eviction Thresholds](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-10.png)
+![Eviction Thresholds](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-13.png)
 **Figure 13: Node with eviction thresholds shown**
 
 Figure 13 shows a node’s memory resources with default eviction threshold. Note
@@ -582,15 +582,15 @@ reserves compute resources for Kubernetes-related daemons and _[system
 reserved](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/#system-reserved)_
 reserves compute resources for other daemons.
 
-![Kube Reserved](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-15.png)
+![Kube Reserved](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-15.png)
 **Figure 15: Node with eviction threshold, kube, and system reserved**
 
 ### Node Allocatable Constraints
 
-![CPU Constraints](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-16a.png)
+![CPU Constraints](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-16a.png)
 **Figure 16a: Node CPU with Node Allocatable and Node Allocatable Constraints highlighted**
 
-![Memory and Storage Constraints](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-16b.png)
+![Memory and Storage Constraints](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-16b.png)
 **Figure 16b: Node Memory & Ephemeral Storage with Node Allocatable and Node Allocatable Constraints highlighted**
 
 _Node allocatable constraints_ are what eviction thresholds, kube reserved and
@@ -638,7 +638,7 @@ cause instability on a node. Kubernetes’ default housekeeping interval is 10
 seconds, but VMware recommends cluster managers adjust this parameter if they
 know their workloads can rapidly increase in memory consumption.
 
-![Increased memory consumption](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-17.png)
+![Increased memory consumption](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-17.png)
 **Figure 17: Linear increase in memory consumption with default housekeeping interval (10 seconds)**
 
 The risk posed by the default housekeeping interval is illustrated in Figure 17.
@@ -648,7 +648,7 @@ example, eviction thresholds would not be triggered until the moment utilization
 hit 100%, which may be too late to mitigate the risk posed by out-of-memory
 handling.
 
-![Memory Spike](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-18.png)
+![Memory Spike](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-18.png)
 **Figure 18: Spike in memory consumption with default housekeeping interval (10 seconds)**
 
 The worst-case scenario is for memory to become fully utilized for some amount
@@ -656,7 +656,7 @@ of time before the utilization captured by the kubelet is updated to reflect
 this. Figure 18 shows this scenario with the actual utilization at 100% for 5
 seconds before the kubelet notices.
 
-![Memory Spike](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-19.png)
+![Memory Spike](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-19.png)
 **Figure 19: Spike in memory consumption with default housekeeping interval of 10 seconds**
 
 For deployments that consume memory rapidly and are at risk of the situation
@@ -674,7 +674,7 @@ given node.
 
 #### Before: Unpredictable Failover
 
-![Default Settings](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-20.png)
+![Default Settings](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-20.png)
 **Figure 20: Kubernetes cluster default settings**
 
 Figure 20 shows a cluster that has not been configured beyond the default
@@ -685,7 +685,7 @@ accomodate a node failure.
 
 #### After: Predictable Failover
 
-![With Node Allocatable Constraints](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-21.png)
+![With Node Allocatable Constraints](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-21.png)
 **Figure 21: Kubernetes cluster with Node Allocatable Constraints configured**
 
 On the other hand, a cluster with bounded resource consumption makes this task
@@ -710,7 +710,7 @@ allows us to be proactive in reasoning about different failure scenarios.
 
 ##### Estimate Function
 
-![Maximum Node Utilization](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-22.png)
+![Maximum Node Utilization](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-22.png)
 **Figure 22: Simple function for maximum utilization of nodes while allowing for 1 failure, where _n_ represents the number of nodes in a cluster**
 
 A simple version of calculating this value is shown in Figure 22, with sample
@@ -737,7 +737,7 @@ taking into account the number of node failures, _f_, and node allocatable
 constraints (summed up across all nodes), _c_. Table 3 shows example input and
 output for this function.
 
-![Maximum Node Utilization](/images/guides/kubernetes/workload-tenancy/cluster-tuning-figure-23.png)
+![Maximum Node Utilization](/images/guides/kubernetes/workload-tenancy/diagrams/cluster-tuning-figure-23.png)
 **Figure 23: Full function for maximum utilization of nodes while accounting for an arbitrary number of node failures (f) and node allocatable constraints.**
 
 {{< table "table" >}}

@@ -32,7 +32,7 @@ When objects are applied to the Kubernetes API server they go through a series
 of steps before being committed to etcd (the persistent datastore). The whole
 flow is illustrated below.
 
-![Admission Control Architecture](/images/guides/kubernetes/platform-security/admission-control-ra-architecture.png)
+![Admission Control Architecture](/images/guides/kubernetes/platform-security/diagrams/admission-control-ra-architecture.png)
 
 There are many admission controllers that are built in to Kubernetes to provide
 common functionality. These include:

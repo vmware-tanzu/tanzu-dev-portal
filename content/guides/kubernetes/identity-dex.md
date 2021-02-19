@@ -27,7 +27,7 @@ providers through "connectors."
 
 ## Configuration
 
-![dex-gangway-setup](/images/guides/kubernetes/identity/dex-setup-01.png)
+![dex-gangway-setup](/images/guides/kubernetes/identity/diagrams/dex-setup-01.png)
 **Figure 1: Dex - Gangway Identity Federation**
 
 Assuming you have either Active Directory or IDP server that provide centralized
@@ -37,7 +37,7 @@ Dex and Gangway and will be explained further in the following sections
 
 ### Dex and Gangway
 
-![dex-gangway-setup](/images/guides/kubernetes/identity/dex-setup-02.png)
+![dex-gangway-setup](/images/guides/kubernetes/identity/diagrams/dex-setup-02.png)
 **Figure 2: Dex - Gangway Configuration**
 
 Dex provide common OIDC endpoints for multiple Identity providers. To configure
@@ -168,7 +168,7 @@ data:
 
 ### Identity Federation
 
-![dex-federation](/images/guides/kubernetes/identity/dex-setup-03.png)
+![dex-federation](/images/guides/kubernetes/identity/diagrams/dex-setup-03.png)
 **Figure 3: Dex - Identity Federation**
 
 Dex acts as a portal to other identity providers through `connectors`. This

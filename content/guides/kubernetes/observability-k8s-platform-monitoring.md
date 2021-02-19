@@ -17,7 +17,7 @@ and monitoring to resident applications . This document represents how the
 VMware field team approaches monitoring in large enterprise Kubernetes
 environments.
 
-![Platform Monitoring Diagram](/images/guides/kubernetes/observability/platform-monitoring.svg)
+![Platform Monitoring Diagram](/images/guides/kubernetes/observability/diagrams/platform-monitoring.svg)
 
 ## Tooling
 
@@ -330,7 +330,7 @@ API](https://github.com/kubernetes/community/blob/master/contributors/design-pro
 which can be leveraged to automatically scale application deployments in
 real-time. This is highly flexible and also evolving.
 
-![App Platform Monitoring Diagram](/images/guides/kubernetes/observability/platform-monitoring-app.svg)
+![App Platform Monitoring Diagram](/images/guides/kubernetes/observability/diagrams/platform-monitoring-app.svg)
 
 The Custom Metrics API is a framework for exposing arbitrary metrics as
 Kubernetes API metrics. It allows them to appear via

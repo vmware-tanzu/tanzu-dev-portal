@@ -66,7 +66,7 @@ Kubernetes API, such as the Ingress and HTTPProxy resources. The data plane is a
 collection of Envoy proxies that use contour as their management server. The
 following diagram shows a high-level overview of a typical Contour's deployment.
 
-![Contour Architecture](/images/guides/kubernetes/service-routing/contour-high-level-architecture.drawio.png)
+![Contour Architecture](/images/guides/kubernetes/service-routing/diagrams/contour-high-level-architecture.drawio.png)
 
 When Envoy starts up, it connects to contour and opens a persistent gRPC stream.
 Using this stream, contour configures Envoy according to the Ingress and
@@ -129,7 +129,7 @@ spec:
 
 The following diagrams shows the flow of the request:
 
-![HTTP Ingress](/images/guides/kubernetes/service-routing/contour-ingress-patterns-http.drawio.png)
+![HTTP Ingress](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-http.drawio.png)
 
 ### Exposing applications with TLS (HTTPS)
 
@@ -162,14 +162,14 @@ spec:
 
 The following diagram shows the request flow:
 
-![HTTPS Ingress](/images/guides/kubernetes/service-routing/contour-ingress-patterns-https.drawio.png)
+![HTTPS Ingress](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-https.drawio.png)
 
 When TLS is enabled, Envoy redirects HTTP clients to the HTTPS endpoint. The
 redirect is enabled by default when using TLS, but it can be disabled on
 specific routes by setting `permitInsecure: true`. The following diagram shows
 the redirect to the secure endpoint:
 
-![HTTPS Ingress with redirect](/images/guides/kubernetes/service-routing/contour-ingress-patterns-https-redirect.drawio.png)
+![HTTPS Ingress with redirect](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-https-redirect.drawio.png)
 
 ### TLS connection to an HTTP backend
 
@@ -202,7 +202,7 @@ spec:
 
 The following diagram shows the connections given the above configuration:
 
-![HTTPS Ingress with TLS to backend](/diagrams/contour-ingress-patterns-https-to-backend.drawio.png)
+![HTTPS Ingress with TLS to backend](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-https-to-backend.drawio.png)
 
 By default, Envoy **does not** validate the backend's serving certificate. To
 enable validation, you must specify a `caSecret` and `subjectName` in the
@@ -289,7 +289,7 @@ spec:
         port: 8080
 ```
 
-![TCP Proxy with TLS passthrough](/images/guides/kubernetes/service-routing/contour-ingress-patterns-tcp-proxying-passthrough.drawio.png)
+![TCP Proxy with TLS passthrough](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-tcp-proxying-passthrough.drawio.png)
 
 ## Deployment architecture
 
@@ -457,7 +457,7 @@ Service), set the `externalTrafficPolicy` to `Local`. The `Local` policy ensures
 that incoming traffic is routed to the Envoy instance running on the local node
 instead of adding an extra hop to another node.
 
-![Envoy Binding Host Port](/images/guides/kubernetes/service-routing/contour-envoy-host-port.drawio.png)
+![Envoy Binding Host Port](/images/guides/kubernetes/service-routing/diagrams/contour-envoy-host-port.drawio.png)
 
 ### DaemonSet versus Deployment
 

@@ -15,7 +15,7 @@ scheduled alongside other pods on the same hosts. Kubernetes has features that
 provide the illusion of workload boundaries such as namespaces. However, odds
 are pods in different namespaces will run together on the same host.
 
-![Worker Tenancy](/images/guides/kubernetes/workload-tenancy/k8s-workers-tenancy.png)
+![Worker Tenancy](/images/guides/kubernetes/workload-tenancy/diagrams/k8s-workers-tenancy.png)
 
 With multiple tenants running on hosts, there are several concerns to account
 for.
@@ -77,11 +77,13 @@ comes under contention, CPU may be throttled to only what was requested.
 Based on what is configured above, pods automatically get marked with a specific
 quality of service.
 
+{{< table "table" >}}
 | QoS  | Condition  | Description  |  
 |---|---|---|
 | Best Effort | No request or limit set | Pod is scheduled and uses any available resources to the host.  |  
 | Guaranteed | Limits == Requests  | The amount of resources a pod is scheduled for equals what its able to consume on the host. If the host comes under contention, the pod could be throttled or killed.  |
 | Burstable | Limits > Requests  | A pod can "burst" beyond its resource request but not above its limit. If the host comes under contention, the pod could be throttled or killed. |
+{{</ table >}}
 
 ## Popular Tooling and Approaches
 

@@ -46,7 +46,7 @@ administrators to install Calico with `kubectl apply -f ${CALICO_MANIFESTS}.yaml
 infrastructure. In this reference architecture, there are a multitude of
 components.
 
-![Calico Components](/images/guides/kubernetes/container-networking/calico-components.png)
+![Calico Components](/images/guides/kubernetes/container-networking/diagrams/calico-components.png)
 
 Here are some details and functionalities of each of the core components:
 
@@ -68,7 +68,7 @@ runs 2 processes, [Felix](https://github.com/projectcalico/felix) and
 [BIRD](https://github.com/projectcalico/bird), which are shown in the diagram
 below:
 
-![Calico Node](/images/guides/kubernetes/container-networking/calico-node.png)
+![Calico Node](/images/guides/kubernetes/container-networking/diagrams/calico-node.png)
 
 [Felix](https://github.com/projectcalico/felix) is responsible for programming
 the host to satisfy pod routes and network policy. To do this, it interacts with
@@ -102,7 +102,7 @@ controllers inside of it, watching changes in the following:
   [profiles](https://docs.projectcalico.org/v3.9/reference/resources/profile))
 - Nodes (used to determine the associated subnet and inform the routing topology)
 
-![Calico kube-controller](/images/guides/kubernetes/container-networking/calico-kube-controller.png)
+![Calico kube-controller](/images/guides/kubernetes/container-networking/diagrams/calico-kube-controller.png)
 
 Based on changes seen by the controllers, Calico can update its datastore, which
 will eventually be seen and enforced in each calico-node.
@@ -118,7 +118,7 @@ thousands of instances. This creates scaling issues in a cluster with more than
 gets around this by being an intermediary between the API server and all
 instances of calico-node.
 
-![Typha](/images/guides/kubernetes/container-networking/typha.png)
+![Typha](/images/guides/kubernetes/container-networking/diagrams/typha.png)
 
 For brevity, only 8 hosts are displayed above. However, it's important to
 consider this model at scale as connecting each calico-node to the datastore
@@ -203,7 +203,7 @@ In almost all cases, it's preferable to use the Kubernetes datastore instead of
 etcd. In this model, all persisted data used by Calico is stored through the
 Kubernetes API server as custom resource definitions (CRDs).
 
-![Calico Datastore](/images/guides/kubernetes/container-networking/calico-datastore-k8s.png)
+![Calico Datastore](/images/guides/kubernetes/container-networking/diagrams/calico-datastore-k8s.png)
 
 Support for a Kubernetes backend was introduced after the etcd backend. For some
 time after its release, it did not offer the same features as the etcd backend.
@@ -360,7 +360,7 @@ troubleshooting simpler as analyzing network traffic does not involve looking
 inside a packet for another packet. When running in this mode, the packet
 structure looks as shown in the diagram below:
 
-![Calico Native Packet](/images/guides/kubernetes/container-networking/calico-native-packet.png)
+![Calico Native Packet](/images/guides/kubernetes/container-networking/diagrams/calico-native-packet.png)
 
 The interface data path is simplified in this diagram to keep the focus on the
 packet in transit. Additionally, Calico will prefer the NIC of the default
@@ -400,7 +400,7 @@ does work in most environments without modification, especially in environments
 that cross multiple subnets. When running in this mode, the packet structure
 looks as shown in the diagram below:
 
-![Calico IP-in-IP](/images/guides/kubernetes/container-networking/calico-ip-in-ip-packet.png)
+![Calico IP-in-IP](/images/guides/kubernetes/container-networking/diagrams/calico-ip-in-ip-packet.png)
 
 Note the ethernet frame destination is set to the `$GATEWAY`, this could be
 targeting a node's mac address or a router depending on whether the request is
@@ -428,7 +428,7 @@ VXLAN mode **does not** require BGP, which is ideal for environments where BGP
 peering is blocked. When running in this mode, the packet structure looks as
 shown in the diagram below:
 
-![Calico VXLAN Packet](/images/guides/kubernetes/container-networking/calico-vxlan-packet.png)
+![Calico VXLAN Packet](/images/guides/kubernetes/container-networking/diagrams/calico-vxlan-packet.png)
 
 Note the outer ethernet frame destination is set to the `$GATEWAY`, this could
 be targeting a node's mac address or a router depending on whether the request
@@ -451,7 +451,7 @@ pods in their IP headers. If for any reason, networks or hosts cannot allow this
 type of configuration, you'll need to look into a full IP-in-IP configuration
 instead.
 
-![Calico Single Subnet](/images/guides/kubernetes/container-networking/calico-single-subnet.png)
+![Calico Single Subnet](/images/guides/kubernetes/container-networking/diagrams/calico-single-subnet.png)
 
 To enable this mode, the IPPools in the cluster must have `ipipMode` and
 `vxlanMode` set to `Never`. This should be done during deployment of Calico, but
@@ -507,7 +507,7 @@ With this setting enabled, native routing is used for all intra-subnet
 communication and IP-in-IP (encapsulation) is used when crossing the subnet
 boundary as illustrated in the diagram below:
 
-![Calico Multi Subnet](/images/guides/kubernetes/container-networking/calico-multi-subnet.png)
+![Calico Multi Subnet](/images/guides/kubernetes/container-networking/diagrams/calico-multi-subnet.png)
 
 In our experience, the majority of clusters span subnets. Thus, this is the most
 common recommended topology.
@@ -705,7 +705,7 @@ able to peer with. By default, Calico requires no BGP-capable routers to be
 deployed. Instead it runs a routing daemon (BIRD) in each node, creating a BGP
 mesh.
 
-![Calico BGP](/images/guides/kubernetes/container-networking/calico-bgp.png)
+![Calico BGP](/images/guides/kubernetes/container-networking/diagrams/calico-bgp.png)
 
 Each colored line represents a peering relationship. This model is referred to
 as a node-to-node mesh, as it does not centralize route distribution. Using
@@ -757,7 +757,7 @@ of reflectors deployed. For clusters exceeding 50 nodes and potentially growing
 far beyond that, this topology is recommended. Once applied, the route sharing
 model looks as shown in the diagram below:
 
-![Calico Route Reflector](/images/guides/kubernetes/container-networking/calico-route-reflector.png)
+![Calico Route Reflector](/images/guides/kubernetes/container-networking/diagrams/calico-route-reflector.png)
 
 This model is referred to as global reflection because nodes peer to all route
 reflectors made available to the cluster. This is an ideal model for most
@@ -864,7 +864,7 @@ Most commonly setup with top of rack (ToR) switches. Each grouping of reflected
 routes typically represent a separate network AS as illustrated in the diagram
 below:
 
-![Calico Route Reflection (TOR)](/images/guides/kubernetes/container-networking/calico-route-reflection-tor.png)
+![Calico Route Reflection (TOR)](/images/guides/kubernetes/container-networking/diagrams/calico-route-reflection-tor.png)
 
 To configure the above model, each node should be labeled with an identifier
 representing the part of the network it runs in.
@@ -956,7 +956,7 @@ detail. However, for routable pods, global or node-specific peering is
 acceptable. The key is to peer with a ToR that propagates routes to the larger
 network as illustrated in the diagram below:
 
-![Calico Routable Pods](/images/guides/kubernetes/container-networking/calico-routable-pods.png)
+![Calico Routable Pods](/images/guides/kubernetes/container-networking/diagrams/calico-routable-pods.png)
 
 An example peering configuration to accomplish the above is as follows:
 
@@ -982,7 +982,7 @@ unrealistic. In these cases, additional `IPPool`(s) can be introduced to target
 a smaller routable space. With another `IPPool`, the topology may look as
 follows:
 
-![Calico Routable Pods (Extra Pool)](/images/guides/kubernetes/container-networking/calico-routable-pods-extra-pool.png)
+![Calico Routable Pods (Extra Pool)](/images/guides/kubernetes/container-networking/diagrams/calico-routable-pods-extra-pool.png)
 
 This topology makes deployment, management, and networking more complex than
 usual. If routable pods are a use case, it's worth considering running a

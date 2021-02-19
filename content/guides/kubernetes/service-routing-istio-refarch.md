@@ -38,7 +38,7 @@ Istio implementation brings it's own challenges, for example:
 This document helps you to understand the concept and details the reference
 architecture implementation.
 
-![Inter service mesh communication](/images/guides/kubernetes/service-routing/istio-introduction.png)
+![Inter service mesh communication](/images/guides/kubernetes/service-routing/diagrams/istio-introduction.png)
 
 Some salient features of the implementation are as follows.
 
@@ -57,7 +57,7 @@ Some salient features of the implementation are as follows.
 
 ## Installation
 
-![Istio Architecture](/images/guides/kubernetes/service-routing/istio-install-arch.png)
+![Istio Architecture](/images/guides/kubernetes/service-routing/diagrams/istio-install-arch.png)
 
 Istio installation refers to Istio control plane installation, which consists of
 following component (pods).
@@ -94,7 +94,7 @@ the same networking functionality but without requiring Istio users to enable
 elevated privileges.
 
 ![istio-init vs istio-cni IPTABLES rules configuration
-](/images/guides/kubernetes/service-routing/istio-cniandnoncni.png)
+](/images/guides/kubernetes/service-routing/diagrams/istio-cniandnoncni.png)
 
 The istio-cni is installed as daemonset in the kube-system namespace. The
 rationale behind using kube-system namespace over istio-system is that istio-cni

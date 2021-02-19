@@ -110,7 +110,7 @@ _**This section assumes you have a Kubernetes cluster running Calico 3.2+**_.
 Start by creating the resources and network paths shown in the diagram below.
 For now, all traffic will be allowed.
 
-![Allow All Traffic](/images/guides/kubernetes/container-networking/netpol-example-allowed.png)
+![Allow All Traffic](/images/guides/kubernetes/container-networking/diagrams/netpol-example-allowed.png)
 
 1. Download `calicoctl`.
 
@@ -745,7 +745,7 @@ would typically be handled by an administrator or automation that ensures proper
 labels are attached to namespaces when teams are on boarded. After labels are
 added, the network should behave as diagrammed below.
 
-![Network Policy Denied](/images/guides/kubernetes/container-networking/netpol-example-denied.png)
+![Network Policy Denied](/images/guides/kubernetes/container-networking/diagrams/netpol-example-denied.png)
 
 1. Add `netpol_deny_all` labels to namespaces.
 
@@ -851,7 +851,7 @@ going forward when a namespace is created for them. In order for team-a to allow
 specific traffic, they must add `NetworkPolicy`. The diagram below demonstrates
 the desired network access.
 
-![Network Policy Restricted](/images/guides/kubernetes/container-networking/netpol-example-restricted.png)
+![Network Policy Restricted](/images/guides/kubernetes/container-networking/diagrams/netpol-example-restricted.png)
 
 1. Create a lorem network policy manifest
 

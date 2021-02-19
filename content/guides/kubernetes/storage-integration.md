@@ -26,7 +26,7 @@ persistence. Integration to providers is typically accomplished through a
 container storage interface (CSI) plugin. The following demonstrates the
 relationship.
 
-![Dynamic Storage Provisioning](/images/guides/kubernetes/storage-integration/dynamic-storage-provisioning.png)
+![Dynamic Storage Provisioning](/images/guides/kubernetes/storage-integration/diagrams/dynamic-storage-provisioning.png)
 
 There is high variance in how the above works based on the provider. Some
 providers create multiple PVs ahead of time and make them available to workloads.
@@ -69,7 +69,7 @@ With this model, every Kubernetes cluster has cloud provider logic in it, even
 if it wasn't activated. In a cluster integrated with vCenter, the
 kube-apiserver, controller-manager, and kubelet will look as follows.
 
-![In-tree provider](/images/guides/kubernetes/storage-integration/in-tree-provider.png)
+![In-tree provider](/images/guides/kubernetes/storage-integration/diagrams/in-tree-provider.png)
 
 As you can imagine, shipping these components with cloud-provider logic for
 every cut of Kubernetes is not a good model. Additionally, the in-tree model
@@ -96,7 +96,7 @@ CCM to function correctly. In the case of vSphere, you install 3 components.
 With these components installed, a 4 node Kubernetes cluster (assuming 1 master)
 would look as follows.
 
-![Out-of-tree provider](/images/guides/kubernetes/storage-integration/out-of-tree-provider-and-csi.png)
+![Out-of-tree provider](/images/guides/kubernetes/storage-integration/diagrams/out-of-tree-provider-and-csi.png)
 
 ### Dedicated Storage Integrations
 

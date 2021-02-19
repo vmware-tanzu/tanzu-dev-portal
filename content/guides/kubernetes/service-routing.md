@@ -55,7 +55,7 @@ selectively expose it on an alternate port (in this case, 3307).
 Each of the Service types build on the previous type, beginning with ClusterIP
 as the most basic type.
 
-![Service Routing](/images/guides/kubernetes/service-routing/service-routing.png)
+![Service Routing](/images/guides/kubernetes/service-routing/diagrams/service-routing.png)
 
 ### ClusterIP
 
@@ -170,7 +170,7 @@ down (again, these are determined by label selectors), the Ingress controller
 will, in turn, add or remove the Pod's IP from the pool of upstream Endpoints.
 Endpoints for a Service may be queried with the `kubectl get endpoints` command.
 
-![Service Routing Ingress](/images/guides/kubernetes/service-routing/service-routing-ingress.png)
+![Service Routing Ingress](/images/guides/kubernetes/service-routing/diagrams/service-routing-ingress.png)
 
 Some proxies, however, also provide functionality above and beyond what would be
 considered a common feature set. In this case, custom features may be
