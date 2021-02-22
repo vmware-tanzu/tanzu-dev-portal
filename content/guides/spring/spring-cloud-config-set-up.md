@@ -2,6 +2,7 @@
 title:  "Setting Up Spring Cloud Config Server"
 linkTitle: Spring Cloud Config Server
 subsection: Spring Cloud Config Server
+weight: 4
 topics:
 - Spring
 - Microservices
