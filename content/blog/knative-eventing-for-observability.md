@@ -19,9 +19,7 @@ team:
   - Tyler Britten
 ---
 
-{{< youtube id="9lBaKKe-59E" class="youtube-video-shortcode" >}}
-<div align="center"><i><a href="https://www.youtube.com/watch?v=9lBaKKe-59E&feature=youtu.be">Watch Tyler Walk through these steps on Tanzu.TV.</a></i></div>
-
+If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it–deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?
 
 If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it—deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?
 
@@ -319,7 +317,7 @@ So to use this app, we need a secret with the configuration necessary for our ev
 
 #### Sample App and HPA Secret
 
-The first thing we need to do is create the secret with the necessary configuration. (There are some sample ones in the repo.) We’re going to use WaveFront as our destination:
+The first thing we need to do is create the secret with the necessary configuration. (There are some sample ones in the repo.) We’re going to use [VMware Tanzu Observability by Wavefront](https://tanzu.vmware.com/observability) as our destination:
 
 ```yaml
 apiVersion: v1
@@ -449,8 +447,9 @@ $ while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done
 
 This will trigger events to our URL:
 
-![Wavefront Event Screenshot](/images/blogs/using-knative-eventing-for-better-observability/wavefront_event_knative.png)
+![WaveFront Event Screenshot](/images/blogs/using-knative-eventing-for-better-observability/wavefront_event_knative.png)
 
 Now we have events marking these scaling occurrences on our application’s performance charts.
 
-This is just one use case for Knative eventing with the Kubernetes API Source, but you can imagine the possibilities enabled by this very customizable, pluggable framework. We didn’t even need to deploy the Knative serving component to do it!
+This is just one use case for Knative eventing with the Kubernetes API Source, but you can imagine the possibilities enabled by this very customizable, pluggable framework. We didn’t even need to deploy the Knative serving component to do it! If you want to see me go through these steps in more detail, and also walk through how the HPA-Sender works, watch this episode of Tanzu.TV: 
+{{< youtube id="9lBaKKe-59E" class="youtube-video-shortcode" >}}
