@@ -1,7 +1,6 @@
 ---
 title:  "Getting Started with Contour - To Ingress and Beyond"
-linkTitle: "Getting Started with Contour - To Ingress and Beyond"
-parent: Contour to Ingress and Beyond
+linkTitle: "Contour to Ingress and Beyond"
 weight: 2
 topics:
 - Kubernetes
