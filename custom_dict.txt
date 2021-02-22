@@ -156,6 +156,7 @@ parallelizing
 passcode|PASSCODE
 Petstore
 pickab(le|ility)?
+pluggable
 precompiled
 performant
 prefilled
@@ -189,6 +190,7 @@ SaaS-based
 [S,s]calable
 screencaster
 seaborn
+secretname
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -261,6 +263,7 @@ Astra
 AutoBuild
 AutoDeploy
 autosave
+autoscaler(s)?
 Autowired
 base64(-encoded)?
 BatchScheduler
@@ -327,6 +330,8 @@ gotchas
 Gunicorn
 H2
 [H,h]elmfiles?
+HPA(s)?
+(HPA|hpa)-(S|s)ender
 Homebrew
 HSQLDB
 Httpie|HTTPie
@@ -419,6 +424,7 @@ OpenShift
 OpenSSL
 Paketo
 Packer
+php-apache
 passwd
 plaintext
 [P,p]ostgres
