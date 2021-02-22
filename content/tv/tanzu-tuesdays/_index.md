@@ -4,6 +4,7 @@ type: "tv-show"
 streaming: "twitch"
 id: "tanzu-tuesdays"
 image: "/images/tv/shows/tanzu-tuesdays.png"
+og_image: "/images/og/TanzuTV-Tuesdays.png"
 weight: 1
 # Text that appears on show index page under show name
 description: See live demos of modern application development technologies.

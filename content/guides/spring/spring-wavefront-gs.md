@@ -1,7 +1,7 @@
 ---
-title:  "Wavefront for Spring Boot: Getting Started"
-sortTitle: "Wavefront for Spring Boot: Getting Started"
-weight: 2
+title:  "Getting Started with Wavefront for Spring Boot"
+linkTitle: "Wavefront for Spring Boot"
+parent: "Spring Boot"
 topics:
 - Spring
 tags:
@@ -60,12 +60,12 @@ Add these two dependencies to your `pom.xml` file:
 <dependency>
     <groupId>com.wavefront</groupId>
     <artifactId>wavefront-spring-boot-starter</artifactId>
-    <version>2.0.2</version>
+    <version>2.1.0</version>
 </dependency>
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-sleuth</artifactId>
-    <version>2.2.2.RELEASE</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 

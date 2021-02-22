@@ -1,6 +1,6 @@
 ---
-title:  "Basics of REST"
-sortTitle: "Basics of REST"
+title: "Basics of REST"
+subsection: "Basics of REST"
 weight: 1
 topics:
 - Microservices

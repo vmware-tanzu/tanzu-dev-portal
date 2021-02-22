@@ -1,7 +1,7 @@
 ---
-title:  "Kubeapps: Getting Started"
-sortTitle: "Kubeapps"
-weight: 3
+title:  "Getting Started with Kubeapps"
+linkTitle: "Kubeapps"
+subsection: Kubeapps
 topics:
 - Kubernetes
 tags:

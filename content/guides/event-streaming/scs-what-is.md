@@ -1,7 +1,7 @@
 ---
-title:  "Spring Cloud Stream: What Is It?"
-sortTitle: "Spring Cloud Stream"
-weight: 1
+title: "What is Spring Cloud Stream?"
+linkTitle: "Spring Cloud Stream"
+subsection: "Spring Cloud Stream"
 topics:
 - Spring
 - Microservices

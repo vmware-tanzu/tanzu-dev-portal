@@ -5,6 +5,7 @@ tags:
 - Event Streaming
 description: >
     Event streaming enables services to simply emit “events” that are open for any interested services to consume.
+icon: streaming
 layout: single
 ---
 

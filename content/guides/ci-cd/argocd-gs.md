@@ -1,7 +1,6 @@
 ---
-title: "ArgoCD: Getting Started with Kubernetes-native Continuous Delivery"
-sortTitle: "ArgoCD"
-weight: 2
+title: "Getting Started with ArgoCD, Kubernetes-native Continuous Delivery"
+linkTitle: "ArgoCD"
 topics:
   - CI-CD
 tags:

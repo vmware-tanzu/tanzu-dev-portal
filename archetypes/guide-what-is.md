@@ -1,11 +1,12 @@
 ---
-title:  "{{ replace (replace .Name "-" " " | title) " What Is" "" }}: What Is It?"
-sortTitle: "{{ replace (replace .Name "-" " " | title) " What Is" "" }}"
+title:  "{{ (replace .Name "-" " ") | title }}?"
+linkTitle: "{{ replace (replace .Name "what-is-" "") "-" " " | title }}"
+subsection: {{ replace (replace .Name "what-is-" "") "-" " " | title }}
 weight: 1
-categories:
+topics:
 - 
 tags:
-- {{ replace .Name "-what-is" "" }}
+- {{ replace (replace .Name "what-is-" "") "-" " " | title }}
 # Author(s)
 team:
 -

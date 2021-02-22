@@ -1,6 +1,6 @@
 ---
-title:  "Understanding API-First Development"
-sortTitle: "Understanding API-First Development"
+title: "Understanding API-First Development"
+linkTitle: "API-First Development"
 weight: 3
 topics:
 - Spring
@@ -395,7 +395,7 @@ The example below uses the [OpenAPI Generator](https://github.com/OpenAPITools/o
 # Usage 
 > openapi-generator-cli generate -i <input API spec> -g <target> -o <output folder>
 
-# Generate SpringBoot artifacts from the specification defined in **apifirst_openapi_bundled.yaml**
+# Generate Spring Boot artifacts from the specification defined in **apifirst_openapi_bundled.yaml**
 # Use default parameters, for ex Java 8
 > openapi-generator generate -i apifirst_openapi_bundled.yaml -g spring -o output
 

@@ -1,7 +1,7 @@
 ---
-title:  "Cloud Native Buildpacks: What Are They?"
-sortTitle: "Cloud Native Buildpacks"
-weight: 1
+title:  "What are Cloud Native Buildpacks?"
+linkTitle: "Cloud Native Buildpacks"
+subsection: "Cloud Native Buildpacks"
 topics:
 - Containers
 tags:

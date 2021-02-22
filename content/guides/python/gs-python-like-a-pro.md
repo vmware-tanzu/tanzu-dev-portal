@@ -1,7 +1,6 @@
 ---
 title:  "Python Like A Pro: Installing Python"
-sortTitle: "Python Like A Pro - Installing Python"
-weight: 2
+linkTitle: "Installing Python"
 description: "Learn how to install multiple versions of Python and switch between them with ease."
 topics:
 - Python

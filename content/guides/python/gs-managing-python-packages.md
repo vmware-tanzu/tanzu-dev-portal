@@ -1,7 +1,6 @@
 ---
-title:  "Python Like A Pro: Managing Project Dependencies"
-sortTitle: "Python Like A Pro - Project Dependencies"
-weight: 2
+title: "Python Like A Pro: Managing Project Dependencies"
+linkTitle: "Managing Python Project Dependencies"
 description: "Learn how to isolate your Python dependencies using pyenv-virtualenv."
 topics:
 - Python

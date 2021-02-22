@@ -28,7 +28,7 @@ Our remote working tips cover a wide range of topics, from general consideration
 
 [Leveraging physical space](/guides/agile/remote-tips-physical-space/) – How important is physical space in an all-remote working environment? More important than ever before, it turns out, which is why we offer a gallery of practitioner setups for inspiration.
 
-[Battling fatigue](/guides/agile/remote-tips-remote-is-exhausing/) – Working remotely is exhausting. We suggest ways that you can create a stimulating and inspiring work environment, complete with ways to look after yourself (and others), including by setting routines.
+[Battling fatigue](/guides/agile/remote-tips-remote-is-exhausting/) – Working remotely is exhausting. We suggest ways that you can create a stimulating and inspiring work environment, complete with ways to look after yourself (and others), including by setting routines.
 
 [Using the tools](/guides/agile/remote-tips-tools-and-tips/) – Whether you’re still agreeing on the tool stack or helping your customers get up to speed on Zoom, as we’ve learned firsthand, the tools you and your team use have never had such a big impact. 
 

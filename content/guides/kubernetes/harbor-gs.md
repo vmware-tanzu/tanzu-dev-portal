@@ -1,7 +1,7 @@
 ---
-title:  "Harbor: Installing on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt"
-sortTitle: "Harbor"
-weight: 2
+title:  "Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt"
+linkTitle: "Harbor"
+subsection: Harbor
 topics:
 - Kubernetes
 tags:

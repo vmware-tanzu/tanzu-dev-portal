@@ -5,9 +5,6 @@
 {{ $jsBase := resources.Get "js/base.js" }}
 {{ $jsAnchor := resources.Get "js/anchor.js" }}
 {{ $jsSearch := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" .Site.Home }}
-{{ if .Site.Params.offlineSearch }}
-{{ $jsSearch = resources.Get "js/offline-search.js" }}
-{{ end }}
 {{ $js := (slice $jsLightbox $jsBase $jsAnchor $jsSearch) | resources.Concat "js/main.js" }}
 {{ if .Site.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>
@@ -27,5 +24,3 @@
       });
     }
   </script>
-
-{{ partial "hooks/body-end.html" . }}

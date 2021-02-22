@@ -1,7 +1,6 @@
 ---
-title:  "Kubernetes Secrets and Service Accounts: What Are They?"
-sortTitle: "Kubernetes Secrets"
-weight: 1
+title:  "What are Kubernetes Secrets and Service Accounts?"
+linkTitle: "Kubernetes Secrets"
 topics:
 - Kubernetes
 tags:

@@ -61,18 +61,6 @@
         font-weight: $font-weight-normal;
     }
 
-    .td-search-input {
-        border: none;
-
-        @include placeholder {
-            color: $navbar-dark-color;
-        }
-    }
-
-    .dropdown {
-/*        min-width: 100px; */
-    }
-
     #menu-toggle {
        display: none;
     }

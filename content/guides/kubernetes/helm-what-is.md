@@ -1,7 +1,7 @@
 ---
-title:  "Helm: What Is It?"
-sortTitle: "Helm"
-weight: 1
+title:  "What Is Helm?"
+linkTitle: "Helm"
+subsection: "Helm"
 topics:
 - Kubernetes
 tags:

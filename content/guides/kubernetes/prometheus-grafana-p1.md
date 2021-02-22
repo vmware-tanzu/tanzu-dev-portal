@@ -1,16 +1,16 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
-sortTitle: "Prometheus and Grafana: Gathering Metrics from Kubernetes"
-weight: 2
+linkTitle: "Prometheus and Grafana"
+subsection: "Prometheus and Grafana"
 topics:
-- kubernetes
+- Kubernetes
 tags:
-- kubernetes
-- observability
-- prometheus
-- grafana
+- Kubernetes
+- Observability
+- Prometheus
+- Grafana
 patterns:
-- observability
+- Observability
 team:
 - Brian McClain
 ---
