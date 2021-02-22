@@ -39,8 +39,8 @@ Backend
 [B,b]ackfill
 balancer(')?(s)?
 biome
-[B,b]ootiful
 Booternetes
+[B,b]ootif(ul|y|ying|ied|ication)
 bootup
 Boris
 Brandolini('s)?
@@ -62,6 +62,7 @@ Crowdsourced
 customizable
 DDD
 dataset
+[D,d]atasources
 de
 [D,d]e-referenced
 decrypt(ed)?
@@ -99,6 +100,7 @@ getters
 ghostEmail
 ghostPassword
 ghostUsername
+[G,g]it[F,f]low
 GitOps
 Helming
 hermeticism
@@ -107,9 +109,11 @@ HumanOps
 ideate
 ideation
 InfoSec
+initializer
 [I,i]ntegrations
 [I,i]nterservice
 Irizarry
+iteratively
 Jiu
 Jitsu
 judgement
@@ -162,12 +166,15 @@ prefilled
 preload
 prepending
 pre-built
+pre-configured
 pre-optimize
 pre-programmed
 pre-release
 preconfigured
 podcaster
+Pre-sync
 programmatically
+Proxy-ing|Proxying
 pushable
 Quickstart
 quokka
@@ -178,6 +185,7 @@ rearchitect(ing)
 refactorings?
 [R,r]epos?
 replicaset
+restaging
 revertibility
 [R,r]oadmap
 rollout
@@ -187,6 +195,7 @@ runtimes?
 runnable
 SaaS-based
 [S,s]calable
+schemas
 screencaster
 seaborn
 [S,s]erverless
@@ -200,6 +209,7 @@ stateful
 [S,s]tandups?
 subdirectory
 suboptimal
+substring
 symposia
 telecom
 telco(s)*
@@ -212,16 +222,19 @@ timebox
 TODOs?
 toolchain
 toolkits
+toolset
 tooltip
 topologies
 UI-based
 uncomment
 undersample
 unencrypted
+(un)?marshalling
 unpause
 Unported
 unpushed
 unreleasable
+[U,u]nstaged
 upgradability
 uptime
 V2
@@ -291,6 +304,7 @@ containerPort
 create-load-balancer
 CredHub
 cron
+Cygwin
 Dataflow
 DataJpaTest
 DATEV('s)?
@@ -329,9 +343,12 @@ H2
 [H,h]elmfiles?
 Homebrew
 HSQLDB
+HttpBase
 Httpie|HTTPie
+HttpSession
 HyperKit
 init(Container)?
+Initializr
 InfoQ
 IntelliJ
 J2EE
@@ -340,6 +357,7 @@ JaFU
 Jakarta
 JavaEE
 JBatch
+jdbcUrl
 Jetstack
 JHipster
 jks
@@ -376,15 +394,16 @@ linter
 LoadBalancer
 lockfile
 logback
+Lombok
 MacBook
 [M,m]acOS
 MapRepository
 Mesos
+MessagingBase
 Microk8s
 minideb
 [M,m]inikube
-Minio
-MinIO
+Minio|MinIO
 [M,m]itigations
 MiXiT
 Mockito
@@ -454,6 +473,7 @@ SaaS
 SameSite
 securityContext
 Semver
+ServiceInfo(Creator)?
 ServiceMonitor
 serviceName=backend
 setValue(Template)?s
@@ -461,7 +481,7 @@ SIG-(Network|Runtime|Security|Storage)
 Siri
 [S,s]kaffold
 Snapchat
-SqlServer
+SqlServer|sqlserver
 SpringBootTest
 spring-petclinic
 ssh-keygen
@@ -477,6 +497,7 @@ swagger-cli
 Sysdig
 Tanzu(Developer)?
 targetPort
+TAS
 TaskRepository
 Tekton('s)?
 Terraform(-ing)?
@@ -484,6 +505,7 @@ TestContainers
 tgz
 Thanos
 [T,t]imebox
+TomEE
 Trello
 TRS-80
 URL(s)?
@@ -519,6 +541,7 @@ WORKDIR
 # Companies / Conferences
 Alibaba
 Apress
+Baeldung('s)?
 DataStax('s|Examples)?
 LinkedIn
 deliverAgile
@@ -528,6 +551,7 @@ DevNexus
 DevOpsDays(KC)?
 Documentum
 DockerCon
+[D,d]ockerhub(-[\w|-]+)?
 DZone
 EMC
 Garmin
@@ -539,10 +563,14 @@ HashiCorp('s)?
 Heptio
 Heroku('s)?
 JavaOne
+JBoss
 JetBrains
 KubeCon
+LiveLessons
 McGraw-Hill
+Mkyong
 NameCheap
+NetWeaver
 Octoverse
 OneMagnify
 OpenSource
@@ -550,6 +578,7 @@ Percona
 Pluralsight
 PMC
 Rakuten
+[R,r]eddit
 RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
@@ -560,11 +589,9 @@ ThoughtWorks
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
-[D,d]ockerhub
-[D,d]ockerhub-[\w|-]+
-[R,r]eddit
-Proxy-ing
-Proxying
+WebLogic
+WebSphere
+Wildfly
 ZDNet
 
 # Acronyms

@@ -11,7 +11,7 @@ patterns:
 - API
 ---
 
-There are multiple approaches to modernizing applications and defining APIs. This guide describes the consumer driven contracts apptanzuroach. The guide [Understanding API-First Development](/guides/microservices/api-first-development/) describes an alternative approach. 
+There are multiple approaches to modernizing applications and defining APIs. This guide describes the consumer driven contracts approach. The guide [Understanding API-First Development](/guides/microservices/api-first-development/) describes an alternative approach. 
 
 The consumer driven contracts approach may be useful when a team is building many related services at the same time as part of a modernization effort, and your team knows the "domain language" of the bounded context, but doesn't know the individual properties of each aggregate and event payload.
 
