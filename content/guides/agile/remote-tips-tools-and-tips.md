@@ -7,7 +7,7 @@ topics:
 tags:
 - Agile
 team:
-- VMware Pivotal Labs
+- VMware Tanzu Labs
 ---
 
 ## Agreeing on the tool stack
