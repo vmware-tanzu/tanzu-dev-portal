@@ -679,6 +679,9 @@ plaintext
 PodSecurityPolicy
 PodsPerCore
 Poly1305
+[P,p]ostgres
+php-apache
+Postgres
 Pomodoro
 [P,p]ortieris
 [P,p]ostgres
