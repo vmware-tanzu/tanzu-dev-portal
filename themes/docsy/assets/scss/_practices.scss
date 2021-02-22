@@ -73,4 +73,8 @@
   .callout {
     border-width: 1px !important;
   }
+
+  table, tr, th, td {
+    border: 1px solid $border-color;
+  }
 }
