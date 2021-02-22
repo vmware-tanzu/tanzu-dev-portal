@@ -144,7 +144,7 @@ public class CloudConfig {
 
 ## Keep Learning
 
-If you aren’t already familiar with Spring Cloud Connectors, you may want to refer to our [introductory guide](link) as well as the [Spring Cloud Connectors - Reference Documentation](http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html). a The [Spring Cloud Connectors page on Spring.io](https://cloud.spring.io/spring-cloud-connectors/) also includes a Quick Start tutorial that may be a useful starting point.
+If you aren’t already familiar with Spring Cloud Connectors, you may want to refer to our [introductory guide](/guides/spring/spring-cloud-connectors) as well as the [Spring Cloud Connectors - Reference Documentation](http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html). a The [Spring Cloud Connectors page on Spring.io](https://cloud.spring.io/spring-cloud-connectors/) also includes a Quick Start tutorial that may be a useful starting point.
 
 If you aren’t familiar with the intricacies of Spring profiles or need a refresher, see the [Spring Profiles - Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html), this [One-Stop Guide](https://reflectoring.io/spring-boot-profiles/) and this [tutorial on the Baeldung site](https://www.baeldung.com/spring-profiles).
 
