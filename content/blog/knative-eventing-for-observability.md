@@ -3,88 +3,77 @@ title: "Using Knative Eventing for Better Observability"
 featured: true
 weight: 1
 description: >
-    Getting a better picture of Kubernetes events
+  Getting a better picture of Kubernetes events
 date: 2021-02-22
 topics:
-- Kubernetes
+  - Kubernetes
 tags:
-- Kubernetes
-- API
-- Development
-- Knative
+  - Kubernetes
+  - API
+  - Development
+  - Knative
 patterns:
-- Deployment
+  - Deployment
 # Author(s)
-team: 
-- Tyler Britten
+team:
+  - Tyler Britten
 ---
 
-If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it—deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events? 
+{{< youtube id="9lBaKKe-59E" class="youtube-video-shortcode" >}}
+<div align="center"><i><a href="https://www.youtube.com/watch?v=9lBaKKe-59E&feature=youtu.be">Watch Tyler Walk through these steps on Tanzu.TV.</a></i></div>
+
+
+If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it—deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?
 
 [Knative](https://knative.dev) is a Kubernetes-based platform used to deploy and manage serverless workloads. It has two components: serving and eventing, both of which can be deployed independently. In this post, we’re going to focus on eventing here, which can automatically mark events in your data or trigger other events based on your needs.
-
 
 ### Knative Eventing
 
 The eventing component of Knative is a loosely coupled system of event producers and consumers that allows for multiple modes of usage and event transformation.
 
-Among the other components in this system are the [broker](https://knative.dev/docs/eventing/broker/), which routes the events over [channels](https://knative.dev/docs/eventing/channels/), and [triggers](https://knative.dev/docs/eventing/triggers/), which subscribe specific consumers to events. For our example, we’re going to keep things very simple, with a single broker using a single[ in-memory channel, ](https://github.com/knative/eventing/blob/release-0.20/config/channels/in-memory-channel/README.md)which itself is not to be used in production.  
-
+Among the other components in this system are the [broker](https://knative.dev/docs/eventing/broker/), which routes the events over [channels](https://knative.dev/docs/eventing/channels/), and [triggers](https://knative.dev/docs/eventing/triggers/), which subscribe specific consumers to events. For our example, we’re going to keep things very simple, with a single broker using a single[ in-memory channel, ](https://github.com/knative/eventing/blob/release-0.20/config/channels/in-memory-channel/README.md)which itself is not to be used in production.
 
 ### Kubernetes Events
 
-If we want Kubernetes events as a source, we can use the [API server source](https://knative.dev/docs/eventing/samples/kubernetes-event-source/) as an event producer. This will publish any changes seen by the API server to the channel we’re using, and we can consume that event with a small golang application and forward to the observability tool of our choice. 
+If we want Kubernetes events as a source, we can use the [API server source](https://knative.dev/docs/eventing/samples/kubernetes-event-source/) as an event producer. This will publish any changes seen by the API server to the channel we’re using, and we can consume that event with a small golang application and forward to the observability tool of our choice.
 
 In this case, we’re going to specifically watch for horizontal pod autoscaler (HPA) messages. Anytime the HPA scales our example app up or down, we’ll send a API call to mark an event.
-
 
 ### Eventing in Action
 
 We’re going to use Kind to deploy a Knative eventing setup and then deploy a sample application with an autoscaler so we can see when it scales up or down. To do this, we will need to:
 
-
-
-*   Have [Kind](https://kind.sigs.k8s.io) installed
-*   Clone this repo [https://github.com/tybritten/hpa-sender](https://github.com/tybritten/hpa-sender) \
-
+- Have [Kind](https://kind.sigs.k8s.io) installed
+- Clone this repo [https://github.com/tybritten/hpa-sender](https://github.com/tybritten/hpa-sender) \
 
 The first thing we need to do is create the Kind cluster. If you’re not comfortable with curling to bash, you can download it first and inspect it:
-
 
 ```bash
 curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/01-kind.sh | bash
 ```
 
-
 Next, we need to install all the Knative eventing components, starting with the CRD and core components:
-
 
 ```bash
 kubectl apply -f https://github.com/knative/eventing/releases/download/v0.19.0/eventing-crds.yaml
 kubectl apply -f https://github.com/knative/eventing/releases/download/v0.19.0/eventing-core.yaml
 ```
 
-
 As mentioned earlier, we need a channel; we’re going to use the simple in-memory channel and corresponding broker:
-
 
 ```bash
 kubectl apply -f https://github.com/knative/eventing/releases/download/v0.19.0/in-memory-channel.yaml
 kubectl apply -f https://github.com/knative/eventing/releases/download/v0.19.0/mt-channel-broker.yaml
 ```
 
-
 Lastly, we need to install the metrics server (and apply a patch) for the HPA:
-
 
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
 kubectl patch deployment metrics-server -n kube-system -p '{"spec":{"template":{"spec":{"containers":[{"name":"metrics-server","args":["--cert-dir=/tmp", "--secure-port=4443", "--kubelet-insecure-tls","--kubelet-preferred-address-types=InternalIP"]}]}}}}'
 ```
 
-
 Let’s check to make sure everything is up and running:
-
 
 ```bash
 kubectl get all -n knative-eventing
@@ -128,16 +117,14 @@ horizontalpodautoscaler.autoscaling/broker-filter-hpa    Deployment/mt-broker-fi
 horizontalpodautoscaler.autoscaling/broker-ingress-hpa   Deployment/mt-broker-ingress   2%/70%    1         10        1          6m51s
 ```
 
-
 Now we want to add the API event sender. First we need a broker in the default namespace where the application will be:
-
 
 ```yaml
 apiVersion: eventing.knative.dev/v1
 kind: broker
 metadata:
- name: default
- namespace: knative-eventing
+  name: default
+  namespace: knative-eventing
 
 We then need a service account (with a cluster role and role binding) for the API source to use:
 ---
@@ -148,23 +135,21 @@ metadata:
   namespace: default
 
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: event-watcher
 rules:
-- apiGroups:
-  - ""
-  resources:
-  - events
-  verbs:
-  - get
-  - list
-  - watch
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - get
+      - list
+      - watch
 
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -174,14 +159,12 @@ roleRef:
   kind: ClusterRole
   name: event-watcher
 subjects:
-- kind: ServiceAccount
-  name: events-sa
-  namespace: default
+  - kind: ServiceAccount
+    name: events-sa
+    namespace: default
 ```
 
-
 Now we need our API server source:
-
 
 ```yaml
 apiVersion: sources.knative.dev/v1
@@ -193,8 +176,8 @@ spec:
   serviceAccountName: events-sa
   mode: Resource
   resources:
-  - apiVersion: v1
-    kind: Event
+    - apiVersion: v1
+      kind: Event
   sink:
     ref:
       apiVersion: eventing.knative.dev/v1
@@ -203,17 +186,13 @@ spec:
       namespace: knative-eventing
 ```
 
-
 We can apply these all together from a file in the `kind-example` folder in the repo:
-
 
 ```bash
 kubectl apply -f k8s-events.yaml
 ```
 
-
 We now have an API source and a broker reader for an event consumer:
-
 
 ```bash
 kubectl get all
@@ -235,14 +214,12 @@ eventtype.eventing.knative.dev/5c1186d11f693b2c331a9c31246588e0   dev.knative.ap
 eventtype.eventing.knative.dev/b6426fa883a42e3e23ace1cebabfdd5e   dev.knative.apiserver.resource.update   https://10.96.0.1:443            default                 False   BrokerDoesNotExist
 
 NAME                                             SINK                                                                                AGE   READY   REASON
-apiserversource.sources.knative.dev/testevents   http://broker-ingress.knative-eventing.svc.cluster.local/knative-eventing/default   7s    True    
+apiserversource.sources.knative.dev/testevents   http://broker-ingress.knative-eventing.svc.cluster.local/knative-eventing/default   7s    True
 ```
-
 
 We can now use any number of consumers, the most simple being the Knative event-display container (`gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display)`.
 
 For this example, I’ve created and published a container using the code in the repo. We’re going to deploy it along with another role that gives it access to the horizontal pod autoscalers, as well as a trigger to send the events to the container:
-
 
 ```yaml
 apiVersion: v1
@@ -256,9 +233,9 @@ kind: ClusterRole
 metadata:
   name: hpa-sender
 rules:
-- apiGroups: ["", "autoscaling"] # "" indicates the core API group
-  resources: ["secrets", "horizontalpodautoscalers"]
-  verbs: ["get", "watch", "list"]
+  - apiGroups: ["", "autoscaling"] # "" indicates the core API group
+    resources: ["secrets", "horizontalpodautoscalers"]
+    verbs: ["get", "watch", "list"]
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -270,9 +247,9 @@ roleRef:
   kind: ClusterRole
   name: hpa-sender
 subjects:
-- kind: ServiceAccount
-  name: hpa-sender
-  namespace: knative-eventing
+  - kind: ServiceAccount
+    name: hpa-sender
+    namespace: knative-eventing
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -293,10 +270,10 @@ spec:
     spec:
       serviceAccountName: hpa-sender
       containers:
-      - name: hpa-sender
-        image: vmtyler/hpa-sender
-        ports:
-        - containerPort: 8080
+        - name: hpa-sender
+          image: vmtyler/hpa-sender
+          ports:
+            - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -309,7 +286,7 @@ spec:
     app: hpa-sender
   ports:
     - protocol: TCP
-      port: 80  
+      port: 80
       targetPort: 8080
 ---
 apiVersion: eventing.knative.dev/v1
@@ -323,34 +300,26 @@ spec:
     uri: http://hpa-sender.knative-eventing.svc.cluster.local
 ```
 
-
 We can apply these all together from a file:
-
 
 ```bash
 kubectl apply -f hpa-sender-deployment.yaml
 ```
 
-
-
 #### HPA-Sender Configuration
 
 The way the hpa-sender container works is pretty simple; it:
 
-
-
-*   Watches the API server events related to HPAs
-*   Retrieves the specific HPA referenced in the event from the API server
-*   Checks if the HPA has an annotation for hpa-sender with a secret location as namespace/secretname
-*   Retrieves the secret, which includes configuration for where to send the event, if it has the annotation
+- Watches the API server events related to HPAs
+- Retrieves the specific HPA referenced in the event from the API server
+- Checks if the HPA has an annotation for hpa-sender with a secret location as namespace/secretname
+- Retrieves the secret, which includes configuration for where to send the event, if it has the annotation
 
 So to use this app, we need a secret with the configuration necessary for our event destination, and we have to annotate our HPA.
-
 
 #### Sample App and HPA Secret
 
 The first thing we need to do is create the secret with the necessary configuration. (There are some sample ones in the repo.) We’re going to use WaveFront as our destination:
-
 
 ```yaml
 apiVersion: v1
@@ -362,9 +331,9 @@ type: Opaque
 stringData:
   url: https://WAVEFRONTHOSTNAME/api/v2/event
   headers: >
-      {
-        "Authorization": "Bearer <wavefront_api_token>"
-      }
+    {
+      "Authorization": "Bearer <wavefront_api_token>"
+    }
   body: >
     {
       "name": "HPA Scaling",
@@ -381,11 +350,9 @@ stringData:
     }
 ```
 
-
-We’ll put our WaveFront host name in there along with our API token. In the body, you’ll  see a _message_, which is what hpa-sender will replace with the actual HPA message.
+We’ll put our WaveFront host name in there along with our API token. In the body, you’ll see a _message_, which is what hpa-sender will replace with the actual HPA message.
 
 For our sample app, we’ll use a basic php-apache image:
-
 
 ```yaml
 apiVersion: apps/v1
@@ -404,15 +371,15 @@ spec:
         run: php-apache
     spec:
       containers:
-      - name: php-apache
-        image: k8s.gcr.io/hpa-example
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-          requests:
-            cpu: 200m
+        - name: php-apache
+          image: k8s.gcr.io/hpa-example
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -423,7 +390,7 @@ metadata:
     run: php-apache
 spec:
   ports:
-  - port: 80
+    - port: 80
   selector:
     run: php-apache
 
@@ -449,34 +416,28 @@ status:
   desiredReplicas: 1
 ```
 
-
 You will see on the HPA that it has an annotation of `hpa-event: default/php-apache-hpe `enabling the hpa-sender and pointing to the secret with the configuration.
 
 We can apply these all together from a single file:
-
 
 ```bash
 kubectl apply -f hpa-app.yaml
 ```
 
-
 To check on the app and the HPA, we can run:
-
 
 ```bash
 $ kubectl get pods
 NAME                                                              READY   STATUS    RESTARTS   AGE
 apiserversource-testevents-bbeb355d-72a6-4e81-b0a8-02d9b0dtq8gn   1/1     Running   0          74m
-php-apache-d4cf67d68-crmsr  
-     
+php-apache-d4cf67d68-crmsr
+
 $ kubectl get hpa
 NAME         REFERENCE               TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
 php-apache   Deployment/php-apache   <unknown>/50%   1         5         1          47s
 ```
 
-
 Now we can cause the load to go up or down by following [these instructions](https://unofficial-kubernetes.readthedocs.io/en/latest/tasks/run-application/horizontal-pod-autoscale-walkthrough/).
-
 
 ```bash
 $ kubectl run -i --tty load-generator --image=busybox /bin/sh
@@ -486,11 +447,9 @@ Hit enter for command prompt
 $ while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done
 ```
 
-
 This will trigger events to our URL:
 
 ![Wave Front Event Screenshot](/images/blogs/using-knative-eventing-for-better-observability/wavefront_event_knative.png)
-
 
 Now we have events marking these scaling occurrences on our application’s performance charts.
 
