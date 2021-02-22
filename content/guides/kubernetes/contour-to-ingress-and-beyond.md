@@ -5,7 +5,6 @@ parent: Contour to Ingress and Beyond
 weight: 2
 topics:
 - Kubernetes
-- Tanzu
 tags:
 - Kubernetes
 - Tanzu
@@ -22,7 +21,11 @@ team:
 
 ### Introduction to Contour
 
-Need to write some details about Contour here
+[Contour](https://projectcontour.io/) is an open source Kubernetes [Ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) that acts as a control plane for the Envoy edge and service proxy (see below).​ Contour supports dynamic configuration updates and multi-team ingress delegation while maintaining a lightweight profile.
+
+Contour is built for Kubernetes to empower you to quickly deploy cloud native applications by using the flexible HTTPProxy API which is a lightweight system that provides many of the advanced routing features of a Service Mesh.
+
+Contour deploys the [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) proxy as a reverse proxy and load balancer.  Envoy is a Layer 7 (application layer) bus for proxy and communication in modern service-oriented architectures, such as Kubernetes clusters. Envoy strives to make the network transparent to applications while maximizing observability to ease troubleshooting.
 
 ### Before You Begin
 
@@ -51,7 +54,7 @@ You can install Contour directly from the manifests provided by the project, how
 
 1. Download contour installation manifests
     ```bash
-    wget https://projectcontour.io/quickstart/contour.yaml
+    wget https://projectcontour.io/quickstart/v1.12.0/contour.yaml
     ```
 
 1. View the manifests in your favorite local text editor
