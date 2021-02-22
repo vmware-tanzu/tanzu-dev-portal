@@ -45,7 +45,9 @@ Success is when you have agreement on the problem and solution (aka snapshot)to 
 
 #### Facilitator Notes & Tips
 
-None at the moment
+Feel free to use this slide deck for this workshop. 
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/1wtb5448ncVV6E" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/molecule-242998322" title="Molecule" target="_blank">Molecule</a> </strong> from <strong><a href="//www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
 
 ### Related Practices
 
