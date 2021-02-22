@@ -121,6 +121,7 @@ parallelizing
 passcode|PASSCODE
 Petstore
 pickab(le|ility)?
+pluggable
 precompiled
 performant
 preload
@@ -150,6 +151,7 @@ SaaS-based
 scalable
 screencaster
 seaborn
+secretname
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -211,6 +213,7 @@ AppServer
 Astra
 auth
 autosave
+autoscaler(s)?
 Autowired
 base64(-encoded)?
 Bitnami('s)?
@@ -266,6 +269,8 @@ Grasso
 gotchas
 Gunicorn
 [H,h]elmfiles?
+HPA(s)?
+(HPA|hpa)-(S|s)ender
 Homebrew
 Httpie
 HTTPie
@@ -340,6 +345,7 @@ OpenID
 OpenSSL
 Paketo
 Packer
+php-apache
 Postgres
 Pomodoro
 Procfile
