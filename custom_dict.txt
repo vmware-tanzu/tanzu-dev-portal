@@ -536,8 +536,10 @@ LinkedIn
 deliverAgile
 CodeFresh
 CoreOS
+D2iQ
 DevNexus
 DevOpsDays(KC)?
+Disneyland
 Documentum
 DockerCon
 DZone
@@ -641,6 +643,8 @@ JST
 JVM
 KMS
 KNN
+KUDO
+KUTTL
 LDAP
 LTS
 MDN
