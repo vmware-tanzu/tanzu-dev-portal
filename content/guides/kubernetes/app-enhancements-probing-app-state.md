@@ -30,39 +30,7 @@ Two approaches for adding probes to your applications are:
 
 Option **1** is preferred. Since the endpoint is implemented in the application, it can perform an 
 in-depth check before responding to the requester. However, this option does require code 
-modification. An example of a simple Go application implementing this endpoint is as follows.
-
-```go
-package main
-
-import (
-	"log"
-	"net/http"
-)
-
-
-
-func main() {
-	// start the application routine
-	err := start()
-	if err != nil {
-		log.Panicln("failed to start.")
-	}
-
-  // TODO add http handler / server to validate health of app
-
-
-}
-
-func start() error {
-	// app logic for starting
-	return nil
-}
-
-func isHealthy() {
-	if 
-}
-```
+modification. 
 
 Option **2** requires no application modification. It is ideal for legacy applications where 
 adding an endpoint is non-trivial. It does assume there is a command that can be run to validate
@@ -147,6 +115,7 @@ The following diagram demonstrates the impact of this `livenessProbe`.
 ![liveness-probe](/images/guides/kubernetes/app-enhancements/liveness-probe.png)
 
 ### Startup Probes - Protecting Slow Container Initialization
+
 > Startup Probes are not enabled by default until Kubernetes 1.18. 
 Until then, they need to be enabled via `--feature-gates` on the 
 `kube-apiserver` and the `kubelet` in each node.
@@ -192,8 +161,6 @@ is allowing the container 300 seconds (`periodSeconds` * `failureThreshold`)
 to finish its startup. It is also validating against a different
 endpoint than the `livenessProbe`.
 
-![startup probe](/images/guides/kubernetes/app-enhancements/startup-probe.png)
+![startup probe](/images/guides/kubernetes/app-enhancements/diagrams/startup-probe.png)
 
-When a `startupProbe` is defined, all other checks are disabled 
-until it succeeds.
-
+When a `startupProbe` is defined, all other checks are disabled until it succeeds.
