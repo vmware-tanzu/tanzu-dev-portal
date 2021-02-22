@@ -207,6 +207,7 @@ scaffolded
 schema(s)?
 screencaster
 seaborn
+secretname
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -280,6 +281,7 @@ Astra
 AutoBuild
 AutoDeploy
 autosave
+autoscaler(s)?
 Autowired
 base64(-encoded)?
 BatchScheduler
@@ -357,6 +359,8 @@ gotchas
 Gunicorn
 H2
 [H,h]elmfiles?
+HPA(s)?
+(HPA|hpa)-(S|s)ender
 Homebrew
 HSQLDB
 Httpie|HTTPie
@@ -464,6 +468,8 @@ Packer
 passwd
 plaintext
 [P,p]ostgres
+php-apache
+Postgres
 Pomodoro
 Procfile
 [P,p]rometheus
