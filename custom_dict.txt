@@ -96,7 +96,7 @@ fileshare
 FinTech
 firewalling
 frictionless
-Frontend
+[f,F]rontend(-green)?
 [G,g]amestorming
 geospatial
 getters
@@ -439,7 +439,7 @@ myapp
 mychart
 mydb
 MyPy
-MySql
+[m,M]y[s,S]ql
 mystream
 mytopic
 [N,n]amespace(s)?
@@ -544,6 +544,7 @@ webapps_default
 WebFlux
 WebSocket
 WireMock
+[w,W]ordpress
 [V,v]eth
 ytt
 [Z,z]ipkin

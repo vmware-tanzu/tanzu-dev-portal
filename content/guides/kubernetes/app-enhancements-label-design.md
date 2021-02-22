@@ -128,10 +128,10 @@ Some recommended labels per the
 | --- | --- | --- |
 | name | The name of the application | mysql |
 | instance | A unique name identifying the instance of an application | frontend-green |
-| version | The current version of the application (e.g., a seamntic version, revision hash, etc.) | 1.0.0 |
+| version | The current version of the application (e.g., a semantic version, revision hash, etc.) | 1.0.0 |
 | component | The component within the architecture | database |
 | part-of | The name of a parent application this application is part of | wordpress |
-| managed-by | The tool being used to manage the operation of an application | noc |
+| managed-by | The tool being used to manage the operation of an application | app-manager |
 {{< table />}}
 
 VMware recommends you extend the above labels with the following, where relevant.
