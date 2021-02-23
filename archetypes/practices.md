@@ -3,7 +3,7 @@
 draft: true
 
 title: "{{ (replace .Name "-" " ") | title }} - Page Title"
-linkTitle: "{{ replace (replace .Name "-" "") "-" " " | title }} - Will Appear in Links"
+linkTitle: "{{ replace .Name "-" " " | title }} - Will Appear in Links"
 description: "Short description about this practice or workshop"
 # Note: remove any tags that are not relevant.
 tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
