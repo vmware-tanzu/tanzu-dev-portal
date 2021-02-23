@@ -92,6 +92,13 @@ To create a new video `videos/my-video.md`:
 ```
 make video.my-video
 ```
+#### Create a new Agile Practice
+The following command will create an Agile Practice. 
+
+To create a new practice `practices/a-new-practice.md`:
+```
+make practice.a-new-practice
+```
 
 ### Guides Navigation
 There are three special front matter fields that can be used in Guides to control how they appear in the sidebar tree navigation. The left side navigation can contain two levels worth of content with each entry capable of containing articles contained underneath. To define what appears where, use the following fields:
