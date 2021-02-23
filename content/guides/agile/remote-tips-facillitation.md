@@ -7,7 +7,7 @@ topics:
 tags:
 - Agile
 team:
-- VMware Pivotal Labs
+- VMware Tanzu Labs
 ---
 
 ## Setting team working agreements and ground rules

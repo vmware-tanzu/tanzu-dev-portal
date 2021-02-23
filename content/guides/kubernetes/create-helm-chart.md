@@ -2,8 +2,8 @@
 title: "Creating Your First Helm Chart"
 linkTitle: "Creating a Helm Chart"
 description: Create your first ever Helm chart and learn what goes inside these packages.
-parent: "Helm"
-weight: 2
+parent: "Packaging"
+weight: 3
 date: 2018-10-05
 topics:
 - Kubernetes

@@ -26,6 +26,10 @@ Contour is built for Kubernetes to empower you to quickly deploy cloud native ap
 
 Contour deploys the [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) proxy as a reverse proxy and load balancer.  Envoy is a Layer 7 (application layer) bus for proxy and communication in modern service-oriented architectures, such as Kubernetes clusters. Envoy strives to make the network transparent to applications while maximizing observability to ease troubleshooting.
 
+{{< youtube id="Kz671dXioS0" class="youtube-video-shortcode" >}}
+<div align="center"><i><a href="https://www.youtube.com/watch?v=Kz671dXioS0&feature=youtu.be">Watch Paul livestream trying Contour 1.12.0 for the first time.</a></i></div>
+
+
 ### Before You Begin
 
 You'll need a Kubernetes cluster. This guide uses a [Tanzu Kubernetes Grid](https://tanzu.vmware.com/kubernetes-grid) cluster, but any Kubernetes Cluster whether they're running on a Public Cloud, in your [Home] Lab, or on your desktop such as [KIND](https://kind.sigs.k8s.io/) or [minikube](https://minikube.sigs.k8s.io/docs/start/). You'll also need the Kubernetes CLI [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).

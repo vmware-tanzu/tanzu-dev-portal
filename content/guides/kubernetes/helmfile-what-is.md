@@ -1,8 +1,8 @@
 ---
 title:  "What is Helmfile?"
-linkTitle: "Helmfile"
-parent: "Helm"
+parent: "Packaging"
 topics: ["Kubernetes"]
+weight: 4
 tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]
 patterns: ["Deployment"]
 team:

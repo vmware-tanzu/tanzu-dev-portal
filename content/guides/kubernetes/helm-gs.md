@@ -1,6 +1,6 @@
 ---
 title:  "Getting Started with Helm"
-parent: "Helm"
+parent: "Packaging"
 weight: 2
 topics:
 - Kubernetes
@@ -20,7 +20,7 @@ In this guide you'll deploy a simple application using Helm to a Kubernetes clus
 
 There are a few things you need to do before getting started with Helm:
 
-- Have access to a Kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube). 
+- Have access to a Kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube).
 
 - Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
