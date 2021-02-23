@@ -95,6 +95,7 @@ fiancé
 fileshare
 FinTech
 firewalling
+flyyy
 frictionless
 [f,F]rontend(-green)?
 [G,g]amestorming
@@ -208,6 +209,7 @@ scaffolded
 schema(s)?
 screencaster
 seaborn
+secretname
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -281,6 +283,7 @@ Astra
 AutoBuild
 AutoDeploy
 autosave
+autoscaler(s)?
 Autowired
 base64(-encoded)?
 BatchScheduler
@@ -358,6 +361,8 @@ gotchas
 Gunicorn
 H2
 [H,h]elmfiles?
+HPA(s)?
+(HPA|hpa)-(S|s)ender
 Homebrew
 HSQLDB
 Httpie|HTTPie
@@ -462,6 +467,7 @@ OpenSSL
 OpenTracing
 Paketo
 Packer
+php-apache
 passwd
 plaintext
 [P,p]ostgres
@@ -549,6 +555,12 @@ WireMock
 ytt
 [Z,z]ipkin
 Zuul
+daemonset
+HTTPProxy
+virtualhost
+CTRL-C
+Istio
+
 
 # Parameter Values
 AUTO_DEVOPS_CHART
@@ -575,8 +587,10 @@ deliverAgile
 CodeFresh
 CoffeeOps
 CoreOS
+D2iQ
 DevNexus
 DevOpsDays(KC)?
+Disneyland
 Documentum
 DockerCon
 DZone
@@ -684,6 +698,8 @@ JST
 JVM(-based)?
 KMS
 KNN
+KUDO
+KUTTL
 LDAP
 LTS
 MDN
@@ -805,6 +821,7 @@ Jiang
 Julien
 Junio
 Kousen
+Kravitz
 Lazu
 Liles
 Lippert
@@ -843,6 +860,7 @@ Sébastien
 Sevilla
 Sheasha
 Shopen
+Sipe
 Sletten
 Sloka
 Smythe
