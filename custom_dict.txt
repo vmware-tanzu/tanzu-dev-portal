@@ -322,6 +322,7 @@ Dataflow
 DataJpaTest
 DATEV('s)?
 Devoops
+DevSecOps
 [D,d]ebian
 distros
 distroless
@@ -350,6 +351,7 @@ GemFire
 getAppFromExternalRepository(=false)?
 [G,g]it[L,l]ab('s|-managed)?
 [G,g]ithub
+GitLabCI
 [G,g]mail
 [G,g]olang
 GraalVM
@@ -753,8 +755,10 @@ ZOP
 # Names
 Abbie
 Abo
+Abubakar
 Alexey
 Amaro
+Ango
 Anneliese
 Aravena
 Asiedu-Ampem
@@ -860,6 +864,7 @@ Sébastien
 Sevilla
 Sheasha
 Shopen
+Siddiq
 Sipe
 Sletten
 Sloka
