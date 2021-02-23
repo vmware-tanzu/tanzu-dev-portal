@@ -244,6 +244,15 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
   border-color: #D9E4EA !important;
 }
 
+div.aside-warning > div.aside-title {
+  background: #fc5a5a !important;
+}
+
+div.aside div.aside-content {
+    padding: 5px 20px;
+    background: #f4f8fa !important;
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
