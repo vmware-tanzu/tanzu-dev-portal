@@ -21,7 +21,7 @@ any Kubernetes cluster.
 [Sonobuoy](https://sonobuoy.io/) is a tool for cluster owners to ensure their
 cluster conforms to CNCF guidelines via these tests. It does the following:
 
-- Integrated end-to-end (e2e) conformance testing 
+- Integrated end-to-end (e2e) conformance testing
 - Workload debugging
 - Custom data collection via extensible plugins
 
@@ -57,7 +57,7 @@ A conformance-passing cluster provides the following guarantees:
   conformance
   tests](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/conformance-tests.md).
 
-`Sonobuoy` also has a plugin architecture that allows implementers to write
+`Sonobuoy` also has a plugin architecture that allows implementors to write
 additional tests. These plugins include the `kube-hunter` project (and it’s
 associated plugins from AquaSecurity) and the `kube-bench` project which is
 based on [CIS benchmarks](https://www.cisecurity.org/benchmark/kubernetes/).
@@ -103,9 +103,9 @@ provisioning to pick and insert the right test into the provisioning flow. If
 possible, you could have the user select the lifecycle event from a dropdown in
 an interface, and then have that configure the correct tests.
 
-Second, as you potentially move toward a gitops-type workflow, it will be
+Second, as you potentially move toward a GitOps-type workflow, it will be
 possible to have the tests run automatically based on changes checked into a
-gitops repository. The issue would be tagging the change types in the workflow
+Git repository. The issue would be tagging the change types in the workflow
 so that the correct tests would be run, based on the type of event that occurs.
 Tests can be selected based on the SIG or test type. This would potentially
 allow a further refinement of the test run to the particular areas impacted by
@@ -128,6 +128,7 @@ resources. There have been instances in the past where disruption occurred.
 
 The [required prerequisites](https://github.com/vmware-tanzu/sonobuoy) for
 Sonobuoy are:
+
 - Access to a Kubernetes cluster. If you do not have a cluster, we recommend
   following the [AWS Quickstart for Kubernetes
   instructions](https://aws.amazon.com/quickstart/architecture/vmware-kubernetes/).
@@ -147,8 +148,7 @@ to your `PATH`. The link to download `sonobuoy` binaries is
 [https://github.com/vmware-tanzu/sonobuoy/tags](https://github.com/vmware-tanzu/sonobuoy/tags).
 Ensure that you download the version closest to your version of Kubernetes. For
 example, If you are running versions 1.17.3 of Kubernetes, then you should
-download the most recent v0.17.x version of `Sonobuoy`. You can also execute `$
-sonobuoy version` and it will return the maximum and minimum versions of
+download the most recent v0.17.x version of `Sonobuoy`. You can also execute `$ sonobuoy version` and it will return the maximum and minimum versions of
 Kubernetes that it will support.
 
 ```
@@ -156,10 +156,10 @@ $ sonobuoy version
 Sonobuoy Version: v0.17.2
 MinimumKubeVersion: 1.15.0
 MaximumKubeVersion: 1.17.99
-GitSHA: eb9343dbd96ebc225d076630be5c348a57dfc430 
+GitSHA: eb9343dbd96ebc225d076630be5c348a57dfc430
 ```
 
-#### Executing Sonobuoy 
+#### Executing Sonobuoy
 
 To run a quick sanity test and make sure your environment is working correctly
 execute:
@@ -228,7 +228,7 @@ Sonobuoy output is a gzipped tarball, named in the following manner:
 
 For example:
 
-`202003061908_sonobuoy_2e9ee3d9-8505-46d1-8664-0b3536b49b0f.tar.gz` 
+`202003061908_sonobuoy_2e9ee3d9-8505-46d1-8664-0b3536b49b0f.tar.gz`
 
 `YYYYmmDDHHMM` is a timestamp containing the year, month, day, hour, and minute
 of the run. The '<uuid>' string is an RFC4122 UUID, consisting of lowercase
@@ -238,4 +238,4 @@ the snapshot's meta/config.json, stored at the root of the tarball.
 
 The tar file contains the [output of the
 tests](https://sonobuoy.io/docs/master/results/), and a [snapshot of the tested
-cluster's running configuration](https://sonobuoy.io/docs/master/snapshot/).  
+cluster's running configuration](https://sonobuoy.io/docs/master/snapshot/).

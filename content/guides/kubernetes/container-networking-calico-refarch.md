@@ -5,8 +5,8 @@ description: "A reference architecture for running the Calico CNI in Kubernetes"
 parent: "Container Networking"
 weight: 1600
 keywords:
-- Kubernetes
-- Calico
+  - Kubernetes
+  - Calico
 ---
 
 ## Abstract
@@ -41,10 +41,11 @@ design decisions and examples of their configuration.
 Calico is a CNI plugin offering container networking to a Kubernetes cluster. It
 uses Linux-native tools to facilitate traffic routing and enforce network
 policy. It also hosts a BGP daemon for distributing routes to other nodes.
-Calico's tools run as a Daemonset atop a Kubernetes cluster. This enables
-administrators to install Calico with `kubectl apply -f ${CALICO_MANIFESTS}.yaml` and no need to setup additional services or
-infrastructure. In this reference architecture, there are a multitude of
-components.
+Calico's tools run as a DaemonSet atop a Kubernetes cluster. This enables
+administrators to install Calico with
+`kubectl apply -f ${CALICO_MANIFESTS}.yaml` and no need to setup additional
+services or infrastructure. In this reference architecture, there are a
+multitude of components.
 
 ![Calico Components](/images/guides/kubernetes/container-networking/diagrams/calico-components.png)
 
@@ -110,7 +111,7 @@ will eventually be seen and enforced in each calico-node.
 ### Typha
 
 Typha is a process that fans out configuration to all calico-node instances in a
-cluster. It acts as a cache that can de-dupe events from the API server,
+cluster. It acts as a cache that can de-duplicate events from the API server,
 lessening load significantly. As the Calico datastore changes, these changes
 must be propagated to every instance of calico-node, which can be hundreds or
 thousands of instances. This creates scaling issues in a cluster with more than
@@ -165,9 +166,9 @@ this datastore are:
 - [IPPool](https://docs.projectcalico.org/reference/resources/ippool)
 
   - Represents the pool(s) of IP addresses and their preferences from which
-    endpoint IPs will be assigned to pods. You can set an IPPool's encapsulation
+    endpoint IPs will be assigned to pods. You can set the pool's encapsulation
     protocol such as IP-in-IP, VXLAN, or Native. A cluster can have multiple
-    IPPools, each with its own configuraiton.
+    IPPools, each with its own configuration.
 
 - [NetworkPolicy](https://docs.projectcalico.org/reference/resources/networkpolicy)
 
@@ -209,7 +210,7 @@ Support for a Kubernetes backend was introduced after the etcd backend. For some
 time after its release, it did not offer the same features as the etcd backend.
 In current Calico (3.9+), feature parity has been achieved. Another issue with
 the Kubernetes backend was its inability to scale. With hundreds of Felix
-instances trying to interact with the kube-apiserver to get the lastest updates
+instances trying to interact with the kube-apiserver to get the latest updates
 and changes, it had a negative impact on the system. This has been remedied with
 the introduction of [Typha](https://github.com/projectcalico/typha). With the
 feature parity and scalability solved, the etcd mode incurs an unnecessary cost
@@ -344,12 +345,12 @@ Calico supports 3 routing modes:
 
 1. Native: Packets routed as-is, no encapsulation.
 
-1. IP-in-IP: Minimal encapsulation; outer header includes host src/dst IPs and
-   inner header includes pod src/dst.
+1. IP-in-IP: Minimal encapsulation; outer header includes host
+   source/destination IPs and inner header includes pod source/destination.
 
 1. VXLAN: Robust encapsulation using UDP over IP; outer header includes host
-   src/dst IP addresses and inner header includes pod src/dst IP addresses as
-   well as Ethernet headers.
+   source/destination IP addresses and inner header includes pod
+   source/destination IP addresses as well as Ethernet headers.
 
 #### Native
 
@@ -381,7 +382,7 @@ This routing mode can be problematic in environments that:
 1. Cross multiple subnets or feature routers that rely on the destination IP to
    determine the host it should route the packet to.
 
-2. Enforce src/dst checks for inbound packets.
+2. Enforce source/destination checks for inbound packets.
    - Some networks such as AWS allow you to disable these checks.
 
 ![Calico Inbound Checks](/images/guides/kubernetes/container-networking/calico-src-dst-check.png)
@@ -407,7 +408,7 @@ targeting a node's mac address or a router depending on whether the request is
 crossing a subnet boundary.
 
 In order to facilitate this model, Felix programs the route table to use
-ipip tunnel interfaces to provide routing across nodes.
+IP-in-IP tunnel interfaces to provide routing across nodes.
 
 ![Calico IP-in-IP Route Table](/images/guides/kubernetes/container-networking/calico-route-table-ipinip.png)
 
@@ -423,7 +424,7 @@ network topologies. Environments where this model can be problematic are:
 
 VXLAN is a feature-rich form of encapsulation that enables the creation of
 virtualized layer 2 networks. This is achieved by completely encapsulating the
-pod's ethernet frame and adding some VXLAN-specific header information. The
+pod's ethernet frame and adding some header information specific to VXLAN. The
 VXLAN mode **does not** require BGP, which is ideal for environments where BGP
 peering is blocked. When running in this mode, the packet structure looks as
 shown in the diagram below:
@@ -434,7 +435,7 @@ Note the outer ethernet frame destination is set to the `$GATEWAY`, this could
 be targeting a node's mac address or a router depending on whether the request
 is crossing a subnet boundary.
 
-In order to facilitate this model, Felix programs the route table to use vxlan
+In order to facilitate this model, Felix programs the route table to use VXLAN
 tunnel interfaces to provide routing across nodes.
 
 ![Calico Route Table (VXLAN)](/images/guides/kubernetes/container-networking/calico-route-table-vxlan.png)
@@ -442,14 +443,14 @@ tunnel interfaces to provide routing across nodes.
 VXLAN is arguably a more complex encapsulation option. However, it's a known and
 capable protocol, which a network team may prefer.
 
-### Single-Subnet Configuration
+### Single Subnet Configuration
 
 For clusters deployed in a single subnet, use the Native routing mode. This will
 provide the best performance and simplest network model as there will be no
-encapsulation. Packets traversing the network will contain the src/dst IPs of
-pods in their IP headers. If for any reason, networks or hosts cannot allow this
-type of configuration, you'll need to look into a full IP-in-IP configuration
-instead.
+encapsulation. Packets traversing the network will contain the source and
+destination IPs of pods in their IP headers. If for any reason, networks or
+hosts cannot allow this type of configuration, you'll need to look into a full
+IP-in-IP configuration instead.
 
 ![Calico Single Subnet](/images/guides/kubernetes/container-networking/diagrams/calico-single-subnet.png)
 
@@ -507,7 +508,7 @@ With this setting enabled, native routing is used for all intra-subnet
 communication and IP-in-IP (encapsulation) is used when crossing the subnet
 boundary as illustrated in the diagram below:
 
-![Calico Multi Subnet](/images/guides/kubernetes/container-networking/diagrams/calico-multi-subnet.png)
+![Calico Multi-Subnet](/images/guides/kubernetes/container-networking/diagrams/calico-multi-subnet.png)
 
 In our experience, the majority of clusters span subnets. Thus, this is the most
 common recommended topology.
@@ -551,9 +552,10 @@ spec:
 ### Full IP-in-IP Configuration
 
 If native routing for intra-subnet traffic is not possible in your environment,
-e.g. the network performs src/dst checks against the IP datagram, you can use
-full IP-in-IP configuration. This is the default for most Calico deployments. To
-verify that, you can check the following in the `calico-node` manifest:
+e.g. the network performs source/destination checks against the IP datagram, you
+can use full IP-in-IP configuration. This is the default for most Calico
+deployments. To verify that, you can check the following in the `calico-node`
+manifest:
 
 ```yaml
 env:
@@ -928,7 +930,7 @@ spec:
 Calico supports making pod and service networks routable to the entire network.
 By default, the pod network and service networks are only routable from the
 hosts that `calico-node` runs on. The need for routable pod and service networks
-should be considered carefully. In many architectures, an external loadbalancer
+should be considered carefully. In many architectures, an external load balancer
 paired with an ingress controller can achieve a more idiomatic network topology
 for Kubernetes. Making these networks routable can come with some downsides:
 
@@ -939,8 +941,8 @@ for Kubernetes. Making these networks routable can come with some downsides:
 
 - Service IPs, when routable, are still backed by `kube-proxy`.
 
-  - `kube-proxy` implements simple round-robin loadbalancing with IPtables.
-    The limited routing capabilities and scalabiliy of IPtables may be a
+  - `kube-proxy` implements simple round-robin load balancing with IPtables.
+    The limited routing capabilities and scalability of IPtables may be a
     concern.
 
 - Routing pod networks can consume a large chunk of an organization's IPv4 space.
@@ -993,7 +995,7 @@ The routable pods model relies on labels in the
 [Node](https://docs.projectcalico.org/v3.11/reference/resources/node) CRD. The
 above requires a common label for nodes containing non-routable pods and labels
 for nodes containing routable pods. To start, the cluster adds a label qualifier
-to only apply the default-ippool to specific nodes (based on label).
+to only apply the default IPPool to specific nodes (based on label).
 
 ```yaml
 apiVersion: projectcalico.org/v3

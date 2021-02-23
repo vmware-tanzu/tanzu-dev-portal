@@ -35,7 +35,7 @@ It is important to keep in mind that thresholds and the severity of alerts will
 vary for each environment. Platform operators can use this guide as a starting
 point for their monitoring implementation.
 
-## Etcd
+## etcd
 
 ### Member Down
 
@@ -65,21 +65,21 @@ point for their monitoring implementation.
   require writing to etcd are not possible. These operations include deploying
   new applications, scaling existing workloads, adding new nodes, etc.
 
-### Increased GRPC Request Failures
+### Increased gRPC Request Failures
 
-- _Threshold:_ >5% failure reate for 5 minutes 
+- _Threshold:_ >5% failure rate for 5 minutes 
 - _Severity:_ Critical
 - _Metrics:_ `grpc_server_handled_total`
-- _Notes:_ An increase in the number of GRPC request failures can impact the
+- _Notes:_ An increase in the number of gRPC request failures can impact the
   operation of the Kubernetes cluster. The `--metrics` etcd command line flag
   must be set to `extensive` for etcd to generate request-related metrics.
 
-### Slow GRPC Requests
+### Slow gRPC Requests
 
 - _Threshold:_ 99th percentile response time >150 milliseconds for 10 minutes
 - _Severity:_ Critical
 - _Metrics:_ `grpc_server_handling_seconds_bucket`
-- _Notes:_ An increase in latency of GRPC requests can impact the operation of
+- _Notes:_ An increase in latency of gRPC requests can impact the operation of
   the Kubernetes cluster. The `--metrics` etcd command line flag must be set to
   `extensive` for etcd to generate latency-related metrics.
 
@@ -246,7 +246,7 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Severity:_ Critical
 
-## Kube-proxy
+## kube-proxy
 
 Monitoring kube-proxy is critical to ensure workloads can access Pods and
 Services running on other nodes.

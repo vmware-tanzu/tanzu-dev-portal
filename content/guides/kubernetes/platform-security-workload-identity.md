@@ -18,18 +18,18 @@ team approaches workload identity in enterprise Kubernetes environments.
 Each section covers architectural recommendations and, at times, configuration
 for each concern. At a high-level, the key recommendations are:
 
-* Selectors that determine the identity of a workload (image ID, service
+- Selectors that determine the identity of a workload (image ID, service
   account, node name etc...) should be scoped as tightly as possible to ensure a
   strong guarantee of unique identity.
-* Identity-providing systems should be able to easily rotate and revoke granted
+- Identity-providing systems should be able to easily rotate and revoke granted
   identities in the case of compromise.
-* Prefer integrating identity solutions into a service mesh or sidecar to avoid
+- Prefer integrating identity solutions into a service mesh or sidecar to avoid
   tightly-coupling identity into your applications.
-* Ensure you understand the security model (including the blast radius of a
+- Ensure you understand the security model (including the blast radius of a
   compromise at any level) of your identity provider. Develop and test a
   contingency strategy should credentials be compromised at different points.
-* Avoid using network primitives (IP addresses, etc...) as identities.
-* Understand the domains throughout which identity has to be proved (single /
+- Avoid using network primitives (IP addresses, etc...) as identities.
+- Understand the domains throughout which identity has to be proved (single /
   multi-cluster, single / multi-cloud, Kubernetes / non-Kubernetes, etc...).
 
 ## Identity and Authentication
@@ -77,7 +77,7 @@ need it.
 
 You also need a way to easily rotate secret credentials in the case of a
 compromise. Again you need to ensure that secrets are distributed to all calling
-applications and kept in sync. There are many secret stores ([Hashicorp
+applications and kept in sync. There are many secret stores ([HashiCorp
 Vault](https://www.hashicorp.com/products/vault/) is a prominent and mature
 example) that offer integrations that get close to this goal however these still
 suffer from the initial _secure introduction problem_.
@@ -87,7 +87,7 @@ problem](https://learn.hashicorp.com/vault/identity-access-management/iam-secure
 is the issue that is faced when initially bootstrapping application access to a
 secret store. Once the authenticated communication is established, you have no
 problems refreshing / rotating and so on. However, how does the application
-authenticate to the secret store *_initially_*?
+authenticate to the secret store _*initially*_?
 
 In the example below, the backend application holds a database of authorized
 credentials. However, you need to distribute a set of credentials to the
@@ -97,12 +97,12 @@ frontend application in order for a connection to be established.
 
 Advantages:
 
-* Well-understood and supported pattern by almost all applications & platforms.
+- Well-understood and supported pattern by almost all applications & platforms.
 
 Disadvantages:
 
-* Suffers from the secure introduction problem.
-* Keeping track of, rotating and revoking credentials is challenging, especially
+- Suffers from the secure introduction problem.
+- Keeping track of, rotating and revoking credentials is challenging, especially
   in large environments.
 
 Shared secrets should only be used in conjunction with a robust secret store /
@@ -158,13 +158,13 @@ is only being used to _Authenticate_ the request.
 
 Advantages:
 
-* Transparent to end users.
-* Tight integration with the platform (AWS, GCP, etc...).
+- Transparent to end users.
+- Tight integration with the platform (AWS, GCP, etc...).
 
 Disadvantages:
 
-* Requires all workloads to be running on the same platform.
-* Granularity of identifying metadata may not match granularity of workloads
+- Requires all workloads to be running on the same platform.
+- Granularity of identifying metadata may not match granularity of workloads
   (_see AWS section below_).
 
 ## Kubernetes Identity Primitives / Methods
@@ -175,7 +175,7 @@ all with varying degrees of guarantees, complexity and versatility.
 ### Certificate Signing Requests (CSR)
 
 Any entity with appropriate RBAC permissions can submit a certificate signing
-request (containing metadata to be encoded into an x509 certificate) to a
+request (containing metadata to be encoded into a x509 certificate) to a
 Kubernetes cluster. A user (or automated tooling) then approves or denies the
 request. If the request is approved, a certificate signed by the Kubernetes CA
 is created and made available for retrieval. This certificate can then be used
@@ -191,12 +191,12 @@ publishing it in a config map.
 ```yaml
 spec:
   containers:
-  - command:
-    - kube-controller-manager
-    - --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
-    - --cluster-signing-key-file=/etc/kubernetes/pki/ca.key
-    # Additional flags removed for brevity
-    image: k8s.gcr.io/kube-controller-manager:v1.17.3
+    - command:
+        - kube-controller-manager
+        - --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
+        - --cluster-signing-key-file=/etc/kubernetes/pki/ca.key
+      # Additional flags removed for brevity
+      image: k8s.gcr.io/kube-controller-manager:v1.17.3
 ```
 
 Firstly the application needs to create (or utilize an existing) private key and
@@ -210,7 +210,7 @@ openssl req -new -key my-app.key -out my-app.csr -subj "/CN=my-application"
 Next you need to apply a CSR object into the cluster that utilizes the created
 `my-app.csr` file above. Below is an example of the request as a YAML object,
 but this could (and probably would, in an automated flow) be applied
-programatically via the Kubernetes API.
+programmatically via the Kubernetes API.
 
 ```yaml
 cat <<EOF | kubectl apply -f -
@@ -245,19 +245,19 @@ metadata:
   name: my-app
 spec:
   groups:
-  - system:serviceaccounts
-  - system:serviceaccounts:default
-  - system:authenticated
+    - system:serviceaccounts
+    - system:serviceaccounts:default
+    - system:authenticated
   request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQ1hqQ0NBVVlDQVFBd0dURVhNQlVHQTFVRUF3d09iWGt0WVhCd2JHbGpZWFJwYjI0d2dnRWlNQTBHQ1NxRwpTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFEb1hiV2FhUXVGTG9wckx6cjNNZVZnQWVwTThOUnRUQ2diClNiczk2bHVmY0tjMjFkamNFN0JHNkNmYS91NE1zTktyQnRWN2g1SEZxekM5TTArVGJwN1lmcHJLcHFYTEZhdmIKVUdSbExHZk5hUDdtS0xOMFVQTmV6d3d4d1NRdUJTNXcxMTJONElpWnV1eFhXQlNqeFVRNmtEYkx4U1pSQkxzUgp6YTBldVJkRm0wSnJuRzFzVmp4ZUFUZUx5WU90YmV0VXhTOThnOUtIZXJoSFVuNzBOM0hqeXRwRXdOT3lPV2QwCnlVVVlEYWp4bFcwSFl0VndwYkx6VnYvVk92cjFibmR1NUh0MFBwbmY5cUVsSCtxZ1hqOTIxNWFUaG1WY0RXVmQKMUhTMFdwNEVNRnpnRmMzSlRSUGtMYk9wY0haRGxuSS9ESFpkZm81TVZUblFQTzM3YzJBSkFnTUJBQUdnQURBTgpCZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFUalV4Y25tOTZKT1VWSVNibWxjaW1wSndGSDhmZG4ydXlBSmJyaFpmCkNiOEYvdE5KWXhtUlRRWVpvQ0Z5aGEzb1hRSGh4T0FGeUZsREUrZ0tDem9CL2JPenFqZjdQZFlQVG1uTldHc0kKcndnZmZ1U2NXUkJsMGZrNGlUNU0vK0x0aUIvNnkzQTJIODE0dTF5dTQ5SmNBYXB2NE5XbUNra08vZE01cDlXcQorbmFubmVWS0FjZzlTQVpFK0JUQ2N6dVhQUm4zV2RxTzRoMUM5djgzQXRzRWt4Q0xBU1g4TU1QM1hJUnhPaHdUCkhkQWZ6bitMa0lQNTNndDNWeFFaK3RsOUVxNXN4OWZBM1JxcWEzZktsREpXN2MvSWZPcjN1Rnd2OGlid0ZuY3cKRUJnLzA3ZXdPNmR0ZjJRdUhzeHNuNW1KL2FicUdJWEppYW5CdTF4Mjl6Z0xsQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
   usages:
-  - client auth
+    - client auth
   username: system:serviceaccount:default:default
 status: {}
 ```
 
 In this flow, a Kubernetes platform operator is responsible for ensuring that
-the certificate should be granted based on the metadata contained within the
-request and the requestor's username / service account. Once approved, the
+the certificate should be granted, based on the metadata contained within the
+request and the username / service account of the requestor. Once approved, the
 requestor can retrieve the certificate (in the `status` field of the CSR) and
 use it (in conjunction with their private key) in TLS communications.
 
@@ -270,10 +270,10 @@ metadata:
 status:
   certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURBRENDQWVpZ0F3SUJBZ0lVWm9JL3pCQS9xckhmVzhWQ3o4dGJST0ZGU1g4d0RRWUpLb1pJaHZjTkFRRUwKQlFBd0ZURVRNQkVHQTFVRUF4TUthM1ZpWlhKdVpYUmxjekFlRncweU1EQXpNRFF4TlRReE1EQmFGdzB5TVRBegpNRFF4TlRReE1EQmFNQmt4RnpBVkJnTlZCQU1URG0xNUxXRndjR3hwWTJGMGFXOXVNSUlCSWpBTkJna3Foa2lHCjl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUE2RjIxbW1rTGhTNktheTg2OXpIbFlBSHFUUERVYlV3b0cwbTcKUGVwYm4zQ25OdFhZM0JPd1J1Z24ydjd1RExEU3F3YlZlNGVSeGFzd3ZUTlBrMjZlMkg2YXlxYWx5eFdyMjFCawpaU3hueldqKzVpaXpkRkR6WHM4TU1jRWtMZ1V1Y05kZGplQ0ltYnJzVjFnVW84VkVPcEEyeThVbVVRUzdFYzJ0Ckhya1hSWnRDYTV4dGJGWThYZ0UzaThtRHJXM3JWTVV2ZklQU2gzcTRSMUorOURkeDQ4cmFSTURUc2psbmRNbEYKR0EybzhaVnRCMkxWY0tXeTgxYi8xVHI2OVc1M2J1UjdkRDZaMy9haEpSL3FvRjQvZHRlV2s0WmxYQTFsWGRSMAp0RnFlQkRCYzRCWE55VTBUNUMyenFYQjJRNVp5UHd4MlhYNk9URlU1MER6dCszTmdDUUlEQVFBQm8wUXdRakFUCkJnTlZIU1VFRERBS0JnZ3JCZ0VGQlFjREFqQU1CZ05WSFJNQkFmOEVBakFBTUIwR0ExVWREZ1FXQkJUdWp1WE0KbUVGNFNxNHlkVkljM04zUW01WGdnVEFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBaUIzOS9aWFpRTjQwYmhJRQoxQXc3UmZwaGhqVkZVTEMvT1M3QldPRUxLMjdyVVNYR1U5UWdtejNDbXdwUlo2MktFZ0RLNldGMkdqRXo0K3lvCnpiQitRMU9wd1VaLysvalJiaS91ZE1VUnZEbGdENDNXV2RObnZiYUlTZTI0aGNYSnhjQ2hlWDdmSDNsTUVXVGsKTnJaM3Y4L2dGZEErQVdSV0lJamhHY1UxTi9WZmpNSXhDWVFIK3E1a2NYSFVVTXN1OEtzcFd4elc0encvNnpTbQpISVVyTWMwb2xwQU1lUGQ0cTJvTDZ1VHJZK0lJWWcxUGFSdWhHVjg2cTJ3dVFraFBCTks4Tm5ybTNNY2s4TUczCmJPM0Ntcm9SZnJZQ0VtNnk4dmpmTnZzbzhCd25qR1R0QUY0RlQybEtIQjZqVnVDaHF2Y01vYWpranViUXlmZmsKQWJ5bjVnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
   conditions:
-  - lastUpdateTime: "2020-03-04T15:45:30Z"
-    message: This CSR was approved by kubectl certificate approve.
-    reason: KubectlApprove
-    type: Approved
+    - lastUpdateTime: "2020-03-04T15:45:30Z"
+      message: This CSR was approved by kubectl certificate approve.
+      reason: KubectlApprove
+      type: Approved
 ```
 
 In this example, other applications within the cluster can use the Kubernetes CA
@@ -286,27 +286,27 @@ applications that require the ability to verify provided certificates.
 
 Advantages:
 
-* Tight integration with the platform (Kubernetes).
-* Flexible, supports a wide range of [key
+- Tight integration with the platform (Kubernetes).
+- Flexible, supports a wide range of [key
   usages](https://godoc.org/k8s.io/api/certificates/v1beta1#KeyUsage) (signing,
   client, server, etc...).
-* Provides identity in a well-understood and consumable format (x509).
+- Provides identity in a well-understood and consumable format (x509).
 
 Disadvantages:
 
-* Requires manual intervention or development of additional tooling to verify
+- Requires manual intervention or development of additional tooling to verify
   and approve certificate requests.
-* Impossible to revoke certificates in the case of compromise. This could be
+- Impossible to revoke certificates in the case of compromise. This could be
   mitigated by using certificates with short TTLs but would require additional
   logic to keep requesting new certs.
-* Only works with services running on a single Kubernetes cluster.
+- Only works with services running on a single Kubernetes cluster.
 
 ### Service Account Tokens (SAT)
 
 {{% aside title="Service Accounts & Tokens" %}}
 Service Accounts are primitives in Kubernetes that provide identity for groups
 of pods. Every pod runs under a service account. If a service account is not
-pre-created by an administator and assigned to a pod, they are assigned a
+pre-created by an administrator and assigned to a pod, they are assigned a
 default service account for the namespace they reside in.
 
 Service account tokens are JSON Web Tokens (JWT) that are created as Kubernetes
@@ -329,7 +329,7 @@ metadata:
   name: default
   namespace: default
 secrets:
-- name: default-token-mf9v2
+  - name: default-token-mf9v2
 ```
 
 When a service account is created, an associated Secret is also created
@@ -398,25 +398,25 @@ addition to whether or not it has been authenticated.
 ```json
 {
   "kind": "TokenReview",
-    "apiVersion": "authentication.k8s.io/v1",
-    "metadata": {
-        "creationTimestamp": null
-    },
-    "spec": {
-        "token": "<token to verify>"
-    },
-    "status": {
-        "authenticated": true,
-        "user": {
-            "username": "system:serviceaccount:default:default",
-            "uid": "4afdf4d0-46d2-11e9-8716-005056bf4b40",
-            "groups": [
-                "system:serviceaccounts",
-                "system:serviceaccounts:default",
-                "system:authenticated"
-            ]
-        }
+  "apiVersion": "authentication.k8s.io/v1",
+  "metadata": {
+    "creationTimestamp": null
+  },
+  "spec": {
+    "token": "<token to verify>"
+  },
+  "status": {
+    "authenticated": true,
+    "user": {
+      "username": "system:serviceaccount:default:default",
+      "uid": "4afdf4d0-46d2-11e9-8716-005056bf4b40",
+      "groups": [
+        "system:serviceaccounts",
+        "system:serviceaccounts:default",
+        "system:authenticated"
+      ]
     }
+  }
 }
 ```
 
@@ -424,21 +424,21 @@ addition to whether or not it has been authenticated.
 
 Advantages:
 
-* Tight integration with the platform (Kubernetes).
-* Provides identity in a well-understood and consumable format (JWT).
-* Invalidated once the service account / Secret is deleted.
+- Tight integration with the platform (Kubernetes).
+- Provides identity in a well-understood and consumable format (JWT).
+- Invalidated once the service account / Secret is deleted.
 
 Disadvantages:
 
-* Tokens do not have a TTL and not expire (unless the service account / Secret
+- Tokens do not have a TTL and not expire (unless the service account / Secret
   is deleted).
-* Tokens are scoped to the service account so are not a good unique way of
+- Tokens are scoped to the service account so are not a good unique way of
   identifying either a Pod or a container.
-* Additional functionality must be added to applications to be aware of and
+- Additional functionality must be added to applications to be aware of and
   verify Kubernetes tokens.
-* Tokens are persisted in the Kubernetes Secrets API and must have access to them
+- Tokens are persisted in the Kubernetes Secrets API and must have access to them
   restricted.
-* Only works with services running on a single Kubernetes cluster.
+- Only works with services running on a single Kubernetes cluster.
 
 {{% aside title="Service Account Best Practices" %}}
 To ensure that permissions can be granted to applications in an appropriately
@@ -458,21 +458,21 @@ available that builds on the ideas in Service Account Tokens but seeks to
 address some of the weaknesses (such as lack of TTL, wide scoping and
 persistence).
 
-Note that in order for the PSAT flow to function correctly the apiserver needs
+Note that in order for the PSAT flow to function correctly the API server needs
 to be configured with the parameter keys shown below (all are configurable
 though).
 
 ```yaml
 spec:
   containers:
-  - command:
-    - kube-apiserver
-    - --service-account-signing-key-file=/etc/kubernetes/pki/sa.key
-    - --service-account-key-file=/etc/kubernetes/pki/sa.pub
-    - --service-account-issuer=api
-    - --service-account-api-audiences=api
-    # Additional flags removed for brevity
-    image: k8s.gcr.io/kube-apiserver:v1.17.3
+    - command:
+        - kube-apiserver
+        - --service-account-signing-key-file=/etc/kubernetes/pki/sa.key
+        - --service-account-key-file=/etc/kubernetes/pki/sa.pub
+        - --service-account-issuer=api
+        - --service-account-api-audiences=api
+      # Additional flags removed for brevity
+      image: k8s.gcr.io/kube-apiserver:v1.17.3
 ```
 
 The flow for establishing and verifying identity is similar to the SAT method.
@@ -491,20 +491,20 @@ metadata:
 spec:
   serviceAccountName: test
   containers:
-  - name: test
-    image: ubuntu:bionic
-    command: ['sh', '-c', 'echo Hello Kubernetes! && sleep 3600']
-    volumeMounts:
-    - mountPath: /var/run/secrets/tokens
-      name: app-token
+    - name: test
+      image: ubuntu:bionic
+      command: ["sh", "-c", "echo Hello Kubernetes! && sleep 3600"]
+      volumeMounts:
+        - mountPath: /var/run/secrets/tokens
+          name: app-token
   volumes:
-  - name: app-token
-    projected:
-      sources:
-      - serviceAccountToken:
-          audience: api
-          expirationSeconds: 600
-          path: app-token
+    - name: app-token
+      projected:
+        sources:
+          - serviceAccountToken:
+              audience: api
+              expirationSeconds: 600
+              path: app-token
 ```
 
 Note that when using PSAT, a designated service account must be created and
@@ -534,20 +534,20 @@ validity and granularity of the identity asserted by the token.
 
 Advantages:
 
-* Tight integration with the platform (Kubernetes).
-* Provides identity in a well-understood and consumable format (JWT).
-* Invalidated once the service account / Secret is deleted.
-* Scoped to individual Pods.
-* Configurable TTL.
-* Configurable audience.
-* Not persisted in the Kubernetes Secrets API.
-* Tokens are rotated before expiry automatically by the Kubelet (if using projection).
+- Tight integration with the platform (Kubernetes).
+- Provides identity in a well-understood and consumable format (JWT).
+- Invalidated once the service account / Secret is deleted.
+- Scoped to individual Pods.
+- Configurable TTL.
+- Configurable audience.
+- Not persisted in the Kubernetes Secrets API.
+- Tokens are rotated before expiry automatically by the Kubelet (if using projection).
 
 Disadvantages:
 
-* Additional functionality must be added to applications to be aware of and
+- Additional functionality must be added to applications to be aware of and
   verify Kubernetes tokens.
-* Only works with services running on a single Kubernetes cluster.
+- Only works with services running on a single Kubernetes cluster.
 
 ### Container Network Interface (CNI)
 
@@ -603,7 +603,7 @@ label `app: summary` and restrict access to Pods calling from the `customer`
 service account (in namespaces with the label `app: bank`). This works because
 the Calico control-plane (the Felix node agent) computes rules by reconciling
 Pods that are running under a specific service account with their IP addresses
-and subsequently syncing this information to Diskastes via a Unix socket.
+and subsequently syncing this information to Dikastes via a Unix socket.
 
 This out-of-band verification is important as it mitigates a potential attack
 vector in an Istio environment. Istio stores each service account's PKI assets
@@ -614,18 +614,18 @@ running as that account.
 
 Advantages:
 
-* If platforms are already leveraging Calico (either as CNI or only for network
+- If platforms are already leveraging Calico (either as CNI or only for network
   policy), Dikastes provides an extra layer of defense in depth.
-* Easy-to-understand syntax / user experience and format (CRDs).
-* Calico and Istio are cross-platform so can be used across Kubernetes and
+- Easy-to-understand syntax / user experience and format (CRDs).
+- Calico and Istio are cross-platform so can be used across Kubernetes and
   non-Kubernetes environments.
 
 Disadvantages:
 
-* Requires platforms to already be using a mesh or proxy solution, this often
+- Requires platforms to already be using a mesh or proxy solution, this often
   comes with additional complexity overhead.
-* Adds additional latency into the data plane (Diskastes is consulted on every request).
-* Identity claims are not independently cryptographically verifiable, relying
+- Adds additional latency into the data plane (Dikastes is consulted on every request).
+- Identity claims are not independently cryptographically verifiable, relying
   on the mesh to be present with every connected service.
 
 #### Cilium
@@ -646,7 +646,7 @@ hooks at various points in the datapath.
 The example below shows the output of listing Cilium endpoints (Pods). The
 `deathstar-657477f57d-zzz65` has one additional label from the other Pods in the
 Deployment, and is assigned a different identity. All Pods in the Deployment
-share a namespace, service account and several abitrary Kubernetes labels.
+share a namespace, service account and several arbitrary Kubernetes labels.
 
 ```shell
 NAMESPACE     NAME                              ENDPOINT ID   IDENTITY ID   INGRESS ENFORCEMENT
@@ -674,17 +674,17 @@ spec:
     matchLabels:
       io.cilium.k8s.policy.serviceaccount: leia
   ingress:
-  - fromEndpoints:
-    - matchLabels:
-        io.cilium.k8s.policy.serviceaccount: luke
-    toPorts:
-    - ports:
-      - port: '80'
-        protocol: TCP
-      rules:
-        http:
-        - method: GET
-          path: "/public$"
+    - fromEndpoints:
+        - matchLabels:
+            io.cilium.k8s.policy.serviceaccount: luke
+      toPorts:
+        - ports:
+            - port: "80"
+              protocol: TCP
+          rules:
+            http:
+              - method: GET
+                path: "/public$"
 ```
 
 In the example above, we are using special `io.cilium.k8s.policy.*` label
@@ -693,15 +693,15 @@ its registry of identities to restrict / allow access as necessary.
 
 Advantages:
 
-* Cilium is cross-platform so can be used across Kubernetes and
+- Cilium is cross-platform so can be used across Kubernetes and
   non-Kubernetes environments.
-* No additional solutions besides Cilium are required.
-* Increases the complexity of the network stack (for troubleshooting /
+- No additional solutions besides Cilium are required.
+- Increases the complexity of the network stack (for troubleshooting /
   debugging, etc...).
 
 Disadvantages:
 
-* Identity claims are not independently cryptographically verifiable, relying
+- Identity claims are not independently cryptographically verifiable, relying
   on Cilium to be present with every connected service.
 
 ## AWS Platform Identity Methods / Tooling
@@ -738,7 +738,7 @@ architecture is shown below:
 
 ![Kube2IAM](/images/guides/kubernetes/platform-security/workload-identity-kube2iam.png)
 
-Kube2IAM Pods run on every node via a Daemonset. Each Pod injects an iptables
+Kube2IAM Pods run on every node via a DaemonSet. Each Pod injects an iptables
 rule to capture outbound traffic to the metadata API and redirect it to the
 running instance of Kube2IAM on that node.
 
@@ -760,10 +760,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.9.1
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:1.9.1
+          ports:
+            - containerPort: 80
 ```
 
 ### KIAM
@@ -781,7 +781,7 @@ improved.
 
 ![KIAM](/images/guides/kubernetes/platform-security/workload-identity-kiam.png)
 
-KIAM has both server and agent components. The agents run as a Daemonset on
+KIAM has both server and agent components. The agents run as a DaemonSet on
 every node in the cluster. The server component can (and should) be restricted
 to the either the control-plane nodes or a subset of cluster nodes. Agents
 capture EC2 metadata API requests and forward them to the server components to
@@ -811,10 +811,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.9.1
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:1.9.1
+          ports:
+            - containerPort: 80
 ```
 
 While the security model is better than Kube2IAM, KIAM still has a potential
@@ -843,7 +843,7 @@ IAM called
 [IAM Roles for Service Accounts](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/)
 (IRSA).
 
-At a high level, IRSA exposes a similiar experience to KIAM and Kube2IAM, in
+At a high level, IRSA exposes a similar experience to KIAM and Kube2IAM, in
 that users can annotate their Pods with an AWS IAM role they want it to assume.
 The implementation is very different though, eliminating the security concerns
 of the earlier approaches.
@@ -900,15 +900,15 @@ PSAT for the desired IAM role credentials.
 
 Advantages:
 
-* Tight integration with AWS using familiar primitives for those customers
+- Tight integration with AWS using familiar primitives for those customers
   already invested in the platform.
-* Easy-to-understand mapping model between service accounts and roles.
-* Webhook makes consumption straightforward once everything else is configured.
-* Strong security model.
+- Easy-to-understand mapping model between service accounts and roles.
+- Webhook makes consumption straightforward once everything else is configured.
+- Strong security model.
 
 Disadvantages:
 
-* Complex to configure if not using EKS.
+- Complex to configure if not using EKS.
 
 _*IRSA is the recommended approach for providing AWS access to applications
 running on Kubernetes.*_
@@ -934,7 +934,7 @@ SPIRE runs a server component that acts a signing authority for identities, and
 maintains a registry of all workload identities and the conditions required for
 an identity document to be issued.
 
-SPIRE agents run on every node as a Daemonset where they expose an API for
+SPIRE agents run on every node as a DaemonSet where they expose an API for
 workloads to request identity via a Unix socket. The agent is also configured
 with read-only access to the Kubelet to determine metadata about Pods on the Node.
 
@@ -944,7 +944,7 @@ When agents come online they verify and register themselves to the server by a
 process called _node attestation_. This process utilizes environmental context
 (for example the AWS EC2 metadata API or Kubernetes PSATs) to identify a node
 and assign it a SPIFFE ID. The server then issues the node an identity in the
-form of an x509 SVID. Shown below is an example registration for a node:
+form of a x509 SVID. Shown below is an example registration for a node:
 
 ```shell
 /opt/spire/bin/spire-server entry create \
@@ -983,11 +983,11 @@ for authentication against other systems.
 The above tells the SPIRE server to assign the SPIFFE ID
 `spiffe://cnr-trust-domain/service-a` to any workload that:
 
-* Is running on a node with ID `spiffe://cnr-trust-domain/nodes`.
-* Is running in the `default` namespace.
-* Is running under the `service-a` service account.
-* Has the Pod label `app: frontend`.
-* Was built using the `docker.io/johnharris85/service-a:v0.0.1` image.
+- Is running on a node with ID `spiffe://cnr-trust-domain/nodes`.
+- Is running in the `default` namespace.
+- Is running under the `service-a` service account.
+- Has the Pod label `app: frontend`.
+- Was built using the `docker.io/johnharris85/service-a:v0.0.1` image.
 
 ![Workload Attestation](/images/guides/kubernetes/platform-security/workload-identity-workload-attestation.png)
 
@@ -996,30 +996,30 @@ requires reachability to the Kubernetes API server. Therefore API server
 downtime can interrupt workload attestation. The
 `--authentication-token-webhook-cache-ttl` kubelet flag controls how long the
 kubelet caches TokenReview responses and may help to mitigate this issue. A
-large cache ttl value is not recommended however, as that can impact permission
+large cache TTL value is not recommended however, as that can impact permission
 revocation.
 
 Advantages:
 
-* Leverages well understood and widely supported cryptographic standards (x509 &
+- Leverages well understood and widely supported cryptographic standards (x509 &
   JWT).
-* Cross-platform supporting both Kubernetes and non-Kubernetes workloads.
-* Can leverage an upstream CA if required.
-* All certificates can be provided in-memory to mitigate compromised disk
+- Cross-platform supporting both Kubernetes and non-Kubernetes workloads.
+- Can leverage an upstream CA if required.
+- All certificates can be provided in-memory to mitigate compromised disk
   access.
-* Supports many application integration points (see below).
-* Supports more granular property selectors than other identity providers.
-* CNCF project.
-* Supports federation between clusters.
-* Regular rotation of secrets.
+- Supports many application integration points (see below).
+- Supports more granular property selectors than other identity providers.
+- CNCF project.
+- Supports federation between clusters.
+- Regular rotation of secrets.
 
 Disadvantages:
 
-* Doesn't support separate certificate authorities for client and server.
-* Is another component to maintain in an environment.
-* Nodes and workloads identities need to be registered. This is manual out of
+- Doesn't support separate certificate authorities for client and server.
+- Is another component to maintain in an environment.
+- Nodes and workloads identities need to be registered. This is manual out of
   the box (but could be automated).
-* Requires a backing datastore to persist identity data (sqlite by default),
+- Requires a backing datastore to persist identity data (sqlite by default),
   raising the complexity of maintaining the solution.
 
 ### Integration Points
@@ -1034,16 +1034,16 @@ coupling to the platform and the amount of control users have over the environme
 Direct integration is not a recommended approach (unless building intermediate tooling) for
 the following reasons:
 
-* Tightly couples the application with the platform / implementation.
-* Requires mounting the SPIRE agent Unix socket into the Pod.
-* Not easily extensible.
-{{% /aside %}}
+- Tightly couples the application with the platform / implementation.
+- Requires mounting the SPIRE agent Unix socket into the Pod.
+- Not easily extensible.
+  {{% /aside %}}
 
 SPIRE provides SDKs for Go, C and Java for applications to directly integrate
 with the SPIFFE workload API. These wrap existing HTTP libraries but provide
 native support for obtaining and verifying identities. Below is an example in Go
 calling a Kubernetes service `service-b` and expecting a specific SPIFFE ID to
-be presented (through an x509 SVID).
+be presented (through a x509 SVID).
 
 ```go
 err := os.Setenv("SPIFFE_ENDPOINT_SOCKET", "unix:///run/spire/sockets/agent.sock")
@@ -1114,11 +1114,11 @@ or build on the methods and tooling detailed in this guide.
 
 In addition to the primary methods above, SPIRE also supports the following:
 
-* Pulling SVIDs and trust bundles directly to a filesystem, enabling
+- Pulling SVIDs and trust bundles directly to a filesystem, enabling
   applications to detect changes and reload. While this enables applications to
   be somewhat agnostic to SPIRE, it also opens an attack vector for
   certificates to be stolen from the filesystem.
-* Nginx module that allows for certificates to be streamed from SPIRE (similiar
+- Nginx module that allows for certificates to be streamed from SPIRE (similar
   to the Envoy integration described above). There are custom modules for Nginx
   that enable users to specify the SPIFFE IDs that should be allowed to connect
   to the server.
@@ -1126,7 +1126,7 @@ In addition to the primary methods above, SPIRE also supports the following:
 ### Integration with Secrets Store (Vault)
 
 SPIRE can be used to solve the secure introduction problem when an application
-needs to obtain some shared secret material from [Hashicorp
+needs to obtain some shared secret material from [HashiCorp
 Vault](https://www.vaultproject.io/). Vault can be configured to authenticate
 clients using OIDC federation with the SPIRE server as an OIDC provider.
 

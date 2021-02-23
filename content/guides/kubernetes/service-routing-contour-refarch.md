@@ -204,8 +204,8 @@ The following diagram shows the connections given the above configuration:
 
 ![HTTPS Ingress with TLS to backend](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-https-to-backend.drawio.png)
 
-By default, Envoy **does not** validate the backend's serving certificate. To
-enable validation, you must specify a `caSecret` and `subjectName` in the
+By default, Envoy **does not** validate the certificate served by the backend.
+To enable validation, you must specify a `caSecret` and `subjectName` in the
 HTTPProxy configuration:
 
 ```yaml

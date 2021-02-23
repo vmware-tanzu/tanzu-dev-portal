@@ -8,10 +8,9 @@ team:
 - Craig Tracey
 ---
 
-
 In order to deploy Kubernetes securely you need to implement the principle of
 least privilege. What this means is that you will allow users to take actions
-against the cluster (eg. create Pods, Services, etc.), but you will ensure that
+against the cluster (e.g. create Pods, Services, etc.), but you will ensure that
 any privileges that you extend to a user will be constrained to include only
 those that are necessary to fulfill the user's needs, and nothing more.
 
@@ -118,9 +117,9 @@ There are no direct LDAP or Active Directory integrations, but it is possible to
 integrate these systems with tools that will act as identity brokers.
 
 One very common tool for brokering various identity backends is
-[dex](https://github.com/dexidp/dex). This service, deployed in-cluster, will
+[Dex](https://github.com/dexidp/dex). This service, deployed in-cluster, will
 allow us to connect various backends, such as LDAP, SAML, Active Directory, and
-similar to an OIDC front-end. Kubernetes may then be configured to utilize dex
+similar to an OIDC front-end. Kubernetes may then be configured to utilize Dex
 as its identity source.
 
 This project was developed by CoreOS, and is currently being proposed for
@@ -202,7 +201,7 @@ many users are often confused by the steps required to generate a certificate.
 And this confusion often leads to reluctance when it comes to proper issuance of
 credentials to new users and/or the reissuance in the case of compromise. In
 fact, a common pattern that we have encountered in-the-wild has been for
-certificates with broad privileges (eg. cluster-admin) to be shared among many
+certificates with broad privileges (e.g. cluster-admin) to be shared among many
 users. This not only severely compromises security, but also limits your ability
 to leverage features like audit logging.
 

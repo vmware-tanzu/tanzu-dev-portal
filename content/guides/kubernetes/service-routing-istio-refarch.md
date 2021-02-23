@@ -14,9 +14,9 @@ keywords:
 A lot of enterprises are embarking on a journey to adopt cloud native
 technologies to meet their technology strategy goals and address internal and
 external challenges. One of the key components of the technology stack is the
-Enterprise Platform as a Service (ePaaS) which will be the target platform for a
-number of migrated and new applications. These applications will be required to
-adopt latest standards in security, performance, scalability and resilience in a
+Platform as a Service (PaaS) which will be the target platform for a number of
+migrated and new applications. These applications will be required to adopt
+latest standards in security, performance, scalability and resilience in a
 manner which is agile and efficient.
 
 In order to adopt these standards, enterprises are looking towards open source
@@ -27,9 +27,9 @@ operational tasks.
 Istio implementation brings it's own challenges, for example:
 
 - Installation and upgrade process using istio-cni.
-- Automation of certificate managmement at the edge (ingress/egress) of mesh.
+- Automation of certificate management at the edge (ingress/egress) of mesh.
 - Different resource definitions
-  (gateway/virtualservice/destinationrule/serviceentry) created while
+  (gateway/VirtualService/DestinationRule/ServiceEntry) created while
   communicating at the edges (ingress/egress) of mesh for different use cases.
 - How to share responsibility across cluster-admin/Mesh Admin/Application
   Developer.
@@ -48,7 +48,7 @@ Some salient features of the implementation are as follows.
   plane.
 - All the communication within the service mesh takes place via mutual TLS.
 - All external communication across two service meshes running in separate
-  clusters takes place via mutual TLS through ingres/egress gateways.
+  clusters takes place via mutual TLS through ingress/egress gateways.
 - In order to implement mutual TLS across service meshes, all TLS certificates
   are provisioned via [centralized vault](https://www.vaultproject.io/).
 - To automate the provisioning of certificate via centralized vault, a
@@ -62,7 +62,7 @@ Some salient features of the implementation are as follows.
 Istio installation refers to Istio control plane installation, which consists of
 following component (pods).
 
-- istio-cni plugin (running as Daemonset) in the kube-system namespace
+- istio-cni plugin (running as DaemonSet) in the kube-system namespace
 - ingress gateway in the istio-system namespace
 - egress gateway in the istio-system namespace
 - istiod in the istio-system namespace
@@ -80,7 +80,7 @@ In order to install Istio, following are the prerequisites.
 #### Istio CNI Plugin
 
 Istio injects initContainer (istio-init) in any pod which is part Istio mesh. It
-programs all the iptable rules required for intercepting all incoming and
+programs all the iptables rules required for intercepting all incoming and
 outgoing request to application pod. These rules are programmed into the pod’s
 network namespace. That requires some elevated privileges. Service accounts
 deploying pods to the mesh need to have sufficient Kubernetes RBAC permissions
@@ -93,12 +93,12 @@ rescue. This plugin is a replacement for the istio-init container that performs
 the same networking functionality but without requiring Istio users to enable
 elevated privileges.
 
-![istio-init vs istio-cni IPTABLES rules configuration
+![istio-init vs istio-cni IPtables rules configuration
 ](/images/guides/kubernetes/service-routing/diagrams/istio-cniandnoncni.png)
 
-The istio-cni is installed as daemonset in the kube-system namespace. The
+The istio-cni is installed as a DaemonSet in the kube-system namespace. The
 rationale behind using kube-system namespace over istio-system is that istio-cni
-does not support mutiltenancy and in the event that multiple control planes are
+does not support multitenancy and in the event that multiple control planes are
 running (this is not possible at the moment) in a single Kubernetes cluster,
 there is no confusion as to which Istio control namespace, istio-cni is running.
 The istio-cni namespace is configurable using components.cni.namespace parameter
@@ -183,7 +183,7 @@ defined as `istio-ca`.
 
 #### Container Registry
 
-In order to install Istio in an offline/airgap environment, a container registry
+In order to install Istio in an offline/airgapped environment, a container registry
 is required which contains all the requires container images needed for
 installation.
 
@@ -224,15 +224,15 @@ Istio can be installed in two different ways.
 - **istioctl command**: Providing the full configuration in an IstioOperator CR
   is considered an Istio best practice for production environments.
 
-- **istio operator**: One needs to consider security implications when using the
+- **Istio operator**: One needs to consider security implications when using the
   operator pattern in Kubernetes. With the istioctl install command, the
   operation will run in the admin user’s security context, whereas with an
   operator, an in-cluster pod will run the operation in its security context.
 
 **NOTE**: All the following steps use the **istioctl command** method.
 
-This command is just for reference to get insatallation quickly and highlighting
-the important parameteres.
+This command is just for reference to get installation quickly and highlighting
+the important parameters.
 
 ```bash
 istioctl manifest install --set profile=demo --set components.cni.enabled=true --set components.cni.namespace=kube-system --set values.global.istioNamespace=istio-system --set values.global.hub={{ REGISTRY_HOSTNAME }}/istio --set meshConfig.outboundTrafficPolicy.mode=REGISTRY_ONLY --set values.global.controlPlaneSecurityEnabled=true --set meshConfig.enablePrometheusMerge=true --set revision=1-7-0
@@ -256,7 +256,7 @@ NAME                    REVISION   STATUS   AGE
 installed-state-1-7-0   1-7-0               143m
 ```
 
-To verify the istio-cni Daemonset is deployed successfully:
+To verify the istio-cni DaemonSet is deployed successfully:
 
 ```bash
 $ kubectl get daemonset -n kube-system
@@ -289,7 +289,7 @@ kubectl get deployments istio-ingressgateway -n istio-system -o yaml|grep -i ima
         image: {{ REGISTRY_HOSTNAME }}/istio/proxyv2:1.7.0
 ```
 
-### Uninstallation Method
+### Uninstall Method
 
 Uninstall control plane (istiod) only:
 
@@ -297,7 +297,7 @@ Uninstall control plane (istiod) only:
 istioctl x uninstall -f istiooperator-airgap-1-7-0.yaml
 ```
 
-- Uninstall Istio completely (including cni):
+- Uninstall Istio completely (including CNI):
 
 ```bash
 istioctl x uninstall -f istiooperator-airgap-1-7-0.yaml --purge
@@ -311,7 +311,7 @@ following considerations are required.
 - Integration of istioctl with the pipeline.Pipeline running it required
   cluster-admin permission.
 - Integration of some security vulnerability tooling with the pipeline, which
-  ensures that there is no security vulnerability before installing istio.
+  ensures that there is no security vulnerability before installing Istio.
 
 ### Conformant with Security Vulnerability
 
@@ -376,7 +376,7 @@ There are different ways of injecting the Istio sidecar into a pod.
     default and enable injection.
 
 Application teams organize the workloads participating in a mesh in single or
-multiple namespaces depending upon the architecture (micorservices bounded
+multiple namespaces depending upon the architecture (microservices bounded
 context/non microservices). Our general recommendation is to keep the mesh and
 non mesh related workloads in different namespaces. Automatic sidecar injection
 with **default configuration** is recommended as it is easier to maintain during
@@ -677,7 +677,7 @@ spec:
 ### Cloud Consideration
 
 Once Istio is installed on any cloud, e.g. AWS, Azure, a Service of Type
-Loadbalancer provisions an external LoadBalancer. For example, an Elastic Load
+LoadBalancer provisions an external LoadBalancer. For example, an Elastic Load
 Balancer is created by default in AWS.
 
 ```bash
@@ -759,7 +759,7 @@ spec:
               servicePort: 80
 ```
 
-**NOTE**: If using an https host for the Ingress, create with passthrough mode
+**NOTE**: If using a HTTPS host for the Ingress, create with passthrough mode
 so that mutual authentication can take place at Istio ingress gateway.
 
 **NOTE**: The above Ingress definition is just for reference. In this document,
@@ -780,7 +780,7 @@ you will put an additional hop on the request path. The following picture
 illustrates on the left side cluster the additional hop to reach to Istio
 ingress gateway as compared to without it on right side.
 
-![Number of hops when using ingress controller in addition to istio](/images/guides/kubernetes/service-routing/istio-ingresscontroller.png)
+![Number of hops when using ingress controller in addition to Istio](/images/guides/kubernetes/service-routing/istio-ingresscontroller.png)
 
 ### Istio Secure Ingress Gateway with mTLS
 
@@ -795,7 +795,7 @@ Following is an example depicting the difference between two (TLS vs mTLS)
 certificate exchanges. Notice how the client certificate is requested and
 verified depicted by yellow line in mTLS traffic flow.
 
-![tls(left) vs mTLS(right) handshake](/images/guides/kubernetes/service-routing/istio-tlsvsmtls.png)
+![TLS(left) vs mTLS(right) handshake](/images/guides/kubernetes/service-routing/istio-tlsvsmtls.png)
 
 As an mTLS service provider, the following certificates are required:
 
@@ -867,8 +867,8 @@ Configure Kubernetes authentication with service account:
 vault-0 -- vault write auth/kubernetes/config token_reviewer_jwt="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443" kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
 ```
 
-A role needs to be created that specify which serviceaccount in which namespace
-can access vault:
+A role needs to be created that specify which ServiceAccount in which namespace
+can access Vault:
 
 ```bash
 vault exec vault-0 -- vault write auth/kubernetes/role/issuer bound_service_account_names=issuer bound_service_account_namespaces={{ controlPlaneNamespace }} policies=pki ttl=20m
@@ -888,7 +888,7 @@ The diagram above describes interaction among different namespaces and vault:
 
 1. **Mesh admin creates** an Issuer in istio-system namespace.
 2. Once Issuer is created, cert-manager auto discovers new certificate-issuer .
-3. cert-manager connects certificate-issuer to centralized vault pki engine.
+3. cert-manager connects certificate-issuer to centralized Vault PKI engine.
 4. **Application Developer creates** Istio gateway definition in dev namespace
    with credentialName required for mutual TLS.
 5. **Application Developer creates** certificate in istio-system namespace with
@@ -896,7 +896,7 @@ The diagram above describes interaction among different namespaces and vault:
 6. cert-manager, which is watching istio-system namespace for any new
    certificate created, picks up the certificate and creates corresponding
    CertificateRequests in istio-system namespace.
-7. cert-manager sends Certificate Sign Request (CSR) to centralized vault pki
+7. cert-manager sends Certificate Sign Request (CSR) to centralized Vault PKI
    engine to sign certificate. Vault signs the certificate. CertificateRequests
    and Certificate turns into Ready state.
 8. cert-manager generates Kubernetes secret in istio-system namespace.
@@ -905,13 +905,13 @@ The diagram above describes interaction among different namespaces and vault:
 
 Mesh Admin needs to perform following steps:
 
-1. create serviceaccount, which is configured above in vault.
+1. create ServiceAccount, which is configured above in Vault.
 
 ```bash
 kubectl -n istio-system create serviceaccount issuer
 ```
 
-2. get the secret from above serviceaccount.
+2. get the secret from above ServiceAccount.
 
 ```bash
 kubectl -n istio-system  get serviceaccount issuer -o json | jq -r .secrets[].name
@@ -1030,7 +1030,7 @@ ca.crt:
 tls.crt:
 
 - Cert Issued by Root CA in vault.
-- Issuing CA crt.
+- Issuing CA certificate.
 - In case vault is configured as Intermediate CA cert, it will consist of
   Intermediate CA cert and complete chain of authority.
 
@@ -1140,7 +1140,7 @@ As a **MeshAdmin**, RequestAuthentication definition can be applied globally
 `jwksUri`: The JSON Web Key Set (JWKS) is a set of keys containing the public keys used to verify any JSON Web Token (JWT).
 
 `forwardOriginalToken`: By default, JWT request tokens are not passed from one
-service to another service. It is the responsibilty of **Application Developer**
+service to another service. It is the responsibility of **Application Developer**
 to pass these tokens from one service to another. This can be set to true to
 pass the JWT Request token to next service. This forward is valid only for first
 hop.
@@ -1176,14 +1176,14 @@ The above AuthorizationPolicy says that any request coming to ingress gateway
 with label `istio: ingressgateway` is denied if it does not have a JWT in
 request header.
 
-A token can be obtained as follows. This is an example of one of the oidc
+A token can be obtained as follows. This is an example of one of the OIDC
 providers: keycloak. This can vary depending upon the provider.
 
 ```bash
 curl -X POST 'http://<OIDC_PROVIDER>/auth/realms/istio/protocol/openid-connect/token' -H "Content-Type: application/x-www-form-urlencoded" -d 'username=prod001&password=< PASSWORD >&grant_type=password&client_id=servicemesh' |jq -r .access_token
 ```
 
-**NOTE**: In above example username is prod001. This will be used to illustrate
+**NOTE**: In above example username is `prod001`. This will be used to illustrate
 some examples in the next section.
 
 ![Sample JWT structure](/images/guides/kubernetes/service-routing/istio-jwttoken.png)
@@ -1226,7 +1226,7 @@ together.
 curl -H --cacert ca.crt --cert tls.crt --key /tls.key -H "Authorization: Bearer <JWT_TOKEN>" https://productpage.bookinfo.appk8s.com/productpage
 ```
 
-## Intra Service Mesh Communication
+## Service Mesh Communication
 
 ### Istio Identity
 
@@ -1252,7 +1252,7 @@ kubectl get secret istio-ca-secret -o=jsonpath='{$.data.ca-cert\.pem}' -n istio-
 ```
 
 One can plug in their own root/intermediate certificate by creating a secret
-named cacerts in istio-system namespace.
+named `cacerts` in istio-system namespace.
 
 ```bash
 kubectl create secret generic cacerts -n istio-system \
@@ -1264,10 +1264,10 @@ kubectl create secret generic cacerts -n istio-system \
 
 ### mTLS Mode
 
-![Intra-cluster mTLS communication](/images/guides/kubernetes/service-routing/istio-intracluster-mtls.png)
+![In-cluster mTLS communication](/images/guides/kubernetes/service-routing/istio-intracluster-mtls.png)
 
 **Mesh Admin** can ensure that all the services inside the mesh are
-communicationg vis mTLS by applying following PeerAuthentication definition:
+communicating via mTLS by applying following PeerAuthentication definition:
 
 ```yaml
 apiVersion: security.istio.io/v1beta1
@@ -1300,8 +1300,8 @@ spec:
         version: v1
 ```
 
-With the DestainationRule tls mode policy set to ISTIO_MUTUAL, the istio CA
-gernerates all the required client and server certificates
+With the DestinationRule TLS mode policy set to ISTIO_MUTUAL, the Istio CA
+generates all the required client and server certificates
 [automatically](https://istio.io/latest/docs/concepts/security/#pki).
 
 The certificate can be verified if they are created using the SPIFFE format
@@ -1314,7 +1314,7 @@ kubectl -n bookinfo exec $(kubectl -n bookinfo get pod -l app=productpage -o jso
 ```
 
 The issuer of the certificate can be verified by executing the following
-command. By default, the workload certificates are provisioned for 24hrs.
+command. By default, the workload certificates are provisioned for 24 hours.
 
 ```bash
 kubectl -n bookinfo exec $(kubectl -n bookinfo get pod -l app=productpage -o jsonpath={.items..metadata.name}) -c istio-proxy -- openssl s_client -showcerts -connect details:9080 | openssl x509 -noout -text | grep -A3 Issuer
@@ -1328,7 +1328,7 @@ kubectl -n bookinfo exec $(kubectl -n bookinfo get pod -l app=productpage -o jso
 
 ### Istio Secure Egress Gateway mTLS Origination
 
-#### Intra Cluster
+#### Within Cluster
 
 ![Istio Egress](/images/guides/kubernetes/service-routing/istio-egress-arch-withcluster.png)
 
@@ -1341,11 +1341,11 @@ cluster but not in the service mesh.
 
 The diagram above describes the interaction between different namespaces and vault.
 
-##### **Intra Cluster Steps**
+##### **Within Cluster Steps**
 
 1. **Mesh admin creates** an Issuer in istio-system namespace.
 2. Once Issuer is created, cert-manager auto discovers new certificate-issuer.
-3. cert-manager connects certificate-issuer to Centralized vault pki engine.
+3. cert-manager connects certificate-issuer to Centralized Vault PKI engine.
 4. **Application Developer creates** the following in `sleep` namespace:
    - Istio egress gateway definition and destination rule (for egress service).
    - virtual service which routes
@@ -1356,7 +1356,7 @@ The diagram above describes the interaction between different namespaces and vau
 6. cert-manager, which is watching `istio-system` namespace for any new
    Certificate created, picks up the Certificate and creates corresponding
    CertificateRequests in `istio-system` namespace.
-7. cert-manager sends Certificate Sign Request (CSR) to Centralized vault pki
+7. cert-manager sends Certificate Sign Request (CSR) to Centralized Vault PKI
    engine to sign certificate. Vault signs the certificate. CertificateRequests
    and Certificate turns into Ready state.
 8. cert-manager generates Kubernetes secret in `istio-system` namespace.
@@ -1544,10 +1544,10 @@ cluster.
 
 The diagram above describes the interaction between different namespaces and Vault.
 
-Please see the [intra cluster steps](#intra-cluster-steps) section for all
-different steps involved. The only difference here is in **step4** where an
-additional serviceentry is required in order to access the service residing in
-differnt Kubernetes cluster. This is required to make sure external service is
+Please see the [Within cluster steps](#within-cluster-steps) section for all
+different steps involved. The only difference here is in **step 4** where an
+additional service entry is required in order to access the service residing in
+different Kubernetes cluster. This is required to make sure external service is
 available in Istio's internal service registry.
 
 ##### **Mesh Admin Responsibility**
@@ -1591,7 +1591,7 @@ spec:
 
 **NOTE**: EXTERNAL_SERVICE_HOST=my-nginx-client.mesh-external.appk8s.com
 
-Please see [Intra cluster](#application-developer-responsibility-1) section for
+Please see [Within cluster](#application-developer-responsibility-1) section for
 all required responsibilities. Note that an additional service entry is
 required. This is required to make sure external service is available in Istio's
 internal service registry.
@@ -1763,7 +1763,7 @@ in Prometheus.
 ![Prometheus status target](/images/guides/kubernetes/service-routing/istio-promethus-bookinfo-metrics.png)
 
 Prometheus instances that are deployed locally to each cluster for Istio act as
-initial collectors. A local Prometheus scrapes the metrics from differnet
+initial collectors. A local Prometheus scrapes the metrics from different
 services. Metrics fill up underlying storage very fast over a period of days or
 weeks.The recommended approach is to keep a short retention window on this local
 cluster. If you deploy this Prometheus server to the `istio-system` namespace,
@@ -1806,14 +1806,14 @@ To use an existing Prometheus instance, add the scraping configurations from
 [prometheus/configmap.yaml](https://raw.githubusercontent.com/istio/istio/release-1.7/manifests/charts/istio-telemetry/prometheus/templates/configmap.yaml)
 to your configuration.
 
-In both the above cases, access to metrics are provided using grafana with RBAC.
+In both the above cases, access to metrics are provided using Grafana with RBAC.
 
 ##### **Grafana Installation**
 
 Istio provides a
 [basic sample](https://istio.io/latest/docs/ops/integrations/grafana/#option-1-quick-start)
 installation to quickly get Grafana up and running. It is bundled with all of
-the Istio dashboards already installed. One can remotely access grafana
+the Istio dashboards already installed. One can remotely access Grafana
 [securely](https://istio.io/latest/docs/tasks/observability/gateways/#option-1-secure-access-https).
 
 If using an existing Grafana instance, the following dashboards can be imported
@@ -1866,7 +1866,7 @@ metadata:
 ```
 
 Once the above pod definition is applied in a namespace that is part of the
-service mesh, istio-proxy is injected and the above annotattions are merged as
+service mesh, istio-proxy is injected and the above annotations are merged as
 shown in the following pod definition.
 
 ```yaml
@@ -1880,7 +1880,7 @@ metadata:
 ```
 
 At the same time ISTIO_PROMETHEUS_ANNOTATIONS environment variable is updated to
-the application specific Prometheus annotattion.
+the application specific Prometheus annotation.
 
 ```yaml
 env:
@@ -1915,7 +1915,7 @@ streams are redirected by container engine to its configured location (usually
 
 #### Log Aggregation
 
-Logs are produced by containers at the configured location on their repective
+Logs are produced by containers at the configured location on their respective
 nodes, where they are running.
 
 An example of Istio control plane logs are as follows.
@@ -1947,15 +1947,15 @@ istio-cni-node-cfxml_kube-system_repair-cni-xx.log -> /var/log/pods/kube-system_
 These logs are created on all the nodes where pods are running. A logging agent
 such as Fluentd, FluentBit or Logstash is required to be running on all the
 nodes and have access to log directories. It collects logs from those
-directories and forwards it to a back end log storage such as Elasticsearch,
+directories and forwards it to a back end log storage such as ElasticSearch,
 Splunk or Kafka. Most of the logging agents provided by different vendors are
-implemented as a Daemonset.
+implemented as a DaemonSet.
 
 ![Logging architecture](/images/guides/kubernetes/service-routing/istio-logging-architecture.png)
 
-An example of a **fluentbit intgeration with splunk** is as follows. It runs as
-Daemonset using a configmap to provide a configuration file. This configuration
-file hs two sections: input and output.
+An example of a **FluentBit integration with Splunk** is as follows. It runs as
+DaemonSet using a ConfigMap to provide a configuration file. This configuration
+file has two sections: input and output.
 
 This example is provided to explain the concept. Complete details are omitted.
 
@@ -1993,21 +1993,21 @@ TLS            On
 TLS.Verify     Off
 ```
 
-Things to notee:
+Things to note:
 
-- **Name:** shows output sent to splunk
+- **Name:** shows output sent to Splunk
 - **Tag:** Which tag is used to filter logs for Output phase.
-- **Splunk_Token:** splunk index specific token for HTTP Event Collector.
+- **Splunk_Token:** Splunk index specific token for HTTP Event Collector.
 
 ![Splunk HTTP Event Collector](/images/guides/kubernetes/service-routing/istio-splunk-event-collector.png)
 
-Once a FluentBit Daemonset is created with the above configiuration, the
-FlientBit agent starts sending logs to splunk.
+Once a FluentBit DaemonSet is created with the above configuration, the
+FluentBit agent starts sending logs to Splunk.
 
 #### Log Display
 
-In Splunk, one can view the logs by entering the aporpriate query. Some
-screenshot are as follows.
+In Splunk, one can view the logs by entering the appropriate query. Some
+screenshots follow.
 
 ![splunk: logs for istiod](/images/guides/kubernetes/service-routing/istio-splunk-istiod.png)
 
@@ -2015,7 +2015,7 @@ screenshot are as follows.
 
 ![splunk: logs for Istio data plane proxy](/images/guides/kubernetes/service-routing/istio-splunk-dataplane-istioproxy.png)
 
-![splunk:logs for Istio data plane app container](/images/guides/kubernetes/service-routing/istio-splunk-dataplane-productpage.png)
+![splunk: logs for Istio data plane app container](/images/guides/kubernetes/service-routing/istio-splunk-dataplane-productpage.png)
 
 ## Known Bugs
 

@@ -187,9 +187,9 @@ allows users to write constraints in the Rego language to specify rules that
 specific resources should conform to.
 
 Administrators specify `ConstraintTemplate` resources which are templates with
-overridable variable placeholders that can be re-used by end-users. For example,
-to specify a `ConstraintTemplate` that allows a user to specify some required
-labels, the following could be applied:
+variable placeholders that can be re-used by end-users. For example, to specify
+a `ConstraintTemplate` that allows a user to specify some required labels, the
+following could be applied:
 
 ```yaml
 apiVersion: templates.gatekeeper.sh/v1beta1

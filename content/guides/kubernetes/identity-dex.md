@@ -16,7 +16,7 @@ centralized directory service, most commonly Active Directory. Some cases expose
 these services through an Identity Provider using OIDC or SAML.
 
 Authentication and Authorization is a common topic on how you can provide
-Kubernetes cluster access and the resources to the intended user; eg:
+Kubernetes cluster access and the resources to the intended user; e.g.:
 Developers, Kubernetes Admin, Backup Admin, etc. Rather than create and manage a
 new user repository, you can leverage Dex and Gangway to enable kubernetes
 cluster authentication using an existing Identity Provider.
@@ -27,7 +27,7 @@ providers through "connectors."
 
 ## Configuration
 
-![dex-gangway-setup](/images/guides/kubernetes/identity/diagrams/dex-setup-01.png)
+![Dex Gangway Setup](/images/guides/kubernetes/identity/diagrams/dex-setup-01.png)
 **Figure 1: Dex - Gangway Identity Federation**
 
 Assuming you have either Active Directory or IDP server that provide centralized
@@ -37,7 +37,7 @@ Dex and Gangway and will be explained further in the following sections
 
 ### Dex and Gangway
 
-![dex-gangway-setup](/images/guides/kubernetes/identity/diagrams/dex-setup-02.png)
+![Dex Gangway Setup](/images/guides/kubernetes/identity/diagrams/dex-setup-02.png)
 **Figure 2: Dex - Gangway Configuration**
 
 Dex provide common OIDC endpoints for multiple Identity providers. To configure
@@ -178,9 +178,9 @@ their authentication logic once to talk to Dex, then Dex handles the protocols
 for a given backend.
 
 Upon successful authentication, signed JWT token returned by Dex as part of the
-authentication (OAuth2) response that attest to the end user's identity. Dex's
-JWT token contains standard claims which can be consumed by other system for
-service to service call.
+authentication (OAuth2) response that attest to the end user's identity. The JWT
+token issued by Dex contains standard claims which can be consumed by other
+system for service to service call.
 
 ```json
 // Sample JWT claims response from Dex.
@@ -205,10 +205,10 @@ another identity provider. Dex adopted connectors that target specific platforms
 such as LDAP, OIDC, Github, SAML, etc. A list of available connectors is available
 [here](https://github.com/dexidp/dex/blob/master/README.md#connectors).
 
-Depending on the connectors limitations in protocols can prevent dex from
+Depending on the connectors limitations in protocols can prevent Dex from
 issuing refresh tokens or returning group membership claims. For example,
 because SAML doesn't provide a non-interactive way to refresh assertions, if a
-user logs in through the SAML connector dex won't issue a refresh token to
+user logs in through the SAML connector Dex won't issue a refresh token to
 its client.
 
 With the example from the above diagrams (figure 1), the configuration for the

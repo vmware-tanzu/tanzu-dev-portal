@@ -41,7 +41,7 @@ following components:
 first-party project of Kubernetes. Running as a DaemonSet on the Kubernetes
 cluster, this component generates metrics from API events that occur within
 Kubernetes. Its focus is on exposing events related to Kubernetes objects within
-the cluster in a raw and un-modified format.
+the cluster in a raw and unmodified format.
 
 ### Prometheus
 
@@ -69,19 +69,19 @@ as a service on each node in the Kubernetes cluster.
 
 ### Prometheus Adapter for Kubernetes Metrics APIs
 
-[k8s-prometheus-adaptor](https://github.com/DirectXMan12/k8s-prometheus-adapter)
+[k8s-prometheus-adapter](https://github.com/DirectXMan12/k8s-prometheus-adapter)
 is an agent that runs as an application Deployment in your cluster. It is an
 implementation of the Kubernetes resource metrics API and custom metrics API
 that acts downstream of Prometheus to provide feedback on applications using
 metrics data. It implements `HorizontalPodAutoscaler` functionality that can
 react and scale applications based on real-time metrics data.
 
-### Prometheus Alert-Manager
+### Prometheus Alertmanager
 
 [alert-manager](https://github.com/prometheus/alertmanager) is the handler for
-alerts sent by the Prometheus server. Alert-Manager handles integrating with
+alerts sent by the Prometheus server. Alertmanager handles integrating with
 external services by responding to metric-related events such as notifying
-email, PagerDuty, or OpsGenie. AlertManager provides a CRD that can be tuned via
+email, PagerDuty, or OpsGenie. Alertmanager provides a CRD that can be tuned via
 replica-count and other parameters.
 
 ### Grafana
@@ -102,7 +102,7 @@ yourself. In order to address long-term maintenance, it is difficult to manage
 YAML customizations made in the quick-start method. Please refer to <a
 href="https://github.com/coreos/kube-prometheus#customizing-kube-prometheus">Customizing
 kube-prometheus</a> for the advanced compilation method via <a
-href="http://jsonnet.org/">jsonnet</a>.
+href="http://jsonnet.org/">Jsonnet</a>.
 {{</aside>}}
 
 In order to install platform monitoring, clone the
@@ -201,7 +201,7 @@ for the specific steps.
 ### Grafana Data Sources & Dashboards
 
 `kube-prometheus` also ships with a default datastore for Prometheus already set
-up with the parameters needed to injest time-series data.
+up with the parameters needed to ingest time-series data.
 
 ![Grafana Data Source](/images/guides/kubernetes/observability/grafana-ds.png)
 
@@ -271,13 +271,13 @@ kubectl get secret alertmanager-main -n monitoring --template '{{ index .data "a
       "receiver": "Critical"
 ```
 
-Downstream services that receive alerts will need to be be specified in the
+Downstream services that receive alerts will need to be specified in the
 **receivers** section. Alert Manager provides many capabilities to alert with
 external systems like email, Slack, Wechat, etc. For example, in order to add
-Wechat functionality to the `Critical` receiver, you would add a `wechat_config`
+WeChat functionality to the `Critical` receiver, you would add a `wechat_config`
 field to your receiver titled **Critical**.
 
-It is important to lock down Alert Manager from unauthorized access. This can be
+It is important to lock down Alertmanager from unauthorized access. This can be
 done by removing the Ingress or securing the route using TLS certificates. As
 stated in the documentation: "Any user with access to the Alertmanager HTTP
 endpoint has access to its data. They can create and resolve alerts. They can
@@ -286,7 +286,7 @@ create, modify and delete silences."
 ## Monitoring Cluster
 
 Grafana provides the cluster administrator with a single pane of glass view into
-the Kubernetes cluster operations. Using Dashboards, Grafana can present the
+the Kubernetes cluster operations. Using dashboards, Grafana can present the
 monitoring data with respect to time in a way that is meaningful for measuring
 the health of infrastructure, workloads, and network related data.
 
@@ -336,7 +336,7 @@ The Custom Metrics API is a framework for exposing arbitrary metrics as
 Kubernetes API metrics. It allows them to appear via
 `/apis/custom.metrics.k8s.io/` and be fetched internally by
 [HorizontalPodAutoscalers](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/).
-While Horizontal Pod Auto Scalers ship with built-in CPU and memory
+While Horizontal Pod Autoscalers ship with built-in CPU and memory
 resource-based scaling, it is sometimes necessary to utilize custom
 application-supplied metrics to scale the application. This is necessary for
 scaling beyond the built-in CPU and memory metrics. The example below is based
@@ -395,7 +395,7 @@ spec:
 ```
 
 The above resource is what ties the custom API endpoint to the Kubernetes
-Prometheus Adaptor. The adaptor runs as a sort-of translation layer between
+Prometheus Adapter. The adapter runs as a sort-of translation layer between
 Kubernetes API requests, and the Prometheus server.
 
 Therefore, if an application `sample-app` is deployed and configured with a HPA

@@ -5,7 +5,7 @@ description: "Approaches and best practices for secret management in Kubernetes"
 parent: "Platform Security"
 weight: 3
 keywords:
-- Kubernetes
+  - Kubernetes
 ---
 
 ## Abstract
@@ -130,7 +130,7 @@ a filesystem. There are many points in time where this encryption could occur.
 For example, an application could retrieve a key for an external location,
 encrypt or decrypt a secret, and then act on the secret. More commonly, the
 application relies on a system capable of secret management, such as Kubernetes
-or Hashicorp's Vault. This reference architecture covers the variety of
+or HashiCorp's Vault. This reference architecture covers the variety of
 approaches, architectures, and recommendations to achieve the latter. The goal
 is to provide applications an enterprise-grade way to store and retrieve secret
 objects.
@@ -228,7 +228,7 @@ Additionally, it is less secure and performant than `secretbox`. Issue
 is tracking the task to align documentation with best practices. If using static
 key encryption at rest, you may wish to consider an alternative such
 as`secretbox`. There are some critics for `secretbox`, stating its immaturity in
-the crypto ecosystem may make it an non-options for some organizations.
+the crypto ecosystem may make it a non-option for some organizations.
 Partnering with your security team to explain the available options and their
 trade-offs is recommended. The following will demonstrate the static key
 approach using `secretbox`.
@@ -251,7 +251,7 @@ this method.
 
 Using the key data above, an `EncryptionConfiguration` should be added to all
 nodes running a `kube-apiserver`. This static file should be added using
-configuration management such as [ansible](https://www.ansible.com) or
+configuration management such as [Ansible](https://www.ansible.com) or
 [KubeadmConfigSpec](https://godoc.org/github.com/kubernetes-sigs/cluster-api-bootstrap-provider-kubeadm/api/v1alpha2#KubeadmConfigSpec).
 if using Cluster API. This ensures keys can be added, deleted, and rotated. The
 following example assumes the configuration is stored at
@@ -497,7 +497,7 @@ which was only partially implemented and has been archived (abandoned).
 
 Our preference is to use an external secret store instead of Kubernetes.
 Regardless of whether Kubernetes secrets are encrypted at rest. Instead, we
-recommend using an external secret store such as [Hashicorp's
+recommend using an external secret store such as [HashiCorp's
 Vault](https://www.vaultproject.io/docs). Over time, if KMS-plugins mature and
 see larger adoption, they could be a viable alternative to external stores. Most
 external secret stores feature advanced management capabilities, permission
@@ -519,7 +519,7 @@ understands how to operate Vault before adopting it as their secret manager.
 For testing purposes, Vault can be deployed inside Kubernetes using the Helm
 chart at https://www.vaultproject.io/docs/platform/k8s/helm/run. This is not a
 production-ready deployment of Vault. Individuals with Vault expertise and/or
-Hashicorp should be consulted if running Vault in production.
+HashiCorp should be consulted if running Vault in production.
 
 Once an external secret store is available to workloads in Kubernetes, there are
 several options for retrieval. The following covers these approaches, our
@@ -538,7 +538,7 @@ application. However, this does make the platform more complex, as facilitating
 secret injection is now an offering of the Kubernetes-based platform.
 
 Vault's implementation of this model uses a
-[MutatingWebook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/)
+[MutatingWebhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/)
 pointed at a `vault-agent-injector`. As pods are created, based on annotations,
 the vault-agent-injector adds an `initContainer` (used for retrieval of the
 initial secret) and a sidecar container to keep secrets updated, if needed.
@@ -662,7 +662,7 @@ Note: Some configuration was removed for brevity.
 {{% aside title="Vault image" %}}
 An unfortunate detail (as of March 2020) of the vault-sidecar implementation is
 the use of the **entire** [vault image](https://hub.docker.com/_/vault). This is
-the entire image (~50Mb) used to run a Vault server, not just a client. Thus
+the entire image (~50MB) used to run a Vault server, not just a client. Thus
 there is unneeded bloat from packages, code, and more.
 {{% /aside %}}
 

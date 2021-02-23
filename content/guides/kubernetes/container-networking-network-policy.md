@@ -13,7 +13,7 @@ tags:
 This directory demonstrates how to implement default deny-all network rules in a
 Kubernetes cluster. This is achieved using Calico's
 [GlobalNetworkPolicy](https://docs.projectcalico.org/v3.5/reference/calicoctl/resources/globalnetworkpolicy)
-and Kubernetes's
+and the Kubernetes
 [NetworkPolicy](https://docs.kubernetes.io/concepts/services-networking/network-policies/)
 objects. It operates based on labels attached to namespaces.
 
@@ -68,7 +68,8 @@ spec:
           port: 3306
 ```
 
-Note: this policy, unlike `GlobalNetworkPolicy`, is namespace-scoped and owned by team-a.
+Note: this policy, unlike `GlobalNetworkPolicy`, is scoped within namespace and
+owned by team-a.
 
 ### Namespace Ownership
 
@@ -222,7 +223,7 @@ For now, all traffic will be allowed.
    kubectl create ns team-a
    ```
 
-1. Create a contour manifest
+1. Create a Contour manifest
 
    ```yaml
    # contour.yaml
@@ -524,16 +525,16 @@ For now, all traffic will be allowed.
      - patch
    ```
 
-1. Deploy [Contour](https://github.com/heptio/contour) in the ingress namespace.
+1. Deploy [Contour](https://github.com/projectcontour/contour) in the ingress namespace.
 
    ```
    kubectl apply -f contour.yaml
    ```
 
-   Contour will be deployed as a daemonset attaching to a host's port 8080.
+   Contour will be deployed as a DaemonSet attaching to a host's port 8080.
    Testing assumes you will be able to route directly to a node's IP.
 
-1. Create an echoserver manifest
+1. Create a manifest for a simple echo server
 
    ```yaml
    # echoserver.yaml
@@ -590,7 +591,7 @@ For now, all traffic will be allowed.
    			- containerPort: 8080
    ```
 
-1. Deploy echoserver in the team-a namespace.
+1. Deploy the manifest in the team-a namespace.
 
    ```
    kubectl apply -f echoserver.yaml
@@ -599,7 +600,7 @@ For now, all traffic will be allowed.
    This deploys a `Deployment`, `Service`, and `Ingress` to satisfy the diagram
    above.
 
-1. Create a lorem-ipsum manifest
+1. Create a manifest for `lorem-ipsum`
 
    ```yaml
    # lorem-ipsum.yaml
@@ -656,7 +657,7 @@ For now, all traffic will be allowed.
                - containerPort: 80
    ```
 
-1. Deploy lorem-ipsum in the team-a namespace.
+1. Deploy the manifest in the team-a namespace.
 
    ```
    kubectl apply -f lorem-ipsum.yaml
@@ -711,7 +712,7 @@ For now, all traffic will be allowed.
 
    ![Validate Ingress](/images/guides/kubernetes/container-networking/lorem-ipsum.png)
 
-1. Attach to the lorem-ipsum pod.
+1. Attach to the `lorem-ipsum` pod.
 
    ```
    LOREM_POD=$(kubectl -n team-a get pod -l app=lorem-ipsum -o jsonpath='{.items[0].metadata.name}')
@@ -719,7 +720,7 @@ For now, all traffic will be allowed.
    kubectl exec -n team-a -it $LOREM_POD /bin/sh
    ```
 
-1. Add `curl` to the lorem-ipsum pod
+1. Add `curl` to the `lorem-ipsum` pod
 
    ```
    # apt update && apt install -y curl
@@ -853,7 +854,7 @@ the desired network access.
 
 ![Network Policy Restricted](/images/guides/kubernetes/container-networking/diagrams/netpol-example-restricted.png)
 
-1. Create a lorem network policy manifest
+1. Create a network policy manifest
 
    ```yaml
    # lorem-netpol.yaml
@@ -904,19 +905,19 @@ the desired network access.
    kubectl apply -f lorem-netpol.yaml
    ```
 
-   This applies rules to allow ingress traffic originating from contour pods to
+   This applies rules to allow ingress traffic originating from Contour pods to
    reach the lorem-ipsum pods. It also applies rules to allow egress from the
-   lorem-ipsum pod to the echoserver pod. Note that the ingress rules have yet
-   to be added to the echoserver pod. Thus when the lorem-ipsum pod egresses to
-   it, echoserver will not allow the traffic in.
+   `lorem-ipsum` pod to the `echoserver` pod. Note that the ingress rules have
+   yet to be added to the `echoserver` pod. Thus when the `lorem-ipsum` pod
+   attempts to connect to it, `echoserver` will not allow the traffic in.
 
 #### Validation
 
-1. Verify ingress is allowed to lorem-ipsum through contour.
+1. Verify ingress is allowed to `lorem-ipsum` through Contour.
 
    ![Verify Ingress](/images/guides/kubernetes/container-networking/lorem-ipsum.png)
 
-1. Verify ingress is denied to echoserver through contour.
+1. Verify ingress is denied to echoserver through Contour.
 
    ```
    curl -v 34.219.198.115:8080/echo

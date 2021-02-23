@@ -14,14 +14,14 @@ networking functionality to containers. Networking is implemented in CNI
 plugins. The interface / plugin model enables Kubernetes to support many
 networking options implemented via plugins such as Calico, Antrea, and Cilium.
 
-![cni-logo](https://raw.githubusercontent.com/containernetworking/cni/master/logo.png)
+![CNI Logo](https://raw.githubusercontent.com/containernetworking/cni/master/logo.png)
 
 Anyone may write a CNI-plugin. The expectation is the plugin will support
 specific operations defined in the specification (e.g.
 [0.4.0](https://github.com/containernetworking/cni/blob/spec-v0.4.0/SPEC.md#parameters)).
 These operations include:
 
-- `ADD`: Add a container to to the network.
+- `ADD`: Add a container to the network.
 - `DEL`: Delete a container from the network.
 - `CHECK`: Check whether the container's network is as expected.
 
@@ -123,15 +123,15 @@ CNI-plugin.
 
 ### Antrea
 
-Antrea provides container networking based on open vswitch. Using open vswitch,
+Antrea provides container networking based on Open vSwitch. Using Open vSwitch,
 Antrea is capable of offering routing via VXLAN, Geneve, GRE, or STT
 encapsulation methods. Unlike Calico, Antrea can enforce networking rules inside
-open vswitch, which should provide more performant policy enforcement relative
+Open vSwitch, which should provide more performant policy enforcement relative
 to IPtables.
 
 ![Antrea](/images/guides/kubernetes/container-networking/antrea.png)
 
-Those familiar with open vswitch are likely to find Antrea a very compelling
+Those familiar with Open vSwitch are likely to find Antrea a very compelling
 option. Since Antrea is still in pre-release, we don't recommend it for
 production use cases at this time.
 
@@ -142,20 +142,20 @@ production use cases at this time.
   - Geneve
   - GRE
   - STT
-- Familiar to users of open vswitch.
+- Familiar to users of Open vSwitch.
 - Performant network policy enforcement.
 - [Octant](https://github.com/vmware-tanzu/octant) UI support.
 - Break-fix support from VMware.
 
 **Cons:**
 
-- Must have open vswitch kernel module.
+- Must have Open vSwitch kernel module.
 
 ### NSX-T
 
 NSX-T is an extremely capable network virtualization technology. It is used to
 facilitate networking in datacenters around the world. As such, it is very
-uncommon to see NSX-T's CNI plugin used unless an existing NSX-T deployment
+uncommon to see the NSX-T CNI plugin used unless an existing NSX-T deployment
 exists. Introducing a net new NSX-T deployment for a Kubernetes platform
 introduces a lot of operational overhead. It is also common for teams running
 Kubernetes on top of vSphere + NSX-T to run a different CNI-plugin (such as
@@ -182,7 +182,7 @@ networking with it directly.
 
 Cilium is a powerful CNI-plugin that uses
 [BPF](https://en.wikipedia.org/wiki/Berkeley_Packet_Filter) to make routing
-decisions in a highly-performant manner. Cilium has replaced kube-proxy, which
+decisions in a highly performant manner. Cilium has replaced kube-proxy, which
 facilitates services, for it's own eBPF implementation. This makes service
 routing decisions O(1) rather than the time complexity it takes to traverse many
 IPtables chain rules.

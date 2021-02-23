@@ -343,7 +343,7 @@ two OPA Pods running.
 You will test the policy file `PolicyA.rego` in your cluster. Navigate to the
 directory where `PolicyA.rego` is stored. You will use this file to create a
 ConfigMap in the `opa` namespace that the OPA sidecar will notice and load into
-OPA. OPA can also load policies from other namespaces if they are labelled
+OPA. OPA can also load policies from other namespaces if they are labeled
 `openpolicyagent.org/policy=rego`
 
 Load the policy using this command:
@@ -370,7 +370,7 @@ Also, confirm that OPA accepted the policy by checking the ConfigMap status and
 looking at the `openpolicyagent.org/policy-status` annotation. The status should
 be equal to "ok".
 
-Run the following command to get the ConfigMap's annotations:
+Run the following command to view the annotations on the ConfigMap:
 
 ```bash
 kubectl get configmap cpulimits -o yaml

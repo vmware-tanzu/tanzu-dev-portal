@@ -274,7 +274,7 @@ annotation `allow-priority-class: "cat-1"`. Refer to `ns-prod-parkconnect.yaml`
 to allow multiple priority class
 {{% /aside %}}
 
-The above axample shows how you can apply control by namespace. To enable
+The above example shows how you can apply control by namespace. To enable
 control by roles, you can further enhance the rego policy
 to evaluate more rules.
 

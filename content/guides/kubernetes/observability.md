@@ -88,7 +88,7 @@ for container log aggregation, search and analytics.
 
 **Pros:**
 
-- Architected for scale
+- Built for scale
 - Automated failover handling
 - Distributed by design
 - Widely tested
@@ -191,7 +191,7 @@ It is usually paired with [Grafana](#grafana) for visualization and
 
 **Cons:**
 
-- Less featureful search capabilities than Elasticsearch
+- Less sophisticated search capabilities than Elasticsearch
 
 #### Promtail
 
@@ -215,7 +215,7 @@ dashboards, sophisticated analytics and broad third-party extensibility.
 **Cons:**
 
 - Requires a licenses to be purchased
-  - The version thats bundled with NSX-T can only be used for NSX-T or vSphere
+  - The version that's bundled with NSX-T can only be used for NSX-T or vSphere
     logs.
 - Must be deployed in a virtual environment through an appliance.
 
@@ -343,7 +343,7 @@ Wavefront also integrates with application services including:
 - NGINX
 - WebSphere
 
-Wavefront can also ingest data from other monitoring tools such as: FluentD,
+Wavefront can also ingest data from other monitoring tools such as: Fluentd,
 Logstash, Splunk, vROps, Jaeger, and Prometheus.
 
 Alert notifications can be sent to a variety of solutions including: Slack,

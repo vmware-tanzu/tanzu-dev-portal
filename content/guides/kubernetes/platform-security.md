@@ -69,7 +69,7 @@ the following cases:
 - Your company’s policies might require TLS certificates that are issued by your
   own PKI.
 - If you integrate with an OpenID Connect (OIDC) provider, you can use the OIDC CA.
-- Publically facing workloads may require a Commercial or
+- Publicly facing workloads may require a Commercial or
   [non-profit](https://en.wikipedia.org/wiki/Let%27s_Encrypt) certificate
   bundle.
 
@@ -173,7 +173,7 @@ To get the most benefit from RBAC, an appropriate configuration is required:
   access controls to prevent unauthorized access.
 
 When creating RBAC policies, prefer Roles and RoleBindings over ClusterRoles and
-Cluster-RoleBindings whenever possible as they are scoped to namespaces by
+ClusterRoleBindings whenever possible as they are scoped to namespaces by
 default. While Kubernetes comes with default RBAC policies in place, we
 recommend setting up your baseline policies with the least required privileges
 that you need.
@@ -470,7 +470,7 @@ could have been scanned and approved but become a liability as new
 vulnerabilities, bugs, and threats are found. Runtime security tools help to
 mitigate this problem by looking at what's happening inside containers:
 filesystem, process activity, networking behavior, etc. Examples of runtime
-security tools: Falco, Aquasec, Twistlock, SysDig.
+security tools: Falco, Aquasec, Twistlock, Sysdig.
 
 ### Attack Surface Minimization
 
@@ -655,7 +655,7 @@ understanding of the cluster's current state to determine whether a request
 should be authorized. Kubernetes offers preset admission controllers built into
 the `kube-apiserver`, such as `PodSecurityPolicy`. These can be enabled by
 altering flags on the `kube-apiserver`. To provide custom admission control
-without modifying the API server, Kubernetes offers an Admission webook
+without modifying the API server, Kubernetes offers an Admission webhook
 functionality. In this model, Kubernetes offers selected inbound request to an
 external service that can approve or deny the request.
 

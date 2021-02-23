@@ -100,7 +100,7 @@ throttling when the limit is reached. Memory limits kill the workload when the
 limit is exceeded. In the absence of resource requests, the request is
 automatically set to that of the limit. This can be a good model as it ensures
 the amount of resources the workload is scheduled for is exactly the amount that
-will be available on the host (ie no overcommitting). This decreases the
+will be available on the host (i.e. no overcommitting). This decreases the
 complexity of workloads. The downside to only using limits is you cannot
 overcommit resources. An example of overcommitting is where you set a limit
 higher than a request, which means the container can use more than is requested,
@@ -114,8 +114,8 @@ unless the host comes under contention.
 
 **Cons:**
 * Reduced infra utilization
-    * May result in unutilized compute resources
-* Can lead to CPU throtlling and OOM kills
+    * May result in underutilized compute resources
+* Can lead to CPU throttling and OOM kills
     * Important to understand resource consumption profile of workloads
 
 ### Burstable Pods

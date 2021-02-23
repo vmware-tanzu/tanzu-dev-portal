@@ -40,10 +40,10 @@ interface](https://github.com/container-storage-interface/spec) (CSI) to provide
 storage functionality to containers. Storage is implemented in CSI plugins. This
 interface / plugin model enables Kubernetes to support many storage options
 implemented via plugins (or drivers) such as
-[vsphere](https://github.com/kubernetes-sigs/vsphere-csi-driver),
+[vSphere](https://github.com/kubernetes-sigs/vsphere-csi-driver),
 [portworx](https://github.com/libopenstorage/openstorage/tree/master/csi), [AWS
 EFS](https://github.com/kubernetes-sigs/aws-ebs-csi-driver), and
-[Netapp](https://github.com/NetApp/trident).
+[NetApp](https://github.com/NetApp/trident).
 
 ![CSI Logo](/images/guides/kubernetes/storage-integration/csi-logo.png)
 
@@ -61,7 +61,7 @@ find explanations on each.
 ### In-tree Providers
 
 Historically, Kubernetes relied on in-tree "cloud" provider functionality for
-most storage integration. This method of integration pre-dates CSI. These
+most storage integration. This method of integration predates CSI. These
 providers are referred to as in-tree because [their code lives in the core
 kubernetes/kubernetes
 repo](https://github.com/kubernetes/kubernetes/tree/v1.18.0-alpha.2/pkg/cloudprovider).
@@ -89,8 +89,8 @@ CCM to function correctly. In the case of vSphere, you install 3 components.
 | Component | Name | Type |
 | --------------------------- | -------------------------- | ----------- |
 | Cloud Controller Manager | `vsphere-cloud-controller` | Deployment |
-| Storage Controller | `vsphere-csi-controller` | Statefulset |
-| Storage Driver (CSI-plugin) | `vsphere-csi-node` | Daemonset |
+| Storage Controller | `vsphere-csi-controller` | StatefulSet |
+| Storage Driver (CSI-plugin) | `vsphere-csi-node` | DaemonSet |
 {{</ table >}}
 
 With these components installed, a 4 node Kubernetes cluster (assuming 1 master)

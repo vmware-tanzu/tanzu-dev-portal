@@ -70,7 +70,7 @@ diagram shows the aggregate CPU requests of all tenants and the cluster’s CPU
 capacity. The difference between the total CPU requests and the total CPU
 capacity is the available CPU capacity for additional workloads.
 
-![showback: cluster cpu capacity](/images/guides/kubernetes/observability/showback-cluster-cpu-capacity.png)
+![showback: cluster CPU capacity](/images/guides/kubernetes/observability/showback-cluster-cpu-capacity.png)
 
 Building a showback system based on resource requests is a good foundation. As
 you can see from the previous diagrams, resource requests provide insight into
@@ -84,11 +84,11 @@ that are wasting resources by not consuming their requests.
 
 The following diagram shows the CPU usage and requests of a platform tenant over
 time. There are two important aspects to consider in this diagram. First, the
-tenant’s workload bursted above the resource requests. From a showback
-perspective, burst CPU usage can be regarded as a freebie. The second, more
-important thing to consider is the wasted CPU capacity. Based on the diagram,
-the tenant is requesting more CPU than necessary, thus wasting CPU capacity that
-could otherwise be used to schedule additional workloads on the cluster.
+tenant’s workload exceeded the resource requests. From a showback perspective,
+burst CPU usage can be regarded as a freebie. The second, more important thing
+to consider is the wasted CPU capacity. Based on the diagram, the tenant is
+requesting more CPU than necessary, thus wasting CPU capacity that could
+otherwise be used to schedule additional workloads on the cluster.
 
 ![showback: requests vs usage](/images/guides/kubernetes/observability/showback-requests-vs-usage.png)
 
@@ -118,7 +118,7 @@ not expose this information via metrics.
 
 To collect resource request metrics, you must install
 [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics) in your
-platform. Kube-state-metrics is a service that queries the Kubernetes API and
+platform. kube-state-metrics is a service that queries the Kubernetes API and
 exposes useful metrics about the API objects (Deployments, Pods, Nodes, etc.).
 The CPU and memory requests for all pods on the cluster are available through
 the `kube_pod_container_resource_requests` and

@@ -1,7 +1,7 @@
 ---
 title: "Autoscaling Reference Architecture"
 linkTitle: "Autoscaling Reference Architecture"
-description: "Guidance for autoscaling application workkloads and cluster compute resources"
+description: "Guidance for autoscaling application workloads and cluster compute resources"
 parent: "Workload Tenancy"
 weight: 1600
 keywords:
@@ -25,10 +25,10 @@ If the following conditions are present, autoscaling may be advisable:
   - Adding replicated instances
   - Taking advantage of added compute resources
 - Compute can scale: In environments such as the public cloud where new compute
-  resources can be brought online programatically, the capacity of the
+  resources can be brought online programmatically, the capacity of the
   underlying infrastructure can be dynamically managed.
 - Bursting usage: If the load on your application is prone to sharp increases,
-  such as ecommerce workloads, the ability to respond immediately using
+  such as eCommerce workloads, the ability to respond immediately using
   automated systems may be important.
 - High utilization needs: If cost management and efficient utilization are
   important for a workload with varying load, using automated scaling mechanisms

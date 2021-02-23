@@ -20,7 +20,7 @@ document, you will have a clearer understanding of how your responsibilities
 impact the stability, utilization, and performance of your overall Kubernetes
 environment.
 
-The content of this guide was presented at the 2019 Kubecon in San Diego. This
+The content of this guide was presented at the 2019 KubeCon in San Diego. This
 presentation may be viewed [here](https://youtu.be/uodXrKk7I-o).
 
 ### Motivations
@@ -116,7 +116,7 @@ introduce risk if implemented incorrectly. Examples of misconfigured parameters:
 
 - for Application Owners, misconfigured or “abuse” of pod priority can
   negatively impact scheduling of other teams' workloads
-- for Cluster Operators, misconfigured Kube & System reserved flags can cause
+- for Cluster Operators, misconfigured Kubernetes & System reserved flags can cause
   significant instability in the cluster.
 
 ## Application Owner
@@ -250,7 +250,7 @@ resource to trigger pod eviction. Memory is a good example because memory
 overcommit poses the greatest risk to node stability. Although CPU overcommit
 isn’t a risk to node stability, it does have significant performance
 implications. If your workloads are latency-sensitive, we recommend viewing a
-[Zolando presentation](https://www.youtube.com/watch?v=eBChCFD9hfs) that goes
+[Zalando presentation](https://www.youtube.com/watch?v=eBChCFD9hfs) that goes
 into depth on this topic. We also recommend reviewing the Kubernetes
 documentation on [CPU Management
 Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/)
@@ -681,7 +681,7 @@ Figure 20 shows a cluster that has not been configured beyond the default
 kubeadm configuration. While it is possible to configure a monitoring tool to
 observe the current utilization of nodes within your cluster, a lack of requests
 and limits makes it difficult to tell whether or not the cluster could
-accomodate a node failure.
+accommodate a node failure.
 
 #### After: Predictable Failover
 
@@ -717,7 +717,7 @@ A simple version of calculating this value is shown in Figure 22, with sample
 input and output shown in Table 2. Calculating maximum utilization with this
 function makes the following assumptions:
 
-- allocatable constraints (eviction threshold, kybe & system reserved) == 0
+- allocatable constraints (eviction threshold, kube & system reserved) == 0
 - number of failures is 1
 
 {{< table "table" >}}

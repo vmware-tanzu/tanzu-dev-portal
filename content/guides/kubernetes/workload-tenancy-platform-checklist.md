@@ -60,7 +60,7 @@ control plane node location.
 ### Ingress
 
 {{% checklist-item title="Load balancer is redundant" %}}
-Your ingress should be configured to run on on several pre-defined nodes for
+Your ingress should be configured to run on several pre-defined nodes for
 high availability. Configure the load balancer to route traffic to these nodes
 accordingly. Test to make sure all defined nodes are getting traffic.
 {{% /checklist-item %}}

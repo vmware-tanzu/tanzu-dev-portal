@@ -135,16 +135,16 @@ external load balancer will also be configured to front all of the NodePort
 services.
 
 This Service type requires the cluster is built on top of infrastructure that
-provides load balancing functionality. Nearly all cloud IaaS providers (ie. AWS,
+provides load balancing functionality. Nearly all cloud IaaS providers (i.e. AWS,
 GCP, Azure, etc.), provide support for these services through Kubernetes cloud
-provider integrations. Additionally, there are third-party integrations (ie. F5,
+provider integrations. Additionally, there are third-party integrations (i.e. F5,
 NSX, etc.) that may also provide load balancing functionality that implements
 the Kubernetes Service resource.
 
 ## Ingress
 
 As web-based services continue to grow in popularity, whether those are
-user-facing UI's or REST/GraphQL API's, it is likely that these types of
+user-facing interfaces or REST/GraphQL APIs, it is likely that these types of
 applications will constitute the majority of what gets deployed on an average
 cluster. With these types of applications, there are a number of features that
 are necessary for a production deployment. First and foremost, these
@@ -160,7 +160,7 @@ a number of rules before it is forwarded on to the upstream instances of the
 application. These rules for evaluation may include conditions such as the value
 of the `Host` header in the HTTP request, as well as the specific paths that are
 being requested. Once a rule has evaluated to a known upstream, the traffic may
-be passed as-is or forwarded on with specified modifications (ie. header
+be passed as-is or forwarded on with specified modifications (i.e. header
 changes, path rewrites, etc).
 
 Kubernetes provides a mechanism for easy configuration of an in-cluster reverse
@@ -206,7 +206,7 @@ will watch for any updates to the full collection of Ingress objects and, in
 turn, configure the reverse proxy to reflect the desired state. In the case of
 proxies such as nginx, this will amount to the controller writing a collection
 of nginx configuration files, and reloading the nginx service. Alternatively,
-with more modern proxies (eg. Envoy managed by the Contour Controller),
+with more modern proxies (e.g. Envoy managed by the Contour Controller),
 upstreams and other configurations may be manipulated with an API, and thus do
 not require reloads. This functionality is advantageous as it will not disrupt
 any in-flight connections.
@@ -276,7 +276,7 @@ analyzed by tools such as [Jaeger](https://jaegertracing.io).
 
 Circuit breaking allows for advanced patterns concerning failure detection. Now,
 instead of relying on the, relatively simplistic, health checks offered by layer
-3 and layer 4 (ie. can we connect?), we can now programmatically remove
+3 and layer 4 (i.e. can we connect?), we can now programmatically remove
 upstreams based on more qualified data. Because service mesh operates at the
 application layer, we can add criteria concerning HTTP status codes, response
 times, number of pending requests and the like. Utilizing application data in
