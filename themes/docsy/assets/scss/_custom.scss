@@ -919,7 +919,9 @@ body.tv-episode {
     }
   }
   @media (min-width: 992px) {
-    flex: 0 0 31.5%;
+    &.col-lg-4 {
+      flex: 0 0 31.5%;
+    }
     &:hover {
       transform: scale(1.05);
       opacity: 1;

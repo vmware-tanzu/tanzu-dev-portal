@@ -86,17 +86,21 @@
             <h3 class="mb-4">Watch Past Episodes</h3>
             {{ end }}
             {{ end }}
-            <div class="row">
+            <div class="row align-items-baseline mb-3">
             {{ range sort $pages "Params.episode" "desc" }}
                 {{ if eq .Parent $parent }}
-                {{ printf "<div class=\"previous col-lg-4 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
-                    <div class="col-lg-11 col-12 px-0">
-                        <!--<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>-->
-                        <!--<p><a class="text-white lightbox" href="https://youtube.com/watch?v={{ .Params.youtube_id }}">{{- .Title -}}</a></p>-->
-                        <a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_image | relURL }}"></a>
-                        <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
-                    </div>
-                </div>
+                    <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
+                        <div class='col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
+                            <div class='thumbnail-gradient position-absolute'></div>
+                            <img src="{{ .Params.episode_image | relURL }}" />
+                            {{ if gt (len .Title) 100}}
+                                <div class='video-description'>{{ print (substr .Title 0 100) "..." }}</div>
+                            {{ else }}
+                                <div class='video-description'>{{.Title}}</div>
+                            {{ end }}
+                            <!-- {{ printf "<div class=\"previous col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div> -->
+                        </div>
+                    </a>
                 {{ end }}
             {{ end }}
             </div>
@@ -110,6 +114,7 @@
                     }
                 });
                 </script>
+                
         </div>
     </div>
 </div>

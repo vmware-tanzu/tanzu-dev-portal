@@ -34,6 +34,7 @@
             var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
             
             if ((epDate - currentDate) > 0) {
+                
                 var diffTime = Math.abs(epDate - currentDate);
                 var diffDays = Math.floor(diffTime / (1000 * 3600 * 24)); 
                 var whenLive = "in " + diffDays + " days";
