@@ -103,6 +103,8 @@ echoserver
 eCommerce
 [E,e]venting
 [D,d]ev[R,r]el
+echoserver
+eCommerce
 egoless
 [E,e]nablement
 Endnotes
@@ -146,6 +148,7 @@ implementors
 InfoSec
 [I,i]ntegrations
 [I,i]nterservice
+interpolator
 intra-cluster
 intra-namespace
 intra-service
@@ -192,6 +195,7 @@ Multi-Subnet
 multi-subnet
 [M,m]ultiuser
 (multi-)?namespace
+MVP(s)
 [N,n]amespace-scoped
 namespaced
 namespacing
@@ -495,6 +499,9 @@ globalDefault
 GlobalNetworkPolicy
 GlobalNetworkSet
 GitLabCI
+globalDefault
+GlobalNetworkPolicy
+GlobalNetworkSet
 [G,g]mail
 [G,g]olang
 GraalVM
@@ -681,7 +688,11 @@ PodsPerCore
 Poly1305
 [P,p]ostgres
 php-apache
-Postgres
+[P,p]ip[X,x]('s)?
+plaintext
+PodSecurityPolicy
+PodsPerCore
+Poly1305
 Pomodoro
 [P,p]ortieris
 [P,p]ostgres
@@ -766,7 +777,6 @@ TaskRepository
 Tekton('s)?
 Terraform(-ing)?
 TestContainers
-Tilt(file|Cloud)?
 tgz
 Thanos
 Tilt(file|Cloud)?
@@ -840,6 +850,9 @@ Apress
 AquaSecurity
 Datadog
 Apdex
+Apress
+AquaSecurity
+Datadog
 DataStax('s|Examples)?
 deliverAgile
 CodeFresh
