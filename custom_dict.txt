@@ -95,6 +95,7 @@ fiancé
 fileshare
 FinTech
 firewalling
+flyyy
 frictionless
 [f,F]rontend(-green)?
 [G,g]amestorming
@@ -819,6 +820,7 @@ Jiang
 Julien
 Junio
 Kousen
+Kravitz
 Lazu
 Liles
 Lippert
