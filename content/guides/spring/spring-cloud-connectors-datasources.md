@@ -47,9 +47,9 @@ The key thing to remember about the service connectors is that they all perform 
 
 As an example, here's what it might look like to create a user-provided service that can be detected as a SQL Server binding with Spring Cloud connectors:
 
-``
+```
 cf cups sqlDataSource1 -p '{\"jdbcUrl\":\"jdbc:sqlserver://host:port;DatabaseName=theDb;user=user;password=password;\"}'
-``
+```
 
 We typically have to escape the quotes when creating these from the command line to allow the CLI to parse the entire string.
 

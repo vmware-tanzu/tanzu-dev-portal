@@ -21,7 +21,7 @@ The Tanzu Application Service GO Router uses the `jsessionid` plus a `vcap_id` t
 
 
 
-> Ensure your session object implements [serializable](https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html).
+> Ensure your session object implements [java.io.Serializable](https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html).
 
 > This guide was customized for Spring 3.2.18 and XML Configuration. It is highly recommended to [bootify your application](/guides/spring/bootifying-java-apps) and leverage the Spring Boot Starter modules to help stay current with Spring versions.
 

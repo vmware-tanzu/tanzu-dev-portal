@@ -29,7 +29,7 @@ You can extend Spring Cloud Connectors to support additional services, including
 
 * `ServiceInfo` models the information required to connect to the service. In the case of a database service, a ServiceInfo implementation might include fields for host, port, database name, username, and password; in the case of a web service, it might include fields for URL and API key.
 
-*`ServiceInfoCreator` creates `ServiceInfo` objects based on the service information collected by a cloud connector. A ServiceInfoCreator implementation is specific to a cloud platform.
+* `ServiceInfoCreator` creates `ServiceInfo` objects based on the service information collected by a cloud connector. A ServiceInfoCreator implementation is specific to a cloud platform.
 
 ## Application Framework Support
 
