@@ -1,0 +1,24 @@
+<div id="td-sidebar-menu" class="td-sidebar__inner nocontent">
+    <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
+        <ol class="td-sidebar-nav__section">     
+            <!--<li class="td-sidebar-nav__subsection-title" id="">
+            <a href="" class="align-left pr-2 td-sidebar-link td-sidebar-link__section">{{.Title}}</a>
+            </li>-->
+
+            {{ if .IsSection }}
+                {{ .Scratch.Set "pages" .Pages }}
+            {{ else }}
+                {{ .Scratch.Set "pages" .Parent.Pages }}
+            {{ end }}
+
+            {{ range .Scratch.Get "pages" }}
+                {{ $active := eq . $ }}
+                <li class="td-sidebar-nav__subsection-title" id="">
+                    <a href="{{ .RelPermalink }}" class="align-left pr-2 td-sidebar-link{{ if $active}} active{{ end }} td-sidebar-link__section">{{.Title}}</a>
+                </li>
+            {{ end }}
+        </ol>
+
+    </nav>
+</div>
+  

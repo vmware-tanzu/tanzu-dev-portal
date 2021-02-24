@@ -1,0 +1,38 @@
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} series" data-section="{{ .Parent.Params.title | lower }}">
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    <div class="container-fluid td-outer">
+      {{ partial "live-notify.html" . }}
+      <div class="td-main">
+        <div class="row flex-xl-nowrap container mx-auto">
+          <div class="col-12 col-md-3 col-lg-3 col-xl-3 td-sidebar d-print-none">
+          	<br/>
+            {{ partial "sidebar-series.html" . }}
+          </div>
+          {{ if not .IsSection }}
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            {{ partial "toc.html" . }}
+          </div>
+          {{ end }}
+          <main class="{{if not .IsSection}}col-12 col-md-9 col-xl-8{{end}} pl-md-5 mt-lg-5 pt-lg-5" role="main">
+          	<br/>
+            {{ partial "version-banner.html" . }}
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+            {{ block "main" . }}{{ end }}
+            {{ with .Site.GetPage .Params.source }}
+              <h1>{{ .Title }}</h1>
+              {{ .Content }}
+            {{ end }}
+          </main>
+        </div>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
