@@ -120,7 +120,7 @@ following diagram:
 ![pod-priority](/images/guides/kubernetes/workload-tenancy/pod-priority-01.png)
 **_Figure 1: Scenario: Green Application is Preempted_**
 
-{{% aside %}}
+{{% aside title="Pod Disruption Budgets" %}}
 Even though blue pod has lowest priority (`cat-1`), the Kubernetes scheduler will
 not pick that pod due to the disruption budget requirement. Removing any blue
 pod will cause a violation.
@@ -218,10 +218,11 @@ kubectl create configmap priority-class-whitelist --from-file ./policy/priority-
 
 ```
 
-{{% aside %}}
-Current example show how you can submit `Pod` and `Deployment` object
-for admission review. To enable that, additional arguments is needed as
-shown in admission-controller.yaml
+{{% aside title="Additional Arguments" %}}
+The current example shows how you can submit `Pod` and `Deployment` objects
+for admission review. To enable that, additional arguments are needed as
+shown in below.
+{{% /aside %}}
 
 ```yaml
 apiVersion: apps/v1
@@ -235,8 +236,6 @@ kind: Deployment
     - "--replicate=apps/v1/deployments"
     - "--replicate=v1/pods"
 ```
-
-{{% /aside %}}
 
 3. Test the rules
 
@@ -268,10 +267,10 @@ kubectl create -f ./kube/pod-web-ok.yaml
 
 ```
 
-{{% aside %}}
+{{% aside title="Multiple Priority Classes" %}}
 Namespace `ns-dev-parkconnect` only allow cat-1 priority class as defined in
 annotation `allow-priority-class: "cat-1"`. Refer to `ns-prod-parkconnect.yaml`
-to allow multiple priority class
+to allow multiple priority classes.
 {{% /aside %}}
 
 The above example shows how you can apply control by namespace. To enable
