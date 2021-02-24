@@ -1,7 +1,7 @@
 ---
 title:  "Create a Multi-Cluster Monitoring Dashboard with Thanos, Grafana and Prometheus"
 linkTitle: "Multi-Cluster Monitoring"
-parent: "Observability"
+parent: "Platform Observability"
 description: Use Thanos and Grafana to collect metrics from Prometheus on multiple Kubernetes clusters.
 date: 2020-03-11
 weight: 1800

@@ -1,6 +1,6 @@
 ---
-title: "Observability"
-subsection: "Observability"
+title: "Platform Observability"
+subsection: "Platform Observability"
 weight: 5
 topics:
 - Kubernetes

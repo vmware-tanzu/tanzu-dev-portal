@@ -2,7 +2,7 @@
 title: "Kubernetes Platform Monitoring"
 linkTitle: "Kubernetes Platform Monitoring"
 description: "Considerations, guidance, and best practices for monitoring Kubernetes clusters."
-parent: "Observability"
+parent: "Platform Observability"
 weight: 1600
 keywords:
   - Kubernetes

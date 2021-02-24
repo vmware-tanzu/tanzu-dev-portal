@@ -1,7 +1,7 @@
 ---
 title:  "Prometheus and Grafana: Gathering Metrics from Kubernetes"
 linkTitle: "Prometheus and Grafana"
-parent: "Observability"
+parent: "Platform Observability"
 weight: 1
 topics:
 - Kubernetes

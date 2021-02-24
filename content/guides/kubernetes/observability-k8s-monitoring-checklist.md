@@ -2,7 +2,7 @@
 title: "Kubernetes Monitoring Checklist"
 linkTitle: "Kubernetes Monitoring Checklist"
 description: "A list of components that platform operators should monitor"
-parent: "Observability"
+parent: "Platform Observability"
 weight: 1600
 keywords:
 - Kubernetes
