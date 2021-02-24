@@ -49,7 +49,7 @@ Before changing anything in your application, you should also create a separate 
 
 Now it is time to update your application dependencies, packaging and create a Spring Boot application class.
 
-If you want to use either Maven or Gradle, [Spring Initializr](http://start.spring.io/) is the recommended approach for generating a new Spring Boot application. Spring Initializr is like a shopping cart for all of the dependencies you might need for your application. It offers a fast way to pull in all of the dependencies you need for an application and does a lot of the setup for you. Just Navigate to [Spring Initializr](http://start.spring.io/), fill in the metadata, add the dependencies relevant to your application ... and generate the new project. Make sure to carefully pick the right Spring Boot starters for your application.
+If you want to use either Maven or Gradle, [Spring Initializr](http://start.spring.io/) is the recommended approach for generating a new Spring Boot application. Spring Initializr is like a shopping cart for all of the dependencies you might need for your application. It offers a fast way to pull in all of the dependencies you need for an application and does a lot of the setup for you. Just Navigate to [Spring Initializr](http://start.spring.io/), fill in the metadata, add the dependencies relevant to your application, and generate the new project. Make sure to carefully pick the right Spring Boot starters for your application.
 
 Initializr will automatically generate the main Spring Boot application class for you. Feel free to adjust it to your needs.
 
@@ -59,7 +59,7 @@ At this stage, make sure you understand Spring Boot auto-configuration and [how 
 
 It typically makes sense to start working locally on your developer machine. Once you want to connect your application to external resources (e.g., database, messaging middleware, external services) or test it in a more realistic environment, deploying your Spring Boot application to a remote runtime environment or server is an excellent idea.
 
-For this reason, from this point on you can consider deploying the application on [VMware Tanzu Application Service] (https://tanzu.vmware.com/application-service) (TAS) or a remote testing server. TAS is based on the Cloud Foundry open-source project. It is built to be the best runtime for Spring and Spring Boot applications, providing a lean, integrated, and efficient user experience. If you want to deploy your application there, follow the corresponding "[getting started](https://docs.cloudfoundry.org/buildpacks/java/getting-started-deploying-apps/gsg-spring.html)" deployment guide.
+For this reason, from this point on you can consider deploying the application on [VMware Tanzu Application Service](https://tanzu.vmware.com/application-service) (TAS) or a remote testing server. TAS is based on the Cloud Foundry open-source project. It is built to be the best runtime for Spring and Spring Boot applications, providing a lean, integrated, and efficient user experience. If you want to deploy your application there, follow the corresponding "[getting started](https://docs.cloudfoundry.org/buildpacks/java/getting-started-deploying-apps/gsg-spring.html)" deployment guide.
 
 ### 6. Prepare your application to work with Spring Boot
 
@@ -135,4 +135,3 @@ In addition to the links included in the text, the list below provides additiona
 * [Spring Initializr](https://start.spring.io/) --- generate a Spring Boot project with just what you need to start quickly
 * [Spring Boot Starters](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-starters) --- one-stop-shop for convenient dependency descriptors that include all of the Spring and related technology that you need in your application
 * [Spring Tools](https://spring.io/tools) --- next-generation Spring tooling for your favorite coding environment
-
