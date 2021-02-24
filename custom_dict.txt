@@ -189,6 +189,7 @@ misconfigured
 [M,m]odelling
 modularity
 ([M,m]|multi-m)icroservice(s)?(-related|-based)?
+microservice.
 multitenancy
 Multitenant
 Multi-Subnet
@@ -197,6 +198,7 @@ multi-subnet
 (multi-)?namespace
 MVP(s)
 [N,n]amespace-scoped
+namespace.
 namespaced
 namespacing
 natively
@@ -423,11 +425,12 @@ clusterIPs
 cluster-proportional-autoscaler
 ClusterRole(s)?
 ClusterRoleBinding(s)?
+ClusterRoleBindings.
 Clojure
 CMD
 CNI-[P,p]lugin(s)?
 CNI-specific
-commonName
+commonName(.)?
 CoreCLR
 [C,c]onfig[M,m]ap(s)?
 ConfigurationMap(s)?
@@ -578,7 +581,7 @@ ksqlDB
 [k,K]ube
 KubeAcademy
 kubeadm
-KubeadmConfigSpec
+KubeadmConfigSpec(.)?
 [k,K]ubelet(-probe)?
 KubeAcademy
 [K,k]ubeapps
@@ -786,7 +789,7 @@ TokenRequest
 TokenReview
 Traefik
 Trello
-Trivy
+Trivy(.)?
 TRS-80
 [T,t]ypha
 urandom
@@ -916,6 +919,7 @@ ZDNet
 # Acronyms
 (I|P)aaS
 (IP|ip)(v6|v4|s)?
+IPs.
 [S,J]DK
 [s,S]3
 3D
