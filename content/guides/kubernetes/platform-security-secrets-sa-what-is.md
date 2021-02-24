@@ -3,6 +3,8 @@ title:  "What are Kubernetes Secrets and Service Accounts?"
 linkTitle: "Secrets and Service Accounts"
 parent: "Platform Security"
 weight: 2
+aliases:
+- guides/kubernetes/k8s-secrets-sa-what-is/
 topics:
 - Kubernetes
 tags:
