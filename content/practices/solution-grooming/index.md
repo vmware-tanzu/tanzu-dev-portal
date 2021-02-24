@@ -67,23 +67,23 @@ This workshop can run very long if there are a lot of ideas to cluster so be sur
 
 If needed, you can also lead the team in expanding / consolidating clusters to the team's satisfaction.
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 
 [Solution Brainstorming](/practices/solution-brainstorming)
 
-## Following
+### Following
 
 [Solution Prioritization](/practices/solution-prioritization)
 
-### Real World Examples
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading
 
 

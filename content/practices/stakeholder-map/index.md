@@ -64,21 +64,21 @@ You've succeeded when there exists a shared understanding of stakeholders involv
 
 This exercise has a tendency to go long. Your job is to keep each description brief and give the team people to follow up with.
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 Coming soon! 
 
 ### Recommended reading

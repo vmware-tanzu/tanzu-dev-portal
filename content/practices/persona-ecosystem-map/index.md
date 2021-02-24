@@ -44,23 +44,23 @@ The team has a shared understanding of all the users, what they care about, and 
 
 None at the moment
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 Coming soon!
  
-### Recommended Reading
+## Recommended Reading
 
 

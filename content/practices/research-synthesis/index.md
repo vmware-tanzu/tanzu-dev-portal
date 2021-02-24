@@ -66,23 +66,23 @@ It's also helpful to share out findings at the subsequent iteration planning mee
 
 You can alternately create your categories from the questions you are asking to your identified [personas](/practices/personas). These categories only tend to work for users of the same persona (i.e. do not mix user interviews with stakeholder interviews while synthesizing)
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Assumptions](/practices/assumptions)
 - [Exploratory Interviews](/practices/exploratory-interviews)
 
-## Following
+### Following
 
 Various, depending on context
 
-### Real World Examples
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading
 
 
