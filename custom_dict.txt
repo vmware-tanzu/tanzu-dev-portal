@@ -86,9 +86,9 @@ dbkey
 de
 declaratively
 decrypt(ed|ing)?
+[D,d]e-referenced
 de-duplicate
 deployable
-[D,d]e-referenced
 deserializing
 developer-centric
 DevOps(-related)?
@@ -97,6 +97,7 @@ DevOps(-related)?
 diehard
 differentiators
 donut
+durations
 dropdown
 durations
 echoserver
@@ -155,6 +156,7 @@ intra-service
 intra-subnet
 Irizarry
 interpolator
+Irizarry
 Jiu
 Jitsu
 judgement
@@ -165,7 +167,10 @@ latencies
 letsencrypt-staging
 [L,l]ifecycle
 Livelessons
-liveness
+[l,L]iveness(-probe|[P,p]robe)?
+Low-fi
+m'étonner
+machine-centric
 Livestream
 Low-fi
 m'étonner
@@ -591,7 +596,6 @@ KUBECONFIG
 [k,K]ubectl
 kubectx
 [k,K]ubelet(-probe)?
-[k,K]ubelet(-probe)?
 kubelet(s)?
 kubeseal
 Kube2IAM
@@ -681,6 +685,7 @@ OpenStack
 OpenTracing
 Paketo
 Packer
+php-apache
 passwd
 PeerAuthentication
 php-apache
@@ -780,6 +785,7 @@ TaskRepository
 Tekton('s)?
 Terraform(-ing)?
 TestContainers
+Tilt(file|Cloud)?
 tgz
 Thanos
 Tilt(file|Cloud)?

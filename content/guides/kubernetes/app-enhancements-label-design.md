@@ -36,7 +36,8 @@ metadata:
     app: my_app
     version: 1.0.0
     component: frontend
-spec: ...
+spec:
+  ...
 ```
 
 ### Labels with Selectors
@@ -86,11 +87,10 @@ perform these queries: `=`, `==`, and `!=`.
 {{< table "table" >}}
 | Operator | Description |
 | -------- | ----------- |
-| = | equal to or is |
-| == | equal to or is |
-| != | not equal to or is not |
+| =        | equal to or is |
+| ==       | equal to or is |
+| !=       | not equal to or is not |
 {{< table />}}
-
 #### Label Query Examples
 
 Find all components in Kubernetes that are related to running MySQL

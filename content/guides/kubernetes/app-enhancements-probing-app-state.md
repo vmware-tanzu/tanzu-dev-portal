@@ -2,11 +2,11 @@
 title: "Probing Application State"
 parent: "Application Enhancements"
 topics:
-- Kubernetes
+  - Kubernetes
 tags:
-- Kubernetes
+  - Kubernetes
 team:
-- John Harris
+  - John Harris
 ---
 
 Adding probes to your application provides two critical pieces of information to the system running

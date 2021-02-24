@@ -522,11 +522,7 @@ body.light-mode #toggle-light-dark-mode span {
       border-radius: 0;
       display: block;
     }
-    input[type="text"]:focus,
-    input[type="url"]:focus,
-    input[type="email"]:focus,
-    input[type="tel"]:focus,
-    select.mktoField:focus {
+    input[type=text]:focus, input[type=url]:focus, input[type=email]:focus, input[type=tel]:focus, select.mktoField:focus {
       outline: none !important;
       border-bottom: 1px solid $link !important;
     }
