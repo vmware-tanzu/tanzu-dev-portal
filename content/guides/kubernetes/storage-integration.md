@@ -45,8 +45,6 @@ implemented via plugins (or drivers) such as
 EFS](https://github.com/kubernetes-sigs/aws-ebs-csi-driver), and
 [NetApp](https://github.com/NetApp/trident).
 
-![CSI Logo](/images/guides/kubernetes/storage-integration/csi-logo.png)
-
 A more complete list is available in the [CSI driver documentation](https://kubernetes-csi.github.io/docs/drivers.html).
 
 Prior to standardization around CSI, the implementation of storage integrations

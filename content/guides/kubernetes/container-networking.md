@@ -8,13 +8,11 @@ team:
 - Josh Rosso
 ---
 
-Kubernetes uses the [container network
-interface](https://github.com/containernetworking/cni) (CNI) to provide
+Kubernetes uses the [Container Network
+Iinterface](https://github.com/containernetworking/cni) (CNI) to provide
 networking functionality to containers. Networking is implemented in CNI
 plugins. The interface / plugin model enables Kubernetes to support many
 networking options implemented via plugins such as Calico, Antrea, and Cilium.
-
-![CNI Logo](https://raw.githubusercontent.com/containernetworking/cni/master/logo.png)
 
 Anyone may write a CNI-plugin. The expectation is the plugin will support
 specific operations defined in the specification (e.g.
