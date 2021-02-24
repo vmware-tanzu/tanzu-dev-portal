@@ -69,22 +69,22 @@ The top ideas that came out of the design studio will be carried forward and syn
 - Be sure to focus on the user journeys
 - You can use any variety of paper sizes and squares; it’s about generating quantity, not detail
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Personas](/practices/personas)
 - [Journey Map](/practices/journey-map)
 - [Scenario Writing](/practices/scenario-writing)
 
-## Following
+### Following
 None at the moment
 
-### Real World Examples
+## Real World Examples
 Coming soon.
 
-### Recommended Reading
+## Recommended Reading
 None at the moment

@@ -47,26 +47,26 @@ Success is when you have agreement on the problem and solution (aka snapshot)to 
 
 None at the moment
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 
 ![Close up of a detailed molecule map drawn on a whiteboard with persona in the center](/images/practices/molecule-map/example-1.jpg)
 
 ![Close up of a molecule map drawn on a whiteboard](/images/practices/molecule-map/example-2.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 

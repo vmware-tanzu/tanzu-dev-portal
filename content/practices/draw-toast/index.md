@@ -54,22 +54,22 @@ Sometimes people say “Do I have to draw? I don’t know how to draw.” Genera
 
 If short on time, have everyone tape theirs up and just ask participants to take a look during a break.
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 None at the moment
 
-## Preceding
+### Preceding
 None at the moment
 
-## Following
+### Following
 None at the moment
 
-### Real World Examples
+## Real World Examples
 ![Wide view of different toast drawings taped to a window wall](/images/practices/draw-toast/example-1.png)
 
 ![Close up of one drawing of how to make toast](/images/practices/draw-toast/example-2.png)
 
-### Recommended Reading
+## Recommended Reading
 
 <a href="http://www.drawtoast.com/" target="_blank">DrawToast.com</a> has a wealth of information including a TED talk and examples of others' work on this subject. One particularly helpful resource is <a href="http://www.drawtoast.com/downloads/DrawToast%20Systems%20Thinking%20Guide.pdf" target="_blank">A Primer in Systems Thinking</a> (PDF).

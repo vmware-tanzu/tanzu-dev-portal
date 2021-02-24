@@ -66,25 +66,25 @@ Success is when you have agreement and understanding of the product market fit, 
 - Revenue is one way to measure success, that box could be renamed to **Outcomes**
 - Update this business model week over week, it’s meant to be used over time.
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Molecule Map](/practices/molecule-map)
 - [Personas](/practices/personas)
 
-## Following
+### Following
 
 None at the moment
 
-### Real World Examples
+## Real World Examples
 
 ![Sample filled out canvas](/images/practices/lean-business-canvas/example-1.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 [Business Model Generation book](https://www.strategyzer.com/books/business-model-generation)  
 [Business Model Canvas Yelp](https://www.innovationtactics.com/business-model-canvas-yelp/)

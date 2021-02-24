@@ -51,25 +51,25 @@ Success is achieved when the team agrees to the top 3-5 problems on which it wil
 
 The timing of this activity varies along with the number of problems identified in the research process, so prepare accordingly. It can also be beneficial to timebox conversation of each problem in order to ensure the team maintains forward momentum.
 
-### Related practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Research Synthesis](/practices/research-synthesis)
 
-## Following
+### Following
 - [Insight Prioritization](/practices/insight-prioritization)
 - [Solution Brainstorming](/practices/solution-brainstorming)
 
-### Real World Examples
+## Real World Examples
 ![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
 
 ![A group of people discusses priority in front of a whiteboard with two by two chart on it](/images/practices/problem-prioritization/example-3.jpg)
 
 ![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
 
-### Recommended Reading
+## Recommended Reading
 

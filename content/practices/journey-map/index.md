@@ -66,25 +66,25 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
  to consider, map them as touch points from a single [Personas](/practices/personas) perspective.
 - To understand more detail and complexity consider using a Service Blueprint to map a product/service’s “backstage actions” and “support processes” to an individual customer journey.
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Personas](/practices/personas)
 - [Research Synthesis](/practices/research-synthesis)
 
-## Following
+### Following
 [Service Blueprint](/practices/service-blueprint)
 [Scenario Writing](/practices/scenario-writing)
 
-### Real World Examples
+## Real World Examples
 
 ![Journey map on a whiteboard example](/images/practices/journey-map/example-1.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 [Design Sprint journey mapping technique](https://sprintstories.com/the-design-sprint-note-n-map-a9bf0ca88f51)  
 [The difference between a journey map and a service blueprint](https://blog.practicalservicedesign.com/the-difference-between-a-journey-map-and-a-service-blueprint-31a6e24c4a6c)  

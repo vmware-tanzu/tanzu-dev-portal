@@ -63,19 +63,19 @@ You know you are done when the team has prioritized their solutions and is comfo
 
 This is an activity that you can time box if it feels drawn out. Many of the tips embedded above are intended to help you avoid rabbit holes, but if that happens you should feel empowered to move things forward by refocusing the team, setting a timer, or forcing a decision.
 
-### Related Practices
+## Related Practices
 
-## Preceding
+### Preceding
 - [Solution Brainstorming](/practices/solution-brainstorming)
 - [Solution Grooming](/practices/solution-grooming)
 
-## Following
+### Following
 - [Scenario Walkthrough](/practices/scenario-walkthrough)
 - [Design Studio](/practices/design-studio)
 
-### Real World Examples
+## Real World Examples
 ![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 
