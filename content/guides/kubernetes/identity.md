@@ -190,7 +190,9 @@ documentation](https://kubernetes.io/docs/concepts/cluster-administration/certif
 With X.509 certificates we may specify the username and groups that a user is a
 member of by manipulating the standard fields of the cert.
 
-`openssl req -new -key marysmith.pem -out marysmith-csr.pem -subj "/CN=marysmith/O=group1/O=group2"`
+```
+openssl req -new -key marysmith.pem -out marysmith-csr.pem -subj "/CN=marysmith/O=group1/O=group2"
+```
 
 The Common Name field is used to indicate the username of the identity, and we
 add the user to user groups by way of the Organization fields. Just as with the
