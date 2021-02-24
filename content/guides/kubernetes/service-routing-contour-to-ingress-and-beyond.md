@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Contour - To Ingress and Beyond"
 linkTitle: "Contour to Ingress and Beyond"
+parent: "Service Routing"
 weight: 2
 topics:
 - Kubernetes
@@ -80,7 +81,7 @@ You can install Contour directly from the manifests provided by the project, how
 
 1. After a few moments you can confirm that its ready.
 
-    > You're looking for both the **deployment** and **daemonset** to show as fully Available, and a valid IP (or hostname) in the `EXTERNAL-IP` field of your envoy **service**.
+    > You're looking for both the **deployment** and **DaemonSet** to show as fully Available, and a valid IP (or hostname) in the `EXTERNAL-IP` field of your envoy **service**.
 
     ```bash
     $ kubectl -n projectcontour get deployment,daemonset,service

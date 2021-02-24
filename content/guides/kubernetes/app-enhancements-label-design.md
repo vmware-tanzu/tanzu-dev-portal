@@ -1,5 +1,5 @@
 ---
-title:  "Label Best Practices"
+title: "Label Best Practices"
 parent: "Application Enhancements"
 topics:
 - Kubernetes
@@ -10,15 +10,14 @@ team:
 ---
 
 Labels are a means for describing and identifying components that make up an
-application with arbitrary key/value pairs.  Labels are attached to Kubernetes
+application with arbitrary key/value pairs. Labels are attached to Kubernetes
 API objects at time of creation or can also be added/modified/removed at a later
- time.  Labels are simple pieces of metadata that can help with organization and
-  administration of an application's lifecycle.  
+time. Labels are simple pieces of metadata that can help with organization and
+administration of an application's lifecycle.
 
-Labels are ***not always*** arbitrary, and are sometimes applied automatically to
+Labels are **_not always_** arbitrary, and are sometimes applied automatically to
 some API objects by Kubernetes, typically via the
-[`kubelet`](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/).  
-
+[`kubelet`](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/).
 
 ## Using Labels
 
@@ -44,9 +43,9 @@ spec:
 ### Labels with Selectors
 
 Selectors enable you to select Kubernetes API objects based on the labels
-applied to them.  This is useful when defining what workloads should be routed
+applied to them. This is useful when defining what workloads should be routed
 to or from a service and their underlying components, such as what pods should
-be managed by a replica set.  A selector achieves this by specifying which
+be managed by a replica set. A selector achieves this by specifying which
 key/value pairs to search for within API object metadata (typically, but not
 limited to pod specifications) to be able to properly perform these tasks, and
 is one of the main purposes for labels.
@@ -82,8 +81,8 @@ spec:
 ### Identifying Application Components with Labels
 
 The Kubernetes API can be queried with the `kubectl` client to list specific
-components with specific labels.  There are three operators that can be used to
-perform these queries: `=`, `==`, and `!=`.  
+components with specific labels. There are three operators that can be used to
+perform these queries: `=`, `==`, and `!=`.
 
 {{< table "table" >}}
 | Operator | Description |
@@ -103,14 +102,14 @@ kubectl get all -l name==mysql,environment!=production -A
 
 In the command above:
 
-* `get`: lists the API objects
-* `all`: is equivalent to all component/API object types
-* `-l`: label(s) to query/filter on
-* `name==mysql`: label with key `name` is/equals `mysql`
-* `,`: comma separator for multiple label queries
-* `environment!=production`: label with key `environment` is not/not equal to
-`production`
-* `-A`: from all namespaces in Kubernetes.
+- `get`: lists the API objects
+- `all`: is equivalent to all component/API object types
+- `-l`: label(s) to query/filter on
+- `name==mysql`: label with key `name` is/equals `mysql`
+- `,`: comma separator for multiple label queries
+- `environment!=production`: label with key `environment` is not/not equal to
+  `production`
+- `-A`: from all namespaces in Kubernetes.
 
 ## Considerations when Creating Labeling Standards
 
@@ -122,7 +121,7 @@ locating and managing components easier in the long run.
 
 Some recommended labels per the
 [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
- include:
+include:
 {{< table "table" >}}
 | Key | Description | Example |
 | --- | --- | --- |
