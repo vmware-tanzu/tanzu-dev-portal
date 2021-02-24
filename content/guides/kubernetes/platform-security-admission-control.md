@@ -8,8 +8,6 @@ keywords:
 - Kubernetes
 ---
 
-## Abstract
-
 This document details the philosophy and methods for implementing admission
 control in a Kubernetes cluster, such as Tanzu Kubernetes Grid (TKG). It covers
 architectural considerations, tooling choices, and best practices. This document

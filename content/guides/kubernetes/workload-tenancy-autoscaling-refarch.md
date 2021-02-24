@@ -8,8 +8,6 @@ keywords:
   - Kubernetes
 ---
 
-## Abstract
-
 This reference provides guidance, trade-off considerations and implementation
 details for autoscaling application workloads and the cluster's compute
 resources that host them. It includes a variety of approaches to the practice

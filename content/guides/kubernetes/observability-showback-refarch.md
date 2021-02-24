@@ -8,8 +8,6 @@ keywords:
   - Kubernetes
 ---
 
-## Abstract
-
 This document discusses showback for Kubernetes clusters, such as those provided
 by Tanzu Kubernetes Grid (TKG). It covers concepts, and implementation
 considerations. This document represents how the VMware field team approaches

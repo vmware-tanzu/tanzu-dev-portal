@@ -8,8 +8,6 @@ keywords:
   - Kubernetes
 ---
 
-## Abstract
-
 This document details platform monitoring and alerting for Kubernetes clusters,
 such as those provided by Tanzu Kubernetes Grid (TKG). It covers architectural
 considerations, best practices, and will provide guidance for offering alerting

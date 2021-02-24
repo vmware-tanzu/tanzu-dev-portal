@@ -9,8 +9,6 @@ keywords:
   - Contour
 ---
 
-## Abstract
-
 This document details a reference architecture for running
 [Contour](https://projectcontour.io/) as the ingress controller for a Kubernetes
 cluster, such as [Tanzu Kubernetes Grid

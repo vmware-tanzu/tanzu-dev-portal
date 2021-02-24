@@ -9,8 +9,6 @@ keywords:
   - Calico
 ---
 
-## Abstract
-
 This document details a reference architecture for running
 [Calico](https://docs.projectcalico.org/introduction) as the container
 networking plugin (CNI) for a Kubernetes cluster, such as [Tanzu Kubernetes Grid

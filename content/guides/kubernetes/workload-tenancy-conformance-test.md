@@ -8,8 +8,6 @@ keywords:
 - Kubernetes
 ---
 
-## Overview
-
 Conformance testing assists in determining whether software is in compliance
 with standards or specifications. With such a wide array of Kubernetes
 implementations available, conformance testing is an invaluable tool. It’s

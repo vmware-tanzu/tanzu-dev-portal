@@ -8,8 +8,6 @@ keywords:
   - Kubernetes
 ---
 
-## Abstract
-
 This document details secret management and distribution for Kubernetes
 clusters, such as those provided by Tanzu Kubernetes Grid (TKG). It covers
 architectural considerations, secret provider integration approaches, and best

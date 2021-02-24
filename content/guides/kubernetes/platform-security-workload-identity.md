@@ -8,8 +8,6 @@ keywords:
 - Kubernetes
 ---
 
-## Abstract
-
 This document details the philosophy and methods for providing workload identity
 in a Kubernetes cluster. It covers architectural considerations, tooling
 integrations, and best practices. This document represents how the VMware field
