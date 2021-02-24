@@ -21,7 +21,7 @@ Throughout most of my career as a developer, I have written code using .NET (mos
 
 Microsoft released .NET Core 3.0 on Sept. 23, 2019, and a couple of months later, on Dec. 3, 2019, version 3.1 followed. Version 3.0 had already reached its end of life, while version 3.1, with its LTS designation, will have support until Dec. 3, 2022 (more details [here](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)).
 
-.NET Core 3.1 contains a tiny number of changes compared to version 3.0. These are mainly related to Blazor and Windows Desktop, in addition to the LTS designation. The bulk of significant changes were in version 3.0. I have selected a subset of items that I believe have a more significant impact on my day-to-day role at VMware Pivotal Labs. For the complete list of changes, go [here](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) and [here](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
+.NET Core 3.1 contains a tiny number of changes compared to version 3.0. These are mainly related to Blazor and Windows Desktop, in addition to the LTS designation. The bulk of significant changes were in version 3.0. I have selected a subset of items that I believe have a more significant impact on my day-to-day role at VMware Tanzu Labs. For the complete list of changes, go [here](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) and [here](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
 
 ## From Container-Friendly to Container-Aware

@@ -7,6 +7,7 @@
 [0-9]*(GB|MB|KB|m?s|k)
 https?|HTTPS?
 localhost(:[0-9]*)?
+samplehost(:[0-9]*)?
 
 # Times / Dates / timezones / etc
 [0-9]*(am|pm|AM|PM)
@@ -18,6 +19,7 @@ localhost(:[0-9]*)?
 12pm
 2x2
 4x
+[2,4,5]xx
 addon(s)?
 affordances
 Agile-ific
@@ -52,7 +54,7 @@ checkboxes
 codebase
 [C,c]omms
 [C,c]omposable
-[C,c]onfig
+[C,c]onfig(s|-drift)?
 cortado
 counterintuitive
 COVID-19
@@ -75,12 +77,14 @@ DevOps(-related)?
 diehard
 differentiators
 donut
+durations
 dropdown
 [E,e]venting
 [D,d]ev[R,r]el
 egoless
 [E,e]nablement
 Endnotes
+env
 executables
 expensed
 expirations
@@ -92,8 +96,9 @@ fiancé
 fileshare
 FinTech
 firewalling
+flyyy
 frictionless
-Frontend
+[f,F]rontend(-green)?
 [G,g]amestorming
 geospatial
 getters
@@ -104,6 +109,7 @@ ghostUsername
 GitOps
 Helming
 hermeticism
+High-Cardinality
 hostname(s)?
 HumanOps
 ideate
@@ -112,6 +118,7 @@ InfoSec
 initializer
 [I,i]ntegrations
 [I,i]nterservice
+interpolator
 Irizarry
 iteratively
 Jiu
@@ -123,7 +130,10 @@ kitesurfing
 letsencrypt-staging
 [L,l]ifecycle
 Livelessons
-liveness
+[l,L]iveness(-probe|[P,p]robe)?
+Low-fi
+m'étonner
+machine-centric
 Livestream
 Low-fi
 m'étonner
@@ -139,8 +149,8 @@ Mini-Wheats
 minimalistic
 Multitenant
 [M,m]ultiuser
+(multi-)?namespace
 MVP(s)
-namespace
 natively
 no-brainer
 nullable
@@ -150,16 +160,18 @@ old-checkout-desc
 ok
 [O,o]makase
 on-prem
-orchestrator
+orchestrator(s)?
 org(s)?
 overcomplicate
 overengineer(ing)?
 oversample
 pb&jelly
 parallelizing
+[P,p]arameteriz(e|ation|ing)?
 passcode|PASSCODE
 Petstore
 pickab(le|ility)?
+pluggable
 precompiled
 performant
 prefilled
@@ -167,9 +179,13 @@ preload
 prepending
 pre-built
 pre-configured
+pre-defined
+pre-exist(s)?
 pre-optimize
 pre-programmed
 pre-release
+preStop
+[p,P]re-stop
 preconfigured
 podcaster
 Pre-sync
@@ -179,6 +195,7 @@ pushable
 Quickstart
 quokka
 README
+[R,r]eadiness([P,p]robe)?
 realtime
 rearchitect(ing)
 [R,r]ebase
@@ -188,16 +205,19 @@ replicaset
 restaging
 revertibility
 [R,r]oadmap
+[r,R]ole([B,b]inding(s)?)?
 rollout
 rom-com
 rootPassword
 runtimes?
 runnable
-SaaS-based
+SaaS(-based)?
+scaffolded
 [S,s]calable
-schemas
+schema(s)?
 screencaster
 seaborn
+secretname
 [S,s]erverless
 [S,s]ervlets?
 SmartTV
@@ -205,6 +225,7 @@ sso|SSO
 (de)*serialize[d,r]
 Sox
 Spock
+startupProbe(s)?
 stateful
 [S,s]tandups?
 subdirectory
@@ -274,6 +295,7 @@ Astra
 AutoBuild
 AutoDeploy
 autosave
+autoscaler(s)?
 Autowired
 base64(-encoded)?
 BatchScheduler
@@ -290,13 +312,15 @@ cfapps
 ChartMuseum
 chartPath
 classpath
+client[_,-]golang
 CloudEvents
+CloudWatch
 ClusterIssuer
 ClusterIP
 Clojure
 CMD
 CoreCLR
-ConfigMap(s)?
+[C,c]onfig[M,m]ap(s)?
 ConfigurationMap(s)?
 ConfigurationProperties
 containerd
@@ -305,15 +329,22 @@ create-load-balancer
 CredHub
 cron
 Cygwin
+CustomResourceDefinition(s)?
+[D,d]aemonSet
 Dataflow
 DataJpaTest
 DATEV('s)?
 Devoops
+DevSecOps
 [D,d]ebian
 distros
+distroless
+DiscoveryClient
+django-prometheus
 [D,d]ockerfile(s|-built)?
 DockerHub
 dotnetsdk
+dnsutil
 EclipseLink
 ElasticSearch
 [E,e]thernet(s)?
@@ -321,15 +352,19 @@ etcd
 (registry_)?external_url
 extraDeploy
 Falco
+FeignClient
 filesystem
 Finchley
 Flake8
+[f,F]luentd
+[f,F]luentbit
 formatter
 fullnameOverride
 GemFire
 getAppFromExternalRepository(=false)?
 [G,g]it[L,l]ab('s|-managed)?
 [G,g]ithub
+GitLabCI
 [G,g]mail
 [G,g]olang
 GraalVM
@@ -341,6 +376,8 @@ gotchas
 Gunicorn
 H2
 [H,h]elmfiles?
+HPA(s)?
+(HPA|hpa)-(S|s)ender
 Homebrew
 HSQLDB
 HttpBase
@@ -366,6 +403,7 @@ JSON-to-Java
 JUnit
 Jupyter(Hub|Lab)?
 [K,k](8|9|14)s
+Kamus
 Kaniko
 kapp
 Kafka
@@ -380,26 +418,35 @@ kpack(-hosted)?
 Krisp
 ksqlDB
 kube-apiserver
+[k,K]ubelet(-probe)?
 KubeAcademy
+[k,K]ubebuilder
 [K,k]ubeapps
-kubectl
-kubeconfig
-Kubernetes(-native|-specific|-centric|-based|-related)?
+[k,K]ustomize
+[k,K]ubectl
+kubectx
+[K,k]ubeconfig
+KUBECONFIG
+[K,k]ubernetes(-native|-specific|-centric|-based|-related)?
 labelset
 lego
 libnss-wrapper
 linter
 [L,l]inux
 [L,l]og4j2?
+[l,L]ogrus
 LoadBalancer
 lockfile
 logback
 Lombok
 MacBook
 [M,m]acOS
+[m,M]akefile
 MapRepository
 Mesos
 MessagingBase
+[M,m]etacontroller
+metac
 Microk8s
 minideb
 [M,m]inikube
@@ -408,7 +455,7 @@ Minio|MinIO
 MiXiT
 Mockito
 MockMvc
-mongo(db)?
+[M,m]ongo(db)?
 msgpack(ed)?
 Multipass
 my-mongodb
@@ -416,7 +463,7 @@ myapp
 mychart
 mydb
 MyPy
-MySql
+[m,M]y[s,S]ql
 mystream
 mytopic
 [N,n]amespace(s)?
@@ -436,15 +483,17 @@ OpenFeign
 OpenID
 OpenShift
 OpenSSL
+OpenTracing
 Paketo
 Packer
+php-apache
 passwd
 plaintext
 [P,p]ostgres
 Pomodoro
 Procfile
 [P,p]rometheus
-PropertySources
+PropertySource(s)?
 [P,p]roto
 Protobuf
 pre-installed
@@ -460,6 +509,7 @@ PubSub
 Querier
 r0
 RabbitMQ('s)?
+[r,R]edis
 ReplicaSet(s)?
 repmgr
 Resilience4J
@@ -475,6 +525,7 @@ securityContext
 Semver
 ServiceInfo(Creator)?
 ServiceMonitor
+ServiceAccount(s)?
 serviceName=backend
 setValue(Template)?s
 SIG-(Network|Runtime|Security|Storage)
@@ -493,7 +544,7 @@ STDERR|stderr
 STDOUT|stdout
 sudo
 svc
-swagger-cli
+[S,s]wagger(-cli|2)?
 Sysdig
 Tanzu(Developer)?
 targetPort
@@ -502,6 +553,7 @@ TaskRepository
 Tekton('s)?
 Terraform(-ing)?
 TestContainers
+Tilt(file|Cloud)?
 tgz
 Thanos
 [T,t]imebox
@@ -510,6 +562,7 @@ Trello
 TRS-80
 URL(s)?
 Vaadin
+vault-kubernetes-authenticator
 Velero('s)?
 VirtualBox
 [V,v]irtualenv
@@ -519,10 +572,17 @@ webapps_default
 WebFlux
 WebSocket
 WireMock
+[w,W]ordpress
 [V,v]eth
 ytt
 [Z,z]ipkin
 Zuul
+daemonset
+HTTPProxy
+virtualhost
+CTRL-C
+Istio
+
 
 # Parameter Values
 AUTO_DEVOPS_CHART
@@ -539,16 +599,21 @@ NODE_ENV
 WORKDIR
 
 # Companies / Conferences
+Ardanlabs
 Alibaba
 Apress
 Baeldung('s)?
+Apdex
 DataStax('s|Examples)?
 LinkedIn
 deliverAgile
 CodeFresh
+CoffeeOps
 CoreOS
+D2iQ
 DevNexus
 DevOpsDays(KC)?
+Disneyland
 Documentum
 DockerCon
 [D,d]ockerhub(-[\w|-]+)?
@@ -582,6 +647,7 @@ Rakuten
 RedMonk('s)?
 SpringOne(2020)?
 Skyscanner
+Soluto('s)?
 Styra
 TechRepublic
 Theia
@@ -600,6 +666,7 @@ ZDNet
 [S,J]DK
 [s,S]3
 3D
+AAAA
 A3
 api
 APIs?
@@ -646,16 +713,20 @@ IIS
 IoT
 IPM
 JAAS(-based)?
+JAX-RS
 JDBC
 JMX
 JPA
 JRE
+JOP
 JSON(-formatted)?
 JSR-352
 JST
-JVM
+JVM(-based)?
 KMS
 KNN
+KUDO
+KUTTL
 LDAP
 LTS
 MDN
@@ -674,6 +745,7 @@ ORM(-based)?
 OSS
 OWASP
 pb('s)?
+PID
 POJO(s)?
 POJP
 PR(s)?
@@ -682,7 +754,8 @@ RBAC(-enabled)?
 ROI
 RSA
 SCDF('s)?
-SIG
+src
+SIG(KILL|TERM)?
 SRE
 TBD
 TCP
@@ -695,18 +768,22 @@ url
 UX
 v3
 VMs?
+VCS
 WCF
 WSL
 x64
 XKCD
 (U)?UID(s)?
 YAML|yaml
+ZOP
 
 # Names
 Abbie
 Abo
+Abubakar
 Alexey
 Amaro
+Ango
 Anneliese
 Aravena
 Asiedu-Ampem
@@ -773,6 +850,7 @@ Jiang
 Julien
 Junio
 Kousen
+Kravitz
 Lazu
 Liles
 Lippert
@@ -811,6 +889,8 @@ Sébastien
 Sevilla
 Sheasha
 Shopen
+Siddiq
+Sipe
 Sletten
 Sloka
 Smythe
@@ -843,6 +923,7 @@ olehdokuka
 OLGA_MACIASZEK
 starbuxman
 tiffanyfayj
+johnharris85
 
 # Tags
 img

@@ -1,8 +1,8 @@
 ---
-title:  "Deploy Custom Applications from a Private Helm Repository Using Kubeapps"
-linkTitle: "Deploy Custom Application from Private Repository"
-parent: Kubeapps
+title:  "Deploy from a Private Helm Repository Using Kubeapps"
+parent: "Packaging"
 description: Create a private registry for your customized Helm chart using Harbor and Kubeapps.
+weight: 7
 date: 2020-06-15
 topics:
 - Kubernetes

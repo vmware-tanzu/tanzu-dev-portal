@@ -44,3 +44,7 @@ sample.%:
 #video: @ creates a video. example: make video.demo-writing-makefiles
 video.%:
 	hugo new videos/$(call word-dot,$*,1).md -k video
+
+#practice: @ creates a new agile practice. example: make practice.makefile-workshop
+practice.%:
+	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
