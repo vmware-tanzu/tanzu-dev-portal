@@ -51,6 +51,7 @@ biome
 bookinfo(-ingressgateway-certs-ca)?
 [B,b]ootiful
 Booternetes
+[B,b]ootif(ul|y|ying|ied|ication)
 bootup
 Boris
 Brandolini('s)?
@@ -75,6 +76,9 @@ Crowdsource
 Crowdsourced
 currentMetricValue(s)?
 customizable
+DDD
+dataset
+[D,d]atasources
 customization(s)?
 datagram
 datapath
@@ -133,6 +137,7 @@ getters
 ghostEmail
 ghostPassword
 ghostUsername
+[G,g]it[F,f]low
 GitOps(-type)?
 Helming
 hermeticism
@@ -147,6 +152,7 @@ idempotency
 implementors
 [I,i]ncompressible
 InfoSec
+initializer
 [I,i]ntegrations
 [I,i]nterservice
 interpolator
@@ -157,6 +163,7 @@ intra-subnet
 Irizarry
 interpolator
 Irizarry
+iteratively
 Jiu
 Jitsu
 judgement
@@ -246,6 +253,7 @@ preload
 PreemptLowerPriority
 prepending
 pre-built
+pre-configured
 pre-created
 pre
 pre-defined
@@ -257,6 +265,9 @@ preStop
 [p,P]re-stop
 preconfigured
 podcaster
+Pre-sync
+programmatically
+Proxy-ing|Proxying
 PodDisruptionBudget
 PodMetrics
 programmatically
@@ -275,6 +286,8 @@ Recommender
 refactorings?
 replicationcontrollers
 [R,r]epos?
+replicaset
+restaging
 requestor
 revertibility
 [R,r]oadmap
@@ -311,6 +324,7 @@ subcommand
 subdirectory
 [S,s]ubnet(s)?
 suboptimal
+substring
 subpath
 superset
 symposia
@@ -326,6 +340,7 @@ TODOs?
 toleration(s)?
 toolchain
 toolkits
+toolset
 tooltip
 topologies
 tradeoff(s)?
@@ -336,11 +351,13 @@ undersample
 underutilization
 unencoded
 unencrypted
+(un)?marshalling
 unschedulable
 unpause
 Unported
 unpushed
 unreleasable
+[U,u]nstaged
 untuned
 upgradability
 upstream(s)?
@@ -449,6 +466,7 @@ create-load-balancer
 credentialName
 CredHub
 cron
+Cygwin
 CRuby
 crypto
 CrossSubnet
@@ -532,7 +550,9 @@ horizontally-scalable
 HostEndpoint
 hostPath
 HSQLDB
+HttpBase
 Httpie|HTTPie
+HttpSession
 HttpProxy
 HyperKit
 ImagePolicyWebhook
@@ -558,6 +578,7 @@ JaFU
 Jakarta
 JavaEE
 JBatch
+jdbcUrl
 Jetstack
 JHipster
 jks
@@ -629,6 +650,7 @@ linter
 LoadBalancer
 lockfile
 logback
+Lombok
 Logstash
 Lua
 MacBook
@@ -636,13 +658,13 @@ MacBook
 [m,M]akefile
 MapRepository
 Mesos
+MessagingBase
 [M,m]etacontroller
 metac
 Microk8s
 minideb
 [M,m]inikube
-Minio
-MinIO
+Minio|MinIO
 [M,m]itigations
 MiXiT
 Mockito
@@ -751,6 +773,7 @@ secretbox
 securityContext
 SELinux
 Semver
+ServiceInfo(Creator)?
 ServiceEntry
 ServiceMonitor
 ServiceAccount(s)?
@@ -761,6 +784,7 @@ SIG-(Network|Runtime|Security|Storage)
 Siri
 [S,s]kaffold
 Snapchat
+SqlServer|sqlserver
 [S,s]onobuoy
 Splunk
 SpringBootTest
@@ -781,6 +805,7 @@ svc
 Sysdig
 Tanzu(Developer)?
 targetPort
+TAS
 TaskRepository
 Tekton('s)?
 Terraform(-ing)?
@@ -790,6 +815,7 @@ tgz
 Thanos
 Tilt(file|Cloud)?
 [T,t]imebox
+TomEE
 TLS-enabled
 TokenRequest
 TokenReview
@@ -856,6 +882,7 @@ Ardanlabs
 Alibaba
 Apdex
 Apress
+Baeldung('s)?
 AquaSecurity
 Datadog
 Apdex
@@ -874,6 +901,7 @@ DevOpsDays(KC)?
 Disneyland
 Documentum
 DockerCon
+[D,d]ockerhub(-[\w|-]+)?
 DZone
 EMC
 Garmin
@@ -885,12 +913,16 @@ HashiCorp('s)?
 Heptio
 Heroku('s)?
 JavaOne
+JBoss
 JetBrains
 KubeCon
+LiveLessons
 LinkedIn
 Lyft
 McGraw-Hill
+Mkyong
 NameCheap
+NetWeaver
 NetApp('s)?
 Octoverse
 OneMagnify
@@ -901,6 +933,7 @@ Percona
 Pluralsight
 PMC
 Rakuten
+[R,r]eddit
 RedMonk('s)?
 [R,r]eddit
 SpringOne(2020)?
@@ -916,6 +949,9 @@ Twistlock
 [U,u]ber
 VMware(-hosted|'s|Tanzu)?
 VMworld
+WebLogic
+WebSphere
+Wildfly
 WeChat
 [D,d]ockerhub
 [D,d]ockerhub-[\w|-]+
