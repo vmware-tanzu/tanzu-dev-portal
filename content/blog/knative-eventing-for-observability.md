@@ -19,8 +19,6 @@ team:
   - Tyler Britten
 ---
 
-If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it–deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?
-
 If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it—deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?
 
 [Knative](https://knative.dev) is a Kubernetes-based platform used to deploy and manage serverless workloads. It has two components: serving and eventing, both of which can be deployed independently. In this post, we’re going to focus on eventing here, which can automatically mark events in your data or trigger other events based on your needs.
