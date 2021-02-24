@@ -69,8 +69,7 @@ which is not deployed by default.
 Distributed Tracing is another important pillar of observability. As a platform
 operator, consider deploying a tracing system to offer it as a platform service.
 This will enable developers to perform distributed tracing in their
-applications. Consult the Distributed Tracing section of the [Application
-Observability](/observability/concepts/#distributed-tracing) document.
+applications.
 
 ## Popular Tooling and Approaches
 

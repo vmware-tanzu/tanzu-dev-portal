@@ -25,6 +25,7 @@ Ensure the members of your etcd cluster are healthy. The below commands give you
 a glimpse of the status of your cluster.
 
 Note the need to substitute the node IP's for x, y and z below:
+
 ```
 ETCDCTL_API=3 etcdctl --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/healthcheck-client.crt --key=/etc/kubernetes/pki/etcd/healthcheck-client.key member list
 
@@ -33,6 +34,7 @@ https://x:2379 is healthy: successfully committed proposal: took = 9.969618ms
 https://y:2379 is healthy: successfully committed proposal: took = 10.675474ms
 https://z:2379 is healthy: successfully committed proposal: took = 13.338815ms
 ```
+
 {{% /checklist-item %}}
 
 {{% checklist-item title="A Backup/restore strategy is outlined" %}}
@@ -92,7 +94,7 @@ When applicable, validate that network policies are being enforced as expected.
 
 More information on designing a network policy for your cluster can be found in
 the
-[Network Policy Implementation](/networking/guides/network-policy-implementation)
+[Network Policy Implementation](../container-networking-network-policy)
 library document.
 {{% /checklist-item %}}
 
@@ -124,7 +126,7 @@ define default, minimum and maximum memory, CPU and storage utilization per Pod
 in a namespace. These should be defined to avoid running unbounded containers.
 
 You can find more information about this in the
-[resource limits](/workload-tenancy/guides/cluster-tuning/#resource-limits)
+[resource limits](../workload-tenancy-cluster-tuning#resource-limits)
 section of the cluster tuning library document.
 {{% /checklist-item %}}
 
@@ -136,7 +138,7 @@ Ensure notifications are correctly delivered, and a dead man's switch is
 configured and working.
 
 The Tanzu Labs library contains a
-[thorough monitoring checklist](/observability-platform/guides/kubernetes-monitoring-checklist/)
+[thorough monitoring checklist](../observability-k8s-monitoring-checklist/)
 to help you plan your tests accordingly and ensure full coverage.
 {{% /checklist-item %}}
 
@@ -144,7 +146,7 @@ to help you plan your tests accordingly and ensure full coverage.
 The containers running on the platform should be monitored for performance and
 availability. Kubernetes provides liveness and readiness checks, and prometheus
 can give you more in-depth information of application performance. Review the
-[probing application state](/application-enhancements/guides/probing-application-state/)
+[probing application state](../app-enhancements-probing-app-state/)
 guide content for details.
 {{% /checklist-item %}}
 
@@ -172,7 +174,7 @@ to properly set expectations with application owners.
 Verify that the configured identity provider is functional. Test the platform
 login process using existing and new users.
 
-See the [identity and access control](/identity/concepts/) section of the
+See the [identity and access control](../identity) section of the
 library for more details.
 {{% /checklist-item %}}
 
@@ -188,11 +190,10 @@ Verify that the metrics aggregation pipeline for the workloads and the platform
 is functional. This is a requirement for cluster and pod autoscalers to work.
 
 The
-[Platform Monitoring Guide](/observability/guides/exporting-application-metrics/)
+[Platform Monitoring Guide](../app-observability-exporting-metrics/)
 goes deep detailing monitoring, alerting and visualizing the metrics collected
 by the system.
 {{% /checklist-item %}}
-
 
 ### Logging
 

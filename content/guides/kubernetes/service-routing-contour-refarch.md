@@ -261,7 +261,7 @@ With the above configuration, Envoy first inspects the SNI extension to
 determine the destination server. Once identified, it terminates the TLS
 connection and forwards the TCP traffic over an unencrypted connection.
 
-![TCP Proxying with TLS](/images/guides/kubernetes/service-routing/contour-ingress-patterns-tcp-proxying.drawio.png)
+![TCP Proxying with TLS](/images/guides/kubernetes/service-routing/diagrams/contour-ingress-patterns-tcp-proxying.drawio.png)
 
 ### TLS passthrough
 

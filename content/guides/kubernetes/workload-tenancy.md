@@ -3,9 +3,9 @@ title: "Workload Tenancy"
 subsection: "Workload Tenancy"
 weight: 1500
 topics:
-- Kubernetes
+  - Kubernetes
 team:
-- Josh Rosso
+  - Josh Rosso
 ---
 
 Kubernetes is an inherently multi-tenant system. The term tenant can
@@ -46,15 +46,15 @@ metadata:
   name: frontend
 spec:
   containers:
-  - name: db
-    image: mysql
-    resources:
-      requests:
-        memory: "64Mi"
-        cpu: "250m"
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
+    - name: db
+      image: mysql
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
 ```
 
 ### Limits
@@ -78,18 +78,18 @@ Based on what is configured above, pods automatically get marked with a specific
 quality of service.
 
 {{< table "table" >}}
-| QoS  | Condition  | Description  |  
+| QoS | Condition | Description |  
 |---|---|---|
-| Best Effort | No request or limit set | Pod is scheduled and uses any available resources to the host.  |  
-| Guaranteed | Limits == Requests  | The amount of resources a pod is scheduled for equals what its able to consume on the host. If the host comes under contention, the pod could be throttled or killed.  |
-| Burstable | Limits > Requests  | A pod can "burst" beyond its resource request but not above its limit. If the host comes under contention, the pod could be throttled or killed. |
+| Best Effort | No request or limit set | Pod is scheduled and uses any available resources to the host. |  
+| Guaranteed | Limits == Requests | The amount of resources a pod is scheduled for equals what its able to consume on the host. If the host comes under contention, the pod could be throttled or killed. |
+| Burstable | Limits > Requests | A pod can "burst" beyond its resource request but not above its limit. If the host comes under contention, the pod could be throttled or killed. |
 {{</ table >}}
 
 ## Popular Tooling and Approaches
 
 This section covers a multitude of configuration and our recommendations for
 each. For an in-depth guide on tuning these parameters, see the [Cluster Tuning
-Guide](../guides/cluster-tuning).
+Guide](../workload-tenancy-cluster-tuning).
 
 ### Guaranteed Pods
 
@@ -109,14 +109,16 @@ unless the host comes under contention.
 ![Guaranteed Pods](/images/guides/kubernetes/workload-tenancy/guaranteed-pods.png)
 
 **Pros:**
-* Improved stability
-    * Eliminates resource contention between workloads
+
+- Improved stability
+  - Eliminates resource contention between workloads
 
 **Cons:**
-* Reduced infra utilization
-    * May result in underutilized compute resources
-* Can lead to CPU throttling and OOM kills
-    * Important to understand resource consumption profile of workloads
+
+- Reduced infra utilization
+  - May result in underutilized compute resources
+- Can lead to CPU throttling and OOM kills
+  - Important to understand resource consumption profile of workloads
 
 ### Burstable Pods
 
@@ -138,10 +140,12 @@ instability in workloads as they are killed when the host comes under resource
 contention.
 
 **Pros:**
-* Possibly improved infra resource utilization
+
+- Possibly improved infra resource utilization
 
 **Cons:**
-* Potential for resource contention
+
+- Potential for resource contention
 
 ### Pod Disruption Budgets
 
@@ -155,12 +159,14 @@ For any workload that requires a minimum number of instances running, this is
 recommended.
 
 **Pros:**
-* Improved stability through availability guarantees
+
+- Improved stability through availability guarantees
 
 **Cons:**
-* Potential to stall upgrades
-    * If cluster resources are under contention, an upgrade may stall to respect
-      the disruption budget
+
+- Potential to stall upgrades
+  - If cluster resources are under contention, an upgrade may stall to respect
+    the disruption budget
 
 ### Limit Ranges
 
@@ -171,10 +177,12 @@ scoped and recommended for administrators to enforce a sensible default and
 limit per-pod.
 
 **Pros:**
-* Provides "guardrails" for development teams
+
+- Provides "guardrails" for development teams
 
 **Cons:**
-* Possibly confusing for tenants that don't know how resource values are being set
+
+- Possibly confusing for tenants that don't know how resource values are being set
 
 ### Resource Quotas
 
@@ -185,22 +193,24 @@ as object count quota.
 
 Below are some of the resources that can be placed under object count quota:
 
-* count/persistentvolumeclaims
-* count/services
-* count/secrets
-* count/configmaps
-* count/replicationcontrollers
-* count/deployments.apps
-* count/replicasets.apps
-* count/statefulsets.apps
-* count/jobs.batch
-* count/cronjobs.batch
-* count/deployments.extensions
+- count/persistentvolumeclaims
+- count/services
+- count/secrets
+- count/configmaps
+- count/replicationcontrollers
+- count/deployments.apps
+- count/replicasets.apps
+- count/statefulsets.apps
+- count/jobs.batch
+- count/cronjobs.batch
+- count/deployments.extensions
 
 For multi-team environments, these constraints can be beneficial to enforce.
 
 **Pros:**
-* Provides controls over resource consumption
+
+- Provides controls over resource consumption
 
 **Cons:**
-* Can be over-restrictive in single-tenant environments
+
+- Can be over-restrictive in single-tenant environments

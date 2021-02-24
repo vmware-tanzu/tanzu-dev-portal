@@ -5,7 +5,7 @@ description: "Guidance on pod priority and preemption"
 parent: "Workload Tenancy"
 weight: 2000
 keywords:
-- Kubernetes
+  - Kubernetes
 ---
 
 ## Overview
@@ -75,12 +75,12 @@ With the above assumptions, we can define the following priority classes for
 your entire application needs.
 
 {{< table "table" >}}
-| PriorityClass Name | Value   | preemptionPolicy     | globalDefault |
+| PriorityClass Name | Value | preemptionPolicy | globalDefault |
 | ------------------ | ------- | -------------------- | ------------- |
-| cat-1              | 10000   | None                 | true          |
-| cat-2              | 20000   | PreemptLowerPriority | false         |
-| cat-3              | 30000   | PreemptLowerPriority | false         |
-| cluster-service    | 1000000 | PreemptLowerPriority | false         |
+| cat-1 | 10000 | None | true |
+| cat-2 | 20000 | PreemptLowerPriority | false |
+| cat-3 | 30000 | PreemptLowerPriority | false |
+| cluster-service | 1000000 | PreemptLowerPriority | false |
 {{</ table >}}
 **_Table 1: Sample PriorityClass Allocation_**
 
@@ -106,10 +106,10 @@ budgets.
 {{< table "table" >}}
 | Application | Disruption Budget |
 | ----------- | ----------------- |
-| Blue Pod    | Min Available : 3 |
-| Purple Pod  | Min Available : 3 |
-| Green Pod   | Min Available : 2 |
-| Red Pod     | Min Available : 2 |
+| Blue Pod | Min Available : 3 |
+| Purple Pod | Min Available : 3 |
+| Green Pod | Min Available : 2 |
+| Red Pod | Min Available : 2 |
 {{</ table >}}
 **_Table 2: Scenario Disruption Budget_**
 
@@ -127,7 +127,7 @@ pod will cause a violation.
 {{% /aside %}}
 
 The scheduling will run with 2 passes. If the first attempt
- failed with
+failed with
 `fitError` which is an indication from scheduler that it could not find the
 best fit for the pod under the current situations, the Kubernetes scheduler will
 attempt to run the 2 passes as long as the new pod priority class has
@@ -178,7 +178,7 @@ With `PriorityClass` you can define the importance of your application
 and may evict application pod from other team with lower priority. To ensure
 this does not happen in shared environment, Kubernetes admin can
 implement a policy based control with
-[OPA](/platform-security/guides/developing-opa-policies/)
+[OPA](../platform-security-opa/)
 
 The following example show how to limit `PriorityClass` by namespace
 
@@ -230,10 +230,10 @@ kind: Deployment
 - name: kube-mgmt
   image: openpolicyagent/kube-mgmt:0.8
   args:
-    - '--replicate-cluster=v1/namespaces'
-    - '--replicate=extensions/v1beta1/ingresses'
-    - '--replicate=apps/v1/deployments'
-    - '--replicate=v1/pods'
+    - "--replicate-cluster=v1/namespaces"
+    - "--replicate=extensions/v1beta1/ingresses"
+    - "--replicate=apps/v1/deployments"
+    - "--replicate=v1/pods"
 ```
 
 {{% /aside %}}

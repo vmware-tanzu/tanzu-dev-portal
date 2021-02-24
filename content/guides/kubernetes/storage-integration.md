@@ -130,5 +130,4 @@ guarantees your platform needs to offer. Some key considerations are:
 - What storage system can you realistically operate? Ceph? vSAN?
 
 Having conversations around these points will help you determine the best
-storage integration for you. For details on the available options,
-recommendations, and trade-offs, [see the Options section](../options/).
+storage integration for you.
