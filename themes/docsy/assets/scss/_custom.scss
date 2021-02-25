@@ -86,6 +86,7 @@ blockquote {
 }
 
 p {
+  font-size: 1.0625rem;
 	margin: 1rem 0;
 }
 
@@ -505,7 +506,8 @@ body.light-mode #toggle-light-dark-mode span {
 .td-sidebar-nav .td-sidebar-link__page,
 .td-sidebar-nav .td-sidebar-link__subsection
  {
-	color: $light;
+	// color: $light;
+  color: white;
 }
 
 .breadcrumb-item {
@@ -907,6 +909,11 @@ body.tv-episode {
   overflow: hidden;
 }
 
+.tv-episode-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
 .col-4-thumbnail {
   padding: 0;
   background-color: #324F61;
@@ -953,7 +960,15 @@ body.tv-episode {
   padding: 20px 25px;
   transition: background-color .25s;
   height: 130px;
+  font-size: 1.0625rem;
 }
+
+@media (min-width: 992px) {
+  .tv-episode-hero .col-lg-3 .btn {
+    float: none;
+  }
+}
+
 
 /* SYNTAX HIGHLIGHTING */
 

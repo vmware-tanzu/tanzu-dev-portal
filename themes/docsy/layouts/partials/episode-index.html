@@ -98,7 +98,7 @@
                             {{ else }}
                                 <div class='video-description'>{{.Title}}</div>
                             {{ end }}
-                            <!-- {{ printf "<div class=\"previous col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div> -->
+                            {{ printf "<div class=\"previous col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
                         </div>
                     </a>
                 {{ end }}
@@ -110,7 +110,7 @@
                 previous.forEach(episode => {
                     var episodeTime = new Date(episode.dataset.episodeDate).getTime();
                     if (episodeTime > currentTime) {
-                        episode.style.display = "none";
+                        episode.parentNode.parentNode.style.display = "none";
                     }
                 });
                 </script>
