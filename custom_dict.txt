@@ -290,7 +290,8 @@ replicaset
 restaging
 requestor
 revertibility
-[R,r]oadmap
+[R,r]oadmap(s)?
+[R,r]oadmapping
 [R,r]ole([B,b]inding(s)?)?
 [R,r]ollout
 rom-com
@@ -1195,6 +1196,7 @@ Gerhard('s)?
 Gibb
 Glênio
 Glithero
+Gothelf
 Grygleski
 Hadlow
 Hamano
@@ -1232,6 +1234,7 @@ Oded
 Pacak
 Palo
 (pc|C)zarkowski('s)?
+Pichler
 Pilimon
 Pratik('s)?
 Pulkit
