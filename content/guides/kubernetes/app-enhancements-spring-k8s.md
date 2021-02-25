@@ -470,23 +470,23 @@ For example, the `department-service` breaks down as follows.
 
 ## Use Secret through mounted volume
 
-{{% aside title="For production grade deployments we recommend that containers share secrets through mounted volumes" type="warning" %}}
-We recommend that containers share secrets through mounted volumes. If
-you enable consuming Secrets through the API, we recommend that you limit access
-to Secrets by using [RBAC
+Kubernetes has the notion of
+[Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for storing
+sensitive data such as passwords, OAuth tokens, etc.
+
+{{% aside title="Sharing Secrets" type="warning" %}}
+While there are several ways to share secrets with a container, we recommend
+sharing secrets through mounted volumes. If you enable consuming secrets through
+the API, we recommend limiting access with [RBAC
 authorization](https://kubernetes.io/docs/concepts/configuration/secret/#best-practices)
 policies.
 
 NOTE: secrets are not secure, they are merely an obfuscation
 {{% /aside %}}
 
-Kubernetes has the notion of
-[Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for storing
-sensitive data such as passwords, OAuth tokens, etc.
-
-- Secret named `department` is mounted to the file `/etc/secretspot` via volume
-  `mongodb` for the following microservices: `department-service`,
-  `employee-service`, `organization-service`.
+In this example, a secret named `department` is mounted to the file
+  `/etc/secretspot` via volume `mongodb` for the following microservices:
+  `department-service`, `employee-service`, `organization-service`.
 
 `/spring-microservices-k8s/department-service/src/main/resources/bootstrap.yaml`
 
@@ -534,7 +534,7 @@ spec:
       # other config removed for brevity.
 ```
 
-- Mongo credentials are defined inside Secret object `/spring-microservices-k8s/k8s/department-secret.yaml`
+Mongo credentials are defined inside Secret object `/spring-microservices-k8s/k8s/department-secret.yaml`
 
   ```yaml
   apiVersion: v1
