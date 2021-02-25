@@ -1,7 +1,7 @@
 ---
 title: "Container Networking"
 subsection: "Container Networking"
-weight: 3
+weight: 5
 topics:
 - Kubernetes
 team:

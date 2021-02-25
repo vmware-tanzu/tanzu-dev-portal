@@ -121,8 +121,11 @@ kind: broker
 metadata:
   name: default
   namespace: knative-eventing
+```
 
 We then need a service account (with a cluster role and role binding) for the API source to use:
+
+```yaml
 ---
 apiVersion: v1
 kind: ServiceAccount

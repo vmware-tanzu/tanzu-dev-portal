@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Cloud Foundry for Kubernetes"
 linkTitle: "Cloud Foundry for Kubernetes"
+weight: 4
 topics:
 - Kubernetes
 tags:
