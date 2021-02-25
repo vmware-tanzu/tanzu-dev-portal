@@ -522,7 +522,11 @@ body.light-mode #toggle-light-dark-mode span {
       border-radius: 0;
       display: block;
     }
-    input[type=text]:focus, input[type=url]:focus, input[type=email]:focus, input[type=tel]:focus, select.mktoField:focus {
+    input[type="text"]:focus,
+    input[type="url"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select.mktoField:focus {
       outline: none !important;
       border-bottom: 1px solid $link !important;
     }
@@ -985,12 +989,6 @@ body.tv-episode {
 
 .checklist-item {
   padding: 0.5rem;
-  margin: 0.5rem 0;
-  display: flex;
-  border-left: 4px solid #0f171c;
-  padding: 2rem 2rem 1rem;
-  margin: 1.5rem 0;
-  display: flex;
   border-left: 3px solid var(--MAIN-ANCHOR-color);
 }
 
