@@ -21,11 +21,22 @@ team:
 
 ### Introduction to Contour
 
-[Contour](https://projectcontour.io/) is an open source Kubernetes [Ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) that acts as a control plane for the Envoy edge and service proxy (see below).​ Contour supports dynamic configuration updates and multi-team ingress delegation while maintaining a lightweight profile.
+[Contour](https://projectcontour.io/) is an open source Kubernetes
+[Ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+that acts as a control plane for the Envoy edge and service proxy (see below).​
+Contour supports dynamic configuration updates and multi-team ingress delegation
+while maintaining a lightweight profile.
 
-Contour is built for Kubernetes to empower you to quickly deploy cloud native applications by using the flexible HTTPProxy API which is a lightweight system that provides many of the advanced routing features of a Service Mesh.
+Contour is built for Kubernetes to empower you to quickly deploy cloud native
+applications by using the flexible HTTPProxy API which is a lightweight system
+that provides many of the advanced routing features of a Service Mesh.
 
-Contour deploys the [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) proxy as a reverse proxy and load balancer.  Envoy is a Layer 7 (application layer) bus for proxy and communication in modern service-oriented architectures, such as Kubernetes clusters. Envoy strives to make the network transparent to applications while maximizing observability to ease troubleshooting.
+Contour deploys the
+[Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) proxy
+as a reverse proxy and load balancer. Envoy is a Layer 7 (application layer) bus
+for proxy and communication in modern service-oriented architectures, such as
+Kubernetes clusters. Envoy strives to make the network transparent to
+applications while maximizing observability to ease troubleshooting.
 
 {{< youtube id="Kz671dXioS0" class="youtube-video-shortcode" >}}
 <div align="center"><i><a href="https://www.youtube.com/watch?v=Kz671dXioS0&feature=youtu.be">Watch Paul livestream trying Contour 1.12.0 for the first time.</a></i></div>
@@ -33,7 +44,13 @@ Contour deploys the [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/wh
 
 ### Before You Begin
 
-You'll need a Kubernetes cluster. This guide uses a [Tanzu Kubernetes Grid](https://tanzu.vmware.com/kubernetes-grid) cluster, but any Kubernetes Cluster whether they're running on a Public Cloud, in your [Home] Lab, or on your desktop such as [KIND](https://kind.sigs.k8s.io/) or [minikube](https://minikube.sigs.k8s.io/docs/start/). You'll also need the Kubernetes CLI [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+You'll need a Kubernetes cluster. This guide uses a
+[Tanzu Kubernetes Grid](https://tanzu.vmware.com/kubernetes-grid) cluster, but
+any Kubernetes Cluster whether they're running on a Public Cloud, in your
+[Home] Lab, or on your desktop such as [KIND](https://kind.sigs.k8s.io/) or
+[minikube](https://minikube.sigs.k8s.io/docs/start/). You'll also need the
+Kubernetes CLI
+[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
 1. Verify access to your Kubernetes cluster
 
@@ -52,9 +69,15 @@ You'll need a Kubernetes cluster. This guide uses a [Tanzu Kubernetes Grid](http
 
 ### Installing Contour 1.12.0
 
-Since version 1.11.0 we've got two primary options for installing Contour, A singleton install from manifests, or by using the [Operator](https://projectcontour.io/resources/deprecation-policy/) (which is currently in Alpha). Since we only plan to install Contour once on the cluster, we can stick to the safer method of using the Contour provided manifests.
+Since version 1.11.0 we've got two primary options for installing Contour, A
+singleton install from manifests, or by using the
+[Operator](https://projectcontour.io/resources/deprecation-policy/) (which is
+currently in Alpha). Since we only plan to install Contour once on the cluster,
+we can stick to the safer method of using the Contour provided manifests.
 
-You can install Contour directly from the manifests provided by the project, however best practice would have you download them locally first for validation and repeatability.
+You can install Contour directly from the manifests provided by the project,
+however best practice would have you download them locally first for validation
+and repeatability.
 
 1. Download contour installation manifests
     ```bash
@@ -81,7 +104,9 @@ You can install Contour directly from the manifests provided by the project, how
 
 1. After a few moments you can confirm that its ready.
 
-    > You're looking for both the **deployment** and **DaemonSet** to show as fully Available, and a valid IP (or hostname) in the `EXTERNAL-IP` field of your envoy **service**.
+    You're looking for both the **deployment** and **DaemonSet** to show as fully
+    Available, and a valid IP (or hostname) in the `EXTERNAL-IP` field of your
+    envoy **service**.
 
     ```bash
     $ kubectl -n projectcontour get deployment,daemonset,service
@@ -99,17 +124,24 @@ You can install Contour directly from the manifests provided by the project, how
       service/envoy     LoadBalancer   100.66.114.136   a36c85343e9284c1cb4236d844c31aab-1691151764.us-east-2.elb.amazonaws.com   80:30825/TCP,443:30515/TCP   2m18s
     ```
 
-    1. Save the Ingress `EXTERNAL-IP` for later use as a [xip.io](http://xip.io) dynamic DNS host.
+  1. Save the Ingress `EXTERNAL-IP` for later use as a [xip.io](http://xip.io) dynamic DNS host.
 
-    > Note: Since this is deployed in Amazon Web Services I had to resolve the hostname using the `host` command, but in other clouds you will probably get an IP address.
+  {{% aside title="Note for AWS Users" %}}
+  Since this is deployed in Amazon Web Services I had to resolve the hostname
+  using the `host` command, but in other clouds you will probably get an IP
+  address.
+  {{% /aside %}}
 
-    ```bash
-    INGRESS_HOST=<external ip address from above>.xip.io
-    ```
+  ```bash
+  INGRESS_HOST=<external ip address from above>.xip.io
+  ```
 
 ### Creating an Ingress using Contour 1.12.0
 
-Now that Contour is installed we can validate it is functioning correctly by deploying an application, exposing it as a service, then creating an Ingress resource. As well as creating the resources we'll output the manifests to a file for later re-use.
+Now that Contour is installed we can validate it is functioning correctly by
+deploying an application, exposing it as a service, then creating an Ingress
+resource. As well as creating the resources we'll output the manifests to a file
+for later re-use.
 
 1. Create a namespace
 
@@ -167,11 +199,21 @@ Now that Contour is installed we can validate it is functioning correctly by dep
     <h1>Welcome to nginx!</h1>
     ```
 
-Congratulations! If you see the **Welcome to nginx!** message, that means you've successfully installed and tested Contour as an Ingress Controller. However its so much more than that, so lets explore further.
+Congratulations! If you see the **Welcome to nginx!** message, that means you've
+successfully installed and tested Contour as an Ingress Controller. However its
+so much more than that, so lets explore further.
 
-However let's clean up our resources before we move on. Since all of our resources are in a single namespace we could use `kubectl delete namespace my-ingress-app`, However we also saved the manifests so we can use those like so:
+However let's clean up our resources before we move on. Since all of our
+resources are in a single namespace we could use
+`kubectl delete namespace my-ingress-app`, However we also saved the manifests
+so we can use those like so:
 
-> Note: we created these manifests in the same path as our contour manifests, so we will move them into a subdirectory to ensure we only delete the app itself. This is a lesson learned that we should have created them in a sub directory in the first place for organizational purposes.
+{{% aside title="Caution" type="warning" %}}
+We created these manifests in the same directory as our contour manifests, so
+we will move them into a subdirectory to ensure we only delete the app itself.
+This is a lesson learned that we should have created them in a subdirectory
+in the first place for organizational purposes.
+{{% /aside %}}
 
 ```bash
 mkdir my-ingress-app
@@ -181,9 +223,13 @@ kubectl delete -f my-ingress-app
 
 ### Beyond Ingress with Contour 1.12.0
 
-As well as **Ingress** Contour supports a resource type **HTTPProxy** which extends the concept of **Ingress** to add many features that you would normally have to reach for **Istio** or a similar service mesh to get. We can explore some of those features here.
+As well as **Ingress** Contour supports a resource type **HTTPProxy** which
+extends the concept of **Ingress** to add many features that you would normally
+have to reach for **Istio** or a similar service mesh to get. We can explore
+some of those features here.
 
-Having learned our lesson about sub directories above, lets create a directory for our exploration of HTTPProxy.
+Having learned our lesson about sub directories above, lets create a directory
+for our exploration of HTTPProxy.
 
 ```bash
 mkdir http-proxy
@@ -212,7 +258,9 @@ As we did earlier we'll start by deploying a nginx **Pod** and a **Service**.
       > http-proxy-nginx-service.yaml
     ```
 
-Now that we have the Deployment and Service created we can create the HTTPProxy resource. Unfortunately we can't just sling a `kubectl create httpproxy` like we could with the other resources so we'll need to get creative.
+Now that we have the Deployment and Service created we can create the HTTPProxy
+resource. Unfortunately we can't just sling a `kubectl create httpproxy` like we
+could with the other resources so we'll need to get creative.
 
 1. Create a HTTPProxy manifest
 
@@ -250,9 +298,17 @@ Now that we have the Deployment and Service created we can create the HTTPProxy 
 
 #### Rate Limiting
 
-Now that your nginx is working via **HTTPProxy** we can look at some of the more advanced features. Let's start with Rate limiting. Contour 1.12.0 supports doing *local* rate limiting, which means that each Envoy **Pod** will have its own limits, vs a *global* rate limit which would need further coordination between the Envoy **Pods**. You can also set the Rate limit for the virtualhost, or for a specific route.
+Now that your nginx is working via **HTTPProxy** we can look at some of the more
+advanced features. Let's start with Rate limiting. Contour 1.12.0 supports doing
+*local* rate limiting, which means that each Envoy **Pod** will have its own
+limits, vs a *global* rate limit which would need further coordination between
+the Envoy **Pods**. You can also set the Rate limit for the virtualhost, or for
+a specific route.
 
-Let's create a fairly aggressive rate limit so we can see the affects of it fairly quickly. The example cluster I am using has three worker nodes, which means three Envoy **Pods** so if I set a rate limit of 2 per minute we should be able to hit the limit after 6 requests.
+Let's create a fairly aggressive rate limit so we can see the affects of it
+fairly quickly. The example cluster I am using has three worker nodes, which
+means three Envoy **Pods** so if I set a rate limit of 2 per minute we should be
+able to hit the limit after 6 requests.
 
 1. Create a new **HTTPProxy** resource with rate limiting enabled
 
@@ -285,9 +341,10 @@ Let's create a fairly aggressive rate limit so we can see the affects of it fair
     kubectl -n http-proxy apply -f rate-limit.yaml
     ```
 
-1. Wait a few moments and then fire up a while loop to connecting to the service and watch it hit the limit after a few hits.
+1. Wait a few moments and then fire up a while loop to connecting to the service
+   and watch it hit the limit after a few hits.
 
-    > Note: You'll need to hit CTRL-C to break the while loop.
+   Note: You'll need to hit CTRL-C to break the while loop.
 
     ```bash
     $ while true; do curl -s rate.$INGRESS_HOST | grep -E 'h1|rate' ; done
@@ -304,11 +361,17 @@ Let's create a fairly aggressive rate limit so we can see the affects of it fair
     ^C
     ```
 
-That's it, rate limiting is enabled. This is incredibly useful if you have a service with known limitations or you want to restrict any one user from overwhelming the service.
+That's it, rate limiting is enabled. This is incredibly useful if you have a
+service with known limitations or you want to restrict any one user from
+overwhelming the service.
 
 #### Weighted routing
 
-The **HTTPProxy** resource can also route a Virtual Host to multiple services, this is a great feature if you want to perform Blue/Green deployments, or you want to send a small percentage of requests to a special debug endpoint. Let's explore Weighted routing by adding an Apache service to receive 10% of the requests.
+The **HTTPProxy** resource can also route a Virtual Host to multiple services,
+this is a great feature if you want to perform Blue/Green deployments, or you
+want to send a small percentage of requests to a special debug endpoint. Let's
+explore Weighted routing by adding an Apache service to receive 10% of the
+requests.
 
 1. Create a Deployment containing a basic httpd pod
 
@@ -366,7 +429,9 @@ The **HTTPProxy** resource can also route a Virtual Host to multiple services, t
 
 1. Test the weighting
 
-    > Note: It's not clear in the documentation, but it appears that the weighting is applied per Envoy **Pod** so it might not be exactly 10% for small test runs, but would statistically work out over time.
+   Note: It's not clear in the documentation, but it appears that the weighting
+   is applied per Envoy **Pod**, so it might not be exactly 10% for small test
+   runs, but would statistically work out over time.
 
     ```bash
     $ while true; do curl -s weight.$INGRESS_HOST | grep h1 ; done
@@ -387,7 +452,11 @@ The **HTTPProxy** resource can also route a Virtual Host to multiple services, t
     ^C
     ```
 
-That's it! we've successfully done a walk through of some of the new features of Contour 1.12.0 and tested out both Rate Limiting and Weighted Routing. Let's clean up.
+That's it! we've successfully done a walk through of some of the new features of
+Contour 1.12.0 and tested out both Rate Limiting and Weighted Routing. Let's
+clean up.
+
+#### Cleanup
 
 1. Delete your http-proxy namespace and resources
 
@@ -404,4 +473,7 @@ That's it! we've successfully done a walk through of some of the new features of
 
 ### Conclusion
 
-As you can see Contour 1.12.0 is more than just an Ingress Controller as it brings some of the more advanced features of a service mesh but without all the extra resources required. Next time you find yourself looking to run Istio, remember to check in with Contour and see if it will do what you need.
+As you can see Contour 1.12.0 is more than just an Ingress Controller as it
+brings some of the more advanced features of a service mesh but without all the
+extra resources required. Next time you find yourself looking to run Istio,
+remember to check in with Contour and see if it will do what you need.
