@@ -1,7 +1,7 @@
 ---
 title: "Platform Observability"
 subsection: "Platform Observability"
-weight: 5
+weight: 10
 topics:
 - Kubernetes
 team:

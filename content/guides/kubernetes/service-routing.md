@@ -1,7 +1,7 @@
 ---
 title: "Service Routing"
 subsection: "Service Routing"
-weight: 4
+weight: 12
 topics:
 - Kubernetes
 team:
