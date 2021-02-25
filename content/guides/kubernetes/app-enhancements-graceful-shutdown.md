@@ -63,8 +63,10 @@ manually clean up the process.
 
 ![Graceful Shutdown Zombie](/images/guides/kubernetes/app-enhancements/graceful_shutdown_zombie.png)
 
-> While technically possible, it is unlikely you will end up with a zombie
-> process after forcefully deleting a pod.
+{{% aside title="Note" %}}
+While technically possible, it is unlikely you will end up with a zombie process
+after forcefully deleting a pod.
+{{% /aside %}}
 
 ## Shutting Down Gracefully
 
