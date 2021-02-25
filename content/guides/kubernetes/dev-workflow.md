@@ -1,11 +1,11 @@
 ---
 title: "Developer Workflow"
 subsection: "Developer Workflow"
-weight: 2
+weight: 6
 topics:
-  - Kubernetes
+- Kubernetes
 team:
-  - John Harris
+- John Harris
 ---
 
 The developer workflow typically involves writing code, executing automated

@@ -1,7 +1,7 @@
 ---
 title: "Application Observability"
 subsection: "Application Observability"
-weight: 5
+weight: 3
 topics:
 - Kubernetes
 team:

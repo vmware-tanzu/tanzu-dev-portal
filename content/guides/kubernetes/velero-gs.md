@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Velero
 linkTitle: Velero
+weight: 14
 topics:
 - Kubernetes
 tags:
