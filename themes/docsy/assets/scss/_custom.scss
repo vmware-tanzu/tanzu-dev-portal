@@ -1014,22 +1014,24 @@ div.aside-tip > div.aside-title {
 }
 
 div.aside div.aside-title {
-  height: 30px;
+  min-height: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
   /* To center the line vertically */
   line-height: 30px;
   color: #fff;
   padding-left: 1em;
-  font-size: 1em;
 }
 
 div.aside div.aside-title i {
   margin-right: 5px;
+  margin-top: 6px;
 }
 
 div.aside div.aside-content {
   padding: 5px 20px;
   background: #0f171c;
-  /* background-color: black; */
 }
 
 /* SYNTAX HIGHLIGHTING */
