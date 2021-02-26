@@ -375,7 +375,7 @@ Gangway
 Garmin
 Gartner('s)?
 Gaubert
-GC(E|L|P|R|S)
+GC(E|L|P|R|S)?
 Geesaman
 GemFire
 Geneve
@@ -712,8 +712,8 @@ MyPy
 mystream
 mytopic
 NameCheap
-[Nn]amespace-scoped
-[Nn]amespace(.|d|ing|s)?
+[Nn]amespace(.|d|-scoped|s)?
+[Nn]amespacing
 Nana
 [Nn]ano
 natively
