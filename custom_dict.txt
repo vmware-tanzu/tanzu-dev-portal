@@ -47,6 +47,7 @@ Ango
 Anneliese
 Ansible
 anthonyjvetter
+antifragility
 antipatterns?
 Antrea
 Apdex
@@ -78,6 +79,7 @@ Astra
 async
 Attribution-NonCommercial-ShareAlike
 audit2rbac
+Auditable
 [Aa]uth(z|n)?
 authenticator
 AuthorizationPolicy
@@ -251,6 +253,7 @@ de-duplicate
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
+debuggable
 declaratively
 decrypt(ed|ing)?
 DEK(s)?
@@ -469,6 +472,7 @@ implementors
 [Ii]ncompressible
 InfoQ
 InfoSec
+IngressRoute
 init(Container)?
 initializer
 Initializr
@@ -660,6 +664,7 @@ Masala
 matchings
 maxUtilization
 McGraw-Hill
+McLuckie
 MDN
 MeshAdmin
 Mesos
@@ -668,6 +673,7 @@ metac
 [Mm]etacontroller
 Microk8s
 microservice.
+microservices-oriented
 middleware
 Minella
 Mini-Wheats
@@ -910,6 +916,7 @@ ReplicaSet(s)?
 replicationcontrollers
 repmgr
 [Rr]epos?
+reproducibility
 RequestAuthentication
 requestor
 Resilience4J
@@ -1190,10 +1197,3 @@ ZDNet
 ZOP
 Zou
 Zuul
-IngressRoute
-reproducibility
-microservices-oriented
-antifragility
-Auditable
-debuggable
-McLuckie

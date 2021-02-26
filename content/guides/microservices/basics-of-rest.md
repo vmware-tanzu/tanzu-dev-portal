@@ -1,7 +1,6 @@
 ---
 title: "Basics of REST"
-subsection: "Basics of REST"
-weight: 1
+weight: 2
 topics:
 - Microservices
 tags:
