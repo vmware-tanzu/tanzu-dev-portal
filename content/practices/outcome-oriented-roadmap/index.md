@@ -4,7 +4,7 @@ draft: false
 title: "Outcome-Oriented Roadmap"
 linkTitle: "Outcome Oriented Roadmap"
 description: "A communication and planning tool that shows sequential outcomes that help execute your strategy and build towards your vision."
-tags: ["Inception"]
+tags: ["Discovery", "Framing"]
 length: "2+ hours (block enough time or consider breaking the activity into two sessions)"
 participants: "Product Manager(s), core team, stakeholders"
 # custom "cover" image example: "boris/boris.png"
