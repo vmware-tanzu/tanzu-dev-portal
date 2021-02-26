@@ -15,6 +15,4 @@ teaser: Live Most Mondays at 10am PT
 subheader: Join Nate Schutta and a special guest on Twitch, most Mondays at 10am PT.
 # Any content below here shows up above episode index
 ---
-Interviews and discussions with open source committers, thought leaders, friends and interesting people in the software space.
-
-No preparation, no live coding, no slides just a conversation with "cool", smart people. An "Inside the Actors Studio" but for technologists if we may be so bold.
+Interviews and discussions with open source committers, thought leaders, friends and interesting people in the software space. No preparation, no live coding, no slides just a conversation with "cool", smart people. An "Inside the Actors Studio" but for technologists if we may be so bold.
