@@ -1,6 +1,7 @@
 ---
 title:  "Creating Batch Microservices with Spring Batch"
 linkTitle: "Spring Batch"
+weight: 1
 topics:
 - Spring
 - Microservices

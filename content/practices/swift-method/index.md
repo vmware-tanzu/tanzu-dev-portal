@@ -67,19 +67,19 @@ A good facilitator should be able to drive out how a system should be designed b
 
 This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
 
-### Related Practices
+## Related Practices
 Swift Method contains many activities, including:
 
 - [Event Storming](/practices/event-storming)
 - [Boris](/practices/boris)
 
-### Real World Examples
+## Real World Examples
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris) and the Swift Method of modernization for an Uber Eats-style application
 
 ![Visual of the Swift Method's various steps and how they flow into one another](/images/practices/swift-method/example-1.png)
 
-### Recommended Reading
+## Recommended Reading
 
 <a href="https://tanzu.vmware.com/content/white-papers/tackle-application-modernization-in-days-and-weeks-not-months-and-years" target="_blank">Tackle Application Modernization in Days and Weeks, Not Months and Years</a> (white paper)
 

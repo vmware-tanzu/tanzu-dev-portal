@@ -57,21 +57,21 @@ Success is achieved when you have extracted ideas that directly relate to your t
 
 You may need to adjust the timing depending on how many people are present. Be sure to give sufficient time for people to both read ideas and create new ideas (this is especially critical as you get further into the pass-and-brainstorm process).
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Insight Prioritization](/practices/insight-prioritization)
 - [Problem Prioritization](/practices/problem-prioritization)
 
-## Following
+### Following
 - [Solution Grooming](/practices/solution-grooming)
 - [Solution Prioritization](/practices/solution-prioritization)
 
-### Real World Examples
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading

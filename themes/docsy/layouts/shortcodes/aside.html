@@ -1,0 +1,11 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $type :=  .Get "type" | default "info" }}
+<div class="aside aside-{{$type}}">
+    <div class="aside aside-title">
+        <i class="fas fa-exclamation-circle"></i>
+        <div>{{ .Get "title" | markdownify }}</div>
+    </div>
+    <div class="aside aside-content">
+    {{ .Inner }}
+    </div>
+</div>

@@ -71,21 +71,21 @@ If you find yourself running low on time during share out, consider prioritizing
 
 Try as hard as you can to have one or more domain experts in the room with you. Without people present who can represent the subject matter, it will be tougher to converge on a shared language that represents the business reality.
 
-### Related Practices
+## Related Practices
 
-## Preceding
-
-None at the moment.
-
-## Following
+### Preceding
 
 None at the moment.
 
-### Real World Examples
+### Following
+
+None at the moment.
+
+## Real World Examples
 
 ![example ubiquitous language workshop on whiteboard](/images/practices/ubiquitous-language/example-1.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 [Ubiquitous Language & the joy of naming](https://blog.carbonfive.com/2016/10/04/ubiquitous-language-the-joy-of-naming/)  
 [DDD: Questions around ubiquitous language](https://richarddingwall.name/2013/02/16/ubiquitious-language-handling-change/)  

@@ -73,20 +73,20 @@ You know you’re done when all comments have been reviewed and all problems hav
 
 Regardless of how you decide to run your design critique, you should ensure that a room is booked and any supplies (such as sticky notes, sharpies, and tape) are available.
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 None at the moment
 
-## Preceding
+### Preceding
 None at the moment
 
-## Following
+### Following
 None at the moment
 
-### Real World Examples
+## Real World Examples
 ![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 <a href="http://shop.oreilly.com/product/0636920033561.do" target="_blank">Discussing Design</a> by Adam Conner and Aaron Irizarry

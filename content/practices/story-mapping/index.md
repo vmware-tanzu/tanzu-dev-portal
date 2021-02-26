@@ -69,19 +69,19 @@ A user task is a short verb phrase like “read an email” or “respond to a m
  
 Work on the happy path first. Then in the deep dive portion, capture the alternative paths a user might take through the product.
 
-### Related Practices
+## Related Practices
 
-## Preceding
+### Preceding
 
 Completion of Discovery & Framing
 
-## Following
+### Following
 
 Share out at Inception
 
-### Real World Examples
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading
 
 

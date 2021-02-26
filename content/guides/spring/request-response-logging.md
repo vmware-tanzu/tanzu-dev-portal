@@ -98,6 +98,6 @@ Logging has three elements: collection, indexing, and visualization. This guide 
 Two open-source tools that help with logging and visualization are Prometheus and Grafana. Prometheus excels at gathering metrics from a wide array of sources, while Grafana is the go-to tool for visualizing complex time-series data. The following guides explain how to use these tools in Kubernetes environments:
 
 * [Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes](/guides/spring/spring-prometheus/)
-* [Prometheus and Grafana: Gathering Metrics from Kubernetes](/guides/kubernetes/prometheus-grafana-p1/)
+* [Prometheus and Grafana: Gathering Metrics from Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/)
  
 Spring Boot also provides health checks for application monitoring in addition to logging. Learn how to [enable health checks using Spring Boot Actuator](/guides/spring/spring-boot-actuator). 
