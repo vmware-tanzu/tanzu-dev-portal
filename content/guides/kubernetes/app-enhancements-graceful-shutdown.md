@@ -81,27 +81,25 @@ The following code snippet shows how to handle the SIGTERM signal in a Go proces
 ```go
 func main() {
     // App initialization code here...
-    server := app.NewServer()
+    serverErrors := make(chan error, 1)
+    server := app.NewServer(serverErrors)
 
     // Make a channel to listen for an interrupt or terminate signal from the OS.
     // Use a buffered channel because the signal package requires it.
     shutdown := make(chan os.Signal, 1)
     signal.Notify(shutdown, os.Interrupt, syscall.SIGTERM)
 
-    /// Start the application and listen for errors
-    serverErrors := make(chan error, 1)
+    // Start the application and listen for errors
     go server.ListenAndServe()
 
-    // Blocking main and waiting for shutdown.
+    // Wait for a server error or shutdown signal
     select {
         case err := <-serverErrors:
-            return errors.Wrap(err, "server error")
+            log.Fatalln("server error", err)
 
         case sig := <-shutdown:
-            return server.Shutdown()
+            server.Shutdown()
     }
-
-    return nil
 }
 ```
 
