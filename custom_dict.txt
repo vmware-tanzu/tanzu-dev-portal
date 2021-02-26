@@ -1,15 +1,15 @@
 # markdown-spellcheck spelling configuration file
-# Format - lines beginning # are comments
+# Format - lines beginning # are comments in header of file
 # global dictionary is at the start file overrides afterwards
 # one word per line to define a file override use ' - filename'
 # where filename is relative to this configuration file
+# add entries to bottom of file, will be sorted on commit
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|KB|Mi|m|m?s|k)
 (?:[APMCEI][ESD]T|UTC)
 1:1s
-12pm
 12SwitchRestoresSansCheckOuts
 2x2
 3D
@@ -26,8 +26,7 @@ accessor
 Activiti
 additively
 addon(s)?
-AdmissionResponse
-AdmissionReview
+Admission(Response|Review)
 adoptopenjdk
 AES-GCM
 affordances
@@ -39,7 +38,6 @@ Alexey
 Alibaba
 [Aa]llocatable
 Alpine(-based)?
-(AM|am|PM|pm)
 Amaro
 amd64
 amongst
@@ -84,21 +82,16 @@ audit2rbac
 authenticator
 AuthorizationPolicy
 Authorizer
-AUTO_DEVOPS_CHART
-AUTO_DEVOPS_CHART_REPOSITORY
-AUTO_DEVOPS_CHART_REPOSITORY_NAME
+AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 AutoBuild
 autocompletion
 AutoDeploy
 autosave
-[Aa]utoscal(er|ing)
-[Aa]utoscaler(s)?
-[Aa]utoscaling
+[Aa]utoscal(e|ers|er|ing)?
 Autowired
 Aviv
 aws-encryption-provider
-(back|front)end(s)?
-Backend
+([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 Baeldung('s)?
 Bai
@@ -110,9 +103,7 @@ Belamaric
 benbravo73
 benchmark(ing)?
 BestEffort
-BGP(-capable)?
-BGPConfiguration
-BGPPeer(s)?
+BGP(Configuration|-capable|Peer(s)?)?
 biome
 [Bb]itnami('s)?
 Biville
@@ -124,7 +115,6 @@ Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
-[Bb]ootiful
 bootup
 Boris
 Bowei
@@ -134,8 +124,7 @@ brd1
 Brindley
 Brodi
 Bugsville
-[Bb]uildpack(s|'s)?
-buildpackages
+[Bb]uildpack(s|'s|ages)?
 Bundler
 [Bb]urstable
 Buschmann
@@ -174,8 +163,7 @@ CloudHealth
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
-ClusterIP
-clusterIPs
+[Cc]lusterIPs?
 ClusterIssuer
 ClusterRole(s)?
 ClusterRoleBinding(s)?
@@ -211,8 +199,7 @@ Coté
 counterintuitive
 COVID-19
 CQL
-CRD-based
-CRD(s)?
+CRD(s|-based)?
 create-load-balancer
 credentialName
 CredHub
@@ -221,12 +208,10 @@ CRM
 cron
 cross-subnet
 CrossSubnet
-Crowdsource
-Crowdsourced
+Crowdsourced?
 CRuby
 crypto
-[Cc]ryptographic
-[Cc]ryptographically
+[Cc]ryptographic(ally)?
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
@@ -246,8 +231,7 @@ Damasceno
 DAO
 DaShaun
 [Dd]ata(set|store)
-datacenter's
-datacenters
+datacenter(s|'s)?
 Datadog
 Dataflow
 datagram
@@ -300,12 +284,9 @@ DNS
 dnsNames
 dnsutil
 Dobrin
+[Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
 [Dd]ockerfile(s|-built)?
-[Dd]ockerhub
-DockerHub
-[Dd]ockerhub-[\w|-]+
-[Dd]ockerhub(-[\w|-]+)?
 Documentum
 Dokuka
 Dolan
@@ -341,8 +322,7 @@ Endnotes
 enforce-node-allocatable
 env
 EOF
-etcd
-etcdctl
+etcd(ctl)?
 [Ee]thernet(s)?
 ETL
 [Ee]venting
@@ -351,8 +331,7 @@ expander(s)?
 expensed
 expirations
 ExploreDDD
-external-dns
-External-DNS
+[Ee]xternal-(dns|DNS)
 extraDeploy
 F5
 facto
@@ -396,9 +375,7 @@ Gangway
 Garmin
 Gartner('s)?
 Gaubert
-GC
-GC(L|P|R|S)
-GCE
+GC(E|L|P|R|S)
 Geesaman
 GemFire
 Geneve
@@ -421,8 +398,7 @@ GKE
 Glênio
 Glithero
 globalDefault
-GlobalNetworkPolicy
-GlobalNetworkSet
+GlobalNetwork(Policy|Set)
 [Gg]mail
 GoDaddy
 [Gg]olang
@@ -471,10 +447,9 @@ HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
 HSQLDB
+(Http|HTTP)ie
+(Http|HTTP)Proxy
 HttpBase
-Httpie|HTTPie
-HttpProxy
-HTTPProxy
 https?|HTTPS?
 HttpSession
 HumanOps
@@ -680,8 +655,7 @@ Maciaszek-Sharma
 Madhav
 [mM]akefile
 MapRepository
-MARIADB-ADMIN-PASSWORD
-MARIADB-REPL-PASSWORD
+MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchings
 maxUtilization
@@ -713,27 +687,21 @@ MockMvc
 [Mm]odelling
 modularity
 [Mm]ongo(db)?
+MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
-MONGODB-ROOT-PASSWORD
-MONGODB-USER-PASSWORD
 msgpack(ed)?
 mTLS
-MTTD
-MTTR
+MTT(D|R)
 MTU
 (multi-)?namespace
-Multi-Subnet
-multi-subnet
+[Mm]ulti-[Ss]ubnet
 Multipass
-multitenancy
-Multitenant
+[Mm]ultitenan(t|cy)
 [Mm]ultiuser
-MutatingAdmissionWebhook
-MutatingWebhook
+Mutating(Admission)?Webhook
 Muzz
 MVB(-awarded)?
 MVC
-MVP(s)
 MVP(s)?
 my-mongodb
 [mM]y[sS]ql
@@ -745,10 +713,7 @@ mystream
 mytopic
 NameCheap
 [Nn]amespace-scoped
-namespace.
-[Nn]amespace(s)?
-namespaced
-namespacing
+[Nn]amespace(.|d|ing|s)?
 Nana
 [Nn]ano
 natively
@@ -757,14 +722,10 @@ Nesterov
 NetApp('s)?
 Netty(-based)?
 NetWeaver
-NetworkPolicy
-NetworkSet
+Network(Policy|Set)
 Neumann
-NFJS
-NFS
-nginx
-Nginx
-NGINX
+NFJ?S
+[Nn]ginx|NGINX
 NIC
 Nicoll
 NLB(s)?
@@ -842,8 +803,7 @@ PeerAuthentication
 per-namespace
 Percona
 [Pp]erformant
-PersistentVolumeClaim
-persistentvolumeclaim(s)?
+PersistentVolumeClaim|persistentvolumeclaim(s)?
 Petstore
 php-apache
 pickab(le|ility)?
@@ -902,9 +862,7 @@ Promtail
 PropertySource(s)?
 [Pp]roto
 Protobuf
-Proxy-ing|Proxying
-Proxy(-ing|ing)?
-proxying
+[Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
 PubSub
@@ -912,8 +870,7 @@ Pulkit
 pullPolicy
 pushable
 PuTTYgen
-PV(s)?
-PVC(s)?
+PVC?s?
 PWAs
 pyenv-installer
 [Pp]yenv(-virtualenv)?
@@ -1113,8 +1070,7 @@ Tikka
 Tilt(file|Cloud)?
 [Tt]imebox
 timebox
-TLS
-TLS-enabled
+TLS(-enabled)?
 [Tt]o[Dd]o
 TODOs?
 TokenRequest
@@ -1140,8 +1096,7 @@ Twistlock
 UAA
 [Uu]ber
 UDP
-UI-based
-UI(s)?
+UI(s|-based)?
 (un)?marshalling
 uncomment
 undersample
@@ -1163,9 +1118,7 @@ urandom
 url
 URL(s)?
 UX
-v1
-V2
-v3
+[Vv][123]
 Vaadin
 ValidatingAdmissionWebhook
 validators
@@ -1191,8 +1144,7 @@ VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?
 VMworld
-VPA('s)?
-VPA(s)?
+VPA(s|'s)?
 vRealize
 vRLI
 vSAN
@@ -1206,8 +1158,7 @@ WCF
 webapps_default
 WeBeFoods
 WebFlux
-webhook-based
-[Ww]ebhook(s)?
+[Ww]ebhook(-based|s)?
 WebLogic
 WebSocket
 WebSphere
