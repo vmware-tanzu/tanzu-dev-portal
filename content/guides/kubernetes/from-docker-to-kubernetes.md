@@ -41,7 +41,7 @@ COPY hello /
 CMD ["/hello"]
 ```
 
-When you give this Dockerfile to a local instance of Docker by using the `docker build`command, it creates a container image with the "Hello World" app installed in it.
+When you give this Dockerfile to a local instance of Docker by using the `docker build` command, it creates a container image with the "Hello World" app installed in it.
 
 ### Creating a Kubernetes Deployment for Hello World
 

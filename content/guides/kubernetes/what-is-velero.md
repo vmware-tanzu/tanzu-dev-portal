@@ -24,7 +24,7 @@ Here are some of the things Velero can do:
 * Replicate your production environment to create development and testing environments.
 * Take a snapshot of your application's state before upgrading a cluster.
 
-#Velero Components and Architecture
+# Velero Components and Architecture
 
 Velero consists of two main components:
 
