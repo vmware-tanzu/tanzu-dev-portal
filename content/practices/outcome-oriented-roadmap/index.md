@@ -63,9 +63,11 @@ This session is usually better to do once you have a product **mission**, **visi
    Tip: If no vision statement has been created, make sure the team is aligned by adding a 15 min vision exercise (Practice coming soon!) to the agenda.
    {{% /callout %}}
 
+   Summarize the strategy for achieving this vision to ensure collective understanding.
+
 1. Brainstorm Outcomes (10 minutes)
    
-   In groups of 3, quickly generate potential outcomes to achieve the vision using large post-it notes or the outcomes cards (either printed out or in a Miro board).
+   In groups of 3, quickly generate potential outcomes (that are in alignment with the strategic approach) to achieve the vision using large post-it notes or the outcomes cards, either printed out or in a Miro board.
    
    Ask the team: “What outcomes do you want to deliver against your vision? Try to limit yourself to the next 6-12 months.”
    
