@@ -109,13 +109,13 @@
 #searchheaderform input {
     padding: 2px 0 0 0;
     font-size: 17px;
-    color: #ACBAC3;
+    color: $light;
     font-weight: 300;
     width: 100%;
 }
   
 #searchheaderform ::placeholder {
-    color: #ACBAC3;
+    color: $light;
 }
 
 // Results Page

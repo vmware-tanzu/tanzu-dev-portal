@@ -8,4 +8,5 @@
 
 ## OS Files
 .DS_Store
+.vscode/
 .idea

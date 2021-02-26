@@ -1,25 +1,52 @@
 <div class="section-index">
-    {{ $pages := sort (where .Site.Pages "Section" "tv") }}
-    {{ $parent := .Page }}
-    <div class="flex justify-content-between flex-wrap">
-        <div class="col-lg-12 px-0 pb-5 mb-5 shows">
-        {{ range $pages }}
-            {{ if eq .Parent $parent }}
-            <div class="row mb-5" >
-                <div class='col-lg-5 col-12 pl-0 bg-primary'> 
-                    <div class="p-5">
-                        {{ if (and (isset .Params "streaming") (isset .Params "teaser")) }}<a class="teaser btn btn-small mb-4 mt-2" href="{{ .RelPermalink }}">{{ .Params.teaser }}</a>{{ end }}
-                        <h1>{{ .Title }}</h1>
-                        <p class="lead my-0">{{ .Description | markdownify }}</p>
-                        <a class="btn mt-3" href="{{ .RelPermalink }}">View Episodes</a>
-                    </div>
-                </div>
-                <div class='col-lg-7 col-12 px-0 bg-primary text-center pt-4 pt-lg-0'>
-                    <a href="{{ .RelPermalink }}"><img src="{{ .Params.image | relURL }}" /></a>
-                </div>
+    <div>
+        <div class="px-0 mb-5 shows">
+        {{ range sort .Sections }}
+            <div class="row flex justify-content-between align-items-baseline mb-3" >
+                <a href="{{ .RelPermalink }}"><h4>{{ .Title }}</h4></a>
+                <h5 class='text-uppercase text-white'>{{ .Params.teaser }} </h5>
             </div>
+            <div class='row flex justify-content-between mb-5 episodes'>
+                
+            {{ range first 3 (sort .RegularPages ".Date" "desc") }}
+                <a class='col-4-thumbnail col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+                    <div class='thumbnail-gradient position-absolute'></div>
+                    <img src="{{ .Params.episode_image | relURL }}" />
+                    {{ if gt (len .Title) 100}}
+                        <div class='video-description'>{{ print (substr .Title 0 100) "..." }}</div>
+                    {{ else }}
+                        <div class='video-description'>{{.Title}}</div>
+                    {{ end }}
+                    {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
+                    <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
+                    
+                </a>
             {{ end }}
+            </div>
         {{ end }}
+
         </div>
     </div>
+    <script>
+        var upcomingEpisodes = document.querySelectorAll('div.upcoming');
+        upcomingEpisodes.forEach(function(value, i) {
+            var epDate = (new Date(value.dataset.episodeDate)).getTime();
+            var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
+            
+            if ((epDate - currentDate) > 0) {
+                
+                var diffTime = Math.abs(epDate - currentDate);
+                var diffDays = Math.floor(diffTime / (1000 * 3600 * 24)); 
+                var whenLive = "in " + diffDays + " days";
+                if (diffDays == 0) whenLive = "today";
+                console.log(diffDays);
+                value.nextElementSibling.innerHTML = "Live " + whenLive;
+                var elementPosition = value.parentNode 
+                value.parentNode.style.order = -1-i;
+            }
+            else {
+                value.nextElementSibling.style.display = 'none';
+            }
+        });
+    </script>
 </div>
