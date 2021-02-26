@@ -40,6 +40,10 @@ A preview of the dev portal will be available at: [http://localhost:1313/develop
 1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
 2. Run `make test`
 
+#### Spell Check
+
+A GitHub action will run after opening a Pull Request that checks spelling. (You may test this locally using `make spell`.) You can add entries to the `custom_dict.txt` file for words that should not be flagged. This file gets sorted as a pre-commit hook so you can just add your entries to the end of the file and not worry about the order.
+
 ### Publish to Staging
 
 After running and testing locally, opened Pull Requests will be automatically staged by Netlify.

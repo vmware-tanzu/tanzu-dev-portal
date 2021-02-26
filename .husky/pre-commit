@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+node "$(dirname "$0")/sort-dict/sort-dict.js" "$(dirname "$0")/../custom_dict.txt"
+git add $(dirname "$0")/../custom_dict.txt
