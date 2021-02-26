@@ -43,6 +43,7 @@ amd64
 amongst
 AMQP
 [Aa]nalytics
+Anchore
 Ango
 Anneliese
 Ansible
@@ -80,6 +81,7 @@ async
 Attribution-NonCommercial-ShareAlike
 audit2rbac
 Auditable
+auditd
 [Aa]uth(z|n)?
 authenticator
 AuthorizationPolicy
@@ -104,6 +106,7 @@ Beda('s)?
 Belamaric
 benbravo73
 benchmark(ing)?
+benefitting
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
 biome
@@ -141,12 +144,13 @@ Carvel('s)?
 cass-operator
 CCM
 cd
+CentOS
 Ceph
 CertificateRequests
 CEST
 (CF|cf)(-for-k8s)?
 cfapps
-cgroup(s)?
+[Cc]group(s)?
 [Cc]hangemaker(s)
 [Cc]hargeback
 ChartMuseum
@@ -294,6 +298,7 @@ Documentum
 Dokuka
 Dolan
 donut
+DoSec
 dotnetsdk
 Dre
 dropdown
@@ -734,6 +739,7 @@ NFJ?S
 [Nn]ginx|NGINX
 NIC
 Nicoll
+NIST
 NLB(s)?
 no-brainer
 NODE_ENV
@@ -782,6 +788,7 @@ orchestrator(s)?
 org(s)?
 ORM(-based)?
 OSI
+OSM
 OSS
 [oO]vercommit(ted|ting)?
 overcomplicate
@@ -836,7 +843,6 @@ Pomodoro
 POSTROUTING
 PR(s)?
 Pratik('s)?
-pre
 pre-auth
 pre-built
 pre-configured
@@ -850,6 +856,7 @@ pre-programmed
 pre-release
 [pP]re-stop
 Pre-sync
+pre(-)?
 precompiled
 preconfigured
 [Pp]reemptionPolicy
@@ -914,6 +921,7 @@ Renner
 replicaset
 ReplicaSet(s)?
 replicationcontrollers
+replumb
 repmgr
 [Rr]epos?
 reproducibility
@@ -936,6 +944,7 @@ ROI
 [Rr]ollout
 rom-com
 rootPassword
+Rosso
 [Rr]outable
 Route53
 RSA
@@ -998,6 +1007,7 @@ Sletten
 slideshare
 Sloka
 SmartTV
+SMI
 Smythe
 Snapchat
 SNI
@@ -1065,7 +1075,7 @@ Templeton
 Teppanyaki
 Terraform(-ing)?
 TestContainers
-TGIK
+TGI(K)?
 tgz
 Thanos
 Theia
@@ -1116,6 +1126,7 @@ unpushed
 unreleasable
 unschedulable
 [Uu]nstaged
+untrusted
 untuned
 upgradability
 upstream(s)?

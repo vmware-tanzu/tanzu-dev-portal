@@ -16,7 +16,7 @@ In general, the term **container** is used to refer to either a container image 
 
 ## The Container Runtime
 
-Although Docker is the most popular example of a container runtime, there are others, such as Containerd, rkt etc. 
+Although Docker is the most popular example of a container runtime, there are others, such as containerd, rkt etc. 
 
 Similar to how a Linux kernel helps run application processes by providing hardware resources, a container runtime helps partition the Linux kernel to run isolated Linux processes with specific resource limits around CPU, memory, etc. The runtime also helps isolate application processes using two Linux kernel primitives: [control groups \(cgroups\)](https://man7.org/linux/man-pages/man7/cgroups.7.html) and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html). Cgroups limit resources to a set of processes running on a Linux host, and namespaces isolate processes from one another. 
 

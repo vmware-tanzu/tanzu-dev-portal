@@ -56,7 +56,7 @@ The Notary services of the Harbor private registry can furnish project-level con
 
 Harbor works in the context of a development pipeline to manage and secure container images. The following diagram illustrates Harbor's role in a development pipeline:
 
-![The Harbor container registry manages and secures container images.](/images/guides/containers/harbor-registry-security.png)
+![The Harbor container registry manages and secures container images.](/images/guides/containers/diagrams/harbor-registry-security.png)
 
 Harbor is an important tool in your software security program, ensuring your cloud native application development meets all of the latest security protocols.
 
