@@ -1,6 +1,5 @@
 ---
 title: "Storage Integration"
-weight: 13
 topics:
 - Kubernetes
 team:

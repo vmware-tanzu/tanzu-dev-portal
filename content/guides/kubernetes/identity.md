@@ -1,7 +1,6 @@
 ---
 title: "Identity and Access Control"
 subsection: "Identity and Access Control"
-weight: 8
 topics:
 - Kubernetes
 team:

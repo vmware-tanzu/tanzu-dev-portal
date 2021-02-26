@@ -1,5 +1,7 @@
 ---
 title:  "Controlling Ingress with Contour"
+parent: Service Routing
+weight: 1
 topics:
 - Kubernetes
 tags:

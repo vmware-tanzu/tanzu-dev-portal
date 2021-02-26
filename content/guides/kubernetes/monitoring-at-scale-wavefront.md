@@ -1,7 +1,7 @@
 ---
 title:  "Monitoring Containers at Scale with Wavefront"
 linkTitle: Monitor at Scale with Wavefront
-parent: Kubernetes Monitoring
+parent: Platform Observability
 weight: 3 
 topics:
 - Kubernetes
