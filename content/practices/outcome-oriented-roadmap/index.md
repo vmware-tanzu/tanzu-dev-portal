@@ -55,7 +55,7 @@ This session is usually better to do once you have a product **mission**, **visi
 
    Your stakeholders may be more used to features-over-time roadmaps, which focus on specific features (without context of why they are needed) and fixed delivery dates, and may not have the flexibility to release the most valuable things first. In contrast, an outcome-oriented roadmap helps us to be clear about the value of what we build, and allows us to release the most valuable things first and less valuable things incrementally after that.
 
-1. Understand the Vision (5 minutes) 
+1. Understand the Vision and Strategy (5-15 minutes)
 
    If you have a vision statement for your product, write it down and put it on your board. Check to see if everyone understands it.
 
