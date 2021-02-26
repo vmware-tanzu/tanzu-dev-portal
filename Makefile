@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: test preview theme spell
+.PHONY: test preview build theme spell node_modules
 
 word-dot = $(word $2,$(subst ., ,$1))
 
@@ -13,16 +13,24 @@ help:
 theme:
 	git submodule update --init --recursive
 
+#npm: @ runs npm install to install dependencies
+npm: theme
+	npm install
+
 #preview: @ preview hugo
-preview: theme
+preview: npm
 	hugo server -b http://localhost:1313/developer
 
+#build: @ build site into `public` directory
+build: npm
+	hugo -b https://localhost:1313/developer
+
 #test: @ runs act to simulate a github pull request test suite
-test:
+test: npm
 	act pull_request
 
 #spell: @ runs act to perform spellcheck
-spell:
+spell: npm
 	act -j spell-check
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
