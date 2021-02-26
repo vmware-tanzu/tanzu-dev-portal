@@ -15,8 +15,7 @@ patterns:
 - Observability
 ---
 
-
-Observability is a key element of cloud native application architectures. You need to be able to see when and where failures occur. And you need to measure failures to establish a profile or baseline against which deviations from normal operation can be identified and addressed. As such, monitoring, feature-rich metrics, alerting tools, and data visualization frameworks are a key element of successful cloud native applications.
+Observability is a key element of cloud native application architectures. Most modern applications are distributed in nature, with a collection of multiple modules that communicate with each other via APIs. Anytime a problem occurs you need to be able to see when and where failures happened. And you need to measure failures to establish a profile or baseline against which deviations from normal operation can be identified and addressed. As such, monitoring, feature-rich metrics, alerting tools, and data visualization frameworks are a key element of successful cloud native applications.
 
 This guide provides an overview of monitoring tools for Kubernetes environments.
 
@@ -56,12 +55,11 @@ Centralized logging is an essential part of any enterprise Kubernetes deployment
 
 For security auditing purposes, consider streaming your logs to an external location with append-only access from within your cluster. For example, on AWS, you can create an S3 bucket in an isolated AWS account and give append-only access to your cluster log aggregator. This ensures your logs cannot be tampered with, even in the case of a total cluster compromise.
 
-#### Log Aggregation
+##### Log Aggregation
 
 An effective log aggregator must support the processing of events from thousands of endpoints, the ability to accommodate real-time queries, and a superior analytics engine to provide intelligent metrics to solve complex technical and business problems. You have the option to implement log aggregation using a number of popular open source or commercial logging analytics solutions, such as Elasticsearch, Fluentd, Kibana, or Splunk. Each solution has a set of strengths and weaknesses. 
 
 [Fluentd](https://www.fluentd.org) is an open-source data collector for unified logging. [Fluent Bit](https://fluentbit.io) is a lightweight data forwarder for Fluentd. Fluentd is used to create a unified logging layer to collect and process data. Fluent Bit is for forwarding data from the edge to Fluentd aggregators. Fluentd and Fluent Bit can collect logging data and push it to an output destination, such as [Elasticsearch](https://www.elastic.co), which is a distributed search and analytics engine that lets data engineers query unstructured, structured, and time-series data.
-
 
 ### Network monitoring
 
@@ -84,6 +82,7 @@ Prometheus excels at monitoring multidimensional data, including time-series dat
 Kubernetes can be integrated with Wavefront (VMware Tanzu Observability) to efficiently monitor containers at enterprise scale. Wavefront delivers monitoring and analytics throughout a cloud native stack for always-on metrics as a service.Wavefront gives developers and DevOps real-time visibility into the operations and performance of containerized workloads and Kubernetes clusters.
 
 ## Keep Learning
+
 KubeAcademy offers a course on [Kubernetes observability](https://kube.academy/courses/introduction-to-observability) where you can learn more about many of the topics mentioned above. For a practical guide on how to get started with Prometheus and Grafana, be sure to read [Prometheus and Grafana: Gathering Metrics from Kubernetes](/guides/kubernetes/prometheus-grafana-p1/). Spring Boot users will also want to check out [Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes](/guides/spring/spring-prometheus/) to learn how to gather metrics from Spring applications. The guides [Implementing Distributed Tracing](/guides/microservices/distributed-tracing) and [Getting Started with Zipkin and Spring Boot](/guides/spring/spring-zipkin/) can help you improve observability for microservices applications.
 
 If you’re considering Wavefront, be sure and read [Monitoring Containers at Scale with Wavefront](/guides/kubernetes/monitoring-at-scale-wavefront) and [Wavefront for Spring Boot: Getting Started](/guides/spring/spring-wavefront-gs/).
