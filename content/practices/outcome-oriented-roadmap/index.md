@@ -27,6 +27,7 @@ what:
 - Post-it notes
 - Sharpies
 - Painter’s tape
+- "For Remote: [Miro](https://miro.com/)"
 
 # If this practice or workshop has a Miro template: remote: true
 remote: false
