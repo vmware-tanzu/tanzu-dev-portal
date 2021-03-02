@@ -7,7 +7,6 @@ description: Create, test, and publish a secure Docker image for an ASP.NET Web 
 date: 2020-09-03
 topics:
 - Containers
-- Kubernetes
 tags:
 - Bitnami
 - ASP.NET
