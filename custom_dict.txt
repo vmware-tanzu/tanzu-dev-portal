@@ -412,6 +412,7 @@ GoDaddy
 [Gg]olang
 Google('s)?
 gotchas
+Gothelf
 GraalVM
 Gradle
 Grafana
@@ -820,6 +821,7 @@ Percona
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 Petstore
 php-apache
+Pichler
 pickab(le|ility)?
 PID
 Pilimon
@@ -938,7 +940,8 @@ RHEL
 Riak
 Rickard
 rkt
-[Rr]oadmap
+[Rr]oadmap(s)?
+[Rr]oadmapping
 Rockstar
 ROI
 [Rr]ole([Bb]inding(s)?)?
