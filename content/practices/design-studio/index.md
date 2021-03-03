@@ -6,7 +6,7 @@ length: "60 - 90 mins"
 participants: "Core team, subject matter experts (SMEs)"
 image: "default-cover.png"
 description: "Understand the problem from different team perspectives and generate many solution sketches using scenario as a guide"
-lastmod: "2019-04-09"
+lastmod: "2021-03-03"
 
 
 why:
@@ -34,7 +34,7 @@ what:
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections. The goal is to create lots of small ideas instead of detailed solutions.
 
    {{% callout %}}
-   Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wireframe notations for pictures, text, and boxes).
+   Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
    {{% /callout %}}
 
 1. Next, set a timer for 5-10 minutes and have each person generate as many ideas as possible using the following prompt:
