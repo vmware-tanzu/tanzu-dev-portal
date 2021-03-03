@@ -195,9 +195,9 @@ similar to WordPress. We will be using the
     ghostEmail: admin@example.com
 
     mariadb:
-    auth:
-        rootPassword: "root_password"
-        password: "db_password"
+        auth:
+            rootPassword: "root_password"
+            password: "db_password"
     EOF
     ```
 
