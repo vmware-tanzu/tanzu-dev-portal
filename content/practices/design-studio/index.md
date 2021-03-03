@@ -33,6 +33,10 @@ what:
 
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections. The goal is to create lots of small ideas instead of detailed solutions.
 
+   {{% callout %}}
+   Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wireframe notations for pictures, text, and boxes).
+   {{% /callout %}}
+
 1. Next, set a timer for 5-10 minutes and have each person generate as many ideas as possible using the following prompt:
 
    _“How might we design an experience that addresses [the problem]? Use the sheets of paper to come up with as many ideas as possible and don’t over think how you draw it out.”_
