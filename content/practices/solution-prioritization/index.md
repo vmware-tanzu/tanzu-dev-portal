@@ -19,7 +19,7 @@ when:
 - "[Design Studio](/practices/design-studio)."
 
 what: 
-- Solution ideas on sticky notes (or cluster post-its from [Solution Grooming](/practices/solution-grooming))
+- Solution ideas on sticky notes (or cluster sticky notes from [Solution Grooming](/practices/solution-grooming))
 - Whiteboard
 - Dry erase markers
 - Blue painter's tape
@@ -40,7 +40,7 @@ what:
 If whiteboard space is limited, you can do this exercise on a window
 ![Empty 2x2 quadrant](/images/practices/solution-prioritization/step-1.png)
 
-1. Plot the solution post-its on the 2x2 (can go around in a circle, person by person, if desired) and discuss
+1. Plot the solution sticky notes on the 2x2 (can go around in a circle, person by person, if desired) and discuss
 
    {{% callout %}}
    Tip: Let everyone (PM, design, engineering) weigh-in on user value but only let engineering identify relative complexity

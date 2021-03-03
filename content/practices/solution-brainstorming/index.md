@@ -18,8 +18,8 @@ what:
 
 - Prioritized insights & problems
 - Tabloid (11"x17") / A3 paper
-- Large post-its
-- Small post-its
+- Large sticky notes
+- Small sticky notes
 - Sharpies
 - Whiteboard
 
@@ -30,7 +30,7 @@ what:
 
 1. Hand out each sheet—with problem or insight attached—to a team member
 
-1. Have team members convert their assigned problem or insight into a "How might we...?" statement, writing the output clearly (in Sharpie) on a new, differently colored large post-it note and attaching it over the original problem or insight.
+1. Have team members convert their assigned problem or insight into a "How might we...?" statement, writing the output clearly (in Sharpie) on a new, differently colored large sticky note and attaching it over the original problem or insight.
 
    {{% callout %}}
    Tip: If there are more problems and insights than team members, you can divide the team into pairs and assign several to each pair. This can also be helpful if there are more people than problems and insights.

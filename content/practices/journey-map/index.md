@@ -44,14 +44,14 @@ what:
    ![All user journeys dot voted](/images/practices/journey-map/Step-3.png)
 
 1. Consolidate into one big story (10 minutes)
-   - Throw out all post-its without dots
+   - Throw out all sticky notes without dots
    - Combine duplicate stickies and rearranges the stacked timelines into one large timeline
    - Draw arrows between stickies and mark the amount of time between steps, if possible. If there are multiple “routes”, you can split the timeline up vertically
 
    ![Consolidated user journeys](/images/practices/journey-map/Step-4.png)
 
 1. Mark customers emotions and pain points (10 minutes)
-   - As a group, read through the finished timeline and mark points in time that the persona experiences a “pain point” (use a different color marker for this on the whiteboard or on post-it notes)
+   - As a group, read through the finished timeline and mark points in time that the persona experiences a “pain point” (use a different color marker for this on the whiteboard or on sticky notes)
    - If you have the data to support it, track the persona’s emotions throughout the journey using a horizontal line that rises and falls in accordance with the pain points
 
 1. Identify opportunities along the journey (10 minutes)
