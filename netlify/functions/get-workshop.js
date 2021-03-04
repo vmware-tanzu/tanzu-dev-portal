@@ -1,11 +1,10 @@
 const cookie = require("cookie");
 const jwt = require("jsonwebtoken");
-const querystring = require("querystring");
 const got = require("got");
-const base64 = require("./util/base64");
+const { getSiteURL } = require("./util/auth");
 
-var baseurl
-var apikey
+var baseurl;
+var apikey;
 if (process.env.CONTEXT != "production") {
   baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
   apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;

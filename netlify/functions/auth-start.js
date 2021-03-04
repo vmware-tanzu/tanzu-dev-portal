@@ -1,5 +1,5 @@
 const cookie = require("cookie");
-const { getDiscoveryUrl, getClientId } = require("./util/auth");
+const { getDiscoveryUrl, getClientId, getSiteURL } = require("./util/auth");
 const base64 = require("./util/base64");
 
 exports.handler = async (event, context) => {
