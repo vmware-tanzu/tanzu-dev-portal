@@ -19,7 +19,7 @@ what:
 - Scissors
 - Scotch tape
 - Post-it Dry Erase Surface (3 ft x 2 ft)
-- Super sticky 4x6 multicolor post-its, 4 pack
+- Super sticky 4x6 multicolor sticky notes, 4 pack
 
 ---
 ## How to Use this Method
