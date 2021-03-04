@@ -3,6 +3,7 @@ const { getDiscoveryUrl, getClientId, getSiteURL } = require("./util/auth");
 const base64 = require("./util/base64");
 
 exports.handler = async (event, context) => {
+  console.log(process.env);
   var path = "";
   if (event.path === "/.netlify/functions/auth-start") {
     path = "developer/";
