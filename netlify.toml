@@ -10,6 +10,7 @@
 
 [context.deploy-preview]
   command = "git submodule update -f --init --recursive && npm install && hugo -F -b $DEPLOY_PRIME_URL/developer"
+  
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.69.2"
@@ -35,8 +36,8 @@
   conditions = {Role = ["user"]}
 
 [[redirects]]
-  from = "/developer/workshop-live"
-  to = "/developer/workshop-live"
+  from = "/developer/workshop-live/*"
+  to = "/developer/workshop-live/:splat"
   force = true
   status = 200
   conditions = {Role = ["user"]}
