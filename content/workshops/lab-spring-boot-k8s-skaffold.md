@@ -4,7 +4,6 @@ description: >
   Use Skaffold to create a Spring Boot application and deploy it to Kubernetes.
 summary:
   - Use Skaffold to create a Spring Boot application and deploy it to Kubernetes.
-type: workshop
 topics:
   - Spring
   - Microservices

@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="td-main bg-gray-dark " style="display: none;" id="hidden-content">
+<br><div>
+<p class="pl-3">This Workshop is temporarily unavailable. </p>
+<p class="pl-3">Please Try again later.</p>	</div>
+<br>
+</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
+		$.fancybox.open([
+		{
+			width: 400,
+			height: 130,
+			padding: 0,
+			href: "#hidden-content",
+			autoSize: false,
+			fitToView: true,
+		},
+		]);
+	}
+	const decodedToken = getCookie("nf_jwt")
+	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
+		document.getElementById("startinfo").textContent = "Login Required"
+	}
+	});
+	function LoadingButton() {
+	document.getElementById("startbutton").innerHTML = `<span id="buttonicon" class="fa fa-hourglass"> </span> Loading...`;
+	}
+	function getCookie(name) {
+	var dc = document.cookie;
+	var prefix = name + "=";
+	var begin = dc.indexOf("; " + prefix);
+	if (begin == -1) {
+		begin = dc.indexOf(prefix);
+		if (begin != 0) return null;
+	}
+	else
+	{
+		begin += 2;
+		var end = document.cookie.indexOf(";", begin);
+		if (end == -1) {
+		end = dc.length;
+		}
+	}
+	// because unescape has been deprecated, replaced with decodeURI
+	//return unescape(dc.substring(begin + prefix.length, end));
+	return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+</script>
+<div class="td-main ">
+	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+		<div class='container'>
+			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<h1>{{ .Title }}</h1>
+			<p>{{ .Description }}</p>
+			<p>Approximate time: {{ .Params.length }} minutes</p>
+			<div class="short-gradient-line mb-4"></div>
+			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" ><span id="buttonicon" class="fa fa-cog"> </span> Start Workshop</a><br><span class="text-muted pl-5" id="startinfo"></span>
+
+		</div>
+	</div>
+
+	{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
+
+	<div class="container py-5">
+			{{ with $img := .Params.logo }}
+		<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+		{{end}}
+		<div class="github-imported-sample">
+				{{ .Content }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}

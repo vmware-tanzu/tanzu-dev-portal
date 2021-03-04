@@ -1,11 +1,10 @@
 ---
-draft: true
+draft: false
 title: "Getting Started with Spring Boot on Kubernetes"
 description: >
   Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
 summary:
   - Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
-type: workshop
 topics:
   - Spring
   - Microservices

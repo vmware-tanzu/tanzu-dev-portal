@@ -6,7 +6,6 @@ description: >
   Learn the basics of how to build container images and run them. We’ll be using the Docker tool.
 summary:
   - Learn the basics of how to build container images and run them. We’ll be using the Docker tool.
-type: workshop
 topics:
   - Containers
 tags:
