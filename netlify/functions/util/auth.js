@@ -10,7 +10,11 @@ function makeAuth(clientId, orgId) {
   if (!clientId) {
     throw new Error('Missing client ID')
   }
-  const base = `${cspEndpoints[process.env.CSP_ENVIRONMENT]}`
+  const base =
+  process.env.CONTEXT != "production"
+    ? "https://auth.esp-staging.vmware-aws.com/api/auth/v1"
+    : "https://auth.esp.vmware.com/api/auth/v1";
+
 
   // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
   const config = {
@@ -34,11 +38,11 @@ function makeAuth(clientId, orgId) {
 }
 
 function getPublicKeyEndpoint(env) {
-  return `${cspEndpoints[env]}/tokens/public-key`
+  return `${base}/tokens/public-key`
 }
 
 function getDiscoveryUrl(env, params) {
-  return `${cspEndpoints[env]}/authorize?${querystring.stringify(
+  return `${base}/authorize?${querystring.stringify(
     params
   )}`
 }
