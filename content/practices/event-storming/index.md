@@ -44,7 +44,7 @@ what:
    - Identify the beginning and end of the event storming session in order to create a sequence of events
    - Think about an event in the past tense
    - Focus on the happy path to begin with
-   - Turn post-it's sideways 45 degrees to indicate there are questions or a need for clarification
+   - Turn sticky notes sideways 45 degrees to indicate there are questions or a need for clarification
    
    ![Multiple event stickies encircled in a sample bounded context](/images/practices/event-storming/example-2.jpg)
 
