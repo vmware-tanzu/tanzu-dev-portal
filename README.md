@@ -26,7 +26,7 @@ mv ./hugo /usr/local/bin/
 Now you're ready to build locally:
 
 ```
-git clone https://github.com/vmware-tanzu-private/tanzu-dev-portal
+git clone https://github.com/vmware-tanzu/tanzu-dev-portal
 cd tanzu-dev-portal
 make preview
 ```
