@@ -2,7 +2,7 @@ const cookie = require("cookie");
 
 const jwt = require("jsonwebtoken");
 const querystring = require("querystring");
-const { makeAuth } = require("./util/auth");
+const { makeAuth, getClientId } = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
 
@@ -36,12 +36,8 @@ exports.handler = async (event, context) => {
         body: JSON.stringify({ error: "Not authorized" }),
       };
     }
-    const clientId =
-    process.env.CONTEXT != "production"
-      ? process.env.DEV_CLIENT_ID
-      : process.env.PROD_CLIENT_ID;
-  
-    const oauth = makeAuth(clientId);
+
+    const oauth = makeAuth(getClientId());
     const tokenResponse = await oauth.getToken({
       code: code,
       redirect_uri: `${process.env.URL}/.netlify/functions/auth-callback`,

@@ -1,5 +1,5 @@
 const cookie = require("cookie");
-const { getDiscoveryUrl } = require("./util/auth");
+const { getDiscoveryUrl, getClientId } = require("./util/auth");
 const base64 = require("./util/base64");
 
 exports.handler = async (event, context) => {
@@ -18,11 +18,10 @@ exports.handler = async (event, context) => {
     domain: process.env.URL.replace("https://", ""),
     maxAge: 600,
   });
-
   // redirect the user to the CSP discovery endpoint for authentication
   const params = {
     response_type: "code",
-    client_id: process.env.CLIENT_ID,
+    client_id: getClientId(),
     redirect_uri: `${process.env.URL}/.netlify/functions/auth-callback`,
     state: base64.urlEncode(`csrf=${csrf}&path=${path}&referer=${event.headers.referer}`),
   };

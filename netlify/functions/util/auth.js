@@ -39,8 +39,14 @@ function getDiscoveryUrl(params) {
   )}`
 }
 
+function getClientId(){
+  return process.env.CONTEXT != "production"
+    ? process.env.DEV_CLIENT_ID
+    : process.env.PROD_CLIENT_ID;
+}
 
 module.exports = {
   makeAuth: makeAuth,
   getDiscoveryUrl: getDiscoveryUrl,
+  getClientId: getClientId
 }
