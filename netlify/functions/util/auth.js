@@ -37,11 +37,8 @@ function makeAuth(clientId, orgId) {
   return new AuthorizationCode(config)
 }
 
-function getPublicKeyEndpoint(env) {
-  return `${base}/tokens/public-key`
-}
 
-function getDiscoveryUrl(env, params) {
+function getDiscoveryUrl(params) {
   return `${base}/authorize?${querystring.stringify(
     params
   )}`
@@ -51,5 +48,4 @@ function getDiscoveryUrl(env, params) {
 module.exports = {
   makeAuth: makeAuth,
   getDiscoveryUrl: getDiscoveryUrl,
-  getPublicKeyEndpoint: getPublicKeyEndpoint,
 }

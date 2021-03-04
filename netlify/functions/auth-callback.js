@@ -2,7 +2,7 @@ const cookie = require("cookie");
 
 const jwt = require("jsonwebtoken");
 const querystring = require("querystring");
-const { makeAuth, getPublicKeyEndpoint } = require("./util/auth");
+const { makeAuth } = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
 

@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
   return {
     statusCode: 302,
     headers: {
-      Location: getDiscoveryUrl(process.env.CSP_ENVIRONMENT, params),
+      Location: getDiscoveryUrl(params),
       "Cache-Control": "no-cache",
       "Set-Cookie": c,
     },
