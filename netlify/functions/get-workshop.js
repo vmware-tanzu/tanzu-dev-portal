@@ -65,7 +65,7 @@ exports.handler = async (event, context) => {
     }
     const { body, statusCode } = await got.post(remoteUrl, {
       headers: { Authorization: `Api-Key ${apikey}` },
-      json: { refer: process.env.URL, user: decodedToken.id },
+      json: { refer: process.env.DEPLOY_URL, user: decodedToken.id },
     });
     if (statusCode !== 200 || body.error) {
       throw new Error(
@@ -78,7 +78,7 @@ exports.handler = async (event, context) => {
       .replace("+", "-")
       .replace("/", "_")
       .replace(/=+$/, "");
-    const redirectedUrl = `${process.env.URL}/developer/workshop-live?ws=${encodedUrl}`;
+    const redirectedUrl = `${process.env.DEPLOY_URL}/developer/workshop-live?ws=${encodedUrl}`;
     return {
       statusCode: 302,
       headers: {

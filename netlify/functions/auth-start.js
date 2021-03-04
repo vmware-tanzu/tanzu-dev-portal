@@ -15,14 +15,14 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: process.env.URL.replace("https://", ""),
+    domain: process.env.DEPLOY_URL.replace("https://", ""),
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
   const params = {
     response_type: "code",
     client_id: getClientId(),
-    redirect_uri: `${process.env.URL}/.netlify/functions/auth-callback`,
+    redirect_uri: `${process.env.DEPLOY_URL}/.netlify/functions/auth-callback`,
     state: base64.urlEncode(`csrf=${csrf}&path=${path}&referer=${event.headers.referer}`),
   };
   return {
