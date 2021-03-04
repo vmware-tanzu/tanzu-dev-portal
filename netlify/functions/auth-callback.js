@@ -2,7 +2,7 @@ const cookie = require("cookie");
 
 const jwt = require("jsonwebtoken");
 const querystring = require("querystring");
-const { makeAuth, getClientId } = require("./util/auth");
+const { makeAuth, getClientId, getSiteURL} = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
 
@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     const oauth = makeAuth(getClientId());
     const tokenResponse = await oauth.getToken({
       code: code,
-      redirect_uri: `${process.env.DEPLOY_PRIME_URL}/.netlify/functions/auth-callback`,
+      redirect_uri: `${getSiteURL()}/.netlify/functions/auth-callback`,
     });
 
     const { token } = tokenResponse;
@@ -63,7 +63,7 @@ exports.handler = async (event, context) => {
         exp: decoded.payload.exp,
         iat: decoded.payload.iat,
         sub: decoded.payload.sub,
-        iss: `${process.env.DEPLOY_PRIME_URL}`,
+        iss: `${getSiteURL()}`,
         context: decoded.payload.context,
         context_name: decoded.payload.context_name,
         app_metadata: {
@@ -82,7 +82,7 @@ exports.handler = async (event, context) => {
       secure: true,
       httpOnly: false,
       path: "/",
-      domain: process.env.DEPLOY_PRIME_URL.replace("https://", ""),
+      domain: getSiteURL().replace("https://", ""),
       expires: new Date(decoded.payload.exp * 1000), // same expiration as CSP token
     });
 
@@ -90,9 +90,9 @@ exports.handler = async (event, context) => {
     // with the cookie so that Netlify lets them in
     var redirect
     if (parsed.path.includes('get-workshop')){
-      redirect = `${process.env.DEPLOY_PRIME_URL}/${parsed.path}?src=${parsed.referer}`;
+      redirect = `${getSiteURL()}/${parsed.path}?src=${parsed.referer}`;
     } else{
-      redirect = `${process.env.DEPLOY_PRIME_URL}/${parsed.path || ""}`;
+      redirect = `${getSiteURL()}/${parsed.path || ""}`;
     }
     console.log(redirect)
     return {

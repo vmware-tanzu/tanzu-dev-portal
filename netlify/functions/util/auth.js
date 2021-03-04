@@ -45,8 +45,15 @@ function getClientId(){
     : process.env.PROD_CLIENT_ID;
 }
 
+function getSiteURL(){
+  return process.env.CONTEXT != "production"
+    ? process.env.DEPLOY_PRIME_URL
+    : process.env.URL;
+}
+
 module.exports = {
   makeAuth: makeAuth,
   getDiscoveryUrl: getDiscoveryUrl,
-  getClientId: getClientId
+  getClientId: getClientId,
+  getSiteURL: getSiteURL
 }
