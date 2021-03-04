@@ -1,8 +1,5 @@
 ---
-path: "/practices/event-storming"
 title: "Event Storming"
-topics:
-- Agile
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1 - 2 hours; multiple runs may be needed"
 participants: "Business stakeholders, business analysts, executives, developers, architects, team leads, domain experts, core team"

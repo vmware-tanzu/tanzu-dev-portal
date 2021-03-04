@@ -1,5 +1,4 @@
 ---
-path: "/methods/solution-brainstorming"
 title: "Solution Brainstorming"
 tags: ["Framing", "Remote"]
 length: "1.5 - 2 hours"

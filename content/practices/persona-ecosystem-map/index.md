@@ -1,5 +1,4 @@
 ---
-path: "/methods/persona-ecosystem-map"
 title: "Persona Ecosystem Map"
 tags: ["Kickoff"]
 length: "30 - 45 min"
