@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     const oauth = makeAuth(getClientId());
     const tokenResponse = await oauth.getToken({
       code: code,
-      redirect_uri: `${process.env.DEPLOY_URL}/.netlify/functions/auth-callback`,
+      redirect_uri: `${process.env.DEPLOY_PRIME_URL}/.netlify/functions/auth-callback`,
     });
 
     const { token } = tokenResponse;
@@ -63,7 +63,7 @@ exports.handler = async (event, context) => {
         exp: decoded.payload.exp,
         iat: decoded.payload.iat,
         sub: decoded.payload.sub,
-        iss: `${process.env.DEPLOY_URL}`,
+        iss: `${process.env.DEPLOY_PRIME_URL}`,
         context: decoded.payload.context,
         context_name: decoded.payload.context_name,
         app_metadata: {
@@ -82,7 +82,7 @@ exports.handler = async (event, context) => {
       secure: true,
       httpOnly: false,
       path: "/",
-      domain: process.env.DEPLOY_URL.replace("https://", ""),
+      domain: process.env.DEPLOY_PRIME_URL.replace("https://", ""),
       expires: new Date(decoded.payload.exp * 1000), // same expiration as CSP token
     });
 
@@ -90,9 +90,9 @@ exports.handler = async (event, context) => {
     // with the cookie so that Netlify lets them in
     var redirect
     if (parsed.path.includes('get-workshop')){
-      redirect = `${process.env.DEPLOY_URL}/${parsed.path}?src=${parsed.referer}`;
+      redirect = `${process.env.DEPLOY_PRIME_URL}/${parsed.path}?src=${parsed.referer}`;
     } else{
-      redirect = `${process.env.DEPLOY_URL}/${parsed.path || ""}`;
+      redirect = `${process.env.DEPLOY_PRIME_URL}/${parsed.path || ""}`;
     }
     console.log(redirect)
     return {
