@@ -56,3 +56,9 @@ video.%:
 #practice: @ creates a new agile practice. example: make practice.makefile-workshop
 practice.%:
 	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
+
+#audit: @ runs a content audit on all guides and blogs. example: make audit
+audit:
+	cd scripts/audit && bundle install
+	ruby scripts/audit/audit.rb -s . > scripts/audit/full.csv
+	ruby scripts/audit/audit.rb -s . -f > scripts/audit/filtered.csv
