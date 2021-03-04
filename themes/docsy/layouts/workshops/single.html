@@ -1,27 +1,13 @@
 {{ define "main" }}
-<div class="td-main bg-gray-dark " style="display: none;" id="hidden-content">
-<br><div>
-<p class="pl-3">This Workshop is temporarily unavailable. </p>
-<p class="pl-3">Please Try again later.</p>	</div>
-<br>
-</div>
+
 <script type="text/javascript">
 	$(document).ready(function () {
 	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
-		$.fancybox.open([
-		{
-			width: 400,
-			height: 130,
-			padding: 0,
-			href: "#hidden-content",
-			autoSize: false,
-			fitToView: true,
-		},
-		]);
+		document.getElementById("startinfo").textContent = "This Workshop is temporarily unavailable. Please try again later."
 	}
 	const decodedToken = getCookie("nf_jwt")
 	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
-		document.getElementById("startinfo").textContent = "Login Required"
+		document.getElementById("startinfo").textContent = "(Login Required)"
 	}
 	});
 	function LoadingButton() {
@@ -43,8 +29,7 @@
 		end = dc.length;
 		}
 	}
-	// because unescape has been deprecated, replaced with decodeURI
-	//return unescape(dc.substring(begin + prefix.length, end));
+
 	return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
@@ -57,7 +42,7 @@
 			<p>{{ .Description }}</p>
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
-			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" ><span id="buttonicon" class="fa fa-cog"> </span> Start Workshop</a><br><span class="text-muted pl-5" id="startinfo"></span>
+			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" ><span id="buttonicon" class="fa fa-cog"> </span> Start Workshop</a><span class="text-muted pl-2" id="startinfo"></span>
 
 		</div>
 	</div>
