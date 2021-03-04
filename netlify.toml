@@ -29,7 +29,7 @@
 
 [[redirects]]
   from = "/developer/get-workshop/*"
-  to = "/netlify/functions/get-workshop/:splat"
+  to = "/.netlify/functions/get-workshop/:splat"
   force = true
   status = 200
   conditions = {Role = ["user"]}
@@ -43,13 +43,13 @@
 
 [[redirects]]
   from = "/developer/get-workshop/*"
-  to = "/netlify/functions/auth-start/:splat"
+  to = "/.netlify/functions/auth-start/:splat"
   force = true
   status = 200
   
 [[redirects]]
   from = "/developer/workshop-live/*"
-  to = "/netlify/functions/auth-start/:splat"
+  to = "/.netlify/functions/auth-start/:splat"
   force = true
   status = 200
 
