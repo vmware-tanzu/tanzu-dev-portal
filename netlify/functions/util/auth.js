@@ -45,12 +45,17 @@ function getClientId(){
     : process.env.PROD_CLIENT_ID;
 }
 
-function getSiteURL(){
+/*function getSiteURL(){
   return process.env.CONTEXT != "production"
     ? process.env.DEPLOY_PRIME_URL
     : process.env.URL;
-}
+}*/
 
+function getSiteURL(){
+  return process.env.CONTEXT != "production"
+    ? "https://deploy-preview-604--tanzu-dev-portal.netlify.app"
+    : process.env.URL;
+}
 module.exports = {
   makeAuth: makeAuth,
   getDiscoveryUrl: getDiscoveryUrl,
