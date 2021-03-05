@@ -1,5 +1,4 @@
 const cookie = require("cookie");
-
 const jwt = require("jsonwebtoken");
 const querystring = require("querystring");
 const { makeAuth, getClientId, getSiteURL} = require("./util/auth");
