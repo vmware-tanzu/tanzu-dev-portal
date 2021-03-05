@@ -44,7 +44,7 @@ point for their monitoring implementation.
 ### Member Down
 
 - _Threshold:_ 3 minutes
-- _Severity:_ Critical
+- _Severity:_ Warning
 - _Notes:_ A single member failure does not have a direct impact on the
   Kubernetes cluster. However, it increases the risk of experiencing etcd quorum
   loss if additional members fail.  
@@ -93,18 +93,12 @@ point for their monitoring implementation.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
+- _Metrics:_ `kube_pod_status_phase` (via
+  [kube-state-metrics](#kube-state-metrics)) (when the API server is running as
+  a pod)
 - _Notes:_ The loss of a single API server does not have an immediate impact on
   the cluster’s operations. However, it increases the risk of a control plane
   outage if additional API servers fail.
-
-### API Server Pod Not Ready
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
-- _Notes:_ Assumes the API server runs as a pod. A single API server pod that is
-  not ready does not have an impact on the cluster’s operations. However, it
-  increases the risk of a control plane outage if additional API servers fail.
 
 ### High Request Latency
 
@@ -146,18 +140,9 @@ managers fail.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-
-### Controller Manager Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
-
-### Controller Manager Not Ready
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Metrics:_ `kube_pod_container_status_restarts_total` and
+  `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
+  the Controller Manager is running as a pod)
 
 ## Kubernetes Scheduler
 
@@ -172,18 +157,9 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-
-### Scheduler Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
-
-### Scheduler Not Ready
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Metrics:_ `kube_pod_container_status_restarts_total` and
+  `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
+  the scheduler is running as a pod)
 
 ## Node
 
@@ -255,18 +231,9 @@ communicate with other pods using Service IPs.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-
-### kube-proxy Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_container_status_restarts_total` (via [kube-state-metrics](#kube-state-metrics))
-
-### kube-proxy Not Ready
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics))
+- _Metrics:_ `kube_pod_container_status_restarts_total` and
+  `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
+  kube-proxy is running as a pod)
 
 ## kube-state-metrics
 
@@ -371,33 +338,19 @@ proper functioning of the Service resource in Kubernetes.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes:_ Nodes with a not-ready CNI plugin are unable to start new pods.
-  Network connectivity of existing pods might also be impacted.
-
-### Pod Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ kube_pod_container_status_restarts_total (via kube-state-metrics)
-- _Notes:_ Nodes with a not-ready CNI plugin are unable to start new pods.
-  Network connectivity of existing pods might also be impacted.
+- _Metrics:_ `kube_pod_status_phase` and
+  `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Notes:_ Nodes with a not-ready or crashing CNI plugin are unable to start new
+  pods. Network connectivity of existing pods might also be impacted.
 
 ## Ingress Controller
 
-### Pod Not Ready
+### Pod Down
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes:_ Applications exposed via the Ingress API are not accessible if
-  Ingress controller pods are unavailable.
-
-### Pod Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Metrics:_ `kube_pod_status_phase` and
+  `kube_pod_container_status_restarts_total` (via kube-state-metrics)
 - _Notes:_ Applications exposed via the Ingress API are not accessible if
   Ingress controller pods are unavailable.
 
@@ -410,19 +363,12 @@ proper functioning of the Service resource in Kubernetes.
 
 ## Log Forwarder
 
-### Pod Not Ready
+### Pod Down
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-- _Metrics:_ `kube_pod_status_phase` (via kube-state-metrics)
-- _Notes:_ Application and platform logs are not forwarded to the centralized
-  logging system if the log forwarding pods are unavailable.
-
-### Pod Crash Loop
-
-- _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `kube_pod_container_status_restarts_total` (via kube-state-metrics)
+- _Metrics:_ `kube_pod_status_phase` and
+  `kube_pod_container_status_restarts_total` (via kube-state-metrics)
 - _Notes:_ Application and platform logs are not forwarded to the centralized
   logging system if the log forwarding pods are unavailable.
 
