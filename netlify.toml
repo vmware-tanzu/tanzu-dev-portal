@@ -17,7 +17,7 @@
   TZ='America/Los_Angeles'
 
 
-[redirects]]
+[[redirects]]
   from = "/"
   to = "/developer"
   status = 302
