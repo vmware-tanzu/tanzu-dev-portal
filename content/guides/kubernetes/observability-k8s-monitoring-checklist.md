@@ -29,7 +29,11 @@ operating Kubernetes. For each condition, the guide provides the following:
 - _Notes:_ Additional information applicable to the condition.
 
 If the condition is true and above the given threshold, the monitoring system
-should generate an alert with the given severity.
+should generate an alert with the given severity. To keep things simple, we use
+two severities in this guide: _Warning_ and _Critical_. We advise treating
+critical alerts as urgent, and alerting via a pager or equivalent. Warnings are
+less severe and can typically be tied to an asynchronous notification such as
+email, Slack, or a ticketing system.
 
 It is important to keep in mind that thresholds and the severity of alerts will
 vary for each environment. Platform operators can use this guide as a starting
