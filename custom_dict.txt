@@ -993,6 +993,7 @@ ServiceMonitor
 serviceName=backend
 [Ss]ervlets?
 setValue(Template)?s
+severities
 Sevilla
 sharded
 Sheasha
