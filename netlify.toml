@@ -16,7 +16,6 @@
   HUGO_VERSION = "0.69.2"
   TZ='America/Los_Angeles'
 
-
 [[redirects]]
   from = "/"
   to = "/developer"
@@ -40,11 +39,12 @@
   from = "/developer/get-workshop/*"
   to = "/.netlify/functions/auth-start/:splat"
   force = true
-  status = 302
+  status = 200
   
 [[redirects]]
   from = "/developer/workshop-live/*"
   to = "/developer/404.html"
+  force = true
   status = 404
 
 # Global 404 handler
