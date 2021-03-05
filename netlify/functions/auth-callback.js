@@ -4,7 +4,6 @@ const querystring = require("querystring");
 const { makeAuth, getClientId, getSiteURL} = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
-require("config");
 
 const netlifyCookieName = "nf_jwt";
 

@@ -1,6 +1,7 @@
 const { AuthorizationCode } = require("simple-oauth2");
 const querystring = require("querystring");
-const config = require("config");
+
+const config = require("./config.js.ph");
 
 const base =
   config.context != "production"
