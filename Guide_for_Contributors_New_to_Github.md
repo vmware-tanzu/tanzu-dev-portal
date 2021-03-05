@@ -57,6 +57,7 @@ My tip
 
 Try to also keep to the indentation format so that the text looks neat and readable.
 
+Unfortunately, at this point in time, it is not possible to preview what it will look like on the actual website, but you can click on the Preview Changes tab to see if the edits show up in the right places. 
 
 2. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but give it a short summary of **what you did** in less that 50 words
 3. Fill up the extended description with the reason **why** the update was needed, or the context around the update.
@@ -73,7 +74,7 @@ Try to also keep to the indentation format so that the text looks neat and reada
 
 ## 4. Pull Request (Submit edits for review)
 
-1. Click ‘New Pull Request’
+1. Click ‘New Pull Request’. 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR%201.png" />
 
 2. Make sure that your base repository is vmware-tanzu/tanzu-dev-po..., and the head repository is your account.
@@ -92,16 +93,24 @@ Try to also keep to the indentation format so that the text looks neat and reada
 8. If you want to, you can keep the screen running until all the tests have passed, and click on the netlify row to preview how it will look on the site.
 9. Otherwise, feel free to close GitHub and continue with your life. The checks will continue running even if you leave the page. Once the change passes through all the checks, it will land on the reviewers’s plate, and all you have to do is wait for it to be reviewed, approved and merged. 
 
-
-> #### How will I know if the changes have passed the checks, been rejected, approved or merged?
-> If there’s a change to the status of your pull request, Github will alert you via the email linked to your Github account. 
-> A change in status of your pull request will also appear if you click on the notifications icon of your Github account. 
+> ## Short FAQ
 >
-> #### How can I make a change to the pull request if it doesn’t pass a test, or there’s a request for edits from the reviewers?
+> ### How will I know if the changes have passed the checks, been rejected, approved or merged?
+> If there’s a change to the status of your pull request, Github will alert you via the email linked to your Github account, and add a notification to the  notifications icon of your Github account. 
+> 1. Click on the notification icon.
+><img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Notification%201.png"/>
+> 2. Click on the notification with the name of the branch you submitted for pull request
+><img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Notification%202.png"/>
+> 3. Check out the status under the title! (Some possible statuses are: Open, Rejected, Merged, etc)
+><img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Notification%203.png"/>
+> 
+> ### How can I make a change to the pull request if it doesn’t pass a test, or there’s a request for edits from the reviewers?
 > Go to your copy of the Tanzu Practices site, making sure that you are in the right branch to make the edits.
-> Go back to the file to edit it.
-> Under Commit Changes, fill in the title and description for the change.
-> This time, commit directly to the branch. Do NOT create a new branch. This updates your pull request with your latest edits. 
+> <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/MkChanges%201.png" />
+> Click on the 'Content' folder, 'Practices' folder, the folder of the practice you edited, and then index.md. Click on the pencil icon to edit it.  
+> When saving the edits, under Commit Changes, fill in the title and description for the change.  
+> This time, commit directly to the branch. Do NOT create a new branch. This updates your pull request with your latest edits.   
+> <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/MkChanges%202.png" />
 > That’s it!
 
 ## 5. Delete (delete repo)
