@@ -1,5 +1,4 @@
 ---
-path: "/methods/draw-toast"
 title: "Draw Toast"
 tags: ["Kickoff", "Discovery", "Framing", "Inception"]
 length: "20 min"

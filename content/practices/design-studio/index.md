@@ -1,5 +1,4 @@
 ---
-path: "/methods/design-studio"
 title: "Design Studio"
 tags: ["Discovery", "Framing"]
 length: "60 - 90 mins"

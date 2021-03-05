@@ -1,5 +1,4 @@
 ---
-path: "/methods/ubiquitous-language"
 title: "Ubiquitous Language"
 tags: ["Discovery", "Framing"]
 length: "1 hour"
