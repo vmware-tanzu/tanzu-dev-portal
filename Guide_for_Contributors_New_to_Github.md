@@ -24,12 +24,25 @@ Repeat steps when you want to suggest new edits to the site.
 ## 2. Fork (Create a copy of Practices site)
 1. Go to the [VMware practices repository on Github](https://github.com/vmware-tanzu/tanzu-dev-portal/tree/main/content/practices) - this is where all the code for the site sits. It is also open to the public for contribution. 
 2.  Click on fork
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Fork.png" alt="click on fork" />
+
 3. Fork it to your own Github account
+<img style="float: left;" width="300"  src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Fork%20to%20your%20own%20Github%20account.png" alt="click on fork" />
+
 4. Click on Content
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Content.png" alt="click on fork" />
+
 5. Click on Practices. You’ll see a list of all the practices currently on the site.
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Practices.png" alt="click on fork" />
+
 6. Click on the practice you want to add to. For this example, I clicked on design-studio.
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Practices.png" alt="click on fork" />
+
 7. Click on index.md. You can now see what the page looks like in plain text
 8. Click on the pencil edit icon. You can now see what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script. 
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Edit%20icon.png" alt="click on fork" />
 
 ## 3. Edit (Make Edits and save as branch)
 
