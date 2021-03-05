@@ -25,52 +25,72 @@ Repeat steps when you want to suggest new edits to the site.
 1. Go to the [VMware practices repository on Github](https://github.com/vmware-tanzu/tanzu-dev-portal/tree/main/content/practices) - this is where all the code for the site sits. It is also open to the public for contribution. 
 2.  Click on fork
 
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Fork.png" alt="click on fork" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Fork.png" />
 
 3. Fork it to your own Github account
-<img style="float: left;" width="300"  src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Fork%20to%20your%20own%20Github%20account.png" alt="click on fork" />
+<img style="float: left;" width="300"  src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Fork%20to%20your%20own%20Github%20account.png" />
 
 4. Click on Content
 
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Content.png" alt="click on fork" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Content.png"  />
 
 5. Click on Practices. You’ll see a list of all the practices currently on the site.
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Practices.png" alt="click on fork" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Practices.png" />
 
 6. Click on the practice you want to add to. For this example, I clicked on design-studio.
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20the%20practice%20you%20want%20to%20edit.png" alt="click on fork" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20the%20practice%20you%20want%20to%20edit.png"  />
 
 7. Click on index.md. You can now see what the page looks like in plain text
 8. Click on the pencil edit icon. You can now see what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script. 
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Edit%20icon.png" alt="click on fork" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Edit%20icon.png" />
 
 ## 3. Edit (Make Edits and save as branch)
 
 1. Paste your edits into the right section. Just note that if you’re adding a ‘header’, ‘callout’ or any form of special formatted text, take a look to see how headers have been written, so you can copy the syntax. 
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Edit%201.png" />
 
 For example, I added a tip here. A tip is written like this:
  {{%callout%}}
 My tip
  {{/%callout%}}
 
-Try to keep to the indentation format so that the text looks neat and readable.
+Try to also keep to the indentation format so that the text looks neat and readable.
 
-2. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but give it a short summary of what you did in less that 50 words
-3. Fill up the extended description with the reason why the update was needed, or the context around the update.
+
+2. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but give it a short summary of **what you did** in less that 50 words
+3. Fill up the extended description with the reason **why** the update was needed, or the context around the update.
 4. Select ‘Create a new branch for this commit’
-5. Create a name for the new branch that explains what it is 
-6. Click Propose Changes. Do NOT click the ‘Create Pull Request’ button that appears in the next screen. 
+5. Create a name for the new branch that explains **what it is** 
+6. Click Propose Changes. 
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Edit%202-6.png" />
+
+
+8. Do NOT click the ‘Create Pull Request’ button that appears in the next screen. Click instead on the Pull Requests tab. 
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Edit%207.png" />
 
 ## 4. Pull Request (Submit edits for review)
 
-1. Go to the Pull Requests tab
-2. Click ‘New Pull Request’
-3. Change the dropdown for your “compare: main” to the name of the branch you have created. Scroll down to check that text highlighted in green is the change you want to make. 
-4. Click Create Pull Request
-5. Click Create Pull Request again. This will send the edits through some automated checks. 
-6. At this stage, you’re done! 
-7. If you want to, you can keep the screen running until all the tests have passed, and click on the netlify row to preview how it will look on the site!
-8. Otherwise. feel free to close GitHub and continue with your life. The checks will continue running even if you leave the page. Once the change passes through all the checks, it will land on the reviewers’s plate, and all you have to do is wait for it to be reviewed, approved and merged. 
+1. Click ‘New Pull Request’
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR%201.png" />
+
+2. Make sure that your base repository is vmware-tanzu/tanzu-dev-po..., and the head repository is your account.
+3. Change the dropdown for your “compare: main” to the name of the branch you have created. 
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR2-3.png" />
+
+4. Scroll down to check that text highlighted in green is the change you want to make. 
+5. Click Create Pull Request
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR5.png" />
+
+6. Click Create Pull Request again. This will send the edits through some automated checks. 
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR6.png" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/PR%207%20-%20checks.png" />
+
+7. At this stage, you’re done! 
+8. If you want to, you can keep the screen running until all the tests have passed, and click on the netlify row to preview how it will look on the site.
+9. Otherwise, feel free to close GitHub and continue with your life. The checks will continue running even if you leave the page. Once the change passes through all the checks, it will land on the reviewers’s plate, and all you have to do is wait for it to be reviewed, approved and merged. 
 
 
 > #### How will I know if the changes have passed the checks, been rejected, approved or merged?
