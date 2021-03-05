@@ -1,7 +1,7 @@
+require 'csv'
 require 'optparse'
-require 'yaml'
 require 'redcarpet'
-
+require 'yaml'
 
 def filter(options, headers, row) 
     matches = []
@@ -25,19 +25,26 @@ def filter(options, headers, row)
     return matches
 end
 
+# Parse the command line flags
 options = {}
 OptionParser.new do |opts|
     opts.banner = "Usage: audit.rb [options]"
 
-    opts.on("-s", "--source SOURCE", "Path to local TDC Source") do |s|
+    opts.on("-s", "--source PATH", "Path to local TDC Source") do |s|
         options[:source] = s
     end
 
-    opts.on("-f", "--filter", "Only include entries that match criteria for review") do |f|
-        options[:filter] = true
+    opts.on("-o", "--output PATH", "Path to write the results") do |o|
+        options[:output] = o
     end
 end.parse!
 
+
+# Prepae the CSV file to write the results
+csv = CSV.open(options[:output], "w")
+#csv = CSV.generate
+
+# Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
 contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md"))
 
@@ -47,9 +54,9 @@ markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
 auditData = []
 metaKeys = []
 
-# First iteration to determain metadata keys
+# Gather the meta data from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
-    next if f.split("/").last == "_index.md"
+    next if f.split("/").last == "_index.md" # Do not parse index files
     fData = File.open(f).read
     contentMetadata = YAML.load(fData)
     contentMetadata["path"] = f.gsub(contentPath, "")
@@ -68,17 +75,22 @@ contentFiles.each do |f|
     auditData.push(contentMetadata)
 end
 
-# Print headers
-if options[:filter]
-    puts ["title", "path", "issues"].join("|")
-else
-    puts metaKeys.join("|")
-end
+# Add extra column for audit data
+metaKeys.push("audit")
+csv << metaKeys
 
 auditData.each do |content|
+    # Process an individual row, add filter data
     row = []
     metaKeys.each do |k|
-        if content.has_key? k
+        if k == "audit"
+            matches = filter(options, metaKeys, row)
+            if matches.empty?
+                row.push("")
+            else
+                row.push(matches.join(", "))
+            end
+        elsif content.has_key? k
             if content[k].is_a? Array
                 row.push(content[k].join(", "))
             else
@@ -89,16 +101,7 @@ auditData.each do |content|
         end
     end
 
-    if options[:filter]
-        matches = filter(options, metaKeys, row)
-        if matches.size > 0
-            puts [
-                row[metaKeys.index("title")], 
-                row[metaKeys.index("path")], 
-                matches.join(",")
-            ].join("|")
-        end
-    else
-        puts row.join("|")
-    end
+    csv << row
 end
+
+csv.close
