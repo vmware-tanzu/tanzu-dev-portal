@@ -16,14 +16,8 @@
   HUGO_VERSION = "0.69.2"
   TZ='America/Los_Angeles'
 
-[context.branch-deploy]
-  command = "git submodule update -f --init --recursive && npm install && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer"
 
-[context.branch-deploy.environment]
-  HUGO_VERSION = "0.69.2"
-  TZ='America/Los_Angeles'
-
-[[redirects]]
+[redirects]]
   from = "/"
   to = "/developer"
   status = 302
@@ -36,8 +30,8 @@
   conditions = {Role = ["user"]}
 
 [[redirects]]
-  from = "/developer/workshop-live/*"
-  to = "/developer/workshop-live/:splat"
+  from = "/developer/workshop-live"
+  to = "/developer/workshop-live"
   force = true
   status = 200
   conditions = {Role = ["user"]}
@@ -46,13 +40,12 @@
   from = "/developer/get-workshop/*"
   to = "/.netlify/functions/auth-start/:splat"
   force = true
-  status = 200
+  status = 302
   
 [[redirects]]
   from = "/developer/workshop-live/*"
-  to = "/.netlify/functions/auth-start/:splat"
-  force = true
-  status = 200
+  to = "/developer/404.html"
+  status = 404
 
 # Global 404 handler
 [[redirects]]

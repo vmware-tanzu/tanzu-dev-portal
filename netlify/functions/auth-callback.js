@@ -61,7 +61,6 @@ exports.handler = async (event, context) => {
         exp: decoded.payload.exp,
         iat: decoded.payload.iat,
         sub: decoded.payload.sub,
-        iss: `${getSiteURL()}`,
         context: decoded.payload.context,
         context_name: decoded.payload.context_name,
         app_metadata: {
