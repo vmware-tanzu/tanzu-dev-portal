@@ -1,5 +1,4 @@
 ---
-path: "/methods/stakeholder-map"
 title: "Stakeholder Map"
 tags: ["Kickoff"]
 length: "45 mins - 1 hour"

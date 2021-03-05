@@ -1,5 +1,4 @@
 ---
-path: "/methods/team-values"
 title: "Team Values"
 tags: ["Kickoff", "Discovery", "Framing"]
 length: "30 - 45 mins"

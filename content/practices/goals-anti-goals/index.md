@@ -1,5 +1,4 @@
 ---
-path: "/methods/goals-anti-goals"
 title: "Goals & Anti-Goals"
 tags: ["Kickoff", "Inception", "Remote"]
 length: "45 - 60 mins"

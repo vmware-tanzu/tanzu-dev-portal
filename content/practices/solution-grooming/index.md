@@ -2,7 +2,6 @@
 # Draft: unclear how this is helpful or if it is used. 
 # Content very sparse, not very helpful?
 draft: true
-path: "/methods/solution-grooming"
 title: "Solution Grooming"
 tags: ["Framing", "Remote"]
 length: "1 hr - 4 hr"
