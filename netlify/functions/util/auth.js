@@ -1,7 +1,5 @@
 const { AuthorizationCode } = require("simple-oauth2");
 const querystring = require("querystring");
-
-process.env["NODE_CONFIG_DIR"] = __dirname + "/netlify/functions/config/";
 const config = require("config");
 
 const base =
