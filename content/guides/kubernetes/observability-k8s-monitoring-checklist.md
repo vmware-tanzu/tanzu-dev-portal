@@ -242,14 +242,6 @@ the risk of losing scheduling functionality if additional schedulers fail.
 - _Metrics:_ `node_timex_offset_seconds` (via [kube-state-metrics](#kube-state-metrics))
 - _Notes:_ Kubernetes does not tolerate clock skew between nodes in the cluster.
 
-### AppArmor Disabled
-
-- _Severity:_ Critical
-
-### SELinux Disabled (for RHEL nodes)
-
-- _Severity:_ Critical
-
 ## kube-proxy
 
 Monitoring kube-proxy is critical to ensure workloads can access Pods and
