@@ -96,7 +96,7 @@ Unfortunately, at this point in time, it is not possible to preview what it will
 > ## Short FAQ
 >
 > ### How will I know if the changes have passed the checks, been rejected, approved or merged?
-> If there’s a change to the status of your pull request, Github will alert you via the email linked to your Github account, and add a notification to the  notifications icon of your Github account. 
+> If there’s a change to the status of your pull request, Github will alert you via the email linked to your Github account, and add a notification to the  notifications icon of your Github account. Here's how to check from the Github site:
 > 1. Click on the notification icon.
 ><img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Notification%201.png"/>
 > 2. Click on the notification with the name of the branch you submitted for pull request
@@ -105,15 +105,20 @@ Unfortunately, at this point in time, it is not possible to preview what it will
 ><img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Notification%203.png"/>
 > 
 > ### How can I make a change to the pull request if it doesn’t pass a test, or there’s a request for edits from the reviewers?
-> Go to your copy of the Tanzu Practices site, making sure that you are in the right branch to make the edits.
+> 1. Go to your copy of the Tanzu Practices site, making sure that you are in the right branch to make the edits.
 > <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/MkChanges%201.png" />
-> Click on the 'Content' folder, 'Practices' folder, the folder of the practice you edited, and then index.md. Click on the pencil icon to edit it.  
-> When saving the edits, under Commit Changes, fill in the title and description for the change.  
-> This time, commit directly to the branch. Do NOT create a new branch. This updates your pull request with your latest edits.   
+> 2. Click on the 'Content' folder, 'Practices' folder, the folder of the practice you edited, and then index.md. Click on the pencil icon to edit it.  
+> 3. When saving the edits, under Commit Changes, fill in the title and description for the change.  
+> 4. This time, commit directly to the branch. Do NOT create a new branch. This updates your pull request with your latest edits.   
 > <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/MkChanges%202.png" />
 > That’s it!
 
 ## 5. Delete (delete repo)
 
-Once you’re sure your edits have been merged, go to settings, and delete your copy of the repository. 
+Once you’re sure your edits have been merged, you can delete your repo with these steps:
 
+1. Click on settings
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Delete%201.png"/>
+2. Scroll all the way down to the Danger Zone, and click Delete this repository
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Delete%202.png"/>
+3. Follow the instructions to type the name of your repo, and enter your password. Done!
