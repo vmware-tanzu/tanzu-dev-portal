@@ -33,6 +33,11 @@ test: npm
 spell: npm
 	act -j spell-check
 
+#function-config: @ sets the function config variables during build
+function-config:
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/config/placeholder.json | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/config/default.json
+
+
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
 	hugo new guides/$(call word-dot,$*,1)/$(call word-dot,$*,2).md -k guide-what-is

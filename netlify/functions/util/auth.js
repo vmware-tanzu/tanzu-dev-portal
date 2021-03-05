@@ -1,14 +1,15 @@
-const { AuthorizationCode } = require('simple-oauth2')
-const querystring = require('querystring')
+const { AuthorizationCode } = require("simple-oauth2");
+const querystring = require("querystring");
+const config = require("config");
 
 const base =
-process.env.CONTEXT != "production"
-  ? "https://auth.esp-staging.vmware-aws.com/api/auth/v1"
-  : "https://auth.esp.vmware.com/api/auth/v1";
+  config.context != "production"
+    ? "https://auth.esp-staging.vmware-aws.com/api/auth/v1"
+    : "https://auth.esp.vmware.com/api/auth/v1";
 
 function makeAuth(clientId, orgId) {
   if (!clientId) {
-    throw new Error('Missing client ID')
+    throw new Error("Missing client ID");
   }
 
   // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
@@ -24,41 +25,33 @@ function makeAuth(clientId, orgId) {
       json: true,
     },
     options: {
-      authorizationMethod: 'body',
-      bodyFormat: 'json'
-    }
-  }
+      authorizationMethod: "body",
+      bodyFormat: "json",
+    },
+  };
 
-  return new AuthorizationCode(config)
+  return new AuthorizationCode(config);
 }
-
 
 function getDiscoveryUrl(params) {
-  return `${base}/authorize?${querystring.stringify(
-    params
-  )}`
+  return `${base}/authorize?${querystring.stringify(params)}`;
 }
 
-function getClientId(){
-  return process.env.CONTEXT != "production"
+function getClientId() {
+  return config.context != "production"
     ? process.env.DEV_CLIENT_ID
     : process.env.PROD_CLIENT_ID;
 }
 
-/*function getSiteURL(){
-  return process.env.CONTEXT != "production"
-    ? process.env.DEPLOY_PRIME_URL
-    : process.env.URL;
-}*/
-
 function getSiteURL(){
-  return process.env.CONTEXT != "production"
-    ? "https://deploy-preview-604--tanzu-dev-portal.netlify.app"
-    : process.env.URL;
+  return config.context != "production"
+    ? config.deployPrimeURL
+    : "https://tanzu.vmware.com/developer"
 }
+
 module.exports = {
   makeAuth: makeAuth,
   getDiscoveryUrl: getDiscoveryUrl,
   getClientId: getClientId,
-  getSiteURL: getSiteURL
-}
+  getSiteURL: getSiteURL,
+};
