@@ -2,13 +2,15 @@ const cookie = require("cookie");
 const jwt = require("jsonwebtoken");
 const got = require("got");
 const { getSiteURL } = require("./util/auth");
+const config = require("./config");
 
 var baseurl;
 var apikey;
-if (process.env.CONTEXT === "production" || process.env.CONTEXT === "staging") {
+
+if (config.context === "production" || config.context === "staging") {
   baseurl = process.env.PROD_LOOKUP_SERVICE_URL;
   apikey = process.env.PROD_LOOKUP_SERVICE_API_KEY;
-}else {
+} else {
   baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
   apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
 }
