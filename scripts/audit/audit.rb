@@ -3,21 +3,27 @@ require 'optparse'
 require 'redcarpet'
 require 'yaml'
 
+# Check each row for a series of criteria, adding a tag to a list
+# of results that will be included as a row in the final document
 def filter(options, headers, row) 
     matches = []
     
+    # No Tag(s)
     if row[headers.index("tags")].size == 0
         matches.append("No Tags")
     end
 
+    # No Topic(s)
     if row[headers.index("topics")].size == 0
         matches.append("No Topics")
     end
     
+    # No Description
     if row[headers.index("description")].size == 0
         matches.append("No Description")
     end
 
+    # > 5000 words (potentially look at shortening)
     if row[headers.index("wordcount")].to_i > 5000
         matches.append("> 5000 words")
     end
