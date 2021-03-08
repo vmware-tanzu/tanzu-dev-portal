@@ -1,7 +1,9 @@
 ---
-title:  "Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes"
+title: "Gathering Metrics from Spring Boot on Kubernetes with Prometheus and Grafana"
+metaTitle: "Gather Metrics with Spring Boot using Prometheus & Grafana"
 linkTitle: "Prometheus and Grafana"
 parent: "Spring Boot"
+description: Discover how to gather both standard and custom metrics from Spring Boot using Prometheus and visualize them in Grafana.
 weight: 5
 topics:
 - Spring

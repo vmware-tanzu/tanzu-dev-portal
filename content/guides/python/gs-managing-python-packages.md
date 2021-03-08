@@ -1,7 +1,8 @@
 ---
 title: "Python Like A Pro: Managing Project Dependencies"
 linkTitle: "Managing Python Project Dependencies"
-description: "Learn how to isolate your Python dependencies using pyenv-virtualenv."
+metaTitle: "Managing Python Project Dependencies"
+description: "Learn how to isolate your Python dependencies using pyenv-virtualenv. Explore this guide to manage project dependencies and become a Python Pro!"
 topics:
 - Python
 tags:
@@ -13,13 +14,13 @@ team:
 - Ben Wilcock
 ---
 
-### Why Do You Need This Guide?
+## Why Do You Need This Guide?
 
 Suppose you've already mastered the fine art of [installing multiple versions of Python][install] on your computer using [Pyenv][pyenv]. In that case, you're probably keen to control your Python projects and the packages they use.
 
 For a pro-developer, this means mastering some additional tools --- tools designed to help you maintain a healthy degree of separation between your 'system' dependencies and your project dependencies. Without these tools, your system quickly becomes a tangled mess of incompatible packages that break your projects and disrupt your flow.
 
-### Before You Begin
+## Before You Begin
 
 This guide follows on where '[Python Like A Pro: Installing Python][install]' left off. To complete it, you'll need the `pyenv` tool installed on your system and Python 3.8.5 and Python 2.7.18, both installed using the `pyenv install` command as discussed in that earlier guide.
 
@@ -39,7 +40,7 @@ If successful, you'll see output similar to that below, confirming that `pyenv` 
 
 Finally, if you'd prefer to watch a video on this guide, scroll down to the bottom of the page and hit 'play.'
 
-### Managing Python Project Dependencies
+## Managing Python Project Dependencies
 
 As a rule of thumb, it's best if each Python project you work on has its own set of dependencies, both on the version of Python it needs, but also on any dependencies you install via [pip][pip]. This model is especially true if your work involves tens or even hundreds of Python projects --- like a microservices project.
 
@@ -54,7 +55,7 @@ Pyenv-virtualenv lets you:
 
 Let's get 'hands-on' and take a closer look at `pyenv virtualenv` in action.
 
-#### Step 1: Create A Python 3.8.5 Project
+### Step 1: Create A Python 3.8.5 Project
 
 Make a new folder and in this folder begin a new Python 3 project by adding a ready-made Python program file like so:
 
@@ -85,7 +86,7 @@ At this point, your prompt may change slightly to confirm that the virtual envir
 py3
 ```
   
-#### Step 2: Add Some Package Dependencies
+### Step 2: Add Some Package Dependencies
 
 From this point on, any dependencies you install while in this folder will be specific to the `py3` virtual environment. Add the [Flask][flask] and [Gunicorn][gunicorn] packages as follows:
 
@@ -112,7 +113,7 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 ```
 
-#### Step 3: Test The Application
+### Step 3: Test The Application
 
 Use Gunicorn and Flask to run the `web.py` application as follows:
 
@@ -128,7 +129,7 @@ When Gunicorn starts, it reports its version as `20.x.x` like so:
 
 Now, point your browser to `http://localhost:8080` and you'll be greeted with the legend __"Hello, World!"__
 
-#### Step 4: Leave The Project Folder
+### Step 4: Leave The Project Folder
 
 Finally, leave the `python-3-project` folder.
 
@@ -145,7 +146,7 @@ system (set by /home/ben/.pyenv/version)
 
 > Should you ever move back into the `python-3-project` folder, pyenv will automatically activate the `py3` virtual environment.
 
-#### Step 5: Rinse And Repeat With Python 2.8.17
+### Step 5: Rinse And Repeat With Python 2.8.17
 
 Repeat steps 1-4 above, but this time, create a folder called `python-2-project` and use Python version 2.7.18 as the basis of your virtual environment. The updated commands for step 1 are as follows:
 
@@ -164,7 +165,7 @@ In step 3, run your app in Gunicorn as before, but this time, you'll notice that
 [2020-08-19 11:14:52 +0000] [15150] [INFO] Starting gunicorn 19.10.0
 ```
 
-### Keep Learning
+## Keep Learning
 
 To discover more of what `pyenv` can do for you, check out the [pyenv website][pyenv] or try `pyenv --help`. To get help on a specific command in pyenv type `pyenv <command> --help`.
 
