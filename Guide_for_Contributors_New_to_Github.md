@@ -28,7 +28,9 @@ Repeat steps when you want to suggest new edits to the site.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Images%20for%20Guide/Click%20on%20Fork.png" />
 3. Check the title of the repository to make sure that you are editing on your own copy of the code. It should show your github account name/tanzu-dev-portal, as you can see below:
 
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/Check%20Repo%20Title.png"  />
+![Example of repo title](/images/guides/guide-for-contributors-new-to-github/Check Repo Title.png)
+
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Check%20Repo%20Title.png" />
 
 
 4. Click on Content
