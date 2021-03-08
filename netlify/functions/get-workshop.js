@@ -6,13 +6,14 @@ const config = require("./util/config");
 
 var baseurl;
 var apikey;
-console.log(config.context)
-if (config.context === "production" || config.context === "deploy-preview") {
+
+if (config.context === "production" || config.context === "staging") {
   baseurl = process.env.PROD_LOOKUP_SERVICE_URL;
   apikey = process.env.PROD_LOOKUP_SERVICE_API_KEY;
 } else {
   baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
   apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
+  
 }
 
 exports.handler = async (event, context) => {
@@ -51,8 +52,6 @@ exports.handler = async (event, context) => {
       redirectURL = event.headers.referer.replace(/$/, "");
     }
     redirectURL = redirectURL.replace(/\?ws_status=unavailable/, "");
-    console.log(event.headers.referer);
-    console.log(redirectURL);
     const jsonavailbody = JSON.parse(availability.body);
     if (jsonavailbody.available == 0) {
       return {
