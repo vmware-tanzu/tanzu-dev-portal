@@ -87,9 +87,9 @@ exports.handler = async (event, context) => {
     // with the cookie so that Netlify lets them in
     var redirect
     if (parsed.path.includes('get-workshop')){
-      redirect = `${getSiteURL()}/${parsed.path}?src=${parsed.referer}`;
+      redirect = `${getSiteURL()}/${parsed.path}?logged_in=true&src=${parsed.referer}`;
     } else{
-      redirect = `${getSiteURL()}/${parsed.path || ""}`;
+      redirect = `${getSiteURL()}/${parsed.path || ""}?logged_in=true`;
     }
     console.log(redirect)
     return {

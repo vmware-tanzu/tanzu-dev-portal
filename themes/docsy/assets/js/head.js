@@ -77,3 +77,6 @@ function sendAmplitudeUserPropsOnLoad(userProperties) {
 function sendAmplitudeUserProps(userProperties) {
   dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});
 }
+function setAmplitudeUserId(userId) {
+  dataLayer.push({'event': 'setUserId', 'userId': userId});
+}
