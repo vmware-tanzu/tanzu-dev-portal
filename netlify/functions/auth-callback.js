@@ -92,28 +92,7 @@ exports.handler = async (event, context) => {
       redirect = `${getSiteURL()}/${parsed.path || ""}`;
     }
     console.log(redirect)
-    const redirectBody = `<html><head><script>
-    function getCookie(name) {
-      var dc = document.cookie;
-      var prefix = name + "=";
-      var begin = dc.indexOf("; " + prefix);
-      if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-      } else {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-          end = dc.length;
-        }
-      }
-    
-      return decodeURI(dc.substring(begin + prefix.length, end));
-    }
-    
-    function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); }
-    if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
-    dataLayer.push({'event': 'setUserId', 'userId': JSON.parse(atob(getCookie("nf_jwt").split('.')[1])).id})</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`
+    const redirectBody = `<html><head><script>function getCookie(e){var t=document.cookie,n=e+"=",o=t.indexOf("; "+n);if(-1==o){if(0!=(o=t.indexOf(n)))return null}else{o+=2;var i=document.cookie.indexOf(";",o);-1==i&&(i=t.length)}return decodeURI(t.substring(o+n.length,i))}function setGTM(e,t,n,o,i){e[o]=e[o]||[],e[o].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var r=t.getElementsByTagName(n)[0],a=t.createElement(n),s="dataLayer"!=o?"&l="+o:"";a.async=!0,a.src="https://www.googletagmanager.com/gtm.js?id="+i+s,r.parentNode.insertBefore(a,r)}var timer;function waitForOnetrustActiveGroups(){document.cookie.indexOf("OptanonConsent")>-1&&document.cookie.indexOf("groups=")>-1?(clearTimeout(timer),setGTM(window,document,"script","dataLayer","GTM-TQ9H33K")):timer=setTimeout(waitForOnetrustActiveGroups,250)}document.cookie.indexOf("OptanonConsent")>-1&&document.cookie.indexOf("groups=")>-1?setGTM(window,document,"script","dataLayer","GTM-TQ9H33K"):waitForOnetrustActiveGroups(),dataLayer.push({event:"setUserId",userId:JSON.parse(atob(getCookie("nf_jwt").split(".")[1])).id});</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`
     return {
       statusCode: 200,
       headers: {
