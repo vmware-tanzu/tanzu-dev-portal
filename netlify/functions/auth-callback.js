@@ -92,13 +92,17 @@ exports.handler = async (event, context) => {
       redirect = `${getSiteURL()}/${parsed.path || ""}`;
     }
     console.log(redirect)
+    const redirectBody = `<html><head><script>
+    function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); }
+    if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
+    dataLayer.push({'event': 'setUserId', 'userId': JSON.parse(atob(getCookie("nf_jwt").split('.')[1])).id})</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`
     return {
       statusCode: 200,
       headers: {
         "Cache-Control": "no-cache",
         "Set-Cookie": c,
       },
-      body: `<html><head><script>setAmplitudeUserId(JSON.parse(atob(getCookie("nf_jwt").split('.')[1])).id);</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`,
+      body: redirectBody,
     };
   } catch (err) {
     console.error(err.message);
