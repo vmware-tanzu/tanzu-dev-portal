@@ -2,7 +2,7 @@
 title:  "What are Cloud Native Buildpacks?"
 linkTitle: "Cloud Native Buildpacks"
 subsection: "Cloud Native Buildpacks"
-description: Learn the basics of Cloud Native Buildpacks. Discover how they work and how to use them to turn your code into OCI-compliant containers.
+description: Learn the basics of Cloud Native Buildpacks and discover how they work and how to use them to turn your code into OCI-compliant containers.
 topics:
 - Containers
 tags:
