@@ -333,7 +333,8 @@ limitations under the License.
       if (window.location.href.indexOf("logged_in=true") > -1) {
         const decodedToken = getCookie("nf_jwt");
         if (decodedToken) {
-          setAmplitudeUserId(decodedToken.id);
+            const tokenContents = JSON.parse(atob(decodedToken.split('.')[1]))
+            setAmplitudeUserId(tokenContents.id);
         }
       }
     });
