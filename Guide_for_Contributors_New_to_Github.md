@@ -40,7 +40,8 @@ Repeat steps when you want to suggest new edits to the site.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork6.png" />
 7. Click on index.md. This shows you what the page looks like in plain text
 8. Click on the pencil edit icon. This shows you what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script. 
-<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />
+<img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />. 
+
 ## 3. Edit (Make Edits and save as branch)
 
 1. Paste your edits into the right section. Just note that if you’re adding a ‘header’, ‘callout’ or any form of special formatted text, take a look to see how headers have been written, so you can copy the syntax. 
@@ -56,7 +57,7 @@ Try to also keep to the indentation format so that the text looks neat and reada
 Unfortunately, at this point in time, it is not possible to preview what it will look like on the actual website, but you can click on the Preview Changes tab to see if the edits show up in the right places. 
 
 
-2. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but give it a short summary of **what you did** in less that 50 words. Refer to the image below for an example.
+2. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but delete that and give it a short summary of **what you did** in less that 50 words. Refer to the image below for an example.
 3. Fill up the extended description with the reason **why** the update was needed, or the context around the update. This will be read by the reviewers - help them understand why they should approve this edit!
 4. Select ‘Create a new branch for this commit’
 5. Create a name for the new branch that explains **what it is** 
