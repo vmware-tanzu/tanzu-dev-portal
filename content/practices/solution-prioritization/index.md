@@ -1,5 +1,4 @@
 ---
-path: "/methods/solution-prioritization"
 title: "Solution Prioritization"
 tags: ["Framing"]
 length: "1 - 2 hours"

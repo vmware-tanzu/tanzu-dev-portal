@@ -2,7 +2,6 @@
 # Draft: needs deeper review and changes for public consumption. 
 # References Miro template with old branding.
 draft: "true"
-path: "/methods/product-valuation"
 title: "Product Valuation"
 tags: ["Discovery", "Framing", "Inception"]
 length: "Varies greatly"

@@ -1,5 +1,4 @@
 ---
-path: "/methods/personas"
 title: "Personas"
 tags: ["Kickoff", "Discovery", "Remote"]
 length: "45 - 60 mins"

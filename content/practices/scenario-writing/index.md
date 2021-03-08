@@ -1,5 +1,4 @@
 ---
-path: "/methods/scenario-writing"
 title: "Scenario Writing"
 tags: ["Discovery", "Framing", "Remote"]
 length: "45 - 60 mins"

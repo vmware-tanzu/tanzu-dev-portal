@@ -1,7 +1,8 @@
 ---
 title: "Python Like A Pro: Managing Global Packages"
 linkTitle: "Managing Python Global Packages"
-description: "Learn how to isolate your global Python packages using PipX."
+metaTitle: "Managing Python Global Packages"
+description: "Learn how to isolate your global Python packages using PipX, a tool that allows the installation of packages in an isolated environment."
 topics:
 - Python
 tags:
@@ -12,7 +13,8 @@ patterns:
 team:
 - Ben Wilcock
 ---
-### Why You Need This Guide
+
+## Why You Need This Guide
 
 There are loads of super-useful Python-based tools available in the [Python Package Installer][pip] --- also known as 'pip'. [MyPy][mypy] the static type checker, [Flake8][flake8] the awesome code linter, [Black][black] the 'uncompromising code formatter,' and [Glances][glances] the 'eye on your system,' are all great examples. These are Python packages that are useful globally, across all your Python projects, and beyond! 
 
@@ -22,7 +24,7 @@ Unsurprisingly, the bright folks in 'python-land' have a solution to this proble
 
 Follow the steps below to get started with PipX.
 
-### Before You Start
+## Before You Start
 
 [Ubuntu 20.04 LTS][ubuntu] provides the reference baseline operating system for this guide. Many Python developers use Linux, and Ubuntu is the most popular Linux distribution. Microsoft also distributes Ubuntu as part of the [Windows Subsystem for Linux][wsl], so it's available to most Windows 10 users. On Mac OS, most of the tools shown here are available from Homebrew.
 
@@ -30,7 +32,7 @@ When following this guide, it helps if you're starting from a clean system. That
 
 Finally, if you'd prefer to watch a video on this guide, scroll down to the bottom of the page and hit 'play.'
 
-#### Step 1: Install Pip And PipX
+### Step 1: Install Pip And PipX
 
 To install [PipX][pipx], you first need to install [pip][pip] into your system's Python environment. In Ubuntu --- and WSL environments based upon Ubuntu --- that means adding some packages from the built-in Ubuntu package manager like so:
 
@@ -51,7 +53,7 @@ Now close your terminal for those changes to take effect.
 exit
 ```
 
-#### Step 2: Install A Global Command Line Package With PipX
+### Step 2: Install A Global Command Line Package With PipX
 
 Open a new terminal window and test that `pipx` works by calling up pipx's built-in help.
 
@@ -83,7 +85,7 @@ To check the installation of Glances has not altered your system's `pip` package
 
 To see a list of tools installed by `pipx`, use the `pipx list` command. You will see that Glances _is_ present on this list.
 
-#### Step 3: Run A Tool Without Installation With PipX 
+### Step 3: Run A Tool Without Installation With PipX 
 
 When you're unsure if a package is right for you, PipX offers a way to try the package without installing it. Let's try this feature using the fun --- but mostly useless --- `pycowsay` package:
 
@@ -98,7 +100,7 @@ The first argument after `pipx run` is always assumed to be the name of the pack
 
 If you decide that `pycowsay` is definitely for you, you can install it permanently using the `pipx install` command you saw in Step 2.
 
-### Keep Leaning
+## Keep Leaning
 
 To find out more about PipX, check out the [PipX website][pipx], the [PipX docs][pipx-docs] or try `pipx --help`. To get help on a specific command type `pipx <command> --help`.
 

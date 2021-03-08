@@ -1,5 +1,4 @@
 ---
-path: "/practices/boris"
 title: "Boris"
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1.5 hours per run; multiple runs are often needed"
@@ -18,11 +17,11 @@ when:
 
 what:
 - Output from Event Storming (i.e. list of bounded contexts & the events contained within them)
-- Post-It arrow flags
+- Sticky arrow flags
 - Whiteboard tape (black, green, red; 2 rolls of each)
 - Scissors
 - Scotch tape
-- Post-it Dry Erase Surface (3 ft x 2 ft)
+- Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
 
 ---

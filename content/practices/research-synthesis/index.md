@@ -1,5 +1,4 @@
 ---
-path: "/methods/research-synthesis"
 title: "Research Synthesis"
 tags: ["Discovery", "Framing", "Remote"]
 length: "30 min - 1 hour per interview"
