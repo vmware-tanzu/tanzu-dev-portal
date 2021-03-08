@@ -1,5 +1,7 @@
 ---
-path: "/methods/solution-grooming"
+# Draft: unclear how this is helpful or if it is used. 
+# Content very sparse, not very helpful?
+draft: true
 title: "Solution Grooming"
 tags: ["Framing", "Remote"]
 length: "1 hr - 4 hr"
@@ -12,11 +14,11 @@ why:
 - Unless you have a systematic way to approach your pile of solutions, you may find yourself overwhelmed with opportunities. It helps to break them down into smaller features and/or group them into larger epics before prioritizing. This activity is also a great way to de-duplicate the similar ideas that people may have generated from different "How might we…?” prompts.
 
 when:
-- When you've come up with a huge number of ideas during [Solution Brainstorming](/practices/solution-brainstorming-hmw-whiteboard) and you have so many you need to understand and organize them.
+- When you've come up with a huge number of ideas during [Solution Brainstorming](/practices/solution-brainstorming) and you have so many you need to understand and organize them.
 
 what:
-- post-its with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming-hmw-whiteboard), still attached to tabloid sheets)
-- large post-its
+- sticky notes with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming), still attached to tabloid sheets)
+- large sticky notes
 - sharpies
 - whiteboard
 - expo markers
@@ -29,37 +31,38 @@ what:
 
 1. Outline the general process for the team:
 
-   - Get post-its on the wall
+   - Get sticky notes on the wall
    - Cluster them quietly
    - Share out findings
    - Refine
 
 1. Hand out one idea sheet to each team member.
 
-1. Have team members quietly add their idea post-its to the whiteboard and begin to cluster post-its into groups.
+1. Have team members quietly add their idea sticky notes to the whiteboard and begin to cluster sticky notes into groups.
 
    {{% callout %}}
    Tip: As groups form, write a label above each one so you can quickly spot duplicate groups.
    {{% /callout %}}
-1. Once all post-its are up on the wall and in rudimentary groups, facilitator begins systematically walking through each group asking questions and  massaging the group until the team is happy. Remember to update the label accordingly!
+   
+1. Once all sticky notes are up on the wall and in rudimentary groups, facilitator begins systematically walking through each group asking questions and  massaging the group until the team is happy. Remember to update the label accordingly!
 
    Use the following prompts:
 
    - Are there any other groups that are similar to this one?
-   - Are there any individual post-its that should be moved to this group?
-   - Do all of these post-its belong together? If not, where should they go?
+   - Are there any individual sticky notes that should be moved to this group?
+   - Do all of these sticky notes belong together? If not, where should they go?
    - Can we subdivide this group in any meaningful way?
 
 1. Repeat Step 5 for all groups until you've worked your way through the entire whiteboard of ideas.
 
-1. Once complete, direct team members to begin transferring the labels to new large post-its for use in the Solution Prioritization workshop.
+1. Once complete, direct team members to begin transferring the labels to new large sticky notes for use in the Solution Prioritization workshop.
 
    {{% callout %}}
-   Tip: To avoid confusion and duplication of effort, it’s helpful if each person transferring a label to the post-it puts that post-it on the whiteboard (over the group in question) after they’ve finished writing it.
+   Tip: To avoid confusion and duplication of effort, it’s helpful if each person transferring a label to the sticky note puts that note on the whiteboard (over the group in question) after they’ve finished writing it.
    {{% /callout %}}
 
 #### Success/Expected Outcomes
-Success is achieved when you have clustered your ideas and copied the group labels onto large post-its.
+Success is achieved when you have clustered your ideas and copied the group labels onto large sticky notes.
 
 #### Facilitator Notes & Tips
 
@@ -85,5 +88,3 @@ None at the moment
 Coming soon! 
 
 ## Recommended Reading
-
-

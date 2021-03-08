@@ -4,8 +4,8 @@ metaTitle: "Gathering Metrics from Kubernetes with Prometheus & Grafana"
 linkTitle: "Prometheus and Grafana"
 parent: "Platform Observability"
 description: Learn how to set up Prometheus and Grafana, two open source tools for gathering metrics and visualizing, on an existing Kubernetes cluster.
+weight: 2
 aliases: ["/guides/kubernetes/prometheus-grafana-p1"]
-weight: 1
 topics:
 - Kubernetes
 tags:

@@ -3,7 +3,7 @@ title: "Breaking Down a Monolith into Microservices"
 linkTitle: "Breaking Down a Monolith"
 metaTitle: "Breaking Down a Monolith"
 description: Looking to decompose a monolith? This guide provides expert tricks and tips to break down monoliths into microservices. 
-weight: 2
+weight: 3
 topics:
 - Microservices
 tags:

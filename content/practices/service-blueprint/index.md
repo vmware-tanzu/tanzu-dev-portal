@@ -1,5 +1,4 @@
 ---
-path: "/methods/service-blueprint"
 title: "Service Blueprint"
 tags: ["Discovery"]
 length: "1 - 2 hours"

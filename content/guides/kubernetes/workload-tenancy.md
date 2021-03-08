@@ -1,7 +1,6 @@
 ---
 title: "Workload Tenancy"
 subsection: "Workload Tenancy"
-weight: 15
 topics:
   - Kubernetes
 team:

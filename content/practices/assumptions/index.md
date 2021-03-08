@@ -1,5 +1,4 @@
 ---
-path: "/methods/assumptions"
 title: "Assumptions"
 tags: ["Kickoff", "Discovery"]
 lastmod: "2019-03-09"

@@ -1,7 +1,6 @@
 ---
 title: "Developer Workflow"
 subsection: "Developer Workflow"
-weight: 6
 topics:
 - Kubernetes
 team:

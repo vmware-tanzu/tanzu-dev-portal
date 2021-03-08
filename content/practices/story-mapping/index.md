@@ -1,5 +1,4 @@
 ---
-path: "/methods/story-mapping"
 title: "Story Mapping"
 tags: ["Framing", "Inception"]
 length: "1 hour"

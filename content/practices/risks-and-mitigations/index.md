@@ -1,5 +1,4 @@
 ---
-path: "/methods/risks-mitigations"
 title: "Risks & Mitigations"
 tags: ["Kickoff", "Inception", "Remote"]
 length: "30 min - 1 hour"

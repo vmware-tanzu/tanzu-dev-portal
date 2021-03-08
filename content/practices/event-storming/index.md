@@ -1,8 +1,5 @@
 ---
-path: "/practices/event-storming"
 title: "Event Storming"
-topics:
-- Agile
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1 - 2 hours; multiple runs may be needed"
 participants: "Business stakeholders, business analysts, executives, developers, architects, team leads, domain experts, core team"
@@ -44,7 +41,7 @@ what:
    - Identify the beginning and end of the event storming session in order to create a sequence of events
    - Think about an event in the past tense
    - Focus on the happy path to begin with
-   - Turn post-it's sideways 45 degrees to indicate there are questions or a need for clarification
+   - Turn sticky notes sideways 45 degrees to indicate there are questions or a need for clarification
    
    ![Multiple event stickies encircled in a sample bounded context](/images/practices/event-storming/example-2.jpg)
 
