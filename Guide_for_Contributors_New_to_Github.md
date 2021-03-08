@@ -38,8 +38,10 @@ Repeat steps when you want to suggest new edits to the site.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork5.png" />
 6. Click on the practice you want to add to. For this example, I clicked on design-studio.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork6.png" />
-7. Click on index.md. This shows you what the page looks like in plain text.
-8. Click on the pencil edit icon. This shows you what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script. 
+7. Click on index.md. This shows you what the page looks like in plain text. 
+
+8. Click on the pencil edit icon. This shows you what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script.   
+
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />. 
 
 ## 3. Edit (Make Edits and save as branch)
