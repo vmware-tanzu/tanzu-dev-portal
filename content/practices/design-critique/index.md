@@ -1,5 +1,4 @@
 ---
-path: "/methods/design-critique"
 title: "Design Critique"
 tags: ["Discovery", "Framing"]
 length: "30 min - 1 hour"

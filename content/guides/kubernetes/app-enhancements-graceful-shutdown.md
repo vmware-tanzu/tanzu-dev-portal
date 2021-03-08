@@ -28,7 +28,7 @@ execution of an optional pre-stop hook and PID 1 responding to the SIGTERM
 signal. Once the containers exit successfully, the Kubelet deletes the pod from
 the API server.
 
-![Graceful Shutdown Success](/images/guides/kubernetes/app-enhancements/graceful_shutdown_success.png)
+![Graceful Shutdown Success](/images/guides/kubernetes/app-enhancements/diagrams/graceful_shutdown_success.png)
 
 ### Forceful Shutdown
 
@@ -43,7 +43,7 @@ sends a SIGKILL signal to forcefully shutdown the processes running in the pod.
 Depending on the application, this can result in data loss and user-facing
 errors.
 
-![Graceful Shutdown Failure](/images/guides/kubernetes/app-enhancements/graceful_shutdown_failure.png)
+![Graceful Shutdown Failure](/images/guides/kubernetes/app-enhancements/diagrams/graceful_shutdown_failure.png)
 
 ## Forceful Deletion Using Kubectl
 
@@ -61,7 +61,7 @@ be terminated. Furthermore. the user has no visibility of this problem via the
 API server (using `kubectl` commands) and would have to log into the node to
 manually clean up the process.
 
-![Graceful Shutdown Zombie](/images/guides/kubernetes/app-enhancements/graceful_shutdown_zombie.png)
+![Graceful Shutdown Zombie](/images/guides/kubernetes/app-enhancements/diagrams/graceful_shutdown_zombie.png)
 
 {{% aside title="Note" %}}
 While technically possible, it is unlikely you will end up with a zombie process
@@ -81,27 +81,25 @@ The following code snippet shows how to handle the SIGTERM signal in a Go proces
 ```go
 func main() {
     // App initialization code here...
-    server := app.NewServer()
+    serverErrors := make(chan error, 1)
+    server := app.NewServer(serverErrors)
 
     // Make a channel to listen for an interrupt or terminate signal from the OS.
     // Use a buffered channel because the signal package requires it.
     shutdown := make(chan os.Signal, 1)
     signal.Notify(shutdown, os.Interrupt, syscall.SIGTERM)
 
-    /// Start the application and listen for errors
-    serverErrors := make(chan error, 1)
+    // Start the application and listen for errors
     go server.ListenAndServe()
 
-    // Blocking main and waiting for shutdown.
+    // Wait for a server error or shutdown signal
     select {
         case err := <-serverErrors:
-            return errors.Wrap(err, "server error")
+            log.Fatalln("server error", err)
 
         case sig := <-shutdown:
-            return server.Shutdown()
+            server.Shutdown()
     }
-
-    return nil
 }
 ```
 

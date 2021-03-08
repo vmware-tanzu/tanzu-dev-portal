@@ -1,7 +1,6 @@
 ---
 title: "Packaging"
 subsection: "Packaging"
-weight: 9
 topics:
 - Kubernetes
 team:

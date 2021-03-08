@@ -18,7 +18,7 @@ instagram: ""
 youtube: ""
 ---
 
-Cora Iberkleid is part developer advocate, part advisory solutions engineer at VMware, helping developers and enterprises navigate and adopt modern practices and technologies including Spring, Cloud Foundry, Kubernetes, Tanzu, and modern CI/CD.
+Cora Iberkleid is a Developer Advocate for Modern Applications at VMware, helping developers and enterprises navigate modern practices and technologies including Spring, Kubernetes, Cloud Foundry, Tanzu, and modern CI/CD. Prior to that she was an Advisory Cloud Application and Platform Architect at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications.
 
 <!--more-->
 

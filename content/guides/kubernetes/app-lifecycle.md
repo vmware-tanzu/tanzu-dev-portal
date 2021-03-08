@@ -1,7 +1,6 @@
 ---
 title: "Application Lifecycle"
 subsection: "Application Lifecycle"
-weight: 2
 topics:
 - Kubernetes
 team:

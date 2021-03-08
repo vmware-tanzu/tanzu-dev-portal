@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Velero
-linkTitle: Velero
-weight: 14
+parent: Velero
 topics:
 - Kubernetes
 tags:
@@ -33,8 +32,8 @@ Before you get started you will need to do the following:
   [does not officially support Windows](https://velero.io/docs/v1.5/basic-install/#velero-on-windows).
 * **Install
   [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on our
-  local machine**: You probably already have that one if you're working with
-  Kubernetes.installed locally
+  local machine**: You probably already have this one if you're working with
+  Kubernetes.
 * **Verify the cluster has a
   [storage class](https://kubernetes.io/docs/concepts/storage/storage-classes/)**:
   Check if you have a storage class with `kubectl get storageclasses`. You need
@@ -196,9 +195,9 @@ similar to WordPress. We will be using the
     ghostEmail: admin@example.com
 
     mariadb:
-    auth:
-        rootPassword: "root_password"
-        password: "db_password"
+        auth:
+            rootPassword: "root_password"
+            password: "db_password"
     EOF
     ```
 
