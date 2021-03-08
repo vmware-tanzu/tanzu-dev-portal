@@ -7,7 +7,7 @@ const config = require("./util/config");
 var baseurl;
 var apikey;
 console.log(config.context)
-if (config.context === "production" || config.context === "staging") {
+if (config.context === "production" || config.context === "deploy-preview") {
   baseurl = process.env.PROD_LOOKUP_SERVICE_URL;
   apikey = process.env.PROD_LOOKUP_SERVICE_API_KEY;
 } else {
