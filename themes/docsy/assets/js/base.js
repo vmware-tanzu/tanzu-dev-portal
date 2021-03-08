@@ -329,17 +329,6 @@ limitations under the License.
         });
       }
     });
-    $(window).on("load", function () {
-      if (window.location.href.indexOf("logged_in=true") > -1) {
-        const decodedToken = getCookie("nf_jwt");
-        if (decodedToken) {
-            const tokenContents = JSON.parse(atob(decodedToken.split('.')[1]))
-            console.log(tokenContents)
-            setAmplitudeUserId(tokenContents.id);
-        }
-      }
-    });
-
 
   });
 

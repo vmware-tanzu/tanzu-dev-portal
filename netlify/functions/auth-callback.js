@@ -58,7 +58,7 @@ exports.handler = async (event, context) => {
         name: decoded.payload.username,
         id: decoded.payload.username,
         acct: decoded.payload.acct,
-        exp: decoded.payload.exp,
+        exp: decoded.payload.iat + 86400,
         iat: decoded.payload.iat,
         sub: decoded.payload.sub,
         context: decoded.payload.context,
@@ -87,9 +87,9 @@ exports.handler = async (event, context) => {
     // with the cookie so that Netlify lets them in
     var redirect
     if (parsed.path.includes('get-workshop')){
-      redirect = `${getSiteURL()}/${parsed.path}?logged_in=true&src=${parsed.referer}`;
+      redirect = `${getSiteURL()}/${parsed.path}?src=${parsed.referer}`;
     } else{
-      redirect = `${getSiteURL()}/${parsed.path || ""}?logged_in=true`;
+      redirect = `${getSiteURL()}/${parsed.path || ""}`;
     }
     console.log(redirect)
     return {
@@ -98,7 +98,7 @@ exports.handler = async (event, context) => {
         "Cache-Control": "no-cache",
         "Set-Cookie": c,
       },
-      body: `<html><head><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`,
+      body: `<html><head><script>setAmplitudeUserId(JSON.parse(atob(getCookie("nf_jwt").split('.')[1])).id);</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`,
     };
   } catch (err) {
     console.error(err.message);
