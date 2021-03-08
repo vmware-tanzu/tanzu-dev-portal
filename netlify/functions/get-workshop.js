@@ -2,7 +2,7 @@ const cookie = require("cookie");
 const jwt = require("jsonwebtoken");
 const got = require("got");
 const { getSiteURL } = require("./util/auth");
-const config = require("./utilconfig");
+const config = require("./util/config");
 
 var baseurl;
 var apikey;
