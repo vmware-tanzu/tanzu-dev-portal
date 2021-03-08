@@ -38,7 +38,7 @@ Repeat steps when you want to suggest new edits to the site.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork5.png" />
 6. Click on the practice you want to add to. For this example, I clicked on design-studio.
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork6.png" />
-7. Click on index.md. This shows you what the page looks like in plain text
+7. Click on index.md. This shows you what the page looks like in plain text.
 8. Click on the pencil edit icon. This shows you what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script. 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />. 
 
@@ -47,10 +47,12 @@ Repeat steps when you want to suggest new edits to the site.
 1. Paste your edits into the right section. Just note that if you’re adding a ‘header’, ‘callout’ or any form of special formatted text, take a look to see how headers have been written, so you can copy the syntax. 
 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Edit1.png" />
-For example, I added a tip in the example above. A tip is written like this:
+For example, I added a tip in the example above.   
+
+A tip is written like this:
  {{%callout%}}
 This is a tip
- {{/%callout%}}
+ {{/%callout%}}. 
 
 Try to also keep to the indentation format so that the text looks neat and readable.
 
