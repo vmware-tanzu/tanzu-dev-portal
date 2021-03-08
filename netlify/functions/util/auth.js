@@ -4,7 +4,7 @@ const querystring = require("querystring");
 const config = require("./config");
 
 const base =
-  config.context != "production"
+  config.context != "production" || config.context != "staging"
     ? "https://auth.esp-staging.vmware-aws.com/api/auth/v1"
     : "https://auth.esp.vmware.com/api/auth/v1";
 
@@ -39,7 +39,7 @@ function getDiscoveryUrl(params) {
 }
 
 function getClientId() {
-  return config.context != "production"
+  return config.context != "production" || config.context != "staging"
     ? process.env.DEV_CLIENT_ID
     : process.env.PROD_CLIENT_ID;
 }

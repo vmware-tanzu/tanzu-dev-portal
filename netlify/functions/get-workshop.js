@@ -5,12 +5,12 @@ const { getSiteURL } = require("./util/auth");
 
 var baseurl;
 var apikey;
-if (process.env.CONTEXT != "production") {
-  baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
-  apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
-} else {
+if (process.env.CONTEXT === "production" || process.env.CONTEXT === "staging") {
   baseurl = process.env.PROD_LOOKUP_SERVICE_URL;
   apikey = process.env.PROD_LOOKUP_SERVICE_API_KEY;
+}else {
+  baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
+  apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
 }
 
 exports.handler = async (event, context) => {
