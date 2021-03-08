@@ -71,11 +71,12 @@ Unfortunately, at this point in time, it is not possible to preview what it will
 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Edit7.png" />
 
-## 4. Pull Request (Submit edits for review)
+## 4. Submit a Pull Request (Submit edits for review)
 
 1. Click ‘New Pull Request’. 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/PR1.png" />
-2. Make sure that your base repository is vmware-tanzu/tanzu-dev-po..., and the head repository is your account.
+2. Make sure that your base repository is vmware-tanzu/tanzu-dev-po..., and the head repository is your account.  
+
 3. Change the dropdown for your “compare: main” to the name of the branch you have created. 
 <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/PR2.png" />
 4. Scroll down to check that text highlighted in green is the change you want to make. 
