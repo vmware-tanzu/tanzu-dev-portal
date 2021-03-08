@@ -6,5 +6,5 @@ description: >
 menu:
     main:
         parent: "sections"
-        weight: 2
+        weight: 3
 ---

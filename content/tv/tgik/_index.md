@@ -14,4 +14,8 @@ teaser: Live Every Friday at 1pm PT
 # Text that shows on show page under show name
 subheader: Live discussion about Kubernetes on YouTube, every Friday at 1pm PT.
 # Any content below here shows up above episode index
+menu:
+    main:
+        parent: "tv"
+        weight: 4
 ---

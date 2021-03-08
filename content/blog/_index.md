@@ -3,5 +3,6 @@ title: "Blog"
 linkTitle: "Blog"
 menu:
     main:
-        weight: 30
+        parent: "sections"
+        weight: 6
 ---

@@ -13,4 +13,8 @@ teaser: Live Every Tuesday at 1pm PT
 # Text that shows on show page under show name
 subheader: Live demos on Twitch, every Tuesday at 1pm PT.
 # Any content below here shows up above episode index
+menu:
+    main:
+        parent: "tv"
+        weight: 2
 ---
