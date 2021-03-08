@@ -1,6 +1,7 @@
 ---
 title:  "What is Helmfile?"
 parent: "Packaging"
+description: Helmfile is a declarative specification for deploying distributions of Helm charts and provides additional functionality to Helm.
 topics: ["Kubernetes"]
 weight: 4
 tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]

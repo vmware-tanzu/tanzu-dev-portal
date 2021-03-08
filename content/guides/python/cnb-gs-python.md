@@ -1,7 +1,8 @@
 ---
 title: "Python Like A Pro: Building Docker Containers"
 linkTitle: "Python Buildpacks"
-description: "Package your Python apps into Docker images in no time with Buildpacks."
+metaTitle: "Building Docker Containers with Python"
+description: "Read industry best practices about building containers and discover how to use Buildpacks to package your Python apps into Docker containers."
 topics:
 - Python
 - Containers

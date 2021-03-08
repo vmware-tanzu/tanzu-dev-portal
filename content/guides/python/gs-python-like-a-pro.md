@@ -1,7 +1,8 @@
 ---
-title:  "Python Like A Pro: Installing Python"
+title: "Python Like A Pro: How to Install Python"
 linkTitle: "Installing Python"
-description: "Learn how to install multiple versions of Python and switch between them with ease."
+metaTitle: "How to Install Python"
+description: "Learn how to install different versions of Python at the same time and switch between them with ease using the open-source command line tool Pyenv."
 topics:
 - Python
 tags:

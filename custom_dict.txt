@@ -148,6 +148,7 @@ CentOS
 Ceph
 CertificateRequests
 CEST
+CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
@@ -614,7 +615,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
-[Kk]ubernetes(-native|-specific|-centric|-based|-related)?
+[Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 KUDO
 [kK]ustomize

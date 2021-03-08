@@ -2,6 +2,7 @@
 title: "What is Spring Cloud Gateway?"
 linkTitle: "Spring Cloud Gateway"
 subsection: "Spring Cloud Gateway"
+description: Discover the basics and importance of Spring Cloud Gateway, a library for building API gateways on top of Spring and Java.
 topics:
 - Spring
 - Microservices
