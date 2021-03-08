@@ -4,9 +4,9 @@ const querystring = require("querystring");
 const config = require("./config");
 
 const base =
-  config.context != "production" || config.context != "staging"
-    ? "https://auth.esp-staging.vmware-aws.com/api/auth/v1"
-    : "https://auth.esp.vmware.com/api/auth/v1";
+  config.context === "production" || config.context === "staging"
+    ? "https://auth.esp.vmware.com/api/auth/v1"
+    : "https://auth.esp-staging.vmware-aws.com/api/auth/v1";
 
 function makeAuth(clientId, orgId) {
   if (!clientId) {
@@ -39,15 +39,15 @@ function getDiscoveryUrl(params) {
 }
 
 function getClientId() {
-  return config.context != "production" || config.context != "staging"
-    ? process.env.DEV_CLIENT_ID
-    : process.env.PROD_CLIENT_ID;
+  return config.context === "production" || config.context === "staging"
+    ? process.env.PROD_CLIENT_ID
+    : process.env.DEV_CLIENT_ID;
 }
 
-function getSiteURL(){
+function getSiteURL() {
   return config.context != "production"
     ? config.deployPrimeURL
-    : "https://tanzu.vmware.com/developer"
+    : "https://tanzu.vmware.com/developer";
 }
 
 module.exports = {
