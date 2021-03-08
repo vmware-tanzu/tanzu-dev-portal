@@ -1,7 +1,9 @@
 ---
 title:  "What are Kubernetes Secrets and Service Accounts?"
 linkTitle: "Secrets and Service Accounts"
+metaTitle: "Kubernetes Secrets and Service Accounts"
 parent: "Platform Security"
+description: Kubernetes Secrets are a collection of keys and values that let you store sensitive information and a service account describes the set of permissions.
 weight: 2
 aliases:
 - guides/kubernetes/k8s-secrets-sa-what-is/

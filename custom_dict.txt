@@ -142,6 +142,7 @@ cd
 Ceph
 CertificateRequests
 CEST
+CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 cgroup(s)?

@@ -1,6 +1,8 @@
 ---
-title:  "Getting Started with `kpack` to Automate Builds"
+title: "Getting Started with `kpack` to Automate Builds using Cloud Native Buildpacks"
+metaTitle: "Getting Started with `kpack` to Automate Builds"
 linkTitle: "Getting Started with `kpack`"
+description: Discover how to use kpack, a Kubernetes-native build service that builds OCI-compliant container images on Kubernetes using Cloud Native Buildpacks.
 parent: "Cloud Native Buildpacks"
 weight: 3
 topics:

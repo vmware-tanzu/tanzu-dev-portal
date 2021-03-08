@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with Cloud Foundry for Kubernetes"
 linkTitle: "Cloud Foundry for Kubernetes"
+description: Learn about the tools required to use Cloud Foundry on Kubernetes with the CF-for-k8s platform to add a higher level of abstraction.
 weight: 4
 topics:
 - Kubernetes
@@ -14,9 +15,6 @@ team:
 - Ivan Tarin
 ---
 
-
-### What is cf-for-k8s?
-
 > Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.
 
 [CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) brings Cloud Foundry to Kubernetes. 
@@ -29,15 +27,15 @@ The cf-for-k8s platform adds a higher level of abstraction to Kubernetes by remo
 
 In this guide you'll deploy Cloud Foundry on Kubernetes locally.
 
-### Before you begin
+## Before you begin
 
-#### Machine Requirements
+### Machine Requirements
 
 Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file we are using to make our kind cluster will make a cluster with the following requirements, see that your computer can handle them:
 - have a minimum of 1 node
 - have a minimum of 6 CPU, 8GB memory per node
 
-#### Tools required
+### Tools required
 
 > You will need a few tools before beginning and once set up installation usually takes 10 minutes or less.
 
@@ -86,14 +84,14 @@ Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file 
         ```
 - [DockerHub](https://hub.docker.com/) is the image registry used in this guide please make an account if you don't have one they are free and quickly made.
 
-### Clone the CF for K8s repo
+## Clone the CF for K8s repo
 
 Clone the repo to preferred location and cd into it.
 ```
 git clone https://github.com/cloudfoundry/cf-for-k8s.git && cd cf-for-k8s
 ```        
 
-### Setup your local k8s cluster with KinD  
+## Setup your local k8s cluster with KinD  
 
 Create your cluster using the config yaml from the cf-for-k8s repo obtained above.
 ```
@@ -104,7 +102,7 @@ Point your kubeconfig to your new cluster.
 kubectl cluster-info --context kind-kind
 ```
 
-### Generate the yaml used to deploy CF for k8s
+## Generate the yaml used to deploy CF for k8s
 
 In this script you use `vcap.me` as your CF domain with the flag `-d`, this way you can avoid configuring DNS for a domain.
 
@@ -147,7 +145,7 @@ Now, use cf-install-values.yml to render the final Kubernetes template to raw Ku
 
 ytt -f config -f ./cf-install-values.yml > ./cf-for-k8s-rendered.yml 
 
-### Deploy CF for k8s 
+## Deploy CF for k8s 
 
 You are ready to deploy cf-for-k8s using the `./cf-for-k8s-rendered.yml` file created above. Once you deploy it should take around 10 minutes to finish. 
 
@@ -157,9 +155,7 @@ You are ready to deploy cf-for-k8s using the `./cf-for-k8s-rendered.yml` file cr
 kapp deploy -a cf -f ./cf-for-k8s-rendered.yml -y
 ```
 
----
-
-### Validate the deployment
+## Validate the deployment
 
 Target your CF CLI to point to the new CF instance.
 ```
@@ -190,8 +186,7 @@ cf create-space -o test-org test-space
 cf target -o test-org -s test-space
 ```
 
----
-### Deploy an application with `cf push`
+## Deploy an application with `cf push`
 
 At last you can push the included sample `test-node-app`.
 ```
@@ -223,21 +218,21 @@ kubectl get pods -n cf-workloads
 
 You can now play with cf for k8s and deploy other apps and observe how it affects the Kubernetes infrastructure. Try other cf commands like `cf delete test-node-app` and see what changes, enjoy you new cf for k8s instance.
 
-### Delete the cf-for-k8s deployment
+## Delete the cf-for-k8s deployment
 
 You can delete the cf-for-k8s deployment from your cluster by running the following command.
 ```
 kapp delete -a cf
 ```
 
-### Delete your Kind cluster
+## Delete your Kind cluster
 
 To delete your KinD cluster.
 ```
 kind delete cluster
 ```
 
-### Next Steps
+## Next Steps
 
 Learn more about Cloud Foundry with the links below:
 

@@ -1,6 +1,8 @@
 ---
 title: "Basics of REST"
+metaTitle: "Understanding the Basics of REST"
 subsection: "Basics of REST"
+description: Explore the basics of Representational State Transfer (REST) APIs, a software style that provides architectural constraints used for creating web services. 
 weight: 1
 topics:
 - Microservices

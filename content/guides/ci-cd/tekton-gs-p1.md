@@ -1,7 +1,9 @@
 ---
 title:  "Getting Started with Tekton Part 1: Hello World"
 linkTitle: "Getting Started with Tekton"
+metaTitle: "Getting Started with Tekton"
 parent: "Tekton"
+description: Walk through the set up and installation of Tekton, a set of open source Kubernetes resources to build and run CI/CD pipelines.
 weight: 1
 topics:
 - CI-CD

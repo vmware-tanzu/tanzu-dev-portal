@@ -1,6 +1,7 @@
 ---
 title:  "Getting Started with RabbitMQ"
 linkTitle: "RabbitMQ"
+description: Leverage RabbitMQ, an open source message broker that is lightweight and easy to deploy on premises and in the cloud.
 topics:
 - Event Streaming
 - Messaging and Integration
