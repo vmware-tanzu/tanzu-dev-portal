@@ -17,7 +17,7 @@ Repeat steps when you want to suggest new edits to the site.
 # Step by Step Instructions 
 
 ## 1. Prepare
-1. Type up the changes you want to make for the Practices site. Any word editor will do for this, Microsoft Word, Google Docs, Notes on Mac. For your first suggestion, try adding something small, such as a few sentences. This will make it easier for the suggestion to be approved and merged.
+1. Type up the changes you want to make to the `tanzu-dev-portal` pages you are updating. Any word editor will do for this, Microsoft Word, Google Docs, Notes on Mac. For your first suggestion, try adding something small, such as a few sentences. This will make it easier for the suggestion to be approved and merged.
 1. Create a Github account, if you don’t have one. Login to your Github account, if you do.
 1. If you’re doing this for the first time, set aside around 35 minutes to go through these steps.
 
