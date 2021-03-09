@@ -118,7 +118,7 @@ Repeat steps when you want to suggest new edits to the site.
 Once you’re sure your edits have been merged, you can delete your repo with these steps:
 
 1. Click on settings
-    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Delete1.png" />.   
+    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Delete1.png" />
 1. Scroll all the way down to the Danger Zone, and click Delete this repository
     <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Delete2.png" />.
 1. Follow the instructions to type the name of your repo, and enter your password. Done!
