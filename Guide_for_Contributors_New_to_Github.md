@@ -97,7 +97,7 @@ Repeat steps when you want to suggest new edits to the site.
 > ### How will I know if the changes have passed the checks, been rejected, approved or merged?
 > If there’s a change to the status of your pull request, Github will alert you via the email linked to your Github account, and add a notification to the  notifications icon of your Github account. Here's how to check from the Github site:
 > 1. Click on the notification icon.
->    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification1.png" />.   
+>    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification1.png" />
 > 1. Click on the notification with the name of the branch you submitted for pull request
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification2.png" />.   
 >
