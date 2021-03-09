@@ -9,6 +9,7 @@ const got = require("got");
 const netlifyCookieName = "nf_jwt";
 
 exports.handler = async (event, context) => {
+  console.log(event)
   // we should only get here via a reidrect from CSP, which would have
   // an authorization code in the query string. if that's not present,
   // then someone didn't follow the correct flow - bail early
