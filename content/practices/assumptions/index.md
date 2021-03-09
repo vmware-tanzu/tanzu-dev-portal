@@ -13,11 +13,18 @@ what:
 - Small sticky notes
 - Sharpies / markers
 - Painter's tape (for making a 2x2)
+- "For Remote: [Miro](https://miro.com/)"
+
 when:
 - We try to do this early in the project process in advance of any user research—often in the Kickoff itself.
 
 ---
 ## How to Use this Method
+
+   {{% callout %}}
+   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person steps to the digital world. For example. draw a digital 2x2 matrix rather than using a real whiteboard.
+   {{% /callout %}}
+
 ### Sample Agenda & Prompts
 1. Define "assumption" for the team and explain why the team is doing this workshop
    {{% callout %}}
@@ -30,28 +37,31 @@ when:
    {{% /callout %}}
 1. Ask the team to make **2 equal piles** of sticky notes: one with the most important assumptions, one with the least important
 
-1. Have each person rip up the pile of least important assumptions (how cathartic!)
+1. Have each person discard the pile of the least important assumptions. If using real sticky notes, rip them up -- how cathartic!
 
-1. Using painter's tape (or a dry erase marker), make a vertical line on the whiteboard marked **"Higher Risk"** at the top and **"Lower Risk"** at the bottom
-
-   {{% callout %}}
-   Tip: "Risk" is meant to indicate the negative impact to the project that an assumption could have if it turns out to be wrong
-   {{% /callout %}}
-1. As a group, share out and stack rank each assumption along the line, with no 2 sticky notes occupying the same vertical space
+1. Make a vertical line on the whiteboard marked **"Higher Risk"** at the top and **"Lower Risk"** at the bottom. If in person, use the painter's tape or dry erase markers. 
 
    {{% callout %}}
-   Tip: If duplicate sticky notes surface, simply stack them on top of one another or toss the extras in the trash
+   Tip: "Risk" is meant to indicate the negative impact to the project that an assumption could have if it turns out to be wrong.
    {{% /callout %}}
-1. Once that is complete, use painter's tape (or a dry erase marker) to make a horizontal line on the whiteboard, marked **"Know A Lot"** on the left and **"Know Little"** on the right
+   
+1. As a group, share out and stack rank each assumption along the line, with no 2 sticky notes occupying the same vertical space.
 
-1. Spread out each assumption horizontally along the new axis, being sure not to move anything vertically (the riskiness has already been addressed in step 6).
+   {{% callout %}}
+   Tip: If duplicate ideas surface, simply stack them on top of one another or discard the extras.
+   {{% /callout %}}
+   
+1. Once that is complete make a horizontal line on the whiteboard, marked **"Know A Lot"** on the left and **"Know Little"** on the right.
+
+1. Spread out each assumption horizontally along the new axis, being sure not to move anything vertically since the riskiness was addressed earlier.
 
 1. At the end of the exercise, you'll have a strong idea of which assumptions (top right quadrant) you'll need to take action on, and—if time allows—can outline specifically what actions to take and who will own them
 
    {{% callout %}}
    Tip: If you don’t have time to address all quadrants, that's okay; begin above the horizontal axis so that you'll be sure to address the riskiest assumptions first
    {{% /callout %}}
-1. Finally, take a picture and memorialize it in some way (e.g. add to Drive or another storage space)
+   
+1. Finally, memorialize the 2x2 in some way, such as a photo, screenshot, or saved to a shared workspace.
 
 #### Success/Expected Outcomes
 Success happens when you have a fully arranged 2x2 grid that maps out the riskiest assumptions that must be addressed with research
