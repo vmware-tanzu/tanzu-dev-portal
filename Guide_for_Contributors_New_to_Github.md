@@ -22,7 +22,7 @@ Repeat steps when you want to suggest new edits to the site.
 1. If you’re doing this for the first time, set aside around 35 minutes to go through these steps.
 
 ## 2. Fork (Create a copy of Practices site)
-1. Go to the [VMware practices repository on Github](https://github.com/vmware-tanzu/tanzu-dev-portal/tree/main/content/practices) - this is where all the code for the site sits. It is also open to the public for contribution. 
+1. Go to the [Tanzu Developer Center on GitHub](https://github.com/vmware-tanzu/tanzu-dev-portal/tree/main/) - this is where all the code for the site sits, such as Blogs, Guides, and Agile Practices. It is also open to the public for contribution. 
 1.  Click on fork to make a copy of the code to your own github account.
 
     <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork2.png" />
