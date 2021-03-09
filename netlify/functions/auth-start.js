@@ -4,7 +4,6 @@ const base64 = require("./util/base64");
 const config = require("./util/config");
 
 exports.handler = async (event, context) => {
-  console.log(event)
   var path = "";
   if (event.path === "/.netlify/functions/auth-start") {
     path = "developer/";
@@ -29,7 +28,6 @@ exports.handler = async (event, context) => {
       `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`
     ),
   };
-  console.log(c)
   return {
     statusCode: 302,
     headers: {
