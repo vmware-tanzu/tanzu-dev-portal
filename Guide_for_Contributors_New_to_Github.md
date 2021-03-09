@@ -102,7 +102,7 @@ Repeat steps when you want to suggest new edits to the site.
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification2.png" />
 >
 > 1. Check out the status under the title! (Some possible statuses are: Open, Rejected, Merged, etc)
->    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification3.png" />.   
+>    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification3.png" />
 > 
 > ### How can I make a change to the pull request if it doesn’t pass a test, or there’s a request for edits from the reviewers?
 > 1. Go to your copy of the Tanzu Practices site, making sure that you are in the right branch to make the edits.  
