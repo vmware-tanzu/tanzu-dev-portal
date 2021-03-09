@@ -1,5 +1,4 @@
 ---
-path: "/methods/molecule-map"
 title: "Molecule Map"
 tags: ["Kickoff", "Inception", "Remote"]
 length: "45 min - 1 hour"

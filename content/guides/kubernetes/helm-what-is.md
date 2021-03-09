@@ -1,6 +1,7 @@
 ---
 title:  "What Is Helm?"
 parent: "Packaging"
+description: Learn the basics of Helm, a tool to help you define, install, and upgrade applications running on Kubernetes, and explore how it works. 
 topics:
 - Kubernetes
 weight: 1
