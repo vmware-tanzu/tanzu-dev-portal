@@ -5,7 +5,6 @@ description: >
   Workshop on learning the fundamentals of using Tekton for CI/CD
 summary:
   - Workshop on learning the fundamentals of using Tekton for CI/CD
-type: workshop
 topics:
   - Kubernetes
   - CI-CD

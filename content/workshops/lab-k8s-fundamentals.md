@@ -4,7 +4,6 @@ description: >
   A quick, hands-on introduction to using Kubernetes.
 summary:
   - A quick, hands-on introduction to using Kubernetes.
-type: workshop
 topics:
   - Kubernetes
 tags:

@@ -4,7 +4,6 @@ description: >
   Build a simple microservice with Spring.
 summary:
   - Build a simple microservice with Spring.
-type: workshop
 topics:
   - Spring
   - Microservices

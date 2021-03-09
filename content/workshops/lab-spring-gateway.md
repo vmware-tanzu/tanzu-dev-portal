@@ -4,7 +4,6 @@ description: >
   This workshop walks you through getting started with the Spring Cloud Gateway.
 summary:
   - This workshop walks you through getting started with the Spring Cloud Gateway.
-type: workshop
 topics:
   - Spring
   - Microservices

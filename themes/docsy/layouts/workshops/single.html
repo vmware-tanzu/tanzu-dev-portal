@@ -1,5 +1,25 @@
 {{ define "main" }}
 
+<script type="text/javascript">
+	$(document).ready(function () {
+
+	const decodedToken = getCookie("nf_jwt")
+	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
+		document.getElementById("startinfo").innerHTML = "<em>(Login Required)</em>"
+	}
+	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
+
+	document.getElementById("startinfo").innerHTML = `<span class="fa fa-unlink"></span> All Workshops are in use. Please Try again later.`
+	document.getElementById("startbutton").href ="";
+	document.getElementById("startbutton").innerHTML = ``;
+	document.getElementById("startbutton").classList.remove('btn');
+	}
+	});
+	function LoadingButton() {
+	document.getElementById("startbutton").innerHTML = `<span id="buttonicon" class="fa fa-hourglass"> </span> Loading...`;
+	}
+
+</script>
 <div class="td-main ">
 	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
 		<div class='container'>
@@ -8,25 +28,8 @@
 			<p>{{ .Description }}</p>
 			<p>Approximate time: {{ .Params.length }} minutes</p>
 			<div class="short-gradient-line mb-4"></div>
-			<!-- {{ .Params.tags }} -->
-			{{ $workshops_url := "" }}
-			{{ if eq (getenv "HUGO_ENV") "production" }}
-				{{ $.Scratch.Set "workshops_url" .Site.Params.workshops_url_prod }} 
-			{{ else }}
-				{{ $.Scratch.Set "workshops_url" .Site.Params.workshops_url_staging }}
-			{{ end }}
-			<iframe id="auth-iframe" width="100%" height="75" style="border:none;position:relative;" scrolling="no" src='{{ $.Scratch.Get "workshops_url" }}{{ .Params.lab }}'>
-			</iframe>	
-				<script type="text/javascript">
-					var iframe = document.getElementById('auth-iframe')
-					iframe.src = iframe.src + "?url=" + window.location.href 
-					iframe.onload = function() {
-					var mode = localStorage.getItem("light-dark-mode-storage") || "dark";
-					if (mode === "light") {
-							iframe.contentWindow.postMessage('light', '*');
-					}
-					}
-				</script>
+			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" ><span id="buttonicon" class="fa fa-cog"> </span> Start Workshop</a><span class="text-muted pl-2 fs-90" id="startinfo"></span>
+
 		</div>
 	</div>
 

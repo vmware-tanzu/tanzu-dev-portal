@@ -4,7 +4,6 @@ description: >
   Add liveness and readiness probes to a Spring Boot application in Kubernetes.
 summary:
   - Add liveness and readiness probes to a Spring Boot application in Kubernetes.
-type: workshop
 topics:
   - Spring
   - Microservices
