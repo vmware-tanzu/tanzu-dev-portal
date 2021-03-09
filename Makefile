@@ -35,7 +35,11 @@ spell: npm
 
 #function-config: @ sets the function config variables during build
 function-config:
+ifeq ($(CONTEXT), production)
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+else
 	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+endif
 
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
