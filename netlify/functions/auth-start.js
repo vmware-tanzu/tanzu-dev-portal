@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: getSiteURL().replace("https://", ""),
+    domain: event.headers.host,
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
