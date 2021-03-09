@@ -89,7 +89,7 @@ Repeat steps when you want to suggest new edits to the site.
 1. If you want to, you can keep the screen running until all the tests have passed, just to have a peace of mind. In the list of checks, some people can see a row below WIP called netlify. If you see it, you can click on the netlify row after all the checks have completed to preview how it will look on the site.
 1. Otherwise, feel free to close GitHub and continue with your life. The checks will continue running even if you leave the page. Once the change passes through all the checks, it will land on the reviewers’s plate, and all you have to do is wait for it to be reviewed, approved and merged. 
 
-1. You’ve successfully suggested a change to the practices site! 
+1. You’ve successfully suggested a change to the Tanzu Developer Center! 
 
 
 > ## Short FAQ
