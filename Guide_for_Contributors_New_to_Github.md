@@ -110,7 +110,7 @@ Repeat steps when you want to suggest new edits to the site.
 > 1. Click on the 'Content' folder, 'Practices' folder, the folder of the practice you edited, and then index.md. Click on the pencil icon to edit it.    
 > 1. When saving the edits, under Commit Changes, fill in the title and description for the change.    
 > 1. This time, commit directly to the branch. Do NOT create a new branch. This updates your pull request with your latest edits.     
->    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/MkChanges2.png" />.   
+>    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/MkChanges2.png" />
 > That’s it!
 
 ## 5. Delete (delete repo)
