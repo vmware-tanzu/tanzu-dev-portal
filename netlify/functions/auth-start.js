@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: event.headers.host,
+    domain: "tanzu.vmware.com",
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
