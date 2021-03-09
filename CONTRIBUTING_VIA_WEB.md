@@ -39,32 +39,32 @@ through these steps.
 
 1. Click on Fork to make a copy of the code to your own GitHub account.
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork2.png)
+   ![GitHub Fork Button](contributing-images/Fork2.png)
 
 1. Check the title of the repository to make sure that you are editing on your
    own copy of the code. It should show your GitHub account
    name/tanzu-dev-portal, as you can see below:
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork3.png)
+   ![GitHub Fork Button](contributing-images/Fork3.png)
 
 1. Find the file you wish to edit. Click on content
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork4.png)
+   ![GitHub Fork Button](contributing-images/Fork4.png)
 
 1. Click on practices. You’ll see a list of all the practices currently on the site.
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork5.png)
+   ![GitHub Fork Button](contributing-images/Fork5.png)
 
 1. Click on the practice you want to add to. For this example, I clicked on design-studio.
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork6.png)
+   ![GitHub Fork Button](contributing-images/Fork6.png)
 
 1. Click on `index.md`. This shows you what the page looks like in plain text.
 
 1. Click on the pencil edit icon. This shows you what the page looks like in
    markdown language. Don’t worry, markdown is a simplified HTML/CSS script.
 
-   ![GitHub Fork Button](static/images/guides/guide-for-contributors-new-to-github/Fork8.png)
+   ![GitHub Fork Button](contributing-images/Fork8.png)
 
 ## 3. Edit (Make Edits and save as branch)
 
@@ -73,7 +73,7 @@ through these steps.
    helpful for learning the basic syntax for formatting. Also note that some of
    the pages use a special syntax for things like tips or callouts.
 
-   ![Edit Button](static/images/guides/guide-for-contributors-new-to-github/Edit1.png)
+   ![Edit Button](contributing-images/Edit1.png)
 
    For example, I added a tip in the example above.
 
@@ -105,33 +105,33 @@ through these steps.
 
 1. Create a name for the new branch that explains **what it is**
 
-   ![New Branch](static/images/guides/guide-for-contributors-new-to-github/Edit2.png)
+   ![New Branch](contributing-images/Edit2.png)
 
 1. Click Propose Changes.
 
 1. Click on the Pull Requests tab. Do NOT click the green ‘Create Pull Request’
    button that appears at the bottom of the next screen.
 
-   ![Pull Requests](static/images/guides/guide-for-contributors-new-to-github/Edit7.png)
+   ![Pull Requests](contributing-images/Edit7.png)
 
 ## 4. Submit a Pull Request (Submit edits for review)
 
 1. Click ‘New Pull Request’.
 
-   ![New Pull Request](static/images/guides/guide-for-contributors-new-to-github/PR1.png)
+   ![New Pull Request](contributing-images/PR1.png)
 
 1. Make sure that your base repository is `vmware-tanzu/tanzu-dev-portal`, and
    the head repository is your account.
 
 1. Change the dropdown for your “compare: main” to the name of the branch you have created.
 
-   ![New Pull Request](static/images/guides/guide-for-contributors-new-to-github/PR2.png)
+   ![New Pull Request](contributing-images/PR2.png)
 
 1. Scroll down to check that text highlighted in green is the change you want to make.
 
 1. Click Create Pull Request
 
-   ![New Pull Request](static/images/guides/guide-for-contributors-new-to-github/PR5.png)
+   ![New Pull Request](contributing-images/PR5.png)
 
 1. Click Create Pull Request again. _Tip:_ it's helpful to include the text
    `WIP` (for "Work in Progress") in the title of your pull request. This
@@ -139,11 +139,11 @@ through these steps.
    for review. When you have completed the process and are happy with your
    changes you can edit the title to remove this keyword.
 
-   ![New Pull Request](static/images/guides/guide-for-contributors-new-to-github/PR6.png)
+   ![New Pull Request](contributing-images/PR6.png)
 
 1. If you scroll down, you can see that the edits are going through some automated checks.
 
-   ![Automated Checks](static/images/guides/guide-for-contributors-new-to-github/PR7.png)
+   ![Automated Checks](contributing-images/PR7.png)
 
 1. If you want to, you can keep the screen running until all the tests have
    passed, just to have a peace of mind. In the list of checks, some people can
@@ -169,21 +169,21 @@ site:
 
 1. Click on the notification icon.
 
-   ![Notification Icon](static/images/guides/guide-for-contributors-new-to-github/Notification1.png)
+   ![Notification Icon](contributing-images/Notification1.png)
 
 1. Click on the notification with the name of the branch you submitted for pull request
 
-   ![Notification Icon](static/images/guides/guide-for-contributors-new-to-github/Notification2.png)
+   ![Notification Icon](contributing-images/Notification2.png)
 
 1. Check out the status under the title! (Some possible statuses are: Open, Rejected, Merged, etc)
 
-   ![Notification Icon](static/images/guides/guide-for-contributors-new-to-github/Notification3.png)
+   ![Notification Icon](contributing-images/Notification3.png)
 
 ### How can I make a change to the pull request?
 
 1. Go to your copy of the Tanzu Developer Center, making sure that you are in the right branch to make the edits.
 
-   ![Making Changes](static/images/guides/guide-for-contributors-new-to-github/MkChanges1.png)
+   ![Making Changes](contributing-images/MkChanges1.png)
 
 1. Navigate to file you would like to update. For example, for a specific agile
    practice, click on the 'Content' folder, 'Practices' folder, the folder of
@@ -196,7 +196,7 @@ site:
 1. This time, commit directly to the branch. Do NOT create a new branch. This
    updates your pull request with your latest edits.
 
-   ![Making Changes](static/images/guides/guide-for-contributors-new-to-github/MkChanges2.png)
+   ![Making Changes](contributing-images/MkChanges2.png)
 
    That’s it!
 
@@ -206,10 +206,10 @@ Once you’re sure your edits have been merged, you can delete your repo with th
 
 1. Click on settings
 
-   ![Settings](static/images/guides/guide-for-contributors-new-to-github/Delete1.png)
+   ![Settings](contributing-images/Delete1.png)
 
 1. Scroll all the way down to the Danger Zone, and click Delete this repository
 
-   ![Delete](static/images/guides/guide-for-contributors-new-to-github/Delete2.png)
+   ![Delete](contributing-images/Delete2.png)
 
 1. Follow the instructions to type the name of your repo, and enter your password. Done!
