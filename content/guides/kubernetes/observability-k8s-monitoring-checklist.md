@@ -45,6 +45,7 @@ point for their monitoring implementation.
 
 - _Threshold:_ 3 minutes
 - _Severity:_ Warning
+- _Metrics:_ `up`
 - _Notes:_ A single member failure does not have a direct impact on the
   Kubernetes cluster. However, it increases the risk of experiencing etcd quorum
   loss if additional members fail.  
@@ -53,6 +54,7 @@ point for their monitoring implementation.
 
 - _Threshold:_ 3 minutes
 - _Severity:_ Critical
+- _Metrics:_ `up`
 - _Notes:_ When the majority of members are down, the cluster loses quorum and
   cannot accept writes. Existing workloads on the Kubernetes cluster continue to
   function, but any operations that require writing to etcd are not possible.
@@ -140,6 +142,7 @@ managers fail.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
+- _Metrics:_ `up`
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the Controller Manager is running as a pod)
@@ -157,6 +160,7 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
+- _Metrics:_ `up`
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the scheduler is running as a pod)
@@ -167,6 +171,7 @@ the risk of losing scheduling functionality if additional schedulers fail.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
+- _Metrics:_ `up`
 - _Notes:_ If the kubelet is down, it is deemed not ready. Nodes that are not
   ready cannot accept pods. The platform evicts Pods running on a not-ready Node
   if the Node remains in that condition for longer than the pod eviction
@@ -231,6 +236,7 @@ communicate with other pods using Service IPs.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
+- _Metrics:_ `up`
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   kube-proxy is running as a pod)
@@ -319,7 +325,7 @@ proper functioning of the Service resource in Kubernetes.
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-- _Metrics:_
+- _Metrics:_ `up`
 - _Notes:_ When CoreDNS is down, applications are unable to use DNS for service
   discovery.
 
