@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to the Tanzu Develoepr Center!
+Thanks for your interest in contributing to the Tanzu Developer Center!
 
 You may contribute content by creating a branch (or fork) and submitting a pull
 request. Content should be written in Markdown with metadata included in the
