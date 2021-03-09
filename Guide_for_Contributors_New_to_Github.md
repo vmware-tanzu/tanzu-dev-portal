@@ -105,7 +105,7 @@ Repeat steps when you want to suggest new edits to the site.
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification3.png" />
 > 
 > ### How can I make a change to the pull request if it doesn’t pass a test, or there’s a request for edits from the reviewers?
-> 1. Go to your copy of the Tanzu Practices site, making sure that you are in the right branch to make the edits.  
+> 1. Go to your copy of the Tanzu Developer Center, making sure that you are in the right branch to make the edits.  
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/MkChanges1.png" />
 > 1. Navigate to file you would like to update. For example, for a specific agile practice, click on the 'Content' folder, 'Practices' folder, the folder of the practice you edited, and then `index.md`. Click on the pencil icon to edit it.    
 > 1. When saving the edits, under Commit Changes, fill in the title and description for the change.    
