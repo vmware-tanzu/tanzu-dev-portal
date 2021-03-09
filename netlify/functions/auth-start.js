@@ -16,15 +16,22 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: config.deployPrimeURL.replace("https://", ""),
+    domain: getSiteURL().replace("https://", ""),
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
+  const redirectUri =
+    config.context == "production"
+      ? "https://tanzu.vmware.com/developer/auth-callback"
+      : `${config.deployPrimeURL}/.netlify/functions/auth-callback`;
+  
   const params = {
     response_type: "code",
     client_id: getClientId(),
-    redirect_uri: `${config.deployPrimeURL}/.netlify/functions/auth-callback`,
-    state: base64.urlEncode(`csrf=${csrf}&path=${path}&referer=${event.headers.referer}`),
+    redirect_uri: redirectUri,
+    state: base64.urlEncode(
+      `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`
+    ),
   };
   return {
     statusCode: 302,

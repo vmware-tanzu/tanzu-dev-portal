@@ -40,7 +40,13 @@
   to = "/.netlify/functions/auth-start/:splat"
   force = true
   status = 200
-  
+
+[[redirects]]
+  from = "/developer/auth-callback/*"
+  to = "/.netlify/functions/auth-callback/:splat"
+  force = true
+  status = 200
+
 [[redirects]]
   from = "/developer/workshop-live/*"
   to = "/developer/404.html"
