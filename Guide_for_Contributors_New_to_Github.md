@@ -1,5 +1,5 @@
 
-Hi there! This guide aims to teach people unfamiliar with Github how to suggest edits to the [Tanzu Agile Practices site](https://tanzu.vmware.com/developer/practices/). Follow the steps below to get started!
+Hi there! This guide aims to teach people unfamiliar with GitHub or the Git command line how to suggest edits and submit Pull Requests using only the GitHub Web UI. We will use the [Tanzu Agile Practices section](https://tanzu.vmware.com/developer/practices/) for our examples. Follow the steps below to get started!
 
 
 # Workflow overview
