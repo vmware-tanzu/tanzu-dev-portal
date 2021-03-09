@@ -65,7 +65,7 @@ Repeat steps when you want to suggest new edits to the site.
 1. Fill up the extended description with the reason **why** the update was needed, or the context around the update. This will be read by the reviewers - help them understand why they should approve this edit!
 1. Select ‘Create a new branch for this commit’
 1. Create a name for the new branch that explains **what it is** 
-    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Edit2.png" />. 
+    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Edit2.png" />
 1. Click Propose Changes. 
 1. Click on the Pull Requests tab. Do NOT click the green ‘Create Pull Request’ button that appears at the bottom of the next screen.
 
