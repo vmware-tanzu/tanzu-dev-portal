@@ -61,7 +61,7 @@ Repeat steps when you want to suggest new edits to the site.
     Unfortunately, at this point in time, it is not possible to preview what it will look like on the actual website, but you can click on the Preview Changes tab to see if the edits show up in the right places. 
 
 
-1. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update index.md’, but delete that and give it a short summary of **what you did** in less that 50 words. Refer to the image below for an example.
+1. Scroll down to the Commit Changes section, and fill in the title. It defaults to ‘Update <the file you changed>’, but delete that and give it a short summary of **what you did** in less that 50 words. Refer to the image below for an example.
 1. Fill up the extended description with the reason **why** the update was needed, or the context around the update. This will be read by the reviewers - help them understand why they should approve this edit!
 1. Select ‘Create a new branch for this commit’
 1. Create a name for the new branch that explains **what it is** 
