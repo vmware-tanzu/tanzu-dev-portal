@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with Spring Cloud Gateway"
 parent: "Spring Cloud Gateway"
+description: Explore this Spring Cloud Gateway guide to look at the code that goes around defining a gateway and running a gateway with a Spring Boot application.
 topics:
 - Spring
 - Microservices

@@ -1,5 +1,4 @@
 ---
-path: "/methods/problem-prioritization"
 title: "Problem Prioritization"
 tags: ["Discovery", "Remote"]
 length: "60-120 mins"

@@ -1,5 +1,4 @@
 ---
-path: "/methods/insight-prioritization"
 title: "Insight Prioritization"
 tags: ["Discovery", "Remote"]
 length: "1 - 2 hours"

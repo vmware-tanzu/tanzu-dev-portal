@@ -1,7 +1,9 @@
 ---
-title:  "Cloud Native Buildpacks: Getting Started with the `pack` CLI"
+title: "Getting Started with the `pack` CLI using Cloud Native Buildpacks"
 linkTitle: "Getting Started with `pack`"
 parent: "Cloud Native Buildpacks"
+metaTitle: "Getting Started with the `pack` CLI"
+description: Discover how to use pack, a CLI tool that builds container images locally on your developer machine using Cloud Native Buildpacks
 weight: 2
 topics:
 - Containers

@@ -1,8 +1,5 @@
 ---
-path: "/practices/event-storming"
 title: "Event Storming"
-topics:
-- Agile
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1 - 2 hours; multiple runs may be needed"
 participants: "Business stakeholders, business analysts, executives, developers, architects, team leads, domain experts, core team"
@@ -104,6 +101,8 @@ You know you’ve finished when you have:
 **There is no ONE correct style of Event Storming.** Every session is different from another based on the desired goals and outcomes. So don’t worry about getting it right- just do it and roll your own style. Multiple iterations of this activity may be needed a varying levels of abstraction to realize the outcomes needed
 
 **An Event Storming is only successful if the right people are involved.** This is a mix of business domain experts, customer executives, stakeholders, business analysts, software developers, architects, testers, and folks who support the product in production. Subject matter experts, product owners and developers that knows and understands the application domain. This process enables cross perspective conversation throughout the team as well as a standard definition of the terms used by both technical and non-technical team members.
+
+**Running a Cinderella exercise prior to Event Storming can be a great ice-breaker!** This exercise maps out the story of Cinderella. The PM will choose a start and end point and ask participants to scribe events that happened in the movie. Afterwards, storytelling will confirm everyone's recollection of the movie. This exercise provides the team with a safe environment to learn about Event Storming without getting into the actual exercise.
 
 ## Related Practices
 

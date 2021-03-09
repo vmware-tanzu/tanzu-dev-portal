@@ -1,5 +1,4 @@
 ---
-path: "/methods/journey-map"
 title: "Journey Map"
 tags: ["Discovery", "Framing"]
 length: "1 hour"

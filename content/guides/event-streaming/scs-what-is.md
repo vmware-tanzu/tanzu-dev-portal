@@ -2,6 +2,7 @@
 title: "What is Spring Cloud Stream?"
 linkTitle: "Spring Cloud Stream"
 subsection: "Spring Cloud Stream"
+description: Discover how to use Spring Cloud Stream, a framework for building highly scalable, event-driven microservices connected with shared messaging systems.
 topics:
 - Spring
 - Microservices
@@ -14,10 +15,10 @@ team:
 - Brian McClain
 ---
 
-
 Spring Cloud Stream is a framework for building highly scalable, event-driven microservices connected with shared messaging systems. Spring Cloud Stream provides components that abstract the communication with many message brokers away from the code.
 
 ## Why Is It Important?
+
 The components that abstract away the communication with message brokers, referred to as “binders,” allow developers to focus on code that emits and consumes messages without having to write code for a specific broker. Because of this, that also means migrating from one message broker to another can be as simple as the dependencies of your code.
 
 Since Spring Cloud Stream is a part of the Spring framework, you can easily test your code as well. Spring provides methods for running tests without the need to specifically connect to a message broker, which allows it to fit in nicely with your current CI process.

@@ -24,7 +24,7 @@ when:
 
 what:
 - Whiteboard
-- Post-it notes
+- Sticky notes
 - Sharpies
 - Painter’s tape
 - "For Remote: [Miro](https://miro.com/)"

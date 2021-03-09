@@ -1,5 +1,4 @@
 ---
-path: "/methods/swift-method"
 title: "Swift Method"
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "2 - 4 days if done end-to-end"
@@ -14,11 +13,11 @@ when:
 - Jumpstart application modernization initiatives in an iterative fashion. This is the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization), which can be a short consulting engagement that quickly reviews current business functionality and plans “to be” architecture. Our experts practice the Swift method to discover architecture, boundaries, points of risk or concern, and then map a direction to move from current state to future state. 
 
 what: 
-- Post-It arrow flags
+- Sticky arrow flags
 - Whiteboard tape - black, green, red; 2 rolls of each
 - Scissors
 - Scotch tape
-- Post-it Dry Erase Surface (3 ft x 2 ft)
+- Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
 
 ---
