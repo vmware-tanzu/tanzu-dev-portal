@@ -4,6 +4,7 @@ const querystring = require("querystring");
 const { makeAuth, getClientId, getSiteURL} = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
+const got = require("got");
 
 const netlifyCookieName = "nf_jwt";
 
@@ -112,12 +113,13 @@ exports.handler = async (event, context) => {
 
 async function tokenIsValid(tokenStr) {
   try {
-    console.log(tokenStr)
-    const publicKey =  "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiU0lm33VdB0vLrbSS3jIu4IyXyxqcbvH\niNexGuUA6Xgltp2YIaqU8MDyD+a2YGOlYBegeqb1Hm5G9xId3ewIG4+lM5TTq1PAHL1dnIDyOJb8\nBdhPCt6kYCvHcSVjFCVXb8jW+VDwHppxEVqQYWwc49qWi9ksoBiLn0zboogLrZ1+d89zFxEjuYsM\nunI/OBiAWcp2eEOVNbQeXcjolPcyYV3GR8+OCOQ0Rd02SesiPWxMF73fIdLTiVAqHZIc0KzBaiSB\n/LzB3nqDx2zHKMVmdoFkcAKX9bQBoovjd/WwbGfUXQ1Hciq5DK9Lg9d6fJSBwz129rUqfHWXTxXk\n7aM6hwIDAQAB\n-----END PUBLIC KEY-----"
-    jwt.verify(tokenStr, publicKey, { algorithms: ["RS256"] });
+    const req = await got.get("https://auth.esp.vmware.com/api/auth/v1/tokens/public-key")
+    const key = JSON.parse(req.body)
+    const convertKey = key.key.replace(/RSA /gi,"",)
+    jwt.verify(tokenStr, convertKey, { algorithms: [key.alg] });
     return true;
   } catch (err) {
-    console.error("Error validating CSP token", err);
+    console.error("Error validating ESP token", err);
     return false;
   }
 }
