@@ -42,7 +42,7 @@ Repeat steps when you want to suggest new edits to the site.
 
 1. Click on the pencil edit icon. This shows you what the page looks like in markdown language. Don’t worry, markdown is a simplified HTML/CSS script.   
 
-    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />. 
+    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Fork8.png" />
 
 ## 3. Edit (Make Edits and save as branch)
 
