@@ -112,6 +112,7 @@ exports.handler = async (event, context) => {
 
 async function tokenIsValid(tokenStr) {
   try {
+    console.log(tokenStr)
     const publicKey =  "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiU0lm33VdB0vLrbSS3jIu4IyXyxqcbvH\niNexGuUA6Xgltp2YIaqU8MDyD+a2YGOlYBegeqb1Hm5G9xId3ewIG4+lM5TTq1PAHL1dnIDyOJb8\nBdhPCt6kYCvHcSVjFCVXb8jW+VDwHppxEVqQYWwc49qWi9ksoBiLn0zboogLrZ1+d89zFxEjuYsM\nunI/OBiAWcp2eEOVNbQeXcjolPcyYV3GR8+OCOQ0Rd02SesiPWxMF73fIdLTiVAqHZIc0KzBaiSB\n/LzB3nqDx2zHKMVmdoFkcAKX9bQBoovjd/WwbGfUXQ1Hciq5DK9Lg9d6fJSBwz129rUqfHWXTxXk\n7aM6hwIDAQAB\n-----END PUBLIC KEY-----"
     jwt.verify(tokenStr, publicKey, { algorithms: ["RS256"] });
     return true;
