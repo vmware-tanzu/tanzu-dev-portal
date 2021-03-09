@@ -1,7 +1,7 @@
 const cookie = require("cookie");
 const jwt = require("jsonwebtoken");
 const querystring = require("querystring");
-const { makeAuth, getClientId, getSiteURL} = require("./util/auth");
+const { makeAuth, getClientId, getSiteURL, getRedirectURI} = require("./util/auth");
 const base64 = require("./util/base64");
 const { parse } = require("querystring");
 const got = require("got");
@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     const oauth = makeAuth(getClientId());
     const tokenResponse = await oauth.getToken({
       code: code,
-      redirect_uri: `${getSiteURL()}/.netlify/functions/auth-callback`,
+      redirect_uri: getRedirectURI(),
     });
 
     const { token } = tokenResponse;

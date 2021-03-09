@@ -47,7 +47,13 @@ function getClientId() {
 function getSiteURL() {
   return config.context != "production"
     ? config.deployPrimeURL
-    : "https://tanzu.vmware.com/";
+    : "https://tanzu.vmware.com";
+}
+
+function getRedirectURI(){
+  return config.context == "production"
+    ? "https://tanzu.vmware.com/developer/auth-callback"
+    : `${config.deployPrimeURL}/.netlify/functions/auth-callback`;
 }
 
 module.exports = {
@@ -55,4 +61,5 @@ module.exports = {
   getDiscoveryUrl: getDiscoveryUrl,
   getClientId: getClientId,
   getSiteURL: getSiteURL,
+  getRedirectURI: getRedirectURI
 };

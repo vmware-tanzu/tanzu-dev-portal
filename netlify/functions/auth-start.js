@@ -1,5 +1,5 @@
 const cookie = require("cookie");
-const { getDiscoveryUrl, getClientId, getSiteURL } = require("./util/auth");
+const { getDiscoveryUrl, getClientId, getSiteURL, getRedirectURI } = require("./util/auth");
 const base64 = require("./util/base64");
 const config = require("./util/config");
 
@@ -17,19 +17,14 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: "tanzu.vmware.com",
+    domain: getSiteURL().replace("https://",""),
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
-  const redirectUri =
-    config.context == "production"
-      ? "https://tanzu.vmware.com/developer/auth-callback"
-      : `${config.deployPrimeURL}/.netlify/functions/auth-callback`;
-  
   const params = {
     response_type: "code",
     client_id: getClientId(),
-    redirect_uri: redirectUri,
+    redirect_uri: getRedirectURI(),
     state: base64.urlEncode(
       `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`
     ),
