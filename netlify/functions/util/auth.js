@@ -47,7 +47,7 @@ function getClientId() {
 function getSiteURL() {
   return config.context != "production"
     ? config.deployPrimeURL
-    : "https://tanzu.vmware.com/developer";
+    : "https://tanzu.vmware.com/";
 }
 
 module.exports = {

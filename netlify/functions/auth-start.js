@@ -1,6 +1,7 @@
 const cookie = require("cookie");
 const { getDiscoveryUrl, getClientId, getSiteURL } = require("./util/auth");
 const base64 = require("./util/base64");
+const config = require("./util/config");
 
 exports.handler = async (event, context) => {
   var path = "";
@@ -15,14 +16,14 @@ exports.handler = async (event, context) => {
     secure: true,
     httpOnly: true,
     path: "/",
-    domain: getSiteURL().replace("https://", ""),
+    domain: config.deployPrimeURL.replace("https://", ""),
     maxAge: 600,
   });
   // redirect the user to the CSP discovery endpoint for authentication
   const params = {
     response_type: "code",
     client_id: getClientId(),
-    redirect_uri: `${getSiteURL()}/.netlify/functions/auth-callback`,
+    redirect_uri: `${config.deployPrimeURL}/.netlify/functions/auth-callback`,
     state: base64.urlEncode(`csrf=${csrf}&path=${path}&referer=${event.headers.referer}`),
   };
   return {
