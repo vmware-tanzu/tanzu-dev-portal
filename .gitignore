@@ -11,5 +11,8 @@
 .vscode/
 .idea
 
+# Generated audit scripts
+scripts/audit/*.csv
+
 # function config
 /netlify/functions/util/config.js
