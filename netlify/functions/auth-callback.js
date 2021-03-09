@@ -103,7 +103,7 @@ exports.handler = async (event, context) => {
       body: redirectBody,
     };
   } catch (err) {
-    console.error(err.message);
+    console.error(err);
     return {
       statusCode: err.statusCode || 500,
       body: JSON.stringify({ error: err.message }),
