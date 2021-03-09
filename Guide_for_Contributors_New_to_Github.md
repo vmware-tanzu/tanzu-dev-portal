@@ -99,7 +99,7 @@ Repeat steps when you want to suggest new edits to the site.
 > 1. Click on the notification icon.
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification1.png" />
 > 1. Click on the notification with the name of the branch you submitted for pull request
->    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification2.png" />.   
+>    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification2.png" />
 >
 > 1. Check out the status under the title! (Some possible statuses are: Open, Rejected, Merged, etc)
 >    <img style="float: left;" src="https://github.com/Weimankow/tanzu-dev-portal/blob/Guide-for-Contributors-New-to-Github/static/images/guides/guide-for-contributors-new-to-github/Notification3.png" />.   
