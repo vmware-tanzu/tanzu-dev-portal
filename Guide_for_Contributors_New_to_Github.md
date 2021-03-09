@@ -10,7 +10,7 @@ It takes many clicks to suggest an edit, but these are the 5 big stages you have
 1. **Fork**: Forking just means creating a copy of the practices site code in your GitHub account
 1. **Edit**: Copy and paste suggested edits into the code in your copy of the site through the GitHub UI and save it in a branch.
 1. **Submit a Pull Request**: Submitting a Pull Request is the technical term for submitting the suggested edits to be reviewed, approved by someone else and updated on the site. It is so named because the reviewer will be 'pulling' your code into the VMware repository to merge it. 
-1. **Delete**: When the change is approved, delete your copy of the practices site.
+1. **Delete**: When the change is approved, delete your copy of the `tanzu-dev-portal`.
 
 Repeat steps when you want to suggest new edits to the site.
 
