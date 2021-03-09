@@ -94,7 +94,7 @@ point for their monitoring implementation.
 ### API Server Down
 
 - _Threshold:_ 15 minutes
-- _Severity:_ Critical
+- _Severity:_ Warning
 - _Metrics:_ `kube_pod_status_phase` (via
   [kube-state-metrics](#kube-state-metrics)) (when the API server is running as
   a pod)
@@ -127,43 +127,42 @@ point for their monitoring implementation.
 - _Threshold:_ Expiration within 24 hours
 - _Severity:_ Critical
 - _Metrics:_ `apiserver_client_certificate_expiration_seconds_count`
+- _Notes:_ A client certificate expiration will result in the affected client/s
+  getting an authorization failure and will be unable to carry out their
+  function.
 
 ## Kubernetes Controller Manager
 
 Monitoring the Controller Manager is critical to ensure the cluster can
 reconcile the current state of the cluster with the users' desired state.
 
-If the cluster has multiple control plane nodes, the loss of a single controller
-manager does not have an immediate impact on the cluster's operations. However,
-it increases the risk of losing reconciliation loops if additional controller
-managers fail.
-
 ### Controller Manager Down
 
 - _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `up`
+- _Severity:_ Warning
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the Controller Manager is running as a pod)
+- _Notes:_ If the cluster has multiple control plane nodes, the loss of a single controller
+  manager does not have an immediate impact on the cluster's operations. However,
+  it increases the risk of losing reconciliation loops if additional controller
+  managers fail.
 
 ## Kubernetes Scheduler
 
 Monitoring the scheduler is critical to ensure the cluster can place new
 workloads and move existing workloads to other nodes.
 
-If the cluster has multiple control plane nodes, the loss of a single scheduler
-does not have an immediate impact on cluster's operations. However, it increases
-the risk of losing scheduling functionality if additional schedulers fail.
-
 ### Scheduler Down
 
 - _Threshold:_ 15 minutes
-- _Severity:_ Critical
-- _Metrics:_ `up`
+- _Severity:_ Warning
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the scheduler is running as a pod)
+- _Notes:_  If the cluster has multiple control plane nodes, the loss of a single scheduler
+  does not have an immediate impact on cluster's operations. However, it increases
+  the risk of losing scheduling functionality if additional schedulers fail.
 
 ## Node
 
@@ -228,18 +227,17 @@ the risk of losing scheduling functionality if additional schedulers fail.
 Monitoring kube-proxy is critical to ensure workloads can access Pods and
 Services running on other nodes.
 
-When kube-proxy is unavailable, Services are not reflected on a node's IPtables
-or IPVS configuration. Thus, applications running on the affected node cannot
-communicate with other pods using Service IPs.
-
 ### kube-proxy Down
 
 - _Threshold:_ 15 minutes
 - _Severity:_ Critical
-- _Metrics:_ `up`
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   kube-proxy is running as a pod)
+- _Notes:_ When kube-proxy is unavailable, Services are not reflected on a node's IPtables
+  or IPVS configuration. Thus, applications running on the affected node cannot
+  communicate with other pods using Service IPs.
+
 
 ## kube-state-metrics
 
