@@ -821,6 +821,7 @@ per-namespace
 Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
+PetClinic
 Petstore
 php-apache
 Pichler
