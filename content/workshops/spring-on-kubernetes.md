@@ -17,7 +17,6 @@ tags:
 length: 120
 hidden: true
 lab: spring-on-kubernetes
-logo: "/images/workshops/logo-spring-boot.svg"
 ---
 
 During this workshop you will learn the finer details of how to create, build, run, and debug a basic Spring Boot app on
