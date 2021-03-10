@@ -26,18 +26,18 @@ what:
 
 ---
 ## How to Use this Method
-   {{% callout %}}
-   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
-   
-   **[More remote tips below in the Variations section](#variations).**
-   {{% /callout %}}
-
 ### Sample Agenda & Prompts
 1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. 
 
    ***What are the biggest pain points?***
 
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections, or make similar sections on your digital collaboration tool. The goal is to create lots of small ideas instead of detailed solutions.
+
+   {{% callout %}}
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
+   
+   **[More remote tips below in the Variations section](#variations).**
+   {{% /callout %}}
 
    {{% callout %}}
    Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
@@ -98,7 +98,7 @@ The top ideas that came out of the design studio will be carried forward and syn
 
 ### Variations
 
-#### Remote Design Studio
+#### For Remote Teams
 You can still host a Design Studio even if the team is remote. 
 
 While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
@@ -107,10 +107,9 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 - Next, have them take a photo on their phone and upload the photo to the collaboration space.
    
-   Alternatively, send the photos to the facilitators via chat app, email, or even text message. People can even hold up their drawings to their camera and the facilitator can take a screenshot, then add the image to the collaboration space.
+   Alternatively, send the photos to the facilitators via chat app, email, or even text message. People can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 
 - For all other steps, such as dot-voting, use the digital whiteboard with the drawing photos.
-
 
 ### Preceding
 - [Personas](/practices/personas)

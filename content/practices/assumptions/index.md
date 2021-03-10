@@ -20,7 +20,7 @@ when:
 ## How to Use this Method
 
    {{% callout %}}
-   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. For example: draw a digital 2x2 matrix rather than using a real whiteboard.    
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. For example: draw a digital 2x2 matrix rather than using a real whiteboard.    
    {{% /callout %}}
 
 ### Sample Agenda & Prompts

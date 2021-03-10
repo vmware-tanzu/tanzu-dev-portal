@@ -7,7 +7,6 @@ image: "default-cover.png"
 description: "An icebreaker that shows a room that even very easy tasks can be exceedingly complex to execute without full alignment"
 lastmod: "2020-01-24"
 
-
 why:
 - Breaking the ice with a big group and using it to show something productive is often difficult. This activity helps to explicitly demonstrate the pain points around misalignment—using a simple task that everyone in the room is familiar with—and can act as an important “a-ha” moment for team members.
 
@@ -19,12 +18,20 @@ what:
 - A writing utensil for each participant
 - Tape can help if the facilitator wants to hang the drawings up on the wall
 - Timer to timebox the drawing activity (could just be the timer on a smartphone)
+- "For remote: Digital collaboration space like [Miro](https://miro.com/)"
 
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
 *Paraphrased from <a href="http://www.drawtoast.com/" target="_blank">DrawToast.com</a>. Draw Toast is part of Tom Wujec's Wicked Problem Solving™ toolkit to help you get playfully clear about what's important in your organization. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.*
-1. Hand out paper and writing utensils to all of the participants
+
+1. Hand out paper and writing utensils to all the participants
+
+   {{% callout %}}
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes.
+   
+   **[More remote tips below in the Variations section](#variations).**
+   {{% /callout %}}
 
 1. Hand out markers and paper to everyone and ask participants to **draw each step in the process of making toast**. Give them 2-3 minutes.
 
@@ -38,7 +45,7 @@ what:
 1. Now that everyone can see how even a simple prompt has led to so much differentiation between each drawing, tie this point back to the group:
 
    {{% callout %}}
-   Example: "Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."
+   Example: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
    {{% /callout %}}
 
 
@@ -48,7 +55,6 @@ You’ll know you’re successful when you see the diversity in thought that eac
 You’ll know you’re even more successful when you can use this as an analogy throughout the project to point out how complex software building really is and how critical alignment is. For example, you might remind participants *"Just like when we were drawing toast, everyone has a different idea in their mind and we need to get those ideas out so we can get some alignment."*
 
 #### Facilitator Notes & Tips
-
 Sometimes people say “Do I have to draw? I don’t know how to draw.” Generally, it’s okay to encourage that person to draw and let them know no one will pass judgement on their drawing, but if they really hold out and want to write something out that’s okay too. Generally people who choose not to draw regret not drawing when everyone else in the room has done drawings.
 
 If short on time, have everyone tape theirs up and just ask participants to take a look during a break.
@@ -56,7 +62,16 @@ If short on time, have everyone tape theirs up and just ask participants to take
 ## Related Practices
 
 ### Variations
-None at the moment
+#### For Remote Teams
+You can still facilitate this workshop even if the team is remote. 
+
+While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
+
+- Have people draw upon actual paper as described above.
+
+- Next, have them take a photo on their phone and upload the photo to the collaboration space.
+   
+   Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 
 ### Preceding
 None at the moment
