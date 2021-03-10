@@ -7,7 +7,6 @@ image: "default-cover.png"
 description: "Understand the problem from different team perspectives and generate many solution sketches using scenario as a guide"
 lastmod: "2021-03-03"
 
-
 why:
 - By encouraging cross-disciplinary roles to think deeply about a problem simultaneously, we discover many more unknowns than if a designer sketched alone. Additionally, when developers are in the process they understand where the product and/or service are going and are able to make better decisions. It can save them time later as they're developing the product we create as a team.
 
@@ -18,23 +17,33 @@ what:
 - User journey(s)
 - Persona(s)
 - Scenario (if already available)
+- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 - Painter's tape
 - Sharpies / fine-tipped markers
 - Red pens
 - Paper
 - Small sticky dots
-- Whiteboard
 
 ---
 ## How to Use this Method
-### Sample Agenda & Prompts
-1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. What are the biggest pain points?
+   {{% callout %}}
+   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
+   
+   **[More remote tips below in the Variations section](#variations).**
+   {{% /callout %}}
 
-1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections. The goal is to create lots of small ideas instead of detailed solutions.
+### Sample Agenda & Prompts
+1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. 
+
+   ***What are the biggest pain points?***
+
+1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections, or make similar sections on your digital collaboration tool. The goal is to create lots of small ideas instead of detailed solutions.
 
    {{% callout %}}
    Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
    {{% /callout %}}
+   
+   ![Design Studio Step 1](/images/practices/design-studio/ds-1.png)
 
 1. Next, set a timer for 5-10 minutes and have each person generate as many ideas as possible using the following prompt:
 
@@ -43,17 +52,30 @@ what:
    {{% callout %}}
    Tip: It’s important not to not think of the paper as a screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
    {{% /callout %}}
+   
 1. After time is up, ask each person to share their explorations (1-2 minutes per person). Encourage the team to write down questions or feedback on sticky notes and attach them to the sheet. Make sure everyone gets a turn to share.
+
+   ![Design Studio Example](/images/practices/design-studio/ds-example-1.png)
  
 1. After the share out, do a second round of idea generation. This time, instead of starting from scratch, build on the ideas you discussed and push the ideas further.
+
+   ![Design Studio Round 2](/images/practices/design-studio/ds-2.png)
  
-1. Have each person share out again (1-2 minutes per person)
+1. Have each person share out again (1-2 minutes per person).
+
+   ![Design Studio Example](/images/practices/design-studio/ds-example-4.png)
  
-1. Tape all designs to the whiteboard, spaced adequately to allow for silent review
+1. Tape or add all designs to the whiteboard, spaced adequately to allow for silent review.
  
 1. Give each participant an appropriate number of dots (e.g. if there are 8 participants, give 5 dots; fewer/more if there are fewer/more participants; the goal is to make people think critically about their votes), set the timer for 5-7 minutes, and ask them to dot the sketch **elements** (i.e. not the entire sketch) that they think could be the most successful if implemented.
+
+   ![Design Studio Dot Vote](/images/practices/design-studio/ds-3.png)
  
 1. Once complete, look for clusters of dots and discuss the largest. Ask the group to elaborate on **why** they dotted what they did and catalog the rationale behind each on the whiteboard or a piece of paper.
+
+   ![Design Studio Discussion](/images/practices/design-studio/ds-4.png)
+   
+   ![Design Studio Example](/images/practices/design-studio/ds-example-2.png)
  
 #### Success/Expected Outcomes
 Success is when you have a clear understanding of the ideas each participant has about how best to solve a particular problem. You've put those ideas onto paper, discussed them as a group, voted on the ones the team feels most likely to create user value, and captured the rationale.
@@ -76,7 +98,19 @@ The top ideas that came out of the design studio will be carried forward and syn
 
 ### Variations
 
-None at the moment
+#### Remote Design Studio
+You can still host a Design Studio even if the team is remote. 
+
+While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
+
+- Have people fold and draw upon actual paper as described above.
+
+- Next, have them take a photo on their phone and upload the photo to the collaboration space.
+   
+   Alternatively, send the photos to the facilitators via chat app, email, or even text message. People can even hold up their drawings to their camera and the facilitator can take a screenshot, then add the image to the collaboration space.
+
+- For all other steps, such as dot-voting, use the digital whiteboard with the drawing photos.
+
 
 ### Preceding
 - [Personas](/practices/personas)
@@ -87,7 +121,11 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-Coming soon.
+![Design Studio Example](/images/practices/design-studio/ds-example-3.png)
+
+![Design Studio Example](/images/practices/design-studio/ds-example-5.png)
+
+![Design Studio Example](/images/practices/design-studio/ds-example-6.png)
 
 ## Recommended Reading
 None at the moment

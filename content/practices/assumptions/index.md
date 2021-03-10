@@ -9,12 +9,10 @@ description: "Create a list of assumptions and identify which are the riskiest"
 why:  
 - We do this because if we do not identify and address our implicit assumptions, we may make uninformed decisions about the project or product's direction. The output of this exercise can be used to generate user research questions.
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 - Small sticky notes
 - Sharpies / markers
 - Painter's tape (for making a 2x2)
-- "For Remote: [Miro](https://miro.com/)"
-
 when:
 - We try to do this early in the project process in advance of any user research—often in the Kickoff itself.
 
@@ -22,19 +20,22 @@ when:
 ## How to Use this Method
 
    {{% callout %}}
-   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person steps to the digital world. For example. draw a digital 2x2 matrix rather than using a real whiteboard.
+   Remote Tip: For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. For example: draw a digital 2x2 matrix rather than using a real whiteboard.    
    {{% /callout %}}
 
 ### Sample Agenda & Prompts
 1. Define "assumption" for the team and explain why the team is doing this workshop
+
    {{% callout %}}
    _"Assumptions are things that we believe to be true BUT which are not based on facts or evidence. Capturing them now will help us determine which questions we need to answer with research."_     
    {{% /callout %}}
+
 1. Ask the team to generate assumptions for 3-5 minutes
 
    {{% callout %}}
    Tip: If the group is large (e.g. if this is during a Kickoff), err on the side of giving less time; otherwise, you'll end up with an enormous number of sticky notes that will take a long time to sift through.
    {{% /callout %}}
+
 1. Ask the team to make **2 equal piles** of sticky notes: one with the most important assumptions, one with the least important
 
 1. Have each person discard the pile of the least important assumptions. If using real sticky notes, rip them up -- how cathartic!
@@ -53,7 +54,7 @@ when:
    
 1. Once that is complete make a horizontal line on the whiteboard, marked **"Know A Lot"** on the left and **"Know Little"** on the right.
 
-1. Spread out each assumption horizontally along the new axis, being sure not to move anything vertically since the riskiness was addressed earlier.
+1. Spread out each assumption horizontally along the new axis, being sure not to move anything vertically since riskiness was addressed earlier.
 
 1. At the end of the exercise, you'll have a strong idea of which assumptions (top right quadrant) you'll need to take action on, and—if time allows—can outline specifically what actions to take and who will own them
 
