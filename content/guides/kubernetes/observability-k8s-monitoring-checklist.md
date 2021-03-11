@@ -48,7 +48,7 @@ point for their monitoring implementation.
 - _Metrics:_ `up`
 - _Notes:_ A single member failure does not have a direct impact on the
   Kubernetes cluster. However, it increases the risk of experiencing etcd quorum
-  loss if additional members fail.  
+  loss if additional members fail.
 
 ### Majority of Members Down
 
@@ -73,7 +73,7 @@ point for their monitoring implementation.
 
 ### Increased gRPC Request Failures
 
-- _Threshold:_ >5% failure rate for 5 minutes 
+- _Threshold:_ >5% failure rate for 5 minutes
 - _Severity:_ Critical
 - _Metrics:_ `grpc_server_handled_total`
 - _Notes:_ An increase in the number of gRPC request failures can impact the
@@ -127,8 +127,8 @@ point for their monitoring implementation.
 - _Threshold:_ Expiration within 24 hours
 - _Severity:_ Critical
 - _Metrics:_ `apiserver_client_certificate_expiration_seconds_count`
-- _Notes:_ A client certificate expiration will result in the affected client/s
-  getting an authorization failure and will be unable to carry out their
+- _Notes:_ A client certificate expiration will prevent cluster components from
+  authenticating with each other, rendering them unable to carry out their
   function.
 
 ## Kubernetes Controller Manager
@@ -143,10 +143,10 @@ reconcile the current state of the cluster with the users' desired state.
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the Controller Manager is running as a pod)
-- _Notes:_ If the cluster has multiple control plane nodes, the loss of a single controller
-  manager does not have an immediate impact on the cluster's operations. However,
-  it increases the risk of losing reconciliation loops if additional controller
-  managers fail.
+- _Notes:_ If the cluster has multiple control plane nodes, the loss of a single
+  controller manager does not have an immediate impact on the cluster's
+  operations. However, it increases the risk of losing reconciliation loops if
+  additional controller managers fail.
 
 ## Kubernetes Scheduler
 
@@ -160,9 +160,10 @@ workloads and move existing workloads to other nodes.
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   the scheduler is running as a pod)
-- _Notes:_  If the cluster has multiple control plane nodes, the loss of a single scheduler
-  does not have an immediate impact on cluster's operations. However, it increases
-  the risk of losing scheduling functionality if additional schedulers fail.
+- _Notes:_ If the cluster has multiple control plane nodes, the loss of a single
+  scheduler does not have an immediate impact on cluster's operations. However,
+  it increases the risk of losing scheduling functionality if additional
+  schedulers fail.
 
 ## Node
 
@@ -176,7 +177,6 @@ workloads and move existing workloads to other nodes.
   if the Node remains in that condition for longer than the pod eviction
   timeout.
 
-
 ### Node Not Ready
 
 - _Threshold:_ 15 minutes
@@ -185,7 +185,6 @@ workloads and move existing workloads to other nodes.
 - _Notes:_ Nodes that are not ready cannot accept pods. The platform evicts Pods
   running on a not-ready Node if the Node remains in that condition for longer
   than the pod eviction timeout.
-
 
 ### Node Unreachable
 
@@ -196,7 +195,6 @@ workloads and move existing workloads to other nodes.
   Pods running on an unreachable Node if the Node remains in that condition for
   longer than the pod eviction timeout.
 
-
 ### Too Many Pods
 
 - _Threshold:_ 95% pod count capacity
@@ -206,8 +204,9 @@ workloads and move existing workloads to other nodes.
 ### File System Utilization
 
 - _Severity:_ Critical
-- _Metrics:_ `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via [kube-state-metrics](#kube-state-metrics))
-  kube-state-metrics), `node_filesystem_files_free` (via [kube-state-metrics](#kube-state-metrics))
+- _Metrics:_ `node_filesystem_avail_bytes` and `node_filesystem_size_bytes` (via
+  [kube-state-metrics](#kube-state-metrics)) kube-state-metrics),
+  `node_filesystem_files_free` (via [kube-state-metrics](#kube-state-metrics))
 
 ### Persistent Volume Usage
 
@@ -234,10 +233,9 @@ Services running on other nodes.
 - _Metrics:_ `kube_pod_container_status_restarts_total` and
   `kube_pod_status_phase` (via [kube-state-metrics](#kube-state-metrics)) (when
   kube-proxy is running as a pod)
-- _Notes:_ When kube-proxy is unavailable, Services are not reflected on a node's IPtables
-  or IPVS configuration. Thus, applications running on the affected node cannot
-  communicate with other pods using Service IPs.
-
+- _Notes:_ When kube-proxy is unavailable, Services are not reflected on a
+  node's IPtables or IPVS configuration. Thus, applications running on the
+  affected node cannot communicate with other pods using Service IPs.
 
 ## kube-state-metrics
 
@@ -249,7 +247,6 @@ kube-state-metrics is not built into Kubernetes. It is an extra component that
 platform operators must deploy onto the cluster. For more information, see the
 kube-state-metrics [GitHub
 repository](https://github.com/kubernetes/kube-state-metrics).
-
 
 ### Pod Crash Looping
 
@@ -302,7 +299,6 @@ repository](https://github.com/kubernetes/kube-state-metrics).
 - _Notes:_ If kube-state-metrics is experiencing an elevated error rate in list
   operations, it will not be able to expose metrics about Kubernetes objects
   correctly.
-
 
 ### Elevated Watch Errors
 
