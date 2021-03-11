@@ -15,6 +15,7 @@ tags:
   - Spring Boot
   - Skaffold
 length: 30 
+hidden: true
 lab: lab-spring-boot-k8s-skaffold
 logo: "/images/workshops/logo-spring-boot.svg"
 ---

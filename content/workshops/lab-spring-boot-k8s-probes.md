@@ -15,6 +15,7 @@ tags:
   - Spring Boot
   - Probes
 length: 30
+hidden: true
 lab: lab-spring-boot-k8s-probes
 logo: "/images/workshops/logo-spring-boot.svg"
 ---
