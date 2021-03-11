@@ -9,8 +9,8 @@ for our examples. Follow the steps below to get started!
 It takes many clicks to suggest an edit, but these are the 5 big stages you have to go through.
 
 1. **Prepare**: Type up your suggested edits
-1. **Fork**: Forking just means creating a copy of the practices site code in your GitHub account
-1. **Edit**: Copy and paste suggested edits into the code in your copy of the site through the GitHub UI and save it in a branch.
+1. **Fork**: Forking just means creating a copy of the Tanzu Developer Center code and content (including the practices) in your GitHub account
+1. **Edit**: Copy and paste suggested edits into the files in your copy of the site through the GitHub UI and save it in a branch.
 1. **Submit a Pull Request**: Submitting a Pull Request is the technical term for submitting the suggested edits to be reviewed, approved by someone else and updated on the site. It is so named because the reviewer will be 'pulling' your code into the VMware repository to merge it.
 1. **Delete**: When the change is approved, delete your copy of the `tanzu-dev-portal`.
 
@@ -25,7 +25,8 @@ through these steps.
 
 1. Type up the changes you want to make to the `tanzu-dev-portal` pages you are
    updating. While any text editor will do, some editors include support for
-   Markdown and may offer a better experience. We encourage smaller changes,
+   [Markdown](https://guides.github.com/features/mastering-markdown/)
+   and may offer a better experience. We encourage multiple small changes
    which are easier to review and publish.
 
 1. Create a GitHub account, if you don’t have one, and login.
@@ -35,7 +36,7 @@ through these steps.
 1. Go to the
    [Tanzu Developer Center on GitHub](https://github.com/vmware-tanzu/tanzu-dev-portal/tree/main/)
    This is where all the code for the site sits, such as Blogs, Guides, and
-   Agile Practices. It is also open to the public for contribution.
+   Practices. It is also open to the public for contribution.
 
 1. Click on Fork to make a copy of the code to your own GitHub account.
 
@@ -43,11 +44,11 @@ through these steps.
 
 1. Check the title of the repository to make sure that you are editing on your
    own copy of the code. It should show your GitHub account
-   name/tanzu-dev-portal, as you can see below:
+   **name/tanzu-dev-portal**, as you can see below:
 
    ![GitHub Fork Button](contributing-images/Fork3.png)
 
-1. Find the file you wish to edit. Click on content
+1. Find the file you wish to edit. Using the "Design Studio" practice as an example, first click on content.
 
    ![GitHub Fork Button](contributing-images/Fork4.png)
 
@@ -63,14 +64,15 @@ through these steps.
 
 1. Click on the pencil edit icon. This shows you what the page looks like in
    markdown language. Don’t worry, markdown is a simplified HTML/CSS script.
+   You may find
+   [GitHub's markdown guide](https://guides.github.com/features/mastering-markdown/)
+   helpful for learning the basic syntax for formatting.
 
    ![GitHub Fork Button](contributing-images/Fork8.png)
 
 ## 3. Edit (Make Edits and save as branch)
 
-1. Paste your edits into the right section. You may find
-   [GitHub's markdown guide](https://guides.github.com/features/mastering-markdown/)
-   helpful for learning the basic syntax for formatting. Also note that some of
+1. Paste your edits into the right section. Also note that some of
    the pages use a special syntax for things like tips or callouts.
 
    ![Edit Button](contributing-images/Edit1.png)
