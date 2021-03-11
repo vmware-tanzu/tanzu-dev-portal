@@ -15,7 +15,6 @@ tags:
   - Kubernetes
   - Spring Boot
 length: 120
-hidden: true
 lab: spring-on-kubernetes
 ---
 
