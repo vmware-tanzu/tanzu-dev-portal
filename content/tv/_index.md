@@ -4,6 +4,7 @@ title: "Tanzu.TV Shows"
 linkTitle: "Tanzu.TV"
 menu:
     main:
-        identifier: tv
-        weight: 3
+        name: "Overview "
+        parent: tv
+        weight: 1
 ---
