@@ -34,6 +34,9 @@
 {{ else if eq .event "workshop started" }}
     <script>sendAmplitudeEventOnLoad('workshop session started', {'workshop name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
 
+{{ else if eq .event "practice viewed" }}
+<script>sendAmplitudeEventOnLoad('practice viewed', {'practice name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
+
 {{ else if eq .event "episode played" }}
     <script type="text/javascript">
         var tag = document.createElement('script');

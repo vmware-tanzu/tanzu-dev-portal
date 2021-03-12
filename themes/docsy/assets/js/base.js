@@ -246,7 +246,7 @@ limitations under the License.
     // Track scroll depth on guides and blogs
     var scrollDepthCurrent = -1;
     $(window).scroll(function () {
-      if ($("body.guide").length > 0 || $("div.blog").length > 0) {
+      if ($("body.guide").length > 0 || $("div.blog").length > 0 || $("div.practices").length > 0) {
         var totalScrollHeight =
           document.querySelector("body").scrollHeight - window.innerHeight;
         var percentScrolled = window.scrollY / totalScrollHeight;
