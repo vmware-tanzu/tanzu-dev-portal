@@ -118,6 +118,11 @@ archived_version = false
     weight = 1
 
   [[menu.main]]
+    identifier = "tv"
+    name = "Tanzu.TV"
+    weight = 3
+
+  [[menu.main]]
     identifier = "community"
     name = "Community"
     weight = 50

@@ -6,6 +6,10 @@ id: "springone-tour"
 image: "/images/tv/shows/springone-tour.png"
 og_image: "/images/og/TanzuTV-SpringOneTour.png"
 weight: 5
+menu:
+    main:
+        parent: "tv"
+        weight: 7
 notwitchicon: true
 # Text that appears on show index page under show name
 description: 

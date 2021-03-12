@@ -7,6 +7,10 @@ id: "talk"
 image: "/images/tv/shows/talk.png"
 og_image: "/images/og/TanzuTV-TanzuTalk.png"
 weight: 4
+menu:
+    main:
+        parent: "tv"
+        weight: 6
 # Text that appears on show index page under show name
 description: See interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
 # Text that appears highlighted in green on show index page above show name

@@ -6,5 +6,5 @@ description: From container basics to Kubernetes and Docker introductions, VMwar
 menu:
     main:
         parent: "sections"
-        weight: 2
+        weight: 3
 ---
