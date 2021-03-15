@@ -124,6 +124,7 @@ bootup
 Boris
 Bowei
 BPF
+br/
 Brandolini('s)?
 brd1
 Brindley
@@ -426,6 +427,7 @@ GRE
 Groupon
 gRPC
 Grygleski
+Grzejszxzak
 GUID(s)?
 Gunicorn
 gzip(ped)?
@@ -663,6 +665,7 @@ Macanufo
 MacBook
 machine-centric
 Maciaszek-Sharma
+Marcin
 [Mm]acOS
 Madhav
 [mM]akefile
