@@ -1,7 +1,8 @@
 ---
-title: "Python Like A Pro: Run In Production"
+title: "Python Like A Pro: How To Deploy Python Application Into Production"
 linkTitle: "Python On Cloud Foundry"
-description: "Get your Python code into production faster. No meetings, no managers, just 'push' & go!"
+metaTitle: "Running a Python Application into Production"
+description: "Get your Python application into production in seconds and explore how Cloud Foundry simplifies a developers' job from log streaming to scaling."
 topics:
 - Python
 - Containers
@@ -23,23 +24,23 @@ Getting code into production quickly and regularly is life changing for develope
 
 That's where Cloud Foundry comes in. 
 
-### What Is Cloud Foundry?
+## What Is Cloud Foundry?
 
 [Cloud Foundry][cloud-foundry] is an open-source platform that simplifies the lives of developers. Cloud Foundry's ['Application Runtime'][cfar] takes your application code --- written in Python or a number of other languages or frameworks --- and runs it on any cloud, including Azure, AWS, GCP, Kubernetes, or even vSphere VMs.
 
 A unique feature of Cloud Foundry is its smooth developer experience. Using a single command you can have your code running in a safe, secure, and stable environment in seconds. Once running, Cloud Foundry takes care of everything else including log streaming, health monitoring, scaling, networking, load-balancing, and makes everyday chores like starting and stopping applications a breeze. 
 
-### Before You Begin
+## Before You Begin
 
 There are a few things you need to do before getting started with Cloud Foundry:
 
 - Install the [Cloud Foundry CLI][cf-cli] tool on your computer. This is the tool you will use to interact with Cloud Foundry. You can check that the tool is working by issuing the command `cf help`.
 
-- Decide which Cloud Foundry you're going to use and obtain it's endpoint URL. For demonstration purposes the [Pivotal Web Services][pws] API endpoint is used in the guide below, but if you don't have a Cloud Foundry to work with, consider installing Cloud Foundry locally onto Kubernetes on your computer by following the steps in [this guide][cf-on-k8s] 
+- Decide which Cloud Foundry you're going to use and obtain it's endpoint URL. If you don't have a Cloud Foundry to work with, consider installing Cloud Foundry locally onto Kubernetes on your computer by following the steps in [this guide][cf-on-k8s] 
 
 > Note: Cloud Foundry goes by many names. There are many ['certified distributions'][certified] that offer Cloud Foundry as a commercial product. The [VMware Tanzu Application Service][tas] is one example. It is certified to meet the Cloud Foundry open-source standard and is fully compatible with the [cf CLI][cf-cli] tool.
 
-### Get The Sample Python Application
+## Get The Sample Python Application
 
 Download the sample Python application from Github and make the sample application's folder your current working directory as follows:
 
@@ -86,7 +87,7 @@ web: FLASK_APP=web.py python3 -m flask run --host=0.0.0.0 --port=$PORT
 
 Cloud Foundry's buildpack system uses these files to determine that your application is a Python application. Follow the steps below to run this application in Cloud Foundry.
 
-### Login To Cloud Foundry
+## Login To Cloud Foundry
 
 You can login to your Cloud Foundry application service using the `cf login` command as follows:
 
@@ -97,8 +98,8 @@ You can login to your Cloud Foundry application service using the `cf login` com
 The `cf` tool will then prompt you for your credentials and ask you to select an 'org' and a 'space'. For example:
 
 ```bash
-> cf login -a api.run.pivotal.io
-API endpoint: api.run.pivotal.io
+> cf login -a CF_API_ENDPOINT_URL
+API endpoint: CF_API_ENDPOINT_URL
 
 Email: <enter-your-email>
 
@@ -127,7 +128,7 @@ If at any point you need to remind yourself which API url, org, or space you are
 ```bash
 > cf target
 
-api endpoint:   https://api.run.pivotal.io
+api endpoint:   CF_API_ENDPOINT_URL
 api version:    2.151.0
 user:           <your-email>
 org:            tanzu-devrel
@@ -146,7 +147,7 @@ USAGE:
    cf login [-a API_URL] [-u USERNAME] [-p PASSWORD] [-o ORG] [-s SPACE] [--sso | --sso-passcode PASSCODE] [--origin ORIGIN]
 ```
 
-### Run Your Python Application In The 'Production' Space
+## Run Your Python Application In The 'Production' Space
 
 The `cf target` command above confirmed that the `production` space is the current target for your applications. Any space is fine, it doesn't have to be production, the process is the same. 
 
@@ -183,7 +184,7 @@ start command:   FLASK_APP=web.py python3 -m flask run --host=0.0.0.0 --port=$PO
 
 In this case, the route assigned to this application by Cloud Foundry is `python-demo-lean-quokka-sc.cfapps.io`. Your application's route will be different. You will use the route __you__ have been given to test that you can communicate with the application.
 
-### Test Your Python Application Is Running
+## Test Your Python Application Is Running
 
 To test the application is running, issue a HTTP GET request to the route Cloud Foundry gave to you when you used the `cf push` command in the previous step.
 
@@ -208,11 +209,11 @@ Hello, World!
 The test above uses the [HTTPie][httpie] tool, but you could also use `curl` or a regular web browser. It's up to you.
 
 
-### There's More
+## There's More
 
 Here's a few more commonly used `cf` commands for you. Don't forget, you can use `cf help` to get a full list of all the available commands at any time, and `cf <command> --help` will give you detailed information on each of them.
 
-#### Listing Your Applications
+### Listing Your Applications
 
 You can see a list of all the applications you have running in your current space at any time using the `cf apps` command. 
 
@@ -225,7 +226,7 @@ name          requested state   instances   memory   disk   urls
 python-demo   started           1/1         1G       1G     python-demo-lean-quokka-sc.cfapps.io
 ```
 
-#### Getting Detailed Application Status
+### Getting Detailed Application Status
 
 You can get fine-grained application status using the `cf app` command.
 
@@ -247,7 +248,7 @@ memory usage:   1024M
 0   running   2020-07-28T15:32:55Z   0.5%   30.8M of 1G   214.6M of 1G
 ```
 
-#### Tailing An Applications Log
+### Tailing An Applications Log
 
 You can view the log stream for your application in realtime with the `cf logs` command.
 
@@ -260,7 +261,7 @@ Retrieving logs for app python-demo in org tanzu-devrel / space production as <y
 
 You can get recent logs (rather than a tail of the log) using the `--recent` option.
 
-#### Deleting (Removing) An Application
+### Deleting (Removing) An Application
 
 You can remove and delete your application from Cloud Foundry at any time using the `cf delete` command.
 
@@ -271,7 +272,7 @@ Deleting app python-demo in org tanzu-devrel / space production as <your-email>.
 OK
 ```
 
-### Keep Learning
+## Keep Learning
 
 Most Cloud Foundry installations include a Python Buildpack. But did you know that you can use buildpacks without using Cloud Foundry? Buildpacks are a fabulous, sustainable, stress-free way to get code into Docker containers. To find out how to use them in your Python tool chain take a look at our [Python buildpack guide][python-cnb-guide].
 
@@ -299,7 +300,6 @@ And if you'd prefer to see Cloud Foundry in action without actually following th
 [certified]: https://www.cloudfoundry.org/thefoundry/#cert-distros
 [python-cnb-guide]: /guides/python/cnb-gs-python
 [httpie]: https://httpie.org/
-[pws]: https://run.pivotal.io/
 
 [gs-pyenv]: /guides/python/gs-python-like-a-pro
 [gs-pyenv-venv]: /guides/python/gs-managing-python-packages

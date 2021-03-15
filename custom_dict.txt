@@ -148,6 +148,7 @@ CentOS
 Ceph
 CertificateRequests
 CEST
+CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
@@ -323,6 +324,7 @@ egoless
 EKS
 ElasticSearch
 ELB(s)?
+Eleftheria
 EMC
 EMEA
 [Ee]nablement
@@ -334,7 +336,7 @@ etcd(ctl)?
 [Ee]thernet(s)?
 ETL
 [Ee]venting
-executables
+[Ee]xecutables
 expander(s)?
 expensed
 expirations
@@ -614,7 +616,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
-[Kk]ubernetes(-native|-specific|-centric|-based|-related)?
+[Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 KUDO
 [kK]ustomize
@@ -819,6 +821,7 @@ per-namespace
 Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
+PetClinic
 Petstore
 php-apache
 Pichler

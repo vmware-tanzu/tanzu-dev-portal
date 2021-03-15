@@ -1,8 +1,10 @@
 ---
-title:  "Getting Started with Tekton Part 2: Building a Container"
+title: "Getting Started with Tekton Part 2: Building a Container"
 linkTitle: "Building a Container with Tekton"
+metaTitle: "Building a Container with Tekton"
 parent: "Tekton"
 weight: 2
+description: Using Tekton, an automation tool for CI/CD pipelines, learn how to build container images from a Dockerfile on top of Kubernetes.
 topics:
 - CI-CD
 tags:
