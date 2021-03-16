@@ -73,7 +73,7 @@ None at the moment
 
 ### Preceding
 - [Assumptions](/practices/assumptions)
-- [Exploratory Interviews](/practices/exploratory-interviews)
+- Exploratory Interviews - Coming soon!
 
 ### Following
 

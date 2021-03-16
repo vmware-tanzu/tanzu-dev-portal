@@ -665,11 +665,11 @@ Macanufo
 MacBook
 machine-centric
 Maciaszek-Sharma
-Marcin
 [Mm]acOS
 Madhav
 [mM]akefile
 MapRepository
+Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchings

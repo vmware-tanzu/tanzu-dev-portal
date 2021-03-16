@@ -82,7 +82,7 @@ None at the moment
 None at the moment
 
 ### Following
-[Exploratory Interviews](/practices/exploratory-interviews)
+Exploratory Interviews - Coming soon!
 
 ## Real World Examples
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)

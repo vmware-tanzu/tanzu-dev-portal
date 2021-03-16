@@ -16,7 +16,7 @@ when:
 what:
 - Whiteboard
 - Dry erase markers
-- "[Personas](/practices/personas)"
+- Output from **Personas** workshop
 - Tape
 
 ---
