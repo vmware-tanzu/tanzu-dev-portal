@@ -74,7 +74,7 @@ None at the moment
 - [Problem Prioritization](/practices/problem-prioritization)
 
 ### Following
-- [Solution Grooming](/practices/solution-grooming)
+- Solution Grooming -- coming soon!
 - [Solution Prioritization](/practices/solution-prioritization)
 
 ## Real World Examples
