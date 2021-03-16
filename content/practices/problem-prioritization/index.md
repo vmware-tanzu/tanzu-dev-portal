@@ -14,7 +14,7 @@ when:
 - During Discovery & Framing, after conducting and synthesizing exploratory research.
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Painter's tape
 - All problems you've identified in previous workshops
 

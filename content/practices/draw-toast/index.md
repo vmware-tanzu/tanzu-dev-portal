@@ -68,7 +68,6 @@ You can still facilitate this workshop even if the team is remote.
 While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
 
 - Have people draw upon actual paper as described above.
-
 - Next, have them take a photo on their phone and upload the photo to the collaboration space.
    
    Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.

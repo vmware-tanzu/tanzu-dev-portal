@@ -14,10 +14,10 @@ when:
 - Design studios can help with generating areas to explore and prioritize a range of different problem areas early in the Discovery process. They can also be used to generate a great number of ideas to address more granular user needs later on.  
 
 what:
+- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 - User journey(s)
 - Persona(s)
 - Scenario (if already available)
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 - Painter's tape
 - Sharpies / fine-tipped markers
 - Red pens
@@ -26,18 +26,18 @@ what:
 
 ---
 ## How to Use this Method
+   {{% callout %}}
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
+   
+   **[More remote tips below in the Variations section](#variations).**
+   {{% /callout %}}
+
 ### Sample Agenda & Prompts
 1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. 
 
    ***What are the biggest pain points?***
 
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections, or make similar sections on your digital collaboration tool. The goal is to create lots of small ideas instead of detailed solutions.
-
-   {{% callout %}}
-   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
-   
-   **[More remote tips below in the Variations section](#variations).**
-   {{% /callout %}}
 
    {{% callout %}}
    Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
@@ -50,7 +50,7 @@ what:
    _“How might we design an experience that addresses [the problem]? Use the sheets of paper to come up with as many ideas as possible and don’t over think how you draw it out.”_
 
    {{% callout %}}
-   Tip: It’s important not to not think of the paper as a screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
+   Tip: It’s important not to not think of the paper as a computer or mobile screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
    {{% /callout %}}
    
 1. After time is up, ask each person to share their explorations (1-2 minutes per person). Encourage the team to write down questions or feedback on sticky notes and attach them to the sheet. Make sure everyone gets a turn to share.
@@ -71,14 +71,14 @@ what:
 
    ![Design Studio Dot Vote](/images/practices/design-studio/ds-3.png)
  
-1. Once complete, look for clusters of dots and discuss the largest. Ask the group to elaborate on **why** they dotted what they did and catalog the rationale behind each on the whiteboard or a piece of paper.
+1. Once complete, look for clusters of dots and discuss the largest. Ask the group to elaborate on **why** they dotted what they did and catalog the rationale behind each on the whiteboard, piece of paper, or in the digital workspace.
 
    ![Design Studio Discussion](/images/practices/design-studio/ds-4.png)
    
    ![Design Studio Example](/images/practices/design-studio/ds-example-2.png)
  
 #### Success/Expected Outcomes
-Success is when you have a clear understanding of the ideas each participant has about how best to solve a particular problem. You've put those ideas onto paper, discussed them as a group, voted on the ones the team feels most likely to create user value, and captured the rationale.
+Success is when you have a clear understanding of the ideas each participant has about how best to solve a particular problem. You've put those ideas "onto paper", discussed them as a group, voted on the ones the team feels most likely to create user value, and captured the rationale.
 
 It's very likely that the actual solution will look different than these sketches, so understanding why the team felt how they did about certain elements will help the design team make good choices as they iterate.
 
@@ -99,7 +99,7 @@ The top ideas that came out of the design studio will be carried forward and syn
 ### Variations
 
 #### For Remote Teams
-You can still host a Design Studio even if the team is remote. 
+You can still facilitate this workshop even if the team is remote. 
 
 While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
 
