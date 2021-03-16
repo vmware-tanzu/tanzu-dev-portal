@@ -1,6 +1,7 @@
 ---
 title: "Getting Started with Spring Cloud Stream"
 parent: "Spring Cloud Stream"
+description: Leverage Spring Cloud Stream, a framework for building highly scalable, event-driven microservices for your enterprise needs.
 topics:
 - Event Streaming
 - Messaging and Integration

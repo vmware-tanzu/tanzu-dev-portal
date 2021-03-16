@@ -57,7 +57,7 @@ Things to keep in mind:
    
    Just space them in 3 spaces `<space><space><space>` from the margin and they will fall under that step instead of creating a new step.
 
-1. This will be the next step. It sould render as `2`. 
+1. This will be the next step. It should render as `2`.
 
    {{< callout >}}
    Tip: This is a "callout". You can use it for Tips, Warnings, Info, Quotes, things like that. 

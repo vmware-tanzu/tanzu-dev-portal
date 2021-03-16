@@ -7,6 +7,10 @@ id: "code"
 image: "/images/tv/shows/code.jpg"
 og_image: "/images/og/TanzuTV-Code.png"
 weight: 2
+menu:
+    main:
+        parent: "tv"
+        weight: 3
 # Text that appears on show index page under show name
 description: Watch our Developer Advocates code live every week.
 # Text that appears highlighted in green on show index page above show name

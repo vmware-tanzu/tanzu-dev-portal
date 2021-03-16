@@ -1,6 +1,12 @@
 ---
-title: Agile Practices
-linkTitle: Agile Practices
+title: "Tanzu Practices"
+linkTitle: Tanzu Practices
 description: >
-    A balanced set of practices to help healthy teams achieve great product outcomes
+    Over the past 30 years, [Tanzu Labs](https://tanzu.vmware.com/labs) has developed an invaluable collection<br/>
+    of lean, user-centered, agile practices and workshops.<br/><br/>
+    We're thrilled to share them with you.
+menu:
+    main:
+        parent: "sections"
+        weight: 7
 ---

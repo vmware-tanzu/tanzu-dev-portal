@@ -33,6 +33,15 @@ test: npm
 spell: npm
 	act -j spell-check
 
+#function-config: @ sets the function config variables during build
+function-config:
+ifeq ($(CONTEXT), production)
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+else
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+endif
+
+
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
 	hugo new guides/$(call word-dot,$*,1)/$(call word-dot,$*,2).md -k guide-what-is
@@ -56,3 +65,8 @@ video.%:
 #practice: @ creates a new agile practice. example: make practice.makefile-workshop
 practice.%:
 	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
+
+#audit: @ runs a content audit on all guides and blogs. example: make audit
+audit:
+	cd scripts/audit && bundle install
+	ruby scripts/audit/audit.rb -s . -o scripts/audit/audit.csv
