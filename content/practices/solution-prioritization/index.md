@@ -14,8 +14,8 @@ when:
 - "This activity is often followed by the **Scenario Walkthrough** and/or **Design Studio** workshops"
 
 what: 
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Solution ideas on sticky notes (or cluster sticky notes from Solution Grooming -- coming soon!)
-- Whiteboard
 - Dry erase markers
 - Blue painter's tape
 ---

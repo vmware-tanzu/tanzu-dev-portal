@@ -23,7 +23,7 @@ when:
 - Product sponsors and stakeholders ask for more visibility into the product direction and your progre
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes
 - Sharpies
 - Painter’s tape

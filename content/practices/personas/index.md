@@ -16,7 +16,7 @@ when:
 - We try to do this as early as possible on a project, usually during Kickoff.
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Paper
 - Sharpies / markers
 - Sticky dots
@@ -24,12 +24,22 @@ what:
 
 ---
 ## How to Use this Method
+
+   {{% callout %}}
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
+   
+   **[More remote tips below in the Variations section](#variations).**
+   {{% /callout %}}
+
 ### Sample Agenda & Prompts
 1. Divide room into small groups and give a piece of paper to each group
         
    {{% callout %}}
    Tip: If the group is small, you can also do this exercise individually
+
+   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
+   
 1. Define “persona” for the room and remind all participants this is a provisional persona—through research, what we think we know about this person will change and evolve
 
    {{% callout %}}
@@ -55,6 +65,7 @@ what:
    {{% callout %}}
    Tip: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
+   
 #### Success/Expected Outcomes
 Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible.
 
@@ -65,8 +76,15 @@ None at the moment
 ## Related Practices
 
 ### Variations
+#### For Remote Teams
+You can still facilitate this workshop even if the team is remote. 
 
-None at the moment
+While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
+
+- Have people draw upon actual paper as described above.
+- Next, have them take a photo on their phone and upload the photo to the collaboration space.
+   
+  Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 
 ### Preceding
 
