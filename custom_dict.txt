@@ -31,6 +31,7 @@ adoptopenjdk
 AES-GCM
 affordances
 Agile-ific
+Aino
 airgap(ped)?
 Alertmanager
 Alexa
@@ -201,6 +202,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+Corry
 CORS
 cortado
 Coté
@@ -675,6 +677,7 @@ MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchings
 maxUtilization
+Mayers
 McGraw-Hill
 McLuckie
 MDN
@@ -1174,6 +1177,7 @@ VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?
 VMworld
+Vonge
 VPA(s|'s)?
 vRealize
 vRLI
