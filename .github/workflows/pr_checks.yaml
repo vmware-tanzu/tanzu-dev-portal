@@ -28,3 +28,17 @@ jobs:
         env:
           HUGO_OPTIONS: "-b http://localhost:1313/developer" #"--buildDrafts"
           MUFFET_OPTIONS: "-e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
+  lighthouse-checks:
+    needs: broken-link-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: peaceiris/actions-hugo@v2
+        name: hugo
+        with:
+          hugo-version: '0.81.0'
+          extended: true
+      - uses: treosh/lighthouse-ci-action@v7
+        name: lighthouse
+        with:
+          configPath: ./lighthouserc.yml
