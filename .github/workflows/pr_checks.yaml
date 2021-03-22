@@ -33,14 +33,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: peaceiris/actions-hugo@v2
-        name: setup-hugo
+      - uses: jakepartusch/wait-for-netlify-action@v1
+        name: wait_for_deploy_preview
+        id: netlify
         with:
-          hugo-version: '0.69.2'
-          extended: true
-      - name: build
-        run: pwd && ls && npm install && hugo --minify
+          site_name: tanzu-dev-portal
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
         with:
           configPath: ./lighthouserc.yml
+          urls: |
+            ${{ steps.netlify.outputs.url }}/developer/
