@@ -1,8 +1,5 @@
 ci:
-  collect:
-    # spins up a local server that serves the files
-    # in this directory
-    staticDistDir: './public/developer'
+  collect: {}
 
   upload:
     target: temporary-public-storage
