@@ -1,4 +1,4 @@
-name: Check Spelling and Broken Links
+name: PR Checks
 on:
   pull_request:
     branches:
@@ -36,10 +36,10 @@ jobs:
       - uses: peaceiris/actions-hugo@v2
         name: setup-hugo
         with:
-          hugo-version: '0.81.0'
+          hugo-version: '0.69.2'
           extended: true
       - name: build
-        run: hugo --minify && pwd && ls
+        run: pwd && ls && npm install && hugo --minify
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
         with:
