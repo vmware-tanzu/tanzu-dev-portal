@@ -40,6 +40,8 @@ jobs:
           site_name: tanzu-dev-portal
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
         with:
           temporaryPublicStorage: true
           configPath: ./lighthouserc.yml
