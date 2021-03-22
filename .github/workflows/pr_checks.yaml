@@ -41,6 +41,7 @@ jobs:
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
         with:
+          temporaryPublicStorage: true
           configPath: ./lighthouserc.yml
           urls: |
             ${{ steps.netlify.outputs.url }}/developer/
