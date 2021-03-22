@@ -8,7 +8,7 @@ jobs:
   spell-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         name: Checkout
         with:
           fetch-depth: 1
@@ -18,7 +18,7 @@ jobs:
     needs: spell-check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         name: Checkout
         with:
           fetch-depth: 1
@@ -39,7 +39,7 @@ jobs:
           hugo-version: '0.81.0'
           extended: true
       - name: build
-        run: hugo --minify
+        run: hugo --minify && pwd && ls
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
         with:
