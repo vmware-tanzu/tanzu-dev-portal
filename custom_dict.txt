@@ -1034,6 +1034,7 @@ SolidFire
 Soluto('s)?
 [Ss]onobuoy
 Sox
+[Ss]peedback
 SPIFFE
 Splunk
 Spock
@@ -1106,7 +1107,7 @@ Tigera
 Tikka
 Tilt(file|Cloud)?
 [Tt]imebox
-timebox
+timebox(ed)?
 TLS(-enabled)?
 [Tt]o[Dd]o
 TODOs?
