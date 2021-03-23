@@ -1,7 +1,7 @@
 ---
 title: "Application Enhancements"
 subsection: "Application Enhancements"
-weight: 2
+weight: 1
 topics:
 - Kubernetes
 team:

@@ -89,24 +89,24 @@ Optional lines to draw between rows
    -  _The line of visibility_ - beyond this line, the customer can no longer see into the service
    -  _The line of internal interaction_ - this is where the business itself stops, and partners step in
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading
 
 <a href="https://www.izacross.com/thoughts/blueprintfoundations" target="_blank">Service Blueprints: Laying the Foundation</a> by Izac Ross of Cooper
 

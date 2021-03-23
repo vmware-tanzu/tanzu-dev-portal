@@ -118,23 +118,23 @@ In many ways this is true about any practice, so similar wisdom and optimization
 
 Also acknowledge that it will take several sessions to go through the “I do, we do, you do” process - more opportunities to facilitate can help mitigate this.
 
-### Related Practices
+## Related Practices
 
 Boris is an activity within the [Swift Method](/practices/swift-method).
 
-## Preceding
+### Preceding
 
 [Event Storming](/practices/event-storming)
 
-## Following
+### Following
 
 None at the moment
 
-### Real World Examples
+## Real World Examples
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of Boris and the [Swift Method](/practices/swift-method) of modernization for an Uber Eats-style application
 
-### Recommended Reading
+## Recommended Reading
 
 <a href="https://www.youtube.com/watch?v=7-fRtd8LUwA" target="_blank">Swift Method: Event Storming, Boris the Spider and Other Techniques</a> (YouTube video) talk at ExploreDDD 2019 by Shaun Anderson
 

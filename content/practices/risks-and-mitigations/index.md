@@ -64,23 +64,23 @@ Success is when you have a shared understanding of the biggest risks and have a 
 - Curtail finger pointing or unkind feedback
 - Ensure that the actions are actionable and not too general e.g., “Don’t do this…”  
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 ![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 

@@ -76,24 +76,24 @@ How sheep farmers currently purchase sheep at actions in person
 Example of a **future state** scenario:  
 How sheep farmers will purchase sheep via the internet with the new product
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
  
-## Preceding
+### Preceding
 - [Personas](/practices/personas)
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Insight Prioritization](/practices/insight-prioritization)  
 
-## Following
+### Following
 
 [Design Studio](/practices/design-studio)
 
-### Real World Examples
+## Real World Examples
 Coming soon! 
 
-### Recommended Reading
+## Recommended Reading
 
 

@@ -63,19 +63,19 @@ This exercise could go long if there are many assumptions or you're having troub
 
 ## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 
 None at the moment
 
-## Following
+### Following
 [Exploratory Interviews](/practices/exploratory-interviews)
 
-### Real World Examples
+## Real World Examples
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
 
-### Recommended Reading
+## Recommended Reading
 

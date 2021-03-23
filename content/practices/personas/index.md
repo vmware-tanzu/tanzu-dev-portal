@@ -63,21 +63,21 @@ Success is when you've created a "master persona" and everyone in the room feels
 
 None at the moment
 
-### Related Practices
+## Related Practices
 
-## Variations
-
-None at the moment
-
-## Preceding
+### Variations
 
 None at the moment
 
-## Following
+### Preceding
 
 None at the moment
 
-### Real World Examples
+### Following
+
+None at the moment
+
+## Real World Examples
 
 ![Team member presenting a persona while everyone watches and listens](/images/practices/personas/example-1.png)
 
@@ -87,6 +87,6 @@ None at the moment
 
 ![Example of a digital persona template](/images/practices/personas/example-5.jpg)
 
-### Recommended Reading
+## Recommended Reading
 
 

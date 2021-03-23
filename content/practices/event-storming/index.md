@@ -105,24 +105,24 @@ You know you’ve finished when you have:
 
 **An Event Storming is only successful if the right people are involved.** This is a mix of business domain experts, customer executives, stakeholders, business analysts, software developers, architects, testers, and folks who support the product in production. Subject matter experts, product owners and developers that knows and understands the application domain. This process enables cross perspective conversation throughout the team as well as a standard definition of the terms used by both technical and non-technical team members.
 
-### Related Practices
+## Related Practices
 
 Event Storming is an activity within the [Swift Method](/practices/swift-method).
 
-## Preceding
+### Preceding
 
 None at the moment
 
-## Following
+### Following
 
 [Boris](/practices/boris)
 
-### Real World Examples
+## Real World Examples
 
 <a href="https://www.youtube.com/watch?v=by8SdfF56vI" target="_blank">Deconstructing Monoliths With Domain Driven Design</a>  
 <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">WeBeFoods Example Mock (via Miro)</a>  
 
-### Recommended Reading
+## Recommended Reading
 
 Motivation for the Event Storming exercise:  
 <a href="https://www.amazon.com/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172" target="_blank">Gamestorming: A Playbook for Innovators, Rulebreakers, and Changemakers</a> by Dave Gray, Sunni Brown, and James Macanufo

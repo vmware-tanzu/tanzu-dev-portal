@@ -51,13 +51,13 @@ Success is achieved when the team agrees to the top 3-5 Insights on which it wil
 
 None at the moment
 
-### Related Practices
+## Related Practices
 
-## Variations
+### Variations
 
 None at the moment
 
-## Preceding
+### Preceding
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Research Synthesis](/practices/research-synthesis)
 
@@ -65,13 +65,13 @@ None at the moment
 
 [Problem Prioritization](/practices/problem-prioritization)
 
-## Following
+### Following
 
 [Solution Brainstorming](/practices/solution-brainstorming)
 
-### Real World Examples
+## Real World Examples
 Coming soon!
 
-### Recommended Reading
+## Recommended Reading
 
 

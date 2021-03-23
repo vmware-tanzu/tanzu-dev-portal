@@ -123,17 +123,17 @@ Our advice is to remember that:
 - Estimating the product valuation is just adding details to the intuition that your stakeholders already have that this product is valuable.
 - The practice of making assumptions, building calculations on top of them, and making decisions based on those calculations is extremely common. People across industries do this every single day.
 
-### Related Practices
+## Related Practices
 
 In step 1 or 2, you may want to use a prioritization exercise similar to [Insight Prioritization](/practices/insight-prioritization).
 
-### Real World Examples
+## Real World Examples
 
 ![Example value slide showing how an MVP saves 60 minutes of time per document for a set of users with a future projection based on an assumed adoption rate](/images/practices/product-valuation/example-1.png)
 
 ![Another example value slide showing the number of developer hours saved with the team's solution in place](/images/practices/product-valuation/example-2.png)
 
-### Recommended Reading
+## Recommended Reading
 
 Coming soon: Christopher Hendrix’s summary of "How to Measure Anything”
 
