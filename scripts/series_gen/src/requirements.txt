@@ -1,0 +1,2 @@
+pyyaml==5.3.1
+python-slugify

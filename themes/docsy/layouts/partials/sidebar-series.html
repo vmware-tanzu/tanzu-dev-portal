@@ -1,24 +1,42 @@
-<div id="td-sidebar-menu" class="td-sidebar__inner nocontent">
-    <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
-        <ol class="td-sidebar-nav__section">     
-            <!--<li class="td-sidebar-nav__subsection-title" id="">
-            <a href="" class="align-left pr-2 td-sidebar-link td-sidebar-link__section">{{.Title}}</a>
-            </li>-->
-
-            {{ if .IsSection }}
-                {{ .Scratch.Set "pages" .Pages }}
-            {{ else }}
-                {{ .Scratch.Set "pages" .Parent.Pages }}
-            {{ end }}
-
-            {{ range .Scratch.Get "pages" }}
-                {{ $active := eq . $ }}
-                <li class="td-sidebar-nav__subsection-title" id="">
-                    <a href="{{ .RelPermalink }}" class="align-left pr-2 td-sidebar-link{{ if $active}} active{{ end }} td-sidebar-link__section">{{.Title}}</a>
-                </li>
-            {{ end }}
-        </ol>
-
-    </nav>
-</div>
+{{/* We cache this partial for bigger sites and set the active class client side. */}}
+{{ $shouldDelayActive := ge (len .Site.Pages) 2000 }}
+<div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }}">
   
+  <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
+    {{ if  (gt (len .Site.Home.Translations) 0) }}
+    <div class="nav-item dropdown d-block d-lg-none">
+      {{ partial "navbar-lang-selector.html" . }}
+    </div>
+    {{ end }}
+    {{ template "section-tree-series-section" (dict "page" . "section" .FirstSection "delayActive" $shouldDelayActive)  }}
+  </nav>
+</div>
+{{ define "section-tree-series-section" }}
+{{ $s := .section }}
+{{ $p := .page }}
+{{ $shouldDelayActive := .delayActive }}
+{{ $active := eq $p.CurrentSection $s }}
+{{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
+{{ $sid := $s.RelPermalink | anchorize }}
+<ul class="td-sidebar-nav__section ">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{if ne $s.Weight 0 }}{{$s.Weight }} - {{end}}{{ $s.LinkTitle }}</a>
+  </li>
+  <ul>
+      
+    <li class="collapse {{ if $show }}show{{ end }}" id="{{ $sid }}">
+      {{ $pages := where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true }}
+      {{ $pages := $pages | first 50 }}
+      {{ range ($pages.ByWeight).ByParam "sortTitle" }}
+      {{ if .IsPage }}
+      {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+      {{ $active := eq . $p }}
+      <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ else }}
+      {{ template "section-tree-series-section" (dict "page" $p "section" .) }}
+      {{ end }}
+      {{ end }}
+    </li>
+  </ul>
+</ul>
+{{ end }}

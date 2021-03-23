@@ -2,6 +2,7 @@
 .PHONY: test preview theme spell
 
 word-dot = $(word $2,$(subst ., ,$1))
+SERIES_IMAGE := $(shell docker image ls | grep series-gen)
 
 #help: @ List available tasks on this project
 help:
@@ -24,6 +25,14 @@ test:
 #spell: @ runs act to perform spellcheck
 spell:
 	act -j spell-check
+
+#spell: @ runs act to perform spellcheck
+series:
+ifndef SERIES_IMAGE
+	cd scripts/series_gen && docker build -t series-gen .
+endif
+	ls 
+	docker run -u $(shell id -u) --mount type=bind,source=$(shell pwd),destination=/tdc -e SERIES_PATH=/tdc/content/series/ series-gen:latest
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
