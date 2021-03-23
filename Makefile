@@ -32,7 +32,7 @@ ifndef SERIES_IMAGE
 	cd scripts/series_gen && docker build -t series-gen .
 endif
 	ls 
-	docker run -u $(shell id -u) --mount type=bind,source=$(shell pwd),destination=/tdc -e SERIES_PATH=/tdc/content/series/ series-gen:latest
+	docker run -u $(shell id -u) --mount type=bind,source=$(shell pwd),destination=/tdc -e REMOVE_EXISTING=true -e SERIES_PATH=/tdc/content/series/ series-gen:latest
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
