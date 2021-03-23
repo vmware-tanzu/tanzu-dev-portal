@@ -35,7 +35,7 @@ Kubernetes coordinates clusters of nodes to provide integration, orchestration, 
 
 In addition to scheduling deployment and automating the management of containerized applications, a key benefit of Kubernetes is that it maintains the desired state of an application as specified by an administrator. It does this using a declarative text file (YAML) that defines the desired state for a containerized application. If a container/pod dies it is automatically restarted, providing a built in level of resilience.
 
-Kubernetes uses various resource constructs to work with containers. These resources help define simple tasks such as how many instances of a container to run at all times, how to trigger auto-scaling, how to route ingress traffic to a set of container images, or how to define a load balancer to distribute traffic between multiple container images. 
+Kubernetes uses various resource constructs to work with containers. These resources help define simple tasks such as how many instances of a container to run at all times, how to trigger auto-scaling, how to route ingress traffic to a set of container images, or how to define a [load balancer](https://tanzu.vmware.com/content/blog/exploring-kube-apiserver-load-balancers-for-on-premises-kubernetes-clusters) to distribute traffic between multiple container images. 
 
 ## Keep Learning
 
