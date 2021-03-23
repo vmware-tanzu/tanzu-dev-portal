@@ -18,7 +18,7 @@
         {{/* If simple_list is true we show a bulleted list of subpages */}}
             <ul>
                 {{ range $pages }}
-                    {{ if eq .Parent $parent }}
+                    {{ if and (eq .Parent $parent) (not .Params.hidden) }}
                         <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>
                     {{ end }}
                 {{ end }}
@@ -28,7 +28,7 @@
         <!-- <hr class="panel-line"> -->
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
-                {{ if eq .Parent $parent }}
+                {{ if and (eq .Parent $parent) (not .Params.hidden) }}
                 <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
                     <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
                         <h4 class="link mt-3">{{- .Title -}}</h4>

@@ -1,5 +1,4 @@
 ---
-path: "/methods/ubiquitous-language"
 title: "Ubiquitous Language"
 tags: ["Discovery", "Framing"]
 length: "1 hour"
@@ -17,7 +16,7 @@ when:
 - We try to do this during Discovery or Framing in order to establish a baseline vocabulary. It’s advisable to do this prior to delivery so the code that’s written reflects the business domain language from day one. It’s also worth revisiting this throughout the project as new domain terms are uncovered.  
 
 what:
-- Whiteboard / wall
+- "Whiteboard, large wall, or digital version like [Miro](https://miro.com/)"
 - Sticky notes
 - Sharpies / markers
 

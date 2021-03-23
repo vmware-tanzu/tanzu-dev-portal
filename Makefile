@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: test preview theme spell
+.PHONY: test preview build theme spell node_modules
 
 word-dot = $(word $2,$(subst ., ,$1))
 SERIES_IMAGE := $(shell docker image ls | grep series-gen)
@@ -14,25 +14,41 @@ help:
 theme:
 	git submodule update --init --recursive
 
+#npm: @ runs npm install to install dependencies
+npm: theme
+	npm install
+
 #preview: @ preview hugo
-preview: theme
+preview: npm
 	hugo server -b http://localhost:1313/developer
 
+#build: @ build site into `public` directory
+build: npm
+	hugo -b https://localhost:1313/developer
+
 #test: @ runs act to simulate a github pull request test suite
-test:
+test: npm
 	act pull_request
 
 #spell: @ runs act to perform spellcheck
-spell:
+spell: npm
 	act -j spell-check
 
-#spell: @ runs act to perform spellcheck
+#series: generates series content
 series:
 ifndef SERIES_IMAGE
 	cd scripts/series_gen && docker build -t series-gen .
 endif
 	ls 
 	docker run -u $(shell id -u) --mount type=bind,source=$(shell pwd),destination=/tdc -e REMOVE_EXISTING=true -e SERIES_PATH=/tdc/content/series/ series-gen:latest
+
+#function-config: @ sets the function config variables during build
+function-config:
+ifeq ($(CONTEXT), production)
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+else
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
+endif
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
@@ -57,3 +73,8 @@ video.%:
 #practice: @ creates a new agile practice. example: make practice.makefile-workshop
 practice.%:
 	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
+
+#audit: @ runs a content audit on all guides and blogs. example: make audit
+audit:
+	cd scripts/audit && bundle install
+	ruby scripts/audit/audit.rb -s . -o scripts/audit/audit.csv

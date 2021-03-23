@@ -1,6 +1,6 @@
 ---
 title: "Understanding the Differences Between RabbitMQ vs Kafka"
-seotitle: "RabbitMQ vs Kafka - Which Messaging System is Better?"
+metaTitle: "RabbitMQ vs Kafka - Which Messaging System is Better?"
 description: >
     Which is better RabbitMQ or Kafka? This article will outline the functionality offered by both messaging systems and help you make an informed decision when choosing a platform.
 date: 2020-11-16

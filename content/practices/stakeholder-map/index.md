@@ -1,5 +1,4 @@
 ---
-path: "/methods/stakeholder-map"
 title: "Stakeholder Map"
 tags: ["Kickoff"]
 length: "45 mins - 1 hour"
@@ -25,7 +24,7 @@ when:
 - As early as possible on a project, usually during a Kickoff.  
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 - Large sticky notes
 - Sharpies

@@ -1,13 +1,11 @@
 ---
-path: "/methods/lean-business-canvas"
 title: "Lean Business Canvas"
 tags: ["Kickoff", "Framing"]
 length: "1 - 2 hrs"
 participants: "Core team, stakeholders"
-image: "lean-business-canvas/cover.png"
+image: "lean-business-canvas/step-1.png"
 description: "Summarize “at-a-glance” how users, business and technology meet to create a business opportunity."
 lastmod: "2019-09-24"
-
 
 why:
 - To create a shared understanding of the project’s goals and provide a basis for validation. This method can be done for an existing business model to identify opportunities or for a future business model to get a holistic view of the potential solution.
@@ -16,9 +14,9 @@ when:
 - This process can be repeated as needed to compare multiple business models and create a shared understanding of the project’s goals. This can be done at Kickoff to provide a basis for validation. Or toward the end of a D&F to summarize learnings.
 
 what:
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes
 - Sharpies
-- Whiteboard
 - Dry erase markers
 - Small sticky dots
 

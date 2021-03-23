@@ -2,6 +2,7 @@
 title:  "Building an API with Spring Boot"
 linkTitle: "Spring Boot API"
 subsection: "Spring Boot"
+description: Learn how to quickly develop a REST API from start to finish to build a microservice from scratch with this Spring Boot guide. 
 weight: 2
 topics:
 - Spring

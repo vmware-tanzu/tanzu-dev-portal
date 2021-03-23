@@ -1,8 +1,5 @@
 ---
-path: "/practices/event-storming"
 title: "Event Storming"
-topics:
-- Agile
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1 - 2 hours; multiple runs may be needed"
 participants: "Business stakeholders, business analysts, executives, developers, architects, team leads, domain experts, core team"
@@ -22,7 +19,7 @@ when:
 - You need to identify subdomains and bounded contexts of a system
 
 what:
-- Large wall
+- "Large wall or digital collaboration space like [Miro](https://miro.com/)"
 - 4+ different colored sticky notes
 - Sharpies
 - Blue painters tape
@@ -31,11 +28,12 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. Explain the goal of Event Storming to the group. Project this image if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic DDD Terms.
+1. Explain the goal of Event Storming to the group. Project the image below if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic Domain Driven Design (DDD) terms.
 
-![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
+   ![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
 
-1. Define “domain event” for the group:  
+1. Define “domain event” for the group:
+
    {{% callout %}}
    Example: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
    {{% /callout %}}
@@ -44,7 +42,7 @@ what:
    - Identify the beginning and end of the event storming session in order to create a sequence of events
    - Think about an event in the past tense
    - Focus on the happy path to begin with
-   - Turn post-it's sideways 45 degrees to indicate there are questions or a need for clarification
+   - Turn sticky notes sideways 45 degrees to indicate there are questions or a need for clarification
    
    ![Multiple event stickies encircled in a sample bounded context](/images/practices/event-storming/example-2.jpg)
 
@@ -72,7 +70,7 @@ what:
    Usually you'll see a big group followed by fewer stickies then a larger group of stickies to indicate the transfer to a new bounded context. Look for vertical swim lanes of events that may indicate bounded contexts or business capabilities.
 
    {{% callout %}}
-Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
+   Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
    {{% /callout %}}
 
    If you want to start bounding models with less permanence use stickies to mark general areas and withhold drawing boundaries with permanent markers until your confidence justifies it.
@@ -104,6 +102,8 @@ You know you’ve finished when you have:
 **There is no ONE correct style of Event Storming.** Every session is different from another based on the desired goals and outcomes. So don’t worry about getting it right- just do it and roll your own style. Multiple iterations of this activity may be needed a varying levels of abstraction to realize the outcomes needed
 
 **An Event Storming is only successful if the right people are involved.** This is a mix of business domain experts, customer executives, stakeholders, business analysts, software developers, architects, testers, and folks who support the product in production. Subject matter experts, product owners and developers that knows and understands the application domain. This process enables cross perspective conversation throughout the team as well as a standard definition of the terms used by both technical and non-technical team members.
+
+**Running a Cinderella exercise prior to Event Storming can be a great ice-breaker!** This exercise maps out the story of Cinderella. The PM will choose a start and end point and ask participants to scribe events that happened in the movie. Afterwards, storytelling will confirm everyone's recollection of the movie. This exercise provides the team with a safe environment to learn about Event Storming without getting into the actual exercise.
 
 ## Related Practices
 

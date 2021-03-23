@@ -61,26 +61,26 @@ system-critical pods.
 If you plan to host cluster-wide critical services such as logging agents,
 metrics server, or an SSO IDP provider; `system-cluster-critical` or another
 level below (you organization's definition of priority) should be used and this
-will give a guaranteed prioritization and uptime for the service.
+will give a guaranteed prioritization for the service.
 
 ## Priority Class Planning
 
 Most IT organizations have a classification of severity. Let’s assume they have
 business criticality categories from 1 to 3, 1 having the lowest priority, while
-3 having the highest priority for applications that require 99.99% SLA. With
-this assumption, you can reflect these categories in PriorityClasses and use
-them to prioritize the pods in the cluster.
+3 having the highest priority for applications that require extremely high
+levels of reliability. With this assumption, you can reflect these categories in
+PriorityClasses and use them to prioritize the pods in the cluster.
 
 With the above assumptions, we can define the following priority classes for
 your entire application needs.
 
 {{< table "table" >}}
-| PriorityClass Name | Value | preemptionPolicy | globalDefault |
+| PriorityClass Name | Value   | preemptionPolicy     | globalDefault |
 | ------------------ | ------- | -------------------- | ------------- |
-| cat-1 | 10000 | None | true |
-| cat-2 | 20000 | PreemptLowerPriority | false |
-| cat-3 | 30000 | PreemptLowerPriority | false |
-| cluster-service | 1000000 | PreemptLowerPriority | false |
+| cat-1              | 10000   | None                 | true          |
+| cat-2              | 20000   | PreemptLowerPriority | false         |
+| cat-3              | 30000   | PreemptLowerPriority | false         |
+| cluster-service    | 1000000 | PreemptLowerPriority | false         |
 {{</ table >}}
 **_Table 1: Sample PriorityClass Allocation_**
 
@@ -94,26 +94,26 @@ PreemptionPolicy if enabled, allows the scheduler to evict existing pods.
 `cat-1` has been deliberately configured as default preemptionPolicy
 
 The `cat-1` priority class is assigned to deployments by default. The remaining
-priority classes can be used to prioritize applications according to the SLA
-requirements. You can leverage the `cluster-service` class for the workloads
-that provide common services, such as logging and monitoring.
+priority classes can be used to prioritize applications according to their
+availability requirements. You can leverage the `cluster-service` class for the
+workloads that provide common services, such as logging and monitoring.
 
 ### Who Gets Evicted?
 
-Lets assume the scenario where your cluster has pods defined with following
-budgets.
+Lets assume the scenario where your cluster has pods defined with the following
+disruption budgets.
 
 {{< table "table" >}}
 | Application | Disruption Budget |
 | ----------- | ----------------- |
-| Blue Pod | Min Available : 3 |
-| Purple Pod | Min Available : 3 |
-| Green Pod | Min Available : 2 |
-| Red Pod | Min Available : 2 |
+| Blue Pod    | Min Available : 3 |
+| Purple Pod  | Min Available : 3 |
+| Green Pod   | Min Available : 2 |
+| Red Pod     | Min Available : 2 |
 {{</ table >}}
 **_Table 2: Scenario Disruption Budget_**
 
-Now, let's assume your cluster is full and you need to put another `cat-3`
+Now, let's assume your cluster is full but you need to deploy another `cat-3`
 application. Kubernetes will attempt to schedule the pod as shown on the
 following diagram:
 
@@ -126,10 +126,9 @@ not pick that pod due to the disruption budget requirement. Removing any blue
 pod will cause a violation.
 {{% /aside %}}
 
-The scheduling will run with 2 passes. If the first attempt
-failed with
-`fitError` which is an indication from scheduler that it could not find the
-best fit for the pod under the current situations, the Kubernetes scheduler will
+The scheduling will run with 2 passes. If the first attempt failed with
+`fitError` which is an indication from scheduler that it could not find the best
+fit for the pod under the current situations, the Kubernetes scheduler will
 attempt to run the 2 passes as long as the new pod priority class has
 `PreemptLowerPriority` flagged.
 
@@ -172,111 +171,6 @@ with each other except for [Kubernetes out-of-resource
 eviction](https://kubernetes.io/docs/tasks/administer-cluster/out-of-resource/)
 scenario.
 
-## Limiting Access to Priority Class
-
-With `PriorityClass` you can define the importance of your application
-and may evict application pod from other team with lower priority. To ensure
-this does not happen in shared environment, Kubernetes admin can
-implement a policy based control with
-[OPA](../platform-security-opa/)
-
-The following example show how to limit `PriorityClass` by namespace
-
-### Steps
-
-1. Clone the repository
-
-```bash
-    git clone https://gitlab.eng.vmware.com/rfoe/opa-priorityclass
-```
-
-2. Setup OPA in your kubernetes
-
-```bash
-# create namespace for opa
-kubectl create ns opa
-
-# switch context to OPA
-kubens opa
-
-# apply server certificate
-# files located at ./setup
-kubectl create secret tls opa-server --cert=./setup/server.crt --key=./setup/server.key
-
-# define label in namespace to skip OPA evaluation
-kubectl label ns kube-system openpolicyagent.org/webhook=ignore
-kubectl label ns opa openpolicyagent.org/webhook=ignore
-
-# deploy OPA
-# files located at ./setup
-kubectl apply -f ./setup/admission-controller.yaml
-kubectl apply -f ./setup/webhook-configuration.yaml
-
-# Apply rego rules
-# files located at ./policy
-kubectl create configmap priority-class-whitelist --from-file ./policy/priority-check.rego
-
-```
-
-{{% aside title="Additional Arguments" %}}
-The current example shows how you can submit `Pod` and `Deployment` objects
-for admission review. To enable that, additional arguments are needed as
-shown in below.
-{{% /aside %}}
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
----
-- name: kube-mgmt
-  image: openpolicyagent/kube-mgmt:0.8
-  args:
-    - "--replicate-cluster=v1/namespaces"
-    - "--replicate=extensions/v1beta1/ingresses"
-    - "--replicate=apps/v1/deployments"
-    - "--replicate=v1/pods"
-```
-
-3. Test the rules
-
-```bash
-
-## create priority class
-kubectl create -f ./kube/pc-cat-1.yaml
-kubectl create -f ./kube/pc-cat-2.yaml
-
-## Create test namespace
-kubectl create -f ./kube/ns-dev-parkconnect.yaml
-
-# change namespace to dev-parkconnect
-kubens dev-parkconnect
-
-## run the below
-## for Deployment object
-kubectl create -f ./kube/deployment-error.yaml
-# Result
-# Error from server (Priority class is not in allowed list , allowed : cat-1)....
-
-kubectl create -f ./kube/deployment-ok.yaml
-# Result
-# deployment.apps/web created
-
-## for Pod object
-kubectl create -f ./kube/pod-web-error.yaml
-kubectl create -f ./kube/pod-web-ok.yaml
-
-```
-
-{{% aside title="Multiple Priority Classes" %}}
-Namespace `ns-dev-parkconnect` only allow cat-1 priority class as defined in
-annotation `allow-priority-class: "cat-1"`. Refer to `ns-prod-parkconnect.yaml`
-to allow multiple priority classes.
-{{% /aside %}}
-
-The above example shows how you can apply control by namespace. To enable
-control by roles, you can further enhance the rego policy
-to evaluate more rules.
-
 ## Key Takeaways
 
 1. Always have a default PriorityClass. Use the one with lowest value.
@@ -290,4 +184,3 @@ to evaluate more rules.
 1. Pod `affinity` and `anti-affinity` rules impact the selection of victims. If
    any of those exist, the worker node will not be considered as part of
    selection.
-1. Apply OPA to control which team can access the priority class

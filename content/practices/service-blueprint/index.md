@@ -1,5 +1,4 @@
 ---
-path: "/methods/service-blueprint"
 title: "Service Blueprint"
 tags: ["Discovery"]
 length: "1 - 2 hours"
@@ -19,9 +18,9 @@ when:
 - Early in Discovery or when anyone has difficulty expressing a workflow
 
 what:
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Markers
 - Sticky notes
-- Whiteboard
 
 ---
 ## How to Use this Method

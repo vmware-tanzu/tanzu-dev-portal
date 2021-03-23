@@ -4,7 +4,8 @@
   "description": "Tanzu Developer Center",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,12 @@
   "homepage": "https://github.com/vmware-tanzu-private/tanzu-dev-portal#readme",
   "dependencies": {
     "autoprefixer": "^9.7.6",
-    "postcss-cli": "^7.1.0"
+    "cookie": "^0.4.1",
+    "got": "^11.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "postcss-cli": "^7.1.0",
+    "querystring": "^0.2.1",
+    "simple-oauth2": "^4.2.0"
   },
   "browserslist": [
     "Android 2.3",
@@ -29,7 +35,8 @@
     "iOS >= 6",
     "Opera >= 12",
     "Safari >= 6"
-  ]
-
-  
+  ],
+  "devDependencies": {
+    "husky": "^5.1.1"
+  }
 }

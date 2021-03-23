@@ -2,6 +2,7 @@
 title: "What is Spring Cloud Gateway?"
 linkTitle: "Spring Cloud Gateway"
 subsection: "Spring Cloud Gateway"
+description: Discover the basics and importance of Spring Cloud Gateway, a library for building API gateways on top of Spring and Java.
 topics:
 - Spring
 - Microservices
@@ -24,7 +25,7 @@ Consider a scenario in which you have a web application that relies on three bac
 
 An API gateway allows you to implement the complexity separately from the client, moving that responsibility from user side to server side. All the client needs to know is how to talk to the gateway. It doesn't matter if the backend services move, go offline, or become unstable so long as the gateway knows how to handle these situations.
 
-As luck would have it, Spring Cloud Gateway benefits from the entirety of the Spring ecosystem. Even better, the Spring ecosystem has done a lot of work to handle this sort of complexity. From security to stability to monitoring, the Spring ecosystem can do a lot for you and your API gateway.
+As luck would have it, [Spring Cloud Gateway](https://tanzu.vmware.com/content/blog/microservices-essentials-getting-started-with-spring-cloud-gateway) benefits from the entirety of the Spring ecosystem. Even better, the Spring ecosystem has done a lot of work to handle this sort of complexity. From security to stability to monitoring, the Spring ecosystem can do a lot for you and your API gateway.
 
 ## How Does It Work? 
 

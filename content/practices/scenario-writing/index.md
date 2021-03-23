@@ -1,5 +1,4 @@
 ---
-path: "/methods/scenario-writing"
 title: "Scenario Writing"
 tags: ["Discovery", "Framing", "Remote"]
 length: "45 - 60 mins"
@@ -15,16 +14,16 @@ when:
 - You can write scenarios during Discovery to outline the existing experience, but they are usually written in Framing (or Delivery) to capture an idealized experience and often followed by a Design Studio
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
-- "[Personas](/practices/personas)"
+- Output from **Personas** workshop
 - Tape
 
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
 
-1. Create four columns on the whiteboard and label each with the following:
+1. Create four columns on the physical or digital whiteboard and label each with the following:
 
    - User
    - Goal
@@ -34,6 +33,7 @@ what:
    {{% callout %}}
    Tip: If time is short and/or the full team is busy with other work, you can also do this activity by yourself/with your pair using the word processing program of your choice
    {{% /callout %}}
+   
 1. Begin by defining the **user**, ideally using the persona(s) your team has created. What you write should answer these questions:
 
    - Who is this person?

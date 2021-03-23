@@ -1,5 +1,4 @@
 ---
-path: "/methods/goals-anti-goals"
 title: "Goals & Anti-Goals"
 tags: ["Kickoff", "Inception", "Remote"]
 length: "45 - 60 mins"
@@ -17,7 +16,7 @@ when:
 - We do this as early as possible during a project, usually defining them during Kickoff and revisiting them at Inception.
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 - Sticky notes
 - Sharpies

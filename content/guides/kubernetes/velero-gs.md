@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Velero
-linkTitle: Velero
-weight: 14
+parent: Velero
 topics:
 - Kubernetes
 tags:
@@ -12,38 +11,83 @@ team:
 - Tiffany Jernigan
 ---
 
-What do you do if you lose state in your cluster, or something went very wrong and you need to revert it or move my resources to another cluster? Are you out of luck?
+What do you do if you lose state in your cluster, or something went very wrong
+and you need to revert it or move my resources to another cluster? Are you out
+of luck?
 
-That’s where [Velero](https://velero.io/) comes in. Velero is an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. This guide will show you how to deploy Velero to your Kubernetes cluster, create backups, and recover from a backup after something goes wrong in the cluster.
+That’s where [Velero](https://velero.io/) comes in. Velero is an open source
+tool to safely backup and restore, perform disaster recovery, and migrate
+Kubernetes cluster resources and persistent volumes. This guide will show you
+how to deploy Velero to your Kubernetes cluster, create backups, and recover
+from a backup after something goes wrong in the cluster.
 
 ## Prerequisites
+
 Before you get started you will need to do the following:
-* **Create a Kubernetes cluster**: You need a Kubernetes cluster, v1.10 or later, with DNS and container networking enabled. This guide uses a Google Kubernetes Engine (GKE) Linux cluster with Kubernetes version 1.16.5 and Velero 1.5.3. As of the writing of this guide, Velero [does not officially support Windows](https://velero.io/docs/v1.5/basic-install/#velero-on-windows).
-* **Install [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on our local machine**: You probably already have that one if you're working with Kubernetes.installed locally
-* **Verify the cluster has a [storage class](https://kubernetes.io/docs/concepts/storage/storage-classes/)**: Check if you have a storage class with `kubectl get storageclasses`. You need one to create persistent volumes.
-* **Install the `velero` CLI**: There are a few [options](https://velero.io/docs/v1.5/basic-install/#install-the-cli) to install Velero. This guide uses `brew install velero` and `velero` v1.5.3 . [Enabling shell autocompletion](https://velero.io/docs/v1.5/customize-installation/#enabling-shell-autocompletion) can be very helpful too. 
+
+* **Create a Kubernetes cluster**: You need a Kubernetes cluster, v1.10 or
+  later, with DNS and container networking enabled. This guide uses a Google
+  Kubernetes Engine (GKE) Linux cluster with Kubernetes version 1.16.5 and
+  Velero 1.5.3. As of the writing of this guide, Velero
+  [does not officially support Windows](https://velero.io/docs/v1.5/basic-install/#velero-on-windows).
+* **Install
+  [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on our
+  local machine**: You probably already have this one if you're working with
+  Kubernetes.
+* **Verify the cluster has a
+  [storage class](https://kubernetes.io/docs/concepts/storage/storage-classes/)**:
+  Check if you have a storage class with `kubectl get storageclasses`. You need
+  one to create persistent volumes.
+* **Install the `velero` CLI**: There are a few
+  [options](https://velero.io/docs/v1.5/basic-install/#install-the-cli) to
+  install Velero. This guide uses `brew install velero` and `velero` v1.5.3 .
+  [Enabling shell autocompletion](https://velero.io/docs/v1.5/customize-installation/#enabling-shell-autocompletion)
+  can be very helpful too.
 
 You can also look at the [Velero Basic Install documentation](https://velero.io/docs/v1.5/basic-install/).
 
 ## Setup
-Now that you have your Kubernetes cluster and the Velero CLI installed, we can move to the next step.
 
-First you need to **install Velero server components** in your cluster. To do this, you need a **storage provider** for Velero to store your resources and volumes. In this guide, since we use GKE, we will use Google Cloud Storage as the object store. If you're deploying Velero in a different environment, check the [providers documentation](https://velero.io/docs/v1.5/supported-providers/) for specific setup instructions. 
+Now that you have your Kubernetes cluster and the Velero CLI installed, we can
+move to the next step.
 
-You can either use the `velero install` CLI command with the required storage provider flags or the [Velero Helm chart](https://vmware-tanzu.github.io/helm-charts/). We will use the CLI in this guide.
+First you need to **install Velero server components** in your cluster. To do
+this, you need a **storage provider** for Velero to store your resources and
+volumes. In this guide, since we use GKE, we will use Google Cloud Storage as
+the object store. If you're deploying Velero in a different environment, check
+the [providers documentation](https://velero.io/docs/v1.5/supported-providers/)
+for specific setup instructions.
+
+You can either use the `velero install` CLI command with the required storage
+provider flags or the
+[Velero Helm chart](https://vmware-tanzu.github.io/helm-charts/). We will use
+the CLI in this guide.
 
 ### Initial Setup
-There are quite a few different storage provider options such as vSphere, AWS, and GCP. 
-This guide uses the [setup for GCP](https://github.com/vmware-tanzu/velero-plugin-for-gcp#setup). 
+
+There are quite a few different storage provider options such as [vSphere](https://tanzu.vmware.com/content/blog/a-deep-dive-into-the-kubernetes-vsphere-csi-driver-with-tkgi-and-tkg), AWS,
+and GCP. This guide uses the
+[setup for GCP](https://github.com/vmware-tanzu/velero-plugin-for-gcp#setup).
+
+{{% aside title="Note for GKE Users" %}}
+If you run Google Kubernetes Engine (GKE), make sure that your current IAM
+user is a cluster-admin. This role is required to create RBAC objects. See
+the
+[GKE documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#iam-rolebinding-bootstrap)
+for more information.
+{{% /aside %}}
 
 1.  First we need to create an object storage bucket for Velero to save backups in:
     ```
     BUCKET=<your-bucket-name>
     gsutil mb gs://$BUCKET/
     ```
-    > If you run Google Kubernetes Engine (GKE), make sure that your current IAM user is a cluster-admin. This role is required to create RBAC objects. See the [GKE documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#iam-rolebinding-bootstrap) for more information.
 
-With GCP you can set Velero permissions [using a service account](https://github.com/vmware-tanzu/velero-plugin-for-gcp#option-2-set-permissions-with-using-workload-identity-optional) or optionally [using Workload Identity](https://github.com/vmware-tanzu/velero-plugin-for-gcp#option-2-set-permissions-with-using-workload-identity-optional) to set up Velero GCP permissions. This guide will use a service account.
+    With GCP you can set Velero permissions
+    [using a service account](https://github.com/vmware-tanzu/velero-plugin-for-gcp#option-2-set-permissions-with-using-workload-identity-optional)
+    or optionally
+    [using Workload Identity](https://github.com/vmware-tanzu/velero-plugin-for-gcp#option-2-set-permissions-with-using-workload-identity-optional)
+    to set up Velero GCP permissions. This guide will use a service account.
 
 2. Get the current GCP project:
     ```bash
@@ -56,7 +100,9 @@ With GCP you can set Velero permissions [using a service account](https://github
     gcloud iam service-accounts create velero \
         --display-name "Velero service account"
     ```
-    > Note: If you'll be using Velero to back up multiple clusters with multiple GCS buckets, you may want to create a unique name per cluster instead of just `velero`.
+    Tip: If you'll be using Velero to back up multiple clusters with multiple
+    GCS buckets, you may want to create a unique name per cluster instead of
+    just `velero`.
 
 4. Set `SERVICE_ACCOUNT_EMAIL` to the email attached to your new service account:
     ```bash
@@ -98,7 +144,10 @@ With GCP you can set Velero permissions [using a service account](https://github
     ```
 
 ### Install Velero
-OK, now it’s time to install Velero. We need to give `velero install` the provider, provider plugin, storage bucket, and IAM credentials.
+
+OK, now it’s time to install Velero. We need to give `velero install` the
+provider, provider plugin, storage bucket, and IAM credentials.
+
 ```bash
 velero install \
     --provider gcp \
@@ -107,18 +156,34 @@ velero install \
     --secret-file ./credentials-velero
 ```
 
-It will then display the resources that are being created. If you’re interested in looking further, you can view Velero's server-side components by running:
+It will then display the resources that are being created. If you’re interested
+in looking further, you can view Velero's server-side components by running:
+
 ```bash
 kubectl -n velero get all
 ```
 
-Velero also uses a number of CRDs (Custom Resource Definitions) to represents its own resources like backups, backups schedules, etc.
+Velero also uses a number of CRDs (Custom Resource Definitions) to represents
+its own resources like backups, backups schedules, etc.
 
 ## Run Apps
-As an example, we will deploy an instance of Ghost. Ghost is a personal blog, similar to WordPress. We will be using the [Ghost Helm Chart](https://bitnami.com/stack/ghost/helm). 
 
-1. Create a file containing configuration values for the Ghost Helm Chart. Ghost uses MariaDB for storage. For simplicity, we are going to hard-code in that file the database credentials, as well as the login credentials (so that we know these passwords). The `ghostPassword` and `ghostEmail` will be used to log into the admin account to create blogs.
-    > Note: These are sample, insecure passwords. Please don’t use these outside of a demo! Instead of a values YAML file, we could also use multiple `--set` flags when invoking `helm install` below.
+As an example, we will deploy an instance of Ghost. Ghost is a personal blog,
+similar to WordPress. We will be using the
+[Ghost Helm Chart](https://bitnami.com/stack/ghost/helm).
+
+1. Create a file containing configuration values for the Ghost Helm Chart. Ghost
+   uses MariaDB for storage. For simplicity, we are going to hard-code in that
+   file the database credentials, as well as the login credentials (so that we
+   know these passwords). The `ghostPassword` and `ghostEmail` will be used to
+   log into the admin account to create blogs. 
+   
+   {{% aside type="warning" title="Caution" %}}
+   These are sample, insecure passwords. Please don’t use these outside of
+   a demo! Instead of a values YAML file, we could also use multiple `--set`
+   flags when invoking `helm install` below.
+   {{% /aside %}}
+   
     ```bash
     # Create a file called ghost-values.yaml in the current dir
     # And add the following variables
@@ -130,9 +195,9 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
     ghostEmail: admin@example.com
 
     mariadb:
-    auth:
-        rootPassword: "root_password"
-        password: "db_password"
+        auth:
+            rootPassword: "root_password"
+            password: "db_password"
     EOF
     ```
 
@@ -144,7 +209,11 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
 3. Create the `ghost` namespace and install the Helm chart.
 
     For Helm 3:
-    > Note: As of Helm 3.2.0 you can add a `--create-namespace` flag to the `helm` command instead of using kubectl to create the namespace first.
+
+    {{% aside title="Tip for Helm 3.2.0 and later" %}}
+As of Helm 3.2.0 you can add a `--create-namespace` flag to the `helm`
+command instead of using kubectl to create the namespace first.
+    {{% /aside %}}
 
     ```bash
     kubectl create namespace ghost
@@ -154,7 +223,8 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
         --values ./ghost-values.yaml 
     ```
 
-    You should see an error message telling you that you "did not provide an external host"; so we're going to address that.
+    You should see an error message telling you that you "did not provide an
+    external host"; so we're going to address that.
 
 4. Check if the load balancer is up and running. It should have an `EXTERNAL_IP` listed.
     ```bash
@@ -170,7 +240,8 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
     ghost-mariadb   ClusterIP      10.108.8.42    <none>          3306/TCP       2m2s
     ```
 
-5. Once it’s running, get the load balancer’s external IP and add it to our ghost-values.yaml and upgrade the Helm chart to get the deployment to start:
+5. Once it’s running, get the load balancer’s external IP and add it to our
+   ghost-values.yaml and upgrade the Helm chart to get the deployment to start:
     ```bash
     # Set the APP_HOST to the ghost service's EXTERNAL-IP. You could also copy-paste
     export APP_HOST=$(kubectl get svc --namespace ghost ghost \--template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")
@@ -186,9 +257,13 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
         --values ./ghost-values.yaml
     ```
 
-6. Helm will show us our blog URL, and the admin URL that we will use in a minute to create some content. The IP address is the `EXTERNAL_IP` of the load balancer.
+6. Helm will show us our blog URL, and the admin URL that we will use in a
+   minute to create some content. The IP address is the `EXTERNAL_IP` of the
+   load balancer.
 
-    So right now you should be seeing these resources. Your IP addresses will be different; and if the pods are not both `Running` and `READY` yet, give them a minute to come up.
+    So right now you should be seeing these resources. Your IP addresses will be
+    different; and if the pods are not both `Running` and `READY` yet, give them
+    a minute to come up.
 
     ```bash
     kubectl -n ghost get all
@@ -211,19 +286,30 @@ As an example, we will deploy an instance of Ghost. Ghost is a personal blog, si
     statefulset.apps/ghost-mariadb   1/1     50m
     ```
 
-7. Now open your `Admin URL` in a web browser. If it doesn't load, double-check that the pods shown in the previous section show up as `1/1` in the `READY` column. Sign in the admin interface with the email and password that we entered earlier in the values file. You should now see the following screen, which will let us create a blog:
+7. Now open your `Admin URL` in a web browser. If it doesn't load, double-check
+   that the pods shown in the previous section show up as `1/1` in the `READY`
+   column. Sign in the admin interface with the email and password that we
+   entered earlier in the values file. You should now see the following screen,
+   which will let us create a blog:
    ![Ghost Admin Page](/images/guides/kubernetes/velero-gs/1-welcome-to-ghost.png)
 
-   Click on the `+` next to Posts to create your first post. Enter a title and some content, then click Publish in the top right.
+   Click on the `+` next to Posts to create your first post. Enter a title and
+   some content, then click Publish in the top right.
    ![Ghost Publish Page](/images/guides/kubernetes/velero-gs/2-ghost-create-post.png)
 
    The home page should now look like this:
    ![Ghost Page With Post](/images/guides/kubernetes/velero-gs/3-ghost-home-page.png)
 
 ## Backup
-Now, let’s look into backups in case something happens to the blog. Backups are for Kubernetes resources and persistent volumes. You can back up your entire cluster, or optionally choose a namespace or label selector to back up. 
 
-They can be run one off or scheduled. It’s a good idea to have scheduled backups so you are certain you have a recent backup to easily fall back to. You can also create [backup hooks](https://velero.io/docs/v1.5/backup-hooks/) if you want to execute actions before or after a backup is made.
+Now, let’s look into backups in case something happens to the blog. Backups are
+for Kubernetes resources and persistent volumes. You can back up your entire
+cluster, or optionally choose a namespace or label selector to back up.
+
+They can be run one off or scheduled. It’s a good idea to have scheduled backups
+so you are certain you have a recent backup to easily fall back to. You can also
+create [backup hooks](https://velero.io/docs/v1.5/backup-hooks/) if you want to
+execute actions before or after a backup is made.
 
 By default, the backup retention is 30 days, but you can change it with the `--ttl` flag.
 
@@ -232,13 +318,18 @@ By default, the backup retention is 30 days, but you can change it with the `--t
     ```bash
     velero backup -h
     ```
-2. Let’s start with the most basic option: creating a one off backup. It’s a good idea to give it a meaningful name so you remember what it was for unlike what is done here.
+2. Let’s start with the most basic option: creating a one off backup. It’s a
+   good idea to give it a meaningful name so you remember what it was for unlike
+   what is done here.
     ```bash
     BACKUP=gastly
     velero backup create $BACKUP --include-namespaces ghost
     ```
 
-    If we wanted to do a backup with all namespaces we can remove the `--include-namespaces` flag. And to include all namespaces except specific ones we could use `--exclude-namespaces` with the namespace(s) we don't want.
+    If we wanted to do a backup with all namespaces we can remove the
+    `--include-namespaces` flag. And to include all namespaces except specific
+    ones we could use `--exclude-namespaces` with the namespace(s) we don't
+    want.
 
 
 3. Let’s create a backup from a schedule. 
@@ -261,7 +352,8 @@ By default, the backup retention is 30 days, but you can change it with the `--t
     …
     ```
 
-5. [Optional] For both curiosity and debugging, it’s useful to do a `describe` and `logs` on your backups:
+5. [Optional] For both curiosity and debugging, it’s useful to do a `describe`
+   and `logs` on your backups:
     ```bash
     velero backup describe $BACKUP
 
@@ -269,24 +361,32 @@ By default, the backup retention is 30 days, but you can change it with the `--t
     ```
 
 ## 🔥Wreak Havoc🔥
-Now that we have a happy cluster state and that most excellent blog you created...let’s nuke Ghost. 
 
-Let’s say that _**someone**_ (you) “accidentally” (definitely intentionally) deleted the Ghost Helm chart and the persistent volume claim (PVC) by running the following:
+Now that we have a happy cluster state and that most excellent blog you
+created...let’s nuke Ghost.
+
+Let’s say that _**someone**_ (you) “accidentally” (definitely intentionally)
+deleted the Ghost Helm chart and the persistent volume claim (PVC) by running
+the following:
 ```bash
 helm delete --namespace ghost ghost
 kubectl -n ghost delete pvc data-ghost-mariadb-0
 ```
-Try to connect to Ghost again. Shoot... Now the blog site is down and so is that _**super important**_ blog post you just made. What now?
+Try to connect to Ghost again. Shoot... Now the blog site is down and so is that
+_**super important**_ blog post you just made. What now?
 
 ## Restore
-Well, it’s a good thing you have backups! Now it's time to look into restoring from a backup.
+
+Well, it’s a good thing you have backups! Now it's time to look into restoring
+from a backup.
 
 1. To see what all you can do with restore run:
     ```bash
     velero restore -h
     ```
     
-2. Let’s now wait for all of the resources to be gone. First check the output of `get all`:
+2. Let’s now wait for all of the resources to be gone. First check the output of
+   `get all`:
     ```bash
     kubectl -n ghost get all
     ```
@@ -294,7 +394,9 @@ Well, it’s a good thing you have backups! Now it's time to look into restoring
     ```bash
     kubectl get pvc
     ```
-    > Note: It might take a minute until everything is properly deleted; so you may run these commands above until they give you a (somewhat ominous) `No resources found` output.
+    Note: It might take a minute until everything is properly deleted; so you
+    may run these commands above until they give you a (somewhat ominous)
+    `No resources found` output.
 
 2. Now to perform a restore:
    
@@ -311,7 +413,8 @@ Well, it’s a good thing you have backups! Now it's time to look into restoring
    * Did all the resources come back up and therefore the Ghost site?
    * Is the _super important_ blog back, or only the default blogs?
 
-   * Let’s find out. First let’s check to see if our resources are back and running.
+   * Let’s find out. First let’s check to see if our resources are back and
+     running.
     ```bash
     kubectl -n ghost get all
 
@@ -333,30 +436,45 @@ Well, it’s a good thing you have backups! Now it's time to look into restoring
     statefulset.apps/ghost-mariadb   1/1     2m12s
     ```
 
-    Again, wait until all the pods above are `Running` with counts of `1/1` pods in `READY` state.
+    Again, wait until all the pods above are `Running` with counts of `1/1` pods
+    in `READY` state.
 
 4. Now get the `EXTERNAL_IP` from your service:
     ```bash
     kubectl get svc --namespace ghost ghost --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}"
     ```
 
-    > Note: Your IP address may have changed from earlier. For the depth of this specific demo it doesn't cause problems. However, to ensure all links work properly, update the `ghostHost` in `ghost-values.yaml` and run the [previous `helm upgrade`](#run-apps) command again. If we were using [`external-dns`](https://github.com/kubernetes-sigs/external-dns) and hostnames, it would automatically resolve itself.
+    {{% aside type="warning" title="Double check your IP" %}}
+Note: Your IP address may have changed from earlier. For the depth of this
+specific demo it doesn't cause problems. However, to ensure all links work
+properly, update the `ghostHost` in `ghost-values.yaml` and run the
+[previous `helm upgrade`](#run-apps) command again. If we were using
+[`external-dns`](https://github.com/kubernetes-sigs/external-dns) and
+hostnames, it would automatically resolve itself.
+    {{% /aside %}}
 
-    Now head to you the IP address in your browser and your blog should be up with the post you wrote!
+    Now head to you the IP address in your browser and your blog should be up
+    with the post you wrote!
 
-5. [Optional] For both curiosity and debugging, it’s useful to do a `describe` and `logs` on your restores:
+5. [Optional] For both curiosity and debugging, it’s useful to do a `describe`
+   and `logs` on your restores:
     ```bash
     velero restore describe <restore-name>
 
     velero restore logs <restore-name>
     ```
 
-As of Velero 1.5 [Restore Hooks](https://velero.io/docs/v1.5/restore-hooks/) are also available.
+As of Velero 1.5 [Restore Hooks](https://velero.io/docs/v1.5/restore-hooks/) are
+also available.
 
-For cluster migration (restoring from one cluster’s backup into another cluster) you can follow the [cluster migration documentation](https://velero.io/docs/v1.5/migration-case/).
+For cluster migration (restoring from one cluster’s backup into another cluster)
+you can follow the
+[cluster migration documentation](https://velero.io/docs/v1.5/migration-case/).
 
 ## Cleanup
-To delete the app resources, you can use `helm uninstall` and then delete the namespace:
+
+To delete the app resources, you can use `helm uninstall` and then delete the
+namespace:
 ```bash
 helm uninstall --namespace ghost ghost
 kubectl delete ns ghost
@@ -382,11 +500,12 @@ gsutil -m rm -r gs://$BUCKET
 ```
 
 ## Learn More
-Hopefully you found this guide helpful. Here are some other resources to help you learn more.
+
+Hopefully you found this guide helpful. Here are some other resources to help
+you learn more.
 
 * [Velero](https://velero.io/)
 * [Velero Documentation](https://velero.io/docs/latest/)
 * [Velero GitHub](https://github.com/vmware-tanzu/velero)
 * [Introduction to Velero Blog](https://velero.io/blog/Velero-is-an-Open-Source-Tool-to-Back-up-and-Migrate-Kubernetes-Clusters/)
 * [Quick start evaluation install with Minio](https://velero.io/docs/v1.5/contributions/minio/)
-

@@ -1,5 +1,7 @@
 ---
-path: "/methods/product-valuation"
+# Draft: needs deeper review and changes for public consumption. 
+# References Miro template with old branding.
+draft: "true"
 title: "Product Valuation"
 tags: ["Discovery", "Framing", "Inception"]
 length: "Varies greatly"
@@ -17,7 +19,7 @@ when:
 - A product valuation can be generated at any stage, and is useful at any stage. It is most important to do any time that there is not an abundance of clarity into the value that the team is creating, and stakeholders need a better understanding to inform staffing or product decisions.
 
 what:
-- Whiteboard (or Miro)
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Spreadsheet app (like Excel)
 - Paper
 - Pens

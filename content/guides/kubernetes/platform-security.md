@@ -1,7 +1,6 @@
 ---
 title: "Platform Security"
 subsection: "Platform Security"
-weight: 11
 topics:
   - Kubernetes
 team:

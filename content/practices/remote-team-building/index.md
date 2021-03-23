@@ -1,4 +1,8 @@
 ---
+# Draft: references to Miro templates that are not available. 
+# Without them the workshops are not useful.
+# Next steps: Try to make Miro templates public. 
+draft: "true"
 path: '/methods/remote-team-building'
 title: 'Remote Team Building'
 tags: ["Framing", "Remote"]

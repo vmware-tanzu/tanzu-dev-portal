@@ -1,5 +1,4 @@
 ---
-path: "/practices/boris"
 title: "Boris"
 tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
 length: "1.5 hours per run; multiple runs are often needed"
@@ -17,13 +16,14 @@ when:
 - The Boris exercise comes after Event Storming since it uses insight discovered by that activity to identify system components and model their relationships
 
 what:
-- Output from Event Storming (i.e. list of bounded contexts & the events contained within them)
-- Post-It arrow flags
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Output from **Event Storming** (i.e. list of bounded contexts & the events contained within them)
+- Sticky arrow flags
 - Whiteboard tape (black, green, red; 2 rolls of each)
 - Scissors
 - Scotch tape
-- Post-it Dry Erase Surface (3 ft x 2 ft)
-- Super sticky 4x6 multicolor post-its, 4 pack
+- Dry Erase Surface (3 ft x 2 ft)
+- Super sticky 4x6 multicolor sticky notes, 4 pack
 
 ---
 ## How to Use this Method
@@ -82,7 +82,7 @@ what:
 #### Success/Expected Outcomes
 At the end of a Boris exercise, Services, APIs, Data and Event Choreography and a backlog of work starts becoming obvious.
 
-SNAP is used to quickly document the outcomes of a Boris in real-time. Information is often grouped into APIs, Data, Pub/Sub, External Systems/UI, Stories, and Risks. The key artifact is a poster-sized sticky paper on a conference room wall, with one SNAP per node or service depicted on Boris. Typically there will be one SNAP per node or service depicted on Boris. Each SNAP consists of documentation about six categories: APIs, Data, External Systems/UI, Pub/Sub, Stories and Risks.
+SNAP is used to quickly document the outcomes of a Boris in real-time. Information is often grouped into APIs, Data, Pub/Sub, External Systems/UI, Stories, and Risks. The key artifact is a poster-sized sticky paper on a conference room wall or similar from a digital workspace, with one SNAP per node or service depicted on Boris. Typically there will be one SNAP per node or service depicted on Boris. Each SNAP consists of documentation about six categories: APIs, Data, External Systems/UI, Pub/Sub, Stories and Risks.
 
 #### Facilitator Notes & Tips
 

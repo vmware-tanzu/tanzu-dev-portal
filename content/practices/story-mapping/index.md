@@ -1,5 +1,4 @@
 ---
-path: "/methods/story-mapping"
 title: "Story Mapping"
 tags: ["Framing", "Inception"]
 length: "1 hour"
@@ -16,7 +15,7 @@ when:
 - During inception, to translate Discovery & Framing outcomes (likely a product prototype and user journeys) into a prioritized product backlog.   
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes
 - Markers
 - Blue painter's tape

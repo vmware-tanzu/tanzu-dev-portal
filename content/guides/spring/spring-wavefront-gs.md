@@ -2,6 +2,7 @@
 title:  "Getting Started with Wavefront for Spring Boot"
 linkTitle: "Wavefront for Spring Boot"
 parent: "Spring Boot"
+description: VMware Tanzu Observability by Wavefront offers a free tier for Spring Boot developers. Get started today and walk through the basics of Wavefront for Spring Boot.
 topics:
 - Spring
 tags:

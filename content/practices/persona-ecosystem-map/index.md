@@ -1,5 +1,4 @@
 ---
-path: "/methods/persona-ecosystem-map"
 title: "Persona Ecosystem Map"
 tags: ["Kickoff"]
 length: "30 - 45 min"
@@ -16,7 +15,7 @@ when:
 - After the goals for the project / consulting engagement have been covered, when the team is beginning to dive deeper into the details of the problem space
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 
 ---

@@ -1,5 +1,4 @@
 ---
-path: "/methods/insight-prioritization"
 title: "Insight Prioritization"
 tags: ["Discovery", "Remote"]
 length: "1 - 2 hours"
@@ -16,7 +15,7 @@ when:
 - During Discovery & Framing, after conducting and synthesizing exploratory research.
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Painter's tape
 - Any insights you've identified in previous workshops
 
