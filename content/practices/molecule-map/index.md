@@ -22,6 +22,10 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
+1. Review the [Crafting a Molecule](https://tanzu.vmware.com/content/vmware-tanzu-developer-center-slides/molecule) presentation and familiarize yourself with the concept, how to arrive at solutions, and how to identify anti-patterns.
+
+   <iframe src="//www.slideshare.net/slideshow/embed_code/key/1wtb5448ncVV6E" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/molecule-242998322" title="Molecule" target="_blank">Molecule</a> </strong> from <strong><a href="https://www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
+
 1. Draw an example molecule on the physical or digital whiteboard
 
    - Persona — Who are we helping? (use the [Personas](/practices/personas) practice) practice if you haven't created one yet)
