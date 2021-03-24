@@ -16,7 +16,7 @@ when:
 - Early in the project, normally during Kick-Off, and again during Inception
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 - Sticky notes
 - Markers
@@ -30,16 +30,21 @@ what:
    {{% callout %}}
    Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
    {{% /callout %}}
+   
 1. Ask each person to select their top 5 risks and obstacles
 
 1. Split the group into pairs. Ask each pair to plot their risks together on the axes they draw.
 
-   Each pair should grab one sheet of paper and draw axes:
+   {{% callout %}}
+   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   {{% /callout %}}
+
+   Each pair should grab one sheet of paper or section of the digital whiteboard and draw axes:
    - X-axis: **Easy to Mitigate** to **Hard to Mitigate**
    - Y-axis: **Low Risk** to **High Risk**
 
    {{% callout %}}
-   Tip: Walk around the groups and move each group forward if they are moving faster than others
+   Tip: Check in on the groups and move each group forward if they are moving faster than others
    {{% /callout %}}
    
    ![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)

@@ -15,7 +15,7 @@ when:
 - The best time to do a Journey Map is after a few rounds of user research, when synthesizing data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s vision of a Customer Journey, before starting User Research. During Framing, the map can be modified to match a “future” state where the proposed solution exists.
 
 what:
-- Whiteboard
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 - Sticky notes
 - Markers

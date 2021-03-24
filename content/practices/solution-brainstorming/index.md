@@ -14,12 +14,12 @@ when:
 - Solution Brainstorming is often one of the first times that we begin to explore solutions and features. We run this activity after identifying and prioritizing insights & problems because we want to solve for the most important things first.
 
 what:
+- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 - Prioritized insights & problems
 - Large sheets (11"x17") of paper / A3 paper
 - Large sticky notes
 - Small sticky notes
 - Sharpies
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
 
 ---
 ## How to Use this Method
@@ -37,6 +37,8 @@ what:
 
    {{% callout %}}
    Tip: If there are more problems and insights than team members, you can divide the team into pairs and assign several to each pair. This can also be helpful if there are more people than problems and insights.
+
+   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
 
 1. Go around the group and have each person (or pair) share out their original problem or insight and the "How might we...?" statement(s) they created from it. Make adjustments as a team until you're happy with all statements.
@@ -74,7 +76,7 @@ None at the moment
 - [Problem Prioritization](/practices/problem-prioritization)
 
 ### Following
-- [Solution Grooming](/practices/solution-grooming)
+- Solution Grooming -- coming soon!
 - [Solution Prioritization](/practices/solution-prioritization)
 
 ## Real World Examples

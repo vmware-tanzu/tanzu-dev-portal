@@ -14,9 +14,9 @@ when:
 - This process can be repeated as needed to compare multiple business models and create a shared understanding of the project’s goals. This can be done at Kickoff to provide a basis for validation. Or toward the end of a D&F to summarize learnings.
 
 what:
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes
 - Sharpies
-- Whiteboard
 - Dry erase markers
 - Small sticky dots
 

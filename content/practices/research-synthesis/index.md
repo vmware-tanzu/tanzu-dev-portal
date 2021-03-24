@@ -14,8 +14,8 @@ when:
 - Ideally we do this after each user interview in order to analyze the information we captured during our user interview session while it’s still fresh in our minds.
 
 what:
+- "Large Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes with findings on them (stemming from research sessions), color-coded by research participant
-- A large whiteboard
 - Dry erase markers
 
 ---
@@ -46,6 +46,10 @@ what:
    - Draw a smiley face that appropriately captures the sentiment (smiling, meh, frowning)
    - Write the number of individual users that make up the group
    - Circle each group when you are complete so you know that you don’t have to revisit the section
+   
+   {{% callout %}}
+   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   {{% /callout %}}
 
 1. When all sticky notes have been grouped (or placed in the Parking Lot), do another pass to identify (a) actions to take and (b) findings to re-test
 
@@ -73,7 +77,7 @@ None at the moment
 
 ### Preceding
 - [Assumptions](/practices/assumptions)
-- [Exploratory Interviews](/practices/exploratory-interviews)
+- Exploratory Interviews - Coming soon!
 
 ### Following
 

@@ -19,7 +19,7 @@ when:
 - You need to identify subdomains and bounded contexts of a system
 
 what:
-- Large wall
+- "Large wall or digital collaboration space like [Miro](https://miro.com/)"
 - 4+ different colored sticky notes
 - Sharpies
 - Blue painters tape
@@ -28,11 +28,12 @@ what:
 ---
 ## How to Use this Method
 ### Sample Agenda & Prompts
-1. Explain the goal of Event Storming to the group. Project this image if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic DDD Terms.
+1. Explain the goal of Event Storming to the group. Project the image below if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic Domain Driven Design (DDD) terms.
 
-![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
+   ![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
 
-1. Define “domain event” for the group:  
+1. Define “domain event” for the group:
+
    {{% callout %}}
    Example: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
    {{% /callout %}}
@@ -69,7 +70,7 @@ what:
    Usually you'll see a big group followed by fewer stickies then a larger group of stickies to indicate the transfer to a new bounded context. Look for vertical swim lanes of events that may indicate bounded contexts or business capabilities.
 
    {{% callout %}}
-Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
+   Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
    {{% /callout %}}
 
    If you want to start bounding models with less permanence use stickies to mark general areas and withhold drawing boundaries with permanent markers until your confidence justifies it.
