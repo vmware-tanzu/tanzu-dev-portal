@@ -481,6 +481,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+[Ii]mmeasurability
 implementors
 [Ii]ncompressible
 InfoQ
