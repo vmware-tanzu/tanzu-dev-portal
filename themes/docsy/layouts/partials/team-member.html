@@ -32,8 +32,10 @@
             <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
             {{ .context.Summary }}
         {{ else if eq .display "tv" }}
-            {{ .context.Summary }} 
-            <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            {{ if not .context.Params.hidden }}
+                {{ .context.Summary }} 
+                <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            {{ end }}
         {{ else }}
             <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
             <div class='team-body-copy'>
