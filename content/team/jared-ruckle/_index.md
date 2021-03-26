@@ -6,6 +6,7 @@ roles: ["guest"]
 skills: []
 location: ""
 weight: 1
+hidden: true
 
 # Social Media
 twitter: "jaredruckle"

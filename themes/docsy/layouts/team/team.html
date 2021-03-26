@@ -2,6 +2,10 @@
 <html lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>
     {{ partial "head.html" . }}
+    
+    {{ if $.Params.hidden }}
+        <meta http-equiv="refresh" content="0; url={{ "/404.html"  | relURL }}" />
+    {{ end }}
   </head>
   <body class="td-{{ .Kind }} td-topic">
     <header>
@@ -11,12 +15,14 @@
       <div class="td-main ">
         <div class="mt-lg-5 mt-0 py-lg-5 py-2">
             <div class='container'>
-                {{ .Render "content" }}
+                {{ if  not $.Params.hidden }}
+                    {{ .Render "content" }}
+                {{ end }}
             </div>
         </div>
 
           {{ $blogs := where .Data.Pages "Section" "blog" }}
-          {{ if gt (len $blogs) 0 }}
+          {{ if and (gt (len $blogs) 0) (not $.Params.hidden) }}
           <div id="blogs" class='border-top container py-5 flex flex-wrap'>
             <div class="mb-4 col-lg-2 col-md-2 col-12 px-0 mr-5 mb-5"><div class='flex align-items-center icon-title'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div></div>
             <div class='col-lg-8 col-md-8 col-12 px-0'>
@@ -28,7 +34,7 @@
           {{ end }}
 
           {{ $guides := where .Data.Pages "Section" "guides" }}
-          {{ if gt (len $guides) 0 }}
+          {{ if and (gt (len $guides) 0) (not $.Params.hidden) }}
           <div id="guides" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-4'><img class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
@@ -50,7 +56,7 @@
           {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
-          {{ if gt (len $shows) 0 }}
+          {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
           <div id="tanzu-tv" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
               <div class="col px-lg-0"><div class='row'>
@@ -68,7 +74,7 @@
 
   
           {{ $videos := where .Data.Pages "Section" "videos" }}
-          {{ if gt (len $videos) 0 }}
+          {{ if and (gt (len $videos) 0) (not $.Params.hidden) }}
           <div id="videos" class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
               <div class="col px-lg-0"><div class='row'>
@@ -84,7 +90,7 @@
   
       
           {{ $samples := where .Data.Pages "Section" "samples" }}
-          {{ if gt (len $samples) 0 }}
+          {{ if and (gt (len $samples) 0) (not $.Params.hidden) }}
           <div class='container py-5 border-top'>
               <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
               <div class="col px-lg-0"><div class='row'>
