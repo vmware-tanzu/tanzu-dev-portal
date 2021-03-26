@@ -30,6 +30,7 @@ jobs:
           MUFFET_OPTIONS: "-e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
   lighthouse-checks:
     needs: broken-link-check
+    if: ${{ !env.ACT }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
