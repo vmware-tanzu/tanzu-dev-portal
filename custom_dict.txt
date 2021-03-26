@@ -146,6 +146,7 @@ Carvel('s)?
 cass-operator
 CCM
 cd
+Cedrick
 CentOS
 Ceph
 CertificateRequests
@@ -480,6 +481,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+[Ii]mmeasurability
 implementors
 [Ii]ncompressible
 InfoQ
@@ -661,6 +663,7 @@ lTwaivWHzk
 Lua
 Lubomir
 Lum
+Lunven
 Lyft
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
@@ -877,6 +880,7 @@ PreemptLowerPriority
 prefilled
 preload
 prepending
+Presales
 preStop
 PriorityClass(es)?
 Procfile
@@ -1047,6 +1051,7 @@ sso|SSO
 Stacker
 [Ss]tandups?
 starbuxman
+STARGATE|Stargate
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1224,3 +1229,4 @@ ZDNet
 ZOP
 Zou
 Zuul
+μServices
