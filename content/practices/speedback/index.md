@@ -4,8 +4,8 @@ title: "Speedback Feedback"
 linkTitle: "Speedback"
 description: "Speedback is a session where the “speed-dating” format is applied for exchanging feedback within a group of people, usually a team. It is intentional, timeboxed feedback gathering."
 tags: ["Delivery"]
-length: "15min per session"
-participants: "Delivery team: PMs, Deisgers, and Engineers"
+length: "10min per session plus prep"
+participants: "Delivery team: PMs, Designers, and Engineers"
 image: "default-cover.png" 
 lastmod: "2021-03-23"
 why: 
