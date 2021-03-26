@@ -5,7 +5,7 @@
     <div class="row">
         {{ range $pages }}
             {{ if eq .Parent $parent }}
-                {{ if and .Params.name (not .Params.external) }}
+                {{ if and .Params.name (not .Params.external) (not .Params.hidden) }}
                 <div class="person col-lg-4 mb-0 mb-lg-0">
                     <div class="card py-3 px-4 mb-4 text-left text-white">
                         <div class="row">

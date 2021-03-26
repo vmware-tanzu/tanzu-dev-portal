@@ -6,6 +6,7 @@ roles: ["advocate","author"]
 skills: ["Spring", "Kubernetes"]
 location: "Austin, TX"
 weight: 1
+hidden: true
 
 # Social Media 
 twitter: "pczarkowski"
