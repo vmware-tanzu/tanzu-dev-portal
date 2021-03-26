@@ -33,13 +33,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        if: ${{ !env.ACT }}
       - uses: jakepartusch/wait-for-netlify-action@v1
         name: wait_for_deploy_preview
+        if: ${{ !env.ACT }}
         id: netlify
         with:
           site_name: tanzu-dev-portal
       - uses: treosh/lighthouse-ci-action@v7
         name: lighthouse
+        if: ${{ !env.ACT }}
         env:
           LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
         with:
