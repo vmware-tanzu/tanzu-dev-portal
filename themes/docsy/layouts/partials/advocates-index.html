@@ -4,7 +4,7 @@
     <div class="flex justify-content-between">
         <div class="col-lg-12 px-0 advocates">
          {{ range $pages }}
-            {{ if in .Params.roles "advocate" }}
+            {{ if  and (in .Params.roles "advocate") (not .Params.hidden) }}
              <div class="item mb-4" >
                  <div class='border px-4 py-5 bg-gray-dark '> 
 	                {{ partial "team-member.html" (dict "context" . "display" "summary") }}
