@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Cloud Native Developer practices on Kubernetes"
+title: "Cloud Native Developer Practices on Kubernetes"
 description: >
   The first in a series of developer workshops focused on deploying cloud-native development with Spring Boot and Kubernetes.
 summary:
@@ -29,4 +29,4 @@ In this workshop you will:
 - Deploy and run the application on Kubernetes
 - Configure and test an ingress for the application
 
-This workshop is intended to become the first in a series of workshops that explore cloud-native developer practices.
+This workshop is the first in a series of workshops that explore cloud-native developer practices.
