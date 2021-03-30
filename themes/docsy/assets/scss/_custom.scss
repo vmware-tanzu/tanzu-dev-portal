@@ -311,9 +311,7 @@ a {
 
 .dropdown-toggle::after {
   border: none !important;
-  content: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-white.png);
-  vertical-align: top;
-  margin-top: -0.1em;
+  content: "";
   @include media-breakpoint-down(md) {
     content: "";
   }
@@ -1037,6 +1035,11 @@ body.tv-episode {
   }
 }
 
+.flex-315 {
+  @media (min-width: 992px) {
+      flex: 0 0 31.5%;
+  }
+}
 .thumbnail-gradient {
   width: 100%;
   height: 80px;
@@ -1058,6 +1061,10 @@ body.tv-episode {
   .tv-episode-hero .col-lg-3 .btn {
     float: none;
   }
+}
+
+.guide .section-index .col-lg-4 {
+  // background-color: 
 }
 
 .checklist-item {
