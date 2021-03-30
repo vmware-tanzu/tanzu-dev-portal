@@ -3,7 +3,7 @@ title: "Building and deploying a Cloud Native Application"
 draft: false
 description: >
     You will build and deploy a web application on a modern container
-    container orchestration platform,
+    orchestration platform,
     and learn cloud native principles along the way.
 summary:
     You will build and deploy a web application on a modern container
