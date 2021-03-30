@@ -3,7 +3,11 @@
     {{ $page := index (where $.context.Site.Pages "Params.name" .) 0 }}
     {{ if gt $index 0 }} & {{ end }}
     {{ if $page }}
-        <a href='{{ (print "/team/" . | urlize) | relURL }}'>{{ . }}</a>
+        {{ if $page.Params.hidden }}
+            {{ . }}
+        {{ else }}
+            <a href='{{ (print "/team/" . | urlize) | relURL }}'>{{ . }}</a>
+        {{ end }}
     {{ else}}
         {{ . }}
     {{ end }}
