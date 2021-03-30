@@ -39,7 +39,7 @@ Spring Cloud Task allows a user to develop and run short-lived microservices usi
 
 Spring Cloud Task records the lifecycle events of a given task. The lifecycle consists of a single task execution. This is a physical execution of a Spring Boot application configured to be a task (annotated with the `@EnableTask` annotation).
 
-Spring Cloud Task requires a SQL database, for a _TaskRepository_, similar to the Spring Batch `JobRepository`. The following databases are supported:
+Spring Cloud Task requires a SQL database, for a `TaskRepository`, similar to the Spring Batch `JobRepository`. The following databases are supported:
 
  * H2
  * HSQLDB
@@ -56,20 +56,6 @@ If you are new to Spring Cloud Task:
 
 [Spring Cloud Data Flow](https://spring.io/projects/spring-cloud-dataflow) (SCDF) supports microservice-based Streaming and Batch data processing for Cloud Foundry and Kubernetes. It provides tools to create complex topologies for streaming and batch data pipelines. The data pipelines consist of Spring Boot apps, built using the Spring Cloud Stream or Spring Cloud Task microservice frameworks. Spring Cloud Data Flow supports a range of data processing use cases, from ETL to import/export, event streaming, and predictive analytics. SCDF’s [BatchScheduler](https://dataflow.spring.io/docs/feature-guides/batch/scheduling/) supports scheduling batch jobs at a set time or in response to an event. 
 
-Scheduling a batch process to run is accomplished using the following steps:
-
-1. In the application or configuration class add the annotation `@EnableScheduling`
-
-2. Specify a cron job expression with the schedule to be executed
-
-```
-  @Scheduled(cron = "${notification.cron:0 0 0/1 * * *}")
-  public void sendNotifications() {
-    logger.info("Sending notifications.....");
-  }
-```        
- SCDF’s [BatchScheduler](https://dataflow.spring.io/docs/feature-guides/batch/scheduling/) supports scheduling batch jobs at a set time or in response to an event. 
- 
 ## Learn More 
 
 Along with the links in this guide, the following videos provide a good introduction to batch processing and related topics:

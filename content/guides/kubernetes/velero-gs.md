@@ -65,7 +65,7 @@ the CLI in this guide.
 
 ### Initial Setup
 
-There are quite a few different storage provider options such as vSphere, AWS,
+There are quite a few different storage provider options such as [vSphere](https://tanzu.vmware.com/content/blog/a-deep-dive-into-the-kubernetes-vsphere-csi-driver-with-tkgi-and-tkg), AWS,
 and GCP. This guide uses the
 [setup for GCP](https://github.com/vmware-tanzu/velero-plugin-for-gcp#setup).
 

@@ -17,12 +17,12 @@ when:
 - When you've come up with a huge number of ideas during [Solution Brainstorming](/practices/solution-brainstorming) and you have so many you need to understand and organize them.
 
 what:
-- sticky notes with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming), still attached to tabloid sheets)
-- large sticky notes
-- sharpies
-- whiteboard
-- expo markers
-- painter’s tape
+- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Sticky notes with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming), still attached to tabloid sheets)
+- Large sticky notes
+- Sharpies
+- Expo markers
+- Painter’s tape
 
 ---
 ## How to Use this Method

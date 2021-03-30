@@ -31,6 +31,7 @@ adoptopenjdk
 AES-GCM
 affordances
 Agile-ific
+Aino
 airgap(ped)?
 Alertmanager
 Alexa
@@ -145,6 +146,7 @@ Carvel('s)?
 cass-operator
 CCM
 cd
+Cedrick
 CentOS
 Ceph
 CertificateRequests
@@ -201,6 +203,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+Corry
 CORS
 cortado
 Coté
@@ -478,6 +481,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+[Ii]mmeasurability
 implementors
 [Ii]ncompressible
 InfoQ
@@ -494,6 +498,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+IoC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
@@ -658,6 +663,7 @@ lTwaivWHzk
 Lua
 Lubomir
 Lum
+Lunven
 Lyft
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
@@ -674,6 +680,7 @@ MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchings
 maxUtilization
+Mayers
 McGraw-Hill
 McLuckie
 MDN
@@ -873,6 +880,7 @@ PreemptLowerPriority
 prefilled
 preload
 prepending
+Presales
 preStop
 PriorityClass(es)?
 Procfile
@@ -1026,6 +1034,7 @@ SolidFire
 Soluto('s)?
 [Ss]onobuoy
 Sox
+[Ss]peedback
 SPIFFE
 Splunk
 Spock
@@ -1043,6 +1052,7 @@ sso|SSO
 Stacker
 [Ss]tandups?
 starbuxman
+STARGATE|Stargate
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1097,7 +1107,7 @@ Tigera
 Tikka
 Tilt(file|Cloud)?
 [Tt]imebox
-timebox
+timebox(ed)?
 TLS(-enabled)?
 [Tt]o[Dd]o
 TODOs?
@@ -1173,6 +1183,7 @@ VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?
 VMworld
+Vonge
 VPA(s|'s)?
 vRealize
 vRLI
@@ -1219,3 +1230,4 @@ ZDNet
 ZOP
 Zou
 Zuul
+μServices
