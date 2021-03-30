@@ -419,7 +419,7 @@ GoDaddy
 Google('s)?
 gotchas
 Gothelf
-GraalVM
+GraalVM(-powered)?
 Gradle
 Grafana
 GRAFANA-PASSWORD
@@ -957,6 +957,7 @@ rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
 Rockstar
+Rodislav
 ROI
 [Rr]ole([Bb]inding(s)?)?
 [Rr]ollout
@@ -1162,6 +1163,7 @@ Vaadin
 ValidatingAdmissionWebhook
 validators
 vault-kubernetes-authenticator
+Vavr
 vCenter
 VCS
 Velero('s)?
