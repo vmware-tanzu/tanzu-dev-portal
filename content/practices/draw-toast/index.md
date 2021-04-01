@@ -72,6 +72,10 @@ While many on-line collaboration solutions have drawing features, we suggest kee
    
    Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 
+Here's a good example using a digital drawing tablet:
+
+![Digital Drawing Toast](/images/practices/draw-toast/example-6.jpg)
+
 ### Preceding
 None at the moment
 
@@ -79,9 +83,14 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-![Wide view of different toast drawings taped to a window wall](/images/practices/draw-toast/example-1.png)
 
-![Close up of one drawing of how to make toast](/images/practices/draw-toast/example-2.png)
+![Drawing Toast](/images/practices/draw-toast/example-5.jpg)
+
+![Drawing Toast](/images/practices/draw-toast/example-3.jpg)
+
+![Drawing Toast](/images/practices/draw-toast/example-4.jpg)
+
+![Drawing Toast](/images/practices/draw-toast/example-1.jpg)
 
 ## Recommended Reading
 
