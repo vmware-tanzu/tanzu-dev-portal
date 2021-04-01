@@ -1,6 +1,6 @@
 ---
 name: Thomas Kraus
-description: "Field Principal in VMware's Modern Applications Business Unit"
+description: "Field Principal at VMware"
 photo: "/images/team/thomas-kraus.png"
 roles: ["author"]
 skills: []

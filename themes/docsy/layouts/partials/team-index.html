@@ -10,7 +10,11 @@
                     <div class="card py-3 px-4 mb-4 text-left text-white">
                         <div class="row">
                             <div class="col-3 pr-0">
-                                <a onclick="" href="{{ .RelPermalink }}"><img class='' src='{{ (.Params.photo | default (print "/images/team/" (urlize .Params.name) ".jpg") | relURL) }}'/></a>
+                                <!-- <a onclick="" href="{{ .RelPermalink }}"><img class='' src='{{ (.Params.photo | default (print "/images/team/" (urlize .Params.name) ".jpg") | relURL) }}'/></a> -->
+                                <a onclick="" href="{{ .RelPermalink }}">
+                                    <div class='' style='background-image: url({{ (.Params.photo | default (print "/images/team/" (urlize .Params.name) ".jpg") | relURL) }}); height:69px;background-size:cover;background-position:center'/></div>
+                                </a>
+
                             </div>
                             <div class="col-9 pr-0 pl-3">
                                 <p class="h4"><a href="{{ .RelPermalink }}">{{- .Params.name -}}</a></p>
