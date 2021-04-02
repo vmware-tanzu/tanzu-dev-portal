@@ -1,5 +1,5 @@
 ---
-title: "Building and deploying a Cloud Native Application"
+title: "Building and Deploying a Cloud Native Application"
 draft: false
 description: >
     You will build and deploy a web application on a modern container
