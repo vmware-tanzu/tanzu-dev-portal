@@ -6,9 +6,6 @@ body {
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
 }
- body .dropdown-toggle::after {
-   content: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-999.png) !important;
-}
 @media (max-width: 991.98px) {
  body .td-navbar .td-navbar-nav-hamburger .dropdown-toggle::after {
     content: "" !important;
@@ -266,6 +263,12 @@ div.aside div.aside-content {
   }
 }
 
+.guide .td-sidebar-nav h5 a:before {
+  padding-right: 10px;
+  content: url({{ "/images/icons/arrow-left-black.svg" | relURL }}) !important;
+  width: 16px;
+  height: 12px;
+}
 
 /* SYNTAX HIGHLIGHTING */
 
