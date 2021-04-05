@@ -10,7 +10,6 @@ summary:
     orchestration platform,
     and learn cloud native principles along the way.
 topics:
-  - Practices
 tags:
   - Practices
   - Development
