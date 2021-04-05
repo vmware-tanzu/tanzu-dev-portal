@@ -131,7 +131,7 @@ then run the application
 ./gradlew bootRun
 ```
 
-*We are running a gradle task so you will most likely see the executing progress bar stop around 75% when the app is up and running.*
+*We are running a Gradle task so you will most likely see the executing progress bar stop around 75% when the app is up and running.*
 
 Now that the application has started, open a browser and go to **(http://localhost:8080)**.
 
@@ -186,7 +186,7 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
     Value       : "2020-12-08T13:46:47.322"
     ```
     
-    **Shown on the Webpage**
+    **Shown on the Page**
     ```
     key: hello
     value: 2020-12-08T13:46:47.322

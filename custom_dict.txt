@@ -399,6 +399,7 @@ Gereon
 Gerhard('s)?
 getAppFromExternalRepository(=false)?
 getters
+gfsh
 ghostEmail
 ghostPassword
 ghostUsername
@@ -427,6 +428,7 @@ Grails
 GraphQL
 Grasso
 GRE
+Greenplum
 Groupon
 gRPC
 Grygleski
@@ -741,6 +743,7 @@ NameCheap
 [Nn]amespacing
 Nana
 [Nn]ano
+Natively
 natively
 Neo4j
 Nesterov
