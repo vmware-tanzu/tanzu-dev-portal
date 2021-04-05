@@ -160,6 +160,7 @@ cfapps
 ChartMuseum
 chartPath
 checkboxes
+Chunyi
 CIDR(s)?
 CIO
 CIS
@@ -234,6 +235,7 @@ customization(s)?
 CustomResourceDefinition(s)?
 CVE-[0-9]{4}-[0-9]+
 CVE(s|-reported)?
+cybersecurity
 Cygwin
 D2iQ
 [Dd]aemonSet(s)?
@@ -667,6 +669,7 @@ Lubomir
 Lum
 Lunven
 Lyft
+Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
@@ -1227,6 +1230,7 @@ XKCD
 XSalsa20
 Xu
 YAML|yaml
+Yaron
 youtube
 ytt
 Zalando
