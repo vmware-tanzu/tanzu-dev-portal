@@ -30,6 +30,9 @@ what:
    {{% callout %}}
    Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
    {{% /callout %}}
+   {{% callout %}}
+   Tip: It may help to communicate the different types of risks prevalent. Business risks ("regulatory standards may hinder our delivery timelines"), team risks ("some members may burn out due to the team being remotely located in different time zones"), etc. can negatively impact an engagement as much as technical risks do.
+   {{% /callout %}}
 1. Ask each person to select their top 5 risks and obstacles
 
 1. Split the group into pairs. Ask each pair to plot their risks together on the axes they draw.
@@ -62,6 +65,7 @@ Success is when you have a shared understanding of the biggest risks and have a 
 - Create a space in which people feel comfortable being honest by setting up the right context for the session
 - Curtail finger pointing or unkind feedback
 - Ensure that the actions are actionable and not too general e.g., “Don’t do this…”  
+- The 2x2 matrix can use different criteria when prioritizing risks ("Potential Impact" vs "Likelihood")
 
 ## Related Practices
 
