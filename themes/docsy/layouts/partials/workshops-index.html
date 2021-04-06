@@ -1,14 +1,5 @@
 <div class='flex container flex-wrap'>
 
-    <div class='sidebar col-lg-3 col-0 pl-0 pr-3'>
-        <h3>Filter</h3>
-        <br/>
-        <ul class='filters'>
-            <li class="filter active" filter="all">View all</li>
-            {{ partial "section-tags.html" . }}
-        </ul>
-    </div>
-
     <div class="section-index flex-1">
         {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
         {{ $parent := .Page }}
@@ -29,11 +20,14 @@
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
-                    <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
-                        <h4 class="link mt-3">{{- .Title -}}</h4>
-                        <h5 class="fs-90"><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }} mins</h5>
-                        <p class="fs-90">{{ .Description | markdownify }}</p>
+                <div class="filter-item col-lg-4 mb-4 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
+                    <a class="linked-box td-box--gray-darkest workshop-box overflow-hidden" href="{{ .RelPermalink }}">
+                        <div class='workshop-hero' style='background-image: url({{ (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL) }});background-size:cover;background-position:center'></div>
+                        <div class='description px-4 pt-2 flex-column'>
+                            <h4 class="white mt-3">{{- .Title -}}</h4>
+                            <p class=" fs-90 ">{{ .Description | markdownify }}</p>
+                            <h5 class="fs-80 "><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }} mins</h5>
+                        </div>
                     </a>
                 </div>
                 {{ end }}

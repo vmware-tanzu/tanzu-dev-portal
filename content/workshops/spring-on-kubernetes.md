@@ -16,6 +16,8 @@ tags:
   - Spring Boot
 length: 120
 lab: spring-on-kubernetes
+hero: "/images/workshops/workshop-spring-on-kubernetes.png"
+
 ---
 
 During this workshop you will learn the finer details of how to create, build, run, and debug a basic Spring Boot app on
