@@ -27,6 +27,7 @@
             {{ with .Site.GetPage .Params.source }}
               <h1>{{ .Title }}</h1>
               {{ .Content }}
+              {{ partial "pager.html" . }}
             {{ end }}
           </main>
         </div>

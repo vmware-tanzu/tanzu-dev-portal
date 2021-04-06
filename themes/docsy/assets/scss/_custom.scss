@@ -113,7 +113,7 @@ blockquote {
 
 p {
   font-size: 1.0625rem;
-	margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 img {
@@ -584,7 +584,7 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 .breadcrumb-item {
-	font-size: 0.9rem;
+  font-size: 0.9rem;
   // opacity: 0.5;
 }
 
@@ -690,7 +690,8 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
-.team-body-copy, .guide {
+.team-body-copy,
+.guide {
   h4 {
     margin-top: 2rem;
   }
@@ -906,7 +907,7 @@ body.light-mode #toggle-light-dark-mode span {
 .episodes .countdown {
   border-radius: 40px;
   background: $bright-green;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 500;
   padding: 2px 20px 1px;
   -webkit-font-smoothing: antialiased;
@@ -914,9 +915,9 @@ body.light-mode #toggle-light-dark-mode span {
 }
 
 .episodes .countdown {
-  position:absolute;
-  top:2px;
-  right:10px;
+  position: absolute;
+  top: 2px;
+  right: 10px;
   padding: 3px 15px;
 }
 
@@ -987,7 +988,7 @@ body.tv-episode {
 #live-notify .btn {
   border-radius: 40px;
   background: white;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 500;
   padding: 2px 10px 1px;
   -webkit-font-smoothing: antialiased;
@@ -1007,11 +1008,11 @@ body.tv-episode {
 
 .col-4-thumbnail {
   padding: 0;
-  background-color: #324F61;
+  background-color: #324f61;
   transform: scale(1);
-  transition: transform .25s;
-  
-  @media(min-width: 1160px) {
+  transition: transform 0.25s;
+
+  @media (min-width: 1160px) {
     img {
       height: 200px;
     }
@@ -1023,9 +1024,9 @@ body.tv-episode {
     &:hover {
       transform: scale(1.05);
       opacity: 1;
-  
+
       .video-description {
-        background-color: #45667B;
+        background-color: #45667b;
       }
       .thumbnail-gradient {
         opacity: 0;
@@ -1040,16 +1041,20 @@ body.tv-episode {
 .thumbnail-gradient {
   width: 100%;
   height: 80px;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   opacity: 30%;
-  transition: opacity .25s;
+  transition: opacity 0.25s;
 }
 
 .video-description {
-  background-color: #324F61;
+  background-color: #324f61;
   color: white !important;
   padding: 20px 25px;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
   height: 130px;
   font-size: 1.0625rem;
 }
@@ -1391,3 +1396,21 @@ code {
 /* GenericUnderline .chroma .gl {  } */
 /* Text .chroma . {  } */
 /* TextWhitespace .chroma .w {  } */
+
+.series-pager {
+  a {
+    border: 1px solid #485764 !important;
+    border-radius: 4px;
+  }
+  p.text-uppercase {
+    font-size: 0.75rem;
+    color: $light;
+  }
+  p {
+    color: white;
+  }
+  i {
+    font-size: 1.5rem;
+    color: $light;
+  }
+}
