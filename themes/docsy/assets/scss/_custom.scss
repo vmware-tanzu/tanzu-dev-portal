@@ -184,6 +184,27 @@ a {
   }
 }
 
+.data-featured-section {
+
+  padding-top: 0 !important;
+
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-lg-4 {
+    padding-left: 0;
+    padding-right: 30px;
+    &:last-child {
+      padding-right: 0;
+    }
+    @media (max-width: 991px) {
+      padding-right: 0;
+    }
+  }
+}
+
+
 .row {
   margin-left: 0;
   margin-right: 0;
