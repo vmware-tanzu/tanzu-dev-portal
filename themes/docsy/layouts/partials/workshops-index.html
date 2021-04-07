@@ -23,10 +23,12 @@
                 <div class="filter-item col-lg-4 mb-4 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
                     <a class="linked-box td-box--gray-darkest workshop-box overflow-hidden" href="{{ .RelPermalink }}">
                         <div class='workshop-hero' style='background-image: url({{ (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL) }});background-size:cover;background-position:center'></div>
-                        <div class='description px-4 pt-2 flex-column'>
-                            <h4 class="white mt-3">{{- .Title -}}</h4>
-                            <p class=" fs-90 ">{{ .Description | markdownify }}</p>
-                            <h5 class="fs-80 "><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }} mins</h5>
+                        <div class='description px-4 pt-2 flex flex-column justify-content-between pb-4'>
+                            <div>
+                                <h4 class="white mt-3">{{- .Title -}}</h4>
+                                <p>{{ .Description | markdownify }}</p>
+                            </div>
+                            <h5 class="fs-80 opacity-4"><span class="fa fa-hourglass-half mr-1">&nbsp;</span>{{ .Params.length }} minutes</h5>
                         </div>
                     </a>
                 </div>
