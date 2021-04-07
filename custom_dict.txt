@@ -161,6 +161,7 @@ ChartMuseum
 chartPath
 checkboxes
 Chunyi
+Christoph
 CIDR(s)?
 CIO
 CIS
@@ -270,6 +271,7 @@ decrypt(ed|ing)?
 DEK(s)?
 Deleuze
 deliverAgile
+DellEMC
 deployable
 deserializing
 Desgber
@@ -417,9 +419,11 @@ Glithero
 globalDefault
 GlobalNetwork(Policy|Set)
 [Gg]mail
+GmbH
 GoDaddy
 [Gg]olang
 Google('s)?
+Görkem
 gotchas
 Gothelf
 GraalVM(-powered)?
@@ -699,6 +703,7 @@ microservice.
 microservices-oriented
 Microsystems
 middleware
+Migros
 Minella
 Mini-Wheats
 [Mm]inibroker
@@ -818,6 +823,7 @@ overengineer(ing)?
 [oO]verprovisioning
 oversample
 OWASP
+Özlü
 Pacak
 Packer
 PagerDuty
@@ -1179,8 +1185,10 @@ VerticalPodAutoscaler
 [Vv]eth
 veth-jelly
 Vetter
+vExpert
 Vikram
 Viktor
+Villnow
 Violeta
 VirtualBox
 [Vv]irtualenv
