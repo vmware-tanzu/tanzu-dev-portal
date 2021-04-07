@@ -1414,3 +1414,15 @@ code {
     color: $light;
   }
 }
+
+.related-reading {
+  background-color: $gray-800;
+  border-radius: 6px;
+  p {
+    color: white;
+    font-size: 0.75rem;
+  }
+  a {
+    font-size: 0.8rem;
+  }
+}

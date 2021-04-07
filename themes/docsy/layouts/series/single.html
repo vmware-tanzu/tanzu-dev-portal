@@ -17,6 +17,7 @@
           {{ if not .IsSection }}
           <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
             {{ partial "toc.html" . }}
+            {{ partial "related.html" . }}
           </div>
           {{ end }}
           <main class="{{if not .IsSection}}col-12 col-md-9 col-xl-8{{end}} pl-md-5 mt-lg-5 pt-lg-5" role="main">
