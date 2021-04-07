@@ -160,6 +160,7 @@ cfapps
 ChartMuseum
 chartPath
 checkboxes
+Chunyi
 Christoph
 CIDR(s)?
 CIO
@@ -235,6 +236,7 @@ customization(s)?
 CustomResourceDefinition(s)?
 CVE-[0-9]{4}-[0-9]+
 CVE(s|-reported)?
+cybersecurity
 Cygwin
 D2iQ
 [Dd]aemonSet(s)?
@@ -401,6 +403,7 @@ Gereon
 Gerhard('s)?
 getAppFromExternalRepository(=false)?
 getters
+gfsh
 ghostEmail
 ghostPassword
 ghostUsername
@@ -431,6 +434,7 @@ Grails
 GraphQL
 Grasso
 GRE
+Greenplum
 Groupon
 gRPC
 Grygleski
@@ -669,6 +673,7 @@ Lubomir
 Lum
 Lunven
 Lyft
+Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
@@ -746,6 +751,7 @@ NameCheap
 [Nn]amespacing
 Nana
 [Nn]ano
+Natively
 natively
 Neo4j
 Nesterov
@@ -1232,6 +1238,7 @@ XKCD
 XSalsa20
 Xu
 YAML|yaml
+Yaron
 youtube
 ytt
 Zalando
