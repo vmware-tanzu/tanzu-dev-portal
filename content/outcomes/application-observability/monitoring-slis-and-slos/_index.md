@@ -1,18 +1,20 @@
 ---
-title: Monitoring SLI's and SLO's
+title: Monitoring SLIs and SLOs
 weight: 1
 layout: single
 related:
-- "/guides/kubernetes/app-observability-exporting-metrics"
+  - "/guides/kubernetes/app-observability-exporting-metrics"
 ---
+
 Service Level Indicators (SLIs) and Service Level Objectives (SLOs) are two of the most important concepts in Site Reliability Engineering (SRE), and are key to establishing an observability culture.
 It all starts with identifying the right SLIs. Think about the key features and workflows that your users care most about, and choose a small number (think three to five per service) of SLIs that represent the availability of these features. Next, choose an appropriate objective for each of these indicators. Avoid spending too much time debating the initial SLO - your first attempt will almost certainly need adjustment. A good rule of thumb is to start with an initial SLO much lower than you think you’ll need, and fine-tune this number as necessary.
 Once you’ve identified the SLIs and SLOs for your service you need to start measuring them. SLIs are typically measured over a rolling window so that the effects of an availability-impacting incident “stay with you” for some amount of time, before rolling out of the window. This approach helps teams to adjust their behavior in order to avoid multiple incidents occurring in a short amount of time, which leads to unhappy users. Since many services have different usage and traffic patterns on weekends, we recommend a 28-day rolling window - which ensures you’ll always have four weekends in the window.
 
 ## Measurement
+
 In this guide we’ll cover two simple frameworks for structuring your metrics in a way that facilitates this type of monitoring. While these two approaches might not work for every scenario, we’ve found that the majority of SLIs can be measured in this way.
 The first approach uses a single gauge metric. A gauge is a metric whose value can increase or decrease over time, but in this approach we limit the value of the gauge to 1 (last probe was successful) or 0 (last probe was unsuccessful). Prometheus’ up time series works in this way.
-The second approach uses two counter metrics.  A counter is a metric whose value only increases with time (think total number of page views or total number of error responses). In this approach, the first counter represents the total number of probe attempts, and the second counter represents the total number of successful (or unsuccessful) probes.
+The second approach uses two counter metrics. A counter is a metric whose value only increases with time (think total number of page views or total number of error responses). In this approach, the first counter represents the total number of probe attempts, and the second counter represents the total number of successful (or unsuccessful) probes.
 The examples that follow will use Tanzu Observability by Wavefront for the storage and visualization of this data, but the concepts can be applied to any system that can store and display time-series data.
 Monitoring SLIs with a gauge metric
 This approach exposes a single metric that is either 1 or 0 at all times. For example, a prober could periodically test an application feature such as “add item to shopping cart” and set the value of the metric to 1 if the operation succeeded, or 0 otherwise.
