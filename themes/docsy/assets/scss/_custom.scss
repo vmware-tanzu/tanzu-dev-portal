@@ -570,11 +570,6 @@ body.light-mode #toggle-light-dark-mode span {
   color: white;
 }
 
-.guide .td-sidebar-nav__section-title a.active,
-.guide .td-sidebar-nav__section-title a:hover {
-  font-size: 1.2rem;
-}
-
 .breadcrumb-item a,
 .td-sidebar-nav .td-sidebar-link__page,
 .td-sidebar-nav .td-sidebar-link__subsection {
@@ -1443,5 +1438,12 @@ code {
   }
   a {
     font-size: 0.8rem;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  li {
+    list-style: none;
+    display: block;
   }
 }
