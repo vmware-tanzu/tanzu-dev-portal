@@ -37,6 +37,7 @@
     "Safari >= 6"
   ],
   "devDependencies": {
-    "husky": "^5.1.1"
+    "husky": "^5.1.1",
+    "netlify-cli": "^3.16.2"
   }
 }
