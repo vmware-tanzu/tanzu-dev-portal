@@ -59,23 +59,10 @@
     }
   }
 
-<<<<<<< HEAD
   order: 2;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
   vertical-align: top;
-=======
-    &__inner {
-        @include media-breakpoint-up(md) {
-            @supports (position: sticky) {
-                position: sticky;
-                top: 0rem;
-                z-index: 10;
-                // height: calc(100vh - 6rem);
-            }
-        }
-    }
->>>>>>> 75a1013 (Design bug fixes (#684))
 
   a {
     display: block;
