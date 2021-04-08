@@ -28,10 +28,11 @@
         {{ partial "sidebar-outcomes.html" (dict "context" . "outcome" $outcome) }}
       </div>
       <div class="col-14 col-md-8 col-lg-8 col-xl-8 d-print-none">
-        {{ if ne $outcome .CurrentSection }}
+        {{ if ne $outcome .Page }}
         <h3>{{ .Title }}</h3>
         {{ end }}
         {{ .Content }}
+
         {{ partial "pager.html" . }}
       </div>
       <div class="col-14 col-md-3 col-lg-3 col-xl-3 d-print-none">

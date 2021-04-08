@@ -2,6 +2,7 @@
     {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
     {{ $parent := .Page }}
     {{ range $pages }}
+    {{ if .IsSection }}
     {{ if eq .Parent $parent }}
     <div class="px-4 py-3 my-3">
         <a class="lpx-4 py-2" href="{{ .RelPermalink }}">
@@ -9,6 +10,7 @@
             <p>{{ .Description | markdownify }}</p>
         </a> 
     </div>
+    {{ end }}
     {{ end }}
     {{ end }}
 </div>
