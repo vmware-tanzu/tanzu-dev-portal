@@ -60,7 +60,6 @@ exports.handler = async (event, context) => {
     const jwtToken = {
       exp: decoded.payload.iat + 86400,
       iat: decoded.payload.iat,
-      sub: decoded.payload.sub,
       context: decoded.payload.context,
       context_name: decoded.payload.context_name,
       app_metadata: {
@@ -72,16 +71,17 @@ exports.handler = async (event, context) => {
       },
     };
     const oneTrustCookieParsed = querystring.parse(cookies["OptanonConsent"]);
-    const groupposition = oneTrustCookieParsed.groups.search("C0002:") + 1;
-    console.log(oneTrustCookieParsed)
-    if (oneTrustCookieParsed.groups[groupposition] == 0) {
+    const groupposition = oneTrustCookieParsed.groups.search("C0002:") + 6;
+    console.log(oneTrustCookieParsed.groups[groupposition]);
+    if (oneTrustCookieParsed.groups[groupposition] === "0") {
       jwtToken.id = randomToken();
     } else {
       jwtToken.name = decoded.payload.username;
       jwtToken.id = decoded.payload.username;
       jwtToken.acct = decoded.payload.acct;
+      jwtToken.sub = decoded.payload.sub;
     }
-    console.log(jwtToken)
+    console.log(jwtToken);
     const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SIGNING_SECRET, {
       algorithm: "HS256",
     });
