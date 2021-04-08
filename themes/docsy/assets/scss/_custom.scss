@@ -1399,6 +1399,13 @@ code {
 /* Text .chroma . {  } */
 /* TextWhitespace .chroma .w {  } */
 
+.outcomes {
+  h2,
+  a {
+    padding-top: 0;
+  }
+}
+
 .outcomes-pager {
   a {
     border: 1px solid #485764 !important;
