@@ -1,0 +1,19 @@
+{{warnf "nextinsection %v" .}}
+<div class="outcomes-pager my-5 d-flex align-items-center d-print-none">
+    <a {{if .Prev}}href="{{.Prev.RelPermalink}}" {{end}}
+        class="flex-grow-1 flex-shrink-1 mr-2 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center {{if not .Prev}} disabled{{end}}">
+        <i class="fas fa-arrow-left"></i>
+        <div>
+            <p class="text-right text-uppercase font-weight-light mb-0">{{ T "ui_pager_prev" }}</p>
+            <p class="text-right mt-0">{{if .Prev}}{{.Prev.Title}}{{end}}</p>
+        </div>
+    </a>
+    <a {{if .Next}}href="{{.Next.RelPermalink}}" {{end}}
+        class="flex-grow-1 flex-shrink-1 ml-2 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center {{if not .Next}} disabled{{end}}">
+        <div>
+            <p class="text-left text-uppercase font-weight-light mb-0">{{ T "ui_pager_next" }}</p>
+            <p class="text-left mt-0">{{if .Next}}{{.Next.Title}}{{end}}</p>
+        </div>
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>

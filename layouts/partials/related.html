@@ -1,0 +1,10 @@
+{{ if .Params.related }}
+<div class="related-reading pl-3 pr-3 pt-2 pb-2">
+    <p class="text-uppercase font-weight-bold">Related</p>
+    <ul>
+        {{ range .Params.related }}
+        <li><a href="{{ .href }}">{{ .title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
