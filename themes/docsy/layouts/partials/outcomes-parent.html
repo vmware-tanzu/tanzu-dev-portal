@@ -1,0 +1,9 @@
+{{ $scratch := newScratch  }}
+{{ print "GGGGGGGGGGGGGGG"}}
+{{ if eq .Parent .FirstSection }}
+{{ printf "FFFF %s %s %s\n\n" .Parent .FirstSection .}}
+{{ $scratch.Set "outcome" . }}
+{{ else }}
+{{ printf "JJJJ"}}
+{{ partial "outcomes-parent.html" .Parent }}}
+{{ end }}

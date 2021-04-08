@@ -1,0 +1,10 @@
+{{ define "subpages" }}
+  {{ if .Pages }}
+    {{ range .Pages}}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+      {{ template "subpages" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ template "subpages" . }}
