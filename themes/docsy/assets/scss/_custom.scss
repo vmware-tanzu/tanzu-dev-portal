@@ -1075,6 +1075,16 @@ body.tv-episode {
   opacity: 80%;
 }
 
+.workshops-hero {
+  background: none;
+  padding-bottom: 0px !important;
+  min-height: auto !important;
+
+  .lead {
+    max-width: 920px;
+  }
+}
+
 .checklist-item {
   padding: 0.5rem;
   border-left: 3px solid var(--MAIN-ANCHOR-color);
