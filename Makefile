@@ -40,9 +40,9 @@ ifeq ($(CONTEXT), production)
 else
 	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
 endif
-	sed -i "s/SENTRY_DSN_AUTH_START/$SENTRY_DSN_AUTH_START/g" netlify/functions/util/config.js
-	sed -i "s/SENTRY_DSN_AUTH_CALLBACK/$SENTRY_DSN_AUTH_CALLBACK/g" netlify/functions/util/config.js
-	sed -i "s/SENTRY_DSN_GET_WORKSHOP/$SENTRY_DSN_GET_WORKSHOP/g" netlify/functions/util/config.js
+	sed -i "s/SENTRY_DSN_AUTH_START/${SENTRY_DSN_AUTH_START}/g" netlify/functions/util/config.js
+	sed -i "s/SENTRY_DSN_AUTH_CALLBACK/${SENTRY_DSN_AUTH_CALLBACK}/g" netlify/functions/util/config.js
+	sed -i "s/SENTRY_DSN_GET_WORKSHOP/${SENTRY_DSN_GET_WORKSHOP}/g" netlify/functions/util/config.js
 
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
