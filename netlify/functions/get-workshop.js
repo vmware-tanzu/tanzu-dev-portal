@@ -2,6 +2,8 @@
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const got = require('got');
+const Sentry = require('@sentry/serverless');
+
 const { getSiteURL } = require('./util/auth');
 // eslint-disable-next-line import/no-unresolved
 const config = require('./util/config');
@@ -17,7 +19,13 @@ if (config.context === 'production' || config.context === 'deploy-preview') {
     apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
 }
 
-exports.handler = async (event) => {
+Sentry.AWSLambda.init({
+    dsn: config.sentry.getWorkshopDsn,
+    environment: config.context,
+    tracesSampleRate: 1.0,
+});
+
+exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     if (
         event.path === '/developer/get-workshop' ||
     event.path === '/developer/get-workshop/'
@@ -95,4 +103,4 @@ exports.handler = async (event) => {
             body: JSON.stringify({ error: err.message }),
         };
     }
-};
+});

@@ -2,6 +2,7 @@
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const querystring = require('querystring');
+const Sentry = require('@sentry/serverless');
 
 const {
     makeAuth,
@@ -12,10 +13,20 @@ const {
     tokenIsValid
 } = require('./util/auth');
 const base64 = require('./util/base64');
+// eslint-disable-next-line import/no-unresolved
+const config = require("./util/config");
 
 const netlifyCookieName = 'nf_jwt';
 
-exports.handler = async (event) => {
+
+
+Sentry.AWSLambda.init({
+    dsn: config.sentry.authCallbackDsn,
+    environment: config.context,
+    tracesSampleRate: 1.0,
+});
+
+exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     // we should only get here via a reidrect from CSP, which would have
     // an authorization code in the query string. if that's not present,
     // then someone didn't follow the correct flow - bail early
@@ -120,6 +131,6 @@ exports.handler = async (event) => {
             body: JSON.stringify({ error: err.message }),
         };
     }
-};
+});
 
 
