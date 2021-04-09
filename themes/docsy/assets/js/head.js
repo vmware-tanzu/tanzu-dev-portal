@@ -1,16 +1,3 @@
-import * as Sentry from "@sentry/browser";
-import { Integrations } from "@sentry/tracing";
-
-Sentry.init({
-  dsn: "https://91138cf7f17842fd8a57d45372bf538c@o448817.ingest.sentry.io/5712977",
-  integrations: [new Integrations.BrowserTracing()],
-
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
-});
-
 var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
 

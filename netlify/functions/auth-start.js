@@ -12,8 +12,6 @@ const base64 = require('./util/base64');
 // eslint-disable-next-line import/no-unresolved
 const config = require("./util/config");
 
-console.log(config);
-
 Sentry.AWSLambda.init({
     dsn: config.sentry.authStartDsn,
     environment: config.context,
