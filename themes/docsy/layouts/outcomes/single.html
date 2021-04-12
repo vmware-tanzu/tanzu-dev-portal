@@ -32,7 +32,11 @@
         {{ end }}
         {{ .Content }}
 
+        {{ if .IsSection }}
+        {{ partial "begin.html" . }}
+        {{ else }}
         {{ partial "pager.html" . }}
+        {{ end }}
       </div>
       <div class="col-12 col-md-2 mt-2 d-print-none">
         <div class="outcomes-toc px-3">
