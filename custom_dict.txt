@@ -26,6 +26,7 @@ accessor
 Activiti
 additively
 addon(s)?
+Adib
 Admission(Response|Review)
 adoptopenjdk
 AES-GCM
@@ -160,8 +161,8 @@ cfapps
 ChartMuseum
 chartPath
 checkboxes
-Chunyi
 Christoph
+Chunyi
 CIDR(s)?
 CIO
 CIS
@@ -987,6 +988,7 @@ runtimes?
 [sS]3
 SaaS
 SaaS(-based)?
+Saikali
 SameSite
 SAML
 samplehost(:[0-9]*)?
