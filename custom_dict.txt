@@ -257,6 +257,7 @@ dataset
 DataStax('s|Examples)?
 DATEV('s)?
 DawsCon
+DAZN
 dbkey
 dbuser
 DDD
@@ -676,6 +677,7 @@ LTS
 lTwaivWHzk
 Lua
 Lubomir
+Luca
 Lum
 Lunven
 Lyft
@@ -704,6 +706,8 @@ Mesos
 MessagingBase
 metac
 [Mm]etacontroller
+Mezzalira
+micro-frontends
 Microk8s
 microservice.
 microservices-oriented
@@ -823,6 +827,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
 overconsumption
