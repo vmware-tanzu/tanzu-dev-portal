@@ -188,6 +188,7 @@ CNI-[Pp]lugin(s)?
 CNI-specific
 codebase
 CodeFresh
+CodeOne
 CoffeeOps
 colocated
 commonName(.)?
@@ -255,6 +256,7 @@ dataset
 [Dd]atasources
 DataStax('s|Examples)?
 DATEV('s)?
+DawsCon
 DAZN
 dbkey
 dbuser
@@ -409,6 +411,7 @@ ghostEmail
 ghostPassword
 ghostUsername
 Gibb
+GIDS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -442,6 +445,7 @@ Grygleski
 Grzejszxzak
 GUID(s)?
 Gunicorn
+Guntur
 gzip(ped)?
 H2
 Hadlow
@@ -588,6 +592,7 @@ Kanban
 Kaniko
 kapp
 kata
+Katas
 KEK(s)?
 kendrickcoleman
 [Kk]ey[Ss]tore
@@ -783,6 +788,7 @@ NoSQL
 npm
 NSX(-T|-SM)?
 nullable
+NYJavaSIG
 OAuth2?
 [Oo]bservability
 OCI(-compliant)?
@@ -922,6 +928,7 @@ PWAs
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+QCon
 QoS
 Querier
 Quickstart
@@ -1064,6 +1071,7 @@ SqlServer
 SqlServer|sqlserver
 src
 SRE
+Sri
 ssh-keygen
 SSL
 sso|SSO
@@ -1185,6 +1193,7 @@ vCenter
 VCS
 Velero('s)?
 Venkat
+Venkateswara
 versioned
 VerticalPodAutoscaler
 [Vv]eth
