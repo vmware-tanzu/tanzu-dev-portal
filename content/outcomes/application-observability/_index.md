@@ -1,6 +1,5 @@
 ---
 title: Application Observability
-description: Some description of app observability
 weight: 2
 layout: single
 description: |

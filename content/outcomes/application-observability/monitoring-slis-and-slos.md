@@ -55,7 +55,7 @@ any system that can store and display time-series data.
 ## Monitoring SLIs with a gauge metric
 
 This approach exposes a single metric that is either 1 or 0 at all times. For
-example, a prober could periodically test an application feature and set the
+example, a probe could periodically test an application feature and set the
 value of the metric to 1 if the operation succeeded, or 0 otherwise.
 
 The raw metric may look like this:
@@ -75,7 +75,7 @@ probes that were successful.
 
 We can use the `mcount` and `msum`
 [moving window functions](https://docs.wavefront.com/query_language_reference.html#moving-window-time-functions)
-to build the queres. For a metric named `gauge.up`, we would have the following
+to build the queries. For a metric named `gauge.up`, we would have the following
 queries:
 
 - Attempts: `mcount(28d, ts("guage.up"))`

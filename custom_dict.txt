@@ -391,6 +391,7 @@ Gartner('s)?
 Gaubert
 GC(E|L|P|R|S)?
 Geesaman
+Gemfiles
 GemFire
 Geneve
 Georgiva
@@ -641,7 +642,7 @@ LimitRanger
 LimitRanges
 LinkedIn
 Linkerd
-linter
+linter(s)
 [Ll]inux
 Lippert
 Livelessons
@@ -783,6 +784,7 @@ olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
 on-prem
+onboarded
 OneMagnify
 OOM
 oom_killer
@@ -979,6 +981,7 @@ SameSite
 SAML
 samplehost(:[0-9]*)?
 sandbox(ing)?
+sandboxed
 Sanderson
 SAT(s)?
 Sathe
@@ -1024,7 +1027,9 @@ Siri
 Skyscanner
 SLA
 Sletten
+SLI(s)
 slideshare
+SLO(s)
 Sloka
 SmartTV
 SMI
