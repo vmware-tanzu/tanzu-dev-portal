@@ -124,6 +124,7 @@ Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootup
 Boris
+Boskey
 Bowei
 BPF
 br/
@@ -1011,6 +1012,7 @@ sandboxed
 Sanderson
 SAT(s)?
 Sathe
+Savla
 scaffolded
 [Ss]calable
 scaledown(s)?
