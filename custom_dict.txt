@@ -26,6 +26,7 @@ accessor
 Activiti
 additively
 addon(s)?
+Adib
 Admission(Response|Review)
 adoptopenjdk
 AES-GCM
@@ -123,6 +124,7 @@ Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootup
 Boris
+Boskey
 Bowei
 BPF
 br/
@@ -160,8 +162,8 @@ cfapps
 ChartMuseum
 chartPath
 checkboxes
-Chunyi
 Christoph
+Chunyi
 CIDR(s)?
 CIO
 CIS
@@ -188,6 +190,7 @@ CNI-[Pp]lugin(s)?
 CNI-specific
 codebase
 CodeFresh
+CodeOne
 CoffeeOps
 colocated
 commonName(.)?
@@ -255,6 +258,8 @@ dataset
 [Dd]atasources
 DataStax('s|Examples)?
 DATEV('s)?
+DawsCon
+DAZN
 dbkey
 dbuser
 DDD
@@ -408,6 +413,7 @@ ghostEmail
 ghostPassword
 ghostUsername
 Gibb
+GIDS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -441,6 +447,7 @@ Grygleski
 Grzejszxzak
 GUID(s)?
 Gunicorn
+Guntur
 gzip(ped)?
 H2
 Hadlow
@@ -587,6 +594,7 @@ Kanban
 Kaniko
 kapp
 kata
+Katas
 KEK(s)?
 kendrickcoleman
 [Kk]ey[Ss]tore
@@ -670,6 +678,7 @@ LTS
 lTwaivWHzk
 Lua
 Lubomir
+Luca
 Lum
 Lunven
 Lyft
@@ -698,6 +707,8 @@ Mesos
 MessagingBase
 metac
 [Mm]etacontroller
+Mezzalira
+micro-frontends
 Microk8s
 microservice.
 microservices-oriented
@@ -779,6 +790,7 @@ NoSQL
 npm
 NSX(-T|-SM)?
 nullable
+NYJavaSIG
 OAuth2?
 [Oo]bservability
 OCI(-compliant)?
@@ -815,6 +827,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
 overconsumption
@@ -917,6 +930,7 @@ PWAs
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+QCon
 QoS
 Querier
 Quickstart
@@ -987,6 +1001,7 @@ runtimes?
 [sS]3
 SaaS
 SaaS(-based)?
+Saikali
 SameSite
 SAML
 samplehost(:[0-9]*)?
@@ -994,6 +1009,7 @@ sandbox(ing)?
 Sanderson
 SAT(s)?
 Sathe
+Savla
 scaffolded
 [Ss]calable
 scaledown(s)?
@@ -1059,6 +1075,7 @@ SqlServer
 SqlServer|sqlserver
 src
 SRE
+Sri
 ssh-keygen
 SSL
 sso|SSO
@@ -1180,6 +1197,7 @@ vCenter
 VCS
 Velero('s)?
 Venkat
+Venkateswara
 versioned
 VerticalPodAutoscaler
 [Vv]eth
