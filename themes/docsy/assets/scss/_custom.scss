@@ -90,12 +90,20 @@ blockquote {
   }
 }
 
+.fs-75 {
+  font-size: 75%;
+}
+
 .fs-80 {
   font-size: 80%;
 }
 
 .fs-90 {
   font-size: 90%;
+}
+
+.grey-hr {
+  border-top: 1px solid rgb(72, 87, 100);
 }
 
 .border-top {
@@ -1073,6 +1081,10 @@ body.tv-episode {
 
 .opacity-4 {
   opacity: 80%;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 1px;
 }
 
 .workshops-hero {

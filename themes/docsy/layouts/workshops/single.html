@@ -5,7 +5,7 @@
 
 	const decodedToken = getCookie("nf_jwt")
 	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
-		document.getElementById("startinfo").innerHTML = "<em>(Login Required)</em>"
+		document.getElementById("startinfo").innerHTML = "<em class='mt-4'>Login Required</em>"
 	}
 	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
 
@@ -21,23 +21,24 @@
 
 </script>
 <div class="td-main ">
-	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+	<div class="mt-lg-5 mt-0 py-2">
 		<div class='container'>
 			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 			<h1>{{ .Title }}</h1>
-			<p>{{ .Description }}</p>
-			<p>Approximate time: {{ .Params.length }} minutes</p>
-			<div class="short-gradient-line mb-4"></div>
-			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" ><span id="buttonicon" class="fa fa-cog"> </span> Start Workshop</a><span class="text-muted pl-2 fs-90" id="startinfo"></span>
+			<h4 class='text-white'>{{ .Description }}</h4>
+			<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>Approximate time: {{ .Params.length }} minutes</p>
+			<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90" id="startinfo"></span>
+			<hr class='grey-hr mt-4'>
 
 		</div>
 	</div>
 
+
 	{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
 
-	<div class="container py-5">
+	<div class="container pb-5">
 			{{ with $img := .Params.logo }}
-		<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+		<!-- <img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/> -->
 		{{end}}
 		<div class="github-imported-sample">
 				{{ .Content }}
