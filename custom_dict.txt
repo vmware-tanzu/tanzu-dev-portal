@@ -271,7 +271,7 @@ de-duplicate
 [Dd]ebian
 Debroy
 debuggable
-declaratively
+[Dd]eclaratively
 decrypt(ed|ing)?
 DEK(s)?
 Deleuze
@@ -592,7 +592,7 @@ Kafka
 Kamus
 Kanban
 Kaniko
-[Kk]app(-controller)?
+[Kk]app(-controller|.)?
 kata
 Katas
 KEK(s)?
