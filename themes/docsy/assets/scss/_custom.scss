@@ -184,6 +184,27 @@ a {
   }
 }
 
+.data-featured-section {
+
+  padding-top: 0 !important;
+
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-lg-4 {
+    padding-left: 0;
+    padding-right: 30px;
+    &:last-child {
+      padding-right: 0;
+    }
+    @media (max-width: 991px) {
+      padding-right: 0;
+    }
+  }
+}
+
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -1070,6 +1091,10 @@ a i.fa, a i.fas {
 .guide .td-toc {
   max-height: calc(100vh - 4rem);
   overflow: scroll;
+}
+
+.guide .section-index .col-lg-4 {
+  // background-color: 
 }
 
 .checklist-item {
