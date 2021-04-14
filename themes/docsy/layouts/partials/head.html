@@ -36,7 +36,7 @@
 {{ if .Site.IsServer }}
 <script src="{{ $jsHead.RelPermalink }}"></script>
 {{ else }}
-{{ $jsHead := $jsHead | minify | fingerprint }}
+{{ $jsHead := $jsHead | js.Build  (dict "sourcemap" "inline" "minify" "true") | fingerprint }}
 <script src="{{ $jsHead.RelPermalink }}" integrity="{{ $jsHead.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 
