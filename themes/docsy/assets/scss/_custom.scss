@@ -1084,6 +1084,15 @@ body.tv-episode {
   }
 }
 
+a i.fa, a i.fas {
+  margin-right: 5px;
+}
+
+.guide .td-toc {
+  max-height: calc(100vh - 4rem);
+  overflow: scroll;
+}
+
 .guide .section-index .col-lg-4 {
   // background-color: 
 }
