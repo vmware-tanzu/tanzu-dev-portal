@@ -13,7 +13,7 @@
   
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.82.0+extended"
   TZ='America/Los_Angeles'
 
 [[redirects]]
