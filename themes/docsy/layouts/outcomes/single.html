@@ -7,7 +7,6 @@
 {{ end }}
 {{ end }}
 
-
 {{ define "main"}}
 
 {{ template "outcomefinder" (dict "context" . "scratch" $.Scratch) }}
@@ -30,7 +29,13 @@
         {{ if ne $outcome .Page }}
         <h2>{{ .Title }}</h2>
         {{ end }}
+
+        {{ if .Params.contentPage }}
+        {{ $page := .GetPage .Params.contentPage }}
+        {{ $page.Content }}
+        {{ else }}
         {{ .Content }}
+        {{ end }}
 
         {{ if .IsSection }}
         {{ partial "begin.html" . }}
