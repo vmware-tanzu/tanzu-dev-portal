@@ -157,7 +157,6 @@ limitations under the License.
     if (!promo.length) {
       return;
     }
-
     var promoOffset = bottomPos(promo);
     var navbarOffset = $(".js-navbar-scroll").offset().top;
 
