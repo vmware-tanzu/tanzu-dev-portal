@@ -1,5 +1,5 @@
 ---
-title: "Tanzu Observability Slug Generator"
+title: "Introducing the Tanzu Observability Slug Generator"
 featured: false
 description: >
     Announcement for the open sourcing of code that generates Tanzu Observability URL
