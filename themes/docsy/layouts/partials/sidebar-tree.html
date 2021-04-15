@@ -2,7 +2,14 @@
 {{ $shouldDelayActive := ge (len .Site.Pages) 2000 }}
 <div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }} nocontent">
   <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
-    <h5><a href="{{ print .Section | relURL }}">ALL GUIDES</a></h5>
+
+
+      {{if eq .Section "data"}}
+      <h5><a href="{{ print .CurrentSection.RelPermalink  }}">{{.CurrentSection.Title}}</a></h5>
+      {{else}}
+      <h5><a href="{{ print .Section | relURL }}">ALL GUIDES</a></h5>
+      {{end}}
+
   <!--
     {{ if  (gt (len .Site.Home.Translations) 0) }}
     <div class="nav-item dropdown d-block d-lg-none">

@@ -2,14 +2,16 @@
 
 .alert {
     font-weight: $font-weight-medium;
-    background: $white;
+    background: inherit;
     color: inherit;
     border-radius: 0;
+    ;
 
     @each $color, $value in $theme-colors {
         &-#{$color} {
             & .alert-heading {
                 color: $value;
+                margin-top: 0rem
             }
 
             border-style: solid;
