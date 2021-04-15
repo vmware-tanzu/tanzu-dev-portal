@@ -18,7 +18,8 @@ team:
 - Dan Florea
 ---
 
-If you have ever looked at the URL of a [Tanzu Observability](https://tanzu.vmware.com/observability) chart or dashboard, you may have noticed that the URL slug is rather involved. This is not a problem when the UI generates the URL, but it becomes very tedious when customers try to create the URL on their own in order to automate and embed Tanzu Observability charts and dashboards outside of the product itself.
+
+A great feature of [Tanzu Observability](https://tanzu.vmware.com/observability) is that all context about the chart or dashboard that you are looking at is encoded in the URL, which makes it easy for you to share those links with your colleagues and to deep link into our product from other places such as wiki pages. A consequence of this is that the URL slug is rather involved. This is not a problem when the UI generates the URL, but it becomes very tedious when customers try to create the URL on their own in order to automate and embed Tanzu Observability charts and dashboards outside of the product itself.
 
 To help customers take better advantage of Tanzu Observability charts and dashboards as well as allow easier automation and customization, we recently open sourced our Tanzu Observability URL slug generation code. This code lets you programmatically generate links to charts and dashboards that you can then embed wherever you like to give users an easy to find view of the metrics that matter to them.
 
@@ -32,9 +33,7 @@ In the URL above, “company.html” is referred to as the URL slug.
 
 In some cases, the URL slug is relatively simple. In the case of a Tanzu Observability chart or dashboard, a lot of information is encoded in the slug which makes it difficult for humans to parse and even trickier to generate. For example, a Tanzu Observability slug might looks like the following:
 
-```
-“(c:(b:1,id:chart,n:Chart,ne:!t,s:!((n:source,q:'ts(metrics)',qb:!n,qbe:!f)),smp:off),g:(c:off,d:7200,g:auto,s:1373948820),t:customer)”
-```
+`(c:(b:1,id:chart,n:Chart,ne:!t,s:!((n:source,q:'ts(metrics)',qb:!n,qbe:!f)),smp:off),g:(c:off,d:7200,g:auto,s:1373948820),t:customer)`
 
 Luckily, you do not have to parse URLs manually. But at times, it can be convenient to generate a Tanzu Observability dashboard or chart in code and this is where the open sourced library comes in.
 
