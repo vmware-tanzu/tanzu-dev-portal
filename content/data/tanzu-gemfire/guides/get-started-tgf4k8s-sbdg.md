@@ -6,7 +6,7 @@ type: data-guides
 data-featured: false
 weight: 3
 
-description: How to set up a Tanzu GemFire Cluster on Kubernetes.
+description: How to set up a Tanzu GemFire instance on Kubernetes.
 
 
 ---
