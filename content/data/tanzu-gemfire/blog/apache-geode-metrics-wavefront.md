@@ -223,4 +223,5 @@ Join the [Apache Geode Community](https://geode.apache.org/community/)!
 
 Create and share your own MetricsPublishingService on the [user list](http://apache%20geode%20community/)
 
+[Ingest, Store and Search JSON data with Apache Kafka and Apache Geode](/data/tanzu-gemfire/blog/apache-geode-apache-kafka)
 
