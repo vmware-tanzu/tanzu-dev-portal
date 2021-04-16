@@ -1,7 +1,7 @@
 ---
 title: '"Sailboat" Futurespective'
 linkTitle: "Futurespective"
-description: "A type of retrospective where you start from the goal to find ways on how to get there. Teams place themselves in the future by imagining that their goal has been reached. By exploring their imaginary past, teams agree how to work together to reach the goal."
+description: "Using the "sailboat" retrospective format, start from the goal to find ways on how to get there. Teams place themselves in the future by imagining that their goal has been reached. By exploring their imaginary past, teams agree how to work together to reach the goal."
 # Note: remove any tags that are not relevant.
 tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
 length: "1-2 hours"
