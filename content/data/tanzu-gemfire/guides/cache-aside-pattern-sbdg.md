@@ -43,10 +43,10 @@ To complete this guide you need:
 * The Spring Boot for Apache Geode dependency.
 
 **If running on the Tanzu Application Service for VMs**
-* A [Tanzu GemFire service instance](spring-boot-for-apache-geode/getting-started/setting-up-tgf4vms-on-tas) on the Tanzu Application Service.
+* A [Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
 
 **If running on Kubernetes**
-* A [Tanzu GemFire Cluster](spring-boot-for-apache-geode/getting-started/set-up-tgf4k8s).
+* A [Tanzu GemFire Cluster](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
 
     For this example:
     * Our **namespace** is `tanzu-gemfire`
@@ -278,7 +278,7 @@ If you click the search button again with the same ZIP code, you will see that t
 &nbsp;
        
 {{% alert title="Tanzu GemFire Service Instance" color="warning" %}}
-To deploy the Bike Incident application to Tanzu Application Service (TAS) make sure you have [created a Tanzu GemFire service instance](spring-boot-for-apache-geode/getting-started/setting-up-tgf4vms-on-tas).
+To deploy the Bike Incident application to Tanzu Application Service (TAS) make sure you have [created a Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
 {{% /alert %}} 
        
 &nbsp;
@@ -301,7 +301,7 @@ To deploy the Bike Incident application to Tanzu Application Service (TAS) make 
  &nbsp;
         
  {{% alert title="Tanzu GemFire Kubernetes Cluster" color="warning" %}}
- To deploy the Bike Incident application on Kubernetes make sure you have [created a Tanzu GemFire cluster on Kubernetes](spring-boot-for-apache-geode/getting-started/set-up-tgf4k8s).
+ To deploy the Bike Incident application on Kubernetes make sure you have [created a Tanzu GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
  
  For this example:
  * Our **namespace** is `tanzu-gemfire`
@@ -442,8 +442,11 @@ This shows that the Spring Boot for Apache Geode app has connected to the Tanzu 
 > If the `BikeIncidentsByZip` region IS NOT listed, the first item to check is the `application.properties` file.  Confirm that the spring data property values are set correctly.  If you need to update them, make sure you also increment your build number of your image.  This will force [Kubernetes to pull the new image](https://kubernetes.io/docs/concepts/containers/images/) (as opposed to using a cached version of the image).
 
 
----
 
 **Congratulations! You have now deployed a simple Spring Boot for Apache Geode app that implements the cache-aside pattern**
 
- 
+---
+
+## Learn More
+
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).  

@@ -341,7 +341,15 @@ Then delete each persistent volume claim listed.
    * Replace `tanzu-gemfire` with your namespace if different.
    * Replace `PVC_NAME_1 PVC_NAME_2 PVC_NAME_3` with each persistent volume claim listed.
 
+---
 
+ ## Learn More
+ 
+ Now that you have successfully created a running Tanzu GemFire cluster on Kubernetes, check out some other guides.
+ 
+ * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
+  
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg). 
 
 
 

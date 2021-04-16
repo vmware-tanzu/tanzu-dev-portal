@@ -182,6 +182,15 @@ There are two ways to delete the app and the Tanzu GemFire service instance
 
 Congratulations! You’re ready to start using Tanzu GemFire. You will need to create a new Tanzu GemFire Service Instance when working with your own application.
 
+---
+
+ ## Learn More
+ 
+ Now that you have successfully created a running Tanzu GemFire service instance, check out some other guides.
+ 
+  * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
+   
+  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg). 
 
 
  
