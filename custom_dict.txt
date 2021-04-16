@@ -373,6 +373,7 @@ FinTech
 FIPS(-enabled|-approved)?
 firewalling
 Flake8
+Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
