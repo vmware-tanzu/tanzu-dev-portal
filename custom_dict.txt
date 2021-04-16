@@ -271,7 +271,7 @@ de-duplicate
 [Dd]ebian
 Debroy
 debuggable
-declaratively
+[Dd]eclaratively
 decrypt(ed|ing)?
 DEK(s)?
 Deleuze
@@ -373,6 +373,7 @@ FinTech
 FIPS(-enabled|-approved)?
 firewalling
 Flake8
+Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
@@ -592,7 +593,7 @@ Kafka
 Kamus
 Kanban
 Kaniko
-kapp
+[Kk]app(-controller|.)?
 kata
 Katas
 KEK(s)?
@@ -1147,7 +1148,7 @@ toleration(s)?
 TomEE
 toolchain
 toolkits
-toolset
+[Tt]oolset
 tooltip
 topologies
 tradeoff(s)?
