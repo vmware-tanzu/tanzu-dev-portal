@@ -387,6 +387,7 @@ frictionless
 [fF]rontend(-green)?
 Fu
 fullnameOverride
+[Ff]uturespective(s)?
 Gabbi
 Gabriella
 Gabry
@@ -491,7 +492,7 @@ HyperKit
 (I|P)aaS
 IAM
 Iberkleid
-ideate
+ideate(d)?
 ideation
 idempotency
 IDP
