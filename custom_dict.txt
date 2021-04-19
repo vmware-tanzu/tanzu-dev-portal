@@ -502,6 +502,7 @@ fullnameOverride
 functionExecutionCalls
 functionExecutionQueueSize
 functionExecutionsCompleted
+[Ff]uturespective(s)?
 Gabbi
 Gabriella
 Gabry
@@ -649,7 +650,7 @@ HyperKit
 (I|P)aaS
 IAM
 Iberkleid
-ideate
+ideate(d)?
 ideation
 idempotency
 IDP
