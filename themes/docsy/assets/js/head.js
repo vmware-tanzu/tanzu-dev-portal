@@ -1,7 +1,7 @@
 Sentry.init({
   dsn: "https://91138cf7f17842fd8a57d45372bf538c@o448817.ingest.sentry.io/5712977",
   integrations: [new Sentry.Integrations.BrowserTracing()],
-  release: "devcenter-site@{{ .GitInfo.Hash }}",
+  release: 'devcenter-site@{{ getenv "COMMIT_REF" }}',
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
   tracesSampleRate: 1.0,
