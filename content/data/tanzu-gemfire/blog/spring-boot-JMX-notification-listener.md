@@ -117,7 +117,7 @@ Once the connection is made, messages like these will be logged:
 
 ### Change Alert Level
 
-The [changeAlertLevel](https://github.com/boglesby/jmx-notification-listener/blob/a3b5d04134e29a42bd227aa33be95ad7191801b3/src/main/java/example/client/jmx/GeodeJmxNotificationListener.java#L92) method invokes the the changeAlertLevel operation on the DistributedSystemMXBean to change the alert level from severe to warning like:
+The [changeAlertLevel](https://github.com/boglesby/jmx-notification-listener/blob/a3b5d04134e29a42bd227aa33be95ad7191801b3/src/main/java/example/client/jmx/GeodeJmxNotificationListener.java#L92) method invokes the changeAlertLevel operation on the DistributedSystemMXBean to change the alert level from severe to warning like:
 
 ```java
 private void changeAlertLevel() throws Exception {

@@ -56,7 +56,7 @@ Starting in a terminal
 
 &nbsp;
 
-1. Within your org, create a space or navigate to the space that will hold your Tanzu Gemfire service instance.
+1. Within your org, create a space or navigate to the space that will hold your Tanzu GemFire service instance.
 
 &nbsp;
 
@@ -89,7 +89,7 @@ Starting in a terminal
 
 7.  After clicking create you will see Tanzu GemFire service instance provisioning begin and in the **Last Operation** column it will say `create in progress`.
     
-     ![Creat in in preogress in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/create_in_progress.png)
+     ![Create in progress in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/create_in_progress.png)
 
 &nbsp;
 
@@ -99,7 +99,7 @@ Starting in a terminal
 
 8.  Once complete you will see `create succeeded` under the **Last Operation** column (you may need to refresh the page for the status to update).
 
-    ![Creat succeeded in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/create_succeeded.png)
+    ![Create succeeded in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/create_succeeded.png)
 
 ---
 
@@ -138,7 +138,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 
 The `cf push` operation will bind the Hello,World! app to the Tanzu GemFire service instance named in your `manifest.yaml` file  and then start the app.
 
- When the app is up and running, the `cf push` command should output information about the app in the terminal.  One the fields listed will be the `route`.  In a browser copy and paste the the `[route from cf push]/hello`.
+ When the app is up and running, the `cf push` command should output information about the app in the terminal.  One the fields listed will be the `route`.  In a browser copy and paste the `[route from cf push]/hello`.
  
  You should see something similar to the below, which represents an artificial time delay simulating a database query.
  

@@ -161,7 +161,7 @@ Starting with Spring Boot 2.3, you can now customize and create an OCI image usi
 
 * In a terminal, navigate to the `hello-world` directory.
 * Build the application with `./gradlew clean build`
-* Open the `build.gradle` file and update the the `bootBuildImage` section, with your Docker repository information. This will build an image with the name `docker.io/[docker username]/hello-world:0.0.1-SNAPSHOT`.  
+* Open the `build.gradle` file and update the `bootBuildImage` section, with your Docker repository information. This will build an image with the name `docker.io/[docker username]/hello-world:0.0.1-SNAPSHOT`.  
 * Build the image with `./gradlew bootBuildImage`
 
 
