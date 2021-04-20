@@ -14,8 +14,13 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.0"
-  SENTRY_AUTH_TOKEN = ""
   TZ='America/Los_Angeles'
+
+[[plugins]]
+  package = "@sentry/netlify-build-plugin"
+
+  [plugins.inputs]
+    deployPreviews = false
 
 [[redirects]]
   from = "/"
