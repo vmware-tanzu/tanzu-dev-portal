@@ -4,7 +4,7 @@
   command = "git submodule update -f --init --recursive && npm install && make function-config && hugo -b https://tanzu.vmware.com/developer --minify"
 
 [context.production.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.82.0"
   HUGO_ENV = "production"
   TZ='America/Los_Angeles'
 
