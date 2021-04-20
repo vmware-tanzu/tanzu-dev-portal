@@ -8,7 +8,7 @@ Sentry.init({
 });
 
 var liveShowName, liveShowLink, liveShowStream;
-function isTvShowLive(showName) {   
+export function isTvShowLive(showName) {   
 
   var episodeShowNames = [], episodeLinks = [], episodeDates = [], episodeTimes = [], episodeLengths = [], episodeStreams = [];
       {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" now.Unix }}
@@ -63,10 +63,10 @@ function changeTheme(mode) {
     } 
 }
 
-function sendAmplitudeEventOnLoad(eventType, eventProperties) {
+export function sendAmplitudeEventOnLoad(eventType, eventProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});});
 }
-function sendAmplitudeEvent(eventType, eventProperties) {
+export function sendAmplitudeEvent(eventType, eventProperties) {
   // Clear out persisted properties from previous/onload events
   var event = dataLayer.find(element => element["event"] == "logEvent");
   var existingProps = Object.keys(event["eventProperties"]);
@@ -80,17 +80,17 @@ function sendAmplitudeEvent(eventType, eventProperties) {
   Object.assign(eventProperties, removeProps);
   dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
 }
-function sendAmplitudeUserPropsOnLoad(userProperties) {
+export function sendAmplitudeUserPropsOnLoad(userProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});});
 }
-function sendAmplitudeUserProps(userProperties) {
+export function sendAmplitudeUserProps(userProperties) {
   dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});
 }
-function setAmplitudeUserId(userId) {
+export function setAmplitudeUserId(userId) {
   dataLayer.push({'event': 'setUserId', 'userId': userId});
 }
 
-function getCookie(name) {
+export function getCookie(name) {
   var dc = document.cookie;
   var prefix = name + "=";
   var begin = dc.indexOf("; " + prefix);
