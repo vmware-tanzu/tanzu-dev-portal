@@ -447,7 +447,7 @@ Greenplum
 Groupon
 gRPC
 Grygleski
-Grzejszxzak
+Grzejszczak
 GUID(s)?
 Gunicorn
 Guntur
