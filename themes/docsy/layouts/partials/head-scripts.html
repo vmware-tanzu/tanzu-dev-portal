@@ -1,3 +1,39 @@
+<!-- Initialize GTM data layer -->
+<script>
+dataLayer = [];
+</script>
+<!-- OneTrust -->
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<meta content='b9242434-9feb-47be-a894-3a9e658fdd50' name='onetrust-data-domain'>
+<meta content='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.js' name='microsites-utag'>
+{{ else }}
+<meta content='b9242434-9feb-47be-a894-3a9e658fdd50-test' name='onetrust-data-domain'>
+<meta content='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/qa/utag.js' name='microsites-utag'>
+{{ end }}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src='https://www.vmware.com/files/templates/inc/utag_data.js'></script>
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<script src='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.sync.js'></script>
+{{ else }}
+<script src='https://tags.tiqcdn.com/utag/vmware/microsites-privacy/qa/utag.sync.js'></script>
+{{ end }}
+<script>
+function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } }
+</script>
+<!-- Google Tag Manager -->
+<script>
+function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); }
+if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
+</script>
+
+<!-- Sentry SDK-->
+<script
+src="https://browser.sentry-cdn.com/6.2.5/bundle.tracing.min.js"
+integrity="sha384-xd/W0P7puokZpoEqk4srLDzK5R0WV2B2IZVlA0T4MEU4Fojxk+o+5KF6u43wkTL6"
+crossorigin="anonymous"
+></script>
+
+<script>
 Sentry.init({
   dsn: "https://91138cf7f17842fd8a57d45372bf538c@o448817.ingest.sentry.io/5712977",
   integrations: [new Sentry.Integrations.BrowserTracing()],
@@ -7,8 +43,29 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
+var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
+changeTheme(savedTheme);
+function changeTheme(mode) {
+    if (mode === "light") {
+      var iframe = document.getElementById('auth-iframe');
+      var head = document.head;
+      var link = document.createElement("link");
+
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
+      link.id = "light-theme"
+
+      head.prepend(link);
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage('light', '*');
+      }
+      document.documentElement.classList.add('light-mode')
+    } 
+}
+
 var liveShowName, liveShowLink, liveShowStream;
-export function isTvShowLive(showName) {   
+function isTvShowLive(showName) {   
 
   var episodeShowNames = [], episodeLinks = [], episodeDates = [], episodeTimes = [], episodeLengths = [], episodeStreams = [];
       {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" now.Unix }}
@@ -42,31 +99,10 @@ export function isTvShowLive(showName) {
       return isLive;
 }
 
-var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
-changeTheme(savedTheme);
-function changeTheme(mode) {
-    if (mode === "light") {
-      var iframe = document.getElementById('auth-iframe');
-      var head = document.head;
-      var link = document.createElement("link");
-
-      link.type = "text/css";
-      link.rel = "stylesheet";
-      link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
-      link.id = "light-theme"
-
-      head.prepend(link);
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage('light', '*');
-      }
-      document.documentElement.classList.add('light-mode')
-    } 
-}
-
-export function sendAmplitudeEventOnLoad(eventType, eventProperties) {
+function sendAmplitudeEventOnLoad(eventType, eventProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});});
 }
-export function sendAmplitudeEvent(eventType, eventProperties) {
+function sendAmplitudeEvent(eventType, eventProperties) {
   // Clear out persisted properties from previous/onload events
   var event = dataLayer.find(element => element["event"] == "logEvent");
   var existingProps = Object.keys(event["eventProperties"]);
@@ -80,17 +116,17 @@ export function sendAmplitudeEvent(eventType, eventProperties) {
   Object.assign(eventProperties, removeProps);
   dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
 }
-export function sendAmplitudeUserPropsOnLoad(userProperties) {
+function sendAmplitudeUserPropsOnLoad(userProperties) {
   $(window).on('load', function(e){dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});});
 }
-export function sendAmplitudeUserProps(userProperties) {
+function sendAmplitudeUserProps(userProperties) {
   dataLayer.push({'event': 'setUserProperties', 'userProperties': userProperties});
 }
-export function setAmplitudeUserId(userId) {
+function setAmplitudeUserId(userId) {
   dataLayer.push({'event': 'setUserId', 'userId': userId});
 }
 
-export function getCookie(name) {
+function getCookie(name) {
   var dc = document.cookie;
   var prefix = name + "=";
   var begin = dc.indexOf("; " + prefix);
@@ -107,3 +143,4 @@ export function getCookie(name) {
 
   return decodeURI(dc.substring(begin + prefix.length, end));
 }
+</script>
