@@ -38,7 +38,8 @@
 {{ if .Site.IsServer }}
 <script src="{{ $jsHead.RelPermalink }}"></script>
 {{ else }}
-{{ $jsHead := $jsHead | js.Build  (dict "sourcemap" "external" "minify" true) | fingerprint }}
+{{ $opts := dict "sourcemap" "external" "minify" true "targetPath" "js/head.js"}}
+{{ $jsHead := $jsHead | js.Build  $opts | fingerprint }}
 <script src="{{ $jsHead.RelPermalink }}" integrity="{{ $jsHead.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
 
