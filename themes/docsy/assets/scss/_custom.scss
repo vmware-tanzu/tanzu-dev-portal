@@ -1083,8 +1083,8 @@ body.tv-episode {
 #springonetour .row .upcoming:nth-child(5),
 #springonetour .row .upcoming:nth-child(6),
 #springonetour .row .upcoming:nth-child(7) {
-  // flex: 0 0 20.66666667%;
-  // max-width: 20.66666667%;
+  cursor: default;
+  pointer-events: none;
 
   .countdown {
     display: none;
