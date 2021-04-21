@@ -185,8 +185,8 @@
   </body>
   <script>
     $( ".show-all-button" ).click(function() {
-        $(this).parent().parent().find(".hidden-item:first").show( "fast", function showNext() {
-            $(this).next( ".hidden-item" ).show( "fast", showNext );
+        $(this).parent().parent().find(".hidden-item:first").show( 20, function showNext() {
+            $(this).next( ".hidden-item" ).show( 20, showNext );
         });
     });
   </script>
