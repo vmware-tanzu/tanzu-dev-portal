@@ -469,6 +469,7 @@ Heroku('s)?
 High-Cardinality
 Hinojosa
 HMAC
+hoc
 Hockin
 Homebrew
 homogenous

@@ -43,7 +43,7 @@ better customer outcomes.
 
 Unfortunately, for many organizations the primary development focus is often
 centered on product features alone. Delivery systems are very often an
-afterthought, usually implemented in an ad-hoc fashion, and, as a result, become
+afterthought, usually implemented in an ad hoc fashion, and, as a result, become
 a fragile component that stands between development teams and the customers
 seeking to derive value from their work. When properly implemented, a secure
 software supply chain has the ability to close this gap across the entirety of
