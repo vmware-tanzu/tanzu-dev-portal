@@ -188,6 +188,7 @@
         $(this).parent().parent().find(".hidden-item:first").show( 20, function showNext() {
             $(this).next( ".hidden-item" ).show( 20, showNext );
         });
+        $(this).parent().hide();
     });
   </script>
 
