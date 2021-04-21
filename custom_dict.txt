@@ -661,8 +661,7 @@ LimitRanger
 LimitRanges
 LinkedIn
 Linkerd
-linter
-linter(s)
+linter(s)?
 [Ll]inux
 Lippert
 Livelessons
@@ -1061,8 +1060,7 @@ SLA
 Sletten
 SLI(s)
 slideshare
-SLO
-SLO(s)
+SLO(s)?
 Sloka
 SmartTV
 SMI
