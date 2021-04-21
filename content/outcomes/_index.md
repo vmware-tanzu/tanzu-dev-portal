@@ -1,5 +1,12 @@
 ---
 title: Outcome Architectures
 description: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    The successful adoption of technology is rooted in achieving outcomes. Whether
+    these outcomes are focused on the internal needs of the business or for direct
+    enagegement with your customer, the solutions employed are ever-evolving.
+    
+    Outcome Architectures are designed to enable you to achieve the outcomes that are 
+    right for your business by way of a curated learning path. This content provides the 
+    "Why?" in the form of strategy content, as well as the "How?" in the form of 
+    practical and proven tactical references.
 ---
