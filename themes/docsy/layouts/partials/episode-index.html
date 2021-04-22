@@ -3,7 +3,7 @@
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
 
-    <div class='container episodes'>
+    <div class='container episodes' id='{{ replaceRE "(\\s)" "" (lower .Title) }}'>
         {{ range sort $pages "Params.Date" "asc" }}
             {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
                 {{ $.Scratch.Set "upcoming" true }}
