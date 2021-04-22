@@ -1,0 +1,77 @@
+{{/* We cache this partial for bigger sites and set the active class client side. */}}
+{{ $shouldDelayActive := ge (len .Site.Pages) 2000 }}
+<div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }} nocontent">
+    <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
+
+
+
+        <h5><a href="{{ print .CurrentSection.RelPermalink  }}">{{.CurrentSection.Title}}</a></h5>
+
+
+        <!--
+          {{ if  (gt (len .Site.Home.Translations) 0) }}
+          <div class="nav-item dropdown d-block d-lg-none">
+            {{ partial "navbar-lang-selector.html" . }}
+          </div>
+          {{ end }}
+        -->
+        {{ template "data-section-tree-nav-section" (dict "page" . "section" .CurrentSection "delayActive" $shouldDelayActive)  }}
+    </nav>
+</div>
+
+
+{{ define "data-section-tree-nav-section" }}
+{{ $s := .section }}
+{{ $p := .page }}
+{{ $ss := .subsection }}
+{{ $c := .caller }}
+{{ $shouldDelayActive := false }}
+{{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
+{{ if not $ss }} <!-- Top-Level Section -->
+<ul class="td-sidebar-nav__section">
+    {{ $active := eq $p $s }}
+    {{ $sid := $s.RelPermalink | anchorize }}
+    <li class="td-sidebar-nav__section-title" id="{{ $sid }}">
+        <a href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $s.LinkTitle | markdownify }}</a>
+    </li>
+    {{ else }} <!-- Subsection -->
+    {{ $active := eq $p $c }}
+    {{ $sid := $p.RelPermalink | anchorize }}
+    <li class="td-sidebar-nav__subsection-title" id="{{ $sid }}">
+        {{ $selected := eq $c.Params.parent $p.Params.subsection }}
+        <a href="{{ $p.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }}{{ if $selected}} selected{{ end }} td-sidebar-link td-sidebar-link__subsection">{{ $p.LinkTitle | markdownify }}</a>
+    </li>
+    {{ end }}
+    {{ $show := or (eq $ss $c.Params.parent) (eq $ss $c.Params.subsection) }}
+    <ul class="td-sidebar-nav__{{if ($c)}}sub{{end}}section">
+        {{ $pages := where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true }}
+        {{ $pages := where $pages ".Params.parent" "eq" $ss }} <!-- All children pages except children of subsections -->
+
+        {{ $pages := where $pages ".Params.type" "eq" "data-guides"}}
+
+        {{ $pages := $pages | first 50 }}
+
+        {{ range $pages.ByTitle.ByLinkTitle.ByWeight }}
+
+        {{ if .IsPage }}
+        {{ if .Params.subsection }}
+        {{ template "section-tree-nav-section" (dict "page" . "section" .CurrentSection "subsection" .Params.subsection "caller" $p) }}
+                            {{ else }}
+
+                            {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+                            {{ $active := or (eq . $p) (eq . $c) }}
+                            {{ $sid := .RelPermalink | anchorize }}
+                            <li class="collapse {{ if $show }}show{{ end }}" id="{{ $sid }}">
+                                <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a>
+                            </li>
+                        {{ end }}
+                {{ else }}
+                    {{ template "section-tree-nav-section" (dict "page" $p "section" .) }}
+                {{ end }}
+            {{ end }}
+
+    </ul>
+    {{ if not $ss }} <!-- Top-Level Section -->
+</ul>
+{{ end }}
+{{ end }}
