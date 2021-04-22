@@ -1087,8 +1087,8 @@ body.tv-episode {
   letter-spacing: 1px;
 }
 
-.workshops-hero {
-  background: none;
+body .workshops-hero {
+  background-color: transparent !important;
   padding-bottom: 0px !important;
   min-height: auto !important;
 
