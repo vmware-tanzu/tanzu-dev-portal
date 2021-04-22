@@ -565,6 +565,8 @@ Jiu
 jks
 JMX
 johnharris85
+Jonatan
+jonatan_ivanov
 JOP
 JPA
 JRE
@@ -1113,6 +1115,7 @@ symposia
 Sysdig
 Tanzu(Developer)?
 targetPort
+Tarin
 TAS
 TaskRepository
 TBD
@@ -1157,6 +1160,7 @@ Trivy(.)?
 TRS-80
 TTL(s)?
 tunable
+Turanski
 Turnquist
 Twistlock
 [Tt]ypha
