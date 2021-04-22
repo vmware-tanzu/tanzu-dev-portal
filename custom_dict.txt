@@ -373,6 +373,7 @@ FinTech
 FIPS(-enabled|-approved)?
 firewalling
 Flake8
+Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
@@ -386,6 +387,7 @@ frictionless
 [fF]rontend(-green)?
 Fu
 fullnameOverride
+[Ff]uturespective(s)?
 Gabbi
 Gabriella
 Gabry
@@ -400,6 +402,7 @@ Gartner('s)?
 Gaubert
 GC(E|L|P|R|S)?
 Geesaman
+Gemfiles
 GemFire
 Geneve
 Georgiva
@@ -437,14 +440,14 @@ Gradle
 Grafana
 GRAFANA-PASSWORD
 Grails
-GraphQL
+GraphQL(-based)?
 Grasso
 GRE
 Greenplum
 Groupon
 gRPC
 Grygleski
-Grzejszxzak
+Grzejszczak
 GUID(s)?
 Gunicorn
 Guntur
@@ -455,6 +458,7 @@ Hamano
 HAProxy
 HashiCorp('s)?
 Hayk
+Haytham
 Heartbleed
 HELM_UPGRADE_EXTRA_ARGS
 [Hh]elmfiles?
@@ -466,6 +470,7 @@ Heroku('s)?
 High-Cardinality
 Hinojosa
 HMAC
+hoc
 Hockin
 Homebrew
 homogenous
@@ -489,7 +494,7 @@ HyperKit
 (I|P)aaS
 IAM
 Iberkleid
-ideate
+ideate(d)?
 ideation
 idempotency
 IDP
@@ -565,6 +570,8 @@ Jiu
 jks
 JMX
 johnharris85
+Jonatan
+jonatan_ivanov
 JOP
 JPA
 JRE
@@ -657,7 +664,7 @@ LimitRanger
 LimitRanges
 LinkedIn
 Linkerd
-linter
+linter(s)?
 [Ll]inux
 Lippert
 Livelessons
@@ -806,6 +813,7 @@ olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
 on-prem
+onboarded
 OneMagnify
 OOM
 oom_killer
@@ -1006,6 +1014,7 @@ SameSite
 SAML
 samplehost(:[0-9]*)?
 sandbox(ing)?
+sandboxed
 Sanderson
 SAT(s)?
 Sathe
@@ -1052,7 +1061,9 @@ Siri
 Skyscanner
 SLA
 Sletten
+SLI(s)
 slideshare
+SLO(s)?
 Sloka
 SmartTV
 SMI
@@ -1064,6 +1075,7 @@ Soluto('s)?
 [Ss]onobuoy
 Sox
 [Ss]peedback
+SPEL
 SPIFFE
 Splunk
 Spock
@@ -1113,6 +1125,7 @@ symposia
 Sysdig
 Tanzu(Developer)?
 targetPort
+Tarin
 TAS
 TaskRepository
 TBD
@@ -1125,6 +1138,7 @@ telecom
 Templeton
 Teppanyaki
 Terraform(-ing)?
+testability
 TestContainers
 TGI(K)?
 tgz
@@ -1157,6 +1171,7 @@ Trivy(.)?
 TRS-80
 TTL(s)?
 tunable
+Turanski
 Turnquist
 Twistlock
 [Tt]ypha

@@ -10,7 +10,7 @@ removePathAccents = true
 theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
-enableGitInfo = false
+enableGitInfo = true
 
 #disableKinds = ["taxonomy", "taxonomyTerm"]
 
