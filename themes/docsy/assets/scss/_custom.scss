@@ -1078,6 +1078,20 @@ body.tv-episode {
   font-size: 1.0625rem;
 }
 
+//SpringOne Tour Upcoming
+#springonetour .row .upcoming:nth-child(4),
+#springonetour .row .upcoming:nth-child(5),
+#springonetour .row .upcoming:nth-child(6),
+#springonetour .row .upcoming:nth-child(7) {
+  cursor: default;
+  pointer-events: none;
+
+  .countdown {
+    display: none;
+  }
+}
+
+
 @media (min-width: 992px) {
   .tv-episode-hero .col-lg-3 .btn {
     float: none;
