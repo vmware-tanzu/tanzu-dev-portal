@@ -402,6 +402,7 @@ Gartner('s)?
 Gaubert
 GC(E|L|P|R|S)?
 Geesaman
+Gemfiles
 GemFire
 Geneve
 Georgiva
@@ -446,7 +447,7 @@ Greenplum
 Groupon
 gRPC
 Grygleski
-Grzejszxzak
+Grzejszczak
 GUID(s)?
 Gunicorn
 Guntur
@@ -468,6 +469,7 @@ Heroku('s)?
 High-Cardinality
 Hinojosa
 HMAC
+hoc
 Hockin
 Homebrew
 homogenous
@@ -567,6 +569,8 @@ Jiu
 jks
 JMX
 johnharris85
+Jonatan
+jonatan_ivanov
 JOP
 JPA
 JRE
@@ -659,7 +663,7 @@ LimitRanger
 LimitRanges
 LinkedIn
 Linkerd
-linter
+linter(s)?
 [Ll]inux
 Lippert
 Livelessons
@@ -808,6 +812,7 @@ olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
 on-prem
+onboarded
 OneMagnify
 OOM
 oom_killer
@@ -1008,6 +1013,7 @@ SameSite
 SAML
 samplehost(:[0-9]*)?
 sandbox(ing)?
+sandboxed
 Sanderson
 SAT(s)?
 Sathe
@@ -1054,7 +1060,9 @@ Siri
 Skyscanner
 SLA
 Sletten
+SLI(s)
 slideshare
+SLO(s)?
 Sloka
 SmartTV
 SMI
@@ -1115,6 +1123,7 @@ symposia
 Sysdig
 Tanzu(Developer)?
 targetPort
+Tarin
 TAS
 TaskRepository
 TBD
@@ -1127,6 +1136,7 @@ telecom
 Templeton
 Teppanyaki
 Terraform(-ing)?
+testability
 TestContainers
 TGI(K)?
 tgz
@@ -1159,6 +1169,7 @@ Trivy(.)?
 TRS-80
 TTL(s)?
 tunable
+Turanski
 Turnquist
 Twistlock
 [Tt]ypha
