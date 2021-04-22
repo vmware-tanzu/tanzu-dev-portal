@@ -1,7 +1,7 @@
 ---
 title: "Value Stream Map"
 linkTitle: "Value Stream Map"
-description: "Visualize the steps an organization takes to create & deliver value to customers in order to help eliminate \"waste.\" A common use case is a path to production and product development lifecycle."
+description: "Visualize the steps an organization takes to create & deliver value to customers in order to help eliminate \"waste.\" A common use case is a path to production and product development life cycle."
 
 tags: ["Kickoff", "Discovery", "Framing", "Inception"]
 length: "1-2 hours"
@@ -13,7 +13,7 @@ why:
 - To identify how we could deliver user and/or business value faster and/or more often by identifying delays, unnecessary features and hand-offs. 
 - To understand the steps and people involved in a process so that we can improve collaboration and preclude potential blockers.
 when:
-- This activity can be done as early as the Kickoff if there are concerns about many teams creating one system or known problems in product development lifecycle. Otherwise, it can be done as part of technical Discovery, Framing, or any time the team finds itself bogged down with an inefficient process.
+- This activity can be done as early as the Kickoff if there are concerns about many teams creating one system or known problems in product development life cycle. Otherwise, it can be done as part of technical Discovery, Framing, or any time the team finds itself bogged down with an inefficient process.
 what:
 - "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Sticky notes
@@ -28,11 +28,11 @@ remote: false
    
    Using product development lifecyle as an example, you might say something like:
    
-   > “To identify our product development lifecycle, we’ll follow a feature from the moment user gives feedback (e.g. a story is written) to its deployment on production. We’ll focus on the current deployment process before the future state, because understanding what’s happening now will surface real blockers and stakeholders faster than an idealized workflow. Additionally, we want to discover not only the steps, but also the roles and the lead time of each steps.”
+   > “To identify our product development life cycle, we’ll follow a feature from the moment user gives feedback (e.g. a story is written) to its deployment on production. We’ll focus on the current deployment process before the future state, because understanding what’s happening now will surface real blockers and stakeholders faster than an idealized workflow. Additionally, we want to discover not only the steps, but also the roles and the lead time of each steps.”
 
 1. Start with the current product development process. On one end of the whiteboard or section of the digital collaboration board, write the first step of your chosen value stream. On the other end, write the last step.
    
-   For product development lifecycle, put “User Feedback” as a first step and “Release to Prod” as a last step.
+   For product development life cycle, put “User Feedback” as a first step and “Release to Prod” as a last step.
  
    {{< callout >}}
    Tip: If the team having trouble determining the end point, ask a question like "when would we consider the job done for this journey?" 
@@ -94,7 +94,7 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-Product development lifecycle
+Product development life cycle
 ![Value Stream Map image](/images/practices/value-stream-map/value-stream-map-3.jpg)
 
 ## Recommended Reading
