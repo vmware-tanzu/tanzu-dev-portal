@@ -531,6 +531,7 @@ GatewaysSender
 Gaubert
 GC(E|L|P|R|S)?
 Geesaman
+Gemfiles
 GemFire
 Geneve
 geode-async-listener-spring-jpa
@@ -595,6 +596,7 @@ Grails
 GrantedAuthoritiesMapper
 GrantedAuthority
 GraphQL
+GraphQL(-based)?
 Grasso
 GRE
 Greenplum
@@ -614,6 +616,7 @@ HAProxy
 HashiCorp('s)?
 hasResult
 Hayk
+Haytham
 Heartbleed
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
@@ -626,6 +629,7 @@ Heroku('s)?
 High-Cardinality
 Hinojosa
 HMAC
+hoc
 Hockin
 Homebrew
 homogenous
@@ -738,6 +742,8 @@ JmxNotificationHandler
 JMXNotificationHandler
 JmxNotificationsAccessor
 johnharris85
+Jonatan
+jonatan_ivanov
 JOP
 JPA
 JProfiler
@@ -839,7 +845,7 @@ LimitRanger
 LimitRanges
 LinkedIn
 Linkerd
-linter
+linter(s)?
 [Ll]inux
 Lippert
 Livelessons
@@ -1009,6 +1015,7 @@ olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
 on-prem
+onboarded
 OneMagnify
 onRegion
 onServer
@@ -1258,6 +1265,7 @@ SameSite
 SAML
 samplehost(:[0-9]*)?
 sandbox(ing)?
+sandboxed
 Sanderson
 SAT(s)?
 Sathe
@@ -1313,7 +1321,9 @@ Siri
 Skyscanner
 SLA
 Sletten
+SLI(s)
 slideshare
+SLO(s)?
 Sloka
 SmartTV
 SMI
@@ -1326,6 +1336,7 @@ SomeRegion
 [Ss]onobuoy
 Sox
 [Ss]peedback
+SPEL
 SPIFFE
 Splunk
 Spock
@@ -1381,6 +1392,7 @@ symposia
 Sysdig
 Tanzu(Developer)?
 targetPort
+Tarin
 TAS
 TaskRepository
 TBD
@@ -1393,6 +1405,7 @@ telecom
 Templeton
 Teppanyaki
 Terraform(-ing)?
+testability
 TestContainers
 TGI(K)?
 tgz
@@ -1433,6 +1446,7 @@ Trivy(.)?
 TRS-80
 TTL(s)?
 tunable
+Turanski
 Turnquist
 Twistlock
 type=RegionStats-partition-Trades
