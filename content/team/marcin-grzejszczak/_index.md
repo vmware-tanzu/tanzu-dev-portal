@@ -1,7 +1,7 @@
 ---
-name: Marcin Grzejszxzak
+name: Marcin Grzejszczak
 description: 
-photo: "/images/team/marcin-grzejszxzak.jpg"
+photo: "/images/team/marcin-grzejszczak.jpg"
 roles: ["guest"]
 skills: []
 
