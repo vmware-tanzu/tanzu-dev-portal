@@ -14,9 +14,9 @@ team:
 
 ## Introduction
 
-Apache Geode is a data management platform that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Geode pools memory, CPU, network resources, and optionally local disk across multiple processes to manage application objects and behavior. It uses dynamic replication and data partitioning techniques to implement high availability, improved performance, scalability, and fault tolerance. In addition to being a distributed data container, Apache Geode is an in-memory data management system that provides reliable asynchronous event notifications and guaranteed message delivery.
+[Apache Geode](https://geode.apache.org/) is a data management platform that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Geode pools memory, CPU, network resources, and optionally local disk across multiple processes to manage application objects and behavior. It uses dynamic replication and data partitioning techniques to implement high availability, improved performance, scalability, and fault tolerance. In addition to being a distributed data container, Apache Geode is an in-memory data management system that provides reliable asynchronous event notifications and guaranteed message delivery.
 
-The article assumes you have a basic understanding of Apache Geode. You can refer to the [quick start](https://geode.apache.org/docs/guide/19/getting_started/book_intro.html) for an overview of the system.
+This article assumes you have a basic understanding of Apache Geode. You can refer to the [quick start](https://geode.apache.org/docs/guide/19/getting_started/book_intro.html) for an overview of the system.
 
 Apache Geode offers super fast write-ahead-logging (WAL) persistence with a shared-nothing architecture that is optimized for fast parallel recovery of nodes or an entire cluster. Persistence provides a disk backup of region entry data. The keys and values of all entries are saved to disk, like having a replica of the region on disk. When the member stops for any reason, the region data on disk remains. The disk data can be used at member startup to repopulate the region. Each member has its own set of disk stores, and they are completely separate from the disk stores of any other member.
 
@@ -67,7 +67,7 @@ With the help of the warning messages, and the thread stacks, we have identified
 
 Once we understand the root cause, the solution becomes clear. We’d better replace `HashMap` with `ConcurrentHashMap`, to remove unnecessary synchronization among the threads. With `ConcurrentHashMap`, the persistence recovery time is reduced by 30% for recovering the same amount of persistent data during Geode cluster restart.
 
-## Parallel Disk stores Recovery
+## Parallel Disk Stores Recovery
 
 After further analyzing the logs, we noticed that the disk stores are recovered sequentially with single thread. There is an opportunity to improve the recovery performance here. If the disk stores are recovered in parallel, the persistence recovery performance can be dramatically improved. When each region is on a different disk store, parallel disk store recovery makes parallel region recovery possible. This is especially effective when the disk stores are on different disk controllers, so that the disk stores don’t have to compete for the same disk controller. With the completion of [GEODE-8035](https://issues.apache.org/jira/browse/GEODE-8035), parallel disk store recovery is introduced. For example, when recovering two regions on two separate disk stores, we can reduce the persistent recovery time by half, compared to the case in which two regions share the same default disk store. With more disk stores, the performance of persistence recovery can be further improved from parallel disk store recovery.
 

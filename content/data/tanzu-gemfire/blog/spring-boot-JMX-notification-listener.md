@@ -259,7 +259,7 @@ DiskStore disk usage warning:
 "message": "The disk volume . for disk store DEFAULT has exceeded the warning usage threshold and is 95.2% full"
 ```
 
-GatewaySender remote locator warning:
+`GatewaySender` remote locator warning:
 
 ```json
 "source": "DistributedSystem(1)",
@@ -315,7 +315,7 @@ The list of JMX Notifications can be cleared using the clearnotifications reques
 curl -X POST http://localhost:8080/clearnotifications
 ```
 
-Note: the list of JMX Notifications is cleared automatically every 24 hours by default (controlled by the *jmx.listener.clear.notifications.delay* property) using the scheduled clearNotifications method.
+Note: the list of JMX Notifications is cleared automatically every 24 hours by default (controlled by the `jmx.listener.clear.notifications.delay` property) using the scheduled `clearNotifications` method.
 
 ## Future
-An out-of-the-box Spring Boot JMX Notification client with various supported **JmxNotificationHandler** plugins would be a useful addition to Apache Geode.
+An out-of-the-box Spring Boot JMX Notification client with various supported `JmxNotificationHandler` plugins would be a useful addition to Apache Geode.

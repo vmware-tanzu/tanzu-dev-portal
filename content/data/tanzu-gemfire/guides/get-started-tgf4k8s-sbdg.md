@@ -29,14 +29,14 @@ You will also need permission to use `kubectl`.
     ```
     kubectl config current-context
     ```
-   &nbsp;
+   
    
 2. Create a namespace for the Tanzu GemFire cluster (We use the creative *namespace* name of `tanzu-gemfire` for this example)
     
     ```
     kubectl create namespace tanzu-gemfire
     ```
-   &nbsp;
+   
    
 3. Create an image pull secret that will be used to pull down the Tanzu GemFire images needed to create the cluster
 
@@ -48,7 +48,7 @@ You will also need permission to use `kubectl`.
    * Replace `TANZU NET USERNAME` with your Tanzu Net Username
    * Replace `TANZU NET PASSWD` with your Tanzu Net Password
     
-       &nbsp;
+      
        
 4.  Create your Tanzu GemFire CRD file. 
     
@@ -78,13 +78,13 @@ You will also need permission to use `kubectl`.
     * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
     * Replace `CLUSTER-CRD-YAML` with the name of the yaml file you created. 
    
-   &nbsp;
+   
    
 6.  If successful you should see in your terminal
 
     ` gemfirecluster.gemfire.tanzu.vmware.com/hello-world-gemfire-cluster created`      
 
-&nbsp;
+
 
 7. Confirm that Tanzu GemFire is up and ready to use
     
@@ -142,7 +142,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
     ```
     spring.data.gemfire.pool.locators: hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.tanzu-gemfire[10334]
     ```
-  &nbsp;
+
   
 * Replace the value for `spring.data.gemfire.management.http.host:` with your Tanzu GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to GemFire.  The information follows a similar form as above:
 

@@ -274,14 +274,14 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 
 ## Run the App on the Tanzu Application Service
 
-&nbsp;
+
  
  {{% alert title="Tanzu GemFire Service Instance" color="warning" %}}
   To deploy the application to the Tanzu Application
    Service (TAS) make sure you have [created a Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
  {{% /alert %}} 
  
-&nbsp;
+
  
 ### Update the manifest.yaml file
  In the project root directory, open the `manifest.yml` file and replace  `<SERVICE-INSTANCE-NAME>` with the name of your service instance.
@@ -292,13 +292,13 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  
  After the app has successfully been pushed, in the output find the `route`.  Then open a browser and copy and paste the route into the browser.  
  
-&nbsp;
+
  
 ---
  
  ## Run the App on Kubernetes
  
- &nbsp;
+
         
  {{% alert title="Tanzu GemFire Kubernetes Cluster" color="warning" %}}
  To deploy the Session State Example application on Kubernetes make sure you have [created a Tanzu GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
@@ -308,7 +308,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  * Our **GemFire cluster** is `notes-app-gemfire-cluster` 
  {{% /alert %}} 
          
- &nbsp;
+
   
 ### Edit the `application.properties` file
 * Navigate to the application directory. 
@@ -327,8 +327,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
    * Replace `notes-app-gemfire-cluster` with the name of your GemFire cluster if different.
    * Replace `tanzu-gemfire` with your namespace if different.
   
-  &nbsp;
-  
+
 * Replace the value for `spring.data.gemfire.management.http.host:` with your Tanzu GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to your Tanzu GemFire cluster.  The information follows a similar form as above:
 
    ```

@@ -48,37 +48,37 @@ Starting in a terminal
    
 ### Option 2: Create the service instance using Tanzu Application Service apps manager
 
-&nbsp;
+
 
 {{% alert title="Apps Manger" color="info" %}}
 [Apps Manager](https://docs.run.pivotal.io/console/dev-console.html) is a user interface that must be turned on by the operator of the foundation.
 {{% /alert %}} 
 
-&nbsp;
+
 
 1. Within your org, create a space or navigate to the space that will hold your Tanzu GemFire service instance.
 
-&nbsp;
+
 
 2. Click on the **Services** tab.
     ![Services Link in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/Service_Tab_in_Apps_Manager.png)
 
-&nbsp;
+
 
 3.  Click on the **ADD A SERVICE** button.
     ![Add A Service Button in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/add_a_service_button.png)
 
-&nbsp;
+
 
 4.  Click on ***Tanzu GemFire***.
     ![Click on Tanzu GemFire in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/tanzu_gemfire_apps_manager.png)
 
-&nbsp;
+
 
 5. Choose one of the available plans and click ***SELECT PLAN***.
      ![Select A Plan in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/select_a_plan.png)
 
-&nbsp;
+
 
 6.  Fill in the **Instance Name** with a custom name for your service instance. The service instance name can include alpha-numeric characters, hyphens, and underscores. This is the name you will use in your `manifest.yml`.  (Alternatively, if you have already pushed your application to your space can select it in the "Bind to App" dropdown - however we prefer to bind our applications through a `manifest.yml` file)
     
@@ -91,11 +91,11 @@ Starting in a terminal
     
      ![Create in progress in Apps Manager](/images/guides/data/tanzu-gemfire/get-started-tgf4vms-sbdg/create_in_progress.png)
 
-&nbsp;
+
 
 **It can take several minutes for the service instance creation to complete.**
 
-&nbsp;
+
 
 8.  Once complete you will see `create succeeded` under the **Last Operation** column (you may need to refresh the page for the status to update).
 

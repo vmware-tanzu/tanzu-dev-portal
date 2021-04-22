@@ -45,7 +45,10 @@ gfsh output after creating locator and server
 
 
 Create the region we want the data to end up in:
-create region --name=’Events’ --type=PARTITION
+
+```
+create region --name=’Events’ --type=PARTITION`
+```
 
 ![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/geode-kafka-gfsh-createregion.png)
 
@@ -68,7 +71,7 @@ bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-fac
 ## Creating the Sink Connector
 We’ll now create a sink connector to flow data from Kafka to Geode. We will also configure the key and value converters. For the value converter we will explicitly use the JsonPdxConverter supplied by the geode-kafka-connector. For the key, we will use a String converter, where the example webapp will just populate with an arbitrary value.
 
-**Configure connect-geode-sink.properties**
+### Configure connect-geode-sink.properties
 Create a file called connect-geode-sink.properties with the following properties and place this file in the config directory of Apache Kafka. Notice we use the JsonPdxConverter for our value converter. We can also map any topics to any number of regions.
 
 ```
@@ -82,7 +85,7 @@ locators=localHost[10334]
 topics=test
 ```
 
-**Modify config/connect-standalone.properties**
+### Modify config/connect-standalone.properties
 Modify config/connect-standalone.properties to point Kafka to where the plugin is installed. For example:
 
 ```
@@ -127,7 +130,11 @@ curl localhost:8080/ingest/github/test
 
 ## Query the JSON data in Apache Geode!
 Revisit gfsh and set a gfsh environment variable so we can see values with large fields.
-set variable --name=APP_RESULT_VIEWER --value=external
+
+```
+set variable --name=APP_RESULT_VIEWER --value=external`
+```
+
 Now we will query the events region. We’ll first display all the events we ingested.
 
 ```
@@ -138,7 +145,7 @@ query --query=”select * from /Events”
 
 Events made it into the region and we are able to query for them!
 
-**Query nested fields**
+### Query nested fields
 We can also issue a query on any of the JSON fields and nested fields as well. In this example we are actually going to drill down into a nested JSON field. We will find any event where the action field in the payload object is ‘opened’
 
 ```

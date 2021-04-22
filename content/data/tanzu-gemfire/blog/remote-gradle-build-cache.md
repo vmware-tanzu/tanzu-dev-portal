@@ -1,5 +1,5 @@
 ---
-title: "Apache Geode as a remote Gradle Build Cache"
+title: "Apache Geode as a Remote Gradle Build Cache"
 description: >
     Apache Geode as a remote cache for Gradle to share commonly built task outputs across remote builds to improve build times
 date: 2020-02-06
@@ -14,15 +14,15 @@ team:
 Gradle task output can be cached locally but also remotely. The idea of a remote cache is to share commonly built task outputs across remote builds to improve build times. With a few steps, we can use Apache Geode as a remote cache for Gradle.
 
 ## What’s Apache Geode?
-Apache Geode is a fault tolerant, highly concurrent and scalable in-memory data grid that can be used in many ways, including as a cache. A *region* is a data structure, similar to a distributed map, that we will use to store the task output. Regions provide extra features such as LRU eviction, that can be used to improve our solution in the future. As data grows, we can add more nodes to the cluster and with a simple rebalance command, the data will be evenly distributed across all the nodes.
+[Apache Geode](https://geode.apache.org/) is a fault tolerant, highly concurrent and scalable in-memory data grid that can be used in many ways, including as a cache. A *region* is a data structure, similar to a distributed map, that we will use to store the task output. Regions provide extra features such as LRU eviction, that can be used to improve our solution in the future. As data grows, we can add more nodes to the cluster and with a simple rebalance command, the data will be evenly distributed across all the nodes.
 
 ## How?
 
-**1. Prerequisites:**
+### Prerequisites
 
 Assuming you have Apache Geode installed. For help, see the [User Guide](https://geode.apache.org/docs/).
 
-**2. Start Apache Geode Cluster**
+### Start Apache Geode Cluster
 
 First we start a one locator and one server cluster.
 
@@ -38,7 +38,7 @@ Create the region where we will store the Gradle artifacts
 4. create region --name='gradleRegionName' 
 ```
 
-**3. Using the [Geode Gradle Build Cache](https://github.com/jhuynh1/geode-gradle-build-cache)**
+### Using the [Geode Gradle Build Cache](https://github.com/jhuynh1/geode-gradle-build-cache)
 
 Change your project's settings.gradle to include the following:
 
@@ -83,7 +83,7 @@ buildscript {
 
 Run a build with `--build-cache` or add `org.gradle.caching=true` to gradle.properties.
 
-**Remote and Local Cache**
+### Remote and Local Cache
 There are different ways to configure the remote and local cache relationship in Gradle to get optimal performance. These settings were not configured to get the best performance but to show the usage of the remote cache. More resources can be found online for creating ci and developer specific configurations. More info [here](https://docs.gradle.org/current/userguide/build_cache.html).
 
 ## What next?

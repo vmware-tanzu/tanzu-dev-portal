@@ -1,7 +1,7 @@
 ---
 title: "The Command Region Pattern"
 description: >
-        The Command Pattern is a behavioural design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event.
+        The Command Pattern is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event.
 date: 2020-04-15
 type: blog
 
@@ -16,7 +16,7 @@ team:
 
 The multi-site or WAN topology is used to connect distinct clusters, they act as one distributed system when they are coupled, and they act as independent systems when communication between sites fails.
 
-The *Command Pattern* is a behavioural design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event.
+The *Command Pattern* is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event.
 
 
 ## Why?
@@ -39,77 +39,78 @@ The idea is pretty straightforward: a custom *distributedCommand* region will be
 5. The DistributedCommand reaches a remote server, where the CacheWriter is invoked and the DistributedCommand is executed locally.
 
 ## Implementation
-* Create a *DistributedCommand* interface.
 
-```java
-public interface DistributedCommand {
+1. Create a *DistributedCommand* interface.
 
-  void execute();
-  default String getName() {
-    return this.getClass().getSimpleName();
-  }
-}
-```
-* Create as many implementations of the DistributedCommand interface as you need. Below is a dummy example, which does nothing but print *“Hello World from ${clientId}!”* in the logs.
+    ```java
+    public interface DistributedCommand {
+    
+      void execute();
+      default String getName() {
+        return this.getClass().getSimpleName();
+      }
+    }
+    ```
+2. Create as many implementations of the DistributedCommand interface as you need. Below is a dummy example, which does nothing but print *“Hello World from ${clientId}!”* in the logs.
 
-```java
-public class HelloWorldCommand implements DistributedCommand, Serializable {
-  private final static transient Logger logger = LogService.getLogger();
-  private String clientId;
-  @Override
-  public void execute() {
-    logger.info("Hello World from {}!.", clientId);
-  }
-}
-```
+    ```java
+    public class HelloWorldCommand implements DistributedCommand, Serializable {
+      private final static transient Logger logger = LogService.getLogger();
+      private String clientId;
+      @Override
+      public void execute() {
+        logger.info("Hello World from {}!.", clientId);
+      }
+    }
+    ```
 
-* Create a DistributedCommandCacheWriter, its only purpose is to execute the received command.
+3. Create a DistributedCommandCacheWriter, its only purpose is to execute the received command.
 
-```java
-public class DistributedCommandCacheWriter extends CacheWriterAdapter<Long, DistributedCommand> implements Declarable {
-  private final static transient Logger logger = LogService.getLogger();
+    ```java
+    public class DistributedCommandCacheWriter extends CacheWriterAdapter<Long, DistributedCommand> implements Declarable {
+      private final static transient Logger logger = LogService.getLogger();
+    
+      @Override
+      public void initialize(Cache cache, Properties properties) {
+      }
+    
+      @Override
+      public void beforeCreate(EntryEvent<Long, DistributedCommand> event) throws CacheWriterException {
+        DistributedCommand distributedCommand = event.getNewValue();
+        logger.info("Executing distributed command {}...", distributedCommand.getName());
+        distributedCommand.execute();
+        logger.info("Executing distributed command {}... Done!.", distributedCommand.getName());
+      }
+    }
+    ```
 
-  @Override
-  public void initialize(Cache cache, Properties properties) {
-  }
+4. Start two clusters (1 locator and 1 server each) for testing purposes.
 
-  @Override
-  public void beforeCreate(EntryEvent<Long, DistributedCommand> event) throws CacheWriterException {
-    DistributedCommand distributedCommand = event.getNewValue();
-    logger.info("Executing distributed command {}...", distributedCommand.getName());
-    distributedCommand.execute();
-    logger.info("Executing distributed command {}... Done!.", distributedCommand.getName());
-  }
-}
-```
+    ```
+    gfsh> start locator --name=cluster1-locator --port=10334 --J=-Dgemfire.remote-locators=localhost[11334] --J=-Dgemfire.distributed-system-id=1 --J=-Dgemfire.jmx-manager-start=true --J=-Dgemfire.jmx-manager-port=1080 --J=-Dgemfire.jmx-manager-http-port=0
+    gfsh> start server --name=cluster1-server --locators=localhost[10334] --server-port=40401
+    gfsh> start locator --name=cluster2-locator --port=11334 --J=-Dgemfire.remote-locators=localhost[10334] --J=-Dgemfire.distributed-system-id=2 --J=-Dgemfire.jmx-manager-start=true --J=-Dgemfire.jmx-manager-port=1090 --J=-Dgemfire.jmx-manager-http-port=0
+    gfsh> start server --name=cluster2-server --locators=localhost[11334] --server-port=40402
+    ```
 
-* Start two clusters (1 locator and 1 server each) for testing purposes.
+5. Deploy the *Commands* and *CacheWriter* to both clusters (hint: use the **gfsh deploy** command).
+6. Connected to cluster1, create the *region* and the *gateway-sender*.
 
-```
-gfsh> start locator --name=cluster1-locator --port=10334 --J=-Dgemfire.remote-locators=localhost[11334] --J=-Dgemfire.distributed-system-id=1 --J=-Dgemfire.jmx-manager-start=true --J=-Dgemfire.jmx-manager-port=1080 --J=-Dgemfire.jmx-manager-http-port=0
-gfsh> start server --name=cluster1-server --locators=localhost[10334] --server-port=40401
-gfsh> start locator --name=cluster2-locator --port=11334 --J=-Dgemfire.remote-locators=localhost[10334] --J=-Dgemfire.distributed-system-id=2 --J=-Dgemfire.jmx-manager-start=true --J=-Dgemfire.jmx-manager-port=1090 --J=-Dgemfire.jmx-manager-http-port=0
-gfsh> start server --name=cluster2-server --locators=localhost[11334] --server-port=40402
-```
+    ```
+    gfsh> connect --locator=localhost[10334]
+    gfsh> create gateway-sender --id=sender1 --remote-distributed-system-id=2
+    gfsh> create region --name=distributedCommand --type=REPLICATE_PROXY --gateway-sender-id=sender1 --cache-writer=org.apache.geode.tools.command.internal.DistributedCommandCacheWriter
+    ```
 
-* Deploy the *Commands* and *CacheWriter* to both clusters (hint: use the **gfsh deploy** command).
-* Connected to cluster1, create the *region* and the *gateway-sender*.
+7. Connected to cluster2, create the *region* and the *gateway-receiver*.
 
-```
-gfsh> connect --locator=localhost[10334]
-gfsh> create gateway-sender --id=sender1 --remote-distributed-system-id=2
-gfsh> create region --name=distributedCommand --type=REPLICATE_PROXY --gateway-sender-id=sender1 --cache-writer=org.apache.geode.tools.command.internal.DistributedCommandCacheWriter
-```
+    ```
+    gfsh> connect --locator=localhost[11334]
+    gfsh> create gateway-receiver
+    gfsh> create region --name=distributedCommand --type=REPLICATE_PROXY --cache-writer=org.apache.geode.tools.command.internal.DistributedCommandCacheWriter
+    ```
 
-* Connected to cluster2, create the *region* and the *gateway-receiver*.
-
-```
-gfsh> connect --locator=localhost[11334]
-gfsh> create gateway-receiver
-gfsh> create region --name=distributedCommand --type=REPLICATE_PROXY --cache-writer=org.apache.geode.tools.command.internal.DistributedCommandCacheWriter
-```
-
-* That’s it, you’re ready to start replicating your units of work across clusters!.
+That’s it, you’re ready to start replicating your units of work across clusters!.
 
 ## Example
 The following client application simply connects to cluster1 and inserts the *HelloWorldCommand*.
@@ -145,7 +146,7 @@ It’s easy to see in the logs from both servers (*cluster1-server* and *cluster
 ```
 
 ## What’s Next?
-Check out [geode-command-region-pattern](https://github.com/jujoramos/geode-command-region-pattern) and play around with it, it allows you to test your commands in a distributed fashion using the [geode-dunit](https://cwiki.apache.org/confluence/display/GEODE/DistributedTest) module.
+Check out [geode-command-region-pattern](https://github.com/jujoramos/geode-command-region-pattern) and play around with it, it allows you to test your commands in a distributed fashion using the [geode-dunit](https://cwiki.apache.org/confluence/display/GEODE/About+Distributed+Testing) module.
 
 There are several other really useful things that can be done through the usage of this pattern, like distributing a *Region.destroy()* or *Region.clear()* operation, execute a transaction on the remote cluster, the possibilities are endless, give it a try!
 

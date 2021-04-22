@@ -27,7 +27,7 @@ If you are willing to allow gaps, continue reading further, if you don’t… we
 Instead of embedding the sequence generation within the real-time processing, use the [Geode Sequence Generator](https://github.com/jujoramos/geode-sequence-generator) and invoke the service occasionally to retrieve a big enough set of counters to work on.
 Ideally, the service should be invoked during client startup and the batch requested should be big enough to avoid multiple calls to the service in real-time. The above alleviates the contention on the servers and maintains scalability, allowing several client applications to truly process batches of work in parallel using the set of assigned sequentially generated IDs.
 
-##How Does it Work?
+## How Does it Work?
 The tool primarily relies on `PERSISTENT` regions, the `Distributed Lock Service` and `Function Execution`.
 There’s only one `Region` acting as the backing store, no matter how many different sequences are managed, and a `Distributed Lock` is acquired every time a sequence needs to be computed (thus the recommendation to avoid invoking the service multiple times in real-time and get a big enough batch of sequences to work on from the start).
 To initialize the backing `Region`, the tool executes an initialization `Function` through the usage of `FunctionService.onServers`, allowing the user to choose exactly which servers will be used as the back end for the sequence generation (all by default).

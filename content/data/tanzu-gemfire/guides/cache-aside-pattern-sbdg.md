@@ -254,13 +254,13 @@ When the app is running, open a browser and go to <http://localhost:8080>.  You 
 
 ![img](/images/guides/data/tanzu-gemfire/cache-aside-sbdg/cache-aside-pattern-1.png)
 
-&nbsp;
+
 
 Enter a ZIP code to search for bike incidents.
 
 ![img](/images/guides/data/tanzu-gemfire/cache-aside-sbdg/cache-aside-pattern-2.png)
 
-&nbsp;
+
 
 
 Notice the response time on the right side.  The application has now queried the Bikewise API with the entered ZIP code and stored the response in Tanzu GemFire.  
@@ -269,19 +269,19 @@ If you click the search button again with the same ZIP code, you will see that t
 
 ![img](/images/guides/data/tanzu-gemfire/cache-aside-sbdg/cache-aside-pattern-3.png)
 
-&nbsp;
+
 
 ---
 
 ## Run the App on the Tanzu Application Service
 
-&nbsp;
+
        
 {{% alert title="Tanzu GemFire Service Instance" color="warning" %}}
 To deploy the Bike Incident application to Tanzu Application Service (TAS) make sure you have [created a Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
 {{% /alert %}} 
        
-&nbsp;
+
  
 ### Update the manifest.yaml file
  In the project root directory, open the `manifest.yml` file and replace  `<your-tanzu-gemfire-service>` with the name of your service instance.
@@ -292,13 +292,13 @@ To deploy the Bike Incident application to Tanzu Application Service (TAS) make 
  
  After the app has successfully been pushed, in the output find the `route`.  Then open a browser and copy and paste the route into the browser.  
  
-&nbsp;
+
 
 ---
  
  ## Run the App on Kubernetes
  
- &nbsp;
+
         
  {{% alert title="Tanzu GemFire Kubernetes Cluster" color="warning" %}}
  To deploy the Bike Incident application on Kubernetes make sure you have [created a Tanzu GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
@@ -308,7 +308,7 @@ To deploy the Bike Incident application to Tanzu Application Service (TAS) make 
  * Our **GemFire cluster** is `cache-aside-gemfire-cluster` 
  {{% /alert %}} 
          
- &nbsp;
+ 
   
 ### Edit the `application.properties` file
 * Navigate to the `spring-for-apache-geode-examples/cache-aside` directory. 
@@ -327,7 +327,7 @@ To deploy the Bike Incident application to Tanzu Application Service (TAS) make 
    * Replace `cache-aside-gemfire-cluster` with the name of your GemFire cluster if different.
    * Replace `tanzu-gemfire` with your namespace if different.
   
-  &nbsp;
+  
   
 * Replace the value for `spring.data.gemfire.management.http.host:` with your Tanzu GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to your Tanzu GemFire cluster.  The information follows a similar form as above:
 

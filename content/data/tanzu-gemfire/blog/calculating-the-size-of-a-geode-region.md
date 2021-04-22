@@ -80,7 +80,7 @@ private SingleMemberRegionSize calculateSize(Cache cache, Region region) {
 }
 ```
 
-Accept or Reject Objects from Region Size
+## Accept or Reject Objects from Region Size
 
 The **RegionObjectFilter** accept method receives the object and its parent object and uses these to decide whether to accept or reject the object. In this case, it just uses the class of the object.
 
