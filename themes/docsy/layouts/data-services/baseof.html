@@ -79,7 +79,7 @@
                 {{ range $blogs }}
                     <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
                         <a class='h4' href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
+                        {{ with .Params.description }}<p>{{ . | markdownify | truncate 150 }}</p>{{ end }}
                     </div>
                 {{ end }}
             </div></div>
