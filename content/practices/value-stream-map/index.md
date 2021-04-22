@@ -26,7 +26,7 @@ remote: false
 ### Sample Agenda & Prompts
 1. Explain the purpose of the workshop.
    
-   Using product development lifecyle as an example, you might say something like:
+   Using product development lifecycle as an example, you might say something like:
    
    > “To identify our product development life cycle, we’ll follow a feature from the moment user gives feedback (e.g. a story is written) to its deployment on production. We’ll focus on the current deployment process before the future state, because understanding what’s happening now will surface real blockers and stakeholders faster than an idealized workflow. Additionally, we want to discover not only the steps, but also the roles and the lead time of each steps.”
 
@@ -57,7 +57,7 @@ remote: false
    - How long does the whole value stream take and how does the team feel about it?
 
    {{< callout >}}
-   Tip: These are example questions. Use whatever “lens data” that’s appropriate for your content to shape your picture of the problem. Care about handoffs? Capture them explicitly. Want to visualize system touchpoints? Add in [Service Blueprint](/practices/service-bluepring)-type details. In short, capture what matters.
+   Tip: These are example questions. Use whatever “lens data” that’s appropriate for your content to shape your picture of the problem. Care about handoffs? Capture them explicitly. Want to visualize system touch-points? Add in **Service Blueprint**-type details. In short, capture what matters.
    {{< /callout >}}
 
 1. Have the team take a step back to review the flow and adjust anything that feels incorrect. 
@@ -84,6 +84,8 @@ Some teams are sensitive to the idea of calling out “waste” in their process
 ## Related Practices
 [Event Storming](/practices/event-storming)
 
+[Service Blueprint](/practices/service-blueprint)
+
 ### Variations
 Path-to-production exercise
 
@@ -94,7 +96,8 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-Product development life cycle
+Example of a **product development life cycle**
+
 ![Value Stream Map image](/images/practices/value-stream-map/value-stream-map-3.jpg)
 
 ## Recommended Reading
