@@ -440,7 +440,7 @@ Gradle
 Grafana
 GRAFANA-PASSWORD
 Grails
-GraphQL
+GraphQL(-based)?
 Grasso
 GRE
 Greenplum
@@ -458,6 +458,7 @@ Hamano
 HAProxy
 HashiCorp('s)?
 Hayk
+Haytham
 Heartbleed
 HELM_UPGRADE_EXTRA_ARGS
 [Hh]elmfiles?
@@ -1074,6 +1075,7 @@ Soluto('s)?
 [Ss]onobuoy
 Sox
 [Ss]peedback
+SPEL
 SPIFFE
 Splunk
 Spock
