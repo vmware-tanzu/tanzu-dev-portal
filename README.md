@@ -6,26 +6,9 @@ The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the s
 
 ### Run locally
 
-To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use one of the following two commands:
+To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary.
 
-Using `brew`:
-
-```
-wget "https://raw.githubusercontent.com/Homebrew/homebrew-core/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
-brew install hugo.rb
-# To keep this version around if you upgrade
-brew pin hugo
-```
-
-Or to directly download:
-
-```
-wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
-tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz"
-mv ./hugo /usr/local/bin/
-```
-
-Now you're ready to build locally:
+To build the site:
 
 ```
 git clone https://github.com/vmware-tanzu/tanzu-dev-portal

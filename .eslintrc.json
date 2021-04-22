@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "prettier/prettier",
+    "plugin:node/recommended"
+  ],
+  "rules": {
+    "indent": ["error", 4],
+    "no-console": "error",
+    "no-missing-require": "off",
+    "node/no-missing-require": "off",
+    "node/no-unpublished-require": "off"
+  }
+}
