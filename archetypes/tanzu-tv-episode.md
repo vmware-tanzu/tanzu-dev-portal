@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
 title: "Coming Soon"
-aliases: ["/0000"]
+aliases: ["0000"]
 episode: "0000"
 hosts:
 - Tiffany Jernigan
