@@ -66,7 +66,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
   // Send any events that are currently queued for sending.
   // Will automatically happen on the next event loop.
-  amplitudeClient.flush();
+  await amplitudeClient.flush();
   return {
     statusCode: 200,
     body: JSON.stringify({ event: 'received' }),
