@@ -20,7 +20,13 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-  console.log(event)
+  if (event.httpMethod !== 'POST') {
+    console.error('Not a POST');
+    return {
+      statusCode: 404,
+      body: JSON.stringify({ error: 'POST ONLY' }),
+    };
+  }
   if (
     !event.queryStringParameters ||
     event.queryStringParameters.token !== analyticsToken
@@ -60,9 +66,9 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
   // Send any events that are currently queued for sending.
   // Will automatically happen on the next event loop.
-  const statussend = amplitudeClient.flush();
+  amplitudeClient.flush();
   return {
     statusCode: 200,
-    body: JSON.stringify({ sent: statussend }),
+    body: JSON.stringify({ event: 'received' }),
   };
 });
