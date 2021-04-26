@@ -48,9 +48,14 @@ OptionParser.new do |opts|
         options[:tags] = t
     end
 
-    opts.on("-p", "--topics PATH", "Path to write the tally results of the topics") do |t|
-        options[:topics] = t
+    opts.on("-p", "--topics PATH", "Path to write the tally results of the topics") do |p|
+        options[:topics] = p
     end
+
+    opts.on("-e", "--errors PATH", "Path to write the tally results of errors") do |e|
+        options[:errors] = e
+    end
+
 end.parse!
 
 
@@ -70,6 +75,7 @@ metaKeys = []
 
 tagsTally = {}
 topicsTally = {}
+errorsTally = {}
 
 # Gather the meta data from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
@@ -124,6 +130,24 @@ auditData.each do |content|
     metaKeys.each do |k|
         if k == "audit"
             matches = filter(options, metaKeys, row)
+
+            # Iterate through the filter results to tally issues
+            if matches.empty?
+                if errorsTally.has_key? "None"
+                    errorsTally["None"] += 1
+                else
+                    errorsTally["None"] = 1
+                end
+            else 
+                matches.each do |m|
+                    if errorsTally.has_key? m
+                        errorsTally[m] += 1
+                    else
+                        errorsTally[m] = 1
+                    end
+                end
+            end
+
             if matches.empty?
                 row.push("")
             else
@@ -143,6 +167,8 @@ auditData.each do |content|
     csv << row
 end
 
+csv.close
+
 # If defined, write the tags tally to a CSV
 if options.has_key? :tags
     CSV.open(options[:tags], "wb") do |csv|
@@ -161,4 +187,11 @@ if options.has_key? :topics
     end
 end
 
-csv.close
+# If defined, write the errors tally to a CSV
+if options.has_key? :errors
+    CSV.open(options[:errors], "wb") do |csv|
+        errorsTally.each do |e|
+            csv << e
+        end
+    end
+end
