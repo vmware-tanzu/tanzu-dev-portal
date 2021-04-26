@@ -1086,6 +1086,9 @@ body.tv-episode {
   cursor: default;
   pointer-events: none;
 
+  h3, .teaser {
+    display: none;
+  }
   .countdown {
     display: none;
   }
