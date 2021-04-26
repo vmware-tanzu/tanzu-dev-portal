@@ -20,6 +20,7 @@
 A3
 AAAA
 Abbie
+Abdellfetah
 Abo
 Abubakar
 Acceptor
@@ -135,6 +136,7 @@ Belamaric
 benbravo73
 benchmark(ing)?
 benefitting
+Berglund
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
 BikeIncidentsByZip
@@ -848,6 +850,7 @@ Linkerd
 linter(s)?
 [Ll]inux
 Lippert
+Littleton
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
@@ -1305,6 +1308,7 @@ serviceName=backend
 setValue(Template)?s
 severities
 Sevilla
+Sghiouar
 sharded
 Sheasha
 Shellshock
@@ -1421,6 +1425,7 @@ Tilt(file|Cloud)?
 [Tt]imebox
 timebox(ed)?
 TimingGatewayEventFilter
+tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
 TODOs?
