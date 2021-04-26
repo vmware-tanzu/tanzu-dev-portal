@@ -5,7 +5,12 @@ const Sentry = require('@sentry/serverless');
 // eslint-disable-next-line import/no-unresolved
 const config = require('./util/config');
 
-const amplitudeClient = Amplitude.init(process.env.AMPLITUDE_API_KEY);
+const amplitudeKey =
+  config.context === 'production'
+    ? process.env.PROD_AMPLITUDE_API_KEY
+    : process.env.DEV_AMPLITUDE_API_KEY;
+
+const amplitudeClient = Amplitude.init(amplitudeKey);
 const analyticsToken = process.env.ANALYTICS_TOKEN;
 
 Sentry.AWSLambda.init({
@@ -34,9 +39,9 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     workshopName: workshopEvent.name,
   };
   if (!workshopEvent.data) {
-    eventProperties.percentageComplete = 0.00;
+    eventProperties.percentageComplete = 0.0;
   } else {
-    const completion = (workshopEvent.step / workshopEvent.total)
+    const completion = workshopEvent.step / workshopEvent.total;
     eventProperties.percentageComplete = completion.toFixed(2);
   }
   amplitudeClient.logEvent({
