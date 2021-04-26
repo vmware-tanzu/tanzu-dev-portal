@@ -36,12 +36,10 @@ spell: npm
 #function-config: @ sets the function config variables during build
 function-config:
 ifeq ($(CONTEXT), production)
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js.ph2
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
 else
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js.ph2
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
 endif
-	awk -v a="${SENTRY_DSN_AUTH_START}" '{gsub(/SENTRY_DSN_AUTH_START/,a)}1' netlify/functions/util/config.js.ph2 | awk -v a="${SENTRY_DSN_AUTH_CALLBACK}" '{gsub(/SENTRY_DSN_AUTH_CALLBACK/,a)}1' | awk -v a="${SENTRY_DSN_GET_WORKSHOP}" '{gsub(/SENTRY_DSN_GET_WORKSHOP/,a)}1' >> netlify/functions/util/config.js
-	
 
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
