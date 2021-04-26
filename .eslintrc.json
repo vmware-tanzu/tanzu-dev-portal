@@ -3,14 +3,8 @@
     "node": true,
     "jest": true
   },
-  "extends": [
-    "airbnb-base",
-    "prettier",
-    "prettier/prettier",
-    "plugin:node/recommended"
-  ],
+  "extends": ["airbnb-base", "plugin:node/recommended", "prettier"],
   "rules": {
-    "indent": ["error", 4],
     "no-console": "error",
     "no-missing-require": "off",
     "node/no-missing-require": "off",
