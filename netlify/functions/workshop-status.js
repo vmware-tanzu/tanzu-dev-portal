@@ -16,10 +16,11 @@ const analyticsToken = process.env.ANALYTICS_TOKEN;
 Sentry.AWSLambda.init({
   dsn: process.env.SENTRY_DSN_ANALYTICS,
   environment: config.context,
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.1,
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+  console.log(event)
   if (
     !event.queryStringParameters ||
     event.queryStringParameters.token !== analyticsToken
@@ -28,6 +29,13 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     return {
       statusCode: 401,
       body: JSON.stringify({ error: 'Not authorized' }),
+    };
+  }
+  if (!event.body) {
+    console.error('No Data');
+    return {
+      statusCode: 404,
+      body: JSON.stringify({ error: 'No Data' }),
     };
   }
   const { body } = event;
