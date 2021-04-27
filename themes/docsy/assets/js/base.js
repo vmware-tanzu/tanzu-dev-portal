@@ -288,7 +288,9 @@ limitations under the License.
           document.title.indexOf("|") - 1
         );
         if (player != null) {
-          var elapsedPercentage = player.getCurrentTime() / player.getDuration();
+          var currentTime = !player.getCurrentTime ? 0.0 : player.getCurrentTime();
+          var duration = !player.getDuration ? 0.0 : player.getDuration();
+          var elapsedPercentage = currentTime / duration;
           var percentageCompleted;
           if (elapsedPercentage < 0.25) percentageCompleted = 0;
           else if (elapsedPercentage >= 0.25 && elapsedPercentage < 0.5)
