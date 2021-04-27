@@ -21,7 +21,7 @@ const netlifyCookieName = 'nf_jwt';
 
 
 Sentry.AWSLambda.init({
-    dsn: config.sentry.authCallbackDsn,
+    dsn: process.env.SENTRY_DSN_AUTH_CALLBACK,
     environment: config.context,
     tracesSampleRate: 1.0,
 });
