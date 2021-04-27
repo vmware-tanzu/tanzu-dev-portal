@@ -13,7 +13,7 @@ const base64 = require('./util/base64');
 const config = require("./util/config");
 
 Sentry.AWSLambda.init({
-    dsn: config.sentry.authStartDsn,
+    dsn: process.env.SENTRY_DSN_AUTH_START,
     environment: config.context,
     tracesSampleRate: 1.0,
 });
