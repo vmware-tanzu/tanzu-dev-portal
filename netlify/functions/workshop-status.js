@@ -13,6 +13,13 @@ const amplitudeKey =
 const amplitudeClient = Amplitude.init(amplitudeKey);
 const analyticsToken = process.env.ANALYTICS_TOKEN;
 
+const eventTypes = [
+  'Workshop/Start',
+  'Workshop/View',
+  'Workshop/Finish',
+  'Session/Orphaned',
+];
+
 Sentry.AWSLambda.init({
   dsn: process.env.SENTRY_DSN_ANALYTICS,
   environment: config.context,
@@ -47,31 +54,35 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
   const { body } = event;
   const jsonbody = JSON.parse(body);
   const workshopEvent = jsonbody.event;
-  const time = new Date(workshopEvent.timestamp)
-  const eventProperties = {
-    'workshop event type': workshopEvent.name,
-    'workshop name': workshopEvent.workshop,
-  };
-  if (!workshopEvent.data) {
-    eventProperties['percentage complete'] = 0;
-  } else {
-    const completion = (workshopEvent.data.step / workshopEvent.data.total) * 100;
-    console.log(completion)
-    eventProperties['percentage complete'] = completion.toFixed(0);
-  }
-  console.log(eventProperties)
-  amplitudeClient.logEvent({
-    time: time.getTime(),
-    event_type: 'workshop event',
-    user_id: workshopEvent.user,
-    event_properties: eventProperties,
-  });
+  if (eventTypes.includes(workshopEvent.name)) {
+    const time = new Date(workshopEvent.timestamp);
+    const eventProperties = {
+      'workshop event type': workshopEvent.name,
+      'workshop name': workshopEvent.workshop,
+    };
+    if (workshopEvent.data.step) {
+      const completion =
+        (workshopEvent.data.step / workshopEvent.data.total) * 100;
+      eventProperties['percentage complete'] = completion.toFixed(0);
+    }
+    console.log(eventProperties);
+    amplitudeClient.logEvent({
+      time: time.getTime(),
+      event_type: 'workshop event',
+      user_id: workshopEvent.user,
+      event_properties: eventProperties,
+    });
 
-  // Send any events that are currently queued for sending.
-  // Will automatically happen on the next event loop.
-  await amplitudeClient.flush();
+    // Send any events that are currently queued for sending.
+    // Will automatically happen on the next event loop.
+    await amplitudeClient.flush();
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ event: 'received' }),
+    };
+  }
   return {
     statusCode: 200,
-    body: JSON.stringify({ event: 'received' }),
+    body: JSON.stringify({ event: 'discarded' }),
   };
 });
