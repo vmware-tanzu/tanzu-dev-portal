@@ -28,8 +28,8 @@ if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('g
 
 <!-- Sentry SDK-->
 <script
-  src="https://browser.sentry-cdn.com/6.3.0/bundle.tracing.min.js"
-  integrity="sha384-bYnMk4rdUJ32XikJR2cXhgirS37DAde7poz0I7hPFWkmGzvhHs1TXBHlU8Gv+hQn"
+  src="https://browser.sentry-cdn.com/6.3.1/bundle.tracing.min.js"
+  integrity="sha384-JRd2IdwDASXsWVxwzVNu8jQ9C2risDIvq5ocYjUTz2nFtG6NXzOiATXTdvWa4xNR"
   crossorigin="anonymous"
 ></script>
 
@@ -40,7 +40,7 @@ Sentry.init({
   release: '{{ getenv "COMMIT_REF" }}',
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.2,
 });
 
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
@@ -105,15 +105,17 @@ function sendAmplitudeEventOnLoad(eventType, eventProperties) {
 function sendAmplitudeEvent(eventType, eventProperties) {
   // Clear out persisted properties from previous/onload events
   var event = dataLayer.find(element => element["event"] == "logEvent");
-  var existingProps = Object.keys(event["eventProperties"]);
-  var newProps = Object.keys(eventProperties);
-  var difference = existingProps.filter(x => !newProps.includes(x));
-  var removeProps = {};
-  difference.forEach(element => {
-    var newObject = {};
-    removeProps[element] = undefined;
-  });
-  Object.assign(eventProperties, removeProps);
+  if (event != null) {
+    var existingProps = Object.keys(event["eventProperties"]);
+    var newProps = Object.keys(eventProperties);
+    var difference = existingProps.filter(x => !newProps.includes(x));
+    var removeProps = {};
+    difference.forEach(element => {
+      var newObject = {};
+      removeProps[element] = undefined;
+    });
+    Object.assign(eventProperties, removeProps);
+  }
   dataLayer.push({'event': 'logEvent', 'eventType': eventType, 'eventProperties': eventProperties});
 }
 function sendAmplitudeUserPropsOnLoad(userProperties) {
