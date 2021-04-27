@@ -54,6 +54,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
   const { body } = event;
   const jsonbody = JSON.parse(body);
   const workshopEvent = jsonbody.event;
+  console.log(jsonbody)
   if (eventTypes.includes(workshopEvent.name)) {
     const time = new Date(workshopEvent.timestamp);
     const eventProperties = {
