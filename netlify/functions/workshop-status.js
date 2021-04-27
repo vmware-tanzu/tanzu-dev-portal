@@ -55,7 +55,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
   if (!workshopEvent.data) {
     eventProperties['percentage complete'] = 0;
   } else {
-    const completion = (workshopEvent.step / workshopEvent.total) * 100;
+    const completion = (workshopEvent.data.step / workshopEvent.data.total) * 100;
     console.log(completion)
     eventProperties['percentage complete'] = completion.toFixed(0);
   }
