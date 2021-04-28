@@ -131,7 +131,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             body: redirectBody,
         };
     } catch (err) {
-        console.error(err);
+        Sentry.captureException(err);
         return {
             statusCode: err.statusCode || 500,
             body: JSON.stringify({ error: err.message }),
