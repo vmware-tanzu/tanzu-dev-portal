@@ -86,10 +86,16 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             },
         };
         const oneTrustCookieParsed = querystring.parse(cookies.OptanonConsent);
-        const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
-        console.log(oneTrustCookieParsed.groups[groupposition]);
-        if (oneTrustCookieParsed.groups[groupposition] === '0') {
-            jwtToken.id = randomToken();
+        if (oneTrustCookieParsed){
+            const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
+            if (oneTrustCookieParsed.groups[groupposition] === '0') {
+                jwtToken.id = randomToken();
+            }else {
+                jwtToken.name = decoded.payload.username;
+                jwtToken.id = decoded.payload.username;
+                jwtToken.acct = decoded.payload.acct;
+                jwtToken.sub = decoded.payload.sub;
+            }
         } else {
             jwtToken.name = decoded.payload.username;
             jwtToken.id = decoded.payload.username;
@@ -125,7 +131,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             body: redirectBody,
         };
     } catch (err) {
-        console.error(err);
+        Sentry.captureException(err);
         return {
             statusCode: err.statusCode || 500,
             body: JSON.stringify({ error: err.message }),
