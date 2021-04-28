@@ -20,16 +20,18 @@
 	}
 
 </script>
-<div class='container flex flex-row justify-content-between'>
-	<div class="td-main">
+<div class='container flex flex-row justify-content-between py-5'>
+	<div class="td-main col-lg-4 col-12 px-0">
 		<div class="mt-lg-5 mt-0 py-2">
 			<div class='container'>
 				{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 				<h1>{{ .Title }}</h1>
-				<h4 class='text-white'>{{ .Description }}</h4>
+				<h4 class='text-white mb-4'>{{ .Description }}</h4>
 				<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>Approximate time: {{ .Params.length }} minutes</p>
-				<a class="btn mt-2" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90" id="startinfo"></span>
-				<hr class='grey-hr mt-4'>
+				<a class="btn mt-4" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90 mt-4 align-middle d-inline-block" id="startinfo"></span>
+				<br>
+				<br>
+				<hr class='grey-hr'>
 	
 			</div>
 		</div>
@@ -38,9 +40,9 @@
 		{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
 	
 		<div class="container pb-5">
-				{{ with $img := .Params.logo }}
-			<!-- <img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/> -->
-			{{end}}
+				<!-- {{ with $img := .Params.logo }}
+					<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
+				{{end}} -->
 			<div class="github-imported-sample">
 					{{ .Content }}
 			</div>
@@ -56,6 +58,8 @@
 			<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
 		</div>
 	</div>
-	<img class='align-self-center' src='https://i.imgur.com/9WGgCUY.png'>
+	{{ with $preview := .Params.preview}}
+		<img class='align-self-center workshop-preview col-lg-7 col-12 px-0' src={{ $preview| relURL }}>
+	{{end}}
 </div>
 {{ end }}

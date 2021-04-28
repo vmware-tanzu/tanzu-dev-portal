@@ -1034,7 +1034,7 @@ body.tv-episode {
 
 .col-4-thumbnail {
   padding: 0;
-  background-color: #324f61;
+  background-color: $border;
   transform: scale(1);
   transition: transform 0.25s;
 
@@ -1082,7 +1082,7 @@ body.tv-episode {
 }
 
 .video-description {
-  background-color: #324f61;
+  background-color: $border;
   color: white !important;
   padding: 20px 25px;
   transition: background-color 0.25s;
@@ -1206,7 +1206,7 @@ div.aside div.aside-content {
     width: 100%;
   }
   .description {
-    background-color: #324F61;
+    background-color: $border;
     height: 230px;
   }
 }

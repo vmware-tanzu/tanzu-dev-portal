@@ -17,6 +17,9 @@ tags:
   - Kubernetes
 length: 180
 lab: cnd-deploy-practices
+hero: "/images/workshops/workshop-springboot.png"
+preview: "/images/workshops/img-cloud-native-app.png"
+
 ---
 
 This is a workshop for developers and application operators

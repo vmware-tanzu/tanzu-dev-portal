@@ -13,6 +13,7 @@ length: 30
 lab: lab-getting-started-with-octant
 logo: "/images/workshops/logo-octant.png"
 hero: "/images/workshops/workshop-octant.png"
+preview: "/images/workshops/img-octant.png"
 
 ---
 

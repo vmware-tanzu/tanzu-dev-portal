@@ -17,6 +17,8 @@ tags:
 length: 120
 lab: spring-on-kubernetes
 hero: "/images/workshops/workshop-spring-on-kubernetes.png"
+preview: "/images/workshops/img-spring-on-kubernetes.png"
+
 
 ---
 

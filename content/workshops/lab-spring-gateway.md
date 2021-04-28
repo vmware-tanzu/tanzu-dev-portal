@@ -16,6 +16,7 @@ length: 15-30
 lab: lab-spring-gateway
 logo: "/images/workshops/logo-spring-cloud.png"
 hero: "/images/workshops/workshop-spring-cloud-gateway.png"
+preview: "/images/workshops/img-spring-cloud.png"
 
 ---
 
