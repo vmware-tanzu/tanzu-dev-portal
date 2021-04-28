@@ -3,7 +3,6 @@ name: Chris Sterling
 description: "Sr. Product Line Manager"
 photo: "/images/team/chris-sterling.jpeg"
 roles: ["guest"]
-skills: [""]
 location: "Kenmore, WA"
 weight: 1
 

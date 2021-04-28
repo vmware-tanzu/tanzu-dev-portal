@@ -1086,6 +1086,9 @@ body.tv-episode {
   cursor: default;
   pointer-events: none;
 
+  h3, .teaser {
+    display: none;
+  }
   .countdown {
     display: none;
   }
@@ -1153,6 +1156,11 @@ div.aside div.aside-title i {
 div.aside div.aside-content {
   padding: 5px 20px;
   background: #0f171c;
+}
+
+.td-term.td-topic .col-12 {
+  padding-left: 0px !important;
+  padding-right: 1rem;
 }
 
 /* SYNTAX HIGHLIGHTING */

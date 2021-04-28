@@ -2,7 +2,7 @@
 
 ## Building the Site
 
-The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
+The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with SCSS/SASS support built in.
 
 ### Run locally
 
@@ -17,6 +17,17 @@ make preview
 ```
 
 A preview of the dev portal will be available at: [http://localhost:1313/developer](http://localhost:1313/developer).
+
+If you do not have the extended version installed, you will get an error similar to this when you run `make preview`:
+
+```
+hugo server -b http://localhost:1313/developer
+Start building sites …
+ERROR 2021/04/26 14:34:41 TOCSS: failed to transform "css/light-theme.css" (text/x-scss). Check your Hugo installation; you need the extended version to build SCSS/SASS.
+Built in 1366 ms
+Error: Error building site: TOCSS: failed to transform "css/main.css" (text/x-scss). Check your Hugo installation; you need the extended version to build SCSS/SASS.
+make: *** [Makefile:22: preview] Error 255
+```
 
 ### Run tests locally
 
