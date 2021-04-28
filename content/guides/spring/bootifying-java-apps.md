@@ -27,6 +27,8 @@ Bootification is the process of changing the code and configuration of an applic
 
 This step-by-step guide walks you through the process of transforming existing Java applications into first-class Spring Boot citizens.
 
+![img](/images/guides/spring/diagrams/spring-bootification-process.png)
+
 ### 1. Learn about Spring Boot
 
 To learn more about what Spring Boot is and what you can do with it, see the official [Spring Boot home page](https://spring.io/projects/spring-boot) and [Getting Started Guides](https://spring.io/guides#getting-started-guides). The [references](#references) section provides more learning resources.
