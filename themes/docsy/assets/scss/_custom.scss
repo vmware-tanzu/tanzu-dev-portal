@@ -1090,6 +1090,16 @@ body.tv-episode {
   font-size: 1.0625rem;
 }
 
+//Workshops
+@media (min-width: 992px) {
+  .workshop-description {
+    width: 35.5%;
+  }
+  .workshop-preview {
+    width: 58%;
+  }
+}
+
 //SpringOne Tour Upcoming
 #springonetour .row .upcoming:nth-child(4),
 #springonetour .row .upcoming:nth-child(5),

@@ -20,11 +20,12 @@
 	}
 
 </script>
-<div class='container flex flex-row justify-content-between py-5'>
-	<div class="td-main col-lg-4 col-12 px-0">
-		<div class="mt-lg-5 mt-0 py-2">
+<div class='container mt-6 mt-0 pt-lg-5'>
+	{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+</div>
+<div class='container flex flex-row justify-content-between py-lg-5 py-2'>
+	<div class="td-main px-0 workshop-description">
 			<div class='container'>
-				{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 				<h1>{{ .Title }}</h1>
 				<h4 class='text-white mb-4'>{{ .Description }}</h4>
 				<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>Approximate time: {{ .Params.length }} minutes</p>
@@ -34,7 +35,6 @@
 				<hr class='grey-hr'>
 	
 			</div>
-		</div>
 	
 	
 		{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
@@ -59,7 +59,7 @@
 		</div>
 	</div>
 	{{ with $preview := .Params.preview}}
-		<img class='align-self-center workshop-preview col-lg-7 col-12 px-0' src={{ $preview| relURL }}>
+		<img class='align-self-start workshop-preview px-0 mt-2 d-lg-block d-none' src={{ $preview| relURL }}>
 	{{end}}
 </div>
 {{ end }}
