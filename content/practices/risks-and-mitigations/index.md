@@ -29,6 +29,7 @@ what:
         
    {{% callout %}}
    Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
+   Tip: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
    {{% /callout %}}
    
 1. Ask each person to select their top 5 risks and obstacles

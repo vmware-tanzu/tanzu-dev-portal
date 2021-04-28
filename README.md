@@ -2,30 +2,13 @@
 
 ## Building the Site
 
-The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
+The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with SCSS/SASS support built in.
 
 ### Run locally
 
-To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use one of the following two commands:
+To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary.
 
-Using `brew`:
-
-```
-wget "https://raw.githubusercontent.com/Homebrew/homebrew-core/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
-brew install hugo.rb
-# To keep this version around if you upgrade
-brew pin hugo
-```
-
-Or to directly download:
-
-```
-wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
-tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz"
-mv ./hugo /usr/local/bin/
-```
-
-Now you're ready to build locally:
+To build the site:
 
 ```
 git clone https://github.com/vmware-tanzu/tanzu-dev-portal
@@ -34,6 +17,17 @@ make preview
 ```
 
 A preview of the dev portal will be available at: [http://localhost:1313/developer](http://localhost:1313/developer).
+
+If you do not have the extended version installed, you will get an error similar to this when you run `make preview`:
+
+```
+hugo server -b http://localhost:1313/developer
+Start building sites …
+ERROR 2021/04/26 14:34:41 TOCSS: failed to transform "css/light-theme.css" (text/x-scss). Check your Hugo installation; you need the extended version to build SCSS/SASS.
+Built in 1366 ms
+Error: Error building site: TOCSS: failed to transform "css/main.css" (text/x-scss). Check your Hugo installation; you need the extended version to build SCSS/SASS.
+make: *** [Makefile:22: preview] Error 255
+```
 
 ### Run tests locally
 

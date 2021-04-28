@@ -157,7 +157,6 @@ limitations under the License.
     if (!promo.length) {
       return;
     }
-
     var promoOffset = bottomPos(promo);
     var navbarOffset = $(".js-navbar-scroll").offset().top;
 
@@ -288,32 +287,36 @@ limitations under the License.
           0,
           document.title.indexOf("|") - 1
         );
-        var elapsedPercentage = player.getCurrentTime() / player.getDuration();
-        var percentageCompleted;
-        if (elapsedPercentage < 0.25) percentageCompleted = 0;
-        else if (elapsedPercentage >= 0.25 && elapsedPercentage < 0.5)
-          percentageCompleted = 0.25;
-        else if (elapsedPercentage >= 0.5 && elapsedPercentage < 0.75)
-          percentageCompleted = 0.5;
-        else if (elapsedPercentage >= 0.75 && elapsedPercentage < 1)
-          percentageCompleted = 0.75;
-        else if (elapsedPercentage == 1) percentageCompleted = 1;
+        if (player != null) {
+          var currentTime = !player.getCurrentTime ? 0.0 : player.getCurrentTime();
+          var duration = !player.getDuration ? 0.0 : player.getDuration();
+          var elapsedPercentage = currentTime / duration;
+          var percentageCompleted;
+          if (elapsedPercentage < 0.25) percentageCompleted = 0;
+          else if (elapsedPercentage >= 0.25 && elapsedPercentage < 0.5)
+            percentageCompleted = 0.25;
+          else if (elapsedPercentage >= 0.5 && elapsedPercentage < 0.75)
+            percentageCompleted = 0.5;
+          else if (elapsedPercentage >= 0.75 && elapsedPercentage < 1)
+            percentageCompleted = 0.75;
+          else if (elapsedPercentage == 1) percentageCompleted = 1;
 
-        if (percentageCompletedCurrent < percentageCompleted) {
-          percentageCompletedCurrent = percentageCompleted;
-          var showTitle = $("h1").innerHTML;
-          var episodeTitle = document.title.substring(
-            0,
-            document.title.indexOf("|") - 1
-          );
-          var episodeType = "vod";
-          sendAmplitudeEvent("episode session ended", {
-            "percentage complete": percentageCompleted * 100,
-            "show title": showTitle,
-            "episode title": episodeTitle,
-            "episode type": episodeType,
-            "url path": window.location.pathname,
-          });
+          if (percentageCompletedCurrent < percentageCompleted) {
+            percentageCompletedCurrent = percentageCompleted;
+            var showTitle = $("h1").innerHTML;
+            var episodeTitle = document.title.substring(
+              0,
+              document.title.indexOf("|") - 1
+            );
+            var episodeType = "vod";
+            sendAmplitudeEvent("episode session ended", {
+              "percentage complete": percentageCompleted * 100,
+              "show title": showTitle,
+              "episode title": episodeTitle,
+              "episode type": episodeType,
+              "url path": window.location.pathname,
+            });
+          }
           //console.log(percentageCompleted);
         }
         //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
