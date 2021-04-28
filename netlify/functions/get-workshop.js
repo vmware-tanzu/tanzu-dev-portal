@@ -20,7 +20,7 @@ if (config.context === 'production' || config.context === 'deploy-preview') {
 }
 
 Sentry.AWSLambda.init({
-    dsn: config.sentry.getWorkshopDsn,
+    dsn: process.env.SENTRY_DSN_GET_WORKSHOP,
     environment: config.context,
     tracesSampleRate: 1.0,
 });

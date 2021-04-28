@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vmware-tanzu-private/tanzu-dev-portal#readme",
   "dependencies": {
+    "@amplitude/node": "^1.5.4",
     "@sentry/serverless": "^6.2.5",
     "autoprefixer": "^9.7.6",
     "cookie": "^0.4.1",
@@ -40,7 +41,7 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^5.1.1",
