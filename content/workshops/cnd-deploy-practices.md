@@ -11,7 +11,6 @@ summary:
     and learn cloud native principles along the way.
 topics:
 tags:
-  - Practices
   - Development
   - Spring Boot
   - Kubernetes
