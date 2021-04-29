@@ -614,6 +614,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handoff(s)?
 HAProxy
 HashiCorp('s)?
 hasResult
@@ -1048,6 +1049,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+Osterling
 OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
@@ -1118,6 +1120,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poppendieck
 [Pp]ortieris
 [Pp]ostgres
 POSTROUTING
@@ -1292,6 +1295,7 @@ secretname
 security-spring-security-xml
 securityContext
 SecurityManager
+Sedano
 SELinux
 Semver
 SerialGatewaySenderQueueEntrySizer
@@ -1372,6 +1376,7 @@ STDOUT|stdout
 Steeltoe
 Stéphane
 StorageClass(es)?
+Storbakken
 StringBuilder
 struct
 STT
@@ -1394,6 +1399,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+Szul
 Tanzu(Developer)?
 targetPort
 Tarin
