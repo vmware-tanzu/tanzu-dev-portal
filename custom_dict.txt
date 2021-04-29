@@ -20,6 +20,7 @@
 A3
 AAAA
 Abbie
+Abdellfetah
 Abo
 Abubakar
 Acceptor
@@ -135,6 +136,7 @@ Belamaric
 benbravo73
 benchmark(ing)?
 benefitting
+Berglund
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
 BikeIncidentsByZip
@@ -612,6 +614,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handoff(s)?
 HAProxy
 HashiCorp('s)?
 hasResult
@@ -848,6 +851,7 @@ Linkerd
 linter(s)?
 [Ll]inux
 Lippert
+Littleton
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
@@ -1045,6 +1049,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+Osterling
 OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
@@ -1115,6 +1120,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poppendieck
 [Pp]ortieris
 [Pp]ostgres
 POSTROUTING
@@ -1289,6 +1295,7 @@ secretname
 security-spring-security-xml
 securityContext
 SecurityManager
+Sedano
 SELinux
 Semver
 SerialGatewaySenderQueueEntrySizer
@@ -1305,6 +1312,7 @@ serviceName=backend
 setValue(Template)?s
 severities
 Sevilla
+Sghiouar
 sharded
 Sheasha
 Shellshock
@@ -1368,6 +1376,7 @@ STDOUT|stdout
 Steeltoe
 Stéphane
 StorageClass(es)?
+Storbakken
 StringBuilder
 struct
 STT
@@ -1390,6 +1399,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+Szul
 Tanzu(Developer)?
 targetPort
 Tarin
@@ -1421,6 +1431,7 @@ Tilt(file|Cloud)?
 [Tt]imebox
 timebox(ed)?
 TimingGatewayEventFilter
+tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
 TODOs?
