@@ -779,6 +779,7 @@ Kamus
 Kanban
 Kaniko
 [Kk]app(-controller|.)?
+Karavi
 kata
 Katas
 KEK(s)?
