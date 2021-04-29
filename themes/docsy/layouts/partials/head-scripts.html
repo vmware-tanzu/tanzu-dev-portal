@@ -41,6 +41,33 @@ Sentry.init({
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
   tracesSampleRate: 0.2,
+  beforeSend: function(event, hint) {
+    var gtm = false;
+    try {
+      gtm = hint.originalException.stack.indexOf('www.googletagmanager.com/gtm.js?id=') > -1;
+    } catch (error) {
+      console.error(error);
+    }
+    event.tags = event.tags || {};
+    if (gtm) {
+      event.tags.logger = 'gtm';
+    }
+    event.tags.logger = event.tags.logger || '_default_';
+    event.extra = event.extra || {};
+    if (gtm) {
+      event.tags.logger = 'gtm';
+      event.extra.dataLayer = dataLayer.map(
+        function(i) {
+          try {
+            return JSON.stringify(i, null, ' ');
+          } catch(error) {
+            return '[cannot be serialized]: ' + error.message;
+          }
+        }
+      );
+    }   
+    return event;
+  }
 });
 
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
