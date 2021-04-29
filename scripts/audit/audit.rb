@@ -65,7 +65,7 @@ csv = CSV.open(options[:output], "w")
 
 # Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
-contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md"))
+contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md")) + Dir.glob(File.join(contentPath, "/practices/**/*.md"))
 
 # Prepare the markdown renderer 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
