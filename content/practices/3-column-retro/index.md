@@ -90,6 +90,21 @@ There are many free retrospective tools available.
 
 ![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-3.png)
 
+Sometimes it's worth paying for something that's being actively maintained and enhanced. Here are a few options.
+
+| Name | Pricing | Notes |
+| -----|-------- | ----- |
+| [Fun Retro](https://funretro.io/)  | GBP £84/month for 6 teams (£14/team/month)  | Established tool. |
+| [TeamRetro](https://www.teamretro.com/) | USD $90/month for 6 teams ($15/team/month) | Established and feature-rich tool. |
+| [Retrium](https://www.retrium.com/) | USD $29/team/month | Established and feature-rich tool. |
+| [ScatterSpoke](https://www.scatterspoke.com/) | USD $225/100 users/month ($2.25/user/month) | Established and feature-rich. |
+| [Neatro](https://www.neatro.io/) | USD $17/team/month | Simple UI. |
+| [Parabol](https://www.parabol.co/) | USD $6/user/month | Open-sourced. Established. |
+| [goReflect](https://www.goreflect.com/) | USD $2.67/user/month | Simple UI. |
+| [Reetro](https://reetro.io/) | Freemium model with unclear pricing. | Less established than other options. |
+
+
+
 ### Preceding
 None at the moment. 
  
