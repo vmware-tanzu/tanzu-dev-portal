@@ -7,7 +7,7 @@ tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", 
 length: "1 Hour"
 participants: "Core delivery team"
 # custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
+image: "3-column-retro/retro-cover.png" 
 lastmod: "2021-04-28"
 why: 
 - For the team to be truly reflective, members must feel safe enough to be self-critical. It is important, therefore, to establish high psychological safety.
