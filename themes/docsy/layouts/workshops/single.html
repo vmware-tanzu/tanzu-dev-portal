@@ -55,8 +55,10 @@
 		<img class='align-self-start workshop-preview px-0 mt-2 d-lg-block d-none' src={{ $preview| relURL }}>
 	{{end}}
 </div>
-<div class="container github-imported-sample py-lg-5 py-2 mb-5">
-	{{ .Content }}
+<div class="container github-imported-sample py-lg-5 py-2 mb-5 flex">
+	<div class='col-lg-9 col-12'>
+		{{ .Content }}
+	</div>
 </div>
 {{ end }}
 
