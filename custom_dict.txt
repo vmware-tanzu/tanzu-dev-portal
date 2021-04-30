@@ -245,6 +245,8 @@ ClusterRoleBindings.
 CMD
 CNAME
 CNCF
+CNC
+CloudNativeCon
 CNI
 CNI-[Pp]lugin(s)?
 CNI-specific

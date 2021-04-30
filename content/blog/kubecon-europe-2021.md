@@ -1,17 +1,17 @@
 ---
-title: "KubeCon EU 2021"
-description: VMware's Open Source projects as presented during KubeCon + Cloud Native Con EU 2021 
+title: "KubeCon Europe 2021"
+description: VMware's Open Source projects as presented during KubeCon + CNC Europe 2021 
 date: "2021-04-30"
 # Author(s)
 team: 
 - Tony Vetter
 type: "blog"
-aliases: ["/kubeconeu2021"]
+aliases: ["/kubeconeurope2021"]
 ---
 
-## Greetings KubeCon + Cloud Native Con EU Attendees!
+## Greetings KubeCon + CNC Europe Attendees!
 
-We hope you are enjoying your time at KubeCon and Cloud Native Conference! Hopefully, you have seen VMware's keynote presentation around just a hand full of the open source projects VMware is involved in. Well, if you are interested in learning more about those projects, and maybe even trying them out for yourself, you've come to the right place. Below, we have some great content for you to look through for each of these projects. Enjoy!
+We hope you are enjoying your time at KubeCon and CloudNativeCon! Hopefully, you have seen VMware's keynote presentation around just a hand full of the open source projects VMware is involved in. Well, if you are interested in learning more about those projects, and maybe even trying them out for yourself, you've come to the right place. Below, we have some great content for you to look through for each of these projects. Enjoy!
 
 ## Carvel
  
