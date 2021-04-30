@@ -18,10 +18,15 @@ what:
 - Sticky notes
 - Sharpies / markers
 
-remote: true
+remote: false
 miro_template_url: "https://miro.com/miroverse/atlassian-team-plays-retrospective/" 
 ---
 ## How to Use this Method
+   {{% callout %}}
+   **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
+   
+   There are many online tools that support team retrospectives. We've listed several in the ["For Remote Teams" section](#variations) below.
+   {{% /callout %}}
 
 ### Sample Agenda & Prompts
 1. Draw three columns on the whiteboard or digital workspace: 
@@ -75,7 +80,15 @@ Success is when the core team has a shared understanding of:
 ["Sailboat" Futurespective](/practices/futurespective)
 
 ## Variations
-None at the moment. 
+
+#### For Remote Teams
+There are many free retrospective tools available. 
+- [Team Retrospective Miro Template](https://miro.com/miroverse/atlassian-team-plays-retrospective/) from Atlasian
+- Trello Template - [Glad, Sad, Mad](https://trello.com/b/0DnfRtxv/template-glad-sad-mad)
+- [Postfacto](https://github.com/pivotal/postfacto) - open source and deployable by you.  
+- Spreadsheets - You can always make a simple 3-column retro board using Google Sheets or Excel.  
+
+![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-3.png)
 
 ### Preceding
 None at the moment. 
@@ -85,7 +98,9 @@ None at the moment.
 
 ## Real World Examples
 
-#### Using a Retrospective Tool
+#### Example using Postfacto
+There are many free retrospective tools available. 
+
 ![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-1.png)
 
 #### 3-Column Retro with fun themes using Miro

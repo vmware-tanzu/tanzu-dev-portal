@@ -95,6 +95,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
+Atlasian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -1123,6 +1124,7 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+Postfacto
 [Pp]ostgres
 POSTROUTING
 PR(s)?
