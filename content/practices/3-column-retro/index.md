@@ -84,7 +84,14 @@ None at the moment.
 None at the moment. 
 
 ## Real World Examples
+
+#### Using a Retrospective Tool
 ![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-1.png)
+
+#### 3-Column Retro with fun themes using Miro
+Online tools like this allow for people to get more engaged with fun themes.
+
+![3 Column Retrospective in Miro](/images/practices/3-column-retro/retro-2.png)
 
 ## Recommended Reading
 [Agile Retrospectives - Making Good Teams Great](https://pragprog.com/titles/dlret/agile-retrospectives/)  by Esther Derby and Diana Larsen, Foreword by Ken Schwaber
