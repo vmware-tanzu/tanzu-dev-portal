@@ -1091,6 +1091,23 @@ body.tv-episode {
 }
 
 //Workshops
+.workshop-box {
+  height: 400px;
+  transform: scale(1);
+  transition: transform .25s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .workshop-hero {
+    height: 170px;
+    width: 100%;
+  }
+  .description {
+    background-color: $border;
+    height: 230px;
+  }
+}
+
 @media (min-width: 992px) {
   .workshop-description {
     width: 35.5%;
@@ -1203,23 +1220,6 @@ div.aside div.aside-content {
   padding-right: 1rem;
 }
 
-.workshop-box {
-  height: 400px;
-  border-radius: 10px;
-  transform: scale(1);
-  transition: transform .25s;
-  &:hover {
-    transform: scale(1.05);
-  }
-  .workshop-hero {
-    height: 170px;
-    width: 100%;
-  }
-  .description {
-    background-color: $border;
-    height: 230px;
-  }
-}
 
 /* SYNTAX HIGHLIGHTING */
 
