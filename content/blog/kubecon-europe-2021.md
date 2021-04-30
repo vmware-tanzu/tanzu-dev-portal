@@ -19,7 +19,7 @@ We hope you are enjoying your time at KubeCon and CloudNativeCon! Hopefully, you
  * **Guide** - [Getting Started with kapp](https://tanzu.vmware.com/developer/guides/kubernetes/kapp-gs/)
  * **Workshop** - [Getting Started with Carvel (formerly k14s)](https://tanzu.vmware.com/developer/workshops/lab-getting-started-with-carvel/)
 
- ## knative
+ ## Knative
 
  * **Guide** - [Using Knative Eventing for Better Observability](https://tanzu.vmware.com/developer/blog/using-knative-eventing-for-better-observability/)
  * **Video** - [Argo CD with Knative and Cloud Native Buildpacks with Boskey Savla](https://tanzu.vmware.com/developer/tv/tanzu-tuesdays/0051/)
