@@ -101,7 +101,7 @@ Sometimes it's worth paying for something that's being actively maintained and e
 | [Neatro](https://www.neatro.io/) | USD $17/team/month | Simple UI. |
 | [Parabol](https://www.parabol.co/) | USD $6/user/month | Open-sourced. Established. |
 | [goReflect](https://www.goreflect.com/) | USD $2.67/user/month | Simple UI. |
-| [Reetro](https://reetro.io/) | Freemium model with unclear pricing. | Less established than other options. |
+| [Reetro](https://reetro.io/) | Free to sign up, used to have paid upgraded features. | Less established than other options. |
 
 
 
