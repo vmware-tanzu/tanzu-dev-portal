@@ -11,7 +11,6 @@ summary:
     orchestration platform.
 topics:
 tags:
-  - Practices
   - Development
   - Spring Boot
   - Kubernetes

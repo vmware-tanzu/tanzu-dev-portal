@@ -230,6 +230,7 @@ Clojure
 closeRegion
 CloudEvents
 CloudHealth
+CloudNativeCon
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -244,6 +245,7 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNC
 CNCF
 CNI
 CNI-[Pp]lugin(s)?
@@ -614,6 +616,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handoff(s)?
 HAProxy
 HashiCorp('s)?
 hasResult
@@ -778,6 +781,7 @@ Kamus
 Kanban
 Kaniko
 [Kk]app(-controller|.)?
+Karavi
 kata
 Katas
 KEK(s)?
@@ -1048,6 +1052,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+Osterling
 OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
@@ -1118,6 +1123,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poppendieck
 [Pp]ortieris
 [Pp]ostgres
 POSTROUTING
@@ -1292,6 +1298,7 @@ secretname
 security-spring-security-xml
 securityContext
 SecurityManager
+Sedano
 SELinux
 Semver
 SerialGatewaySenderQueueEntrySizer
@@ -1372,6 +1379,7 @@ STDOUT|stdout
 Steeltoe
 Stéphane
 StorageClass(es)?
+Storbakken
 StringBuilder
 struct
 STT
@@ -1394,6 +1402,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+Szul
 Tanzu(Developer)?
 targetPort
 Tarin
