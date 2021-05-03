@@ -40,9 +40,22 @@ OptionParser.new do |opts|
         options[:source] = s
     end
 
-    opts.on("-o", "--output PATH", "Path to write the results") do |o|
+    opts.on("-o", "--output PATH", "Path to write the raw results") do |o|
         options[:output] = o
     end
+
+    opts.on("-t", "--tags PATH", "Path to write the tally results of the tags") do |t|
+        options[:tags] = t
+    end
+
+    opts.on("-p", "--topics PATH", "Path to write the tally results of the topics") do |p|
+        options[:topics] = p
+    end
+
+    opts.on("-e", "--errors PATH", "Path to write the tally results of errors") do |e|
+        options[:errors] = e
+    end
+
 end.parse!
 
 
@@ -52,13 +65,17 @@ csv = CSV.open(options[:output], "w")
 
 # Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
-contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md"))
+contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md")) + Dir.glob(File.join(contentPath, "/practices/**/*.md"))
 
 # Prepare the markdown renderer 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
 
 auditData = []
 metaKeys = []
+
+tagsTally = {}
+topicsTally = {}
+errorsTally = {}
 
 # Gather the meta data from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
@@ -71,6 +88,28 @@ contentFiles.each do |f|
     wordcount = markdown.render(fData.split("---").last).gsub(/<\/?[^>]*>/, "").split.length
     contentMetadata["wordcount"] = wordcount
 
+    # Tally the tags
+    if contentMetadata.has_key? "tags"
+        contentMetadata["tags"].each do |t|
+            if tagsTally.has_key? t
+                tagsTally[t] += 1
+            else
+                tagsTally[t] = 1
+            end
+        end
+    end
+
+    # Tally the topics
+    if contentMetadata.has_key? "topics"
+        contentMetadata["topics"].each do |t|
+            if topicsTally.has_key? t
+                topicsTally[t] += 1
+            else
+                topicsTally[t] = 1
+            end
+        end
+    end
+   
     # Add any newly discovered unique keys
     contentMetadata.keys.each do |k|
         if not metaKeys.include? k
@@ -91,6 +130,24 @@ auditData.each do |content|
     metaKeys.each do |k|
         if k == "audit"
             matches = filter(options, metaKeys, row)
+
+            # Iterate through the filter results to tally issues
+            if matches.empty?
+                if errorsTally.has_key? "None"
+                    errorsTally["None"] += 1
+                else
+                    errorsTally["None"] = 1
+                end
+            else 
+                matches.each do |m|
+                    if errorsTally.has_key? m
+                        errorsTally[m] += 1
+                    else
+                        errorsTally[m] = 1
+                    end
+                end
+            end
+
             if matches.empty?
                 row.push("")
             else
@@ -111,3 +168,30 @@ auditData.each do |content|
 end
 
 csv.close
+
+# If defined, write the tags tally to a CSV
+if options.has_key? :tags
+    CSV.open(options[:tags], "wb") do |csv|
+        tagsTally.each do |t|
+            csv << t
+        end
+    end
+end
+
+# If defined, write the topics tally to a CSV
+if options.has_key? :topics
+    CSV.open(options[:topics], "wb") do |csv|
+        topicsTally.each do |t|
+            csv << t
+        end
+    end
+end
+
+# If defined, write the errors tally to a CSV
+if options.has_key? :errors
+    CSV.open(options[:errors], "wb") do |csv|
+        errorsTally.each do |e|
+            csv << e
+        end
+    end
+end

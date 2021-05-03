@@ -206,3 +206,17 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
 * Exit gfsh by typing `exit`.
 
 **Congratulations! Your local environment is set up and ready to develop with.**
+
+---
+
+ ## Learn More
+ 
+ Now that you have successfully set up your local development environment, check out some other guides
+  
+ * Set up your [Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service. 
+
+ * Set up [Tanzu GemFire for Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/). 
+  
+ * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
+ 
+* Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg). 

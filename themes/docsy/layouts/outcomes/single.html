@@ -12,6 +12,11 @@
 {{ template "outcomefinder" (dict "context" . "scratch" $.Scratch) }}
 {{ $outcome := $.Scratch.Get "outcome" }}
 
+{{ $page := . }}
+{{ if .Params.contentPage }}
+{{ $page = .GetPage .Params.contentPage }}
+{{ end }}
+
 <div class="td-content outcomes">
   <div class='container'>
     <div class="row flex-xl-nowrap container mx-auto">
@@ -30,14 +35,9 @@
         <h2>{{ .Title }}</h2>
         {{ end }}
 
-        {{ if .Params.contentPage }}
-        {{ $page := .GetPage .Params.contentPage }}
         {{ $page.Content }}
-        {{ else }}
-        {{ .Content }}
-        {{ end }}
 
-        {{ if .IsSection }}
+        {{ if $page.IsSection }}
         {{ partial "begin.html" . }}
         {{ else }}
         {{ partial "pager.html" . }}
@@ -45,7 +45,7 @@
       </div>
       <div class="col-12 col-md-2 mt-2 d-print-none">
         <div class="outcomes-toc px-3">
-        {{ with .TableOfContents }}
+        {{ with $page.TableOfContents }}
         <h5 class="mb-4">On This Page</h5>
         {{ . }}
         {{ end }}
