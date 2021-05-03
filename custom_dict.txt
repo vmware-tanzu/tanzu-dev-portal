@@ -231,6 +231,7 @@ Clojure
 closeRegion
 CloudEvents
 CloudHealth
+CloudNativeCon
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -245,6 +246,7 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNC
 CNCF
 CNI
 CNI-[Pp]lugin(s)?
