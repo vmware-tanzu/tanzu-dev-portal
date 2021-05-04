@@ -11,12 +11,14 @@ summary:
     orchestration platform.
 topics:
 tags:
-  - Practices
   - Development
   - Spring Boot
   - Kubernetes
 length: 180
 lab: cnd-config-practices
+hero: "/images/workshops/workshop-cloud-native-config.png"
+preview: "/images/workshops/img-cloud-native-app-config.png"
+
 ---
 
 This is a workshop for developers and application operators

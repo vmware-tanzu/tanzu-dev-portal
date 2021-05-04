@@ -268,6 +268,7 @@ limitations under the License.
           var pageCategory;
           if ($("body.guide").length > 0) pageCategory = "guide";
           else if ($("div.blog").length > 0) pageCategory = "blog";
+          else if ($("div.practices").length > 0) pageCategory = "practices";
           sendAmplitudeEvent("page scrolled", {
             "scroll depth": scrollDepth * 100,
             "page title": pageTitle,
