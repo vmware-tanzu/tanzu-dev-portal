@@ -90,8 +90,20 @@ blockquote {
   }
 }
 
+.fs-75 {
+  font-size: 75%;
+}
+
+.fs-80 {
+  font-size: 80%;
+}
+
 .fs-90 {
   font-size: 90%;
+}
+
+.grey-hr {
+  border-top: 1px solid rgb(72, 87, 100);
 }
 
 .border-top {
@@ -1022,7 +1034,7 @@ body.tv-episode {
 
 .col-4-thumbnail {
   padding: 0;
-  background-color: #324f61;
+  background-color: $border;
   transform: scale(1);
   transition: transform 0.25s;
 
@@ -1070,12 +1082,39 @@ body.tv-episode {
 }
 
 .video-description {
-  background-color: #324f61;
+  background-color: $border;
   color: white !important;
   padding: 20px 25px;
   transition: background-color 0.25s;
   height: 130px;
   font-size: 1.0625rem;
+}
+
+//Workshops
+.workshop-box {
+  height: 400px;
+  transform: scale(1);
+  transition: transform .25s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .workshop-hero {
+    height: 170px;
+    width: 100%;
+  }
+  .description {
+    background-color: $border;
+    height: 230px;
+  }
+}
+
+@media (min-width: 992px) {
+  .workshop-description {
+    width: 35.5%;
+  }
+  .workshop-preview {
+    width: 58%;
+  }
 }
 
 //SpringOne Tour Upcoming
@@ -1112,6 +1151,24 @@ a i.fa, a i.fas {
 
 .guide .section-index .col-lg-4 {
   // background-color:
+}
+
+.opacity-4 {
+  opacity: 80%;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 1px;
+}
+
+body .workshops-hero {
+  background-color: transparent !important;
+  padding-bottom: 0px !important;
+  min-height: auto !important;
+
+  .lead {
+    max-width: 920px;
+  }
 }
 
 .checklist-item {
@@ -1156,6 +1213,11 @@ div.aside div.aside-title i {
 div.aside div.aside-content {
   padding: 5px 20px;
   background: #0f171c;
+}
+
+.td-term.td-topic .col-12 {
+  padding-left: 0px !important;
+  padding-right: 1rem;
 }
 
 /* SYNTAX HIGHLIGHTING */

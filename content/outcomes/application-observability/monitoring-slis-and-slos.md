@@ -4,6 +4,8 @@ weight: 1
 layout: single
 related:
   - "/guides/kubernetes/app-observability-exporting-metrics"
+team:
+- Zac Bergquist
 ---
 
 Service Level Indicators (SLIs) and Service Level Objectives (SLOs) are two of
@@ -28,7 +30,7 @@ of time, which leads to unhappy users. Since many services have different usage
 and traffic patterns on weekends, we recommend a 28-day rolling window - which
 ensures you’ll always have four weekends in the window.
 
-### Measurement
+## Measurement
 
 In this guide we’ll cover two simple frameworks for structuring your metrics in
 a way that facilitates this type of monitoring. While these two approaches might
@@ -52,7 +54,7 @@ The examples that follow will use
 the storage and visualization of this data, but the concepts can be applied to
 any system that can store and display time-series data.
 
-### Monitoring SLIs with a gauge metric
+## Monitoring SLIs with a gauge metric
 
 This approach exposes a single metric that is either 1 or 0 at all times. For
 example, a probe could periodically test an application feature and set the
@@ -95,7 +97,7 @@ is recovered on March 30, bringing the availability over the window back to
 100%. This is short-lived, as the subsequent outages on March 30 and April 1
 consume additional error budget, which will be reclaimed 28 days in the future.
 
-### Monitoring SLIs with two counter metrics
+## Monitoring SLIs with two counter metrics
 
 An alternative way to measure this type of data is to use two separate (but
 related) counters. The first counter represents the total number of attempts,

@@ -95,6 +95,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
+Atlasian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -230,6 +231,7 @@ Clojure
 closeRegion
 CloudEvents
 CloudHealth
+CloudNativeCon
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -244,6 +246,7 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNC
 CNCF
 CNI
 CNI-[Pp]lugin(s)?
@@ -614,6 +617,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handoff(s)?
 HAProxy
 HashiCorp('s)?
 hasResult
@@ -778,6 +782,7 @@ Kamus
 Kanban
 Kaniko
 [Kk]app(-controller|.)?
+Karavi
 kata
 Katas
 KEK(s)?
@@ -1048,6 +1053,7 @@ ORM(-based)?
 OSI
 OSM
 OSS
+Osterling
 OTT
 [oO]vercommit(ted|ting)?
 overcomplicate
@@ -1118,7 +1124,9 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poppendieck
 [Pp]ortieris
+Postfacto
 [Pp]ostgres
 POSTROUTING
 PR(s)?
@@ -1260,6 +1268,7 @@ Ruckle
 Rudd
 runnable
 runtimes?
+Rushton
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1280,6 +1289,7 @@ SCDF('s)?
 schema(s)?
 Schimanski
 Schutta
+Schwaber
 screencaster
 SDK(s)?
 SDS
@@ -1292,6 +1302,7 @@ secretname
 security-spring-security-xml
 securityContext
 SecurityManager
+Sedano
 SELinux
 Semver
 SerialGatewaySenderQueueEntrySizer
@@ -1372,6 +1383,7 @@ STDOUT|stdout
 Steeltoe
 Stéphane
 StorageClass(es)?
+Storbakken
 StringBuilder
 struct
 STT
@@ -1394,6 +1406,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+Szul
 Tanzu(Developer)?
 targetPort
 Tarin
@@ -1407,6 +1420,7 @@ telco(s)*
 telecom
 [Tt]emplat(ed|ing)
 Templeton
+Teotti
 Teppanyaki
 Terraform(-ing)?
 testability
