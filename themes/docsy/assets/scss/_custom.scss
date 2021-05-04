@@ -1147,6 +1147,7 @@ a i.fa, a i.fas {
 .page-meta-inner {
   max-height: calc(100vh - 13rem);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .guide .section-index .col-lg-4 {
