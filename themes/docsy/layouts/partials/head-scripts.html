@@ -45,7 +45,8 @@ Sentry.init({
   beforeSend: function(event, hint) {
     var gtm = false;
     try {
-      gtm = hint.originalException.stack.indexOf('www.googletagmanager.com/gtm.js?id=') > -1;
+      if (hint.originalException.stack)
+        gtm = hint.originalException.stack.indexOf('www.googletagmanager.com/gtm.js?id=') > -1;
     } catch (error) {
       console.error(error);
     }

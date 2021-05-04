@@ -95,6 +95,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
+Atlasian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -1125,6 +1126,7 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+Postfacto
 [Pp]ostgres
 POSTROUTING
 PR(s)?
@@ -1267,6 +1269,7 @@ Ruckle
 Rudd
 runnable
 runtimes?
+Rushton
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1287,6 +1290,7 @@ SCDF('s)?
 schema(s)?
 Schimanski
 Schutta
+Schwaber
 screencaster
 SDK(s)?
 SDS
@@ -1418,6 +1422,7 @@ telco(s)*
 telecom
 [Tt]emplat(ed|ing)
 Templeton
+Teotti
 Teppanyaki
 Terraform(-ing)?
 testability
