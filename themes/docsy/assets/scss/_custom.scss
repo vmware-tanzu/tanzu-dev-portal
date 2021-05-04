@@ -908,6 +908,13 @@ body.light-mode #toggle-light-dark-mode span {
   }
 }
 
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px !important;
+  }
+
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 1160px;
@@ -1041,6 +1048,11 @@ body.tv-episode {
   @media (min-width: 1160px) {
     img {
       height: 200px;
+    }
+  }
+  @media (min-width: 1600px) {
+    img {
+      height: 240px;
     }
   }
   @media (min-width: 992px) {
