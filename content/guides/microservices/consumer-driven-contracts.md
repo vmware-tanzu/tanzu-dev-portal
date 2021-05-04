@@ -50,7 +50,7 @@ contracts/
  ...
 ```
 
-In your `build.gradle` file, you'll need to configure how this gets mapped to base classes.  The following will generate tests with a base class made up of the last two segments of the package such as <consumer1>HttpBase or <consumer2>MessagingBase in the `com.lmig.pli.rate.auto.autorateablequote.contract` package:
+In your `build.gradle` file, you'll need to configure how this gets mapped to base classes.  The following will generate tests with a base class made up of the last two segments of the package such as <consumer1>HttpBase or <consumer2>MessagingBase in the `com.rate.auto.autorateablequote.contract` package:
 
 ```yaml
 contracts {
