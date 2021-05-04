@@ -1144,9 +1144,9 @@ a i.fa, a i.fas {
   margin-right: 5px;
 }
 
-.guide .td-toc {
-  max-height: calc(100vh - 4rem);
-  overflow: scroll;
+.page-meta-inner {
+  max-height: calc(100vh - 13rem);
+  overflow-y: auto;
 }
 
 .guide .section-index .col-lg-4 {
