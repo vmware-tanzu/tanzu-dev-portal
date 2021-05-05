@@ -754,7 +754,13 @@ body.light-mode #toggle-light-dark-mode span {
   width: 320px;
   height: 180px;
   cursor: pointer;
+
+  @media(min-width: 1600px) {
+    width: 416px;
+    height: 234px;
+  }
 }
+
 
 .youtube-overlay {
   position: absolute;
@@ -775,6 +781,11 @@ body.light-mode #toggle-light-dark-mode span {
   z-index: 0;
   width: 320px;
   height: 180px;
+
+  @media(min-width: 1600px) {
+    width: 416px;
+    height: 234px;
+  }
 }
 
 .github-imported-sample h1 {

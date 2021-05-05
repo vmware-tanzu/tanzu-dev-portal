@@ -93,6 +93,7 @@
                         <div class='col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
                             <div class='thumbnail-gradient position-absolute'></div>
                             <img src="{{ .Params.episode_image | relURL }}" />
+
                             {{ if gt (len .Title) 100}}
                                 <div class='video-description'>{{ print (substr .Title 0 100) "..." }}</div>
                             {{ else }}
