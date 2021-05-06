@@ -47,7 +47,7 @@ There's many more instructions that a Dockerfile can contain. To learn more, ple
 
 ## Kaniko
 
-[Kaniko](https://github.com/GoogleContainerTools/kaniko) is an example of a tool that can help formalize your build pipeline. When building a Dockerfile directly, you need access to a running Docker daemon, and setting one up inside a container requires privilege escalation. On the other hand, Kaniko doesn't require these privleges, meaning that you're not granting containers unnecessary permissions that could be exploited. At its core, Kaniko is a prebuilt container image with an executable that knows how to compile a Dockerfile without Docker. You still write your Dockerfile as demonstrated, but instead of running a `docker build` command, you provide it to Kaniko along with your code, and it will build and upload the container wherever you specify.
+[Kaniko](https://github.com/GoogleContainerTools/kaniko) is an example of a tool that can help formalize your build pipeline. When building a Dockerfile directly, you need access to a running Docker daemon, and setting one up inside a container requires privilege escalation. On the other hand, Kaniko doesn't require these privileges, meaning that you're not granting containers unnecessary permissions that could be exploited. At its core, Kaniko is a prebuilt container image with an executable that knows how to compile a Dockerfile without Docker. You still write your Dockerfile as demonstrated, but instead of running a `docker build` command, you provide it to Kaniko along with your code, and it will build and upload the container wherever you specify.
 
 Consider the following Kubernetes pod definition:
 
