@@ -20,7 +20,7 @@
             <!-- <div class="col"> --><div class="row justify-content-between">
             {{ range $pages }}
                 {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item col-lg-4 mb-4 flex-315 px-0 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
+                <div class="filter-item col-lg-4 mb-4 flex-315 px-0 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
                     <a class="linked-box td-box--gray-darkest workshop-box overflow-hidden rounded" href="{{ .RelPermalink }}">
                         <div class='workshop-hero' style='background-image: url({{ (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL) }});background-size:cover;background-position:center'></div>
                         <div class='description px-4 pt-2 flex flex-column justify-content-between pb-4 bg-gray-dark'>

@@ -174,4 +174,34 @@ function getCookie(name) {
 
   return decodeURI(dc.substring(begin + prefix.length, end));
 }
+
+  function updateFilters() {
+      const activeFilters = Array.from(document.querySelectorAll('li.filter.active')).map(el => el.getAttribute("filter"))
+      window.history.pushState('', '', '?filters=' + activeFilters.join(","));
+      Array.from(document.getElementsByClassName("filter-item")).forEach(el => {
+        el.hidden = true
+        for (f of activeFilters) {
+          if (el.classList.contains(f) | f === 'all') {
+            el.hidden = false
+            break;
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(document.location.search.substring(1));
+      let fs = params.get("filters")
+      if (fs) {
+        fs = fs.toLowerCase().split(',')
+        Array.from(document.getElementsByClassName("filter")).forEach(el => {
+          if (fs.includes(el.getAttribute("filter"))) {
+            el.classList.add("active")
+          } else el.classList.remove("active")
+        });
+        updateFilters()
+      }
+
+    });
+
 </script>

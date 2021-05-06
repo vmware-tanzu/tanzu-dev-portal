@@ -29,7 +29,7 @@
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
+                <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
                     <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
                         <h4 class="link mt-3">{{- .Title -}}</h4>
                         <h5 class="fs-90"><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }}</h5>
