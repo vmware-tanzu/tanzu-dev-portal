@@ -11,7 +11,7 @@
       {{ partial "live-notify.html" . }}
       <div class="td-main">
         <div class="row flex-xl-nowrap container mx-auto">
-          <div class="d-none d-xl-block col-3 td-sidebar d-print-none">
+          <div class="d-none d-xl-block col-2 col-xl-3 td-sidebar d-print-none pl-0">
           	<br/>
             {{ partial "sidebar.html" . }}
           </div>
@@ -20,7 +20,7 @@
             {{ partial "toc.html" . }}
           </div>
           {{ end }}
-          <main class="{{if not .IsSection}}col-12 col-xl-8 col-lg-7{{end}} mt-lg-5 pt-lg-5" role="main">
+          <main class="{{if not .IsSection}}col-12 col-xl-8{{end}} mt-lg-5 pt-lg-5" role="main">
           	<br/>
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
