@@ -219,6 +219,7 @@ Chunyi
 ci
 CIDR(s)?
 CIO
+CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
@@ -1197,6 +1198,7 @@ Rakuten
 RBAC(-enabled)?
 RDBMS
 reachability
+reactively
 [Rr]eadiness([Pp]robe)?
 README
 realtime
