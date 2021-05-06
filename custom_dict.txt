@@ -57,6 +57,7 @@ AMQP
 Anchore
 Ango
 Anneliese
+[Aa]nomol(y|ies)
 Ansible
 anthonyjvetter
 antifragility
