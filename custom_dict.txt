@@ -8,7 +8,6 @@
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|KB|Mi|m|m?s|k)
-[A-Za-z0-9]{11}
 (?:[APMCEI][ESD]T|UTC)
 1:1s
 12SwitchRestoresSansCheckOuts
@@ -670,6 +669,7 @@ IIS
 ImagePolicyWebhook
 img
 [Ii]mmeasurability
+IMmUjUjBzes
 implementors
 [Ii]ncompressible
 InfoQ
