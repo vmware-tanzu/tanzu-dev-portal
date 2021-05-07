@@ -120,7 +120,7 @@ Append the app_registry credentials to your DockerHub registry to the bottom of 
 cat >> cf-install-values.yml << EOL
 app_registry:
   hostname: https://index.docker.io/v1/
-  repository: "<DockerHub-username>"
+  repository_prefix: "<DockerHub-username>"
   username: "<DockerHub-username>"
   password: "<DockerHub-password>"
 EOL
@@ -143,7 +143,9 @@ EOL
 
 Now, use cf-install-values.yml to render the final Kubernetes template to raw Kubernetes configuration.
 
-ytt -f config -f ./cf-install-values.yml > ./cf-for-k8s-rendered.yml 
+```
+ytt -f config -f ./cf-install-values.yml > ./cf-for-k8s-rendered.yml
+```
 
 ## Deploy CF for k8s 
 
