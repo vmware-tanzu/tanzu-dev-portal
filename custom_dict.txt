@@ -118,6 +118,7 @@ autosave
 Autowired
 autowires
 Aviv
+Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
@@ -801,6 +802,7 @@ KMS
 Knative
 KNN
 KoFu
+kotlin
 Kousen
 kpack(-hosted)?
 Kravitz
@@ -1357,6 +1359,7 @@ SPIFFE
 Splunk
 Spock
 spring-petclinic
+springboot
 SpringBootTest
 SpringOne(2020)?
 SpringSecurityManager

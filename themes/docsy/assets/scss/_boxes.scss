@@ -101,6 +101,10 @@
        flex-direction: row;
        max-width: 1160px;
        margin: 0 auto;
+
+       @media (min-width: 1600px) {
+           max-width: 1400px;
+       }
   }
 }
 // Styling for community page link boxes
