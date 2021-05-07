@@ -2,29 +2,10 @@
   {{ $activePage := .activepage }}
   {{ if .context.Pages }}
     {{ range .context.Pages}}
-
-      {{ $activeParent := eq .Parent $activePage.Parent}}
       {{ $active := eq .Page $activePage }}
-
-      {{ if .IsSection }}
-      <div class="outcomes-sidebar">
-      <ul class="td-sidebar-nav__section " style="font-weight: 400;">
-        {{ $firstSectionPage := index .Pages.ByWeight 0 }}
-        <div style="background-color:#22343c; padding: .3em; margin-bottom: 0.2em;">
-          <a href="{{ $firstSectionPage.RelPermalink}}" class="text-uppercase font-weight-bold">
-            {{ .Title }}
-            {{ if ne . $activePage.Parent }}
-            <i class="fas fa-angle-down"></i>
-            {{ end }}
-          </a>
-        </div>
-      </ul>
-      </div>
-      {{ else }}
-      <li class="td-sidebar-nav__section-title {{ if not $activeParent}}collapse{{ end }} ">
-        <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section collapse-child">{{ .Title }}</a>
+      <li class="td-sidebar-nav__section-title">
+        <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ .Title }}</a>
       </li>
-      {{ end }}
       {{ template "subpages" (dict "context" . "activepage" $activePage ) }}
     {{ end }}
   {{ end }}
