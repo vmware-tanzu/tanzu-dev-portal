@@ -42,21 +42,9 @@
 // Right side toc
 //
 .td-toc {
-  // border-left: 1px solid $border-color;
 
   @include media-breakpoint-up(md) {
     padding-top: 12rem;
-  }
-
-  &__inner {
-    @include media-breakpoint-up(md) {
-      @supports (position: sticky) {
-        position: sticky;
-        top: 7rem;
-        z-index: 10;
-        height: calc(100vh - 6rem);
-      }
-    }
   }
 
   order: 2;
