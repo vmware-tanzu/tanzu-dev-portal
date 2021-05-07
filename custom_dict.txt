@@ -1368,7 +1368,7 @@ sqlite
 SqlServer
 SqlServer|sqlserver
 src
-SRE(s)
+SRE(s)?
 Sri
 SSD
 ssh-keygen
