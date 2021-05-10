@@ -65,7 +65,14 @@ csv = CSV.open(options[:output], "w")
 
 # Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
-contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md")) + Dir.glob(File.join(contentPath, "/practices/**/*.md"))
+
+contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) 
+contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md")) 
+contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/tv/**/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
 
 # Prepare the markdown renderer 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
@@ -103,7 +110,7 @@ contentFiles.each do |f|
     end
 
     # Tally the topics
-    if contentMetadata.has_key? "topics"
+    if contentMetadata.has_key? "topics" and not contentMetadata["topics"].nil?
         contentMetadata["topics"].each do |t|
             if topicsTally.has_key? t
                 topicsTally[t] += 1
