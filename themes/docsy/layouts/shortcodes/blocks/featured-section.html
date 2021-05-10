@@ -11,8 +11,8 @@
                 </div> 
                 {{ range first 3 (where .Site.Pages "Params.featured" true).ByWeight }}
                     <div class="col-lg-4 flex mb-3 mb-lg-0">
-                        <a href="{{ .RelPermalink}}" class="gradient-edge-parent linked-box col-12 featured-link td-box--gray-850 p-4 px-5">
-                            <div class='gradient-edge-left'></div>
+                        <a href="{{ .RelPermalink}}" class="gradient-edge-parent linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+                            <div class='gradient-edge-left animate'></div>
                             <h5 class="mb-3">{{ .Section | singularize }}</h5>
                             <h4 class="h4">{{ .LinkTitle }}</h4>
                             <p class="mb-0 text-light">{{ .Description }}</p>

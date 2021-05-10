@@ -75,13 +75,13 @@
                         {{ range first 6 $videos }}
                             <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
                                 <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
-                                <p><a class="text-white lightbox" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                                <p><a class="lightbox link" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
                             </div>
                         {{ end }}
                         {{ range after 6 $videos }}
                             <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 hidden-item" style='display: none;'>
                                 <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
-                                <p><a class="text-white lightbox" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                                <p><a class="lightbox link" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
                             </div>
                         {{ end }}
                     </div>
@@ -93,7 +93,7 @@
                         {{ range $videos }}
                             <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
                                 <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
-                                <p><a class="text-white lightbox" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                                <p><a class="lightbox link" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
                             </div>
                         {{ end }}
                     </div>
