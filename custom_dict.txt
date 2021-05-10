@@ -118,6 +118,7 @@ autosave
 Autowired
 autowires
 Aviv
+Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
@@ -801,6 +802,7 @@ KMS
 Knative
 KNN
 KoFu
+kotlin
 Kousen
 kpack(-hosted)?
 Kravitz
@@ -1247,6 +1249,7 @@ RFC[0-9]{4}
 RHEL
 Riak
 Rickard
+Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
@@ -1356,6 +1359,7 @@ SPIFFE
 Splunk
 Spock
 spring-petclinic
+springboot
 SpringBootTest
 SpringOne(2020)?
 SpringSecurityManager
@@ -1384,6 +1388,7 @@ Steeltoe
 Stéphane
 StorageClass(es)?
 Storbakken
+Strategyzer
 StringBuilder
 struct
 STT
@@ -1496,6 +1501,7 @@ Unshared
 [Uu]nstaged
 untrusted
 untuned
+unvalidated
 UpdateMessage
 updateServerMetric
 updateServerMetrics

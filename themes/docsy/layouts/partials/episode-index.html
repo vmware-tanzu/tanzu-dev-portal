@@ -23,7 +23,11 @@
                         {{ else if isset .Params "youtube" }}
                             {{ $.Scratch.Set "streamName" "on YouTube" }}
                         {{ end }}
+                        {{ if .Params.no_details }}
+                            {{ printf "<div class=\"no-details upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
+                        {{ else }}
                         {{ printf "<div class=\"upcoming col-lg-6 col-12 px-0 mb-5\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}
+                        {{ end }}
                             <script>
                                 var upcomingEpisodes = document.querySelectorAll('div.upcoming');
                                 var upcomingEpisode = upcomingEpisodes[upcomingEpisodes.length - 1];
@@ -93,6 +97,7 @@
                         <div class='col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
                             <div class='thumbnail-gradient position-absolute'></div>
                             <img src="{{ .Params.episode_image | relURL }}" />
+
                             {{ if gt (len .Title) 100}}
                                 <div class='video-description'>{{ print (substr .Title 0 100) "..." }}</div>
                             {{ else }}
