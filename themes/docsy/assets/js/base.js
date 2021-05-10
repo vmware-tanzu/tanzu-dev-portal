@@ -29,7 +29,14 @@ limitations under the License.
     $(".filters .filter").click(function () {
       if (this.classList.contains("active")) {
         this.classList.remove("active");
-      } else this.classList.add("active");
+      } else {
+        this.classList.add("active")
+        if($(this).attr("filter") === "all") {
+          $(this).siblings().removeClass("active")
+        } else {
+          $("[filter=all]").removeClass("active")
+        }
+      }
       updateFilters()
     });
 

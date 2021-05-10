@@ -176,8 +176,16 @@ function getCookie(name) {
 }
 
   function updateFilters() {
-      const activeFilters = Array.from(document.querySelectorAll('li.filter.active')).map(el => el.getAttribute("filter"))
-      window.history.pushState('', '', '?filters=' + activeFilters.join(","));
+      let activeFilters = Array.from(document.querySelectorAll('li.filter.active')).map(el => el.getAttribute("filter"))
+      if(activeFilters.length === 0) {
+        document.querySelectorAll('[filter="all"]')[0].classList.add("active")
+        activeFilters = ["all"]
+      }
+      const params = new URLSearchParams(document.location.search.substring(1));
+      params.delete('filters')
+      const constructedParams = Array.from(params).length > 0 ? "&" + params.toString() : ''
+      window.history.pushState('', '', '?filters=' + activeFilters.join(",") + constructedParams);
+      
       Array.from(document.getElementsByClassName("filter-item")).forEach(el => {
         el.hidden = true
         for (f of activeFilters) {
@@ -197,7 +205,9 @@ function getCookie(name) {
         Array.from(document.getElementsByClassName("filter")).forEach(el => {
           if (fs.includes(el.getAttribute("filter"))) {
             el.classList.add("active")
-          } else el.classList.remove("active")
+          } else {
+            el.classList.remove("active")
+          }
         });
         updateFilters()
       }
