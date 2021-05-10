@@ -83,6 +83,9 @@ contentFiles.each do |f|
     fData = File.open(f).read
     contentMetadata = YAML.load(fData)
     contentMetadata["path"] = f.gsub(contentPath, "")
+
+    # Add a column for the type of content
+    contentMetadata["type"] = contentMetadata["path"].split("/").first
     
     # Calculate word count
     wordcount = markdown.render(fData.split("---").last).gsub(/<\/?[^>]*>/, "").split.length
@@ -109,6 +112,10 @@ contentFiles.each do |f|
             end
         end
     end
+
+    # Add the title and type columns first
+    metaKeys.push("title")
+    metaKeys.push("type")
    
     # Add any newly discovered unique keys
     contentMetadata.keys.each do |k|
