@@ -1332,6 +1332,7 @@ Shopen
 Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
+siloed
 SingleMemberRegionSize
 SingleServer
 Sipe
@@ -1369,7 +1370,7 @@ sqlite
 SqlServer
 SqlServer|sqlserver
 src
-SRE
+SRE(s)?
 Sri
 SSD
 ssh-keygen
@@ -1507,6 +1508,7 @@ UpdateMessage
 updateServerMetric
 updateServerMetrics
 upgradability
+upleveled 
 upstream(s)?
 uptime
 UR[IL](s)?
