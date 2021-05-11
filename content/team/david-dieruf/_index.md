@@ -6,6 +6,7 @@ roles: ["author"]
 skills: [".NET", "Kubernetes"]
 location: "Louisville, Kentucky"
 weight: 1
+hidden: true
 
 # Social Media 
 twitter: "dierufdavid"
