@@ -6,6 +6,7 @@ roles: ["author"]
 skills: ["Kubernetes"]
 location: "Philadelphia, PA"
 weight: 1
+hidden: true
 
 # Social Media 
 twitter: ""
