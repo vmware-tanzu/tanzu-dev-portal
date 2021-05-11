@@ -6,6 +6,7 @@ roles: ["advocate"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
 location: "St. Louis, MO"
 weight: 1
+hidden: true
 
 # Social Media 
 twitter: "mkheck"
