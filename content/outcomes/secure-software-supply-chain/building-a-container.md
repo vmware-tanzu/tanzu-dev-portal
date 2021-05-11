@@ -16,7 +16,7 @@ If you're already familiar with building a container image, this is probably whe
 FROM ubuntu:18.04
 COPY . /app
 RUN make /app
-ENTRYPOINT /app/my-apo
+ENTRYPOINT /app/my-app
 ```
 
 This Dockerfile tells the Docker build process to use the `ubuntu:18.04` container image as a base and to copy the current directory from the local filesystem to `/app` within the filesystem of the container that we're building. The `RUN` command then runs the command to build the application within the context of the container image. Finally, the `ENTRYPOINT` instruction defines the command to run when the container is started. In this case, when the container is started, the executable at `/app/my-app` is launched by default. Users may override this entry point on the command line or through Kubernetes Pod specifications.
