@@ -42,11 +42,11 @@ This session is a live-coding "lock it down" exploration of how to secure your a
 
 {{< youtube id="8VJNjMD9TG8" class="youtube-video-shortcode" >}}
 
-#### Game of Streams, Extended Edition (@ NYJAVASIG)
+#### Game of Streams, Extended Edition
 
 Most mission-critical systems have distributed elements or are entirely distributed, resulting in a number of challenges: performance, scalability, reliability, resilience...the eight fallacies of distributed computing are alive and well!
 
-Messaging platforms are often used to solve these problems and increase the "-ilities," but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, and Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to **really** use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire and altitude. All examples are coded **live and in real time.**
+Messaging platforms are often used to solve these problems, but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, and Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to **really** use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire and altitude. All examples are coded **live and in real time.**
 
 
 {{< youtube id="mmH4M6gS0pY" class="youtube-video-shortcode" >}}
@@ -55,7 +55,7 @@ Messaging platforms are often used to solve these problems and increase the "-il
 
 Topics: Spring, Reactor, reactive programming, Java, Kotlin, Spring Cloud Stream, messaging, RabbitMQ, Kafka
 
-Going from imperative, blocking code to a reactive programming model enables us to scale our apps in ways that aren't possible with a thread scale-out approach---which is a good thing! But as with all optimizations, one must examine and address the system holistically or all we accomplish is moving bottlenecks around, creating or finding new chokepoints as we tune certain applications/services. This is not so good.
+Going from imperative, blocking code to a reactive programming model enables us to scale our apps in ways that aren't possible with a thread scale-out approach---which is a good thing! But as with all optimizations, one must examine and address the system holistically or all we accomplish is moving bottlenecks around, creating or finding new choke points as we tune certain applications/services. This is not so good.
 
 In this session, Mark discusses and demonstrates:
 
