@@ -67,22 +67,6 @@ Mark codes all examples using 100 percent open source software, live and in real
 
 {{< youtube id="x4PImMjPa7k" class="youtube-video-shortcode" >}}
 
-#### Construyendo Pipelines Reactivos: Como ir de Aplicaciones Escalables a Sistemas RIDICULAMENTE Escalables
-
-Temas: Spring, Reactor, programación reactiva, Java, Kotlin, Spring Cloud Stream, mensajería, RabbitMQ, Kafka
-
-Migrar de código imperativo a un modelo de programación reactiva nos habilita escalar nuestras aplicaciones de maneras que serían imposibles con el método imperativo de "scale out", y eso es una cosa buena! Pero con todas mejoras, se necesita examinar y abordar holisticamente el sistema o todo lo que logremos es de mover los embotellamientos, creando o encontrando uno u otro mientras sintonizemos aplicaciones o servicios particulares. Esto no es tan bueno.
-
-En esta sesión, el ponente discute:
-
-- Como el proyecto Reactor construye en la iniciativa Reactive Streams para ayudarte crear microservicios reactivos escalables de alto rendimiento
-- Plataformas de mensajería como RabbitMQ & Apache Kafka
-- Como Spring Cloud Stream utiliza Reactor para proveer pipelines enteramente reactivos para escalabilidad ridícula entre el sistema total
-
-El ponente escribirá en código todos los ejemplos usando software de código abierto en vivo y en tiempo real! Esta no está una presentación abstracta, vengas para ganar conocimiento real y practical!
-
-{{< youtube id="DfdlDuGONwk" class="youtube-video-shortcode" >}}
-
 ### Spring Boot: Up & Running!
 
 Early access is now available for _[Spring Boot: Up & Running!](https://learning.oreilly.com/library/view/spring-boot-up/9781492076971/)_ (O'Reilly Media, 2021).
