@@ -57,6 +57,7 @@ AMQP
 Anchore
 Ango
 Anneliese
+[Aa]nomol(y|ies)
 Ansible
 anthonyjvetter
 antifragility
@@ -1249,6 +1250,7 @@ RFC[0-9]{4}
 RHEL
 Riak
 Rickard
+Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
@@ -1388,6 +1390,7 @@ Steeltoe
 Stéphane
 StorageClass(es)?
 Storbakken
+Strategyzer
 StringBuilder
 struct
 STT
@@ -1500,6 +1503,7 @@ Unshared
 [Uu]nstaged
 untrusted
 untuned
+unvalidated
 UpdateMessage
 updateServerMetric
 updateServerMetrics

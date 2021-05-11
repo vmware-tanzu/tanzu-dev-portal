@@ -7,13 +7,6 @@
   margin-left: -15px;
 
   @include media-breakpoint-up(md) {
-    @supports (position: sticky) {
-      max-height: calc(100vh - 10rem);
-      overflow-y: auto;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
     display: block !important;
   }
 
@@ -111,15 +104,6 @@
 
   &__inner {
     order: 0;
-
-    @include media-breakpoint-up(md) {
-      @supports (position: sticky) {
-        position: sticky;
-        top: 4rem;
-        z-index: 10;
-        height: calc(100vh - 6rem);
-      }
-    }
 
     @include media-breakpoint-up(xl) {
       flex: 0 1 320px;
