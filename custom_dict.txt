@@ -127,6 +127,7 @@ Baeldung('s)?
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+Baruch
 base64(-encoded)?
 BaseFunction
 batchesDistributed
@@ -681,6 +682,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+Integrallis
 [Ii]ntegrations
 IntelliJ
 interpolator
@@ -728,6 +730,7 @@ JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
 JAX-RS
+JBaruch
 JBatch
 JBoss
 jchen21
@@ -737,6 +740,7 @@ jdbcUrl
 Jernigan
 JetBrains
 Jetstack
+JFrog
 JHipster
 Jiang
 JIRAs
@@ -1276,7 +1280,9 @@ Rushton
 [sS]3
 SaaS
 SaaS(-based)?
+Sadogursky
 Saikali
+Sam-Bodden
 SameSite
 SAML
 samplehost(:[0-9]*)?
@@ -1508,7 +1514,7 @@ UpdateMessage
 updateServerMetric
 updateServerMetrics
 upgradability
-upleveled 
+upleveled
 upstream(s)?
 uptime
 UR[IL](s)?
