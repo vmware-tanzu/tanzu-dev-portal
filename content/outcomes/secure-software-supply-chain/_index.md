@@ -7,6 +7,8 @@ description: |
   software delivery practices.
 weight: 1
 layout: single
+team:
+- Craig Tracey
 ---
 
 ## Key Concepts
