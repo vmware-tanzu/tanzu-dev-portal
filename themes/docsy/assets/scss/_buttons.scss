@@ -13,3 +13,11 @@
         }
     }
 }
+
+.show-all-button {
+    transition: background-color .2s;
+    &:hover {
+        background-color: $link-hover-color;
+
+    }
+}
