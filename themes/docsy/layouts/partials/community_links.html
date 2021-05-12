@@ -1,7 +1,7 @@
 {{ $links := .Site.Params.links }}
 
 <section class="td-box td-box--gradient td-box--height-auto">
-	<div class='container flex flex-wrap justify-content-between'>
+	<div class='container d-flex flex-wrap justify-content-between'>
 		<div class="col-12 col-lg-6 pl-0 mb-5 flush-list">
 			<h3>Engage with us!</h3>
 			<p>For more on VMware Tanzu, join us here:
@@ -45,7 +45,7 @@
 </section>
 
 {{ define "community-links-list" }}
-<ul>
+<ul class='list-unstyled '>
  {{ range . }}
  <li title="{{ .name }}">
    <a target="_blank" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a> {{ .desc }}

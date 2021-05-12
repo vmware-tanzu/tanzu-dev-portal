@@ -6,6 +6,7 @@ roles: ["advocate"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
 location: "St. Louis, MO"
 weight: 1
+hidden: true
 
 # Social Media 
 twitter: "mkheck"
@@ -41,11 +42,11 @@ This session is a live-coding "lock it down" exploration of how to secure your a
 
 {{< youtube id="8VJNjMD9TG8" class="youtube-video-shortcode" >}}
 
-#### Game of Streams, Extended Edition (@ NYJAVASIG)
+#### Game of Streams, Extended Edition
 
 Most mission-critical systems have distributed elements or are entirely distributed, resulting in a number of challenges: performance, scalability, reliability, resilience...the eight fallacies of distributed computing are alive and well!
 
-Messaging platforms are often used to solve these problems and increase the "-ilities," but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, and Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to **really** use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire and altitude. All examples are coded **live and in real time.**
+Messaging platforms are often used to solve these problems, but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, and Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to **really** use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire and altitude. All examples are coded **live and in real time.**
 
 
 {{< youtube id="mmH4M6gS0pY" class="youtube-video-shortcode" >}}
@@ -54,7 +55,7 @@ Messaging platforms are often used to solve these problems and increase the "-il
 
 Topics: Spring, Reactor, reactive programming, Java, Kotlin, Spring Cloud Stream, messaging, RabbitMQ, Kafka
 
-Going from imperative, blocking code to a reactive programming model enables us to scale our apps in ways that aren't possible with a thread scale-out approach---which is a good thing! But as with all optimizations, one must examine and address the system holistically or all we accomplish is moving bottlenecks around, creating or finding new chokepoints as we tune certain applications/services. This is not so good.
+Going from imperative, blocking code to a reactive programming model enables us to scale our apps in ways that aren't possible with a thread scale-out approach---which is a good thing! But as with all optimizations, one must examine and address the system holistically or all we accomplish is moving bottlenecks around, creating or finding new choke points as we tune certain applications/services. This is not so good.
 
 In this session, Mark discusses and demonstrates:
 
@@ -65,22 +66,6 @@ In this session, Mark discusses and demonstrates:
 Mark codes all examples using 100 percent open source software, live and in real time.
 
 {{< youtube id="x4PImMjPa7k" class="youtube-video-shortcode" >}}
-
-#### Construyendo Pipelines Reactivos: Como ir de Aplicaciones Escalables a Sistemas RIDICULAMENTE Escalables
-
-Temas: Spring, Reactor, programación reactiva, Java, Kotlin, Spring Cloud Stream, mensajería, RabbitMQ, Kafka
-
-Migrar de código imperativo a un modelo de programación reactiva nos habilita escalar nuestras aplicaciones de maneras que serían imposibles con el método imperativo de "scale out", y eso es una cosa buena! Pero con todas mejoras, se necesita examinar y abordar holisticamente el sistema o todo lo que logremos es de mover los embotellamientos, creando o encontrando uno u otro mientras sintonizemos aplicaciones o servicios particulares. Esto no es tan bueno.
-
-En esta sesión, el ponente discute:
-
-- Como el proyecto Reactor construye en la iniciativa Reactive Streams para ayudarte crear microservicios reactivos escalables de alto rendimiento
-- Plataformas de mensajería como RabbitMQ & Apache Kafka
-- Como Spring Cloud Stream utiliza Reactor para proveer pipelines enteramente reactivos para escalabilidad ridícula entre el sistema total
-
-El ponente escribirá en código todos los ejemplos usando software de código abierto en vivo y en tiempo real! Esta no está una presentación abstracta, vengas para ganar conocimiento real y practical!
-
-{{< youtube id="DfdlDuGONwk" class="youtube-video-shortcode" >}}
 
 ### Spring Boot: Up & Running!
 

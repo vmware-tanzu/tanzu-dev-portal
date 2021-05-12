@@ -101,7 +101,7 @@ function isTvShowLive(showName) {
         var epDate = new Date("{{ .Params.Date }}");
         episodeDates.push(epDate.toLocaleDateString());
         episodeTimes.push(epDate.toLocaleTimeString());
-        episodeLengths.push({{ default 0 .Params.minutes }});
+        episodeLengths.push({{ default 60 .Params.minutes }});
         episodeShowNames.push("{{ .Parent.Title }}");
         episodeLinks.push("{{ .Parent.Permalink | relURL }}");
         {{ if isset .Params "twitch" }}episodeStreams.push("twitch");{{ else }}episodeStreams.push("{{ .Params.youtube }}");{{ end }}
@@ -174,4 +174,44 @@ function getCookie(name) {
 
   return decodeURI(dc.substring(begin + prefix.length, end));
 }
+
+  function updateFilters() {
+      let activeFilters = Array.from(document.querySelectorAll('li.filter.active')).map(el => el.getAttribute("filter"))
+      if(activeFilters.length === 0) {
+        document.querySelectorAll('[filter="all"]')[0].classList.add("active")
+        activeFilters = ["all"]
+      }
+      const params = new URLSearchParams(document.location.search.substring(1));
+      params.delete('filters')
+      const constructedParams = Array.from(params).length > 0 ? "&" + params.toString() : ''
+      window.history.pushState('', '', '?filters=' + activeFilters.join(",") + constructedParams);
+      
+      Array.from(document.getElementsByClassName("filter-item")).forEach(el => {
+        el.hidden = true
+        for (f of activeFilters) {
+          if (el.classList.contains(f) | f === 'all') {
+            el.hidden = false
+            break;
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(document.location.search.substring(1));
+      let fs = params.get("filters")
+      if (fs) {
+        fs = fs.toLowerCase().split(',')
+        Array.from(document.getElementsByClassName("filter")).forEach(el => {
+          if (fs.includes(el.getAttribute("filter"))) {
+            el.classList.add("active")
+          } else {
+            el.classList.remove("active")
+          }
+        });
+        updateFilters()
+      }
+
+    });
+
 </script>
