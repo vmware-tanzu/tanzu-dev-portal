@@ -65,13 +65,24 @@ csv = CSV.open(options[:output], "w")
 
 # Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
-contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) + Dir.glob(File.join(contentPath, "/guides/**/*.md")) + Dir.glob(File.join(contentPath, "/practices/**/*.md"))
+
+contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) 
+contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md")) 
+contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/tv/**/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
 
 # Prepare the markdown renderer 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
 
 auditData = []
 metaKeys = []
+
+# Add the title and type columns first
+metaKeys.push("title")
+metaKeys.push("type")
 
 tagsTally = {}
 topicsTally = {}
@@ -83,6 +94,9 @@ contentFiles.each do |f|
     fData = File.open(f).read
     contentMetadata = YAML.load(fData)
     contentMetadata["path"] = f.gsub(contentPath, "")
+
+    # Add a column for the type of content
+    contentMetadata["type"] = contentMetadata["path"].split("/").first
     
     # Calculate word count
     wordcount = markdown.render(fData.split("---").last).gsub(/<\/?[^>]*>/, "").split.length
@@ -100,7 +114,7 @@ contentFiles.each do |f|
     end
 
     # Tally the topics
-    if contentMetadata.has_key? "topics"
+    if contentMetadata.has_key? "topics" and not contentMetadata["topics"].nil?
         contentMetadata["topics"].each do |t|
             if topicsTally.has_key? t
                 topicsTally[t] += 1
