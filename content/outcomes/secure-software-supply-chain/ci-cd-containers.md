@@ -26,6 +26,6 @@ The solution, again, can take many forms. You can have one pipeline that tests y
 
 A difference between using a build service such as Tanzu Build Service and a solution such as Kaniko is who initiates each step of the build. With a solution such as Kaniko, you're responsible for kicking up tests once a new commit is made to the code, and then spinning up a pod to build the container. You're then also responsible for figuring out when the build completes, sending it to our image scanning solution, and finally watching for when the scan finishes.
 
-Since solutions such as Tanzu Build Service offer building and scanning images in one, your pipeline could be as simple as watching for a new commit, running the tests, and then tagging the code so that the build service kicks off a build and scan.
+Since solutions such as Tanzu Build Service offer building and scanning images in one, your pipeline could be as simple as watching for a new commit, running the tests, and then tagging the code so that the build service kicks off a build and scan. This may represent a faster and less risk-prone path to production.
 
 <TODO: Example diagram>

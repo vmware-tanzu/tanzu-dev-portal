@@ -10,7 +10,7 @@ There's many options that you have when deciding how you want to build the conta
 
 ## Dockerfile
 
-If you're already familiar with building a container image, this is probably where you got your start. A Dockerfile defines a series of actions (copy files, run commands, etc) that will be executed against a base image. These actions are used to prepare a complete operating system image for your applications, complete with system-level dependencies. Consider this basic Dockerfile:
+If you're already familiar with building a container image, this is probably where you got your start. A Dockerfile defines a series of actions (copy files, run commands, etc) that will be executed against a base image. These actions are used to prepare an operating system image for your applications, complete with all system-level dependencies. Consider this basic Dockerfile:
 
 ```dockerfile
 FROM ubuntu:18.04
@@ -43,11 +43,11 @@ However, Gradle would place the build artifact in the `build/libs` directory. Lu
 docker build --build-arg JAR_FILE=build/libs/\*.jar -t USERNAME/my-application .
 ```
 
-There's many more instructions that a Dockerfile can contain. To learn more, please refer to the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) and the [best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
+There's many more instructions that a Dockerfile may contain. To learn more, please refer to the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) and the [best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 ## Kaniko
 
-[Kaniko](https://github.com/GoogleContainerTools/kaniko) is an example of a tool that can help formalize your build pipeline. When building a Dockerfile directly, you need access to a running Docker daemon, and setting one up inside a container requires privilege escalation. On the other hand, Kaniko doesn't require these privileges, meaning that you're not granting containers unnecessary permissions that could be exploited. At its core, Kaniko is a prebuilt container image with an executable that knows how to compile a Dockerfile without Docker. You still write your Dockerfile as demonstrated, but instead of running a `docker build` command, you provide it to Kaniko along with your code, and it will build and upload the container wherever you specify.
+[Kaniko](https://github.com/GoogleContainerTools/kaniko) is an example of a tool that can help formalize your build pipeline. When building a Dockerfile directly, you need access to a running Docker daemon, and setting one up inside a container requires privileged escalation. Kaniko does not require these privileges, meaning that you will not be granting containers unnecessary permissions that could be potentially exploited. At its core, Kaniko is a prebuilt container image with an executable that knows how to compile a Dockerfile without Docker itself. You still write your Dockerfile as demonstrated, but instead of running a `docker build` command, you provide it to Kaniko along with your code, and it will build and upload the container to the registry that you specify.
 
 Consider the following Kubernetes pod definition:
 
@@ -78,15 +78,20 @@ spec:
 
 In this case, a pod will be spun up in Kubernetes using the Kaniko executor image, which will pull down the latest commit in the `main` branch of the GitHub repository defined in the `--context` argument, build it using the Dockerfile in the repository, and upload it to the container registry defined in the `--destination` argument. This build process, and the build process of other similar tools, makes it much easier to integrate a container build into your CI/CD pipelines.
 
+You will notice that we have not granted any elevated permissions to this Pod. It is operating with the same permissions that Pods will have at runtime. Limiting permissions is a critical component of a secure software supply chain.
+
+Kaniko does not support the scanning of images for vulnerabilities. Instead, it delegates this functionality to other parts of your CI/CD pipeline. This implies that your registry will need policy enforcement capabilities that prevent the upload of insecure images. Implementing [Harbor](https://goharbor.io/) may be a suitable solution.
+
 To learn more about Kaniko, please reference the documentation in the [Kaniko GitHub repository](https://github.com/GoogleContainerTools/kaniko).
 
 ## Tanzu Build Service
 
 The final step you can take when deciding how to build your container is a fully-automated build service such as [Tanzu Build Service](https://tanzu.vmware.com/build-service).  While you can tie tools such as Kaniko into a CI/CD pipeline that you run and manage, tools such as Tanzu Build Service aim to provide that automated build-scan-publish pipeline in a single solution. 
 
-Since tools such as Kaniko do not have features such as security scanning, you're responsible for setting up that additional architecture to support a scanning solution. Additionally, you also have to tie it into your pipeline, passing the code to the external build tool, and then passing the container image to your scanning tool.
+Since tools such as Kaniko do not include features such as security scanning, you will need to independently support a scanning solution. This becomes another component to be managed within your build environment.
 
 Tanzu Build Service leverages [Cloud Native Buildpacks](/guides/containers/cnb-what-is/), which contain all of the logic on how to build an application, removing the need to write your own Dockerfile. Additionally, Cloud Native Buildpacks provide a standardized base for all of your container images, meaning that if there's a vulnerability found in the Java runtime for example, you only need to update the buildpack. Tanzu Build Service can then take this new buildpack image and rebase your application containers automatically, ensuring these security fixes are implemented across your infrastructure. 
+While a primary use case for Tanzu Build Service is to manage the creation of newly built images, it is also a valuable tool for ensuring that images remain in compliance. When building a secure supply chain, we need to close the loop, by quickly leveraging our investment in these build tools to remediate our production environments. Tanzu Build Service may be a valuable component towards achieving that goal.```
 
 {{< youtube IMmUjUjBzes >}}
 
