@@ -6,6 +6,7 @@ roles: ["author"]
 skills: ["Spring", "Python", "Kubernetes", "Cloud Foundry"]
 location: "Glastonbury, UK"
 weight: 1
+hidden: true
 
 # Social Media
 twitter: "benbravo73"

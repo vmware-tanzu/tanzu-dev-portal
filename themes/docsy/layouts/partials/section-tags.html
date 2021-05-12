@@ -10,6 +10,6 @@
 
 {{/* Loop through new var to print unique section tags */}}
 {{ range sort ($scratch.Get "tagsVar") | uniq }}
-	<li class="filter" filter="{{ . | lower }}">{{ . }}</li>
+	<li class="filter" filter="{{ . | lower | urlize }}">{{ . }}</li>
 {{ end }}
 

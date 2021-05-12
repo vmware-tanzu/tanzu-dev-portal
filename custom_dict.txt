@@ -8,6 +8,7 @@
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|KB|Mi|m|m?s|k)
+[R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 1:1s
 12SwitchRestoresSansCheckOuts
@@ -57,6 +58,7 @@ AMQP
 Anchore
 Ango
 Anneliese
+[Aa]nomol(y|ies)
 Ansible
 anthonyjvetter
 antifragility
@@ -126,6 +128,7 @@ Baeldung('s)?
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+Baruch
 base64(-encoded)?
 BaseFunction
 batchesDistributed
@@ -680,6 +683,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+Integrallis
 [Ii]ntegrations
 IntelliJ
 interpolator
@@ -727,6 +731,7 @@ JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
 JAX-RS
+JBaruch
 JBatch
 JBoss
 jchen21
@@ -736,6 +741,7 @@ jdbcUrl
 Jernigan
 JetBrains
 Jetstack
+JFrog
 JHipster
 Jiang
 JIRAs
@@ -1249,6 +1255,7 @@ RFC[0-9]{4}
 RHEL
 Riak
 Rickard
+Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
@@ -1274,7 +1281,9 @@ Rushton
 [sS]3
 SaaS
 SaaS(-based)?
+Sadogursky
 Saikali
+Sam-Bodden
 SameSite
 SAML
 samplehost(:[0-9]*)?
@@ -1330,6 +1339,7 @@ Shopen
 Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
+siloed
 SingleMemberRegionSize
 SingleServer
 Sipe
@@ -1367,7 +1377,7 @@ sqlite
 SqlServer
 SqlServer|sqlserver
 src
-SRE
+SRE(s)?
 Sri
 SSD
 ssh-keygen
@@ -1387,6 +1397,7 @@ Steeltoe
 Stéphane
 StorageClass(es)?
 Storbakken
+Strategyzer
 StringBuilder
 struct
 STT
@@ -1499,10 +1510,12 @@ Unshared
 [Uu]nstaged
 untrusted
 untuned
+unvalidated
 UpdateMessage
 updateServerMetric
 updateServerMetrics
 upgradability
+upleveled
 upstream(s)?
 uptime
 UR[IL](s)?

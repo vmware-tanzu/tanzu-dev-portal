@@ -27,13 +27,17 @@ limitations under the License.
 
     //Samples filters
     $(".filters .filter").click(function () {
-      var filter = $(this).attr("filter");
-      $(this).addClass("active").siblings().removeClass("active");
-      $(".filter-item").hide();
-      $(".filter-item[class*='" + filter + "']").show();
-      if (filter == "all") {
-        $(".filter-item").show();
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+      } else {
+        this.classList.add("active")
+        if($(this).attr("filter") === "all") {
+          $(this).siblings().removeClass("active")
+        } else {
+          $("[filter=all]").removeClass("active")
+        }
       }
+      updateFilters()
     });
 
     //Newsletter
