@@ -17,11 +17,11 @@
     {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
     <!-- <hr class="panel-line"> -->
         <!-- <div class="col"> --><!-- <div class="row"> -->
-       <div class="flex justify-content-between">
+       <div class="d-flex justify-content-between">
            <div class="col-lg-9 px-0 ">
             {{ range $pages }}
                 {{ if eq .Parent $parent }}
-                <div class="item mb-3 gradient-edge-parent" >
+                <div class="item mb-3 position-relative" >
                     <div class='gradient-edge-top'></div>
                     <div class='border p-4 bg-gray-dark '>
                         <a class="h3" href="{{ .RelPermalink }}">{{- .Title -}}</a>
