@@ -45,6 +45,26 @@ However, Gradle would place the build artifact in the `build/libs` directory. Lu
 docker build --build-arg JAR_FILE=build/libs/\*.jar -t USERNAME/my-application .
 ```
 
+Finally, the dependencies to build your application may be different from the dependencies to run your application. For this, you can write a Dockerfile with [multiple stages](https://docs.docker.com/develop/develop-images/multistage-build/). A multi-stage build defines multiple `FROM` statements, which quite literally start a new, separate build from the previous. Consider the following Dockerfile which builds a Spring application and creates a container for it:
+
+```Dockerfile
+FROM maven:3.8.1-openjdk-11 as BUILD
+
+COPY . /spring-hello-world
+WORKDIR /spring-hello-world
+RUN  mvn clean package
+
+FROM openjdk:11.0.11-jre-slim
+COPY --from=BUILD /spring-hello-world/target/spring-helloworld-0.0.1-SNAPSHOT.jar /spring-hello-world/spring-hello-world.jar
+
+EXPOSE 8080
+CMD ["java", "-jar", "/spring-hello-world/spring-hello-world.jar"]
+```
+
+This Dockerfile defines two stages. The first `FROM` statement uses the `maven:3.8.1-openjdk-11` container image as a base, and gives the label of `BUILD` as a name for this build stage. The next few lines should look familiar: we copy our source code into it, set our working directory, and run the `mvn clean package` command to build our application.
+
+From there, you'll notice a second `FROM` command. This tells Docker to start a completely fresh container image, separate from whatever was done before it. This time, we're using `openjdk:11.0.11-jre-slim` as a base, which contains just the JRE and removes a lot of unneeded dependencies. You'll notice that the `COPY` command has the `--from=BUILD` argument, which tells Docker that instead of copying files from the local filesystem, copy it from a previous stage, in this case the one labeled `BUILD`. We copy the JAR file from the previous stage into our new stage, expose the port that it's running on, and set the `CMD` to run the resulting JAR. This results in a much slimmer container image, which in turn can result in a much more secure image. Keeping the dependencies limited and scoped to only situation where they're required shrinks the window for possible vulnerabilities. We don't need to ship the full JDK into production alongside each of our applications, so this method allows us to build the code within the container without that extra weight.
+
 There's many more instructions that a Dockerfile may contain. To learn more, please refer to the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) and the [best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 
