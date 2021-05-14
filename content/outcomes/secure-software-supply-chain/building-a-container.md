@@ -21,6 +21,8 @@ ENTRYPOINT /app/my-app
 
 This Dockerfile tells the Docker build process to use the `ubuntu:18.04` container image as a base and to copy the current directory from the local filesystem to `/app` within the filesystem of the container that we're building. The `RUN` command then runs the command to build the application within the context of the container image. Finally, the `ENTRYPOINT` instruction defines the command to run when the container is started. In this case, when the container is started, the executable at `/app/my-app` is launched by default. Users may override this entry point on the command line or through Kubernetes Pod specifications.
 
+One thing to note is that the separation between base image and your code makes a couple things easier. First, you can create a image containing only the dependencies that you need, reducing the security risk that could be inadvertently introduced by maintaining an entire system of dependencies when only a small fraction are every used. Second, using a common base image among applications means that you're maintaining those dependencies in one place. If you build many Java applications and there's a security vulnerability in the JVM for example, now you only need to update your base image and point your application container to build off of that one image.
+
 With that basic understanding, let's look at a more specific example. In this case, this Dockerfile is used to run a Spring Boot application:
 
 ```dockerfile
@@ -44,6 +46,9 @@ docker build --build-arg JAR_FILE=build/libs/\*.jar -t USERNAME/my-application .
 ```
 
 There's many more instructions that a Dockerfile may contain. To learn more, please refer to the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) and the [best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
+
+
+A Dockerfile requires the most hands-on maintenance as you're handling both the instructions to build the container (writing the Dockerfile), as well as the responsibility of actually running the `docker build` command in your pipeline. If you're using a CI/CD solution that provides access to a running Docker daemon that you can trust to be secure, this may not be a big deal. Be sure to consult the documentation for your CI/CD tools.
 
 ## Kaniko
 
@@ -84,6 +89,8 @@ Kaniko does not support the scanning of images for vulnerabilities. Instead, it 
 
 To learn more about Kaniko, please reference the documentation in the [Kaniko GitHub repository](https://github.com/GoogleContainerTools/kaniko).
 
+While a solution such as this still requires you to provide a Dockerfile, you're no longer responsible for ensuring consistent and secure access to a Docker daemon. On the other hand, you do require access to a running Kubernetes cluster. If you have this available from your build environment, then using Kaniko becomes a much simpler process. However if you need to maintain a Kubernetes cluster just for this build, perhaps there's a better fitting solution.
+
 ## Tanzu Build Service
 
 The final step you can take when deciding how to build your container is a fully-automated build service such as [Tanzu Build Service](https://tanzu.vmware.com/build-service).  While you can tie tools such as Kaniko into a CI/CD pipeline that you run and manage, tools such as Tanzu Build Service aim to provide that automated build-scan-publish pipeline in a single solution. 
@@ -96,3 +103,5 @@ While a primary use case for Tanzu Build Service is to manage the creation of ne
 {{< youtube IMmUjUjBzes >}}
 
 If you're interested in learning more about adding Tanzu Build Service to your build pipeline, you can learn more [here](https://tanzu.vmware.com/build-service)!
+
+A fully-automated build system is the most turnkey of the three we've looked at. Removing the need to maintain a Dockerfile is not only a convenience, it can drastically improve the security of your containers. The use of heavily tested buildpacks means that you containers are being built off of known security-hardened base images, and once your containers are built, they're automatically scanned for known CVEs.
