@@ -2,7 +2,7 @@
 title: Building a Container
 weight: 2
 layout: single
-related: ["/guides/containers/cnb-gs-pack/", "/guides/containers/cnb-gs-kpack/"]
+related: ["/guides/containers/cnb-gs-pack", "/guides/containers/cnb-gs-kpack"]
 
 ---
 
