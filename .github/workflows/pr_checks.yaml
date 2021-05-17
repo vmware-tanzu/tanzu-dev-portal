@@ -3,6 +3,10 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "**content**"
+      - "**layouts**"
+      - "**themes**"
   workflow_dispatch:
 jobs:
   spell-check:
