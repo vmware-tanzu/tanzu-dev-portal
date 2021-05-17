@@ -1,6 +1,6 @@
 ---
 title: Building a Container
-weight: 2
+weight: 3
 layout: single
 related: ["/guides/containers/cnb-gs-pack", "/guides/containers/cnb-gs-kpack"]
 

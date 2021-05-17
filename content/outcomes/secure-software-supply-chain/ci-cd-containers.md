@@ -1,6 +1,6 @@
 ---
 title: Building Containers in CI/CD Pipelines
-weight: 4
+weight: 5
 layout: single
 ---
 
