@@ -11,7 +11,7 @@ To install the latest version of `hugo` you can use `brew install hugo` if you a
 To build the site:
 
 ```
-git clone https://github.com/vmware-tanzu/tanzu-dev-portal
+git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal
 cd tanzu-dev-portal
 make preview
 ```
