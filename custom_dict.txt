@@ -456,6 +456,7 @@ entriesInVM
 entriesOnlyOnDisk
 EntryEventImpl
 EntryEventImpl's
+enum
 EnumInfo
 Enums
 env
@@ -774,6 +775,8 @@ judgement
 Julien
 jumpstart
 Junio
+junit
+Junit
 JUnit
 Jupyter(Hub|Lab)?
 JVM's
@@ -908,6 +911,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
+matchers
 matchings
 maxUtilization
 Mayers
@@ -1271,6 +1275,7 @@ rootPassword
 Rosso
 [Rr]outable
 Route53
+RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
 RSA

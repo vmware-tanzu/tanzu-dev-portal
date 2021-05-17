@@ -24,17 +24,11 @@ Testing route authorizations are often manual processes, that are prone to human
 
 The following are dynamic tests that ensure your route authorization configuration is up-to-date, and has 100 percent coverage.
 
-**Code examples** 
-
-<https://github.com/tobocop/spring-route-authorization-testing>
-
-_Note_: The solutions provided were coded for `spring-boot-starter-security:2.4.4` and junit 5.
+{{<callout>}}
+The solutions provided were coded for `spring-boot-starter-security:2.4.4` and junit 5.
+{{</callout>}}
 
 ## Solution - Kotlin
-
-**Kotlin code example**
-
-<https://github.com/tobocop/spring-route-authorization-testing/tree/main/kotlin>
 
 Here is the finished test class we'll be walking through:
 
@@ -548,3 +542,8 @@ class Access {
 
 ## Further reading
 - [Dynamic tests in Junit 5](https://www.baeldung.com/junit5-dynamic-tests)
+
+## Example Repository
+
+<https://github.com/tobocop/spring-route-authorization-testing>
+
