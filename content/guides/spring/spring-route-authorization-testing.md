@@ -18,15 +18,23 @@ team:
 - Toby Rumans
 ---
 
-Spring Security provides us with the ability to lock down routes in our applications to particular roles. However, testing route authorizations often ends up feeling manual and prone to human error. What this approach proposes is a few dynamic tests that ensure your route authorization configuration is always up to date and has 100% coverage.
+Spring Security enables us to lock down routes in applications to particular roles. 
 
-Code Examples: <https://github.com/tobocop/spring-route-authorization-testing>
+Testing route authorizations are often manual processes, that are prone to human error and often have complicated setup. 
+
+The following are dynamic tests that ensure your route authorization configuration is up-to-date, and has 100 percent coverage.
+
+**Code examples** 
+
+<https://github.com/tobocop/spring-route-authorization-testing>
 
 _Note_: The solutions provided were coded for `spring-boot-starter-security:2.4.4` and junit 5.
 
 ## Solution - Kotlin
 
-Kotlin code example: <https://github.com/tobocop/spring-route-authorization-testing/tree/main/kotlin>
+**Kotlin code example**
+
+<https://github.com/tobocop/spring-route-authorization-testing/tree/main/kotlin>
 
 Here is the finished test class we'll be walking through:
 
@@ -140,11 +148,11 @@ internal class WebSecurityConfigTest {
 
 ### Solution - Kotlin - Setup
 
-The basic premise is to use a combination of the `RequestMappingHandlerMapping` object from Spring Web and a few `@TestFactory` tests to ensure every route is tested with every role in your system.
+To ensure all the routes are tested for every role in your system, we'll use a combination of the `RequestMappingHandlerMapping` object from Spring Web and a few `@TestFactory` tests.
 
-In order to do this, we're going to get to a point where all we're maintaining is a list of specs we can update when we add new routes. 
+To start, let's put our auth Roles into an enum for typed goodness (you can also do this with strings). 
 
-To start, although you can do this with strings, let's put our auth Roles into an enum for typed goodness. In our application code we have: 
+In our application code we have: 
 
 ```kotlin
 enum class Role {
@@ -153,7 +161,7 @@ enum class Role {
 }
 ```
 
-Let's also add a class in our tests to help us understand what authorization should be granted on a route:
+Let's also add a class in the tests to help us understand what authorization should be granted on a route:
 
 ```kotlin
 sealed class Access {
@@ -166,7 +174,7 @@ sealed class Access {
 }
 ```
 
-And finally, we can bring our pieces we need to write tests together with a RouteAuthSpec:
+Finally, we bring all the pieces that we need to write tests for together with RouteAuthSpec:
 
 ```kotlin
 data class RouteAuthSpec(
@@ -193,9 +201,11 @@ data class RouteAuthSpec(
 }
 ```
 
-Sanitizing the route allows us to configure our RouteAuthSpecs with the exact URL we'd use in our controllers. We also don't care what params we pass as we're only looking for access, not successful response codes. 
+Sanitizing the route allows us to configure our RouteAuthSpecs with the exact URL we'd use in our controllers. 
 
-Now we have a few of our helper classes sorted, let's bring them together into a `WebSecurityConfigTest` class and add a few routes we care about:
+Since we are only looking for access when sanitizing the route, parameters, including successful response codes that we pass, do not matter.
+
+Now that we have a few of our helper classes sorted, let's bring them together into a `WebSecurityConfigTest` class and add a few routes that we care about:
 
 ```kotlin
 @SpringBootTest
@@ -210,7 +220,9 @@ internal class WebSecurityConfigTest {
 
 ### Solution - Kotlin - All Routes
 
-The first thing we want to do, is make sure we have a RouteAuthSpec for every route in our application. We can do this by using `RequestMappingHandlerMapping` to pull all registered routes out of our app and looking at differences. Here's an example of the class after adding this test:
+The first thing to enforce is make sure we have a RouteAuthSpec for every route in our application. To do this, use `RequestMappingHandlerMapping` to pull all registered routes out of the app, and to look at differences. 
+
+The following is an example of the class after adding this test:
 
 ```kotlin
 @SpringBootTest
@@ -248,13 +260,13 @@ internal class WebSecurityConfigTest {
     }
 }
 ```
-`allRoutes` is getting every method and route we have registered (minus Spring's default `/error` page). Then it's a matter of comparing it to the list of routes we have specs for.
+`allRoutes` registers all methods and routes by comparing them to the list of routes from `routeAuthSpecs`, (except for Spring's default `/error` page).
 
 Now, we'll have a test failure if we ever add an application route without adding a corresponding `RouteAuthSpec`. We also will get a failure if we remove a route from our app without removing the relevant `RouteAuthSpec`.
 
 ### Solution - Kotlin - Unauthenticated Routes
 
-Next we'll want to ensure every Unauthenticated route is behaving properly:
+Next, we'll want to ensure every unauthenticated route is behaving properly:
 
 ```kotlin
     @TestFactory
@@ -285,7 +297,7 @@ Next we'll want to ensure every Unauthenticated route is behaving properly:
     }
 ```
 
-We use `@TestFacotry` here so we get an individual pass or failure for every route in our system. 
+We use `@TestFactory` here so we get an individual pass or failure for every route in our system. 
 
 ### Solution - Kotlin - Authenticated Routes
 
@@ -329,10 +341,9 @@ At this point, verifying authenticated routes isn't much different from unauthen
     }
 ```
 
-
 ## Solution - Java
 
-The java solution uses all the same concepts as the kotlin solution. In the end, we end up with with this test class:
+The Java solution uses all the same concepts as the Kotlin solution. In the end, we end up with this test class:
 
 ```java
 import org.junit.jupiter.api.DynamicTest;
@@ -524,16 +535,16 @@ class Access {
 
 #### Pros
 
-- Humans don't have to remember to update it, the tests tell you when to change
-- Every API route is tested against every role
-- `@TestFactory` generates an individual case for every route
-- Easy for any team member to add new specs
-- Lets you refactor your authorization matchers with confidence
+- Humans don't have to remember to update it. The tests tell you when to change.
+- Every API route is tested against every role.
+- `@TestFactory` generates an individual case for every route.
+- Any team member can easily add new specs.
+- Lets you refactor your authorization matchers with confidence.
 
 #### Cons
 
-- Adds a lot of tests to your suite, could slow it down
-- Your hand will get sore from all the high fives
+- Adds a lot of tests to your suite that could slow it down.
+- Your hand will get sore from all the high fives.
 
 ## Further reading
 - [Dynamic tests in Junit 5](https://www.baeldung.com/junit5-dynamic-tests)
