@@ -16,10 +16,8 @@ what:
 - "Whiteboard or digital version like [Miro](https://miro.com/)"
 - Dry erase markers
 
-# If this practice or workshop has a Miro template: remote: true
 remote: false
 miro_template_url: "" 
-
 ---
 ## How to Use this Method
 
@@ -103,7 +101,7 @@ miro_template_url: ""
 You’ve succeeded when the team feels like they’re confident they can conduct research in a way that the team can garner usable information. 
 
 ## Facilitator Notes & Tips
-You can make as many or as few visual aids ahead of time as you like to support this workshop, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
+You can make as many or as few visual aids ahead of time as you like to support this session, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
 
 If the team feels like they want more practice conducting research before they do it with actual users, don’t hesitate to schedule a follow-up session or two. Role playing can do wonders to prep people who haven’t done a lot of research before but are excited to learn how.
 
@@ -119,10 +117,11 @@ None at the moment.
 None at the moment. 
 
 ## Real World Examples
-
 ![Research Workshop Example 1](/images/practices/research-workshop/example-1.jpg)
 
 ![Research Workshop Example 2](/images/practices/research-workshop/example-2.jpg)
 
 ## Recommended Reading
-None at the moment
+[Lean UX](https://www.oreilly.com/library/view/lean-ux/9781449366834/) by Jeff Gothelf and Josh Seiden
+
+[UX For Lean Startup](https://www.amazon.com/UX-Lean-Startups-Experience-Research/dp/1449334911) by Eric Ries
