@@ -9,7 +9,7 @@ participants: "Core team"
 image: "default-cover.png" 
 lastmod: "2021-05-14"
 why: 
-- Continuous research helps ensure that we’re building something of value at each step. Needs and problems live with people, so in order to create value we need a deep understanding of how well we're solving those problems. This workshop offers an overview of research best practices in order to align the team prior to the first stakeholder or user interviews they conduct.
+- Continuous research helps ensure that we’re building something of value at each step. Needs and problems live with people, so in order to create value we need a deep understanding of how well we're solving those problems. This session offers an overview of research best practices in order to align the team prior to the first stakeholder or user interviews they conduct.
 when:
 - Given the importance of research early in the project, this workshop is typically done as soon as possible after Kickoff in advance of any stakeholder interviews or exploratory user research.
 what:
