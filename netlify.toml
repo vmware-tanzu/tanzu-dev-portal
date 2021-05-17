@@ -21,7 +21,7 @@
   [plugins.inputs]
     deployPreviews = false
 
-[[plugins]]
+[[context.deploy-preview.plugins]]
   package = "@netlify/plugin-lighthouse"
 
   # optional, fails build when a category is below a threshold
@@ -38,7 +38,7 @@
 
   # to audit a sub path of the build directory
   # audit will use the top level thresholds
-  [[plugins.inputs.audits]]
+  [[context.deploy-preview.plugins.inputs.audits]]
     path = "developer"
     # you can specify output_path per audit, relative to the path
     output_path = "lighthouse/index.html"
