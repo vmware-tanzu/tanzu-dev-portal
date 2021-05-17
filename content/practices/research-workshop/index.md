@@ -1,5 +1,5 @@
 ---
-title: "Research Workshop"
+title: "User Research Introduction Session"
 linkTitle: "Research Workshop"
 description: "Level-set on user research best practices"
 tags: ["Discovery"]
