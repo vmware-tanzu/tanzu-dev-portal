@@ -174,7 +174,7 @@ sealed class Access {
 }
 ```
 
-Finally, we bring all the pieces that we need to write tests for together with RouteAuthSpec:
+Finally, we bring all the pieces that we need to write tests for together with `RouteAuthSpec`:
 
 ```kotlin
 data class RouteAuthSpec(
@@ -220,7 +220,7 @@ internal class WebSecurityConfigTest {
 
 ### Solution - Kotlin - All Routes
 
-The first thing to enforce is make sure we have a RouteAuthSpec for every route in our application. To do this, use `RequestMappingHandlerMapping` to pull all registered routes out of the app, and to look at differences. 
+The first thing to enforce is make sure we have a `RouteAuthSpec` for every route in our application. To do this, use `RequestMappingHandlerMapping` to pull all registered routes out of the app, and to look at differences. 
 
 The following is an example of the class after adding this test:
 
