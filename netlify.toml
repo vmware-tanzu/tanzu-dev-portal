@@ -33,8 +33,8 @@
   #  pwa = 0.9
 
   # optional, deploy the lighthouse report to a path under your site
-  #[plugins.inputs]
-  #  output_path = "reports/lighthouse.html"
+  [plugins.inputs]
+    output_path = ".lighthouse/report.html"
 
 [[redirects]]
   from = "/"
