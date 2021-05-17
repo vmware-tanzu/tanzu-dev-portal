@@ -34,7 +34,7 @@
 
   # optional, deploy the lighthouse report to a path under your site
   [plugins.inputs]
-    output_path = ".lighthouse/report.html"
+    output_path = "lighthouse/report.html"
 
 [[redirects]]
   from = "/"
