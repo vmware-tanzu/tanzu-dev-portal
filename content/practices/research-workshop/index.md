@@ -1,6 +1,6 @@
 ---
 title: "User Research Introduction Session"
-linkTitle: "Research Workshop"
+linkTitle: "User Research Introduction Session"
 description: "Level-set on user research best practices"
 tags: ["Discovery"]
 length: "45 mins - 1 hour"
