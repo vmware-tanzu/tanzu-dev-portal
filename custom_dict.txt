@@ -1627,3 +1627,5 @@ BuildPack
 Gitrepo
 knative
 petclinc
+knative-serving
+Knative-serving
