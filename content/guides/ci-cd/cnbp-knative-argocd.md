@@ -29,7 +29,7 @@ In this Guide we are going to show how to automate building of Container Images 
 
 - [Knative](https://knative.dev/) to automatically generate an Ingress Service with URL and other Kubernetes Resources for the container image that was built using Cloud Native Buildpacks. Knative-serving automates the process of creating Kubernetes objects needed for an application like Deployment, Replicasets, Services etc.,  eliminating the need to write complex Kubernetes YAML files. 
 
-- [ArgoCD](https://argoproj.github.io/) to automates deployment pipeline pushing container images on to Kubernetes using Knative. ArgoCD helps deploy application continuously using Gitops methodology. It can take specifications like Kubernetes resources, Knative, Kustomize etc. to deploy application on Kubernetes.
+- [ArgoCD](https://argoproj.github.io/) to automate deployment pipeline pushing container images on to Kubernetes using Knative. ArgoCD helps deploy application continuously using Gitops methodology. It can take specifications like Kubernetes resources, Knative, Kustomize etc. to deploy application on Kubernetes.
 
 - A sample application called [Petclinic](https://github.com/Boskey/spring-petclinic) that is based on [Spring](https://spring.io/) 
 
@@ -105,8 +105,8 @@ Cloud Native Buildpacks create Container images using a `builder` that uses a pr
 ```
 kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/sa.yaml
 kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/store.yaml
-kubectl apply -f https://github.com/Boskey/spring-petclinic/blob/main/kpack-config/stack.yaml
-https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/builder.yaml
+kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/stack.yaml
+kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/builder.yaml
 ```
 
 ### 5. Install and Configure ArgoCD
@@ -209,11 +209,11 @@ Let's create an application using ArgoCD, **Replace the  `--repo` URL with the G
 ```
 argocd app create petclinic --repo https://github.com/Boskey/spring-petclinic.git --path knative --dest-server https://kubernetes.default.svc --dest-namespace default
 ```
-This tells ArgoCD to create an application called *petclinc* on the local cluster and the *`--path`* variable tells ArgoCD *How* to deploy. In our case the `--path` variable points to the knative-serving specification. So ArgoCD will pass the knative-serving specification to the local Kubernetes cluster, where the CRD for Knative will understand how to deploy the application and will automatically create Deployments, resource pools, Services etc.
+This tells ArgoCD to create an application called *petclinc* on the local cluster and the *`--path`* variable tells ArgoCD *how* to deploy. In our case the `--path` variable points to the knative-serving specification. So ArgoCD will pass the knative-serving specification to the local Kubernetes cluster, where the CRD for Knative will understand how to deploy the application and will automatically create Deployments, resource pools, Services etc.
 
 Let's Sync the app in ArgoCD
 ```
-argocd app sync  petclinic
+argocd app sync petclinic
 ```
 
 This will deploy PetClinic on the Kubernetes Cluster along with a URL petclinic-knative.default.example.com. You can look at all the resource that were created
@@ -235,14 +235,13 @@ If you want to look at the application on your browser, create a DNS entry in yo
 127.0.0.1       petclinic-knative.default.example.com
 ```
 
-And browse to http://localhost:8080
+And browse to [http://localhost:8080](http://localhost:8080)
 
 You should see the Petclinic Application deployed there.
 
 Let's say you have an update to the PetClinic application, you apply your changes and push them to the repo on Github. To deploy the newer version, all you have to do is create a new container image using `kpack` and update the knative-serving specification file with the new image location at `knative-service.yaml`. When synced, ArgoCD will detect the change in the file, and re-deploy the application with the newer container image using knative-serving. Knative will detect that this is an updated version of the same application and will deploy the new version with an updated revision. 
 
 You can also create a new deployment for different pipelines like `staging` by creating a new application in ArgoCD and pointing them to the same `knative-service.yaml` file.
-
 
 
 
