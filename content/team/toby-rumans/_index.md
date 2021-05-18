@@ -3,7 +3,7 @@ name: Toby Rumans
 description: ""
 photo: "/images/team/toby-rumans.png"
 roles: ["Author"]
-skills: ["Spring", "Cloud", "Java", "Testing", "React"]
+skills: ["Spring", "Cloud", "Java", "React"]
 location: "Denver, CO"
 weight: 1
 

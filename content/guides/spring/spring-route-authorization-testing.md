@@ -8,7 +8,6 @@ description: >
 date: "2021-05-12"
 topics:
 - Spring
-- Testing
 tags:
 - Spring
 - Spring Security
