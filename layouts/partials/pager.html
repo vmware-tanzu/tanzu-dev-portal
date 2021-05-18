@@ -1,8 +1,8 @@
-<div class="outcomes-pager my-5 d-flex align-items-center d-print-none">
+<div class="outcomes-pager my-lg-0 my-5 d-flex align-items-center d-print-none">
     {{ if .NextInSection }}
     <a href="{{.NextInSection.RelPermalink}}"
-        class="flex-grow-1 flex-shrink-1 mr-2 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center">
-        <i class="fas fa-arrow-left"></i>
+        class="flex-grow-1 flex-shrink-1 my-4 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center">
+        <i class="fas fa-arrow-left mr-4"></i>
         <div>
             <p class="text-right text-uppercase font-weight-light mb-0">{{ T "ui_pager_prev" }}</p>
             <p class="text-right mt-0">{{.NextInSection.Title}}</p>
@@ -11,12 +11,12 @@
     {{ end }}
     {{ if .PrevInSection }}
     <a href="{{.PrevInSection.RelPermalink}}"
-        class="flex-grow-1 flex-shrink-1 ml-2 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center">
+        class="flex-grow-1 flex-shrink-1 my-4 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center">
         <div>
             <p class="text-left text-uppercase font-weight-light mb-0">{{ T "ui_pager_next" }}</p>
             <p class="text-left mt-0">{{.PrevInSection.Title}}</p>
         </div>
-        <i class="fas fa-arrow-right"></i>
+        <i class="fas fa-arrow-right ml-4"></i>
     </a>
     {{ end }}
 </div>

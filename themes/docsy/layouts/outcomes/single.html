@@ -27,10 +27,10 @@
       </div>
     </div>
     <div class="row flex-xl-nowrap container mx-auto">
-      <div class="col-12 col-md-3 outcomes-sidebar td-sidebar td-sidebar-nav d-print-none">
+      <div class="col-12 col-md-3 outcomes-sidebar td-sidebar td-sidebar-nav d-print-none d-none d-lg-block">
         {{ partial "sidebar-outcomes.html" (dict "context" . "outcome" $outcome) }}
       </div>
-      <div class="col-12 col-md-7 d-print-none">
+      <div class="col-12 col-md-9 col-lg-7 d-print-none position-relative pb-lg-4">
         {{ if ne $outcome .Page }}
         <h2>{{ .Title }}</h2>
         {{ partial "byline" (dict "context" . "withdate" false) }}
@@ -44,7 +44,7 @@
         {{ partial "pager.html" . }}
         {{ end }}
       </div>
-      <div class="col-12 col-md-2 mt-1 d-print-none">
+      <div class="col-12 col-md-2 mt-1 d-print-none d-none d-lg-block">
         <div class="outcomes-toc px-3">
         {{ if ne $page.TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
         {{ with $page.TableOfContents }}
