@@ -1282,6 +1282,7 @@ RSA
 RSocket(-based)?
 Ruckle
 Rudd
+Rumans
 runnable
 runtimes?
 Rushton
