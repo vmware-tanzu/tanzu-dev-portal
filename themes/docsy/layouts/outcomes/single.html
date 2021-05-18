@@ -19,7 +19,7 @@
 
 <div class="td-content outcomes">
   <div class='container'>
-    <div class="row flex-xl-nowrap container mx-auto">
+    <div class="row flex-xl-nowrap container mx-auto mb-4">
       <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-print-none">
         {{ partial "version-banner.html" . }}
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
@@ -27,10 +27,10 @@
       </div>
     </div>
     <div class="row flex-xl-nowrap container mx-auto">
-      <div class="col-12 col-md-3 mt- outcomes-sidebar td-sidebar td-sidebar-nav d-print-none">
+      <div class="col-12 col-md-3 outcomes-sidebar td-sidebar td-sidebar-nav d-print-none">
         {{ partial "sidebar-outcomes.html" (dict "context" . "outcome" $outcome) }}
       </div>
-      <div class="col-12 col-md-7 mt-2 d-print-none">
+      <div class="col-12 col-md-7 d-print-none">
         {{ if ne $outcome .Page }}
         <h2>{{ .Title }}</h2>
         {{ partial "byline" (dict "context" . "withdate" false) }}
@@ -44,7 +44,7 @@
         {{ partial "pager.html" . }}
         {{ end }}
       </div>
-      <div class="col-12 col-md-2 mt-2 d-print-none">
+      <div class="col-12 col-md-2 mt-1 d-print-none">
         <div class="outcomes-toc px-3">
         {{ if ne $page.TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
         {{ with $page.TableOfContents }}
