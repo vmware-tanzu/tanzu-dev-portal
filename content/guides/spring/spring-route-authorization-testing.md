@@ -24,9 +24,9 @@ Testing route authorizations are often manual processes, that are prone to human
 
 The following are dynamic tests that ensure your route authorization configuration is up-to-date, and has 100 percent coverage.
 
-{{<callout>}}
+{{% aside title="Dependencies" %}}
 The solutions provided were coded for `spring-boot-starter-security:2.4.4` and junit 5.
-{{</callout>}}
+{{% /aside %}}
 
 ## Solution - Kotlin
 
