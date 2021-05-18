@@ -27,7 +27,7 @@ In this Guide we are going to show how to automate building of Container Images 
 
 - [Cloud Native Buildpacks](https://buildpacks.io/) to automate Container Image build process. Cloud Native Buildpacks is a specification that defines how OCI compliant containers can be build, removing the need to specify or build `Dockerfiles`. They can automatically detect the language an application is written in and determine the best and most secure way to package applications in a container image. Cloud Native Buildpacks can also be used to update container images easily for any changes. For this guide we will use an implementation of Cloud Native BuildPacks called [kpack](https://github.com/pivotal/kpack). Kpack lets you use deploy CLoud Native BuildPacks on a Kubernetes Cluster.
 
-- [Knative](https://knative.dev/) to automatically generate an Ingress Service with URL and other Kubernetes Resources for the container image that was built using Cloud Native Buildpacks. Kantive-serving automates the process of creating Kubernetes objects needed for an application like Deployment, Replicasets, Services etc. Eliminating the need to write complex Kubernetes YAML files. 
+- [Knative](https://knative.dev/) to automatically generate an Ingress Service with URL and other Kubernetes Resources for the container image that was built using Cloud Native Buildpacks. Knative-serving automates the process of creating Kubernetes objects needed for an application like Deployment, Replicasets, Services etc.,  eliminating the need to write complex Kubernetes YAML files. 
 
 - [ArgoCD](https://argoproj.github.io/) to automates deployment pipeline pushing container images on to Kubernetes using Knative. ArgoCD helps deploy application continuously using Gitops methodology. It can take specifications like Kubernetes resources, Knative, Kustomize etc. to deploy application on Kubernetes.
 
@@ -242,7 +242,6 @@ You should see the Petclinic Application deployed there.
 Let's say you have an update to the PetClinic application, you apply your changes and push them to the repo on Github. To deploy the newer version, all you have to do is create a new container image using `kpack` and update the knative-serving specification file with the new image location at `knative-service.yaml`. When synced, ArgoCD will detect the change in the file, and re-deploy the application with the newer container image using knative-serving. Knative will detect that this is an updated version of the same application and will deploy the new version with an updated revision. 
 
 You can also create a new deployment for different pipelines like `staging` by creating a new application in ArgoCD and pointing them to the same `knative-service.yaml` file.
-
 
 
 
