@@ -397,15 +397,9 @@ footer {
   }
 }
 
-#toggle-dark-mode {
-  background: none !important;
-  border-radius: 50px;
-  display: inline-block;
-  padding: 1px 3px;
-  text-align: right;
-  cursor: pointer;
-}
-#toggle-light-mode {
+#toggle-dark-mode,
+#toggle-light-mode,
+#toggle-pride-mode {
   background: none !important;
   border-radius: 50px;
   display: inline-block;
@@ -650,7 +644,7 @@ footer {
     user-select: none;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    transition: top .2s, color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     z-index: 1;
     cursor: pointer;

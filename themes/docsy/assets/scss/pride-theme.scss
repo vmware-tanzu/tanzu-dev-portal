@@ -1,14 +1,45 @@
 html  {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 500%;
+	animation: gradient 7s ease infinite;
+
+  body,
   .td-outer,
   .td-box--gray-dark,
   section,
   .td-main,
+  .bg-gray-dark:not(footer),
   .td-home {
     background-color: transparent !important;
+    p {
+      color: white !important;
+    }
   }
+  .person .card,
+  .video-description,
+  #search-nav,
+  footer,
+  nav.navbar {
+    background: #17242C !important;
+  }
+}
+.td-home .topic > p > a:hover {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 500%;
+	animation: gradient 3.5s ease infinite;
+}
+
+.gradient-edge-left {
+  background: -moz-linear-gradient(90, #EC7700, #7932A9, #0091DA, #78BE20) !important;
+  background: -webkit-linear-gradient(90deg, #EC7700, #7932A9, #0091DA, #78BE20) !important;
+  background: -ms-linear-gradient(90deg, #EC7700, #7932A9, #0091DA, #78BE20) !important;
+  height: 200%;
+  transition: top .2s;
+  position: absolute;
+  width: 4px;
+  top: -100%;
+  left: 0;
+  bottom: 0;
 }
 
 @keyframes gradient {
@@ -22,3 +53,5 @@ html  {
 		background-position: 0% 50%;
 	}
 }
+
+//Mouse trails

@@ -124,16 +124,15 @@ limitations under the License.
       }
       changeTheme('dark');
       localStorage.setItem("light-dark-mode-storage", "dark");
-      var input1 = document.getElementById("pride-theme");
-      var input2 = document.getElementById("light-theme");
-      console.log(input1);
-      console.log(input2);
-      if(input1) {
+      var hasPride = document.getElementById("pride-theme");
+      var hasLight = document.getElementById("light-theme");
+
+      if(hasPride) {
         document.getElementById("pride-theme").remove();
         $("html").removeClass("pride-mode");
 
       }
-      if(input2) {
+      if(hasLight) {
         document.getElementById("light-theme").remove();
         $("html").removeClass("light-mode");
       }
@@ -447,3 +446,24 @@ limitations under the License.
       });
   });
 }(jQuery));
+
+
+//Mouse trails
+window.addEventListener("mousemove", function (e) {
+	var to_append = document.getElementsByClassName('loader-container')[0];
+	var all = document.getElementsByClassName('loader-container');
+
+	var parent_div = document.createElement('div');
+	parent_div.className = "loader-container";
+	var inner_div = document.createElement('div');
+	inner_div.className = "loader";
+	parent_div.appendChild(inner_div)
+	var d = document.body.appendChild(parent_div);
+
+	parent_div.style.left = (e.clientX - 50)+'px';
+	parent_div.style.top = (e.clientY - 50)+'px';
+
+	if(document.getElementsByClassName('loader-container').length > 50) {
+		document.body.removeChild(to_append)
+	}
+});
