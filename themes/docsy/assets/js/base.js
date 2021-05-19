@@ -77,21 +77,67 @@ limitations under the License.
 
     //Pride toggle
     $("#toggle-pride-mode").click(function () {
+      localStorage.setItem("light-dark-mode-storage", "pride");
       var iframe = document.getElementById("auth-iframe");
+
       if ($("html").hasClass("pride-mode")) {
-        $("html").removeClass("pride-mode");
-        document.getElementById("pride-theme").remove();
-        localStorage.setItem("light-dark-mode-storage", "dark");
-        if (iframe && iframe.contentWindow) {
-          iframe.contentWindow.postMessage("dark", "*");
-        }
-      } else {
+        // if (iframe && iframe.contentWindow) {
+        //   iframe.contentWindow.postMessage("dark", "*");
+        // }
+      }
+      else if ($("html").hasClass("light-mode")) {
+        $("html").removeClass("light-mode");
+        document.getElementById("light-theme").remove();
         $("html").addClass("pride-mode");
         changeTheme("pride");
-        localStorage.setItem("light-dark-mode-storage", "pride");
       }
+      else {
+        $("html").addClass("pride-mode");
+        changeTheme("pride")      }
     });
 
+    //Light toggle
+    $("#toggle-light-mode").click(function () {
+      localStorage.setItem("light-dark-mode-storage", "light");
+      var iframe = document.getElementById("auth-iframe");
+
+      if ($("html").hasClass("light-mode")) {
+        // if (iframe && iframe.contentWindow) {
+        //   iframe.contentWindow.postMessage("dark", "*");
+        // }
+      }
+      else if ($("html").hasClass("pride-mode")) {
+        $("html").removeClass("pride-mode");
+        $("html").addClass("light-mode");
+        document.getElementById("pride-theme").remove();
+        changeTheme("light");
+      }
+      else {
+        $("html").addClass("light-mode");
+        changeTheme("light");
+      }
+    });
+    $("#toggle-dark-mode").click(function () {
+      var iframe = document.getElementById("auth-iframe");
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage("dark", "*");
+      }
+      changeTheme('dark');
+      localStorage.setItem("light-dark-mode-storage", "dark");
+      var input1 = document.getElementById("pride-theme");
+      var input2 = document.getElementById("light-theme");
+      console.log(input1);
+      console.log(input2);
+      if(input1) {
+        document.getElementById("pride-theme").remove();
+        $("html").removeClass("pride-mode");
+
+      }
+      if(input2) {
+        document.getElementById("light-theme").remove();
+        $("html").removeClass("light-mode");
+      }
+    });
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");

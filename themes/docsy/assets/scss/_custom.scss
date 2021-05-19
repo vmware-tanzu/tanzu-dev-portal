@@ -397,7 +397,7 @@ footer {
   }
 }
 
-#toggle-light-dark-mode {
+#toggle-dark-mode {
   background: none !important;
   border-radius: 50px;
   display: inline-block;
@@ -405,7 +405,14 @@ footer {
   text-align: right;
   cursor: pointer;
 }
-
+#toggle-light-mode {
+  background: none !important;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 1px 3px;
+  text-align: right;
+  cursor: pointer;
+}
 
 .newsletter .hidden {
   display: none;
