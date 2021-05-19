@@ -1,6 +1,6 @@
 ---
 title: "Using Knative Eventing for Better Observability"
-featured: true
+featured: false
 weight: 1
 description: >
   Getting a better picture of Kubernetes events

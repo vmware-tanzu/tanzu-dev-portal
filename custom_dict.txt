@@ -175,6 +175,7 @@ BucketRegion's
 BucketRegionDetails
 BucketRegions
 Bugsville
+buildout
 [Bb]uildpack(s|'s|ages)?
 Bundler
 [Bb]urstable
@@ -808,11 +809,12 @@ kitesurfing
 KMS
 (KMS|kms)-plugin(s)?
 Knative
+knative-serving
 KNN
 KoFu
 kotlin
 Kousen
-kpack(-hosted)?
+kpack(.|-hosted)?
 Kravitz
 krf
 Krisp
@@ -1112,7 +1114,7 @@ per-namespace
 Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
-PetClinic
+[Pp]et[Cc]linic
 Petstore
 php-apache
 Pichler
@@ -1435,6 +1437,7 @@ TaskRepository
 Tatooine
 TBD
 TCP
+tdp-guide
 TechRepublic
 Tekton('s)?
 telco(s)*
@@ -1619,18 +1622,3 @@ ZOP
 Zou
 Zuul
 μServices
-buildout
-BuildPacks
-Gitops
-Kpack
-Knative-serving
-Petclinic
-tdp-guide
-BuildPack
-Gitrepo
-knative
-petclinc
-knative-serving
-Knative-serving
-Knative-Serving
-knative-serving
