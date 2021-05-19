@@ -11,7 +11,6 @@
 [context.deploy-preview]
   command = "git submodule update -f --init --recursive && npm install && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer"
   
-
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.0"
   TZ='America/Los_Angeles'
@@ -22,6 +21,29 @@
   [plugins.inputs]
     deployPreviews = false
 
+[[context.deploy-preview.plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  # optional, fails build when a category is below a threshold
+  #[plugins.inputs.thresholds]
+  #  performance = 0.9
+  #  accessibility = 0.9
+  #  best-practices = 0.9
+  #  seo = 0.9
+  #  pwa = 0.9
+
+  # optional, deploy the lighthouse report to a path under your site
+  #[plugins.inputs]
+  #  output_path = "lighthouse/report.html"
+
+  # to audit a sub path of the build directory
+  # audit will use the top level thresholds
+  [[context.deploy-preview.plugins.inputs.audits]]
+    path = "developer"
+    # you can specify output_path per audit, relative to the path
+    output_path = "lighthouse/index.html"
+
+  
 [[redirects]]
   from = "/"
   to = "/developer"
