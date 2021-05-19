@@ -955,6 +955,7 @@ Mockito
 MockMvc
 [Mm]odelling
 modularity
+Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
@@ -988,6 +989,7 @@ Nana
 [Nn]ano
 Natively
 natively
+Nenad
 Neo4j
 Nesterov
 NetApp('s)?
@@ -1286,6 +1288,7 @@ SaaS
 SaaS(-based)?
 Sadogursky
 Saikali
+Salm
 Sam-Bodden
 SameSite
 SAML
@@ -1429,6 +1432,7 @@ targetPort
 Tarin
 TAS
 TaskRepository
+Tatooine
 TBD
 TCP
 TechRepublic
@@ -1456,6 +1460,7 @@ Tilt(file|Cloud)?
 [Tt]imebox
 timebox(ed)?
 TimingGatewayEventFilter
+Timo
 tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
@@ -1614,3 +1619,18 @@ ZOP
 Zou
 Zuul
 μServices
+buildout
+BuildPacks
+Gitops
+Kpack
+Knative-serving
+Petclinic
+tdp-guide
+BuildPack
+Gitrepo
+knative
+petclinc
+knative-serving
+Knative-serving
+Knative-Serving
+knative-serving

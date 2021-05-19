@@ -6,7 +6,7 @@ topics:
 tags:
 - Git
 patterns:
-- Deployment and Packaging
+- Deployment
 ---
 
 Git is a free and open source version control system that is widely used in the open source community, including well known git repositories such as GitHub and GitLab. If you are unfamiliar with Git, it’s worth taking a few moments to familiarize yourself with it.  A simple guide can be found at [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/).

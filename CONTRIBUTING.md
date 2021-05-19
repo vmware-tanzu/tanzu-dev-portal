@@ -55,7 +55,7 @@ make sample.my-sample
 
 ### Create a new Video
 
-Your video should be uploaded to the VMwareTanzu YouTube channel first. For help with this reach out in the #tanzu-dev-portal channel. Once on YouTube, run the following command and make sure to set `youtube_id` in the front matter to the string that appears after `/watch?v=` in the video's URL, along with a title, description, and other taxonomy metadata.
+Your video should be uploaded to the VMwareTanzu YouTube channel first. For help with this reach out in the #tanzu-developer-center channel (VMware employees only). Once on YouTube, run the following command and make sure to set `youtube_id` in the front matter to the string that appears after `/watch?v=` in the video's URL, along with a title, description, and other taxonomy metadata.
 
 To create a new video `videos/my-video.md`:
 
