@@ -223,6 +223,7 @@ Chunyi
 ci
 CIDR(s)?
 CIO
+CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
@@ -673,6 +674,7 @@ IIS
 ImagePolicyWebhook
 img
 [Ii]mmeasurability
+IMmUjUjBzes
 implementors
 [Ii]ncompressible
 InfoQ
@@ -1208,6 +1210,7 @@ Rakuten
 RBAC(-enabled)?
 RDBMS
 reachability
+reactively
 [Rr]eadiness([Pp]robe)?
 README
 realtime
