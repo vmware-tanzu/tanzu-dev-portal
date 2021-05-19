@@ -71,25 +71,26 @@ Sentry.init({
     return event;
   }
 });
-
+// localStorage.clear();
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
 changeTheme(savedTheme);
 function changeTheme(mode) {
-    if (mode === "light") {
+    
+    if (mode === "pride") {
       var iframe = document.getElementById('auth-iframe');
       var head = document.head;
       var link = document.createElement("link");
 
       link.type = "text/css";
       link.rel = "stylesheet";
-      link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
-      link.id = "light-theme"
+      link.href = "{{ printf "%s" "/css/pride-theme.css" | relURL }}";
+      link.id = "pride-theme"
 
       head.prepend(link);
       if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage('light', '*');
+        iframe.contentWindow.postMessage('pride', '*');
       }
-      document.documentElement.classList.add('light-mode')
+      document.documentElement.classList.add('pride-mode')
     } 
 }
 

@@ -58,20 +58,37 @@ limitations under the License.
       e.stopPropagation();
     });
 
-    //Light/dark toggle
-    $("#toggle-light-dark-mode").click(function () {
+    // Light/dark toggle
+    // $("#toggle-light-dark-mode").click(function () {
+    //   var iframe = document.getElementById("auth-iframe");
+    //   if ($("html").hasClass("light-mode")) {
+    //     $("html").removeClass("light-mode");
+    //     document.getElementById("light-theme").remove();
+    //     localStorage.setItem("light-dark-mode-storage", "dark");
+    //     if (iframe && iframe.contentWindow) {
+    //       iframe.contentWindow.postMessage("dark", "*");
+    //     }
+    //   } else {
+    //     $("html").addClass("light-mode");
+    //     changeTheme("light");
+    //     localStorage.setItem("light-dark-mode-storage", "light");
+    //   }
+    // });
+
+    //Pride toggle
+    $("#toggle-pride-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
-      if ($("html").hasClass("light-mode")) {
-        $("html").removeClass("light-mode");
-        document.getElementById("light-theme").remove();
+      if ($("html").hasClass("pride-mode")) {
+        $("html").removeClass("pride-mode");
+        document.getElementById("pride-theme").remove();
         localStorage.setItem("light-dark-mode-storage", "dark");
         if (iframe && iframe.contentWindow) {
           iframe.contentWindow.postMessage("dark", "*");
         }
       } else {
-        $("html").addClass("light-mode");
-        changeTheme("light");
-        localStorage.setItem("light-dark-mode-storage", "light");
+        $("html").addClass("pride-mode");
+        changeTheme("pride");
+        localStorage.setItem("light-dark-mode-storage", "pride");
       }
     });
 

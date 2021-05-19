@@ -398,36 +398,14 @@ footer {
 }
 
 #toggle-light-dark-mode {
-  background: $dark;
+  background: none !important;
   border-radius: 50px;
   display: inline-block;
   padding: 1px 3px;
   text-align: right;
-  width: 37px;
-  font-size: 0.8rem;
   cursor: pointer;
-  span {
-    transform: translateX(-14px);
-    display: block;
-    -webkit-transition: transform 0.2s ease-in-out;
-    &:before {
-      color: $gray-900;
-      background: white;
-      border-radius: 50%;
-      border: 2px solid white;
-      content: "\f186";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-    }
-  }
 }
 
-body.light-mode #toggle-light-dark-mode span {
-  transform: translateX(0);
-  &:before {
-    content: "\f185";
-  }
-}
 
 .newsletter .hidden {
   display: none;
