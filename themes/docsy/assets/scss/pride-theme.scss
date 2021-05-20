@@ -2,6 +2,7 @@ html  {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite;
+  cursor: url(https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/charizard.png), auto !important;
 
   body,
   .td-outer,
@@ -11,6 +12,7 @@ html  {
   .bg-gray-dark:not(footer),
   .td-home {
     background-color: transparent !important;
+
     p {
       color: white !important;
     }
@@ -18,28 +20,70 @@ html  {
   .person .card,
   .video-description,
   #search-nav,
-  footer,
   nav.navbar {
     background: #17242C !important;
   }
 }
-.td-home .topic > p > a:hover {
+
+.pride-mode footer.bg-gray-dark {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
-	background-size: 500% 500%;
-	animation: gradient 3.5s ease infinite;
+	background-size: 500% 150%;
+	animation: gradient 7s ease infinite 1s;
 }
 
-.gradient-edge-left {
-  background: -moz-linear-gradient(90, #EC7700, #7932A9, #0091DA, #78BE20) !important;
-  background: -webkit-linear-gradient(90deg, #EC7700, #7932A9, #0091DA, #78BE20) !important;
-  background: -ms-linear-gradient(90deg, #EC7700, #7932A9, #0091DA, #78BE20) !important;
-  height: 200%;
-  transition: top .2s;
-  position: absolute;
-  width: 4px;
-  top: -100%;
-  left: 0;
-  bottom: 0;
+body p a,
+a.h4 {
+  color: #17242C !important;
+  &:hover {
+    color: white !important;
+  }
+}
+.tvc-link {
+  color: white !important;
+}
+.container.border-bottom {
+  border-bottom: 0px !important;
+}
+.topic a,
+.linked-box,
+.featured-section .featured-link,
+.td-home .topic > p > a {
+  border: 0px !important;
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 3.5s ease infinite;
+  }
+}
+#hero {
+  background-image: none !important;
+}
+.topic .text-left,
+.linked-box .link {
+  color: white !important;
+}
+.gradient-edge-left,
+.gradient-edge-top {
+  display: none !important;
+}
+.td-topic .linked-box,
+.blog-index-list .item {
+  border: 0px !important;
+  background-color: #17242C !important;
+}
+.filters .filter {
+  color: white !important;
+}
+footer a {
+  color: white !important;
+}
+.btn {
+  background-color: #17242C !important;
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 1s linear infinite;
+  }
 }
 
 @keyframes gradient {
