@@ -1,6 +1,6 @@
 ---
 title: "Data Science with Python & JupyterHub on Kubernetes - Part 1"
-featured: true
+featured: false
 weight: 3
 description: >
     Setting up JupyterHub on Kubernetes

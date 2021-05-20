@@ -818,7 +818,6 @@ KMS
 Knative
 knative
 Knative-serving
-knative-serving
 Knative-Serving
 KNN
 KoFu
@@ -826,6 +825,7 @@ kotlin
 Kousen
 Kpack
 kpack(-hosted)?
+kpack(.|-hosted)?
 Kravitz
 krf
 Krisp
@@ -1129,6 +1129,7 @@ PersistentVolumeClaim|persistentvolumeclaim(s)?
 petclinc
 PetClinic
 Petclinic
+[Pp]et[Cc]linic
 Petstore
 php-apache
 Pichler
