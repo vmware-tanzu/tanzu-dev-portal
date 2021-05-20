@@ -819,6 +819,7 @@ Knative
 knative
 Knative-serving
 Knative-Serving
+knative-serving
 KNN
 KoFu
 kotlin
@@ -1126,10 +1127,10 @@ per-namespace
 Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
+[Pp]et[Cc]linic
 petclinc
 PetClinic
 Petclinic
-[Pp]et[Cc]linic
 Petstore
 php-apache
 Pichler
