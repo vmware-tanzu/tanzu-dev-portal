@@ -176,7 +176,9 @@ BucketRegionDetails
 BucketRegions
 Bugsville
 buildout
+BuildPack
 [Bb]uildpack(s|'s|ages)?
+BuildPacks
 Bundler
 [Bb]urstable
 Buschmann
@@ -458,6 +460,7 @@ entriesInVM
 entriesOnlyOnDisk
 EntryEventImpl
 EntryEventImpl's
+enum
 EnumInfo
 Enums
 env
@@ -583,7 +586,9 @@ GIDS
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
 GitLabCI
+Gitops
 GitOps(-type)?
+Gitrepo
 GKE
 Glênio
 Glithero
@@ -777,6 +782,8 @@ judgement
 Julien
 jumpstart
 Junio
+junit
+Junit
 JUnit
 Jupyter(Hub|Lab)?
 JVM's
@@ -809,11 +816,16 @@ kitesurfing
 KMS
 (KMS|kms)-plugin(s)?
 Knative
+knative
+Knative-serving
+Knative-Serving
 knative-serving
 KNN
 KoFu
 kotlin
 Kousen
+Kpack
+kpack(-hosted)?
 kpack(.|-hosted)?
 Kravitz
 krf
@@ -912,6 +924,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
+matchers
 matchings
 maxUtilization
 Mayers
@@ -1115,6 +1128,9 @@ Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 [Pp]et[Cc]linic
+petclinc
+PetClinic
+Petclinic
 Petstore
 php-apache
 Pichler
@@ -1276,12 +1292,14 @@ rootPassword
 Rosso
 [Rr]outable
 Route53
+RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
 RSA
 RSocket(-based)?
 Ruckle
 Rudd
+Rumans
 runnable
 runtimes?
 Rushton
