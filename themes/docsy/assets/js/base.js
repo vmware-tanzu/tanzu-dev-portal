@@ -90,11 +90,15 @@ limitations under the License.
         document.getElementById("light-theme").remove();
         $("html").addClass("pride-mode");
         changeTheme("pride");
+        $('body').append('<iframe id="pride-playlist" src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
       }
       else {
         $("html").addClass("pride-mode");
-        changeTheme("pride")      }
+        changeTheme("pride")      
+        $('body').append('<iframe id="pride-playlist" src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+      }
     });
+
 
     //Light toggle
     $("#toggle-light-mode").click(function () {
@@ -447,6 +451,11 @@ limitations under the License.
   });
 }(jQuery));
 
+$( document ).ready(function() {
+  if ($('html').hasClass('pride-mode')) {
+    $('body').append('<iframe id="pride-playlist" src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+  }
+});
 
 //Mouse trails
 
