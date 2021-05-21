@@ -115,6 +115,7 @@ limitations under the License.
         $("html").addClass("light-mode");
         document.getElementById("pride-theme").remove();
         changeTheme("light");
+        $( "#pride-playlist" ).remove();
       }
       else {
         $("html").addClass("light-mode");
@@ -134,7 +135,7 @@ limitations under the License.
       if(hasPride) {
         document.getElementById("pride-theme").remove();
         $("html").removeClass("pride-mode");
-
+        $( "#pride-playlist" ).remove();
       }
       if(hasLight) {
         document.getElementById("light-theme").remove();
