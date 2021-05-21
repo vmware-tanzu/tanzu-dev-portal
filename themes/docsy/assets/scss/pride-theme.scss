@@ -4,6 +4,7 @@ html  {
 	animation: gradient 7s ease infinite;
   cursor: url(developer/images/global/cursor.svg), auto;
 
+  .td-sidebar,
   body,
   .td-outer,
   .td-box--gray-dark,
@@ -23,7 +24,9 @@ html  {
     background: #17242C !important;
   }
 }
-
+#TableOfContents a {
+  color: #17242C !important;
+}
 .icon {
   filter: grayscale(100%) brightness(150%);
 }
