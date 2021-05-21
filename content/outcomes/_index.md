@@ -14,4 +14,8 @@ menu:
     main:
         parent: "sections"
         weight: 2
+aliases: 
+    - "/patterns"
+    - "/patterns/api"
+    - "/patterns/eventing"
 ---

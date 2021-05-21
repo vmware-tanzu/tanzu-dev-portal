@@ -7,6 +7,7 @@ description: |
   Here we discus various tools and techniques that can be used to ensure
   that the state of your application can be quickly understood, no matter
   how complex it may be.
+aliases: ["/patterns/observability/"]
 ---
 
 ## Key Concepts
