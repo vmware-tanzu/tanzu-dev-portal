@@ -10,7 +10,7 @@ html  {
   .td-box--gray-dark,
   section,
   .td-main,
-  .bg-gray-dark:not(footer):not(.card),
+  .bg-gray-dark:not(footer):not(.card):not(.linked-box),
   .td-home {
     background-color: transparent !important;
 
@@ -37,11 +37,44 @@ html  {
 .td-topic .icon-title .icon {
   filter: invert(100%) grayscale(100%) brightness(300%);
 }
+#advocates-index .section-index .item {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 150%;
+  &:nth-child(1) {
+    animation: gradient 2.5s ease infinite 1.25s;  
+  }
+  &:nth-child(2) {
+    animation: gradient 2.5s ease infinite 1.5s;  
+  }
+  &:nth-child(3) {
+    animation: gradient 2.5s ease infinite 1.75s;  
+  }
+  &:nth-child(4) {
+    animation: gradient 2.5s ease infinite 2s;  
+  }
+  &:nth-child(5) {
+    animation: gradient 2.5s ease infinite 2.25s;  
+  }
+  &:nth-child(6) {
+    animation: gradient 2.5s ease infinite 2.5s;  
+  }
+  &:nth-child(7) {
+    animation: gradient 2.5s ease infinite 2.75s;  
+  }
+  &:nth-child(8) {
+    animation: gradient 2.5s ease infinite 3s;  
+  }
+
+  .border {
+    border: 0px !important;
+  }
+}
 .pride-mode footer.bg-gray-dark {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
+
 .team-member h3 a,
 .shows a,
 body p a,
@@ -51,8 +84,13 @@ a.h4 {
     color: white !important;
   }
 }
+
+#advocates-index .team-member h2 a,
 .tvc-link {
   color: white !important;
+}
+.mt-6.border-top {
+  border-top: 0px !important;
 }
 .container.border-bottom {
   border-bottom: 0px !important;

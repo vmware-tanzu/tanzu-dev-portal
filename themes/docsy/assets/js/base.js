@@ -458,7 +458,7 @@ $( document ).ready(function() {
   }
 });
 
-//Mouse trails
+// Mouse trails
 
 
 // var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
