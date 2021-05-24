@@ -27,12 +27,15 @@ html  {
 #TableOfContents a {
   color: #17242C !important;
 }
+
+.td-term.td-topic .icon-md,
+.row.td-box.td-box--dark.td-box--gradient.td-box--height-auto .icon,
 #advocates-index .icon,
 .icon-gift,
 .blog #hero .icon,
 .icon:not(.mr-3):not(.mr-4),
 .td-topic .icon-title .icon {
-  filter: grayscale(100%) brightness(1000%);
+  filter: invert(100%) grayscale(100%) brightness(300%);
 }
 .pride-mode footer.bg-gray-dark {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
