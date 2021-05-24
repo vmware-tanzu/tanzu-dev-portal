@@ -442,6 +442,7 @@ ECR
 EE
 EFK
 EFS
+eg.
 egoless
 EKS
 ElasticSearch
