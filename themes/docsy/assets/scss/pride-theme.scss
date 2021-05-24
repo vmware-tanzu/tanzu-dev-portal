@@ -13,7 +13,7 @@ html  {
   .bg-gray-dark:not(footer):not(.card):not(.linked-box),
   .td-home {
     background-color: transparent !important;
-
+    li,
     p {
       color: white !important;
     }
@@ -24,6 +24,7 @@ html  {
     background: #17242C !important;
   }
 }
+.filters li.active:before,
 #TableOfContents a {
   color: #17242C !important;
 }
