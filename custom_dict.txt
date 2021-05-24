@@ -512,6 +512,7 @@ FQDN
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
+Frontstage
 Fu
 fullnameOverride
 functionExecutionCalls
