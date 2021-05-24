@@ -10,7 +10,7 @@ html  {
   .td-box--gray-dark,
   section,
   .td-main,
-  .bg-gray-dark:not(footer),
+  .bg-gray-dark:not(footer):not(.card),
   .td-home {
     background-color: transparent !important;
 
@@ -18,7 +18,7 @@ html  {
       color: white !important;
     }
   }
-  .person .card,
+  // .person .card,
   #search-nav,
   nav.navbar {
     background: #17242C !important;
@@ -27,15 +27,19 @@ html  {
 #TableOfContents a {
   color: #17242C !important;
 }
-.icon {
-  filter: grayscale(100%) brightness(150%);
+#advocates-index .icon,
+.icon-gift,
+.blog #hero .icon,
+.icon:not(.mr-3):not(.mr-4),
+.td-topic .icon-title .icon {
+  filter: grayscale(100%) brightness(1000%);
 }
-
 .pride-mode footer.bg-gray-dark {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
+.team-member h3 a,
 .shows a,
 body p a,
 a.h4 {
@@ -60,6 +64,10 @@ a.h4 {
     background-color: #17242C;
   }
 }
+#team-index .person .card .h4 a {
+  color: white !important;
+}
+#team-index .person .card,
 .topic a,
 .linked-box,
 .featured-section .featured-link,
@@ -78,6 +86,8 @@ a.h4 {
 .linked-box .link {
   color: white !important;
 }
+.container-fluid hr,
+.short-gradient-line,
 .gradient-edge-left,
 .gradient-edge-top {
   display: none !important;
