@@ -1,6 +1,6 @@
 ---
 title: Detecting Abnormal Behavior with Tanzu Observability
-weight: 2
+weight: 99
 layout: single
 team:
   - Howard Yoo

@@ -750,6 +750,7 @@ jchen21
 JDBC
 jdbcUrl
 [SJ]DK
+JDK's
 Jernigan
 JetBrains
 Jetstack
@@ -1072,6 +1073,7 @@ OpenShift
 OpenSource
 OpenSSL
 OpenStack
+OpenTelemetry
 OpenTracing
 operationalized
 oplog
