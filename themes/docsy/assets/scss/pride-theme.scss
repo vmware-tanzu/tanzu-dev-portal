@@ -2,7 +2,7 @@ html  {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite;
-  cursor: url(https://i.imgur.com/jOksMQN.png), auto;
+  cursor: url({{ "/images/pride/cursor.svg" | relURL }}), auto;
 
   .td-sidebar,
   body,
@@ -155,10 +155,18 @@ footer a {
 }
 #pride-playlist {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   overflow: hidden;
-  height: 80px;
+  height: 90px;
+  width: 500px;
+
+  iframe {
+    height: 80px;
+  }
+  img {
+    height: 60px;
+  }
 }
 
 @keyframes gradient {
