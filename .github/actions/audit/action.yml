@@ -1,0 +1,5 @@
+name: run-audit
+description: runs the audit script
+runs:
+  using: "docker"
+  image: "Dockerfile"
