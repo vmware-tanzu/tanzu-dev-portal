@@ -59,6 +59,7 @@ Anchore
 Ango
 Anneliese
 [Aa]nomol(y|ies)
+Ansari
 Ansible
 anthonyjvetter
 antifragility
@@ -1593,6 +1594,7 @@ VirtualBox
 virtualhost
 virtualized
 VirtualService
+visualise
 VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?
