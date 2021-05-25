@@ -442,6 +442,7 @@ ECR
 EE
 EFK
 EFS
+eg.
 egoless
 EKS
 ElasticSearch
@@ -511,6 +512,7 @@ FQDN
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
+Frontstage
 Fu
 fullnameOverride
 functionExecutionCalls
@@ -543,6 +545,7 @@ GatewaySenders
 GatewaySenderStatistics
 GatewaysSender
 Gaubert
+GBP
 GC(E|L|P|R|S)?
 Geesaman
 Gemfiles
@@ -599,6 +602,7 @@ GmbH
 GoDaddy
 [Gg]olang
 Google('s)?
+goReflect
 Görkem
 gotchas
 Gothelf
@@ -746,6 +750,7 @@ jchen21
 JDBC
 jdbcUrl
 [SJ]DK
+JDK's
 Jernigan
 JetBrains
 Jetstack
@@ -1004,6 +1009,7 @@ Nana
 [Nn]ano
 Natively
 natively
+Neatro
 Nenad
 Neo4j
 Nesterov
@@ -1067,6 +1073,7 @@ OpenShift
 OpenSource
 OpenSSL
 OpenStack
+OpenTelemetry
 OpenTracing
 operationalized
 oplog
@@ -1097,6 +1104,7 @@ Packer
 PagerDuty
 Paketo
 Palo
+Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
 ParallelGatewaySenderQueueEntrySizer
 parallelize
@@ -1237,6 +1245,7 @@ Recommender
 [Rr]eddit
 [rR]edis
 RedMonk('s)?
+Reetro
 refactorings?
 RegExMethodAuthorizer
 RegionEntries
@@ -1273,6 +1282,7 @@ ResourceQuota(s)?
 restaging
 RestAssured
 RestrictedMethodAuthorizer
+Retrium
 revertibility
 RFC[0-9]{4}
 RHEL
@@ -1322,6 +1332,7 @@ Savla
 scaffolded
 [Ss]calable
 scaledown(s)?
+ScatterSpoke
 SCDF('s)?
 schema(s)?
 Schimanski
@@ -1456,6 +1467,7 @@ Tatooine
 TBD
 TCP
 tdp-guide
+TeamRetro
 TechRepublic
 Tekton('s)?
 telco(s)*
@@ -1551,6 +1563,7 @@ UR[IL](s)?
 urandom
 url
 URL(s)?
+USD
 UX
 [Vv][123]
 Vaadin
