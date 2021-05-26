@@ -1,25 +1,19 @@
 ---
 draft: false
 date: 2021-05-05T10:40:17-06:00
-tags: ["spring","testing", "spring security"]
-title: "Spring Route Authorization Testing"
+tags: ['spring', 'testing', 'spring security']
+title: 'Spring Route Authorization Testing'
 description: >
-    Dynamic testing of your Spring Security route authorizations
-date: "2021-05-12"
+  Dynamic testing of your Spring Security route authorizations
 topics:
-- Spring
-tags:
-- Spring
-- Spring Security
-- Spring Testing
-# Author(s)
-team: 
-- Toby Rumans
+  - Spring
+team:
+  - Toby Rumans
 ---
 
-Spring Security enables us to lock down routes in applications to particular roles. 
+Spring Security enables us to lock down routes in applications to particular roles.
 
-Testing route authorizations are often manual processes, that are prone to human error and often have complicated setup. 
+Testing route authorizations are often manual processes, that are prone to human error and often have complicated setup.
 
 The following are dynamic tests that ensure your route authorization configuration is up-to-date, and has 100 percent coverage.
 
@@ -143,9 +137,9 @@ internal class WebSecurityConfigTest {
 
 To ensure all the routes are tested for every role in your system, we'll use a combination of the `RequestMappingHandlerMapping` object from Spring Web and a few `@TestFactory` tests.
 
-To start, let's put our auth Roles into an enum for typed goodness (you can also do this with strings). 
+To start, let's put our auth Roles into an enum for typed goodness (you can also do this with strings).
 
-In our application code we have: 
+In our application code we have:
 
 ```kotlin
 enum class Role {
@@ -194,7 +188,7 @@ data class RouteAuthSpec(
 }
 ```
 
-Sanitizing the route allows us to configure our RouteAuthSpecs with the exact URL we'd use in our controllers. 
+Sanitizing the route allows us to configure our RouteAuthSpecs with the exact URL we'd use in our controllers.
 
 Since we are only looking for access when sanitizing the route, parameters, including successful response codes that we pass, do not matter.
 
@@ -213,7 +207,7 @@ internal class WebSecurityConfigTest {
 
 ### Solution - Kotlin - All Routes
 
-The first thing to enforce is make sure we have a `RouteAuthSpec` for every route in our application. To do this, use `RequestMappingHandlerMapping` to pull all registered routes out of the app, and to look at differences. 
+The first thing to enforce is make sure we have a `RouteAuthSpec` for every route in our application. To do this, use `RequestMappingHandlerMapping` to pull all registered routes out of the app, and to look at differences.
 
 The following is an example of the class after adding this test:
 
@@ -253,6 +247,7 @@ internal class WebSecurityConfigTest {
     }
 }
 ```
+
 `allRoutes` registers all methods and routes by comparing them to the list of routes from `routeAuthSpecs`, (except for Spring's default `/error` page).
 
 Now, we'll have a test failure if we ever add an application route without adding a corresponding `RouteAuthSpec`. We also will get a failure if we remove a route from our app without removing the relevant `RouteAuthSpec`.
@@ -290,7 +285,7 @@ Next, we'll want to ensure every unauthenticated route is behaving properly:
     }
 ```
 
-We use `@TestFactory` here so we get an individual pass or failure for every route in our system. 
+We use `@TestFactory` here so we get an individual pass or failure for every route in our system.
 
 ### Solution - Kotlin - Authenticated Routes
 
@@ -540,9 +535,9 @@ class Access {
 - Your hand will get sore from all the high fives.
 
 ## Further reading
+
 - [Dynamic tests in Junit 5](https://www.baeldung.com/junit5-dynamic-tests)
 
 ## Example Repository
 
 <https://github.com/tobocop/spring-route-authorization-testing>
-
