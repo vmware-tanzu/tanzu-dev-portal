@@ -514,37 +514,6 @@ if ($('html').hasClass('pride-mode')) {
   // }
   
   // (ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
-
-  // function animate(){
-  
-  //   o=(ns||n6)?window.pageYOffset:0;
-  
-  //   if (ie)con.style.top=document.body.scrollTop + 'px';
-  
-  //   for (i = 0; i < n; i++){
-  
-  //     var temp1 = eval(d+a+"dots"+i+n6r+s);
-  
-  //     randcolours = colours[Math.floor(Math.random()*colours.length)];
-  
-  //     (ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
-  
-  //     if (i < n-1){
-  
-  //       var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
-  //       temp1.top = parseInt(temp2.top) + 'px';
-  //       temp1.left = parseInt(temp2.left) + 'px';
-  
-  //     } 
-  //     else{
-  
-  //       temp1.top = y+o + 'px';
-  //       temp1.left = x + 'px';
-  //     }
-  //   }
-  
-  //   setTimeout("animate()",10);
-  // }
   
   // function animate(){
 
