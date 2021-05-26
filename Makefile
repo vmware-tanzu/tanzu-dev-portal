@@ -68,5 +68,6 @@ practice.%:
 
 #audit: @ runs a content audit on all guides and blogs. example: make audit
 audit:
-	cd .github/audit/src && bundle install
-	ruby github/audit/src/audit/audit.rb -s . -o audit.csv -t tags.csv --topics topics.csv --errors errors.csv
+	cd .github/actions/audit/src && bundle install
+	mkdir audit
+	ruby .github/actions/audit/src/audit.rb -s . -o audit/audit.csv -t audit/tags.csv --topics audit/topics.csv --errors audit/errors.csv

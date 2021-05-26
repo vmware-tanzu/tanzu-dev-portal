@@ -9,10 +9,6 @@ RUN apk add --update \
   make \
   libc-dev
 
-COPY src/Gemfile ./
-
-RUN bundle install
-
 LABEL "name"="Generate Audit Report"
 LABEL "maintainer"="John Harris"
 LABEL "version"="0.0.1"
@@ -22,4 +18,6 @@ LABEL "com.github.actions.description"="Generate Audit Report"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="green"
 
-CMD ["ruby", "./.github/actions/audit/src/audit.rb", "--source", ".", "--output", "audit-output.csv"]
+COPY entrypoint.sh /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
