@@ -1,5 +1,5 @@
 <div class="td-content">
-	<h1><img class='icon icon-md mb-3 d-block d-lg-inline-block mr-4' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon ".svg" | relURL }}' />{{ .Title }}</h1>
+	<h1><img class='icon icon-md mb-3 d-block d-lg-inline-block mr-4 pride-mode-hide' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon ".svg" | relURL }}' /><img class='icon icon-md mb-3 d-block d-lg-inline-block mr-4 pride-mode-only' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon "-pride.svg" | relURL }}' />{{ .Title }}</h1>
 	<!--{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
 	<!--{{ .Content }}-->
 	<div class="lead">{{ .Content }}</div>
