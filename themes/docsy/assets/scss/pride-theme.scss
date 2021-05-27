@@ -29,8 +29,7 @@ html  {
   color: #17242C !important;
 }
 
-.td-term.td-topic .icon-md,
-.row.td-box.td-box--dark.td-box--gradient.td-box--height-auto .icon,
+
 #advocates-index .icon,
 .icon-gift,
 .blog #hero .icon,
@@ -75,10 +74,12 @@ html  {
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
-
+.td-sidebar-link.td-sidebar-link__page,
+.td-sidebar-link.td-sidebar-link__subsection,
 .team-member h3 a,
 .shows a,
 body p a,
+h5 a,
 a.h4 {
   color: #17242C !important;
   &:hover {
@@ -169,6 +170,10 @@ footer a {
     padding-left: 11px;
   }
 }
+.td-home object {
+  height: 50px;
+  width: 50px;
+}
 
 @keyframes gradient {
 	0% {
@@ -181,5 +186,18 @@ footer a {
 		background-position: 0% 50%;
 	}
 }
+.td-home .topic a {
+  display: flex;
+  align-items: center;
+  svg {
+    height: 50px;
+    width: 50px;
+  }
+  rect {
+    fill: white !important;
+  }
+  path {
+    stroke: #17242C !important;
+  }
+}
 
-//Mouse trails
