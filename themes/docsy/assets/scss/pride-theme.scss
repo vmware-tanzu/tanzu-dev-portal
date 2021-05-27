@@ -186,18 +186,9 @@ footer a {
 		background-position: 0% 50%;
 	}
 }
-.td-home .topic a {
-  display: flex;
-  align-items: center;
-  svg {
-    height: 50px;
-    width: 50px;
-  }
-  rect {
-    fill: white !important;
-  }
-  path {
-    stroke: #17242C !important;
-  }
+.pride-mode-only {
+  display: inline !important;
 }
-
+.pride-mode-hide {
+  display: none !important;
+}
