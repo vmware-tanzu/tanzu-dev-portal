@@ -14,7 +14,7 @@ A popular feature of container registry is the ability to automatically scan con
 
 ## Policy Enforcement
 
-Being the central point for gathering and distributing container images, the container registry has a lot of say in _who_ can push or pull an image. Every major container registry -- public or private -- supports requiring the user to be authenticated to interact with it. As such, the registry can then manage a list of actions an user (or group of users) can perform. For example, suppose we create a group called "developers" and they have access to an image that contains a collections of services that the require to perform their job. We can configure the registry to allow them to pull down the image to their laptop, but prevent them from pushing up new versions of the container. 
+Being the central point for gathering and distributing container images, the container registry has a lot of say in _who_ can push or pull an image. Every major container registry -- public or private -- supports requiring the user to be authenticated to interact with it. As such, the registry can then manage a list of actions the user (or group of users) can perform. For example, suppose we create a group called "developers" and they have access to an image that contains a collections of services that the require to perform their job. We can configure the registry to allow them to pull down the image to their laptop, but prevent them from pushing up new versions of the container. 
 
 The all contributes to one of the most fundamental ideas of security: the principal of least privilege. That is, the user should have access to only the actions and resources that they absolutely require.
 
