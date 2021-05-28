@@ -54,7 +54,7 @@ Starting in a terminal
 
 &nbsp;
 
-1. Within your org, create a space or navigate to the space that will hold your Tanzu Gemfire service instance.
+1. Within your org, create a space or navigate to the space that will hold your Tanzu GemFire service instance.
 
 &nbsp;
 
@@ -193,13 +193,13 @@ Type `exit` to quit GFSH.
 
 ### 6. Edit the `manifest.yaml` File
 
-* Navigate to the project root directory directory. 
+* Navigate to the project root directory. 
 * Open the `manifest.yml file`. 
 * Replace `PCC-TLS` with the name of your Tanzu GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
 
 ### 7. Push your application to TAS
 
-* In a terminal, navigate to the project root directory directory.
+* In a terminal, navigate to the project root directory.
 * Push the application to your TAS environment using `cf push`
 
 The `cf push` operation will bind the *Book Service* app to the Tanzu GemFire service instance named in your `manifest.yaml` file  and then start the app.

@@ -107,7 +107,7 @@ To run the `Book Service` example, you must download and install the Tanzu GemFi
 
 * Go to the [Tanzu GemFire](https://network.pivotal.io/products/p-cloudcache/) product page.
 * In the "Releases" drop down, find and select the NodeJS-Client.
-* Click on the file icon to download the tar file (.tgz.).
+* Click on the file icon to download the tar file (.tgz).
 * Once downloaded, copy it to your `Book Service` project directory. Do not untar the tar file -- the npm command installs the Node.js API directly from the compressed .tgz archive.
  
  ### 3. Install the Tanzu GemFire Node.js Client
