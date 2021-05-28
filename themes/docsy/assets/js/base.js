@@ -58,47 +58,37 @@ limitations under the License.
       e.stopPropagation();
     });
 
-    // Light/dark toggle
-    // $("#toggle-light-dark-mode").click(function () {
-    //   var iframe = document.getElementById("auth-iframe");
-    //   if ($("html").hasClass("light-mode")) {
-    //     $("html").removeClass("light-mode");
-    //     document.getElementById("light-theme").remove();
-    //     localStorage.setItem("light-dark-mode-storage", "dark");
-    //     if (iframe && iframe.contentWindow) {
-    //       iframe.contentWindow.postMessage("dark", "*");
-    //     }
-    //   } else {
-    //     $("html").addClass("light-mode");
-    //     changeTheme("light");
-    //     localStorage.setItem("light-dark-mode-storage", "light");
-    //   }
-    // });
+    function testMode(currentMode) {
+      if (currentMode == "light") {
+        if ($('html').hasClass('pride-mode')) {
+          triggerGlitter();
+        }
+      }
+      else if(currentMode == "dark") {
+        if ($('html').hasClass('pride-mode')) {
+          triggerGlitter();
+        }
+      }
+    }
 
     //Pride toggle
     $("#toggle-pride-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "pride");
       var iframe = document.getElementById("auth-iframe");
-
-      if ($("html").hasClass("pride-mode")) {
-        // if (iframe && iframe.contentWindow) {
-        //   iframe.contentWindow.postMessage("dark", "*");
-        // }
-        // makeGlitter();
-      }
-      else if ($("html").hasClass("light-mode")) {
+      
+      if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
         document.getElementById("light-theme").remove();
         $("html").addClass("pride-mode");
         changeTheme("pride");
         $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><img src="/developer/images/pride/playlist-lockup.svg"><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
-        // makeGlitter();
+        testMode("light");
       }
       else {
         $("html").addClass("pride-mode");
+        testMode("dark");
         changeTheme("pride")      
         $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><img src="/developer/images/pride/playlist-lockup.svg"><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
-        // makeGlitter();
       }
     });
 
@@ -107,6 +97,7 @@ limitations under the License.
     $("#toggle-light-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
+      $(".sparkleItem").remove();
 
       if ($("html").hasClass("light-mode")) {
         // if (iframe && iframe.contentWindow) {
@@ -125,8 +116,10 @@ limitations under the License.
         changeTheme("light");
       }
     });
+
     $("#toggle-dark-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
+      $(".sparkleItem").remove();
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
       }
@@ -349,7 +342,6 @@ limitations under the License.
             "page category": pageCategory,
             "url path": window.location.pathname,
           });
-          //console.log(scrollDepth);
         }
       }
     });
@@ -392,9 +384,7 @@ limitations under the License.
               "url path": window.location.pathname,
             });
           }
-          //console.log(percentageCompleted);
         }
-        //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
       }
       if ($("body.workshop-live").length > 0) {
         var pageTitle = document.title.substring(
@@ -455,8 +445,44 @@ limitations under the License.
   });
 }(jQuery));
 
-function glitter () {
-  console.log('Glitter time!');
+function animate(n,y,x,n6,ns,ie,d,a,n6r,s){
+  if ($('html').hasClass('pride-mode')) return;
+  o=(ns||n6)?window.pageYOffset:0;
+
+  if (ie)con.style.top=document.body.scrollTop + 'px';
+
+  for (i = 0; i < n; i++){
+
+    var temp1 = eval(d+a+"dots"+i+n6r+s);
+
+    randcolours = colours[Math.floor(Math.random()*colours.length)];
+
+    (ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
+
+    if (i < n-1){
+
+      var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
+      temp1.top = parseInt(temp2.top) + 'px';
+      temp1.left = parseInt(temp2.left) + 'px';
+
+    } 
+    else{
+
+      temp1.top = y+o + 'px';
+      temp1.left = x + 'px';
+    }
+  }
+
+  setTimeout(function() {
+    if ($('html').hasClass('pride-mode')){
+      animate();
+    }
+    else {
+      return;
+    } 
+  },10);
+}
+
   var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
   var sparkles=100;// increase of decrease for number of sparkles falling
 
@@ -512,40 +538,10 @@ function glitter () {
   
   (ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
   
-  function animate(){
 
-    o=(ns||n6)?window.pageYOffset:0;
-
-    if (ie)con.style.top=document.body.scrollTop + 'px';
-
-    for (i = 0; i < n; i++){
-
-      var temp1 = eval(d+a+"dots"+i+n6r+s);
-
-      randcolours = colours[Math.floor(Math.random()*colours.length)];
-
-      (ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
-
-      if (i < n-1){
-
-        var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
-        temp1.top = parseInt(temp2.top) + 'px';
-        temp1.left = parseInt(temp2.left) + 'px';
-
-      } 
-      else{
-
-        temp1.top = y+o + 'px';
-        temp1.left = x + 'px';
-      }
-    }
-
-    setTimeout("animate()",10);
-  }
-
-  animate();
+  animate(n,y,x,n6,ns,ie,d,a,n6r,s);
   
-  window.onload=function() { if (document.getElementById) {
+  function triggerGlitter() {
     var i, rats, rlef, rdow;
     for (var i=0; i<sparkles; i++) {
       var rats=createDiv(3, 3);
@@ -570,10 +566,18 @@ function glitter () {
     }
     set_width();
     sparkle();
+  }
+  window.onload=function() { if (document.getElementById) {
+    if ($('html').hasClass('pride-mode')) {
+      console.log("Trigger glit");
+      triggerGlitter();
+    }
   }}
   
   function sparkle() {
+    console.log("SPARKLE");
     var c;
+    // if ($('html').hasClass('pride-mode')) return;
     if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
       ox=x;
       oy=y;
@@ -591,7 +595,16 @@ function glitter () {
       if (starv[c]) update_star(c);
       if (tinyv[c]) update_tiny(c);
     }
-    setTimeout("sparkle()", 40);
+
+    setTimeout(function() {
+      if ($('html').hasClass('pride-mode')){
+        console.log("Animating");
+        sparkle();
+      }
+      else {
+        return;
+      } 
+    },40);
   }
   
   function update_star(i) {
@@ -701,6 +714,7 @@ function glitter () {
   
   function createDiv(height, width) {
     var div=document.createElement("div");
+    div.classList.add("sparkleItem");
     div.style.position="absolute";
     div.style.height=height+"px";
     div.style.width=width+"px";
@@ -716,22 +730,8 @@ function glitter () {
     c.sort(function(){return (0.5 - Math.random());});
     return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
   }
-}
 
 if ($('html').hasClass('pride-mode')) {
   $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/3gQmA7tBCtnnPuYo63ZTti?si=7bba183fccbe49b8"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
 }
 
-// window.onload=function() {
-// 	// Get the Object by ID
-// 	var a = document.querySelector("object");
-//   console.log(a);
-// 	// Get the SVG document inside the Object tag
-// 	var svgDoc = a.contentDocument;
-//   console.log(svgDoc);
-// 	// Get one of the SVG items by ID;
-// 	var svgItem = svgDoc.querySelector("object #spring-rect");
-//   console.log(svgItem);
-// 	// Set the colour to something else
-// 	svgItem.setAttribute("fill", "lime");
-// };

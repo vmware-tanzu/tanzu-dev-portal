@@ -11,6 +11,9 @@ body {
     margin: 0 0 10px;
   }
 }
+nav {
+  z-index: 1000 !important;
+}
 
 .bg-gray-dark {
   background-color: $gray-800;
