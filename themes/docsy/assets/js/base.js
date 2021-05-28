@@ -719,7 +719,7 @@ function glitter () {
 }
 
 if ($('html').hasClass('pride-mode')) {
-  $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><img src="/developer/images/pride/playlist-lockup.svg"><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+  $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/3gQmA7tBCtnnPuYo63ZTti?si=7bba183fccbe49b8"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
 }
 
 // window.onload=function() {
