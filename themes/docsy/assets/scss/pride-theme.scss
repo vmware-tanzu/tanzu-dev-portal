@@ -173,6 +173,14 @@ footer a {
     height: 60px;
     padding-left: 11px;
   }
+  @media(max-width:520px) {
+    flex-direction: column;
+    height: 150px;
+    width: 300px;
+    img {
+      padding-top: 10px;
+    }
+  }
 }
 .td-home object {
   height: 50px;
