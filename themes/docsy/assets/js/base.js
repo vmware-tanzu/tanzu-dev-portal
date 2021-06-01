@@ -554,8 +554,8 @@ function animate(n,y,x,n6,ns,ie,d,a,n6r,s){
       rats.style.backgroundColor="transparent";
       rats.style.visibility="hidden";
       rats.style.zIndex="999";
-      var rlef=createDiv(1, 5);
-      var rdow=createDiv(5, 1);
+      var rlef=createDiv(1, 2);
+      var rdow=createDiv(2, 1);
       rats.appendChild(rlef);
       rats.appendChild(rdow);
       rlef.style.top="2px";
