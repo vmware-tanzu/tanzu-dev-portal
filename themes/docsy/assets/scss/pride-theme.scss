@@ -2,7 +2,6 @@ html  {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite;
-  cursor: url({{ "/images/pride/cursor.svg" | relURL }}), auto;
 
   .td-sidebar,
   body,
@@ -24,6 +23,12 @@ html  {
     background: #17242C !important;
   }
 }
+.practices i {
+  color: white !important;
+}
+.practices .steps ol > li:before {
+  background: #17242C !important;
+}
 .filters li.active:before,
 #TableOfContents a {
   color: #17242C !important;
@@ -31,7 +36,15 @@ html  {
 nav .nav-item:last-child {
   background-color: transparent !important;
   .nav-select {
-    left: 65px !important;
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      display: block;
+    }
   }
   i {
     color: white !important;
@@ -82,6 +95,8 @@ nav .nav-item:last-child {
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
+#TableOfContents a,
+.practices a,
 main ul a,
 footer i,
 .guide main li a,

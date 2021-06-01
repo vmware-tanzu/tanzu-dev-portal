@@ -26,8 +26,20 @@ nav {
     position: absolute;
     border-radius: 5px;
     top: 5px;
-    left: 5px;
     z-index: 0;
+    
+    &:nth-child(1) {
+      left: 5px;
+    }
+    &:nth-child(2) {
+      left: 35px;
+      background-color: #1B2A32 !important;
+      display: none;
+    }
+    &:nth-child(3) {
+      left: 65px;
+      display: none;
+    }
   }
   i {
     color: white;

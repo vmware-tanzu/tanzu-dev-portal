@@ -75,20 +75,22 @@ limitations under the License.
     $("#toggle-pride-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "pride");
       var iframe = document.getElementById("auth-iframe");
-      
+      $("#light-select, #dark-select").hide();
+      $("#pride-select").show();
+
       if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
         document.getElementById("light-theme").remove();
         $("html").addClass("pride-mode");
         changeTheme("pride");
-        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><img src="/developer/images/pride/playlist-lockup.svg"><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
         testMode("light");
       }
       else {
         $("html").addClass("pride-mode");
         testMode("dark");
         changeTheme("pride")      
-        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><img src="/developer/images/pride/playlist-lockup.svg"><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
       }
     });
 
@@ -98,6 +100,8 @@ limitations under the License.
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
       $(".sparkleItem").remove();
+      $("#pride-select, #dark-select").hide();
+      $("#light-select").show();
 
       if ($("html").hasClass("light-mode")) {
         // if (iframe && iframe.contentWindow) {
@@ -119,6 +123,9 @@ limitations under the License.
 
     $("#toggle-dark-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
+      $("#light-select, #pride-select").hide();
+      $("#dark-select").show();
+
       $(".sparkleItem").remove();
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
@@ -732,6 +739,6 @@ function animate(n,y,x,n6,ns,ie,d,a,n6r,s){
   }
 
 if ($('html').hasClass('pride-mode')) {
-  $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/3gQmA7tBCtnnPuYo63ZTti?si=7bba183fccbe49b8"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/3gQmA7tBCtnnPuYo63ZTti" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+  $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
 }
 

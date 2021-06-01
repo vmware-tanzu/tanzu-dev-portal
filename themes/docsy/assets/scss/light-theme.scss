@@ -179,8 +179,16 @@ nav .nav-item:last-child {
   background-color: #ADBBC4 !important;
 
   .nav-select {
-    left: 35px !important;
-    background-color: #1B2A32 !important;
+    transition: opacity .2s;
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: block;
+    }
+    &:nth-child(3) {
+      display: none;
+    }
   }
 }
 #toggle-dark-mode i {
