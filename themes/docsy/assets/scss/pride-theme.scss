@@ -208,7 +208,9 @@ footer a {
   height: 50px;
   width: 50px;
 }
-
+#live-notify .btn {
+  background-color: white !important;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
