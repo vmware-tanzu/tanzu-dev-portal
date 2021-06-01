@@ -984,6 +984,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MSc
 msgpack(ed)?
 mTLS
 MTT(D|R)
