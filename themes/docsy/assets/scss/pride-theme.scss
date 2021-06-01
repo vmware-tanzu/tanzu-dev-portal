@@ -28,8 +28,15 @@ html  {
 #TableOfContents a {
   color: #17242C !important;
 }
-
-
+nav .nav-item:last-child {
+  background-color: transparent !important;
+  .nav-select {
+    left: 65px !important;
+  }
+  i {
+    color: white !important;
+  }
+}
 #advocates-index .icon,
 .icon-gift,
 .blog #hero .icon,

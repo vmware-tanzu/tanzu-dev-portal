@@ -13,6 +13,32 @@ body {
 }
 nav {
   z-index: 1000 !important;
+
+  .nav-item:last-child {
+    padding: 5px;
+    background-color: #1B2A32;
+    border-radius: 5px;
+  }
+  .nav-select {
+    transition: left .2s;
+    background-color: white;
+    height: 70%;
+    width: 26%;
+    position: absolute;
+    border-radius: 5px;
+    top: 5px;
+    left: 5px;
+    z-index: 0;
+  }
+  i {
+    color: white;
+  }
+  #toggle-dark-mode {
+    left: 2px;
+    i {
+      color: #1B2A32;
+    }
+  }
 }
 
 .bg-gray-dark {
