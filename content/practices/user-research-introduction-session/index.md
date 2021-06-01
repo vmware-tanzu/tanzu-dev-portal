@@ -36,7 +36,7 @@ miro_template_url: ""
    - Validation — is this solution valuable?
    - Usability — is this solution easy to use?
 
-   ![Research Workshop Types](/images/practices/research-workshop/research-types.jpg)
+   ![Research Workshop Types](/images/practices/user-research-introduction-session/research-types.jpg)
 
 1. Next, describe the main **roles** involved in research, writing each on the board:
    
@@ -80,18 +80,18 @@ miro_template_url: ""
    
 1. Share **biases** to be aware of and key **“dos”** and **“don’ts”** when conducting research by printing out or projecting this **Research Dos & Don'ts Guide** 
 
-  ***EDITOR NOTE: The above Research Dos & Don'ts Guide is an internal google doc. Please change, publish the doc, or find an alternative***
+   ***EDITOR NOTE: The above Research Dos & Don'ts Guide is an internal google doc. Please change, publish the doc, or find an alternative***
 
 1. Finally, spend the remaining time **role playing** to get a feel for what actual research will be like:
    
-   Option 1: Pair Role Play
+   **Option 1: Pair Role Play**
    - Break into pairs, giving each person a “Pause” card
    - Identify who will be playing each role (Interviewee, Interviewer)
    - Interviewer uses one of the team’s discussion guides to ask questions of Interviewee
    - Conduct the interview for 10 minutes, pausing whenever one of the pairs shows the “Pause” card to discuss specific feedback
    - Reflect on the experience using a plus/delta format
    
-   Option 2: Group Role Play
+   **Option 2: Group Role Play**
    - Identify who will be playing each role (Interviewee, Note-takers, Interviewer)
    - Interviewer uses one of the team’s discussion guides to ask questions of Interviewee while Note-takers take notes that, to the extent possible, mimic “real” notes
    - Conduct the interview for 10 minutes
@@ -117,9 +117,9 @@ None at the moment.
 None at the moment. 
 
 ## Real World Examples
-![Research Workshop Example 1](/images/practices/research-workshop/example-1.jpg)
+![Research Workshop Example 1](/images/practices/user-research-introduction-session/example-1.jpg)
 
-![Research Workshop Example 2](/images/practices/research-workshop/example-2.jpg)
+![Research Workshop Example 2](/images/practices/user-research-introduction-session/example-2.jpg)
 
 ## Recommended Reading
 [Lean UX](https://www.oreilly.com/library/view/lean-ux/9781449366834/) by Jeff Gothelf and Josh Seiden
