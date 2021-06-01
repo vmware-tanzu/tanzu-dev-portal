@@ -3,7 +3,7 @@ title: "Tanzu Developer Celebrates Its 1st Birthday with Some Great New Features
 weight: 1
 description: >
     What a year it's been! Let's take a look at what's changed in the last 12 months, including a new feature launching today!
-date: 2021-06-02
+date: 2021-06-01
 tags:
 - Development
 # Author(s)
