@@ -12,7 +12,7 @@
 .idea
 
 # Generated audit scripts
-scripts/audit/*.csv
+/audit
 
 # function config
 /netlify/functions/util/config.js
