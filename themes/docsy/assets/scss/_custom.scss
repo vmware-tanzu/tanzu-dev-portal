@@ -11,6 +11,46 @@ body {
     margin: 0 0 10px;
   }
 }
+nav {
+  z-index: 1000 !important;
+
+  .nav-item:last-child {
+    padding: 5px;
+    background-color: #1B2A32;
+    border-radius: 5px;
+  }
+  .nav-select {
+    background-color: white;
+    height: 70%;
+    width: 26%;
+    position: absolute;
+    border-radius: 5px;
+    top: 5px;
+    z-index: 0;
+    
+    &:nth-child(1) {
+      left: 5px;
+    }
+    &:nth-child(2) {
+      left: 35px;
+      background-color: #1B2A32 !important;
+      display: none;
+    }
+    &:nth-child(3) {
+      left: 65px;
+      display: none;
+    }
+  }
+  i {
+    color: white;
+  }
+  #toggle-dark-mode {
+    left: 2px;
+    i {
+      color: #1B2A32;
+    }
+  }
+}
 
 .bg-gray-dark {
   background-color: $gray-800;
@@ -357,7 +397,6 @@ a {
   background: transparent;
   color: #0f171c;
 }
-
 footer {
   min-height: auto;
   .copyright-legal-links {
@@ -397,36 +436,15 @@ footer {
   }
 }
 
-#toggle-light-dark-mode {
-  background: $dark;
+#toggle-dark-mode,
+#toggle-light-mode,
+#toggle-pride-mode {
+  background: none !important;
   border-radius: 50px;
   display: inline-block;
   padding: 1px 3px;
   text-align: right;
-  width: 37px;
-  font-size: 0.8rem;
   cursor: pointer;
-  span {
-    transform: translateX(-14px);
-    display: block;
-    -webkit-transition: transform 0.2s ease-in-out;
-    &:before {
-      color: $gray-900;
-      background: white;
-      border-radius: 50%;
-      border: 2px solid white;
-      content: "\f186";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-    }
-  }
-}
-
-body.light-mode #toggle-light-dark-mode span {
-  transform: translateX(0);
-  &:before {
-    content: "\f185";
-  }
 }
 
 .newsletter .hidden {
@@ -665,7 +683,7 @@ body.light-mode #toggle-light-dark-mode span {
     user-select: none;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    transition: top .2s, color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     z-index: 1;
     cursor: pointer;
@@ -1572,4 +1590,8 @@ code {
     list-style: none;
     display: block;
   }
+}
+
+.pride-mode-only {
+  display: none !important;
 }

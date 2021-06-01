@@ -94,7 +94,7 @@
             {{ range sort $pages "Params.episode" "desc" }}
                 {{ if eq .Parent $parent }}
                     <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
-                        <div class='col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
+                        <div class='hover-scale col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
                             <div class='thumbnail-gradient position-absolute'></div>
                             <img src="{{ .Params.episode_image | relURL }}" />
 
