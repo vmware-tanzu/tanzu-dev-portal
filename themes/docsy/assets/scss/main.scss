@@ -181,6 +181,24 @@ footer {
     }
 }
 
+#feedback-overlay {
+  position: fixed;
+  display: block;
+  width: 10%;
+  height: 5%;
+  right: 0%;
+  bottom: 10%;
+  background-color: rgba(0,0,0,1);
+  z-index: 0;
+}
+
+.feedback-overlay-content {
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  color: white;
+}
+
 @import "styles_project";
 @import "fancybox";
 @import "custom";
