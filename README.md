@@ -11,7 +11,7 @@ To install the latest version of `hugo` you can use `brew install hugo` if you a
 To build the site:
 
 ```
-git clone https://github.com/vmware-tanzu/tanzu-dev-portal
+git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal
 cd tanzu-dev-portal
 make preview
 ```
@@ -33,7 +33,7 @@ make: *** [Makefile:22: preview] Error 255
 
 > Note: requires Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
 
-1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
+1. Install [act](https://github.com/nektos/act/releases/tag/v0.2.20) (NOTE: Currently, the tests break on `act` > v0.2.20, be sure to install v0.2.20)
 2. Run `make test`
 
 #### Spell Check

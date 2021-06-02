@@ -1,6 +1,6 @@
 ---
 title: "Container Basics"
-featured: true
+featured: false
 weight: 2
 description: >
   Learn the basics of how to build container images and run them. We’ll be using the Docker tool.

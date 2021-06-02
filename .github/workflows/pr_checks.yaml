@@ -3,6 +3,10 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "**content**"
+      - "**layouts**"
+      - "**themes**"
   workflow_dispatch:
 jobs:
   spell-check:
@@ -28,25 +32,3 @@ jobs:
         env:
           HUGO_OPTIONS: "-b http://localhost:1313/developer" #"--buildDrafts"
           MUFFET_OPTIONS: "-e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
-  lighthouse-checks:
-    needs: broken-link-check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        if: ${{ !env.ACT }}
-      - uses: jakepartusch/wait-for-netlify-action@v1
-        name: wait_for_deploy_preview
-        if: ${{ !env.ACT }}
-        id: netlify
-        with:
-          site_name: tanzu-dev-portal
-      - uses: treosh/lighthouse-ci-action@v7
-        name: lighthouse
-        if: ${{ !env.ACT }}
-        env:
-          LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
-        with:
-          temporaryPublicStorage: true
-          configPath: ./lighthouserc.yml
-          urls: |
-            ${{ steps.netlify.outputs.url }}/developer/

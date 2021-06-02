@@ -5,5 +5,5 @@
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
   {{ $link := printf "%s/%s" "/topics" $link | relURL }}
-  {{ with $url_text }}<a class="py-3 px-4 mb-4 text-left h4 text-white" href="{{ $link }}"><img class='icon mr-3' src="{{ $icon_path | relURL }}"/> {{ $url_text }}</a>{{ end }}
+  {{ with $url_text }}<a class="py-3 px-4 mb-4 text-left h4 text-white" href="{{ $link }}"><img class="icon mr-3 pride-mode-hide" src="{{ $icon_path | relURL }}.svg"/><img class="icon mr-3 pride-mode-only" src="{{ $icon_path | relURL }}-pride.svg"/> {{ $url_text }}</a>{{ end }}
 </div>

@@ -42,17 +42,79 @@ with critical security patches, but change introduces risk. A strong
 observability culture is essential to manage this risk and make sense of these
 complex systems.
 
-When most people think of observability, they often immediately think of
-dashboards, metrics, and alerts. We think it’s important to take a step back and
-focus on a few key areas as you execute on your observability strategy.
+## The Three Pillars of Observability
 
-The first area of focus is identifying what to measure. The quality of the data
-you collect is significantly more important than the overall quantity. The best
-way to reason about a system’s availability is to identify a small set of
-Service Level Indicators (SLIs) that closely map to the user’s experience, and
-set appropriate Service Level Objectives (SLOs) for each of these indicators.
-Getting this part right ensures that any future alerts you build will be
-actionable and backed by data that clearly indicates the user-facing impact.
+When we say observability, we're often referring to one or more of:
+
+- logging
+- metrics
+- tracing
+
+### Logging
+
+It's easy to generate logs from your applications. In fact, it's so easy that
+one of the most common challenges when collecting and analyzing logs is that
+there is just way too much data to sift through. This is further complicated
+with the ephemeral nature of today's container-based workloads that can start or
+stop in a matter of moments, taking the local logs with them.
+
+In order for your logs to be of use, you need to ensure that they are collected
+and retained for an appropriate amount of time, easy to find, and easy to
+visualize. There are many ways to solve for these concerns, including logging
+services from cloud providers or application platforms as well as maintaining
+your own logging infrastructure. If you do need to stand up your own solution,
+there is a wide ecosystem of open-source technologies that can be used. For
+example, the "EFK stack" ([Elasticsearch](https://www.elastic.co),
+[Fluentd](https://www.fluentd.org), and
+[Kibana](https://www.elastic.co/kibana)) is a popular option.
+
+### Metrics
+
+Metrics allow you to measure the performance of your applications and
+infrastructure over time. In tools like [Prometheus](https://prometheus.io)
+and [Tanzu Observability](https://tanzu.vmware.com/observability), metrics
+are represented as _time series_ with a unique name and a series of labels
+or tags.
+
+Metrics often require less storage and processing resources than logs, since the
+resources required to collect a single time series are constant and do not scale
+with the utilization of the system. Additionally, since they are numerical and
+more structured it is easier to generate visualizations and alerts to understand
+the health of the system.
+
+### Tracing
+
+Many applications today are made up of several smaller services, and communicate
+with a variety of external dependencies. As a result, one request from a user's
+perspective may result in a series of separate requests to distinct services.
+Tracing is a technique that allows you to follow these related requests through
+the system, and is especially useful for identifying where performance problems
+lie.
+
+For many teams, tracing is the most difficult aspect to implement, as all of the
+various components of the system need to instrumented to propagate traces. There
+are a number of popular open source solutions in this space, including
+[Zipkin](https://zipkin.io) and [Jaeger](https://www.jaegertracing.io).
+Additionally,
+[VMware Tanzu Observability](https://tanzu.vmware.com/content/vmware-tanzu-observability-features/microservices-observability-with-distributed-tracing)
+supports any traces compatible with the
+[OpenTelemetry](https://tanzu.vmware.com/content/vmware-tanzu-observability-features/microservices-observability-with-distributed-tracing)
+framework.
+
+## Getting Started on your Observability Journey
+
+While it can be tempting to jump straight into the world of dashboards, metrics,
+and alerts, we think it’s important to take a step back and focus on a few key
+areas as you execute on your observability strategy.
+
+The first area of focus is identifying what to measure and how you'll measure
+it. The quality of the data you collect is significantly more important than the
+overall quantity. The best way to reason about a system’s availability is to
+identify a small set of Service Level Indicators (SLIs) that closely map to the
+user’s experience, and set appropriate Service Level Objectives (SLOs) for each
+of these indicators. Getting this part right ensures that any future alerts you
+build will be actionable and backed by data that clearly indicates the
+user-facing impact.
 
 Next, you’ll want to spend some time “refactoring” your alerting setup. Just
 like source code, alerting configuration has a tendency to become overly

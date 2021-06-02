@@ -175,6 +175,28 @@ footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
+nav .nav-item:last-child {
+  background-color: #ADBBC4 !important;
+
+  .nav-select {
+    transition: opacity .2s;
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: block;
+    }
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+#live-notify .btn {
+  background-color: white !important;
+}
+#toggle-dark-mode i {
+  color: white !important;
+}
 #menu-toggle .menu-bar {
    background: #1B2A32 !important;
 }

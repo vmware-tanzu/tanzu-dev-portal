@@ -1,7 +1,6 @@
 {{ define "outcomefinder" }}
 {{ if eq .context.Parent .context.FirstSection }}
 {{ .scratch.Set "outcome" .context }}
-{{ printf "SCRATCH %s" (.scratch.Get "outcome")}}
 {{ else }}
 {{ template "outcomefinder" (dict "context" .context.Parent "scratch" .scratch) }}
 {{ end }}

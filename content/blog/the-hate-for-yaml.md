@@ -1,6 +1,5 @@
 ---
 title: "The Hate for YAML: The Hammer or the Nail?"
-featured: true
 weight: 1
 description: >
     YAML gets a lot of hate, but is it more nuanced than that?
