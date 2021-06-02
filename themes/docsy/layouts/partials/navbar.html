@@ -52,8 +52,13 @@
 				</div>
 			</li>
 
-			<li class="nav-item ml-2 mb-0">
-        <a id="toggle-light-dark-mode"><span></span></a>
+			<li class="nav-item ml-2 mb-0 position-relative overflow-hidden">
+				<div id="dark-select" class="nav-select"></div>
+				<div id="light-select" class="nav-select"></div>
+				<div id="pride-select" class="nav-select"></div>
+				<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>
+				<a class="position-relative" id="toggle-light-mode"><i class="fas fa-sun mr-0"></i></a>
+				<a class="position-relative" id="toggle-pride-mode"><img class='mb-1' style='width:22px;height:22px' src='{{ "/images/pride/pride-button.svg" | relURL }}'></a>
 			</li>
 
 <!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}

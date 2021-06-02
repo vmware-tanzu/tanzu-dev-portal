@@ -19,7 +19,7 @@ pwd
 ls -a .github/actions
 
 echo "--> Run bundle install"
-cd .github/actions/audit/src && bundle install
+cd .github/actions/audit/src && bundle install && cd ../../../../
 
 echo "--> Run the audit"
 ruby ./.github/actions/audit/src/audit.rb --source . --output audit-output.csv
