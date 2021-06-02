@@ -37,6 +37,6 @@ As you may have noticed, there is something conspicuously absent from the site: 
 
 ## Thank You!
 
-It’s been such a pleasure to work on this content over the past year, and we’re encouraged each and every time we hear that someone got something useful out of it. The Tanzu Developer Center is an ever-growing project, and we can’t wait to see what the next year brings. We appreciate everyone who has visited us over these last 12 months, and if you’re new here, we encourage you to take a look around! We have _a lot_ planned and we’re so excited to bring new content and features to you!
+It’s been such a pleasure to work on this content over the past year, and we’re encouraged each and every time we hear that someone got something useful out of it. The Tanzu Developer Center is an ever-growing project with content constantly being added, and we can’t wait to see what the next year brings. We appreciate everyone who has visited us over these last 12 months, and if you’re new here, we encourage you to take a look around! We have _a lot_ planned and we’re so excited to bring new content and features to you!
 
 From [all of us who have written content for the site](/team), thank you!
