@@ -576,13 +576,11 @@ function animate(n,y,x,n6,ns,ie,d,a,n6r,s){
   }
   window.onload=function() { if (document.getElementById) {
     if ($('html').hasClass('pride-mode')) {
-      console.log("Trigger glit");
       triggerGlitter();
     }
   }}
   
   function sparkle() {
-    console.log("SPARKLE");
     var c;
     // if ($('html').hasClass('pride-mode')) return;
     if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
@@ -605,7 +603,6 @@ function animate(n,y,x,n6,ns,ie,d,a,n6r,s){
 
     setTimeout(function() {
       if ($('html').hasClass('pride-mode')){
-        console.log("Animating");
         sparkle();
       }
       else {
