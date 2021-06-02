@@ -10,6 +10,7 @@
 [0-9]*(GB|MB|KB|Mi|m|m?s|k)
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+.tgz
 1:1s
 12SwitchRestoresSansCheckOuts
 2x2
@@ -59,6 +60,7 @@ Anchore
 Ango
 Anneliese
 [Aa]nomol(y|ies)
+Ansari
 Ansible
 anthonyjvetter
 antifragility
@@ -155,6 +157,7 @@ Blazor
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
+BookService
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootrun
@@ -175,7 +178,10 @@ BucketRegion's
 BucketRegionDetails
 BucketRegions
 Bugsville
+buildout
+BuildPack
 [Bb]uildpack(s|'s|ages)?
+BuildPacks
 Bundler
 [Bb]urstable
 Buschmann
@@ -222,6 +228,7 @@ Chunyi
 ci
 CIDR(s)?
 CIO
+CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
@@ -438,6 +445,7 @@ ECR
 EE
 EFK
 EFS
+eg.
 egoless
 EKS
 ElasticSearch
@@ -456,6 +464,7 @@ entriesInVM
 entriesOnlyOnDisk
 EntryEventImpl
 EntryEventImpl's
+enum
 EnumInfo
 Enums
 env
@@ -506,6 +515,7 @@ FQDN
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
+Frontstage
 Fu
 fullnameOverride
 functionExecutionCalls
@@ -538,10 +548,12 @@ GatewaySenders
 GatewaySenderStatistics
 GatewaysSender
 Gaubert
+GBP
 GC(E|L|P|R|S)?
 Geesaman
 Gemfiles
 GemFire
+GemFire's
 Geneve
 geode-async-listener-spring-jpa
 geode-dunit
@@ -555,6 +567,7 @@ Georgiva
 geospatial
 Gereon
 Gerhard('s)?
+getAll
 getAllLocalPrimaryBucketRegions
 getAllMetrics
 GetAllMetricsFunction
@@ -581,7 +594,9 @@ GIDS
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
 GitLabCI
+Gitops
 GitOps(-type)?
+Gitrepo
 GKE
 Glênio
 Glithero
@@ -592,6 +607,7 @@ GmbH
 GoDaddy
 [Gg]olang
 Google('s)?
+goReflect
 Görkem
 gotchas
 Gothelf
@@ -672,6 +688,7 @@ IIS
 ImagePolicyWebhook
 img
 [Ii]mmeasurability
+IMmUjUjBzes
 implementors
 [Ii]ncompressible
 InfoQ
@@ -738,6 +755,7 @@ jchen21
 JDBC
 jdbcUrl
 [SJ]DK
+JDK's
 Jernigan
 JetBrains
 Jetstack
@@ -774,6 +792,8 @@ judgement
 Julien
 jumpstart
 Junio
+junit
+Junit
 JUnit
 Jupyter(Hub|Lab)?
 JVM's
@@ -806,11 +826,17 @@ kitesurfing
 KMS
 (KMS|kms)-plugin(s)?
 Knative
+knative
+Knative-serving
+Knative-Serving
+knative-serving
 KNN
 KoFu
 kotlin
 Kousen
+Kpack
 kpack(-hosted)?
+kpack(.|-hosted)?
 Kravitz
 krf
 Krisp
@@ -908,6 +934,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
+matchers
 matchings
 maxUtilization
 Mayers
@@ -957,6 +984,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MSc
 msgpack(ed)?
 mTLS
 MTT(D|R)
@@ -987,6 +1015,7 @@ Nana
 [Nn]ano
 Natively
 natively
+Neatro
 Nenad
 Neo4j
 Nesterov
@@ -1003,6 +1032,7 @@ NIST
 NLB(s)?
 no-brainer
 NODE_ENV
+NodeJS-Client
 NodePort
 nodeSelector
 (non-)?cacheable
@@ -1050,6 +1080,7 @@ OpenShift
 OpenSource
 OpenSSL
 OpenStack
+OpenTelemetry
 OpenTracing
 operationalized
 oplog
@@ -1080,6 +1111,7 @@ Packer
 PagerDuty
 Paketo
 Palo
+Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
 ParallelGatewaySenderQueueEntrySizer
 parallelize
@@ -1110,7 +1142,10 @@ per-namespace
 Percona
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
+[Pp]et[Cc]linic
+petclinc
 PetClinic
+Petclinic
 Petstore
 php-apache
 Pichler
@@ -1185,6 +1220,7 @@ PubSub
 Pulkit
 pullPolicy
 pushable
+putAll
 PuTTYgen
 PVC?s?
 PWAs
@@ -1206,6 +1242,7 @@ Rakuten
 RBAC(-enabled)?
 RDBMS
 reachability
+reactively
 [Rr]eadiness([Pp]robe)?
 README
 realtime
@@ -1216,6 +1253,7 @@ Recommender
 [Rr]eddit
 [rR]edis
 RedMonk('s)?
+Reetro
 refactorings?
 RegExMethodAuthorizer
 RegionEntries
@@ -1252,6 +1290,7 @@ ResourceQuota(s)?
 restaging
 RestAssured
 RestrictedMethodAuthorizer
+Retrium
 revertibility
 RFC[0-9]{4}
 RHEL
@@ -1271,12 +1310,14 @@ rootPassword
 Rosso
 [Rr]outable
 Route53
+RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
 RSA
 RSocket(-based)?
 Ruckle
 Rudd
+Rumans
 runnable
 runtimes?
 Rushton
@@ -1296,9 +1337,11 @@ Sanderson
 SAT(s)?
 Sathe
 Savla
+SBDG
 scaffolded
 [Ss]calable
 scaledown(s)?
+ScatterSpoke
 SCDF('s)?
 schema(s)?
 Schimanski
@@ -1432,6 +1475,8 @@ TaskRepository
 Tatooine
 TBD
 TCP
+tdp-guide
+TeamRetro
 TechRepublic
 Tekton('s)?
 telco(s)*
@@ -1482,6 +1527,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
+truststore
 TTL(s)?
 tunable
 Turanski
@@ -1513,6 +1559,7 @@ unschedulable
 unshared
 Unshared
 [Uu]nstaged
+untar
 untrusted
 untuned
 unvalidated
@@ -1527,6 +1574,7 @@ UR[IL](s)?
 urandom
 url
 URL(s)?
+USD
 UX
 [Vv][123]
 Vaadin
@@ -1536,6 +1584,7 @@ ValueComparator
 ValueComparer
 vault-kubernetes-authenticator
 Vavr
+VCAP
 vCenter
 VCS
 Velero('s)?
@@ -1556,6 +1605,7 @@ VirtualBox
 virtualhost
 virtualized
 VirtualService
+visualise
 VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?

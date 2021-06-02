@@ -1,0 +1,230 @@
+html  {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 150%;
+	animation: gradient 7s ease infinite;
+
+  .td-sidebar,
+  body,
+  .td-outer,
+  .td-box--gray-dark,
+  section,
+  .td-main,
+  .bg-gray-dark:not(footer):not(.card):not(.linked-box),
+  .td-home {
+    background-color: transparent !important;
+    li,
+    p {
+      color: white !important;
+    }
+  }
+  // .person .card,
+  #search-nav,
+  nav.navbar {
+    background: #17242C !important;
+  }
+}
+.practices i {
+  color: white !important;
+}
+.practices .steps ol > li:before {
+  background: #17242C !important;
+}
+.filters li.active:before,
+#TableOfContents a {
+  color: #17242C !important;
+}
+nav .nav-item:last-child {
+  background-color: transparent !important;
+  .nav-select {
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+  i {
+    color: white !important;
+  }
+}
+#advocates-index .icon,
+.icon-gift,
+.blog #hero .icon,
+.icon:not(.mr-3):not(.mr-4),
+.td-topic .icon-title .icon {
+  filter: invert(100%) grayscale(100%) brightness(300%);
+}
+.blog-index-list .item,
+#advocates-index .section-index .item {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 150%;
+  &:nth-child(1) {
+    animation: gradient 2.5s ease infinite 1.25s;  
+  }
+  &:nth-child(2n) {
+    animation: gradient 2.5s ease infinite 1.5s;  
+  }
+  &:nth-child(3n) {
+    animation: gradient 2.5s ease infinite 1.75s;  
+  }
+  &:nth-child(4n) {
+    animation: gradient 2.5s ease infinite 2s;  
+  }
+  &:nth-child(5n) {
+    animation: gradient 2.5s ease infinite 2.25s;  
+  }
+  &:nth-child(6n) {
+    animation: gradient 2.5s ease infinite 2.5s;  
+  }
+  &:nth-child(7n) {
+    animation: gradient 2.5s ease infinite 2.75s;  
+  }
+  &:nth-child(8n) {
+    animation: gradient 2.5s ease infinite 3s;  
+  }
+
+  .border {
+    border: 0px !important;
+  }
+}
+.pride-mode footer.bg-gray-dark {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+	background-size: 500% 150%;
+	animation: gradient 7s ease infinite 1s;
+}
+#TableOfContents a,
+.practices a,
+main ul a,
+footer i,
+.guide main li a,
+.blog .item a,
+.td-sidebar-link.td-sidebar-link__page,
+.td-sidebar-link.td-sidebar-link__subsection,
+.team-member h3 a,
+.shows a,
+body p a,
+h5 a,
+a.h4 {
+  color: #17242C !important;
+  &:hover {
+    color: white !important;
+  }
+}
+
+#advocates-index .team-member h2 a,
+.tvc-link {
+  color: white !important;
+}
+.mt-6.border-top {
+  border-top: 0px !important;
+}
+.container.border-bottom {
+  border-bottom: 0px !important;
+}
+.col-4-thumbnail {
+  &:hover .video-description {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 3.5s ease infinite;
+  }
+  .video-description {
+    background-color: #17242C;
+  }
+}
+#team-index .person .card .h4 a {
+  color: white !important;
+}
+#team-index .person .card,
+.topic a,
+.linked-box,
+.featured-section .featured-link,
+.td-home .topic > p > a {
+  border: 0px !important;
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 3.5s ease infinite;
+  }
+}
+#hero {
+  background-image: none !important;
+}
+.topic .text-left,
+.linked-box .link {
+  color: white !important;
+}
+.container-fluid hr,
+.short-gradient-line,
+.gradient-edge-left,
+.gradient-edge-top {
+  display: none !important;
+}
+.td-topic .linked-box {
+  border: 0px !important;
+  background-color: #17242C !important;
+}
+.filters .filter {
+  color: white !important;
+}
+footer a {
+  color: white !important;
+}
+.btn {
+  background-color: #17242C !important;
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 1s linear infinite;
+  }
+}
+#pride-playlist {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  overflow: hidden;
+  height: 90px;
+  width: 500px;
+
+  iframe {
+    height: 80px;
+  }
+  img {
+    height: 60px;
+    padding-left: 11px;
+  }
+  @media(max-width:520px) {
+    flex-direction: column;
+    height: 150px;
+    width: 300px;
+    img {
+      padding-top: 10px;
+    }
+  }
+}
+.td-home object {
+  height: 50px;
+  width: 50px;
+}
+#live-notify .btn {
+  background-color: white !important;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+img.pride-mode-only {
+  display: inline !important;
+}
+img.pride-mode-hide {
+  display: none !important;
+}
