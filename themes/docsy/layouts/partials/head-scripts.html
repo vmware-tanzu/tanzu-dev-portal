@@ -75,7 +75,8 @@ Sentry.init({
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
 changeTheme(savedTheme);
 function changeTheme(mode) {
-  sendAmplitudeEvent("toggled theme", "mode: " + mode); 
+  sendAmplitudeEvent("toggled theme", "mode: " + mode);
+  sendAmplitudeUserProps("last theme used: " + mode); 
   if (mode === "pride") {
     var iframe = document.getElementById('auth-iframe');
     var head = document.head;
