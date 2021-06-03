@@ -9,6 +9,7 @@ weight: 1
 layout: single
 team:
 - Craig Tracey
+aliases: ["/patterns/deployment"]
 ---
 
 ## Key Concepts

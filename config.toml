@@ -16,7 +16,6 @@ enableGitInfo = true
 
 [taxonomies]
 featured = "featured"
-pattern = "patterns"
 topic = "topics"
 tag = "tags"
 team = "team"
