@@ -74,8 +74,8 @@ Sentry.init({
 // localStorage.clear();
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
 changeTheme(savedTheme, true);
-sendAmplitudeUserProps({"latest saved theme": savedTheme}); 
 function changeTheme(mode, firstLoad) {
+  sendAmplitudeUserProps({"latest saved theme": mode}); 
   if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
   if (mode === "pride") {
     var iframe = document.getElementById('auth-iframe');
