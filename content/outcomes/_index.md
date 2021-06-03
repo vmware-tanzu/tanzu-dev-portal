@@ -1,5 +1,6 @@
 ---
 title: Outcome Architectures
+linkTitle: Outcomes
 description: |
     The successful adoption of technology is rooted in achieving outcomes. Whether
     these outcomes are focused on the internal needs of the business or for direct
@@ -9,4 +10,12 @@ description: |
     right for your business by way of a curated learning path. This content provides the 
     "Why?" in the form of strategy content, as well as the "How?" in the form of 
     practical and proven tactical references.
+menu:
+    main:
+        parent: "sections"
+        weight: 2
+aliases: 
+    - "/patterns"
+    - "/patterns/api"
+    - "/patterns/eventing"
 ---

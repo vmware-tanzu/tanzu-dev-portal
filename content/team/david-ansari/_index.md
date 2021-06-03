@@ -19,5 +19,9 @@ instagram: ""
 youtube: ""
 ---
 
+David is a software engineer at VMware developing RabbitMQ for Kubernetes.
+In the past, he worked for SAP contributing to Cloud Foundry.
+He graduated from University College London with a MSc in Networked Computer Systems.
+In this free time, he does road cycling.
 
 <!--more-->

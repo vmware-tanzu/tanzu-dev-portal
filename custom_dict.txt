@@ -10,6 +10,7 @@
 [0-9]*(GB|MB|KB|Mi|m|m?s|k)
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+.tgz
 1:1s
 12SwitchRestoresSansCheckOuts
 2x2
@@ -157,6 +158,7 @@ Blazor
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
+BookService
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootrun
@@ -290,6 +292,7 @@ CoreOS
 Corry
 CORS
 cortado
+Cosgrove
 Coté
 counterintuitive
 COVID-19
@@ -552,6 +555,7 @@ GC(E|L|P|R|S)?
 Geesaman
 Gemfiles
 GemFire
+GemFire's
 Geneve
 geode-async-listener-spring-jpa
 geode-dunit
@@ -565,6 +569,7 @@ Georgiva
 geospatial
 Gereon
 Gerhard('s)?
+getAll
 getAllLocalPrimaryBucketRegions
 getAllMetrics
 GetAllMetricsFunction
@@ -807,6 +812,7 @@ Kanban
 Kaniko
 [Kk]app(-controller|.)?
 Karavi
+Kat
 kata
 Katas
 KEK(s)?
@@ -981,6 +987,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MSc
 msgpack(ed)?
 mTLS
 MTT(D|R)
@@ -1028,6 +1035,7 @@ NIST
 NLB(s)?
 no-brainer
 NODE_ENV
+NodeJS-Client
 NodePort
 nodeSelector
 (non-)?cacheable
@@ -1215,6 +1223,7 @@ PubSub
 Pulkit
 pullPolicy
 pushable
+putAll
 PuTTYgen
 PVC?s?
 PWAs
@@ -1331,6 +1340,7 @@ Sanderson
 SAT(s)?
 Sathe
 Savla
+SBDG
 scaffolded
 [Ss]calable
 scaledown(s)?
@@ -1520,6 +1530,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
+truststore
 TTL(s)?
 tunable
 Turanski
@@ -1551,6 +1562,7 @@ unschedulable
 unshared
 Unshared
 [Uu]nstaged
+untar
 untrusted
 untuned
 unvalidated
@@ -1575,6 +1587,7 @@ ValueComparator
 ValueComparer
 vault-kubernetes-authenticator
 Vavr
+VCAP
 vCenter
 VCS
 Velero('s)?
