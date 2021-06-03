@@ -74,7 +74,7 @@ Sentry.init({
 // localStorage.clear();
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
 changeTheme(savedTheme, true);
-sendAmplitudeUserProps({"latest saved theme": mode}); 
+sendAmplitudeUserProps({"latest saved theme": savedTheme}); 
 function changeTheme(mode, firstLoad) {
   if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
   if (mode === "pride") {
