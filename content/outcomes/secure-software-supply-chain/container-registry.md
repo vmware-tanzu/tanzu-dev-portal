@@ -4,7 +4,7 @@ weight: 6
 layout: single
 ---
 
-A container registry provides a single place to store and retrieve your container images. At a minimum, a container registry will support the [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec), the API that both Docker and Kubernetes expect to be supported to pull container images. They may either be a publicly hosted such as [Docker Hub](https://hub.docker.com/) or [Google Container Registry](https://cloud.google.com/container-registry), or they may be hosted privately such as [VMware Harbor](https://goharbor.io/).
+A container registry provides a single place to store and retrieve your container images. At a minimum, a container registry will support the [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec), the API that both Docker and Kubernetes expect to be supported to pull container images. They may either be a publicly hosted such as [Docker Hub](https://hub.docker.com/) or [Google Container Registry](https://cloud.google.com/container-registry), or they may be hosted privately such as [Harbor](https://goharbor.io/).
 
 ## Automated Security Scans
 
@@ -14,11 +14,12 @@ A popular feature of container registry is the ability to automatically scan con
 
 ## Policy Enforcement
 
-Being the central point for gathering and distributing container images, the container registry has a lot of say in _who_ can push or pull an image. Every major container registry -- public or private -- supports requiring the user to be authenticated to interact with it. As such, the registry can then manage a list of actions the user (or group of users) can perform. For example, suppose we create a group called "developers" and they have access to an image that contains a collections of services that the require to perform their job. We can configure the registry to allow them to pull down the image to their laptop, but prevent them from pushing up new versions of the container. 
+Being the central point for gathering and distributing container images, the container registry has a lot of say in _who_ can push or pull an image. Every major container registry -- public or private -- supports requiring the user to be authenticated to interact with it. As such, the registry can then manage a list of actions the user (or group of users) can perform. For example, suppose we create a group called "developers" and they have access to an image that contains a collections of services that the require to perform their job. We can configure the registry to allow them to pull down the image to their workstation, but prevent them from pushing up new versions of the container. 
 
-The all contributes to one of the most fundamental ideas of security: the principal of least privilege. That is, the user should have access to only the actions and resources that they absolutely require.
+This all contributes to one of the most fundamental ideas of security: the principle of least privilege. That is, the user should have access to only the actions and resources that they absolutely require.
 
 Finally, if your pipeline relies on container images published or hosted by others, your own container registry can act as a proxy and a cache to those remote registries. For example, say a container that we're building relies on the `ubuntu:18.04` container as a base. By default, your pipeline can reach out to your container registry and ask for this image. If it already exists on your private registry, great! It gets pulled down just as it would normally. If it doesn't exist however, the registry can then proxy that request to Docker Hub where that container image lives, pull it down, and cache it in your private registry. Not only does this mean that deployments aren't relying on an external dependency, but it also allows you to ensure the version of a container image that you're using is exactly what you expect it to be.
+
 ## Using a Container Registry in an Air-Gapped Environment
 
 In an air-gapped environment, your delivery pipeline may have no access to the internet at all. The good news is, you can still use a private container registry just as you would a public one. You can push and pull to it, manage permissions, even scan for vulnerabilities. Of course new security definitions and updates must be done manually, but this also means that your delivery pipeline is physically separated from public networks and the internet, giving an additional layer of protection for your process. 
