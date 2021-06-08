@@ -1,8 +1,9 @@
 ---
-title: "Python Like A Pro: How to Install Python"
-linkTitle: "Installing Python"
-metaTitle: "How to Install Python"
-description: "Learn how to install different versions of Python at the same time and switch between them with ease using the open-source command line tool Pyenv."
+title: 'Python Like A Pro: How to Install Python'
+linkTitle: Installing Python
+metaTitle: How to Install Python
+description: Learn how to install different versions of Python at the same time and
+  switch between them with ease using the open-source command line tool Pyenv.
 topics:
 - Python
 tags:
@@ -12,6 +13,9 @@ patterns:
 - Deployment
 team:
 - Ben Wilcock
+oldPath: "/content/guides/python/gs-python-like-a-pro.md"
+aliases:
+- "/guides/python/gs-python-like-a-pro"
 ---
 ### Why do you need this guide?
 

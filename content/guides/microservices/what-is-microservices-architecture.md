@@ -1,7 +1,7 @@
 ---
-title: "What is Microservices Architecture?"
-linkTitle: "What are Microservices?"
-subsection: "What are Microservices?"
+title: What is Microservices Architecture?
+linkTitle: What are Microservices?
+subsection: What are Microservices?
 weight: 1
 topics:
 - Microservices
@@ -9,6 +9,9 @@ topics:
 tags:
 - Microservices
 - Spring
+oldPath: "/content/guides/microservices/what-is-microservices-architecture.md"
+aliases:
+- "/guides/microservices/what-is-microservices-architecture"
 ---
 
 Microservices are a modern architectural pattern for building an application. A microservices architecture breaks up the functions of an application into a set of small, discrete, decentralized, goal-oriented processes, each of which can be independently developed, tested, deployed, replaced, and scaled.

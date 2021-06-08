@@ -1,5 +1,5 @@
 ---
-title:  "Using Spring REST Docs"
+title: Using Spring REST Docs
 linkTitle: Spring REST Docs
 parent: Spring Boot
 weight: 4
@@ -10,6 +10,9 @@ tags:
 - Testing
 patterns:
 - API
+oldPath: "/content/guides/spring/spring-rest-docs.md"
+aliases:
+- "/guides/spring/spring-rest-docs"
 ---
 
 [Spring REST Docs](https://spring.io/projects/spring-restdocs#overview) provides a useful and always update-to-date way to document an application's RESTful services by combining hand-written documentation created with [Asciidoctor](https://asciidoctor.org) and auto-generated snippets created by [Spring MVC unit tests](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#unit-testing-spring-mvc). 

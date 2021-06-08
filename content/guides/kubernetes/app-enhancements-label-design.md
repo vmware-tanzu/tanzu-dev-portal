@@ -1,12 +1,15 @@
 ---
-title: "Label Best Practices"
-parent: "Application Enhancements"
+title: Label Best Practices
+parent: Application Enhancements
 topics:
 - Kubernetes
 tags:
 - Kubernetes
 team:
 - John Harris
+oldPath: "/content/guides/kubernetes/app-enhancements-label-design.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-label-design"
 ---
 
 Labels are a means for describing and identifying components that make up an

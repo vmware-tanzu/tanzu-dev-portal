@@ -1,10 +1,13 @@
 ---
-title: "Application Lifecycle"
-subsection: "Application Lifecycle"
+title: Application Lifecycle
+subsection: Application Lifecycle
 topics:
 - Kubernetes
 team:
 - John Harris
+oldPath: "/content/guides/kubernetes/app-lifecycle.md"
+aliases:
+- "/guides/kubernetes/app-lifecycle"
 ---
 
 The scripts and systems used in the CI/CD pipelines to deploy and update

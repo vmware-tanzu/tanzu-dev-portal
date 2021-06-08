@@ -1,12 +1,15 @@
 ---
-title: "Istio Reference Architecture"
-linkTitle: "Istio Reference Architecture"
-description: "A reference architecture for implementing the Istio Service Mesh"
-parent: "Service Routing"
+title: Istio Reference Architecture
+linkTitle: Istio Reference Architecture
+description: A reference architecture for implementing the Istio Service Mesh
+parent: Service Routing
 weight: 1600
 keywords:
 - Kubernetes
 - Istio
+oldPath: "/content/guides/kubernetes/service-routing-istio-refarch.md"
+aliases:
+- "/guides/kubernetes/service-routing-istio-refarch"
 ---
 
 ## Introduction

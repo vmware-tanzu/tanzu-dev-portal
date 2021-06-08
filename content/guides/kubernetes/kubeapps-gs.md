@@ -1,16 +1,20 @@
 ---
-title:  "Getting Started with Kubeapps"
-parent: "Packaging"
+title: Getting Started with Kubeapps
+parent: Packaging
 weight: 6
-description: Walk through the process of deploying Kubeapps for your cluster and installing an example application with this step-by-step Kubeapps guide. 
+description: Walk through the process of deploying Kubeapps for your cluster and installing
+  an example application with this step-by-step Kubeapps guide.
 topics:
 - Kubernetes
 tags:
 - Kubeapps
 patterns:
 - Deployment
-team: 
+team:
 - Tiffany Jernigan
+oldPath: "/content/guides/kubernetes/kubeapps-gs.md"
+aliases:
+- "/guides/kubernetes/kubeapps-gs"
 ---
 
 This guide will walk you through the process of deploying Kubeapps for your cluster and installing an example application.

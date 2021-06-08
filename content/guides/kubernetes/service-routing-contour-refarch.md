@@ -1,12 +1,15 @@
 ---
-title: "Contour Reference Architecture"
-linkTitle: "Contour Reference Architecture"
-description: "A reference architecture for implementing the Contour Service Mesh"
-parent: "Service Routing"
+title: Contour Reference Architecture
+linkTitle: Contour Reference Architecture
+description: A reference architecture for implementing the Contour Service Mesh
+parent: Service Routing
 weight: 1600
 keywords:
-  - Kubernetes
-  - Contour
+- Kubernetes
+- Contour
+oldPath: "/content/guides/kubernetes/service-routing-contour-refarch.md"
+aliases:
+- "/guides/kubernetes/service-routing-contour-refarch"
 ---
 
 This document details a reference architecture for running

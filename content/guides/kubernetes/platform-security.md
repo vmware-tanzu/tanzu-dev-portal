@@ -1,10 +1,13 @@
 ---
-title: "Platform Security"
-subsection: "Platform Security"
+title: Platform Security
+subsection: Platform Security
 topics:
-  - Kubernetes
+- Kubernetes
 team:
-  - Farid Saad
+- Farid Saad
+oldPath: "/content/guides/kubernetes/platform-security.md"
+aliases:
+- "/guides/kubernetes/platform-security"
 ---
 
 ## Overview

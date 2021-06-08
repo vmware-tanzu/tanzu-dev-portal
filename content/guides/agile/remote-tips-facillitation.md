@@ -1,13 +1,16 @@
 ---
-title:  "Remote Tips: Facilitation"
-linkTitle: "Facilitation"
-parent: "Remote Tips"
+title: 'Remote Tips: Facilitation'
+linkTitle: Facilitation
+parent: Remote Tips
 topics:
 - Agile
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
+oldPath: "/content/guides/agile/remote-tips-facillitation.md"
+aliases:
+- "/guides/agile/remote-tips-facillitation"
 ---
 
 ## Setting team working agreements and ground rules

@@ -1,11 +1,14 @@
 ---
-title: "Kubernetes Monitoring Checklist"
-linkTitle: "Kubernetes Monitoring Checklist"
-description: "A list of components that platform operators should monitor"
-parent: "Platform Observability"
+title: Kubernetes Monitoring Checklist
+linkTitle: Kubernetes Monitoring Checklist
+description: A list of components that platform operators should monitor
+parent: Platform Observability
 weight: 1600
 keywords:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/observability-k8s-monitoring-checklist.md"
+aliases:
+- "/guides/kubernetes/observability-k8s-monitoring-checklist"
 ---
 
 To run a Kubernetes platform effectively, cluster administrators need visibility

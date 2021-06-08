@@ -1,11 +1,14 @@
 ---
-title: "Configuring the Dex Identity Provider"
-linkTitle: "Configuring Dex"
-description: "Configuring the Dex identity provider."
-parent: "Identity and Access Control"
+title: Configuring the Dex Identity Provider
+linkTitle: Configuring Dex
+description: Configuring the Dex identity provider.
+parent: Identity and Access Control
 weight: 1600
 keywords:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/identity-dex.md"
+aliases:
+- "/guides/kubernetes/identity-dex"
 ---
 
 ## Motivation

@@ -1,9 +1,10 @@
 ---
-title: "Deploy a Custom Node.js Application using Bitnami Containers"
-linkTitle: "Node.js"
-parent: "Bitnami"
+title: Deploy a Custom Node.js Application using Bitnami Containers
+linkTitle: Node.js
+parent: Bitnami
 weight: 2
-description: Create, test, and publish a secure Docker image for a Node.js application using Bitnami.
+description: Create, test, and publish a secure Docker image for a Node.js application
+  using Bitnami.
 topics:
 - Containers
 - Kubernetes
@@ -14,6 +15,9 @@ tags:
 - Helm
 team:
 - Vikram Vaswani
+oldPath: "/content/guides/containers/deploy-custom-nodejs-app-bitnami-containers.md"
+aliases:
+- "/guides/containers/deploy-custom-nodejs-app-bitnami-containers"
 ---
 
 Developers like using containers for development because they are easy to use, portable, and require less maintenance overhead compared to bare metal or virtual machines. [Docker](https://www.docker.com/) is a popular choice, because it provides tools that make it simple for developers to build, run and publish applications in containers.

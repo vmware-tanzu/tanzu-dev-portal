@@ -7,8 +7,11 @@ tags:
 - Velero
 patterns:
 - Deployment
-team: 
+team:
 - Tiffany Jernigan
+oldPath: "/content/guides/kubernetes/velero-gs.md"
+aliases:
+- "/guides/kubernetes/velero-gs"
 ---
 
 What do you do if you lose state in your cluster, or something went very wrong

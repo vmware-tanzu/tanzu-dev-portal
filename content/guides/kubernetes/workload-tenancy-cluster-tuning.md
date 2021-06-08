@@ -1,11 +1,14 @@
 ---
-title: "Cluster Tuning Guide"
-linkTitle: "Cluster Tuning Guide"
-description: "A workflow for tuning Kubernetes clusters"
-parent: "Workload Tenancy"
+title: Cluster Tuning Guide
+linkTitle: Cluster Tuning Guide
+description: A workflow for tuning Kubernetes clusters
+parent: Workload Tenancy
 weight: 1800
 keywords:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/workload-tenancy-cluster-tuning.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy-cluster-tuning"
 ---
 
 ## Overview
