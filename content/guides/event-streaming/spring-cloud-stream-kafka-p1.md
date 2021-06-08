@@ -291,4 +291,4 @@ The complete running code for this tutorial is available in [Github](https://git
 
 
 ## What’s Next
-In the next tutorial ([Part 2](#)), I’ll show a real life example such as the PubSub module, multiple kafka topics and failover handling.
+In the next tutorial ([Part 2](#)), I’ll show a real life example such as the **PubSub** module, multiple kafka topics and failover handling.
