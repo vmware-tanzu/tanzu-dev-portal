@@ -2,7 +2,7 @@
 title:  "Spring Cloud Stream Kafka"
 linkTitle: "Spring Cloud Stream Kafka"
 subsection: "Spring Cloud Stream Kafka (Part 1)"
-description: A simple demonstration of how to implement your Java application with Kafka (SCS) with the least amount of code in your Spring Boot application.
+description: A simple demonstration of how to implement your Java application with Kafka (Spring Cloud Stream) with the least amount of code in your Spring Boot application.
 topics:
 - Spring
 - Microservices
