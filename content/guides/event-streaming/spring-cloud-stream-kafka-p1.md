@@ -53,7 +53,7 @@ This tutorial provides examples on how to enable the Apache Kafka binder with Sp
 
 The following diagram shows Spring Cloud Stream Kafka enabling Apache Kafka Binder on top of [https://spring.io/projects/spring-cloud-stream](https://spring.io/projects/spring-cloud-stream).
 
-![General Flow Diagram](https://raw.githubusercontent.com/ehsaniara/scs-kafka-intro/6604387604742fc43b9afa8ff71dc3288cdefae6/scs-099/material/kafka-events-intro-099-1.svg)
+![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-1.svg)
 
 ### Add a Dependency to the Project
 In this example, we add the following dependency to the project for spring-cloud-stream-binder-kafka (_Hoxton.SR11_). In later versions, the `@EnableBinding` feature will be _~~deprecated~~_ in favor of _Functional Programming_, which we will look into later.
@@ -162,6 +162,7 @@ Run the generated **jar** file in the `target` folder, Make sure you are in the 
 ```shell
 java -jar scs-099-0.0.1-SNAPSHOT.jar
 ```
+![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-2.svg)
 
 **Note:** _The application starts to listen on port 8080. The port cannot be occupied by any other app. If it is, try to pass the following parameter before `-jar` by adding `-Dserver.port=8081`._
 
@@ -239,7 +240,7 @@ There are **3 concurrent threads** to execute the consumer method. The partition
 
 As you see, by using Spring Cloud Stream this happened by  only adding a few lines.
 
-![General Flow Diagram](https://raw.githubusercontent.com/ehsaniara/scs-kafka-intro/6604387604742fc43b9afa8ff71dc3288cdefae6/scs-099/material/kafka-events-intro-099-4.svg)
+![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-4.svg)
 
 All messages have been consumed based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2sec (200ms  X 10 = 2000ms).
 
@@ -269,7 +270,7 @@ On `Terminal-3:` This app has only one consumer.
 java -Dspring.profiles.active=test2 -Dserver.port=8082 -jar scs-099-0.0.1-SNAPSHOT.jar
 ```
 
-![General Flow Diagram](https://raw.githubusercontent.com/ehsaniara/scs-kafka-intro/6604387604742fc43b9afa8ff71dc3288cdefae6/scs-099/material/kafka-events-intro-099-3.svg)
+![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-3.svg)
 
 **Note:** _To avoid having multiple producers, we just let only one app to create messages in the topic in the **producer** method by checking the (app port == 8080)_
 
