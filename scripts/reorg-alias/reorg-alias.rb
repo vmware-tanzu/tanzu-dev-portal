@@ -13,6 +13,11 @@ OptionParser.new do |opts|
     opts.on("-d", "--dryrun", "Path to write the raw results") do |d|
         options[:dry] = d
     end
+
+    opts.on("-m", "--move", "Move the files to a flat structure") do |d|
+        options[:dry] = d
+    end
+
 end.parse!
 
 # Gather the list of files to parse
@@ -27,11 +32,12 @@ contentPath.each do |f|
     newAliases = contentMetadata["aliases"].nil? ? [] : contentMetadata["aliases"]
     oldPath = "/content" + f.split("/content")[1]
     newAliases << oldPath.gsub("/content", "").gsub(".md", "")
+    newAliases = newAliases.uniq
     
     contentMetadata["oldPath"] = oldPath
     contentMetadata["aliases"] = newAliases
 
-    newPath = oldPath.gsub("/content", "")
+    newPath = oldPath.gsub("content", "")
     newFile = File.join(File.expand_path(File.join(File.dirname(f), "..")), File.basename(f))
 
     if options[:dry]
@@ -48,13 +54,19 @@ contentPath.each do |f|
     sContent = fData.split("---")
     frontMatter, articleContent = ""
 
+    frontMatter = YAML.dump(contentMetadata)
+
     if splitFirst
-        frontMatter = sContent[0]
         articleContent = sContent[1..]
     else
-        frontMatter = sContent[1]
-        articleContent = sContent[2..]
+        articleContent = sContent[2..].join("---")
     end
 
-    if options[:dry]
+    if not options[:dry]
+        outFile = f
+        puts "Writing to #{outFile} . . ."
+        File.open(outFile, "w") { |f|
+            f.write "#{frontMatter}---#{articleContent}"
+        }
+    end
 end
