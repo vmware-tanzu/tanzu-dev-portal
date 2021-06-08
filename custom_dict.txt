@@ -136,6 +136,7 @@ base64(-encoded)?
 BaseFunction
 batchesDistributed
 BatchScheduler
+Becki
 Beda('s)?
 beforeEnqueue
 beforeTransmit
@@ -879,6 +880,7 @@ labelset
 latencies
 Lazu
 LDAP
+[Ll]earnings
 lego
 letsencrypt-staging
 libnss-wrapper
@@ -982,7 +984,7 @@ Mkyong
 Mockito
 MockMvc
 [Mm]odelling
-modularity
+[Mm]odularity
 Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
@@ -1067,6 +1069,7 @@ OLGA_MACIASZEK
 [Oo]makase
 on-prem
 onboarded
+[Oo]nboarding
 OneMagnify
 onRegion
 onServer
