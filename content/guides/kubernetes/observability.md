@@ -1,13 +1,10 @@
 ---
-title: Platform Observability
-subsection: Platform Observability
+title: "Platform Observability"
+subsection: "Platform Observability"
 topics:
 - Kubernetes
 team:
 - Alexander Brand
-oldPath: "/content/guides/kubernetes/observability.md"
-aliases:
-- "/guides/kubernetes/observability"
 ---
 
 Observability is crucial for successfully operating a complex software system

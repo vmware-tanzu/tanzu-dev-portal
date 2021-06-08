@@ -1,8 +1,7 @@
 ---
-title: Getting Started with Concourse CI
-linkTitle: Concourse CI
-description: Install Concourse CI onto Kubernetes with VMware Tanzu as an automation
-  engine for cloud native CI/CD and build declarative pipelines to automate your workflows.
+title:  "Getting Started with Concourse CI"
+linkTitle: "Concourse CI"
+description: Install Concourse CI onto Kubernetes with VMware Tanzu as an automation engine for cloud native CI/CD and build declarative pipelines to automate your workflows.
 topics:
 - CI-CD
 tags:
@@ -12,9 +11,6 @@ patterns:
 - Deployment
 team:
 - Tony Vetter
-oldPath: "/content/guides/ci-cd/concourse-gs.md"
-aliases:
-- "/guides/ci-cd/concourse-gs"
 ---
 
 Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration (CI), Continuous Deployment (CD), Continuous Delivery (CD again), artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.

@@ -1,9 +1,8 @@
 ---
-title: Getting Started with Kafka
-linkTitle: Kafka
+title:  "Getting Started with Kafka"
+linkTitle: "Kafka"
 subsection: Kafka
-description: Leverage Apache Kafka, a distributed streaming platform built for storing
-  and processing streams of records, while focusing on performance.
+description: Leverage Apache Kafka, a distributed streaming platform built for storing and processing streams of records, while focusing on performance.
 topics:
 - Event Streaming
 - Messaging and Integration
@@ -14,9 +13,6 @@ patterns:
 - Eventing
 team:
 - Brian McClain
-oldPath: "/content/guides/messaging-and-integration/kafka-gs.md"
-aliases:
-- "/guides/messaging-and-integration/kafka-gs"
 ---
 
 ## What Is Kafka?

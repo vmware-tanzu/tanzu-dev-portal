@@ -1,9 +1,8 @@
 ---
-title: 'Python Like A Pro: Managing Global Packages'
-linkTitle: Managing Python Global Packages
-metaTitle: Managing Python Global Packages
-description: Learn how to isolate your global Python packages using PipX, a tool that
-  allows the installation of packages in an isolated environment.
+title: "Python Like A Pro: Managing Global Packages"
+linkTitle: "Managing Python Global Packages"
+metaTitle: "Managing Python Global Packages"
+description: "Learn how to isolate your global Python packages using PipX, a tool that allows the installation of packages in an isolated environment."
 topics:
 - Python
 tags:
@@ -13,9 +12,6 @@ patterns:
 - Deployment
 team:
 - Ben Wilcock
-oldPath: "/content/guides/python/gs-python-installing-global-packages.md"
-aliases:
-- "/guides/python/gs-python-installing-global-packages"
 ---
 
 ## Why You Need This Guide

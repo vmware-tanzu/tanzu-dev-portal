@@ -1,14 +1,11 @@
 ---
-title: Workload Identity
-linkTitle: Workload Identity
-description: Methods for providing workload identity in a Kubernetes cluster
-parent: Platform Security
+title: "Workload Identity"
+linkTitle: "Workload Identity"
+description: "Methods for providing workload identity in a Kubernetes cluster"
+parent: "Platform Security"
 weight: 5
 keywords:
 - Kubernetes
-oldPath: "/content/guides/kubernetes/platform-security-workload-identity.md"
-aliases:
-- "/guides/kubernetes/platform-security-workload-identity"
 ---
 
 This document details the philosophy and methods for providing workload identity

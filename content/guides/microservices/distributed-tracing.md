@@ -1,6 +1,6 @@
 ---
-title: Implementing Distributed Tracing
-linkTitle: Distributed Tracing
+title:  "Implementing Distributed Tracing"
+linkTitle: "Distributed Tracing"
 topics:
 - Spring
 - Microservices
@@ -8,12 +8,9 @@ tags:
 - Observability
 - Distributed Tracing
 - Zipkin
-- ".NET"
+- .NET
 patterns:
 - Observability
-oldPath: "/content/guides/microservices/distributed-tracing.md"
-aliases:
-- "/guides/microservices/distributed-tracing"
 ---
 
 When a request comes into a monolithic application, it's fairly easy to trace through what happened as a result of that request because everything is self-contained. However, when a request comes into a microservice (remember GUI apps can be microservices, they just render HTML instead of JSON), that request could result in a cascading chain of 10 other HTTP calls to various other services. You might also be interested in knowing when a particular service makes non-HTTP calls, such as to a database or a message queue.

@@ -1,16 +1,13 @@
 ---
-title: 'Remote Tips: Tools and Tips'
-linkTitle: Tools and Tips
-parent: Remote Tips
+title:  "Remote Tips: Tools and Tips"
+linkTitle: "Tools and Tips"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
-oldPath: "/content/guides/agile/remote-tips-tools-and-tips.md"
-aliases:
-- "/guides/agile/remote-tips-tools-and-tips"
 ---
 
 ## Agreeing on the tool stack

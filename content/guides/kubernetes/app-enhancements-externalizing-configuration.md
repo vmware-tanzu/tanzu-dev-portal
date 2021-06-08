@@ -1,15 +1,12 @@
 ---
-title: Externalizing Configuration
-parent: Application Enhancements
+title:  "Externalizing Configuration"
+parent: "Application Enhancements"
 topics:
 - Kubernetes
 tags:
 - Kubernetes
 team:
 - John Harris
-oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
-aliases:
-- "/guides/kubernetes/app-enhancements-externalizing-configuration"
 ---
 
 Application _configuration_ is anything that varies between environments. For

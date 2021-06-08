@@ -1,14 +1,11 @@
 ---
-title: Secret Management
-linkTitle: Secret Management
-description: Approaches and best practices for secret management in Kubernetes
-parent: Platform Security
+title: "Secret Management"
+linkTitle: "Secret Management"
+description: "Approaches and best practices for secret management in Kubernetes"
+parent: "Platform Security"
 weight: 3
 keywords:
-- Kubernetes
-oldPath: "/content/guides/kubernetes/platform-security-secret-management.md"
-aliases:
-- "/guides/kubernetes/platform-security-secret-management"
+  - Kubernetes
 ---
 
 This document details secret management and distribution for Kubernetes

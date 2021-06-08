@@ -1,13 +1,10 @@
 ---
-title: Container Networking
-subsection: Container Networking
+title: "Container Networking"
+subsection: "Container Networking"
 topics:
 - Kubernetes
 team:
 - Josh Rosso
-oldPath: "/content/guides/kubernetes/container-networking.md"
-aliases:
-- "/guides/kubernetes/container-networking"
 ---
 
 Kubernetes uses the [Container Network

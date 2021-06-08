@@ -1,6 +1,6 @@
 ---
-title: Microservices with Spring Cloud Kubernetes Reference Architecture
-parent: Application Enhancements
+title:  "Microservices with Spring Cloud Kubernetes Reference Architecture"
+parent: "Application Enhancements"
 topics:
 - Kubernetes
 tags:
@@ -10,9 +10,6 @@ tags:
 - Microservices
 team:
 - Andriy Kalashnykov
-oldPath: "/content/guides/kubernetes/app-enhancements-spring-k8s.md"
-aliases:
-- "/guides/kubernetes/app-enhancements-spring-k8s"
 ---
 
 This Reference Architecture demonstrates design, development, and deployment of

@@ -1,10 +1,9 @@
 ---
-title: Develop and Publish an ASP.NET Web Application using Bitnami Containers
-linkTitle: ASP.NET
-parent: Bitnami
+title: "Develop and Publish an ASP.NET Web Application using Bitnami Containers"
+linkTitle: "ASP.NET"
+parent: "Bitnami"
 weight: 1
-description: Create, test, and publish a secure Docker image for an ASP.NET Web application
-  using Bitnami.
+description: Create, test, and publish a secure Docker image for an ASP.NET Web application using Bitnami.
 date: 2020-09-03
 topics:
 - Containers
@@ -15,9 +14,6 @@ tags:
 - Helm
 team:
 - Vikram Vaswani
-oldPath: "/content/guides/containers/develop-aspnet-application-bitnami-containers.md"
-aliases:
-- "/guides/containers/develop-aspnet-application-bitnami-containers"
 ---
 
 [Docker](https://www.docker.com) containers have become increasingly popular amongst developers on account of their ease of use, consistency and portability. For .NET developers looking to develop and publish applications using containers, Bitnami offers a number of options:

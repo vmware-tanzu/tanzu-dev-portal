@@ -1,8 +1,7 @@
 ---
-title: Getting Started with Cloud Foundry for Kubernetes
-linkTitle: Cloud Foundry for Kubernetes
-description: Learn about the tools required to use Cloud Foundry on Kubernetes with
-  the CF-for-k8s platform to add a higher level of abstraction.
+title:  "Getting Started with Cloud Foundry for Kubernetes"
+linkTitle: "Cloud Foundry for Kubernetes"
+description: Learn about the tools required to use Cloud Foundry on Kubernetes with the CF-for-k8s platform to add a higher level of abstraction.
 weight: 4
 topics:
 - Kubernetes
@@ -14,9 +13,6 @@ patterns:
 - Deployment
 team:
 - Ivan Tarin
-oldPath: "/content/guides/kubernetes/cf4k8s-gs.md"
-aliases:
-- "/guides/kubernetes/cf4k8s-gs"
 ---
 
 > Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.

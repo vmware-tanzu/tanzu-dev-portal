@@ -1,21 +1,14 @@
 ---
 draft: false
-date: 2021-05-05 10:40:17.000000000 -06:00
-tags:
-- spring
-- testing
-- spring security
-title: Spring Route Authorization Testing
-description: 'Dynamic testing of your Spring Security route authorizations
-
-  '
+date: 2021-05-05T10:40:17-06:00
+tags: ['spring', 'testing', 'spring security']
+title: 'Spring Route Authorization Testing'
+description: >
+  Dynamic testing of your Spring Security route authorizations
 topics:
-- Spring
+  - Spring
 team:
-- Toby Rumans
-oldPath: "/content/guides/spring/spring-route-authorization-testing.md"
-aliases:
-- "/guides/spring/spring-route-authorization-testing"
+  - Toby Rumans
 ---
 
 Spring Security enables us to lock down routes in applications to particular roles.

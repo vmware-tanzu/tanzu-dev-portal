@@ -1,9 +1,7 @@
 ---
-title: Continuously Develop and Monitor an Express Application on Kubernetes with
-  Bitnami, Skaffold and Octant
-linkTitle: Skaffold and Octant
-description: Continuously develop, test, and monitor an Express app with Bitnami,
-  Skaffold and Octant
+title: "Continuously Develop and Monitor an Express Application on Kubernetes with Bitnami, Skaffold and Octant"
+linkTitle: "Skaffold and Octant"
+description: Continuously develop, test, and monitor an Express app with Bitnami, Skaffold and Octant
 date: 2020-01-30
 topics:
 - CI-CD
@@ -13,11 +11,8 @@ tags:
 - Octant
 - Skaffold
 - Kubernetes
-team:
+team: 
 - Vikram Vaswani
-oldPath: "/content/guides/ci-cd/express-app-bitnami-skaffold-octant.md"
-aliases:
-- "/guides/ci-cd/express-app-bitnami-skaffold-octant"
 ---
 
 As Kubernetes' importance as a platform grows, developers are increasingly searching for ways to build and debug cloud-native applications on Kubernetes infrastructure from the get-go. Rather than first hacking on code in local (or virtualized) environments and then migrating it to cloud-native architecture, this new approach involves continuously developing, debugging and deploying containerized applications on a live Kubernetes cluster.

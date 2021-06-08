@@ -1,7 +1,7 @@
 ---
-title: Spring Cloud Connectors and Datasources
-linkTitle: Spring Cloud Connectors and Datasources
-parent: Spring Cloud Connectors
+title:  "Spring Cloud Connectors and Datasources"
+linkTitle: "Spring Cloud Connectors and Datasources"
+parent: "Spring Cloud Connectors"
 topics:
 - Spring
 - Messaging and Integration
@@ -9,9 +9,6 @@ tags:
 - Spring Cloud Connectors
 patterns:
 - API
-oldPath: "/content/guides/spring/spring-cloud-connectors-datasources.md"
-aliases:
-- "/guides/spring/spring-cloud-connectors-datasources"
 ---
 
 [Spring Cloud Connectors](https://cloud.spring.io/spring-cloud-connectors/) simplifies the process of connecting Spring applications to services in cloud platforms. If you aren’t familiar with the project, you might want to refer to the guide [What Are Spring Cloud Connectors?](/guides/spring/spring-cloud-connectors).

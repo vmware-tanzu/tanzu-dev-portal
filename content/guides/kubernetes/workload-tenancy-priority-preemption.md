@@ -1,14 +1,11 @@
 ---
-title: Pod Priority and Preemption
-linkTitle: Pod Priority and Preemption
-description: Guidance on pod priority and preemption
-parent: Workload Tenancy
+title: "Pod Priority and Preemption"
+linkTitle: "Pod Priority and Preemption"
+description: "Guidance on pod priority and preemption"
+parent: "Workload Tenancy"
 weight: 2000
 keywords:
-- Kubernetes
-oldPath: "/content/guides/kubernetes/workload-tenancy-priority-preemption.md"
-aliases:
-- "/guides/kubernetes/workload-tenancy-priority-preemption"
+  - Kubernetes
 ---
 
 ## Overview

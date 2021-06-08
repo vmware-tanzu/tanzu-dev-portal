@@ -1,13 +1,10 @@
 ---
-title: Service Routing
-subsection: Service Routing
+title: "Service Routing"
+subsection: "Service Routing"
 topics:
 - Kubernetes
 team:
 - Craig Tracey
-oldPath: "/content/guides/kubernetes/service-routing.md"
-aliases:
-- "/guides/kubernetes/service-routing"
 ---
 
 Fundamental to the deployment of most software is the ability to route traffic

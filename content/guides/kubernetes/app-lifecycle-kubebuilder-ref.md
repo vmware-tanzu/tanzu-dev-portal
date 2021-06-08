@@ -1,6 +1,6 @@
 ---
-title: Kubebuilder Reference Architecture
-parent: Application Lifecycle
+title:  "Kubebuilder Reference Architecture"
+parent: "Application Lifecycle"
 draft: true
 topics:
 - Kubernetes
@@ -10,7 +10,4 @@ tags:
 - Operators
 team:
 - Rich Lander
-oldPath: "/content/guides/kubernetes/app-lifecycle-kubebuilder-ref.md"
-aliases:
-- "/guides/kubernetes/app-lifecycle-kubebuilder-ref"
 ---

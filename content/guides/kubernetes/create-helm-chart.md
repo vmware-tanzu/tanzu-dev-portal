@@ -1,8 +1,8 @@
 ---
-title: Creating Your First Helm Chart
-linkTitle: Creating a Helm Chart
+title: "Creating Your First Helm Chart"
+linkTitle: "Creating a Helm Chart"
 description: Create your first ever Helm chart and learn what goes inside these packages.
-parent: Packaging
+parent: "Packaging"
 weight: 3
 date: 2018-10-05
 topics:
@@ -14,9 +14,6 @@ patterns:
 - Deployment
 team:
 - Raquel Campuzano
-oldPath: "/content/guides/kubernetes/create-helm-chart.md"
-aliases:
-- "/guides/kubernetes/create-helm-chart"
 ---
 
 So, you've got your [Kubernetes cluster up and running](https://docs.bitnami.com/kubernetes/get-started-kubernetes/) and [set up Helm v3.x](https://docs.bitnami.com/kubernetes/get-started-kubernetes/#step-4-install-helm), but how do you run your applications on it? This guide walks you through the process of creating your first ever chart, explaining what goes inside these packages and the tools you use to develop them. By the end of it you should have an understanding of the advantages of using Helm to deliver your own applications to your cluster.

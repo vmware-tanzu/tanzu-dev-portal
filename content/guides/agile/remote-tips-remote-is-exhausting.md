@@ -1,16 +1,13 @@
 ---
-title: 'Remote Tips: Remote is Exhausting'
-linkTitle: Remote is Exhausting
-parent: Remote Tips
+title:  "Remote Tips: Remote is Exhausting"
+linkTitle:  "Remote is Exhausting"
+parent: "Remote Tips"
 topics:
 - Agile
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
-oldPath: "/content/guides/agile/remote-tips-remote-is-exhausting.md"
-aliases:
-- "/guides/agile/remote-tips-remote-is-exhausting"
 ---
 
 ## Creating the right working environment

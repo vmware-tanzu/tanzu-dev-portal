@@ -1,14 +1,11 @@
 ---
-title: Showback Reference Architecture
-linkTitle: Showback Reference Architecture
-description: Considerations for showback in large Kubernetes environments
+title: "Showback Reference Architecture"
+linkTitle: "Showback Reference Architecture"
+description: "Considerations for showback in large Kubernetes environments"
 weight: 2000
-parent: Platform Observability
+parent: "Platform Observability"
 keywords:
-- Kubernetes
-oldPath: "/content/guides/kubernetes/observability-showback-refarch.md"
-aliases:
-- "/guides/kubernetes/observability-showback-refarch"
+  - Kubernetes
 ---
 
 This document discusses showback for Kubernetes clusters, such as those provided

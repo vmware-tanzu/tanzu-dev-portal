@@ -1,16 +1,13 @@
 ---
-title: Network Policy Implementation
-linkTitle: Network Policy Implementation
-description: Implement a deny-all network policy in Kubernetes
-parent: Container Networking
+title: "Network Policy Implementation"
+linkTitle: "Network Policy Implementation"
+description: "Implement a deny-all network policy in Kubernetes"
+parent: "Container Networking"
 keywords:
-- Kubernetes
+  - Kubernetes
 tags:
-- networking
-- Calico
-oldPath: "/content/guides/kubernetes/container-networking-network-policy.md"
-aliases:
-- "/guides/kubernetes/container-networking-network-policy"
+  - networking
+  - Calico
 ---
 
 This directory demonstrates how to implement default deny-all network rules in a

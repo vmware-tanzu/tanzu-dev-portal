@@ -1,14 +1,11 @@
 ---
-title: Admission Control
-linkTitle: Admission Control
-description: Considerations for implementing admission control in Kubernetes
-parent: Platform Security
+title: "Admission Control"
+linkTitle: "Admission Control"
+description: "Considerations for implementing admission control in Kubernetes"
+parent: "Platform Security"
 weight: 1
 keywords:
 - Kubernetes
-oldPath: "/content/guides/kubernetes/platform-security-admission-control.md"
-aliases:
-- "/guides/kubernetes/platform-security-admission-control"
 ---
 
 This document details the philosophy and methods for implementing admission

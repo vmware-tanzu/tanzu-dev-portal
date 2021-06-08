@@ -1,13 +1,10 @@
 ---
-title: Application Enhancements
-subsection: Application Enhancements
+title: "Application Enhancements"
+subsection: "Application Enhancements"
 topics:
 - Kubernetes
 team:
 - John Harris
-oldPath: "/content/guides/kubernetes/app-enhancements.md"
-aliases:
-- "/guides/kubernetes/app-enhancements"
 ---
 
 Kubernetes does not demand specifics about the applications that run on top of

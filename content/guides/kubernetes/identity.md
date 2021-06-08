@@ -1,13 +1,10 @@
 ---
-title: Identity and Access Control
-subsection: Identity and Access Control
+title: "Identity and Access Control"
+subsection: "Identity and Access Control"
 topics:
 - Kubernetes
 team:
 - Craig Tracey
-oldPath: "/content/guides/kubernetes/identity.md"
-aliases:
-- "/guides/kubernetes/identity"
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of

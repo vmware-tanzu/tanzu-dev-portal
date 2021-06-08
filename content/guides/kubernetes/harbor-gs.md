@@ -1,11 +1,9 @@
 ---
-title: Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s
-  Encrypt
-linkTitle: Harbor
+title:  "Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt"
+linkTitle: "Harbor"
 metaTitle: Deploying Harbor to Kubernetes
 subsection: Harbor
-description: Looking to run a private container image for self-hosting or enterprise
-  purposes? This guide walks through deploying Harbor to Kubernetes.
+description: Looking to run a private container image for self-hosting or enterprise purposes? This guide walks through deploying Harbor to Kubernetes.
 weight: 7
 topics:
 - Kubernetes
@@ -17,9 +15,6 @@ patterns:
 team:
 - Tony Vetter
 - Paul Czarkowski
-oldPath: "/content/guides/kubernetes/harbor-gs.md"
-aliases:
-- "/guides/kubernetes/harbor-gs"
 ---
 
 Running a private container image registry has been a staple in many enterprise

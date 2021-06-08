@@ -1,6 +1,6 @@
 ---
-title: Backing Up, Restoring, and Migrating Resources with Velero
-linkTitle: Velero
+title:  "Backing Up, Restoring, and Migrating Resources with Velero"
+linkTitle: "Velero"
 subsection: Velero
 topics:
 - Kubernetes
@@ -8,9 +8,6 @@ tags:
 - Backup
 - Disaster Recovery
 - Velero
-oldPath: "/content/guides/kubernetes/what-is-velero.md"
-aliases:
-- "/guides/kubernetes/what-is-velero"
 ---
 
 Velero is an open source tool for safely backing up and restoring resources in a Kubernetes cluster, performing disaster recovery, and migrating resources and persistent volumes to another Kubernetes cluster.
