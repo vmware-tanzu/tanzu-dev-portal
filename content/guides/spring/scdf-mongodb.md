@@ -1,7 +1,9 @@
 ---
-title: Integrate Spring Cloud Data Flow Applications with a Scalable MongoDB Deployment on Kubernetes
+title: Integrate Spring Cloud Data Flow Applications with a Scalable MongoDB Deployment
+  on Kubernetes
 linkTitle: Spring Cloud Data Flow with MongoDB on Kubernetes
-description: Integrate a Spring Cloud Data Flow app with a MongoDB service running on Kubernetes.
+description: Integrate a Spring Cloud Data Flow app with a MongoDB service running
+  on Kubernetes.
 date: 2020-09-04
 topics:
 - Spring
@@ -16,6 +18,9 @@ patterns:
 - Eventing
 team:
 - Vikram Vaswani
+oldPath: "/content/guides/spring/scdf-mongodb.md"
+aliases:
+- "/guides/spring/scdf-mongodb"
 ---
 
 [Spring Cloud Data Flow](https://dataflow.spring.io/) is a framework for creating data streaming applications and batch data processing pipelines. It is commonly used to develop and test microservices, and it comes with built-in support for popular data sources and data storage services. It is available under an Apache license.

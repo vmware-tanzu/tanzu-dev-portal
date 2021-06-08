@@ -1,11 +1,15 @@
 ---
-title: "Kubernetes Platform Monitoring"
-linkTitle: "Kubernetes Platform Monitoring"
-description: "Considerations, guidance, and best practices for monitoring Kubernetes clusters."
-parent: "Platform Observability"
+title: Kubernetes Platform Monitoring
+linkTitle: Kubernetes Platform Monitoring
+description: Considerations, guidance, and best practices for monitoring Kubernetes
+  clusters.
+parent: Platform Observability
 weight: 1600
 keywords:
-  - Kubernetes
+- Kubernetes
+oldPath: "/content/guides/kubernetes/observability-k8s-platform-monitoring.md"
+aliases:
+- "/guides/kubernetes/observability-k8s-platform-monitoring"
 ---
 
 This document details platform monitoring and alerting for Kubernetes clusters,

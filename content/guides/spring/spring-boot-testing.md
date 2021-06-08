@@ -1,6 +1,6 @@
 ---
-title:  "Spring Boot Testing Best Practices"
-linkTitle: "Testing Best Practices"
+title: Spring Boot Testing Best Practices
+linkTitle: Testing Best Practices
 parent: Spring Boot
 weight: 3
 topics:
@@ -11,6 +11,9 @@ tags:
 - Testing
 patterns:
 - API
+oldPath: "/content/guides/spring/spring-boot-testing.md"
+aliases:
+- "/guides/spring/spring-boot-testing"
 ---
 
 Proper testing is critical to the successful development of applications that use a microservices architecture. This guide provides some important recommendations for writing tests for Spring Boot applications, using [F.I.R.S.T. principles](https://www.appsdeveloperblog.com/the-first-principle-in-unit-testing/):

@@ -1,8 +1,9 @@
 ---
-title:  "What are Cloud Native Buildpacks?"
-linkTitle: "Cloud Native Buildpacks"
-subsection: "Cloud Native Buildpacks"
-description: Learn the basics of Cloud Native Buildpacks and discover how they work and how to use them to turn your code into OCI-compliant containers.
+title: What are Cloud Native Buildpacks?
+linkTitle: Cloud Native Buildpacks
+subsection: Cloud Native Buildpacks
+description: Learn the basics of Cloud Native Buildpacks and discover how they work
+  and how to use them to turn your code into OCI-compliant containers.
 topics:
 - Containers
 tags:
@@ -11,6 +12,9 @@ patterns:
 - Deployment
 team:
 - Brian McClain
+oldPath: "/content/guides/containers/cnb-what-is.md"
+aliases:
+- "/guides/containers/cnb-what-is"
 ---
 
 [Cloud Native Buildpacks](https://buildpacks.io/) turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 

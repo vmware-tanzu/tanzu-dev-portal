@@ -1,10 +1,13 @@
 ---
-title: "Developer Workflow"
-subsection: "Developer Workflow"
+title: Developer Workflow
+subsection: Developer Workflow
 topics:
 - Kubernetes
 team:
 - John Harris
+oldPath: "/content/guides/kubernetes/dev-workflow.md"
+aliases:
+- "/guides/kubernetes/dev-workflow"
 ---
 
 The developer workflow typically involves writing code, executing automated

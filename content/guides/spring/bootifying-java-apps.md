@@ -1,6 +1,6 @@
 ---
-title:  "Bootifying Java Applications"
-linkTitle: "Bootifying Java Applications"
+title: Bootifying Java Applications
+linkTitle: Bootifying Java Applications
 weight: 3
 topics:
 - Spring
@@ -9,6 +9,9 @@ tags:
 - Spring Boot
 team:
 - Marc Zottner
+oldPath: "/content/guides/spring/bootifying-java-apps.md"
+aliases:
+- "/guides/spring/bootifying-java-apps"
 ---
 
 Spring Boot is a convention-over-configuration solution to create standalone, production-grade Spring-based applications that you can "just run". It is pre-configured with an opinionated view of the best configuration of the Spring platform, including third-party libraries, so that you can get started with minimum fuss. The Spring framework provides hundreds of features and modules, but knowing where to start and configure them can be challenging.

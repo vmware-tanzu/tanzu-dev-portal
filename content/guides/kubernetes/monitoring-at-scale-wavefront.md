@@ -1,8 +1,8 @@
 ---
-title:  "Monitoring Containers at Scale with Wavefront"
+title: Monitoring Containers at Scale with Wavefront
 linkTitle: Monitor at Scale with Wavefront
 parent: Platform Observability
-weight: 3 
+weight: 3
 topics:
 - Kubernetes
 - Containers
@@ -13,6 +13,9 @@ tags:
 - Wavefront
 patterns:
 - Observability
+oldPath: "/content/guides/kubernetes/monitoring-at-scale-wavefront.md"
+aliases:
+- "/guides/kubernetes/monitoring-at-scale-wavefront"
 ---
 
 [Tanzu Observability by Wavefront](https://tanzu.vmware.com/observability) efficiently monitors cloud native operations at scale. It is a high-performance streaming analytics platform that supports 3D observability (metrics, histograms, traces/spans) and can scale to very high data ingestion rates and query loads. You can collect data from many services and sources across your entire application stack, and can look at details for earlier data collected by Wavefront.

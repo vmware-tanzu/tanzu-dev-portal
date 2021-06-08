@@ -1,10 +1,13 @@
 ---
-title: "Workload Tenancy"
-subsection: "Workload Tenancy"
+title: Workload Tenancy
+subsection: Workload Tenancy
 topics:
-  - Kubernetes
+- Kubernetes
 team:
-  - Josh Rosso
+- Josh Rosso
+oldPath: "/content/guides/kubernetes/workload-tenancy.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy"
 ---
 
 Kubernetes is an inherently multi-tenant system. The term tenant can

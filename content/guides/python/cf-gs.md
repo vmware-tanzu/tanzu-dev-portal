@@ -1,8 +1,9 @@
 ---
-title: "Python Like A Pro: How To Deploy Python Application Into Production"
-linkTitle: "Python On Cloud Foundry"
-metaTitle: "Running a Python Application into Production"
-description: "Get your Python application into production in seconds and explore how Cloud Foundry simplifies a developers' job from log streaming to scaling."
+title: 'Python Like A Pro: How To Deploy Python Application Into Production'
+linkTitle: Python On Cloud Foundry
+metaTitle: Running a Python Application into Production
+description: Get your Python application into production in seconds and explore how
+  Cloud Foundry simplifies a developers' job from log streaming to scaling.
 topics:
 - Python
 - Containers
@@ -14,6 +15,9 @@ patterns:
 - Deployment
 team:
 - Ben Wilcock
+oldPath: "/content/guides/python/cf-gs.md"
+aliases:
+- "/guides/python/cf-gs"
 ---
 
 In this guide, you'll learn how to get a Python application into production in seconds. 

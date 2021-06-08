@@ -32,6 +32,7 @@ contentPath.each do |f|
     newAliases = contentMetadata["aliases"].nil? ? [] : contentMetadata["aliases"]
     oldPath = "/content" + f.split("/content")[1]
     newAliases << oldPath.gsub("/content", "").gsub(".md", "")
+    puts newAliases
     newAliases = newAliases.uniq
     
     contentMetadata["oldPath"] = oldPath

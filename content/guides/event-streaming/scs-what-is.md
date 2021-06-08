@@ -1,8 +1,9 @@
 ---
-title: "What is Spring Cloud Stream?"
-linkTitle: "Spring Cloud Stream"
-subsection: "Spring Cloud Stream"
-description: Discover how to use Spring Cloud Stream, a framework for building highly scalable, event-driven microservices connected with shared messaging systems.
+title: What is Spring Cloud Stream?
+linkTitle: Spring Cloud Stream
+subsection: Spring Cloud Stream
+description: Discover how to use Spring Cloud Stream, a framework for building highly
+  scalable, event-driven microservices connected with shared messaging systems.
 topics:
 - Spring
 - Microservices
@@ -13,6 +14,9 @@ patterns:
 - Eventing
 team:
 - Brian McClain
+oldPath: "/content/guides/event-streaming/scs-what-is.md"
+aliases:
+- "/guides/event-streaming/scs-what-is"
 ---
 
 Spring Cloud Stream is a framework for building highly scalable, event-driven microservices connected with shared messaging systems. Spring Cloud Stream provides components that abstract the communication with many message brokers away from the code.

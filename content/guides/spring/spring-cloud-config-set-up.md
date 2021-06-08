@@ -1,5 +1,5 @@
 ---
-title:  "Setting Up Spring Cloud Config Server"
+title: Setting Up Spring Cloud Config Server
 linkTitle: Spring Cloud Config Server
 subsection: Spring Cloud Config Server
 weight: 4
@@ -10,6 +10,9 @@ tags:
 - Spring Cloud Config Server
 patterns:
 - API
+oldPath: "/content/guides/spring/spring-cloud-config-set-up.md"
+aliases:
+- "/guides/spring/spring-cloud-config-set-up"
 ---
 
 As an application moves through the deployment pipeline from dev to test to production, you may need a centralized way to manage the configuration across environments to make certain that each application has access to everything it needs to run as it moves and always uses the right configuration. [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/reference/html/) provides server-side and client-side support for managing and using external configuration information. 

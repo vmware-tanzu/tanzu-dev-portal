@@ -1,11 +1,14 @@
 ---
-title: "Autoscaling Reference Architecture"
-linkTitle: "Autoscaling Reference Architecture"
-description: "Guidance for autoscaling application workloads and cluster compute resources"
-parent: "Workload Tenancy"
+title: Autoscaling Reference Architecture
+linkTitle: Autoscaling Reference Architecture
+description: Guidance for autoscaling application workloads and cluster compute resources
+parent: Workload Tenancy
 weight: 1600
 keywords:
-  - Kubernetes
+- Kubernetes
+oldPath: "/content/guides/kubernetes/workload-tenancy-autoscaling-refarch.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy-autoscaling-refarch"
 ---
 
 This reference provides guidance, trade-off considerations and implementation

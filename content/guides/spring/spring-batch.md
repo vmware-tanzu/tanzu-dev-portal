@@ -1,6 +1,6 @@
 ---
-title:  "Creating Batch Microservices with Spring Batch"
-linkTitle: "Spring Batch"
+title: Creating Batch Microservices with Spring Batch
+linkTitle: Spring Batch
 weight: 1
 topics:
 - Spring
@@ -9,6 +9,9 @@ tags:
 - Spring Batch
 patterns:
 - API
+oldPath: "/content/guides/spring/spring-batch.md"
+aliases:
+- "/guides/spring/spring-batch"
 ---
 
 

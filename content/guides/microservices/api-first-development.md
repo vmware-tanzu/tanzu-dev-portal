@@ -1,7 +1,8 @@
 ---
-title: "Understanding API-First Development"
-linkTitle: "API-First Development"
-description: API-First approach development allows API teams design-driven development, API governance, and agility in incorporating changes.
+title: Understanding API-First Development
+linkTitle: API-First Development
+description: API-First approach development allows API teams design-driven development,
+  API governance, and agility in incorporating changes.
 weight: 4
 topics:
 - Spring
@@ -16,6 +17,9 @@ patterns:
 - API
 team:
 - Dan Dobrin
+oldPath: "/content/guides/microservices/api-first-development.md"
+aliases:
+- "/guides/microservices/api-first-development"
 ---
 
 

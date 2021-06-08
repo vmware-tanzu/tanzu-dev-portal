@@ -1,10 +1,13 @@
 ---
-title: "Application Observability"
-subsection: "Application Observability"
+title: Application Observability
+subsection: Application Observability
 topics:
 - Kubernetes
 team:
 - John Harris
+oldPath: "/content/guides/kubernetes/app-observability.md"
+aliases:
+- "/guides/kubernetes/app-observability"
 ---
 
 The term "observability" in control theory states that the system is observable

@@ -1,12 +1,15 @@
 ---
-title:  "Application Readiness Checklist"
-parent: "Application Enhancements"
+title: Application Readiness Checklist
+parent: Application Enhancements
 topics:
 - Kubernetes
 tags:
 - Kubernetes
 team:
 - John Harris
+oldPath: "/content/guides/kubernetes/app-enhancements-checklist.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-checklist"
 ---
 
 This list is a starting place for considerations about your application running
