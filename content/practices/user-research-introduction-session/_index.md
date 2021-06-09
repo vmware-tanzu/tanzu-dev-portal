@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "User Research Introduction Session"
 linkTitle: "User Research Introduction Session"
 description: "Level-set on user research best practices"
@@ -78,9 +79,7 @@ miro_template_url: ""
    Tip: Drawing these four steps on the board showing a progression can be really helpful to visualize how they flow together
    {{< /callout >}}
    
-1. Share **biases** to be aware of and key **“dos”** and **“don’ts”** when conducting research by printing out or projecting this **Research Dos & Don'ts Guide** 
-
-   ***EDITOR NOTE: The above Research Dos & Don'ts Guide is an internal google doc. Please change, publish the doc, or find an alternative***
+1. Share **biases** to be aware of and key **“dos”** and **“don’ts”** when conducting research by printing out or projecting this [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
 
 1. Finally, spend the remaining time **role playing** to get a feel for what actual research will be like:
    
@@ -104,6 +103,8 @@ You’ve succeeded when the team feels like they’re confident they can conduct
 You can make as many or as few visual aids ahead of time as you like to support this session, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
 
 If the team feels like they want more practice conducting research before they do it with actual users, don’t hesitate to schedule a follow-up session or two. Role playing can do wonders to prep people who haven’t done a lot of research before but are excited to learn how.
+
+Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
 
 ## Related Practices
 
