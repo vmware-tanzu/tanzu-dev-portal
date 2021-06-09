@@ -1587,7 +1587,9 @@ code {
     display: block;
   }
 }
-
+.feedback i {
+  font-size: 1.4rem;
+}
 .pride-mode-only {
   display: none !important;
 }

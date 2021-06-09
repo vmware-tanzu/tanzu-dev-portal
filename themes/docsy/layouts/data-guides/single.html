@@ -30,11 +30,15 @@
             {{ if .IsSection }}
                 {{ partial "guides-section-index.html" . }}
             {{ end }}
+            <div class="feedback mt-4 pt-4 border-top">
+              <a href='{{ printf "%s%s" "https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=" .Title }}'><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+            </div>
           </main>
         </div>
       </div>
       {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}
+    
   </body>
 </html>
