@@ -73,9 +73,10 @@ Sentry.init({
 });
 // localStorage.clear();
 var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
-changeTheme(savedTheme);
-function changeTheme(mode) {
-    
+changeTheme(savedTheme, true);
+function changeTheme(mode, firstLoad) {
+  sendAmplitudeUserProps({"latest saved theme": mode}); 
+  if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
   if (mode === "pride") {
     var iframe = document.getElementById('auth-iframe');
     var head = document.head;

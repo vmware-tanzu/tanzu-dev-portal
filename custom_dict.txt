@@ -44,6 +44,7 @@ affordances
 afterAcknowledgement
 Agile-ific
 Aino
+[Aa]ir-[Gg]apped
 airgap(ped)?
 Alertmanager
 Alexa
@@ -291,6 +292,7 @@ CoreOS
 Corry
 CORS
 cortado
+Cosgrove
 Coté
 counterintuitive
 COVID-19
@@ -810,6 +812,7 @@ Kanban
 Kaniko
 [Kk]app(-controller|.)?
 Karavi
+Kat
 kata
 Katas
 KEK(s)?
@@ -1416,6 +1419,7 @@ Spock
 spring-petclinic
 springboot
 SpringBootTest
+Springdom
 SpringOne(2020)?
 SpringSecurityManager
 SpringSecurityManagerDistributedTest
