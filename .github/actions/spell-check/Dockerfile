@@ -10,5 +10,6 @@ LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="green"
 
 COPY entrypoint.sh /entrypoint.sh
+COPY custom_dict.txt /custom_dict.txt
 
 ENTRYPOINT ["/entrypoint.sh"]
