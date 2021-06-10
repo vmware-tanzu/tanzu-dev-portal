@@ -33,7 +33,7 @@ With Kubeapps you can:
 
 ##  Key Features of Kubeapps 2.3.2
 
-In this Kubeapps release, we have focussed on delivering key user experience features including the capability to enable Tanzu users to deploy Kubeapps directly as a Helm chart in TKG workload clusters. This version is tested and validated on the latest version of TKG (v1.3.1)
+In this Kubeapps release, we have focused on delivering key user experience features including the capability to enable Tanzu users to deploy Kubeapps directly as a Helm chart in TKG workload clusters. This version is tested and validated on the latest version of TKG (v1.3.1)
 
 Once Kubeapps is up and running, cluster admins will benefit from having :
 

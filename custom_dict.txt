@@ -530,6 +530,7 @@ Gabry
 GAC
 Galystan
 [Gg]amestorming
+Gamez
 Gamov
 Gandhi
 Gangway
@@ -1155,6 +1156,7 @@ Pichler
 pickab(le|ility)?
 PID
 Pilimon
+[Pp]inniped
 [Pp]ip[Xx]('s)?
 PKCS
 PKI
@@ -1507,6 +1509,7 @@ Tilt(file|Cloud)?
 timebox(ed)?
 TimingGatewayEventFilter
 Timo
+TKG
 tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
