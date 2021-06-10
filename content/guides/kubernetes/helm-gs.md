@@ -29,7 +29,7 @@ There are a few things you need to do before getting started with Helm:
 
 - Have access to a Kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube).
 
-- Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
+- Check out [Getting Started with Kubernetes](https://kube.academy/courses/getting-started) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
 - Follow the documentation for [installing Helm](https://helm.sh/docs/intro/install/).
 
