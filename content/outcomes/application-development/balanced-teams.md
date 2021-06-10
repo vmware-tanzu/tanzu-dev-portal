@@ -98,4 +98,4 @@ Balanced teams have a host of benefits, some top ones are:
 ### Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)
 - [Lean Product Development](https://tanzu.vmware.com/content/videos/lean-product-development-by-michael-fisher)
-- User Centered Design
+- [User Centered Design] (https://tanzu.vmware.com/campaigns/design)
