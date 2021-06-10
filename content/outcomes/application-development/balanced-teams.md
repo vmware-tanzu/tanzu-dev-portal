@@ -96,6 +96,6 @@ Balanced teams have a host of benefits, some top ones are:
 1. Ready to dive into more fine grained details of what balanced teams are? Check out this VMware Tanzu Labs [Balanced Team Whitepaper](https://tanzu.vmware.com/content/white-papers/how-to-build-better-software-with-balanced-teams).
 
 ### Related topics
-- Agile
+- [Agile Software Development](https://tanzu.vmware.com/agile)
 - Lean
 - User Centered Design
