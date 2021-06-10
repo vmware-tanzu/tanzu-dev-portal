@@ -25,6 +25,8 @@ Abbie
 Abdellfetah
 Abo
 AbstractGatewaySenderEventProcessor
+AbstractRegionEntry
+AbstractRegionMap
 Abubakar
 Acceptor
 accessor
@@ -193,6 +195,8 @@ bytesOnlyOnDisk
 CA(s)?
 Cacheable
 CacheCallback
+CachedDeserializable
+CachedDeserializableFactory
 CacheListener
 CacheLoader
 CacheManager
@@ -306,6 +310,7 @@ CPUs
 CQL
 CRD(s|-based)?
 create-load-balancer
+createEntry
 createEvent
 createGauge
 createRegion
@@ -330,6 +335,7 @@ CTO
 CTRL-C
 currentClientConnections
 currentMetricValue(s)?
+CustomEntryConcurrentHashMap
 customizable
 customization(s)?
 CustomResourceDefinition(s)?
@@ -569,6 +575,7 @@ GC(E|L|P|R|S)?
 Geesaman
 Gemfiles
 GemFire
+gemfire.
 GemFire's
 Geneve
 geode-async-listener-spring-jpa
@@ -891,9 +898,11 @@ KUDO
 [kK]ustomize
 KUTTL
 labelset
+lastAccessedTime
 latencies
 Lazu
 LDAP
+LeafRegionEntry
 lego
 letsencrypt-staging
 libnss-wrapper
@@ -1135,6 +1144,7 @@ ParallelGatewaySenderQueueEntrySizer
 parallelize
 parallelizing
 [Pp]arameteriz(e|ation|ing)?
+PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
 PartitionedRegionDetails
@@ -1213,6 +1223,7 @@ precompiled
 preconfigured
 [Pp]reemptionPolicy
 PreemptLowerPriority
+PreferBytesCachedDeserializable
 prefilled
 preload
 prepending
@@ -1276,6 +1287,8 @@ refactorings?
 RegExMethodAuthorizer
 RegionEntries
 RegionEntry
+RegionEntryFactory
+RegionEntryFactoryBuilder
 RegionFunctionContext
 regionName
 RegionObjectFilter
@@ -1462,11 +1475,13 @@ Steeltoe
 Stéphane
 StorageClass(es)?
 Storbakken
+StoreAllCachedDeserializable
 Strategyzer
 StringBuilder
 struct
 STT
 Styra
+subclasses
 subcommand
 subdirectory
 subjectAltName
@@ -1626,6 +1641,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VMCachedDeserializable
 VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?
