@@ -27,8 +27,8 @@ This document provides a simple demonstration of how to implement your Java appl
 
 This document has been written for:
 
-- Developers with Java (intermediate), SpringBoot (basic) and Maven dependency management.
-- Developers interested in migrating from Java JEE into modern application development ([12Factor](https://12factor.net)) and application containerization.
+- Developers with Java (intermediate), Spring Boot (basic) and Maven dependency management.
+- Developers interested in migrating from Java EnterPrise Edition into modern application development ([12Factor](https://12factor.net)) and application containerization.
 - Basic Kafka knowledge, including Brokers, Topic, and Partitions.
 
 For more about Spring Boot Background Modern Application Development or Kafka, refer to the following:
@@ -43,7 +43,7 @@ To do this tutorial, make sure that the following software is on your workstatio
 - Java 8 (preferably Java 11)
 - Maven 2 or greater 
   * (For Gradle builds: Gradle 6.0 or greater, and run `gradle init` to convert current maven into gradle)
-- Java Editor such as Intellij or Eclipse. 
+- Java Editor such as IntelliJ or Eclipse. 
 - Docker (Docker Compose)
 
 The complete running code for this tutorial is available in [Github](https://github.com/ehsaniara/scs-kafka-intro/tree/main/scs-099).
@@ -56,7 +56,7 @@ The following diagram shows Spring Cloud Stream Kafka enabling Apache Kafka Bind
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-1.svg)
 
 ### Add a Dependency to the Project
-In this example, we add the following dependency to the project for spring-cloud-stream-binder-kafka (_Hoxton.SR11_). In later versions, the `@EnableBinding` feature will be _~~deprecated~~_ in favor of _Functional Programming_, which we will look into later.
+For this example, we are using the following dependency: `spring-cloud-stream-binder-kafka` (_Hoxton.SR11_). In later versions, the `@EnableBinding` feature will be _~~deprecated~~_ in favor of _Functional Programming_, which we will look into later.
 
 
 For more information, see [spring-cloud-stream-binder-kafka](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka).
@@ -242,7 +242,7 @@ As you see, by using Spring Cloud Stream this happened by  only adding a few lin
 
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-4.svg)
 
-All messages have been consumed based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2sec (200ms  X 10 = 2000ms).
+All messages have been consumed based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2 Seconds (200ms  X 10 = 2000ms).
 
 ## Single Producer and 3 Consumer App (3 Separate JVM Processes)
 
@@ -275,9 +275,9 @@ java -Dspring.profiles.active=test2 -Dserver.port=8082 -jar scs-099-0.0.1-SNAPSH
 **Note:** _To avoid having multiple producers, we just let only one app to create messages in the topic in the **producer** method by checking the (app port == 8080)_
 
 ### What’s happening now?
-We only have one application running (producer and consumer on the same app). Similar to the previous example, we basically consume all messages based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2sec _(200ms  X 10 = 2000ms)_.
+We only have one application running (producer and consumer on the same app). Similar to the previous example, we basically consume all messages based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2 seconds _(200ms  X 10 = 2000ms)_.
 
-However, this time it’s running in different JVMs. Now, it  can be decoupled out and run in different machines or containers in the future. Our primary intention is to have **horizontal scalability** in the app.
+However, this time it’s running in different (JVM)s. Now, it  can be decoupled out and run in different machines or containers in the future. Our primary intention is to have **horizontal scalability** in the app.
 
 When you run the app in the second terminal, you basically tell Kafka to distribute the message to the newly introduced consumer app. You see the new application start consuming some produced messages, but not the same ones from the first app.
 
@@ -292,4 +292,4 @@ The complete running code for this tutorial is available in [Github](https://git
 
 
 ## What’s Next
-In the next tutorial ([Part 2](#)), I’ll show a real life example such as the **PubSub** module, multiple kafka topics and failover handling.
+In the next tutorial (Part 2), I’ll show a real life example such as the **PubSub** module, multiple Kafka topics and failover handling.
