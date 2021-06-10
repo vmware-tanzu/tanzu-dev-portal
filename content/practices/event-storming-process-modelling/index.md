@@ -27,7 +27,7 @@ what:
 
 ---
 ## How to Use this Method
-This is formally a grammar/notation for modelling Processes and Software, that has evolved from the application of [Event Storming](https://www.eventstorming.com/) by its founder Alberto Brandolini. 
+This is formally a grammar/notation for modelling Processes and Software, that has evolved from the application of [EventStorming](https://www.eventstorming.com/) by its founder Alberto Brandolini. 
 Traditionally it was indistinguishable from EventStorming, however its evolution has lead to Process Modelling becoming its own phase in the EventStorming methodology.
 
 While the formal method is best used for identifying large complex high level processes, the general principals and grammar of Process Modelling have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
@@ -82,11 +82,11 @@ The output from these workshops can be used to discover, validate or design a sy
 
 ## Related Practices:
 ### EventStorming
-As mentioned Process Modelling evolved from EventStorming and is a fundamental part of the complete application of Event Storming as prescribed by Alberto Brandolini. However the storming phase, or `Big Picture` as referred to by Alberto Brandolini, has been more widely adopted with minor variations to the original, such as the use of EventStorming as described here in the Developer Center. Therefore Process Modelling naturally offers a way to enrich any EventStorming session
+As mentioned Process Modelling evolved from EventStorming and is a fundamental part of the complete application of Event Storming as prescribed by Alberto Brandolini. However the storming phase, or `Big Picture` as referred to by Alberto Brandolini, has been more widely adopted with minor variations to the original, such as the use of [Event Storming](/practices/event-storming)  as described in this Developer Center. Therefore Process Modelling naturally offers a way to enrich any EventStorming session
 ### UML/C4/Boris
 if you are using an Object Oriented based notation to model your architecture, Process Modelling offers an algorithmic view of the problem you are solving, and can be used to complete a number of diagrams as the process is narrated.
 ### Boris and SNAP
-The grammar used by Process Modelling offers a lot of information that can be directly used in the completion of Boris and SNAP exercises. 
+The grammar used by Process Modelling offers a lot of information that can be directly used in the completion of [Boris](/practices/boris) and [SNAP](/practices/boris) exercises. 
 
 ### Variations:
 ### Event Storming | Software Modelling

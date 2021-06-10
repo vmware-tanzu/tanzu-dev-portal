@@ -127,6 +127,7 @@ Event Storming is an activity within the [Swift Method](/practices/swift-method)
 {{% section %}}
 ### Following
 
+[EventStorming | Process Modelling](/practices/event-storming-process-modelling)
 [Boris](/practices/boris)
 {{% /section %}}
 
