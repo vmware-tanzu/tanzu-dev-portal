@@ -478,6 +478,7 @@ enforce-node-allocatable
 Enqueueing
 entriesInVM
 entriesOnlyOnDisk
+EntryEvent
 EntryEventImpl
 EntryEventImpl's
 enum
@@ -555,12 +556,14 @@ GatewayenderQueueStatistics
 GatewayEventFilter
 GatewayQueueEvent
 GatewayQueueEventRegionEntryObjectFilter
+GatewayReceiver
 GatewayReceiverCommand
 GatewaySender
 GatewaySender's
 GatewaySenderDeltaCacheListener
 GatewaySenderDeltaCacheWriter
 GatewaySenderEventImpl
+GatewaySenderEventRemoteDispatcher
 GatewaySenderProxyCacheWriter
 GatewaySenderQueueEntrySizer
 GatewaySenderQueueEntrySizers
@@ -660,6 +663,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handleWANEvent
 handoff(s)?
 HAProxy
 HashiCorp('s)?
