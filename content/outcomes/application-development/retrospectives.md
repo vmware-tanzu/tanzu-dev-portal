@@ -1,6 +1,6 @@
 ---
-title: Pair Programming
-weight: 20
+title: Retrospectives
+weight: 30
 layout: single
 ---
 Coming soon!
