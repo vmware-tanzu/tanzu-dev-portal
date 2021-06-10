@@ -24,6 +24,7 @@ AAAA
 Abbie
 Abdellfetah
 Abo
+AbstractGatewaySenderEventProcessor
 Abubakar
 Acceptor
 accessor
@@ -134,6 +135,8 @@ Bai
 Baruch
 base64(-encoded)?
 BaseFunction
+basicBridgeDestroy
+basicBridgePut
 batchesDistributed
 BatchScheduler
 Beda('s)?
@@ -189,6 +192,8 @@ Buschmann
 bytesOnlyOnDisk
 CA(s)?
 Cacheable
+CacheCallback
+CacheListener
 CacheLoader
 CacheManager
 CachePerfStats
@@ -239,6 +244,7 @@ cli
 CLI(s|'s)?
 client[_-]golang
 ClientMetadataService
+ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
@@ -402,10 +408,12 @@ Disneyland
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
+DistributedMember
 DistributedMembers
 DistributedRegion
 DistributedRegions
 DistributedSystem
+DistributedSystem's
 DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
@@ -520,6 +528,7 @@ frictionless
 Frontstage
 Fu
 fullnameOverride
+fully-deserialized
 functionExecutionCalls
 functionExecutionQueueSize
 functionExecutionsCompleted
@@ -535,13 +544,18 @@ Gandhi
 Gangway
 Garmin
 Gartner('s)?
+GatewayAck
 GatewayenderQueueStatistics
 GatewayEventFilter
 GatewayQueueEvent
 GatewayQueueEventRegionEntryObjectFilter
+GatewayReceiverCommand
 GatewaySender
 GatewaySender's
+GatewaySenderDeltaCacheListener
+GatewaySenderDeltaCacheWriter
 GatewaySenderEventImpl
+GatewaySenderProxyCacheWriter
 GatewaySenderQueueEntrySizer
 GatewaySenderQueueEntrySizers
 GatewaySenderQueueLogger
@@ -800,6 +814,7 @@ JUnit
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
+JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
@@ -1595,6 +1610,7 @@ Velero('s)?
 Venkat
 Venkateswara
 versioned
+VersionTag
 VerticalPodAutoscaler
 [Vv]eth
 veth-jelly
