@@ -1,7 +1,7 @@
 ---
 name: Raquel Campuzano Godoy
 description: "Technical Marketing Manager"
-photo: "/images/team/raquel-campuzano-godoy.jpg"
+photo: "/images/team/raquel-campuzano-godoy.jpeg"
 roles: ["author"]
 skills: []
 location: "Seville, Spain"
