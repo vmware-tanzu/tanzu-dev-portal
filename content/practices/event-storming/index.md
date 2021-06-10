@@ -115,6 +115,7 @@ None at the moment
 
 ### Following
 
+[EventStorming | Process Modelling](/practices/event-storming-process-modelling)
 [Boris](/practices/boris)
 
 ## Real World Examples
