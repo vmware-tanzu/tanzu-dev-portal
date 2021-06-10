@@ -15,6 +15,10 @@
   HUGO_VERSION = "0.82.0"
   TZ='America/Los_Angeles'
 
+[dev]
+  command = "make local"
+  jwtSecret = "ivoAajsoeiRCRpMiDAQnM4UGtjbsVQ"
+  
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
 

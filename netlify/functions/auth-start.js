@@ -27,13 +27,17 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     }
     // store a random string in a cookie that we can verify in the callback
     const csrf = randomToken();
-    const c = cookie.serialize('content-lib-csrf', csrf, {
+    const cookieParams = {
         secure: true,
         httpOnly: true,
         path: '/',
-        domain: getSiteURL().replace('https://', ''),
         maxAge: 600,
-    });
+    };
+    // don't add the domain parameter for localhost dev, only add if there's a url
+    if (config.context === "production" || config.context === "deploy-preview")
+        cookieParams.domain = getSiteURL().replace('https://', '');
+    const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
+    
     // redirect the user to the CSP discovery endpoint for authentication
     const params = {
         response_type: 'code',
