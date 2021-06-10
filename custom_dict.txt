@@ -202,6 +202,7 @@ cali
 calico-kube-controller
 calicoctl
 callout
+Campuzano
 Cao
 Carducci
 Carvel('s)?
@@ -1210,6 +1211,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Programadoras
 programmatically
 [Pp]rometheus
 prometheus:15020
