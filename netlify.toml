@@ -17,7 +17,6 @@
 
 [dev]
   command = "make local"
-  jwtSecret = "ivoAajsoeiRCRpMiDAQnM4UGtjbsVQ"
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
