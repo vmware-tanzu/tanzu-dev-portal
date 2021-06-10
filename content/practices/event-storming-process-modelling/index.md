@@ -1,6 +1,6 @@
 ---
 # remove "draft:true" when ready for final publication 
-draft: true
+draft: false
 
 title: "Event Storming | Process Modelling"
 linkTitle: "Event Storming | Process Modelling - Will Appear in Links"
@@ -137,7 +137,4 @@ Events: Finding suitable events can be the most challenging part of Process Mode
 ![This is the placeholder for sample 1](/images/practices/event-storming-process-modelling/SampleEventStormingAndModellingBoard.JPG)
 ![This is the placeholder for sample 2](/images/practices/event-storming-process-modelling/SampleProcessModellingBoard.JPG)
 ![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleSoftwareModellingBoard.JPG)
-![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleProcessModellingAndBorisBoard.JPG)
 ## Recommended Reading
-[Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
-[What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
