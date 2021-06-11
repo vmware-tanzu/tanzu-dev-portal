@@ -14,7 +14,7 @@ facebook: ""
 linkedin: "whitneylee"
 github: ""
 pinterest: ""
-instagram: "https://www.instagram.com/sweetlovewhitney/"
+instagram: "sweetlovewhitney"
 youtube: ""
 ---
 
