@@ -182,4 +182,4 @@ var redirectTemplate = `<html>
 </head>
 <body></body>
 </html>
-'=`
+`
