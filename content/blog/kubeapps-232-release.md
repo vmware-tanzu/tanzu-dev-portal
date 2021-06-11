@@ -50,7 +50,7 @@ Once Kubeapps is up and running, cluster admins will benefit from having :
 *   A customized user interface adapted to the Tanzu look and feel.
 
 
-![alt_text](images/image1.png "Kubeapps support for SSO Authentication")
+![alt_text](/images/blogs/kubeapps-232-release/kubeapps-tkg.png "Kubeapps support for SSO Authentication")
 _Kubeapps support for SSO Authentication_
 
 All these new capabilities are designed to offer a seamless experience between Kubeapps and Tanzu Kubernetes Grid clusters. 
