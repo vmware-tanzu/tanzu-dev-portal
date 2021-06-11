@@ -23,7 +23,8 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     if (event.path === '/.netlify/functions/auth-start') {
         path = 'developer/';
     } else {
-        path = event.path;
+        //path = event.path;
+        path = "/.netlify/functions/auth-start";
     }
     // store a random string in a cookie that we can verify in the callback
     const csrf = randomToken();
