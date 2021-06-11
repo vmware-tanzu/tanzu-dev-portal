@@ -492,6 +492,7 @@ facto
 failback
 [Ff]ailover(s)?
 Falco
+Fani
 favourite(s)?
 FC
 FeignClient
