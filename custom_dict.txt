@@ -24,6 +24,9 @@ AAAA
 Abbie
 Abdellfetah
 Abo
+AbstractGatewaySenderEventProcessor
+AbstractRegionEntry
+AbstractRegionMap
 Abubakar
 Acceptor
 accessor
@@ -134,6 +137,8 @@ Bai
 Baruch
 base64(-encoded)?
 BaseFunction
+basicBridgeDestroy
+basicBridgePut
 batchesDistributed
 BatchScheduler
 Becki
@@ -190,6 +195,10 @@ Buschmann
 bytesOnlyOnDisk
 CA(s)?
 Cacheable
+CacheCallback
+CachedDeserializable
+CachedDeserializableFactory
+CacheListener
 CacheLoader
 CacheManager
 CachePerfStats
@@ -203,6 +212,7 @@ cali
 calico-kube-controller
 calicoctl
 callout
+Campuzano
 Cao
 Carducci
 Carvel('s)?
@@ -240,6 +250,7 @@ cli
 CLI(s|'s)?
 client[_-]golang
 ClientMetadataService
+ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
@@ -301,6 +312,7 @@ CPUs
 CQL
 CRD(s|-based)?
 create-load-balancer
+createEntry
 createEvent
 createGauge
 createRegion
@@ -325,6 +337,7 @@ CTO
 CTRL-C
 currentClientConnections
 currentMetricValue(s)?
+CustomEntryConcurrentHashMap
 customizable
 customization(s)?
 CustomResourceDefinition(s)?
@@ -403,10 +416,12 @@ Disneyland
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
+DistributedMember
 DistributedMembers
 DistributedRegion
 DistributedRegions
 DistributedSystem
+DistributedSystem's
 DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
@@ -465,6 +480,7 @@ enforce-node-allocatable
 Enqueueing
 entriesInVM
 entriesOnlyOnDisk
+EntryEvent
 EntryEventImpl
 EntryEventImpl's
 enum
@@ -492,6 +508,7 @@ facto
 failback
 [Ff]ailover(s)?
 Falco
+Fani
 favourite(s)?
 FC
 FeignClient
@@ -521,6 +538,7 @@ frictionless
 Frontstage
 Fu
 fullnameOverride
+fully-deserialized
 functionExecutionCalls
 functionExecutionQueueSize
 functionExecutionsCompleted
@@ -531,18 +549,26 @@ Gabry
 GAC
 Galystan
 [Gg]amestorming
+Gamez
 Gamov
 Gandhi
 Gangway
 Garmin
 Gartner('s)?
+GatewayAck
 GatewayenderQueueStatistics
 GatewayEventFilter
 GatewayQueueEvent
 GatewayQueueEventRegionEntryObjectFilter
+GatewayReceiver
+GatewayReceiverCommand
 GatewaySender
 GatewaySender's
+GatewaySenderDeltaCacheListener
+GatewaySenderDeltaCacheWriter
 GatewaySenderEventImpl
+GatewaySenderEventRemoteDispatcher
+GatewaySenderProxyCacheWriter
 GatewaySenderQueueEntrySizer
 GatewaySenderQueueEntrySizers
 GatewaySenderQueueLogger
@@ -556,6 +582,7 @@ GC(E|L|P|R|S)?
 Geesaman
 Gemfiles
 GemFire
+gemfire.
 GemFire's
 Geneve
 geode-async-listener-spring-jpa
@@ -640,6 +667,7 @@ H2
 Hadlow
 Hamano
 handleNotification
+handleWANEvent
 handoff(s)?
 HAProxy
 HashiCorp('s)?
@@ -801,6 +829,7 @@ JUnit
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
+JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
@@ -877,9 +906,11 @@ KUDO
 [kK]ustomize
 KUTTL
 labelset
+lastAccessedTime
 latencies
 Lazu
 LDAP
+LeafRegionEntry
 [Ll]earnings
 lego
 letsencrypt-staging
@@ -1123,6 +1154,7 @@ ParallelGatewaySenderQueueEntrySizer
 parallelize
 parallelizing
 [Pp]arameteriz(e|ation|ing)?
+PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
 PartitionedRegionDetails
@@ -1158,6 +1190,7 @@ Pichler
 pickab(le|ility)?
 PID
 Pilimon
+[Pp]inniped
 [Pp]ip[Xx]('s)?
 PKCS
 PKI
@@ -1201,6 +1234,7 @@ precompiled
 preconfigured
 [Pp]reemptionPolicy
 PreemptLowerPriority
+PreferBytesCachedDeserializable
 prefilled
 preload
 prepending
@@ -1211,6 +1245,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Programadoras
 programmatically
 [Pp]rometheus
 prometheus:15020
@@ -1264,6 +1299,8 @@ refactorings?
 RegExMethodAuthorizer
 RegionEntries
 RegionEntry
+RegionEntryFactory
+RegionEntryFactoryBuilder
 RegionFunctionContext
 regionName
 RegionObjectFilter
@@ -1450,11 +1487,13 @@ Steeltoe
 Stéphane
 StorageClass(es)?
 Storbakken
+StoreAllCachedDeserializable
 Strategyzer
 StringBuilder
 struct
 STT
 Styra
+subclasses
 subcommand
 subdirectory
 subjectAltName
@@ -1510,6 +1549,7 @@ Tilt(file|Cloud)?
 timebox(ed)?
 TimingGatewayEventFilter
 Timo
+TKG
 tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
@@ -1598,6 +1638,7 @@ Velero('s)?
 Venkat
 Venkateswara
 versioned
+VersionTag
 VerticalPodAutoscaler
 [Vv]eth
 veth-jelly
@@ -1613,6 +1654,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VMCachedDeserializable
 VMs?
 VMSS
 VMware(-hosted|'s|Tanzu)?

@@ -3,6 +3,8 @@ require 'optparse'
 require 'redcarpet'
 require 'yaml'
 
+TDC_URL = "https://tanzu.vmware.com/developer"
+
 # Check each row for a series of criteria, adding a tag to a list
 # of results that will be included as a row in the final document
 def filter(options, headers, row) 
@@ -58,8 +60,7 @@ OptionParser.new do |opts|
 
 end.parse!
 
-
-# Prepae the CSV file to write the results
+# Prepare the CSV file to write the results
 csv = CSV.open(options[:output], "w")
 #csv = CSV.generate
 
@@ -86,9 +87,10 @@ metaKeys.push("type")
 
 tagsTally = {}
 topicsTally = {}
+tanzuProductsTally = {}
 errorsTally = {}
 
-# Gather the meta data from all the files, collecting the keys as the files are read
+# Gather the metadata from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
     next if f.split("/").last == "_index.md" # Do not parse index files
     fData = File.open(f).read
@@ -97,7 +99,15 @@ contentFiles.each do |f|
 
     # Add a column for the type of content
     contentMetadata["type"] = contentMetadata["path"].split("/").first
-    
+
+    # Add a column for the direct URL
+    if contentMetadata["type"] == 'blog'
+        contentMetadata["url"] = [TDC_URL, contentMetadata["path"].split("/")[0...-1].join("/"), contentMetadata["title"].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')].join("/")
+    else
+        contentMetadata["url"] = [TDC_URL, contentMetadata["path"].gsub('.md', '')].join("/")
+    end
+    contentMetadata["url"] = contentMetadata["url"].gsub('---', '-').gsub('--', '-')
+
     # Calculate word count
     wordcount = markdown.render(fData.split("---").last).gsub(/<\/?[^>]*>/, "").split.length
     contentMetadata["wordcount"] = wordcount
@@ -124,6 +134,17 @@ contentFiles.each do |f|
         end
     end
    
+    # Tally the tags
+    if contentMetadata.has_key? "products"
+        contentMetadata["products"].each do |t|
+            if tanzuProductsTally.has_key? t
+                tanzuProductsTally[t] += 1
+            else
+                tanzuProductsTally[t] = 1
+            end
+        end
+    end
+
     # Add any newly discovered unique keys
     contentMetadata.keys.each do |k|
         if not metaKeys.include? k
