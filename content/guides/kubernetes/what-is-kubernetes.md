@@ -39,6 +39,6 @@ Kubernetes uses various resource constructs to work with containers. These resou
 
 ## Keep Learning
 
-If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](/topics/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Kubernetes 101](https://kube.academy/courses/kubernetes-101) course on [KubeAcademy](https://kube.academy/).
+If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](/topics/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Getting Started with Kubernetes](https://kube.academy/courses/getting-started) course on [KubeAcademy](https://kube.academy/).
 
 After you feel comfortable with Kubernetes concepts, you can also learn about combining the Docker container platform with Kubernetes to develop [microservices](/topics/microservices).
