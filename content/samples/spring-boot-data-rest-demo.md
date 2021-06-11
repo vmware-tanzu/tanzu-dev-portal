@@ -1,19 +1,22 @@
 ---
-title: Spring Boot Data REST Demo with JPA
-description: >
-    Build a basic Spring Boot application that uses JPA to access a database
+date: '2020-04-21'
+description: 'Build a basic Spring Boot application that uses JPA to access a database
+
+  '
+lastmod: '2020-05-07'
+patterns:
+- API
+readme: true
+repo: https://github.com/Pivotal-Field-Engineering/spring-boot-data-rest-demo
 summary:
 - Build a basic Spring Boot application that uses JPA to access a database
-topics:
-- Spring
-- Messaging and Integration
 tags:
 - Spring
 - Spring Boot
 - REST
 - JPA
-patterns:
-- API
-repo: https://github.com/Pivotal-Field-Engineering/spring-boot-data-rest-demo
-readme: true
+title: Spring Boot Data REST Demo with JPA
+topics:
+- Spring
+- Messaging and Integration
 ---

@@ -1,23 +1,25 @@
 ---
-title: "Introducing the Tanzu Observability Slug Generator"
-featured: false
-description: >
-    Announcement for the open sourcing of code that generates Tanzu Observability URL
 date: 2021-04-15
-topics:
-- Microservices
+description: 'Announcement for the open sourcing of code that generates Tanzu Observability
+  URL
+
+  '
+featured: false
+lastmod: '2021-04-16'
+patterns:
+- Deployment
 tags:
 - Microservices
 - Observability
 - Spring
 - Spring Boot
 - Wavefront
-patterns:
-- Deployment
-team: 
+team:
 - Dan Florea
+title: Introducing the Tanzu Observability Slug Generator
+topics:
+- Microservices
 ---
-
 
 A great feature of [Tanzu Observability](https://tanzu.vmware.com/observability) is that all context about the chart or dashboard that you are looking at is encoded in the URL, which makes it easy for you to share those links with your colleagues and to deep link into our product from other places such as wiki pages. A consequence of this is that the URL slug is rather involved. This is not a problem when the UI generates the URL, but it becomes very tedious when customers try to create the URL on their own in order to automate and embed Tanzu Observability charts and dashboards outside of the product itself.
 
@@ -60,6 +62,3 @@ Generating Tanzu Observability URL slugs can be cumbersome and error prone. With
 - If you are a Spring developer, take a look at the [guide for Tanzu Observability](https://spring.io/guides/gs/tanzu-observability/) as well as our guide on [Getting Started with Wavefront for Spring Boot](https://tanzu.vmware.com/developer/guides/spring/spring-wavefront-gs/)
 
 - [Get started with generating URL slugs](https://github.com/vmware-tanzu/tanzu-observability-slug-generator)
-
-
-

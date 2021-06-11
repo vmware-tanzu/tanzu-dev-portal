@@ -1,12 +1,13 @@
 ---
-title: "A Place to Build Apps and Build Skills"
-featured: false
-description: >
-    Meet the VMware Tanzu Developer Center.
 date: 2020-05-07
-# Author(s)
-team: 
+description: 'Meet the VMware Tanzu Developer Center.
+
+  '
+featured: false
+lastmod: '2020-09-17'
+team:
 - Bryan Friedman
+title: A Place to Build Apps and Build Skills
 ---
 
 Developers and VMware. The pairing might not make sense to you at first. As an application developer, maybe you have only limited experience working with VMware software. It’s probably just the place where your software runs on-premises. Or it’s the thing you get access to a couple of days after putting in that infrastructure request ticket.

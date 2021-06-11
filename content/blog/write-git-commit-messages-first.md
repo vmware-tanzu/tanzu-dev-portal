@@ -1,14 +1,17 @@
 ---
-title: "How — and Why — to Write Commit Messages First"
-featured: false
-description: >
-  Writing your commit messages first keeps you and your pair focused between the feature you are currently trying to implement and whatever current change you are making that could be a smaller, more atomic pushable commit.
 date: 2020-08-19
+description: 'Writing your commit messages first keeps you and your pair focused between
+  the feature you are currently trying to implement and whatever current change you
+  are making that could be a smaller, more atomic pushable commit.
+
+  '
+featured: false
+lastmod: '2020-09-17'
 tags:
-  - Git
-# Author(s)
+- Git
 team:
-  - Eric Tsiliacos
+- Eric Tsiliacos
+title: How — and Why — to Write Commit Messages First
 ---
 
 You’re halfway through delivering your feature and you decide to take a look at your diff. Doing so gives you a sinking feeling in your stomach, because you see a lot more changes than you were expecting, some of which were refactorings, like renames or structural changes you wish were separated into their own commits. Teasing apart these smaller commits can be messy and would take too much effort at this point. But if you’d tried to preemptively break them apart at random, you’d have run the risk of overengineering your work or creating unnecessary changes.

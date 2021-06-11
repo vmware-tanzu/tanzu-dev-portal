@@ -1,14 +1,16 @@
 ---
-title: "Git Switch and Restore: an Improved User Experience"
-featured: false
-description: >
-  A look at how the two commands expands Git's vocabulary to specifically deal with a single aspect of the repository.
 date: 2020-06-23
+description: 'A look at how the two commands expands Git''s vocabulary to specifically
+  deal with a single aspect of the repository.
+
+  '
+featured: false
+lastmod: '2020-09-17'
 tags:
-  - Git
-# Author(s)
+- Git
 team:
-  - Ray Chuan Tay
+- Ray Chuan Tay
+title: 'Git Switch and Restore: an Improved User Experience'
 ---
 
 If you're like me and you've worked with Git for some time, you might have a couple of commands committed to your memory—from `git commit` for recording your changes, to `git log` for sensing "where" you are.

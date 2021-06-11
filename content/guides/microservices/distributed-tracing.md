@@ -1,16 +1,18 @@
 ---
-title:  "Implementing Distributed Tracing"
-linkTitle: "Distributed Tracing"
-topics:
-- Spring
-- Microservices
+date: '2021-01-29'
+lastmod: '2021-02-08'
+linkTitle: Distributed Tracing
+patterns:
+- Observability
 tags:
 - Observability
 - Distributed Tracing
 - Zipkin
 - .NET
-patterns:
-- Observability
+title: Implementing Distributed Tracing
+topics:
+- Spring
+- Microservices
 ---
 
 When a request comes into a monolithic application, it's fairly easy to trace through what happened as a result of that request because everything is self-contained. However, when a request comes into a microservice (remember GUI apps can be microservices, they just render HTML instead of JSON), that request could result in a cascading chain of 10 other HTTP calls to various other services. You might also be interested in knowing when a particular service makes non-HTTP calls, such as to a database or a message queue.
@@ -91,5 +93,3 @@ If you can avoid installing an agent then you should do so. There are plenty of 
 Distributed tracing is essential for troubleshooting microservices applications, so it’s worth the effort to learn about it. What you will discover is that the vast majority of modern distributed tracing solutions are either based on, or inspired by, the [Google Dapper Whitepaper](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf).
 
 To learn more about observability in cloud native environments, visit our [Observability pattern](/patterns/observability/). And be sure and read the guide [Getting Started with Zipkin and Spring Boot](/guides/spring/spring-zipkin/) if you’re implementing microservices in the Spring environment.
-
-

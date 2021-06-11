@@ -1,17 +1,19 @@
 ---
-title: "Declarative Deployments in Kubernetes: What Options Do I Have?"
-description: >
-    Compare various options for declarative deployment of microservices in Kubernetes.
 date: 2020-07-30
-topics:
-- Kubernetes
-tags:
-- Kubernetes
+description: 'Compare various options for declarative deployment of microservices
+  in Kubernetes.
+
+  '
+lastmod: '2020-09-22'
 patterns:
 - Deployment
-# Author(s)
-team: 
+tags:
+- Kubernetes
+team:
 - Dan Dobrin
+title: 'Declarative Deployments in Kubernetes: What Options Do I Have?'
+topics:
+- Kubernetes
 ---
 
 Your cloud-native application has been designed, built, and tested locally, and now you're taking the next step: deployment to Kubernetes.

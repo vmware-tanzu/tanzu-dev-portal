@@ -1,19 +1,20 @@
 ---
-title: "Data Science with Python & JupyterHub on Kubernetes - Part 2"
-featured: false
-description: >
-    Using JupyterHub on Kubernetes
 date: 2021-01-08
-topics:
-- Python
+description: 'Using JupyterHub on Kubernetes
+
+  '
+featured: false
+lastmod: '2021-01-07'
+patterns:
+- Deployment
 tags:
 - Python
 - Kubernetes
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Thomas Kraus
+title: Data Science with Python & JupyterHub on Kubernetes - Part 2
+topics:
+- Python
 ---
 
 In a [previous post](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-1), we discussed the advantages of running JupyterHub on Kubernetes. We also showed you how to install a local Kubernetes cluster using kind on your Mac, as well as how to install the JupyterHub Helm chart on a Kubernetes cluster. 

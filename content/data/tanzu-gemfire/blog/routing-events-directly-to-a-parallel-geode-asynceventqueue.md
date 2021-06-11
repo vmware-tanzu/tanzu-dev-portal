@@ -1,13 +1,14 @@
 ---
-title: "Routing Events Directly to a Parallel Apache Geode AsyncEventQueue"
-description: >
-        This article shows how to route events directly to a parallel AsyncEventQueue using Functions.
 date: 2020-08-29
-type: blog
+description: 'This article shows how to route events directly to a parallel AsyncEventQueue
+  using Functions.
 
-# Author(s) 
+  '
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby 
+- Barry Oglesby
+title: Routing Events Directly to a Parallel Apache Geode AsyncEventQueue
+type: blog
 ---
 
 ## Introduction

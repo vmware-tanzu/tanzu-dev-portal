@@ -1,14 +1,16 @@
 ---
-title: "Tanzu Developer Celebrates Its 1st Birthday with Some Great New Features!"
-weight: 1
-description: >
-    What a year it's been! Let's take a look at what's changed in the last 12 months, including a new feature launching today!
 date: 2021-06-01
+description: 'What a year it''s been! Let''s take a look at what''s changed in the
+  last 12 months, including a new feature launching today!
+
+  '
+lastmod: '2021-06-02'
 tags:
 - Development
-# Author(s)
-team: 
+team:
 - Brian McClain
+title: Tanzu Developer Celebrates Its 1st Birthday with Some Great New Features!
+weight: 1
 ---
 
 My, how time flies. [It seems like just yesterday](/blog/a-place-to-build-apps-and-build-skills/) that the Tanzu Developer Center launched. Our initial showing had what we believed at the time to be a wide array of content, from [guides](/guides) to [videos](/videos) to [code samples](/samples). Over the last 12 months, though, we’ve really seen our content grow.

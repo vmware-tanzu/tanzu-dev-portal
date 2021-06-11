@@ -1,10 +1,12 @@
 ---
-title: "Identity and Access Control"
-subsection: "Identity and Access Control"
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-02-26'
+subsection: Identity and Access Control
 team:
 - Craig Tracey
+title: Identity and Access Control
+topics:
+- Kubernetes
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of

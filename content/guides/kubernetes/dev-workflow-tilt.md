@@ -1,15 +1,16 @@
 ---
-title: "Getting Started with Tilt" 
-linkTitle: "Getting Started with Tilt" 
+date: '2021-02-09'
 description: Implement a tilt-based development workflow for Kubernetes.
-parent: "Developer Workflow"
-# date: 2018-10-05
-topics:
-- Kubernetes
+lastmod: '2021-02-09'
+linkTitle: Getting Started with Tilt
+parent: Developer Workflow
 tags:
 - Tilt
 team:
 - John Harris
+title: Getting Started with Tilt
+topics:
+- Kubernetes
 ---
 
 When developing applications to be deployed on Kubernetes, additional steps are

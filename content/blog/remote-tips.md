@@ -1,13 +1,16 @@
 ---
-title: "Need Help Working Remotely? Check Out Our Tips"
-description: >
-    VMware Tanzu Labs offers some tips for overcoming the challenges many are facing from transitioning to remote work due to COVID-19
 date: 2020-10-07
+description: 'VMware Tanzu Labs offers some tips for overcoming the challenges many
+  are facing from transitioning to remote work due to COVID-19
+
+  '
+lastmod: '2021-02-22'
+patterns: null
+team:
+- VMware Tanzu Labs
+title: Need Help Working Remotely? Check Out Our Tips
 topics:
 - Agile
-patterns:
-team: 
-- VMware Tanzu Labs
 ---
 
 ![Remote Workspace with Cat](/images/blogs/remote-tips/remote-workspace.jpg)
@@ -36,4 +39,4 @@ Our remote working tips cover a wide range of topics, from general consideration
 
 At VMware Tanzu Labs, we [practice what we preach](https://tanzu.vmware.com/app-development). To create these tips, we assigned a balanced team—which consisted of a product manager, a designer, and an engineer—to run user research and identify current best practices along with problems and pain points. And as with every project, there were plenty of stakeholders involved. Our team collaborated with our colleagues in Services Strategy, Marketing, and Legal, to name just a few. These tips are as much theirs as they are ours—and now, yours.
 
-Indeed, we have been using and improving on these remote tips internally, but we also recognize that the challenges we’ve faced are hardly unique. And so we wanted to share them with a wider audience. We’re confident that you’ll find something that makes your own remote working life—and that of your team—a little easier. 
+Indeed, we have been using and improving on these remote tips internally, but we also recognize that the challenges we’ve faced are hardly unique. And so we wanted to share them with a wider audience. We’re confident that you’ll find something that makes your own remote working life—and that of your team—a little easier.

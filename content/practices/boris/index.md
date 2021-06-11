@@ -1,31 +1,36 @@
 ---
-title: "Boris"
-tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
-length: "1.5 hours per run; multiple runs are often needed"
-participants: "Business stakeholders, architects, technical leads, developers "
-image: "boris/boris.png"
-description: "Identify relationships between services in a complex system to reveal the notional target system architecture and record them using SNAP"
-lastmod: "2019-12-09"
-
-why:
-- Explore and understand a complex system
-- Model the relationships between the capabilities in a system
-- Avoid pitfalls such as premature solutioning
-
-when:
-- The Boris exercise comes after Event Storming since it uses insight discovered by that activity to identify system components and model their relationships
-
+date: '2021-02-11'
+description: Identify relationships between services in a complex system to reveal
+  the notional target system architecture and record them using SNAP
+image: boris/boris.png
+lastmod: '2021-03-17'
+length: 1.5 hours per run; multiple runs are often needed
+participants: 'Business stakeholders, architects, technical leads, developers '
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Modernization
+title: Boris
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Output from **Event Storming** (i.e. list of bounded contexts & the events contained within them)
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Output from **Event Storming** (i.e. list of bounded contexts & the events contained
+  within them)
 - Sticky arrow flags
 - Whiteboard tape (black, green, red; 2 rolls of each)
 - Scissors
 - Scotch tape
 - Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
-
+when:
+- The Boris exercise comes after Event Storming since it uses insight discovered by
+  that activity to identify system components and model their relationships
+why:
+- Explore and understand a complex system
+- Model the relationships between the capabilities in a system
+- Avoid pitfalls such as premature solutioning
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. After [Event Storming](/practices/event-storming), using one color of sticky notes create one for each bounded context. Place on the board in a blob.

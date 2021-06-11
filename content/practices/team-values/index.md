@@ -1,25 +1,32 @@
 ---
-title: "Team Values"
-tags: ["Kickoff", "Discovery", "Framing"]
-length: "30 - 45 mins"
-participants: "Core team"
-image: "default-cover.png"
-description: "Allow a team to determine, openly discuss and share their team values"
-lastmod: "2019-12-17"
-
-why:
-- By setting team values together, team members are able to understand what is important to their colleagues and what behaviors are expected day to day. It can help fast forward the early stages of team formation (Forming, Storming, Norming, and Performing) and provide a baseline for feedback.
-
-when:
-- Although this activity can be done as early as when a project and/or consulting engagement kicks off, the first day of product development (after a D&F is wrapping up) typically works best. The key is to have the full core team present. Sometimes that isn’t possible until development kicks off.  
-
+date: '2021-02-09'
+description: Allow a team to determine, openly discuss and share their team values
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 30 - 45 mins
+participants: Core team
+tags:
+- Kickoff
+- Discovery
+- Framing
+title: Team Values
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
-
+when:
+- Although this activity can be done as early as when a project and/or consulting
+  engagement kicks off, the first day of product development (after a D&F is wrapping
+  up) typically works best. The key is to have the full core team present. Sometimes
+  that isn’t possible until development kicks off.
+why:
+- By setting team values together, team members are able to understand what is important
+  to their colleagues and what behaviors are expected day to day. It can help fast
+  forward the early stages of team formation (Forming, Storming, Norming, and Performing)
+  and provide a baseline for feedback.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Write the following prompts on the whiteboard:
@@ -71,5 +78,3 @@ Coming soon: How We Work
 ## Recommended Reading
 
 None at the moment
-
-

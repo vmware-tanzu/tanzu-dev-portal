@@ -1,15 +1,13 @@
 ---
-title: "Improving the Performance of Apache Geode Persistence Recovery"
-
-description: >
-        This is our journey into how we improved the system recovery performance.
 date: 2020-07-20
-type: blog
+description: 'This is our journey into how we improved the system recovery performance.
 
-# Author(s)
-team: 
+  '
+lastmod: '2021-04-22'
+team:
 - Jianxia Chen
- 
+title: Improving the Performance of Apache Geode Persistence Recovery
+type: blog
 ---
 
 ## Introduction
@@ -84,5 +82,3 @@ For backward compatibility, we introduced a new boolean system property `paralle
 ## Conclusion
 
 Geode shared-nothing persistence architecture is powerful for fast parallel recovery of nodes or an entire cluster. With recent performance improvements, we further removed the unnecessary thread synchronization during persistence recovery. We have also introduced parallel disk store recovery within each Geode server. The improvement has made Geode parallel recovery even faster.
-
-

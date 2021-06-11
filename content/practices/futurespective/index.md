@@ -1,28 +1,42 @@
 ---
+date: '2021-04-16'
+description: Using the "sailboat" retrospective format, start from the goal to find
+  ways on how to get there. Teams place themselves in the future by imagining that
+  their goal has been reached. By exploring their imaginary past, teams agree how
+  to work together to reach the goal.
+image: /futurespective/cover.png
+lastmod: '2021-04-16'
+length: 1-2 hours
+linkTitle: Futurespective
+miro_template_url: https://metroretro.io/templates/the-sailboat-retrospective
+participants: Core Team
+remote: false
+tags:
+- Scoping
+- Kickoff
+- Discovery
+- Framing
+- Inception
+- Transition
+- Modernization
+- Delivery
 title: '"Sailboat" Futurespective'
-linkTitle: "Futurespective"
-description: "Using the \"sailboat\" retrospective format, start from the goal to find ways on how to get there. Teams place themselves in the future by imagining that their goal has been reached. By exploring their imaginary past, teams agree how to work together to reach the goal."
-# Note: remove any tags that are not relevant.
-tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
-length: "1-2 hours"
-participants: "Core Team"
-# custom "cover" image example: "boris/boris.png"
-image: "/futurespective/cover.png" 
-lastmod: "2021-04-14"
-why: 
-- Futurespectives enable a team to envision the challenges and successes as they work towards a common goal. This will empower members to proactively align on drivers contributing to the goal, as well as minimize/mitigate “anchors” that may hinder the team from achieving it.
-when:
-- Ideally, the team should perform the futurespective when the problem and solution space has been defined. This will better allow the team to align their working agreements towards goals and objectives.
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies
 - Painter’s tape
-
-miro_template_url: https://metroretro.io/templates/the-sailboat-retrospective
-
-remote: false
+when:
+- Ideally, the team should perform the futurespective when the problem and solution
+  space has been defined. This will better allow the team to align their working agreements
+  towards goals and objectives.
+why:
+- Futurespectives enable a team to envision the challenges and successes as they work
+  towards a common goal. This will empower members to proactively align on drivers
+  contributing to the goal, as well as minimize/mitigate “anchors” that may hinder
+  the team from achieving it.
 ---
+
 ## How to Use this Method
 
 ### Sample Agenda & Prompts

@@ -1,14 +1,15 @@
 ---
-title: "Calculating the Size of an Apache Geode GatewaySender Queue"
 data-featured: false
-description: >
-        This article describes how to use the ObjectGraphSizer to calculate the size of a GatewaySender queue.
 date: 2021-01-19
-type: blog
+description: 'This article describes how to use the ObjectGraphSizer to calculate
+  the size of a GatewaySender queue.
 
-# Author(s)
-team: 
+  '
+lastmod: '2021-04-22'
+team:
 - Barry Oglesby
+title: Calculating the Size of an Apache Geode GatewaySender Queue
+type: blog
 ---
 
 ## Introduction

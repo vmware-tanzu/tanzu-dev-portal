@@ -1,23 +1,26 @@
 ---
-title: Spring Cloud Stream Demo
-description: >
-    Simple Event Driven Microservices with Spring Cloud Stream
+date: '2020-04-21'
+description: 'Simple Event Driven Microservices with Spring Cloud Stream
+
+  '
+lastmod: '2020-05-19'
+patterns:
+- Eventing
+readme: true
+repo: https://github.com/benwilcock/spring-cloud-stream-demo
 summary:
 - Simple Event Driven Microservices with Spring Cloud Stream
-topics:
-- Spring
-- Messaging and Integration
-- Microservices
-- Event Streaming
 tags:
 - Spring
 - Microservices
 - Event Streaming
 - Spring Cloud Stream
-patterns:
-- Eventing
 team:
 - Ben Wilcock
-repo: https://github.com/benwilcock/spring-cloud-stream-demo
-readme: true
+title: Spring Cloud Stream Demo
+topics:
+- Spring
+- Messaging and Integration
+- Microservices
+- Event Streaming
 ---

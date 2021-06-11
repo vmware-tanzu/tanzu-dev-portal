@@ -1,11 +1,12 @@
 ---
-title: "Measuring the Immeasurable"
-description: > 
-    We summarize one fascinating and helpful section of How To Measure Anything by Douglas Hubbard, along with our notes and thoughts, as this section is particularly helpful for the Product Valuation workshop. 
-date: "2021-03-22"
-# Author(s)
-team: 
+date: '2021-03-22'
+description: "We summarize one fascinating and helpful section of How To Measure Anything
+  by Douglas Hubbard, along with our notes and thoughts, as this section is particularly
+  helpful for the Product Valuation workshop. \n"
+lastmod: '2021-03-25'
+team:
 - VMware Tanzu Labs
+title: Measuring the Immeasurable
 ---
 
 _[How To Measure Anything](https://www.howtomeasureanything.com/)_ by Douglas Hubbard is a popular book at VMware Tanzu Labs. In it, Hubbard takes a strong, opinionated stance on both the concept of measurement, the value of measurement, and how to measure things that are considered immeasurable.

@@ -1,27 +1,32 @@
 ---
-title: "Solution Brainstorming"
-tags: ["Framing", "Remote"]
-length: "1.5 - 2 hours"
-participants: "Core team"
-image: "default-cover.png"
-description: "Extract solutions that could potentially address the identified problem(s)"
-lastmod: "2019-02-05"
-
-why:
-- We do this activity so that the entire team -— product managers, designers, and engineers -— is able to document their ideas and contribute to the overall solution, enhancing our shared responsibility for the success of the product. After all, no single discipline has a monopoly on good ideas!
-
-when:
-- Solution Brainstorming is often one of the first times that we begin to explore solutions and features. We run this activity after identifying and prioritizing insights & problems because we want to solve for the most important things first.
-
+date: '2021-02-09'
+description: Extract solutions that could potentially address the identified problem(s)
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1.5 - 2 hours
+participants: Core team
+tags:
+- Framing
+- Remote
+title: Solution Brainstorming
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Prioritized insights & problems
 - Large sheets (11"x17") of paper / A3 paper
 - Large sticky notes
 - Small sticky notes
 - Sharpies
-
+when:
+- Solution Brainstorming is often one of the first times that we begin to explore
+  solutions and features. We run this activity after identifying and prioritizing
+  insights & problems because we want to solve for the most important things first.
+why:
+- We do this activity so that the entire team -— product managers, designers, and
+  engineers -— is able to document their ideas and contribute to the overall solution,
+  enhancing our shared responsibility for the success of the product. After all, no
+  single discipline has a monopoly on good ideas!
 ---
+
 ## How to Use this Method
 
    {{% callout %}}

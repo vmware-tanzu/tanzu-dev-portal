@@ -1,12 +1,13 @@
 ---
-title:  "Getting Started with Tanzu GemFire on TAS"
-link-title: "Getting Started with Tanzu GemFire on TAS"
+date: '2021-04-22'
+description: How to set up a Tanzu GemFire service instance on the Tanzu Application
+  Service.
+lastmod: '2021-04-22'
+link-title: Getting Started with Tanzu GemFire on TAS
 parent: Spring for Apache Geode
-weight: 2
+title: Getting Started with Tanzu GemFire on TAS
 type: data-guides
-
-description: How to set up a Tanzu GemFire service instance on the Tanzu Application Service.
-
+weight: 2
 ---
 
 This guide will walk you through creating and testing a Tanzu GemFire service instance on the Tanzu Application Service (TAS) using a `Hello, World!` client application.
@@ -190,10 +191,4 @@ Congratulations! You’re ready to start using Tanzu GemFire. You will need to c
  
   * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
    
-  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg). 
-
-
- 
-
- 
- 
+  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).

@@ -1,20 +1,20 @@
 ---
-title: "What’s New in .NET Core for Containers and Microservices"
-description: >
-    Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads 
 date: 2020-07-22
-topics:
-- Containers
-- Microservices
+description: "Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads
+  \n"
+lastmod: '2021-02-22'
+patterns:
+- Deployment
 tags:
 - Containers
 - Microservices
 - .NET
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Santiago Vasquez
+title: What’s New in .NET Core for Containers and Microservices
+topics:
+- Containers
+- Microservices
 ---
 
 Throughout most of my career as a developer, I have written code using .NET (mostly C#). But lately, I have been spending more time with Spring, and I keep hearing comments about exciting changes in .NET around containers. I decided it was time to go back and check out what I had missed. This article highlights some of these changes, emphasizing the ones most relevant to containers and microservices; after all, I am part of the [VMware Tanzu Portfolio](https://tanzu.vmware.com/tanzu). 

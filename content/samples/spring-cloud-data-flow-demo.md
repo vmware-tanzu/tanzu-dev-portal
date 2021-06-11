@@ -1,24 +1,27 @@
 ---
-title: Spring Cloud Data Flow Sample
-description: >
-    Building Microservice Data Streams With Spring Cloud Data Flow
+date: '2020-08-11'
+description: 'Building Microservice Data Streams With Spring Cloud Data Flow
+
+  '
+lastmod: '2020-09-17'
+patterns:
+- API
+- Eventing
+readme: true
+repo: https://github.com/benwilcock/spring-cloud-dataflow-demo
 summary:
 - Building Microservice Data Streams With Spring Cloud Data Flow
-topics:
-- Spring
-- Microservices
-- Event Streaming
 tags:
 - Spring
 - Reactive
 - Microservices
 - Event Streaming
 - Spring Cloud Data Flow
-patterns:
-- API
-- Eventing
 team:
 - Ben Wilcock
-repo: https://github.com/benwilcock/spring-cloud-dataflow-demo
-readme: true
+title: Spring Cloud Data Flow Sample
+topics:
+- Spring
+- Microservices
+- Event Streaming
 ---

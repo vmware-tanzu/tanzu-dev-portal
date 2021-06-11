@@ -1,19 +1,20 @@
 ---
-title: "From Commit to Container"
-featured: false
-description: >
-    Building Containers from your code.
 date: 2020-05-29
-topics:
-- Containers
+description: 'Building Containers from your code.
+
+  '
+featured: false
+lastmod: '2020-09-17'
+patterns:
+- Deployment
 tags:
 - Buildpacks
 - Concourse
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Tyler Britten
+title: From Commit to Container
+topics:
+- Containers
 ---
 
 While running software in containers is very popular, it can be a little confusing to figure out the best way to get your code into a container. Now that the industry is mostly unified on Open Container Initiative (OCI) Standard container image formats, they can be built in any number of ways. 

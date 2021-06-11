@@ -1,11 +1,13 @@
 ---
-title:  "What are Containers?"
-weight: 1
-topics:
-- Containers
+date: '2021-02-26'
+lastmod: '2021-02-26'
 tags:
 - Containers
 - Microservices
+title: What are Containers?
+topics:
+- Containers
+weight: 1
 ---
 
 Containers are logical constructs that contain the binaries for an application. Container binaries run at a higher level of infrastructure abstraction than virtual machines. In contrast to a virtual machine, which provides an entire operating system to provide a runtime environment for an application's binaries, a container bundles only an application's binaries and its required libraries. 

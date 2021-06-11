@@ -1,20 +1,23 @@
 ---
-title:  "Building an API with Spring Boot"
-linkTitle: "Spring Boot API"
-subsection: "Spring Boot"
-description: Learn how to quickly develop a REST API from start to finish to build a microservice from scratch with this Spring Boot guide. 
-weight: 2
-topics:
-- Spring
-- Microservices
+date: '2020-05-05'
+description: Learn how to quickly develop a REST API from start to finish to build
+  a microservice from scratch with this Spring Boot guide.
+lastmod: '2021-03-07'
+linkTitle: Spring Boot API
+patterns:
+- API
+subsection: Spring Boot
 tags:
 - Spring Boot
 - REST
 - API
-patterns:
-- API
 team:
 - Brian McClain
+title: Building an API with Spring Boot
+topics:
+- Spring
+- Microservices
+weight: 2
 ---
 
 Spring Boot is a framework built on top of Spring that focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will demonstrate how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo).

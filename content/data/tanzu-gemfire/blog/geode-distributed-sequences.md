@@ -1,13 +1,18 @@
 ---
-title: "Geode Distributed Sequences"
-description: >
-        A sequence, also known as a counter, is a feature supported by some database systems to produce unique values on demand, generally increasing the current value by 1 and returning the resulting value to the caller. Instead of embedding the sequence generation within the real-time processing, use the Geode Sequence Generator and invoke the service occasionally to retrieve a big enough set of counters to work on.
 date: 2020-03-09
-type: blog
+description: 'A sequence, also known as a counter, is a feature supported by some
+  database systems to produce unique values on demand, generally increasing the current
+  value by 1 and returning the resulting value to the caller. Instead of embedding
+  the sequence generation within the real-time processing, use the Geode Sequence
+  Generator and invoke the service occasionally to retrieve a big enough set of counters
+  to work on.
 
-# Author(s)
-team: 
+  '
+lastmod: '2021-04-22'
+team:
 - Juan Jose Ramos
+title: Geode Distributed Sequences
+type: blog
 ---
 
 ## Introduction
@@ -89,4 +94,3 @@ Write an [RFC](https://cwiki.apache.org/confluence/display/GEODE/Lightweight+RFC
 [Apache Geode Repository](https://github.com/apache/geode)
 
 [Geode Sequence Generator Repository](https://github.com/jujoramos/geode-sequence-generator)
-

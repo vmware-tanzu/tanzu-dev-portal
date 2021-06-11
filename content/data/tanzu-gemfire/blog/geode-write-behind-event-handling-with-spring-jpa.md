@@ -1,15 +1,15 @@
 ---
-title: "Geode Write-Behind Event Handling with Spring JPA"
-description: >
-        A small project to show how an Apache Geode write-behind event handling can be implemented with Spring Data JPA and Spring Boot Data Geode.
 date: 2020-06-12
-type: blog
+description: 'A small project to show how an Apache Geode write-behind event handling
+  can be implemented with Spring Data JPA and Spring Boot Data Geode.
 
-# Author(s)
-team: 
+  '
+lastmod: '2021-04-22'
+team:
 - Juan Jose Ramos
+title: Geode Write-Behind Event Handling with Spring JPA
+type: blog
 ---
-
 
 ## Introduction
 [Apache Geode](https://geode.apache.org/) is an in-memory data grid that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. One of the most used features of Apache Geode is the *Write-Behind Cache Event Handling* which allows the user to keep external databases in sync with the data stored within an Apache Geode region(s).
@@ -353,7 +353,3 @@ The test is straightforward and simple: we check that the database is empty, ins
 Check out the [geode-async-listener-spring-jpa](https://github.com/jujoramos/geode-async-listener-spring-jpa) project and play around with it, you can add Transaction Management and Error Handling to the AsyncEventListener, build a cluster, etc.
 
 Check out [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/), you can do way more things more easily and quickly, with just some extra annotations!.
-
-
-
-

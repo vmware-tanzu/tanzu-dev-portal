@@ -1,14 +1,18 @@
 ---
-title: "Verifying Apache Geode Region Consistency in Different Distributed Systems"
-description: >
-        Apache Geode provides a mechanism to asynchronously distribute batches of events between two disparate DistributedSystems called a WAN topology. The events are stored in queues in the local DistributedSystem before being batched and distributed. The default behavior can be changed with the gemfire.GatewaySender.REMOVE_FROM_QUEUE_ON_EXCEPTION java system property. Setting this property to false will cause all batches of events to be retried indefinitely until they succeed.
-        The default behavior can cause a Region’s data in each site to become inconsistent. This article describes a way to verify that a Region’s data in two WAN sites is consistent.      
 date: 2020-06-11
-type: blog
-
-# Author(s) 
+description: "Apache Geode provides a mechanism to asynchronously distribute batches
+  of events between two disparate DistributedSystems called a WAN topology. The events
+  are stored in queues in the local DistributedSystem before being batched and distributed.
+  The default behavior can be changed with the gemfire.GatewaySender.REMOVE_FROM_QUEUE_ON_EXCEPTION
+  java system property. Setting this property to false will cause all batches of events
+  to be retried indefinitely until they succeed. The default behavior can cause a
+  Region’s data in each site to become inconsistent. This article describes a way
+  to verify that a Region’s data in two WAN sites is consistent.      \n"
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby  
+- Barry Oglesby
+title: Verifying Apache Geode Region Consistency in Different Distributed Systems
+type: blog
 ---
 
 ## Introduction
@@ -236,4 +240,3 @@ There are a number of Apache Geode enhancements that would be helpful in this sc
 * connect a client Region to two Pools simultaneously and to choose on which to invoke an operation
 * connect a client Region to two Pools simultaneously in a primary / secondary arrangement
 * automatically or manually failover and failback between Pools
-

@@ -1,12 +1,12 @@
 ---
-title: "Save Your Stack: Build Cloud Native Apps with Spring, Kubernetes and Cassandra"
-description: >
-    Build modern, cloud native apps today using the latest innovations from Spring, Cassandra and Kubernetes
 date: 2020-07-08
-topics:
-- Spring
-- Containers
-- Kubernetes
+description: 'Build modern, cloud native apps today using the latest innovations from
+  Spring, Cassandra and Kubernetes
+
+  '
+lastmod: '2020-09-17'
+patterns:
+- API
 tags:
 - Containers
 - API
@@ -15,11 +15,13 @@ tags:
 - Spring Boot
 - Spring Cloud
 - Kubernetes
-patterns:
-- API
-# Author(s)
-team: 
+team:
 - Chris Splinter
+title: 'Save Your Stack: Build Cloud Native Apps with Spring, Kubernetes and Cassandra'
+topics:
+- Spring
+- Containers
+- Kubernetes
 ---
 
 You can start to build modern, cloud native apps today using the latest innovations from Spring, Cassandra and Kubernetes. This blog will show you code samples and a fully working demo to get you up to speed in minutes with these open-source technologies.

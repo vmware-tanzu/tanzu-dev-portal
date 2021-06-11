@@ -1,14 +1,16 @@
 ---
-title: "Digital Transformation: The Coder’s Business Codex"
-featured: false
-description: >
-    Coté demystifies what the term "digital transformation" means for developers.
 date: 2020-11-23
+description: 'Coté demystifies what the term "digital transformation" means for developers.
+
+  '
+featured: false
+lastmod: '2021-01-19'
+patterns: null
+team:
+- Michael Coté
+title: 'Digital Transformation: The Coder’s Business Codex'
 topics:
 - Agile
-patterns:
-team: 
-- Michael Coté
 ---
 
 Who will speak for the various, meaningless phrases and jargon that fills our ears? “Digital transformation,” for example. Year after year, surveys of Very Important People in the form of Gartner’s CIO Agenda Report and others show rising interest, even “do or die” desire for digital transformation. These efforts seem to always be behind: They’re either underfunded or in the process of getting more funding; skilled people are consistently hard to find. And the headwinds! Always with [the macro-global headwinds](https://twitter.com/cote/status/1327242407361056776).

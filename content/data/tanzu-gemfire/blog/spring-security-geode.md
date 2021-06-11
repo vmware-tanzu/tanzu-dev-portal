@@ -1,13 +1,15 @@
 ---
-title: "Spring Security & Geode"
-description: >
-        Spring Security is an extremely powerful and highly customizable framework that provides authentication, authorization, and protection against common attacks, it is the de-facto standard for securing Spring-based applications.
 date: 2020-05-27
-type: blog
+description: 'Spring Security is an extremely powerful and highly customizable framework
+  that provides authentication, authorization, and protection against common attacks,
+  it is the de-facto standard for securing Spring-based applications.
 
-# Author(s)
-team: 
+  '
+lastmod: '2021-04-22'
+team:
 - Juan Jose Ramos
+title: Spring Security & Geode
+type: blog
 ---
 
 ## Introduction

@@ -1,7 +1,9 @@
 ---
+date: '2021-05-19'
+lastmod: '2021-05-19'
+layout: single
 title: Building Containers in CI/CD Pipelines
 weight: 5
-layout: single
 ---
 
 While we explored a number of methods to build a container, they can all integrate into your CI/CD pipelines differently. Of course, your choice of CI and CD tools can also dictate how you build your container as well, so make sure you're reading the appropriate documentation and ensure that your pipelines are leveraging all of the features at your disposal.

@@ -1,9 +1,12 @@
 ---
+date: '2021-05-19'
+lastmod: '2021-05-19'
+layout: single
+related:
+- /guides/containers/cnb-gs-pack
+- /guides/containers/cnb-gs-kpack
 title: Building a Container
 weight: 3
-layout: single
-related: ["/guides/containers/cnb-gs-pack", "/guides/containers/cnb-gs-kpack"]
-
 ---
 
 There's many options that you have when deciding how you want to build the container for your code. From writing a Dockerfile by hand to automated build services, finding the right build method is an important first step. Let's take a look at a few options that exist do see the advantages and disadvantages of each!
