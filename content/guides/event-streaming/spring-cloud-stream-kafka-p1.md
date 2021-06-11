@@ -56,10 +56,8 @@ The following diagram shows Spring Cloud Stream Kafka enabling Apache Kafka Bind
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-1.svg)
 
 ### Add a Dependency to the Project
-For this example, we are using the following dependency: [spring-cloud-stream-binder-kafka](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka) (_[Hoxton.SR11](https://docs.spring.io/spring-cloud/docs/Hoxton.SR11/reference/html/)_). In later versions, the `@EnableBinding` feature will be _~~deprecated~~_ in favor of _Functional Programming_, which we will look into later.
+For this example, we are using the following dependency: `spring-cloud-stream-binder-kafka` (_[Hoxton.SR11](https://docs.spring.io/spring-cloud/docs/Hoxton.SR11/reference/html/)_). In later versions, the `@EnableBinding` feature will be _~~deprecated~~_ in favor of _Functional Programming_, which we will look into later. (for more information, see [here](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka))
 
-
-For more information, see [spring-cloud-stream-binder-kafka](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka).
 
 ```xml
 <dependency>
