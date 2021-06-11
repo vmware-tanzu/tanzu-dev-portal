@@ -11,7 +11,7 @@ weight: 1
 twitter: ""
 website: ""
 facebook: ""
-linkedin: "https://www.linkedin.com/in/whitneylee/"
+linkedin: "whitneylee"
 github: ""
 pinterest: ""
 instagram: "https://www.instagram.com/sweetlovewhitney/"
@@ -34,4 +34,3 @@ Whitney traveled the scenic route but is absolutely chuffed to have found her wa
 {{< youtube id="o2HJCGcYwoU" class="youtube-video-shortcode" >}}
 
 {{< youtube id="7rkeORD4jSw" class="youtube-video-shortcode" >}}
-
