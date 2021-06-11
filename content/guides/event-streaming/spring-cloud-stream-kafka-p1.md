@@ -28,7 +28,7 @@ This document provides a simple demonstration of how to implement your Java appl
 This document has been written for:
 
 - Developers with Java (intermediate), Spring Boot (basic) and Maven dependency management.
-- Developers interested in migrating from "Java EE" (`J2EE`, or please visit [here](https://www.oracle.com/java/technologies/javase/javanaming.html) for more info naming details) into modern application development ([12Factor](https://12factor.net)) and application containerization.
+- Developers interested in migrating from "Java EE" (`J2EE`, please visit [here](https://www.oracle.com/java/technologies/javase/javanaming.html) for naming details) into modern application development ([12Factor](https://12factor.net)) and application containerization.
 - Basic Kafka knowledge, including Brokers, Topic, and Partitions.
 
 For more about Spring Boot Background Modern Application Development or Kafka, refer to the following:
