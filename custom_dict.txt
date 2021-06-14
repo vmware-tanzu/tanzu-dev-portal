@@ -152,6 +152,7 @@ benefitting
 Berglund
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
+Bhave
 BikeIncidentsByZip
 Bikewise
 biome
@@ -963,6 +964,7 @@ machine-centric
 Maciaszek-Sharma
 [Mm]acOS
 Madhav
+Madhura
 [mM]akefile
 MapRepository
 Marcin
