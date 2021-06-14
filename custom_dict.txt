@@ -152,6 +152,7 @@ benefitting
 Berglund
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
+Bhave
 BikeIncidentsByZip
 Bikewise
 biome
@@ -211,6 +212,7 @@ cali
 calico-kube-controller
 calicoctl
 callout
+Campuzano
 Cao
 Carducci
 Carvel('s)?
@@ -299,6 +301,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+CoRoutines
 Corry
 CORS
 cortado
@@ -458,6 +461,7 @@ EclipseLink
 ECMP
 eCommerce
 ECR
+EDA
 EE
 EFK
 EFS
@@ -547,6 +551,7 @@ Gabry
 GAC
 Galystan
 [Gg]amestorming
+Gamez
 Gamov
 Gandhi
 Gangway
@@ -961,6 +966,7 @@ machine-centric
 Maciaszek-Sharma
 [Mm]acOS
 Madhav
+Madhura
 [mM]akefile
 MapRepository
 Marcin
@@ -1185,6 +1191,7 @@ Pichler
 pickab(le|ility)?
 PID
 Pilimon
+[Pp]inniped
 [Pp]ip[Xx]('s)?
 PKCS
 PKI
@@ -1239,6 +1246,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Programadoras
 programmatically
 [Pp]rometheus
 prometheus:15020
@@ -1542,6 +1550,7 @@ Tilt(file|Cloud)?
 timebox(ed)?
 TimingGatewayEventFilter
 Timo
+TKG
 tlberglund
 TLS(-enabled)?
 [Tt]o[Dd]o
