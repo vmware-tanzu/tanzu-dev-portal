@@ -301,6 +301,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+CoRoutines
 Corry
 CORS
 cortado
@@ -460,6 +461,7 @@ EclipseLink
 ECMP
 eCommerce
 ECR
+EDA
 EE
 EFK
 EFS
