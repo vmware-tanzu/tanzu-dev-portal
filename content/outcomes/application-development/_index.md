@@ -37,7 +37,7 @@ The following topics are covered:
 * Test Driven Development (coming soon)
 * Product Validation (coming soon)
 * User Stories (coming soon)
-* Distributed, Remote, and Asynchronous Work (coming soon)
+* [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
 
 
 ## Where can I share my feedback
