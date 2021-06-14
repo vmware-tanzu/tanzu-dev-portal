@@ -1116,11 +1116,6 @@ body.tv-episode {
   }
 }
 
-.flex-495 {
-  @media (min-width: 992px) {
-    flex: 0 0 49.5%;
-  }
-}
 .flex-315 {
   @media (min-width: 992px) {
     flex: 0 0 31.5%;
@@ -1198,9 +1193,14 @@ body .workshops-hero {
   background-color: transparent !important;
   padding-bottom: 0px !important;
   min-height: auto !important;
-
+}
+body .outcomes-hero,
+body .workshops-hero {
   .lead {
     max-width: 920px;
+    @media (min-width: 992px) {
+      max-width: 620px;
+    }
   }
 }
 
