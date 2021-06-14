@@ -1,14 +1,13 @@
-<div class="outcomes-index row justify-content-between flex-lg-nowrap">
-    {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
-    {{ $parent := .Page }}
+{{ $pages := (where .Pages ".Params.parent" "eq" nil) }}
+<div class="section-index">
+    <div class="row">
     {{ range $pages }}
-    {{ if .IsSection }}
-    {{ if eq .Parent $parent }}
-    <a class="h-auto linked-box td-box--gray-850 pr-3 p-4 mb-3 col-lg-6 col-12 mr-lg-3" href="{{ .RelPermalink }}">
-        <h4 class="link mt-3">{{- .Title -}}</h4>
-        <p>{{ .Description | markdownify }}</p>
-    </a> 
+        <div class="col-lg-4 px-2 px-lg-2 mb-3">
+            <a class="linked-box td-box--gray-darkest px-4 py-2 h-100" href="{{ .RelPermalink }}">
+                <h4 class="link mt-3">{{- .LinkTitle -}}</h4>
+                <p>{{ .Description | default .Title | markdownify }}</p>
+            </a>
+        </div>
     {{ end }}
-    {{ end }}
-    {{ end }}
+    </div>  
 </div>
