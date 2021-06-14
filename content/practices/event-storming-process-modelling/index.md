@@ -54,11 +54,11 @@ The output from these workshops can be used to discover, validate or design a sy
     - Questions: If a question cannot be answered straight away then leave it on the board and return to it later.
     - Grammar: Add grammar appropriately but do not get bogged down by it
       1. Events: These represent events that are "Interesting" to the wider system. When understanding what is "interesting", you might refer to the description given by Martin Fowler in his article [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
-      1. Commands: An action that must be performed due to policy, and produces one or more outcomes
       1. Policies: This sticky represents a decision to do something: "When `<previous event>` `<actor>` `<always, sometimes, if.. then>` `<task>`
       1. Actors: This sticky represents a human interaction and should be placed with policies to identify who is responsible of making the decision and performing the task, a policy without an actor is automated
-      1. Tools: external/3rd party tools such as; email, excel, notepad, or any required COTS application
+      1. Action: An action that must be performed due to policy and produces one or more interesting events
       1. Read Models: Data required to make decisions or perform commands
+      1. System: external/3rd party tools such as; email, excel, notepad, or any required COTS application
       Note: it does not always need to happen in this order and more grammar may be added, so it is best to leave enough space or be prepared to shift post-its further to the right as you make changes.
     - Negative/Alternative Outcomes: If a command can result in multiple or alternative events then all events should be placed vertically
     - Pain Points and Opportunities: Place a sticky to represent any pain points and any opportunities that are identified at the time. Pain points can be around the process itself or the current system or tools supporting the process
@@ -138,3 +138,5 @@ Events: Finding suitable events can be the most challenging part of Process Mode
 ![This is the placeholder for sample 2](/images/practices/event-storming-process-modelling/SampleProcessModellingBoard.JPG)
 ![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleSoftwareModellingBoard.JPG)
 ## Recommended Reading
+- [Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
+- [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
