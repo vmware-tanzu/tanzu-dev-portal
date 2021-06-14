@@ -153,6 +153,7 @@ benefitting
 Berglund
 BestEffort
 BGP(Configuration|-capable|Peer(s)?)?
+Bhave
 BikeIncidentsByZip
 Bikewise
 biome
@@ -302,6 +303,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+CoRoutines
 Corry
 CORS
 cortado
@@ -461,6 +463,7 @@ EclipseLink
 ECMP
 eCommerce
 ECR
+EDA
 EE
 EFK
 EFS
@@ -966,6 +969,7 @@ machine-centric
 Maciaszek-Sharma
 [Mm]acOS
 Madhav
+Madhura
 [mM]akefile
 MapRepository
 Marcin
