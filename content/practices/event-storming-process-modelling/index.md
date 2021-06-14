@@ -41,7 +41,7 @@ The output from these workshops can be used to discover, validate or design a sy
        - Pre-conditions: Identify events which need to have happened before this process can begin and put them in a greyed area on the left with the title Pre-Conditions
        - Post-conditions: Identify at least one suitable event which describes the optimal outcome of the process
        - Arrange any remaining events in a chronological order from left to right between the pre-conditions and optimal outcomes. Do not worry about accuracy, as the events are narrated, be prepared to change, add or remove events
-     - Add a grammar guide as shown  ![This is the placeholder for grammar](/images/practices/event-storming-process-modelling/Grammar.PNG)
+     - Add a grammar guide as shown  ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar.png)
 
 1. First Narration: Attempt to narrate a `golden path` through the board, describing the process of events as they happen from left to right. Adjust and add grammar as necessary to reach a consensus of the process.
     - Roles: 
@@ -53,30 +53,30 @@ The output from these workshops can be used to discover, validate or design a sy
 
     - Questions: If a question cannot be answered straight away then leave it on the board and return to it later.
     - Grammar: Add grammar appropriately but do not get bogged down by it
-      1. Events: These represent events that are "Interesting" to the wider system. When understanding what "interesting" means, you might refer to the description given by Martin Fowler in his blog about Event-Driven systems
-      2. Commands: An action that must be performed due to policy, and produces one or more outcomes
-      3. Policies: This sticky represents a decision to do something: "When `<previous event>` `<actor>` `<always, sometimes, if.. then>` `<task>`
-      4. Actors: This sticky represents a human interaction and should be placed with policies to identify who is responsible of making the decision and performing the task, a policy without an actor is automated
-      5. Tools: external/3rd party tools such as; email, excel, notepad, or any required COTS application
-      6. Read Models: Data required to make decisions or perform commands
+      1. Events: These represent events that are "Interesting" to the wider system. When understanding what is "interesting", you might refer to the description given by Martin Fowler in his article [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
+      1. Commands: An action that must be performed due to policy, and produces one or more outcomes
+      1. Policies: This sticky represents a decision to do something: "When `<previous event>` `<actor>` `<always, sometimes, if.. then>` `<task>`
+      1. Actors: This sticky represents a human interaction and should be placed with policies to identify who is responsible of making the decision and performing the task, a policy without an actor is automated
+      1. Tools: external/3rd party tools such as; email, excel, notepad, or any required COTS application
+      1. Read Models: Data required to make decisions or perform commands
       Note: it does not always need to happen in this order and more grammar may be added, so it is best to leave enough space or be prepared to shift post-its further to the right as you make changes.
     - Negative/Alternative Outcomes: If a command can result in multiple or alternative events then all events should be placed vertically
     - Pain Points and Opportunities: Place a sticky to represent any pain points and any opportunities that are identified at the time. Pain points can be around the process itself or the current system or tools supporting the process
 
-3. Narrate the process again, including the policies and commands and add or correct any grammar along the way. 
-   You can repeat this until you have agreed on at least one end-to-end slice through the process
+1. Narrate the process again, adding any missing grammar or correcting inaccuracies along the way. 
+   You can repeat this until you are satisfied you have enough of the process to identify a thin slice.
 
-4. Review Questions and Pain Points: Try to answer as many questions as possible and rationalise pain points and opportunities
+1. Review Questions and Pain Points: Try to answer as many questions as possible and rationalise pain points and opportunities
 
 #### Success/Expected Outcomes
    - Capture information to assist further in the development process
      - Ubiquitous Language
      - Domain Events
+     - Policies for Decision Making 
+     - Actors
      - Read Models
      - Manual Actions + System Commands
-     - Decision Making Policies
-     - External Integration
-     - Existing Applications
+     - Integrations with tools and apps
      - Pain Points + Opportunities
    - Identify one or more thin slices. Pick out a set of events that represents an end-to-end path through the process. Usually you will start with a simplified version of the `golden path` and add more slices as you choose to tackle more complexity and more outcomes. 
 
@@ -94,67 +94,50 @@ This is an extension of Process Modelling and is represented by Alberto Brandoli
 #### Sample Agenda & Prompts
 1. Arrange the board:
    - Start with a copy of an existing Process Modelling board
-   - Add an additional piece of grammar as shown: 
+   - Add an additional piece of grammar as shown ![This is the placeholder for grammar](/images/practices/event-storming-process-modelling/software-modelling-grammar.png) 
 
-1. Narrate the story and identify aggregates for each command
+1. Narrate the story and identify solutions for each command
     - Grammar: Add grammar appropriately but do not get bogged down by it
-      1. Aggregate: This represents either an existing or proposed aggregate for executing a given command. Repeat the same aggregate if they have multiple commands
-
+      1. Software: This represents either an existing or proposed solutions for executing a given command
 #### Success/Expected Outcomes
-  - Object Model
+The primary focus of this is to define a domain driven solution to support the process, however it can also be used to identify where existing solutions exist and help to map a migration path from legacy.
+  - Software Model
 
 ### When discovering a pipeline or workflow
-Often when using Process Modelling to investigate or discover small workflows or pipelines, eventstorming can be done as a short session as part of the process modelling or skipped entirely in favour narration. Also grammar might be a lot more flexible, as you may only need events to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
+Often when using Process Modelling to investigate or discover specific workflows or pipelines, eventstorming can be done as a short session as part of the process modelling or skipped entirely in favour narration. Also grammar might be a lot more flexible, as you may only need events to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
 
 #### Sample Agenda & Prompts
-1. Arrange the board:
-     - Label the board to identify a name for the process being explored
-     - Add a grammar guide as shown  ![This is the placeholder for grammar](/images/practices/event-storming-process-modelling/Grammar.PNG)
-     - Post-conditions: Identify at least one suitable event which describes the optimal outcome of the process
-     - Pre-conditions: Identify at least one event, which need to have happened before this process can begin and put it in a greyed area on the left with the title Pre-Conditions
+For the most part the agenda is the same as formal process modelling, however the grammar is more ad-hoc and there is some initial discovery as you are not starting with an Event Storming board
+
+1. Arrange the board: 
+     - Start by identifying the target process and label the board
+     - Add the grammar as with the formal method
+     - Discover at least one suitable precondition and one outcome and arrange them as with the formal method
 
 1. Optional: At this point you can ask participants to "event storm" events in between, but this should be time-boxed to 10 minutes
 
-1. First Narration: Attempt to narrate a `golden path` through the board, describing the process of events as they happen from left to right. Adjust and add grammar as necessary to reach a consensus of the process.
-    - Roles: 
-       - There are typically 3 roles; one Narrater, one Scribe and the remaining participants are The Audience
-         - A Narrator reads through the process from left to right
-         - The Audience listens to the narrator and assists in discovering the process
-         - A Scribe records the process on the board
-       - Any participant can take on any of these roles and it should be encouraged for roles to rotate
+1. First Narration: As with the formal method, attempt to narrate a `golden path` through the board.
+     - If you did not event storm then your main goal here is to discover interesting events as you try to identify how the process gets from precondition to outcome
+  
+1. Narrate the process again, as with the formal method you can include more grammar and correct inaccuracies. 
+   To save time you can identify only the grammar that is relevant to the discussion, you do not need to find all grammar for all events.
 
-    - Questions: If a question cannot be answered straight away then leave it on the board and return to it later.
-    - Grammar: Add grammar appropriately but do not get bogged down by it
-      1. Events: These represent events that are "Interesting" to the wider system. When understanding what "interesting" means, you might refer to the description given by Martin Fowler in his blog about Event-Driven systems
-      2. Commands: An action that must be performed due to policy, and produces one or more outcomes
-      3. Policies: This sticky represents a decision to do something: "When `<previous event>` `<actor>` `<always, sometimes, if.. then>` `<task>`
-      4. Actors: This sticky represents a human interaction and should be placed with policies to identify who is responsible of making the decision and performing the task, a policy without an actor is automated
-      5. Tools: external/3rd party tools such as; email, excel, notepad, or any required COTS application
-      6. Read Models: Data required to make decisions or perform commands
-      Note: It is not always discovered in this order and more grammar may be added, so it is best to leave enough space or be prepared to shift post-its further to the right as you make changes.
-    - Negative/Alternative Outcomes: If a command can result in multiple or alternative events then all events should be placed vertically
-    - Pain Points and Opportunities: Place a sticky to represent any pain points and any opportunities that are identified at the time. Pain points can be around the process itself or the current system or tools supporting the process
-      
-1. Narrate the process again, including the policies and commands and correcting any inaccuracies along the way.
-
-1. Review Questions and Pain Points: Try to answer as many questions as possible and rationalise pain points and opportunities
+1. Review Questions and Pain Points: As with he formal method try to answer as many questions as possible and rationalise pain points and opportunities
 
 #### Success/Expected Outcomes
-   - Capture information to assist further in the development process
-     - Interesting Events
-     - Data Models
-     - Manual Actions + System Commands
-     - Decision Making Policies
-     - External Integration
-     - Existing Applications
-     - Pain Points + Opportunities
+   Generally you are looking for the same types of outcome as the formal method, however the sessions tend to be shorter and more focused on the flow of the process, and so only Events and Integrations are required
 
 #### Facilitator Notes & Tips
 
-Warning: The pipeline and workflow variation can often lead to "Passive-Aggressive Commands" as described by Marting Fowler, sometimes this can be useful to better understand the problem space, but any architecture that is derived from the output should take that into account.
+Events: Finding suitable events can be the most challenging part of Process Modelling. 
+ - When wording the event, try to be passive in its description. So rather than "Customer placed an order", you would say "Order was placed"
+ - Try to avoid "Passive-Aggressive Commands" as described in Martin Fowlers' blog [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html). However don't ignore them, often they come about because a command is important and it may be the negative result of this command that you want to capture
 
 ## Real World Examples
 ![This is the placeholder for sample 1](/images/practices/event-storming-process-modelling/SampleEventStormingAndModellingBoard.JPG)
 ![This is the placeholder for sample 2](/images/practices/event-storming-process-modelling/SampleProcessModellingBoard.JPG)
 ![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleSoftwareModellingBoard.JPG)
+![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleProcessModellingAndBorisBoard.JPG)
 ## Recommended Reading
+[Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
+[What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
