@@ -233,6 +233,7 @@ changeAlertLevel
 [Cc]hargeback
 ChartMuseum
 chartPath
+ChatOps
 checkboxes
 checkConnection
 Christoph
@@ -1210,6 +1211,7 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+[Pp]ost-mortem
 Postfacto
 [Pp]ostgres
 POSTROUTING
@@ -1685,6 +1687,7 @@ Webpage
 WebSocket
 WebSphere
 WeChat
+Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
 Wilcock('s)?
