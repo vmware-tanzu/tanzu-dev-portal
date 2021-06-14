@@ -82,7 +82,7 @@ Balanced teams have a host of benefits, some top ones are:
 | Consensus building | • Having a balanced team dedicated to a product and highly collaborative during product development allows for rapid context sharing and fewer meetings.<br><br>• The different disciplines can break out of their siloed domains and create more room for compromise and collaboration.|
 | Modularity of the team | Shared product knowledge on the team across disciplines allows the team to not get blocked when a team member isn’t present.<br><br> • Creates more flexibility for team members to rotate to other teams and easily onboard new members. |
 | Autonomy in decision making | • A shared sense of product ownership allows the team to feel confident in decision making, empowered to lead, able to ask another team member for help, and knows when to gather input from outside of the team. |
-| Cross Domain Empowerment | • Having cross discipline balanced team members like a Product Designer and a Developer pair with each other to review UI implementations together allows for much less documentation like requirements and design specification . It also creates empathy and respect for other practitioners. Designers can more easily understand technical constraints the more time they spend with developers and can incorporate those learnings into future design concepts. |
+| Cross Domain Empowerment | • Having cross discipline balanced team members like a Product Designer and a Developer pair with each other to review UI implementations together allows for much less documentation like requirements and design specification. It also creates empathy and respect for other practitioners. Designers can more easily understand technical constraints the more time they spend with developers and can incorporate those learnings into future design concepts. |
 |  |  |
 {{< /table >}}
 
@@ -98,4 +98,4 @@ Balanced teams have a host of benefits, some top ones are:
 ### Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)
 - [Lean Product Development](https://tanzu.vmware.com/content/videos/lean-product-development-by-michael-fisher)
-- [User Centered Design] (https://tanzu.vmware.com/campaigns/design)
+- [User Centered Design](https://tanzu.vmware.com/campaigns/design)
