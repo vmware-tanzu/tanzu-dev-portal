@@ -4,7 +4,7 @@ weight: 40
 layout: single
 ---
 
-Cloud Native is at the heart of modern application development endeavours. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.
+Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.
 
 ![Cloud Native Development](/images/outcomes/app-dev-onboarding/cloud-native-development.jpg)
 
@@ -16,7 +16,7 @@ In this article, you will learn to:
 - [List three major outcomes of cloud native](#outcomes)
 - Explain the main cloud native concepts for ...
 	- [application architecture](#app-archi)
-	- [software lifecycle](#sw-lifecycle)
+	- [software life-cycle](#sw-life-cycle)
 	- [supporting infrastructure](#support-infra)
 	- [team culture](#culture)
 - [Identify the twelve factors of cloud native applications](#factors)
@@ -43,7 +43,7 @@ Organizations that adopt cloud native practices and technology generally report 
 
 Cloud native concepts are numerous. The following ones are the most common. They are sorted by their context:
 - [application architecture](#app-archi)
-- [software lifecycle](#sw-lifecycle)
+- [software life-cycle](#sw-life-cycle)
 - [supporting infrastructure](#support-infra)
 - [team culture](#culture)
 
@@ -59,7 +59,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 |  |  |
 {{< table />}}
 
-### Application lifecycle {id=sw-lifecycle}
+### Application life-cycle {id=sw-life-cycle}
 
 {{< table "table" >}}
 | Concept | Definition | 
@@ -76,10 +76,10 @@ Cloud native concepts are numerous. The following ones are the most common. They
 | Concept | Definition | 
 | ------- | ---------- |
 | Container | A standard unit of software that packages code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers are typically lighter weight than full systems. They make applications more atomic and portable across environments.
-| Container orchestrator | Automates container lifecycles from deployment and scaling, to more advanced management operations. While tools such as Docker create images and run containers, you also need tools to manage them. When operating at scale, a container orchestrator like   [Kubernetes](https://kubernetes.io/) is essential to manage common orchestrator tasks such as (anti) affinity, failover, health monitoring, networking, rolling upgrades, scaling, scheduling, and service discovery .. |
+| Container orchestrator | Automates container life-cycles from deployment and scaling, to more advanced management operations. While tools such as Docker create images and run containers, you also need tools to manage them. When operating at scale, a container orchestrator like   [Kubernetes](https://kubernetes.io/) is essential to manage common orchestrator tasks such as (anti) affinity, failover, health monitoring, networking, rolling upgrades, scaling, scheduling, and service discovery .. |
 | Service mesh | A dedicated infrastructure layer facilitating service-to-service communications between services or microservices, using a proxy.  [Istio](https://istio.io/)  is an example of a service mesh framework. It simplifies observability, traffic management, security, and policy. |
 | Immutable infrastructure | An infrastructure paradigm in which servers are never modified after being deployed. If something needs to be changed, updated, or fixed, new servers built automatically with the appropriate changes are provisioned to replace the old ones. In a traditional mutable server infrastructure, servers are continually updated and modified in place. |
-| * as a Service | Infrastructure (IaaS), Container (CaaS), Platform (PaaS), Function (FaaS) or Software (SaaS) as a service are categories of cloud computing services. They provide APIs to manage on-demand lifecycles of the corresponding abstraction layers: virtualized infrastructures, containers, application platforms, functions or external software. |
+| * as a Service | Infrastructure (IaaS), Container (CaaS), Platform (PaaS), Function (FaaS) or Software (SaaS) as a service are categories of cloud computing services. They provide APIs to manage on-demand life-cycles of the corresponding abstraction layers: virtualized infrastructures, containers, application platforms, functions or external software. |
 |  |  |
 {{< table />}}
 
@@ -106,7 +106,7 @@ Cloud native app development has centered around the twelve factors originally d
 
 Sometimes it is enough to refactor and update an existing legacy application with only a handful of these factors in order to get it running on a cloud platform like Tanzu, gaining the operational benefits of the platform without the large investment of a far-reach modernization effort. Pay specific attention to externalizing configurations, converting integrations into backing services, keeping your processes stateless, and logging to standard input and output.
 
-For more information on cloud native apps check out the free ebook  [Beyond the 12-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) , by Kevin Hoffman. In it, he introduces three additional factors including API-first development, security, and telemetry not covered in the original set, but are often required for apps to run well in the cloud.
+For more information on cloud native apps check out the free e-book [Beyond the 12-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app), by Kevin Hoffman. In it, he introduces three additional factors including API-first development, security, and telemetry not covered in the original set, but are often required for apps to run well in the cloud.
 
 
 ## In this article, you learned to:
@@ -131,7 +131,7 @@ To deepen your understanding, check out the following resources:
 
 *Concepts*
 
-* [Beyond the Twelve-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) - eBook
+* [Beyond the Twelve-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) - e-book
 * [Microservices: How to deliver scalable software, faster](https://tanzu.vmware.com/microservices) - VMware Tanzu article
 * [Cloud Native Patterns by Cornelia Davis](https://www.manning.com/books/cloud-native-patterns) - Book
-* [Domain-Driven Design Crew](https://github.com/ddd-crew) - GitHub hotspot for the DDD community
+* [Domain-Driven Design Crew](https://github.com/ddd-crew) - GitHub hot spot for the DDD community
