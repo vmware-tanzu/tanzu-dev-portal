@@ -3,7 +3,7 @@ name: "Jay Ehsaniara"
 description: "Solution Architect"
 photo: "/images/team/jay-ehsaniara.png"
 roles: ["author"]
-skills: ["Java", "Kafka", "Kubernetes", "Docker", "Continuous Delivery", "DevOps"]
+skills: ["Java", "Kafka", "Kubernetes"]
 location: "Los Angeles, CA"
 weight: 1
 
