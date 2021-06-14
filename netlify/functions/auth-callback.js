@@ -102,18 +102,23 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             jwtToken.acct = decoded.payload.acct;
             jwtToken.sub = decoded.payload.sub;
         }
-        console.log(jwtToken);
+
         const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SIGNING_SECRET, {
             algorithm: 'HS256',
         });
 
-        const c = cookie.serialize(netlifyCookieName, netlifyJwt, {
+        const cookieParams = {
             secure: true,
             httpOnly: false,
             path: '/',
-            domain: getSiteURL().replace('https://', ''),
             expires: new Date(decoded.payload.exp * 1000), // same expiration as CSP token
-        });
+        }
+
+        if (config.context === "production" || config.context === "deploy-preview") {
+            cookieParams.domain = getSiteURL().replace('https://', '');
+        }
+
+        const c = cookie.serialize(netlifyCookieName, netlifyJwt, cookieParams);
 
         // redirect the user to where they were originally trying to get
         // with the cookie so that Netlify lets them in
