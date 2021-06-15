@@ -8,7 +8,7 @@ team:
 
 Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.
 
-![Cloud Native Development](/images/outcomes/app-dev-onboarding/cloud-native-development.jpg)
+![Cloud Native Development](/images/outcomes/application-development/cloud-native-development.jpg)
 
 ## What you will learn
 
