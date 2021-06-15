@@ -8,6 +8,9 @@ linkTitle: Showback Reference Architecture
 parent: Platform Observability
 title: Showback Reference Architecture
 weight: 2000
+oldPath: "/content/guides/kubernetes/observability-showback-refarch.md"
+aliases:
+- "/guides/kubernetes/observability-showback-refarch"
 ---
 
 This document discusses showback for Kubernetes clusters, such as those provided

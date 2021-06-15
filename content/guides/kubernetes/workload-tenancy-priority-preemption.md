@@ -8,6 +8,9 @@ linkTitle: Pod Priority and Preemption
 parent: Workload Tenancy
 title: Pod Priority and Preemption
 weight: 2000
+oldPath: "/content/guides/kubernetes/workload-tenancy-priority-preemption.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy-priority-preemption"
 ---
 
 ## Overview

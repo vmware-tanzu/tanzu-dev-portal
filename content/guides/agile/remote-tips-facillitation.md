@@ -10,6 +10,9 @@ team:
 title: 'Remote Tips: Facilitation'
 topics:
 - Agile
+oldPath: "/content/guides/agile/remote-tips-facillitation.md"
+aliases:
+- "/guides/agile/remote-tips-facillitation"
 ---
 
 ## Setting team working agreements and ground rules

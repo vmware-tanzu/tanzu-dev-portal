@@ -16,6 +16,9 @@ title: Continuously Develop and Monitor an Express Application on Kubernetes wit
 topics:
 - CI-CD
 - Kubernetes
+oldPath: "/content/guides/ci-cd/express-app-bitnami-skaffold-octant.md"
+aliases:
+- "/guides/ci-cd/express-app-bitnami-skaffold-octant"
 ---
 
 As Kubernetes' importance as a platform grows, developers are increasingly searching for ways to build and debug cloud-native applications on Kubernetes infrastructure from the get-go. Rather than first hacking on code in local (or virtualized) environments and then migrating it to cloud-native architecture, this new approach involves continuously developing, debugging and deploying containerized applications on a live Kubernetes cluster.

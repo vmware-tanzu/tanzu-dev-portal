@@ -8,6 +8,9 @@ title: Service Routing
 topics:
 - Kubernetes
 weight: 67
+oldPath: "/content/guides/kubernetes/service-routing.md"
+aliases:
+- "/guides/kubernetes/service-routing"
 ---
 
 Fundamental to the deployment of most software is the ability to route traffic

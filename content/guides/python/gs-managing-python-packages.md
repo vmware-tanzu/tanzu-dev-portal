@@ -15,6 +15,9 @@ team:
 title: 'Python Like A Pro: Managing Project Dependencies'
 topics:
 - Python
+oldPath: "/content/guides/python/gs-managing-python-packages.md"
+aliases:
+- "/guides/python/gs-managing-python-packages"
 ---
 
 ## Why Do You Need This Guide?

@@ -15,6 +15,9 @@ team:
 title: 'Python Like A Pro: How to Install Python'
 topics:
 - Python
+oldPath: "/content/guides/python/gs-python-like-a-pro.md"
+aliases:
+- "/guides/python/gs-python-like-a-pro"
 ---
 
 ### Why do you need this guide?

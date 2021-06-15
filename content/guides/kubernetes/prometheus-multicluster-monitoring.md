@@ -22,6 +22,9 @@ title: Create a Multi-Cluster Monitoring Dashboard with Thanos, Grafana and Prom
 topics:
 - Kubernetes
 weight: 1800
+oldPath: "/content/guides/kubernetes/prometheus-multicluster-monitoring.md"
+aliases:
+- "/guides/kubernetes/prometheus-multicluster-monitoring"
 ---
 
 [Prometheus](https://prometheus.io/), coupled with

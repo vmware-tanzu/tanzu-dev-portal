@@ -17,6 +17,9 @@ title: Deploy from a Private Helm Repository Using Kubeapps
 topics:
 - Kubernetes
 weight: 7
+oldPath: "/content/guides/kubernetes/kubeapps-private-repo.md"
+aliases:
+- "/guides/kubernetes/kubeapps-private-repo"
 ---
 
 [Kubeapps](https://github.com/kubeapps/kubeapps/) is a web-based UI for

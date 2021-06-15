@@ -12,6 +12,9 @@ topics:
 - Spring
 - Microservices
 weight: 4
+oldPath: "/content/guides/spring/spring-cloud-config-set-up.md"
+aliases:
+- "/guides/spring/spring-cloud-config-set-up"
 ---
 
 As an application moves through the deployment pipeline from dev to test to production, you may need a centralized way to manage the configuration across environments to make certain that each application has access to everything it needs to run as it moves and always uses the right configuration. [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/reference/html/) provides server-side and client-side support for managing and using external configuration information. 

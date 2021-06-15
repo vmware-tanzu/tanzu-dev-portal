@@ -19,6 +19,9 @@ title: Getting Started with Zipkin and Spring Boot
 topics:
 - Spring
 - Microservices
+oldPath: "/content/guides/spring/spring-zipkin.md"
+aliases:
+- "/guides/spring/spring-zipkin"
 ---
 
 The moment you facilitate one application making a request to another over the network, you  introduce significant complexity. Maybe “significant” is relative, but ask yourself, “What could go wrong?” Because the more services you introduce that your application comes to rely on, the harder it becomes to diagnose any problems that crop up. Is the application slow because of the network? Or is it because one of the services is taking a long time to process? Or something else? 
