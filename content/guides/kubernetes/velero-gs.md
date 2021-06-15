@@ -23,6 +23,7 @@ Kubernetes cluster resources and persistent volumes. This guide will show you
 how to deploy Velero to your Kubernetes cluster, create backups, and recover
 from a backup after something goes wrong in the cluster.
 
+{{< youtube id="VBwBR9Em_1A" class="youtube-video-shortcode" >}}
 ## Prerequisites
 
 Before you get started you will need to do the following:
