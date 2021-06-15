@@ -141,6 +141,7 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Becki
 Beda('s)?
 beforeEnqueue
 beforeTransmit
@@ -233,6 +234,7 @@ changeAlertLevel
 [Cc]hargeback
 ChartMuseum
 chartPath
+ChatOps
 checkboxes
 checkConnection
 Christoph
@@ -913,6 +915,7 @@ latencies
 Lazu
 LDAP
 LeafRegionEntry
+[Ll]earnings
 lego
 letsencrypt-staging
 libnss-wrapper
@@ -1017,7 +1020,7 @@ Mkyong
 Mockito
 MockMvc
 [Mm]odelling
-modularity
+[Mm]odularity
 Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
@@ -1102,6 +1105,7 @@ OLGA_MACIASZEK
 [Oo]makase
 on-prem
 onboarded
+[Oo]nboarding
 OneMagnify
 onRegion
 onServer
@@ -1211,6 +1215,7 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+[Pp]ost-mortem
 Postfacto
 [Pp]ostgres
 POSTROUTING
@@ -1687,6 +1692,7 @@ Webpage
 WebSocket
 WebSphere
 WeChat
+Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
 Wilcock('s)?
