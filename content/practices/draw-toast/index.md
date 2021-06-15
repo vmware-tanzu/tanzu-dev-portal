@@ -1,26 +1,35 @@
 ---
-title: "Draw Toast"
-tags: ["Kickoff", "Discovery", "Framing", "Inception"]
-length: "20 min"
-participants: "Core team, stakeholders, and anyone else commonly invited to an Inception / Kickoff / Icebreaker event"
-image: "default-cover.png"
-description: "An icebreaker that shows a room that even very easy tasks can be exceedingly complex to execute without full alignment"
-lastmod: "2020-01-24"
-
-why:
-- Breaking the ice with a big group and using it to show something productive is often difficult. This activity helps to explicitly demonstrate the pain points around misalignment—using a simple task that everyone in the room is familiar with—and can act as an important “a-ha” moment for team members.
-
-when:
-- As an icebreaker activity, a good opportunity to run this activity is whenever a new group is assembled that hasn't worked together before and/or will be tackling a problem together. Often this occurs at the beginning of a project for Kickoff/Inception.
-
+date: '2021-02-09'
+description: An icebreaker that shows a room that even very easy tasks can be exceedingly
+  complex to execute without full alignment
+image: default-cover.png
+lastmod: '2021-04-01'
+length: 20 min
+participants: Core team, stakeholders, and anyone else commonly invited to an Inception
+  / Kickoff / Icebreaker event
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Inception
+title: Draw Toast
 what:
 - One sheet of paper per person (not a sticky note)
 - A writing utensil for each participant
 - Tape can help if the facilitator wants to hang the drawings up on the wall
 - Timer to timebox the drawing activity (could just be the timer on a smartphone)
-- "For remote: Digital collaboration space like [Miro](https://miro.com/)"
-
+- 'For remote: Digital collaboration space like [Miro](https://miro.com/)'
+when:
+- As an icebreaker activity, a good opportunity to run this activity is whenever a
+  new group is assembled that hasn't worked together before and/or will be tackling
+  a problem together. Often this occurs at the beginning of a project for Kickoff/Inception.
+why:
+- Breaking the ice with a big group and using it to show something productive is often
+  difficult. This activity helps to explicitly demonstrate the pain points around
+  misalignment—using a simple task that everyone in the room is familiar with—and
+  can act as an important “a-ha” moment for team members.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 *Paraphrased from <a href="http://www.drawtoast.com/" target="_blank">DrawToast.com</a>. Draw Toast is part of Tom Wujec's Wicked Problem Solving™ toolkit to help you get playfully clear about what's important in your organization. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.*

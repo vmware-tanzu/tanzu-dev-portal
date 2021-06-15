@@ -1,12 +1,14 @@
 ---
-title: "Calico Reference Architecture"
-linkTitle: "Calico Reference Architecture"
-description: "A reference architecture for running the Calico CNI in Kubernetes"
-parent: "Container Networking"
-weight: 1600
+date: '2021-02-24'
+description: A reference architecture for running the Calico CNI in Kubernetes
 keywords:
-  - Kubernetes
-  - Calico
+- Kubernetes
+- Calico
+lastmod: '2021-02-24'
+linkTitle: Calico Reference Architecture
+parent: Container Networking
+title: Calico Reference Architecture
+weight: 1600
 ---
 
 This document details a reference architecture for running

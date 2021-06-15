@@ -1,10 +1,12 @@
 ---
-title:  "Offload HTTP Sessions with Spring Session and Redis"
-linkTitle: "Spring Session"
-topics:
-- Spring
+date: '2021-02-24'
+lastmod: '2021-02-24'
+linkTitle: Spring Session
 tags:
 - Spring Session
+title: Offload HTTP Sessions with Spring Session and Redis
+topics:
+- Spring
 ---
 
 [Spring Session](https://spring.io/projects/spring-session) frees session management from the limitations of HTTP data stored in server memory. Session data can be shared between services in a cloud without being tied to a single container, multiple sessions can be supported in the same browser, and session ids can be included and sent in a header.
@@ -78,4 +80,4 @@ That’s it. With the Redis service bound and session replication defined, sessi
 ## Keep Learning
 The Spring Session documentation provides a number of [sample applications](https://docs.spring.io/spring-session/docs/current/reference/html5/#samples) showing how to use Spring Session with Redis and JDBC as well as other use cases. Several more examples, including an HttpSession Quick Start guide, can be found [here](https://spring.io/projects/spring-session-data-redis#samples).
 
-Baeldung’s [Guide to Spring Session](https://www.baeldung.com/spring-session) provides an additional example combining the use of Spring Session and Redis in Spring Boot and Spring environments. 
+Baeldung’s [Guide to Spring Session](https://www.baeldung.com/spring-session) provides an additional example combining the use of Spring Session and Redis in Spring Boot and Spring environments.

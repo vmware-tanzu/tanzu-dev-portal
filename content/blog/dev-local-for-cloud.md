@@ -1,17 +1,15 @@
 ---
-title: "Developing Locally for the Cloud"
-featured: false
-description: >
-    Develop apps to run on the cloud right on your laptop.
 date: 2020-05-21
+description: Develop apps to run on the cloud right on your laptop.
+featured: false
+lastmod: '2020-09-17'
 patterns:
 - Deployment
-# Author(s)
-team: 
+team:
 - David Dieruf
+title: Developing Locally for the Cloud
 ---
 
- 
 Your app is destined for the cloud, but it’s going to meet some challenges along the way. First stop is the always fun whiteboarding session(s). Then come the sticky notes, which inevitably yield a backlog. Only when those two steps are complete does the Zen art of coding begin.
 
 But ask yourself this: While whiteboarding the app's design, how often is the developer’s local environment considered? Probably never. In fact, I bet during design a local environment doesn't even make into the afterthoughts. Instead, it's just one of those "figure it out" things.

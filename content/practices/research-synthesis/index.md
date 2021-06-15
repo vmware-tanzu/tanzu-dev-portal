@@ -1,24 +1,33 @@
 ---
-title: "Research Synthesis"
-tags: ["Discovery", "Framing", "Remote"]
-length: "30 min - 1 hour per interview"
-participants: "Interviewers, researchers, observers, note-takers"
-image: "default-cover.png"
-description: "Help sort through generative or evaluative research data using an affinity diagram"
-lastmod: "2019-04-9"
-
-why:
-- We use the output of this activity to identify patterns in collected research data, improve our understanding of users, and identify action items we can take (including any re-testing to confirm any inconclusive findings). These findings can either validate or invalidate assumptions we’ve made about our persona (i.e. demographics, behaviors, concerns, motivators, etc). Output also supports conversations on the why of behaviors and what actions to take.
-
-when:
-- Ideally we do this after each user interview in order to analyze the information we captured during our user interview session while it’s still fresh in our minds.
-
+date: '2021-02-09'
+description: Help sort through generative or evaluative research data using an affinity
+  diagram
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 30 min - 1 hour per interview
+participants: Interviewers, researchers, observers, note-takers
+tags:
+- Discovery
+- Framing
+- Remote
+title: Research Synthesis
 what:
-- "Large Whiteboard or digital version like [Miro](https://miro.com/)"
-- Sticky notes with findings on them (stemming from research sessions), color-coded by research participant
+- Large Whiteboard or digital version like [Miro](https://miro.com/)
+- Sticky notes with findings on them (stemming from research sessions), color-coded
+  by research participant
 - Dry erase markers
-
+when:
+- Ideally we do this after each user interview in order to analyze the information
+  we captured during our user interview session while it’s still fresh in our minds.
+why:
+- We use the output of this activity to identify patterns in collected research data,
+  improve our understanding of users, and identify action items we can take (including
+  any re-testing to confirm any inconclusive findings). These findings can either
+  validate or invalidate assumptions we’ve made about our persona (i.e. demographics,
+  behaviors, concerns, motivators, etc). Output also supports conversations on the
+  why of behaviors and what actions to take.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Write the following categories on the whiteboard, taking care to leave ample space between them (to accommodate many sticky notes):
@@ -87,5 +96,3 @@ Various, depending on context
 Coming soon! 
 
 ## Recommended Reading
-
-

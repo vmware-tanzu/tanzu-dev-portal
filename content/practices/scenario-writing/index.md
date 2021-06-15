@@ -1,25 +1,33 @@
 ---
-title: "Scenario Writing"
-tags: ["Discovery", "Framing", "Remote"]
-length: "45 - 60 mins"
-participants: "Core team"
-image: "default-cover.png"
-description: "Help the team understand the circumstances surrounding the problem they’re attempting to solve"
-lastmod: "2019-04-06"
-
-why:
-- This activity allows the team to tell a story about either the user's current, potentially frustrating experience with the core problem or their future, ideally positive experience after the team’s solution is in place. Doing this provides structure in advance of exploratory research—drawing out areas to probe—or leverages what the team has learned to support solution sketching.
-
-when:
-- You can write scenarios during Discovery to outline the existing experience, but they are usually written in Framing (or Delivery) to capture an idealized experience and often followed by a Design Studio
-
+date: '2021-02-09'
+description: Help the team understand the circumstances surrounding the problem they’re
+  attempting to solve
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 45 - 60 mins
+participants: Core team
+tags:
+- Discovery
+- Framing
+- Remote
+title: Scenario Writing
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Output from **Personas** workshop
 - Tape
-
+when:
+- You can write scenarios during Discovery to outline the existing experience, but
+  they are usually written in Framing (or Delivery) to capture an idealized experience
+  and often followed by a Design Studio
+why:
+- This activity allows the team to tell a story about either the user's current, potentially
+  frustrating experience with the core problem or their future, ideally positive experience
+  after the team’s solution is in place. Doing this provides structure in advance
+  of exploratory research—drawing out areas to probe—or leverages what the team has
+  learned to support solution sketching.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 
@@ -95,5 +103,3 @@ None at the moment
 Coming soon! 
 
 ## Recommended Reading
-
-

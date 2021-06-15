@@ -1,11 +1,13 @@
 ---
-title: "Autoscaling Reference Architecture"
-linkTitle: "Autoscaling Reference Architecture"
-description: "Guidance for autoscaling application workloads and cluster compute resources"
-parent: "Workload Tenancy"
-weight: 1600
+date: '2021-02-24'
+description: Guidance for autoscaling application workloads and cluster compute resources
 keywords:
-  - Kubernetes
+- Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Autoscaling Reference Architecture
+parent: Workload Tenancy
+title: Autoscaling Reference Architecture
+weight: 1600
 ---
 
 This reference provides guidance, trade-off considerations and implementation

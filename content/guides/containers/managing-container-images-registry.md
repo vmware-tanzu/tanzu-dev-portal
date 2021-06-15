@@ -1,16 +1,18 @@
 ---
-title: "Managing and Securing Container Images in a Registry"
-linkTitle: "Manage and Secure Container Images in a Registry"
-weight: 
+date: '2021-02-26'
+lastmod: '2021-02-26'
+linkTitle: Manage and Secure Container Images in a Registry
+patterns:
+- Deployment
+tags:
+- Harbor
+- Containers
+title: Managing and Securing Container Images in a Registry
 topics:
 - Kubernetes
 - Containers
 - Microservices
-tags:
-- Harbor
-- Containers
-patterns:
-- Deployment
+weight: null
 ---
 
 A key reason why enterprises are turning to Kubernetes is that cloud native services and practices boost developer productivity. As you put containerized applications into production, you need a secure way to store, scan, and sign your container images. A container image registry without management and security puts your cloud native environment at risk.
@@ -64,4 +66,4 @@ Harbor is an important tool in your software security program, ensuring your clo
 
 If you are new to Harbor or haven’t checked in recently, have a look at the [features of the latest release](https://goharbor.io/). This guide focuses on security, but Harbor also provides support for multi-tenancy, replication across registries, and offers an extensible API and web UI.
 
-To get started using Harbor, this guide provides a good, real-world introduction: [Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt](/guides/kubernetes/harbor-gs/). 
+To get started using Harbor, this guide provides a good, real-world introduction: [Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt](/guides/kubernetes/harbor-gs/).

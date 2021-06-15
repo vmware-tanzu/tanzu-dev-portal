@@ -1,28 +1,32 @@
 ---
-title: "Risks & Mitigations"
-tags: ["Kickoff", "Inception", "Remote"]
-length: "30 min - 1 hour"
-participants: "Core team, stakeholders"
-image: "risks-and-mitigations/cover.png"
-description: "Surface risks and how the team might mitigate them"
-lastmod: "2019-02-24"
+date: '2021-02-09'
+description: Surface risks and how the team might mitigate them
+image: risks-and-mitigations/cover.png
+lastmod: '2021-04-08'
+length: 30 min - 1 hour
+miro_template_url: https://miro.com/miroverse/risks-and-mitigations
+participants: Core team, stakeholders
 remote: true
-miro_template_url: "https://miro.com/miroverse/risks-and-mitigations"
-
-why:
-- We do this to create a forum where people feel comfortable sharing fears and concerns in order to proactively mitigate issues we think may arise. This session results in a list of prioritized action items that the team can use to get ahead of any risks.
-
-when:
-- Early in the project, normally during Kick-Off, and again during Inception
-
+tags:
+- Kickoff
+- Inception
+- Remote
+title: Risks & Mitigations
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
 - Large sheets of paper
-
+when:
+- Early in the project, normally during Kick-Off, and again during Inception
+why:
+- We do this to create a forum where people feel comfortable sharing fears and concerns
+  in order to proactively mitigate issues we think may arise. This session results
+  in a list of prioritized action items that the team can use to get ahead of any
+  risks.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Have the group silently write project risks and obstacles this team may face. One item per sticky note.
@@ -87,5 +91,3 @@ None at the moment
 ![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
 
 ## Recommended Reading
-
-

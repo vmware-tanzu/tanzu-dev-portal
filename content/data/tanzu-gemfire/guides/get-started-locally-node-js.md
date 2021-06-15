@@ -1,13 +1,14 @@
 ---
-title:  "Getting Started Locally"
-link-title: "Getting Started Locally"
-parent: Node.js
-type: data-guides
 data-featured: false
+date: '2021-05-28'
+description: A guide to help get your local development environment up and running
+  with a Node.js client side application.
+lastmod: '2021-05-28'
+link-title: Getting Started Locally
+parent: Node.js
+title: Getting Started Locally
+type: data-guides
 weight: 1
-description: A guide to help get your local development environment up and running with a Node.js client side application. 
-
-
 ---
 
 This guide walks you through setting up your local development environment using Apache Geode, the Tanzu GemFire node.js client, and a `Book Service` example.    
@@ -251,9 +252,4 @@ When finished running the example locally, shut down the client and server proce
   
   Now that you have successfully set up your local development environment, check out some other guides
  
-  * Set up your [Tanzu GemFire service instance](data/tanzu-gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service. 
- 
- 
- 
- 
- 
+  * Set up your [Tanzu GemFire service instance](data/tanzu-gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service.
