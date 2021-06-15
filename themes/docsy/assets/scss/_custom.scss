@@ -618,7 +618,6 @@ footer {
   width: 30px;
   margin-right: 15px;
 }
-
 .guide .td-sidebar-nav__section-title a {
   font-size: 1.2rem;
   color: white;
@@ -1587,7 +1586,9 @@ code {
     display: block;
   }
 }
-
+.feedback i {
+  font-size: 1.4rem;
+}
 .pride-mode-only {
   display: none !important;
 }
