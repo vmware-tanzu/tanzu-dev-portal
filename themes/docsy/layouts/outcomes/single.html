@@ -43,7 +43,7 @@
         {{ partial "pager.html" . }}
         {{ end }}
         <div class="feedback mt-4 pt-4 border-top">
-          <a href='{{ printf "%s%s" "https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=" .Title }}'><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+          <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Outcomes Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
         </div>
       </div>
       <div class="col-12 col-md-2 mt-1 d-print-none d-none d-lg-block">

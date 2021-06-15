@@ -31,7 +31,7 @@
             {{ end }}
             {{ if ne .Parent.Params.title "Guides" }}
               <div class="feedback pt-4 mt-4 border-top">
-                <a href='{{ printf "%s%s" "https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=" .Title }}'><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+                <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Guides Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
               </div>
             {{ end }}
           </main>
