@@ -7,6 +7,7 @@ team:
 title: Packaging
 topics:
 - Kubernetes
+weight: 52
 ---
 
 In Kubernetes, the desired state of the system is declared via resources sent to the API Server.

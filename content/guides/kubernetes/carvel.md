@@ -15,6 +15,7 @@ team:
 title: Carvel
 topics:
 - Kubernetes
+weight: 27
 ---
 
 [Carvel](https://carvel.dev/)[^1] is an open source suite of tools. Carvel provides a set of reliable, single-purpose, composable tools that aid in your application building, configuration, and deployment to Kubernetes.

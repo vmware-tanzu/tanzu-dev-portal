@@ -7,6 +7,7 @@ team:
 title: Application Observability
 topics:
 - Kubernetes
+weight: 22
 ---
 
 The term "observability" in control theory states that the system is observable

@@ -7,6 +7,7 @@ team:
 title: Platform Security
 topics:
 - Kubernetes
+weight: 62
 ---
 
 ## Overview

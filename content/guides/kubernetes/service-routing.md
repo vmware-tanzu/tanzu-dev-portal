@@ -7,6 +7,7 @@ team:
 title: Service Routing
 topics:
 - Kubernetes
+weight: 67
 ---
 
 Fundamental to the deployment of most software is the ability to route traffic

@@ -7,6 +7,7 @@ team:
 title: Container Networking
 topics:
 - Kubernetes
+weight: 32
 ---
 
 Kubernetes uses the [Container Network

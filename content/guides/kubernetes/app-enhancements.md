@@ -7,6 +7,7 @@ team:
 title: Application Enhancements
 topics:
 - Kubernetes
+weight: 12
 ---
 
 Kubernetes does not demand specifics about the applications that run on top of

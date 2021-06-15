@@ -7,6 +7,7 @@ team:
 title: Identity and Access Control
 topics:
 - Kubernetes
+weight: 42
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of

@@ -7,6 +7,7 @@ team:
 title: Platform Observability
 topics:
 - Kubernetes
+weight: 57
 ---
 
 Observability is crucial for successfully operating a complex software system

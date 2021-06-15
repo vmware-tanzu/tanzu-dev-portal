@@ -6,6 +6,7 @@ team:
 title: Storage Integration
 topics:
 - Kubernetes
+weight: 72
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it

@@ -7,6 +7,7 @@ team:
 title: Developer Workflow
 topics:
 - Kubernetes
+weight: 37
 ---
 
 The developer workflow typically involves writing code, executing automated
