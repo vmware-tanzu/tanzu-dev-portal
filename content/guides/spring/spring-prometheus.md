@@ -1,21 +1,24 @@
 ---
-title: "Gathering Metrics from Spring Boot on Kubernetes with Prometheus and Grafana"
-metaTitle: "Gather Metrics with Spring Boot using Prometheus & Grafana"
-linkTitle: "Prometheus and Grafana"
-parent: "Spring Boot"
-description: Discover how to gather both standard and custom metrics from Spring Boot using Prometheus and visualize them in Grafana.
-weight: 5
-topics:
-- Spring
+date: '2020-09-08'
+description: Discover how to gather both standard and custom metrics from Spring Boot
+  using Prometheus and visualize them in Grafana.
+lastmod: '2021-03-07'
+linkTitle: Prometheus and Grafana
+metaTitle: Gather Metrics with Spring Boot using Prometheus & Grafana
+parent: Spring Boot
+patterns:
+- Observability
 tags:
 - Spring
 - Observability
 - Prometheus
 - Grafana
-patterns:
-- Observability
 team:
 - Brian McClain
+title: Gathering Metrics from Spring Boot on Kubernetes with Prometheus and Grafana
+topics:
+- Spring
+weight: 5
 ---
 
 If you read the guide on how to run [Prometheus and Grafana on Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/), you might be wondering: How do I add metrics from my application? Spring Boot developers are used to making metrics available from their application using [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready) and [Micrometer](https://micrometer.io/), but Prometheus expects metrics to be in a specific format. In this guide, you’ll learn how to expose both standard and custom metrics in your Spring Boot application, gather them using Prometheus, and visualize them in Grafana.

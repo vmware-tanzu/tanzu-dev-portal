@@ -1,28 +1,32 @@
 ---
-title: "Personas"
-tags: ["Kickoff", "Discovery", "Remote"]
-length: "45 - 60 mins"
-participants: "Core team, stakeholders"
-image: "personas/cover.png"
-description: "Create a provisional representation of a user based on existing knowledge and assumptions"
-lastmod: "2019-02-03"
+date: '2021-02-09'
+description: Create a provisional representation of a user based on existing knowledge
+  and assumptions
+image: personas/cover.png
+lastmod: '2021-03-17'
+length: 45 - 60 mins
+miro_template_url: https://miro.com/miroverse/personas
+participants: Core team, stakeholders
 remote: true
-miro_template_url: "https://miro.com/miroverse/personas"
-
-why:
-- The provisional persona anchors the discussions we have during the Kickoff and allows the core team to make smart decisions about who to target for exploratory research during the Discovery phase of the project.
-
-when:
-- We try to do this as early as possible on a project, usually during Kickoff.
-
+tags:
+- Kickoff
+- Discovery
+- Remote
+title: Personas
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Paper
 - Sharpies / markers
 - Sticky dots
 - Scissors (optional)
-
+when:
+- We try to do this as early as possible on a project, usually during Kickoff.
+why:
+- The provisional persona anchors the discussions we have during the Kickoff and allows
+  the core team to make smart decisions about who to target for exploratory research
+  during the Discovery phase of the project.
 ---
+
 ## How to Use this Method
 
    {{% callout %}}
@@ -105,5 +109,3 @@ None at the moment
 ![Example of a digital persona template](/images/practices/personas/example-5.jpg)
 
 ## Recommended Reading
-
-

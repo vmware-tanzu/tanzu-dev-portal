@@ -1,24 +1,24 @@
 ---
-title: "Spring Boot Probes on Kubernetes"
-description: >
-  Add liveness and readiness probes to a Spring Boot application in Kubernetes.
-summary:
-  - Add liveness and readiness probes to a Spring Boot application in Kubernetes.
-topics:
-  - Spring
-  - Microservices
-  - Kubernetes
-tags:
-  - Spring
-  - Microservices
-  - Kubernetes
-  - Spring Boot
-  - Probes
-length: 30
+date: '2021-03-04'
+description: Add liveness and readiness probes to a Spring Boot application in Kubernetes.
 hidden: true
 lab: lab-spring-boot-k8s-probes
-logo: "/images/workshops/logo-spring-boot.svg"
-
+lastmod: '2021-05-03'
+length: 30
+logo: /images/workshops/logo-spring-boot.svg
+summary:
+- Add liveness and readiness probes to a Spring Boot application in Kubernetes.
+tags:
+- Spring
+- Microservices
+- Kubernetes
+- Spring Boot
+- Probes
+title: Spring Boot Probes on Kubernetes
+topics:
+- Spring
+- Microservices
+- Kubernetes
 ---
 
 This lab shows you how to add liveness and readiness probes to a Spring Boot application in Kubernetes. This lab will cover the following tasks:

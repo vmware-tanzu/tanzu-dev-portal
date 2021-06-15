@@ -1,10 +1,12 @@
 ---
-title: Platform Readiness Checklist
-linkTitle: Platform Readiness Checklist
-description: "A checklist for Kubernetes platform considerations"
-parent: "Workload Tenancy"
+date: '2021-02-24'
+description: A checklist for Kubernetes platform considerations
 keywords:
 - Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Platform Readiness Checklist
+parent: Workload Tenancy
+title: Platform Readiness Checklist
 weight: 100
 ---
 

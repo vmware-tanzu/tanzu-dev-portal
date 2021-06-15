@@ -1,16 +1,18 @@
 ---
-title:  "Spring Boot Testing Best Practices"
-linkTitle: "Testing Best Practices"
+date: '2021-01-29'
+lastmod: '2021-01-29'
+linkTitle: Testing Best Practices
 parent: Spring Boot
-weight: 3
-topics:
-- Spring
-- Microservices
+patterns:
+- API
 tags:
 - Spring Boot
 - Testing
-patterns:
-- API
+title: Spring Boot Testing Best Practices
+topics:
+- Spring
+- Microservices
+weight: 3
 ---
 
 Proper testing is critical to the successful development of applications that use a microservices architecture. This guide provides some important recommendations for writing tests for Spring Boot applications, using [F.I.R.S.T. principles](https://www.appsdeveloperblog.com/the-first-principle-in-unit-testing/):
@@ -178,4 +180,4 @@ public class CarServiceControllerTests {
 ## Keep Learning
 Many of the frameworks and other capabilities mentioned in this best practices guide are described in the [Spring Boot testing documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html). This recent video on [testing messaging in Spring](/tv/code/0004/) describes the use of Spock, JUnit, Mockito, Spring Cloud Stream and Spring Cloud Contract.
 
-A more exhaustive [tutorial](https://spring.io/guides/gs/testing-web/) is available to help you learn more about testing the web layer. 
+A more exhaustive [tutorial](https://spring.io/guides/gs/testing-web/) is available to help you learn more about testing the web layer.

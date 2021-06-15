@@ -1,11 +1,12 @@
 ---
-title:  "Cache-Aside Pattern"
-link-title: "Cache-Aside Pattern"
-type: data-guides
+date: '2021-04-22'
+description: Use the Cache Aside pattern with your Spring Boot application.
+lastmod: '2021-04-22'
+link-title: Cache-Aside Pattern
 parent: Spring for Apache Geode
-description: Use the Cache Aside pattern with your Spring Boot application. 
+title: Cache-Aside Pattern
+type: data-guides
 weight: 4
-
 ---
 
 This guide walks you through how to implement the cache-aside pattern to your Spring Boot application using VMware Tanzu GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
@@ -449,4 +450,4 @@ This shows that the Spring Boot for Apache Geode app has connected to the Tanzu 
 
 ## Learn More
 
- * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).  
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).

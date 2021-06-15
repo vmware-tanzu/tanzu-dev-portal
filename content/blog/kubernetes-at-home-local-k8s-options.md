@@ -1,18 +1,18 @@
 ---
-title: "Kubernetes at Home: Local k8s Options"
-description: >
-    Compare various options for developing on top of Kubernetes locally using Minikube, kind, and Docker Desktop.
 date: 2020-07-17
+description: Compare various options for developing on top of Kubernetes locally using
+  Minikube, kind, and Docker Desktop.
 featured: false
-topics:
-- Kubernetes
-tags:
-- Kubernetes
+lastmod: '2020-09-22'
 patterns:
 - Deployment
-# Author(s)
-team: 
+tags:
+- Kubernetes
+team:
 - Brian McClain
+title: 'Kubernetes at Home: Local k8s Options'
+topics:
+- Kubernetes
 ---
 
 When you’re first learning how Kubernetes works, or are developing code that leverages Kubernetes, you’re likely to find yourself looking to one of the many options available to run it locally. As with almost anything in technology, there are more options than you probably know what to do with,  which can leave you   asking yourself which one you should use. Minikube? Kind? Microk8s? Even Docker Desktop ships with the ability to spin up Kubernetes.

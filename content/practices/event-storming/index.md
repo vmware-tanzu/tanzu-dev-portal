@@ -1,31 +1,35 @@
 ---
-title: "Event Storming"
-tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
-length: "1 - 2 hours; multiple runs may be needed"
-participants: "Business stakeholders, business analysts, executives, developers, architects, team leads, domain experts, core team"
-image: "event-storming/example-2.jpg"
-description: > 
-    Drive out the domains, bounded contexts and services of a system to reveal vertical slices, 
-    trouble spots and starting points for rearchitecting the system
-lastmod: "2019-12-07"
-
-why:
-- Event Storming enables decomposing monoliths into microservices. It allows for modeling new flows and ideas, synthesizing knowledge, and facilitating active group participation without conflict in order to ideate the next generation of a software system.
-
+date: '2021-02-11'
+description: Drive out the domains, bounded contexts and services of a system to reveal
+  vertical slices,  trouble spots and starting points for rearchitecting the system
+image: event-storming/example-2.jpg
+lastmod: '2021-03-17'
+length: 1 - 2 hours; multiple runs may be needed
+participants: Business stakeholders, business analysts, executives, developers, architects,
+  team leads, domain experts, core team
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Modernization
+title: Event Storming
+what:
+- Large wall or digital collaboration space like [Miro](https://miro.com/)
+- 4+ different colored sticky notes
+- Sharpies
+- Blue painters tape
+- Paper flip boards (for readouts & breakouts)
 when:
 - You need to clarify the current state of the system via cross-functional communication
 - You need to break down monolithic systems
 - You need to identify the top constraint in a system
 - You need to identify subdomains and bounded contexts of a system
-
-what:
-- "Large wall or digital collaboration space like [Miro](https://miro.com/)"
-- 4+ different colored sticky notes
-- Sharpies
-- Blue painters tape
-- Paper flip boards (for readouts & breakouts)
-
+why:
+- Event Storming enables decomposing monoliths into microservices. It allows for modeling
+  new flows and ideas, synthesizing knowledge, and facilitating active group participation
+  without conflict in order to ideate the next generation of a software system.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Explain the goal of Event Storming to the group. Project the image below if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic Domain Driven Design (DDD) terms.

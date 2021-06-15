@@ -1,26 +1,36 @@
 ---
-title: "Value Stream Map"
-linkTitle: "Value Stream Map"
-description: "Visualize the steps an organization takes to create & deliver value to customers in order to help eliminate \"waste.\" A common use case is a path to production and product development life cycle."
-
-tags: ["Kickoff", "Discovery", "Framing", "Inception"]
-length: "1-2 hours"
-participants: "Core team, subject matter experts (as needed)"
-
-image: "default-cover.png" 
-lastmod: "2021-04-21"
-why: 
-- To identify how we could deliver user and/or business value faster and/or more often by identifying delays, unnecessary features and hand-offs. 
-- To understand the steps and people involved in a process so that we can improve collaboration and preclude potential blockers.
-when:
-- This activity can be done as early as the Kickoff if there are concerns about many teams creating one system or known problems in product development life cycle. Otherwise, it can be done as part of technical Discovery, Framing, or any time the team finds itself bogged down with an inefficient process.
+date: '2021-04-28'
+description: Visualize the steps an organization takes to create & deliver value to
+  customers in order to help eliminate "waste." A common use case is a path to production
+  and product development life cycle.
+image: default-cover.png
+lastmod: '2021-04-28'
+length: 1-2 hours
+linkTitle: Value Stream Map
+participants: Core team, subject matter experts (as needed)
+remote: false
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Inception
+title: Value Stream Map
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies / markers
-
-remote: false
+when:
+- This activity can be done as early as the Kickoff if there are concerns about many
+  teams creating one system or known problems in product development life cycle. Otherwise,
+  it can be done as part of technical Discovery, Framing, or any time the team finds
+  itself bogged down with an inefficient process.
+why:
+- To identify how we could deliver user and/or business value faster and/or more often
+  by identifying delays, unnecessary features and hand-offs.
+- To understand the steps and people involved in a process so that we can improve
+  collaboration and preclude potential blockers.
 ---
+
 ## How to Use this Method
 
 ### Sample Agenda & Prompts

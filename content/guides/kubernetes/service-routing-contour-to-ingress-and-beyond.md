@@ -1,10 +1,8 @@
 ---
-title:  "Getting Started with Contour - To Ingress and Beyond"
-linkTitle: "Contour to Ingress and Beyond"
-parent: "Service Routing"
-weight: 2
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-02-25'
+linkTitle: Contour to Ingress and Beyond
+parent: Service Routing
 tags:
 - Kubernetes
 - Tanzu
@@ -14,9 +12,12 @@ tags:
 - istio
 - service mesh
 - network
-# Author(s)
 team:
 - Paul Czarkowski
+title: Getting Started with Contour - To Ingress and Beyond
+topics:
+- Kubernetes
+weight: 2
 ---
 
 ### Introduction to Contour

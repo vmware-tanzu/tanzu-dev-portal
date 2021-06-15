@@ -1,8 +1,7 @@
 ---
-title:  "Microservices with Spring Cloud Kubernetes Reference Architecture"
-parent: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-25'
+parent: Application Enhancements
 tags:
 - Kubernetes
 - Spring
@@ -10,6 +9,9 @@ tags:
 - Microservices
 team:
 - Andriy Kalashnykov
+title: Microservices with Spring Cloud Kubernetes Reference Architecture
+topics:
+- Kubernetes
 ---
 
 This Reference Architecture demonstrates design, development, and deployment of

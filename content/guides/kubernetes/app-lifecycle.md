@@ -1,10 +1,13 @@
 ---
-title: "Application Lifecycle"
-subsection: "Application Lifecycle"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-26'
+subsection: Application Lifecycle
 team:
 - John Harris
+title: Application Lifecycle
+topics:
+- Kubernetes
+weight: 17
 ---
 
 The scripts and systems used in the CI/CD pipelines to deploy and update

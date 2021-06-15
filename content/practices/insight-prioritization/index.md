@@ -1,25 +1,28 @@
 ---
-title: "Insight Prioritization"
-tags: ["Discovery", "Remote"]
-length: "1 - 2 hours"
-participants: "Core team"
-image: "default-cover.png"
-description: "Prioritize any insights that were uncovered during research so the team can use them to make informed product decisions"
-lastmod: "2019-02-05"
-
-why:
-- Insight Prioritization helps us understand "what are the first set of problems that need solving?". It looks at insights—"aha!" moments where critical thinking results in a meaningful conclusion—in order to help provide color to our problem space and eventual solutions.
-
-
-when:
-- During Discovery & Framing, after conducting and synthesizing exploratory research.
-
+date: '2021-02-09'
+description: Prioritize any insights that were uncovered during research so the team
+  can use them to make informed product decisions
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1 - 2 hours
+participants: Core team
+tags:
+- Discovery
+- Remote
+title: Insight Prioritization
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Painter's tape
 - Any insights you've identified in previous workshops
-
+when:
+- During Discovery & Framing, after conducting and synthesizing exploratory research.
+why:
+- Insight Prioritization helps us understand "what are the first set of problems that
+  need solving?". It looks at insights—"aha!" moments where critical thinking results
+  in a meaningful conclusion—in order to help provide color to our problem space and
+  eventual solutions.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Gather all the insights you discovered from research     
@@ -72,5 +75,3 @@ None at the moment
 Coming soon!
 
 ## Recommended Reading
-
-

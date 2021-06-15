@@ -1,35 +1,38 @@
 ---
-title: "Stakeholder Map"
-tags: ["Kickoff"]
-length: "45 mins - 1 hour"
-participants: "Core team, stakeholders"
-image: "default-cover.png"
-description: "Map out business, product, and project stakeholders that may impact or interact with the core team"
-lastmod: "2019-02-25"
+date: '2021-02-09'
+description: Map out business, product, and project stakeholders that may impact or
+  interact with the core team
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 45 mins - 1 hour
+miro_template_url: https://miro.com/miroverse/stakeholder-map
+participants: Core team, stakeholders
 remote: true
-miro_template_url: "https://miro.com/miroverse/stakeholder-map"
-
+tags:
+- Kickoff
+title: Stakeholder Map
+what:
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Dry erase markers
+- Large sticky notes
+- Sharpies
+when:
+- As early as possible on a project, usually during a Kickoff.
 why:
-- Sometimes projects involve large numbers of stakeholders in varying departments, and they need to be identified.
+- Sometimes projects involve large numbers of stakeholders in varying departments,
+  and they need to be identified.
 - Identifies who is involved in a project
 - Identifies who is invested in the outcome
 - Identifies who has right of refusal
 - Identifies who will support the team
 - Identifies who are key decision makers
 - Identifies who the team should meet with to help get context
-- Stakeholder maps help to visually represent a user and their world while showing connections within a context such as an organization. 
-- They can help the team understand which parts of the organization will be affected by what is built.
-
-when:
-- As early as possible on a project, usually during a Kickoff.  
-
-what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Dry erase markers
-- Large sticky notes
-- Sharpies
-
+- Stakeholder maps help to visually represent a user and their world while showing
+  connections within a context such as an organization.
+- They can help the team understand which parts of the organization will be affected
+  by what is built.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Provide all attendees at Kickoff with a large sticky note and have them write their:
@@ -81,5 +84,3 @@ None at the moment
 Coming soon! 
 
 ### Recommended reading
-
-

@@ -1,28 +1,37 @@
 ---
-title: "Lean Experiments"
-linkTitle: "Lean Experiments"
-description: "A way to have your team create experiments to run so that you can validate or invalidate risky assumptions that may lead to product failure"
-tags: ["Framing", "Inception", "Delivery"]
-length: "60-90 mins"
-participants: "Core team, stakeholders (optional)"
-image: "/lean-experiments/lean-experiment-1.png" 
-lastmod: "2021-05-03"
-why: 
-- Lean experiments are useful when your team lacks evidence that a new product or feature will achieve its intended results. Running lean experiments alongside product development helps validate what is truly valuable to your customers/users, without incurring the cost of developing and maintaining production ready software.
-when:
-- During Framing of a D&F, at an Inception or throughout product development. Usually an **Assumptions** workshop has already been done.
+date: '2021-05-10'
+description: A way to have your team create experiments to run so that you can validate
+  or invalidate risky assumptions that may lead to product failure
+image: /lean-experiments/lean-experiment-1.png
+lastmod: '2021-05-10'
+length: 60-90 mins
+linkTitle: Lean Experiments
+miro_template_url: ''
+participants: Core team, stakeholders (optional)
+remote: false
+tags:
+- Framing
+- Inception
+- Delivery
+title: Lean Experiments
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Markers
 - Blank sheets of paper
 - Sticky notes
 - Sticky dots
 - Painter's tape
-remote: false
-miro_template_url: "" 
-
+when:
+- During Framing of a D&F, at an Inception or throughout product development. Usually
+  an **Assumptions** workshop has already been done.
+why:
+- Lean experiments are useful when your team lacks evidence that a new product or
+  feature will achieve its intended results. Running lean experiments alongside product
+  development helps validate what is truly valuable to your customers/users, without
+  incurring the cost of developing and maintaining production ready software.
 ---
+
 ## How to Use this Method
 
 ### Sample Agenda & Prompts

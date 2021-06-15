@@ -1,26 +1,35 @@
 ---
-title: "3 Column Retrospective"
-linkTitle: "3 Column Retrospective"
-description: "A way to identify how to improve teamwork by reflecting on what worked well, what could be improved, and what is on people’s minds."
-# Note: remove any tags that are not relevant.
-tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
-length: "1 Hour"
-participants: "Core delivery team"
-# custom "cover" image example: "boris/boris.png"
-image: "3-column-retro/retro-cover.png" 
-lastmod: "2021-04-28"
-why: 
-- For the team to be truly reflective, members must feel safe enough to be self-critical. It is important, therefore, to establish high psychological safety.
-when:
-- Ideally, a team should run a retrospective on a weekly basis. 
+date: '2021-05-03'
+description: A way to identify how to improve teamwork by reflecting on what worked
+  well, what could be improved, and what is on people’s minds.
+image: 3-column-retro/retro-cover.png
+lastmod: '2021-05-03'
+length: 1 Hour
+linkTitle: 3 Column Retrospective
+miro_template_url: https://miro.com/miroverse/atlassian-team-plays-retrospective/
+participants: Core delivery team
+remote: false
+tags:
+- Scoping
+- Kickoff
+- Discovery
+- Framing
+- Inception
+- Transition
+- Modernization
+- Delivery
+title: 3 Column Retrospective
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies / markers
-
-remote: false
-miro_template_url: "https://miro.com/miroverse/atlassian-team-plays-retrospective/" 
+when:
+- Ideally, a team should run a retrospective on a weekly basis.
+why:
+- For the team to be truly reflective, members must feel safe enough to be self-critical.
+  It is important, therefore, to establish high psychological safety.
 ---
+
 ## How to Use this Method
    {{% callout %}}
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 

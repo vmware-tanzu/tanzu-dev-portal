@@ -1,26 +1,23 @@
 ---
-title: "Building and Deploying a Cloud Native Application"
+date: '2021-03-30'
+description: Build and deploy a web application on a modern container orchestration
+  platform, and learn cloud native principles along the way.
 draft: false
 featured: true
-weight: 2
-description: >
-    Build and deploy a web application on a modern container
-    orchestration platform,
-    and learn cloud native principles along the way.
-summary:
-    You will build and deploy a web application on a modern container
-    orchestration platform,
-    and learn cloud native principles along the way.
-topics:
-tags:
-  - Development
-  - Spring Boot
-  - Kubernetes
-length: 180
+hero: /images/workshops/workshop-springboot.png
 lab: cnd-deploy-practices
-hero: "/images/workshops/workshop-springboot.png"
-preview: "/images/workshops/img-cloud-native-app.png"
-
+lastmod: '2021-05-19'
+length: 180
+preview: /images/workshops/img-cloud-native-app.png
+summary: You will build and deploy a web application on a modern container orchestration
+  platform, and learn cloud native principles along the way.
+tags:
+- Development
+- Spring Boot
+- Kubernetes
+title: Building and Deploying a Cloud Native Application
+topics: null
+weight: 2
 ---
 
 This is a workshop for developers and application operators

@@ -1,20 +1,19 @@
 ---
-title: "Under the Microscope: Software Observability in a Distributed Architecture"
-featured: false
-weight: 1
-description: >
-  The importance of observability in distributed systems.
 date: 2020-11-04
-topics:
-  - Microservices
-tags:
-  - Microservices
-  - Observability
+description: The importance of observability in distributed systems.
+featured: false
+lastmod: '2021-02-24'
 patterns:
-  - Observability
-# Author(s)
+- Observability
+tags:
+- Microservices
+- Observability
 team:
-  - Scott Rogers
+- Scott Rogers
+title: 'Under the Microscope: Software Observability in a Distributed Architecture'
+topics:
+- Microservices
+weight: 1
 ---
 
 It’s the day and age of mountains of microservices, running on various platforms, consuming multiple services from multiple providers. As applications become more and more distributed, they become more complex. Even splitting a monolith into multiple smaller microservices introduces several points of failure. What happens when the two services can’t reach each other over the network? What if one service relies on the other and it crashes? What about if the application slows to a crawl; where would you start looking to figure out why?

@@ -1,14 +1,14 @@
 ---
-title: "Publishing Apache Geode Metrics to Wavefront"
-description: >
-        In this particular case, Micrometer provides a simple way to create a Micrometer registry for Wavefront and we’ll plug this registry into an implementation of Apache Geode’s MetricsPublishingService. This will allow our Apache Geode Cluster to publish metrics to Wavefront.
 date: 2020-03-24
-type: blog
-
-# Author(s)
-team: 
+description: In this particular case, Micrometer provides a simple way to create a
+  Micrometer registry for Wavefront and we’ll plug this registry into an implementation
+  of Apache Geode’s MetricsPublishingService. This will allow our Apache Geode Cluster
+  to publish metrics to Wavefront.
+lastmod: '2021-04-22'
+team:
 - Jason Huynh
-
+title: Publishing Apache Geode Metrics to Wavefront
+type: blog
 ---
 
 ## Overview
@@ -224,4 +224,3 @@ Join the [Apache Geode Community](https://geode.apache.org/community/)!
 Create and share your own MetricsPublishingService on the [user list](https://geode.apache.org/community/)
 
 [Ingest, Store and Search JSON data with Apache Kafka and Apache Geode](/data/tanzu-gemfire/blog/apache-geode-apache-kafka)
-
