@@ -1,14 +1,13 @@
 ---
-title: "Ingest, Store and Search JSON data with Apache Kafka and Apache Geode"
-description: >
-        We’ll be ingesting JSON data from a rest endpoint into a Kafka topic. We will sink the data into an Apache Geode region using the geode-kafka-connector and execute queries against the data.
 date: 2020-03-03
-type: blog
-
-# Author(s)
-team: 
+description: We’ll be ingesting JSON data from a rest endpoint into a Kafka topic.
+  We will sink the data into an Apache Geode region using the geode-kafka-connector
+  and execute queries against the data.
+lastmod: '2021-04-22'
+team:
 - Jason Huynh
-
+title: Ingest, Store and Search JSON data with Apache Kafka and Apache Geode
+type: blog
 ---
 
 ## Introduction
@@ -166,5 +165,3 @@ If there is are fields we plan on querying often or need faster performance on, 
 
 - [Read how Apache Geode was used to simplify architecture and operations](https://www.pymma.com/index.php/blogs/data-analytic-apache-geode-a-successful-alternative-to-kafka-spark-and-storm)
 Join the [Apache Geode Community](https://geode.apache.org/community/)
-
-

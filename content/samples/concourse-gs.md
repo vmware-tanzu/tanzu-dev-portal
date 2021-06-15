@@ -1,15 +1,17 @@
 ---
-title: Getting Started with Concourse
+date: '2020-05-07'
 description: Install files and demo pipelines for getting started with Concourse CI
-topics:
-- CI-CD
+lastmod: '2020-05-19'
+patterns:
+- Deployment
+readme: true
+repo: https://github.com/anthonyvetter/concourse-getting-started
 tags:
 - CI-CD
 - Concourse
-patterns:
-- Deployment
 team:
 - Tony Vetter
-repo: https://github.com/anthonyvetter/concourse-getting-started
-readme: true
+title: Getting Started with Concourse
+topics:
+- CI-CD
 ---

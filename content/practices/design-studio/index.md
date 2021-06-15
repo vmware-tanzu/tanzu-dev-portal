@@ -1,20 +1,17 @@
 ---
-title: "Design Studio"
-tags: ["Discovery", "Framing"]
-length: "60 - 90 mins"
-participants: "Core team, subject matter experts (SMEs)"
-image: "default-cover.png"
-description: "Understand the problem from different team perspectives and generate many solution sketches using scenario as a guide"
-lastmod: "2021-03-03"
-
-why:
-- By encouraging cross-disciplinary roles to think deeply about a problem simultaneously, we discover many more unknowns than if a designer sketched alone. Additionally, when developers are in the process they understand where the product and/or service are going and are able to make better decisions. It can save them time later as they're developing the product we create as a team.
-
-when:
-- Design studios can help with generating areas to explore and prioritize a range of different problem areas early in the Discovery process. They can also be used to generate a great number of ideas to address more granular user needs later on.  
-
+date: '2021-02-09'
+description: Understand the problem from different team perspectives and generate
+  many solution sketches using scenario as a guide
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 60 - 90 mins
+participants: Core team, subject matter experts (SMEs)
+tags:
+- Discovery
+- Framing
+title: Design Studio
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - User journey(s)
 - Persona(s)
 - Scenario (if already available)
@@ -23,8 +20,18 @@ what:
 - Red pens
 - Paper
 - Small sticky dots
-
+when:
+- Design studios can help with generating areas to explore and prioritize a range
+  of different problem areas early in the Discovery process. They can also be used
+  to generate a great number of ideas to address more granular user needs later on.
+why:
+- By encouraging cross-disciplinary roles to think deeply about a problem simultaneously,
+  we discover many more unknowns than if a designer sketched alone. Additionally,
+  when developers are in the process they understand where the product and/or service
+  are going and are able to make better decisions. It can save them time later as
+  they're developing the product we create as a team.
 ---
+
 ## How to Use this Method
    {{% callout %}}
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 

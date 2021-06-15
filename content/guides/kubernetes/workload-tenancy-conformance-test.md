@@ -1,11 +1,13 @@
 ---
-title: "Automated Cluster Acceptance Testing"
-linkTitle: "Cluster Acceptance Testing"
-description: "Using Sonobuoy for cluster conformance testing"
-parent: "Workload Tenancy"
-weight: 1400
+date: '2021-02-24'
+description: Using Sonobuoy for cluster conformance testing
 keywords:
 - Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Cluster Acceptance Testing
+parent: Workload Tenancy
+title: Automated Cluster Acceptance Testing
+weight: 1400
 ---
 
 Conformance testing assists in determining whether software is in compliance

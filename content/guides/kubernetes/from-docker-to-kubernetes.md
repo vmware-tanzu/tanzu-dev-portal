@@ -1,7 +1,9 @@
 ---
-title:  "Getting Started with Docker Containers on Kubernetes"
-linkTitle: "From Docker to Kubernetes"
-parent: "What is Kubernetes?"
+date: '2021-02-26'
+lastmod: '2021-02-26'
+linkTitle: From Docker to Kubernetes
+parent: What is Kubernetes?
+title: Getting Started with Docker Containers on Kubernetes
 topics:
 - Kubernetes
 - Containers

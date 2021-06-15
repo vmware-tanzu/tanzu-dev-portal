@@ -1,12 +1,12 @@
 ---
-title:  "Create a Multi-Cluster Monitoring Dashboard with Thanos, Grafana and Prometheus"
-linkTitle: "Multi-Cluster Monitoring"
-parent: "Platform Observability"
-description: Use Thanos and Grafana to collect metrics from Prometheus on multiple Kubernetes clusters.
 date: 2020-03-11
-weight: 1800
-topics:
-- Kubernetes
+description: Use Thanos and Grafana to collect metrics from Prometheus on multiple
+  Kubernetes clusters.
+lastmod: '2021-02-24'
+linkTitle: Multi-Cluster Monitoring
+parent: Platform Observability
+patterns:
+- Observability
 tags:
 - Kubernetes
 - Observability
@@ -15,11 +15,13 @@ tags:
 - Thanos
 - Bitnami
 - Helm
-patterns:
-- Observability
 team:
 - Vikram Vaswani
 - Juan Ariza
+title: Create a Multi-Cluster Monitoring Dashboard with Thanos, Grafana and Prometheus
+topics:
+- Kubernetes
+weight: 1800
 ---
 
 [Prometheus](https://prometheus.io/), coupled with

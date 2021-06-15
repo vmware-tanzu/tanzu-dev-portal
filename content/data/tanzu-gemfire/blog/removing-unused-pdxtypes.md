@@ -1,13 +1,11 @@
 ---
-title: "Removing Unused PdxTypes from an Apache Geode Distributed System"
-description: >
-        A short description of the blog post
 date: 2020-04-28
-type: blog
-
-# Author(s) 
+description: A short description of the blog post
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby  
+- Barry Oglesby
+title: Removing Unused PdxTypes from an Apache Geode Distributed System
+type: blog
 ---
 
 ## Introduction
@@ -93,4 +91,3 @@ Here are a few caveats and comments:
 
 ## Future
    The concepts in this Function can become the implementation of a gfsh command that removes unused PdxTypes from an offline Distributed System. In order to provide this behavior for an online Distributed System, the Function would have to be modified to use the TypeRegistry so that proper locking is done around access to the PdxTypes Region. Also, the TypeRegistry would have to be enhanced to be able to delete PdxTypes from itself as well as the PdxTypes Region.
-

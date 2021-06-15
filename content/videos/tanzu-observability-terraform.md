@@ -1,15 +1,18 @@
 ---
-title: Tanzu Observability by Wavefront Terraform Integration
-description: Use the Wavefront provider for Terraform to manage resources in your Wavefront environment.
-topics:
-- Kubernetes
+date: '2020-10-08'
+description: Use the Wavefront provider for Terraform to manage resources in your
+  Wavefront environment.
+lastmod: '2020-10-08'
+patterns:
+- Observability
 tags:
 - Terraform
 - Wavefront
 - Observability
-patterns:
-- Observability
 team:
 - Scott Rogers
+title: Tanzu Observability by Wavefront Terraform Integration
+topics:
+- Kubernetes
 youtube_id: AE6JhQwmboY
 ---

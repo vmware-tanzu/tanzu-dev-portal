@@ -1,22 +1,26 @@
 ---
-title: "Gathering Metrics from Kubernetes with Prometheus and Grafana"
-metaTitle: "Gathering Metrics from Kubernetes with Prometheus & Grafana"
-linkTitle: "Prometheus and Grafana"
-parent: "Platform Observability"
-description: Learn how to set up Prometheus and Grafana, two open source tools for gathering metrics and visualizing, on an existing Kubernetes cluster.
-weight: 2
-aliases: ["/guides/kubernetes/prometheus-grafana-p1"]
-topics:
-- Kubernetes
+aliases:
+- /guides/kubernetes/prometheus-grafana-p1
+date: '2021-02-24'
+description: Learn how to set up Prometheus and Grafana, two open source tools for
+  gathering metrics and visualizing, on an existing Kubernetes cluster.
+lastmod: '2021-03-07'
+linkTitle: Prometheus and Grafana
+metaTitle: Gathering Metrics from Kubernetes with Prometheus & Grafana
+parent: Platform Observability
+patterns:
+- Observability
 tags:
 - Kubernetes
 - Observability
 - Prometheus
 - Grafana
-patterns:
-- Observability
 team:
 - Brian McClain
+title: Gathering Metrics from Kubernetes with Prometheus and Grafana
+topics:
+- Kubernetes
+weight: 2
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and

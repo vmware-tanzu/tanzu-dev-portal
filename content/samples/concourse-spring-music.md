@@ -1,16 +1,17 @@
 ---
-title:  "Using Concourse to Deploy Spring Music"
-description: >
-    Deploy a multi-microservice application with Concourse.
+date: '2020-04-21'
+description: Deploy a multi-microservice application with Concourse.
+lastmod: '2020-05-07'
+readme: true
+repo: https://github.com/Pivotal-Field-Engineering/s1p-concourse-spring-music
 summary:
 - Deploy a multi-microservice application with Concourse.
-topics:
-- CI-CD
-- Spring
 tags:
 - CI-CD
 - Spring
 - Concourse
-repo: https://github.com/Pivotal-Field-Engineering/s1p-concourse-spring-music
-readme: true
+title: Using Concourse to Deploy Spring Music
+topics:
+- CI-CD
+- Spring
 ---

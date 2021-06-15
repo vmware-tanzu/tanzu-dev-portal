@@ -1,13 +1,15 @@
 ---
-title: "Remote Tips: Physical Space"
-linkTitle: "Physical Space"
-parent: "Remote Tips"
-topics:
-  - Agile
+date: '2020-10-01'
+lastmod: '2021-02-22'
+linkTitle: Physical Space
+parent: Remote Tips
 tags:
-  - Agile
+- Agile
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: 'Remote Tips: Physical Space'
+topics:
+- Agile
 ---
 
 On this page, you’ll find examples of some VMware employees’ setups within their home in order to give you insight and inspiration on how to set up your own physical space. In addition to these examples, you’ll find a quick interview with each practitioner about how and why they set up their space this way.

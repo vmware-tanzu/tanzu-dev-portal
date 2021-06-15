@@ -1,18 +1,20 @@
 ---
-title:  "Deploy Cloud Native Apps Using GitLab CI/CD and Cloud Native Buildpacks"
-linkTitle: "GitLab CI/CD with Buildpacks"
+date: '2021-02-11'
+description: Deploy Cloud Native Apps Using GitLab CI/CD and Cloud Native Buildpacks
+lastmod: '2021-02-11'
+linkTitle: GitLab CI/CD with Buildpacks
 parent: GitLab Auto DevOps
-description: "Deploy Cloud Native Apps Using GitLab CI/CD and Cloud Native Buildpacks"
-topics:
-- CI-CD
+patterns:
+- Deployment
 tags:
 - CI-CD
 - GitLab
 - Buildpacks
-patterns:
-- Deployment
 team:
 - Samer Akkoub
+title: Deploy Cloud Native Apps Using GitLab CI/CD and Cloud Native Buildpacks
+topics:
+- CI-CD
 ---
 
 GitLab is a single application built from the ground up for all stages of the DevOps lifecycle that enables  product, development, QA, security, and operations teams to work on the same project concurrently. It provides teams with a single data store, user interface, and permission model across the DevOps lifecycle. Teams can collaborate and work on a project utilizing a single conversation, which significantly reduces cycle time, allowing developers to focus exclusively on building great software quickly.
