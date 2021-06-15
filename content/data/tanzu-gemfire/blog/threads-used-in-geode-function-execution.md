@@ -1,13 +1,12 @@
 ---
-title: "Threads Used in Apache Geode Function Execution"
-description: >
-        This article describes several common Function execution use cases and which threads processes those requests.
 date: 2020-07-31
-type: blog
-
-# Author(s) 
+description: This article describes several common Function execution use cases and
+  which threads processes those requests.
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby  
+- Barry Oglesby
+title: Threads Used in Apache Geode Function Execution
+type: blog
 ---
 
 ## Introduction
@@ -302,4 +301,3 @@ This use case uses the same three threads as the **onRegion (Replicated Region, 
 
 ## Conclusion
 The use cases which require the least number of threads are **onServer / on Servers** and **onRegion (Partitioned Region, One Filter)**. Both of these require one thread on each server. The other use cases each require either three or four threads depending on the thread socket policy setting in the Function execute method. **Setting it set to false** eliminates the use of shared **P2P message readers** and uses one unshared **P2P message reader** on the server receiving the replication.
-

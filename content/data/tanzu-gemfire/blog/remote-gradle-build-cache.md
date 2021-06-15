@@ -1,13 +1,12 @@
 ---
-title: "Apache Geode as a Remote Gradle Build Cache"
-description: >
-    Apache Geode as a remote cache for Gradle to share commonly built task outputs across remote builds to improve build times
 date: 2020-02-06
-type: blog
-
-# Author(s)
-team: 
+description: Apache Geode as a remote cache for Gradle to share commonly built task
+  outputs across remote builds to improve build times
+lastmod: '2021-04-22'
+team:
 - Jason Huynh
+title: Apache Geode as a Remote Gradle Build Cache
+type: blog
 ---
 
 ## Introduction

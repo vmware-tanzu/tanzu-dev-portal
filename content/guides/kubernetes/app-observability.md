@@ -1,10 +1,13 @@
 ---
-title: "Application Observability"
-subsection: "Application Observability"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-26'
+subsection: Application Observability
 team:
 - John Harris
+title: Application Observability
+topics:
+- Kubernetes
+weight: 22
 ---
 
 The term "observability" in control theory states that the system is observable

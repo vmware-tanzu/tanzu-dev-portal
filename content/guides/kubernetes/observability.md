@@ -1,10 +1,13 @@
 ---
-title: "Platform Observability"
-subsection: "Platform Observability"
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-02-26'
+subsection: Platform Observability
 team:
 - Alexander Brand
+title: Platform Observability
+topics:
+- Kubernetes
+weight: 57
 ---
 
 Observability is crucial for successfully operating a complex software system

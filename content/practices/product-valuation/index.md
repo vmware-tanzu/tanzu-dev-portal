@@ -1,24 +1,32 @@
 ---
-title: "Product Valuation"
-description: "Quantify the value a product delivers to users and the business to support your stakeholder’s assessment of their investment in the product"
-tags: ["Discovery", "Framing", "Inception"]
-length: "Varies greatly"
-participants: "Everyone with a vested interest. The core team should be involved in initial brainstorming (step 1) and direct stakeholder should be brought along as estimates shape up (steps 2-5)."
-image: "/product-valuation/example-3.png"
-lastmod: "2020-05-08"
-
-why:
-- It builds trust and transparency with stakeholders, supports alignment on product decisions, and creates visibility into the importance of the team’s work.
-
-when:
-- A product valuation can be generated at any stage, and is useful at any stage. It is most important to do any time that there is not an abundance of clarity into the value that the team is creating, and stakeholders need a better understanding to inform staffing or product decisions.
-
+date: '2021-02-09'
+description: Quantify the value a product delivers to users and the business to support
+  your stakeholder’s assessment of their investment in the product
+image: /product-valuation/example-3.png
+lastmod: '2021-03-25'
+length: Varies greatly
+participants: Everyone with a vested interest. The core team should be involved in
+  initial brainstorming (step 1) and direct stakeholder should be brought along as
+  estimates shape up (steps 2-5).
+tags:
+- Discovery
+- Framing
+- Inception
+title: Product Valuation
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Spreadsheet app (like Excel)
 - Paper and Pens or shared collaboration documents
-
+when:
+- A product valuation can be generated at any stage, and is useful at any stage. It
+  is most important to do any time that there is not an abundance of clarity into
+  the value that the team is creating, and stakeholders need a better understanding
+  to inform staffing or product decisions.
+why:
+- It builds trust and transparency with stakeholders, supports alignment on product
+  decisions, and creates visibility into the importance of the team’s work.
 ---
+
 ## How to Use this Method
 The time needed varies greatly for several reasons. For example, if you have the data already and are producing a fairly high level estimate, this could take a half day. If you have a complex product, need to gather a lot of data, and are producing a detailed estimate, it could take weeks.
 
@@ -149,5 +157,3 @@ Particularly helpful for step 1
 - <a href="https://www.brainpickings.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/" target="_blank">The Computer as the Bicycle of the Mind</a>
 - <a href="https://www.interaction-design.org/literature/article/google-s-heart-framework-for-measuring-ux" target="_blank">Google’s HEART Framework for Measuring UX</a>
 - <a href="https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b" target="_blank">Pirate Metrics</a>
-
-

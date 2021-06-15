@@ -1,20 +1,22 @@
 ---
-title:  "Deploy from a Private Helm Repository Using Kubeapps"
-parent: "Packaging"
-description: Create a private registry for your customized Helm chart using Harbor and Kubeapps.
-weight: 7
 date: 2020-06-15
-topics:
-- Kubernetes
+description: Create a private registry for your customized Helm chart using Harbor
+  and Kubeapps.
+lastmod: '2021-02-25'
+parent: Packaging
+patterns:
+- Deployment
 tags:
 - Kubeapps
 - Helm
 - Harbor
 - Kubernetes
-patterns:
-- Deployment
-team: 
+team:
 - Raquel Campuzano
+title: Deploy from a Private Helm Repository Using Kubeapps
+topics:
+- Kubernetes
+weight: 7
 ---
 
 [Kubeapps](https://github.com/kubeapps/kubeapps/) is a web-based UI for

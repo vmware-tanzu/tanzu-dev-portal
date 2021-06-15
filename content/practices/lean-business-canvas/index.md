@@ -1,26 +1,31 @@
 ---
-title: "Lean Business Canvas"
-tags: ["Kickoff", "Framing"]
-length: "1 - 2 hrs"
-participants: "Core team, stakeholders"
-image: "lean-business-canvas/step-1.png"
-description: "Summarize “at-a-glance” how users, business and technology meet to create a business opportunity."
-lastmod: "2019-09-24"
-
-why:
-- To create a shared understanding of the project’s goals and provide a basis for validation. This method can be done for an existing business model to identify opportunities or for a future business model to get a holistic view of the potential solution.
-
-when:
-- This process can be repeated as needed to compare multiple business models and create a shared understanding of the project’s goals. This can be done at Kickoff to provide a basis for validation. Or toward the end of a D&F to summarize learnings.
-
+date: '2021-02-09'
+description: Summarize “at-a-glance” how users, business and technology meet to create
+  a business opportunity.
+image: lean-business-canvas/step-1.png
+lastmod: '2021-03-17'
+length: 1 - 2 hrs
+participants: Core team, stakeholders
+tags:
+- Kickoff
+- Framing
+title: Lean Business Canvas
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies
 - Dry erase markers
 - Small sticky dots
-
+when:
+- This process can be repeated as needed to compare multiple business models and create
+  a shared understanding of the project’s goals. This can be done at Kickoff to provide
+  a basis for validation. Or toward the end of a D&F to summarize learnings.
+why:
+- To create a shared understanding of the project’s goals and provide a basis for
+  validation. This method can be done for an existing business model to identify opportunities
+  or for a future business model to get a holistic view of the potential solution.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Draw the lean business canvas on the whiteboard
@@ -86,5 +91,3 @@ None at the moment
 
 [Business Model Generation book](https://www.strategyzer.com/books/business-model-generation)  
 [Business Model Canvas Yelp](https://www.innovationtactics.com/business-model-canvas-yelp/)
-
-

@@ -1,14 +1,16 @@
 ---
-title:  "Securing Spring Cloud Config Server"
+date: '2021-01-29'
+lastmod: '2021-01-29'
 linkTitle: Securing Config Server
 parent: Spring Cloud Config Server
+patterns:
+- API
+tags:
+- Spring Cloud Config Server
+title: Securing Spring Cloud Config Server
 topics:
 - Spring
 - Microservices
-tags:
-- Spring Cloud Config Server
-patterns:
-- API
 ---
 
 As explained in [Setting Up Spring Cloud Config Server](/guides/spring/spring-cloud-config-set-up/), a Spring Cloud Config Server provides a centralized configuration repository for Spring apps. The [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/reference/html/) externalizes configuration information for an application and serves out this information via a REST interface. Some configuration information is sensitive (such as passwords) and requires greater security. 
@@ -84,4 +86,3 @@ You can use the encryption features of Spring Cloud Config Server with a git rep
 You can get started learning about and using Spring Cloud Config with git in the [Centralized Configuration Guide](https://spring.io/guides/gs/centralized-configuration/). Although it does not include use of encryption, this guide steps through the process of setting up a Config Server and consuming configuration information from a client. Use that as a starting point to explore the use of encryption as described above. 
 
 If you want to learn more and get started using a Vault backend, this [sample code on Github](https://github.com/spring-cloud-samples/spring-cloud-config-vault) provides an example of a working Config Server with Vault and Config Client plus usage instructions.
-

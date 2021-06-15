@@ -1,14 +1,13 @@
 ---
-title: "Converting All Apache Geode Statistics to Micrometer Meters"
-description: >
-        This article describes a way to convert all existing Geode Statistics to Micrometer Gauges and to push those Gauges to Wavefront using a Spring Boot Micrometer Wavefront registry.
 date: 2020-05-12
-type: blog
-
-# Author(s) 
+description: This article describes a way to convert all existing Geode Statistics
+  to Micrometer Gauges and to push those Gauges to Wavefront using a Spring Boot Micrometer
+  Wavefront registry.
+lastmod: '2021-04-22'
 team:
 - Barry Oglesby
-
+title: Converting All Apache Geode Statistics to Micrometer Meters
+type: blog
 ---
 
 ## Introduction
@@ -211,6 +210,3 @@ Once the Spring Boot application containing the Micrometer Wavefront registry is
 Creating and publishing all the Gauges from one application is convenient, and the fact that Spring Boot easily supports adding a Micrometer Wavefront registry makes a Spring Boot client application a natural place to do it. But, that adds a process into the flow that isn’t really necessary.
 
 Instead of having a Spring Boot client application that gathers each server’s Statistics, converts them to Gauges and registers them in the MeterRegistry, this behavior could all be done on the server. A mechanism already exists for doing this using a [MetricsPublishingService](https://geode.apache.org/releases/latest/javadoc/org/apache/geode/metrics/MetricsPublishingService.html) that was described by **Jason Huynh** in [this article](/data/tanzu-gemfire/blog/apache-geode-metrics-wavefront). It would be nice to expand it to include all Geode Statistics.
-
-
-

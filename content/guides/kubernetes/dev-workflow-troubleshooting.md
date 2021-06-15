@@ -1,15 +1,16 @@
 ---
-title: "Troubleshooting Applications on Kubernetes" 
-linkTitle: "Troubleshooting Applications" 
+date: '2021-02-09'
 description: Common steps for troubleshooting applications running on Kubernetes.
-parent: "Developer Workflow"
-# date: 2018-10-05
-topics:
-- Kubernetes
+lastmod: '2021-02-09'
+linkTitle: Troubleshooting Applications
+parent: Developer Workflow
 tags:
 - Troubleshooting
 team:
 - John Harris
+title: Troubleshooting Applications on Kubernetes
+topics:
+- Kubernetes
 ---
 
 This guide lists common commands and approaches to troubleshoot applications on

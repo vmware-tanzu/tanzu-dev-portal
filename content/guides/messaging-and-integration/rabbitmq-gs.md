@@ -1,17 +1,20 @@
 ---
-title:  "Getting Started with RabbitMQ"
-linkTitle: "RabbitMQ"
-description: Leverage RabbitMQ, an open source message broker that is lightweight and easy to deploy on premises and in the cloud.
-topics:
-- Event Streaming
-- Messaging and Integration
+date: '2020-05-06'
+description: Leverage RabbitMQ, an open source message broker that is lightweight
+  and easy to deploy on premises and in the cloud.
+lastmod: '2021-03-23'
+linkTitle: RabbitMQ
+patterns:
+- Eventing
 tags:
 - RabbitMQ
 - Event Streaming
-patterns:
-- Eventing
 team:
 - Brian McClain
+title: Getting Started with RabbitMQ
+topics:
+- Event Streaming
+- Messaging and Integration
 ---
 
 ## What Is RabbitMQ?

@@ -1,19 +1,22 @@
 ---
-title: "Python Like A Pro: Building Docker Containers"
-linkTitle: "Python Buildpacks"
-metaTitle: "Building Docker Containers with Python"
-description: "Read industry best practices about building containers and discover how to use Buildpacks to package your Python apps into Docker containers."
-topics:
-- Python
-- Containers
+date: '2020-07-21'
+description: Read industry best practices about building containers and discover how
+  to use Buildpacks to package your Python apps into Docker containers.
+lastmod: '2021-03-07'
+linkTitle: Python Buildpacks
+metaTitle: Building Docker Containers with Python
+patterns:
+- Deployment
 tags:
 - Python
 - Containers
 - Buildpacks
-patterns:
-- Deployment
 team:
 - Ben Wilcock
+title: 'Python Like A Pro: Building Docker Containers'
+topics:
+- Python
+- Containers
 ---
 
 Packaging your application code into Docker containers is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.

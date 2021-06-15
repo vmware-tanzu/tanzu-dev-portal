@@ -1,11 +1,13 @@
 ---
-title: Monitoring SLIs and SLOs
-weight: 1
+date: '2021-04-21'
+lastmod: '2021-05-03'
 layout: single
 related:
-  - "/guides/kubernetes/app-observability-exporting-metrics"
+- /guides/kubernetes/app-observability-exporting-metrics
 team:
 - Zac Bergquist
+title: Monitoring SLIs and SLOs
+weight: 1
 ---
 
 Service Level Indicators (SLIs) and Service Level Objectives (SLOs) are two of

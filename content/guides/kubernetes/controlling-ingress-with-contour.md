@@ -1,12 +1,14 @@
 ---
-title:  "Controlling Ingress with Contour"
+date: '2021-02-26'
+lastmod: '2021-02-26'
 parent: Service Routing
-weight: 1
-topics:
-- Kubernetes
 tags:
 - Contour
 - Envoy
+title: Controlling Ingress with Contour
+topics:
+- Kubernetes
+weight: 1
 ---
 
 In Kubernetes, Ingress is a set of routing rules that define how external traffic is routed to an application inside a Kubernetes cluster. An Ingress controller watches for changes to objects in the cluster and then wires together a data path for each request to be resolved. An Ingress controller processes the requests for resources, provides transport layer security (TLS) termination, and performs other functions.

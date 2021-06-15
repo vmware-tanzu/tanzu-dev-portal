@@ -1,21 +1,22 @@
 ---
-title:  "Create a Continuous Integration Pipeline with GitLab and Kubernetes"
-linkTitle: "GitLab Auto DevOps"
-subsection: GitLab Auto DevOps
-description: Configure a CI/CD pipeline using GitLab and a Kubernetes cluster
 date: 2019-09-18
-topics:
-- CI-CD
+description: Configure a CI/CD pipeline using GitLab and a Kubernetes cluster
+lastmod: '2021-02-05'
+linkTitle: GitLab Auto DevOps
+patterns:
+- Deployment
+subsection: GitLab Auto DevOps
 tags:
 - CI-CD
 - GitLab
 - Bitnami
 - Kubernetes
 - Helm
-patterns:
-- Deployment
 team:
 - Vikram Vaswani
+title: Create a Continuous Integration Pipeline with GitLab and Kubernetes
+topics:
+- CI-CD
 ---
 
 As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and DevOps tools and techniques.

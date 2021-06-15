@@ -7,14 +7,14 @@ assignees: ''
 
 ---
 
-## Summary of contnet
+## Summary of content
 A short summary of the content to be proposed. A few sentences at most.
 
-## Summary of audience
+## Summary of audiences
 A short summary of the audience. Include:
 - Professional area of audience (developer, likely)
-- General expertice in their area
-- Expertice in the particular topic to be discussed
+- General expertise in their area
+- Expertise in the particular topic to be discussed
 
 ## Level of content
 Level of content as it pertains to the topic proposed

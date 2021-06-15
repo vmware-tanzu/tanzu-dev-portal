@@ -1,14 +1,16 @@
 ---
-title: Getting Started with Velero
+date: '2021-01-29'
+lastmod: '2021-03-23'
 parent: Velero
-topics:
-- Kubernetes
-tags:
-- Velero
 patterns:
 - Deployment
-team: 
+tags:
+- Velero
+team:
 - Tiffany Jernigan
+title: Getting Started with Velero
+topics:
+- Kubernetes
 ---
 
 What do you do if you lose state in your cluster, or something went very wrong
@@ -21,6 +23,7 @@ Kubernetes cluster resources and persistent volumes. This guide will show you
 how to deploy Velero to your Kubernetes cluster, create backups, and recover
 from a backup after something goes wrong in the cluster.
 
+{{< youtube id="VBwBR9Em_1A" class="youtube-video-shortcode" >}}
 ## Prerequisites
 
 Before you get started you will need to do the following:

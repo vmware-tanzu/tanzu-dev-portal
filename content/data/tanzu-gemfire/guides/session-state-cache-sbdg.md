@@ -1,11 +1,12 @@
 ---
-title:  "Session State Caching"
-link-title: "Session State Caching"
+date: '2021-04-22'
 description: Session state cache using Tanzu GemFire in a Spring Boot application.
-weight: 5
+lastmod: '2021-04-22'
+link-title: Session State Caching
 parent: Spring for Apache Geode
+title: Session State Caching
 type: data-guides
-
+weight: 5
 ---
 
 This guide walks you through how to implement a session state cache using Tanzu GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
@@ -446,7 +447,3 @@ This shows that the Spring Boot for Apache Geode app has connected to the Tanzu 
 ---
 
 **Congratulations! You have now deployed a Spring Boot for Apache Geode app that implements Session State Caching**
-
-
-
-

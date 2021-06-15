@@ -1,23 +1,29 @@
 ---
-title: "Solution Prioritization"
-tags: ["Framing"]
-length: "1 - 2 hours"
-participants: "Core team members (PM, designer, engineers)"
-image: "solution-prioritization/cover.png"
-description: "Determine which solutions to explore first"
-lastmod: "2019-02-01"
-why:
-- Unless you have a systematic way to approach your pile of solutions, you may find yourself overwhelmed with opportunities. Solution Prioritization lets you walk away with a clear idea of the relative priority / complexity of your many groomed ideas as well as the ones you plan to start with first.
-
-when:
-- "This activity is usually done during Framing and is often preceded by the **Solution Brainstorming**, **Solution Rolestorming**, and **Solution Grooming** workshops"
-- "This activity is often followed by the **Scenario Walkthrough** and/or **Design Studio** workshops"
-
-what: 
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Solution ideas on sticky notes (or cluster sticky notes from Solution Grooming -- coming soon!)
+date: '2021-02-09'
+description: Determine which solutions to explore first
+image: solution-prioritization/cover.png
+lastmod: '2021-03-17'
+length: 1 - 2 hours
+participants: Core team members (PM, designer, engineers)
+tags:
+- Framing
+title: Solution Prioritization
+what:
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Solution ideas on sticky notes (or cluster sticky notes from Solution Grooming --
+  coming soon!)
 - Dry erase markers
 - Blue painter's tape
+when:
+- This activity is usually done during Framing and is often preceded by the **Solution
+  Brainstorming**, **Solution Rolestorming**, and **Solution Grooming** workshops
+- This activity is often followed by the **Scenario Walkthrough** and/or **Design
+  Studio** workshops
+why:
+- Unless you have a systematic way to approach your pile of solutions, you may find
+  yourself overwhelmed with opportunities. Solution Prioritization lets you walk away
+  with a clear idea of the relative priority / complexity of your many groomed ideas
+  as well as the ones you plan to start with first.
 ---
 
 ---
@@ -75,5 +81,3 @@ This is an activity that you can time box if it feels drawn out. Many of the tip
 ![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
 
 ## Recommended Reading
-
-

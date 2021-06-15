@@ -1,12 +1,13 @@
 ---
-title:  "Spring Zipkin Demo"
-description: >
-    Instrument a Spring Boot application with Zipkin
+date: '2020-10-26'
+description: Instrument a Spring Boot application with Zipkin
+lastmod: '2020-10-26'
+patterns:
+- Observability
+readme: false
+repo: https://github.com/BrianMMcClain/spring-zipkin-demo
 summary:
 - Instrument a Spring Boot application with Zipkin
-topics:
-- Spring
-- Microservices
 tags:
 - Spring
 - Microservices
@@ -14,10 +15,10 @@ tags:
 - REST
 - Zipkin
 - Observability
-patterns:
-- Observability
 team:
 - Brian McClain
-repo: https://github.com/BrianMMcClain/spring-zipkin-demo
-readme: false
+title: Spring Zipkin Demo
+topics:
+- Spring
+- Microservices
 ---

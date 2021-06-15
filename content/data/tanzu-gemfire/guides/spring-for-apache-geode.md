@@ -1,13 +1,13 @@
 ---
-title:  "Spring for Apache Geode"
+date: '2021-04-07'
+description: Utilizing the auto-configuration of Spring Boot with Tanzu GemFire and
+  Apache Geode.
+lastmod: '2021-05-28'
 subsection: Spring for Apache Geode
 subsection-parent-page: true
+title: Spring for Apache Geode
 type: data-guides
-
-description: Utilizing the auto-configuration of Spring Boot with Tanzu GemFire and Apache Geode.
 weight: 1
-
-
 ---
 
 Utilizing the auto-configuration of Spring Boot with Tanzu GemFire/Apache Geode.  The [Spring Boot for Apache Geode documentation](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/) further discusses the details of many of these topics.
@@ -26,5 +26,3 @@ You can also refer to the [Spring Boot for Apache Geode compatibility matrix](ht
 - [Getting Started with Tanzu GemFire for Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/): A guide to help set up a  Tanzu GemFire instance on Kubernetes.
 - [Cache-Aside Pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg): Use the Cache Aside pattern with your Spring Boot application to improve your applications performance.
 - [Session State Caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg): This guide walks you through how to implement a session state cache using Tanzu GemFire, Spring Boot for Apache Geode, and Spring Session.
-
-  
