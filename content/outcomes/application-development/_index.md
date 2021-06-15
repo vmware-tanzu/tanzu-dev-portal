@@ -7,7 +7,7 @@ team:
   - VMware Tanzu Labs
 ---
  
-## Why is this learning path important?
+## Why is this important?
  
 Software engineering techniques have never evolved at such a quick pace as they are today. New frameworks, practices, and technologies keep emerging, while bringing new concepts and increased complexity of software. As a result, it feels hard to keep up with change and to make the right choices for your end-to-end modern application lifecycle.
  
