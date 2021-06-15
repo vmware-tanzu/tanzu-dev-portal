@@ -15,11 +15,11 @@ One reason is that while these teams may place a priority on perfectly implement
 ## What you will learn
 In this article, you will learn to:
 
-- Define balanced team for your team members
-- Draw the balanced team diagram
-- Identify the benefits of a balanced team
+- [Define balanced team for your team members](#definition)
+- [Draw the balanced team diagram](#diagram)
+- [Identify the benefits of a balanced team](#benefits)
 
-## Define balanced team for your team members
+## Define balanced team for your team members {id=definition}
 > “A team management philosophy that has people with a variety of skills and perspectives that support each other towards a shared goal.” - *balancedteam.org*
 
 The typical balanced team mix for product development is a product manager, product designer, and engineer(s) dedicated to a single product development effort. This is in contrast to another common team structure where roles some roles, such as product management and design, are shared across many product efforts.
@@ -46,34 +46,34 @@ The following are the most common roles you will see on a balanced team for prod
 |  |  |
 {{< /table >}}
 
-## Draw the balanced team diagram
+## Draw the balanced team diagram {id=diagram}
 At VMware Tanzu Labs, we assemble balanced software product development teams in order to ensure that the products we are building are:
 
-- Desirable from a customer’s perspective.
-- Viable from a business perspective.
-- Feasible from a technical perspective. 
+- [Desirable from a customer’s perspective.](#desirable)
+- [Viable from a business perspective.](#viable)
+- [Feasible from a technical perspective.](#feasible)
 
 Each member of the balanced team represents one of these areas. 
 
 ![Balanced Team Diagram](/images/outcomes/application-development/balanced-team-diagram.png)
 
-#### Desirable: Does it solve our users’ problems?
+#### Desirable: Does it solve our users’ problems? {id=desirable}
 
 The product should be something that users want and that solves real problems. A designer’s primary question is, “How is the user affected?” More than anyone else on the team, designers help us answer these fundamental questions: “Is this an important problem to users?” and, “Does this design solve the problem?”
 
 **Reflection:** if designers become too focused on user needs and cannot connect with business needs and technical feasibility, they will focus on solution ideas that cannot be implemented and/or will deliver no return on investment.
 
-#### Viable: Will this help the business?
+#### Viable: Will this help the business? {id=viable}
 The product has to support a sustainable business model. The product manager’s primary question is, “By solving these specific user problems with these specific solutions, are we creating valuable user and business outcomes?” 
 
 **Reflection:** if product managers become too focused on the business and cannot connect with users, they will likely focus on solutions that don’t solve any real needs and thus don’t get used.
 
-#### Feasible: How difficult is it to build?
+#### Feasible: How difficult is it to build? {id=feasible}
 Product implementation has to be feasible and robust. Engineers’ primary question is, “What technical implementation will satisfy the project and product goals best?” Engineers help us debate the feasibility and merit of potential solutions while remaining mindful of technology constraints.
 
 **Reflection:** it doesn’t help for engineers to come up with feasible solutions that don’t solve problems for users, or to home in on solutions that are desirable and viable and yet not feasible. Engineers should offer alternative solutions that are more feasible (or cheaper) if they know them to be available.
 
-## Identify four benefits of a balanced team
+## Identify four benefits of a balanced team {id=benefits}
 When sitting next to each other, or sharing virtual space, team members constantly communicate and collaborate. Teams are focused on delivering customer value through working software in small, iterative releases, and are self-organizing in that they can adapt common tools and practices to what works best for all members. Communication among team members tends to be informal, favoring spontaneous conversation over lengthy meetings. 
 
 Balanced teams have a host of benefits, some top ones are:
@@ -89,9 +89,9 @@ Balanced teams have a host of benefits, some top ones are:
 {{< /table >}}
 
 ## In this article, you learned to:
-- Define balanced team for your team members
-- Draw the balanced team diagram 
-- Identify the potential benefits of a balanced team
+- [Define balanced team for your team members](#definition)
+- [Draw the balanced team diagram](#diagram)
+- [Identify the benefits of a balanced team](#benefits)
 
 ## Keep Learning
 1. Want to learn more about balanced teams? Check out Becki Hyde, Product Manager at Tanzu Labs giving her talk [“Making magic with Balanced Teams”](https://tanzu.vmware.com/content/videos/becki-hyde-making-magic-with-balanced-teams) at SpringOne. 
