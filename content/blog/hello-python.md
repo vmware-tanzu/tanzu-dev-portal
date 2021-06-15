@@ -1,8 +1,6 @@
 ---
 date: 2020-08-11
-description: 'How does Python look in the cloud-native world of today?
-
-  '
+description: How does Python look in the cloud-native world of today?
 featured: false
 lastmod: '2020-10-08'
 patterns:

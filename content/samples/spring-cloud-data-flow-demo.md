@@ -1,8 +1,6 @@
 ---
 date: '2020-08-11'
-description: 'Building Microservice Data Streams With Spring Cloud Data Flow
-
-  '
+description: Building Microservice Data Streams With Spring Cloud Data Flow
 lastmod: '2020-09-17'
 patterns:
 - API

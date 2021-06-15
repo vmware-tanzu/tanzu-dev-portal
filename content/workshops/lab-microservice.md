@@ -1,8 +1,6 @@
 ---
 date: '2021-03-04'
-description: 'Build a simple microservice with Spring.
-
-  '
+description: Build a simple microservice with Spring.
 hero: /images/workshops/workshop-spring-microservices.png
 lab: lab-microservice
 lastmod: '2021-05-03'

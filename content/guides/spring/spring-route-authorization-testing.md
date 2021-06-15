@@ -1,8 +1,6 @@
 ---
 date: 2021-05-05 10:40:17-06:00
-description: 'Dynamic testing of your Spring Security route authorizations
-
-  '
+description: Dynamic testing of your Spring Security route authorizations
 draft: false
 lastmod: '2021-05-25'
 tags:

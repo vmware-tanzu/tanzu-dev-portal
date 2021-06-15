@@ -1,8 +1,6 @@
 ---
 date: 2020-11-11
-description: 'Here is a curated list of some talks to watch at KubeCon NA 2020
-
-  '
+description: Here is a curated list of some talks to watch at KubeCon NA 2020
 lastmod: '2020-11-11'
 tags:
 - Containers

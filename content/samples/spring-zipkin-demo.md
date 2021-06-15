@@ -1,8 +1,6 @@
 ---
 date: '2020-10-26'
-description: 'Instrument a Spring Boot application with Zipkin
-
-  '
+description: Instrument a Spring Boot application with Zipkin
 lastmod: '2020-10-26'
 patterns:
 - Observability

@@ -1,8 +1,6 @@
 ---
 date: 2020-11-23
-description: 'Coté demystifies what the term "digital transformation" means for developers.
-
-  '
+description: Coté demystifies what the term "digital transformation" means for developers.
 featured: false
 lastmod: '2021-01-19'
 patterns: null

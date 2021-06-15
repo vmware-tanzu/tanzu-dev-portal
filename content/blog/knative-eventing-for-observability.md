@@ -1,8 +1,6 @@
 ---
 date: 2021-02-22
-description: 'Getting a better picture of Kubernetes events
-
-  '
+description: Getting a better picture of Kubernetes events
 featured: false
 lastmod: '2021-05-19'
 patterns:

@@ -1,8 +1,6 @@
 ---
 date: 2020-11-04
-description: 'The importance of observability in distributed systems.
-
-  '
+description: The importance of observability in distributed systems.
 featured: false
 lastmod: '2021-02-24'
 patterns:

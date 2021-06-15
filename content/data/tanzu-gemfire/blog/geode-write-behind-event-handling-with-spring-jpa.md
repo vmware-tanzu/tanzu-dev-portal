@@ -1,9 +1,7 @@
 ---
 date: 2020-06-12
-description: 'A small project to show how an Apache Geode write-behind event handling
+description: A small project to show how an Apache Geode write-behind event handling
   can be implemented with Spring Data JPA and Spring Boot Data Geode.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Juan Jose Ramos

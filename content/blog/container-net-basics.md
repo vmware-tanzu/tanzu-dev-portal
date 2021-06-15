@@ -1,8 +1,6 @@
 ---
 date: 2020-06-29
-description: 'Demystify containers and cover some networking basics
-
-  '
+description: Demystify containers and cover some networking basics
 featured: false
 lastmod: '2021-02-08'
 patterns:

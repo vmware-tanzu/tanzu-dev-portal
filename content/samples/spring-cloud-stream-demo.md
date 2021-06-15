@@ -1,8 +1,6 @@
 ---
 date: '2020-04-21'
-description: 'Simple Event Driven Microservices with Spring Cloud Stream
-
-  '
+description: Simple Event Driven Microservices with Spring Cloud Stream
 lastmod: '2020-05-19'
 patterns:
 - Eventing

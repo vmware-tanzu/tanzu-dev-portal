@@ -1,9 +1,7 @@
 ---
 date: 2020-06-03
-description: 'This is a how-to article that describes a way to log all the events
-  in a GatewaySender queue.
-
-  '
+description: This is a how-to article that describes a way to log all the events in
+  a GatewaySender queue.
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

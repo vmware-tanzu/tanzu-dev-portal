@@ -1,7 +1,7 @@
 ---
 date: '2021-05-28'
-description: "Provides a simple book-serving app which uses the data service as a
-  system of record. \n"
+description: 'Provides a simple book-serving app which uses the data service as a
+  system of record. '
 lastmod: '2021-05-28'
 repo: https://github.com/gemfire/node-examples
 title: Node.js - Book Service

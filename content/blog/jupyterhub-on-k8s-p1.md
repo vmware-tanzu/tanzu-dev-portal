@@ -1,8 +1,6 @@
 ---
 date: 2021-01-07
-description: 'Setting up JupyterHub on Kubernetes
-
-  '
+description: Setting up JupyterHub on Kubernetes
 featured: false
 lastmod: '2021-05-19'
 patterns:

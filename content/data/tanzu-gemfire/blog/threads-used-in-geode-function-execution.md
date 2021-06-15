@@ -1,9 +1,7 @@
 ---
 date: 2020-07-31
-description: 'This article describes several common Function execution use cases and
+description: This article describes several common Function execution use cases and
   which threads processes those requests.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

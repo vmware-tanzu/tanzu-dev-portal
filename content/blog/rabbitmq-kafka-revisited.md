@@ -2,11 +2,9 @@
 aliases:
 - /blog/revisited-understanding-when-to-use-rabbitmq-or-apache-kafka/
 date: 2020-11-16
-description: 'Which is better RabbitMQ or Kafka? This article will outline the functionality
+description: Which is better RabbitMQ or Kafka? This article will outline the functionality
   offered by both messaging systems and help you make an informed decision when choosing
   a platform.
-
-  '
 lastmod: '2021-03-07'
 metaTitle: RabbitMQ vs Kafka - Which Messaging System is Better?
 tags:

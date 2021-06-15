@@ -1,8 +1,6 @@
 ---
 date: 2020-04-28
-description: 'A short description of the blog post
-
-  '
+description: A short description of the blog post
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

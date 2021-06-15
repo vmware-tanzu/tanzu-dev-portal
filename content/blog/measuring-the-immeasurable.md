@@ -1,8 +1,8 @@
 ---
 date: '2021-03-22'
-description: "We summarize one fascinating and helpful section of How To Measure Anything
+description: 'We summarize one fascinating and helpful section of How To Measure Anything
   by Douglas Hubbard, along with our notes and thoughts, as this section is particularly
-  helpful for the Product Valuation workshop. \n"
+  helpful for the Product Valuation workshop. '
 lastmod: '2021-03-25'
 team:
 - VMware Tanzu Labs

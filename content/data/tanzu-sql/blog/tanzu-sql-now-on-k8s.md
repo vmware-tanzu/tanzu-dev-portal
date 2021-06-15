@@ -1,9 +1,7 @@
 ---
 data-featured: true
 date: 2020-11-10
-description: 'Getting Started with Tanzu SQL - Postgres
-
-  '
+description: Getting Started with Tanzu SQL - Postgres
 lastmod: '2021-04-07'
 team:
 - Jing Li

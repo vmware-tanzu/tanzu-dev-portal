@@ -1,8 +1,6 @@
 ---
 date: '2020-04-21'
-description: 'An example of how to connect to, send, and receive messages from Kafka.
-
-  '
+description: An example of how to connect to, send, and receive messages from Kafka.
 lastmod: '2020-05-19'
 patterns:
 - Eventing

@@ -1,9 +1,7 @@
 ---
 date: 2020-07-08
-description: 'Build modern, cloud native apps today using the latest innovations from
+description: Build modern, cloud native apps today using the latest innovations from
   Spring, Cassandra and Kubernetes
-
-  '
 lastmod: '2020-09-17'
 patterns:
 - API

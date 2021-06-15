@@ -1,9 +1,7 @@
 ---
 date: 2020-07-17
-description: 'Compare various options for developing on top of Kubernetes locally
-  using Minikube, kind, and Docker Desktop.
-
-  '
+description: Compare various options for developing on top of Kubernetes locally using
+  Minikube, kind, and Docker Desktop.
 featured: false
 lastmod: '2020-09-22'
 patterns:

@@ -1,9 +1,7 @@
 ---
 date: 2020-08-29
-description: 'This article shows how to route events directly to a parallel AsyncEventQueue
+description: This article shows how to route events directly to a parallel AsyncEventQueue
   using Functions.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

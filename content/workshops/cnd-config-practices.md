@@ -1,9 +1,7 @@
 ---
 date: '2021-04-22'
-description: 'You will externalize environment configuration and consume it from a
+description: You will externalize environment configuration and consume it from a
   web application on a modern container orchestration platform.
-
-  '
 draft: false
 hero: /images/workshops/workshop-cloud-native-config.png
 lab: cnd-config-practices

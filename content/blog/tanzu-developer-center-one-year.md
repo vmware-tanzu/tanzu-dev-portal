@@ -1,9 +1,7 @@
 ---
 date: 2021-06-01
-description: 'What a year it''s been! Let''s take a look at what''s changed in the
-  last 12 months, including a new feature launching today!
-
-  '
+description: What a year it's been! Let's take a look at what's changed in the last
+  12 months, including a new feature launching today!
 lastmod: '2021-06-02'
 tags:
 - Development

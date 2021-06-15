@@ -1,9 +1,7 @@
 ---
 date: 2021-04-15
-description: 'Announcement for the open sourcing of code that generates Tanzu Observability
+description: Announcement for the open sourcing of code that generates Tanzu Observability
   URL
-
-  '
 featured: false
 lastmod: '2021-04-16'
 patterns:

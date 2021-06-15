@@ -1,8 +1,6 @@
 ---
 date: 2020-10-12
-description: 'This article describes a Spring Boot JMX Notification listener application.
-
-  '
+description: This article describes a Spring Boot JMX Notification listener application.
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

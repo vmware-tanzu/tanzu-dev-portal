@@ -1,8 +1,6 @@
 ---
 date: '2020-04-21'
-description: 'Build a basic Spring Boot application that uses JPA to access a database
-
-  '
+description: Build a basic Spring Boot application that uses JPA to access a database
 lastmod: '2020-05-07'
 patterns:
 - API

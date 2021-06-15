@@ -1,9 +1,7 @@
 ---
 date: 2020-09-17
-description: 'Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New
+description: Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New
   Home
-
-  '
 lastmod: '2021-02-08'
 tags:
 - SpringOne

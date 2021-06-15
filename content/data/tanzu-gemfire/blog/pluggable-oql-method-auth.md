@@ -1,7 +1,7 @@
 ---
 date: 2020-02-07
-description: "Apache Geode provides a SQL-like query language called OQL that allows
-  users to access data stored within the regions.   \n"
+description: 'Apache Geode provides a SQL-like query language called OQL that allows
+  users to access data stored within the regions.   '
 lastmod: '2021-04-22'
 team:
 - Juan Jose Ramos

@@ -1,10 +1,8 @@
 ---
 date: 2020-05-27
-description: 'Spring Security is an extremely powerful and highly customizable framework
+description: Spring Security is an extremely powerful and highly customizable framework
   that provides authentication, authorization, and protection against common attacks,
   it is the de-facto standard for securing Spring-based applications.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Juan Jose Ramos

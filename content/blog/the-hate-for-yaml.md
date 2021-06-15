@@ -1,8 +1,6 @@
 ---
 date: 2021-01-19
-description: 'YAML gets a lot of hate, but is it more nuanced than that?
-
-  '
+description: YAML gets a lot of hate, but is it more nuanced than that?
 lastmod: '2021-05-19'
 patterns:
 - Deployment

@@ -1,9 +1,7 @@
 ---
 date: 2020-07-30
-description: 'Compare various options for declarative deployment of microservices
-  in Kubernetes.
-
-  '
+description: Compare various options for declarative deployment of microservices in
+  Kubernetes.
 lastmod: '2020-09-22'
 patterns:
 - Deployment

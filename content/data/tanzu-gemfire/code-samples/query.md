@@ -1,9 +1,7 @@
 ---
 date: '2021-05-28'
-description: 'A simple JavaScript application that demonstrates executing a query
-  on a Tanzu GemFire cluster.
-
-  '
+description: A simple JavaScript application that demonstrates executing a query on
+  a Tanzu GemFire cluster.
 lastmod: '2021-05-28'
 repo: https://github.com/gemfire/node-examples
 title: Node.js - Query

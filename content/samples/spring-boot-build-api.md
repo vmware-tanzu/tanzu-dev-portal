@@ -1,8 +1,6 @@
 ---
 date: '2020-05-06'
-description: 'Building a REST API with Spring Boot
-
-  '
+description: Building a REST API with Spring Boot
 lastmod: '2020-05-19'
 patterns:
 - API

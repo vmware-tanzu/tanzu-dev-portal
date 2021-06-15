@@ -1,7 +1,7 @@
 ---
 date: '2021-05-28'
-description: "Demonstrates the basic authentication and authorization mechanism used
-  when an app interacts with a Tanzu GemFire cluster. \n"
+description: 'Demonstrates the basic authentication and authorization mechanism used
+  when an app interacts with a Tanzu GemFire cluster. '
 lastmod: '2021-05-28'
 repo: https://github.com/gemfire/node-examples
 title: Node.js - Authentication

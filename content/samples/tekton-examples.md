@@ -1,8 +1,6 @@
 ---
 date: '2020-06-15'
-description: 'A collection of examples for Tekton
-
-  '
+description: A collection of examples for Tekton
 lastmod: '2020-06-15'
 patterns:
 - Deployment

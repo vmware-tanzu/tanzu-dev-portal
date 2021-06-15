@@ -1,8 +1,6 @@
 ---
 date: '2020-04-21'
-description: 'RESTful service development with Spring
-
-  '
+description: RESTful service development with Spring
 lastmod: '2020-05-19'
 patterns:
 - API

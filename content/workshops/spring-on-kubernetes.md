@@ -1,9 +1,7 @@
 ---
 date: '2021-03-09'
-description: 'Create a Spring Boot application. Containerize it, and push the container
+description: Create a Spring Boot application. Containerize it, and push the container
   to a registry. Deploy it to Kubernetes.
-
-  '
 draft: false
 hero: /images/workshops/workshop-spring-on-kubernetes.png
 lab: spring-on-kubernetes

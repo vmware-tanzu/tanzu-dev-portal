@@ -1,13 +1,11 @@
 ---
 date: 2020-03-09
-description: 'A sequence, also known as a counter, is a feature supported by some
-  database systems to produce unique values on demand, generally increasing the current
-  value by 1 and returning the resulting value to the caller. Instead of embedding
-  the sequence generation within the real-time processing, use the Geode Sequence
-  Generator and invoke the service occasionally to retrieve a big enough set of counters
-  to work on.
-
-  '
+description: A sequence, also known as a counter, is a feature supported by some database
+  systems to produce unique values on demand, generally increasing the current value
+  by 1 and returning the resulting value to the caller. Instead of embedding the sequence
+  generation within the real-time processing, use the Geode Sequence Generator and
+  invoke the service occasionally to retrieve a big enough set of counters to work
+  on.
 lastmod: '2021-04-22'
 team:
 - Juan Jose Ramos

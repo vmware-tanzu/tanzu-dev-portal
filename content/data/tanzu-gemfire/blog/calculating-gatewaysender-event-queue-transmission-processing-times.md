@@ -1,12 +1,10 @@
 ---
 date: 2020-12-01
-description: 'Calculating queue, transmission and total processing times for Apache
+description: Calculating queue, transmission and total processing times for Apache
   Geode GatewaySender events can be helpful for WAN resource capacity planning like
   the amount of queue memory to allocate and the number of dispatcher threads to configure.
   This article describes how to implement a GatewayEventFilter to calculate these
   times using a custom Apache Geode Statistics object.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

@@ -1,9 +1,7 @@
 ---
 date: 2020-06-23
-description: 'A look at how the two commands expands Git''s vocabulary to specifically
+description: A look at how the two commands expands Git's vocabulary to specifically
   deal with a single aspect of the repository.
-
-  '
 featured: false
 lastmod: '2020-09-17'
 tags:

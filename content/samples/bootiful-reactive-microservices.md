@@ -1,8 +1,6 @@
 ---
 date: '2020-04-21'
-description: 'Reactive Microservice workshop in Spring
-
-  '
+description: Reactive Microservice workshop in Spring
 lastmod: '2020-05-19'
 readme: true
 repo: https://github.com/joshlong/bootiful-reactive-microservices

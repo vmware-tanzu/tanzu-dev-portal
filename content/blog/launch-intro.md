@@ -1,8 +1,6 @@
 ---
 date: 2020-05-07
-description: 'Meet the VMware Tanzu Developer Center.
-
-  '
+description: Meet the VMware Tanzu Developer Center.
 featured: false
 lastmod: '2020-09-17'
 team:

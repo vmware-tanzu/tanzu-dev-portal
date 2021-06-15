@@ -1,8 +1,6 @@
 ---
 date: 2020-05-29
-description: 'Building Containers from your code.
-
-  '
+description: Building Containers from your code.
 featured: false
 lastmod: '2020-09-17'
 patterns:

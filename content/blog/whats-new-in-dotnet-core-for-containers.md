@@ -1,7 +1,6 @@
 ---
 date: 2020-07-22
-description: "Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads
-  \n"
+description: 'Looking at recent changes in .NET 3.0 and 3.1 for containerized workloads '
 lastmod: '2021-02-22'
 patterns:
 - Deployment

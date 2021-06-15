@@ -1,8 +1,6 @@
 ---
 date: 2020-05-21
-description: 'Develop apps to run on the cloud right on your laptop.
-
-  '
+description: Develop apps to run on the cloud right on your laptop.
 featured: false
 lastmod: '2020-09-17'
 patterns:

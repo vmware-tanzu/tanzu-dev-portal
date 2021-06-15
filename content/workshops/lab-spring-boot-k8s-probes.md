@@ -1,8 +1,6 @@
 ---
 date: '2021-03-04'
-description: 'Add liveness and readiness probes to a Spring Boot application in Kubernetes.
-
-  '
+description: Add liveness and readiness probes to a Spring Boot application in Kubernetes.
 hidden: true
 lab: lab-spring-boot-k8s-probes
 lastmod: '2021-05-03'

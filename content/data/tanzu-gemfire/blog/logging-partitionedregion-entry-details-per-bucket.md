@@ -1,8 +1,6 @@
 ---
 date: 2020-09-15
-description: 'This article shows how to get details for each BucketRegion in the PartitionedRegion.
-
-  '
+description: This article shows how to get details for each BucketRegion in the PartitionedRegion.
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

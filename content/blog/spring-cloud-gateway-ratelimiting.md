@@ -1,6 +1,6 @@
 ---
 date: '2021-04-22'
-description: "Using Spring Cloud Gateway to manage API requests rate. \n"
+description: 'Using Spring Cloud Gateway to manage API requests rate. '
 lastmod: '2021-04-22'
 tags:
 - API

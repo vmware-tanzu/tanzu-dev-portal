@@ -1,10 +1,8 @@
 ---
 date: 2020-05-12
-description: 'This article describes a way to convert all existing Geode Statistics
+description: This article describes a way to convert all existing Geode Statistics
   to Micrometer Gauges and to push those Gauges to Wavefront using a Spring Boot Micrometer
   Wavefront registry.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Barry Oglesby

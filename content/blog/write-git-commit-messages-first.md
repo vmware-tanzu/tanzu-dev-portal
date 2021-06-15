@@ -1,10 +1,8 @@
 ---
 date: 2020-08-19
-description: 'Writing your commit messages first keeps you and your pair focused between
+description: Writing your commit messages first keeps you and your pair focused between
   the feature you are currently trying to implement and whatever current change you
   are making that could be a smaller, more atomic pushable commit.
-
-  '
 featured: false
 lastmod: '2020-09-17'
 tags:

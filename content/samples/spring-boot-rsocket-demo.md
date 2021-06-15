@@ -1,8 +1,6 @@
 ---
 date: '2020-08-11'
-description: 'Getting Started With RSocket On Spring Boot
-
-  '
+description: Getting Started With RSocket On Spring Boot
 lastmod: '2020-09-17'
 patterns:
 - API

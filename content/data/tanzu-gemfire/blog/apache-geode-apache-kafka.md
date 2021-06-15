@@ -1,10 +1,8 @@
 ---
 date: 2020-03-03
-description: 'We’ll be ingesting JSON data from a rest endpoint into a Kafka topic.
+description: We’ll be ingesting JSON data from a rest endpoint into a Kafka topic.
   We will sink the data into an Apache Geode region using the geode-kafka-connector
   and execute queries against the data.
-
-  '
 lastmod: '2021-04-22'
 team:
 - Jason Huynh

@@ -1,8 +1,6 @@
 ---
 date: '2021-03-04'
-description: 'Use Skaffold to create a Spring Boot application and deploy it to Kubernetes.
-
-  '
+description: Use Skaffold to create a Spring Boot application and deploy it to Kubernetes.
 hidden: true
 lab: lab-spring-boot-k8s-skaffold
 lastmod: '2021-03-11'

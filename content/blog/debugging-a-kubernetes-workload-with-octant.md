@@ -1,9 +1,7 @@
 ---
 date: 2020-10-15
-description: 'Walk through an NGINX deployment with a faulty NGINX configuration to
+description: Walk through an NGINX deployment with a faulty NGINX configuration to
   demonstrate how common pitfalls can be identified using Octant.
-
-  '
 lastmod: '2020-12-04'
 patterns:
 - Deployment
