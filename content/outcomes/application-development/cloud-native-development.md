@@ -2,6 +2,8 @@
 title: Cloud Native Development
 weight: 40
 layout: single
+team:
+  - VMware Tanzu Labs
 ---
 
 Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.
