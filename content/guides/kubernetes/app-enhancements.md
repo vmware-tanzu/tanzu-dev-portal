@@ -1,10 +1,13 @@
 ---
-title: "Application Enhancements"
-subsection: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-26'
+subsection: Application Enhancements
 team:
 - John Harris
+title: Application Enhancements
+topics:
+- Kubernetes
+weight: 12
 ---
 
 Kubernetes does not demand specifics about the applications that run on top of

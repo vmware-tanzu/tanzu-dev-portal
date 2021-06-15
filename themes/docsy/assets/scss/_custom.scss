@@ -618,7 +618,6 @@ footer {
   width: 30px;
   margin-right: 15px;
 }
-
 .guide .td-sidebar-nav__section-title a {
   font-size: 1.2rem;
   color: white;
@@ -1193,9 +1192,20 @@ body .workshops-hero {
   background-color: transparent !important;
   padding-bottom: 0px !important;
   min-height: auto !important;
-
+}
+body .outcomes-hero + .td-content {
+  margin-top: 2rem;
+}
+body .outcomes-intro {
+  max-width: 920px;
+}
+body .outcomes-hero,
+body .workshops-hero {
   .lead {
     max-width: 920px;
+    @media (min-width: 992px) {
+      max-width: 620px;
+    }
   }
 }
 
@@ -1587,7 +1597,9 @@ code {
     display: block;
   }
 }
-
+.feedback i {
+  font-size: 1.4rem;
+}
 .pride-mode-only {
   display: none !important;
 }

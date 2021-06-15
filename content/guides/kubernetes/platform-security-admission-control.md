@@ -1,11 +1,13 @@
 ---
-title: "Admission Control"
-linkTitle: "Admission Control"
-description: "Considerations for implementing admission control in Kubernetes"
-parent: "Platform Security"
-weight: 1
+date: '2021-02-24'
+description: Considerations for implementing admission control in Kubernetes
 keywords:
 - Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Admission Control
+parent: Platform Security
+title: Admission Control
+weight: 1
 ---
 
 This document details the philosophy and methods for implementing admission

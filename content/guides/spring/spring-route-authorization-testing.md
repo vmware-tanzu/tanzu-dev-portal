@@ -1,14 +1,17 @@
 ---
+date: 2021-05-05 10:40:17-06:00
+description: Dynamic testing of your Spring Security route authorizations
 draft: false
-date: 2021-05-05T10:40:17-06:00
-tags: ['spring', 'testing', 'spring security']
-title: 'Spring Route Authorization Testing'
-description: >
-  Dynamic testing of your Spring Security route authorizations
-topics:
-  - Spring
+lastmod: '2021-05-25'
+tags:
+- spring
+- testing
+- spring security
 team:
-  - Toby Rumans
+- Toby Rumans
+title: Spring Route Authorization Testing
+topics:
+- Spring
 ---
 
 Spring Security enables us to lock down routes in applications to particular roles.

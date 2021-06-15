@@ -1,23 +1,22 @@
 ---
-title:  "The Spring REST Stack"
-description: >
-    RESTful service development with Spring
+date: '2020-04-21'
+description: RESTful service development with Spring
+lastmod: '2020-05-19'
+patterns:
+- API
+readme: true
+repo: https://github.com/joshlong/the-spring-rest-stack
 summary:
 - Accompanies a talk that Josh Long delivers on RESTful service development with Spring
-topics:
-- Spring
-- Microservices
 tags:
 - Spring
 - Microservices
 - Spring Boot
 - REST
-patterns:
-- API
 team:
 - Josh Long
-repo: https://github.com/joshlong/the-spring-rest-stack
-readme: true
+title: The Spring REST Stack
+topics:
+- Spring
+- Microservices
 ---
-
-

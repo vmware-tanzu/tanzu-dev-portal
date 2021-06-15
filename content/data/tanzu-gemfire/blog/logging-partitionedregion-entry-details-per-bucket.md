@@ -1,13 +1,11 @@
 ---
-title: "Logging Apache Geode PartitionedRegion Entry Details Per Bucket"
-description: >
-        This article shows how to get details for each BucketRegion in the PartitionedRegion.
 date: 2020-09-15
-type: blog
-
-# Author(s) 
+description: This article shows how to get details for each BucketRegion in the PartitionedRegion.
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby 
+- Barry Oglesby
+title: Logging Apache Geode PartitionedRegion Entry Details Per Bucket
+type: blog
 ---
 
 ## Introduction

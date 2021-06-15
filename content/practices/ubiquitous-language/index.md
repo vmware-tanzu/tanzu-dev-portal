@@ -1,26 +1,29 @@
 ---
-title: "Ubiquitous Language"
-tags: ["Discovery", "Framing"]
-length: "1 hour"
-participants: "Core team, subject matter experts"
-image: "default-cover.png"
-description: "Establish a common set of terms understood by the core team"
-lastmod: "2018-10-04"
-
+date: '2021-02-09'
+description: Establish a common set of terms understood by the core team
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1 hour
+participants: Core team, subject matter experts
+tags:
+- Discovery
+- Framing
+title: Ubiquitous Language
+what:
+- Whiteboard, large wall, or digital version like [Miro](https://miro.com/)
+- Sticky notes
+- Sharpies / markers
+when:
+- We try to do this during Discovery or Framing in order to establish a baseline vocabulary.
+  It’s advisable to do this prior to delivery so the code that’s written reflects
+  the business domain language from day one. It’s also worth revisiting this throughout
+  the project as new domain terms are uncovered.
 why:
 - Helps establish clear names and definitions for domain concepts
 - Helps eliminate duplication and inconsistency in the codebase and in team conversations
 - Helps Give new team members an easy way to onboard into the domain
-
-when:
-- We try to do this during Discovery or Framing in order to establish a baseline vocabulary. It’s advisable to do this prior to delivery so the code that’s written reflects the business domain language from day one. It’s also worth revisiting this throughout the project as new domain terms are uncovered.  
-
-what:
-- "Whiteboard, large wall, or digital version like [Miro](https://miro.com/)"
-- Sticky notes
-- Sharpies / markers
-
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Clearly outline the goal of the meeting:
@@ -90,5 +93,3 @@ None at the moment.
 [DDD: Questions around ubiquitous language](https://richarddingwall.name/2013/02/16/ubiquitious-language-handling-change/)  
 [Domain-Driven Design Distilled (1st Edition)](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420)  
 [Domain-Driven Design: Tackling Complexity in the Heart of Software (1st Edition)](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
-
-

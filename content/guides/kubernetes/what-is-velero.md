@@ -1,13 +1,16 @@
 ---
-title:  "Backing Up, Restoring, and Migrating Resources with Velero"
-linkTitle: "Velero"
+date: '2021-02-26'
+lastmod: '2021-02-26'
+linkTitle: Velero
 subsection: Velero
-topics:
-- Kubernetes
 tags:
 - Backup
 - Disaster Recovery
 - Velero
+title: Backing Up, Restoring, and Migrating Resources with Velero
+topics:
+- Kubernetes
+weight: 77
 ---
 
 Velero is an open source tool for safely backing up and restoring resources in a Kubernetes cluster, performing disaster recovery, and migrating resources and persistent volumes to another Kubernetes cluster.
@@ -43,4 +46,4 @@ Data protection is a chief concern for application owners who want to make sure 
 
 On the [Velero home page](https://velero.io/) you can get information on the latest release and download Velero from Github. 
 
-To get started using Velero watch these videos covering two of Velero’s useful features, [Backup and Restore,](https://kube.academy/lessons/backup-restore) and [Migration](https://www.youtube.com/watch?v=q2FCxheA8VI&list=PL7bmigfV0EqQRysvqvqOtRNk4L5S7uqwM&index=5&t=0s). 
+To get started using Velero watch these videos covering two of Velero’s useful features, [Backup and Restore,](https://kube.academy/lessons/backup-restore) and [Migration](https://www.youtube.com/watch?v=q2FCxheA8VI&list=PL7bmigfV0EqQRysvqvqOtRNk4L5S7uqwM&index=5&t=0s).

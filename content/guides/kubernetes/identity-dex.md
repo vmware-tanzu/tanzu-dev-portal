@@ -1,11 +1,13 @@
 ---
-title: "Configuring the Dex Identity Provider"
-linkTitle: "Configuring Dex"
-description: "Configuring the Dex identity provider."
-parent: "Identity and Access Control"
-weight: 1600
+date: '2021-02-24'
+description: Configuring the Dex identity provider.
 keywords:
 - Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Configuring Dex
+parent: Identity and Access Control
+title: Configuring the Dex Identity Provider
+weight: 1600
 ---
 
 ## Motivation

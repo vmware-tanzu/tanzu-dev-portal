@@ -1,30 +1,35 @@
 ---
-# Draft: unclear how this is helpful or if it is used. 
-# Content very sparse, not very helpful?
+date: '2021-02-09'
+description: A tool to understand and organize solutions so they can be prioritized
+  effectively.
 draft: true
-title: "Solution Grooming"
-tags: ["Framing", "Remote"]
-length: "1 hr - 4 hr"
-participants: "Core Team"
-image: "default-cover.png"
-description: "A tool to understand and organize solutions so they can be prioritized effectively."
-lastmod: "2018-09-14"
-
-why:
-- Unless you have a systematic way to approach your pile of solutions, you may find yourself overwhelmed with opportunities. It helps to break them down into smaller features and/or group them into larger epics before prioritizing. This activity is also a great way to de-duplicate the similar ideas that people may have generated from different "How might we…?” prompts.
-
-when:
-- When you've come up with a huge number of ideas during [Solution Brainstorming](/practices/solution-brainstorming) and you have so many you need to understand and organize them.
-
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1 hr - 4 hr
+participants: Core Team
+tags:
+- Framing
+- Remote
+title: Solution Grooming
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Sticky notes with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming), still attached to tabloid sheets)
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Sticky notes with solution ideas (from [Solution Brainstorming](/practices/solution-brainstorming),
+  still attached to tabloid sheets)
 - Large sticky notes
 - Sharpies
 - Expo markers
 - Painter’s tape
-
+when:
+- When you've come up with a huge number of ideas during [Solution Brainstorming](/practices/solution-brainstorming)
+  and you have so many you need to understand and organize them.
+why:
+- Unless you have a systematic way to approach your pile of solutions, you may find
+  yourself overwhelmed with opportunities. It helps to break them down into smaller
+  features and/or group them into larger epics before prioritizing. This activity
+  is also a great way to de-duplicate the similar ideas that people may have generated
+  from different "How might we…?” prompts.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Prior to the workshop, ensure that you can locate a space (conference room, hallway, etc.) with a whiteboard that is large enough to accommodate a very large clustering session.

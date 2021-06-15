@@ -1,12 +1,14 @@
 ---
-title:  "Logging Best Practices"
-parent: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-16'
+parent: Application Enhancements
 tags:
 - Kubernetes
 team:
 - John Harris
+title: Logging Best Practices
+topics:
+- Kubernetes
 ---
 
 Logs help you monitor events and debug problems in an application. As complexity

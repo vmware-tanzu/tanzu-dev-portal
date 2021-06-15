@@ -1,17 +1,19 @@
 ---
-title: Getting Started with kpack
+date: '2020-05-06'
 description: Using kpack to create a container image using Kubernetes
-topics:
-- Kubernetes
-- Containers
+lastmod: '2020-05-19'
+patterns:
+- Deployment
 tags:
 - Kubernetes
 - Containers
 - kpack
 - Buildpacks
-patterns:
-- Deployment
 team:
 - Tyler Britten
+title: Getting Started with kpack
+topics:
+- Kubernetes
+- Containers
 youtube_id: -a82R7lNlcU
 ---

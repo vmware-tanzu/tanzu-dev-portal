@@ -1,7 +1,9 @@
 ---
+date: '2021-06-07'
+lastmod: '2021-06-07'
+layout: single
 title: How a Container Registry Can Help
 weight: 6
-layout: single
 ---
 
 A container registry provides a single place to store and retrieve your container images. At a minimum, a container registry will support the [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec), the API that both Docker and Kubernetes expect to be supported to pull container images. They may either be a publicly hosted such as [Docker Hub](https://hub.docker.com/) or [Google Container Registry](https://cloud.google.com/container-registry), or they may be hosted privately such as [Harbor](https://goharbor.io/).

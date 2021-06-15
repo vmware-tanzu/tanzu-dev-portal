@@ -1,26 +1,41 @@
 ---
-title: "Swift Method"
-tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
-length: "2 - 4 days if done end-to-end"
-participants: "Business stakeholders, architects, technical leads, developers"
-image: "swift-method/swift.png"
-description: A set of lightweight techniques using agile and Domain Driven Design (DDD) principles that help teams plan enough to start modernizing software systems
-lastmod: "2019-12-09"
-
-why:
-- Align business leaders and technical practitioners. Use this approach to break down a system of systems, and develop a notional architectural plan that maps future goals with the way the system “wants to behave.” We’ve found this to be especially important for critical systems modernization. - Inform decisions on how to organize development teams, and prioritize work from both a business and technical perspective. It’s also helpful as a “catch-all” way to define a path between the status quo and the desired state.
-when:
-- Jumpstart application modernization initiatives in an iterative fashion. This is the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization), which can be a short consulting engagement that quickly reviews current business functionality and plans “to be” architecture. Our experts practice the Swift method to discover architecture, boundaries, points of risk or concern, and then map a direction to move from current state to future state. 
-
-what: 
+date: '2021-02-11'
+description: A set of lightweight techniques using agile and Domain Driven Design
+  (DDD) principles that help teams plan enough to start modernizing software systems
+image: swift-method/swift.png
+lastmod: '2021-03-04'
+length: 2 - 4 days if done end-to-end
+participants: Business stakeholders, architects, technical leads, developers
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Modernization
+title: Swift Method
+what:
 - Sticky arrow flags
 - Whiteboard tape - black, green, red; 2 rolls of each
 - Scissors
 - Scotch tape
 - Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
-
+when:
+- Jumpstart application modernization initiatives in an iterative fashion. This is
+  the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization),
+  which can be a short consulting engagement that quickly reviews current business
+  functionality and plans “to be” architecture. Our experts practice the Swift method
+  to discover architecture, boundaries, points of risk or concern, and then map a
+  direction to move from current state to future state.
+why:
+- Align business leaders and technical practitioners. Use this approach to break down
+  a system of systems, and develop a notional architectural plan that maps future
+  goals with the way the system “wants to behave.” We’ve found this to be especially
+  important for critical systems modernization. - Inform decisions on how to organize
+  development teams, and prioritize work from both a business and technical perspective.
+  It’s also helpful as a “catch-all” way to define a path between the status quo and
+  the desired state.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. [Event Storm](/practices/event-storming) the system, using language that business and technical people understand.
