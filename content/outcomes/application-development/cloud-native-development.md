@@ -31,7 +31,7 @@ In this article, you will learn to:
 
 There are many definitions for cloud native. The definition we use in this article is an approach to building and running applications that exploit the advantages of the cloud computing delivery model. At its heart, cloud native is structuring teams, culture, and technology to utilize automation and architectures to manage complexity and unlock velocity.
 
-Cloud native development, often referred to as modern application development, defines how applications are created and deployed. It does not define where the deployment occurs. For example, public cloud, private cloud, hybrid cloud, multi-cloud.
+Cloud native development, often referred to as modern application development, defines how applications are created and deployed. It does not define where the deployment occurs. For example, [public cloud](https://www.vmware.com/topics/glossary/content/public-cloud), [private cloud](https://www.vmware.com/topics/glossary/content/private-cloud?SRC=WWW_US_GP_public-cloud_SiteLink), [hybrid cloud](https://www.vmware.com/topics/glossary/content/hybrid-cloud?SRC=WWW_US_GP_public-cloud_SiteLink), [multi-cloud](https://www.vmware.com/topics/glossary/content/multi-cloud?SRC=WWW_US_GP_private-cloud_SiteLink).
 
 ## List three major outcomes of cloud native {id=outcomes}
 
@@ -123,7 +123,7 @@ For more information on cloud native apps check out the free e-book [Beyond the 
 
 To deepen your understanding, check out the following resources:
 
-*Cloud Native*
+#### Cloud Native
 * [What is Cloud Native? ](https://tanzu.vmware.com/developer/guides/microservices/what-is-cloud-native/) - VMware Tanzu Developer Center article
 * [How to think Cloud Native?](https://tanzu.vmware.com/content/white-papers/how-to-think-cloud-native) - Whitepaper by Joe Beda
 * [Cloud Native Computing Foundation (CNCF) ](https://www.cncf.io/) - Home page of an organization aiming to advance cloud native and container technology while aligning the tech industry around their evolution.
@@ -131,7 +131,7 @@ To deepen your understanding, check out the following resources:
 	* [CNCF Cloud-Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)  guidance for enterprises beginning their cloud-native journey - Image
 * [Difference between Cloud and Cloud Native discussed by Kubernetes founders Craig McLuckie and Joe Beda](https://youtu.be/I0p8MIezKkE) - YouTube video
 
-*Concepts*
+#### Concepts
 
 * [Beyond the Twelve-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) - e-book
 * [Microservices: How to deliver scalable software, faster](https://tanzu.vmware.com/microservices) - VMware Tanzu article
