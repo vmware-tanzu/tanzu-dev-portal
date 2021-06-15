@@ -28,7 +28,6 @@ When we work within the construct of a balanced team, we ensure that all these p
 
 Our product development teams are:
 - [Small enough to be fed by two pizzas](http://blog.idonethis.com/two-pizza-team/) as pioneered by Amazon
-- Co-located (In person or remotely)
 - Multidisciplinary
 - Organized around goals established by the product sponsor(s).
 - Empowered to define and iterate on solutions that deliver against those goals. 
