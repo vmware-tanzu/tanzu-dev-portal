@@ -39,7 +39,3 @@ The following topics are covered:
 * User Stories (coming soon)
  
 This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote lab engagement.
-
-## Where can I share my feedback?
- 
-Please visit our [Github Issues page](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new/choose) to add a comment or file an issue.

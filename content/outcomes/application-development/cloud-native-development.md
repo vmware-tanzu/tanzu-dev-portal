@@ -16,7 +16,7 @@ In this article, you will learn to:
 
 - [Define one meaning of cloud native](#meaning)
 - [List three major outcomes of cloud native](#outcomes)
-- Explain the main cloud native concepts for ...
+- Explain the main cloud native concepts for the following:
 	- [application architecture](#app-archi)
 	- [software life-cycle](#sw-life-cycle)
 	- [supporting infrastructure](#support-infra)
