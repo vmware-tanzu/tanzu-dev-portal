@@ -17,7 +17,7 @@ Beyond technology, this learning path also teaches the fundamentals of the 30+ y
 - Use Agile development to deliver the products your customers want.
 - Seed a new mindset. Quickly validate your concepts. Get them from idea to production in days, and not months.
  
-## Who is this Learning Path for?
+## Who is this learning path for?
  
 This learning path is primarily for software engineers and other technical development team members involved in the development of modern applications. 
  
