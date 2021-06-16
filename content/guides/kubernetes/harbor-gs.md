@@ -19,6 +19,9 @@ title: Installing Harbor on Kubernetes with Project Contour, Cert Manager, and L
 topics:
 - Kubernetes
 weight: 7
+oldPath: "/content/guides/kubernetes/harbor-gs.md"
+aliases:
+- "/guides/kubernetes/harbor-gs"
 ---
 
 Running a private container image registry has been a staple in many enterprise

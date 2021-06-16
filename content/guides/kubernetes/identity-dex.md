@@ -8,6 +8,9 @@ linkTitle: Configuring Dex
 parent: Identity and Access Control
 title: Configuring the Dex Identity Provider
 weight: 1600
+oldPath: "/content/guides/kubernetes/identity-dex.md"
+aliases:
+- "/guides/kubernetes/identity-dex"
 ---
 
 ## Motivation

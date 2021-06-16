@@ -14,6 +14,9 @@ title: Getting Started with Kubeapps
 topics:
 - Kubernetes
 weight: 6
+oldPath: "/content/guides/kubernetes/kubeapps-gs.md"
+aliases:
+- "/guides/kubernetes/kubeapps-gs"
 ---
 
 This guide will walk you through the process of deploying Kubeapps for your cluster and installing an example application.

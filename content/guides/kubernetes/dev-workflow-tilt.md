@@ -11,6 +11,9 @@ team:
 title: Getting Started with Tilt
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/dev-workflow-tilt.md"
+aliases:
+- "/guides/kubernetes/dev-workflow-tilt"
 ---
 
 When developing applications to be deployed on Kubernetes, additional steps are

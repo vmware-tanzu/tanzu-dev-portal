@@ -20,6 +20,9 @@ title: Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Apa
 topics:
 - Event Streaming
 - Messaging and Integration
+oldPath: "/content/guides/messaging-and-integration/kafka-mongodb.md"
+aliases:
+- "/guides/messaging-and-integration/kafka-mongodb"
 ---
 
 [Apache Kafka](https://kafka.apache.org/) is a popular open source tool for real-time publish/subscribe messaging. It uses a scalable, fault-tolerant cluster for message storage, and it can also be integrated with other open source data-oriented solutions such as [Apache Hadoop](https://hadoop.apache.org/), [Apache Spark](https://spark.apache.org/) or [Apache HBase](https://hbase.apache.org/) for real-time analysis and rendering of streaming data.

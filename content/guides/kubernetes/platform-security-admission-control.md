@@ -8,6 +8,9 @@ linkTitle: Admission Control
 parent: Platform Security
 title: Admission Control
 weight: 1
+oldPath: "/content/guides/kubernetes/platform-security-admission-control.md"
+aliases:
+- "/guides/kubernetes/platform-security-admission-control"
 ---
 
 This document details the philosophy and methods for implementing admission

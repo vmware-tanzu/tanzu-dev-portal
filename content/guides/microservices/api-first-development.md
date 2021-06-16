@@ -19,6 +19,9 @@ topics:
 - Spring
 - Microservices
 weight: 4
+oldPath: "/content/guides/microservices/api-first-development.md"
+aliases:
+- "/guides/microservices/api-first-development"
 ---
 
 Organizations are increasingly embracing new processes to deal with microservices architectures, containerization, and continuous delivery as part of the cloud migration journey.

@@ -11,6 +11,9 @@ team:
 title: Troubleshooting Applications on Kubernetes
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/dev-workflow-troubleshooting.md"
+aliases:
+- "/guides/kubernetes/dev-workflow-troubleshooting"
 ---
 
 This guide lists common commands and approaches to troubleshoot applications on

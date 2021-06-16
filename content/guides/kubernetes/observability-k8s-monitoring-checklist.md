@@ -8,6 +8,9 @@ linkTitle: Kubernetes Monitoring Checklist
 parent: Platform Observability
 title: Kubernetes Monitoring Checklist
 weight: 1600
+oldPath: "/content/guides/kubernetes/observability-k8s-monitoring-checklist.md"
+aliases:
+- "/guides/kubernetes/observability-k8s-monitoring-checklist"
 ---
 
 To run a Kubernetes platform effectively, cluster administrators need visibility

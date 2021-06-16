@@ -8,6 +8,9 @@ title: Container Networking
 topics:
 - Kubernetes
 weight: 32
+oldPath: "/content/guides/kubernetes/container-networking.md"
+aliases:
+- "/guides/kubernetes/container-networking"
 ---
 
 Kubernetes uses the [Container Network

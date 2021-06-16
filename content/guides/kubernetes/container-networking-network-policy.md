@@ -10,6 +10,9 @@ tags:
 - networking
 - Calico
 title: Network Policy Implementation
+oldPath: "/content/guides/kubernetes/container-networking-network-policy.md"
+aliases:
+- "/guides/kubernetes/container-networking-network-policy"
 ---
 
 This directory demonstrates how to implement default deny-all network rules in a

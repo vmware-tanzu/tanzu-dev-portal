@@ -8,6 +8,9 @@ title: Challenges Managing Multiple Clusters Across Multiple Clouds
 topics:
 - Kubernetes
 weight: 47
+oldPath: "/content/guides/kubernetes/multi-cloud-multi-cluster-management.md"
+aliases:
+- "/guides/kubernetes/multi-cloud-multi-cluster-management"
 ---
 
 While Kubernetes provides a rich and capable environment for modern applications, it introduces a lot of moving parts and day 2 operating issues. How do you create and enforce security policy in a highly fluid environment? How do you make sure that your identity and access control systems are configured? How do you make certain that everything stays properly configured?
