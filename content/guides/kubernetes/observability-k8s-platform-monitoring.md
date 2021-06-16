@@ -9,6 +9,9 @@ linkTitle: Kubernetes Platform Monitoring
 parent: Platform Observability
 title: Kubernetes Platform Monitoring
 weight: 1600
+oldPath: "/content/guides/kubernetes/observability-k8s-platform-monitoring.md"
+aliases:
+- "/guides/kubernetes/observability-k8s-platform-monitoring"
 ---
 
 This document details platform monitoring and alerting for Kubernetes clusters,

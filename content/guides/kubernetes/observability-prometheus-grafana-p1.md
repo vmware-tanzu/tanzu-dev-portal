@@ -1,6 +1,7 @@
 ---
 aliases:
-- /guides/kubernetes/prometheus-grafana-p1
+- "/guides/kubernetes/prometheus-grafana-p1"
+- "/guides/kubernetes/observability-prometheus-grafana-p1"
 date: '2021-02-24'
 description: Learn how to set up Prometheus and Grafana, two open source tools for
   gathering metrics and visualizing, on an existing Kubernetes cluster.
@@ -21,6 +22,7 @@ title: Gathering Metrics from Kubernetes with Prometheus and Grafana
 topics:
 - Kubernetes
 weight: 2
+oldPath: "/content/guides/kubernetes/observability-prometheus-grafana-p1.md"
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and

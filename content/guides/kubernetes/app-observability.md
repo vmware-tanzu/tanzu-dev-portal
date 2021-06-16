@@ -8,6 +8,9 @@ title: Application Observability
 topics:
 - Kubernetes
 weight: 22
+oldPath: "/content/guides/kubernetes/app-observability.md"
+aliases:
+- "/guides/kubernetes/app-observability"
 ---
 
 The term "observability" in control theory states that the system is observable

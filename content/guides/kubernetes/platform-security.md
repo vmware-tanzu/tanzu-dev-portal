@@ -8,6 +8,9 @@ title: Platform Security
 topics:
 - Kubernetes
 weight: 62
+oldPath: "/content/guides/kubernetes/platform-security.md"
+aliases:
+- "/guides/kubernetes/platform-security"
 ---
 
 ## Overview

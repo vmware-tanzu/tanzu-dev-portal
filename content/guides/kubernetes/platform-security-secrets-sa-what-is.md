@@ -1,6 +1,7 @@
 ---
 aliases:
 - guides/kubernetes/k8s-secrets-sa-what-is/
+- "/guides/kubernetes/platform-security-secrets-sa-what-is"
 date: '2021-02-24'
 description: Kubernetes Secrets are a collection of keys and values that let you store
   sensitive information and a service account describes the set of permissions.
@@ -19,6 +20,7 @@ title: What are Kubernetes Secrets and Service Accounts?
 topics:
 - Kubernetes
 weight: 2
+oldPath: "/content/guides/kubernetes/platform-security-secrets-sa-what-is.md"
 ---
 
 In software, there’s often data that you want to keep separate from your build

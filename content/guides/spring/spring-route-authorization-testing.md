@@ -1,5 +1,5 @@
 ---
-date: 2021-05-05 10:40:17-06:00
+date: 2021-05-05 10:40:17.000000000 -06:00
 description: Dynamic testing of your Spring Security route authorizations
 draft: false
 lastmod: '2021-05-25'
@@ -12,6 +12,9 @@ team:
 title: Spring Route Authorization Testing
 topics:
 - Spring
+oldPath: "/content/guides/spring/spring-route-authorization-testing.md"
+aliases:
+- "/guides/spring/spring-route-authorization-testing"
 ---
 
 Spring Security enables us to lock down routes in applications to particular roles.

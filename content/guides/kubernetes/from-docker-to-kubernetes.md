@@ -8,6 +8,9 @@ topics:
 - Kubernetes
 - Containers
 - Microservices
+oldPath: "/content/guides/kubernetes/from-docker-to-kubernetes.md"
+aliases:
+- "/guides/kubernetes/from-docker-to-kubernetes"
 ---
 
 Once you understand what [containers](/guides/containers/what-are-containers) and [Kubernetes](/guides/kubernetes/what-is-kubernetes) are, the next step is to learn how the two work together. This guide provides an example of containerizing a simple application using Docker and deploying it on Kubernetes.

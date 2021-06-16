@@ -8,6 +8,9 @@ title: Developer Workflow
 topics:
 - Kubernetes
 weight: 37
+oldPath: "/content/guides/kubernetes/dev-workflow.md"
+aliases:
+- "/guides/kubernetes/dev-workflow"
 ---
 
 The developer workflow typically involves writing code, executing automated

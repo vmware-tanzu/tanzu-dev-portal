@@ -12,7 +12,10 @@ topics:
 - Kubernetes
 - Containers
 - Microservices
-weight: null
+weight:
+oldPath: "/content/guides/containers/managing-container-images-registry.md"
+aliases:
+- "/guides/containers/managing-container-images-registry"
 ---
 
 A key reason why enterprises are turning to Kubernetes is that cloud native services and practices boost developer productivity. As you put containerized applications into production, you need a secure way to store, scan, and sign your container images. A container image registry without management and security puts your cloud native environment at risk.

@@ -9,6 +9,9 @@ team:
 title: Label Best Practices
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-label-design.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-label-design"
 ---
 
 Labels are a means for describing and identifying components that make up an
