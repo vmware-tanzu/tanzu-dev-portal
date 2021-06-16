@@ -8,6 +8,9 @@ title: Workload Tenancy
 topics:
 - Kubernetes
 weight: 82
+oldPath: "/content/guides/kubernetes/workload-tenancy.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy"
 ---
 
 Kubernetes is an inherently multi-tenant system. The term tenant can

@@ -9,6 +9,9 @@ linkTitle: Calico Reference Architecture
 parent: Container Networking
 title: Calico Reference Architecture
 weight: 1600
+oldPath: "/content/guides/kubernetes/container-networking-calico-refarch.md"
+aliases:
+- "/guides/kubernetes/container-networking-calico-refarch"
 ---
 
 This document details a reference architecture for running

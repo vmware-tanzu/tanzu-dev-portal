@@ -8,6 +8,9 @@ linkTitle: Secret Management
 parent: Platform Security
 title: Secret Management
 weight: 3
+oldPath: "/content/guides/kubernetes/platform-security-secret-management.md"
+aliases:
+- "/guides/kubernetes/platform-security-secret-management"
 ---
 
 This document details secret management and distribution for Kubernetes

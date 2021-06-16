@@ -13,6 +13,9 @@ title: Request/Response Logging in a Spring Boot Application
 topics:
 - Spring
 weight: 2
+oldPath: "/content/guides/spring/request-response-logging.md"
+aliases:
+- "/guides/spring/request-response-logging"
 ---
 
 Logging is essential for monitoring and troubleshooting running applications. This guide explains how to utilize `logback` to collect full request/response payloads in a Spring Boot application. 

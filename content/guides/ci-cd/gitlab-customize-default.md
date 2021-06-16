@@ -19,6 +19,9 @@ team:
 title: Customize GitLab's Default Auto DevOps Pipeline with Bitnami's Helm Charts
 topics:
 - CI-CD
+oldPath: "/content/guides/ci-cd/gitlab-customize-default.md"
+aliases:
+- "/guides/ci-cd/gitlab-customize-default"
 ---
 
 [Bitnami's GitLab CE stack](https://bitnami.com/stack/gitlab) is a popular solution for agile development teams, providing a secure and fully-functional GitLab instance for software development and deployment. GitLab CE includes a Continuous Integration and Delivery (CI/CD) system that can build, test, and deploy software updates as well as a private registry for Docker containers.

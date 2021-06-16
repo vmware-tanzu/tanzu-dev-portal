@@ -9,6 +9,9 @@ team:
 title: Externalizing Configuration
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-externalizing-configuration"
 ---
 
 Application _configuration_ is anything that varies between environments. For

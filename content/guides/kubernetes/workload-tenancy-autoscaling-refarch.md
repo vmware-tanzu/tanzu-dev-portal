@@ -8,6 +8,9 @@ linkTitle: Autoscaling Reference Architecture
 parent: Workload Tenancy
 title: Autoscaling Reference Architecture
 weight: 1600
+oldPath: "/content/guides/kubernetes/workload-tenancy-autoscaling-refarch.md"
+aliases:
+- "/guides/kubernetes/workload-tenancy-autoscaling-refarch"
 ---
 
 This reference provides guidance, trade-off considerations and implementation

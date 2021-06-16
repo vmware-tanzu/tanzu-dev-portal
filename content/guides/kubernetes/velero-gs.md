@@ -11,6 +11,9 @@ team:
 title: Getting Started with Velero
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/velero-gs.md"
+aliases:
+- "/guides/kubernetes/velero-gs"
 ---
 
 What do you do if you lose state in your cluster, or something went very wrong

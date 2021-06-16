@@ -8,6 +8,9 @@ title: Identity and Access Control
 topics:
 - Kubernetes
 weight: 42
+oldPath: "/content/guides/kubernetes/identity.md"
+aliases:
+- "/guides/kubernetes/identity"
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of

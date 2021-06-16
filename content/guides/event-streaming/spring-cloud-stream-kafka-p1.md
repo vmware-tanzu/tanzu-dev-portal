@@ -1,8 +1,9 @@
 ---
-title:  "Spring Cloud Stream Kafka"
-linkTitle: "Spring Cloud Stream Kafka"
-subsection: "Spring Cloud Stream Kafka (Part 1)"
-description: A simple demonstration of how to implement your Java application with Kafka (Spring Cloud Stream) with the least amount of code in your Spring Boot application.
+title: Spring Cloud Stream Kafka
+linkTitle: Spring Cloud Stream Kafka
+subsection: Spring Cloud Stream Kafka (Part 1)
+description: A simple demonstration of how to implement your Java application with
+  Kafka (Spring Cloud Stream) with the least amount of code in your Spring Boot application.
 topics:
 - Spring
 - Microservices
@@ -11,12 +12,15 @@ topics:
 tags:
 - Spring Cloud Stream Kafka
 - Event Streaming
-- Spring 
+- Spring
 - Kafka
 patterns:
 - Eventing
 team:
 - Jay Ehsaniara
+oldPath: "/content/guides/event-streaming/spring-cloud-stream-kafka-p1.md"
+aliases:
+- "/guides/event-streaming/spring-cloud-stream-kafka-p1"
 ---
 
 ## Spring Cloud Stream Kafka – Intro to Event Driven Architecture (Part 1)
