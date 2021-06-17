@@ -58,6 +58,7 @@ While pair programming, not only are two people working on the same difficult pr
 *   Junior developers learning from senior developers
 *   Senior developers learning from junior developers — it’s true!
 *   Breaking down knowledge silos
+*   Collective code ownership 
 *   Reduce the [“bus factor” or “lottery factor”](https://en.wikipedia.org/wiki/Bus_factor)
 *   Tips and tricks sharing
 
