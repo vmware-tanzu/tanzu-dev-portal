@@ -69,6 +69,7 @@ Pair programming isn’t all about the code — it’s also all about the people
 *   Empathy building
 *   Interpersonal skills development
 *   Social interaction 
+*   Happier, more motivated employees
 
 ## List at least five potential challenges of pair programming
 The benefits of pair programming are clear, but those benefits don’t come cheaply. Pairing is hard. Without a doubt, the most difficult challenge of pair programming is **_the willingness to give it an honest try_**. 
