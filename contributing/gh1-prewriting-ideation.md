@@ -27,4 +27,4 @@ Follow these processes if you need assistance prior to creating content. Example
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Start Here](contributing/start-here.md)** | **[Getting set up](contributing/gh2-env-setup.md)** |
+| **[Start Here](start-here.md)** | **[Getting set up](gh2-env-setup.md)** |
