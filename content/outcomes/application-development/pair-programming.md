@@ -113,10 +113,10 @@ Just go for it! Sit down, start pairing, and ride whatever driver/navigator patt
 Switch roles any time the pair wants to research something further. This helps reduce the impulse to separate and research individually, which can sometimes evolve into an excuse to stop pairing entirely. 
 
 ### Pairmate/One-keyboard
-A small item like a stuffed animal or tchotchke can be used to signal who is navigating. The navigator holds the item to signal that they are not to touch the keyboard until that item is passed off (physically or virtually when remote) to the other. Alternatively, the item can be removed,and the pair shares a single keyboard or toggles remote-keyboard control as needed.
+A small item like a stuffed animal or tchotchke can be used to signal who is navigating. The navigator holds the item to signal that they are not to touch the keyboard until that item is passed off (physically or virtually when remote) to the other. Alternatively, the item can be removed, and the pair shares a single keyboard or toggles remote-keyboard control as needed.
 
 ### Task List
-The pair decides on a set of tasks that need to be accomplished and switches after each task is accomplished. Tasks can be created, modified, or deleted as the pair progresses.Ideally each takes about the same amount of time to complete.
+The pair decides on a set of tasks that need to be accomplished and switches after each is completed. Tasks can be created, modified, or deleted as the pair progresses. Ideally each takes about the same amount of time to complete.
 
 ## In this article, you learned to:
 *  Define pair programming and remote pair programming
@@ -130,5 +130,5 @@ The pair decides on a set of tasks that need to be accomplished and switches aft
 1. Video: [I've Pair Programmed for 30,000 Hours: Ask Me Anything! — Joe Moore](https://www.youtube.com/watch?v=RCDfBioUgts)
 
 ## Related topics to Pair Programming
-*  TDD
-*  Agile
+*  Test Driven Development
+*  Agile software development
