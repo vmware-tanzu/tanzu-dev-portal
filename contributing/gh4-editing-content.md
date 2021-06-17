@@ -20,4 +20,4 @@ Prior to submitting PR of a content post to the Tanzu Developer Center, all post
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Drafting content](contributing/gh3-drafting-content.md)** | **[Testing Content](contributing/gh5-testing-content.md)** |
+| **[Drafting content](gh3-drafting-content.md)** | **[Testing Content](gh5-testing-content.md)** |

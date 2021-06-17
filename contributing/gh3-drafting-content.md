@@ -134,4 +134,4 @@ topics:
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Getting set up](contributing/gh2-env-setup.md)** | **[Editing Content](contributing/gh4-editing-content.md)** |
+| **[Getting set up](gh2-env-setup.md)** | **[Editing Content](gh4-editing-content.md)** |

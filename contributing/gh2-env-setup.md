@@ -101,4 +101,4 @@ code content/guides/topic-name/guide-name.md
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Prewriting / Ideation](contributing/gh1-prewriting-ideation.md)** | **[Drafting Content](contributing/gh3-drafting-content.md)** |
+| **[Prewriting / Ideation](gh1-prewriting-ideation.md)** | **[Drafting Content](gh3-drafting-content.md)** |

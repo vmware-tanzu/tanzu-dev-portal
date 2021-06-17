@@ -35,4 +35,4 @@ make preview
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Editing content](contributing/gh4-editing-content.md)** | **[Commiting Content](contributing/gh6-commiting-content.md)** |
+| **[Editing content](gh4-editing-content.md)** | **[Commiting Content](gh6-commiting-content.md)** |

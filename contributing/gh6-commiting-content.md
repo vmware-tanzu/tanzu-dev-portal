@@ -23,4 +23,4 @@ After your content piece has been [drafted](gh3-drafting-content.md), [edited](g
 
 | Previous Step | Next Step |
 | ------------- | --------- |
-| **[Editing content](contributing/gh5-testing-content.md)** | **[Creating an Author page](contributing/gh7-team-content.md)** (If you have not yet done it)|
+| **[Editing content](gh5-testing-content.md)** | **[Creating an Author page](gh7-team-content.md)** (If you have not yet done it)|
