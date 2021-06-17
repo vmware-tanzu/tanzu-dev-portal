@@ -1,6 +1,7 @@
 
 	<h1>{{ .Title | markdownify }}</h1>
 	{{ partial "byline" (dict "context" . "withdate" false) }}
+	{{ partial "stale-notice" (dict "context" . "contentType" "guide") }}
 	<!--{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
 	{{ .Content }}
 	{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}

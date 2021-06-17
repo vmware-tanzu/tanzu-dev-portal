@@ -1,0 +1,3 @@
+{{ if now.After (.context.Params.lastmod.AddDate 1 0 ) }}
+    <div class="alert alert-warning">This {{ .contentType }} is over a year old and may not be completely up-to-date.</div>
+{{ end }}
