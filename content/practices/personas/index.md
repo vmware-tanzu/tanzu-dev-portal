@@ -100,12 +100,12 @@ None at the moment
 
 ## Real World Examples
 
-![Team member presenting a persona while everyone watches and listens](/images/practices/personas/example-1.png)
+![Team member presenting a persona while everyone watches and listens](images/example-1.png)
 
-![Example of a paper-based persona showing the four winning quadrants](/images/practices/personas/example-2.png)
+![Example of a paper-based persona showing the four winning quadrants](images/example-2.png)
 
-![Example of a paper-based persona](/images/practices/personas/example-3.png)
+![Example of a paper-based persona](images/example-3.png)
 
-![Example of a digital persona template](/images/practices/personas/example-5.jpg)
+![Example of a digital persona template](images/example-5.jpg)
 
 ## Recommended Reading

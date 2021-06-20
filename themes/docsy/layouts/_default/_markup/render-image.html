@@ -1,1 +1,1 @@
-<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+{{ if (eq .Page.File.BaseFileName "index") }}<img src="{{ print .Page.Permalink .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ else }}<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ end }}

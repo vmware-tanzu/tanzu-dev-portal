@@ -41,7 +41,7 @@ why:
    
    > _"Lean Experiments are based on the Lean Startup approach to creating new products and services under conditions of extreme uncertainty. Lean Experiments are designed to quickly and cheaply gather evidence to validate or invalidate risky assumptions about your product."_
    
-   ![Risks Without Validation](/images/practices/lean-experiments/lean-experiment-1.png)
+   ![Risks Without Validation](images/lean-experiment-1.png)
    
    Common types of experiments:
    
@@ -183,9 +183,9 @@ None at the moment.
 None at the moment. 
 
 ## Real World Examples
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-2.jpg)
+![Lean Experiment Drawings](images/lean-experiment-2.jpg)
 
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-3.jpg)
+![Lean Experiment Drawings](images/lean-experiment-3.jpg)
 
 ## Recommended Reading
 [Lean Startup](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK) by Eric Ries

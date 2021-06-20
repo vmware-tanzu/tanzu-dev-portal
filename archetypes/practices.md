@@ -66,7 +66,7 @@ Things to keep in mind:
 
 1. You can embed images like this: 
 
-   ![This is the default cover image as an example](/images/practices/default-cover.png)
+   ![This is the default cover image as an example](images/default-cover.png)
    
    Images go in `/static/images/practices/<your-practice-folder>/the-image.png`
    

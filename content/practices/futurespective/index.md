@@ -89,7 +89,7 @@ None at the moment.
 None at the moment.
 
 ## Real World Examples
-![Design Studio Example](/images/practices/futurespective/example.png)
+![Design Studio Example](images/example.png)
 
 ## Recommended Reading
 [Speed Car Futurespective Miro Template](https://metroretro.io/templates/the-speed-car-and-the-abyss)

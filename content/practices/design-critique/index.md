@@ -88,7 +88,7 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+![Design printout with feedback attached using sticky notes](images/example-2.jpg)
 
 ## Recommended Reading
 

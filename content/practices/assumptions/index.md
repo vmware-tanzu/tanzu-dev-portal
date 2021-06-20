@@ -91,6 +91,6 @@ None at the moment
 Exploratory Interviews - Coming soon!
 
 ## Real World Examples
-![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
+![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](images/example-2.jpg)
 
 ## Recommended Reading

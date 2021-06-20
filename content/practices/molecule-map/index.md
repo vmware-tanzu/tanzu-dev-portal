@@ -37,7 +37,7 @@ why:
    - Problem — What is one of their problems?
    - Solution — What is our solution?
 
-   ![Blank Molecule Map](/images/practices/molecule-map/step-1.png)
+   ![Blank Molecule Map](images/step-1.png)
 
 1. Get into groups of 3 or ask each person to draw 3 circles on a piece of paper and draw multiple molecules. Come up with as many solutions as possible.
 
@@ -47,7 +47,7 @@ why:
    Also, feel free to use real paper and hold it up to the camera when the group is remote.
    {{% /callout %}}
 
-   ![Filled Molecule Map](/images/practices/molecule-map/step-2.png)
+   ![Filled Molecule Map](images/step-2.png)
    
 1. Tape or upload molecules onto the board. Treat these as assumptions to go validate.
 
@@ -77,8 +77,8 @@ None at the moment
 
 ## Real World Examples
 
-![Close up of a detailed molecule map drawn on a whiteboard with persona in the center](/images/practices/molecule-map/example-1.jpg)
+![Close up of a detailed molecule map drawn on a whiteboard with persona in the center](images/example-1.jpg)
 
-![Close up of a molecule map drawn on a whiteboard](/images/practices/molecule-map/example-2.jpg)
+![Close up of a molecule map drawn on a whiteboard](images/example-2.jpg)
 
 ## Recommended Reading

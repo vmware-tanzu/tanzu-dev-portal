@@ -32,7 +32,7 @@ An icebreaker is a fun, interactive game that acts as an informal introduction a
 
 Miro template name: Tanzu - Icebreaker Question
 
-![Ice Breaker](/images/practices/remote-team-building/ice-breakers.png)
+![Ice Breaker](images/ice-breakers.png)
 
 ## Energizers
 This quick energizer is ideal to get participants engaged, energized and generally set a positive tone for the session ahead. It can be used before as well as during a session to set or reinstate a positive mood and encourage energy.
@@ -42,7 +42,7 @@ Fast turnaround involving numbers, logical thinking at speed as well gestures.
 
 Miro Template: Tanzu - Remote Energizer - One Two Ping Four Pong
 
-![TODO](/images/practices/remote-team-building/energizers.png)
+![TODO](images/energizers.png)
 
 ## Creative Warm Ups
 To encourage creativity! But rather than using it to judge an individual’s creative abilities, it can be used to identify our natural creative weaknesses and highlight how working as a group increases the number of solutions.
@@ -52,7 +52,7 @@ Spark creativity while drawing many different patterns using Miro.
 
 Miro Template: Tanzu - Remote Energizer - Circles
 
-![TODO](/images/practices/remote-team-building/creative-warmups.png)
+![TODO](images/creative-warmups.png)
 
 ## Recaps & Warm Downs
 This wind-down activity gives participants a safe space to share how they feel visually instead of verbally in relation to others within the team, and to close out a session in preparation for a retro, the next session or end of day.
@@ -62,4 +62,4 @@ Finish a session by gauging the final emotional pulse.
 
 Miro Template: Tanzu - Smiley Faces Wind-Down
 
-![TODO](/images/practices/remote-team-building/recaps.png)
+![TODO](images/recaps.png)

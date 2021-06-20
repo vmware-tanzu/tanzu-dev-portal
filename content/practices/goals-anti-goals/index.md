@@ -74,4 +74,4 @@ None at the moment
 
 ## Real World Examples
 
-![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](/images/practices/goals-anti-goals/example-3.jpg)
+![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](images/example-3.jpg)

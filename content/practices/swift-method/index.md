@@ -42,7 +42,7 @@ why:
 
 1. Conduct a [Boris](/practices/boris) exercise that models the relationships between capabilities in a system. Conduct a SNAP that documents the technical capabilities identified during Boris in real time.
 
-    ![SNAP analysis](/images/practices/boris/snap.jpg)
+    ![SNAP analysis](images/snap.jpg)
 
 1. Identify thin slices of modernization.
 
@@ -91,7 +91,7 @@ Swift Method contains many activities, including:
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris) and the Swift Method of modernization for an Uber Eats-style application
 
-![Visual of the Swift Method's various steps and how they flow into one another](/images/practices/swift-method/example-1.png)
+![Visual of the Swift Method's various steps and how they flow into one another](images/example-1.png)
 
 ## Recommended Reading
 

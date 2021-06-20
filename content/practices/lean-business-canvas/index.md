@@ -30,7 +30,7 @@ why:
 ### Sample Agenda & Prompts
 1. Draw the lean business canvas on the whiteboard
 
-   ![Lean business canvas template](/images/practices/lean-business-canvas/step-1.png)
+   ![Lean business canvas template](images/step-1.png)
 
 1. Explain the lean business canvas, one section at a time, using a common business as an example (e.g. “yelp”)
 
@@ -57,7 +57,7 @@ why:
    - Business metrics
    - Unfair advantage
 
-   ![Lean business canvas template with order specified](/images/practices/lean-business-canvas/step-7.png)
+   ![Lean business canvas template with order specified](images/step-7.png)
 
 #### Success/Expected Outcomes
 Success is when you have agreement and understanding of the product market fit, what value we’re delivering from a customer perspective, and an idea of how to sustain this business.
@@ -85,7 +85,7 @@ None at the moment
 
 ## Real World Examples
 
-![Sample filled out canvas](/images/practices/lean-business-canvas/example-1.jpg)
+![Sample filled out canvas](images/example-1.jpg)
 
 ## Recommended Reading
 

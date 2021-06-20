@@ -97,7 +97,7 @@ There are many free retrospective tools available.
 - [Postfacto](https://github.com/pivotal/postfacto) - open source and deployable by you.  
 - Spreadsheets - You can always make a simple 3-column retro board using Google Sheets or Excel.  
 
-![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-3.png)
+![3 Column Retrospective in Action](images/retro-3.png)
 
 Sometimes it's worth paying for something that's being actively maintained and enhanced. Here are a few options.
 
@@ -125,12 +125,12 @@ None at the moment.
 #### Example using Postfacto
 There are many free retrospective tools available. 
 
-![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-1.png)
+![3 Column Retrospective in Action](images/retro-1.png)
 
 #### 3-Column Retro with fun themes using Miro
 Online tools like this allow for people to get more engaged with fun themes.
 
-![3 Column Retrospective in Miro](/images/practices/3-column-retro/retro-2.png)
+![3 Column Retrospective in Miro](images/retro-2.png)
 
 ## Recommended Reading
 [Agile Retrospectives - Making Good Teams Great](https://pragprog.com/titles/dlret/agile-retrospectives/)  by Esther Derby and Diana Larsen, Foreword by Ken Schwaber
