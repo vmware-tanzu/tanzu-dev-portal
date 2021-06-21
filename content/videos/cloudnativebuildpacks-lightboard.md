@@ -15,5 +15,5 @@ title: Simplify Building Containers w/ Cloud Native Buildpacks
 topics:
 - Containers
 - CI-CD
-youtube_id: GsShUK3FxQY
+youtube_id: 2FvVeb_aqZg
 ---
