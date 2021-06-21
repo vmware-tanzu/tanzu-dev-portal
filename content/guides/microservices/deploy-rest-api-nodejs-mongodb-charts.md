@@ -18,6 +18,9 @@ title: Deploy a REST API on Kubernetes with Bitnami's Helm Charts
 topics:
 - Microservices
 weight: 2
+oldPath: "/content/guides/microservices/deploy-rest-api-nodejs-mongodb-charts.md"
+aliases:
+- "/guides/microservices/deploy-rest-api-nodejs-mongodb-charts"
 ---
 
 In the [first part of this series](/guides/microservices/develop-rest-api-nodejs-mongodb-containers/), you developed and integrated a sample REST API with a MongoDB database running on your local system. In this second and concluding part, you will transition your API from your local system to a Kubernetes environment, thereby making it available to a wider audience for review, test and usage.

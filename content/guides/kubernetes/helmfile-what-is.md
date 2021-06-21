@@ -17,6 +17,9 @@ title: What is Helmfile?
 topics:
 - Kubernetes
 weight: 4
+oldPath: "/content/guides/kubernetes/helmfile-what-is.md"
+aliases:
+- "/guides/kubernetes/helmfile-what-is"
 ---
 
 [Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.

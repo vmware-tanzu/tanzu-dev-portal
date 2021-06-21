@@ -9,6 +9,9 @@ linkTitle: Istio Reference Architecture
 parent: Service Routing
 title: Istio Reference Architecture
 weight: 1600
+oldPath: "/content/guides/kubernetes/service-routing-istio-refarch.md"
+aliases:
+- "/guides/kubernetes/service-routing-istio-refarch"
 ---
 
 ## Introduction

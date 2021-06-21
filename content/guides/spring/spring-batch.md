@@ -11,6 +11,9 @@ topics:
 - Spring
 - Microservices
 weight: 1
+oldPath: "/content/guides/spring/spring-batch.md"
+aliases:
+- "/guides/spring/spring-batch"
 ---
 
 A batch microservice is a short-lived process that launches as the result of some trigger (typically a clock), or that is executed on demand. While *batch processing* may seem like a holdover from another era, it is still used widely for all kinds of asynchronous transaction and file processing workloads such as extract, transform, and load (ETL). Data science makes use of batch processing for the training of AI models and other asynchronous tasks.

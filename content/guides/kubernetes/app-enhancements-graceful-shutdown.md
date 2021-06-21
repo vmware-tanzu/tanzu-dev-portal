@@ -9,6 +9,9 @@ team:
 title: Graceful Shutdown
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-graceful-shutdown.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-graceful-shutdown"
 ---
 
 Throughout the lifecycle of an application, running pods are terminated due to

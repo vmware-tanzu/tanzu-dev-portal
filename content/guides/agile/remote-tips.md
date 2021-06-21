@@ -9,6 +9,9 @@ team:
 title: Remote Tips
 topics:
 - Agile
+oldPath: "/content/guides/agile/remote-tips.md"
+aliases:
+- "/guides/agile/remote-tips"
 ---
 
 The transition to working remotely due to COVID-19 has proven to be quite a challenge—including for those of us at VMware Tanzu Labs. While remotely communicating and collaborating using digital tools is not new to us, doing so in an entirely distributed environment for the foreseeable future is. 

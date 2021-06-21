@@ -9,6 +9,9 @@ linkTitle: Contour Reference Architecture
 parent: Service Routing
 title: Contour Reference Architecture
 weight: 1600
+oldPath: "/content/guides/kubernetes/service-routing-contour-refarch.md"
+aliases:
+- "/guides/kubernetes/service-routing-contour-refarch"
 ---
 
 This document details a reference architecture for running

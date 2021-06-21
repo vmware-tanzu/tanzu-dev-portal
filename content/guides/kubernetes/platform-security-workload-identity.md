@@ -8,6 +8,9 @@ linkTitle: Workload Identity
 parent: Platform Security
 title: Workload Identity
 weight: 5
+oldPath: "/content/guides/kubernetes/platform-security-workload-identity.md"
+aliases:
+- "/guides/kubernetes/platform-security-workload-identity"
 ---
 
 This document details the philosophy and methods for providing workload identity
