@@ -126,12 +126,12 @@ None at the moment.
 ## Real World Examples
 
 ## Recommended Reading
-Agile Estimating and Planning, Mike Cohn (https://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415)
+[Agile Estimating and Planning](https://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415) by Mike Cohn
 
-Yesterday’s Weather (http://wiki.c2.com/?YesterdaysWeather)
+[Yesterday’s Weather](http://wiki.c2.com/?YesterdaysWeather)
 
-Planning Poker (https://en.wikipedia.org/wiki/Planning_poker)
+[Planning Poker](https://en.wikipedia.org/wiki/Planning_poker)
 
-Extreme Programming Explained, Kent Beck, Cynthia Andres (https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained), chapter 12
+Chapter 12 of [Extreme Programming Explained](https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained) by Kent Beck, Cynthia Andres
 
-ExtremeProgramming.org (http://www.extremeprogramming.org/rules/iterationplanning.html)
+[ExtremeProgramming.org](http://www.extremeprogramming.org/rules/iterationplanning.html)
