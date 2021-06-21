@@ -1,2 +1,1 @@
-TODO: Add a check for page bundle AND relative url (not start with /)
-{{ if (eq .Page.File.BaseFileName "index") }}<img src="{{ print .Page.Permalink .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ else }}<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ end }}
+{{ if (and (not (strings.HasPrefix .Destination "/")) (eq .Page.File.BaseFileName "index")) }}<img src="{{ print .Page.Permalink .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ else }}<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ end }}

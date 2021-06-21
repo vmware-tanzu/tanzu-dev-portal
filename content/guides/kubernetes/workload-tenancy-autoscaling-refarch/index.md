@@ -127,7 +127,7 @@ desired state defined in the HPAs, it will update the replicas in the relevant
 resource, e.g. Deployment, which will, in turn, alter the number of pods
 running.
 
-[Horizontal Pod Autoscaling](images/autoscaling-hpa-0.png)
+![Horizontal Pod Autoscaling](images/autoscaling-hpa-0.png)
 
 When using HPAs it is important to understand how your workload is going to
 scale in response to changes in resource usage. In the following sample
