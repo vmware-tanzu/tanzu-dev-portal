@@ -25,7 +25,7 @@ miro_template_url: "URL for related Miro template"
 ---
 ## How to Use this Method
 ### Sprint Planning vs. Iteration Planning
-[Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxes but with some differences that impact how planning is done:
+[Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxed activities but with some differences that impact how planning is done:
 
 {{< table "table" >}}
 |  | Sprint Planning | Iteration Planning |
@@ -44,7 +44,7 @@ miro_template_url: "URL for related Miro template"
 1. Read through the first user story to explain the business value, the user value, and the acceptance criteria. Allow participants to ask questions, providing clarifications as needed.
    
    {{< callout >}}
-   Tip: Allow space for all members of the team to get the clarifications they need to provide an estimate they feel comfortable with. Beware of individual personalities shortcutting conversation or dictating approaches that prevent full team understanding.
+   Tip: Allow space for all members of the team to get the clarifications they need to provide an estimate they feel comfortable with. Beware of individual personalities taking over the conversation or dictating approaches that prevent full team understanding.
    {{< /callout >}}
 
 1. Prompt the engineers to indicate if they are ready to estimate the user story and if so, to estimate the relative complexity of the story by simultaneously voting on a story point estimate.
