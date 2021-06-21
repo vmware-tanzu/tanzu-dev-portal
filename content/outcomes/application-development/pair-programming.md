@@ -10,7 +10,7 @@ Lennon and McCartney. Penn and Teller. Venus and Serena.
 
 Some of the greatest achievements in history were produced by pairs of great minds working side-by-side on the same task. Software is no exception.
 
-At VMWare Tanzu Labs, we are known for being on the cutting edge of Agile software development—some might even say [extreme](https://en.wikipedia.org/wiki/Extreme_programming). One software development technique in which we believe deeply is pair programming.
+At Tanzu Labs, we are known for being on the cutting edge of Agile software development—some might even say [extreme](https://en.wikipedia.org/wiki/Extreme_programming). One software development technique in which we believe deeply is pair programming.
 
 Pair programming helps the team produce high quality software while also helping everyone on the development team have a broader understanding of the software. There are some challenges to pair programming but we’ve proven time again across hundreds of projects that the benefits far outweigh the costs.
 
@@ -37,43 +37,43 @@ If the pair is not co-located, [remote pair programming](https://tanzu.vmware.co
 ### Code quality benefits
 The most beneficial outcome of pair programming is the quality of the code written by the team. As pairs switch (often daily), everyone has a chance to contribute  and refine the system they are developing. Benefits include:
 
-*  Fewer bugs
-*  Better system design
-*  More understandable code
-*  Wider code testing coverage
-*  “Fresh eyes” to help expose hidden flaws
+* Fewer bugs
+* Better system design
+* More understandable code
+* Wider code testing coverage
+* “Fresh eyes” to help expose hidden flaws
 
 ### Time-to-production benefits
 While pair programming does support shipping high quality code to production quickly, predictability is a more important benefit over speed. Radical swings in delivery velocity introduce risk into the development cycles — pair programming helps mitigate swings in delivery velocity in the following ways: 
 
-*  Intense focus on the task at hand
-*  Less rework
-*  More accurate implementation of requirements
-*  Less time in QA
+* Intense focus on the task at hand
+* Less rework
+* More accurate implementation of requirements
+* Less time in QA
 
 ### Knowledge sharing benefits
 While pair programming, not only are two people working on the same difficult problem together, they are also constantly teaching one another in the following ways: 
 
-*  New team member onboarding
-*  Junior developers learning from senior developers
-*  Senior developers learning from junior developers — it’s true!
-*  Tips and tricks sharing
+* New team member onboarding
+* Junior developers learning from senior developers
+* Senior developers learning from junior developers — it’s true!
+* Tips and tricks sharing
 
 ### Collective ownership benefits
 Individual ownership of features, modules, and even entire systems is both common and tempting -- it's comforting to know someone is responsible for something important. This pattern is also extremely risky since people switch jobs, have life events that make them unavailable, and other factors that impact delivery velocity. Pair programming mitigates these risks in the following ways:  
 
-*  Breaking down knowledge silos
-*  Countering "hero" culture
-*  Reduce the [“bus factor” or “lottery factor”](https://en.wikipedia.org/wiki/Bus_factor)
+* Breaking down knowledge silos
+* Countering "hero" culture
+* Reduce the [“bus factor” or “lottery factor”](https://en.wikipedia.org/wiki/Bus_factor)
 
 ### Team building benefits
 Pair programming isn’t all about the code — it’s also all about the people who write the code. 
 
-*  Shared pride of ownership of the code and product
-*  Building empathy with one another
-*  Interpersonal skills development
-*  Social interaction
-*  Happier, more motivated employees
+* Shared pride of ownership of the code and product
+* Building empathy with one another
+* Interpersonal skills development
+* Social interaction
+* Happier, more motivated employees
 
 ## List at least five potential challenges of pair programming
 The benefits of pair programming are clear, but those benefits don’t come cheaply. Pairing is hard. Without a doubt, the most difficult challenge of pair programming is **_the willingness to give it an honest try_**. 
@@ -82,18 +82,18 @@ Pair programming means not only sharing what we know, but also exposing how much
 
 Other challenges include:
 
-*  Being made fun of by others in the organization -- it happens!
-*  Different code editor preferences and computer configuration
-*  Differing schedules
-*  Ergonomics, such as physical desk and office configurations
-*  Falling behind on emails, chat threads, and other communication channels
-*  For remote pair programming: infrastructure, tools, network speed, security restrictions
-*  Individual cultural differences
-*  Interruptions and distractions imposed by other responsibilities
-*  Mental and physical exhaustion
-*  Organizational resistance
-*  Perception that it’s “twice the cost” a developers programming alone
-*  Personality conflicts
+* Being made fun of by others in the organization -- it happens!
+* Different code editor preferences and computer configuration
+* Differing schedules
+* Ergonomics, such as physical desk and office configurations
+* Falling behind on emails, chat threads, and other communication channels
+* For remote pair programming: infrastructure, tools, network speed, security restrictions
+* Individual cultural differences
+* Interruptions and distractions imposed by other responsibilities
+* Mental and physical exhaustion
+* Organizational resistance
+* Perception that it’s “twice the cost” a developers programming alone
+* Personality conflicts
 
 ## Describe the mechanics of the driver/navigator style of pair programming
 [While there are many pair programming styles](https://martinfowler.com/articles/on-pair-programming.html), our experience shows most are a variation of the **driver/navigator** style. At any given moment, the **driver** has their fingers on the keyboard, coding and implementing the next logic statement. At the same time, the **navigator** is looking back at what was just written, suggesting the next course of action, and strategically thinking further ahead. Research shows and our experience confirms that our brains have difficulty performing high-level strategizing and detailed execution at the same time, which is why two heads working together is better than one in complex problem-solving situations. Pairing addresses this conundrum by having one person for each role.
@@ -119,10 +119,10 @@ A small item like a stuffed animal or tchotchke can be used to signal who is nav
 The pair decides on a set of tasks that need to be accomplished and switches after each is completed. Tasks can be created, modified, or deleted as the pair progresses. Ideally each takes about the same amount of time to complete.
 
 ## In this article, you learned to:
-*  Define pair programming and remote pair programming
-*  List at least five potential benefits of pair programming
-*  List at least five potential challenges of pair programming
-*  Describe the mechanics of the driver/navigator style of pair programming
+* Define pair programming and remote pair programming
+* List at least five potential benefits of pair programming
+* List at least five potential challenges of pair programming
+* Describe the mechanics of the driver/navigator style of pair programming
 
 ## Keep Learning
 1. Blog: [What’s the Best Way to Pair?](https://tanzu.vmware.com/content/blog/what-s-the-best-way-to-pair) by Maya Rosecrance and Sarah Connor.
@@ -130,5 +130,6 @@ The pair decides on a set of tasks that need to be accomplished and switches aft
 1. Video: [I've Pair Programmed for 30,000 Hours: Ask Me Anything! — Joe Moore](https://www.youtube.com/watch?v=RCDfBioUgts)
 
 ## Related topics to Pair Programming
-*  Test Driven Development
-*  Agile software development
+* [Agile software development](https://tanzu.vmware.com/agile)
+* Test Driven Development
+* Automate who pairs with whom with [Parrit](https://parrit.io/)
