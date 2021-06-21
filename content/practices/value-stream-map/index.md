@@ -3,7 +3,7 @@ date: '2021-04-28'
 description: Visualize the steps an organization takes to create & deliver value to
   customers in order to help eliminate "waste." A common use case is a path to production
   and product development life cycle.
-image: default-cover.png
+
 lastmod: '2021-04-28'
 length: 1-2 hours
 linkTitle: Value Stream Map

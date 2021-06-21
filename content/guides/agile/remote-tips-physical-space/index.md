@@ -87,8 +87,7 @@ I think the big one is my wife getting used to me talking at home all day while 
 
 #### Florent Biville (Engineer, France/Remote)
 
-![Florent Biville (Engineer, France/Remote)
-](/images/guides/agile/remote-physical-space/florent-biville.jpg)
+![Florent Biville (Engineer, France/Remote)](images/florent-biville.jpg)
 
 #### Hayk Galystan (Engineer, Yerevan)
 
