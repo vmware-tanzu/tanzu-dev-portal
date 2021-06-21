@@ -1,7 +1,7 @@
 ---
 date: '2021-02-09'
 description: Establish a common set of terms understood by the core team
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1 hour
 participants: Core team, subject matter experts
