@@ -2,7 +2,6 @@
 date: '2021-02-09'
 description: Prioritize problems that were discovered during research so the team
   can focus on the most important ones
-image: default-cover.png
 lastmod: '2021-03-17'
 length: 60-120 mins
 participants: Core team

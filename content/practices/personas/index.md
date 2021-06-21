@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Create a provisional representation of a user based on existing knowledge
   and assumptions
-image: personas/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 45 - 60 mins
 miro_template_url: https://miro.com/miroverse/personas

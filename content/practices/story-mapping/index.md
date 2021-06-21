@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Plan release cycles by organizing user stories into a step-by-step segmented
   flow
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1 hour
 participants: Core team, stakeholders

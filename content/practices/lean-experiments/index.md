@@ -2,7 +2,9 @@
 date: '2021-05-10'
 description: A way to have your team create experiments to run so that you can validate
   or invalidate risky assumptions that may lead to product failure
-image: /lean-experiments/lean-experiment-1.png
+resources:
+- name: cover
+  src: images/lean-experiment-1.png
 lastmod: '2021-05-10'
 length: 60-90 mins
 linkTitle: Lean Experiments

@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Create a list of assumptions and identify which are the riskiest
-image: assumptions/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-16'
 length: 30 - 60 mins
 participants: Core team, stakeholders (optional)

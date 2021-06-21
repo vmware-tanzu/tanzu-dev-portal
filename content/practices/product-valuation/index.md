@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Quantify the value a product delivers to users and the business to support
   your stakeholder’s assessment of their investment in the product
-image: /product-valuation/example-3.png
+resources:
+- name: cover
+  src: images/example-3.png
 lastmod: '2021-03-25'
 length: Varies greatly
 participants: Everyone with a vested interest. The core team should be involved in

@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Using customer narratives and data, “map” what they are doing, thinking,
   feeling and interacting with over a set period of time.
-image: journey-map/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 1 hour
 participants: Core team, subject matter experts

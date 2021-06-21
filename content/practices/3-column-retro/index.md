@@ -2,7 +2,9 @@
 date: '2021-05-03'
 description: A way to identify how to improve teamwork by reflecting on what worked
   well, what could be improved, and what is on people’s minds.
-image: 3-column-retro/retro-cover.png
+resources:
+- name: cover
+  src: images/retro-cover.png
 lastmod: '2021-05-03'
 length: 1 Hour
 linkTitle: 3 Column Retrospective

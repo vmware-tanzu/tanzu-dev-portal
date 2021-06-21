@@ -2,7 +2,9 @@
 date: '2021-02-11'
 description: Identify relationships between services in a complex system to reveal
   the notional target system architecture and record them using SNAP
-image: boris/boris.png
+resources:
+- name: cover
+  src: images/boris.png
 lastmod: '2021-03-17'
 length: 1.5 hours per run; multiple runs are often needed
 participants: 'Business stakeholders, architects, technical leads, developers '

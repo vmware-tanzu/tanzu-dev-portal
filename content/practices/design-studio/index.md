@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Understand the problem from different team perspectives and generate
   many solution sketches using scenario as a guide
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 60 - 90 mins
 participants: Core team, subject matter experts (SMEs)

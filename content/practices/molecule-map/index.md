@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Quickly generate many possible solutions after identifying who the user
   is and what problem they have
-image: molecule-map/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-24'
 length: 45 min - 1 hour
 miro_template_url: https://miro.com/miroverse/molecule-map/

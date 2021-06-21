@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Help the team understand the technological and human interactions that
   take place in a customer journey
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1 - 2 hours
 participants: Core team, stakeholders

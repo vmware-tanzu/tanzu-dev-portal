@@ -3,7 +3,7 @@ date: '2021-03-02'
 description: A communication and planning tool that shows sequential outcomes that
   help execute your strategy and build towards your vision.
 draft: false
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 2+ hours (block enough time or consider breaking the activity into two sessions)
 linkTitle: Outcome Oriented Roadmap

@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Summarize “at-a-glance” how users, business and technology meet to create
   a business opportunity.
-image: lean-business-canvas/step-1.png
+resources:
+- name: cover
+  src: images/step-1.png
 lastmod: '2021-03-17'
 length: 1 - 2 hrs
 participants: Core team, stakeholders

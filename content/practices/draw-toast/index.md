@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: An icebreaker that shows a room that even very easy tasks can be exceedingly
   complex to execute without full alignment
-image: default-cover.png
+
 lastmod: '2021-04-01'
 length: 20 min
 participants: Core team, stakeholders, and anyone else commonly invited to an Inception

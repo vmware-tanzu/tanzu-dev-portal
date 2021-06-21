@@ -4,7 +4,9 @@ description: Using the "sailboat" retrospective format, start from the goal to f
   ways on how to get there. Teams place themselves in the future by imagining that
   their goal has been reached. By exploring their imaginary past, teams agree how
   to work together to reach the goal.
-image: /futurespective/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-04-16'
 length: 1-2 hours
 linkTitle: Futurespective
