@@ -1,7 +1,7 @@
 ---
 date: '2021-02-09'
 description: Establish a common set of terms understood by the core team
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1 hour
 participants: Core team, subject matter experts
@@ -40,7 +40,7 @@ why:
    Tip: You can also present any anti-goals that may help steer the team away from rabbit holes. This is optional.
    {{% /callout %}}
  
-   ![Visual of the gap between the app's vocabulary and new business vocabulary](/images/practices/ubiquitous-language/step-1.png)
+   ![Visual of the gap between the app's vocabulary and new business vocabulary](images/step-1.png)
 
 1. Give everyone 10 minutes (or less) to individually write down as many terms as they can, 1 term per sticky note
 
@@ -85,7 +85,7 @@ None at the moment.
 
 ## Real World Examples
 
-![example ubiquitous language workshop on whiteboard](/images/practices/ubiquitous-language/example-1.jpg)
+![example ubiquitous language workshop on whiteboard](images/example-1.jpg)
 
 ## Recommended Reading
 

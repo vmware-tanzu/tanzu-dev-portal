@@ -37,7 +37,7 @@ miro_template_url: ""
    - Validation — is this solution valuable?
    - Usability — is this solution easy to use?
 
-   ![Research Workshop Types](/images/practices/user-research-introduction-session/research-types.jpg)
+   ![Research Workshop Types](images/research-types.jpg)
 
 1. Next, describe the main **roles** involved in research, writing each on the board:
    
@@ -118,9 +118,9 @@ None at the moment.
 None at the moment. 
 
 ## Real World Examples
-![Research Workshop Example 1](/images/practices/user-research-introduction-session/example-1.jpg)
+![Research Workshop Example 1](images/example-1.jpg)
 
-![Research Workshop Example 2](/images/practices/user-research-introduction-session/example-2.jpg)
+![Research Workshop Example 2](images/example-2.jpg)
 
 ## Recommended Reading
 [Lean UX](https://www.oreilly.com/library/view/lean-ux/9781449366834/) by Jeff Gothelf and Josh Seiden

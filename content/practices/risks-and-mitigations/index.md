@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Surface risks and how the team might mitigate them
-image: risks-and-mitigations/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-04-08'
 length: 30 min - 1 hour
 miro_template_url: https://miro.com/miroverse/risks-and-mitigations
@@ -52,7 +54,7 @@ why:
    Tip: Check in on the groups and move each group forward if they are moving faster than others
    {{% /callout %}}
    
-   ![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)
+   ![2x2 with labeled axes](images/step-3.png)
 
 1. Instruct each team to choose the top 2 risks from the high risk section that they would like to share out
 
@@ -88,6 +90,6 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
+![Whiteboard table showing risks in one column and related mitigation strategies in another](images/example-2.jpg)
 
 ## Recommended Reading

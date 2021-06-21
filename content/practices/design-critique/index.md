@@ -8,7 +8,7 @@ Project team brings:
 date: '2021-02-09'
 description: Provide valuable design feedback to a project team so they can determine
   if further effort is needed
-image: default-cover.png
+
 lastmod: '2021-03-04'
 length: 30 min - 1 hour
 participants: Core team, stakeholders, other designers
@@ -88,7 +88,7 @@ None at the moment
 None at the moment
 
 ## Real World Examples
-![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+![Design printout with feedback attached using sticky notes](images/example-2.jpg)
 
 ## Recommended Reading
 
