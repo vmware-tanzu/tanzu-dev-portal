@@ -80,6 +80,7 @@ appender
 application-centric
 ApplicationEvent
 applicationPort
+Applitools
 AppSec
 AppServer
 Apress
@@ -1541,6 +1542,7 @@ Teppanyaki
 Terraform(-ing)?
 testability
 TestContainers
+testcontainers
 TGI(K)?
 tgz
 Thanos
