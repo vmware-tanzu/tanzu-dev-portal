@@ -185,14 +185,19 @@ img[src*="diagram"] {
   margin: 0;
 }
 
-
-.linked-box:hover .link,
-.linked-box:focus .link {
-  color: $link-hover-color;
+.linked-box .link {
+  color: $link;
+  -webkit-font-smoothing: auto;
+  transition: color .2s;
 }
-
+.linked-box:hover,
+.linked-box:focus {
+  background-color: $linkboxhover;
+  .link, p {
+    color: white;
+  }
+}
 .bg-gray-dark p.link,
-.linked-box .link,
 .td-box--gray-850 p > a,
 .td-box--gray-darkest p > a,
 .td-box--dark p > a,
@@ -1038,10 +1043,13 @@ body.tv-episode {
   position: fixed;
   z-index: 20;
   height: 40px;
-  top: 80px;
+  top: 54px;
   padding: 8px 0;
   color: white;
   background: #78be20;
+  @media(min-width: 992px) {
+    top: 80px;
+  }
 }
 
 #live-notify .btn {
@@ -1137,7 +1145,13 @@ body.tv-episode {
   padding: 20px 25px;
   transition: background-color 0.25s;
   font-size: 1.0625rem;
-  height: 150px;
+  height: 177px;
+  @media(min-width: 1600px) {
+    height: 150px;
+  }
+  @media(max-width: 991px) {
+    height: auto;
+  }
 }
 
 //Workshops
