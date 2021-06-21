@@ -97,7 +97,14 @@ None at the moment.
 None at the moment.
 
 ## Real World Examples
-Coming soon!
+![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
+
+![A group of people discusses priority in front of a whiteboard with two by two chart on it](/images/practices/problem-prioritization/example-3.jpg)
+
+![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
+
+![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
+
 
 ## Recommended Reading
 [2×2 Prioritization Matrix from ProductPlan](https://www.productplan.com/glossary/2x2-prioritization-matrix/)
