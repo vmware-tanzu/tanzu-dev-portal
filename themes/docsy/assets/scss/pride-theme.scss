@@ -6,7 +6,7 @@ html  {
   .td-sidebar,
   body,
   .td-outer,
-  .td-box--gray-dark,
+  .td-box--gray-:not(.linked-box),
   section,
   .td-main,
   .bg-gray-dark:not(footer):not(.card):not(.linked-box),

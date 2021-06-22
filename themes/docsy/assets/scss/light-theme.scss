@@ -1,7 +1,7 @@
 .td-outer,
 body {
    background-color: white !important;
-   color: #1B2A32 !important;
+   color: #61717d !important;
 }
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
@@ -23,6 +23,8 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+.col-4-thumbnail,
+.video-description,
 .outcomes-index .td-box--gray-850,
 body .bg-primary,
 .person .card, .person .highlight,
@@ -33,7 +35,6 @@ p code, li > code, table code,
 body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
    background-color: #f4f8fa !important;
 }
-
 body .bg-gray-dark.border {
   border: none !important;
 }
@@ -55,7 +56,7 @@ body.guide .td-sidebar-nav__section-title a,
 p code, li > code, table code,
 .mktoForm .mktoRadioList>label, .mktoForm .mktoCheckboxList>label,
  body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li {
-   color: #1B2A32 !important;
+   color: #61717d !important;
 }
 
  body .topic a,
@@ -82,9 +83,14 @@ footer li.list-inline-item .text-white {
  body .border-top {
    border-color: #d9e4ea !important;
 }
+body a:hover, body a:focus,
 body a code,
- body .linked-box .link, body .td-box--gray-850 p > a, body .td-box--gray-darkest p > a, body .td-box--dark p > a, body a, body p.link {
-   color: #1d428a !important;
+body .linked-box .link, 
+body .td-box--gray-850 p > a, 
+body .td-box--gray-darkest p > a, 
+body .td-box--dark p > a, body a, 
+body p.link {
+  color: #0e2b65 !important;
 }
 #live-notify,
 body a.btn {
@@ -96,7 +102,7 @@ body a.btn {
       color: #1d428a !important;
    }
    body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
-      stroke: #1B2A32 !important;
+      stroke: #61717d !important;
    }
 }
  body .text-light {
@@ -118,7 +124,7 @@ pre,
 }
 
 input::placeholder {
-   color: #1B2A32 !important;
+   color: #61717d !important;
 }
 
 body.tv-episode .fancybox-inner {
@@ -131,7 +137,7 @@ body.tv-episode #register .mktoForm select, body.tv-episode #register .mktoForm 
 }
 
 body.tv-episode #register .confirmation .-text-white {
-  color: #1B2A32 !important;
+  color: #61717d !important;
 }
 
 body.tv-episode #register .mktoForm select {
@@ -198,7 +204,7 @@ nav .nav-item:last-child {
   color: white !important;
 }
 #menu-toggle .menu-bar {
-   background: #1B2A32 !important;
+   background: #61717d !important;
 }
 
 #search-nav {
@@ -206,11 +212,11 @@ nav .nav-item:last-child {
 }
 
 #search-nav svg .b {
-    fill: #1B2A32 !important;
+    fill: #61717d !important;
 }
 
 #search-svg circle, #search-svg path {
-  stroke: #1B2A32 !important;
+  stroke: #61717d !important;
 }
 
 #searchheaderform input, #searchheaderform ::placeholder {
@@ -222,7 +228,7 @@ nav .nav-item:last-child {
 }
 
 .gsc-tabHeader.gsc-tabHeader span {
-  color: #1B2A32 !important;
+  color: #61717d !important;
 }
 
 .gsc-tabHeader.active-tab span {
@@ -270,19 +276,6 @@ div.aside-warning > div.aside-title {
 div.aside div.aside-content {
     padding: 5px 20px;
     background: #f4f8fa !important;
-}
-
-.col-4-thumbnail {
-  background-color: #1D428A;
-
-  .video-description {
-    background-color: #1D428A;
-  }
-  @media (min-width: 992px) {
-    &:hover .video-description {
-        background-color: #0E2B65 !important;
-      }
-  }
 }
 
 .guide .td-sidebar-nav h5 a:before {

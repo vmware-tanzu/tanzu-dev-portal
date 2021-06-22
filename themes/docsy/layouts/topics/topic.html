@@ -27,19 +27,17 @@
                     <div class='row'>
                         {{ range first 6 $guides }}
                             <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
-                                <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
+                                <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
-                                    <p class='link'>Read more</p>
                                 </a>
                             </div>
                         {{ end }}
                         {{ range after 6 $guides }}
                             <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0 hidden-item" style='display: none;'>
-                                <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
+                                <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
-                                    <p class='link'>Read more</p>
                                 </a>
                             </div>
                         {{ end }}
@@ -51,10 +49,9 @@
                     <div class='row'>
                         {{ range $guides }}
                             <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
-                                <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
+                                <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
-                                    <p class='link'>Read more</p>
                                 </a>
                             </div>
                         {{ end }}
