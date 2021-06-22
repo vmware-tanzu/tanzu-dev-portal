@@ -25,19 +25,8 @@ miro_template_url: "URL for related Miro template"
 ---
 ## How to Use this Method
 ### Sprint Planning vs. Iteration Planning
-[Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxed activities but with some differences that impact how planning is done:
-
-{{< table "table" >}}
-|  | Sprint Planning | Iteration Planning |
-| ---- | ---- | ---- |
-| **Prerequisites** | • A Sprint Goal<br>• A prioritized Product Backlog | • A prioritized Product Backlog<br>• User stories to be reviewed  |
-| **Objective** | • Align on a goal for the Sprint<br>• Negotiate and plan the scope for the Sprint (a.k.a. the Sprint Backlog) | • Maintain a shared understanding of the current scope and priorities (i.e. the Product Backlog) | 
-| **Activities** | • Review user stories<br>• Pull user stories from the Product Backlog to the Sprint Backlog | • Review user stories<br> • Estimate user stories<br> • Promote user stories to the Product Backlog according to priority | 
-| **Outputs** | • An unprioritized Sprint Backlog that the team commits to deliver and demonstrate at the end of the Sprint | • A prioritized Product Backlog<br> • An estimation of the work that may be delivered and demonstrated during the Iteration | 
-| **Participants** | • Product Owner<br> • Engineers | • Core team |
-{{</ table >}}
-
 ### Sample Agenda & Prompts
+
 1. Start by framing the conversation for the meeting. Help to set overall project context as needed by briefly recapping recently accepted and in-progress stories or the current state of the newest capabilities in your acceptance environment, to get everyone aligned on where things currently stand as you enter this next iteration. Review the arc of new user stories by outlining what they will add to the product. Present user interface mockups, if available.
 
 
@@ -47,40 +36,10 @@ miro_template_url: "URL for related Miro template"
    Tip: Allow space for all members of the team to get the clarifications they need to provide an estimate they feel comfortable with. Beware of individual personalities taking over the conversation or dictating approaches that prevent full team understanding.
    {{< /callout >}}
 
-1. Prompt the engineers to indicate if they are ready to estimate the user story and if so, to estimate the relative complexity of the story by simultaneously voting on a story point estimate.
-   
-   {{< callout >}}
-   Tip 1: Complexity can be estimated relative to other user stories in the product backlog, or relative to a baseline user story.
-   {{< /callout >}}
-   
-   {{< callout >}}
-   Tip 2: Relative complexity is an easier and more reliable way to estimate the size of a user story than the time it may take to complete the work.
-   {{< /callout >}}
-   
-   {{< callout >}}
-   Tip 3: Estimates are typically quantified using “story points”, and the team should align beforehand on the point scale they will use throughout the project, for consistency (e.g. Fibonacci, linear, exponential).
-   {{< /callout >}}
-    
-   {{< callout >}}
-   Tip 4: It’s important that the estimation be done simultaneously in order to avoid bias. A good way to do this is to have participants vote on the count of 3.
-    {{< /callout >}}
-    
-   {{< callout >}}
-   Tip 5: Large story point estimates may suggest the user story should be broken down if the resulting smaller stories can still be valuable to users.
-    {{< /callout >}}
-    
-   {{< callout >}}
-   Tip 6: User stories may be estimated to have 0 story points when there is little or no work to be done beyond acceptance testing/verification.
-   {{< /callout >}}
-   
-   {{< callout >}}
-   Tip 7: It’s OK for story point estimations to be imprecise. The same team working on the same product generally makes more accurate and consistent estimates over time as discrepancies average out.
-    {{< /callout >}}
-    
-   {{< callout >}}
-   Tip 8: Estimation should typically be done only by engineers, or those who will be delivering the work. Other roles, such as Testers and Architects, may contribute when they have a sufficient understanding of the relative complexity. 
-   {{< /callout >}}
+1. Prompt the engineers to indicate if they are ready to estimate the user story and if so, to estimate the relative complexity of the story by simultaneously voting on a story point estimate. 
 
+  Please see the [short guide to estimation](#estimation) below for estimation tips.
+   
 1. If there is a consensus on the estimation, label the user story with the estimation result and promote it to the backlog, indicating to the team the priority of this story. Otherwise, if there is no consensus, prompt the engineers to discuss, and re-estimate if necessary until there is a consensus that the team is happy with.
    
    {{< callout >}}
@@ -110,9 +69,31 @@ Firstly, the team should have a shared understanding of the scope and relative c
 - To make IPMs run more efficiently, try to ensure the user stories to be discussed in the meeting have been suitably groomed beforehand. Collaborate with a designer and an engineer to ensure the stories are actionable and meet the INVEST criteria. Avoid trying to hurriedly write stories during the meeting.
 - Encourage engineers to create necessary chores and if necessary, work with the engineers to prioritize and groom those chores before the IPM.
 - Only hold an IPM if you have already prepared user stories to be discussed and estimated, and your product backlog contains less than 3 iterations of work, according to average team velocity. If you estimate too far out, then estimates may be less accurate and the team may forget the context by the time they begin work on those user stories.
+
+### A Short Guide to Estimation {id=estimation}
 - If there are user stories in the product backlog that were estimated more than 3 iterations ago, consider spending time scheduled for the IPM to review and re-estimate upcoming user stories, if the team agrees it would be helpful.
+- Complexity can be estimated relative to other user stories in the product backlog, or relative to a baseline user story.
+- Relative complexity is an easier and more reliable way to estimate the size of a user story than the time it may take to complete the work.
+- Estimates are typically quantified using “story points”, and the team should align beforehand on the point scale they will use throughout the project, for consistency (e.g. Fibonacci, linear, exponential).
+- It’s important that the estimation be done simultaneously in order to avoid bias. A good way to do this is to have participants vote on the count of 3.
+- Large story point estimates may suggest the user story should be broken down if the resulting smaller stories can still be valuable to users.
+- User stories may be estimated to have 0 story points when there is little or no work to be done beyond acceptance testing/verification.
+- It’s OK for story point estimations to be imprecise. The same team working on the same product generally makes more accurate and consistent estimates over time as discrepancies average out.
+- Estimation should typically be done only by engineers, or those who will be delivering the work. Other roles, such as Testers and Architects, may contribute when they have a sufficient understanding of the relative complexity. 
 
 ## Related Practices
+
+[Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxed activities but with some differences that impact how planning is done:
+
+{{< table "table" >}}
+|  | Sprint Planning | Iteration Planning |
+| ---- | ---- | ---- |
+| **Prerequisites** | • A Sprint Goal<br>• A prioritized Product Backlog | • A prioritized Product Backlog<br>• User stories to be reviewed  |
+| **Objective** | • Align on a goal for the Sprint<br>• Negotiate and plan the scope for the Sprint (a.k.a. the Sprint Backlog) | • Maintain a shared understanding of the current scope and priorities (i.e. the Product Backlog) | 
+| **Activities** | • Review user stories<br>• Pull user stories from the Product Backlog to the Sprint Backlog | • Review user stories<br> • Estimate user stories<br> • Promote user stories to the Product Backlog according to priority | 
+| **Outputs** | • An unprioritized Sprint Backlog that the team commits to deliver and demonstrate at the end of the Sprint | • A prioritized Product Backlog<br> • An estimation of the work that may be delivered and demonstrated during the Iteration | 
+| **Participants** | • Product Owner<br> • Engineers | • Core team |
+{{</ table >}}
 
 ### Variations
 None at the moment. 
