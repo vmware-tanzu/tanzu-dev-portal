@@ -38,7 +38,7 @@ miro_template_url: "URL for related Miro template"
 
 1. Prompt the engineers to indicate if they are ready to estimate the user story and if so, to estimate the relative complexity of the story by simultaneously voting on a story point estimate. 
 
-  Please see the [short guide to estimation](#estimation) below for estimation tips.
+   Please see the [short guide to estimation](#estimation) below for estimation tips.
    
 1. If there is a consensus on the estimation, label the user story with the estimation result and promote it to the backlog, indicating to the team the priority of this story. Otherwise, if there is no consensus, prompt the engineers to discuss, and re-estimate if necessary until there is a consensus that the team is happy with.
    
