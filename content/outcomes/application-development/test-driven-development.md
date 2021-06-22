@@ -50,7 +50,7 @@ With test-driving, you set up the expected value in your test, asserting the cal
 ## Define Integration Tests
 An Integration Test exercises a subset of the system. They differ from End-to-End Tests in that they do not have to simulate user interactions and they differ from Unit Tests in that they exercise groups of “units” in one test. 
 
-Integration Tests operate on smaller parts of the system than End-tond Tests, thus running faster. They also test larger parts than unit tests, thus running slower than unit tests.
+Integration Tests operate on smaller parts of the system than End-to-End Tests, thus running faster. They also test larger parts than unit tests, thus running slower than unit tests.
 
 Because they are “smaller” than End-to-End Tests, they can be useful in tracking down bugs because they encompass a smaller part of the system. However, because they are “bigger” than a Unit Test, they do not allow for the fine grained design feedback that you get with unit tests.
 
