@@ -1006,6 +1006,7 @@ microservices-oriented
 Microsystems
 middleware
 Migros
+Mikusa
 Minella
 Mini-Wheats
 [Mm]inibroker
@@ -1638,6 +1639,7 @@ urandom
 url
 URL(s)?
 USD
+userDetails
 UX
 [Vv][123]
 Vaadin
