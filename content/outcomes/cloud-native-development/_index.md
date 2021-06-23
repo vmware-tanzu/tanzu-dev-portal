@@ -28,7 +28,7 @@ The following topics are covered:
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
 * [Twelve-Factor Apps](/outcomes/cloud-native-development/general__twelve-factor-apps/)
 * [Development Tools](/outcomes/cloud-native-development/general__dev_env_tools/)
-* [Spring Ecosystem](/outcomes/cloud-native-development/general__spring_framework/)
+* [Spring Ecosystem](/outcomes/cloud-native-development/general__spring_ecosystem/)
 * [Test Driven Development](/outcomes/cloud-native-development/general__tdd/)
 * [Using Cloud Foundry (PAS)](/outcomes/cloud-native-development/general__using_cloud_foundry/)
 * [Continuous Delivery](/outcomes/cloud-native-development/general__ci_cd/)
