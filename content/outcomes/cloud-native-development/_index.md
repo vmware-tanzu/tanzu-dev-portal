@@ -1,6 +1,6 @@
 ---
 title: Cloud Native Development
-weight: 1
+weight: -1
 layout: single
 description: "Learn the basics of cloud native development with Spring. This developer pre-engagement guide helps you to get the most of an engagement following the Tanzu Labs methodology."
 team:

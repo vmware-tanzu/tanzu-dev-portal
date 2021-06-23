@@ -1,8 +1,8 @@
 ---
 title: Modern Application Development
-weight: 1
+weight: -2
 layout: single
-description: "Learn how we approach application development at VMware Tanzu Labs"
+description: "Learn how we approach modern application development practices, teaming, culture, and technology at VMware Tanzu Labs."
 team:
   - VMware Tanzu Labs
 ---
