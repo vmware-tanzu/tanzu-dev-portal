@@ -173,7 +173,7 @@ public void checkInventory(@Payload Order orderIn) {
 ```
 _This method is the consumer and produce order event_
 
-In this method, you’ve intentionally thrown a runtime exception to simulate one of the cool features of [`SCS`](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka) which is provided out of the box, “Retry Mechanism”. It can easily be configured in application.yml with no extra coding. It also supports the “Back off and retry mechanism”. The retry value is 3 seconds, by default, and the `backoff` value is 5 seconds, by default.
+In this method, you’ve intentionally thrown a runtime exception to simulate one of the cool features of [`SCS`](https://github.com/spring-cloud/spring-cloud-stream-binder-kafka) which is provided out of the box, “Retry Mechanism”. It can easily be configured in `application.yml` with no extra coding. It also supports the “Back off and retry mechanism”. The retry value is 3 seconds, by default, and the `backoff` value is 5 seconds, by default.
 
 Eventually, when this method throws an exception, it doesn't immediately fail  unless it hits its built-in retry threshold.
 
