@@ -18,7 +18,7 @@ As software engineers, we will be working with our tools of the trade the whole 
 
 - Review the applicable [tutorial(s)](https://howtodoinjava.com/) from Java 8 through the version of Java you will be using.
 - Run through the [git tutorials](https://www.atlassian.com/git/tutorials).
-- If your using Maven for the build process, you can familiarize yourself with these resources [Maven](https://www.baeldung.com/maven) and [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
+- If you are using Apache Maven for the build process, familiarize yourself with the [Baeldung tutorial](https://www.baeldung.com/maven) and [Maven in 5 Minutes guide](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 - If you are using Gradle for the build process, run through the [Gradle guides](https://gradle.org/guides).
 - If you develop in the IntelliJ IDE, install the [learn plugin](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer) and run through the interactive tutorials within the application.
 
