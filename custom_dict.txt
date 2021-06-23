@@ -33,6 +33,7 @@ accessor
 acknowledgedEvents
 acknowledgement
 Acknowledgement
+ActiveMQ
 Activiti
 addAndReturnSize
 addAndReturnSizes
@@ -72,6 +73,7 @@ antipatterns?
 Antrea
 Apdex
 api
+Apigee
 ApiResponse
 APIs?
 APM
@@ -103,7 +105,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
-Atlasian
+Atlassian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -333,6 +335,7 @@ Crowdsourced?
 CRuby
 crypto
 [Cc]ryptographic(ally)?
+crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
@@ -363,7 +366,7 @@ datagram
 DataJpaTest
 datapath
 dataset
-[Dd]atasources
+[Dd]atasource(s)?
 DataStax('s|Examples)?
 dataStoreBytesInUse
 dataStoreEntryCount
@@ -492,6 +495,7 @@ EnumInfo
 Enums
 env
 EOF
+ESB
 etcd(ctl)?
 [Ee]thernet(s)?
 ETL
@@ -674,6 +678,7 @@ handleNotification
 handleWANEvent
 handoff(s)?
 HAProxy
+hardcoded
 HashiCorp('s)?
 hasResult
 Hayk
@@ -738,6 +743,7 @@ Initializr
 Integrallis
 [Ii]ntegrations
 IntelliJ
+interiorizing
 interpolator
 [Ii]nterservice
 intra-cluster
@@ -807,6 +813,7 @@ JmxNotificationClient
 JmxNotificationHandler
 JMXNotificationHandler
 JmxNotificationsAccessor
+JNDI
 johnharris85
 Jonatan
 jonatan_ivanov
@@ -821,6 +828,7 @@ JSONFormatter
 Jsonnet
 JSONPatch
 JsonPdxConverter
+JSP
 JSR-352
 JST
 judgement
@@ -1025,6 +1033,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MQ
 MSc
 msgpack(ed)?
 mTLS
@@ -1044,6 +1053,7 @@ MVP(s)?
 my-mongodb
 [mM]y[sS]ql
 myapp
+MyBatis
 mychart
 mydb
 MyPy
@@ -1171,6 +1181,7 @@ passwd
 pb('s)?
 pb&jelly
 (pc|C)zarkowski('s)?
+PCF
 PDB(s)?
 PDX
 PDX-serializable
@@ -1215,6 +1226,7 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+[Pp]ortlet(s)?
 [Pp]ost-mortem
 Postfacto
 [Pp]ostgres
@@ -1227,6 +1239,7 @@ pre-configured
 pre-created
 pre-defined
 pre-encryption
+pre-engagement
 pre-exist(s|ing)?
 pre-installed
 pre-optimize
@@ -1234,6 +1247,7 @@ pre-programmed
 pre-release
 [pP]re-stop
 Pre-sync
+pre-work
 pre(-)?
 prebuilt
 precompiled
@@ -1323,6 +1337,7 @@ Ren
 Renaud
 Renfro
 Renner
+replatforming
 replicaset
 ReplicaSet(s)?
 replicationcontrollers
@@ -1392,6 +1407,7 @@ scaffolded
 scaledown(s)?
 ScatterSpoke
 SCDF('s)?
+SCG
 schema(s)?
 Schimanski
 Schutta
@@ -1622,6 +1638,7 @@ updateServerMetric
 updateServerMetrics
 upgradability
 upleveled
+upskill
 upstream(s)?
 uptime
 UR[IL](s)?
@@ -1692,6 +1709,7 @@ Webpage
 WebSocket
 WebSphere
 WeChat
+well-intentioned
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
