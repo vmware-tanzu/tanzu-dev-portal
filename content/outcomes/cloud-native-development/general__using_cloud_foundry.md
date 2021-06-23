@@ -34,8 +34,8 @@ You may have already run into a handful of terms and concepts like "organization
 
 #### Homework
 
-- <input type="checkbox"> Run through the [Try Cloud Foundry](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf) tutorial
-- <input type="checkbox"> Get access to your company's Apps Manager and push your application to your Company's TAS environment.
-- <input type="checkbox"> Read through the [overview of TAS for VMs](https://docs.pivotal.io/application-service/2-11/concepts/overview.html) 
+- Run through the [Try Cloud Foundry](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf) tutorial
+- Get access to your company's Apps Manager and push your application to your Company's TAS environment.
+- Read through the [overview of TAS for VMs](https://docs.pivotal.io/application-service/2-11/concepts/overview.html) 
 
 

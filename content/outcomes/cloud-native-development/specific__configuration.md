@@ -19,9 +19,9 @@ The second phase of externalizing application configuration will move these appl
 
 #### Homework
 
-- <input type="checkbox"> Brush up on YAML syntax with the [CircleCI guide](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/) 
-- <input type="checkbox"> Read the introduction to [Externalizing Configuration with Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) 
+- Brush up on YAML syntax with the [CircleCI guide](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/) 
+- Read the introduction to [Externalizing Configuration with Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) 
 
 #### Additional resources
 
-- <input type="checkbox"> Take a look at the  [Externalizing Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) documentation to get an understanding of the many ways Boot exposes configuration to your application.
+- Take a look at the  [Externalizing Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) documentation to get an understanding of the many ways Boot exposes configuration to your application.

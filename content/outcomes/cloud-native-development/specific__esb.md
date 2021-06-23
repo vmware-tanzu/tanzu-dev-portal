@@ -15,7 +15,7 @@ Another newer option builds on top of Spring Integration and Spring Cloud Stream
 
 #### Homework
 
-- <input type="checkbox"> Run through the [Integrating Data](https://spring.io/guides/gs/integration/) guide to getting some experience with Spring integration.
+- Run through the [Integrating Data](https://spring.io/guides/gs/integration/) guide to getting some experience with Spring integration.
 
-- <input type="checkbox"> Run through the [Baeldung guide to Spring Cloud Data Flow](https://www.baeldung.com/spring-cloud-data-flow-stream-processing).
+- Run through the [Baeldung guide to Spring Cloud Data Flow](https://www.baeldung.com/spring-cloud-data-flow-stream-processing).
 

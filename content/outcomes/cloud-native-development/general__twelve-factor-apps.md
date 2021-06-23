@@ -20,9 +20,9 @@ For more info on cloud native apps, check out the free book "[Beyond the Twelve-
 
 #### Homework
 
-- <input type="checkbox"> Read about the twelve factors at [https://12factor.net](https://12factor.net/).
+- Read about the twelve factors at [https://12factor.net](https://12factor.net/).
 
 #### Additional resources
 
-- <input type="checkbox"> Read the "[Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app)" book.
+- Read the "[Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app)" book.
 

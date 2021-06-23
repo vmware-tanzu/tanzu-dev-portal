@@ -12,5 +12,5 @@ We will look to wire up security for newly created or modernized services using 
 
 #### Homework
 
-- <input type="checkbox"> Run through the [Securing Web Services](https://spring.io/guides/gs/securing-web/) guide.
+- Run through the [Securing Web Services](https://spring.io/guides/gs/securing-web/) guide.
 

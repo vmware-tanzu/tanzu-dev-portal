@@ -17,4 +17,4 @@ If your app interacts with a caching layer now, take a look through the [Caching
 
 #### Homework
 
-- <input type="checkbox"> Run through the [Caching Data with Spring](https://spring.io/guides/gs/caching/) guide
+- Run through the [Caching Data with Spring](https://spring.io/guides/gs/caching/) guide

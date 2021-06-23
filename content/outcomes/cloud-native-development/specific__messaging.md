@@ -13,7 +13,7 @@ Even when your application does not currently use some form of pub/sub, we will 
 
 #### Homework
 
-- <input type="checkbox"> Read the [Introduction](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing)
+- Read the [Introduction](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing)
 
-- <input type="checkbox"> Read the [Quick Start](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing) guide for Spring Cloud Stream
+- Read the [Quick Start](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing) guide for Spring Cloud Stream
 

@@ -14,4 +14,4 @@ Connecting to the database is only one part of the traditional data access layer
 
 #### Homework
 
-- <input type="checkbox"> Run through the [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/) guide.
+- Run through the [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/) guide.

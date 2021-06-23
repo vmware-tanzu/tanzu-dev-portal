@@ -24,5 +24,5 @@ Read the introductions to
 
 #### Homework
 
-- <input type="checkbox"> Use [this guide](https://spring.io/guides/gs/spring-boot/) to build a simple RESTful web service using Spring Boot and minimal configuration.
-- <input type="checkbox"> Read through the introductions for the most common Spring Cloud components.
+- Use [this guide](https://spring.io/guides/gs/spring-boot/) to build a simple RESTful web service using Spring Boot and minimal configuration.
+- Read through the introductions for the most common Spring Cloud components.

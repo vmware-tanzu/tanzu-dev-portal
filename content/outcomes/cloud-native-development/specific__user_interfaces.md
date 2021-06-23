@@ -14,7 +14,7 @@ Regarding other technologies such as Portlets or thick-client desktop applicatio
 
 #### Homework
 
-- <input type="checkbox"> List and evaluate the user interface and view technologies your applications use now.
+- List and evaluate the user interface and view technologies your applications use now.
 
-- <input type="checkbox"> Have a team conversation on your vision, teaming, and technologies for future user experiences.
+- Have a team conversation on your vision, teaming, and technologies for future user experiences.
 

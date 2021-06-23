@@ -11,5 +11,5 @@ Applications running in VMware Tanzu Application Service live inside a temporary
 
 #### Homework
 
-- <input type="checkbox"> Run through the [example to use an external file system](https://docs.pivotal.io/application-service/2-11/devguide/services/using-vol-services.html).
+- Run through the [example to use an external file system](https://docs.pivotal.io/application-service/2-11/devguide/services/using-vol-services.html).
 
