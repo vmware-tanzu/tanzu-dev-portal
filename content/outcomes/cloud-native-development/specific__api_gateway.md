@@ -13,4 +13,4 @@ There are many commercial and open-source options for this - the former includes
 
 #### Homework
 
-- [x] Run through the [Building a Gateway](https://spring.io/guides/gs/gateway/) guide
+- <input type="checkbox"> Run through the [Building a Gateway](https://spring.io/guides/gs/gateway/) guide

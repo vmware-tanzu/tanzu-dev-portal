@@ -16,9 +16,9 @@ As software engineers, we will be working with our tools of the trade the whole 
 
 #### Homework
 
-- [x] Review the applicable [tutorial(s)](https://howtodoinjava.com/) from Java 8 through the version of Java you will be using.
-- [x] Run through the [git tutorials](https://www.atlassian.com/git/tutorials).
-- [x] If your using Maven for the build process, you can familiarize yourself with these resources [Maven](https://www.baeldung.com/maven) and [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
-- [x] If you are using Gradle for the build process, run through the [Gradle guides](https://gradle.org/guides).
-- [x] If you develop in the IntelliJ IDE, install the [learn plugin](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer) and run through the interactive tutorials within the application.
+- <input type="checkbox"> Review the applicable [tutorial(s)](https://howtodoinjava.com/) from Java 8 through the version of Java you will be using.
+- <input type="checkbox"> Run through the [git tutorials](https://www.atlassian.com/git/tutorials).
+- <input type="checkbox"> If your using Maven for the build process, you can familiarize yourself with these resources [Maven](https://www.baeldung.com/maven) and [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
+- <input type="checkbox"> If you are using Gradle for the build process, run through the [Gradle guides](https://gradle.org/guides).
+- <input type="checkbox"> If you develop in the IntelliJ IDE, install the [learn plugin](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer) and run through the interactive tutorials within the application.
 

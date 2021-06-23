@@ -13,5 +13,5 @@ While we can work with many of these tools, Concourse provides one of the purest
 
 #### Homework
 
-- [x] Run through the [Concourse Tutorial](https://concoursetutorial.com/).
+- <input type="checkbox"> Run through the [Concourse Tutorial](https://concoursetutorial.com/).
 

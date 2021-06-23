@@ -14,5 +14,5 @@ With these included in your Spring Boot app, you get automatic embedded monitori
 
 #### Homework
 
-- [x] Run through the [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) guide.
+- <input type="checkbox"> Run through the [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) guide.
 

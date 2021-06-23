@@ -36,7 +36,7 @@ The best way to learn about test-driven development is to do some of it! Pairing
 
 #### Homework
 
-- [x] Read linked articles on the test pyramid and specific kinds of testing.
-- [x] Run through at least three requirements from the Greeting exercise.
+- <input type="checkbox"> Read linked articles on the test pyramid and specific kinds of testing.
+- <input type="checkbox"> Run through at least three requirements from the Greeting exercise.
 
 

@@ -14,8 +14,8 @@ If a job needs more control or will benefit from moving it into its own atomic d
 
 #### Homework
 
-- [x] Run through the [Spring Scheduler guide](https://spring.io/guides/gs/scheduling-tasks/) 
+- <input type="checkbox"> Run through the [Spring Scheduler guide](https://spring.io/guides/gs/scheduling-tasks/) 
 
-- [x] Run through the [Spring Cloud Task Getting Started guide](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started) 
+- <input type="checkbox"> Run through the [Spring Cloud Task Getting Started guide](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started) 
 
 
