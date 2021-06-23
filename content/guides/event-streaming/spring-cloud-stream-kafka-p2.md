@@ -21,8 +21,6 @@ aliases:
 - "/guides/event-streaming/spring-cloud-stream-kafka-p2"
 ---
 
-## Intro to Event Driven Architecture (Part 2)
-
 Based on our previous demo in [Part 1](https://tanzu.vmware.com/developer/guides/event-streaming/spring-cloud-stream-kafka-p1/), you are now ready to simulate a scenario to get a better sense of what we have previously discussed. Let’s say you need to design a system where you can place an order and ship it after some verification process.
 To demonstrate how `SCS` can help you make your application development simpler, we are not going to cover all the edge or corner cases where this design can fail.
 
