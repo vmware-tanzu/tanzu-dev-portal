@@ -57,8 +57,7 @@ The timing of this activity varies along with the number of problems identified 
 ## Related Practices
 
 ### Variations
-
-None at the moment
+- [2x2 Prioritization](/practices/2x2)
 
 ### Preceding
 - [Research Synthesis](/practices/research-synthesis)
