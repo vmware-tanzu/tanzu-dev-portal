@@ -23,7 +23,6 @@ aliases:
 - "/guides/event-streaming/spring-cloud-stream-kafka-p1"
 ---
 
-## Intro to Event Driven Architecture (Part 1)
 
 This document provides a simple demonstration of how to implement your Java application with Kafka using the least amount of code. The goal is to achieve a lot out of the box, without having to reinvent the wheel and implement it in your Spring Boot application.
 
