@@ -285,6 +285,12 @@ div.aside div.aside-content {
   height: 12px;
 }
 
+.linked-box:hover, .linked-box:focus {
+  background-color: #45667C !important;
+  h5, p:not(.workshop-text), .link {
+    color: white !important;
+  }
+}
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
