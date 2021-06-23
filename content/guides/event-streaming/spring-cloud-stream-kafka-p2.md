@@ -54,7 +54,7 @@ In order to visualize our goal, let’s take it to as high a level as possible a
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-100-3.svg)
 
 ## Create an Order Request
-A rest call is a **create request** through the controller and ordering service. It can also be a UI or any other service.
+A REST call is a **create request** through the controller and ordering service. It can also be a UI or any other service.
 
 Since you are expecting a series of processes and operations in the back-end, you don't need to make the UI wait for the entire flow and keep the request thread occupied (blocked).
 
