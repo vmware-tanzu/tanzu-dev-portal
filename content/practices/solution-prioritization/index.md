@@ -68,6 +68,7 @@ You know you are done when the team has prioritized their solutions and is comfo
 This is an activity that you can time box if it feels drawn out. Many of the tips embedded above are intended to help you avoid rabbit holes, but if that happens you should feel empowered to move things forward by refocusing the team, setting a timer, or forcing a decision.
 
 ## Related Practices
+- [2x2 Prioritization](/practices/2x2)
 
 ### Preceding
 - [Solution Brainstorming](/practices/solution-brainstorming)
