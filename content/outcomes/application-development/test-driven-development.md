@@ -57,6 +57,8 @@ Because they are “smaller” than End-to-End Tests, they can be useful in trac
 ## Draw a “testing pyramid”
 As you’ve learned above, tests can be written at different levels of the system. At each level, there is a balance between speed of execution, the cost to maintain the test, and the confidence it brings to the correctness of the system.
 
+![Balanced Team Diagram](/images/outcomes/application-development/testing-pyramid.png)
+
 **End-to-End Tests: Fewest and most expensive.** End-to-End Tests are slower to run because they use simulated user interactions. They can also be fragile and susceptible to false-negatives because they rely on the quality and accuracy of user-simulation tools, such as web browser interaction tools, and other difficult to control factors, such as network latency.
 
 In addition, changes to the user interface might require significant End-to-End Test rewrites even when the underlying functionality has not changed. These, and other related factors make End-to-End Tests “expensive” to maintain. You want to minimize the number of these to keep the test suite running quickly and minimize maintenance headaches while still covering the key flows of the system, either from a user interface or an API endpoint.
@@ -64,9 +66,10 @@ In addition, changes to the user interface might require significant End-to-End 
 **Unit Tests: Highest number and least expensive.** You want the most Unit Tests in your test suite because they are the key way to design highly cohesive, loosely coupled software. Because you have kept them running quickly, the number of tests should not adversely affect the running time of the test suite. Also, the isolated nature of unit tests means changes in one area of the system do not require changes to other areas, making maintenance of Unit Tests minimal.
 
 **Integration Tests: somewhere in the middle.** You want more Integration Tests than End-to-End Tests because they balance speed of execution and test maintenance with coverage of the system. However, too many Integration Tests can quickly slow down a test suite and make the feedback from the Unit Tests decrease in value.
+
 A slow test suite is a signal that your testing pyramid might be “upside down” and you should focus more on Unit Tests to drive the design, and ensure the correctness of your software.
 
-*** image of testing pyramid here**
+![Balanced Team Diagram](/images/outcomes/application-development/inverted-testing-pyramid.png)
 
 ## Describe how TDD allows teams to go fast “forever”
 TDD gives teams the confidence to refactor application code to keep it clean so that they can go fast forever.
