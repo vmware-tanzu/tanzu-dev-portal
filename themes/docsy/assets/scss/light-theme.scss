@@ -47,7 +47,7 @@ body .td-sidebar-nav a.td-sidebar-link__page.active {
 .guide .td-sidebar-nav__section-title a.active, .guide .td-sidebar-nav__section-title a:hover {
   color: #78be20 !important;
 }
-
+.workshop-box .description h4,
 .person .card, .person .highlight,
 pre, .highlight,
 body p code, body li > code, body table code,
@@ -64,13 +64,7 @@ p code, li > code, table code,
    background-color: #f4f8fa !important;
    color: #1d428a !important;
 }
-.outcomes-index .td-box--gray-850:hover,
-.person .card:hover, .person .highlight:hover,
-body a.bg-gray-dark.border:hover,
-body a.td-box--gray-darkest:hover,
-body .topic a:hover {
-  background: #d9e4ea !important;
-}
+
 
 footer li.list-inline-item .text-white {
   color: #798893 !important;
@@ -85,7 +79,6 @@ footer li.list-inline-item .text-white {
 }
 // body a:hover, body a:focus,
 body a code,
-body .linked-box .link, 
 body .td-box--gray-850 p > a, 
 body .td-box--gray-darkest p > a, 
 body .td-box--dark p > a, body a, 
@@ -95,6 +88,7 @@ body p.link {
     color: #0E2B65 !important;
   }
 }
+
 #live-notify,
 body a.btn {
   color: white !important;
@@ -292,9 +286,13 @@ div.aside div.aside-content {
   height: 12px;
 }
 
-.linked-box:hover, .linked-box:focus {
+.linked-box:hover:not(.workshop-box), .linked-box:focus:not(.workshop-box) {
   background-color: #45667C !important;
-  h5, p:not(.workshop-text), .link {
+  h4:not(.workshop-title), h5:not(.fs-80), .link {
+    color: #5ACFFF !important;
+  }
+  .workshop-title,
+  p:not(.workshop-text) {
     color: white !important;
   }
 }

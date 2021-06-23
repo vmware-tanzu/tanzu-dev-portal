@@ -22,11 +22,11 @@
         {{ if gt (len $guides) 0 }}
         <div class='container py-5 border-bottom'>
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
-            <div class='col px-lg-0'>
+            <div class='col px-0'>
                 {{ if gt (len $guides) 6 }}
                     <div class='row'>
                         {{ range first 6 $guides }}
-                            <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
+                            <div class="flex-315 col-12 mr-3 mb-3 px-0">
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
@@ -34,7 +34,7 @@
                             </div>
                         {{ end }}
                         {{ range after 6 $guides }}
-                            <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0 hidden-item" style='display: none;'>
+                            <div class="flex-315 col-12 mr-3 mb-3 px-0 hidden-item" style='display: none;'>
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
@@ -48,7 +48,7 @@
                 {{ else }}
                     <div class='row'>
                         {{ range $guides }}
-                            <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
+                            <div class="flex-315 col-12 mr-3 mb-3 px-0">
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
                                     <h4 class="mt-2">{{ .Title }}</h4>
                                     <p>{{ .Description }}</p>
