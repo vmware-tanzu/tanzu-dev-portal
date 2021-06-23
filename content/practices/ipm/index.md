@@ -24,7 +24,7 @@ miro_template_url: "URL for related Miro template"
 
 ---
 ## How to Use this Method
-### Sprint Planning vs. Iteration Planning
+
 ### Sample Agenda & Prompts
 
 1. Start by framing the conversation for the meeting. Help to set overall project context as needed by briefly recapping recently accepted and in-progress stories or the current state of the newest capabilities in your acceptance environment, to get everyone aligned on where things currently stand as you enter this next iteration. Review the arc of new user stories by outlining what they will add to the product. Present user interface mockups, if available.
@@ -82,6 +82,8 @@ Firstly, the team should have a shared understanding of the scope and relative c
 - Estimation should typically be done only by engineers, or those who will be delivering the work. Other roles, such as Testers and Architects, may contribute when they have a sufficient understanding of the relative complexity. 
 
 ## Related Practices
+
+### Sprint Planning vs. Iteration Planning
 
 [Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxed activities but with some differences that impact how planning is done:
 
