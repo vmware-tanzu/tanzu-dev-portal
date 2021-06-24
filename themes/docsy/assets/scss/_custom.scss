@@ -696,6 +696,7 @@ footer {
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     z-index: 1;
     cursor: pointer;
+    border: 0 !important;
     &:hover,
     &:focus {
       background-color: $linkboxhover !important;  
