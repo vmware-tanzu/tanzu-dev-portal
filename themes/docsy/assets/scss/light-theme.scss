@@ -70,10 +70,6 @@ footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
 
-.person .card, .person .highlight,
- body .td-sidebar, body .topic a {
-   border-color: #d9e4ea !important;
-}
  body .border-top {
    border-color: #d9e4ea !important;
 }
@@ -286,7 +282,9 @@ div.aside div.aside-content {
   height: 12px;
 }
 
-.linked-box:hover:not(.workshop-box), .linked-box:focus:not(.workshop-box) {
+.linked-box:hover:not(.workshop-box), 
+.linked-box:focus:not(.workshop-box),
+.card {
   background-color: #45667C !important;
   h4:not(.workshop-title), h5:not(.fs-80), .link {
     color: #5ACFFF !important;

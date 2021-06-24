@@ -343,9 +343,9 @@ a {
 .btn-primary {
   box-shadow: none;
 }
-
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn {
-  background: $link;
+  background: $link !important;
   text-transform: uppercase;
   color: white;
   border-radius: 4px;
@@ -362,7 +362,7 @@ a {
 
   &:hover,
   &:focus {
-    background-color: $link-hover-color;
+    background-color: $link-hover-color !important;
     color: white;
   }
 }
@@ -683,7 +683,6 @@ footer {
 
 .person {
   .card {
-    border: 1px solid $border;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -696,8 +695,10 @@ footer {
     cursor: pointer;
     &:hover,
     &:focus {
-      background: rgba(0, 0, 0, 0.1);
-      border-color: $border;
+      background-color: #45667C !important;  
+      p {
+        color: white !important;
+      }
     }
   }
   a.social {
