@@ -140,7 +140,19 @@ body.tv-episode #register .mktoForm select {
 .episodes .teaser {
   color: #78be20!important;
 }
+#team-index .card {
+  .job {
+    color: #61717d !important
+  }
+  &:hover, &:focus {
+    h4 {
 
+    }
+    .job {
+      color: white !important
+    }
+  }
+}
 footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
@@ -282,11 +294,11 @@ div.aside div.aside-content {
   height: 12px;
 }
 
-.linked-box:hover:not(.workshop-box), 
-.linked-box:focus:not(.workshop-box),
-.card {
+.linked-box:hover:not(.workshop-box):not(.featured-link), 
+.linked-box:focus:not(.workshop-box):not(.featured-link),
+.card:hover {
   background-color: #45667C !important;
-  h4:not(.workshop-title), h5:not(.fs-80), .link {
+  h4:not(.workshop-title), h5:not(.fs-80), .link, .h4 > a {
     color: #5ACFFF !important;
   }
   .workshop-title,

@@ -184,14 +184,17 @@ img[src*="diagram"] {
   padding: 0;
   margin: 0;
 }
-
+.featured-link:hover .link,
+.featured-link:focus .link{
+  color: $link-hover-color !important;
+}
 .linked-box .link {
   color: $link;
   -webkit-font-smoothing: auto;
   transition: color .2s;
 }
-.linked-box:hover,
-.linked-box:focus {
+.linked-box:hover:not(.featured-link),
+.linked-box:focus:not(.featured-link) {
   background-color: $linkboxhover;
   .link {
     color: $link-hover-color;
@@ -656,7 +659,6 @@ footer {
 .topic {
   a {
     border-radius: 0;
-    border: 1px solid $border;
     background: $gray-800;
     display: inline-block;
     font-weight: 400;
@@ -669,8 +671,9 @@ footer {
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     width: 100%;
     &:hover {
-      background: rgba(0, 0, 0, 0.1);
+      background: $linkboxhover;
       border-color: $border;
+      color: $link-hover-color;
     }
   }
   .h4 {
@@ -695,7 +698,10 @@ footer {
     cursor: pointer;
     &:hover,
     &:focus {
-      background-color: #45667C !important;  
+      background-color: $linkboxhover !important;  
+      .h4 a {
+        color: $link-hover-color !important;
+      }
       p {
         color: white !important;
       }
