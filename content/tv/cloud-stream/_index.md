@@ -18,4 +18,4 @@ subheader: Live streaming on Twitch, every Friday at 10am ET.
 # Any content below here shows up above episode index
 ---
 
-A video channel to increase awareness of Multicloud value for Business, Technical and Security stakeholders and customers. Discuss expanding the definition of VMware Cloud. ​VMW Cloud represents our unique multi-cloud infrastructure and our Tanzu platform coming together for a complete app and cloud solution.
+A video channel to increase awareness of Multicloud value for Business, Technical and Security stakeholders and customers. Discuss expanding the definition of VMware Cloud. VMware Cloud represents our unique multi-cloud infrastructure and our Tanzu platform coming together for a complete app and cloud solution.
