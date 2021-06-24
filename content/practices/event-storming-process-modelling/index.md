@@ -54,7 +54,7 @@ The output from these workshops can be used to discover, validate or design a sy
     - Questions: If a question cannot be answered straight away then leave it on the board and return to it later.
     - Grammar: Add grammar appropriately but do not get bogged down by it
       1. Events: These represent events that are "Interesting" to the wider system. When understanding what is "interesting", you might refer to the description given by Martin Fowler in his article [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
-      1. Policies: This sticky represents a decision to do something: "When `<previous event>` `<actor>` `<always, sometimes, if.. then>` `<task>`
+      1. Policies: This sticky represents a business decision to do something, sometimes this is written as a short sentence or can be labeled and described somewhere else. Any descritpion should include the `event` they are listening to an `actor` if one is required, a `business decision` to be made and an `action` to take
       1. Actors: This sticky represents a human interaction and should be placed with policies to identify who is responsible of making the decision and performing the task, a policy without an actor is automated
       1. Action: An action that must be performed due to policy and produces one or more interesting events
       1. Read Models: Data required to make decisions or perform commands
@@ -63,8 +63,8 @@ The output from these workshops can be used to discover, validate or design a sy
     - Negative/Alternative Outcomes: If a command can result in multiple or alternative events then all events should be placed vertically
     - Pain Points and Opportunities: Place a sticky to represent any pain points and any opportunities that are identified at the time. Pain points can be around the process itself or the current system or tools supporting the process
 
-1. Narrate the process again, adding any missing grammar or correcting inaccuracies along the way. 
-   You can repeat this until you are satisfied you have enough of the process to identify a thin slice.
+1. Narrate the process again; correct inaccuracies and add missing grammar. You can also encourage the discovery of negative events
+   Repeat this until you are satisfied you have enough of the process to identify a thin slice.
 
 1. Review Questions and Pain Points: Try to answer as many questions as possible and rationalise pain points and opportunities
 
@@ -78,7 +78,7 @@ The output from these workshops can be used to discover, validate or design a sy
      - Manual Actions + System Commands
      - Integrations with tools and apps
      - Pain Points + Opportunities
-   - Identify one or more thin slices. Pick out a set of events that represents an end-to-end path through the process. Usually you will start with a simplified version of the `golden path` and add more slices as you choose to tackle more complexity and more outcomes. 
+   - Identify one or more thin slices. Try to identify a simplified end-to-end process that can provide the most value. 
 
 ## Related Practices:
 ### EventStorming
@@ -104,7 +104,7 @@ The primary focus of this is to define a domain driven solution to support the p
   - Software Model
 
 ### When discovering a pipeline or workflow
-Often when using Process Modelling to investigate or discover specific workflows or pipelines, eventstorming can be done as a short session as part of the process modelling or skipped entirely in favour narration. Also grammar might be a lot more flexible, as you may only need events to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
+Often when using Process Modelling to investigate or discover specific workflows or pipelines, eventstorming can be done as a short session as part of the process modelling or skipped entirely in favour narration. Also grammar might be a lot more flexible, as you may only need events and commands to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
 
 #### Sample Agenda & Prompts
 For the most part the agenda is the same as formal process modelling, however the grammar is more ad-hoc and there is some initial discovery as you are not starting with an Event Storming board
@@ -118,6 +118,7 @@ For the most part the agenda is the same as formal process modelling, however th
 
 1. First Narration: As with the formal method, attempt to narrate a `golden path` through the board.
      - If you did not event storm then your main goal here is to discover interesting events as you try to identify how the process gets from precondition to outcome
+     - At this level you will often find more passive aggressive events. For this reason identify them early and if you want to leave them "un-squashed" only represent them as either events or commands and events
   
 1. Narrate the process again, as with the formal method you can include more grammar and correct inaccuracies. 
    To save time you can identify only the grammar that is relevant to the discussion, you do not need to find all grammar for all events.
@@ -129,9 +130,14 @@ For the most part the agenda is the same as formal process modelling, however th
 
 #### Facilitator Notes & Tips
 
-Events: Finding suitable events can be the most challenging part of Process Modelling. 
- - When wording the event, try to be passive in its description. So rather than "Customer placed an order", you would say "Order was placed"
- - Try to avoid "Passive-Aggressive Commands" as described in Martin Fowlers' blog [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html). However don't ignore them, often they come about because a command is important and it may be the negative result of this command that you want to capture
+Events: Finding suitable events is important to getting a good architecture. 
+ - Identify the important state change and write the event to make the object that changed state, the subject of the event. i.e. the "Customer created an order", in this sentence the state of the Order is more important so we re-write it as "Order was created". Another might be "Customer Changed Address" In this instance the change of state to the customer's address is important, so the event could be written as "Customer's Address Changed". 
+ - Try to avoid "Passive-Aggressive Commands" as described in Martin Fowlers' blog [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html). These are often found when the object raising state changes is a listener to that event, in order to complete a process. One way to handle this could be to squash all policies, commands and events into a new policy, command, written to describe the whole process squashed. Identify which events are listened to and what negative events might be raised as a result of any failures from the squashed commands, again only if they are listened to.
+
+Policies: Writing Policies can be important to ensure you have the correct flow and capturing the correct business requirement
+ - Policies should be written as a business decision that guides an actor or system to the correct action. The actor may be responsible for implementing the policy but they are not responsible for defining the policy. If good Roles are identified in the EventStorming stage then you should be able to identify roles that influence that decision.
+
+Thin Slices: Thin Slices can be heavily influenced by the goals of your project, but a good start might be to pick out a `golden path` and reduce it to the least set of events required to achieve the final outcome.
 
 ## Real World Examples
 ![This is the placeholder for sample 1](/images/practices/event-storming-process-modelling/SampleEventStormingAndModellingBoard.JPG)
