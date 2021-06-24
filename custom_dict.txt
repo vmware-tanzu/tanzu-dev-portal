@@ -283,6 +283,7 @@ CodeFresh
 CodeOne
 CoffeeOps
 cognisant
+Cohn
 colocated
 commonName(.)?
 [Cc]omms
@@ -752,6 +753,7 @@ IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
 IPM
+IPM(s)
 IPPool(s)?
 IPs.
 IPVS
@@ -1025,6 +1027,7 @@ MiXiT
 Mkyong
 Mockito
 MockMvc
+[Mm]ockup(s)
 [Mm]odelling
 [Mm]odularity
 Momcilovic
@@ -1238,6 +1241,7 @@ pre-defined
 pre-encryption
 pre-exist(s|ing)?
 pre-installed
+Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
@@ -1568,8 +1572,7 @@ tiffanyfayj
 Tigera
 Tikka
 Tilt(file|Cloud)?
-[Tt]imebox
-timebox(ed)?
+[Tt]imebox(ed)?
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1621,6 +1624,7 @@ unencoded
 unencrypted
 unpause
 Unported
+unprioritized
 unpushed
 unregister
 unreleasable
