@@ -54,6 +54,7 @@ Success is achieved when the team agrees to the top 3-5 Insights on which it wil
 None at the moment
 
 ## Related Practices
+- [2x2 Prioritization](/practices/2x2)
 
 ### Variations
 

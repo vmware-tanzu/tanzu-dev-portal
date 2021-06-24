@@ -282,6 +282,7 @@ codebase
 CodeFresh
 CodeOne
 CoffeeOps
+cognisant
 colocated
 commonName(.)?
 [Cc]omms
@@ -296,6 +297,7 @@ ConfigurationProperties
 [Cc]onformant
 connectJmxConnectionHandler
 connectToMBeanServer
+Connor
 containerd
 containerPort
 Containous
@@ -1156,6 +1158,7 @@ P2P
 Pacak
 Packer
 PagerDuty
+Pairmate
 Paketo
 Palo
 Parabol
@@ -1164,6 +1167,7 @@ ParallelGatewaySenderQueueEntrySizer
 parallelize
 parallelizing
 [Pp]arameteriz(e|ation|ing)?
+Parrit
 PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
@@ -1256,6 +1260,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+ProductPlan
 Programadoras
 programmatically
 [Pp]rometheus
@@ -1361,6 +1366,7 @@ ROI
 [Rr]ollout
 rom-com
 rootPassword
+Rosecrance
 Rosso
 [Rr]outable
 Route53
@@ -1501,6 +1507,7 @@ Stéphane
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
+strategizing
 Strategyzer
 StringBuilder
 struct
@@ -1534,6 +1541,7 @@ TAS
 TaskRepository
 Tatooine
 TBD
+tchotchke
 TCP
 tdp-guide
 TeamRetro
