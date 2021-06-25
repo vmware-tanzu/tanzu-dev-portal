@@ -148,7 +148,11 @@ a.h4 {
 .featured-section .featured-link,
 .td-home .topic > p > a {
   border: 0px !important;
+
   &:hover {
+    .link {
+      color: white !important;
+    }
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500%;
     animation: gradient 3.5s ease infinite;
@@ -177,8 +181,10 @@ a.h4 {
 footer a {
   color: white !important;
 }
-.btn {
-  background-color: #17242C !important;
+footer .btn.btn-small,
+.btn,
+a.btn, {
+  background-color: #17242C;
   &:hover {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500%;

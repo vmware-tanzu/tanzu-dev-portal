@@ -56,7 +56,10 @@ body.guide .td-sidebar-nav__section-title a,
 p code, li > code, table code,
 .mktoForm .mktoRadioList>label, .mktoForm .mktoCheckboxList>label,
  body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li {
-   color: #61717d !important;
+   color: #28333c !important;
+}
+body p {
+  color: #61717d !important;
 }
 
  body .topic a,
@@ -64,8 +67,31 @@ p code, li > code, table code,
    background-color: #f4f8fa !important;
    color: #1d428a !important;
 }
-
-
+#team-index .person .card:hover  {
+  p {
+    color: #61717d !important;
+  }
+  .h4 a{
+    color: #1d428a !important;
+  }
+}
+.linked-box {
+  &:hover .link,
+  &:focus .link {
+    color: #0E2B65 !important;
+  }
+  .link {
+   color: #1d428a !important;
+  }
+}
+#team-index .card:hover,
+#team-index .card:focus,
+.topic.col-lg-4 a:focus,
+.topic.col-lg-4 a:hover,
+.workshop-box:hover .description,
+.col-4-thumbnail:hover .video-description {
+  background-color: #D9E4EA !important;
+}
 footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
@@ -74,6 +100,7 @@ footer li.list-inline-item .text-white {
    border-color: #d9e4ea !important;
 }
 // body a:hover, body a:focus,
+
 body a code,
 body .td-box--gray-850 p > a, 
 body .td-box--gray-darkest p > a, 
@@ -84,6 +111,7 @@ body p.link {
     color: #0E2B65 !important;
   }
 }
+
 .featured-section .featured-link:hover .link,
 .featured-section .featured-link:focus .link{
   color: #0E2B65 !important;
@@ -143,19 +171,7 @@ body.tv-episode #register .mktoForm select {
 .episodes .teaser {
   color: #78be20!important;
 }
-#team-index .card {
-  .job {
-    color: #61717d !important
-  }
-  &:hover, &:focus {
-    h4 {
 
-    }
-    .job {
-      color: white !important
-    }
-  }
-}
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
@@ -300,13 +316,9 @@ div.aside div.aside-content {
 .linked-box:hover:not(.workshop-box):not(.featured-link), 
 .linked-box:focus:not(.workshop-box):not(.featured-link),
 .card:hover {
-  background-color: #45667C !important;
+  background-color: #D9E4EA !important;
   h4:not(.workshop-title), h5:not(.fs-80), .link, .h4 > a {
-    color: #5ACFFF !important;
-  }
-  .workshop-title,
-  p:not(.workshop-text) {
-    color: white !important;
+    color: #0E2B65 !important;
   }
 }
 /* SYNTAX HIGHLIGHTING */

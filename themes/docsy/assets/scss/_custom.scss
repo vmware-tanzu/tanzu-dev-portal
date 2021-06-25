@@ -348,7 +348,7 @@ a {
 }
 .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn {
-  background: $link !important;
+  background: $link;
   text-transform: uppercase;
   color: white;
   border-radius: 4px;
@@ -365,7 +365,7 @@ a {
 
   &:hover,
   &:focus {
-    background-color: $link-hover-color !important;
+    background-color: $link-hover-color;
     color: white;
   }
 }
@@ -1107,7 +1107,11 @@ body.tv-episode {
   font-size: 1.2rem;
   margin-bottom: 3rem;
 }
-
+.workshop-box:hover {
+  .description {
+    background-color: #45667b;
+  }
+}
 .col-4-thumbnail {
   padding: 0;
   background-color: $border;
