@@ -283,6 +283,7 @@ CodeFresh
 CodeOne
 CoffeeOps
 cognisant
+Cohn
 colocated
 commonName(.)?
 [Cc]omms
@@ -752,6 +753,7 @@ IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
 IPM
+IPM(s)
 IPPool(s)?
 IPs.
 IPVS
@@ -770,7 +772,9 @@ Istio('s)?
 istioctl
 istiod(-1-7-3)?
 IstioOperator
+ISV(s)
 iteratively
+ITSM
 Ivanov
 IvanTarin2
 Izac
@@ -1023,6 +1027,7 @@ MiXiT
 Mkyong
 Mockito
 MockMvc
+[Mm]ockup(s)
 [Mm]odelling
 [Mm]odularity
 Momcilovic
@@ -1036,6 +1041,7 @@ MTT(D|R)
 MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
+[Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
 [Mm]ultiuser
@@ -1235,6 +1241,7 @@ pre-defined
 pre-encryption
 pre-exist(s|ing)?
 pre-installed
+Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
@@ -1430,6 +1437,7 @@ ServiceEntry
 ServiceInfo(Creator)?
 ServiceMonitor
 serviceName=backend
+servicexen
 [Ss]ervlets?
 setValue(Template)?s
 severities
@@ -1519,6 +1527,7 @@ subpath
 Subramaniam
 subregistry
 substring
+Sudesh
 sudo
 superset
 svc
@@ -1542,7 +1551,7 @@ tdp-guide
 TeamRetro
 TechRepublic
 Tekton('s)?
-telco(s)*
+[Tt]elco(s)*
 telecom
 [Tt]emplat(ed|ing)
 Templeton
@@ -1563,8 +1572,7 @@ tiffanyfayj
 Tigera
 Tikka
 Tilt(file|Cloud)?
-[Tt]imebox
-timebox(ed)?
+[Tt]imebox(ed)?
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1616,6 +1624,7 @@ unencoded
 unencrypted
 unpause
 Unported
+unprioritized
 unpushed
 unregister
 unreleasable
