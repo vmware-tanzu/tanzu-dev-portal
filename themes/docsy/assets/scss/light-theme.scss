@@ -84,7 +84,10 @@ body p.link {
     color: #0E2B65 !important;
   }
 }
-
+.featured-section .featured-link:hover .link,
+.featured-section .featured-link:focus .link{
+  color: #0E2B65 !important;
+}
 #live-notify,
 body a.btn {
   color: white !important;
@@ -153,7 +156,7 @@ body.tv-episode #register .mktoForm select {
     }
   }
 }
-footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
+.mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
 
