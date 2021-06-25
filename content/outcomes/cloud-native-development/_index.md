@@ -7,22 +7,21 @@ team:
  - VMware Tanzu Labs
 ---
  
-## Why is this important?
+## Why is this learning path important?
 
-This learning path will provide you with foundational knowledge around modern, cloud-native software development with Spring and Cloud-Foundry. It has been conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. 
+This learning path provides the foundational knowledge around modern, cloud-native software development with Spring and Cloud-Foundry. It has been conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. 
 
 ## Who is this learning path for?
  
-This learning path is mainly for software engineers and other members of the technical development team involved in a Tanzu Labs engagement.
-
+This learning path is for software engineers and other members of the technical development team involved in a Tanzu Labs engagement.
 
 ## What you will learn
  
-Each section of this guide provides some context to the skills or technologies in question, with links throughout to specific and targeted info you will need. Each section is followed by a list of suggested homework and optional additional resources.
+Each section of this guide provides details about the skills or technologies in question, and includes links to specific and targeted information to assist you. Each section is followed by suggested homework assignments and additional resources.
 
-Going through the material of this learning path should not take more than 8 hours. However, the more time you put in, the more you will get out of the engagement.
+It should take about eight hours to complete the material in this learning path. However, the more time you put into the learnng path, the more you will get out of the engagement.
  
-The following topics are covered:
+This learning path includes the following topics:
  
 **General skills**
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
