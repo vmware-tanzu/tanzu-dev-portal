@@ -1173,12 +1173,12 @@ body.tv-episode {
 //Workshops
 .workshop-box {
   height: 400px;
-
   .workshop-hero {
     height: 170px;
     width: 100%;
   }
   .description {
+    transition: all .2s;
     background-color: $border;
     height: 230px;
   }
