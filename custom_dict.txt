@@ -273,6 +273,8 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNB-speak
+CNB(s)?
 CNC
 CNCF
 CNI
@@ -1310,6 +1312,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebasing
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1328,6 +1331,7 @@ RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
+reimagine
 Reinertsen
 reissuance
 removeAll
@@ -1663,6 +1667,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+vendored
 Venkat
 Venkateswara
 versioned
