@@ -17,6 +17,9 @@ title: 'Getting Started with Tekton Part 1: Hello World'
 topics:
 - CI-CD
 weight: 1
+oldPath: "/content/guides/ci-cd/tekton-gs-p1.md"
+aliases:
+- "/guides/ci-cd/tekton-gs-p1"
 ---
 
 [Tekton](https://github.com/tektoncd/pipeline) provides a set of open source Kubernetes resources to build and run [CI/CD](/guides/ci-cd/ci-cd-what-is/) pipelines, such as parameterized tasks, inputs and outputs, as well as runtime definitions. This guide will walk you through setting up Tekton on Minikube as well as setting up your first task.

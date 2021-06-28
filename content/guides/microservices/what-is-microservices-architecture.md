@@ -11,6 +11,9 @@ topics:
 - Microservices
 - Kubernetes
 weight: 1
+oldPath: "/content/guides/microservices/what-is-microservices-architecture.md"
+aliases:
+- "/guides/microservices/what-is-microservices-architecture"
 ---
 
 Microservices are a modern architectural pattern for building an application. A microservices architecture breaks up the functions of an application into a set of small, discrete, decentralized, goal-oriented processes, each of which can be independently developed, tested, deployed, replaced, and scaled.

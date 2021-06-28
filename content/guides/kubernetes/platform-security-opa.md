@@ -8,6 +8,9 @@ linkTitle: Developing OPA Policies
 parent: Platform Security
 title: Developing OPA Policies
 weight: 1600
+oldPath: "/content/guides/kubernetes/platform-security-opa.md"
+aliases:
+- "/guides/kubernetes/platform-security-opa"
 ---
 
 [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is a declarative

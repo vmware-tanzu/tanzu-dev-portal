@@ -12,6 +12,9 @@ team:
 title: Getting Started with kapp
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/kapp-gs.md"
+aliases:
+- "/guides/kubernetes/kapp-gs"
 ---
 
 [kapp](https://carvel.dev/kapp/) (part of the open source [Carvel](https://carvel.dev) suite) is a lightweight application-centric tool for deploying resources on Kubernetes. Being both explicit and application-centric it provides an easier way to deploy and view all resources created together regardless of what namespace they’re in. Being dependency-aware, it is able to wait for resources to be created, updated, or deleted, and provides a live status on the progress of the actions. Continue on to see how to get started with kapp.

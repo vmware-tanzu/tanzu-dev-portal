@@ -9,6 +9,9 @@ team:
 title: Application Readiness Checklist
 topics:
 - Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-checklist.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-checklist"
 ---
 
 This list is a starting place for considerations about your application running

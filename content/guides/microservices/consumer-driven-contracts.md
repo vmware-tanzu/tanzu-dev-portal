@@ -11,6 +11,9 @@ topics:
 - Spring
 - Microservices
 weight: 4
+oldPath: "/content/guides/microservices/consumer-driven-contracts.md"
+aliases:
+- "/guides/microservices/consumer-driven-contracts"
 ---
 
 There are multiple approaches to modernizing applications and defining APIs. This guide describes the consumer driven contracts approach. The guide [Understanding API-First Development](/guides/microservices/api-first-development/) describes an alternative approach. 

@@ -11,6 +11,9 @@ topics:
 - Containers
 - Microservices
 - CI-CD
+oldPath: "/content/guides/microservices/what-is-cloud-native.md"
+aliases:
+- "/guides/microservices/what-is-cloud-native"
 ---
 
 Cloud native is an approach to building and running applications that exploit the advantages of the cloud computing delivery model. Cloud native development—also increasingly referred to as modern application development—is appropriate for public, hybrid, and private clouds; it’s about how applications are created and deployed, not where.

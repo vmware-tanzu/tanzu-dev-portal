@@ -8,6 +8,9 @@ title: Application Enhancements
 topics:
 - Kubernetes
 weight: 12
+oldPath: "/content/guides/kubernetes/app-enhancements.md"
+aliases:
+- "/guides/kubernetes/app-enhancements"
 ---
 
 Kubernetes does not demand specifics about the applications that run on top of
