@@ -1,7 +1,8 @@
 ---
 date: 2021-06-28
 description: Dive into the pros and cons between Dockerfile and Buildpacks
-featured: false
+featured: true
+weight: 1
 lastmod: '2021-06-28'
 patterns:
 - Deployment
@@ -43,7 +44,7 @@ A [Cloud Native Computing Foundation (CNCF) project](https://www.cncf.io/blog/20
 
 You don’t need to create or maintain any scripts of your own. You simply choose an OSS or vendored “[builder](https://buildpacks.io/docs/concepts/components/builder)” that serves the function of a thorough and well-formed Dockerfile (without actually using a Dockerfile). The builder provides the runtime base image for your application as well as any logic for compiling your code and layering it onto the base image in a thoughtful manner.
 
-The builder itself is an image, too, but you cannot use the `docker` CLI to execute the builder and generate an image for your application. You need a specialized tool—a “platform,” in CNB-speak—that knows how to access the builder and orchestrate the creation of your application image. The platform that provides the most comparable user experience to the [`docker build`](https://docs.docker.com/engine/reference/commandline/build) command is a CLI called [`pack`](https://buildpacks.io/docs/tools/pack).
+The builder itself is an image, too, but you cannot use the `docker` CLI to execute the builder and generate an image for your application. You need a specialized tool—a “[platform](https://buildpacks.io/docs/concepts/components/platform),” in CNB-speak—that knows how to access the builder and orchestrate the creation of your application image. The platform that provides the most comparable user experience to the [`docker build`](https://docs.docker.com/engine/reference/commandline/build) command is a CLI called [`pack`](https://buildpacks.io/docs/tools/pack).
 
 You could create an image by running:
 
@@ -74,7 +75,7 @@ The CNB project provides the structure needed for creating and maintaining image
 
 The task of choosing and maintaining the base image (think the “FROM” statement in a Dockerfile) and the know-how for providing the contents of the rest of the layers (analogous to all the other instructions in a Dockerfile) are delegated to buildpacks. The CNB project provides a [Buildpack API](https://buildpacks.io/docs/reference/spec/buildpack-api) to foster an ecosystem of buildpacks. In our example above, we chose the open source [Paketo Buildpacks](https://paketo.io), which can handle applications written in Java, Ruby, Golang, .NET Core, and more. In each case, Paketo Buildpacks employ optimizations related to image size and layering; caching; and security; as well as standards and optimizations particular to a given programming language. One example of how buildpacks automatically do something few would reliably get right is the Paketo Java memory calculation.
 
-CNBs also provide choices around the user experience. As with buildpacks, a [Platform API](https://buildpacks.io/docs/reference/spec/platform-api) enables an ecosystem of tools that can be incorporated into your workflow. Need a CLI to mimic the `docker build` approach? Use `pack.` Want to recreate the “Build as a Service” experience of the prior generation of Heroku and Cloud Foundry buildpacks? Install [`kpack`](https://github.com/pivotal/kpack#readme) into your Kubernetes cluster and let it autonomously kick off builds whenever you commit new code to git or upgrade your builder image. 
+CNBs also provide choices around the user experience. As with buildpacks, a [Platform API](https://buildpacks.io/docs/reference/spec/platform-api) enables an ecosystem of tools that can be incorporated into your workflow. Need a CLI to mimic the `docker build` approach? Use `pack`. Want to recreate the “Build as a Service” experience of the prior generation of Heroku and Cloud Foundry buildpacks? Install [`kpack`](https://github.com/pivotal/kpack#readme) into your Kubernetes cluster and let it autonomously kick off builds whenever you commit new code to git or upgrade your builder image. 
 
 Suddenly, achieving consistent builds across your organization becomes trivial. As long as all apps are built using the same builder, you can guarantee they will be built in the same way. Since the builders are themselves images and are decoupled from platforms, CNBs inherently provide a way to distribute and reuse build logic across an organization.
 
@@ -88,7 +89,7 @@ Buildpacks require you to fit in a box. That box might be big enough for you not
 
 One one hand, your mileage will vary depending on how robustly the current ecosystem of buildpacks supports your use case. For example, if you are building Java applications, Paketo provides a set of battle-tested buildpacks that are not only likely to meet your needs, but to solve problems you might not have considered (exiting cleanly on an out-of-memory error, for example). On the other hand, if you are writing your applications in Lisp you might find yourself needing to write your own custom buildpacks, which requires significantly more work. The exact calculus for a given app will change over time as the buildpack ecosystem grows.
 
-What’s more, you may run into certain limitations with buildpacks. For example, currently you can't install an arbitrary OS package using `apt-get install.` While most applications can handle it, if you wanted to run, say, PostgreSQL and needed some package that doesn't exist on your runtime base image, you'd be out of luck. In such a case, you would be better off creating a one-off Dockerfile. To benefit from the automation at scale that buildpacks afford, you need to give up some flexibility. This tradeoff isn't novel, but it will be a deal breaker for some workloads.
+What’s more, you may run into certain limitations with buildpacks. For example, currently you can't install an arbitrary OS package using `apt-get install`. While most applications can handle it, if you wanted to run, say, PostgreSQL and needed some package that doesn't exist on your runtime base image, you'd be out of luck. In such a case, you would be better off creating a one-off Dockerfile. To benefit from the automation at scale that buildpacks afford, you need to give up some flexibility. This tradeoff isn't novel, but it will be a deal breaker for some workloads.
 
 ## Making The Call
 
