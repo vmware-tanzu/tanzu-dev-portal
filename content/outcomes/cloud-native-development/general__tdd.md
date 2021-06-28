@@ -40,3 +40,6 @@ The best way to learn about test-driven development is to do some of it! Pairing
 - Run through at least three requirements from the Greeting exercise.
 
 
+#### Additional resources
+
+- Review the [foundaments of Test Driven Development](/outcomes/application-development/test-driven-development/). 
