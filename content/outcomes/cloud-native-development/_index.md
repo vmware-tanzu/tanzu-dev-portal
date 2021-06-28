@@ -30,7 +30,7 @@ The following topics are covered:
 * [Development Tools](/outcomes/cloud-native-development/general__dev_env_tools/)
 * [Spring Ecosystem](/outcomes/cloud-native-development/general__spring_ecosystem/)
 * [Test Driven Development](/outcomes/cloud-native-development/general__tdd/)
-* [Using Cloud Foundry (PAS)](/outcomes/cloud-native-development/general__using_cloud_foundry/)
+* [Using Using Tanzu Application Service (TAS)](/outcomes/cloud-native-development/general__using_cloud_foundry/)
 * [Continuous Delivery](/outcomes/cloud-native-development/general__ci_cd/)
 
 **Specific skills**

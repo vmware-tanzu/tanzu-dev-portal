@@ -1,12 +1,12 @@
 ---
-title: Using Cloud Foundry
+title: Using Tanzu Application Service (TAS)
 weight: 50
 layout: single
 team:
  - VMware Tanzu Labs
 ---
 
-VMware [Tanzu Application Service](https://tanzu.vmware.com/application-service) (TAS), formerly Pivotal Cloud Foundry (PCF), is a modern application platform conceived to provide best in class developer experience. It is based on Cloud Foundry, which is an open-source cloud app platform, providing a choice of clouds, developer frameworks, and app services. 
+VMware [Tanzu Application Service](https://tanzu.vmware.com/application-service) (TAS), formerly Pivotal Cloud Foundry (PCF), is a modern application platform conceived to provide best in class developer experience. It is based on Cloud Foundry, which is an open-source cloud app platform, providing a choice of clouds, developer frameworks, and app services.
 
 While we will be spending most of our time working on software code, it is essential to know how to use the VMware Tanzu Application Service (TAS) platform to deploy applications. Even more so, it is imperative to understand how to work with your own TAS environment. Every TAS installation operates the same way, but there are many ways to interact with it, and your company may have its own process for getting an account, orgs, and spaces, and apps up and running.
 
