@@ -25,8 +25,7 @@ Going through the material of this learning path should not take more than 8 hou
  
 The following topics are covered:
 
- 
-**General skills**
+**Development ecosystem**
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
 * [Twelve-Factor Apps](/outcomes/cloud-native-development/general__twelve-factor-apps/)
 * [Development Tools](/outcomes/cloud-native-development/general__dev_env_tools/)
@@ -35,7 +34,7 @@ The following topics are covered:
 * [Using Using Tanzu Application Service (TAS)](/outcomes/cloud-native-development/general__using_cloud_foundry/)
 * [Continuous Delivery](/outcomes/cloud-native-development/general__ci_cd/)
 
-**Specific skills**
+**Cloud native factors**
 * [Logging](/outcomes/cloud-native-development/specific__logging/)
 * [Configuration](/outcomes/cloud-native-development/specific__configuration/)
 * [Caching](/outcomes/cloud-native-development/specific__caching/)
