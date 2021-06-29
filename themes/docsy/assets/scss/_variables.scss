@@ -29,6 +29,7 @@ $light: #adbbc4 !default;
 $link: #49afd9 !default;
 $border: #324f61 !default;
 $blockhover: #495a67 !default;
+$linkboxhover: #45667C !default;
 
 $dark: #1b2a32 !default;
 $blue: #49afd9 !default;
@@ -71,7 +72,7 @@ $colors: map-merge(
 
 $link-color: darken($blue, 15%) !default;
 $link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-color: #5ACFFF !default;
 $link-hover-decoration: none !default;
 
 // Fonts

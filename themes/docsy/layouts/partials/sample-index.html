@@ -29,8 +29,8 @@
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if eq .Parent $parent }}
-                <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
-                    <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
+                <div class="filter-item flex-315 mr-0 mr-lg-2 mb-2 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
+                    <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .RelPermalink }}">
                         <h4 class="link mt-3">{{- .Title -}}</h4>
                         <p class="fs-90">{{ .Description | markdownify }}</p>
                     </a>

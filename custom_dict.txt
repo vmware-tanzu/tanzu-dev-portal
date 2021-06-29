@@ -82,6 +82,7 @@ appender
 application-centric
 ApplicationEvent
 applicationPort
+Applitools
 AppSec
 AppServer
 Apress
@@ -274,6 +275,8 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNB-speak
+CNB(s)?
 CNC
 CNCF
 CNI
@@ -283,6 +286,8 @@ codebase
 CodeFresh
 CodeOne
 CoffeeOps
+cognisant
+Cohn
 colocated
 commonName(.)?
 [Cc]omms
@@ -297,6 +302,7 @@ ConfigurationProperties
 [Cc]onformant
 connectJmxConnectionHandler
 connectToMBeanServer
+Connor
 containerd
 containerPort
 Containous
@@ -755,6 +761,7 @@ IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
 IPM
+IPM(s)
 IPPool(s)?
 IPs.
 IPVS
@@ -773,7 +780,9 @@ Istio('s)?
 istioctl
 istiod(-1-7-3)?
 IstioOperator
+ISV(s)
 iteratively
+ITSM
 Ivanov
 IvanTarin2
 Izac
@@ -1011,6 +1020,7 @@ microservices-oriented
 Microsystems
 middleware
 Migros
+Mikusa
 Minella
 Mini-Wheats
 [Mm]inibroker
@@ -1027,6 +1037,7 @@ MiXiT
 Mkyong
 Mockito
 MockMvc
+[Mm]ockup(s)
 [Mm]odelling
 [Mm]odularity
 Momcilovic
@@ -1041,6 +1052,7 @@ MTT(D|R)
 MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
+[Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
 [Mm]ultiuser
@@ -1161,6 +1173,7 @@ P2P
 Pacak
 Packer
 PagerDuty
+Pairmate
 Paketo
 Palo
 Parabol
@@ -1169,6 +1182,7 @@ ParallelGatewaySenderQueueEntrySizer
 parallelize
 parallelizing
 [Pp]arameteriz(e|ation|ing)?
+Parrit
 PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
@@ -1242,6 +1256,7 @@ pre-encryption
 pre-engagement
 pre-exist(s|ing)?
 pre-installed
+Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
@@ -1265,6 +1280,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+ProductPlan
 Programadoras
 programmatically
 [Pp]rometheus
@@ -1310,6 +1326,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebasing
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1328,6 +1345,7 @@ RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
+reimagine
 Reinertsen
 reissuance
 removeAll
@@ -1371,6 +1389,7 @@ ROI
 [Rr]ollout
 rom-com
 rootPassword
+Rosecrance
 Rosso
 [Rr]outable
 Route53
@@ -1439,6 +1458,7 @@ ServiceEntry
 ServiceInfo(Creator)?
 ServiceMonitor
 serviceName=backend
+servicexen
 [Ss]ervlets?
 setValue(Template)?s
 severities
@@ -1512,6 +1532,7 @@ Stéphane
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
+strategizing
 Strategyzer
 StringBuilder
 struct
@@ -1527,6 +1548,7 @@ subpath
 Subramaniam
 subregistry
 substring
+Sudesh
 sudo
 superset
 svc
@@ -1544,12 +1566,13 @@ TAS
 TaskRepository
 Tatooine
 TBD
+tchotchke
 TCP
 tdp-guide
 TeamRetro
 TechRepublic
 Tekton('s)?
-telco(s)*
+[Tt]elco(s)*
 telecom
 [Tt]emplat(ed|ing)
 Templeton
@@ -1558,6 +1581,7 @@ Teppanyaki
 Terraform(-ing)?
 testability
 TestContainers
+testcontainers
 TGI(K)?
 tgz
 Thanos
@@ -1569,8 +1593,7 @@ tiffanyfayj
 Tigera
 Tikka
 Tilt(file|Cloud)?
-[Tt]imebox
-timebox(ed)?
+[Tt]imebox(ed)?
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1622,6 +1645,7 @@ unencoded
 unencrypted
 unpause
 Unported
+unprioritized
 unpushed
 unregister
 unreleasable
@@ -1647,6 +1671,7 @@ urandom
 url
 URL(s)?
 USD
+userDetails
 UX
 [Vv][123]
 Vaadin
@@ -1660,6 +1685,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+vendored
 Venkat
 Venkateswara
 versioned

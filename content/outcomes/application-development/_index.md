@@ -9,7 +9,7 @@ team:
  
 ## Why is this important?
  
-Software engineering techniques have never evolved at such a quick pace as they are today. New frameworks, practices, and technologies keep emerging, while bringing new concepts and increased complexity of software. As a result, it feels hard to keep up with change and to make the right choices for your end-to-end modern application lifecycle.
+Software engineering techniques have never evolved at such a rapid pace as they are today. New frameworks, practices, and technologies keep emerging, while bringing new concepts and increased complexity of software. As a result, it feels hard to keep up with change and to make the right choices for your end-to-end modern application lifecycle.
  
 Beyond technology, this learning path also teaches the fundamentals of the 30+ year old [VMware Tanzu Labs](https://tanzu.vmware.com/labs) methodology on developing modern applications, including how to:
  
@@ -27,15 +27,15 @@ Managers, designers, and other non-technical stakeholders may also find this lea
  
 You will learn everything needed to start as a newly onboarded team member. Each section in this learning path provides details on specific skills or technologies, and includes links to corresponding information. 
  
-The following topics are covered:
+We cover the following topics:
  
 * [Balanced Teams](/outcomes/application-development/balanced-teams/)
+* [Pair Programming](/outcomes/application-development/pair-programming/)
 * [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
+* [Test Driven Development](/outcomes/application-development/test-driven-development/)
 * [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
-* Pair Programming (coming soon)
-* Product Validation (coming soon)
-* Retrospectives (coming soon)
-* Test Driven Development (coming soon)
-* User Stories (coming soon)
+* Product Validation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/987))
+* Common Team Practices ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/993))
+* Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
  
-This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote lab engagement.
+This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement.

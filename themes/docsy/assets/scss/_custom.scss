@@ -184,15 +184,26 @@ img[src*="diagram"] {
   padding: 0;
   margin: 0;
 }
-
-
-.linked-box:hover .link,
-.linked-box:focus .link {
-  color: $link-hover-color;
+.featured-link:hover .link,
+.featured-link:focus .link{
+  color: $link-hover-color !important;
 }
-
+.linked-box .link {
+  color: $link;
+  -webkit-font-smoothing: auto;
+  transition: color .2s;
+}
+.linked-box:hover:not(.featured-link),
+.linked-box:focus:not(.featured-link) {
+  background-color: $linkboxhover;
+  .link {
+    color: $link-hover-color;
+  }
+  p {
+    color: white;
+  }
+}
 .bg-gray-dark p.link,
-.linked-box .link,
 .td-box--gray-850 p > a,
 .td-box--gray-darkest p > a,
 .td-box--dark p > a,
@@ -335,7 +346,7 @@ a {
 .btn-primary {
   box-shadow: none;
 }
-
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
 .btn {
   background: $link;
   text-transform: uppercase;
@@ -648,7 +659,6 @@ footer {
 .topic {
   a {
     border-radius: 0;
-    border: 1px solid $border;
     background: $gray-800;
     display: inline-block;
     font-weight: 400;
@@ -661,8 +671,9 @@ footer {
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     width: 100%;
     &:hover {
-      background: rgba(0, 0, 0, 0.1);
+      background: $linkboxhover;
       border-color: $border;
+      color: $link-hover-color;
     }
   }
   .h4 {
@@ -675,7 +686,6 @@ footer {
 
 .person {
   .card {
-    border: 1px solid $border;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -686,10 +696,16 @@ footer {
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     z-index: 1;
     cursor: pointer;
+    border: 0 !important;
     &:hover,
     &:focus {
-      background: rgba(0, 0, 0, 0.1);
-      border-color: $border;
+      background-color: $linkboxhover !important;  
+      .h4 a {
+        color: $link-hover-color !important;
+      }
+      p {
+        color: white !important;
+      }
     }
   }
   a.social {
@@ -1038,10 +1054,13 @@ body.tv-episode {
   position: fixed;
   z-index: 20;
   height: 40px;
-  top: 80px;
+  top: 54px;
   padding: 8px 0;
   color: white;
   background: #78be20;
+  @media(min-width: 992px) {
+    top: 80px;
+  }
 }
 
 #live-notify .btn {
@@ -1088,7 +1107,11 @@ body.tv-episode {
   font-size: 1.2rem;
   margin-bottom: 3rem;
 }
-
+.workshop-box:hover {
+  .description {
+    background-color: #45667b;
+  }
+}
 .col-4-thumbnail {
   padding: 0;
   background-color: $border;
@@ -1116,6 +1139,7 @@ body.tv-episode {
 }
 
 .flex-315 {
+  width: 100%;
   @media (min-width: 992px) {
     flex: 0 0 31.5%;
   }
@@ -1137,18 +1161,24 @@ body.tv-episode {
   padding: 20px 25px;
   transition: background-color 0.25s;
   font-size: 1.0625rem;
-  height: 150px;
+  height: 177px;
+  @media(min-width: 1600px) {
+    height: 150px;
+  }
+  @media(max-width: 991px) {
+    height: auto;
+  }
 }
 
 //Workshops
 .workshop-box {
   height: 400px;
-
   .workshop-hero {
     height: 170px;
     width: 100%;
   }
   .description {
+    transition: all .2s;
     background-color: $border;
     height: 230px;
   }
@@ -1253,10 +1283,6 @@ div.aside div.aside-content {
   background: #0f171c;
 }
 
-.td-term.td-topic .col-12 {
-  padding-left: 0px !important;
-  padding-right: 1rem;
-}
 
 /* SYNTAX HIGHLIGHTING */
 
@@ -1557,6 +1583,7 @@ code {
   a {
     border: 1px solid #485764 !important;
     border-radius: 4px;
+    flex-basis: 50%;
   }
   p.text-uppercase {
     font-size: 0.75rem;
