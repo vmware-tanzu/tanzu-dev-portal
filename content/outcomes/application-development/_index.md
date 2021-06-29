@@ -33,9 +33,9 @@ We cover the following topics:
 * [Pair Programming](/outcomes/application-development/pair-programming/)
 * [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
 * [Test Driven Development](/outcomes/application-development/test-driven-development/)
+* [Common Team Practices and Rhythm](outcomes/application-development/common-practices/)
 * [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
 * Product Validation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/987))
-* Common Team Practices ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/993))
 * Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
  
 This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement.

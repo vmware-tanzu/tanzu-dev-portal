@@ -1,6 +1,6 @@
 ---
 title: Cloud Native Development
-weight: 40
+weight: 50
 layout: single
 team:
   - VMware Tanzu Labs
