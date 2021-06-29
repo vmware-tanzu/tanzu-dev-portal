@@ -9,7 +9,9 @@ team:
  
 ## Why is this important?
 
-This learning path will provide you with foundational knowledge around modern, cloud-native software development with Spring and Cloud-Foundry. It has been conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. 
+This learning path will provide you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
+
+It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we found this learning path highly effective in building up your Spring Boot, cloud native, and TAS skills without any Tanzu Labs service engagement.
 
 ## Who is this learning path for?
  
