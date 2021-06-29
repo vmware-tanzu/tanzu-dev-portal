@@ -280,6 +280,7 @@ CNCF
 CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
+co-organiser
 codebase
 CodeFresh
 CodeOne

@@ -14,7 +14,7 @@ tags:
 team:
 - Tyler Britten
 - Ivan Tarin
-title: Getting Started with `kpack` to Automate Builds using Cloud Native Buildpacks
+title: Getting Started with kpack to Automate Builds using Cloud Native Buildpacks
 topics:
 - Containers
 weight: 3
