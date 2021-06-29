@@ -11,12 +11,11 @@ team:
 
 This learning path will provide you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
 
-It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we found this learning path highly effective in building up your Spring Boot, cloud native, and TAS skills without any Tanzu Labs service engagement.
+It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we also find this learning path highly effective without service engagement.
 
 ## Who is this learning path for?
  
-This learning path is mainly for software engineers and other members of the technical development team involved in a Tanzu Labs engagement.
-
+This learning path is for software engineers and architects interested in quickly ramping up their cloud native skills with Spring Boot.
 
 ## What you will learn
  
@@ -25,6 +24,7 @@ Each section of this guide provides some context to the skills or technologies i
 Going through the material of this learning path should not take more than 8 hours. However, the more time you put in, the more you will get out of the engagement.
  
 The following topics are covered:
+
  
 **General skills**
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
