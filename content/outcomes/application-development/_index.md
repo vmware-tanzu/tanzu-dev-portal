@@ -30,12 +30,12 @@ You will learn everything needed to start as a newly onboarded team member. Each
 We cover the following topics:
  
 * [Balanced Teams](/outcomes/application-development/balanced-teams/)
-* [Pair Programming](/outcomes/application-development/pair-programming/)
-* [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
-* [Test Driven Development](/outcomes/application-development/test-driven-development/)
 * [Common Team Practices and Rhythm](outcomes/application-development/common-practices/)
-* [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
 * Product Validation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/987))
 * Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
- 
+* [Pair Programming](/outcomes/application-development/pair-programming/)
+* [Test Driven Development](/outcomes/application-development/test-driven-development/)
+* [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
+* [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
+
 This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement.
