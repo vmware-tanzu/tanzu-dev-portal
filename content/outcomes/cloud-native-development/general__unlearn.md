@@ -17,7 +17,7 @@ In the course of our engagement, we will use domain-driven design (DDD) principl
 
 ## Design at the Last Responsible Moment
 
-Most companies are incredibly risk-averse, and any practice that guarantees that they will get it right the first time is worth the cost. The problem is that no practice ensures such a thing. Just on the opposite, we can guarantee you will learn something you had not considered or planned for before once your app is in production.
+Many companies are incredibly risk-averse and want to have everything right the first time. The problem is that no practice ensures such a thing. Just on the opposite, we can guarantee you will learn something you had not considered or planned for before once your app is in production.
 That said, no planning guarantees that everything will be a surprise. So instead, we will help you work in small iterations on thin slices of your app, getting them in front of users slice by slice. This provides us the feedback loops we need to know we are building the best thing for the company without months of up-front design work. We will show you how to balance design and architecture with moving quickly, evolving the architecture as we learn new things.
 
 ## No Superheroes
