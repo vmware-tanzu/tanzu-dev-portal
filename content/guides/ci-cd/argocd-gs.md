@@ -1,17 +1,23 @@
 ---
-title: "Getting Started with ArgoCD on Kubernetes"
-linkTitle: "ArgoCD"
+date: '2020-05-05'
+description: Deploy applications to Kubernetes with ArgoCD, a declarative GitOps tool
+  that is lightweight and easy to configure.
+lastmod: '2021-03-07'
+linkTitle: ArgoCD
 metaTitle: Using ArgoCD with Kubernetes-Native Continuous Delivery
-description: Deploy applications to Kubernetes with ArgoCD, a declarative GitOps tool that is lightweight and easy to configure.
-topics:
-  - CI-CD
-tags:
-  - CI-CD
-  - ArgoCD
 patterns:
-  - Deployment
+- Deployment
+tags:
+- CI-CD
+- ArgoCD
 team:
-  - Tony Vetter
+- Tony Vetter
+title: Getting Started with ArgoCD on Kubernetes
+topics:
+- CI-CD
+oldPath: "/content/guides/ci-cd/argocd-gs.md"
+aliases:
+- "/guides/ci-cd/argocd-gs"
 ---
 
 ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. While the continuous delivery (CD) space is seen by some as crowded these days, ArgoCD does bring some interesting capabilities to the table.

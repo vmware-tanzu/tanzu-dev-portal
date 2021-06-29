@@ -1,14 +1,19 @@
 ---
-title:  "Spring Cloud Connectors and Datasources"
-linkTitle: "Spring Cloud Connectors and Datasources"
-parent: "Spring Cloud Connectors"
+date: '2021-02-24'
+lastmod: '2021-02-24'
+linkTitle: Spring Cloud Connectors and Datasources
+parent: Spring Cloud Connectors
+patterns:
+- API
+tags:
+- Spring Cloud Connectors
+title: Spring Cloud Connectors and Datasources
 topics:
 - Spring
 - Messaging and Integration
-tags:
-- Spring Cloud Connectors
-patterns:
-- API
+oldPath: "/content/guides/spring/spring-cloud-connectors-datasources.md"
+aliases:
+- "/guides/spring/spring-cloud-connectors-datasources"
 ---
 
 [Spring Cloud Connectors](https://cloud.spring.io/spring-cloud-connectors/) simplifies the process of connecting Spring applications to services in cloud platforms. If you aren’t familiar with the project, you might want to refer to the guide [What Are Spring Cloud Connectors?](/guides/spring/spring-cloud-connectors).
@@ -147,4 +152,3 @@ public class CloudConfig {
 If you aren’t already familiar with Spring Cloud Connectors, you may want to refer to our [introductory guide](/guides/spring/spring-cloud-connectors) as well as the [Spring Cloud Connectors - Reference Documentation](http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html). a The [Spring Cloud Connectors page on Spring.io](https://cloud.spring.io/spring-cloud-connectors/) also includes a Quick Start tutorial that may be a useful starting point.
 
 If you aren’t familiar with the intricacies of Spring profiles or need a refresher, see the [Spring Profiles - Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html), this [One-Stop Guide](https://reflectoring.io/spring-boot-profiles/) and this [tutorial on the Baeldung site](https://www.baeldung.com/spring-profiles).
-

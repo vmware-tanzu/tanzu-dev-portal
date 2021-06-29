@@ -1,21 +1,22 @@
 ---
-title:  "Spring Boot REST API Demo"
-description: >
-    Building a REST API with Spring Boot
+date: '2020-05-06'
+description: Building a REST API with Spring Boot
+lastmod: '2020-05-19'
+patterns:
+- API
+readme: true
+repo: https://github.com/BrianMMcClain/spring-boot-api-demo
 summary:
 - Building a REST API with Spring Boot
-topics:
-- Spring
-- Microservices
 tags:
 - Spring
 - Microservices
 - Spring Boot
 - REST
-patterns:
-- API
 team:
 - Brian McClain
-repo: https://github.com/BrianMMcClain/spring-boot-api-demo
-readme: true
+title: Spring Boot REST API Demo
+topics:
+- Spring
+- Microservices
 ---

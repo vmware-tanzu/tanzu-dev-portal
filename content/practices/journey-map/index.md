@@ -1,28 +1,33 @@
 ---
-title: "Journey Map"
-tags: ["Discovery", "Framing"]
-length: "1 hour"
-participants: "Core team, subject matter experts"
-image: "journey-map/cover.png"
-description: "Using customer narratives and data, “map” what they are doing, thinking, feeling and interacting with over a set period of time."
-lastmod: "2019-09-25"
-
-
-why:
-- During Discovery, a journey map can help arrange individual data points into chronological order. During Framing, the team can return to a journey map to identify the point in the journey when a proposed solution will be used by a customer.
-
-when:
-- The best time to do a Journey Map is after a few rounds of user research, when synthesizing data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s vision of a Customer Journey, before starting User Research. During Framing, the map can be modified to match a “future” state where the proposed solution exists.
-
+date: '2021-02-09'
+description: Using customer narratives and data, “map” what they are doing, thinking,
+  feeling and interacting with over a set period of time.
+image: journey-map/cover.png
+lastmod: '2021-03-17'
+length: 1 hour
+participants: Core team, subject matter experts
+tags:
+- Discovery
+- Framing
+title: Journey Map
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
 - Small sticky dots
 - Persona(s)
-
+when:
+- The best time to do a Journey Map is after a few rounds of user research, when synthesizing
+  data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s
+  vision of a Customer Journey, before starting User Research. During Framing, the
+  map can be modified to match a “future” state where the proposed solution exists.
+why:
+- During Discovery, a journey map can help arrange individual data points into chronological
+  order. During Framing, the team can return to a journey map to identify the point
+  in the journey when a proposed solution will be used by a customer.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Identify which users journey the team is mapping. Leverage existing [Personas](/practices/personas) and if multiple choose the most important one to start

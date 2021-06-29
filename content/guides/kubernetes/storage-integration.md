@@ -1,9 +1,15 @@
 ---
-title: "Storage Integration"
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-04-29'
 team:
 - Josh Rosso
+title: Storage Integration
+topics:
+- Kubernetes
+weight: 72
+oldPath: "/content/guides/kubernetes/storage-integration.md"
+aliases:
+- "/guides/kubernetes/storage-integration"
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it

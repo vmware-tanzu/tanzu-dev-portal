@@ -1,12 +1,14 @@
 ---
-title: "KubeCon Europe 2021"
-description: VMware's Open Source projects as presented during KubeCon + CNC Europe 2021 
-date: "2021-04-30"
-# Author(s)
-team: 
+aliases:
+- /kubeconeurope2021
+date: '2021-04-30'
+description: VMware's Open Source projects as presented during KubeCon + CNC Europe
+  2021
+lastmod: '2021-04-30'
+team:
 - Tony Vetter
-type: "blog"
-aliases: ["/kubeconeurope2021"]
+title: KubeCon Europe 2021
+type: blog
 ---
 
 ## Greetings KubeCon + CNC Europe Attendees!

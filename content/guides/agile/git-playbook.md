@@ -1,12 +1,17 @@
 ---
-title: "Git Playbook"
-linkTitle: "Git Playbook"
-topics:
-- Agile
-tags:
-- Git
+date: '2021-02-24'
+lastmod: '2021-05-17'
+linkTitle: Git Playbook
 patterns:
 - Deployment
+tags:
+- Git
+title: Git Playbook
+topics:
+- Agile
+oldPath: "/content/guides/agile/git-playbook.md"
+aliases:
+- "/guides/agile/git-playbook"
 ---
 
 Git is a free and open source version control system that is widely used in the open source community, including well known git repositories such as GitHub and GitLab. If you are unfamiliar with Git, it’s worth taking a few moments to familiarize yourself with it.  A simple guide can be found at [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/).
@@ -311,4 +316,3 @@ git merge --abort
 If you’re just getting familiar with git and related tools, you may also want to check out the blog [How and Why to Write Commit Messages First](/blog/how-and-why-to-write-commit-messages-first/), and you’ll find more tips in this blog on [Git Switch and Restore](/blog/git-switch-and-restore-an-improved-user-experience/).
 
 To learn how to take the next steps when your code is ready, check out [From Code to Container](/blog/from-commit-to-container/).
-

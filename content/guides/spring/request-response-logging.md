@@ -1,16 +1,21 @@
 ---
-title: Request/Response Logging in a Spring Boot Application
+date: '2021-01-29'
+lastmod: '2021-02-24'
 linkTitle: Request/Response Logging
 parent: Spring Boot
-weight: 2
-topics:
-- Spring
+patterns:
+- Observability
 tags:
 - Logging
 - Spring Boot
 - Observability
-patterns:
-- Observability
+title: Request/Response Logging in a Spring Boot Application
+topics:
+- Spring
+weight: 2
+oldPath: "/content/guides/spring/request-response-logging.md"
+aliases:
+- "/guides/spring/request-response-logging"
 ---
 
 Logging is essential for monitoring and troubleshooting running applications. This guide explains how to utilize `logback` to collect full request/response payloads in a Spring Boot application. 
@@ -100,4 +105,4 @@ Two open-source tools that help with logging and visualization are Prometheus an
 * [Prometheus and Grafana: Gathering Metrics from Spring Boot on Kubernetes](/guides/spring/spring-prometheus/)
 * [Prometheus and Grafana: Gathering Metrics from Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/)
  
-Spring Boot also provides health checks for application monitoring in addition to logging. Learn how to [enable health checks using Spring Boot Actuator](/guides/spring/spring-boot-actuator). 
+Spring Boot also provides health checks for application monitoring in addition to logging. Learn how to [enable health checks using Spring Boot Actuator](/guides/spring/spring-boot-actuator).

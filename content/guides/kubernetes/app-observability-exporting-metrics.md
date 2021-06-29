@@ -1,12 +1,17 @@
 ---
-title:  "Exporting Application Metrics"
-parent: "Application Observability"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-16'
+parent: Application Observability
 tags:
 - Kubernetes
 team:
 - John Harris
+title: Exporting Application Metrics
+topics:
+- Kubernetes
+oldPath: "/content/guides/kubernetes/app-observability-exporting-metrics.md"
+aliases:
+- "/guides/kubernetes/app-observability-exporting-metrics"
 ---
 
 Exposing useful metrics is critical to understanding what is happening with your

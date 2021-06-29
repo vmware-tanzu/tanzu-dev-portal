@@ -1,18 +1,24 @@
 ---
-title:  "Getting Started with Kafka"
-linkTitle: "Kafka"
+date: '2020-05-06'
+description: Leverage Apache Kafka, a distributed streaming platform built for storing
+  and processing streams of records, while focusing on performance.
+lastmod: '2021-03-07'
+linkTitle: Kafka
+patterns:
+- Eventing
 subsection: Kafka
-description: Leverage Apache Kafka, a distributed streaming platform built for storing and processing streams of records, while focusing on performance.
-topics:
-- Event Streaming
-- Messaging and Integration
 tags:
 - Kafka
 - Event Streaming
-patterns:
-- Eventing
 team:
 - Brian McClain
+title: Getting Started with Kafka
+topics:
+- Event Streaming
+- Messaging and Integration
+oldPath: "/content/guides/messaging-and-integration/kafka-gs.md"
+aliases:
+- "/guides/messaging-and-integration/kafka-gs"
 ---
 
 ## What Is Kafka?

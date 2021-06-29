@@ -1,17 +1,22 @@
 ---
-title:  "How to use Harbor Registry to Eliminate Docker Hub Rate Limits"
-linkTitle: "Eliminate Docker Hub Rate Limits"
+date: '2021-01-22'
+lastmod: '2021-02-25'
+linkTitle: Eliminate Docker Hub Rate Limits
 parent: Harbor
-weight: 2
-topics:
-- Kubernetes
+patterns:
+- Deployment
 tags:
 - Kubernetes
 - Containers
-patterns:
-- Deployment
 team:
 - Paul Czarkowski
+title: How to use Harbor Registry to Eliminate Docker Hub Rate Limits
+topics:
+- Kubernetes
+weight: 2
+oldPath: "/content/guides/kubernetes/harbor-as-docker-proxy.md"
+aliases:
+- "/guides/kubernetes/harbor-as-docker-proxy"
 ---
 
 {{< youtube id="KSH2Hzk-E7U" class="youtube-video-shortcode" >}}

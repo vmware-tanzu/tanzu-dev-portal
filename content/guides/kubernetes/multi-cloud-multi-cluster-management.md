@@ -1,11 +1,16 @@
 ---
-title:  "Challenges Managing Multiple Clusters Across Multiple Clouds"
-linkTitle: "Multi-Cluster Management"
-weight: 
+date: '2021-02-26'
+lastmod: '2021-02-26'
+linkTitle: Multi-Cluster Management
+tags:
+- Cluster API
+title: Challenges Managing Multiple Clusters Across Multiple Clouds
 topics:
 - Kubernetes
-tags:
-- Cluster API 
+weight: 47
+oldPath: "/content/guides/kubernetes/multi-cloud-multi-cluster-management.md"
+aliases:
+- "/guides/kubernetes/multi-cloud-multi-cluster-management"
 ---
 
 While Kubernetes provides a rich and capable environment for modern applications, it introduces a lot of moving parts and day 2 operating issues. How do you create and enforce security policy in a highly fluid environment? How do you make sure that your identity and access control systems are configured? How do you make certain that everything stays properly configured?
@@ -31,8 +36,3 @@ VMware is investing heavily in the Cluster API effort, including baking a superv
 If you want to learn more about Cluster API or get started using it, [The Cluster API Book](https://cluster-api.sigs.k8s.io/) provides a deep dive that will help you get started. 
 
 Two recent Tanzu blogs, [Cluster API is a Big Deal](https://tanzu.vmware.com/content/blog/cluster-api-is-a-big-deal-joe-beda-craig-mcluckie-tell-you-why) and [Cluster API Provider for Azure](https://tanzu.vmware.com/content/blog/cluster-api-provider-for-azure-is-another-giant-leap-for-the-community) provide more context to help you understand what’s happening in multi-cloud, multi-cluster management.
-
-
-
-
-

@@ -1,18 +1,23 @@
 ---
-title:  "Monitoring Containers at Scale with Wavefront"
+date: '2021-02-26'
+lastmod: '2021-02-26'
 linkTitle: Monitor at Scale with Wavefront
 parent: Platform Observability
-weight: 3 
-topics:
-- Kubernetes
-- Containers
-- Microservices
+patterns:
+- Observability
 tags:
 - Kubernetes
 - Observability
 - Wavefront
-patterns:
-- Observability
+title: Monitoring Containers at Scale with Wavefront
+topics:
+- Kubernetes
+- Containers
+- Microservices
+weight: 3
+oldPath: "/content/guides/kubernetes/monitoring-at-scale-wavefront.md"
+aliases:
+- "/guides/kubernetes/monitoring-at-scale-wavefront"
 ---
 
 [Tanzu Observability by Wavefront](https://tanzu.vmware.com/observability) efficiently monitors cloud native operations at scale. It is a high-performance streaming analytics platform that supports 3D observability (metrics, histograms, traces/spans) and can scale to very high data ingestion rates and query loads. You can collect data from many services and sources across your entire application stack, and can look at details for earlier data collected by Wavefront.
@@ -36,11 +41,3 @@ Wavefront can also help you evaluate and tune the performance of microservices r
 Wavefront helps monitor and manage container deployments. It offers so much functionality that it’s often best to begin by investigating specific areas you are interested in. The video [Introduction to Wavefront](https://tanzu.vmware.com/content/vmware-tanzu-observability-by-wavefront-videos/introduction-to-wavefront) explains more about where and how Wavefront is being used. Watch [Wavefront and Kubernetes](https://tanzu.vmware.com/content/vmware-tanzu-observability-by-wavefront-videos/wavefront-and-kubernetes) to understand Kubernetes specifics. You can check out the [complete library of Wavefront videos](https://tanzu.vmware.com/content/vmware-tanzu-observability-by-wavefront-videos) to find topics of interest. [The Wavefront docs](https://docs.wavefront.com/index.html) also provide an exceptionally thorough introduction to the solution, with in-depth sections on Kubernetes, dashboards, alerts, tracing and more, including lots of video content for visual learners.
 
 If you are a Spring Boot developer [Wavefront for Spring Boot: Getting Started](/guides/spring/spring-wavefront-gs/) is a great starting point and explains how to take advantage of our free tier offer.
-
-
-
-
-
-
-
-

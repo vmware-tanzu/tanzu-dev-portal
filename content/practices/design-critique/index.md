@@ -1,28 +1,32 @@
 ---
-title: "Design Critique"
-tags: ["Discovery", "Framing"]
-length: "30 min - 1 hour"
-participants: "Core team, stakeholders, other designers"
-image: "default-cover.png"
-description: "Provide valuable design feedback to a project team so they can determine if further effort is needed"
-lastmod: "2019-02-22"
-
-why:
-- It provides valuable design feedback to help the project team refine their solution. It helps the team find consensus when deciding what actions to take next. And it holds the whole team accountable for making design decisions.
-
-when:
-- Integrate design critiques into your workflow by having them regularly or whenever there is a need for feedback from the team. They are most helpful after a design artifact is created or iterated upon.
-
-what:
 Facilitator brings:
 - Sharpies
 - Tape
 - Sticky notes
-
 Project team brings:
 - Design artifacts to be critiqued
-
+date: '2021-02-09'
+description: Provide valuable design feedback to a project team so they can determine
+  if further effort is needed
+image: default-cover.png
+lastmod: '2021-03-04'
+length: 30 min - 1 hour
+participants: Core team, stakeholders, other designers
+tags:
+- Discovery
+- Framing
+title: Design Critique
+what: null
+when:
+- Integrate design critiques into your workflow by having them regularly or whenever
+  there is a need for feedback from the team. They are most helpful after a design
+  artifact is created or iterated upon.
+why:
+- It provides valuable design feedback to help the project team refine their solution.
+  It helps the team find consensus when deciding what actions to take next. And it
+  holds the whole team accountable for making design decisions.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. While the project team hangs up printouts of the design artifacts being critiqued, remind everyone that their job today is to help the project team find the challenges with their design, not the solutions, using language that is specific and kind.
