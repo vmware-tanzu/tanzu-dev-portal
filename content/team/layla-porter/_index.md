@@ -3,7 +3,7 @@ name: Layla Porter
 description: "Developer Advocate"
 photo: "/images/team/advocates/layla.png"
 roles: ["advocate"]
-skills: [".NET", "Microservices"]
+skills: [".NET", "Microservices", "Solution Architecture", "TDD"]
 location: "Milton Keynes, UK"
 weight: 1
 
