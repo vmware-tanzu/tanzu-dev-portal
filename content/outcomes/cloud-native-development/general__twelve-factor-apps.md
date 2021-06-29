@@ -6,9 +6,9 @@ team:
  - VMware Tanzu Labs
 ---
 
-Cloud native app development has centered around the twelve factors described initially by the team behind the Heroku platform. The website [https://12factor.net](https://12factor.net/) provides a great bootstrapped understanding of how a cloud native application deals with aspects like logging, application state, and integration with external systems.
+Cloud native app development has centered around the twelve factors described initially by the team behind the Heroku platform. The website [https://12factor.net](https://12factor.net/) provides a great understanding of how a cloud native application deals with aspects like logging, application state, and integration with external systems.
 
-Sometimes it’s enough to refactor and update an existing legacy application with only a handful of these factors to get it running on a cloud platform like VMware Tanzu Application Service (TAS), gaining the operational benefits of the platform without the large investment of a far-reach modernization effort.
+Sometimes it is enough to refactor and update an existing legacy application with only a handful of these factors to get it running on a cloud platform like VMware Tanzu Application Service (TAS), gaining the operational benefits of the platform without the large investment of a far-reaching modernization effort. 
 
 Pay specific attention to these factors:
 * [externalizing config](https://12factor.net/config)
