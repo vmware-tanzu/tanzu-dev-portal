@@ -1,5 +1,5 @@
 ---
-title: Common Practices and Rhythm
+title: Team Rhythm
 weight: 20
 layout: single
 team:
@@ -31,22 +31,29 @@ These gatherings do not have to only be about work. Office, department, and othe
 
 We commonly see daily stand-up meetings having four categories: new faces, help requests, interesting things, and events. 
 
-Your role **Team Member*- when the stand-up moderator announces each topic:
+Your role as a **Participant** when the stand-up moderator announces each topic:
 
-- Announce new teammates or guests..
-- Ask for help if you need it.
+- Announce new teammates or guests.
+- Ask for help if you or your team need it.
 - Share interesting or notable things you’ve learned that could help other teams.
 - Announce and/or volunteer to participate in events.
 
 ### Project Stand-up
 
-The purpose of the Project Stand-up is to check in on everyone’s progress, plan, and blockers.
+The main purpose of the project stand-up is to check in on everyone’s progress, plan, and blockers. Another subtle but powerful purpose is to align everyone's schedules, almost like synchronizing everyone's clock.
 
-Your role **Team Member**:
+Some teams prefer to have everyone (or each pair) report on what they did the previous day. Other teams omit the status report and adopt a format similar to the [office, department, or cross-team stand-up](#office-department-or-cross-team-stand-up), choosing to discuss blockers and other topics impactful to the project. Experiment with both formats.    
 
+{{% callout %}}
+Tip: Each week, have a different team member volunteer to facilitate the daily project stand-up. This reduces facilitation fatigue.
+{{% /callout %}}
+
+Your role as a **Team Member**:
+
+- Report on the previous workday's progress as needed.
+- Report any interesting or project-impacting topics.
 - Understand blockers and their implications on the current priorities.
-- Remind everyone of action items and upcoming milestones.
-- Make sure team members take turns facilitating stand-up.
+- Remind everyone of outstanding team action items and upcoming milestones.
 
 ## List the weekly meetings and describe your role in each one
 
