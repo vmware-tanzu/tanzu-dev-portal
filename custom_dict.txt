@@ -273,16 +273,20 @@ ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
 CNAME
+CNB-speak
+CNB(s)?
 CNC
 CNCF
 CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
+co-organiser
 codebase
 CodeFresh
 CodeOne
 CoffeeOps
 cognisant
+Cohn
 colocated
 commonName(.)?
 [Cc]omms
@@ -752,6 +756,7 @@ IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
 IPM
+IPM(s)
 IPPool(s)?
 IPs.
 IPVS
@@ -1025,6 +1030,7 @@ MiXiT
 Mkyong
 Mockito
 MockMvc
+[Mm]ockup(s)
 [Mm]odelling
 [Mm]odularity
 Momcilovic
@@ -1238,6 +1244,7 @@ pre-defined
 pre-encryption
 pre-exist(s|ing)?
 pre-installed
+Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
@@ -1306,6 +1313,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebasing
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1324,6 +1332,7 @@ RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
+reimagine
 Reinertsen
 reissuance
 removeAll
@@ -1568,8 +1577,7 @@ tiffanyfayj
 Tigera
 Tikka
 Tilt(file|Cloud)?
-[Tt]imebox
-timebox(ed)?
+[Tt]imebox(ed)?
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1621,6 +1629,7 @@ unencoded
 unencrypted
 unpause
 Unported
+unprioritized
 unpushed
 unregister
 unreleasable
@@ -1659,6 +1668,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+vendored
 Venkat
 Venkateswara
 versioned
