@@ -8,9 +8,14 @@ team:
 
 Automate everything. Any time we have manual processes or required intervention, we have friction in the machinery that allows us to release fast at a moment’s notice. There are many tools to support continuous build, integration, and delivery of software, and your company may already have selected the tool we will use. This is usually the [Jenkins](https://www.jenkins.io/) or [Concourse CI](https://concourse-ci.org/) platforms but can include [Atlassian Bamboo](https://www.atlassian.com/software/bamboo), or cloud build provides such as [CircleCI](https://circleci.com/), [TravisCI](https://travis-ci.org/), or [Oracle Container Pipelines](https://docs.oracle.com/en/cloud/iaas-classic/wercker-cloud/index.html).
 
-While we can work with many of these tools, Concourse provides one of the purest abstractions of declarative pipelines and is our preferred tool when there isn’t already a solution in place. It is beneficial to run through the [Concourse tutorial](https://concoursetutorial.com/) provided by Stark & Wayne to get an idea of the core tenets of building with pipelines checked into your source control along with your application. Even if we end up building your applications on Jenkins or another application, we will use Concourse’s concepts to talk through the various challenges and solutions to continuous software delivery.
+While we can work with many of these tools, Concourse provides one of the purest abstractions of declarative pipelines and is our preferred tool when there is not already a solution in place. It is beneficial to run through the [Concourse tutorial](https://concoursetutorial.com/) provided by Stark & Wayne to get an idea of the core tenets of building with pipelines checked into your source control along with your application. Even if we end up building your applications on Jenkins or another application, we will use Concourse’s concepts to talk through the various challenges and solutions to continuous software delivery.
 
 
 #### Homework
 
 - Run through the [Concourse Tutorial](https://concoursetutorial.com/).
+
+
+#### Additional resources
+
+- Review the [Introduction of Secure Software Supply Chains](/outcomes/secure-software-supply-chain/what-is-ci-cd/).
