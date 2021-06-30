@@ -42,7 +42,7 @@ Your role as a **Participant** when the stand-up moderator announces each topic:
 
 The main purpose of the project stand-up is to check in on everyone’s progress, plan, and blockers. Another subtle but powerful purpose is to align everyone's schedules, almost like synchronizing everyone's clock.
 
-Some teams prefer to have everyone (or each pair) report on what they did the previous day. Other teams omit the status report and adopt a format similar to the [office, department, or cross-team stand-up](#office-department-or-cross-team-stand-up), choosing to discuss blockers and other topics impactful to the project. Experiment with both formats.    
+Some teams prefer to have everyone (or each pair) report on what they did the previous day. Other teams omit the status report and adopt a format similar to the [office, department, or cross-team stand-up](#office-department-or-cross-team-stand-up), choosing to discuss blockers and other topics impacting the project. Experiment with both formats.    
 
 {{% callout %}}
 Tip: Each week, have a different team member volunteer to facilitate the daily project stand-up. This reduces facilitation fatigue.

@@ -30,7 +30,7 @@ You will learn everything needed to start as a newly onboarded team member. Each
 We cover the following topics:
  
 * [Balanced Teams](/outcomes/application-development/balanced-teams/)
-* [Common Team Practices and Rhythm](outcomes/application-development/common-practices/)
+* [Team Rhythm](outcomes/application-development/team-rhythm/)
 * Product Validation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/987))
 * Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
 * [Pair Programming](/outcomes/application-development/pair-programming/)
