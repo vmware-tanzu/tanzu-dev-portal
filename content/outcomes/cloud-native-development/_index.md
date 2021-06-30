@@ -9,11 +9,21 @@ team:
  
 ## Why is this learning path important?
 
+<<<<<<< HEAD
 This learning path provides the foundational knowledge around modern, cloud-native software development with Spring and Cloud-Foundry. It has been conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. 
 
 ## Who is this learning path for?
  
 This learning path is for software engineers and other members of the technical development team involved in a Tanzu Labs engagement.
+=======
+This learning path will provide you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
+
+It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we also find this learning path highly effective without service engagement.
+
+## Who is this learning path for?
+ 
+This learning path is for software engineers and architects interested in quickly ramping up their cloud native skills with Spring Boot.
+>>>>>>> 244d986b9dee0e461cd063af7babd7b86e487dff
 
 ## What you will learn
  
@@ -21,9 +31,15 @@ Each section of this guide provides details about the skills or technologies in 
 
 It should take about eight hours to complete the material in this learning path. However, the more time you put into the learnng path, the more you will get out of the engagement.
  
+<<<<<<< HEAD
 This learning path includes the following topics:
  
 **General skills**
+=======
+The following topics are covered:
+
+**Development ecosystem**
+>>>>>>> 244d986b9dee0e461cd063af7babd7b86e487dff
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
 * [Twelve-Factor Apps](/outcomes/cloud-native-development/general__twelve-factor-apps/)
 * [Development Tools](/outcomes/cloud-native-development/general__dev_env_tools/)
@@ -32,7 +48,7 @@ This learning path includes the following topics:
 * [Using Using Tanzu Application Service (TAS)](/outcomes/cloud-native-development/general__using_cloud_foundry/)
 * [Continuous Delivery](/outcomes/cloud-native-development/general__ci_cd/)
 
-**Specific skills**
+**Cloud native factors**
 * [Logging](/outcomes/cloud-native-development/specific__logging/)
 * [Configuration](/outcomes/cloud-native-development/specific__configuration/)
 * [Caching](/outcomes/cloud-native-development/specific__caching/)
