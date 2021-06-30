@@ -21,7 +21,7 @@ This learning path is for software engineers and architects interested in quickl
  
 Each section of this guide provides some context to the skills or technologies in question, with links throughout to specific and targeted info you will need. Each section is followed by a list of suggested homework and optional additional resources.
 
-Going through the material of this learning path should not take more than 8 hours. However, the more time you put in, the more you will get out of the engagement.
+Going through the material of this learning path should not take more than 8 hours. The more time you spend, for example by studying deeper the provided additional resources, the more you will get out of this learning path.
  
 The following topics are covered:
 
