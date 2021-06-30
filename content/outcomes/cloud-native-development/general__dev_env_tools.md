@@ -21,4 +21,3 @@ As software engineers, we work with the tools of our trade the whole time. Still
 - If you are using Apache Maven for the build process, familiarize yourself with the [Baeldung tutorial](https://www.baeldung.com/maven) and [Maven in 5 Minutes guide](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 - If you are using Gradle for the build process, run through the [Gradle guides](https://gradle.org/guides).
 - If you develop in the IntelliJ IDE, install the [learn plugin](https://plugins.jetbrains.com/plugin/8554-ide-features-trainer) and run through the interactive tutorials within the application.
-

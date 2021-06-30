@@ -6,7 +6,7 @@
          {{ range $pages }}
             {{ if  and (in .Params.roles "advocate") (not .Params.hidden) }}
              <div class="item mb-4" >
-                 <div class='border px-4 py-5 bg-gray-dark '> 
+                 <div class='px-4 py-5 bg-gray-dark '> 
 	                {{ partial "team-member.html" (dict "context" . "display" "summary") }}
                  </div>
              </div>

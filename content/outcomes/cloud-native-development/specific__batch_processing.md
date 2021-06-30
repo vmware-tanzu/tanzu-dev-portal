@@ -6,7 +6,7 @@ team:
  - VMware Tanzu Labs
 ---
 
-There are numerous ways to schedule and run batch jobs with Spring.
+The Java ecosystem provides a variety of libraries and standards helping you to define and launch batch processes: [Java EE batch processing](https://www.baeldung.com/java-ee-7-batch-processing), [Quartz Job Scheduler](http://www.quartz-scheduler.org/), [Cron Utils](https://github.com/jmrozanec/cron-utils), [Easy Batch](https://github.com/j-easy/easy-batch) ... Alone using Spring, there are numerous lightweight ways to schedule and run batch jobs. 
 
 For simple, scheduled activity tightly coupled to the app itself, [Spring Scheduler](https://spring.io/guides/gs/scheduling-tasks/) provides the simplest solution to set up a method for performing periodic work.
 

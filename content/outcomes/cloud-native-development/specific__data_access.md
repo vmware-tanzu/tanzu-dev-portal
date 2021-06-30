@@ -6,7 +6,7 @@ team:
  - VMware Tanzu Labs
 ---
 
-Your app may use manually-configured JDBC drivers, ORM solutions like JPA, Hibernate, or MyBatis, or JNDI to lookup database connections provided by containing web server. For all of these, we will look into migrating connections to a Spring `DataSource` to improve integration with the Spring and Spring Boot ecosystems. 
+Your app may use manually-configured JDBC drivers, ORM solutions like [JPA](https://en.wikipedia.org/wiki/Jakarta_Persistence), [Hibernate](http://hibernate.org/orm/), [MyBatis](https://mybatis.org/mybatis-3/), [EclipseLink](https://www.eclipse.org/eclipselink/), or [JNDI](https://en.wikipedia.org/wiki/Java_Naming_and_Directory_Interface) to lookup database connections provided by containing web server. For all of these, we will look into migrating connections to a Spring `DataSource` to improve integration with the Spring and Spring Boot ecosystems. 
 
 Read through the section on [configuring Spring Boot data sources](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-access.configure-custom-datasource) to see how you can configure them with YAML or Java configuration beans.
 
