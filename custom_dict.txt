@@ -334,7 +334,7 @@ CredHub
 crf
 critiquers
 CRM
-cron
+[Cc]ron
 cross-subnet
 CrossSubnet
 Crowdsourced?
@@ -543,6 +543,7 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+foundaments
 Foxwell
 FP
 FQDN
@@ -1500,6 +1501,7 @@ SPEL
 SPIFFE
 Splunk
 Spock
+spoilt
 spring-petclinic
 springboot
 SpringBootTest
@@ -1672,6 +1674,7 @@ url
 URL(s)?
 USD
 userDetails
+Utils
 UX
 [Vv][123]
 Vaadin
