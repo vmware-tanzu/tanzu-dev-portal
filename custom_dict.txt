@@ -533,6 +533,7 @@ Finchley
 FinTech
 FIPS(-enabled|-approved)?
 firewalling
+Fiscus
 Flake8
 Florea
 Florent
@@ -993,6 +994,7 @@ MBeanServer
 McGraw-Hill
 McLuckie
 MDN
+[Mm]entorship
 MeshAdmin
 Mesos
 messageQueueSize
@@ -1050,6 +1052,7 @@ Multipass
 [Mm]ultiuser
 Mutating(Admission)?Webhook
 mutators
+[Mm]utli-Cloud
 Muzz
 MVB(-awarded)?
 MVC
