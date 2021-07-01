@@ -47,7 +47,6 @@ c.each do |row|
         contentMetadata["level2"] = level2
 
         if not options[:dry]
-
             # Most frontmatter should start with "---", meaning we split on the second occurance.
             # However we should double check to make sure
             splitFirst = false
@@ -55,29 +54,22 @@ c.each do |row|
                 splitFirst = true
             end
 
+            # Gather the frontmatter and content to write 
             sContent = fData.split("---")
             frontMatter, articleContent = ""
-
             frontMatter = YAML.dump(contentMetadata)
-
             if splitFirst
                 articleContent = sContent[1..]
             else
                 articleContent = sContent[2..].join("---")
             end
 
-            if not options[:dry]
-                outFile = contentPath
-                puts "Writing to #{outFile} . . ."
-                File.open(outFile, "w") { |f|
-                    f.write "#{frontMatter}---#{articleContent}"
-                }
-            end
-
-
-
-
-           
+            # Write the changes to the file
+            outFile = contentPath
+            puts "Writing to #{outFile} . . ."
+            File.open(outFile, "w") { |f|
+                f.write "#{frontMatter}---#{articleContent}"
+            }
         else
             # Dry run
             #puts "#{path} -> #{level1} // #{level2}"
