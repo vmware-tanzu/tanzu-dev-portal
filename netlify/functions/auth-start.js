@@ -1,5 +1,6 @@
 const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
+const jwt = require('jsonwebtoken');
 
 const {
     getDiscoveryUrl,
@@ -19,12 +20,15 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+    console.log("In auth-start");
+    //console.log(event);
     let path = '';
+    console.log("Auth Start event.path = " + event.path);
     if (event.path === '/.netlify/functions/auth-start') {
         path = 'developer/';
     } else {
-        //path = event.path;
-        path = "/.netlify/functions/auth-start";
+        path = event.path;
+        console.log("event.path = " + path);
     }
     // store a random string in a cookie that we can verify in the callback
     const csrf = randomToken();
@@ -38,7 +42,27 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     if (config.context === "production" || config.context === "deploy-preview")
         cookieParams.domain = getSiteURL().replace('https://', '');
     const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
-    
+
+    // Set a JWT token
+    // const jwtData = {
+    //     exp: Date.now() * 1000  - 86400,
+    //     iat: Date.now() * 1000,
+    // };
+    // const netlifyJwt = jwt.sign(jwtData, process.env.JWT_SIGNING_SECRET, {
+    //     algorithm: 'HS256',
+    // });
+    // const jwtCookieParams = {
+    //     secure: true,
+    //     httpOnly: false,
+    //     path: '/',
+    //     maxAge: 600,
+    // }
+    // if (config.context === "production" || config.context === "deploy-preview") {
+    //     jwtCookieParams.domain = getSiteURL().replace('https://', '');
+    // }
+    // const jwtCookie = cookie.serialize("nf_jwt", netlifyJwt, jwtCookieParams);
+
+
     // redirect the user to the CSP discovery endpoint for authentication
     const params = {
         response_type: 'code',
@@ -53,7 +77,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         headers: {
             Location: getDiscoveryUrl(params),
             'Cache-Control': 'no-cache',
-            'Set-Cookie': c,
+            'Set-Cookie': c
         },
         body: '',
     };

@@ -17,6 +17,7 @@
 
 [dev]
   command = "make local"
+  publish = "public"
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"

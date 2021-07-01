@@ -27,6 +27,8 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+    console.log("In auth-callback");
+    //console.log(event);
     // we should only get here via a reidrect from CSP, which would have
     // an authorization code in the query string. if that's not present,
     // then someone didn't follow the correct flow - bail early
@@ -122,9 +124,12 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
         // redirect the user to where they were originally trying to get
         // with the cookie so that Netlify lets them in
-        const redirect = parsed.path.includes('get-workshop')
-            ? `${getSiteURL()}${parsed.path}?src=${parsed.referer}`
-            : `${getSiteURL()}${parsed.path || ''}`;
+        var redirectPath = parsed.path === '/.netlify/non-existent-path' ? '/.netlify/functions/get-workshop/' : parsed.path;
+        console.log("redirectPath = " + redirectPath);
+        console.log("JWT TOKEN BEFORE REDIRECT = " + JSON.stringify(jwtToken, undefined, 2));
+        const redirect = redirectPath.includes('get-workshop')
+            ? `${getSiteURL()}${redirectPath}?src=${parsed.referer}`
+            : `${getSiteURL()}${redirectPath || ''}`;
 
         var redirectBody = redirectTemplate.replace("REDIRECT_URL", redirect)
         

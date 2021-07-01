@@ -27,6 +27,7 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+  console.log("In workshop-status");
   if (event.httpMethod !== 'POST') {
     console.error('Not a POST');
     return {
