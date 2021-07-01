@@ -653,7 +653,7 @@ goReflect
 Görkem
 gotchas
 Gothelf
-GraalVM(-powered)?
+GraalVM(-powered|.)?
 Gradle
 gradle
 gradlew
@@ -1114,6 +1114,7 @@ Oded
 OIDC
 ok
 OKR(s)?
+Okta
 old-checkout-desc
 Oleh
 olehdokuka
