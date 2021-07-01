@@ -12,7 +12,7 @@ tags:
 - Buildpacks
 team:
 - Bryan Friedman
-title: Getting Started with the `pack` CLI using Cloud Native Buildpacks
+title: Getting Started with the pack CLI using Cloud Native Buildpacks
 topics:
 - Containers
 weight: 2
