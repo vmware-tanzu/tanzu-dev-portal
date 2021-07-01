@@ -22,7 +22,7 @@ nav {
   .nav-select {
     background-color: white;
     height: 70%;
-    width: 26%;
+    width: 41%;
     position: absolute;
     border-radius: 5px;
     top: 5px;
@@ -34,10 +34,6 @@ nav {
     &:nth-child(2) {
       left: 35px;
       background-color: #1B2A32 !important;
-      display: none;
-    }
-    &:nth-child(3) {
-      left: 65px;
       display: none;
     }
   }
@@ -448,8 +444,7 @@ footer {
 }
 
 #toggle-dark-mode,
-#toggle-light-mode,
-#toggle-pride-mode {
+#toggle-light-mode {
   background: none !important;
   border-radius: 50px;
   display: inline-block;
@@ -1626,7 +1621,4 @@ code {
 }
 .feedback i {
   font-size: 1.4rem;
-}
-.pride-mode-only {
-  display: none !important;
 }
