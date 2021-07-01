@@ -10,7 +10,7 @@ Many teams today have chosen to follow an Agile approach to software development
 
 One reason is that while these teams may place a priority on perfectly implementing their chosen Agile methodology, such as [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)), [XP](https://en.wikipedia.org/wiki/Extreme_programming), or [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)), they neglect to consider the impacts to the human side of those methodologies. One of the most promising of these human practices is the balanced team.
 
-![Balanced Team Diagram](/images/outcomes/application-development/balanced-team.jpg)
+![Balanced Team Diagram](/images/outcomes/application-development/balanced-teams.jpeg)
 
 ## What you will learn
 In this article, you will learn to:
