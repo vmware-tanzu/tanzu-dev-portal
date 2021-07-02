@@ -53,21 +53,21 @@ Kubernetes operators are often leveraged in production to run various platform s
 Using Kubernetes operators to fulfill platform services usually offers the most efficient and resilient solution since it is native to the Kubernetes substrate and uses the same engineering principles that make the system stable, self-healing and extendable.
 
 
-### Tenant Workload   
+### Tenant workload   
 
 Tenant workloads with the largest teams and the most involved architecture will benefit most from Kubernetes operators. You’ll see immediate benefits once you identify the tenant workloads where the most engineering time is spent in routine toil around deployment and maintenance that Kubernetes operators can autonomously take over for your end-users.
 
 
-### In-house Software 
+### In-house software 
 
 There is no limit as to the amount or type of software Kubernetes operators can manage for your business. This includes in-house software that Kubernetes operators autonomously control, freeing-up time for your developers to focus on website updates and fixing existing issues. In-house software is any application developed by your company, for your company. Examples of in-house software include a billing app for an online store, a customer database for an emergency alert system, an inventory management software for an online pharmacy, and an online scheduling tool for a hospital. Any online business that provides Software as a Service (SaaS) can manage their business more efficiently and reliably with Kubernetes operators.
 
 
-## There’s a Proper Way to Build Kubernetes Operators
+## There’s a proper way to build Kubernetes operators
 
 The articles that you read about Kubernetes operators being hard to build are true. That’s why Kubernetes training and experience are essential. If you try to build one without understanding Kubernetes, you’re more likely to create problems that diminish the instant time-to-value savings that your company would have realized had the Kubernetes operator been built properly on Kubernetes engineering principles.
 
 
-## Affordable Kubernetes Training 
+## Affordable Kubernetes training 
 
 If the cost of Kubernetes training is a concern for your company, there is a viable, and fun solution. One of the more popular, affordable ways to learn how to build Kubernetes operators is to join the [Kubernetes community](https://kubernetes.io/community/), where you’ll find a myriad of support from new and experienced users and contributors who share advice, use-cases and bug fixes that make the complexity of learning Kubernetes a lot less intimidating, and much more manageable. 
