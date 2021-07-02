@@ -22,7 +22,7 @@ Many of the companies that made the lucrative decision to choose Kubernetes as a
 
 You can leverage Kubernetes operators to accomplish all types of automated tasks, including software deployments, management, troubleshooting and updates through custom resources to define the state of the system, and custom controllers to reconcile the existing state of the system with the desired state of the system defined in the custom resource. 
 
-There’s also an impressive assortment of Kubernetes operators developed by contributing members of the Kubernetes community that are freely available. For more information, see [OperatorHub.io](https://operatorhub.io/).
+There’s also an impressive assortment of Kubernetes operators developed by contributing members of the Kubernetes community that are freely available. For more information, see [OperatorHub](https://operatorhub.io/).
 
 Kubernetes operators use level-triggered logic to bring about the desired state that you defined in custom resources by continually looping through the system until it is able to reconcile the desired state. A Kubernetes operator never quits working until it completes its directive. For example, when a Kubernetes operator encounters an unexpected condition, it doesn’t crash or fail, but stays-on-course, continually looping until the condition is remedied and it is able to successfully accomplish the desired state.
 
