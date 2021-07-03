@@ -2,42 +2,74 @@
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
 <div class='container'>
 
-        <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+	<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 	</a>
 	<div class="td-navbar-nav-hamburger" id="main_navbar">
 		<ul class="navbar-nav mt-lg-0 align-items-center">
-			{{ if  .Site.Params.versions }}
-			<li class="nav-item dropdown d-none d-lg-block mr-xl-4 mr-2 mb-0">
-				{{ partial "navbar-version-selector.html" . }}
+			<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span>Topics</span>
+				</a>
+				<div id="topics-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<div class="inner">
+						<a class="dropdown-item">Concepts</a>
+						<a class="dropdown-item">Building Kubernetes Runtime</a>
+						<a class="dropdown-item">Managing & Operating Kubernetes</a>
+						<a class="dropdown-item">Devops Practices</a>
+						<a class="dropdown-item">Application Development & Practices</a>
+						<a class="dropdown-item">Application Config & Observability</a>
+						<a class="dropdown-item">Application Modernization</a>
+						<a class="dropdown-item">Machine Learning</a>
+						<a class="dropdown-item">Edge Computing</a>
+					</div>
+				</div>
 			</li>
 
-			{{ end }}
-			{{ $p := . }}
-			{{ $url := urls.Parse .RelPermalink }}
-			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
-			{{ range .Site.Menus.main }}
-				{{ if .HasChildren }}
-				<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						{{ .Name }}
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						{{ range .Children }}
-						<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
-						{{ end }}
+			<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Resources
+				</a>
+				<div id="resources-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<div class="inner">
+						<a class="dropdown-item">Workshops</a>
+						<a class="dropdown-item">Tanzu Labs Practices</a>
+						<a class="dropdown-item">Code Samples</a>
+						<a class="dropdown-item">Videos</a>
+						<a class="dropdown-item">Blog</a>
 					</div>
-				</li>
-				{{ else }}
-				<li class="nav-item mr-xl-4 mr-2 mb-0">
-					{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
-					{{ with .Page }}
-					{{ $active = or $active ( $.IsDescendant .)  }}
-					{{ end }}
-					<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
-				</li>
-				{{ end }}
-			{{ end }}
+				</div>
+			</li>
+
+			<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Tanzu.TV
+				</a>
+				<div id="tv-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<div class="inner">
+						<a class="dropdown-item">Tanzu Tuesdays</a>
+						<a class="dropdown-item">Code</a>
+						<a class="dropdown-item">TGIK</a>
+						<a class="dropdown-item">Between Chair and Keyboard</a>
+						<a class="dropdown-item">Tanzu Talk</a>
+						<a class="dropdown-item">SpringOne Tour</a>
+						<a class="dropdown-item">Spring Live</a>
+					</div>
+				</div>
+			</li>
+
+			<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Community
+				</a>
+				<div id="community-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<div class="inner">
+						<a class="dropdown-item">Tanzu Overview</a>
+						<a class="dropdown-item">Advocates</a>
+						<a class="dropdown-item">Team</a>
+					</div>
+				</div>
+			</li>
 
 			<li class="nav-item mr-xl-4 mr-2 mb-0 mobile-search-link" style="display: none;">
 				<a class="nav-link" href="{{ "/search" | relURL }}"><span>Search</span></a>
@@ -58,13 +90,6 @@
 				<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>
 				<a class="position-relative" id="toggle-light-mode"><i class="fas fa-sun mr-0"></i></a>
 			</li>
-
-<!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}
-			<li class="nav-item dropdown d-none d-lg-block">
-				{{ partial "navbar-lang-selector.html" . }}
-			</li>
-			{{ end }} -->
-
 		</ul>
 
 		<div id="menu-toggle">

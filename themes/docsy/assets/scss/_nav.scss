@@ -1,6 +1,65 @@
 //
 // Main navbar
 //
+.nav-item {
+    border-radius: .1rem;
+    padding-left: .55rem;
+    &.show {
+        background-color: #EAEAEA;
+    }
+}
+.dropdown-menu {
+    border: 0;
+    box-shadow: none;
+    background: none;
+    padding-top: 1.1rem;
+
+    .inner {
+        border-radius: 0 !important;
+        border-color: #EFEFEF;
+        padding: 1rem;
+        flex-wrap: wrap;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        border: 1px solid rgba(239, 239, 239, 1);
+        background-color: white;
+    }
+
+    &.show .inner {
+        display: flex;
+    }
+    a {
+        font-family: "Metropolis Semi Bold", sans-serif;
+        color: #1B2A32 !important;
+        font-size: .9375rem;
+        max-width: 250px;
+        display: inline;
+        margin-bottom: 1rem;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    &#topics-menu {
+        width: 800px;
+        left: -100%;
+        .inner {
+             a {
+                white-space: normal;
+             }
+        }
+    }
+    &#resources-menu {
+        width: 540px;
+        left: -50%;
+    }
+    &#tv-menu {
+        left: -25%;
+    }
+    &#community-menu {
+        left: -25%;
+    }
+}
 
 .td-navbar-cover {
     background: $primary;
