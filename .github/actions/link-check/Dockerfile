@@ -15,7 +15,7 @@ ENV HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION
 RUN wget "${HUGO_URL}" && \
     tar -zxvf "${HUGO_NAME}.tar.gz" && \
     mv ./hugo /go/bin/ && \
-    go get -u github.com/raviqqe/muffet
+    go get -u github.com/raviqqe/muffet/v2
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
