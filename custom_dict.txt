@@ -752,6 +752,7 @@ Initializr
 Integrallis
 [Ii]ntegrations
 IntelliJ
+interiorize
 interiorizing
 interpolator
 [Ii]nterservice
