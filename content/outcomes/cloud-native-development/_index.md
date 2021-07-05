@@ -9,7 +9,7 @@ team:
  
 ## Why is this learning path important?
 
-This learning path will provide you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
+This learning path provides you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
 
 It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we also find this learning path highly effective without service engagement.
 
@@ -17,13 +17,9 @@ It has been initially conceived as pre-work to get the most of an application-re
  
 This learning path is for software engineers and architects interested in quickly ramping up their cloud native skills with Spring Boot.
 
-## What you will learn
+## What you will learn in this learning plan
  
-Each section of this guide provides details about the skills or technologies in question, and includes links to specific and targeted information to assist you. Each section is followed by suggested homework assignments and additional resources.
-
-Going through the material of this learning path should not take more than 8 hours. The more time you spend, for example by studying deeper the provided additional resources, the more you will get out of this learning path.
-
-The following topics are covered:
+You'll learn the following topics.
 
 **Development ecosystem**
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
@@ -47,3 +43,9 @@ The following topics are covered:
 * [User interface](/outcomes/cloud-native-development/specific__user_interfaces/)
 * [Telemetry](/outcomes/cloud-native-development/specific__telemetry/)
 * [Security](/outcomes/cloud-native-development/specific__security/)
+ 
+Each section of this guide provides details about the skills or technologies in question, and includes links to specific and targeted information to assist you. Each section is followed by suggested homework assignments and additional resources.
+
+This learning path takes approximately eight hours to complete, but the more time you spend on the learning path, for example, doing a deep study on the additional resources provided, the more value you'll get out of it.
+
+

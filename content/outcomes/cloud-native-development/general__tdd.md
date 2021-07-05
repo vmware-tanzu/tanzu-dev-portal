@@ -8,20 +8,20 @@ team:
 
 Testing is crucial to cloud native application development. It is our primary (and sometimes only) way to build confidence that we can push to production at any given time.
 
-## Kinds of Tests
+## Test Types
 
-In many traditional organizations with independent quality assurance and testing teams, software engineers may only leverage unit tests. As a [balanced team](/outcomes/application-development/balanced-teams/) with complete ownership of releases, we write and own an extensive spectrum of tests for our app. These include:
+In many traditional organizations with independent, quality assurance and testing teams, software engineers may only leverage unit tests. As a [balanced team](/outcomes/application-development/balanced-teams/) with complete ownership of releases, we write and own an extensive spectrum of tests for our app. These include:
 * Unit Tests
 * Integration Tests
 * Contract Tests
 * Behavior Tests
 
 
-While we may use some additional layers such as end-to-end tests or automated UI tests, these are by far the most expensive to run, and we will look to build confidence with the other leaner test layers when possible.
+While we may use some additional layers such as end-to-end tests or automated UI tests, these are the most expensive to run. We will look to build confidence with the other leaner test layers when possible.
 
-* Read what [Martin Fowler](https://martinfowler.com/bliki/TestPyramid.html) and [his team](https://martinfowler.com/articles/practical-test-pyramid.html) have to say on the test pyramid, as it provides a solid foundation for answering questions such as “at which layer should I test this functionality?”.
+* Read what [Martin Fowler](https://martinfowler.com/bliki/TestPyramid.html) and [his team](https://martinfowler.com/articles/practical-test-pyramid.html) have to say on the test pyramid, and how it provides a solid foundation for answering questions such as “at which layer should I test this functionality?”.
 
-* Read [this article](https://spring.io/blog/2016/04/15/testing-improvements-in-spring-boot-1-4) on testing various slices of your Spring Boot application.
+* Read [this article](https://spring.io/blog/2016/04/15/testing-improvements-in-spring-boot-1-4) to learn more on testing various slices of your Spring Boot application.
 
 * Read through the [Quick Start Guide](https://cloud.spring.io/spring-cloud-contract/) on Consumer-Driven Contract testing with Spring Cloud Contract.
 
@@ -31,11 +31,10 @@ While we may use some additional layers such as end-to-end tests or automated UI
 
 ## The Basics of Test Driven Development
 
-Now that you know the tools you have to test your application, you will also want to know how we will apply those tools during development for the engagement. 
+Now that you know the tools you have to test your application, it's time to learn how to apply those tools during development for the engagement. 
 
-VMware Tanzu develops software using the test-driven development methodology of writing tests to describe our intended behavior, see those tests fail, build the functionality to make our tests pass, and clean up any technical debt created during the process. This is often referred to as the “red-green-refactor” loop.
-
-The best way to learn about test-driven development is to do some of it! Pairing with a Tanzu Labs engineer during the engagement will give you lots of practice. Or, you can prepare to do it yourself by reading [this article on TDD exercises](https://medium.com/@marlenac/learning-tdd-with-katas-3f499cb9c492) and running through some of the [first requirements for the Greeting exercise](https://github.com/testdouble/contributing-tests/wiki/Greeting-Kata) in your IDE.
+VMware Tanzu develops software using the test-driven development methodology of writing tests to describe our intended behavior. This is often referred to as the “red-green-refactor” loop. We see our tests fail, we build the functionality to make our tests pass, and we clean up any technical debt created during the process. 
+The best way to learn about test-driven development is to do some of it! Pairing with a Tanzu Labs engineer during the engagement will give you lots of practice. Or, if you prefer to do it yourself, you can prepare by reading [this article on TDD exercises](https://medium.com/@marlenac/learning-tdd-with-katas-3f499cb9c492) and running through some of the [first requirements for the Greeting exercise](https://github.com/testdouble/contributing-tests/wiki/Greeting-Kata) in your IDE.
 
 
 #### Homework
