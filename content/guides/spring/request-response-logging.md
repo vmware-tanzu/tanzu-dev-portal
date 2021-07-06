@@ -118,7 +118,7 @@ Spring Boot also provides health checks for application monitoring in addition t
     Spring Boot utilizes Apache Commons for internal logging and is also configured to support Logback, Log4j2, and Java Util Logging for console and file logging.
   {{< /faq >}}
   {{< faq question="How do you manage logs in Spring Boot microservices?" >}}
-    Logs in Spring Boot can be managed by enabling logback in a POM, containing configuration details and other vital information about the project. Additionally, [Prometheus](/guides/spring/spring-prometheus/) and Grafana can also be utilized when trying to visualize data and metrics.
+    Logs in Spring Boot can be managed by enabling logback in a POM, containing configuration details and other vital information about the project. Additionally, [Prometheus](https://tanzu.vmware.com/developer/guides/spring/spring-prometheus/) and Grafana can also be utilized when trying to visualize data and metrics.
   {{< /faq >}}
   {{< faq question="How do you capture both requests and responses when diagnosing bugs in a Spring Boot application?" >}}
     Capturing client's requests and server's response when diagnosing bugs can be accomplished with the TeeFilter servlet.
