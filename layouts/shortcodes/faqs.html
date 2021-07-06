@@ -12,10 +12,8 @@
 <script type="text/javascript">
     $(".faq-item").each( function() {
         $(this).click(function () {
-            $question = $(this).find(".faq-question");
-            $answer = $(this).find(".faq-answer");
-            $("#arrow").toggleClass("flip"); // Flip the display arrow
-            $answer.slideToggle(200); // Toggle the answer
+            $(this).find("#arrow").toggleClass("flip"); // Flip the display arrow
+            $(this).find(".faq-answer").slideToggle(200); // Toggle the answer
         });
     });
 </script>
