@@ -34,6 +34,7 @@ acknowledgedEvents
 acknowledgement
 Acknowledgement
 Activiti
+add-on(s)?
 addAndReturnSize
 addAndReturnSizes
 additively
@@ -1143,6 +1144,7 @@ OpenStack
 OpenTelemetry
 OpenTracing
 operationalized
+OperatorHub
 oplog
 oplogs
 OpsGenie
