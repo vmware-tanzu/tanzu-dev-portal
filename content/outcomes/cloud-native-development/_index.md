@@ -11,7 +11,7 @@ team:
 
 This learning path provides you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
 
-It has been initially conceived as pre-work to get the most of an application-related software development engagement with Tanzu Labs. However, we also find this learning path highly effective without service engagement.
+You'll get the most out of this learning path if you have an application-related, software development engagement with Tanzu Labs, but its also a highly effective learning path even if you not have a service engagement.
 
 ## Who is this learning path for?
  
