@@ -521,6 +521,7 @@ failback
 [Ff]ailover(s)?
 Falco
 Fani
+faq(s)?
 favourite(s)?
 FC
 FeignClient
@@ -953,6 +954,7 @@ localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
 logback
+Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 LogPartitionedRegionBucketDetailsFunction
@@ -1561,6 +1563,7 @@ TCP
 tdp-guide
 TeamRetro
 TechRepublic
+TeeFilter
 Tekton('s)?
 [Tt]elco(s)*
 telecom
@@ -1661,6 +1664,7 @@ url
 URL(s)?
 USD
 userDetails
+Util
 UX
 [Vv][123]
 Vaadin
