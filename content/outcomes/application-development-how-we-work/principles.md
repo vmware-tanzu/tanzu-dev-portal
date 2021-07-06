@@ -1,5 +1,5 @@
 ---
-title: "We Always Rely to our Principles"
+title: "Our Foundational Principles"
 weight: 10
 layout: single
 team:
@@ -12,7 +12,7 @@ Wow. That's a lot of anything and everything.
 
 In a world where we work with anyone, anywhere, anytime, upon anything, **what is our "north star" that guides how we approach so many diverse situations?**
 
-The answer is our **Foundational Principles**. Within Tanzu Labs, we've developed six principles which complement our [VMware EPIC<sub>2</sub> values](https://submissions.eng.vmware.com/epic2-achievement-awards-2020/pages/our-shared-values) with an eye towards how we work with clients and each other:
+The answer is our **foundational principles**. Within Tanzu Labs, we've developed six principles which complement our [VMware EPIC<sub>2</sub> values](https://submissions.eng.vmware.com/epic2-achievement-awards-2020/pages/our-shared-values) with an eye towards how we work with clients and each other:
 
 ### ⚡️ Empower Teams
 Diverse teams with shared context, psychological safety, and decision-making authority move faster.
@@ -34,4 +34,4 @@ Share our time, tools, code, and approach with internal and open source communit
 
 ---
 
-With our foundational principles and VMware EPIC<sub>2</sub> values established, we're set the stage for learning how we approach modern app development, and why we approach it this way, and why you should consider adopting this ideas, too.
+With our foundational principles and VMware EPIC<sub>2</sub> values established, we've set the stage for learning how we approach modern app development, and why we approach it this way, and why you should consider adopting this ideas, too.
