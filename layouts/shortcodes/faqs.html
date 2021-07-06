@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="{{ "/css/faq.css" | relURL }}">
+<div class="faqs" id="faqs">
+    <div class="flex-container jc-between"></div>
+        <h2 class="h2 mb-md">Frequently Asked Questions</h2>
+        <div class="faq">
+            {{ .Inner }}
+        </div>
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+    $(".faq-item").each( function() {
+        $(this).click(function () {
+            $question = $(this).find(".faq-question");
+            $answer = $(this).find(".faq-answer");
+            //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+            $("#arrow").toggleClass("flip");
+            $answer.slideToggle(200, function () {
+                
+            });
+        });
+    });
+</script>
