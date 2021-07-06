@@ -1,6 +1,6 @@
 ---
 title: Fundamentals of Modern Application Development
-weight: 1
+weight: 2
 layout: single
 description: "Learn how we approach application development at VMware Tanzu Labs"
 team:

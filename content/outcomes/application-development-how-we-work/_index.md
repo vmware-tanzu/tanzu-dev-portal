@@ -2,7 +2,7 @@
 title: How VMware Tanzu Labs Works and Why
 weight: 1
 layout: single
-description: "Learn our philosophy to enabling amazing outcomes through software."
+description: "Learn our philosophy to enabling people to achieve amazing outcomes through software."
 team:
   - VMware Tanzu Labs
 ---
@@ -11,5 +11,5 @@ VMware Tanzu Labs has a long history of doing things a little differently. We al
 
 Thus, we're writing it all down and telling the world all about it. We hope that you will also see how simple our way of thinking is, and we also hope many people and organizations will adopt some, or all, of these ideas themselves. 
 
-## It's not all about consulting 
+## It's not all about consulting
 Our approach to how we work is the same regardless of whether we're working with clients or with each other. Though we do talk a bit about how we approach consulting and working with clients, our principles are applicable to all product and services teams in all industries. 
