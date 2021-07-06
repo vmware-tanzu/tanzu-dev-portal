@@ -14,9 +14,8 @@
         $(this).click(function () {
             $question = $(this).find(".faq-question");
             $answer = $(this).find(".faq-answer");
-            //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-            $("#arrow").toggleClass("flip");
-            $answer.slideToggle(200);
+            $("#arrow").toggleClass("flip"); // Flip the display arrow
+            $answer.slideToggle(200); // Toggle the answer
         });
     });
 </script>
