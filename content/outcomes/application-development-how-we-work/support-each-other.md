@@ -12,6 +12,6 @@ We believe that the most valuable feedback we can get along that journey comes f
 
 Everyone who joins Tanzu Labs has one-one-ones scheduled with their manager. Our managers help us with all of the questions we have about the expectations set forth in these articles, because **we use this very learning series for our own onboarding**. 
 
-Out managers work with us to understand where we're at in our careers, and help us come up with a plan for where we want to be. They help us get the books we recommend, and connect us with other amazing people that we should meet and pair with. They show us how to _give back_ ❤️ beyond just our immediate pairs, projects, and teams. They connect us to the global community at VMware Tanzu Labs.  
+Our managers work with us to understand where we're at in our careers, and help us come up with a plan for where we want to be. They help us get the books we recommend, and connect us with other amazing people that we should meet and pair with. They show us how to _give back_ ❤️ beyond just our immediate pairs, projects, and teams. They connect us to the global community at VMware Tanzu Labs.  
 
 Most importantly, our managers are there with us for our journey, every step of the way. 
