@@ -520,6 +520,7 @@ failback
 [Ff]ailover(s)?
 Falco
 Fani
+faq(s)?
 favourite(s)?
 FC
 FeignClient
