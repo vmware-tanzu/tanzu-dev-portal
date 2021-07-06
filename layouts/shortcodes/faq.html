@@ -4,6 +4,6 @@
         <i class="fa fa-angle-down" id="arrow"></i>
     </div>
     <div class="faq-answer">
-        <p>{{ .Inner }}</p>
+        <div>{{(replaceRE  "^[ \t\r\n]+" "" .Inner) | markdownify }}</div>
     </div>
 </div>
