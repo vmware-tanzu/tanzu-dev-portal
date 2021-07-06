@@ -14,7 +14,7 @@ This all changed around the end of 2012. We hired product management and product
 
 The balanced team is a powerful force multiplier for both product or services organizations. Balanced teams can clearly define problems, articulate assumptions, form hypotheses, run experiments, establish [Key Performance Indicators](https://en.wikipedia.org/wiki/Performance_indicator), and validate learnings through software. In effect, balanced teams can help organizations not just "build the thing right", but "build the _right_ thing." 
 
-Our product management and product design practices in Tanzu Labs App Services help our clients find the right thing to build, and our engineers complete the trusted partnership to help implement the vision. **Great products are desirable to users, viable to the business, and feasible for the engineers, and it takes all members of the balanced team to enable these outcomes.**
+Our product management and product design practices in Tanzu Labs help our clients find the right thing to build, and our engineers complete the trusted partnership to help implement the vision. **Great products are desirable to users, viable to the business, and feasible for the engineers, and it takes all members of the balanced team to enable these outcomes.**
 
 ![Balanced Team Diagram](/images/outcomes/application-development/balanced-teams.jpeg)
 
