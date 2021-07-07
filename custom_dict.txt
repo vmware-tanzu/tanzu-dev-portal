@@ -687,7 +687,7 @@ handleNotification
 handleWANEvent
 handoff(s)?
 HAProxy
-hardcoded
+[hH]ardcoded
 HashiCorp('s)?
 hasResult
 Hayk
