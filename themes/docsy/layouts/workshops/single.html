@@ -62,8 +62,17 @@
 </div>
 <div class="container github-imported-sample py-lg-5 py-2 mb-5 d-flex">
 	<div class='col-lg-9 col-12 px-0'>
+
 		{{ .Content }}
 	</div>
+
+	<a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Workshop Issue: {{ .Title }}">
+		<div id="feedback-overlay">
+			<div class="feedback-overlay-content">
+				<span class="fab fa-github"></span> Report an Issue
+			</div>
+		</div>
+	</a>
 </div>
 {{ end }}
 
