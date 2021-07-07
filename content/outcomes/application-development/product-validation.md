@@ -6,7 +6,7 @@ team:
   - VMware Tanzu Labs
 ---
 
-There are a lot of unknowns when building a new software system, including business unknowns such as product/market fit, customer unknowns such as addressable market size, and technical unknowns such as how feasible something is to build. 
+There are a lot of unknowns when building a new software system, including customer unknowns such as product/market fit, business unknowns such as addressable market size, and technical unknowns such as how feasible something is to build. 
 
 For decades, management practice has emphasized planning and control as a means of ensuring predictable outcomes, but building software has inherent complexities that make this management style too rigid. This rigidity is expressed in many ways, from organizations being slow to react to new information to teams not being empowered to act autonomously and react effectively to customer feedback.  
 
