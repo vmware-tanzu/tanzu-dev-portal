@@ -1,6 +1,6 @@
 ---
 title: Product Validation
-weight: 15
+weight: 30
 layout: single
 team:
   - VMware Tanzu Labs
