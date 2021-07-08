@@ -1,6 +1,6 @@
 ---
 title: Test Driven Development
-weight: 50
+weight: 40
 layout: single
 team:
   - VMware Tanzu Labs
