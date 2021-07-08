@@ -140,9 +140,9 @@ This is a relatively low-risk test that will give them a lot of confidence as to
 
 
 ## Keep Learning
-1. The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses by Eric Ries.
-1. The Startup Way: How Modern Companies Use Entrepreneurial Management to Transform Culture and Drive Long-Term Growth by Eric Ries.
-1. Measure What Matters: OKRs: The Simple Idea that Drives 10x Growth by John Doerr.
+1. _[The Lean Startup](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898): How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses_ by Eric Ries.
+1. _[The Startup Way](https://www.amazon.com/Startup-Way-Companies-Entrepreneurial-Management/dp/1101903201/): How Modern Companies Use Entrepreneurial Management to Transform Culture and Drive Long-Term Growth_ by Eric Ries.
+1. _[Measure What Matters](https://www.amazon.com/Measure-What-Matters-audiobook/dp/B07BMJ4L1S/): OKRs: The Simple Idea that Drives 10x Growth_ by John Doerr.
 
 ### Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)
