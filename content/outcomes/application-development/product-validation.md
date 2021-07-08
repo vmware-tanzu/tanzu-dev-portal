@@ -12,6 +12,8 @@ For decades, management practice has emphasized planning and control as a means 
 
 One way to mitigate the risk of unknowns derailing a product or initiative is to follow the Build, Measure, Learn cycle detailed later in this article. Scientists and engineers have been using something similar known as the[ scientific method for at least 200 years.](https://en.wikipedia.org/wiki/Scientific_method) Both methods use data to inform decisions and place an emphasis on facts over assumptions. You can learn more about the Build, Measure Learn cycle from the book, ["Lean Startup"](http://theleanstartup.com/) by Eric Ries. While the book and this article use startups in several examples, the principles of lean software product development are applicable to organizations of any size and age.
 
+![VMware Office Image](/images/outcomes/application-development/Office-image.jpeg)
+
 ## What you will learn
 
 In this article, you will learn to:
