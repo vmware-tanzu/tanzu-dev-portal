@@ -45,12 +45,12 @@ By validating our product decisions early and continuously as we build a product
 
 it is especially important to get these signals early on in the development process; before we run out of money, before we put together a “big bang” product launch, or while we can still make changes cost-effectively. Validation reduces risk through explicit, focused learning cycles. 
 
-![Risk Over Time Chart](static/images/outcomes/application-development/Product-risk.jpeg)
+![Risk Over Time Chart](/images/outcomes/application-development/Product-risk.jpeg)
 
 ## Describe the Build-Measure-Learn cycle, its importance, and how each step informs the other {id=cycle}
 Eric Ries popularized Build-Measure-Learn as a way to identify and reduce risk, focus resources on the right work, continuously learn about our customers, and eventually build a successful product or business. This process won’t help a team succeed if it’s done once in the early days of a project. It must underpin the work the team does week-after-week. Eventually, as the team repeats the Build-Measure-Learn cycle, validated learning and a focus on outcomes will replace big ideas and a focus on output. 
 
-![Build Measure Learn Cycle](static/images/outcomes/application-development/Build-measure-learn.jpeg)
+![Build Measure Learn Cycle](/images/outcomes/application-development/Build-measure-learn.jpeg)
 
 Although the team’s activities happen in the build, measure, and learn order, planning actually works the other way around. 
 
