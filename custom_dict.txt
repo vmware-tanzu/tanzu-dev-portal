@@ -34,6 +34,7 @@ acknowledgedEvents
 acknowledgement
 Acknowledgement
 Activiti
+add-on(s)?
 addAndReturnSize
 addAndReturnSizes
 additively
@@ -520,6 +521,7 @@ failback
 [Ff]ailover(s)?
 Falco
 Fani
+faq(s)?
 favourite(s)?
 FC
 FeignClient
@@ -653,7 +655,7 @@ goReflect
 Görkem
 gotchas
 Gothelf
-GraalVM(-powered)?
+GraalVM(-powered|.)?
 Gradle
 gradle
 gradlew
@@ -952,6 +954,7 @@ localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
 logback
+Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 LogPartitionedRegionBucketDetailsFunction
@@ -1114,6 +1117,7 @@ Oded
 OIDC
 ok
 OKR(s)?
+Okta
 old-checkout-desc
 Oleh
 olehdokuka
@@ -1141,6 +1145,7 @@ OpenStack
 OpenTelemetry
 OpenTracing
 operationalized
+OperatorHub
 oplog
 oplogs
 OpsGenie
@@ -1558,6 +1563,7 @@ TCP
 tdp-guide
 TeamRetro
 TechRepublic
+TeeFilter
 Tekton('s)?
 [Tt]elco(s)*
 telecom
@@ -1658,6 +1664,7 @@ url
 URL(s)?
 USD
 userDetails
+Util
 UX
 [Vv][123]
 Vaadin

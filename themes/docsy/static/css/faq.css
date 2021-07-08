@@ -1,0 +1,40 @@
+.faq-question {
+    display: block;
+    margin-top: 1rem !important;
+}
+
+.faq-answer {
+    display: none;
+}
+
+.faq-item {
+    /* padding: 5px 5px; */
+    border-top: 2px solid #304250;
+}
+
+.faqs { 
+    width: 80%;
+}
+
+.flip { 
+    transform: scaleY(-1);
+    transition-duration: 200ms;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.fa {
+    margin-left: 15px;
+    padding-right: 10px;
+    display: inline-block;
+} 
