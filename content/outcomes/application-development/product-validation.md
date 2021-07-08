@@ -12,8 +12,6 @@ For decades, management practice has emphasized planning and control as a means 
 
 One way to mitigate the risk of unknowns derailing a product or initiative is to follow the Build, Measure, Learn cycle detailed later in this article. Scientists and engineers have been using something similar known as the[ scientific method for at least 200 years.](https://en.wikipedia.org/wiki/Scientific_method) Both methods use data to inform decisions and place an emphasis on facts over assumptions. You can learn more about the Build, Measure Learn cycle from the book, ["Lean Startup"](http://theleanstartup.com/) by Eric Ries. While the book and this article use startups in several examples, the principles of lean software product development are applicable to organizations of any size and age.
 
-![Office image](static/images/outcomes/app-observability/build-masure-learn.png)
-
 ## What you will learn
 
 In this article, you will learn to:
@@ -47,12 +45,12 @@ By validating our product decisions early and continuously as we build a product
 
 it is especially important to get these signals early on in the development process; before we run out of money, before we put together a “big bang” product launch, or while we can still make changes cost-effectively. Validation reduces risk through explicit, focused learning cycles. 
 
-![Risk Over Time Chart](static/images/outcomes/app-observability/risk-over-time.png)
+![Risk Over Time Chart](static/images/outcomes/application-development/Product-risk.jpeg)
 
 ## Describe the Build-Measure-Learn cycle, its importance, and how each step informs the other {id=cycle}
 Eric Ries popularized Build-Measure-Learn as a way to identify and reduce risk, focus resources on the right work, continuously learn about our customers, and eventually build a successful product or business. This process won’t help a team succeed if it’s done once in the early days of a project. It must underpin the work the team does week-after-week. Eventually, as the team repeats the Build-Measure-Learn cycle, validated learning and a focus on outcomes will replace big ideas and a focus on output. 
 
-![Build Measure Learn Cycle](static/images/outcomes/app-observability/build-masure-learn.png)
+![Build Measure Learn Cycle](static/images/outcomes/application-development/Build-measure-learn.jpeg)
 
 Although the team’s activities happen in the build, measure, and learn order, planning actually works the other way around. 
 
