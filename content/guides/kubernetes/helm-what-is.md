@@ -17,6 +17,8 @@ weight: 1
 oldPath: "/content/guides/kubernetes/helm-what-is.md"
 aliases:
 - "/guides/kubernetes/helm-what-is"
+level1: Modern App Basics
+level2: Kubernetes Platform
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. At its most basic, Helm is a templating engine that creates Kubernetes manifests. What makes Helm more than that is it can upgrade and scale applications as well.

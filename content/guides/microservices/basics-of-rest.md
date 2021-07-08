@@ -21,6 +21,8 @@ weight: 2
 oldPath: "/content/guides/microservices/basics-of-rest.md"
 aliases:
 - "/guides/microservices/basics-of-rest"
+level1: Modern App Basics
+level2: Modern Development Concepts
 ---
 
 So what is [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)? At a high level REST, or REpresentational State Transfer, is an architectural style for distributed hypermedia systems. It was created from a combination of other architectural styles and enlists several constraints. Roy Fielding, its creator, said that "REST provides a set of architectural constraints that, when applied as a whole, emphasizes scalability of component interactions, generality of interfaces, independent deployment of components, and intermediary components to reduce interaction latency, enforce security, and encapsulate legacy systems." 
