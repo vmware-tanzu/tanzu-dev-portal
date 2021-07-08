@@ -10,11 +10,11 @@ The Java ecosystem provides a variety of libraries and standards to help you def
 
 If you are only using Spring, there are many ways to easily schedule and run batch jobs. 
 
-For example, scheduled activity tightly coupled to the app itself [Spring Scheduler](https://spring.io/guides/gs/scheduling-tasks/), provides the simplest solution to set up a method for performing periodic work.
+For simple, scheduled activity tightly coupled to the app itself [Spring Scheduler](https://spring.io/guides/gs/scheduling-tasks/), provides the simplest solution to set up a method for performing periodic work.
 
-If a job requires more control, or is going to benefit if moved to its own atomic deployable unit to leverage the platform, we will look to Spring Batch and Spring Cloud Task (SCT) to work at a higher level of abstraction. Both work great with Spring Cloud Data Flow (SCDF). As we gradually move towards a higher level of abstraction, we're going to introduce multiple batch jobs that require oversight and orchestration. 
+If a job requires more control, or is going to benefit from having its own atomic deployable unit, we look to [Spring Batch](https://spring.io/projects/spring-batch) and [Spring Cloud Task](https://spring.io/projects/spring-cloud-task) (SCT) to work at a higher level of abstraction. Both work great with [Spring Cloud Data Flow](https://spring.io/projects/spring-cloud-dataflow) (SCDF). As we gradually move towards a higher level of abstraction, we're going to introduce multiple batch jobs that require oversight and orchestration. 
 
-Refer to Spring Cloud Task's "[Getting Started](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started)" guide for details on how to manage multiple jobs as part of an application; and to become familiar with Task and SCDF so that you can join the discussion at the engagement.
+Refer to Spring Cloud Task's [Getting Started](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started) guide for details on how to manage multiple jobs as part of an application; and to become familiar with Task and SCDF so that you can join the discussion within your project.
 
 #### Homework
 

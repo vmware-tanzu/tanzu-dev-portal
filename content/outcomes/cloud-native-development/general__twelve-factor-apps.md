@@ -16,7 +16,7 @@ Pay specific attention to these factors:
 * [keeping your processes stateless](https://12factor.net/processes)
 * [logging to standard input and output](https://12factor.net/logs).
 
-For more information on cloud native apps, check out the free book by Kevin Hoffman, "[Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app)". In it, he introduces three additional factors including API-first development, security, and telemetry not covered in the original set, but often required for apps to run well in the cloud.
+For more information on cloud native apps, check out the free book by Kevin Hoffman, [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app). In it, he introduces three additional factors including API-first development, security, and telemetry not covered in the original set, but often required for apps to run well in the cloud.
 
 #### Homework
 
@@ -24,5 +24,5 @@ For more information on cloud native apps, check out the free book by Kevin Hoff
 
 #### Additional resources
 
-- Read the "[Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app)" book.
+- Read the [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app) book.
 

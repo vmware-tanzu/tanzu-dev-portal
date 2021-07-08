@@ -2,7 +2,7 @@
 title: Cloud Native Application Development with Spring
 weight: -1
 layout: single
-description: "Learn the basics of cloud native development with Spring. This developer pre-engagement guide helps you to get the most of an engagement following the Tanzu Labs methodology."
+description: "Learn the basics of cloud native development with Spring. This developer preparation guide helps you to get the most of a project following the Tanzu Labs methodology."
 team:
  - VMware Tanzu Labs
 ---
@@ -11,7 +11,7 @@ team:
 
 This learning path provides you with foundational knowledge around modern, cloud native software development with Spring and Tanzu Application Service (TAS).
 
-You'll get the most out of this learning path if you have an application-related, software development engagement with Tanzu Labs, but it's also a highly effective learning path even if you do not have a service engagement.
+You'll get the most out of this learning path if you have an application-related software development project with Tanzu Labs. However, it's also a highly effective learning path without service engagement.
 
 ## Who is this learning path for?
  
@@ -35,7 +35,7 @@ You'll learn the following topics.
 * [Configuration](/outcomes/cloud-native-development/specific__configuration/)
 * [Caching](/outcomes/cloud-native-development/specific__caching/)
 * [Data Access](/outcomes/cloud-native-development/specific__data_access/)
-* [Enterprise Service Bus](/outcomes/cloud-native-development/specific__esb/)
+* [Enterprise Integration](/outcomes/cloud-native-development/specific__integration/)
 * [API Gateways](/outcomes/cloud-native-development/specific__api_gateway/)
 * [Batch Processing](/outcomes/cloud-native-development/specific__batch_processing/)
 * [File Access](/outcomes/cloud-native-development/specific__file_access/)
@@ -47,5 +47,4 @@ You'll learn the following topics.
 Each section of this guide provides details about the skills or technologies in question, and includes links to specific and targeted information to assist you. Each section is followed by suggested homework assignments and additional resources.
 
 This learning path takes approximately eight hours to complete, but the more time you spend on the learning path, for example, doing a deep study on the additional resources provided, the more value you'll get out of it.
-
 

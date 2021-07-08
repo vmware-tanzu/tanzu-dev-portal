@@ -6,7 +6,7 @@ team:
  - VMware Tanzu Labs
 ---
 
-Telemetry is one of the additional three factors introduced in "[Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app)". Developing your application is only the first aspect of a cloud native developer's job. Feedback from real users hitting your app deployed in production is where you can learn and improve your app.
+Telemetry is one of the additional three factors introduced in [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app). Developing your application is only the first aspect of a cloud native developer's job. Feedback from real users hitting your app deployed in production is where you can learn and improve your app.
 
 Spring Boot provides an assortment of automatic health monitoring and metrics through the [Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) and [Micrometer](https://micrometer.io/) projects. 
 

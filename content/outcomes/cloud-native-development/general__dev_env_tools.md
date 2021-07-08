@@ -6,13 +6,12 @@ team:
  - VMware Tanzu Labs
 ---
 
-As software engineers, we work with the tools of our trade the whole time. Still, it's always a good idea to take some time to brush up on a few things before starting your next engagement.
+As software engineers, we work with the tools of our trade the whole time. Still, it's always a good idea to take some time to brush up on a few things before starting our next project.
 
-* **Java 8 basics** such as lambdas, the streams API, updated Date/Time libraries, default methods, and Optional.
-* Your company’s modern **build tool** of choice (Maven or Gradle). We lean on this for both dependency management as well as building our deployable application artifacts.
-* Distributed source control with **Git**. You should be comfortable with the basic commands on the command line, including clone, fetch/merge/pull, add/rm, commit, and push.
-* Your **IDE** of choice. For example, Eclipse with the Spring Tools Suite or JetBrains IntelliJ. While we want our application and its build process to be decoupled from your development environment, you are going to use everyday during the engagement. It pays to get familiar with common actions. You should be comfortable with the basics of creating and importing new projects, common code navigation, and  common refactoring commands. You should also be familiar with how to run tests within the IDE, as we do that a lot.
-
+* **Java 8 basics** such as [lambdas](https://howtodoinjava.com/java-8-tutorial/#lambda), the [streams API](https://howtodoinjava.com/java-8-tutorial/#stream), updated [Date/Time libraries](https://howtodoinjava.com/java-8-tutorial/#date-time), [default methods](https://howtodoinjava.com/java8/default-methods-in-java-8/), and [Optional](https://howtodoinjava.com/java8/java-8-optionals-complete-reference/).
+* Your company’s modern **build tool** of choice ([Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/)). We lean on this for both dependency management as well as building our deployable application artifacts.
+* Distributed source control with **Git**. You should be comfortable with the [basic commands](https://www.atlassian.com/git/tutorials) on the command line, including clone, fetch/merge/pull, add/rm, commit, and push.
+* Your **IDE** of choice. For example, [Eclipse](https://www.eclipse.org/) with the [Spring Tools Suite](https://spring.io/tools) or [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/). While we want our application and its build process to be decoupled from its development environment, you are going to use it every day during your project. It pays to get familiar with common actions. You should be comfortable with the basics of creating and importing new projects, standard code navigation, and generic refactoring commands. You should also be familiar with how to run tests within your favorite IDE, as you will do that a lot.
 
 #### Homework
 

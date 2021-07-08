@@ -10,7 +10,7 @@ Traditional Java Enterprise Edition (EE) web applications evolved through many m
 
 Depending on the current state of the application and the amount of refactoring your team wants to take on, we may port the existing JSP or similar view templates over to deploy your application in a TAS Tomcat container. This provides a simple and non-intrusive way to get one of these technologies running on the platform.
 
-Regarding other technologies such as Portlets or thick-client desktop applications, we'll peel out the underlying business logic into web services and access them through a new set of user interfaces. Modern web application development has moved towards frameworks such as React and Angular leveraging JavaScript to call back-end services. Your company may already be looking into building full-stack [balanced teams](/outcomes/application-development/balanced-teams/) developing a new generation of front-ends.
+Regarding other technologies such as Portlets or thick-client desktop applications, we typically peel out the underlying business logic into web services and access them through a new set of user interfaces. Modern web application development has moved towards frameworks such as React and Angular leveraging JavaScript to call back-end services. Your company may already be looking into building full-stack [balanced teams](/outcomes/application-development/balanced-teams/) developing a new generation of front-ends.
 
 #### Homework
 
