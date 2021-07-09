@@ -21,7 +21,7 @@ This learning path is for software engineers and architects interested in quickl
  
 You'll learn essential cloud native software development skills using Spring Boot and the Tanzu Application Service. 
 
-You'll also be given a list of specific and targeted links to assist yoy in this learning path. These links include:
+You'll also be given a list of specific and targeted links to assist you in this learning path. These links include:
 
 **Development ecosystem**
 * [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
