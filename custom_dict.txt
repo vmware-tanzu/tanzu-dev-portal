@@ -891,6 +891,8 @@ Kravitz
 krf
 Krisp
 ksqlDB
+KStream
+KTable
 [kK]ube
 kube_pod_container_status_restarts_total
 kube-apiserver
@@ -1376,6 +1378,7 @@ Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
+RocksDB
 Rockstar
 Rodislav
 ROI
@@ -1567,6 +1570,7 @@ TeeFilter
 Tekton('s)?
 [Tt]elco(s)*
 telecom
+[Tt]elematics
 [Tt]emplat(ed|ing)
 Templeton
 Teotti
