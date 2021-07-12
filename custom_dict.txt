@@ -22,6 +22,7 @@
 8PpgqEqkQWA
 A3
 AAAA
+Aasta
 Abbie
 Abdellfetah
 Abo
@@ -155,6 +156,7 @@ benchmark(ing)?
 benefitting
 Berglund
 BestEffort
+betweens
 BGP(Configuration|-capable|Peer(s)?)?
 Bhave
 BikeIncidentsByZip
@@ -232,6 +234,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chander
 changeAlertLevel
 [Cc]hangemaker(s)
 [Cc]hargeback
@@ -549,6 +552,7 @@ formatter
 Foxwell
 FP
 FQDN
+Frascati-Robinson
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
@@ -1462,6 +1466,8 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+Sharat
+Sharat_Chander
 sharded
 Sheasha
 Shellshock
