@@ -1614,6 +1614,7 @@ totalTransmissionTime
 tradeoff(s)?
 Traefik
 transactional
+transformational
 transmittedEvents
 Trello
 Trivy(.)?
@@ -1630,6 +1631,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UCD
 UDP
 UI(s|-based)?
 (un)?marshalling
@@ -1750,6 +1752,7 @@ x509
 x64
 Xing
 XKCD
+XP
 XSalsa20
 Xu
 YAML|yaml
