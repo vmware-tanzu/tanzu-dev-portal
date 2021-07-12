@@ -14,7 +14,7 @@ The list is not exhaustive, but starting to reflect on these anti-patterns will 
 
 As software engineers, we interiorize that duplicating code is a bad thing. The "[Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)" (DRY) mantra led us to build shared libraries and shared data models to help keep things in a single place. In reality, the reliance on shared libraries and shared models can slow releases down because development teams have to align with all the other teams that also use the shared libraries and models. The teams managing the shared libraries often become gatekeepers to new functionality, resulting in everyone getting the lowest common denominator that works with all consumers. This creates a problem because it is rare that all consumers have the same needs.
 
-In the course of our projects, we use [Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD) principles to put a boundary around the services that should share things, have explicit external APIs and break away from common shared models.
+In the course of our projects, we use [Domain-Driven Design](https://github.com/ddd-crew/welcome-to-ddd) (DDD) principles to put a boundary around the services that should share things, have explicit external APIs and break away from common shared models.
 
 ## Design at the Last Responsible Moment
 
