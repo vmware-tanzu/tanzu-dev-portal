@@ -27,7 +27,7 @@ TAS, VMware's enterprise-class distribution of Cloud Foundry, has many useful fe
 Find the URL for your development or sandbox TAS Apps Manager and try logging into it. Once you can access it, try pushing the same demo app from the TAS Dev tutorial above your company org and space. 
 
 
-## Cloud Foundry Concepts
+## TAS and Cloud Foundry Concepts
 
 You may have already run into terms and concepts like "organizations", "spaces", and "instances" in the above exercises. 
 
