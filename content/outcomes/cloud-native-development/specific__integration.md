@@ -18,5 +18,4 @@ Another, newer option builds on top of [Spring Integration](https://spring.io/pr
 #### Homework
 
 - Read the [Integrating Data](https://spring.io/guides/gs/integration/) guide to getting some experience with Spring integration.
-
 - Read the [Baeldung guide to Spring Cloud Data Flow](https://www.baeldung.com/spring-cloud-data-flow-stream-processing).
