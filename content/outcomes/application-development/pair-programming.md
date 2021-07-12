@@ -1,6 +1,6 @@
 ---
 title: Pair Programming
-weight: 30
+weight: 50
 layout: single
 team:
   - VMware Tanzu Labs
