@@ -18,6 +18,4 @@ Read the [Introduction](https://docs.spring.io/spring-cloud-stream/docs/current/
 #### Homework
 
 - Read the [Introduction](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing).
-
 - Read the [Quick Start](https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing) guide for Spring Cloud Stream.
-
