@@ -12,6 +12,7 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+10x
 12SwitchRestoresSansCheckOuts
 2x2
 3D
@@ -386,6 +387,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
+de-risk
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -448,6 +450,7 @@ Dobrin
 DockerCon
 [Dd]ockerfile(s|-built)?
 Documentum
+Doerr
 Dokuka
 Dolan
 donut
