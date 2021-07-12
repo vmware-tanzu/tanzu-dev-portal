@@ -19,6 +19,7 @@ In the course of our projects, we use [Domain-Driven Design](https://en.wikipedi
 ## Design at the Last Responsible Moment
 
 Some companies are incredibly risk-averse and want everything right the first time. The problem is that no practice can ensure such a thing. Just the opposite. We guarantee that you'll learn something that you have never considered or planned before your app was added to production.
+
 That said, no planning guarantees that will be no surprises. So instead, we work in small iterations on thin slices of your app, getting them in front of users slice by slice. This provides the feedback loops we need to know if we are building the best thing for the company without months of up-front design work. We balance design and architecture by moving quickly, evolving the architecture as we learn new things.
 
 ## No Superheroes
