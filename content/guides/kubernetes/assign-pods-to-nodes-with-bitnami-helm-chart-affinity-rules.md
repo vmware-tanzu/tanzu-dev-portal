@@ -1,7 +1,7 @@
 ---
 title:  "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
 linkTitle: "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
-description: Using Bitnami Helm Charts to force the Kubernetes scheduler to place pods on specific nodes using affinity rules.
+description: To help users to implement affinity rules, Bitnami has enhanced its Helm charts by including opinionated affinities in their manifest files. Check out this step-by-step guide to learn how to adapt them to your needs.
 topics:
 - Kubernetes
 - Containers
