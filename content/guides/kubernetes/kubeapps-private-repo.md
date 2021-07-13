@@ -20,6 +20,8 @@ weight: 7
 oldPath: "/content/guides/kubernetes/kubeapps-private-repo.md"
 aliases:
 - "/guides/kubernetes/kubeapps-private-repo"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 [Kubeapps](https://github.com/kubeapps/kubeapps/) is a web-based UI for

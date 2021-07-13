@@ -13,6 +13,8 @@ topics:
 oldPath: "/content/guides/agile/remote-tips-remote-is-exhausting.md"
 aliases:
 - "/guides/agile/remote-tips-remote-is-exhausting"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Creating the right working environment

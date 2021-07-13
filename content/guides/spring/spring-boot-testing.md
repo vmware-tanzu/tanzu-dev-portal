@@ -16,6 +16,8 @@ weight: 3
 oldPath: "/content/guides/spring/spring-boot-testing.md"
 aliases:
 - "/guides/spring/spring-boot-testing"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Proper testing is critical to the successful development of applications that use a microservices architecture. This guide provides some important recommendations for writing tests for Spring Boot applications, using [F.I.R.S.T. principles](https://www.appsdeveloperblog.com/the-first-principle-in-unit-testing/):

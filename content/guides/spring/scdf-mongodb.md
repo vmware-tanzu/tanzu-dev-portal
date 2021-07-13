@@ -22,6 +22,8 @@ topics:
 oldPath: "/content/guides/spring/scdf-mongodb.md"
 aliases:
 - "/guides/spring/scdf-mongodb"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring Cloud Data Flow](https://dataflow.spring.io/) is a framework for creating data streaming applications and batch data processing pipelines. It is commonly used to develop and test microservices, and it comes with built-in support for popular data sources and data storage services. It is available under an Apache license.

@@ -19,6 +19,8 @@ weight: 27
 oldPath: "/content/guides/kubernetes/carvel.md"
 aliases:
 - "/guides/kubernetes/carvel"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 [Carvel](https://carvel.dev/)[^1] is an open source suite of tools. Carvel provides a set of reliable, single-purpose, composable tools that aid in your application building, configuration, and deployment to Kubernetes.

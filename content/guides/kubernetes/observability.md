@@ -11,6 +11,8 @@ weight: 57
 oldPath: "/content/guides/kubernetes/observability.md"
 aliases:
 - "/guides/kubernetes/observability"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 Observability is crucial for successfully operating a complex software system

@@ -11,6 +11,8 @@ weight: 1400
 oldPath: "/content/guides/kubernetes/workload-tenancy-conformance-test.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-conformance-test"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Conformance testing assists in determining whether software is in compliance

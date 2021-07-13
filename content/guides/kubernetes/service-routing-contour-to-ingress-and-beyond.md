@@ -21,6 +21,8 @@ weight: 2
 oldPath: "/content/guides/kubernetes/service-routing-contour-to-ingress-and-beyond.md"
 aliases:
 - "/guides/kubernetes/service-routing-contour-to-ingress-and-beyond"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 ### Introduction to Contour

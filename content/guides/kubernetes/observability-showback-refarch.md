@@ -11,6 +11,8 @@ weight: 2000
 oldPath: "/content/guides/kubernetes/observability-showback-refarch.md"
 aliases:
 - "/guides/kubernetes/observability-showback-refarch"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 This document discusses showback for Kubernetes clusters, such as those provided

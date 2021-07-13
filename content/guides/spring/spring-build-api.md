@@ -21,6 +21,8 @@ weight: 2
 oldPath: "/content/guides/spring/spring-build-api.md"
 aliases:
 - "/guides/spring/spring-build-api"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Boot is a framework built on top of Spring that focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will demonstrate how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo).

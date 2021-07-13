@@ -22,6 +22,8 @@ weight: 7
 oldPath: "/content/guides/kubernetes/harbor-gs.md"
 aliases:
 - "/guides/kubernetes/harbor-gs"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Running a private container image registry has been a staple in many enterprise

@@ -17,6 +17,8 @@ weight: 2
 oldPath: "/content/guides/kubernetes/harbor-as-docker-proxy.md"
 aliases:
 - "/guides/kubernetes/harbor-as-docker-proxy"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 {{< youtube id="KSH2Hzk-E7U" class="youtube-video-shortcode" >}}

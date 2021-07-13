@@ -15,6 +15,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-enhancements-spring-k8s.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-spring-k8s"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This Reference Architecture demonstrates design, development, and deployment of

@@ -12,6 +12,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-enhancements-logging-practices.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-logging-practices"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Logs help you monitor events and debug problems in an application. As complexity

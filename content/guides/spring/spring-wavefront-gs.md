@@ -20,6 +20,8 @@ topics:
 oldPath: "/content/guides/spring/spring-wavefront-gs.md"
 aliases:
 - "/guides/spring/spring-wavefront-gs"
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 [VMware Tanzu Observability by Wavefront](https://www.wavefront.com/) offers a [free tier](https://tanzu.vmware.com/content/blog/byo-spring-boot-apps-tanzu-observability-for-free-no-sign-up-needed) for Spring Boot developers. If you're unfamiliar with Wavefront, it provides a SaaS-based platform for real-time metrics, monitoring, and alerting. It has integrations for many languages, frameworks, and platforms. Simply put, you send Wavefront your metrics, and it handles visualization and analysis. Additionally, [Wavefront for Spring Boot](https://docs.wavefront.com/wavefront_springboot.html) helps Spring developers to integrate with Wavefront while still using solutions they’re used to, such as Micrometer and Sleuth. 

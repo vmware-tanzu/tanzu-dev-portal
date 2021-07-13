@@ -20,6 +20,8 @@ weight: 3
 oldPath: "/content/guides/containers/deploy-locally-spring-boot-application-docker.md"
 aliases:
 - "/guides/containers/deploy-locally-spring-boot-application-docker"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 [Bitnami containers](https://bitnami.com/stacks/containers) provide you with a ready-to-go environment for the development framework of your choice backed by Bitnami. By selecting a Bitnami container for local development, you can save a lot of time in coding as well as you benefit from having always the latest and more secure application image.

@@ -19,6 +19,8 @@ weight: 4
 oldPath: "/content/guides/kubernetes/cf4k8s-gs.md"
 aliases:
 - "/guides/kubernetes/cf4k8s-gs"
+level1: Building Kubernetes Runtime
+level2: Application Platform on Kubernetes
 ---
 
 > Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.

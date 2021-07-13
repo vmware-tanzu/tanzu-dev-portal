@@ -20,6 +20,8 @@ weight: 4
 oldPath: "/content/guides/containers/deploy-spring-boot-application-production-helm.md"
 aliases:
 - "/guides/containers/deploy-spring-boot-application-production-helm"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 Bitnami provides ready-to-run [Helm charts](https://github.com/bitnami/charts) that can be directly deployed on [Kubernetes](https://kubernetes.io/) and also infrastructure charts that can help you deploy your custom applications. That is the case of the [Bitnami Tomcat Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/tomcat) that with some tweaks can be used to run Java applications in production easily.

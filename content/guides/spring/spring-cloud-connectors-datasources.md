@@ -14,6 +14,8 @@ topics:
 oldPath: "/content/guides/spring/spring-cloud-connectors-datasources.md"
 aliases:
 - "/guides/spring/spring-cloud-connectors-datasources"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring Cloud Connectors](https://cloud.spring.io/spring-cloud-connectors/) simplifies the process of connecting Spring applications to services in cloud platforms. If you aren’t familiar with the project, you might want to refer to the guide [What Are Spring Cloud Connectors?](/guides/spring/spring-cloud-connectors).

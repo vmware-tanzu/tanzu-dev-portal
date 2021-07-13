@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/ci-cd/gitlab-ci-cd-cnb.md"
 aliases:
 - "/guides/ci-cd/gitlab-ci-cd-cnb"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 GitLab is a single application built from the ground up for all stages of the DevOps lifecycle that enables  product, development, QA, security, and operations teams to work on the same project concurrently. It provides teams with a single data store, user interface, and permission model across the DevOps lifecycle. Teams can collaborate and work on a project utilizing a single conversation, which significantly reduces cycle time, allowing developers to focus exclusively on building great software quickly.

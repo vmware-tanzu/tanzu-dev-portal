@@ -12,6 +12,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-enhancements-checklist.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-checklist"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This list is a starting place for considerations about your application running

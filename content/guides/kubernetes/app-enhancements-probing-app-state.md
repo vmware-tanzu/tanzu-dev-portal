@@ -12,6 +12,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-enhancements-probing-app-state.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-probing-app-state"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Adding probes to your application provides two critical pieces of information to the system running

@@ -11,6 +11,8 @@ weight: 42
 oldPath: "/content/guides/kubernetes/identity.md"
 aliases:
 - "/guides/kubernetes/identity"
+level1: Managing and Operating Kubernetes
+level2: Access and Security
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of

@@ -10,6 +10,8 @@ topics:
 oldPath: "/content/guides/spring/offload-http-sessions-spring-session.md"
 aliases:
 - "/guides/spring/offload-http-sessions-spring-session"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring Session](https://spring.io/projects/spring-session) frees session management from the limitations of HTTP data stored in server memory. Session data can be shared between services in a cloud without being tied to a single container, multiple sessions can be supported in the same browser, and session ids can be included and sent in a header.

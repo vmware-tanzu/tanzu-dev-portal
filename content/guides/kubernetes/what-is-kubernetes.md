@@ -11,6 +11,8 @@ weight: 1
 oldPath: "/content/guides/kubernetes/what-is-kubernetes.md"
 aliases:
 - "/guides/kubernetes/what-is-kubernetes"
+level1: Modern App Basics
+level2: Kubernetes Platform
 ---
 
 Containers accelerate development pipelines by removing the need to build, test and validate application code across multiple operating systems. They also help simplify application operations by being portable across multiple hosts and cloud platforms. However, an application running in a container still needs management. For example:

@@ -20,6 +20,8 @@ weight: 1
 oldPath: "/content/guides/microservices/develop-rest-api-nodejs-mongodb-containers.md"
 aliases:
 - "/guides/microservices/develop-rest-api-nodejs-mongodb-containers"
+level1: Building Modern Applications
+level2: Microservice Patterns
 ---
 
 For developers building cloud-native applications and APIs for Kubernetes, Bitnami offers a variety of [containers](https://bitnami.com/stacks/containers) and [Helm charts](https://github.com/bitnami/charts/) to ease the process. These ready-to-use assets make it easier to develop and deploy applications consistently, follow best practices and focus on code rather than infrastructure configuration. Bitnami containers and charts are also always secure, optimized and up-to-date, so you can rest assured that your applications always have access to the latest language features and security fixes. 

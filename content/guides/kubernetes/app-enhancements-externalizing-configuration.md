@@ -12,6 +12,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-externalizing-configuration"
+level1: Managing and Operating Applications
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Application _configuration_ is anything that varies between environments. For

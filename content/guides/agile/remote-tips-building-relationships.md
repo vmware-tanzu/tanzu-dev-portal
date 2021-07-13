@@ -13,6 +13,8 @@ topics:
 oldPath: "/content/guides/agile/remote-tips-building-relationships.md"
 aliases:
 - "/guides/agile/remote-tips-building-relationships"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Socializing

@@ -19,6 +19,8 @@ topics:
 oldPath: "/content/guides/event-streaming/scs-gs.md"
 aliases:
 - "/guides/event-streaming/scs-gs"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Cloud Stream is a framework for building highly scalable, event-driven microservices connected with shared messaging systems. Spring Cloud Stream provides components that abstract the communication with many message brokers away from the code. If you'd like to learn more, make sure to check out [Spring Cloud Stream: What Is It?](/guides/event-streaming/scs-what-is/). In this guide, you'll go through writing a fictitious loan check system. One service will generate new loan applications, containing the applicant name and requested amount. That service will leverage Spring Cloud Stream to send that application to a second service, which will approve or decline loan applications.  

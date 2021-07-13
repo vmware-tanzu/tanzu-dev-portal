@@ -15,6 +15,8 @@ weight: 4
 oldPath: "/content/guides/spring/spring-rest-docs.md"
 aliases:
 - "/guides/spring/spring-rest-docs"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring REST Docs](https://spring.io/projects/spring-restdocs#overview) provides a useful and always update-to-date way to document an application's RESTful services by combining hand-written documentation created with [Asciidoctor](https://asciidoctor.org) and auto-generated snippets created by [Spring MVC unit tests](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#unit-testing-spring-mvc). 

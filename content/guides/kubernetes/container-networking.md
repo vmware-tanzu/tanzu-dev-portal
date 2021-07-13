@@ -11,6 +11,8 @@ weight: 32
 oldPath: "/content/guides/kubernetes/container-networking.md"
 aliases:
 - "/guides/kubernetes/container-networking"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 Kubernetes uses the [Container Network

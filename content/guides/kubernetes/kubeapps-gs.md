@@ -17,6 +17,8 @@ weight: 6
 oldPath: "/content/guides/kubernetes/kubeapps-gs.md"
 aliases:
 - "/guides/kubernetes/kubeapps-gs"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This guide will walk you through the process of deploying Kubeapps for your cluster and installing an example application.

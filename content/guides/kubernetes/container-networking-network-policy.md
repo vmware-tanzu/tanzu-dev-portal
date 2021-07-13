@@ -13,6 +13,8 @@ title: Network Policy Implementation
 oldPath: "/content/guides/kubernetes/container-networking-network-policy.md"
 aliases:
 - "/guides/kubernetes/container-networking-network-policy"
+level1: Managing and Operating Kubernetes
+level2: Kubernetes Architecture
 ---
 
 This directory demonstrates how to implement default deny-all network rules in a

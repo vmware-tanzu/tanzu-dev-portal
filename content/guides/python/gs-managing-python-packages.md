@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/python/gs-managing-python-packages.md"
 aliases:
 - "/guides/python/gs-managing-python-packages"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 ## Why Do You Need This Guide?

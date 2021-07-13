@@ -11,6 +11,8 @@ weight: 12
 oldPath: "/content/guides/kubernetes/app-enhancements.md"
 aliases:
 - "/guides/kubernetes/app-enhancements"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Kubernetes does not demand specifics about the applications that run on top of

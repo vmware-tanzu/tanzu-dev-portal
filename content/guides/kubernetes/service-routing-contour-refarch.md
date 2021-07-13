@@ -12,6 +12,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/service-routing-contour-refarch.md"
 aliases:
 - "/guides/kubernetes/service-routing-contour-refarch"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 This document details a reference architecture for running

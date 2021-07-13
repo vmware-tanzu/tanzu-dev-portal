@@ -20,6 +20,8 @@ topics:
 oldPath: "/content/guides/ci-cd/gitlab-auto-devops.md"
 aliases:
 - "/guides/ci-cd/gitlab-auto-devops"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and DevOps tools and techniques.

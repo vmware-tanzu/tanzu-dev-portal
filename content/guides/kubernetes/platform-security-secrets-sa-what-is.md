@@ -21,6 +21,8 @@ topics:
 - Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/platform-security-secrets-sa-what-is.md"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 In software, there’s often data that you want to keep separate from your build

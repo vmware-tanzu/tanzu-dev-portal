@@ -14,6 +14,8 @@ topics:
 oldPath: "/content/guides/spring/spring-cloud-config-security.md"
 aliases:
 - "/guides/spring/spring-cloud-config-security"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 As explained in [Setting Up Spring Cloud Config Server](/guides/spring/spring-cloud-config-set-up/), a Spring Cloud Config Server provides a centralized configuration repository for Spring apps. The [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/reference/html/) externalizes configuration information for an application and serves out this information via a REST interface. Some configuration information is sensitive (such as passwords) and requires greater security. 

@@ -12,6 +12,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/service-routing-istio-refarch.md"
 aliases:
 - "/guides/kubernetes/service-routing-istio-refarch"
+level1: Building Kubernetes Runtime
+level2: Kubernetes Architecture
 ---
 
 ## Introduction

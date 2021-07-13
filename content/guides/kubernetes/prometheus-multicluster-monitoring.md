@@ -25,6 +25,8 @@ weight: 1800
 oldPath: "/content/guides/kubernetes/prometheus-multicluster-monitoring.md"
 aliases:
 - "/guides/kubernetes/prometheus-multicluster-monitoring"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 [Prometheus](https://prometheus.io/), coupled with

@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/spring/scg-gs.md"
 aliases:
 - "/guides/spring/scg-gs"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring. For more information, make sure to check out [What is Spring Cloud Gateway?](../scg-what-is)
