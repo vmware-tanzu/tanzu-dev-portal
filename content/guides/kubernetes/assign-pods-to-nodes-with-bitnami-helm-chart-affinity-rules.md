@@ -1,6 +1,7 @@
 ---
 title:  "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
 linkTitle: "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
+description: Using Bitnami Helm Charts to force the Kubernetes scheduler to place pods on specific nodes using affinity rules.
 topics:
 - Kubernetes
 - Containers
@@ -25,7 +26,7 @@ Affinity rules supply a way to force the scheduler to follow specific rules that
 This tutorial will demonstrate the available affinity rules and how they can be adapted to your needs.
 
 
-# Assumptions and Prerequisites
+## Assumptions and Prerequisites
 
 This article assumes that:
 * You have a Google Cloud account. [Register for a Google Cloud account](https://cloud.google.com/free).
@@ -33,7 +34,7 @@ This article assumes that:
 
 {{% callout %}} This guide uses a Kubernetes cluster created in GKE. These steps are the same for all Kubernetes engines. They don't work, however, in Minikube, since with Minikube you only can create single-node clusters. {{% /callout %}}
 
-# How Affinity Rules Work in Bitnami Helm Charts
+## How Affinity Rules Work in Bitnami Helm Charts
 
 All Bitnami infrastructure solutions available in the [Bitnami Helm charts catalog](https://github.com/bitnami/charts/tree/master/bitnami) now include pre-defined affinity rules exposed through the `podAffinityPreset` and `podAntiAffinitypreset` parameters in their `values.yml` file:
 
@@ -56,12 +57,12 @@ Bitnami Helm charts have the `podAntiAffinity` rule with the `soft` value enable
 The following section shows two different use cases of configuring `podAntiaffinity` parameter.
 
 
-# Deploying a Chart Using the `podAntiAffinity` Rule
+## Deploying a Chart Using the `podAntiAffinity` Rule
 
 The following examples illustrate how the `podAntiAffinity` rule works in the context of the Bitnami MySQL Helm chart. They cover two use cases: installing the chart with the default `podAntiAffinity` value and changing the `podAntiAffinity` value from `soft` to `hard`.
 
 
-## Use Case 1: Install the Chart with the Default `podAntiaffinity` Value
+### Use Case 1: Install the Chart with the Default `podAntiaffinity` Value
 
 * Install the Bitnami Helm charts repository by running:
 
@@ -112,7 +113,7 @@ kubectl scale sts/mysql-secondary --replicas 3
 Note that two pods are running in the same node.
 
 
-## Use Case 2: Change the `podAntiAffinity` Value from Soft to Hard
+### Use Case 2: Change the `podAntiAffinity` Value from Soft to Hard
 
 To try the `hard` type of the `podAntiAffinity` rule, deploy the chart again by changing the `secondary.podAntiAffinityPreset` value from `soft` to `hard` as shown below. The chart will deploy the cluster with three nodes and two replicas - one primary and one secondary.
 
