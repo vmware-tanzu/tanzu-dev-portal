@@ -6,13 +6,19 @@ team:
   - Mark Schweighardt
   - Niran Even-Chen
   - Andrew Huffman
-title: "Tanzu Service Mesh: Understand the posture (health and performance) of your distributed application (day 1)"
-weight: 101
+title: "Tanzu Service Mesh: Understand the posture (health and performance) of your distributed application"
+weight: 100
 ---
+
+## Introduction
+
+As microservices applications become more distributed and get deployed across different infrastructures it is becoming more complicated to understand where things live and much harder to manage and troubleshoot. Tanzu Service Mesh helps with that problem by providing the organization with information across different dashboards that allows application owners and operators to understand how their applications are working and their health which makes it also easier to identify where issues are coming from when troubleshooting is required.  
+
+To better understand how to take advantage of the observability capabilities within Tanzu Service mesh let's look at day 1 and day 2 views of the application management with Tanzu Service Mesh.
 
 In very simple terms, a "modern application" is one that the functions and components are broken into a separate set of micro-services. Each function is considered a service, which is an app on its own, where together they create the "Application". These micro-services communicate with each other over the network and because they can be placed on different infrastructures and clouds, it requires the organization to be able to understand the application posture so that it is easier and faster to figure out what is the problem in case that issues arise. 
 
-The following views in Tanzu Service Mesh help the application owner get insight into how the application is built. Each view can be set in 5 minute, 15 , 30 and 1 hour data sets. This is configured in the top right hand of the screen
+The following views in Tanzu Service Mesh help the application owner get insight into how the application is built. Each view can be set to 5 minute, 15 minute, 30 minute, and 1 hour data sets. This is configured in the top right hand of the screen.
 
   * Topology maps - the topology maps, which exist on both the cluster view and the global namespace view, provide a map of the application services, the communication patterns between them and some health status. These maps are generated dynamically by observing the traffic that is flowing between the proxy sidecars on the services and they provide insights into the service dependencies of the application as they instantiated from the traffic patterns.  We can also see some health metrics of those services which we call the "Golden metrics" which are the service's incoming RPS (requests per second), the error rates as seen in the http errors and the P99 Latency to the services response (additional latency metrics can be found in other views). The importance of understanding the dependencies between services in a distributed application is significant as it provides faster detection of cascading as many times issues observed on one service are actually caused by a dependent service. For example, a front end service that seems slow only due to the fact that its data service is overloaded. Knowing how the applications works makes it also easier to know which areas can be bottle necks and even how to model the security policy of the application (which service should talk with which services).  
 

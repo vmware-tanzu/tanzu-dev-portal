@@ -7,12 +7,12 @@ team:
   - Niran Even-Chen
   - Andrew Huffman
 title: "Tanzu Service Mesh: SLO-based Measurement & Monitoring of Applications"
-weight: 103
+weight: 102
 ---
 
 ## Overview
 
-TSM Service level objectives (SLOs) provide a formalized way for Application Operators, Application Owners, and Application Developers to describe, measure, and monitor the performance, quality, and reliability of microservice applications in an automated way.  
+**Service Level Objectives** are a range of target values used to help measure the performance of a service provider or particular service over time. Tanzu Service Mesh Service Level Objectives (SLOs) provide a formalized way for Application Operators, Application Owners, and Application Developers to describe, measure, and monitor the performance, quality, and reliability of microservice applications in an automated way.  
 
 SLOs provide a shared quality benchmark for application teams to reference for gauging service level agreement (SLA) compliance, to make informed decisions around which parts of the application have performance issues and need to be optimized as a part of continuous improvement, and to help ensure a high-quality user experience for application end users.  
 
@@ -39,14 +39,14 @@ Tanzu Service Mesh provides an interface where you can configure SLO targets and
 
 1. **View SLO and SLI Violations** - After you define SLO configurations, you can view and track violations of SLIs and SLOs in real time in the Tanzu Service Mesh Console user interface. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-F114FF5C-E632-4711-9D5F-B25FD980C5EF.html)
 
-1. **Track “Error Budgets”** - Based on SLOs, teams can track “error budgets,” that is, a length of time over which performance can be outside the desired SLIs without violating the SLO. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-9C1D70D7-1C0C-4F72-A39C-42EDCDBB5D9E.html)
+1. **Track “Error Budgets”** - Based on SLOs, teams can track “error budgets,” that is, a metric in which performance or availability can be outside the desired SLIs without violating the SLO. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-9C1D70D7-1C0C-4F72-A39C-42EDCDBB5D9E.html)
 
 1. **Track Autoscaling Impact on Services** - Developers and operators can use the Service Level Objective (SLO) graph to see how Tanzu Service Mesh Service Autoscaler impacts the stated microservice objectives. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/service-autoscaling-with-tsm-user-guide/GUID-E5684E2C-8D32-4422-BA3B-822606D01E6C.html)
 
 
 ## Best Practices
 
-1. **Set High-Level Objectives for Production Environments** – A common measure of the health of a service are latency percentile values. Of the three latency percentiles available to use with Tanzu Service Mesh SLOs, the p99 latency is the most appropriate service level indicator (SLI) for production environments because this metric most fully covers the experience of the users of a service. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-2651936B-E8C7-41C3-AE76-5163611970C3.html)
+1. **Set High-Level Objectives for Production Environments** – A common measure of the health of a service are latency percentile values. Of the three latency percentiles available to use with Tanzu Service Mesh SLOs, the 99th percentile (p99) latency is the most appropriate service level indicator (SLI) for production environments because this metric most fully covers the experience of the users of a service. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-2651936B-E8C7-41C3-AE76-5163611970C3.html)
 
 1. **Use the P90 Latency for SLI Development** – We suggested using the p99 latency to define an SLI. Development environments do not need to have service qualities as high as that of production environments and so can use the p90 latencies for an SLI measurement. [more](https://docs.vmware.com/en/VMware-Tanzu-Service-Mesh/services/slos-with-tsm/GUID-20F1B2A2-7789-44DE-B193-352F8C4BAE23.html)
 
