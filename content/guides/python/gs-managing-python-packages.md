@@ -1,17 +1,23 @@
 ---
-title: "Python Like A Pro: Managing Project Dependencies"
-linkTitle: "Managing Python Project Dependencies"
-metaTitle: "Managing Python Project Dependencies"
-description: "Learn how to isolate your Python dependencies using pyenv-virtualenv. Explore this guide to manage project dependencies and become a Python Pro!"
-topics:
-- Python
+date: '2020-08-19'
+description: Learn how to isolate your Python dependencies using pyenv-virtualenv.
+  Explore this guide to manage project dependencies and become a Python Pro!
+lastmod: '2021-03-07'
+linkTitle: Managing Python Project Dependencies
+metaTitle: Managing Python Project Dependencies
+patterns:
+- Deployment
 tags:
 - Python
 - Development
-patterns:
-- Deployment
 team:
 - Ben Wilcock
+title: 'Python Like A Pro: Managing Project Dependencies'
+topics:
+- Python
+oldPath: "/content/guides/python/gs-managing-python-packages.md"
+aliases:
+- "/guides/python/gs-managing-python-packages"
 ---
 
 ## Why Do You Need This Guide?

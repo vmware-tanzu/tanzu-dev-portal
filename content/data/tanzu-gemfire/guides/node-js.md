@@ -1,13 +1,14 @@
 ---
-title:  "Node.js"
+date: '2021-05-28'
+description: Leveraging Node.js' asynchronous, event-driven JavaScript runtime with
+  Tanzu GemFire's high-concurrency, low-latency data access to improve your applications
+  performance.
+lastmod: '2021-05-28'
 subsection: Node.js
 subsection-parent-page: true
+title: Node.js
 type: data-guides
-
-description: Leveraging Node.js' asynchronous, event-driven JavaScript runtime with Tanzu GemFire's high-concurrency, low-latency data access to improve your applications performance.
 weight: 2
-
-
 ---
 
 Many developers use Node.js to build scalable network applications, leveraging its asynchronous, event-driven JavaScript runtime. In order to respond to REST requests from remote Web apps, the Node.js apps often need access to information kept in a datastore.

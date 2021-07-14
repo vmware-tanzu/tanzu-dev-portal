@@ -1,21 +1,28 @@
 ---
-title: "Automated Code to URL on Kubernetes using Cloud Native Buildpacks, Knative and ArgoCD"
-linkTitle: "From Code to URL with Buildpacks, Knative and ArgoCD"
-description: "Use Cloud Native Buildpacks and Knative to build and run your container image, then automate the deployment with GitOps and ArgoCD."
-weight: 1
+date: '2021-05-12'
+description: Use Cloud Native Buildpacks and Knative to build and run your container
+  image, then automate the deployment with GitOps and ArgoCD.
 featured: true
-topics:
-  - CI-CD
-tags:
-  - CI-CD
-  - ArgoCD
-  - Buildpacks
-  - Kubernetes
-  - Automation
+lastmod: '2021-05-19'
+linkTitle: From Code to URL with Buildpacks, Knative and ArgoCD
 patterns:
-  - Deployment
+- Deployment
+tags:
+- CI-CD
+- ArgoCD
+- Buildpacks
+- Kubernetes
+- Automation
 team:
-  - Boskey Savla
+- Boskey Savla
+title: Automated Code to URL on Kubernetes using Cloud Native Buildpacks, Knative
+  and ArgoCD
+topics:
+- CI-CD
+weight: 1
+oldPath: "/content/guides/ci-cd/cnbp-knative-argocd.md"
+aliases:
+- "/guides/ci-cd/cnbp-knative-argocd"
 ---
 
 Technologies like Docker and Kubernetes simplify the process of building, running and maintaining cloud native applications. At the same time taking source code, building it into a container image and turning it into a deployed application on Kubernetes can be a time consuming process. A large part of the process can be automated with Continuous Integration Systems (CI) and Continuous Deployment(CD) Systems. However there are stages in the build and deployment phases that still need to be defined manually. Most CI systems aren't application aware. They cannot build automated Docker images from source code unless explicitly defined in a spec file like [Dockerfiles](https://docs.docker.com/engine/reference/builder/) or a config file that a CI system can understand. Due to which, Apart from writing application code, you also need to manually define and test Dockerfiles or config files to convert source code into an executable container image. When deploying the image onto Kubernetes, you need to then define various Kubernetes constructs needed to run the application. Like [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), [Services](https://kubernetes.io/docs/concepts/services-networking/service/), [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) etc. This process can add errors, security gaps and overhead.

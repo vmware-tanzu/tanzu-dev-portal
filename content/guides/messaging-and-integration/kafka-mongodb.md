@@ -1,22 +1,28 @@
 ---
-title: "Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Apache Kafka and MongoDB"
-linkTitle: "Kafka with MongoDB"
-parent: Kafka
-description: Integrate Kafka with MongoDB to create scalable, fault-tolerant messaging on Kubernetes
 date: 2020-07-29
-topics:
-- Event Streaming
-- Messaging and Integration
+description: Integrate Kafka with MongoDB to create scalable, fault-tolerant messaging
+  on Kubernetes
+lastmod: '2021-02-05'
+linkTitle: Kafka with MongoDB
+parent: Kafka
+patterns:
+- Eventing
 tags:
 - Kafka
 - MongoDB
 - Bitnami
 - Event Streaming
 - Kubernetes
-patterns:
-- Eventing
 team:
 - Vikram Vaswani
+title: Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Apache
+  Kafka and MongoDB
+topics:
+- Event Streaming
+- Messaging and Integration
+oldPath: "/content/guides/messaging-and-integration/kafka-mongodb.md"
+aliases:
+- "/guides/messaging-and-integration/kafka-mongodb"
 ---
 
 [Apache Kafka](https://kafka.apache.org/) is a popular open source tool for real-time publish/subscribe messaging. It uses a scalable, fault-tolerant cluster for message storage, and it can also be integrated with other open source data-oriented solutions such as [Apache Hadoop](https://hadoop.apache.org/), [Apache Spark](https://spark.apache.org/) or [Apache HBase](https://hbase.apache.org/) for real-time analysis and rendering of streaming data.

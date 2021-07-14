@@ -1,10 +1,16 @@
 ---
-title: "Packaging"
-subsection: "Packaging"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-26'
+subsection: Packaging
 team:
 - John Harris
+title: Packaging
+topics:
+- Kubernetes
+weight: 52
+oldPath: "/content/guides/kubernetes/packaging.md"
+aliases:
+- "/guides/kubernetes/packaging"
 ---
 
 In Kubernetes, the desired state of the system is declared via resources sent to the API Server.

@@ -1,20 +1,26 @@
 ---
-# remove "draft:true" when ready for final publication 
-title: "Speedback Feedback"
-linkTitle: "Speedback"
-description: "Speedback is a session where the “speed-dating” format is applied for exchanging feedback within a group of people, usually a team. It is intentional, timeboxed feedback gathering."
-tags: ["Delivery"]
-length: "10min per session plus prep"
-participants: "Delivery team: PMs, Designers, and Engineers"
-image: "default-cover.png" 
-lastmod: "2021-03-23"
-why: 
-- Speedback is an opportunity for all participants to give and receive a wide breadth of feedback within a relatively short amount of time. Speedback is also an accessible means to introduce a culture of feedback.
-when:
-- As needed; suggest Quarterly
+date: '2021-03-26'
+description: Speedback is a session where the “speed-dating” format is applied for
+  exchanging feedback within a group of people, usually a team. It is intentional,
+  timeboxed feedback gathering.
+image: default-cover.png
+lastmod: '2021-03-26'
+length: 10min per session plus prep
+linkTitle: Speedback
+participants: 'Delivery team: PMs, Designers, and Engineers'
+tags:
+- Delivery
+title: Speedback Feedback
 what:
 - Note-taking materials or app
+when:
+- As needed; suggest Quarterly
+why:
+- Speedback is an opportunity for all participants to give and receive a wide breadth
+  of feedback within a relatively short amount of time. Speedback is also an accessible
+  means to introduce a culture of feedback.
 ---
+
 ## How to Use this Method
 It is recommended that a person outside the team facilitates the Speedback sessions. This person’s responsibilities include introducing the Speedback concept (including emphasizing the prep work involved) ahead of time, planning rooms and rounds (who talks to who when and where), keeping time/enforcing switches, and being available to help facilitate feedback sessions if asked. By default, this person does not sit in on any feedback sessions. 
 

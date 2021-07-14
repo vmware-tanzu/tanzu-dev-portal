@@ -1,28 +1,33 @@
 ---
-title: "Goals & Anti-Goals"
-tags: ["Kickoff", "Inception", "Remote"]
-length: "45 - 60 mins"
-participants: "Core team, stakeholders"
-image: "goals-anti-goals/cover.png"
-description: "Identify and prioritize key product, business, project, and/or consulting engagement goals and anti-goals (non-goals)"
-lastmod: "2019-02-24"
+date: '2021-02-09'
+description: Identify and prioritize key product, business, project, and/or consulting
+  engagement goals and anti-goals (non-goals)
+image: goals-anti-goals/cover.png
+lastmod: '2021-03-17'
+length: 45 - 60 mins
+miro_template_url: https://miro.com/miroverse/goals-and-anti-goals/
+participants: Core team, stakeholders
 remote: true
-miro_template_url: "https://miro.com/miroverse/goals-and-anti-goals/"
-
-why:
-- Goals help the team decide where to focus their time and efforts. By developing them hand-in-hand with stakeholders, we can align ourselves around shared goals and avoid any unnecessary or unwanted surprises down the road.
-
-when:
-- We do this as early as possible during a project, usually defining them during Kickoff and revisiting them at Inception.
-
+tags:
+- Kickoff
+- Inception
+- Remote
+title: Goals & Anti-Goals
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Sharpies
 - Painter's tape (optional)
-
+when:
+- We do this as early as possible during a project, usually defining them during Kickoff
+  and revisiting them at Inception.
+why:
+- Goals help the team decide where to focus their time and efforts. By developing
+  them hand-in-hand with stakeholders, we can align ourselves around shared goals
+  and avoid any unnecessary or unwanted surprises down the road.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Draw 4 columns on the whiteboard, one for each type of goal. Put anti-goal column off to the side to introduce it later.

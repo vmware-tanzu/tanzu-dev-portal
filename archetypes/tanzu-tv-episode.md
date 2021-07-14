@@ -9,7 +9,8 @@ hosts:
 guests:
 -
 minutes: 60
-Date: "2020-04-07"
+date: "{{ now.Format "2006-01-02" }}"
+lastmod: "{{ now.Format "2006-01-02" }}"
 PublishDate: "2020-04-01"
 episode_image: "/images/tv/episodes/show/0000.jpg"
 episode_banner: "/images/tv/episodes/show/0000.jpg"

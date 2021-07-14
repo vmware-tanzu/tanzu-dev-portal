@@ -1,26 +1,31 @@
 ---
-title: "Story Mapping"
-tags: ["Framing", "Inception"]
-length: "1 hour"
-participants: "Core team, stakeholders"
-image: "default-cover.png"
-description: "Plan release cycles by organizing user stories into a step-by-step segmented flow"
-lastmod: "2019-02-03"
-
-
-why:
-- We use story mapping to collaboratively translate the users’ journey into tasks, broken down into epics and user stories as we transition from Discovery & Framing to delivery. This helps us to sequence user tasks, create a prioritized product backlog and chunk initial product releases. A story map also creates shared understanding about the functionality of the product.
-
-when:
-- During inception, to translate Discovery & Framing outcomes (likely a product prototype and user journeys) into a prioritized product backlog.   
-
+date: '2021-02-09'
+description: Plan release cycles by organizing user stories into a step-by-step segmented
+  flow
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1 hour
+participants: Core team, stakeholders
+tags:
+- Framing
+- Inception
+title: Story Mapping
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Markers
 - Blue painter's tape
-
+when:
+- During inception, to translate Discovery & Framing outcomes (likely a product prototype
+  and user journeys) into a prioritized product backlog.
+why:
+- We use story mapping to collaboratively translate the users’ journey into tasks,
+  broken down into epics and user stories as we transition from Discovery & Framing
+  to delivery. This helps us to sequence user tasks, create a prioritized product
+  backlog and chunk initial product releases. A story map also creates shared understanding
+  about the functionality of the product.
 ---
+
 ## How to Use this Method
 ### Sample Agenda & Prompts
 1. Before mapping, create a short product or feature brief to frame and constrain what you map. Think of this as the big story. What is the product you are creating or the problem you are solving? Who are the customers or users? How does each user benefit? Why are you interested in building this and how do you benefit?
@@ -82,5 +87,3 @@ Share out at Inception
 Coming soon! 
 
 ## Recommended Reading
-
-

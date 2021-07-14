@@ -6,7 +6,7 @@ html  {
   .td-sidebar,
   body,
   .td-outer,
-  .td-box--gray-dark,
+  .td-box--gray-:not(.linked-box),
   section,
   .td-main,
   .bg-gray-dark:not(footer):not(.card):not(.linked-box),
@@ -95,6 +95,7 @@ nav .nav-item:last-child {
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
+.feedback a,
 #TableOfContents a,
 .practices a,
 main ul a,
@@ -125,10 +126,14 @@ a.h4 {
   border-bottom: 0px !important;
 }
 .col-4-thumbnail {
-  &:hover .video-description {
+  &:hover {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500%;
     animation: gradient 3.5s ease infinite;
+
+    .video-description {
+      background: transparent !important;
+    }
   }
   .video-description {
     background-color: #17242C;
@@ -143,7 +148,11 @@ a.h4 {
 .featured-section .featured-link,
 .td-home .topic > p > a {
   border: 0px !important;
+
   &:hover {
+    .link {
+      color: white !important;
+    }
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500%;
     animation: gradient 3.5s ease infinite;
@@ -172,8 +181,10 @@ a.h4 {
 footer a {
   color: white !important;
 }
-.btn {
-  background-color: #17242C !important;
+footer .btn.btn-small,
+.btn,
+a.btn, {
+  background-color: #17242C;
   &:hover {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500%;

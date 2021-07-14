@@ -1,39 +1,38 @@
 ---
-# remove "draft:true" when ready for final publication 
+date: '2021-03-02'
+description: A communication and planning tool that shows sequential outcomes that
+  help execute your strategy and build towards your vision.
 draft: false
-title: "Outcome-Oriented Roadmap"
-linkTitle: "Outcome Oriented Roadmap"
-description: "A communication and planning tool that shows sequential outcomes that help execute your strategy and build towards your vision."
-tags: ["Discovery", "Framing"]
-length: "2+ hours (block enough time or consider breaking the activity into two sessions)"
-participants: "Product Manager(s), core team, stakeholders"
-# custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
-lastmod: "2021-02-25"
-why: 
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 2+ hours (block enough time or consider breaking the activity into two sessions)
+linkTitle: Outcome Oriented Roadmap
+miro_template_url: ''
+participants: Product Manager(s), core team, stakeholders
+remote: false
+tags:
+- Discovery
+- Framing
+title: Outcome-Oriented Roadmap
+what:
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Sticky notes
+- Sharpies
+- Painter’s tape
+- 'For Remote: [Miro](https://miro.com/)'
+when:
+- You’ve started development but don’t have a roadmap
+- During development, you need a way to align your backlog with your goals and metrics
+- Product sponsors and stakeholders ask for more visibility into the product direction
+  and your progre
+why:
 - Align our day-to-day work with the product vision and strategy
 - Keep focused on one goal at a time, and move metrics incrementally
 - Prioritize based on business & user value
 - Establish and maintain stakeholder and cross-team alignment, collaboration and visibility
 - Create a backlog
-
-when:
-- You’ve started development but don’t have a roadmap
-- During development, you need a way to align your backlog with your goals and metrics
-- Product sponsors and stakeholders ask for more visibility into the product direction and your progre
-
-what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Sticky notes
-- Sharpies
-- Painter’s tape
-- "For Remote: [Miro](https://miro.com/)"
-
-# If this practice or workshop has a Miro template: remote: true
-remote: false
-miro_template_url: "" 
-
 ---
+
 ## How to Use this Method
 Using outcome-oriented roadmaps, rather than organizing our roadmaps around fixed features and dates, helps us to visibly communicate what the value is of what we want to achieve while maintaining flexibility in how we implement.
 

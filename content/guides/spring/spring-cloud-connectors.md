@@ -1,18 +1,23 @@
 ---
-title:  "What are Spring Cloud Connectors?"
-linkTitle: "Spring Cloud Connectors"
-subsection: "Spring Cloud Connectors"
-weight: 5
-topics:
-- Spring
+date: '2021-02-24'
+lastmod: '2021-02-24'
+linkTitle: Spring Cloud Connectors
+patterns:
+- API
+subsection: Spring Cloud Connectors
 tags:
 - Kafka
 - Spring
 - Spring Data
 - Spring Cloud
 - Spring Cloud Connectors
-patterns:
-- API
+title: What are Spring Cloud Connectors?
+topics:
+- Spring
+weight: 5
+oldPath: "/content/guides/spring/spring-cloud-connectors.md"
+aliases:
+- "/guides/spring/spring-cloud-connectors"
 ---
 
 [Spring Cloud Connectors](https://cloud.spring.io/spring-cloud-connectors/) is a project that simplifies the process of connecting Spring applications to services in cloud platforms and gaining operational awareness of those platforms. It is designed for extensibility: you can use one of the provided cloud connectors or write one for your cloud platform, you can use the built-in support for commonly-used services (like relational databases, MongoDB, Redis, RabbitMQ), or extend Spring Cloud Connectors to work with your own services.
@@ -234,10 +239,3 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 For more information about Spring Cloud Connectors and a Quick Start tutorial, refer to the [Spring Cloud Connectors page on Spring.io](https://cloud.spring.io/spring-cloud-connectors/). You may also want to learn more about [Extending Spring Cloud Connectors](http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html#_extending_spring_cloud_connectors). 
 
 To learn about connecting to external datasources, see the guide [Spring Cloud Connectors and Datasources](/guides/spring/spring-cloud-connectors-datasources).
-
-
-
-
-
-
-

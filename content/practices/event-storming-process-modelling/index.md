@@ -1,6 +1,6 @@
 ---
 # remove "draft:true" when ready for final publication 
-draft: true
+draft: false
 
 title: "Event Storming | Process Modelling"
 linkTitle: "Event Storming | Process Modelling - Will Appear in Links"

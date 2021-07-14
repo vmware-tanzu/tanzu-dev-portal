@@ -12,6 +12,7 @@ participants: "Who should be in this workshop? Examples include Core team, produ
 # custom "cover" image example: "boris/boris.png"
 image: "default-cover.png" 
 lastmod: "{{ now.Format "2006-01-02" }}"
+date: "{{ now.Format "2006-01-02" }}"
 why: 
 - The first reason why you might perform this practice
 - Second if needed

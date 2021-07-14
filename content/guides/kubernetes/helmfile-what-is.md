@@ -1,13 +1,25 @@
 ---
-title:  "What is Helmfile?"
-parent: "Packaging"
-description: Helmfile is a declarative specification for deploying distributions of Helm charts and provides additional functionality to Helm.
-topics: ["Kubernetes"]
-weight: 4
-tags: ["Kubernetes", "Containers", "Helm", "Helmfile"]
-patterns: ["Deployment"]
+date: '2020-04-30'
+description: Helmfile is a declarative specification for deploying distributions of
+  Helm charts and provides additional functionality to Helm.
+lastmod: '2021-03-07'
+parent: Packaging
+patterns:
+- Deployment
+tags:
+- Kubernetes
+- Containers
+- Helm
+- Helmfile
 team:
 - Paul Czarkowski
+title: What is Helmfile?
+topics:
+- Kubernetes
+weight: 4
+oldPath: "/content/guides/kubernetes/helmfile-what-is.md"
+aliases:
+- "/guides/kubernetes/helmfile-what-is"
 ---
 
 [Helmfile](https://github.com/roboll/helmfile) adds additional functionality to [Helm](https://helm.sh) by wrapping it in a declarative spec that allows you to compose several charts together to create a comprehensive deployment artifact for anything from a single application to your entire infrastructure stack.

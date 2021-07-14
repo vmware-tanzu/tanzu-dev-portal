@@ -1,14 +1,19 @@
 ---
-title: "What is Bitnami?"
-linkTitle: "Bitnami"
-subsection: "Bitnami"
-topics:
-- Containers
-- Kubernetes
+date: '2021-02-05'
+lastmod: '2021-02-05'
+linkTitle: Bitnami
+subsection: Bitnami
 tags:
 - Bitnami
 team:
 - Brad Bock
+title: What is Bitnami?
+topics:
+- Containers
+- Kubernetes
+oldPath: "/content/guides/containers/what-is-bitnami.md"
+aliases:
+- "/guides/containers/what-is-bitnami"
 ---
 
 Bitnami is an application packaging and publishing startup that was acquired by VMware in 2019. It is a leading provider of prepackaged open source software that runs natively in environments where the lion’s share of developers and other users want to build or deploy applications: in the major public clouds, on laptops, and on Kubernetes. 
@@ -31,4 +36,3 @@ You can also find Bitnami cloud images and containers in the cloud marketplaces 
 Each Bitnami app has extensive documentation that makes it easy to get started. Check out [Bitnami Documentation](https://docs.bitnami.com) for more information.
 
 In addition to great content across many different marketplaces, Bitnami also has a large community—of more than 3 million developers! On the Bitnami Community page, Bitnami engineers and fellow developers help each other when they run into trouble, need ideas on how to use Bitnami stacks, or want to discuss topics like open source software.
-

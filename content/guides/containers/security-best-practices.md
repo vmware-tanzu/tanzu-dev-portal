@@ -1,19 +1,24 @@
 ---
-title:  "Best Practices for Securing and Hardening Container Images"
-linkTitle: "Container Security Best Practices"
+date: '2021-02-05'
 description: Learn how Bitnami applies security best practices to its containers.
-topics:
-- Containers
+lastmod: '2021-02-05'
+linkTitle: Container Security Best Practices
+patterns:
+- Deployment
 tags:
 - Bitnami
 - Docker
 - Containers
 - Kuberenetes
 - Security
-patterns:
-- Deployment
 team:
 - Carlos Rodriguez Hernandez
+title: Best Practices for Securing and Hardening Container Images
+topics:
+- Containers
+oldPath: "/content/guides/containers/security-best-practices.md"
+aliases:
+- "/guides/containers/security-best-practices"
 ---
 
 When a container is built and/or used, it is important to ensure that the image is built by following best practices in terms of security, efficiency, performance, etc. This article will go over some of the key points Bitnami takes into account when publishing Bitnami containers. It covers image tagging, non-root configuration and arbitrary UIDs, the importance of reducing size and dependencies, and the release process, including CVE scanning and tests.

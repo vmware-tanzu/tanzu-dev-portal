@@ -1,22 +1,28 @@
 ---
-title: "Assumptions"
-tags: ["Kickoff", "Discovery"]
-lastmod: "2019-03-09"
-length: "30 - 60 mins"
-participants: "Core team, stakeholders (optional)"
-image: "assumptions/cover.png"
-description: "Create a list of assumptions and identify which are the riskiest"
-why:  
-- We do this because if we do not identify and address our implicit assumptions, we may make uninformed decisions about the project or product's direction. The output of this exercise can be used to generate user research questions.
+date: '2021-02-09'
+description: Create a list of assumptions and identify which are the riskiest
+image: assumptions/cover.png
+lastmod: '2021-03-16'
+length: 30 - 60 mins
+participants: Core team, stakeholders (optional)
+tags:
+- Kickoff
+- Discovery
+title: Assumptions
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Small sticky notes
 - Sharpies / markers
 - Painter's tape (for making a 2x2)
 when:
-- We try to do this early in the project process in advance of any user research—often in the Kickoff itself.
-
+- We try to do this early in the project process in advance of any user research—often
+  in the Kickoff itself.
+why:
+- We do this because if we do not identify and address our implicit assumptions, we
+  may make uninformed decisions about the project or product's direction. The output
+  of this exercise can be used to generate user research questions.
 ---
+
 ## How to Use this Method
 
    {{% callout %}}
@@ -88,4 +94,3 @@ Exploratory Interviews - Coming soon!
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
 
 ## Recommended Reading
-
