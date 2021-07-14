@@ -32,4 +32,4 @@ During this workshop you will automate the testing and deployment of a Spring Bo
     - Integration testing for databases using Flyway and Testcontainers
 - Automate testing using GitHub Actions
 - Automate container builds using kpack
-- Automate deployment to Kubernetes using GitOps an ArgoCD
+- Automate deployment to Kubernetes using GitOps and ArgoCD
