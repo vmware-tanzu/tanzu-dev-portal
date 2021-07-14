@@ -1605,9 +1605,8 @@ Templeton
 Teotti
 Teppanyaki
 Terraform(-ing)?
+[Tt]est[Cc]ontainers
 testability
-TestContainers
-testcontainers
 TGI(K)?
 tgz
 Thanos
