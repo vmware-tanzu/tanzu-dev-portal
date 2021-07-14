@@ -5,7 +5,7 @@ draft: false
 hidden: true
 lab: lab-springone-tour-devops
 lastmod: '2021-07-09'
-length: 120
+length: 210
 title: SpringOne Tour DevOps
 preview: /images/tv/episodes/springone-tour/S1T-Twitter-FB-July.png
 summary:
