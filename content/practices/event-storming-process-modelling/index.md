@@ -2,8 +2,8 @@
 # remove "draft:true" when ready for final publication 
 draft: false
 
-title: "Event Storming | Process Modelling"
-linkTitle: "Event Storming | Process Modelling - Will Appear in Links"
+title: "EventStorming | Process Modelling"
+linkTitle: "EventStorming | Process Modelling - Will Appear in Links"
 description: "A workshop for facilitating discussions around an outcome based view of a process or workflow, with flexible levels of detail and complexity."
 # Note: remove any tags that are not relevant.
 tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
@@ -22,7 +22,7 @@ when:
 - When validating process changes that might help solve a problem
 what:
 - "Large wall or digital collaboration space like [Miro](https://miro.com/)"
-- 5+ different colored sticky notes (when using this in conjunction with Event Storming and/or BORIS + SNAPe keep consistency in colors)
+- 5+ different colored sticky notes (when using this in conjunction with EventStorming and/or BORIS + SNAPe keep consistency in colors)
 - Sharpies
 
 ---
@@ -37,7 +37,7 @@ The output from these workshops can be used to discover, validate or design a sy
 #### Sample Agenda & Prompts - 
 1. Arrange the board:
      - Label the board to identify a name for the process being explored
-     - From the main event storming board, identify a selection of key events that describe an end to end process within the larger system and copy them to another board. 
+     - From the main storming board, identify a selection of key events that describe an end to end process within the larger system and copy them to another board. 
        - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left with the title Preconditions
        - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process
        - Arrange any remaining events in a chronological order from left to right between the preconditions and optimal outcomes. Do not worry about accuracy, as the events are narrated, be prepared to change, add or remove events
@@ -82,14 +82,14 @@ The output from these workshops can be used to discover, validate or design a sy
 
 ## Related Practices:
 ### `EventStorming`
-As mentioned Process Modelling evolved from `EventStorming` and is a fundamental part of the complete application of Event Storming as prescribed by Alberto Brandolini. However the storming phase, or `Big Picture` as referred to by Alberto Brandolini, has been more widely adopted with minor variations to the original, such as the use of [Event Storming](/practices/event-storming)  as described in this Developer Center. Therefore Process Modelling naturally offers a way to enrich any `EventStorming` session
+As mentioned Process Modelling evolved from `EventStorming` and is a fundamental part of the complete the tool, as prescribed by Alberto Brandolini. However the storming phase, or `Big Picture` as referred to by Alberto Brandolini, has been more widely adopted with minor variations to the original, such as the use of [EventStorming](/practices/event-storming)  as described in this Developer Center. Therefore Process Modelling naturally offers a way to enrich any `EventStorming` session
 ### UML/C4/Boris
 if you are using an Object Oriented based notation to model your architecture, Process Modelling offers an algorithmic view of the problem you are solving, and can be used to complete a number of diagrams as the process is narrated.
 ### Boris and SNAP
 The grammar used by Process Modelling offers a lot of information that can be directly used in the completion of [Boris](/practices/boris) and [SNAP](/practices/boris) exercises. 
 
 ### Variations:
-### Event Storming | Software Modelling
+### EventStorming | Software Modelling
 This is an extension of Process Modelling and is represented by Alberto Brandolini as a third phase in the `EventStorming` methodology. It is primarily used to identify an aggregate responsible for the execution of one or more commands.
 #### Sample Agenda & Prompts
 1. Arrange the board:
@@ -104,20 +104,20 @@ The primary focus of this is to define a domain driven solution to support the p
   - Software Model
 
 ### When discovering a pipeline or workflow
-Often when using Process Modelling to investigate or discover specific workflows or pipelines, event storming can be done as a short session as part of the process modelling or skipped entirely in favor of narration. Also grammar might be a lot more flexible, as you may only need events and commands to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
+Often when using Process Modelling to investigate or discover specific workflows or pipelines, EventStorming can be done as a short session as part of the process modelling or skipped entirely in favor of narration. Also grammar might be a lot more flexible, as you may only need events and commands to visualise the process. This can also be useful when comparing processes to identify a good solution, as you do not want to spend too much time on detailed grammar
 
 #### Sample Agenda & Prompts
-For the most part the agenda is the same as formal process modelling, however the grammar is more ad-hoc and there is some initial discovery as you are not starting with an Event Storming board
+For the most part the agenda is the same as formal process modelling, however the grammar is more ad-hoc and there is some initial discovery as you are not starting with an EventStorming board
 
 1. Arrange the board: 
      - Start by identifying the target process and label the board
      - Add the grammar as with the formal method
      - Discover at least one suitable precondition and one outcome and arrange them as with the formal method
 
-1. Optional: At this point you can ask participants to "event storm" events in between, but this should be time-boxed to 10 minutes
+1. Optional: At this point you can ask participants to "storm" events in between, but this should be time-boxed to 10 minutes
 
 1. First Narration: As with the formal method, attempt to narrate a `golden path` through the board.
-     - If you did not event storm then your main goal here is to discover interesting events as you try to identify how the process gets from precondition to outcome
+     - If you did not storm for events then your main goal here is to discover interesting events as you try to identify how the process gets from precondition to outcome
      - At this level you will often find more passive aggressive events. For this reason identify them early and if you want to leave them "un-squashed" only represent them as either events or commands and events
   
 1. Narrate the process again, as with the formal method you can include more grammar and correct inaccuracies. 
@@ -146,5 +146,5 @@ Thin Slices: Thin Slices can be heavily influenced by the goals of your project,
 ## Recommended Reading
 - [50,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=1i6QYvYhlYQming/)
 - [100,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=fGm62ra_mQ8)
-- [Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
+- [Remote EventStorming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
 - [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
