@@ -1,25 +1,14 @@
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#open-projects-issues-and-content-backlog">Open Projects, Issues, and Content Backlog</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#code-of-conduct">Code of Conduct</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Open Projects, Issues, and Content Backlog](#open-projects-issues-and-content-backlog)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
 
 
 ## About The Project
