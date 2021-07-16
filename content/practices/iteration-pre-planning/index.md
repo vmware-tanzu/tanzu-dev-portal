@@ -61,7 +61,7 @@ You know you are done when all stories staged for IPM are ready to be estimated 
 You know it’s working when improvement is observed in the issues identified in Step 1.
 
 
-#### Facilitator Notes & Tips
+## Facilitator Notes & Tips
 - Iteration pre-planning tends to be a relatively informal discussion without heavy facilitation.
 - The outcome doesn’t need to be perfect, only serve as a “first pass” to catch the issues most likely to provoke waste on unwanted tangents.
 - Because of their involvement in writing them, engineers who attend iteration pre-planning are in a position to help advocate for the product direction expressed in the stories during IPM.
