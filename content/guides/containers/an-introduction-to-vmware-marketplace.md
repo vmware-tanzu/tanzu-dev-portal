@@ -2,18 +2,19 @@
 title:  "An Introduction to VMware Marketplace"
 linkTitle: "An Introduction to VMware Marketplace"
 subsection: An Introduction to VMware Marketplace
+description: Learn how developers can discover, try, download, and deploy over 2,000 open source and third-party solutions directly from VMware Marketplace.
 topics:
 - Containers
 tags:
 - Marketplace
 # Author(s)
 team:
--
+- 
 date: "2021-07-16"
 lastmod: "2021-07-16"
 ---
 
-VMware Marketplace is platform for developers to discover, try, download, and deploy solutions from third-party, open source, and first party vendors. From the Marketplace, developers have the convenience and flexibility to directly deploy solutions to VMware environments such as VMware Tanzu or VMware Cloud.  
+VMware Marketplace is a platform for developers to discover, try, download, and deploy solutions from third-party, open source, and first party vendors. From the Marketplace, developers have the convenience and flexibility to directly deploy solutions to VMware environments such as VMware Tanzu or VMware Cloud.  
 
 With over 2,000 solutions from hundreds of partners available to deploy, there are solutions to fit everyone’s needs — whether you are a software developer, DevOps manager, cloud administrator, or anything in between.   
 
@@ -38,15 +39,15 @@ For quick demos on how to deploy solutions directly to various VMware environmen
 
 ## How to find solutions on the Marketplace 
 
-If you know what you’re looking for, use the key word-based search to navigate to a solution.  
+If you know what you’re looking for, use the keyword-based search to navigate to a solution.  
 
 Otherwise, utilize the side navigation filters on VMware Marketplace to sort through Publisher, Content Type (containers, machine images, and more), Platform Type, Pricing, and Validated/Certified solutions (Partner Ready, VMware Ready) to find solutions.  
 
 
 ## Further reading 
 
-You can start browsing and deploying solutions now by navigating to VMware Marketplace. To start deploying solutions, sign into VMware Marketplace by clicking **Create a Marketplace Account**. For additional information, refer to Resources or read our FAQ.  
+You can start browsing and deploying solutions now by navigating to [VMware Marketplace](https://marketplace.cloud.vmware.com). To start deploying solutions, sign in to VMware Marketplace by clicking **Create a Marketplace Account**. For additional information, refer to [Resources](https://www.vmware.com/products/vmware-marketplace.html) or read our [FAQ](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/market-place/vmw-marketplace-faq.pdf).  
 
-For the latest, up-to-date information on VMware Marketplace content, keep following Tanzu Developer Center or our YouTube and Twitter.  
+For the latest, up-to-date information on VMware Marketplace content, keep following Tanzu Developer Center or our [YouTube](https://www.youtube.com/playlist?list=PLNOz1mVhDkG7NNz6UyUzCqTbLj91GUvoZ) and [Twitter](https://twitter.com/vmwmarketplace).  
 
 Questions? Contact us at [VMwareMarketplace@vmware.com](mailto:VMwareMarketplace@vmware.com). 
