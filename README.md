@@ -1,5 +1,4 @@
-## Table of Contents
-- [Table of Contents](#table-of-contents)
+
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -15,7 +14,7 @@
 
 ![Tanzu Developer Center Screen Shot](static/images/github/homepage-screenshot.png)
 
-The VMware Tanzu Develoer Center is VMware's site built specifically with devlopment teams in mind. Above all, our guiding pribiples for content included on the Tanzu Developer Center is that if the reader is excited about a topic, they don't have to contact a sales rep or purchase a pricey license because all content in the Tanzu Developer Center is immediately actionable, either because it is open source, or there is an easily accessible trial.Above all, we want the Tanzu Developer Center to be a great resource for software development teams. 
+The VMware Tanzu Developer Center is VMware's site built specifically with developer teams in mind. Above all, our guiding principles for content included on the Tanzu Developer Center is that if the reader is excited about a topic, they don't have to contact a sales rep or purchase a pricey license because all content in the Tanzu Developer Center is immediately actionable, either because it is open source, or there is an easily accessible trial. Above all, we want the Tanzu Developer Center to be a great resource for software development teams. 
 
 Beyond this, the Tanzu Developer Center is fully open source, and contributions from all teams within VMware, as well as individuals without. Check out the [contributing](#contributing) section below for more details.
 
@@ -77,7 +76,7 @@ See the [open issues](https://github.com/vmware-tanzu/tanzu-dev-portal/issues) a
 
 Contributions are what make open source and the developer community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-The contribution process is documented fully on our GitHub [wiki site](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki) and includes methods for both VMware empolyees as well as non-employees to contribute to content or bug fixes.
+The contribution process is documented fully on our GitHub [wiki site](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki) and includes methods for both VMware employees as well as non-employees to contribute to content or bug fixes.
 
 
 ## Code of Conduct
