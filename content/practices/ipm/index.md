@@ -101,7 +101,7 @@ Firstly, the team should have a shared understanding of the scope and relative c
 None at the moment. 
 
 ### Preceding
-Pre-IPM (coming soon)
+[Pre-IPM](/practices/pre-ipm) (optional)
  
 ### Following
 None at the moment.
