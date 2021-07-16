@@ -1,6 +1,6 @@
 ---
 # remove "draft:true" when ready for final publication 
-draft: true
+draft: false
 
 title: "Pre-IPM"
 linkTitle: "Pre-IPM"
