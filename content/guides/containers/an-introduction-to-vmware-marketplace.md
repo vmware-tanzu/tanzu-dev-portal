@@ -1,5 +1,5 @@
 ---
-title:  "An Introduction to VMware Marketplace?"
+title:  "An Introduction to VMware Marketplace"
 linkTitle: "An Introduction to VMware Marketplace"
 subsection: An Introduction to VMware Marketplace
 weight: 1
