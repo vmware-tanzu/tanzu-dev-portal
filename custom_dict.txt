@@ -201,6 +201,7 @@ Bundler
 [Bb]urstable
 Buschmann
 bytesOnlyOnDisk
+C4
 CA(s)?
 Cacheable
 CacheCallback
@@ -327,6 +328,7 @@ counterintuitive
 COVID-19
 CPUs
 CQL
+CQRS
 CRD(s|-based)?
 create-load-balancer
 createEntry
@@ -518,6 +520,7 @@ EventID
 eventQueueSize
 eventsDistributed
 eventsQueued
+EventStorming
 [Ee]xecutables
 expander(s)?
 expensed
@@ -1662,6 +1665,7 @@ UAA
 UCD
 UDP
 UI(s|-based)?
+UML
 (un)?marshalling
 unannotated
 uncomment
