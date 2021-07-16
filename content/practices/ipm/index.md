@@ -101,7 +101,7 @@ Firstly, the team should have a shared understanding of the scope and relative c
 None at the moment. 
 
 ### Preceding
-[Pre-IPM](/practices/pre-ipm) (optional)
+[Iteration pre-planning](/practices/iteration-pre-planning) (optional)
  
 ### Following
 None at the moment.

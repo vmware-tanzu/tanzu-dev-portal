@@ -2,9 +2,9 @@
 # remove "draft:true" when ready for final publication 
 draft: false
 
-title: "Pre-IPM"
-linkTitle: "Pre-IPM"
-description: "An optional planning session to make the [Iteration Planning Meeting (IPM)](/practices/ipm) more productive if needed."
+title: "Iteration Pre-Planning"
+linkTitle: "Iteration Pre-Planning"
+description: "An optional planning session to make the Iteration Planning Meeting (IPM) more productive if needed."
 tags: ["Delivery"]
 length: "30 min - 1 hour"
 participants: "Product managers, 1-2 engineers"
@@ -12,7 +12,7 @@ image: "default-cover.png"
 lastmod: "2021-07-15"
 date: "2021-07-14"
 why: 
-- If a team finds that an excessive amount of time in [IPM](/practices/ipm) is spent on revising stories before estimation, editing or grooming them in a smaller group beforehand can help the larger meeting produce better results.
+- If a team finds that an excessive amount of time in the [Iteration Planning Meeting (IPM)](/practices/ipm) is spent on revising stories before estimation, editing or grooming them in a smaller group beforehand can help the larger meeting produce better results.
 when:
 - Shortly before IPM
 - Only when it is needed
@@ -26,7 +26,7 @@ miro_template_url: "URL for related Miro template"
 ---
 ## How to Use this Method
 
-1. Before you begin, decide as a team whether the outcomes of your [iteration planning meetings (IPMs)](/practices/ipm) even make pre-IPM necessary.
+1. Before you begin, decide as a team whether the outcomes of your [iteration planning meetings (IPMs)](/practices/ipm) even make iteration pre-planning necessary.
    Common indications include:
    - IPM often ends with fewer stories estimated than needed to keep up with velocity
    - IPM often runs over the allotted time
@@ -62,10 +62,10 @@ You know it’s working when improvement is observed in the issues identified in
 
 
 #### Facilitator Notes & Tips
-- Pre-IPM tends to be a relatively informal discussion without heavy facilitation.
+- Iteration pre-planning tends to be a relatively informal discussion without heavy facilitation.
 - The outcome doesn’t need to be perfect, only serve as a “first pass” to catch the issues most likely to provoke waste on unwanted tangents.
-- Because of their involvement in writing them, engineers who attend pre-IPM are in a position to help advocate for the product direction expressed in the stories during IPM.
-- Pre-IPM can be a great opportunity to get detailed feedback about story quality, and for all present to improve as story writers.
+- Because of their involvement in writing them, engineers who attend iteration pre-planning are in a position to help advocate for the product direction expressed in the stories during IPM.
+- Iteration pre-planning can be a great opportunity to get detailed feedback about story quality, and for all present to improve as story writers.
 
 
 ## Related Practices
