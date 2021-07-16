@@ -4,7 +4,7 @@ description: Summarize “at-a-glance” how users, business and technology meet
   a business opportunity.
 image: lean-business-canvas/step-1.png
 lastmod: '2021-03-17'
-length: 1 - 2 hrs
+length: 1-2 hours
 participants: Core team, stakeholders
 tags:
 - Kickoff

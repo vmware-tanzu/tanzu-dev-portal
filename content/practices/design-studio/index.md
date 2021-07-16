@@ -4,7 +4,7 @@ description: Understand the problem from different team perspectives and generat
   many solution sketches using scenario as a guide
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 60 - 90 mins
+length: 60-90 min
 participants: Core team, subject matter experts (SMEs)
 tags:
 - Discovery

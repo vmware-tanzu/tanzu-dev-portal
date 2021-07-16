@@ -4,7 +4,7 @@ description: Quickly generate many possible solutions after identifying who the 
   is and what problem they have
 image: molecule-map/cover.png
 lastmod: '2021-03-24'
-length: 45 min - 1 hour
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/molecule-map/
 participants: Core team, stakeholders
 remote: true

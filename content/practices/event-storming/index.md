@@ -4,7 +4,7 @@ description: Drive out the domains, bounded contexts and services of a system to
   vertical slices,  trouble spots and starting points for rearchitecting the system
 image: event-storming/example-2.jpg
 lastmod: '2021-03-17'
-length: 1 - 2 hours; multiple runs may be needed
+length: 1-2 hours; multiple runs may be needed
 participants: Business stakeholders, business analysts, executives, developers, architects,
   team leads, domain experts, core team
 tags:

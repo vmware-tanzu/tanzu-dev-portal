@@ -4,7 +4,7 @@ description: A set of lightweight techniques using agile and Domain Driven Desig
   (DDD) principles that help teams plan enough to start modernizing software systems
 image: swift-method/swift.png
 lastmod: '2021-03-04'
-length: 2 - 4 days if done end-to-end
+length: 2-4 days if done end-to-end
 participants: Business stakeholders, architects, technical leads, developers
 tags:
 - Kickoff

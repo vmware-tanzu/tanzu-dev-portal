@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Allow a team to determine, openly discuss and share their team values
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 30 - 45 mins
+length: 30-45 min
 participants: Core team
 tags:
 - Kickoff

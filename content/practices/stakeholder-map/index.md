@@ -4,7 +4,7 @@ description: Map out business, product, and project stakeholders that may impact
   interact with the core team
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 45 mins - 1 hour
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/stakeholder-map
 participants: Core team, stakeholders
 remote: true

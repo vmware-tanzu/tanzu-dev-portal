@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Determine which solutions to explore first
 image: solution-prioritization/cover.png
 lastmod: '2021-03-17'
-length: 1 - 2 hours
+length: 1-2 hours
 participants: Core team members (PM, designer, engineers)
 tags:
 - Framing

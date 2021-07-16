@@ -4,7 +4,7 @@ title: "User Research Introduction Session"
 linkTitle: "User Research Introduction Session"
 description: "Level-set on user research best practices"
 tags: ["Discovery"]
-length: "45 mins - 1 hour"
+length: "45-60 min"
 participants: "Core team"
 # custom "cover" image example: "boris/boris.png"
 image: "default-cover.png" 

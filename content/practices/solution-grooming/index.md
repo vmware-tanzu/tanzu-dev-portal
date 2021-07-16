@@ -5,7 +5,7 @@ description: A tool to understand and organize solutions so they can be prioriti
 draft: true
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 1 hr - 4 hr
+length: 1-4 hours
 participants: Core Team
 tags:
 - Framing

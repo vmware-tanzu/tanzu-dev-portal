@@ -10,7 +10,7 @@ description: Provide valuable design feedback to a project team so they can dete
   if further effort is needed
 image: default-cover.png
 lastmod: '2021-03-04'
-length: 30 min - 1 hour
+length: 30-60 min
 participants: Core team, stakeholders, other designers
 tags:
 - Discovery

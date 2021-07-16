@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Surface risks and how the team might mitigate them
 image: risks-and-mitigations/cover.png
 lastmod: '2021-04-08'
-length: 30 min - 1 hour
+length: 30-60 min
 miro_template_url: https://miro.com/miroverse/risks-and-mitigations
 participants: Core team, stakeholders
 remote: true

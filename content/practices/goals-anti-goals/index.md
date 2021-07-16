@@ -4,7 +4,7 @@ description: Identify and prioritize key product, business, project, and/or cons
   engagement goals and anti-goals (non-goals)
 image: goals-anti-goals/cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/goals-and-anti-goals/
 participants: Core team, stakeholders
 remote: true
