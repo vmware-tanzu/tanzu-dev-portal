@@ -4,7 +4,7 @@ description: Prioritize any insights that were uncovered during research so the 
   can use them to make informed product decisions
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 1 - 2 hours
+length: 1-2 hours
 participants: Core team
 tags:
 - Discovery

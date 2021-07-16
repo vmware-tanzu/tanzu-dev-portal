@@ -4,7 +4,7 @@ description: Help the team understand the circumstances surrounding the problem 
   attempting to solve
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 participants: Core team
 tags:
 - Discovery

@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Extract solutions that could potentially address the identified problem(s)
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 1.5 - 2 hours
+length: 90-120 min
 participants: Core team
 tags:
 - Framing

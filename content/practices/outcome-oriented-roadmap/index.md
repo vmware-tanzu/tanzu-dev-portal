@@ -5,7 +5,7 @@ description: A communication and planning tool that shows sequential outcomes th
 draft: false
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 2+ hours (block enough time or consider breaking the activity into two sessions)
+length: 2+ hours
 linkTitle: Outcome Oriented Roadmap
 miro_template_url: ''
 participants: Product Manager(s), core team, stakeholders

@@ -5,7 +5,7 @@ description: Speedback is a session where the “speed-dating” format is appli
   timeboxed feedback gathering.
 image: default-cover.png
 lastmod: '2021-03-26'
-length: 10min per session plus prep
+length: 10 min per session plus prep
 linkTitle: Speedback
 participants: 'Delivery team: PMs, Designers, and Engineers'
 tags:

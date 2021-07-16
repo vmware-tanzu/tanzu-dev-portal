@@ -4,7 +4,7 @@ description: Create a provisional representation of a user based on existing kno
   and assumptions
 image: personas/cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/personas
 participants: Core team, stakeholders
 remote: true
