@@ -56,7 +56,7 @@ miro_template_url: "URL for related Miro template"
 1. Repeat steps 2-4 for the remaining user stories that were prepared for this meeting.
 
 
-#### Success/Expected Outcomes
+## Success/Expected Outcomes
 You know you are done when all stories staged for IPM are ready to be estimated according to the engineer(s) present.
 You know it’s working when improvement is observed in the issues identified in Step 1.
 
