@@ -20,14 +20,11 @@
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-lg-9 col-12 px-0">
+            <p>{{ .Description }}</p>
             {{ if .Content }}
-                <p>{{ .Description }}</p>
-                <p>{{ .Content }}</p>
+              <p>{{ .Content }}</p>
             {{ end }}
-            {{ if not .Content }}
-                <p>{{ .Description }}</p>
-            {{ end }}
-        </div>
+          </div>          
     </div>
     <div class="row justify-content-center mb-5 text-center">
         <div class="col-lg-9 col-12 px-0 d-flex">
