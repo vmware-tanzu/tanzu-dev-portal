@@ -22,7 +22,7 @@
                                     <h5 class="mt-3">Phases</h5>
                                     <ul class="tags">
                                         {{ range .Params.tags }}
-                                        <li>{{ . }}</li>
+                                        <li class="mr-1">{{ . }}</li>
                                         {{ end }}
                                     </ul>
                                 </div>
@@ -52,7 +52,7 @@
     <div class="row position-relative border-bottom">
         <div class="gradient-edge-top">
         </div>
-        <div class="container pt-4">
+        <div class="container py-4">
             <div class="row">
                 <div class="col-lg-4 px-2 px-lg-2 mb-1">
                     {{ partial "practices/info-box" (dict "context" . "title" "Why do it?" "info" .Params.why ) }}
@@ -100,7 +100,7 @@
         </div>
     </div>
     <div class="container py-4">
-        <div class="col-9 steps">
+        <div class="col-109 steps">
             {{ .Content }}
             <div class="feedback mt-4 pt-4 border-top">
                 <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Practices Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
