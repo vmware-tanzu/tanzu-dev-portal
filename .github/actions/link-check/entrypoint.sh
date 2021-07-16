@@ -8,7 +8,7 @@ eval hugo server "${HUGO_OPTIONS}" > /dev/null &
 echo -n "--> Wait for hugo server to start..."
 for i in $(seq 0 ${MAX_WAIT_TIME}); do # 5 min
     sleep 0.5
-    IS_SERVER_RUNNING=$(wget -Sq --spider ${LOCAL_HOST} 2>&1 | awk '/^  HTTP/{print $2}' | tail -n 1)
+    IS_SERVER_RUNNING=$(curl -LI ${LOCAL_HOST} -o /dev/null -w '%{http_code}' -s)
     if [[ "${IS_SERVER_RUNNING}" == "200" ]]; then
         echo "server started."
         echo "--> Check for broken links"
