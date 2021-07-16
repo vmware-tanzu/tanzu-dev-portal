@@ -10,7 +10,6 @@ LABEL "homepage"="https://github.com/peaceiris/actions-hugo-link-check"
 LABEL "maintainer"="peaceiris"
 
 RUN GO111MODULE=on go get -u github.com/raviqqe/muffet/v2
-RUN apt-get install curl
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
