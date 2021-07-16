@@ -1,12 +1,12 @@
 ---
-title:  "An Introduction to VMware Maketplace?"
-linkTitle: "An Introduction to VMware Maketplace"
-subsection: An Introduction to VMware Maketplace
+title:  "An Introduction to VMware Marketplace?"
+linkTitle: "An Introduction to VMware Marketplace"
+subsection: An Introduction to VMware Marketplace
 weight: 1
 topics:
 - Containers
 tags:
-- Maketplace
+- Marketplace
 # Author(s)
 team:
 -
