@@ -359,6 +359,7 @@ CustomEntryConcurrentHashMap
 customizable
 customization(s)?
 CustomResourceDefinition(s)?
+CVaaS
 CVE-[0-9]{4}-[0-9]+
 CVE(s|-reported)?
 cybersecurity
