@@ -92,7 +92,7 @@ Success is when the core team has a shared understanding of:
 
 #### For Remote Teams
 There are many free retrospective tools available. 
-- [Team Retrospective Miro Template](https://miro.com/miroverse/atlassian-team-plays-retrospective/) from Atlasian
+- [Team Retrospective Miro Template](https://miro.com/miroverse/atlassian-team-plays-retrospective/) from Atlassian
 - Trello Template - [Glad, Sad, Mad](https://trello.com/b/0DnfRtxv/template-glad-sad-mad)
 - [Postfacto](https://github.com/pivotal/postfacto) - open source and deployable by you.  
 - Spreadsheets - You can always make a simple 3-column retro board using Google Sheets or Excel.  

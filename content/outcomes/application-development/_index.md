@@ -1,8 +1,8 @@
 ---
-title: Modern Application Development
-weight: 1
+title: Foundations of Modern Application Development Practices
+weight: -2
 layout: single
-description: "Learn how we approach application development at VMware Tanzu Labs"
+description: "Learn how we approach modern application development practices, teaming, culture, and technology at VMware Tanzu Labs."
 team:
   - VMware Tanzu Labs
 ---
@@ -30,12 +30,12 @@ You will learn everything needed to start as a newly onboarded team member. Each
 We cover the following topics:
  
 * [Balanced Teams](/outcomes/application-development/balanced-teams/)
-* [Team Rhythm](outcomes/application-development/team-rhythm/)
-* Product Validation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/987))
+* [Team Rhythm](/outcomes/application-development/team-rhythm/)
+* [Product Validation](/outcomes/application-development/product-validation/)
 * Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
 * [Pair Programming](/outcomes/application-development/pair-programming/)
 * [Test Driven Development](/outcomes/application-development/test-driven-development/)
 * [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
-* [Distributed, Remote, and Asynchronous Work](outcomes/application-development/remote/)
+* [Distributed, Remote, and Asynchronous Work](/outcomes/application-development/remote/)
 
 This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement.
