@@ -1097,6 +1097,7 @@ Nana
 Natively
 natively
 Neatro
+Neeharika
 Nenad
 Neo4j
 Nesterov
@@ -1195,6 +1196,7 @@ Packer
 PagerDuty
 Pairmate
 Paketo
+Palaka
 Palo
 Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
@@ -1239,6 +1241,7 @@ php-apache
 Pichler
 pickab(le|ility)?
 PID
+Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
@@ -1321,6 +1324,7 @@ putAll
 PuTTYgen
 PVC?s?
 PWAs
+PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
