@@ -28,13 +28,15 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. While the project team hangs up printouts of the design artifacts being critiqued, remind everyone that their job today is to help the project team find the challenges with their design, not the solutions, using language that is specific and kind.
         
    {{% callout %}}
    Tip: If necessary, remind the project team that they should take notes on what’s discussed (e.g. in Sketch or a text editor) and should refrain from defending the work. They can use project context to decide what should/should not be acted upon.
    {{% /callout %}}
-1. Once everyone is settled, ask the project team the following questions and write each answer on the whiteboard for all to see:
+2. Once everyone is settled, ask the project team the following questions and write each answer on the whiteboard for all to see:
    - What’s the name of the app being critiqued?
    - What is the goal of the app? For example, “'Super Bowl Land' is a series of screens for call center operators to manage the billing and account information for football fans during football season.”)
    - Who is the user?
@@ -45,7 +47,7 @@ why:
    {{% /callout %}}
 
 Try to keep the project team from explaining too much. It can be a poor use of time and it robs everyone in the room of their fresh eyes. Some of the most useful feedback the team can get is “I don’t understand this” or “I didn’t see that.”
-1. Once everyone understands the app being critiqued and the desired feedback, set a timer for 8 minutes of silent critique during which critiquers:
+3. Once everyone understands the app being critiqued and the desired feedback, set a timer for 8 minutes of silent critique during which critiquers:
    - Review the screens, and
    - Write sticky notes of constructive and positive commentary
         
@@ -54,27 +56,34 @@ Try to keep the project team from explaining too much. It can be a poor use of t
    {{% /callout %}}
 
 Be sure to find the good, too, so that positive aspects of the design are not later deleted because they weren’t commented on.
-1. At the end of 8 minutes, ask critiquers to post their sticky notes to the appropriate screens
+4. At the end of 8 minutes, ask critiquers to post their sticky notes to the appropriate screens
         
    {{% callout %}}
    Tip: When everyone has to commit their opinions to paper before they share, they become a lot less likely to all pile on to the same opinion or fall into "group think"
    {{% /callout %}}
-1. Scan the notes and open key topics for discussion, looking for patterns and areas that have a high number of comments. Be sure to mix in negative and positive comments as well as ask for expanded opinions from the group if a comment is unclear.
+5. Scan the notes and open key topics for discussion, looking for patterns and areas that have a high number of comments. Be sure to mix in negative and positive comments as well as ask for expanded opinions from the group if a comment is unclear.
         
    {{% callout %}}
    Tip: If people start talking about or designing different solutions for the problem, remind everyone that they don’t have the same context or knowledge of the problem the designer on the project does
    {{% /callout %}}
-1. As the group discusses each topic, capture key actions/tasks on the whiteboard in order to move to the next topic
+6. As the group discusses each topic, capture key actions/tasks on the whiteboard in order to move to the next topic
         
    {{% callout %}}
    Tip: Once a problem has been converted into a task (“Super-Duper widget doesn't make sense. Explore alternate designs.”), you shouldn’t keep talking about it
    {{% /callout %}}
-#### Success/Expected Outcomes
-You know you’re done when all comments have been reviewed and all problems have been converted into tasks.
 
+{{% /section %}}
+
+{{% section %}}
+### Success/Expected Outcomes
+You know you’re done when all comments have been reviewed and all problems have been converted into tasks.
+{{% /section %}}
+
+{{% section %}}
 #### Facilitator Notes & Tips
 
 Regardless of how you decide to run your design critique, you should ensure that a room is booked and any supplies (such as sticky notes, sharpies, and tape) are available.
+{{% /section %}}
 
 ## Related Practices
 
@@ -87,9 +96,13 @@ None at the moment
 ### Following
 None at the moment
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+{{% /section %}}
 
+{{% section %}}
 ## Recommended Reading
 
 <a href="http://shop.oreilly.com/product/0636920033561.do" target="_blank">Discussing Design</a> by Adam Conner and Aaron Irizarry
+{{% /section %}}

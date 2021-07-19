@@ -24,6 +24,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Gather all the insights you discovered from research     
 
@@ -45,32 +47,43 @@ why:
    Tip: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
    {{% /callout %}}
 ![2x2 diagram showing stickies in each quadrant](/images/practices/insight-prioritization/step-4.png)
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is achieved when the team agrees to the top 3-5 Insights on which it will focus
+{{% /section %}}
 
 #### Facilitator Notes & Tips
 
 None at the moment
 
-## Related Practices
+{{% section %}}
+### Related Practices
 - [2x2 Prioritization](/practices/2x2)
+{{% /section %}}
 
 ### Variations
 
 None at the moment
 
+{{% section %}}
 ### Preceding
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Research Synthesis](/practices/research-synthesis)
+{{% /section %}}
 
-## Parallel
+{{% section %}}
+### Parallel
 
 [Problem Prioritization](/practices/problem-prioritization)
+{{% /section %}}
 
+{{% section %}}
 ### Following
 
 [Solution Brainstorming](/practices/solution-brainstorming)
+{{% /section %}}
 
 ## Real World Examples
 Coming soon!
