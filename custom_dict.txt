@@ -162,6 +162,7 @@ betweens
 BGP(Configuration|-capable|Peer(s)?)?
 Bhave
 BikeIncidentsByZip
+bikeshedding
 Bikewise
 biome
 [Bb]itnami('s)?
@@ -1270,6 +1271,7 @@ Postfacto
 POSTROUTING
 PR(s)?
 Pratik('s)?
+[pP]re-[pP]lanning
 pre-auth
 pre-built
 pre-configured
