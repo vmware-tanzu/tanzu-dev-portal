@@ -7,7 +7,7 @@ description: Learn about Bitnami's free and open source solutions for developers
 tags:
 - Bitnami
 team:
-- Brad Bock
+- Raquel Campuzano Godoy
 title: What is Bitnami?
 topics:
 - Containers
