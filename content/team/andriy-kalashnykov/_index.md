@@ -3,7 +3,7 @@ name: Andriy Kalashnykov
 description: "Staff Engineer"
 photo: "/images/team/andriy-kalashnykov.jpg"
 roles: ["author"]
-skills: ["Kubernetes", "Docker", "Ci/CD", "DevOps","Architecture","Microservices","Frameworks","Spring Boot","Containerization"]
+skills: ["Kubernetes", "Docker", "CI/CD", "DevOps","Architecture","Microservices","Frameworks","Spring Boot","Containerization"]
 location: "Miami, FL"
 weight: 1
 
@@ -24,7 +24,7 @@ Previously he was a Principal Consultant at Red Hat helping Fortune 100 customer
 * Kubernetes and OpenShift adoption
 * Digital Transformation
 * Cloud Native Applications Readiness for Kubernetes (Spring Native, Micronaut, GraalVM)
-* Containerization (Go, Spring Boot, Camel, Kafka, ActiveMQ, JBoss EAP, JBoss FUSE)
-* CICD pipeline/ecosystem (Jenkins, ArgoCD, Concourse CI, Github/Bitbucket)
+* Containerization (Go, Spring Boot, Camel, Kafka, ActiveMQ, JBoss Enterprise Application Server, JBoss FUSE)
+* CI/CD pipeline/ecosystem (Jenkins, ArgoCD, Concourse CI, Github workflows)
 * Automation (Ansible, Terraform)
 * Running middleware atop of Kubernetes
