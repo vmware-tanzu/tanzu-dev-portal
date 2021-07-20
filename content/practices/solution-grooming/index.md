@@ -31,6 +31,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Prior to the workshop, ensure that you can locate a space (conference room, hallway, etc.) with a whiteboard that is large enough to accommodate a very large clustering session.
 
@@ -65,15 +67,20 @@ why:
    {{% callout %}}
    Tip: To avoid confusion and duplication of effort, it’s helpful if each person transferring a label to the sticky note puts that note on the whiteboard (over the group in question) after they’ve finished writing it.
    {{% /callout %}}
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is achieved when you have clustered your ideas and copied the group labels onto large sticky notes.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 This workshop can run very long if there are a lot of ideas to cluster so be sure to take frequent breaks to avoid team burnout. It can help to get dedicated whiteboard space that you can leave and come back to over the span of a couple days.
 
 If needed, you can also lead the team in expanding / consolidating clusters to the team's satisfaction.
+{{% /section %}}
 
 ## Related Practices
 
@@ -81,13 +88,17 @@ If needed, you can also lead the team in expanding / consolidating clusters to t
 
 None at the moment
 
+{{% section %}}
 ### Preceding
 
 [Solution Brainstorming](/practices/solution-brainstorming)
+{{% /section %}}
 
+{{% section %}}
 ### Following
 
 [Solution Prioritization](/practices/solution-prioritization)
+{{% /section %}}
 
 ## Real World Examples
 Coming soon! 
