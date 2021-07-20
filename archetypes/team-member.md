@@ -1,5 +1,5 @@
 ---
-name: Full Name
+name: "{{ replace .Name "-" " " | title }}"
 description: "Job Title"
 photo: ""
 roles: ["author","advocate"]
