@@ -33,7 +33,7 @@ why:
 ---
 
 ## How to Use this Method
-
+{{% section %}}
 ### Sample Agenda & Prompts
 1. **Introduce the team to lean experimentation**
 
@@ -163,31 +163,44 @@ why:
 1. **Create an experiment tracker**
 
    Keep track of the experiments that were not selected in this session in a backlog. Regularly review these experiments and implement the experiments that are relevant to validate your product direction, especially if your product direction changes.
+{{% /section %}}
 
+{{% section %}}
 ### Success/Expected Outcomes
 Success is when the whole team has aligned on a documented Lean Experiment that is ready to be executed on 
+{{% /section %}}
 
-## Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 If there are many assumptions to validate, consider following up with a hypothesis/experiment tracker, as suggested in the last step above. This can help the team visualize what hypotheses should be tested in what order, and their associated experiments.
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 [Assumptions](/practices/assumptions)
+{{% /section %}}
 
 ## Variations
 None at the moment. 
 
+{{% section %}}
 ### Preceding
 [Assumptions](/practices/assumptions)
- 
+{{% /section %}}
+
 ### Following
 None at the moment. 
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-2.jpg)
 
 ![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-3.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [Lean Startup](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK) by Eric Ries
 
 [Lean Product Playbook](https://www.amazon.com/Lean-Product-Playbook-Innovate-Products/dp/1118960874/) by Dan Olsen
+{{% /section %}}

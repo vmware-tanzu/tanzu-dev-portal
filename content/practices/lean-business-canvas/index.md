@@ -27,6 +27,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw the lean business canvas on the whiteboard
 
@@ -58,16 +60,21 @@ why:
    - Unfair advantage
 
    ![Lean business canvas template with order specified](/images/practices/lean-business-canvas/step-7.png)
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is when you have agreement and understanding of the product market fit, what value we’re delivering from a customer perspective, and an idea of how to sustain this business.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 - If the group is small, dot voting may be unnecessary.
 - later sections may not need as much (or any) ideation time since participants may be able to shout out a shared set of answers.
 - Revenue is one way to measure success, that box could be renamed to **Outcomes**
 - Update this business model week over week, it’s meant to be used over time.
+{{% /section %}}
 
 ## Related Practices
 
@@ -75,15 +82,18 @@ Success is when you have agreement and understanding of the product market fit, 
 
 None at the moment
 
+{{% section %}}
 ### Preceding
 - [Molecule Map](/practices/molecule-map)
 - [Personas](/practices/personas)
+{{% /section %}}
 
 ### Following
 
 None at the moment
 
-## Real World Examples
+{{% /section %}}
+### Real World Examples
 
 ![Sample filled out canvas](/images/practices/lean-business-canvas/example-1.jpg)
 
@@ -91,3 +101,4 @@ None at the moment
 
 [Business Model Generation book](https://www.strategyzer.com/books/business-model-generation)  
 [Business Model Canvas Yelp](https://www.innovationtactics.com/business-model-canvas-yelp/)
+{{% /section %}}
