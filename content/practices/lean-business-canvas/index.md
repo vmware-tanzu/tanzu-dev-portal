@@ -92,7 +92,7 @@ None at the moment
 
 None at the moment
 
-{{% /section %}}
+{{% section %}}
 ### Real World Examples
 
 ![Sample filled out canvas](/images/practices/lean-business-canvas/example-1.jpg)

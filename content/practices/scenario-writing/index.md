@@ -29,6 +29,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 
 1. Create four columns on the physical or digital whiteboard and label each with the following:
@@ -73,31 +75,41 @@ You can lead the team in creating a well-formed persona using the [Personas](/pr
    {{% callout %}}
    Tip: If you’re writing a scenario for the future state, be careful not to be too prescriptive in how you capture the solution. Leave enough ambiguity so that the team has space to ideate broadly.
    {{% /callout %}}
-#### Success/Expected Outcomes
-You’ve succeeded once you feel the team understands the scope of current or future scenario and could confidently use it to support subsequent activities (research, design studio, etc.)
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Success/Expected Outcomes
+You’ve succeeded once you feel the team understands the scope of current or future scenario and could confidently use it to support subsequent activities (research, design studio, etc.)
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 Example of a **current state** scenario:  
 How sheep farmers currently purchase sheep at actions in person
 
 Example of a **future state** scenario:  
 How sheep farmers will purchase sheep via the internet with the new product
+{{% /section %}}
 
 ## Related Practices
 
 ### Variations
 
 None at the moment
- 
+
+{{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Insight Prioritization](/practices/insight-prioritization)  
+{{% /section %}}
 
+{{% section %}}
 ### Following
 
 [Design Studio](/practices/design-studio)
+{{% /section %}}
 
 ## Real World Examples
 Coming soon! 
