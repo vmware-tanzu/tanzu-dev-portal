@@ -1,6 +1,6 @@
 ---
 title: VMware Marketplace - Platform Validation
-description: VMware Marketplace’s continuous and automated platform validation capability enables developers to deploy solutions in confidence,  knowing they are fully validated and tested.
+description: VMware Marketplace’s platform validation capability enables developers to deploy solutions in confidence,  knowing they are fully validated and tested.
 topics:
 - Containers
 tags:
