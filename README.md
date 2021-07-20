@@ -14,9 +14,9 @@
 
 ![Tanzu Developer Center Screen Shot](static/images/github/homepage-screenshot.png)
 
-The VMware Tanzu Developer Center is VMware's site built specifically with developer teams in mind. Above all, our guiding principles for content included on the Tanzu Developer Center is that if the reader is excited about a topic, all content in the Tanzu Developer Center is immediately actionable with no purchase necessary, either because it is open source, or there is an easily accessible trial. Above all, we want the Tanzu Developer Center to be a great resource for software development teams. 
+The VMware Tanzu Developer Center is a site specifically built to be a great resource for  software development teams. Our guiding principle is to ensure readers have free, immediate access to all the content on the Tanzu Developer Center. No purchase is ever necessary to access content on the Tanzu Developer Center because it is either open source or an easily accessible trial.
 
-Beyond this, the Tanzu Developer Center is fully open source, with contributions from all teams within VMware, as well as individuals without. Check out the [contributing](#contributing) section below for more details.
+The contributions on the Tanzu Developer Center,  are from teams across VMware, as well as individuals without. Check out the [contributing](#contributing) section below for more details.
 
 
 ### Built With
@@ -28,27 +28,27 @@ Beyond this, the Tanzu Developer Center is fully open source, with contributions
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these steps.
 
 ### Prerequisites
 
-1. **Install hugo** - The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with SCSS/SASS support built in. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary. To install this specific version, see the [gohugo GitHub releases page for 0.82.0](https://github.com/gohugoio/hugo/releases/tag/v0.82.0).
+1. **Install hugo** -- The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with SCSS/SASS support built in. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary. To install this specific version, see the [gohugo GitHub releases page for 0.82.0](https://github.com/gohugoio/hugo/releases/tag/v0.82.0).
 
      ```sh
      brew install hugo
      ```
 
-2. **Install NPM** - Hugo uses NPM to manage its local packages. If you don’t already have it installed, you will need it to move further.
+2. **Install NPM** -- Hugo uses NPM to manage its local packages. If you don’t already have it installed, you will need it to move further.
 
      ```sh
      brew install npm
      ```
 
-3. **Install act** - [act](https://github.com/nektos/act/releases/tag/v0.2.20) is used to run GitHub Actions tests locally. The Tanzu Developer Center uses GitHub Actions to perform automated testing periodically, and on each pull request. 
+3. **Install act** -- [act](https://github.com/nektos/act/releases/tag/v0.2.20) is used to run GitHub Actions tests locally. The Tanzu Developer Center uses GitHub Actions to perform automated testing periodically, and on each pull request. 
    
     **NOTE**: Currently, the tests break on `act` > v0.2.20, be sure to install [v0.2.20](https://github.com/nektos/act/releases/tag/v0.2.20).)
 
-4. **Install Docker** - Running automated test locally will require Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
+4. **Install Docker** -- Running automated test locally will require Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
 
      ```sh
      brew install docker --cask
