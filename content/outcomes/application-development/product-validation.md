@@ -8,7 +8,7 @@ team:
 
 There are a lot of unknowns when building a new software system, including customer unknowns such as product/market fit, business unknowns such as addressable market size, and technical unknowns such as how feasible something is to build. 
 
-For decades, management practice has emphasized planning and control as a means of ensuring predictable outcomes, but building software has inherent complexities that make this management style too rigid. This rigidity is expressed in many ways, from organizations being slow to react to new information to teams not being empowered to act autonomously and react effectively to customer feedback.  
+For decades, management practice has emphasized planning and control as a means of ensuring predictable output, but building software has inherent complexities that make this management style too rigid. This rigidity is expressed in many ways, from organizations being slow to react to new information to teams not being empowered to act autonomously and react effectively to customer feedback.  
 
 One way to mitigate the risk of unknowns derailing a product or initiative is to follow the Build, Measure, Learn cycle detailed later in this article. Scientists and engineers have been using something similar known as the[ scientific method for at least 200 years.](https://en.wikipedia.org/wiki/Scientific_method) Both methods use data to inform decisions and place an emphasis on facts over assumptions. You can learn more about the Build, Measure Learn cycle from the book, ["Lean Startup"](http://theleanstartup.com/) by Eric Ries. While the book and this article use startups in several examples, the principles of lean software product development are applicable to organizations of any size and age.
 
