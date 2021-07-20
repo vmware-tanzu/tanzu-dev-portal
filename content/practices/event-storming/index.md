@@ -38,13 +38,13 @@ why:
 
    ![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
 
-2. Define “domain event” for the group:
+1. Define “domain event” for the group:
 
    {{% callout %}}
    Example: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
    {{% /callout %}}
 
-3. Have the group "storm the business" process by writing a series of domain events on orange sticky notes, one per note.
+1. Have the group "storm the business" process by writing a series of domain events on orange sticky notes, one per note.
    - Identify the beginning and end of the event storming session in order to create a sequence of events
    - Think about an event in the past tense
    - Focus on the happy path to begin with
@@ -52,9 +52,9 @@ why:
    
    ![Multiple event stickies encircled in a sample bounded context](/images/practices/event-storming/example-2.jpg)
 
-4. Place the domain events on the wall in time order from left to right
+1. Place the domain events on the wall in time order from left to right
 
-5. As you go through the storming session, you will uncover different aspects of the existing business process. Capture them as follows:
+1. As you go through the storming session, you will uncover different aspects of the existing business process. Capture them as follows:
 
    - Mark **trouble spots** with red sticky notes
    - Highlight **external systems** with a new color sticky note and place them near the actions/events they trigger
@@ -63,7 +63,7 @@ why:
    
    ![Event Storming output leading to service node input for Boris](/images/practices/event-storming/example-1.png)
 
-6. After all the events are posted, pair with the domain experts to post a locally ordered sequence of events and enforce a timeline. Crowdsource feedback as you go.
+1. After all the events are posted, pair with the domain experts to post a locally ordered sequence of events and enforce a timeline. Crowdsource feedback as you go.
 
    {{% callout %}}
    Tip: Enforcing a timeline triggers long awaited conversations and eventually STRUCTURE will emerge.
@@ -71,7 +71,7 @@ why:
 
    Crowdsourced feedback may uncover missing elements. Add more stickies as needed.
 
-7. With the timeline enforced, look for bounded contexts (aka "domain aggregates"). Find groupings of events to see what they are acting on and transferring to the next part. Identify pivotal events that indicate a transition across subdomains.
+1. With the timeline enforced, look for bounded contexts (aka "domain aggregates"). Find groupings of events to see what they are acting on and transferring to the next part. Identify pivotal events that indicate a transition across subdomains.
 
    Usually you'll see a big group followed by fewer stickies then a larger group of stickies to indicate the transfer to a new bounded context. Look for vertical swim lanes of events that may indicate bounded contexts or business capabilities.
 

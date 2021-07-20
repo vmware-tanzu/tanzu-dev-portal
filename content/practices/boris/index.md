@@ -43,14 +43,14 @@ why:
 
    ![Example of Boris legend with stickies](/images/practices/boris/legend.jpeg)
 
-2. Discuss a thin slice of the flow and map out how each of the bounded contexts communicate with one another to complete the flow. Start with the happy path then move to unhappy paths.
+1. Discuss a thin slice of the flow and map out how each of the bounded contexts communicate with one another to complete the flow. Start with the happy path then move to unhappy paths.
 
    {{< callout >}}
    Tip: If mapping more than one slice through the system, use different colored arrows for each. From a happy path perspective, how should the “to be” bounded contexts communicate with each other? From a non-happy path perspective, how should the “to be” system communicate with each other during a failure?
    {{</ callout >}}
 
    If the event message payload is discussed, push to use the smallest message possible with the least number of unique keys to identify a unique bounded context through a synchronous web service lookup (“lean events, rich APIs”)
-3. Draw a line from system to system as they talk, using different colors for **synchronous** and **asynchronous** communication. Add arrows to indicate if it is pushing or pulling.
+1. Draw a line from system to system as they talk, using different colors for **synchronous** and **asynchronous** communication. Add arrows to indicate if it is pushing or pulling.
 
    Questions to think about:
    - What are the inputs and outputs for this bounded context?
@@ -59,11 +59,11 @@ why:
 
    ![Example of Boris diagram with sync and async flows](/images/practices/boris/step-3.jpg)
 
-4. Indicate if a queue is needed by adding them in a new sticky note of the same color for a queue/topic. Add in the lines for what systems are talking to it.
+1. Indicate if a queue is needed by adding them in a new sticky note of the same color for a queue/topic. Add in the lines for what systems are talking to it.
 
-5. Using a new sticky note of a different color, indicate if there are external systems as part of the flow. Add in the lines for how it is communicated with in the flow.
+1. Using a new sticky note of a different color, indicate if there are external systems as part of the flow. Add in the lines for how it is communicated with in the flow.
 
-6. Create SNAP lists on large sheets.
+1. Create SNAP lists on large sheets.
 
    SNAP takes the understanding from the Boris diagram to understand the specific needs of every bounded context under the new proposed architecture. The SNAP exercise should be done for each bounded context and call out APIs, data needed, UIs, and risks that would apply to that bounded context. The backlog for the product will be created based upon the items identified.
 
@@ -78,13 +78,13 @@ why:
 
    ![Example of SNAP output for a given context](/images/practices/boris/snap.jpg)
 
-7. As you discuss the flow and the interactions with the system you can add information to each bounded context's sheet
+1. As you discuss the flow and the interactions with the system you can add information to each bounded context's sheet
 
-8. Move on to the next flow indicating this in a new color
+1. Move on to the next flow indicating this in a new color
 
-9. Add info on the new flow to the larger bounded context sheet on a new sticky note color
+1. Add info on the new flow to the larger bounded context sheet on a new sticky note color
 
-10. Call out specific areas that are missing on the bounded context sheets that are missing.
+1. Call out specific areas that are missing on the bounded context sheets that are missing.
 {{% /section %}}
 
 {{% section %}}

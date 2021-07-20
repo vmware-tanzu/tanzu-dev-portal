@@ -44,16 +44,16 @@ why:
    **[More remote tips below in the Variations section](#variations).**
    {{% /callout %}}
 
-2. Hand out markers and paper to everyone and ask participants to **draw each step in the process of making toast**. Give them 2-3 minutes.
+1. Hand out markers and paper to everyone and ask participants to **draw each step in the process of making toast**. Give them 2-3 minutes.
 
-3. Have each person hold up their drawing for all to see and quickly explain their thought process. As facilitator, when relevant, point out trends or divergences that emerge. A follow up might be to ask how some could be made more lean or who thought it through in more steps versus just a few steps.
+1. Have each person hold up their drawing for all to see and quickly explain their thought process. As facilitator, when relevant, point out trends or divergences that emerge. A follow up might be to ask how some could be made more lean or who thought it through in more steps versus just a few steps.
 
    Some great questions to ask about individual drawings during Step 3 include:
    - Could you tell me more about how you chose what to draw?
    - Why did you draw it the way you did?
    - How did you decide where to start?
 
-4. Now that everyone can see how even a simple prompt has led to so much differentiation between each drawing, tie this point back to the group:
+1. Now that everyone can see how even a simple prompt has led to so much differentiation between each drawing, tie this point back to the group:
 
    {{% callout %}}
    Example: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
