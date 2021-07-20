@@ -65,6 +65,7 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+Andriy
 Ango
 Anneliese
 [Aa]nomol(y|ies)
@@ -872,6 +873,7 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+Kalashnykov
 Kamus
 Kanban
 Kaniko
