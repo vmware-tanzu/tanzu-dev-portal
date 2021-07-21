@@ -1,9 +1,11 @@
 ---
-title: Thank you!
-weight: 90
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Thank you!
+weight: 90
 ---
 
 Thank you for reading our story and learning about how we approach product development, helping each other and our clients, and why we do what we do. 

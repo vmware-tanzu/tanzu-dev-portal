@@ -1,9 +1,11 @@
 ---
-title: Security
-weight: 200
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Security
+weight: 200
 ---
 
 Security in a distributed system can be a daunting task since you cannot rely on a large centralized security module on a monolithic web server. Spring Boot provides the Spring Security package to offer a general abstraction layer for configuring your application security without relying on the specific container or deployment environment.
@@ -15,4 +17,3 @@ It's a good idea to complete this exercise to be comfortable applying the techno
 #### Homework
 
 - Read the [Securing Web Services](https://spring.io/guides/gs/securing-web/) guide.
-

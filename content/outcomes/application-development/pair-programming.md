@@ -1,9 +1,11 @@
 ---
-title: Pair Programming
-weight: 50
+date: '2021-06-22'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Pair Programming
+weight: 50
 ---
 
 Lennon and McCartney. Penn and Teller. Venus and Serena.
