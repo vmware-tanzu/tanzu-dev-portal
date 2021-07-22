@@ -1,9 +1,16 @@
 ---
-title: Cloud Native Development
-weight: 70
+date: '2021-06-15'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Cloud Native Development
+weight: 70
+tags:
+- 12 Factor
+- Culture
+- Cloud Native
+- Architecture
 ---
 
 Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.

@@ -1,9 +1,11 @@
 ---
-title: Messaging
-weight: 170
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Messaging
+weight: 170
 ---
 
 Event-driven applications are a natural fit for microservices as they reduce the coupling between services even further and allow for the whole system to move from central orchestration to distributed asynchronous choreography. 

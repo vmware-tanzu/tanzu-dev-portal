@@ -1,9 +1,11 @@
 ---
-title: Twelve-Factor Apps
-weight: 10
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Twelve-Factor Apps
+weight: 10
 ---
 
 Cloud native app development centers around the twelve factors initially described by the team behind the Heroku platform. The website [https://12factor.net](https://12factor.net/) provides a great understanding of how a cloud native application deals with aspects like logging, application state, and integration with external systems.
@@ -25,4 +27,3 @@ For more information on cloud native apps, check out the free book by Kevin Hoff
 #### Additional resources
 
 - Read the [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app) book.
-

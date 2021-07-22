@@ -1,10 +1,13 @@
 ---
-title: We Generalize (in technologies and domains)
-weight: 40
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: We Generalize (in technologies and domains)
+weight: 40
 ---
+
 > "I only work in Healthcare".
 > "I only design for iOS."
 > "I only write Java."
