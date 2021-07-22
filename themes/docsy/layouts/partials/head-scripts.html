@@ -102,7 +102,8 @@ var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
   // Gather all the episodes that have a start time after one week ago
   // This is due to the Go template being gathered at build time, not
-  // in real time
+  // in real time. ie. This will return all episodes that have a start time
+  // of one week before the live build or later
   episodes = [];
   {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" (sub now.Unix 604800) }}
     var epInfo = {
