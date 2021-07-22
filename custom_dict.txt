@@ -682,6 +682,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
