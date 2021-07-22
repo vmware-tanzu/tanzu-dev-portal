@@ -108,16 +108,19 @@ function isTvShowLive(showName) {
     var epInfo = {
       startTime: new Date("{{ .Params.Date }}"),
       endTime: new Date(new Date("{{ .Params.Date }}").getTime() + ({{ default 60 .Params.minutes }} * 60000)),
-      duration: {{ default 60 .Params.minutes }} * 60000,
       show: "{{ .Parent.Title }}",
       link: "{{ .Parent.Permalink | relURL }}"
     };
+
+    // Determine if it's a livestream or a YouTube video
     {{ if isset .Params "twitch" }}epInfo["stream"] = "twitch";{{ else }}epInfo["stream"] = "{{ .Params.youtube }}";{{ end }}
+    
     episodes.push(epInfo);
   {{ end }}
 
   // Iterate over each episode, determine if any are currently live
   currentTime = new Date(Date.now());
+  var isLive = false;
   for (var episode of episodes) {
     if (currentTime >= episode["startTime"] && currentTime <= episode["endTime"]) {      
       // If a specific show was defined, make sure it matches
@@ -126,13 +129,13 @@ function isTvShowLive(showName) {
         liveShowName = episode["show"];
         liveShowLink = episode["link"];
         liveShowStream = episode["stream"];
-        return true;
+        isLive = true;
       }
     }
   };
 
   // No live shows found
-  return false;
+  return isLive;
 }
 
 function sendAmplitudeEventOnLoad(eventType, eventProperties) {
