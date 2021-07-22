@@ -48,6 +48,9 @@
     {{ end }}
 
   </div>
+
+  <div id="twitch-embed" class="row justify-content-center mt-5 pt-3"></div>
+
   <!-- ELSE IF PREVIOUS -->
   <div id="vod" class="row justify-content-center mt-5">
     <div class="col-lg-9 col-12 px-0">
@@ -75,21 +78,40 @@
   </div>
   <!-- END -->
 
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
   <script type="text/javascript">
     var live = document.getElementById("live");
     var vod = document.getElementById("vod");
+    var embed = document.getElementById("twitch-embed");
     var episodeType = "";
     var currentTime = Date.now();
-    var episodeTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
-    if (episodeTime < currentTime) {
-      live.style.display = "none";
-      vod.style.display = "flex";
-      episodeType = "vod";
-    }
-    else {
+    var startTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
+    var duration = "{{default 60 .Params.minutes }}" * 60000;
+    var endTime = new Date(startTime + duration).getTime();
+
+    if (currentTime < startTime) {
       live.style.display = "flex";
+      embed.style.display = "none";
       vod.style.display = "none";
       episodeType = "live";
+    } 
+    else if (currentTime >= startTime && currentTime <= endTime) {
+      live.style.display = "none";
+      embed.style.display = "flex";
+      vod.style.display = "none";
+      episodeType = "live";
+      new Twitch.Embed("twitch-embed", {
+          width: 1130,
+          height: 480,
+          channel: "vmwaretanzu",
+      });
+    }
+    else {
+      live.style.display = "none";
+      embed.style.display = "none";
+      vod.style.display = "flex";
+      episodeType = "vod";
     }
   </script>
 
