@@ -90,6 +90,10 @@
     var duration = "{{default 60 .Params.minutes }}" * 60000;
     var endTime = new Date(startTime + duration).getTime();
 
+    // Display content based on the current state:
+    // Future event: Show the air time and link to Twitch
+    // Live event: Embed the twitch stream
+    // Past event: Link/embed the VOD depending if it's on Twitch or YouTube
     if (currentTime < startTime) {
       live.style.display = "flex";
       embed.style.display = "none";
