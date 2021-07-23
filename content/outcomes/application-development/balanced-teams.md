@@ -1,16 +1,22 @@
 ---
-title: Balanced Teams
-weight: 10
+date: '2021-06-15'
+lastmod: '2021-07-02'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Balanced Teams
+weight: 10
+tags:
+- Teams
+- Roles
+- Agile
 ---
 
 Many teams today have chosen to follow an Agile approach to software development. Despite the proven benefits of such an approach, many of these teams still fail to realize their full potential. 
 
 One reason is that while these teams may place a priority on perfectly implementing their chosen Agile methodology, such as [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)), [XP](https://en.wikipedia.org/wiki/Extreme_programming), or [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)), they neglect to consider the impacts to the human side of those methodologies. One of the most promising of these human practices is the balanced team.
 
-![Balanced Team Diagram](/images/outcomes/application-development/balanced-teams.jpeg)
+![Balanced Team in a meeting room](/images/outcomes/application-development/balanced-team.jpg)
 
 ## What you will learn
 In this article, you will learn to:
@@ -54,7 +60,7 @@ At VMware Tanzu Labs, we assemble balanced software product development teams in
 
 Each member of the balanced team represents one of these areas. 
 
-![Balanced Team Diagram](/images/outcomes/application-development/balanced-team-diagram.png)
+![Balanced Team Diagram](/images/outcomes/application-development/balanced-teams.jpeg)
 
 #### Desirable: Does it solve our users’ problems? {id=desirable}
 
