@@ -19,6 +19,8 @@ aliases:
 
 [kapp](https://carvel.dev/kapp/) (part of the open source [Carvel](https://carvel.dev) suite) is a lightweight application-centric tool for deploying resources on Kubernetes. Being both explicit and application-centric it provides an easier way to deploy and view all resources created together regardless of what namespace they’re in. Being dependency-aware, it is able to wait for resources to be created, updated, or deleted, and provides a live status on the progress of the actions. Continue on to see how to get started with kapp.
 
+{{< youtube id="ShWVyyY2E3o" class="youtube-video-shortcode" >}}
+
 ## Prerequisites
 Before you get started you will need to do the following:
 * Create a Kubernetes cluster
@@ -123,7 +125,7 @@ Let’s go ahead and deploy our first application with kapp!
 
 1.  Now that we have the deployment and service up, we can verify it’s working properly. First we can just take a look and see that they are up.
     ```
-    kapp inspect -n kapp-demo -a spring-petclinic
+    kubectl -n spring-petclinic get deployment,service spring-petclinic
     ```
 
     And then we can create a container and curl the service from within it. We need to do this right now since the service type is `ClusterIP` (default) so we can’t see it from outside of the cluster itself.
@@ -164,8 +166,6 @@ Okay, so let’s use kapp instead to take a look at our application.
     ```
     kapp -n kapp-demo inspect -a spring-petclinic
     ```
-
-    We’ll come back to this in a bit to dig further into what kapp does to keep track of resources and changes.
 
 1.  We can also look at logs, which is especially useful if something fails after the pods are up. `kapp logs` will show all pod logs in the app.
     ```
