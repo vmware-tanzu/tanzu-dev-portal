@@ -81,9 +81,9 @@ metadata:
 
 By default, NGINX Ingress places the URL-encoded PEM client certificate in the `ssl-client-cert` header, for example `-----BEGIN%20CERTIFICATE-----%0A...---END%20CERTIFICATE-----%0A`.
 
-This corresponds to the NGINX variable `$ssl_client_escaped_cert`[^ssl_client_escaped_cert].
+This corresponds to the NGINX variable `$ssl_client_escaped_cert`[^nginx_ssl_cert_docs].
 
-[^ssl_client_escaped_cert]: http://nginx.org/en/docs/http/ngx_http_ssl_module.html#var_ssl_client_escaped_cert
+[^nginx_ssl_cert_docs]: http://nginx.org/en/docs/http/ngx_http_ssl_module.html#var_ssl_client_escaped_cert
 
 
 ## Closing
