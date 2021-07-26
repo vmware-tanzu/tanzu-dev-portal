@@ -1,9 +1,11 @@
 ---
-title: Batch Processing
-weight: 150
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Batch Processing
+weight: 150
 ---
 
 The Java ecosystem provides a variety of libraries and standards to help you define and launch batch processes: [Java EE batch processing](https://www.baeldung.com/java-ee-7-batch-processing), [Quartz Job Scheduler](http://www.quartz-scheduler.org/), [Cron Utils](https://github.com/jmrozanec/cron-utils), [Easy Batch](https://github.com/j-easy/easy-batch) ... 
@@ -20,6 +22,4 @@ Refer to Spring Cloud Task's [Getting Started](https://docs.spring.io/spring-clo
 
 - Read the [Spring Scheduler guide](https://spring.io/guides/gs/scheduling-tasks/). 
 
-- Read the [Spring Cloud Task Getting Started guide](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started). 
-
-
+- Read the [Spring Cloud Task Getting Started guide](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started).

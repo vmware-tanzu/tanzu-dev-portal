@@ -1,9 +1,11 @@
 ---
-title: Telemetry
-weight: 190
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Telemetry
+weight: 190
 ---
 
 Telemetry is one of the additional three factors introduced in [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app). Developing your application is only the first aspect of a cloud native developer's job. Feedback from real users hitting your app deployed in production is where you can learn and improve your app.
@@ -15,4 +17,3 @@ When you add these to your Spring Boot app, you get automatic embedded monitorin
 #### Homework
 
 - Read the [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) guide.
-

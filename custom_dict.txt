@@ -65,6 +65,7 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+Andriy
 Ango
 Anneliese
 [Aa]nomol(y|ies)
@@ -162,6 +163,7 @@ betweens
 BGP(Configuration|-capable|Peer(s)?)?
 Bhave
 BikeIncidentsByZip
+bikeshedding
 Bikewise
 biome
 [Bb]itnami('s)?
@@ -680,6 +682,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
@@ -871,6 +874,7 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+Kalashnykov
 Kamus
 Kanban
 Kaniko
@@ -1097,6 +1101,7 @@ Nana
 Natively
 natively
 Neatro
+Neeharika
 Nenad
 Neo4j
 Nesterov
@@ -1195,6 +1200,7 @@ Packer
 PagerDuty
 Pairmate
 Paketo
+Palaka
 Palo
 Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
@@ -1239,6 +1245,7 @@ php-apache
 Pichler
 pickab(le|ility)?
 PID
+Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
@@ -1267,6 +1274,7 @@ Postfacto
 POSTROUTING
 PR(s)?
 Pratik('s)?
+[pP]re-[pP]lanning
 pre-auth
 pre-built
 pre-configured
@@ -1321,6 +1329,7 @@ putAll
 PuTTYgen
 PVC?s?
 PWAs
+PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3

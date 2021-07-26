@@ -1,10 +1,13 @@
 ---
-title: Test Driven Development
-weight: 60
+date: '2021-06-24'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Test Driven Development
+weight: 60
 ---
+
 Test Driven Development (TDD) is a software development practice where a test case describing desired functionality is written before the production code. When that test is executed, it fails because the supporting functionality does not exist yet. After writing the minimum functionality to satisfy the test parameters, the code is [refactored](https://en.wikipedia.org/wiki/Code_refactoring) to improve the design. This cycle is repeated until all requested functionality is implemented.
 These tests serve as a guide for development of the production code by acting as the first “client” or “user” for the system. In addition, the tests provide a regression suite for the completed code. 
 
