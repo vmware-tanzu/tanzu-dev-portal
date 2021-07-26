@@ -1,9 +1,11 @@
 ---
-title: Data Access
-weight: 130
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Data Access
+weight: 130
 ---
 
 Your app may use manually-configured JDBC drivers, ORM solutions such as [JPA](https://en.wikipedia.org/wiki/Jakarta_Persistence), [Hibernate](http://hibernate.org/orm/), [MyBatis](https://mybatis.org/mybatis-3/), [EclipseLink](https://www.eclipse.org/eclipselink/), or [JNDI](https://en.wikipedia.org/wiki/Java_Naming_and_Directory_Interface) to lookup database connections provided by the containing web server. To improve integration with the Spring and Spring Boot ecosystems for all these, we look into migrating connections to a Spring `DataSource`. 

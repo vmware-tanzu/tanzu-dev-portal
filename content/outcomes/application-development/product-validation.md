@@ -1,9 +1,11 @@
 ---
-title: Product Validation
-weight: 30
+date: '2021-07-12'
+lastmod: '2021-07-21'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Product Validation
+weight: 30
 ---
 
 There are a lot of unknowns when building a new software system, including customer unknowns such as product/market fit, business unknowns such as addressable market size, and technical unknowns such as how feasible something is to build. 
