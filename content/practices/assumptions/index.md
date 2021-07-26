@@ -83,21 +83,7 @@ Success happens when you have a fully arranged 2x2 grid that maps out the riskie
 This exercise could go long if there are many assumptions or you're having trouble ranking each assumption. Your job is to keep discussions brief and remind the team that (a) there is no "right" answer and (b) the rankings are relative—the research we do will help us uncover anything we might have missed. Do your best to keep momentum moving forward.
 {{% /section %}}
 
-### Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-Exploratory Interviews - Coming soon!
-
 {{% section %}}
 ### Real World Examples
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
 {{% /section %}}
-## Recommended Reading

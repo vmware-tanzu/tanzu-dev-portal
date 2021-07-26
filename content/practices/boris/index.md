@@ -144,10 +144,6 @@ Boris is an activity within the [Swift Method](/practices/swift-method).
 [Event Storming](/practices/event-storming)
 {{% /section %}}
 
-### Following
-
-None at the moment
-
 {{% section %}}
 ### Real World Examples
 

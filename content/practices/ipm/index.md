@@ -89,9 +89,10 @@ Firstly, the team should have a shared understanding of the scope and relative c
 - Estimation should typically be done only by engineers, or those who will be delivering the work. Other roles, such as Testers and Architects, may contribute when they have a sufficient understanding of the relative complexity. 
 {{% /section %}}
 
-## Related Practices
 
 {{% section %}}
+## Related Practices
+
 ### Sprint Planning vs. Iteration Planning
 
 [Scrum “Sprints”](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_planning) and “Iterations” are both timeboxed activities but with some differences that impact how planning is done:
@@ -106,17 +107,6 @@ Firstly, the team should have a shared understanding of the scope and relative c
 | **Participants** | • Product Owner<br> • Engineers | • Core team |
 {{</ table >}}
 {{% /section %}}
-
-### Variations
-None at the moment. 
-
-### Preceding
-Pre-IPM (coming soon)
- 
-### Following
-None at the moment.
-
-## Real World Examples
 
 {{% section %}}
 ### Recommended Reading

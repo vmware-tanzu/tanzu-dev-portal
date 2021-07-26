@@ -95,5 +95,3 @@ This is an activity that you can time box if it feels drawn out. Many of the tip
 ### Real World Examples
 ![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
 {{% /section %}}
-
-## Recommended Reading

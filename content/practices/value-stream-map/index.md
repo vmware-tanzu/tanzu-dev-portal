@@ -109,12 +109,6 @@ Some teams are sensitive to the idea of calling out “waste” in their process
 Path-to-production exercise
 {{% /section %}}
 
-### Preceding
-None at the moment
- 
-### Following
-None at the moment
-
 {{% section %}}
 ### Real World Examples
 Example of a **product development life cycle**

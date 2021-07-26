@@ -80,23 +80,7 @@ Success is when you have a shared understanding of the biggest risks and have a 
 - Ensure that the actions are actionable and not too general e.g., “Don’t do this…”  
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
 {{% section %}}
 ### Real World Examples
 ![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
 {{% /section %}}
-
-## Recommended Reading

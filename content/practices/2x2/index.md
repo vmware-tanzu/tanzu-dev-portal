@@ -88,23 +88,7 @@ Involve people who can evaluate against the chosen prioritization criteria (e.g.
 [Problem Prioritization](/practices/problem-prioritization)
 
 [Solution Prioritization](/practices/solution-prioritization)
-
-Stack Ranking (coming soon.)
-
-Dump and Sort (coming soon.)
-
-Affinity Mapping (coming soon.)
 {{% /section %}}
-
-
-## Variations
-None at the moment.
-
-### Preceding
-None at the moment.
- 
-### Following
-None at the moment.
 
 
 {{% section %}}

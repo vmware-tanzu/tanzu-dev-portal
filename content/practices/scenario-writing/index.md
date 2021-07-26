@@ -92,12 +92,6 @@ Example of a **future state** scenario:
 How sheep farmers will purchase sheep via the internet with the new product
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
 {{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
@@ -110,8 +104,3 @@ None at the moment
 
 [Design Studio](/practices/design-studio)
 {{% /section %}}
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading

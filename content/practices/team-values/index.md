@@ -72,11 +72,6 @@ Every member of the “core” team should be involved in this activity. A helpf
 These team values can be leveraged again at the end of the project and/or consulting engagement if you decide to do a How We Work transition activity. This will allow the team to adjust their values and identify aligned practices they’ve done during the engagement to keep doing after they return home.
 {{% /section %}}
 
-## Related Practices
-
-Coming soon: How We Work
-
-
 {{% section %}}
 ### Real World Examples
 
@@ -85,6 +80,3 @@ Coming soon: How We Work
 ![Summarized value statements up on the wall in team project area](/images/practices/team-values/example-2.jpeg)
 
 {{% /section %}}
-## Recommended Reading
-
-None at the moment

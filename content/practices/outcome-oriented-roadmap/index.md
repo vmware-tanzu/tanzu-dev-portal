@@ -209,7 +209,6 @@ Additional resources:
 - [Why "MVP" is Confusing](https://tajmo.medium.com/why-mvp-is-a-contronym-40af0fcb74c0)
 {{% /section %}}
 
-## Related Practices
 {{% section %}}
 ### Preceding
 Vision, mission, strategy -- coming soon!
@@ -218,9 +217,6 @@ Vision, mission, strategy -- coming soon!
 
 [Problem Prioritization](/practices/problem-prioritization)
 {{% /section %}}
-
-### Following
-OKRs - coming soon!  
 
 {{% section %}}
 ### Real World Examples

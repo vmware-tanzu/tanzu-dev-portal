@@ -82,12 +82,6 @@ This workshop can run very long if there are a lot of ideas to cluster so be sur
 If needed, you can also lead the team in expanding / consolidating clusters to the team's satisfaction.
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
 {{% section %}}
 ### Preceding
 
@@ -99,8 +93,3 @@ None at the moment
 
 [Solution Prioritization](/practices/solution-prioritization)
 {{% /section %}}
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading

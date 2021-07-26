@@ -95,23 +95,6 @@ Optional lines to draw between rows
    -  _The line of internal interaction_ - this is where the business itself stops, and partners step in
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
-Coming soon! 
-
 {{% section %}}
 ### Recommended Reading
 

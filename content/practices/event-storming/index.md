@@ -122,10 +122,6 @@ You know you’ve finished when you have:
 Event Storming is an activity within the [Swift Method](/practices/swift-method).
 {{% /section %}}
 
-### Preceding
-
-None at the moment
-
 {{% section %}}
 ### Following
 

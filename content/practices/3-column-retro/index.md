@@ -124,12 +124,6 @@ Sometimes it's worth paying for something that's being actively maintained and e
 {{% /section %}}
 
 
-### Preceding
-None at the moment. 
- 
-### Following
-None at the moment. 
-
 {{% section %}}
 ### Real World Examples
 

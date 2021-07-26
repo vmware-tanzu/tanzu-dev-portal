@@ -76,21 +76,11 @@ Success is when you have agreement and understanding of the product market fit, 
 - Update this business model week over week, it’s meant to be used over time.
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
 {{% section %}}
 ### Preceding
 - [Molecule Map](/practices/molecule-map)
 - [Personas](/practices/personas)
 {{% /section %}}
-
-### Following
-
-None at the moment
 
 {{% section %}}
 ### Real World Examples

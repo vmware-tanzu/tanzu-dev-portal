@@ -62,8 +62,6 @@ Success is achieved when the team agrees to the top 3-5 problems on which it wil
 The timing of this activity varies along with the number of problems identified in the research process, so prepare accordingly. It can also be beneficial to timebox conversation of each problem in order to ensure the team maintains forward momentum.
 {{% /section %}}
 
-## Related Practices
-
 {{% section %}}
 ### Variations
 - [2x2 Prioritization](/practices/2x2)
@@ -88,5 +86,3 @@ The timing of this activity varies along with the number of problems identified 
 
 ![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
 {{% /section %}}
-
-## Recommended Reading

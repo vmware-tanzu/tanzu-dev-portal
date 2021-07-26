@@ -77,13 +77,9 @@ why:
 Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible.
 {{% /section %}}
 
-#### Facilitator Notes & Tips
-
-None at the moment
-
-## Related Practices
 
 {{% section %}}
+## Related Practices
 ### Variations
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
@@ -96,13 +92,6 @@ While many on-line collaboration solutions have drawing features, we suggest kee
   Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 {{% /section %}}
 
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
 {{% section %}}
 ### Real World Examples
 
@@ -114,5 +103,3 @@ None at the moment
 
 ![Example of a digital persona template](/images/practices/personas/example-5.jpg)
 {{% /section %}}
-
-## Recommended Reading

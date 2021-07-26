@@ -54,18 +54,10 @@ why:
 Success is achieved when the team agrees to the top 3-5 Insights on which it will focus
 {{% /section %}}
 
-#### Facilitator Notes & Tips
-
-None at the moment
-
 {{% section %}}
 ### Related Practices
 - [2x2 Prioritization](/practices/2x2)
 {{% /section %}}
-
-### Variations
-
-None at the moment
 
 {{% section %}}
 ### Preceding
@@ -84,8 +76,3 @@ None at the moment
 
 [Solution Brainstorming](/practices/solution-brainstorming)
 {{% /section %}}
-
-## Real World Examples
-Coming soon!
-
-## Recommended Reading

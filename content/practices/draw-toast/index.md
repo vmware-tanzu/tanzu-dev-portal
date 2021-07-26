@@ -75,9 +75,11 @@ If short on time, have everyone tape theirs up and just ask participants to take
 {{% /section %}}
 
 
-## Related Practices
 {{% section %}}
+## Related Practices
+
 ### Variations
+
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
 
@@ -92,12 +94,6 @@ Here's a good example using a digital drawing tablet:
 
 ![Digital Drawing Toast](/images/practices/draw-toast/example-6.jpg)
 {{% /section %}}
-
-### Preceding
-None at the moment
-
-### Following
-None at the moment
 
 {{% section %}}
 ### Real World Examples

@@ -65,20 +65,6 @@ Success is when the core team and stakeholders have a clear and shared understan
 If you have a lot of people in your Kickoff (e.g. 15+), consider asking everyone to organize themselves into groups of 3-4 people. This will simplify the process of sharing out and affinity mapping the generated goals.
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
 {{% section %}}
 ### Real World Examples
 

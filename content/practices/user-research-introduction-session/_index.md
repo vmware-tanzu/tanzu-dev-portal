@@ -112,17 +112,6 @@ If the team feels like they want more practice conducting research before they d
 Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-None at the moment. 
-
-### Preceding
-None at the moment. 
- 
-### Following
-None at the moment. 
-
 {{% section %}}
 ### Real World Examples
 ![Research Workshop Example 1](/images/practices/user-research-introduction-session/example-1.jpg)

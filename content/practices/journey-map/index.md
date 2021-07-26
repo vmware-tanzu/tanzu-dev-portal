@@ -77,12 +77,6 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 - To understand more detail and complexity consider using a Service Blueprint to map a product/service’s “backstage actions” and “support processes” to an individual customer journey.
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
 {{% section %}}
 ### Preceding
 - [Personas](/practices/personas)

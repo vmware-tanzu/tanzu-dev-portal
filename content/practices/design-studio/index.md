@@ -106,10 +106,6 @@ The top ideas that came out of the design studio will be carried forward and syn
 - You can use any variety of paper sizes and squares; it’s about generating quantity, not detail
 {{% /section %}}
 
-## Related Practices
-
-### Variations
-
 {{% section %}}
 ### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
@@ -132,9 +128,6 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 - [Scenario Writing](/practices/scenario-writing)
 {{% /section %}}
 
-### Following
-None at the moment
-
 {{% section %}}
 ## Real World Examples
 ![Design Studio Example](/images/practices/design-studio/ds-example-3.png)
@@ -143,6 +136,3 @@ None at the moment
 
 ![Design Studio Example](/images/practices/design-studio/ds-example-6.png)
 {{% /section %}}
-
-## Recommended Reading
-None at the moment

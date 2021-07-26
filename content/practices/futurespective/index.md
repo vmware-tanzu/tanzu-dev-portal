@@ -80,19 +80,6 @@ You know you are done when the team has a group of positive practices and assign
 - Consider discussing the difference between a retrospective and futurespective at the beginning to avoid any confusion during the exercise
 - Templates (public): [Public Trello Board with many Retrospective types, including Futurespectives.](https://metroretro.io/templates/the-sailboat-retrospective)
 {{% /section %}}
-   
-
-## Related Practices
-None at the moment.
-
-## Variations
-None at the moment.
-
-### Preceding
-None at the moment.
- 
-### Following
-None at the moment.
 
 {{% section %}}
 ### Real World Examples
@@ -100,6 +87,6 @@ None at the moment.
 {{% /section %}}
 
 {{% section %}}
-## Recommended Reading
+### Recommended Reading
 [Speed Car Futurespective Miro Template](https://metroretro.io/templates/the-speed-car-and-the-abyss)
 {{% /section %}}

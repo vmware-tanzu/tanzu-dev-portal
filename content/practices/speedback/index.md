@@ -96,35 +96,29 @@ Speedback can be intense and overwhelming and some restorative or reflection tim
 {{% /section %}}
 
 
-## Facilitator Notes & Tips
 
 {{% section %}}
-### How do I present Speedback to hesitant team members to get them on board?
+### Facilitator Notes & Tips
+#### How do I present Speedback to hesitant team members to get them on board?
 
 Explain to hesitant team members that there is direct value to the project when team members provide and receive individualized feedback.  Describe the ASK feedback system and reinforce that everyone participating is likely feeling similarly.
 
 Additionally, the act itself of seeing and participating in a Speedback session is a valuable process/tool for encouraging ongoing feedback within the team even if the team members change over time.
-{{% /section %}}
 
-{{% section %}}
-### How is Speedback different from other methods of feedback?
+#### How is Speedback different from other methods of feedback?
 
 Participants receive a wide breadth of feedback in a short amount of time. Chances are, when an individual receives similar feedback from three different people within an hour, it may resonate more strongly than if the feedback was delivered three times but spread out over the course of a month.
 
 Speedback is also a good way for everyone to get a quick health check on how they are doing as individuals on the team, and to set goals based on what they hear.
 
 Speedback has an advantage of appearing more democratic in that it is initiated by an outsider, facilitated by an outsider, and all participants are on the same footing. This can be less daunting than say, a feedback session that person A initiates with person B specifically.
-{{% /section %}}
 
-{{% section %}}
-### Speedback is not a cure-all
+#### Speedback is not a cure-all
 One disadvantage of Speedback is that due to its timeboxed nature, it can be difficult to go deep into any one topic. Participants can always schedule follow-up sessions to continue the conversation.
 
 Speedback can be very effective when teams are going through a rough patch or if there are indications that the team’s health is taking a downturn. But if the team health or morale is already low, or if a subset of interpersonal relationships have truly deteriorated, Speedback is not the right format to resolve those issues.
-{{% /section %}}
 
-{{% section %}}
-### Email Template
+#### Email Template
 Feel free to use the following email template, modifying it as needed based on the size of your Speedback session. 
 
 > Hi [name of team],
@@ -155,12 +149,9 @@ Feel free to use the following email template, modifying it as needed based on t
 > It's easy to heap on the praise; try to come up with at least one piece of constructive feedback for everyone.
 {{% /section %}}
 
-## Related Practices
-None at the moment. 
-
 {{% section %}}
 ### Variations
-### For Remote Teams
+#### For Remote Teams
 If the entire team is co-located, try hosting Speedback in person. But if the team is even partially remote, set up the entire session as remote with video calls.
 
    {{% callout %}}
@@ -172,25 +163,15 @@ With some clever video-call preparation and facilitation over chat, you can have
    {{% callout %}}
    **Remote Tip:** Many video call systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
-{{% /section %}}
 
-{{% section %}}
-### How do I make this work in a large team of 8 or more participants?
+#### How do I make this work in a large team of 8 or more participants?
 It can be logistically challenging to set up Speedback with a large group. Some teams also may benefit from discipline-specific sessions, such as an engineering-only group. 
 
 Try having two or more smaller sessions. Try to keep them somewhat close together (within a week of each other).
-{{% /section %}}
 
-{{% section %}}
-### What if there’s an odd number of participants, e.g. 5 people on the team?
+#### What if there’s an odd number of participants, e.g. 5 people on the team?
 At any given time, one person will end up sitting out during each round. They can use that time to reflect, prepare, or just take a break.
 {{% /section %}}
-
-### Preceding
- 
-### Following
-
-## Real World Examples
 
 {{% section %}}
 ### Recommended Reading

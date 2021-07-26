@@ -180,16 +180,10 @@ If there are many assumptions to validate, consider following up with a hypothes
 [Assumptions](/practices/assumptions)
 {{% /section %}}
 
-## Variations
-None at the moment. 
-
 {{% section %}}
 ### Preceding
 [Assumptions](/practices/assumptions)
 {{% /section %}}
-
-### Following
-None at the moment. 
 
 {{% section %}}
 ### Real World Examples

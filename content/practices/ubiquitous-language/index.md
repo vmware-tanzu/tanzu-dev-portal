@@ -81,16 +81,6 @@ If you find yourself running low on time during share out, consider prioritizing
 Try as hard as you can to have one or more domain experts in the room with you. Without people present who can represent the subject matter, it will be tougher to converge on a shared language that represents the business reality.
 {{% /section %}}
 
-## Related Practices
-
-### Preceding
-
-None at the moment.
-
-### Following
-
-None at the moment.
-
 {{% section %}}
 ### Real World Examples
 

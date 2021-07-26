@@ -61,24 +61,6 @@ why:
 Success is when you have agreement on the problem and solution (aka snapshot)to move forward with as a team. You’re doing it right when you are thinking of users as humans.
 {{% /section %}}
 
-#### Facilitator Notes & Tips
-
-None at the moment
-
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
 {{% section %}}
 ### Real World Examples
 
@@ -87,5 +69,3 @@ None at the moment
 ![Close up of a molecule map drawn on a whiteboard](/images/practices/molecule-map/example-2.jpg)
 
 {{% /section %}}
-
-## Recommended Reading
