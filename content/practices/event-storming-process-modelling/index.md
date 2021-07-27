@@ -145,6 +145,6 @@ Thin Slices: Thin Slices can be heavily influenced by the goals of your project,
 ![This is the placeholder for sample 3](/images/practices/event-storming-process-modelling/SampleSoftwareModellingBoard.JPG)
 ## Recommended Reading
 - [50,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=1i6QYvYhlYQming/)
-- [100,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=fGm62ra_mQ8)
+- [Alberto Brandolini - 100,000 Orange Stickies Later](https://www.youtube.com/watch?v=fGm62ra_mQ8)
 - [Remote EventStorming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
 - [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
