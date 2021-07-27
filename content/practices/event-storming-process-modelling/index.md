@@ -80,7 +80,7 @@ The output from these workshops can be used to discover, validate or design a sy
      - Pain Points + Opportunities
    - Identify one or more thin slices. Try to identify a simplified end-to-end process that can provide the most value. 
 
-## Related Practices:
+## Related Practices
 ### `EventStorming`
 As mentioned Process Modelling evolved from `EventStorming` and is a fundamental part of the complete the tool, as prescribed by Alberto Brandolini. However the storming phase, or `Big Picture` as referred to by Alberto Brandolini, has been more widely adopted with minor variations to the original, such as the use of [EventStorming](/practices/event-storming)  as described in this Developer Center. Therefore Process Modelling naturally offers a way to enrich any `EventStorming` session
 ### UML/C4/Boris
