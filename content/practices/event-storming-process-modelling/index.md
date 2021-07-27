@@ -30,7 +30,7 @@ what:
 This is formally a grammar/notation for modelling Processes and Software, that has evolved from the application of [EventStorming](https://www.eventstorming.com/) by its founder Alberto Brandolini. 
 Traditionally it was indistinguishable from `EventStorming`, however its evolution has lead to Process Modelling becoming its own phase in the `EventStorming` methodology.
 
-While the formal method is best used for identifying large complex high level processes, the general principals and grammar of Process Modelling have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
+While the formal method is best used for understanding large, complex high-level processes, the general principles and grammar of Process Modelling have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
 
 The output from these workshops can be used to discover, validate or design a system that supports an end to end business process. The information can be used as an algorithmic model of the problem space, and other forms of design can be derived from it; such as an Event + Domain Driven microservice architecture, a simple Pipeline or even design a `CQRS` and Event Sourcing pattern. Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a more suitable architectural model.
 
