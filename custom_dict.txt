@@ -271,6 +271,7 @@ CloudEvents
 CloudHealth
 CloudNativeCon
 CloudWatch
+Cloudflare
 Clozel
 cluster-proportional-autoscaler
 cluster1
@@ -1235,6 +1236,7 @@ PdxInstanceImpl
 PdxInstances
 PdxType
 PdxTypes
+PEM
 PeerAuthentication
 per-namespace
 Percona
