@@ -148,6 +148,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -695,6 +697,7 @@ gzip(ped)?
 H2
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
@@ -1102,6 +1105,7 @@ Natively
 natively
 Neatro
 Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1447,6 +1451,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
