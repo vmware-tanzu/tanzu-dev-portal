@@ -107,7 +107,9 @@ The top ideas that came out of the design studio will be carried forward and syn
 {{% /section %}}
 
 {{% section %}}
-### For Remote Teams
+### Related Practices
+### Variations
+#### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
 
 While many on-line collaboration solutions have drawing features, we suggest keeping thing low-tech: use paper and cameras. 
