@@ -32,9 +32,7 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 ### Sample Agenda & Prompts
 1. Preparation: As a group, agree on 2 relevant prioritization criteria.
    
-   {{< callout >}}
-   Examples: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation
-   {{< /callout >}}
+   {{< callout >}}Examples: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation{{< /callout >}}
 
 1. Create 2 perpendicular intersecting axes and label each axis with one of the chosen criteria.
 
