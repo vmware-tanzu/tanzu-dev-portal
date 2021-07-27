@@ -709,6 +709,7 @@ HAProxy
 [hH]ardcoded
 HashiCorp('s)?
 hasResult
+HATEOAS
 Hayk
 Haytham
 Heartbleed
@@ -870,6 +871,7 @@ Junio
 junit
 Junit
 JUnit
+junky
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
@@ -1205,6 +1207,7 @@ OWASP
 P2P
 Pacak
 Packer
+Packt('s)?
 PagerDuty
 Pairmate
 Paketo
