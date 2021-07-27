@@ -1,9 +1,11 @@
 ---
-title: "We Share Knowledge"
-weight: 60
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: We Share Knowledge
+weight: 60
 ---
 
 **We are committed to helping others.** This requires communication, and most importantly, empathy. We learn how to work so well _with_ our clients and each other that we make progress better together than either of us would alone.

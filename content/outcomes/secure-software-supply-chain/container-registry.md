@@ -1,6 +1,6 @@
 ---
 date: '2021-06-07'
-lastmod: '2021-06-07'
+lastmod: '2021-06-15'
 layout: single
 title: How a Container Registry Can Help
 weight: 6

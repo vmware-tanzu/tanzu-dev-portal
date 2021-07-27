@@ -108,8 +108,8 @@ Firstly, the team should have a shared understanding of the scope and relative c
 {{</ table >}}
 {{% /section %}}
 
+
 {{% section %}}
-### Recommended Reading
 [Agile Estimating and Planning](https://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415) by Mike Cohn
 
 [Yesterday’s Weather](http://wiki.c2.com/?YesterdaysWeather)

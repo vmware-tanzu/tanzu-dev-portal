@@ -1,9 +1,11 @@
 ---
-title: Enterprise Integration
-weight: 140
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Enterprise Integration
+weight: 140
 ---
 
 Enterprise integration middleware are software systems that offer services to link and integrate separate applications. They cover many use cases and domains like transaction processing, distributed computing, message broker, data access systems, or Enterprise Service Buses (ESB).

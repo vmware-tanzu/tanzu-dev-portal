@@ -1,9 +1,11 @@
 ---
-title: Configuration
-weight: 110
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Configuration
+weight: 110
 ---
 
 Even quite trivial applications have some form of configuration, such as how to connect to its data sources, how to change behavior based on the target deployment environment, or how to log. There are plenty of ways to configure your application.

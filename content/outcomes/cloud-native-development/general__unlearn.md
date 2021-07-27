@@ -1,9 +1,11 @@
 ---
-title: Things to Unlearn
-weight: 1
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Things to Unlearn
+weight: 1
 ---
 
 Every company and team is different, and we have all spent a lot of time learning software development practices that can be detrimental to developing distributed cloud native systems. 
