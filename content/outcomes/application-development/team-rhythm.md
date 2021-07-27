@@ -1,10 +1,13 @@
 ---
-title: Team Rhythm
-weight: 20
+date: '2021-07-02'
+lastmod: '2021-07-02'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Team Rhythm
+weight: 20
 ---
+
 A healthy lean and agile team has a strong and consistent rhythm. Each week is punctuated by a small set of standing practices and meetings.
 
 It is critical to establish a [psychologically safe](https://en.wikipedia.org/wiki/Psychological_safety) work environment. Many of the following practices emphasize asking for help, volunteering to help others, explaining your reasoning, challenging the reasoning of others, and laying bare what you feel is and is not working well on the project. This will not happen within a _toxic_ work environment where honesty and vulnerability are punished, mocked, or reduce one’s standing in the organization. 

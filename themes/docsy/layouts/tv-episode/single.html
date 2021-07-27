@@ -21,9 +21,11 @@
 {{ if isset .Params "twitch" }} 
   {{ $.Scratch.Set "streamUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
   {{ $.Scratch.Set "streamName" "on Twitch" }}
+  {{ $.Scratch.Set "embedSite" "twitch" }}
 {{ else if isset .Params "youtube" }}
   {{ $.Scratch.Set "streamUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
   {{ $.Scratch.Set "streamName" "on YouTube" }}
+  {{ $.Scratch.Set "embedSite" "youtube" }}
 {{ end }}
 <div class='container'>
   <div id="live" class="row justify-content-center mt-5 pt-3">
@@ -48,6 +50,16 @@
     {{ end }}
 
   </div>
+
+  <div class="row" id="stream-embed">
+    <h2 class="mb-2"> {{- .Title -}}</h2>
+    <div id="internal-embed" class="container justify-content-center mt-3 pt-3" style="text-align: center;">
+      {{ if eq ($.Scratch.Get "embedSite") "youtube" }}
+        <iframe width="910" height="512" src='https://www.youtube.com/embed/{{ .Params.youtube }}' frameborder='0' allowfullscreen></iframe>
+      {{ end }}
+    </div>
+  </div>
+
   <!-- ELSE IF PREVIOUS -->
   <div id="vod" class="row justify-content-center mt-5">
     <div class="col-lg-9 col-12 px-0">
@@ -75,21 +87,47 @@
   </div>
   <!-- END -->
 
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
   <script type="text/javascript">
     var live = document.getElementById("live");
     var vod = document.getElementById("vod");
+    var embed = document.getElementById("stream-embed");
     var episodeType = "";
     var currentTime = Date.now();
-    var episodeTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
-    if (episodeTime < currentTime) {
-      live.style.display = "none";
-      vod.style.display = "flex";
-      episodeType = "vod";
-    }
-    else {
+    var startTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
+    var duration = "{{default 60 .Params.minutes }}" * 60000;
+    var endTime = new Date(startTime + duration).getTime();
+
+    // Display content based on the current state:
+    // Future event: Show the air time and link to Twitch
+    // Live event: Embed the twitch stream
+    // Past event: Link/embed the VOD depending if it's on Twitch or YouTube
+    if (currentTime < startTime) {
       live.style.display = "flex";
+      embed.style.display = "none";
       vod.style.display = "none";
       episodeType = "live";
+    } 
+    else if (currentTime >= startTime && currentTime <= endTime) {
+      live.style.display = "none";
+      embed.style.display = "flex";
+      vod.style.display = "none";
+      episodeType = "live";
+
+      {{ if eq ($.Scratch.Get "embedSite") "twitch" }}
+        new Twitch.Embed("stream-embed", {
+            width: 1130,
+            height: 480,
+            channel: "vmwaretanzu",
+        });
+      {{ end }}
+    }
+    else {
+      live.style.display = "none";
+      embed.style.display = "none";
+      vod.style.display = "flex";
+      episodeType = "vod";
     }
   </script>
 
