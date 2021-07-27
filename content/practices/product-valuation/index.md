@@ -149,7 +149,7 @@ In step 1 or 2, you may want to use a prioritization exercise similar to [Insigh
 {{% /section %}}
 
 {{% section %}}
-## Real World Examples
+### Real World Examples
 
 ![Example value slide showing how an MVP saves 60 minutes of time per document for a set of users with a future projection based on an assumed adoption rate](/images/practices/product-valuation/example-1.png)
 

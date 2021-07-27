@@ -42,9 +42,7 @@ why:
 1. Have team members convert their assigned problem or insight into a "How might we...?" statement, writing the output clearly on a new, differently colored large sticky note and attaching it over the original problem or insight.
 
    {{% callout %}}
-   Tip: If there are more problems and insights than team members, you can divide the team into pairs and assign several to each pair. This can also be helpful if there are more people than problems and insights.
-
-   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   Tip: If there are more problems and insights than team members, you can divide the team into pairs and assign several to each pair. This can also be helpful if there are more people than problems and insights. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
 
 1. Go around the group and have each person (or pair) share out their original problem or insight and the "How might we...?" statement(s) they created from it. Make adjustments as a team until you're happy with all statements.

@@ -40,9 +40,7 @@ why:
 1. Divide room into small groups and give a piece of paper to each group
         
    {{% callout %}}
-   Tip: If the group is small, you can also do this exercise individually
-
-   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   Tip: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
    
 1. Define “persona” for the room and remind all participants this is a provisional persona—through research, what we think we know about this person will change and evolve
@@ -79,7 +77,7 @@ Success is when you've created a "master persona" and everyone in the room feels
 
 
 {{% section %}}
-## Related Practices
+### Related Practices
 ### Variations
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 

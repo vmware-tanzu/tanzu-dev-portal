@@ -44,9 +44,7 @@ why:
 1. Get into groups of 3 or ask each person to draw 3 circles on a piece of paper and draw multiple molecules. Come up with as many solutions as possible.
 
    {{% callout %}}
-   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
-   
-   Also, feel free to use real paper and hold it up to the camera when the group is remote.
+   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. Also, feel free to use real paper and hold it up to the camera when the group is remote.
    {{% /callout %}}
 
    ![Filled Molecule Map](/images/practices/molecule-map/step-2.png)

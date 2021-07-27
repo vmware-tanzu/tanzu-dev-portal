@@ -48,7 +48,7 @@ why:
    Tip: Focus on a single happy path for this step. We will incorporate secondary actions later.
    {{% /callout %}}
 
-Check with the group after adding each task to make sure the order feel rights and critical tasks have not been skipped.
+   Check with the group after adding each task to make sure the order feel rights and critical tasks have not been skipped.
 1. **Optional:** Use stickies to label groups of user stories by their corresponding epic.
 
 1. Have the participants to come up to the whiteboard and engage with the map. Ask them to think about variations or deviations from the “happy path” already outlined.

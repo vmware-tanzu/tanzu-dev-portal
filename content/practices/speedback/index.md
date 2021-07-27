@@ -26,9 +26,7 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 
    {{< callout >}}
    Tip: 10 minutes per pair is a good starting point but can be adjusted. Subsequent Speedback sessions with mature, experienced teams might get it down to 5 minutes.
-   {{< /callout >}}
-   
-   {{% callout %}}
+
    **Remote Tip:** For distributed teams, use video calls and "breakout rooms" for these feedback sessions. 
    
    **[More remote tips below in the Variations section](#for-remote-teams).**

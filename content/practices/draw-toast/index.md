@@ -40,8 +40,6 @@ why:
 
    {{% callout %}}
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes.
-   
-   **[More remote tips below in the Variations section](#variations).**
    {{% /callout %}}
 
 1. Hand out markers and paper to everyone and ask participants to **draw each step in the process of making toast**. Give them 2-3 minutes.
@@ -76,7 +74,7 @@ If short on time, have everyone tape theirs up and just ask participants to take
 
 
 {{% section %}}
-## Related Practices
+### Related Practices
 
 ### Variations
 

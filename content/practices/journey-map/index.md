@@ -70,7 +70,7 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 {{% /section %}}
 
 {{% section %}}
-#### Facilitator Notes & Tips
+### Facilitator Notes & Tips
 
 - Create one Journey Map per Persona. If there are other [Personas](/practices/personas)
  to consider, map them as touch points from a single [Personas](/practices/personas) perspective.

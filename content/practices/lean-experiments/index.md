@@ -118,10 +118,9 @@ why:
       
    {{< callout >}}
    Tip: Print out your templates, email/share them, or create and share the digital workspace before the workshop.
-   
-   Feel free to copy this Miro board: [Validation Research/MVP Experiment on Miro](https://miro.com/app/board/o9J_lGThxtc=/)  
    {{< /callout >}}
    
+   Feel free to copy this Miro board: [Validation Research/MVP Experiment on Miro](https://miro.com/app/board/o9J_lGThxtc=/)  
    Prompt everyone to take 5 minutes individually to think of an experiment to test the hypothesis and associated measurable outcomes.
 
 1. **Share experiments**
