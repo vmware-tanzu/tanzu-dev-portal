@@ -148,6 +148,7 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
 BEA
 Becki
 Beda('s)?
@@ -1104,6 +1105,7 @@ Natively
 natively
 Neatro
 Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1449,6 +1451,7 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
 Sarella
 SAT(s)?
 Sathe
