@@ -1,7 +1,7 @@
 ---
-title: "Most Useful Statistics"
+title: "The Most Useful Statistics for Troubleshooting Tanzu GemFire Deployments"
 description: >
-    This article describes the most useful statistics used for troubleshooting.
+    This article describes the most useful statistics for troubleshooting Tanzu GemFire Deployments.
 date: 2021-07-01
 type: blog
 
@@ -12,7 +12,7 @@ team:
 ---
 
 ## Introduction
-Apache Geode produces a variety of statistics in each member of the `DistributedSystem` including statistics for:
+Each member of the Tanzu GemFire `DistributedSystem` produces a variety of statistics including ones in these categories:
 
 - Operating System
 - Java Virtual Machine (JVM)
