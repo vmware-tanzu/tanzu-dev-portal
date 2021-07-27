@@ -148,6 +148,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -269,6 +271,7 @@ CloudEvents
 CloudHealth
 CloudNativeCon
 CloudWatch
+Cloudflare
 Clozel
 cluster-proportional-autoscaler
 cluster1
@@ -551,6 +554,7 @@ FIPS(-enabled|-approved)?
 firewalling
 Fiscus
 Flake8
+flatlined
 Florea
 Florent
 [fF]luent[Bb]it
@@ -697,6 +701,7 @@ gzip(ped)?
 H2
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
@@ -1104,6 +1109,7 @@ Natively
 natively
 Neatro
 Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1233,6 +1239,7 @@ PdxInstanceImpl
 PdxInstances
 PdxType
 PdxTypes
+PEM
 PeerAuthentication
 per-namespace
 Percona
@@ -1449,6 +1456,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
