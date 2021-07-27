@@ -12,6 +12,7 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+10x
 12SwitchRestoresSansCheckOuts
 2x2
 3D
@@ -21,6 +22,7 @@
 8PpgqEqkQWA
 A3
 AAAA
+Aasta
 Abbie
 Abdellfetah
 Abo
@@ -33,7 +35,9 @@ accessor
 acknowledgedEvents
 acknowledgement
 Acknowledgement
+ActiveMQ
 Activiti
+add-on(s)?
 addAndReturnSize
 addAndReturnSizes
 additively
@@ -61,6 +65,7 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+Andriy
 Ango
 Anneliese
 [Aa]nomol(y|ies)
@@ -72,6 +77,7 @@ antipatterns?
 Antrea
 Apdex
 api
+Apigee
 ApiResponse
 APIs?
 APM
@@ -104,7 +110,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
-Atlasian
+Atlassian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -142,6 +148,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -153,9 +161,11 @@ benchmark(ing)?
 benefitting
 Berglund
 BestEffort
+betweens
 BGP(Configuration|-capable|Peer(s)?)?
 Bhave
 BikeIncidentsByZip
+bikeshedding
 Bikewise
 biome
 [Bb]itnami('s)?
@@ -230,6 +240,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chander
 changeAlertLevel
 [Cc]hangemaker(s)
 [Cc]hargeback
@@ -260,6 +271,7 @@ CloudEvents
 CloudHealth
 CloudNativeCon
 CloudWatch
+Cloudflare
 Clozel
 cluster-proportional-autoscaler
 cluster1
@@ -333,13 +345,14 @@ CredHub
 crf
 critiquers
 CRM
-cron
+[Cc]ron
 cross-subnet
 CrossSubnet
 Crowdsourced?
 CRuby
 crypto
 [Cc]ryptographic(ally)?
+crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
@@ -370,7 +383,7 @@ datagram
 DataJpaTest
 datapath
 dataset
-[Dd]atasources
+[Dd]atasource(s)?
 DataStax('s|Examples)?
 dataStoreBytesInUse
 dataStoreEntryCount
@@ -385,6 +398,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
+de-risk
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -447,6 +461,7 @@ Dobrin
 DockerCon
 [Dd]ockerfile(s|-built)?
 Documentum
+Doerr
 Dokuka
 Dolan
 donut
@@ -499,6 +514,7 @@ EnumInfo
 Enums
 env
 EOF
+ESB
 etcd(ctl)?
 [Ee]thernet(s)?
 ETL
@@ -520,6 +536,7 @@ failback
 [Ff]ailover(s)?
 Falco
 Fani
+faq(s)?
 favourite(s)?
 FC
 FeignClient
@@ -542,9 +559,11 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+foundaments
 Foxwell
 FP
 FQDN
+Frascati-Robinson
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
@@ -667,6 +686,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
@@ -679,10 +699,12 @@ gzip(ped)?
 H2
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
 HAProxy
+[hH]ardcoded
 HashiCorp('s)?
 hasResult
 Hayk
@@ -747,6 +769,8 @@ Initializr
 Integrallis
 [Ii]ntegrations
 IntelliJ
+interiorize
+interiorizing
 interpolator
 [Ii]nterservice
 intra-cluster
@@ -819,6 +843,7 @@ JmxNotificationClient
 JmxNotificationHandler
 JMXNotificationHandler
 JmxNotificationsAccessor
+JNDI
 johnharris85
 Jonatan
 jonatan_ivanov
@@ -833,6 +858,7 @@ JSONFormatter
 Jsonnet
 JSONPatch
 JsonPdxConverter
+JSP
 JSR-352
 JST
 judgement
@@ -853,6 +879,7 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+Kalashnykov
 Kamus
 Kanban
 Kaniko
@@ -890,6 +917,8 @@ Kravitz
 krf
 Krisp
 ksqlDB
+KStream
+KTable
 [kK]ube
 kube_pod_container_status_restarts_total
 kube-apiserver
@@ -953,6 +982,7 @@ localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
 logback
+Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 LogPartitionedRegionBucketDetailsFunction
@@ -1040,6 +1070,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MQ
 MSc
 msgpack(ed)?
 mTLS
@@ -1061,6 +1092,7 @@ MVP(s)?
 my-mongodb
 [mM]y[sS]ql
 myapp
+MyBatis
 mychart
 mydb
 MyPy
@@ -1074,6 +1106,8 @@ Nana
 Natively
 natively
 Neatro
+Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1143,6 +1177,7 @@ OpenStack
 OpenTelemetry
 OpenTracing
 operationalized
+OperatorHub
 oplog
 oplogs
 OpsGenie
@@ -1171,6 +1206,7 @@ Packer
 PagerDuty
 Pairmate
 Paketo
+Palaka
 Palo
 Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
@@ -1191,6 +1227,7 @@ passwd
 pb('s)?
 pb&jelly
 (pc|C)zarkowski('s)?
+PCF
 PDB(s)?
 PDX
 PDX-serializable
@@ -1200,6 +1237,7 @@ PdxInstanceImpl
 PdxInstances
 PdxType
 PdxTypes
+PEM
 PeerAuthentication
 per-namespace
 Percona
@@ -1214,6 +1252,7 @@ php-apache
 Pichler
 pickab(le|ility)?
 PID
+Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
@@ -1235,18 +1274,21 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+[Pp]ortlet(s)?
 [Pp]ost-mortem
 Postfacto
 [Pp]ostgres
 POSTROUTING
 PR(s)?
 Pratik('s)?
+[pP]re-[pP]lanning
 pre-auth
 pre-built
 pre-configured
 pre-created
 pre-defined
 pre-encryption
+pre-engagement
 pre-exist(s|ing)?
 pre-installed
 Pre-IPM
@@ -1255,6 +1297,7 @@ pre-programmed
 pre-release
 [pP]re-stop
 Pre-sync
+pre-work
 pre(-)?
 prebuilt
 precompiled
@@ -1293,6 +1336,7 @@ putAll
 PuTTYgen
 PVC?s?
 PWAs
+PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
@@ -1347,6 +1391,7 @@ Ren
 Renaud
 Renfro
 Renner
+replatforming
 replicaset
 ReplicaSet(s)?
 replicationcontrollers
@@ -1373,6 +1418,7 @@ Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
+RocksDB
 Rockstar
 Rodislav
 ROI
@@ -1408,6 +1454,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
@@ -1417,11 +1465,13 @@ scaffolded
 scaledown(s)?
 ScatterSpoke
 SCDF('s)?
+SCG
 schema(s)?
 Schimanski
 Schutta
 Schwaber
 screencaster
+SCS
 SDK(s)?
 SDS
 seaborn
@@ -1453,6 +1503,8 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+Sharat
+Sharat_Chander
 sharded
 Sheasha
 Shellshock
@@ -1489,6 +1541,7 @@ SPEL
 SPIFFE
 Splunk
 Spock
+spoilt
 spring-petclinic
 springboot
 SpringBootTest
@@ -1560,17 +1613,18 @@ TCP
 tdp-guide
 TeamRetro
 TechRepublic
+TeeFilter
 Tekton('s)?
 [Tt]elco(s)*
 telecom
+[Tt]elematics
 [Tt]emplat(ed|ing)
 Templeton
 Teotti
 Teppanyaki
 Terraform(-ing)?
+[Tt]est[Cc]ontainers
 testability
-TestContainers
-testcontainers
 TGI(K)?
 tgz
 Thanos
@@ -1606,6 +1660,7 @@ totalTransmissionTime
 tradeoff(s)?
 Traefik
 transactional
+transformational
 transmittedEvents
 Trello
 Trivy(.)?
@@ -1622,6 +1677,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UCD
 UDP
 UI(s|-based)?
 (un)?marshalling
@@ -1652,6 +1708,7 @@ updateServerMetric
 updateServerMetrics
 upgradability
 upleveled
+upskill
 upstream(s)?
 uptime
 UR[IL](s)?
@@ -1660,6 +1717,7 @@ url
 URL(s)?
 USD
 userDetails
+Util(s)?
 UX
 [Vv][123]
 Vaadin
@@ -1724,6 +1782,7 @@ Webpage
 WebSocket
 WebSphere
 WeChat
+well-intentioned
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
@@ -1741,6 +1800,7 @@ x509
 x64
 Xing
 XKCD
+XP
 XSalsa20
 Xu
 YAML|yaml
