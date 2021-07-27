@@ -430,6 +430,7 @@ Dieu
 differentiators
 Dikastes
 DirtiesContext
+disambiguated
 DiscoveryClient
 DiskRegionStatistics
 DiskStore
@@ -520,6 +521,7 @@ EventID
 eventQueueSize
 eventsDistributed
 eventsQueued
+Evie
 [Ee]xecutables
 expander(s)?
 expensed
@@ -1592,7 +1594,7 @@ Syer
 symposia
 Sysdig
 Szul
-Tanzu(Developer)?
+Tanzu(Developer|'s)?
 targetPort
 Tarin
 TAS
@@ -1722,6 +1724,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+Vendio
 vendored
 Venkat
 Venkateswara
