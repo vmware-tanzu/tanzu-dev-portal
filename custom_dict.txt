@@ -268,10 +268,10 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
+Cloudflare
 CloudHealth
 CloudNativeCon
 CloudWatch
-Cloudflare
 Clozel
 cluster-proportional-autoscaler
 cluster1
@@ -1237,8 +1237,8 @@ PdxInstanceImpl
 PdxInstances
 PdxType
 PdxTypes
-PEM
 PeerAuthentication
+PEM
 per-namespace
 Percona
 [Pp]erformant
