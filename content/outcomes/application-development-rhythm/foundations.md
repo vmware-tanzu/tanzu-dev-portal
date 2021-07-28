@@ -191,7 +191,7 @@ It is important to be careful about selection of tools,
 technologies and frameworks,
 as some today may be obsolete tomorrow.
 
-For this reason it is important not to overfit to any particular tool or
+For this reason it is important not to over fit to any particular tool or
 technology,
 and their selection criteria should be based on support for standards.
 
