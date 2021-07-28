@@ -37,7 +37,7 @@ First, let's define an Incident:
    
    Example of timeline:
    
-   ![Postmortem Timeline](/images/practices/post-mortem/timeline.jpg)
+   ![Postmortem Timeline](/images/practices/postmortem/timeline.jpg)
    
    Make sure to invite the right people for the postmortem session. For example:
    
@@ -46,7 +46,7 @@ First, let's define an Incident:
       - Member of platform team
       - Member of security team
 
-1. **Explain the goal of the postmortem (5 mins)**
+1. **Explain the goal of the postmortem (5 minutes)**
 
    You might say something like: 
    
@@ -56,11 +56,11 @@ First, let's define an Incident:
    Tip: Embrace blameless culture because you want to identify what happens and how to avoid it in the future. Make sure you provide psychological safety for each team member.
    {{< /callout >}}
 
-1. **Present the incident timeline (5 mins)**
+1. **Present the incident timeline (5 minutes)**
 
    Show the incident timeline and confirm it with the team.
 
-1. **Brainstorming Postmortem Topic (5 mins)**
+1. **Brainstorming Postmortem Topic (5 minutes)**
 
    Ask team to write on post-it or digital workspace:
    
@@ -68,11 +68,11 @@ First, let's define an Incident:
    - What went well - What did we do that worked well to fix the incident?
    - Where we got lucky - Are there any events/things that helped us out?
 
-1. **Quick Topic Clustering (5 mins)**
+1. **Quick Topic Clustering (5 minutes)**
    
    Ask the team to cluster the post-its based on similar topics.
 
-1. Discuss each cluster (20 mins)
+1. Discuss each cluster (20 minutes)
    
    Allow enough time for each cluster to be discussed. If any particular clusters need additional time, consider a follow-up session about that specific topic.
    
@@ -82,25 +82,25 @@ First, let's define an Incident:
    Tip: consider using [“five whys” method](https://en.wikipedia.org/wiki/Five_whys). Again, be sure to focus on root causes that are due to the process, not individual blame.  
    {{< /callout >}}
 
-1. **Discuss the action items (15 mins)**
+1. **Discuss the action items (15 minutes)**
 
    Discuss with the team what actions we can take to solve the incident and avoid it in the future. Define the owner(s) of these actions.
 
-1. **Agreed on the postmortem owner(s) (4 mins)**
+1. **Agreed on the postmortem owner(s) (4 minutes)**
 
-   Decide as a team the post-mortem owner, whose responsibilities are to:
+   Decide as a team the postmortem owner, whose responsibilities are to:
    
-   - Create a post-mortem document for future reference that contains:
+   - Create a postmortem document for future reference that contains:
       - Overview of the incident
       - Action items to resolve the incident
       - [Root cause analysis](https://asq.org/quality-resources/root-cause-analysis)
    - Learnings and next steps to avoid the incident happening in the future
-   - Communicate with stakeholders regarding the status of the post-mortem
+   - Communicate with stakeholders regarding the status of the postmortem
    - Plan review meeting to make sure all action items in the postmortem meeting is done
 
 1. **Schedule the follow up (1 min)**
 
-   Agree with the team for a follow up post-mortem session to review the actions. The incident is not closed until all post-mortem actions are completed. 
+   Agree with the team for a follow up postmortem session to review the actions. The incident is not closed until all postmortem actions are completed. 
 
 ## Success/Expected Outcomes
 At the end of this exercise, the team will have a clear alignment of what the incident was and how it happened. Moreover, the team will have a set of plans to prevent or reduce the impact of the incident’s recurrence. 
@@ -110,12 +110,12 @@ Examples of postmortem documents:
 
 - https://sre.google/sre-book/example-postmortem/
 - https://github.com/dastergon/postmortem-templates
-- https://github.com/danluu/post-mortems
+- https://github.com/danluu/postmortems
 - ["sredocs" on GitHub](https://github.com/google/sredocs)
 
 ## Recommended Reading
 [Atlassian Incident management](https://www.atlassian.com/incident-management)
 
-[Google Post mortem culture](https://sre.google/sre-book/postmortem-culture/)
+[Google Postmortem culture](https://sre.google/sre-book/postmortem-culture/)
 
-Life of a production system incident ebook (coming soon!)
+Life of a production system incident (coming soon!)
