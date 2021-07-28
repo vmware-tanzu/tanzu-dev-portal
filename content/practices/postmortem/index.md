@@ -1,6 +1,6 @@
 ---
-title: "Post Mortem"
-linkTitle: "Post Mortem"
+title: "Postmortem"
+linkTitle: "Postmortem"
 description: "An exercise to learn from any incident that impacts the product or users. In the SRE community, this exercise is called an incident retrospective."
 tags: ["Delivery"]
 length: "1 hour"
@@ -13,7 +13,7 @@ why:
 when:
 - When the team agrees that there is something to learn about the incident or near miss.
 - During the incident or soon after it is resolved, as long as the session would not interfere with resolving the incident
-- Stakeholders or another team (eg: support) has asked for a post mortem session.
+- Stakeholders or another team (eg: support) has asked for a postmortem session.
 what:
 - Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
@@ -33,24 +33,24 @@ First, let's define an Incident:
 ### Sample Agenda & Prompts
 1. **Prior to the session**, collect as much information about the incident as you can. For example, you might send a survey to relevant teams requesting information. If teams took notes about the incident while it was in progress, collect these as well.
    
-   Moreover, it will be helpful to create a timeline prior to the session and validate it during the post mortem session.
+   Moreover, it will be helpful to create a timeline prior to the session and validate it during the postmortem session.
    
    Example of timeline:
    
-   ![Post Mortem Timeline](/images/practices/post-mortem/timeline.jpg)
+   ![Postmortem Timeline](/images/practices/post-mortem/timeline.jpg)
    
-   Make sure to invite the right people for the post mortem session. For example:
+   Make sure to invite the right people for the postmortem session. For example:
    
    - Core team: Product Manager(s), Engineer(s), Designer(s)
    - Relevant party, anyone who is the key role and involved in the incident. For example:
       - Member of platform team
       - Member of security team
 
-1. **Explain the goal of the post mortem (5 mins)**
+1. **Explain the goal of the postmortem (5 mins)**
 
    You might say something like: 
    
-   > “What caused the recent incident? And how did we fix it? Additionally we want to define action items to avoid this in the future and document it in our post mortem document.  We are not looking to find someone to blame.” 
+   > “What caused the recent incident? And how did we fix it? Additionally we want to define action items to avoid this in the future and document it in our postmortem document.  We are not looking to find someone to blame.” 
    
    {{< callout >}}
    Tip: Embrace blameless culture because you want to identify what happens and how to avoid it in the future. Make sure you provide psychological safety for each team member.
@@ -60,7 +60,7 @@ First, let's define an Incident:
 
    Show the incident timeline and confirm it with the team.
 
-1. **Brainstorming Post Mortem Topic (5 mins)**
+1. **Brainstorming Postmortem Topic (5 mins)**
 
    Ask team to write on post-it or digital workspace:
    
@@ -86,7 +86,7 @@ First, let's define an Incident:
 
    Discuss with the team what actions we can take to solve the incident and avoid it in the future. Define the owner(s) of these actions.
 
-1. **Agreed on the post mortem owner(s) (4 mins)**
+1. **Agreed on the postmortem owner(s) (4 mins)**
 
    Decide as a team the post-mortem owner, whose responsibilities are to:
    
@@ -96,7 +96,7 @@ First, let's define an Incident:
       - [Root cause analysis](https://asq.org/quality-resources/root-cause-analysis)
    - Learnings and next steps to avoid the incident happening in the future
    - Communicate with stakeholders regarding the status of the post-mortem
-   - Plan review meeting to make sure all action items in the post mortem meeting is done
+   - Plan review meeting to make sure all action items in the postmortem meeting is done
 
 1. **Schedule the follow up (1 min)**
 
@@ -106,7 +106,7 @@ First, let's define an Incident:
 At the end of this exercise, the team will have a clear alignment of what the incident was and how it happened. Moreover, the team will have a set of plans to prevent or reduce the impact of the incident’s recurrence. 
 
 ## Facilitator Notes & Tips
-Examples of post mortem documents: 
+Examples of postmortem documents: 
 
 - https://sre.google/sre-book/example-postmortem/
 - https://github.com/dastergon/postmortem-templates
