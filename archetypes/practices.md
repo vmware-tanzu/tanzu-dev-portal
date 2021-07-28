@@ -72,10 +72,10 @@ Things to keep in mind:
    
    Try not to make them to large either in pixels or disk space. 1280px on the longest side and 400KB or so max. 
 
-#### Success/Expected Outcomes
+## Success/Expected Outcomes
 How do people know if this workshop was successful? 
 
-#### Facilitator Notes & Tips
+## Facilitator Notes & Tips
 Are there common ways by which this workshop gets off track? Notes like that are great for this section.
 
 ## Related Practices
@@ -84,16 +84,20 @@ If there are any related practices list them here.
 - [Related Practice 1](/practices/related-practice-1)
 - [Related Practice 2](/practices/related-practice-2)
 
-### Variations
+Delete if unused.
+
+## Variations
 Are there alternative ways of performing this practice or workshop? Call out the differences here.
 
+Delete if unused.
+
 ### Preceding
-Optional.
+Optional. Delete if unused.
 
 - [Specific practice that takes place before this one](/practices/related-practice-before)
  
 ### Following
-Optional.
+Optional. Delete if unused.
 
 - [Specific practice that takes place after one](/practices/related-practice-after)
 
