@@ -9,4 +9,4 @@ weight: 3
 youtube_id: jrCwx9qzutM
 ---
 
-VMware's Charlie Black, product manager for Tanzu GemFire Vmware, demos a GemFire enabled Spring Boot Application that uses Spring Caching.  
+VMware's Charlie Black, product manager for Tanzu GemFire VMware, demos a GemFire enabled Spring Boot Application that uses Spring Caching.  

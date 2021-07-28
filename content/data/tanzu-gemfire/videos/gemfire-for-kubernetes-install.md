@@ -9,4 +9,4 @@ weight: 2
 youtube_id: vbskafFrJ_I
 ---
 
-VMware's Charlie Black, product manager for Tanzu GemFire Vmware, walks through how to install the Tanzu GemFire operator and creates a GemFire cluster. 
+VMware's Charlie Black, product manager for Tanzu GemFire VMware, walks through how to install the Tanzu GemFire operator and creates a GemFire cluster. 

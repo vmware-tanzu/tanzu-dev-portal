@@ -9,9 +9,9 @@ type: samples
 weight: 
 ---
 
-This is a sample code that stores a session state for an ASP.NET app (basically .NET Web App). It's a command line simple program that connects to a region using cache factory object and does not involve any depenency on Java.
+This is a sample code that stores a session state for an ASP.NET app (basically .NET Web App). It's a command line simple program that connects to a region using cache factory object and does not involve any dependency on Java.
 
-Before you continue, you need to follow these steps for SessionStateProvider sample works:
+Before you continue, you need to follow these steps for `SessionStateProvider` sample works:
 
 - In your Web.Config file, add below section under <system.web> section. The timeout value can be changed as needed:
  ```xml

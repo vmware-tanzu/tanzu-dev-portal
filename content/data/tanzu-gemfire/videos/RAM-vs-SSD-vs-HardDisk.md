@@ -1,12 +1,10 @@
 ---
 data-featured: false
 date: '2021-03-21'
-description: In this video we go over what is Tanzu GemFire from a high level.    
+description: In this video we discuss the performance difference between RAM vs SSD vs Hard Disks.    
 lastmod: '2021-03-21'
-title: What is GemFire?
+title: Tanzu GemFire - RAM vs SSD vs Hard Disks
 type: videos
-weight: 1
-youtube_id: tbD-1FqVyQM
+weight: 
+youtube_id: WITXmRrGOCw
 ---
-
-VMware's Charlie Black, product manager for Tanzu GemFire Vmware, walks through what the Tanzu GemFire product is from a high level. 
