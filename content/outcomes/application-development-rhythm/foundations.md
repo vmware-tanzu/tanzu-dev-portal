@@ -20,8 +20,8 @@ project using modern application development practices.
 In this article you will be able to:
 
 -   Explain the context of modern application development.
--   The types of building blocks that comprise modern application
-    development.
+-   Describe the types of building blocks that comprise modern
+    application development.
 
 ## Modern Application Principles and Practices
 
@@ -138,9 +138,9 @@ safely.
 
 Some of the practices you will learn about in this series are:
 
--   [Pair Programming](http://localhost:1313/developer/outcomes/application-development/pair-programming/)
+-   [Pair Programming](../../application-development/pair-programming/)
 
--   [Test Driven Development](http://localhost:1313/developer/outcomes/application-development/test-driven-development/)
+-   [Test Driven Development](../../application-development/test-driven-development/)
 
 ### Methods and Techniques
 
@@ -153,8 +153,8 @@ scenarios that support the relevant *practices*.
 
 Some methods/techniques you will see in this series:
 
-- [*Refactoring*](https://refactoring.com)
-- *Red/Green/Refactor*
+- [Refactoring](https://refactoring.com)
+- Red/Green/Refactor
 
 ## Patterns
 
