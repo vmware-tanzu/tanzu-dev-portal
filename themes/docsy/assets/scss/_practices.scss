@@ -55,19 +55,8 @@
       float: left;
     }
   }
-
-  ul.tags {
-    list-style: none;
-    padding: 1rem 0;
-
-    li {
-      font-size: .8rem;
-      display: inline-block;
-      border: solid 1px $border-color;
-      border-radius: $border-radius;
-      line-height: 1.0rem;
-      padding: 0.375rem 0.5rem;
-    }
+  .tags span:not(:last-child)::after {
+    content: ",";
   }
 
   .callout {
