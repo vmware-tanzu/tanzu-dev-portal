@@ -31,6 +31,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 *Paraphrased from <a href="http://www.drawtoast.com/" target="_blank">DrawToast.com</a>. Draw Toast is part of Tom Wujec's Wicked Problem Solving™ toolkit to help you get playfully clear about what's important in your organization. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.*
 
@@ -38,8 +40,6 @@ why:
 
    {{% callout %}}
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes.
-   
-   **[More remote tips below in the Variations section](#variations).**
    {{% /callout %}}
 
 1. Hand out markers and paper to everyone and ask participants to **draw each step in the process of making toast**. Give them 2-3 minutes.
@@ -56,21 +56,28 @@ why:
    {{% callout %}}
    Example: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
    {{% /callout %}}
+{{% /section %}}
 
-
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 You’ll know you’re successful when you see the diversity in thought that each person put in to such a simple, daily activity everyone is familiar with.
 
 You’ll know you’re even more successful when you can use this as an analogy throughout the project to point out how complex software building really is and how critical alignment is. For example, you might remind participants *"Just like when we were drawing toast, everyone has a different idea in their mind and we need to get those ideas out so we can get some alignment."*
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 Sometimes people say “Do I have to draw? I don’t know how to draw.” Generally, it’s okay to encourage that person to draw and let them know no one will pass judgement on their drawing, but if they really hold out and want to write something out that’s okay too. Generally people who choose not to draw regret not drawing when everyone else in the room has done drawings.
 
 If short on time, have everyone tape theirs up and just ask participants to take a look during a break.
+{{% /section %}}
 
-## Related Practices
+
+{{% section %}}
+### Related Practices
 
 ### Variations
+
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
 
@@ -84,14 +91,10 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 Here's a good example using a digital drawing tablet:
 
 ![Digital Drawing Toast](/images/practices/draw-toast/example-6.jpg)
+{{% /section %}}
 
-### Preceding
-None at the moment
-
-### Following
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Drawing Toast](/images/practices/draw-toast/example-5.jpg)
 
@@ -100,7 +103,11 @@ None at the moment
 ![Drawing Toast](/images/practices/draw-toast/example-4.jpg)
 
 ![Drawing Toast](/images/practices/draw-toast/example-1.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+
+### Recommended Reading
 
 <a href="http://www.drawtoast.com/" target="_blank">DrawToast.com</a> has a wealth of information including a TED talk and examples of others' work on this subject. One particularly helpful resource is <a href="http://www.drawtoast.com/downloads/DrawToast%20Systems%20Thinking%20Guide.pdf" target="_blank">A Primer in Systems Thinking</a> (PDF).
+{{% /section %}}
