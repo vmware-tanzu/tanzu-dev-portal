@@ -77,4 +77,29 @@
   table, tr, th, td {
     border: 1px solid $border-color;
   }
+  #how-to-use-this-method {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  img {
+    margin: 1rem 0 1.5rem ;
+  }
+  h3 + ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h3 + h4 {
+    margin-top: 1rem; 
+  }
+  @media(max-width: 991px) {
+    .col-lg-3 img {
+      display: none;
+    }
+    .logistics {
+      border-right: none !important;
+    }
+  }
 }
