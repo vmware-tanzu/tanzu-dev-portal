@@ -32,7 +32,7 @@ applications.
 
 Managers, designers, and other non-technical stakeholders may also find
 this learning path useful for understanding how modern application
-developer do their daily work.
+developers do their daily work.
 
 ## What you will learn
 
