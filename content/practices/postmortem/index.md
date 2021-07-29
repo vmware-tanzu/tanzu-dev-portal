@@ -110,7 +110,7 @@ Examples of postmortem documents:
 
 - https://sre.google/sre-book/example-postmortem/
 - https://github.com/dastergon/postmortem-templates
-- https://github.com/danluu/postmortems
+- https://github.com/danluu/post-mortems
 - ["sredocs" on GitHub](https://github.com/google/sredocs)
 
 ## Recommended Reading
