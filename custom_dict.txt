@@ -37,7 +37,7 @@ acknowledgement
 Acknowledgement
 ActiveMQ
 Activiti
-add-on(s)?
+ad-hoc
 addAndReturnSize
 addAndReturnSizes
 additively
