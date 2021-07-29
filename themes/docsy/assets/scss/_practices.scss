@@ -55,19 +55,8 @@
       float: left;
     }
   }
-
-  ul.tags {
-    list-style: none;
-    padding: 1rem 0;
-
-    li {
-      font-size: .8rem;
-      display: inline-block;
-      border: solid 1px $border-color;
-      border-radius: $border-radius;
-      line-height: 1.0rem;
-      padding: 0.375rem 0.5rem;
-    }
+  .tags span:not(:last-child)::after {
+    content: ",";
   }
 
   .callout {
@@ -76,5 +65,30 @@
 
   table, tr, th, td {
     border: 1px solid $border-color;
+  }
+  #how-to-use-this-method {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  img {
+    margin: 1rem 0 1.5rem ;
+  }
+  h3 + ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h3 + h4 {
+    margin-top: 1rem; 
+  }
+  @media(max-width: 991px) {
+    .col-lg-3 img {
+      display: none;
+    }
+    .logistics {
+      border-right: none !important;
+    }
   }
 }
