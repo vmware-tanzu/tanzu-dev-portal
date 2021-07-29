@@ -2,7 +2,7 @@
 name: "Christina Liu"
 description: "Product Manager, Tanzu Labs"
 photo: "images/team/christina-liu.png"
-roles: ["author","advocate"]
+roles: ["author"]
 location: "San Francisco, CA"
 
 # Social Media 
