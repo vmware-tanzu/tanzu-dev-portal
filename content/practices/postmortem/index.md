@@ -108,10 +108,10 @@ At the end of this exercise, the team will have a clear alignment of what the in
 ## Facilitator Notes & Tips
 Examples of postmortem documents: 
 
-- https://sre.google/sre-book/example-postmortem/
-- https://github.com/dastergon/postmortem-templates
-- https://github.com/danluu/post-mortems
-- ["sredocs" on GitHub](https://github.com/google/sredocs)
+- Example postmortem from Google: the [Shakespeare Sonnet++ Postmortem](https://sre.google/sre-book/example-postmortem/)
+- [Postmortem Templates](https://github.com/dastergon/postmortem-templates) from [@dastergon](https://github.com/dastergon)
+- ["A List of Post-mortems!"](https://github.com/danluu/postmortems) from [@danluu](https://github.com/danluu)
+- ["sredocs" from Google's GitHub](https://github.com/google/sredocs)
 
 ## Recommended Reading
 [Atlassian Incident management](https://www.atlassian.com/incident-management)
