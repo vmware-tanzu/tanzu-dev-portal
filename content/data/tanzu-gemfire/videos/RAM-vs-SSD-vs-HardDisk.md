@@ -8,3 +8,4 @@ type: videos
 weight: 
 youtube_id: WITXmRrGOCw
 ---
+In this video Charlie Black will be discussing the performance difference between RAM vs SSD vs Hard Disks.   Hopefully this video will help demonstrate why GemFire's memory first approach to performance is leaps ahead of traditional disk based data stores.  
