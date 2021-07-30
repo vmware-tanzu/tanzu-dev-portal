@@ -9,11 +9,12 @@ image: "default-cover.png"
 lastmod: "2021-07-28"
 date: "2021-07-28"
 why: 
-- Post-mortems help to reduce the recurrence of negative incidents.
+- Postmortems help to reduce the recurrence of negative incidents
 when:
-- When the team agrees that there is something to learn about the incident or near miss.
+- When the team agrees that there is something to learn about the incident or near miss
 - During the incident or soon after it is resolved, as long as the session would not interfere with resolving the incident
-- Stakeholders or another team (eg: support) has asked for a postmortem session.
+- Stakeholders or another team (e.g. support team) has asked for a postmortem session
+
 what:
 - Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
@@ -50,10 +51,10 @@ First, let's define an Incident:
 
    You might say something like: 
    
-   > “What caused the recent incident? And how did we fix it? Additionally we want to define action items to avoid this in the future and document it in our postmortem document.  We are not looking to find someone to blame.” 
+   > “What caused the recent incident? How did we fix it? Additionally, we want to define action items to avoid this in the future and document it in our postmortem document.  We are not looking to find someone to blame.” 
    
    {{< callout >}}
-   Tip: Embrace blameless culture because you want to identify what happens and how to avoid it in the future. Make sure you provide psychological safety for each team member.
+   Tip: Embrace blameless culture because you want to identify what happened and how to avoid it in the future. Make sure you provide psychological safety for each team member.
    {{< /callout >}}
 
 1. **Present the incident timeline (5 minutes)**
@@ -72,7 +73,7 @@ First, let's define an Incident:
    
    Ask the team to cluster the post-its based on similar topics.
 
-1. Discuss each cluster (20 minutes)
+1. **Discuss each cluster (20 minutes)**
    
    Allow enough time for each cluster to be discussed. If any particular clusters need additional time, consider a follow-up session about that specific topic.
    
@@ -86,7 +87,7 @@ First, let's define an Incident:
 
    Discuss with the team what actions we can take to solve the incident and avoid it in the future. Define the owner(s) of these actions.
 
-1. **Agreed on the postmortem owner(s) (4 minutes)**
+1. **Agree on the postmortem owner(s) (4 minutes)**
 
    Decide as a team the postmortem owner, whose responsibilities are to:
    
@@ -94,13 +95,13 @@ First, let's define an Incident:
       - Overview of the incident
       - Action items to resolve the incident
       - [Root cause analysis](https://asq.org/quality-resources/root-cause-analysis)
-   - Learnings and next steps to avoid the incident happening in the future
+      - Learnings and next steps to avoid the incident happening in the future
    - Communicate with stakeholders regarding the status of the postmortem
    - Plan review meeting to make sure all action items in the postmortem meeting is done
 
 1. **Schedule the follow up (1 min)**
 
-   Agree with the team for a follow up postmortem session to review the actions. The incident is not closed until all postmortem actions are completed. 
+   Agree with the team for a follow up postmortem session to review the actions. The incident should not be closed until the team completes all postmortem actions. 
 
 ## Success/Expected Outcomes
 At the end of this exercise, the team will have a clear alignment of what the incident was and how it happened. Moreover, the team will have a set of plans to prevent or reduce the impact of the incident’s recurrence. 
@@ -110,7 +111,7 @@ Examples of postmortem documents:
 
 - Example postmortem from Google: the [Shakespeare Sonnet++ Postmortem](https://sre.google/sre-book/example-postmortem/)
 - [Postmortem Templates](https://github.com/dastergon/postmortem-templates) from [@dastergon](https://github.com/dastergon)
-- ["A List of Post-mortems!"](https://github.com/danluu/postmortems) from [@danluu](https://github.com/danluu)
+- ["A List of Post-mortems!"](https://github.com/danluu/post-mortems) from [@danluu](https://github.com/danluu)
 - ["sredocs" from Google's GitHub](https://github.com/google/sredocs)
 
 ## Recommended Reading
@@ -118,4 +119,4 @@ Examples of postmortem documents:
 
 [Google Postmortem culture](https://sre.google/sre-book/postmortem-culture/)
 
-Life of a production system incident (coming soon!)
+Book: Life of a production system incident (coming soon!)
