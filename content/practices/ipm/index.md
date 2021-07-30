@@ -25,6 +25,7 @@ miro_template_url: "URL for related Miro template"
 ---
 ## How to Use this Method
 
+{{% section %}}
 ### Sample Agenda & Prompts
 
 1. Start by framing the conversation for the meeting. Help to set overall project context as needed by briefly recapping recently accepted and in-progress stories or the current state of the newest capabilities in your acceptance environment, to get everyone aligned on where things currently stand as you enter this next iteration. Review the arc of new user stories by outlining what they will add to the product. Present user interface mockups, if available.
@@ -61,15 +62,21 @@ miro_template_url: "URL for related Miro template"
    {{< callout >}}
    Tip: Prompt the engineers to advise on the scope and importance of chores they wish to promote to the product backlog.
    {{< /callout >}}
+{{% /section %}}
 
+{{% section %}}
 ### Success/Expected Outcomes
 Firstly, the team should have a shared understanding of the scope and relative complexity of the product backlog items that were discussed. Secondly, items should have been added to the product backlog, which remains sorted according to current priorities. The team should come away from IPM feeling aligned and energized about the work coming up in the next iteration.
+{{% /section %}}
 
-## Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 - To make IPMs run more efficiently, try to ensure the user stories to be discussed in the meeting have been suitably groomed beforehand. Collaborate with a designer and an engineer to ensure the stories are actionable and meet the INVEST criteria. Avoid trying to hurriedly write stories during the meeting.
 - Encourage engineers to create necessary chores and if necessary, work with the engineers to prioritize and groom those chores before the IPM.
 - Only hold an IPM if you have already prepared user stories to be discussed and estimated, and your product backlog contains less than 3 iterations of work, according to average team velocity. If you estimate too far out, then estimates may be less accurate and the team may forget the context by the time they begin work on those user stories.
+{{% /section %}}
 
+{{% section %}}
 ### A Short Guide to Estimation {id=estimation}
 - If there are user stories in the product backlog that were estimated more than 3 iterations ago, consider spending time scheduled for the IPM to review and re-estimate upcoming user stories, if the team agrees it would be helpful.
 - Complexity can be estimated relative to other user stories in the product backlog, or relative to a baseline user story.
@@ -80,7 +87,10 @@ Firstly, the team should have a shared understanding of the scope and relative c
 - User stories may be estimated to have 0 story points when there is little or no work to be done beyond acceptance testing/verification.
 - It’s OK for story point estimations to be imprecise. The same team working on the same product generally makes more accurate and consistent estimates over time as discrepancies average out.
 - Estimation should typically be done only by engineers, or those who will be delivering the work. Other roles, such as Testers and Architects, may contribute when they have a sufficient understanding of the relative complexity. 
+{{% /section %}}
 
+
+{{% section %}}
 ## Related Practices
 
 ### Sprint Planning vs. Iteration Planning
@@ -96,19 +106,16 @@ Firstly, the team should have a shared understanding of the scope and relative c
 | **Outputs** | • An unprioritized Sprint Backlog that the team commits to deliver and demonstrate at the end of the Sprint | • A prioritized Product Backlog<br> • An estimation of the work that may be delivered and demonstrated during the Iteration | 
 | **Participants** | • Product Owner<br> • Engineers | • Core team |
 {{</ table >}}
+{{% /section %}}
 
-### Variations
-None at the moment. 
-
+{{% section %}}
 ### Preceding
 [Iteration pre-planning](/practices/iteration-pre-planning) (optional)
- 
-### Following
-None at the moment.
+{{% /section %}}
 
-## Real World Examples
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [Agile Estimating and Planning](https://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415) by Mike Cohn
 
 [Yesterday’s Weather](http://wiki.c2.com/?YesterdaysWeather)
@@ -118,3 +125,4 @@ None at the moment.
 Chapter 12 of [Extreme Programming Explained](https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained) by Kent Beck, Cynthia Andres
 
 [ExtremeProgramming.org](http://www.extremeprogramming.org/rules/iterationplanning.html)
+{{% /section %}}
