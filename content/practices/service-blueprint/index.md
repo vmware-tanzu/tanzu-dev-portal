@@ -4,7 +4,7 @@ description: Help the team understand the technological and human interactions t
   take place in a customer journey
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 1 - 2 hours
+length: 1-2 hours
 participants: Core team, stakeholders
 tags:
 - Discovery
@@ -24,6 +24,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw these rows on the whiteboard:
 
@@ -61,11 +63,15 @@ why:
    - Are opportunities to measure the quality of the service
    - Are opportunities for cost savings or increased profits
    - Are moments that are loved by the customer and should not be lost
- 
-#### Success/Expected Outcomes
-You've succeeded when everyone has a shared understanding of the entire workflow and the areas that have the most pain
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Success/Expected Outcomes
+You've succeeded when everyone has a shared understanding of the entire workflow and the areas that have the most pain
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 Compared to a journey map, service blueprints focus more on the process than the customer experience.
 
@@ -87,24 +93,10 @@ Optional lines to draw between rows
    - _The line of interaction_ - this is the point at which customers and the service interact
    -  _The line of visibility_ - beyond this line, the customer can no longer see into the service
    -  _The line of internal interaction_ - this is where the business itself stops, and partners step in
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 <a href="https://www.izacross.com/thoughts/blueprintfoundations" target="_blank">Service Blueprints: Laying the Foundation</a> by Izac Ross of Cooper
+{{% /section %}}
