@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Create a list of assumptions and identify which are the riskiest
 image: assumptions/cover.png
 lastmod: '2021-03-16'
-length: 30 - 60 mins
+length: 30-60 min
 participants: Core team, stakeholders (optional)
 tags:
 - Kickoff
@@ -29,6 +29,7 @@ why:
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. For example: draw a digital 2x2 matrix rather than using a real whiteboard.    
    {{% /callout %}}
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Define "assumption" for the team and explain why the team is doing this workshop
 
@@ -69,28 +70,20 @@ why:
    {{% /callout %}}
    
 1. Finally, memorialize the 2x2 in some way, such as a photo, screenshot, or saved to a shared workspace.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success happens when you have a fully arranged 2x2 grid that maps out the riskiest assumptions that must be addressed with research
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 This exercise could go long if there are many assumptions or you're having trouble ranking each assumption. Your job is to keep discussions brief and remind the team that (a) there is no "right" answer and (b) the rankings are relative—the research we do will help us uncover anything we might have missed. Do your best to keep momentum moving forward.
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-Exploratory Interviews - Coming soon!
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
-
-## Recommended Reading
+{{% /section %}}

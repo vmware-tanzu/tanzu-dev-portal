@@ -6,6 +6,7 @@ lastmod: "2021-06-09"
 ---
 Biases to be aware of during interviews as well as several “dos & don’ts” to consider while conducting research.
 
+{{% section %}}
 ### RESEARCH IS NOT...
 * A demo to sell a product
 * Word for word everything the user wants, sometimes known as “Requirements Gathering”. We look for pains, gaps and needs. We dig deeper to ask why they want something, when they last needed it & build a timeline for such functionality.
@@ -217,3 +218,4 @@ These questions are asked generally during Validation and Usability Research.
 * What do you think this _[point to a UI element]_ might do?
 * What does this _[point to a UI element]_ means?
 * If you wanted to _______, how would you. . .?
+{{% /section %}}
