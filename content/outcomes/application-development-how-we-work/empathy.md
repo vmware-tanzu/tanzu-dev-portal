@@ -1,9 +1,11 @@
 ---
-title: "We Consult Through Empathy"
-weight: 20
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: We Consult Through Empathy
+weight: 20
 ---
 
 Our mission is to **catalyze enterprise transformation through software**. But that isn't easy. In fact, it's really hard. That's because _enterprises don't really transform – people do._ 
@@ -19,4 +21,3 @@ Very few of us walk in the door with these skills. Getting there means learning 
 Therefore, first and foremost, at Tanzu Labs we must develop ourselves as consultants. "Consultant" is a loaded word in our industry, and not all the connotations are positive. Google Dictionary defines "consultant" as _"a person who provides expert advice professionally."_ 
 
 Although that definition certainly applies to us in Tanzu Labs, when we say consultant, we really mean this: ***a deeply empathetic human being committed to helping others.***
-

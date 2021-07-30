@@ -10,7 +10,7 @@ description: Provide valuable design feedback to a project team so they can dete
   if further effort is needed
 image: default-cover.png
 lastmod: '2021-03-04'
-length: 30 min - 1 hour
+length: 30-60 min
 participants: Core team, stakeholders, other designers
 tags:
 - Discovery
@@ -28,6 +28,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. While the project team hangs up printouts of the design artifacts being critiqued, remind everyone that their job today is to help the project team find the challenges with their design, not the solutions, using language that is specific and kind.
         
@@ -69,27 +71,27 @@ Be sure to find the good, too, so that positive aspects of the design are not la
    {{% callout %}}
    Tip: Once a problem has been converted into a task (“Super-Duper widget doesn't make sense. Explore alternate designs.”), you shouldn’t keep talking about it
    {{% /callout %}}
-#### Success/Expected Outcomes
-You know you’re done when all comments have been reviewed and all problems have been converted into tasks.
 
-#### Facilitator Notes & Tips
+{{% /section %}}
+
+{{% section %}}
+### Success/Expected Outcomes
+You know you’re done when all comments have been reviewed and all problems have been converted into tasks.
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 Regardless of how you decide to run your design critique, you should ensure that a room is booked and any supplies (such as sticky notes, sharpies, and tape) are available.
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-None at the moment
-
-### Preceding
-None at the moment
-
-### Following
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+{{% /section %}}
 
+{{% section %}}
 ## Recommended Reading
 
 <a href="http://shop.oreilly.com/product/0636920033561.do" target="_blank">Discussing Design</a> by Adam Conner and Aaron Irizarry
+{{% /section %}}

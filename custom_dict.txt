@@ -148,6 +148,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -266,6 +268,7 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
+Cloudflare
 CloudHealth
 CloudNativeCon
 CloudWatch
@@ -430,6 +433,7 @@ Dieu
 differentiators
 Dikastes
 DirtiesContext
+disambiguated
 DiscoveryClient
 DiskRegionStatistics
 DiskStore
@@ -520,6 +524,7 @@ EventID
 eventQueueSize
 eventsDistributed
 eventsQueued
+Evie
 [Ee]xecutables
 expander(s)?
 expensed
@@ -549,6 +554,7 @@ FIPS(-enabled|-approved)?
 firewalling
 Fiscus
 Flake8
+flatlined
 Florea
 Florent
 [fF]luent[Bb]it
@@ -682,6 +688,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
@@ -694,6 +701,7 @@ gzip(ped)?
 H2
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
@@ -701,6 +709,7 @@ HAProxy
 [hH]ardcoded
 HashiCorp('s)?
 hasResult
+HATEOAS
 Hayk
 Haytham
 Heartbleed
@@ -862,6 +871,7 @@ Junio
 junit
 Junit
 JUnit
+junky
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
@@ -1101,6 +1111,7 @@ Natively
 natively
 Neatro
 Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1196,6 +1207,7 @@ OWASP
 P2P
 Pacak
 Packer
+Packt('s)?
 PagerDuty
 Pairmate
 Paketo
@@ -1231,6 +1243,7 @@ PdxInstances
 PdxType
 PdxTypes
 PeerAuthentication
+PEM
 per-namespace
 Percona
 [Pp]erformant
@@ -1446,6 +1459,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
@@ -1591,7 +1606,7 @@ Syer
 symposia
 Sysdig
 Szul
-Tanzu(Developer)?
+Tanzu(Developer|'s)?
 targetPort
 Tarin
 TAS
@@ -1721,6 +1736,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+Vendio
 vendored
 Venkat
 Venkateswara

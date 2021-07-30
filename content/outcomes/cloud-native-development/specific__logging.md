@@ -1,9 +1,11 @@
 ---
-title: Logging
-weight: 100
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Logging
+weight: 100
 ---
 
 Logging is straightforward. You've likely already spent time comprehensively thinking about logging solutions and frameworks. The good news is you are probably where you need to be in your understanding of logging. 

@@ -27,12 +27,12 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 ---
 ## How to Use this Method
 
+{{% section %}}
+
 ### Sample Agenda & Prompts
 1. Preparation: As a group, agree on 2 relevant prioritization criteria.
    
-   {{< callout >}}
-   Examples: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation
-   {{< /callout >}}
+   {{< callout >}}Examples: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation{{< /callout >}}
 
 1. Create 2 perpendicular intersecting axes and label each axis with one of the chosen criteria.
 
@@ -58,11 +58,15 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 
    ![Populated two by two grid](/images/practices/2x2/2x2-populated.png)
 
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 You know you are done when your group has decided on an option (or options) to focus on. 
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 - If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable. 
 
   ![Re-drawn two by two axis grid](/images/practices/2x2/2x2-regrid.png)
@@ -73,29 +77,19 @@ Involve people who can evaluate against the chosen prioritization criteria (e.g.
 - When choosing qualifiers for the X and Y axes, consider:
    - Choose a less debatable qualifier for the Y axis. A qualifier with a stronger yes/no statement will help people with initial placement and allow the group to disqualify items (get them below the X axis) with less debate.
    - You want debate to happen along the X axis, so choose a qualifier which leaves more room for debate.
+{{% /section %}}
 
+{{% section %}}
 ## Related Practices
 [Insight Prioritization](/practices/insight-prioritization)
 
 [Problem Prioritization](/practices/problem-prioritization)
 
 [Solution Prioritization](/practices/solution-prioritization)
+{{% /section %}}
 
-Stack Ranking (coming soon.)
 
-Dump and Sort (coming soon.)
-
-Affinity Mapping (coming soon.)
-
-## Variations
-None at the moment.
-
-### Preceding
-None at the moment.
- 
-### Following
-None at the moment.
-
+{{% section %}}
 ## Real World Examples
 ![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
 
@@ -104,7 +98,9 @@ None at the moment.
 ![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
 
 ![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
+{{% /section %}}
 
-
+{{% section %}}
 ## Recommended Reading
 [2×2 Prioritization Matrix from ProductPlan](https://www.productplan.com/glossary/2x2-prioritization-matrix/)
+{{% /section %}}

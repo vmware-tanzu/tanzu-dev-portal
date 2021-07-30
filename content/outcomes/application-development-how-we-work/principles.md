@@ -1,9 +1,11 @@
 ---
-title: "Our Foundational Principles"
-weight: 10
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Our Foundational Principles
+weight: 10
 ---
 
 Within Tanzu Labs, we work with an unpredictable assortment of companies, industries, governments, countries, cities, cultures, and people. **We help nearly every industry in the world refactor, reimagine, and build every kind of software product using any technology stack.** We work with countless unique embedded company cultures – some welcoming, some hostile, some ambivalent, yet nearly all have given us a mandate to help them rethink not only how they build products but how they build and manage teams. Sometimes they ask us to help them rethink their entire company culture. Sometimes they ask us to help them design their offices – really, their physical offices!

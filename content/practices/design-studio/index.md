@@ -4,7 +4,7 @@ description: Understand the problem from different team perspectives and generat
   many solution sketches using scenario as a guide
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 60 - 90 mins
+length: 60-90 min
 participants: Core team, subject matter experts (SMEs)
 tags:
 - Discovery
@@ -39,6 +39,7 @@ why:
    **[More remote tips below in the Variations section](#variations).**
    {{% /callout %}}
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Leveraging any user journeys, [personas](/practices/personas), or scenarios your team has made, define what problem you are trying to solve and for whom. 
 
@@ -83,16 +84,19 @@ why:
    ![Design Studio Discussion](/images/practices/design-studio/ds-4.png)
    
    ![Design Studio Example](/images/practices/design-studio/ds-example-2.png)
- 
-#### Success/Expected Outcomes
+{{% /section %}}
+
+{{% section %}}
+### Success/Expected Outcomes
 Success is when you have a clear understanding of the ideas each participant has about how best to solve a particular problem. You've put those ideas "onto paper", discussed them as a group, voted on the ones the team feels most likely to create user value, and captured the rationale.
 
 It's very likely that the actual solution will look different than these sketches, so understanding why the team felt how they did about certain elements will help the design team make good choices as they iterate.
 
 The top ideas that came out of the design studio will be carried forward and synthesized further by the designer(s).
+{{% /section %}}
 
-
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 - Use black colored sharpies or fine tipped pens to sketch, colored pens (ideally red) for comments
 - Encourage people to title each idea to make it easier to reference
@@ -100,11 +104,11 @@ The top ideas that came out of the design studio will be carried forward and syn
 - Be positive, but you can always give constructive comments about trade offs
 - Be sure to focus on the user journeys
 - You can use any variety of paper sizes and squares; it’s about generating quantity, not detail
+{{% /section %}}
 
-## Related Practices
-
+{{% section %}}
+### Related Practices
 ### Variations
-
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
 
@@ -117,21 +121,20 @@ While many on-line collaboration solutions have drawing features, we suggest kee
    Alternatively, send the photos to the facilitators via chat app, email, or even text message. People can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
 
 - For all other steps, such as dot-voting, use the digital whiteboard with the drawing photos.
+{{% /section %}}
 
+{{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
 - [Journey Map](/practices/journey-map)
 - [Scenario Writing](/practices/scenario-writing)
+{{% /section %}}
 
-### Following
-None at the moment
-
+{{% section %}}
 ## Real World Examples
 ![Design Studio Example](/images/practices/design-studio/ds-example-3.png)
 
 ![Design Studio Example](/images/practices/design-studio/ds-example-5.png)
 
 ![Design Studio Example](/images/practices/design-studio/ds-example-6.png)
-
-## Recommended Reading
-None at the moment
+{{% /section %}}

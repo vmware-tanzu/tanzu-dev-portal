@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Determine which solutions to explore first
 image: solution-prioritization/cover.png
 lastmod: '2021-03-17'
-length: 1 - 2 hours
+length: 1-2 hours
 participants: Core team members (PM, designer, engineers)
 tags:
 - Framing
@@ -28,6 +28,8 @@ why:
 
 ---
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Construct a 2x2 matrix on the whiteboard using the blue painter's tape and label the axes clearly using parameters that make sense for your context. For example:
         
@@ -59,26 +61,37 @@ why:
    {{% /callout %}}
 
    ![Nested 2x2 quadrant](/images/practices/solution-prioritization/step-3.png)
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 You know you are done when the team has prioritized their solutions and is comfortable that they've identified a manageable list of top solutions to explore.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 This is an activity that you can time box if it feels drawn out. Many of the tips embedded above are intended to help you avoid rabbit holes, but if that happens you should feel empowered to move things forward by refocusing the team, setting a timer, or forcing a decision.
+{{% /section %}}
 
+{{% section %}}
 ## Related Practices
 - [2x2 Prioritization](/practices/2x2)
+{{% /section %}}
 
+{{% section %}}
 ### Preceding
 - [Solution Brainstorming](/practices/solution-brainstorming)
 - Solution Grooming -- coming soon!
+{{% /section %}}
 
+{{% section %}}
 ### Following
 - Scenario Walkthrough -- coming soon!
 - [Design Studio](/practices/design-studio)
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
-
-## Recommended Reading
+{{% /section %}}
