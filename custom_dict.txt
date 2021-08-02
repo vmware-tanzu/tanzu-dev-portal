@@ -842,6 +842,7 @@ JIRAs
 Jitsu
 Jiu
 jks
+JKS
 JMX
 JmxConnectionHandler
 JmxNotificationClient
@@ -902,6 +903,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -1824,5 +1826,3 @@ ZOP
 Zou
 Zuul
 μServices
-JKS
-KeyStore
