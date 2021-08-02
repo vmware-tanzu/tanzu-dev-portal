@@ -48,17 +48,13 @@ You will explore the following topics:
 
 -   [Foundations](/outcomes/application-development-rhythm/foundations/)
 
--   Development Flow
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1096)
+-   [Development Flow](/outcomes/application-development-rhythm/dev-flow/)
 
--   Development Building Blocks, Part 1
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1092)
+-   [Development Building Blocks, Part 1](/outcomes/application-development-rhythm/dev-building-blocks-1/)
 
--   Development Building Blocks, Part 2
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1093)
+-   [Development Building Blocks, Part 2](/outcomes/application-development-rhythm/dev-building-blocks-2/)
 
--   Deployment Rhythm by Example
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1120)
+-   [Deployment Rhythm by Example](/outcomes/application-development-rhythm/dev-rhythm/)
 
 This learning path is an adequate preparation for engineers that will
 pair with Lab engineers on Tanzu Services engagements.

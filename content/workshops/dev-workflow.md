@@ -1,0 +1,23 @@
+---
+date: '2021-07-14'
+description: Demonstrate a modern application developer daily workflow.
+draft: false
+featured: true
+hero: /images/workshops/img-dev-workflow-header.jpeg
+lab: dev-workflow
+lastmod: '2021-05-19'
+length: 120
+preview: /images/workshops/img-dev-workflow.png
+summary: You will demonstrate a modern application developer daily workflow.
+tags:
+- Development
+title: Developer Daily Workflow
+topics: null
+weight: 2
+---
+
+This is a workshop for developers new to modern application
+development practices.
+
+In this workshop you will demonstrate the main building blocks of
+a modern developers daily workflow.
