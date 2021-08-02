@@ -28,4 +28,8 @@ For changes to an already-published practice: provide the link and describe your
 - Links to articles and blog posts
 - Links to presentations, videos, books, etc.
 
+## Getting Started
+- Please review the [Contribution Guide](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki)
+- Ready to start writing? Please use this [Tanzu Practice Template](https://docs.google.com/document/d/1ys0JUDF1VPXwcD65dSe3VZBr5MCl9FFSJWPYXeQLMC8)
+
 **Note:** If these resources are not public (i.e. an internal document), provide _publicly safe information_ about how someone with the proper access would find these resources. **Do not post insecure links or non-public information here**.
