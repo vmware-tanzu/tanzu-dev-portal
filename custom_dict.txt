@@ -293,7 +293,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
-codebase
+[Cc]odebase(s)
 CodeFresh
 CodeOne
 CoffeeOps
@@ -893,8 +893,7 @@ Kaniko
 [Kk]app(-controller|.)?
 Karavi
 Kat
-kata
-Katas
+[Kk]ata(s)
 KEK(s)?
 kendrickcoleman
 [Kk]ey[Ss]tore
@@ -1052,7 +1051,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
-middleware
+[Mm]iddleware
 Migros
 Mikusa
 Minella
@@ -1647,6 +1646,7 @@ Tigera
 Tikka
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
+[Tt]imeboxing
 TimingGatewayEventFilter
 Timo
 TKG

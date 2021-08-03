@@ -75,11 +75,9 @@ application development processes:
 
 You will see example of building blocks in the upcoming articles:
 
--   Development Building Blocks, Part 1
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1092)
+-   [Development Building Blocks, Part 1](../dev-building-blocks-1/)
 
--   Development Building Blocks, Part 2
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/1093)
+-   [Development Building Blocks, Part 2](../dev-building-blocks-2/)
 
 ## Principles
 
