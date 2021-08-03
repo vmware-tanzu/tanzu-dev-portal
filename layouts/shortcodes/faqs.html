@@ -1,15 +1,39 @@
+<script type='application/ld+json'>
+    {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[ {{ .Inner | safeJS }} ]
+    }
+</script>
+
+<!--
 <link rel="stylesheet" href="{{ "/css/faq.css" | relURL }}">
 <div class="faqs" id="faqs">
     <div class="flex-container jc-between"></div>
         <h2 class="h2 mb-md">Frequently Asked Questions</h2>
         <div class="faq">
-            {{ .Inner }}
+            <div class="faq-item" id="faq-item">
+                <div class="flex jc-between ai-center">
+                    <h4 class="faq-question">"QUESTION"</h4>
+                    <i class="fa fa-angle-down" id="arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div>"ANSWER"</div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
 </div>
+-->
+
+
 
 <script type="text/javascript">
+    var jsonld = JSON.parse(document.querySelector('script[type="application/ld+json"]').innerText);
+    for (let i=0; 1 < jsonld.length; i++ ) {
+        console.log(jsonid.mainEntity)
+    }
     $(".faq-item").each( function() {
         $(this).click(function () {
             $(this).find("#arrow").toggleClass("flip"); // Flip the display arrow

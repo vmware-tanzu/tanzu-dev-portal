@@ -1,9 +1,5 @@
-<div class="faq-item" id="faq-item">
-    <div class="flex jc-between ai-center">
-        <h4 class="faq-question">{{ .Get "question" }}</h4>
-        <i class="fa fa-angle-down" id="arrow"></i>
-    </div>
-    <div class="faq-answer">
-        <div>{{(replaceRE  "^[ \t\r\n]+" "" .Inner) | markdownify }}</div>
-    </div>
-</div>
+{
+    "@type":"Question",
+    "name": "{{ .Get "question" | markdownify }}" ,
+    "acceptedAnswer":{ "@type":"Answer", "text":"{{(replaceRE "[ \t\r\n]+$" "" (replaceRE  "^[ \t\r\n]+" "" .Inner) ) | htmlEscape }}" }
+ },
