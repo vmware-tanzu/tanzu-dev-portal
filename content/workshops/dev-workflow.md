@@ -1,11 +1,11 @@
 ---
-date: '2021-07-14'
+date: '2021-07-30'
 description: Demonstrate a modern application developer daily workflow.
 draft: false
 featured: true
 hero: /images/workshops/img-dev-workflow-header.jpeg
 lab: dev-workflow
-lastmod: '2021-05-19'
+lastmod: '2021-08-02'
 length: 120
 preview: /images/workshops/img-dev-workflow.png
 summary: You will demonstrate a modern application developer daily workflow.
