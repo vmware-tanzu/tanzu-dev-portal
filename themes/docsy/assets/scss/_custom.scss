@@ -1577,12 +1577,15 @@ code {
       margin-top: 100px !important;
       margin-bottom: 100px !important;
     }
+    .col-12.col-md-9.col-lg-7 {
+      min-height: 800px;
+    }
   }
 }
-.td-page.series footer {
-  position: relative;
-  z-index: 1000;
-}
+// .td-page.series footer {
+//   position: relative;
+//   z-index: 1000;
+// }
 
 .outcomes-pager {  
   a {
@@ -1608,7 +1611,7 @@ code {
   @media(min-width: 1600px) {
     z-index: 1;
     bottom: -1%;
-    width: 1360px;
+    // width: 1360px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -1625,7 +1628,7 @@ code {
         margin-top: 4px;
       }
       p.mt-0 {
-        font-size: .8rem;
+        font-size: .9rem;
       }
     }
   }
