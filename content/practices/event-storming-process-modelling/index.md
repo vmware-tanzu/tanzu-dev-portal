@@ -126,6 +126,8 @@ If you are using an Object-Oriented based notation to model your architecture, `
 The grammar used by Process Modelling offers a lot of information that can be directly used in the completion of [Boris](/practices/boris) and [SNAP](/practices/boris) exercises, to map out the flow through the system from a technical perspective.
 ### Service Blueprint
 Stickies from the main storming board, policies and other grammar can be used to complete a [Service Blueprint](/practices/service-blueprint) to map out the journey through the system from the users perspective.
+### Swift Methodology
+If being used as part of the [Swift Method](/practices/swift-method), then this would be done as part of the Event Storm exercise that is run in the beginning, just prior to Service Candidate discovery.
 
 #### Facilitator Notes & Tips
 
@@ -152,6 +154,6 @@ Thin Slices: Thin Slices can be heavily influenced by the goals of your project,
 ## Recommended Reading
 - [50,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=1i6QYvYhlYQming/)
 - [Alberto Brandolini - 100,000 Orange Stickies Later](https://www.youtube.com/watch?v=fGm62ra_mQ8)
-- [Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-Event Storming/)
+- [Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
 - [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
 - [DDD Crew Starter modelling Process](https://github.com/ddd-crew/ddd-starter-modelling-process)

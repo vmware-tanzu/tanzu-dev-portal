@@ -6,7 +6,7 @@ resources:
 - name: cover
   src: images/example-2.jpg
 lastmod: '2021-03-17'
-length: 1-2 hours; multiple runs may be needed
+length: 1 - 2 hours; multiple runs may be needed
 participants: Business stakeholders, business analysts, executives, developers, architects,
   team leads, domain experts, core team
 tags:
@@ -33,8 +33,6 @@ why:
 ---
 
 ## How to Use this Method
-
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Explain the goal of Event Storming to the group. Project the image below if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic Domain Driven Design (DDD) terms.
 
@@ -47,7 +45,7 @@ why:
    {{% /callout %}}
 
 1. Have the group "storm the business" process by writing a series of domain events on orange sticky notes, one per note.
-   - Identify the beginning and end of the event storming session in order to create a sequence of events
+   - Identify the beginning and end of the Event Storming session in order to create a sequence of events
    - Think about an event in the past tense
    - Focus on the happy path to begin with
    - Turn sticky notes sideways 45 degrees to indicate there are questions or a need for clarification
@@ -87,25 +85,21 @@ why:
 
 1. These event clumps or common groupings give us our notional service candidates (actors or aggregates depending on how rigid the team is with DDD definitions)  These will be used during the [Boris](/practices/boris) exercise.
 
-1. **Optional:** Identify the various views  that your users will need to carry out their actions, and important roles for various users. Use bright yellow stickies to identify user roles or [personas](/practices/personas). Enrich the event storming with incremental notations using stickies for user roles, personas, money, or whatever is important in the domain.
+1. **Optional:** Identify the various views  that your users will need to carry out their actions, and important roles for various users. Use bright yellow stickies to identify user roles or [personas](/practices/personas). Enrich the Event Storming with incremental notations using stickies for user roles, personas, money, or whatever is important in the domain.
 
 1. At the conclusion, be sure to take a lot of pictures so you can capture the output for later use
-{{% /section %}}
 
-{{% section %}}
-### Success/Expected Outcomes
+#### Success/Expected Outcomes
 You know you’ve finished when you have:
 - Identified bounded contexts and aligned domains
 - Mapped each bounded context with a business subdomain (it’s typically 1:1)
 - Manifested each bounded context/subdomain as a service in the target architecture
-{{% /section %}}
 
-{{% section %}}
-### Facilitator Notes & Tips
+#### Facilitator Notes & Tips
 
-**Event Storming is a group exercise to scientifically explore the domains and problem areas of a monolithic application.** The most concise description of the process of event storming comes from [Vaughn Vernon's _Domain-Driven Design Distilled_](https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/) book and the color around the process inspired from [Alberto Brandolini's book _Event Storming_](https://www.eventstorming.com/book/) has been improved on by VMware.
+**Event Storming is a group exercise to scientifically explore the domains and problem areas of a monolithic application.** The most concise description of the process of Event Storming comes from [Vaughn Vernon's _Domain-Driven Design Distilled_](https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/) book and the color around the process inspired from [Alberto Brandolini's book _Event Storming_](https://www.eventstorming.com/book/) has been improved on by VMware.
 
-**Event Storming is a technique used to visualize complex systems and processes.** This could range from monoliths to value streams. Event Storming -- inspired from [gamestorming](https://gamestorming.com/) -- is a technique for harnessing and capturing the information captured in a group’s minds. It surfaces conflicts and different perspectives of a complex system and bubbles up the top constraints and problem spots. As an event storming facilitator you have one job - create a safe environment for the exchange and output of ideas and data. The job is 50% technical facilitation and 50% soft people facilitation where you are reading body language. **A single facilitator can typically orchestrate groups of 15-20.** For a group of 30 or more you need two facilitators.
+**Event Storming is a technique used to visualize complex systems and processes.** This could range from monoliths to value streams. Event Storming -- inspired from [gamestorming](https://gamestorming.com/) -- is a technique for harnessing and capturing the information captured in a group’s minds. It surfaces conflicts and different perspectives of a complex system and bubbles up the top constraints and problem spots. As an Event Storming facilitator you have one job - create a safe environment for the exchange and output of ideas and data. The job is 50% technical facilitation and 50% soft people facilitation where you are reading body language. **A single facilitator can typically orchestrate groups of 15-20.** For a group of 30 or more you need two facilitators.
 
 **Event Storming is usually conducted in two phases.** A high level event storm to identify the domains and then a subsequent ES into a top constraint - the core domain.
 
@@ -116,29 +110,26 @@ You know you’ve finished when you have:
 **An Event Storming is only successful if the right people are involved.** This is a mix of business domain experts, customer executives, stakeholders, business analysts, software developers, architects, testers, and folks who support the product in production. Subject matter experts, product owners and developers that knows and understands the application domain. This process enables cross perspective conversation throughout the team as well as a standard definition of the terms used by both technical and non-technical team members.
 
 **Running a Cinderella exercise prior to Event Storming can be a great ice-breaker!** This exercise maps out the story of Cinderella. The PM will choose a start and end point and ask participants to scribe events that happened in the movie. Afterwards, storytelling will confirm everyone's recollection of the movie. This exercise provides the team with a safe environment to learn about Event Storming without getting into the actual exercise.
-{{% /section %}}
 
-{{% section %}}
-### Related Practices
+## Related Practices
 
 Event Storming is an activity within the [Swift Method](/practices/swift-method).
-{{% /section %}}
 
-{{% section %}}
+### Preceding
+
+None at the moment
+
 ### Following
 
+[Event Storming | Process Modelling](/practices/event-storming-process-modelling)
 [Boris](/practices/boris)
-{{% /section %}}
 
-{{% section %}}
-### Real World Examples
+## Real World Examples
 
 <a href="https://www.youtube.com/watch?v=by8SdfF56vI" target="_blank">Deconstructing Monoliths With Domain Driven Design</a>  
 <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">WeBeFoods Example Mock (via Miro)</a>  
-{{% /section %}}
 
-{{% section %}}
-### Recommended Reading
+## Recommended Reading
 
 Motivation for the Event Storming exercise:  
 <a href="https://www.amazon.com/Gamestorming-Playbook-Innovators-Rulebreakers-Changemakers/dp/0596804172" target="_blank">Gamestorming: A Playbook for Innovators, Rulebreakers, and Changemakers</a> by Dave Gray, Sunni Brown, and James Macanufo
@@ -149,4 +140,3 @@ Children’s book-style big picture presentation on Event Storming:
 <a href="https://leanpub.com/introducing_eventstorming" target="_blank">Event Storming</a> by Alberto Brandolini (with related info at <a href="https://www.eventstorming.com/" target="_blank">EventStorming.com</a>)
 
 Domain Driven Design (DDD) - provides the theoretical underpinnings of decomposing monoliths. <a href="https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420" target="_blank">Domain-Driven Design Distilled</a> by Vaughn Vernon is the perfect book to understand the science of DDD and how ES fits into the grander scheme of things - how do the ES artifacts translate into software design, architecture and an actual backlog.
-{{% /section %}}
