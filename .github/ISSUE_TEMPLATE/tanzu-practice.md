@@ -52,6 +52,6 @@ A Core Method should have the following properties:
 - You are likely to use this method in the future, either on the same project or other projects
 - While everything evolves, this method is not under constant and dramatic change
 
-If the method meets these criterial then it is a strong candidate for the Practices section of the public, open source Tanzu Developer Center.
+If the method meets these criteria then it is a strong candidate for the Practices section of the public, open source Tanzu Developer Center.
 
 If this method does not meet those criteria then it might be more appropriate to publish it internally to our company Confluence. For example, if you chose a Publication Status of "Not yet written" and Maturity of "Immature" above then consider documenting this method internally, applying it in more situations and have others do the same. Iterate on the method or practice until it is more stable.
