@@ -159,7 +159,7 @@ It is most often applied to research tasks as done in
 A characteristic of modern app development is the achievement of
 consistency,
 and sustainability.
-A good analogy is that of an modern app team running a marathon at a
+A good analogy is that of a modern app team running a marathon at a
 consistent pace,
 versus a sprint.
 

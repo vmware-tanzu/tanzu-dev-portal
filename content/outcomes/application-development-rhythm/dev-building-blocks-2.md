@@ -33,7 +33,7 @@ By the end of this article, you will be able to:
 
 ### Private Branch method
 
-Distributed Source Code Version Systems (DVCS) like *Git* or *Mercurial*
+Distributed Source Code Version Systems like *Git* or *Mercurial*
 allow you to work independently from the team source control repository.
 
 The mechanics include copying the complete repository to the developer
@@ -44,8 +44,8 @@ The developer has the capability to create a *new local history*,
 and *revise that history* before merging it back to the team shared
 repository trunk.
 
-The developer uses the DVCS local branching feature to track work in the
-feedback loops,
+The developer uses the distributed source control local branching
+feature to track work in the feedback loops,
 making it easy to throw out experiments that did not work without having
 to merge the team shared repository.
 
@@ -66,7 +66,7 @@ developers will have to restructure it to accommodate new features.
 [Refactoring](https://www.refactoring.com/) is the process of changing
 the structure of a codebase without changing its behavior.
 While refactoring is a technique,
-its use can range from straight-foward to extremely complex.
+its use can range from straightforward to extremely complex.
 
 ### Mikado method
 
