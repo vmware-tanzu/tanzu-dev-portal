@@ -2,8 +2,8 @@
 # remove "draft:true" when ready for final publication 
 draft: false
 
-title: "EventStorming | Process Modelling"
-linkTitle: "EventStorming | Process Modelling - Will Appear in Links"
+title: "Event Storming | Process Modelling"
+linkTitle: "Event Storming | Process Modelling - Will Appear in Links"
 description: "A workshop for facilitating discussions around an outcome based view of a process or workflow, with flexible levels of detail and complexity."
 # Note: remove any tags that are not relevant.
 tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
@@ -22,14 +22,14 @@ when:
 - When validating process changes that might help solve a problem
 what:
 - "Large wall or digital collaboration space like [Miro](https://miro.com/)"
-- Sticky notes of 5+ different colors. When using this in conjunction with other flavours of EventStorming and/or BORIS + SNAP keep consistency in colors
+- Sticky notes of 5+ different colors. When using this in conjunction with other flavours of Event Storming and/or BORIS + SNAP keep consistency in colors
 - Sharpies
 
 ---
 ## How to Use this Method
-`EventStorming` is a workshop created by `Alberto Brandolini`. The fundamentals of this practice have already been described in the `Tanzu Developer Center` [here](/practices/event-storming), where the main goal is to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. This is referred to by Alberto Brandolini, in his book [Introducing EventStorming](https://leanpub.com/introducing_eventstorming), as the `Bigger Picture`. However the book also describes two other flavors of `EventStorming` that introduce additional exercises, `Process Modelling` and `Software Design` to the standard `Bigger Picture` workshop. These exercises have the aim of adding layers of notation in the form of different colored stickies, also referred to as `Grammar`, and build a complete process and software model. `Alberto Brandolini` suggests it is like making a pizza, where events and a timeline give you a margarita but you can add more grammar to make different pizzas. Though he did warn that you might be tempted to put grammar that isn't suited for EventStorming, such as data tables. He likens this to pineapple, and insists it should never be on your pizza.
+`Event Storming` is a workshop created by `Alberto Brandolini`. The fundamentals of this practice have already been described in the `Tanzu Developer Center` [here](/practices/event-storming), where the main goal is to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. This is referred to by Alberto Brandolini, in his book [Introducing Event Storming](https://leanpub.com/introducing_eventstorming), as the `Bigger Picture`. However the book also describes two other flavors of `Event Storming` that introduce additional exercises, `Process Modelling` and `Software Design` to the standard `Bigger Picture` workshop. These exercises have the aim of adding layers of notation in the form of different colored stickies, also referred to as `Grammar`, to capture more information and validate assumptions. `Alberto Brandolini` suggests it is like making a pizza, where events and a timeline give you a margarita but you can add more grammar to make different pizzas. Though he did warn that you might be tempted to put grammar that isn't suited for Event Storming, such as data tables. He likens this to pineapple, and insists it should never be on your pizza.
 
-The Practice described below is the additional exercise used by `Process modelling`, as it was taught in `Alberto Brandolini`'s workshop [EventStorming Remote Modelling](https://www.avanscoperta.it/it/training/eventstorming-remote-modelling-workshop/), 
+The Practice described below is the additional exercise used by `Process modelling`, as it was taught in `Alberto Brandolini`'s workshop [Event Storming Remote Modelling](https://www.avanscoperta.it/it/training/eventstorming-remote-modelling-workshop/), 
 
 While formally the method is best used for understanding large, complex high-level processes, the general principles and grammar of `Process Modelling` have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
 
@@ -38,13 +38,13 @@ The output from these workshops can be used to discover, validate or design a sy
 Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a different architectural model, such as Event and Domain Driven microservice architecture, a simple Pipeline or even `CQRS` and Event Sourcing patterns. However this is often where you loose Subject Matter Experts, and the conversation often continues from a more technical perspective, so it can be useful to revisit this board and get both technical and business clarity on the problem and the solution being delivered.
 
 #### Sample Agenda & Prompts - 
-1. ##### Prerequisites: 
+1. #### Prerequisites: 
    Previously you should have run a `Bigger Picture` exercise to provide enough events to find a process to model
    - Copy the main storming board to record a `snapshot` 
    - Ask the participants to vote for pivotal events, the most important to their work.
    - The scope of the process modelling has been agreed with preconditions and post conditions
    - Participants have organized their own stickies between pivotal events in a timeline
-1. ##### Arrange the board
+1. #### Arrange the board
    - Label the board to identify a name for the process being explored
    - From the main storming board, choose a set of pivotal events that describe an end to end flow
       - Main Business Flows: something similar to a Customer Journey, often segmented on different personas. Small Company vs Big Corporation, vs Freelance or New vs Returning customer. This is the story on the surface.
@@ -57,7 +57,7 @@ Typically there will be a follow on exercise to rationalize the information and 
       - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process
       - Arrange any remaining events in a chronological order from left to right between the preconditions and optimal outcomes. Do not worry about accuracy, as the events are narrated, be prepared to change, add or remove events
    - Add a grammar guide as shown  ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar.jpg)
-1. ##### First Narration
+1. #### First Narration
    As described in the prerequisites, when moving from the Storming board you will have chosen a flow of interest to model. The main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome, where everything goes smoothly and no failures or issues arise.
 
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. Adjust and add grammar as necessary to reach a consensus of the process.
@@ -96,13 +96,13 @@ Typically there will be a follow on exercise to rationalize the information and 
    - If opportunities are identified and can be tied to the process, then these should be captured as a sticky and connected to the associated point in the process.
 
    Flows: 
-   While the main goal is to follow the flow chosen from the EventStorming board, you might discover other flows. These should be separated and moved to another board, with a connector drawn between the two to identify the transition between flows
+   While the main goal is to follow the flow chosen from the Event Storming board, you might discover other flows. These should be separated and moved to another board, with a connector drawn between the two to identify the transition between flows
 
-2. ##### Narrate the process again
+1. #### Narrate the process again
    - Correct inaccuracies and add additional grammar. You can also encourage the discovery of negative events
    - Repeat this until you are satisfied you have enough of the process to identify a thin slice to work on.
 
-3. ##### Review Questions, Pain Points and Opportunities
+1. #### Review Questions, Pain Points and Opportunities
    Try to answer as many questions as possible and rationalize pain points and opportunities
 
 #### Success/Expected Outcomes
@@ -116,9 +116,9 @@ Typically there will be a follow on exercise to rationalize the information and 
 - Identify one or more thin slices. Try to identify a simplified end-to-end process that can provide the most value. 
 
 ## Related Practices
-### EventStorming 
-As mentioned `Process Modelling` is a form of `EventStorming`, and as taught by `Alberto Brandolini`, is a natural follow on exercise to the more common `Bigger Picture` workshop. Therefore the `Process Modelling` exercise naturally offers a way to enrich any `EventStorming` session with additional grammar
-### EventStorming Software Design
+### Event Storming 
+As mentioned `Process Modelling` is a form of `Event Storming`, and as taught by `Alberto Brandolini`, is a natural follow on exercise to the more common `Bigger Picture` workshop. Therefore the `Process Modelling` exercise naturally offers a way to enrich any `Event Storming` session with additional grammar
+### Event Storming Software Design
 As with `Process Modelling` exercise, `Software Design` offers additional grammar to enrich your `Bigger Picture` and `Process modelling` workshops.
 ### Unified Modelling Language (UML) / C4 Component Diagrams 
 If you are using an Object-Oriented based notation to model your architecture, `Process Modelling` offers an algorithmic view of the problem you are solving and can be used to complete a number of diagrams as the process is narrated.
@@ -137,7 +137,7 @@ Events: Finding suitable events is important to getting a good model.
 Policies: Writing Policies can be important to ensure you have the correct flow and capturing the correct business requirement
  - Policies should be written as a business decision that guides an actor or system to the correct action. 
  - The actor may be responsible for implementing the policy but they may not be responsible for defining the policy. 
- - If good Roles are identified in the `EventStorming` stage then you should be able to identify roles that influence the business decision.
+ - If good Roles are identified in the `Event Storming` stage then you should be able to identify roles that influence the business decision.
 
 Thin Slices: Thin Slices can be heavily influenced by the goals of your project, but a good start might be to pick out a `golden path` and reduce it to the least set of events required to achieve the final outcome.
 
@@ -152,6 +152,6 @@ Thin Slices: Thin Slices can be heavily influenced by the goals of your project,
 ## Recommended Reading
 - [50,000 Orange Stickies and Counting](https://www.youtube.com/watch?v=1i6QYvYhlYQming/)
 - [Alberto Brandolini - 100,000 Orange Stickies Later](https://www.youtube.com/watch?v=fGm62ra_mQ8)
-- [Remote EventStorming](https://blog.avanscoperta.it/2020/03/26/remote-eventstorming/)
+- [Remote Event Storming](https://blog.avanscoperta.it/2020/03/26/remote-Event Storming/)
 - [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)
 - [DDD Crew Starter modelling Process](https://github.com/ddd-crew/ddd-starter-modelling-process)
