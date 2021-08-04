@@ -15,6 +15,8 @@ This article outlines the context,
 as well as the core building blocks necessary to sustain a product or
 project using modern application development practices.
 
+![Foundations](/images/outcomes/application-development-rhythm/foundations-building.jpg)
+
 ## What you will learn
 
 In this article you will be able to:
@@ -22,6 +24,8 @@ In this article you will be able to:
 -   Explain the context of modern application development.
 -   Describe the types of building blocks that comprise modern
     application development.
+-   Describe how modern application developer must continually
+    consider tradeoffs and technical debt.
 
 ## Modern Application Principles and Practices
 
@@ -117,7 +121,7 @@ practitioners,
 make sure you are asking about *why* you are working in a specific way,
 and what principles are important in guiding your work.
 
-![Principles](/images/outcomes/application-development-rhythm/principles.png)
+![Principles](/images/outcomes/application-development-rhythm/principles.jpg)
 
 ## Practices
 
@@ -160,7 +164,7 @@ Patterns are known solutions in the appropriate problem context.
 
 Think of patterns as one of the high level *whats* of building software.
 
-![Patterns](/images/outcomes/application-development-rhythm/patterns.png)
+![Patterns](/images/outcomes/application-development-rhythm/patterns.jpg)
 
 *Patterns* are not “invented”.
 They are typically noticed across projects when developers use similar
@@ -197,6 +201,106 @@ It is important to select and gain proficiency with the appropriate
 tools that will remove unnecessary friction in the modern apps
 practitioner workflow.
 
+## Tradeoffs, Costs and Technical Debt
+
+So far in this article you have been exposed to the major types of
+building blocks you will use to run your daily work.
+Selecting which ones to use,
+and when to use them,
+can be a challenge.
+
+**Every activity you do,**
+**and every building block you select and use,**
+**will have tradeoffs,**
+**and associated costs.**
+The costs may be measured in time, money or opportunities lost.
+
+You can think of managing your costs from three perspectives:
+
+- Upfront Costs
+- Taxes
+- Debt
+
+![Tradeoffs, Costs and Technical Debt](/images/outcomes/application-development-rhythm/foundations-bank.jpg)
+
+### Upfront Costs
+
+When software product teams are planning,
+estimating and building new features,
+or fixing defects,
+there are clear costs:
+
+-   Team's time spent on doing the activities
+
+-   Resource costs,
+    including compute,
+    storage and other infrastructure costs
+    specific to the activities
+
+Modern App Developers will keep to minimal designs to keep the upfront
+costs low,
+but that may lead to
+[*Technical Debt*](#technical-debt).
+
+### Taxes
+
+The term *tax* is a useful one when describing ongoing costs of
+authoring and maintenance of software products.
+
+*Taxes* are *compulsory charges* imposed to fund activities over time,
+with negative consequences when avoiding to pay them.
+
+Some examples of such software *taxes*:
+
+-   Software maintenance,
+    keeping application codebases clean
+
+-   Use of *Platforms* or *Middleware*
+
+-   Tools licensing or subscription costs
+
+-   3rd party dependency upgrades
+
+-   Developer continual learning
+
+Attempting to avoid paying any of these will have serious ramifications
+to the associated software product team.
+
+### Technical Debt
+
+*Technical Debt* is the concept where:
+
+-   A software product team,
+    or developer,
+    chooses to take a shortcut,
+    perhaps in a feature or design implementation,
+    for an immediate term benefit.
+
+    It is expected the team or developer will remediate,
+    or repay,
+    the shortcut at some later time.
+
+-   The more such shortcuts that are taken without remediating,
+    or replaying,
+    them,
+    the more accumulation of "debt" will have negative ramifications for
+    the product team.
+    Most of the time this will translate to slowing the team down.
+
+A common example of accumulation of technical debt is where:
+
+-   A developer chooses to deviate from software development principles
+    as a short cut to move faster in the moment.
+
+-   A developer should remediate that deviation as part of an ongoing
+    code maintenance activity.
+
+-   Development teams that continually deviate from development
+    principles will put the software codebase in a state that
+    becomes hard to maintain and change.
+
+Make sure you repay your technical debt!
+
 ## Summary
 
 This article primed you with the context of:
@@ -204,3 +308,4 @@ This article primed you with the context of:
 -   Modern application development
 -   The types of building blocks that comprise modern application
     development
+-   Tradeoffs, Costs and Technical Debt
