@@ -25,7 +25,7 @@ In this article you will be able to:
 -   Describe the types of building blocks that comprise modern
     application development.
 -   Describe how modern application developer must continually
-    consider tradeoffs and technical debt.
+    consider trade offs and technical debt.
 
 ## Modern Application Principles and Practices
 
@@ -201,7 +201,7 @@ It is important to select and gain proficiency with the appropriate
 tools that will remove unnecessary friction in the modern apps
 practitioner workflow.
 
-## Tradeoffs, Costs and Technical Debt
+## Trade offs, Costs and Technical Debt
 
 So far in this article you have been exposed to the major types of
 building blocks you will use to run your daily work.
@@ -211,7 +211,7 @@ can be a challenge.
 
 **Every activity you do,**
 **and every building block you select and use,**
-**will have tradeoffs,**
+**will have trade offs,**
 **and associated costs.**
 The costs may be measured in time, money or opportunities lost.
 
@@ -221,7 +221,7 @@ You can think of managing your costs from three perspectives:
 - Taxes
 - Debt
 
-![Tradeoffs, Costs and Technical Debt](/images/outcomes/application-development-rhythm/foundations-bank.jpg)
+![Trade offs, Costs and Technical Debt](/images/outcomes/application-development-rhythm/foundations-bank.jpg)
 
 ### Upfront Costs
 
@@ -308,4 +308,4 @@ This article primed you with the context of:
 -   Modern application development
 -   The types of building blocks that comprise modern application
     development
--   Tradeoffs, Costs and Technical Debt
+-    offs, Costs and Technical Debt
