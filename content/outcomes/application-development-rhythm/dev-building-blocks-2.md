@@ -16,6 +16,8 @@ and tooling with the objective of moving quickly,
 safely,
 and sustainably.
 
+![Methods, Tools, Techniques](/images/outcomes/application-development-rhythm/dev-building-blocks-tools.jpg)
+
 Note:
 For brevity,
 during the remainder of this article,

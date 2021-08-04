@@ -24,6 +24,8 @@ This learning path teaches the software engineering fundamentals that
 [VMware Tanzu Labs](https://tanzu.vmware.com/labs) developers use in
 their daily work.
 
+![Developer Rhythm](/images/outcomes/application-development-rhythm/developer-rhythm.jpg)
+
 ## Who is this learning path for?
 
 This learning path is for software engineers and other technical

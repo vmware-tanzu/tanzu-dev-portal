@@ -15,6 +15,8 @@ flow.
 The order reflects the more general building blocks,
 to the more specific.
 
+![Principles, Practices](/images/outcomes/application-development-rhythm/dev-building-blocks.jpg)
+
 *Note:*
 For the remainder of this article,
 the term *developer* either refers to a *single developer*,

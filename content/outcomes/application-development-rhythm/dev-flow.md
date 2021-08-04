@@ -23,6 +23,8 @@ this article,
 the reference articles and workshops will prepare you to become more
 productive on the first day of your engagement.
 
+![Developer Flow](/images/outcomes/application-development-rhythm/developer-flow-programmer.jpg)
+
 Note:
 For brevity,
 during the remainder of this article,

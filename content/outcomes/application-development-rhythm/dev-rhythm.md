@@ -17,3 +17,5 @@ Both will demonstrate a daily developer's flow using TDD and
 Continuous Integration practices,
 along with techniques such as *Red/Green/Refactor*, *Mikado Method*
 and *Private Branching*.
+
+![Developer Rhythm](/images/outcomes/application-development-rhythm/developer-rhythm-programmer.jpg)
