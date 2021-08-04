@@ -372,9 +372,11 @@ D2iQ
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+danluu
 DAO
 DaoAuthenticationProvider
 DaShaun
+dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
@@ -840,6 +842,7 @@ JIRAs
 Jitsu
 Jiu
 jks
+JKS
 JMX
 JmxConnectionHandler
 JmxNotificationClient
@@ -900,6 +903,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -1281,6 +1285,7 @@ Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
 [Pp]ost-mortem
+[Pp]ost-mortem(s)?
 Postfacto
 [Pp]ostgres
 POSTROUTING
