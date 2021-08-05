@@ -28,7 +28,7 @@
                         {{ range first 6 $guides }}
                             <div class="flex-315 col-12 mr-3 mb-3 px-0">
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                                    <h4 class="mt-2">{{ .Title }}</h4>
+                                    <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
                                     <p>{{ .Description }}</p>
                                 </a>
                             </div>
@@ -36,7 +36,7 @@
                         {{ range after 6 $guides }}
                             <div class="flex-315 col-12 mr-3 mb-3 px-0 hidden-item" style='display: none;'>
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                                    <h4 class="mt-2">{{ .Title }}</h4>
+                                    <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
                                     <p>{{ .Description }}</p>
                                 </a>
                             </div>
@@ -50,7 +50,7 @@
                         {{ range $guides }}
                             <div class="flex-315 col-12 mr-3 mb-3 px-0">
                                 <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                                    <h4 class="mt-2">{{ .Title }}</h4>
+                                    <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
                                     <p>{{ .Description }}</p>
                                 </a>
                             </div>
