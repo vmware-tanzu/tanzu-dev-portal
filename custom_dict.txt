@@ -54,6 +54,7 @@ Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
 Alertmanager
+Aletty
 Alexa
 Alexey
 Alibaba
@@ -100,6 +101,7 @@ Artifactory
 artisanal
 Asciidoctor
 ASG(s)?
+Ashok
 Asiedu-Ampem
 aspirational
 Astra
