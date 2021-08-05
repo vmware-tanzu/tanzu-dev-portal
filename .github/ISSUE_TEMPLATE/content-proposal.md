@@ -42,7 +42,7 @@ Level of content as it pertains to the topic proposed. Delete those not applicab
 * [ ] There this GitHub issue has been added to the [content backlog project](https://github.com/vmware-tanzu/tanzu-dev-portal/projects/7) 
 * [ ] Ensure with the author that the content has been reviewed for technical accuracy.
 * [ ] Ensure with the author that the content has been through copy editing.
-* [ ] I**If applicable**: Ensure with the author that the content has been through Legal review.
+* [ ] **If applicable**: Ensure with the author that the content has been through Legal review.
 * [ ] Review fit with the [Tanzu Developer Center Style Guide](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Reference,-Style-Guide) and the [VMware Style Guide](https://www.vmware.com/content/dam/brand/photography-only/guidelines/writing-and-naming/editorial-style-guide/marketing-editorial-style-guide.pdf) (**VMware Employees Only**). 
 * [ ] Ensure the front matter is filled out correctly and completely.
 * [ ] **If applicable**: Review additions to `custom_dict.txt`.
