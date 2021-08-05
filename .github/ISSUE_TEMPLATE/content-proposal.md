@@ -38,7 +38,7 @@ Level of content as it pertains to the topic proposed. Delete those not applicab
 
 ## Reviewer Checklist
 
-* [ ] Review if the content is a good fit for the Tanzu Developer Center. 
+* [ ] Review if the content is a good fit for the Tanzu Developer Center. See [Content Prewriting and Ideation](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Prewriting-Ideation-(GitHub-and-Google-Docs-Method))
 * [ ] There this GitHub issue has been added to the [content backlog project](https://github.com/vmware-tanzu/tanzu-dev-portal/projects/7) 
 * [ ] Ensure with the author that the content has been reviewed for technical accuracy.
 * [ ] Ensure with the author that the content has been through copy editing.
