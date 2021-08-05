@@ -1,9 +1,15 @@
 ---
-title: Balanced Teams
-weight: 10
+date: '2021-06-15'
+lastmod: '2021-07-02'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Balanced Teams
+weight: 10
+tags:
+- Teams
+- Roles
+- Agile
 ---
 
 Many teams today have chosen to follow an Agile approach to software development. Despite the proven benefits of such an approach, many of these teams still fail to realize their full potential. 

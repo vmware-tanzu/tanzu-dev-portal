@@ -1,9 +1,11 @@
 ---
-title: Test-Driven Development
-weight: 40
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Test-Driven Development
+weight: 40
 ---
 
 Testing is crucial to cloud native application development. It is our primary (and sometimes only) way to build confidence that we can push to production at any given time.
@@ -44,4 +46,4 @@ The best way to learn about test-driven development is to do some of it! Pairing
 
 #### Additional resources
 
-- Review the [foundaments of Test Driven Development](/outcomes/application-development/test-driven-development/). 
+- Review the [foundaments of Test Driven Development](/outcomes/application-development/test-driven-development/).

@@ -1,6 +1,6 @@
 ---
 date: '2021-04-21'
-lastmod: '2021-05-03'
+lastmod: '2021-06-15'
 layout: single
 related:
 - /guides/kubernetes/app-observability-exporting-metrics

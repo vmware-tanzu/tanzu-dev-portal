@@ -1,9 +1,11 @@
 ---
-title: "We Care About More Than Engineering"
-weight: 30
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: We Care About More Than Engineering
+weight: 30
 ---
 
 For many years, Tanzu Labs only employed engineers. We expected our clients to bring the product manager (PM) and product designer (PD) roles to the team. We didn't have any expertise in Lean Product Design or User Centered Design (UCD). We could help our clients "build it right", but we didn't concern ourselves with helping them discover the right thing to build – which our clients often did not know how to do. This too often led to a demoralizing outcome: we helped clients build very well-built _wrong_ things for their business. 

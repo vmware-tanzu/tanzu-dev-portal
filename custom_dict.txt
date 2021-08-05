@@ -65,6 +65,7 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+Andriy
 Ango
 Anneliese
 [Aa]nomol(y|ies)
@@ -147,6 +148,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -265,6 +268,7 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
+Cloudflare
 CloudHealth
 CloudNativeCon
 CloudWatch
@@ -368,9 +372,11 @@ D2iQ
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+danluu
 DAO
 DaoAuthenticationProvider
 DaShaun
+dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
@@ -429,6 +435,7 @@ Dieu
 differentiators
 Dikastes
 DirtiesContext
+disambiguated
 DiscoveryClient
 DiskRegionStatistics
 DiskStore
@@ -519,6 +526,7 @@ EventID
 eventQueueSize
 eventsDistributed
 eventsQueued
+Evie
 [Ee]xecutables
 expander(s)?
 expensed
@@ -548,6 +556,7 @@ FIPS(-enabled|-approved)?
 firewalling
 Fiscus
 Flake8
+flatlined
 Florea
 Florent
 [fF]luent[Bb]it
@@ -681,6 +690,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
@@ -693,6 +703,7 @@ gzip(ped)?
 H2
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
@@ -700,6 +711,7 @@ HAProxy
 [hH]ardcoded
 HashiCorp('s)?
 hasResult
+HATEOAS
 Hayk
 Haytham
 Heartbleed
@@ -830,6 +842,7 @@ JIRAs
 Jitsu
 Jiu
 jks
+JKS
 JMX
 JmxConnectionHandler
 JmxNotificationClient
@@ -861,6 +874,7 @@ Junio
 junit
 Junit
 JUnit
+junky
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
@@ -872,6 +886,7 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+Kalashnykov
 Kamus
 Kanban
 Kaniko
@@ -888,6 +903,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -1098,6 +1114,8 @@ Nana
 Natively
 natively
 Neatro
+Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1193,9 +1211,11 @@ OWASP
 P2P
 Pacak
 Packer
+Packt('s)?
 PagerDuty
 Pairmate
 Paketo
+Palaka
 Palo
 Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
@@ -1227,6 +1247,7 @@ PdxInstances
 PdxType
 PdxTypes
 PeerAuthentication
+PEM
 per-namespace
 Percona
 [Pp]erformant
@@ -1240,6 +1261,7 @@ php-apache
 Pichler
 pickab(le|ility)?
 PID
+Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
@@ -1263,6 +1285,7 @@ Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
 [Pp]ost-mortem
+[Pp]ost-mortem(s)?
 Postfacto
 [Pp]ostgres
 POSTROUTING
@@ -1323,6 +1346,7 @@ putAll
 PuTTYgen
 PVC?s?
 PWAs
+PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
@@ -1440,6 +1464,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
@@ -1585,7 +1611,7 @@ Syer
 symposia
 Sysdig
 Szul
-Tanzu(Developer)?
+Tanzu(Developer|'s)?
 targetPort
 Tarin
 TAS
@@ -1715,6 +1741,7 @@ VCAP
 vCenter
 VCS
 Velero('s)?
+Vendio
 vendored
 Venkat
 Venkateswara

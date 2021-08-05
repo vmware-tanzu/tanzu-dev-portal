@@ -1,9 +1,11 @@
 ---
-title: "We're Supported"
-weight: 80
+date: '2021-07-12'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: We're Supported
+weight: 80
 ---
 
 We don't have traditional command-and-control line management structures within Tanzu Labs. **We have coaching managers.** They help our people get to where they want to go in their careers. 
@@ -14,4 +16,4 @@ Everyone who joins Tanzu Labs has one-one-ones scheduled with their manager. Our
 
 Our managers work with us to understand where we're at in our careers, and help us come up with a plan for where we want to be. They help us get the books we recommend, and connect us with other amazing people that we should meet and pair with. They show us how to _give back_ ❤️ beyond just our immediate pairs, projects, and teams. They connect us to the global community at VMware Tanzu Labs.  
 
-Most importantly, our managers are there with us for our journey, every step of the way. 
+Most importantly, our managers are there with us for our journey, every step of the way.
