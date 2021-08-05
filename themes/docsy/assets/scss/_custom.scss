@@ -136,7 +136,9 @@ blockquote {
 .fs-90 {
   font-size: 90%;
 }
-
+.fs-p {
+  font-size: 1.0625rem;
+}
 .grey-hr {
   border-top: 1px solid rgb(72, 87, 100);
 }
@@ -870,7 +872,6 @@ footer {
   .h1,
   .h2,
   .h3,
-  .h4,
   .h5,
   .h6 {
     color: white;
