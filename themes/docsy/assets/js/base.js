@@ -27,13 +27,17 @@ limitations under the License.
 
     //Samples filters
     $(".filters .filter").click(function () {
-      var filter = $(this).attr("filter");
-      $(this).addClass("active").siblings().removeClass("active");
-      $(".filter-item").hide();
-      $(".filter-item[class*='" + filter + "']").show();
-      if (filter == "all") {
-        $(".filter-item").show();
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+      } else {
+        this.classList.add("active")
+        if($(this).attr("filter") === "all") {
+          $(this).siblings().removeClass("active")
+        } else {
+          $("[filter=all]").removeClass("active")
+        }
       }
+      updateFilters()
     });
 
     //Newsletter
@@ -54,23 +58,41 @@ limitations under the License.
       e.stopPropagation();
     });
 
-    //Light/dark toggle
-    $("#toggle-light-dark-mode").click(function () {
+    //Light toggle
+    $("#toggle-light-mode").click(function () {
+      localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
+      $("#light-select").show();
+      $("#dark-select").hide();
+
       if ($("html").hasClass("light-mode")) {
-        $("html").removeClass("light-mode");
-        document.getElementById("light-theme").remove();
-        localStorage.setItem("light-dark-mode-storage", "dark");
-        if (iframe && iframe.contentWindow) {
-          iframe.contentWindow.postMessage("dark", "*");
-        }
-      } else {
+        // if (iframe && iframe.contentWindow) {
+        //   iframe.contentWindow.postMessage("dark", "*");
+        // }
+      }
+      else {
         $("html").addClass("light-mode");
         changeTheme("light");
-        localStorage.setItem("light-dark-mode-storage", "light");
       }
     });
 
+    $("#toggle-dark-mode").click(function () {
+      var iframe = document.getElementById("auth-iframe");
+      $("#dark-select").show();
+      $("#light-select").hide();
+
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage("dark", "*");
+      }
+      changeTheme('dark');
+      localStorage.setItem("light-dark-mode-storage", "dark");
+      var hasLight = document.getElementById("light-theme");
+
+      if(hasLight) {
+        document.getElementById("light-theme").remove();
+        $("html").removeClass("light-mode");
+      }
+    });
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
@@ -157,7 +179,6 @@ limitations under the License.
     if (!promo.length) {
       return;
     }
-
     var promoOffset = bottomPos(promo);
     var navbarOffset = $(".js-navbar-scroll").offset().top;
 
@@ -269,13 +290,13 @@ limitations under the License.
           var pageCategory;
           if ($("body.guide").length > 0) pageCategory = "guide";
           else if ($("div.blog").length > 0) pageCategory = "blog";
+          else if ($("div.practices").length > 0) pageCategory = "practices";
           sendAmplitudeEvent("page scrolled", {
             "scroll depth": scrollDepth * 100,
             "page title": pageTitle,
             "page category": pageCategory,
             "url path": window.location.pathname,
           });
-          //console.log(scrollDepth);
         }
       }
     });
@@ -288,35 +309,37 @@ limitations under the License.
           0,
           document.title.indexOf("|") - 1
         );
-        var elapsedPercentage = player.getCurrentTime() / player.getDuration();
-        var percentageCompleted;
-        if (elapsedPercentage < 0.25) percentageCompleted = 0;
-        else if (elapsedPercentage >= 0.25 && elapsedPercentage < 0.5)
-          percentageCompleted = 0.25;
-        else if (elapsedPercentage >= 0.5 && elapsedPercentage < 0.75)
-          percentageCompleted = 0.5;
-        else if (elapsedPercentage >= 0.75 && elapsedPercentage < 1)
-          percentageCompleted = 0.75;
-        else if (elapsedPercentage == 1) percentageCompleted = 1;
+        if (player != null) {
+          var currentTime = !player.getCurrentTime ? 0.0 : player.getCurrentTime();
+          var duration = !player.getDuration ? 0.0 : player.getDuration();
+          var elapsedPercentage = currentTime / duration;
+          var percentageCompleted;
+          if (elapsedPercentage < 0.25) percentageCompleted = 0;
+          else if (elapsedPercentage >= 0.25 && elapsedPercentage < 0.5)
+            percentageCompleted = 0.25;
+          else if (elapsedPercentage >= 0.5 && elapsedPercentage < 0.75)
+            percentageCompleted = 0.5;
+          else if (elapsedPercentage >= 0.75 && elapsedPercentage < 1)
+            percentageCompleted = 0.75;
+          else if (elapsedPercentage == 1) percentageCompleted = 1;
 
-        if (percentageCompletedCurrent < percentageCompleted) {
-          percentageCompletedCurrent = percentageCompleted;
-          var showTitle = $("h1").innerHTML;
-          var episodeTitle = document.title.substring(
-            0,
-            document.title.indexOf("|") - 1
-          );
-          var episodeType = "vod";
-          sendAmplitudeEvent("episode session ended", {
-            "percentage complete": percentageCompleted * 100,
-            "show title": showTitle,
-            "episode title": episodeTitle,
-            "episode type": episodeType,
-            "url path": window.location.pathname,
-          });
-          //console.log(percentageCompleted);
+          if (percentageCompletedCurrent < percentageCompleted) {
+            percentageCompletedCurrent = percentageCompleted;
+            var showTitle = $("h1").innerHTML;
+            var episodeTitle = document.title.substring(
+              0,
+              document.title.indexOf("|") - 1
+            );
+            var episodeType = "vod";
+            sendAmplitudeEvent("episode session ended", {
+              "percentage complete": percentageCompleted * 100,
+              "show title": showTitle,
+              "episode title": episodeTitle,
+              "episode type": episodeType,
+              "url path": window.location.pathname,
+            });
+          }
         }
-        //console.log("Elapsed percentage: " + player.getCurrentTime()/player.getDuration());
       }
       if ($("body.workshop-live").length > 0) {
         var pageTitle = document.title.substring(
@@ -376,3 +399,7 @@ limitations under the License.
       });
   });
 }(jQuery));
+
+
+  
+

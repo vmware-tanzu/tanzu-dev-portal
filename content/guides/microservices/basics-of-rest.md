@@ -1,20 +1,26 @@
 ---
-title: "Basics of REST"
-metaTitle: "Understanding the Basics of REST"
-subsection: "Basics of REST"
-description: Explore the basics of Representational State Transfer (REST) APIs, a software style that provides architectural constraints used for creating web services. 
-weight: 2
-topics:
-- Microservices
+date: '2020-05-07'
+description: Explore the basics of Representational State Transfer (REST) APIs, a
+  software style that provides architectural constraints used for creating web services.
+lastmod: '2021-03-07'
+metaTitle: Understanding the Basics of REST
+patterns:
+- API
+subsection: Basics of REST
 tags:
 - Microservices
 - API
 - REST
-patterns:
-- API
 team:
 - Tiffany Jernigan
 - Brian McClain
+title: Basics of REST
+topics:
+- Microservices
+weight: 2
+oldPath: "/content/guides/microservices/basics-of-rest.md"
+aliases:
+- "/guides/microservices/basics-of-rest"
 ---
 
 So what is [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)? At a high level REST, or REpresentational State Transfer, is an architectural style for distributed hypermedia systems. It was created from a combination of other architectural styles and enlists several constraints. Roy Fielding, its creator, said that "REST provides a set of architectural constraints that, when applied as a whole, emphasizes scalability of component interactions, generality of interfaces, independent deployment of components, and intermediary components to reduce interaction latency, enforce security, and encapsulate legacy systems." 
@@ -160,4 +166,4 @@ Layered system constraints are used to scope hierarchical layers based on behavi
 This constraint states that a server can extend the functionality of a client by providing it executable code. Probably the most common example of this is client-side scripting with JavaScript, but this can take many forms. While this keeps clients simpler and smaller, it also reduces visibility of features and can introduce ambiguity. Because of this, while the absence of other constraints may mean a service isn’t actually RESTful, this constraint is optional.
 
 ## Conclusion
-Well, this is the end of this coverage of the basics of REST. Reading Roy Fielding's REST [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) is a great place to start if you haven't already. If you’d like to start building your own REST APIs and are a Spring developer, be sure to check out [Building a REST API with Spring Boot](/guides/spring/spring-build-api) to see these principles in action! 
+Well, this is the end of this coverage of the basics of REST. Reading Roy Fielding's REST [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) is a great place to start if you haven't already. If you’d like to start building your own REST APIs and are a Spring developer, be sure to check out [Building a REST API with Spring Boot](/guides/spring/spring-build-api) to see these principles in action!

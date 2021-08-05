@@ -1,22 +1,27 @@
 ---
-title: "Getting Started with `kpack` to Automate Builds using Cloud Native Buildpacks"
-metaTitle: "Getting Started with `kpack` to Automate Builds"
-linkTitle: "Getting Started with `kpack`"
-description: Discover how to use kpack, a Kubernetes-native build service that uses Cloud Native Buildpacks to build OCI-compliant container images on Kubernetes.
-parent: "Cloud Native Buildpacks"
-weight: 3
-topics:
-- Containers
+date: '2020-04-16'
+description: Discover how to use kpack, a Kubernetes-native build service that uses
+  Cloud Native Buildpacks to build OCI-compliant container images on Kubernetes.
+lastmod: '2021-06-03'
+linkTitle: Getting Started with `kpack`
+metaTitle: Getting Started with `kpack` to Automate Builds
+parent: Cloud Native Buildpacks
+patterns:
+- Deployment
 tags:
 - kpack
 - Buildpacks
-patterns:
-- Deployment
 team:
 - Tyler Britten
 - Ivan Tarin
+title: Getting Started with kpack to Automate Builds using Cloud Native Buildpacks
+topics:
+- Containers
+weight: 3
+oldPath: "/content/guides/containers/cnb-gs-kpack.md"
+aliases:
+- "/guides/containers/cnb-gs-kpack"
 ---
-
 
 [`kpack`](https://github.com/pivotal/kpack) is a Kubernetes-native build service that builds container images on Kubernetes using [Cloud Native Buildpacks](../cnb-what-is). It takes source code repositories (like GitHub), builds the code into a container image, and uploads it to the container registry of your choice.
 
@@ -26,7 +31,7 @@ There are a few things you need to do before getting started with `kpack`:
 
 - Have access to a Kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube). 
 
-- Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
+- Check out [Getting Started with Kubernetes](https://kube.academy/courses/getting-started) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
 - Optionally [install `stern`](https://github.com/wercker/stern/releases), a tool that makes it easy to tail the logs during builds. 
   - Command to install with Homebrew on Mac OS `brew install stern`

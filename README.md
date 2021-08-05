@@ -1,55 +1,107 @@
-# VMware Tanzu Developer Center
 
-## Building the Site
+- [About The Project](#about-the-project)
+  - [Site Built With](#site-built-with)
+- [Getting Started Building a Local Deployment of the Tanzu Developer Center](#getting-started-building-a-local-deployment-of-the-tanzu-developer-center)
+  - [Software Installation Prerequisites](#software-installation-prerequisites)
+  - [Run a Local Copy of the Tanzu Developer Center](#run-a-local-copy-of-the-tanzu-developer-center)
+- [Open Projects, Issues, and Content Backlog](#open-projects-issues-and-content-backlog)
+- [Contributing](#contributing)
+  - [Contributing Code](#contributing-code)
+  - [Contributing Content](#contributing-content)
+- [Code of Conduct](#code-of-conduct)
+- [Tanzu Developer Center Open Source License](#tanzu-developer-center-open-source-license)
 
-The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally.
 
-### Run locally
+## About The Project
 
-To install the latest version of `hugo` you can use `brew install hugo` if you are on a Mac. However, this site currently requires a specific version (0.69.2) to build successfully. To install this version of `hugo`, use one of the following two commands:
+![Tanzu Developer Center Screen Shot](static/images/github/homepage-screenshot.png)
 
-Using `brew`:
+The VMware Tanzu Developer Center is a site specifically built to be a great resource for software development teams. The contributions on the Tanzu Developer Center are from teams across VMware, as well as individuals without.
 
-```
-wget "https://raw.githubusercontent.com/Homebrew/homebrew-core/5c50ad9cf3b3145b293edbc01e7fa88583dd0024/Formula/hugo.rb"
-brew install hugo.rb
-# To keep this version around if you upgrade
-brew pin hugo
-```
+Our guiding principle is to ensure readers have free, immediate access to all the content on the Tanzu Developer Center. No purchase is ever necessary to access content on the Tanzu Developer Center because it is either open source or an easily accessible trial.
 
-Or to directly download:
 
-```
-wget "https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_extended_0.69.2_Linux-64bit.tar.gz"
-tar -zxvf "hugo_extended_0.69.2_Linux-64bit.tar.gz"
-mv ./hugo /usr/local/bin/
-```
+### Site Built With
 
-Now you're ready to build locally:
+* [Hugo](https://gohugo.io)
+* [Netlify](https://www.netlify.com)
+* [npm](https://www.npmjs.com)
+* [act](https://github.com/nektos/act)
+* [Docker](https://docs.docker.com/get-docker/)
 
-```
-git clone https://github.com/vmware-tanzu/tanzu-dev-portal
-cd tanzu-dev-portal
-make preview
-```
 
-A preview of the dev portal will be available at: [http://localhost:1313/developer](http://localhost:1313/developer).
+## Getting Started Building a Local Deployment of the Tanzu Developer Center
 
-### Run tests locally
+Before you can build a local copy of the Tanzu Developer Center, there are software prerequisites that you’re going to need to install.
 
-> Note: requires Docker to be running (On Mac OS X requires Docker Desktop 2.4 or newer)
+### Software Installation Prerequisites
 
-1. Install [act](https://github.com/nektos/act#installation) (`brew install act`)
-2. Run `make test`
+* **Install Hugo** — The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with built in SCSS/SASS support. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary. To install this version, see the [gohugo GitHub releases page for 0.82.0](https://github.com/gohugoio/hugo/releases/tag/v0.82.0).
 
-#### Spell Check
+     ```sh
+     brew install hugo
+     ```
 
-A GitHub action will run after opening a Pull Request that checks spelling. (You may test this locally using `make spell`.) You can add entries to the `custom_dict.txt` file for words that should not be flagged. This file gets sorted as a pre-commit hook so you can just add your entries to the end of the file and not worry about the order.
+* **Install NPM** — Hugo uses NPM to manage its local packages. If you don’t already have it installed, you’ll need it to move further.
 
-### Publish to Staging
+     ```sh
+     brew install npm
+     ```
 
-After running and testing locally, opened Pull Requests will be automatically staged by Netlify.
+* **Install [act](https://github.com/nektos/act)** — Used to runs GitHub Action’s tests locally. The Tanzu Developer Center uses GitHub Actions to perform automated testing periodically, and on pull requests. 
 
-## Contributing Content
+     **NOTE**: The tests currently break on `act` > [v0.2.20, be sure to install v0.2.20](https://github.com/nektos/act/releases/tag/v0.2.20).
 
-See the [Contributors guide](CONTRIBUTING.md).
+* **Install Docker** — Used to build images for local automated tests.  
+
+    **NOTE:** (Mac OS X requires Docker Desktop 2.4, or later)
+
+     ```sh
+     brew install docker --cask
+     ```
+
+### Run a Local Copy of the Tanzu Developer Center
+
+To get a local copy of the Tanzu Developer Center up and running follow these steps.
+
+1. Clone the repository.
+
+     ```sh
+     git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal.git
+     ```
+
+2. Build a preview of the website. The website will be available at [`http://localhost:1313/developer`](http://localhost:1313/developer).
+    
+     ```sh
+     make preview
+     ```
+
+
+## Open Projects, Issues, and Content Backlog
+
+See the [open issues](https://github.com/vmware-tanzu/tanzu-dev-portal/issues) and [project boards](https://github.com/vmware-tanzu/tanzu-dev-portal/projects) for a list of proposed features, content backlog, and known issues.
+
+
+## Contributing
+
+Content contributions are what make open source and the developer community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+
+### Contributing Code
+
+The code contribution process is documented in [CONTRIBUTING.md](https://github.com/vmware-tanzu/tanzu-dev-portal/blob/main/CONTRIBUTING.md).
+
+
+### Contributing Content
+
+The content contribution process is documented fully on our GitHub [wiki site](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki) and includes methods for both VMware employees as well as non-employees to contribute to content or bug fixes.
+
+
+## Code of Conduct
+
+We, the Admin team of the Tanzu Developer Center adhere to a code of conduct that you can read more about here: <code>[CODE_OF_CONDUCT.md](https://github.com/vmware-tanzu/tanzu-dev-portal/blob/main/CODE_OF_CONDUCT.md)</code>
+
+
+## Tanzu Developer Center Open Source License
+
+The Tanzu Developer Center is distributed under the Apache License .For more information, see <code>[LICENSE](https://github.com/vmware-tanzu/tanzu-dev-portal/blob/main/LICENSE)</code>.

@@ -1,25 +1,36 @@
 ---
-title: "Research Synthesis"
-tags: ["Discovery", "Framing", "Remote"]
-length: "30 min - 1 hour per interview"
-participants: "Interviewers, researchers, observers, note-takers"
-image: "default-cover.png"
-description: "Help sort through generative or evaluative research data using an affinity diagram"
-lastmod: "2019-04-9"
-
-why:
-- We use the output of this activity to identify patterns in collected research data, improve our understanding of users, and identify action items we can take (including any re-testing to confirm any inconclusive findings). These findings can either validate or invalidate assumptions we’ve made about our persona (i.e. demographics, behaviors, concerns, motivators, etc). Output also supports conversations on the why of behaviors and what actions to take.
-
-when:
-- Ideally we do this after each user interview in order to analyze the information we captured during our user interview session while it’s still fresh in our minds.
-
+date: '2021-02-09'
+description: Help sort through generative or evaluative research data using an affinity
+  diagram
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 30-60 min per interview
+participants: Interviewers, researchers, observers, note-takers
+tags:
+- Discovery
+- Framing
+- Remote
+title: Research Synthesis
 what:
-- "Large Whiteboard or digital version like [Miro](https://miro.com/)"
-- Sticky notes with findings on them (stemming from research sessions), color-coded by research participant
+- Large Whiteboard or digital version like [Miro](https://miro.com/)
+- Sticky notes with findings on them (stemming from research sessions), color-coded
+  by research participant
 - Dry erase markers
-
+when:
+- Ideally we do this after each user interview in order to analyze the information
+  we captured during our user interview session while it’s still fresh in our minds.
+why:
+- We use the output of this activity to identify patterns in collected research data,
+  improve our understanding of users, and identify action items we can take (including
+  any re-testing to confirm any inconclusive findings). These findings can either
+  validate or invalidate assumptions we’ve made about our persona (i.e. demographics,
+  behaviors, concerns, motivators, etc). Output also supports conversations on the
+  why of behaviors and what actions to take.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Write the following categories on the whiteboard, taking care to leave ample space between them (to accommodate many sticky notes):
 
@@ -54,12 +65,15 @@ what:
 1. When all sticky notes have been grouped (or placed in the Parking Lot), do another pass to identify (a) actions to take and (b) findings to re-test
 
 1. Take pictures of the output on the wall, ensuring you get a nice wide shot (which are great for sharing out or using as deck backgrounds) and clear, close-up shots (which are perfect for re-reading the "verbatims" that make up each sentiment group)
+{{% /section %}}
 
-
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 The goal is to walk away from research with actionable insights and an understanding of whether we've validated or invalidated any research objectives and to give design and/or product a set of actionable next steps to take
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 As needed, build on the Persona data you've captured to-date. Take any new user insights and validate or invalidate the assumptions you have about your existing [personas](/practices/personas) or create a new persona if you find new information that will support it.
 
@@ -68,24 +82,9 @@ Try using Trello (or something like it) to track your assumptions
 It's also helpful to share out findings at the subsequent iteration planning meeting (IPM, similar to SCRUM Sprint planning) so that the entire team - including anyone who wasn't present during the actual research sessions - can benefit from what was learned.
 
 You can alternately create your categories from the questions you are asking to your identified [personas](/practices/personas). These categories only tend to work for users of the same persona (i.e. do not mix user interviews with stakeholder interviews while synthesizing)
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
+{{% section %}}
 ### Preceding
 - [Assumptions](/practices/assumptions)
-- Exploratory Interviews - Coming soon!
-
-### Following
-
-Various, depending on context
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading
-
-
+{{% /section %}}

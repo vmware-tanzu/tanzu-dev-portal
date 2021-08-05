@@ -1,18 +1,24 @@
 ---
-title: "Getting Started with Using Helm to Deploy Apps on Kubernetes"
-linkTitle: "Getting Started with Helm"
-metaTitle: "Deploying Apps on Kubernetes with Helm"
-parent: "Packaging"
-description: Learn how to use Helm to help define, install, upgrade applications, and deploy apps on Kubernetes, from set up to configuring and changing values. 
-weight: 2
-topics:
-- Kubernetes
-tags:
-- Helm
+date: '2020-04-16'
+description: Learn how to use Helm to help define, install, upgrade applications,
+  and deploy apps on Kubernetes, from set up to configuring and changing values.
+lastmod: '2021-06-03'
+linkTitle: Getting Started with Helm
+metaTitle: Deploying Apps on Kubernetes with Helm
+parent: Packaging
 patterns:
 - Deployment
+tags:
+- Helm
 team:
 - Tyler Britten
+title: Getting Started with Using Helm to Deploy Apps on Kubernetes
+topics:
+- Kubernetes
+weight: 2
+oldPath: "/content/guides/kubernetes/helm-gs.md"
+aliases:
+- "/guides/kubernetes/helm-gs"
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [Helm: What Is It?](../helm-what-is/)
@@ -25,7 +31,7 @@ There are a few things you need to do before getting started with Helm:
 
 - Have access to a Kubernetes cluster. If you don't, you can use local options like [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community) or [Minikube](https://github.com/kubernetes/minikube).
 
-- Check out [Kubernetes 101](https://kube.academy/courses/kubernetes-101) on KubeAcademy, particularly if you've never worked with Kubernetes before.
+- Check out [Getting Started with Kubernetes](https://kube.academy/courses/getting-started) on KubeAcademy, particularly if you've never worked with Kubernetes before.
 
 - Follow the documentation for [installing Helm](https://helm.sh/docs/intro/install/).
 

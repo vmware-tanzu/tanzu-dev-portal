@@ -1,9 +1,15 @@
 ---
-title: "Storage Integration"
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-04-29'
 team:
 - Josh Rosso
+title: Storage Integration
+topics:
+- Kubernetes
+weight: 72
+oldPath: "/content/guides/kubernetes/storage-integration.md"
+aliases:
+- "/guides/kubernetes/storage-integration"
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it
@@ -40,6 +46,7 @@ storage functionality to containers. Storage is implemented in CSI plugins. This
 interface / plugin model enables Kubernetes to support many storage options
 implemented via plugins (or drivers) such as
 [vSphere](https://github.com/kubernetes-sigs/vsphere-csi-driver),
+[DellEMC](https://dell.github.io/storage-plugin-docs/docs/dell-csi-driver/),
 [portworx](https://github.com/libopenstorage/openstorage/tree/master/csi), [AWS
 EFS](https://github.com/kubernetes-sigs/aws-ebs-csi-driver), and
 [NetApp](https://github.com/NetApp/trident).
@@ -106,6 +113,8 @@ providers, such as NetApp's SolidFire. It also handles concerns around backup
 and recovery. Another common project that follows this model is
 [rook](https://rook.io), which provides integration with providers like Ceph and
 NFS.
+Also, Dell EMC [Container Storage Modules](https://github.com/dell/karavi) (formerly known as Karavi)
+enriches CSI with enterprise storage capabilities such as Authorization, Resiliency and others.
 
 ### Option Considerations
 

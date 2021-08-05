@@ -1,22 +1,21 @@
 ---
-title: "Using Knative Eventing for Better Observability"
-featured: true
-weight: 1
-description: >
-  Getting a better picture of Kubernetes events
 date: 2021-02-22
-topics:
-  - Kubernetes
-tags:
-  - Kubernetes
-  - API
-  - Development
-  - Knative
+description: Getting a better picture of Kubernetes events
+featured: false
+lastmod: '2021-05-19'
 patterns:
-  - Deployment
-# Author(s)
+- Deployment
+tags:
+- Kubernetes
+- API
+- Development
+- Knative
 team:
-  - Tyler Britten
+- Tyler Britten
+title: Using Knative Eventing for Better Observability
+topics:
+- Kubernetes
+weight: 1
 ---
 
 If you’re using one of the great observability tools out there, you probably already mark your data with important events that may affect it—deployments, configuration changes, code commits, and more. But what about changes Kubernetes makes on its own, like autoscaling events?

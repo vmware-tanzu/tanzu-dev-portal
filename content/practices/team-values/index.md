@@ -1,26 +1,35 @@
 ---
-title: "Team Values"
-tags: ["Kickoff", "Discovery", "Framing"]
-length: "30 - 45 mins"
-participants: "Core team"
-image: "default-cover.png"
-description: "Allow a team to determine, openly discuss and share their team values"
-lastmod: "2019-12-17"
-
-why:
-- By setting team values together, team members are able to understand what is important to their colleagues and what behaviors are expected day to day. It can help fast forward the early stages of team formation (Forming, Storming, Norming, and Performing) and provide a baseline for feedback.
-
-when:
-- Although this activity can be done as early as when a project and/or consulting engagement kicks off, the first day of product development (after a D&F is wrapping up) typically works best. The key is to have the full core team present. Sometimes that isn’t possible until development kicks off.  
-
+date: '2021-02-09'
+description: Allow a team to determine, openly discuss and share their team values
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 30-45 min
+participants: Core team
+tags:
+- Kickoff
+- Discovery
+- Framing
+title: Team Values
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
-
+when:
+- Although this activity can be done as early as when a project and/or consulting
+  engagement kicks off, the first day of product development (after a D&F is wrapping
+  up) typically works best. The key is to have the full core team present. Sometimes
+  that isn’t possible until development kicks off.
+why:
+- By setting team values together, team members are able to understand what is important
+  to their colleagues and what behaviors are expected day to day. It can help fast
+  forward the early stages of team formation (Forming, Storming, Norming, and Performing)
+  and provide a baseline for feedback.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Write the following prompts on the whiteboard:
         
@@ -48,28 +57,26 @@ what:
    - Type up the sticky notes written by the team, keeping them grouped. Be sure this document is in the team’s shared drive/folder
    - Summarize each group with one value statement. This might be an umbrella sentence that describes the group or one of the value statements in that group.
    - Take the list of summarized value statements and compile them into a single document. Print it out and hang it up in the team area.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 You know you’re done when you’ve created a set of agreed on team values that can be put up in the team area and referred to during the project and/or consulting engagement.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 Every member of the “core” team should be involved in this activity. A helpful way to think about the “core” team is it’s the folks who will be working full time together, ideally co-located, for the lifecycle of the project and/or consulting engagement.
 
 These team values can be leveraged again at the end of the project and/or consulting engagement if you decide to do a How We Work transition activity. This will allow the team to adjust their values and identify aligned practices they’ve done during the engagement to keep doing after they return home.
+{{% /section %}}
 
-## Related Practices
-
-Coming soon: How We Work
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Typed up list of grouped team values with a summarized value statement for each group](/images/practices/team-values/example-1.png)
 
 ![Summarized value statements up on the wall in team project area](/images/practices/team-values/example-2.jpeg)
 
-## Recommended Reading
-
-None at the moment
-
-
+{{% /section %}}

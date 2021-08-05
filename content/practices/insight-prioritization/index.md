@@ -1,26 +1,31 @@
 ---
-title: "Insight Prioritization"
-tags: ["Discovery", "Remote"]
-length: "1 - 2 hours"
-participants: "Core team"
-image: "default-cover.png"
-description: "Prioritize any insights that were uncovered during research so the team can use them to make informed product decisions"
-lastmod: "2019-02-05"
-
-why:
-- Insight Prioritization helps us understand "what are the first set of problems that need solving?". It looks at insights—"aha!" moments where critical thinking results in a meaningful conclusion—in order to help provide color to our problem space and eventual solutions.
-
-
-when:
-- During Discovery & Framing, after conducting and synthesizing exploratory research.
-
+date: '2021-02-09'
+description: Prioritize any insights that were uncovered during research so the team
+  can use them to make informed product decisions
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1-2 hours
+participants: Core team
+tags:
+- Discovery
+- Remote
+title: Insight Prioritization
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Painter's tape
 - Any insights you've identified in previous workshops
-
+when:
+- During Discovery & Framing, after conducting and synthesizing exploratory research.
+why:
+- Insight Prioritization helps us understand "what are the first set of problems that
+  need solving?". It looks at insights—"aha!" moments where critical thinking results
+  in a meaningful conclusion—in order to help provide color to our problem space and
+  eventual solutions.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Gather all the insights you discovered from research     
 
@@ -42,35 +47,32 @@ what:
    Tip: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
    {{% /callout %}}
 ![2x2 diagram showing stickies in each quadrant](/images/practices/insight-prioritization/step-4.png)
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is achieved when the team agrees to the top 3-5 Insights on which it will focus
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Related Practices
+- [2x2 Prioritization](/practices/2x2)
+{{% /section %}}
 
-None at the moment
-
-## Related Practices
-
-### Variations
-
-None at the moment
-
+{{% section %}}
 ### Preceding
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Research Synthesis](/practices/research-synthesis)
+{{% /section %}}
 
-## Parallel
+{{% section %}}
+### Parallel
 
 [Problem Prioritization](/practices/problem-prioritization)
+{{% /section %}}
 
+{{% section %}}
 ### Following
 
 [Solution Brainstorming](/practices/solution-brainstorming)
-
-## Real World Examples
-Coming soon!
-
-## Recommended Reading
-
-
+{{% /section %}}

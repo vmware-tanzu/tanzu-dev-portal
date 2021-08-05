@@ -1,21 +1,25 @@
 ---
-title: Develop a REST API with Bitnami's Node.js and MongoDB Containers
-linkTitle: Develop Node.js REST API
-parent: "Basics of REST"
-weight: 1
 date: 2020-03-24
-topics:
-- Microservices
+lastmod: '2021-02-05'
+linkTitle: Develop Node.js REST API
+parent: Basics of REST
+patterns:
+- API
 tags:
 - Microservices
 - API
 - REST
 - MongoDB
 - Node.js
-patterns:
-- API
 team:
 - Vikram Vaswani
+title: Develop a REST API with Bitnami's Node.js and MongoDB Containers
+topics:
+- Microservices
+weight: 1
+oldPath: "/content/guides/microservices/develop-rest-api-nodejs-mongodb-containers.md"
+aliases:
+- "/guides/microservices/develop-rest-api-nodejs-mongodb-containers"
 ---
 
 For developers building cloud-native applications and APIs for Kubernetes, Bitnami offers a variety of [containers](https://bitnami.com/stacks/containers) and [Helm charts](https://github.com/bitnami/charts/) to ease the process. These ready-to-use assets make it easier to develop and deploy applications consistently, follow best practices and focus on code rather than infrastructure configuration. Bitnami containers and charts are also always secure, optimized and up-to-date, so you can rest assured that your applications always have access to the latest language features and security fixes. 

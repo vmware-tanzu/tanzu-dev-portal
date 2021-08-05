@@ -10,13 +10,12 @@ removePathAccents = true
 theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
-enableGitInfo = false
+enableGitInfo = true
 
 #disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [taxonomies]
 featured = "featured"
-pattern = "patterns"
 topic = "topics"
 tag = "tags"
 team = "team"
@@ -195,3 +194,6 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 #	url = "https://tanzu.vmware.com/newsletter-subscription"
 #	icon = "fa fa-envelope"
 #       desc = "Discuss development issues around the project"
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date"]

@@ -1,0 +1,20 @@
+name: Generate and upload audit report
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "**content**"
+jobs:
+  generate-audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout
+    - uses: ./.github/actions/audit
+      name: Generate Audit
+    - uses: actions/upload-artifact@v2
+      name: Upload artifact
+      with:
+        name: audit-output
+        path: audit-output.csv

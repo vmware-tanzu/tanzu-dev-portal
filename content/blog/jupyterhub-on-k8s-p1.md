@@ -1,20 +1,19 @@
 ---
-title: "Data Science with Python & JupyterHub on Kubernetes - Part 1"
-featured: true
-weight: 3
-description: >
-    Setting up JupyterHub on Kubernetes
 date: 2021-01-07
-topics:
-- Python
+description: Setting up JupyterHub on Kubernetes
+featured: false
+lastmod: '2021-05-19'
+patterns:
+- Deployment
 tags:
 - Python
 - Kubernetes
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Thomas Kraus
+title: Data Science with Python & JupyterHub on Kubernetes - Part 1
+topics:
+- Python
+weight: 3
 ---
 
 Provisioning environments for data scientists and analysts to run simulations, test new models, or experiment with new datasets can be time-consuming and error-prone. Python is a popular choice for data science use cases, and one of the easiest ways to leverage Python is through Jupyter Notebooks. A web-based development environment for multiple languages, Jupyter Notebooks support the creation and sharing of documents that contain code, equations, visualizations, output, and markup text all in the same document. Because Jupyter Notebooks are just text files, they can be easily stored and managed in a source code repository such as GitLab or GitHub. JupyterHub, meanwhile, is a multiuser hub that spawns, manages, isolates, and proxies multiple instances of a single-user Jupyter Notebook server.  

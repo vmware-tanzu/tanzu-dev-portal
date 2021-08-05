@@ -1,20 +1,19 @@
 ---
-title: "Hello Python, My Old Friend: Revisiting Python in a Cloud-Native Climate"
-featured: false
-description: >
-    How does Python look in the cloud-native world of today?
 date: 2020-08-11
-topics:
-- Python
+description: How does Python look in the cloud-native world of today?
+featured: false
+lastmod: '2020-10-08'
+patterns:
+- Deployment
 tags:
 - Kubernetes
 - Python
 - Buildpacks
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Brian McClain
+title: 'Hello Python, My Old Friend: Revisiting Python in a Cloud-Native Climate'
+topics:
+- Python
 ---
 
 For quite a while now, I’ve kept an eye on [RedMonk’s programming language rankings](https://redmonk.com/sogrady/2020/07/27/language-rankings-6-20/) — which track the usage of all programming languages based on data from GitHub, as well as discussion about them on Stack Overflow —— to get insight into the various language trends. In the [January 2020 update,](https://redmonk.com/sogrady/2020/02/28/language-rankings-1-20/) something interesting happened: Python reached  No. 2 on the list, taking over Java. 

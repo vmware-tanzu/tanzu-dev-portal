@@ -1,21 +1,19 @@
 ---
-title: "The Hate for YAML: The Hammer or the Nail?"
-featured: true
-weight: 1
-description: >
-    YAML gets a lot of hate, but is it more nuanced than that?
 date: 2021-01-19
-topics:
-- Kubernetes
+description: YAML gets a lot of hate, but is it more nuanced than that?
+lastmod: '2021-05-19'
+patterns:
+- Deployment
 tags:
 - Kubernetes
 - API
 - Development
-patterns:
-- Deployment
-# Author(s)
-team: 
+team:
 - Brian McClain
+title: 'The Hate for YAML: The Hammer or the Nail?'
+topics:
+- Kubernetes
+weight: 1
 ---
 
 Those four letters that strike dread in the hearts of every Kubernetes user. That short acronym that pierces like a knife in the dark. The aura of terror that follows it, enveloping everyone and everything as its reach seems to grow to the ends of time itself.

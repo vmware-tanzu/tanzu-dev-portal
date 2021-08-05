@@ -1,24 +1,25 @@
 ---
-title: Spring Boot RSocket Sample
-description: >
-    Getting Started With RSocket On Spring Boot
+date: '2020-08-11'
+description: Getting Started With RSocket On Spring Boot
+lastmod: '2020-09-17'
+patterns:
+- API
+- Eventing
+readme: true
+repo: https://github.com/benwilcock/spring-rsocket-demo
 summary:
 - Getting Started With RSocket On Spring Boot
-topics:
-- Spring
-- Reactive
-- Microservices
 tags:
 - Spring
 - Reactive
 - Microservices
 - RSocket
 - Spring Boot
-patterns:
-- API
-- Eventing
 team:
 - Ben Wilcock
-repo: https://github.com/benwilcock/spring-rsocket-demo
-readme: true
+title: Spring Boot RSocket Sample
+topics:
+- Spring
+- Reactive
+- Microservices
 ---

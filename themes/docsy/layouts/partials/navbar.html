@@ -8,7 +8,7 @@
 	<div class="td-navbar-nav-hamburger" id="main_navbar">
 		<ul class="navbar-nav mt-lg-0 align-items-center">
 			{{ if  .Site.Params.versions }}
-			<li class="nav-item dropdown d-none d-lg-block mr-4 mb-0">
+			<li class="nav-item dropdown d-none d-lg-block mr-xl-4 mr-2 mb-0">
 				{{ partial "navbar-version-selector.html" . }}
 			</li>
 
@@ -18,7 +18,7 @@
 			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
 			{{ range .Site.Menus.main }}
 				{{ if .HasChildren }}
-				<li class="nav-item dropdown d-lg-block mr-4 mb-0">
+				<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{{ .Name }}
 					</a>
@@ -29,7 +29,7 @@
 					</div>
 				</li>
 				{{ else }}
-				<li class="nav-item mr-4 mb-0">
+				<li class="nav-item mr-xl-4 mr-2 mb-0">
 					{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
 					{{ with .Page }}
 					{{ $active = or $active ( $.IsDescendant .)  }}
@@ -39,7 +39,7 @@
 				{{ end }}
 			{{ end }}
 
-			<li class="nav-item mr-4 mb-0 mobile-search-link" style="display: none;">
+			<li class="nav-item mr-xl-4 mr-2 mb-0 mobile-search-link" style="display: none;">
 				<a class="nav-link" href="{{ "/search" | relURL }}"><span>Search</span></a>
 			</li>
 			
@@ -52,8 +52,11 @@
 				</div>
 			</li>
 
-			<li class="nav-item ml-2 mb-0">
-        <a id="toggle-light-dark-mode"><span></span></a>
+			<li class="nav-item ml-lg-2 ml-1 mb-0 position-relative overflow-hidden text-nowrap ">
+				<div id="dark-select" class="nav-select"></div>
+				<div id="light-select" class="nav-select"></div>
+				<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>
+				<a class="position-relative" id="toggle-light-mode"><i class="fas fa-sun mr-0"></i></a>
 			</li>
 
 <!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}

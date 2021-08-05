@@ -1,11 +1,16 @@
 ---
-title:  "What is Kubernetes?"
-subsection: "What is Kubernetes?"
-weight: 1
+date: '2021-02-26'
+lastmod: '2021-06-03'
+subsection: What is Kubernetes?
+title: What is Kubernetes?
 topics:
 - Kubernetes
 - Containers
 - Microservices
+weight: 1
+oldPath: "/content/guides/kubernetes/what-is-kubernetes.md"
+aliases:
+- "/guides/kubernetes/what-is-kubernetes"
 ---
 
 Containers accelerate development pipelines by removing the need to build, test and validate application code across multiple operating systems. They also help simplify application operations by being portable across multiple hosts and cloud platforms. However, an application running in a container still needs management. For example:
@@ -39,6 +44,6 @@ Kubernetes uses various resource constructs to work with containers. These resou
 
 ## Keep Learning
 
-If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](/topics/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Kubernetes 101](https://kube.academy/courses/kubernetes-101) course on [KubeAcademy](https://kube.academy/).
+If you haven’t already, check out our [introduction to containers](/guides/containers/what-are-containers), and refer to the guides and resources on our [Kubernetes topic page](/topics/kubernetes/) to go deeper. The [Kubernetes Fundamentals workshop](/workshops/lab-k8s-fundamentals/) provides a quick, hands-on introduction, as well as the [Getting Started with Kubernetes](https://kube.academy/courses/getting-started) course on [KubeAcademy](https://kube.academy/).
 
 After you feel comfortable with Kubernetes concepts, you can also learn about combining the Docker container platform with Kubernetes to develop [microservices](/topics/microservices).

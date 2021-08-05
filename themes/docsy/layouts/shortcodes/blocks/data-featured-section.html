@@ -1,0 +1,28 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $color_id := .Get "color" | default .Ordinal }}
+{{ $height := .Get "height" | default "auto"  }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
+<a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
+<section class="data-featured-section pt-0 td-box td-box--{{ $color_id }} td-box--gradient td-box--height-{{ $height }}">
+    <div class='container'>
+    	<div class="col px-0">
+            <div class="row jc-even">   
+                <div class="col-12 mb-4 mt-0">
+                    <h5 class="text-center">Featured</h5>
+                </div> 
+                {{ range first 3 (where .Site.Pages "Params.data-featured" true).ByWeight }}
+                    <div class="col-lg-4 d-flex mb-3 mb-lg-0">
+                        <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+                            <div class='gradient-edge-left animate'></div>
+                            <h5 class="mb-3">{{ .CurrentSection.Title }}</h5>
+                            <h4 class="h4">{{ .LinkTitle }}</h4>
+                            <p class="mb-0 text-light">{{ .Description | truncate 75 }}</p>
+                            <p class="link">Read now</p>
+                        </a>
+                    </div>
+                {{ end }}
+    		</div>
+        </div>
+	</div>
+</section>
+

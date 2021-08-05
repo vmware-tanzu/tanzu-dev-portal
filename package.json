@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/vmware-tanzu-private/tanzu-dev-portal#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.6",
+    "@amplitude/node": "^1.5.4",
+    "@sentry/serverless": "^6.2.5",
+    "autoprefixer": "^10.2.6",
     "cookie": "^0.4.1",
     "got": "^11.8.2",
     "jsonwebtoken": "^8.5.1",
-    "postcss-cli": "^7.1.0",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
     "querystring": "^0.2.1",
     "simple-oauth2": "^4.2.0"
   },
@@ -37,6 +40,15 @@
     "Safari >= 6"
   ],
   "devDependencies": {
-    "husky": "^5.1.1"
+    "@netlify/plugin-lighthouse": "^2.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "husky": "^5.1.1",
+    "jest": "^26.6.3",
+    "lambda-tester": "4.0.1",
+    "prettier": "^2.2.1"
   }
 }

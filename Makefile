@@ -66,7 +66,12 @@ video.%:
 practice.%:
 	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
 
+#team: @ creates a new team page. example: make team.firstname-lastname
+team.%:
+	hugo new team/$(call word-dot,$*,1)/_index.md -k team-member
+
 #audit: @ runs a content audit on all guides and blogs. example: make audit
 audit:
-	cd scripts/audit && bundle install
-	ruby scripts/audit/audit.rb -s . -o scripts/audit/audit.csv
+	cd .github/actions/audit/src && bundle install
+	mkdir audit
+	ruby .github/actions/audit/src/audit.rb -s . -o audit/audit.csv -t audit/tags.csv --topics audit/topics.csv --errors audit/errors.csv

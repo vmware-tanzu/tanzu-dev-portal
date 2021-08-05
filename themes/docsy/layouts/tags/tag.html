@@ -20,10 +20,10 @@
         {{ $guides := where .Data.Pages "Section" "guides" }}
         {{ if gt (len $guides) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
+            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
             <div class='col px-lg-0'><div class='row'>
                 {{ range $guides }}
-                    <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
+                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
                         <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .Permalink }}">
                             <h4 class="mt-2">{{ .Title }}</h4>
                             <p>{{ .Description }}</p>
@@ -38,10 +38,10 @@
         {{ $videos := where .Data.Pages "Section" "videos" }}
         {{ if gt (len $videos) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $videos }}
-                    <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
                         <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
                         <p><a class="text-white" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
                     </div>
@@ -54,10 +54,10 @@
         {{ $samples := where .Data.Pages "Section" "samples" }}
         {{ if gt (len $samples) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{"/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{"/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $samples }}
-                    <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
                         <a class='h4' href="{{ .Permalink }}">{{ .Title }}</a>
                         {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
                     </div>
@@ -70,10 +70,10 @@
         {{ $blogs := where .Data.Pages "Section" "blog" }}
         {{ if gt (len $blogs) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $blogs }}
-                    <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
                         <a class='h4' href="{{ .Permalink }}">{{ .Title }}</a>
                         {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
                     </div>

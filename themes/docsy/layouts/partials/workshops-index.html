@@ -1,13 +1,4 @@
-<div class='flex container flex-wrap'>
-
-    <div class='sidebar col-lg-3 col-0 pl-0 pr-3'>
-        <h3>Filter</h3>
-        <br/>
-        <ul class='filters'>
-            <li class="filter active" filter="all">View all</li>
-            {{ partial "section-tags.html" . }}
-        </ul>
-    </div>
+<div class='d-flex container flex-wrap'>
 
     <div class="section-index flex-1">
         {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
@@ -29,11 +20,20 @@
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item col-lg-4 px-lg-2 mb-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
-                    <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
-                        <h4 class="link mt-3">{{- .Title -}}</h4>
-                        <h5 class="fs-90"><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }} mins</h5>
-                        <p class="fs-90">{{ .Description | markdownify }}</p>
+                <div class="filter-item col-lg-4 mb-4 flex-315 px-0 mr-lg-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
+                    <a class="linked-box td-box--gray-darkest workshop-box hover-scale overflow-hidden rounded" href="{{ .RelPermalink }}">
+                        <div class='workshop-hero bg-transparent' style='background-image: url({{ (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL) }});background-size:cover;background-position:center'></div>
+                        <div class='description px-4 pt-2 d-flex flex-column justify-content-between pb-4 bg-gray-dark'>
+                            <div>
+                                <h4 class="workshop-title mt-3">{{- .Title -}}</h4>
+                                {{ if gt (len .Description) 100}}
+                                    <p class='text-white workshop-text'>{{ print (substr .Description 0 100) "..." }}</p>
+                                {{ else }}
+                                    <p class='text-white workshop-text'>{{ .Description | markdownify }}</p>
+                                {{ end }}
+                            </div>
+                            <h5 class="fs-80 opacity-4"><span class="fa fa-hourglass-half mr-1">&nbsp;</span>{{ .Params.length }} minutes</h5>
+                        </div>
                     </a>
                 </div>
                 {{ end }}

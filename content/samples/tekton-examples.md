@@ -1,18 +1,19 @@
 ---
-title:  "Tekton Examples"
-description: >
-    A collection of examples for Tekton
+date: '2020-06-15'
+description: A collection of examples for Tekton
+lastmod: '2020-06-15'
+patterns:
+- Deployment
+readme: true
+repo: https://github.com/BrianMMcClain/tekton-examples
 summary:
 - A collection of examples for Tekton
-topics:
-- CI-CD
 tags:
 - CI-CD
 - Tekton
-patterns:
-- Deployment
 team:
 - Brian McClain
-repo: https://github.com/BrianMMcClain/tekton-examples
-readme: true
+title: Tekton Examples
+topics:
+- CI-CD
 ---

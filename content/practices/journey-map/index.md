@@ -1,29 +1,36 @@
 ---
-title: "Journey Map"
-tags: ["Discovery", "Framing"]
-length: "1 hour"
-participants: "Core team, subject matter experts"
-image: "journey-map/cover.png"
-description: "Using customer narratives and data, “map” what they are doing, thinking, feeling and interacting with over a set period of time."
-lastmod: "2019-09-25"
-
-
-why:
-- During Discovery, a journey map can help arrange individual data points into chronological order. During Framing, the team can return to a journey map to identify the point in the journey when a proposed solution will be used by a customer.
-
-when:
-- The best time to do a Journey Map is after a few rounds of user research, when synthesizing data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s vision of a Customer Journey, before starting User Research. During Framing, the map can be modified to match a “future” state where the proposed solution exists.
-
+date: '2021-02-09'
+description: Using customer narratives and data, “map” what they are doing, thinking,
+  feeling and interacting with over a set period of time.
+image: journey-map/cover.png
+lastmod: '2021-03-17'
+length: 1 hour
+participants: Core team, subject matter experts
+tags:
+- Discovery
+- Framing
+title: Journey Map
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
 - Small sticky dots
 - Persona(s)
-
+when:
+- The best time to do a Journey Map is after a few rounds of user research, when synthesizing
+  data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s
+  vision of a Customer Journey, before starting User Research. During Framing, the
+  map can be modified to match a “future” state where the proposed solution exists.
+why:
+- During Discovery, a journey map can help arrange individual data points into chronological
+  order. During Framing, the team can return to a journey map to identify the point
+  in the journey when a proposed solution will be used by a customer.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Identify which users journey the team is mapping. Leverage existing [Personas](/practices/personas) and if multiple choose the most important one to start
 
@@ -55,36 +62,43 @@ what:
 
 1. Identify opportunities along the journey (10 minutes)
    - Have the team read through the completed journey map one more time, asking all participants to write “how might we” statements on a sticky note, whenever they identify a moment for intervention/improvement.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 At the end of a Journey Map the team will have a shared holistic view of a Persona’s experience. The process reveals opportunities to address user pain points and prevents misalignment during the “framing” process.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 - Create one Journey Map per Persona. If there are other [Personas](/practices/personas)
  to consider, map them as touch points from a single [Personas](/practices/personas) perspective.
 - To understand more detail and complexity consider using a Service Blueprint to map a product/service’s “backstage actions” and “support processes” to an individual customer journey.
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
+{{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
 - [Research Synthesis](/practices/research-synthesis)
+{{% /section %}}
 
+{{% section %}}
 ### Following
 [Service Blueprint](/practices/service-blueprint)
 [Scenario Writing](/practices/scenario-writing)
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Journey map on a whiteboard example](/images/practices/journey-map/example-1.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 [Design Sprint journey mapping technique](https://sprintstories.com/the-design-sprint-note-n-map-a9bf0ca88f51)  
 [The difference between a journey map and a service blueprint](https://blog.practicalservicedesign.com/the-difference-between-a-journey-map-and-a-service-blueprint-31a6e24c4a6c)  
 [Adaptive Path's guide to Experience Mapping (PDF download)](https://adaptivepath.s3.amazonaws.com/apguide/download/Adaptive_Paths_Guide_to_Experience_Mapping.pdf)
+{{% /section %}}
