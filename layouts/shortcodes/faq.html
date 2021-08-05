@@ -1,5 +1,0 @@
-{
-    "@type":"Question",
-    "name": "{{ .Get "question" | markdownify }}" ,
-    "acceptedAnswer":{ "@type":"Answer", "text":"{{(replaceRE "[ \t\r\n]+$" "" (replaceRE  "^[ \t\r\n]+" "" .Inner) ) | htmlEscape }}" }
- },
