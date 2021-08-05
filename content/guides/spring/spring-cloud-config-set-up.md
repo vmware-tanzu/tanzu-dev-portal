@@ -1,15 +1,20 @@
 ---
-title:  "Setting Up Spring Cloud Config Server"
+date: '2021-01-29'
+lastmod: '2021-02-24'
 linkTitle: Spring Cloud Config Server
+patterns:
+- API
 subsection: Spring Cloud Config Server
-weight: 4
+tags:
+- Spring Cloud Config Server
+title: Setting Up Spring Cloud Config Server
 topics:
 - Spring
 - Microservices
-tags:
-- Spring Cloud Config Server
-patterns:
-- API
+weight: 4
+oldPath: "/content/guides/spring/spring-cloud-config-set-up.md"
+aliases:
+- "/guides/spring/spring-cloud-config-set-up"
 ---
 
 As an application moves through the deployment pipeline from dev to test to production, you may need a centralized way to manage the configuration across environments to make certain that each application has access to everything it needs to run as it moves and always uses the right configuration. [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/reference/html/) provides server-side and client-side support for managing and using external configuration information. 
@@ -84,4 +89,3 @@ A great way to get started learning about and using Spring Cloud Config is the [
 In a recent [Spring Tips video](/tv/springone-tour/0006/) from the 2020 SpringOne tour, Developer Advocate Josh Long goes deep on configuration methods, including Spring Cloud Config.
 
 [Securing Spring Cloud Config Server](/guides/spring/spring-cloud-config-security/) explains how to implement several security options in conjunction with Spring Cloud Config.
-

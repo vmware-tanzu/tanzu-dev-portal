@@ -1,28 +1,39 @@
 ---
-title: "Value Stream Map"
-linkTitle: "Value Stream Map"
-description: "Visualize the steps an organization takes to create & deliver value to customers in order to help eliminate \"waste.\" A common use case is a path to production and product development life cycle."
-
-tags: ["Kickoff", "Discovery", "Framing", "Inception"]
-length: "1-2 hours"
-participants: "Core team, subject matter experts (as needed)"
-
-image: "default-cover.png" 
-lastmod: "2021-04-21"
-why: 
-- To identify how we could deliver user and/or business value faster and/or more often by identifying delays, unnecessary features and hand-offs. 
-- To understand the steps and people involved in a process so that we can improve collaboration and preclude potential blockers.
-when:
-- This activity can be done as early as the Kickoff if there are concerns about many teams creating one system or known problems in product development life cycle. Otherwise, it can be done as part of technical Discovery, Framing, or any time the team finds itself bogged down with an inefficient process.
+date: '2021-04-28'
+description: Visualize the steps an organization takes to create & deliver value to
+  customers in order to help eliminate "waste." A common use case is a path to production
+  and product development life cycle.
+image: default-cover.png
+lastmod: '2021-04-28'
+length: 1-2 hours
+linkTitle: Value Stream Map
+participants: Core team, subject matter experts (as needed)
+remote: false
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Inception
+title: Value Stream Map
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies / markers
-
-remote: false
+when:
+- This activity can be done as early as the Kickoff if there are concerns about many
+  teams creating one system or known problems in product development life cycle. Otherwise,
+  it can be done as part of technical Discovery, Framing, or any time the team finds
+  itself bogged down with an inefficient process.
+why:
+- To identify how we could deliver user and/or business value faster and/or more often
+  by identifying delays, unnecessary features and hand-offs.
+- To understand the steps and people involved in a process so that we can improve
+  collaboration and preclude potential blockers.
 ---
+
 ## How to Use this Method
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Explain the purpose of the workshop.
    
@@ -65,11 +76,15 @@ remote: false
 1. When the value stream map feels the right visualization of current processes, calculate the total lead time for the whole process and discuss it with the team to find area that can be improved.
 
 1. Repeat steps 2-6 for the "to be" process.
+{{% /section %}}
 
+{{% section %}}
 ### Success/Expected Outcomes
 You know you’re done when you have a visual value stream on the whiteboard and the team feels confident it accurately represents the current process. 
+{{% /section %}}
 
-## Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 Some teams are sensitive to the idea of calling out “waste” in their processes. Another way to frame the purpose of this activity is to call it an opportunity to increase efficiency.
 
 **The Seven Wastes of Product Development**
@@ -80,27 +95,29 @@ Some teams are sensitive to the idea of calling out “waste” in their process
 - Delays (because this slows the team down)
 - Task switching (because it leads to context switching which reduces our focus and slows us down)
 - Defects (because this adds work cycles)
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 [Event Storming](/practices/event-storming)
 
 [Service Blueprint](/practices/service-blueprint)
+{{% /section %}}
 
+{{% section %}}
 ### Variations
 Path-to-production exercise
+{{% /section %}}
 
-### Preceding
-None at the moment
- 
-### Following
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 Example of a **product development life cycle**
 
 ![Value Stream Map image](/images/practices/value-stream-map/value-stream-map-3.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [Value Stream Mapping: How to Visualize Work and Align Leadership for Organizational Transformation](https://www.oreilly.com/library/view/value-stream-mapping/9780071828918/) by Mike Osterling & Karen Martin
 
 [The Seven Wastes of Software Development](https://codepunk.io/the-seven-wastes-of-software-development/) - Blog post by Michael Szul
@@ -110,3 +127,4 @@ Example of a **product development life cycle**
 [Lean Software Development: An Agile Toolkit](https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783) by Mary Poppendieck & Tom Poppendieck
 
 [DevOps Processes: Value Stream Mapping](https://cloud.vmware.com/community/2020/12/02/devops-processes-value-stream-mapping/) by Mandy Storbakken
+{{% /section %}}

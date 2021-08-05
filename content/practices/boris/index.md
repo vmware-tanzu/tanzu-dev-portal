@@ -1,32 +1,39 @@
 ---
-title: "Boris"
-tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
-length: "1.5 hours per run; multiple runs are often needed"
-participants: "Business stakeholders, architects, technical leads, developers "
-image: "boris/boris.png"
-description: "Identify relationships between services in a complex system to reveal the notional target system architecture and record them using SNAP"
-lastmod: "2019-12-09"
-
-why:
-- Explore and understand a complex system
-- Model the relationships between the capabilities in a system
-- Avoid pitfalls such as premature solutioning
-
-when:
-- The Boris exercise comes after Event Storming since it uses insight discovered by that activity to identify system components and model their relationships
-
+date: '2021-02-11'
+description: Identify relationships between services in a complex system to reveal
+  the notional target system architecture and record them using SNAP
+image: boris/boris.png
+lastmod: '2021-03-17'
+length: 1.5 hours per run; multiple runs are often needed
+participants: 'Business stakeholders, architects, technical leads, developers '
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Modernization
+title: Boris
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Output from **Event Storming** (i.e. list of bounded contexts & the events contained within them)
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Output from **Event Storming** (i.e. list of bounded contexts & the events contained
+  within them)
 - Sticky arrow flags
 - Whiteboard tape (black, green, red; 2 rolls of each)
 - Scissors
 - Scotch tape
 - Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
-
+when:
+- The Boris exercise comes after Event Storming since it uses insight discovered by
+  that activity to identify system components and model their relationships
+why:
+- Explore and understand a complex system
+- Model the relationships between the capabilities in a system
+- Avoid pitfalls such as premature solutioning
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. After [Event Storming](/practices/event-storming), using one color of sticky notes create one for each bounded context. Place on the board in a blob.
 
@@ -78,17 +85,23 @@ what:
 1. Add info on the new flow to the larger bounded context sheet on a new sticky note color
 
 1. Call out specific areas that are missing on the bounded context sheets that are missing.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 At the end of a Boris exercise, Services, APIs, Data and Event Choreography and a backlog of work starts becoming obvious.
 
 SNAP is used to quickly document the outcomes of a Boris in real-time. Information is often grouped into APIs, Data, Pub/Sub, External Systems/UI, Stories, and Risks. The key artifact is a poster-sized sticky paper on a conference room wall or similar from a digital workspace, with one SNAP per node or service depicted on Boris. Typically there will be one SNAP per node or service depicted on Boris. Each SNAP consists of documentation about six categories: APIs, Data, External Systems/UI, Pub/Sub, Stories and Risks.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 Boris, [Event Storming](/practices/event-storming) and other techniques are part of the [Swift Method](/practices/swift-method) that we use for identifying the “real” problems in a large scale system and discover the North Star direction for your modernized system. Let the solution present itself through rhetorical questions. Practice a fine balance between driving to a solution vs organic evolution of the target architecture. Do not pre-optimize during the Boris exercise.
+{{% /section %}}
 
-##### Challenges Playbook
+{{% section %}}
+### Challenges Playbook
 
 ***Challenge: It isn’t clear when to move from [Event Storming](/practices/event-storming) to Boris to SNAP.***
 
@@ -117,27 +130,32 @@ See the section on who to invite in the prep work section. Aim for a real or tem
 In many ways this is true about any practice, so similar wisdom and optimization can be applied here. See the prep step on identifying facilitators and being deliberate in this process rather than expecting everyone to show up without a specific role.
 
 Also acknowledge that it will take several sessions to go through the “I do, we do, you do” process - more opportunities to facilitate can help mitigate this.
+{{% /section %}}
 
+{{% section %}}
 ## Related Practices
 
 Boris is an activity within the [Swift Method](/practices/swift-method).
+{{% /section %}}
 
+{{% section %}}
 ### Preceding
 
 [Event Storming](/practices/event-storming)
+{{% /section %}}
 
-### Following
-
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of Boris and the [Swift Method](/practices/swift-method) of modernization for an Uber Eats-style application
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 <a href="https://www.youtube.com/watch?v=7-fRtd8LUwA" target="_blank">Swift Method: Event Storming, Boris the Spider and Other Techniques</a> (YouTube video) talk at ExploreDDD 2019 by Shaun Anderson
 
 <a href="https://www.youtube.com/watch?v=s5qeE4qii6M" target="_blank">A Deep Dive into Modernization Patterns to Get Your Mission Critical Applications to the Cloud</a> (YouTube video)
 
 <a href="https://tanzu.vmware.com/content/slides/the-modern-family-modernizing-applications-to-pivotal-cloud-foundry-getting-out-of-the-big-ball-of-mud" target="_blank">Tools to Slay the Fire Breathing Monoliths in Your Enterprise</a> (blog post)
+{{% /section %}}

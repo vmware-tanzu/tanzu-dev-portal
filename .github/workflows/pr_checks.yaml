@@ -3,10 +3,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - "**content**"
-      - "**layouts**"
-      - "**themes**"
   workflow_dispatch:
 jobs:
   spell-check:
@@ -31,4 +27,4 @@ jobs:
         name: Link Check
         env:
           HUGO_OPTIONS: "-b http://localhost:1313/developer" #"--buildDrafts"
-          MUFFET_OPTIONS: "-e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
+          MUFFET_OPTIONS: "-t 30 -e 'https?' --exclude='/developer/get-workshop'" # Excludes external links

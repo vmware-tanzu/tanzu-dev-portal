@@ -1,18 +1,25 @@
 ---
-title: "Python Like A Pro: How to Install Python"
-linkTitle: "Installing Python"
-metaTitle: "How to Install Python"
-description: "Learn how to install different versions of Python at the same time and switch between them with ease using the open-source command line tool Pyenv."
-topics:
-- Python
+date: '2020-08-14'
+description: Learn how to install different versions of Python at the same time and
+  switch between them with ease using the open-source command line tool Pyenv.
+lastmod: '2021-03-07'
+linkTitle: Installing Python
+metaTitle: How to Install Python
+patterns:
+- Deployment
 tags:
 - Python
 - Development
-patterns:
-- Deployment
 team:
 - Ben Wilcock
+title: 'Python Like A Pro: How to Install Python'
+topics:
+- Python
+oldPath: "/content/guides/python/gs-python-like-a-pro.md"
+aliases:
+- "/guides/python/gs-python-like-a-pro"
 ---
+
 ### Why do you need this guide?
 
 As a professional Python developer, you'll be asked to work on a wide variety of projects. The tools you'll use to do that work may need to change on a project-by-project basis. One day you may be maintaining some legacy code written in Python 2; the next day, you may be prototyping in the very latest version of Python 3.

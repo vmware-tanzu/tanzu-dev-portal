@@ -1,11 +1,16 @@
 ---
-title:  "What is Kubernetes?"
-subsection: "What is Kubernetes?"
-weight: 1
+date: '2021-02-26'
+lastmod: '2021-06-03'
+subsection: What is Kubernetes?
+title: What is Kubernetes?
 topics:
 - Kubernetes
 - Containers
 - Microservices
+weight: 1
+oldPath: "/content/guides/kubernetes/what-is-kubernetes.md"
+aliases:
+- "/guides/kubernetes/what-is-kubernetes"
 ---
 
 Containers accelerate development pipelines by removing the need to build, test and validate application code across multiple operating systems. They also help simplify application operations by being portable across multiple hosts and cloud platforms. However, an application running in a container still needs management. For example:

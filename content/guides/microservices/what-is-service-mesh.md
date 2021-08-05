@@ -1,11 +1,16 @@
 ---
-title: What is a Service Mesh?
+date: '2021-02-26'
+lastmod: '2021-02-26'
 linkTitle: Service Mesh
-weight: 
+title: What is a Service Mesh?
 topics:
 - Kubernetes
 - Containers
 - Microservices
+weight:
+oldPath: "/content/guides/microservices/what-is-service-mesh.md"
+aliases:
+- "/guides/microservices/what-is-service-mesh"
 ---
 
 Microservices are the key to building applications that scale to meet changing business demands. A microservices architecture breaks up the functions of an application into a set of small, discrete, decentralized, goal-oriented processes, each of which can be independently developed, tested, deployed, replaced, and scaled. 

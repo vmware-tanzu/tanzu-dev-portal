@@ -1,26 +1,35 @@
 ---
-title: "3 Column Retrospective"
-linkTitle: "3 Column Retrospective"
-description: "A way to identify how to improve teamwork by reflecting on what worked well, what could be improved, and what is on people’s minds."
-# Note: remove any tags that are not relevant.
-tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
-length: "1 Hour"
-participants: "Core delivery team"
-# custom "cover" image example: "boris/boris.png"
-image: "3-column-retro/retro-cover.png" 
-lastmod: "2021-04-28"
-why: 
-- For the team to be truly reflective, members must feel safe enough to be self-critical. It is important, therefore, to establish high psychological safety.
-when:
-- Ideally, a team should run a retrospective on a weekly basis. 
+date: '2021-05-03'
+description: A way to identify how to improve teamwork by reflecting on what worked
+  well, what could be improved, and what is on people’s minds.
+image: 3-column-retro/retro-cover.png
+lastmod: '2021-05-03'
+length: 1 Hour
+linkTitle: 3 Column Retrospective
+miro_template_url: https://miro.com/miroverse/atlassian-team-plays-retrospective/
+participants: Core delivery team
+remote: false
+tags:
+- Scoping
+- Kickoff
+- Discovery
+- Framing
+- Inception
+- Transition
+- Modernization
+- Delivery
+title: 3 Column Retrospective
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)" 
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Sticky notes
 - Sharpies / markers
-
-remote: false
-miro_template_url: "https://miro.com/miroverse/atlassian-team-plays-retrospective/" 
+when:
+- Ideally, a team should run a retrospective on a weekly basis.
+why:
+- For the team to be truly reflective, members must feel safe enough to be self-critical.
+  It is important, therefore, to establish high psychological safety.
 ---
+
 ## How to Use this Method
    {{% callout %}}
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. 
@@ -28,6 +37,7 @@ miro_template_url: "https://miro.com/miroverse/atlassian-team-plays-retrospectiv
    There are many online tools that support team retrospectives. We've listed several in the ["For Remote Teams" section](#variations) below.
    {{% /callout %}}
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw three columns on the whiteboard or digital workspace: 
    - What went well (“I’m glad that”)
@@ -56,15 +66,19 @@ miro_template_url: "https://miro.com/miroverse/atlassian-team-plays-retrospectiv
    {{< /callout >}}
 
 1. For the remaining 5 minutes, review the Action Items, making sure each item has a person or pair assigned.
+{{% /section %}}
 
+{{% section %}}
 ### Success/Expected Outcomes
 Success is when the core team has a shared understanding of: 
 
 - The most important things that happened during   the week, Sprint, project planning iteration, or whichever time-span is the subject of the retrospective
 - The challenges they are currently facing
 - The actionable steps they will take to try and improve
+{{% /section %}}
 
-## Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 - If this is the first retrospective run with the team, provide background and set the expectation on what a retrospective entails.
 - Keep conversations constructive and respectful
 - Consider holding retros on Wednesday. This will provide a couple of benefits. First, the action items can be acted upon immediately (next day) as opposed the following Monday. This will better track progress amongst team members. Second, members tend to be more engaged mid-week compared to end-of-week, providing greater engagement from every individual. 
@@ -75,15 +89,20 @@ Success is when the core team has a shared understanding of:
 - To better keep track of Action Items from previous retrospectives, consider creating a Kanban board (‘Backlog’, ‘In Progress’, ‘Done’) on a whiteboard visible to the entire team (or on a Miro board if it is done remotely)
 - If possible, create a different environment when running the retro so that members can actively disconnect from the daily work tasks and solely focus on the retrospective. This may include moving to a different floor or providing snacks to the team.
 - At the end of the retrospective, consider asking the team whether there was any card not discussed which any individual feels strongly about. 
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 ["Sailboat" Futurespective](/practices/futurespective)
+{{% /section %}}
 
-## Variations
+
+{{% section %}}
+### Variations
 
 #### For Remote Teams
 There are many free retrospective tools available. 
-- [Team Retrospective Miro Template](https://miro.com/miroverse/atlassian-team-plays-retrospective/) from Atlasian
+- [Team Retrospective Miro Template](https://miro.com/miroverse/atlassian-team-plays-retrospective/) from Atlassian
 - Trello Template - [Glad, Sad, Mad](https://trello.com/b/0DnfRtxv/template-glad-sad-mad)
 - [Postfacto](https://github.com/pivotal/postfacto) - open source and deployable by you.  
 - Spreadsheets - You can always make a simple 3-column retro board using Google Sheets or Excel.  
@@ -102,16 +121,11 @@ Sometimes it's worth paying for something that's being actively maintained and e
 | [Parabol](https://www.parabol.co/) | USD $6/user/month | Open-sourced. Established. |
 | [goReflect](https://www.goreflect.com/) | USD $2.67/user/month | Simple UI. |
 | [Reetro](https://reetro.io/) | Free to sign up, used to have paid upgraded features. | Less established than other options. |
+{{% /section %}}
 
 
-
-### Preceding
-None at the moment. 
- 
-### Following
-None at the moment. 
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 #### Example using Postfacto
 There are many free retrospective tools available. 
@@ -122,10 +136,13 @@ There are many free retrospective tools available.
 Online tools like this allow for people to get more engaged with fun themes.
 
 ![3 Column Retrospective in Miro](/images/practices/3-column-retro/retro-2.png)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [Agile Retrospectives - Making Good Teams Great](https://pragprog.com/titles/dlret/agile-retrospectives/)  by Esther Derby and Diana Larsen, Foreword by Ken Schwaber
 
 [How to Run a Really Good Retrospective](https://tanzu.vmware.com/content/blog/how-to-run-a-really-good-retrospective) - Blog Post by Nicola Rushton
 
 [Measure Success in Agile Retrospectives](https://tanzu.vmware.com/content/videos/measure-success-in-agile-retrospectives-enrico-teotti) – Video by Enrico Teotti
+{{% /section %}}

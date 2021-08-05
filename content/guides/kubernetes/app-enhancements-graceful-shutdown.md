@@ -1,12 +1,17 @@
 ---
-title:  "Graceful Shutdown"
-parent: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-26'
+parent: Application Enhancements
 tags:
 - Kubernetes
 team:
 - John Harris
+title: Graceful Shutdown
+topics:
+- Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-graceful-shutdown.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-graceful-shutdown"
 ---
 
 Throughout the lifecycle of an application, running pods are terminated due to

@@ -1,12 +1,10 @@
 ---
-title: "Deploy Locally a Spring Boot Application Using Bitnami Containers"
-linkTitle: "Spring Boot Local"
-parent: "Bitnami"
-weight: 3
-description: Locally deploy a Spring Boot app that connects to a database using the Bitnami MariaDB container image.
-topics:
-- Containers
-- Kubernetes
+date: '2021-02-05'
+description: Locally deploy a Spring Boot app that connects to a database using the
+  Bitnami MariaDB container image.
+lastmod: '2021-02-05'
+linkTitle: Spring Boot Local
+parent: Bitnami
 tags:
 - Bitnami
 - Spring Boot
@@ -14,6 +12,14 @@ tags:
 - Helm
 team:
 - Raquel Campuzano
+title: Deploy Locally a Spring Boot Application Using Bitnami Containers
+topics:
+- Containers
+- Kubernetes
+weight: 3
+oldPath: "/content/guides/containers/deploy-locally-spring-boot-application-docker.md"
+aliases:
+- "/guides/containers/deploy-locally-spring-boot-application-docker"
 ---
 
 [Bitnami containers](https://bitnami.com/stacks/containers) provide you with a ready-to-go environment for the development framework of your choice backed by Bitnami. By selecting a Bitnami container for local development, you can save a lot of time in coding as well as you benefit from having always the latest and more secure application image.

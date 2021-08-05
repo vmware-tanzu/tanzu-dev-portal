@@ -1,14 +1,19 @@
 ---
-title:  "Modernization with Consumer Driven Contracts"
-linkTitle: "Consumer Driven Contracts"
-weight: 4
+date: '2021-02-24'
+lastmod: '2021-05-04'
+linkTitle: Consumer Driven Contracts
+patterns:
+- API
+tags:
+- Spring Cloud Contract
+title: Modernization with Consumer Driven Contracts
 topics:
 - Spring
 - Microservices
-tags:
-- Spring Cloud Contract
-patterns:
-- API
+weight: 4
+oldPath: "/content/guides/microservices/consumer-driven-contracts.md"
+aliases:
+- "/guides/microservices/consumer-driven-contracts"
 ---
 
 There are multiple approaches to modernizing applications and defining APIs. This guide describes the consumer driven contracts approach. The guide [Understanding API-First Development](/guides/microservices/api-first-development/) describes an alternative approach. 

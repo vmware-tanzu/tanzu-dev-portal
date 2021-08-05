@@ -1,7 +1,7 @@
 .td-outer,
 body {
    background-color: white !important;
-   color: #1B2A32 !important;
+   color: #61717d !important;
 }
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
@@ -23,6 +23,8 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+.col-4-thumbnail,
+.video-description,
 .outcomes-index .td-box--gray-850,
 body .bg-primary,
 .person .card, .person .highlight,
@@ -33,7 +35,6 @@ p code, li > code, table code,
 body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
    background-color: #f4f8fa !important;
 }
-
 body .bg-gray-dark.border {
   border: none !important;
 }
@@ -46,7 +47,7 @@ body .td-sidebar-nav a.td-sidebar-link__page.active {
 .guide .td-sidebar-nav__section-title a.active, .guide .td-sidebar-nav__section-title a:hover {
   color: #78be20 !important;
 }
-
+.workshop-box .description h4,
 .person .card, .person .highlight,
 pre, .highlight,
 body p code, body li > code, body table code,
@@ -55,7 +56,10 @@ body.guide .td-sidebar-nav__section-title a,
 p code, li > code, table code,
 .mktoForm .mktoRadioList>label, .mktoForm .mktoCheckboxList>label,
  body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li {
-   color: #1B2A32 !important;
+   color: #28333c !important;
+}
+body p {
+  color: #61717d !important;
 }
 
  body .topic a,
@@ -63,30 +67,56 @@ p code, li > code, table code,
    background-color: #f4f8fa !important;
    color: #1d428a !important;
 }
-.outcomes-index .td-box--gray-850:hover,
-.person .card:hover, .person .highlight:hover,
-body a.bg-gray-dark.border:hover,
-body a.td-box--gray-darkest:hover,
-body .topic a:hover {
-  background: #d9e4ea !important;
+#team-index .person .card:hover  {
+  p {
+    color: #61717d !important;
+  }
+  .h4 a{
+    color: #1d428a !important;
+  }
 }
-
+.linked-box {
+  &:hover .link,
+  &:focus .link {
+    color: #0E2B65 !important;
+  }
+  .link {
+   color: #1d428a !important;
+  }
+}
+#team-index .card:hover,
+#team-index .card:focus,
+.topic.col-lg-4 a:focus,
+.topic.col-lg-4 a:hover,
+.workshop-box:hover .description,
+.col-4-thumbnail:hover .video-description {
+  background-color: #D9E4EA !important;
+}
 footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
 
-.person .card, .person .highlight,
- body .td-sidebar, body .topic a {
-   border-color: #d9e4ea !important;
-}
  body .border-top {
    border-color: #d9e4ea !important;
 }
+// body a:hover, body a:focus,
+
 body a code,
- body .linked-box .link, body .td-box--gray-850 p > a, body .td-box--gray-darkest p > a, body .td-box--dark p > a, body a, body p.link {
-   color: #1d428a !important;
+body .td-box--gray-850 p > a, 
+body .td-box--gray-darkest p > a, 
+body .td-box--dark p > a, body a, 
+body p.link {
+  color: #1D428A !important;
+  &:hover,  &:focus {
+    color: #0E2B65 !important;
+  }
 }
 
+.featured-section .featured-link:hover .link,
+.featured-section .featured-link:focus .link{
+  color: #0E2B65 !important;
+}
+#live-notify,
 body a.btn {
   color: white !important;
 }
@@ -96,7 +126,7 @@ body a.btn {
       color: #1d428a !important;
    }
    body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
-      stroke: #1B2A32 !important;
+      stroke: #61717d !important;
    }
 }
  body .text-light {
@@ -118,7 +148,7 @@ pre,
 }
 
 input::placeholder {
-   color: #1B2A32 !important;
+   color: #61717d !important;
 }
 
 body.tv-episode .fancybox-inner {
@@ -131,7 +161,7 @@ body.tv-episode #register .mktoForm select, body.tv-episode #register .mktoForm 
 }
 
 body.tv-episode #register .confirmation .-text-white {
-  color: #1B2A32 !important;
+  color: #61717d !important;
 }
 
 body.tv-episode #register .mktoForm select {
@@ -142,14 +172,18 @@ body.tv-episode #register .mktoForm select {
   color: #78be20!important;
 }
 
-footer .mktoForm .mktoButtonWrap.mktoSimple .mktoButton,
+.mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
+
+  &:hover, &:focus {
+   background: #0E2B65 !important;
+  }
 }
 #hero.guides-hero {
    background-image: url({{ "/images/backgrounds/background-guides-light.svg" | relURL }}) !important;
  }
- #hero.patterns-hero {
+ #hero.outcomes-hero {
    background-image: url({{ "/images/backgrounds/background-patterns-light.svg" | relURL }}) !important;
  }
  #hero.samples-hero {
@@ -198,7 +232,7 @@ nav .nav-item:last-child {
   color: white !important;
 }
 #menu-toggle .menu-bar {
-   background: #1B2A32 !important;
+   background: #61717d !important;
 }
 
 #search-nav {
@@ -206,11 +240,11 @@ nav .nav-item:last-child {
 }
 
 #search-nav svg .b {
-    fill: #1B2A32 !important;
+    fill: #61717d !important;
 }
 
 #search-svg circle, #search-svg path {
-  stroke: #1B2A32 !important;
+  stroke: #61717d !important;
 }
 
 #searchheaderform input, #searchheaderform ::placeholder {
@@ -222,7 +256,7 @@ nav .nav-item:last-child {
 }
 
 .gsc-tabHeader.gsc-tabHeader span {
-  color: #1B2A32 !important;
+  color: #61717d !important;
 }
 
 .gsc-tabHeader.active-tab span {
@@ -272,19 +306,6 @@ div.aside div.aside-content {
     background: #f4f8fa !important;
 }
 
-.col-4-thumbnail {
-  background-color: #1D428A;
-
-  .video-description {
-    background-color: #1D428A;
-  }
-  @media (min-width: 992px) {
-    &:hover .video-description {
-        background-color: #0E2B65 !important;
-      }
-  }
-}
-
 .guide .td-sidebar-nav h5 a:before {
   padding-right: 10px;
   content: url({{ "/images/icons/arrow-left-black.svg" | relURL }}) !important;
@@ -292,6 +313,14 @@ div.aside div.aside-content {
   height: 12px;
 }
 
+.linked-box:hover:not(.workshop-box):not(.featured-link), 
+.linked-box:focus:not(.workshop-box):not(.featured-link),
+.card:hover {
+  background-color: #D9E4EA !important;
+  h4:not(.workshop-title), h5:not(.fs-80), .link, .h4 > a {
+    color: #0E2B65 !important;
+  }
+}
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }

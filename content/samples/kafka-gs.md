@@ -1,17 +1,18 @@
 ---
-title:  "Getting Started with Kafka"
-description: >
-    An example of how to connect to, send, and receive messages from Kafka.
-summary:
-- An example of how to connect to, send, and receive messages from Kafka.
-topics:
-- Messaging and Integration
-tags:
-- Kafka
+date: '2020-04-21'
+description: An example of how to connect to, send, and receive messages from Kafka.
+lastmod: '2020-05-19'
 patterns:
 - Eventing
+readme: true
+repo: https://github.com/BrianMMcClain/kafka-getting-started
+summary:
+- An example of how to connect to, send, and receive messages from Kafka.
+tags:
+- Kafka
 team:
 - Brian McClain
-repo: https://github.com/BrianMMcClain/kafka-getting-started
-readme: true
+title: Getting Started with Kafka
+topics:
+- Messaging and Integration
 ---

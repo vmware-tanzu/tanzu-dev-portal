@@ -1,12 +1,14 @@
 ---
-title:  "Getting Started with Tanzu GemFire on TAS"
-link-title: "Getting Started with Tanzu GemFire on TAS"
-parent: Node.js
-type: data-guides
 data-featured: false
+date: '2021-05-28'
+description: How to set up a Tanzu GemFire service instance on the Tanzu Application
+  Service and use the node.js client.
+lastmod: '2021-05-28'
+link-title: Getting Started with Tanzu GemFire on TAS
+parent: Node.js
+title: Getting Started with Tanzu GemFire on TAS
+type: data-guides
 weight: 2
-description: How to set up a Tanzu GemFire service instance on the Tanzu Application Service and use the node.js client.
-
 ---
 
 This guide walks you through creating a Tanzu GemFire service instance on the Tanzu Application Service using the `Book Service` example to confirm that it is working.
@@ -276,4 +278,3 @@ There are two ways to delete the app and the Tanzu GemFire service instance
 8. Click on the ***DELETE SERVICE INSTANCE*** button, and confirm the deletion.
 
 Congratulations! You’re ready to start using Tanzu GemFire. You will need to create a new Tanzu GemFire Service Instance when working with your own application.
-

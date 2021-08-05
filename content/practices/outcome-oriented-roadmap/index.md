@@ -1,39 +1,38 @@
 ---
-# remove "draft:true" when ready for final publication 
+date: '2021-03-02'
+description: A communication and planning tool that shows sequential outcomes that
+  help execute your strategy and build towards your vision.
 draft: false
-title: "Outcome-Oriented Roadmap"
-linkTitle: "Outcome Oriented Roadmap"
-description: "A communication and planning tool that shows sequential outcomes that help execute your strategy and build towards your vision."
-tags: ["Discovery", "Framing"]
-length: "2+ hours (block enough time or consider breaking the activity into two sessions)"
-participants: "Product Manager(s), core team, stakeholders"
-# custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
-lastmod: "2021-02-25"
-why: 
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 2+ hours
+linkTitle: Outcome Oriented Roadmap
+miro_template_url: ''
+participants: Product Manager(s), core team, stakeholders
+remote: false
+tags:
+- Discovery
+- Framing
+title: Outcome-Oriented Roadmap
+what:
+- Whiteboard or digital version like [Miro](https://miro.com/)
+- Sticky notes
+- Sharpies
+- Painter’s tape
+- 'For Remote: [Miro](https://miro.com/)'
+when:
+- You’ve started development but don’t have a roadmap
+- During development, you need a way to align your backlog with your goals and metrics
+- Product sponsors and stakeholders ask for more visibility into the product direction
+  and your progre
+why:
 - Align our day-to-day work with the product vision and strategy
 - Keep focused on one goal at a time, and move metrics incrementally
 - Prioritize based on business & user value
 - Establish and maintain stakeholder and cross-team alignment, collaboration and visibility
 - Create a backlog
-
-when:
-- You’ve started development but don’t have a roadmap
-- During development, you need a way to align your backlog with your goals and metrics
-- Product sponsors and stakeholders ask for more visibility into the product direction and your progre
-
-what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
-- Sticky notes
-- Sharpies
-- Painter’s tape
-- "For Remote: [Miro](https://miro.com/)"
-
-# If this practice or workshop has a Miro template: remote: true
-remote: false
-miro_template_url: "" 
-
 ---
+
 ## How to Use this Method
 Using outcome-oriented roadmaps, rather than organizing our roadmaps around fixed features and dates, helps us to visibly communicate what the value is of what we want to achieve while maintaining flexibility in how we implement.
 
@@ -41,6 +40,7 @@ Outcome-oriented roadmaps are typically created during or shortly after Inceptio
 
 This session is usually better to do once you have a product **mission**, **vision** and **strategy** already, or know the business goals and metrics your product must contribute to.
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Explain the difference between an outcome and an output:  (5 minutes)
 
@@ -189,40 +189,47 @@ This session is usually better to do once you have a product **mission**, **visi
    {{% callout %}}
    Tip 2: Less mature product ideas often may require more frequent updating, as outcomes are validated or invalidated, and there is generally less certainty about what is right to do next. Do not worry if you have to update and change this regularly!   
    {{% /callout %}}
+{{% /section %}}
 
+{{% section %}}
 
-#### Success/Expected Outcomes
+### Success/Expected Outcomes
 At the end of this exercise, you will have a roadmap of product organized sequentially in this way:  
 
 ![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+
+### Facilitator Notes & Tips
 MVP: The **Minimum Viable Product** (MVP) is an experiment designed to test our product’s value proposition. It’s the **smallest possible version of our product** that enables us to learn the most about our customers with the least amount of effort.
 
 Additional resources:
 - [SVP: The Shoddiest Viable Product](https://tanzu.vmware.com/content/blog/svp-the-shoddiest-viable-product)
 - [Why "MVP" is Confusing](https://tajmo.medium.com/why-mvp-is-a-contronym-40af0fcb74c0)
+{{% /section %}}
 
-## Related Practices
-
+{{% section %}}
 ### Preceding
 Vision, mission, strategy -- coming soon!
 
 [Lean Business Canvas](/practices/lean-business-canvas)
 
 [Problem Prioritization](/practices/problem-prioritization)
- 
-### Following
-OKRs - coming soon!  
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 Companies adopt different formats of roadmaps. Most will have some kind of outcome/benefit written as minimal. Companies more confident of their velocity might have specific timelines, some may have more established OKRs as a company already (e.g. measured in sales targets, etc.). We have put some examples here, but the minimum they should have is outcomes and a priority order. 
 
 ![Outcomes in Priority Order](/images/practices/outcome-oriented-roadmap/grid2.png)
 
 ![Outcomes with Levels of Certainty](/images/practices/outcome-oriented-roadmap/high-low.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [The GO Product Roadmap](https://www.romanpichler.com/blog/goal-oriented-agile-product-roadmap/) by Roman Pichler
 
 [What Does an Agile Product Roadmap Look Like?](https://medium.com/@jboogie/what-does-an-agile-product-roadmap-look-like-cf0dbe5be4ef) by Jeff Gothelf
+{{% /section %}}

@@ -1,16 +1,22 @@
 ---
-title:  "What Is Helm?"
-parent: "Packaging"
-description: Learn the basics of Helm, a tool to help you define, install, and upgrade applications running on Kubernetes, and explore how it works. 
+date: '2020-04-16'
+description: Learn the basics of Helm, a tool to help you define, install, and upgrade
+  applications running on Kubernetes, and explore how it works.
+lastmod: '2021-03-07'
+parent: Packaging
+patterns:
+- Deployment
+tags:
+- Helm
+team:
+- Tyler Britten
+title: What Is Helm?
 topics:
 - Kubernetes
 weight: 1
-tags:
-- Helm
-patterns:
-- Deployment
-team:
-- Tyler Britten
+oldPath: "/content/guides/kubernetes/helm-what-is.md"
+aliases:
+- "/guides/kubernetes/helm-what-is"
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. At its most basic, Helm is a templating engine that creates Kubernetes manifests. What makes Helm more than that is it can upgrade and scale applications as well.

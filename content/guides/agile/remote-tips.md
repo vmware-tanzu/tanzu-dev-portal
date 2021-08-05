@@ -1,12 +1,17 @@
 ---
-title: "Remote Tips"
-subsection: "Remote Tips"
-topics:
-- Agile
+date: '2021-01-29'
+lastmod: '2021-02-22'
+subsection: Remote Tips
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
+title: Remote Tips
+topics:
+- Agile
+oldPath: "/content/guides/agile/remote-tips.md"
+aliases:
+- "/guides/agile/remote-tips"
 ---
 
 The transition to working remotely due to COVID-19 has proven to be quite a challenge—including for those of us at VMware Tanzu Labs. While remotely communicating and collaborating using digital tools is not new to us, doing so in an entirely distributed environment for the foreseeable future is. 
@@ -33,4 +38,4 @@ Our remote working tips cover a wide range of topics, from general consideration
 
 At VMware Tanzu Labs, we [practice what we preach](https://tanzu.vmware.com/app-development). To create these tips, we assigned a balanced team—which consisted of a product manager, a designer, and an engineer—to run user research and identify current best practices along with problems and pain points. And as with every project, there were plenty of stakeholders involved. Our team collaborated with our colleagues in Services Strategy, Marketing, and Legal, to name just a few. These tips are as much theirs as they are ours—and now, yours.
 
-Indeed, we have been using and improving on these remote tips internally, but we also recognize that the challenges we’ve faced are hardly unique. And so we wanted to share them with a wider audience. We’re confident that you’ll find something that makes your own remote working life—and that of your team—a little easier. 
+Indeed, we have been using and improving on these remote tips internally, but we also recognize that the challenges we’ve faced are hardly unique. And so we wanted to share them with a wider audience. We’re confident that you’ll find something that makes your own remote working life—and that of your team—a little easier.

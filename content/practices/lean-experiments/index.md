@@ -1,30 +1,39 @@
 ---
-title: "Lean Experiments"
-linkTitle: "Lean Experiments"
-description: "A way to have your team create experiments to run so that you can validate or invalidate risky assumptions that may lead to product failure"
-tags: ["Framing", "Inception", "Delivery"]
-length: "60-90 mins"
-participants: "Core team, stakeholders (optional)"
-image: "/lean-experiments/lean-experiment-1.png" 
-lastmod: "2021-05-03"
-why: 
-- Lean experiments are useful when your team lacks evidence that a new product or feature will achieve its intended results. Running lean experiments alongside product development helps validate what is truly valuable to your customers/users, without incurring the cost of developing and maintaining production ready software.
-when:
-- During Framing of a D&F, at an Inception or throughout product development. Usually an **Assumptions** workshop has already been done.
+date: '2021-05-10'
+description: A way to have your team create experiments to run so that you can validate
+  or invalidate risky assumptions that may lead to product failure
+image: /lean-experiments/lean-experiment-1.png
+lastmod: '2021-05-10'
+length: 60-90 mins
+linkTitle: Lean Experiments
+miro_template_url: ''
+participants: Core team, stakeholders (optional)
+remote: false
+tags:
+- Framing
+- Inception
+- Delivery
+title: Lean Experiments
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Markers
 - Blank sheets of paper
 - Sticky notes
 - Sticky dots
 - Painter's tape
-remote: false
-miro_template_url: "" 
-
+when:
+- During Framing of a D&F, at an Inception or throughout product development. Usually
+  an **Assumptions** workshop has already been done.
+why:
+- Lean experiments are useful when your team lacks evidence that a new product or
+  feature will achieve its intended results. Running lean experiments alongside product
+  development helps validate what is truly valuable to your customers/users, without
+  incurring the cost of developing and maintaining production ready software.
 ---
-## How to Use this Method
 
+## How to Use this Method
+{{% section %}}
 ### Sample Agenda & Prompts
 1. **Introduce the team to lean experimentation**
 
@@ -109,10 +118,9 @@ miro_template_url: ""
       
    {{< callout >}}
    Tip: Print out your templates, email/share them, or create and share the digital workspace before the workshop.
-   
-   Feel free to copy this Miro board: [Validation Research/MVP Experiment on Miro](https://miro.com/app/board/o9J_lGThxtc=/)  
    {{< /callout >}}
    
+   Feel free to copy this Miro board: [Validation Research/MVP Experiment on Miro](https://miro.com/app/board/o9J_lGThxtc=/)  
    Prompt everyone to take 5 minutes individually to think of an experiment to test the hypothesis and associated measurable outcomes.
 
 1. **Share experiments**
@@ -154,31 +162,38 @@ miro_template_url: ""
 1. **Create an experiment tracker**
 
    Keep track of the experiments that were not selected in this session in a backlog. Regularly review these experiments and implement the experiments that are relevant to validate your product direction, especially if your product direction changes.
+{{% /section %}}
 
+{{% section %}}
 ### Success/Expected Outcomes
 Success is when the whole team has aligned on a documented Lean Experiment that is ready to be executed on 
+{{% /section %}}
 
-## Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 If there are many assumptions to validate, consider following up with a hypothesis/experiment tracker, as suggested in the last step above. This can help the team visualize what hypotheses should be tested in what order, and their associated experiments.
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 [Assumptions](/practices/assumptions)
+{{% /section %}}
 
-## Variations
-None at the moment. 
-
+{{% section %}}
 ### Preceding
 [Assumptions](/practices/assumptions)
- 
-### Following
-None at the moment. 
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-2.jpg)
 
 ![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-3.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 [Lean Startup](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK) by Eric Ries
 
 [Lean Product Playbook](https://www.amazon.com/Lean-Product-Playbook-Innovate-Products/dp/1118960874/) by Dan Olsen
+{{% /section %}}

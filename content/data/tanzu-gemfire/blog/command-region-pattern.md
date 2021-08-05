@@ -1,14 +1,13 @@
 ---
-title: "The Command Region Pattern"
-description: >
-        The Command Pattern is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event.
 date: 2020-04-15
-type: blog
-
-# Author(s)
-team: 
+description: The Command Pattern is a behavioral design pattern in which an object
+  is used to encapsulate all information needed to perform an action or trigger an
+  event.
+lastmod: '2021-04-22'
+team:
 - Juan Jose Ramos
- 
+title: The Command Region Pattern
+type: blog
 ---
 
 ## Introduction
@@ -161,4 +160,3 @@ Need help with a complex problem or want to validate your solution?, share some 
 * [Apache Geode Repository](https://github.com/apache/geode)
 * [Join the Apache Geode Community](https://geode.apache.org/community/)
 * [Asynchronous Event Distribution Internals](https://cwiki.apache.org/confluence/display/GEODE/Asynchronous+Event+Distribution+Internals)
-
