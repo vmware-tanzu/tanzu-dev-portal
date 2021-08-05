@@ -14,7 +14,7 @@ team:
 ---
 
 
-{{% callout %}} VMware is pleased to join the Docker Verified Publisher’s program. This provides developers unrestricted access to our artifacts and allows them to safely adopt the popular open-source technologies we’ve made available. We are excited that VMware Tanzu customers, in particular, will benefit from a wider range of complementary services they can leverage as they quickly get apps to market.” - Ashok Aletty, VP Engineering, VMware {{% /callout %}}
+{{% callout %}} _"VMware is pleased to join the Docker Verified Publisher’s program. This provides developers unrestricted access to our artifacts and allows them to safely adopt the popular open-source technologies we’ve made available. We are excited that VMware Tanzu customers, in particular, will benefit from a wider range of complementary services they can leverage as they quickly get apps to market.” - Ashok Aletty, VP Engineering, VMware_ {{% /callout %}}
 
 In May 2021, Docker, Inc™ announced the launch of its [Docker Verified Publisher Program](https://www.docker.com/partners) which helps developers recognize trusted publisher software. For development teams, this is huge, since this program simplifies the consumption of secure and verified components for them, as they build their applications.  
 
