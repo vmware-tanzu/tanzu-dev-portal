@@ -25,7 +25,7 @@ Level of content as it pertains to the topic proposed. Delete those not applicab
 
 ## Contributor Checklist
 1. [x] I have added a card to the [GitHub Content Backlog](https://github.com/vmware-tanzu/tanzu-dev-portal/projects/7) and/or moved it to the proper column. See [Content Prewriting and Ideation](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Prewriting-Ideation-(GitHub-and-Google-Docs-Method))
-2. [ ] **If contributing via Google Docs**: I have added a link to my document to this issue, and made is visible with comment rights to everyone.
+2. [ ] **If contributing via Google Docs**: I have added a link to my document to this issue, and set the document's Share settings to "Anyone on the internet with this link can comment".
 3. [ ] My content is drafted in accordance with existing [style guides](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Reference,-Style-Guide) and best practices. See [Drafting Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Drafting-Content-(GitHub-Method)) 
 4. [ ] The front matter (metadata) is filled out completely (e.g. description, topics, tags, author, etc - as appropriate for the content type). See [Drafting Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Drafting-Content-(GitHub-Method))
 5. [ ] My content has been reviewed by my team for technical accuracy. See [Editing Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Editing-Content-(GitHub-and-Google-Docs-Method))
