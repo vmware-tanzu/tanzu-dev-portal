@@ -11,6 +11,8 @@ weight: 5
 oldPath: "/content/guides/kubernetes/platform-security-workload-identity.md"
 aliases:
 - "/guides/kubernetes/platform-security-workload-identity"
+level1: Managing and Operating Kubernetes
+level2: Access and Security
 ---
 
 This document details the philosophy and methods for providing workload identity

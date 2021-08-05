@@ -12,6 +12,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/observability-k8s-platform-monitoring.md"
 aliases:
 - "/guides/kubernetes/observability-k8s-platform-monitoring"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 This document details platform monitoring and alerting for Kubernetes clusters,

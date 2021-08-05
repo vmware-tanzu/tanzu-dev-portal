@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/ci-cd/argocd-gs.md"
 aliases:
 - "/guides/ci-cd/argocd-gs"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. While the continuous delivery (CD) space is seen by some as crowded these days, ArgoCD does bring some interesting capabilities to the table.
