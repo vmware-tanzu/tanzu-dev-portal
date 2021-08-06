@@ -6,7 +6,8 @@
   {{ $link := replace $link " " "-" }}
   {{ $link := printf "%s/%s" "/topics" $link | relURL }}
   {{ with $url_text }}
-  <h3 class="d-none">{{ $url_text }}</h3>
+  <p>
     <a class="py-3 px-4 mb-4 text-left h4 text-white" href="{{ $link }}"><img class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>{{ $url_text }}</a>
+  </p>
   {{ end }}
 </div>
