@@ -28,7 +28,7 @@ level2: Monitoring and Observing Kubernetes
 faqs:
   faq:
     - question: What are Bitnami Helm charts?
-      answer: [Bitnami](https://bitnami.com/) offers automated application deployments of open source server apps and allows developers to deploy an application using Bitnami's Helm charts.
+      answer: "[Bitnami](https://bitnami.com/) offers automated application deployments of open source server apps and allows developers to deploy an application using Bitnami's Helm charts."
     - question: What is the difference between Prometheus and Grafana in Kubernetes?
       answer: Prometheus and Grafana are two open source tools. Prometheus excels at gathering metrics from a wide array of sources, while Grafana is the go-to tool for visualizing complex time-series data.
     - question: How do you install Prometheus using Helm for Kubernetes?
