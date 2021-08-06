@@ -30,6 +30,8 @@ faqs:
       answer: The `@SpringBootTest` annotation can be used to run quick unit tests in Spring Boot.
     - question: What are the benefits of using mock frameworks in Spring Boot testing?
       answer: Mock frameworks eliminate the need to access real instances of external resources while Spring Boot testing.
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Proper testing is critical to the successful development of applications that use a microservices architecture. This guide provides some important recommendations for writing tests for Spring Boot applications, using [F.I.R.S.T. principles](https://www.appsdeveloperblog.com/the-first-principle-in-unit-testing/):

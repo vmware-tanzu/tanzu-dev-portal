@@ -1572,13 +1572,27 @@ code {
   a {
     padding-top: 0;
   }
+  @media(min-width: 1600px) {
+    .feedback {
+      margin-top: 100px !important;
+      margin-bottom: 100px !important;
+    }
+    .col-12.col-md-9.col-lg-7 {
+      min-height: 800px;
+    }
+  }
 }
+// .td-page.series footer {
+//   position: relative;
+//   z-index: 1000;
+// }
 
-.outcomes-pager {
+.outcomes-pager {  
   a {
     border: 1px solid #485764 !important;
     border-radius: 4px;
     flex-basis: 50%;
+
   }
   p.text-uppercase {
     font-size: 0.75rem;
@@ -1590,6 +1604,33 @@ code {
   i {
     font-size: 1.5rem;
     color: $light;
+  }
+  
+}
+.td-page .outcomes-pager {
+  @media(min-width: 1600px) {
+    z-index: 1;
+    bottom: -1%;
+    // width: 1360px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+
+    a {
+      flex: 0 0  18%;
+      max-width: 18%;
+      i {
+        font-size: 1rem;
+      }
+      p.mb-0 {
+        margin-top: 4px;
+      }
+      p.mt-0 {
+        font-size: .9rem;
+      }
+    }
   }
 }
 .outcomes-index {

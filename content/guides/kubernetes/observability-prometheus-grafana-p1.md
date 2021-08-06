@@ -23,6 +23,8 @@ topics:
 - Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/observability-prometheus-grafana-p1.md"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and

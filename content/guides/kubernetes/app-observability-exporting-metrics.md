@@ -12,6 +12,8 @@ topics:
 oldPath: "/content/guides/kubernetes/app-observability-exporting-metrics.md"
 aliases:
 - "/guides/kubernetes/app-observability-exporting-metrics"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Exposing useful metrics is critical to understanding what is happening with your

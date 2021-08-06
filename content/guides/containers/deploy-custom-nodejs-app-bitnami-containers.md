@@ -20,6 +20,8 @@ weight: 2
 oldPath: "/content/guides/containers/deploy-custom-nodejs-app-bitnami-containers.md"
 aliases:
 - "/guides/containers/deploy-custom-nodejs-app-bitnami-containers"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 Developers like using containers for development because they are easy to use, portable, and require less maintenance overhead compared to bare metal or virtual machines. [Docker](https://www.docker.com/) is a popular choice, because it provides tools that make it simple for developers to build, run and publish applications in containers.

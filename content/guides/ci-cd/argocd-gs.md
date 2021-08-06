@@ -32,6 +32,8 @@ faqs:
       answer: Kubernetes clusters can be added to ArgoCD by installing the proper configuration files, installing ArgoCD on a Kubernetes cluster, then starting both the target cluster and the cluster in which you installed ArgoCD.
     - question: What is ArgoCD sync?
       answer: “Sync” is the terminology ArgoCD uses to describe the application on your target cluster as being up to date with the sources ArgoCD is pulling from. 
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 ArgoCD is a declarative GitOps tool built to deploy applications to Kubernetes. While the continuous delivery (CD) space is seen by some as crowded these days, ArgoCD does bring some interesting capabilities to the table.

@@ -18,6 +18,8 @@ weight: 5
 oldPath: "/content/guides/kubernetes/production-ready-helm.md"
 aliases:
 - "/guides/kubernetes/production-ready-helm"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Three years have passed since [the first release of Helm](https://github.com/helm/helm/releases?after=v1.1), and it has indeed made a name for itself. Both avowed fans and fervent haters agree that the Kubernetes "apt-get equivalent" is the standard way of deploying to production (at least for now, let's see what Operators end up bringing to the table). During this time, Bitnami has contributed to the project in many ways. You can find us in PRs in Helm's code, in solutions like [Kubeapps](https://hub.kubeapps.com/charts/bitnami), and especially in what we are mostly known for: [our huge application library](https://bitnami.com/stacks/helm).

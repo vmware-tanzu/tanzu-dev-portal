@@ -22,6 +22,8 @@ weight: 5
 oldPath: "/content/guides/spring/spring-prometheus.md"
 aliases:
 - "/guides/spring/spring-prometheus"
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 If you read the guide on how to run [Prometheus and Grafana on Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/), you might be wondering: How do I add metrics from my application? Spring Boot developers are used to making metrics available from their application using [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready) and [Micrometer](https://micrometer.io/), but Prometheus expects metrics to be in a specific format. In this guide, you’ll learn how to expose both standard and custom metrics in your Spring Boot application, gather them using Prometheus, and visualize them in Grafana.

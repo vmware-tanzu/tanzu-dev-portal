@@ -30,6 +30,8 @@ faqs:
       answer: Capturing client's requests and server's response when diagnosing bugs can be accomplished with the TeeFilter servlet.
     - question: How do you avoid logging sensitive data in Spring Boot?
       answer: Enabling or disabling access logging can help users avoid logging sensitive data in Spring Boot.
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 Logging is essential for monitoring and troubleshooting running applications. This guide explains how to utilize `logback` to collect full request/response payloads in a Spring Boot application. 

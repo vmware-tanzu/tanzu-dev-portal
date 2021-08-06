@@ -13,6 +13,8 @@ topics:
 oldPath: "/content/guides/agile/remote-tips-tools-and-tips.md"
 aliases:
 - "/guides/agile/remote-tips-tools-and-tips"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Agreeing on the tool stack
