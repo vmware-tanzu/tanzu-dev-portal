@@ -8,7 +8,7 @@
     </div>
     <div class="col-lg-8 col-md-8">
         {{ if eq .display "summary" }}
-            <h2 class='pt-0'><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h2>
+            <h3 class='pt-0'><a href="{{ .context.RelPermalink }}">{{ .context.Params.name }}</a></h3>
         {{ else if (eq .display "tv") }}
             {{ if .context.Params.hidden }}
                 <h3 class='pt-0'>{{ .context.Params.name }}</h3>

@@ -1099,9 +1099,14 @@ body.tv-episode {
   }
 }
 
-.tv-episode-hero p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+.tv-episode-hero {
+  h5 {
+    font-size: 0.75rem;
+  }
+  p:not(.h5) {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
 }
 .workshop-box:hover {
   .description {
