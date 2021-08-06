@@ -14,6 +14,18 @@ title: Data Science with Python & JupyterHub on Kubernetes - Part 1
 topics:
 - Python
 weight: 3
+faqs:
+  faq:
+    - question: What is the difference between Jupyter Notebooks and JupyterHub?
+      answer: Jupyter Notebook is an easy to manage web-based development environment for multiple languages that simplifies the creation and sharing of code, equations, visualizations, output, and markup within the same text document. JupyterHub, in contrast, is an encapsulated multiuser environment that spawns, manages, isolates, and proxies multiple instances of a single user Jupyter Notebook server.
+    - question: How do you modify the configuration of a Helm chart for a JupyterHub Helm package?
+      answer: The configuration of a Helm chart can be modified at the time of deployment with a values YAML file. The value file will need to be configured to pull the required Docker images and to change the default Jupyter Notebook interface to the new Jupyter Lab interface.
+    - question: How do you access JupyterHub web UI on Mac?
+      answer: Jupyter web UI can be accessed using your web browser and local IP address with the specified port (8080) at http://localhost:8080/.
+    - question: How do you monitor and troubleshoot JupyterHub installation?
+      answer: JupyterHub installation errors can be monitored and troubleshooted by placing a watch on Kubernetes events occurring during the install of the Helm release, or watching the pod creation in the jupyter namespace.
+    - question: How do you install JupyterHub into a Kubernetes cluster?
+      answer: After installing kind, Helm CLI, and creating a Kubernetes cluster, to install JupyterHub into a Kubernetes cluster, leverage the Helm package manager for Kubernetes to install JupyterHub. First, add the Jupyter Helm chart repo to Helm, then, on a Linux machine, generate a random hex string to be used as a security token. Next, confirm the existence of the "standard" storage class and modify the configuration of the Helm chart with a values YAML file. In the YAML file, enter your Docker Hub username, email, and password as well as the security token hex string. Finally, create a dedicated Kubernetes namespace and install JupyterHub using the Helm chart, being sure to reference the values file you previously modified.
 ---
 
 Provisioning environments for data scientists and analysts to run simulations, test new models, or experiment with new datasets can be time-consuming and error-prone. Python is a popular choice for data science use cases, and one of the easiest ways to leverage Python is through Jupyter Notebooks. A web-based development environment for multiple languages, Jupyter Notebooks support the creation and sharing of documents that contain code, equations, visualizations, output, and markup text all in the same document. Because Jupyter Notebooks are just text files, they can be easily stored and managed in a source code repository such as GitLab or GitHub. JupyterHub, meanwhile, is a multiuser hub that spawns, manages, isolates, and proxies multiple instances of a single-user Jupyter Notebook server.  

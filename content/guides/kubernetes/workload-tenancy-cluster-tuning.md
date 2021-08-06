@@ -11,6 +11,8 @@ weight: 1800
 oldPath: "/content/guides/kubernetes/workload-tenancy-cluster-tuning.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-cluster-tuning"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 ## Overview

@@ -11,6 +11,8 @@ weight: 100
 oldPath: "/content/guides/kubernetes/workload-tenancy-platform-checklist.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-platform-checklist"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 This list is a starting place for considerations about the Kubernetes platform
