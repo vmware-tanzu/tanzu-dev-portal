@@ -14,7 +14,7 @@ Depending on the current state of the application and the amount of refactoring 
 
 Regarding other technologies such as Portlets or thick-client desktop applications, we typically peel out the underlying business logic into web services and access them through a new set of user interfaces. Modern web application development has moved towards frameworks such as React and Angular leveraging JavaScript to call back-end services. Your company may already be looking into building full-stack [balanced teams](/outcomes/application-development/balanced-teams/) developing a new generation of front-ends.
 
-#### Homework
+## Homework
 
 - List and evaluate the user interface and view technologies your applications use now.
 - Have a team conversation on your vision, teaming, and technologies for future user experiences.

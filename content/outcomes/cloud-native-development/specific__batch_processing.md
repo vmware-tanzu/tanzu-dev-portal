@@ -18,7 +18,7 @@ If a job requires more control, or is going to benefit from having its own atomi
 
 Refer to Spring Cloud Task's [Getting Started](https://docs.spring.io/spring-cloud-task/docs/current/reference/htmlsingle/#getting-started) guide for details on how to manage multiple jobs as part of an application; and to become familiar with Task and SCDF so that you can join the discussion within your project.
 
-#### Homework
+## Homework
 
 - Read the [Spring Scheduler guide](https://spring.io/guides/gs/scheduling-tasks/). 
 
