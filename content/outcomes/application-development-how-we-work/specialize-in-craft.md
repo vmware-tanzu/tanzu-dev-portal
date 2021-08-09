@@ -14,7 +14,7 @@ Craft isn't something we either know or don't know -- craft is a lifelong proces
 
 Each discipline might specialize in their craft differently. Learn about:
 
-* Craft **For Engineers** (coming soon).
+* Craft **[For Engineers](outcomes/application-development-rhythm/)**
 * Craft **For Product Designers** (coming soon).
 * Craft **For Product Managers** (coming soon).
 

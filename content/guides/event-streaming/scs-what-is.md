@@ -19,6 +19,8 @@ topics:
 oldPath: "/content/guides/event-streaming/scs-what-is.md"
 aliases:
 - "/guides/event-streaming/scs-what-is"
+level1: Modern App Basics
+level2: Modern Development Concepts
 ---
 
 Spring Cloud Stream is a framework for building highly scalable, event-driven microservices connected with shared messaging systems. Spring Cloud Stream provides components that abstract the communication with many message brokers away from the code.

@@ -17,6 +17,8 @@ topics:
 oldPath: "/content/guides/ci-cd/concourse-gs.md"
 aliases:
 - "/guides/ci-cd/concourse-gs"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration (CI), Continuous Deployment (CD), Continuous Delivery (CD again), artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.

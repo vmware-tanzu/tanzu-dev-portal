@@ -18,6 +18,21 @@ title: Understanding the Differences Between RabbitMQ vs Kafka
 topics:
 - Event Streaming
 - Messaging and Integration
+faqs:
+  faq:
+    - question: What is the difference between Kafka and RabbitMQ
+      answer: Kafka is a distributed event streaming platform that facilitates raw throughput, focused on a distributed append-only log that can be clustered across multiple servers for a higher degree of availability. This differs from RabbitMQ, an open source distributed message broker that efficiently facilitates the delivery of messages in complex routing scenarios. RabbitMQ capabilities can be expanded through the use of plug-ins enabled on the server. They can also be distributed and configured to be reliable in the case of server or network failure.
+    - question: When should you use Kafka vs RabbitMQ?
+      answer: Kafka's append-only log allows developers to access stream history and direct stream processing, while RabbitMQ's message broker design excels in use cases that have specific routing needs and per-message guarantees. However, RabbitMQ is developing a new data structure model to the append-only log that will close the gap in streaming use cases.
+    - question: Can Kafka and RabbitMQ be deployed on Kubernetes?
+      answer: Yes, both Kafka and RabbitMQ can be deployed on Kubernetes.
+    - question: Should you use Kafka or RabbitMQ for microservices?
+      answer: While Kafka utilizes a straightforward, high performance routing approach ideal for big data use cases, RabbitMQ is ideal for blocking tasks and allows for faster server response time. Both options are suitable depending on your specific use case.
+    - question: Is Kafka higher performance than RabbitMQ?
+      answer: Both Kafka and RabbitMQ optimize for performance, which can be very hard to quantify depending on your specific use case. While Kafka has a very high throughput, RabbitMQ excels at low latency message delivery. Of course, service configuration, code interaction, hardware, and network speed will dramatically impact the performance of either service.
+    - question: What are the different use cases for Kafka vs. RabbitMQ?
+      answer: Kafka is ideal for big data use cases that require the best throughput, while RabbitMQ is ideal for low latency message delivery, guarantees on a per-message basis, and complex routing.
+
 ---
 
 Three years ago, a colleague of mine wrote a post to help readers understand when to use RabbitMQ and when to use Apache Kafka, which many found to be very useful. While the two solutions take very different approaches architecturally and can solve very different problems, many find themselves comparing them for overlapping solutions. In an increasingly distributed environment where more and more services need to communicate with each other, RabbitMQ and Kafka have both come to be popular services that facilitate that communication.
@@ -67,27 +82,6 @@ If you’re interested in raw numbers, both the [RabbitMQ team](https://www.rabb
 ## Making the Call
 
 Deciding whether to use RabbitMQ or Kafka was never easy, and with both technologies improving every day, the margins of advantage have only gotten smaller.  The decision you make will depend on your individual scenario. Make use of the knowledge contained both in this post and the [original one](https://tanzu.vmware.com/content/blog/understanding-when-to-use-rabbitmq-or-apache-kafka) and apply it to the familiarity you have with your use case along with any proof of concepts. 
-
-{{< faqs >}}
-  {{< faq question="What is the difference between Kafka and RabbitMQ?" >}}
-    Kafka is a distributed event streaming platform that facilitates raw throughput, focused on a distributed append-only log that can be clustered across multiple servers for a higher degree of availability. This differs from RabbitMQ, an open source distributed message broker that efficiently facilitates the delivery of messages in complex routing scenarios. RabbitMQ capabilities can be expanded through the use of plug-ins enabled on the server. They can also be distributed and configured to be reliable in the case of server or network failure.
-  {{< /faq >}}
-  {{< faq question="When should you use Kafka vs RabbitMQ?" >}}
-    Kafka's append-only log allows developers to access stream history and direct stream processing, while RabbitMQ's message broker design excels in use cases that have specific routing needs and per-message guarantees. However, RabbitMQ is developing a new data structure model to the append-only log that will close the gap in streaming use cases.
-  {{< /faq >}}
-  {{< faq question="Can Kafka and RabbitMQ be deployed on Kubernetes?" >}}
-    Yes, both Kafka and RabbitMQ can be deployed on Kubernetes.
-  {{< /faq >}}
-  {{< faq question="Should you use Kafka or RabbitMQ for microservices?" >}}
-    While Kafka utilizes a straightforward, high performance routing approach ideal for big data use cases, RabbitMQ is ideal for blocking tasks and allows for faster server response time. Both options are suitable depending on your specific use case.
-  {{< /faq >}}
-  {{< faq question="Is Kafka higher performance than RabbitMQ?" >}}
-    Both Kafka and RabbitMQ optimize for performance, which can be very hard to quantify depending on your specific use case. While Kafka has a very high throughput, RabbitMQ excels at low latency message delivery. Of course, service configuration, code interaction, hardware, and network speed will dramatically impact the performance of either service.
-  {{< /faq >}}
-  {{< faq question="What are the different use cases for Kafka vs. RabbitMQ?" >}}
-    Kafka is ideal for big data use cases that require the best throughput, while RabbitMQ is ideal for low latency message delivery, guarantees on a per-message basis, and complex routing.
-  {{< /faq >}}
-{{< /faqs >}}
 
 ## Learn More
 

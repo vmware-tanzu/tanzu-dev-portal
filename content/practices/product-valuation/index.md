@@ -30,6 +30,7 @@ why:
 ## How to Use this Method
 The time needed varies greatly for several reasons. For example, if you have the data already and are producing a fairly high level estimate, this could take a half day. If you have a complex product, need to gather a lot of data, and are producing a detailed estimate, it could take weeks.
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. **Brainstorm Your Value** (30 min)
         
@@ -114,11 +115,15 @@ The time needed varies greatly for several reasons. For example, if you have the
    Visit the ["tell your story" section of the Miro board](https://miro.com/app/board/o9J_lNuKt0U=/?moveToWidget=3074457356234182075&cot=14) for more helpful notes. 
 
    ![Example slide depicting the value of a fake API the team is creating, including dollar value of projected savings and an ROI value](/images/practices/product-valuation/step-6.png)
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 A single slide that demonstrates the value prop that you can present to stakeholders, and is easily understood.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 Remember to do a gut check at every step of the way - that means checking in with your stakeholders and other experts to make sure that you’re staying aligned with them and getting their input.
 
@@ -135,17 +140,23 @@ Our advice is to remember that:
 - You can lean on your assumptions at all times - your assumptions might be wrong, but that’s ok. When you get better information, you’ll change them, and the resulting calculations
 - Estimating the product valuation is just adding details to the intuition that your stakeholders already have that this product is valuable.
 - The practice of making assumptions, building calculations on top of them, and making decisions based on those calculations is extremely common. People across industries do this every single day.
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 
 In step 1 or 2, you may want to use a prioritization exercise similar to [Insight Prioritization](/practices/insight-prioritization).
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Example value slide showing how an MVP saves 60 minutes of time per document for a set of users with a future projection based on an assumed adoption rate](/images/practices/product-valuation/example-1.png)
 
 ![Another example value slide showing the number of developer hours saved with the team's solution in place](/images/practices/product-valuation/example-2.png)
+{{% /section %}}
 
+{{% section %}}
 ## Recommended Reading
 
 ["How to Measure Anything" by Douglas W. Hubbard](https://www.howtomeasureanything.com/) -- Book
@@ -157,3 +168,4 @@ Particularly helpful for step 1
 - <a href="https://www.brainpickings.org/2011/12/21/steve-jobs-bicycle-for-the-mind-1990/" target="_blank">The Computer as the Bicycle of the Mind</a>
 - <a href="https://www.interaction-design.org/literature/article/google-s-heart-framework-for-measuring-ux" target="_blank">Google’s HEART Framework for Measuring UX</a>
 - <a href="https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b" target="_blank">Pirate Metrics</a>
+{{% /section %}}

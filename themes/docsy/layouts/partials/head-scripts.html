@@ -100,37 +100,43 @@ function changeTheme(mode, firstLoad) {
 
 var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
+  // Gather all the episodes that have a start time after one week ago
+  // This is due to the Go template being gathered at build time, not
+  // in real time. ie. This will return all episodes that have a start time
+  // of one week before the live build or later
+  episodes = [];
+  {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" (sub now.Unix 604800) }}
+    var epInfo = {
+      startTime: new Date("{{ .Params.Date }}"),
+      endTime: new Date(new Date("{{ .Params.Date }}").getTime() + ({{ default 60 .Params.minutes }} * 60000)),
+      show: "{{ .Parent.Title }}",
+      link: "{{ .Permalink | relURL }}"
+    };
 
-  var episodeShowNames = [], episodeLinks = [], episodeDates = [], episodeTimes = [], episodeLengths = [], episodeStreams = [];
-      {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "le" now.Unix }}
-        var epDate = new Date("{{ .Params.Date }}");
-        episodeDates.push(epDate.toLocaleDateString());
-        episodeTimes.push(epDate.toLocaleTimeString());
-        episodeLengths.push({{ default 60 .Params.minutes }});
-        episodeShowNames.push("{{ .Parent.Title }}");
-        episodeLinks.push("{{ .Parent.Permalink | relURL }}");
-        {{ if isset .Params "twitch" }}episodeStreams.push("twitch");{{ else }}episodeStreams.push("{{ .Params.youtube }}");{{ end }}
-      {{ end }}
-      var currentDate = (new Date(Date.now())).toLocaleDateString();
-      var index = episodeDates.indexOf(currentDate);
-      var isLive = false;
-      if (index > -1) {
-        var startTime = (new Date(episodeDates[index] + " " + episodeTimes[index])).getTime();
-        var endTime = startTime + (episodeLengths[index] * 60 * 1000);
-        var currentTime = (new Date(Date.now())).getTime();
+    // Determine if it's a livestream or a YouTube video
+    {{ if isset .Params "twitch" }}epInfo["stream"] = "twitch";{{ else }}epInfo["stream"] = "{{ .Params.youtube }}";{{ end }}
     
-        if (showName == null)
-          isLive = (currentTime < endTime && currentTime > startTime); 
-        else
-          isLive = (currentTime < endTime && currentTime > startTime && episodeShowNames[index] == showName); 
-        
-        if (isLive) {
-          liveShowName = episodeShowNames[index];
-          liveShowLink = episodeLinks[index];
-          liveShowStream = episodeStreams[index];
-        }
+    episodes.push(epInfo);
+  {{ end }}
+
+  // Iterate over each episode, determine if any are currently live
+  currentTime = new Date(Date.now());
+  var isLive = false;
+  for (var episode of episodes) {
+    if (currentTime >= episode["startTime"] && currentTime <= episode["endTime"]) {      
+      // If a specific show was defined, make sure it matches
+      if (showName == null || showName == episode["show"]) {
+        // Live show found
+        liveShowName = episode["show"];
+        liveShowLink = episode["link"];
+        liveShowStream = episode["stream"];
+        isLive = true;
       }
-      return isLive;
+    }
+  };
+
+  // No live shows found
+  return isLive;
 }
 
 function sendAmplitudeEventOnLoad(eventType, eventProperties) {
