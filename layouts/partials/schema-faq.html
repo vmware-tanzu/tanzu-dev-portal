@@ -1,0 +1,20 @@
+{{ with .Params.faqs }}
+    <script type='application/ld+json'>
+        {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[ {{ range $i, $e := .faq }}
+                {{ if $i }}, {{ end }} 
+                {
+                    "@type":"Question",
+                    "name": "{{ .question }}",
+                    "acceptedAnswer":{
+                        "@type":"Answer",
+                        "text": "{{ .answer | markdownify }}"
+                    }
+                }
+            {{ end }}
+            ]
+        }
+    </script>
+{{ end }}
