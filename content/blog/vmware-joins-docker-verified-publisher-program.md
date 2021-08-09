@@ -30,8 +30,6 @@ In addition, developers will benefit from being exempt from rates limiting. This
 
 ## How can I find VMware Images Labeled “Verified Publisher”? 
 
-![Bitnami as a Docker Verified Publisher](images/blogs/vmware-joined-docker-verified-program/bitnami-docker-verified-publisher.png)
-
 VMware with its Bitnami, Tanzu, and Spring Cloud products has joined the Docker Verified Publisher program to enable developers to find trusted content for use in their application delivery pipeline.  
 
 This will allow developers to have unlimited access to VMware’s robust and secure components.
@@ -39,6 +37,8 @@ This will allow developers to have unlimited access to VMware’s robust and sec
 From now on, all users, especially VMware Tanzu customers, will be able to accelerate time to market for their applications by accessing an extended offering of complementary services.  
 
 As a part of VMware’s open-source offerings, Bitnami delivers more than 250 images labeled as “Verified Publisher” in Docker Hub. To discover them, navigate to [Docker Hub](https://hub.docker.com/) and enable the “Verified Publisher” filter. You will see the “Verified Publisher” badge in the upper right corner of each image.  
+
+![Bitnami as a Docker Verified Publisher](images/blogs/vmware-joined-docker-verified-program/bitnami-docker-verified-publisher.png)
 
 
 ## Support and Resources 
