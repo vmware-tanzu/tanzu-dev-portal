@@ -58,7 +58,7 @@ NOTE:
 There are other, specific principles to support this broad one,
 but they are outside the scope of this article.
 
-## Pair Programming Practices
+### Pair Programming Practices
 
 Pair programming addresses many of the challenges of modern application
 development,
@@ -75,7 +75,7 @@ the inherent benefits of pairing often outweigh the tradeoffs that
 cross-cut many of the challenges a developer will encounter during the
 modern app developer workflow.
 
-## Test-first practices
+### Test-first practices
 
 Test-first practices have a wide range of acceptance and are supported
 through mature techniques and tools.
@@ -120,7 +120,7 @@ Some examples of trunk naming in various source control systems:
 -   **Git**:
     *main* is the preferred branch name.
     Although the branch name of *master* may be found in older projects,
-    its use* *is deprecated.
+    its use is deprecated.
 -   **Mercurial**:
     *default*
 -   **Subversion (SVN)**:
@@ -195,7 +195,7 @@ article.
 
 ## Keep Learning
 
-- [Pair Programming](https://tanzu.vmware.com/developer/outcomes/application-development/pair-programming/)
-- [Test-Driven Development](https://tanzu.vmware.com/developer/outcomes/application-development/test-driven-development/)
-- [Cloud Native Development](https://tanzu.vmware.com/developer/outcomes/application-development/cloud-native-development/)
+- [Pair Programming](../../application-development/pair-programming/)
+- [Test-Driven Development](../../application-development/test-driven-development/)
+- [Cloud Native Development](../../application-development/cloud-native-development/)
 - [Trunk-based Development](https://trunkbaseddevelopment.com)
