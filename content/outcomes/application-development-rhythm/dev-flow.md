@@ -175,6 +175,9 @@ repeatable processes to be sustainable.
 A common theme in modern application teams and their practices are use
 of *feedback loops* at varying levels in the application development
 lifecycle.
+
+![Feedback Loop Cycle](/images/outcomes/application-development-rhythm/feedback-loop.jpeg)
+
 You can read more about that in the following articles:
 
 - [Team Rhythm](https://tanzu.vmware.com/developer/outcomes/application-development/team-rhythm/)
