@@ -3,7 +3,8 @@ date: '2021-07-30'
 description: Demonstrate a modern application developer daily workflow.
 draft: false
 featured: true
-hero: /images/workshops/img-dev-workflow-header.jpeg
+hero: /images/workshops/workshop-app-modernization.png
+logo: /images/workshops/logo-tanzu.png
 lab: dev-workflow
 lastmod: '2021-08-03'
 length: 120
