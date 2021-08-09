@@ -1740,6 +1740,7 @@ Vavr
 VCAP
 vCenter
 VCS
+Vega
 Velero('s)?
 Vendio
 vendored
