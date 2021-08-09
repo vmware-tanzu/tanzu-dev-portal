@@ -1,0 +1,30 @@
+{{/* The "active" toggle here may delay rendering, so we only cache this side bar menu for bigger sites. */}}
+{{ $shouldCache := ge (len .Site.Pages) 2000 }}
+
+{{if eq .Section "data"}}
+        {{ if $shouldCache }}
+            {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+            <script>
+                $(function() {
+                    $("#td-sidebar-menu #{{ $mid }}").toggleClass("active");
+                    $("#td-sidebar-menu").toggleClass("d-none");
+                });
+            </script>
+            {{ partialCached "data-sidebar-tree.html" . .CurrentSection.RelPermalink }}
+        {{ else }}
+            {{ partial "data-sidebar-tree.html" . }}
+        {{ end }}
+{{else}}
+    {{ if $shouldCache }}
+        {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+        <script>
+         $(function() {
+         $("#td-sidebar-menu #{{ $mid }}").toggleClass("active");
+         $("#td-sidebar-menu").toggleClass("d-none");
+        });
+        </script>
+        {{ partialCached "sidebar-tree.html" . .CurrentSection.RelPermalink }}
+    {{ else }}
+        {{ partial "sidebar-tree.html" . }}
+    {{ end }}
+{{end}}

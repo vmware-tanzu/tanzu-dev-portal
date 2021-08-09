@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "tanzu.tv viewed") }}
+
+{{ partial "hero.html" . }}
+
+<div class='container'>
+  {{ .Content }}
+  {{ partial "show-index.html" . }}
+</div>
+
+{{ end }}
+

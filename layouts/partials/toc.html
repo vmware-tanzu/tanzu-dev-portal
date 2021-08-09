@@ -1,0 +1,11 @@
+<div id="page-meta-links" class="td-toc__inner">
+{{ partial "page-meta-links.html" . }}
+{{ if not .Params.notoc }}
+{{ with .TableOfContents }}
+{{ if ge (len .) 200 }}
+<h5 class="mb-4">On This Page</h5>
+{{ . }}
+{{ end }}
+{{ end }}
+{{ end }}
+</div>
