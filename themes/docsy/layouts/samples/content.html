@@ -3,6 +3,7 @@
 	{{ .Params.repo }}
 	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
 	{{ .Content }}
+	{{ partial "faqs.html" . }}
 	{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
 		{{ partial "feedback.html" .Site.Params.ui.feedback }}
 		<br />
