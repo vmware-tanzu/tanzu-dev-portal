@@ -64,7 +64,7 @@ tekton-pipelines-webhook-69796f78cf-b28z4      1/1     Running             0    
 tekton-pipelines-controller-6d55778887-df59t   1/1     Running             0          13s
 ```
 
-Finally, in a couple of the examples, you'll be pushing up container images to Docker Hub, so create a secret that Tekton can use to log in to Docker Hub with, substituting the placeholder values with your own:
+Finally, in a couple of the examples, you'll be pushing container images to Docker Hub. Create a secret that Tekton can use to log in to Docker Hub. Substitute the placeholder values with your own:
 
 ```bash
 kubectl create secret docker-registry dockercreds --docker-server=https://index.docker.io/v1/ --docker-username=<DOCKERHUB_USERNAME> --docker-password=<DOCKERHUB_PASSWORD> --docker-email <DOCKERHUB_EMAIL>
