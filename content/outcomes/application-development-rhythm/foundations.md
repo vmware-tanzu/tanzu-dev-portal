@@ -308,4 +308,4 @@ This article primed you with the context of:
 -   Modern application development
 -   The types of building blocks that comprise modern application
     development
--    offs, Costs and Technical Debt
+-   Trade offs, Costs and Technical Debt
