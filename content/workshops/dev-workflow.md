@@ -5,7 +5,7 @@ draft: false
 featured: true
 hero: /images/workshops/workshop-app-modernization.png
 logo: /images/workshops/logo-tanzu.png
-lab: dev-workflow
+lab: dev-workflow-workshop
 lastmod: '2021-08-03'
 length: 120
 preview: /images/workshops/img-dev-workflow.png
