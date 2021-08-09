@@ -19,6 +19,8 @@ weight: 2
 oldPath: "/content/guides/kubernetes/helm-gs.md"
 aliases:
 - "/guides/kubernetes/helm-gs"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. For more information, be sure to check out [Helm: What Is It?](../helm-what-is/)

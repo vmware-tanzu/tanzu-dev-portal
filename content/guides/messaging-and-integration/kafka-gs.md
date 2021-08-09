@@ -19,6 +19,8 @@ topics:
 oldPath: "/content/guides/messaging-and-integration/kafka-gs.md"
 aliases:
 - "/guides/messaging-and-integration/kafka-gs"
+level1: Building Modern Applications
+level2: Services
 ---
 
 ## What Is Kafka?

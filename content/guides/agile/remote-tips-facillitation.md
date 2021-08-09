@@ -13,6 +13,8 @@ topics:
 oldPath: "/content/guides/agile/remote-tips-facillitation.md"
 aliases:
 - "/guides/agile/remote-tips-facillitation"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Setting team working agreements and ground rules
