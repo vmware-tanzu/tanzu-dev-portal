@@ -6,7 +6,7 @@ team:
   - VMware Tanzu Labs
 ---
 
-**This article is the fifth in a five-part series.**
+*This article is the fifth in a five-part series.*
 
 To view a demo on a developer daily worklow that follows Test Driven Development practices, Continuous Integration practices, uses the Red/Green/Refactor Cycle, the Mikado Method and private branching techniques, do one of the following:
 

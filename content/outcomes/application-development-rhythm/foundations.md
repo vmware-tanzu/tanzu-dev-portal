@@ -5,7 +5,7 @@ layout: single
 team:
   - VMware Tanzu Labs
 ---
-**This article is the first in a five-part series.**
+*This article is the first in a five-part series.*
 
 Modern Application Developers know the secret to
 successfully building modern apps in today's
@@ -63,8 +63,13 @@ foundation of modern application development.
 ## Building Blocks
 
 There are five building block categories
+<<<<<<< HEAD
 that support the Modern Application Development
 processes:
+=======
+that support the Modern Application Development 
+process:
+>>>>>>> edits
 
 1.  Principles
 1.  Practices
