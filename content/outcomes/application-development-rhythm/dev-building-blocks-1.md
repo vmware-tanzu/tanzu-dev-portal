@@ -115,6 +115,8 @@ failing due to integration conflicts.
 method of a team’s developers integrating on a *trunk* or *mainline* of
 a source control repository.
 
+![Trunk](/images/outcomes/application-development-rhythm/trunk.jpg)
+
 Some examples of trunk naming in various source control systems:
 
 -   **Git**:
