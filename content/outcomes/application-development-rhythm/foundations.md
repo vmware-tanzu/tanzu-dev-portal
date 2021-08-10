@@ -7,20 +7,21 @@ team:
 ---
 **This article is the first in a five-part series.**
 
-This article outlines the context,
-and the core building blocks necessary to sustain a product or
-project using modern application development practices.
+Modern Application Developers know the secret to
+successfully building modern apps in today's
+competitive market is learning how to
+use building blocks in a bottom-up collaborative
+environment.
 
 ![Foundations](/images/outcomes/application-development-rhythm/foundations-building.jpg)
 
-Before you explore this series,
-you're going to need to understand 
+To get the most out of this series, take some time to
+to learn more about
 *modern application principles* and *practices*.
 
+## What You Will Learn
 
-## What you will learn
-
-In this article, you will learn how to:
+In this first article, you will learn how to:
 
 -   Explain the context of modern application development.
 -   Describe the types of building blocks that comprise modern
@@ -30,7 +31,7 @@ In this article, you will learn how to:
 
 ## Modern Application Principles and Practices
 
-Modern Application Development enhances your organization's
+Modern Application Development improves your organization's
 ability to maintain, plan to build,
 or modernize existing software products that:
 
@@ -54,9 +55,6 @@ formalized structure to *force discipline top-down* to deliver software.
 
 Modern application development practices require just as much,
 if not more discipline, than legacy processes.
-The difference is the way discipline is instilled from a
-*bottom-up collaborative approach* instead of the *top-down bureaucratic
-approach*.
 
 Now that you have an idea about the context,
 let us discuss the major types of building blocks that form the
@@ -64,60 +62,54 @@ foundation of modern application development.
 
 ## Building Blocks
 
-The following ordered list provides five categories of building blocks
-that support *Modern Application Development* and the associated modern
-application development processes:
+There are five building block categories
+that support the Modern Application Development
+processes:
 
 1.  Principles
 1.  Practices
 1.  Patterns
-1.  Methods,
+1.  Methods and
     Techniques
-1.  Tools,
+1.  Tools and
     Technologies
 
-There are examples of building blocks in the upcoming articles:
+You can view building block examples in each of the upcoming articles:
 
 -   [Development Building Blocks, Part 1](../dev-building-blocks-1/)
-
 -   [Development Building Blocks, Part 2](../dev-building-blocks-2/)
 
 ## Principles
 
-A *Principle* is a fundamental rule that guides the modern application
-development practitioners' discipline and selection of
-*practices in the appropriate context*.
-There are lots of principles that build on each other,
-or have related contexts.
-Principles also:
+Principles are foundational rules that help modern application developers
+select the best practices to use to accomplish a specific task.
+For example, *why* it is a good idea to combine the some of the principles
+in this article that are similar in belief or behavior.
 
--   Provide context such as *why* you might use any combination of the
-    remaining building block types in this article.
--   Serve as a light that guides you in the right direction.
--   Are tied to proven success factors,
-    and are relevant for long periods of time.
+Principles are proven success factors that remain relevant for long periods of time.
 
-Tanzu Labs's foundational principles are to:
+At Tanzu Labs, following foundational principles makes it possible to:
 
-- ⚡️ Empower Teams.
-- 🌱 Start Simple.
-- 🦋 Embrace Change.
-- 🚀 Deliver Early and Often.
-- 🔬 Improve Continuously.
-- ❤️ Give Back.
+- ⚡️ Empower teams.
+- 🌱 Start simple.
+- 🦋 Embrace change.
+- 🚀 Deliver early and often.
+- 🔬 Improve continuously.
+- ❤️ Give back.
 
-Learn more about our foundational principles
+To find out more more about Tanzu foundational principles click
 [here](/outcomes/application-development-how-we-work/principles/).
 
-Some of the engineering principles are:
+There are two engineering principles that you may find particularly
+useful. They are:
 
 - [SOLID design principles](https://en.wikipedia.org/wiki/SOLID)
 - [12 Factor guidelines](https://12factor.net)
 
 As you collaborate with other experienced modern application development
 practitioners,
-make sure to ask *why* they work in a specific way,
-and what principles they follow to guide their work.
+make sure to ask *why* they do work in a specific way,
+and what principles they use to guide their work.
 
 ![Principles](/images/outcomes/application-development-rhythm/principles.jpg)
 
@@ -128,15 +120,14 @@ A *practice* is a specific way the developer works to accomplish a goal, accordi
 Think of *practices* as a high level method of *how* work is done without
 specifying the exact steps.
 
-Like principles,
-practices are relevant longer than the items lower in the list.
 The lifetime of principles is tied to the relevance of the context in which they
 live.
-The modern application development practitioner may use multiple
-practices during their daily workflow to solve problems efficiently and
+
+A Modern App Developer may use multiple practices
+during their daily workflow to solve problems efficiently and
 safely.
 
-Some of the practices you will learn about in this series include:
+Practices in this series include:
 
 -   [Pair Programming](../../application-development/pair-programming/)
 
@@ -159,22 +150,22 @@ Some of the methods and techniques you will see in this series includes:
 ## Code Patterns
 
 Code patterns are traceable events that happen when a developer codes.
-They are an excellent resource for providing solutions to new and 
-recurring software problems. 
+They are an excellent resource for providing solutions to new and
+recurring software problems.
 
 *Patterns* are also long-lived,
 similar to *practices*.
 
 Think of patterns as one of the high level *whats* of building software.
 
-Developers whose share common coding techniques are quick to recognize 
-similar code patterns, across projects. Today, code patterns are 
-often published so that other developers may also share 
+Developers whose share common coding techniques are quick to recognize
+similar code patterns, across projects. Today, code patterns are
+often published so that other developers may also share
 and collaborate their findings.
 
 ![Patterns](/images/outcomes/application-development-rhythm/patterns.jpg)
 
-*Anti-patterns* are code patterns that do not provide a solution to fix 
+*Anti-patterns* are code patterns that do not provide a solution to fix
 a new or recurring software problem.
 
 ## Tools and Technologies
@@ -183,30 +174,28 @@ a new or recurring software problem.
 as well as the implementation of solution patterns, where appropriate.
 
 As you know, the most popular tools, technologies and frameworks
-available on the market today, can quickly be replaced and considered 
-outdated tomorrow. One way to ensure the tools and technologies that you select  
-are going to be the most productive is to refer to your organization's 
+available on the market today, can quickly be replaced and considered
+outdated tomorrow. One way to ensure the tools and technologies that you select
+are going to be the most productive is to refer to your organization's
 support for standards to collect tool selection criteria.
 
 It's also a good idea to become proficient in how each of the tools and
-technologies work, as this is the best ways to prevent
+technologies work, as this is the best way to prevent
 friction in the Modern Apps Practitioner Workflow.
 
 ## Trade offs, Costs and Technical Debt
 
-So far in this article you have been exposed to the major types of
-building blocks you will use to run your daily work.
-Selecting which ones to use,
-and when to use them,
+Selecting the best building blocks to run your daily work
 can be a challenge.
 
 **Every activity you do,**
 **and every building block you select and use,**
 **will have trade offs,**
 **and associated costs.**
-The costs may be measured in time, money or opportunities lost.
 
-You can think of managing your costs from three perspectives:
+Associated costs are measured in time, money or opportunities lost.
+
+There are three types of costs to manage:
 
 - Upfront Costs
 - Taxes
@@ -216,46 +205,47 @@ You can think of managing your costs from three perspectives:
 
 ### Upfront Costs
 
-When software product teams are planning,
-estimating and building new features,
-or fixing defects,
-there are clear costs:
+Upfront costs are incurred whenever a
+software product teams plans,
+estimates, and builds new features,
+or fixes defects.
 
--   Team's time spent on doing the activities
+Upfront costs are also incurred when
+the team spends time doing activities.
 
--   Resource costs,
-    including compute,
-    storage and other infrastructure costs
-    specific to the activities
+Resources are another upfront cost.
+Resource costs includes compute, storage and other
+infrastructures specific to the activities.
 
-Modern App Developers will keep to minimal designs to keep the upfront
-costs low,
-but that may lead to
-[*Technical Debt*](#technical-debt).
+As a Modern App Developer, you can do your part
+in keeping your organization's upfront costs down
+by working with minimal designs. Although this is
+a proven cost-effective solution, there are drawbacks
+that can sometimes cause [*Technical Debt*](#technical-debt).
 
 ### Taxes
 
-The term *tax* is a useful one when describing ongoing costs of
-authoring and maintenance of software products.
+The term *tax* describes the ongoing costs of
+authoring and maintaining software products.
 
-*Taxes* are *compulsory charges* imposed to fund activities over time,
-with negative consequences when avoiding to pay them.
+*Taxes* are *compulsory charges* imposed to fund activities over time.
 
-Some examples of such software *taxes*:
+Examples of software taxes include:
 
--   Software maintenance,
-    keeping application codebases clean
+-   Software maintenance such as
+    keeping the application codebases clean.
 
--   Use of *Platforms* or *Middleware*
+-   Use of *Platforms* or *Middleware*.
 
--   Tools licensing or subscription costs
+-   Tools license or subscription costs.
 
--   3rd party dependency upgrades
+-   Third party dependency upgrades.
 
--   Developer continual learning
+-   Developer continual learning.
 
-Attempting to avoid paying any of these will have serious ramifications
-to the associated software product team.
+It's never a good idea to avoid paying taxes for these products
+because the associated software product team may be
+impacted by the consequences.
 
 ### Technical Debt
 
@@ -264,39 +254,38 @@ to the associated software product team.
 -   A software product team,
     or developer,
     chooses to take a shortcut,
-    perhaps in a feature or design implementation,
-    for an immediate term benefit.
+    in a feature or design implementation,
+    for an immediate benefit.
 
-    It is expected the team or developer will remediate,
-    or repay,
-    the shortcut at some later time.
+    You can expect the team or developer to remediate,
+    or repay for taking
+    the shortcut at a later time.
 
--   The more such shortcuts that are taken without remediating,
-    or replaying,
-    them,
-    the more accumulation of "debt" will have negative ramifications for
+-   The more shortcuts that are taken without remediating,
+    or replaying them,
+    the more accumulation of "debt" will have consequences for
     the product team.
-    Most of the time this will translate to slowing the team down.
+    Most of the time this results in the team slowing down.
 
-A common example of accumulation of technical debt is where:
+A common example of accumulation of technical debt is when:
 
 -   A developer chooses to deviate from software development principles
     as a short cut to move faster in the moment.
 
--   A developer should remediate that deviation as part of an ongoing
+-   A developer should remediate the deviation as part of an ongoing
     code maintenance activity.
 
 -   Development teams that continually deviate from development
-    principles will put the software codebase in a state that
+    principles ultimately put the software codebase in a state that
     becomes hard to maintain and change.
 
-Make sure you repay your technical debt!
+Always repay your technical debt!
 
 ## Summary
 
-This article primed you with the context of:
+In this article, you learned about:
 
--   Modern application development
+-   Modern application development.
 -   The types of building blocks that comprise modern application
-    development
--   Trade offs, Costs and Technical Debt
+    development.
+-   Tradeoffs, Costs and Technical Debt
