@@ -658,6 +658,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gilardi
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -728,6 +729,7 @@ Heroku('s)?
 High-Cardinality
 Hinojosa
 HMAC
+Hobsons
 hoc
 Hockin
 Homebrew
@@ -1546,6 +1548,7 @@ SNI
 SolidFire
 Soluto('s)?
 SomeRegion
+SonicDMG
 [Ss]onobuoy
 Sox
 [Ss]peedback
