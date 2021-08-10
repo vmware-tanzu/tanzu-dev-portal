@@ -3,7 +3,6 @@ date: '2021-07-30'
 description: Demonstrate a modern application developer daily workflow.
 draft: false
 hidden: true
-featured: true
 hero: /images/workshops/workshop-app-modernization.png
 logo: /images/workshops/logo-tanzu.png
 lab: dev-workflow-workshop
@@ -14,7 +13,6 @@ summary: You will demonstrate a modern application developer daily workflow.
 tags:
 - Development
 title: Developer Daily Workflow
-topics: null
 weight: 2
 ---
 
