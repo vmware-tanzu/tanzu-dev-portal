@@ -11,6 +11,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/identity-dex.md"
 aliases:
 - "/guides/kubernetes/identity-dex"
+level1: Managing and Operating Kubernetes
+level2: Access and Security
 ---
 
 ## Motivation

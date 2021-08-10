@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/messaging-and-integration/rabbitmq-gs.md"
 aliases:
 - "/guides/messaging-and-integration/rabbitmq-gs"
+level1: Building Modern Applications
+level2: Services
 ---
 
 ## What Is RabbitMQ?
