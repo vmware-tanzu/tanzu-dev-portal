@@ -42,7 +42,7 @@
         {{ else }}
         {{ partial "pager.html" . }}
         {{ end }}
-        <div class="feedback mt-4 pt-4 border-top">
+        <div class="feedback my-4 pt-4 border-top">
           <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Outcomes Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
         </div>
       </div>
@@ -71,6 +71,6 @@
       </div>
     </div>
   </div>
-  {{ partial "stickypager.html" . }}
+  {{ partial "pager.html" . }}
 </div>
 {{ end }}
