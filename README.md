@@ -76,6 +76,22 @@ To get a local copy of the Tanzu Developer Center up and running follow these st
      make preview
      ```
 
+## Troubleshooting
+
+### Q. I'm receiving an error about cloning `themes/docsy`
+
+```
+rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy
+```
+
+### Q. `make preview` is throwing a `fatal error: pipe failed` error
+
+```
+sudo launchctl limit maxfiles 65535 200000
+ulimit -n 65535
+sudo sysctl -w kern.maxfiles=100000
+sudo sysctl -w kern.maxfilesperproc=65535
+```
 
 ## Open Projects, Issues, and Content Backlog
 
