@@ -115,8 +115,9 @@ and what principles they use to guide their work.
 
 ## Practices
 
-A *practice* is a specific way the developer works to accomplish a goal, according to their work context
-*principles*.
+A *practice* is a specific way the developer works to accomplish a goal, 
+based on the principles of their their work context.
+
 Think of *practices* as a high level method of *how* work is done without
 specifying the exact steps.
 
@@ -147,20 +148,19 @@ Some of the methods and techniques you will see in this series includes:
 - [Refactoring](https://refactoring.com)
 - Red/Green/Refactor
 
-## Code Patterns
+## Software Design Pattern
 
-Code patterns are traceable events that happen when a developer codes.
-They are an excellent resource for providing solutions to new and 
-recurring software problems. 
+A software design pattern is a reusable solution that you can use
+to solve problems that commonly occur in your software. 
+Think of patterns as one of the 
+high level *whats* of building software.
 
 *Patterns* are also long-lived,
 similar to *practices*.
 
-Think of patterns as one of the high level *whats* of building software.
-
-Developers whose share common coding techniques are quick to recognize 
+Developers who share common coding techniques are quick to recognize 
 similar code patterns, across projects. Today, code patterns are 
-often published so that other developers may also share 
+being published so that other developers can benefit 
 and collaborate their findings.
 
 ![Patterns](/images/outcomes/application-development-rhythm/patterns.jpg)
