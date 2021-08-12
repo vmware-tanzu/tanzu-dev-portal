@@ -1,15 +1,11 @@
 ---
-
-title: "Implementing a Spring Boot JMX Notification Listener for Apache Geode"
-description: >
-    This article describes a Spring Boot JMX Notification listener application.
 date: 2020-10-12
-type: blog
-
-# Author(s) 
+description: This article describes a Spring Boot JMX Notification listener application.
+lastmod: '2021-04-22'
 team:
-- Barry Oglesby 
-
+- Barry Oglesby
+title: Implementing a Spring Boot JMX Notification Listener for Apache Geode
+type: blog
 ---
 
 ## Introduction

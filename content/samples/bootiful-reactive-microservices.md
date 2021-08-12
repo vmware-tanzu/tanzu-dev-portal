@@ -1,13 +1,11 @@
 ---
-title:  "Bootiful Reactive Microservices"
-description: >
-    Reactive Microservice workshop in Spring
+date: '2020-04-21'
+description: Reactive Microservice workshop in Spring
+lastmod: '2020-05-19'
+readme: true
+repo: https://github.com/joshlong/bootiful-reactive-microservices
 summary:
 - Reactive Microservice workshop in Spring
-topics:
-- Spring
-- Microservices
-- Reactive
 tags:
 - Spring
 - Microservices
@@ -15,7 +13,9 @@ tags:
 - Spring Boot
 team:
 - Josh Long
-repo: https://github.com/joshlong/bootiful-reactive-microservices
-readme: true
+title: Bootiful Reactive Microservices
+topics:
+- Spring
+- Microservices
+- Reactive
 ---
-

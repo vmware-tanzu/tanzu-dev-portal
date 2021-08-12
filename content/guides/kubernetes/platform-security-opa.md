@@ -1,11 +1,18 @@
 ---
-title: "Developing OPA Policies" 
-linkTitle: "Developing OPA Policies"
-description: "Implementing Open Policy Agent in Kubernetes"
-parent: "Platform Security"
-weight: 1600
+date: '2021-02-24'
+description: Implementing Open Policy Agent in Kubernetes
 keywords:
 - Kubernetes
+lastmod: '2021-02-24'
+linkTitle: Developing OPA Policies
+parent: Platform Security
+title: Developing OPA Policies
+weight: 1600
+oldPath: "/content/guides/kubernetes/platform-security-opa.md"
+aliases:
+- "/guides/kubernetes/platform-security-opa"
+level1: Managing and Operating Kubernetes
+level2: Access and Security
 ---
 
 [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is a declarative

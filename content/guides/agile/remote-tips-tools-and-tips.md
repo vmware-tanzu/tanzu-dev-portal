@@ -1,13 +1,20 @@
 ---
-title:  "Remote Tips: Tools and Tips"
-linkTitle: "Tools and Tips"
-parent: "Remote Tips"
-topics:
-- Agile
+date: '2020-10-01'
+lastmod: '2021-02-22'
+linkTitle: Tools and Tips
+parent: Remote Tips
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
+title: 'Remote Tips: Tools and Tips'
+topics:
+- Agile
+oldPath: "/content/guides/agile/remote-tips-tools-and-tips.md"
+aliases:
+- "/guides/agile/remote-tips-tools-and-tips"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Agreeing on the tool stack

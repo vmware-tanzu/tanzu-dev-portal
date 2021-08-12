@@ -1,13 +1,20 @@
 ---
-title:  "Remote Tips: Remote is Exhausting"
-linkTitle:  "Remote is Exhausting"
-parent: "Remote Tips"
-topics:
-- Agile
+date: '2021-01-29'
+lastmod: '2021-02-22'
+linkTitle: Remote is Exhausting
+parent: Remote Tips
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
+title: 'Remote Tips: Remote is Exhausting'
+topics:
+- Agile
+oldPath: "/content/guides/agile/remote-tips-remote-is-exhausting.md"
+aliases:
+- "/guides/agile/remote-tips-remote-is-exhausting"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Creating the right working environment
@@ -46,4 +53,3 @@ team:
 - Experiment with different ways of working to find out what's best for the team; not everyone shares the same peak hours of energy and focus.
 - Designate a pair of engineers as the “interrupt pair” at the start of each day to lower the cost of interruptions and minimize the need for conversations, decisions and context switching.
 - Respect the routine, but experiment with change.
-

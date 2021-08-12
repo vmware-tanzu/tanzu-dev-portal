@@ -1,14 +1,13 @@
 ---
-title:  "Getting Started with Tanzu GemFire for Kubernetes"
-link-title: "Getting Started with Tanzu GemFire for Kubernetes"
-parent: Spring for Apache Geode
-type: data-guides
 data-featured: false
-weight: 3
-
+date: '2021-04-22'
 description: How to set up a Tanzu GemFire instance on Kubernetes.
-
-
+lastmod: '2021-04-22'
+link-title: Getting Started with Tanzu GemFire for Kubernetes
+parent: Spring for Apache Geode
+title: Getting Started with Tanzu GemFire for Kubernetes
+type: data-guides
+weight: 3
 ---
 
 This guide walks you through creating and testing a Tanzu GemFire cluster on Kubernetes using a *Hello, World!* client application.
@@ -349,11 +348,4 @@ Then delete each persistent volume claim listed.
  
  * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
   
- * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg). 
-
-
-
- 
-
- 
- 
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).

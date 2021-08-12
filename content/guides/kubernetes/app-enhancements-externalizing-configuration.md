@@ -1,12 +1,19 @@
 ---
-title:  "Externalizing Configuration"
-parent: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-16'
+parent: Application Enhancements
 tags:
 - Kubernetes
 team:
 - John Harris
+title: Externalizing Configuration
+topics:
+- Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-externalizing-configuration"
+level1: Managing and Operating Applications
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Application _configuration_ is anything that varies between environments. For

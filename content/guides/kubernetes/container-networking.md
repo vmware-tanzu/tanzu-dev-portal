@@ -1,10 +1,18 @@
 ---
-title: "Container Networking"
-subsection: "Container Networking"
-topics:
-- Kubernetes
+date: '2021-02-24'
+lastmod: '2021-02-26'
+subsection: Container Networking
 team:
 - Josh Rosso
+title: Container Networking
+topics:
+- Kubernetes
+weight: 32
+oldPath: "/content/guides/kubernetes/container-networking.md"
+aliases:
+- "/guides/kubernetes/container-networking"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 Kubernetes uses the [Container Network

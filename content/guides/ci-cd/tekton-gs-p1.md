@@ -1,19 +1,27 @@
 ---
-title:  "Getting Started with Tekton Part 1: Hello World"
-linkTitle: "Getting Started with Tekton"
-metaTitle: "Getting Started with Tekton"
-parent: "Tekton"
-description: Walk through the set up and installation of Tekton, a set of open source Kubernetes resources to build and run CI/CD pipelines.
-weight: 1
-topics:
-- CI-CD
+date: '2020-06-15'
+description: Walk through the set up and installation of Tekton, a set of open source
+  Kubernetes resources to build and run CI/CD pipelines.
+lastmod: '2021-03-07'
+linkTitle: Getting Started with Tekton
+metaTitle: Getting Started with Tekton
+parent: Tekton
+patterns:
+- Deployment
 tags:
 - CI-CD
 - Tekton
-patterns:
-- Deployment
 team:
 - Brian McClain
+title: 'Getting Started with Tekton Part 1: Hello World'
+topics:
+- CI-CD
+weight: 1
+oldPath: "/content/guides/ci-cd/tekton-gs-p1.md"
+aliases:
+- "/guides/ci-cd/tekton-gs-p1"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 [Tekton](https://github.com/tektoncd/pipeline) provides a set of open source Kubernetes resources to build and run [CI/CD](/guides/ci-cd/ci-cd-what-is/) pipelines, such as parameterized tasks, inputs and outputs, as well as runtime definitions. This guide will walk you through setting up Tekton on Minikube as well as setting up your first task.
@@ -56,7 +64,7 @@ tekton-pipelines-webhook-69796f78cf-b28z4      1/1     Running             0    
 tekton-pipelines-controller-6d55778887-df59t   1/1     Running             0          13s
 ```
 
-Finally, in a couple of the examples, you'll be pushing up container images to Docker Hub, so create a secret that Tekton can use to log in to Docker Hub with, substituting the placeholder values with your own:
+Finally, in a couple of the examples, you'll be pushing container images to Docker Hub. Create a secret that Tekton can use to log in to Docker Hub. Substitute the placeholder values with your own:
 
 ```bash
 kubectl create secret docker-registry dockercreds --docker-server=https://index.docker.io/v1/ --docker-username=<DOCKERHUB_USERNAME> --docker-password=<DOCKERHUB_PASSWORD> --docker-email <DOCKERHUB_EMAIL>

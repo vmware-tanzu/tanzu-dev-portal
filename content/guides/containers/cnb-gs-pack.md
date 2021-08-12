@@ -1,18 +1,26 @@
 ---
-title: "Getting Started with the `pack` CLI using Cloud Native Buildpacks"
-linkTitle: "Getting Started with `pack`"
-parent: "Cloud Native Buildpacks"
-metaTitle: "Getting Started with the `pack` CLI"
-description: Discover how to use pack, a CLI tool that builds container images locally on your developer machine using Cloud Native Buildpacks
-weight: 2
-topics:
-- Containers
-tags:
-- Buildpacks
+date: '2020-04-16'
+description: Discover how to use pack, a CLI tool that builds container images locally
+  on your developer machine using Cloud Native Buildpacks
+lastmod: '2021-03-07'
+linkTitle: Getting Started with `pack`
+metaTitle: Getting Started with the `pack` CLI
+parent: Cloud Native Buildpacks
 patterns:
 - Deployment
+tags:
+- Buildpacks
 team:
 - Bryan Friedman
+title: Getting Started with the pack CLI using Cloud Native Buildpacks
+topics:
+- Containers
+weight: 2
+oldPath: "/content/guides/containers/cnb-gs-pack.md"
+aliases:
+- "/guides/containers/cnb-gs-pack"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 [`pack`](https://github.com/buildpacks/pack) is a command line interface (CLI) tool that builds container images locally on your developer machine using [Cloud Native Buildpacks](../cnb-what-is).

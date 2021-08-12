@@ -1,13 +1,10 @@
 ---
-title: "Move a Custom Spring Boot Application to Production Using Bitnami Helm Charts"
-linkTitle: "Spring Boot Production"
-parent: "Bitnami"
-weight: 4
-description: Deploy a Spring Boot container image on Kubernetes using the Bitnami Apache Tomcat Helm chart.
 date: 2019-05-13
-topics:
-- Containers
-- Kubernetes
+description: Deploy a Spring Boot container image on Kubernetes using the Bitnami
+  Apache Tomcat Helm chart.
+lastmod: '2021-02-05'
+linkTitle: Spring Boot Production
+parent: Bitnami
 tags:
 - Bitnami
 - Spring Boot
@@ -15,6 +12,16 @@ tags:
 - Helm
 team:
 - Raquel Campuzano
+title: Move a Custom Spring Boot Application to Production Using Bitnami Helm Charts
+topics:
+- Containers
+- Kubernetes
+weight: 4
+oldPath: "/content/guides/containers/deploy-spring-boot-application-production-helm.md"
+aliases:
+- "/guides/containers/deploy-spring-boot-application-production-helm"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 Bitnami provides ready-to-run [Helm charts](https://github.com/bitnami/charts) that can be directly deployed on [Kubernetes](https://kubernetes.io/) and also infrastructure charts that can help you deploy your custom applications. That is the case of the [Bitnami Tomcat Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/tomcat) that with some tweaks can be used to run Java applications in production easily.

@@ -1,27 +1,32 @@
 ---
-title: "Ubiquitous Language"
-tags: ["Discovery", "Framing"]
-length: "1 hour"
-participants: "Core team, subject matter experts"
-image: "default-cover.png"
-description: "Establish a common set of terms understood by the core team"
-lastmod: "2018-10-04"
-
+date: '2021-02-09'
+description: Establish a common set of terms understood by the core team
+image: default-cover.png
+lastmod: '2021-03-17'
+length: 1 hour
+participants: Core team, subject matter experts
+tags:
+- Discovery
+- Framing
+title: Ubiquitous Language
+what:
+- Whiteboard, large wall, or digital version like [Miro](https://miro.com/)
+- Sticky notes
+- Sharpies / markers
+when:
+- We try to do this during Discovery or Framing in order to establish a baseline vocabulary.
+  It’s advisable to do this prior to delivery so the code that’s written reflects
+  the business domain language from day one. It’s also worth revisiting this throughout
+  the project as new domain terms are uncovered.
 why:
 - Helps establish clear names and definitions for domain concepts
 - Helps eliminate duplication and inconsistency in the codebase and in team conversations
 - Helps Give new team members an easy way to onboard into the domain
-
-when:
-- We try to do this during Discovery or Framing in order to establish a baseline vocabulary. It’s advisable to do this prior to delivery so the code that’s written reflects the business domain language from day one. It’s also worth revisiting this throughout the project as new domain terms are uncovered.  
-
-what:
-- "Whiteboard, large wall, or digital version like [Miro](https://miro.com/)"
-- Sticky notes
-- Sharpies / markers
-
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Clearly outline the goal of the meeting:
 
@@ -61,34 +66,32 @@ what:
    {{% callout %}}
    Tip: If your team is fully co-located, consider keeping the sticky notes. Set notice space on a wall in your team area and reconstruct the term list there. This will provide the team with an always-accessible vocab reference wall.
    {{% /callout %}}
-#### Success/Expected Outcomes
-Success happens when you’ve identified a starting list of common terms and given a definition to each. Congratulations—you’ve created a Ubiquitous Language glossary!
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Success/Expected Outcomes
+Success happens when you’ve identified a starting list of common terms and given a definition to each. Congratulations—you’ve created a Ubiquitous Language glossary!
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 If you find yourself running low on time during share out, consider prioritizing the terms most closely related to upcoming work. This way you’ll be able to work those terms in the most imminent stories so they get built into the codebase.
 
 Try as hard as you can to have one or more domain experts in the room with you. Without people present who can represent the subject matter, it will be tougher to converge on a shared language that represents the business reality.
+{{% /section %}}
 
-## Related Practices
-
-### Preceding
-
-None at the moment.
-
-### Following
-
-None at the moment.
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![example ubiquitous language workshop on whiteboard](/images/practices/ubiquitous-language/example-1.jpg)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 [Ubiquitous Language & the joy of naming](https://blog.carbonfive.com/2016/10/04/ubiquitous-language-the-joy-of-naming/)  
 [DDD: Questions around ubiquitous language](https://richarddingwall.name/2013/02/16/ubiquitious-language-handling-change/)  
 [Domain-Driven Design Distilled (1st Edition)](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420)  
 [Domain-Driven Design: Tackling Complexity in the Heart of Software (1st Edition)](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
-
-
+{{% /section %}}

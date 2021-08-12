@@ -1,34 +1,42 @@
 ---
-title: "Risks & Mitigations"
-tags: ["Kickoff", "Inception", "Remote"]
-length: "30 min - 1 hour"
-participants: "Core team, stakeholders"
-image: "risks-and-mitigations/cover.png"
-description: "Surface risks and how the team might mitigate them"
-lastmod: "2019-02-24"
+date: '2021-02-09'
+description: Surface risks and how the team might mitigate them
+image: risks-and-mitigations/cover.png
+lastmod: '2021-04-08'
+length: 30-60 min
+miro_template_url: https://miro.com/miroverse/risks-and-mitigations
+participants: Core team, stakeholders
 remote: true
-miro_template_url: "https://miro.com/miroverse/risks-and-mitigations"
-
-why:
-- We do this to create a forum where people feel comfortable sharing fears and concerns in order to proactively mitigate issues we think may arise. This session results in a list of prioritized action items that the team can use to get ahead of any risks.
-
-when:
-- Early in the project, normally during Kick-Off, and again during Inception
-
+tags:
+- Kickoff
+- Inception
+- Remote
+title: Risks & Mitigations
 what:
-- "Whiteboard or digital version like [Miro](https://miro.com/)"
+- Whiteboard or digital version like [Miro](https://miro.com/)
 - Dry erase markers
 - Sticky notes
 - Markers
 - Large sheets of paper
-
+when:
+- Early in the project, normally during Kick-Off, and again during Inception
+why:
+- We do this to create a forum where people feel comfortable sharing fears and concerns
+  in order to proactively mitigate issues we think may arise. This session results
+  in a list of prioritized action items that the team can use to get ahead of any
+  risks.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Have the group silently write project risks and obstacles this team may face. One item per sticky note.
         
    {{% callout %}}
    Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
+   {{% /callout %}}
+   {{% callout %}}
    Tip: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
    {{% /callout %}}
    
@@ -57,35 +65,24 @@ what:
 1. Go around the room and have each pair read **one** (1) risk and **one** (1) mitigation strategy.
 
 1. Group similar risks/mitigations into categories. For example, "technical risks", "business risks", "product risks", etc.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is when you have a shared understanding of the biggest risks and have a set of actions items to get started with
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 - Ensure that there is equal representation of different disciplines present
 - Try to time box explanations in order to keep things succinct
 - Create a space in which people feel comfortable being honest by setting up the right context for the session
 - Curtail finger pointing or unkind feedback
 - Ensure that the actions are actionable and not too general e.g., “Don’t do this…”  
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 ![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
-
-## Recommended Reading
-
-
+{{% /section %}}

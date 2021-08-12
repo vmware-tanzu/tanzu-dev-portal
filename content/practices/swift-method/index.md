@@ -1,27 +1,44 @@
 ---
-title: "Swift Method"
-tags: ["Kickoff", "Discovery", "Framing", "Modernization"]
-length: "2 - 4 days if done end-to-end"
-participants: "Business stakeholders, architects, technical leads, developers"
-image: "swift-method/swift.png"
-description: A set of lightweight techniques using agile and Domain Driven Design (DDD) principles that help teams plan enough to start modernizing software systems
-lastmod: "2019-12-09"
-
-why:
-- Align business leaders and technical practitioners. Use this approach to break down a system of systems, and develop a notional architectural plan that maps future goals with the way the system “wants to behave.” We’ve found this to be especially important for critical systems modernization. - Inform decisions on how to organize development teams, and prioritize work from both a business and technical perspective. It’s also helpful as a “catch-all” way to define a path between the status quo and the desired state.
-when:
-- Jumpstart application modernization initiatives in an iterative fashion. This is the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization), which can be a short consulting engagement that quickly reviews current business functionality and plans “to be” architecture. Our experts practice the Swift method to discover architecture, boundaries, points of risk or concern, and then map a direction to move from current state to future state. 
-
-what: 
+date: '2021-02-11'
+description: A set of lightweight techniques using agile and Domain Driven Design
+  (DDD) principles that help teams plan enough to start modernizing software systems
+image: swift-method/swift.png
+lastmod: '2021-03-04'
+length: 2-4 days if done end-to-end
+participants: Business stakeholders, architects, technical leads, developers
+tags:
+- Kickoff
+- Discovery
+- Framing
+- Modernization
+title: Swift Method
+what:
 - Sticky arrow flags
 - Whiteboard tape - black, green, red; 2 rolls of each
 - Scissors
 - Scotch tape
 - Dry Erase Surface (3 ft x 2 ft)
 - Super sticky 4x6 multicolor sticky notes, 4 pack
-
+when:
+- Jumpstart application modernization initiatives in an iterative fashion. This is
+  the core method of the [App Navigator](https://tanzu.vmware.com/application-modernization),
+  which can be a short consulting engagement that quickly reviews current business
+  functionality and plans “to be” architecture. Our experts practice the Swift method
+  to discover architecture, boundaries, points of risk or concern, and then map a
+  direction to move from current state to future state.
+why:
+- Align business leaders and technical practitioners. Use this approach to break down
+  a system of systems, and develop a notional architectural plan that maps future
+  goals with the way the system “wants to behave.” We’ve found this to be especially
+  important for critical systems modernization. - Inform decisions on how to organize
+  development teams, and prioritize work from both a business and technical perspective.
+  It’s also helpful as a “catch-all” way to define a path between the status quo and
+  the desired state.
 ---
+
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. [Event Storm](/practices/event-storming) the system, using language that business and technical people understand.
 
@@ -51,34 +68,44 @@ what:
    Tip: User story impact mapping is a technique that can be applied for mapping stories to MVPs and releases. Here's a <a href="https://blog.eriksen.com.br/en/mapping-domain-knowledge" target="_blank">blog post</a> that explains how to combine User Story Mapping with DDD.
    {{% /callout %}}
 1. Start hands-on experimentation, feedback, and iterative progress.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 - Quickly discover current system capabilities, create an aspirational target architecture, identify underlying areas of concern and agree on prioritization
 - Discuss and understand notional solutions, tactical fixes, potential trade-offs, framed in an incremental, measured way
 - Architectural work to validate / invalidate assumptions and help inform solutions / fixes
 - Develop approach to incrementally modernize services
 - Definition of solution(s) with associated business outcomes using an “everything on the table” approach
 - A  plan of tactical steps that starts small, scales & enables customer developers and architects to move forward confidently.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 A good facilitator should be able to drive out how a system should be designed based on supporting the business capabilities from a DDD perspective.
 
 This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
+{{% /section %}}
 
-## Related Practices
+{{% section %}}
+### Related Practices
 Swift Method contains many activities, including:
 
 - [Event Storming](/practices/event-storming)
 - [Boris](/practices/boris)
+{{% /section %}}
 
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris) and the Swift Method of modernization for an Uber Eats-style application
 
 ![Visual of the Swift Method's various steps and how they flow into one another](/images/practices/swift-method/example-1.png)
+{{% /section %}}
 
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 <a href="https://tanzu.vmware.com/content/white-papers/tackle-application-modernization-in-days-and-weeks-not-months-and-years" target="_blank">Tackle Application Modernization in Days and Weeks, Not Months and Years</a> (white paper)
 
@@ -89,3 +116,4 @@ See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event
 <a href="https://tanzu.vmware.com/content/slides/the-modern-family-modernizing-applications-to-pivotal-cloud-foundry-getting-out-of-the-big-ball-of-mud" target="_blank">Tools to Slay the Fire Breathing Monoliths in Your Enterprise</a> (blog post)
 
 <a href="https://www.eventstorming.com/" target="_blank">EventStorming.com</a> (website)
+{{% /section %}}

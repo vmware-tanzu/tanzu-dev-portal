@@ -57,7 +57,9 @@
 }
 
 .guide a.linked-box {
-  min-height: 200px;
+  @media(min-width: 992px) {
+    min-height: 200px;
+  }
   height: auto;
 }
 
@@ -81,7 +83,7 @@
     &.guides-hero {
       background-image: url({{ "/images/backgrounds/background-guides.svg" | relURL }});
     }
-    &.patterns-hero {
+    &.outcomes-hero {
       background-image: url({{ "/images/backgrounds/background-patterns.svg" | relURL }});
     }
     &.samples-hero {
@@ -110,9 +112,18 @@
     &.tv-episode-hero {
       min-height: 100px;
     }
+    @media(max-width: 1200px) {
+      &.outcomes-hero {
+        .lead {
+          max-width: 620px;
+        }
+        background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
+        background-position: right -50px bottom;
+        padding-bottom: 220px;
+      }
+    }
     @media(max-width: 991px) {
       &.guides-hero,
-      &.patterns-hero,
       &.samples-hero,
       &.videos-hero,
       &.practices-hero,

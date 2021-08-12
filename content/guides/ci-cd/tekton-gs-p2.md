@@ -1,19 +1,27 @@
 ---
-title: "Getting Started with Tekton Part 2: Building a Container"
-linkTitle: "Building a Container with Tekton"
-metaTitle: "Building a Container with Tekton"
-parent: "Tekton"
-weight: 2
-description: Using Tekton, an automation tool for CI/CD pipelines, learn how to build container images from a Dockerfile on top of Kubernetes.
-topics:
-- CI-CD
+date: '2020-06-15'
+description: Using Tekton, an automation tool for CI/CD pipelines, learn how to build
+  container images from a Dockerfile on top of Kubernetes.
+lastmod: '2021-03-07'
+linkTitle: Building a Container with Tekton
+metaTitle: Building a Container with Tekton
+parent: Tekton
+patterns:
+- Deployment
 tags:
 - CI-CD
 - Tekton
-patterns:
-- Deployment
 team:
 - Brian McClain
+title: 'Getting Started with Tekton Part 2: Building a Container'
+topics:
+- CI-CD
+weight: 2
+oldPath: "/content/guides/ci-cd/tekton-gs-p2.md"
+aliases:
+- "/guides/ci-cd/tekton-gs-p2"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll learn how to use a preexisting `Task` and provide parameters to build your code using [Cloud Native Buildpacks](https://buildpacks.io/).

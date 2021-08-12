@@ -10,8 +10,8 @@
 			<div class="short-gradient-line mb-4"></div>
 			<!-- {{ .Params.tags }} -->
 
-			<a href="{{ .Params.repo }}/archive/master.zip" title="{{ .Title }}" id="sample-zip" class="btn"><span class="fas fa-download"></span>   Download ZIP</a>
-			<a href="{{ .Params.repo }}" title="{{ .Title }}" id="sample-gh" class="btn"><span class="fab fa-github"></span>   View on GitHub</a>
+			<a href="{{ .Params.repo }}/archive/master.zip" title="{{ .Title }}" id="sample-zip" class="btn"><span class="fas fa-download mr-2"></span>Download ZIP</a>
+			<a href="{{ .Params.repo }}" title="{{ .Title }}" id="sample-gh" class="btn"><span class="fab fa-github mr-2"></span>View on GitHub</a>
 
 		</div>
 	</div>
@@ -38,6 +38,9 @@
 			{{ partial "disqus-comment.html" . }}
 		{{ end }}
 		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+		<div class="feedback mt-4 pt-4 border-top">
+			<a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Videos Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+		</div>
 	</div>
 </div>
 {{ end }}

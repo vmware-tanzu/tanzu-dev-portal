@@ -1,13 +1,20 @@
 ---
-title:  "Remote Tips: Building Relationships"
-linkTitle: "Building Relationships"
-parent: "Remote Tips"
-topics:
-- Agile
+date: '2020-10-01'
+lastmod: '2021-02-22'
+linkTitle: Building Relationships
+parent: Remote Tips
 tags:
 - Agile
 team:
 - VMware Tanzu Labs
+title: 'Remote Tips: Building Relationships'
+topics:
+- Agile
+oldPath: "/content/guides/agile/remote-tips-building-relationships.md"
+aliases:
+- "/guides/agile/remote-tips-building-relationships"
+level1: Agile Transformation and Practices
+level2: Team Tips
 ---
 
 ## Socializing

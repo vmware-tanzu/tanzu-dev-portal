@@ -1,10 +1,18 @@
 ---
-title: "Developer Workflow"
-subsection: "Developer Workflow"
-topics:
-- Kubernetes
+date: '2021-02-09'
+lastmod: '2021-02-26'
+subsection: Developer Workflow
 team:
 - John Harris
+title: Developer Workflow
+topics:
+- Kubernetes
+weight: 37
+oldPath: "/content/guides/kubernetes/dev-workflow.md"
+aliases:
+- "/guides/kubernetes/dev-workflow"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 The developer workflow typically involves writing code, executing automated

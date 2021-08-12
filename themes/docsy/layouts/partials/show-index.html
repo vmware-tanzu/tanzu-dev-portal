@@ -8,7 +8,7 @@
             </div>
             <div class='row d-flex justify-content-between mb-5 episodes'>
             {{if ( eq (.Title ) "SpringOne Tour")}}
-                {{ range after 4 ( first 7 (sort .RegularPages ".Date" "desc")) }}
+                {{ range after 2 ( first 5 (sort .RegularPages ".Date" "desc")) }}
                     <a class='col-4-thumbnail hover-scale flex-315 col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
                         <img src="{{ .Params.episode_image | relURL }}" />

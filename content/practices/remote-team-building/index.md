@@ -1,26 +1,27 @@
 ---
-# Draft: references to Miro templates that are not available. 
-# Without them the workshops are not useful.
-# Next steps: Try to make Miro templates public. 
-draft: "true"
-path: '/methods/remote-team-building'
-title: 'Remote Team Building'
-tags: ["Framing", "Remote"]
-length: '1 - 5 mins'
-participants: 'Core team, stakeholders, project team members'
-image: 'remote-team-building/cover.png'
-summary: 'Team building activities are essential when working together, particularly remotely. Icebreakers, energizers, creative warm-ups and wind-downs are great for team building, getting to know each other, getting people to think about a specific topic, or simply just to wake up a sleepy and tired group.'
-lastmod: '2019-08-21'
-
-why:
-- Team building activities are essential when working together, particularly remotely.
-
-when:
-- Team building activities should ideally be run at the beginning of a session, but there’s also opportunities between sessions as well as at the end.
-
+date: '2021-02-09'
+draft: 'true'
+image: remote-team-building/cover.png
+lastmod: '2021-03-03'
+length: 5 min
+participants: Core team, stakeholders, project team members
+path: /methods/remote-team-building
+summary: Team building activities are essential when working together, particularly
+  remotely. Icebreakers, energizers, creative warm-ups and wind-downs are great for
+  team building, getting to know each other, getting people to think about a specific
+  topic, or simply just to wake up a sleepy and tired group.
+tags:
+- Framing
+- Remote
+title: Remote Team Building
 what:
 - Miro
 - Video conferencing software
+when:
+- Team building activities should ideally be run at the beginning of a session, but
+  there’s also opportunities between sessions as well as at the end.
+why:
+- Team building activities are essential when working together, particularly remotely.
 ---
 
 ## Icebreakers

@@ -1,23 +1,30 @@
 ---
-title: "Understanding API-First Development"
-linkTitle: "API-First Development"
-description: API-First approach development allows API teams design-driven development, API governance, and agility in incorporating changes.
-weight: 4
-topics:
-- Spring
-- Microservices
+date: '2020-11-05'
+description: API-First approach development allows API teams design-driven development,
+  API governance, and agility in incorporating changes.
+lastmod: '2021-03-07'
+linkTitle: API-First Development
+patterns:
+- API
 tags:
 - Swagger
 - OpenAPI
 - Maven
 - Spring
 - Spring Boot
-patterns:
-- API
 team:
 - Dan Dobrin
+title: Understanding API-First Development
+topics:
+- Spring
+- Microservices
+weight: 4
+oldPath: "/content/guides/microservices/api-first-development.md"
+aliases:
+- "/guides/microservices/api-first-development"
+level1: Building Modern Applications
+level2: Microservice Patterns
 ---
-
 
 Organizations are increasingly embracing new processes to deal with microservices architectures, containerization, and continuous delivery as part of the cloud migration journey.
 Traditional code-first application development focuses on implementing business logic first, leaving the interface that will eventually be created to expose the functionality as an afterthought. At the time of implementing the interface (the API), most or all business logic has already been implemented, which results in the core business logic driving the API. The API has not been shared with either consumer teams or QA before the code is built, precluding any timely feedback. 

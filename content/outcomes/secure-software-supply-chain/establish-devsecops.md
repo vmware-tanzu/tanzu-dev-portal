@@ -1,9 +1,11 @@
 ---
-title: Developing a DevSecOps Practice
-weight: 1
+date: '2021-05-11'
+lastmod: '2021-06-15'
 layout: single
 team:
 - Craig Tracey
+title: Developing a DevSecOps Practice
+weight: 1
 ---
 
 Modern software delivery demands that we think differently about how we bring

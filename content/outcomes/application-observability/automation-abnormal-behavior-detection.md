@@ -1,10 +1,12 @@
 ---
-title: Detecting Abnormal Behavior with Tanzu Observability
-weight: 99
+date: '2021-05-06'
+lastmod: '2021-06-15'
 layout: single
 team:
-  - Howard Yoo
-  - Zac Bergquist
+- Howard Yoo
+- Zac Bergquist
+title: Detecting Abnormal Behavior with Tanzu Observability
+weight: 99
 ---
 
 As more and more sources of metrics become available for monitoring, the problem

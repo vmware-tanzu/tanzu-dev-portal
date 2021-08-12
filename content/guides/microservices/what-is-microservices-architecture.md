@@ -1,14 +1,21 @@
 ---
-title: "What is Microservices Architecture?"
-linkTitle: "What are Microservices?"
-subsection: "What are Microservices?"
-weight: 1
-topics:
-- Microservices
-- Kubernetes
+date: '2021-02-26'
+lastmod: '2021-02-26'
+linkTitle: What are Microservices?
+subsection: What are Microservices?
 tags:
 - Microservices
 - Spring
+title: What is Microservices Architecture?
+topics:
+- Microservices
+- Kubernetes
+weight: 1
+oldPath: "/content/guides/microservices/what-is-microservices-architecture.md"
+aliases:
+- "/guides/microservices/what-is-microservices-architecture"
+level1: Modern App Basics
+level2: DevOps Practices
 ---
 
 Microservices are a modern architectural pattern for building an application. A microservices architecture breaks up the functions of an application into a set of small, discrete, decentralized, goal-oriented processes, each of which can be independently developed, tested, deployed, replaced, and scaled.
@@ -44,7 +51,3 @@ Here's a video by a former Netflix architect that gives you the lowdown on using
 {{< youtube 4ClmJxVz1SM >}}
 
 The guide [Deconstructing the Monolith](/guides/microservices/deconstructing-the-monolith/) discusses how to break a monolithic application down into microservices. After you are comfortable with the concepts, our [microservices workshop](/workshops/lab-microservice/) can help you get started building microservices using [Spring](/topics/spring).
-
-
-
-

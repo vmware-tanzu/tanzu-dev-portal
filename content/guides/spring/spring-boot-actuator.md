@@ -1,14 +1,21 @@
 ---
-title:  Custom Health Checks Using Spring Boot Actuator
+date: '2021-01-29'
+lastmod: '2021-01-29'
 linkTitle: Spring Boot Actuator
 parent: Spring Boot
-weight: 1
-topics:
-- Spring
-tags:
-- Spring Boot Actuator
 patterns:
 - Observability
+tags:
+- Spring Boot Actuator
+title: Custom Health Checks Using Spring Boot Actuator
+topics:
+- Spring
+weight: 1
+oldPath: "/content/guides/spring/spring-boot-actuator.md"
+aliases:
+- "/guides/spring/spring-boot-actuator"
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html) provides insight into the Spring environment for applications running in production. Actuator includes a number of built-in endpoints allowing you to monitor and interact with your application. 

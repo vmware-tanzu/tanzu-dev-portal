@@ -1,18 +1,25 @@
 ---
-title: Kubernetes Monitoring Overview
-parent: "Platform Observability"
-weight: 1
-topics:
-- Kubernetes
-- Microservices
+date: '2021-02-26'
+lastmod: '2021-02-26'
+parent: Platform Observability
+patterns:
+- Observability
 tags:
 - Kubernetes
 - Observability
 - Prometheus
 - Grafana
 - Wavefront
-patterns:
-- Observability
+title: Kubernetes Monitoring Overview
+topics:
+- Kubernetes
+- Microservices
+weight: 1
+oldPath: "/content/guides/kubernetes/observability-kubernetes-monitoring-overview.md"
+aliases:
+- "/guides/kubernetes/observability-kubernetes-monitoring-overview"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 Observability is a key element of cloud native application architectures. Most modern applications are distributed in nature, with a collection of multiple modules that communicate with each other via APIs. Anytime a problem occurs you need to be able to see when and where failures happened. And you need to measure failures to establish a profile or baseline against which deviations from normal operation can be identified and addressed. As such, monitoring, feature-rich metrics, alerting tools, and data visualization frameworks are a key element of successful cloud native applications.

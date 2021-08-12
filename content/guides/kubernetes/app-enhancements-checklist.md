@@ -1,12 +1,19 @@
 ---
-title:  "Application Readiness Checklist"
-parent: "Application Enhancements"
-topics:
-- Kubernetes
+date: '2021-02-16'
+lastmod: '2021-02-16'
+parent: Application Enhancements
 tags:
 - Kubernetes
 team:
 - John Harris
+title: Application Readiness Checklist
+topics:
+- Kubernetes
+oldPath: "/content/guides/kubernetes/app-enhancements-checklist.md"
+aliases:
+- "/guides/kubernetes/app-enhancements-checklist"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This list is a starting place for considerations about your application running

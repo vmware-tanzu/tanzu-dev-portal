@@ -1,9 +1,11 @@
 ---
-title: Exposing Prometheus Metrics from Java
-weight: 3
+date: '2021-05-25'
+lastmod: '2021-06-15'
 layout: single
 team:
-  - Marc Zottner
+- Marc Zottner
+title: Exposing Prometheus Metrics from Java
+weight: 3
 ---
 
 The [Micrometer](https://micrometer.io/) library is a popular way to expose
