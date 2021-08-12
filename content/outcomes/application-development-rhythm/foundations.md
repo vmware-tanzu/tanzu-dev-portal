@@ -15,8 +15,7 @@ environment.
 
 ![Foundations](/images/outcomes/application-development-rhythm/foundations-building.jpg)
 
-To get the most out of this series, take some time to
-to learn more about
+To get the most out of this series, take some time to learn more about
 *modern application principles* and *practices*.
 
 ## What You Will Learn
@@ -63,13 +62,8 @@ foundation of modern application development.
 ## Building Blocks
 
 There are five building block categories
-<<<<<<< HEAD
 that support the Modern Application Development
-processes:
-=======
-that support the Modern Application Development 
 process:
->>>>>>> edits
 
 1.  Principles
 1.  Practices
@@ -102,7 +96,7 @@ At Tanzu Labs, following foundational principles makes it possible to:
 - 🔬 Improve continuously.
 - ❤️ Give back.
 
-To find out more more about Tanzu foundational principles click
+To find out more about Tanzu foundational principles click
 [here](/outcomes/application-development-how-we-work/principles/).
 
 There are two engineering principles that you may find particularly
@@ -293,4 +287,4 @@ In this article, you learned about:
 -   Modern application development.
 -   The types of building blocks that comprise modern application
     development.
--   Tradeoffs, Costs and Technical Debt
+-   Trade offs, Costs and Technical Debt
