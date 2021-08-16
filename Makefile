@@ -11,6 +11,7 @@ help:
 
 #theme: @ runs git module to update the theme
 theme:
+	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
 	git submodule update --init --recursive
 
 #npm: @ runs npm install to install dependencies
