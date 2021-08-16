@@ -19,7 +19,7 @@ npm: theme
 
 #preview: @ preview hugo
 preview: npm
-	hugo server -b http://localhost:1313/developer
+	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
 #build: @ build site into `public` directory
 build: npm
