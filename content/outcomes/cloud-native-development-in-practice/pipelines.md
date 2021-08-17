@@ -21,7 +21,7 @@ Concourse or Jenkins.
 For the purpose of this lab there are two environments:
 
 - Local environment (i.e. your workstation)
-- Review environment (the `sandbox` space on PAS)
+- Review environment (the `sandbox` space on TAS)
 
 This is a small but realistic example of a deployment pipeline.
 In your actual experience there will likely be more environments such as
@@ -37,11 +37,12 @@ to deploy to production.
 
 After completing the lab, you will be able to:
 
--   Describe CI and its importance
+-   Describe Continuous Integration and Continuous Delivery
+    and their importance
 -   Explain configuration for different environments and why it is
     important
 -   Use the CF CLI commands to manage routes for an application
--   Describe the steps of a CI build
+-   Describe the steps of an automated Continuous Integration build
 
 ## Get started
 
@@ -82,8 +83,8 @@ or you can
 
 ## Configure environment variables
 
-[Add credentials as PAL Tracker project Github secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets)
-for the following environment variables based on your PAS Credentials:
+[Add credentials as PAL Tracker project Github repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+for the following environment variables based on your TAS Credentials:
 
 1.  `CF_API_URL`
 
@@ -157,17 +158,14 @@ environment and verify that the welcome message is correct.
 
 ## Wrap up
 
-Checkout the
-[Blue/Green Deployment slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gae083b4822_0_219)
-about how to use TAS routes to accomplish zero downtime upgrades.
-
 Now that you have completed the lab, you should be able to:
 
--   Describe CI and its importance
+-   Describe Continuous Integration and Continuous Delivery
+    and their importance
 -   Explain configuration for different environments and why it is
     important
 -   Use the CF CLI commands to manage routes for an application
--   Describe the steps of a CI build
+-   Describe the steps of an automated Continuous Integration build
 
 ## Extra
 
