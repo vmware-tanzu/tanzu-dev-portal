@@ -23,7 +23,7 @@ preview: npm
 
 #build: @ build site into `public` directory
 build: npm
-	hugo -b https://localhost:1313/developer
+	hugo -b http://localhost:1313/developer
 
 #test: @ runs act to simulate a github pull request test suite
 test: npm
@@ -35,10 +35,10 @@ spell: npm
 
 #local: @ used for running local netlify dev server
 local: function-config
-	hugo server -w
+	hugo server -w -b http://localhost:1313/developer
 
 #function-config: @ sets the function config variables during build
-function-config:
+function-config: npm
 ifeq ($(CONTEXT), production)
 	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
 else

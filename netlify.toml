@@ -17,7 +17,10 @@
 
 [dev]
   command = "make local"
-  publish = "public"
+  publish = "public/developer"
+  framework = "#custom"
+  targetPort = 1313
+  autoLaunch = true
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
