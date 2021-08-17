@@ -55,6 +55,7 @@ Aino
 airgap(ped)?
 Akka
 Alertmanager
+Aletty
 Alexa
 Alexey
 Alibaba
@@ -102,6 +103,7 @@ Artifactory
 artisanal
 Asciidoctor
 ASG(s)?
+Ashok
 Asiedu-Ampem
 aspirational
 Astra
@@ -666,6 +668,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gilardi
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -735,8 +738,10 @@ Herbrich
 hermeticism
 Heroku('s)?
 High-Cardinality
+Hillegass
 Hinojosa
 HMAC
+Hobsons
 hoc
 Hockin
 Homebrew
@@ -1566,6 +1571,7 @@ SNI
 SolidFire
 Soluto('s)?
 SomeRegion
+SonicDMG
 [Ss]onobuoy
 Sox
 [Ss]peedback
@@ -1764,6 +1770,7 @@ Vavr
 VCAP
 vCenter
 VCS
+Vega
 Velero('s)?
 Vendio
 vendored
