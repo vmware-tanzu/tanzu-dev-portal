@@ -132,7 +132,7 @@ To get some familiarity with routing, run the following commands:
     file.
     You will differentiate your route from others in the Tanzu Application Services
     instance by following
-    [this guide](../../../course-instructions/route-naming/index.html).
+    [this guide](../route-naming/).
 
 1.  Set this `route` for the application in your manifest.
     Your manifest should now look similar to the solution:

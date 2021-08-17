@@ -8,8 +8,8 @@ team:
 
 In this lab we will enable our applications to use
 [service discovery](https://docs.pivotal.io/spring-cloud-services/2-0/common/service-registry/)
-to register and locate microservices. The applications will be using
-Internal Routes on TAS.
+to register and locate microservices.
+The applications will be using Internal Routes on TAS.
 
 At the end of the lab, each application will be able to discover
 microservices by name, reducing the configuration needed to deploy our
@@ -43,23 +43,6 @@ After completing the lab, you will be able to:
 You will make no code changes in the lab.
 You will make only configuration changes to your
 distributed app running on TAS.
-
-## Service discovery and client load balancing
-
-Take a look at the following to view pattern and components:
-
--   Service Registry and Discovery solution pattern:
-
-    ![Service Registry and Discovery solution pattern](https://docs.pivotal.io/spring-cloud-services/2-0/common/service-registry/images/service-registry-overview.png)
-
--   Service Discovery and Client Load Balancing:
-
-    ![Service Discovery and Client Load Balancing](images/client-lb.png)
-
--   Load balancing in a modern cloud application:
-
-    ![Load balancing in a modern cloud application](images/client-lb2.png)
-
 
 ## Use Internal Routes instead of Spring Cloud Services Registry
 

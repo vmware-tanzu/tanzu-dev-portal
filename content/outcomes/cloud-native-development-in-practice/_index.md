@@ -120,7 +120,7 @@ After completing the course, you will be able to
 | ------- | ---------- | ---------- | ---------- |
 | Service Discovery and Client Side Load Balancing |[Concepts](https://docs.google.com/presentation/d/14P89lCFrS5Jcql1HA1lxrspMUGKnsc8R1VOQWcMUPLs/present#slide=id.ge9ceda5589_0_0) | [Lab](./service-discovery/) | [Implementations](https://docs.google.com/presentation/d/1DncxQ8_EXbhUO284pnojaC7Z_DYnGIQ5AaU8OulUrMM/present#slide=id.ge9ceda5589_0_0) |
 | Fault Tolerance |[Concepts](https://docs.google.com/presentation/d/1rErojSPHhbDNnOnFKLvrchwLcF4_lhH_Jri2QWG_rTc/present#slide=id.ge9ceda5682_0_0) | [Lab](./fault-tolerance/) | [Implementations](https://docs.google.com/presentation/d/11jngtQWW23wmnwl_Bmt7DWpEaxIEZPLgCfcaMue9tY4/present#slide=id.ge9ceda5682_0_0) |
-| Architecture Styles |[Intro](https://docs.google.com/presentation/d/1fq0pnLTkSSXg9WF0y0IVVeqSm3bYPWoaF7EVcEQscQY/present#slide=id.ge9ceda56f4_0_0) | [Lab](./architecture-styles/) | |
+| Architecture Styles |[Intro](https://docs.google.com/presentation/d/1fq0pnLTkSSXg9WF0y0IVVeqSm3bYPWoaF7EVcEQscQY/present#slide=id.ge9ceda56f4_0_0) | [Lab](./arch-styles/) | |
 | Securing a Distributed System |[Intro](https://docs.google.com/presentation/d/1arad8h_mRiX_NAbUC8hx7qeZAHeTKTU5y88yPbNYRqg/present#slide=id.ge9ceda571c_0_0) | [Lab](./security/) | |
 | External Configuration with Backing Services |[Concepts](https://docs.google.com/presentation/d/1Bo4KkHS0830-qbZV5d_TmbBdnbWuHSotVHAuUEFD_8c/present#slide=id.ge9cf28d82d_0_0) | [Lab](./external-config-backing-service/) | [Implementations](https://docs.google.com/presentation/d/1W6slax9Hu0tbbHrqlAVI4IlOegAuK-Dqxow182Hh37M/present#slide=id.ge9cf28d82d_0_0) |
 | API Gateways - coming soon |

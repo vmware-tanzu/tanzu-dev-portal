@@ -46,7 +46,7 @@ After completing the lab, you will be able to:
 
     You have nothing in your codebase yet except for the Gradle wrapper
     you generated during the
-    [Introduction lab](./intro/).
+    [Introduction lab](../intro/).
 
 1.  Verify the state of your Git workspace:
 
