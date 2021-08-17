@@ -242,8 +242,8 @@ Each application needs a unique route so that it does not collide with
 other students' applications.
 
 1.  Change the `route` value in each manifest to make it unique
-    following
-    [this guide](../../../course-instructions/route-naming/index.html).
+    following the
+    [Route Names](../route-naming/) guide.
 
 1.  Once you have chosen routes, update the value for
     `REGISTRATION_SERVER_ENDPOINT` in each manifest.

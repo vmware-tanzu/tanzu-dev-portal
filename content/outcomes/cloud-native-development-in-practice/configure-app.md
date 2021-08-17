@@ -84,7 +84,7 @@ be introduced in an upcoming lab.
 
 If you get stuck within this lab,
 you can either
-[view the solution](../intro/#view-a-file-from-a-solution),
+[view the solution](../intro/#view-a-solution),
 or you can
 [fast-forward](../intro/#fast-forward) to the `configuration-solution` tag.
 

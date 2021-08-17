@@ -47,7 +47,7 @@ The goal is to get the test suite passing by the end of the lab.
 
 If you get stuck within this lab,
 you can either
-[view the solution](../intro/#view-a-file-from-a-solution),
+[view the solution](../intro/#view-a-solution),
 or you can
 [fast-forward](../intro/#fast-forward) to the `mvc-solution` tag.
 

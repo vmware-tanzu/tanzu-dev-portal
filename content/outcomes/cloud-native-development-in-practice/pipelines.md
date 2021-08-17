@@ -76,7 +76,7 @@ After completing the lab, you will be able to:
 
 If you get stuck within this lab,
 you can either
-[view the solution](../intro/#view-a-file-from-a-solution),
+[view the solution](../intro/#view-a-solution),
 or you can
 [fast-forward](../intro/#fast-forward) to the `pipeline-solution` tag.
 
@@ -116,8 +116,8 @@ To get some familiarity with routing, run the following commands:
 
 1.  Map another route to your app with the `map-route` command, making
     sure to view the help for the command first.
-    Choose a unique hostname by following
-    [this guide](../../../course-instructions/route-naming/index.html).
+    Choose a unique hostname by following the
+    [Route naming guide](../route-naming/).
 
 1.  Navigate to both the old and new routes in a browser to check that
     both work and go to the same app.
