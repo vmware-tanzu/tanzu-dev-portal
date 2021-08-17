@@ -8,7 +8,7 @@ location: "Austin"
 weight: 1
 
 # Social Media 
-twitter: ""
+twitter: "@wiggitywhitney"
 website: ""
 facebook: ""
 linkedin: "whitneylee"

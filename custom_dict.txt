@@ -727,6 +727,7 @@ Herbrich
 hermeticism
 Heroku('s)?
 High-Cardinality
+Hillegass
 Hinojosa
 HMAC
 Hobsons
