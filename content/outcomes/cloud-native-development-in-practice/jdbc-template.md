@@ -279,12 +279,12 @@ See
 for more information.
 
 There are a couple of scenarios under which you may choose to suppress
-the auto-reconconfiguration:
+the auto-reconfiguration:
 
 1. Your app has multiple datasources to configure.
 1. You want to replace the auto-reconfigured datasource.
 
-You can turn off the auto reconfiguration behavior as follows:
+You can turn off the auto-reconfiguration behavior as follows:
 
 `cf set-env pal-tracker JBP_CONFIG_SPRING_AUTO_RECONFIGURATION '{ enabled: false }'`
 
