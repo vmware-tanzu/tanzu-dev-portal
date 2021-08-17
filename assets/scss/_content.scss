@@ -8,6 +8,11 @@
 
     p, li, td {
         font-weight: $font-weight-body-text;
+        color: #fff;
+    }
+
+    th {
+        color: #fff;
     }
 
     > h1 {
