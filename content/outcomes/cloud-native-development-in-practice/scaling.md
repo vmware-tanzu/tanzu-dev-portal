@@ -200,7 +200,7 @@ See the
 [Reddit outage postmortem announcement related to autoscaling](https://www.reddit.com/r/announcements/comments/4y0m56/why_reddit_was_down_on_aug_11/).
 
 It is sobering read that should give you pause when choosing to run an
-auto scaler, as well as operate it.
+autoscaler, as well as operate it.
 
 Another good read on the subject is
 [Release It! Second Edition](https://pragprog.com/titles/mnee2/release-it-second-edition/),

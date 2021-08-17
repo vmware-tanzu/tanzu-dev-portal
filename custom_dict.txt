@@ -127,6 +127,7 @@ Authorizer
 authorizer
 authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
+[Aa]uto-reconfiguration
 AutoBuild
 autocompletion
 [Aa]utoconfiguration
@@ -333,8 +334,8 @@ Cosgrove
 Coté
 counterintuitive
 COVID-19
-cpu(s)
-CPU(s)
+cpu(s)?
+CPU(s)?
 CQL
 CRD(s|-based)?
 create-load-balancer
@@ -523,7 +524,7 @@ EntryEventImpl's
 enum
 EnumInfo
 Enums
-env
+[Ee]nv
 EOF
 ESB
 etcd(ctl)?
@@ -1065,7 +1066,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
-middleware
+[Mm]iddleware
 Migros
 Mik
 Mikusa
@@ -1310,7 +1311,8 @@ PowerShell
 PR(s)?
 Pratik('s)?
 [pP]re-[pP]lanning
-pre-auth(or)(ed)
+pre-auth
+pre-author(ed)
 pre-built
 pre-configured
 pre-created
@@ -1411,7 +1413,7 @@ RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
 reimagine
-[Rr]eimplement
+[Rr]eimplement(ing)?
 Reinertsen
 reissuance
 removeAll
@@ -1435,7 +1437,7 @@ requestor
 Resilience4J
 ResourcePermission
 ResourceQuota(s)?
-restaging
+[Rr]estag(e|ed|ing)
 RestAssured
 RestrictedMethodAuthorizer
 Retrium
@@ -1618,7 +1620,7 @@ subjectAltName
 [Ss]ubnet(s)?
 suboptimal
 subpath
-[Ss]ubproject(s)
+[Ss]ubproject(s)?
 Subramaniam
 subregistry
 substring

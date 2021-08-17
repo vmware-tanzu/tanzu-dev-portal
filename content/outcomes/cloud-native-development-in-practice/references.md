@@ -62,7 +62,7 @@ applications.
   Play is based on a lightweight, stateless, web-friendly architecture.
 
   Built on Akka, Play provides predictable and minimal resource
-  consumption (CPU, memory, threads) for highly-scalable applications.
+  consumption (CPU, memory, threads) for highly scalable applications.
 
 - **[akka](http://akka.io/)** &mdash;
   Akka is a toolkit for building highly concurrent, distributed, and
