@@ -27,11 +27,11 @@ generated UUID (try running `uuid` from the command line).
 
 Here are some examples:
 
-1.  pal-tracker-ben-smith
+1.  `pal-tracker-ben-smith`
 
-1.  pal-tracker-47BFE3
+1.  `pal-tracker-47BFE3`
 
-1.  pal-tracker-12E51872-1682-4E1B-97D2-55D0EB44432B
+1.  `pal-tracker-12E51872-1682-4E1B-97D2-55D0EB44432B`
 
 ## Verify your route is unique
 
