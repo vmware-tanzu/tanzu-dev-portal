@@ -1,10 +1,11 @@
 ---
-title: Outcome Architectures
-linkTitle: Outcomes
+title: Learning Paths and Outcome Architectures
+linkTitle: Learning Paths and Outcomes
 description: |
     The successful adoption of technology is rooted in achieving outcomes. Whether
     these outcomes are focused on the internal needs of the business or for direct
-    engagement with your customer, the solutions employed are ever-evolving.
+    engagement with your customer, the solutions employed are ever-evolving. We've 
+    assembled these learning paths and courses to help you achieve impactful outcomes.
 menu:
     main:
         parent: "sections"
