@@ -4,7 +4,7 @@ lastmod: '2021-08-16'
 layout: single
 team:
 - VMware Tanzu Labs
-title: Prioritizing Impactful Outcomes
+title: "Prioritizing Impactful Outcomes: User Stories, Estimation, and Velocity"
 weight: 40
 ---
 
