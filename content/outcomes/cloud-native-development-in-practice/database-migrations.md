@@ -295,7 +295,7 @@ It is problematic for two reasons:
 
 -   It requires a tunnel to execute the migration against the managed
     and brokered MySQL database.
-    Your platform operators will likely not allow and enable tunnelling
+    Your platform operators will likely not allow and enable tunneling
     on your TAS platform.
 
 -   It requires the `pal-tracker` application to be pushed *before* the

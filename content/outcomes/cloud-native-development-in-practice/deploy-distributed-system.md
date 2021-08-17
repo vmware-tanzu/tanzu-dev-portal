@@ -6,7 +6,7 @@ team:
   - VMware Tanzu Labs
 ---
 
-In this lab we will use
+In this lab you will use
 [Github Actions](https://github.com/features/actions) to
 deploy a system of four applications to Tanzu Application Service.
 
@@ -47,8 +47,9 @@ After completing the lab, you will be able to:
 
 ## Set up CF services
 
-We will now create databases for our applications. We create them now because
-the MySQL service instances take time to provision.
+You will now create databases for our applications.
+You create them now because the MySQL service instances take time to
+provision.
 
 Create a MySQL service instance for each application.
 Call them `tracker-allocations-database`, `tracker-backlog-database`,
@@ -94,7 +95,7 @@ your codebase.
     different schemas.
 -   The `buildSrc` directory is a standard gradle directory that gets
     built before the rest of the build is loaded.
-    This is where we store the code for our custom gradle plugins.
+    This is where you store the code for our custom gradle plugins.
 
 ## Explore locally
 
@@ -125,7 +126,8 @@ command:
 ./gradlew applications:registration-server:bootRun
 ```
 
-Managing many terminal windows can be cumbersome, so we can use Gradle's
+Managing many terminal windows can be cumbersome,
+so you can use Gradle
 [parallel execution](https://guides.gradle.org/performance/#parallel_execution)
 feature to make things a bit easier.
 The following command finds all `bootRun` tasks in a gradle project and
@@ -138,7 +140,7 @@ executes them in parallel.
 Beware that running all applications in parallel will dump the log
 output of all applications to the same terminal, which can make
 debugging difficult.
-Also, pressing *Ctrl-C* will kill all applications at once.
+Also, pressing `Ctrl+C` will kill all applications at once.
 If you need to stop one application you can use the
 [JVM Project Status tool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jps.html)
 to list Java processes by running
@@ -201,7 +203,7 @@ curl -v localhost:8084/time-entries?userId=${USER_ID}
 
 ### Get the pipeline
 
-We have provided you a pipeline file as part of the `pipeline` tag.
+You are provided a pipeline file as part of the `pipeline` tag.
 
 Cherry pick this into your `pal-tracker-distributed` workspace:
 
@@ -232,7 +234,9 @@ The root directory contains a deployment manifest for each application
 in our distributed system.
 Familiarize yourself with a manifest, below.
 
-{{codebase-file codebase="pal-tracker-distributed" path="manifest-allocations.yml" lang="yaml" ref="service-discovery-start"}}
+```bash
+git show deploy-distributed-app-solution:manifest-allocations.yml
+```
 
 Each application needs a unique route so that it does not collide with
 other students' applications.
@@ -257,7 +261,7 @@ other students' applications.
 
     This will trigger a build on Github Actions given you have added
     the workflow pipeline.
-    We expect the build and deploy to succeed this time.
+    Expect the build and deploy to succeed this time.
 
 1.  For each application, visit its root page on PAS and test manually.
     Each one should display _Noop!_.

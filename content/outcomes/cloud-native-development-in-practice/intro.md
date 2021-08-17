@@ -46,12 +46,12 @@ The codebase structure will include a local git repo:
 
 1.  Navigate to the `workspace` sub-directory of your home directory.
 
-    Vmware Tanzu Labs engineers practice [pair programming](https://en.wikipedia.org/wiki/Pair_programming)
+    VMware Tanzu Labs engineers practice [pair programming](https://en.wikipedia.org/wiki/Pair_programming)
     and rotate pairs quite frequently, usually two to three times per
     week.
     Because of this, a developer may be assigned to a different
     workstation on any given day.
-    To reduce friction, Vmware Tanzu Labs engineers adopted this
+    To reduce friction, VMware Tanzu Labs engineers adopted this
     standard setup for where all project code is located.
 
     These lab instructions will assume from now on that your code is in
@@ -389,7 +389,7 @@ local, private branch in case you wish to recover your work via
 If you are sure to want to throw out any stashed work out permanently,
 run `git stash clear` command.
 
-### Staging and commiting your changes
+### Staging and committing your changes
 
 Many IDEs and UIs mask the local git workflow.
 When using the command line CLI,

@@ -23,7 +23,7 @@ After completing the lab, you will be able to:
 -   Describe the pros and cons of using Client Side Load Balancing
 -   Explain how to add Client Side Load Balancing and Service Discovery
     to an application
--   Identify the differences between routing through the GoRouter and
+-   Identify the differences between routing through the Gorouter and
     container to container networking
 
 ## Get started
@@ -123,5 +123,5 @@ Now that you have completed the lab, you will be able to:
 -   Describe the pros and cons of using Client Side Load Balancing
 -   Explain how to add Client Side Load Balancing and Service Discovery
     to an application
--   Identify the differences between routing through the GoRouter and
+-   Identify the differences between routing through the Gorouter and
     container to container networking

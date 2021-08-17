@@ -13,7 +13,8 @@ Repository using [Spring JDBC Template](https://docs.spring.io/spring/docs/curre
 
 After completing the lab, you will be able to:
 
--   Recall why ORMs encourage circular dependencies
+-   Recall why *Object Relational Mappers* encourage circular
+    dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
 -   Describe how to set up a Spring Boot app running on CF to connect
@@ -78,7 +79,7 @@ Configure flyway in your `build.gradle` file as follows:
     + import org.flywaydb.gradle.task.FlywayMigrateTask
     ```
 
-1.  Add the `flyway` plugin to the the `plugins` closure:
+1.  Add the `flyway` plugin to the `plugins` closure:
 
     ```diff
       plugins {
@@ -218,7 +219,8 @@ as the `routes` and `env` labels.
 
 Now that you have completed the lab, you should be able to:
 
--   Recall why ORMs encourage circular dependencies
+-   Recall why *Object Relational Mappers* encourage circular
+    dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
 -   Describe how to set up a Spring Boot app running on CF to connect
@@ -289,7 +291,7 @@ You can turn off the auto reconfiguration behavior as follows:
 This will suppress auto configuration of your datasource via
 `VCAP_SERVICES` during the next push and staging of your application.
 
-You will also need to configure your datasource or datasourses by
+You will also need to configure your datasource or datasources by
 parsing `VCAP_SERVICES` for the associated service binding credentials,
 or you can also use the
 [VCAP processor provided by Spring Boot](https://github.com/spring-projects/spring-boot/blob/v1.3.3.RELEASE/spring-boot/src/main/java/org/springframework/boot/cloud/CloudFoundryVcapEnvironmentPostProcessor.java).

@@ -52,7 +52,7 @@ characteristics of the `pal-tracker` application:
     [concurrent scale out model](https://12factor.net/concurrency),
     meaning that it can run multiple application instances concurrently.
 
-Now you will use the auto-scaler to accommodate for increased workload
+Now you will use the autoscaler to accommodate for increased workload
 through `pal-tracker` application.
 
 ### Scenario
@@ -73,8 +73,8 @@ and you have good insights into the runtime characteristics:
     workload 10 rps throughout the day.
 
 1.  You forecast in the next release you will have situational daily
-    peaks where the `pal-tracker` application may peak between between
-    40 and 50 rps.
+    peaks where the `pal-tracker` application may peak between 40 and 50
+    rps.
     How many instances will you need to run at peak periods,
     without factoring in availability?
 
@@ -105,7 +105,7 @@ performance, stability, and scaling characteristics of your app.
     [install the Tanzu Application Services Autoscaler CLI plugin](https://docs.pivotal.io/application-service/2-9/appsman-services/autoscaler/using-autoscaler-cli.html#install-the-app-autoscaler-cli-plugin).
 
 1.  You are supplied the set up script that will configure an
-    auto-scaling rule for you with the following characteristics:
+    autoscaling rule for you with the following characteristics:
 
     -   Minimum number of instances:
         3
@@ -135,7 +135,7 @@ performance, stability, and scaling characteristics of your app.
     watch cf autoscaling-events pal-tracker
     ```
 
-### Observe auto-scaling
+### Observe autoscaling
 
 1.  From a separate terminal window,
     run a load test:
@@ -160,7 +160,7 @@ performance, stability, and scaling characteristics of your app.
 1.  Let your load test complete,
     or terminate it by `Ctrl+C`.
 
-### Turn off auto-scaling
+### Turn off autoscaling
 
 1.  Observe both the *pal-tracker watch* and *autoscaler watch*
     terminal windows.
@@ -168,7 +168,7 @@ performance, stability, and scaling characteristics of your app.
     How long does it take before the autoscaler scales down to the
     minimum 3 instances?
 
-1.  Turn off the auto-scaler:
+1.  Turn off the autoscaler:
 
     ```bash
     ./scripts/turn-off-autoscaling.sh
@@ -178,13 +178,13 @@ performance, stability, and scaling characteristics of your app.
 
 ### Autoscaling limitations
 
-You saw that the auto-scaling behavior is not instantaneous.
+You saw that the autoscaling behavior is not instantaneous.
 It is designed conservatively using a concept of *Governor*,
 an algorithm that limits rate of change within the autoscaler to
-prevent potential of inadvertant outages if it is mistuned,
-or misused.
+prevent potential of inadvertent outages if it is not tuned or used
+correctly.
 
-The [Scenario](#scenario) alluded that you have signficant knowledge
+The [Scenario](#scenario) alluded that you have significant knowledge
 about the performance, stability, scaling and capacity usage of your
 application.
 The scenario in this lab is actually quite naive,
@@ -194,10 +194,10 @@ and also to do empirical testing to verify behaviors that you
 anticipate to encounter in production.
 
 **If you do not have this background and knowledge,**
-**do not use the auto-scaler!**.
+**do not use the autoscaler!**.
 
 See the
-[Redit outage post mortem announcement related to autoscaling](https://www.reddit.com/r/announcements/comments/4y0m56/why_reddit_was_down_on_aug_11/).
+[Reddit outage postmortem announcement related to autoscaling](https://www.reddit.com/r/announcements/comments/4y0m56/why_reddit_was_down_on_aug_11/).
 
 It is sobering read that should give you pause when choosing to run an
 auto scaler, as well as operate it.

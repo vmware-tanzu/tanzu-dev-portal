@@ -164,7 +164,7 @@ This lab will walk you through the more interesting and important ones.
 
 When you enable your Spring Boot applications to talk to external
 *backing services* using auto configuration,
-such as relational databases or message-oriented-middleware,
+such as relational databases or *Message Oriented Middleware*,
 Spring Boot will automatically provide health indicators
 that you may monitor for the ability of the application to
 connect to them.
@@ -217,7 +217,7 @@ They can be used for:
 The actuator health endpoint is one of the various data points that
 may be streamed to monitoring systems:
 
-1.  Near-realtime monitoring systems
+1.  Near realtime monitoring systems
 
     These systems tell application operators the current state of the
     application.
@@ -228,8 +228,9 @@ may be streamed to monitoring systems:
 
     These systems allow application operators to report on historical
     performance of their workloads.
-    For example, mean time to recovery or application uptime/availbility
-    are metrics that can be calculated from time-series data.
+    For example, mean time to recovery or application
+    uptime/availability are metrics that can be calculated from
+    time-series data.
 
 ### Platform automation/self healing
 
@@ -367,7 +368,7 @@ demonstrate a broken liveness state in your `pal-tracker` application:
     ```
 
 1.  Verify a request against the liveness endpoint with a 503 HTTP
-    response and an *down* status:
+    response and a *down* status:
 
     ```bash
     curl -v localhost:8080/actuator/health/liveness

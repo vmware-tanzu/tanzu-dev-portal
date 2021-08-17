@@ -63,7 +63,7 @@ After completing the lab, you will be able to:
     but there might be some requests in flight during the shutdown
     event.
 
-    Your application design should accomodate for such transient
+    Your application design should accommodate for such transient
     failures.
 
 1.  Let your load test complete,

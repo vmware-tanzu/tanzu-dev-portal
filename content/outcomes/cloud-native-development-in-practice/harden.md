@@ -40,8 +40,8 @@ After completing the lab, you will be able to:
     **You will likely receive a git merge conflict message after**
     **executing the `cherry-pick`,**
     **either on the `route` you defined,**
-    **or the `JBP_CONFIG_OPEN_JDK_JRE` environment varilable change**
-    **wth the explicit `memory_calcuator` `stack_threads` configuration.**
+    **or the `JBP_CONFIG_OPEN_JDK_JRE` environment variable change**
+    **with the explicit `memory_calcuator` `stack_threads` configuration.**
     **Make sure to clean the up the merge conflicts,**
     **and pick the updated `JBP_CONFIG_OPEN_JDK_JRE` configuration.**
     **After that,**
@@ -56,8 +56,8 @@ After completing the lab, you will be able to:
 
     -   `pal-tracker` manifest file with the desired initial state of
         your app.
-    -   Scripts you will use to enable and teardown autoscaling later in
-        the lab.
+    -   Scripts you will use to enable and tear down the autoscaling
+        later in the lab.
 
 1.  Ensure you have the latest code built on your local dev workstation
     that includes all the updates from the previous labs,

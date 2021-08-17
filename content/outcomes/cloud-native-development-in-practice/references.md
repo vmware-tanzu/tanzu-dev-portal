@@ -44,7 +44,7 @@ applications.
   Server, and Cloud Foundry services.
 
 - **[Evolve](https://github.com/lecaillon/Evolve)** &mdash;
-  Open source migration tool that uses plain old sql scripts.
+  Open source migration tool that uses plain old SQL scripts.
   Its purpose is to automate your database changes, and help keep those
   changes synchronized through all your environments and development
   teams, making it an ideal tool for continuous integration / delivery.
@@ -123,7 +123,7 @@ applications.
 ## Spring
 
 - **[Understanding Spring Boot](https://geowarin.github.io/understanding-spring-boot.html)** &mdash;
-  An top-down overview of Spring Boot autoconfiguration.
+  A top-down overview of Spring Boot autoconfiguration.
 
 - **[Spring Boot Autoconfiguration](http://sivalabs.in/2016/03/how-springboot-autoconfiguration-magic/)** &mdash;
   A bottom-up overview of Spring Boot autoconfiguration.

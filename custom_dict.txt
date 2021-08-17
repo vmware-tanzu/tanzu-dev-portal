@@ -7,7 +7,7 @@
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
-[0-9]*(GB|MB|KB|Mi|m|m?s|k)
+[0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
@@ -53,6 +53,7 @@ Agile-ific
 Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
+Akka
 Alertmanager
 Alexa
 Alexey
@@ -73,7 +74,7 @@ Ansari
 Ansible
 anthonyjvetter
 antifragility
-antipatterns?
+[Aa]ntipatterns?
 Antrea
 Apdex
 api
@@ -82,6 +83,7 @@ ApiResponse
 APIs?
 APM
 AppArmor
+AppDynamics
 appender
 application-centric
 ApplicationEvent
@@ -127,6 +129,7 @@ authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 AutoBuild
 autocompletion
+[Aa]utoconfiguration
 AutoDeploy
 autosave
 [Aa]utoscal(e|ers|er|ing)?
@@ -330,7 +333,8 @@ Cosgrove
 Coté
 counterintuitive
 COVID-19
-CPUs
+cpu(s)
+CPU(s)
 CQL
 CRD(s|-based)?
 create-load-balancer
@@ -369,6 +373,7 @@ CVE(s|-reported)?
 cybersecurity
 Cygwin
 D2iQ
+d3
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
@@ -440,6 +445,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+[Dd]isposability
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
@@ -473,10 +479,12 @@ dotnetsdk
 Dre
 drf
 dropdown
+Dropwizard
 Drotbohm
 DSL(s)?
 Dubois
 durations
+Dynatrace
 DZone
 e280e387f128e70537e37093d26f6422
 e2e
@@ -538,6 +546,7 @@ F5
 facto
 failback
 [Ff]ailover(s)?
+Fakhouri
 Falco
 Fani
 faq(s)?
@@ -675,6 +684,7 @@ GoDaddy
 Google('s)?
 goReflect
 Görkem
+Gorouter
 gotchas
 Gothelf
 GraalVM(-powered|.)?
@@ -766,6 +776,7 @@ InfoQ
 InfoSec
 IngressRoute
 init(Container)?
+InitialCapacity
 initializer
 initializeTotalDetails
 initializeTotalPrimaryDetails
@@ -897,6 +908,7 @@ kata
 Katas
 KEK(s)?
 kendrickcoleman
+Kerievsky
 [Kk]ey[Ss]tore
 keychain
 keySet
@@ -993,6 +1005,7 @@ logback
 Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
+Loggregator
 LogPartitionedRegionBucketDetailsFunction
 logQueue
 [lL]ogrus
@@ -1054,6 +1067,7 @@ microservices-oriented
 Microsystems
 middleware
 Migros
+Mik
 Mikusa
 Minella
 Mini-Wheats
@@ -1140,6 +1154,7 @@ non-JVM
 non-Kubernetes
 non-routable
 non-schedulable
+Noop
 NoSQL
 NotificationListener
 npm
@@ -1170,11 +1185,13 @@ OneMagnify
 onRegion
 onServer
 onServers
+Onsi
 OOM
 oom_killer
 OOP
 OOTB
 OPA
+Opdyke
 OpenAPI(Tools)?
 OpenFeign
 OpenID
@@ -1289,10 +1306,11 @@ Poppendieck
 Postfacto
 [Pp]ostgres
 POSTROUTING
+PowerShell
 PR(s)?
 Pratik('s)?
 [pP]re-[pP]lanning
-pre-auth
+pre-auth(or)(ed)
 pre-built
 pre-configured
 pre-created
@@ -1377,6 +1395,7 @@ Recommender
 [Rr]eddit
 [rR]edis
 RedMonk('s)?
+Reenvisioning
 Reetro
 refactorings?
 RegExMethodAuthorizer
@@ -1392,6 +1411,7 @@ RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
 reimagine
+[Rr]eimplement
 Reinertsen
 reissuance
 removeAll
@@ -1559,6 +1579,7 @@ Springdom
 SpringOne(2020)?
 SpringSecurityManager
 SpringSecurityManagerDistributedTest
+SQL
 sqlite
 SqlServer
 SqlServer|sqlserver
@@ -1592,11 +1613,12 @@ STT
 Styra
 subclasses
 subcommand
-subdirectory
+subdirector(y|ies)
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
 subpath
+[Ss]ubproject(s)
 Subramaniam
 subregistry
 substring
@@ -1762,6 +1784,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+Vlissides
 VMCachedDeserializable
 VMs?
 VMSS

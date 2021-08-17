@@ -90,7 +90,7 @@ or you can
 
 ## Add test dependencies
 
-Since you now have have added tests to your codebase,
+Since you now have added tests to your codebase,
 you need to set up the build to use a testing framework.
 You will use Junit 5.
 
@@ -259,7 +259,9 @@ Create an endpoint to see some of that information.
 
     Take a look at our solution if you get stuck:
 
-    {{codebase-file codebase="pal-tracker" path="src/main/java/io/pivotal/pal/tracker/EnvController.java" ref="configuration-solution" lang="java" hidden="true"}}
+    ```bash
+    git show configuration-solution:src/main/java/io/pivotal/pal/tracker/EnvController.java
+    ```
 
 1.  Run your app and navigate to [localhost:8080/env](http://localhost:8080/env).
     Make sure you are getting a response.

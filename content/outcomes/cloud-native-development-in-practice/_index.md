@@ -53,7 +53,7 @@ Spring Boot applications run on them.
 This path is also provided as an updated archive of the
 previous instructor-led courses:
 
-- *Vmware Tanzu Master Class for Java Developers*
+- *VMware Tanzu Master Class for Java Developers*
 - *Pivotal Acceleration Lab for Java Developers*
 
 ## Learning Outcomes
@@ -87,7 +87,7 @@ After completing the course, you will be able to
 | ------- | ---------- | ---------- | ---------- |
 | Initialize an app | | [Lab](./spring-boot-app-build/) | |
 | Deploy it | [TAS Push](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61) | [Lab](./spring-boot-app-deploy/) | [TAS Staging](https://docs.google.com/presentation/d/1gWulATqi0WvV7SUEbAK3qVbNW80Y2pplsCD4NGy-fFE/present#slide=id.ge70b517444_0_0) |
-| Configure it |[Environment](https://docs.google.com/presentation/d/1Sy5EvqCLPHSv1zJ8NyPyza4oAANn1qxYCeiyJclQgZ0/present#slide=id.ge9c860dbf9_0_0) | [Lab](./configure-app/) | [TAS Env](https://docs.google.com/presentation/d/1s8bT9cpfMWXluYkCZHVUB9jKUmfG-ODzj2P1nZsBVaY/present#slide=id.ge9c860dc14_0_0) |
+| Configure it |[Environment](https://docs.google.com/presentation/d/1Sy5EvqCLPHSv1zJ8NyPyza4oAANn1qxYCeiyJclQgZ0/present#slide=id.ge9c860dbf9_0_0) | [Lab](./configure-app/) | [TAS Environment](https://docs.google.com/presentation/d/1s8bT9cpfMWXluYkCZHVUB9jKUmfG-ODzj2P1nZsBVaY/present#slide=id.ge9c860dc14_0_0) |
 | Pipeline |[Routing](https://docs.google.com/presentation/d/1pAL1pL-KtQT4RUiAE4DdeFedzW-9U1V9Joq2hiukzho/present#slide=id.gb53c81140d_0_51) | [Lab](./pipelines/) | |
 | Build a REST app |[Web Apps](https://docs.google.com/presentation/d/17UWVwjWNjP3H0i8jCXybCyB7qC_N7gesq3vCj1aUsag/present#slide=id.gd58f40471a_2_0) | [Lab](./spring-mvc/) | |
 | Backing Services & Database Migrations |[Services](https://docs.google.com/presentation/d/1I0PCgsBnsbz_EOfWSpNhcdb73xCd-Zj1g-h3IGe3ox4/present#slide=id.gae083b4822_0_215) | [Lab](./database-migrations/) | [Migrations](https://docs.google.com/presentation/d/15DO2A_raKVbPh7qGjXQ9Hi79NFwZdsImHu04jNlsC54/present#slide=id.gae083b4822_0_14) |

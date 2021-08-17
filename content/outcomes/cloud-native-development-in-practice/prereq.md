@@ -21,7 +21,7 @@ If you want to do the labs,
 it will be up to you to set up or acquire environments in which to
 run the labs.
 
-This section lists the prequisites and caveats.
+This section lists the prerequisites and caveats.
 
 ## Practitioner
 
@@ -37,10 +37,10 @@ the following knowledge is required:
 - Navigating a Java IDE
 - Ability to search the web to find technical answers
 
-If you are coming from Windows and are Powershell literate,
+If you are coming from Windows and are PowerShell literate,
 you will likely be able to navigate the Bash shell commands,
-or translate to Powershell if you choose to run the labs on Windows
-Powershell rather than Bash.
+or translate to PowerShell if you choose to run the labs on Windows
+PowerShell rather than Bash.
 
 If you have no experience with terminals or Java,
 you will struggle to get through the labs.
@@ -116,4 +116,4 @@ Following are the tools you need to run the labs:
 You can also run a Linux desktop from a virtual machine using
 Virtual Box,
 Vagrant,
-or even run on Amazon via a published AMI.
+or even run on Amazon via a published *Amazon Machine Image*.

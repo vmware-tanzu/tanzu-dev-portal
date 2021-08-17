@@ -85,7 +85,7 @@ Review the following java classes:
     ```
 
 -   `InMemoryTimeEntryRepository` -
-    implements the `TimeEntryRepository` interface using a HashMap
+    implements the `TimeEntryRepository` interface using a `HashMap`
     based implementation.
 
     ```bash
@@ -134,7 +134,7 @@ you will build out a REST service for Time Entries using a
     notice the following:
 
     -   Notice the pattern of setting up text fixtures,
-        executing the the controller methods under test,
+        executing the controller methods under test,
         and verifying successful execution of each method.
 
         ```java

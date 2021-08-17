@@ -112,7 +112,7 @@ you can begin building a Spring Boot _Hello World_ application.
     ```
 
     This will configure the name of your Gradle project which ensures
-    that your jarfile has the correct filename.
+    that your jar file has the correct filename.
 
 1.  Refresh the Gradle project in your IDE so that it picks up
     your changes.
@@ -168,9 +168,9 @@ you can begin building a Spring Boot _Hello World_ application.
     line that says it is listening on port 8080.
     Navigate to [localhost:8080](http://localhost:8080) and see that the
     application responds.
-    You will see a whitelabel error page with a status code of 404.
+    You will see a white label error page with a status code of 404.
     The application is running but it does not have any controllers.
-    Stop the application with _CTRL + C_.
+    Stop the application with `Ctrl+C`.
 
 ## Create a controller
 

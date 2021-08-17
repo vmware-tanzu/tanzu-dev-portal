@@ -70,7 +70,7 @@ collection or analytics tool of your choice,
 such as
 [Splunk](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html)
 or
-[FluentD](https://docs.cloudfoundry.org/devguide/services/fluentd.html#drain).
+[Fluentd](https://docs.cloudfoundry.org/devguide/services/fluentd.html#drain).
 
 You can read more about the
 [Tanzu Application Services Loggregator Architecture](https://docs.cloudfoundry.org/loggregator/architecture.html).
