@@ -15,6 +15,8 @@ topics:
 oldPath: "/content/guides/spring/spring-route-authorization-testing.md"
 aliases:
 - "/guides/spring/spring-route-authorization-testing"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Security enables us to lock down routes in applications to particular roles.

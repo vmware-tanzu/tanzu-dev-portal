@@ -19,6 +19,8 @@ weight: 3
 oldPath: "/content/guides/microservices/deconstructing-the-monolith.md"
 aliases:
 - "/guides/microservices/deconstructing-the-monolith"
+level1: Modernizing Legacy Applications
+level2: Deconstruction
 ---
 
 There is a pretty good chance more than a few people in your organization are talking about microservices these days. Perhaps you’ve noticed more copies of Eric Evans’ [Domain-Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215), or maybe they’ve taken a [training course](http://www.wmrichards.com/microservices-architecture.html) or two. And while there are ample [resources](https://martinfowler.com/microservices/) to help you understand the nuances of a suite of small focused services, most start from, well, greenfield development. Much as physicists are first taught to “[ignore air resistance](https://www.forbes.com/sites/chadorzel/2015/09/29/the-annoying-physics-of-air-resistance/#38a1ab0e718a)” software prognostication often ignores the reality facing every organization - the entrenched portfolio of heritage applications that make up the bulk of every company’s IT environment. While it is tempting to nuke and pave, you have to face the facts, these applications are powering your business and you must chart a path forward.

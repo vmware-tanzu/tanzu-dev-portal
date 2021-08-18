@@ -14,6 +14,8 @@ topics:
 oldPath: "/content/guides/kubernetes/dev-workflow-tilt.md"
 aliases:
 - "/guides/kubernetes/dev-workflow-tilt"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 When developing applications to be deployed on Kubernetes, additional steps are

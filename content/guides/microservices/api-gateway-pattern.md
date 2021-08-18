@@ -13,6 +13,8 @@ topics:
 oldPath: "/content/guides/microservices/api-gateway-pattern.md"
 aliases:
 - "/guides/microservices/api-gateway-pattern"
+level1: Building Modern Applications
+level2: Microservice Patterns
 ---
 
 In a microservices architecture, you may have multiple types of front-end clients communicating with back-end services. These clients could include mobile applications, web applications, or third-party applications. The back end may be composed of many different services exposed over various protocols (SOAP+XML, REST+HTTP, JMS, AMQP, WebSocket, etc.). Clients may collect data from multiple services. In some cases, these services may come from legacy applications,  and each application may have its own way of handling security.
