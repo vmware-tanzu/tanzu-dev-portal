@@ -159,7 +159,7 @@ If the number of story points a team delivers varies widely across multiple iter
 ## Keep Learning
 
 Find out how to run an [iteration planning meeting](https://tanzu.vmware.com/developer/practices/ipm/), where your team will estimate and discuss user stories.
-- Ready to dive into more fine grained details of what balanced teams are? Check out this VMware Tanzu Labs [Balanced Team Whitepaper](https://tanzu.vmware.com/content/white-papers/how-to-build-better-software-with-balanced-teams).
+Read our [blog post on how to write user stories that are easy to understand](https://tanzu.vmware.com/content/blog/be-good-to-your-devs-write-user-stories-that-are-easy-to-understand).
 
 ## Related Topics
 
