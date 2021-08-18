@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/python/gs-python-like-a-pro.md"
 aliases:
 - "/guides/python/gs-python-like-a-pro"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 ### Why do you need this guide?

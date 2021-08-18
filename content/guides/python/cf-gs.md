@@ -20,6 +20,8 @@ topics:
 oldPath: "/content/guides/python/cf-gs.md"
 aliases:
 - "/guides/python/cf-gs"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 In this guide, you'll learn how to get a Python application into production in seconds. 
