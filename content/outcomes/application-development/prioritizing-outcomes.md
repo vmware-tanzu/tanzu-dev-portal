@@ -8,7 +8,7 @@ title: "Prioritizing Impactful Outcomes: User Stories, Estimation, and Velocity"
 weight: 40
 ---
 
-Being busy isn’t the same as making progress towards an important goal. To make progress, the team has to know what to work on, why it is important, and when one task is done and it’s time to move on to the next. The team also has to know what is the next most important and valuable thing to work on so they are always delivering the most impactful to their end users. Using user stories, estimated based on risk complexity, and ruthlessly prioritize based on that information is the best way we’ve seen to consistently and predictably deliver value forever.
+Being busy isn’t the same as making progress towards an important goal. To make progress, the team has to know what to work on, why it is important, and when one task is done and it’s time to move on to the next. The team also has to know what is the next most important and valuable thing to work on so they are always delivering the most impactful to their end users. Using user stories, estimated based on risk complexity, and ruthlessly prioritized based on that information is the best way we’ve seen to consistently and predictably deliver value forever.
 
 ![Two People at a Whiteboard](/images/outcomes/application-development/whiteboard2.jpg)
 
