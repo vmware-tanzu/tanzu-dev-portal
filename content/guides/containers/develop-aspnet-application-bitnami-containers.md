@@ -19,6 +19,8 @@ weight: 1
 oldPath: "/content/guides/containers/develop-aspnet-application-bitnami-containers.md"
 aliases:
 - "/guides/containers/develop-aspnet-application-bitnami-containers"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 [Docker](https://www.docker.com) containers have become increasingly popular amongst developers on account of their ease of use, consistency and portability. For .NET developers looking to develop and publish applications using containers, Bitnami offers a number of options:

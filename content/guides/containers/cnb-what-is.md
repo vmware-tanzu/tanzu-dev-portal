@@ -17,6 +17,8 @@ topics:
 oldPath: "/content/guides/containers/cnb-what-is.md"
 aliases:
 - "/guides/containers/cnb-what-is"
+level1: Modern App Basics
+level2: DevOps Practices
 ---
 
 [Cloud Native Buildpacks](https://buildpacks.io/) turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 

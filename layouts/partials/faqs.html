@@ -1,0 +1,31 @@
+{{ with .Params.faqs }}
+    <link rel="stylesheet" href="{{ "/css/faq.css" | relURL }}">
+    <div class="faqs" id="faqs">
+        <div class="flex-container jc-between"></div>
+            <h2 class="h2 mb-md">Frequently Asked Questions</h2>
+            {{ range .faq }}            
+            <div class="faq">
+                <div class="faq-item" id="faq-item">
+                    <div class="flex jc-between ai-center">
+                        <h4 class="faq-question">{{ .question | markdownify }}</h4>
+                        <i class="fa fa-angle-down" id="arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div>{{ .answer | markdownify }}</div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(".faq-item").each( function() {
+            $(this).click(function () {
+                $(this).find("#arrow").toggleClass("flip"); // Flip the display arrow
+                $(this).find(".faq-answer").slideToggle(200); // Toggle the answer
+            });
+        });
+    </script>
+{{ end }}
