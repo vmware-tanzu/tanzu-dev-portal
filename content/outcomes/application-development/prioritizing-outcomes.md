@@ -145,7 +145,7 @@ Estimation gives the team _data which helps them learn how to deliver more predi
 
 To do this, we use the concept of **velocity**. You can calculate velocity by taking an average of the story points delivered in previous iterations. Once you know how many story points are left in your backlog, you can use your team’s velocity to forecast approximately how many iterations it is going to take to deliver the rest of the work.
  
-Of course circumstances change and unexpected things happen, so predictions are never going be 100 percent certain. To accommodate for risk, use a range of estimates based on optimistic and pessimistic scenarios. 
+Of course circumstances change and unexpected things happen, so predictions are never going to be 100 percent certain. To accommodate for risk, use a range of estimates based on optimistic and pessimistic scenarios. 
 
 If the number of story points a team delivers varies widely across multiple iterations, then the team’s velocity has **high volatility**. This makes it harder to predict delivery. It’s worth taking time with your team to understand why volatility is high and try to address it. Even uncertain estimates help to reduce and communicate risk, and make software delivery more predictable. Again, predictability and consistency are more important than raw numbers, and enable more accurate future planning.
 
