@@ -145,18 +145,55 @@
   
   // Adjust anchors vs the fixed menu.
   @include media-breakpoint-up(md) {
-      .td-offset-anchor:target {
-          display: block;
-          position: relative;
-          top: -4rem;
-          visibility: hidden;
-      }
-  
-      h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before {
-          display: block;
-          content: " ";
-          margin-top: -5rem;
-          height: 5rem;
-          visibility: hidden;
-      }
+    .td-offset-anchor:target {
+      display: block;
+      position: relative;
+      top: -4rem;
+      visibility: hidden;
+    }
+
+    h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before {
+      display: block;
+      content: " ";
+      margin-top: -5rem;
+      height: 5rem;
+      visibility: hidden;
+    }
   }
+
+.data-service-left-edge {
+  border-left-style: solid;
+  position: absolute;
+  width: 4px;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+}
+
+.left-edge-color-blue {
+  border-left-color: rgba(73, 175, 217, 1);
+}
+
+.left-edge-color-gray {
+  border-left-color: rgba(173, 187, 196, 1);
+}
+;
+
+.left-edge-color-green {
+  border-left-color: rgba(96, 181, 21, 1);;
+}
+
+
+.data-service-landing-page-product-tile {
+  .icon {
+    float: left;
+  }
+
+  .h4 {
+    padding-top: 0.5rem;
+  }
+
+  p {
+    float: left;
+  }
+}
