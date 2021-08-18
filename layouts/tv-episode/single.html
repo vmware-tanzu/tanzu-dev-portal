@@ -1,0 +1,224 @@
+{{ define "main" }}
+
+{{ $class := replace .Page.Section "." "-" | lower }}
+<section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-7 pt-4 pb-5">
+	<div class="container">
+		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+    <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
+    {{ if .Params.description_episode }}
+      <div class="lead"><p>{{ .Params.description_episode | markdownify }}</p></div>
+    {{ else if .Parent.Params.description_episodes }}
+      <div class="lead"><p>{{- .Parent.Params.description_episodes | markdownify }}</p></div>
+    {{ else }}
+      <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
+    {{ end }}
+   </div>
+</section>
+
+<!-- IF UPCOMING -->
+{{ $.Scratch.Set "streamName" "" }}
+{{ $.Scratch.Set "streamUrl" "#" }}
+{{ if isset .Params "twitch" }} 
+  {{ $.Scratch.Set "streamUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
+  {{ $.Scratch.Set "streamName" "on Twitch" }}
+  {{ $.Scratch.Set "embedSite" "twitch" }}
+{{ else if isset .Params "youtube" }}
+  {{ $.Scratch.Set "streamUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
+  {{ $.Scratch.Set "streamName" "on YouTube" }}
+  {{ $.Scratch.Set "embedSite" "youtube" }}
+{{ end }}
+<div class='container'>
+  <div id="live" class="row justify-content-center mt-5 pt-3">
+    {{ if .Params.banner_only }}
+      <div class="col-lg-9 col-12 px-0">
+        <img src="{{ .Params.episode_banner | relURL }}">
+      </div>
+    {{ else }}
+      <div class="col-lg-5 col-12 mb-5 pl-0">
+        <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
+        <div>
+          <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
+          <div class="float-left ml-3 pl-1">
+            <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
+            <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12 px-0">
+        <img src="{{ .Params.episode_banner | relURL }}">
+      </div>
+    {{ end }}
+
+  </div>
+
+  <div class="row justify-content-center" id="stream-embed">
+    <h2 class="mb-2"> {{- .Title -}}</h2>
+    <div id="internal-embed" class="container justify-content-center mt-3 pt-3" style="text-align: center;">
+      {{ if eq ($.Scratch.Get "embedSite") "youtube" }}
+        <iframe width="910" height="512" src='https://www.youtube.com/embed/{{ .Params.youtube }}' frameborder='0' allowfullscreen></iframe>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- ELSE IF PREVIOUS -->
+  <div id="vod" class="row justify-content-center mt-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h2 class="mb-2"> {{- .Title -}}</h2>
+      <p class='show-date mt-4 text-white h5 mb-4'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+
+      {{ if .Params.youtube }}
+      <div class="youtube-video-shortcode">
+        <iframe id="episode-embed" src="https://www.youtube.com/embed/{{ .Params.youtube }}?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {{ else }}
+      {{ if .Params.register }}
+      <div>
+        <a href="{{ .Params.register }}">
+        <img src="{{ .Params.episode_banner | relURL }}"></a><br>
+      </div>
+      {{ else }}
+      <div>
+        <a href="https://www.twitch.tv/{{ .Params.twitch }}">
+        <img src="{{ .Params.episode_banner | relURL }}"></a><br>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <!-- END -->
+
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+  <script type="text/javascript">
+    var live = document.getElementById("live");
+    var vod = document.getElementById("vod");
+    var embed = document.getElementById("stream-embed");
+    var episodeType = "";
+    var currentTime = Date.now();
+    var startTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
+    var duration = "{{default 60 .Params.minutes }}" * 60000;
+    var endTime = new Date(startTime + duration).getTime();
+
+    // Display content based on the current state:
+    // Future event: Show the air time and link to Twitch
+    // Live event: Embed the twitch stream
+    // Past event: Link/embed the VOD depending if it's on Twitch or YouTube
+    if (currentTime < startTime) {
+      live.style.display = "flex";
+      embed.style.display = "none";
+      vod.style.display = "none";
+      episodeType = "live";
+    } 
+    else if (currentTime >= startTime && currentTime <= endTime) {
+      live.style.display = "none";
+      embed.style.display = "flex";
+      vod.style.display = "none";
+      episodeType = "live";
+
+      {{ if eq ($.Scratch.Get "embedSite") "twitch" }}
+        new Twitch.Embed("stream-embed", {
+            width: 1130,
+            height: 480,
+            channel: "vmwaretanzu",
+        });
+      {{ end }}
+    }
+    else {
+      live.style.display = "none";
+      embed.style.display = "none";
+      vod.style.display = "flex";
+      episodeType = "vod";
+    }
+  </script>
+
+  {{ partial "amplitude.html" (dict "context" . "event" "episode viewed") }}
+
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0 mt-5">
+      {{ if not .Params.no_episode_title }}
+        <h3>In this episode</h3>
+      {{ end }}
+      {{ if .Params.calendar }}
+        <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
+      {{ end }}
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{ with .Params.guests }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Guests</h3>
+      {{ range . }}
+        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          <div class="border-bottom mb-4 pb-5">
+          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with .Params.hosts }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Hosts</h3>
+      {{ range . }}
+        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          <div class="mb-4">
+          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with .Params.speakers }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Speakers</h3>
+      {{ range . }}
+        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          <div class="mb-4">
+          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if and (.Params.contact) (.Params.code_of_conduct) }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ else if .Params.contact}}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a></p>
+      </div>
+    </div>
+  {{ else if .Params.code_of_conduct }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p><a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ end }}
+  <div class="row justify-content-center mb-5 text-center">
+    <div class="col-lg-9 col-12 px-0 d-flex">
+      <div class="feedback mt-4 pt-4 w-100 text-left border-top">
+        <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{{ partial "amplitude.html" (dict "context" . "event" "episode played") }}
+
+{{ end }}

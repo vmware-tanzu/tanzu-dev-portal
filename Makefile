@@ -11,6 +11,7 @@ help:
 
 #theme: @ runs git module to update the theme
 theme:
+	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
 	git submodule update --init --recursive
 
 #npm: @ runs npm install to install dependencies
@@ -19,7 +20,7 @@ npm: theme
 
 #preview: @ preview hugo
 preview: npm
-	hugo server -b http://localhost:1313/developer
+	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
 #build: @ build site into `public` directory
 build: npm
