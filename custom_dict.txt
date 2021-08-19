@@ -54,6 +54,7 @@ Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
 Alertmanager
+Aletty
 Alexa
 Alexey
 Alibaba
@@ -100,6 +101,7 @@ Artifactory
 artisanal
 Asciidoctor
 ASG(s)?
+Ashok
 Asiedu-Ampem
 aspirational
 Astra
@@ -498,6 +500,7 @@ EKS
 ElasticSearch
 ELB(s)?
 Eleftheria
+Emad
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -656,6 +659,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gilardi
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -701,6 +705,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+Hackenburg
 Hadlow
 Hamano
 Hananiel
@@ -724,8 +729,10 @@ Herbrich
 hermeticism
 Heroku('s)?
 High-Cardinality
+Hillegass
 Hinojosa
 HMAC
+Hobsons
 hoc
 Hockin
 Homebrew
@@ -819,6 +826,7 @@ JaFU
 Jakarta
 Jakub
 Jarvinen
+Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
@@ -916,6 +924,7 @@ Knative-Serving
 knative-serving
 KNN
 KoFu
+Kostadis
 kotlin
 Kousen
 Kpack
@@ -1438,6 +1447,7 @@ rom-com
 rootPassword
 Rosecrance
 Rosso
+Roussos
 [Rr]outable
 Route53
 RouteAuthSpecs
@@ -1544,6 +1554,7 @@ SNI
 SolidFire
 Soluto('s)?
 SomeRegion
+SonicDMG
 [Ss]onobuoy
 Sox
 [Ss]peedback
@@ -1740,6 +1751,7 @@ Vavr
 VCAP
 vCenter
 VCS
+Vega
 Velero('s)?
 Vendio
 vendored
@@ -1817,6 +1829,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+Yonis
 youtube
 ytt
 Zalando
@@ -1825,4 +1838,5 @@ ZDNet
 ZOP
 Zou
 Zuul
+Zynga
 μServices

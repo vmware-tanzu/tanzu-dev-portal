@@ -12,6 +12,8 @@ weight: 1
 oldPath: "/content/guides/kubernetes/controlling-ingress-with-contour.md"
 aliases:
 - "/guides/kubernetes/controlling-ingress-with-contour"
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 In Kubernetes, Ingress is a set of routing rules that define how external traffic is routed to an application inside a Kubernetes cluster. An Ingress controller watches for changes to objects in the cluster and then wires together a data path for each request to be resolved. An Ingress controller processes the requests for resources, provides transport layer security (TLS) termination, and performs other functions.
@@ -22,7 +24,7 @@ Ingress is an important component of Kubernetes because it cleanly separates an 
 
 Contour is built for Kubernetes to empower you to quickly deploy cloud native applications by using the flexible IngressRoute API. Contour deploys the Envoy proxy as a reverse proxy and load balancer.
 
-### What Is Envoy?
+## What Is Envoy?
 [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) is a Layer 7 (application layer) bus for proxy and communication in modern service-oriented architectures, such as Kubernetes clusters. Envoy strives to make the network transparent to applications while maximizing observability to ease troubleshooting.
 
 ## What Problems Does Contour Solve?

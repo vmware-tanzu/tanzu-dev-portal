@@ -1,0 +1,43 @@
+<div class='d-flex container flex-wrap'>
+
+    <div class='sidebar col-lg-3 col-0 pl-0 pr-3'>
+        <h3>Filter</h3>
+        <br/>
+        <ul class='filters'>
+            <li class="filter active" filter="all">View all</li>
+            {{ partial "section-tags.html" . }}
+        </ul>
+    </div>
+
+    <div class="section-index flex-1">
+        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+        {{ $parent := .Page }}
+        {{ if $parent.Params.no_list }}
+        {{/* If no_list is true we don't show a list of subpages */}}
+        {{ else if $parent.Params.simple_list }}
+        {{/* If simple_list is true we show a bulleted list of subpages */}}
+            <ul>
+                {{ range $pages }}
+                    {{ if eq .Parent $parent }}
+                        <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        {{ else }}
+        {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
+        <!-- <hr class="panel-line"> -->
+            <!-- <div class="col"> --><div class="row">
+            {{ range $pages }}
+                {{ if eq .Parent $parent }}
+                <div class="filter-item flex-315 mr-0 mr-lg-2 mb-2 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
+                    <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .RelPermalink }}">
+                        <h2 class="h4 link mt-3 pt-0">{{- .Title -}}</h2>
+                        <p class="fs-90">{{ .Description | markdownify }}</p>
+                    </a>
+                </div>
+                {{ end }}
+            {{ end }}
+           <!--  </div> --></div>
+        {{ end }}
+    </div>
+</div>

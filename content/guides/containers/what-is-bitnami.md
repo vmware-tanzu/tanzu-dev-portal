@@ -15,6 +15,8 @@ topics:
 oldPath: "/content/guides/containers/what-is-bitnami.md"
 aliases:
 - "/guides/containers/what-is-bitnami"
+level1: Modern App Basics
+level2: Kubernetes Platform
 ---
 
 Bitnami is an application packaging and publishing startup that was acquired by VMware in 2019. It is a leading provider of prepackaged open source software that runs natively in environments where a large portion of developers and other users want to build or deploy applications in the major public clouds, on laptops, and on Kubernetes. 

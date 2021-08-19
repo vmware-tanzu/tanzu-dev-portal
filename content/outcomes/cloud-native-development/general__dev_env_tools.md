@@ -15,7 +15,7 @@ As software engineers, we work with the tools of our trade the whole time. Still
 * Distributed source control with **Git**. You should be comfortable with the [basic commands](https://www.atlassian.com/git/tutorials) on the command line, including clone, fetch/merge/pull, add/rm, commit, and push.
 * Your **IDE** of choice. For example, [Eclipse](https://www.eclipse.org/) with the [Spring Tools Suite](https://spring.io/tools) or [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/). While we want our application and its build process to be decoupled from its development environment, you are going to use it every day during your project. It pays to get familiar with common actions. You should be comfortable with the basics of creating and importing new projects, standard code navigation, and generic refactoring commands. You should also be familiar with how to run tests within your favorite IDE, as you will do that a lot.
 
-#### Homework
+## Homework
 
 - Review the applicable [tutorial(s)](https://howtodoinjava.com/) from Java 8 through your current version of Java.
 - Run through the [Git tutorials](https://www.atlassian.com/git/tutorials).
