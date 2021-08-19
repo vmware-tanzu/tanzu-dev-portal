@@ -146,7 +146,7 @@ This is a relatively low-risk test that will give them a lot of confidence as to
 1. _[The Startup Way](https://www.amazon.com/Startup-Way-Companies-Entrepreneurial-Management/dp/1101903201/): How Modern Companies Use Entrepreneurial Management to Transform Culture and Drive Long-Term Growth_ by Eric Ries.
 1. _[Measure What Matters](https://www.amazon.com/Measure-What-Matters-audiobook/dp/B07BMJ4L1S/): OKRs: The Simple Idea that Drives 10x Growth_ by John Doerr.
 
-### Related topics
+## Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)
 - [Lean Product Development](https://tanzu.vmware.com/content/videos/lean-product-development-by-michael-fisher)
 - [User Centered Design](https://tanzu.vmware.com/campaigns/design)

@@ -22,7 +22,7 @@ level1: Building Modern Applications
 level2: Frameworks and Languages
 ---
 
-### Why do you need this guide?
+## Why do you need this guide?
 
 As a professional Python developer, you'll be asked to work on a wide variety of projects. The tools you'll use to do that work may need to change on a project-by-project basis. One day you may be maintaining some legacy code written in Python 2; the next day, you may be prototyping in the very latest version of Python 3.
 
@@ -30,7 +30,7 @@ And here lies the problem. The [2019 Python Developers Survey][survey] found tha
 
 So in this guide, you'll learn how to install many different versions of Python at the same time and discover how to switch between them with ease.
 
-### Before You Begin
+## Before You Begin
 
 There's a lot of different OS and package management choices out there.  But in the [Python Survey][survey] mentioned earlier, Linux was shown to be the most popular OS. [Ubuntu 20.04][ubuntu] has been chosen as the baseline for this guide because it's the latest LTS of the most popular Linux distribution. Ubuntu is also used in the [Windows Subsystem for Linux][wsl], so it's available to most Windows 10 based developers. On Mac OS, most of the tools shown here can be added via Homebrew.
 
@@ -38,7 +38,7 @@ When following this guide, it helps if you're starting from a clean system. That
 
 Finally, if you'd prefer to watch a video on this guide, scroll down to the bottom of the page and hit 'play.'
 
-### Installing Python Like A Pro
+## Installing Python Like A Pro
 
 Having the ability to install and switch between Python versions in seconds --- without affecting your operating system --- will make your job much easier. Fortunately, there's a tool that can help.
 
@@ -54,7 +54,7 @@ Pyenv lets you:
 
 Follow the steps below to install the `pyenv` tool on your system.
 
-#### Step 1: Getting Your System Ready
+### Step 1: Getting Your System Ready
 
 Ubuntu 20.04 ships with version 3.8.2 of Python pre-installed as the 'system' version of Python. You'll want to keep this, but it's helpful to make it respond to all `python` commands. By default, it will only respond to `python3`. To fix this, you can install the `python-is-python3` command like so:
 
@@ -64,7 +64,7 @@ sudo apt install python-is-python3
 
 If you're not using Ubuntu 20.04, your system may already respond to the command `python`.
 
-#### Step 2: Installing Pyenv
+### Step 2: Installing Pyenv
 
 Installation is simple. A script in the open-source [pyenv-installer][pyenv-installer] project installs everything you need onto your computer.
 
@@ -100,7 +100,7 @@ pyenv doctor
 
 If this command reports, `"Congratulations! You are ready to build pythons!"` then you're good to go.
 
-#### Step 3: Installing Python 3.8.5
+### Step 3: Installing Python 3.8.5
 
 First of all, to see the full list of the available Python versions --- there are a lot --- type the following command.
 
@@ -123,7 +123,7 @@ pyenv rehash
 ```
 
 
-#### Step 4: Switching Between Python Versions
+### Step 4: Switching Between Python Versions
 
 Now that Python 3.8.5 is installed, let's take a look at the Python versions that `pyenv` reports are available for use:
 
@@ -160,7 +160,7 @@ pyenv global system
 
 And that's it. You can now install and switch between many different versions of Python any time you like!
 
-### Keep Learning
+## Keep Learning
 
 To find out more about what pyenv can do for you, check out the [website][pyenv] or try `pyenv --help`. To get help on a specific command type `pyenv <command> --help`.
 

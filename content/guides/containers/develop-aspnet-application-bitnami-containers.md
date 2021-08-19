@@ -147,7 +147,7 @@ Once you have a published, tested version of your application, you can proceed t
   
   The result of this command is an image containing the application, the ASP.NET framework and all the related dependencies.
 
-# Step 3: Test and publish the Docker image
+## Step 3: Test and publish the Docker image
 
 Once you have the application image, you can test it and publish it as follows:
 
