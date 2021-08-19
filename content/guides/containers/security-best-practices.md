@@ -19,6 +19,8 @@ topics:
 oldPath: "/content/guides/containers/security-best-practices.md"
 aliases:
 - "/guides/containers/security-best-practices"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 When a container is built and/or used, it is important to ensure that the image is built by following best practices in terms of security, efficiency, performance, etc. This article will go over some of the key points Bitnami takes into account when publishing Bitnami containers. It covers image tagging, non-root configuration and arbitrary UIDs, the importance of reducing size and dependencies, and the release process, including CVE scanning and tests.

@@ -14,6 +14,6 @@ Spring Boot provides an assortment of automatic health monitoring and metrics th
 
 When you add these to your Spring Boot app, you get automatic embedded monitoring and reporting in the application, along with many extension points for adding custom health indicators and other metrics. Read the [Spring Actuator guide to build a RESTful web service](https://spring.io/guides/gs/actuator-service/), or add actuators to one of the applications you have already crafted as part of this guide.
 
-#### Homework
+## Homework
 
 - Read the [Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) guide.

@@ -18,6 +18,6 @@ In cases where the caching solution assumes it has only one client (read and wri
 
 If your app already interacts with a caching layer, refer to the [Caching Data with Spring](https://spring.io/guides/gs/caching/) guide to get an idea of how you could use Spring Boot's abstraction layer.
 
-#### Homework
+## Homework
 
 - Read the [Caching Data with Spring](https://spring.io/guides/gs/caching/) guide.

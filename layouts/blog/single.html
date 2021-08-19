@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ partial "amplitude.html" (dict "context" . "event" "blog post viewed") }}
+<div class="td-main blog">
+	<div class="mt-lg-5 mt-md-5 mt-4 pt-lg-5 pt-md-5 pb-2">
+		<div class='container pt-2'>
+			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+			<br/>
+			<h1>{{ .Title }}</h1>
+			<!--<p>{{ .Description }}</p>-->
+
+			{{ partial "byline" (dict "context" . "withdate" "true") }}
+			
+			<div class="short-gradient-line  mb-3"></div>
+
+
+		</div>
+	</div>
+	<div class="container py-2">
+		<div class="col-lg-9 px-0">
+				{{ .Content }}
+				{{ partial "faqs.html" . }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+		<div class="feedback pt-4 my-4 border-top">
+			<a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Blog Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+		</div>
+	</div>
+</div>
+{{ end }}

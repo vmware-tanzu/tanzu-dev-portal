@@ -11,6 +11,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/observability-k8s-monitoring-checklist.md"
 aliases:
 - "/guides/kubernetes/observability-k8s-monitoring-checklist"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 To run a Kubernetes platform effectively, cluster administrators need visibility
