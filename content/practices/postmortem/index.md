@@ -38,7 +38,7 @@ First, let's define an Incident:
    
    Example of timeline:
    
-   ![Postmortem Timeline](/images/practices/postmortem/timeline.jpg)
+   ![Postmortem Timeline](images/timeline.jpg)
    
    Make sure to invite the right people for the postmortem session. For example:
    

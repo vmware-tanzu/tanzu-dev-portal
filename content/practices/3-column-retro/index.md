@@ -137,7 +137,7 @@ There are many free retrospective tools available.
 #### 3-Column Retro with fun themes using Miro
 Online tools like this allow for people to get more engaged with fun themes.
 
-![3 Column Retrospective in Miro](/images/practices/3-column-retro/retro-2.png)
+![3 Column Retrospective in Miro](images/retro-2.png)
 {{% /section %}}
 
 {{% section %}}

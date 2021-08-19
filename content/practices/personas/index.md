@@ -101,5 +101,5 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 ![Example of a paper-based persona](images/example-3.png)
 
-![Example of a digital persona template](/images/practices/personas/example-5.jpg)
+![Example of a digital persona template](images/example-5.jpg)
 {{% /section %}}

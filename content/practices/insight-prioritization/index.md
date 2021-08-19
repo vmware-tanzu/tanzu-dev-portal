@@ -46,7 +46,7 @@ why:
    {{% callout %}}
    Tip: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
    {{% /callout %}}
-![2x2 diagram showing stickies in each quadrant](/images/practices/insight-prioritization/step-4.png)
+![2x2 diagram showing stickies in each quadrant](images/step-4.png)
 {{% /section %}}
 
 {{% section %}}

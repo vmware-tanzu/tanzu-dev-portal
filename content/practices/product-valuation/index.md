@@ -116,7 +116,7 @@ The time needed varies greatly for several reasons. For example, if you have the
 
    Visit the ["tell your story" section of the Miro board](https://miro.com/app/board/o9J_lNuKt0U=/?moveToWidget=3074457356234182075&cot=14) for more helpful notes. 
 
-   ![Example slide depicting the value of a fake API the team is creating, including dollar value of projected savings and an ROI value](/images/practices/product-valuation/step-6.png)
+   ![Example slide depicting the value of a fake API the team is creating, including dollar value of projected savings and an ROI value](images/step-6.png)
 {{% /section %}}
 
 {{% section %}}
@@ -155,7 +155,7 @@ In step 1 or 2, you may want to use a prioritization exercise similar to [Insigh
 
 ![Example value slide showing how an MVP saves 60 minutes of time per document for a set of users with a future projection based on an assumed adoption rate](images/example-1.png)
 
-![Another example value slide showing the number of developer hours saved with the team's solution in place](/images/practices/product-valuation/example-2.png)
+![Another example value slide showing the number of developer hours saved with the team's solution in place](images/example-2.png)
 {{% /section %}}
 
 {{% section %}}

@@ -83,7 +83,7 @@ why:
 
    ![Design Studio Discussion](images/ds-4.png)
    
-   ![Design Studio Example](/images/practices/design-studio/ds-example-2.png)
+   ![Design Studio Example](images/ds-example-2.png)
 {{% /section %}}
 
 {{% section %}}
@@ -136,5 +136,5 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 ![Design Studio Example](images/ds-example-5.png)
 
-![Design Studio Example](/images/practices/design-studio/ds-example-6.png)
+![Design Studio Example](images/ds-example-6.png)
 {{% /section %}}

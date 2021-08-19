@@ -86,5 +86,5 @@ Success is when you have a shared understanding of the biggest risks and have a 
 
 {{% section %}}
 ### Real World Examples
-![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
+![Whiteboard table showing risks in one column and related mitigation strategies in another](images/example-2.jpg)
 {{% /section %}}

@@ -85,7 +85,7 @@ You know you are done when the team has a group of positive practices and assign
 
 {{% section %}}
 ### Real World Examples
-![Design Studio Example](/images/practices/futurespective/example.png)
+![Design Studio Example](images/example.png)
 {{% /section %}}
 
 {{% section %}}

@@ -196,7 +196,7 @@ This session is usually better to do once you have a product **mission**, **visi
 ### Success/Expected Outcomes
 At the end of this exercise, you will have a roadmap of product organized sequentially in this way:  
 
-![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
+![Now, Near Term, and Future Term Outcomes](images/now-near-future-1.png)
 {{% /section %}}
 
 {{% section %}}
@@ -224,7 +224,7 @@ Companies adopt different formats of roadmaps. Most will have some kind of outco
 
 ![Outcomes in Priority Order](images/grid2.png)
 
-![Outcomes with Levels of Certainty](/images/practices/outcome-oriented-roadmap/high-low.jpg)
+![Outcomes with Levels of Certainty](images/high-low.jpg)
 {{% /section %}}
 
 {{% section %}}

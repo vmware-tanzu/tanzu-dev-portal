@@ -87,7 +87,7 @@ Regardless of how you decide to run your design critique, you should ensure that
 
 {{% section %}}
 ### Real World Examples
-![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+![Design printout with feedback attached using sticky notes](images/example-2.jpg)
 {{% /section %}}
 
 {{% section %}}

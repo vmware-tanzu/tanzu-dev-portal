@@ -113,7 +113,7 @@ Path-to-production exercise
 ### Real World Examples
 Example of a **product development life cycle**
 
-![Value Stream Map image](/images/practices/value-stream-map/value-stream-map-3.jpg)
+![Value Stream Map image](images/value-stream-map-3.jpg)
 {{% /section %}}
 
 {{% section %}}

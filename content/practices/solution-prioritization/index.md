@@ -62,7 +62,7 @@ why:
    Tip: If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
 
-   ![Nested 2x2 quadrant](/images/practices/solution-prioritization/step-3.png)
+   ![Nested 2x2 quadrant](images/step-3.png)
 {{% /section %}}
 
 {{% section %}}
@@ -95,5 +95,5 @@ This is an activity that you can time box if it feels drawn out. Many of the tip
 
 {{% section %}}
 ### Real World Examples
-![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
+![Digital two by two with prioritized solutions](images/example-6.jpg)
 {{% /section %}}

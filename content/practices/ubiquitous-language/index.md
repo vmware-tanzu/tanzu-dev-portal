@@ -84,7 +84,7 @@ Try as hard as you can to have one or more domain experts in the room with you. 
 {{% section %}}
 ### Real World Examples
 
-![example ubiquitous language workshop on whiteboard](/images/practices/ubiquitous-language/example-1.jpg)
+![example ubiquitous language workshop on whiteboard](images/example-1.jpg)
 {{% /section %}}
 
 {{% section %}}

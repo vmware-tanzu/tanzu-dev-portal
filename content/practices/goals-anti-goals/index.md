@@ -70,5 +70,5 @@ If you have a lot of people in your Kickoff (e.g. 15+), consider asking everyone
 {{% section %}}
 ### Real World Examples
 
-![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](/images/practices/goals-anti-goals/example-3.jpg)
+![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](images/example-3.jpg)
 {{% /section %}}

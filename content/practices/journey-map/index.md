@@ -94,7 +94,7 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 {{% section %}}
 ### Real World Examples
 
-![Journey map on a whiteboard example](/images/practices/journey-map/example-1.jpg)
+![Journey map on a whiteboard example](images/example-1.jpg)
 {{% /section %}}
 
 {{% section %}}

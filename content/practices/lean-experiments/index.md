@@ -188,9 +188,9 @@ If there are many assumptions to validate, consider following up with a hypothes
 
 {{% section %}}
 ### Real World Examples
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-2.jpg)
+![Lean Experiment Drawings](images/lean-experiment-2.jpg)
 
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-3.jpg)
+![Lean Experiment Drawings](images/lean-experiment-3.jpg)
 {{% /section %}}
 
 {{% section %}}

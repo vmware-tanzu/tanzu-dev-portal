@@ -90,7 +90,7 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 Here's a good example using a digital drawing tablet:
 
-![Digital Drawing Toast](/images/practices/draw-toast/example-6.jpg)
+![Digital Drawing Toast](images/example-6.jpg)
 {{% /section %}}
 
 {{% section %}}
@@ -102,7 +102,7 @@ Here's a good example using a digital drawing tablet:
 
 ![Drawing Toast](images/example-4.jpg)
 
-![Drawing Toast](/images/practices/draw-toast/example-1.jpg)
+![Drawing Toast](images/example-1.jpg)
 {{% /section %}}
 
 {{% section %}}

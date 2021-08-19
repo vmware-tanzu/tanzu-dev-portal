@@ -61,7 +61,7 @@ why:
    - Business metrics
    - Unfair advantage
 
-   ![Lean business canvas template with order specified](/images/practices/lean-business-canvas/step-7.png)
+   ![Lean business canvas template with order specified](images/step-7.png)
 {{% /section %}}
 
 {{% section %}}
