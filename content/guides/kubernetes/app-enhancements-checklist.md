@@ -20,7 +20,7 @@ This list is a starting place for considerations about your application running
 on Kubernetes. It is not exhaustive and should be expanded based on your
 requirements.
 
-### Required
+## Required
 
 The following are items that must be completed before running on Kubernetes.
 
@@ -44,7 +44,7 @@ applications should log to stdout and/or stderr.
 For more details, see the [Logging Practices guide](../app-enhancements-logging-practices/).
 {{% /checklist-item %}}
 
-### Recommended
+## Recommended
 
 The following are items that you should consider to ensure your application can run well on Kubernetes.
 

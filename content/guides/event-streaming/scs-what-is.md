@@ -46,6 +46,7 @@ Consider the following scenario of an application that has one input and one out
 In this scenario, you can see that there are two logical bindings—one for input and another for output—that communicate with the binder. The binder then handles communication with the message broker directly. All of this happens outside of your code, so rather than connecting to the broker, creating the channels, and defining how everything gets routed, Spring will abstract away as much as possible.
 
 Out of the box, Spring Cloud Stream will automatically create channels if they don’t already exist and use auto-generated names if they aren’t provided, and will serialize your data the best it can. This is all configurable and customizable, however, and as is the case with much of Spring, it makes the best decisions that it can given the data it has.  
+
 ## How Can I Use It?
 
 Make sure to check out [Getting Started with Spring Cloud Stream](../scs-gs) for a more in-depth walkthrough of Spring Cloud Stream, as well as this great [Quick Start doc on Spring.io](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/current/reference/html/spring-cloud-stream.html#_quick_start). Finally, you can find many code examples in the [Spring Cloud GitHub](https://github.com/spring-cloud/spring-cloud-stream-samples/).
