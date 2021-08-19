@@ -16,22 +16,22 @@ In a world where we work with anyone, anywhere, anytime, upon anything, **what i
 
 The answer is our **foundational principles**. Within Tanzu Labs, we've developed six principles which complement our [VMware EPIC<sub>2</sub> values](https://www.vmware.com/radius/vmwares-culture-built-epic2-values/) with an eye towards how we work with clients and each other:
 
-### ⚡️ Empower Teams
+## ⚡️ Empower Teams
 Diverse teams with shared context, psychological safety, and decision-making authority move faster.
 
-### 🌱 Start Simple
+## 🌱 Start Simple
 Learn just enough to begin and let the work inform the direction.
 
-### 🦋 Embrace Change
+## 🦋 Embrace Change
 Expect change and turn it into opportunity.
  
-### 🚀 Deliver Early and Often
+## 🚀 Deliver Early and Often
 Ship value to users and measure impact to lower risk.
 
-### 🔬 Improve Continuously
+## 🔬 Improve Continuously
 We are always learning and humbled by what we don't know.
 
-### ❤️ Give Back
+## ❤️ Give Back
 Share our time, tools, code, and approach with internal and open source communities to maximize impact.
 
 ---

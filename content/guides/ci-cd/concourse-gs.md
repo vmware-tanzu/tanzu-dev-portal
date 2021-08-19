@@ -68,7 +68,7 @@ Next, define a variable for your username of your GitHub account.
 export GH_USERNAME=your-github-username
 ```
 
-### Installation
+## Installation
 Let’s get started by installing Concourse CI onto Kubernetes. This installation will be abbreviated; it’s intended for demonstration and learning purposes only. Full installation instructions using Helm can be found [via the Concourse CI team](https://github.com/concourse/concourse-chart) from which the installation instructions in this guide borrow heavily.
 
 **Optional step**: Concourse CI installation in a local context is fairly straightforward. There are some default attributes contained in the `install/values.yml` file; leaving these as their default values will get you a working installation. That said, there are a few values that you may choose to modify in order to slightly customize your installation and experiment with Concourse CI. Modify this file to suit your needs. Comments on each line will explain their respective functions.
@@ -120,7 +120,7 @@ Running this script opens up a node port in your Kubernetes cluster and forwards
 
 You can access the cluster by logging in using the credentials set in the `values.yml` file. If you left them as default the username and the password are both `test`. At this point, there are no pipelines set; you need to install the fly client application first.
 
-### Installing fly
+## Installing fly
 Fly is the local client application developers and Concourse CI administrators use as their primary way to interact with the cluster from the command line. To install fly, download the binary from your Concourse CI cluster directly by clicking the link appropriate for your system, as shown here. 
 
 ![Download Fly](/images/guides/ci-cd/concourse/screenshots/download-fly.png)
@@ -211,7 +211,7 @@ When clicking into that pipeline, you will see the jobs and resources depicted a
 
 ![Download Fly](/images/guides/ci-cd/concourse/screenshots/pipeline.png)
 
-### The pipeline 
+## The pipeline 
 
 Back at the CLI, unpause the pipeline using the `unpause-pipeline` command, which can be abbreviated `up`. 
 
@@ -223,7 +223,7 @@ Watch the pipeline complete. Then click into the running job and watch it comple
 
 ![Pipeline run](/images/guides/ci-cd/concourse/screenshots/concourse-test.gif)
 
-### The pipeline and job run details 
+## The pipeline and job run details 
 
 That’s it! Your pipeline is now monitoring your test branch for changes. Whenever a change is made, this pipeline will be kicked off and the tests will be run. Feel free to keep experimenting with this pipeline configuration, and build it to suit your needs. Push more changes to the application and watch Concourse CI trigger a new test run. 
 

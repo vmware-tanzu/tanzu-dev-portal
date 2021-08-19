@@ -22,19 +22,19 @@ Git is a free and open source version control system that is widely used in the 
 
 Gitflow enables you to work on your own feature branch in isolation before committing to the main project branches, i.e. develop and master.  Features may be driven from your preferred project planning tool as assigned tasks.  Gitflow helps manage the Git history to reflect the progress against specific issues.
 
-### Install GitFlow
+## Install GitFlow
 
-#### OS X
+### OS X
 ```bash
 brew install gitflow
 ```
 
-#### Linux
+### Linux
 ```bash
 apt-get install gitflow
 ```
 
-#### Windows (via Cygwin)
+### Windows (via Cygwin)
 
 > `wget` and `util-linux` are required to install gitflow.  For more detailed instructions see [https://github.com/nvie/gitflow/wiki/Windows](https://github.com/nvie/gitflow/wiki/Windows)
 
@@ -42,7 +42,7 @@ apt-get install gitflow
 wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
 ```
 
-### GitFlow initialization and settings
+## GitFlow initialization and settings
 
 1. From the local repository directory (e.g. /universal-imports),
 ```bash
@@ -60,7 +60,7 @@ support = support/
 versiontag = -v
 ```
 
-### GitFlow workflow
+## GitFlow workflow
 
 1. Before starting a feature branch ensure that you have the latest code from the `develop` branch,
 
@@ -133,7 +133,7 @@ git flow feature start 007
     git branch -d feature/007
     ```
 
-### Resolve Unstaged Change Warnings
+## Resolve Unstaged Change Warnings
 
 Resolve unstaged change warnings using:
 
@@ -149,11 +149,11 @@ To bring back your stashed changes:
 git stash pop
 ```
 
-### Avoid Fast-forward Merges
+## Avoid Fast-forward Merges
 
 Suppose you are working on "feature/007" and there have been changes in the meantime to the "develop" branch.
 
-#### Approach 1 - Pre-sync the target branch
+### Approach 1 - Pre-sync the target branch
 
 ```bash
 git checkout develop
@@ -162,7 +162,7 @@ git checkout feature/007
 git flow feature finish 007
 ```
 
-#### Approach 2 - Merge the branches with the "no fast-forward" flag
+### Approach 2 - Merge the branches with the "no fast-forward" flag
 
 ```bash
 git flow feature start 007

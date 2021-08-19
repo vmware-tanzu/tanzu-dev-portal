@@ -31,7 +31,7 @@ Once configuration has been decoupled from source code, configure your
 application to consume it at runtime by presenting environment variables or
 mounting a file in the container.
 
-### Environment Variables
+## Environment Variables
 
 Most programming languages support reading environment variables from the local
 environment. The following is an example of this in Go.
@@ -76,7 +76,7 @@ spec:
       value: "foo.example.com"
 ```
 
-### Mounted Files
+## Mounted Files
 
 Another way to inject configuration is through a local file. Most programming
 languages support reading from a local file. The following is an example of this
@@ -159,7 +159,7 @@ handle sensitive information in the context of Kubernetes using
 biggest difference between a Secret and ConfigMap is that Secret data is stored
 in `base64` encoding, whereas ConfigMap data is stored in plain text.
 
-### Secret Creation
+## Secret Creation
 
 Create a secret using `kubectl` with the following command:
 ```shell
@@ -178,7 +178,7 @@ data:
   password: MWYyZDFlMmU2N2Rm
 ```
 
-### Environment Variables
+## Environment Variables
 
 Secrets may be mounted in a pod as an environment variable, just like
 configuration.
@@ -207,7 +207,7 @@ spec:
   restartPolicy: Never
 ```
 
-### Mounted Files
+## Mounted Files
 
 Similarly, secrets may also be mounted in a pod as a file.
 

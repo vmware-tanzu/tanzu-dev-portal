@@ -46,7 +46,7 @@ minikube start --memory=4096 --disk-size=10g
 
 Once your Minikube environment is created, you can install Tekton by applying the YAML from the [latest release](https://github.com/tektoncd/pipeline/releases):
 
-### Install Tekton
+## Install Tekton
 ```bash
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
 ```
