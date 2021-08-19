@@ -17,6 +17,6 @@ There are many commercial and open-source options for this - the former includes
 Go to the [Building a Gateway](https://spring.io/guides/gs/gateway/) guide to learn how to craft your first API gateway with SCG.
 
 
-#### Homework
+## Homework
 
 - Read the [Building a Gateway](https://spring.io/guides/gs/gateway/) guide.

@@ -21,7 +21,7 @@
             {{ if eq .Parent $parent }}
             <div class="flex-315 mr-3 mb-3">
                 <a class="linked-box td-box--gray-darkest px-4 py-2" href="{{ .RelPermalink }}">
-                    <h4 class="link mt-3">{{- .Title -}}</h4>
+                    <h2 class="link mt-3 pt-0 h4">{{- .Title -}}</h2>
                     <p>{{ .Description | markdownify }}</p>
                 </a>
             </div>

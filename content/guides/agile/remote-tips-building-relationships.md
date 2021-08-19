@@ -19,7 +19,7 @@ level2: Team Tips
 
 ## Socializing
 
-#### Here are a few ways your team can make remote work fun:
+### Here are a few ways your team can make remote work fun:
 
 - Create virtual water cooler Zoom rooms and Slack channels with specific themes (e.g., favorite movie, last night's dinner, #baking, #bad-jokes, etc.).
 - ⏱ Set 10 minutes of casual catch-up time at the start of meetings.
@@ -32,7 +32,7 @@ level2: Team Tips
 - Do a desk show and tell.
 - Make all social activities optional.
 
-#### Here are remote-first ways for team building:
+### Here are remote-first ways for team building:
 
 - ☕️ Take 1:1 social/coffee breaks.
 - Have an expensed remote lunch/dinner together.
@@ -48,7 +48,7 @@ level2: Team Tips
     - http://skribbl.io/
     - https://houseparty.com/
 
-## Building empathy 
+### Building empathy 
 - Try user manuals:
     - Each team member creates their own user manual that outlines hours they prefer to work, how they prefer to communicate, what their personal interests are, etc.
     - Share and compare all the user manuals to find common ground, areas of difference, and actions to ensure effective collaboration and strong relationships.
@@ -56,14 +56,14 @@ level2: Team Tips
 - Use gallery view in video calls.
 - Encourage always-on video, but make it optional; remember, in a remote setting, it's OK to look away!
 
-## Creating virtual spaces
+### Creating virtual spaces
 - Set up dedicated meeting rooms for all meetings: IPM, retro, etc.
 - Set up dedicated meeting rooms for pairs (e.g., team-name-pair-1, team-name-pair-2, team-name-pms, etc.).
 - Set up personal meeting rooms so somebody can quickly talk to you even if you’re soloing.
 - Set up a Trello or Miro board where people can drag pictures of themselves and link to the room they’re in, so people who want to talk to you can find where you are, and jump into your Zoom just like they could walk over and talk to you.
 - Set up a shared calendar/social calendar.
 
-## Being kinder, more inclusive, and expressive
+### Being kinder, more inclusive, and expressive
 - It costs nothing to be kind, even if you don't believe someone deserves it.
 - Sharing praise creates a climate where feedback is viewed as a gift rather than an attack—say thanks!
 - 👩🏻‍🏫 Use emoji or emoticons when chatting—they can be more inclusive when English isn’t the first language, and help convey tone, emphasis and emotion.
@@ -72,7 +72,7 @@ level2: Team Tips
 - Make the effort to get to know each other; building rapport enables trust.
 - It's impossible to know everything; you can't know how your words are interpreted without asking.
 
-## Checking in
+### Checking in
 - Schedule regular virtual coffee chats and happy hours.
 - Schedule 1:1s with team members.
 - Emphasize weekly retros as a way to continuously improve the way you work and get to know each other better.

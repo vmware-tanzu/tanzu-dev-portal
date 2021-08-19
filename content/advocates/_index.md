@@ -9,7 +9,7 @@ menu:
         weight: 2
 ---
 
-#### We are many things, among them: 
+## We are many things, among them: ## {class="h4"} 
 
 - Experts in our field (DevOps, CF/PAS, Spring, DDD, Kubernetes, architecture, microservices, containers, Java, digital transformation)
 - Dedicated open source maintainers and contributors
@@ -22,7 +22,7 @@ menu:
 
 <!--split-->
 
-#### We can do a whole range of things, including: 
+## We can do a whole range of things, including: ## {class="h4"} 
 
 - Conduct deep-dive, technical workshops for technical staff (devs, ops, product managers, testers, security, and all of the intersections of these disciplines)
 - Lead or support executive briefings, meetings, executive dinners, etc.

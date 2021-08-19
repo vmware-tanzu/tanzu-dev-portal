@@ -113,5 +113,5 @@ There is a cost to these benefits. The initial sprint of functionality does not 
 - [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
 - [Why TDD?](https://tanzu.vmware.com/content/blog/why-tdd)
 
-### Related topics
+## Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)

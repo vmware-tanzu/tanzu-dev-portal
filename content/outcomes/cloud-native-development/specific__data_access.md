@@ -16,6 +16,6 @@ Connecting to the database is only one part of the traditional data access layer
 
 For apps that do not require significant refactoring, we change just enough of this data layer so that it plays well with Spring `DataSource` beans. For broader modernization efforts, we recommend refactoring this layer using Spring Data to drastically reduce the code length (and test surface area the team is responsible for). To learn more about what Spring Data can do for you that a manually-built data layer cannot, see the [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/) guide.
 
-#### Homework
+## Homework
 
 - Read the [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/) guide.
