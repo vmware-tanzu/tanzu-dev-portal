@@ -20,7 +20,7 @@
   publish = "public/developer"
   framework = "#custom"
   targetPort = 1313
-  autoLaunch = true
+  autoLaunch = false
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
