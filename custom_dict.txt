@@ -509,6 +509,7 @@ EKS
 ElasticSearch
 ELB(s)?
 Eleftheria
+Emad
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -715,6 +716,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+Hackenburg
 Hadlow
 Hamano
 Hananiel
@@ -836,6 +838,7 @@ JaFU
 Jakarta
 Jakub
 Jarvinen
+Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
@@ -934,6 +937,7 @@ Knative-Serving
 knative-serving
 KNN
 KoFu
+Kostadis
 kotlin
 Kousen
 Kpack
@@ -1465,6 +1469,7 @@ rom-com
 rootPassword
 Rosecrance
 Rosso
+Roussos
 [Rr]outable
 Route53
 RouteAuthSpecs
@@ -1849,6 +1854,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+Yonis
 youtube
 ytt
 Zalando
@@ -1857,4 +1863,5 @@ ZDNet
 ZOP
 Zou
 Zuul
+Zynga
 μServices
