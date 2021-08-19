@@ -3,7 +3,7 @@ title: Tanzu SQL
 linkTitle: Tanzu SQL
 type: data-services
 dataServiceType: Relational DBaaS
-icon: tanzu
+icon: sql
 
 description: >
     A relational database-as-a-service for developers that is fully compatible with MySQL and Postgres.
