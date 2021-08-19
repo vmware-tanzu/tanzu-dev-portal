@@ -14,6 +14,8 @@ weight: 77
 oldPath: "/content/guides/kubernetes/what-is-velero.md"
 aliases:
 - "/guides/kubernetes/what-is-velero"
+level1: Managing and Operating Kubernetes
+level2: Backup and Restore
 ---
 
 Velero is an open source tool for safely backing up and restoring resources in a Kubernetes cluster, performing disaster recovery, and migrating resources and persistent volumes to another Kubernetes cluster.
@@ -49,4 +51,4 @@ Data protection is a chief concern for application owners who want to make sure 
 
 On the [Velero home page](https://velero.io/) you can get information on the latest release and download Velero from Github. 
 
-To get started using Velero read our guide, [Getting Started with Velero](/guides/kubernetes/velero-gs), and watch these videos covering two of Velero’s useful features, [Backup and Restore,](https://kube.academy/lessons/backup-restore) and [Migration](https://www.youtube.com/watch?v=q2FCxheA8VI&list=PL7bmigfV0EqQRysvqvqOtRNk4L5S7uqwM&index=5&t=0s).
+To get started using Velero read our guide, [Getting Started with Velero](/guides/kubernetes/velero-gs), and watch these videos covering two of Velero’s useful features, [Backup and Restore](https://kube.academy/courses/cluster-operations/lessons/backuprestore), and [Migration](https://www.youtube.com/watch?v=q2FCxheA8VI&list=PL7bmigfV0EqQRysvqvqOtRNk4L5S7uqwM&index=5&t=0s).

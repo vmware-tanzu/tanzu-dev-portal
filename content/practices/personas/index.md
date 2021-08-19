@@ -6,7 +6,7 @@ resources:
 - name: cover
   src: images/cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/personas
 participants: Core team, stakeholders
 remote: true
@@ -37,13 +37,12 @@ why:
    **[More remote tips below in the Variations section](#variations).**
    {{% /callout %}}
 
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Divide room into small groups and give a piece of paper to each group
         
    {{% callout %}}
-   Tip: If the group is small, you can also do this exercise individually
-
-   **Remote Tip:** Many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   Tip: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
    
 1. Define “persona” for the room and remind all participants this is a provisional persona—through research, what we think we know about this person will change and evolve
@@ -71,16 +70,16 @@ why:
    {{% callout %}}
    Tip: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
-   
-#### Success/Expected Outcomes
+{{% /section %}}
+
+{{% section %}}
+### Success/Expected Outcomes
 Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
 
-None at the moment
-
-## Related Practices
-
+{{% section %}}
+### Related Practices
 ### Variations
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
@@ -91,16 +90,10 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 - Next, have them take a photo on their phone and upload the photo to the collaboration space.
    
   Alternatively, people can send the photos to the facilitator via chat app, email, or even text message. They can even hold up their drawings to their webcam -- the facilitator can take a screenshot, then add the image to the collaboration space.
+{{% /section %}}
 
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Team member presenting a persona while everyone watches and listens](images/example-1.png)
 
@@ -108,6 +101,5 @@ None at the moment
 
 ![Example of a paper-based persona](images/example-3.png)
 
-![Example of a digital persona template](images/example-5.jpg)
-
-## Recommended Reading
+![Example of a digital persona template](/images/practices/personas/example-5.jpg)
+{{% /section %}}

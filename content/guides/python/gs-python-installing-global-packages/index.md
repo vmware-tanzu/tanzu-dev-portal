@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/python/gs-python-installing-global-packages.md"
 aliases:
 - "/guides/python/gs-python-installing-global-packages"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 ## Why You Need This Guide

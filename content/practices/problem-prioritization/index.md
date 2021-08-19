@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: Prioritize problems that were discovered during research so the team
   can focus on the most important ones
 lastmod: '2021-03-17'
-length: 60-120 mins
+length: 60-120 min
 participants: Core team
 tags:
 - Discovery
@@ -23,6 +23,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Gather all the problems you discovered from research
 
@@ -35,7 +37,7 @@ why:
    {{% callout %}}
    Tip: Optionally, you can generate different 2x2 criteria by asking the team "What makes a problem worth solving?". Some other 2x2 examples include: higher user pain vs. higher impact (e.g. affects most users); higher user pain vs. higher business pain (e.g. in terms of lost revenue); higher impact vs. higher immediate need.
    {{% /callout %}}
-![Empty 2x2 diagram](images/step-3.png)
+   ![Empty 2x2 diagram](/images/practices/problem-prioritization/step-3.png)
 
 1. Plot the problems/pains on the 2x2.  
 
@@ -46,31 +48,40 @@ why:
    {{% callout %}}
    Tip: If there are too many priority problems in the top right quadrant, re-draw the axes within that quadrant to further separate the problems. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
-#### Success/Expected Outcomes
-Success is achieved when the team agrees to the top 3-5 problems on which it will focus.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Success/Expected Outcomes
+Success is achieved when the team agrees to the top 3-5 problems on which it will focus.
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 The timing of this activity varies along with the number of problems identified in the research process, so prepare accordingly. It can also be beneficial to timebox conversation of each problem in order to ensure the team maintains forward momentum.
+{{% /section %}}
 
-## Related Practices
-
+{{% section %}}
 ### Variations
+- [2x2 Prioritization](/practices/2x2)
+{{% /section %}}
 
-None at the moment
-
+{{% section %}}
 ### Preceding
 - [Research Synthesis](/practices/research-synthesis)
+{{% /section %}}
 
+{{% section %}}
 ### Following
 - [Insight Prioritization](/practices/insight-prioritization)
 - [Solution Brainstorming](/practices/solution-brainstorming)
+{{% /section %}}
 
-## Real World Examples
-![Two by two chart plotting problems by frequency and intensity](images/example-2.jpg)
+{{% section %}}
+### Real World Examples
+![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
 
 ![A group of people discusses priority in front of a whiteboard with two by two chart on it](images/example-3.jpg)
 
-![Two by two chart with top problems prioritized](images/example-5.jpg)
-
-## Recommended Reading
+![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
+{{% /section %}}

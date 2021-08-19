@@ -23,6 +23,8 @@ weight: 1
 oldPath: "/content/guides/ci-cd/cnbp-knative-argocd.md"
 aliases:
 - "/guides/ci-cd/cnbp-knative-argocd"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 Technologies like Docker and Kubernetes simplify the process of building, running and maintaining cloud native applications. At the same time taking source code, building it into a container image and turning it into a deployed application on Kubernetes can be a time consuming process. A large part of the process can be automated with Continuous Integration Systems (CI) and Continuous Deployment(CD) Systems. However there are stages in the build and deployment phases that still need to be defined manually. Most CI systems aren't application aware. They cannot build automated Docker images from source code unless explicitly defined in a spec file like [Dockerfiles](https://docs.docker.com/engine/reference/builder/) or a config file that a CI system can understand. Due to which, Apart from writing application code, you also need to manually define and test Dockerfiles or config files to convert source code into an executable container image. When deploying the image onto Kubernetes, you need to then define various Kubernetes constructs needed to run the application. Like [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), [Services](https://kubernetes.io/docs/concepts/services-networking/service/), [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) etc. This process can add errors, security gaps and overhead.
@@ -57,7 +59,7 @@ There are a few things you will need before getting started
 * You have an account in [Github](https://github.com/) to clone the app *Petclinic*
 
 
-### 1. Prepare a Kubernetes Cluster and clone Sample Application
+## 1. Prepare a Kubernetes Cluster and clone Sample Application
 
 We will deploy a Kind cluster using Docker Desktop and install [Contour](https://projectcontour.io/) on it to help provide Ingress management. Contour along with [Envoy](https://www.envoyproxy.io/) Proxy will help create service and URL management for Knative. 
 
@@ -72,13 +74,13 @@ kubectl cluster-info --context kind-tdp-guide
 ```
 Log onto Github and Fork the repository for our sample app [Petclinic](https://github.com/Boskey/spring-petclinic
 )
-### 2. Install Knative Serving
+## 2. Install Knative Serving
 
 ```
 kubectl apply -f https://github.com/knative/serving/releases/download/v0.22.0/serving-crds.yaml
 kubectl apply -f https://github.com/knative/serving/releases/download/v0.22.0/serving-core.yaml
 ```
-### 3. Install Contour Ingress Controller
+## 3. Install Contour Ingress Controller
 ```
 kubectl apply -f https://github.com/knative/net-contour/releases/download/v0.22.0/contour.yaml
 kubectl apply -f https://github.com/knative/net-contour/releases/download/v0.22.0/net-contour.yaml
@@ -90,7 +92,7 @@ kubectl patch configmap/config-network \
   --type merge \
   --patch '{"data":{"ingress.class":"contour.ingress.networking.knative.dev"}}'
   ```
-### 4. Install and Configure Cloud Native Buildpack using *kpack*
+## 4. Install and Configure Cloud Native Buildpack using *kpack*
 ```
 kubectl apply -f https://github.com/pivotal/kpack/releases/download/v0.2.2/release-0.2.2.yaml
 ```
@@ -116,7 +118,7 @@ kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/
 kubectl apply -f https://raw.githubusercontent.com/Boskey/spring-petclinic/main/kpack-config/builder.yaml
 ```
 
-### 5. Install and Configure ArgoCD
+## 5. Install and Configure ArgoCD
 ```
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -148,7 +150,7 @@ argocd login localhost:8080
 
 We have now installed Knative Serving, Cloud Native Buildpacks and ArgoCD. Its time to implement a workflow that will take our source code and convert it into a URL.
 
-### 6. Build Container Image using Cloud Native Buildpacks
+## 6. Build Container Image using Cloud Native Buildpacks
 
 We will be using the *Petclinic* app, the file `petclinic-image-build.yaml` tells kpack where the source code is via the `spec.source.git.url` , where to upload and what tag to use for the final container image using `spec.tag`. 
 
@@ -188,7 +190,7 @@ ttv-image   index.docker.io/boskey/app@sha256:949a72120f888b2f37fdf3be0c439422ce
 [bsavla] ci-cd 🐘
 ```
 
-### 7. Update Knative Service Definition 
+## 7. Update Knative Service Definition 
 
 So far we have built a container image based on the sample app *Petclinic*, Now we will deploy the app onto Kubernetes via Knative Serving. ArgoCD will help us automate the deployment. We now need to define a `knative-serving` spec for our app. The Git repository you forked already has the below spec in a file called `knative-service.yaml` under the `knative` folder. This spec file tells Knative where to fetch the container image for the application that needs to be deployed on Kubernetes. Edit the file `knative-service.yaml` in the Git repository you forked in step 1. Change the `image` property to the image URL you got from kpack (step 6). The file should be under the folder `knative`. 
 
@@ -208,7 +210,7 @@ spec:
 
 
 
-### 8. Use ArgoCD to deploy application.
+## 8. Use ArgoCD to deploy application.
 
 Let's create an application using ArgoCD, **Replace the  `--repo` URL with the Github repo you forked in Step 1**
 

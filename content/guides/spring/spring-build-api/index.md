@@ -21,6 +21,8 @@ weight: 2
 oldPath: "/content/guides/spring/spring-build-api.md"
 aliases:
 - "/guides/spring/spring-build-api"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Boot is a framework built on top of Spring that focuses on allowing developers to quickly but safely build applications and microservices. It focuses on minimal configuration and “out-of-the-box” functionality. In just a few lines of code, a developer can have an application running on its own embedded web server. This guide will demonstrate how you can quickly build a microservice by building a REST API from scratch. You can also see the completed code [on GitHub](https://github.com/BrianMMcClain/spring-boot-api-demo).
@@ -355,6 +357,6 @@ public void postWithoutIdShouldCreate() throws Exception {
 
 This test will send a `POST` to `/items` with the data `"{"name": "Speakers", "price": 39.99, "count": 33}"`, setting the `Content-Type` header to `application/json`. It will then ensure that the response has a status code of `201` (with `status().isCreated()`, which is equal to `201`), as well as check that all the fields that are returned are what you would expect.
 
-## Learn More
+## Keep learning
 
 The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/), which are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/microservices/basics-of-rest).

@@ -25,6 +25,20 @@ weight: 1800
 oldPath: "/content/guides/kubernetes/prometheus-multicluster-monitoring.md"
 aliases:
 - "/guides/kubernetes/prometheus-multicluster-monitoring"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
+faqs:
+  faq:
+    - question: Why do developers and site reliability engineering (SRE) teams use Prometheus and Grafana?
+      answer: SRE teams and developers use Prometheus, coupled with Grafana, to capture metrics and telemetry data for applications running in a cluster, allowing deeper insights into application performance and reliability. As teams scale out, effective multi-cluster monitoring with Thanos is essential.
+    - question: What is Thanos Prometheus?
+      answer: Thanos is a monitoring system that aggregates data from multiple Prometheus deployments. This data can then be inspected and analyzed using Grafana, just as with regular Prometheus metrics.
+    - question: Can Prometheus monitor multiple Kubernetes clusters?
+      answer: Yes, with the Prometheus/Grafana combination, you can monitor multiple Kubernetes clusters and multiple providers.
+    - question: How do you integrate Thanos with Prometheus?
+      answer: To integrate Thanos with Prometheus, install the Prometheus Operator on each cluster, then install and configure Thanos in the "data aggregator" cluster. As an additional step, install and configure Grafana to use Thanos as a data source and start deploying applications into your "data producer" clusters and collating the metrics in Thanos and Grafana.
+    - question: How do you connect Thanos to Grafana?
+      answer: After installing Grafana, navigate to the dashboard and click the "Add data source" button. Next, on the "Choose data source type" page, select "Prometheus" and set the URL for the Prometheus server with the Thanos service.
 ---
 
 [Prometheus](https://prometheus.io/), coupled with

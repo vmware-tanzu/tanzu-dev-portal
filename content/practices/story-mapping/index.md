@@ -27,6 +27,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Before mapping, create a short product or feature brief to frame and constrain what you map. Think of this as the big story. What is the product you are creating or the problem you are solving? Who are the customers or users? How does each user benefit? Why are you interested in building this and how do you benefit?
 
@@ -46,7 +48,7 @@ why:
    Tip: Focus on a single happy path for this step. We will incorporate secondary actions later.
    {{% /callout %}}
 
-Check with the group after adding each task to make sure the order feel rights and critical tasks have not been skipped.
+   Check with the group after adding each task to make sure the order feel rights and critical tasks have not been skipped.
 1. **Optional:** Use stickies to label groups of user stories by their corresponding epic.
 
 1. Have the participants to come up to the whiteboard and engage with the map. Ask them to think about variations or deviations from the “happy path” already outlined.
@@ -63,27 +65,17 @@ Check with the group after adding each task to make sure the order feel rights a
 1. Define the goal of each release and write it next to each corresponding release.
 
 1. Reassess the placement of each user story. Move stories if necessary.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 You’re done when the team feels like they have an accurate representation of what will be built and a backlog of users stories.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 A user task is a short verb phrase like “read an email” or “respond to a message”. Don’t get too detailed. Stick to tasks at the functional level. This means the resolution of the task is right when it’s as big as it can be without a person plausibly taking a break in the middle of it. (e.g. In the story of my daily routine, a task might be “taking a shower”. “Changing the temperature” of the shower is too detailed (sub-functional) while “Getting ready for work” is too broad.
  
 Work on the happy path first. Then in the deep dive portion, capture the alternative paths a user might take through the product.
-
-## Related Practices
-
-### Preceding
-
-Completion of Discovery & Framing
-
-### Following
-
-Share out at Inception
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading
+{{% /section %}}

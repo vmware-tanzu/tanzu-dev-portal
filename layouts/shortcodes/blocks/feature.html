@@ -1,0 +1,15 @@
+{{ $icon := .Get "icon" | default "fa-lightbulb" }}
+{{ $url_text := .Get "url_text" }}
+{{ $icon_path := .Get "icon_path" }}
+
+<div class="col-lg-4 mb-5 mb-lg-0 ">
+  <h2 class='d-none'>More content</h2>
+	<div class='container'>
+  <div class="mb-4 h1">
+    <img class="icon" src="{{ $icon_path | relURL }}"/>
+  </div>
+  <h3 class="h3">{{ .Get "title" | markdownify }}</h3>
+  <p class="mb-0">{{ .Inner }}</p>
+  {{ with .Get "url" }}<p><a href="{{ . | relURL }}">{{ with $url_text }}{{ $url_text }}{{ else }}{{ T "ui_learn_more" }}{{ end }}</a></p>{{ end }}
+</div>
+</div>

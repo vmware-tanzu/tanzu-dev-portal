@@ -23,6 +23,20 @@ topics:
 - Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/observability-prometheus-grafana-p1.md"
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
+faqs:
+  faq:
+    - question: What are Bitnami Helm charts?
+      answer: "[Bitnami](https://bitnami.com/) offers automated application deployments of open source server apps and allows developers to deploy an application using Bitnami's Helm charts."
+    - question: What is the difference between Prometheus and Grafana in Kubernetes?
+      answer: Prometheus and Grafana are two open source tools. Prometheus excels at gathering metrics from a wide array of sources, while Grafana is the go-to tool for visualizing complex time-series data.
+    - question: How do you install Prometheus using Helm for Kubernetes?
+      answer: To install Prometheus, you must start with the Bitnami Helm repository. Please refer to the section above titled 'Installing Prometheus' for specific commands that need to be installed.
+    - question: How do you install Grafana using Helm for Kubernetes?
+      answer: There are many configuration options when installing Grafana. For a thorough walkthrough of installing bitnami/grafana Helm chart, refer to the section above titled 'Installing Grafana.' 
+    - question: Can you use data in both Prometheus and Grafana?
+      answer: Yes, any data gathered from Prometheus can be used in Grafana, meaning any pod with the proper annotations will automatically get scraped by Prometheus.
 ---
 
 You have your Kubernetes cluster up, it’s running your applications, and

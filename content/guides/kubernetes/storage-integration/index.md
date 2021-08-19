@@ -10,6 +10,8 @@ weight: 72
 oldPath: "/content/guides/kubernetes/storage-integration.md"
 aliases:
 - "/guides/kubernetes/storage-integration"
+level1: Managing and Operating Kubernetes
+level2: Kubernetes Architecture
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it

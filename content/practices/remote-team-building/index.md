@@ -5,7 +5,7 @@ resources:
 - name: cover
   src: images/cover.png
 lastmod: '2021-03-03'
-length: 1 - 5 mins
+length: 5 min
 participants: Core team, stakeholders, project team members
 path: /methods/remote-team-building
 summary: Team building activities are essential when working together, particularly

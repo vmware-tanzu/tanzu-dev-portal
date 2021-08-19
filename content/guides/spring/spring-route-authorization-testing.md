@@ -15,6 +15,8 @@ topics:
 oldPath: "/content/guides/spring/spring-route-authorization-testing.md"
 aliases:
 - "/guides/spring/spring-route-authorization-testing"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Security enables us to lock down routes in applications to particular roles.
@@ -527,7 +529,7 @@ class Access {
 }
 ```
 
-#### Pros
+### Pros
 
 - Humans don't have to remember to update it. The tests tell you when to change.
 - Every API route is tested against every role.
@@ -535,7 +537,7 @@ class Access {
 - Any team member can easily add new specs.
 - Lets you refactor your authorization matchers with confidence.
 
-#### Cons
+### Cons
 
 - Adds a lot of tests to your suite that could slow it down.
 - Your hand will get sore from all the high fives.

@@ -6,7 +6,7 @@ resources:
 - name: cover
   src: images/cover.png
 lastmod: '2021-03-17'
-length: 30 - 45 min
+length: 30-45 min
 participants: Stakeholders & project team members
 tags:
 - Kickoff
@@ -24,6 +24,7 @@ why:
 ---
 
 ## How to Use this Method
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw the primary persona on the whiteboard
 
@@ -40,28 +41,10 @@ why:
    {{% callout %}}
    Tip: If desired, clarify the relationships by using verbs with arrows like "supports", "reports to", or "is supported by"
    {{% /callout %}}
-#### Success/Expected Outcomes
-The team has a shared understanding of all the users, what they care about, and how they relate to one another
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+  ### Success/Expected Outcomes
+  The team has a shared understanding of all the users, what they care about, and how they relate to one another
+{{% /section %}}
 
-None at the moment
-
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
-Coming soon!
- 
-## Recommended Reading
