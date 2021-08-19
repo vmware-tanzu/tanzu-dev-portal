@@ -27,10 +27,8 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-    console.log("In auth-callback");
-    //console.log(event);
-    // we should only get here via a reidrect from CSP, which would have
-    // an authorization code in the query string. if that's not present,
+    // we should only get here via a redirect from CSP, which would have
+    // an authorization code in the querystring. if that's not present,
     // then someone didn't follow the correct flow - bail early
     if (!event.queryStringParameters) {
         console.error('Missing query params, unauthorized');
@@ -125,8 +123,6 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         // redirect the user to where they were originally trying to get
         // with the cookie so that Netlify lets them in
         var redirectPath = parsed.path === '/.netlify/non-existent-path' ? '/.netlify/functions/get-workshop/' : parsed.path;
-        console.log("redirectPath = " + redirectPath);
-        console.log("JWT TOKEN BEFORE REDIRECT = " + JSON.stringify(jwtToken, undefined, 2));
         const redirect = redirectPath.includes('get-workshop')
             ? `${getSiteURL()}${redirectPath}?src=${parsed.referer}`
             : `${getSiteURL()}${redirectPath || ''}`;
@@ -154,8 +150,6 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 var redirectTemplate = `<html>
 <head>
     <script>
-        console.log("COOKIES:");
-        console.log(document.cookie);
         function getCookie(e) {
             var t = document.cookie,
                 n = e + "=",
@@ -182,8 +176,6 @@ var redirectTemplate = `<html>
                 ? (clearTimeout(timer), setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K"))
                 : (timer = setTimeout(waitForOnetrustActiveGroups, 250));
         }
-        console.log("NF_JWT TOKEN:");
-        console.log(getCookie("nf_jwt"));
         document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1 ? setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K") : waitForOnetrustActiveGroups(),
             dataLayer.push({ event: "setUserId", userId: JSON.parse(atob(getCookie("nf_jwt").split(".")[1])).id });
     </script>
