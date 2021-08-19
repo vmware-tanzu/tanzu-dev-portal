@@ -1,7 +1,7 @@
 ---
 date: '2021-05-11'
 description: Move Spring Boot apps to run on Kubernetes.
-draft: false
+draft: true
 hero: /images/workshops/workshop-spring-on-kubernetes.png
 hidden: true
 lab: springone-tour-lab-workshop-2

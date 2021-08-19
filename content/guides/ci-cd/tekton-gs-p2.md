@@ -20,6 +20,8 @@ weight: 2
 oldPath: "/content/guides/ci-cd/tekton-gs-p2.md"
 aliases:
 - "/guides/ci-cd/tekton-gs-p2"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll learn how to use a preexisting `Task` and provide parameters to build your code using [Cloud Native Buildpacks](https://buildpacks.io/).
