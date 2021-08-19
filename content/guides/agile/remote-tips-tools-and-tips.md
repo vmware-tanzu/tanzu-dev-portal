@@ -51,7 +51,7 @@ level2: Team Tips
 
 We can save each other time if we create templates on Miro and share them with everyone.
 
-#### ℹ️ Creating your own Miro templates and sharing with others
+### ℹ️ Creating your own Miro templates and sharing with others
 
 1. Create your template content on your own Miro board; this board must be created under the team you want to share it with.
 1. Click and drag over your content to select it.
@@ -61,7 +61,7 @@ We can save each other time if we create templates on Miro and share them with e
 1. (Optional) Click “Select the preview area” to set a thumbnail that others will see while searching for the template.
 1. The sharing option will be “Personal” by default; select “Shared with the team”.
 
-#### ℹ️ Using Miro templates created by others
+### ℹ️ Using Miro templates created by others
 
 1. Create a new Miro board in your team space (this is important).
 1. Click on the templates icon on the left side of the board.

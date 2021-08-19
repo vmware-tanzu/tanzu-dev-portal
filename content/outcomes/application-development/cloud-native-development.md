@@ -130,7 +130,7 @@ For more information on cloud native apps check out the free e-book [Beyond the 
 
 To deepen your understanding, check out the following resources:
 
-#### Cloud Native
+### Cloud Native
 * [What is Cloud Native? ](https://tanzu.vmware.com/developer/guides/microservices/what-is-cloud-native/) - VMware Tanzu Developer Center article
 * [How to think Cloud Native?](https://tanzu.vmware.com/content/white-papers/how-to-think-cloud-native) - Whitepaper by Joe Beda
 * [Cloud Native Computing Foundation (CNCF) ](https://www.cncf.io/) - Home page of an organization aiming to advance cloud native and container technology while aligning the tech industry around their evolution.
@@ -138,7 +138,7 @@ To deepen your understanding, check out the following resources:
 	* [CNCF Cloud-Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)  guidance for enterprises beginning their cloud-native journey - Image
 * [Difference between Cloud and Cloud Native discussed by Kubernetes founders Craig McLuckie and Joe Beda](https://youtu.be/I0p8MIezKkE) - YouTube video
 
-#### Concepts
+### Concepts
 
 * [Beyond the Twelve-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) - e-book
 * [Microservices: How to deliver scalable software, faster](https://tanzu.vmware.com/microservices) - VMware Tanzu article

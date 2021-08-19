@@ -39,7 +39,7 @@ You may have already run into terms and concepts like "organizations", "spaces",
 - Read [this overview of TAS for VMs](https://docs.pivotal.io/application-service/2-11/concepts/overview.html) for a birds-eye view of how the platform works.
 
 
-#### Homework
+## Homework
 
 - Run through the [Try Cloud Foundry](https://katacoda.com/cloudfoundry-tutorials/scenarios/trycf) tutorial.
 - Get access to your company's Apps Manager and push your application to your Company's TAS environment.

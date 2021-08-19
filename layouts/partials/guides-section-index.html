@@ -4,7 +4,7 @@
     {{ range $pages }}
         <div class="flex-315 mr-3 mb-3">
             <a class="linked-box td-box--gray-dark px-4 py-2 h-100" href="{{ .RelPermalink }}">
-                <h4 class="link mt-3">{{- .LinkTitle -}}</h4>
+                <h2 class="pt-0 h4 link mt-3">{{- .LinkTitle -}}</h2>
                 <p>{{ .Description | default .Title | markdownify }}</p>
             </a>
         </div>

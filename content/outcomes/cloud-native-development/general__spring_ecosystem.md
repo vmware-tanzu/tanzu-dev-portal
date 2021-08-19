@@ -25,7 +25,7 @@ To better understand what you have in your tool belt before we get started, take
 * [Part 3: Spring Cloud Netflix](https://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_cloud_netflix) 
 * [Part 4: Spring Cloud Stream](https://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_cloud_stream)
 
-#### Homework
+## Homework
 
 - Use [this guide](https://spring.io/guides/gs/spring-boot/) to build a simple RESTful web service using Spring Boot and minimal configuration.
 - Read through the introductions for the most common Spring Cloud components.

@@ -12,10 +12,10 @@ Automate everything. Any time we have manual processes or required intervention,
 
 While we can work with many of these tools, Concourse provides one of the purest abstractions of declarative pipelines and is our preferred tool when there is no solution in place. It is beneficial to run through the [Learning Concourse tutorial](https://github.com/concourse/concourse/wiki/Tutorials) to understand the core tenets of building with pipelines checked into your source control along with your application. Even if you end up building your applications with Jenkins or another tool, Concourse’s core concepts are great for discussing the various challenges and solutions to continuous software delivery.
 
-#### Homework
+## Homework
 
 - Run through the [Learning Concourse tutorial](https://github.com/concourse/concourse/wiki/Tutorials).
 
-#### Additional resources
+## Additional resources
 
 - Review the [Introduction of Secure Software Supply Chains](/outcomes/secure-software-supply-chain/what-is-ci-cd/).

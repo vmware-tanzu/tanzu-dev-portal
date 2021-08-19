@@ -85,7 +85,7 @@ $ curl -X "GET" "http://localhost:8888/myapp/default" -H "X-Config-Token: yourto
 ```
 This is the default way for a client to provide the necessary authentication to let Config Server talk to HashiCorp Vault.
 
-## Keep learning 
+## Keep Learning 
 You can use the encryption features of Spring Cloud Config Server with a git repository to improve the security of your configuration service, or use Vault as a backend for situations that require the highest security. Some organizations or projects use a git repository for configuration information that does not need to be secured, plus a HashiCorp Vault repository for secrets.
 
 You can get started learning about and using Spring Cloud Config with git in the [Centralized Configuration Guide](https://spring.io/guides/gs/centralized-configuration/). Although it does not include use of encryption, this guide steps through the process of setting up a Config Server and consuming configuration information from a client. Use that as a starting point to explore the use of encryption as described above. 
