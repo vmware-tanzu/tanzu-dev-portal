@@ -8,7 +8,7 @@ title: "Prioritizing Impactful Outcomes: User Stories, Estimation, and Velocity"
 weight: 40
 ---
 
-Being busy isn’t the same as making progress towards an important goal. To make progress, the team has to know what to work on, why it is important, and when one task is done and it’s time to move on to the next. The team also has to know what is the next most important and valuable thing to work on so they are always delivering the most impactful to their end users. Using user stories, estimated based on risk complexity, and ruthlessly prioritized based on that information is the best way we’ve seen to consistently and predictably deliver value forever.
+Being busy isn’t always the same as making progress towards an important goal. To make progress, the team has to know what to work on, why it is important, when one task is done and it’s time to move on to the next. The team also has to know what is the next most important and valuable thing to work on so they are always delivering the most impact to their end users. Using user stories estimated based on risk and  complexity that are ruthlessly prioritized using that that information is the best way we’ve seen to consistently and predictably deliver value forever.
 
 ![Two People at a Whiteboard](/images/outcomes/application-development/whiteboard2.jpg)
 
@@ -16,12 +16,12 @@ Being busy isn’t the same as making progress towards an important goal. To mak
 
 In this article, you will learn to:
 
-* Define what a user story is and why they are useful.
-* Describe the advantages of estimating work in terms of risk and complexity instead of time.
-* Describe how measuring velocity enables teams to predict delivery.
+* [Define what a user story is and why they are useful.](#stories)
+* [Describe the advantages of estimating work in terms of risk and complexity instead of time.](#estimation)
+* [Describe how measuring velocity enables teams to predict delivery.](#velocity)
 
 
-## Define What a User Story is and Why They are Useful
+## Define What a User Story is and Why They are Useful{id=stories}
 
 A user story is a short, simple description of a product feature told from the perspective of a user. It helps a team to understand what the feature is, who it is being built for and why it is valuable to build. 
 
@@ -29,7 +29,7 @@ Anyone on a team can contribute stories, although it is typically the product ma
 
 ### Why User Stories are Useful
 
-Stories are designed to** help collaboration**. Unlike weighty requirements documents, user stories capture just enough information for a team to start talking and working together. We sometimes say that a user story is a “placeholder for a conversation”. 
+Stories are designed to **help collaboration**. Unlike weighty requirements documents, user stories capture just enough information for a team to start talking and working together. We sometimes say that a user story is a “placeholder for a conversation”. 
 
 User stories help **break up software development into small, valuable increments**. Building software incrementally, and prioritizing the work that delivers the most value reduces risk and helps a software team plan and get rapid feedback on what they are building.  
 
@@ -78,7 +78,7 @@ Example:
 
 #### Acceptance Criteria
 
-Acceptance criteria list the scenarios the product manager uses to verify that the story is  complete. A common format is the [Behavioral Specification](https://en.wikipedia.org/wiki/Behavior-driven_development#Behavioral_specifications) format, also called the [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) language:
+Acceptance criteria list the scenarios the product manager uses to verify that the story is complete. [Behavioral Specification](https://en.wikipedia.org/wiki/Behavior-driven_development#Behavioral_specifications) is a common format, also called the [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_language) language:
 
 GIVEN `situation or context`
 
@@ -97,21 +97,49 @@ Example:
 **THEN** _a PDF file of the sales proposal downloads to my computer_
 {{% /callout %}}
 
-Acceptance criteria are important because they **clearly describe when the story is _done_**. Without an explicit statement of “done”, the feature risks [scope creep](https://en.wikipedia.org/wiki/Scope_creep). In the above example, the feature is done when the sales proposal  downloads to the user's computer as a PDF file. 
+Acceptance criteria is important because they **clearly describe when the story is _done_**. Without an explicit statement of “done”, the feature risks [scope creep](https://en.wikipedia.org/wiki/Scope_creep). In the above example, the feature is done when the sales proposal downloads to the user's computer as a PDF file. 
 
 Would it be handy if the user could email the PDF directly from the product? Sure!
 
-Would it be great if the system would automatically prompt the user to follow up on the sale proposal in one week? Heck yeah!
+Would it be great if the system would automatically prompt the user to follow up with the prospective customer in one week? Heck, yeah!
 
-_But_, those features are _out of scope for this story_. The team should create new stories for those features with their own very explicit and tightly focused acceptance criteria. 
+_But_, those features are _out of scope for this story_. The team should create new stories for those features with their own explicit and focused acceptance criteria. 
 
 #### Resources
 
 Attach anything else helpful explaining the story including mockups, sketches or user flows.
 
-## Describe the advantages of estimating work in terms of risk and complexity instead of time
+Here is a complete example:
+{{% callout %}}
 
-Simply put: [people are really bad at estimating based on time](https://en.wikipedia.org/wiki/Planning_fallacy). Yet, most projects, software or otherwise, insist on doing so. We recommend estimating tasks based on risk and complexity rather than time to completion.
+**STORY TITLE:** _A Sales rep can download a sales proposal as a PDF_
+
+Description:
+
+**AS A** _sales rep_
+
+**I WANT** _to download a PDF version of a sales proposal_
+
+**SO THAT** _I can email it to a prospective customer_
+
+Acceptance Criteria:
+
+**GIVEN** _I visit the proposal summary page_
+
+**WHEN** _I click the button labeled “PDF Download”_
+
+**THEN** _a PDF file of the sales proposal downloads to my computer_
+
+Resources:
+
+- Example of this feature from one of our other products: `<link>`
+- Developer note: here is the PDF conversion library our other teams use: `<link>`
+
+{{% /callout %}}
+
+## Describe The Advantages of Estimating Work in Terms of Risk and Complexity Instead of Time{id=estimation}
+
+Simply put: [people are bad at estimating how long it will take to complete tasks](https://en.wikipedia.org/wiki/Planning_fallacy). Yet most people insist on estimating task completion based on time. We recommend estimating tasks based on risk and complexity rather than time to completion.
 
 Agile software teams use **estimation** to understand the relative complexity of delivering a story. They do this because:
 
@@ -122,16 +150,16 @@ Agile software teams use **estimation** to understand the relative complexity of
 When discussing a story, usually in an [iteration or sprint planning meeting](https://tanzu.vmware.com/developer/practices/ipm/), teams will estimate the size of a story in terms of **story points**. Story points measure a story’s complexity and risk. Teams use different scales. For example:
  
 - A simple scale of 1, 2, or 3 points 
-- "T-shirt sizing" as Small (S), Medium (M) Large (L), Extra Large (XL)
+- "T-shirt sizing" as Small (S), Medium (M), Large (L), Extra Large (XL)
 - The Fibonacci sequence: 1, 2, 3, 5, 8, 13 (or more) points
 
-We use a scale rather than time estimates because time estimates are known to be highly error prone. They do not account well for the uncertainty that teams often encounter when building software. Time estimates are especially prone to [planning fallacy](https://en.wikipedia.org/wiki/Planning_fallacy) and [optimism bias](https://en.wikipedia.org/wiki/Optimism_bias).
+We use scales rather than time estimates because time estimates are known to be highly error prone. They do not account well for the uncertainty that teams often encounter when building software. Time estimates are especially prone to [planning fallacy](https://en.wikipedia.org/wiki/Planning_fallacy) and [optimism bias](https://en.wikipedia.org/wiki/Optimism_bias).
 
 **Relative complexity** means thinking about similar stories that the team has delivered in the past and making a relative estimate. This way, the team can build up a consistent, shared idea of what constitutes a small, medium or large-sized story.
 
 When team members give different estimates for a story, this can give rise to valuable conversations! Estimation prompts team members to talk about their assumptions and arrive at a shared understanding of what is involved in the work. Learn more in our [short guide to estimation](https://tanzu.vmware.com/developer/practices/ipm/#estimation).
 
-## Describe How Measuring Velocity Enables Teams to Predict Delivery
+## Describe How Measuring Velocity Enables Teams to Predict Delivery{id=velocity}
 
 > _"When is it going to be done?"_
 >
@@ -139,7 +167,7 @@ When team members give different estimates for a story, this can give rise to va
 
 Every team responsible for a deliverable has been asked this question. 
 
-Software teams commonly need to gauge how long it takes to deliver a feature, or say whether a deadline will be met. Yet haven't we just described how we don't recommend estimating based on time of delivery?
+Project teams commonly need to gauge how long it will take to deliver their work. Yet haven't we just stated that we don't recommend estimating work based on time to delivery?
 
 Estimation gives the team _data which helps them learn how to deliver more predictably over time_ and make predictions about future delivery. 
 
@@ -159,7 +187,10 @@ If the number of story points a team delivers varies widely across multiple iter
 ## Keep Learning
 
 Find out how to run an [iteration planning meeting](https://tanzu.vmware.com/developer/practices/ipm/), where your team will estimate and discuss user stories.
+
 Read our [blog post on how to write user stories that are easy to understand](https://tanzu.vmware.com/content/blog/be-good-to-your-devs-write-user-stories-that-are-easy-to-understand).
+
+Learn more about user stories in [User Story Mapping: Discover the Whole Story, Build the Right Product](https://www.amazon.co.uk/User-Story-Mapping-Discover-Product/dp/1491904909) by Jeff Patton.
 
 ## Related Topics
 
