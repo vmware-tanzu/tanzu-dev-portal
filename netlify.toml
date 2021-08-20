@@ -15,6 +15,13 @@
   HUGO_VERSION = "0.82.0"
   TZ='America/Los_Angeles'
 
+[dev]
+  command = "make local"
+  publish = "public/developer"
+  framework = "#custom"
+  targetPort = 1313
+  autoLaunch = false
+  
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
 
