@@ -6,8 +6,6 @@ description: "Level-set on user research best practices"
 tags: ["Discovery"]
 length: "45-60 min"
 participants: "Core team"
-# custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
 lastmod: "2021-05-14"
 why: 
 - Continuous research helps ensure that we’re building something of value at each step. Needs and problems live with people, so in order to create value we need a deep understanding of how well we're solving those problems. This session offers an overview of research best practices in order to align the team prior to the first stakeholder or user interviews they conduct.
@@ -114,9 +112,9 @@ Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-res
 
 {{% section %}}
 ### Real World Examples
-![Research Workshop Example 1](/images/practices/user-research-introduction-session/example-1.jpg)
+![Research Workshop Example 1](images/example-1.jpg)
 
-![Research Workshop Example 2](/images/practices/user-research-introduction-session/example-2.jpg)
+![Research Workshop Example 2](images/example-2.jpg)
 {{% /section %}}
 
 {{% section %}}

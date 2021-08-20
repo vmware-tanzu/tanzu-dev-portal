@@ -51,7 +51,7 @@ There are other, alternative frameworks such as [Spring Integration](https://spr
 
 In order to visualize our goal, let’s take it to as high a level as possible and see this problem in three major services, while keeping in mind the future scalability. Each service has individual responsibilities (as stateless as possible) 
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-100-3.svg)
+![General Flow Diagram](images/kafka-events-intro-100-3.svg)
 
 ## Create an Order Request
 A REST call is a **create request** through the controller and ordering service. It can also be a UI or any other service.
@@ -221,7 +221,7 @@ _Note: Any failure on this step also drives the order to your `DLQ`, by configur
 
 Basically, you are handling all `DLQ` messages (orders) in this topic. Eventually, orders which end up here should be canceled so that the canceling process applies to them.
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-100-1.svg)
+![General Flow Diagram](images/kafka-events-intro-100-1.svg)
 
 
 ## Show Time!
@@ -283,7 +283,7 @@ _Basically, once you see the “CANCELED” status you can exit the loop. You ma
 
 ## Conclusion
 Spring Cloud Stream, which is represented as the **green layer** in the following diagram, helps us to focus on solving the business problem rather than taking care of plumbing issues with the application.
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-100-2.svg)
+![General Flow Diagram](images/kafka-events-intro-100-2.svg)
 
 The complete running code for this tutorial is available in [Github](https://github.com/ehsaniara/scs-kafka-intro/tree/main/scs-100).
 

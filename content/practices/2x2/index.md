@@ -91,13 +91,13 @@ Involve people who can evaluate against the chosen prioritization criteria (e.g.
 
 {{% section %}}
 ## Real World Examples
-![Two by two chart plotting problems by frequency and intensity](images/example-2.jpg)
+![Two by two chart plotting problems by frequency and intensity](/practices/problem-prioritization/images/example-2.jpg)
 
-![A group of people discusses priority in front of a whiteboard with two by two chart on it](images/example-3.jpg)
+![A group of people discusses priority in front of a whiteboard with two by two chart on it](/practices/problem-prioritization/images/example-3.jpg)
 
-![Two by two chart with top problems prioritized](images/example-5.jpg)
+![Two by two chart with top problems prioritized](/practices/problem-prioritization/images/example-5.jpg)
 
-![Digital two by two with prioritized solutions](images/example-6.jpg)
+![Digital two by two with prioritized solutions](/practices/solution-prioritization/images/example-6.jpg)
 {{% /section %}}
 
 {{% section %}}

@@ -38,7 +38,7 @@ This article assumes that:
 
 All Bitnami infrastructure solutions available in the [Bitnami Helm charts catalog](https://github.com/bitnami/charts/tree/master/bitnami) now include pre-defined affinity rules exposed through the `podAffinityPreset` and `podAntiAffinitypreset` parameters in their `values.yml` file:
 
-![Pod affinity rules](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-1.png)
+![Pod affinity rules](images/image-1.png)
 
 Pod affinity and anti-affinity rules allow you to define how the scheduler should behave when locating application pods in your cluster eligible nodes. Depending on the option you choose, the scheduler will behave as follows:
 
@@ -84,7 +84,7 @@ kubectl get nodes
 
 * You will see an output message like this:
 
-![Example kubectl get pods output](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-2.png)
+![Example kubectl get pods output](images/image-2.png)
 
 Three nodes are running in the cluster.
 
@@ -94,7 +94,7 @@ Three nodes are running in the cluster.
 kubectl get pods -o wide 
 ```
 
-![Example kubectl get pods -o wide output](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-3.png)
+![Example kubectl get pods -o wide output](images/image-3.png)
 
 As expected, both the primary and the secondary pods are in different nodes.
 
@@ -108,7 +108,7 @@ kubectl scale sts/mysql-secondary --replicas 3
 
 * Check the pods by running again the `kubectl get pods` command. The `soft` value left the scheduler to locate the remaining pod that didn't comply with the "one pod per node" rule:
 
-![Example kubectl get pods output](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-4.png)
+![Example kubectl get pods output](images/image-4.png)
 
 Note that two pods are running in the same node.
 
@@ -124,7 +124,7 @@ helm install mysql-hard bitnami/mysql --set architecture=replication --set secon
 * Check the nodes and the pods by running the `kubectl get nodes` and the `kubectl get pods –o wide` commands:
 
 
-![Example kubectl get pods -o wide output](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-5.png)
+![Example kubectl get pods -o wide output](images/image-5.png)
 
 Both the primary and secondary pods are running in the same node.
 
@@ -138,7 +138,7 @@ kubectl scale sts/mysql-hard secondary --replicas 3
 
 * When checking the pods, you will see that the scheduler has ignored the "one pod per node" rule and also located only as many pods as there are nodes. The fourth pod was not deployed as there are only three nodes available.
 
-![Example kubectl get pods -o wide output](images/guides/kubernetes/bitnami-helm-chart-affinity-rules/image-6.png)
+![Example kubectl get pods -o wide output](images/image-6.png)
 
 The `podAntiAffinity` rule is an easy way to control how application pods will be distributed across the cluster nodes when installing a Helm chart. Deploy your favorite Bitnami applications and enable this feature via a simple install-time parameter.
 

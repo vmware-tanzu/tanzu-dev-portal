@@ -6,8 +6,6 @@ description: "A regular meeting for the core team to understand and align on the
 tags: ["Delivery"]
 length: "1 Hour"
 participants: "Core delivery team"
-# custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
 lastmod: "2021-06-17"
 date: "2021-06-17"
 why: 

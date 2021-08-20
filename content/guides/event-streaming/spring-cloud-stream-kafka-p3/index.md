@@ -36,7 +36,7 @@ For example: If someone asks you “What time is it?”, or “What is the time 
 
 Conversely, if someone asks you “How did you get here?”, despite the fact that your current location is known, the intention is about the series of locations over time that got you here.
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-p0.png)
+![General Flow Diagram](images/kafka-events-intro-1002-p0.png)
 
 Telematics or sensor data, app logs, and similar systems are the types of structures we are going to discuss when we talk about streaming.
 
@@ -69,7 +69,7 @@ From [Part 2](https://tanzu.vmware.com/developer/guides/event-streaming/spring-c
 _Note: There are many ways to create the Topology for this problem. The following example is not the only solution._
 
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-2.svg)
+![General Flow Diagram](images/kafka-events-intro-1002-2.svg)
 
 To overcome the [Known Issues](https://tanzu.vmware.com/developer/guides/event-streaming/spring-cloud-stream-kafka-p2/#known-issues) mentioned in the previous tutorial, we have a continued flow from the time the "order" is created and put in the Kafka topic through [`orderAggConsumer`](https://github.com/ehsaniara/scs-kafka-intro/blob/main/scs-100-2/src/main/java/com/ehsaniara/scs_kafka_intro/scs1002/OrderService.java#L69). This materializes the aggregate state value of the order per each `orderUuid`, so the temporary `HashMap` lookup can go away with it.
 
@@ -108,7 +108,7 @@ _Note: If you run multiple of these applications on the same machine, you may ha
 
 With the current design, you only see the latest order status. The missing parameter here is  TIME.
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-0.svg)
+![General Flow Diagram](images/kafka-events-intro-1002-0.svg)
 
 KStream
 
@@ -134,7 +134,7 @@ KTable
 
 Expected stream topology:
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-1.svg)
+![General Flow Diagram](images/kafka-events-intro-1002-1.svg)
 
 At this point, if the application wants the order status, it does a rest call to [Order Controller](https://github.com/ehsaniara/scs-kafka-intro/blob/main/scs-100-2/src/main/java/com/ehsaniara/scs_kafka_intro/scs1002/OrderController.java) and gets it from the following method:
 
@@ -300,14 +300,14 @@ Terminal 2:
 java -Dserver.port=8082 -jar target/scs-100-2-0.0.1-SNAPSHOT.jar
 ```
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-3.svg)
+![General Flow Diagram](images/kafka-events-intro-1002-3.svg)
 
 Then, run our curl call command again (same as the earlier one)
 ```shell
 ORDER_UUID=$(curl --silent -H 'Content-Type: application/json' -d "{\"itemName\":\"book\"}" http://localhost:8080/order | jq -r '.orderUuid') && for i in `seq 1 15`; do sleep 1; echo $(curl --silent "http://localhost:8080/order/status/"$ORDER_UUID); done;
 ```
 
-![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-1002-4.svg)
+![General Flow Diagram](images/kafka-events-intro-1002-4.svg)
 
 When you review the logs, you'll notice some calls are going into App 1 and others into App 2.
 
