@@ -14,7 +14,7 @@ theme:
 	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
 	git submodule update --init --recursive
 
-#npm: @ runs npm install to install dependencies
+#npm: @ runs npm ci to install dependencies from package-lock.json
 npm: theme
 	npm ci
 
