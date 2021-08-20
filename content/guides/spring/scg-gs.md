@@ -135,6 +135,6 @@ You've sent a `GET` request to your application, adding a custom header of `MyHe
 
 Here you can see the response from httpbin.org, including the `MyHeader` header that you sent in your request, as well as the `Hello` header that Spring Cloud Gateway added to your request.
 
-### Keep Learning
+## Keep Learning
 
 Check out some of the great guides on the Spring website to learn how you can leverage the amazing Spring ecosystem to accomplish things like [hiding your backend services](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway) as well as how you can [secure your services using Spring Cloud Security](https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway).
