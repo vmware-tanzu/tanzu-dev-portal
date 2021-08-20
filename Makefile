@@ -16,7 +16,7 @@ theme:
 
 #npm: @ runs npm install to install dependencies
 npm: theme
-	npm install
+	npm ci
 
 #preview: @ preview hugo
 preview: npm
