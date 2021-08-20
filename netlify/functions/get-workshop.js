@@ -26,10 +26,7 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-    if (
-        event.path === '/developer/get-workshop' ||
-    event.path === '/developer/get-workshop/'
-    ) {
+    if (event.path.endsWith('/get-workshop') || event.path.endsWith('/get-workshop/')) {
         console.error('Missing workshop');
         return {
             statusCode: 401,
@@ -39,6 +36,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     const ws = event.path.replace('/developer/get-workshop/', '');
     const cookies = cookie.parse(event.headers.cookie);
     const decodedToken = jwt.decode(cookies.nf_jwt);
+
     try {
         const remoteUrl = `${baseurl}/${ws}`;
         const availability = await got.get(remoteUrl, {

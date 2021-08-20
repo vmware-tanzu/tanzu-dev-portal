@@ -27,8 +27,8 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-    // we should only get here via a reidrect from CSP, which would have
-    // an authorization code in the query string. if that's not present,
+    // we should only get here via a redirect from CSP, which would have
+    // an authorization code in the querystring. if that's not present,
     // then someone didn't follow the correct flow - bail early
     if (!event.queryStringParameters) {
         console.error('Missing query params, unauthorized');
@@ -102,26 +102,33 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             jwtToken.acct = decoded.payload.acct;
             jwtToken.sub = decoded.payload.sub;
         }
-        console.log(jwtToken);
+
         const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SIGNING_SECRET, {
             algorithm: 'HS256',
         });
 
-        const c = cookie.serialize(netlifyCookieName, netlifyJwt, {
+        const cookieParams = {
             secure: true,
             httpOnly: false,
             path: '/',
-            domain: getSiteURL().replace('https://', ''),
             expires: new Date(decoded.payload.exp * 1000), // same expiration as CSP token
-        });
+        }
+
+        if (config.context === "production" || config.context === "deploy-preview") {
+            cookieParams.domain = getSiteURL().replace('https://', '');
+        }
+
+        const c = cookie.serialize(netlifyCookieName, netlifyJwt, cookieParams);
 
         // redirect the user to where they were originally trying to get
         // with the cookie so that Netlify lets them in
-        const redirect = parsed.path.includes('get-workshop')
-            ? `${getSiteURL()}${parsed.path}?src=${parsed.referer}`
-            : `${getSiteURL()}${parsed.path || ''}`;
+        var redirectPath = parsed.path === '/.netlify/non-existent-path' ? '/.netlify/functions/get-workshop/' : parsed.path;
+        const redirect = redirectPath.includes('get-workshop')
+            ? `${getSiteURL()}${redirectPath}?src=${parsed.referer}`
+            : `${getSiteURL()}${redirectPath || ''}`;
 
-        const redirectBody = `<html><head><script>function getCookie(e){var t=document.cookie,n=e+"=",o=t.indexOf("; "+n);if(-1==o){if(0!=(o=t.indexOf(n)))return null}else{o+=2;var i=document.cookie.indexOf(";",o);-1==i&&(i=t.length)}return decodeURI(t.substring(o+n.length,i))}function setGTM(e,t,n,o,i){e[o]=e[o]||[],e[o].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var r=t.getElementsByTagName(n)[0],a=t.createElement(n),s="dataLayer"!=o?"&l="+o:"";a.async=!0,a.src="https://www.googletagmanager.com/gtm.js?id="+i+s,r.parentNode.insertBefore(a,r)}var timer;function waitForOnetrustActiveGroups(){document.cookie.indexOf("OptanonConsent")>-1&&document.cookie.indexOf("groups=")>-1?(clearTimeout(timer),setGTM(window,document,"script","dataLayer","GTM-TQ9H33K")):timer=setTimeout(waitForOnetrustActiveGroups,250)}document.cookie.indexOf("OptanonConsent")>-1&&document.cookie.indexOf("groups=")>-1?setGTM(window,document,"script","dataLayer","GTM-TQ9H33K"):waitForOnetrustActiveGroups(),dataLayer.push({event:"setUserId",userId:JSON.parse(atob(getCookie("nf_jwt").split(".")[1])).id});</script><title>Redirect</title><meta http-equiv="refresh" content="0;url=${redirect}" /></head><body></body></html>`;
+        var redirectBody = redirectTemplate.replace("REDIRECT_URL", redirect)
+        
         return {
             statusCode: 200,
             headers: {
@@ -140,3 +147,41 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 });
 
 
+var redirectTemplate = `<html>
+<head>
+    <script>
+        function getCookie(e) {
+            var t = document.cookie,
+                n = e + "=",
+                o = t.indexOf("; " + n);
+            if (-1 == o) {
+                if (0 != (o = t.indexOf(n))) return null;
+            } else {
+                o += 2;
+                var i = document.cookie.indexOf(";", o);
+                -1 == i && (i = t.length);
+            }
+            return decodeURI(t.substring(o + n.length, i));
+        }
+        function setGTM(e, t, n, o, i) {
+            (e[o] = e[o] || []), e[o].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var r = t.getElementsByTagName(n)[0],
+                a = t.createElement(n),
+                s = "dataLayer" != o ? "&l=" + o : "";
+            (a.async = !0), (a.src = "https://www.googletagmanager.com/gtm.js?id=" + i + s), r.parentNode.insertBefore(a, r);
+        }
+        var timer;
+        function waitForOnetrustActiveGroups() {
+            document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1
+                ? (clearTimeout(timer), setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K"))
+                : (timer = setTimeout(waitForOnetrustActiveGroups, 250));
+        }
+        document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1 ? setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K") : waitForOnetrustActiveGroups(),
+            dataLayer.push({ event: "setUserId", userId: JSON.parse(atob(getCookie("nf_jwt").split(".")[1])).id });
+    </script>
+    <title>Redirect</title>
+    <meta http-equiv="refresh" content="0;url=REDIRECT_URL" />
+</head>
+<body></body>
+</html>
+`
