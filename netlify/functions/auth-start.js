@@ -20,6 +20,9 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+    
+    console.log(event)
+
     let path = '';
     if (event.path === '/.netlify/functions/auth-start') {
         path = 'developer/';
