@@ -149,7 +149,7 @@ Some of the methods and techniques you will see in this series includes:
 
 ## Software Patterns
 
-Software patterns are known solutions used to solve a common type of
+Software patterns are known solutions used to solve common types of
 development problem.
 They are an excellent resource for providing solutions to new and
 recurring software problems.
