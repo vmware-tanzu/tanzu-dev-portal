@@ -36,7 +36,8 @@ In the previous lab, you covered the first two factors by setting up
 your codebase in GitHub and using Gradle to explicitly declare your
 dependencies.
 
-This lab will focus on the third factor: storing configuration in
+This lab will focus on the third factor:
+Storing configuration in
 the environment.
 
 There are many options for how to externalize configuration for a cloud
@@ -77,6 +78,7 @@ be introduced in an upcoming lab.
     create mode 100644 src/test/java/test/pivotal/pal/tracker/WelcomeControllerTest.java
     create mode 100644 src/test/java/test/pivotal/pal/trackerapi/WelcomeApiTest.java
     ```
+
     Your goal is to get your tests to pass by the end of the lab,
     as well as deploy the updated code to TAS.
 
@@ -249,7 +251,8 @@ Create an endpoint to see some of that information.
     - `CF_INSTANCE_ADDR`
 
 1.  Add a default value to the variables above so that the app will still
-    boot correctly locally. For example:
+    boot correctly locally.
+    For example:
 
     ```java
     @Value("${cf.instance.index:NOT SET}") String cfInstanceIndex,
@@ -377,7 +380,6 @@ Now that you have completed the lab, you should be able to:
     Tanzu Application Services
 -   Explain when to use the CLI vs Apps Manager vs a manifest for
     application configuration
-
 
 ## Extras
 

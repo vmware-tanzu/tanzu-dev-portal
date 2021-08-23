@@ -19,8 +19,7 @@ After completing the lab, you will be able to:
 
 ## Getting started
 
-1.  You must have reviewed the
-    [Availability slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gd559b629f0_0_751).
+### Codebase and manifest
 
 1.  You must have completed (or fast-forwarded to) the
     [Health Monitoring lab](../health-monitoring/).
@@ -41,7 +40,8 @@ After completing the lab, you will be able to:
     **executing the `cherry-pick`,**
     **either on the `route` you defined,**
     **or the `JBP_CONFIG_OPEN_JDK_JRE` environment variable change**
-    **with the explicit `memory_calcuator` `stack_threads` configuration.**
+    **with the explicit `memory_calcuator` `stack_threads` configuration,**
+    **or with the YAML indentation.**
     **Make sure to clean the up the merge conflicts,**
     **and pick the updated `JBP_CONFIG_OPEN_JDK_JRE` configuration.**
     **After that,**
@@ -76,6 +76,27 @@ After completing the lab, you will be able to:
 
     You will push it with the desired start configuration later in the
     lab.
+
+### Monitoring
+
+In this lab you will exercise your `pal-tracker` application under load,
+monitor it,
+and tune it.
+
+You can monitor the `pal-tracker` application through the following:
+
+-   Command Line via the following `cf` commands:
+
+    - `cf app pal-tracker`
+    - `cf events pal-tracker`
+
+-   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+    user interface.
+
+If you will monitor via command line you will need a minimum of four
+terminal windows open.
+
+If you choose to monitor with *App Manager* you will need only one.
 
 ## Review the current state of your application
 
@@ -160,10 +181,12 @@ You can see the entire list of
     #0   running   2020-12-01T00:42:33Z   0.0%   0 of 1G   0 of 1G
     ```
 
-For the remainder of the lab you will be monitoring the state of the
+For the remainder of the lab you will monitor the state of the
 `pal-tracker` application.
-You will set up a couple of terminal windows set up exclusively for
-monitoring `pal-tracker`.
+
+You can navigate to the `pal-tracker` application overview page in
+*App Manager*,
+or you can monitor from command line:
 
 1.  In a separate terminal window, run the following command,
 
@@ -226,7 +249,8 @@ Keep both this windows open and running for the rest of the lab.
 
 #### Container Resources
 
-1.  Run some load against your application.
+1.  Dedicate one of your open terminal windows to run some load against
+    your application.
     You will use the
     [`docker-loadtest`](https://hub.docker.com/r/pivotaleducation/loadtest)
     tool as follows,
@@ -242,7 +266,7 @@ Keep both this windows open and running for the rest of the lab.
     - `DURATION` option value is the max duration of the test (seconds)
     - `REQUESTS_PER_SECOND` option value is the number of requests per second.
 
-1.  In the `cf app` Watch window,
+1.  In either *App Manager* or the `cf app` Watch window,
     monitor the amount of cpu, memory and disk resources taken for the
     test.
 
@@ -352,4 +376,4 @@ Now that you have completed the lab, you should be able to:
 
 -   Tune your application for disposability.
 
--   Tune your application to run optimally in a container
+-   Tune your application to run optimally in a container.

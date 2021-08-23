@@ -21,11 +21,11 @@ After completing the lab, you will be able to:
 
 - Describe how to create runnable Spring Boot application
 - Describe how to create a controller that responds to HTTP requests
-- Use gradle to run gradle tasks
+- Use `gradle` to run Gradle tasks
 
 ## Getting started
 
-1.  You must have completed the
+1.  Check out the
     [Introduction Lab](../intro/).
 
 1.  In a terminal window,
@@ -215,7 +215,7 @@ Now that you have completed the lab, you should be able to:
 
 - Describe how to create runnable Spring Boot application
 - Describe how to create a controller that responds to HTTP requests
-- Use gradle to run gradle tasks
+- Use `gradle` to run Gradle tasks
 
 ## Extra
 

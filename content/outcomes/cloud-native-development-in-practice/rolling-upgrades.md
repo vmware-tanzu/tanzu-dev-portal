@@ -13,13 +13,15 @@ You will demonstrate how to achieve zero downtime upgrades of your
 
 After completing the lab, you will be able to:
 
--   Demonstrate zero downtime upgrades on Tanzu Application Services.
+- Demonstrate zero downtime upgrades on Tanzu Application Services.
 
 ## Getting started
 
-1.  You must have reviewed the
-    [Blue/Green](https://docs.google.com/presentation/d/1XeACqEoDSpII-nKpQhbE_6RbXGNCCFP-ivwIBmdXCyE/present#slide=id.ge9cac6b512_0_0)
-    slides.
+Check out the
+[Blue/Green](https://docs.google.com/presentation/d/1XeACqEoDSpII-nKpQhbE_6RbXGNCCFP-ivwIBmdXCyE/present#slide=id.ge9cac6b512_0_0)
+slides.
+
+### Codebase
 
 1.  You must have completed (or fast-forwarded to) the
     [Scaling lab](../scaling/).
@@ -34,6 +36,27 @@ After completing the lab, you will be able to:
     ```bash
     git cherry-pick rolling-upgrade-solution
     ```
+
+### Monitoring
+
+In this lab you will exercise your `pal-tracker` application under load,
+monitor it,
+and tune it.
+
+You can monitor the `pal-tracker` application through the following:
+
+-   Command Line via the following `cf` commands:
+
+    - `cf app pal-tracker`
+    - `cf events pal-tracker`
+
+-   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+    user interface.
+
+If you will monitor via command line you will need a minimum of four
+terminal windows open.
+
+If you choose to monitor with *App Manager* you will need only one.
 
 ## Perform a zero downtime upgrade
 

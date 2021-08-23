@@ -13,13 +13,15 @@ works with Tanzu Application Services Availability characteristics.
 
 After completing the lab, you will be able to:
 
--   Demonstrate how Tanzu Application Services handles availability.
+- Demonstrate how Tanzu Application Services handles availability.
 
 ## Getting started
 
-1.  Check out the
-    [Availability](https://docs.google.com/presentation/d/1FmUnMpbKKqnIH0y4CxDjB7Vzn7nY0hiGaWngYN6F1oU/present#slide=id.ge9cac6b40d_0_0)
-    slides.
+Check out the
+[Availability](https://docs.google.com/presentation/d/1FmUnMpbKKqnIH0y4CxDjB7Vzn7nY0hiGaWngYN6F1oU/present#slide=id.ge9cac6b40d_0_0)
+slides.
+
+### Codebase and manifest
 
 1.  You must have completed (or fast-forwarded to) the
     [Hardening lab](../harden/).
@@ -29,9 +31,30 @@ After completing the lab, you will be able to:
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
 
+### Monitoring
+
+In this lab you will exercise your `pal-tracker` application under load,
+monitor it,
+and tune it.
+
+You can monitor the `pal-tracker` application through the following:
+
+-   Command Line via the following `cf` commands:
+
+    - `cf app pal-tracker`
+    - `cf events pal-tracker`
+
+-   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+    user interface.
+
+If you will monitor via command line you will need a minimum of four
+terminal windows open.
+
+If you choose to monitor with *App Manager* you will need only one.
+
 ## Verify availability characteristics
 
-1.  From a separate terminal window,
+1.  An a dedicated terminal window,
     run a load test:
 
     ```bash
@@ -47,7 +70,8 @@ After completing the lab, you will be able to:
     curl -v -XPOST -H "Content-Length:0"  http://${APP_URL}/actuator/palTrackerFailure
     ```
 
-1.  Verify in your `pal-tracker` and events watch windows a crash and
+1.  Verify in either *App Manager* or
+    the `pal-tracker` and events watch windows a crash and
     restart occurs.
     This may occur very quickly,
     which demonstrates
@@ -76,6 +100,7 @@ Checkout the
 about how logging is handled on TAS.
 
 Now that you have completed the lab, you should be able to:
--   Demonstrate how Tanzu Application Services handles availability.
+
+- Demonstrate how Tanzu Application Services handles availability.
 
 ## Extras

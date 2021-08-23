@@ -18,9 +18,11 @@ After completing the lab, you will be able to:
 
 ## Getting started
 
-1.  Check out the
-    [Scaling](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
-    slides.
+Check out the
+[Scaling](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
+slides.
+
+### Codebase
 
 1.  You must have completed (or fast-forwarded to) the
     [Availability lab](../availability/).
@@ -29,6 +31,27 @@ After completing the lab, you will be able to:
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
+
+### Monitoring
+
+In this lab you will exercise your `pal-tracker` application under load,
+monitor it,
+and tune it.
+
+You can monitor the `pal-tracker` application through the following:
+
+-   Command Line via the following `cf` commands:
+
+    - `cf app pal-tracker`
+    - `cf events pal-tracker`
+
+-   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+    user interface.
+
+If you will monitor via command line you will need a minimum of four
+terminal windows open.
+
+If you choose to monitor with *App Manager* you will need only one.
 
 ## Scaling `pal-tracker`
 
