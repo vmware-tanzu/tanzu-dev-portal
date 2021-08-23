@@ -10,17 +10,17 @@ This article is the second in a five-part series.
 A healthy, lean, modern application team has a strong and consistent
 *Development Rhythm*.
 
-Developers who apply modern principles, practices, 
-methods, and tools to software are able to 
-add new features and fix existing issues faster, 
+Developers who apply modern principles, practices,
+methods, and tools to software are able to
+add new features and fix existing issues faster,
 safer and more sustainably than ever before.
- 
+
 If you are a developer new to Agile concepts,
 and plan to work with Tanzu Labs on an upcoming
 engagement,
 continue reading this article,
-then go read the reference articles and do the workshops 
-so that you are ready to be productive on your 
+then go read the reference articles and do the workshops
+so that you are ready to be productive on your
 first day of work.
 
 ![Developer Flow](/images/outcomes/application-development-rhythm/developer-flow-programmer.jpg)
@@ -57,7 +57,6 @@ work.
 Before a developer starts work,
 the work must be specified and prioritized in a backlog.
 
-
 The work is specified as discrete *Stories* that are:
 
 - Specifications of *what* to build (or fix).
@@ -67,11 +66,11 @@ The work is specified as discrete *Stories* that are:
 - Sized small enough to be integrated daily.
 
 Product teams typically organize work around features or fixes.
-Either may comprise work that is not small enough 
+Either may comprise work that is not small enough
 to fit in the confines of a single story.
 
-Agile frameworks specify course grained work as an *Epic* or 
-as a *Theme*, but neither the Epic or Theme directly specify 
+Agile frameworks specify course grained work as an *Epic* or
+as a *Theme*, but neither the Epic or Theme directly specify
 the work done by the developer.
 Stories may be tied to Epics (or Themes) to keep the work to
 a specific feature or fix.
@@ -113,7 +112,7 @@ The Agile development workflow compresses design,
 construction,
 and a substantial amount of testing into a story's implementation work.
 
-This places more burden on the developer and shows there is a 
+This places more burden on the developer and shows there is a
 need for discipline in the developer workflow.
 
 ## Flow Summary
@@ -124,7 +123,7 @@ An Agile developer's daily flow is similar to this:
 1.  Review the story details, including its desired outcome.
     The story may be for building new features,
     fixing defects,
-    or for an investigation if the problem/solution domain 
+    or for an investigation if the problem/solution domain
     is not well known.
     If the story is investigative,
     the developer may use a
@@ -221,5 +220,6 @@ methods and tools to help implement your workflow.
 
 ## Keep Learning
 
-- Describe Stories/Velocity/Estimation for team members joining an Application Development project,
-[coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994)
+-   Describe Stories/Velocity/Estimation for team members joining an
+    Application Development project,
+    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994)

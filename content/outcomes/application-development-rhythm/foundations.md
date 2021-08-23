@@ -75,8 +75,8 @@ process:
 
 You can view building block examples in each of the upcoming articles:
 
--   [Development Building Blocks, Part 1](../dev-building-blocks-1/)
--   [Development Building Blocks, Part 2](../dev-building-blocks-2/)
+- [Development Building Blocks, Part 1](../dev-building-blocks-1/)
+- [Development Building Blocks, Part 2](../dev-building-blocks-2/)
 
 ## Principles
 
@@ -100,7 +100,8 @@ To find out more about Tanzu foundational principles click
 [here](/outcomes/application-development-how-we-work/principles/).
 
 There are two engineering principles that you may find particularly
-useful. They are:
+useful.
+They are:
 
 - [SOLID design principles](https://en.wikipedia.org/wiki/SOLID)
 - [12 Factor guidelines](https://12factor.net)
@@ -146,9 +147,10 @@ Some of the methods and techniques you will see in this series includes:
 - [Refactoring](https://refactoring.com)
 - Red/Green/Refactor
 
-## Code Patterns
+## Software Patterns
 
-Code patterns are traceable events that happen when a developer codes.
+Software patterns are known solutions used to solve a common type of
+development problem.
 They are an excellent resource for providing solutions to new and
 recurring software problems.
 
@@ -157,10 +159,9 @@ similar to *practices*.
 
 Think of patterns as one of the high level *whats* of building software.
 
-Developers whose share common coding techniques are quick to recognize
-similar code patterns, across projects. Today, code patterns are
-often published so that other developers may also share
-and collaborate their findings.
+Software patterns are discovered over time,
+then published so that other developers may also share and collaborate
+their findings.
 
 ![Patterns](/images/outcomes/application-development-rhythm/patterns.jpg)
 
@@ -169,20 +170,23 @@ a new or recurring software problem.
 
 ## Tools and Technologies
 
-*Tools* and *Technologies* facilitate the use of solution pattern methods and practices,
-as well as the implementation of solution patterns, where appropriate.
+*Tools* and *Technologies* facilitate the use of solution pattern
+methods and practices,
+as well as the implementation of solution patterns,
+where appropriate.
 
 As you know, the most popular tools, technologies and frameworks
-available on the market today, can quickly be replaced and considered
-outdated tomorrow. One way to ensure the tools and technologies that you select
+available on the market today,
+can quickly be replaced and considered outdated tomorrow.
+One way to ensure the tools and technologies that you select
 are going to be the most productive is to refer to your organization's
 support for standards to collect tool selection criteria.
 
 It's also a good idea to become proficient in how each of the tools and
-technologies work, as this is the best way to prevent
+technologies work, as this is the best way to minimize
 friction in the Modern Apps Practitioner Workflow.
 
-## Trade offs, Costs and Technical Debt
+## Trade Offs, Costs and Technical Debt
 
 Selecting the best building blocks to run your daily work
 can be a challenge.
@@ -216,11 +220,12 @@ Resources are another upfront cost.
 Resource costs includes compute, storage and other
 infrastructures specific to the activities.
 
-As a Modern App Developer, you can do your part
-in keeping your organization's upfront costs down
-by working with minimal designs. Although this is
-a proven cost-effective solution, there are drawbacks
-that can sometimes cause [*Technical Debt*](#technical-debt).
+As a Modern App Developer,
+you can do your part in keeping your organization's upfront costs down
+by working with minimal designs.
+Although this is a proven cost-effective solution,
+there are drawbacks that can sometimes cause
+[*Technical Debt*](#technical-debt).
 
 ### Taxes
 

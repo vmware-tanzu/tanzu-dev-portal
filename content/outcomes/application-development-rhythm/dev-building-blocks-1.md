@@ -8,7 +8,7 @@ team:
 This article is the third in a five-part series.
 
 A healthy *Developer Rhythm* uses a disciplined workflow.
-This type of workflow requires you to use a set of 
+This type of workflow requires you to use a set of
 building blocks to facilitate that flow.
 
 ![Principles, Practices](/images/outcomes/application-development-rhythm/dev-building-blocks.jpg)
@@ -20,26 +20,26 @@ In this article, you will learn to:
 -   List and describe the development *practices* to use in your
     day-to-day development flow.
 
--   List and describe the development flow *techniques and methods* 
+-   List and describe the development flow *techniques and methods*
     to use in your day-to-day development flow.
 
 ## Coding and Architectural Design Principles and Practices
 
-Building a new application is easier than you might think. 
-This is because there is nothing existing to change 
+Building a new application is easier than you might think.
+This is because there is nothing existing to change
 and nothing existing to break when adding new features.
 
-Much of the work you do as a developer centers around 
+Much of the work you do as a developer centers around
 adding and modifying code to *an existing codebase*.
 This implies frequent change.
 Frequent change can be difficult.
 
-You can gain knowledge and experience using 
-principles and practices by continually applying 
-them to the problems you are trying to solve, while 
-also ensurng the codebase is *flexible to change*.
+You can gain knowledge and experience using
+principles and practices by continually applying
+them to the problems you are trying to solve, while
+also ensuring the codebase is *flexible to change*.
 
-There are many good development principles. 
+There are many good development principles.
 The following principle is universal for software,
 regardless of the language or technology:
 
@@ -77,7 +77,7 @@ safety and sustainability because they let you:
 -   Specify the implementation design that
     reduces the need for explicit design documentation.
 -   Test coverage.
--   Separate the hypothesis phase and the experiment phase 
+-   Separate the hypothesis phase and the experiment phase
     that provides a natural fit to drive a feedback loop.
 
 ## Continuous Integration Practices
@@ -122,9 +122,9 @@ It also scales well when combined with
 
 Trunk-based development facilitates
 *Continuous Integration* and *Continuous Delivery* practices.
-If you are working on products that support multiple, 
+If you are working on products that support multiple,
 release versions used by different customers,
-or if you have a significant number of contributors that are outside 
+or if you have a significant number of contributors that are outside
 the product team,
 this model is not the best for you.
 
@@ -152,8 +152,8 @@ A good analogy is that of a modern app team running a marathon at a
 consistent pace,
 instead of running at a sprint pace.
 
-Timeboxing lets you chunk specific times for work 
-and specific times to rest in so that 
+Timeboxing lets you chunk specific times for work
+and specific times to rest in so that
 the workflow cadence is more consistent and sustainable.
 
 The
@@ -172,10 +172,10 @@ After reading this article, you can now:
 
 You were also introduced to the major building blocks to use
 in your daily workflow.
-There are many more building blocks for you to learn about. 
+There are many more building blocks for you to learn about.
 
-The building blocks described here, influence use of 
-other techniques and tools that you can read about 
+The building blocks described here, influence use of
+other techniques and tools that you can read about
 in the article, *Building Blocks, Part 2*.
 
 ## Keep Learning

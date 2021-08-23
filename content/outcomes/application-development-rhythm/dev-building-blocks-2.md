@@ -9,11 +9,11 @@ This article is the fourth in a five-part series.
 
 A healthy *Developer Rhythm* starts with a disciplined workflow.
 The only way you can successfully achieve this type of workflow
-is to learn how to use modern developer tools much in the same 
-way that a carpenter has to learn to the tools of their trade.
+is to learn how to use modern developer tools much in the same
+way that a carpenter has to learn how to use the tools of their trade.
 
-Developers who implement features or fixes in software 
-like to move quickly, safely, and sustainably. 
+Developers who implement features or fixes in software
+like to move quickly, safely, and sustainably.
 The methods, techniques and tools in this article ensure
 that new developers are also able to accomplish these
 goals.
@@ -34,26 +34,27 @@ In this article, you will learn to:
 Distributed Source Code Version Systems like *Git* or *Mercurial*
 allow you to work independently from the team source control repository.
 
-To get started, copy the complete repository, 
+To get started, copy the complete repository,
 including the full commit history to your workstation.
 
-Next, create a new local history. Update the local history, 
+Next, create a new local history.
+Update the local history,
 then merge it back to the team source control repository.
 
 Now, create private (local) branches using the distributed source control local
-branching feature. 
+branching feature.
 
-Private branches make it easy for you to track new 
+Private branches make it easy for you to track new
 and updated work in feedback loops that are not yet
-merged in your team source control repository. 
+merged in your team source control repository.
 
-If there is a file in your local branch that you do 
-not want to keep, you can remove it. For example, you can
-take out an experiment that did not work from 
-the local branch, before merging the local branch 
-to the team source control repository.
+If there is a file in your local branch that you do
+not want to keep, you can remove it.
+For example, you can take out an experiment that did not work from the
+local branch,
+before merging the local branch to the team source control repository.
 
-Update the version history at the end of the 
+Update the version history at the end of the
 feedback loop phase of the workflow so that it is a single,
 curated,
 well described commit that specifies the purpose of the
@@ -69,7 +70,7 @@ developers will have to restructure it to accommodate new features.
 
 [Refactoring](https://www.refactoring.com/) is the process of changing
 the structure of a codebase without changing its behavior.
-Refactoring is a technique that is straightforward but also 
+Refactoring is a technique that is straightforward but also
 extremely complex.
 
 ### Mikado Method
@@ -104,14 +105,14 @@ method to see if you can get unstuck.
 ## Middleware, Databases, Platforms
 
 You need a place to run your software applications,
-and a place to store the software applications data. 
+and a place to store the software applications data.
 This is necessary for your production apps,
 but not necessary for your development environments.
 
-As of the authoring of this article, there are 
-two popular learning trends that support the 
-modern platforms where most new applications 
-run today. 
+As of the authoring of this article, there are
+two popular learning trends that support the
+modern platforms where most new applications
+run today.
 
 - Virtualization technologies
 - Container technologies (like Docker)
@@ -120,18 +121,18 @@ run today.
 
 These are the class of tools developers can choose that best fit their
 projects and work.
-Notice that there are no specific tools recommended. You will need to
-figure that out based on your team needs.
+Notice that there are no specific tools recommended.
+You will need to figure that out based on your team needs.
 
 One suggestion is to start with the most minimal possible toolset,
 and add more sophisticated tools, as needed.
 
-It's always a good idea to start with a minimal developer 
+It's always a good idea to start with a minimal developer
 toolset because:
 
 -   It is more important for you to focus on solving problems
     than on using tools.
-    It's up to you to keep the tools you are not using 
+    It's up to you to keep the tools you are not using
     out of the way.
 
 -   More complex tools may hide key details that you are
@@ -142,7 +143,7 @@ toolset because:
 These tools are the root, technical, building blocks upon which
 your software is built.
 
-You may work in an organization that lets you pick the 
+You may work in an organization that lets you pick the
 technologies for your products.
 If not, your choice could be restricted by:
 
@@ -155,9 +156,9 @@ If not, your choice could be restricted by:
 are common tools in a developer's toolkit that sheds some of the burden of
 software development.
 When you use a framework,
-it is important to understand the mechanics and workings 
+it is important to understand the mechanics and workings
 of the framework during software runtime.
-One area to be aware of is a particular framework hiding 
+One area to be aware of is a particular framework hiding
 implementation or software runtime details.
 
 See [Spring Framework](https://spring.io/projects/spring-framework) for an example in the Java ecosystem.
@@ -167,10 +168,10 @@ See [Spring Framework](https://spring.io/projects/spring-framework) for an examp
 *Interactive Development Environment* (IDE) is a popular
 developer tool for writing software that you can also use to.
 
-* Debug software.
-* Integrate source control system clients.
-* Write documentation.
-* Orchestrate a developer’s workflow (in some cases).
+- Debug software.
+- Integrate source control system clients.
+- Write documentation.
+- Orchestrate a developer’s workflow (in some cases).
 
 Some IDEs are modular,
 meaning they can be extended and customized for a particular developer
@@ -199,7 +200,7 @@ frameworks you choose,
 or perhaps to facilitate working in a secure path to production.
 
 See [Spring Initializr](https://start.spring.io/)
-as an example of a new project accelerator in the 
+as an example of a new project accelerator in the
 Java/Spring ecosystem.
 
 ### Code Katas
