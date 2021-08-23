@@ -767,6 +767,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
