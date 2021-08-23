@@ -299,7 +299,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
-codebase
+[Cc]odebase
 CodeFresh
 CodeOne
 CoffeeOps
