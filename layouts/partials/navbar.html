@@ -19,7 +19,7 @@
 			{{ range .Site.Menus.main }}
 				{{ if .HasChildren }}
 				<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						{{ .Name }}
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -52,7 +52,7 @@
 				</div>
 			</li>
 
-			<li class="nav-item ml-lg-2 ml-1 mb-0 position-relative overflow-hidden text-nowrap ">
+			<li id="theme-select" class="nav-item ml-lg-2 ml-1 mb-0 position-relative overflow-hidden text-nowrap">
 				<div id="dark-select" class="nav-select"></div>
 				<div id="light-select" class="nav-select"></div>
 				<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>

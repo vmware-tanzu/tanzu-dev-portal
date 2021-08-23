@@ -13,6 +13,6 @@ Applications running in VMware Tanzu Application Service live inside a temporary
 However, if file access is required (as an integration pattern with an external tool or team outside of your control), TAS provides "volume services" to map network folders to the twelve-factor concept of bound services. The [volume services documentation](https://docs.pivotal.io/application-service/2-11/devguide/services/using-vol-services.html) provides an overview, and a demo app for you to review to ensure volume services are available to you in your TAS environment.
 
 
-#### Homework
+## Homework
 
 - Read the [example to use an external file system](https://docs.pivotal.io/application-service/2-11/devguide/services/using-vol-services.html).

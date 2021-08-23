@@ -778,6 +778,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
@@ -902,6 +903,7 @@ JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
+k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
@@ -1379,6 +1381,7 @@ PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+Pythonic
 QCon
 QoS
 Querier
@@ -1607,6 +1610,7 @@ Stacker
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
+Starlark
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1663,7 +1667,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing)
+[Tt]emplat(ed|ing|ing.|ize)
 Templeton
 Teotti
 Teppanyaki

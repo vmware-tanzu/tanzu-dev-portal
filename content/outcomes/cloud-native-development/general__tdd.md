@@ -38,12 +38,12 @@ VMware Tanzu develops software using the test-driven development methodology of 
 The best way to learn about test-driven development is to do some of it! Pairing with an experienced software engineer will give you lots of practice. Or, if you prefer to do it yourself, you can prepare by reading [this article on TDD exercises](https://medium.com/@marlenac/learning-tdd-with-katas-3f499cb9c492) and running through some of the [first requirements for the Greeting exercise](https://github.com/testdouble/contributing-tests/wiki/Greeting-Kata) in your IDE.
 
 
-#### Homework
+## Homework
 
 - Read linked articles on the test pyramid and specific kinds of testing.
 - Run through at least three requirements from the Greeting exercise.
 
 
-#### Additional resources
+## Additional resources
 
 - Review the [foundaments of Test Driven Development](/outcomes/application-development/test-driven-development/).

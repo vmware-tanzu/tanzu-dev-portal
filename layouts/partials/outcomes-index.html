@@ -11,7 +11,7 @@
     {{ if .IsSection }}
     {{ if eq .Parent $parent }}
     <a class="h-auto linked-box td-box--gray-dark p-4 flex-315 col-12 mr-3 mb-3 px-0" href="{{ .RelPermalink }}">
-        <h4 class="link mt-3">{{- .Title -}}</h4>
+        <h2 class="h4 link mt-3 pt-0">{{- .Title -}}</h2>
         <p>{{ .Description | markdownify }}</p>
     </a> 
     {{ end }}

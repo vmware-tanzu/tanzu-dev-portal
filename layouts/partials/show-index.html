@@ -3,8 +3,10 @@
         <div class="px-0 mb-5 shows">
         {{ range sort .Sections }}
             <div class="row d-flex justify-content-between align-items-baseline mb-3" >
-                <a href="{{ .RelPermalink }}"><h4>{{ .Title }}</h4></a>
-                <h5 class='text-uppercase text-white'>{{ .Params.teaser }} </h5>
+                <h2 class="h4">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+                <p class='h5 text-uppercase text-white'>{{ .Params.teaser }} </p>
             </div>
             <div class='row d-flex justify-content-between mb-5 episodes'>
             {{if ( eq (.Title ) "SpringOne Tour")}}

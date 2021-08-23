@@ -62,18 +62,18 @@ Each member of the balanced team represents one of these areas.
 
 ![Balanced Team Diagram](/images/outcomes/application-development/balanced-teams.jpeg)
 
-#### Desirable: Does it solve our users’ problems? {id=desirable}
+### Desirable: Does it solve our users’ problems? {id=desirable}
 
 The product should be something that users want and that solves real problems. A designer’s primary question is, “How is the user affected?” More than anyone else on the team, designers help us answer these fundamental questions: “Is this an important problem to users?” and, “Does this design solve the problem?”
 
 **Reflection:** if designers become too focused on user needs and cannot connect with business needs and technical feasibility, they will focus on solution ideas that cannot be implemented and/or will deliver no return on investment.
 
-#### Viable: Will this help the business? {id=viable}
+### Viable: Will this help the business? {id=viable}
 The product has to support a sustainable business model. The product manager’s primary question is, “By solving these specific user problems with these specific solutions, are we creating valuable user and business outcomes?” 
 
 **Reflection:** if product managers become too focused on the business and cannot connect with users, they will likely focus on solutions that don’t solve any real needs and thus don’t get used.
 
-#### Feasible: How difficult is it to build? {id=feasible}
+### Feasible: How difficult is it to build? {id=feasible}
 Product implementation has to be feasible and robust. Engineers’ primary question is, “What technical implementation will satisfy the project and product goals best?” Engineers help us debate the feasibility and merit of potential solutions while remaining mindful of technology constraints.
 
 **Reflection:** it doesn’t help for engineers to come up with feasible solutions that don’t solve problems for users, or to home in on solutions that are desirable and viable and yet not feasible. Engineers should offer alternative solutions that are more feasible (or cheaper) if they know them to be available.
@@ -102,7 +102,7 @@ Balanced teams have a host of benefits, some top ones are:
 1. Want to learn more about balanced teams? Check out Becki Hyde, Product Manager at Tanzu Labs giving her talk [“Making magic with Balanced Teams”](https://tanzu.vmware.com/content/videos/becki-hyde-making-magic-with-balanced-teams) at SpringOne. 
 1. Ready to dive into more fine grained details of what balanced teams are? Check out this VMware Tanzu Labs [Balanced Team Whitepaper](https://tanzu.vmware.com/content/white-papers/how-to-build-better-software-with-balanced-teams).
 
-### Related topics
+## Related topics
 - [Agile Software Development](https://tanzu.vmware.com/agile)
 - [Lean Product Development](https://tanzu.vmware.com/content/videos/lean-product-development-by-michael-fisher)
 - [User Centered Design](https://tanzu.vmware.com/campaigns/design)
