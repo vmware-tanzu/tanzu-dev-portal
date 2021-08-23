@@ -357,6 +357,6 @@ public void postWithoutIdShouldCreate() throws Exception {
 
 This test will send a `POST` to `/items` with the data `"{"name": "Speakers", "price": 39.99, "count": 33}"`, setting the `Content-Type` header to `application/json`. It will then ensure that the response has a status code of `201` (with `status().isCreated()`, which is equal to `201`), as well as check that all the fields that are returned are what you would expect.
 
-## Learn More
+## Keep learning
 
 The Spring website has some great guides on writing [RESTful APIs with Spring Boot](https://spring.io/guides/gs/rest-service/) as well as a more in-depth look at [Testing the Web Layer](https://spring.io/guides/gs/testing-web/), which are wonderful next steps. If you’re new to REST APIs, make sure to check out the [Basics of REST](/guides/microservices/basics-of-rest).

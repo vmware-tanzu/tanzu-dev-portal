@@ -11,19 +11,20 @@ help:
 
 #theme: @ runs git module to update the theme
 theme:
+	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
 	git submodule update --init --recursive
 
-#npm: @ runs npm install to install dependencies
+#npm: @ runs npm ci to install dependencies from package-lock.json
 npm: theme
-	npm install
+	npm ci
 
 #preview: @ preview hugo
 preview: npm
-	hugo server -b http://localhost:1313/developer
+	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
 #build: @ build site into `public` directory
 build: npm
-	hugo -b https://localhost:1313/developer
+	hugo -b http://localhost:1313/developer
 
 #test: @ runs act to simulate a github pull request test suite
 test: npm
@@ -33,14 +34,21 @@ test: npm
 spell: npm
 	act -j spell-check
 
-#function-config: @ sets the function config variables during build
-function-config:
-ifeq ($(CONTEXT), production)
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
-else
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' >> netlify/functions/util/config.js
-endif
+#local: @ used for running local netlify dev server
+local: function-config
+	hugo server -w -b http://localhost:1313/developer
 
+#function-config: @ sets the function config variables during build
+function-config: npm
+ifeq ($(CONTEXT), production)
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
+else
+ifeq ($(CONTEXT), deploy-preview)
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
+else
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="http://localhost:8888" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
+endif
+endif
 
 #guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:

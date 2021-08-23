@@ -500,6 +500,7 @@ EKS
 ElasticSearch
 ELB(s)?
 Eleftheria
+Emad
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -704,6 +705,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+Hackenburg
 Hadlow
 Hamano
 Hananiel
@@ -765,6 +767,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
@@ -824,6 +827,7 @@ JaFU
 Jakarta
 Jakub
 Jarvinen
+Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
@@ -887,6 +891,7 @@ JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
+k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
@@ -920,6 +925,7 @@ Knative-Serving
 knative-serving
 KNN
 KoFu
+Kostadis
 kotlin
 Kousen
 Kpack
@@ -1354,6 +1360,7 @@ PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+Pythonic
 QCon
 QoS
 Querier
@@ -1442,6 +1449,7 @@ rom-com
 rootPassword
 Rosecrance
 Rosso
+Roussos
 [Rr]outable
 Route53
 RouteAuthSpecs
@@ -1578,6 +1586,7 @@ Stacker
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
+Starlark
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1633,7 +1642,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing)
+[Tt]emplat(ed|ing|ing.|ize)
 Templeton
 Teotti
 Teppanyaki
@@ -1824,6 +1833,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+Yonis
 youtube
 ytt
 Zalando
@@ -1832,4 +1842,5 @@ ZDNet
 ZOP
 Zou
 Zuul
+Zynga
 μServices

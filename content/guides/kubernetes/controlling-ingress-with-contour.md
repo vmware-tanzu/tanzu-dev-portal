@@ -24,7 +24,7 @@ Ingress is an important component of Kubernetes because it cleanly separates an 
 
 Contour is built for Kubernetes to empower you to quickly deploy cloud native applications by using the flexible IngressRoute API. Contour deploys the Envoy proxy as a reverse proxy and load balancer.
 
-### What Is Envoy?
+## What Is Envoy?
 [Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) is a Layer 7 (application layer) bus for proxy and communication in modern service-oriented architectures, such as Kubernetes clusters. Envoy strives to make the network transparent to applications while maximizing observability to ease troubleshooting.
 
 ## What Problems Does Contour Solve?

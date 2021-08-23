@@ -1,0 +1,93 @@
+{{ $cover := .HasShortcode "blocks/cover" }}
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
+<div class='container'>
+
+        <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
+	</a>
+	<div class="td-navbar-nav-hamburger" id="main_navbar">
+		<ul class="navbar-nav mt-lg-0 align-items-center">
+			{{ if  .Site.Params.versions }}
+			<li class="nav-item dropdown d-none d-lg-block mr-xl-4 mr-2 mb-0">
+				{{ partial "navbar-version-selector.html" . }}
+			</li>
+
+			{{ end }}
+			{{ $p := . }}
+			{{ $url := urls.Parse .RelPermalink }}
+			{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
+			{{ range .Site.Menus.main }}
+				{{ if .HasChildren }}
+				<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{{ .Name }}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						{{ range .Children }}
+						<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+						{{ end }}
+					</div>
+				</li>
+				{{ else }}
+				<li class="nav-item mr-xl-4 mr-2 mb-0">
+					{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
+					{{ with .Page }}
+					{{ $active = or $active ( $.IsDescendant .)  }}
+					{{ end }}
+					<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
+				</li>
+				{{ end }}
+			{{ end }}
+
+			<li class="nav-item mr-xl-4 mr-2 mb-0 mobile-search-link" style="display: none;">
+				<a class="nav-link" href="{{ "/search" | relURL }}"><span>Search</span></a>
+			</li>
+			
+			<li class="search remove-menu search_icon">
+				<div class="search-icon relative z-1" tabindex="0">
+					<svg id="search-svg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="6.08696" cy="6.08696" r="5.33696" stroke="white" stroke-width="1.5"/>
+						<path d="M9.13049 10.3478L14.0001 15.2173" stroke="white" stroke-width="1.5"/>
+					</svg>
+				</div>
+			</li>
+
+			<li id="theme-select" class="nav-item ml-lg-2 ml-1 mb-0 position-relative overflow-hidden text-nowrap">
+				<div id="dark-select" class="nav-select"></div>
+				<div id="light-select" class="nav-select"></div>
+				<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>
+				<a class="position-relative" id="toggle-light-mode"><i class="fas fa-sun mr-0"></i></a>
+			</li>
+
+<!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}
+			<li class="nav-item dropdown d-none d-lg-block">
+				{{ partial "navbar-lang-selector.html" . }}
+			</li>
+			{{ end }} -->
+
+		</ul>
+
+		<div id="menu-toggle">
+			<span>
+        <div id="menu-bars"><div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div></div>
+        <svg id="menu-close" viewBox="0 0 18.33 18.33" xmlns="http://www.w3.org/2000/svg"><line class="a" x1="1" x2="17.33" y1="1" y2="17.33"></line><line class="a" x1="17.33" x2="1" y1="1" y2="17.33"></line></svg>
+      </span>
+		</div>
+	</div>
+
+	<div id="search-nav" role="search">
+		<div class="container relative">
+		<form id="searchheaderform" action='{{ "/search" | relURL }}' accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+		<input type="text" name="q" id="searchheaderinput" autocomplete="off" placeholder="Search for guides, videos, code samples, posts, and more...">
+		<input type="submit" value="" id="searchheadersubmit" data-disable-with="">
+		</form>
+		
+		<div class="search-icon search-hide">
+		<svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+		<path class="b" d="M19.41,18l7.29-7.29a1,1,0,0,0-1.41-1.41L18,16.59,10.71,9.29a1,1,0,0,0-1.41,1.41L16.59,18,9.29,25.29a1,1,0,1,0,1.41,1.41L18,19.41l7.29,7.29a1,1,0,0,0,1.41-1.41Z"></path>
+		</svg>
+		</div>
+		</div>
+	</div>
+</div>
+</nav>

@@ -1,0 +1,25 @@
+{{ $url_text := .Get "url_text" }}
+{{$icon_path := .Get "icon_path" }}
+{{ $left_border_color := .Get "color" }}
+{{ $link := replace (lower $url_text) "/" "-"  }}
+{{ $link := replace $link "&" "and" }}
+{{ $link := replace $link " " "-" }}
+{{ $section_name := $link  }}
+{{ $link := printf "%s/%s" "/data" $link | relURL }}
+
+
+<div class="col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+
+  {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+<div class='data-service-left-edge left-edge-color-{{$left_border_color}} '></div>
+
+{{ with $.Site.GetPage "section" $section_name }}
+<h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
+    <div>
+      <img class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
+      <h4 class="h4">{{$url_text }}</h4>
+    </div>
+
+<p class="mb-0 text-light">{{ .Description }}</p>
+  </a>{{end}}{{ end }}
+</div>

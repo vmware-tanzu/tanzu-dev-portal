@@ -76,6 +76,38 @@ To get a local copy of the Tanzu Developer Center up and running follow these st
      make preview
      ```
 
+## Troubleshooting
+
+### Q. I'm receiving an error about cloning `themes/docsy`
+
+With the change with how the theme files are overridden, the first time you update your branch you may see the following issue when running `make preview`:
+
+```
+git submodule update --init --recursive
+Submodule 'themes/docsy' (https://github.com/google/docsy.git) registered for path 'themes/docsy'
+fatal: not a git repository: /private/tmp/tanzu-dev-portal/themes/docsy/../../.git/modules/themes/docsy
+Failed to clone 'themes/docsy'. Retry scheduled
+BUG: submodule considered for cloning, doesn't need cloning any more?
+fatal: could not get a repository handle for submodule 'themes/docsy'
+make: *** [theme] Error 1
+```
+
+You can run the following command for a one-time fix:
+
+```
+rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy
+```
+
+### Q. `make preview` is throwing a `fatal error: pipe failed` error
+
+This is due to the number of files that are opened during the process of building the site. If you're on OSX, this can be addressed with the following command:
+
+```
+sudo launchctl limit maxfiles 65535 200000
+ulimit -n 65535
+sudo sysctl -w kern.maxfiles=100000
+sudo sysctl -w kern.maxfilesperproc=65535
+```
 
 ## Open Projects, Issues, and Content Backlog
 

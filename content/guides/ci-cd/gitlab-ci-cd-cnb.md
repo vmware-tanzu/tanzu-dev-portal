@@ -40,7 +40,7 @@ GitLab pipelines are defined in the `.gitlab-ci.yml` file; they consist of one o
 
 ![](/images/guides/ci-cd/gitlab-ci-cd-cnb/screenshots/image3.png)
 
-### Create a New Project in GitLab SaaS  (or Using Your GitLab Instance If You Have a Self-Managed One)
+## Create a New Project in GitLab SaaS  (or Using Your GitLab Instance If You Have a Self-Managed One)
 
 1. Log in to GitLab.com.
 
@@ -107,7 +107,7 @@ Suggested builders:
 
 ![](/images/guides/ci-cd/gitlab-ci-cd-cnb/screenshots/image9.png)
 
-### Use Cloud Native Buildpacks with GitLab in GitLab Build Job WITHOUT Using the GitLab Build Template
+## Use Cloud Native Buildpacks with GitLab in GitLab Build Job WITHOUT Using the GitLab Build Template
 
 GitLab CI/CD also allows you to use your own build script if you so wish. Let’s look at a build script that reads the `AUTO_DEVOPS_BUILD_IMAGE_CNB_BUILDER` environment variable to determine which buildpack to use, which we saw how to set in Step 11:  
 ```yaml
