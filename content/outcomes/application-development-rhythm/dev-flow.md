@@ -220,6 +220,5 @@ methods and tools to help implement your workflow.
 
 ## Keep Learning
 
--   Describe Stories/Velocity/Estimation for team members joining an
-    Application Development project,
-    [coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994)
+-   [Describe Stories/Velocity/Estimation for team members joining an
+    Application Development project](../../application-development/prioritizing-outcomes/)
