@@ -106,7 +106,7 @@ article.
 
 While the story provides a form of specification or requirement,
 it is up to the developer to translate the specification of the story
-into one or more tests and their associated solutions.
+into the design, tests, and their associated solutions.
 
 The Agile development workflow compresses design,
 construction,
@@ -165,24 +165,6 @@ to craft quality software quickly *and* safely.
 Discipline requires a set of clear,
 repeatable processes to be sustainable.
 
-## Development Inner Loop
-
-As container and container orchestration technologies are becoming
-mainstream,
-development,
-testing and deployment become more complicated.
-
-Another term you may see that relates to this subject is
-*Development Inner Loop*.
-
-The idea is that the developer will iterate in their development
-environment (the *Inner Loop*),
-and then integrate their work in a *DevOps Cycle*
-(the *Outer Loop*)
-for continuous integration automated verification,
-and automation to support *Continuous Delivery* or
-*Continuous Deployment*.
-
 ## Feedback Loops
 
 A common theme in modern application teams and their practices are use
@@ -221,6 +203,24 @@ The idea is to use evidence-based approaches to change,
 and that changes are easy to define,
 implement,
 and measure the outcome.
+
+## Development Inner Loop
+
+As container and container orchestration technologies are becoming
+mainstream,
+development,
+testing and deployment become more complicated.
+
+Another term you may see that relates to this subject is
+*Development Inner Loop*.
+
+The idea is that the developer will iterate in their development
+environment (the *Inner Loop*),
+and then integrate their work in a *DevOps Cycle*
+(the *Outer Loop*)
+for continuous integration automated verification,
+and automation to support *Continuous Delivery* or
+*Continuous Deployment*.
 
 ## Summary
 
