@@ -2,7 +2,7 @@
 title: Tanzu RabbitMQ
 linkTitle: Tanzu RabbitMQ
 type: data-services
-icon: tanzu
+icon: tanzu-rabbitmq
 dataServiceType: Message Broker
 
 description: >

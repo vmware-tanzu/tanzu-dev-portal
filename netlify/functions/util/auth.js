@@ -72,7 +72,7 @@ function randomToken() {
 async function tokenIsValid(tokenStr) {
     try {
         const req = await got.get(
-            'https://auth.esp.vmware.com/api/auth/v1/tokens/public-key',
+            base+'/tokens/public-key',
         );
         const key = JSON.parse(req.body);
         const convertKey = key.key.replace(/RSA /gi, '');
