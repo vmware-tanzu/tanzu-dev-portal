@@ -165,6 +165,24 @@ to craft quality software quickly *and* safely.
 Discipline requires a set of clear,
 repeatable processes to be sustainable.
 
+## Development Inner Loop
+
+As container and container orchestration technologies are becoming
+mainstream,
+development,
+testing and deployment become more complicated.
+
+Another term you may see that relates to this subject is
+*Development Inner Loop*.
+
+The idea is that the developer will iterate in their development
+environment (the *Inner Loop*),
+and then integrate their work in a *DevOps Cycle*
+(the *Outer Loop*)
+for continuous integration automated verification,
+and automation to support *Continuous Delivery* or
+*Continuous Deployment*.
+
 ## Feedback Loops
 
 A common theme in modern application teams and their practices are use
@@ -222,3 +240,5 @@ methods and tools to help implement your workflow.
 
 -   [Describe Stories/Velocity/Estimation for team members joining an
     Application Development project](../../application-development/prioritizing-outcomes/)
+
+-   [Docker and Development Inner Loop](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
