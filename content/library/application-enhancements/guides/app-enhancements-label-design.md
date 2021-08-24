@@ -5,7 +5,7 @@ parent: Application Enhancements
 tags:
 - Kubernetes
 team:
-- John Harris
+- Andrew Huffman
 title: Label Best Practices
 topics:
 - Kubernetes
