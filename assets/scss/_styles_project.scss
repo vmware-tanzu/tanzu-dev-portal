@@ -158,6 +158,8 @@ body {
   
   .table thead th {
     vertical-align: middle;
+    color: white;
+    border-bottom-color: rgb(222, 226, 230);
   }
   
   p {
@@ -2052,6 +2054,7 @@ background: black;
   
     table, tr, th, td {
       border: 1px solid $border-color;
+      color: white;
     }
     #how-to-use-this-method {
       text-align: center;
