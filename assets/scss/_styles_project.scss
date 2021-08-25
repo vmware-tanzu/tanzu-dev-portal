@@ -653,7 +653,7 @@ body {
       top: -2px;
     }
   }
-  .topic {
+  .topic, .language {
     a {
       border-radius: 0;
       background: $gray-800;
@@ -662,14 +662,14 @@ body {
       text-align: center;
       vertical-align: middle;
       user-select: none;
-      padding: 0.375rem 0.75rem;
+      //padding: 0.375rem 0.75rem;
       line-height: 1.5;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      //   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       width: 100%;
       &:hover {
         background: $linkboxhover;
-        border-color: $border;
+        //border-color: $border;
         color: $link-hover-color;
       }
     }
@@ -679,6 +679,105 @@ body {
     p {
       margin: 0;
     }
+    .topic-description {
+      border-radius: 0;
+      background: $gray-800;
+      display: inline-block;
+      font-weight: 400;
+      text-align: left;
+      vertical-align: middle;
+      user-select: none;
+      //padding: 0.375rem 0.75rem;
+      line-height: 1.5;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 100%;
+      // &:hover {
+      //   background: $linkboxhover;
+      //   border-color: $border;
+      //   color: $link-hover-color;
+      // }
+    }
+  }
+
+  .language {
+    a {
+      background: $dark;
+    }
+  }
+  .gs-tanzu {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem;
+    line-height: 1.5;
+    color: white;
+    background-color: $bright-green;
+    transition: top .2s, color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    user-select: none;
+    display: block;
+    &:hover {
+      background: $dark-green;
+      //border-color: $border;
+      color: $link-hover-color;
+    }
+  }
+
+  .learning-path-card {
+    a {
+      border-radius: 0;
+      background: $dark;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      //padding: 0.375rem 0.75rem;
+      line-height: 1.5;
+      // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      //   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 100%;
+      &:hover {
+        background: $linkboxhover;
+        //border-color: $border;
+        color: $link-hover-color;
+      }
+    }
+    .h4 {
+      font-size: 1.1rem;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .learning-path-description {
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: middle;
+    user-select: none;
+    //padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+  }
+  .learning-path-duration {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 0.5rem;
+    color: $gray-500;
+    font-size: 0.8rem;
+  }
+  .learning-path-level {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.5rem;
+    color: $gray-500;
+    font-size: 0.8rem;
   }
   
   .person {
