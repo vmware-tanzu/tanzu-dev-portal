@@ -329,7 +329,7 @@ Corry
 CORS
 cortado
 Cosgrove
-Coté
+Coté('s)?
 counterintuitive
 COVID-19
 CPUs
