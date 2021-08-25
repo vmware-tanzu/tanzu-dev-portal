@@ -4,11 +4,14 @@ description: Install Concourse CI onto Kubernetes with VMware Tanzu as an automa
   engine for cloud native CI/CD and build declarative pipelines to automate your workflows.
 lastmod: '2021-03-07'
 linkTitle: Concourse CI
+metaTitle: Concourse CI
+subsection: Concourse CI
 patterns:
 - Deployment
 tags:
 - CI-CD
 - Concourse
+- Kubernetes
 team:
 - Tony Vetter
 title: Getting Started with Concourse CI
