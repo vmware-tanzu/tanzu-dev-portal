@@ -16,6 +16,22 @@ weight: 2
 oldPath: "/content/guides/spring/request-response-logging.md"
 aliases:
 - "/guides/spring/request-response-logging"
+faqs:
+  faq:
+    - question: How do log requests and responses in Spring Boot work?
+      answer: Log requests and responses in a Spring Boot application work by utilizing logback to collect full payloads,  an essential part of monitoring and troubleshooting running applications.
+    - question: How do you get Spring Boot logs?
+      answer: Spring Boot logs can be obtained by creating a Maven Project Object Model and enabling logback.
+    - question: What logging does Spring Boot use?
+      answer: Spring Boot utilizes Apache Commons for internal logging and is also configured to support Logback, Log4j2, and Java Util Logging for console and file logging.
+    - question: How do you manage logs in Spring Boot microservices
+      answer: Logs in Spring Boot can be managed by enabling logback in a POM, containing configuration details and other vital information about the project. Additionally, [Prometheus](https://tanzu.vmware.com/developer/guides/spring/spring-prometheus/) and Grafana can also be utilized when trying to visualize data and metrics.
+    - question: How do you capture both requests and responses when diagnosing bugs in a Spring Boot application?
+      answer: Capturing client's requests and server's response when diagnosing bugs can be accomplished with the TeeFilter servlet.
+    - question: How do you avoid logging sensitive data in Spring Boot?
+      answer: Enabling or disabling access logging can help users avoid logging sensitive data in Spring Boot.
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 Logging is essential for monitoring and troubleshooting running applications. This guide explains how to utilize `logback` to collect full request/response payloads in a Spring Boot application. 
@@ -106,24 +122,3 @@ Two open-source tools that help with logging and visualization are Prometheus an
 * [Prometheus and Grafana: Gathering Metrics from Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/)
  
 Spring Boot also provides health checks for application monitoring in addition to logging. Learn how to [enable health checks using Spring Boot Actuator](/guides/spring/spring-boot-actuator).
-
-{{< faqs >}}
-  {{< faq question="How do log requests and responses in Spring Boot work?" >}}
-    Log requests and responses in a Spring Boot application work by utilizing logback to collect full payloads,  an essential part of monitoring and troubleshooting running applications.
-  {{< /faq >}}
-  {{< faq question="How do you get Spring Boot logs?" >}}
-    Spring Boot logs can be obtained by creating a Maven Project Object Model and enabling logback.
-  {{< /faq >}}
-  {{< faq question="What logging does Spring Boot use?" >}}
-    Spring Boot utilizes Apache Commons for internal logging and is also configured to support Logback, Log4j2, and Java Util Logging for console and file logging.
-  {{< /faq >}}
-  {{< faq question="How do you manage logs in Spring Boot microservices?" >}}
-    Logs in Spring Boot can be managed by enabling logback in a POM, containing configuration details and other vital information about the project. Additionally, [Prometheus](https://tanzu.vmware.com/developer/guides/spring/spring-prometheus/) and Grafana can also be utilized when trying to visualize data and metrics.
-  {{< /faq >}}
-  {{< faq question="How do you capture both requests and responses when diagnosing bugs in a Spring Boot application?" >}}
-    Capturing client's requests and server's response when diagnosing bugs can be accomplished with the TeeFilter servlet.
-  {{< /faq >}}
-  {{< faq question="How do you avoid logging sensitive data in Spring Boot?" >}}
-    Enabling or disabling access logging can help users avoid logging sensitive data in Spring Boot.
-  {{< /faq >}}
-{{< /faqs >}}

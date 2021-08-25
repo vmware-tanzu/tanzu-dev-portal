@@ -17,3 +17,6 @@
 # function config
 /netlify/functions/util/config.js
 /netlify/functions/util/config.js.ph2
+
+# Local Netlify folder
+.netlify

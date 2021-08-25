@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/spring/scg-gs.md"
 aliases:
 - "/guides/spring/scg-gs"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring. For more information, make sure to check out [What is Spring Cloud Gateway?](../scg-what-is)
@@ -133,6 +135,6 @@ You've sent a `GET` request to your application, adding a custom header of `MyHe
 
 Here you can see the response from httpbin.org, including the `MyHeader` header that you sent in your request, as well as the `Hello` header that Spring Cloud Gateway added to your request.
 
-### Keep Learning
+## Keep Learning
 
 Check out some of the great guides on the Spring website to learn how you can leverage the amazing Spring ecosystem to accomplish things like [hiding your backend services](https://spring.io/blog/2019/07/01/hiding-services-runtime-discovery-with-spring-cloud-gateway) as well as how you can [secure your services using Spring Cloud Security](https://spring.io/blog/2019/08/16/securing-services-with-spring-cloud-gateway).

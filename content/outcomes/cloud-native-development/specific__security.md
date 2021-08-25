@@ -14,6 +14,6 @@ We typically wire up security for newly created or modernized services using thi
 
 It's a good idea to complete this exercise to be comfortable applying the technology to your applications. You'll learn the specifics of more advanced configurations over time. In the meantime, this exercise will help you recognize the get-go basics.
 
-#### Homework
+## Homework
 
 - Read the [Securing Web Services](https://spring.io/guides/gs/securing-web/) guide.

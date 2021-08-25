@@ -22,7 +22,7 @@ jobs:
         name: Checkout
         with:
           fetch-depth: 1
-          submodules: true
+          submodules: recursive
       - uses: ./.github/actions/link-check
         name: Link Check
         env:

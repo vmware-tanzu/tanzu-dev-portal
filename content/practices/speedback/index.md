@@ -5,7 +5,7 @@ description: Speedback is a session where the “speed-dating” format is appli
   timeboxed feedback gathering.
 image: default-cover.png
 lastmod: '2021-03-26'
-length: 10min per session plus prep
+length: 10 min per session plus prep
 linkTitle: Speedback
 participants: 'Delivery team: PMs, Designers, and Engineers'
 tags:
@@ -26,14 +26,14 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 
    {{< callout >}}
    Tip: 10 minutes per pair is a good starting point but can be adjusted. Subsequent Speedback sessions with mature, experienced teams might get it down to 5 minutes.
-   {{< /callout >}}
-   
-   {{% callout %}}
+
    **Remote Tip:** For distributed teams, use video calls and "breakout rooms" for these feedback sessions. 
    
    **[More remote tips below in the Variations section](#for-remote-teams).**
    {{% /callout %}}
 
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. If needed, host a 15 minute session to explain Speedback in person using this deck. This is especially helpful if it’s the first time the team has participated in a Speedback style feedback session. 
 
@@ -80,8 +80,10 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 1. At the end of the 10 minutes the next round of Speedback begins, with each participant paired up with a different teammate. This continues until all participants have had a chance to give feedback to one another.
 
 1. As the facilitator, keep time. If pairs are not switching or are going over their allotted time, let them know and encourage them to wrap up.
-   
-#### Success/Expected Outcomes
+{{% /section %}}
+
+{{% section %}}
+### Success/Expected Outcomes
 At the end of all one-on-one interactions, gather the team together and perform a quick debrief about how the Speedback session went, anything they learned that they would like to share, suggestions for improving the session, when to schedule the next one, and whatever else is on their minds. 
 
 Speedback can be intense and overwhelming and some restorative or reflection time afterwards is important. Individuals can either do their own thing, or the team can go out for a coffee or ice cream - they can decide during the wrap up.
@@ -89,16 +91,19 @@ Speedback can be intense and overwhelming and some restorative or reflection tim
    {{< callout >}}
    Tip: Proactively plan a team outing or other non-work (even remote-friendly) social activity! Feedback sessions can be cathartic. It's nice to have a bit of bonding-time afterwards.
    {{< /callout >}}
+{{% /section %}}
 
-## Facilitator Notes & Tips
 
-### How do I present Speedback to hesitant team members to get them on board?
+
+{{% section %}}
+### Facilitator Notes & Tips
+#### How do I present Speedback to hesitant team members to get them on board?
 
 Explain to hesitant team members that there is direct value to the project when team members provide and receive individualized feedback.  Describe the ASK feedback system and reinforce that everyone participating is likely feeling similarly.
 
 Additionally, the act itself of seeing and participating in a Speedback session is a valuable process/tool for encouraging ongoing feedback within the team even if the team members change over time.
 
-### How is Speedback different from other methods of feedback?
+#### How is Speedback different from other methods of feedback?
 
 Participants receive a wide breadth of feedback in a short amount of time. Chances are, when an individual receives similar feedback from three different people within an hour, it may resonate more strongly than if the feedback was delivered three times but spread out over the course of a month.
 
@@ -106,12 +111,12 @@ Speedback is also a good way for everyone to get a quick health check on how the
 
 Speedback has an advantage of appearing more democratic in that it is initiated by an outsider, facilitated by an outsider, and all participants are on the same footing. This can be less daunting than say, a feedback session that person A initiates with person B specifically.
 
-### Speedback is not a cure-all
+#### Speedback is not a cure-all
 One disadvantage of Speedback is that due to its timeboxed nature, it can be difficult to go deep into any one topic. Participants can always schedule follow-up sessions to continue the conversation.
 
 Speedback can be very effective when teams are going through a rough patch or if there are indications that the team’s health is taking a downturn. But if the team health or morale is already low, or if a subset of interpersonal relationships have truly deteriorated, Speedback is not the right format to resolve those issues.
 
-### Email Template
+#### Email Template
 Feel free to use the following email template, modifying it as needed based on the size of your Speedback session. 
 
 > Hi [name of team],
@@ -140,12 +145,11 @@ Feel free to use the following email template, modifying it as needed based on t
 >
 >
 > It's easy to heap on the praise; try to come up with at least one piece of constructive feedback for everyone.
+{{% /section %}}
 
-## Related Practices
-None at the moment. 
-
+{{% section %}}
 ### Variations
-### For Remote Teams
+#### For Remote Teams
 If the entire team is co-located, try hosting Speedback in person. But if the team is even partially remote, set up the entire session as remote with video calls.
 
    {{% callout %}}
@@ -158,22 +162,19 @@ With some clever video-call preparation and facilitation over chat, you can have
    **Remote Tip:** Many video call systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
 
-### How do I make this work in a large team of 8 or more participants?
+#### How do I make this work in a large team of 8 or more participants?
 It can be logistically challenging to set up Speedback with a large group. Some teams also may benefit from discipline-specific sessions, such as an engineering-only group. 
 
 Try having two or more smaller sessions. Try to keep them somewhat close together (within a week of each other).
 
-### What if there’s an odd number of participants, e.g. 5 people on the team?
+#### What if there’s an odd number of participants, e.g. 5 people on the team?
 At any given time, one person will end up sitting out during each round. They can use that time to reflect, prepare, or just take a break.
+{{% /section %}}
 
-### Preceding
- 
-### Following
-
-## Real World Examples
-
-## Recommended Reading
+{{% section %}}
+### Recommended Reading
 
 [Interpersonal Feedback - Talk and Workshop](https://tanzu.vmware.com/content/vmware-tanzu-developer-center-slides/interpersonal-feedback-talk-and-workshop) -- Presentation
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/uJ5WGVfjWpdrL1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/interpersonal-feedback-talk-and-workshop" title="Interpersonal feedback talk and workshop" target="_blank">Interpersonal feedback talk and workshop</a> </strong> from <strong><a href="https://www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
+{{% /section %}}

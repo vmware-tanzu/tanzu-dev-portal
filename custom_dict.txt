@@ -54,6 +54,7 @@ Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
 Alertmanager
+Aletty
 Alexa
 Alexey
 Alibaba
@@ -100,6 +101,7 @@ Artifactory
 artisanal
 Asciidoctor
 ASG(s)?
+Ashok
 Asiedu-Ampem
 aspirational
 Astra
@@ -327,7 +329,7 @@ Corry
 CORS
 cortado
 Cosgrove
-Coté
+Coté('s)?
 counterintuitive
 COVID-19
 CPUs
@@ -372,9 +374,11 @@ D2iQ
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+danluu
 DAO
 DaoAuthenticationProvider
 DaShaun
+dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
@@ -496,6 +500,7 @@ EKS
 ElasticSearch
 ELB(s)?
 Eleftheria
+Emad
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -654,6 +659,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gilardi
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -699,6 +705,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+Hackenburg
 Hadlow
 Hamano
 Hananiel
@@ -722,8 +729,10 @@ Herbrich
 hermeticism
 Heroku('s)?
 High-Cardinality
+Hillegass
 Hinojosa
 HMAC
+Hobsons
 hoc
 Hockin
 Homebrew
@@ -758,6 +767,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
@@ -817,6 +827,7 @@ JaFU
 Jakarta
 Jakub
 Jarvinen
+Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
@@ -840,6 +851,7 @@ JIRAs
 Jitsu
 Jiu
 jks
+JKS
 JMX
 JmxConnectionHandler
 JmxNotificationClient
@@ -879,6 +891,7 @@ JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
+k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
@@ -900,6 +913,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -912,6 +926,7 @@ Knative-Serving
 knative-serving
 KNN
 KoFu
+Kostadis
 kotlin
 Kousen
 Kpack
@@ -1281,6 +1296,7 @@ Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
 [Pp]ost-mortem
+[Pp]ost-mortem(s)?
 Postfacto
 [Pp]ostgres
 POSTROUTING
@@ -1345,6 +1361,7 @@ PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+Pythonic
 QCon
 QoS
 Querier
@@ -1433,6 +1450,7 @@ rom-com
 rootPassword
 Rosecrance
 Rosso
+Roussos
 [Rr]outable
 Route53
 RouteAuthSpecs
@@ -1539,6 +1557,7 @@ SNI
 SolidFire
 Soluto('s)?
 SomeRegion
+SonicDMG
 [Ss]onobuoy
 Sox
 [Ss]peedback
@@ -1568,6 +1587,7 @@ Stacker
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
+Starlark
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1623,7 +1643,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing)
+[Tt]emplat(ed|ing|ing.|ize)
 Templeton
 Teotti
 Teppanyaki
@@ -1735,6 +1755,7 @@ Vavr
 VCAP
 vCenter
 VCS
+Vega
 Velero('s)?
 Vendio
 vendored
@@ -1812,6 +1833,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+Yonis
 youtube
 ytt
 Zalando
@@ -1820,4 +1842,5 @@ ZDNet
 ZOP
 Zou
 Zuul
+Zynga
 μServices

@@ -15,4 +15,6 @@ topics:
 oldPath: "/content/guides/kubernetes/app-lifecycle-kubebuilder-ref.md"
 aliases:
 - "/guides/kubernetes/app-lifecycle-kubebuilder-ref"
+level1: ''
+level2: ''
 ---
