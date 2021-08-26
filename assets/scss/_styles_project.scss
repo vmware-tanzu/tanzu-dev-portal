@@ -90,7 +90,7 @@ body {
   h3 {
     padding-top: 1rem;
   }
-  
+
   .uppercase,
   .h5,
   h5 {
@@ -127,6 +127,10 @@ body {
     }
   }
   
+  .fs-p {
+    font-size: 1.0625rem;
+  }
+
   .fs-75 {
     font-size: 75%;
   }
@@ -138,7 +142,7 @@ body {
   .fs-90 {
     font-size: 90%;
   }
-  
+
   .grey-hr {
     border-top: 1px solid rgb(72, 87, 100);
   }
@@ -874,7 +878,6 @@ body {
     .h1,
     .h2,
     .h3,
-    .h4,
     .h5,
     .h6 {
       color: white;
@@ -939,7 +942,7 @@ body {
       }
     }
   }
-  
+ 
   @media (max-width: 982px) {
     .filters {
       li {
@@ -1102,10 +1105,16 @@ body {
     }
   }
   
-  .tv-episode-hero p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
+  .tv-episode-hero {
+    h5 {
+      font-size: 0.75rem;
+    }
+    p:not(.h5) {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
   }
+
   .workshop-box:hover {
     .description {
       background-color: #45667b;
