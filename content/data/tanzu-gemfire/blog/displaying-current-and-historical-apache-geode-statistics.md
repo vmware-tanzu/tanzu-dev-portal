@@ -103,7 +103,7 @@ server1, 88564, LinuxSystemStats: "2021/05/09 00:16:08.677 BST" samples=488895
   cpuUser %: samples=488895 min=0 max=95 average=19.34 stddev=9.63 last=6
   ...
 ```
-To display a specific operating system statistic like freeMemory, execute the *`systemadmin.sh`* script like:
+To display a specific operating system statistic like `freeMemory`, execute the *`systemadmin.sh`* script like:
 ```
 ./systemadmin.sh stats :LinuxSystemStats.freeMemory -archive=statistics.gfs
 
@@ -271,8 +271,8 @@ It can be easily modified to return all the statistics values:
 - For a specific category and instance (e.g. VMMemoryPoolStats — CMS Old Gen heap memory) in a member
 
 The `getStatisticValue` method:
-- Gets all the statistics for the input typeName (e.g. PartitionedRegionStats)
-- Filters those for the input textId (e.g. /Trade)
+- Gets all the statistics for the input `typeName` (e.g. PartitionedRegionStats)
+- Filters those for the input `textId` (e.g. /Trade)
 - Returns the value for the first occurrence of the input statistic (e.g dataStoreEntryCount) or -1 if none
 
 Its parameters are:
