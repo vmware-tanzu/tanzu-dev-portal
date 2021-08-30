@@ -71,12 +71,12 @@ The codebase structure will include a local git repo:
 
 ## Git
 
-This course makes extensive use of the git command line interface.
+This learning path makes extensive use of the git command line interface.
 You can use UI tools of your choice,
 but you will get better understanding of how git works by using
 its CLI.
 
-You may wonder why there is so much emphasis on Git in this course.
+You may wonder why there is so much emphasis on Git in this learning path.
 That is because source control versioning and
 [trunk-based development](https://trunkbaseddevelopment.com) are
 fundamental to modern development practices.
@@ -87,7 +87,7 @@ make sure to checkout the
 
 ## Github
 
-You will use Github as your remote repository in this course,
+You will use Github as your remote repository in this learning path,
 as well as Github Actions as your pipeline automation tool.
 
 You will do some set up to prepare:
@@ -216,9 +216,9 @@ Becoming proficient with Git can take a lot of time.
 There are a lot of features,
 a lot of ways of doing the same things.
 
-This course will use git in specific ways,
+This learning path will use git in specific ways,
 the following sub-sections list some common uses of Git that
-you will encounter in this course.
+you will encounter in this learning path.
 
 ### Navigating the codebase
 
@@ -260,7 +260,7 @@ you will encounter in this course.
     ```
 
 1.  Notice that `HEAD` is pointed to the first (initial) commit.
-    This is the start point for the course,
+    This is the start point for the learning path,
     and as you complete each lab,
     you will create your own history and commits separate from the
     solutions.
@@ -416,8 +416,8 @@ changes to your remote:
 
 ### Fast-forward
 
-In this course you will be directed to *fast-forward* in some of the
-labs by "cherry picking" git repo commits or tags.
+In this learning path you will be directed to *fast-forward* in some of
+the labs by "cherry picking" git repo commits or tags.
 
 In most cases,
 the lab instructions will have you pull in pre-authored tests or

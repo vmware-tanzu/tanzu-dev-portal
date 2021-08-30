@@ -7,7 +7,7 @@ team:
 ---
 
 Before you start,
-you need to decide how you will use this course:
+you need to decide how you will use this learning path:
 
 1.  You want to review the contents,
     but not do the labs.
@@ -25,7 +25,7 @@ This section lists the prerequisites and caveats.
 
 ## Practitioner
 
-While this course is designed at a 200 level,
+While this learning path is designed at a 200 level,
 it requires you to implement solutions with a minimum level of
 prescribed instructions.
 

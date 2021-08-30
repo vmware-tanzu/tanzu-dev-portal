@@ -27,8 +27,8 @@ complete that first.
 **and applies them to a specific application context and**
 **codebase.**
 
-In this course you will build a greenfield Spring Boot application and
-deploy it on TAS.
+In this learning path you will build a greenfield Spring Boot
+application and deploy it on TAS.
 
 Then you will run it and maintain it in production.
 
@@ -58,7 +58,7 @@ previous instructor-led courses:
 
 ## Learning Outcomes
 
-After completing the course, you will be able to
+After completing the learning path, you will be able to
 -   Demonstrate the ability to build greenfield, cloud native
     applications using Java, and Spring Boot
 -   Use Tanzu Application Service for web application deployments
