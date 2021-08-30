@@ -82,7 +82,6 @@
 .td-title {
     margin-top: 1rem;
     margin-bottom: .5rem;
-
     @include media-breakpoint-up(sm) {
         font-size: 3rem;
     }
