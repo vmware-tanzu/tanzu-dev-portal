@@ -286,6 +286,7 @@ ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
+CMS
 CNAME
 CNB-speak
 CNB(s)?
@@ -455,6 +456,7 @@ DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
 DistributionMessageObserver
+DistributionStats
 distroless
 distros
 django-prometheus
@@ -650,8 +652,10 @@ getnotifications
 getRegions
 getServerMetric
 getSizeInBytes
+GetStatisticValueFunction
 getters
 getValueAsString
+gfs
 GFSH
 gfsh
 ghostEmail
@@ -837,6 +841,7 @@ JBaruch
 JBatch
 JBoss
 jchen21
+JConsole
 JDBC
 jdbcUrl
 [SJ]DK
@@ -999,6 +1004,7 @@ LocalDataSets
 localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
+LogAllStatisticValuesFunction
 logback
 Logback
 LogGatewaySenderQueueFunction
@@ -1039,6 +1045,7 @@ matchers
 matchings
 maxUtilization
 Mayers
+MBeans
 MBeanServer
 McGraw-Hill
 McLuckie
@@ -1624,6 +1631,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+SystemAdmin
 Szul
 Tanzu(Developer|'s)?
 targetPort
@@ -1778,6 +1786,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
