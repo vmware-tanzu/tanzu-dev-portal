@@ -5,7 +5,6 @@
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
   {{ $link := printf "%s/%s" "/topics" $link | relURL }}
-  {{ $link := "#" }} <!-- TODO: Replace -->
   {{ with $url_text }}
   <p>
     <a class="py-3 px-4 mb-0 text-left h4 text-white" href="{{ $link }}">{{ $url_text }}</a>
