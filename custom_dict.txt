@@ -299,7 +299,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
-[Cc]odebase
+[Cc]odebase(s)?
 CodeFresh
 CodeOne
 CoffeeOps
@@ -1802,6 +1802,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VisualVM
 Vlissides
 VMCachedDeserializable
 VMs?
