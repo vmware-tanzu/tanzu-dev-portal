@@ -1,5 +1,121 @@
 {{ define "main" }}
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
+
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="td-box td-box--dark position-relative td-box--gradient td-box--height-auto">
+	<div class="container text-center ">
+		<div class="col-12 mx-auto col-lg-9">
+			<span class="h1 mb-0 ">
+				{{ .Params.tagline }}
+			</span>
+		</div>
+	</div>
+</section>
+
+<!-- Build topics -->
+{{ $guides := where .Site.Pages "Section" "guides" }}
+{{ $topics := (slice) }}
+{{ range $guides }}
+    {{ $topics = union $topics ( slice .Params.level1 )}}
+{{ end }}
+
+<!-- Topics -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="row td-box td-box--dark td-box--gradient td-box--height-auto">
+	<div class="row justify-content-center w-100">
+
+        {{ range $topics }}
+        <div class="topic col-lg-4 mb-0 mb-lg-0 ">
+            <p>
+                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="#">{{ . }}</a>
+            </p>
+            <div class="topic-description py-3 px-4 mb-4 text-left h4 text-white" >
+                <!-- Gather Subtopics -->
+                {{ $topicguides := where $guides "Params.level1" . }}
+                {{ $subtopics := (slice) }}
+                {{ range $topicguides }}
+                    {{ $subtopics = union $subtopics ( slice .Params.level2 )}}
+                {{ end }}
+                
+                {{ range $subtopics }}
+                <a href="#">{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+		</div>
+</section>
+
+
+<!-- Getting Started With Tanzu -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="row td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+	<div class="row justify-content-center w-100">
+
+        <div class="gs-tanzu col-lg-10 mb-0 mb-lg-0 mx-auto">
+            <a href="#" class="mb-0 text-white d-block">
+              Get Started with Tanzu >
+            </a>
+          </div>
+
+    </div>
+</section>
+
+
+<!-- Featured Learning Paths -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="row pt-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+	<div class="row justify-content-center w-100">
+
+        <div class="col-sm-12 pb-4">
+            <h3>Featured Learning Paths</h3>
+        </div>
+
+        {{ range (seq 3) }} <!-- TODO: Get featured learning paths -->
+        <div class="learning-path-card col-lg-4 mb-2 mb-lg-0 ">
+            <a href="#">
+                <p><div class="py-3 px-4 mb-0 text-left h3 text-white">Learning Path {{ . }} </div></p>
+                <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                </div>
+                <div class="learning-path-duration">
+                30m
+                </div>
+                <div class="learning-path-level">
+                Beginner
+                </div>
+            </a>
+        </div>
+        {{ end }}
+
+    </div>
+</section>
+
+<!-- Languages -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="row pt-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+	<div class="row justify-content-center w-100">
+
+        <div class="col-sm-12 pb-4">
+            <h3>Languages</h3>
+        </div>
+
+        {{ $languages := slice "Java" ".NET" "Ruby" "Python" }} <!-- TODO: Reference language meta pages -->
+        {{ range $languages}}
+        <div class="language col-sm-3 mb-0 mb-lg-0">
+            <p>
+                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="#">{{ . }}</a>
+            </p>
+        </div>
+        {{ end }}
+
+
+    </div>
+</section>
+
+<script>sendAmplitudeEventOnLoad('home viewed', {'url path': window.location.pathname});</script>
+
 {{ with .Content }}
 {{ . }}
 {{ end }}
