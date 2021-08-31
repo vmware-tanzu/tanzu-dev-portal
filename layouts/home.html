@@ -25,9 +25,13 @@
 	<div class="row justify-content-center w-100">
 
         {{ range $topics }}
+        {{ $link := replace (lower .) "/" "-"  }}
+        {{ $link := replace $link "&" "and" }}
+        {{ $link := replace $link " " "-" }}
+        {{ $link := printf "%s/%s" "/topics" $link | relURL }}
         <div class="topic col-lg-4 mb-0 mb-lg-0 ">
             <p>
-                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="#">{{ . }}</a>
+                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="{{ $link }}">{{ . }}</a>
             </p>
             <div class="topic-description py-3 px-4 mb-4 text-left h4 text-white" >
                 <!-- Gather Subtopics -->
