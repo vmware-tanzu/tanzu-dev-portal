@@ -42,9 +42,9 @@ Ultimately, CI reduces risk. Developers work in small batches. Bugs are found an
 ## What is CD?
 Continuous Delivery (CD) builds upon the foundations of CI and takes it to the next step, where code is released. By adding automation to the release process, it allows you to decide which cadence is most appropriate. The goal is to find issues before your code hits production servers. [CD](https://martinfowler.com/bliki/ContinuousDelivery.html) takes the deployable unit coming out of your CI process and moves it from a development region all the way through to production. This process typically involves a pass through QA and a customer acceptance gate, both of which may involve a manual sign off.
 
-> ### Delivery vs. Deployment
-> There is some ambiguity about the definition of the D in CD. Arguably the most common understanding is that continuous *deployment* is one step beyond continuous *delivery* where changes that successfully pass through all the deployment pipeline gates are **automatically** moved to production. In other words, changes are serving live customer traffic within minutes of a commit. Continuous Deployment requires a significant investment in testing to ensure changes do not cause havoc in production. It also typically involves feature flags and other advanced techniques.
-
+{{% callout %}}
+Delivery vs. Deployment: there is some ambiguity about the definition of the D in CD. Arguably the most common understanding is that continuous *deployment* is one step beyond continuous *delivery* where changes that successfully pass through all the deployment pipeline gates are **automatically** moved to production. In other words, changes are serving live customer traffic within minutes of a commit. Continuous Deployment requires a significant investment in testing to ensure changes do not cause havoc in production. It also typically involves feature flags and other advanced techniques.
+{{% /callout %}}
 
 From there, releases move into a staging environment. There should be relatively few issues in staging; they should have been discovered earlier in the process. Staging allows you to throw real-world traffic at your code without actually exposing it to customers validating monitoring, performance, user experience, and whatever other factors matter for your application. If it all checks out in staging, it’s time to move to a canary release.
 

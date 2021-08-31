@@ -165,7 +165,9 @@ java -jar scs-099-0.0.1-SNAPSHOT.jar
 ```
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-2.svg)
 
+{{% callout %}}
 **Note:** _The application starts to listen on port 8080. The port cannot be occupied by any other app. If it is, try to pass the following parameter before `-jar` by adding `-Dserver.port=8081`._
+{{% /callout %}}
 
 
 Now, the console shows  10 messages from the producer (when it’s producing messages) and 10 messages from the consumer.
@@ -173,7 +175,9 @@ Now, the console shows  10 messages from the producer (when it’s producing mes
 
 Based on the current default configuration, the consumer app has only one concurrent threat,   to consume the message: `container-0-C-1`. Note, all messages have been produced from the same thread.
 
-**Note:** _You can simulate a busy consumer and long-running process by adding a 200ms delay._
+{{% callout %}}
+**Note**: _You can simulate a busy consumer and long-running process by adding a 200ms delay._
+{{% /callout %}}
 
 
 ```
@@ -249,7 +253,9 @@ All messages have been consumed based on the 200ms delay introduced in the consu
 
 Depending on your topic traffic or consumer performance, the best way you can scale up or down is to run your consumer in a different JVM.
 
-**NOTE:** _In future tutorials you’ll see how to containerize and scale this application._
+{{% callout %}}
+**NOTE**: _In future tutorials you’ll see how to containerize and scale this application._
+{{% /callout %}}
 
 So now, let's stop the previous Java process to make port 8080 available again.
 
@@ -273,7 +279,9 @@ java -Dspring.profiles.active=test2 -Dserver.port=8082 -jar scs-099-0.0.1-SNAPSH
 
 ![General Flow Diagram](/images/guides/event-streaming/kafka-events-intro-099-3.svg)
 
-**Note:** _To avoid having multiple producers, we just let only one app to create messages in the topic in the **producer** method by checking the (app port == 8080)_
+{{% callout %}}
+**Note**: _To avoid having multiple producers, we just let only one app to create messages in the topic in the **producer** method by checking the (app port == 8080)_
+{{% /callout %}}
 
 ### What’s happening now?
 We only have one application running (producer and consumer on the same app). Similar to the previous example, we basically consume all messages based on the 200ms delay introduced in the consumer. Therefore, the total number of messages cannot be fully consumed in less than 2 seconds _(200ms  X 10 = 2000ms)_.

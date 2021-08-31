@@ -2059,6 +2059,10 @@ background: black;
   
     .callout {
       border-width: 1px !important;
+      
+      h3 {
+        padding-top: 0 !important;
+      }
     }
   
     table, tr, th, td {
