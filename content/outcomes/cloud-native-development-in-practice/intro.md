@@ -6,7 +6,7 @@ team:
   - VMware Tanzu Labs
 ---
 
-This lab will walk you through steps necessary to setup your lab
+This lab will walk you through steps necessary to set up your lab
 environment should you choose to run the labs.
 
 Make sure to review the
@@ -15,11 +15,11 @@ proceeding.
 
 ## Outcomes
 
-After completing the lab, you will have and environment with the
+After completing the lab, you will have an environment with the
 following:
 
-- Your lab codebase setup on a local workstation
-- Your Github repository will be set up with a Personal Access Token.
+- Your lab codebase set up on a local workstation
+- Your GitHub repository will be set up with a Personal Access Token.
 
 You will also be able to navigate the lab codebase start and solution
 points,
@@ -28,7 +28,7 @@ or get stuck.
 
 ## Project structure and codebase
 
-The codebase structure will include a local git repo:
+The codebase structure will include a local Git repo:
 
 1.  Create the following directory in your user profile,
     also known as the `HOME` directory:
@@ -63,7 +63,7 @@ The codebase structure will include a local git repo:
     solutions for all the labs in this unit.
     Download the linked zip file and extract the codebase in the
     `~/workspace` directory.
-    The extracted directory will contains a single text file as well as
+    The extracted `pal-tracker` directory will contains a single text file as well as
     the (hidden) Git files.
     You will be building up the code in this directory bit by bit, and
     we have provided reference implementations at each stage identified
@@ -71,9 +71,9 @@ The codebase structure will include a local git repo:
 
 ## Git
 
-This learning path makes extensive use of the git command line interface.
+This learning path makes extensive use of the Git command line interface.
 You can use UI tools of your choice,
-but you will get better understanding of how git works by using
+but you will get better understanding of how Git works by using
 its CLI.
 
 You may wonder why there is so much emphasis on Git in this learning path.
@@ -81,22 +81,22 @@ That is because source control versioning and
 [trunk-based development](https://trunkbaseddevelopment.com) are
 fundamental to modern development practices.
 
-If you are not proficient using the git command line client,
+If you are not proficient using the Git command line client,
 make sure to checkout the
 [Git Primer](#git-primer) section at the end of this lab.
 
-## Github
+## GitHub
 
-You will use Github as your remote repository in this learning path,
-as well as Github Actions as your pipeline automation tool.
+You will use GitHub as your remote repository in this learning path,
+as well as GitHub Actions as your pipeline automation tool.
 
-You will do some set up to prepare:
+You will do some setup to prepare:
 
-1.  [Create a Github Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+1.  [Create a GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
     Make sure to record this for future reference when you are prompted
-    to authenticate to Github.
+    to authenticate to GitHub.
 
-1.  [Create a Github repository](https://help.github.com/articles/create-a-repo/)
+1.  [Create a GitHub repository](https://help.github.com/articles/create-a-repo/)
     called _pal-tracker_ in your GitHub account.
 
 1.  [Add this repository as a remote](https://help.github.com/articles/adding-a-remote/)
@@ -106,28 +106,28 @@ You will do some set up to prepare:
 
     You can make the repository public or private,
     but
-    **do select any of the *initialize this repository with***
+    **do NOT select any of the *initialize this repository with***
     **options.**
 
 1.  Before your push your local repository to the remote,
     set up a repository scoped configuration when you authenticate to
-    Github in the next step:
+    GitHub in the next step:
 
     ```bash
-    git config credentials.https://github.com.username <your github username>
+    git config credentials.https://github.com.username <your GitHub username>
     git config credential.helper cache
     git config --global credential.helper 'cache --timeout=7200'
     ```
 
-    This will make sure that if have any other github or gitlab
-    credentials you are using on your local workstation will not
-    conflict with your personal github credentials you use for this
-    repository,
-    and will cache your credentials
+    This will make sure that if you have any other GitHub or GitLab
+    credentials you are using on your local workstation they will not
+    conflict with your personal GitHub credentials you use for this
+    repository.
+    It will also cache your credentials
     (after the first time you authenticate) for up to the `--timeout`
     setting in seconds.
     The example is set for 2 hours,
-    but you can set lower or higher as your comfort level dictates.
+    but you can set lower or higher values as your comfort level dictates.
 
 1.  You will start by pushing the initial commit to GitHub,
     complete with the start and solutions tags.
@@ -137,16 +137,22 @@ You will do some set up to prepare:
     ```
 
 1.  You can then navigate to GitHub and view the solution tags.
-    This is handy when you get stuck during a lab and need a little help.
+    This is useful when you get stuck during a lab and need a little help.
 
     You can also use [GitHub's compare functionality](https://help.github.com/articles/comparing-commits-across-time/)
     to compare your code to the solution.
 
-## Bootstrap a gradle project
+## Bootstrap a Gradle project
 
 You will use Gradle as your build and dependency management system.
 
-1.  Create a [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper)
+1.  Check if you have a version of Gradle installed by typing `gradle`
+    at the command-line.
+    If it is not currently present, follow the
+    [official installation instructions](https://gradle.org/install/)
+    for your environment.
+    
+1.  Create a [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper)
     in the project root directory (`~/workspace/pal-tracker`) with
     a `gradle-version` of `7.1.1` and `distribution-type` of `all`.
 
@@ -160,13 +166,18 @@ You will use Gradle as your build and dependency management system.
     "added gradle wrapper to initial project":
 
     ```bash
+    git add ./gradle ./gradlew ./gradlew.bat ./build.gradle
+    
     git commit -m'added gradle wrapper to initial project'
     ```
 
-## TAS CLI
+## TAS (CF) CLI
 
 You will interact with Tanzu Application Service is via the _Tanzu
 Application Services CLI_.
+This command-line interface is common to all products, like TAS, based
+on the (open source) Cloud Foundry technology.
+For this reason it is usually known as the CF CLI.
 
 1.  Verify the CLI is installed correctly by running
 
@@ -175,6 +186,11 @@ Application Services CLI_.
     ```
 
     which will show a list of available tasks.
+
+2.  If the CLI is not installed, follow the
+    [instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+    for your environment.
+    Note that the labs have been written for v6 of the CLI.
 
 1.  To view more information about each task, use the `--help` flag.
     For example, use the following command to find more information
@@ -212,11 +228,11 @@ to get familiar with some basic concepts.
 If you are not proficient with the Git CLI,
 you will get value from reviewing this section.
 
-Becoming proficient with Git can take a lot of time.
+Becoming proficient with Git can take a long time.
 There are a lot of features,
-a lot of ways of doing the same things.
+and many ways of doing the same things.
 
-This learning path will use git in specific ways,
+This learning path will use Git in specific ways,
 the following sub-sections list some common uses of Git that
 you will encounter in this learning path.
 
@@ -229,11 +245,14 @@ you will encounter in this learning path.
     git log --graph --decorate --oneline --all
     ```
 
-    You can also set a git `lola` alias for this command as follows:
+    You can also set a Git alias, `lola`, for this command as follows:
 
     ```bash
     git config alias.lola "log --graph --decorate --oneline --all"
     ```
+
+    This will then allow you to use the command `git lola` as a
+    shortcut for the full version of the log command.
 
 1.  You will see start and solution tags for each of the coming labs,
     with the most recent commit at the top,
@@ -276,13 +295,13 @@ you will encounter in this learning path.
     git log --graph --decorate --oneline
     ```
 
-    You can also set a git `lol` alias for this command as follows:
+    You can also set a Git `lol` alias for this command as follows:
 
     ```bash
     git config alias.lol "log --graph --decorate --oneline"
     ```
 
-### Git Ignored files
+### Git ignored files
 
 1.  Take a look at the `.gitignore` file:
 
@@ -298,7 +317,7 @@ you will encounter in this learning path.
 
 ### View a solution
 
-Sometimes you will want to peek at a solution file if you get stuck.
+Sometimes you will want to look at a solution file if you get stuck.
 
 1.  Use the following command:
 
@@ -317,7 +336,7 @@ Sometimes you will want to peek at a solution file if you get stuck.
 
     The output will be the contents of the file.
 
-1.  You can also view all the solution commits in git diff form:
+1.  You can also view all the solution commits in `git diff` form:
 
     ```bash
     git show <solution tag>
@@ -327,24 +346,25 @@ Sometimes you will want to peek at a solution file if you get stuck.
 
 You can run the `git diff` command to view differences:
 
-1.  View the different in a file:
+1.  View the differences in a file:
 
     ```bash
     git diff <solution tag>:<path to file> <path to workspace file>
     ```
 
 1.  For example,
-    If wanting to view the difference for the `build.gradle` file you
-    create later in this lab,
+    If wanting to view the difference between the `build.gradle` file you
+    created in this lab,
     to the one in the next lab:
 
     ```bash
     git diff spring-boot-solution:build.gradle build.gradle
     ```
 
-    The output will be in a git diff format.
+    The output will be in a specific `git diff` format, similar
+    to that produced by the UNIX/Linux `diff -u` command.
 
-    You may find IDEs have better diff viewers.
+    You may find IDEs have better difference viewers.
 
 ### Checking out a file from a solution
 
@@ -360,7 +380,7 @@ you can run the `git checkout` command:
 
 1.  An example:
     In the next lab you will add contents to the `build.gradle` file
-    that you create later in this lab.
+    that you created earlier in this lab.
     You want to go directly to the solution:
 
     ```bash
@@ -373,7 +393,7 @@ you can run the `git checkout` command:
 
 ### Clean your workspace
 
-Sometimes you may what to clean your workspace,
+Sometimes you may want to clean your workspace,
 and revert to the last local committed state.
 
 Run the following command:
@@ -382,25 +402,25 @@ Run the following command:
 git stash --include-untracked
 ```
 
-This will tuck away any changes that you did in a hidden,
+This will save any changes that you did in a hidden,
 local, private branch in case you wish to recover your work via
-`git stash pop` command.
+the `git stash pop` command.
 
-If you are sure to want to throw out any stashed work out permanently,
-run `git stash clear` command.
+If you are sure to want to throw out any stashed work permanently,
+run the `git stash clear` command.
 
 ### Staging and committing your changes
 
-Many IDEs and UIs mask the local git workflow.
-When using the command line CLI,
+Many IDEs and UIs mask the local Git workflow.
+When using the command line,
 make sure you are using the following workflow when making and pushing
 changes to your remote:
 
 1.  Verify the state of your workspace with the `git status` command.
-    Unstaged changes will be annotated in *red*,
-    staged changes will be annotated in *green*.
+    Unstaged changes will be highlighted in *red*,
+    staged changes will be highlighted in *green*.
     Everything else in your workspace is either ignored
-    (annotated in the `.gitignore` file),
+    (recorded in the `.gitignore` file),
     or already committed in your local repository.
 
 1.  Stage your changes with the `git add` command.
@@ -417,17 +437,17 @@ changes to your remote:
 ### Fast-forward
 
 In this learning path you will be directed to *fast-forward* in some of
-the labs by "cherry picking" git repo commits or tags.
+the labs by "cherry picking" Git commits or tags.
 
 In most cases,
-the lab instructions will have you pull in pre-authored tests or
+the lab instructions will have you pull in pre-written tests or
 solution files that you will not have to author.
 
 1.  The `git cherry-pick` command is used to apply a pre-existing commit
     into your workspace.
 
     If you want to pull in the commit for the entire solution of a lab that
-    you are working,
+    you are working on,
     you can run the cherry-pick as follows:
 
     ```bash
@@ -448,7 +468,7 @@ solution files that you will not have to author.
         [Deployment Pipelines Lab](../pipelines/) after this
         introduction lab.
 
-    -   You will need to fast-forward from start of the spring boot
+    -   You will need to fast-forward from start of the Spring Boot
         application lab to the start of the deployment pipeline labs:
 
         ```bash
@@ -494,9 +514,6 @@ solution files that you will not have to author.
             by the last cherry-pick,
             but the remote `HEAD` still points to the initial
             commit.
-
-        and that `HEAD` is at the last commit generated with
-        the cherry-pick.
 
         ```no-highlight
         * 6fa5aa2 (HEAD -> main) Add deployment pipeline
