@@ -6,8 +6,9 @@ team:
   - VMware Tanzu Labs
 ---
 
-This lab will walk you deploying the application to
+This lab will walk you through the process of deploying an application to
 [Tanzu Application Service](https://pivotal.io/platform).
+This is known as "pushing an app to TAS".
 
 ## Learning Outcomes
 
@@ -17,28 +18,35 @@ After completing the lab, you will be able to:
 
 ## Getting started
 
-1.  Make sure you check out the
-    [TAS Push](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61) slides.
-
 1.  You must have completed (or fast-forwarded to) the
     [Building a Spring Boot Application lab](../spring-boot-app-build/).
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
 
+1.  Make sure you view the
+    [TAS Push](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
+    slides after completing this lab for more information about how
+    the push process works.
+
+If you get stuck during this lab and need a little more help, please
+see the [Hints](#hints) section at the end.
+
 ## Deploy
 
-In order to push a JVM application to Tanzu Application Service you will
-use an executable jar file.
+In order to deploy a JVM application to Tanzu Application Service you will
+first need to create a standalone executable jar file.
+This will be a "fat jar" &mdash; a single jar file that contains
+all of its dependent libraries as well as your application code.
 
-### Assemble the Spring Boot Fat Jar
+### Assemble the jar file
 
-Use gradle to build the jar file for your application using the
+Use Gradle to build the jar file for your application using the
 `bootJar` task.
 
-### Push the Spring Boot Fat Jar
+### Push the jar file
 
-1.  Use the `push` command to push your code to an application named
+1.  Use the `cf push` command to push your code to an application named
     `pal-tracker` while making sure that you:
 
     -   Use the `-p` flag to specify the jar file to push.
@@ -53,7 +61,7 @@ Use gradle to build the jar file for your application using the
     You will see the CF CLI upload the jar file.
 
 1.  When the command completes,
-    look close at the output after the
+    look closely at the output after the
     `Waiting for API to complete processing files...` line.
 
     It will look similar (but not identical) to this:
@@ -83,7 +91,7 @@ Use gradle to build the jar file for your application using the
     but it is in a `down` state with no `instances`
     (processes) running.
 
-### Setting the Java Version
+### Setting the Java version
 
 Set an environment variable to tell the buildpack to use Java 11.
 
@@ -135,7 +143,7 @@ Set an environment variable to tell the buildpack to use Java 11.
     your `pal-tracker` application,
     and it is not the same one you used to run locally.
 
-    You will see more discussion during the wrap up.
+    You will see more details in the wrap up section.
 
 ### What if you forgot to suppress the start?
 
@@ -166,5 +174,61 @@ Now that you have completed the lab, you should be able to:
 
 ## Wrap up
 
-Checkout the
-[TAS Staging slides](https://docs.google.com/presentation/d/1gWulATqi0WvV7SUEbAK3qVbNW80Y2pplsCD4NGy-fFE/present#slide=id.ge70b517444_0_0) about how cloud foundry deployment works.
+* Review the
+  [Push an App](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
+  slides for details of the interactions between the CLI and the TAS foundation
+  components during the push process.
+* Review the
+  [Staging an App](https://docs.google.com/presentation/d/1gWulATqi0WvV7SUEbAK3qVbNW80Y2pplsCD4NGy-fFE/present#slide=id.ge70b517444_0_0)
+  slides for details about the staging process and the role of buildpacks.
+
+## Hints
+
+### Where can you find the "fat jar" file?
+
+Run the following commands:
+
+```bash
+cd ~/workspace/pal-tracker
+
+./gradlew bootJar
+
+ls build/libs
+```
+
+You should see a `pal-tracker.jar` file, and you can run this locally using:
+
+```bash
+java -jar build/libs/pal-tracker.jar
+```
+
+This is the file that you need to give to `cf push`.
+
+### What happens if the `cf push` command fails?
+
+First check that you have provided all of the options described in the
+instructions.
+
+If you see a message something like "An app was not successfully
+detected by any available buildpack" then you probably omitted the `-p`
+option or gave it the wrong argument.
+
+If you saw a message something like "Routes cannot be mapped" then
+you have probably missed the `--random-route` option.
+
+If the command hangs with "Instances starting" or fails to start
+(before setting the `JBP_CONFIG_OPEN_JDK_JRE` environment variable)
+then, as described above, you probably fogot the `--no-start` option.
+
+Your command should look something like this:
+
+```bash
+cf push pal-tracker -p build/libs/pal-tracker.jar --random-route --no-start
+```
+
+If you are not certain what state your application is in and want
+to try the push again, it is safe to delete your app first:
+
+```bash
+cf delete pal-tracker
+```
