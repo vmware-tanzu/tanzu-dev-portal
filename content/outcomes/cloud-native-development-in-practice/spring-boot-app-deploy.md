@@ -218,7 +218,7 @@ you have probably missed the `--random-route` option.
 
 If the command hangs with "Instances starting" or fails to start
 (before setting the `JBP_CONFIG_OPEN_JDK_JRE` environment variable)
-then, as described above, you probably fogot the `--no-start` option.
+then, as described above, you probably forgot the `--no-start` option.
 
 Your command should look something like this:
 

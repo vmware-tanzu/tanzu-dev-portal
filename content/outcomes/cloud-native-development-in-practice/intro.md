@@ -190,7 +190,7 @@ For this reason it is usually known as the CF CLI.
 2.  If the CLI is not installed, follow the
     [instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
     for your environment.
-    Note that the labs have been written for v6 of the CLI.
+    Note that the labs have been written for version 6 of the CLI.
 
 1.  To view more information about each task, use the `--help` flag.
     For example, use the following command to find more information

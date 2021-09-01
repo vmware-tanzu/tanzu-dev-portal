@@ -1345,6 +1345,7 @@ pre-release
 [pP]re-stop
 Pre-sync
 pre-work
+pre-written
 pre(-)?
 prebuilt
 precompiled
