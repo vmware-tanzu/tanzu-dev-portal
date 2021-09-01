@@ -42,7 +42,11 @@
                 {{ end }}
                 
                 {{ range $subtopics }}
-                <a href="#">{{ . }}</a>
+                {{ $subtopiclink := replace (lower .) "/" "-"  }}
+                {{ $subtopiclink := replace $subtopiclink "&" "and" }}
+                {{ $subtopiclink := replace $subtopiclink " " "-" }}
+                {{ $subtopiclink := printf "%s/%s" "/guides" $subtopiclink | relURL }}
+                <a href="{{ $subtopiclink }}">{{ . }}</a>
                 {{ end }}
             </div>
         </div>
