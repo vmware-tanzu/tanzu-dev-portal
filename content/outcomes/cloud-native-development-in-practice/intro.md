@@ -58,12 +58,12 @@ The codebase structure will include a local Git repo:
     this directory.
 
 1.  The
-    [pal-tracker codebase](https://github.com/platform-acceleration-lab/pal-tracker/archive/refs/tags/platform-acceleration-release-12.3.52.zip)
+    [pal-tracker codebase](https://github.com/platform-acceleration-lab/pal-tracker/releases/download/platform-acceleration-release-12.3.52/pal-tracker.zip)
     contains a local Git repository with the starting points and the
     solutions for all the labs in this unit.
     Download the linked zip file and extract the codebase in the
     `~/workspace` directory.
-    The extracted `pal-tracker` directory will contains a single text file as well as
+    The extracted `pal-tracker` directory will contain a single text file as well as
     the (hidden) Git files.
     You will be building up the code in this directory bit by bit, and
     we have provided reference implementations at each stage identified
