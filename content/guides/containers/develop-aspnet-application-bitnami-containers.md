@@ -45,7 +45,9 @@ This guide makes the following assumptions:
 
 ## Step 1: Create or obtain the application source code
 
-> If you already have an ASP.NET Web application of your own, you can use that instead and skip to [Step 2](#step-2-build-a-docker-image-of-the-application). 
+{{% callout %}}
+**Note**: If you already have an ASP.NET Web application of your own, you can use that instead and skip to [Step 2](#step-2-build-a-docker-image-of-the-application). 
+{{% /callout %}}
 
 The first step is to create a sample ASP.NET Web application which generates a welcome message. If you don't have .NET installed, an easy way to do this is with the .NET CLI from [Bitnami's .NET SDK container image](https://github.com/bitnami/bitnami-docker-dotnet-sdk). This allows you to execute .NET CLI commands using the Bitnami .NET SDK container on your host, exactly as though you had the complete .NET SDK already installed. If you already have a .NET development environment, you can use that instead and skip the Docker commands below. 
 
@@ -95,7 +97,9 @@ The first step is to create a sample ASP.NET Web application which generates a w
 
   ![Default page](/images/guides/containers/bitnami/develop-aspnet-application-bitnami-containers/welcome.png)
 
-  > If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 5000.
+{{% callout %}}
+**Note**: If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 5000.
+{{% /callout %}}
 
 * Once you have confirmed that the application works, proceed to publish it:
 
@@ -159,7 +163,9 @@ Once you have the application image, you can test it and publish it as follows:
 
   This command runs the application in a container and maps port 5000 of the container to port 5000 on the Docker host. With this, a user can access the application by browsing to port 5000 of the host. To test it, browse to http://DOCKER-HOST-ADDRESS:5000/, where DOCKER-HOST-ADDRESS is the IP address of your host, and confirm that you see the application welcome page shown previously.
 
-  > If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 5000.
+{{% callout %}}
+**Note**: If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 5000.
+{{% /callout %}}
 
 * Log in to Docker Hub and publish the image. Replace the DOCKER-USERNAME placeholder in the command below with your Docker account username. 
 

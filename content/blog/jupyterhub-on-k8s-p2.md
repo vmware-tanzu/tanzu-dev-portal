@@ -27,7 +27,7 @@ Each user that accesses JupyterHub will have their own workspace complete with a
 - **ml-stock-predictor-knn-v4.ipynb** – Machine learning (ML) based on revenue data from public financial statements that leverages the `scikit-learn` library for Python
 
 {{% callout %}}
-**Note:** Each time a user logs into the JupyterHub web page, an additional pod will be instantiated for that user and a 10GB persistent volume will be mapped to the user’s home directory.  
+**Note**: Each time a user logs into the JupyterHub web page, an additional pod will be instantiated for that user and a 10GB persistent volume will be mapped to the user’s home directory.  
 {{% /callout %}}
 
 
