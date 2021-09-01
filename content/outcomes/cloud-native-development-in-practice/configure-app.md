@@ -15,11 +15,11 @@ After completing the lab, you will be able to:
 -   Summarize some of the ways to configure a Spring application
 -   Use environment variables to configure an application running
     locally
--   Use cf logs to view the logs of an application running on Cloud
-    Foundry
+-   Use `cf logs` to view the logs of an application running on Tanzu
+    Application Service
 -   Use environment variables to configure an application running on
-    Tanzu Application Services
--   Explain when to use the CLI vs Apps Manager vs a manifest for
+    TAS
+-   Explain when to use the CLI versus a manifest for
     application configuration
 
 # 12 Factor Applications
@@ -29,7 +29,7 @@ If you completed the
 you should already be familiar with [12 factors](https://12factor.net)
 guidelines.
 
-In practice you will have to decide which ones to use and if it makes
+In practice, you will have to decide which ones to use and if it makes
 sense to adhere to all of them.
 
 In the previous lab, you covered the first two factors by setting up
@@ -37,7 +37,7 @@ your codebase in GitHub and using Gradle to explicitly declare your
 dependencies.
 
 This lab will focus on the third factor:
-Storing configuration in
+storing configuration in
 the environment.
 
 There are many options for how to externalize configuration for a cloud
@@ -99,7 +99,7 @@ You will use Junit 5.
 Add the following to your `build.gradle` file:
 
 1.  Add the following line to the `dependencies` closure in your
-    `build.gradle` file to enable our test dependencies:
+    `build.gradle` file to enable the necessary test dependencies:
 
     ```groovy
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -130,10 +130,10 @@ It does not matter if your application is written in
 [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)),
 [Golang](https://en.wikipedia.org/wiki/Go_(programming_language)), or
 some other language,
-they all have the capability of sourcing environment variables during
+they all have the capability of accessing environment variables during
 their process start up time.
 
-Tanzu Application Services can be configured to provide your application
+Tanzu Application Service can be configured to provide your application
 with environment variables when it is executed.
 In fact, it provides [several environment variables](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html)
 that your application can use to uniquely identify its execution
@@ -141,8 +141,9 @@ environment.
 
 You will extend your application to:
 
-- Configure the hello message from the environment.
-- Add a RESTful endpoint that returns some of the CF variables.
+- Configure the "hello" message from the environment.
+- Add a RESTful endpoint that returns some of the system-provided
+  variables.
 
 ## Externalize Configuration
 
@@ -196,7 +197,7 @@ statically configured message.
 Running your application like this with environment variables in the
 command line every time is tedious.
 
-You can [leverage gradle](https://cloudnative.tips/configuring-a-java-application-for-local-development-60e2c9794ca7)
+You can [configure your Gradle build](https://cloudnative.tips/configuring-a-java-application-for-local-development-60e2c9794ca7)
 to make this easier.
 
 1.  Extend the `bootRun` and `test` tasks to set the required
@@ -229,11 +230,12 @@ to make this easier.
 This has the added benefit of documenting required environment variables
 and supporting multiple operating systems.
 
-## CF Environment Variables
+## TAS Environment Variables
 
-When Tanzu Application Services starts your application, it will be running with
+When Tanzu Application Service starts your application, it will be running with
 a port provided by the runtime environment.
-If the app has multiple instances, it will also have an instance ID set.
+It will also have an instance ID set which will be distinct for
+each instance, if the app has multiple instances.
 
 Create an endpoint to see some of that information.
 
@@ -251,7 +253,7 @@ Create an endpoint to see some of that information.
     - `CF_INSTANCE_ADDR`
 
 1.  Add a default value to the variables above so that the app will still
-    boot correctly locally.
+    run correctly locally.
     For example:
 
     ```java
@@ -279,33 +281,34 @@ Create an endpoint to see some of that information.
 
 ## Deploy
 
-1.  Push the app to Tanzu Application Services.
+1.  Push the app to Tanzu Application Service.
     The app will fail to start and will be reported as a crash.
 
-    To see what the problem is, use the __cf logs__ command.
-    Logging in Tanzu Application Services works by taking everything from STDOUT and
-    STDERR and storing it in a small buffer.
+    To see what the problem is, use the `cf logs` command.
+    Logging in Tanzu Application Service works by taking everything from
+    standard output and error (`System.out` and `System.err` in Java)
+    and storing it in a small buffer.
 
-1.  View the logs from your app through the CF CLI with the `logs`
+1.  View the logs from your app through the `cf logs`
     command.
-    By default this will show you a stream of logs.
+    By default, this will show you a stream of logs.
     To see logs from the recent past, use the `--recent` flag.
 
 1.  Check the output and find the problem.
     You will see something about Spring not having a value for the
     welcome message.
 
-1.  To fix this issue, use the CF CLI's `set-env` command to set the
+1.  To fix this issue, use the `cf set-env` command to set the
     `WELCOME_MESSAGE` environment variable to
-    __Howdy from Tanzu Application Services__ in your app's container on
-    Tanzu Application Services.
-    The CF CLI will give you a helpful tip:
+    __Howdy from Tanzu Application Service__ in your app's container on
+    Tanzu Application Service.
+    The CLI will give you a helpful tip:
 
     ```no-highlight
     TIP: Use 'cf restage pal-tracker' to ensure your env variable changes take effect
     ```
 
-    Actually, CF does not know whether you need to restage, or simply restart.
+    Actually, the CLI does not know whether you need to restage, or simply restart.
     Restaging is necessary if the environment variable is used in the buildpack's
     compile stage.
     Restarting is sufficient if the environment variable is only used by the
@@ -317,8 +320,8 @@ Create an endpoint to see some of that information.
     cf restart pal-tracker
     ```
 
-1.  Once your app is running on Tanzu Application Services, navigate to the root
-    endpoint and check that it displays __Howdy from Tanzu Application Services__.
+1.  Once your app is running on Tanzu Application Service, navigate to the root
+    endpoint and check that it displays __Howdy from Tanzu Application Service__.
 
 1.  Navigate to the `/env` endpoint and verify actual values are
     displayed instead of __NOT SET__.
@@ -346,17 +349,17 @@ You will see more about backing services in the
     ```
 
 1.  Notice the `WELCOME_MESSAGE` must be
-    `Hello from Tanzu Application Services`.
+    `Hello from Tanzu Application Service`.
 
 To see the effect of using a manifest:
 
-1.  Delete your app with the CF CLI's `delete` command.
+1.  Delete your app with the `cf delete` command.
 
-1.  Push your app using your new manifest with the `push`.
+1.  Push your app using your new manifest with `push`.
     The `push` command will automatically use your manifest file if you
     push from the same directory.
 
-1.  Visit the root endpoint and env endpoint.
+1.  Visit the root endpoint and `/env` endpoint.
     Be aware that the app URL has changed as a result of the
     `random-route: true` line in the manifest.
 
@@ -365,8 +368,8 @@ To see the effect of using a manifest:
 
 ## Wrap up
 
-Checkout the
-[TAS Env](https://docs.google.com/presentation/d/1s8bT9cpfMWXluYkCZHVUB9jKUmfG-ODzj2P1nZsBVaY/present#slide=id.ge9c860dc14_0_0)
+Review the
+[TAS Environment](https://docs.google.com/presentation/d/1s8bT9cpfMWXluYkCZHVUB9jKUmfG-ODzj2P1nZsBVaY/present#slide=id.ge9c860dc14_0_0)
 slides about environment variable configuration on TAS.
 
 Now that you have completed the lab, you should be able to:
@@ -374,25 +377,25 @@ Now that you have completed the lab, you should be able to:
 -   Summarize some of the ways to configure a Spring application
 -   Use environment variables to configure an application running
     locally
--   Use cf logs to view the logs of an application running on Cloud
+-   Use `cf logs` to view the logs of an application running on Cloud
     Foundry
 -   Use environment variables to configure an application running on
-    Tanzu Application Services
--   Explain when to use the CLI vs Apps Manager vs a manifest for
+    Tanzu Application Service
+-   Explain when to use the CLI versus a manifest for
     application configuration
 
 ## Extras
 
-### Tanzu Application Services CLI
+### Tanzu Application Service CLI
 
-If you have additional time, explore the cf CLI by reading the
+If you have additional time, explore the `cf` CLI by reading the
 [documentation](https://docs.run.pivotal.io/cf-cli/cf-help.html) or by
 running `cf help` and `cf <command> --help`.
 
 ### Explore the PAL Tracker application environment
 
 1.  Review the
-    [`env`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
+    [`cf env`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
 
 1.  Run the `cf env` command for the `pal-tracker` application.
     Review the system provided environment variables,
@@ -401,18 +404,18 @@ running `cf help` and `cf <command> --help`.
 ### Explore the PAL Tracker container
 
 1.  Review the
-    [`ssh`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
+    [`cf ssh`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
 
 1.  Run the `cf ssh` command to create a secure shell connection to the
     only running instance (index `0`) of your `pal-tracker`.
 
 1.  Run the following and review the running `pal-tracker` container:
 
-    -   [Tanzu Application Services environment variables](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html):
+    -   [Tanzu Application Service environment variables](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html):
 
-        `env |grep CF_`
+        `env | grep CF_`
 
-        Notice that Tanzu Application Services Diego sets the IP address,
+        Notice that Tanzu Application Service sets the IP address,
         ports,
         and host name (GUID) of the containers for you.
 
@@ -421,7 +424,7 @@ running `cf help` and `cf <command> --help`.
         `ps -ef`
 
         Notice the Java process,
-        how did Tanzu Application Services Diego know what the run command is for the
+        how did Tanzu Application Service know what the run command is for the
         `pal-tracker` application?
 
         Notice the `envoy` and `healthcheck` processes.
