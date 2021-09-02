@@ -43,7 +43,10 @@ This article explains the process of integrating Apache Kafka and MongoDB on Kub
 
 ## Step 1: Deploy MongoDB on Kubernetes
 
-> If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-create-and-publish-a-custom-mongodb-kafka-connector-image).
+{{% callout %}}
+**Note**: If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-create-and-publish-a-custom-mongodb-kafka-connector-image).
+{{% /callout %}}
+
 
 The first step is to deploy a MongoDB service on Kubernetes. The simplest way to do this is with Bitnami's MongoDB Helm chart. Follow the steps below:
 
@@ -61,7 +64,10 @@ The first step is to deploy a MongoDB service on Kubernetes. The simplest way to
 
   Wait for a few minutes until the chart is deployed.
 
-  > See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% /callout %}}
+
 
 * Use the commands shown in the "Notes" section to create a MongoDB client and connect to the MongoDB service. Remember to replace the MONGODB-ROOT-PASSWORD placeholder with the password defined at deployment time.
 
@@ -108,7 +114,10 @@ The next step is to create a container image with the MongoDB Connector for Apac
   * It downloads the latest version of the MongoDB Connector for Apache Kafka and adds it to the image.
   * It starts the Kafka Connect application in "standalone mode", passing it a set of configuration files. These files contain the information needed for Kafka Connect to integrate with both Apache Kafka and MongoDB. The files are not included in the image at this point; instead, they will be defined using a Kubernetes *ConfigMap* in a later step.
 
-  > At the time of writing, the latest version of the MongoDB Connector for Apache Kafka is v1.2.0. Replace this with the most recent version when using the Dockerfile shown above. You can find the latest version on [the project's GitHub page](https://github.com/mongodb/mongo-kafka/releases).
+{{% callout %}}
+**Note**: At the time of writing, the latest version of the MongoDB Connector for Apache Kafka is v1.2.0. Replace this with the most recent version when using the Dockerfile shown above. You can find the latest version on [the project's GitHub page](https://github.com/mongodb/mongo-kafka/releases).
+{{% /callout %}}
+
 
 * Build the image using the command below. Replace the DOCKER-USERNAME placeholder in the command below with your Docker account username.
 
@@ -235,7 +244,10 @@ The next step is to deploy Apache Kafka and the custom Kafka Connect container o
     * The *connect-standalone.properties* file defines the standalone mode configuration for Kafka Connect. It specifies the host name of the Apache Kafka server and the client credentials to use when connecting to it. It also tells Kafka Connect which converter to use (JSON) when serializing messages for MongoDB.
     * The *mongodb.properties* file contains additional configuration for the MongoDB sink connector. This configuration includes the MongoDB connection URI, database and collection to use for the saved messages. It also specifies the converter to use for the data (JSON again). In particular, note the *topics* parameter, which specifies the list of topics to monitor/save in MongoDB.
 
-    > Find additional properties to control how data is handled by the sink connector in the official [Kafka Sink Connector documentation](https://docs.mongodb.com/kafka-connector/master/kafka-sink/).
+{{% callout %}}
+Find additional properties to control how data is handled by the sink connector in the official [Kafka Sink Connector documentation](https://docs.mongodb.com/kafka-connector/master/kafka-sink/).
+{{% /callout %}}
+
 
 * Once the configuration file has been created, deploy Apache Kafka on Kubernetes using the Helm chart:
 
@@ -255,7 +267,10 @@ The next step is to deploy Apache Kafka and the custom Kafka Connect container o
 
   ![Running pods](/images/guides/messaging-and-integration/kafka-mongodb/pods.png)
 
-  > See the [complete list of parameters supported by the Bitnami Apache Kafka Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/kafka#parameters).
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami Apache Kafka Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/kafka#parameters).
+{{% /callout %}}
+
 
 ## Step 4: Test the integration
 

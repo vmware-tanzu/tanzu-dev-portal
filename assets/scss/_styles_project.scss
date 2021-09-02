@@ -636,7 +636,9 @@ body {
     font-size: 1.2rem;
     color: white;
   }
-  
+  .guide table {
+    color: white;
+  }
   .breadcrumb-item a,
   .td-sidebar-nav .td-sidebar-link__page,
   .td-sidebar-nav .td-sidebar-link__subsection {
@@ -2059,10 +2061,6 @@ background: black;
   
     .callout {
       border-width: 1px !important;
-      
-      h3 {
-        padding-top: 0 !important;
-      }
     }
   
     table, tr, th, td {

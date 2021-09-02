@@ -78,7 +78,9 @@ The majority of the changes required to get your application running are tied to
 
 You will need to modify the application depending on the Java EE specification it currently uses: annotations, EJBs, JAX-WS, JAX-RS, JAXB, JMS, JSF, JPA...
 
-> NOTE: Expect detailed future guides covering what needs to be done for each specification.
+{{% callout %}}
+**Note**: Expect detailed future guides covering what needs to be done for each specification.
+{{% /callout %}}
 
 ### 7. Modify and deploy your application iteratively until it runs
 
