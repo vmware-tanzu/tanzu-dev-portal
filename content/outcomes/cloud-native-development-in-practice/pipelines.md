@@ -7,13 +7,13 @@ team:
 ---
 
 This lab demonstrates
-[Github Actions](https://github.com/features/actions),
+[GitHub Actions](https://github.com/features/actions),
 which provides the ability to do continuous integration/continuous
-delivery (CI/CD) from within your Github projects.
+delivery (CI/CD) from within your GitHub projects.
 
 In this lab you will create a pipeline to deploy an application to
-Tanzu Application Services.
-The lab will lead you through the anatomy of how Github Actions solve
+Tanzu Application Service.
+The lab will lead you through the anatomy of how GitHub Actions solve
 this problem.
 You can apply the same pipeline structure to other CI tools like
 Concourse or Jenkins.
@@ -28,9 +28,9 @@ In your actual experience there will likely be more environments such as
 a QA, staging, pre-production, etc.
 
 When code is pushed to GitHub,
-Github Actions will build, test and deploy to the review environment
+GitHub Actions will build, test and deploy to the review environment
 automatically.
-The application can be observed running on Tanzu Application Services before deciding
+The application can be observed running on Tanzu Application Service before deciding
 to deploy to production.
 
 ## Learning Outcomes
@@ -41,12 +41,12 @@ After completing the lab, you will be able to:
     and their importance
 -   Explain configuration for different environments and why it is
     important
--   Use the CF CLI commands to manage routes for an application
+-   Use CLI commands to manage routes for an application
 -   Describe the steps of an automated Continuous Integration build
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Routing](https://docs.google.com/presentation/d/1pAL1pL-KtQT4RUiAE4DdeFedzW-9U1V9Joq2hiukzho/present#slide=id.gb53c81140d_0_51)
     slides.
 
@@ -66,25 +66,28 @@ After completing the lab, you will be able to:
     git cherry-pick pipeline-start
     ```
 
-    This will pull in a Github Actions pipeline at
+    This will pull in a GitHub Actions pipeline at
     `.github/workflows/pipeline.yml` file which defines the configuration
-    for Github Actions.
+    for GitHub Actions.
 
-1.  Github Actions will automatically pick up and execute the
+1.  GitHub Actions will automatically pick up and execute the
     pipeline when you commit and push your changes in this lab.
 
 ## If you get stuck
 
-If you get stuck within this lab,
+If you get stuck during this lab,
 you can either
 [view the solution](../intro/#view-a-solution),
 or you can
 [fast-forward](../intro/#fast-forward) to the `pipeline-solution` tag.
 
+You may also wish to look at the [Hints](#hints) section for some
+further guidance.
+
 ## Configure environment variables
 
-[Add credentials as PAL Tracker project Github repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
-for the following environment variables based on your TAS Credentials:
+[Add credentials as **pal-tracker** project GitHub repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+for the following environment variables based on your TAS credentials:
 
 1.  `CF_API_URL`
 
@@ -98,14 +101,13 @@ for the following environment variables based on your TAS Credentials:
 
 ## Understanding Routes
 
-All requests to apps that are running on Tanzu Application Services go through a
+All requests to apps that are running on Tanzu Application Service go through a
 router which holds a mapping between the route and an app.
 When a request comes in, it is routed to one of the app instances in a
-round robin fashion.
+round-robin fashion.
 You have been using `--random-route` and `random-route: true` in the
-class because the route an app is bound to is global to the Cloud
-Foundry installation.
-In other words, if one student takes the route `pal-tracker` then nobody
+class because the route an app is bound to is global to the TAS installation.
+In other words, if one user takes the route `pal-tracker` then nobody
 else is able to use that route.
 Anyone asking to take the `pal-tracker` route after that would be
 denied.
@@ -115,7 +117,7 @@ blue-green deployment strategy.
 
 To get some familiarity with routing, run the following commands:
 
-1.  Map another route to your app with the `map-route` command, making
+1.  Map another route to your app with the `cf map-route` command, making
     sure to view the help for the command first.
     Choose a unique hostname by following the
     [Route naming guide](../route-naming/).
@@ -131,7 +133,7 @@ To get some familiarity with routing, run the following commands:
 
 1.  You will also explicitly state routes for your app in your manifest
     file.
-    You will differentiate your route from others in the Tanzu Application Services
+    You will differentiate your route from others in the Tanzu Application Service
     instance by following
     [this guide](../route-naming/).
 
@@ -147,8 +149,8 @@ To get some familiarity with routing, run the following commands:
 
 1.  Push your changes to GitHub.
 
-    This will trigger a build of your pipeline in Github.
-    Visit the Github Actions view of your project to watch the execution
+    This will trigger a build of your pipeline in GitHub.
+    Visit the GitHub Actions view of your project to watch the execution
     of the pipeline.
 
 ## View deployed application
@@ -164,7 +166,7 @@ Now that you have completed the lab, you should be able to:
     and their importance
 -   Explain configuration for different environments and why it is
     important
--   Use the CF CLI commands to manage routes for an application
+-   Use CLI commands to manage routes for an application
 -   Describe the steps of an automated Continuous Integration build
 
 ## Extra
@@ -180,3 +182,73 @@ If you have additional time:
     - [Concourse](https://concourse-ci.org/)
     - [Jenkins](https://jenkins.io/2.0/)
     - [Travis CI](https://travis-ci.org/)
+
+## Hints
+
+### How do you map additional routes?
+
+The `cf map-route` command can be a little confusing until you
+understand that a route consists of two parts, known as the hostname
+and the domain.
+This is explained in [the route naming guide](../route-naming/).
+If you haven't read that already, it is worth doing so now.
+
+To recap, a foundation may support multiple domains, which you can list with
+the `cf domains` command.
+There will usually be at least one "shared" domain, that is not
+marked as "internal".
+This domain will form part of the route to your app that was
+generated when you pushed it to TAS.
+Your app route may be something like this:
+
+```
+pal-tracker-dangerous-dingo-ab.apps.tas.example.com
+```
+
+The domain here is `apps.tas.example.com`.
+The hostname component is `pal-tracker-dangerous-dingo-ab`.
+
+To map a new route, you might do something like this:
+
+```bash
+cf map-route pal-tracker apps.tas.example.com --hostname my-tracker
+```
+
+That would result in a new route, `my-tracker.apps.tas.example.com`.
+
+### What should you do if the GitHub actions are failing?
+
+If your GitHub pipeline is failing the first thing to do is to drill
+down through the interface to find out exactly which steps are failing.
+You can click on each job, and then see the steps within that.
+Clicking on the steps will show you the output from that step.
+
+### What should you do if the `deploy` job is failing?
+
+The commonest cause of errors is a mis-configuation of the
+environment variables.
+
+The various environment variables starting with `CF_` should
+reflect the values that you use to login to your TAS foundation.
+The `CF_API_URL` is the value that you used with the `-a` option
+at login.
+You can find values for `CF_ORG` and `CF_SPACE` by running `cf target`.
+The `CF_USERNAME` and `CF_PASSWORD` values should be obvious!
+
+Beware that once you have set the values in GitHub you cannot see
+them again, only replace them.
+In particular, be careful to make sure that you have not included any
+extra spaces in the values.
+
+### What happens if your TAS foundation is not accessible from GitHub?
+
+You will have seen that the GitHub actions use the `cf` CLI to login
+to your foundation, in order to deploy your app.
+If your foundation is not accessible from the Internet, then the GitHub
+actions will not be able to complete successfully.
+
+In this case you will need to remove those steps from the `pipeline.yml`
+file.
+There is, however, still value to running the rest of the build in a
+completely separate environment as it may catch issues with your code that
+do not show up because of your local machine's configuration.
