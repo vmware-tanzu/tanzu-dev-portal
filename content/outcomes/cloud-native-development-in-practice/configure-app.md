@@ -192,7 +192,24 @@ WELCOME_MESSAGE=howdy ./gradlew bootRun
 Notice you are using a different welcome message than the previous
 statically configured message.
 
-## Manage local properties
+### Why is the `@Value` name `welcome.message`?
+
+You may be wondering why the name given in the `@Value` annotation
+is `welcome.message` and not the name of the environment variable,
+`WELCOME_MESSAGE`.
+
+Spring can take configuration information from
+[many different sources](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config).
+In order to support this, and to have a consistent way of naming
+configuration items from different sources, Spring uses what is known
+as [relaxed binding](https://github.com/spring-projects/spring-boot/wiki/Relaxed-Binding-2.0).
+Among other things, this defines the rules that convert environment
+variable names, such as `WELCOME_MESSAGE`, to the common format represented
+by `welcome.message`.
+This means that you could later change the source of the welcome message
+text to, for example, a Java property without having to modify the code.
+
+## Manage local configuration
 
 Running your application like this with environment variables in the
 command line every time is tedious.
@@ -392,7 +409,7 @@ If you have additional time, explore the `cf` CLI by reading the
 [documentation](https://docs.run.pivotal.io/cf-cli/cf-help.html) or by
 running `cf help` and `cf <command> --help`.
 
-### Explore the PAL Tracker application environment
+### Explore the *pal-tracker* application environment
 
 1.  Review the
     [`cf env`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
@@ -401,7 +418,7 @@ running `cf help` and `cf <command> --help`.
     Review the system provided environment variables,
     as well as the user provided environment variables.
 
-### Explore the PAL Tracker container
+### Explore the *pal-tracker* container
 
 1.  Review the
     [`cf ssh`](http://cli.cloudfoundry.org/en-US/cf/ssh.html) command.
