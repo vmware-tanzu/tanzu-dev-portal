@@ -49,7 +49,7 @@ be introduced in an upcoming lab.
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Environment](https://docs.google.com/presentation/d/1Sy5EvqCLPHSv1zJ8NyPyza4oAANn1qxYCeiyJclQgZ0/present#slide=id.ge9c860dbf9_0_0)
     slides.
 
