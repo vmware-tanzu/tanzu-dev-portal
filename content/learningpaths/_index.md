@@ -1,6 +1,6 @@
 ---
-title: Outcome Architectures
-linkTitle: Outcomes
+title: Learning Paths
+linkTitle: Learning Paths
 description: |
     The successful adoption of technology is rooted in achieving outcomes. Whether
     these outcomes are focused on the internal needs of the business or for direct
@@ -13,4 +13,5 @@ aliases:
     - "/patterns"
     - "/patterns/api"
     - "/patterns/eventing"
+    - "/outcomes"
 ---

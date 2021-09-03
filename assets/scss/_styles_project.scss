@@ -1330,13 +1330,13 @@ body {
     padding-bottom: 0px !important;
     min-height: auto !important;
   }
-  body .outcomes-hero + .td-content {
+  body .learningpaths-hero + .td-content {
     margin-top: 2rem;
   }
-  body .outcomes-intro {
+  body .learningpaths-intro {
     max-width: 920px;
   }
-  body .outcomes-hero,
+  body .learningpaths-hero,
   body .workshops-hero {
     .lead {
       max-width: 920px;
@@ -1679,7 +1679,7 @@ body {
   /* Text .chroma . {  } */
   /* TextWhitespace .chroma .w {  } */
   
-  .outcomes {
+  .learningpaths {
     h2,
     a {
       padding-top: 0;
@@ -1699,8 +1699,8 @@ body {
   //   z-index: 1000;
   // }
   
-  .outcomes-pager,
-  .outcomes-pager-sticky {  
+  .learningpaths-pager,
+  .learningpaths-pager-sticky {  
     a {
       border: 1px solid #485764 !important;
       border-radius: 4px;
@@ -1720,16 +1720,16 @@ body {
     }
     
   }
-  .td-page .col-12 .outcomes-pager {
+  .td-page .col-12 .learningpaths-pager {
     @media(min-width: 1600px) {
       display: none !important;
     }
   }
   
-  .series .outcomes > .outcomes-pager {
+  .series .learningpaths > .learningpaths-pager {
     display: none !important;
   }
-  .td-page .outcomes > .outcomes-pager {
+  .td-page .learningpaths > .learningpaths-pager {
     display: none !important;
     z-index: 1;
     bottom: -1%;
@@ -1758,7 +1758,7 @@ body {
       display: flex !important;  
     }
   }
-  .outcomes-index {
+  .learningpaths-index {
     a {
       color: white;
     }
