@@ -225,7 +225,7 @@ Clicking on the steps will show you the output from that step.
 
 ### What should you do if the `deploy` job is failing?
 
-The commonest cause of errors is a mis-configuration of the
+The most common cause of errors is a misconfiguration of the
 environment variables.
 
 The various environment variables starting with `CF_` should
