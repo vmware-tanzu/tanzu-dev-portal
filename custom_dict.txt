@@ -1695,6 +1695,7 @@ Tikka
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
+[Tt]imesheet(s)?
 TimingGatewayEventFilter
 Timo
 TKG

@@ -99,7 +99,7 @@ for the following environment variables based on your TAS credentials:
 
 1.  `CF_PASSWORD`
 
-## Understanding Routes
+## Understanding routes
 
 All requests to apps that are running on Tanzu Application Service go through a
 router which holds a mapping between the route and an app.
