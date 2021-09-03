@@ -6,11 +6,15 @@ team:
   - VMware Tanzu Labs
 ---
 
-In this lab, you will build a Time Entry service which will expose a
+In this lab, you will build a service which will expose a
 [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
 API for time entries.
-The lab will introduce the fundamentals of Spring MVC for building web
-services.
+A "time entry" is a record of hours worked for a specific user, on a
+particular day &mdash; the kind of information that you might record
+on a timesheet for project tracking or billing purposes.
+The lab will introduce the fundamentals of
+[Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc)
+for building web services.
 
 # Learning Outcomes
 
@@ -22,7 +26,7 @@ After completing the lab, you will be able to:
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Web Apps](https://docs.google.com/presentation/d/17UWVwjWNjP3H0i8jCXybCyB7qC_N7gesq3vCj1aUsag/present#slide=id.gd58f40471a_2_0)
     slides.
 
@@ -53,10 +57,10 @@ or you can
 
 ## Time Entries CRUD
 
-The start point of the lab provides you the in-memory repository
-implementation `InMemoryTimeEntryRepository`,
-the associated interface `TimeEntryRepository`,
-and the `TimeEntry` data class.
+The start point of the lab provides you with a time entry data class,
+an interface used to define the operations of
+a repository for those entities, and an in-memory implementation of
+that repository interface.
 
 You will build a service that can do [CRUD (Create, Read, Update,
 Delete) operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
@@ -64,12 +68,13 @@ on time entries.
 
 ### Data layer
 
-Review the following java classes:
+Review the following Java classes:
 
--   `TimeEntry` - Java "data class" which functions as a Value Object
+-   `TimeEntry` - Java "data class" which functions as a
+    [value object](https://en.wikipedia.org/wiki/Value_object)
     and a logical repository persisted record.
-    It will also be used in the controller you will build in this lab
-    as a "Data transfer object".
+    It will also be used in the controller you will build in this lab as a
+    [data transfer object](https://en.wikipedia.org/wiki/Data_transfer_object).
 
     ```bash
     git show mvc-solution:src/main/java/io/pivotal/pal/tracker/TimeEntry.java
@@ -115,24 +120,23 @@ Review the following java classes:
     ./gradlew clean compileTestJava
     ```
 
-### Wiring your In-Memory repository
+### Wiring your in-memory repository
 
 Declare a
 [`@Bean`](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html#beans-java-bean-annotation)
 method which returns your implementation of the `TimeEntryRepository`
 in the `PalTrackerApplication` class.
 
-## REST Controller
+## REST controller
 
 In this section of the lab,
-you will build out a REST service for Time Entries using a
-*Spring MVC Annotated REST Controller*.
+you will build out a REST service for time entries using a
+[Spring MVC Annotated REST Controller](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-controller).
 
 ### Implement the controller Java class
 
-1.  Review each test case in the `TimeEntryControllerTest` class,
-    notice the following:
-
+1.  Review each test case in the `TimeEntryControllerTest` class:
+    
     -   Notice the pattern of setting up text fixtures,
         executing the controller methods under test,
         and verifying successful execution of each method.
@@ -152,8 +156,9 @@ you will build out a REST service for Time Entries using a
         ...
         ```
 
-    -   Notice the use of mocking patterns,
-        such as the mock trained stubs in the test fixture
+    -   Notice the use of
+        [mocking](https://en.wikipedia.org/wiki/Mock_object)
+        patterns, such as the mock trained stubs in the test fixture
         setup:
 
         ```java
@@ -194,21 +199,21 @@ you will build out a REST service for Time Entries using a
 
 ### Research how to implement the REST controller with Spring
 
-Spring MVC annotated controller are Java objects with an annotation that
+Spring MVC controllers are Java objects with an annotation that
 signals to Spring that they are controllers.
 
 1.  Use the following tips to build out your solution:
 
     -   For convenience,
         use the `@RestController` annotation.
-        This is a regular Spring MVC Controller but it also includes the
+        This is a regular Spring MVC controller, but it also includes the
         `@ResponseBody` annotation which automatically serializes objects
         into JSON when they are returned from a handler method.
 
     -   Controller handler methods are annotated with
         [`@RequestMapping`](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-requestmapping)
         or one of the associated
-        [Custom Annotations](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-composed),
+        [custom annotations](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-composed),
         such `@GetMapping`, `@PostMapping`, `@PutMapping`
         and `@DeleteMapping`.
         Use the custom annotations in your solution.
@@ -258,7 +263,7 @@ signals to Spring that they are controllers.
 
 1.  Start your application locally
 
-1.  Use the curl commands below to verify
+1.  Use the `curl` commands below to verify
 that your application behaves as expected.
 
     __Get all time entries__
@@ -270,8 +275,22 @@ that your application behaves as expected.
     __Create a time entry__
 
     ```bash
-    curl -v -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
+    curl -v -XPOST -H"Content-Type: application/json" localhost:8080/time-entries -d'{"projectId": 1, "userId": 2, "date": "2019-01-01", "hours": 8}'
     ```
+
+    **Note:** On UNIX-like systems, you can set the shell variable
+    `TIME_ENTRY_ID` to the value of the ID that was created by the previous
+    command.
+    Assuming the ID value was 42, you would do that like this:
+    
+    ```bash
+    TIME_ENTRY_ID=42
+    ```
+    
+    You can then cut and paste the commands in the following sections
+    directly.
+    Otherwise, replace the placeholder `${TIME_ENTRY_ID}` with the value
+    of the ID.
 
     __Get a time entry by ID__
 
@@ -282,7 +301,7 @@ that your application behaves as expected.
     __Update a time entry by ID__
 
     ```bash
-    curl -v -XPUT -H"Content-Type: application/json" localhost:8080/time-entries/${TIME_ENTRY_ID} -d"{\"projectId\": 88, \"userId\": 99, \"date\": \"2019-01-01\", \"hours\": 8}"
+    curl -v -XPUT -H"Content-Type: application/json" localhost:8080/time-entries/${TIME_ENTRY_ID} -d'{"projectId": 88, "userId": 99, "date": "2019-01-01", "hours": 8}'
     ```
 
     __Delete a time entry by ID__
@@ -296,14 +315,14 @@ that your application behaves as expected.
 
 ## Deploy
 
-1.  Push your code to GitHub and let the pipeline deploy to the review
+1.  Push your code to GitHub and let the pipeline deploy to your TAS
     environment.
 
-1.  Redo the [Exercise endpoints](#exercise-endpoints) section on review
-    by replacing `localhost:8080` with the review environment route.
+1.  Redo the [Exercise endpoints](#exercise-endpoints) section on TAS
+    by replacing `localhost:8080` with the TAS environment route.
 
-1.  Make sure all the endpoints succeed in the review environment before
-    you submit the assignment.
+1.  Make sure all the endpoints succeed in the TAS environment before
+    you move on.
 
 ## Wrap up
 
