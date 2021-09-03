@@ -54,7 +54,7 @@ First, let's define an Incident:
    > “What caused the recent incident? How did we fix it? Additionally, we want to define action items to avoid this in the future and document it in our postmortem document.  We are not looking to find someone to blame.” 
    
    {{< callout >}}
-   Tip: Embrace blameless culture because you want to identify what happened and how to avoid it in the future. Make sure you provide psychological safety for each team member.
+   **Tip**: Embrace blameless culture because you want to identify what happened and how to avoid it in the future. Make sure you provide psychological safety for each team member.
    {{< /callout >}}
 
 1. **Present the incident timeline (5 minutes)**
@@ -80,7 +80,7 @@ First, let's define an Incident:
    Additionally, for clusters in the “what went wrong” column, ask “Why did this happen?” and “How can we reduce the impact if it happens again?” 
    
    {{< callout >}}
-   Tip: consider using [“five whys” method](https://en.wikipedia.org/wiki/Five_whys). Again, be sure to focus on root causes that are due to the process, not individual blame.  
+   **Tip**: consider using [“five whys” method](https://en.wikipedia.org/wiki/Five_whys). Again, be sure to focus on root causes that are due to the process, not individual blame.  
    {{< /callout >}}
 
 1. **Discuss the action items (15 minutes)**

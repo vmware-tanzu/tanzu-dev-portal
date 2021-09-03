@@ -49,7 +49,7 @@ This session is usually better to do once you have a product **mission**, **visi
    An ***Outcome*** **is a measurable change in behavior** that drives business results. Outcomes describe the ‘why’ of a set of features and the value they are intended to deliver.
 
    {{% callout %}}
-   Tip/Example: For example, for a musical instrument retailer, an outcome might be "a customer is able to see our different instruments". But this outcome can be achieved through several outputs, like sending mail order catalogs, or creating a web page they can browse, or creating an augmented reality product where a musician can see what the instrument might look like on them. Any one of these outputs could help to achieve the outcome, but one might be more successful than the other.
+   **Tip/Example**: For example, for a musical instrument retailer, an outcome might be "a customer is able to see our different instruments". But this outcome can be achieved through several outputs, like sending mail order catalogs, or creating a web page they can browse, or creating an augmented reality product where a musician can see what the instrument might look like on them. Any one of these outputs could help to achieve the outcome, but one might be more successful than the other.
    {{% /callout %}}
 
    We don’t want to get too focused on a potentially unsuccessful output too early, so we should focus on being clear about the outcome (the "why") during roadmapping.
@@ -61,7 +61,7 @@ This session is usually better to do once you have a product **mission**, **visi
    If you have a vision statement for your product, write it down and put it on your board. Check to see if everyone understands it.
 
    {{% callout %}}
-   Tip: If no vision statement has been created, make sure the team is aligned by adding a 15 min vision exercise (Practice coming soon!) to the agenda.
+   **Tip**: If no vision statement has been created, make sure the team is aligned by adding a 15 min vision exercise (Practice coming soon!) to the agenda.
    {{% /callout %}}
 
    Summarize the strategy for achieving this vision to ensure collective understanding.
@@ -85,7 +85,7 @@ This session is usually better to do once you have a product **mission**, **visi
    If you end up with more than 10 outcomes, consider sticking them up on the board, combining duplicates, and dot voting them down to a manageable count.
    
    {{% callout %}}
-   Tip: If you have a large team, ask groups to select 1–2 outcomes only.
+   **Tip**: If you have a large team, ask groups to select 1–2 outcomes only.
    {{% /callout %}}
    
 1. Fill out Outcome Cards for each outcome (40 minutes)
@@ -108,7 +108,7 @@ This session is usually better to do once you have a product **mission**, **visi
    
    
    {{% callout %}}
-   Tip: If your team has a fixed idea of what they want to build, this is a good opportunity to get them to break down their idea, think about the value it delivers, and design metrics to validate it’s delivering that value.
+   **Tip**: If your team has a fixed idea of what they want to build, this is a good opportunity to get them to break down their idea, think about the value it delivers, and design metrics to validate it’s delivering that value.
    {{% /callout %}}
    
 1. Prioritize the Outcomes (20 minutes)
@@ -128,7 +128,7 @@ This session is usually better to do once you have a product **mission**, **visi
    Remind the team that this doesn’t have to be a perfect or final guess on value and effort—this is roughly what the team thinks, based on what is known at the time. 
    
    {{% callout %}}
-   Tip: Sometimes customer value and business value conflict; for example, in dating sites customers might find it more valuable to meet the right person as soon as possible, while the business might find it more valuable to keep them on the platform slightly longer. In these cases, get the product stakeholders to prioritize one of those and make very explicit whose value they are prioritizing. 
+   **Tip**: Sometimes customer value and business value conflict; for example, in dating sites customers might find it more valuable to meet the right person as soon as possible, while the business might find it more valuable to keep them on the platform slightly longer. In these cases, get the product stakeholders to prioritize one of those and make very explicit whose value they are prioritizing. 
    {{% /callout %}}
    
    At this point, you should have a 2x2 grid that shows something about **what the value** is and **how valuable** you think an outcome is, how much **effort/ease** it will take to build, and how **confident** you are that this outcome is needed.
@@ -138,7 +138,7 @@ This session is usually better to do once you have a product **mission**, **visi
    Have the team **build the roadmap** by prioritizing the **order** in which you deliver the outcomes, from things you want to do “now” (in the next few weeks) to things you want to do in the “near term” (3-6 months) and “future” (6+ months) (25 minutes). Do this on a physical board or a Trello/Miro board. 
    
    {{% callout %}}
-   Tip: Concentrate on outcomes in the upper right quadrant first as they are high value & less effort/high confidence. 
+   **Tip**: Concentrate on outcomes in the upper right quadrant first as they are high value & less effort/high confidence. 
    {{% /callout %}}
    
    Some principles you can apply here are:
@@ -151,7 +151,7 @@ This session is usually better to do once you have a product **mission**, **visi
    - It is normal to have more of a solid idea about what you will do now than what you will do in the future (>6 months) – it is possible that things that are further into the future may not need to get done. 
    
    {{% callout %}}
-   Tip: Your roadmap should regularly be re-prioritized as you learn more (see step 9); creating a long roadmap could feel daunting for the team.
+   **Tip**: Your roadmap should regularly be re-prioritized as you learn more (see step 9); creating a long roadmap could feel daunting for the team.
    {{% /callout %}}
    
    ![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
@@ -183,11 +183,11 @@ This session is usually better to do once you have a product **mission**, **visi
    **Following this alignment session, update your roadmap.** You can do that by repeating steps 3–8.
    
    {{% callout %}}
-   Tip 1: Block out time on a regular cadence (~ monthly) to review your roadmap to keep your roadmap up to date. Also make your roadmap visible for everyone: Either on the wall in your office or prominently in a remote working board to be reviewed during Iteration Planning Meetings, internal and stakeholder updates. 
+   **Tip 1**: Block out time on a regular cadence (~ monthly) to review your roadmap to keep your roadmap up to date. Also make your roadmap visible for everyone: Either on the wall in your office or prominently in a remote working board to be reviewed during Iteration Planning Meetings, internal and stakeholder updates. 
    {{% /callout %}}
    
    {{% callout %}}
-   Tip 2: Less mature product ideas often may require more frequent updating, as outcomes are validated or invalidated, and there is generally less certainty about what is right to do next. Do not worry if you have to update and change this regularly!   
+   **Tip 2**: Less mature product ideas often may require more frequent updating, as outcomes are validated or invalidated, and there is generally less certainty about what is right to do next. Do not worry if you have to update and change this regularly!   
    {{% /callout %}}
 {{% /section %}}
 

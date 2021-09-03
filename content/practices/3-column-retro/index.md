@@ -53,7 +53,7 @@ why:
 1. For items which require follow-ups, add a card to the ‘Action Items’ section/column, asking for volunteers to be accountable for each action.
 
    {{< callout >}}
-   Tip: Ask for volunteers in pairs, so that no one person is responsible for an action item by themselves.
+   **Tip**: Ask for volunteers in pairs, so that no one person is responsible for an action item by themselves.
    {{< /callout >}}
 
 
@@ -62,7 +62,7 @@ why:
 1. Continue steps 5-7 until all cards have been covered, or only 5 minutes remain.
 
    {{< callout >}}
-   Tip: End this part of the retrospective with a “What went well” item. This ensures the retrospective discussion ends on a positive note.
+   **Tip**: End this part of the retrospective with a “What went well” item. This ensures the retrospective discussion ends on a positive note.
    {{< /callout >}}
 
 1. For the remaining 5 minutes, review the Action Items, making sure each item has a person or pair assigned.

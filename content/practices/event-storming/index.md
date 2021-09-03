@@ -41,7 +41,7 @@ why:
 1. Define “domain event” for the group:
 
    {{% callout %}}
-   Example: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
+   **Example**: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
    {{% /callout %}}
 
 1. Have the group "storm the business" process by writing a series of domain events on orange sticky notes, one per note.
@@ -66,7 +66,7 @@ why:
 1. After all the events are posted, pair with the domain experts to post a locally ordered sequence of events and enforce a timeline. Crowdsource feedback as you go.
 
    {{% callout %}}
-   Tip: Enforcing a timeline triggers long awaited conversations and eventually STRUCTURE will emerge.
+   **Tip**: Enforcing a timeline triggers long awaited conversations and eventually STRUCTURE will emerge.
    {{% /callout %}}
 
    Crowdsourced feedback may uncover missing elements. Add more stickies as needed.
@@ -76,7 +76,7 @@ why:
    Usually you'll see a big group followed by fewer stickies then a larger group of stickies to indicate the transfer to a new bounded context. Look for vertical swim lanes of events that may indicate bounded contexts or business capabilities.
 
    {{% callout %}}
-   Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
+   **Tip**: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
    {{% /callout %}}
 
    If you want to start bounding models with less permanence use stickies to mark general areas and withhold drawing boundaries with permanent markers until your confidence justifies it.

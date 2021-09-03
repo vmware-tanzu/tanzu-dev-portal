@@ -37,7 +37,7 @@ why:
    - Y-Axis — Lower User Value (bottom) to Higher User Value (top)
 
    {{% callout %}}
-   Tip: Make sure you define “higher value” in relationship to the top “how might we...” questions
+   **Tip**: Make sure you define “higher value” in relationship to the top “how might we...” questions
    {{% /callout %}}
 
    If whiteboard space is limited, you can do this exercise on a window
@@ -47,7 +47,7 @@ why:
 1. Plot the solution sticky notes on the 2x2 (can go around in a circle, person by person, if desired) and discuss
 
    {{% callout %}}
-   Tip: Let everyone (PM, design, engineering) weigh-in on user value but only let engineering identify relative complexity
+   **Tip**: Let everyone (PM, design, engineering) weigh-in on user value but only let engineering identify relative complexity
    {{% /callout %}}
 
    Use this opportunity to extract any immovable requirements from product - especially if they're business driven
@@ -57,7 +57,7 @@ why:
 1. Do your best to end with manageable number of solutions in the top right quadrant. The team should feel comfortable about where you land.
 
    {{% callout %}}
-   Tip: If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
+   **Tip**: If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
 
    ![Nested 2x2 quadrant](/images/practices/solution-prioritization/step-3.png)

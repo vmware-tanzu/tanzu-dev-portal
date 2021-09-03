@@ -32,14 +32,14 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 ### Sample Agenda & Prompts
 1. Preparation: As a group, agree on 2 relevant prioritization criteria.
    
-   {{< callout >}}Examples: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation{{< /callout >}}
+   {{< callout >}}**Examples**: Impact vs. Likeliness, Value vs. Complexity, Risk vs. Ease of Mitigation{{< /callout >}}
 
 1. Create 2 perpendicular intersecting axes and label each axis with one of the chosen criteria.
 
    ![Empty two by two grid](/images/practices/2x2/2x2-empty.png)
 
    {{< callout >}}
-   Tip: Label the axes such that the top-right quadrant represents the most important/highest-priority. This is a convention that will make it easier when using this practice repeatedly.
+   **Tip**: Label the axes such that the top-right quadrant represents the most important/highest-priority. This is a convention that will make it easier when using this practice repeatedly.
    {{< /callout >}}
 
 1. Start by selecting an option at random and place it near the center.
@@ -47,13 +47,13 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 1. Choose another option and, as a group, position it relative to other options on the grid, vertically and horizontally.
    
    {{< callout >}}
-   Tip: Avoid placing any 2 options on the same row or column. Each option should be clearly placed in a unique horizontal and vertical position on each axis to avoid any ambiguity.
+   **Tip**: Avoid placing any 2 options on the same row or column. Each option should be clearly placed in a unique horizontal and vertical position on each axis to avoid any ambiguity.
    {{< /callout >}}
 
 1. Repeat step 4 until every option is positioned on the grid. The highest priority options should be in the top-right quadrant.
    
    {{< callout >}}
-   Tip: If the options are weighted towards a particular half or quadrant, you can reposition the options so that roughly half are on either side of each axis. This will remove ambiguity and make it easier to make prioritization decisions.
+   **Tip**: If the options are weighted towards a particular half or quadrant, you can reposition the options so that roughly half are on either side of each axis. This will remove ambiguity and make it easier to make prioritization decisions.
    {{< /callout >}}
 
    ![Populated two by two grid](/images/practices/2x2/2x2-populated.png)

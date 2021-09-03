@@ -46,7 +46,7 @@ The time needed varies greatly for several reasons. For example, if you have the
    Have the group share out what they’ve written and affinity map (group) related items; you’ll use these in **Step 2.** Visit the ["brainstorm your values" part of the related Miro board](https://miro.com/app/board/o9J_lNuKt0U=/?moveToWidget=3074457356234182070&cot=14) for examples and more ideas on how to frame the prompts for your team.
 
    {{% callout %}}
-   Tip: If appropriate, you can include stakeholders during this step. Use your judgement.
+   **Tip**: If appropriate, you can include stakeholders during this step. Use your judgement.
    {{% /callout %}}
    
    ![Sticky notes representing team value clustered on a digital whiteboard](/images/practices/product-valuation/step-1.png)
@@ -71,9 +71,9 @@ The time needed varies greatly for several reasons. For example, if you have the
    - A high, low, and average to support the range you’ll be building
    - The reasoning behind an opinion
 
-   {{% callout %}}
-   Remember: “You don’t need to be precise - you just need to outrun your intuition.” -- Donald Reinertsen from *The Principles of Product Development Flow*
-   {{% /callout %}}
+   
+   >“You don’t need to be precise - you just need to outrun your intuition.” -- Donald Reinertsen from *The Principles of Product Development Flow*
+   
 
    Visit the ["identifying input numbers" section of the Miro board](https://miro.com/app/board/o9J_lNuKt0U=/?moveToWidget=3074457356234182072&cot=14) for more notes and examples about identifying the right input numbers.
 
@@ -84,7 +84,7 @@ The time needed varies greatly for several reasons. For example, if you have the
    Plug your numbers into a spreadsheet to calculate the end valuation, as well as a range. The range is very important for building trust because it allows you to be transparent about the accuracy of your estimate.
    
    {{% callout %}}
-   Feel free to use [this sample spreadsheet](/files/PM-onomics-Examples.xlsx) of a fictional product valuation, complete with sample formulas.
+   **Tip**: Feel free to use [this sample spreadsheet](/files/PM-onomics-Examples.xlsx) of a fictional product valuation, complete with sample formulas.
    {{% /callout %}} 
    
    Here's an example:
