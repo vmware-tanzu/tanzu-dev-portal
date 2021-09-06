@@ -35,7 +35,7 @@ The problem of
 may be related to schema migration.
 For example, some schema changes may so large that they require data
 to be transformed and transferred to a new database.
-However, you would address this using a different set of techologies, such as
+However, you would address this using a different set of technologies, such as
 [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load)
 tools.
 
