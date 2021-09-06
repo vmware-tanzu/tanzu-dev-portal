@@ -408,7 +408,10 @@ You can create a
 [user-provided service](https://docs.cloudfoundry.org/devguide/services/user-provided.html)
 and bind it to your application, in the same way that you bind a service created from the
 service catalog.
-However, the simplest mechanism may be the same you used when running the database
-locally, that is by setting the `SPRING_DATASOURCE_URL` environment variable.
-Please be aware, however, that you will need to modify the `migrate-databases.sh` script
-in this case to work with that configuration.
+However, the simplest mechanism may be the same that you will see used in
+[next lab](../jdbc-template/)
+for accessing the local database.
+That is by setting the `SPRING_DATASOURCE_URL` environment variable.
+
+Please be aware, however, that using either method you will need to modify the
+`migrate-databases.sh` script to work with that configuration.
