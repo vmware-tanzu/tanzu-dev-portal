@@ -6,18 +6,18 @@ team:
   - VMware Tanzu Labs
 ---
 
-This lab introduces the concepts Logging.
+This lab introduces the concepts around logging.
 
 ## Learning Outcomes
 
 After completing the lab, you will be able to:
 
--   Explain how Tanzu Application Services help with logging of Cloud Native
+-   Explain how Tanzu Application Service helps with logging of cloud native
     applications
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Logs](https://docs.google.com/presentation/d/1XiqxrGlLZ-OccP7HX7DoLn39xvq86NhWbBvgTrAyGRw/present#slide=id.ge9cac6b442_0_0)
     slides.
 
@@ -35,22 +35,22 @@ It is discussion and demo only.
 ## Logs
 
 Logs are a crucial part of monitoring and observability in a modern
-Cloud Native application.
+cloud native application.
 
-Pivotal Tanzu Application Services (PCF) has rich support for handling logs in the
+Tanzu Application Service (TAS) has rich support for handling logs in the
 following ways:
 
 ### Log aggregation
 
-PCF has a rich log aggregation subsystem that supports cloud native
+TAS has a rich log aggregation subsystem that supports cloud native
 applications
 [writing to log streams](https://12factor.net/logs).
 
-1.  The PCF Diego subsystem takes care of capturing your application
+1.  The Diego subsystem takes care of capturing your application
     instance log streams and putting them into a single
     log stream for the application.
 
-1.  PCF Loggregator subsystem manages the aggregation of the log stream,
+1.  The Loggregator subsystem manages the aggregation of the log stream,
     including:
 
     - Application instance logs
@@ -58,14 +58,14 @@ applications
     - Go Router access logs
     - Cloud controller events
 
-1.  Loggregator is also used to stream PCF system metrics.
+1.  Loggregator is also used to stream TAS system metrics.
     You can read more about the
     [architecture](https://docs.pivotal.io/application-service/2-7/loggregator/architecture.html#system-metrics-agents).
 
 ### Agnostic to downstream monitoring collection tools
 
-PCF does not assume the role for log collection or analytics tools.
-It supports the ability to configure "Drains" to put to a log
+TAS does not perform the roles of log collection or analytics tools.
+It supports the ability to configure "drains" to output to a log
 collection or analytics tool of your choice,
 such as
 [Splunk](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html)
@@ -73,19 +73,19 @@ or
 [Fluentd](https://docs.cloudfoundry.org/devguide/services/fluentd.html#drain).
 
 You can read more about the
-[Tanzu Application Services Loggregator Architecture](https://docs.cloudfoundry.org/loggregator/architecture.html).
+[Tanzu Application Service Loggregator Architecture](https://docs.cloudfoundry.org/loggregator/architecture.html).
 
 ## Wrap up
 
-Checkout the
+Review the
 [Logs slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gae083b4822_0_18)
 about how logging is handled on TAS.
 
 Now that you have completed the lab, you should be able to:
 
--   Explain how Tanzu Application Services help with logging of Cloud Native
+-   Explain how Tanzu Application Services help with logging of cloud native
     applications
 
 ## Resources
 
-- [Tanzu Application Services Logging and Metrics](https://docs.cloudfoundry.org/loggregator/data-sources.html)
+- [Tanzu Application Service Logging and Metrics](https://docs.cloudfoundry.org/loggregator/data-sources.html)
