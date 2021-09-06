@@ -6,14 +6,14 @@ team:
   - VMware Tanzu Labs
 ---
 
-You will create [MySQL](https://www.mysql.com/) databases for the PAL
-Tracker project.
+You will create [MySQL](https://www.mysql.com/) databases for the **pal-tracker**
+project.
 MySQL is a good choice for a data store because it is a well-tested
 relational database.
 Relational databases are a good fit for almost any data store need.
 
 This lab introduces a tool called [Flyway](https://flywaydb.org/documentation/)
-which perform database [migrations](https://en.wikipedia.org/wiki/Schema_migration).
+which performs database [schema migrations](https://en.wikipedia.org/wiki/Schema_migration).
 Migration tools such as Flyway work by tracking changes to the database
 schema alongside the codebase.
 This has many benefits:
@@ -24,6 +24,21 @@ This has many benefits:
 -   The last-run migration is readily apparent.
 -   Schema changes are performed easily.
 
+### Schema migration not data migration
+
+This lab focuses on migrating a database **schema** &mdash; the table and column
+structure &mdash; from one version to another.
+It is not about migrating **data** from one database to another.
+
+The problem of
+[data migration](https://en.wikipedia.org/wiki/Data_migration)
+may be related to schema migration.
+For example, some schema changes may so large that they require data
+to be transformed and transferred to a new database.
+However, you would address this using a different set of techologies, such as
+[ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load)
+tools.
+
 ## Learning Outcomes
 
 After completing the lab, you will be able to:
@@ -33,11 +48,11 @@ After completing the lab, you will be able to:
     control is beneficial
 -   Describe how to create and run a script for setting up databases
     on your development machine
--   Use the CF CLI to create services from the marketplace
+-   Use the command-line to create services from the marketplace
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Services](https://docs.google.com/presentation/d/1I0PCgsBnsbz_EOfWSpNhcdb73xCd-Zj1g-h3IGe3ox4/present#slide=id.gae083b4822_0_215)
     slides.
 
@@ -63,9 +78,12 @@ you can either
 or you can
 [fast-forward](../intro/#fast-forward) to the `migrations-solution` tag.
 
-## Create Database on TAS
+You may also refer to the [Hints](#hints) section at the end of the lab
+if you need more assistance.
 
-Create the database service on Tanzu Application Services
+## Create a database on TAS
+
+Create the database service on Tanzu Application Service
 that you will use later in the lab.
 You do this here because the MySQL service takes a while to create
 instances.
@@ -76,14 +94,14 @@ instances.
     service named _tracker-database_.
 
 1.  Confirm that the service instance is being created via
-    `cf service ${SERVICE_INSTANCE_NAME}`.
+    `cf service tracker-database`.
 
-## Create the Database DDL
+## Create the database DDL
 
 1.  Create a folder in the root of your project called `databases`.
 1.  Create a folder inside the `databases` folder called `tracker`.
 1.  Create a Database Definition Language (DDL) file called
-    `create_databases.sql` with the following content:
+    `create_databases.sql` with content from the following command:
 
     ```bash
     git show migration-solution:databases/tracker/create_databases.sql
@@ -98,11 +116,11 @@ instances.
     -   Create a `tracker` user in the database that has access to the
         databases.
 
-## Create Migrations
+## Create migrations
 
 1.  Create a file called `V1__initial_schema.sql` in
-    `databases/tracker/migrations/` with the following
-    content:
+    `databases/tracker/migrations/` with content from the following
+    command:
 
     ```bash
     git show migration-solution:databases/tracker/migrations/V1__initial_schema.sql
@@ -156,7 +174,7 @@ Read more about flyway naming conventions
 
     User will be `tracker` with no password, if you have set up MySQL in
     a standard way.
-    Refer to [Flyway](https://flywaydb.org/documentation/commandline/)
+    Refer to [the Flyway documentation](https://flywaydb.org/documentation/commandline/)
     for alternative installation instructions.
 
 1.  Do the same on the test database.
@@ -194,7 +212,7 @@ Read more about flyway naming conventions
 
 You are building a cloud native application which assumes that backing
 services (like a database) are provided by the platform.
-Since the Tracker application now needs a database, you must create the
+Since the **pal-tracker** application now needs a database, you must create the
 database service and bind your application to it.
 This instructs the platform to reserve the instance of the service and
 then provide the connection information to your application.
@@ -205,7 +223,7 @@ then provide the connection information to your application.
 1.  Bind the service instance to your application with the
     `cf bind-service` command.
 
-    This instructs Tanzu Application Services to provide your application with the
+    This instructs Tanzu Application Service to provide your application with the
     connection information for the MySQL database you created earlier.
     This is given to your application in the `VCAP_SERVICES`
     environment variable.
@@ -217,34 +235,39 @@ then provide the connection information to your application.
 
 1.  Take a look at the updated `.github/workflows/pipeline.yml` file
 
-    The cherry pick you performed at the beginning of this lab brought
+    The cherry-pick you performed at the beginning of this lab brought
     in changes to your `.github/workflows/pipeline.yml` file which run a
     `migrate-databases.sh` script.
-    This script opens an SSH tunnel to your Tanzu Application Services database and
+    This script opens an SSH tunnel to your Tanzu Application Service database and
     performs migrations.
 
     The database instance that your application has access to is
     protected by a firewall so you will not be able to connect to it
     directly.
-    Instead, you can open a SSH tunnel which will use your application
+    Instead, you can open an SSH tunnel which will use your application
     as a proxy so that the Flyway CLI running on your CI server can
-    migrate the database managed by Tanzu Application Services.
+    migrate the database managed by Tanzu Application Service.
 
-    This functionality does assume you have SSH access on the Cloud
-    Foundry instance you are working with,
-    which is the case for the foundation you use for this class.
+    This functionality does assume you have SSH access on the TAS
+    instance you are working with.
+    This may not be possible in your environment.
+    In this case you should take a look at the [Extras](#extras)
+    section for some ideas as to how you might handle this.
+    You can also look in the [Hints](#hints) for suggestions
+    on how you could use an external database that you
+    have direct access to.
 
 1.  Commit and push your changes.
 
     This will trigger a rebuild and re-deployment to the staging
-    environment that will also perform the migrations on your CF
+    environment that will also perform the migrations on your TAS
     database.
 
 ## Wrap up
 
-Checkout the
+Review the
 [Migrations](https://docs.google.com/presentation/d/15DO2A_raKVbPh7qGjXQ9Hi79NFwZdsImHu04jNlsC54/present#slide=id.gae083b4822_0_14)
-about database migrations.
+slides about database migrations.
 
 Now that you have completed the lab, you should be able to:
 
@@ -253,7 +276,7 @@ Now that you have completed the lab, you should be able to:
     control is beneficial
 -   Describe how to create and run a script for setting up databases
     on your development machine
--   Use the CF CLI to create services from the marketplace
+-   Use the command-line to create services from the marketplace
 
 ## Extras
 
@@ -286,8 +309,8 @@ Now that you have completed the lab, you should be able to:
 
 ### Implement a migration that operates on-platform
 
-The migration in this lab runs off-platform -
-It runs on either a developer workstation,
+The migration in this lab runs off-platform &mdash;
+it runs on either a developer workstation,
 or on the CI/CD server infrastructure.
 It does *not* run on the TAS platform.
 
@@ -301,14 +324,14 @@ It is problematic for two reasons:
 -   It requires the `pal-tracker` application to be pushed *before* the
     migration can be executed,
     because the design requires a running container on the platform that
-    the flyway migration can tunnel to its network.
+    the Flyway migration can tunnel to its network.
     That implies you must design into your release workflow to block
     traffic to your application until the migration is successfully
     complete.
 
 You can improve upon this design by the following:
 
--   Implement a process/job whose sole function is to run a flyway
+-   Implement a process/job whose sole function is to run a Flyway
     migration,
     *that is not the same application that consumes the migrated database.*
     It will run on the TAS platform as a
@@ -325,10 +348,10 @@ You can improve upon this design by the following:
 Implement the *improved* migration:
 
 1.  Create a new Spring boot app named `pal-tracker-migrations`.
-    Use Spring Boot with Flyway Integration to run the flyway
+    Use Spring Boot with Flyway Integration to run the Flyway
     migrations.
-    You can simplify the solution by bundling the flyway migrations
-    inside of the application *resources* and reference from the
+    You can simplify the solution by bundling the Flyway migrations
+    inside the application *resources* and reference from the
     classpath instead of the file system.
     See the following links for help:
 
@@ -339,3 +362,53 @@ Implement the *improved* migration:
 
 1.  [Create a Cloud task](https://docs.pivotal.io/application-service/2-9/devguide/using-tasks.html)
     for your new migration and run it on TAS platform.
+
+## Hints
+
+### How do you create a database instance in TAS?
+
+This lab assumes that you have some kind of MySQL service available in your
+foundation, as shown through the `cf marketplace` command.
+It is possible that there may be more than one or, perhaps, none at all.
+If you have access to the "Apps Manager" application, it may be easier to browse
+the services marketplace there as the output from `cf marketplace` can be a little
+hard to read when there are many services.
+You will need to find the name of the service and at least one "service plan" name.
+Plans represent a specific configuration of the service, for example, a particular
+database size or quality of service.
+
+Here is and edited version of the output from `cf marketplace`:
+
+```no-highlight
+$ cf marketplace
+Getting services from marketplace in org neil / space sandbox as neil...
+OK
+
+service         plans                  description                    broker
+...
+p.mysql         db-small, db-medium    Dedicated instances of MySQL   dedicated-mysql-broker
+...
+```
+
+The service name here is `p.mysql` and there are two plans available, `db-small` and
+`db-medium`.
+
+Using that information a possible command to create the `tracker-database` instance
+might be:
+
+```bash
+cf create-service p.mysql db-small tracker-database
+```
+### What about using an external database?
+
+If you can not, or do not want to, create a database service instance within your foundation,
+you can use a database available outside the foundation.
+
+You can create a
+[user-provided service](https://docs.cloudfoundry.org/devguide/services/user-provided.html)
+and bind it to your application, in the same way that you bind a service created from the
+service catalog.
+However, the simplest mechanism may be the same you used when running the database
+locally, that is by setting the `SPRING_DATASOURCE_URL` environment variable.
+Please be aware, however, that you will need to modify the `migrate-databases.sh` script
+in this case to work with that configuration.
