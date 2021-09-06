@@ -17,8 +17,8 @@ After completing the lab, you will be able to:
     dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
--   Describe how to set up a Spring Boot app running on CF to connect
-    to a MySQL CF Service
+-   Describe how to set up a Spring Boot app running on TAS to connect
+    to a MySQL Service
 -   Use JDBC Template to perform CRUD database operations
 
 ## Get started
@@ -48,6 +48,8 @@ you can either
 or you can
 [fast-forward](../intro/#fast-forward) to the `jdbc-solution` tag.
 
+You can also look at the [Hints](#hints) for some more assistance.
+
 ## Configure datasource dependencies
 
 Add the following dependencies to the `build.gradle` file:
@@ -66,14 +68,14 @@ dependencies {
 Review the `.github/workflows/pipeline.yml` pipeline declaration
 additions from the `jdbc-start` cherry-pick.
 You will see a `Create test database` section has been added to the
-`build-and-publish` job to setup the CI test database.
+`build-and-publish` job to set up the CI test database.
 
-It uses a new flyway task you will add next to run it
-through gradle instead of the command line.
+It uses a new Flyway task you will add next to run it
+through Gradle instead of the command line.
 
-Configure flyway in your `build.gradle` file as follows:
+Configure Flyway in your `build.gradle` file as follows:
 
-1.  Add import for flyway as the first line in the `build.gradle` file:
+1.  Add import for Flyway as the first line in the `build.gradle` file:
 
     ```diff
     + import org.flywaydb.gradle.task.FlywayMigrateTask
@@ -132,7 +134,7 @@ Configure flyway in your `build.gradle` file as follows:
     + }
     ```
 
-    This is the gradle task executed by the pipeline to migrate
+    This is the Gradle task executed by the pipeline to migrate
     your test database.
 
 1.  Review the `build.gradle` file below to verify your datasource
@@ -162,19 +164,21 @@ as the `routes` and `env` labels.
 
 1.  Create a new class called `JdbcTimeEntryRepository` that:
     - Implements the `TimeEntryRepository` interface.
-    - Takes `DataSource`  as a constructor argument.
+    - Takes a `DataSource` as a constructor argument.
+      Make sure to use the `DataSource` interface type, not the concrete `MysqlDataSource`
+      class type.
 
     Use the `JdbcTimeEntryRepositoryTest` to guide your
     implementation.
     Keep the following tips in mind:
 
-    -   Use `DataSource` to construct a `JdbcTemplate` object and
+    -   Use the `DataSource` to construct a `JdbcTemplate` object and
         store the `JdbcTemplate` object to a private field.
 
-    -   In the `create` method use the `JDBCTemplate#update()`
+    -   In the `create` method use the `JDBCTemplate#update()` method
         to persist the `TimeEntry` object to the database.
         Retrieve the newly created record from the database using the
-        generated id (the id can be retrieved using a
+        generated ID (the ID can be retrieved using a
         [`GeneratedKeyHolder`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/support/GeneratedKeyHolder.html))
 
     Take a look at our solution if you need help:
@@ -223,8 +227,8 @@ Now that you have completed the lab, you should be able to:
     dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
--   Describe how to set up a Spring Boot app running on CF to connect
-    to a MySQL CF Service
+-   Describe how to set up a Spring Boot app running on TAS to connect
+    to a MySQL Service
 -   Use JDBC Template to perform CRUD database operations
 
 ## Extras
@@ -240,19 +244,19 @@ Now that you have completed the lab, you should be able to:
 
     -   Determine if `VCAP_SERVICES` is set:
 
-        `env |grep VCAP_SERVICES`
+        `env | grep VCAP_SERVICES`
 
 -   Do you see the environment variable set in the running container?
     Why, or why not?
 
-### Java Buildpack Auto reconfiguration
+### Java buildpack auto-reconfiguration
 
-In this lab you saw the *Java Buildpack Auto reconfiguration* feature
+In this lab you saw the *Java buildpack auto-reconfiguration* feature
 in work.
 It replaces the Spring Boot auto-configured `DataSource` with one it
 creates from the service binding found in `VCAP_SERVICES`.
 
-One issue you may have noticed if reviewing PCF logs after deploying
+One issue you may have noticed if you reviewed the app logs after deploying
 your JDBC code changes is this warning:
 
 ```nohighlight
@@ -262,11 +266,11 @@ your JDBC code changes is this warning:
 
 But you did not see this when you ran this locally as a Spring Boot app!
 
-A trade-off of using the default Tanzu Application Services Java Buildpack
+A trade-off of using the default Tanzu Application Service Java buildpack
 auto-reconfiguration behavior is that it hijacks backing service
 configuration,
-and replaces with the associated spring beans configured separately by
-the auto reconfiguration plugin.
+and replaces with the associated Spring beans configured separately by
+the auto-reconfiguration plugin.
 This includes any `DataSource` configuration you
 (the application developer or application operator) may have provided.
 
@@ -288,7 +292,7 @@ You can turn off the auto-reconfiguration behavior as follows:
 
 `cf set-env pal-tracker JBP_CONFIG_SPRING_AUTO_RECONFIGURATION '{ enabled: false }'`
 
-This will suppress auto configuration of your datasource via
+This will suppress auto-configuration of your datasource via
 `VCAP_SERVICES` during the next push and staging of your application.
 
 You will also need to configure your datasource or datasources by
@@ -314,3 +318,30 @@ or you can also use the
 
 If you completed both of the *Spring Data JDBC* and *JPA* extras,
 how did both of the solution compare to the *JDBC Template* solution?
+
+## Hints
+
+### Where do you get the `DataSource` from?
+
+It is obvious that, ultimately, the application will need a `DataSource` instance,
+connected to a real database.
+It is much less obvious how to create that.
+The good news is that you, the developer, do not need to create the datasource at all &mdash;
+Spring Boot will do that for you!
+In order to do that it needs several things to be true:
+
+-  Spring Boot auto-configuration is enabled, which it is by default.
+
+-  There is a valid value for the configuration property `spring.datasource.url` (in
+   this case provided via the environment), or the app is running in a cloud environment
+   (such as TAS) where information on bound database instances is available.
+   
+-  There is an appropriate JDBC driver available on the classpath.
+
+If these conditions are true, Spring Boot will create a datasource bean and place it
+in the application context.
+
+### How do you inject the `DataSource` into the `JdbcTimeEntryRepository`?
+
+As well as Spring auto-wiring parameters into bean class constructors, it will
+also auto-wire the parameters of methods annotated with `@Bean`.
