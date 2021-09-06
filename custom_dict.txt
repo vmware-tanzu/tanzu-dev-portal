@@ -464,6 +464,7 @@ DistributedSystemMXBean's
 DistributedSystems
 DistributionMessageObserver
 DistributionStats
+DistributionSummary
 distroless
 distros
 django-prometheus
