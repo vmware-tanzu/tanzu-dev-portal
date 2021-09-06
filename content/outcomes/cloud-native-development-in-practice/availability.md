@@ -7,17 +7,17 @@ team:
 ---
 
 You will demonstrate how `pal-tracker` application
-works with Tanzu Application Services Availability characteristics.
+works with Tanzu Application Service availability characteristics.
 
 ## Learning Outcomes
 
 After completing the lab, you will be able to:
 
-- Demonstrate how Tanzu Application Services handles availability.
+- Demonstrate how Tanzu Application Service handles availability.
 
 ## Getting started
 
-Check out the
+Review the
 [Availability](https://docs.google.com/presentation/d/1FmUnMpbKKqnIH0y4CxDjB7Vzn7nY0hiGaWngYN6F1oU/present#slide=id.ge9cac6b40d_0_0)
 slides.
 
@@ -39,22 +39,22 @@ and tune it.
 
 You can monitor the `pal-tracker` application through the following:
 
--   Command Line via the following `cf` commands:
+-   Command line via the following `cf` commands:
 
     - `cf app pal-tracker`
     - `cf events pal-tracker`
 
--   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+-   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
-If you will monitor via command line you will need a minimum of four
+If you choose to monitor via the command line you will need a minimum of four
 terminal windows open.
 
-If you choose to monitor with *App Manager* you will need only one.
+If you choose to monitor with *Apps Manager* you will need only one.
 
 ## Verify availability characteristics
 
-1.  An a dedicated terminal window,
+1.  In a dedicated terminal window,
     run a load test:
 
     ```bash
@@ -70,11 +70,10 @@ If you choose to monitor with *App Manager* you will need only one.
     curl -v -XPOST -H "Content-Length:0"  http://${APP_URL}/actuator/palTrackerFailure
     ```
 
-1.  Verify in either *App Manager* or
-    the `pal-tracker` and events watch windows a crash and
-    restart occurs.
-    This may occur very quickly,
-    which demonstrates
+1.  Verify that a crash and restart occurs.
+    You can see this either in *Apps Manager* or
+    the window in which you are watching `cf events` output.
+    This restart may occur very quickly, which demonstrates
     [disposability](https://12factor.net/disposability)
     characteristics of your application.
 
@@ -87,7 +86,7 @@ If you choose to monitor with *App Manager* you will need only one.
     but there might be some requests in flight during the shutdown
     event.
 
-    Your application design should accommodate for such transient
+    Your application design should accommodate such transient
     failures.
 
 1.  Let your load test complete,
@@ -95,12 +94,12 @@ If you choose to monitor with *App Manager* you will need only one.
 
 ## Wrap up
 
-Checkout the
-[Scaling slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gb53c81140d_0_55)
-about how logging is handled on TAS.
+Review the
+[Availability](https://docs.google.com/presentation/d/1FmUnMpbKKqnIH0y4CxDjB7Vzn7nY0hiGaWngYN6F1oU/present#slide=id.ge9cac6b40d_0_0)
+slides about how processes are monitored and recovered in TAS.
 
 Now that you have completed the lab, you should be able to:
 
-- Demonstrate how Tanzu Application Services handles availability.
+- Demonstrate how Tanzu Application Service handles availability.
 
 ## Extras
