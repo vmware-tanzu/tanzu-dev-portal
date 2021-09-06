@@ -18,7 +18,7 @@ After completing the lab, you will be able to:
 
 ## Getting started
 
-Check out the
+Review the
 [Scaling](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
 slides.
 
@@ -40,43 +40,43 @@ and tune it.
 
 You can monitor the `pal-tracker` application through the following:
 
--   Command Line via the following `cf` commands:
+-   Command line via the following `cf` commands:
 
     - `cf app pal-tracker`
     - `cf events pal-tracker`
 
--   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+-   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
-If you will monitor via command line you will need a minimum of four
+If you choose to monitor via the command line you will need a minimum of four
 terminal windows open.
 
-If you choose to monitor with *App Manager* you will need only one.
+If you choose to monitor with *Apps Manager* you will need only one.
 
 ## Scaling `pal-tracker`
 
-Tanzu Application Services supports scaling the number of application instances in 3
+Tanzu Application Service supports scaling the number of application instances in 3
 ways:
 
 1.  Command line through the `cf scale -i <number of instances>` command.
 1.  Setting in the manifest `instances` parameter,
     and pushing it.
 1.  Through the
-    [TAS Autoscaler](https://docs.pivotal.io/application-service/2-9/appsman-services/autoscaler/about-app-autoscaler.html).
+    [TAS Autoscaler](https://docs.pivotal.io/application-service/2-11/appsman-services/autoscaler/about-app-autoscaler.html).
 
-You already used #2 already to achieve better availability
+You have already used the second option to achieve better availability
 characteristics of your application.
 
 Scaling up the number of `pal-tracker` instances requires two
-characteristics of the `pal-tracker` application:
+characteristics of the ` application:
 
 -   [Each `pal-tracker` application instance cannot persist state within its container](https://12factor.net/processes).
 -   The `pal-tracker` application supports a
     [concurrent scale out model](https://12factor.net/concurrency),
     meaning that it can run multiple application instances concurrently.
 
-Now you will use the autoscaler to accommodate for increased workload
-through `pal-tracker` application.
+Now you will use the autoscaler to accommodate increased workload
+for the `pal-tracker` application.
 
 ### Scenario
 
@@ -85,39 +85,56 @@ production for a while,
 and you have good insights into the runtime characteristics:
 
 1.  You know from experience you can run 10 requests/second (rps)
-    comfortably on a given `pal-tracker` application instance,
-    factoring in you have sufficient redundancy with 2 extra instances.
-
-1.  You have stress tested you application where you know the maximum
-    work rate per instance is 20 rps,
-    when it may become unstable.
+    comfortably on a given `pal-tracker` application instance.
+    
+1.  You have stress tested your application, and you know the maximum
+    work rate per instance when it may become unstable is 20 rps.
 
 1.  The current `pal-tracker` application has a relatively consistent
-    workload 10 rps throughout the day.
+    workload of 10 rps throughout the day.
 
-1.  You forecast in the next release you will have situational daily
-    peaks where the `pal-tracker` application may peak between 40 and 50
+1.  You forecast in the next release you will have occasional daily
+    peaks where the `pal-tracker` application may have to handle between 40 and 50
     rps.
     How many instances will you need to run at peak periods,
     without factoring in availability?
 
     ```nohighlight
-    (target rps)/(rps/instance) -> number of instances
+    (target rps) / (rps/instance) = number of instances
     ```
 
     Or
 
     ```nohighlight
-    (50 rps)/(10 rps/instance) => 5 instances
+    (50 rps) / (10 rps/instance) = 5 instances
     ```
+    
+    Factoring in the need for availability, you have learned in
+    production that under normal conditions you have sufficient redundancy
+    with 2 extra instances.
+    So, you never want to run fewer than 3 instances.
 
-    You know based from your stress testing that planned and/or
+    You now know based on your stress testing that planned and/or
     unplanned outage of individual instances will be sufficiently
     tolerated with a total of 5 instances at 50 rps.
+    You can see this by considering that even if 2 of the 5 instances
+    become unavailable, the overall throughput would be:
+    
+    ```nohighlight
+    (maximum rps/instance) * (number of instances) = max throughput
+    ```
+    
+    or
+
+    ```nohighlight
+    (20 rps) * (3 instances) = 60 rps
+    ```
+    
+    This still greater than the maximum required throughput of 50 rps.
 
 ### Enable application autoscaling
 
-Tanzu Application Services supports automatic horizontal scaling based on either pre-defined or custom rules.
+Tanzu Application Service supports automatic horizontal scaling based on either pre-defined or custom rules.
 
 For blocking web applications,
 HTTP throughput is a good choice assuming you have a solid grasp of the
@@ -125,9 +142,9 @@ performance, stability, and scaling characteristics of your app.
 
 1.  If you are running the labs on your own development machine,
     you will need to
-    [install the Tanzu Application Services Autoscaler CLI plugin](https://docs.pivotal.io/application-service/2-9/appsman-services/autoscaler/using-autoscaler-cli.html#install-the-app-autoscaler-cli-plugin).
+    [install the Tanzu Application Service Autoscaler CLI plugin](https://docs.pivotal.io/application-service/2-9/appsman-services/autoscaler/using-autoscaler-cli.html#install-the-app-autoscaler-cli-plugin).
 
-1.  You are supplied the set up script that will configure an
+1.  You have been supplied with a set up script that will configure an
     autoscaling rule for you with the following characteristics:
 
     -   Minimum number of instances:
@@ -139,7 +156,7 @@ performance, stability, and scaling characteristics of your app.
     -   Threshold when to scale down:
         5 rps
 
-1.  You can review the set up script to see how the autoscaler cli
+1.  You can review the set up script to see how the autoscaler CLI
     works:
 
     ```bash
@@ -168,7 +185,7 @@ performance, stability, and scaling characteristics of your app.
 
     **It is critical to run with these new settings instead of the**
     **previous load test runs,**
-    **otherwise the autoscaler will not work accordingly to**
+    **otherwise the autoscaler will not work in line with the**
     **expectations of this lab.**
 
     ```bash
@@ -202,12 +219,12 @@ performance, stability, and scaling characteristics of your app.
 ### Autoscaling limitations
 
 You saw that the autoscaling behavior is not instantaneous.
-It is designed conservatively using a concept of *Governor*,
+It is designed conservatively using a concept of a *Governor*,
 an algorithm that limits rate of change within the autoscaler to
-prevent potential of inadvertent outages if it is not tuned or used
+prevent potential outages if it is not tuned or used
 correctly.
 
-The [Scenario](#scenario) alluded that you have significant knowledge
+The [Scenario](#scenario) assumed that you have significant knowledge
 about the performance, stability, scaling and capacity usage of your
 application.
 The scenario in this lab is actually quite naive,
@@ -222,15 +239,15 @@ anticipate to encounter in production.
 See the
 [Reddit outage postmortem announcement related to autoscaling](https://www.reddit.com/r/announcements/comments/4y0m56/why_reddit_was_down_on_aug_11/).
 
-It is sobering read that should give you pause when choosing to run an
+It is a sobering read that should give you pause when choosing to run an
 autoscaler, as well as operate it.
 
 Another good read on the subject is
 [Release It! Second Edition](https://pragprog.com/titles/mnee2/release-it-second-edition/),
-*Chapter 4 - Stability Antipatterns -> Force Multiplier* and
-*Chapter 5 - Stability Patterns* -> Governor
+*Chapter 4 - Stability Antipatterns &rarr; Force Multiplier* and
+*Chapter 5 - Stability Patterns &rarr; Governor*
 
-A specific limitation for PCF autoscaler is that the CPU rules are not
+A specific limitation for the TAS autoscaler is that the CPU rules are not
 reliable.
 See
 [this advisory](https://pvtl.force.com/s/article/PCF-Autoscaler-Advisory-for-Scaling-Apps-Based-on-the-CPU-utilization?language=en_US)
@@ -240,8 +257,5 @@ for more information.
 
 Now that you have completed the lab, you should be able to:
 
--   Demonstrate the ability to manually scale an application on Cloud
-    Foundry.
 -   Demonstrate the ability to use autoscaling for an application on
-    Tanzu Application Services.
--   Demonstrate how Tanzu Application Services handles availability.
+    Tanzu Application Service.
