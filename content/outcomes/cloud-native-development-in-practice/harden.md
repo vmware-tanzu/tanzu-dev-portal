@@ -7,7 +7,7 @@ team:
 ---
 
 You will demonstrate how to harden your `pal-tracker` application
-running on Tanzu Application Services for Scaling and Availability characteristics.
+running on Tanzu Application Service for scaling and availability characteristics.
 
 ## Learning Outcomes
 
@@ -59,7 +59,7 @@ After completing the lab, you will be able to:
     -   Scripts you will use to enable and tear down the autoscaling
         later in the lab.
 
-1.  Ensure you have the latest code built on your local dev workstation
+1.  Ensure you have the latest code built on your local machine
     that includes all the updates from the previous labs,
     or as of the `actuator-solution` point:
 
@@ -85,18 +85,18 @@ and tune it.
 
 You can monitor the `pal-tracker` application through the following:
 
--   Command Line via the following `cf` commands:
+-   Command line via the following `cf` commands:
 
     - `cf app pal-tracker`
     - `cf events pal-tracker`
 
--   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+-   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
-If you will monitor via command line you will need a minimum of four
+If you choose to monitor via the command line you will need a minimum of four
 terminal windows open.
 
-If you choose to monitor with *App Manager* you will need only one.
+If you choose to monitor with *Apps Manager* you will need only one.
 
 ## Review the current state of your application
 
@@ -109,14 +109,14 @@ git show scaling-availability-start:manifest.yml
 ```
 
 Notice the new parameters added,
-they reflect the defaults the Tanzu Application Services set on your behalf:
+they reflect the defaults the Tanzu Application Service sets on your behalf:
 
 1.  [`java_buildpack_offline`](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#buildpack):
-    Given the `pal-tracker` app is a Java app,
-    the associated build pack would automatically detect and build the
-    app's droplet.
-    From here on,
-    it is explicitly set in the manifest.
+    Given that the `pal-tracker` app is a Java app,
+    this buildpack is the one that would automatically be detected and
+    used to build the app's droplet.
+    From here on, it is explicitly set in the manifest, which will
+    speed up the staging process.
 
 1.  [`stack`](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#stack):
     `cflinuxfs3` is the default Linux file system stack from which the
@@ -142,13 +142,13 @@ they reflect the defaults the Tanzu Application Services set on your behalf:
     port `8080`.
 
 1.  [`timeout`](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#timeout):
-    `60` seconds is the default time interval that Diego will wait on
+    `60` seconds is the default time interval that Diego will wait for
     the health check to succeed on start up before giving up and
     retrying.
 
 1.  [`JBP_CONFIG_OPEN_JDK_JRE`](https://github.com/cloudfoundry/java-buildpack):
     `'{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 250 } }'`
-    environment variable sets the build pack java version,
+    is the environment variable that sets the buildpack Java version,
     and optionally
     [memory calculator](https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/main/README.md)
     tuning.
@@ -160,7 +160,7 @@ they reflect the defaults the Tanzu Application Services set on your behalf:
     endpoint you will use in this lab.
 
 You can see the entire list of
-[Tanzu Application Services manifest attributes](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html).
+[Tanzu Application Service manifest attributes](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html).
 
 ### Push and monitor the state of your app
 
@@ -185,7 +185,7 @@ For the remainder of the lab you will monitor the state of the
 `pal-tracker` application.
 
 You can navigate to the `pal-tracker` application overview page in
-*App Manager*,
+*Apps Manager*,
 or you can monitor from command line:
 
 1.  In a separate terminal window, run the following command,
@@ -204,17 +204,17 @@ or you can monitor from command line:
     watch cf events pal-tracker
     ```
 
-    Notice that the event are ordered most recent at the top,
-    least recent at the bottom.
+    Notice that the events are ordered from the most recent at the top
+    to the oldest at the bottom.
 
     You will see in the later instructions this is referred to as the
     **`cf events` watch window**.
 
-Keep both this windows open and running for the rest of the lab.
+Keep both these windows open and running for the rest of the lab.
 
 #### Startup time
 
-1.  After the application completes is startup,
+1.  After the application completes its startup,
     review the logs since startup:
 
     ```bash
@@ -266,8 +266,8 @@ Keep both this windows open and running for the rest of the lab.
     - `DURATION` option value is the max duration of the test (seconds)
     - `REQUESTS_PER_SECOND` option value is the number of requests per second.
 
-1.  In either *App Manager* or the `cf app` Watch window,
-    monitor the amount of cpu, memory and disk resources taken for the
+1.  In either *Apps Manager* or the `cf app` Watch window,
+    monitor the amount of CPU, memory and disk resources taken for the
     test.
 
 1.  Let your load test complete,
@@ -275,7 +275,7 @@ Keep both this windows open and running for the rest of the lab.
 
 #### Questions for production hardening
 
-Based from what we have seen with our `pal-tracker` application so far,
+Based on what you have seen with your `pal-tracker` application so far,
 is it optimally tuned for production?
 
 1.  Are the resources allocated by the `pal-tracker` instance really
@@ -283,8 +283,8 @@ is it optimally tuned for production?
     Can you perhaps tune down the memory and disk resources allocated
     to the `pal-tracker` application instance?
 
-1.  Is the 60 second startup interval really needed by Diego based off
-    of the startup time characteristic of the `pal-tracker` application?
+1.  Is the 60-second startup interval really needed by Diego based on
+    the startup time characteristic of the `pal-tracker` application?
     Can you perhaps tune it down,
     such that a misbehaving `pal-tracker` instance can fail faster for
     better
@@ -293,24 +293,24 @@ is it optimally tuned for production?
 
 1.  Do you have enough instances to make your `pal-tracker` application
     available?
-    What if a Platform operator is doing daily planned maintenance that
-    would take down the Cell upon which your application instance is
+    What if a platform operator is doing daily planned maintenance that
+    would take down the cell in which your application instance is
     running?
     What if your application instance crashes?
-    How many instances might you run at a minimum should you run to
+    How many instances should you run at a minimum to
     account for concurrent planned and unplanned outage of individual
     instances?
 
 1.  Is the port health check optimal for a blocking Java web application?
-    What if your `pal-tracker` application stalls on Java Garbage
-    Collection?
+    What if your `pal-tracker` application stalls on Java garbage
+    collection?
     What if it runs out of threads?
     What type of health check would be optimal,
     and which Spring Boot Actuator feature could you use for that
     health check?
 
 1.  What about CPU resources?
-    How does Tanzu Application Services handle that?
+    How does Tanzu Application Service handle that?
 
 ## Production hardening
 
@@ -326,27 +326,26 @@ Configure the following in the `manifest.yml` file:
 1.  Configure the memory quota for 512M.
 
 1.  Configure the `JBP_CONFIG_OPEN_JDK_JRE` environment variable,
-    `memory_calculator` -> `stack_threads` to `100`.
+    `memory_calculator` &rarr; `stack_threads` to `100`.
 
-    **The reduced container memory quota to 512M will not start**
-    **with the default stack thread configuration.**
+    **The app will not start with the container memory quota reduced to 512M**
+    **and the default stack thread configuration.**
 
 1.  Configure 3 instances.
 
-1.  Configure a http health check type:
+1.  Configure a `http` health check type:
     -   Change the `health-check-type` from `port` to `http`
     -   Add a new manifest attribute `health-check-http-endpoint` with
         a value configured to the associated endpoint of the
-        `pal-tracker` Spring Boot application's Liveness probe endpoint.
+        `pal-tracker` Spring Boot application's liveness probe endpoint.
     -   Configure the `MANAGEMENT_HEALTH_PROBES_ENABLED` environment
         variable with a value of `true` to enable the liveness probe.
 
-1.  Tune down the startup health check `timeout` to roughly 2 times
-    (and round up to next 10 second interval)
-    of the start up time of your `pal-tracker` application that you
-    measured in
+1.  Tune down the startup health check `timeout` to roughly twice
+    the start up time of your `pal-tracker` application that you
+    measured in the
     [Startup time](#startup-time) section
-    step 4.
+    step 4 (and round up to next 10 second interval).
 
 1.  Push your updated configuration:
 
@@ -357,20 +356,20 @@ Configure the following in the `manifest.yml` file:
 1.  Wait until all the `pal-tracker` instances start.
 
 If you get stuck,
-you can peek at the solution here:
+you can look at the solution here:
 
 ```bash
 git show scaling-availability-solution:manifest.yml
 ```
 
-Notice that you are not configuring PCF CPU resource allocation.
-[Read about how Tanzu Application Services works with CPU](https://www.cloudfoundry.org/blog/better-way-split-cake-cpu-entitlements/).
+Notice that you are not configuring CPU resource allocation.
+[Read about how Tanzu Application Service works with CPU](https://www.cloudfoundry.org/blog/better-way-split-cake-cpu-entitlements/).
 
 ## Wrap up
 
-Checkout the
-[Scaling slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gb53c81140d_0_55)
-about how logging is handled on TAS.
+Review the
+[Scaling slides](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
+about how scaling is handled on TAS.
 
 Now that you have completed the lab, you should be able to:
 
