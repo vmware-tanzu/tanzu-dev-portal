@@ -370,7 +370,9 @@ Implement the *improved* migration:
 This lab assumes that you have some kind of MySQL service available in your
 foundation, as shown through the `cf marketplace` command.
 It is possible that there may be more than one or, perhaps, none at all.
-If you have access to the "Apps Manager" application, it may be easier to browse
+If you have access to the
+[Apps Manager](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+application, it may be easier to browse
 the services marketplace there as the output from `cf marketplace` can be a little
 hard to read when there are many services.
 You will need to find the name of the service and at least one "service plan" name.
