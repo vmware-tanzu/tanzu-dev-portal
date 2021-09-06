@@ -57,7 +57,7 @@ After completing the lab, you will be able to:
     -   `pal-tracker` manifest file with the desired initial state of
         your app.
     -   Scripts you will use to enable and tear down the autoscaling
-        later in the lab.
+        [in a later lab](../scaling/).
 
 1.  Ensure you have the latest code built on your local machine
     that includes all the updates from the previous labs,
