@@ -377,7 +377,6 @@ limitations under the License.
     $("#searchheaderform input").focus();
     $("#mega-menus").toggleClass("no-border");
   });
-
   //Nav hover
   const $dropdown = $(".dropdown");
   const $dropdownToggle = $(".dropdown-toggle");
@@ -399,7 +398,3 @@ limitations under the License.
       });
   });
 }(jQuery));
-
-
-  
-
