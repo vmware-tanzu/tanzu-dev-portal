@@ -148,7 +148,7 @@ $ minikube service mount-demo-service
 
 After running the command, the Minikube CLI will open up your default browser and point it to this service automatically, showing you your very own Kubernetes Shop!
 
-![The example "Kubernetes Shop" UI running in the web browser](/images/blogs/local-k8s-options/k8s-shop.png)
+![The example "Kubernetes Shop" UI running in the web browser](images/k8s-shop.png)
 
 Try modifying the code and re-running the Spring application, and you will see these changes reflected in your pod. This gives you a great way to rapidly try changes to code that directly relies on Kubernetes, in this case testing the code that queries the Kubernetes API to find the backend service. When you’re down, you can tear down your Minikube environment:
 

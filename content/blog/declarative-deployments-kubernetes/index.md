@@ -47,8 +47,7 @@ Let's introduce a simple decision matrix for declarative deployments, then look 
 3. [Blue-green deployments](#3)
 4. [Canary deployments](#4)
 
-![Deployment options
-](/images/blogs/declarative-deployments-kubernetes/summary.png)
+![Deployment options](images/summary.png)
 
 A sample application, including step-by-step instructions, source code, and Kubernetes deployment configurations for all four deployment patterns can be found on [GitHub](https://github.com/ddobrin/declarative-deployments-k8s).
 
@@ -67,12 +66,12 @@ A sample application, including step-by-step instructions, source code, and Kube
 - Allows you to control the range of available and excess pods
 
 
-![Rolling Deployment - Prior to Deployment](/images/blogs/declarative-deployments-kubernetes/RD1.png)  
+![Rolling Deployment - Prior to Deployment](images/RD1.png)  
 
 
-![Rolling Deployment - During Deployment](/images/blogs/declarative-deployments-kubernetes/RD2.png)  
+![Rolling Deployment - During Deployment](images/RD2.png)  
 
-![Rolling Deployment - Post Deployment](/images/blogs/declarative-deployments-kubernetes/RD3.png)  
+![Rolling Deployment - Post Deployment](images/RD3.png)  
 
 #### The deployment configuration
 The deployment uses the `RollingUpdate` strategy and allows full control over how many instances of the `my-app` application can be unavailable at any given moment in time:
@@ -130,11 +129,11 @@ spec:
 - Client accesses requests serviced by the new application version
 
 
-![Fixed Deployment - Prior to Deployment](/images/blogs/declarative-deployments-kubernetes/FD1.png)  
+![Fixed Deployment - Prior to Deployment](images/FD1.png)  
 
-![Fixed Deployment - During Deployment](/images/blogs/declarative-deployments-kubernetes/FD2.png)  
+![Fixed Deployment - During Deployment](images/FD2.png)  
 
-![Fixed Deployment - Post Deployment](/images/blogs/declarative-deployments-kubernetes/FD3.png)  
+![Fixed Deployment - Post Deployment](images/FD3.png)  
 
 #### The deployment configuration
 The deployment uses the `Recreate` strategy as it terminates all pods from a deployment before creating the pods for the new version of the `my-app` application:
@@ -186,11 +185,11 @@ spec:
 - The service selector in K8s is updated to route traffic to the new version (green), followed by the removal of the old (blue) deployment
 
 
-![Blue-Green Deployment - Prior to Deployment](/images/blogs/declarative-deployments-kubernetes/BGD1.png)  
+![Blue-Green Deployment - Prior to Deployment](images/BGD1.png)  
 
-![Blue-Green Deployment - During Deployment](/images/blogs/declarative-deployments-kubernetes/BGD2.png)  
+![Blue-Green Deployment - During Deployment](images/BGD2.png)  
 
-![Blue-Green Deployment - Post Deployment](/images/blogs/declarative-deployments-kubernetes/BGD3.png)  
+![Blue-Green Deployment - Post Deployment](images/BGD3.png)  
 
 #### The deployment configuration
 The deployment does not provide a specific strategy, as the service exposing the deployment is the K8s resource participating in the deployment process, which selects which pod instances are exposed to client requests. In this excerpt, two labels are used, `my-app` and `blue`:
@@ -245,11 +244,11 @@ spec:
 - Once there is confidence that the canary version works as expected, traffic is fully scaled up for the canary application version and scaled to zero for the old one
 
 
-![Canary Deployment - Prior to Deployment](/images/blogs/declarative-deployments-kubernetes/CD1.png)  
+![Canary Deployment - Prior to Deployment](images/CD1.png)  
 
-![Canary Deployment - During Deployment](/images/blogs/declarative-deployments-kubernetes/CD2.png)  
+![Canary Deployment - During Deployment](images/CD2.png)  
 
-![Canary Deployment - Post Deployment](/images/blogs/declarative-deployments-kubernetes/CD3.png)  
+![Canary Deployment - Post Deployment](images/CD3.png)  
 
 #### The deployment configuration
 The deployment does not provide a specific strategy, as the service exposing the deployment is the K8s resource participating in the deployment process, which selects which pod instances are exposed to client requests. In this excerpt, two labels are used, `my-app` and `1.0`, the canary deployment will use `my-app` and `canary`, which will allow the service to match pods by a single label `my-app`:

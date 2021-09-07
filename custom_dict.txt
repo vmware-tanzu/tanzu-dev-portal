@@ -1634,6 +1634,7 @@ symposia
 Sysdig
 SystemAdmin
 Szul
+tabpane
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1854,4 +1855,3 @@ Zou
 Zuul
 Zynga
 μServices
-tabpane

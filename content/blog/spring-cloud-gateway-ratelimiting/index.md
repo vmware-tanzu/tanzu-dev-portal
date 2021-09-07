@@ -18,11 +18,11 @@ topics:
 
 One of the imperative architectural concerns for software architects is to protect APIs and service endpoints from harmful events such as denial-of-service attacks, cascading failures, or overuse of resources. Rate limiting is a technique used to control the rate by which an API or a service is consumed, which in turn can protect you from these events that can bring your services to a screeching halt. In a distributed system, no better option exists than to centralize configuring and managing the rate at which consumers can interact with APIs. Only those requests within a defined rate would make it to the API. Any more would return an HTTP 429 (“Too Many Requests”) error.
 
-![An example how a gateway between the consumer and an API can help limit the number of requests the API is serving](/images/blogs/spring-cloud-gateway-series/diagrams/rate-limit-1.svg)
+![An example how a gateway between the consumer and an API can help limit the number of requests the API is serving](images/rate-limit-1.svg#diagram)
 
 [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway) is a simple and lightweight component that can be used to limit API consumption rates. In this post, I am going to demonstrate how easily that can be accomplished using a configuration method. As shown in the figure below, the demonstration consists of both a front- and backend service, with a Spring Cloud Gateway service in between.
 
-![The gateway can sit between the frontend and the backend to help manage the traffic between the two](/images/blogs/spring-cloud-gateway-series/diagrams/backend-gateway-frontend.svg)
+![The gateway can sit between the frontend and the backend to help manage the traffic between the two](images/backend-gateway-frontend.svg#diagram)
 
 No code whatsoever is needed to include the Spring Cloud Gateway in the architecture. You need instead to include the Spring Boot Cloud dependency `org.springframework.cloud:spring-cloud-starter-gateway` in a vanilla Spring Boot application, then you’ll be set to go with the appropriate configuration settings.
 
@@ -63,7 +63,7 @@ spring.cloud.gateway.filter.request-rate-limiter.empty-key-status-code=
 
 Consider a blueprint architecture in which a gateway controls the limiting of API consumption by using Redis. The provided Redis implementation uses the token bucket algorithm. To enable its use, you need to include the `spring-boot-starter-data-redis` Spring Boot starter dependency in the gateway application. Basically, the token bucket algorithm uses balance tokens as a way to maintain an accumulating budget of utilization. The algorithm assumes tokens will be added to a bucket at a certain rate while calls to an API consume the tokens from the bucket. One API invocation may perform many operations in order to compose a response so that it fulfills a request (think of GraphQL-based APIs). In such cases, the algorithm helps Spring Cloud Gateway recognize that one invocation may cost an API more than one token.
 
-![An example of how Redis can be used to keep track of how many requests are being sent to the backend, which can work together with the gateway](/images/blogs/spring-cloud-gateway-series/diagrams/redis-rate-limiting.svg)
+![An example of how Redis can be used to keep track of how many requests are being sent to the backend, which can work together with the gateway](images/redis-rate-limiting.svg#diagram)
 
 The provided Redis implementation lets you define the request rate at which users can make calls within a certain time period. It also makes it possible to accommodate sporadic demands while constrained by the defined consumption rate. For example, a configuration can define a replenish rate of 500 requests per second by setting the `redis-rate-limiter.replenishRate=500` property and a burst capacity of 1,000 requests per second by setting the `redis-rate-limiter.burstCapacity=1000` property. Doing so limits consumption to 500 requests every second. If a burst in the number of requests occurs, only 1,000 requests are allowed. However, since this exceeds our defined limit of 500 requests per second, the gateway won’t route the other 500 requests until the next second. The configuration also lets you define how many tokens a request would cost by setting the property `redis-rate-limiter.requestedTokens`. Typically, it is set to one.
 

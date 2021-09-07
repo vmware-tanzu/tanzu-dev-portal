@@ -447,7 +447,7 @@ $ while true; do wget -q -O- http://php-apache.default.svc.cluster.local; done
 
 This will trigger events to our URL:
 
-![WaveFront Event Screenshot](/images/blogs/using-knative-eventing-for-better-observability/wavefront_event_knative.png)
+![WaveFront Event Screenshot](images/wavefront_event_knative.png)
 
 Now we have events marking these scaling occurrences on our application’s performance charts.
 

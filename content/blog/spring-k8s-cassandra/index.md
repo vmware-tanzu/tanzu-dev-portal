@@ -61,7 +61,7 @@ In the next sections, we'll walk through an inventory application of Products an
 
 At a glance, the architecture of the application looks as follows. Each portion of the stack is deployed in Kubernetes in its own namespace to have clear separation of duties and isolation between services, simulating different teams working on separate parts of a single application.
 
-![Application stack showing two microservices behind Spring Cloud Gateway, both of which connect to Cassandra](/images/blogs/spring-k8s-cassandra/stack.png)
+![Application stack showing two microservices behind Spring Cloud Gateway, both of which connect to Cassandra](images/stack.png)
 
 We'll use [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) as we walk through deploying this stack locally. All of these commands can be translated to [Kind](https://kind.sigs.k8s.io/) alternatives, and there are step-by-step details for setting up Cassandra with Kind over on the [DataStax Academy GitHub](https://github.com/DataStax-Academy/kubernetes-workshop-online). You will need to install [Docker](https://www.docker.com/products/docker-desktop), [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), [Maven](https://maven.apache.org/install.html) and [Java 11+](https://adoptopenjdk.net/) as prerequisites for this demo. And with that, let's get this thing going.
 

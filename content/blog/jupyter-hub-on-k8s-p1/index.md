@@ -34,7 +34,7 @@ Kubernetes provides the perfect abstractions and API to automate consistent and 
 
 In the first post in this two-part series, you will learn how to deploy a Kubernetes cluster using kind on a Mac, then how to install JupyterHub into that cluster. In the second post, we will show you how to use the data science and machine learning notebooks you have created on your newly deployed JupyterHub service running on Kubernetes.
 
-![Example notebook in JupyterHub](/images/blogs/jupyter-hub-on-k8s/p1-jh-ex.png)
+![Example notebook in JupyterHub](images/p1-jh-ex.png)
 
 ## Before You Begin
 
@@ -359,6 +359,6 @@ Forwarding from [::1]:8080 -> 8000
  
 To access the JupyterHub web UI from your Mac, use your web browser and enter your local IP address with the port specified above (8080), so http://localhost:8080/.
 
-![JupyterHub login screen](/images/blogs/jupyter-hub-on-k8s/p1-jh-login.png)
+![JupyterHub login screen](images/p1-jh-login.png)
  
 Congratulations! You are now ready to consume the service you have created and developed using Python Jupyter Notebooks running on JupyterHub on Kubernetes. In [Part 2 of this series](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-2/), we will focus on how to use JupyterHub and use Jupyter Notebooks on Kubernetes.

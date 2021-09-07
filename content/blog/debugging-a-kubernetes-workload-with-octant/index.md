@@ -107,11 +107,11 @@ spec:
 
 Open Octant and press the "Apply YAML" button on the top menu. Paste the YAML into the editor and hit "Apply".
 
-![](/images/blogs/octant-debugging/octant-debugging4.png)
+![](images/octant-debugging4.png)
 
 After the YAML is applied, press `Ctrl + Enter` to open the quick switcher. Type “pod,” then navigate to the list of pods by clicking the drop-down. This shortcut is also useful for navigating around various resources.
 
-![](/images/blogs/octant-debugging/octant-debugging1.png) 
+![](images/octant-debugging1.png) 
 
 Upon initial inspection, the container is running. Click the name of the pod  for more information, including the volume mounts included above.
 
@@ -119,13 +119,13 @@ Upon initial inspection, the container is running. Click the name of the pod  fo
 
 The first step is to see if the NGINX landing page is visible, for which port forwarding provides a quick way to test. Click the port forward button, then click the generated link.
 
-![](/images/blogs/octant-debugging/octant-debugging3.png) 
+![](images/octant-debugging3.png) 
 
 The port forward link leads to a 404 page. To see if the container logs provide any insight about that error, look under the "Logs" tab
 
 ## Logs
 
-![](/images/blogs/octant-debugging/octant-debugging7.png)
+![](images/octant-debugging7.png)
  
 The logs show startup then the initial traffic as a result of port forwarding. And as they make clear, there are two issues with this configuration:
 
@@ -138,17 +138,17 @@ An NGINX container would typically have all the necessary default configuration 
 
 Click the Terminal tab to start a new terminal session and list the files in `/etc/nginx`.  As you’ll see, quite a few configuration files are missing from the expected [directory structure](https://wiki.debian.org/Nginx/DirectoryStructure).
 
-![](/images/blogs/octant-debugging/octant-debugging6.png)
+![](images/octant-debugging6.png)
 
 The mount path overwrites the entire directory even though only a single configuration file needs to change. The [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#add-configmap-data-to-a-volume) describes this behavior. Overwrites can be avoided by specifying a [`subPath`](https://kubernetes.io/docs/concepts/storage/volumes/#using-subpath). This also prevents copying `index.html` to unnecessary places.
 
 Navigate to the `nginx-conf` ConfigMap (remember the quick switcher shortcut). Then navigate to the YAML tab. Under `nginx.conf`, change `html` under “location” to `/usr/share/nginx/html`.
 
-![](/images/blogs/octant-debugging/octant-debugging8.png)
+![](images/octant-debugging8.png)
 
 Navigate to the YAML of the `nginx` deployment. Edit the volume mounts to add `subPath` and update `mountPath` to the name of the configuration.
 
-![](/images/blogs/octant-debugging/octant-debugging5.png)
+![](images/octant-debugging5.png)
 
 This updated deployment will automatically create a new pod. If you port forward this newly created pod, the expected homepage of `Hello Octant!` should be visible.
 
@@ -165,7 +165,7 @@ Let’s update `index.html` in the ConfigMap and apply the changes.
 
 A developer unfamiliar with Kubernetes might expect the deployment to use the new ConfigMap; however, this is not the case. We can verify the old `index.html` is in use if we port forward the existing pod. Try navigating into the `nginx` deployment, then edit the configuration to increase the number of replicas. The new pods created will use an updated ConfigMap, which can be confirmed via port forwarding.
 
-![](/images/blogs/octant-debugging/octant-debugging2.png)
+![](images/octant-debugging2.png)
  
 Octant provides various features designed to be used together to understand workflows on a cluster. In this scenario, you’ve used a number of debugging features with minimal knowledge of `kubectl` as a way to understand potentially counterintuitive behaviors.
 

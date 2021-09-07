@@ -39,11 +39,11 @@ Forwarding from [::1]:8080 -> 8000
 
 2. To access the JupyterHub web UI, from your Mac you would use a web browser and enter the localhost IP (127.0.0.1) or localhost with the port specified above (8080), so http://localhost:8080/. JupyterHub is running with a default dummy authenticator, so entering any username and password combination will let you enter the hub.
 
-![Jupyter login screen](/images/blogs/jupyter-hub-on-k8s-p2/login-admin.png)
+![Jupyter login screen](images/login-admin.png)
 
 Once you are authenticated, you will be brought to the workspaces screen, which will allow you to open a local terminal inside the container, run interactive Python in a console, or create a new Python3 Jupyter notebook. You can also get interactive help or browse the local container’s directory structure.  
 
-![JupyterHub UI](/images/blogs/jupyter-hub-on-k8s-p2/ui.png)
+![JupyterHub UI](images/ui.png)
 
 3. Click the Terminal button under Other on the main workspace screen.
 At the Terminal prompt, type the following command:
@@ -52,7 +52,7 @@ At the Terminal prompt, type the following command:
 git clone https://github.com/tkrausjr/data-science-demos.git data-science
 ```
 
-![Running git clone in a terminal in JupyterHub](/images/blogs/jupyter-hub-on-k8s-p2/terminal.png)
+![Running git clone in a terminal in JupyterHub](images/terminal.png)
 
 ## Running the Machine Learning Notebook
 
@@ -60,11 +60,11 @@ To jumpstart your data science learning, two sample notebooks are in the data sc
  
 1. Open the `/data-science/jupyter-hub` directory.  
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/terminal-dir.png)
+![](images/terminal-dir.png)
 
 2. To run the machine learning notebook, double-click the `ml-stock-predictor-knn-v4.ipynb` file. You can run each cell individually by clicking in the cell and then hitting the `>| Run` button or using keyboard shortcut **Shift + Enter**. To run all cells from top to bottom (in other words, the entire program) you can go to **Menu --> Run --> Run All Cells**.  
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/run-all-cells-stock.png)
+![](images/run-all-cells-stock.png)
 
 This notebook aims to classify companies as high growth or low growth according to their historical annual revenue growth, using supervised learning with the k-nearest neighbor (KNN) classification algorithm. As such, it will:
 - Using the pandas library, create a data frame from a CSV containing real public companies’ annual sales figures and stock price data. 
@@ -74,11 +74,11 @@ This notebook aims to classify companies as high growth or low growth according 
 - Train, test, and split the data with the `scikit-learn` library.
 - Run a KNN ML model against the dataset and evaluate it using the `scikit-learn` library. 
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/graph-1.png)
+![](images/graph-1.png)
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/stock.png)
+![](images/stock.png)
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/graph-2.png)
+![](images/graph-2.png)
 
 The output of the classification report in cell 36 shows us that although the model seems to be working, it is actually just choosing the value for the majority class, which is “0” every time. To make this model work as a classification problem, we would need to do some additional work, namely to undersample from the majority class or oversample from the minority class in order to create a more balanced dataset.
 
@@ -86,7 +86,7 @@ The output of the classification report in cell 36 shows us that although the mo
 
 To run the pandas data analysis notebook, double-click the `industry-revenue-analysis.ipynb` file. You can run each cell individually by clicking in the cell and then hitting the `>| Run` button or using keyboard shortcut **Shift + Enter**. To run all cells from top to bottom (in other words, the entire program) you can go to **Menu --> Run --> Run All Cells**.  
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/run-all-cells-ind.png)
+![](images/run-all-cells-ind.png)
 
 This notebook will do the following:
 - Using the pandas library, create two data frames from two separate CSVs containing real public companies’ annual sales figures and industry sector data. 
@@ -94,15 +94,15 @@ This notebook will do the following:
 - Aggregate the historical revenue data by industry and year and create a pandas pivot table.
 - Calculate the annual percentage change in revenue per industry and sort from highest to lowest for the most recent period. 
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/table.png)
+![](images/table.png)
 
 ## Multiuser Support
 
 When another data scientist wants to use the platform, they just need to login to JupyterHub and it will take care of the rest.
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/login-john.png)
+![](images/login-john.png)
 
-![](/images/blogs/jupyter-hub-on-k8s-p2/ui.png)
+![](images/ui.png)
 
 When a second data scientist (in this case, myself, Thomas) logs into JupyterHub, a second persistent volume claim, persistent volume, and pod will be provisioned for the new user.
 

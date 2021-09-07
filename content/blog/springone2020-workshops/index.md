@@ -21,7 +21,7 @@ topics:
 SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). _UPDATE: These workshops are available to [try out now](/workshops)!_
 
 
-![SpringOne 2020 Workshops and Training](/images/blogs/springone2020-workshops/workshops-and-training.png "SpringOne2020")
+![SpringOne 2020 Workshops and Training](images/workshops-and-training.png "SpringOne2020")
 
 
 For those that missed SpringOne 2020, we’ll quickly recap what the workshops focused on and what they accomplished. Feel free to jump around if you need to; the recap is meant to be a quick read with plenty of pictures.
@@ -45,12 +45,12 @@ Each of these workshops has an environment prepared and ready, which is quite re
 
 In this screenshot from Getting Started with Spring Boot on Kubernetes, you can see the code editor utilized in it and some of the other workshops.
 
-![SpringOne2020 code editor example](/images/blogs/springone2020-workshops/code-editor.png "SpringOne2020 code editor example")
+![SpringOne2020 code editor example](images/code-editor.png "SpringOne2020 code editor example")
 
 
 In Getting Started with Octant, you use the open-source Kubernetes tool Octant to inspect your Kubernetes cluster. Many developers use [Octant](https://octant.dev/) to reveal the objects running in their Kubernetes clusters.
 
-![SpringOne2020 Octant example](/images/blogs/springone2020-workshops/octant-redact.png "SpringOne2020 octant example")
+![SpringOne2020 Octant example](images/octant-redact.png "SpringOne2020 octant example")
 
 ## Kubernetes Fundamentals
 
@@ -58,29 +58,29 @@ We designed the workshops so you can mouse-click to automate manual steps that a
 
 The screenshot below from the Kubernetes Fundamentals workshop provides an example of the click automation capability we provided. In the instructions on the left, you click the command `kubectl apply -f database/` which is then executed in the appropriate terminal on the right.
 
-![SpringOne2020 click automation example](/images/blogs/springone2020-workshops/creating-resc-underline.png "SpringOne2020 click automation example")
+![SpringOne2020 click automation example](images/creating-resc-underline.png "SpringOne2020 click automation example")
 
 
 The Kubernetes Fundamentals workshop, a hands-on introduction to using Kubernetes, was by far the most popular workshop at SpringOne 2020. It not only provides you with a real Kubernetes cluster to interact with, but access to the Kubernetes Dashboard!
 
-![SpringOne2020 Kubernetes dashboard example](/images/blogs/springone2020-workshops/kubernetes-dashboard.png "SpringOne2020 Kubernetes dashboard example")
+![SpringOne2020 Kubernetes dashboard example](images/kubernetes-dashboard.png "SpringOne2020 Kubernetes dashboard example")
   
 
 By the second step, you are already deploying a blog application to your Kubernetes cluster!
 
-![SpringOne2020 Kubernetes blog example](/images/blogs/springone2020-workshops/kubernetes-blog.png "SpringOne2020 Kubernetes blog example")
+![SpringOne2020 Kubernetes blog example](images/kubernetes-blog.png "SpringOne2020 Kubernetes blog example")
 
 
 Kubernetes Fundamentals covers many other concepts, such as service networking and exposing those services, as well as linking a database, persistent volumes, and even application health. You’ll even learn best practices for deployments with ReplicaSets.
 
-![SpringOne2020 Kubernetes ReplicaSet example](/images/blogs/springone2020-workshops/replica-redact.png "SpringOne2020 Kubernetes ReplicaSet example")
+![SpringOne2020 Kubernetes ReplicaSet example](images/replica-redact.png "SpringOne2020 Kubernetes ReplicaSet example")
 
 
 ## Container Basics 
 
 The Container Basics workshop, while introductory, goes into details that are typically omitted from container tutorials, like how to inspect layers.
 
-![SpringOne2020 container inspect layers example](/images/blogs/springone2020-workshops/inspect-layers.png "SpringOne2020 container inspect layers example")
+![SpringOne2020 container inspect layers example](images/inspect-layers.png "SpringOne2020 container inspect layers example")
 
 
 ## Getting Started with Spring Boot on Kubernetes
@@ -90,12 +90,12 @@ It wouldn’t be a Spring conference without at least a few Spring workshops. Of
 You might recognize the terminal art in the following screenshot; it is of a Spring application being built.
 
 
-![SpringOne2020 Spring Boot Kubernetes build](/images/blogs/springone2020-workshops/spring-jar-redact.png "SpringOne2020 Spring Boot Kubernetes build")
+![SpringOne2020 Spring Boot Kubernetes build](images/spring-jar-redact.png "SpringOne2020 Spring Boot Kubernetes build")
 
 
 Once the Spring Boot application is built, you deploy it to Kubernetes from your very own image registry! 
 
-![SpringOne2020 Spring Boot Kubernetes deploy](/images/blogs/springone2020-workshops/deploy-2-k8s.png "SpringOne2020 Spring Boot Kubernetes deploy")
+![SpringOne2020 Spring Boot Kubernetes deploy](images/deploy-2-k8s.png "SpringOne2020 Spring Boot Kubernetes deploy")
 
 
 There were so many amazing workshops from SpringOne. New and hot technologies like [Carvel](https://k14s.io/) and [Tekton](https://cloud.google.com/tekton) stood out as they are gaining traction in the industry. 
@@ -108,8 +108,8 @@ Using very similar code to the Spring Microservices workshop in Getting Started 
 
 Here is a full rundown of the self-paced workshops featured at SpringOne 2020: 
 
-![SpringOne2020 workshops list 1](/images/blogs/springone2020-workshops/workshops-1.png "SpringOne2020 workshops list")
-![SpringOne2020 workshops list 2](/images/blogs/springone2020-workshops/workshops-2.png "SpringOne2020 workshops list")
+![SpringOne2020 workshops list 1](images/workshops-1.png "SpringOne2020 workshops list")
+![SpringOne2020 workshops list 2](images/workshops-2.png "SpringOne2020 workshops list")
 
 
 
@@ -119,7 +119,7 @@ Now that SpringOne 2020 has come and gone, the SpringOne self-paced workshops ar
 
 Not only are you getting the workshops from SpringOne 2020, but more workshops are being made as we speak! 
 
-![SpringOne2020 workshops end](/images/blogs/springone2020-workshops/overview.png "SpringOne2020 workshops end")
+![SpringOne2020 workshops end](images/overview.png "SpringOne2020 workshops end")
 
 To be notified as soon as the workshops are made available, [subscribe to Tanzu Developer Newsletter.](/community/) 
 
