@@ -7,13 +7,13 @@ team:
 ---
 
 You will demonstrate how to achieve zero downtime upgrades of your
-`pal-tracker` application running on Tanzu Application Services.
+`pal-tracker` application running on Tanzu Application Service.
 
 ## Learning Outcomes
 
 After completing the lab, you will be able to:
 
-- Demonstrate zero downtime upgrades on Tanzu Application Services.
+- Demonstrate zero downtime upgrades on Tanzu Application Service.
 
 ## Getting started
 
@@ -39,9 +39,7 @@ slides.
 
 ### Monitoring
 
-In this lab you will exercise your `pal-tracker` application under load,
-monitor it,
-and tune it.
+In this lab you will exercise your `pal-tracker` application under load.
 
 You can monitor the `pal-tracker` application through the following:
 
@@ -50,13 +48,13 @@ You can monitor the `pal-tracker` application through the following:
     - `cf app pal-tracker`
     - `cf events pal-tracker`
 
--   [*App Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
+-   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
 If you will monitor via command line you will need a minimum of four
 terminal windows open.
 
-If you choose to monitor with *App Manager* you will need only one.
+If you choose to monitor with *Apps Manager* you will need only one.
 
 ## Perform a zero downtime upgrade
 
@@ -93,7 +91,7 @@ How would you do that?
 
 ## Extras
 
-### Perform a rolling update with the `cf cli v2` client
+### Perform a rolling update with the `cf cli v7` client
 
 Read about how you can use
 [a newer `cf` command line client](https://docs.run.pivotal.io/cf-cli/v7.html)
