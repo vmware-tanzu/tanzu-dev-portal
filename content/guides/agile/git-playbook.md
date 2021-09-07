@@ -24,17 +24,22 @@ Gitflow enables you to work on your own feature branch in isolation before commi
 
 ## Install GitFlow
 
-### OS X
+{{< tabpane >}}
+{{< tab header="OS X" >}}
+
 ```bash
 brew install gitflow
 ```
 
-### Linux
+{{< /tab >}}
+{{< tab header="Linux" >}}
+
 ```bash
 apt-get install gitflow
 ```
 
-### Windows (via Cygwin)
+{{< /tab >}}
+{{< tab header="Windows (via Cygwin)" >}}
 
 > `wget` and `util-linux` are required to install gitflow.  For more detailed instructions see [https://github.com/nvie/gitflow/wiki/Windows](https://github.com/nvie/gitflow/wiki/Windows)
 
@@ -42,14 +47,20 @@ apt-get install gitflow
 wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
 ```
 
+{{< /tab >}}
+{{< /tabpane >}}
+
+
 ## GitFlow initialization and settings
 
 1. From the local repository directory (e.g. /universal-imports),
+
 ```bash
 git flow init
 ```
 
 2. Use the following settings when prompted for the gitflow prefixes,
+
 ```bash
 master = master
 develop = develop

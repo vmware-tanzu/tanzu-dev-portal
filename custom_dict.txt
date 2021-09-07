@@ -383,7 +383,7 @@ dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
-Dataflow
+Dataflow(s)?
 datagram
 DataJpaTest
 datapath
@@ -1355,7 +1355,7 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
-PubSub
+PubSub(bing)?
 Pulkit
 pullPolicy
 pushable
@@ -1572,6 +1572,7 @@ SPIFFE
 Splunk
 Spock
 spoilt
+Spring-Cloud-Dataflow
 spring-petclinic
 springboot
 SpringBootTest
@@ -1853,3 +1854,4 @@ Zou
 Zuul
 Zynga
 μServices
+tabpane
