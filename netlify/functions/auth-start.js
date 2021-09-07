@@ -1,5 +1,6 @@
 const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
+const jwt = require('jsonwebtoken');
 
 const {
     getDiscoveryUrl,
@@ -27,13 +28,37 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     }
     // store a random string in a cookie that we can verify in the callback
     const csrf = randomToken();
-    const c = cookie.serialize('content-lib-csrf', csrf, {
+    const cookieParams = {
         secure: true,
         httpOnly: true,
         path: '/',
-        domain: getSiteURL().replace('https://', ''),
         maxAge: 600,
-    });
+    };
+    // don't add the domain parameter for localhost dev, only add if there's a url
+    if (config.context === "production" || config.context === "deploy-preview")
+        cookieParams.domain = getSiteURL().replace('https://', '');
+    const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
+
+    // Set a JWT token
+    // const jwtData = {
+    //     exp: Date.now() * 1000  - 86400,
+    //     iat: Date.now() * 1000,
+    // };
+    // const netlifyJwt = jwt.sign(jwtData, process.env.JWT_SIGNING_SECRET, {
+    //     algorithm: 'HS256',
+    // });
+    // const jwtCookieParams = {
+    //     secure: true,
+    //     httpOnly: false,
+    //     path: '/',
+    //     maxAge: 600,
+    // }
+    // if (config.context === "production" || config.context === "deploy-preview") {
+    //     jwtCookieParams.domain = getSiteURL().replace('https://', '');
+    // }
+    // const jwtCookie = cookie.serialize("nf_jwt", netlifyJwt, jwtCookieParams);
+
+
     // redirect the user to the CSP discovery endpoint for authentication
     const params = {
         response_type: 'code',
@@ -48,7 +73,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         headers: {
             Location: getDiscoveryUrl(params),
             'Cache-Control': 'no-cache',
-            'Set-Cookie': c,
+            'Set-Cookie': c
         },
         body: '',
     };

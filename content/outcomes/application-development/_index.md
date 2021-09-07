@@ -32,7 +32,7 @@ We cover the following topics:
 * [Balanced Teams](/outcomes/application-development/balanced-teams/)
 * [Team Rhythm](/outcomes/application-development/team-rhythm/)
 * [Product Validation](/outcomes/application-development/product-validation/)
-* Stories, Velocity, and Estimation ([coming soon](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/994))
+* [Prioritizing Impactful Outcomes: User Stories, Estimation, and Velocity](/outcomes/application-development/prioritizing-outcomes/)
 * [Pair Programming](/outcomes/application-development/pair-programming/)
 * [Test Driven Development](/outcomes/application-development/test-driven-development/)
 * [Cloud Native Development](/outcomes/application-development/cloud-native-development/)

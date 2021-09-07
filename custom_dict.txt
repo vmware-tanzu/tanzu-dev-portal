@@ -286,6 +286,7 @@ ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
+CMS
 CNAME
 CNB-speak
 CNB(s)?
@@ -295,7 +296,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
-codebase
+[Cc]odebase(s)?
 CodeFresh
 CodeOne
 CoffeeOps
@@ -329,7 +330,7 @@ Corry
 CORS
 cortado
 Cosgrove
-Coté
+Coté('s)?
 counterintuitive
 COVID-19
 CPUs
@@ -455,6 +456,7 @@ DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
 DistributionMessageObserver
+DistributionStats
 distroless
 distros
 django-prometheus
@@ -650,8 +652,10 @@ getnotifications
 getRegions
 getServerMetric
 getSizeInBytes
+GetStatisticValueFunction
 getters
 getValueAsString
+gfs
 GFSH
 gfsh
 ghostEmail
@@ -767,6 +771,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
@@ -836,6 +841,7 @@ JBaruch
 JBatch
 JBoss
 jchen21
+JConsole
 JDBC
 jdbcUrl
 [SJ]DK
@@ -890,6 +896,7 @@ JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
+k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
@@ -901,8 +908,7 @@ Kaniko
 [Kk]app(-controller|.)?
 Karavi
 Kat
-kata
-Katas
+[Kk]ata(s)?
 KEK(s)?
 kendrickcoleman
 [Kk]ey[Ss]tore
@@ -998,6 +1004,7 @@ LocalDataSets
 localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
+LogAllStatisticValuesFunction
 logback
 Logback
 LogGatewaySenderQueueFunction
@@ -1038,6 +1045,7 @@ matchers
 matchings
 maxUtilization
 Mayers
+MBeans
 MBeanServer
 McGraw-Hill
 McLuckie
@@ -1061,7 +1069,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
-middleware
+[Mm]iddleware
 Migros
 Mikusa
 Minella
@@ -1359,6 +1367,7 @@ PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+Pythonic
 QCon
 QoS
 Querier
@@ -1584,6 +1593,7 @@ Stacker
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
+Starlark
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1621,6 +1631,7 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+SystemAdmin
 Szul
 Tanzu(Developer|'s)?
 targetPort
@@ -1639,7 +1650,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing)
+[Tt]emplat(ed|ing|ing.|ize)
 Templeton
 Teotti
 Teppanyaki
@@ -1658,6 +1669,7 @@ Tigera
 Tikka
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
+[Tt]imeboxing
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1774,6 +1786,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
