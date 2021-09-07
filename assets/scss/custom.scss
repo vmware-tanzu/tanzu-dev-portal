@@ -52,7 +52,7 @@
       &.guides-hero {
         background-image: url({{ "/images/backgrounds/background-guides.svg" | relURL }});
       }
-      &.outcomes-hero {
+      &.learningpaths-hero {
         background-image: url({{ "/images/backgrounds/background-patterns.svg" | relURL }});
       }
       &.samples-hero {
@@ -82,7 +82,7 @@
         min-height: 100px;
       }
       @media(max-width: 1200px) {
-        &.outcomes-hero {
+        &.learningpaths-hero {
           .lead {
             max-width: 620px;
           }
