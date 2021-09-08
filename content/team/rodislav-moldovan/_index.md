@@ -1,7 +1,6 @@
 ---
 name: Rodislav Moldovan
 description: "Software Craftsman"
-photo: "/images/external/rodislav-moldovan.jpg"
 roles: ["guest"]
 skills: []
 location: ""

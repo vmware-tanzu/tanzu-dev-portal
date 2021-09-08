@@ -1,7 +1,6 @@
 ---
 name: "Christoph Villnow"
 description: "Senior IT Architect"
-photo: "/images/external/christoph-villnow.jpeg"
 roles: ["guest"]
 skills: []
 location: ""

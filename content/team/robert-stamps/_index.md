@@ -1,7 +1,6 @@
 ---
 name: "Robert Stamps"
 description: "Senior Cloud Architect"
-photo: "/images/external/robert-stamps.jpeg"
 roles: ["guest"]
 skills: []
 location: ""

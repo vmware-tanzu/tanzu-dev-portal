@@ -1,7 +1,6 @@
 ---
 name: Jonathan Regehr
 description: "Platform Architect (Garmin)"
-photo: "/images/external/jonathan-regehr.jpeg"
 roles: ["guest"]
 skills: []
 location: ""

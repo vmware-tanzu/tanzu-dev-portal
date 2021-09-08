@@ -1,7 +1,6 @@
 ---
 name: Rob Richardson
 description: "Software Craftsman"
-photo: "/images/external/rob-richardson.png"
 roles: ["guest"]
 skills: []
 location: ""

@@ -1,7 +1,6 @@
 ---
 name: "Görkem Özlü"
 description: "Platform Architect"
-photo: "/images/external/gorkem-ozlu.png"
 roles: ["guest"]
 skills: []
 location: ""
