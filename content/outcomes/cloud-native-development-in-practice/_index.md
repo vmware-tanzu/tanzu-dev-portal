@@ -50,15 +50,10 @@ This learning path is for software engineers and architects who wish to
 gain a deeper understanding of modern Cloud Native Platforms and how
 Spring Boot applications run on them.
 
-This path is also provided as an updated archive of the
-previous instructor-led courses:
-
-- *VMware Tanzu Master Class for Java Developers*
-- *Pivotal Acceleration Lab for Java Developers*
-
 ## Learning Outcomes
 
 After completing the learning path, you will be able to
+
 -   Demonstrate the ability to build greenfield, cloud native
     applications using Java, and Spring Boot
 -   Use Tanzu Application Service for web application deployments
