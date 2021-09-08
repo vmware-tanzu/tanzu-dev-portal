@@ -32,7 +32,10 @@ It also applies if you're deploying the same app multiple times. Using find-and-
 
 It's why an instance of a chart running on a Kubernetes cluster is called a _release_. If you need three different installs of a web server, each one is its own release. The Helm docs includes releases as one of [_three important concepts_](https://helm.sh/docs/intro/using_helm/):  
 
->Helm installs _charts_ into Kubernetes, creating a new _release_ for each installation. And to find new charts, you can search Helm chart _repositories_.
+{{% callout %}}
+Helm installs _charts_ into Kubernetes, creating a new _release_ for each installation. And to find new charts, you can search Helm chart _repositories_.
+{{% /callout %}}
+
 
 You can read more about the [Helm architecture here.](https://helm.sh/docs/topics/architecture/)
 

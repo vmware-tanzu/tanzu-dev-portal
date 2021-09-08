@@ -23,7 +23,10 @@ level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 ---
 
-> Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.
+{{% callout %}}
+Updated October 2020: CF CLI version 7+ and 6 CPU availability now required, removed metrics server install, new values added to the install yaml eliminate steps from before, and new Kubernetes rendering file. Overall this simplifies installation from previous iterations.
+{{% /callout %}}
+
 
 [CF-for-k8s](https://github.com/cloudfoundry/cf-for-k8s.git) brings Cloud Foundry to Kubernetes. 
 
@@ -45,9 +48,9 @@ Currently cf-for-k8s supports Kubernetes 1.15.x or 1.16.x, the config yaml file 
 
 ### Tools required
 
-> You will need a few tools before beginning and once set up installation usually takes 10 minutes or less.
+You will need a few tools before beginning and once set up installation usually takes 10 minutes or less.
 
-> **CF CLI version requirement changed to version 7+**
+**CF CLI version requirement changed to version 7+**
 - [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) (version 7+) to talk to Cloud Foundry
     * on mac 
         ```
@@ -120,9 +123,15 @@ The `./hack/generate-values.sh` script will generate certificates, keys, passwor
 ```
 Append the app_registry credentials to your DockerHub registry to the bottom of the `./cf-install-values.yml` replacing with your information. You can copy/paste  or use the following command.
 
-> The repeated username is a requirement for DockerHub, this setting changes with some container registries. Also, don't forget to add the quotes.
+{{% callout %}}
+**Note**: The repeated username is a requirement for DockerHub, this setting changes with some container registries. Also, don't forget to add the quotes.
+{{% /callout %}}
 
->To use another container registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md).
+
+{{% callout %}}
+**Note**: To use another container registry follow the [instructions under step 3](https://github.com/cloudfoundry/cf-for-k8s/blob/master/docs/deploy.md).
+{{% /callout %}}
+
 
 ```
 cat >> cf-install-values.yml << EOL
@@ -159,7 +168,10 @@ ytt -f config -f ./cf-install-values.yml > ./cf-for-k8s-rendered.yml
 
 You are ready to deploy cf-for-k8s using the `./cf-for-k8s-rendered.yml` file created above. Once you deploy it should take around 10 minutes to finish. 
 
-> The deployment has a timer and will exit with a timeout error if it takes too long. Assuming all previous steps were followed correctly enter the deployment command again to finish if it exits early.
+{{% callout %}}
+**Note**: The deployment has a timer and will exit with a timeout error if it takes too long. Assuming all previous steps were followed correctly enter the deployment command again to finish if it exits early.
+{{% /callout %}}
+
 
 ```
 kapp deploy -a cf -f ./cf-for-k8s-rendered.yml -y
@@ -203,10 +215,10 @@ At last you can push the included sample `test-node-app`.
 cf push test-node-app -p ./tests/smoke/assets/test-node-app
 ```
 
-> Or you can push any app you wish just cd into the directory and push the app with the following command.
-> ```
-> cf push APP-NAME
-> ```
+Or you can push any app you wish just cd into the directory and push the app with the following command.
+```
+cf push APP-NAME
+```
 
 Once your app stages you can find it in Cloud Foundry with this command.
 ```
