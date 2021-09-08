@@ -110,7 +110,7 @@ After completing the learning path, you will be able to
 {{< table "table" >}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
-| Application Evolution | [App Continuum](https://deck.appcontinuum.io) | | [Resources](./app-continuum/) | |
+| Application Evolution | [App Continuum](https://courses.education.pivotal.io/appcontinuum) | | | |
 | Deploy a Distributed System |[Intro](https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present#slide=id.ge9cac6b4e4_0_0) | [Lab](./deploy-distributed-system/) | |
 
 ## Advanced topics
