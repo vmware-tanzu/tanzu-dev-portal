@@ -32,8 +32,7 @@
 <ul class="td-sidebar-nav__section">
 {{ $active := eq $p $s }} 
 {{ $sid := $s.RelPermalink | anchorize }}
-<!-- TODO: Do we want to keep the top header? Fix link -->
-  <li class="td-sidebar-nav__section-title" id="{{ $sid }}">
+  <li class="td-sidebar-nav__section-title text-nowrap" id="{{ $sid }}">
     <a href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $p.Params.level2 | markdownify }}</a>
   </li>
 {{ else }} <!-- Subsection -->

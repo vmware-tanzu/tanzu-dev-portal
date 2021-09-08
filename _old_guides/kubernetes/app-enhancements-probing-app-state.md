@@ -123,9 +123,10 @@ The following diagram demonstrates the impact of this `livenessProbe`.
 
 ### Startup Probes - Protecting Slow Container Initialization
 
-> Startup Probes are not enabled by default until Kubernetes 1.18.
-> Until then, they need to be enabled via `--feature-gates` on the
-> `kube-apiserver` and the `kubelet` in each node.
+{{% callout %}}
+**Note**: Startup Probes are not enabled by default until Kubernetes 1.18. Until then, they need to be enabled via `--feature-gates` on the `kube-apiserver` and the `kubelet` in each node.
+{{% /callout %}}
+
 
 Sometimes a `livenessProbe` might be ideal as an ongoing check,
 but not necessarily for initialization time.

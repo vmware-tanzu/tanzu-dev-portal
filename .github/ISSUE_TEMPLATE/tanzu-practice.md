@@ -30,7 +30,10 @@ List anything here that might be helpful for writing this article.
 - Links to articles and blog posts
 - Links to presentations, videos, books, etc.
 
-**Note:** If these resources are not public (i.e. an internal document), provide _publicly safe information_ about how someone with the proper access would find these resources. **Do not post insecure links or non-public information here**.
+{{% callout %}}
+**Note**: If these resources are not public (i.e. an internal document), provide _publicly safe information_ about how someone with the proper access would find these resources. **Do not post insecure links or non-public information here**.
+{{% /callout %}}
+
 
 ---
 

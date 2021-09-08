@@ -624,19 +624,18 @@ body {
     height: 66px;
   }
   
-  .td-sidebar-nav__section-title a {
-    color: white;
-  }
-  
   .td-sidebar-nav__section-title img {
     width: 30px;
     margin-right: 15px;
   }
   .guide .td-sidebar-nav__section-title a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
   }
-  
+  .guide table {
+    color: white;
+  }
+  .td-sidebar-nav__section-title a,
   .breadcrumb-item a,
   .td-sidebar-nav .td-sidebar-link__page,
   .td-sidebar-nav .td-sidebar-link__subsection {

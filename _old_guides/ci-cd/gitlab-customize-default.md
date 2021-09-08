@@ -40,7 +40,9 @@ This guide assumes that:
 
 * Your application is a Node.js application and the application code is hosted in a GitLab repository. [Obtain the sample application's code and the Dockerfile to build it](https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-gitlab-kubernetes/#step-6-commit-test-and-repeat).
 
-  > Other programming languages or frameworks will require a different chart, but the broad steps to configure and integrate a custom Helm chart with GitLab's Auto DevOps will remain the same. 
+{{% callout %}}
+**Note**: Other programming languages or frameworks will require a different chart, but the broad steps to configure and integrate a custom Helm chart with GitLab's Auto DevOps will remain the same. 
+{{% /callout %}}
 
 * You have [Git](https://git-scm.com/) and [*kubectl*](https://docs.bitnami.com/kubernetes/get-started-kubernetes#step-3-install-kubectl-command-line) installed and configured to work with your GitLab CE installation and Kubernetes cluster respectively.
 
@@ -80,7 +82,9 @@ For the Bitnami Node.js chart, the parameters passed via the *HELM_UPGRADE_EXTRA
 
 You can also view the [complete list of parameters supported by the chart](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).
 
-> Using a LoadBalancer service type will typically assign a static IP address for the deployment. Depending on your cloud provider's policies, you may incur additional charges for this static IP address.
+{{% callout %}}
+**Note**: Using a LoadBalancer service type will typically assign a static IP address for the deployment. Depending on your cloud provider's policies, you may incur additional charges for this static IP address.
+{{% /callout %}}
 
 ## Step 2: Commit code and test the pipeline
 

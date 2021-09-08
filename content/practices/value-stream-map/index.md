@@ -46,13 +46,13 @@ why:
    For product development life cycle, put “User Feedback” as a first step and “Release to Prod” as a last step.
  
    {{< callout >}}
-   Tip: If the team having trouble determining the end point, ask a question like "when would we consider the job done for this journey?" 
+   **Tip**: If the team having trouble determining the end point, ask a question like "when would we consider the job done for this journey?" 
    {{< /callout >}}
 
 1. Have the group identify the high-level steps that take place from beginning to end in the value stream, being as detailed as possible. Write each step on a sticky note and place it in order on the whiteboard. Iterate as needed.
 
    {{< callout >}}
-   Tip: Ideally you’ll move from start to end but don’t get hung up on the order because you can easily move the sticky notes around. The idea is just to start generating as a team. 
+   **Tip**: Ideally you’ll move from start to end but don’t get hung up on the order because you can easily move the sticky notes around. The idea is just to start generating as a team. 
    {{< /callout >}}
    
 1. Once the group is satisfied they’ve captured all of the high-level steps in the right order, loop through the flow again. This time, capture the following information about each step on another sticky note or on the whiteboard:
@@ -68,7 +68,7 @@ why:
    - How long does the whole value stream take and how does the team feel about it?
 
    {{< callout >}}
-   Tip: These are example questions. Use whatever “lens data” that’s appropriate for your content to shape your picture of the problem. Care about handoffs? Capture them explicitly. Want to visualize system touch-points? Add in **Service Blueprint**-type details. In short, capture what matters.
+   **Tip**: These are example questions. Use whatever “lens data” that’s appropriate for your content to shape your picture of the problem. Care about handoffs? Capture them explicitly. Want to visualize system touch-points? Add in **Service Blueprint**-type details. In short, capture what matters.
    {{< /callout >}}
 
 1. Have the team take a step back to review the flow and adjust anything that feels incorrect. 

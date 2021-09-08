@@ -41,7 +41,10 @@ Before you get started you will need to do the following:
   ```
   * [GitHub releases](https://github.com/vmware-tanzu/carvel-ytt/releases/tag/v0.36.0) -- move it to `/usr/local/bin` or add it to your `$PATH` and run `chmod +x` to make it executable
 
-> Note: This guide uses ytt v0.36.0, and we suggest you download and install the same version to ensure the best experience as you follow through this guide.
+{{% callout %}}
+**Note**: This guide uses ytt v0.36.0, and we suggest you download and install the same version to ensure the best experience as you follow through this guide.
+{{% /callout %}}
+
 
 ## Clone the Examples Repo
 Now that we have ytt installed, let’s clone the main ytt repo so we can look at some examples:

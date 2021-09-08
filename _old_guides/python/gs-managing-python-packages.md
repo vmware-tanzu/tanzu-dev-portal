@@ -73,7 +73,10 @@ cd python-3-project
 curl https://raw.githubusercontent.com/benwilcock/buildpacks-python-demo/master/web.py -o web.py
 ```
 
-> To see the sample code in the hello world program you just downloaded, use `cat web.py`.
+{{% callout %}}
+To see the sample code in the hello world program you just downloaded, use `cat web.py`.
+{{% /callout %}}
+
 
 Now, still within the `python-3-project` folder, create a new Python 3.8.5 virtual environment using `pyenv virtualenv <version> <project-name>` like this:
 
@@ -152,7 +155,10 @@ The `py3` virtual environment will deactivate itself, and your regular command p
 system (set by /home/ben/.pyenv/version)
 ```
 
-> Should you ever move back into the `python-3-project` folder, pyenv will automatically activate the `py3` virtual environment.
+{{% callout %}}
+**Note**: Should you ever move back into the `python-3-project` folder, pyenv will automatically activate the `py3` virtual environment.
+{{% /callout %}}
+
 
 ### Step 5: Rinse And Repeat With Python 2.8.17
 

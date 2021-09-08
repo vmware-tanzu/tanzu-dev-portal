@@ -40,13 +40,13 @@ why:
 1. Divide room into small groups and give a piece of paper to each group
         
    {{% callout %}}
-   Tip: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   **Tip**: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
    
 1. Define “persona” for the room and remind all participants this is a provisional persona—through research, what we think we know about this person will change and evolve
 
    {{% callout %}}
-   Example: "A persona is a composite user used to create empathy on the team and allows you to understand the users well and design a product for them.”
+   **Example**: "A persona is a composite user used to create empathy on the team and allows you to understand the users well and design a product for them.”
    {{% /callout %}}
 
 1. Have each group (or person) fold paper into quadrants
@@ -66,7 +66,7 @@ why:
 1. Tape together the highest scoring quadrants into one "master persona" and reads it to the group
 
    {{% callout %}}
-   Tip: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
+   **Tip**: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
 {{% /section %}}
 

@@ -77,7 +77,7 @@ miro_template_url: ""
    - See Research Synthesis for more information
    
    {{< callout >}}
-   Tip: Drawing these four steps on the board showing a progression can be really helpful to visualize how they flow together
+   **Tip**: Drawing these four steps on the board showing a progression can be really helpful to visualize how they flow together
    {{< /callout >}}
    
 1. Share **biases** to be aware of and key **“dos”** and **“don’ts”** when conducting research by printing out or projecting this [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).

@@ -34,10 +34,11 @@ why:
 1. Have the group silently write project risks and obstacles this team may face. One item per sticky note.
         
    {{% callout %}}
-   Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
+   **Tip**: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
    {{% /callout %}}
+
    {{% callout %}}
-   Tip: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
+   **Tip**: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
    {{% /callout %}}
    
 1. Ask each person to select their top 5 risks and obstacles
@@ -53,7 +54,7 @@ why:
    - Y-axis: **Low Risk** to **High Risk**
 
    {{% callout %}}
-   Tip: Check in on the groups and move each group forward if they are moving faster than others
+   **Tip**: Check in on the groups and move each group forward if they are moving faster than others
    {{% /callout %}}
    
    ![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)

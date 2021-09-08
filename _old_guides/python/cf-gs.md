@@ -46,7 +46,9 @@ There are a few things you need to do before getting started with Cloud Foundry:
 
 - Decide which Cloud Foundry you're going to use and obtain it's endpoint URL. If you don't have a Cloud Foundry to work with, consider installing Cloud Foundry locally onto Kubernetes on your computer by following the steps in [this guide][cf-on-k8s] 
 
-> Note: Cloud Foundry goes by many names. There are many ['certified distributions'][certified] that offer Cloud Foundry as a commercial product. The [VMware Tanzu Application Service][tas] is one example. It is certified to meet the Cloud Foundry open-source standard and is fully compatible with the [cf CLI][cf-cli] tool.
+{{% callout %}}
+**Note**: Cloud Foundry goes by many names. There are many ['certified distributions'][certified] that offer Cloud Foundry as a commercial product. The [VMware Tanzu Application Service][tas] is one example. It is certified to meet the Cloud Foundry open-source standard and is fully compatible with the [cf CLI][cf-cli] tool.
+{{% /callout %}}
 
 ## Get The Sample Python Application
 
@@ -129,7 +131,9 @@ If you're using your employers Cloud Foundry, the login process may be different
 
 'Org and space' are simply Cloud Foundry terms for application partitioning. Depending on how your cloud foundry was set up, you may see very different names and options. Cloud Foundry doesn't attach any special meaning to these names. Production could just as easily be called 'bob' if that makes sense in your organization. Ask your platform team for advice on which space to use.
 
-> __*Don't really push apps to production unless it's definitely safe for you to do so!*__
+{{% callout %}}
+**Note**: Don't really push apps to production unless it's definitely safe for you to do so!
+{{% /callout %}}
 
 If at any point you need to remind yourself which API url, org, or space you are currently using, you can use the `cf target` command like this:
 
@@ -165,8 +169,9 @@ The command you use to run your application on Cloud Foundry is `cf push`. You m
 > cf push python-demo --random-route
 Pushing app python-demo to org tanzu-devrel / space production as <your-email>
 ```
-
-> You don't have to use `--random-route` either, it just prevents clashes when an app exists with the same name elsewhere on your Cloud Foundry instance.
+{{% callout %}}
+**Note**: You don't have to use `--random-route` either, it just prevents clashes when an app exists with the same name elsewhere on your Cloud Foundry instance.
+{{% /callout %}}
 
 The `cf push` command uses a technology called '[buildpacks][python-cnb-guide]' to put your Python application into a Docker container before running it. The process takes no more than a minute or two on average. During that time, Cloud Foundry will communicate what the buildpack is doing before finally confirming that your application is running.
 

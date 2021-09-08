@@ -54,7 +54,7 @@ why:
 1. Now that everyone can see how even a simple prompt has led to so much differentiation between each drawing, tie this point back to the group:
 
    {{% callout %}}
-   Example: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
+   **Example**: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
    {{% /callout %}}
 {{% /section %}}
 

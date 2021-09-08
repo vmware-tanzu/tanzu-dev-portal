@@ -41,7 +41,9 @@ apt-get install gitflow
 {{< /tab >}}
 {{< tab header="Windows (via Cygwin)" >}}
 
-> `wget` and `util-linux` are required to install gitflow.  For more detailed instructions see [https://github.com/nvie/gitflow/wiki/Windows](https://github.com/nvie/gitflow/wiki/Windows)
+{{% callout %}}
+**Note**: `wget` and `util-linux` are required to install gitflow.  For more detailed instructions see [https://github.com/nvie/gitflow/wiki/Windows](https://github.com/nvie/gitflow/wiki/Windows)
+{{% /callout %}}
 
 ```bash
 wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash

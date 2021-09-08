@@ -60,7 +60,10 @@ cf cups sqlDataSource1 -p '{\"jdbcUrl\":\"jdbc:sqlserver://host:port;DatabaseNam
 
 We typically have to escape the quotes when creating these from the command line to allow the CLI to parse the entire string.
 
-**NOTE** -> If you do an **update-user-provided-service** on a service that is already bound to an application, you **must** unbind and then rebind the service. Simply restaging the application **will not** be sufficient.
+{{% callout %}}
+**Note**: If you do an **update-user-provided-service** on a service that is already bound to an application, you **must** unbind and then rebind the service. Simply restaging the application **will not** be sufficient.
+{{% /callout %}}
+
 
 ## Example Source Code
 

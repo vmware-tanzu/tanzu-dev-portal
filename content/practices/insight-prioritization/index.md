@@ -32,7 +32,7 @@ why:
 1. If there are many (roughly 20+), first do a culling exercise by asking yourselves _"Will this insight help me make an informed product decision for this project or consulting engagement period?"_ Sort each Insight into a "No" or "Yes" pile on the wall
 
    {{% callout %}}
-   Tip: You can clarify this prompt further by adding additional context: “Could you use this insight to create or modify solutions? Can it be re-framed into a useful “how might we …” statement?”
+   **Tip**: You can clarify this prompt further by adding additional context: “Could you use this insight to create or modify solutions? Can it be re-framed into a useful “how might we …” statement?”
    {{% /callout %}}
 1. Once you have a simplified list, create a 2x2 with the painter's tape and label the axes as follows:
 
@@ -44,7 +44,7 @@ why:
 1. Plot the "Yes" insights on the 2x2, striving to end with a list of the top 3-5 insights
 
    {{% callout %}}
-   Tip: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
+   **Tip**: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
    {{% /callout %}}
 ![2x2 diagram showing stickies in each quadrant](/images/practices/insight-prioritization/step-4.png)
 {{% /section %}}

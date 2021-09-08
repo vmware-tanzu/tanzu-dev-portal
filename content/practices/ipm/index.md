@@ -34,7 +34,7 @@ miro_template_url: "URL for related Miro template"
 1. Read through the first user story to explain the business value, the user value, and the acceptance criteria. Allow participants to ask questions, providing clarifications as needed.
    
    {{< callout >}}
-   Tip: Allow space for all members of the team to get the clarifications they need to provide an estimate they feel comfortable with. Beware of individual personalities taking over the conversation or dictating approaches that prevent full team understanding.
+   **Tip**: Allow space for all members of the team to get the clarifications they need to provide an estimate they feel comfortable with. Beware of individual personalities taking over the conversation or dictating approaches that prevent full team understanding.
    {{< /callout >}}
 
 1. Prompt the engineers to indicate if they are ready to estimate the user story and if so, to estimate the relative complexity of the story by simultaneously voting on a story point estimate. 
@@ -44,23 +44,23 @@ miro_template_url: "URL for related Miro template"
 1. If there is a consensus on the estimation, label the user story with the estimation result and promote it to the backlog, indicating to the team the priority of this story. Otherwise, if there is no consensus, prompt the engineers to discuss, and re-estimate if necessary until there is a consensus that the team is happy with.
    
    {{< callout >}}
-   Tip 1: Try to prevent the conversation from taking too long or veering too far from the scope of this user story. If there is a large amount of uncertainty or disagreement on the scope of this story, it may be necessary to add a chore to the product backlog for investigating or experimenting before this story can be reasonably estimated in a future IPM.
+   **Tip 1**: Try to prevent the conversation from taking too long or veering too far from the scope of this user story. If there is a large amount of uncertainty or disagreement on the scope of this story, it may be necessary to add a chore to the product backlog for investigating or experimenting before this story can be reasonably estimated in a future IPM.
    {{< /callout >}}
    
    {{< callout >}}
-   Tip 2: User stories should remain implementation-agnostic. While some discussion on implementation will naturally arise when estimating relative complexity, try and keep these discussions high-level and park any deep dives on implementation.
+   **Tip 2**: User stories should remain implementation-agnostic. While some discussion on implementation will naturally arise when estimating relative complexity, try and keep these discussions high-level and park any deep dives on implementation.
    {{< /callout >}}
 
 1. Repeat steps 2-4 for the remaining user stories that were prepared for this meeting.
 
    {{< callout >}}
-   Tip: Use the time available to discuss and estimate as many user stories as were prepared. If necessary, some user stories may be deferred to the next Iteration Planning Meeting. Avoid taking more time than planned, sapping valuable energy from the team
+   **Tip**: Use the time available to discuss and estimate as many user stories as were prepared. If necessary, some user stories may be deferred to the next Iteration Planning Meeting. Avoid taking more time than planned, sapping valuable energy from the team
    {{< /callout >}}
 
 1. In the final 10 minutes of the meeting, review and discuss the relative priorities of product backlog items, including any engineering chores.
 
    {{< callout >}}
-   Tip: Prompt the engineers to advise on the scope and importance of chores they wish to promote to the product backlog.
+   **Tip**: Prompt the engineers to advise on the scope and importance of chores they wish to promote to the product backlog.
    {{< /callout >}}
 {{% /section %}}
 
