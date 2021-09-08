@@ -20,7 +20,7 @@ limitations under the License.
     $(function () {
         // Handle in-page anchor links with fixed header
         $('a[href^="#"]').click(function(e) {
-            if (this.hash.length > 1) { // don't do this for empty # links
+            if (this.hash.length > 1 && !this.hash.startsWith("#tabs-")) { // don't do this for empty # links or tabs
                 window.location.href = this.href;
                 e.preventDefault();
                 scrollToTarget(this.hash);
