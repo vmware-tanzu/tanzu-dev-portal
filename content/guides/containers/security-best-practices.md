@@ -50,7 +50,10 @@ Continuing with the example above, the *3.4.13* tag might point to the etcd 3.4.
 
 The suffix revision number (*rXX*) is incremented every time that Bitnami releases an updated version of the image for the same version of the application. As explained in the next section, suffixed tags are also known as immutable tags.
 
-> Any tags that do not explicitly specify a distribution, such as *3* or *3.4.13*, should be assumed to refer to Debian 10.
+{{% callout %}}
+**Note**: Any tags that do not explicitly specify a distribution, such as *3* or *3.4.13*, should be assumed to refer to Debian 10.
+{{% /callout %}}
+
 
 ### Immutable tags
 
@@ -139,7 +142,10 @@ Bitnami automatically re-releases its container catalog every 24 hours. In terms
 
 As explained previously, this approach means that a new immutable tag is produced every day, increasing the revision number. At the same time, rolling tags are updated to point to this new immutable tag.
 
-> For the Bitnami Community Catalog, the release frequency is set to 1 day. However, this can be modified by the customer in the [Tanzu Application Catalog](https://tanzu.vmware.com/application-catalog).
+{{% callout %}}
+**Note**: For the Bitnami Community Catalog, the release frequency is set to 1 day. However, this can be modified by the customer in the [Tanzu Application Catalog](https://tanzu.vmware.com/application-catalog).
+{{% /callout %}}
+
 
 Apart from daily releases, there are other processes that can trigger a new release. For example, if there is a new version (major, minor, or patch) of the main component, Bitnami's tracking system detects this new upstream release and trigger a new release of the Bitnami image, which uses the *-r0* tag suffix.
 

@@ -236,7 +236,10 @@ Istio can be installed in two different ways.
   operation will run in the admin user’s security context, whereas with an
   operator, an in-cluster pod will run the operation in its security context.
 
-**NOTE**: All the following steps use the **istioctl command** method.
+{{% callout %}}
+**Note**: All the following steps use the **istioctl command** method.
+{{% /callout %}}
+
 
 This command is just for reference to get installation quickly and highlighting
 the important parameters.
@@ -441,7 +444,10 @@ install it using istioctl:
 istioctl install -f istiooperator-airgap-1-7-3.yaml
 ```
 
-**NOTE**: istioctl version is the target version (e.g. 1.7.3).
+{{% callout %}}
+**Note**: istioctl version is the target version (e.g. 1.7.3).
+{{% /callout %}}
+
 
 ![Control plane upgrade](/images/guides/kubernetes/service-routing/istio-upgrade2.png)
 
@@ -727,12 +733,14 @@ gateways:
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
 ```
 
-**NOTE:** AWS ELBs and NLBs both support layer 4 load balancing. There has not been
+{{% callout %}}
+**Note**: AWS ELBs and NLBs both support layer 4 load balancing. There has not been
 much adoption of NLB with open source Istio. But we don't have any strong
 opinion when it comes to comparing these two. When it comes to Istio, Istio's
 Gateway resource just lets you configure layer 4-6 load balancing properties
 such as ports to expose TLS settings and so on. Application-layer traffic
 routing (L7) are configured in virtual service which is bound to Istio gateway.
+{{% /callout %}}
 
 ### Existing Ingress Control
 
@@ -766,12 +774,16 @@ spec:
               servicePort: 80
 ```
 
-**NOTE**: If using a HTTPS host for the Ingress, create with passthrough mode
+{{% callout %}}
+**Note**: If using a HTTPS host for the Ingress, create with passthrough mode
 so that mutual authentication can take place at Istio ingress gateway.
+{{% /callout %}}
 
-**NOTE**: The above Ingress definition is just for reference. In this document,
+{{% callout %}}
+**Note**: The above Ingress definition is just for reference. In this document,
 only Istio ingress controller using [Gateway Definition](#gateway-definition)
 and [Virtual Service Definition](#virtual-service-definition) is used.
+{{% /callout %}}
 
 With the above setting, and after creating required
 [Gateway Definition](#gateway-definition) and
@@ -1045,8 +1057,8 @@ tls.key:
 
 - TLS key generated
 
-**NOTE**:
-
+{{% callout %}}
+**Note**:
 - Full automation can be achieved in case that the Root CA is configured in
   vault.
 - Full automation **can not** be achieved in the case that an intermediate CA
@@ -1063,6 +1075,8 @@ tls.key:
   operations. You will need to write a utility which keeps track of CA cert in
   vault and the moment it changes, recreate all the secrets
   (bookinfo-ingressgateway-certs-ca) in istio-system automatically.
+{{% /callout %}}
+
 
 #### Access Privilege Required to Create a Certificate
 
@@ -1190,8 +1204,10 @@ providers: keycloak. This can vary depending upon the provider.
 curl -X POST 'http://<OIDC_PROVIDER>/auth/realms/istio/protocol/openid-connect/token' -H "Content-Type: application/x-www-form-urlencoded" -d 'username=prod001&password=< PASSWORD >&grant_type=password&client_id=servicemesh' |jq -r .access_token
 ```
 
-**NOTE**: In above example username is `prod001`. This will be used to illustrate
+{{% callout %}}
+**Note**: In above example username is `prod001`. This will be used to illustrate
 some examples in the next section.
+{{% /callout %}}
 
 ![Sample JWT structure](/images/guides/kubernetes/service-routing/istio-jwttoken.png)
 
@@ -1409,7 +1425,10 @@ spec:
 
 ##### **Application Developer Responsibility**
 
-**NOTE**: EXTERNAL_SERVICE_HOST=my-nginx-client.mesh-external.svc.cluster.local
+{{% callout %}}
+**Note**: EXTERNAL_SERVICE_HOST=my-nginx-client.mesh-external.svc.cluster.local
+{{% /callout %}}
+
 
 1. Create egress gateway definition in `sleep` namespace as all traffic external
    to mesh goes via this Egress Gateway.
@@ -1596,7 +1615,10 @@ spec:
 
 ##### **Application Developer Responsibility**
 
-**NOTE**: EXTERNAL_SERVICE_HOST=my-nginx-client.mesh-external.appk8s.com
+{{% callout %}}
+**Note**: EXTERNAL_SERVICE_HOST=my-nginx-client.mesh-external.appk8s.com
+{{% /callout %}}
+
 
 Please see [Within cluster](#application-developer-responsibility-1) section for
 all required responsibilities. Note that an additional service entry is

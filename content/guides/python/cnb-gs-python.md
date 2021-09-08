@@ -171,7 +171,9 @@ REPOSITORY                  TAG                 IMAGE ID            CREATED     
 benwilcock/python-sample    1.0.0               59843a212207        40 years ago        651MB
 ```
 
-> Already we're benefiting from buildpack engineering! Notice that the `CREATED` date says "40 years ago". This is a best practice whereby the timestamps of layers are 'zeroed' to make container builds more reproducible, cache-able, and to avoid unnecessary image downloads. You can read more [here](https://buildpacks.io/docs/reference/reproducibility/).
+{{% callout %}}
+**Note**: Already we're benefiting from buildpack engineering! Notice that the `CREATED` date says "40 years ago". This is a best practice whereby the timestamps of layers are 'zeroed' to make container builds more reproducible, cache-able, and to avoid unnecessary image downloads. You can read more [here](https://buildpacks.io/docs/reference/reproducibility/).
+{{% /callout %}}
 
 ### Test The Container Image
 

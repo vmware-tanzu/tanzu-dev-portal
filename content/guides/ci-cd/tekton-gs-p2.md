@@ -81,8 +81,9 @@ spec:
 
 This `PipelineResource` is of type `image`, as in a container image. It's also been given the name "sinatra-hello-world-tekton-demo-image". In this case, it simply takes the image name and tag. Since no full URL is provided, it's assumed that it will be published to Docker Hub, but you can also point to your own container registry.
 
-
-> **NOTE:** Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
+{{% callout %}}
+**Note**: Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
+{{% /callout %}}
 
 With your input and output defined, it's time to create the `Task` that will build the container. Take some time to carefully read this through:
 

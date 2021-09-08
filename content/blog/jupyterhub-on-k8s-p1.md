@@ -226,8 +226,10 @@ proxy:
     type: ClusterIP
   secretToken: "c86a373144e4e8b1341fa5661cdc70f165856ba48eb54028eb844d41f1f2aeb4d4a0cca29b9548d52cb9b4c2fb901aa00537a9d37451a6f77953add34039ca56" ## <<Change the token to your random hex string from Step 1>>
 ```
-
+{{% callout %}}
 **Note**: We have chosen the latest version of the `jupyter/scipy-notebook`, which comes with all the required libraries for the machine learning and data science use cases we will demonstrate in the second post of this two-part series. Specifically, the `scipy-notebook` comes preinstalled with pandas, matplotlib, scikit-learn, beautifulsoup, and seaborn. For a list of the Docker images that the Jupyter team maintains, you can look [here](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html).
+{{% /callout %}}
+
 
 Create a dedicated Kubernetes namespace to house the JupyterHub Kubernetes components:  
 
@@ -261,8 +263,10 @@ Note that this is still an alpha release! If you have questions, feel free to
   3. File issues at https://github.com/jupyterhub/zero-to-jupyterhub-k8s/issues
 directly instead.
 ```
-
+{{% callout %}}
 **Note**: This installation will take a while to pull down all the images required to use JupyterHub and bootstrap the installation process.
+{{% /callout %}}
+
 
 You can monitor and troubleshoot the JupyterHub installation by watching the pod creations in the `jupyter` namespace.
 

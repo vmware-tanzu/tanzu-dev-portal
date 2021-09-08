@@ -48,7 +48,7 @@ why:
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections, or make similar sections on your digital collaboration tool. The goal is to create lots of small ideas instead of detailed solutions.
 
    {{% callout %}}
-   Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
+   **Tip**: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
    {{% /callout %}}
    
    ![Design Studio Step 1](/images/practices/design-studio/ds-1.png)
@@ -58,7 +58,7 @@ why:
    _“How might we design an experience that addresses [the problem]? Use the sheets of paper to come up with as many ideas as possible and don’t over think how you draw it out.”_
 
    {{% callout %}}
-   Tip: It’s important not to not think of the paper as a computer or mobile screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
+   **Tip**: It’s important not to not think of the paper as a computer or mobile screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
    {{% /callout %}}
    
 1. After time is up, ask each person to share their explorations (1-2 minutes per person). Encourage the team to write down questions or feedback on sticky notes and attach them to the sheet. Make sure everyone gets a turn to share.
