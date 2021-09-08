@@ -1,11 +1,9 @@
 ---
 name: Paul Warren
 description: "Staff Engineer"
-photo: "/images/team/paul-warren.jpg"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

@@ -1,11 +1,9 @@
 ---
 name: Jakub Pilimon
 description: "Developer Advocate"
-photo: "/images/team/advocates/jakub.jpg"
 roles: ["advocate"]
 skills: ["Architecture", "Domain-Driven Design", "Unit testing", "Refactoring", "Spring"]
 location: "Poland"
-weight: 1
 
 # Social Media 
 twitter: "JakubPilimon"

@@ -1,11 +1,9 @@
 ---
 name: Olga Maciaszek-Sharma
 description: "Spring Cloud Team"
-photo: "/images/team/olga-maciaszek-sharma.jpg"
 roles: ["author"]
 skills: ["Spring", "Kubernetes"]
 location: "Warsaw, Poland"
-weight: 1
 
 # Social Media
 twitter: "OLGA_MACIASZEK"

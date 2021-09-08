@@ -5,7 +5,6 @@ photo: "/images/external/juergen-sussner.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 external: true
 
 # Social Media

@@ -1,11 +1,9 @@
 ---
 name: Shawn Sherwood
 description: "Staff Solution Engineer"
-photo: "/images/team/shawn-sherwood.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "shawn_sherwood"

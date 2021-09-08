@@ -76,7 +76,7 @@ One of Git's roles is to track content, and it helps us to know what changes we 
 
 `HEAD` plays a role in this. By setting `HEAD` to, for example, a branch, as in the second operation we looked at, Git would report changes by comparing it against the contents of the branch that `HEAD` points to [^head-simple]. Both `HEAD` and the branch would reference the same commit.
 
-![Commit history illustration with HEAD and branches](/images/blogs/git-switch-and-restore/diagrams/HEAD-diagram.svg)
+![Commit history illustration with HEAD and branches](images/HEAD-diagram.svg#diagram)
 
 [^head-simple]: When determining what has changed, `HEAD` isn't the only factor—it depends on how you ask Git for changes. For example, `git diff` uses the index as the point of comparison, so even if your files didn't match their content in `HEAD` but had been staged, you'd get an empty output. It's also important to note that Git doesn't deal with changes or deltas; each commit is a complete snapshot of your files.
 
@@ -90,11 +90,11 @@ $ git checkout f7884
 
 Apart from setting the contents of your files, it also sets `HEAD` to point to the commit `f7884`, unlike a branch in the second operation we looked at:
 
-![Commit history illustration in detached HEAD state](/images/blogs/git-switch-and-restore/diagrams/detached-HEAD.svg)
+![Commit history illustration in detached HEAD state](images/detached-HEAD.svg#diagram)
 
 This is known as a _detached HEAD_ state. (In fact, you can perform the equivalent operation by invoking `git checkout` with the `--detach` argument). If you were to make a new commit while in this state, `HEAD` would advance accordingly, but these commits would not be reachable through the usual Git references, like branches and tags. For example, if you were in this state and made a new commit to add padding to a header, here's what your Git history would look like:
 
-![Commit history illustration of new commits in detached HEAD state](/images/blogs/git-switch-and-restore/diagrams/detached-HEAD-commit.svg)
+![Commit history illustration of new commits in detached HEAD state](images/detached-HEAD-commit.svg#diagram)
 
 If you were to switch away to another branch, and not point a reference to your new commit, there is a chance your new commit will be lost through garbage collection. [^git-checkout]
 
@@ -119,7 +119,7 @@ Granted, these aspects are intertwined, with B being a corollary of A. For examp
 
 Enter `git restore` and `git switch`.
 
-![https://giphy.com/gifs/drone-cut-satisfy-Eeqkz0EAtAdvq](/images/blogs/git-switch-and-restore/banana-slice.gif)
+![https://giphy.com/gifs/drone-cut-satisfy-Eeqkz0EAtAdvq](images/banana-slice.gif)
 
 Now let's run through the three operations again to see how these two commands are used.
 

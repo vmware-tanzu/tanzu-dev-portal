@@ -1,10 +1,8 @@
 ---
 name: "Michael Wright"
 description: "Platform Architecture Manager"
-photo: "/images/team/michael-wright.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: ""

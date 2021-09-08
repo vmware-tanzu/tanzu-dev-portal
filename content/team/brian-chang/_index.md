@@ -1,10 +1,8 @@
 ---
 name: Brian Chang
 description: "Staff Technologist"
-photo: "/images/team/brian-chang.jpg"
 roles: ["host"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "techadvoguy"

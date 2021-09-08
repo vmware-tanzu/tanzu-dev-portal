@@ -6,7 +6,6 @@ roles: ["guest"]
 skills: []
 location: ""
 external: true
-weight: 1
 
 # Social Media
 twitter: ""

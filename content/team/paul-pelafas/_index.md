@@ -5,7 +5,6 @@ photo: "/images/external/paul-pelafas.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 external: true
 
 # Social Media

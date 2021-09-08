@@ -1,10 +1,8 @@
 ---
 name: "Glenn Renfro"
 description: "Staff Engineer"
-photo: "/images/team/glenn-renfro.png"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "cppwfs"

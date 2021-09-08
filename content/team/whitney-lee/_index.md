@@ -1,11 +1,9 @@
 ---
 name: Whitney Lee
 description: "Developer Advocate"
-photo: "/images/team/advocates/whitney.jpg"
 roles: ["advocate"]
 skills: ["Kubernetes"]
 location: "Austin"
-weight: 1
 
 # Social Media 
 twitter: "@wiggitywhitney"
