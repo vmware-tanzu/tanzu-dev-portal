@@ -15,7 +15,7 @@ Even if you spend most of your time working on software code, it is essential to
 It's important to push the application to the platform as early as possible in order to get quick feedback on what is working and what is not. The primary ways to work with the platform are the Command Line Interface (CLI) and the apps manager web application.
 
 {{% callout %}}
-Note: At the time of writing, VMware is still transitioning from Cloud Foundry to Tanzu tools and nomenclature. In this article you should expect to see a mix of Cloud Foundry and TAS references, such as the `cf` command line interface. 
+**Note**: At the time of writing, VMware is still transitioning from Cloud Foundry to Tanzu tools and nomenclature. In this article you should expect to see a mix of Cloud Foundry and TAS references, such as the `cf` command line interface. 
 {{% /callout %}}
 
 ## Command Line Interface 

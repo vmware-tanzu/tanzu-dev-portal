@@ -57,7 +57,10 @@ helm install mongodb bitnami/mongodb --set mongodbRootPassword=root --set mongod
 
 The parameters passed to the chart define the MongoDB administrator password and also create a new database named *mydb* with corresponding user credentials. 
 
-> See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% /callout %}}
+
 
 Wait for the deployment to complete before proceeding to the next step.
 
@@ -117,7 +120,9 @@ These values will be injected into the application's environment by the Helm cha
   
   This *Dockerfile* uses the [Bitnami Node.js 13.x development image](https://github.com/bitnami/bitnami-docker-node/tree/master/13/debian-10) to copy the application files from the current directory. It also creates a non-root user account that the application will run under. For security reasons, it's recommended to always run your application using a non-root user account. Finally, it sets the application to run on port 3000 (the default port expected by the Bitnami Node.js Helm chart) and starts the Node.js server. 
 
-  > The Dockerfile used above produces a development image which contains additional development tools and dependencies. For production scenarios, you should instead use [Bitnami's Node.js 13.x production image](https://github.com/bitnami/bitnami-docker-node/tree/master/13-prod/debian-10) with a multi-stage build process, as described in this [tutorial on creating a production-ready image of a Node.js application](https://docs.bitnami.com/tutorials/deploy-custom-nodejs-app-bitnami-containers/).
+{{% callout %}}
+**Note**: The Dockerfile used above produces a development image which contains additional development tools and dependencies. For production scenarios, you should instead use [Bitnami's Node.js 13.x production image](https://github.com/bitnami/bitnami-docker-node/tree/master/13-prod/debian-10) with a multi-stage build process, as described in this [tutorial on creating a production-ready image of a Node.js application](https://docs.bitnami.com/tutorials/deploy-custom-nodejs-app-bitnami-containers/).
+{{% /callout %}}
 
 * Build the image using the command below. Replace the DOCKER-USERNAME placeholder in the command below with your Docker account username. 
 
@@ -173,7 +178,10 @@ Follow the steps below to create the Kubernetes secret.
   * The *image.repository* and *image.tag* parameters tell the chart which container image and version to pull from the registry. The values assigned to these parameters should match the image published in [Step 3](#step-3-create-and-publish-a-docker-image-of-the-application).
   * The *mongodb.install=false* parameter disables the built-in MongoDB chart, and the *externaldb.secretName* parameter names the secret holding details of the alternate MongoDB deployment to use.
 
-  > See the [complete list of parameters supported by the Bitnami Node.js Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).  
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami Node.js Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).  
+{{% /callout %}}
+
   
 * Wait for the deployment to complete. Obtain the public IP address of the load balancer service:
 
@@ -218,7 +226,9 @@ Your REST API is now deployed on Kubernetes. You can proceed to test it by sendi
 
 Your Node.js REST API is now running on Kubernetes and available for public review. You can now continue adding features to your API, upgrading the application and scaling out the database using normal Kubernetes procedures, which you can learn more about in our tutorial on [deploying, scaling and upgrading applications on Kubernetes](https://docs.bitnami.com/kubernetes/how-to/deploy-application-kubernetes-helm/).  
   
-> As you continue developing and deploying your REST API, consider using a tool like Skaffold, which continuously monitors your application source code and deploys the latest version automatically on Kubernetes. [Learn more about building a continuous development pipeline for a Node.js application with Skaffold](https://docs.bitnami.com/tutorials/continuously-develop-express-application-kubernetes-bitnami-skaffold-octant/).
+{{% callout %}}
+**Note**: As you continue developing and deploying your REST API, consider using a tool like Skaffold, which continuously monitors your application source code and deploys the latest version automatically on Kubernetes. [Learn more about building a continuous development pipeline for a Node.js application with Skaffold](https://docs.bitnami.com/tutorials/continuously-develop-express-application-kubernetes-bitnami-skaffold-octant/).
+{{% /callout %}}
 
 ## Useful links
 

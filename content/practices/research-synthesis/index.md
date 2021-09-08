@@ -44,12 +44,12 @@ why:
    You can also create a Parking Lot at this point, though often we do this last (as we find sticky notes that aren't actionable)
 
    {{% callout %}}
-   Tip: If you have already grouped your user interview questions into categories, use these categories in your synth instead for more targeted results. (i.e. Technology Usage, Systems & Integrations, etc.)
+   **Tip**: If you have already grouped your user interview questions into categories, use these categories in your synth instead for more targeted results. (i.e. Technology Usage, Systems & Integrations, etc.)
    {{% /callout %}}
 1. Place sticky note findings beneath the corresponding categories, including a section to identify the users (notes for whom should each have been written on different colored sticky notes)
 
    {{% callout %}}
-   Tip: Since several people may have taken notes, you will naturally find duplicates. When this happens, discuss as a team which sticky notes capture the comment best then discard the duplicates.
+   **Tip**: Since several people may have taken notes, you will naturally find duplicates. When this happens, discuss as a team which sticky notes capture the comment best then discard the duplicates.
    {{% /callout %}}
 1. Once all have been placed, begin the process of grouping sticky notes. This can either be done as a team, pairs, or individually (depending on who is available at the time):
 

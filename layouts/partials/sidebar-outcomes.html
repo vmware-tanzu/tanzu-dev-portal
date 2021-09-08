@@ -3,7 +3,7 @@
   {{ if .context.Pages }}
     {{ range .context.Pages}}
       {{ $active := eq .Page $activePage }}
-      <li class="td-sidebar-nav__section-title">
+      <li class="td-sidebar-nav__section-title text-nowrap">
         <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ .Title }}</a>
       </li>
       {{ template "subpages" (dict "context" . "activepage" $activePage ) }}

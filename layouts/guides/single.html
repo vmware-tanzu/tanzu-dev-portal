@@ -20,7 +20,7 @@
             {{ partial "toc.html" . }}
           </div>
           {{ end }}
-          <main class="{{if not .IsSection}}col-12 col-xl-8{{end}} mt-lg-5 pt-lg-5" role="main">
+          <main class="{{if not .IsSection}}col-12 col-xl-8 px-xl-4{{ else }}col-xl-10 col-12{{end}} px-0 pl-xl-5 mt-lg-5 pt-lg-5" role="main">
           	<br/>
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}

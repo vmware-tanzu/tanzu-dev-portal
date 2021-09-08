@@ -27,7 +27,7 @@ why:
 1. Draw the primary persona on the whiteboard
 
    {{% callout %}}
-   Tip: If necessary, you can split into groups first
+   **Tip**: If necessary, you can split into groups first
    {{% /callout %}}
 1. For each additional persona, draw:
    - A person
@@ -37,7 +37,7 @@ why:
 1. Draw arrows connecting other personas that work with the primary persona
 
    {{% callout %}}
-   Tip: If desired, clarify the relationships by using verbs with arrows like "supports", "reports to", or "is supported by"
+   **Tip**: If desired, clarify the relationships by using verbs with arrows like "supports", "reports to", or "is supported by"
    {{% /callout %}}
 {{% /section %}}
 

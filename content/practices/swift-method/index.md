@@ -49,15 +49,16 @@ why:
 1. Identify thin slices of modernization.
 
    Thin slices are short domain event flows. Vertical slices are identified by choosing short, domain event flows in the core domain and leveraging the services coming out of [Boris](/practices/boris) to produce those events. Think of them as the architectural components required to produce those events. Thin slices are informed by [Event Storming](/practices/event-storming), [Boris](/practices/boris) and SNAP activities.
+
    {{% callout %}}
-   Tip: A vertical slice touches every layer of the architecture but implements only a sliver of functionality. For example, the vertical slice, “Allow a user to login with a password,” might add username and password fields to a user interface, implement server-side logic, and update the last login field on the database record. Slicing vertically is one of the toughest mind shifts to make for a team new to agile because it requires developers to interact with areas of the app with which they may be less familiar.
+   **Tip**: A vertical slice touches every layer of the architecture but implements only a sliver of functionality. For example, the vertical slice, “Allow a user to login with a password,” might add username and password fields to a user interface, implement server-side logic, and update the last login field on the database record. Slicing vertically is one of the toughest mind shifts to make for a team new to agile because it requires developers to interact with areas of the app with which they may be less familiar.
    {{% /callout %}}
 
 1. Prioritize the thin slices, with an eye to balancing business value, technical risk, and effort. The goal is to incrementally move the system toward behaving “the way it wants to;” the implementation of each successive slice gets us that much closer to this goal.
 
 1. The thin slices become actionable when captured in the backlog as MVPs (Minimum Viable Products) or collections of stories. In some cases, VMware Tanzu Labs will partner with the customer team to identify and prioritize the thin slices, with an eye to balancing business value, technical risk, and effort.
    {{% callout %}}
-   Tip: In order to determine the right MVPs for your system you have to consider thin vertical end to end slices where these domains interact with one another. The MVPs map a path from ["strangling the monolith"](https://tanzu.vmware.com/content/blog/strangling-a-monolith-by-focusing-on-roi) and leveraging tactical patterns to interact with the new domains and services.
+   **Tip**: In order to determine the right MVPs for your system you have to consider thin vertical end to end slices where these domains interact with one another. The MVPs map a path from ["strangling the monolith"](https://tanzu.vmware.com/content/blog/strangling-a-monolith-by-focusing-on-roi) and leveraging tactical patterns to interact with the new domains and services.
    {{% /callout %}}
 
 1. As you define the slices, leverage tactical implementation patterns  like <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer" target="_blank">anti-corruption layer</a>, <a href="https://en.wikipedia.org/wiki/Facade_pattern" target="_blank">Facade</a>, <a href="https://www.swiftbird.us/docket-choreography" target="_blank">Docket Based Choreography</a>, and <a href="https://martinfowler.com/bliki/StranglerFigApplication.html" target="_blank">Strangler</a> so that the newer or strangled services coexist together with the older legacy system
@@ -65,7 +66,7 @@ why:
 1. Create a backlog of prioritized user stories tied back to ***goals*** (practice coming soon) / OKRs. Map user stories to MVP or releases.
 
    {{% callout %}}
-   Tip: User story impact mapping is a technique that can be applied for mapping stories to MVPs and releases. Here's a <a href="https://blog.eriksen.com.br/en/mapping-domain-knowledge" target="_blank">blog post</a> that explains how to combine User Story Mapping with DDD.
+   **Tip**: User story impact mapping is a technique that can be applied for mapping stories to MVPs and releases. Here's a <a href="https://blog.eriksen.com.br/en/mapping-domain-knowledge" target="_blank">blog post</a> that explains how to combine User Story Mapping with DDD.
    {{% /callout %}}
 1. Start hands-on experimentation, feedback, and iterative progress.
 {{% /section %}}

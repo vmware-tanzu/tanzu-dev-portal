@@ -94,12 +94,6 @@
   force = true
   status = 200
 
-[[redirects]]
-  from = "/developer/workshop-status-s1/*"
-  to = "/.netlify/functions/workshop-status-s1/:splat"
-  force = true
-  status = 200
-
 # Global 404 handler
 [[redirects]]
   from = "/*"

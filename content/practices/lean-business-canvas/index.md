@@ -39,7 +39,7 @@ why:
 1. After the explanation, start to ideate by having each participant write what they think should fill into **one section** (starting with the “Problem”)
 
    {{% callout %}}
-   Tip: If you are working with a larger group, instead of asking each person to fill in the canvas, you can split into groups of three.
+   **Tip**: If you are working with a larger group, instead of asking each person to fill in the canvas, you can split into groups of three.
    {{% /callout %}}
 1. After 2-3 minutes, go around the room and “de-duplicate” the ideas (e.g. when Joe reads his sticky note and Sally wrote the same thing, Sally will not read that when her turn comes around)
 

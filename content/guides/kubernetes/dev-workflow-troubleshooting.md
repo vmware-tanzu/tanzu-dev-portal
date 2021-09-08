@@ -249,11 +249,12 @@ kubectl exec -it example-pod -- ps -ef
 ```
 
 ---
-**NOTE**
-Keep in mind that the container must have the binary you are trying to execute
+{{% callout %}}
+**Note**: Keep in mind that the container must have the binary you are trying to execute
 (`ps` in the above example). Otherwise, you will get an error.
 
 Use [Ephemeral Containers (alpha)](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/) if the binary is not available.
+{{% /callout %}}
 
 ---
 

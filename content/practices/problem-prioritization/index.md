@@ -36,7 +36,7 @@ why:
    - Y-Axis --> Low Frequency (bottom) to High Frequency (top)
 
    {{% callout %}}
-   Tip: Optionally, you can generate different 2x2 criteria by asking the team "What makes a problem worth solving?". Some other 2x2 examples include: higher user pain vs. higher impact (e.g. affects most users); higher user pain vs. higher business pain (e.g. in terms of lost revenue); higher impact vs. higher immediate need.
+   **Tip**: Optionally, you can generate different 2x2 criteria by asking the team "What makes a problem worth solving?". Some other 2x2 examples include: higher user pain vs. higher impact (e.g. affects most users); higher user pain vs. higher business pain (e.g. in terms of lost revenue); higher impact vs. higher immediate need.
    {{% /callout %}}
    ![Empty 2x2 diagram](/images/practices/problem-prioritization/step-3.png)
 
@@ -47,7 +47,7 @@ why:
 1. Depending upon the size of each problem/pain, strive to end with a list of the top 3-5 problems/pains.
 
    {{% callout %}}
-   Tip: If there are too many priority problems in the top right quadrant, re-draw the axes within that quadrant to further separate the problems. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
+   **Tip**: If there are too many priority problems in the top right quadrant, re-draw the axes within that quadrant to further separate the problems. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
 {{% /section %}}
 

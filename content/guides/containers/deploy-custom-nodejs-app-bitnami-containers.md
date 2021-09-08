@@ -135,7 +135,10 @@ This *Dockerfile* consists of two build stages:
 * The first stage uses the Bitnami Node.js 12.x development image to copy the application source and install the required application modules using *npm install*.
 * The second stage uses the Bitnami Node.js 12.x production image and creates a minimal Docker image that only consists of the application source, modules and Node.js runtime.
 
-> Bitnami's Node.js production image is different from its Node.js development image, because the production image (tagged with the suffix *prod*) is based on [minideb](https://github.com/bitnami/minideb) and does not include additional development dependencies. It is therefore lighter and smaller in size than the development image and is commonly used in multi-stage builds as the final target image.
+{{% callout %}}
+**Note**: Bitnami's Node.js production image is different from its Node.js development image, because the production image (tagged with the suffix *prod*) is based on [minideb](https://github.com/bitnami/minideb) and does not include additional development dependencies. It is therefore lighter and smaller in size than the development image and is commonly used in multi-stage builds as the final target image.
+{{% /callout %}}
+
 
 ### First build stage
 
@@ -164,7 +167,10 @@ Once the *Dockerfile* is created, building a Docker image is as simple as callin
 docker build -t DOCKER_USERNAME/my-node-app:0.1.0 .
 ```
 
-> For successful execution of this and subsequent *docker* commands, ensure that the user account you're using belongs to the *docker* group.
+{{% callout %}}
+**Note**: For successful execution of this and subsequent *docker* commands, ensure that the user account you're using belongs to the *docker* group.
+{{% /callout %}}
+
 
 This will create an image named *my-node-app*, tagged as version *0.1.0*. This tag uniquely identifies a Docker image, allowing you to deploy a specific version of the application if needed.
 
@@ -182,7 +188,10 @@ The version tag added during the *docker build* command also appears in the outp
 
 ![Image in local Docker registry](/images/guides/containers/bitnami/deploy-custom-nodejs-app-bitnami-containers/deploy-custom-nodejs-app-bitnami-containers-2.png)
 
-> Tagging image releases is a recommended practice. [Learn more about tags](https://docs.docker.com/engine/reference/commandline/tag/).
+{{% callout %}}
+**Note**: Tagging image releases is a recommended practice. [Learn more about tags](https://docs.docker.com/engine/reference/commandline/tag/).
+{{% /callout %}}
+
 
 ## Step 4: Test the Docker image
 
@@ -202,13 +211,18 @@ To test the application, browse to *http://localhost:3000* (if the Docker host i
 
 ![Application output](/images/guides/containers/bitnami/deploy-custom-nodejs-app-bitnami-containers/deploy-custom-nodejs-app-bitnami-containers-4.png)
 
-> If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 3000.
+{{% callout %}}
+**Note**: If the Docker host is a different machine, ensure that the host firewall is configured to allow access on port 3000.
+{{% /callout %}}
+
 
 The *-i* and *-t* options to *docker run* allocate a terminal for the container process, while the *-p* option specifies the container-host port binding. [Learn more about the *docker run* command and its options](https://docs.docker.com/engine/reference/run/).
 
 ## Step 5: Publish the Docker image
 
-> This step requires a Docker Hub account. In case you don't already have one, [sign up on the Docker website](https://hub.docker.com/).
+{{% callout %}}
+**Note**: This step requires a Docker Hub account. In case you don't already have one, [sign up on the Docker website](https://hub.docker.com/).
+{{% /callout %}}
 
 At this point, you have built, tagged and tested a Docker image containing your application code. To share it with others, you can upload the image to a public registry. A number of such registries are available, including [Google Container Registry](https://cloud.google.com/container-registry/), [Quay](https://quay.io/) and others, but this guide will use [Docker Hub](https://hub.docker.com/).
 
@@ -230,7 +244,10 @@ To upload an image to Docker Hub, follow these steps:
 
   ![Image publishing process](/images/guides/containers/bitnami/deploy-custom-nodejs-app-bitnami-containers/deploy-custom-nodejs-app-bitnami-containers-5.png)
 
-  > Once published on Docker Hub, your image is publicly available by default.
+{{% callout %}}
+**Note**: Once published on Docker Hub, your image is publicly available by default.
+{{% /callout %}}
+
 
 * Check that the image has been successfully uploaded to Docker Hub by searching for it using the *docker search* command, as shown below:
 
@@ -240,7 +257,10 @@ To upload an image to Docker Hub, follow these steps:
 
 Once published on Docker Hub, other users can download your application and try it for themselves.
 
-> You can also delete images from Docker Hub using the Docker website.
+{{% callout %}}
+**Note**: You can also delete images from Docker Hub using the Docker website.
+{{% /callout %}}
+
 
 ## Handling Updates
 

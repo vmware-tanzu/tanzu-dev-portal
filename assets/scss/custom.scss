@@ -134,7 +134,7 @@
         }
       }
     }
-  
+
   footer {
       min-height: 150px;
   
@@ -177,7 +177,6 @@
 .left-edge-color-gray {
   border-left-color: rgba(173, 187, 196, 1);
 }
-;
 
 .left-edge-color-green {
   border-left-color: rgba(96, 181, 21, 1);;
@@ -197,3 +196,30 @@
     float: left;
   }
 }
+
+.callout svg {
+  opacity: .8;
+
+.tab-content {
+  margin: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+  box-shadow: inset 0 0 5px rgb(0, 3, 0);
+  border: 2px solid rgba(20, 0, 0, 0.521);
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}}
