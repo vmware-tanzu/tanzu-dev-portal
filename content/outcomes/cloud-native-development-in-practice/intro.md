@@ -57,17 +57,18 @@ The codebase structure will include a local Git repo:
     These lab instructions will assume from now on that your code is in
     this directory.
 
-1.  The
-    [pal-tracker codebase](https://github.com/platform-acceleration-lab/pal-tracker/releases/download/platform-acceleration-release-12.3.74/pal-tracker.zip)
-    contains a local Git repository with the starting points and the
-    solutions for all the labs in this unit.
-    Download the linked zip file and extract the codebase in the
-    `~/workspace` directory.
+1.  Download this
+    [`pal-tracker` linked zip file](https://github.com/platform-acceleration-lab/pal-tracker/releases/download/platform-acceleration-release-12.3.74/pal-tracker.zip).
+
+1.  Extract the codebase in the `~/workspace` directory.
     The extracted `pal-tracker` directory will contain a single text file as well as
     the (hidden) Git files.
     You will be building up the code in this directory bit by bit, and
-    we have provided reference implementations at each stage identified
-    by tags in the Git repository.
+    we have provided reference implementations at each stage identified by tags in the Git repository.
+
+1.  The `pal-tracker` codebase
+    contains a local Git repository with the starting points and the
+    solutions for all the labs in this unit.
 
 ## Git
 
@@ -151,7 +152,7 @@ You will use Gradle as your build and dependency management system.
     If it is not currently present, follow the
     [official installation instructions](https://gradle.org/install/)
     for your environment.
-    
+
 1.  Create a [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper)
     in the project root directory (`~/workspace/pal-tracker`) with
     a `gradle-version` of `7.1.1` and `distribution-type` of `all`.
@@ -167,7 +168,7 @@ You will use Gradle as your build and dependency management system.
 
     ```bash
     git add ./gradle ./gradlew ./gradlew.bat ./build.gradle
-    
+
     git commit -m'added gradle wrapper to initial project'
     ```
 

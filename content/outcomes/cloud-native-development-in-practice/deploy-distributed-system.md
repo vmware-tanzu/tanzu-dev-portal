@@ -29,21 +29,18 @@ After completing the lab, you will be able to:
     [Intro](https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present#slide=id.ge9cac6b4e4_0_0)
     slides.
 
-1.  You must have completed (or fast-forwarded to) the
-    [Scaling lab](../scaling/).
-    You must have your `pal-tracker` application associated with the
-    `scaling-solution` codebase deployed and running on TAS.
+1.  Prepare a new `pal-tracker-distributed` codebase by following
+    [the introduction codebase preparation](../intro/#project-structure-and-codebase)
+    steps 3 and 4 using the
+    [`pal-tracker-distributed` codebase link](https://github.com/platform-acceleration-lab/pal-tracker-distributed/releases/download/platform-acceleration-release-12.3.74/pal-tracker-distributed.zip).
 
-1.  In a terminal window,
-    make sure you start in the `~/workspace/pal-tracker` directory.
+1.  Prepare your remote GitHub repo for your
+    `pal-tracker-distributed` codebase according to the
+    [Introduction lab instructions](../intro/#github).
 
-1.  Cherry-pick the start point of this lab:
-
-    ```bash
-    git cherry-pick deploy-distributed-app-solution
-    ```
-
-    This will put you at the distributed application
+1.  Prepare your remote GitHub repo secrets for your
+    `pal-tracker-distributed` codebase according to the
+    [Pipelines lab instructions](../pipelines/#configure-environment-variables).
 
 ## Set up CF services
 
