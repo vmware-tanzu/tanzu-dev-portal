@@ -5,6 +5,11 @@ layout: intro
 description: "Learn how we approach modern application development practices, teaming, culture, and technology at VMware Tanzu Labs."
 team:
   - VMware Tanzu Labs
+tags:
+  - All Roles
+  - Applications
+experience: Beginner
+duration: 240
 ---
  
 ## Why is this important?
@@ -22,20 +27,11 @@ Beyond technology, this learning path also teaches the fundamentals of the 30+ y
 This learning path is primarily for software engineers and other technical development team members involved in the development of modern applications. 
  
 Managers, designers, and other non-technical stakeholders may also find this learning path useful for understanding new technical terminology and concepts. 
- 
+
+This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement. 
+
 ## What you will learn
  
 You will learn everything needed to start as a newly onboarded team member. Each section in this learning path provides details on specific skills or technologies, and includes links to corresponding information. 
- 
-We cover the following topics:
- 
-* [Balanced Teams](/outcomes/application-development/balanced-teams/)
-* [Team Rhythm](/outcomes/application-development/team-rhythm/)
-* [Product Validation](/outcomes/application-development/product-validation/)
-* [Prioritizing Impactful Outcomes: User Stories, Estimation, and Velocity](/outcomes/application-development/prioritizing-outcomes/)
-* [Pair Programming](/outcomes/application-development/pair-programming/)
-* [Test Driven Development](/outcomes/application-development/test-driven-development/)
-* [Cloud Native Development](/outcomes/application-development/cloud-native-development/)
-* [Distributed, Remote, and Asynchronous Work](/outcomes/application-development/remote/)
 
 This learning path is also an adequate, on-the-clock preparation for getting the most out of an on-site or remote Tanzu Labs consulting engagement.
