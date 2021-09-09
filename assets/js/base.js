@@ -398,3 +398,18 @@ limitations under the License.
       });
   });
 }(jQuery));
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+  if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+    document.querySelector("#navbar").classList.add("darken");
+    document.querySelector("#tanzu-logo").style.height = "35px";
+    document.querySelector(".navbar-logo svg").style.height = "0";
+  } else {
+    document.querySelector("#navbar").classList.remove("darken");
+    document.querySelector("#tanzu-logo").style.height = "0";
+    document.querySelector(".navbar-logo svg").style.height = "20px";
+  }
+}
