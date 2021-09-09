@@ -84,44 +84,23 @@
             <h3>Featured Learning Paths</h3>
         </div>
 
-        {{ range (seq 3) }} <!-- TODO: Get featured learning paths -->
+        {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
+        {{ range $learningpaths }} <!-- TODO: Get featured learning paths -->
         <div class="learning-path-card col-lg-4 mb-2 mb-lg-0 ">
             <a href="#">
-                <p><div class="py-3 px-4 mb-0 text-left h3 text-white">Learning Path {{ . }} </div></p>
+                <p><div class="py-3 px-4 mb-0 text-left h3 text-white">Learning Path {{ .Title }} </div></p>
                 <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    {{ .Description }}
                 </div>
                 <div class="learning-path-duration">
-                30m
+                {{ .Params.duration }}m <!-- TODO: Format to nearest hour -->
                 </div>
                 <div class="learning-path-level">
-                Beginner
+                {{ .Params.experience }}
                 </div>
             </a>
         </div>
         {{ end }}
-
-    </div>
-</section>
-
-<!-- Languages -->
-<a id="td-block" class="td-offset-anchor"></a>
-<section class="row pt-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-	<div class="row justify-content-center w-100">
-
-        <div class="col-sm-12 pb-4">
-            <h3>Languages</h3>
-        </div>
-
-        {{ $languages := slice "Java" ".NET" "Ruby" "Python" }} <!-- TODO: Reference language meta pages -->
-        {{ range $languages}}
-        <div class="language col-sm-3 mb-0 mb-lg-0">
-            <p>
-                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="#">{{ . }}</a>
-            </p>
-        </div>
-        {{ end }}
-
 
     </div>
 </section>
