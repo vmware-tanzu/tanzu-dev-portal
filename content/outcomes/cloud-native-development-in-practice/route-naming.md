@@ -75,7 +75,7 @@ apps.internal                    shared          internal
 ```
 
 In this example,
-the `apps.tas.example.com` is the desired route.
+the `apps.tas.example.com` is the desired domain.
 
 **Do not use the `mesh` or `internal` domains.**
 
