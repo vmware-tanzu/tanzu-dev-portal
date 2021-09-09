@@ -196,7 +196,10 @@
     float: left;
   }
 }
-
+.td-home #hero {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 .callout svg {
   opacity: .8;
 
@@ -223,3 +226,4 @@
   -webkit-hyphens: auto;
   hyphens: auto;
 }}
+
