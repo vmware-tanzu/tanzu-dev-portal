@@ -1,7 +1,9 @@
 ---
 title: Application Observability
 weight: 2
-layout: single
+layout: intro
+duration: 60
+experience: Beginner
 description: |
   Reliability is one of the most important features of any application.
   Here we discus various tools and techniques that can be used to ensure

@@ -1,7 +1,9 @@
 ---
 title: How VMware Tanzu Labs Works and Why
 weight: 1
-layout: single
+layout: intro
+duration: 60
+experience: Beginner
 description: "Learn our philosophy to enabling people to achieve amazing outcomes through software."
 team:
   - VMware Tanzu Labs

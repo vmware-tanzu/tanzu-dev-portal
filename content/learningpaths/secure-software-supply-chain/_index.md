@@ -6,7 +6,11 @@ description: |
   Here we explore the components that drive successful outcomes through mature
   software delivery practices.
 weight: 1
-layout: single
+featured: true
+featuredspot: 3
+duration: 60
+experience: Beginner
+layout: intro
 team:
 - Craig Tracey
 aliases: ["/patterns/deployment"]

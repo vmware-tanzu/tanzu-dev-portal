@@ -1,7 +1,11 @@
 ---
 title: Cloud Native Application Development with Spring
 weight: -1
-layout: single
+featured: true
+featuredspot: 2
+duration: 60
+experience: Beginner
+layout: intro
 description: "Learn the basics of cloud native development with Spring. This developer preparation guide helps you to get the most of a project following the Tanzu Labs methodology."
 team:
  - VMware Tanzu Labs
@@ -19,31 +23,6 @@ This learning path is for software engineers and architects interested in quickl
 
 ## What will you learn in this learning plan?
  
-You'll learn essential cloud native software development skills using Spring Boot and the Tanzu Application Service. 
+You'll learn essential cloud native software development skills using Spring Boot and the Tanzu Application Service. You'll also be given a list of specific and targeted links to assist you in this learning path.
 
-You'll also be given a list of specific and targeted links to assist you in this learning path. These links include:
-
-**Development ecosystem**
-* [Things to unlearn](/outcomes/cloud-native-development/general__unlearn/)
-* [Twelve-Factor Apps](/outcomes/cloud-native-development/general__twelve-factor-apps/)
-* [Development Tools](/outcomes/cloud-native-development/general__dev_env_tools/)
-* [Spring Ecosystem](/outcomes/cloud-native-development/general__spring_ecosystem/)
-* [Test Driven Development](/outcomes/cloud-native-development/general__tdd/)
-* [Using Using Tanzu Application Service (TAS)](/outcomes/cloud-native-development/general__using_tas/)
-* [Continuous Delivery](/outcomes/cloud-native-development/general__ci_cd/)
-
-**Cloud native factors**
-* [Logging](/outcomes/cloud-native-development/specific__logging/)
-* [Configuration](/outcomes/cloud-native-development/specific__configuration/)
-* [Caching](/outcomes/cloud-native-development/specific__caching/)
-* [Data Access](/outcomes/cloud-native-development/specific__data_access/)
-* [Enterprise Integration](/outcomes/cloud-native-development/specific__integration/)
-* [API Gateways](/outcomes/cloud-native-development/specific__api_gateway/)
-* [Batch Processing](/outcomes/cloud-native-development/specific__batch_processing/)
-* [File Access](/outcomes/cloud-native-development/specific__file_access/)
-* [Messaging](/outcomes/cloud-native-development/specific__messaging/)
-* [User interface](/outcomes/cloud-native-development/specific__user_interfaces/)
-* [Telemetry](/outcomes/cloud-native-development/specific__telemetry/)
-* [Security](/outcomes/cloud-native-development/specific__security/)
- 
 Each section is followed by suggested homework assignments and additional resources. This learning path takes approximately eight hours to complete, but the more time you spend on the learning path, for example, doing a deep study on the additional resources provided, the more value you'll get out of it.

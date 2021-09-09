@@ -1,7 +1,9 @@
 ---
 title: Modern Application Development Rhythm
 weight: -2
-layout: single
+layout: intro
+duration: 60
+experience: Beginner
 description: "Learn how we approach developer productivity practices at VMware Tanzu Labs."
 team:
   - VMware Tanzu Labs
@@ -38,25 +40,8 @@ developers do their daily work.
 
 ## What you will learn
 
-You will be able to identify and explain some of the key principles,
-practices,
-tools and technologies that are used to build modern applications.
+You will be able to identify and explain some of the key principles, practices, tools and technologies that are used to build modern applications.
 
-Each section in this learning path provides details on specific skills
-or technologies,
-and includes links to related information.
+Each section in this learning path provides details on specific skills or technologies, and includes links to related information.
 
-You will explore the following topics:
-
--   [Foundations](/outcomes/application-development-rhythm/foundations/)
-
--   [Development Flow](/outcomes/application-development-rhythm/dev-flow/)
-
--   [Development Building Blocks, Part 1](/outcomes/application-development-rhythm/dev-building-blocks-1/)
-
--   [Development Building Blocks, Part 2](/outcomes/application-development-rhythm/dev-building-blocks-2/)
-
--   [Deployment Rhythm by Example](/outcomes/application-development-rhythm/dev-rhythm/)
-
-This learning path is an adequate preparation for engineers that will
-pair with Lab engineers on Tanzu Services engagements.
+This learning path is an adequate preparation for engineers that will pair with Lab engineers on Tanzu Services engagements.
