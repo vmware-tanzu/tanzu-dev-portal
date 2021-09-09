@@ -1,7 +1,7 @@
 ---
-title: Foundations of Modern Application Development Practices
-weight: -3
-layout: intro
+title: Introduction
+weight: -2
+layout: single
 description: "Learn how we approach modern application development practices, teaming, culture, and technology at VMware Tanzu Labs."
 team:
   - VMware Tanzu Labs
