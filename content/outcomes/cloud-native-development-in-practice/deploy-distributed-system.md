@@ -7,7 +7,7 @@ team:
 ---
 
 In this lab you will use
-[Github Actions](https://github.com/features/actions) to
+[GitHub Actions](https://github.com/features/actions) to
 deploy a system of four applications to Tanzu Application Service.
 
 ## Learning Outcomes
@@ -15,17 +15,17 @@ deploy a system of four applications to Tanzu Application Service.
 After completing the lab, you will be able to:
 
 -   Outline the reasons to keep the source code for multiple
-    applications under one repo
+    applications under one repository
 -   Explain the directory structure and dependencies defined in the
     build files
 -   Describe how to run a microservice application locally
--   Use a http client to manually test API endpoints
+-   Use an HTTP client to manually test API endpoints
 -   Explain how to configure CI to test and deploy multiple applications
 -   Outline the reasons to deploy all the applications at the same time
 
 ## Get started
 
-1.  Check out the
+1.  Review the
     [Intro](https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present#slide=id.ge9cac6b4e4_0_0)
     slides.
 
@@ -34,17 +34,17 @@ After completing the lab, you will be able to:
     steps 3 and 4 using the
     [`pal-tracker-distributed` codebase link](https://github.com/platform-acceleration-lab/pal-tracker-distributed/releases/download/platform-acceleration-release-12.3.74/pal-tracker-distributed.zip).
 
-1.  Prepare your remote GitHub repo for your
+1.  Prepare a new remote GitHub repository for your
     `pal-tracker-distributed` codebase according to the
     [Introduction lab instructions](../intro/#github).
 
-1.  Prepare your remote GitHub repo secrets for your
+1.  Prepare new GitHub repository secrets for your
     `pal-tracker-distributed` codebase according to the
     [Pipelines lab instructions](../pipelines/#configure-environment-variables).
 
-## Set up CF services
+## Set up services
 
-You will now create databases for our applications.
+You will now create databases for your applications.
 You create them now because the MySQL service instances take time to
 provision.
 
@@ -54,8 +54,8 @@ Call them `tracker-allocations-database`, `tracker-backlog-database`,
 
 ## Explore the codebase
 
-Open the code in IntelliJ and take a look around. Make sure that Java 11 is
-set as the Gradle JVM and the Project SDK (File -> Project Structure).
+Open the code in your IDE and take a look around. Make sure that the project is
+set up to use Java 11.
 
 Pay special attention to the new directory structure of
 your codebase.
@@ -85,14 +85,14 @@ your codebase.
 └── buildSrc
 ```
 
--   The `applications` directory contains our Spring Boot applications.
--   The `components` directory contains components of our domains and
+-   The `applications` directory contains four Spring Boot applications.
+-   The `components` directory contains components of the application domains and
     support libraries.
--   The `databases` directory contains migration information for our
-    different schemas.
--   The `buildSrc` directory is a standard gradle directory that gets
+-   The `databases` directory contains migration information for the
+    different database schemas.
+-   The `buildSrc` directory is a standard Gradle directory that gets
     built before the rest of the build is loaded.
-    This is where you store the code for our custom gradle plugins.
+    This is where code for some custom Gradle plugins is stored.
 
 ## Explore locally
 
@@ -124,36 +124,52 @@ command:
 ```
 
 Managing many terminal windows can be cumbersome,
-so you can use Gradle
+so you can use the Gradle
 [parallel execution](https://guides.gradle.org/performance/#parallel_execution)
 feature to make things a bit easier.
-The following command finds all `bootRun` tasks in a gradle project and
+The following command finds all `bootRun` tasks in a Gradle project and
 executes them in parallel.
 
 ```bash
 ./gradlew bootRun --parallel
 ```
 
-Beware that running all applications in parallel will dump the log
+Beware that running all applications in parallel will send the log
 output of all applications to the same terminal, which can make
 debugging difficult.
-Also, pressing `Ctrl+C` will kill all applications at once.
+Also, pressing `Ctrl+C` will interrupt all applications at once.
 If you need to stop one application you can use the
-[JVM Project Status tool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jps.html)
-to list Java processes by running
+[JVM process status tool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jps.html)
+to list Java processes by running:
 
 ```bash
 jps -l
 ```
 
-Kill the desired application by targeting its PID.
+You can then find the process ID of the specific application and stop
+just that one.
 
 ### Exercise endpoints
 
-Exercise the curl commands below to make sure that you understand the
+Exercise the `curl` commands below to make sure that you understand the
 system.
 Keep these commands handy, as they will be useful to test your system in
 future labs.
+
+Note that (on UNIX/Linux) if you define shell variables *USER_ID, PROJECT_ID* and
+*ACCOUNT_ID* with the values that you receive back at different stages then
+you will be able to cut and paste these commands directly.
+For example, the first `curl` command will produce something like this:
+
+```json
+{"id":1,"name":"Pete","info":"registration info"}
+```
+
+So, the user ID generated is 1 and you can then define *USER_ID* as follows:
+
+```bash
+USER_ID=1
+```
 
 __Users__
 
@@ -196,13 +212,13 @@ curl -v -XPOST -H"Content-Type: application/json" localhost:8084/time-entries/ -
 curl -v localhost:8084/time-entries?userId=${USER_ID}
 ```
 
-## Set up Github Actions for Continuous Integration
+## Set up GitHub Actions for Continuous Integration
 
 ### Get the pipeline
 
 You are provided a pipeline file as part of the `pipeline` tag.
 
-Cherry pick this into your `pal-tracker-distributed` workspace:
+Cherry-pick this into your `pal-tracker-distributed` workspace:
 
 ```bash
 git cherry-pick pipeline
@@ -210,16 +226,16 @@ git cherry-pick pipeline
 
 Your new `.github/workflows/pipeline.yml` file configures the pipeline
 to build all four applications,
-deploy them to PAS,
+deploy them to TAS,
 and migrate all four databases.
 
 Take a few minutes to review the pipeline.
 Notice the `build-and-publish` and `migrate-databases` jobs method of
-executing the flyway migrations.
-Take a look at the `buildSrc` project and associated gradle migration
+executing the Flyway migrations.
+Take a look at the `buildSrc` project and associated Gradle migration
 tasks.
 
-## Confirm CF service creation
+## Confirm service creation
 
 Confirm that all of the MySQL instances you created earlier have been fully
     provisioned using the `cf services` or `cf service` command.
@@ -232,15 +248,16 @@ in our distributed system.
 Familiarize yourself with a manifest, below.
 
 ```bash
-git show deploy-distributed-app-solution:manifest-allocations.yml
+git show pipeline:manifest-allocations.yml
 ```
 
 Each application needs a unique route so that it does not collide with
-other students' applications.
+other people's applications.
 
-1.  Change the `route` value in each manifest to make it unique
-    following the
-    [Route Names](../route-naming/) guide.
+1.  Replace the `${UNIQUE_IDENTIFIER}` and `${DOMAIN}` placeholders
+    in the `route` value in each manifest to make it unique.
+    Follow the same approach used for `pal-tracker`, as described in the
+    [Route Naming](../route-naming/) guide.
 
 1.  Once you have chosen routes, update the value for
     `REGISTRATION_SERVER_ENDPOINT` in each manifest.
@@ -254,13 +271,13 @@ other students' applications.
     You need to fill-in the proper route instead of the placeholder
     `${REGISTRATION_SERVER_ROUTE}`.
 
-1.  Commit your changes and push them to Github.
+1.  Commit your changes and push them to GitHub.
 
-    This will trigger a build on Github Actions given you have added
+    This will trigger a build on GitHub Actions, given that you have added
     the workflow pipeline.
     Expect the build and deploy to succeed this time.
 
-1.  For each application, visit its root page on PAS and test manually.
+1.  For each application, visit its root page on TAS and test manually.
     Each one should display _Noop!_.
 
 1.  Manually trigger a few requests to the various controllers to verify
@@ -275,11 +292,11 @@ other students' applications.
 Now that you have completed the lab, you should be able to:
 
 -   Outline the reasons to keep the source code for multiple
-    applications under one repo
+    applications under one repository
 -   Explain the directory structure and dependencies defined in the
     build files
 -   Describe how to run a microservice application locally
--   Use a http client to manually test API endpoints
+-   Use an HTTP client to manually test API endpoints
 -   Explain how to configure CI to test and deploy multiple applications
 -   Outline the reasons to deploy all the applications at the same time
 
