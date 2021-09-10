@@ -7,16 +7,17 @@
     background-color: #0f181c;
 }
 
-main {
-    opacity: 1;
-    transform: scale(1);
-    transition: all .2s ease-out;
+// main {
+//     opacity: 1;
+//     transform: scale(1);
+//     transition: all .2s ease-out;
 
-    &.mini {
-        transform: scale(.9);
-        opacity: .5;
-    }
-}
+//     &.mini {
+//         transform: scale(.9);
+//         opacity: .5;
+//         pointer-events: none;
+//     }
+// }
 
 // The outer page container for the default base template.
 .td-default {
