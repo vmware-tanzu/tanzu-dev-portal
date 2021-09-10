@@ -11,8 +11,9 @@ length: 120
 preview: "/images/workshops/img-dev-workflow.png"
 summary: You will demonstrate a modern application developer daily workflow.
 tags:
-- Development
+  - Development
 title: Developer Daily Workflow
+level1: Modern App Basics
 weight: 2
 ---
 
