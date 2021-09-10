@@ -3,7 +3,6 @@
 	<div class='container'>
 		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
-			<span id="tanzu-logo" class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/vmw-logo-vmware-logo-white.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 		</a>
 		<div class="td-navbar-nav-hamburger" id="main_navbar">
 			<ul class="navbar-nav mt-lg-0 align-items-center">
