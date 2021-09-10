@@ -407,7 +407,19 @@ function scrollFunction() {
   if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     document.querySelector("#navbar").classList.add("darken");
     document.querySelector("#dev-title").classList.add("fadeOut");
-  } else {
+    console.log(document.documentElement.scrollTop);
+    console.log(document.body.scrollHeight - 280);
+
+    if (document.body.scrollTop > (document.body.scrollHeight - 1000) || document.documentElement.scrollTop > (document.body.scrollHeight - 1000)) {
+      document.querySelector("main").classList.add("mini");
+      document.querySelector("footer").classList.add("fadeIn");
+    }
+    else {
+      document.querySelector("main").classList.remove("mini");
+      document.querySelector("footer").classList.remove("fadeIn");
+    }
+  }
+  else {
     document.querySelector("#navbar").classList.remove("darken");
     document.querySelector("#dev-title").classList.remove("fadeOut");
   }
