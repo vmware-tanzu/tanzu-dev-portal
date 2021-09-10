@@ -413,10 +413,12 @@ function scrollFunction() {
     if (document.body.scrollTop > (document.body.scrollHeight - 1000) || document.documentElement.scrollTop > (document.body.scrollHeight - 1000)) {
       document.querySelector("main").classList.add("mini");
       document.querySelector("footer").classList.add("fadeIn");
+      document.querySelector("#navbar").classList.add("darker");
     }
     else {
       document.querySelector("main").classList.remove("mini");
       document.querySelector("footer").classList.remove("fadeIn");
+      document.querySelector("#navbar").classList.remove("darker");
     }
   }
   else {
