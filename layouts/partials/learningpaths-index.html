@@ -24,7 +24,13 @@
             {{ end }}
         </div>
         <div class="learning-path-level">
-            {{ .Params.experience }}
+            {{ if eq .Params.experience "Beginner" }}
+                <h4><span class="badge badge-success mr-3">Beginner</span></h4>
+            {{ else if eq .Params.experience "Intermediate" }}
+                <h4><span class="badge badge-warning mr-3">Intermediate</span></h4>
+            {{ else if eq .Params.experience "Advanced" }}
+                <h4><span class="badge badge-danger mr-3">Advanced</span></h4>
+            {{ end }}
         </div>
     </a>
 
