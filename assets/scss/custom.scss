@@ -197,3 +197,133 @@
     float: left;
   }
 }
+
+  .carousel {
+    display: block;
+    position: absolute;
+    -webkit-transform: translateZ(0);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // width: 55%;
+    min-width: 550px;
+    margin: auto;
+    // font-size: 0;
+    // background: #505456;
+    // padding: 8px;
+    // border-radius: 6px;
+    // box-shadow: 0 4px 10px #000;
+    height: fit-content; // height: 200px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .touch .carousel {
+    overflow: auto;
+  }
+  .carousel:before, .carousel:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 0px;
+    font-size: 80px;
+    line-height: 190px;
+    font-family: arial;
+    color: #2ab1ce;
+    font-weight: bold;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+  }
+  .carousel:before {
+    content: '\2039';
+    left: 0;
+    text-align: left;
+    text-indent: -20px;
+    box-shadow: 50px 0 20px -20px #292b2c20 inset;
+  }
+  .carousel:after {
+    content: '\203A';
+    right: 0;
+    text-align: right;
+    // text-indent: 40px;
+    box-shadow: -50px 0 20px -20px #292b2c20 inset;
+  }
+  .carousel.right:after, .carousel.left:before {
+    opacity: 1;
+  }
+  .carousel.right:after {
+    right: 0;
+    text-indent: 20px;
+  }
+  .carousel.left:before {
+    left: 0;
+    text-indent: -40px;
+  }
+  .carousel > a {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    color: #CCC;
+    font-size: 1.5em;
+    transition: 0.1s;
+  }
+  .carousel > a:hover {
+    color: #FFF;
+  }
+  .carousel > a.prev {
+    left: -20px;
+  }
+  .carousel > a.next {
+    right: -20px;
+  }
+  .carousel > .slide {
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    background: #2ab1ce;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.2s, bottom 0.2s;
+  }
+  .carousel:hover > .slide {
+    opacity: 1;
+    bottom: -10px;
+  }
+  .carousel > .wrap {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .carousel > .wrap > ul {
+    list-style: none;
+    white-space: nowrap;
+    // height: 200px;
+  }
+  .carousel > .wrap > ul > li {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0 0 0 5px;
+    position: relative;
+    white-space: normal;
+    // overflow: hidden;
+    transition: 0.25s ease-out;
+  }
+  .carousel > .wrap > ul > li:first-child {
+    margin: 0;
+  }
+  .carousel > .wrap > ul > li > div {
+    display: block;
+    height: 100%;
+    width: 400px;
+    margin: auto;
+    vertical-align: bottom;
+    position: relative;
+    z-index: 1;
+    transition: 1s ease;
+  }

@@ -1,4 +1,12 @@
 {
-    "singleQuote": true,
-    "trailingComma": "all"
+  "singleQuote": true,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
 }
