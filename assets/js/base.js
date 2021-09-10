@@ -411,3 +411,38 @@ function scrollFunction() {
     document.querySelector("#dev-title").classList.remove("fadeOut");
   }
 }
+
+function removeNavClasses () {
+  $('#scope').removeClass('why-scope learn-scope projects-scope community-scope');
+  $('.drop-menu').removeClass('active');
+  $('.has-menu').removeClass('active');
+}
+$('#why-target').mouseenter(function(){
+  removeNavClasses();
+  $('#scope').addClass('why-scope');
+  $('#why-items').addClass('active');
+});
+$('#learn-target').mouseenter(function(){
+  removeNavClasses();
+  $('#scope').addClass('learn-scope');
+  $('#learn-items').addClass('active');
+});
+$('#project-target').mouseenter(function(){
+  removeNavClasses();
+  $('#scope').addClass('projects-scope');
+  $('#project-items').addClass('active');
+});
+$('#community-target').mouseenter(function(){
+  removeNavClasses();
+  $('#scope').addClass('community-scope');
+  $('#community-items').addClass('active');
+});
+$('.drop-menu').mouseenter(function () {
+  $('this').addClass('active');
+});
+$('.drop-menu ul').mouseleave(function () {
+  removeNavClasses();
+});
+$('.drop-menu').mouseleave(function () {
+  removeNavClasses();
+});

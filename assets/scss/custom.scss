@@ -197,8 +197,16 @@
   }
 }
 .td-home #hero {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+  .h1 {
+    font-size: 3rem;
+  }
+  .h1+p {
+    max-width: 600px;
+  }
+
 }
 .callout svg {
   opacity: .8;
