@@ -238,6 +238,10 @@
 footer {
   opacity: 0;
   transition: opacity .2s;
+  .container {
+    position: relative;
+    top: -5rem;
+  }
   &.fadeIn {
     opacity: 1;
   }
