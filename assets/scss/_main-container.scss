@@ -10,7 +10,7 @@
 main {
     opacity: 1;
     transform: scale(1);
-    transition: all .2s;
+    transition: all .2s ease-out;
 
     &.mini {
         transform: scale(.8);
