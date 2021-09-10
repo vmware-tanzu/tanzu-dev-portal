@@ -6,9 +6,13 @@ team:
   - VMware Tanzu Labs
 ---
 
-In this lab you will use
+In this lab you will see an evolution of the `pal-tracker`
+codebase, structured according to the principles described in
+the
+[App Continuum](https://courses.education.pivotal.io/appcontinuum).
+You will then use
 [GitHub Actions](https://github.com/features/actions) to
-deploy a system of four applications to Tanzu Application Service.
+deploy that system of four applications to Tanzu Application Service.
 
 ## Learning Outcomes
 
@@ -25,10 +29,6 @@ After completing the lab, you will be able to:
 
 ## Get started
 
-1.  Review the
-    [Intro](https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present#slide=id.ge9cac6b4e4_0_0)
-    slides.
-
 1.  Prepare a new `pal-tracker-distributed` codebase by following
     [the introduction codebase preparation](../intro/#project-structure-and-codebase)
     steps 3 and 4 using the
@@ -41,6 +41,12 @@ After completing the lab, you will be able to:
 1.  Prepare new GitHub repository secrets for your
     `pal-tracker-distributed` codebase according to the
     [Pipelines lab instructions](../pipelines/#configure-environment-variables).
+
+1.  Review the
+    [Overview](https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present#slide=id.ge9cac6b4e4_0_0)
+    slides.
+    These provide a view of the main elements of the new system
+    and how they interact.
 
 ## Set up services
 
@@ -94,6 +100,13 @@ your codebase.
     built before the rest of the build is loaded.
     This is where code for some custom Gradle plugins is stored.
 
+### A note on other tags
+
+You may see that the `pal-tracker-distributed` codebase contains a
+number of tags for code versions that are not referenced in these materials.
+They are used in other materials beyond the current scope of this
+learning path.
+
 ## Explore locally
 
 ### Build
@@ -107,8 +120,13 @@ mysql -uroot < databases/create_databases.sql
 ./gradlew clean build
 ```
 
-It is important to check that the code is working on your machine before
-each of the labs, so remember to run the build before each lab.
+You will notice that there unit tests for each of the components as
+well as basic tests for individual applications.
+However, there are also a set of integration tests that exercise
+all of the microservices, working together.
+This ability to test the system as a whole is greatly helped by
+having all the code, for all applications, together in a single repository.
+It also makes it easier to extract and share common code.
 
 ### Run
 
@@ -165,7 +183,8 @@ For example, the first `curl` command will produce something like this:
 {"id":1,"name":"Pete","info":"registration info"}
 ```
 
-So, the user ID generated is 1 and you can then define *USER_ID* as follows:
+From this you can see that the generated user ID is 1,
+and you can then set the shell variable *USER_ID* as follows:
 
 ```bash
 USER_ID=1
@@ -286,6 +305,13 @@ other people's applications.
     The `allocations`, `backlog`, and `timesheets` applications all
     integrate with the `registration` application, so make sure to
     exercise API endpoints that integrate with `registration`.
+
+You will note that a code change to any part of the codebase will cause
+all of the applications to be rebuilt, tested and pushed to TAS.
+This means that you have the highest degree of confidence that all
+the microservices will continue to work together, without having to worry
+about issues such as API compatibility between different
+deployed versions.
 
 ## Wrap up
 
