@@ -68,7 +68,13 @@
             </div>
         
         <!-- Getting Started-->
-        {{ $gettingstarted := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+        {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+        {{ $gettingstarted := slice }}
+        {{ range $guides }}
+            {{ if in .Params.tags "Getting Started" }}
+                {{ $gettingstarted = $gettingstarted | append . }}
+            {{ end }}
+        {{ end }}
         <div class='container py-5 border-bottom'>
             <!-- TODO: Update Icon -->
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>

@@ -7,6 +7,9 @@ topics:
 - Kubernetes
 - Containers
 - Microservices
+tags:
+- Kubernetes
+- Getting Started
 weight: 1
 oldPath: "/content/guides/kubernetes/what-is-kubernetes.md"
 aliases:

@@ -4,6 +4,8 @@ lastmod: '2021-02-26'
 tags:
 - Containers
 - Microservices
+- Getting Started
+featured: true
 title: What are Containers?
 topics:
 - Containers

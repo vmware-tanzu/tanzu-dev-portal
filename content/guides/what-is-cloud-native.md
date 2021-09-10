@@ -5,6 +5,7 @@ parent: What are Microservices?
 tags:
 - Cloud Native
 - Microservices
+- Getting Started
 title: What is Cloud Native?
 topics:
 - Kubernetes
