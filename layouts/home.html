@@ -66,7 +66,7 @@
 	<div class="row justify-content-center w-100">
 
         <div class="gs-tanzu col-lg-10 mb-0 mb-lg-0 mx-auto">
-            <a href="#" class="mb-0 text-white d-block">
+            <a href="https://learn.tanzu.io" class="mb-0 text-white d-block">
               Get Started with Tanzu >
             </a>
           </div>
@@ -77,17 +77,20 @@
 
 <!-- Featured Learning Paths -->
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="row pt-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-	<div class="row justify-content-center w-100">
-
+<section class="row pt-0 mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+	
+    <div class="row justify-content-center w-100">
         <div class="col-sm-12 pb-4">
             <h3>Featured Learning Paths</h3>
         </div>
+    </div>
 
+    
+    <div class="row justify-content-center flex-nowrap w-100">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
         {{ range $learningpaths }} <!-- TODO: Get featured learning paths -->
         <div class="learning-path-card col-lg-4 mb-2 mb-lg-0 ">
-            <a href="#">
+            <a href="{{ .RelPermalink }}">
                 <p><div class="py-3 px-4 mb-0 text-left h3 text-white">Learning Path {{ .Title }} </div></p>
                 <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
                     {{ .Description }}
