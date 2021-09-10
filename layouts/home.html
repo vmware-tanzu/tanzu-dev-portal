@@ -96,7 +96,13 @@
                     {{ .Description }}
                 </div>
                 <div class="learning-path-duration">
-                {{ .Params.duration }}m <!-- TODO: Format to nearest hour -->
+                    <i class="fas fa-hourglass-half"></i>
+                    {{ if gt .Params.duration 60 }}
+                        <!-- Round up to closest full hour duration -->
+                        {{ math.Ceil (div .Params.duration 60.0) }}h    
+                    {{ else }}
+                        {{ .Params.duration }}m
+                    {{ end }}
                 </div>
                 <div class="learning-path-level">
                 {{ .Params.experience }}
