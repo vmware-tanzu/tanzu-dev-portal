@@ -212,6 +212,16 @@ body.tv-episode #register .mktoForm select {
 nav .nav-item:last-child {
   background-color: #ADBBC4 !important;
 
+  .fa-sun {
+    color: #1B2A32 !important;
+  }
+  #dark-select {
+    background-color: transparent !important;
+  }
+  #theme-square {
+    transform: translateX(32px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
   .nav-select {
     transition: opacity .2s;
     &:nth-child(1) {

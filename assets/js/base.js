@@ -64,7 +64,7 @@ limitations under the License.
       var iframe = document.getElementById("auth-iframe");
       $("#light-select").show();
       $("#dark-select").hide();
-
+      $("#theme-square").addClass("moveSquare");
       if ($("html").hasClass("light-mode")) {
         // if (iframe && iframe.contentWindow) {
         //   iframe.contentWindow.postMessage("dark", "*");
@@ -80,6 +80,7 @@ limitations under the License.
       var iframe = document.getElementById("auth-iframe");
       $("#dark-select").show();
       $("#light-select").hide();
+      $("#theme-square").removeClass("moveSquare");
 
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");

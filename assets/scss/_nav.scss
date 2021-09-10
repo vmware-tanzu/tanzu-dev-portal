@@ -213,14 +213,11 @@ nav {
     .nav-item:last-child {
         padding: 5px;
         background-color: #1B2A32;
-        border-radius: 5px;
     }
     .nav-select {
-        background-color: white;
         height: 70%;
         width: 41%;
         position: absolute;
-        border-radius: 5px;
         top: 5px;
         z-index: 0;
         
@@ -232,6 +229,17 @@ nav {
         background-color: #1B2A32 !important;
         display: none;
         }
+    }
+    #theme-square {
+        left: 0;
+        top: 0;
+        height: 101%;
+        width: 50%;
+        position: absolute;
+        background: $gray-200;
+        transform: translateX(0px);
+        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
+        transition: transform .2s ease-in;
     }
     i {
         color: white;
@@ -248,7 +256,3 @@ nav {
         }
     }
 }
-
-.nav-tabs {
-    border-bottom: 1px solid #000000;
-  }
