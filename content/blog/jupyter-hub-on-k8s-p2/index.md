@@ -26,7 +26,10 @@ Each user that accesses JupyterHub will have their own workspace complete with a
 - **industry-revenue-analysis.ipynb** – Analysis of historical financial data organized by industry that leverages the pandas library
 - **ml-stock-predictor-knn-v4.ipynb** – Machine learning (ML) based on revenue data from public financial statements that leverages the `scikit-learn` library for Python
 
-**Note:** Each time a user logs into the JupyterHub web page, an additional pod will be instantiated for that user and a 10GB persistent volume will be mapped to the user’s home directory.  
+{{% callout %}}
+**Note**: Each time a user logs into the JupyterHub web page, an additional pod will be instantiated for that user and a 10GB persistent volume will be mapped to the user’s home directory.  
+{{% /callout %}}
+
 
 1. In [Part 1](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-1), we showed you how to expose the JupyterHub proxy-public Kubernetes service locally on your Mac using port forwarding. If you have not already done this, execute the following command:
 

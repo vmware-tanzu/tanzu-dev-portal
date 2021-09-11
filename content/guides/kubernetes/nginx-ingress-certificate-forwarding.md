@@ -20,7 +20,10 @@ If you are building an application service, there are several ways to authentica
 
 What advantage do client certificates offer compared to API keys? As Cloudflare[^Cloudflare] puts it,
 
-> <!-- spellchecker-disable -->[C]lient<!-- spellchecker-enable --> certificates offer a layer of security that API keys cannot provide. If an API key gets compromised mid-connection, it can be reused to fire its own valid, trusted requests to the backend infrastructure. However, the private key of the client certificate is used to create a digital signature in every TLS connection, and so even if the certificate is sniffed mid-connection, new requests can’t be instantiated with it.
+{{% callout %}}
+**Note**: <!-- spellchecker-disable -->[C]lient<!-- spellchecker-enable --> certificates offer a layer of security that API keys cannot provide. If an API key gets compromised mid-connection, it can be reused to fire its own valid, trusted requests to the backend infrastructure. However, the private key of the client certificate is used to create a digital signature in every TLS connection, and so even if the certificate is sniffed mid-connection, new requests can’t be instantiated with it.
+{{% /callout %}}
+
 
 [^Cloudflare]: https://blog.cloudflare.com/introducing-tls-client-auth/
 

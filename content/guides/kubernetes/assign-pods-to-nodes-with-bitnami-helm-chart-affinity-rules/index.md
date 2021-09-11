@@ -32,7 +32,9 @@ This article assumes that:
 * You have a Google Cloud account. [Register for a Google Cloud account](https://cloud.google.com/free).
 * You have a Kubernetes cluster running with Helm v3.x and `kubectl` installed. [Learn more about getting started with Kubernetes and Helm using different cloud providers](https://docs.bitnami.com/kubernetes/).
 
-{{% callout %}} This guide uses a Kubernetes cluster created in GKE. These steps are the same for all Kubernetes engines. They don't work, however, in Minikube, since with Minikube you only can create single-node clusters. {{% /callout %}}
+{{% callout %}} 
+**Note**: This guide uses a Kubernetes cluster created in GKE. These steps are the same for all Kubernetes engines. They don't work, however, in Minikube, since with Minikube you only can create single-node clusters. 
+{{% /callout %}}
 
 ## How Affinity Rules Work in Bitnami Helm Charts
 

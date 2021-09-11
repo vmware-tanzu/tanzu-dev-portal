@@ -79,8 +79,9 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
-
-> If you're new to Linux, you can do this by opening the Terminal application and typing `nano .bashrc`. Nano uses arrows to navigate, `ctrl-o` to write the changes out, and `ctrl-x` to quit.
+{{% callout %}}
+**Note**: If you're new to Linux, you can do this by opening the Terminal application and typing `nano .bashrc`. Nano uses arrows to navigate, `ctrl-o` to write the changes out, and `ctrl-x` to quit.
+{{% /callout %}}
 
 Once that's done, close your terminal session (type `exit`) and then open a new terminal. 
 

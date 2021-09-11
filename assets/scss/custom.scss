@@ -134,7 +134,7 @@
         }
       }
     }
-  
+
   footer {
       min-height: 150px;
   
@@ -177,7 +177,6 @@
 .left-edge-color-gray {
   border-left-color: rgba(173, 187, 196, 1);
 }
-;
 
 .left-edge-color-green {
   border-left-color: rgba(96, 181, 21, 1);;
@@ -197,6 +196,9 @@
     float: left;
   }
 }
+
+.callout svg {
+  opacity: .8;
 
 .tab-content {
   margin: 0rem;
@@ -220,4 +222,4 @@
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-}
+}}

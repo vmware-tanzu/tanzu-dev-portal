@@ -35,7 +35,10 @@ Before you get started you will need to do the following:
   ```
 	* [GitHub releases](https://github.com/vmware-tanzu/carvel-kapp/releases/tag/v0.37.0): move the binary to `/usr/local/bin` or add it to your `$PATH` and run `chmod +x` to make it executable
 
-> Note: This guide uses kapp v0.37.0, and we suggest you download and install the same version to ensure the best experience as you follow through this guide.
+{{% callout %}}
+**Note**: This guide uses kapp v0.37.0, and we suggest you download and install the same version to ensure the best experience as you follow through this guide.
+{{% /callout %}}
+
 
 ## Deploy App
 Let’s go ahead and deploy our first application with kapp!

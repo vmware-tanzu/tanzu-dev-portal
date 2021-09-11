@@ -47,7 +47,10 @@ The following are the steps you will complete in this guide:
 * Step 3: Create a secret to secure the deployment
 * Step 4: Deploy the example application in Kubernetes
 
-> Learn how to create a Spring Boot Docker container image in the [Deploy locally a Spring Boot application using Bitnami containers](../deploy-locally-spring-boot-application-docker) guide.
+{{% callout %}}
+**Note**: Learn how to create a Spring Boot Docker container image in the [Deploy locally a Spring Boot application using Bitnami containers](../deploy-locally-spring-boot-application-docker) guide.
+{{% /callout %}}
+
 
 ## Step 1: Create the Helm chart
 

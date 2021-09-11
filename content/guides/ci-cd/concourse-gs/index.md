@@ -119,7 +119,9 @@ Once all the pods are ready, Concourse CI will be up and running. But it won’t
 
 Running this script opens up a node port in your Kubernetes cluster and forwards it to your localhost. Assuming you left these values as default, your Concourse CI cluster should now be available at [http://localhost:8080](http://localhost:8080). 
 
+{{% callout %}}
 **Note**: This port-forward task is running in the foreground in your terminal. To keep UI access available, open a new terminal window or tab and cd back into your working directory.
+{{% /callout %}}
 
 You can access the cluster by logging in using the credentials set in the `values.yml` file. If you left them as default the username and the password are both `test`. At this point, there are no pipelines set; you need to install the fly client application first.
 
@@ -135,8 +137,9 @@ Once completed, make the binary executable, then move it into your `$PATH`. That
 ```
 sudo chmod +x ~/Downloads/fly && mv ~/Downloads/fly /usr/local/bin
 ```
-
+{{% callout %}}
 **Note**: These commands are for use on a Macintosh computer. They will need to be modified for other platforms.
+{{% /callout %}}
 
 Now you need to let fly know about your Concourse CI cluster. Do that with the `target` command for your fly client. Notice we are giving our Concourse CI a name of `demo`. It can be any name you want, just keep it short. Every command run using fly must include the `--target` flag to explicitly run commands on a specific cluster, so unless you `alias` it, you will be typing it a lot.
 
@@ -191,10 +194,13 @@ You will notice there are a few `((variables))` contained within the pipeline; y
 ```
 vim pipelines/credentials.yml # replace vim with your favorite text editor
 ```
+{{% callout %}}
+**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
+{{% /callout %}}
 
->**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
-
->**Another note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
+{{% callout %}}
+**Note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
+{{% /callout %}}
 
 That’s because using a credentials file provides just a simple translation done at the time when the pipeline is set. Which is not a big deal when it's just URLs, but when these files contain access tokens, private SSH keys, passwords, and the like, you will want a more secure system.
 

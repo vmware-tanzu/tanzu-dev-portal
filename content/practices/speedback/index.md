@@ -25,7 +25,7 @@ why:
 It is recommended that a person outside the team facilitates the Speedback sessions. This person’s responsibilities include introducing the Speedback concept (including emphasizing the prep work involved) ahead of time, planning rooms and rounds (who talks to who when and where), keeping time/enforcing switches, and being available to help facilitate feedback sessions if asked. By default, this person does not sit in on any feedback sessions. 
 
    {{< callout >}}
-   Tip: 10 minutes per pair is a good starting point but can be adjusted. Subsequent Speedback sessions with mature, experienced teams might get it down to 5 minutes.
+   **Tip**: 10 minutes per pair is a good starting point but can be adjusted. Subsequent Speedback sessions with mature, experienced teams might get it down to 5 minutes.
 
    **Remote Tip:** For distributed teams, use video calls and "breakout rooms" for these feedback sessions. 
    
@@ -42,19 +42,19 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 1. Let the team know a Speedback session is happening, and tell them how to prepare. 
 
    {{< callout >}}
-   Tip: Feel free to modify and use the [**email template** in the Facilitator Notes & Tips](#email-template) section.
+   **Tip**: Feel free to modify and use the [**email template** in the Facilitator Notes & Tips](#email-template) section.
    {{< /callout >}}
 
 1. Send out calendar invites to block out times and rooms. If remote, include video-call sessions. Since people will be paired up, you'll need half as many rooms or video call sessions as number of participants.
    
    {{< callout >}}
-   Example: For a team of 8, book 4 rooms or set up 4 dedicated video call sessions.
+   **Example**: For a team of 8, book 4 rooms or set up 4 dedicated video call sessions.
    {{< /callout >}}
 
 1. Prior to the Speedback session, send a reminder for participants to make sure they have their feedback prepared.
    
    {{< callout >}}
-   Tip: It is _highly encouraged_ that every team member prepare written feedback for every other team member prior to the session. This helps sessions move quickly and smoothly, and shows respect to one’s teammates. 
+   **Tip**: It is _highly encouraged_ that every team member prepare written feedback for every other team member prior to the session. This helps sessions move quickly and smoothly, and shows respect to one’s teammates. 
    {{< /callout >}}
       
    Feedback should ideally contain both positive and at least one constructive thought. Consider using one of the feedback frameworks described in the linked Speedback slide deck, such as the Actionable, Specific, and Kind framework (ASK).
@@ -74,7 +74,7 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 1. Speedback time. In any given session, one participant gives their feedback to the other, and they spend up to 5 minutes discussing. Participants are encouraged to take notes but remain engaged. After 5 minutes they switch roles.
 
    {{< callout >}}
-   Tip: As needed, participants are encouraged to schedule follow-up sessions to discuss feedback in more detail.
+   **Tip**: As needed, participants are encouraged to schedule follow-up sessions to discuss feedback in more detail.
    {{< /callout >}}
 
 1. At the end of the 10 minutes the next round of Speedback begins, with each participant paired up with a different teammate. This continues until all participants have had a chance to give feedback to one another.
@@ -89,7 +89,7 @@ At the end of all one-on-one interactions, gather the team together and perform 
 Speedback can be intense and overwhelming and some restorative or reflection time afterwards is important. Individuals can either do their own thing, or the team can go out for a coffee or ice cream - they can decide during the wrap up.
 
    {{< callout >}}
-   Tip: Proactively plan a team outing or other non-work (even remote-friendly) social activity! Feedback sessions can be cathartic. It's nice to have a bit of bonding-time afterwards.
+   **Tip**: Proactively plan a team outing or other non-work (even remote-friendly) social activity! Feedback sessions can be cathartic. It's nice to have a bit of bonding-time afterwards.
    {{< /callout >}}
 {{% /section %}}
 

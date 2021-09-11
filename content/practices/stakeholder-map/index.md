@@ -46,11 +46,11 @@ why:
 1. Organize the sticky notes on the whiteboard before starting activity, placing the core team in the center, surrounded by clustered departments and project sponsors
 
    {{% callout %}}   
-   Note: A core team member is someone who will be working on the project full-time
+   **Note**: A core team member is someone who will be working on the project full-time
    {{% /callout %}}   
 
    {{% callout %}}   
-   Tip: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
+   **Tip**: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
    {{% /callout %}}   
 
    Make sure people have name tags beforehand, it helps when calling on people

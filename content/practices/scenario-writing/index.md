@@ -41,7 +41,7 @@ why:
    - Scenario
 
    {{% callout %}}
-   Tip: If time is short and/or the full team is busy with other work, you can also do this activity by yourself/with your pair using the word processing program of your choice
+   **Tip**: If time is short and/or the full team is busy with other work, you can also do this activity by yourself/with your pair using the word processing program of your choice
    {{% /callout %}}
    
 1. Begin by defining the **user**, ideally using the persona(s) your team has created. What you write should answer these questions:
@@ -50,7 +50,7 @@ why:
    - What is their role?
 
    {{% callout %}}
-   Tip: If you have your persona available, you can use it in this section instead of making one from scratch
+   **Tip**: If you have your persona available, you can use it in this section instead of making one from scratch
    {{% /callout %}}
 
    You can lead the team in creating a well-formed persona using the [Personas](/practices/personas) activity
@@ -73,7 +73,7 @@ why:
    - Anything relevant the user does after achieving the scenario’s goal
 
    {{% callout %}}
-   Tip: If you’re writing a scenario for the future state, be careful not to be too prescriptive in how you capture the solution. Leave enough ambiguity so that the team has space to ideate broadly.
+   **Tip**: If you’re writing a scenario for the future state, be careful not to be too prescriptive in how you capture the solution. Leave enough ambiguity so that the team has space to ideate broadly.
    {{% /callout %}}
 {{% /section %}}
 

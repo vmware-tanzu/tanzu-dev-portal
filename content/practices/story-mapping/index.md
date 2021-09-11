@@ -35,17 +35,17 @@ why:
 1. Hand out a stack of stickies (of the same color) to each of the participants. Explain that everyone is going to use these stickies to tell the story of the product through user tasks.
 
    {{% callout %}}
-   Tip: The story should start with the first action your “primary user” takes. As the story unfolds, other users may need to be weaved into the story. That’s fine! (Sometimes, from a narrative perspective, it makes sense to weave in the computer or device as a user too!) Just make sure participants note which users are taking the action on a given sticky.
+   **Tip**: The story should start with the first action your “primary user” takes. As the story unfolds, other users may need to be weaved into the story. That’s fine! (Sometimes, from a narrative perspective, it makes sense to weave in the computer or device as a user too!) Just make sure participants note which users are taking the action on a given sticky.
    {{% /callout %}}
 1. Give everyone a few minutes to silently generate user tasks that together compose the narrative flow of the product or solution.
 
    {{% callout %}}
-   Tip: At this point, it’s important to remain a mile wide and inch deep. Getting the full scope of the story is more important at this point than getting all the granular detail.
+   **Tip**: At this point, it’s important to remain a mile wide and inch deep. Getting the full scope of the story is more important at this point than getting all the granular detail.
    {{% /callout %}}
 1. Start putting user tasks on the whiteboard by asking each participant for a task, one at a time. If there are duplicates, use the one that best captures the step and discard the rest.
 
    {{% callout %}}
-   Tip: Focus on a single happy path for this step. We will incorporate secondary actions later.
+   **Tip**: Focus on a single happy path for this step. We will incorporate secondary actions later.
    {{% /callout %}}
 
    Check with the group after adding each task to make sure the order feel rights and critical tasks have not been skipped.
@@ -54,7 +54,7 @@ why:
 1. Have the participants to come up to the whiteboard and engage with the map. Ask them to think about variations or deviations from the “happy path” already outlined.
 
    {{% callout %}}
-   Tip: Play “wouldn’t it be cool if?” and feel free to go as blue sky as you’d like. Add in product details, like proposed UI or business rules.
+   **Tip**: Play “wouldn’t it be cool if?” and feel free to go as blue sky as you’d like. Add in product details, like proposed UI or business rules.
    {{% /callout %}}
 1. Ask the participants to write these secondary tasks on stickies and place them underneath the backbone stickies in the appropriate order.
 

@@ -166,8 +166,10 @@ Now that the `argocd` client is installed, you can log it into your ArgoCD insta
 ```
 argocd login localhost:8080
 ```
-
+{{% callout %}}
 **Note**: Again, as with the UI, you will need to accept the server certificate error.
+{{% /callout %}}
+
 
 **Optional step**: You can change your password at this stage if you like. This command will prompt you for your current password, your new password, then to confirm that new password.
 
@@ -262,8 +264,10 @@ Once completed, your target Kubernetes cluster will be creating the pod on which
 ```
 kubectl config use-context target-k8s
 ```
-
+{{% callout %}}
 **Note**: Since the argocd CLI client uses your kubectl context to connect to your cluster, any argocd commands you run from this point won’t work. You will need to change contexts back to your argocd-k8s cluster to manage ArgoCD.
+{{% /callout %}}
+
 
 Now simply forward the port as you did for the ArgoCD UI. Once completed, spring-petclinic will be available at [http://localhost:9090](http://localhost:9090).
 

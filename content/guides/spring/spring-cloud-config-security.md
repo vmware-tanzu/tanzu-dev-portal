@@ -25,7 +25,10 @@ This guide explains two methods to increase the security of a Config Server:
 * Using encryption in combination with a git repository
 * Using Vault as a secure repository
 
-**NOTE:** To use encryption and decryption features you need the full-strength Java Cryptography Extension (JCE) installed in your JVM (it is not included by default). Download the *Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files* from Oracle, and follow instructions for installation (essentially replace the two policy files in the JRE lib/security directory with the ones you downloaded).
+{{% callout %}}
+**Note:** To use encryption and decryption features you need the full-strength Java Cryptography Extension (JCE) installed in your JVM (it is not included by default). Download the *Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files* from Oracle, and follow instructions for installation (essentially replace the two policy files in the JRE lib/security directory with the ones you downloaded).
+{{% /callout %}}
+
 ## Securing a git repository
 The default backend for a Config Server is a git repository. This can be configured to store and serve encrypted configuration values to protect sensitive information. In a secure Config Server, the remote property sources contain encrypted content (values starting with `{cipher}`). These will be decrypted before sending to clients over HTTP. The main advantage of this approach is that property values aren’t stored in plain text. 
 
@@ -64,7 +67,10 @@ In practice, you might not want to decrypt locally because it spreads the [key m
 ## Using HashiCorp Vault as a secure external repository
 Spring Cloud Vault Config provides client-side support for externalized configuration in a distributed system. [HashiCorp’s Vault](https://learn.hashicorp.com/collections/vault/getting-started) is a central place to manage external secret properties for applications across all environments. It can be used to back Config Server instances.This section provides some guidelines for working with a Vault backend. 
 
-**NOTE** you can also configure applications to access Vault directly using [Spring Cloud Vault](https://cloud.spring.io/spring-cloud-vault/reference/html/). Spring Cloud Vault and Spring Cloud Config with a Vault backend are [not the same thing](https://stackoverflow.com/questions/45502722/difference-between-spring-cloud-vault-and-spring-cloud-config-with-vault-backend).
+{{% callout %}}
+**Note** you can also configure applications to access Vault directly using [Spring Cloud Vault](https://cloud.spring.io/spring-cloud-vault/reference/html/). Spring Cloud Vault and Spring Cloud Config with a Vault backend are [not the same thing](https://stackoverflow.com/questions/45502722/difference-between-spring-cloud-vault-and-spring-cloud-config-with-vault-backend).
+{{% /callout %}}
+
 
 To enable Config Server to [use a Vault backend](https://cloud.spring.io/spring-cloud-config/reference/html/#vault-backend), you run your Config Server with the Vault profile. For example, in your Config Server’s `application.properties`, add `spring.profiles.active=vault`.
 

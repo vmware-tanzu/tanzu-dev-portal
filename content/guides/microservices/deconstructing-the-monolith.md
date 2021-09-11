@@ -31,11 +31,16 @@ There is a pretty good chance more than a few people in your organization are ta
 
 There are nearly as many definitions of a microservice as there are developers touting them as miracle cures. Before delving further, the key definition is the one inside the walls of *your* organization. Whether it adheres to the Platonic ideal form of a microservice isn’t nearly as important as getting everyone on the same page. There is a reason why a glossary is often one of the most important artifacts in any project room.
 
-> If you’ve already debated tabs vs spaces, consider touching off a [discussion around the definition](https://mobile.twitter.com/littleidea/status/500005289241108480) of a microservice. Consider removing sharp objects, it may devolve rapidly. Microservices really are in the eye of the beholder!
+{{% callout %}}
+**Note**: If you’ve already debated tabs vs spaces, consider touching off a [discussion around the definition](https://mobile.twitter.com/littleidea/status/500005289241108480) of a microservice. Consider removing sharp objects, it may devolve rapidly. Microservices really are in the eye of the beholder!
+{{% /callout %}}
+
 
 Ultimately, microservices are a reaction to monoliths and heavyweight [service oriented architectures](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html) as well as the capabilities of cloud environments. The issues with poorly structured monolithic architectures are legion, from low developer productivity caused by massive code bases to the inability to target compute resources to the bits that need more performance, there are no shortage of headaches. Software is not immune to the [second law of thermodynamics](https://www.grc.nasa.gov/WWW/K-12/airplane/thermo2.html), over time, the modularity of the monolith breaks down and it takes longer and longer to add new features and functionality.
 
-> It should be stressed that monoliths span the continuum of modularity and they can actually be structured in such a way that they don’t suffer all of the maladies normally associated with the term “monolith”. You can apply [microservice design principles](https://twitter.com/simonbrown/status/962945350737825793?lang=en) to monoliths!
+{{% callout %}}
+**Note**: It should be stressed that monoliths span the continuum of modularity and they can actually be structured in such a way that they don’t suffer all of the maladies normally associated with the term “monolith”. You can apply [microservice design principles](https://twitter.com/simonbrown/status/962945350737825793?lang=en) to monoliths!
+{{% /callout %}}
 
 Personally, I am a fan of “something that can be rewritten in two weeks or less” since that reminds us microservices should be, well, small. Others are partial to saying any service built and maintained by a two pizza team. While I support two pizza teams, that definition won’t help you determine just how many services said team can support. Of course there is no stock answer to that question, it depends on the volatility of the services in question. If the microservices are stable, a two pizza team might be able to support ten or twenty however if the services are constantly changing, the exact same team might struggle with more than five!
 
@@ -59,7 +64,9 @@ There is no doubt that microservices bring a host of benefits however, they come
 
 **Facilitate Legal Compliance**. Our applications often deal with sensitive data which means compliance with various laws and regulations. Credit cards and personally identifiable information must be safeguarded. Creating a separate microservice to handle the legally entangled aspects of your application can be simpler and faster than attempting to rewire the monolith.
 
-> Microservices are not an excuse to use your favorite esoteric language or technology. You must [weigh the pros and cons](https://www.vmwaretanzu.com/episode/0004/) of any design choice and do not dismiss the cost of maintaining multiple disparate stacks.
+{{% callout %}}
+**Note**: Microservices are not an excuse to use your favorite esoteric language or technology. You must [weigh the pros and cons](https://www.vmwaretanzu.com/episode/0004/) of any design choice and do not dismiss the cost of maintaining multiple disparate stacks.
+{{% /callout %}}
 
 If you’d like to learn more about these principles, peruse the blog series [Should that be a Microservice?](https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind) on the [VMware Tanzu blog](https://tanzu.vmware.com/blog).
 
@@ -83,4 +90,6 @@ Once you have some candidate boundaries, you can test them! Are there any “sch
 
 There is a fair amount of art involved when you decompose a monolith, there is no magic formula. Hopefully this article gives you some tips and a place to start your journey. [Refactoring](https://www.youtube.com/watch?v=toqfiv4o7jA) takes time, be patient, your portfolio wasn’t built in a day and you won’t move everything to the cloud in a week. Move what makes sense, prioritize what can and be ruthlessly pragmatic. Good luck!
 
-> Decomposing the monolith can be a very challenging exercise. With years of technical debt, mounting pressure and an often unconscious attachment to “we’ve always done it that way” it can be a challenge to shift to microservices. Not to toot our own horn, but the [VMware Tanzu Labs](https://tanzu.vmware.com/labs) team has a [proven track record of success](https://tanzu.vmware.com/customers) helping companies of all sizes in a wide variety of domains [modernize their apps](https://tanzu.vmware.com/application-modernization). We even offer a virtual consultation, if you’re interested, please [reach out](https://tanzu.vmware.com/product-consultation).
+{{% callout %}}
+**Note**: Decomposing the monolith can be a very challenging exercise. With years of technical debt, mounting pressure and an often unconscious attachment to “we’ve always done it that way” it can be a challenge to shift to microservices. Not to toot our own horn, but the [VMware Tanzu Labs](https://tanzu.vmware.com/labs) team has a [proven track record of success](https://tanzu.vmware.com/customers) helping companies of all sizes in a wide variety of domains [modernize their apps](https://tanzu.vmware.com/application-modernization). We even offer a virtual consultation, if you’re interested, please [reach out](https://tanzu.vmware.com/product-consultation).
+{{% /callout %}}
