@@ -19,6 +19,8 @@ topics:
 oldPath: "/content/guides/ci-cd/express-app-bitnami-skaffold-octant.md"
 aliases:
 - "/guides/ci-cd/express-app-bitnami-skaffold-octant"
+level1: Building Modern Applications
+level2: Modern Development Practices
 ---
 
 As Kubernetes' importance as a platform grows, developers are increasingly searching for ways to build and debug cloud-native applications on Kubernetes infrastructure from the get-go. Rather than first hacking on code in local (or virtualized) environments and then migrating it to cloud-native architecture, this new approach involves continuously developing, debugging and deploying containerized applications on a live Kubernetes cluster.
@@ -42,7 +44,9 @@ This guide makes the following assumptions:
 * You have Docker installed. [Learn about installing and configuring Docker for your platform](https://docs.docker.com/install/).
 * You have a Docker Hub account. If not, [sign up for a free Docker Hub account](https://hub.docker.com/signup).
 
-> As of this writing, Skaffold only works with Helm v2.x.
+{{% callout %}}
+**Note**: As of this writing, Skaffold only works with Helm v2.x.
+{{% /callout %}}
 
 ## Step 1: Create a simple Express application
 
@@ -208,7 +212,10 @@ Bitnami's Node.js chart comes with a large number of configurable parameters, wh
 * The *service.type* parameter configures the deployment to be available at a public load balancer IP address so that it can be easily reviewed or tested.
 * The *applicationPort* parameter exposes the application on port 3000, which is the port configured for the application in the *Dockerfile*. 
 
-> For Node.js applications that use MongoDB, Bitnami's Node.js chart will automatically deploy MongoDB on your cluster. Alternatively, if you're using a cloud-based MongoDB service, you can skip the cluster deployment of MongoDB and instead configure the chart with the necessary credentials to connect to your remote MongoDB service. [See the complete list of available chart parameters](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).
+{{% callout %}}
+**Note**: For Node.js applications that use MongoDB, Bitnami's Node.js chart will automatically deploy MongoDB on your cluster. Alternatively, if you're using a cloud-based MongoDB service, you can skip the cluster deployment of MongoDB and instead configure the chart with the necessary credentials to connect to your remote MongoDB service. [See the complete list of available chart parameters](https://github.com/bitnami/charts/tree/master/bitnami/node#parameters).
+{{% /callout %}}
+
 
 ## Step 3: Continuously build and test the application
 
@@ -264,7 +271,10 @@ This will start a browser on your system and direct you to the Octant dashboard.
 octant --listener-addr 0.0.0.0:7777
 ```
 
-> Note that Octant does not come with authentication enabled so, if accessing it remotely from a different host, ensure that your firewall configuration only allows access from whitelisted hosts or add your own authentication layer to avoid cluster information being exposed to unauthorized users.
+{{% callout %}}
+**Note**: Octant does not come with authentication enabled so, if accessing it remotely from a different host, ensure that your firewall configuration only allows access from whitelisted hosts or add your own authentication layer to avoid cluster information being exposed to unauthorized users.
+{{% /callout %}}
+
 
 The Octant dashboard will display the running workloads on the cluster:
 

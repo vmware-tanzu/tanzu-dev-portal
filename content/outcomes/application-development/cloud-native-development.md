@@ -1,9 +1,16 @@
 ---
-title: Cloud Native Development
-weight: 40
+date: '2021-06-15'
+lastmod: '2021-07-12'
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+title: Cloud Native Development
+weight: 70
+tags:
+- 12 Factor
+- Culture
+- Cloud Native
+- Architecture
 ---
 
 Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.
@@ -57,7 +64,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 | Twelve-factor application | A set of [twelve principles and practices](https://12factor.net/) that developers follow to construct applications optimized for modern cloud environments. Those twelve factors are often used to determine how well an application leverages cloud native technologies.
 | Microservice architecture | A software architectural style that functionally decomposes an application into a set of loosely coupled services. It is prevalent within companies craving greater agility and scalability. The microservices model is an alternative to traditional monolithic software consisting of tightly integrated modules that typically ship infrequently and scale as a single unit.  Microservices are not silver bullets, their drawbacks and benefits should be carefully weighed before use. |
 | Cloud Native Patterns | A catalog of reusable solutions to recurring problems occurring in cloud native applications. Each pattern describes an architectural problem, its solution, and implied benefits, and drawbacks. |
-| Domain-Driven Design | A software development philosophy that encourages thinking in business domains at each step of the process: discovery, architecture, and design. [Domain-Driven Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) comprises a variety of practices (for example, Event Storming) and concepts (for example, Bounded Context), while infusing a common "ubiquitous" language for better collaboration and alignment between business people and software engineers. DDD is not an all-or-nothing deal. You can apply the ideas from DDD as much or as little as you feel is beneficial to the project you're working on. |
+| Domain-Driven Design | A software development philosophy that encourages thinking in business domains at each step of the process: discovery, architecture, and design. [Domain-Driven Design (DDD)](https://github.com/ddd-crew/welcome-to-ddd) comprises a variety of practices (for example, Event Storming) and concepts (for example, Bounded Context), while infusing a common "ubiquitous" language for better collaboration and alignment between business people and software engineers. DDD is not an all-or-nothing deal. You can apply the ideas from DDD as much or as little as you feel is beneficial to the project you're working on. |
 |  |  |
 {{< table />}}
 
@@ -123,7 +130,7 @@ For more information on cloud native apps check out the free e-book [Beyond the 
 
 To deepen your understanding, check out the following resources:
 
-#### Cloud Native
+### Cloud Native
 * [What is Cloud Native? ](https://tanzu.vmware.com/developer/guides/microservices/what-is-cloud-native/) - VMware Tanzu Developer Center article
 * [How to think Cloud Native?](https://tanzu.vmware.com/content/white-papers/how-to-think-cloud-native) - Whitepaper by Joe Beda
 * [Cloud Native Computing Foundation (CNCF) ](https://www.cncf.io/) - Home page of an organization aiming to advance cloud native and container technology while aligning the tech industry around their evolution.
@@ -131,7 +138,7 @@ To deepen your understanding, check out the following resources:
 	* [CNCF Cloud-Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)  guidance for enterprises beginning their cloud-native journey - Image
 * [Difference between Cloud and Cloud Native discussed by Kubernetes founders Craig McLuckie and Joe Beda](https://youtu.be/I0p8MIezKkE) - YouTube video
 
-#### Concepts
+### Concepts
 
 * [Beyond the Twelve-Factor App](https://tanzu.vmware.com/content/blog/beyond-the-twelve-factor-app) - e-book
 * [Microservices: How to deliver scalable software, faster](https://tanzu.vmware.com/microservices) - VMware Tanzu article

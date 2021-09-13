@@ -12,6 +12,7 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+10x
 12SwitchRestoresSansCheckOuts
 2x2
 3D
@@ -21,6 +22,7 @@
 8PpgqEqkQWA
 A3
 AAAA
+Aasta
 Abbie
 Abdellfetah
 Abo
@@ -33,8 +35,10 @@ accessor
 acknowledgedEvents
 acknowledgement
 Acknowledgement
+ActiveMQ
 Activiti
 ad-hoc
+add-on(s)?
 addAndReturnSize
 addAndReturnSizes
 additively
@@ -51,6 +55,7 @@ Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
 Alertmanager
+Aletty
 Alexa
 Alexey
 Alibaba
@@ -62,6 +67,7 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+Andriy
 Ango
 Anneliese
 [Aa]nomol(y|ies)
@@ -73,6 +79,7 @@ antipatterns?
 Antrea
 Apdex
 api
+Apigee
 ApiResponse
 APIs?
 APM
@@ -95,6 +102,7 @@ Artifactory
 artisanal
 Asciidoctor
 ASG(s)?
+Ashok
 Asiedu-Ampem
 aspirational
 Astra
@@ -105,7 +113,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
-Atlasian
+Atlassian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -143,6 +151,8 @@ basicBridgeDestroy
 basicBridgePut
 batchesDistributed
 BatchScheduler
+Baxter
+BEA
 Becki
 Beda('s)?
 beforeEnqueue
@@ -154,9 +164,11 @@ benchmark(ing)?
 benefitting
 Berglund
 BestEffort
+betweens
 BGP(Configuration|-capable|Peer(s)?)?
 Bhave
 BikeIncidentsByZip
+bikeshedding
 Bikewise
 biome
 [Bb]itnami('s)?
@@ -232,6 +244,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chander
 changeAlertLevel
 [Cc]hangemaker(s)
 [Cc]hargeback
@@ -259,6 +272,7 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
+Cloudflare
 CloudHealth
 CloudNativeCon
 CloudWatch
@@ -274,6 +288,7 @@ ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
+CMS
 CNAME
 CNB-speak
 CNB(s)?
@@ -282,7 +297,8 @@ CNCF
 CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
-codebase
+co-organiser
+[Cc]odebase(s)?
 CodeFresh
 CodeOne
 CoffeeOps
@@ -316,7 +332,7 @@ Corry
 CORS
 cortado
 Cosgrove
-Coté
+Coté('s)?
 counterintuitive
 COVID-19
 CPUs
@@ -335,13 +351,14 @@ CredHub
 crf
 critiquers
 CRM
-cron
+[Cc]ron
 cross-subnet
 CrossSubnet
 Crowdsourced?
 CRuby
 crypto
 [Cc]ryptographic(ally)?
+crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
@@ -361,18 +378,20 @@ D2iQ
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+danluu
 DAO
 DaoAuthenticationProvider
 DaShaun
+dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
-Dataflow
+Dataflow(s)?
 datagram
 DataJpaTest
 datapath
 dataset
-[Dd]atasources
+[Dd]atasource(s)?
 DataStax('s|Examples)?
 dataStoreBytesInUse
 dataStoreEntryCount
@@ -387,6 +406,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
+de-risk
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -421,6 +441,7 @@ Dieu
 differentiators
 Dikastes
 DirtiesContext
+disambiguated
 DiscoveryClient
 DiskRegionStatistics
 DiskStore
@@ -438,6 +459,7 @@ DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
 DistributionMessageObserver
+DistributionStats
 distroless
 distros
 django-prometheus
@@ -449,6 +471,7 @@ Dobrin
 DockerCon
 [Dd]ockerfile(s|-built)?
 Documentum
+Doerr
 Dokuka
 Dolan
 donut
@@ -482,6 +505,7 @@ EKS
 ElasticSearch
 ELB(s)?
 Eleftheria
+Emad
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -501,6 +525,7 @@ EnumInfo
 Enums
 env
 EOF
+ESB
 etcd(ctl)?
 [Ee]thernet(s)?
 ETL
@@ -510,6 +535,7 @@ eventQueueSize
 eventsDistributed
 eventsQueued
 EventStorming
+Evie
 [Ee]xecutables
 expander(s)?
 expensed
@@ -523,6 +549,7 @@ failback
 [Ff]ailover(s)?
 Falco
 Fani
+faq(s)?
 favourite(s)?
 FC
 FeignClient
@@ -536,16 +563,20 @@ Finchley
 FinTech
 FIPS(-enabled|-approved)?
 firewalling
+Fiscus
 Flake8
+flatlined
 Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
 flyyy
 formatter
+foundaments
 Foxwell
 FP
 FQDN
+Frascati-Robinson
 freddygthatsme
 frictionless
 [fF]rontend(-green)?
@@ -625,8 +656,10 @@ getnotifications
 getRegions
 getServerMetric
 getSizeInBytes
+GetStatisticValueFunction
 getters
 getValueAsString
+gfs
 GFSH
 gfsh
 ghostEmail
@@ -634,6 +667,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gilardi
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -655,7 +689,7 @@ goReflect
 Görkem
 gotchas
 Gothelf
-GraalVM(-powered)?
+GraalVM(-powered|.)?
 Gradle
 gradle
 gradlew
@@ -668,6 +702,7 @@ GraphQL
 GraphQL(-based)?
 Grasso
 GRE
+Greenaway
 Greenplum
 Groupon
 gRPC
@@ -678,14 +713,18 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+Hackenburg
 Hadlow
 Hamano
+Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
 HAProxy
+[hH]ardcoded
 HashiCorp('s)?
 hasResult
+HATEOAS
 Hayk
 Haytham
 Heartbleed
@@ -698,8 +737,10 @@ Herbrich
 hermeticism
 Heroku('s)?
 High-Cardinality
+Hillegass
 Hinojosa
 HMAC
+Hobsons
 hoc
 Hockin
 Homebrew
@@ -734,6 +775,7 @@ ImagePolicyWebhook
 img
 [Ii]mmeasurability
 IMmUjUjBzes
+[Ii]mpactful
 implementors
 [Ii]ncompressible
 InfoQ
@@ -748,6 +790,8 @@ Initializr
 Integrallis
 [Ii]ntegrations
 IntelliJ
+interiorize
+interiorizing
 interpolator
 [Ii]nterservice
 intra-cluster
@@ -791,6 +835,7 @@ JaFU
 Jakarta
 Jakub
 Jarvinen
+Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
@@ -800,6 +845,7 @@ JBaruch
 JBatch
 JBoss
 jchen21
+JConsole
 JDBC
 jdbcUrl
 [SJ]DK
@@ -814,12 +860,14 @@ JIRAs
 Jitsu
 Jiu
 jks
+JKS
 JMX
 JmxConnectionHandler
 JmxNotificationClient
 JmxNotificationHandler
 JMXNotificationHandler
 JmxNotificationsAccessor
+JNDI
 johnharris85
 Jonatan
 jonatan_ivanov
@@ -834,6 +882,7 @@ JSONFormatter
 Jsonnet
 JSONPatch
 JsonPdxConverter
+JSP
 JSR-352
 JST
 judgement
@@ -843,6 +892,7 @@ Junio
 junit
 Junit
 JUnit
+junky
 Jupyter(Hub|Lab)?
 JVM's
 JVM(-based)?
@@ -850,18 +900,19 @@ JVMs
 JWT_TOKEN
 JWT(s)?
 [Kk](8|9|14)s
+k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+Kalashnykov
 Kamus
 Kanban
 Kaniko
 [Kk]app(-controller|.)?
 Karavi
 Kat
-kata
-Katas
+[Kk]ata(s)?
 KEK(s)?
 kendrickcoleman
 [Kk]ey[Ss]tore
@@ -870,6 +921,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -882,6 +934,7 @@ Knative-Serving
 knative-serving
 KNN
 KoFu
+Kostadis
 kotlin
 Kousen
 Kpack
@@ -891,6 +944,8 @@ Kravitz
 krf
 Krisp
 ksqlDB
+KStream
+KTable
 [kK]ube
 kube_pod_container_status_restarts_total
 kube-apiserver
@@ -953,7 +1008,9 @@ LocalDataSets
 localhost(:[0-9]*)?
 lockfile
 [Ll]og4j2?
+LogAllStatisticValuesFunction
 logback
+Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 LogPartitionedRegionBucketDetailsFunction
@@ -992,10 +1049,12 @@ matchers
 matchings
 maxUtilization
 Mayers
+MBeans
 MBeanServer
 McGraw-Hill
 McLuckie
 MDN
+[Mm]entorship
 MeshAdmin
 Mesos
 messageQueueSize
@@ -1014,7 +1073,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
-middleware
+[Mm]iddleware
 Migros
 Mikusa
 Minella
@@ -1040,6 +1099,7 @@ Momcilovic
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+MQ
 MSc
 msgpack(ed)?
 mTLS
@@ -1053,6 +1113,7 @@ Multipass
 [Mm]ultiuser
 Mutating(Admission)?Webhook
 mutators
+[Mm]utli-Cloud
 Muzz
 MVB(-awarded)?
 MVC
@@ -1060,6 +1121,7 @@ MVP(s)?
 my-mongodb
 [mM]y[sS]ql
 myapp
+MyBatis
 mychart
 mydb
 MyPy
@@ -1073,6 +1135,8 @@ Nana
 Natively
 natively
 Neatro
+Neeharika
+Neha
 Nenad
 Neo4j
 Nesterov
@@ -1114,6 +1178,7 @@ Oded
 OIDC
 ok
 OKR(s)?
+Okta
 old-checkout-desc
 Oleh
 olehdokuka
@@ -1141,6 +1206,7 @@ OpenStack
 OpenTelemetry
 OpenTracing
 operationalized
+OperatorHub
 oplog
 oplogs
 OpsGenie
@@ -1166,9 +1232,11 @@ OWASP
 P2P
 Pacak
 Packer
+Packt('s)?
 PagerDuty
 Pairmate
 Paketo
+Palaka
 Palo
 Parabol
 ParallelGatewaySenderQueueByBucketEntrySizer
@@ -1189,6 +1257,7 @@ passwd
 pb('s)?
 pb&jelly
 (pc|C)zarkowski('s)?
+PCF
 PDB(s)?
 PDX
 PDX-serializable
@@ -1199,6 +1268,7 @@ PdxInstances
 PdxType
 PdxTypes
 PeerAuthentication
+PEM
 per-namespace
 Percona
 [Pp]erformant
@@ -1212,6 +1282,7 @@ php-apache
 Pichler
 pickab(le|ility)?
 PID
+Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
@@ -1233,18 +1304,22 @@ Poly1305
 Pomodoro
 Poppendieck
 [Pp]ortieris
+[Pp]ortlet(s)?
 [Pp]ost-mortem
+[Pp]ost-mortem(s)?
 Postfacto
 [Pp]ostgres
 POSTROUTING
 PR(s)?
 Pratik('s)?
+[pP]re-[pP]lanning
 pre-auth
 pre-built
 pre-configured
 pre-created
 pre-defined
 pre-encryption
+pre-engagement
 pre-exist(s|ing)?
 pre-installed
 Pre-IPM
@@ -1253,6 +1328,7 @@ pre-programmed
 pre-release
 [pP]re-stop
 Pre-sync
+pre-work
 pre(-)?
 prebuilt
 precompiled
@@ -1283,7 +1359,7 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
-PubSub
+PubSub(bing)?
 Pulkit
 pullPolicy
 pushable
@@ -1291,9 +1367,11 @@ putAll
 PuTTYgen
 PVC?s?
 PWAs
+PwC
 pyenv-installer
 [Pp]yenv(-virtualenv)?
 Python3
+Pythonic
 QCon
 QoS
 Querier
@@ -1345,6 +1423,7 @@ Ren
 Renaud
 Renfro
 Renner
+replatforming
 replicaset
 ReplicaSet(s)?
 replicationcontrollers
@@ -1371,6 +1450,7 @@ Ries
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
+RocksDB
 Rockstar
 Rodislav
 ROI
@@ -1380,6 +1460,7 @@ rom-com
 rootPassword
 Rosecrance
 Rosso
+Roussos
 [Rr]outable
 Route53
 RouteAuthSpecs
@@ -1406,6 +1487,8 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sardana
+Sarella
 SAT(s)?
 Sathe
 Savla
@@ -1415,11 +1498,13 @@ scaffolded
 scaledown(s)?
 ScatterSpoke
 SCDF('s)?
+SCG
 schema(s)?
 Schimanski
 Schutta
 Schwaber
 screencaster
+SCS
 SDK(s)?
 SDS
 seaborn
@@ -1451,6 +1536,8 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+Sharat
+Sharat_Chander
 sharded
 Sheasha
 Shellshock
@@ -1480,6 +1567,7 @@ SNI
 SolidFire
 Soluto('s)?
 SomeRegion
+SonicDMG
 [Ss]onobuoy
 Sox
 [Ss]peedback
@@ -1487,6 +1575,8 @@ SPEL
 SPIFFE
 Splunk
 Spock
+spoilt
+Spring-Cloud-Dataflow
 spring-petclinic
 springboot
 SpringBootTest
@@ -1508,6 +1598,7 @@ Stacker
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
+Starlark
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -1545,8 +1636,10 @@ SweetKiller9
 Syer
 symposia
 Sysdig
+SystemAdmin
 Szul
-Tanzu(Developer)?
+tabpane
+Tanzu(Developer|'s)?
 targetPort
 Tarin
 TAS
@@ -1558,17 +1651,18 @@ TCP
 tdp-guide
 TeamRetro
 TechRepublic
+TeeFilter
 Tekton('s)?
 [Tt]elco(s)*
 telecom
-[Tt]emplat(ed|ing)
+[Tt]elematics
+[Tt]emplat(ed|ing|ing.|ize)
 Templeton
 Teotti
 Teppanyaki
 Terraform(-ing)?
+[Tt]est[Cc]ontainers
 testability
-TestContainers
-testcontainers
 TGI(K)?
 tgz
 Thanos
@@ -1581,6 +1675,7 @@ Tigera
 Tikka
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
+[Tt]imeboxing
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1604,6 +1699,7 @@ totalTransmissionTime
 tradeoff(s)?
 Traefik
 transactional
+transformational
 transmittedEvents
 Trello
 Trivy(.)?
@@ -1620,6 +1716,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UCD
 UDP
 UI(s|-based)?
 UML
@@ -1651,6 +1748,7 @@ updateServerMetric
 updateServerMetrics
 upgradability
 upleveled
+upskill
 upstream(s)?
 uptime
 UR[IL](s)?
@@ -1659,6 +1757,7 @@ url
 URL(s)?
 USD
 userDetails
+Util(s)?
 UX
 [Vv][123]
 Vaadin
@@ -1671,7 +1770,9 @@ Vavr
 VCAP
 vCenter
 VCS
+Vega
 Velero('s)?
+Vendio
 vendored
 Venkat
 Venkateswara
@@ -1692,6 +1793,7 @@ virtualhost
 virtualized
 VirtualService
 visualise
+VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
@@ -1723,6 +1825,7 @@ Webpage
 WebSocket
 WebSphere
 WeChat
+well-intentioned
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
@@ -1740,11 +1843,13 @@ x509
 x64
 Xing
 XKCD
+XP
 XSalsa20
 Xu
 YAML|yaml
 Yaron
 yay
+Yonis
 youtube
 ytt
 Zalando
@@ -1753,4 +1858,5 @@ ZDNet
 ZOP
 Zou
 Zuul
+Zynga
 μServices

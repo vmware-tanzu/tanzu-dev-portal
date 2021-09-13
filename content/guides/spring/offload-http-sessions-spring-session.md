@@ -10,6 +10,8 @@ topics:
 oldPath: "/content/guides/spring/offload-http-sessions-spring-session.md"
 aliases:
 - "/guides/spring/offload-http-sessions-spring-session"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring Session](https://spring.io/projects/spring-session) frees session management from the limitations of HTTP data stored in server memory. Session data can be shared between services in a cloud without being tied to a single container, multiple sessions can be supported in the same browser, and session ids can be included and sent in a header.
@@ -25,10 +27,14 @@ By default, an [Apache Tomcat](http://tomcat.apache.org) web server instance is 
 The Tanzu Application Service GO Router uses the `jsessionid` plus a `vcap_id` to establish sticky sessions. Session replication breaks with sticky sessions at the GO router which is one of the reasons Spring Session is used. By default Spring Session creates a custom `SESSION` cookie to house an application’s HTTP session. See the [documentation](https://docs.pivotal.io/pivotalcf/concepts/http-routing.html)).
 
 
+{{% callout %}}
+**Note**: Ensure your session object implements [java.io.Serializable](https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html).
+{{% /callout %}}
 
-> Ensure your session object implements [java.io.Serializable](https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html).
+{{% callout %}}
+**Note**: This guide was customized for Spring 3.2.18 and XML Configuration. It is highly recommended to [bootify your application](/guides/spring/bootifying-java-apps) and leverage the Spring Boot Starter modules to help stay current with Spring versions.
+{{% /callout %}}
 
-> This guide was customized for Spring 3.2.18 and XML Configuration. It is highly recommended to [bootify your application](/guides/spring/bootifying-java-apps) and leverage the Spring Boot Starter modules to help stay current with Spring versions.
 
 ### Cloud Foundry Platform and Redis Service Creation
 
@@ -63,9 +69,12 @@ Spring Session can better handle the object’s marshalling/unmarshalling than t
   </filter-mapping>
 ```
 
-> For the session replication to work with spring security, you need to place the spring session filter above the spring security filter.
+{{% callout %}}
+**Note**: For the session replication to work with spring security, you need to place the spring session filter above the spring security filter.
 
-> For the session replication to work with Apache Struts, you need to place the spring session filter above the Struts filter.
+For the session replication to work with Apache Struts, you need to place the spring session filter above the Struts filter.
+{{% /callout %}}
+
 
 **2. Define the following in your Spring `application-context.xml`:**
 

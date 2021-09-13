@@ -4,7 +4,7 @@ description: Help the team understand the circumstances surrounding the problem 
   attempting to solve
 image: default-cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 participants: Core team
 tags:
 - Discovery
@@ -29,6 +29,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 
 1. Create four columns on the physical or digital whiteboard and label each with the following:
@@ -39,7 +41,7 @@ why:
    - Scenario
 
    {{% callout %}}
-   Tip: If time is short and/or the full team is busy with other work, you can also do this activity by yourself/with your pair using the word processing program of your choice
+   **Tip**: If time is short and/or the full team is busy with other work, you can also do this activity by yourself/with your pair using the word processing program of your choice
    {{% /callout %}}
    
 1. Begin by defining the **user**, ideally using the persona(s) your team has created. What you write should answer these questions:
@@ -48,10 +50,10 @@ why:
    - What is their role?
 
    {{% callout %}}
-   Tip: If you have your persona available, you can use it in this section instead of making one from scratch
+   **Tip**: If you have your persona available, you can use it in this section instead of making one from scratch
    {{% /callout %}}
 
-You can lead the team in creating a well-formed persona using the [Personas](/practices/personas) activity
+   You can lead the team in creating a well-formed persona using the [Personas](/practices/personas) activity
 1. Next, define the **goal** of the scenario. What you write should answer these questions:
 
    - What is the user trying to accomplish?
@@ -71,35 +73,34 @@ You can lead the team in creating a well-formed persona using the [Personas](/pr
    - Anything relevant the user does after achieving the scenario’s goal
 
    {{% callout %}}
-   Tip: If you’re writing a scenario for the future state, be careful not to be too prescriptive in how you capture the solution. Leave enough ambiguity so that the team has space to ideate broadly.
+   **Tip**: If you’re writing a scenario for the future state, be careful not to be too prescriptive in how you capture the solution. Leave enough ambiguity so that the team has space to ideate broadly.
    {{% /callout %}}
-#### Success/Expected Outcomes
-You’ve succeeded once you feel the team understands the scope of current or future scenario and could confidently use it to support subsequent activities (research, design studio, etc.)
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Success/Expected Outcomes
+You’ve succeeded once you feel the team understands the scope of current or future scenario and could confidently use it to support subsequent activities (research, design studio, etc.)
+{{% /section %}}
+
+{{% section %}}
+### Facilitator Notes & Tips
 
 Example of a **current state** scenario:  
 How sheep farmers currently purchase sheep at actions in person
 
 Example of a **future state** scenario:  
 How sheep farmers will purchase sheep via the internet with the new product
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
- 
+{{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
 - [Problem Prioritization](/practices/problem-prioritization)
 - [Insight Prioritization](/practices/insight-prioritization)  
+{{% /section %}}
 
+{{% section %}}
 ### Following
 
 [Design Studio](/practices/design-studio)
-
-## Real World Examples
-Coming soon! 
-
-## Recommended Reading
+{{% /section %}}

@@ -14,6 +14,8 @@ topics:
 oldPath: "/content/guides/spring/spring-cloud-config-security.md"
 aliases:
 - "/guides/spring/spring-cloud-config-security"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 As explained in [Setting Up Spring Cloud Config Server](/guides/spring/spring-cloud-config-set-up/), a Spring Cloud Config Server provides a centralized configuration repository for Spring apps. The [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/reference/html/) externalizes configuration information for an application and serves out this information via a REST interface. Some configuration information is sensitive (such as passwords) and requires greater security. 
@@ -23,7 +25,10 @@ This guide explains two methods to increase the security of a Config Server:
 * Using encryption in combination with a git repository
 * Using Vault as a secure repository
 
-**NOTE:** To use encryption and decryption features you need the full-strength Java Cryptography Extension (JCE) installed in your JVM (it is not included by default). Download the *Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files* from Oracle, and follow instructions for installation (essentially replace the two policy files in the JRE lib/security directory with the ones you downloaded).
+{{% callout %}}
+**Note:** To use encryption and decryption features you need the full-strength Java Cryptography Extension (JCE) installed in your JVM (it is not included by default). Download the *Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files* from Oracle, and follow instructions for installation (essentially replace the two policy files in the JRE lib/security directory with the ones you downloaded).
+{{% /callout %}}
+
 ## Securing a git repository
 The default backend for a Config Server is a git repository. This can be configured to store and serve encrypted configuration values to protect sensitive information. In a secure Config Server, the remote property sources contain encrypted content (values starting with `{cipher}`). These will be decrypted before sending to clients over HTTP. The main advantage of this approach is that property values aren’t stored in plain text. 
 
@@ -62,7 +67,10 @@ In practice, you might not want to decrypt locally because it spreads the [key m
 ## Using HashiCorp Vault as a secure external repository
 Spring Cloud Vault Config provides client-side support for externalized configuration in a distributed system. [HashiCorp’s Vault](https://learn.hashicorp.com/collections/vault/getting-started) is a central place to manage external secret properties for applications across all environments. It can be used to back Config Server instances.This section provides some guidelines for working with a Vault backend. 
 
-**NOTE** you can also configure applications to access Vault directly using [Spring Cloud Vault](https://cloud.spring.io/spring-cloud-vault/reference/html/). Spring Cloud Vault and Spring Cloud Config with a Vault backend are [not the same thing](https://stackoverflow.com/questions/45502722/difference-between-spring-cloud-vault-and-spring-cloud-config-with-vault-backend).
+{{% callout %}}
+**Note** you can also configure applications to access Vault directly using [Spring Cloud Vault](https://cloud.spring.io/spring-cloud-vault/reference/html/). Spring Cloud Vault and Spring Cloud Config with a Vault backend are [not the same thing](https://stackoverflow.com/questions/45502722/difference-between-spring-cloud-vault-and-spring-cloud-config-with-vault-backend).
+{{% /callout %}}
+
 
 To enable Config Server to [use a Vault backend](https://cloud.spring.io/spring-cloud-config/reference/html/#vault-backend), you run your Config Server with the Vault profile. For example, in your Config Server’s `application.properties`, add `spring.profiles.active=vault`.
 
@@ -83,7 +91,7 @@ $ curl -X "GET" "http://localhost:8888/myapp/default" -H "X-Config-Token: yourto
 ```
 This is the default way for a client to provide the necessary authentication to let Config Server talk to HashiCorp Vault.
 
-## Keep learning 
+## Keep Learning 
 You can use the encryption features of Spring Cloud Config Server with a git repository to improve the security of your configuration service, or use Vault as a backend for situations that require the highest security. Some organizations or projects use a git repository for configuration information that does not need to be secured, plus a HashiCorp Vault repository for secrets.
 
 You can get started learning about and using Spring Cloud Config with git in the [Centralized Configuration Guide](https://spring.io/guides/gs/centralized-configuration/). Although it does not include use of encryption, this guide steps through the process of setting up a Config Server and consuming configuration information from a client. Use that as a starting point to explore the use of encryption as described above. 

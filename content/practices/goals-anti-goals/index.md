@@ -4,7 +4,7 @@ description: Identify and prioritize key product, business, project, and/or cons
   engagement goals and anti-goals (non-goals)
 image: goals-anti-goals/cover.png
 lastmod: '2021-03-17'
-length: 45 - 60 mins
+length: 45-60 min
 miro_template_url: https://miro.com/miroverse/goals-and-anti-goals/
 participants: Core team, stakeholders
 remote: true
@@ -29,6 +29,8 @@ why:
 ---
 
 ## How to Use this Method
+
+{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw 4 columns on the whiteboard, one for each type of goal. Put anti-goal column off to the side to introduce it later.
 
@@ -50,28 +52,21 @@ why:
 1. When everyone has shared, hand out 6 dots per person and have everyone dot vote on their top 2 product, business, and project/consulting engagement goals (there’s no need to vote on the anti-goals). Circle the top 2 goals that emerge.
 
 1. Confirm with key stakeholder(s) if there’s anything else really important that we’ve missed. If so, circle those as well or write them down.
+{{% /section %}}
 
-#### Success/Expected Outcomes
+{{% section %}}
+### Success/Expected Outcomes
 Success is when the core team and stakeholders have a clear and shared understanding of the top product, business, project/consulting engagement, and anti-goals.
+{{% /section %}}
 
-#### Facilitator Notes & Tips
+{{% section %}}
+### Facilitator Notes & Tips
 
 If you have a lot of people in your Kickoff (e.g. 15+), consider asking everyone to organize themselves into groups of 3-4 people. This will simplify the process of sharing out and affinity mapping the generated goals.
+{{% /section %}}
 
-## Related Practices
-
-### Variations
-
-None at the moment
-
-### Preceding
-
-None at the moment
-
-### Following
-
-None at the moment
-
-## Real World Examples
+{{% section %}}
+### Real World Examples
 
 ![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](/images/practices/goals-anti-goals/example-3.jpg)
+{{% /section %}}

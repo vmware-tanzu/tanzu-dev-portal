@@ -20,6 +20,8 @@ topics:
 oldPath: "/content/guides/ci-cd/gitlab-auto-devops.md"
 aliases:
 - "/guides/ci-cd/gitlab-auto-devops"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and DevOps tools and techniques.
@@ -273,8 +275,10 @@ Follow these steps:
   ```
 
     This multi-stage *Dockerfile* creates a new image using Bitnami's Node.js container image as base. It copies the application files to the container's */app* directory and then runs *npm install* to install Express. It then creates a production-ready container image and configures the application to listen to request on port 5000.
-    
-> Exposing the application on port 5000 is a requirement of GitLab's [default Helm chart](https://gitlab.com/gitlab-org/charts/auto-deploy-app), which is used to deploy the application to the cluster. This can be overridden if needed using a custom Helm chart. Read more in our tutorial on [using a custom Helm chart with the Auto DevOps pipeline](https://docs.bitnami.com/tutorials/customize-ci-cd-pipeline-gitlab-bitnami-charts).
+
+{{% callout %}}    
+**Note**: Exposing the application on port 5000 is a requirement of GitLab's [default Helm chart](https://gitlab.com/gitlab-org/charts/auto-deploy-app), which is used to deploy the application to the cluster. This can be overridden if needed using a custom Helm chart. Read more in our tutorial on [using a custom Helm chart with the Auto DevOps pipeline](https://docs.bitnami.com/tutorials/customize-ci-cd-pipeline-gitlab-bitnami-charts).
+{{% /callout %}}
 
 * Initialize a Git repository and commit and push the application code to GitLab. Replace the NAME and EMAIL-ADDRESS placeholders with your name and email address (if not already configured) and the CLONE-URL placeholder with the repository clone URL obtained in [Step 3](#step-3-create-a-new-gitlab-project).
 

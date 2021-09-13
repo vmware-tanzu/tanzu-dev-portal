@@ -4,11 +4,14 @@ description: Install Concourse CI onto Kubernetes with VMware Tanzu as an automa
   engine for cloud native CI/CD and build declarative pipelines to automate your workflows.
 lastmod: '2021-03-07'
 linkTitle: Concourse CI
+metaTitle: Concourse CI
+subsection: Concourse CI
 patterns:
 - Deployment
 tags:
 - CI-CD
 - Concourse
+- Kubernetes
 team:
 - Tony Vetter
 title: Getting Started with Concourse CI
@@ -17,6 +20,8 @@ topics:
 oldPath: "/content/guides/ci-cd/concourse-gs.md"
 aliases:
 - "/guides/ci-cd/concourse-gs"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 Writing code is one thing. Testing and deploying that code into production is another. Many tools exist to automate the workflow, from code commit to production release. Continuous Integration (CI), Continuous Deployment (CD), Continuous Delivery (CD again), artifact registries, code security scanners, and various other tools are used to achieve this goal. But it all starts with code integration.
@@ -66,7 +71,7 @@ Next, define a variable for your username of your GitHub account.
 export GH_USERNAME=your-github-username
 ```
 
-### Installation
+## Installation
 Let’s get started by installing Concourse CI onto Kubernetes. This installation will be abbreviated; it’s intended for demonstration and learning purposes only. Full installation instructions using Helm can be found [via the Concourse CI team](https://github.com/concourse/concourse-chart) from which the installation instructions in this guide borrow heavily.
 
 **Optional step**: Concourse CI installation in a local context is fairly straightforward. There are some default attributes contained in the `install/values.yml` file; leaving these as their default values will get you a working installation. That said, there are a few values that you may choose to modify in order to slightly customize your installation and experiment with Concourse CI. Modify this file to suit your needs. Comments on each line will explain their respective functions.
@@ -114,11 +119,13 @@ Once all the pods are ready, Concourse CI will be up and running. But it won’t
 
 Running this script opens up a node port in your Kubernetes cluster and forwards it to your localhost. Assuming you left these values as default, your Concourse CI cluster should now be available at [http://localhost:8080](http://localhost:8080). 
 
+{{% callout %}}
 **Note**: This port-forward task is running in the foreground in your terminal. To keep UI access available, open a new terminal window or tab and cd back into your working directory.
+{{% /callout %}}
 
 You can access the cluster by logging in using the credentials set in the `values.yml` file. If you left them as default the username and the password are both `test`. At this point, there are no pipelines set; you need to install the fly client application first.
 
-### Installing fly
+## Installing fly
 Fly is the local client application developers and Concourse CI administrators use as their primary way to interact with the cluster from the command line. To install fly, download the binary from your Concourse CI cluster directly by clicking the link appropriate for your system, as shown here. 
 
 ![Download Fly](/images/guides/ci-cd/concourse/screenshots/download-fly.png)
@@ -130,8 +137,9 @@ Once completed, make the binary executable, then move it into your `$PATH`. That
 ```
 sudo chmod +x ~/Downloads/fly && mv ~/Downloads/fly /usr/local/bin
 ```
-
+{{% callout %}}
 **Note**: These commands are for use on a Macintosh computer. They will need to be modified for other platforms.
+{{% /callout %}}
 
 Now you need to let fly know about your Concourse CI cluster. Do that with the `target` command for your fly client. Notice we are giving our Concourse CI a name of `demo`. It can be any name you want, just keep it short. Every command run using fly must include the `--target` flag to explicitly run commands on a specific cluster, so unless you `alias` it, you will be typing it a lot.
 
@@ -186,10 +194,13 @@ You will notice there are a few `((variables))` contained within the pipeline; y
 ```
 vim pipelines/credentials.yml # replace vim with your favorite text editor
 ```
+{{% callout %}}
+**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
+{{% /callout %}}
 
->**Note**: This will include a step for setting up a Slack webhook integration. A link to the instructions from Slack to set it up is provided in the file, or you can view it [here](https://slack.com/help/articles/115005265063-Incoming-Webhooks-for-Slack).
-
->**Another note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
+{{% callout %}}
+**Note**: Using credentials files in this way provides an easy way to make changes to a pipeline. For example, by modifying just this one file in a straightforward way, the pipeline can be used flexibly across many environments, with many applications. However, in a production environment you would want to configure Concourse CI to use a [credential management system](https://concourse-ci.org/creds.html) like [Vault](https://learn.hashicorp.com/vault/getting-started/install), [CredHub](https://docs.cloudfoundry.org/credhub/), or something similar. 
+{{% /callout %}}
 
 That’s because using a credentials file provides just a simple translation done at the time when the pipeline is set. Which is not a big deal when it's just URLs, but when these files contain access tokens, private SSH keys, passwords, and the like, you will want a more secure system.
 
@@ -209,7 +220,7 @@ When clicking into that pipeline, you will see the jobs and resources depicted a
 
 ![Download Fly](/images/guides/ci-cd/concourse/screenshots/pipeline.png)
 
-### The pipeline 
+## The pipeline 
 
 Back at the CLI, unpause the pipeline using the `unpause-pipeline` command, which can be abbreviated `up`. 
 
@@ -221,7 +232,7 @@ Watch the pipeline complete. Then click into the running job and watch it comple
 
 ![Pipeline run](/images/guides/ci-cd/concourse/screenshots/concourse-test.gif)
 
-### The pipeline and job run details 
+## The pipeline and job run details 
 
 That’s it! Your pipeline is now monitoring your test branch for changes. Whenever a change is made, this pipeline will be kicked off and the tests will be run. Feel free to keep experimenting with this pipeline configuration, and build it to suit your needs. Push more changes to the application and watch Concourse CI trigger a new test run. 
 

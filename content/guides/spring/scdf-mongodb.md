@@ -22,6 +22,8 @@ topics:
 oldPath: "/content/guides/spring/scdf-mongodb.md"
 aliases:
 - "/guides/spring/scdf-mongodb"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 [Spring Cloud Data Flow](https://dataflow.spring.io/) is a framework for creating data streaming applications and batch data processing pipelines. It is commonly used to develop and test microservices, and it comes with built-in support for popular data sources and data storage services. It is available under an Apache license.
@@ -36,7 +38,9 @@ This article assumes that you have a Kubernetes cluster running with Helm v3.x a
 
 ## Step 1: Deploy MongoDB on Kubernetes
 
-> If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-deploy-spring-cloud-data-flow-on-kubernetes).
+{{% callout %}}
+**Note**: If you already have a MongoDB deployment, you can use that instead and skip to [Step 2](#step-2-deploy-spring-cloud-data-flow-on-kubernetes).
+{{% /callout %}}
 
 The first step is to deploy a MongoDB service on Kubernetes. The simplest way to do this is with [Bitnami's MongoDB Helm chart](https://github.com/helm/charts/tree/master/stable/mongodb). Follow the steps below:
 
@@ -60,7 +64,10 @@ The first step is to deploy a MongoDB service on Kubernetes. The simplest way to
 
   ![MongoDB deployment](/images/guides/spring/scdf-mongodb/mongodb.png)
 
-  > See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami MongoDB Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/mongodb#parameters).
+{{% /callout %}}
+
 
 ## Step 2: Deploy Spring Cloud Data Flow on Kubernetes
 
@@ -74,7 +81,9 @@ The next step is to deploy Spring Cloud Data Flow on the same cluster using Bitn
 
   Wait for a few minutes until the chart is deployed.
 
-  > See the [complete list of parameters supported by the Bitnami Spring Cloud Data Flow Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow#parameters).
+{{% callout %}}
+**Note**: See the [complete list of parameters supported by the Bitnami Spring Cloud Data Flow Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/spring-cloud-dataflow#parameters).
+{{% /callout %}}
 
 * Forward the Spring Cloud Data Flow server port:
 

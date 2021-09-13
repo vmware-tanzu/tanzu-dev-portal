@@ -20,6 +20,8 @@ weight: 2
 oldPath: "/content/guides/ci-cd/tekton-gs-p2.md"
 aliases:
 - "/guides/ci-cd/tekton-gs-p2"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 In [part one of this guide](/guides/ci-cd/tekton-gs-p1/), you learned how to install Tekton on Minikube, as well as what a basic `Task` looks like. In part two, you'll create a more complex `Task`, which will use [Kaniko](https://github.com/GoogleContainerTools/kaniko) to build and publish a container image. After that, you'll learn how to use a preexisting `Task` and provide parameters to build your code using [Cloud Native Buildpacks](https://buildpacks.io/).
@@ -79,8 +81,9 @@ spec:
 
 This `PipelineResource` is of type `image`, as in a container image. It's also been given the name "sinatra-hello-world-tekton-demo-image". In this case, it simply takes the image name and tag. Since no full URL is provided, it's assumed that it will be published to Docker Hub, but you can also point to your own container registry.
 
-
-> **NOTE:** Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
+{{% callout %}}
+**Note**: Make sure to replace <DOCKER_USERNAME> with your Docker Hub username
+{{% /callout %}}
 
 With your input and output defined, it's time to create the `Task` that will build the container. Take some time to carefully read this through:
 

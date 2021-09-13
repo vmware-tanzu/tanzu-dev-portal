@@ -20,6 +20,8 @@ weight: 3
 oldPath: "/content/guides/containers/deploy-locally-spring-boot-application-docker.md"
 aliases:
 - "/guides/containers/deploy-locally-spring-boot-application-docker"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 [Bitnami containers](https://bitnami.com/stacks/containers) provide you with a ready-to-go environment for the development framework of your choice backed by Bitnami. By selecting a Bitnami container for local development, you can save a lot of time in coding as well as you benefit from having always the latest and more secure application image.
@@ -60,7 +62,10 @@ To begin the process, ensure that you have access to the application source code
 
   This will clone the sample repository. The *gs-mysql-data-0.1.0.war* file is located in the *spring-boot-app* subdirectory.
 
-  > Learn more about the changes done in the application source code by checking check the [repository README file](https://github.com/bitnami/tutorials/tree/master/spring-boot-app/README.md).
+{{% callout %}}
+**Note**: Learn more about the changes done in the application source code by checking check the [repository README file](https://github.com/bitnami/tutorials/tree/master/spring-boot-app/README.md).
+{{% /callout %}}
+
 
 ## Step 2: Create a Dockerfile
 
@@ -123,9 +128,14 @@ services:
      - '8080:8080'
 ```
 
-> The application environment variable set in this file allows you to use any MySQL database with any credentials at deployment time. This, makes your image secure for production environments.
+{{% callout %}}
+**Note**: The application environment variable set in this file allows you to use any MySQL database with any credentials at deployment time. This, makes your image secure for production environments.
+{{% /callout %}}
 
-> The ALLOW_EMPTY_PASSWORD parameter is set as "yes" in this *docker-compose.yml* file since the application is built for development purposes. That value is highly discouraged for production. Remember to secure your deployments by setting a password in production environments.
+{{% callout %}}
+**Note**: The ALLOW_EMPTY_PASSWORD parameter is set as "yes" in this *docker-compose.yml* file since the application is built for development purposes. That value is highly discouraged for production. Remember to secure your deployments by setting a password in production environments.
+{{% /callout %}}
+
 
 ## Step 5: Test the Docker image and your custom application
 

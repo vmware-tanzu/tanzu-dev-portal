@@ -17,6 +17,8 @@ weight: 1
 oldPath: "/content/guides/kubernetes/helm-what-is.md"
 aliases:
 - "/guides/kubernetes/helm-what-is"
+level1: Modern App Basics
+level2: Kubernetes Platform
 ---
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. At its most basic, Helm is a templating engine that creates Kubernetes manifests. What makes Helm more than that is it can upgrade and scale applications as well.
@@ -30,7 +32,10 @@ It also applies if you're deploying the same app multiple times. Using find-and-
 
 It's why an instance of a chart running on a Kubernetes cluster is called a _release_. If you need three different installs of a web server, each one is its own release. The Helm docs includes releases as one of [_three important concepts_](https://helm.sh/docs/intro/using_helm/):  
 
->Helm installs _charts_ into Kubernetes, creating a new _release_ for each installation. And to find new charts, you can search Helm chart _repositories_.
+{{% callout %}}
+Helm installs _charts_ into Kubernetes, creating a new _release_ for each installation. And to find new charts, you can search Helm chart _repositories_.
+{{% /callout %}}
+
 
 You can read more about the [Helm architecture here.](https://helm.sh/docs/topics/architecture/)
 

@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
+
+{{ $class := replace .Page.Section "." "-" | lower }}
+<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-4">
+  	<div class="container">
+		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+    <div class='row justify-content-between'>
+      <div class='col-lg-9 px-0'>
+        <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1>
+        <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description | markdownify }}</p>
+        {{ .Content }}
+        {{ if (isset .Params "streaming") }}
+        
+          <div id="twitch-embed"></div>
+    
+          <script src="https://embed.twitch.tv/embed/v1.js"></script>
+          <script type="text/javascript">
+    
+            var check = isTvShowLive("{{ .Title }}"); 
+            if (check) {
+    
+              if (liveShowStream == "twitch") {
+                new Twitch.Embed("twitch-embed", {
+                    width: 1130,
+                    height: 480,
+                    channel: "vmwaretanzu",
+                });
+              } else {
+                document.write("<div class='youtube-video-shortcode'>");
+                document.write("<iframe src='https://www.youtube.com/embed/" + liveShowStream + "' frameborder='0' allowfullscreen></iframe>");
+                document.write("</div>");
+              }
+            }
+    
+          </script>
+        {{ end }}
+      </div>
+      <div class='col-lg-3 px-0'>
+        {{ if (isset .Params "streaming") }}
+          {{ if not .Params.notwitchicon }}
+            <a class="btn px-4 float-lg-right mt-lg-5 mt-4 mb-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+   </div>
+
+</section>
+
+<div class='container'>
+  {{ partial "episode-index.html" . }}
+</div>
+
+{{ end }}

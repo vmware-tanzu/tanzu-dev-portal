@@ -20,6 +20,8 @@ topics:
 oldPath: "/content/guides/python/cnb-gs-python.md"
 aliases:
 - "/guides/python/cnb-gs-python"
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 Packaging your application code into Docker containers is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.
@@ -169,7 +171,9 @@ REPOSITORY                  TAG                 IMAGE ID            CREATED     
 benwilcock/python-sample    1.0.0               59843a212207        40 years ago        651MB
 ```
 
-> Already we're benefiting from buildpack engineering! Notice that the `CREATED` date says "40 years ago". This is a best practice whereby the timestamps of layers are 'zeroed' to make container builds more reproducible, cache-able, and to avoid unnecessary image downloads. You can read more [here](https://buildpacks.io/docs/reference/reproducibility/).
+{{% callout %}}
+**Note**: Already we're benefiting from buildpack engineering! Notice that the `CREATED` date says "40 years ago". This is a best practice whereby the timestamps of layers are 'zeroed' to make container builds more reproducible, cache-able, and to avoid unnecessary image downloads. You can read more [here](https://buildpacks.io/docs/reference/reproducibility/).
+{{% /callout %}}
 
 ### Test The Container Image
 

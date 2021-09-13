@@ -17,6 +17,8 @@ weight: 6
 oldPath: "/content/guides/kubernetes/kubeapps-gs.md"
 aliases:
 - "/guides/kubernetes/kubeapps-gs"
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This guide will walk you through the process of deploying Kubeapps for your cluster and installing an example application.
@@ -86,10 +88,12 @@ kubectl create serviceaccount kubeapps-operator
 kubectl create clusterrolebinding kubeapps-operator --clusterrole=cluster-admin --serviceaccount=default:kubeapps-operator
 ```
 
-**NOTE:** It's not recommended to create `cluster-admin` users for Kubeapps
+{{% callout %}}
+**Note**: It's not recommended to create `cluster-admin` users for Kubeapps
 production usage. Please refer to the
 [Access Control](https://github.com/kubeapps/kubeapps/blob/master/docs/user/access-control.md)
 documentation to configure fine-grained access control for users.
+{{% /callout %}}
 
 To retrieve the token,
 
@@ -179,11 +183,14 @@ applications into your cluster.
 To access your new WordPress site, you can run the commands in the "Notes"
 section to get the URLs or simply click a URL (HTTP and HTTPS) shown.
 
-***Note:*** Depending on your cloud provider of choice, it may take some time
+{{% callout %}}
+**Note**: Depending on your cloud provider of choice, it may take some time
 for an access URL to be available for the application and the Service will stay
 in a "Pending" state until a URL is assigned. If using Minikube, you will need
 to run `minikube tunnel` in your terminal in order for an IP address to be
 assigned to your application.
+{{% /callout %}}
+
 
 ![WordPress deployment notes](/images/guides/kubernetes/kubeapps/screenshots/wordpress-url.png)
 

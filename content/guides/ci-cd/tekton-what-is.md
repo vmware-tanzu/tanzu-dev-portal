@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/ci-cd/tekton-what-is.md"
 aliases:
 - "/guides/ci-cd/tekton-what-is"
+level1: Modern App Basics
+level2: DevOps Practices
 ---
 
 [Tekton](https://tekton.dev) is a framework for building [CI/CD](/guides/ci-cd/ci-cd-what-is/) pipelines on Kubernetes. It provides a set of building blocks to craft a system that meets your exact needs by breaking things down into individual `Task` resources, which are in turn chained together in a user-defined `Pipeline`.

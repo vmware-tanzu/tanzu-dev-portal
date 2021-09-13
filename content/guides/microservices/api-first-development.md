@@ -22,6 +22,8 @@ weight: 4
 oldPath: "/content/guides/microservices/api-first-development.md"
 aliases:
 - "/guides/microservices/api-first-development"
+level1: Building Modern Applications
+level2: Microservice Patterns
 ---
 
 Organizations are increasingly embracing new processes to deal with microservices architectures, containerization, and continuous delivery as part of the cloud migration journey.
@@ -47,7 +49,10 @@ The **API-First**  approach has several advantages:
 * Assisting DevOps - DevOps team can use the API design to test the API before Production deployment
 * Agility in incorporating changes - API design becomes an ongoing and evolving process, well-supported by automated tooling 
 
-**NOTE**: API First is illustrated in this document through the lens of the [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3), with code generated for a [Spring Boot Application](https://spring.io/projects/spring-boot).
+{{% callout %}}
+**Note**: API First is illustrated in this document through the lens of the [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3), with code generated for a [Spring Boot Application](https://spring.io/projects/spring-boot).
+{{% /callout %}}
+
 
 ## API-First with Open API Spec 3.0
 

@@ -18,6 +18,8 @@ topics:
 oldPath: "/content/guides/python/gs-python-installing-global-packages.md"
 aliases:
 - "/guides/python/gs-python-installing-global-packages"
+level1: Building Modern Applications
+level2: Frameworks and Languages
 ---
 
 ## Why You Need This Guide
@@ -83,7 +85,10 @@ The Glances tool will start and show you various live statistics about your comp
 
 ![img](/images/guides/python/screenshots/gs-python-global-packages-screenshot-python-glances.png)
 
-> What's cool about [Glances][glances] is that it's cross-platform, can run in the terminal, but also offers a way for you to access the machine stats over the network using a web browser. Pretty neat!
+{{% callout %}}
+**Note**: What's cool about [Glances][glances] is that it's cross-platform, can run in the terminal, but also offers a way for you to access the machine stats over the network using a web browser. Pretty neat!
+{{% /callout %}}
+
 
 Quit glances by issuing the stop command `Ctrl-C`. 
 

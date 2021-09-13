@@ -14,6 +14,8 @@ weight: 3
 oldPath: "/content/guides/spring/bootifying-java-apps.md"
 aliases:
 - "/guides/spring/bootifying-java-apps"
+level1: Modernizing Legacy Applications
+level2: Packaging, Operating, and Outside Enhancements
 ---
 
 Spring Boot is a convention-over-configuration solution to create standalone, production-grade Spring-based applications that you can "just run". It is pre-configured with an opinionated view of the best configuration of the Spring platform, including third-party libraries, so that you can get started with minimum fuss. The Spring framework provides hundreds of features and modules, but knowing where to start and configure them can be challenging.
@@ -76,7 +78,9 @@ The majority of the changes required to get your application running are tied to
 
 You will need to modify the application depending on the Java EE specification it currently uses: annotations, EJBs, JAX-WS, JAX-RS, JAXB, JMS, JSF, JPA...
 
-> NOTE: Expect detailed future guides covering what needs to be done for each specification.
+{{% callout %}}
+**Note**: Expect detailed future guides covering what needs to be done for each specification.
+{{% /callout %}}
 
 ### 7. Modify and deploy your application iteratively until it runs
 

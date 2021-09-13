@@ -22,6 +22,20 @@ weight: 5
 oldPath: "/content/guides/spring/spring-prometheus.md"
 aliases:
 - "/guides/spring/spring-prometheus"
+level1: Managing and Operating Applications
+level2: Metrics, Tracing, and Monitoring
+faqs:
+  faq:
+    - question: When using Prometheus and Grafana on Kubernetes, can you add metrics from an application?
+      answer: Yes, Spring Boot developers are used to making metrics available from their application using Spring Boot Actuator and Micrometer, but Prometheus expects metrics to be in a specific format.
+    - question: What is Spring Boot Actuator?
+      answer: Spring Boot Actuator auto-configures all enabled endpoints to be exposed over HTTP if you are developing a web application. It also includes the ability to view and configure the log levels of your application at runtime and provides dependency management and auto-configuration for Micrometer.
+    - question: What is Micrometer?
+      answer: Micrometer is an instrumentation facade that allows you to instrument your code with dimensional metrics with a vendor-neutral interface and decide on the monitoring system as a last step. In addition, it provides several tools which Prometheus automatically gathers.	
+    - question: How do I set up Prometheus and Grafana?
+      answer: Check out our thorough guide that walks through [how to set up Prometheus and Grafana](https://tanzu.vmware.com/developer/guides/kubernetes/observability-prometheus-grafana-p1/) for the first time.
+    - question: Can you add custom metrics in Spring Boot Actuator and Prometheus?
+      answer: Yes, custom metrics are taken care of by Spring Boot Actuator, and any metric generated is picked up by Prometheus as well.
 ---
 
 If you read the guide on how to run [Prometheus and Grafana on Kubernetes](/guides/kubernetes/observability-prometheus-grafana-p1/), you might be wondering: How do I add metrics from my application? Spring Boot developers are used to making metrics available from their application using [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready) and [Micrometer](https://micrometer.io/), but Prometheus expects metrics to be in a specific format. In this guide, you’ll learn how to expose both standard and custom metrics in your Spring Boot application, gather them using Prometheus, and visualize them in Grafana.
