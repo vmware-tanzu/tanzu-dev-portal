@@ -31,7 +31,7 @@
   <div id="live" class="row justify-content-center mt-5 pt-3">
     {{ if .Params.banner_only }}
       <div class="col-lg-9 col-12 px-0">
-        <img src="{{ .Params.episode_banner | relURL }}">
+        <img src='{{ partial "tv-image-src" . }}' />
       </div>
     {{ else }}
       <div class="col-lg-5 col-12 mb-5 pl-0">
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-12 px-0">
-        <img src="{{ .Params.episode_banner | relURL }}">
+        <img src='{{ partial "tv-image-src" . }}' />
       </div>
     {{ end }}
 
@@ -74,12 +74,12 @@
       {{ if .Params.register }}
       <div>
         <a href="{{ .Params.register }}">
-        <img src="{{ .Params.episode_banner | relURL }}"></a><br>
+        <img src='{{ partial "tv-image-src" . }}' /></a><br>
       </div>
       {{ else }}
       <div>
         <a href="https://www.twitch.tv/{{ .Params.twitch }}">
-        <img src="{{ .Params.episode_banner | relURL }}"></a><br>
+        <img src='{{ partial "tv-image-src" . }}' /></a><br>
       </div>
       {{ end }}
       {{ end }}

@@ -3,7 +3,7 @@ title: "Tanzu Tuesdays"
 type: "tv-show"
 streaming: "twitch"
 id: "tanzu-tuesdays"
-image: "/images/tv/shows/tanzu-tuesdays.png"
+image: "tanzu-tuesdays.png"
 og_image: "/images/og/TanzuTV-Tuesdays.png"
 weight: 1
 menu:

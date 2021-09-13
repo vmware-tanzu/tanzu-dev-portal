@@ -44,7 +44,7 @@
         {{ end }}
 -->
         {{ if (eq .Section "tv") }}
-          {{ printf "<![CDATA[<img src=\"%s\" width=\"640\" />]]>" (.Params.episode_image | absURL) | safeHTML }}
+          {{ printf "<![CDATA[<img src=\"%s\" width=\"640\" />]]>" ((partial "tv-image-src" .) | absURL) | safeHTML }}
         {{ end }}
         {{ .Content | html }}
       </description>
