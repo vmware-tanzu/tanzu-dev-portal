@@ -19,4 +19,4 @@ teaser: Live Daily at 11am CET
 subheader: Daily interviews and discussions about cloud native software on Twitch, every weekday at 11am CET.
 # Any content below here shows up above episode index
 ---
-![Tanzu Talk show graphic](/images/tv/shows/talk.png)
+![Tanzu Talk show graphic](images/talk.png)
