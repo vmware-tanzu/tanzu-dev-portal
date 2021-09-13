@@ -40,17 +40,15 @@ This article focuses on the Process Modelling flavour
 ### Event Storming Grammar
 Additional `Event Storming` exercises have the aim of adding layers of notation in the form of different colored stickies, also referred to as `Grammar`, to capture more information and validate assumptions. `Alberto Brandolini` suggests it is like making a pizza, where events and a timeline give you a margarita, but you can add more grammar to make different pizzas. Though he did warn that you might be tempted to put grammar that isn't suited for Event Storming, such as data tables, he likens this to pineapple, and insists it should never be on your pizza.
 
-![This is the placeholder for grammar layering](/images/practices/event-storming-process-modelling/event-storming-grammar-layers.jpg)
-
 ### Process Modelling Exercise
 The Practice described below is the additional exercise used by `Process modelling`, as it was taught in `Alberto Brandolini`'s workshop ???, linked below???. 
 
 While formally this method is best used for understanding large, complex high-level processes, the general principles and grammar of `Process Modelling` have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
 
-The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. The information can be used as an algorithmic model of the problem space.
+The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. Engineers can see this as an algorithmic  model (as opposed to Object Oriented) of the problem space.
 
 #### Sample Agenda & Prompts - 
-1. #### Prerequisites: 
+#### Prerequisites: 
    Previously you should have run a [Bigger Picture](/practices/event-storming) exercise to provide enough events to find a process to model
    - Participants have organized stickies between pivotal events in a timeline.
    - Pain-points and opportunities have been added to the board and linked to stickies.
@@ -66,12 +64,11 @@ The output from these workshops can be used to discover, validate or design soft
      - Move the chosen stickies to a new board.
      - Label the board to identify a name for the process being explored.
    - Repeat until there are no more stickies on the main storming board.
-
-1. #### Prioritize Workflows
-   To find a thin slice, a single workflow should be prioritized:
-   - Prioritize Pain-points/Opportunities.
-   - Identify workflows with the most important pain points/opportunity.
-1. #### Arrange the process modelling board
+1. #### Prioritize Processes
+   To narrow down the scope of discovery a single process should be prioritized.
+   This might be based on pain points and opportunities, business value etc.
+   There are many exercises described in the `Tanzu Developer Center` that can be used to identify priorities.
+   #### Arrange the process modelling board
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
    - Add a grammar guide to your board (these will be described later) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar.jpg).
    - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title `Preconditions`.
@@ -80,14 +77,14 @@ The output from these workshops can be used to discover, validate or design soft
 1. #### First Narration
    As described in the prerequisites, when moving from the Storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome. A `golden path` is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
-   Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. Adjust and add grammar as necessary to reach a consensus of the process.
-
    Roles:
    - There are typically 3 roles:
      - A `Narrator` reads through the process from left to right.
      - `The Audience` listens to the narrator and assists in discovering the process.
      - A `Scribe` records the process on the board.
    - Any participant can take on any of these roles. Rotating roles should also be encouraged, so everyone develops both ownership of the process and a deeper familiarity with the exercise.
+
+   Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. The primary goal is to get an end to end of events, so while you can add grammar in the first narration it is not necessary.
 
    Grammar:
    - Events: Represent a state change or notification that another part of the system wants to listen to.
@@ -96,7 +93,7 @@ The output from these workshops can be used to discover, validate or design soft
    - Actions: Represent a tasks that must be performed due to policy, and produces one or more interesting events. Also called Commands.
    - Read Models: Represent data required to make decisions or perform commands.
    - Systems: Represent external/3rd party tools such as; email, excel, notepad, or any required commercial off the shelf (COTS) applications.
-   
+
    Grammar Rules:
    - A Policy listens to a single Event.
    - A Policy should call one Action per decision outcome.
@@ -117,13 +114,13 @@ The output from these workshops can be used to discover, validate or design soft
    New Flows: 
    While the main goal is to follow the flow chosen from the main storming board, you might discover other flows. These can be separated and moved to another board, with a connector drawn between the two to identify the transition between flows.
 
-1. #### Narrate the process again
+2. #### Narrate the process again
    The goal is to capture enough of the process over several narrations to identify a thin slice. Each time capturing more information to improve the participants understanding of the process and build a consensus.
    - Correct inaccuracies and add additional grammar stickies where needed.
    - If there is a prioritized pain point linked to a sticky that has not been included in the `golden path` flow, try to discover the flow that will include that sticky.
    - Repeat this until you are satisfied you have enough of the process to identify a thin slice to work on.
 
-1. #### Review Questions, Pain Points and Opportunities
+3. #### Review Questions, Pain Points and Opportunities
    - Try to answer as many questions as possible.
    - Simplify, remove duplication and affinity group pain points and opportunities.
 
