@@ -55,7 +55,7 @@ The output from these workshops can be used to discover, validate or design soft
    - Participants have organized stickies between pivotal events in a timeline.
    - Pain-points and opportunities have been added to the board and linked to stickies.
    - A copy or snapshot of the main storming board should be created before moving onto the process modelling exercise.
-2. #### Breaking up the event storming board
+1. #### Breaking up the event storming board
    - Breakout processes
      - From the main storming board, choose a set of pivotal events that describe an end-to-end flow. Each flow could be one of the following types:
         - Main Business Flows: similar to a Customer Journey, often segmented on different personas. Small Company vs Big Corporation, vs Freelance or New vs Returning customer. This is the story on the surface.
@@ -67,17 +67,17 @@ The output from these workshops can be used to discover, validate or design soft
      - Label the board to identify a name for the process being explored.
    - Repeat until there are no more stickies on the main storming board.
 
-3. #### Prioritize Workflows
+1. #### Prioritize Workflows
    To find a thin slice, a single workflow should be prioritized:
    - Prioritize Pain-points/Opportunities.
    - Identify workflows with the most important pain points/opportunity.
-4. #### Arrange the process modelling board
+1. #### Arrange the process modelling board
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
    - Add a grammar guide to your board (these will be described later) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar.jpg).
    - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title `Preconditions`.
    - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process.
    - Arrange any remaining events in chronological order from left to right between the preconditions and postconditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
-5. #### First Narration
+1. #### First Narration
    As described in the prerequisites, when moving from the Storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome. A `golden path` is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. Adjust and add grammar as necessary to reach a consensus of the process.
@@ -117,13 +117,13 @@ The output from these workshops can be used to discover, validate or design soft
    New Flows: 
    While the main goal is to follow the flow chosen from the main storming board, you might discover other flows. These can be separated and moved to another board, with a connector drawn between the two to identify the transition between flows.
 
-6. #### Narrate the process again
+1. #### Narrate the process again
    The goal is to capture enough of the process over several narrations to identify a thin slice. Each time capturing more information to improve the participants understanding of the process and build a consensus.
    - Correct inaccuracies and add additional grammar stickies where needed.
    - If there is a prioritized pain point linked to a sticky that has not been included in the `golden path` flow, try to discover the flow that will include that sticky.
    - Repeat this until you are satisfied you have enough of the process to identify a thin slice to work on.
 
-7. #### Review Questions, Pain Points and Opportunities
+1. #### Review Questions, Pain Points and Opportunities
    - Try to answer as many questions as possible.
    - Simplify, remove duplication and affinity group pain points and opportunities.
 
