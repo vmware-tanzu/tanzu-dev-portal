@@ -47,13 +47,13 @@ While formally this method is best used for understanding large, complex high-le
 
 The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. Engineers can see this as an algorithmic  model (as opposed to Object Oriented) of the problem space.
 
-#### Sample Agenda & Prompts - 
-#### Prerequisites: 
+## Sample Agenda & Prompts - 
+### Prerequisites: 
    Previously you should have run a [Bigger Picture](/practices/event-storming) exercise to provide enough events to find a process to model
    - Participants have organized stickies between pivotal events in a timeline.
    - Pain-points and opportunities have been added to the board and linked to stickies.
    - A copy or snapshot of the main storming board should be created before moving onto the process modelling exercise.
-1. #### Breaking up the event storming board
+### 1. Breaking up the event storming board
    - Breakout processes
      - From the main storming board, choose a set of pivotal events that describe an end-to-end flow. Each flow could be one of the following types:
         - Main Business Flows: similar to a Customer Journey, often segmented on different personas. Small Company vs Big Corporation, vs Freelance or New vs Returning customer. This is the story on the surface.
@@ -64,20 +64,20 @@ The output from these workshops can be used to discover, validate or design soft
      - Move the chosen stickies to a new board.
      - Label the board to identify a name for the process being explored.
    - Repeat until there are no more stickies on the main storming board.
-1. #### Prioritize Processes
+### 1. Prioritize Processes
    To narrow down the scope of discovery a single process should be prioritized.
    This might be based on pain points and opportunities, business value etc.
    There are many exercises described in the `Tanzu Developer Center` that can be used to identify priorities.
-   #### Arrange the process modelling board
+### 1. Arrange the process modelling board
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
    - Add a grammar legend to your board (as shown below with grammar definition).
    - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title `Preconditions`.
    - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process.
    - Arrange any remaining events in chronological order from left to right between the preconditions and postconditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
-2. #### First Narration
+### 1. First Narration
    As described in the prerequisites, when moving from the Storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome. A `golden path` is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
-   ##### Roles:
+   #### Roles:
    - There are typically 3 roles:
      - A `Narrator` reads through the process from left to right.
      - `The Audience` listens to the narrator and assists in discovering the process.
@@ -85,41 +85,41 @@ The output from these workshops can be used to discover, validate or design soft
    - Any participant can take on any of these roles. Rotating roles should also be encouraged, so everyone develops both ownership of the process and a deeper familiarity with the exercise.
 
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. The primary goal is to get an end to end of events, so while you can add grammar in the first narration it is not necessary.
-   ##### Grammar:
-![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-legend.jpg)
-| Term | Definition | Rules | Examples |
-| --- | --- | --- | --- |
-| Events | Represent a state change or notification that another part of the system wants to listen to. They can be raised as a result of an Action or raised automatically as a Timed Event | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be, timed or modelled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-preconditions.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-events.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-timed-events.jpg). |
-| Policies | Represent a decision to perform a task, sometimes this is written as a short sentence or can be labeled and described somewhere else. Policies can be manually performed by an Actor or automated by an IT system | <ul> <li>A Policy listens to a single Event.</li>  <li>A Policy should call one Action per decision outcome.</li> <li>Multiple Policies can call the same Action.</li> <li>A Policy description should include the Event they are listening to, an Actor if one is required, a decision to be made and an Action to take. </li> <li>A manual Policy should have an actor.</li> <li>An automated Policy should not have an actor.</li>  </ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policies.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-description.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-type.jpg). |
-| Actions | Represent a tasks that must be performed due to policy, and produces one or more interesting events. Also called Commands. | <ul> <li>An Action can require multiple Systems.</li> <li>An Action can raise multiple Events.</li> <li>If an Action raises more than one event, these should be placed in a column, with the most pivotal events at the top.</li> <li>Multiple Actions can raise the same Event.</li> </ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-actions.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-actions-systems.jpg). |
-| Actors | Represent a human interaction and should be placed with policies to identify who is responsible for making the decision and performing the Action. A policy without an actor is automated. | | |
-| Read Models | Represent data required to make decisions or perform Actions. Read Models should be small chunks of relevant structures or fields | <ul> <li>Multiple Read Models can be assigned to a Policy</li> <li>Read Models can be duplicated to multiple Policies</li></ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-readmodels.jpg). |
-| Systems | Represent external/3rd party tools such as; email, excel, notepad, or any required commercial off the shelf (COTS) applications. | <ul> <li>Systems used by multiple Actions can be duplicated for each Action.</li> </ul>  | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-systems.jpg). |
+   #### Grammar:
+      ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-legend.jpg)
+      | Term | Definition | Rules | Examples |
+      | --- | --- | --- | --- |
+      | Events | Represent a state change or notification that another part of the system wants to listen to. They can be raised as a result of an Action or raised automatically as a Timed Event | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be, timed or modelled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-preconditions.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-events.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-timed-events.jpg). |
+      | Policies | Represent a decision to perform a task, sometimes this is written as a short sentence or can be labeled and described somewhere else. Policies can be manually performed by an Actor or automated by an IT system | <ul> <li>A Policy listens to a single Event.</li>  <li>A Policy should call one Action per decision outcome.</li> <li>Multiple Policies can call the same Action.</li> <li>A Policy description should include the Event they are listening to, an Actor if one is required, a decision to be made and an Action to take. </li> <li>A manual Policy should have an actor.</li> <li>An automated Policy should not have an actor.</li>  </ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policies.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-description.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-type.jpg). |
+      | Actions | Represent a tasks that must be performed due to policy, and produces one or more interesting events. Also called Commands. | <ul> <li>An Action can require multiple Systems.</li> <li>An Action can raise multiple Events.</li> <li>If an Action raises more than one event, these should be placed in a column, with the most pivotal events at the top.</li> <li>Multiple Actions can raise the same Event.</li> </ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-actions.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-actions-systems.jpg). |
+      | Actors | Represent a human interaction and should be placed with policies to identify who is responsible for making the decision and performing the Action. A policy without an actor is automated. | | |
+      | Read Models | Represent data required to make decisions or perform Actions. Read Models should be small chunks of relevant structures or fields | <ul> <li>Multiple Read Models can be assigned to a Policy</li> <li>Read Models can be duplicated to multiple Policies</li></ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-readmodels.jpg). |
+      | Systems | Represent external/3rd party tools such as; email, excel, notepad, or any required commercial off the shelf (COTS) applications. | <ul> <li>Systems used by multiple Actions can be duplicated for each Action.</li> </ul>  | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-systems.jpg). |
 
- ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-overview.jpg) 
+      ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-overview.jpg) 
 
 
-   ##### Questions:
+   #### Questions:
    If an assumption is being made or there is no way to clarify parts of the process with the people in the room, leave a question on the board and return to it later with the right people or new information.
 
-   ##### Pain Points and Opportunities:
+   #### Pain Points and Opportunities:
    - If pain points are identified and correlated to a sticky in the process, then they should be captured on the board near the associated sticky.
    - If opportunities are identified that correlate to either a pain point or a sticky in the process, then they should be captured on the board near the associated pain point or sticky.
 
-   ##### New Flows: 
+   #### New Flows: 
    While the main goal is to follow the flow chosen from the main storming board, you might discover other flows. These can be separated and moved to another board, with a connector drawn between the two to identify the transition between flows.
 
-1. #### Narrate the process again
+### 1. Narrate the process again
    The goal is to capture enough of the process over several narrations to identify a thin slice. Each time capturing more information to improve the participants understanding of the process and build a consensus.
    - Correct inaccuracies and add additional grammar stickies where needed.
    - If there is a prioritized pain point linked to a sticky that has not been included in the `golden path` flow, try to discover the flow that will include that sticky.
    - Repeat this until you are satisfied you have enough of the process to identify a thin slice to work on.
 
-2. #### Review Questions, Pain Points and Opportunities
+### 1. Review Questions, Pain Points and Opportunities
    - Try to answer as many questions as possible.
    - Simplify, remove duplication and affinity group pain points and opportunities.
 
-#### Success/Expected Outcomes
+## Success/Expected Outcomes
 - Capture information to assist further in the development process.
   - Define Ubiquitous Language: Policies, Actions, Events and Systems all help to define a common language that cuts through assumption and clarifies a shared understanding. A glossary can also be maintained to capture important language that needs describing.
   - Identify Domain Events: Pivotal Events describe the communication between sub-domains. They are raised by one sub-domain and listened to by another, decoupling the dependency between the domains.
@@ -132,7 +132,6 @@ The output from these workshops can be used to discover, validate or design soft
 ## Related Practices
 ### Event Storming 
 As mentioned `Process Modelling` is a form of `Event Storming`, and as taught by `Alberto Brandolini`, is a natural follow on exercise to the more common `Bigger Picture` workshop. Therefore the `Process Modelling` exercise naturally offers a way to enrich any `Event Storming` session with additional grammar. The exercise can also be carried out with smaller more focused groups of SMEs to help with planning and managing attendance.
-
 ### Software Design
 Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a different architectural model, such as Event and Domain Driven microservice architecture, a simple Pipeline or even `CQRS` and `Event Sourcing` patterns. However this is often where you lose `Subject Matter Experts`, and the conversation often continues from a more technical perspective. It can be useful to revisit this board and get both technical and business clarity on the problem and the solution being delivered.
 #### Event Storming | Software Design
@@ -147,7 +146,7 @@ Stickies from the main storming board, policies and other grammar can be used to
 #### User Interviews
 The information gathered here could help focus user interviews and identify good questions to ask.
 #### Story Writing
-???
+The process identifies both users and policy makers. These personas and their objectives for each policy can be used to write stories that deliver value to either the user or the business.
 ### Swift Methodology
 If being used as part of the [Swift Method](/practices/swift-method), then this would be done as part of the Event Storm exercise that is run in the beginning, just prior to Service Candidate discovery.
 ## Facilitator Notes & Tips
