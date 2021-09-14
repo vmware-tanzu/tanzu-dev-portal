@@ -70,14 +70,14 @@ The output from these workshops can be used to discover, validate or design soft
    There are many exercises described in the `Tanzu Developer Center` that can be used to identify priorities.
    #### Arrange the process modelling board
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
-   - Add a grammar legend to your board (these will be described later) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-legend.jpg).
+   - Add a grammar legend to your board (as shown below with grammar definition).
    - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title `Preconditions`.
    - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process.
    - Arrange any remaining events in chronological order from left to right between the preconditions and postconditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
 2. #### First Narration
    As described in the prerequisites, when moving from the Storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome. A `golden path` is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
-   Roles:
+   ##### Roles:
    - There are typically 3 roles:
      - A `Narrator` reads through the process from left to right.
      - `The Audience` listens to the narrator and assists in discovering the process.
@@ -85,7 +85,8 @@ The output from these workshops can be used to discover, validate or design soft
    - Any participant can take on any of these roles. Rotating roles should also be encouraged, so everyone develops both ownership of the process and a deeper familiarity with the exercise.
 
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. The primary goal is to get an end to end of events, so while you can add grammar in the first narration it is not necessary.
-
+   ##### Grammar:
+![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-legend.jpg)
 | Term | Definition | Rules | Examples |
 | --- | --- | --- | --- |
 | Events | Represent a state change or notification that another part of the system wants to listen to. They can be raised as a result of an Action or raised automatically as a Timed Event | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be, timed or modelled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> | ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-preconditions.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-events.jpg). ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-timed-events.jpg). |
@@ -98,14 +99,14 @@ The output from these workshops can be used to discover, validate or design soft
  ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-overview.jpg) 
 
 
-   Questions:
+   ##### Questions:
    If an assumption is being made or there is no way to clarify parts of the process with the people in the room, leave a question on the board and return to it later with the right people or new information.
 
-   Pain Points and Opportunities:
+   ##### Pain Points and Opportunities:
    - If pain points are identified and correlated to a sticky in the process, then they should be captured on the board near the associated sticky.
    - If opportunities are identified that correlate to either a pain point or a sticky in the process, then they should be captured on the board near the associated pain point or sticky.
 
-   New Flows: 
+   ##### New Flows: 
    While the main goal is to follow the flow chosen from the main storming board, you might discover other flows. These can be separated and moved to another board, with a connector drawn between the two to identify the transition between flows.
 
 1. #### Narrate the process again
