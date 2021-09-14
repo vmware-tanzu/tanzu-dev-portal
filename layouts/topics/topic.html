@@ -92,7 +92,7 @@
             </div>
         
         <!-- Featured Content -->
-        {{ $featured := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }} <!-- TODO: Att featured metadata and filter -->
+        {{ $featured := where (where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic) "Params.featured" true }}
         <div class='container py-5 border-bottom'>
             <!-- TODO: Update Icon -->
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>

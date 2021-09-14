@@ -6,6 +6,7 @@ subsection: What are Microservices?
 tags:
 - Microservices
 - Spring
+featured: true
 title: What is Microservices Architecture?
 topics:
 - Microservices
