@@ -1,6 +1,9 @@
 ---
 title: Modern App Basics
 topic: Modern App Basics
+topicgroups: "Modern Applications"
+grouptitle: "Learn the Basics"
+weight: 1
 icon: cicd
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit

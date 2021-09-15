@@ -16,49 +16,39 @@
 	</div>
 </section>
 
-<!-- Build topics -->
-{{ $guides := where .Site.Pages "Section" "guides" }}
-{{ $topics := (slice) }}
-{{ range $guides }}
-    {{ $topics = union $topics ( slice .Params.level1 )}}
+<!-- Gather topic groups -->
+{{ $topicgroups := (slice) }}
+{{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
+    {{ $topicgroups = union $topicgroups ( slice .Title )}}
 {{ end }}
 
-<!-- Topics -->
+<!-- Build topic groups -->
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="row td-box td-box--dark td-box--gradient td-box--height-auto">
-	<div class="row justify-content-center w-100">
-
-        {{ range $topics }}
-        {{ $link := replace (lower .) "/" "-"  }}
-        {{ $link := replace $link "&" "and" }}
-        {{ $link := replace $link " " "-" }}
-        {{ $link := printf "%s/%s" "/topics" $link | relURL }}
-        <div class="topic col-lg-4 mb-0 mb-lg-0 ">
-            <p>
-                <a class="py-3 px-4 mb-0 text-left h4 text-white" href="{{ $link }}">{{ . }}</a>
-            </p>
-            <div class="topic-description py-3 px-4 mb-4 text-left h4 text-white" >
-                <!-- Gather Subtopics -->
-                {{ $topicguides := where $guides "Params.level1" . }}
-                {{ $subtopics := (slice) }}
-                {{ range $topicguides }}
-                    {{ $subtopics = union $subtopics ( slice .Params.level2 )}}
-                {{ end }}
-                
-                {{ range $subtopics }}
-                {{ $subtopiclink := replace (lower .) "/" "-"  }}
-                {{ $subtopiclink := replace $subtopiclink "&" "and" }}
-                {{ $subtopiclink := replace $subtopiclink " " "-" }}
-                {{ $subtopiclink := printf "%s/%s" "/guides" $subtopiclink | relURL }}
-                <a href="{{ $subtopiclink }}">{{ . }}</a>
-                {{ end }}
-            </div>
+<section class="row td-box td-box--gradient td-box--height-auto">
+{{ range $topicgroups }}
+    <div class="row justify-content-left w-100 td-box td-box--gray-dark mb-lg-4">
+        <div class="col-3 h3">
+            {{ . }}
         </div>
+        {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
+            {{ $link := replace (lower .Title) "/" "-"  }}
+            {{ $link := replace $link "&" "and" }}
+            {{ $link := replace $link " " "-" }}
+            {{ $link := printf "%s/%s" "/topics" $link | relURL }}
+            <div class="topic col-lg-3 my-lg-2 td-box td-box--gray-dark">
+                <a href="{{ $link }}">
+                    <div class="h3 link">
+                        {{ .Params.grouptitle }}
+                    </div>
+                    <div class="py-3 px-4 mb-4 text-left h4 text-white" >
+                        {{ .Description }}
+                    </div>
+                </a>
+            </div>
         {{ end }}
-
-		</div>
+    </div>
+{{ end }}
 </section>
-
 
 <!-- Getting Started With Tanzu -->
 <a id="td-block" class="td-offset-anchor"></a>

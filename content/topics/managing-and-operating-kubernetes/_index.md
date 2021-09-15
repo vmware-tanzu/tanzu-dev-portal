@@ -1,6 +1,9 @@
 ---
 title: Managing & Operating Kubernetes
 topic: Managing and Operating Kubernetes
+topicgroups: "Kubernetes Platform"
+grouptitle: "Manage"
+weight: 2
 icon: cicd
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit

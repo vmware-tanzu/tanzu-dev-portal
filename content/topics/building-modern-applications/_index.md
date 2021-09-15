@@ -1,6 +1,9 @@
 ---
 title: Building Modern Applications
 topic: Building Modern Applications
+topicgroups: "Application Development"
+grouptitle: "Build"
+weight: 1
 icon: cicd
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit

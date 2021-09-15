@@ -1,6 +1,9 @@
 ---
 title: Deploying Modern Applications
 topic: Deploying Modern Applications
+topicgroups: "Application Development"
+grouptitle: "Deploy"
+weight: 2
 icon: cicd
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit

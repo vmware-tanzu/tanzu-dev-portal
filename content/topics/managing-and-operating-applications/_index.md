@@ -1,6 +1,9 @@
 ---
 title: Managing & Operating Applications
 topic: Managing and Operating Applications
+topicgroups: "Application Development"
+grouptitle: "Manage"
+weight: 3
 icon: cicd
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit

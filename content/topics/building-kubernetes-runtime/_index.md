@@ -2,6 +2,9 @@
 title: Building a Kubernetes Runtime
 linkTitle: Building a Kubernetes Runtime
 topic: Building Kubernetes Runtime
+topicgroups: "Kubernetes Platform"
+grouptitle: "Build"
+weight: 1
 icon: cicd
 description: >
     Continuous integration and delivery automate the software development lifecycle as much as possible.
