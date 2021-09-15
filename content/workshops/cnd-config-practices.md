@@ -16,6 +16,7 @@ tags:
 - Kubernetes
 title: Configuring a Cloud Native Application
 topics: null
+weight: 9
 ---
 
 This is a workshop for developers and application operators
