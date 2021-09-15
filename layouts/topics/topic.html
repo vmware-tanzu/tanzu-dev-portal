@@ -49,10 +49,9 @@
         <br />
 
         <!-- Featured Learning Paths -->
-        {{ $learningpaths := where (where .Site.Pages "Section" "outcomes") "Params.level1" .Params.topic }}
-        {{ $learningpaths := seq 3 }} <!-- TODO: Add featured content -->
+        <!-- {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") "Params.level1" .Params.topic }}
+        {{ printf "%v" $learningpaths }}
         <div class='container py-5 border-bottom'>
-            <!-- TODO: Update Icon -->
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Learning Paths</h2></div>
             <div class='col px-0'>
                 <div class='row'>
@@ -66,7 +65,31 @@
                     {{ end }}
                 </div>
             </div>
-        
+         -->
+
+
+        <!-- Featured Content -->
+        <!-- TODO: -->
+        {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+        <div class='container py-5 border-bottom'>
+            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
+            <div class='col px-0'>
+                <div class='row'>
+                    {{ range first 3 $featured }}
+                        {{ partial (printf "%v-card.html" .Section) . }}
+                    <!-- {{ printf "%v" .Section }}
+                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
+                        <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
+                            <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
+                            <p>{{ .Params.description }}</p>
+                        </a>
+                    </div> -->
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+
         <!-- Getting Started-->
         {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
         {{ $gettingstarted := slice }}
@@ -76,7 +99,6 @@
             {{ end }}
         {{ end }}
         <div class='container py-5 border-bottom'>
-            <!-- TODO: Update Icon -->
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>
             <div class='col px-0'>
                 <div class='row'>
@@ -90,25 +112,10 @@
                     {{ end }}
                 </div>
             </div>
+        </div>
         
-        <!-- Featured Content -->
-        {{ $featured := where (where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic) "Params.featured" true }}
-        <div class='container py-5 border-bottom'>
-            <!-- TODO: Update Icon -->
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
-            <div class='col px-0'>
-                <div class='row'>
-                    {{ range first 3 $featured }}
-                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                            <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
-                            <p>{{ .Params.description }}</p>
-                        </a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-        
+            
+
       </div>
       {{ partial "footer.html" . }}
     </div>
