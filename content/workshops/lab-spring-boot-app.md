@@ -1,11 +1,11 @@
 ---
 date: '2021-09-13'
-description: If you’re new to Spring Boot, take this gentle introduction to experience how Spring Boot makes it easy to create standalone, production-grade Spring-based applications that you can "just run."
+description: Experience how Spring Boot makes it easy to create standalone, production-grade Spring-based applications that you can "just run."
 hero: /images/workshops/workshop-springboot.png
 lab: lab-sb-app
 lastmod: '2021-09-13'
 length: 30
-preview: /images/workshops/img-spring-booternetes.png
+preview: /images/workshops/img-spring-boot-app.png
 summary:
 - If you’re new to Spring Boot, take this gentle introduction to experience how Spring Boot makes it easy to create standalone, production-grade Spring-based applications that you can "just run."
 tags:
@@ -23,4 +23,4 @@ team:
 weight: 10
 ---
 
-Try this lab to see how Spring Boot helps you accelerate application development. This workshop is meant to give you a quick taste of Spring Boot. You’ll build a simple web application with Spring Boot and add some useful services to it.
+If you’re new to Spring Boot, take this gentle introduction to experience how Spring Boot makes it easy to create standalone, production-grade Spring-based applications that you can "just run." Try this lab to see how Spring Boot helps you accelerate application development. This workshop is meant to give you a quick taste of Spring Boot. You’ll build a simple web application with Spring Boot and add some useful services to it.
