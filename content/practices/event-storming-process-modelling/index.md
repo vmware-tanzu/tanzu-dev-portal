@@ -122,13 +122,46 @@ The output from these workshops can be used to discover, validate or design soft
 
 ## Success/Expected Outcomes
 - Capture information to assist further in the development process.
-  - Define Ubiquitous Language: Policies, Actions, Events and Systems all help to define a common language that cuts through assumption and clarifies a shared understanding. A glossary can also be maintained to capture important language that needs describing.
-  - Identify Domain Events: Pivotal Events describe the communication between sub-domains. They are raised by one sub-domain and listened to by another, decoupling the dependency between the domains.
-  - Identify Policies for Decision Making: Policies describe business level decisions and identifies actors and read-models, helping to discover or validate behavior and responsibility.
-  - Define Service Contracts: Actions identify where there should be a contract. In theory you can add write models here, but the main premise is to keep read and write models separate.
-  - Recognize Integrations with tools and apps: Systems give you an understanding of when your process needs to integrate with an external system.
+  - Define Ubiquitous Language: A common language that cuts through assumption and clarifies a shared understanding. A glossary can also be maintained to capture important language that needs describing.
+  - Identify Domain Events: Pivotal Events that describe communication between sub-domains. They are raised by one sub-domain and listened to by another, decoupling the dependency between the domains.
+  - Identify Policies for Decision Making: Company policies describe business level decisions and relates them to users and data.
+  - Identify Service Contracts: Events, write models and command inputs that are be used to create contracts for services.
+  - Identify Integrations: external systems are needed to make decisions and perform actions.
   - Discuss Pain Points + Opportunities: An understanding of where problems are experienced and ideas of how they can be resolved.
 - Identify one or more thin slices. Try to identify a simplified end-to-end process that can provide the most value. This will be your starting point for development.
+
+ ![This is the placeholder for process modelling artifacts](/images/practices/event-storming-process-modelling/process-modelling-artifacts.jpg) 
+
+Discovery of opportunities:
+- The algorithmic model and use of Policies, can identify more opportunities to improve either the process and/or the user journey
+- Read Models can identify opportunities to improve a user or automated decision making process
+- Actors and automated Policies identify the potential for opportunities through automation
+
+Decision Making:
+All Process Modelling artifacts act as evidence of requirements and priorities. 
+These can be used to re-enforce decisions and validate work being undertook
+
+Thin Slice:
+- The decomposition of an event storming board by workflow offers a first opportunity to define a thin slice.
+- Flows can be prioritized by pain points and/or opportunities
+- Additional grammar such as Preconditions, and Policies can be used to identify a number of scenarios that could act as the first iteration
+- Scenarios can be prioritized by value and complexity
+
+Notional Architecture:
+- Additional grammar such as policies and commands can identify and correctly name domain objects and events
+- An algorithmic process model leads to a more inclusive synthesis and candidate selection across all pillars of the balanced team and stakeholders
+- An algorithmic process model offers the chance to discover both a notional "north star" architecture and a notional architecture of existing systems
+- Additional grammar such as Policies, Actions and Read Models can offer a notional architecture at the code level
+- Preconditions, Actions, Read Models and Events can drive the discovery of how data gets into the system, and where it is used. This offers a notion of data flow through the system.
+- Actors and automated Policies identifies the potential for synchronous and asynchronous operations
+- Domain Objects offer a notional microservice architecture
+
+Story Writing:
+- Actors identify the user of stories where value is achieved through improved human interaction, and offers a focused role from which to start investigation of user needs
+- Policy makers, SME's best suited to define the decision made in a policy on behalf of the business, identify the user of stories based on business requirements and offers a focused SME from whom to obtain further requirements
+- All grammar can be used to better define a story and offer more detail as to it's value
+- Policies, can identify more opportunities to improve either the process and/or the user journey
+- Read Models can identify opportunities to improve a user or automated decision making process
 
 ## Related Practices
 #### Event Storming 
