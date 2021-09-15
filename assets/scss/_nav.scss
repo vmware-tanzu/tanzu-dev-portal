@@ -210,10 +210,6 @@
 nav {
     z-index: 1000 !important;
 
-    .nav-item:last-child {
-        padding: 5px;
-        background-color: #1B2A32;
-    }
     .nav-select {
         height: 70%;
         width: 41%;
@@ -254,5 +250,105 @@ nav {
         #theme-select {
             display: none !important;
         }
+    }
+    .nav-arrow {
+        transform: rotate(45deg) translateY(-6px);
+        -webkit-transform: rotate(45deg) translateY(-6px);
+        border: solid white;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 5px;
+    }
+    #dropdown-menus {
+        height: 40px;
+        right: 0;
+        top: 0;
+        width: 100%;
+        cursor: pointer;
+    }
+    .dropdown {
+        height: 40px;
+
+        &.show {
+            .drop-menu {
+                .dropdown-item {
+                    opacity: 1;
+                }
+                padding: 20px 0;
+                height: auto;
+            }
+        } 
+            
+    }
+    #learn {
+        right: 570px;
+        width: 110px;
+    }
+    #topics {        
+        right: 435px;
+        width: 135px;
+    }
+    #tanzutv {
+        right: 286px;
+        width: 149px;
+    }
+    #community {
+        right: 130px;
+        width: 156px; 
+    }
+    .drop-target {
+        height: 40px;
+    }
+    .drop-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $zindex-dropdown;
+        float: left;
+        text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+        list-style: none;
+        height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0;
+        
+        .dropdown-item {
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+    #scope {
+        background: white;
+        height: 500px;
+        transition: all .2s ease-out;
+        height: 400px;
+        top: 40px;
+
+        &.learn-scope {
+            left: -18px;
+            width: 200px;
+            height: 264px;
+        }
+        &.topics-scope {
+            left: 95px;
+            width: 340px;
+            height: 360px;
+        }
+        &.tanzutv-scope {
+            left: 229px;
+            width: 290px;
+            height: 328px;
+        }
+        &.community-scope {
+            left: 378px;            
+            width: 150px;
+            height: 136px;
+        }
+    }
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        background: rgb(228, 228, 228);
+        border-radius: 2px;
     }
 }

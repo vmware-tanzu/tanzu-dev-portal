@@ -5,7 +5,7 @@
 		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 		</a>
-		<div class="td-navbar-nav-hamburger" id="main_navbar">
+		<div class="td-navbar-nav-hamburger position-relative" id="main_navbar">
 			<ul class="navbar-nav mt-lg-0 align-items-center">
 				{{ if  .Site.Params.versions }}
 				<li class="nav-item dropdown d-none d-lg-block mr-xl-4 mr-2 mb-0">
@@ -17,26 +17,11 @@
 				{{ $url := urls.Parse .RelPermalink }}
 				{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
 				{{ range .Site.Menus.main }}
-					{{ if .HasChildren }}
-					<li class="nav-item dropdown d-lg-block mr-xl-4 mr-2 mb-0">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							{{ .Name }}
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							{{ range .Children }}
-							<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
-							{{ end }}
-						</div>
-					</li>
-					{{ else }}
-					<li class="nav-item mr-xl-4 mr-2 mb-0">
-						{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
-						{{ with .Page }}
-						{{ $active = or $active ( $.IsDescendant .)  }}
-						{{ end }}
-						<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
-					</li>
-					{{ end }}
+				<li class="mb-0 mr-5 nav-link">
+					{{ .Name }}
+					<div class="nav-arrow"></div>
+				</li>
+				
 				{{ end }}
 
 				<li class="nav-item mr-xl-4 mr-2 mb-0 mobile-search-link" style="display: none;">
@@ -59,15 +44,33 @@
 					<a class="position-relative" id="toggle-dark-mode"><i class="fas fa-moon"></i></a>
 					<a class="position-relative" id="toggle-light-mode"><i class="fas fa-sun mr-0"></i></a>
 				</li>
-
-
-	<!-- 			{{ if  (gt (len .Site.Home.Translations) 0) }}
-				<li class="nav-item dropdown d-none d-lg-block">
-					{{ partial "navbar-lang-selector.html" . }}
-				</li>
-				{{ end }} -->
-
 			</ul>
+
+			<div id="dropdown-menus" class="position-absolute">
+				<div id='scope' class='position-absolute'></div>
+				<ul class="mb-0 p-0 position-relative w-100">
+					{{ range .Site.Menus.main }}
+						{{ if .HasChildren }}
+						<li id={{ lower (replace .Name "." "") }} class="nav-item dropdown d-lg-block mb-0 position-absolute">
+							<div id="{{ lower (replace .Name "." "") }}-target" class="drop-target"></div>
+							<div class="drop-menu m-0" aria-labelledby="navbarDropdownMenuLink">
+								{{ range .Children }}
+								<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+								{{ end }}
+							</div>
+						</li>
+						{{ else }}
+						<!-- <li class="nav-item mr-xl-4 mr-2 mb-0">
+							{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
+							{{ with .Page }}
+							{{ $active = or $active ( $.IsDescendant .)  }}
+							{{ end }}
+							<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
+						</li> -->
+						{{ end }}
+					{{ end }}
+				</ul>
+			</div>
 
 			<div id="menu-toggle">
 				<span>

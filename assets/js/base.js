@@ -409,17 +409,6 @@ function scrollFunction() {
   if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     document.querySelector("#navbar").classList.add("darken");
     document.querySelector("#dev-title").classList.add("fadeOut");
-
-    // if (document.body.scrollTop > (document.body.scrollHeight - 1000) || document.documentElement.scrollTop > (document.body.scrollHeight - 1000)) {
-    //   document.querySelector("main").classList.add("mini");
-    //   document.querySelector("footer").classList.add("fadeIn");
-    //   document.querySelector("#navbar").classList.add("darker");
-    // }
-    // else {
-    //   document.querySelector("main").classList.remove("mini");
-    //   document.querySelector("footer").classList.remove("fadeIn");
-    //   document.querySelector("#navbar").classList.remove("darker");
-    // }
   }
   else {
     document.querySelector("#navbar").classList.remove("darken");
@@ -428,36 +417,32 @@ function scrollFunction() {
 }
 
 function removeNavClasses () {
-  $('#scope').removeClass('why-scope learn-scope projects-scope community-scope');
-  $('.drop-menu').removeClass('active');
-  $('.has-menu').removeClass('active');
+  $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
+  $('.dropdown').removeClass('show');
 }
-$('#why-target').mouseenter(function(){
-  removeNavClasses();
-  $('#scope').addClass('why-scope');
-  $('#why-items').addClass('active');
-});
 $('#learn-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('learn-scope');
-  $('#learn-items').addClass('active');
+  $('this').next().addClass('show');
 });
-$('#project-target').mouseenter(function(){
+$('#topics-target').mouseenter(function(){
   removeNavClasses();
-  $('#scope').addClass('projects-scope');
-  $('#project-items').addClass('active');
+  $('#scope').addClass('topics-scope');
+  $('this').next().addClass('show');
+});
+$('#tanzutv-target').mouseenter(function(){
+  removeNavClasses();
+  $('#scope').addClass('tanzutv-scope');
+  $('this').next().addClass('show');
 });
 $('#community-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('community-scope');
-  $('#community-items').addClass('active');
+  $('this').next().addClass('show');
 });
 $('.drop-menu').mouseenter(function () {
-  $('this').addClass('active');
+  $('this').addClass('show');
 });
-$('.drop-menu ul').mouseleave(function () {
-  removeNavClasses();
-});
-$('.drop-menu').mouseleave(function () {
+$('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
   removeNavClasses();
 });
