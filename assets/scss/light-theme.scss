@@ -209,9 +209,9 @@ body.tv-episode #register .mktoForm select {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
-nav .nav-item:last-child {
+nav #theme-select {
   background-color: #ADBBC4 !important;
-
+  
   .fa-sun {
     color: #1B2A32 !important;
   }

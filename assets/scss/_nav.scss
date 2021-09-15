@@ -314,12 +314,13 @@ nav {
         padding: 0;
         
         .dropdown-item {
+            color: $link;
             opacity: 0;
             transition: opacity .5s;
         }
     }
     #scope {
-        background: white;
+        background: $gray-800;
         height: 500px;
         transition: all .2s ease-out;
         height: 400px;
@@ -348,7 +349,7 @@ nav {
     }
 
     .dropdown-item:hover, .dropdown-item:focus {
-        background: rgb(228, 228, 228);
+        background: $dark;
         border-radius: 2px;
     }
 }
