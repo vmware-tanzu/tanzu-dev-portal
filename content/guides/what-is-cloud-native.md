@@ -6,7 +6,6 @@ tags:
 - Cloud Native
 - Microservices
 - Getting Started
-featured: true
 title: What is Cloud Native?
 topics:
 - Kubernetes
