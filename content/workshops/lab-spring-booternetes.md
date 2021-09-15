@@ -1,12 +1,12 @@
 ---
 date: '2021-09-13'
-description: Microservices introduce a lot of the complexity implied in building any distributed system. Things will fail in production at sufficient scale. In this workshop, you're going to look at different technologies that let us pay down some of the technical complexity and technical debt of scale.
+description: Look at different technologies that help with the technical complexity and technical debt when building and running microservices at scale.
 hero: /images/workshops/workshop-springboot.png
 lab: lab-booternetes
 lastmod: '2021-09-13'
 length: 30
 preview: /images/workshops/img-spring-booternetes.png
-summary: I do not like work even when someone else is doing it. ―Mark Twain >We're with Mr. Twain on this one. We loathe work, especially undifferentiated work. Work that you have to do but that doesn't directly contribute to your project's success is undifferentiated work, and getting to production today means doing more of it than ever."
+summary: Look at different technologies that help with the technical complexity and technical debt when building and running microservices at scale.
 tags:
 - Spring
 - Microservices
