@@ -681,6 +681,7 @@ body {
     }
   }
   .topic, .language, .subtopic {
+    a {
       border-radius: 0;
       background: $gray-800;
       display: inline-block;
@@ -698,7 +699,7 @@ body {
         //border-color: $border;
         color: $link-hover-color;
       }
-
+    }
     .h4 {
       font-size: 1.1rem;
     }
