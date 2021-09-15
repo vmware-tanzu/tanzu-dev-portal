@@ -175,6 +175,7 @@ biome
 Biville
 BKPR
 BlackBox
+blazingly
 Blazor
 [Bb]lockchain
 BOM
