@@ -21,7 +21,7 @@ type: blog
 ## PdxType Examples
 Several examples of JSON data and the PdxType generated for each is shown below. Each field in the JSON data becomes a PdxField in the PdxType. A PdxField describes the field name, type and the location in the data containing the field’s value.
 
-![img](images/data-blogs/tanzu-gemfire/removing-unused-pdxtypes/diagrams/removing-unused-pdxtypes-diagram.png)
+![img](images/removing-unused-pdxtypes-diagram.png#diagram)
 
 This is a very simple example of multiple PdxTypes being created for similar unstructured JSON data. In this case, the best thing to do is to standardize the JSON address on one format and convert all JSON to that format before storing it in a Region.
 In a more complex case, PdxTypes can proliferate pretty easily, many of which become unused if the JSON data is removed or becomes more standardized. The **RemoveUnusedPdxTypesFunction** below shows a way to remove any unused PdxTypes.
