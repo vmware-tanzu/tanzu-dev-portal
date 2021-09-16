@@ -1,11 +1,9 @@
 ---
 name: Ollie Hughes
 description: "Software Engineer"
-photo: "/images/team/ollie-hughes.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "olliehughes82"

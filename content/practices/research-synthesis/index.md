@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Help sort through generative or evaluative research data using an affinity
   diagram
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 30-60 min per interview
 participants: Interviewers, researchers, observers, note-takers

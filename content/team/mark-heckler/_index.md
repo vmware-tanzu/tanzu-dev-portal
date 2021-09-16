@@ -1,11 +1,9 @@
 ---
 name: Mark Heckler
 description: "Developer Advocate"
-photo: "/images/team/advocates/mheckler.jpg"
 roles: ["advocate"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
 location: "St. Louis, MO"
-weight: 1
 hidden: true
 
 # Social Media 

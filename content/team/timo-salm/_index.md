@@ -1,11 +1,9 @@
 ---
 name: Timo Salm
 description: "Solution Engineer"
-photo: "/images/team/timo-salm.jpeg"
 roles: ["guest"]
 skills: []
 location: "Stuttgart, Germany"
-weight: 1
 
 # Social Media 
 twitter: "salmto"

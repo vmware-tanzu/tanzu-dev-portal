@@ -4,7 +4,7 @@ type: "tv-show"
 streaming: "twitch"
 # noPast: true
 id: "code"
-image: "/images/tv/shows/code.jpg"
+image: "code.jpg"
 og_image: "/images/og/TanzuTV-Code.png"
 weight: 2
 menu:

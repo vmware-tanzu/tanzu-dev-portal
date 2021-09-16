@@ -7,7 +7,7 @@
                 {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
                 <div class="row mt-lg-5">
                     <div class="col-lg-3 col-md-12">
-                        <img src={{(print "/images/practices/" .Page.Params.image) | relURL }}
+                        {{ with .Resources.GetMatch "cover" }}<img src={{ print .RelPermalink }}{{ else }}<img src={{(print "/images/practices/default-cover.png") | relURL }}{{ end }}
                         className="method-template__img-container"
                         alt="cover"
                         />

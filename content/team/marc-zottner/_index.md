@@ -1,11 +1,9 @@
 ---
 name: Marc Zottner
 description: "Field CTO"
-photo: "/images/team/marc-zottner.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "marczottner"

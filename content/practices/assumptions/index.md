@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Create a list of assumptions and identify which are the riskiest
-image: assumptions/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-16'
 length: 30-60 min
 participants: Core team, stakeholders (optional)
@@ -83,5 +85,5 @@ This exercise could go long if there are many assumptions or you're having troub
 
 {{% section %}}
 ### Real World Examples
-![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
+![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](images/example-2.jpg)
 {{% /section %}}

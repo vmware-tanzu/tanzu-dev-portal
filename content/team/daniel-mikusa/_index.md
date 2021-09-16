@@ -1,7 +1,6 @@
 ---
 name: Daniel Mikusa
 description: "Software Engineer"
-photo: "/images/team/daniel-mikusa.jpeg"
 roles: [""]
 # skills: ["""]
 # location: 

@@ -3,7 +3,7 @@ date: '2021-03-02'
 description: A communication and planning tool that shows sequential outcomes that
   help execute your strategy and build towards your vision.
 draft: false
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 2+ hours
 linkTitle: Outcome Oriented Roadmap
@@ -104,7 +104,7 @@ This session is usually better to do once you have a product **mission**, **visi
    
    Take up to 4 minutes per card.
 
-   ![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
+   ![Now, Near Term, and Future Term Outcomes](images/now-near-future-1.png)
    
    
    {{% callout %}}
@@ -120,7 +120,7 @@ This session is usually better to do once you have a product **mission**, **visi
    - X-Axis — We think this is easy to be achieved (right) to We think this hard to be achieved (left)
    - Y-Axis — We think this will bring more value to customers or the business (top) to We think this will bring less value to customers or the business (bottom)
    
-   ![2x2 diagram showing stickies in each quadrant](/images/practices/problem-prioritization/step-4.png)
+   ![2x2 diagram showing stickies in each quadrant](images/step-4.png)
 
    
    With the whole team, plot outcome cards according to how much value and effort you think it is on this quadrant. (You can go around in a circle, go through person by person, etc). Try not to plot any outcome as having the exact same value or effort as another outcome, otherwise nothing can emerge as a priority.
@@ -154,7 +154,7 @@ This session is usually better to do once you have a product **mission**, **visi
    **Tip**: Your roadmap should regularly be re-prioritized as you learn more (see step 9); creating a long roadmap could feel daunting for the team.
    {{% /callout %}}
    
-   ![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
+   ![Now, Near Term, and Future Term Outcomes](images/now-near-future-1.png)
    
 1. Check the First Draft of the Roadmap, and Adjust as Needed (10 minutes)
    
@@ -196,7 +196,7 @@ This session is usually better to do once you have a product **mission**, **visi
 ### Success/Expected Outcomes
 At the end of this exercise, you will have a roadmap of product organized sequentially in this way:  
 
-![Now, Near Term, and Future Term Outcomes](/images/practices/outcome-oriented-roadmap/now-near-future-1.png)
+![Now, Near Term, and Future Term Outcomes](images/now-near-future-1.png)
 {{% /section %}}
 
 {{% section %}}
@@ -222,9 +222,9 @@ Vision, mission, strategy -- coming soon!
 ### Real World Examples
 Companies adopt different formats of roadmaps. Most will have some kind of outcome/benefit written as minimal. Companies more confident of their velocity might have specific timelines, some may have more established OKRs as a company already (e.g. measured in sales targets, etc.). We have put some examples here, but the minimum they should have is outcomes and a priority order. 
 
-![Outcomes in Priority Order](/images/practices/outcome-oriented-roadmap/grid2.png)
+![Outcomes in Priority Order](images/grid2.png)
 
-![Outcomes with Levels of Certainty](/images/practices/outcome-oriented-roadmap/high-low.jpg)
+![Outcomes with Levels of Certainty](images/high-low.jpg)
 {{% /section %}}
 
 {{% section %}}

@@ -1,10 +1,8 @@
 ---
 name: Boskey Savla
 description: "Technical Marketing Manager"
-photo: "/images/team/boskey-savla.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "boskey"
