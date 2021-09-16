@@ -407,6 +407,9 @@ body {
       .arrow-box {
         background: rgba(73, 175, 217, 1);
       }
+      .solid-rect {
+        transform: translateX(0);
+      }
     }
     .cta-btn {
       top: 0;
@@ -417,12 +420,14 @@ body {
       height: 100%;
       font-weight: 500;
       -webkit-font-smoothing: antialiased;
+      z-index: 1;
     }
     .arrow-box {
       height: 67px;
       width: 67px;
       background: rgba(73, 175, 217, .5);
       transition: all .2s;
+      z-index: 1;
     }
     .arrow-right {
       width: 0; 
@@ -430,6 +435,13 @@ body {
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent; 
       border-left: 5px solid white;
+    }
+    .solid-rect {
+      width: 100%;
+      height: 100%;
+      transform: translateX(100%);
+      background: rgba(73, 175, 217, .5);
+      transition: all .2s ease-out;
     }
   }
   .play-icon {
