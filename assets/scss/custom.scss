@@ -197,11 +197,11 @@
   }
 }
 .td-home #hero {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 
   .h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
   .h1+p {
     max-width: 600px;
@@ -234,15 +234,3 @@
   -webkit-hyphens: auto;
   hyphens: auto;
 }}
-
-// footer {
-//   opacity: 0;
-//   transition: opacity .2s ease-out;
-//   .container {
-//     position: relative;
-//     top: -3rem;
-//   }
-//   &.fadeIn {
-//     opacity: 1;
-//   }
-// }

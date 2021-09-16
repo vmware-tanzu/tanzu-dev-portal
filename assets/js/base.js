@@ -416,32 +416,43 @@ function scrollFunction() {
   }
 }
 
+function dimBody () {
+  $("header + .container-fluid").addClass("dim");
+  $("nav").addClass("dropShadow");
+}
 function removeNavClasses () {
   $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
   $('.dropdown').removeClass('show');
+  $("header + .container-fluid").removeClass("dim");
+  $("nav").removeClass("dropShadow");
 }
 $('#learn-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('learn-scope');
   $('this').next().addClass('show');
+  dimBody();
 });
 $('#topics-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('topics-scope');
   $('this').next().addClass('show');
+  dimBody();
 });
 $('#tanzutv-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('tanzutv-scope');
   $('this').next().addClass('show');
+  dimBody();
 });
 $('#community-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('community-scope');
   $('this').next().addClass('show');
+  dimBody();
 });
 $('.drop-menu').mouseenter(function () {
   $('this').addClass('show');
+  dimBody();
 });
 $('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
   removeNavClasses();
