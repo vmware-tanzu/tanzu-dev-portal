@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Identify and prioritize key product, business, project, and/or consulting
   engagement goals and anti-goals (non-goals)
-image: goals-anti-goals/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 45-60 min
 miro_template_url: https://miro.com/miroverse/goals-and-anti-goals/
@@ -68,5 +70,5 @@ If you have a lot of people in your Kickoff (e.g. 15+), consider asking everyone
 {{% section %}}
 ### Real World Examples
 
-![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](/images/practices/goals-anti-goals/example-3.jpg)
+![Whiteboard with business, product, project, consulting engagement, and anti-goals written out](images/example-3.jpg)
 {{% /section %}}

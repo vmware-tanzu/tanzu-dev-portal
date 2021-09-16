@@ -3,7 +3,7 @@ date: '2021-03-26'
 description: Speedback is a session where the “speed-dating” format is applied for
   exchanging feedback within a group of people, usually a team. It is intentional,
   timeboxed feedback gathering.
-image: default-cover.png
+
 lastmod: '2021-03-26'
 length: 10 min per session plus prep
 linkTitle: Speedback

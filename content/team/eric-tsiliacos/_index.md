@@ -1,11 +1,9 @@
 ---
 name: Eric Tsiliacos
 description: "Staff Software Engineer"
-photo: "/images/team/eric-tsiliacos.jpg"
 roles: ["author"]
 skills: []
 location: "San Francisco, CA"
-weight: 1
 
 # Social Media 
 twitter: "erictsiliacos"

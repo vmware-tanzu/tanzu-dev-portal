@@ -1,10 +1,8 @@
 ---
 name: Art Fewell
 description: "Sr. Technical Marketing Manager"
-photo: "/images/team/art-fewell.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "afewell"

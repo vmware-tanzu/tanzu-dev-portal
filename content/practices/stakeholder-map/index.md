@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Map out business, product, and project stakeholders that may impact or
   interact with the core team
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 45-60 min
 miro_template_url: https://miro.com/miroverse/stakeholder-map

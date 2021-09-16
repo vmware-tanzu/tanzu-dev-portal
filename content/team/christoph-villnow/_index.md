@@ -1,12 +1,10 @@
 ---
 name: "Christoph Villnow"
 description: "Senior IT Architect"
-photo: "/images/external/christoph-villnow.jpeg"
 roles: ["guest"]
 skills: []
 location: ""
 external: true
-weight: 1
 
 # Social Media
 twitter: "lagndary"

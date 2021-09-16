@@ -7,7 +7,6 @@ from operator import itemgetter
 
 API_KEY = os.environ["API_KEY"]
 EPISODES_PATH = os.environ["EPISODES_PATH"]
-IMAGES_REL_PATH = os.environ["IMAGES_REL_PATH"]
 IMG_PATH_PREFIX = os.environ["IMG_PATH_PREFIX"]
 PLAYLIST_ID = os.environ["PLAYLIST_ID"]
 TEMPLATE_FILE = os.environ["TEMPLATE_FILE"]
@@ -132,11 +131,10 @@ def writeNewEpisodeFiles(videos):
     template = templateEnv.get_template(TEMPLATE_FILE)
     print("==> Writing episodes to hugo")
     for video in videos:
-        imageFilename = IMG_PATH_PREFIX + IMAGES_REL_PATH + video["episode"] + ".jpg"
-        markdownFilename = EPISODES_PATH + video["episode"] + ".md"
+        imageFilename = EPISODES_PATH + video["episode"] + "/" + IMG_PATH_PREFIX + video["episode"] + ".jpg"
+        markdownFilename = EPISODES_PATH + video["episode"] + "/index.md"
         print("---> fetching preview image from " + video["imageUrl"])
         urllib.request.urlretrieve(video["imageUrl"], imageFilename)
-        video["image"] = IMAGES_REL_PATH + video["episode"] + ".jpg"
         outputText = template.render(video=video)
         print("---> writing " + markdownFilename)
         f = open(markdownFilename, "w")

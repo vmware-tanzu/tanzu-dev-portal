@@ -1,11 +1,9 @@
 ---
 name: Oleh Dokuka
 description: "Software Engineer"
-photo: "/images/team/oleh-dokuka.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "olehdokuka"

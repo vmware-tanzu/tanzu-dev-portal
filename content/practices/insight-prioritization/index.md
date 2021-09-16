@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Prioritize any insights that were uncovered during research so the team
   can use them to make informed product decisions
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1-2 hours
 participants: Core team
@@ -39,14 +39,14 @@ why:
    - X-Axis → Smaller Size of Opportunity (left) to Greater Size of Opportunity (right)
    - Y-Axis → Less Useful for Making Product Decisions (bottom) to More Useful for Making Product Decisions (top)
  
-   ![Empty 2x2 diagram](/images/practices/insight-prioritization/step-3.png)
+   ![Empty 2x2 diagram](images/step-3.png)
 
 1. Plot the "Yes" insights on the 2x2, striving to end with a list of the top 3-5 insights
 
    {{% callout %}}
    **Tip**: If the top right quadrant is packed with insights, draw a second 2x2 within that quadrant and discuss what has fallen out—with some additional conversation, the team will generally agree that the new top right quadrant truly does have the highest priority insights
    {{% /callout %}}
-![2x2 diagram showing stickies in each quadrant](/images/practices/insight-prioritization/step-4.png)
+![2x2 diagram showing stickies in each quadrant](images/step-4.png)
 {{% /section %}}
 
 {{% section %}}

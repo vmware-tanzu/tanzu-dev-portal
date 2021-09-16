@@ -1,11 +1,9 @@
 ---
 name: Martin Lippert
 description: "Software Engineer"
-photo: "/images/team/martin-lippert.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "martinlippert"

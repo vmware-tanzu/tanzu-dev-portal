@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Determine which solutions to explore first
-image: solution-prioritization/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 1-2 hours
 participants: Core team members (PM, designer, engineers)
@@ -42,7 +44,7 @@ why:
 
    If whiteboard space is limited, you can do this exercise on a window
 
-   ![Empty 2x2 quadrant](/images/practices/solution-prioritization/step-1.png)
+   ![Empty 2x2 quadrant](images/step-1.png)
 
 1. Plot the solution sticky notes on the 2x2 (can go around in a circle, person by person, if desired) and discuss
 
@@ -52,7 +54,7 @@ why:
 
    Use this opportunity to extract any immovable requirements from product - especially if they're business driven
    
-   ![Filled 2x2 quadrant](/images/practices/solution-prioritization/step-2.png)
+   ![Filled 2x2 quadrant](images/step-2.png)
 
 1. Do your best to end with manageable number of solutions in the top right quadrant. The team should feel comfortable about where you land.
 
@@ -60,7 +62,7 @@ why:
    **Tip**: If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
 
-   ![Nested 2x2 quadrant](/images/practices/solution-prioritization/step-3.png)
+   ![Nested 2x2 quadrant](images/step-3.png)
 {{% /section %}}
 
 {{% section %}}
@@ -93,5 +95,5 @@ This is an activity that you can time box if it feels drawn out. Many of the tip
 
 {{% section %}}
 ### Real World Examples
-![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
+![Digital two by two with prioritized solutions](images/example-6.jpg)
 {{% /section %}}

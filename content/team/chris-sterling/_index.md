@@ -1,10 +1,8 @@
 ---
 name: Chris Sterling
 description: "Sr. Product Line Manager"
-photo: "/images/team/chris-sterling.jpeg"
 roles: ["guest"]
 location: "Kenmore, WA"
-weight: 1
 
 # Social Media
 twitter: "@csterwa"

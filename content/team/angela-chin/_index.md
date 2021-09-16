@@ -1,11 +1,9 @@
 ---
 name: Angela Chin
 description: "Senior Engineer"
-photo: "/images/team/angela-chin.jpg"
 roles: ["guest"]
 skills: ["Tanzu Application Service", "Cloud Foundry", "Kubernetes"]
 # location: "San Francisco, CA"
-weight: 1
 
 # Social Media
 twitter: "AngelaSChin"

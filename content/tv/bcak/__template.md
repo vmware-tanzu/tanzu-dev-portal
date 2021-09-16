@@ -13,10 +13,6 @@ PublishDate: "2020-04-07T00:00:00-07:00"
 Date: "2020-11-01T10:00:00-08:00"
 minutes: 120
 episode: "0"
-
-episode_banner: "/images/tv/episodes/bcak/0.jpg"
-episode_image: "/images/tv/episodes/bcak/0.jpg"
-
 explicit: "no"
 title: "The one with GUEST_NAME"
 youtube: "YT_ID"

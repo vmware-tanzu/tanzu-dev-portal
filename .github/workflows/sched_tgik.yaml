@@ -24,8 +24,7 @@ jobs:
           API_KEY: ${{ secrets.YT_API_KEY }}
           PLAYLIST_ID: "PL7bmigfV0EqQzxcNpmcdTJ9eFRPBe-iZa"
           EPISODES_PATH: "content/tv/tgik/"
-          IMG_PATH_PREFIX: "static/"
-          IMAGES_REL_PATH: "images/tv/episodes/tgik/"
+          IMG_PATH_PREFIX: "images/"
           TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
       - name: Check for modified files
         id: git-check
