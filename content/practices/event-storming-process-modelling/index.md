@@ -13,22 +13,32 @@ participants: "business: focused group of business analysts or executives or dom
 image: "default-cover.png" 
 lastmod: "2021-05-21"
 why: 
-- Process Modelling can model complex processes that require discussions between engineers and SMEs and help generate a backlog of work
-- Process modelling can be a quick way to visualize an algorithmic flow or pipeline for use in architectural diagrams and other modelling tools
-- Process Modelling can help compare/hypothesise processes to validate proposed solutions
+- To break down and model business processes, aligning balanced teams with stakeholders and SMEs on business practice.
+- To identify user interaction within a process and identify where user journeys are required.
+- To align with a common and understandable language.
+- To build a feature oriented context for future development.
+- To draft, communicate and validate lean product assumption, of how the process should behave, with stakeholders and SMEs.
+- To identify a thin slice and first iteration with prioritize lean assumptions.
+- To create an algorithmic model of a business processes.
+- To break down large problem spaces into smaller more manageable problems.
+- To identify where existing solutions exist to support the process.
+- To compare process changes to validate hypothesise and solutions.
+- To identify future road-map priorities.
 when:
-- When discovering a high level business process and any tools used to support it.
-- When discovering a pipeline or workflow and any tools used to support them
-- When validating process changes that might help solve a problem
+- You have identified a specific process from and Event Storming exercise.
+- You have identified a need to crete new software or re-write legacy software.
+- You need to break down monolithic systems
+- You are validating process changes that might help solve a problem
+- You need to capture more information to identify more detailed requirements
 what:
-- "Large wall or digital collaboration space like [Miro](https://miro.com/)"
-- Sticky notes of 5+ different colors. When using this in conjunction with other flavours of Event Storming and/or BORIS + SNAP keep consistency in colors
-- Sharpies
+- Large wall or digital collaboration space like [Miro](https://miro.com/).
+- Sticky notes of 5+ different colors. When using this in conjunction with other flavours of Event Storming and/or BORIS + SNAP keep consistency in colors.
+- Sharpies.
 
 ---
 ## How to Use this Method
 ### Event Storming Background
-`Event Storming` is a workshop where created by `Alberto Brandolini`, which aims to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. The fundamentals of this practice are already been described in the `Tanzu Developer Center` [here](/practices/event-storming) and in `Alberto Brandolini`'s book [Introducing Event Storming](https://leanpub.com/introducing_eventstorming).
+`Event Storming` is a workshop created by `Alberto Brandolini`, which aims to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. The fundamentals of this practice are already described in the `Tanzu Developer Center` [here](/practices/event-storming) and in `Alberto Brandolini`'s book [Introducing Event Storming](https://leanpub.com/introducing_eventstorming).
 
 The book also describes Event Storming in 3 different exercises:
 - Bigger Picture
@@ -45,7 +55,7 @@ The Practice described below is the additional exercise used by `Process modelli
 
 While formally this method is best used for understanding large, complex high-level processes, the general principles and grammar of `Process Modelling` have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
 
-The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. Engineers can see this as an algorithmic  model (as opposed to Object Oriented) of the problem space.
+The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. Engineers can see this as an algorithmic model of the problem space, as opposed to an Object Oriented model that you might get from UML.
 
 ### Sample Agenda & Prompts - 
 #### Prerequisites: 
@@ -144,17 +154,17 @@ These can be used to re-enforce decisions and validate work being undertook
 Thin Slice:
 - The decomposition of an event storming board by workflow offers a first opportunity to define a thin slice.
 - Flows can be prioritized by pain points and/or opportunities
-- Additional grammar such as Preconditions, and Policies can be used to identify a number of scenarios that could act as the first iteration
-- Scenarios can be prioritized by value and complexity
+- Additional grammar such as Preconditions, and Policies can be used to identify a number of scenarios that could be prioritized by value and complexity to narrow down the first iteration
 
 Notional Architecture:
-- Additional grammar such as policies and commands can identify and correctly name domain objects and events
-- An algorithmic process model leads to a more inclusive synthesis and candidate selection across all pillars of the balanced team and stakeholders
-- An algorithmic process model offers the chance to discover both a notional "north star" architecture and a notional architecture of existing systems
-- Additional grammar such as Policies, Actions and Read Models can offer a notional architecture at the code level
-- Preconditions, Actions, Read Models and Events can drive the discovery of how data gets into the system, and where it is used. This offers a notion of data flow through the system.
-- Actors and automated Policies identifies the potential for synchronous and asynchronous operations
-- Domain Objects offer a notional microservice architecture
+- Additional grammar such as policies and commands can identify and correctly name domain objects and events.
+- An algorithmic model offers a simplified view of the process, readable by all members of the balanced team and stakeholders.
+- Additional grammar assists in the interpretation of the process for synthesis and candidate selection.
+- An algorithmic process model offers the chance to discover both a notional "north star" architecture and a notional architecture of existing systems.
+- Additional grammar such as Policies, Actions and Read Models can offer a notional architecture at the code level.
+- Preconditions, Actions, Read Models and Events can drive the discovery of data entering the system, and where it is used.
+- Actors and automated Policies identifies the potential for synchronous and asynchronous operations.
+- Domain Objects offer a notional microservice architecture.
 
 Story Writing:
 - Actors identify the user of stories where value is achieved through improved human interaction, and offers a focused role from which to start investigation of user needs
@@ -177,26 +187,31 @@ The grammar used by Process Modelling offers a lot of information that can be di
 #### User Journey Mapping
 ##### Service Blueprint
 Stickies from the main storming board, policies and other grammar can be used to complete a [Service Blueprint](/practices/service-blueprint) to map out the journey through the system from the users perspective.
+##### User Story Mapping
+Policies with actors can help identify high-level user stories that can be broken down through story mapping exercises
 ##### User Interviews
-The information gathered here could help focus user interviews and identify good questions to ask.
+The thin slice defined in this exercise, can help focus user interviews and identify good questions to ask.
 ##### Story Writing
 The process identifies both users and policy makers. These personas and their objectives for each policy can be used to write stories that deliver value to either the user or the business.
 #### Swift Methodology
-If being used as part of the [Swift Method](/practices/swift-method), then this would be done as part of the Event Storm exercise that is run in the beginning, just prior to Service Candidate discovery.
+Process Modelling can be used as part of the [Swift Method](/practices/swift-method), created by `Shaun Anderson`. A further article will be published to detail how to use Process Modelling as part of the `Swift Method`
 ## Facilitator Notes & Tips
 #### Ubiquitous Language: 
-- Naming can be contentious and often disagreements can be hard to settle. It is important not to spend too much time discussing names, and to use questions to allow for a less than perfect settlement to keep the conversation going.
+- Naming can be contentious and often disagreements can be hard to settle. It is important not to spend too much time discussing names, and to use questions to allow for a less than perfect settlement to keep the conversation going.  
 #### Events: 
 Finding suitable events is important to getting a good model
- - Identify the important state change by understanding who might listen to it, write the event to make the subject of the event, the object that changed state. 
+ - When discovering new events, do not apply strict rules on how events should be formed. Allow wordy descriptions, that can be used to break down the grammar.
+ -  When discovering new events, do not apply strict rules on the nature of events. Allow for non-domain events to be highlighted and discussed. It is always possible to filter a set of events by pivotal events, pipeline events, user journey events or even path to production events. This information might not be needed for the process model you are working on, but it can be used in another exercise.
+ - Identify the important state change by understanding the action and who might listen to it. Write the event to make the subject of the event, the object that changed state. 
   e.g. the "Customer created an order", in this sentence the state of the Order is more important and will be listened to by other parts of the system so we re-write it as "Order was created". Another might be "Customer Changed Address", in this instance the change of state to the customer's address is important, so the event could be written as "Customer's Address Changed".
- - Try to avoid "Passive-Aggressive Commands" as described in Martin Fowler's blog [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html). These are often found when the object raising state changes is a listener to that event. One way to handle this could be to squash all policies, commands and events into a new policy and command, written to describe the whole process. Identify which events are listened to and what negative events might be raised as a result of any failures from the squashed commands, again only if they are listened to.
+ - Filter or aggregate events that represent "Passive-Aggressive Commands" as described in Martin Fowler's blog [What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html). These are often found when the object raising state changes is a listener to that event. One way to handle this could be to squash all policies, commands and events into a new policy and command, written to describe the whole process. Identify which events are listened to and what negative events might be raised as a result of any failures from the squashed commands, again only if they are listened to.
 
 #### Policies: 
 Writing Policies can be important to ensure you have the correct flow and capturing the correct business requirement
  - Policies should be written as a business decision that guides an actor or system to the correct action. 
- - The actor may be responsible for implementing the policy but they may not be responsible for defining the policy. 
- - If good Roles are identified in the `Event Storming` stage then you should be able to identify roles that influence the business decision.
+ - The actor may be responsible for implementing the policy but are rarely responsible for defining the policy. When discovering Policies, it is always helpful to identify `Policy Makers`. 
+   - Add a sticky to each policy to identify a name and role of someone in the company that can both detail and influence the policy.
+   - If good Roles are identified in the `Event Storming` stage then you should be able to identify roles that influence the business decision.
 
 #### Thin Slices: 
 Thin Slices can be heavily influenced by the goals of your project, but a good start might be to pick out a `golden path` and reduce it to the least set of events required to achieve the final outcome.
