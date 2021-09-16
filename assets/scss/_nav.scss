@@ -264,9 +264,9 @@ nav {
         margin-left: 5px;
     }
     #dropdown-menus {
-        height: 40px;
+        height: 60px;
         right: 0;
-        top: 20px;
+        top: 0;
         width: 100%;
         cursor: pointer;
     }
@@ -327,7 +327,7 @@ nav {
         height: 500px;
         transition: all .2s ease-out;
         height: 400px;
-        top: 40px;
+        top: 60px;
         box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.2);
 
         &.learn-scope {
