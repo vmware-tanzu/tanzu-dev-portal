@@ -196,6 +196,28 @@
     float: left;
   }
 }
+
+.td-home {
+  h2 {
+    font-size: 3rem;
+  }
+
+}
+#home-topics {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  > .container {
+    max-width: 100% !important;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .card-wrapper {
+    height: 300px;
+    background: $dark;
+    padding: 25px;
+  }
+}
 .td-home #hero {
   padding-top: 12rem;
   padding-bottom: 12rem;

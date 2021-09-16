@@ -23,6 +23,38 @@
 	</div>
 </section>
 
+<section id="home-topics" class="td-box position-relative">
+    <div class="container d-flex row flex-nowrap justify-content-between">
+        <div class="col-4">
+            <h2>Modern Applications</h2>
+            <p class="h4">Build, run, and manage all your apps across any cloud with application modernization solutions and guidance from VMware Tanzu.</p>
+        </div>
+        <div class="col-7">
+            <div class="d-flex row justify-content-between flex-nowrap">
+                <div class="flex-315 card-wrapper px-0">
+                    <div class="mod-app-card">
+                        <h3 class="text-center">Learn the Basics</h3>
+                        <p class="px-4">VMware Tanzu offers the tools and products you need to become a high-velocity engineering team and push your code to production faster.</p>
+                    </div>
+                </div>
+                <div class="flex-315 card-wrapper px-0">
+                    <div class="mod-app-card">
+                        <h3 class="text-center">Modernize</h3>
+                        <p class="px-4">Modern applications need to run on modernized infrastructure that provides the automation, security, and scalability to respond to external disruptions and the rapidly changing needs of your customers.</p>
+                    </div>
+                </div>
+                <div class="flex-315 card-wrapper px-0">
+                    <div class="mod-app-card">
+                        <h3 class="text-center">Transform</h3>
+                        <p class="px-4">Companies are using digital technology to drive nimble innovation, find better ways of working, adopt inventive business models, and deliver engaging new customer experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </section>
+
 <!-- Gather topic groups -->
 {{ $topicgroups := (slice) }}
 {{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
