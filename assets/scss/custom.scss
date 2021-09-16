@@ -206,7 +206,9 @@
   .h1+p {
     max-width: 600px;
   }
-
+  #hero-button {
+    background: $dark;
+  }
 }
 .callout svg {
   opacity: .8;
