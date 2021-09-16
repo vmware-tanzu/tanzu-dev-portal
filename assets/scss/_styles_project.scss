@@ -441,7 +441,7 @@ body {
       height: 100%;
       transform: translateX(100%);
       background: rgba(73, 175, 217, .5);
-      transition: all .2s ease-out;
+      transition: all .2s ease-out .2s;
     }
   }
   .play-icon {
