@@ -27,7 +27,7 @@ A replicated Region is implemented by a [DistributedRegion](https://github.com/a
 
 A simplified architecture is shown below:
 
-![Class Diagram For Distributed Region](/images/data-blogs/tanzu-gemfire/calculating-the-size-of-a-geode-region/diagrams/barry_06_24_diagram1.png)
+![Class Diagram For Distributed Region](images/barry_06_24_diagram1.png#diagram)
 
 ## Partitioned Region
 
@@ -35,7 +35,7 @@ A partitioned Region is implemented by a [PartitionedRegion](https://github.com/
 
 A simplified architecture is shown below:
 
-![class diagram for PartitionedRegion](/images/data-blogs/tanzu-gemfire/calculating-the-size-of-a-geode-region/diagrams/barry_06_24_diagram2.png)
+![class diagram for PartitionedRegion](images/barry_06_24_diagram2.png#diagram)
 
 ## Implementation
 All source code described in this article as well as an example usage is available [here](https://github.com/boglesby/calculate-region-size).

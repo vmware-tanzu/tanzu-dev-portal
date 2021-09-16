@@ -18,7 +18,7 @@ Apache Kafka is a popular solution for ingesting from various data sources and i
 
 ## Overview
 We’ll be ingesting JSON data from a rest endpoint into a Kafka topic. We will sink the data into an Apache Geode region using the geode-kafka-connector and execute queries against the data. Secondary indexes will also be created to allow faster and more efficient query lookups.
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/diagrams/geode-kafka.png)
+![img](images/geode-kafka.png#diagram)
 
 (1) Ingest JSON, (2) Connector pulls JSON data from topic, (3) geode-kafka-connector converts to PDX and pushes to Apache Geode, (4) Query is executed in GFSH, (5) Results are returned
 
@@ -38,7 +38,7 @@ Execute gfsh from your Apache Geode Installation and start a locator and a serve
  start server --name=server1
 ```
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/geode-kafka-gfsh.png)
+![img](images/geode-kafka-gfsh.png)
 
 gfsh output after creating locator and server
 
@@ -49,7 +49,7 @@ Create the region we want the data to end up in:
 create region --name=’Events’ --type=PARTITION`
 ```
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/geode-kafka-gfsh-createregion.png)
+![img](images/geode-kafka-gfsh-createregion.png)
 
 gfsh output after creating region
 
@@ -140,7 +140,7 @@ Now we will query the events region. We’ll first display all the events we ing
 query --query=”select * from /Events”
 ```
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/geode-kafka-region-events.png)
+![img](images/geode-kafka-region-events.png)
 
 Events made it into the region and we are able to query for them!
 
@@ -151,7 +151,7 @@ We can also issue a query on any of the JSON fields and nested fields as well. I
 query --query=”select * from /Events where payload.action=’opened’”
 ```
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-apache-kafka/geode-kafka-field-lookup.png)
+![img](images/geode-kafka-field-lookup.png)
 
 We are able to do a nested field lookup and filter for specific results
 

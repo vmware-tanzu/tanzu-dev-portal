@@ -127,7 +127,7 @@ Since the Function execution request is executed by a **ServerConnection**, the 
 
 A simplified sequence diagram of this use case is:
 
-![Image for post](/images/data-blogs/tanzu-gemfire/threads-used-in-geode-function-execution/diagrams/barry_07_31_arch_diagram1.png)
+![Image for post](images/barry_07_31_arch_diagram1.png#diagram)
 
 Below is logging (mainly from a [DistributionMessageObserver](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/distributed/internal/DistributionMessageObserver.java)) on each server that shows the behavior.
 
@@ -167,7 +167,7 @@ Since the Function execution request is executed by a **Function Execution Proce
 
 A simplified sequence diagram of this use case is:
 
-![Image for post](/images/data-blogs/tanzu-gemfire/threads-used-in-geode-function-execution/diagrams/barry_07_31_arch_diagram2.png)
+![Image for post](images/barry_07_31_arch_diagram2.png#diagram)
 
 Below is logging on each server that shows the behavior.
 
@@ -225,7 +225,7 @@ Since the Function execution request is executed by a **Function Execution Proce
 
 A simplified sequence diagram of this use case is:
 
-![Image for post](/images/data-blogs/tanzu-gemfire/threads-used-in-geode-function-execution/diagrams/barry_07_31_arch_diagram3.png)
+![Image for post](images/barry_07_31_arch_diagram3.png#diagram)
 
 Below is logging on each server that shows the behavior.
 

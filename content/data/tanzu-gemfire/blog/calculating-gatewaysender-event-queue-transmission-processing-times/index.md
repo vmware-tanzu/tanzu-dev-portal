@@ -158,10 +158,10 @@ Sample vsd charts for the statistics defined by the **GatewaySenderQueueStatisti
 ### Queued, Transmitted and Acknowledged Events
 This chart shows the number of events queued, transmitted and acknowledged for the specific GatewaySender.
 
-![This vsd chart shows the GatewaySenderQueueStatistics queuedEvents (selected), transmittedEvents and acknowledgedEvents](/images/data-blogs/tanzu-gemfire/calculating-gatewaysender-event-queue-transmission-processing-times/barry_2020_12_01_vsd_events.gif)
+![This vsd chart shows the GatewaySenderQueueStatistics queuedEvents (selected), transmittedEvents and acknowledgedEvents](images/barry_2020_12_01_vsd_events.gif)
 ### Queue, Transmission and Processing Times
 This chart shows total queue, transmission and processing times for all of the GatewaySender’s events.
 
-![This vsd chart shows the GatewayenderQueueStatistics totalQueueTime (selected), totalTransmissionTime and totalProcessingTime](/images/data-blogs/tanzu-gemfire/calculating-gatewaysender-event-queue-transmission-processing-times/barry_2020_12_01_vsd_times.gif)
+![This vsd chart shows the GatewayenderQueueStatistics totalQueueTime (selected), totalTransmissionTime and totalProcessingTime](images/barry_2020_12_01_vsd_times.gif)
 ## Future
 GatewaySender event queue, transmission and processing time statistics like these available out-of-the-box would be a useful addition to Apache Geode.

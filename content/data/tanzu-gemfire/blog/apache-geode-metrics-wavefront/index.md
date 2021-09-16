@@ -34,7 +34,7 @@ start server --name=server --classpath=/User/jhuynh/geode-wavefront-publisher-1.
 
 Everything is up and running and pushing Apache Geode specific metrics into Wavefront!
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-metrics-wavefront/apache-geode-metrics-log.png)
+![img](images/apache-geode-metrics-log.png)
 
 Log output from Apache Geode server log
 
@@ -57,10 +57,10 @@ Old Value   : null
 
 Now we can go to Wavefront and see some of the Apache Geode provided metrics!
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-metrics-wavefront/apache-geode-metrics-wavefront.png)
+![img](images/apache-geode-metrics-wavefront.png)
 </br>Apache Geode Metrics showing up in Wavefront!
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-metrics-wavefront/apache-geode-metrics-region.png)
+![img](images/apache-geode-metrics-region.png)
 We see the metric for the entry we put into SomeRegion
 
 We’ll now go into detail to see how this was implemented so you can build your own or build a new MetricsPublishingService that connects to a different Micrometer supported platform.
@@ -122,7 +122,7 @@ private MeterRegistry createWavefrontRegistry() {
 ## Wait, what’s my API token Key?
 The API Token Key is provided by Wavefront. If you have access to Wavefront, you can generate your token key from your account.
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-metrics-wavefront/apache-geode-metrics-api-token.png)
+![img](images/apache-geode-metrics-api-token.png)
 </br> Generating an api token key
 
 ## Implementing a MetricsServicePublisher
@@ -203,7 +203,7 @@ To build the “uber” jar use the following command
 ./gradlew shadowJar
 ```
 
-![img](/images/data-blogs/tanzu-gemfire/apache-geode-metrics-wavefront/apache-geode-metrics-directory.png)
+![img](images/apache-geode-metrics-directory.png)
 </br>The contents will be in the build/libs directory
 
 That’s all there is to it. If you haven’t already, just follow the instructions on Build and Deploy and you’ll be able to deploy your own implementation the same way.

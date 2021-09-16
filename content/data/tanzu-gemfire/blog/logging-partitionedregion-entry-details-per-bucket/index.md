@@ -47,15 +47,15 @@ A DiskRegionStatistics object is defined for each persistent or overflowed Parti
 
 This vsd chart shows the PartitionedRegionStats bucketCount (selected) and primaryBucketCount:
 
-![This vsd chart shows the PartitionedRegionStats bucketCount (selected) and primaryBucketCount](/images/data-blogs/tanzu-gemfire/logging-partitionedregion-entry-details-per-bucket/barry_2020_09_vsd_1.gif)
+![This vsd chart shows the PartitionedRegionStats bucketCount (selected) and primaryBucketCount](images/barry_2020_09_vsd_1.gif)
 
 This vsd chart shows PartitionedRegionStats dataStoreBytesInUse (selected) and dataStoreEntryCount:
 
-![This vsd chart shows PartitionedRegionStats dataStoreBytesInUse (selected) and dataStoreEntryCount](/images/data-blogs/tanzu-gemfire/logging-partitionedregion-entry-details-per-bucket/barry_2020_09_vsd_2.gif)
+![This vsd chart shows PartitionedRegionStats dataStoreBytesInUse (selected) and dataStoreEntryCount](images/barry_2020_09_vsd_2.gif)
 
 This vsd chart shows the DiskRegionStatistics bytesOnlyOnDisk (selected), entriesInVM and entriesOnlyOnDisk:
 
-![This vsd chart shows the DiskRegionStatistics bytesOnlyOnDisk (selected), entriesInVM and entriesOnlyOnDisk](/images/data-blogs/tanzu-gemfire/logging-partitionedregion-entry-details-per-bucket/barry_2020_09_vsd_3.gif)
+![This vsd chart shows the DiskRegionStatistics bytesOnlyOnDisk (selected), entriesInVM and entriesOnlyOnDisk](images/barry_2020_09_vsd_3.gif)
 
 ### Via gfsh
 

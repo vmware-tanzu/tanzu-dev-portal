@@ -21,13 +21,13 @@ type: blog
  The serial GatewaySender queue is implemented by a collection of DistributedRegions, one per dispatcher thread.
  
  A simplified architecture is shown below:
-![img](/images/data-blogs/tanzu-gemfire/logging-apache-geode-gatewaysender-queue-events/diagrams/barry_06_03_diagram.png)
+![img](images/barry_06_03_diagram.png#diagram)
 
 ### Parallel GatewaySender Queue
 The parallel GatewaySender queue is implemented by a single PartitionedRegion colocated with the data Region attached to it. Each dispatcher thread processes a subset of the PartitionedRegion buckets.
 
 A simplified architecture is shown below:
-![img](/images/data-blogs/tanzu-gemfire/logging-apache-geode-gatewaysender-queue-events/diagrams/barry_06_03_diagram1.png)
+![img](images/barry_06_03_diagram1.png#diagram)
 
 ### Queue Region Entries
 The queue Region entries are keyed by continuously-increasing longs and valued by instances of [GatewaySenderEventImpl](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/wan/GatewaySenderEventImpl.java), each of which defines several fields including:
