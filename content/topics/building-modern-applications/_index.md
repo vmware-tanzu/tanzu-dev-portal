@@ -1,5 +1,6 @@
 ---
 title: Building Modern Applications
+linktitle: Building Modern Applications
 topic: Building Modern Applications
 topicgroups: "Application Development"
 grouptitle: "Build"

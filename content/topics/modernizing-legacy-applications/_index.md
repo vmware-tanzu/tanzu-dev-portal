@@ -1,5 +1,6 @@
 ---
 title: Modernizing Legacy Applications
+linktitle: Modernizing Legacy Applications
 topic: Modernizing Legacy Applications
 topicgroups: "Modern Applications"
 grouptitle: "Modernize"

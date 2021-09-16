@@ -1,5 +1,6 @@
 ---
 title: Managing & Operating Kubernetes
+linktitle: Managing & Operating Kubernetes
 topic: Managing and Operating Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Manage"

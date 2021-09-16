@@ -38,7 +38,7 @@
             {{ . }}
         </div>
         {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-            {{ $link := replace (lower .Title) "/" "-"  }}
+            {{ $link := replace (lower .Params.linktitle) "/" "-"  }}
             {{ $link := replace $link "&" "and" }}
             {{ $link := replace $link " " "-" }}
             {{ $link := printf "%s/%s" "/topics" $link | relURL }}

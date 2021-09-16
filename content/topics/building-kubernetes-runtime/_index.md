@@ -1,6 +1,6 @@
 ---
 title: Building a Kubernetes Runtime
-linkTitle: Building a Kubernetes Runtime
+linkTitle: Building Kubernetes Runtime
 topic: Building Kubernetes Runtime
 topicgroups: "Kubernetes Platform"
 grouptitle: "Build"
