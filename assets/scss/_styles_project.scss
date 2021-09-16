@@ -406,9 +406,11 @@ body {
     &:hover {
       .arrow-box {
         background: rgba(73, 175, 217, 1);
+        transition: all .2s ease-out;
       }
       .solid-rect {
         transform: translateX(0);
+        transition: all .2s ease-out .2s;
       }
     }
     .cta-btn {
@@ -426,7 +428,7 @@ body {
       height: 67px;
       width: 67px;
       background: rgba(73, 175, 217, .5);
-      transition: all .2s;
+      transition: all .2s ease-out .2s;
       z-index: 1;
     }
     .arrow-right {
@@ -441,7 +443,7 @@ body {
       height: 100%;
       transform: translateX(100%);
       background: rgba(73, 175, 217, .5);
-      transition: all .2s ease-out .2s;
+      transition: all .2s ease-out;
     }
   }
   .play-icon {
