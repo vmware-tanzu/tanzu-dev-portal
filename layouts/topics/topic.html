@@ -70,7 +70,6 @@
 
 
         <!-- Featured Content -->
-        <!-- TODO: -->
         {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
         <div class='container py-5 border-bottom'>
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
