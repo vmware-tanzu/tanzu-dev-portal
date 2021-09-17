@@ -1,6 +1,8 @@
 ---
 title: Application Observability
 weight: 2
+featured: true
+featuredspot: 4
 layout: intro
 duration: 60
 experience: Beginner

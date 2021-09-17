@@ -486,6 +486,10 @@ body {
   }
   footer {
     min-height: auto;
+    
+    > .container {
+      max-width: 100%;
+    }
     .copyright-legal-links {
       display: inline-block;
     }

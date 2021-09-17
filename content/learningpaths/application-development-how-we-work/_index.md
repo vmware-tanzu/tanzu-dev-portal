@@ -1,6 +1,8 @@
 ---
 title: How VMware Tanzu Labs Works and Why
 weight: 1
+featured: true
+featuredspot: 5
 layout: intro
 duration: 60
 experience: Beginner

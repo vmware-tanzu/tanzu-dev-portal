@@ -23,6 +23,8 @@
 	</div>
 </section>
 
+<!-- Topics -->
+<a id="td-block" class="td-offset-anchor"></a>
 <section id="home-topics" class="td-box position-relative">
     <div class="container d-flex row flex-nowrap justify-content-between">
         <div class="col-4">
@@ -91,16 +93,15 @@
 
 <!-- Featured Learning Paths -->
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="row pt-0 mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+<section id="featured-paths" class="row mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto pb-0">
 	
     <div class="row justify-content-center w-100">
         <div class="col-sm-12 pb-4">
-            <h3>Featured Learning Paths</h3>
+            <h2 class="mb-5">Featured Learning Paths</h2>
         </div>
     </div>
 
-    
-    <div class="row justify-content-center flex-nowrap w-100">
+    <div class="row justify-content-center flex-nowrap w-100 mw-100">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
         {{ range $learningpaths }} <!-- TODO: Get featured learning paths -->
             {{ partial "learningpaths-card.html" . }}

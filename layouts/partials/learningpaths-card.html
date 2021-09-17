@@ -1,4 +1,9 @@
-<div class="learning-path-card col-lg-4 mb-2 mb-lg-0 ">
+{{ print  .Params.featuredspot }}
+{{ if eq .Params.featuredspot "1" }}
+<div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative active">
+{{ else }}
+<div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative">
+{{ end }}
     <a href="{{ .RelPermalink }}">
         <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ .Title }} </div></p>
         <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >

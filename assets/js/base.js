@@ -400,6 +400,7 @@ limitations under the License.
   });
 }(jQuery));
 
+// Make nav dark after scrolling past hero
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -416,10 +417,13 @@ function scrollFunction() {
   }
 }
 
+// Dim body div when nav is activated
 function dimBody () {
   $("header + .container-fluid").addClass("dim");
   $("nav").addClass("dropShadow");
 }
+
+// Hover nav w/ scope
 function removeNavClasses () {
   $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
   $('.dropdown').removeClass('show');
@@ -456,4 +460,11 @@ $('.drop-menu').mouseenter(function () {
 });
 $('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
   removeNavClasses();
+});
+
+// Featured Learning paths
+
+$( ".learning-path-card" ).mouseenter(function() {
+  $(".learning-path-card").removeClass("active");
+  $(this).addClass("active");
 });

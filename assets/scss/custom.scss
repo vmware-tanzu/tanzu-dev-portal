@@ -232,6 +232,39 @@
     background: $dark;
   }
 }
+#featured-paths {
+  .learning-path-card {
+    height: 400px;
+    transition: all .2s ease-out;
+    flex: 0 0 20%;
+    max-width: 20%;
+
+    a {
+      position: absolute;
+    }
+    &.active {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+    &:nth-child(1) {
+      background: #304250;
+    }
+    &:nth-child(2) {
+      background: #405769;
+
+    }
+    &:nth-child(3) {
+      background: #506e85;
+
+    }
+    &:nth-child(4) {
+      background: #5f829d;
+    }
+    &:nth-child(5) {
+      background: #6a91af;
+    }
+  }
+}
 .callout svg {
   opacity: .8;
 
