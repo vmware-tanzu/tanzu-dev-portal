@@ -1,20 +1,31 @@
 <nav aria-label="breadcrumb" class="d-block d-md-block d-print-none">
 	<ol class="breadcrumb spb-1">
 
+		<!-- If not a guide, just show type and title -->
+		{{ if ne .Section "guides" }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
+			</li>
+		{{ end }}
+		
 		<!-- Topic -->
-		{{ $topiclink := printf "/topics/%s" (.Params.level1 | urlize) }}
-		{{ with .Site.GetPage $topiclink }}
-		<li class="breadcrumb-item active" aria-current="page">
-			<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-		</li>
+		{{ if .Params.level1 }}
+			{{ $link := replace (lower .Params.level1) "/" "-"  }}
+            {{ $link := replace $link "&" "and" }}
+            {{ $link := replace $link " " "-" }}
+            {{ $link := printf "%s/%s" "/topics" $link | relURL }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ $link }}">{{ .Params.level1 }}</a>
+			</li>
 		{{ end }}
 
 		<!-- Subtopic -->
-		{{ $subtopiclink := printf "/topics/%s" (.Params.level1 | urlize) }}
-		<!-- TODO: Link to subtopic --> {{ $subtopiclink := "#" }}
-		<li class="breadcrumb-item active" aria-current="page">
-			<a href="{{ $subtopiclink }}">{{ .Params.level2 }}</a>
-		</li>
+		{{ if (and (and (eq .Section "guides") .Params.level2) (ne .Params.toppage true) ) }}
+			{{ $subtopic := .Site.GetPage (printf "/guides/%s" (.Params.level2 | urlize)) }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ $subtopic.RelPermalink }}">{{ $subtopic.Params.level2 }}</a>
+			</li>
+		{{ end }}
 
 		<!-- If the guide has a parent, include in the breadcrumb -->
 		{{ if .Params.parent }}
