@@ -234,34 +234,48 @@
 }
 #featured-paths {
   .learning-path-card {
-    height: 400px;
+    height: 350px;
     transition: all .2s ease-out;
-    flex: 0 0 20%;
-    max-width: 20%;
 
+    .learning-path-description {
+      color: #adbbc4!important;
+    }
+    .vw-33 {
+      width: 33.333vw;
+    }
     a {
       position: absolute;
+      height: 100%;
+
+      div {
+        opacity: .5;
+        transition: all .2s ease-out;
+      }
     }
     &.active {
-      flex: 0 0 40%;
-      max-width: 40%;
+      width: 200% !important;
+
+      div {
+        opacity: 1;
+      }
     }
     &:nth-child(1) {
-      background: #304250;
+      background: #293742;
     }
     &:nth-child(2) {
-      background: #405769;
+      background: #2e4150;
 
     }
     &:nth-child(3) {
-      background: #506e85;
+      background: #293e4e;
 
     }
     &:nth-child(4) {
-      background: #5f829d;
+      background: #233847;
+
     }
     &:nth-child(5) {
-      background: #6a91af;
+      background: #1f3442;
     }
   }
 }
