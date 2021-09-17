@@ -1,6 +1,10 @@
 @import "support/mixins";
 @import "../vendor/bootstrap/scss/bootstrap";
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
 .guide .td-sidebar-nav__subsection-title a:after {
     padding-left: 5px;
     content: url({{ "/images/icons/arrow-right.svg" | relURL }});
