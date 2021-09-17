@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: what is Tanzu? A quick overview of VMware's kubernetes distros and suites"
-description: "Tanzu Talk: what is Tanzu? A quick overview of VMware's kubernetes distros and suites"
+title: "Tanzu Talk: What is Tanzu? A Quick Overview of VMware's Kubernetes Distros and Suites"
+description: "Tanzu Talk: What is Tanzu? A Quick Overview of VMware's Kubernetes Distros and Suites"
 episode: "95"
 aliases: ["0095"]
 publishdate: "2020-04-01T00:00:00-07:00"

@@ -26,23 +26,25 @@ def loadHugoFrontMatter(file):
 
 def getExistingEpisodes():
     print("==> Processing existing episodes in " + EPISODES_PATH)
-    filelist = os.listdir(EPISODES_PATH)
     episodes = []
     numbers = []
-    youtubeIDs = []
-    for filename in filelist:
-        try:
-            if filename.endswith('.md'):
-                frontMatter = loadHugoFrontMatter(os.path.join(EPISODES_PATH,filename))
-                episode = yaml.load(frontMatter, Loader=yaml.SafeLoader)
-                if episode["type"] == "tv-episode":
-                    if episode["episode"] != "":
-                        numbers.append(int(episode["episode"]))
-                    if episode["youtube"] != "":
-                        youtubeIDs.append(episode["youtube"])
-                    episodes.append(episode)
-        except:
-            pass
+    youtubeIDs = [] 
+    for root, dirs, files in os.walk(EPISODES_PATH):
+        basePath = EPISODES_PATH + os.path.basename(root) + "/"
+        for filename in files:
+            try:
+                if filename.endswith('.md'):
+                    print("----> Loading frontmatter for " + os.path.join(basePath,filename))
+                    frontMatter = loadHugoFrontMatter(os.path.join(basePath,filename))
+                    episode = yaml.load(frontMatter, Loader=yaml.SafeLoader)
+                    if episode["type"] == "tv-episode":
+                        if episode["episode"] != "":
+                            numbers.append(int(episode["episode"]))
+                        if episode["youtube"] != "":
+                            youtubeIDs.append(episode["youtube"])
+                        episodes.append(episode)
+            except:
+                pass
     if len(numbers) > 0:
         maxEpisode = max(numbers)
     else:
@@ -131,8 +133,13 @@ def writeNewEpisodeFiles(videos):
     template = templateEnv.get_template(TEMPLATE_FILE)
     print("==> Writing episodes to hugo")
     for video in videos:
-        imageFilename = EPISODES_PATH + video["episode"] + "/" + IMG_PATH_PREFIX + video["episode"] + ".jpg"
         markdownFilename = EPISODES_PATH + video["episode"] + "/index.md"
+        imageFilename = EPISODES_PATH + video["episode"] + "/" + IMG_PATH_PREFIX + video["episode"] + ".jpg"
+        try:
+            os.mkdir(EPISODES_PATH + video["episode"])
+            os.mkdir(EPISODES_PATH + video["episode"] + "/" + IMG_PATH_PREFIX)
+        except:
+            pass
         print("---> fetching preview image from " + video["imageUrl"])
         urllib.request.urlretrieve(video["imageUrl"], imageFilename)
         outputText = template.render(video=video)
