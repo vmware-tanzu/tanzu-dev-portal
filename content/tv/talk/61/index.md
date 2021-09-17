@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0061'
-date: '2021-01-25 15:58:07'
-description: 'Tanzu Talk: Changing Habits'
-draft: 'False'
-episode: '61'
-lastmod: '2021-01-26'
+type: "tv-episode"
+title: "Tanzu Talk: Changing Habits"
+description: "Tanzu Talk: Changing Habits"
+episode: "61"
+aliases: ["0061"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-01-25 15:58:07"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Changing Habits'
-type: tv-episode
-youtube: _XSbCD2vGt8
+youtube: "_XSbCD2vGt8"
+draft: "False"
 ---
 
 One of the main reasons transforming an organization is so hard is because you’re changing thousands of people’s habits. Changing just one person’s habits - your own! - is hard enough. Coté tells us a helpful way to think about habit change.

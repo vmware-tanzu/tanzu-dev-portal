@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0016'
-date: '2020-10-06 11:44:04'
-description: 'Tanzu Talk: The thrilling world of chargebacks, or, the dangers thereof'
-draft: 'False'
-episode: '16'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: The thrilling world of chargebacks, or, the dangers thereof"
+description: "Tanzu Talk: The thrilling world of chargebacks, or, the dangers thereof"
+episode: "16"
+aliases: ["0016"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-06 11:44:04"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: The thrilling world of chargebacks, or, the dangers thereof'
-type: tv-episode
-youtube: gFa0xMwKIyM
+youtube: "gFa0xMwKIyM"
+draft: "False"
 ---
 
 Tanzu Talk: The thrilling world of chargebacks, or, the dangers thereof

@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0003'
-date: '2020-10-01 11:58:36'
-description: 'Tanzu Talk: Large scale application modernization with Rohit Kelapure,
-  part two'
-draft: 'False'
-episode: '3'
-lastmod: '2020-10-02'
+type: "tv-episode"
+title: "Tanzu Talk: Large scale application modernization with Rohit Kelapure, part two"
+description: "Tanzu Talk: Large scale application modernization with Rohit Kelapure, part two"
+episode: "3"
+aliases: ["0003"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-01 11:58:36"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Large scale application modernization with Rohit Kelapure, part
-  two'
-type: tv-episode
-youtube: JSv7gubN0mc
+youtube: "JSv7gubN0mc"
+draft: "False"
 ---
 
 You can't do everything at once, very quickly, large scale application modernizing, part two, with Rohit Kelapure

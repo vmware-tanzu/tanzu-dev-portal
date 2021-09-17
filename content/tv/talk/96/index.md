@@ -1,14 +1,19 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: where did the 'dev' in DevOps go? Was it ever there?"
-description: "Tanzu Talk: where did the 'dev' in DevOps go? Was it ever there?"
+title: "Tanzu Talk: Reinventing Finance with Customer Experience, with Henri van den Bulk"
+description: "Tanzu Talk: Reinventing Finance with Customer Experience, with Henri van den Bulk"
 episode: "96"
 aliases: ["0096"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-08-12 09:06:33"
+date: "2021-08-17 11:36:26"
 minutes: 120
-youtube: "K_74Ck4CGFE"
+youtube: "jdckvXSC3Ck"
 draft: "False"
 ---
 
-Coté theorizes about what the "dev" in DevOps has come to mean 15 years in. Plus, he goes over a free DevOps conference, DevOps Loop: https://devopsloop.io
+Among other things, the banking world is looking for new revenue and ways to retain customers. Focusing on customer experience is one way to get there. Shifting to a product-centric way of thinking results in dreaming up new types of “features” and even products to offer existing customers and help retain them - maybe even garnering new customers above the humming churn rate. In this episode, Coté talks with Henri van den Bulk about these drivers and some examples of that product-centric thinking in action.
+
+Find Henri in Twitter and LinkedIn:
+
+https://twitter.com/hmvandenb
+https://www.linkedin.com/in/hvandenbulk/

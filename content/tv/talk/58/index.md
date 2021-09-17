@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0058
-date: '2021-01-15 13:24:32'
-description: 'Tanzu Talk: DevSecOps Buzzword Check (plus, securing containers)'
-draft: 'False'
-episode: '58'
-lastmod: '2021-01-15'
+type: "tv-episode"
+title: "Tanzu Talk: DevSecOps Buzzword Check (plus, securing containers)"
+description: "Tanzu Talk: DevSecOps Buzzword Check (plus, securing containers)"
+episode: "58"
+aliases: ["0058"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-01-15 13:24:32"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: DevSecOps Buzzword Check (plus, securing containers)'
-type: tv-episode
-youtube: _tU5L2UelXA
+youtube: "_tU5L2UelXA"
+draft: "False"
 ---
 
 What problem is DevSecOps solving? Was DevOps not secure already? In this video, I go over my understanding of what DevSecOps is and use container security as an example.

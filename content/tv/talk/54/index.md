@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0054'
-date: '2021-01-07 08:51:40'
-description: 'Tanzu Talk: Asking Why All the Time is Annoying'
-draft: 'False'
-episode: '54'
-lastmod: '2021-01-08'
+type: "tv-episode"
+title: "Tanzu Talk: Asking Why All the Time is Annoying"
+description: "Tanzu Talk: Asking Why All the Time is Annoying"
+episode: "54"
+aliases: ["0054"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-01-07 08:51:40"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Asking Why All the Time is Annoying'
-type: tv-episode
-youtube: zXaXgZ0EzcE
+youtube: "zXaXgZ0EzcE"
+draft: "False"
 ---
 
 Most of the time, asking “why” is annoying. Here’s when it’s a good idea.

@@ -1,18 +1,14 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: what is Tanzu? A quick overview of VMware's kubernetes distros and suites"
-description: "Tanzu Talk: what is Tanzu? A quick overview of VMware's kubernetes distros and suites"
+title: "Tanzu Talk: where did the 'dev' in DevOps go? Was it ever there?"
+description: "Tanzu Talk: where did the 'dev' in DevOps go? Was it ever there?"
 episode: "95"
 aliases: ["0095"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-07-08 08:47:34"
+date: "2021-08-12 09:06:33"
 minutes: 120
-youtube: "MV9k4a-DQuA"
+youtube: "K_74Ck4CGFE"
 draft: "False"
 ---
 
-Coté tells you how he thinks of the different Tanzu editions.
-
-See them all here: https://tanzu.vmware.com/tanzu/compare
-
-Archives and free books: https://www.tanzutalk.com
+Coté theorizes about what the "dev" in DevOps has come to mean 15 years in. Plus, he goes over a free DevOps conference, DevOps Loop: https://devopsloop.io

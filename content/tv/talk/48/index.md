@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0048
-date: '2020-12-01 13:34:35'
-description: 'Tanzu Talk: Five Business Metrics to Start Tracking'
-draft: 'False'
-episode: '48'
-lastmod: '2020-12-03'
+type: "tv-episode"
+title: "Tanzu Talk: Five Business Metrics to Start Tracking"
+description: "Tanzu Talk: Five Business Metrics to Start Tracking"
+episode: "48"
+aliases: ["0048"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-12-01 13:34:35"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Five Business Metrics to Start Tracking'
-type: tv-episode
-youtube: rvWh6fWe7vY
+youtube: "rvWh6fWe7vY"
+draft: "False"
 ---
 
 Today, I go over five business metrics to track: (1) sales/workflow completion; (2) adoption; (3) awareness; (4) cost per transaction; (5) customer experience and satisfaction. There are, of course, all sorts of other metrics, but these are some you can start with as you figure out which metrics are the best for you. Check out the article I pull this from, and read even more in The Business Bottleneck.

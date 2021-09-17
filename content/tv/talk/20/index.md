@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0020'
-date: '2020-10-19 10:49:26'
-description: 'Tanzu Talk: Doing something works better than doing nothing'
-draft: 'False'
-episode: '20'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: Doing something works better than doing nothing"
+description: "Tanzu Talk: Doing something works better than doing nothing"
+episode: "20"
+aliases: ["0020"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-19 10:49:26"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Doing something works better than doing nothing'
-type: tv-episode
-youtube: 1-uyAyuG1j8
+youtube: "1-uyAyuG1j8"
+draft: "False"
 ---
 
 When you put a new process, like agile, in place, you often realize there was very little process in the first place. Also, kubernetes at the edge, T-Mobile, and as architecture.

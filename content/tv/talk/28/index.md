@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0028
-date: '2020-10-29 13:38:32'
-description: 'Tanzu Talk: Build alliances for The Big Meeting'
-draft: 'False'
-episode: '28'
-lastmod: '2020-11-04'
+type: "tv-episode"
+title: "Tanzu Talk: Build alliances for The Big Meeting"
+description: "Tanzu Talk: Build alliances for The Big Meeting"
+episode: "28"
+aliases: ["0028"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-29 13:38:32"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Build alliances for The Big Meeting'
-type: tv-episode
-youtube: EX5PWbkL6Dg
+youtube: "EX5PWbkL6Dg"
+draft: "False"
 ---
 
 Pre-wiring and cross-business alliance building for The Big Meeting. Also: the surprising uplift from regular check-in meetings.

@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0001'
-date: '2020-07-31 17:52:50'
-description: 'Tanzu Talk: Large scale application modernization with Rohit Kelapure,
-  part one'
-draft: 'False'
-episode: '1'
-lastmod: '2020-10-02'
+type: "tv-episode"
+title: "Tanzu Talk: Large scale application modernization with Rohit Kelapure, part one"
+description: "Tanzu Talk: Large scale application modernization with Rohit Kelapure, part one"
+episode: "1"
+aliases: ["0001"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-07-31 17:52:50"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Large scale application modernization with Rohit Kelapure, part
-  one'
-type: tv-episode
-youtube: NW7l7pyVWr0
+youtube: "NW7l7pyVWr0"
+draft: "False"
 ---
 
 Eating elephants one bite at a time, large scale application modernization with Rohit Kelapure

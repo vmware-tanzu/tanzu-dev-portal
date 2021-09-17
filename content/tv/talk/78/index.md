@@ -1,18 +1,14 @@
 ---
-aliases:
-- 0078
-date: '2021-03-25 13:25:23'
-description: 'Tanzu Talk: It’s always been about developer productivity, SOA to DevSecOps,
-  with Ajay Patel'
-draft: 'False'
-episode: '78'
-lastmod: '2021-03-26'
+type: "tv-episode"
+title: "Tanzu Talk: It’s always been about developer productivity, SOA to DevSecOps, with Ajay Patel"
+description: "Tanzu Talk: It’s always been about developer productivity, SOA to DevSecOps, with Ajay Patel"
+episode: "78"
+aliases: ["0078"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-03-25 13:25:23"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: It’s always been about developer productivity, SOA to DevSecOps,
-  with Ajay Patel'
-type: tv-episode
-youtube: 2cjiJbo-bw0
+youtube: "2cjiJbo-bw0"
+draft: "False"
 ---
 
 VMware Tanzu’s Ajay Patel talks with Rita and Coté about the history of app servers, SOA, and how we got there to our current cloud native stacks. And, Ajay also lays out the what enterprises are asking for in their app and kubernetes stack and the product strategy Tanzu is putting in place to solve those problems. Plus, we walk down BPE Lane.

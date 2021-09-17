@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0025'
-date: '2020-10-26 11:14:34'
-description: 'Tanzu Talk: It''s not about breaking the rules, it''s about _almost_
-  breaking them.'
-draft: 'False'
-episode: '25'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: It's not about breaking the rules, it's about _almost_ breaking them."
+description: "Tanzu Talk: It's not about breaking the rules, it's about _almost_ breaking them."
+episode: "25"
+aliases: ["0025"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-26 11:14:34"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: It''s not about breaking the rules, it''s about _almost_ breaking
-  them.'
-type: tv-episode
-youtube: mwtIZ8x5EOQ
+youtube: "mwtIZ8x5EOQ"
+draft: "False"
 ---
 
 When you want to change, you need to find out what the new rules are, or start following the ones you've been neglecting. Also, stop trying to find who's in charge: it's probably you!

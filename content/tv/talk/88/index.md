@@ -1,18 +1,18 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: How Kubernetes Helps Businesses, results from the State of Kubernetes 2021 survey"
-description: "Tanzu Talk: How Kubernetes Helps Businesses, results from the State of Kubernetes 2021 survey"
+title: "Tanzu Talk: Opening up healthcare with FHIR & other healthcare innovations"
+description: "Tanzu Talk: Opening up healthcare with FHIR & other healthcare innovations"
 episode: "88"
 aliases: ["0088"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-06-08 10:19:34"
+date: "2021-06-10 09:05:21"
 minutes: 120
-youtube: "46BiNHfQfo0"
+youtube: "T1oanItW70k"
 draft: "False"
 ---
 
-Coté goes over his highlights for the 2021 State of Kubernetes survey: rising production use, the benefits and business capabilities people are getting, hurdles for developers and operations, and the rising use in kubernetes distros.
+Right now there’s no end of possibilities for technology-driven innovation in healthcare. Coté and JT Perry discussed this state in part one of the conversation, and it part two they go over examples of those innovations. First, they discuss what FHIR (in the US) is and how it creates new opportunities for better patient care. Also, discussed: the software development tool-chain for more innovation in healthcare, at-home devices to reduce hospital stays, and API implementation and management.
 
-Get the survey: https://tanzu.vmware.com/content/blog/state-of-kubernetes-survey-2021-benefits-challenges?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=k8sstate2021
+See part one: https://www.youtube.com/watch?v=Dpac46N_5qM&list=PLAdzTan_eSPRNuA52_34wh5VTBC-0Rz7U
 
-Coté’s new book, free: https://tanzu.vmware.com/content/ebooks/changing-mindsets-the-missing-ingredient-to-digital-transformation?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=k8sstate2021
+JT in Twitter: https://twitter.com/circlejtp

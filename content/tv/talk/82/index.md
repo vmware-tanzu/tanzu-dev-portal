@@ -1,17 +1,14 @@
 ---
-aliases:
-- 0082
-date: '2021-05-20 08:36:44'
-description: 'Tanzu Talk: Observability Survey, release schedules for project vs.
-  product'
-draft: 'False'
-episode: '82'
-lastmod: '2021-05-21'
+type: "tv-episode"
+title: "Tanzu Talk: Observability Survey, release schedules for project vs. product"
+description: "Tanzu Talk: Observability Survey, release schedules for project vs. product"
+episode: "82"
+aliases: ["0082"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-05-20 08:36:44"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Observability Survey, release schedules for project vs. product'
-type: tv-episode
-youtube: GJNtgcAjHXo
+youtube: "GJNtgcAjHXo"
+draft: "False"
 ---
 
 Looking over a recent observably survey. What will we find?!

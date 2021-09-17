@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0051'
-date: '2020-12-08 13:45:26'
-description: 'Tanzu Talk: Creating and Sustaining a Culture of Innovation, of What
-  is DevOps Culture?'
-draft: 'False'
-episode: '51'
-lastmod: '2020-12-11'
+type: "tv-episode"
+title: "Tanzu Talk: Creating and Sustaining a Culture of Innovation, of What is DevOps Culture?"
+description: "Tanzu Talk: Creating and Sustaining a Culture of Innovation, of What is DevOps Culture?"
+episode: "51"
+aliases: ["0051"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-12-08 13:45:26"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Creating and Sustaining a Culture of Innovation, of What is DevOps
-  Culture?'
-type: tv-episode
-youtube: kqKJ2NweR_o
+youtube: "kqKJ2NweR_o"
+draft: "False"
 ---
 
 Creating an innovation-driven culture is difficult and requires deliberate and well managed change to how you operate. Scaling it to a large organization is even harder. You also need the organizational context and norms - the culture - that allows innovate practices and thinking to thrive. Nailing these down, let alone what “culture” even is, can be hard. This talk will define what an innovative culture is and then cover several proven methods for leading culture change. Throughout, we’ll draw from use cases from large organizations that have tackled the challenge of changing to a innovation-driven culture.

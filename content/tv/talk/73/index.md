@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0073'
-date: '2021-03-04 10:06:28'
-description: 'Tanzu Talk: Secure Supply Chain, with Henri van den Bulk'
-draft: 'False'
-episode: '73'
-lastmod: '2021-03-05'
+type: "tv-episode"
+title: "Tanzu Talk: Secure Supply Chain, with Henri van den Bulk"
+description: "Tanzu Talk: Secure Supply Chain, with Henri van den Bulk"
+episode: "73"
+aliases: ["0073"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-03-04 10:06:28"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Secure Supply Chain, with Henri van den Bulk'
-type: tv-episode
-youtube: 5GW6R0DRuy8
+youtube: "5GW6R0DRuy8"
+draft: "False"
 ---
 
 DevSecOps alert! Container security alert! 

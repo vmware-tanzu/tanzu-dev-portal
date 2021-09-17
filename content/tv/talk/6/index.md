@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0006'
-date: '2020-10-01 12:29:07'
-description: 'Tanzu Talk: Responsible Micro Services, with Nate Schutta'
-draft: 'False'
-episode: '6'
-lastmod: '2020-10-02'
+type: "tv-episode"
+title: "Tanzu Talk: Responsible Micro Services, with Nate Schutta"
+description: "Tanzu Talk: Responsible Micro Services, with Nate Schutta"
+episode: "6"
+aliases: ["0006"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-01 12:29:07"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Responsible Micro Services, with Nate Schutta'
-type: tv-episode
-youtube: 0sR8FF3A_X8
+youtube: "0sR8FF3A_X8"
+draft: "False"
 ---
 
 Sometimes you feel like a microservice, sometimes you feel like a monolith. In this episode, Coté talks with Nate Schutta about his new book Responsible Microservices: when to use them, when to use a service mesh, the (false?) hope of polyglot programming, monolithic shaming, and giant zucchinis.

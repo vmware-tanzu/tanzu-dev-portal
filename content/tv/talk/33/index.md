@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0033'
-date: '2020-11-05 15:39:40'
-description: 'Tanzu Talk: Everything I know about platform operations and platform
-  as a product'
-draft: 'False'
-episode: '33'
-lastmod: '2020-11-12'
+type: "tv-episode"
+title: "Tanzu Talk: Everything I know about platform operations and platform as a product"
+description: "Tanzu Talk: Everything I know about platform operations and platform as a product"
+episode: "33"
+aliases: ["0033"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-11-05 15:39:40"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Everything I know about platform operations and platform as a
-  product'
-type: tv-episode
-youtube: 5ROovjWTcng
+youtube: "5ROovjWTcng"
+draft: "False"
 ---
 
 I don’t know. The title is pretty comprehensive.

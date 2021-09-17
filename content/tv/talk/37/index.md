@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0037'
-date: '2020-11-11 13:08:34'
-description: 'Tanzu Talk: Don’t forget to measure'
-draft: 'False'
-episode: '37'
-lastmod: '2020-11-12'
+type: "tv-episode"
+title: "Tanzu Talk: Don’t forget to measure"
+description: "Tanzu Talk: Don’t forget to measure"
+episode: "37"
+aliases: ["0037"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-11-11 13:08:34"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Don’t forget to measure'
-type: tv-episode
-youtube: _c8_RwN4jAg
+youtube: "_c8_RwN4jAg"
+draft: "False"
 ---
 
 Most development teams forget to do a key activity: measuring the success of new features. Teams need to create metrics that will validate or invalidate the assumptions behind the feature and also alternate implementations. But it starts with creating measurements! In this episode, Coté discusses covers the importance of measuring your software, some types of measurements, and an example of measurements in action at The Home Depot.

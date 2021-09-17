@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0026'
-date: '2020-10-27 10:48:31'
-description: 'Tanzu Talk: Kubernetes for VI admins, part 1 - VMs fit to the app/apps
-  fit to k8s'
-draft: 'False'
-episode: '26'
-lastmod: '2020-11-04'
+type: "tv-episode"
+title: "Tanzu Talk: Kubernetes for VI admins, part 1 - VMs fit to the app/apps fit to k8s"
+description: "Tanzu Talk: Kubernetes for VI admins, part 1 - VMs fit to the app/apps fit to k8s"
+episode: "26"
+aliases: ["0026"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-27 10:48:31"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Kubernetes for VI admins, part 1 - VMs fit to the app/apps fit
-  to k8s'
-type: tv-episode
-youtube: UOZW3rMqZ1Q
+youtube: "UOZW3rMqZ1Q"
+draft: "False"
 ---
 
 I had a great conversation with Boskey Savla (@boskey) goes over kubernetes for VI admins. We discuss what VI admins traditionally do, how that maps to kubernetes, and the new tasks and roles admins have when managing kubernetes. Also: what does “kubernetes in vSphere,” like, actually mean?

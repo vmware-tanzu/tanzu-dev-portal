@@ -1,14 +1,16 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: The Decadence Vortex"
-description: "Tanzu Talk: The Decadence Vortex"
+title: "Tanzu Talk: Find Customer Friction, with Bernard Golden and Jesse Bean"
+description: "Tanzu Talk: Find Customer Friction, with Bernard Golden and Jesse Bean"
 episode: "86"
 aliases: ["0086"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-06-02 13:35:49"
+date: "2021-06-03 18:44:32"
 minutes: 120
-youtube: "nws9emy-eN0"
+youtube: "jsjf6LqRCM8"
 draft: "False"
 ---
 
-Too much success and you'll get stuck right when you need to change. Get a copy of my new book for free to fix your mindset up real good: https://tanzu.vmware.com/content/ebooks/changing-mindsets-the-missing-ingredient-to-digital-transformation?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=decadence
+Coté is joined by Bernard Golden and Jesse Bean to talk about how companies they’re talking with are thinking through and approaching digital transformation and modernizing their software strategy.
+
+Get Coté's new book for free: https://tanzu.vmware.com/content/ebooks/changing-mindsets-the-missing-ingredient-to-digital-transformation?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=bernard

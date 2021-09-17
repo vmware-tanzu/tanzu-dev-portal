@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0024'
-date: '2020-10-23 12:16:56'
-description: 'Tanzu Talk: actually following priorities and using opportunity cost
-  in your business case'
-draft: 'False'
-episode: '24'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: actually following priorities and using opportunity cost in your business case"
+description: "Tanzu Talk: actually following priorities and using opportunity cost in your business case"
+episode: "24"
+aliases: ["0024"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-23 12:16:56"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: actually following priorities and using opportunity cost in your
-  business case'
-type: tv-episode
-youtube: 4CJlQWDfAyM
+youtube: "4CJlQWDfAyM"
+draft: "False"
 ---
 
 Robbie Clutton joins me again to talk more agile-think. First, we discuss how you can nudge people to actually follow priorities. How do you get people to do what they're supposed to? Then, we discuss how to think about and use cost of delay in business case thinking. Cost of delay is also a good tool for prioritizing work as well.

@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0052'
-date: '2020-12-09 16:30:27'
-description: 'Tanzu Talk: Hug Your Auditors, or, Treat Compliance as a Feature'
-draft: 'False'
-episode: '52'
-lastmod: '2020-12-11'
+type: "tv-episode"
+title: "Tanzu Talk: Hug Your Auditors, or, Treat Compliance as a Feature"
+description: "Tanzu Talk: Hug Your Auditors, or, Treat Compliance as a Feature"
+episode: "52"
+aliases: ["0052"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-12-09 16:30:27"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Hug Your Auditors, or, Treat Compliance as a Feature'
-type: tv-episode
-youtube: mwEBPy1r-v8
+youtube: "mwEBPy1r-v8"
+draft: "False"
 ---
 
 Many people use "regulations" and "compliance" as an excuse to avoid changing how they build and run software. But, what if compliance was actually a beneficial feature, and auditors were "customers" you were looking to please? “Nobody thinks of it as ‘governance’ if it benefits them. They only call it ‘governance’ or ‘regulation’ if they don’t want to do it.” Let's see if we can turn this frown upside down.

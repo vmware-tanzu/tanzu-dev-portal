@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0015'
-date: '2020-10-05 14:20:56'
-description: 'Tanzu Talk: what does digital transformation mean?'
-draft: 'False'
-episode: '15'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: what does digital transformation mean?"
+description: "Tanzu Talk: what does digital transformation mean?"
+episode: "15"
+aliases: ["0015"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-05 14:20:56"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: what does digital transformation mean?'
-type: tv-episode
-youtube: gPRY4EORgSM
+youtube: "gPRY4EORgSM"
+draft: "False"
 ---
 
 Coté discusses three ways he thinks about what “digital transformation” means, and then focuses on the software related one. That whole “BE LIKE A TECH COMPANY” thing people are always PowerPointing about. Also: technology actually is hard, and pre-dread.

@@ -1,18 +1,15 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: Transformation Requires Trying New Things"
-description: "Tanzu Talk: Transformation Requires Trying New Things"
+title: "Tanzu Talk: Beyond DevOps metrics – technical, business, & culture metrics"
+description: "Tanzu Talk: Beyond DevOps metrics – technical, business, & culture metrics"
 episode: "92"
 aliases: ["0092"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-06-24 10:33:22"
+date: "2021-07-01 12:09:40"
 minutes: 120
-youtube: "Gx7mWrXvPt4"
+youtube: "cGmm8Pl0J9k"
 draft: "False"
 ---
 
-Just a reminder: if you want to change how your organization functions, you need to try new things. Time spent just optimizing and removing costs doesn't change anything.
-
-Free book: https://tanzu.vmware.com/content/ebooks/changing-mindsets-the-missing-ingredient-to-digital-transformation?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=tryingnewthings
-
-Archives & more: https://www.tanzutalk.com/videos
+In this talk, you’ll hear about three types of metrics that organizations are using to get better at building and running software. You know, those organizations that are doing the “digital transformation” thing so that they can run their business with software that isn’t ancient and lame.
+Be like a tech company! We all know development and operations metrics like lead time, error budgets, and mean time to repair. But we don’t focus on business metrics enough. And least of all, we don’t talk about internal, organization, or “culture” metrics enough. This talk gives an overview of 15 metrics across three types: technical metrics, business metrics, and culture metrics. If we look at the end-to-end process of software creation, usage, and work as a system to be programmed and refined, we need metrics across that entire system.

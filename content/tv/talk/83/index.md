@@ -1,20 +1,20 @@
 ---
-aliases:
-- 0083
-date: '2021-05-25 10:20:35'
-description: 'Tanzu Talk: Small Risks Lead to Success'
-draft: 'False'
-episode: '83'
-lastmod: '2021-05-25'
+type: "tv-episode"
+title: "Tanzu Talk: Better software, lower risk, with smaller, more frequent releases"
+description: "Tanzu Talk: Better software, lower risk, with smaller, more frequent releases"
+episode: "83"
+aliases: ["0083"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-05-26 12:42:47"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Small Risks Lead to Success'
-type: tv-episode
-youtube: ZVFlXsnt_r4
+youtube: "JOm1N74zvsI"
+draft: "False"
 ---
 
-App modernization webinar: https://tanzu.vmware.com/content/webinars/june-3-emea-start-and-scale-your-cloud-initiative-faster-than-you-thought-possible?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=June3rdCoteAd
+How doing shorter, more frequent release cycles help manage the risk of failure.
 
-Get started with free office hours: https://tanzu.vmware.com/office-hours?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=TanzuTalkDotCom
+Free books: https://cote.io/books/
 
-Get the free books mentioned: http://www.tanzutalk.com/videos
+Book Tanzu Labs office hours: https://tanzu.vmware.com/office-hours?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=smallerrisks
+
+Archives: http://www.tanzutalk.com/videos

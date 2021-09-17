@@ -1,19 +1,16 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: Reinventing Finance with Customer Experience, with Henri van den Bulk"
-description: "Tanzu Talk: Reinventing Finance with Customer Experience, with Henri van den Bulk"
+title: "Tanzu Talk:  Container Strategy Notebook, kubernetes or PaaS,  and why in the first place"
+description: "Tanzu Talk:  Container Strategy Notebook, kubernetes or PaaS,  and why in the first place"
 episode: "97"
 aliases: ["0097"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-08-17 11:36:26"
+date: "2021-09-10 12:46:50"
 minutes: 120
-youtube: "jdckvXSC3Ck"
+youtube: "QisUFgSCdvE"
 draft: "False"
 ---
 
-Among other things, the banking world is looking for new revenue and ways to retain customers. Focusing on customer experience is one way to get there. Shifting to a product-centric way of thinking results in dreaming up new types of “features” and even products to offer existing customers and help retain them - maybe even garnering new customers above the humming churn rate. In this episode, Coté talks with Henri van den Bulk about these drivers and some examples of that product-centric thinking in action.
+Now is the time to figure out your container strategy. Instead of scrambling to do so, start with a solid footing of why you're doing it in the first place. Then decide on the approach you want: a PaaS or building a platform based on kubernetes. Coté covers all this, plus eats some French toast.
 
-Find Henri in Twitter and LinkedIn:
-
-https://twitter.com/hmvandenb
-https://www.linkedin.com/in/hvandenbulk/
+For more: https://tanzu.vmware.com/products

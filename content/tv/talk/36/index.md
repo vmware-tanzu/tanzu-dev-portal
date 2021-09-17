@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0036'
-date: '2020-11-10 13:14:07'
-description: 'Tanzu Talk: Better, more decisive meetings'
-draft: 'False'
-episode: '36'
-lastmod: '2020-11-12'
+type: "tv-episode"
+title: "Tanzu Talk: Better, more decisive meetings"
+description: "Tanzu Talk: Better, more decisive meetings"
+episode: "36"
+aliases: ["0036"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-11-10 13:14:07"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Better, more decisive meetings'
-type: tv-episode
-youtube: vr2RgufcZCw
+youtube: "vr2RgufcZCw"
+draft: "False"
 ---
 
 Most meetings should result in a decision. However, most meetings are not run well enough to get a decision. Today, I summarize the method Pivotal Labs uses to find The One Thing to Work On. It's from the book Radically Collaborative Patterns for Software Makers.

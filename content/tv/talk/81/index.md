@@ -1,18 +1,14 @@
 ---
-aliases:
-- 0081
-date: '2021-05-18 11:04:56'
-description: 'Tanzu Talk: Held back by legacy software and tech debt; State of Kubernetes
-  2021 survey'
-draft: 'False'
-episode: '81'
-lastmod: '2021-05-19'
+type: "tv-episode"
+title: "Tanzu Talk: Held back by legacy software and tech debt; State of Kubernetes 2021 survey"
+description: "Tanzu Talk: Held back by legacy software and tech debt; State of Kubernetes 2021 survey"
+episode: "81"
+aliases: ["0081"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-05-18 11:04:56"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Held back by legacy software and tech debt; State of Kubernetes
-  2021 survey'
-type: tv-episode
-youtube: ZJvIdh6WCwQ
+youtube: "ZJvIdh6WCwQ"
+draft: "False"
 ---
 
 Mentioned:

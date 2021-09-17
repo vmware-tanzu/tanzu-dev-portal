@@ -1,16 +1,21 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk:  Container Strategy Notebook, kubernetes or PaaS,  and why in the first place"
-description: "Tanzu Talk:  Container Strategy Notebook, kubernetes or PaaS,  and why in the first place"
+title: "Tanzu Talk: Suffering from the #LegacyTrap"
+description: "Tanzu Talk: Suffering from the #LegacyTrap"
 episode: "98"
 aliases: ["0098"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-09-10 12:46:50"
+date: "2021-09-15 15:30:07"
 minutes: 120
-youtube: "QisUFgSCdvE"
+youtube: "ZMIz4MaWY0A"
 draft: "False"
 ---
 
-Now is the time to figure out your container strategy. Instead of scrambling to do so, start with a solid footing of why you're doing it in the first place. Then decide on the approach you want: a PaaS or building a platform based on kubernetes. Coté covers all this, plus eats some French toast.
+Chances are you’re caught in a legacy trap, you may not even know it! Coté discussed how legacy services and apps slow down organization’s ability to innovate, or do just about anything. He goes over a “state of” based on some surveys and front-porch anecdotes. Stay tuned for the whole #LegacyTrap series!
 
-For more: https://tanzu.vmware.com/products
+Links mentions:
+
+- DevOps Loop! Free conference: https://devopsloop.io
+- Anne Thomas’ legacy definition: https://www.ciodive.com/news/legacy-IT-app-modernization/605515/
+- OutSystem survey: https://www.outsystems.com/1/growing-threat-technical-debt/
+- Starting with finance: https://zwischenzugs.com/2021/07/12/if-you-want-to-transform-it-start-with-finance/

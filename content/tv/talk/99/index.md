@@ -1,21 +1,23 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: Suffering from the #LegacyTrap"
-description: "Tanzu Talk: Suffering from the #LegacyTrap"
+title: "Tanzu Talk: Is DevSECOps Baloney? BEHIND THE SCENES."
+description: "Tanzu Talk: Is DevSECOps Baloney? BEHIND THE SCENES."
 episode: "99"
 aliases: ["0099"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-09-15 15:30:07"
+date: "2021-09-16 13:04:14"
 minutes: 120
-youtube: "ZMIz4MaWY0A"
+youtube: "0VHDbEr7Qdw"
 draft: "False"
 ---
 
-Chances are you’re caught in a legacy trap, you may not even know it! Coté discussed how legacy services and apps slow down organization’s ability to innovate, or do just about anything. He goes over a “state of” based on some surveys and front-porch anecdotes. Stay tuned for the whole #LegacyTrap series!
+It’s easy to scoff at putting “Sec” into DevSecOps - hasn’t security always been there? Indeed, but as Coté explains, it’s worth calling security out now because there are new tools and practices like containers and cloud native buildpacks that make securing DevOps even better, possible even!
 
-Links mentions:
+Here, Coté walks through planning and putting together a much shorter version of this idea.
 
-- DevOps Loop! Free conference: https://devopsloop.io
-- Anne Thomas’ legacy definition: https://www.ciodive.com/news/legacy-IT-app-modernization/605515/
-- OutSystem survey: https://www.outsystems.com/1/growing-threat-technical-debt/
-- Starting with finance: https://zwischenzugs.com/2021/07/12/if-you-want-to-transform-it-start-with-finance/
+Mentioned:
+- Buildpacks - https://buildpacks.io
+- 3 R’s - https://tanzu.vmware.com/content/blog/the-three-r-s-of-enterprise-security-rotate-repave-and-repair
+
+00:00 - Explaining DevSecOps to a kid, the setup of this video
+22:06 - The run-through

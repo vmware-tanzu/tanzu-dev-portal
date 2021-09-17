@@ -1,13 +1,18 @@
 ---
 type: "tv-episode"
-title: "Ambient Tanzu - Executives as Architects, DevOps Metrics in 20 Minutes"
-description: "Ambient Tanzu - Executives as Architects, DevOps Metrics in 20 Minutes"
+title: "Tanzu Talk: What is Tanzu? A Quick Overview of VMware's Kubernetes Distros and Suites"
+description: "Tanzu Talk: What is Tanzu? A Quick Overview of VMware's Kubernetes Distros and Suites"
 episode: "94"
 aliases: ["0094"]
 publishdate: "2020-04-01T00:00:00-07:00"
-date: "2021-07-06 10:12:18"
+date: "2021-07-08 08:47:34"
 minutes: 120
-youtube: "hun95HGfmdQ"
+youtube: "MV9k4a-DQuA"
 draft: "False"
 ---
 
+Coté tells you how he thinks of the different Tanzu editions.
+
+See them all here: https://tanzu.vmware.com/tanzu/compare
+
+Archives and free books: https://www.tanzutalk.com

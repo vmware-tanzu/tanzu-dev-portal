@@ -1,23 +1,26 @@
 ---
-aliases:
-- 0084
-date: '2021-05-26 12:42:47'
-description: 'Tanzu Talk: Better software, lower risk, with smaller, more frequent
-  releases'
-draft: 'False'
-episode: '84'
-lastmod: '2021-05-26'
+type: "tv-episode"
+title: "Tanzu Talk: Spring Cloud Gateway, with Chris Sterling"
+description: "Tanzu Talk: Spring Cloud Gateway, with Chris Sterling"
+episode: "84"
+aliases: ["0084"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-05-27 11:08:50"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Better software, lower risk, with smaller, more frequent releases'
-type: tv-episode
-youtube: JOm1N74zvsI
+youtube: "JfpWlq6C3LY"
+draft: "False"
 ---
 
-How doing shorter, more frequent release cycles help manage the risk of failure.
+What's the difference between an API Gateway and a Service Mesh? How do they work together? Why would you use either? Christ Sterling joins Rita and Coté to discuss all that.
 
-Free books: https://cote.io/books/
+Mentioned
 
-Book Tanzu Labs office hours: https://tanzu.vmware.com/office-hours?utm_source=cote&utm_medium=video&utm_campaign=TanzuTalk&utm_content=smallerrisks
+Spring Cloud Gateway: https://tanzu.vmware.com/developer/guides/spring/scg-what-is/
 
-Archives: http://www.tanzutalk.com/videos
+Chris’ Ttech debt book: https://www.goodreads.com/book/show/9277805-managing-software-debt
+
+RedMonk videos with Chris: https://www.youtube.com/watch?v=wAMpjc3lSqw
+
+Chris in Twitter: https://twitter.com/csterwa
+
+GitOps for APIs: https://tanzu.vmware.com/developer/tv/tanzu-tuesdays/0052/

@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0069
-date: '2021-02-22 15:02:20'
-description: 'Tanzu Talk: Use corporate values as principals'
-draft: 'False'
-episode: '69'
-lastmod: '2021-02-23'
+type: "tv-episode"
+title: "Tanzu Talk: Use corporate values as principals"
+description: "Tanzu Talk: Use corporate values as principals"
+episode: "69"
+aliases: ["0069"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-22 15:02:20"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Use corporate values as principals'
-type: tv-episode
-youtube: XZF7BcMtmUU
+youtube: "XZF7BcMtmUU"
+draft: "False"
 ---
 
 There’s two parts in this episode: (1) keeping your mind limber and ready for the weird-think of culture change, and, (2) using corporate values as a tool for principles and building trust. Also, a life hack for always being on-time to meetings.

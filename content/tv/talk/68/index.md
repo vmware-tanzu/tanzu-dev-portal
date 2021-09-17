@@ -1,18 +1,14 @@
 ---
-aliases:
-- 0068
-date: '2021-02-16 11:42:28'
-description: 'Tanzu Talk: Corporate Values as a filter, use metrics to encourage mindset
-  shift'
-draft: 'False'
-episode: '68'
-lastmod: '2021-02-16'
+type: "tv-episode"
+title: "Tanzu Talk: Corporate Values as a filter, use metrics to encourage mindset shift"
+description: "Tanzu Talk: Corporate Values as a filter, use metrics to encourage mindset shift"
+episode: "68"
+aliases: ["0068"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-16 11:42:28"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Corporate Values as a filter, use metrics to encourage mindset
-  shift'
-type: tv-episode
-youtube: GMdLgjUvxdc
+youtube: "GMdLgjUvxdc"
+draft: "False"
 ---
 
 We all want to be virtuous and stay out of jail. Like a pragmatic vision, your mission statement should be a tool: for filtering out people and giving clear direction. Also: using metrics to motivate scared people who don't trust your good, culture-change intentions. Watch the full video: https://www.youtube.com/watch?list=PLAdzTan_eSPRNuA52_34wh5VTBC-0Rz7U&v=GMdLgjUvxdc&feature=emb_title

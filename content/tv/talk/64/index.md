@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0064'
-date: '2021-02-08 14:39:13'
-description: 'Tanzu Talk: giving permission to change - one cool trick to digital
-  transformation better'
-draft: 'False'
-episode: '64'
-lastmod: '2021-02-10'
+type: "tv-episode"
+title: "Tanzu Talk: giving permission to change - one cool trick to digital transformation better"
+description: "Tanzu Talk: giving permission to change - one cool trick to digital transformation better"
+episode: "64"
+aliases: ["0064"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-08 14:39:13"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: giving permission to change - one cool trick to digital transformation
-  better'
-type: tv-episode
-youtube: sHXJ6o952NM
+youtube: "sHXJ6o952NM"
+draft: "False"
 ---
 
 People often need to be given permission to change. You might think you’ve given them permission, but unless you’ve explicitly said those words, you probably haven’t.

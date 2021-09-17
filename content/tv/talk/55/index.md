@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0055'
-date: '2021-01-08 15:47:04'
-description: Changing your IT organization to focus on business innovation - project
-  to product
-draft: 'False'
-episode: '55'
-lastmod: '2021-01-15'
+type: "tv-episode"
+title: "Tanzu Talk: Changing your IT organization to focus on business innovation - project to product"
+description: "Tanzu Talk: Changing your IT organization to focus on business innovation - project to product"
+episode: "55"
+aliases: ["0055"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-01-08 15:47:04"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: Changing your IT organization to focus on business innovation - project to
-  product
-type: tv-episode
-youtube: 19IFiI62G2c
+youtube: "19IFiI62G2c"
+draft: "False"
 ---
 
 According to a recent Forrester Research recontact survey of global CIOs and SVPs, 58 percent of respondents now rank “changing our business model” as a top priority. How does IT need to change to help? When it comes to custom written software, there are three ways: (1) move from a project to a product mindset, (2) give developers a standardized platform, (3) manage for innovation, not delivery. Coté discusses each of these, with real world examples.

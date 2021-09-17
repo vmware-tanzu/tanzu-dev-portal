@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0070'
-date: '2021-02-23 11:53:38'
-description: 'Tanzu Talk: filing expenses as a strategic discovery process, and, outsourcing,
-  the good parts'
-draft: 'False'
-episode: '70'
-lastmod: '2021-02-23'
+type: "tv-episode"
+title: "Tanzu Talk: filing expenses as a strategic discovery process, and, outsourcing, the good parts"
+description: "Tanzu Talk: filing expenses as a strategic discovery process, and, outsourcing, the good parts"
+episode: "70"
+aliases: ["0070"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-23 11:53:38"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: filing expenses as a strategic discovery process, and, outsourcing,
-  the good parts'
-type: tv-episode
-youtube: K9ElVTTIrCg
+youtube: "K9ElVTTIrCg"
+draft: "False"
 ---
 
 Two parts in today’s Tanzu Talk: (1) thinking about your dislike of

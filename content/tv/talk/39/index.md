@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0039
-date: '2020-11-13 11:51:55'
-description: 'Tanzu Talk: Skills gaps - it’s probably not as bad as you think.'
-draft: 'False'
-episode: '39'
-lastmod: '2020-11-13'
+type: "tv-episode"
+title: "Tanzu Talk: Skills gaps - it’s probably not as bad as you think."
+description: "Tanzu Talk: Skills gaps - it’s probably not as bad as you think."
+episode: "39"
+aliases: ["0039"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-11-13 11:51:55"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Skills gaps - it’s probably not as bad as you think.'
-type: tv-episode
-youtube: V8MlUUmwhrw
+youtube: "V8MlUUmwhrw"
+draft: "False"
 ---
 
 When it comes to digital transformation, kubernetes, and app development, executives are always stressed about skills gaps. They don’t think staff people are up to the tasks and they don’t have the budget to hire new people with that occult knowledge. However, this might be more about the lack of training and strategic learning methods in those organizations. What if the problem wasn’t a lack of skills, but a lack of learning? In this episode, Coté goes an analyst report that looks at this situation and walks through some tactics to address the (supposed) skills gap.

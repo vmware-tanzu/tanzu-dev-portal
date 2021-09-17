@@ -1,16 +1,14 @@
 ---
-aliases:
-- 0049
-date: '2020-12-02 15:17:17'
-description: 'Tanzu Talk: Four Important DevOps Metrics'
-draft: 'False'
-episode: '49'
-lastmod: '2020-12-03'
+type: "tv-episode"
+title: "Tanzu Talk: Four Important DevOps Metrics"
+description: "Tanzu Talk: Four Important DevOps Metrics"
+episode: "49"
+aliases: ["0049"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-12-02 15:17:17"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Four Important DevOps Metrics'
-type: tv-episode
-youtube: Rw1exVvYSY4
+youtube: "Rw1exVvYSY4"
+draft: "False"
 ---
 
 In this episode, I discuss four software and operations metrics to start with when you’re doing your digital transformation, app modernization stuff: deployment frequency, lead time for changes, time to restore service, and change failure rate. 

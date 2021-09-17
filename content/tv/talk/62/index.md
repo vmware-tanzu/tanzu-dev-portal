@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0062'
-date: '2021-02-02 16:23:12'
-description: 'Tanzu Talk: motivating people to change'
-draft: 'False'
-episode: '62'
-lastmod: '2021-02-03'
+type: "tv-episode"
+title: "Tanzu Talk: motivating people to change"
+description: "Tanzu Talk: motivating people to change"
+episode: "62"
+aliases: ["0062"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-02 16:23:12"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: motivating people to change'
-type: tv-episode
-youtube: 41-971Jiy4Q
+youtube: "41-971Jiy4Q"
+draft: "False"
 ---
 
 People don’t want to change. This is a problem if you’re transforming how your organization does software. You have to figure out how to motivate them, how to reward new behavior. Here, I offer a couple of tactics to get started with. 

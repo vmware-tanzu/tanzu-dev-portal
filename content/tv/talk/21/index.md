@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0021'
-date: '2020-10-20 12:12:29'
-description: 'Tanzu Talk: Shift right to improve corporate strategy'
-draft: 'False'
-episode: '21'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: Shift right to improve corporate strategy"
+description: "Tanzu Talk: Shift right to improve corporate strategy"
+episode: "21"
+aliases: ["0021"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-20 12:12:29"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Shift right to improve corporate strategy'
-type: tv-episode
-youtube: x2DL7a24AY8
+youtube: "x2DL7a24AY8"
+draft: "False"
 ---
 
 Corporate strategy could be improved by shifting right, moving closer to the week-to-week software cycle to get more familiar with customers and changes in the market. See more on corporate strategy in The Business Bottleneck.

@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0066'
-date: '2021-02-10 12:56:07'
-description: 'Tanzu Talk: Security is a feature'
-draft: 'False'
-episode: '66'
-lastmod: '2021-02-10'
+type: "tv-episode"
+title: "Tanzu Talk: Security is a feature"
+description: "Tanzu Talk: Security is a feature"
+episode: "66"
+aliases: ["0066"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-10 12:56:07"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Security is a feature'
-type: tv-episode
-youtube: VnjXhH07614
+youtube: "VnjXhH07614"
+draft: "False"
 ---
 
 Many people assume that becoming more agile means becoming less secure. If you treat security as a feature instead of as a barrier, though, doing agile development can make your software even more secure.

@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0034'
-date: '2020-11-06 11:09:02'
-description: 'Tanzu Talk: How COVID changed IT priorities & spending, with Rita Manachi'
-draft: 'False'
-episode: '34'
-lastmod: '2020-11-12'
+type: "tv-episode"
+title: "Tanzu Talk: How COVID changed IT priorities & spending, with Rita Manachi"
+description: "Tanzu Talk: How COVID changed IT priorities & spending, with Rita Manachi"
+episode: "34"
+aliases: ["0034"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-11-06 11:09:02"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: How COVID changed IT priorities & spending, with Rita Manachi'
-type: tv-episode
-youtube: NY-IouJg7Ek
+youtube: "NY-IouJg7Ek"
+draft: "False"
 ---
 
 Off in analyst land, they’re always checking on IT priorities. In this discussion, Rita Manachi (@ritam) goes over some recent surveys about how COVID has changed IT priorities. It’s some good before/after stuff to see what CIOs and such are looking to do.

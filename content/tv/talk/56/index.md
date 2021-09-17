@@ -1,18 +1,14 @@
 ---
-aliases:
-- '0056'
-date: '2021-01-12 16:15:59'
-description: 'Tanzu Talk: Seeding Culture. DevOps, product management, & improving
-  software in large organizations'
-draft: 'False'
-episode: '56'
-lastmod: '2021-01-15'
+type: "tv-episode"
+title: "Tanzu Talk: Seeding Culture. DevOps, product management, & improving software in large organizations"
+description: "Tanzu Talk: Seeding Culture. DevOps, product management, & improving software in large organizations"
+episode: "56"
+aliases: ["0056"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-01-12 16:15:59"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Seeding Culture. DevOps, product management, & improving software
-  in large organizations'
-type: tv-episode
-youtube: rhs0JdOGJp4
+youtube: "rhs0JdOGJp4"
+draft: "False"
 ---
 
 Changing how one team does software is easy, changing 500 is another thing entirely. How do you scale culture change, digital transformation, and all that? Coté explains how with a couple real world examples.

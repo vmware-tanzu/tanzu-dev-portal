@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0067'
-date: '2021-02-11 12:00:40'
-description: 'Tanzu Talk: End-to-end Mindset'
-draft: 'False'
-episode: '67'
-lastmod: '2021-02-12'
+type: "tv-episode"
+title: "Tanzu Talk: End-to-end Mindset"
+description: "Tanzu Talk: End-to-end Mindset"
+episode: "67"
+aliases: ["0067"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2021-02-11 12:00:40"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: End-to-end Mindset'
-type: tv-episode
-youtube: SUtu3DjnE6I
+youtube: "SUtu3DjnE6I"
+draft: "False"
 ---
 
 I discuss the end-to-end and shift-left mindsets from the draft of the book I'm working on.

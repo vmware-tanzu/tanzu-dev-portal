@@ -1,16 +1,14 @@
 ---
-aliases:
-- '0023'
-date: '2020-10-22 14:33:22'
-description: 'Tanzu Talk: Less leadership, more technocracy'
-draft: 'False'
-episode: '23'
-lastmod: '2020-10-26'
+type: "tv-episode"
+title: "Tanzu Talk: Less leadership, more technocracy"
+description: "Tanzu Talk: Less leadership, more technocracy"
+episode: "23"
+aliases: ["0023"]
+publishdate: "2020-04-01T00:00:00-07:00"
+date: "2020-10-22 14:33:22"
 minutes: 120
-publishdate: '2020-04-01T00:00:00-07:00'
-title: 'Tanzu Talk: Less leadership, more technocracy'
-type: tv-episode
-youtube: G65BeKHoGk8
+youtube: "G65BeKHoGk8"
+draft: "False"
 ---
 
 Getting good at leadership is always good, but make sure to mind the technocracy as well - someone's actually gotta do the work! Also: plan for needing gadgets for your gadgets.
