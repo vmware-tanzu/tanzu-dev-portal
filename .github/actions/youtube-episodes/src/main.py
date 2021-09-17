@@ -79,7 +79,11 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
         videoId = item.snippet.resourceId.videoId
         response = requests.get(YT_API_BASE_URL + YT_API_QS + "&id=" + videoId)
         videoList = json.loads(response.text)
-        videoInfo = videoList["items"][0]["snippet"]
+        videoInfo = {}
+        try: 
+            videoInfo = videoList["items"][0]["snippet"]
+        except:
+            continue
         liveInfo = {}
         try:
             liveInfo = videoList["items"][0]["liveStreamingDetails"]
