@@ -489,7 +489,9 @@ body {
   }
   footer {
     min-height: auto;
-    
+    .col-lg-8 {
+      max-width: 800px;
+    }
     > .container {
       max-width: 100%;
     }
