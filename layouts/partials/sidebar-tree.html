@@ -54,6 +54,10 @@
         <!-- If page is subsection, gather child pages from all topics -->
         {{ $sspages := where (where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true) ".Params.parent" $ss }}
         {{ $pages = union $pages $sspages }}
+      {{ else if .page.Params.parent }}
+        <!-- Page is a chile page, gather the parent page -->
+        {{ $ppage := where (where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true) ".Params.subsection" .page.Params.parent }}
+        {{ $pages = union $pages $ppage }}
       {{ end }}
       
       {{ $pages := $pages | first 50 }}
