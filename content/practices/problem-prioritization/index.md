@@ -2,7 +2,6 @@
 date: '2021-02-09'
 description: Prioritize problems that were discovered during research so the team
   can focus on the most important ones
-image: default-cover.png
 lastmod: '2021-03-17'
 length: 60-120 min
 participants: Core team
@@ -38,11 +37,11 @@ why:
    {{% callout %}}
    **Tip**: Optionally, you can generate different 2x2 criteria by asking the team "What makes a problem worth solving?". Some other 2x2 examples include: higher user pain vs. higher impact (e.g. affects most users); higher user pain vs. higher business pain (e.g. in terms of lost revenue); higher impact vs. higher immediate need.
    {{% /callout %}}
-   ![Empty 2x2 diagram](/images/practices/problem-prioritization/step-3.png)
+   ![Empty 2x2 diagram](images/step-3.png)
 
 1. Plot the problems/pains on the 2x2.  
 
-   ![2x2 diagram showing stickies in each quadrant](/images/practices/problem-prioritization/step-4.png)
+   ![2x2 diagram showing stickies in each quadrant](images/step-4.png)
 
 1. Depending upon the size of each problem/pain, strive to end with a list of the top 3-5 problems/pains.
 
@@ -80,9 +79,9 @@ The timing of this activity varies along with the number of problems identified 
 
 {{% section %}}
 ### Real World Examples
-![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
+![Two by two chart plotting problems by frequency and intensity](images/example-2.jpg)
 
-![A group of people discusses priority in front of a whiteboard with two by two chart on it](/images/practices/problem-prioritization/example-3.jpg)
+![A group of people discusses priority in front of a whiteboard with two by two chart on it](images/example-3.jpg)
 
-![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
+![Two by two chart with top problems prioritized](images/example-5.jpg)
 {{% /section %}}

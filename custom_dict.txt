@@ -139,6 +139,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
+backpressure
 Baeldung('s)?
 Bahhh
 Bai
@@ -174,7 +175,9 @@ biome
 Biville
 BKPR
 BlackBox
+blazingly
 Blazor
+[Bb]lockchain
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
@@ -198,6 +201,7 @@ BucketRegion
 BucketRegion's
 BucketRegionDetails
 BucketRegions
+Buesing
 Bugsville
 buildout
 BuildPack
@@ -460,6 +464,7 @@ DistributionStats
 distroless
 distros
 django-prometheus
+DLT
 DNS
 dnsNames
 dnsutil
@@ -1142,6 +1147,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 NFJ?S
+NFT
 [Nn]ginx|NGINX
 NIC
 Nicoll
@@ -1157,6 +1163,7 @@ non-JVM
 non-Kubernetes
 non-routable
 non-schedulable
+nonblocking
 NoSQL
 NotificationListener
 npm

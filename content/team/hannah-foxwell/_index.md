@@ -1,11 +1,9 @@
 ---
 name: Hannah Foxwell
 description: "Director for Platform Services at VMware Tanzu Labs"
-photo: "/images/team/hannah-foxwell.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "hannahfoxwell"

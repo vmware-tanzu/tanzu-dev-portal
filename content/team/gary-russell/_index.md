@@ -1,11 +1,9 @@
 ---
 name: Gary Russell
 description: "Staff Engineer"
-photo: "/images/team/gary-russell.jpeg"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: "gprussell"

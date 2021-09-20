@@ -1,11 +1,9 @@
 ---
 name: Fani Bahar
 description: ""
-photo: "/images/team/fani-bahar.png"
 roles: ["Author"]
 skills: ["Product Management", "SWIFT", "Facilitation", "Lean Agile"]
 location: "Berlin, DE"
-weight: 1
 
 # Social Media 
 twitter: ""

@@ -1,11 +1,9 @@
 ---
 name: Haytham Mohamed
 description: "Advisory Solutions Architect"
-photo: "/images/team/haytham-mohamed.jpg"
 roles: ["author"]
 skills: []
 location: "Austin, TX"
-weight: 1
 
 # Social Media 
 twitter: "haymahmoh"

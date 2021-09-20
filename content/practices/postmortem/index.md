@@ -5,7 +5,6 @@ description: "An exercise to learn from any incident that impacts the product or
 tags: ["Delivery"]
 length: "1 hour"
 participants: "Core delivery team, stakeholder, and support team"
-image: "default-cover.png" 
 lastmod: "2021-07-28"
 date: "2021-07-28"
 why: 
@@ -38,7 +37,7 @@ First, let's define an Incident:
    
    Example of timeline:
    
-   ![Postmortem Timeline](/images/practices/postmortem/timeline.jpg)
+   ![Postmortem Timeline](images/timeline.jpg)
    
    Make sure to invite the right people for the postmortem session. For example:
    

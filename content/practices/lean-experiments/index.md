@@ -2,7 +2,9 @@
 date: '2021-05-10'
 description: A way to have your team create experiments to run so that you can validate
   or invalidate risky assumptions that may lead to product failure
-image: /lean-experiments/lean-experiment-1.png
+resources:
+- name: cover
+  src: images/lean-experiment-1.png
 lastmod: '2021-05-10'
 length: 60-90 mins
 linkTitle: Lean Experiments
@@ -41,7 +43,7 @@ why:
    
    > _"Lean Experiments are based on the Lean Startup approach to creating new products and services under conditions of extreme uncertainty. Lean Experiments are designed to quickly and cheaply gather evidence to validate or invalidate risky assumptions about your product."_
    
-   ![Risks Without Validation](/images/practices/lean-experiments/lean-experiment-1.png)
+   ![Risks Without Validation](images/lean-experiment-1.png)
    
    Common types of experiments:
    
@@ -186,9 +188,9 @@ If there are many assumptions to validate, consider following up with a hypothes
 
 {{% section %}}
 ### Real World Examples
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-2.jpg)
+![Lean Experiment Drawings](images/lean-experiment-2.jpg)
 
-![Lean Experiment Drawings](/images/practices/lean-experiments/lean-experiment-3.jpg)
+![Lean Experiment Drawings](images/lean-experiment-3.jpg)
 {{% /section %}}
 
 {{% section %}}

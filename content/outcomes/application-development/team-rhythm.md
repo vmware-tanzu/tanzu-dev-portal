@@ -113,7 +113,7 @@ Your role as a **Team Member**:
 - Listen, participate, take notes, and answer questions.
 
 ### Retrospective
-![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-1.png)
+![3 Column Retrospective in Action](/practices/3-column-retro/images/retro-1.png)
 
 Some feel that the Retrospective practice is the most important of all Agile practices as it embodies the principle of continuous improvement. Retrospectives are a way to identify how to improve teamwork by reflecting on what worked well, what could be improved, and what is on people’s minds.
 

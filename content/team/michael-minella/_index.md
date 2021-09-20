@@ -1,11 +1,9 @@
 ---
 name: Michael Minella
 description: "Spring Cloud Team"
-photo: "/images/team/michael-minella.jpg"
 roles: ["guest"]
 skills: ["Spring", "Kubernetes"]
 location: "Naperville, IL"
-weight: 1
 
 # Social Media
 twitter: "michaelminella"

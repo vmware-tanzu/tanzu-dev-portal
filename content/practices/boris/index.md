@@ -2,7 +2,9 @@
 date: '2021-02-11'
 description: Identify relationships between services in a complex system to reveal
   the notional target system architecture and record them using SNAP
-image: boris/boris.png
+resources:
+- name: cover
+  src: images/boris.png
 lastmod: '2021-03-17'
 length: 1.5 hours per run; multiple runs are often needed
 participants: 'Business stakeholders, architects, technical leads, developers '
@@ -41,7 +43,7 @@ why:
    **Tip**: Create a legend identifying the bounded context, topic/queue, external system, UI.
    {{< /callout >}}
 
-   ![Example of Boris legend with stickies](/images/practices/boris/legend.jpeg)
+   ![Example of Boris legend with stickies](images/legend.jpeg)
 
 1. Discuss a thin slice of the flow and map out how each of the bounded contexts communicate with one another to complete the flow. Start with the happy path then move to unhappy paths.
 
@@ -57,7 +59,7 @@ why:
    - Should the communication be through events or web services?
    - What are some of the cross cutting integrations that need to be included (e.g. notifications, monitoring, balancing, accounting, etc)?
 
-   ![Example of Boris diagram with sync and async flows](/images/practices/boris/step-3.jpg)
+   ![Example of Boris diagram with sync and async flows](images/step-3.jpg)
 
 1. Indicate if a queue is needed by adding them in a new sticky note of the same color for a queue/topic. Add in the lines for what systems are talking to it.
 
@@ -76,7 +78,7 @@ why:
    - What backlog stories need to be created to account for the work?
    - It helps to identify someone to be in charge of recording things on the SNAP sheets so that they can grow as things come out in general conversation during Boris.
 
-   ![Example of SNAP output for a given context](/images/practices/boris/snap.jpg)
+   ![Example of SNAP output for a given context](images/snap.jpg)
 
 1. As you discuss the flow and the interactions with the system you can add information to each bounded context's sheet
 

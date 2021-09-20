@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Help the team understand how the primary persona interacts with all other
   personas
-image: persona-ecosystem-map/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 30-45 min
 participants: Stakeholders & project team members

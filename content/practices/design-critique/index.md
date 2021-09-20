@@ -8,7 +8,7 @@ Project team brings:
 date: '2021-02-09'
 description: Provide valuable design feedback to a project team so they can determine
   if further effort is needed
-image: default-cover.png
+
 lastmod: '2021-03-04'
 length: 30-60 min
 participants: Core team, stakeholders, other designers
@@ -87,7 +87,7 @@ Regardless of how you decide to run your design critique, you should ensure that
 
 {{% section %}}
 ### Real World Examples
-![Design printout with feedback attached using sticky notes](/images/practices/design-critique/example-2.jpg)
+![Design printout with feedback attached using sticky notes](images/example-2.jpg)
 {{% /section %}}
 
 {{% section %}}
