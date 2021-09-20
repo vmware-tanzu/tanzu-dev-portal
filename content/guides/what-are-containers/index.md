@@ -7,6 +7,7 @@ tags:
 title: What are Containers?
 topics:
 - Containers
+featured: true
 weight: 1
 oldPath: "/content/guides/containers/what-are-containers.md"
 aliases:

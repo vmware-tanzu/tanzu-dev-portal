@@ -10,6 +10,7 @@ patterns:
 - Deployment
 tags:
 - Buildpacks
+- Getting Started
 team:
 - Bryan Friedman
 title: Getting Started with the pack CLI using Cloud Native Buildpacks

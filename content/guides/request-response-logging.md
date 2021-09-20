@@ -9,6 +9,7 @@ tags:
 - Logging
 - Spring Boot
 - Observability
+featured: true
 title: Request/Response Logging in a Spring Boot Application
 topics:
 - Spring

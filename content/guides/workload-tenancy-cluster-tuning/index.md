@@ -8,6 +8,7 @@ linkTitle: Cluster Tuning Guide
 parent: Workload Tenancy
 title: Cluster Tuning Guide
 weight: 1800
+featured: true
 oldPath: "/content/guides/kubernetes/workload-tenancy-cluster-tuning.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-cluster-tuning"

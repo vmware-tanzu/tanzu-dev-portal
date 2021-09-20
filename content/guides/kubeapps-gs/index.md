@@ -8,6 +8,7 @@ patterns:
 - Deployment
 tags:
 - Kubeapps
+- Getting Started
 team:
 - Tiffany Jernigan
 title: Getting Started with Kubeapps

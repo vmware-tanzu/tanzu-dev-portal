@@ -11,6 +11,7 @@ subsection: Harbor
 tags:
 - Kubernetes
 - Containers
+- Getting Started
 team:
 - Tony Vetter
 - Paul Czarkowski

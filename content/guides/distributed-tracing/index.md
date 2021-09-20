@@ -9,6 +9,8 @@ tags:
 - Distributed Tracing
 - Zipkin
 - ".NET"
+- Getting Started
+featured: true
 title: Implementing Distributed Tracing
 topics:
 - Spring

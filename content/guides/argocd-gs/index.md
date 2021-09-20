@@ -10,6 +10,8 @@ patterns:
 tags:
 - CI-CD
 - ArgoCD
+- Getting Started
+featured: true
 team:
 - Tony Vetter
 title: Getting Started with ArgoCD on Kubernetes

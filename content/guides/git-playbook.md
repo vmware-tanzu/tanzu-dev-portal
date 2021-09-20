@@ -6,6 +6,8 @@ patterns:
 - Deployment
 tags:
 - Git
+- Getting Started
+featured: true
 title: Git Playbook
 topics:
 - Agile

@@ -8,6 +8,8 @@ topics:
 - Kubernetes
 - Containers
 - Microservices
+tags:
+- Getting Started
 oldPath: "/content/guides/kubernetes/from-docker-to-kubernetes.md"
 aliases:
 - "/guides/kubernetes/from-docker-to-kubernetes"

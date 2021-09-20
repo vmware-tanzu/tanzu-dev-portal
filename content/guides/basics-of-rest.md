@@ -11,6 +11,7 @@ tags:
 - Microservices
 - API
 - REST
+- Getting Started
 team:
 - Tiffany Jernigan
 - Brian McClain

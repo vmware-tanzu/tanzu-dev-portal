@@ -10,6 +10,7 @@ tags:
 - imgpkg
 - kapp-controller
 - vendir
+featured: true
 team:
 - Tiffany Jernigan
 title: Carvel

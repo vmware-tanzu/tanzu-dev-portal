@@ -10,6 +10,8 @@ patterns:
 tags:
 - Microservices
 - API
+- Getting Started
+featured: true
 team:
 - Nate Schutta
 title: Breaking Down a Monolith into Microservices

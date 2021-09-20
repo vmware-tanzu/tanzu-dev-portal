@@ -12,6 +12,7 @@ tags:
 - CI-CD
 - Concourse
 - Kubernetes
+featured: true
 team:
 - Tony Vetter
 title: Getting Started with Concourse CI

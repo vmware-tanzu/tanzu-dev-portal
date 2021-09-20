@@ -9,6 +9,7 @@ tags:
 - Kubernetes
 - Observability
 - Wavefront
+featured: true
 title: Monitoring Containers at Scale with Wavefront
 topics:
 - Kubernetes

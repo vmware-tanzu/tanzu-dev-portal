@@ -4,6 +4,8 @@ lastmod: '2021-04-28'
 linkTitle: Bootifying Java Applications
 tags:
 - Spring Boot
+- Getting Started
+featured: true
 team:
 - Marc Zottner
 title: Bootifying Java Applications

@@ -11,6 +11,7 @@ tags:
 - Spring Boot
 - REST
 - API
+- Getting Started
 team:
 - Brian McClain
 title: Building an API with Spring Boot

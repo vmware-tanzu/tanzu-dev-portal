@@ -7,6 +7,9 @@ team:
 title: Container Networking
 topics:
 - Kubernetes
+tags:
+- Getting Started
+featured: true
 weight: 32
 oldPath: "/content/guides/kubernetes/container-networking.md"
 aliases:

@@ -4,6 +4,8 @@ lastmod: '2021-02-22'
 subsection: Remote Tips
 tags:
 - Agile
+- Getting Started
+featured: true
 team:
 - VMware Tanzu Labs
 title: Remote Tips

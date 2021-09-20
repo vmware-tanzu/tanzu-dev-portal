@@ -6,6 +6,8 @@ patterns:
 - API
 tags:
 - Spring Cloud Contract
+- Getting Started
+featured: true
 title: Modernization with Consumer Driven Contracts
 topics:
 - Spring

@@ -8,6 +8,7 @@ patterns:
 - API
 tags:
 - Spring Cloud Gateway
+- Getting Started
 team:
 - Brian McClain
 title: Getting Started with Spring Cloud Gateway

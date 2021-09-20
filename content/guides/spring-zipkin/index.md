@@ -13,6 +13,7 @@ tags:
 - API
 - Zipkin
 - Observability
+featured: true
 team:
 - Brian McClain
 title: Getting Started with Zipkin and Spring Boot

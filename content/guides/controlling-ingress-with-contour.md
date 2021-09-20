@@ -8,6 +8,8 @@ tags:
 title: Controlling Ingress with Contour
 topics:
 - Kubernetes
+tags:
+- Getting Started
 weight: 1
 oldPath: "/content/guides/kubernetes/controlling-ingress-with-contour.md"
 aliases:

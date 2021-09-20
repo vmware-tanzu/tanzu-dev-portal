@@ -9,6 +9,8 @@ patterns:
 tags:
 - RabbitMQ
 - Event Streaming
+- Getting Started
+featured: true
 team:
 - Brian McClain
 title: Getting Started with RabbitMQ

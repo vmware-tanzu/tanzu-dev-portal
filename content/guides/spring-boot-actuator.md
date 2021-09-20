@@ -7,6 +7,7 @@ patterns:
 - Observability
 tags:
 - Spring Boot Actuator
+- Getting Started
 title: Custom Health Checks Using Spring Boot Actuator
 topics:
 - Spring

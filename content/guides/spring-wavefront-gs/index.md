@@ -12,6 +12,7 @@ tags:
 - Spring
 - Wavefront
 - Observability
+- Getting Started
 team:
 - Brian McClain
 title: Getting Started with Wavefront for Spring Boot

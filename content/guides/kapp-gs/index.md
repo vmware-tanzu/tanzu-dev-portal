@@ -7,6 +7,7 @@ patterns:
 tags:
 - kapp
 - Carvel
+- Getting Started
 team:
 - Tiffany Jernigan
 title: Getting Started with kapp

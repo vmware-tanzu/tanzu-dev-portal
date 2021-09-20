@@ -12,6 +12,7 @@ tags:
 - Maven
 - Spring
 - Spring Boot
+featured: true
 team:
 - Dan Dobrin
 title: Understanding API-First Development

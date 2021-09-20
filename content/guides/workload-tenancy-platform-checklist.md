@@ -8,6 +8,7 @@ linkTitle: Platform Readiness Checklist
 parent: Workload Tenancy
 title: Platform Readiness Checklist
 weight: 100
+featured: true
 oldPath: "/content/guides/kubernetes/workload-tenancy-platform-checklist.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-platform-checklist"

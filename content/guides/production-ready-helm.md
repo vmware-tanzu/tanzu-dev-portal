@@ -9,6 +9,7 @@ patterns:
 tags:
 - Helm
 - Bitnami
+featured: true
 team:
 - Javier Salmeron
 title: Best Practices for Creating Production-Ready Helm Charts
