@@ -30,7 +30,7 @@
             <div class="row">
             <!-- Build subtopic boxes -->
             {{ range $subtopics }}
-                <div class="bg-gray-light subtopic col-lg-4 h-100">
+                <div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
                     {{ $link := replace (lower . ) "/" "-"  }}
                     {{ $link := replace $link "&" "and" }}
                     {{ $link := replace $link " " "-" }}
