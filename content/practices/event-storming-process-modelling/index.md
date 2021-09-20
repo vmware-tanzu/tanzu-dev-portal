@@ -19,7 +19,7 @@ why:
 - To build a feature oriented context for future development.
 - To draft, communicate and validate lean product assumptions, with stakeholders and SMEs.
 - To identify a thin slice and first iteration with prioritize lean assumptions.
-- To create an algorithmic model of a business processes.
+- To create an algorithmic model of a business process.
 - To break down large problem spaces into smaller more manageable problems.
 - To identify where existing solutions exist to support the process.
 - To compare process changes to validate hypotheses and solutions.
