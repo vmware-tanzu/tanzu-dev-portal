@@ -19,6 +19,18 @@ aliases:
 - "/guides/kubernetes/harbor-as-docker-proxy"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+faqs:
+  faq:
+   - question: What is Harbor Registry?
+     answer: Harbor Registry is an open-source, cloud native registry that expands Docker Distribution functionalities with the ability to store, sign, and scan content and images.
+   - question: What can Harbor be used for?
+     answer: Harbor serves a variety of purposes; it mainly secures artifacts through role-based access control, scanning images for vulnerabilities, and signing images as trusted. Harbor can also be used to work around Docker Hub Rate Limits.
+   - question: How do you upgrade Harbor?
+     answer: In order to upgrade Harbor, you must update the configuration file and migrate your data to comply with the relevant database schema of the latest Harbor version. Step by step, you must remove the existing Harbor instance, backup your current files, backup your database, download the latest Harbor release package, perform your migration, update the harbor.yml file, then run the install script.
+   - question: What is the difference between Docker Registry and Harbor?
+     answer: Harbor is an expansion of Docker Registry that has the added benefit of multiple, single host registries, enhanced security, and identity management features.
+   - question: How do you stop Docker Hub Rate Limits?
+     answer: Docker Hub Rate Limits can be worked around by using either Proxy-ing, which allows you to keep a local copy of images on an as-requested basis or Replication, which allows you to replicate images between registries.
 ---
 
 {{< youtube id="KSH2Hzk-E7U" class="youtube-video-shortcode" >}}
