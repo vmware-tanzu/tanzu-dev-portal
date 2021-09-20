@@ -713,6 +713,9 @@ body {
     font-size: 1rem;
     color: white;
   }
+  .guide .td-sidebar-nav__section-title .active {
+    color: $bright-green;
+  }
   .guide table {
     color: white;
   }

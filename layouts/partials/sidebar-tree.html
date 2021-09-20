@@ -31,10 +31,14 @@
 
 {{ if not $ss }} <!-- Top-Level Section -->
   <ul class="td-sidebar-nav__section">
-  {{ $active := eq $p $s }} 
+  {{ $active := or (eq $p $s) ($p.Params.toppage) }}
+  {{ $link := replace (lower $p.Params.level2) "/" "-"  }}
+  {{ $link := replace $link "&" "and" }}
+  {{ $link := replace $link " " "-" }}
+  {{ $link := printf "%s/%s" "/guides" $link | relURL }}
   {{ $sid := $s.RelPermalink | anchorize }}
-    <li class="td-sidebar-nav__section-title text-nowrap" id="{{ $sid }}">
-      <a href="{{ $s.RelPermalink }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $p.Params.level2 | markdownify }}</a>
+    <li class="td-sidebar-nav__section-title text-wrap" id="{{ $sid }}">
+      <a href="{{ $link }}" class="align-left pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' />{{ $p.Params.level2 | markdownify }}</a>
     </li>
 {{ else }} <!-- Subsection -->
   {{ $active := eq $p $c }}
@@ -50,6 +54,7 @@
       {{ $pages := where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true }}
       {{ $pages := where $pages ".Params.level2" "eq" $p.Params.level2 }} 
       {{ $pages := where $pages ".Params.parent" "eq" $ss }} <!-- All children pages except children of subsections -->
+      {{ $pages := where $pages ".Params.toppage" "ne" true }} <!-- Don't include the top page twice -->
       {{ if $ss }}
         <!-- If page is subsection, gather child pages from all topics -->
         {{ $sspages := where (where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true) ".Params.parent" $ss }}
