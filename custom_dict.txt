@@ -1390,6 +1390,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebase(d)
 rebasing
 Recommender
 [Rr]eddit
@@ -1468,6 +1469,7 @@ Ruckle
 Rudd
 Rumans
 runnable
+Runtimes
 runtimes?
 Rushton
 [sS]3
@@ -1688,6 +1690,7 @@ toolkits
 [Tt]oolset
 tooltip
 topologies
+Torgerson
 toString
 totalProcessingTime
 totalQueueTime
