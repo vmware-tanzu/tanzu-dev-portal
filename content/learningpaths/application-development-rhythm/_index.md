@@ -2,7 +2,10 @@
 title: Modern Application Development Rhythm
 weight: -2
 layout: intro
-duration: 60
+duration: 120
+tags:
+  - All Roles
+  - Applications
 experience: Beginner
 description: "Learn how we approach developer productivity practices at VMware Tanzu Labs."
 team:
