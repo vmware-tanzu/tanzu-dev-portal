@@ -27,7 +27,7 @@ Learning with the labs in the [Tanzu Developer Center](https://tanzu.vmware.com/
 
 ### What the labs are about
 
-Kubernetes is widely praised for its amazing capabilities, one of which is how applications are treated using cloud native principles—a specialty of Spring Boot that has been perfected over the years. This year’s SpringOne conference showed us that developers are excited to learn about Kubernetes and Spring Boot working together, two complementary technologies that fit tightly together. Our most popular labs this year were on ... you guessed it, [Spring on Kubernetes](https://tanzu.vmware.com/developer/workshops/spring-on-kubernetes/) and [Spring Booternetes](https://tanzu.vmware.com/developer/workshops/lab-spring-booternetes/).
+Kubernetes is widely praised for its amazing capabilities, one of which is how applications are treated using cloud native principles—a specialty of Spring Boot that has been perfected over the years. This year’s SpringOne conference showed us that developers are excited to learn about Kubernetes and Spring Boot working together, two complementary technologies that fit tightly together. Our most popular labs this year were on ... you guessed it, [Spring on Kubernetes](https://tanzu.vmware.com/developer/workshops/spring-on-kubernetes/) and [Spring Booternetes](https://tanzu.vmware.com/developer/workshops/lab-spring-booternetes/). 
 
 ![Spring on Kubernetes](images/pic2-springonk8s.png "Spring on Kubernetes")
 
