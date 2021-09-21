@@ -21,6 +21,18 @@ aliases:
 - "/guides/spring/scg-what-is"
 level1: Modern App Basics
 level2: Modern Development Concepts
+faqs:
+  faq:
+   - question: What is Spring Cloud Gateway?
+     answer: Spring Cloud Gateway is an API gateway implementation in the Spring ecosystem that provides flexible request routing, security, resiliency, and monitoring.
+   - question: What is Spring Cloud Security?
+     answer: Spring Cloud Security is a declarative model that can be heavily configured to lock down access to your backend services.
+   - question: What is Spring Boot Actuator?
+     answer: Spring Boot Actuator is an additional module of Spring that enables users to monitor and manage their applications when they push it to production through the use of actuator endpoints that can be enabled, disabled, or exposed over HTTP or JMX.
+   - question: How does Spring Cloud Gateway work?
+     answer: Spring Cloud Gateway works by providing a library for building API gateways on top Spring and Java with flexible routing requests based on numerous different criteria. Spring Cloud Gateway intercepts, analyzes, and modifies each of these requests before routing them based on context.
+   - question: How is Spring Cloud Gateway used?
+     answer: Spring Cloud Gateway is used as an effective way to route modified requests to APIs. Spring Cloud Gateway also focuses on a number of cross-cutting concerns, including security, resiliency, and monitoring.
 ---
 
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring.

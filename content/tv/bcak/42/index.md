@@ -15,7 +15,7 @@ minutes: 120
 episode: "42"
 explicit: "no"
 title: "The one with Olga Maciaszek-Sharma"
-# youtube: "4L7zjPoFkDM"
+youtube: "6z5n1DNr3YQ"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false

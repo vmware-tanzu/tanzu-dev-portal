@@ -232,6 +232,7 @@ calicoctl
 callout
 Campuzano
 Cao
+Capili
 Carducci
 Carvel('s)?
 cass-operator
@@ -1397,6 +1398,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebase(d)
 rebasing
 Recommender
 [Rr]eddit
@@ -1696,6 +1698,7 @@ toolkits
 [Tt]oolset
 tooltip
 topologies
+Torgerson
 toString
 totalProcessingTime
 totalQueueTime

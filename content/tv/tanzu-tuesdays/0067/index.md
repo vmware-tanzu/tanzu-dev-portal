@@ -23,7 +23,7 @@ minutes: 60
 title: "Let's talk about SpringOne 2021!"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "EQMg0DuC1tY"
 type: tv-episode
 ---
 
