@@ -530,6 +530,7 @@ env
 EOF
 ESB
 etcd(ctl)?
+Ethereum
 [Ee]thernet(s)?
 ETL
 EventID
@@ -1447,6 +1448,7 @@ RestAssured
 RestrictedMethodAuthorizer
 Retrium
 revertibility
+rewatch
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1744,6 +1746,7 @@ UnrestrictedMethodAuthorizer
 unschedulable
 unshared
 Unshared
+Unsplash
 [Uu]nstaged
 untar
 untrusted
