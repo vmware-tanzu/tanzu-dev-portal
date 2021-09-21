@@ -23,73 +23,50 @@
 	</div>
 </section>
 
-<!-- Topics -->
-<a id="td-block" class="td-offset-anchor"></a>
-<section id="home-topics" class="td-box position-relative">
-    <div class="container d-flex row flex-nowrap justify-content-between">
-        <div class="col-4">
-            <h2>Modern Applications</h2>
-            <p class="h4">Build, run, and manage all your apps across any cloud with application modernization solutions and guidance from VMware Tanzu.</p>
-        </div>
-        <div class="col-7">
-            <div class="d-flex row justify-content-between flex-nowrap">
-                <div class="flex-315 card-wrapper px-0">
-                    <div class="mod-app-card">
-                        <h3 class="text-center">Learn the Basics</h3>
-                        <p class="px-4">VMware Tanzu offers the tools and products you need to become a high-velocity engineering team and push your code to production faster.</p>
-                    </div>
-                </div>
-                <div class="flex-315 card-wrapper px-0">
-                    <div class="mod-app-card">
-                        <h3 class="text-center">Modernize</h3>
-                        <p class="px-4">Modern applications need to run on modernized infrastructure that provides the automation, security, and scalability to respond to external disruptions and the rapidly changing needs of your customers.</p>
-                    </div>
-                </div>
-                <div class="flex-315 card-wrapper px-0">
-                    <div class="mod-app-card">
-                        <h3 class="text-center">Transform</h3>
-                        <p class="px-4">Companies are using digital technology to drive nimble innovation, find better ways of working, adopt inventive business models, and deliver engaging new customer experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-  </section>
-
 <!-- Gather topic groups -->
 {{ $topicgroups := (slice) }}
 {{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
     {{ $topicgroups = union $topicgroups ( slice .Title )}}
 {{ end }}
 
-<!-- Build topic groups -->
+<!-- Topics -->
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="row td-box td-box--gradient td-box--height-auto">
-{{ range $topicgroups }}
-    <div class="row justify-content-left w-100 td-box td-box--gray-dark mb-lg-4">
-        <div class="col-3 h3">
-            {{ . }}
+<section id="home-topics" class="td-box">
+    <div class="container px-0 mw-100 mb-4">
+        <div id="topic-selector" class="flex row justify-content-center flex-nowrap">
+            {{ range $topicgroups }}
+                {{ if eq . "Modern Applications"}}
+                    <p id={{ lower (replace . " " "-")}} class="col-4 text-center topic-header py-4 h3 px-5 text-white active">{{ . }}</p>
+                {{ else }}
+                    <p id={{ lower (replace . " " "-")}} class="col-4 text-center topic-header py-4 px-5 h3 text-white">{{ . }}</p>
+                {{ end }}
+            {{ end }}
         </div>
-        {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-            {{ $link := replace (lower .Params.linktitle) "/" "-"  }}
-            {{ $link := replace $link "&" "and" }}
-            {{ $link := replace $link " " "-" }}
-            {{ $link := printf "%s/%s" "/topics" $link | relURL }}
-            <div class="topic col-lg-3 my-lg-2 td-box td-box--gray-dark">
-                <a href="{{ $link }}">
-                    <div class="h3 link">
-                        {{ .Params.grouptitle }}
-                    </div>
-                    <div class="py-3 px-4 mb-4 text-left h4 text-white" >
-                        {{ .Description }}
-                    </div>
-                </a>
-            </div>
-        {{ end }}
     </div>
-{{ end }}
+    <div class="row td-box td-box--gradient td-box--height-auto pt-0">
+    {{ range $topicgroups }}
+        <div class="row justify-content-between w-100 td-box mb-lg-4">
+            {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
+                {{ $link := replace (lower .Params.linktitle) "/" "-"  }}
+                {{ $link := replace $link "&" "and" }}
+                {{ $link := replace $link " " "-" }}
+                {{ $link := printf "%s/%s" "/topics" $link | relURL }}
+                <div class="topic-card flex-315 my-lg-2 td-box">
+                    <a href="{{ $link }}">
+                        <div class="h3 link">
+                            {{ .Params.grouptitle }}
+                        </div>
+                        <div class="py-3 px-4 mb-4 text-left h4 text-white" >
+                            {{ .Description }}
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    </div>
 </section>
+
 
 <!-- Featured Learning Paths -->
 <a id="td-block" class="td-offset-anchor"></a>

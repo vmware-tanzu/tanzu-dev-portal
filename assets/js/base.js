@@ -463,8 +463,14 @@ $('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
 });
 
 // Featured Learning paths
-
 $( ".learning-path-card" ).mouseenter(function() {
   $(".learning-path-card").removeClass("active");
   $(this).addClass("active");
 });
+
+// Topics
+$("#topic-selector .topic-header").mouseenter(function() {
+  $("#topic-selector .topic-header").removeClass("active");
+  $(this).addClass("active");
+});
+

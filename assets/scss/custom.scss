@@ -209,17 +209,26 @@
 }
 #home-topics {
   padding-top: 8rem;
-  padding-bottom: 8rem;
 
-  > .container {
-    max-width: 100% !important;
-    padding-left: 60px;
-    padding-right: 60px;
+  .topic-card {
+    height: 450px;
+    background-color: $gray-800;
   }
-  .card-wrapper {
-    height: 300px;
-    background: $dark;
-    padding: 25px;
+
+  #topic-selector {
+    .topic-header {
+      background: rgba(73, 175, 217, 0);
+      border: 2px solid #49afd9;
+      transition: all .2s ease-out;
+
+      &:nth-child(2) {
+        border-left-width: 0;
+        border-right-width: 0;
+      }
+    }
+    .topic-header.active {
+      background: rgba(73, 175, 217, 0.5);
+    }
   }
 }
 .td-home #hero {
