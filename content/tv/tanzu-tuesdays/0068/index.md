@@ -18,7 +18,7 @@ minutes: 60
 title: "Azure Functions: a guide to getting started with Layla Porter"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "EU2mtSSga54"
 type: tv-episode
 ---
 
