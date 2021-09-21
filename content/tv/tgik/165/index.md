@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "TGI Kubernetes Episode 165: Pod Accoutrements ~ Start/Stop Hooks, HostProcesses, and CGroups"
-description: "TGI Kubernetes Episode 165: Pod Accoutrements ~ Start/Stop Hooks, HostProcesses, and CGroups"
+title: "TGI Kubernetes 165: Pod Accoutrements ~ Start/Stop Hooks, HostProcesses, and CGroups"
+description: "TGI Kubernetes 165: Pod Accoutrements ~ Start/Stop Hooks, HostProcesses, and CGroups"
 episode: "165"
 aliases: ["0165"]
 publishdate: "2020-04-01T00:00:00-07:00"
