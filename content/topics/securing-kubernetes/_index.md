@@ -1,13 +1,13 @@
 ---
-title: Kubernetes Secure
-linkTitle: Kubernetes Secure
-topic: Kubernetes Secure
+title: Securing Kubernetes
+linkTitle: Securing Kubernetes
+topic: Securing Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Secure"
 weight: 3
 icon: cicd
 description: >
-    Continuous integration and delivery automate the software development lifecycle as much as possible.
+    Securing your Kubernetes platform and workloads
 menu:
     main:
         parent: "topics"

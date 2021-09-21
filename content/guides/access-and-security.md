@@ -5,7 +5,7 @@ date: '2021-09-16'
 weight: -100
 linkTitle: Access and Security
 title: Access and Security
-level1: Managing & Operating Kubernetes
+level1: Securing Kubernetes
 level2: Access and Security
 toppage: true
 ---
