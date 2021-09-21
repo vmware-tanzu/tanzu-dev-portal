@@ -11,8 +11,8 @@ weight: 62
 oldPath: "/content/guides/kubernetes/platform-security.md"
 aliases:
 - "/guides/kubernetes/platform-security"
-level1: Building Kubernetes Runtime
-level2: Building Your Kubernetes Platform
+level1: Securing Kubernetes
+level2: Access and Security
 ---
 
 ## Overview

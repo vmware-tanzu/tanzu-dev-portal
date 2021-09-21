@@ -11,7 +11,7 @@ weight: 3
 oldPath: "/content/guides/kubernetes/platform-security-secret-management.md"
 aliases:
 - "/guides/kubernetes/platform-security-secret-management"
-level1: Managing and Operating Kubernetes
+level1: Securing Kubernetes
 level2: Access and Security
 ---
 

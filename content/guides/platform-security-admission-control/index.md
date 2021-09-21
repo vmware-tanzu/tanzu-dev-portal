@@ -11,7 +11,7 @@ weight: 1
 oldPath: "/content/guides/kubernetes/platform-security-admission-control.md"
 aliases:
 - "/guides/kubernetes/platform-security-admission-control"
-level1: Managing and Operating Kubernetes
+level1: Securing Kubernetes
 level2: Access and Security
 ---
 
