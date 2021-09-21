@@ -232,6 +232,7 @@ calicoctl
 callout
 Campuzano
 Cao
+Capili
 Carducci
 Carvel('s)?
 cass-operator

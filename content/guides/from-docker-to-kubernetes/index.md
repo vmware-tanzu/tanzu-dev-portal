@@ -15,6 +15,18 @@ aliases:
 - "/guides/kubernetes/from-docker-to-kubernetes"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+faqs:
+  faq:
+   - question: What is Docker?
+     answer: Docker is an open source container platform that utilizes OS-level virtualization to package software in isolated containers. Applications in Docker containers can be built, ran, and distributed almost anywhere, on-premise or in the cloud.
+   - question: What is a Docker container image?
+     answer: A Docker container image is a lightweight, isolated, executable software package that includes all the necessary components needed to run an application, including code, runtime, system tools, system libraries, and settings.
+   - question: What are Docker pods?
+     answer: A Docker pod is a similar group of containers with shared namespaces and filesystem volumes.
+   - question: Can Kubernetes run Docker containers?
+     answer: Kubernetes can run Docker containers and 'docker build' images, but it is important to note that Kubernetes has depreciated support for Docker as a container runtime.
+   - question: How do you run Kubernetes on Docker?
+     answer: You can run Kubernetes on Docker by enabling Kubernetes in your preferences.
 ---
 
 Once you understand what [containers](/guides/containers/what-are-containers) and [Kubernetes](/guides/kubernetes/what-is-kubernetes) are, the next step is to learn how the two work together. This guide provides an example of containerizing a simple application using Docker and deploying it on Kubernetes.

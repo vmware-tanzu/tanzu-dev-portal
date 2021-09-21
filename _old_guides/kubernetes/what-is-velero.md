@@ -16,6 +16,16 @@ aliases:
 - "/guides/kubernetes/what-is-velero"
 level1: Managing and Operating Kubernetes
 level2: Backup and Restore
+faqs:
+  faq:
+   - question: What is Velero?
+     answer: Velero is an open source data protection tool for backing up and restoring resources in a Kubernetes cluster, disaster recovery, and resource and persistent volume migrations.
+   - question: What are the main components of Velero?
+     answer: The main components of Velero are a server that runs on your cluster and a command line utility that runs locally. Through these components, Velero supports plug-ins to work with different Kubernetes platforms and storage systems in clusters on the cloud or on premise.
+   - question: What is Velero used for?
+     answer: Velero is a data protection tool used to backup and restore clusters, recover data from a disaster, replicate a production environment, migrate k8 clusters, or take a snapshot of your application's state before upgrading a cluster.
+   - question: How does Velero backup work?
+     answer: Velero provides data protection capabilities through custom resource backups and restorations. Controllers process these Kubernetes custom resource definitions to backup and restore resources, either in whole or by object filter.
 ---
 
 Velero is an open source tool for safely backing up and restoring resources in a Kubernetes cluster, performing disaster recovery, and migrating resources and persistent volumes to another Kubernetes cluster.
