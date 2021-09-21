@@ -7,7 +7,7 @@ grouptitle: "Learn the Basics"
 weight: 1
 icon: cicd
 description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    The 101's of building and running modern applications
 menu:
     main:
         parent: "topics"
