@@ -5,14 +5,14 @@ subsection: Application Lifecycle
 team:
 - John Harris
 title: Application Lifecycle
-topics:
-- Kubernetes
 weight: 17
 oldPath: "/content/guides/kubernetes/app-lifecycle.md"
 aliases:
 - "/guides/kubernetes/app-lifecycle"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+tags:
+- Kubernetes
 ---
 
 The scripts and systems used in the CI/CD pipelines to deploy and update

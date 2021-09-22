@@ -9,6 +9,7 @@ weight: 40
 oldPath: "/content/outcomes/application-development-how-we-work/generalize-in-technologies-and-domains.md"
 aliases:
 - "/outcomes/application-development-how-we-work/generalize-in-technologies-and-domains"
+tags: []
 ---
 
 > "I only work in Healthcare".

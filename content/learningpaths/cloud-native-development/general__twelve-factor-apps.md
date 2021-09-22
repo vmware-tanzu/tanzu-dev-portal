@@ -9,6 +9,7 @@ weight: 10
 oldPath: "/content/outcomes/cloud-native-development/general__twelve-factor-apps.md"
 aliases:
 - "/outcomes/cloud-native-development/general__twelve-factor-apps"
+tags: []
 ---
 
 Cloud native app development centers around the twelve factors initially described by the team behind the Heroku platform. The website [https://12factor.net](https://12factor.net/) provides a great understanding of how a cloud native application deals with aspects like logging, application state, and integration with external systems.

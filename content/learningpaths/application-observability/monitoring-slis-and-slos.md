@@ -11,6 +11,7 @@ weight: 1
 oldPath: "/content/outcomes/application-observability/monitoring-slis-and-slos.md"
 aliases:
 - "/outcomes/application-observability/monitoring-slis-and-slos"
+tags: []
 ---
 
 Service Level Indicators (SLIs) and Service Level Objectives (SLOs) are two of

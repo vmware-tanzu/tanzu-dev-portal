@@ -10,12 +10,11 @@ tags:
 - Spring Boot
 - Docker
 - Helm
+- Containers
+- Kubernetes
 team:
 - Raquel Campuzano
 title: Deploy Locally a Spring Boot Application Using Bitnami Containers
-topics:
-- Containers
-- Kubernetes
 weight: 3
 oldPath: "/content/guides/containers/deploy-locally-spring-boot-application-docker.md"
 aliases:

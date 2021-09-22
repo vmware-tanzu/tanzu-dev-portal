@@ -11,12 +11,10 @@ tags:
 - Cloud-foundry
 - Python
 - Buildpacks
+- Containers
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: How To Deploy Python Application Into Production'
-topics:
-- Python
-- Containers
 oldPath: "/content/guides/python/cf-gs.md"
 aliases:
 - "/guides/python/cf-gs"

@@ -14,8 +14,6 @@ tags:
 team:
 - Luke Short
 title: Deploying Remote Concourse CI Workers
-topics:
-- CI-CD
 oldPath: "/content/guides/ci-cd/concourse-remote-workers.md"
 aliases:
 - "/guides/ci-cd/concourse-remote-workers"

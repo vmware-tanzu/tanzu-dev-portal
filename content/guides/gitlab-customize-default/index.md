@@ -17,8 +17,6 @@ team:
 - Vikram Vaswani
 - Tomas Pizarro
 title: Customize GitLab's Default Auto DevOps Pipeline with Bitnami's Helm Charts
-topics:
-- CI-CD
 oldPath: "/content/guides/ci-cd/gitlab-customize-default.md"
 aliases:
 - "/guides/ci-cd/gitlab-customize-default"

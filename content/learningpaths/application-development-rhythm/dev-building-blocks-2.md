@@ -7,6 +7,7 @@ team:
 oldPath: "/content/outcomes/application-development-rhythm/dev-building-blocks-2.md"
 aliases:
 - "/outcomes/application-development-rhythm/dev-building-blocks-2"
+tags: []
 ---
 This article is the fourth in a five-part series.
 

@@ -11,10 +11,7 @@ tags:
 - Spring
 - Event Streaming
 - Kubernetes
-title: Creating a http-log stream with Spring Cloud Data Flow
-topics:
-- Event Streaming
 - Messaging and Integration
-- Spring
+title: Creating a http-log stream with Spring Cloud Data Flow
 youtube_id: ezsgWoMwnqM
 ---

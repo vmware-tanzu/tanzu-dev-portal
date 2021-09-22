@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Graceful Shutdown
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-graceful-shutdown.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-graceful-shutdown"

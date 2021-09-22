@@ -5,13 +5,12 @@ linkTitle: Bootifying Java Applications
 tags:
 - Spring Boot
 - Getting Started
+- Spring
+- Microservices
 featured: true
 team:
 - Marc Zottner
 title: Bootifying Java Applications
-topics:
-- Spring
-- Microservices
 weight: 3
 oldPath: "/content/guides/spring/bootifying-java-apps.md"
 aliases:

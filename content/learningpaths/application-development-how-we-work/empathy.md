@@ -9,6 +9,7 @@ weight: 20
 oldPath: "/content/outcomes/application-development-how-we-work/empathy.md"
 aliases:
 - "/outcomes/application-development-how-we-work/empathy"
+tags: []
 ---
 
 Our mission is to **catalyze enterprise transformation through software**. But that isn't easy. In fact, it's really hard. That's because _enterprises don't really transform – people do._ 

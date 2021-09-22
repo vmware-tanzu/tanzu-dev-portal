@@ -2,18 +2,18 @@
 date: '2021-08-16'
 lastmod: '2021-08-16'
 parent: Carvel
-description: This guide will walk you through the basics of ytt and help you get started with it.
+description: This guide will walk you through the basics of ytt and help you get started
+  with it.
 patterns:
 - Deployment
 tags:
 - ytt
 - Carvel
+- Kubernetes
 team:
 - Leigh Capili
 - Tiffany Jernigan
 title: Getting Started with ytt
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/ytt-gs.md"
 aliases:
 - "/guides/kubernetes/ytt-gs"

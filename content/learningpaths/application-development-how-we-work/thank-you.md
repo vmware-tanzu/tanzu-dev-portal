@@ -9,6 +9,7 @@ weight: 90
 oldPath: "/content/outcomes/application-development-how-we-work/thank-you.md"
 aliases:
 - "/outcomes/application-development-how-we-work/thank-you"
+tags: []
 ---
 
 Thank you for reading our story and learning about how we approach product development, helping each other and our clients, and why we do what we do. 

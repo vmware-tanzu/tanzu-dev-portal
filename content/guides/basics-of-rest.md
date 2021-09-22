@@ -16,8 +16,6 @@ team:
 - Tiffany Jernigan
 - Brian McClain
 title: Basics of REST
-topics:
-- Microservices
 weight: 2
 oldPath: "/content/guides/microservices/basics-of-rest.md"
 aliases:

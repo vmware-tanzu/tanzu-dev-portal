@@ -16,10 +16,6 @@ tags:
 team:
 - Chris Splinter
 title: 'Save Your Stack: Build Cloud Native Apps with Spring, Kubernetes and Cassandra'
-topics:
-- Spring
-- Containers
-- Kubernetes
 ---
 
 You can start to build modern, cloud native apps today using the latest innovations from Spring, Cassandra and Kubernetes. This blog will show you code samples and a fully working demo to get you up to speed in minutes with these open-source technologies.

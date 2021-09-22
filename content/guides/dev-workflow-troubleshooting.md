@@ -6,11 +6,10 @@ linkTitle: Troubleshooting Applications
 parent: Developer Workflow
 tags:
 - Troubleshooting
+- Kubernetes
 team:
 - John Harris
 title: Troubleshooting Applications on Kubernetes
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/dev-workflow-troubleshooting.md"
 aliases:
 - "/guides/kubernetes/dev-workflow-troubleshooting"

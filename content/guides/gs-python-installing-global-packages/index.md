@@ -13,8 +13,6 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Managing Global Packages'
-topics:
-- Python
 oldPath: "/content/guides/python/gs-python-installing-global-packages.md"
 aliases:
 - "/guides/python/gs-python-installing-global-packages"

@@ -9,12 +9,11 @@ patterns:
 tags:
 - Helm
 - Bitnami
+- Kubernetes
 featured: true
 team:
 - Javier Salmeron
 title: Best Practices for Creating Production-Ready Helm Charts
-topics:
-- Kubernetes
 weight: 5
 oldPath: "/content/guides/kubernetes/production-ready-helm.md"
 aliases:

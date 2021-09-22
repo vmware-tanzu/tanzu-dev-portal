@@ -9,6 +9,7 @@ weight: 40
 oldPath: "/content/outcomes/cloud-native-development/general__tdd.md"
 aliases:
 - "/outcomes/cloud-native-development/general__tdd"
+tags: []
 ---
 
 Testing is crucial to cloud native application development. It is our primary (and sometimes only) way to build confidence that we can push to production at any given time.

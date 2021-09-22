@@ -9,6 +9,7 @@ weight: 100
 oldPath: "/content/outcomes/cloud-native-development/specific__logging.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__logging"
+tags: []
 ---
 
 Logging is straightforward. You've likely already spent time comprehensively thinking about logging solutions and frameworks. The good news is you are probably where you need to be in your understanding of logging. 

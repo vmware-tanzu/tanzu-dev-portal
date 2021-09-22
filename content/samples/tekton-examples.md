@@ -14,6 +14,4 @@ tags:
 team:
 - Brian McClain
 title: Tekton Examples
-topics:
-- CI-CD
 ---

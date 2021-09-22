@@ -16,4 +16,5 @@ aliases:
 - "/outcomes"
 - "/outcomes/"
 oldPath: "/content/outcomes/_index.md"
+tags: []
 ---

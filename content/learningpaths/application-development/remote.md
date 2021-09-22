@@ -10,4 +10,5 @@ weight: 90
 oldPath: "/content/outcomes/application-development/remote.md"
 aliases:
 - "/outcomes/application-development/remote"
+tags: []
 ---

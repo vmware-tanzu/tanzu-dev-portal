@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Application Readiness Checklist
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-checklist.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-checklist"

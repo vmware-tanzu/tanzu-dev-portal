@@ -7,6 +7,7 @@ team:
 oldPath: "/content/outcomes/application-development-rhythm/dev-flow.md"
 aliases:
 - "/outcomes/application-development-rhythm/dev-flow"
+tags: []
 ---
 This article is the second in a five-part series.
 

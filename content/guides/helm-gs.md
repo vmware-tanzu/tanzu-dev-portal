@@ -10,11 +10,10 @@ patterns:
 - Deployment
 tags:
 - Helm
+- Kubernetes
 team:
 - Tyler Britten
 title: Getting Started with Using Helm to Deploy Apps on Kubernetes
-topics:
-- Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/helm-gs.md"
 aliases:

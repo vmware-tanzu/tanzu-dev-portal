@@ -13,6 +13,7 @@ aliases:
 - "/guides/kubernetes/workload-tenancy-autoscaling-refarch"
 level1: Managing and Operating Kubernetes
 level2: Kubernetes Architecture
+tags: []
 ---
 
 This reference provides guidance, trade-off considerations and implementation

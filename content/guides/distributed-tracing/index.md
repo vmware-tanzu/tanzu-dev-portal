@@ -10,11 +10,10 @@ tags:
 - Zipkin
 - ".NET"
 - Getting Started
-featured: true
-title: Implementing Distributed Tracing
-topics:
 - Spring
 - Microservices
+featured: true
+title: Implementing Distributed Tracing
 oldPath: "/content/guides/microservices/distributed-tracing.md"
 aliases:
 - "/guides/microservices/distributed-tracing"

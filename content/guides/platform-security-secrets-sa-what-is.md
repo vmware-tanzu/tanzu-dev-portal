@@ -17,8 +17,6 @@ team:
 - Brian McClain
 - Tiffany Jernigan
 title: What are Kubernetes Secrets and Service Accounts?
-topics:
-- Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/platform-security-secrets-sa-what-is.md"
 level1: Managing and Operating Kubernetes

@@ -8,8 +8,6 @@ tags:
 team:
 - VMware Tanzu Labs
 title: 'Remote Tips: Physical Space'
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips-physical-space.md"
 aliases:
 - "/guides/agile/remote-tips-physical-space"

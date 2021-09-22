@@ -9,6 +9,7 @@ weight: 190
 oldPath: "/content/outcomes/cloud-native-development/specific__telemetry.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__telemetry"
+tags: []
 ---
 
 Telemetry is one of the additional three factors introduced in [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-12-factor-app). Developing your application is only the first aspect of a cloud native developer's job. Feedback from real users hitting your app deployed in production is where you can learn and improve your app.

@@ -9,6 +9,7 @@ weight: 120
 oldPath: "/content/outcomes/cloud-native-development/specific__caching.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__caching"
+tags: []
 ---
 
 Caching is available in many forms, ranging from large vendor-specific externalized clusters to caching libraries that cache in-memory within the application itself. There are so many choices, including (sorted alphabetically): [Caffeine](https://github.com/ben-manes/caffeine), [Ehcache](https://www.ehcache.org), [GemFire](https://tanzu.vmware.com/gemfire), [Hazelcast](https://hazelcast.com/), [Infinispan](https://infinispan.org/), [Java Caching System (JCS)](https://commons.apache.org/proper/commons-jcs/), [JCache](https://www.baeldung.com/jcache), [JetCache](https://github.com/alibaba/jetcache), [Memcached](https://memcached.org/), [Redis](https://redis.io/), [Spring Cache](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache), and many more.

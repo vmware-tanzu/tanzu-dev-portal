@@ -8,11 +8,10 @@ patterns:
 - Deployment
 tags:
 - Helm
+- Kubernetes
 team:
 - Tyler Britten
 title: What Is Helm?
-topics:
-- Kubernetes
 weight: 1
 oldPath: "/content/guides/kubernetes/helm-what-is.md"
 aliases:

@@ -10,8 +10,6 @@ tags:
 team:
 - Rich Lander
 title: Kubebuilder Reference Architecture
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-lifecycle-kubebuilder-ref.md"
 aliases:
 - "/guides/kubernetes/app-lifecycle-kubebuilder-ref"

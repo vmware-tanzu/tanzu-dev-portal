@@ -12,9 +12,6 @@ tags:
 team:
 - Brian McClain
 title: What is Tekton?
-topics:
-- CI-CD
-- Kubernetes
 oldPath: "/content/guides/ci-cd/tekton-what-is.md"
 aliases:
 - "/guides/ci-cd/tekton-what-is"

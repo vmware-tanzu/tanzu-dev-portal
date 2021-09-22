@@ -10,11 +10,10 @@ tags:
 - ASP.NET
 - Docker
 - Helm
+- Containers
 team:
 - Vikram Vaswani
 title: Develop and Publish an ASP.NET Web Application using Bitnami Containers
-topics:
-- Containers
 weight: 1
 oldPath: "/content/guides/containers/develop-aspnet-application-bitnami-containers.md"
 aliases:

@@ -1,20 +1,20 @@
 ---
-title:  "Getting Started with VMware Tanzu Application Platform Beta 1 on KIND, Part 1"
-linkTitle: "Getting Started with VMware Tanzu Application Platform Beta 1 on KIND"
-description: What is Tanzu Application Platform, and how do the individual components work together to help build a secure, repeatable, and powerful platform for developers.
-topics:
-- CI-CD
-- Kubernetes
+title: Getting Started with VMware Tanzu Application Platform Beta 1 on KIND, Part
+  1
+linkTitle: Getting Started with VMware Tanzu Application Platform Beta 1 on KIND
+description: What is Tanzu Application Platform, and how do the individual components
+  work together to help build a secure, repeatable, and powerful platform for developers.
 tags:
 - tanzu application platform
 - kind
+- CI-CD
+- Kubernetes
 parent: Tanzu Application Platform
 weight: 1
-# Author(s)
 team:
 - Tony Vetter
-date: "2021-09-13"
-lastmod: "2021-09-13"
+date: '2021-09-13'
+lastmod: '2021-09-13'
 level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 ---

@@ -13,13 +13,11 @@ tags:
 - Bitnami
 - Event Streaming
 - Kubernetes
+- Messaging and Integration
 team:
 - Vikram Vaswani
 title: Build a Scalable, Fault-Tolerant Messaging Cluster on Kubernetes with Apache
   Kafka and MongoDB
-topics:
-- Event Streaming
-- Messaging and Integration
 oldPath: "/content/guides/messaging-and-integration/kafka-mongodb.md"
 aliases:
 - "/guides/messaging-and-integration/kafka-mongodb"

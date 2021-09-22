@@ -9,6 +9,7 @@ weight: 40
 oldPath: "/content/outcomes/application-development/prioritizing-outcomes.md"
 aliases:
 - "/outcomes/application-development/prioritizing-outcomes"
+tags: []
 ---
 
 Being busy isn’t always the same as making progress towards an important goal. To make progress, the team has to know what to work on, why it is important, when one task is done and it’s time to move on to the next. The team also has to know what is the next most important and valuable thing to work on so they are always delivering the most impact to their end users. Using user stories estimated based on risk and  complexity that are ruthlessly prioritized using that that information is the best way we’ve seen to consistently and predictably deliver value forever.

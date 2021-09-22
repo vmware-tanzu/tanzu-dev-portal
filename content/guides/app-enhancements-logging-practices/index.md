@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Logging Best Practices
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-logging-practices.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-logging-practices"

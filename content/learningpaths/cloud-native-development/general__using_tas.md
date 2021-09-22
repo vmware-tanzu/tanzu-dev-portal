@@ -9,6 +9,7 @@ weight: 50
 oldPath: "/content/outcomes/cloud-native-development/general__using_tas.md"
 aliases:
 - "/outcomes/cloud-native-development/general__using_tas"
+tags: []
 ---
 
 VMware [Tanzu Application Service](https://tanzu.vmware.com/application-service) (TAS), formerly Pivotal Cloud Foundry (PCF), is a modern application platform that provides a best-in-class developer experience. It is based on Cloud Foundry, an open-source cloud app platform providing a choice of clouds, developer frameworks, and app services.

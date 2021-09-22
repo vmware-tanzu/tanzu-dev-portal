@@ -17,8 +17,6 @@ team:
 - Paul Czarkowski
 title: Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s
   Encrypt
-topics:
-- Kubernetes
 weight: 7
 oldPath: "/content/guides/kubernetes/harbor-gs.md"
 aliases:

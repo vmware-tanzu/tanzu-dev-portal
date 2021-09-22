@@ -15,8 +15,6 @@ tags:
 team:
 - Paul Czarkowski
 title: Getting Started with Contour - To Ingress and Beyond
-topics:
-- Kubernetes
 weight: 2
 oldPath: "/content/guides/kubernetes/service-routing-contour-to-ingress-and-beyond.md"
 aliases:

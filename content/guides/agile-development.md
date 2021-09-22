@@ -1,13 +1,13 @@
 ---
 date: '2021-09-16'
 description: Lorem ipsum
-date: '2021-09-16'
 weight: -100
 linkTitle: Agile Development
 title: Agile Development
 level1: Agile Transformation and Practices
 level2: Agile Development
 toppage: true
+tags: []
 ---
 
 Agile software development is a set of methods that result in fast and frequent delivery of value to your customers. It promotes well-planned, small iterations by highly collaborative, cross-functional teams. Agile methodologies provide an alternative to the sequential development and long release cycles traditionally associated with Waterfall.

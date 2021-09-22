@@ -13,6 +13,7 @@ aliases:
 - "/guides/kubernetes/platform-security-secret-management"
 level1: Securing Kubernetes
 level2: Access and Security
+tags: []
 ---
 
 This document details secret management and distribution for Kubernetes

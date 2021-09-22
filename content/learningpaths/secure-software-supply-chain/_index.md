@@ -17,6 +17,7 @@ aliases:
 - "/patterns/deployment"
 - "/outcomes/secure-software-supply-chain/"
 oldPath: "/content/outcomes/secure-software-supply-chain/_index.md"
+tags: []
 ---
 
 ## Key Concepts

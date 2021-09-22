@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Label Best Practices
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-label-design.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-label-design"

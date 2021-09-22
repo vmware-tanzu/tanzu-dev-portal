@@ -8,9 +8,8 @@ patterns:
 tags:
 - Spring Boot
 - Testing
-title: Using Spring REST Docs
-topics:
 - Spring
+title: Using Spring REST Docs
 weight: 4
 oldPath: "/content/guides/spring/spring-rest-docs.md"
 aliases:

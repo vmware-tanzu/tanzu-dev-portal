@@ -9,13 +9,12 @@ patterns:
 subsection: Spring Cloud Gateway
 tags:
 - Spring Cloud Gateway
-team:
-- Brian McClain
-title: What is Spring Cloud Gateway?
-topics:
 - Spring
 - Microservices
 - Messaging and Integration
+team:
+- Brian McClain
+title: What is Spring Cloud Gateway?
 oldPath: "/content/guides/spring/scg-what-is.md"
 aliases:
 - "/guides/spring/scg-what-is"

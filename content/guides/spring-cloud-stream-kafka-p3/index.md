@@ -1,17 +1,16 @@
 ---
-title: Spring Cloud Stream Kafka (Part 3) - Functional Programming 
+title: Spring Cloud Stream Kafka (Part 3) - Functional Programming
 parent: Spring Cloud Stream Kafka (Part 1)
-description: Simulate a scenario to get a better sense of what we have previously discussed on Spring Cloud Stream Part 1. Asynchronous communication between applications and using Apache Kafka as broker.
-topics:
-- Spring
-- Microservices
-- Event Streaming
-- Messaging and Integration
+description: Simulate a scenario to get a better sense of what we have previously
+  discussed on Spring Cloud Stream Part 1. Asynchronous communication between applications
+  and using Apache Kafka as broker.
 tags:
 - Spring Cloud Stream Kafka
 - Event Streaming
 - Spring
 - Kafka
+- Microservices
+- Messaging and Integration
 patterns:
 - Eventing
 team:

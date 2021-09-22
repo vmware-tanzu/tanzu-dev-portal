@@ -12,8 +12,5 @@ tags:
 team:
 - Tyler Britten
 title: Getting Started with kpack
-topics:
-- Kubernetes
-- Containers
-youtube_id: -a82R7lNlcU
+youtube_id: "-a82R7lNlcU"
 ---

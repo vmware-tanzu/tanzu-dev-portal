@@ -10,4 +10,5 @@ weight: 2
 oldPath: "/content/outcomes/application-observability/logging-request-response-boot.md"
 aliases:
 - "/outcomes/application-observability/logging-request-response-boot"
+tags: []
 ---

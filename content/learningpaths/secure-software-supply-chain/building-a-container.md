@@ -10,6 +10,7 @@ weight: 3
 oldPath: "/content/outcomes/secure-software-supply-chain/building-a-container.md"
 aliases:
 - "/outcomes/secure-software-supply-chain/building-a-container"
+tags: []
 ---
 
 There's many options that you have when deciding how you want to build the container for your code. From writing a Dockerfile by hand to automated build services, finding the right build method is an important first step. Let's take a look at a few options that exist do see the advantages and disadvantages of each!

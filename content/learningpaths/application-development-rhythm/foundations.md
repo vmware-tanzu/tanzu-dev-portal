@@ -7,6 +7,7 @@ team:
 oldPath: "/content/outcomes/application-development-rhythm/foundations.md"
 aliases:
 - "/outcomes/application-development-rhythm/foundations"
+tags: []
 ---
 *This article is the first in a five-part series.*
 

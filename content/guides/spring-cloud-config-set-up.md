@@ -7,10 +7,9 @@ patterns:
 subsection: Spring Cloud Config Server
 tags:
 - Spring Cloud Config Server
-title: Setting Up Spring Cloud Config Server
-topics:
 - Spring
 - Microservices
+title: Setting Up Spring Cloud Config Server
 weight: 4
 oldPath: "/content/guides/spring/spring-cloud-config-set-up.md"
 aliases:

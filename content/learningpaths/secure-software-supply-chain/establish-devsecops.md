@@ -9,6 +9,7 @@ weight: 1
 oldPath: "/content/outcomes/secure-software-supply-chain/establish-devsecops.md"
 aliases:
 - "/outcomes/secure-software-supply-chain/establish-devsecops"
+tags: []
 ---
 
 Modern software delivery demands that we think differently about how we bring

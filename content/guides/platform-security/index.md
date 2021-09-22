@@ -5,14 +5,14 @@ subsection: Platform Security
 team:
 - Farid Saad
 title: Platform Security
-topics:
-- Kubernetes
 weight: 62
 oldPath: "/content/guides/kubernetes/platform-security.md"
 aliases:
 - "/guides/kubernetes/platform-security"
 level1: Securing Kubernetes
 level2: Access and Security
+tags:
+- Kubernetes
 ---
 
 ## Overview

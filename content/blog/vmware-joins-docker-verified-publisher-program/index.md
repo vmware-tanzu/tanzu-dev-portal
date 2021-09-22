@@ -1,16 +1,20 @@
 ---
-title: "VMware Joins Docker Verified Publisher Program with its Bitnami, Tanzu and Spring Cloud Products"
-description: VMware joins Docker Verified Publisher Program with its Bitnami, Tanzu and Spring Cloud products. From now on, developers can quickly recognize trustworthy containerized images as well as they will have unlimited container image requests for Bitnami, Tanzu, and Spring cloud repositories.
-date: "2021-08-05"
+title: VMware Joins Docker Verified Publisher Program with its Bitnami, Tanzu and
+  Spring Cloud Products
+description: VMware joins Docker Verified Publisher Program with its Bitnami, Tanzu
+  and Spring Cloud products. From now on, developers can quickly recognize trustworthy
+  containerized images as well as they will have unlimited container image requests
+  for Bitnami, Tanzu, and Spring cloud repositories.
+date: '2021-08-05'
 Topics:
 - Containers
 Tags:
 - Marketplace
 - Bitnami
 - Docker
-# Author(s)
-team: 
+team:
 - Raquel Campuzano Godoy
+tags: []
 ---
 
 

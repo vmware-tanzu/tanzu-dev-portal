@@ -13,6 +13,7 @@ aliases:
 - "/guides/kubernetes/platform-security-admission-control"
 level1: Securing Kubernetes
 level2: Access and Security
+tags: []
 ---
 
 This document details the philosophy and methods for implementing admission

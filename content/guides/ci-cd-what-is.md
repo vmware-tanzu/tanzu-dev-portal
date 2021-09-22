@@ -8,8 +8,6 @@ tags:
 team:
 - Nate Schutta
 title: What is CI/CD?
-topics:
-- CI-CD
 weight: -1
 oldPath: "/content/guides/ci-cd/ci-cd-what-is.md"
 aliases:

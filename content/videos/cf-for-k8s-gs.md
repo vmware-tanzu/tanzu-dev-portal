@@ -12,7 +12,5 @@ tags:
 team:
 - Ivan Tarin
 title: Getting Started with Cloud Foundry for Kubernetes
-topics:
-- Kubernetes
 youtube_id: wyB28RS4UUs
 ---

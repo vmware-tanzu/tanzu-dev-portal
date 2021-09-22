@@ -14,8 +14,6 @@ tags:
 team:
 - Brian McClain
 title: 'Getting Started with Tekton Part 2: Building a Container'
-topics:
-- CI-CD
 weight: 2
 oldPath: "/content/guides/ci-cd/tekton-gs-p2.md"
 aliases:

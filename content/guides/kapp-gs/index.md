@@ -8,11 +8,10 @@ tags:
 - kapp
 - Carvel
 - Getting Started
+- Kubernetes
 team:
 - Tiffany Jernigan
 title: Getting Started with kapp
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/kapp-gs.md"
 aliases:
 - "/guides/kubernetes/kapp-gs"

@@ -10,8 +10,6 @@ tags:
 team:
 - Dan Dobrin
 title: 'Declarative Deployments in Kubernetes: What Options Do I Have?'
-topics:
-- Kubernetes
 ---
 
 Your cloud-native application has been designed, built, and tested locally, and now you're taking the next step: deployment to Kubernetes.

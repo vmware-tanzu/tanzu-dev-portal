@@ -14,6 +14,7 @@ aliases:
 - "/guides/kubernetes/identity-dex"
 level1: Securing Kubernetes
 level2: Access and Security
+tags: []
 ---
 
 ## Motivation

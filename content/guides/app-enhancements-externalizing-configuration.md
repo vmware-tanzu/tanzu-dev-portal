@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Externalizing Configuration
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-externalizing-configuration"

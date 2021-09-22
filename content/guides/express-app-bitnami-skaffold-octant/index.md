@@ -9,13 +9,11 @@ tags:
 - Octant
 - Skaffold
 - Kubernetes
+- CI-CD
 team:
 - Vikram Vaswani
 title: Continuously Develop and Monitor an Express Application on Kubernetes with
   Bitnami, Skaffold and Octant
-topics:
-- CI-CD
-- Kubernetes
 oldPath: "/content/guides/ci-cd/express-app-bitnami-skaffold-octant.md"
 aliases:
 - "/guides/ci-cd/express-app-bitnami-skaffold-octant"

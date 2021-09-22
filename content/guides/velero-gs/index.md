@@ -7,12 +7,11 @@ patterns:
 tags:
 - Velero
 - Getting Started
+- Kubernetes
 featured: true
 team:
 - Tiffany Jernigan
 title: Getting Started with Velero
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/velero-gs.md"
 aliases:
 - "/guides/kubernetes/velero-gs"

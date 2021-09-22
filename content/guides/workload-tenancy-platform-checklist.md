@@ -14,6 +14,7 @@ aliases:
 - "/guides/kubernetes/workload-tenancy-platform-checklist"
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+tags: []
 ---
 
 This list is a starting place for considerations about the Kubernetes platform

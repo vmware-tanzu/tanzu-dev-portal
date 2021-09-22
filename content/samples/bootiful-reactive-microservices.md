@@ -14,8 +14,4 @@ tags:
 team:
 - Josh Long
 title: Bootiful Reactive Microservices
-topics:
-- Spring
-- Microservices
-- Reactive
 ---

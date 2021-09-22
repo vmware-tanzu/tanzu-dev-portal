@@ -9,6 +9,7 @@ weight: 60
 oldPath: "/content/outcomes/application-development/test-driven-development.md"
 aliases:
 - "/outcomes/application-development/test-driven-development"
+tags: []
 ---
 
 Test Driven Development (TDD) is a software development practice where a test case describing desired functionality is written before the production code. When that test is executed, it fails because the supporting functionality does not exist yet. After writing the minimum functionality to satisfy the test parameters, the code is [refactored](https://en.wikipedia.org/wiki/Code_refactoring) to improve the design. This cycle is repeated until all requested functionality is implemented.

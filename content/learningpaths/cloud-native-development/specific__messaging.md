@@ -9,6 +9,7 @@ weight: 170
 oldPath: "/content/outcomes/cloud-native-development/specific__messaging.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__messaging"
+tags: []
 ---
 
 Event-driven applications are a natural fit for microservices as they reduce the coupling between services even further and allow for the whole system to move from central orchestration to distributed asynchronous choreography. 

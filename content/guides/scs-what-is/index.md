@@ -9,13 +9,12 @@ patterns:
 subsection: Spring Cloud Stream
 tags:
 - Spring Cloud Stream
-team:
-- Brian McClain
-title: What is Spring Cloud Stream?
-topics:
 - Spring
 - Microservices
 - Messaging and Integration
+team:
+- Brian McClain
+title: What is Spring Cloud Stream?
 oldPath: "/content/guides/event-streaming/scs-what-is.md"
 aliases:
 - "/guides/event-streaming/scs-what-is"

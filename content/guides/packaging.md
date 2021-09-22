@@ -5,14 +5,14 @@ subsection: Packaging
 team:
 - John Harris
 title: Packaging
-topics:
-- Kubernetes
 weight: 52
 oldPath: "/content/guides/kubernetes/packaging.md"
 aliases:
 - "/guides/kubernetes/packaging"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+tags:
+- Kubernetes
 ---
 
 In Kubernetes, the desired state of the system is declared via resources sent to the API Server.

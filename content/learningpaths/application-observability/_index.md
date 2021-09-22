@@ -15,6 +15,7 @@ aliases:
 - "/patterns/observability/"
 - "/outcomes/application-observability/"
 oldPath: "/content/outcomes/application-observability/_index.md"
+tags: []
 ---
 
 ## Key Concepts

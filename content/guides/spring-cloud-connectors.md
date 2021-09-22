@@ -12,8 +12,6 @@ tags:
 - Spring Cloud
 - Spring Cloud Connectors
 title: What are Spring Cloud Connectors?
-topics:
-- Spring
 weight: 5
 oldPath: "/content/guides/spring/spring-cloud-connectors.md"
 aliases:

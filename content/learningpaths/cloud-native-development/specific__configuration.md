@@ -9,6 +9,7 @@ weight: 110
 oldPath: "/content/outcomes/cloud-native-development/specific__configuration.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__configuration"
+tags: []
 ---
 
 Even quite trivial applications have some form of configuration, such as how to connect to its data sources, how to change behavior based on the target deployment environment, or how to log. There are plenty of ways to configure your application.

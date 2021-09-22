@@ -9,11 +9,10 @@ patterns:
 tags:
 - Kubeapps
 - Getting Started
+- Kubernetes
 team:
 - Tiffany Jernigan
 title: Getting Started with Kubeapps
-topics:
-- Kubernetes
 weight: 6
 oldPath: "/content/guides/kubernetes/kubeapps-gs.md"
 aliases:

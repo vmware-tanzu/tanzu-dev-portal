@@ -9,11 +9,10 @@ patterns:
 tags:
 - Helm
 - Bitnami
+- Kubernetes
 team:
 - Raquel Campuzano
 title: Creating Your First Helm Chart
-topics:
-- Kubernetes
 weight: 3
 oldPath: "/content/guides/kubernetes/create-helm-chart.md"
 aliases:

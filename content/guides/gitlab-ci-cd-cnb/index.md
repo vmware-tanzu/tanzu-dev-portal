@@ -13,8 +13,6 @@ tags:
 team:
 - Samer Akkoub
 title: Deploy Cloud Native Apps Using GitLab CI/CD and Cloud Native Buildpacks
-topics:
-- CI-CD
 oldPath: "/content/guides/ci-cd/gitlab-ci-cd-cnb.md"
 aliases:
 - "/guides/ci-cd/gitlab-ci-cd-cnb"

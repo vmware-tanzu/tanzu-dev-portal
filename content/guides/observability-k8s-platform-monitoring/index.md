@@ -14,6 +14,7 @@ aliases:
 - "/guides/kubernetes/observability-k8s-platform-monitoring"
 level1: Managing and Operating Kubernetes
 level2: Monitoring and Observing Kubernetes
+tags: []
 ---
 
 This document details platform monitoring and alerting for Kubernetes clusters,

@@ -6,11 +6,10 @@ linkTitle: Getting Started with Tilt
 parent: Developer Workflow
 tags:
 - Tilt
+- Kubernetes
 team:
 - John Harris
 title: Getting Started with Tilt
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/dev-workflow-tilt.md"
 aliases:
 - "/guides/kubernetes/dev-workflow-tilt"

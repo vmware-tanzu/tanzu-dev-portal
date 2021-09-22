@@ -13,8 +13,6 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: How to Install Python'
-topics:
-- Python
 oldPath: "/content/guides/python/gs-python-like-a-pro.md"
 aliases:
 - "/guides/python/gs-python-like-a-pro"

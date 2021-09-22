@@ -14,9 +14,6 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Building Docker Containers'
-topics:
-- Python
-- Containers
 oldPath: "/content/guides/python/cnb-gs-python.md"
 aliases:
 - "/guides/python/cnb-gs-python"

@@ -1,23 +1,20 @@
 ---
 date: '2021-09-13'
 description: Get started with serverless on Kubernetes using Cloud Native Runtimes.
-hero: /images/workshops/workshop-kubernetes-fundamentals.png
+hero: "/images/workshops/workshop-kubernetes-fundamentals.png"
 lab: lab-cnr-serving
 lastmod: '2021-09-13'
 length: 15
-preview: /images/workshops/img-cnr-serving.png
+preview: "/images/workshops/img-cnr-serving.png"
 summary:
-- Get started with serverless on Kubernetes using the open source backed, Knative-based Cloud Native Runtimes to simplify deploying microservices on Kubernetes.
+- Get started with serverless on Kubernetes using the open source backed, Knative-based
+  Cloud Native Runtimes to simplify deploying microservices on Kubernetes.
 tags:
 - Spring
 - Microservices
 - Kubernetes
 - Spring Boot
 title: Cloud Native Runtimes for Tanzu
-topics:
-- Spring
-- Microservices
-- Kubernetes
 team:
 - Boskey Savla
 weight: 7

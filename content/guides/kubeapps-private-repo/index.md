@@ -14,8 +14,6 @@ tags:
 team:
 - Raquel Campuzano
 title: Deploy from a Private Helm Repository Using Kubeapps
-topics:
-- Kubernetes
 weight: 7
 oldPath: "/content/guides/kubernetes/kubeapps-private-repo.md"
 aliases:

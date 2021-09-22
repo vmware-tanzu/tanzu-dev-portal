@@ -9,13 +9,12 @@ patterns:
 tags:
 - Spring Cloud Gateway
 - Getting Started
-team:
-- Brian McClain
-title: Getting Started with Spring Cloud Gateway
-topics:
 - Spring
 - Microservices
 - Messaging and Integration
+team:
+- Brian McClain
+title: Getting Started with Spring Cloud Gateway
 oldPath: "/content/guides/spring/scg-gs.md"
 aliases:
 - "/guides/spring/scg-gs"

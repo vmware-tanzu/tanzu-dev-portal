@@ -15,8 +15,6 @@ featured: true
 team:
 - Nate Schutta
 title: Breaking Down a Monolith into Microservices
-topics:
-- Microservices
 weight: 3
 oldPath: "/content/guides/microservices/deconstructing-the-monolith.md"
 aliases:

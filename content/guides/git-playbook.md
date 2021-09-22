@@ -7,10 +7,9 @@ patterns:
 tags:
 - Git
 - Getting Started
+- Agile
 featured: true
 title: Git Playbook
-topics:
-- Agile
 oldPath: "/content/guides/agile/git-playbook.md"
 aliases:
 - "/guides/agile/git-playbook"

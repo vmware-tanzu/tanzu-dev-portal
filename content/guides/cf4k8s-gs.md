@@ -13,8 +13,6 @@ tags:
 team:
 - Ivan Tarin
 title: Getting Started with Cloud Foundry for Kubernetes
-topics:
-- Kubernetes
 weight: 4
 oldPath: "/content/guides/kubernetes/cf4k8s-gs.md"
 aliases:

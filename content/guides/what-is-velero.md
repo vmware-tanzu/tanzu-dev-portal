@@ -8,9 +8,8 @@ tags:
 - Disaster Recovery
 - Velero
 - Getting Started
-title: Backing Up, Restoring, and Migrating Resources with Velero
-topics:
 - Kubernetes
+title: Backing Up, Restoring, and Migrating Resources with Velero
 weight: 77
 oldPath: "/content/guides/kubernetes/what-is-velero.md"
 aliases:

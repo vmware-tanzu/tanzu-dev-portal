@@ -7,11 +7,9 @@ patterns:
 tags:
 - Harbor
 - Containers
-title: Managing and Securing Container Images in a Registry
-topics:
 - Kubernetes
-- Containers
 - Microservices
+title: Managing and Securing Container Images in a Registry
 weight:
 oldPath: "/content/guides/containers/managing-container-images-registry.md"
 aliases:

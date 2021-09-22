@@ -11,12 +11,11 @@ patterns:
 tags:
 - kpack
 - Buildpacks
+- Containers
 team:
 - Tyler Britten
 - Ivan Tarin
 title: Getting Started with kpack to Automate Builds using Cloud Native Buildpacks
-topics:
-- Containers
 weight: 3
 oldPath: "/content/guides/containers/cnb-gs-kpack.md"
 aliases:

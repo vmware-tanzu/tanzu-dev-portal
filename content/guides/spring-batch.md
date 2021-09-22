@@ -6,10 +6,9 @@ patterns:
 - API
 tags:
 - Spring Batch
-title: Creating Batch Microservices with Spring Batch
-topics:
 - Spring
 - Microservices
+title: Creating Batch Microservices with Spring Batch
 weight: 1
 oldPath: "/content/guides/spring/spring-batch.md"
 aliases:

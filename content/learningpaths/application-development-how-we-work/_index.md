@@ -13,6 +13,7 @@ team:
 oldPath: "/content/outcomes/application-development-how-we-work/_index.md"
 aliases:
 - "/outcomes/application-development-how-we-work/"
+tags: []
 ---
 ## Why are we talking about this?
 VMware Tanzu Labs has a long history of doing things a little differently. We also have a 30-year reputation as being one of the most innovative, reliable, and agile software services organizations around. The secret to our success is our different way of thinking. But really, it isn't so different, and it isn't a secret. We think our way of doing things is pretty straight forward if you follow a few guiding principles.

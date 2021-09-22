@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Probing Application State
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-enhancements-probing-app-state.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-probing-app-state"

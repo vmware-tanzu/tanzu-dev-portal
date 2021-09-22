@@ -9,6 +9,7 @@ weight: 50
 oldPath: "/content/outcomes/application-development/pair-programming.md"
 aliases:
 - "/outcomes/application-development/pair-programming"
+tags: []
 ---
 
 Lennon and McCartney. Penn and Teller. Venus and Serena.

@@ -9,6 +9,7 @@ weight: 140
 oldPath: "/content/outcomes/cloud-native-development/specific__integration.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__integration"
+tags: []
 ---
 
 Enterprise integration middleware are software systems that offer services to link and integrate separate applications. They cover many use cases and domains like transaction processing, distributed computing, message broker, data access systems, or Enterprise Service Buses (ESB).

@@ -12,13 +12,11 @@ tags:
 - Maven
 - Spring
 - Spring Boot
+- Microservices
 featured: true
 team:
 - Dan Dobrin
 title: Understanding API-First Development
-topics:
-- Spring
-- Microservices
 weight: 4
 oldPath: "/content/guides/microservices/api-first-development.md"
 aliases:

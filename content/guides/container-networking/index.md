@@ -5,10 +5,9 @@ subsection: Container Networking
 team:
 - Josh Rosso
 title: Container Networking
-topics:
-- Kubernetes
 tags:
 - Getting Started
+- Kubernetes
 featured: true
 weight: 32
 oldPath: "/content/guides/kubernetes/container-networking.md"

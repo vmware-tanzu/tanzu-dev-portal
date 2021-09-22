@@ -9,6 +9,7 @@ weight: 20
 oldPath: "/content/outcomes/application-development/team-rhythm.md"
 aliases:
 - "/outcomes/application-development/team-rhythm"
+tags: []
 ---
 
 A healthy lean and agile team has a strong and consistent rhythm. Each week is punctuated by a small set of standing practices and meetings.

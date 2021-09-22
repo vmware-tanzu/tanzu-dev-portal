@@ -9,11 +9,10 @@ patterns:
 subsection: Cloud Native Buildpacks
 tags:
 - Buildpacks
+- Containers
 team:
 - Brian McClain
 title: What are Cloud Native Buildpacks?
-topics:
-- Containers
 oldPath: "/content/guides/containers/cnb-what-is.md"
 aliases:
 - "/guides/containers/cnb-what-is"

@@ -8,4 +8,5 @@ weight: 4
 oldPath: "/content/outcomes/secure-software-supply-chain/what-is-ci-cd.md"
 aliases:
 - "/outcomes/secure-software-supply-chain/what-is-ci-cd"
+tags: []
 ---

@@ -9,6 +9,7 @@ weight: 30
 oldPath: "/content/outcomes/application-development/product-validation.md"
 aliases:
 - "/outcomes/application-development/product-validation"
+tags: []
 ---
 
 There are a lot of unknowns when building a new software system, including customer unknowns such as product/market fit, business unknowns such as addressable market size, and technical unknowns such as how feasible something is to build. 

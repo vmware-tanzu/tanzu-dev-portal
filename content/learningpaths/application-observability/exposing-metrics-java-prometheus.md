@@ -9,6 +9,7 @@ weight: 3
 oldPath: "/content/outcomes/application-observability/exposing-metrics-java-prometheus.md"
 aliases:
 - "/outcomes/application-observability/exposing-metrics-java-prometheus"
+tags: []
 ---
 
 The [Micrometer](https://micrometer.io/) library is a popular way to expose

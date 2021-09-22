@@ -11,7 +11,5 @@ tags:
 team:
 - Tiffany Jernigan
 title: Getting Started with Kubeapps
-topics:
-- Kubernetes
 youtube_id: 9HsWsoDd1fM
 ---

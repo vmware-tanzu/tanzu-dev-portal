@@ -5,14 +5,14 @@ subsection: Workload Tenancy
 team:
 - Josh Rosso
 title: Workload Tenancy
-topics:
-- Kubernetes
 weight: 82
 oldPath: "/content/guides/kubernetes/workload-tenancy.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+tags:
+- Kubernetes
 ---
 
 Kubernetes is an inherently multi-tenant system. The term tenant can

@@ -13,8 +13,6 @@ tags:
 team:
 - Tyler Britten
 title: Using Knative Eventing for Better Observability
-topics:
-- Kubernetes
 weight: 1
 ---
 

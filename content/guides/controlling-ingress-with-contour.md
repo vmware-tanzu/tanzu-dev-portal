@@ -3,13 +3,9 @@ date: '2021-02-26'
 lastmod: '2021-02-26'
 parent: Service Routing
 tags:
-- Contour
-- Envoy
-title: Controlling Ingress with Contour
-topics:
-- Kubernetes
-tags:
 - Getting Started
+- Kubernetes
+title: Controlling Ingress with Contour
 weight: 1
 oldPath: "/content/guides/kubernetes/controlling-ingress-with-contour.md"
 aliases:

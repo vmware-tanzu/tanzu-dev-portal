@@ -13,6 +13,7 @@ aliases:
 - "/guides/kubernetes/platform-security-opa"
 level1: Securing Kubernetes
 level2: Access and Security
+tags: []
 ---
 
 [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) is a declarative

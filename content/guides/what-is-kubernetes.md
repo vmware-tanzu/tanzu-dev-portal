@@ -3,13 +3,11 @@ date: '2021-02-26'
 lastmod: '2021-06-03'
 subsection: What is Kubernetes?
 title: What is Kubernetes?
-topics:
-- Kubernetes
-- Containers
-- Microservices
 tags:
 - Kubernetes
 - Getting Started
+- Containers
+- Microservices
 weight: 1
 oldPath: "/content/guides/kubernetes/what-is-kubernetes.md"
 aliases:

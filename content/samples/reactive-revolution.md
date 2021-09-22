@@ -11,9 +11,6 @@ tags:
 team:
 - Josh Long
 title: Reactive Revolution
-topics:
-- Spring
-- Reactive
 ---
 
 Code that accompanies Josh Long's "The Reactive Revolution" talk. Learn more at [http://ReactiveSpring.io](http://ReactiveSpring.io).

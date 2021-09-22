@@ -5,10 +5,9 @@ subsection: Identity and Access Control
 team:
 - Craig Tracey
 title: Identity and Access Control
-topics:
-- Kubernetes
 tags:
 - Getting Started
+- Kubernetes
 featured: true
 weight: 42
 oldPath: "/content/guides/kubernetes/identity.md"

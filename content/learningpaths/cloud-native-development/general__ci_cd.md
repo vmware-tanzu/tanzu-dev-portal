@@ -9,6 +9,7 @@ weight: 60
 oldPath: "/content/outcomes/cloud-native-development/general__ci_cd.md"
 aliases:
 - "/outcomes/cloud-native-development/general__ci_cd"
+tags: []
 ---
 
 Automate everything. Any time we have manual processes or required intervention, we have friction in the machinery that allows us to release fast at a moment’s notice. There are many tools to support continuous build, integration, and delivery of software, and your company may already have selected the tools to use. This is usually the [Jenkins](https://www.jenkins.io/) or [Concourse CI](https://concourse-ci.org/) platforms but can include [Atlassian Bamboo](https://www.atlassian.com/software/bamboo), or cloud build provides such as [CircleCI](https://circleci.com/), [TravisCI](https://travis-ci.org/), or [Oracle Container Pipelines](https://docs.oracle.com/en/cloud/iaas-classic/wercker-cloud/index.html).

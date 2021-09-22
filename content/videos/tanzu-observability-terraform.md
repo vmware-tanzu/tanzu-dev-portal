@@ -9,10 +9,9 @@ tags:
 - Terraform
 - Wavefront
 - Observability
+- Kubernetes
 team:
 - Scott Rogers
 title: Tanzu Observability by Wavefront Terraform Integration
-topics:
-- Kubernetes
 youtube_id: AE6JhQwmboY
 ---

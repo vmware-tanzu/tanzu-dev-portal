@@ -8,8 +8,6 @@ tags:
 team:
 - VMware Tanzu Labs
 title: 'Remote Tips: Building Relationships'
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips-building-relationships.md"
 aliases:
 - "/guides/agile/remote-tips-building-relationships"

@@ -16,8 +16,6 @@ featured: true
 team:
 - Tony Vetter
 title: Getting Started with Concourse CI
-topics:
-- CI-CD
 oldPath: "/content/guides/ci-cd/concourse-gs.md"
 aliases:
 - "/guides/ci-cd/concourse-gs"

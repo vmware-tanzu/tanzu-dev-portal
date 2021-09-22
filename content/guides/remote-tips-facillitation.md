@@ -8,8 +8,6 @@ tags:
 team:
 - VMware Tanzu Labs
 title: 'Remote Tips: Facilitation'
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips-facillitation.md"
 aliases:
 - "/guides/agile/remote-tips-facillitation"

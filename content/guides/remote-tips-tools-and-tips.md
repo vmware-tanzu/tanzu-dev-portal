@@ -8,8 +8,6 @@ tags:
 team:
 - VMware Tanzu Labs
 title: 'Remote Tips: Tools and Tips'
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips-tools-and-tips.md"
 aliases:
 - "/guides/agile/remote-tips-tools-and-tips"

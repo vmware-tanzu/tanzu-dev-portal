@@ -1,20 +1,19 @@
 ---
-title:  "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
-linkTitle: "Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules"
-description: To help users to implement affinity rules, Bitnami has enhanced its Helm charts by including opinionated affinities in their manifest files. Check out this step-by-step guide to learn how to adapt them to your needs.
-topics:
-- Kubernetes
-- Containers
+title: Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules
+linkTitle: Assign Pods to Nodes With Bitnami Helm Chart Affinity Rules
+description: To help users to implement affinity rules, Bitnami has enhanced its Helm
+  charts by including opinionated affinities in their manifest files. Check out this
+  step-by-step guide to learn how to adapt them to your needs.
 tags:
 - Bitnami
 - Containers
 - Affinity
 - Helm
-# Author(s)
+- Kubernetes
 team:
 - Raquel Campuzano Godoy
-date: "2021-07-13"
-lastmod: "2021-07-13"
+date: '2021-07-13'
+lastmod: '2021-07-13'
 ---
 
 First published on https://docs.bitnami.com/tutorials/assign-pod-nodes-helm-affinity-rules/

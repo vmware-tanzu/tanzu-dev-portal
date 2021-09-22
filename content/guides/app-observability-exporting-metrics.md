@@ -7,8 +7,6 @@ tags:
 team:
 - John Harris
 title: Exporting Application Metrics
-topics:
-- Kubernetes
 oldPath: "/content/guides/kubernetes/app-observability-exporting-metrics.md"
 aliases:
 - "/guides/kubernetes/app-observability-exporting-metrics"

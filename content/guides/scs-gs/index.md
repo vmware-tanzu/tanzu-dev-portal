@@ -10,12 +10,10 @@ tags:
 - Spring Cloud Stream
 - Event Streaming
 - Spring
+- Messaging and Integration
 team:
 - Brian McClain
 title: Getting Started with Spring Cloud Stream
-topics:
-- Event Streaming
-- Messaging and Integration
 oldPath: "/content/guides/event-streaming/scs-gs.md"
 aliases:
 - "/guides/event-streaming/scs-gs"

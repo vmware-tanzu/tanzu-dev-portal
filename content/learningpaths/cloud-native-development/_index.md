@@ -14,6 +14,7 @@ team:
 oldPath: "/content/outcomes/cloud-native-development/_index.md"
 aliases:
 - "/outcomes/cloud-native-development/"
+tags: []
 ---
  
 ## Why is this learning path important?

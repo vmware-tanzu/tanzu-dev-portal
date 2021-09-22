@@ -8,9 +8,8 @@ patterns:
 tags:
 - Spring Boot Actuator
 - Getting Started
-title: Custom Health Checks Using Spring Boot Actuator
-topics:
 - Spring
+title: Custom Health Checks Using Spring Boot Actuator
 weight: 1
 oldPath: "/content/guides/spring/spring-boot-actuator.md"
 aliases:

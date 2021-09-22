@@ -4,11 +4,11 @@ description: Build and deploy a web application on a modern container orchestrat
   platform, and learn cloud native principles along the way.
 draft: false
 featured: true
-hero: /images/workshops/workshop-cloud-native-config.png
+hero: "/images/workshops/workshop-cloud-native-config.png"
 lab: cnd-deploy-practices
 lastmod: '2021-05-19'
 length: 180
-preview: /images/workshops/img-cloud-native-app.png
+preview: "/images/workshops/img-cloud-native-app.png"
 summary: You will build and deploy a web application on a modern container orchestration
   platform, and learn cloud native principles along the way.
 tags:
@@ -16,7 +16,6 @@ tags:
 - Spring Boot
 - Kubernetes
 title: Building and Deploying a Cloud Native Application
-topics: null
 weight: 8
 ---
 

@@ -12,10 +12,7 @@ tags:
 - Spring Boot
 - Microservices
 - Kubernetes
-title: 'Spring Live: Azure Spring Cloud'
-topics:
 - Spring
-- Microservices
-- Kubernetes
+title: 'Spring Live: Azure Spring Cloud'
 youtube_id: CyuhrQtEW90
 ---

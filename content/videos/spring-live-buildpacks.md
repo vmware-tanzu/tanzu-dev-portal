@@ -13,12 +13,10 @@ tags:
 - Buildpacks
 - kpack
 - Kubernetes
+- Spring
+- Containers
 team:
 - Cora Iberkleid
 title: 'Spring Live: Build Images with Confidence and Ease with Cloud Native Buildpacks'
-topics:
-- Spring
-- Containers
-- Kubernetes
 youtube_id: EVHHyiypiY0
 ---

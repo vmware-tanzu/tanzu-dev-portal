@@ -8,8 +8,6 @@ tags:
 team:
 - VMware Tanzu Labs
 title: 'Remote Tips: Remote is Exhausting'
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips-remote-is-exhausting.md"
 aliases:
 - "/guides/agile/remote-tips-remote-is-exhausting"

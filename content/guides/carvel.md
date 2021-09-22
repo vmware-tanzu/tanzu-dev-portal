@@ -6,16 +6,14 @@ tags:
 - Carvel
 - kapp
 - ytt
-- kapp
 - imgpkg
 - kapp-controller
 - vendir
+- Kubernetes
 featured: true
 team:
 - Tiffany Jernigan
 title: Carvel
-topics:
-- Kubernetes
 weight: 27
 oldPath: "/content/guides/kubernetes/carvel.md"
 aliases:

@@ -15,8 +15,6 @@ tags:
 team:
 - Vikram Vaswani
 title: Create a Continuous Integration Pipeline with GitLab and Kubernetes
-topics:
-- CI-CD
 oldPath: "/content/guides/ci-cd/gitlab-auto-devops.md"
 aliases:
 - "/guides/ci-cd/gitlab-auto-devops"
@@ -24,16 +22,26 @@ level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 faqs:
   faq:
-    - question: What is a CI/CD pipeline?
-      answer: Continuous integration/continuous delivery pipelines are essential DevSecOps workflows that ensure the security and automation of the software delivery process.
-    - question: How do you create a CI/CD pipeline in GitLab?
-      answer:  CI/CD pipelines are created using a Bitnami GitLab CE stack and a Kubernetes cluster with GitLab's Auto DevOps feature. After configuring DNS and SSL for GitLab, configure and active GitLab registry, create a new GitLab project, configure a k8 cluster for the project, enable Auto DevOps, and finally, commit code, test and deploy on GitLab.
-    - question: How do you integrate Kubernetes with GitLab?
-      answer: Kubernetes clusters can be integrated and configured safely with GitLab using the GitLab Kubernetes Agent.
-    - question: How do you deploy a GitLab pipeline?
-      answer: GitLab pipelines can be executed manually by navigating to 'Menu > Projects', selecting 'CI/CD > Pipelines,' then selecting 'Run Pipeline' with the proper branch, tag, and variables.
-    - question: How do containerized CI/CD pipelines work with Kubernetes and GitLab?
-      answer: Containerized CI/CD pipelines are directly integrated into the GitLab platform, allowing existing k8 clusters to be deployed within CI/CD pipeline workloads.
+  - question: What is a CI/CD pipeline?
+    answer: Continuous integration/continuous delivery pipelines are essential DevSecOps
+      workflows that ensure the security and automation of the software delivery process.
+  - question: How do you create a CI/CD pipeline in GitLab?
+    answer: CI/CD pipelines are created using a Bitnami GitLab CE stack and a Kubernetes
+      cluster with GitLab's Auto DevOps feature. After configuring DNS and SSL for
+      GitLab, configure and active GitLab registry, create a new GitLab project, configure
+      a k8 cluster for the project, enable Auto DevOps, and finally, commit code,
+      test and deploy on GitLab.
+  - question: How do you integrate Kubernetes with GitLab?
+    answer: Kubernetes clusters can be integrated and configured safely with GitLab
+      using the GitLab Kubernetes Agent.
+  - question: How do you deploy a GitLab pipeline?
+    answer: GitLab pipelines can be executed manually by navigating to 'Menu > Projects',
+      selecting 'CI/CD > Pipelines,' then selecting 'Run Pipeline' with the proper
+      branch, tag, and variables.
+  - question: How do containerized CI/CD pipelines work with Kubernetes and GitLab?
+    answer: Containerized CI/CD pipelines are directly integrated into the GitLab
+      platform, allowing existing k8 clusters to be deployed within CI/CD pipeline
+      workloads.
 ---
 
 As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and DevOps tools and techniques.

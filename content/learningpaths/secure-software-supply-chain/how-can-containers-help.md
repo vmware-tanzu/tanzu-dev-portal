@@ -8,4 +8,5 @@ weight: 2
 oldPath: "/content/outcomes/secure-software-supply-chain/how-can-containers-help.md"
 aliases:
 - "/outcomes/secure-software-supply-chain/how-can-containers-help"
+tags: []
 ---

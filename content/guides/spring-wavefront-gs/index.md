@@ -16,8 +16,6 @@ tags:
 team:
 - Brian McClain
 title: Getting Started with Wavefront for Spring Boot
-topics:
-- Spring
 oldPath: "/content/guides/spring/spring-wavefront-gs.md"
 aliases:
 - "/guides/spring/spring-wavefront-gs"

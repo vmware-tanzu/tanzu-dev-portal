@@ -11,14 +11,12 @@ tags:
 - Spring
 - Spring Cloud Data Flow
 - Bitnami
+- Kubernetes
+- Event Streaming
 team:
 - Vikram Vaswani
 title: Integrate Spring Cloud Data Flow Applications with a Scalable MongoDB Deployment
   on Kubernetes
-topics:
-- Spring
-- Kubernetes
-- Event Streaming
 oldPath: "/content/guides/spring/scdf-mongodb.md"
 aliases:
 - "/guides/spring/scdf-mongodb"

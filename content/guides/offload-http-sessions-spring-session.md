@@ -4,9 +4,8 @@ lastmod: '2021-02-24'
 linkTitle: Spring Session
 tags:
 - Spring Session
-title: Offload HTTP Sessions with Spring Session and Redis
-topics:
 - Spring
+title: Offload HTTP Sessions with Spring Session and Redis
 oldPath: "/content/guides/spring/offload-http-sessions-spring-session.md"
 aliases:
 - "/guides/spring/offload-http-sessions-spring-session"

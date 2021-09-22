@@ -7,10 +7,9 @@ patterns:
 - API
 tags:
 - Spring Cloud Config Server
-title: Securing Spring Cloud Config Server
-topics:
 - Spring
 - Microservices
+title: Securing Spring Cloud Config Server
 oldPath: "/content/guides/spring/spring-cloud-config-security.md"
 aliases:
 - "/guides/spring/spring-cloud-config-security"

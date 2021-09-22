@@ -6,11 +6,9 @@ subsection: What are Microservices?
 tags:
 - Microservices
 - Spring
+- Kubernetes
 featured: true
 title: What is Microservices Architecture?
-topics:
-- Microservices
-- Kubernetes
 weight: 1
 oldPath: "/content/guides/microservices/what-is-microservices-architecture.md"
 aliases:

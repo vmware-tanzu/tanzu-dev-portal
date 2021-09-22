@@ -13,6 +13,7 @@ aliases:
 - "/guides/kubernetes/observability-showback-refarch"
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+tags: []
 ---
 
 This document discusses showback for Kubernetes clusters, such as those provided

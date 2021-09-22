@@ -12,12 +12,11 @@ tags:
 - REST
 - API
 - Getting Started
+- Spring
+- Microservices
 team:
 - Brian McClain
 title: Building an API with Spring Boot
-topics:
-- Spring
-- Microservices
 weight: 2
 oldPath: "/content/guides/spring/spring-build-api.md"
 aliases:

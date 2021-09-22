@@ -14,6 +14,7 @@ aliases:
 - "/guides/kubernetes/container-networking-calico-refarch"
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+tags: []
 ---
 
 This document details a reference architecture for running

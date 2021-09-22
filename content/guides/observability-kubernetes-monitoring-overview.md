@@ -10,10 +10,8 @@ tags:
 - Prometheus
 - Grafana
 - Wavefront
-title: Kubernetes Monitoring Overview
-topics:
-- Kubernetes
 - Microservices
+title: Kubernetes Monitoring Overview
 weight: 1
 oldPath: "/content/guides/kubernetes/observability-kubernetes-monitoring-overview.md"
 aliases:

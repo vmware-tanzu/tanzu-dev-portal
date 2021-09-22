@@ -3,11 +3,11 @@ date: '2021-03-09'
 description: Create a Spring Boot application. Containerize it, and push the container
   to a registry. Deploy it to Kubernetes.
 draft: false
-hero: /images/workshops/workshop-spring-on-kubernetes.png
+hero: "/images/workshops/workshop-spring-on-kubernetes.png"
 lab: spring-on-kubernetes
 lastmod: '2021-05-03'
 length: 120
-preview: /images/workshops/img-spring-on-kubernetes.png
+preview: "/images/workshops/img-spring-on-kubernetes.png"
 summary:
 - Create a Spring Boot application. Containerize it, and push the container to a registry.
   Deploy it to Kubernetes.
@@ -17,10 +17,6 @@ tags:
 - Kubernetes
 - Spring Boot
 title: Spring on Kubernetes
-topics:
-- Spring
-- Microservices
-- Kubernetes
 weight: 2
 ---
 

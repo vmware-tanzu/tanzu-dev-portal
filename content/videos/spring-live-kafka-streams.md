@@ -12,11 +12,8 @@ tags:
 - Kafka
 - Event Streaming
 - Kubernetes
+- Messaging and Integration
 title: 'Spring Live: Developing fault-tolerant stream processing application with
   Kafka Streams and Kubernetes'
-topics:
-- Event Streaming
-- Kubernetes
-- Messaging and Integration
 youtube_id: ZDqswmdZeGQ
 ---

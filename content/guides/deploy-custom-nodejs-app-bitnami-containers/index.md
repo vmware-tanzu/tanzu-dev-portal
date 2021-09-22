@@ -10,12 +10,11 @@ tags:
 - Node.js
 - Docker
 - Helm
+- Containers
+- Kubernetes
 team:
 - Vikram Vaswani
 title: Deploy a Custom Node.js Application using Bitnami Containers
-topics:
-- Containers
-- Kubernetes
 weight: 2
 oldPath: "/content/guides/containers/deploy-custom-nodejs-app-bitnami-containers.md"
 aliases:

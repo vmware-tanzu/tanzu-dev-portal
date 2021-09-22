@@ -4,14 +4,14 @@ lastmod: '2021-04-29'
 team:
 - Josh Rosso
 title: Storage Integration
-topics:
-- Kubernetes
 weight: 72
 oldPath: "/content/guides/kubernetes/storage-integration.md"
 aliases:
 - "/guides/kubernetes/storage-integration"
 level1: Managing and Operating Kubernetes
 level2: Kubernetes Architecture
+tags:
+- Kubernetes
 ---
 
 Core Kubernetes does not concern itself with storage integration. At most, it

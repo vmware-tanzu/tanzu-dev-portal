@@ -1,16 +1,15 @@
 ---
-title:  "Writing Agile User Stories for Event-Based Systems"
-linkTitle: "Writing Agile User Stories for Event-Based Systems"
-description: A Product Manager's perspective on how to write technical backend stories, using an action-oriented approach.
-topics:
-- Agile
+title: Writing Agile User Stories for Event-Based Systems
+linkTitle: Writing Agile User Stories for Event-Based Systems
+description: A Product Manager's perspective on how to write technical backend stories,
+  using an action-oriented approach.
 tags:
 - User Stories
-# Author(s)
+- Agile
 team:
 - Christina Liu
-date: "2021-07-27"
-lastmod: "2021-07-27"
+date: '2021-07-27'
+lastmod: '2021-07-27'
 ---
 
 Product managers (PMs) can help development teams be more agile in their approach to building software by writing crisp user stories that align with the oft-cited “INVEST” (sometimes extended as INVEST-A) principles. This is now a well-accepted truism. 

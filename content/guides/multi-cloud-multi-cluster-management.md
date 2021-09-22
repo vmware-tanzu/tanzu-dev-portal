@@ -4,9 +4,8 @@ lastmod: '2021-02-26'
 linkTitle: Multi-Cluster Management
 tags:
 - Cluster API
-title: Challenges Managing Multiple Clusters Across Multiple Clouds
-topics:
 - Kubernetes
+title: Challenges Managing Multiple Clusters Across Multiple Clouds
 weight: 47
 oldPath: "/content/guides/kubernetes/multi-cloud-multi-cluster-management.md"
 aliases:

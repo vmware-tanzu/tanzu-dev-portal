@@ -11,11 +11,7 @@ tags:
 - Spring
 - Event Streaming
 - Kubernetes
-title: Installing Spring Cloud Data Flow Locally On Kubernetes With Helm
-topics:
-- Event Streaming
-- Kubernetes
 - Messaging and Integration
-- Spring
+title: Installing Spring Cloud Data Flow Locally On Kubernetes With Helm
 youtube_id: 1ljhFAvym14
 ---

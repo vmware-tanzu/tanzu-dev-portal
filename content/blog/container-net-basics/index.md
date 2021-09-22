@@ -8,6 +8,7 @@ patterns:
 team:
 - Ivan Tarin
 title: A Container Is a Linux Namespace and Networking Basics
+tags: []
 ---
 
 ![open source image @freddygthatsme see sources](images/freddy-g-1i1zPbkQJNg-unsplash.jpg)

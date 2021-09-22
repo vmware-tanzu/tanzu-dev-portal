@@ -14,10 +14,7 @@ tags:
 - Spring
 - Event Streaming
 - Kubernetes
-title: Getting Started With The Spring Cloud Data Flow CLI Tool
-topics:
-- Event Streaming
 - Messaging and Integration
-- Spring
+title: Getting Started With The Spring Cloud Data Flow CLI Tool
 youtube_id: 2RGDCNbXBrg
 ---

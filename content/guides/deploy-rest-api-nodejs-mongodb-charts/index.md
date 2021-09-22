@@ -15,8 +15,6 @@ tags:
 team:
 - Vikram Vaswani
 title: Deploy a REST API on Kubernetes with Bitnami's Helm Charts
-topics:
-- Microservices
 weight: 2
 oldPath: "/content/guides/microservices/deploy-rest-api-nodejs-mongodb-charts.md"
 aliases:

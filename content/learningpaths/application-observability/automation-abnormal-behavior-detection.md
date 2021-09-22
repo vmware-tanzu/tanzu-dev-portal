@@ -10,6 +10,7 @@ weight: 99
 oldPath: "/content/outcomes/application-observability/automation-abnormal-behavior-detection.md"
 aliases:
 - "/outcomes/application-observability/automation-abnormal-behavior-detection"
+tags: []
 ---
 
 As more and more sources of metrics become available for monitoring, the problem

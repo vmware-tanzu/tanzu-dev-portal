@@ -1,17 +1,16 @@
 ---
-title:  "An Introduction to VMware Marketplace"
-linkTitle: "An Introduction to VMware Marketplace"
+title: An Introduction to VMware Marketplace
+linkTitle: An Introduction to VMware Marketplace
 subsection: An Introduction to VMware Marketplace
-description: Learn how developers can discover, try, download, and deploy over 2,000 open source and third-party solutions directly from VMware Marketplace.
-topics:
-- Containers
+description: Learn how developers can discover, try, download, and deploy over 2,000
+  open source and third-party solutions directly from VMware Marketplace.
 tags:
 - Marketplace
-# Author(s)
+- Containers
 team:
 - Neeharika Palaka
-date: "2021-07-16"
-lastmod: "2021-07-16"
+date: '2021-07-16'
+lastmod: '2021-07-16'
 ---
 
 VMware Marketplace is a platform for developers to discover, try, download, and deploy solutions from third-party, open source, and first party vendors. From the Marketplace, developers have the convenience and flexibility to directly deploy solutions to VMware environments such as VMware Tanzu or VMware Cloud.  

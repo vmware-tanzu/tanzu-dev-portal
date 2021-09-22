@@ -10,13 +10,11 @@ tags:
 - RabbitMQ
 - Event Streaming
 - Getting Started
+- Messaging and Integration
 featured: true
 team:
 - Brian McClain
 title: Getting Started with RabbitMQ
-topics:
-- Event Streaming
-- Messaging and Integration
 oldPath: "/content/guides/messaging-and-integration/rabbitmq-gs.md"
 aliases:
 - "/guides/messaging-and-integration/rabbitmq-gs"

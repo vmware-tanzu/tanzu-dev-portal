@@ -6,12 +6,10 @@ tags:
 - Cloud Native
 - Microservices
 - Getting Started
-title: What is Cloud Native?
-topics:
 - Kubernetes
 - Containers
-- Microservices
 - CI-CD
+title: What is Cloud Native?
 oldPath: "/content/guides/microservices/what-is-cloud-native.md"
 aliases:
 - "/guides/microservices/what-is-cloud-native"

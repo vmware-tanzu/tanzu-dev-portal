@@ -6,10 +6,9 @@ patterns:
 - API
 tags:
 - API
-title: Applying the API Gateway Pattern
-topics:
 - Spring
 - Microservices
+title: Applying the API Gateway Pattern
 oldPath: "/content/guides/microservices/api-gateway-pattern.md"
 aliases:
 - "/guides/microservices/api-gateway-pattern"

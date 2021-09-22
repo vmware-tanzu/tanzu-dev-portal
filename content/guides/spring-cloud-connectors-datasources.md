@@ -7,10 +7,9 @@ patterns:
 - API
 tags:
 - Spring Cloud Connectors
-title: Spring Cloud Connectors and Datasources
-topics:
 - Spring
 - Messaging and Integration
+title: Spring Cloud Connectors and Datasources
 oldPath: "/content/guides/spring/spring-cloud-connectors-datasources.md"
 aliases:
 - "/guides/spring/spring-cloud-connectors-datasources"

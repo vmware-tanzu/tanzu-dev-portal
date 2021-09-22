@@ -11,11 +11,10 @@ patterns:
 tags:
 - Buildpacks
 - Getting Started
+- Containers
 team:
 - Bryan Friedman
 title: Getting Started with the pack CLI using Cloud Native Buildpacks
-topics:
-- Containers
 weight: 2
 oldPath: "/content/guides/containers/cnb-gs-pack.md"
 aliases:

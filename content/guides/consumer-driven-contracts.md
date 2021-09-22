@@ -7,11 +7,10 @@ patterns:
 tags:
 - Spring Cloud Contract
 - Getting Started
-featured: true
-title: Modernization with Consumer Driven Contracts
-topics:
 - Spring
 - Microservices
+featured: true
+title: Modernization with Consumer Driven Contracts
 weight: 4
 oldPath: "/content/guides/microservices/consumer-driven-contracts.md"
 aliases:

@@ -7,11 +7,10 @@ tags:
 - spring
 - testing
 - spring security
+- Spring
 team:
 - Toby Rumans
 title: Spring Route Authorization Testing
-topics:
-- Spring
 oldPath: "/content/guides/spring/spring-route-authorization-testing.md"
 aliases:
 - "/guides/spring/spring-route-authorization-testing"

@@ -9,6 +9,7 @@ patterns:
 team:
 - Cora Iberkleid
 title: Understanding the Differences Between Dockerfile and Cloud Native Buildpacks
+tags: []
 ---
 
 

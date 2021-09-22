@@ -3,15 +3,15 @@ date: '2021-02-05'
 lastmod: '2021-02-05'
 linkTitle: Bitnami
 subsection: Bitnami
-description: Learn about Bitnami's free and open source solutions for developers. Easily build and deploy applications in public clouds, on laptops, and on Kubernetes.
+description: Learn about Bitnami's free and open source solutions for developers.
+  Easily build and deploy applications in public clouds, on laptops, and on Kubernetes.
 tags:
 - Bitnami
+- Containers
+- Kubernetes
 team:
 - Raquel Campuzano Godoy
 title: What is Bitnami?
-topics:
-- Containers
-- Kubernetes
 oldPath: "/content/guides/containers/what-is-bitnami.md"
 aliases:
 - "/guides/containers/what-is-bitnami"

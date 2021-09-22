@@ -10,12 +10,10 @@ subsection: Kafka
 tags:
 - Kafka
 - Event Streaming
+- Messaging and Integration
 team:
 - Brian McClain
 title: Getting Started with Kafka
-topics:
-- Event Streaming
-- Messaging and Integration
 oldPath: "/content/guides/messaging-and-integration/kafka-gs.md"
 aliases:
 - "/guides/messaging-and-integration/kafka-gs"

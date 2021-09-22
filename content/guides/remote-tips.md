@@ -9,8 +9,6 @@ featured: true
 team:
 - VMware Tanzu Labs
 title: Remote Tips
-topics:
-- Agile
 oldPath: "/content/guides/agile/remote-tips.md"
 aliases:
 - "/guides/agile/remote-tips"

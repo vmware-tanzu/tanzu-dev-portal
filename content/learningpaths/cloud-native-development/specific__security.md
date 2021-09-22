@@ -9,6 +9,7 @@ weight: 200
 oldPath: "/content/outcomes/cloud-native-development/specific__security.md"
 aliases:
 - "/outcomes/cloud-native-development/specific__security"
+tags: []
 ---
 
 Security in a distributed system can be a daunting task since you cannot rely on a large centralized security module on a monolithic web server. Spring Boot provides the Spring Security package to offer a general abstraction layer for configuring your application security without relying on the specific container or deployment environment.

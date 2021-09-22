@@ -14,8 +14,6 @@ tags:
 team:
 - Vikram Vaswani
 title: Develop a REST API with Bitnami's Node.js and MongoDB Containers
-topics:
-- Microservices
 weight: 1
 oldPath: "/content/guides/microservices/develop-rest-api-nodejs-mongodb-containers.md"
 aliases:

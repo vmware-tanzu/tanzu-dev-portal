@@ -17,8 +17,6 @@ team:
 - Boskey Savla
 title: Automated Code to URL on Kubernetes using Cloud Native Buildpacks, Knative
   and ArgoCD
-topics:
-- CI-CD
 weight: 1
 oldPath: "/content/guides/ci-cd/cnbp-knative-argocd.md"
 aliases:

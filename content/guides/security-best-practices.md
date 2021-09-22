@@ -14,8 +14,6 @@ tags:
 team:
 - Carlos Rodriguez Hernandez
 title: Best Practices for Securing and Hardening Container Images
-topics:
-- Containers
 oldPath: "/content/guides/containers/security-best-practices.md"
 aliases:
 - "/guides/containers/security-best-practices"

@@ -10,12 +10,11 @@ tags:
 - Spring Boot
 - Docker
 - Helm
+- Containers
+- Kubernetes
 team:
 - Raquel Campuzano
 title: Move a Custom Spring Boot Application to Production Using Bitnami Helm Charts
-topics:
-- Containers
-- Kubernetes
 weight: 4
 oldPath: "/content/guides/containers/deploy-spring-boot-application-production-helm.md"
 aliases:

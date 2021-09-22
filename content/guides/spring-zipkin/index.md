@@ -13,13 +13,12 @@ tags:
 - API
 - Zipkin
 - Observability
+- Spring
+- Microservices
 featured: true
 team:
 - Brian McClain
 title: Getting Started with Zipkin and Spring Boot
-topics:
-- Spring
-- Microservices
 oldPath: "/content/guides/spring/spring-zipkin.md"
 aliases:
 - "/guides/spring/spring-zipkin"

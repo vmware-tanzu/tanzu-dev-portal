@@ -14,8 +14,6 @@ tags:
 team:
 - Brian McClain
 title: 'Getting Started with Tekton Part 1: Hello World'
-topics:
-- CI-CD
 weight: 1
 oldPath: "/content/guides/ci-cd/tekton-gs-p1.md"
 aliases:

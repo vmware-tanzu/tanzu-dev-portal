@@ -9,12 +9,10 @@ tags:
 - Kubernetes
 - Observability
 - Wavefront
-featured: true
-title: Monitoring Containers at Scale with Wavefront
-topics:
-- Kubernetes
 - Containers
 - Microservices
+featured: true
+title: Monitoring Containers at Scale with Wavefront
 weight: 3
 oldPath: "/content/guides/kubernetes/monitoring-at-scale-wavefront.md"
 aliases:
