@@ -52,7 +52,7 @@
                 {{ $link := replace $link " " "-" }}
                 {{ $link := printf "%s/%s" "/topics" $link | relURL }}
                 <div class="topic-card flex-315 td-box">
-                    <a href="{{ $link }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-4">
+                    <a href="{{ $link }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-3">
                         <img src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
                         <div class="h3 link mt-3">
                             {{ .Params.grouptitle }}

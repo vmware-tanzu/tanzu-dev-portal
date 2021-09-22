@@ -236,7 +236,9 @@
     height: 480px;
     background-color: $gray-800;
     transition: all .2s ease-out;
-
+    p {
+      line-height: 1.8rem;
+    }
     img {
       height: 100px;
     }
