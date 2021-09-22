@@ -5,11 +5,11 @@ date: '2021-09-16'
 weight: -100
 linkTitle: Agile Development
 title: Agile Development
-level1: Agile Transformation & Practices
+level1: Agile Transformation and Practices
 level2: Agile Development
 toppage: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Odio ut sem nulla pharetra diam sit amet. Facilisis gravida neque convallis a cras. Vel eros donec ac odio tempor orci dapibus ultrices in. Sed pulvinar proin gravida hendrerit lectus a. A lacus vestibulum sed arcu. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Et ultrices neque ornare aenean. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Semper feugiat nibh sed pulvinar proin gravida. Porttitor massa id neque aliquam. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+Agile software development is a set of methods that result in fast and frequent delivery of value to your customers. It promotes well-planned, small iterations by highly collaborative, cross-functional teams. Agile methodologies provide an alternative to the sequential development and long release cycles traditionally associated with Waterfall.
 
-Vulputate odio ut enim blandit volutpat maecenas. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Quam pellentesque nec nam aliquam sem et tortor consequat. Tempor orci eu lobortis elementum nibh tellus. Sagittis purus sit amet volutpat consequat mauris nunc congue. Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit. Eget duis at tellus at urna condimentum mattis. Tempor orci dapibus ultrices in iaculis nunc sed augue. Tristique magna sit amet purus gravida quis blandit turpis cursus. Sagittis id consectetur purus ut faucibus pulvinar. Molestie nunc non blandit massa. Et tortor consequat id porta. Integer enim neque volutpat ac tincidunt vitae semper quis. Etiam erat velit scelerisque in dictum non. Leo urna molestie at elementum. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
+Many agile teams work in a co-located environment, which helps foster healthy team dynamics. The shift to remote working brings a host of new challenges. We’re all aware that remote working in some form is here to stay. Although the benefits for organizations are huge, we must also recognize and address the challenges remote working brings—to mental well-being, collaboration and productivity.
