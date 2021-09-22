@@ -5,7 +5,7 @@ topic: Building Modern Applications
 topicgroups: "Application Development"
 grouptitle: "Build"
 weight: 1
-icon: cicd
+icon: containers
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
 menu:

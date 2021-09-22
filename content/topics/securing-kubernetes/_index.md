@@ -5,7 +5,7 @@ topic: Securing Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Secure"
 weight: 3
-icon: cicd
+icon: agile
 description: >
     Securing your Kubernetes platform and workloads
 menu:

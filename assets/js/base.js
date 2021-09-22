@@ -404,9 +404,6 @@ limitations under the License.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  console.log(document.documentElement.scrollTop);
-  console.log(document.body.scrollHeight);
-
   if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     document.querySelector("#navbar").classList.add("darken");
     document.querySelector("#dev-title").classList.add("fadeOut");
@@ -469,8 +466,22 @@ $( ".learning-path-card" ).mouseenter(function() {
 });
 
 // Topics
+var currentRow = "#modern-applications-row";
+$("#modern-applications-row").addClass("active");
+
 $("#topic-selector .topic-header").mouseenter(function() {
   $("#topic-selector .topic-header").removeClass("active");
   $(this).addClass("active");
+  var row = "#"+$(this).attr('id') + "-row";
+  
+  if(currentRow == row) {
+    
+  }
+  else {
+    $(".topics-row").removeClass("active");
+    currentRow = row;
+    $(row).addClass("active");
+  }
 });
+
 

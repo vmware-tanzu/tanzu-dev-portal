@@ -5,7 +5,7 @@ topic: Agile Transformation and Practices
 topicgroups: "Modern Applications"
 grouptitle: "Transform"
 weight: 3
-icon: cicd
+icon: data
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
 menu:

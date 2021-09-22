@@ -5,7 +5,7 @@ topic: Deploying Modern Applications
 topicgroups: "Application Development"
 grouptitle: "Deploy"
 weight: 2
-icon: cicd
+icon: messaging
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
 menu:
