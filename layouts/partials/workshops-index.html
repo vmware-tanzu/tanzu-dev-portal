@@ -1,5 +1,6 @@
 {{ define "workshopCard" }}
   {{/* if and (eq .context.Parent .parent) (not .context.Params.hidden) */}}
+  {{/* end */}}
   {{ if not .Params.hidden }}
     {{ $image := (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL ) }}
     <div
@@ -32,7 +33,14 @@
           </div>
           <h5 class="fs-80 opacity-4">
             <span class="fa fa-hourglass-half mr-1">&nbsp;</span
-            >{{ .Params.length }} minutes <span><a class="btn mt-4" href="{{ print `/get-workshop/` .Params.lab | relURL }}">Start Workshop</a></span>
+            >{{ .Params.length }} minutes
+            <span
+              ><a
+                class="btn mt-4"
+                href="{{ print `/get-workshop/` .Params.lab | relURL }}"
+                >Start Workshop</a
+              ></span
+            >
           </h5>
         </div>
       </div>
@@ -41,30 +49,28 @@
 {{ end }}
 <div class="d-flex container flex-wrap">
   <div class="section-index flex-1">
-      <div class="row">
+      <div class="row flex-nowrap">
         {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
           {{ template "workshopCard" . }}
         {{ end }}
       </div>
-      <hr class="panel-line" />
-      <!-- <div class="col"> -->
-      <div class="row">
-        <!-- Groups content according to the "param_key" field in front matter -->
-        {{ range .Pages.GroupByParam "level1" }}
-          <!--
+    <hr class="panel-line" />
+    <!-- <div class="col"> -->
+    <div>
+      <!-- Groups content according to the "param_key" field in front matter -->
+      {{ range .Pages.GroupByParam "level1" }}
+        <!--
           <div class="col">
             -->
-          <div class="row">
-            <h3>{{ .Key }}</h3>
-          </div>
-          <div class="row" role="listbox">
-            {{ range .Pages }}
-              {{ template "workshopCard" . }}
-            {{ end }}
-          </div>
-          <!--  </div> -->
-          <!-- </div> -->
-        {{ end }}
-      </div>
+        <h3>{{ .Key }}</h3>
+        <div class="row flex-nowrap" role="listbox">
+          {{ range .Pages }}
+            {{ template "workshopCard" . }}
+          {{ end }}
+        </div>
+        <!--  </div> -->
+        <!-- </div> -->
+      {{ end }}
+    </div>
   </div>
 </div>
