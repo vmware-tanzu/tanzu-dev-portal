@@ -43,22 +43,23 @@
             {{ end }}
         </div>
     </div>
-    <div class="row td-box td-box--gradient td-box--height-auto pt-0">
+    <div id="topics-row-outer" class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative">
     {{ range $topicgroups }}
-        <div class="row justify-content-between w-100 td-box mb-lg-4">
+            <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row position-absolute">
             {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
                 {{ $link := replace (lower .Params.linktitle) "/" "-"  }}
                 {{ $link := replace $link "&" "and" }}
                 {{ $link := replace $link " " "-" }}
                 {{ $link := printf "%s/%s" "/topics" $link | relURL }}
-                <div class="topic-card flex-315 my-lg-2 td-box">
-                    <a href="{{ $link }}">
-                        <div class="h3 link">
+                <div class="topic-card flex-315 td-box">
+                    <a href="{{ $link }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-4">
+                        <img src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
+                        <div class="h3 link mt-3">
                             {{ .Params.grouptitle }}
                         </div>
-                        <div class="py-3 px-4 mb-4 text-left h4 text-white" >
+                        <p class="px-4 mb-4 text-left h4 text-center py-0" >
                             {{ .Description }}
-                        </div>
+                        </p>
                     </a>
                 </div>
             {{ end }}

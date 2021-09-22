@@ -5,7 +5,7 @@ topic: Modernizing Legacy Applications
 topicgroups: "Modern Applications"
 grouptitle: "Modernize"
 weight: 2
-icon: cicd
+icon: serverless
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
 menu:

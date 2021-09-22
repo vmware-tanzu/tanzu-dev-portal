@@ -5,7 +5,7 @@ topic: Managing and Operating Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Manage"
 weight: 2
-icon: cicd
+icon: streaming
 description: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
 menu:

@@ -5,7 +5,7 @@ topic: Building Kubernetes Runtime
 topicgroups: "Kubernetes Platform"
 grouptitle: "Build"
 weight: 1
-icon: cicd
+icon: kubernetes
 description: >
     Continuous integration and delivery automate the software development lifecycle as much as possible.
 menu:
