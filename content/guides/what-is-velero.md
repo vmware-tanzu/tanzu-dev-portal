@@ -7,6 +7,7 @@ tags:
 - Backup
 - Disaster Recovery
 - Velero
+- Getting Started
 title: Backing Up, Restoring, and Migrating Resources with Velero
 topics:
 - Kubernetes
@@ -14,7 +15,7 @@ weight: 77
 oldPath: "/content/guides/kubernetes/what-is-velero.md"
 aliases:
 - "/guides/kubernetes/what-is-velero"
-level1: Managing and Operating Kubernetes
+level1: Securing Kubernetes
 level2: Backup and Restore
 ---
 

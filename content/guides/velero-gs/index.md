@@ -6,6 +6,8 @@ patterns:
 - Deployment
 tags:
 - Velero
+- Getting Started
+featured: true
 team:
 - Tiffany Jernigan
 title: Getting Started with Velero
@@ -14,7 +16,7 @@ topics:
 oldPath: "/content/guides/kubernetes/velero-gs.md"
 aliases:
 - "/guides/kubernetes/velero-gs"
-level1: Managing and Operating Kubernetes
+level1: Securing Kubernetes
 level2: Backup and Restore
 ---
 

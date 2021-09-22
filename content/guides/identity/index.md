@@ -7,11 +7,14 @@ team:
 title: Identity and Access Control
 topics:
 - Kubernetes
+tags:
+- Getting Started
+featured: true
 weight: 42
 oldPath: "/content/guides/kubernetes/identity.md"
 aliases:
 - "/guides/kubernetes/identity"
-level1: Managing and Operating Kubernetes
+level1: Securing Kubernetes
 level2: Access and Security
 ---
 
