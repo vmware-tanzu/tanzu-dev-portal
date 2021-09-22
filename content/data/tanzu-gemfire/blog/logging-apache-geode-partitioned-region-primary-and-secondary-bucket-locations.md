@@ -10,9 +10,9 @@ type: blog
 ---
 
 ## Introduction
-An Apache Geode [PartitionedRegion](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/PartitionedRegion.java) partitions its entries into buckets among all the servers where it is defined. Properties that affect the number and location of the buckets include [total-num-buckets](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/configuring_bucket_for_pr.html) and [redundant-copies](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/set_pr_redundancy.html). The total-num-buckets configures the number of buckets across all the members of the DistributedSystem. The redundant-copies configures the number of copies of each bucket. The primary bucket is hosted on one server, and if redundant-copies is greater than zero, the secondary buckets are hosted on other servers.
+An Apache Geode [PartitionedRegion](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/PartitionedRegion.java) partitions its entries into buckets among all the servers where it is defined. Properties that affect the number and location of the buckets include [`total-num-buckets`](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/configuring_bucket_for_pr.html) and [`redundant-copies`](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/set_pr_redundancy.html). The `total-num-buckets` configures the number of buckets across all the members of the DistributedSystem. The `redundant-copies` configures the number of copies of each bucket. The primary bucket is hosted on one server, and if `redundant-copies` is greater than zero, the secondary buckets are hosted on other servers.
 
-In addition, the [redundancy-zone](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/set_redundancy_zones.html) property helps determine where buckets are located. If two redundancy zones are defined and redundant-copies is one (meaning 2 copies of each bucket), then the primary bucket will be in a member in one zone, and the secondary bucket will be in a member in the other zone.
+In addition, the [`redundancy-zone`](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/set_redundancy_zones.html) property helps determine where buckets are located. If two redundancy zones are defined and `redundant-copies` is one (meaning 2 copies of each bucket), then the primary bucket will be in a member in one zone, and the secondary bucket will be in a member in the other zone.
 
 This article is a companion to my [Logging Apache Geode PartitionedRegion Entry Details Per Bucket](data/tanzu-gemfire/blog/logging-partitionedregion-entry-details-per-bucket) article. It provides an example of a compact view of the primary and secondary bucket locations per server and redundancy zone.
 
@@ -20,16 +20,16 @@ This article is a companion to my [Logging Apache Geode PartitionedRegion Entry 
 
 All source code described in this article as well as an example usage is available [here](https://github.com/boglesby/log-redundancy-zone-buckets).
 
-The [GetBucketIdsFunction](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/server/src/main/java/example/server/function/GetBucketIdsFunction.java) is executed on each server and:  
+The [`GetBucketIdsFunction`](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/server/src/main/java/example/server/function/GetBucketIdsFunction.java) is executed on each server and:  
 
 - Gets the PartitionedRegion for the input region name
 - Gets the member’s redundancy zone
 - Gets the configured number of buckets for the PartitionedRegion
 - Gets the list of local bucket ids for the PartitionedRegion
 - Gets the list of local primary bucket ids for the PartitionedRegion
-- Creates and returns a [ServerBucketIds](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/server/src/main/java/example/domain/ServerBucketIds.java) object containing these values
+- Creates and returns a [`ServerBucketIds`](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/server/src/main/java/example/domain/ServerBucketIds.java) object containing these values
 
-The [GetBucketIdsResultCollector](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/client/src/main/java/example/client/function/GetBucketIdsResultCollector.java) created on the client combines each `ServerBucketIds` object into an [`AllBucketIds`](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/client/src/main/java/example/domain/AllBucketIds.java) object.
+The [`GetBucketIdsResultCollector`](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/client/src/main/java/example/client/function/GetBucketIdsResultCollector.java) created on the client combines each `ServerBucketIds` object into an [`AllBucketIds`](https://github.com/boglesby/log-redundancy-zone-buckets/blob/master/client/src/main/java/example/domain/AllBucketIds.java) object.
 
 The `AllBucketIds` object contains:
 - All bucket ids per server
@@ -42,8 +42,8 @@ The `AllBucketIds` object contains:
 - Extra bucket ids per redundancy zone
 
 
-### Execute the GetBucketIdsFunction
-The `GetBucketIdsFunction` `execute` method first gets the PartitionedRegion. The PartitionedRegion provides the configured number of buckets. Its [PartitionedRegionDataStore](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/PartitionedRegionDataStore.java) provides the local bucket ids and the local primary bucket ids. The redundancy zone is retrieved from the [DistributionConfig](https://github.com/apache/geode/blob/723429f291f48f309acc3407f1405339ddbcfc20/geode-core/src/main/java/org/apache/geode/distributed/internal/DistributionConfig.java#L2793). Finally, the Function creates and returns the `ServerBucketIds` object.
+### Execute the `GetBucketIdsFunction`
+The `GetBucketIdsFunction` `execute` method first gets the PartitionedRegion. The PartitionedRegion provides the configured number of buckets. Its [`PartitionedRegionDataStore`](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/PartitionedRegionDataStore.java) provides the local bucket ids and the local primary bucket ids. The redundancy zone is retrieved from the [`DistributionConfig`](https://github.com/apache/geode/blob/723429f291f48f309acc3407f1405339ddbcfc20/geode-core/src/main/java/org/apache/geode/distributed/internal/DistributionConfig.java#L2793). Finally, the Function creates and returns the `ServerBucketIds` object.
 
 ```java
 public void execute(FunctionContext<Object[]> context) {
@@ -67,7 +67,7 @@ public void execute(FunctionContext<Object[]> context) {
 }
 ```
 
-### Process the ServerBucketIds Result
+### Process the `ServerBucketIds` Result
 The `GetBucketIdsResultCollector` `addResult` method is called on the client when the `ServerBucketIds` result from each server is received. The method calls `AllBucketIds` process to process the `ServerBucketIds` object like:
 
 ```java

@@ -43,7 +43,6 @@ addAndReturnSizes
 additively
 addNotificationListener
 addon(s)?
-addResult
 Adib
 Admission(Response|Review)
 adoptopenjdk
@@ -461,7 +460,6 @@ DistributedSystem's
 DistributedSystemMXBean
 DistributedSystemMXBean's
 DistributedSystems
-DistributionConfig
 DistributionMessageObserver
 DistributionStats
 distroless
@@ -651,8 +649,6 @@ getAllLocalPrimaryBucketRegions
 getAllMetrics
 GetAllMetricsFunction
 getAppFromExternalRepository(=false)?
-GetBucketIdsFunction
-GetBucketIdsResultCollector
 getEntries
 getEntry
 getHistogram
@@ -1256,7 +1252,6 @@ Parrit
 PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
-PartitionedRegionDataStore
 PartitionedRegionDetails
 PartitionedRegionStats
 PartitionedRegionStorageException
@@ -1409,8 +1404,6 @@ Recommender
 [Rr]eddit
 [rR]edis
 RedMonk('s)?
-redundancy-zone
-redundant-copies
 Reetro
 refactorings?
 RegExMethodAuthorizer
@@ -1536,7 +1529,6 @@ Semver
 SerialGatewaySenderQueueEntrySizer
 server1
 server2
-ServerBucketIds
 ServerConnection
 [Ss]erverless
 ServiceAccount(s)?
@@ -1708,7 +1700,6 @@ tooltip
 topologies
 Torgerson
 toString
-total-num-buckets
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
