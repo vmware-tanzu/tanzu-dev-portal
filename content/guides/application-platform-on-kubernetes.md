@@ -10,4 +10,4 @@ level2: Application Platform on Kubernetes
 toppage: true
 ---
 
-Building your own application platform on Kubernetes can be a massive undertaking, and if your operational needs call for a full-fledge platform to run your applications, it's often better to use a dedicated, all-in-one solution. There's a number of options designed to make deploying you code to Kubernetes simple, fast, and reliable. 
+Building your own application platform on Kubernetes can be a massive undertaking, and if your operational needs call for a full-fledged platform to run your applications, it's often better to use a dedicated, all-in-one solution. There's a number of options designed to make deploying you code to Kubernetes simple, fast, and reliable. 

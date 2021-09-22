@@ -10,4 +10,4 @@ level2: Access and Security
 toppage: true
 ---
 
-Kubernetes priovides a lot of solutions for access and security, both for the platform itself as well as your containers running on it. Secret management, access and identity, and service accounts make it so you can securely operate your workloads without compromising the data required to run them.
+Kubernetes provides a lot of solutions for access and security, both for the platform itself as well as your containers running on it. Secret management, access and identity, and service accounts make it so you can securely operate your workloads without compromising the data required to run them.

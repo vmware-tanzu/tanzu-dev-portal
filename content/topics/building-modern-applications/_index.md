@@ -7,7 +7,7 @@ grouptitle: "Build"
 weight: 1
 icon: containers
 description: >
-    Your languange, your framework, your data
+    Your language, your framework, your data
 menu:
     main:
         parent: "topics"
