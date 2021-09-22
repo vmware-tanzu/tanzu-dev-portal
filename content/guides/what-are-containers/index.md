@@ -53,6 +53,6 @@ Containers help accelerate development pipelines by streamlining dev/test cycles
 
 ## Keep Learning
 
-Containers enable consistent deployment and execution of applications across development and test environments and across multiple clouds. See our [Containers topic page](/topics/containers/) for more container-related content. You may also want to check out our [Container Basics Workshop](/workshops/lab-container-basics/) to keep learning about containers, as well as [KubeAcademy](https://kube.academy) that has an excellent series on [Containers 101](https://kube.academy/courses/containers-101).
+Containers enable consistent deployment and execution of applications across development and test environments and across multiple clouds. You may want to check out our [Container Basics Workshop](/workshops/lab-container-basics/) to keep learning about containers, as well as [KubeAcademy](https://kube.academy) that has an excellent series on [Containers 101](https://kube.academy/courses/containers-101).
 
 To get started learning about container orchestration with Kubernetes, see [What is Kubernetes?](/guides/kubernetes/what-is-kubernetes).
