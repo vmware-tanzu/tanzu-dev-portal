@@ -32,7 +32,7 @@ There are three caveats to know about before starting the install.
   3. This is a three part post. 
 
   * Part 1, (this post), introduces the Tanzu Application Platform, and how the individual components come together to form this platform. 
-  * Part 2, (coming soon), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
+  * [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
   * Part 3, (coming soon), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application. 
 
     Part 2 and Part 3 will heavily leverage the existing [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, although heavily modified for this specific use case (i.e. deploying in KIND). For the definitive guide to installing Tanzu Application Platform on any supported platform, see [docs](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html). 
@@ -101,7 +101,7 @@ Here, you can see how all the components work together transparently to create a
 
 From development, to operations, to security, a primary goal of Tanzu Application Platform is to ensure all these parties' goals are met. In this way, compliance policies, updates, and new features are automatically configured together from the very beginning, rather than as an afterthought. 
 
-Keep reading  Part 2 (coming soon) to find out how to locally install Tanzu Application Platform on KIND. 
+Keep reading  [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/) to find out how to locally install Tanzu Application Platform on KIND. 
 
 
 ## Resources
@@ -110,6 +110,6 @@ Keep reading  Part 2 (coming soon) to find out how to locally install Tanzu Appl
 - [VMware Tanzu Application Platform demo video](https://www.youtube.com/watch?v=9oupRtKT_JM) -- Watch Aaron Torgerson give a 5 minute demo of Tanzu Application Platform in action before you try it for yourself. 
 - This post will be broken up into three parts:
 - Part 1 (you are here) -- What exactly is Tanzu Application Platform Beta 1?
-- Part 2 (coming soon) -- Installing Tanzu Application Platform Beta 1 locally on KIND as part of an inner development loop.
+- [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/) -- Installing Tanzu Application Platform Beta 1 locally on KIND as part of an inner development loop.
 - Part 3 (coming soon) -- Using Tanzu Application Platform to deploy a sample application and see the parts in action. 
 
