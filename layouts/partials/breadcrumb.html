@@ -10,12 +10,9 @@
 		
 		<!-- Topic -->
 		{{ if .Params.level1 }}
-			{{ $link := replace (lower .Params.level1) "/" "-"  }}
-            {{ $link := replace $link "&" "and" }}
-            {{ $link := replace $link " " "-" }}
-            {{ $link := printf "%s/%s" "/topics" $link | relURL }}
+			{{ $topicpage := index (where (where .Site.Pages "Section" "topics") ".Title" .Params.level1) 0 }}
 			<li class="breadcrumb-item active" aria-current="page">
-				<a href="{{ $link }}">{{ .Params.level1 }}</a>
+				<a href="{{ $topicpage.RelPermalink }}">{{ .Params.level1 }}</a>
 			</li>
 		{{ end }}
 
