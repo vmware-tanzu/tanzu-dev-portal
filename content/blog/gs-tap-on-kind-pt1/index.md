@@ -7,10 +7,7 @@ description: What is Tanzu Application Platform, and how do the individual compo
 tags:
 - tanzu application platform
 - kind
-- CI-CD
-- Kubernetes
-parent: Tanzu Application Platform
-weight: 1
+# Author(s)
 team:
 - Tony Vetter
 date: '2021-09-13'
@@ -34,7 +31,7 @@ There are three caveats to know about before starting the install.
   3. This is a three part post. 
 
   * Part 1, (this post), introduces the Tanzu Application Platform, and how the individual components come together to form this platform. 
-  * Part 2, (coming soon), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
+  * [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
   * Part 3, (coming soon), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application. 
 
     Part 2 and Part 3 will heavily leverage the existing [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, although heavily modified for this specific use case (i.e. deploying in KIND). For the definitive guide to installing Tanzu Application Platform on any supported platform, see [docs](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html). 
@@ -44,7 +41,7 @@ There are three caveats to know about before starting the install.
 If you are reading this, and this is your first introduction to Tanzu Application Platform, consider spending some time reading through the VMware [product pages](https://tanzu.vmware.com/application-platform) where you can get a better idea of the value that this platform can bring to your development flow. There, you will find blog posts, demo videos, and more. The product pages will help you understand how Tanzu Application Platform works, how its architecture works, and if you are interested in deploying it as a Beta. Additional resources are available at the bottom of this post. 
 
 
-![A view of the components of Tanzu Application Platform](images/guides/ci-cd/gs-tap-on-kind/stack-diagram.png)
+![A view of the components of Tanzu Application Platform](images/stack-diagram.png)
 
 
 ### Tanzu Application Platform High-Level Introduction
@@ -62,7 +59,7 @@ Okay, so maybe you want to go a little deeper than the values statements provide
 In this way, developers who are starting a new project do not need to start from a blank page. Instead, much as is the case with [start.spring.io](https://start.spring.io), developers can select from a list of existing accelerators, and go from there. 
 
 
-![The GUI of Application Accelerator for Tanzu](images/guides/ci-cd/gs-tap-on-kind/app-accel-gui.png)
+![The GUI of Application Accelerator for Tanzu](images/app-accel-gui.png)
 
 It is also fairly straight forward to [build a new accelerator](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/0.2/acc-docs/GUID-creating-accelerators-index.html). Trying this out will gain you familiarity with these processes and how they work. All accelerators are maintained as code repositories in GitHub, and integrated into Application Accelerator for Tanzu with small YAML templates. 
 
@@ -97,13 +94,13 @@ Operations teams using Tanzu Build Service are also given a centralized location
 It's great to understand the individual components and what they do. But within the Tanzu Application Platform, these individual components are brought together and configured in such a way as to bring more value than simply the sum of the parts. And additional components, and thus additional value, are being worked on currently to be brought to the Tanzu Application Platform. 
 
 
-![The vale of Tanzu Application Platform, and all pieces working together](images/guides/ci-cd/gs-tap-on-kind/value-flow.png)
+![The vale of Tanzu Application Platform, and all pieces working together](images/value-flow.png)
 
 Here, you can see how all the components work together transparently to create a repeatable and secure pipeline for your applications, to production. 
 
 From development, to operations, to security, a primary goal of Tanzu Application Platform is to ensure all these parties' goals are met. In this way, compliance policies, updates, and new features are automatically configured together from the very beginning, rather than as an afterthought. 
 
-Keep reading  Part 2 (coming soon) to find out how to locally install Tanzu Application Platform on KIND. 
+Keep reading  [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/) to find out how to locally install Tanzu Application Platform on KIND. 
 
 
 ## Resources
@@ -112,6 +109,6 @@ Keep reading  Part 2 (coming soon) to find out how to locally install Tanzu Appl
 - [VMware Tanzu Application Platform demo video](https://www.youtube.com/watch?v=9oupRtKT_JM) -- Watch Aaron Torgerson give a 5 minute demo of Tanzu Application Platform in action before you try it for yourself. 
 - This post will be broken up into three parts:
 - Part 1 (you are here) -- What exactly is Tanzu Application Platform Beta 1?
-- Part 2 (coming soon) -- Installing Tanzu Application Platform Beta 1 locally on KIND as part of an inner development loop.
+- [Part 2](https://tanzu.vmware.com/developer/guides/kubernetes/gs-tap-on-kind-pt2/) -- Installing Tanzu Application Platform Beta 1 locally on KIND as part of an inner development loop.
 - Part 3 (coming soon) -- Using Tanzu Application Platform to deploy a sample application and see the parts in action. 
 
