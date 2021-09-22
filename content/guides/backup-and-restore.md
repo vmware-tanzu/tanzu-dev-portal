@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Create your disaster recovery plan
 weight: -100
 linkTitle: Backup and Restore
 title: Backup and Restore

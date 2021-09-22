@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Get the most from running on Kubernetes
 weight: -100
 linkTitle: Preparing and Deploying Kubernetes Workloads
 title: Preparing and Deploying Kubernetes Workloads

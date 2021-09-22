@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Get the most out of your code
 weight: -100
 linkTitle: Frameworks and Languages
 title: Frameworks and Languages

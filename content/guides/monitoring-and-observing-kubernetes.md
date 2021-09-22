@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Get insight into your Kubernetes platform
 weight: -100
 linkTitle: Monitoring and Observing Kubernetes
 title: Monitoring and Observing Kubernetes

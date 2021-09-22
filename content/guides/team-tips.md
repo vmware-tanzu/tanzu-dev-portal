@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Tips to work better as a team
 weight: -100
 linkTitle: Team Tips
 title: Team Tips

@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Modernize how you work
 weight: -100
 linkTitle: Agile Development
 title: Agile Development

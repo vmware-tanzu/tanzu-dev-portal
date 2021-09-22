@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Modernize how you operate existing applications
 weight: -100
 linkTitle: Packaging, Operating, and Outside Enhancements
 title: Packaging, Operating, and Outside Enhancements

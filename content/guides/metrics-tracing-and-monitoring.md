@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Get insight into your code
 weight: -100
 linkTitle: Metrics, Tracing, and Monitoring
 title: Metrics, Tracing, and Monitoring

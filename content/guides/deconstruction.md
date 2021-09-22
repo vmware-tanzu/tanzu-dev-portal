@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Break down the monolith
 weight: -100
 linkTitle: Deconstruction
 title: Deconstruction

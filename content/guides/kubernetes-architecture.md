@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Learn exactly how Kubernetes works
 weight: -100
 linkTitle: Kubernetes Architecture
 title: Kubernetes Architecture

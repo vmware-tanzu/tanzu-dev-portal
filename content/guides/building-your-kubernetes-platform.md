@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Customize Kubernetes to meet your needs
 weight: -100
 linkTitle: Building Your Kubernetes Platform
 title: Building Your Kubernetes Platform

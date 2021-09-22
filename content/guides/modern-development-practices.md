@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Shorten the development loop
 weight: -100
 linkTitle: Modern Development Practices
 title: Modern Development Practices

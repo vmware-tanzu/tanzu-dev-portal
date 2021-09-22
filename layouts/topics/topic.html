@@ -31,15 +31,11 @@
             <!-- Build subtopic boxes -->
             {{ range $subtopics }}
                 <div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
-                    {{ $link := replace (lower . ) "/" "-"  }}
-                    {{ $link := replace $link "&" "and" }}
-                    {{ $link := replace $link " " "-" }}
-                    {{ $link := replace $link "," "" }}
-                    {{ $link := printf "%s/%s" "/guides" $link | relURL }}
-                    <a href="{{ $link }}">
-                        <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ . }}</div></p>
+                    {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
+                    <a href="{{ $subtopic.RelPermalink }}">
+                        <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ $subtopic.Title }}</div></p>
                         <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
-                            Lorim Ipsum
+                            {{ $subtopic.Description }}
                         </div>
                     </a>
                 </div>   

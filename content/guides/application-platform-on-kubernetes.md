@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Simplify how you deploy to Kubernetes
 weight: -100
 linkTitle: Application Platform on Kubernetes
 title: Application Platform on Kubernetes

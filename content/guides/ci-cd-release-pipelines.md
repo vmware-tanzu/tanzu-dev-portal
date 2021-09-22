@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Push to production faster and safer
 weight: -100
 linkTitle: CI/CD, Release Pipelines
 title: CI/CD, Release Pipelines

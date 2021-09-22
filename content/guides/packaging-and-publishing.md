@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Build your code reliably
 weight: -100
 linkTitle: Packaging and Publishing
 title: Packaging and Publishing

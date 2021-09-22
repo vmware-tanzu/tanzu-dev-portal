@@ -1,6 +1,6 @@
 ---
 date: '2021-09-16'
-description: Lorem ipsum
+description: Get the most from your databases and message brokers
 weight: -100
 linkTitle: Services
 title: Services
