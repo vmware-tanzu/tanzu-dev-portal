@@ -6,9 +6,13 @@ featuredspot: 5
 layout: intro
 duration: 60
 experience: Beginner
-description: "Learn our philosophy to enabling people to achieve amazing outcomes through software."
+description: Learn our philosophy to enabling people to achieve amazing outcomes through
+  software.
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-how-we-work/_index.md"
+aliases:
+- "/outcomes/application-development-how-we-work/"
 ---
 ## Why are we talking about this?
 VMware Tanzu Labs has a long history of doing things a little differently. We also have a 30-year reputation as being one of the most innovative, reliable, and agile software services organizations around. The secret to our success is our different way of thinking. But really, it isn't so different, and it isn't a secret. We think our way of doing things is pretty straight forward if you follow a few guiding principles.

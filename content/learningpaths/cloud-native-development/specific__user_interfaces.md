@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: User Interfaces
 weight: 180
+oldPath: "/content/outcomes/cloud-native-development/specific__user_interfaces.md"
+aliases:
+- "/outcomes/cloud-native-development/specific__user_interfaces"
 ---
 
 Traditional Java Enterprise Edition (EE) web applications evolved through many model-view-controller technology stacks, including templating engines such as Java Server Pages (JSP), Java Server Faces (JSF), Apache Struts, or Portlets. Each of these stacks tried to tackle the separation between server-based business logic and the views themselves while attempting to break up the UI into modular components. The modular components are tightly coupled to an underlying heavyweight server environment. Applications that use these view technologies are often prime candidates for more extensive modernization efforts, as they tend to crystalize in monolithic web applications with many functions and layers.

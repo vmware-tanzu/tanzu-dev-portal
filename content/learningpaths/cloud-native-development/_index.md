@@ -6,9 +6,14 @@ featuredspot: 2
 duration: 60
 experience: Beginner
 layout: intro
-description: "Learn the basics of cloud native development with Spring. This developer preparation guide helps you to get the most of a project following the Tanzu Labs methodology."
+description: Learn the basics of cloud native development with Spring. This developer
+  preparation guide helps you to get the most of a project following the Tanzu Labs
+  methodology.
 team:
- - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/cloud-native-development/_index.md"
+aliases:
+- "/outcomes/cloud-native-development/"
 ---
  
 ## Why is this learning path important?

@@ -3,7 +3,10 @@ title: Development Flow
 weight: 20
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-rhythm/dev-flow.md"
+aliases:
+- "/outcomes/application-development-rhythm/dev-flow"
 ---
 This article is the second in a five-part series.
 

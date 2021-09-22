@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: Pair Programming
 weight: 50
+oldPath: "/content/outcomes/application-development/pair-programming.md"
+aliases:
+- "/outcomes/application-development/pair-programming"
 ---
 
 Lennon and McCartney. Penn and Teller. Venus and Serena.

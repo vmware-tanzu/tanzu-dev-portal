@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: Spring Ecosystem
 weight: 30
+oldPath: "/content/outcomes/cloud-native-development/general__spring_ecosystem.md"
+aliases:
+- "/outcomes/cloud-native-development/general__spring_ecosystem"
 ---
 
 We rely heavily on the [open-source ecosystem of Spring projects](https://spring.io/) to replace vendor- or container-specific technologies or proprietary solutions for Java-based applications. There are many specific tools and frameworks under that banner. For development projects, we leverage two prerequisite frameworks providing us a lightweight core with standard functionalities: [Spring Boot](https://spring.io/projects/spring-boot) and [Spring Cloud](http://projects.spring.io/spring-cloud/).

@@ -6,6 +6,9 @@ team:
 - Craig Tracey
 title: Developing a DevSecOps Practice
 weight: 1
+oldPath: "/content/outcomes/secure-software-supply-chain/establish-devsecops.md"
+aliases:
+- "/outcomes/secure-software-supply-chain/establish-devsecops"
 ---
 
 Modern software delivery demands that we think differently about how we bring

@@ -11,6 +11,9 @@ tags:
 - Culture
 - Cloud Native
 - Architecture
+oldPath: "/content/outcomes/application-development/cloud-native-development.md"
+aliases:
+- "/outcomes/application-development/cloud-native-development"
 ---
 
 Cloud Native is at the heart of modern application development endeavors. Used to depict engineering practices and state of the art applications, the term "cloud-native" is omnipresent and often misunderstood. There is a good chance that anyone you ask will provide a different definition.

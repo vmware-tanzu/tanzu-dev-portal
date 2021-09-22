@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: Development Environment and Tools
 weight: 20
+oldPath: "/content/outcomes/cloud-native-development/general__dev_env_tools.md"
+aliases:
+- "/outcomes/cloud-native-development/general__dev_env_tools"
 ---
 
 As software engineers, we work with the tools of our trade the whole time. Still, it's always a good idea to take some time to brush up on a few things before starting our next project.

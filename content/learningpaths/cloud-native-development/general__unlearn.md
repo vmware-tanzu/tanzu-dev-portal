@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: Things to Unlearn
 weight: 1
+oldPath: "/content/outcomes/cloud-native-development/general__unlearn.md"
+aliases:
+- "/outcomes/cloud-native-development/general__unlearn"
 ---
 
 Every company and team is different, and we have all spent a lot of time learning software development practices that can be detrimental to developing distributed cloud native systems. 

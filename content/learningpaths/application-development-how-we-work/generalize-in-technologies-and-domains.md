@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: We Generalize (in technologies and domains)
 weight: 40
+oldPath: "/content/outcomes/application-development-how-we-work/generalize-in-technologies-and-domains.md"
+aliases:
+- "/outcomes/application-development-how-we-work/generalize-in-technologies-and-domains"
 ---
 
 > "I only work in Healthcare".

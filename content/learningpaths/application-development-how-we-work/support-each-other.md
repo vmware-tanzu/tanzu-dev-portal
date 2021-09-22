@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: We're Supported
 weight: 80
+oldPath: "/content/outcomes/application-development-how-we-work/support-each-other.md"
+aliases:
+- "/outcomes/application-development-how-we-work/support-each-other"
 ---
 
 We don't have traditional command-and-control line management structures within Tanzu Labs. **We have coaching managers.** They help our people get to where they want to go in their careers. 

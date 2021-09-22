@@ -10,6 +10,9 @@ tags:
 - Teams
 - Roles
 - Agile
+oldPath: "/content/outcomes/application-development/balanced-teams.md"
+aliases:
+- "/outcomes/application-development/balanced-teams"
 ---
 
 Many teams today have chosen to follow an Agile approach to software development. Despite the proven benefits of such an approach, many of these teams still fail to realize their full potential. 

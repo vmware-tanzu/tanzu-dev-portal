@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: API Gateway
 weight: 150
+oldPath: "/content/outcomes/cloud-native-development/specific__api_gateway.md"
+aliases:
+- "/outcomes/cloud-native-development/specific__api_gateway"
 ---
 
 An API gateway provides a way to route all traffic to one service before it reaches a different one. This allows you to create a central service that provides cross-cutting functionality like authentication and authorization, policy enforcement, or data transformation. The API gateway also provides an aggregation service that collects and transforms data from lower-level services into something needed by a particular client (for example, a bandwidth-constrained mobile app). 

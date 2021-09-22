@@ -3,7 +3,10 @@ title: Building Blocks, Part 1
 weight: 30
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-rhythm/dev-building-blocks-1.md"
+aliases:
+- "/outcomes/application-development-rhythm/dev-building-blocks-1"
 ---
 This article is the third in a five-part series.
 

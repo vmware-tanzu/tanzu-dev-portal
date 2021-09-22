@@ -5,14 +5,18 @@ featured: true
 featuredspot: 1
 level1: Building Modern Applications
 layout: intro
-description: "Learn how we approach modern application development practices, teaming, culture, and technology at VMware Tanzu Labs."
+description: Learn how we approach modern application development practices, teaming,
+  culture, and technology at VMware Tanzu Labs.
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
 tags:
-  - All Roles
-  - Applications
+- All Roles
+- Applications
 experience: Beginner
 duration: 240
+oldPath: "/content/outcomes/application-development/_index.md"
+aliases:
+- "/outcomes/application-development/"
 ---
  
 ## Why is this important?

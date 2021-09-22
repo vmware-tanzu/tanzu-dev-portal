@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: We Share Knowledge
 weight: 60
+oldPath: "/content/outcomes/application-development-how-we-work/share-knowledge.md"
+aliases:
+- "/outcomes/application-development-how-we-work/share-knowledge"
 ---
 
 **We are committed to helping others.** This requires communication, and most importantly, empathy. We learn how to work so well _with_ our clients and each other that we make progress better together than either of us would alone.

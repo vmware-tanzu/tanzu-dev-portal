@@ -4,12 +4,16 @@ weight: -2
 layout: intro
 duration: 120
 tags:
-  - All Roles
-  - Applications
+- All Roles
+- Applications
 experience: Beginner
-description: "Learn how we approach developer productivity practices at VMware Tanzu Labs."
+description: Learn how we approach developer productivity practices at VMware Tanzu
+  Labs.
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-rhythm/_index.md"
+aliases:
+- "/outcomes/application-development-rhythm/"
 ---
 
 ## Why is this important?

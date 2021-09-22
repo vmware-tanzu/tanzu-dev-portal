@@ -13,7 +13,10 @@ experience: Beginner
 layout: intro
 team:
 - Craig Tracey
-aliases: ["/patterns/deployment"]
+aliases:
+- "/patterns/deployment"
+- "/outcomes/secure-software-supply-chain/"
+oldPath: "/content/outcomes/secure-software-supply-chain/_index.md"
 ---
 
 ## Key Concepts

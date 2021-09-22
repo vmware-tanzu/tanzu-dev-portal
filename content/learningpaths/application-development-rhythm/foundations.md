@@ -3,7 +3,10 @@ title: Foundations
 weight: 10
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-rhythm/foundations.md"
+aliases:
+- "/outcomes/application-development-rhythm/foundations"
 ---
 *This article is the first in a five-part series.*
 

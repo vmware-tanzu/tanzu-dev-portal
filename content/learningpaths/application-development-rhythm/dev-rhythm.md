@@ -3,7 +3,10 @@ title: Development Rhythm by Example
 weight: 40
 layout: single
 team:
-  - VMware Tanzu Labs
+- VMware Tanzu Labs
+oldPath: "/content/outcomes/application-development-rhythm/dev-rhythm.md"
+aliases:
+- "/outcomes/application-development-rhythm/dev-rhythm"
 ---
 
 *This article is the fifth in a five-part series.*

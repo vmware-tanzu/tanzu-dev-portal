@@ -6,6 +6,9 @@ team:
 - VMware Tanzu Labs
 title: We Specialize (in craft)
 weight: 50
+oldPath: "/content/outcomes/application-development-how-we-work/specialize-in-craft.md"
+aliases:
+- "/outcomes/application-development-how-we-work/specialize-in-craft"
 ---
 
 Before you read this section, we want to emphasize this: **_we don't expect anyone to know everything described here day one._** 
