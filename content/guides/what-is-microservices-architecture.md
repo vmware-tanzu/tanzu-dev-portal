@@ -49,4 +49,4 @@ Here's a video by a former Netflix architect that gives you the lowdown on using
 
 {{< youtube 4ClmJxVz1SM >}}
 
-The guide [Deconstructing the Monolith](/guides/microservices/deconstructing-the-monolith/) discusses how to break a monolithic application down into microservices. After you are comfortable with the concepts, our [microservices workshop](/workshops/lab-microservice/) can help you get started building microservices using [Spring](/topics/spring).
+The guide [Deconstructing the Monolith](/guides/microservices/deconstructing-the-monolith/) discusses how to break a monolithic application down into microservices. After you are comfortable with the concepts, our [microservices workshop](/workshops/lab-microservice/) can help you get started [building microservices](/topics/building-modern-applications) using Spring.

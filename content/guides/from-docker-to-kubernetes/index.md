@@ -131,7 +131,7 @@ At the heart of Kubernetes is a `pod.` A pod contains running instances of one o
 | **Load Balancer** | Cluster IP/Node Port | Creates an External Load Balancer that maps to either a Cluster IP/Node Port | External |
 {{</ table >}}
 
-The `services` resource constructs in Kubernetes may be [Microservices](/topics/microservices) or other HTTP services. 
+The `services` resource constructs in Kubernetes may be a microservice or other HTTP services. 
 
 ### Hello World service definition
 

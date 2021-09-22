@@ -194,7 +194,7 @@ You can verify that Prometheus is scraping the new endpoint by checking the targ
 
 ## Visualizing the JVM Metrics
 
-The Grafana website maintains a great repository of community-made dashboards, including one for visualizing [JVM metrics from Micrometer](https://grafana.com/grafana/dashboards/4701). Even better, Grafana makes it very easy to import existing dashboards, as shown in [this guide](/guides/kubernetes/observability-prometheus-grafana-p1/#visualizing-prometheus-data-in-grafana). While it may take a few minutes for Prometheus to pick up some of the metrics, upon importing the dashboard, you’ll see a whole plethora of metrics start to be populated.
+The Grafana website maintains a great repository of community-made dashboards, including one for visualizing [JVM metrics from Micrometer](https://grafana.com/grafana/dashboards/4701). Even better, Grafana makes it very easy to import existing dashboards, as shown in [this guide](/guides/observability-prometheus-grafana-p1/#visualizing-prometheus-data-in-grafana). While it may take a few minutes for Prometheus to pick up some of the metrics, upon importing the dashboard, you’ll see a whole plethora of metrics start to be populated.
 
 ![JVM metrics in Grafana](images/spring-prometheus-002.png)
 

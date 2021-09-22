@@ -117,7 +117,7 @@ If any of the options are relevant to your application, perform them one at a ti
 After your application is working and thoroughly tested, commit your code changes and put the application through the formal testing procedures along the (automated) path to production. You might have to collaborate with operations engineers to adjust your application's configuration and CI/CD pipelines.
 
 ## Keep Learning
-The Tanzu Developer Portal has a [series of guides](/topics/spring/) on topics related to Spring and Spring Boot development that can help you learn more and address a variety of needs. 
+The Tanzu Developer Portal has a [series of guides](/topics/building-modern-applications/) on topics related to building modern applications using Spring and Spring Boot that can help you learn more and address a variety of needs. 
 
 ### References
 In addition to the links included in the text, the list below provides additional useful guides and tutorials related to the topics discussed. 
