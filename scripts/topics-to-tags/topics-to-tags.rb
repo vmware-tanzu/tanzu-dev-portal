@@ -17,7 +17,12 @@ end.parse!
 
 # Gather the list of files to parse
 contentPath = Dir.glob(File.join(File.join(options[:source], "/content/guides/**/*.md")))
-
+contentPath << Dir.glob(File.join(File.join(options[:source], "/content/blog/*.md")))
+contentPath << Dir.glob(File.join(File.join(options[:source], "/content/videos/*.md")))
+contentPath << Dir.glob(File.join(File.join(options[:source], "/content/samples/*.md")))
+contentPath << Dir.glob(File.join(File.join(options[:source], "/content/workshops/*.md")))
+puts contentPath
+return 
 # Add alias
 contentPath.each do |f|
     fData = File.open(f).read
