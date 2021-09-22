@@ -446,5 +446,5 @@ Congratulations! You now (probably) have a full install of Tanzu Application Pla
     tiny       True     io.paketo.stacks.tiny
     ```
 
-    If your outputs look the same, then you are ready to proceed to part 3 (coming soon!)) of this series, where we will actually dive in and use the Tanzu Application Platform. 
+    If your outputs look the same, then you are ready to proceed to part 3 (coming soon!) of this series, where we will actually dive in and use the Tanzu Application Platform. 
 
