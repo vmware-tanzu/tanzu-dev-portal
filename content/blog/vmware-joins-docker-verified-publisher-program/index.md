@@ -6,8 +6,6 @@ description: VMware joins Docker Verified Publisher Program with its Bitnami, Ta
   containerized images as well as they will have unlimited container image requests
   for Bitnami, Tanzu, and Spring cloud repositories.
 date: '2021-08-05'
-Topics:
-- Containers
 Tags:
 - Marketplace
 - Bitnami

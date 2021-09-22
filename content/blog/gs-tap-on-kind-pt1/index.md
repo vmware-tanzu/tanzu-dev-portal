@@ -7,7 +7,6 @@ description: What is Tanzu Application Platform, and how do the individual compo
 tags:
 - tanzu application platform
 - kind
-# Author(s)
 team:
 - Tony Vetter
 date: '2021-09-13'

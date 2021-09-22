@@ -19,6 +19,8 @@
 
         <br/>
 
+        {{ printf "%v" .Data }}
+
         <!-- Gather subtopics -->
         {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
         {{ $subtopics := (slice) }}
