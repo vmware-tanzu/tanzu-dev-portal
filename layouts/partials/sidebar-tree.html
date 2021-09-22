@@ -35,6 +35,7 @@
   {{ $link := replace (lower $p.Params.level2) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
+  {{ $link := replace $link "," "" }}
   {{ $link := printf "%s/%s" "/guides" $link | relURL }}
   {{ $sid := $s.RelPermalink | anchorize }}
     <li class="td-sidebar-nav__section-title text-wrap" id="{{ $sid }}">
