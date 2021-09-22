@@ -7,11 +7,11 @@ grouptitle: "Deploy"
 weight: 2
 icon: messaging
 description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    Get your code in production quickly and safely
 menu:
     main:
         parent: "topics"
         weight: 7
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Once your code is written, there's an immediate followup question: How do I run it? A well-planned release cycle to test, build, package, and deploy your code will allow you to release quickly and safely.

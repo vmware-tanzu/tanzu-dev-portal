@@ -7,11 +7,11 @@ grouptitle: "Manage"
 weight: 2
 icon: streaming
 description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    Keeping your Kubernetes platform running smoothly
 menu:
     main:
         parent: "topics"
         weight: 7
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Just as you gather metrics from your applications and monitor them to keep them running smoothly, you should be keeping an eye on your Kubernetes platform as well. Kubernetes also provides a great selection of features that your applications can leverage to run better and more reliably as well.

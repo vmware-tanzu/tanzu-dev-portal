@@ -7,7 +7,7 @@ grouptitle: "Transform"
 weight: 3
 icon: data
 description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    How you work is just as important as the work you do
 menu:
     main:
         parent: "topics"
