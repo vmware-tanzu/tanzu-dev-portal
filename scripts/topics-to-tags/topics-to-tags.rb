@@ -21,8 +21,7 @@ contentPath << Dir.glob(File.join(File.join(options[:source], "/content/blog/*.m
 contentPath << Dir.glob(File.join(File.join(options[:source], "/content/videos/*.md")))
 contentPath << Dir.glob(File.join(File.join(options[:source], "/content/samples/*.md")))
 contentPath << Dir.glob(File.join(File.join(options[:source], "/content/workshops/*.md")))
-puts contentPath
-return 
+contentPath.flatten!
 # Add alias
 contentPath.each do |f|
     fData = File.open(f).read
@@ -33,10 +32,8 @@ contentPath.each do |f|
     newTags.append(contentMetadata["topics"])
     newTags = newTags.flatten.uniq.compact
     newTags = newTags.nil? ? [] : newTags
-    puts newTags
     contentMetadata["tags"] = newTags
     contentMetadata.delete("topics")
-    puts contentMetadata
 
     # Most frontmatter should start with "---", meaning we split on the second occurance.
     # However we should double check to make sure
