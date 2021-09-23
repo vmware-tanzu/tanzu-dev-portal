@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
-const querystring = require('querystring');
 const Sentry = require('@sentry/serverless');
 
 const {
@@ -40,7 +39,9 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
     try {
         const { code, state } = event.queryStringParameters;
-        const parsed = querystring.parse(base64.urlDecode(state));
+        const urlSearchParams = new URLSearchParams(base64.urlDecode(state));
+        const parsed = Object.fromEntries(urlSearchParams.entries());
+
         const cookies = cookie.parse(event.headers.cookie);
         if (!parsed.csrf || parsed.csrf !== cookies['content-lib-csrf']) {
             console.error(
@@ -85,7 +86,9 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
                 },
             },
         };
-        const oneTrustCookieParsed = querystring.parse(cookies.OptanonConsent);
+
+        const cookieUrlSearchParams = new URLSearchParams(cookies.OptanonConsent);
+        const oneTrustCookieParsed = Object.fromEntries(cookieUrlSearchParams.entries());
         if (oneTrustCookieParsed){
             const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
             if (oneTrustCookieParsed.groups[groupposition] === '0') {
