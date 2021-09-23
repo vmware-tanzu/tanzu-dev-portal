@@ -47,12 +47,8 @@
     {{ range $topicgroups }}
             <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row position-absolute">
             {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-                {{ $link := replace (lower .Params.linktitle) "/" "-"  }}
-                {{ $link := replace $link "&" "and" }}
-                {{ $link := replace $link " " "-" }}
-                {{ $link := printf "%s/%s" "/topics" $link | relURL }}
                 <div class="topic-card flex-315 td-box">
-                    <a href="{{ $link }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-3">
+                    <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-3">
                         <img src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
                         <div class="h3 link mt-3">
                             {{ .Params.grouptitle }}
