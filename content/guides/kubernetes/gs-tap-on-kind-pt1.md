@@ -53,7 +53,7 @@ NOTE: This guide does not provide installation instructions for  all  the suppor
  
   {{% callout %}} Ensure you have enough resources allocated to Docker to install Tanzu Application Platform {{% /callout %}}
 
-* [Install KIND](https://kind.sigs.k8s.io/docs/user/quick-start/):  KIND is the tooling you use to create the Kubernetes cluster on which you will install the Tanzu Application Platform. At the time of this writing, I am using KIND version `0.11.1`. The current prerequisites in the Tanzu Application Platform install docs list a Kubernetes cluster of at least version `1.19`.
+* [Install KIND](https://kind.sigs.k8s.io/docs/user/quick-start/):  KIND is the tooling you use to create the Kubernetes cluster on which you will install the Tanzu Application Platform. At the time of this writing, I am using KIND version `0.11.1`. The current prerequisites in the Tanzu Application Platform install docs list a Kubernetes cluster of at least version `1.19`. Currently, the most current version that should be used for Tanzu Application Platform is `1.21`.
 * [Install `kubectl`](https://kubernetes.io/docs/tasks/tools/): If you have ever worked with Kubernetes, you likely already have this prerequisite installed. At the time of this writing, I am using `kubectl` client version `1.22.1`.
 * [A Tanzu Network Account](https://account.run.pivotal.io/z/uaa/sign-up): Tanzu Application Platform and some other components will be downloaded from the Tanzu Network. You will need a valid account, which you can sign up for free. 
 * [Install the `pivnet` CLI tool](https://github.com/pivotal-cf/pivnet-cli): **This is optional**. In this guide, the `pivnet` CLI tool is used for downloading some components of the Tanzu Application Platform. At the time of this writing, I am using `pivnet` version `3.0.1`.
@@ -79,7 +79,7 @@ In this section, you will create a working directory, download some starter temp
     cd gs-tap-on-kind
     ```
 
-3. Set up local environment variables to make future commands in this guide easier to copy and paste.
+3. Set up local environment variables to make future commands in this guide easier to copy and paste. **NOTE**: These commands will add a plain text copy of your passwords to you shell's history file. You may want to rectify this after completing this guide.
     ```
     export TN_USERNAME=username@domain.com # your username for the Tanzu Network
     ```
@@ -94,6 +94,11 @@ In this section, you will create a working directory, download some starter temp
 
     ```
     export DH_PASSWORD=p@55w0rd! # your password for Docker Hub
+    ```
+
+4. Log the `docker` CLI in to the Tanzu Network at `registry.pivotal.io`.
+    ```
+    docker login registry.pivotal.io -u $TN_USERNAME -p $TN_PASSWORD
     ```
 
 ## Setting up the KIND Kubernetes cluster
