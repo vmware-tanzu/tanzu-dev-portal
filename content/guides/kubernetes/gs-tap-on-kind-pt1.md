@@ -31,8 +31,9 @@ There are three caveats to know about before starting the install.
      NOTE: This blog post provides one way to deploy the Tanzu Application Platform. Visit [supported platforms](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for blog posts that describe other ways to deploy the Tanzu Application platform. 
 
   3. This guide is a two part post. 
-    * Part 1 (this post), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
-    * Part 2 (coming soon), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application.
+   
+     * Part 1 (this post), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
+     * [Part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application.
 
 This guide leverages from the official [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, but is heavily modified for the deployment on KIND. Refer to these documents for installation questions, or if you encounter any issues during the install process as they are the source of truth. 
 
@@ -460,5 +461,5 @@ Congratulations! You now (probably) have a full install of Tanzu Application Pla
     tiny       True     io.paketo.stacks.tiny
     ```
 
-    If your outputs look the same, then you are ready to proceed to part 2 (coming soon!) of this series, where we will actually dive in and use the Tanzu Application Platform.
+    If your outputs look the same, then you are ready to proceed to [part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/) of this series, where we will actually dive in and use the Tanzu Application Platform.
 

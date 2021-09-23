@@ -24,7 +24,7 @@ By now you may have seen the [announcement](https://tanzu.vmware.com/content/vmw
 You also need a way to locally evaluate and use the Tanzu Application Platform. You want to understand how it works, and what it can do for your organization before a potential deployment. If this sounds like you, I have a 2-part series on installing and using Tanzu Application Catalog Beta 1 locally, using [KIND](https://kind.sigs.k8s.io).
 
   * [Part 1](/guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
-  * Part 2, (coming soon), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application. 
+  * [Part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application. 
 
     Both of these guides will heavily leverage the existing [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, although heavily modified for this specific use case (i.e. deploying in KIND). For the definitive guide to installing Tanzu Application Platform on any supported platform, see [docs](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html). 
 
@@ -103,5 +103,5 @@ Keep reading to [Part 1](/guides/kubernetes/gs-tap-on-kind-pt1/) of my guide to 
 - [VMware Tanzu Application Platform demo video](https://www.youtube.com/watch?v=9oupRtKT_JM) -- Watch Aaron Torgerson give a 5 minute demo of Tanzu Application Platform in action before you try it for yourself. 
 - This post will be broken up into three parts:
 - [Tanzu Application Platform on KIND, Part 1](/guides/kubernetes/gs-tap-on-kind-pt1/) -- Installing Tanzu Application Platform Beta 1 locally on KIND as part of an inner development loop.
-- Tanzu Application Platform on KIND, Part 2 (coming soon) -- Using Tanzu Application Platform to deploy a sample application and see the parts in action. 
+- [Tanzu Application Platform on KIND, Part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/) -- Using Tanzu Application Platform to deploy a sample application and see the parts in action. 
 
