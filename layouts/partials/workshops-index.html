@@ -1,66 +1,78 @@
 {{ define "workshopCard" }}
   {{ if not .Params.hidden }}
     {{ $image := (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL ) }}
-    <div
-      class="filter-item col-lg-4 mb-4 flex-315 px-0 mr-lg-3 {{ range .Params.tags }}
-        {{ . | lower }}
-      {{ end }} "
-    >
+    <li>
       <div
-        class="linked-box td-box--gray-darkest workshop-box hover-scale overflow-hidden rounded"
-        href="{{ .RelPermalink }}"
+        class="filter-item mb-4 flex-315 px-0 mr-lg-3 {{ range .Params.tags }}
+          {{ . | lower }}
+        {{ end }} "
       >
         <div
-          class="workshop-hero bg-transparent"
-          style="background-image: url({{$image}});background-size:cover;background-position:center"
-        ></div>
-        <div
-          class="description px-4 pt-2 d-flex flex-column justify-content-between pb-4 bg-gray-dark"
+          class="linked-box td-box--gray-darkest workshop-box hover-scale overflow-hidden rounded"
+          href="{{ .RelPermalink }}"
         >
-          <div>
-            <h4 class="workshop-title mt-3">{{- .Title -}}</h4>
-            {{ if gt (len .Description) 100 }}
-              <p class="text-white workshop-text">
-                {{ print (substr .Description 0 100) "..." }}
-              </p>
-            {{ else }}
-              <p class="text-white workshop-text">
-                {{ .Description | markdownify }}
-              </p>
-            {{ end }}
+          <div
+            class="workshop-hero bg-transparent"
+            style="background-image: url({{$image}});background-size:cover;background-position:center"
+          ></div>
+          <div
+            class="description px-4 pt-2 d-flex flex-column justify-content-between pb-4 bg-gray-dark"
+          >
+            <div>
+              <h4 class="workshop-title mt-3">{{- .Title -}}</h4>
+              {{ if gt (len .Description) 100 }}
+                <p class="text-white workshop-text">
+                  {{ print (substr .Description 0 100) "..." }}
+                </p>
+              {{ else }}
+                <p class="text-white workshop-text">
+                  {{ .Description | markdownify }}
+                </p>
+              {{ end }}
+            </div>
+            <h5 class="fs-80 opacity-4">
+              <span class="fa fa-hourglass-half mr-1">&nbsp;</span
+              >{{ .Params.length }} minutes
+              <span
+                ><a
+                  class="btn"
+                  href="{{ print `/get-workshop/` .Params.lab | relURL }}"
+                  >Start Workshop</a
+                ></span
+              >
+            </h5>
           </div>
-          <h5 class="fs-80 opacity-4">
-            <span class="fa fa-hourglass-half mr-1">&nbsp;</span
-            >{{ .Params.length }} minutes
-            <span
-              ><a
-                class="btn"
-                href="{{ print `/get-workshop/` .Params.lab | relURL }}"
-                >Start Workshop</a
-              ></span
-            >
-          </h5>
         </div>
       </div>
-    </div>
+    </li>
   {{ end }}
 {{ end }}
 <div class="d-flex container flex-wrap">
-  <div class="section-index flex-1">
-      <div class="row flex-nowrap">
-        {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
-          {{ template "workshopCard" . }}
-        {{ end }}
+  <div class="section-index flex-1" style="max-width: inherit">
+    <div class="carousel right">
+      <div class="slide"></div>
+      <div class="wrap">
+        <ul>
+          {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
+            {{ template "workshopCard" . }}
+          {{ end }}
+        </ul>
       </div>
+    </div>
     <hr class="panel-line" />
     <div>
       <!-- Groups content according to the "param_key" field in front matter -->
       {{ range .Pages.GroupByParam "level1" }}
         <h3>{{ .Key }}</h3>
-        <div class="row flex-nowrap" role="listbox">
-          {{ range .Pages }}
-            {{ template "workshopCard" . }}
-          {{ end }}
+        <div class="carousel right" role="listbox">
+          <div class="slide"></div>
+          <div class="wrap">
+            <ul>
+              {{ range .Pages }}
+                {{ template "workshopCard" . }}
+              {{ end }}
+            </ul>
+          </div>
         </div>
       {{ end }}
     </div>
