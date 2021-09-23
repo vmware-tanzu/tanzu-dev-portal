@@ -1,6 +1,6 @@
 ---
-title:  "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 2"
-linkTitle: "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 2"
+title:  "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1"
+linkTitle: "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1"
 description: A guide for installing the VMware Tanzu Application Platform Beta locally, on KIND
 parent: tanzu application platform
 weight: 1
@@ -15,15 +15,24 @@ team:
 - Tony Vetter
 date: "2021-09-14"
 lastmod: "2021-09-14"
+aliases:
+- /guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/
+- /guides/kubernetes/gs-tap-on-kind-pt2/
 ---
 
-In my [previous post](https://tanzu.vmware.com/developer/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/) you were introduced to the individual parts that make up the VMware Tanzu Application Platform, and how they come together to build a powerful development platform. In this post, you will learn the install process that locally deploys this platform on [KIND](https://kind.sigs.k8s.io).
+In my [previous post](/blog/getting-started-with-vmware-tanzu-application-platform-beta-1/) you were introduced to the individual parts that make up the VMware Tanzu Application Platform, and how they come together to build a powerful development platform. In this post, you will learn the install process that locally deploys this platform on [KIND](https://kind.sigs.k8s.io).
 
-Before diving in, there are a couple of caveats from [part 1](https://tanzu.vmware.com/developer/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/) worth mentioning here. For more details on these caveats, see that post. 
+There are three caveats to know about before starting the install. 
 
-First, referenced in the title, Tanzu Application Platform is in beta stage. This means that it is available for users to evaluate, but it is changing quickly. Breaking changes are likely.
+  1. Remember that the Tanzu Application Platform is in Beta. There are many changes still to come. While  every effort will be made to keep this post up to date, it is likely that changes (including possible breaking changes) will be released before these updates are updated. Every effort will be made to call out exact versions of tools and applications that are being used so that you can be aware of where issues might arise. 
 
-Next, deploying applications on KIND makes for an easy, repeatable, code-driven way to run software on Kubernetes. However, that comes with its own tradeoffs. Whether this works for your environment and  needs is up to you to decide. KIND is currently a supported platform for Tanzu Application Platform. The purpose of this guide is to walk you through the process of that deployment. 
+  2. While KIND is an awesome tool, especially for developers that need quick and repeatable access to a Kubernetes cluster, there are some necessary workarounds when it comes to deploying and using Tanzu Application Platform. These workarounds are called out in this guide. It is up to you to decide if you want to workaround these issues. 
+
+     NOTE: This blog post provides one way to deploy the Tanzu Application Platform. Visit [supported platforms](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for blog posts that describe other ways to deploy the Tanzu Application platform. 
+
+  3. This guide is a two part post. 
+    * Part 1 (this post), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
+    * Part 2 (coming soon), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application.
 
 This guide leverages from the official [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, but is heavily modified for the deployment on KIND. Refer to these documents for installation questions, or if you encounter any issues during the install process as they are the source of truth. 
 
@@ -272,7 +281,7 @@ Here you will install the Application Accelerator for VMware Tanzu component of 
     ```
     tanzu package install app-accelerator -p accelerator.apps.tanzu.vmware.com -v 0.2.0 -n tap-install -f app-accelerator-values.yaml
     ```
-    As discussed in [part 1](https://tanzu.vmware.com/developer/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/) of this guide, Application Accelerator for Tanzu is a system for storing and using starter code packages. So in order to get much value out of it as part of this guide, you need to add some of these starters. The Tanzu Application Platform team has created some samples for you already. Go ahead and add those next. 
+    As discussed in my initial ["Getting Started with Tanzu Application Platform Beta 1"](/blog/getting-started-with-vmware-tanzu-application-platform-beta-1/) blog post, Application Accelerator for Tanzu is a system for storing and using starter code packages. So in order to get much value out of it as part of this guide, you need to add some of these starters. The Tanzu Application Platform team has created some samples for you already. Go ahead and add those next. 
 
 6. First, Open the file `sample-accelerators-0-2.yaml` so you can see how the accelerators are defined and brought into the platform.
     ```
@@ -446,5 +455,5 @@ Congratulations! You now (probably) have a full install of Tanzu Application Pla
     tiny       True     io.paketo.stacks.tiny
     ```
 
-    If your outputs look the same, then you are ready to proceed to part 3 (coming soon!) of this series, where we will actually dive in and use the Tanzu Application Platform. 
+    If your outputs look the same, then you are ready to proceed to part 2 (coming soon!) of this series, where we will actually dive in and use the Tanzu Application Platform.
 
