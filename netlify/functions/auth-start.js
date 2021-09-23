@@ -39,27 +39,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         cookieParams.domain = getSiteURL().replace('https://', '');
     const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
 
-    // Set a JWT token
-    // const jwtData = {
-    //     exp: Date.now() * 1000  - 86400,
-    //     iat: Date.now() * 1000,
-    // };
-    // const netlifyJwt = jwt.sign(jwtData, process.env.JWT_SIGNING_SECRET, {
-    //     algorithm: 'HS256',
-    // });
-    // const jwtCookieParams = {
-    //     secure: true,
-    //     httpOnly: false,
-    //     path: '/',
-    //     maxAge: 600,
-    // }
-    // if (config.context === "production" || config.context === "deploy-preview") {
-    //     jwtCookieParams.domain = getSiteURL().replace('https://', '');
-    // }
-    // const jwtCookie = cookie.serialize("nf_jwt", netlifyJwt, jwtCookieParams);
-
-
-    // redirect the user to the CSP discovery endpoint for authentication
+    // redirect the user to the ESP discovery endpoint for authentication
     const params = {
         response_type: 'code',
         client_id: getClientId(),

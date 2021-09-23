@@ -27,7 +27,7 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-    // we should only get here via a redirect from CSP, which would have
+    // we should only get here via a redirect from ESP, which would have
     // an authorization code in the querystring. if that's not present,
     // then someone didn't follow the correct flow - bail early
     if (!event.queryStringParameters) {
@@ -69,7 +69,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             console.error('invalid token, access denied');
             return {
                 statusCode: 401,
-                body: JSON.stringify({ error: 'CSP access denied' }),
+                body: JSON.stringify({ error: 'ESP access denied' }),
             };
         }
         const jwtToken = {
@@ -80,7 +80,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             app_metadata: {
                 authorization: {
                     // this role maps to what we've set up in our Netlify _redirects file
-                    // (for now, anyone who gets a token from CSP is considered a user)
+                    // (for now, anyone who gets a token from ESP is considered a user)
                     roles: ['user'],
                 },
             },
@@ -103,7 +103,12 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             jwtToken.sub = decoded.payload.sub;
         }
 
-        const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SIGNING_SECRET, {
+        const jwtSecret = "secret"; // use default secret for local dev context
+        if (config.context === "production" || config.context === "deploy-preview") {
+            jwtSecret = process.env.JWT_SIGNING_SECRET;
+        }
+
+        const netlifyJwt = jwt.sign(jwtToken, jwtSecret, {
             algorithm: 'HS256',
         });
 
@@ -111,7 +116,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             secure: true,
             httpOnly: false,
             path: '/',
-            expires: new Date(decoded.payload.exp * 1000), // same expiration as CSP token
+            expires: new Date(decoded.payload.exp * 1000), // same expiration as ESP token
         }
 
         if (config.context === "production" || config.context === "deploy-preview") {
@@ -122,10 +127,9 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
         // redirect the user to where they were originally trying to get
         // with the cookie so that Netlify lets them in
-        var redirectPath = parsed.path === '/.netlify/non-existent-path' ? '/.netlify/functions/get-workshop/' : parsed.path;
-        const redirect = redirectPath.includes('get-workshop')
-            ? `${getSiteURL()}${redirectPath}?src=${parsed.referer}`
-            : `${getSiteURL()}${redirectPath || ''}`;
+        const redirect = parsed.path.includes('get-workshop')
+            ? `${getSiteURL()}${parsed.path}?src=${parsed.referer}`
+            : `${getSiteURL()}${parsed.path || ''}`;
 
         var redirectBody = redirectTemplate.replace("REDIRECT_URL", redirect)
         
