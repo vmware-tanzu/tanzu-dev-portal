@@ -1,6 +1,4 @@
 {{ define "workshopCard" }}
-  {{/* if and (eq .context.Parent .parent) (not .context.Params.hidden) */}}
-  {{/* end */}}
   {{ if not .Params.hidden }}
     {{ $image := (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL ) }}
     <div
@@ -36,7 +34,7 @@
             >{{ .Params.length }} minutes
             <span
               ><a
-                class="btn mt-4"
+                class="btn"
                 href="{{ print `/get-workshop/` .Params.lab | relURL }}"
                 >Start Workshop</a
               ></span
@@ -55,21 +53,15 @@
         {{ end }}
       </div>
     <hr class="panel-line" />
-    <!-- <div class="col"> -->
     <div>
       <!-- Groups content according to the "param_key" field in front matter -->
       {{ range .Pages.GroupByParam "level1" }}
-        <!--
-          <div class="col">
-            -->
         <h3>{{ .Key }}</h3>
         <div class="row flex-nowrap" role="listbox">
           {{ range .Pages }}
             {{ template "workshopCard" . }}
           {{ end }}
         </div>
-        <!--  </div> -->
-        <!-- </div> -->
       {{ end }}
     </div>
   </div>
