@@ -1,13 +1,13 @@
 ---
-title:  "Getting Started with VMware Tanzu Application Platform Beta 1"
-linkTitle: "Getting Started with VMware Tanzu Application Platform Beta 1 on KIND"
-description: What is Tanzu Application Platform, and how do the individual components work together to help build a secure, repeatable, and powerful platform for developers.
-topics:
-- CI-CD
-- Kubernetes
+title: Getting Started with VMware Tanzu Application Platform Beta 1
+linkTitle: Getting Started with VMware Tanzu Application Platform Beta 1 on KIND
+description: What is Tanzu Application Platform, and how do the individual components
+  work together to help build a secure, repeatable, and powerful platform for developers.
 tags:
 - tanzu application platform
 - kind
+- CI-CD
+- Kubernetes
 team:
 - Tony Vetter
 date: '2021-09-13'
@@ -15,7 +15,7 @@ lastmod: '2021-09-13'
 level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 aliases:
-- /blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/
+- "/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/"
 ---
 
 By now you may have seen the [announcement](https://tanzu.vmware.com/content/vmware-tanzu-application-platform-resources/announcing-vmware-tanzu-application-platform) at the recent [SpringOne](https://springone.io) conference for VMware's new [Tanzu Application Platform](https://tanzu.vmware.com/application-platform). You understand the power a platform like this can bring to your production environments, but have you considered what it can do for your [inner loop development](https://thenewstack.io/kubernetes-infrastructure-know-the-inner-dev-loop/)? Not every commit goes to production. That’s why you need a way to locally deploy and test your changes locally before going to production. 

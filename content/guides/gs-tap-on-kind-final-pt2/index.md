@@ -1,18 +1,17 @@
 ---
-title: "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 2"
-linkTitle: "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 2"
+title: Getting Started with VMware Tanzu Application Platform Beta on KIND, part 2
+linkTitle: Getting Started with VMware Tanzu Application Platform Beta on KIND, part
+  2
 description: A guide for utilizing Tanzu Application Platform locally, on KIND
-topics:
-- CI-CD
-- Kubernetes
 tags:
 - tanzu application platform
 - kind
-# Author(s)
+- CI-CD
+- Kubernetes
 team:
 - Tony Vetter
-date: "2021-09-16"
-lastmod: "2021-09-16"
+date: '2021-09-16'
+lastmod: '2021-09-16'
 ---
 
 Now that you have been introduced to the VMware Tanzu Application Platform and its resources in my ["Getting Started with Tanzu Application Platform Beta 1"](/blog/getting-started-with-vmware-tanzu-application-platform-beta-1/) blog post, and learned to install all the individual components of the Tanzu Application Platform, Beta 1 in my [part 1](/guides/kubernetes/gs-tap-on-kind-pt1/) guide, you are ready to dive into the second and final post in this guide series. This one describes how you can use the Tanzu Application Platform to deploy a workload.

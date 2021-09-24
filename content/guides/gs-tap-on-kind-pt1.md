@@ -1,7 +1,9 @@
 ---
-title:  "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1"
-linkTitle: "Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1"
-description: A guide for installing the VMware Tanzu Application Platform Beta locally, on KIND
+title: Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1
+linkTitle: Getting Started with VMware Tanzu Application Platform Beta on KIND, part
+  1
+description: A guide for installing the VMware Tanzu Application Platform Beta locally,
+  on KIND
 parent: tanzu application platform
 weight: 1
 tags:
@@ -11,11 +13,11 @@ tags:
 - Kubernetes
 team:
 - Tony Vetter
-date: "2021-09-14"
-lastmod: "2021-09-14"
+date: '2021-09-14'
+lastmod: '2021-09-14'
 aliases:
-- /guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/
-- /guides/kubernetes/gs-tap-on-kind-pt2/
+- "/guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/"
+- "/guides/kubernetes/gs-tap-on-kind-pt2/"
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
