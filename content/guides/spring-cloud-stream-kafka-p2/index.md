@@ -18,6 +18,8 @@ team:
 oldPath: "/content/guides/event-streaming/spring-cloud-stream-kafka-p2.md"
 aliases:
 - "/guides/event-streaming/spring-cloud-stream-kafka-p2"
+level1: Building Modern Applications
+level2: Services
 ---
 
 Based on our previous demo in [Part 1](https://tanzu.vmware.com/developer/guides/event-streaming/spring-cloud-stream-kafka-p1/), you are now ready to simulate a scenario to get a better sense of what we have previously discussed. Let’s say you need to design a system where you can place an order and ship it after some verification process.

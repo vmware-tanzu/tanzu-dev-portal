@@ -11,8 +11,8 @@ weight: 1600
 oldPath: "/content/guides/kubernetes/workload-tenancy-autoscaling-refarch.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-autoscaling-refarch"
-level1: Managing and Operating Kubernetes
-level2: Kubernetes Architecture
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 tags: []
 ---
 

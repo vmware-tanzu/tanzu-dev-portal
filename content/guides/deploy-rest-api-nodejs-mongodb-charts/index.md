@@ -2,7 +2,6 @@
 date: 2020-03-25
 lastmod: '2021-02-05'
 linkTitle: Deploy Node.js REST API
-parent: Basics of REST
 patterns:
 - API
 tags:

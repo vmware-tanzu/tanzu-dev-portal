@@ -5,7 +5,6 @@ description: Discover how to gather both standard and custom metrics from Spring
 lastmod: '2021-03-07'
 linkTitle: Prometheus and Grafana
 metaTitle: Gather Metrics with Spring Boot using Prometheus & Grafana
-parent: Spring Boot
 patterns:
 - Observability
 tags:

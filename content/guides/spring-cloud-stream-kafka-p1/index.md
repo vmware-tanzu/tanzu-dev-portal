@@ -18,6 +18,8 @@ team:
 oldPath: "/content/guides/event-streaming/spring-cloud-stream-kafka-p1.md"
 aliases:
 - "/guides/event-streaming/spring-cloud-stream-kafka-p1"
+level1: Building Modern Applications
+level2: Services
 ---
 
 

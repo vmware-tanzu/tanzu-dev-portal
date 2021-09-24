@@ -2,7 +2,6 @@
 date: '2021-01-29'
 lastmod: '2021-02-24'
 linkTitle: Request/Response Logging
-parent: Spring Boot
 patterns:
 - Observability
 tags:

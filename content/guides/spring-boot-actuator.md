@@ -2,7 +2,6 @@
 date: '2021-01-29'
 lastmod: '2021-01-29'
 linkTitle: Spring Boot Actuator
-parent: Spring Boot
 patterns:
 - Observability
 tags:

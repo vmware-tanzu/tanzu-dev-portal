@@ -4,7 +4,6 @@ description: Looking to track requests as they come into an application? Zipkin 
   instrumentation for numerous frameworks, data services, and more.
 lastmod: '2021-03-07'
 linkTitle: Zipkin
-parent: Spring Boot
 patterns:
 - Observability
 tags:

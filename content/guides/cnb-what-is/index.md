@@ -16,8 +16,8 @@ title: What are Cloud Native Buildpacks?
 oldPath: "/content/guides/containers/cnb-what-is.md"
 aliases:
 - "/guides/containers/cnb-what-is"
-level1: Modern App Basics
-level2: DevOps Practices
+level1: Deploying Modern Applications
+level2: Packaging and Publishing
 ---
 
 [Cloud Native Buildpacks](https://buildpacks.io/) turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 

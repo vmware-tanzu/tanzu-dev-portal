@@ -18,6 +18,8 @@ team:
 oldPath: "/content/guides/event-streaming/spring-cloud-stream-kafka-p3.md"
 aliases:
 - "/guides/event-streaming/spring-cloud-stream-kafka-p3"
+level1: Building Modern Applications
+level2: Services
 ---
 
 This tutorial is going to use the same example (Ordering System) from [Part 2](https://tanzu.vmware.com/developer/guides/event-streaming/spring-cloud-stream-kafka-p2/), and craft it into a Stream Process with a modern Java Functional Programming Model by using `SCS` (Spring Cloud Stream Kafka).

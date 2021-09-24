@@ -14,6 +14,8 @@ team:
 - Raquel Campuzano Godoy
 date: '2021-07-13'
 lastmod: '2021-07-13'
+level1: Managing & Operating Applications
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 First published on https://docs.bitnami.com/tutorials/assign-pod-nodes-helm-affinity-rules/

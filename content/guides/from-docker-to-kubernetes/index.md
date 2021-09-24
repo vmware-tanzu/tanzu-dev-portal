@@ -12,8 +12,8 @@ tags:
 oldPath: "/content/guides/kubernetes/from-docker-to-kubernetes.md"
 aliases:
 - "/guides/kubernetes/from-docker-to-kubernetes"
-level1: Managing and Operating Kubernetes
-level2: Preparing and Deploying Kubernetes Workloads
+level1: Modern App Basics
+level2: Kubernetes Platform
 faqs:
   faq:
   - question: What is Docker?

@@ -11,8 +11,8 @@ weight: 1400
 oldPath: "/content/guides/kubernetes/workload-tenancy-conformance-test.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-conformance-test"
-level1: Managing and Operating Kubernetes
-level2: Preparing and Deploying Kubernetes Workloads
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 tags: []
 ---
 

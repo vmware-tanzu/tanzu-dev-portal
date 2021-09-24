@@ -19,8 +19,8 @@ team:
 title: What are Kubernetes Secrets and Service Accounts?
 weight: 2
 oldPath: "/content/guides/kubernetes/platform-security-secrets-sa-what-is.md"
-level1: Managing and Operating Kubernetes
-level2: Preparing and Deploying Kubernetes Workloads
+level1: Securing Kubernetes
+level2: Access and Security
 ---
 
 In software, there’s often data that you want to keep separate from your build

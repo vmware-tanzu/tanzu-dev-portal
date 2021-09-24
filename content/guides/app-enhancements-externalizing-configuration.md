@@ -10,7 +10,7 @@ title: Externalizing Configuration
 oldPath: "/content/guides/kubernetes/app-enhancements-externalizing-configuration.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-externalizing-configuration"
-level1: Managing and Operating Applications
+level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
 ---
 

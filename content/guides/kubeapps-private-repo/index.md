@@ -3,7 +3,6 @@ date: 2020-06-15
 description: Create a private registry for your customized Helm chart using Harbor
   and Kubeapps.
 lastmod: '2021-02-25'
-parent: Packaging
 patterns:
 - Deployment
 tags:

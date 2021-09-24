@@ -1,7 +1,6 @@
 ---
 date: '2021-02-16'
 lastmod: '2021-02-26'
-subsection: Application Lifecycle
 team:
 - John Harris
 title: Application Lifecycle

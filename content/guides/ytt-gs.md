@@ -17,8 +17,8 @@ title: Getting Started with ytt
 oldPath: "/content/guides/kubernetes/ytt-gs.md"
 aliases:
 - "/guides/kubernetes/ytt-gs"
-level1: Deploying Modern Applications
-level2: CI/CD, Release Pipelines
+level1: Managing and Operating Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 [ytt](https://carvel.dev/ytt/) (part of the open source [Carvel](https://carvel.dev) suite) is a tool that can templatize, combine, and patch any YAML content.

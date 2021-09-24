@@ -17,6 +17,8 @@ title: Deploying Remote Concourse CI Workers
 oldPath: "/content/guides/ci-cd/concourse-remote-workers.md"
 aliases:
 - "/guides/ci-cd/concourse-remote-workers"
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 There are many use-cases for having remote Concourse worker hosts deployed across different sites. This fits into the hybrid cloud model, helps to distribute resources, and can be used for failover scenarios. This guide walks through setting up local and remote worker hosts in a Concourse cluster that is deployed on Kubernetes.

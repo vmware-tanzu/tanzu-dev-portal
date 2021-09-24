@@ -9,8 +9,8 @@ weight: 67
 oldPath: "/content/guides/kubernetes/service-routing.md"
 aliases:
 - "/guides/kubernetes/service-routing"
-level1: Managing and Operating Kubernetes
-level2: Preparing and Deploying Kubernetes Workloads
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 tags:
 - Kubernetes
 ---

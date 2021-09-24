@@ -1,9 +1,7 @@
 ---
 title: Forwarding Client Certificates with NGINX Ingress
 description: 'A look at annotations to configure Kubernetes NGINX Ingress for forwarding
-  client certificates
-
-  '
+  client certificates'
 date: 2021-05-17
 tags:
 - Kubernetes
@@ -11,6 +9,8 @@ team:
 - Ray Chuan Tay
 topic:
 - Kubernetes
+level1: Building a Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 

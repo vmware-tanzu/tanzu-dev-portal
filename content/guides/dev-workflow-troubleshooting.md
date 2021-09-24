@@ -14,7 +14,7 @@ oldPath: "/content/guides/kubernetes/dev-workflow-troubleshooting.md"
 aliases:
 - "/guides/kubernetes/dev-workflow-troubleshooting"
 level1: Managing and Operating Kubernetes
-level2: Monitoring and Observing Kubernetes
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 This guide lists common commands and approaches to troubleshoot applications on

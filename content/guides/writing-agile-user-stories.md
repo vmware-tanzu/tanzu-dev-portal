@@ -10,6 +10,8 @@ team:
 - Christina Liu
 date: '2021-07-27'
 lastmod: '2021-07-27'
+level1: Agile Transformation & Practices
+level2: Agile Development
 ---
 
 Product managers (PMs) can help development teams be more agile in their approach to building software by writing crisp user stories that align with the oft-cited “INVEST” (sometimes extended as INVEST-A) principles. This is now a well-accepted truism. 

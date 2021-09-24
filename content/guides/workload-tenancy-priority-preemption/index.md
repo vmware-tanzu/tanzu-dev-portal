@@ -11,8 +11,8 @@ weight: 2000
 oldPath: "/content/guides/kubernetes/workload-tenancy-priority-preemption.md"
 aliases:
 - "/guides/kubernetes/workload-tenancy-priority-preemption"
-level1: Managing and Operating Kubernetes
-level2: Preparing and Deploying Kubernetes Workloads
+level1: Building Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 tags: []
 ---
 

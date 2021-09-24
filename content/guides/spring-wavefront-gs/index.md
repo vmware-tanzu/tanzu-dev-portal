@@ -5,7 +5,6 @@ description: VMware Tanzu Observability by Wavefront offers a free tier for Spri
   Spring Boot.
 lastmod: '2021-03-07'
 linkTitle: Wavefront for Spring Boot
-parent: Spring Boot
 patterns:
 - Observability
 tags:

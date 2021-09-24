@@ -11,8 +11,8 @@ weight: 2000
 oldPath: "/content/guides/kubernetes/observability-showback-refarch.md"
 aliases:
 - "/guides/kubernetes/observability-showback-refarch"
-level1: Building Kubernetes Runtime
-level2: Building Your Kubernetes Platform
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 tags: []
 ---
 

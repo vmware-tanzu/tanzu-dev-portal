@@ -4,7 +4,7 @@ linkTitle: Getting Started with VMware Tanzu Application Platform Beta on KIND, 
   2
 description: A guide for installing the VMware Tanzu Application Platform Beta locally,
   on KIND
-parent: tanzu application platform
+#parent: tanzu application platform
 weight: 1
 tags:
 - tanzu application platform
@@ -15,6 +15,8 @@ team:
 - Tony Vetter
 date: '2021-09-14'
 lastmod: '2021-09-14'
+level1: Building a Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 ---
 
 In my [previous post](https://tanzu.vmware.com/developer/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/) you were introduced to the individual parts that make up the VMware Tanzu Application Platform, and how they come together to build a powerful development platform. In this post, you will learn the install process that locally deploys this platform on [KIND](https://kind.sigs.k8s.io).

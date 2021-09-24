@@ -11,7 +11,7 @@ oldPath: "/content/guides/kubernetes/app-enhancements-label-design.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-label-design"
 level1: Managing and Operating Kubernetes
-level2: Kubernetes Architecture
+level2: Preparing and Deploying Kubernetes Workloads
 ---
 
 Labels are a means for describing and identifying components that make up an

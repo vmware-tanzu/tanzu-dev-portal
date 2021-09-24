@@ -6,7 +6,6 @@ lastmod: '2021-03-07'
 metaTitle: Understanding the Basics of REST
 patterns:
 - API
-subsection: Basics of REST
 tags:
 - Microservices
 - API
