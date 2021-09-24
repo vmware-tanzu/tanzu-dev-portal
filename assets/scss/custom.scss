@@ -227,7 +227,7 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    width: 50px;
+    width: 0px;
     font-size: 80px;
     line-height: 190px;
     font-family: arial;
@@ -241,21 +241,21 @@
     left: 0;
     text-align: left;
     text-indent: -20px;
-    box-shadow: 50px 0 20px -20px #292B2C inset;
+    box-shadow: 50px 0 20px -20px #292b2c20 inset;
   }
   .carousel:after {
     content: '\203A';
     right: 0;
     text-align: right;
-    text-indent: 40px;
-    box-shadow: -50px 0 20px -20px #292B2C inset;
+    // text-indent: 40px;
+    box-shadow: -50px 0 20px -20px #292b2c20 inset;
   }
   .carousel.right:after, .carousel.left:before {
     opacity: 1;
   }
   .carousel.right:after {
     right: 0;
-    text-indent: 60px;
+    text-indent: 20px;
   }
   .carousel.left:before {
     left: 0;
@@ -310,7 +310,8 @@
     height: 100%;
     margin: 0 0 0 5px;
     position: relative;
-    overflow: hidden;
+    white-space: normal;
+    // overflow: hidden;
     transition: 0.25s ease-out;
   }
   .carousel > .wrap > ul > li:first-child {
@@ -319,6 +320,7 @@
   .carousel > .wrap > ul > li > div {
     display: block;
     height: 100%;
+    width: 400px;
     margin: auto;
     vertical-align: bottom;
     position: relative;
