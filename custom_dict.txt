@@ -422,6 +422,7 @@ deliverAgile
 deliverToAsyncEventQueue
 DellEMC
 deployable
+[Dd]eployable
 deserialize
 deserializes
 deserializing
