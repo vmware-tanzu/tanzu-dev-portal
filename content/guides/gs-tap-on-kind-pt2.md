@@ -18,6 +18,7 @@ lastmod: '2021-09-14'
 aliases:
 - "/guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/"
 - "/guides/kubernetes/gs-tap-on-kind-pt2/"
+- /guides/kubernetes/gs-tap-on-kind-final-pt2/
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
