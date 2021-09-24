@@ -1,7 +1,7 @@
 ---
-date: 2021-09-15
+date: 2021-09-24
 description: This tutorial describes how to backup data from, and restore data to, Apache Kafka deployments on Kubernetes
-lastmod: '2021-09-15'
+lastmod: '2021-09-24'
 parent: Velero
 patterns:
 - Deployment
