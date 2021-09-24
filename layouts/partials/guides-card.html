@@ -1,6 +1,11 @@
-<div class="flex-315 col-4 mr-3 mb-3 px-0">
-    <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-        <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
-        <p>{{ .Description }}</p>
+<div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
+    <a href="{{ .RelPermalink }}">
+        <p><div class="pt-5 px-4 mb-0 text-left h3 text-white">{{ .Title }}</div></p>
+        <div class="card-type-id">
+            Guide
+        </div>
+        <div class="py-3 px-4 mb-4 text-left text-white" >
+            {{ .Description }}
+        </div>
     </a>
 </div>

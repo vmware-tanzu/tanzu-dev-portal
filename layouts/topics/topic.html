@@ -34,7 +34,7 @@
                     {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
                     <a href="{{ $subtopic.RelPermalink }}">
                         <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ $subtopic.Title }}</div></p>
-                        <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
+                        <div class="py-3 px-4 mb-4 text-left text-white" >
                             {{ $subtopic.Description }}
                         </div>
                     </a>
@@ -45,43 +45,14 @@
 
         <br />
 
-        <!-- Featured Learning Paths -->
-        <!-- {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") "Params.level1" .Params.topic }}
-        {{ printf "%v" $learningpaths }}
-        <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Learning Paths</h2></div>
-            <div class='col px-0'>
-                <div class='row'>
-                    {{ range $learningpaths }}
-                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="#">
-                            <h3 class="mt-2 h4 pt-0">Learning Path {{ . }}</h3>
-                            <p>Learning Path {{ . }}</p>
-                        </a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-         -->
-
-
         <!-- Featured Content -->
         {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
-        <div class='container py-5 border-bottom'>
+        <div class='container py-5'>
             <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
-            <div class='col px-0'>
-                <div class='row'>
-                    {{ range first 3 $featured }}
-                        {{ partial (printf "%v-card.html" .Section) . }}
-                    <!-- {{ printf "%v" .Section }}
-                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                            <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
-                            <p>{{ .Params.description }}</p>
-                        </a>
-                    </div> -->
-                    {{ end }}
-                </div>
+            <div class='row'>
+                {{ range first 3 $featured }}
+                    {{ partial (printf "%v-card.html" .Section) . }}
+                {{ end }}
             </div>
         </div>
 
@@ -94,19 +65,12 @@
                 {{ $gettingstarted = $gettingstarted | append . }}
             {{ end }}
         {{ end }}
-        <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>
-            <div class='col px-0'>
-                <div class='row'>
-                    {{ range first 3 $gettingstarted }}
-                    <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                            <h3 class="mt-2 h4 pt-0">{{ .Title }}</h3>
-                            <p>{{ .Params.description }}</p>
-                        </a>
-                    </div>
-                    {{ end }}
-                </div>
+        <div class='container py-5'>
+            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
+            <div class='row'>
+                {{ range first 3 $gettingstarted }}
+                    {{ partial (printf "%v-card.html" .Section) . }}
+                {{ end }}
             </div>
         </div>
         

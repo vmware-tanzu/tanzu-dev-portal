@@ -866,6 +866,13 @@ body {
     color: $gray-500;
     font-size: 0.8rem;
   }
+
+  .card-type-id {
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+    color: $gray-500;
+  }
   
   .person {
     .card {
