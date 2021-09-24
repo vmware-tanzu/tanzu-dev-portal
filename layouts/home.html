@@ -2,7 +2,7 @@
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
 <a id="td-block" class="td-offset-anchor"></a>
-<section id="hero" class="td-box td-box--primary position-relative td-box--gradient td-box--height-auto">
+<section id="hero" class="td-box td-box--primary position-relative\ td-box--height-auto overflow-hidden">
 	<div class="container row py-5">
 		<div class="col-12 mx-auto col-lg-6">
 			<span class="h1 mb-0 ">
@@ -32,35 +32,31 @@
 <!-- Topics -->
 <a id="td-block" class="td-offset-anchor"></a>
 <section id="home-topics" class="td-box">
-    <div class="container px-0 mw-100 mb-4">
-        <div id="topic-selector" class="flex row justify-content-center flex-nowrap">
-            {{ range $topicgroups }}
-                {{ if eq . "Modern Applications"}}
-                    <p id={{ lower (replace . " " "-")}} class="col-4 text-center topic-header py-4 h3 px-5 text-white active">{{ . }}</p>
-                {{ else }}
-                    <p id={{ lower (replace . " " "-")}} class="col-4 text-center topic-header py-4 px-5 h3 text-white">{{ . }}</p>
-                {{ end }}
-            {{ end }}
-        </div>
-    </div>
     <div id="topics-row-outer" class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative">
-    {{ range $topicgroups }}
-            <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row position-absolute">
-            {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-                <div class="topic-card flex-315 td-box">
-                    <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center p-3">
-                        <img src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
-                        <div class="h3 link mt-3">
-                            {{ .Params.grouptitle }}
+        {{ range $topicgroups }}
+        <div class="row mb-5">
+            <div class="col-3">
+                <h2>{{ . }}</h2>
+            </div>
+            <div class="col-9">
+                <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row">
+                    {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
+                        <div class="topic-card flex-315 td-box td-box-dark">
+                            <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center py-5 px-3">
+                                <img class="mb-2" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
+                                <h3 class="h3 pt-0 link mt-3 text-white mb-0">
+                                    {{ .Params.grouptitle }}
+                                </h3>
+                                <p class="px-4 mb-4 text-left text-center py-0" >
+                                    {{ .Description }}
+                                </p>
+                            </a>
                         </div>
-                        <p class="px-4 mb-4 text-left h4 text-center py-0" >
-                            {{ .Description }}
-                        </p>
-                    </a>
+                    {{ end }}
                 </div>
-            {{ end }}
+            </div>
         </div>
-    {{ end }}
+        {{ end }}
     </div>
 </section>
 
@@ -75,7 +71,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center flex-nowrap w-100 mw-100">
+    <div class="row justify-content-center flex-nowrap w-100 mw-100 overflow-hidden">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
         {{ range $learningpaths }} <!-- TODO: Get featured learning paths -->
             {{ partial "learningpaths-card.html" . }}

@@ -8,10 +8,6 @@ weight: 2
 icon: streaming
 description: >
     Keeping your Kubernetes platform running smoothly
-menu:
-    main:
-        parent: "topics"
-        weight: 7
 ---
 
 Just as you gather metrics from your applications and monitor them to keep them running smoothly, you should be keeping an eye on your Kubernetes platform as well. Kubernetes also provides a great selection of features that your applications can leverage to run better and more reliably as well.

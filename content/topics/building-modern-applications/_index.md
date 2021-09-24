@@ -8,10 +8,6 @@ weight: 1
 icon: containers
 description: >
     Your language, your framework, your data
-menu:
-    main:
-        parent: "topics"
-        weight: 7
 ---
 
 Your language, framework, data services, and practices are all tools in your toolbox. Understanding how they work and what their strengths are will yield tremendous results.

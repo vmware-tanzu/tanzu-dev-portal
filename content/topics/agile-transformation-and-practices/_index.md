@@ -8,10 +8,6 @@ weight: 3
 icon: data
 description: >
     How you work is just as important as the work you do
-menu:
-    main:
-        parent: "topics"
-        weight: 7
 ---
 
 Agile software development is a set of methods that result in fast and frequent delivery of value to your customers. It promotes well-planned, small iterations by highly collaborative, cross-functional teams. Agile methodologies provide an alternative to the sequential development and long release cycles traditionally associated with Waterfall.

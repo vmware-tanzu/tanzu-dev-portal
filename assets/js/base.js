@@ -406,11 +406,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     document.querySelector("#navbar").classList.add("darken");
-    document.querySelector("#dev-title").classList.add("fadeOut");
   }
   else {
     document.querySelector("#navbar").classList.remove("darken");
-    document.querySelector("#dev-title").classList.remove("fadeOut");
   }
 }
 
@@ -430,12 +428,6 @@ function removeNavClasses () {
 $('#learn-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('learn-scope');
-  $('this').next().addClass('show');
-  dimBody();
-});
-$('#topics-target').mouseenter(function(){
-  removeNavClasses();
-  $('#scope').addClass('topics-scope');
   $('this').next().addClass('show');
   dimBody();
 });

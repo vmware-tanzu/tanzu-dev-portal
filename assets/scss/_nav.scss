@@ -278,15 +278,15 @@ nav {
                 .dropdown-item {
                     opacity: 1;
                 }
-                padding: 20px 0;
+                padding: 30px 0 20px;
                 height: auto;
             }
         } 
             
     }
     #learn {
-        right: 570px;
-        width: 110px;
+        right: 435px;
+        width: 130px;
     }
     #topics {        
         right: 435px;
@@ -306,7 +306,7 @@ nav {
     .drop-menu {
         position: absolute;
         top: 100%;
-        left: 0;
+        left: 5px;
         z-index: $zindex-dropdown;
         float: left;
         text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -331,22 +331,17 @@ nav {
         box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.2);
 
         &.learn-scope {
-            left: -18px;
+            left: -32px;
             width: 200px;
-            height: 264px;
-        }
-        &.topics-scope {
-            left: 95px;
-            width: 340px;
-            height: 360px;
+            height: 290px;
         }
         &.tanzutv-scope {
-            left: 229px;
-            width: 290px;
-            height: 328px;
+            left: 101px;
+            width: 296px;
+            height: 320px;
         }
         &.community-scope {
-            left: 378px;            
+            left: 251px;            
             width: 150px;
             height: 136px;
         }

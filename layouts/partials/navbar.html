@@ -55,7 +55,7 @@
 							<div id="{{ lower (replace .Name "." "") }}-target" class="drop-target"></div>
 							<div class="drop-menu m-0" aria-labelledby="navbarDropdownMenuLink">
 								{{ range .Children }}
-								<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+									<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
 								{{ end }}
 							</div>
 						</li>

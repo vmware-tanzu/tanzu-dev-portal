@@ -8,10 +8,6 @@ weight: 1
 icon: microservices
 description: >
     The 101's of building and running modern applications
-menu:
-    main:
-        parent: "topics"
-        weight: 7
 ---
 
 Building and running modern applications starts at the fundamentals. No matter if you're new or a seasoned pro, having a solid understanding of the basics will help you build better.
