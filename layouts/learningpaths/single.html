@@ -16,6 +16,8 @@
 {{ $page = .GetPage .Params.contentPage }}
 {{ end }}
 
+{{ partial "amplitude.html" (dict "context" . "event" "learning path content viewed") }}
+
 <div class="mt-lg-5 pt-lg-5 mt-3 td-content learningpaths">
   <div class='container'>
     <div class="row flex-xl-nowrap container mx-auto mb-4">
