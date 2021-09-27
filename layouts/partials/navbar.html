@@ -54,19 +54,32 @@
 						<li id={{ lower (replace .Name "." "") }} class="nav-item dropdown d-lg-block mb-0 position-absolute">
 							<div id="{{ lower (replace .Name "." "") }}-target" class="drop-target"></div>
 							<div class="drop-menu m-0" aria-labelledby="navbarDropdownMenuLink">
-								{{ range .Children }}
-									<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+								{{ $split := false }}
+								{{ if ne (len (where .Children ".Params.split" "right")) 0 }}
+									{{ $split = true }}
+								{{ end }}
+								{{ if $split }}
+									<div class="row">
+									<div class="col-6">
+										{{ range (where .Children ".Params.split" "left") }}
+											<a class="dropdown-item menu-split-left" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+										{{ end }}
+									</div>
+									<div class="w-100 col-6">
+										{{ range (where .Children ".Params.split" "right") }}
+											<a class="dropdown-item menu-split-right" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+										{{ end }}
+									</div>
+									</div>
+								{{ else }}
+									{{ range .Children }}
+										<a class="dropdown-item" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+									{{ end }}
 								{{ end }}
 							</div>
 						</li>
 						{{ else }}
-						<!-- <li class="nav-item mr-xl-4 mr-2 mb-0">
-							{{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) }}
-							{{ with .Page }}
-							{{ $active = or $active ( $.IsDescendant .)  }}
-							{{ end }}
-							<a class="nav-link{{if $active }} active{{end}}" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}><span{{if $active }} class="active"{{end}}>{{ .Name }}</span></a>
-						</li> -->
+
 						{{ end }}
 					{{ end }}
 				</ul>

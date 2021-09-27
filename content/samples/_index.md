@@ -8,6 +8,8 @@ description: 'Explore sample code that uses modern app development technologies 
 menu:
   main:
     parent: sections
+    params:
+      split: right
     weight: 4
 tags: []
 ---

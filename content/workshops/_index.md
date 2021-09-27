@@ -10,6 +10,8 @@ aliases:
 menu:
   main:
     parent: sections
+    params:
+      split: right
     weight: 3
 tags: []
 ---
