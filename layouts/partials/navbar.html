@@ -61,11 +61,26 @@
 								{{ if $split }}
 									<div class="row">
 									<div class="col-6">
-										{{ range (where .Children ".Params.split" "left") }}
-											<a class="dropdown-item menu-split-left" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+										By Category
+										{{ $menuitems := where .Children ".Params.split" "left" }}
+										<!-- Group topic by topic group -->
+										{{ $topicgroups := (slice) }}
+										{{ range $menuitems }}
+											{{ $topicgroups = union $topicgroups (slice .Page.Params.topicgroups) }}
+										{{ end }}
+										{{ $topicgroups := uniq $topicgroups }}
+										{{ range $topicgroups }}
+											{{ $topicgroup := . }}
+											<div><b>{{ $topicgroup }}</b></div>
+											{{ range $menuitems }}
+												{{ if eq .Page.Params.topicgroups $topicgroup }}
+													<a class="dropdown-item menu-split-left" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+												{{ end }}
+											{{ end }}
 										{{ end }}
 									</div>
 									<div class="w-100 col-6">
+										By Type
 										{{ range (where .Children ".Params.split" "right") }}
 											<a class="dropdown-item menu-split-right" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
 										{{ end }}
