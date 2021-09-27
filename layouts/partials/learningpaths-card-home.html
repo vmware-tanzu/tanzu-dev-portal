@@ -1,9 +1,10 @@
-<div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
-    <a href="{{ .RelPermalink }}" class="text-white">
-        <p><div class="link mt-3 px-4 mb-0 text-left h3">{{ .Title }} </div></p>
-        <div class="card-type-id">
-            Learning Path
-        </div>
+{{ if eq .Params.featuredspot 1 }}
+    <div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative w-100 active linked-box p-0">
+{{ else }}
+    <div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative w-100 linked-box p-0">
+{{ end }}
+    <a href="{{ .RelPermalink }}" class="vw-33">
+        <p><div class="link py-3 px-4 mb-0 text-left h3">{{ .Title }} </div></p>
         <div class="learning-path-description py-3 px-4 mb-4 text-left" >{{ .Description }}</div>
         <div class="row justify-content-between d-flex px-4">
             <div class="learning-path-duration">
