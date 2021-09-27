@@ -1,3 +1,4 @@
+footer.bg-dark,
 .td-outer,
 body {
    background-color: white !important;
@@ -23,6 +24,9 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+nav .dropdown-item:hover,
+#hero,
+.topic-card,
 .col-4-thumbnail,
 .video-description,
 .outcomes-index .td-box--gray-850,
@@ -34,6 +38,7 @@ pre,
 p code, li > code, table code,
 body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
    background-color: #f4f8fa !important;
+   transition: all .2s;
 }
 body .bg-gray-dark.border {
   border: none !important;
@@ -84,6 +89,7 @@ body p {
    color: #1d428a !important;
   }
 }
+#home-topics .topic-card a:hover,
 #team-index .card:hover,
 #team-index .card:focus,
 .topic.col-lg-4 a:focus,
@@ -115,6 +121,12 @@ body p.link {
 .featured-section .featured-link:hover .link,
 .featured-section .featured-link:focus .link{
   color: #0E2B65 !important;
+}
+.cta-btn-wrapper .cta-btn {
+  color: rgb(97, 113, 125) !important;
+  &:hover {
+    color: white !important;
+  }
 }
 #live-notify,
 body a.btn {
@@ -209,6 +221,9 @@ body.tv-episode #register .mktoForm select {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
+nav.darken {
+  box-shadow: none !important;
+}
 nav #theme-select {
   background-color: #ADBBC4 !important;
   
@@ -235,6 +250,7 @@ nav #theme-select {
     }
   }
 }
+#featured-paths,
 #live-notify .btn {
   background-color: white !important;
 }
@@ -244,7 +260,7 @@ nav #theme-select {
 #menu-toggle .menu-bar {
    background: #61717d !important;
 }
-
+#scope,
 #search-nav {
   background: white !important;
 }
@@ -331,6 +347,32 @@ div.aside div.aside-content {
     color: #0E2B65 !important;
   }
 }
+
+#featured-paths .row .learning-path-card {
+  .learning-path-description {
+    color: black !important;
+  }
+  &:nth-child(1) {
+    background: #f4f8fa;
+  }
+  &:nth-child(2) {
+    background: #e7ebec;
+
+  }
+  &:nth-child(3) {
+    background: #e4eaec;
+
+  }
+  &:nth-child(4) {
+    background: #e1ebf0;
+
+  }
+  &:nth-child(5) {
+    background: #deecf3;
+  }
+}
+
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
