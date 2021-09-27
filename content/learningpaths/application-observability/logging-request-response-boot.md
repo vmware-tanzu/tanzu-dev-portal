@@ -1,5 +1,5 @@
 ---
-contentPage: guides/spring/request-response-logging
+contentPage: guides/request-response-logging
 date: '2021-05-25'
 lastmod: '2021-06-15'
 layout: single
