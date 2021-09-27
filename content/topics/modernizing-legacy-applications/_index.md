@@ -5,7 +5,7 @@ topic: Modernizing Legacy Applications
 topicgroups: "Modern Applications"
 grouptitle: "Modernize"
 weight: 2
-icon: serverless
+icon: modernize
 description: >
     Break down the monolith and build up existing applications
 ---

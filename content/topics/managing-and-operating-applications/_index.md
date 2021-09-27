@@ -5,7 +5,7 @@ topic: Managing and Operating Applications
 topicgroups: "Application Development"
 grouptitle: "Manage"
 weight: 3
-icon: cicd
+icon: monitoring
 description: >
     Metrics, monitoring, tracing, and more
 ---

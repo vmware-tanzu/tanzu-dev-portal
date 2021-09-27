@@ -5,7 +5,7 @@ topic: Modern App Basics
 topicgroups: "Modern Applications"
 grouptitle: "Learn the Basics"
 weight: 1
-icon: microservices
+icon: containers
 description: >
     The 101's of building and running modern applications
 ---

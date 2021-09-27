@@ -5,7 +5,7 @@ topic: Managing and Operating Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Manage"
 weight: 2
-icon: streaming
+icon: kube-manage
 description: >
     Keeping your Kubernetes platform running smoothly
 ---
