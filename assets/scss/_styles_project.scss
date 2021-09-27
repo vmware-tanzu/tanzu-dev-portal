@@ -232,7 +232,7 @@ body {
   .linked-box .link {
     color: $link;
     -webkit-font-smoothing: auto;
-    transition: color .2s;
+    transition: all .2s;
   }
   .linked-box:hover:not(.featured-link),
   .linked-box:focus:not(.featured-link) {
@@ -252,7 +252,7 @@ body {
   a {
     color: $link;
     -webkit-font-smoothing: auto;
-    transition: color .2s;
+    transition: all .2s;
     &:hover,
     &:focus {
       color: $link-hover-color;
@@ -1157,7 +1157,7 @@ body {
   
   @media (min-width: 768px) {
     .container {
-      max-width: 1160px;
+      max-width: 1500px;
     }
   }
   
@@ -2288,3 +2288,6 @@ background: black;
     }
   }
 
+.cursor-intial {
+  cursor: initial;
+}

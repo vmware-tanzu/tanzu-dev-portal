@@ -287,6 +287,18 @@ nav {
     #learn {
         right: 435px;
         width: 130px;
+
+        .drop-menu {
+            width: 530px;
+            left: -170px;
+
+            .menu-split-left {
+                width: 320px;
+            }
+            .menu-split-right {
+                width: 180px;
+            }
+        }
     }
     #topics {        
         right: 435px;
@@ -321,6 +333,12 @@ nav {
             opacity: 0;
             transition: opacity .5s;
         }
+        .h5, b {
+            padding: 0.25rem 1rem;
+        }
+        .topic-title {
+            margin-top: 1rem;
+        }
     }
     #scope {
         background: $primary;
@@ -331,9 +349,9 @@ nav {
         box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.2);
 
         &.learn-scope {
-            left: -32px;
-            width: 200px;
-            height: 290px;
+            left: -215px;
+            width: 570px;
+            height: 480px;
         }
         &.tanzutv-scope {
             left: 101px;
