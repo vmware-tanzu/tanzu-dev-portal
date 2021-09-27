@@ -35,13 +35,13 @@
     <div id="topics-row-outer" class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative">
         {{ range $topicgroups }}
         <div class="row mb-5">
-            <div class="col-3">
+            <div class="col-lg-3 col-12 d-flex d-lg-block justify-content-center mb-lg-0 mb-4">
                 <h2>{{ . }}</h2>
             </div>
-            <div class="col-9">
+            <div class="col-lg-9 col-12">
                 <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row">
                     {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-                        <div class="topic-card flex-315 td-box td-box-dark">
+                        <div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
                             <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center py-5 px-3">
                                 <img class="mb-2" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
                                 <h3 class="h3 pt-0 link mt-3 text-white mb-0">
