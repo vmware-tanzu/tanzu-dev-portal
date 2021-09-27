@@ -15,6 +15,7 @@ aliases:
 - "/guides/microservices/what-is-microservices-architecture"
 level1: Modern App Basics
 level2: DevOps Practices
+description: What it means to build modern applications
 ---
 
 Microservices are a modern architectural pattern for building an application. A microservices architecture breaks up the functions of an application into a set of small, discrete, decentralized, goal-oriented processes, each of which can be independently developed, tested, deployed, replaced, and scaled.

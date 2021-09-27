@@ -15,6 +15,7 @@ aliases:
 - "/guides/kubernetes/container-networking"
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+description: An introduction to Container Network Interface (CNI) plugins
 ---
 
 Kubernetes uses the [Container Network

@@ -15,6 +15,7 @@ weight: 2
 oldPath: "/content/guides/spring/request-response-logging.md"
 aliases:
 - "/guides/spring/request-response-logging"
+description: Collect full request/response payloads in a Spring Boot application
 faqs:
   faq:
   - question: How do log requests and responses in Spring Boot work?

@@ -17,6 +17,7 @@ aliases:
 - "/guides/kubernetes/kapp-gs"
 level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
+description: Deploy to Kubernetes using kapp, a tool that provides an easier way to deploy and view all resources created together regardless of what namespace they’re in
 ---
 
 [kapp](https://carvel.dev/kapp/) (part of the open source [Carvel](https://carvel.dev) suite) is a lightweight application-centric tool for deploying resources on Kubernetes. Being both explicit and application-centric it provides an easier way to deploy and view all resources created together regardless of what namespace they’re in. Being dependency-aware, it is able to wait for resources to be created, updated, or deleted, and provides a live status on the progress of the actions. Continue on to see how to get started with kapp.

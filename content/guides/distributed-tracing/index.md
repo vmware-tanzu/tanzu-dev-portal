@@ -19,6 +19,7 @@ aliases:
 - "/guides/microservices/distributed-tracing"
 level1: Managing and Operating Applications
 level2: Metrics, Tracing, and Monitoring
+description: Trace requests as they flow through your application and services
 ---
 
 When a request comes into a monolithic application, it's fairly easy to trace through what happened as a result of that request because everything is self-contained. However, when a request comes into a microservice (remember GUI apps can be microservices, they just render HTML instead of JSON), that request could result in a cascading chain of 10 other HTTP calls to various other services. You might also be interested in knowing when a particular service makes non-HTTP calls, such as to a database or a message queue.

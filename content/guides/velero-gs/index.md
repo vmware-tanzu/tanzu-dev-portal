@@ -17,6 +17,7 @@ aliases:
 - "/guides/kubernetes/velero-gs"
 level1: Securing Kubernetes
 level2: Backup and Restore
+description: Getting started with Velero, an open source tool to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes
 ---
 
 What do you do if you lose state in your cluster, or something went very wrong

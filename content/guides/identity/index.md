@@ -15,6 +15,7 @@ aliases:
 - "/guides/kubernetes/identity"
 level1: Securing Kubernetes
 level2: Access and Security
+description: Lock down your Kubernetes cluster by implementing the principle of least privilege
 ---
 
 In order to deploy Kubernetes securely you need to implement the principle of
