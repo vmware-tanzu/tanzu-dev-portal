@@ -1,5 +1,5 @@
 ---
-contentPage: guides/agile/remote-tips
+contentPage: guides/remote-tips
 date: '2021-06-15'
 lastmod: '2021-06-15'
 layout: single
