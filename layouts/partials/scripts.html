@@ -4,8 +4,7 @@
 {{ $jsLightbox := resources.Get "js/lightbox.js" }}
 {{ $jsBase := resources.Get "js/base.js" }}
 {{ $jsAnchor := resources.Get "js/anchor.js" }}
-{{ $jsCarousel := resources.Get "js/carousel.js" }}
-{{ $js := (slice $jsLightbox $jsBase $jsAnchor $jsCarousel) | resources.Concat "js/main.js" }}
+{{ $js := (slice $jsLightbox $jsBase $jsAnchor) | resources.Concat "js/main.js" }}
 {{ if .Site.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ else }}
