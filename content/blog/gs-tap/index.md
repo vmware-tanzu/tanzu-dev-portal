@@ -20,7 +20,7 @@ aliases:
 
 By now you may have seen the [announcement](https://tanzu.vmware.com/content/vmware-tanzu-application-platform-resources/announcing-vmware-tanzu-application-platform) at the recent [SpringOne](https://springone.io) conference for VMware's new [Tanzu Application Platform](https://tanzu.vmware.com/application-platform). You understand the power a platform like this can bring to your production environments, but have you considered what it can do for your [inner loop development](https://thenewstack.io/kubernetes-infrastructure-know-the-inner-dev-loop/)? Not every commit goes to production. That’s why you need a way to locally deploy and test your changes locally before going to production. 
 
-You also need a way to locally evaluate and use the Tanzu Application Platform. You want to understand how it works, and what it can do for your organization before a potential deployment. If this sounds like you, I have a 2-part series on installing and using Tanzu Application Catalog Beta 1 locally, using [KIND](https://kind.sigs.k8s.io).
+You also need a way to locally evaluate and use the Tanzu Application Platform. You want to understand how it works, and what it can do for your organization before a potential deployment. If this sounds like you, I have a 2-part series on installing and using Tanzu Application Platform Beta 1 locally, using [KIND](https://kind.sigs.k8s.io).
 
   * [Part 1](/guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
   * [Part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application. 
@@ -93,7 +93,7 @@ Here, you can see how all the components work together transparently to create a
 
 From development, to operations, to security, a primary goal of Tanzu Application Platform is to ensure all these parties' goals are met. In this way, compliance policies, updates, and new features are automatically configured together from the very beginning, rather than as an afterthought. 
 
-Keep reading to [Part 1](/guides/kubernetes/gs-tap-on-kind-pt1/) of my guide to deploying Tanzu Application Catalog on KIND to find out how to locally install Tanzu Application Platform on KIND. 
+Keep reading to [Part 1](/guides/kubernetes/gs-tap-on-kind-pt1/) of my guide to deploying Tanzu Application Platform on KIND to find out how to locally install Tanzu Application Platform on KIND. 
 
 
 ## Resources

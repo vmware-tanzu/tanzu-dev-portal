@@ -33,7 +33,7 @@ So that is where you start. At the creation of this new project.
 
 Here, you will be accessing Application Accelerator for Tanzu and starting a new project for your client. 
 
-1. Forward a port from KIND to your host. KIND does not include a `LoadBalancer`. This is one of the "gotchas" of using KIND for VMware Tanzu Application Catalog referenced in the caveats section at the beginning of this series. So, the most straightforward way (not necessarily the only way) to gain access to services is with a `port-forward`. For example,
+1. Forward a port from KIND to your host. KIND does not include a `LoadBalancer`. This is one of the "gotchas" of using KIND for VMware Tanzu Application Platform referenced in the caveats section at the beginning of this series. So, the most straightforward way (not necessarily the only way) to gain access to services is with a `port-forward`. For example,
     ```
     kubectl port-forward svc/acc-ui-server 8877:80 -n accelerator-system 
     ```
