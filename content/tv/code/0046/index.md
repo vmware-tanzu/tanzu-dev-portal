@@ -1,6 +1,6 @@
 ---
 Date: '2021-09-22T12:00:00-07:00'
-Description: "# Configuring it all out  with Josh Long"
+Description: "# Configuring it all out with Josh Long"
 PublishDate: '2020-08-04T00:00:00-07:00'
 aliases:
 - /tv/code/46
@@ -11,7 +11,7 @@ hosts:
 - Josh Long
 lastmod: '2021-06-09'
 minutes: 120
-title: "# Configuring it all out  with Josh Long"
+title: "# Configuring it all out with Josh Long"
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
