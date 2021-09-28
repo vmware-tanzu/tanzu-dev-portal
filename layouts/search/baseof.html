@@ -7,6 +7,7 @@
     
     <header>
       {{ partial "navbar.html" . }}
+      {{ partial "amplitude.html" (dict "context" . "event" "search viewed") }}
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main ">

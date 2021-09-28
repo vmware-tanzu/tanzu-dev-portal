@@ -8,7 +8,7 @@
 {{ end }}
 
 {{ if eq .event "guide viewed" }}
-    <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .context.Parent.Params.title | lower }}', 'guide title': '{{ .context.Title }}', 'guide authors': authors, 'url path': window.location.pathname}); </script>
+    <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .context.Params.level1 | lower }}', 'subtopic name': '{{ .context.Params.level2 | lower }}', 'guide title': '{{ .context.Title }}', 'guide authors': authors, 'url path': window.location.pathname}); </script>
 
 {{ else if eq .event "blog post viewed" }}
     <script>sendAmplitudeEventOnLoad('blog post viewed', {'blog post title': '{{ .context.Title }}', 'blog post publish date': '{{ .context.Date.Format "2006-01-02T15:04:05Z0700" }}', 'blog post length': '{{ .context.Content | len }}' ,'blog post authors': authors, 'url path': window.location.pathname});</script>
@@ -47,7 +47,14 @@
     <script>sendAmplitudeEventOnLoad('workshop session started', {'workshop name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
 
 {{ else if eq .event "practice viewed" }}
-<script>sendAmplitudeEventOnLoad('practice viewed', {'practice name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
+    <script>sendAmplitudeEventOnLoad('practice viewed', {'practice name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
+
+{{ else if eq .event "search viewed" }}
+    <script>
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get("name");
+        sendAmplitudeEventOnLoad('search viewed', {'query': params.get("q"), 'url path': window.location.pathname});
+    </script>
 
 {{ else if eq .event "episode played" }}
     <script type="text/javascript">
