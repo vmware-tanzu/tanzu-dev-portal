@@ -153,8 +153,7 @@ limitations under the License.
 
     //Toggle mobile menu
     $("#menu-toggle").click(function () {
-      $(".td-navbar .td-navbar-nav-hamburger").toggleClass("open");
-      $(".td-navbar .td-navbar-nav-hamburger .navbar-nav .nav-item").toggle();
+      $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
     });
   });
 

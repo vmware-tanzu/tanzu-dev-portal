@@ -21,6 +21,9 @@ body {
       color: white;
       background: $bright-green;
     }
+    &.isOpen {
+      overflow-y: hidden;
+    }
   }
   nav {
     z-index: 1000 !important;
