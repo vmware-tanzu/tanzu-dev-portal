@@ -51,12 +51,8 @@
         {{ template "workshopCard" . }}
       {{ end }}
     </div>
-  </div>
-</div>
-<hr class="panel-line" />
-<!-- Groups content according to the "param_key" field in front matter -->
-<div class="d-flex container flex-wrap">
-  <div class="section-index flex-1">
+    <hr class="panel-line" />
+    <!-- Groups content according to the "param_key" field in front matter -->
     {{ range .Pages.GroupByParam "level1" }}
       <h3>{{ .Key }}</h3>
       <div class="row">
