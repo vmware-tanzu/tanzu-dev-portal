@@ -1,4 +1,5 @@
 ---
+
 Date: '2021-09-28T12:00:00-07:00'
 Description: "Building Scalable and Resilient Apps with Spring Boot and RSocket with Oleh Dokuka"
 PublishDate: '2020-01-04T00:00:00-07:00'
@@ -13,7 +14,7 @@ hosts:
 - Tiffany Jernigan
 - Whitney Lee
 - Leigh Capili
-lastmod: '2021-09-20'
+lastmod: '2021-09-28'
 minutes: 60
 title: "Building Scalable and Resilient Apps with Spring Boot and RSocket with Oleh Dokuka"
 truncate: ''
