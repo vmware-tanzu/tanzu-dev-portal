@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: A tool to understand and organize solutions so they can be prioritized
   effectively.
 draft: true
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1-4 hours
 participants: Core Team

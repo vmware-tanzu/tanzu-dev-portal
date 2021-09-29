@@ -1,11 +1,9 @@
 ---
 name: Spencer Gibb
 description: "Spring Cloud Core Co-Lead"
-photo: "/images/team/spencer-gibb.jpg"
 roles: ["guest"]
 skills: ["Spring", "Cloud", "Microservices"]
 location: "Ann Arbor, MI"
-weight: 1
 
 # Social Media 
 twitter: "@spencerbgibb"

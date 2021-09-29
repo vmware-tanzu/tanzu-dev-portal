@@ -1,7 +1,7 @@
 ---
 date: '2021-02-09'
 description: Allow a team to determine, openly discuss and share their team values
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 30-45 min
 participants: Core team
@@ -46,7 +46,7 @@ why:
 
 1. Go around the room individually and ask each team member to share a value statement and their thinking behind it (especially if it’s not obvious). Collect any similar value statements from other team members and place the groups/themes in rows on the whiteboard
 
-   ![Illustration of team value sticky notes clustered into groups](/images/practices/team-values/step-3.png)
+   ![Illustration of team value sticky notes clustered into groups](images/step-3.png)
 
 1. Repeat until all sticky notes have been shared and are grouped on the whiteboard
 
@@ -75,8 +75,8 @@ These team values can be leveraged again at the end of the project and/or consul
 {{% section %}}
 ### Real World Examples
 
-![Typed up list of grouped team values with a summarized value statement for each group](/images/practices/team-values/example-1.png)
+![Typed up list of grouped team values with a summarized value statement for each group](images/example-1.png)
 
-![Summarized value statements up on the wall in team project area](/images/practices/team-values/example-2.jpeg)
+![Summarized value statements up on the wall in team project area](images/example-2.jpeg)
 
 {{% /section %}}

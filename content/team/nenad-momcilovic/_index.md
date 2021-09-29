@@ -1,11 +1,9 @@
 ---
 name: Nenad Momcilovic 
 description: "Platform Architect"
-photo: "/images/team/nenad-momcilovic.jpg"
 roles: ["guest"]
 skills: []
 location: "Vienna, Austria"
-weight: 1
 
 # Social Media 
 twitter: "nenad_am"

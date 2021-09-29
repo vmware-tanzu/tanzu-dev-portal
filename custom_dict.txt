@@ -143,6 +143,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
+backpressure
 Baeldung('s)?
 Bahhh
 Bai
@@ -178,7 +179,9 @@ biome
 Biville
 BKPR
 BlackBox
+blazingly
 Blazor
+[Bb]lockchain
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
@@ -202,6 +205,7 @@ BucketRegion
 BucketRegion's
 BucketRegionDetails
 BucketRegions
+Buesing
 Bugsville
 buildout
 BuildPack
@@ -232,6 +236,7 @@ calicoctl
 callout
 Campuzano
 Cao
+Capili
 Carducci
 Carvel('s)?
 cass-operator
@@ -423,6 +428,7 @@ deliverAgile
 deliverToAsyncEventQueue
 DellEMC
 deployable
+[Dd]eployable
 deserialize
 deserializes
 deserializing
@@ -468,6 +474,7 @@ DistributionSummary
 distroless
 distros
 django-prometheus
+DLT
 DNS
 dnsNames
 dnsutil
@@ -534,6 +541,7 @@ Enums
 EOF
 ESB
 etcd(ctl)?
+Ethereum
 [Ee]thernet(s)?
 ETL
 EventID
@@ -1158,6 +1166,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 NFJ?S
+NFT
 [Nn]ginx|NGINX
 NIC
 Nicoll
@@ -1356,6 +1365,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepend
 prepending
 Presales
 preStop
@@ -1412,6 +1422,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebase(d)
 rebasing
 Recommender
 [Rr]eddit
@@ -1462,6 +1473,7 @@ RestAssured
 RestrictedMethodAuthorizer
 Retrium
 revertibility
+rewatch
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1492,6 +1504,7 @@ Ruckle
 Rudd
 Rumans
 runnable
+Runtimes
 runtimes?
 Rushton
 [sS]3
@@ -1715,6 +1728,7 @@ toolkits
 [Tt]oolset
 tooltip
 topologies
+Torgerson
 toString
 totalProcessingTime
 totalQueueTime
@@ -1760,6 +1774,7 @@ UnrestrictedMethodAuthorizer
 unschedulable
 unshared
 Unshared
+Unsplash
 [Uu]nstaged
 untar
 untrusted

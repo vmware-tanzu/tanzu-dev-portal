@@ -36,7 +36,7 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
 
 1. Create 2 perpendicular intersecting axes and label each axis with one of the chosen criteria.
 
-   ![Empty two by two grid](/images/practices/2x2/2x2-empty.png)
+   ![Empty two by two grid](images/2x2-empty.png)
 
    {{< callout >}}
    **Tip**: Label the axes such that the top-right quadrant represents the most important/highest-priority. This is a convention that will make it easier when using this practice repeatedly.
@@ -56,7 +56,7 @@ miro_template_url: "https://miro.com/templates/2x2-prioritization-matrix/"
    **Tip**: If the options are weighted towards a particular half or quadrant, you can reposition the options so that roughly half are on either side of each axis. This will remove ambiguity and make it easier to make prioritization decisions.
    {{< /callout >}}
 
-   ![Populated two by two grid](/images/practices/2x2/2x2-populated.png)
+   ![Populated two by two grid](images/2x2-populated.png)
 
 {{% /section %}}
 
@@ -69,7 +69,7 @@ You know you are done when your group has decided on an option (or options) to f
 ### Facilitator Notes & Tips
 - If there are too many priority solutions in the top right quadrant, re-draw the axes within that quadrant to further separate the solutions. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable. 
 
-  ![Re-drawn two by two axis grid](/images/practices/2x2/2x2-regrid.png)
+  ![Re-drawn two by two axis grid](images/2x2-regrid.png)
 
 - Too many options can make this practice more difficult and time consuming. If there are 20+ items, consider spending time removing options that are irrelevant to the criterion selected.
 Involve people who can evaluate against the chosen prioritization criteria (e.g. a Designer should speak to usability, while an engineer should speak to technical complexity).
@@ -91,13 +91,13 @@ Involve people who can evaluate against the chosen prioritization criteria (e.g.
 
 {{% section %}}
 ## Real World Examples
-![Two by two chart plotting problems by frequency and intensity](/images/practices/problem-prioritization/example-2.jpg)
+![Two by two chart plotting problems by frequency and intensity](/practices/problem-prioritization/images/example-2.jpg)
 
-![A group of people discusses priority in front of a whiteboard with two by two chart on it](/images/practices/problem-prioritization/example-3.jpg)
+![A group of people discusses priority in front of a whiteboard with two by two chart on it](/practices/problem-prioritization/images/example-3.jpg)
 
-![Two by two chart with top problems prioritized](/images/practices/problem-prioritization/example-5.jpg)
+![Two by two chart with top problems prioritized](/practices/problem-prioritization/images/example-5.jpg)
 
-![Digital two by two with prioritized solutions](/images/practices/solution-prioritization/example-6.jpg)
+![Digital two by two with prioritized solutions](/practices/solution-prioritization/images/example-6.jpg)
 {{% /section %}}
 
 {{% section %}}

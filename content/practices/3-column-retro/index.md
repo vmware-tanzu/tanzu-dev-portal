@@ -2,7 +2,9 @@
 date: '2021-05-03'
 description: A way to identify how to improve teamwork by reflecting on what worked
   well, what could be improved, and what is on people’s minds.
-image: 3-column-retro/retro-cover.png
+resources:
+- name: cover
+  src: images/retro-cover.png
 lastmod: '2021-05-03'
 length: 1 Hour
 linkTitle: 3 Column Retrospective
@@ -107,7 +109,7 @@ There are many free retrospective tools available.
 - [Postfacto](https://github.com/pivotal/postfacto) - open source and deployable by you.  
 - Spreadsheets - You can always make a simple 3-column retro board using Google Sheets or Excel.  
 
-![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-3.png)
+![3 Column Retrospective in Action](images/retro-3.png)
 
 Sometimes it's worth paying for something that's being actively maintained and enhanced. Here are a few options.
 
@@ -130,12 +132,12 @@ Sometimes it's worth paying for something that's being actively maintained and e
 #### Example using Postfacto
 There are many free retrospective tools available. 
 
-![3 Column Retrospective in Action](/images/practices/3-column-retro/retro-1.png)
+![3 Column Retrospective in Action](images/retro-1.png)
 
 #### 3-Column Retro with fun themes using Miro
 Online tools like this allow for people to get more engaged with fun themes.
 
-![3 Column Retrospective in Miro](/images/practices/3-column-retro/retro-2.png)
+![3 Column Retrospective in Miro](images/retro-2.png)
 {{% /section %}}
 
 {{% section %}}

@@ -1,12 +1,10 @@
 ---
 name: "Görkem Özlü"
 description: "Platform Architect"
-photo: "/images/external/gorkem-ozlu.png"
 roles: ["guest"]
 skills: []
 location: ""
 external: true
-weight: 1
 
 # Social Media
 twitter: ""
