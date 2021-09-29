@@ -1,12 +1,12 @@
-<div class="bg-gray-light subtopic mb-3 col-lg-4">
-    <a href="{{ .RelPermalink }}" class="text-white">
-        <p><div class="link mt-4 px-3 mb-0 text-left h3">{{ .Title }} </div></p>
+<div class="bg-gray-light subtopic mb-3 col-lg-4 flex-315 transition-all">
+    <a class="linked-box td-box--gray-dark px-4 pb-2 pt-2 position-relative" href="{{ .RelPermalink }}" class="text-white">
+        <p><div class="link mt-2 px-3 mb-0 text-left h3">{{ .Title }} </div></p>
         <div class="card-type-id td-box--gray-dark">
             <i class="fas fa-list-ol"></i>
             Learning Path
         </div>
-        <div class="learning-path-description py-3 px-4 mb-4 text-left" >{{ .Description }}</div>
-        <div class="row justify-content-between d-flex px-4">
+        <div class="learning-path-description py-1 px-3 mb-3 text-left" >{{ .Description }}</div>
+        <div class="row justify-content-between d-flex px-0">
             <div class="learning-path-duration">
                 <i class="fas fa-hourglass-half"></i>
                 {{ if gt .Params.duration 60 }}
