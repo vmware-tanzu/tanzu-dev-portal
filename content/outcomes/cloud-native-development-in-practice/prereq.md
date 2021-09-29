@@ -127,10 +127,3 @@ Following are the tools you need to run the labs:
 -   TAS command line client `cf` cli
 
 -   Flyway command line
-
-## Workstation image
-
-You can also run a Linux desktop from a virtual machine using
-Virtual Box,
-Vagrant,
-or even run on Amazon via a published *Amazon Machine Image*.
