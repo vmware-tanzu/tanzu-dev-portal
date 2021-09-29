@@ -456,23 +456,4 @@ $( ".learning-path-card" ).mouseenter(function() {
   $(this).addClass("active");
 });
 
-// Topics
-var currentRow = "#modern-applications-row";
-$("#modern-applications-row").addClass("active");
-
-$("#topic-selector .topic-header").mouseenter(function() {
-  $("#topic-selector .topic-header").removeClass("active");
-  $(this).addClass("active");
-  var row = "#"+$(this).attr('id') + "-row";
-  
-  if(currentRow == row) {
-    
-  }
-  else {
-    $(".topics-row").removeClass("active");
-    currentRow = row;
-    $(row).addClass("active");
-  }
-});
-
 

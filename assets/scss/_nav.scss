@@ -220,6 +220,8 @@ nav {
 
         &.show {
             .drop-menu {
+                .h5,
+                .topic-title,
                 .dropdown-item {
                     opacity: 1;
                 }
@@ -273,6 +275,11 @@ nav {
         box-sizing: border-box;
         padding: 0;
         
+        .h5,
+        .topic-title {
+            opacity: 0;
+            transition: opacity .5s;
+        }
         .dropdown-item {
             color: $link;
             opacity: 0;

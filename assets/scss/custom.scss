@@ -219,6 +219,8 @@
   }
 }
 
+
+
 .td-home {
   h2 {
     font-size: 2.5rem;
@@ -254,10 +256,6 @@
   opacity: 0;
   animation: fadeIn 1s ease-out .3s forwards;
 
-  .topics-row.active .topic-card {
-    opacity: 1;
-    z-index: 1;
-  }
   .topic-card {
     transition: all .2s ease-out;
     background-color: #22343c;
@@ -266,9 +264,6 @@
     }
     img {
       height: 45px;
-    }
-    &:hover  {
-      background-color: #45667c;
     }
   }
   #topic-selector {

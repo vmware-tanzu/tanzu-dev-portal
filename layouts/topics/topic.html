@@ -22,23 +22,23 @@
             <div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5">
                 <div class='container'>
                     <div class="row">
-                        <div class="col-12 col-lg-9">
+                        <div class="col-12 col-lg-8">
                             {{ .Render "content" }}
                         </div>
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-4 py-2 py-lg-5">
+                            <div class="">
+                                <!-- Build subtopic boxes -->
+                                {{ range $subtopics }}
+                                    <div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+                                        {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
+                                        <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ $subtopic.RelPermalink }}">
+                                            <h2 class="link mt-3 h4 pt-0 mw-100">{{ $subtopic.Title }}</h2>
+                                            <p>{{ $subtopic.Description }}</p>
+                                        </a>
+                                    </div>   
+                                {{ end }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <!-- Build subtopic boxes -->
-                        {{ range $subtopics }}
-                            <div class="bg-gray-light subtopic mr-3 mb-3 flex-315">
-                                {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
-                                <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ $subtopic.RelPermalink }}">
-                                    <h2 class="link mt-3 h4 pt-0 mw-100">{{ $subtopic.Title }}</h2>
-                                    <p>{{ $subtopic.Description }}</p>
-                                </a>
-                            </div>   
-                        {{ end }}
                     </div>
                 </div>
             </div>

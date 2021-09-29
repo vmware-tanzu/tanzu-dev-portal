@@ -89,7 +89,9 @@ body {
       }
     }
   }
-  
+  .transition-all {
+    transition: all .2s ease-out;
+  }
   .bg-gray-dark {
     background-color: $gray-800;
     h1,
@@ -236,11 +238,15 @@ body {
     color: $link;
     -webkit-font-smoothing: auto;
     transition: all .2s;
-    line-height: 1.7rem;
+
+    //To change the line height on Featured Learning Paths title
+    &.h3 {
+      line-height: 2rem;
+    }
   }
   .linked-box:hover,
   .linked-box:focus {
-    background-color: $linkboxhover;
+    // background-color: $linkboxhover;
     .link {
       color: $link-hover-color;
     }
@@ -826,8 +832,7 @@ body {
     position: absolute;
     right: 1rem;
     top: 0.5rem;
-    color: $gray-500;
-    color: $link;
+    color: #adbbc4;
 
     i {
       font-size: .8rem;
@@ -2126,7 +2131,17 @@ background: black;
   }
 }
 
-
+//Highlighting hover effect on boxes
+.topics-row:hover .topic-card,
+.row:hover > .subtopic,
+#topics-row-outer:hover > .row {
+  opacity: .5;
+}
+.row > .subtopic:hover,
+.topics-row .topic-card:hover,
+#topics-row-outer > .row:hover {
+  opacity: 1;
+}
 
 
 /*** PRACTICES ***/
