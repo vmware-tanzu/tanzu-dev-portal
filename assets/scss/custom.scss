@@ -220,6 +220,9 @@
 }
 
 .td-home {
+  #gradients {
+    pointer-events: none;
+  }
   #gradient-one {
     right: 220px;
     height: 295px;
