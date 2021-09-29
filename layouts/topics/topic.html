@@ -19,7 +19,7 @@
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
         <div class="td-main ">
-            <div class="td-box--primary mt-lg-5 mt-0 py-lg-5">
+            <div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5">
                 <div class='container'>
                     <div class="row">
                         <div class="col-12 col-lg-9">
@@ -34,7 +34,7 @@
                             <div class="bg-gray-light subtopic mr-3 mb-3 flex-315">
                                 {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
                                 <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ $subtopic.RelPermalink }}">
-                                    <h2 class="link mt-3 h4 pt-0">{{ $subtopic.Title }}</h2>
+                                    <h2 class="link mt-3 h4 pt-0 mw-100">{{ $subtopic.Title }}</h2>
                                     <p>{{ $subtopic.Description }}</p>
                                 </a>
                             </div>   
