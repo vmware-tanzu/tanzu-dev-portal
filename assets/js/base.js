@@ -456,4 +456,3 @@ $( ".learning-path-card" ).mouseenter(function() {
   $(this).addClass("active");
 });
 
-

@@ -219,9 +219,23 @@
   }
 }
 
-
-
 .td-home {
+  #gradient-one {
+    right: 220px;
+    height: 295px;
+    max-width: none;
+    opacity: 0;
+    animation: fadeIn 1s ease-out .5s forwards;
+    z-index: 2;
+  }
+  #gradient-two {
+    height: 470px;
+    top: -60px;
+    max-width: none;
+    opacity: 0;
+    animation: fadeIn 1s ease-out .3s forwards;
+    z-index: 1;
+  }
   h2 {
     font-size: 2.5rem;
   }
@@ -287,9 +301,14 @@
   padding-bottom: 3rem;
 
   .h1 {
+    display: inline-block;
     opacity: 0;
     font-size: 4rem;
     animation: fadeIn 1s ease-out 0s forwards;
+
+    @media(min-width:992px) {
+      max-width: 500px;
+    }
   }
   .h1+p {
     opacity: 0;
