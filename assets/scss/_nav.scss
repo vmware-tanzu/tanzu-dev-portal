@@ -347,10 +347,6 @@ nav {
     }
 }
 @media(max-width:991px) {
-    .navbar-nav,
-    #dropdown-menus {
-        // display: none !important;
-    }
     .nav-item {
         position: static;
     }

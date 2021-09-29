@@ -223,7 +223,24 @@
   h2 {
     font-size: 2.5rem;
   }
-
+  @media(max-width:991px) {
+    .h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 2rem !important;
+    }
+    .h3, h3 {
+      font-size: 1.4rem !important;
+    }
+    #home-topics {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  footer {
+    background-color: #1b2a32 !important;
+  }
 }
 #home-topics {
   padding-top: 8rem;
@@ -331,6 +348,32 @@
     }
     &:nth-child(5) {
       background: #1f3442;
+    }
+    @media(max-width:1440px) {
+      height: 350px;
+    }
+    @media(max-width:1300px) {
+      height: 400px;
+    }
+    @media(max-width:1140px) {
+      height: 450px;
+    }
+    @media(max-width:991px) {
+      height: auto;
+      &.active {
+        width: 100% !important;
+      }
+      a {
+        position: relative;
+        height: auto;
+        padding: 20px;
+        div {
+          opacity: 1;
+        }
+      }
+      .vw-33 {
+        width: 100%;
+      }
     }
   }
 }

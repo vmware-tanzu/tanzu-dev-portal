@@ -1,12 +1,10 @@
-<div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
-    <a href="{{ .RelPermalink }}">
-        <p><div class="pt-5 px-3 mb-0 text-left h3 text-white">{{ .Title }}</div></p>
+<div class="bg-gray-light subtopic mr-3 mb-3 flex-315">
+    <a class="linked-box td-box--gray-dark px-4 pb-2 pt-4 position-relative" href="{{ .RelPermalink }}">
+        <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
         <div class="card-type-id">
             <i class="fas fa-book"></i>
-            Guide
+            <span class="h5">Guide</span>
         </div>
-        <div class="py-3 px-4 mb-4 text-left text-white" >
-            {{ .Description }}
-        </div>
+        <p>{{ .Description }}</p>
     </a>
 </div>

@@ -8,74 +8,68 @@
     <header>
       {{ partial "navbar.html" . }}
     </header>
+
+    <!-- Gather subtopics -->
+    {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+    {{ $subtopics := (slice) }}
+    {{ range $guides }}
+        {{ $subtopics = union $subtopics ( slice .Params.level2 )}}
+    {{ end }}
+    
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
-      <div class="td-main ">
-        <div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
-            <div class='container'>
-                {{ .Render "content" }}
-            </div>
-        </div>
-
-        <br/>
-
-        <!-- Gather subtopics -->
-        {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
-        {{ $subtopics := (slice) }}
-        {{ range $guides }}
-            {{ $subtopics = union $subtopics ( slice .Params.level2 )}}
-        {{ end }}
-
-        <div class="container">
-            <div class="row">
-            <!-- Build subtopic boxes -->
-            {{ range $subtopics }}
-                <div class="bg-gray-light subtopic mb-3 col-lg-4 h-100">
-                    {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
-                    <a href="{{ $subtopic.RelPermalink }}">
-                        <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ $subtopic.Title }}</div></p>
-                        <div class="py-3 px-4 mb-4 text-left text-white" >
-                            {{ $subtopic.Description }}
+        <div class="td-main ">
+            <div class="td-box--primary mt-lg-5 mt-0 py-lg-5">
+                <div class='container'>
+                    <div class="row">
+                        <div class="col-12 col-lg-9">
+                            {{ .Render "content" }}
                         </div>
-                    </a>
-                </div>   
-            {{ end }}
+                        <div class="col-12 col-lg-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Build subtopic boxes -->
+                        {{ range $subtopics }}
+                            <div class="bg-gray-light subtopic mr-3 mb-3 flex-315">
+                                {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
+                                <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ $subtopic.RelPermalink }}">
+                                    <h2 class="link mt-3 h4 pt-0">{{ $subtopic.Title }}</h2>
+                                    <p>{{ $subtopic.Description }}</p>
+                                </a>
+                            </div>   
+                        {{ end }}
+                    </div>
+                </div>
             </div>
-        </div>
+                <!-- Featured Content -->
+                {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+                <div class='container py-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $featured }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
 
-        <br />
 
-        <!-- Featured Content -->
-        {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
-        <div class='container py-5'>
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
-            <div class='row'>
-                {{ range first 3 $featured }}
-                    {{ partial (printf "%v-card.html" .Section) . }}
+                <!-- Getting Started-->
+                {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+                {{ $gettingstarted := slice }}
+                {{ range $guides }}
+                    {{ if in .Params.tags "Getting Started" }}
+                        {{ $gettingstarted = $gettingstarted | append . }}
+                    {{ end }}
                 {{ end }}
-            </div>
-        </div>
-
-
-        <!-- Getting Started-->
-        {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
-        {{ $gettingstarted := slice }}
-        {{ range $guides }}
-            {{ if in .Params.tags "Getting Started" }}
-                {{ $gettingstarted = $gettingstarted | append . }}
-            {{ end }}
-        {{ end }}
-        <div class='container py-5'>
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>
-            <div class='row'>
-                {{ range first 3 $gettingstarted }}
-                    {{ partial (printf "%v-card.html" .Section) . }}
-                {{ end }}
-            </div>
-        </div>
-        
-            
-
+                <div class='container py-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $gettingstarted }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
       </div>
       {{ partial "footer.html" . }}
     </div>
