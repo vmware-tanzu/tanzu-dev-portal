@@ -221,8 +221,12 @@ body.tv-episode #register .mktoForm select {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
-nav.darken {
+
+nav,
+.td-home footer.py-5,
+.td-home nav#navbar.darken {
   box-shadow: none !important;
+  background-color: white !important;
 }
 nav #theme-select {
   background-color: #ADBBC4 !important;
