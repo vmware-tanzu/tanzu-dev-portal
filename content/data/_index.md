@@ -1,14 +1,14 @@
-+++
-title = "VMware Tanzu Data Services"
-linkTitle = "Data"
-description = "VMware Tanzu Data Services for modern applications."
-[menu]
-    [menu.main]
-        parent = "sections"
-        name = "Data"
-        weight = 12
-
-+++
+---
+title: "VMware Tanzu Data Services"
+linkTitle: "Data"
+description: "VMware Tanzu Data Services for modern applications."
+menu:
+    main:
+        parent: "sections"
+        params:
+            split: right
+        weight: 8
+---
 
 {{% blocks/lead color="gray-dark" %}}
 Tanzu Data Services
@@ -25,10 +25,5 @@ Tanzu Data Services
 {{< blocks/data-service url_text="Tanzu RabbitMQ" icon_path="/images/icons/icon-tanzu-rabbitmq" color="green">}}
 
 {{< /blocks/section >}}
-
-
-
-
-
 
 <script>sendAmplitudeEventOnLoad('home viewed', {'url path': window.location.pathname});</script>
