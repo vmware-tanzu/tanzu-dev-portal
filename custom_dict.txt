@@ -1174,7 +1174,6 @@ non-Kubernetes
 non-routable
 non-schedulable
 nonblocking
-Noop
 NoSQL
 NotificationListener
 npm

@@ -297,7 +297,7 @@ other people's applications.
     Expect the build and deploy to succeed this time.
 
 1.  For each application, visit its root page on TAS and test manually.
-    Each one should display _Noop!_.
+    Each one should display `Noop!`.
 
 1.  Manually trigger a few requests to the various controllers to verify
     that the applications are working as expected.
