@@ -830,10 +830,18 @@ body {
 
   .card-type-id {
     position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    color: #adbbc4;
+    right: 0rem;
+    top: 0rem;
+    color: $dark;
+    padding: 2px 5px;
+    background-color: $blue;
 
+    img {
+      height: 15px;
+    }
+    .h5 {
+      font-weight: 400;
+    }
     i {
       font-size: .8rem;
       margin-right: 2px !important;

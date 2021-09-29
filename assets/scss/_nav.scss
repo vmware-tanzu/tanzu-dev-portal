@@ -322,6 +322,10 @@ nav {
         border-radius: 2px;
     }
 }
+b {
+    font-weight: 500 !important;
+    -webkit-font-smoothing: antialiased;
+}
 #mobile-nav {
     transform: translateY(-100%);
     position: fixed;
