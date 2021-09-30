@@ -12,8 +12,6 @@ patterns:
 tags:
 - Spring
 - Event Streaming
-- Kubernetes
-- Messaging and Integration
 title: Creating & Deploying Spring Cloud Stream Apps with Spring Cloud Data Flow
 youtube_id: 7YJ552vfvN0
 ---
