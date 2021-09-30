@@ -17,6 +17,7 @@ aliases:
 aliases:
 - /guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/
 - /guides/kubernetes/gs-tap-on-kind-pt2/
+- /guides/kubernetes/gs-tap-on-kind-pt1/
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
@@ -34,7 +35,7 @@ There are three caveats to know about before starting the install.
   3. This guide is a two part post. 
    
      * Part 1 (this post), shows you how to install all the necessary components of the Tanzu Application Platform onto a KIND Kubernetes Cluster. 
-     * [Part 2](/guides/kubernetes/gs-tap-on-kind-final-pt2/), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application.
+     * [Part 2](/guides/gs-tap-on-kind-final-pt2/), shows you how to access and utilize the Tanzu Application Platform to deploy a sample application.
 
 This guide leverages from the official [install documentation](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.1/tap-0-1/GUID-install.html) for Tanzu Application Platform, but is heavily modified for the deployment on KIND. Refer to these documents for installation questions, or if you encounter any issues during the install process as they are the source of truth. 
 
