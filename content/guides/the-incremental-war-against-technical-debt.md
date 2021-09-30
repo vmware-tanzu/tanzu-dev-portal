@@ -2,6 +2,7 @@
 title:  "The Incremental War Against Technical Debt"
 linkTitle: "The Incremental War Against Technical Debt"
 description: An analysis of the causes of technical debt, and what we can do about it.
+featured: true
 topics:
 - Agile
 tags:
@@ -12,6 +13,10 @@ team:
 - George Dean
 date: "2021-09-28"
 lastmod: "2021-09-28"
+aliases:
+- "/guides/agile/the-incremental-war-against-technical-debt"
+level1: Agile Transformation and Practices
+level2: Agile Development
 ---
 
 You have had this feeling before.
