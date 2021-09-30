@@ -46,7 +46,7 @@
                 <!-- Featured Content -->
                 {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
                 <div class='container py-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
                     <div class='row'>
                         {{ range first 3 $featured }}
                             {{ partial (printf "%v-card.html" .Section) . }}
@@ -64,7 +64,7 @@
                     {{ end }}
                 {{ end }}
                 <div class='container py-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Getting Started</h2></div>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
                             {{ partial (printf "%v-card.html" .Section) . }}
