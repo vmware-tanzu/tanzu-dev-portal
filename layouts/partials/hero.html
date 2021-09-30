@@ -2,7 +2,12 @@
 {{ $class := replace $class " " "" }}
 <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7  ">
     <div class="container">
-        <h1 class="h1"> {{- .Title | markdownify }}</h1>
-        <div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
+        <div class="col-12 col-lg-6">
+            <h1 class="h1"> {{- .Title | markdownify }}</h1>
+            <div class="lead"><p class="h4">{{- .Params.description | markdownify }}</p></div>
+        </div>
+        <div class="col-12 col-lg-6">
+            
+        </div>
     </div>
 </section>

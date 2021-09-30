@@ -1615,13 +1615,58 @@ code {
   a {
     padding-top: 0;
   }
-  @media(min-width: 1600px) {
-  //   .feedback {
-  //     margin-top: 100px !important;
-  //     margin-bottom: 100px !important;
-  //   }
-    .col-12.col-md-9.col-lg-7 {
-      min-height: 800px;
+  
+  @media (min-width: 992px) {
+    .workshop-description {
+      width: 35.5%;
+    }
+    .workshop-preview {
+      width: 58%;
+    }
+  }
+  
+  //SpringOne Tour Upcoming
+  #springonetour .no-details {
+    cursor: default;
+    pointer-events: none;
+  
+    h3, .teaser {
+      display: none;
+    }
+    .countdown {
+      display: none;
+    }
+  }
+  
+  a i.fa, a i.fas {
+    margin-right: 5px;
+  }
+  
+  .opacity-4 {
+    opacity: 80%;
+  }
+  
+  .letter-spacing-wide {
+    letter-spacing: 1px;
+  }
+  
+  body .workshops-hero {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+  body .outcomes-hero + .td-content {
+    margin-top: 2rem;
+  }
+  body .outcomes-intro {
+    max-width: 920px;
+  }
+  body .outcomes-hero,
+  body .workshops-hero {
+    .lead {
+      max-width: 920px;
+      @media (min-width: 992px) {
+        max-width: 620px;
+      }
     }
   }
 }
