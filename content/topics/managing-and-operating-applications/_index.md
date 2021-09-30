@@ -1,6 +1,6 @@
 ---
-title: Managing & Operating Applications
-linktitle: Managing & Operating Applications
+title: Managing and Operating Applications
+linktitle: Managing and Operating Applications
 topic: Managing and Operating Applications
 topicgroups: "Application Development"
 grouptitle: "Manage"

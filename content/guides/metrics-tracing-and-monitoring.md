@@ -4,7 +4,7 @@ description: Get insight into your code
 weight: -100
 linkTitle: Metrics, Tracing, and Monitoring
 title: Metrics, Tracing, and Monitoring
-level1: Managing & Operating Applications
+level1: Managing and Operating Applications
 level2: Metrics, Tracing, and Monitoring
 toppage: true
 tags: []

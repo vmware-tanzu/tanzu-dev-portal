@@ -1,6 +1,6 @@
 ---
-title: Agile Transformation & Practices
-linktitle: Agile Transformation & Practices
+title: Agile Transformation and Practices
+linktitle: Agile Transformation and Practices
 topic: Agile Transformation and Practices
 topicgroups: "Modern Applications"
 grouptitle: "Transform"

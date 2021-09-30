@@ -14,7 +14,7 @@ team:
 - Raquel Campuzano Godoy
 date: '2021-07-13'
 lastmod: '2021-07-13'
-level1: Managing & Operating Applications
+level1: Managing and Operating Applications
 level2: Preparing and Deploying Kubernetes Workloads
 ---
 

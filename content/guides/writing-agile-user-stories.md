@@ -10,7 +10,7 @@ team:
 - Christina Liu
 date: '2021-07-27'
 lastmod: '2021-07-27'
-level1: Agile Transformation & Practices
+level1: Agile Transformation and Practices
 level2: Agile Development
 ---
 

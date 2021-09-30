@@ -4,7 +4,7 @@ description: Get insight into your Kubernetes platform
 weight: -100
 linkTitle: Monitoring and Observing Kubernetes
 title: Monitoring and Observing Kubernetes
-level1: Managing & Operating Kubernetes
+level1: Managing and Operating Kubernetes
 level2: Monitoring and Observing Kubernetes
 toppage: true
 tags: []

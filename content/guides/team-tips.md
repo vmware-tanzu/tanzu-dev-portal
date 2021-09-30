@@ -4,7 +4,7 @@ description: Tips to work better as a team
 weight: -100
 linkTitle: Team Tips
 title: Team Tips
-level1: Agile Transformation & Practices
+level1: Agile Transformation and Practices
 level2: Team Tips
 toppage: true
 tags: []

@@ -4,7 +4,7 @@ description: Get the most from running on Kubernetes
 weight: -100
 linkTitle: Preparing and Deploying Kubernetes Workloads
 title: Preparing and Deploying Kubernetes Workloads
-level1: Managing & Operating Applications
+level1: Managing and Operating Applications
 level2: Preparing and Deploying Kubernetes Workloads
 toppage: true
 tags: []
