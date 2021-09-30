@@ -6,7 +6,7 @@ lastmod: '2020-05-06'
 patterns:
 - Deployment
 tags:
-- CF for K8s
+- CF-for-k8s
 - Kubernetes
 title: Deploying on Cloud Foundry for Kubernetes
 youtube_id: Du42DMj22EA
