@@ -17,6 +17,58 @@ limitations under the License.
 (function ($) {
   "use strict";
 
+
+  // Make nav dark after scrolling past hero
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+      document.querySelector("#navbar").classList.add("darken");
+    }
+    else {
+      document.querySelector("#navbar").classList.remove("darken");
+    }
+  }
+
+  // Dim body div when nav is activated
+  function dimBody () {
+    $("header + .container-fluid").addClass("dim");
+    $("nav").addClass("dropShadow");
+  }
+
+  // Hover nav w/ scope
+  function removeNavClasses () {
+    $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
+    $('.dropdown').removeClass('show');
+    $("header + .container-fluid").removeClass("dim");
+    $("nav").removeClass("dropShadow");
+  }
+  $('#learn-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('learn-scope');
+    $('#learn').addClass('show');
+    dimBody();
+  });
+  $('#tanzutv-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('tanzutv-scope');
+    $('#tanzutv').addClass('show');
+    dimBody();
+  });
+  $('#community-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('community-scope');
+    $('#community').addClass('show');
+    dimBody();
+  });
+  $('.drop-menu').mouseenter(function () {
+    $('this').addClass('show');
+    dimBody();
+  });
+  $('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
+    removeNavClasses();
+  });
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
@@ -377,62 +429,13 @@ limitations under the License.
     $("#searchheaderform input").focus();
     $("#mega-menus").toggleClass("no-border");
   });
+
+  // Featured Learning paths
+  $( ".learning-path-card" ).mouseenter(function() {
+    $(".learning-path-card").removeClass("active");
+    $(this).addClass("active");
+  });
+  
 }(jQuery));
 
-// Make nav dark after scrolling past hero
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
-    document.querySelector("#navbar").classList.add("darken");
-  }
-  else {
-    document.querySelector("#navbar").classList.remove("darken");
-  }
-}
-
-// Dim body div when nav is activated
-function dimBody () {
-  $("header + .container-fluid").addClass("dim");
-  $("nav").addClass("dropShadow");
-}
-
-// Hover nav w/ scope
-function removeNavClasses () {
-  $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
-  $('.dropdown').removeClass('show');
-  $("header + .container-fluid").removeClass("dim");
-  $("nav").removeClass("dropShadow");
-}
-$('#learn-target').mouseenter(function(){
-  removeNavClasses();
-  $('#scope').addClass('learn-scope');
-  $('#learn').addClass('show');
-  dimBody();
-});
-$('#tanzutv-target').mouseenter(function(){
-  removeNavClasses();
-  $('#scope').addClass('tanzutv-scope');
-  $('#tanzutv').addClass('show');
-  dimBody();
-});
-$('#community-target').mouseenter(function(){
-  removeNavClasses();
-  $('#scope').addClass('community-scope');
-  $('#community').addClass('show');
-  dimBody();
-});
-$('.drop-menu').mouseenter(function () {
-  $('this').addClass('show');
-  dimBody();
-});
-$('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
-  removeNavClasses();
-});
-
-// Featured Learning paths
-$( ".learning-path-card" ).mouseenter(function() {
-  $(".learning-path-card").removeClass("active");
-  $(this).addClass("active");
-});
 
