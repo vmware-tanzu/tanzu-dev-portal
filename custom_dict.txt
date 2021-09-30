@@ -915,6 +915,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
+kaniko
 [Kk]app(-controller|.)?
 Karavi
 Kat
@@ -1430,6 +1431,7 @@ RegionStats-partition-Trades
 reimagine
 Reinertsen
 reissuance
+[Rr]emediation(s)?
 removeAll
 removeIf
 RemoveUnusedPdxTypesFunction
@@ -1673,6 +1675,7 @@ Tekton('s)?
 telecom
 [Tt]elematics
 [Tt]emplat(ed|ing|ing.|ize)
+[Tt]emplatable
 Templeton
 Teotti
 Teppanyaki
@@ -1707,6 +1710,7 @@ toolchain
 toolkits
 [Tt]oolset
 tooltip
+[Tt]opolog(y|ies)?
 topologies
 Torgerson
 toString
