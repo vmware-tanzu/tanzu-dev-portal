@@ -58,6 +58,7 @@ Aletty
 Alexa
 Alexey
 Alibaba
+allenholub
 [Aa]llocatable
 Alpine(-based)?
 Amaro
@@ -470,6 +471,7 @@ DLT
 DNS
 dnsNames
 dnsutil
+Dobb's
 Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
@@ -748,6 +750,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Holub
 Homebrew
 homogenous
 horizontally-scalable
@@ -846,6 +849,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+JavaWorld
 JAX-RS
 JBaruch
 JBatch
