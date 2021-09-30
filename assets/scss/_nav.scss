@@ -324,10 +324,13 @@ nav {
         background: $dark;
         border-radius: 2px;
     }
-}
-b {
-    font-weight: 500 !important;
-    -webkit-font-smoothing: antialiased;
+    #by-type {
+        padding: 0.25rem 1.5rem;
+    }
+    b {
+        font-weight: 500 !important;
+        -webkit-font-smoothing: antialiased;
+    }
 }
 #mobile-nav {
     transform: translateY(-100%);

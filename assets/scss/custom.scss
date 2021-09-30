@@ -273,6 +273,9 @@
   opacity: 0;
   animation: fadeIn 1s ease-out .3s forwards;
 
+  #topics-row-outer > .row:last-child {
+    margin-bottom: 0px !important;
+  }
   .topic-card {
     transition: all .2s ease-out;
     background-color: #22343c;

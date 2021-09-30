@@ -42,6 +42,7 @@
                     </div>
                 </div>
             </div>
+            <section id="topics-section">
                 <!-- Featured Content -->
                 {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
                 <div class='container py-5'>
@@ -70,6 +71,7 @@
                         {{ end }}
                     </div>
                 </div>
+            </section>
       </div>
       {{ partial "footer.html" . }}
     </div>

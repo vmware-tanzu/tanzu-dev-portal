@@ -86,7 +86,7 @@
 										{{ end }}
 									</div>
 									<div>
-										<p class="h5 cursor-intial fs-75">By Type</p>
+										<p id="by-type" class="h5 cursor-intial fs-75">By Type</p>
 										{{ range (where .Children ".Params.split" "right") }}
 											<a class="dropdown-item menu-split-right" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
 										{{ end }}
