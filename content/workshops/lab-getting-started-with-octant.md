@@ -5,8 +5,8 @@ hero: "/images/workshops/workshop-octant.png"
 lab: lab-getting-started-with-octant
 lastmod: '2021-05-03'
 length: 30
-logo: "/images/workshops/logo-octant.png"
-preview: "/images/workshops/img-octant.png"
+logo: /images/workshops/logo-octant.svg
+preview: /images/workshops/img-octant.png
 summary:
   - An introduction to Octant, a Graphical UI to your Kubernetes clusters.
 tags:

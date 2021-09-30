@@ -3,6 +3,7 @@ date: '2021-04-22'
 description: Lorem epsum Potem
 draft: false
 length: 180
+logo: /images/workshops/logo-tce.svg
 title: Deploying Apps and Microservices with Tanzu Community Edition
 tags:
   - Tanzu

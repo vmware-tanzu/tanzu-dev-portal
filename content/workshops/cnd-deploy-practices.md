@@ -5,7 +5,8 @@ description:
   platform, and learn cloud native principles along the way.
 draft: false
 featured: true
-hero: "/images/workshops/workshop-cloud-native-config.png"
+logo: /images/workshops/logo-spring-boot.svg
+hero: /images/workshops/workshop-springboot.png
 lab: cnd-deploy-practices
 lastmod: '2021-05-19'
 length: 180
