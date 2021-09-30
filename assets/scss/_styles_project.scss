@@ -1220,59 +1220,65 @@ body.tv-episode {
   &#spring-microservices .workshop-hero {
     background-color: #35B07A;
   }
-
-}
-
-@media (min-width: 992px) {
-  .workshop-description {
-    width: 35.5%;
-  }
-  .workshop-preview {
-    width: 58%;
-  }
-}
-
-//SpringOne Tour Upcoming
-#springonetour .no-details {
-  cursor: default;
-  pointer-events: none;
-
-  h3, .teaser {
-    display: none;
-  }
-  .countdown {
-    display: none;
-  }
-}
-
-a i.fa, a i.fas {
-  margin-right: 5px;
-}
-
-.opacity-4 {
-  opacity: 80%;
-}
-
-.letter-spacing-wide {
-  letter-spacing: 1px;
-}
-
-body .workshops-hero {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
-body .outcomes-hero + .td-content {
-  margin-top: 2rem;
-}
-body .outcomes-intro {
-  max-width: 920px;
-}
-body .outcomes-hero,
-body .workshops-hero {
-  .lead {
-    max-width: 920px;
-    @media (min-width: 992px) {
-      max-width: 620px;
+  
+  //Workshops
+  .workshop-box {
+    height: 400px;
+    .workshop-hero {
+      height: 170px;
+      width: 100%;
+      background-color: $gray-800;
+      img {
+        height: 100px;
+      }
+    }
+    .description {
+      transition: all .2s;
+      // background-color: #22343c;
+      background-color: $gray-800;
+      height: 230px;
+    }
+    &#deploying-apps-and-microservices-with-tanzu-community-edition .workshop-hero {
+      background-color: #d7e4ff;
+    }
+    &#manage-platform-dependencies-with-tanzu-community-edition .workshop-hero {
+      background-color: #f3ffe3;
+    }
+    &#reduce-kubernetes-complexity-with-tanzu-cloud-native-runtimes .workshop-hero {
+      background-color: #9e57bc;
+    }
+    &#automate-container-image-creation-with-tanzu-build-service .workshop-hero {
+      background-color: #c9f8ff;
+    }
+    &#build-event-driven-apps-with-tanzu-cloud-native-runtimes .workshop-hero {
+      background-color: #feddd7;
+    }
+    &#getting-started-with-carvel-formerly-k14s .workshop-hero {
+      background-color: #D7BCED;
+    }
+    &#getting-started-with-octant .workshop-hero {
+      background-color: #68BBA2;
+    }
+    &#getting-started-with-spring-cloud-gateway .workshop-hero {
+      background-color: #9DDBFB;
+    }
+    &#building-and-deploying-a-cloud-native-application .workshop-hero {
+      background-color: #E7FFE6;
+    }
+    &#configuring-a-cloud-native-application .workshop-hero {
+      background-color: #BADEFF;
+    }
+    &#spring-on-kubernetes .workshop-hero {
+      background-color: #6DB33F;
+    }
+    &#container-basics .workshop-hero {
+      background-color: #B2DAFF;
+    }
+    &#kubernetes-fundamentals .workshop-hero {
+      background-color: #204FA4;
+    }
+    &#spring-microservices .workshop-hero {
+      background-color: #35B07A;
     }
   }
 }
