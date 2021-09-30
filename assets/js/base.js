@@ -377,26 +377,6 @@ limitations under the License.
     $("#searchheaderform input").focus();
     $("#mega-menus").toggleClass("no-border");
   });
-  //Nav hover
-  const $dropdown = $(".dropdown");
-  const $dropdownToggle = $(".dropdown-toggle");
-  const $dropdownMenu = $(".dropdown-menu");
-  const showClass = "show";
-  
-  $(window).on("load resize", function() {$dropdown.hover(
-      function() {
-          const $this = $(this);
-          $this.addClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "true");
-          $this.find($dropdownMenu).addClass(showClass);
-      },
-      function() {
-          const $this = $(this);
-          $this.removeClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "false");
-          $this.find($dropdownMenu).removeClass(showClass);
-      });
-  });
 }(jQuery));
 
 // Make nav dark after scrolling past hero
@@ -427,19 +407,19 @@ function removeNavClasses () {
 $('#learn-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('learn-scope');
-  $('this').next().addClass('show');
+  $('#learn').addClass('show');
   dimBody();
 });
 $('#tanzutv-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('tanzutv-scope');
-  $('this').next().addClass('show');
+  $('#tanzutv').addClass('show');
   dimBody();
 });
 $('#community-target').mouseenter(function(){
   removeNavClasses();
   $('#scope').addClass('community-scope');
-  $('this').next().addClass('show');
+  $('#community').addClass('show');
   dimBody();
 });
 $('.drop-menu').mouseenter(function () {
