@@ -10,8 +10,6 @@ patterns:
 tags:
 - Spring
 - Event Streaming
-- Kubernetes
-- Messaging and Integration
 title: Installing Spring Cloud Data Flow Locally On Kubernetes With Helm
 youtube_id: 1ljhFAvym14
 ---

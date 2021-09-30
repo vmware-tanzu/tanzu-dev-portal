@@ -58,6 +58,7 @@ Aletty
 Alexa
 Alexey
 Alibaba
+allenholub
 [Aa]llocatable
 Alpine(-based)?
 Amaro
@@ -470,6 +471,7 @@ DLT
 DNS
 dnsNames
 dnsutil
+Dobb's
 Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
@@ -546,6 +548,7 @@ expensed
 expirations
 ExploreDDD
 [Ee]xternal-(dns|DNS)
+[Ee]xternality
 extraDeploy
 F5
 facto
@@ -747,6 +750,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Holub
 Homebrew
 homogenous
 horizontally-scalable
@@ -781,6 +785,7 @@ img
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+[Ii]ncentivized
 [Ii]ncompressible
 InfoQ
 InfoSec
@@ -844,6 +849,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+JavaWorld
 JAX-RS
 JBaruch
 JBatch
@@ -1227,12 +1233,14 @@ OSS
 Osterling
 OTT
 [oO]vercommit(ted|ting)?
+[oO]vercommitment
 overcomplicate
 overconsumption
 overengineer(ing)?
 [oO]verprovisioner('s)?
 [oO]verprovisioning
 oversample
+[oO]versized
 OWASP
 Özlü
 P2P
@@ -1341,6 +1349,7 @@ precompiled
 preconfigured
 [Pp]reemptionPolicy
 PreemptLowerPriority
+[Pp]refactoring
 PreferBytesCachedDeserializable
 prefilled
 preload
@@ -1353,6 +1362,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+production-deployable
 ProductPlan
 Programadoras
 programmatically

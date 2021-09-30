@@ -5,9 +5,7 @@ lastmod: '2020-05-19'
 patterns:
 - Deployment
 tags:
-- Kubernetes
 - Kubeapps
-- Helm
 team:
 - Tiffany Jernigan
 title: Getting Started with Kubeapps

@@ -8,10 +8,6 @@ lastmod: '2020-05-06'
 patterns:
 - API
 tags:
-- Spring Cloud
-- Spring Boot
-- Microservices
-- Kubernetes
 - Spring
 title: 'Spring Live: Azure Spring Cloud'
 youtube_id: CyuhrQtEW90

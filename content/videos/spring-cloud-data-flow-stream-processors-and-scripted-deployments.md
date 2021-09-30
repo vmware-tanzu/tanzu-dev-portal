@@ -12,8 +12,6 @@ patterns:
 tags:
 - Spring
 - Event Streaming
-- Kubernetes
-- Messaging and Integration
 title: Spring Cloud Stream Processors And Scripted Deployments With Spring Cloud Data
   Flow
 youtube_id: ruvoJg0uchc

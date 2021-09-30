@@ -13,8 +13,6 @@ patterns:
 tags:
 - Spring
 - Event Streaming
-- Kubernetes
-- Messaging and Integration
 title: Getting Started With The Spring Cloud Data Flow CLI Tool
 youtube_id: 2RGDCNbXBrg
 ---

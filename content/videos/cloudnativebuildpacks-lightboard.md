@@ -7,10 +7,8 @@ patterns:
 - CI-CD
 - Containers
 tags:
-- containers
 - Cloud Native Buildpacks
 - Containers
-- CI-CD
 team:
 - Boskey Savla
 title: Simplify Building Containers w/ Cloud Native Buildpacks

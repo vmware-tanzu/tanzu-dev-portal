@@ -10,9 +10,8 @@ lastmod: '2020-05-19'
 patterns:
 - Deployment
 tags:
-- Buildpacks
-- kpack
-- Kubernetes
+- Cloud Native Buildpacks
+- Kpack
 - Spring
 - Containers
 team:
