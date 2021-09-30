@@ -1169,6 +1169,12 @@ body {
     left: 0;
   }
   
+  body.tanzu-tv, body.tv-show, body#team-index {
+    .container {
+      max-width: 1400px;
+    }
+  }
+
   body.tv-episode {
     .fancybox-inner {
       background: $gray-800;
