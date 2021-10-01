@@ -1128,7 +1128,6 @@ body {
       max-width: 1500px;
     }
   }
-  
   @media (max-width: 767px) {
     #hero {
       background-image: none;
@@ -2149,6 +2148,7 @@ background: black;
 }
 
 //Highlighting hover effect on boxes
+.advocates .item,
 .learningpaths-index .linked-box,
 .topics-row .topic-card,
 .row > .subtopic,
@@ -2161,7 +2161,7 @@ background: black;
   transition: all .2s ease-out;
   opacity: 1;
 }
-
+.advocates:hover .item,
 .episodes:hover .col-lg-4,
 .row:hover > .flex-315,
 .learningpaths-index:hover .linked-box,
@@ -2170,6 +2170,7 @@ background: black;
 #topics-row-outer:hover > .row {
   opacity: .5;
 }
+.advocates .item:hover,
 .episodes .col-lg-4:hover,
 .row > .flex-315:hover,
 .learningpaths-index .linked-box:hover,
