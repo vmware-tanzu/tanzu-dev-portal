@@ -9,6 +9,7 @@ tags:
   - Tanzu
 level1: Deploying Modern Applications
 weight: 1
+lab: tce-dev-guide
 ---
 
 Lorem epsum Potem
