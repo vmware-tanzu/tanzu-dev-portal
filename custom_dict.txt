@@ -1458,6 +1458,7 @@ ResourcePermission
 ResourceQuota(s)?
 restaging
 RestAssured
+Restic
 RestrictedMethodAuthorizer
 Retrium
 revertibility
