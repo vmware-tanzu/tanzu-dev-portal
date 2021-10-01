@@ -8,6 +8,7 @@ patterns:
 team:
 - Ivan Tarin
 title: A Container Is a Linux Namespace and Networking Basics
+tags: []
 ---
 
 ![open source image @freddygthatsme see sources](images/freddy-g-1i1zPbkQJNg-unsplash.jpg)
@@ -386,7 +387,7 @@ You should now have complete connectivity. The host can direct traffic to a name
 
 You were able to create two containers and a virtual network from scratch! You have gained a more intuitive and intimate understanding of containers and Linux networking concepts, tools, and commands. Creating a container was as easy as one command ` ip netns add pb` to create your namespace. 
 
-Keep a lookout on the VMware Tanzu Developer website for upcoming articles and guides on containers and be sure to visit the [container section](/topics/containers/). A great resource to learn more about container networking is [the Container Network Interface](https://github.com/containernetworking/cni), where you can learn how the community is standardizing container networking standards. And if you are inspired you can contribute or create your own plugin!
+Keep a lookout on the VMware Tanzu Developer website for upcoming articles. A great resource to learn more about container networking is [the Container Network Interface](https://github.com/containernetworking/cni), where you can learn how the community is standardizing container networking standards. And if you are inspired you can contribute or create your own plugin!
 
 
 ## TL;DR or Troubleshooting help

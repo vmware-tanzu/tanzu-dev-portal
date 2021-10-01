@@ -1,5 +1,15 @@
-<div class="section-index">
-    <div class='container'>
+<div class='d-flex container flex-wrap'>
+
+    <div class='sidebar col-lg-3 col-0 pl-0 pr-3'>
+        <h3>Filter</h3>
+        <br/>
+        <ul class='filters'>
+            <li class="filter active" filter="all">View all</li>
+            {{ partial "section-tags.html" . }}
+        </ul>
+    </div>
+
+    <div class="section-index flex-1">
         {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
         {{ $parent := .Page }}
         {{ if $parent.Params.no_list }}
@@ -16,18 +26,16 @@
         {{ else }}
         {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
         <!-- <hr class="panel-line"> -->
-            <div class="col px-lg-0"><div class="row">
+            <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if eq .Parent $parent }}
-                <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
+                <div class="filter-item flex-315 mr-0 mr-lg-3 mb-lg-3 mb-2 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
                     <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
                     <h2 class="fs-p"><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
-                    <!-- <p class="text-white">{{- .Title -}}</p> -->
-                    <!-- <p>{{ .Description | markdownify }}</p> -->
                 </div>
                 {{ end }}
             {{ end }}
-            </div></div>
+           <!--  </div> --></div>
         {{ end }}
     </div>
 </div>

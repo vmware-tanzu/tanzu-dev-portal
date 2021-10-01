@@ -1,0 +1,11 @@
+{{ $guides := where (where .Site.Pages "Params.level2" .Params.level2) "Section" "guides" }}
+<div class='container py-5'>
+    <!-- <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h2 class="h3 mb-0">Featured Content</h2></div> -->
+    <div class='row'>
+        {{ range $guides.ByWeight.ByTitle }}
+            {{ if not .Params.toppage }}
+                {{ partial (printf "%v-card.html" .Section) . }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

@@ -3,11 +3,11 @@ date: 2020-10-07
 description: VMware Tanzu Labs offers some tips for overcoming the challenges many
   are facing from transitioning to remote work due to COVID-19
 lastmod: '2021-02-22'
-patterns: null
+patterns:
 team:
 - VMware Tanzu Labs
 title: Need Help Working Remotely? Check Out Our Tips
-topics:
+tags:
 - Agile
 ---
 

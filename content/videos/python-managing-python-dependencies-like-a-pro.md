@@ -11,7 +11,5 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Managing Project Packages'
-topics:
-- Python
 youtube_id: 7Id2EU0zjw8
 ---

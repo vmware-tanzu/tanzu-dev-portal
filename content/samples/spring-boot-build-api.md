@@ -16,7 +16,4 @@ tags:
 team:
 - Brian McClain
 title: Spring Boot REST API Demo
-topics:
-- Spring
-- Microservices
 ---
