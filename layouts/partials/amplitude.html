@@ -32,7 +32,7 @@
     <script>sendAmplitudeEventOnLoad('show viewed', {'show name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
     
 {{ else if eq .event "video viewed" }}
-    <script>sendAmplitudeEventOnLoad('show viewed', {'video name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
+    <script>sendAmplitudeEventOnLoad('video viewed', {'video name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
 
 {{ else if eq .event "team member viewed" }}
     <script>sendAmplitudeEventOnLoad('team member viewed', {'team member name': '{{ .context.Params.name }}', 'url path': window.location.pathname});</script>
