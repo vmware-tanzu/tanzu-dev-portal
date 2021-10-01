@@ -4,6 +4,7 @@ linkTitle: Securing Kubernetes
 topic: Securing Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Secure"
+layout: topic
 weight: 3
 icon: security
 description: >

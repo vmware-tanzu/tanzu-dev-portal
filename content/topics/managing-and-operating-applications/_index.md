@@ -4,6 +4,7 @@ linktitle: Managing and Operating Applications
 topic: Managing and Operating Applications
 topicgroups: "Application Development"
 grouptitle: "Manage"
+layout: topic
 weight: 3
 icon: monitoring
 description: >

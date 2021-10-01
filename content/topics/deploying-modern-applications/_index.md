@@ -4,6 +4,7 @@ linktitle: Deploying Modern Applications
 topic: Deploying Modern Applications
 topicgroups: "Application Development"
 grouptitle: "Deploy"
+layout: topic
 weight: 2
 icon: messaging
 description: >

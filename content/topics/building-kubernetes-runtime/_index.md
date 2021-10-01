@@ -4,6 +4,7 @@ linkTitle: Building Kubernetes Runtime
 topic: Building Kubernetes Runtime
 topicgroups: "Kubernetes Platform"
 grouptitle: "Build"
+layout: topic
 weight: 1
 icon: kubernetes
 description: >
