@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-bitwise */
 const { AuthorizationCode } = require("simple-oauth2");
-const querystring = require("querystring");
 const got = require('got');
 const jwt = require('jsonwebtoken');
 
@@ -40,7 +39,8 @@ function makeAuth(clientId) {
 }
 
 function getDiscoveryUrl(params) {
-    return `${base}/authorize?${querystring.stringify(params)}`;
+    const qs = (new URLSearchParams(params)).toString();
+    return `${base}/authorize?${qs}`;
 }
 
 function getClientId() {
