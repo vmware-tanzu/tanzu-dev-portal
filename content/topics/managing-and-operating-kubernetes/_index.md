@@ -4,6 +4,7 @@ linktitle: Managing and Operating Kubernetes
 topic: Managing and Operating Kubernetes
 topicgroups: "Kubernetes Platform"
 grouptitle: "Manage"
+layout: topic
 weight: 2
 icon: kube-manage
 description: >

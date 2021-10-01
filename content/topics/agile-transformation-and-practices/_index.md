@@ -4,6 +4,7 @@ linktitle: Agile Transformation and Practices
 topic: Agile Transformation and Practices
 topicgroups: "Modern Applications"
 grouptitle: "Transform"
+layout: topic
 weight: 3
 icon: agile
 description: >

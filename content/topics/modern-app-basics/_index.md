@@ -4,6 +4,7 @@ linktitle: Modern App Basics
 topic: Modern App Basics
 topicgroups: "Modern Applications"
 grouptitle: "Learn the Basics"
+layout: topic
 weight: 1
 icon: containers
 description: >

@@ -4,6 +4,7 @@ linktitle: Building Modern Applications
 topic: Building Modern Applications
 topicgroups: "Application Development"
 grouptitle: "Build"
+layout: topic
 weight: 1
 icon: microservices
 description: >
