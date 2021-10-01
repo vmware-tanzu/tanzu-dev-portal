@@ -45,7 +45,7 @@
             <section id="topics-section">
                 <!-- Featured Content -->
                 {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
-                <div class='container py-5'>
+                <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
                     <div class='row'>
                         {{ range first 3 $featured }}
@@ -63,7 +63,7 @@
                         {{ $gettingstarted = $gettingstarted | append . }}
                     {{ end }}
                 {{ end }}
-                <div class='container py-5'>
+                <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
