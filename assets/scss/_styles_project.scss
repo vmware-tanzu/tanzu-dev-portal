@@ -876,16 +876,6 @@ body {
       z-index: 1;
       cursor: pointer;
       border: 0 !important;
-      &:hover,
-      &:focus {
-        background-color: $linkboxhover !important;  
-        .h4 a {
-          color: $link-hover-color !important;
-        }
-        p {
-          color: white !important;
-        }
-      }
     }
     a.social {
       border: 0;
@@ -2148,6 +2138,7 @@ background: black;
 }
 
 //Highlighting hover effect on boxes
+#team-index .row > .person,
 .advocates .item,
 .learningpaths-index .linked-box,
 .topics-row .topic-card,
@@ -2161,6 +2152,7 @@ background: black;
   transition: all .2s ease-out;
   opacity: 1;
 }
+#team-index .row:hover > .person,
 .advocates:hover .item,
 .episodes:hover .col-lg-4,
 .row:hover > .flex-315,
@@ -2170,6 +2162,7 @@ background: black;
 #topics-row-outer:hover > .row {
   opacity: .5;
 }
+#team-index .row > .person:hover,
 .advocates .item:hover,
 .episodes .col-lg-4:hover,
 .row > .flex-315:hover,
