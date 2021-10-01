@@ -33,7 +33,7 @@ limitations under the License.
   // Dim body div when nav is activated
   function dimBody () {
     $("header + .container-fluid").addClass("dim");
-    $("nav").addClass("dropShadow");
+    $("#navbar").addClass("dropShadow");
   }
 
   // Hover nav w/ scope
@@ -41,7 +41,7 @@ limitations under the License.
     $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
     $('.dropdown').removeClass('show');
     $("header + .container-fluid").removeClass("dim");
-    $("nav").removeClass("dropShadow");
+    $("#navbar").removeClass("dropShadow");
   }
   $('#learn-target').mouseenter(function(){
     removeNavClasses();
