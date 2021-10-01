@@ -7,8 +7,6 @@ tags:
 team:
 - Daniel de Repentigny
 title: Software Supply Chain Choreography, Part 1
-topics:
-- CI-CD
 level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 ---
