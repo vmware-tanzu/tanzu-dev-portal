@@ -11,8 +11,6 @@ tags:
 team:
 - Vikram Vaswani
 title: Backup and Restore Apache Kafka Deployments on Kubernetes
-topics:
-- Kubernetes
 weight: 7
 level1: Managing and Operating Kubernetes
 level2: Monitoring and Observing Kubernetes
