@@ -28,12 +28,14 @@
                 <div class="row mb-5">
                 {{ $pages := where (where .Site.Pages "Section" "guides") ".Params.level1" .Title }}
                 {{ range $pages }}
-                    <div class="flex-315 mr-3 mb-3">
-                        <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .RelPermalink }}">
-                            <h2 class="link mt-3 h4 pt-0">{{- .Title -}}</h2>
-                            <p>{{ .Description | markdownify }}</p>
-                        </a>
-                    </div>
+                    {{ if ne .Params.toppage true }}
+                        <div class="flex-315 mr-3 mb-3">
+                            <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .RelPermalink }}">
+                                <h2 class="link mt-3 h4 pt-0">{{- .Title -}}</h2>
+                                <p>{{ .Description | markdownify }}</p>
+                            </a>
+                        </div>
+                    {{ end }}
                 {{ end }}
                 </div>
             {{ end }}
