@@ -7,6 +7,10 @@ body {
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
 }
+nav .nav-arrow {
+  border: solid #61717d !important;
+  border-width: 0 1px 1px 0 !important;
+}
 @media (max-width: 991.98px) {
  body .td-navbar .td-navbar-nav-hamburger .dropdown-toggle::after {
     content: "" !important;

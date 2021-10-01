@@ -2277,7 +2277,13 @@ background: black;
 .cursor-intial {
   cursor: initial;
 }
-
+#rss {
+  color: $link;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
 @media(max-width:1420px) and (min-width: 992px) {
   main section:not(#featured-paths), 
   .td-main section:not(#featured-paths),
