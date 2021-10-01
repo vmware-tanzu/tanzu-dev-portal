@@ -719,9 +719,14 @@ body {
     height: 50px;
   }
   
+  #hero .icon-md,
+  #hero .td-content img.icon-md {
+    height: 66px;
+  }
+
   .icon-md,
   .td-content img.icon-md {
-    height: 66px;
+    height: 50px;
   }
   
   .td-sidebar-nav__section-title img {
@@ -1024,7 +1029,7 @@ body {
   
   @media (max-width: 991px) {
     #hero.mt-7 {
-      margin-top: 3rem !important;
+      margin-top: 0 !important;
     }
   }
   
@@ -1125,9 +1130,6 @@ body {
   }
   
   @media (max-width: 767px) {
-    #hero.mt-7 {
-      margin-top: 0 !important;
-    }
     #hero {
       background-image: none;
     }
@@ -1242,17 +1244,6 @@ body {
     overflow: hidden;
   }
   
-  .hover-scale {
-    transform: scale(1);
-    transition: all 0.2s;
-    @media (min-width: 992px) {
-      &:hover,
-      &:focus {
-        transform: scale(1.04);
-      }
-    }
-  }
-  
   .hover-lift {
     position: relative;
     top: 0;
@@ -1287,22 +1278,19 @@ body {
   
     img {
       width: 100%;
-      @media (min-width: 1160px) {
-        height: 200px;
-      }
-      @media (min-width: 1600px) {
-        height: 240px;
-      }
+      transform: scale(1);
+      transition: all .2s ease-out;
     }
   
     @media (min-width: 992px) {
       &:hover {
-        .video-description {
-          background-color: #45667b;
-        }
         .thumbnail-gradient {
           opacity: 0;
         }
+        img {
+          transform: scale(1.04);
+        }
+
       }
     }
   }
@@ -2169,6 +2157,7 @@ background: black;
   opacity: 1;
 }
 
+.episodes:hover .col-lg-4,
 .row:hover > .flex-315,
 .learningpaths-index:hover .linked-box,
 .topics-row:hover .topic-card,
@@ -2176,6 +2165,7 @@ background: black;
 #topics-row-outer:hover > .row {
   opacity: .5;
 }
+.episodes .col-lg-4:hover,
 .row > .flex-315:hover,
 .learningpaths-index .linked-box:hover,
 .row > .subtopic:hover,
@@ -2183,8 +2173,6 @@ background: black;
 #topics-row-outer > .row:hover {
   opacity: 1;
 }
-
-
 /*** PRACTICES ***/
 
 .practices {

@@ -50,8 +50,12 @@
 
         svg {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0;
             height: 20px;
+
+            @media(max-width:991px) {
+                margin: 0 10px;
+            }
         }
     }
 
@@ -227,6 +231,7 @@ nav {
                 .topic-title,
                 .dropdown-item {
                     opacity: 1;
+                    transition: opacity .2s ease-out .1s;
                 }
                 padding: 30px 0 20px;
                 height: auto;
@@ -241,7 +246,7 @@ nav {
         .drop-menu {
             width: 530px;
             left: -170px;
-
+            
             .menu-split-left {
                 width: 320px;
             }
@@ -282,6 +287,7 @@ nav {
         .topic-title {
             opacity: 0;
             transition: opacity .5s;
+            margin-top: 1rem;
         }
         .dropdown-item {
             color: $link;
@@ -290,9 +296,6 @@ nav {
         }
         .h5, b {
             padding: 0.25rem 1rem;
-        }
-        .topic-title {
-            margin-top: 1rem;
         }
     }
     #scope {
