@@ -45,7 +45,7 @@ why:
 
 1. Give 7 minutes of brainstorming time. Ask everyone to write as many ideas as possible, 1 per sticky note.
 
-1. In 2 minutes, have each person pick their top 2 goals for each category and rip up everything else. Remember to mention that this is okay!
+1. In 2 minutes, have each person pick their top 8 goals for each category and rip up everything else. Remember to mention that this is okay!
 
 1. Go around the room and have everyone share out the 8 goals they selected. Have a co-facilitator put the sticky notes on the board in the right columns.
 
