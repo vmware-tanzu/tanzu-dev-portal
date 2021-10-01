@@ -4,12 +4,12 @@
 		<!-- If not a guide, just show type and title -->
 		{{ if ne .Section "guides" }}
 			<li class="breadcrumb-item active" aria-current="page">
-				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
+				<a href="{{ .FirstSection.RelPermalink }}">{{ .FirstSection.LinkTitle }}</a>
 			</li>
 		{{ end }}
 		
 		<!-- Topic -->
-		{{ if .Params.level1 }}
+		{{ if and .Params.level1 (eq .Section "guides" ) }}
 			{{ $topicpage := index (where (where .Site.Pages "Section" "topics") ".Title" .Params.level1) 0 }}
 			<li class="breadcrumb-item active" aria-current="page">
 				<a href="{{ $topicpage.RelPermalink }}">{{ .Params.level1 }}</a>
@@ -30,6 +30,11 @@
 			{{ $sspage := index (where .Site.Pages "Params.subsection" .Params.parent) 0 }}
 			<li class="breadcrumb-item active" aria-current="page">
 				<a href="{{ $sspage.RelPermalink }}">{{ $sspage.LinkTitle }}</a>
+			</li>
+		{{ else if and (eq .Section "learningpaths") (ne .FirstSection .Parent) }}
+			<!-- Subpage of a learning path, include the learning path in the bread crumb -->
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
 			</li>
 		{{ end }}
 
