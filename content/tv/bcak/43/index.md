@@ -15,7 +15,7 @@ minutes: 120
 episode: "43"
 explicit: "no"
 title: "The one about Ted Lasso"
-# youtube: "4L7zjPoFkDM"
+youtube: "Fh6ZZ15KnUY"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
