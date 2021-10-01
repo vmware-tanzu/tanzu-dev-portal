@@ -2276,7 +2276,7 @@ background: black;
 
 @media(max-width:1420px) and (min-width: 992px) {
   main section:not(#featured-paths), 
-  .td-main section,
+  .td-main section:not(#featured-paths),
   .section-index,
   .td-content,
   .tanzu-tv .td-main > .container > p,
