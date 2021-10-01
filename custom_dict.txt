@@ -1434,6 +1434,7 @@ RegionStats-partition-Trades
 reimagine
 Reinertsen
 reissuance
+[Rr]emediation(s)?
 removeAll
 removeIf
 RemoveUnusedPdxTypesFunction
@@ -1676,7 +1677,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing|ing.|ize)
+[Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
 Teppanyaki
@@ -1711,7 +1712,7 @@ toolchain
 toolkits
 [Tt]oolset
 tooltip
-topologies
+[Tt]opolog(y|ies)?
 Torgerson
 toString
 totalProcessingTime
