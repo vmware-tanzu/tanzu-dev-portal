@@ -68,6 +68,7 @@ p code, li > code, table code,
  body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li, td, th {
    color: #28333c !important;
 }
+#search-results-info,
 body p {
   color: #61717d !important;
 }
@@ -358,19 +359,19 @@ div.aside div.aside-content {
     background: #f4f8fa;
   }
   &:nth-child(2) {
-    background: #e7ebec;
+    background: #f0f4f7;
 
   }
   &:nth-child(3) {
-    background: #e4eaec;
+    background: #e9edf0;
 
   }
   &:nth-child(4) {
-    background: #e1ebf0;
+    background: #e6ebee;
 
   }
   &:nth-child(5) {
-    background: #deecf3;
+    background: #e2eaee;
   }
 }
 
