@@ -34,7 +34,7 @@ So that is where you start. At the creation of this new project.
 
 Here, you will be accessing Application Accelerator for Tanzu and starting a new project for your client. 
 
-1. Forward a port from KIND to your host. KIND does not include a `LoadBalancer`. This is one of the "gotchas" of using KIND for VMware Tanzu Application Catalog referenced in the caveats section at the beginning of this series. So, the most straightforward way (not necessarily the only way) to gain access to services is with a `port-forward`. For example,
+1. Forward a port from KIND to your host. KIND does not include a `LoadBalancer`. This is one of the "gotchas" of using KIND for VMware Tanzu Application Platform referenced in the caveats section at the beginning of this series. So, the most straightforward way (not necessarily the only way) to gain access to services is with a `port-forward`. For example,
     ```
     kubectl port-forward svc/acc-ui-server 8877:80 -n accelerator-system 
     ```
@@ -155,7 +155,7 @@ Using a declarative deployment configuration, Tanzu Application Platform will wa
 
 3. Wait for the application pods to become ready.
     ```
-    watch kubectl get pods -n tap-install
+    kubectl get pods -n tap-install --watch
     ```
     The application pods should be ready in a minute or less. Once done, go to the next phase.
 
@@ -255,4 +255,3 @@ That's it for this guide! You have successfully deployed the Tanzu Application P
 3. Deploy on other platforms! KIND is great for certain things, but other platforms have value too. Try `minikube` for another local option. Or Amazon Web Services (AWS) or Azure for cloud options. It's a great way to continue to learn the system.
 
 Be on the lookout for future updates to this Beta. I will try to keep these posts updated as new information is released. 
-
