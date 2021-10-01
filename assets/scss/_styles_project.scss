@@ -1362,6 +1362,10 @@ body {
   
   a i.fa, a i.fas {
     margin-right: 5px;
+
+    &.fa-moon {
+      transform: translateX(-2px);
+    }
   }
   
   .opacity-4 {
@@ -2278,7 +2282,7 @@ background: black;
   main section:not(#featured-paths), 
   .td-main section:not(#featured-paths),
   .section-index,
-  .td-content,
+  .td-content:not(.topic-hero-content),
   .tanzu-tv .td-main > .container > p,
   .td-guides .td-main > .row > main,
   footer {
