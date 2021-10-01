@@ -34,7 +34,7 @@ Clearly, the level of abstraction that is provided by the platform teams to the 
 Paths to production squarely address the developer experience gap while still allowing stream-aligned teams to own their code, and while providing platform teams the level of control over the application's journey to production, as needed. A path to production is a way of codifying an application’s _value stream map_ as it makes its way from a developer’s workstation to a production environment.
 
 
-![An example path to production flow chart](images/diagrams/image-1.png "A simple path to production")
+![An example path to production flow chart](images/path-to-prod.png "A simple path to production")
 _Diagram 1: A simple path to production_
 
 In order to address the developer experience gap, the path to production allows users to create a unified access point for all of the tools required for their applications to reach a customer-facing environment. Instead of having four tools that are loosely coupled to each other, a path to production defines all four tools in a single, unified layer of abstraction. Where tools typically aren't able to integrate with one another and additional scripting or webhooks are necessary, there would be a unified automation tool to codify all the interactions between each of the tools.
@@ -51,7 +51,7 @@ The result is a single "pipeline" that is re-used by each team, respective of th
 In the context of microservices, an orchestrator defines each of the interactions between each of the microservices. The orchestration engine is responsible for executing, monitoring, and managing each of the microservices. If the orchestrator becomes inoperable, the entire interaction model falls apart.
 
 
-![Orchestration for a simple path to production](images/diagrams/image-2.png "Orchestration for a simple path to production")
+![Orchestration for a simple path to production](images/orchestrator.png "Orchestration for a simple path to production")
 _Diagram 2: Orchestration for a simple path to production_
 
 With this model applied to a path to production, an orchestrator would execute, monitor, and manage each of the steps of the path to production. The CI stage, or any others, could not function independently from the orchestrator. In the case of a path to production with a vulnerability scanning step, if a new CVE should arise, the only way to scan the code for it would be to trigger the orchestrator to initiate the scanning step or a new run through the supply chain.
@@ -59,7 +59,7 @@ With this model applied to a path to production, an orchestrator would execute, 
 Choreography, on the other hand, knows very little about each of the components and how they function. There is a common set of communication paradigms between each of the integrations. It relies on events being passed back and forth between the choreographer and each of the integrations. Each of the microservices interacts with the others asynchronously.
 
 
-![Choreography for a simple path to production](images/diagrams/image-3.png "Choreography for a simple path to production")
+![Choreography for a simple path to production](images/choreographer.png "Choreography for a simple path to production")
 _Diagram 3: Choreography for a simple path to production_
 
 In the choreography model, each step of the path to production and the tool required for that step knows nothing about the next step. It is responsible for receiving a signal that it must perform some work, completing it, and signaling that it has finished. In the same case as above, with a pipeline that has a vulnerability scanner, if there was a new CVE, the vulnerability scanner would know about it and trigger a new scan. When the scan is complete, the vulnerability scanner would send a message indicating that scanning is complete.
