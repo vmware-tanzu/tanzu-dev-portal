@@ -2273,3 +2273,16 @@ background: black;
 .cursor-intial {
   cursor: initial;
 }
+
+@media(max-width:1420px) and (min-width: 992px) {
+  main section:not(#featured-paths), 
+  .td-main section,
+  .section-index,
+  .td-content,
+  .tanzu-tv .td-main > .container > p,
+  .td-guides .td-main > .row > main,
+  footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
