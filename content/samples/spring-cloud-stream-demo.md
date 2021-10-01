@@ -13,12 +13,8 @@ tags:
 - Microservices
 - Event Streaming
 - Spring Cloud Stream
+- Messaging and Integration
 team:
 - Ben Wilcock
 title: Spring Cloud Stream Demo
-topics:
-- Spring
-- Messaging and Integration
-- Microservices
-- Event Streaming
 ---

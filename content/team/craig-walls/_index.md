@@ -1,9 +1,7 @@
 ---
 name: Craig Walls
 description: "Software Engineer"
-photo: "/images/team/craig-walls.png"
 roles: ["guest"]
-weight: 1
 
 # Social Media
 twitter: "habuma"

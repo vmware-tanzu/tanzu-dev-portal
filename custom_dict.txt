@@ -58,6 +58,7 @@ Aletty
 Alexa
 Alexey
 Alibaba
+allenholub
 [Aa]llocatable
 Alpine(-based)?
 Amaro
@@ -139,6 +140,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
+backpressure
 Baeldung('s)?
 Bahhh
 Bai
@@ -174,7 +176,9 @@ biome
 Biville
 BKPR
 BlackBox
+blazingly
 Blazor
+[Bb]lockchain
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
@@ -198,6 +202,7 @@ BucketRegion
 BucketRegion's
 BucketRegionDetails
 BucketRegions
+Buesing
 Bugsville
 buildout
 BuildPack
@@ -228,6 +233,7 @@ calicoctl
 callout
 Campuzano
 Cao
+Capili
 Carducci
 Carvel('s)?
 cass-operator
@@ -417,6 +423,7 @@ deliverAgile
 deliverToAsyncEventQueue
 DellEMC
 deployable
+[Dd]eployable
 deserialize
 deserializes
 deserializing
@@ -460,9 +467,11 @@ DistributionStats
 distroless
 distros
 django-prometheus
+DLT
 DNS
 dnsNames
 dnsutil
+Dobb's
 Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
@@ -524,6 +533,7 @@ env
 EOF
 ESB
 etcd(ctl)?
+Ethereum
 [Ee]thernet(s)?
 ETL
 EventID
@@ -538,6 +548,7 @@ expensed
 expirations
 ExploreDDD
 [Ee]xternal-(dns|DNS)
+[Ee]xternality
 extraDeploy
 F5
 facto
@@ -739,6 +750,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Holub
 Homebrew
 homogenous
 horizontally-scalable
@@ -773,6 +785,7 @@ img
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+[Ii]ncentivized
 [Ii]ncompressible
 InfoQ
 InfoSec
@@ -836,6 +849,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+JavaWorld
 JAX-RS
 JBaruch
 JBatch
@@ -1142,6 +1156,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 NFJ?S
+NFT
 [Nn]ginx|NGINX
 NIC
 Nicoll
@@ -1157,6 +1172,7 @@ non-JVM
 non-Kubernetes
 non-routable
 non-schedulable
+nonblocking
 NoSQL
 NotificationListener
 npm
@@ -1217,12 +1233,14 @@ OSS
 Osterling
 OTT
 [oO]vercommit(ted|ting)?
+[oO]vercommitment
 overcomplicate
 overconsumption
 overengineer(ing)?
 [oO]verprovisioner('s)?
 [oO]verprovisioning
 oversample
+[oO]versized
 OWASP
 Özlü
 P2P
@@ -1331,9 +1349,11 @@ precompiled
 preconfigured
 [Pp]reemptionPolicy
 PreemptLowerPriority
+[Pp]refactoring
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepend
 prepending
 Presales
 preStop
@@ -1342,6 +1362,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+production-deployable
 ProductPlan
 Programadoras
 programmatically
@@ -1390,6 +1411,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebase(d)
 rebasing
 Recommender
 [Rr]eddit
@@ -1412,6 +1434,7 @@ RegionStats-partition-Trades
 reimagine
 Reinertsen
 reissuance
+[Rr]emediation(s)?
 removeAll
 removeIf
 RemoveUnusedPdxTypesFunction
@@ -1435,9 +1458,11 @@ ResourcePermission
 ResourceQuota(s)?
 restaging
 RestAssured
+Restic
 RestrictedMethodAuthorizer
 Retrium
 revertibility
+rewatch
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1468,6 +1493,7 @@ Ruckle
 Rudd
 Rumans
 runnable
+Runtimes
 runtimes?
 Rushton
 [sS]3
@@ -1634,6 +1660,7 @@ symposia
 Sysdig
 SystemAdmin
 Szul
+tabpane
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1651,7 +1678,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing|ing.|ize)
+[Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
 Teppanyaki
@@ -1686,7 +1713,8 @@ toolchain
 toolkits
 [Tt]oolset
 tooltip
-topologies
+[Tt]opolog(y|ies)?
+Torgerson
 toString
 totalProcessingTime
 totalQueueTime
@@ -1732,6 +1760,7 @@ UnrestrictedMethodAuthorizer
 unschedulable
 unshared
 Unshared
+Unsplash
 [Uu]nstaged
 untar
 untrusted
@@ -1854,4 +1883,3 @@ Zou
 Zuul
 Zynga
 μServices
-tabpane

@@ -11,7 +11,5 @@ patterns:
 tags:
 - Kubernetes
 title: 'Spring Live: Kubernetes Local Development Workflow'
-topics:
-- Kubernetes
 youtube_id: Cl6UQ7AGDU8
 ---

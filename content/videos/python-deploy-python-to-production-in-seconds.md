@@ -15,8 +15,5 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Run In Production'
-topics:
-- Python
-- Containers
 youtube_id: qLg2xtQ5kTA
 ---

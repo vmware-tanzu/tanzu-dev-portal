@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Summarize “at-a-glance” how users, business and technology meet to create
   a business opportunity.
-image: lean-business-canvas/step-1.png
+resources:
+- name: cover
+  src: images/step-1.png
 lastmod: '2021-03-17'
 length: 1-2 hours
 participants: Core team, stakeholders
@@ -32,14 +34,14 @@ why:
 ### Sample Agenda & Prompts
 1. Draw the lean business canvas on the whiteboard
 
-   ![Lean business canvas template](/images/practices/lean-business-canvas/step-1.png)
+   ![Lean business canvas template](images/step-1.png)
 
 1. Explain the lean business canvas, one section at a time, using a common business as an example (e.g. “yelp”)
 
 1. After the explanation, start to ideate by having each participant write what they think should fill into **one section** (starting with the “Problem”)
 
    {{% callout %}}
-   Tip: If you are working with a larger group, instead of asking each person to fill in the canvas, you can split into groups of three.
+   **Tip**: If you are working with a larger group, instead of asking each person to fill in the canvas, you can split into groups of three.
    {{% /callout %}}
 1. After 2-3 minutes, go around the room and “de-duplicate” the ideas (e.g. when Joe reads his sticky note and Sally wrote the same thing, Sally will not read that when her turn comes around)
 
@@ -59,7 +61,7 @@ why:
    - Business metrics
    - Unfair advantage
 
-   ![Lean business canvas template with order specified](/images/practices/lean-business-canvas/step-7.png)
+   ![Lean business canvas template with order specified](images/step-7.png)
 {{% /section %}}
 
 {{% section %}}
@@ -85,7 +87,7 @@ Success is when you have agreement and understanding of the product market fit, 
 {{% section %}}
 ### Real World Examples
 
-![Sample filled out canvas](/images/practices/lean-business-canvas/example-1.jpg)
+![Sample filled out canvas](images/example-1.jpg)
 
 ## Recommended Reading
 

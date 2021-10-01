@@ -16,7 +16,7 @@ enableGitInfo = true
 
 [taxonomies]
 featured = "featured"
-topic = "topics"
+topicgroup = "topicgroups"
 tag = "tags"
 team = "team"
 

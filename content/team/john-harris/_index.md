@@ -1,11 +1,9 @@
 ---
 name: John Harris
 description: "Staff Engineer"
-photo: "/images/team/john-harris.jpg"
 roles: ["author"]
 skills: ["Kubernetes", "Docker", "Continuous Delivery", "DevOps"]
 location: "Seattle, WA"
-weight: 1
 
 # Social Media 
 twitter: "johnharris85"

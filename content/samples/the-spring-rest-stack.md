@@ -16,7 +16,4 @@ tags:
 team:
 - Josh Long
 title: The Spring REST Stack
-topics:
-- Spring
-- Microservices
 ---

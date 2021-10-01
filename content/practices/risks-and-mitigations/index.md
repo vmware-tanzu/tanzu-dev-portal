@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Surface risks and how the team might mitigate them
-image: risks-and-mitigations/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-04-08'
 length: 30-60 min
 miro_template_url: https://miro.com/miroverse/risks-and-mitigations
@@ -34,10 +36,11 @@ why:
 1. Have the group silently write project risks and obstacles this team may face. One item per sticky note.
         
    {{% callout %}}
-   Tip: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
+   **Tip**: Provide an example of a risk or obstacle. For example, "We will be launching code at a different pace than other teams - there may be dependencies and blockers."
    {{% /callout %}}
+
    {{% callout %}}
-   Tip: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
+   **Tip**: It may help to list the different types of risks. Business risks ("Compliance standards may alter our delivery approach") and team risks ("Members are situated in different time zones") should be considered along with technical risks."
    {{% /callout %}}
    
 1. Ask each person to select their top 5 risks and obstacles
@@ -53,10 +56,10 @@ why:
    - Y-axis: **Low Risk** to **High Risk**
 
    {{% callout %}}
-   Tip: Check in on the groups and move each group forward if they are moving faster than others
+   **Tip**: Check in on the groups and move each group forward if they are moving faster than others
    {{% /callout %}}
    
-   ![2x2 with labeled axes](/images/practices/risks-and-mitigations/step-3.png)
+   ![2x2 with labeled axes](images/step-3.png)
 
 1. Instruct each team to choose the top 2 risks from the high risk section that they would like to share out
 
@@ -84,5 +87,5 @@ Success is when you have a shared understanding of the biggest risks and have a 
 
 {{% section %}}
 ### Real World Examples
-![Whiteboard table showing risks in one column and related mitigation strategies in another](/images/practices/risks-and-mitigations/example-2.jpg)
+![Whiteboard table showing risks in one column and related mitigation strategies in another](images/example-2.jpg)
 {{% /section %}}

@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: An icebreaker that shows a room that even very easy tasks can be exceedingly
   complex to execute without full alignment
-image: default-cover.png
+
 lastmod: '2021-04-01'
 length: 20 min
 participants: Core team, stakeholders, and anyone else commonly invited to an Inception
@@ -54,7 +54,7 @@ why:
 1. Now that everyone can see how even a simple prompt has led to so much differentiation between each drawing, tie this point back to the group:
 
    {{% callout %}}
-   Example: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
+   **Example**: *"Even on a simple, daily activity we are all familiar with getting alignment and holding a shared vision is difficult. In software building it is even more difficult and that’s why we’re here today—to create alignment, understand the degrees of complexity, and find ways to work toward common goals."*
    {{% /callout %}}
 {{% /section %}}
 
@@ -90,19 +90,19 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 Here's a good example using a digital drawing tablet:
 
-![Digital Drawing Toast](/images/practices/draw-toast/example-6.jpg)
+![Digital Drawing Toast](images/example-6.jpg)
 {{% /section %}}
 
 {{% section %}}
 ### Real World Examples
 
-![Drawing Toast](/images/practices/draw-toast/example-5.jpg)
+![Drawing Toast](images/example-5.jpg)
 
-![Drawing Toast](/images/practices/draw-toast/example-3.jpg)
+![Drawing Toast](images/example-3.jpg)
 
-![Drawing Toast](/images/practices/draw-toast/example-4.jpg)
+![Drawing Toast](images/example-4.jpg)
 
-![Drawing Toast](/images/practices/draw-toast/example-1.jpg)
+![Drawing Toast](images/example-1.jpg)
 {{% /section %}}
 
 {{% section %}}

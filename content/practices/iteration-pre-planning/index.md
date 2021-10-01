@@ -8,7 +8,6 @@ description: "An optional planning session to make the Iteration Planning Meetin
 tags: ["Delivery"]
 length: "30 min - 1 hour"
 participants: "Product managers, 1-2 engineers"
-image: "default-cover.png"
 lastmod: "2021-07-15"
 date: "2021-07-14"
 why: 

@@ -8,5 +8,7 @@ description: >
 menu:
     main:
         parent: "sections"
+        params:
+            split: right
         weight: 7
 ---

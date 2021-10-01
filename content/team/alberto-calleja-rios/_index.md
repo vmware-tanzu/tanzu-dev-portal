@@ -1,11 +1,9 @@
 ---
 name: Alberto Calleja Ríos
 description: "Software Engineer"
-photo: "/images/team/alberto-rios.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "albertoimpl"

@@ -1,11 +1,9 @@
 ---
 name: Ray Chuan Tay
 description: "Software Engineer"
-photo: "/images/team/ray-chuan-tay.jpg"
 roles: ["author"]
 skills: []
 location: "Singapore"
-weight: 1
 
 # Social Media
 twitter: ""

@@ -18,7 +18,4 @@ tags:
 team:
 - Brian McClain
 title: Spring Zipkin Demo
-topics:
-- Spring
-- Microservices
 ---

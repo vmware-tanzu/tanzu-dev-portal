@@ -12,9 +12,8 @@ summary:
   languages.
 tags:
 - RabbitMQ
+- Messaging and Integration
 team:
 - Brian McClain
 title: Getting Started with RabbitMQ
-topics:
-- Messaging and Integration
 ---

@@ -1,10 +1,8 @@
 ---
 name: Pulkit Chandra
 description: "Manger, Product"
-photo: "/images/team/pulkit-chandra.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "pulkitchandra"

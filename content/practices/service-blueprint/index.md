@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Help the team understand the technological and human interactions that
   take place in a customer journey
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1-2 hours
 participants: Core team, stakeholders
@@ -40,7 +40,7 @@ why:
    The customer/user actions row is always directly under physical evidence row. It is the user we are targeting; they are the “hero”.
 
    {{% callout %}}
-   Tip: All projects/products are different, so you can always add different rows to the table as needed. See "Facilitator Notes & Tips" for a list possibilities.
+   **Tip**: All projects/products are different, so you can always add different rows to the table as needed. See "Facilitator Notes & Tips" for a list possibilities.
    {{% /callout %}}
    
 1. Move column by column through time, filling in cells with:

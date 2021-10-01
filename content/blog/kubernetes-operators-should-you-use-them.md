@@ -1,12 +1,10 @@
 ---
-title: "Kubernetes Operators: Should You Use Them?"
-description: A discussion of the up-front engineering costs associated with using Kubernetes operators, and when you should make the investment.
-date: "2021-07-02"
-topics:
-- Kubernetes
+title: 'Kubernetes Operators: Should You Use Them?'
+description: A discussion of the up-front engineering costs associated with using
+  Kubernetes operators, and when you should make the investment.
+date: '2021-07-02'
 tags:
 - Kubernetes
-# Author(s)
 team:
 - Rich Lander
 ---

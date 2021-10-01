@@ -1,11 +1,9 @@
 ---
 name: Santiago Vasquez
 description: "Software Engineer"
-photo: "/images/team/santiago-vasquez.jpg"
 roles: ["author"]
 skills: []
 location: "New York"
-weight: 1
 
 # Social Media 
 linkedin: "santiagovm"

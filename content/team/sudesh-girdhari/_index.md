@@ -1,7 +1,6 @@
 ---
 name: Sudesh Girdhari
 description: "Chief Solution Finder & Sr Problem Mender"
-photo: ""
 roles: ["author"]
 skills: []
 location: "Atlanta, GA"

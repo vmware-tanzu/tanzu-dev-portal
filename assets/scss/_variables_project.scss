@@ -46,6 +46,7 @@ $gray-850: #17242C !default;
 $gray-900: #0f171c !default;
 $black: #000 !default;
 $bright-green: #78be20 !default;
+$dark-green: #528317 !default;
 $quote-bar-blue: #0195D5 !default;
 
 $code-color: $link !default;
@@ -171,3 +172,7 @@ $navbar-dark-disabled-color: rgba($white, 0.25) !default;
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 $yiq-contrasted-threshold: 200 !default;
 
+// Badges
+$warning: #FFA630;
+$success: $bright-green;
+$secondary: gray;

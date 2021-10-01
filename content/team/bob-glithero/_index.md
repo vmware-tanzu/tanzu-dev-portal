@@ -1,10 +1,8 @@
 ---
 name: Bob Glithero
 description: "Senior Manager, Product Marketing"
-photo: "/images/team/bob-glithero.png"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: ""

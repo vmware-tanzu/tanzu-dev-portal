@@ -1,11 +1,9 @@
 ---
 name: Joe Beda
 description: "Principal Engineer"
-photo: "/images/team/joe-beda.jpeg"
 roles: ["guest"]
 skills: ["Kubernetes"]
 location: "Seattle, WA"
-weight: 1
 
 # Social Media
 twitter: "@jbeda"

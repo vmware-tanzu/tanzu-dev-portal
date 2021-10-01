@@ -3,11 +3,11 @@ date: '2021-04-22'
 description: You will externalize environment configuration and consume it from a
   web application on a modern container orchestration platform.
 draft: false
-hero: /images/workshops/workshop-cloud-native-config.png
+hero: "/images/workshops/workshop-cloud-native-config.png"
 lab: cnd-config-practices
 lastmod: '2021-05-03'
 length: 180
-preview: /images/workshops/img-cloud-native-app-config.png
+preview: "/images/workshops/img-cloud-native-app-config.png"
 summary: You will externalize environment configuration and consume it from a web
   application on a modern container orchestration platform.
 tags:
@@ -15,7 +15,7 @@ tags:
 - Spring Boot
 - Kubernetes
 title: Configuring a Cloud Native Application
-topics: null
+weight: 9
 ---
 
 This is a workshop for developers and application operators

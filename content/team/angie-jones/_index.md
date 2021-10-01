@@ -1,10 +1,8 @@
 ---
 name: Angie Jones
 description: "Senior Director, Developer Relations, Applitools"
-photo: "/images/team/angie-jones.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: ""
