@@ -2140,41 +2140,42 @@ background: black;
     background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
   }
 }
-
-//Highlighting hover effect on boxes
-#team-index .row > .person,
-.advocates .item,
-.learningpaths-index .linked-box,
-.topics-row .topic-card,
-.row > .subtopic,
-#topics-row-outer > .row
-.learningpaths-index,
-.topics-row,
-.row,
-.row > .flex-315,
-#topics-row-outer {
-  transition: all .2s ease-out;
-  opacity: 1;
-}
-#team-index .row:hover > .person,
-.advocates:hover .item,
-.episodes:hover .col-lg-4,
-.row:hover > .flex-315,
-.learningpaths-index:hover .linked-box,
-.topics-row:hover .topic-card,
-.row:hover > .subtopic,
-#topics-row-outer:hover > .row {
-  opacity: .5;
-}
-#team-index .row > .person:hover,
-.advocates .item:hover,
-.episodes .col-lg-4:hover,
-.row > .flex-315:hover,
-.learningpaths-index .linked-box:hover,
-.row > .subtopic:hover,
-.topics-row .topic-card:hover,
-#topics-row-outer > .row:hover {
-  opacity: 1;
+@media(min-width: 992px) {
+  //Highlighting hover effect on boxes
+  #team-index .row > .person,
+  .advocates .item,
+  .learningpaths-index .linked-box,
+  .topics-row .topic-card,
+  .row > .subtopic,
+  #topics-row-outer > .row
+  .learningpaths-index,
+  .topics-row,
+  .row,
+  .row > .flex-315,
+  #topics-row-outer {
+    transition: all .2s ease-out;
+    opacity: 1;
+  }
+  #team-index .row:hover > .person,
+  .advocates:hover .item,
+  .episodes:hover .col-lg-4,
+  .row:hover > .flex-315,
+  .learningpaths-index:hover .linked-box,
+  .topics-row:hover .topic-card,
+  .row:hover > .subtopic,
+  #topics-row-outer:hover > .row {
+    opacity: .5;
+  }
+  #team-index .row > .person:hover,
+  .advocates .item:hover,
+  .episodes .col-lg-4:hover,
+  .row > .flex-315:hover,
+  .learningpaths-index .linked-box:hover,
+  .row > .subtopic:hover,
+  .topics-row .topic-card:hover,
+  #topics-row-outer > .row:hover {
+    opacity: 1;
+  }
 }
 /*** PRACTICES ***/
 
