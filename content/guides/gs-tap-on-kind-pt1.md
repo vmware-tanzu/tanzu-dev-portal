@@ -1,9 +1,9 @@
 ---
 title: Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1
-linkTitle: Getting Started with VMware Tanzu Application Platform Beta on KIND, part
-  1
+linkTitle: Getting Started with VMware Tanzu Application Platform Beta on KIND, part 1
 description: A guide for installing the VMware Tanzu Application Platform Beta locally,
   on KIND
+weight: 83
 tags:
 - tanzu application platform
 - kind
