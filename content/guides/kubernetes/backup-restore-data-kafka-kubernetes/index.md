@@ -6,15 +6,16 @@ parent: Velero
 patterns:
 - Deployment
 tags:
-- Velero
-- Helm
 - Kubernetes
+- Kafka
 team:
 - Vikram Vaswani
 title: Backup and Restore Apache Kafka Deployments on Kubernetes
 topics:
 - Kubernetes
 weight: 7
+level1: Managing and Operating Kubernetes
+level2: Monitoring and Observing Kubernetes
 ---
 
 First published on [https://docs.bitnami.com/tutorials/backup-restore-data-kafka-kubernetes/](https://docs.bitnami.com/tutorials/backup-restore-data-kafka-kubernetes/)
@@ -50,7 +51,7 @@ This guide makes the following assumptions:
 * Both clusters are on the same Kubernetes provider. This is a requirement of [Velero's native support for migrating persistent volumes](https://velero.io/docs/v1.5/migration-case/).
 * The restored deployment on the destination cluster will have the same name, namespace and credentials as the original deployment on the source cluster.
 
-| NOTE: For persistent volume migration across cloud providers with Velero, you have the option of using Velero's [Restic integration](https://velero.io/docs/v1.5/restic/). This integration is not covered in this guide.
+  **NOTE**: For persistent volume migration across cloud providers with Velero, you have the option of using Velero's [Restic integration](https://velero.io/docs/v1.5/restic/). This integration is not covered in this guide.
 
 ## Install Velero on the Source Cluster
 
@@ -68,7 +69,11 @@ To install Velero on the source cluster:
 
    The following is an example of the output that displays during Velero installation:
 
+<<<<<<< Updated upstream
    ![Velero installation](images/velero-installation.png)
+=======
+   ![Velero installation output](images/velero-installation.png)
+>>>>>>> Stashed changes
 
 4. Confirm that the Velero deployment is successful by checking for a running pod using the command below:
   
@@ -103,7 +108,11 @@ Use Velero to copy the persistent data volumes for the Apache Kafka pods. These 
 To restore the persistent volumes and integrate them with a new Apache Kafka deployment on the destination cluster, do the following:
 
 1. Modify your context to reflect the destination cluster.
+<<<<<<< Updated upstream
 2. Install Velero on the destination cluster as described in [Install Velero on the Source Cluster](#Install-Velero-on-the-Source-Cluster). Remember to use the same values for the BUCKET-NAME and SECRET-FILENAME placeholders as you did originally so that Velero is able to access the previously-saved backups.
+=======
+2. Install Velero on the destination cluster as described in [Install Velero on the Source Cluster](#install-velero-on-the-source-cluster). Remember to use the same values for the BUCKET-NAME and SECRET-FILENAME placeholders as you did originally so that Velero is able to access the previously-saved backups.
+>>>>>>> Stashed changes
 
    ```bash
    velero install --provider gcp --plugins velero/velero-plugin-for-gcp:v1.2.0 --bucket BUCKET-NAME --secret-file SECRET-FILENAME
@@ -131,6 +140,7 @@ To restore the persistent volumes and integrate them with a new Apache Kafka dep
 
    ```bash
    helm repo add bitnami https://charts.bitnami.com/bitnami
+<<<<<<< Updated upstream
    helm install kafka bitnami/kafka
    ```
 
@@ -138,15 +148,31 @@ To restore the persistent volumes and integrate them with a new Apache Kafka dep
 
 7. Connect to the new deployment and confirm that your original messages are intact using a query similar to the following example. This will create a new deployment that uses the original pod volumes (and hence the original data).
 
+=======
+   ```
+
+   ```bash
+   helm install kafka bitnami/kafka
+   ```
+
+    **NOTE**: The above deployment command is an example only. It is important to create the new deployment on the destination cluster using the same namespace, deployment name, credentials and cluster topology as the original deployment on the source cluster.
+
+7. Connect to the new deployment and confirm that your original messages are intact using a query similar to the following example. This will create a new deployment that uses the original pod volumes (and hence the original data).
+
+>>>>>>> Stashed changes
    ```bash
    kubectl run kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r27 --namespace default --command -- sleep infinity
    kubectl exec --tty -i kafka-client --namespace default -- bash
    kafka-console-consumer.sh  --bootstrap-server kafka.default.svc.cluster.local:9092 --topic test --from-beginning
    ```
 8. Confirm that your original data is intact.
+<<<<<<< Updated upstream
+=======
+
+That's it! Check out the following links and keep the learning going. 
+>>>>>>> Stashed changes
 
 ## Useful links
 
 * [Bitnami Apache Kafka Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/kafka)
 * [Velero documentation](https://velero.io/docs/master/)
-
