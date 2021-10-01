@@ -7,6 +7,10 @@ body {
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
 }
+nav .nav-arrow {
+  border: solid #61717d !important;
+  border-width: 0 1px 1px 0 !important;
+}
 @media (max-width: 991.98px) {
  body .td-navbar .td-navbar-nav-hamburger .dropdown-toggle::after {
     content: "" !important;
@@ -24,6 +28,7 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+.td-home .darken .dropdown-item:hover,
 nav .dropdown-item:hover,
 #hero,
 .topic-card,
@@ -89,15 +94,7 @@ body p {
    color: #1d428a !important;
   }
 }
-#home-topics .topic-card a:hover,
-#team-index .card:hover,
-#team-index .card:focus,
-.topic.col-lg-4 a:focus,
-.topic.col-lg-4 a:hover,
-.workshop-box:hover .description,
-.col-4-thumbnail:hover .video-description {
-  background-color: #D9E4EA !important;
-}
+
 footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
@@ -222,7 +219,10 @@ body.tv-episode #register .mktoForm select {
   }
 }
 
-nav,
+.td-home .darken #dropdown-menus #scope {
+  background-color: white !important;
+}
+#navbar,
 .td-home footer.py-5,
 .td-home nav#navbar.darken {
   box-shadow: none !important;

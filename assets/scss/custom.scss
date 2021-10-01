@@ -69,6 +69,7 @@
       }
       &.no-bg {
         background-image: none;
+        background-color: transparent !important;
         min-height: auto;
       }
       &.guides-hero {
