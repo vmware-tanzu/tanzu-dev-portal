@@ -4,7 +4,7 @@ description: Customize Kubernetes to meet your needs
 weight: -100
 linkTitle: Building Your Kubernetes Platform
 title: Building Your Kubernetes Platform
-level1: Building a Kubernetes Runtime
+level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 toppage: true
 tags: []
