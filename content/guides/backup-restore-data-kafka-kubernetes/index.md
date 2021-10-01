@@ -12,8 +12,10 @@ team:
 - Vikram Vaswani
 title: Backup and Restore Apache Kafka Deployments on Kubernetes
 weight: 7
-level1: Managing and Operating Kubernetes
-level2: Monitoring and Observing Kubernetes
+level1: Securing Kubernetes
+level2: Backup and Restore
+aliases:
+- "/guides/kubernetes/backup-restore-data-kafka-kubernetes"
 ---
 
 First published on [https://docs.bitnami.com/tutorials/backup-restore-data-kafka-kubernetes/](https://docs.bitnami.com/tutorials/backup-restore-data-kafka-kubernetes/)

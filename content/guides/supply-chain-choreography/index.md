@@ -1,7 +1,6 @@
 ---
 date: '2021-09-29'
 description: How Supply Chain Choreography can unlock the potential of your CI/CD pipelines for microservices environments.
-parent: Software Supply Chain Choreography
 tags:
 - CI-CD
 team:
@@ -9,6 +8,8 @@ team:
 title: Software Supply Chain Choreography, Part 1
 level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
+aliases:
+- "/guides/ci-cd/supply-chain-choreography/"
 ---
 
 Much has been written about choreography and, more specifically, the distinction between choreography and orchestration in the context of microservices[^1] [^2]. However, taking the choreography paradigm and applying it to [continuous integration and continuous deployment (CI/CD)](https://tanzu.vmware.com/cicd) to create a _path to production_ may unlock the potential for addressing the developer experience gap[^3].
