@@ -122,11 +122,11 @@ body p.link {
 .featured-section .featured-link:focus .link{
   color: #0E2B65 !important;
 }
+.cta-btn-wrapper:hover .cta-btn {
+  color: white !important;
+}
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
-  &:hover {
-    color: white !important;
-  }
 }
 #live-notify,
 body a.btn {

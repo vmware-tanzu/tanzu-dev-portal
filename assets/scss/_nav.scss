@@ -349,7 +349,6 @@ nav {
         opacity: 0;
         transition: all .2s ease-out; 
     }
-    
     &.isOpen {
         transform: translateY(0);
         
@@ -359,7 +358,7 @@ nav {
         }
     }
     .mobile-nav-title {
-        font-size: 5vw;
+        font-size: 1.2rem;
         color: white;
     }
 }
