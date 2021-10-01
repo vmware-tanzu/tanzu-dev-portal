@@ -9,6 +9,8 @@ team:
 title: Software Supply Chain Choreography, Part 1
 topics:
 - CI-CD
+level1: Deploying Modern Applications
+level2: CI/CD, Release Pipelines
 ---
 
 Much has been written about choreography and, more specifically, the distinction between choreography and orchestration in the context of microservices[^1] [^2]. However, taking the choreography paradigm and applying it to [continuous integration and continuous deployment (CI/CD)](https://tanzu.vmware.com/cicd) to create a _path to production_ may unlock the potential for addressing the developer experience gap[^3].
