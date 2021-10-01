@@ -915,7 +915,6 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
-kaniko
 [Kk]app(-controller|.)?
 Karavi
 Kat
@@ -1674,8 +1673,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing|ing.|ize)
-[Tt]emplatable
+[Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
 Teppanyaki
@@ -1711,7 +1709,6 @@ toolkits
 [Tt]oolset
 tooltip
 [Tt]opolog(y|ies)?
-topologies
 Torgerson
 toString
 totalProcessingTime
