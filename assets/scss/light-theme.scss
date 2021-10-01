@@ -343,13 +343,11 @@ div.aside div.aside-content {
   height: 12px;
 }
 
-.linked-box:hover:not(.workshop-box):not(.featured-link), 
-.linked-box:focus:not(.workshop-box):not(.featured-link),
-.card:hover {
+#hero .subtopic > .linked-box {
   background-color: #D9E4EA !important;
-  h4:not(.workshop-title), h5:not(.fs-80), .link, .h4 > a {
-    color: #0E2B65 !important;
-  }
+}
+.card-type-id {
+  background: #D9E4EA !important;
 }
 
 #featured-paths .row .learning-path-card {
