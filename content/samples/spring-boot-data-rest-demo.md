@@ -13,8 +13,6 @@ tags:
 - Spring Boot
 - REST
 - JPA
-title: Spring Boot Data REST Demo with JPA
-topics:
-- Spring
 - Messaging and Integration
+title: Spring Boot Data REST Demo with JPA
 ---

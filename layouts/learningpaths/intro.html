@@ -1,0 +1,101 @@
+{{ define "learningpathfinder" }}
+{{ if eq .context.Parent .context.FirstSection }}
+{{ .scratch.Set "learningpath" .context }}
+{{ else }}
+{{ template "learningpathfinder" (dict "context" .context.Parent "scratch" .scratch) }}
+{{ end }}
+{{ end }}
+
+{{ define "main"}}
+
+{{ template "learningpathfinder" (dict "context" . "scratch" $.Scratch) }}
+{{ $learningpath := $.Scratch.Get "learningpath" }}
+
+{{ $page := . }}
+{{ if .Params.contentPage }}
+{{ $page = .GetPage .Params.contentPage }}
+{{ end }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "learning path viewed") }}
+
+<div class="mt-lg-5 pt-lg-5 mt-3 td-content learningpaths">
+  <div class='container'>
+    <div class="row flex-xl-nowrap container mx-auto mb-4">
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-print-none px-0 pt-2">
+        {{ partial "version-banner.html" . }}
+        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+        <h1>{{ $learningpath.Title }}</h1>
+        <!-- Tags -->
+        <div class="learningpath-tags d-flex">
+            <div class="duration mr-3">
+                <i class="fas fa-hourglass-half"></i>
+                {{ if gt .Params.duration 60 }}
+                    <!-- Round up to closest full hour duration -->
+                    {{ math.Ceil (div .Params.duration 60.0) }}h    
+                {{ else }}
+                    {{ .Params.duration }}m
+                {{ end }}
+            </div>
+            <div class="lesson-count mr-3">
+                <i class="fas fa-graduation-cap"></i>
+                {{ len .Pages }} lessons
+            </div>
+            <div class="experience">
+                {{ if eq .Params.experience "Beginner" }}
+                    <h4><span class="badge badge-success mr-3">Beginner</span></h4>
+                {{ else if eq .Params.experience "Intermediate" }}
+                    <h4><span class="badge badge-warning mr-3">Intermediate</span></h4>
+                {{ else if eq .Params.experience "Advanced" }}
+                    <h4><span class="badge badge-danger mr-3">Advanced</span></h4>
+                {{ end }}
+            </div>
+            <div class="tags d-flex">
+                {{ range .Params.tags }}
+                    <h4><span class="badge badge-secondary mr-3">{{ . }}</span></h4>
+                {{ end }}
+            </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="row flex-xl-nowrap container mx-auto">
+      <div class="col-12 col-md-3 learningpaths-sidebar td-sidebar td-sidebar-nav d-print-none d-none d-lg-block pl-0">
+        {{ partial "sidebar-learningpaths.html" (dict "context" . "learningpath" $learningpath) }}
+      </div>
+      <div class="col-12 col-md-9 col-lg-7 d-print-none position-relative pb-lg-4 px-0 px-md-3">
+        {{ if ne $learningpath .Page }}
+        <h2>{{ .Title }}</h2>
+        aaaaa
+        {{ partial "byline" (dict "context" . "withdate" false) }}
+        {{ end }}
+
+        <!-- Start Content -->
+
+        {{ .Content }}
+
+        <h2>Lessons</h2>
+        <ul>
+            {{ range .Pages}}
+            <li class="">
+                <a  href="{{ .RelPermalink }}" class="align-left pr-2">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+
+        <!-- End Content -->
+
+        {{ if $page.IsSection }}
+        {{ partial "begin.html" . }}
+        {{ else }}
+        {{ partial "pager.html" . }}
+        {{ end }}
+        <div class="feedback my-4 pt-4 border-top">
+          <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Learning Path Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {{ partial "pager.html" . }}
+</div>
+{{ end }}

@@ -4,6 +4,13 @@
     flex-direction: column;
     // height: 100vh;
     background-color: $dark;
+    background-color: #0f181c;
+    transition: all .2s ease-out;
+    opacity: 1;
+
+    &.dim {
+        opacity: .3;
+    }
 }
 
 // The outer page container for the default base template.

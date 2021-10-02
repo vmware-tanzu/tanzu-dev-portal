@@ -1,15 +1,13 @@
 ---
-title: "SpringOne Labs Now Available on the Tanzu Developer Center"
-description: Many of the workshops previously available at the Spring One conference are now available on the Tanzu Developer Center. Check out this post for a description of what is now available. 
-date: "2021-09-21"
-topics:
-- kubernetes
-- spring
+title: SpringOne Labs Now Available on the Tanzu Developer Center
+description: Many of the workshops previously available at the Spring One conference
+  are now available on the Tanzu Developer Center. Check out this post for a description
+  of what is now available.
+date: '2021-09-21'
 tags:
 - spring
 - tanzu
 - kubernetes
-# Author(s)
 team:
 - Ivan Tarin
 ---

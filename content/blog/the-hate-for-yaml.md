@@ -11,8 +11,6 @@ tags:
 team:
 - Brian McClain
 title: 'The Hate for YAML: The Hammer or the Nail?'
-topics:
-- Kubernetes
 weight: 1
 ---
 

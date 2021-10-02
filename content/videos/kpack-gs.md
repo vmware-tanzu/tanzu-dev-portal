@@ -5,15 +5,11 @@ lastmod: '2020-05-19'
 patterns:
 - Deployment
 tags:
-- Kubernetes
 - Containers
-- kpack
-- Buildpacks
+- Kpack
+- Cloud Native Buildpacks
 team:
 - Tyler Britten
 title: Getting Started with kpack
-topics:
-- Kubernetes
-- Containers
-youtube_id: -a82R7lNlcU
+youtube_id: "-a82R7lNlcU"
 ---

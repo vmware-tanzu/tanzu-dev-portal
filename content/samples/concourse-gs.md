@@ -12,6 +12,4 @@ tags:
 team:
 - Tony Vetter
 title: Getting Started with Concourse
-topics:
-- CI-CD
 ---
