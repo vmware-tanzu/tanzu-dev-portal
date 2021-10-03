@@ -1321,20 +1321,18 @@ body {
   }
   
   .workshop-box {
-    height: 400px;
+    background-color: $gray-800;
+
     .workshop-hero {
       height: 170px;
       width: 100%;
-      background-color: $gray-800;
+      background-color: $primary;
       img {
         height: 100px;
       }
     }
     .description {
       transition: all .2s;
-      // background-color: #22343c;
-      background-color: $gray-800;
-      height: 230px;
     }
   }
   

@@ -1,7 +1,7 @@
 {{ define "workshopCard" }}
   {{/* if and (eq .context.Parent .parent) (not .context.Params.hidden) */}}
   {{ if not .Params.hidden }}
-    <a id={{ replace (replace (replace (lower .Title) " " "-") "(" "") ")" "" }} href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="workshop-box filter-item col-lg-4 mb-4 flex-315 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
+    <a id={{ replace (replace (replace (lower .Title) " " "-") "(" "") ")" "" }} href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="workshop-box filter-item mb-4 flex-315 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
       <div class="workshop-hero row align-items-center justify-content-center">
         <img src={{ .Params.logo | relURL }}>
       </div>
@@ -17,7 +17,7 @@
               {{ .Description | markdownify }}
             </p>
           {{ end }}
-          <h5 class="fs-80 opacity-4">
+          <h5 class="fs-80 opacity-4 mb-4">
             <i class="fa fa-hourglass-half mr-1"></i>
             <span>{{ .Params.length }} minutes</span>
           </h5>  
