@@ -18,7 +18,7 @@
               {{ .Description | markdownify }}
             </p>
           {{ end }}
-          <h5 class="fs-80 opacity-4 mb-5">
+          <h5 class="fs-80 opacity-4 mb-4">
             <i class="fa fa-hourglass-half mr-1"></i>
             <span>{{ .Params.length }} minutes</span>
           </h5>  
@@ -30,6 +30,7 @@
           </div>
         </div>
       </div>
+      {{ with .Params.badge }}<span class="badge btn btn-small mb-4 mt-2 py-1">{{ . }}</span>{{ end }}
     </a>
   {{ end }}
 {{ end }}
