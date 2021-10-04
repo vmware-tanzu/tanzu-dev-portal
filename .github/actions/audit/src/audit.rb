@@ -95,14 +95,11 @@ contentFiles.each do |f|
     # Normalize dates
     if contentMetadata.has_key? "date"
         if contentMetadata["date"].is_a? String
-            newDate = DateTime.parse(contentMetadata["date"])
-            contentMetadata["date"] = newDate
+            contentMetadata["date"] = DateTime.parse(contentMetadata["date"])
         elsif contentMetadata["date"].is_a? Date
-            newDate = contentMetadata["date"].to_datetime
-            contentMetadata["date"] = newDate
+            contentMetadata["date"] = contentMetadata["date"].to_datetime
         elsif contentMetadata["date"].is_a? Time
-            newDate = contentMetadata["date"].to_datetime
-            contentMetadata["date"] = newDate
+            contentMetadata["date"] = contentMetadata["date"].to_datetime
         end
     end
 
