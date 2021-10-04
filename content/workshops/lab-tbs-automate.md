@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Explore how the Tanzu Build Service can help you get from source code to containers in a repeatable and secure manner.
-lab: lab-cnr-eventing
+lab: tanzu-build-service-overview
 lastmod: '2021-10-03'
 length: 15
 preview: "/images/workshops/img-cnr-serving.png"
