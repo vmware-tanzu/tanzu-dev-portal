@@ -1,13 +1,10 @@
 ---
-color: 6DB33F
 date: '2021-09-13'
 description: Look at different technologies that help with the technical complexity
   and technical debt when building and running microservices at scale.
-hero: "/images/workshops/workshop-springboot.png"
 lab: lab-booternetes
 lastmod: '2021-09-13'
 length: 30
-preview: "/images/workshops/img-spring-booternetes.png"
 summary: Look at different technologies that help with the technical complexity and
   technical debt when building and running microservices at scale.
 tags:

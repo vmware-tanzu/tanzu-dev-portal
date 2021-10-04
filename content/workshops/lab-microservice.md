@@ -1,13 +1,10 @@
 ---
-color: 35B07A
 date: '2021-03-04'
 description: Build a simple microservice with Spring.
-hero: "/images/workshops/workshop-spring-microservices.png"
 lab: lab-microservice
 lastmod: '2021-05-03'
 length: 15-30
 logo: "/images/workshops/logo-microservices.svg"
-preview: "/images/workshops/img-microservices.png"
 summary:
   - Build a simple microservice with Spring.
 tags:

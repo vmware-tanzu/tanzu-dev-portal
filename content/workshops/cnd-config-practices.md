@@ -1,16 +1,13 @@
 ---
-color: BADEFF
 date: '2021-04-22'
 description:
   You will externalize environment configuration and consume it from a
   web application on a modern container orchestration platform.
 draft: false
 logo: /images/workshops/logo-cloud-native.svg
-hero: /images/workshops/workshop-cloud-native-config.png
 lab: cnd-config-practices
 lastmod: '2021-05-03'
 length: 180
-preview: "/images/workshops/img-cloud-native-app-config.png"
 summary: You will externalize environment configuration and consume it from a web application on a modern container orchestration platform.
 tags:
   - Development

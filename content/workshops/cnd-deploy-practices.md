@@ -1,5 +1,4 @@
 ---
-color: E7FFE6
 date: '2021-03-30'
 description:
   Build and deploy a web application on a modern container orchestration
@@ -7,11 +6,9 @@ description:
 draft: false
 featured: true
 logo: /images/workshops/logo-spring-boot.svg
-hero: /images/workshops/workshop-springboot.png
 lab: cnd-deploy-practices
 lastmod: '2021-05-19'
 length: 180
-preview: "/images/workshops/img-cloud-native-app.png"
 summary: You will build and deploy a web application on a modern container orchestration platform, and learn cloud native principles along the way.
 tags:
   - Development

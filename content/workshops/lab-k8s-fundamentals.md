@@ -1,13 +1,10 @@
 ---
-color: 204FA4
 date: '2021-03-04'
 description: A quick, hands-on introduction to using Kubernetes.
-hero: "/images/workshops/workshop-kubernetes-fundamentals.png"
 lab: lab-k8s-fundamentals
 lastmod: '2021-05-03'
 length: 60
 logo: /images/workshops/logo-kubernetes.svg
-preview: /images/workshops/img-kubernetes-fundamentals.png
 summary:
   - A quick, hands-on introduction to using Kubernetes.
 tags:

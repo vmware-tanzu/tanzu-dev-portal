@@ -1,11 +1,9 @@
 ---
-color: c9f8ff
 date: '2021-09-13'
 description: Get started with serverless on Kubernetes using Cloud Native Runtimes.
 lab: lab-cnr-serving
 lastmod: '2021-10-03'
 length: 15
-preview: "/images/workshops/img-cnr-serving.png"
 logo: "/images/workshops/logo-tanzu.png"
 summary:
 - Get started with serverless on Kubernetes using the open source backed, Knative-based

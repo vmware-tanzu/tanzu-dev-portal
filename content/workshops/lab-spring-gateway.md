@@ -1,15 +1,12 @@
 ---
-color: 9DDBFB
 date: '2021-03-04'
 description:
   This workshop walks you through getting started with the Spring Cloud
   Gateway.
-hero: "/images/workshops/workshop-spring-cloud-gateway.png"
 lab: lab-spring-gateway
 lastmod: '2021-05-03'
 length: 15-30
 logo: "/images/workshops/logo-spring-cloud.png"
-preview: "/images/workshops/img-spring-cloud.png"
 summary:
   - This workshop walks you through getting started with the Spring Cloud Gateway.
 tags:

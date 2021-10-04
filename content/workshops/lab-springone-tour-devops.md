@@ -7,7 +7,6 @@ lab: lab-springone-tour-devops
 lastmod: '2021-07-09'
 length: 210
 title: SpringOne Tour DevOps
-preview: "/images/tv/episodes/springone-tour/S1T-Twitter-FB-July.png"
 summary:
 - Learn unit and integration testing techniques using Spring Boot, API contracts,
   database schema management, and testcontainers. Then, try a Kubernetes-native build

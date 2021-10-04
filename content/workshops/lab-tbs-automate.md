@@ -1,11 +1,9 @@
 ---
-color: 9DDBFB
 date: '2021-09-13'
 description: Tanzu Build Service helps get from source code to containers securely and repeatably.
 lab: tanzu-build-service-overview
 lastmod: '2021-10-03'
 length: 15
-preview: "/images/workshops/img-cnr-serving.png"
 logo: "/images/workshops/logo-tbs.svg"
 summary: Tanzu Build Service helps get from source code to containers securely and repeatably.
 tags:

@@ -1,13 +1,10 @@
 ---
-color: D7BCED
 date: '2021-03-04'
 description: Introducing Carvel, Simple and Composable Tools for Application Deployment.
-hero: "/images/workshops/workshop-carvel.png"
 lab: lab-getting-started-with-carvel
 lastmod: '2021-05-03'
 length: 30
 logo: /images/workshops/logo-carvel-2.png
-preview: /images/workshops/img-carvel.png
 summary:
   - Introducing Carvel, Simple and Composable Tools for Application Deployment.
 tags:
