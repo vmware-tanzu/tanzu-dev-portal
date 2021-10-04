@@ -5,7 +5,7 @@ lab: tce-package-guide
 lastmod: '2021-10-03'
 length: 15
 preview: "/images/workshops/img-cnr-serving.png"
-logo: "/images/workshops/logo-tanzu.svg"
+logo: "/images/workshops/logo-tanzu.png"
 summary: Learn how Tanzu makes it easy to install additional packages to help build and deploy Modern Apps.
 tags:
 - Tanzu
