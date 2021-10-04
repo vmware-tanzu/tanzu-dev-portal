@@ -30,9 +30,11 @@ body .border-bottom {
 }
 .td-home .darken .dropdown-item:hover,
 nav .dropdown-item:hover,
-#hero,
+#hero:not(.workshops-hero),
 .topic-card,
 .col-4-thumbnail,
+.workshop-box,
+.workshop-box .description,
 .video-description,
 .outcomes-index .td-box--gray-850,
 body .bg-primary,
@@ -120,6 +122,10 @@ body p.link {
 .featured-section .featured-link:focus .link{
   color: #0E2B65 !important;
 }
+.workshop-box .cta-btn-wrapper .cta-btn {
+color: #49afd9 !important;
+}
+.workshop-box:hover .cta-btn,
 .cta-btn-wrapper:hover .cta-btn {
   color: white !important;
 }
@@ -182,6 +188,9 @@ body.tv-episode #register .mktoForm select {
   color: #78be20!important;
 }
 
+.workshop-box:hover .btn {
+  background: #0E2B65 !important;
+}
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
@@ -374,7 +383,6 @@ div.aside div.aside-content {
     background: #e2eaee;
   }
 }
-
 
 /* SYNTAX HIGHLIGHTING */
 
