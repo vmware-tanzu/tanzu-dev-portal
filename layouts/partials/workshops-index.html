@@ -5,9 +5,9 @@
       <div class="workshop-hero row align-items-center justify-content-center">
         <img src={{ .Params.logo | relURL }}>
       </div>
-      <div class="description px-4 pt-2 d-flex flex-column justify-content-between pb-4 td-box-dark">
+      <div class="description px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
         <div>
-          <h4 class="workshop-title mt-3 link">{{- .Title -}}</h4>
+          <h4 class="workshop-title link">{{- .Title -}}</h4>
           {{ if gt (len .Description) 90 }}
             <p class="workshop-text text-light">
               {{ print (substr .Description 0 90) "..." }}
@@ -21,6 +21,10 @@
             <i class="fa fa-hourglass-half mr-1"></i>
             <span>{{ .Params.length }} minutes</span>
           </h5>  
+          <div class="start-workshop">
+            <span>Start workshop</span>
+            
+          </div>
         </div>
       </div>
     </a>
@@ -29,14 +33,13 @@
 <div class="container mb-lg-4 mb-2">
   <h2>Tanzu Interactive Sandboxes</h2>
 </div>
-<div class="d-flex container flex-wrap">
+<div class="d-flex container flex-wrap px-0">
   <div class="section-index flex-1">
-      <div class="row">
+      <div class="row workshop-row mb-lg-5 mb-2">
         {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
           {{ template "workshopCard" . }}
         {{ end }}
       </div>
-      <hr class="panel-line" />
       <!-- <div class="col"> -->
       <div class="row">
         <!-- Groups content according to the "param_key" field in front matter -->
@@ -47,7 +50,7 @@
           <div class="row">
             <h2 class="mb-lg-4 mb-2">{{ .Key }}</h2>
           </div>
-          <div class="row" role="listbox">
+          <div class="row workshop-row mb-lg-5 mb-2" role="listbox">
             {{ range .Pages }}
               {{ template "workshopCard" . }}
             {{ end }}

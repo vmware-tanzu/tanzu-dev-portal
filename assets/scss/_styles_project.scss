@@ -1327,12 +1327,17 @@ body {
       height: 170px;
       width: 100%;
       background-color: $primary;
+
       img {
-        height: 100px;
+        transition: all .2s ease-out;
+        height: 120px;
       }
     }
     .description {
       transition: all .2s;
+    }
+    &#configuring-a-cloud-native-application img {
+      height: 80px;
     }
   }
   
@@ -2148,7 +2153,7 @@ background: black;
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
-  .row:hover > .flex-315,
+  .row:hover:not(.workshop-row) > .flex-315,
   .learningpaths-index:hover .linked-box,
   .topics-row:hover .topic-card,
   .row:hover > .subtopic,
@@ -2163,7 +2168,7 @@ background: black;
   .row > .subtopic:hover,
   .topics-row .topic-card:hover,
   #topics-row-outer > .row:hover {
-    opacity: 1;
+    opacity: 1 !important;
   }
 }
 /*** PRACTICES ***/
