@@ -1140,8 +1140,13 @@ body {
     background: $dark;
   }
 
-  .episodes .countdown, 
   .workshop-row .badge {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    padding: 3px 10px;
+  }
+  .episodes .countdown {
     position: absolute;
     top: 2px;
     right: 10px;
@@ -1348,7 +1353,7 @@ body {
 
       img {
         transition: all .2s ease-out;
-        height: 105px;
+        height: 80px;
       }
     }
     .description {
