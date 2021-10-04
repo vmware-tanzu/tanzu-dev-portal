@@ -1309,7 +1309,7 @@ body {
       rgba(255, 255, 255, 0) 100%
     );
     opacity: 20%;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
     top: 0;
     z-index: 1;
   }
@@ -1339,31 +1339,25 @@ body {
     padding-right: 0 !important;
   }
   .workshop-box {
-    background-color: $gray-800;
+    background-color: #22343c;
+
     .workshop-hero {
+      background-color: $primary;
       height: 170px;
       width: 100%;
-      background-color: $primary;
 
       img {
         transition: all .2s ease-out;
         height: 105px;
       }
     }
-    .solid-rect {
-      transform: translateX(0);
-      background: rgba(73, 175, 217, 0);
-    }
     .description {
       transition: all .2s;
       height: calc(100% - 170px);
     }
-    &#configuring-a-cloud-native-application img {
-      height: 80px;
-    }
     &:hover {
-      .solid-rect {
-        background: rgba(73, 175, 217, .5);
+      .description .btn {
+        background: $link-hover-color !important;
       }
       .thumbnail-gradient {
         opacity: 0;
