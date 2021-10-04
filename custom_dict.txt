@@ -468,6 +468,7 @@ distroless
 distros
 django-prometheus
 DLT
+DNF
 DNS
 dnsNames
 dnsutil
@@ -579,6 +580,7 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+FOSS
 foundaments
 Foxwell
 FP
@@ -969,6 +971,7 @@ KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
 [Kk]ubeapps
+KubeApps
 [kK]ubebuilder
 KubeCon
 [Kk]ubeconfig
@@ -978,6 +981,7 @@ kubectl
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
+Kubernetes-compliant
 kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
@@ -1563,6 +1567,7 @@ Sharat_Chander
 sharded
 Sheasha
 Shellshock
+Shipley
 Shopen
 [Ss]howback
 Siddiq
