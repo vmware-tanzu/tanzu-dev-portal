@@ -1,4 +1,5 @@
 ---
+color: D7BCED
 date: '2021-03-04'
 description: Introducing Carvel, Simple and Composable Tools for Application Deployment.
 hero: "/images/workshops/workshop-carvel.png"

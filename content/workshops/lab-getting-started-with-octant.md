@@ -1,4 +1,5 @@
 ---
+color: 68BBA2
 date: '2021-03-04'
 description: An introduction to Octant, a Graphical UI to your Kubernetes clusters.
 hero: "/images/workshops/workshop-octant.png"

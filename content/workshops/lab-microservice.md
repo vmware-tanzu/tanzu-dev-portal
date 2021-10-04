@@ -1,4 +1,5 @@
 ---
+color: 35B07A
 date: '2021-03-04'
 description: Build a simple microservice with Spring.
 hero: "/images/workshops/workshop-spring-microservices.png"

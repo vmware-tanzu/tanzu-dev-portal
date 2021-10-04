@@ -1,4 +1,5 @@
 ---
+color: c9f8ff
 date: '2021-09-13'
 description: Get started with serverless on Kubernetes using Cloud Native Runtimes.
 lab: lab-cnr-serving

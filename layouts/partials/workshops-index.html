@@ -1,11 +1,12 @@
 {{ define "workshopCard" }}
   {{/* if and (eq .context.Parent .parent) (not .context.Params.hidden) */}}
   {{ if not .Params.hidden }}
-    <a id={{ replace (replace (replace (lower .Title) " " "-") "(" "") ")" "" }} href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="workshop-box filter-item mb-4 flex-315 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
-      <div class="workshop-hero row align-items-center justify-content-center">
+    <a href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-315 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
+      <div class="workshop-hero row align-items-center justify-content-center" style="background-color: #{{ .Params.color }};">
+        <div class='thumbnail-gradient position-absolute'></div>
         <img src={{ .Params.logo | relURL }}>
       </div>
-      <div class="description px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
+      <div class="description flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
         <div>
           <h4 class="workshop-title link">{{- .Title -}}</h4>
           {{ if gt (len .Description) 90 }}
@@ -17,24 +18,26 @@
               {{ .Description | markdownify }}
             </p>
           {{ end }}
-          <h5 class="fs-80 opacity-4 mb-4">
+          <h5 class="fs-80 opacity-4 mb-5">
             <i class="fa fa-hourglass-half mr-1"></i>
             <span>{{ .Params.length }} minutes</span>
           </h5>  
-          <div class="start-workshop">
-            <span>Start workshop</span>
-            
+        </div>
+        <div class="start-workshop d-flex justify-content-center mb-2">
+          <div class="cta-btn-wrapper overflow-hidden d-flex justify-content-between align-items-center position-relative">
+            <div class="solid-rect position-absolute"></div>
+            <div class="cta-btn p-3 m-0 d-inline-block text-uppercase fs-80">Start workshop</div>
           </div>
         </div>
       </div>
     </a>
   {{ end }}
 {{ end }}
-<div class="container mb-lg-4 mb-2">
-  <h2>Tanzu Interactive Sandboxes</h2>
+<div class="container mb-4">
+  <h2>Learn With Tanzu</h2>
 </div>
-<div class="d-flex container flex-wrap px-0">
-  <div class="section-index flex-1">
+<div class="d-flex container flex-wrap">
+  <div id="workshops-index" class="section-index flex-1">
       <div class="row workshop-row mb-lg-5 mb-2">
         {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
           {{ template "workshopCard" . }}
@@ -48,7 +51,7 @@
           <div class="col">
             -->
           <div class="row">
-            <h2 class="mb-lg-4 mb-2">{{ .Key }}</h2>
+            <h2 class="mb-4">{{ .Key }}</h2>
           </div>
           <div class="row workshop-row mb-lg-5 mb-2" role="listbox">
             {{ range .Pages }}

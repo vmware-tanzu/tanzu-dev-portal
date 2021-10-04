@@ -1,4 +1,5 @@
 ---
+color: B2DAFF
 date: '2021-09-13'
 description: Learn how Tanzu makes it easy to install additional packages to help build and deploy Modern Apps.
 lab: tce-package-guide

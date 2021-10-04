@@ -1302,8 +1302,10 @@ body {
       rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
-    opacity: 30%;
+    opacity: 20%;
     transition: opacity 0.25s;
+    top: 0;
+    z-index: 1;
   }
   .video-description {
     background-color: $border;
@@ -1319,10 +1321,19 @@ body {
       height: auto;
     }
   }
-  
+  @media(max-width:1540px) and (min-width: 1420px) {
+    .workshops-hero,
+    .workshops-hero + .td-content {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+  #workshops-index {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .workshop-box {
     background-color: $gray-800;
-
     .workshop-hero {
       height: 170px;
       width: 100%;
@@ -1333,11 +1344,24 @@ body {
         height: 120px;
       }
     }
+    .solid-rect {
+      transform: translateX(0);
+      background: rgba(73, 175, 217, 0);
+    }
     .description {
       transition: all .2s;
+      height: calc(100% - 170px);
     }
     &#configuring-a-cloud-native-application img {
       height: 80px;
+    }
+    &:hover {
+      .solid-rect {
+        background: rgba(73, 175, 217, .5);
+      }
+      .thumbnail-gradient {
+        opacity: 0;
+      }
     }
   }
   
@@ -2153,7 +2177,7 @@ background: black;
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
-  .row:hover:not(.workshop-row) > .flex-315,
+  .row:hover > .flex-315,
   .learningpaths-index:hover .linked-box,
   .topics-row:hover .topic-card,
   .row:hover > .subtopic,

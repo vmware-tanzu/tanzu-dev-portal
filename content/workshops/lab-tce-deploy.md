@@ -1,4 +1,5 @@
 ---
+color: 204FA4
 date: '2021-09-13'
 description: Learn how Tanzu can provide a platform that simplifies working with Modern Applications.
 lab: tce-dev-guide

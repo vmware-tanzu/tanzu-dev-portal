@@ -1,4 +1,5 @@
 ---
+color: 204FA4
 date: '2021-03-04'
 description: A quick, hands-on introduction to using Kubernetes.
 hero: "/images/workshops/workshop-kubernetes-fundamentals.png"

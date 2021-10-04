@@ -1,4 +1,5 @@
 ---
+color: 6DB33F
 date: '2021-03-04'
 description: Add liveness and readiness probes to a Spring Boot application in Kubernetes.
 hidden: true

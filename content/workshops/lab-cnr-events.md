@@ -1,4 +1,5 @@
 ---
+color: 6DB33F
 date: '2021-09-13'
 description: An introduction to Knative Eventing for users of VMware Tanzu Cloud Native Runtimes.
 lab: lab-cnr-eventing

@@ -1,4 +1,5 @@
 ---
+color: 9DDBFB
 date: '2021-03-04'
 description:
   This workshop walks you through getting started with the Spring Cloud

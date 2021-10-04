@@ -1,4 +1,5 @@
 ---
+color: BADEFF
 date: '2021-04-22'
 description:
   You will externalize environment configuration and consume it from a

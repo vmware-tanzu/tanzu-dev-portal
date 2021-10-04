@@ -1,4 +1,5 @@
 ---
+color: 6DB33F
 date: '2021-03-04'
 description: Use Skaffold to create a Spring Boot application and deploy it to Kubernetes.
 hidden: true

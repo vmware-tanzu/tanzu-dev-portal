@@ -1,4 +1,5 @@
 ---
+color: 6DB33F
 date: '2021-09-13'
 description: Experience how Spring Boot makes it easy to create standalone, production-grade
   Spring-based applications that you can "just run."
