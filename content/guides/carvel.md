@@ -38,6 +38,8 @@ It currently[^2] contains the following tools:
 
 **Guides**
 * [Getting Started with kapp](/guides/kubernetes/kapp-gs/)
+* [Getting Started with ytt](/guides/kubernetes/ytt-gs/)
+* [Getting Started with kapp-controller](/guides/kubernetes/kapp-controller-gs/)
 
 **Workshops**
 * [Getting Started with Carvel](https://tanzu.vmware.com/developer/workshops/lab-getting-started-with-carvel/)
