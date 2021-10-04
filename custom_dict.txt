@@ -450,6 +450,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+distributable
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
@@ -783,6 +784,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+imgpkg
 [Ii]mmeasurability
 IMmUjUjBzes
 [Ii]mpactful
@@ -921,7 +923,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
-[Kk]app(-controller|.)?
+[Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kat
 [Kk]ata(s)?
@@ -1142,7 +1144,7 @@ MyPy
 mystream
 mytopic
 NameCheap
-[Nn]amespace(.|d|-scoped|s)?
+[Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
 Nana
 [Nn]ano
@@ -1643,13 +1645,13 @@ StringBuilder
 struct
 STT
 Styra
+sub(p|P)ath
 subclasses
 subcommand
 subdirectory
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
-subpath
 Subramaniam
 subregistry
 substring
@@ -1675,6 +1677,7 @@ Tatooine
 TBD
 tchotchke
 TCP
+tdc-carvel-examples
 tdp-guide
 TeamRetro
 TechRepublic
@@ -1749,6 +1752,7 @@ UDP
 UI(s|-based)?
 (un)?marshalling
 unannotated
+unbundle
 uncomment
 Uncomment
 undersample
@@ -1825,6 +1829,7 @@ VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
+vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
@@ -1879,7 +1884,7 @@ Yaron
 yay
 Yonis
 youtube
-ytt
+ytt(-templatized)?
 Zalando
 ZDNet
 [Zz]ipkin
