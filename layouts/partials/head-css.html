@@ -19,7 +19,7 @@
 {{ else }}
 {{ $css := resources.Get $scssMain | resources.ExecuteAsTemplate "css/main.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
 {{ $cssCustom := resources.Get $scssCustom | resources.ExecuteAsTemplate "css/custom.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
-{{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS }}
+{{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
 
 <link rel="preload" href="{{ $css.RelPermalink }}" as="style">
 <link rel="preload" href="{{ $cssCustom.RelPermalink }}" as="style">

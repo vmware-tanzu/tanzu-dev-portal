@@ -33,6 +33,9 @@ if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('g
   crossorigin="anonymous"
 ></script>
 
+{{ $scssLight := "scss/light-theme.scss" }}
+{{ $cssLight := resources.Get "scss/light-theme.scss" | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
+
 <script>
 Sentry.init({
   dsn: "https://91138cf7f17842fd8a57d45372bf538c@o448817.ingest.sentry.io/5712977",
@@ -84,7 +87,7 @@ function changeTheme(mode, firstLoad) {
 
     link.type = "text/css";
     link.rel = "stylesheet";
-    link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
+    link.href = "{{ $cssLight.RelPermalink }}";
     link.id = "light-theme"
 
     head.prepend(link);
