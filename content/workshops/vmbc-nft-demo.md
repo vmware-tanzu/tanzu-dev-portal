@@ -2,13 +2,11 @@
 date: '2021-09-13'
 description: Get a high-level overview of how Spring and Blockchain DLT can be used
   in a digital asset exchange.
-hero: "/images/workshops/workshop-spring-microservices.png"
 lab: vmbc-nft-demo
 hidden: true
 draft: true
 lastmod: '2021-09-13'
 length: 30
-preview: "/images/workshops/img-vmbc-nft.png"
 summary:
 - Get a high-level overview of how Spring and Blockchain DLT can be used in a digital
   asset exchange.
