@@ -33,7 +33,7 @@ We hope these changes to our topics structure will help you find what you are lo
 
 Guides are great, and useful for completing very specific tasks. But what if the task you need to complete is only a small part of an overall role you are performing at your organization? Maybe today you have been tasked with [developing a test-driven development (TDD) practice](learningpaths/application-development/test-driven-development/) within your team, and you need a guide to walk you through that process. But you also know that this task is simply part of a larger initiative within your organization to build out a [modern application development practice](https://deploy-preview-1224--tanzu-dev-portal.netlify.app/developer/learningpaths/application-development/). 
 
-This is where [Learning Paths](/learningpaths/) come in. Learning paths are a selection of prescriptive and curated content built to help readers master topics too complex for a single [guide](/developer/guides/). Readers can jump around to specific content using the side-bar navigation, or walk the entire path to master a topic. 
+This is where [Learning Paths](/learningpaths/) come in. Learning paths are a selection of prescriptive and curated content built to help readers master topics too complex for a single [guide](/guides/). Readers can jump around to specific content using the side-bar navigation, or walk the entire path to master a topic. 
 
 Much like our focus on topics, we hope these Learning Paths help you find what you are looking for faster. We hope this content aids you in solving your development issues today, as well as getting in front of complex issues coming down the road. 
 
