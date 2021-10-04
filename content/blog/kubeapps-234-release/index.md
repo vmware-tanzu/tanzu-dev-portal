@@ -2,8 +2,6 @@
 title: "Kubeapps 2.3.4 - Easier Deployment in VMware Tanzu™ Kubernetes Grid Clusters"
 description: A new Kubeapps release is out, and it is even easier to run in TKG clusters! The last version of Kubeapps necessitated a manual update of the current Pinniped version to the latest – this step is no longer required. Keep reading to learn more.
 date: "2021-09-23"
-topics:
-- Kubernetes
 tags:
 - Kubeapps
 - Containers

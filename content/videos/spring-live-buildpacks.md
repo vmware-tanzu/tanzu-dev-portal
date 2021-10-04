@@ -10,15 +10,12 @@ lastmod: '2020-05-19'
 patterns:
 - Deployment
 tags:
-- Buildpacks
-- kpack
-- Kubernetes
+- Cloud Native Buildpacks
+- Kpack
+- Spring
+- Containers
 team:
 - Cora Iberkleid
 title: 'Spring Live: Build Images with Confidence and Ease with Cloud Native Buildpacks'
-topics:
-- Spring
-- Containers
-- Kubernetes
 youtube_id: EVHHyiypiY0
 ---

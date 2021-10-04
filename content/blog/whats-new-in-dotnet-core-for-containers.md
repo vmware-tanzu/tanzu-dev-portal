@@ -7,13 +7,10 @@ patterns:
 tags:
 - Containers
 - Microservices
-- .NET
+- ".NET"
 team:
 - Santiago Vasquez
 title: What’s New in .NET Core for Containers and Microservices
-topics:
-- Containers
-- Microservices
 ---
 
 Throughout most of my career as a developer, I have written code using .NET (mostly C#). But lately, I have been spending more time with Spring, and I keep hearing comments about exciting changes in .NET around containers. I decided it was time to go back and check out what I had missed. This article highlights some of these changes, emphasizing the ones most relevant to containers and microservices; after all, I am part of the [VMware Tanzu Portfolio](https://tanzu.vmware.com/tanzu). 

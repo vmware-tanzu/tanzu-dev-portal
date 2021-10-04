@@ -14,7 +14,5 @@ tags:
 team:
 - Mark Heckler
 title: What Is Spring?
-topics:
-- Spring
 youtube_id: Spzug_SjJnM
 ---

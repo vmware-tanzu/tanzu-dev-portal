@@ -1,0 +1,78 @@
+{{ define "learningpathfinder" }}
+{{ if eq .context.Parent .context.FirstSection }}
+{{ .scratch.Set "learningpath" .context }}
+{{ else }}
+{{ template "learningpathfinder" (dict "context" .context.Parent "scratch" .scratch) }}
+{{ end }}
+{{ end }}
+
+{{ define "main"}}
+
+{{ template "learningpathfinder" (dict "context" . "scratch" $.Scratch) }}
+{{ $learningpath := $.Scratch.Get "learningpath" }}
+
+{{ $page := . }}
+{{ if .Params.contentPage }}
+{{ $page = .GetPage .Params.contentPage }}
+{{ end }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "learning path content viewed") }}
+
+<div class="mt-lg-5 pt-lg-5 mt-3 td-content learningpaths">
+  <div class='container'>
+    <div class="row flex-xl-nowrap container mx-auto mb-4">
+      <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-print-none px-0 pt-2">
+        {{ partial "version-banner.html" . }}
+        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+        <h1>{{ $learningpath.Title }}</h1>
+      </div>
+    </div>
+    <div class="row flex-xl-nowrap container mx-auto">
+      <div class="col-12 col-md-3 learningpaths-sidebar td-sidebar td-sidebar-nav d-print-none d-none d-lg-block pl-0">
+        {{ partial "sidebar-learningpaths.html" (dict "context" . "learningpath" $learningpath) }}
+      </div>
+      <div class="col-12 col-md-9 col-lg-7 d-print-none position-relative pb-lg-4 px-0 px-md-3">
+        {{ if ne $learningpath .Page }}
+        <h2>{{ .Title }}</h2>
+        {{ partial "byline" (dict "context" . "withdate" false) }}
+        {{ end }}
+
+        {{ $page.Content }}
+
+        {{ if $page.IsSection }}
+        {{ partial "begin.html" . }}
+        {{ else }}
+        {{ partial "pager.html" . }}
+        {{ end }}
+        <div class="feedback my-4 pt-4 border-top">
+          <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Learning Path Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 mt-1 d-print-none d-none d-lg-block">
+        <div class="learningpaths-toc pl-3 pr-0">
+        {{ if ne $page.TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+        {{ with $page.TableOfContents }}
+        <h5 class="mb-4">On This Page</h5>
+        {{ . }}
+        {{ end }}
+        {{ end }}
+        </div>
+
+        {{ if .Params.related }}
+        <div class="related-reading px-3 py-2">
+          <p class="text-uppercase font-weight-bold">Related</p>
+          <ul>
+            {{ range .Params.related }}
+            {{ with $.GetPage . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ partial "pager.html" . }}
+</div>
+{{ end }}

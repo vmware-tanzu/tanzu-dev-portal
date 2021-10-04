@@ -13,7 +13,4 @@ tags:
 team:
 - Josh Long
 title: Bootiful Microservices
-topics:
-- Spring
-- Microservices
 ---

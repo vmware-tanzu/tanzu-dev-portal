@@ -1,15 +1,17 @@
 ---
 date: '2021-07-09'
-description: SpringOne Tour DevOps 
+description: SpringOne Tour DevOps
 draft: true
 hidden: true
 lab: lab-springone-tour-devops
 lastmod: '2021-07-09'
 length: 210
 title: SpringOne Tour DevOps
-preview: /images/tv/episodes/springone-tour/S1T-Twitter-FB-July.png
 summary:
-- Learn unit and integration testing techniques using Spring Boot, API contracts, database schema management, and testcontainers. Then, try a Kubernetes-native build & deploy supply chain powered by kpack and ArgoCD to deploy a microservice-based application.
+- Learn unit and integration testing techniques using Spring Boot, API contracts,
+  database schema management, and testcontainers. Then, try a Kubernetes-native build
+  & deploy supply chain powered by kpack and ArgoCD to deploy a microservice-based
+  application.
 tags:
 - Spring
 - Microservices
@@ -17,10 +19,6 @@ tags:
 - Spring Boot
 - ArgoCD
 - kpack
-topics:
-- Spring
-- Microservices
-- Kubernetes
 ---
 
 During this workshop you will automate the testing and deployment of a Spring Boot app and its backing database to Kubernetes, including:

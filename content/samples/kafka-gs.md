@@ -10,9 +10,8 @@ summary:
 - An example of how to connect to, send, and receive messages from Kafka.
 tags:
 - Kafka
+- Messaging and Integration
 team:
 - Brian McClain
 title: Getting Started with Kafka
-topics:
-- Messaging and Integration
 ---
