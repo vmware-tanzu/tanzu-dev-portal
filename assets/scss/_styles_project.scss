@@ -1395,7 +1395,7 @@ body {
   }
   
   body .workshops-hero {
-    
+    background-color: $primary;
   }
   body .learningpaths-hero + .td-content {
     margin-top: 2rem;
@@ -1407,9 +1407,6 @@ body {
   body .workshops-hero {
     .lead {
       max-width: 920px;
-      @media (min-width: 992px) {
-        max-width: 620px;
-      }
     }
   }
   
