@@ -1,14 +1,23 @@
 ---
-date: '2021-04-22'
-description: Lorem epsum Potem
-draft: false
-length: 180
-logo: /images/workshops/logo-tbs.svg
-title: Automate Container Image creation with Tanzu Build Service
+date: '2021-09-13'
+description: Explore how the Tanzu Build Service can help you get from source code to containers in a repeatable and secure manner.
+lab: lab-cnr-eventing
+lastmod: '2021-10-03'
+length: 15
+preview: "/images/workshops/img-cnr-serving.png"
+logo: "/images/workshops/logo-tbs.svg"
+summary: Explore how the Tanzu Build Service can help you get from source code to containers in a repeatable and secure manner.
 tags:
-  - Tanzu
+- Spring
+- Microservices
+- Kubernetes
+- Spring Boot
+- Tanzu
+title: Automate Container Image Creation with Tanzu Build Service
 level1: Building Kubernetes Platform
-weight: 4
+team:
+- Ryan Baker
+weight: 3
 ---
 
-Lorem epsum Potem
+In this workshop, you'll explore how the Tanzu Build Service can produce OCI Compliant container images from source code in a repeatable, scalable, and secure manner. You'll start with a sample application, use the Tanzu Build Service to build a container, deploy it, update the application, and finally, patch the base operating system. In the process of the workshop, you'll use Harbor to look at the container image that Harbor produced.
