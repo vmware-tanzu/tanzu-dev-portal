@@ -19,5 +19,5 @@ level1: Deploying Modern Applications
 team:
 - Boskey Savla
 weight: 1
-badge: Tanzu Community Edition
+badge: Tanzu
 ---
