@@ -1125,7 +1125,8 @@ body {
   }
   
   .shows .teaser,
-  .episodes .countdown {
+  .episodes .countdown,
+  .workshop-row .badge {
     border-radius: 40px;
     background: $bright-green;
     font-size: 0.75em;
@@ -1135,13 +1136,23 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .workshop-row .badge {
+    background: $dark;
+  }
+
+  .workshop-row .badge {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    padding: 3px 10px;
+  }
   .episodes .countdown {
     position: absolute;
     top: 2px;
     right: 10px;
     padding: 3px 15px;
   }
-  
+
   .episodes .teaser {
     margin-bottom: 0;
     color: $bright-green;
@@ -1256,11 +1267,7 @@ body {
     }
   }
 
-  .workshop-box:hover {
-    .description {
-      background-color: #45667b;
-    }
-  }
+
   .col-4-thumbnail {
     padding: 0;
     background-color: $border;
@@ -1306,8 +1313,10 @@ body {
       rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
-    opacity: 30%;
-    transition: opacity 0.25s;
+    opacity: 20%;
+    transition: opacity 0.5s;
+    top: 0;
+    z-index: 1;
   }
   .video-description {
     background-color: $border;
@@ -1323,27 +1332,41 @@ body {
       height: auto;
     }
   }
-  
-  //Workshops
+  @media(max-width:1540px) and (min-width: 1420px) {
+    .workshops-hero,
+    .workshops-hero + .td-content {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+  #workshops-index {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .workshop-box {
-    height: 400px;
+    background-color: #22343c;
+
     .workshop-hero {
+      background-color: $primary;
       height: 170px;
       width: 100%;
+
+      img {
+        transition: all .2s ease-out;
+        height: 80px;
+      }
     }
     .description {
       transition: all .2s;
-      background-color: $border;
-      height: 230px;
+      height: calc(100% - 170px);
     }
-  }
-  
-  @media (min-width: 992px) {
-    .workshop-description {
-      width: 35.5%;
-    }
-    .workshop-preview {
-      width: 58%;
+    &:hover {
+      .description .btn {
+        background: $link-hover-color !important;
+      }
+      .thumbnail-gradient {
+        opacity: 0;
+      }
     }
   }
   
@@ -1377,9 +1400,9 @@ body {
   }
   
   body .workshops-hero {
-    background-color: transparent !important;
-    padding-bottom: 0px !important;
-    min-height: auto !important;
+    background-color: $primary;
+    padding: 50px 0 !important;
+    min-height: 200px !important;
   }
   body .learningpaths-hero + .td-content {
     margin-top: 2rem;
@@ -1391,9 +1414,6 @@ body {
   body .workshops-hero {
     .lead {
       max-width: 920px;
-      @media (min-width: 992px) {
-        max-width: 620px;
-      }
     }
   }
   
@@ -2159,7 +2179,7 @@ background: black;
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
-  .row:hover > .flex-315,
+  .row:hover:not(.workshop-row) > .flex-315,
   .learningpaths-index:hover .linked-box,
   .topics-row:hover .topic-card,
   .row:hover > .subtopic,
@@ -2174,7 +2194,7 @@ background: black;
   .row > .subtopic:hover,
   .topics-row .topic-card:hover,
   #topics-row-outer > .row:hover {
-    opacity: 1;
+    opacity: 1 !important;
   }
 }
 /*** PRACTICES ***/

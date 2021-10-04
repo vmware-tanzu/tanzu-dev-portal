@@ -14,7 +14,6 @@ team:
 date: '2021-09-14'
 lastmod: '2021-09-14'
 aliases:
-aliases:
 - /guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/
 - /guides/kubernetes/gs-tap-on-kind-pt2/
 - /guides/kubernetes/gs-tap-on-kind-pt1/
