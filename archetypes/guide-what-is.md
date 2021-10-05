@@ -1,17 +1,15 @@
 ---
 title:  "{{ (replace .Name "-" " ") | title }}?"
-linkTitle: "{{ replace (replace .Name "what-is-" "") "-" " " | title }}"
-subsection: {{ replace (replace .Name "what-is-" "") "-" " " | title }}
-weight: 1
-topics:
-- 
+description: 
+date: "{{ now.Format "2006-01-02" }}"
+lastmod: "{{ now.Format "2006-01-02" }}"
+level1: 
+Level2: 
 tags:
-- {{ replace (replace .Name "what-is-" "") "-" " " | title }}
+- 
 # Author(s)
 team:
 -
-date: "{{ now.Format "2006-01-02" }}"
-lastmod: "{{ now.Format "2006-01-02" }}"
 ---
 
 Intro text...
