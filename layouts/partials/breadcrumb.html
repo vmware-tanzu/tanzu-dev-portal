@@ -18,7 +18,7 @@
 
 		<!-- Subtopic -->
 		{{ if (and (and (eq .Section "guides") .Params.level2) (ne .Params.toppage true) ) }}
-			{{ $subtopic := .Site.GetPage (printf "/guides/%s" (.Params.level2 | urlize)) }}
+			{{ $subtopic := .Site.GetPage (printf "/guides/%s" (replace (.Params.level2 | urlize) "/" "-")) }}
 			<li class="breadcrumb-item active" aria-current="page">
 				<a href="{{ $subtopic.RelPermalink }}">{{ $subtopic.Params.level2 }}</a>
 			</li>
