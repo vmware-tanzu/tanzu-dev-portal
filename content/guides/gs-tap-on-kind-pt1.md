@@ -21,6 +21,8 @@ level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
 
+{{% callout %}} On October 5th, VMware Tanzu Application Platform Beta 2 was released. Read the [blog post](https://tanzu.vmware.com/content/blog/vmware-tanzu-application-platform-beta-2-announcement) for more details. This post is for getting started with Beta 1. This post will be updated, but that is not yet done. {{% /callout %}}
+
 In my [previous post](/blog/getting-started-with-vmware-tanzu-application-platform-beta-1/) you were introduced to the individual parts that make up the VMware Tanzu Application Platform, and how they come together to build a powerful development platform. In this post, you will learn the install process that locally deploys this platform on [KIND](https://kind.sigs.k8s.io).
 
 There are three caveats to know about before starting the install. 
