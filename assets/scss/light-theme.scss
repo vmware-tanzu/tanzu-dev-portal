@@ -187,10 +187,13 @@ body.tv-episode #register .mktoForm select {
 .episodes .teaser {
   color: #78be20!important;
 }
-
-.workshop-box:hover .btn {
+.workshop-box .workshop-hero {
+  background-color: #BADEFF !important;
+}
+.workshop-box:hover .description .btn.btn-small {
   background: #0E2B65 !important;
 }
+
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;

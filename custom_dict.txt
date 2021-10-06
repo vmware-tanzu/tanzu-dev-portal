@@ -450,6 +450,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+distributable
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
@@ -468,6 +469,7 @@ distroless
 distros
 django-prometheus
 DLT
+DNF
 DNS
 dnsNames
 dnsutil
@@ -579,6 +581,7 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+FOSS
 foundaments
 Foxwell
 FP
@@ -781,6 +784,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+imgpkg
 [Ii]mmeasurability
 IMmUjUjBzes
 [Ii]mpactful
@@ -919,7 +923,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
-[Kk]app(-controller|.)?
+[Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kat
 [Kk]ata(s)?
@@ -969,6 +973,7 @@ KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
 [Kk]ubeapps
+KubeApps
 [kK]ubebuilder
 KubeCon
 [Kk]ubeconfig
@@ -978,6 +983,7 @@ kubectl
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
+Kubernetes-compliant
 kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
@@ -1138,7 +1144,7 @@ MyPy
 mystream
 mytopic
 NameCheap
-[Nn]amespace(.|d|-scoped|s)?
+[Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
 Nana
 [Nn]ano
@@ -1563,6 +1569,7 @@ Sharat_Chander
 sharded
 Sheasha
 Shellshock
+Shipley
 Shopen
 [Ss]howback
 Siddiq
@@ -1638,13 +1645,13 @@ StringBuilder
 struct
 STT
 Styra
+sub(p|P)ath
 subclasses
 subcommand
 subdirectory
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
-subpath
 Subramaniam
 subregistry
 substring
@@ -1670,6 +1677,7 @@ Tatooine
 TBD
 tchotchke
 TCP
+tdc-carvel-examples
 tdp-guide
 TeamRetro
 TechRepublic
@@ -1744,6 +1752,7 @@ UDP
 UI(s|-based)?
 (un)?marshalling
 unannotated
+unbundle
 uncomment
 Uncomment
 undersample
@@ -1820,6 +1829,7 @@ VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
+vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
@@ -1874,7 +1884,7 @@ Yaron
 yay
 Yonis
 youtube
-ytt
+ytt(-templatized)?
 Zalando
 ZDNet
 [Zz]ipkin
