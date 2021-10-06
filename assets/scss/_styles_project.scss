@@ -2294,7 +2294,14 @@ background: black;
       }
     }
   }
-
+.guide-icon {
+  top: .7rem;
+  left: -1.2rem;
+  
+  @media(max-width: 1560px) {
+    display: none;
+  }
+}
 .cursor-intial {
   cursor: initial;
 }
