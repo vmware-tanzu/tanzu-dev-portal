@@ -565,6 +565,7 @@ FeignClient
 FelixConfiguration
 Fewell
 fiancé
+[Ff]ibonacci
 fileshare
 [fF]ilesystem
 FileSystemXmlApplicationContext
@@ -1108,7 +1109,7 @@ MiXiT
 Mkyong
 Mockito
 MockMvc
-[Mm]ockup(s)
+[Mm]ockup(s)?
 [Mm]odelling
 [Mm]odularity
 Momcilovic
@@ -1864,6 +1865,7 @@ whiteboard(ed|ing)
 [Ww]hitepaper
 Wilcock('s)?
 Wildfly
+[Ww]ireframe(s)?
 WireMock
 Wittrock
 [wW]ordpress
