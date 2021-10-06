@@ -1,10 +1,8 @@
 ---
 name: Marco Nicosia
 description: "Product Lead"
-photo: "/images/team/marco-nicosia.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "menicosia"

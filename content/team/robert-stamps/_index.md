@@ -1,12 +1,10 @@
 ---
 name: "Robert Stamps"
 description: "Senior Cloud Architect"
-photo: "/images/external/robert-stamps.jpeg"
 roles: ["guest"]
 skills: []
 location: ""
 external: true
-weight: 1
 
 # Social Media
 twitter: ""

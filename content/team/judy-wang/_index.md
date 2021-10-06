@@ -1,10 +1,8 @@
 ---
 name: Judy Wang
 description: "Product Manager"
-photo: "/images/team/judy-wang.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: ""

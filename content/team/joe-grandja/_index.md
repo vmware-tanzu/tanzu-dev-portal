@@ -1,11 +1,9 @@
 ---
 name: Joe Grandja
 description: ""
-photo: "/images/team/joe-grandja.jpeg"
 roles: ["guest"]
 skills: [""]
 location: ""
-weight: 1
 
 # Social Media
 twitter: "joe_grandja"

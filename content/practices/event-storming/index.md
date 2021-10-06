@@ -2,7 +2,9 @@
 date: '2021-02-11'
 description: Drive out the domains, bounded contexts and services of a system to reveal
   vertical slices,  trouble spots and starting points for rearchitecting the system
-image: event-storming/example-2.jpg
+resources:
+- name: cover
+  src: images/example-2.jpg
 lastmod: '2021-03-17'
 length: 1-2 hours; multiple runs may be needed
 participants: Business stakeholders, business analysts, executives, developers, architects,
@@ -36,12 +38,12 @@ why:
 ### Sample Agenda & Prompts
 1. Explain the goal of Event Storming to the group. Project the image below if necessary. Identify a legend to include a description for events, bounded contexts, services, and pain points. Draw out a legend for all the stickies and explain basic Domain Driven Design (DDD) terms.
 
-   ![Gamestorming flow (credit: Dave Gray)](/images/practices/event-storming/step-1.png)
+   ![Gamestorming flow (credit: Dave Gray)](images/step-1.png)
 
 1. Define “domain event” for the group:
 
    {{% callout %}}
-   Example: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
+   **Example**: "A 'Domain Event' represents a state transition in the domain. It’s expressed as a verb in the past tense, such as 'Order Placed' or 'Refund Initiated'.”
    {{% /callout %}}
 
 1. Have the group "storm the business" process by writing a series of domain events on orange sticky notes, one per note.
@@ -50,7 +52,7 @@ why:
    - Focus on the happy path to begin with
    - Turn sticky notes sideways 45 degrees to indicate there are questions or a need for clarification
    
-   ![Multiple event stickies encircled in a sample bounded context](/images/practices/event-storming/example-2.jpg)
+   ![Multiple event stickies encircled in a sample bounded context](images/example-2.jpg)
 
 1. Place the domain events on the wall in time order from left to right
 
@@ -61,12 +63,12 @@ why:
    - Represent **parallel processing** using vertical space
    - Highlight anything caused by a **set time period** (like batch processes or cron jobs) in a new color sticky note and place them next to triggers they control
    
-   ![Event Storming output leading to service node input for Boris](/images/practices/event-storming/example-1.png)
+   ![Event Storming output leading to service node input for Boris](images/example-1.png)
 
 1. After all the events are posted, pair with the domain experts to post a locally ordered sequence of events and enforce a timeline. Crowdsource feedback as you go.
 
    {{% callout %}}
-   Tip: Enforcing a timeline triggers long awaited conversations and eventually STRUCTURE will emerge.
+   **Tip**: Enforcing a timeline triggers long awaited conversations and eventually STRUCTURE will emerge.
    {{% /callout %}}
 
    Crowdsourced feedback may uncover missing elements. Add more stickies as needed.
@@ -76,7 +78,7 @@ why:
    Usually you'll see a big group followed by fewer stickies then a larger group of stickies to indicate the transfer to a new bounded context. Look for vertical swim lanes of events that may indicate bounded contexts or business capabilities.
 
    {{% callout %}}
-   Tip: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
+   **Tip**: Draw boundaries and lines with arrows to show flow on the modeling surface. Use solid lines for bounded contexts. Draw lines with arrowheads to show direction of domain events flowing between bounded contexts.
    {{% /callout %}}
 
    If you want to start bounding models with less permanence use stickies to mark general areas and withhold drawing boundaries with permanent markers until your confidence justifies it.

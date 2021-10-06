@@ -1,11 +1,9 @@
 ---
 name: Kerry Schaffer
 description: "Senior IT Director (OneMagnify​)"
-photo: "/images/external/kerry-schaffer.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 external: true
 
 # Social Media

@@ -1,11 +1,9 @@
 ---
 name: Jonatan Ivanov
 description: "Software Engineer"
-photo: "/images/team/jonatan-ivanov.jpeg"
 roles: ["guest"]
 skills: ["Spring"]
 location: "Bellevue, WA"
-weight: 1
 
 # Social Media
 twitter: "@jonatan_ivanov"

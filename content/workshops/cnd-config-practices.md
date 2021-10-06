@@ -1,21 +1,21 @@
 ---
 date: '2021-04-22'
-description: You will externalize environment configuration and consume it from a
+description:
+  You will externalize environment configuration and consume it from a
   web application on a modern container orchestration platform.
 draft: false
-hero: /images/workshops/workshop-cloud-native-config.png
+logo: /images/workshops/logo-cloud-native.svg
 lab: cnd-config-practices
 lastmod: '2021-05-03'
 length: 180
-preview: /images/workshops/img-cloud-native-app-config.png
-summary: You will externalize environment configuration and consume it from a web
-  application on a modern container orchestration platform.
+summary: You will externalize environment configuration and consume it from a web application on a modern container orchestration platform.
 tags:
-- Development
-- Spring Boot
-- Kubernetes
+  - Development
+  - Spring Boot
+  - Kubernetes
 title: Configuring a Cloud Native Application
-topics: null
+weight: 9
+level1: Deploying Modern Applications
 ---
 
 This is a workshop for developers and application operators
@@ -25,13 +25,13 @@ codebase using modern orchestration platform tools.
 
 After completing the workshop, you will be able to:
 
--   Explain configuration requirements of Cloud Native applications
+- Explain configuration requirements of Cloud Native applications
 
--   Explain configuration options available to Cloud Native applications
+- Explain configuration options available to Cloud Native applications
 
--   Explain the concept of *Configuration Drift*,
-    why it can be a problem,
-    and how to avoid it.
+- Explain the concept of _Configuration Drift_,
+  why it can be a problem,
+  and how to avoid it.
 
 This workshop is the second in a series of workshops that explore
 cloud-native development and application operations practices.

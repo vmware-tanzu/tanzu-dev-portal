@@ -19,8 +19,5 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Building Docker Containers'
-topics:
-- Python
-- Containers
 youtube_id: JS_YIn49xuw
 ---

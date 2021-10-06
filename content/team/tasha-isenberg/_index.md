@@ -1,11 +1,9 @@
 ---
 name: Tasha Isenberg
 description: "Developer Advocacy Manager"
-photo: "/images/team/advocates/tasha.jpg"
 roles: ["advocate","author"]
 skills: []
 location: "Pittsburgh, PA"
-weight: 1
 
 # Social Media 
 twitter: "TashaIsenberg"

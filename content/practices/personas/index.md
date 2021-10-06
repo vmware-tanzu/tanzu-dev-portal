@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Create a provisional representation of a user based on existing knowledge
   and assumptions
-image: personas/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 45-60 min
 miro_template_url: https://miro.com/miroverse/personas
@@ -40,13 +42,13 @@ why:
 1. Divide room into small groups and give a piece of paper to each group
         
    {{% callout %}}
-   Tip: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
+   **Tip**: If the group is small, you can also do this exercise individually. For remote users, many video chat systems support "breakout rooms" or similar means to temporarily divide large groups into smaller groups for closer collaboration. 
    {{% /callout %}}
    
 1. Define “persona” for the room and remind all participants this is a provisional persona—through research, what we think we know about this person will change and evolve
 
    {{% callout %}}
-   Example: "A persona is a composite user used to create empathy on the team and allows you to understand the users well and design a product for them.”
+   **Example**: "A persona is a composite user used to create empathy on the team and allows you to understand the users well and design a product for them.”
    {{% /callout %}}
 
 1. Have each group (or person) fold paper into quadrants
@@ -66,7 +68,7 @@ why:
 1. Tape together the highest scoring quadrants into one "master persona" and reads it to the group
 
    {{% callout %}}
-   Tip: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
+   **Tip**: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
 {{% /section %}}
 
@@ -93,11 +95,11 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 {{% section %}}
 ### Real World Examples
 
-![Team member presenting a persona while everyone watches and listens](/images/practices/personas/example-1.png)
+![Team member presenting a persona while everyone watches and listens](images/example-1.png)
 
-![Example of a paper-based persona showing the four winning quadrants](/images/practices/personas/example-2.png)
+![Example of a paper-based persona showing the four winning quadrants](images/example-2.png)
 
-![Example of a paper-based persona](/images/practices/personas/example-3.png)
+![Example of a paper-based persona](images/example-3.png)
 
-![Example of a digital persona template](/images/practices/personas/example-5.jpg)
+![Example of a digital persona template](images/example-5.jpg)
 {{% /section %}}

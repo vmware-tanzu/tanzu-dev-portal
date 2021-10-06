@@ -1,10 +1,9 @@
 ---
 name: "Maria Gabriella (Gabry) Brodi"
 description: "Senior Platform Architect"
-photo: "/images/team/maria-gabriella-brodi.png"
 roles: ["guest"]
 skills: []
-weight: 1
+photo: "maria-gabriella-brodi.jpg"
 
 # Social Media
 twitter: "BrodiMg"

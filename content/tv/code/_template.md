@@ -10,9 +10,8 @@ PublishDate: "2020-04-07T00:00:00-07:00" # leave this unless you want to schedul
 Date: "2020-09-09T12:00:00-07:00" # the time the stream starts
 minutes: 120 # approx length, estimate longer
 episode: "0"
-# change all images to `static/images/tv/shows/code/name-of-guest.png` when created.
-episode_image: "/images/tv/show/code.jpg"
-episode_banner: "/images/tv/show/code.jpg"
+# change all images to `static/images/tv/shows/code/name-of-guest.jpg` when created.
+image: "/images/tv/show/code.jpg"
 # swearbear notification
 explicit: "no"
 title: "TBD"

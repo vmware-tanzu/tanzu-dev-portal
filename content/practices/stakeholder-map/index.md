@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Map out business, product, and project stakeholders that may impact or
   interact with the core team
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 45-60 min
 miro_template_url: https://miro.com/miroverse/stakeholder-map
@@ -46,11 +46,11 @@ why:
 1. Organize the sticky notes on the whiteboard before starting activity, placing the core team in the center, surrounded by clustered departments and project sponsors
 
    {{% callout %}}   
-   Note: A core team member is someone who will be working on the project full-time
+   **Note**: A core team member is someone who will be working on the project full-time
    {{% /callout %}}   
 
    {{% callout %}}   
-   Tip: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
+   **Tip**: Creating a "straw man" version of the stakeholder map makes it easier for participants to edit what they see vs. create a map from scratch
    {{% /callout %}}   
 
    Make sure people have name tags beforehand, it helps when calling on people

@@ -11,8 +11,6 @@ tags:
 team:
 - Scott Rogers
 title: 'Under the Microscope: Software Observability in a Distributed Architecture'
-topics:
-- Microservices
 weight: 1
 ---
 

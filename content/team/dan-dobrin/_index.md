@@ -1,11 +1,9 @@
 ---
 name: Dan Dobrin
 description: "Senior Platform Architect"
-photo: "/images/team/dan-dobrin.jpg"
 roles: ["author"]
 skills: ["Architecture","Microservices","Frameworks","Kubernetes","Patterns","Performance Tuning"]
 location: "Toronto, ON"
-weight: 1
 
 # Social Media 
 twitter: "ddobrin"

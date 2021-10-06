@@ -11,8 +11,6 @@ tags:
 team:
 - Jorge Morales Pou
 title: Securely Connect with Your Local Kubernetes Environment
-topics:
-- Kubernetes
 ---
 
 One of the biggest challenges I face when developing applications that will run on Kubernetes is having a local environment that I can spin up at any time—one that won’t give me any problems, won’t cost me money when left on during the weekend or at night, and that I can be confident will have all the same functionality as my cloud-based environment. That’s why I use minikube for local development, as it’s the tool that gives me the best “developer experience” possible. None of the alternatives can really compare.

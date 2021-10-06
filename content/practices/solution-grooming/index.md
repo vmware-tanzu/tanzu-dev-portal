@@ -3,7 +3,7 @@ date: '2021-02-09'
 description: A tool to understand and organize solutions so they can be prioritized
   effectively.
 draft: true
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 1-4 hours
 participants: Core Team
@@ -48,7 +48,7 @@ why:
 1. Have team members quietly add their idea sticky notes to the whiteboard and begin to cluster sticky notes into groups.
 
    {{% callout %}}
-   Tip: As groups form, write a label above each one so you can quickly spot duplicate groups.
+   **Tip**: As groups form, write a label above each one so you can quickly spot duplicate groups.
    {{% /callout %}}
    
 1. Once all sticky notes are up on the wall and in rudimentary groups, facilitator begins systematically walking through each group asking questions and  massaging the group until the team is happy. Remember to update the label accordingly!
@@ -65,7 +65,7 @@ why:
 1. Once complete, direct team members to begin transferring the labels to new large sticky notes for use in the Solution Prioritization workshop.
 
    {{% callout %}}
-   Tip: To avoid confusion and duplication of effort, it’s helpful if each person transferring a label to the sticky note puts that note on the whiteboard (over the group in question) after they’ve finished writing it.
+   **Tip**: To avoid confusion and duplication of effort, it’s helpful if each person transferring a label to the sticky note puts that note on the whiteboard (over the group in question) after they’ve finished writing it.
    {{% /callout %}}
 {{% /section %}}
 

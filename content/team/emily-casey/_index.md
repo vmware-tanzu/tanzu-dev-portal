@@ -1,11 +1,9 @@
 ---
 name: Emily Casey
 description: "Staff Software Engineer"
-photo: "/images/team/emily-casey.jpg"
 roles: ["guest"]
 skills: []
 location: "New York"
-weight: 1
 
 # Social Media
 twitter: ""

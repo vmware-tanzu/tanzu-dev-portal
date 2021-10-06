@@ -1,11 +1,9 @@
 ---
 name: Eleftheria Stein
 description: "Software Engineer"
-photo: "/images/team/eleftheria-stein.jpeg"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

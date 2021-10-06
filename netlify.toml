@@ -21,6 +21,7 @@
   framework = "#custom"
   targetPort = 1313
   autoLaunch = false
+  # jwtSecret = ""
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
@@ -65,7 +66,14 @@
 
 [[redirects]]
   from = "/developer/workshop-live"
-  to = "/developer/workshop-live"
+  to = "/developer/workshop-live/"
+  force = true
+  status = 200
+  conditions = {Role = ["user"]}
+
+[[redirects]]
+  from = "/developer/workshop-live/"
+  to = "/developer/workshop-live/"
   force = true
   status = 200
   conditions = {Role = ["user"]}
@@ -91,12 +99,6 @@
 [[redirects]]
   from = "/developer/workshop-status/*"
   to = "/.netlify/functions/workshop-status/:splat"
-  force = true
-  status = 200
-
-[[redirects]]
-  from = "/developer/workshop-status-s1/*"
-  to = "/.netlify/functions/workshop-status-s1/:splat"
   force = true
   status = 200
 

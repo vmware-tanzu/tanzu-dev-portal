@@ -1,7 +1,9 @@
 ---
 date: '2021-02-09'
 description: Create a list of assumptions and identify which are the riskiest
-image: assumptions/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-16'
 length: 30-60 min
 participants: Core team, stakeholders (optional)
@@ -33,14 +35,12 @@ why:
 ### Sample Agenda & Prompts
 1. Define "assumption" for the team and explain why the team is doing this workshop
 
-   {{% callout %}}
-   _"Assumptions are things that we believe to be true BUT which are not based on facts or evidence. Capturing them now will help us determine which questions we need to answer with research."_     
-   {{% /callout %}}
+> _"Assumptions are things that we believe to be true BUT which are not based on facts or evidence. Capturing them now will help us determine which questions we need to answer with research."_     
 
 1. Ask the team to generate assumptions for 3-5 minutes
 
    {{% callout %}}
-   Tip: If the group is large (e.g. if this is during a Kickoff), err on the side of giving less time; otherwise, you'll end up with an enormous number of sticky notes that will take a long time to sift through.
+   **Tip**: If the group is large (e.g. if this is during a Kickoff), err on the side of giving less time; otherwise, you'll end up with an enormous number of sticky notes that will take a long time to sift through.
    {{% /callout %}}
 
 1. Ask the team to make **2 equal piles** of sticky notes: one with the most important assumptions, one with the least important
@@ -50,13 +50,13 @@ why:
 1. Make a vertical line on the whiteboard marked **"Higher Risk"** at the top and **"Lower Risk"** at the bottom. If in person, use the painter's tape or dry erase markers. 
 
    {{% callout %}}
-   Tip: "Risk" is meant to indicate the negative impact to the project that an assumption could have if it turns out to be wrong.
+   **Tip**: "Risk" is meant to indicate the negative impact to the project that an assumption could have if it turns out to be wrong.
    {{% /callout %}}
    
 1. As a group, share out and stack rank each assumption along the line, with no 2 sticky notes occupying the same vertical space.
 
    {{% callout %}}
-   Tip: If duplicate ideas surface, simply stack them on top of one another or discard the extras.
+   **Tip**: If duplicate ideas surface, simply stack them on top of one another or discard the extras.
    {{% /callout %}}
    
 1. Once that is complete make a horizontal line on the whiteboard, marked **"Know A Lot"** on the left and **"Know Little"** on the right.
@@ -66,7 +66,7 @@ why:
 1. At the end of the exercise, you'll have a strong idea of which assumptions (top right quadrant) you'll need to take action on, and—if time allows—can outline specifically what actions to take and who will own them
 
    {{% callout %}}
-   Tip: If you don’t have time to address all quadrants, that's okay; begin above the horizontal axis so that you'll be sure to address the riskiest assumptions first
+   **Tip**: If you don’t have time to address all quadrants, that's okay; begin above the horizontal axis so that you'll be sure to address the riskiest assumptions first
    {{% /callout %}}
    
 1. Finally, memorialize the 2x2 in some way, such as a photo, screenshot, or saved to a shared workspace.
@@ -85,5 +85,5 @@ This exercise could go long if there are many assumptions or you're having troub
 
 {{% section %}}
 ### Real World Examples
-![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](/images/practices/assumptions/example-2.jpg)
+![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](images/example-2.jpg)
 {{% /section %}}

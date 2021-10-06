@@ -1,11 +1,9 @@
 ---
 name: Sam Foo
 description: "Software Engineer"
-photo: "/images/team/sam-foo.jpg"
 roles: ["author"]
 skills: []
 location: "Seattle, WA"
-weight: 1
 
 # Social Media 
 twitter: "GuessWhoSamFoo"

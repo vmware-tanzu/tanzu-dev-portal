@@ -1,11 +1,9 @@
 ---
 name: Hananiel Sarella
 description: "Software Engineer"
-photo: "/images/team/hananiel-sarella.jpeg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

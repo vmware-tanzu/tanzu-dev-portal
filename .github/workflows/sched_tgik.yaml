@@ -14,18 +14,14 @@ jobs:
           token: ${{ secrets.PA_TOKEN }}
       - name: Checkout TGIK Branch
         run: |
-          git checkout -B youtube-tgik
-          if git ls-remote --heads --exit-code https://github.com/vmware-tanzu/tanzu-dev-portal.git youtube-tgik;then git fetch && \
-          git branch --set-upstream-to=origin/youtube-tgik youtube-tgik && git pull; else \
-          git push --set-upstream origin youtube-tgik; fi
+          git checkout -B youtube-tgik-${{ github.run_id }}
       - uses: ./.github/actions/youtube-episodes
         name: Get Latest TGIK Episodes (creates local changes)
         env:
           API_KEY: ${{ secrets.YT_API_KEY }}
           PLAYLIST_ID: "PL7bmigfV0EqQzxcNpmcdTJ9eFRPBe-iZa"
           EPISODES_PATH: "content/tv/tgik/"
-          IMG_PATH_PREFIX: "static/"
-          IMAGES_REL_PATH: "images/tv/episodes/tgik/"
+          IMG_PATH_PREFIX: "images/"
           TEMPLATE_FILE: ".github/actions/youtube-episodes/src/template.md"
       - name: Check for modified files
         id: git-check
@@ -38,8 +34,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Add changes" -a
-          git push
-      - name: Cleanup tgik branch
-        if: steps.git-check.outputs.modified == 'false'
-        run: |
-          git push origin --delete youtube-tgik
+          git push origin youtube-tgik-${{ github.run_id }}

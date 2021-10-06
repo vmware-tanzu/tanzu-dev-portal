@@ -1,11 +1,9 @@
 ---
 name: Brian McClain
 description: "Developer Engineering"
-photo: "/images/team/brian-mcclain.jpg"
 roles: ["author"]
 skills: []
 location: "Cleveland, OH"
-weight: 1
 
 # Social Media 
 twitter: "brianmmcclain"

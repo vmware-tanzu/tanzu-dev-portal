@@ -1,11 +1,9 @@
 ---
 name: David Turanski
 description: "Staff Engineer"
-photo: "/images/team/david-turanski.jpeg"
 roles: ["guest"]
 skills: [""]
 location: "Philadelphia, PA"
-weight: 1
 
 # Social Media
 twitter: "@dturanski"

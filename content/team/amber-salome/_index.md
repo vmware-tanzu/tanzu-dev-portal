@@ -1,11 +1,9 @@
 ---
 name: Amber Salome
 description: "Senior Solutions Architect"
-photo: "/images/team/amber-salome.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

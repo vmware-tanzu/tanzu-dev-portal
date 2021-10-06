@@ -12,21 +12,61 @@ body {
     li {
       margin: 0 0 10px;
     }
+    ::-moz-selection { /* Code for Firefox */
+      color: white;
+      background: $bright-green;
+    }
+    
+    ::selection {
+      color: white;
+      background: $bright-green;
+    }
+    &.isOpen {
+      overflow-y: hidden;
+    }
   }
   nav {
     z-index: 1000 !important;
-  
-    .nav-item:last-child {
+    transition: all .3s;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+    
+    > .container {
+      max-width: 100% !important;
+    }
+
+    .navbar-logo #dev-title {
+      transition: all .3s;
+      opacity: 1;
+
+      &.fadeOut {
+        opacity: 0;
+      }
+    }
+    &.darken {
+      background-color: $gray-800;
+      box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.2);
+
+      .dropdown-item:hover {
+        background-color: $dark;
+      }
+      #scope {
+        background: $gray-800;
+      }
+      #theme-select {
+        padding: 5px;
+        background-color: $primary;
+      }
+    }
+    #theme-select {
       padding: 5px;
       background-color: #1B2A32;
-      border-radius: 5px;
+      transition: background-color .2s;
+      z-index: 100;
     }
     .nav-select {
-      background-color: white;
       height: 70%;
       width: 41%;
       position: absolute;
-      border-radius: 5px;
       top: 5px;
       z-index: 0;
       
@@ -49,7 +89,9 @@ body {
       }
     }
   }
-  
+  .transition-all {
+    transition: all .2s ease-out;
+  }
   .bg-gray-dark {
     background-color: $gray-800;
     h1,
@@ -120,6 +162,8 @@ body {
   
   .lead {
     p {
+      line-height: 1.8rem;
+      font-size: 1.25rem;
       margin-top: 0;
     }
     span {
@@ -166,6 +210,10 @@ body {
     border-bottom-color: rgb(222, 226, 230);
   }
   
+  .table tbody tr {
+    color: white;
+  }
+
   p {
     font-size: 1.0625rem;
     margin: 1rem 0;
@@ -195,16 +243,18 @@ body {
   .linked-box .link {
     color: $link;
     -webkit-font-smoothing: auto;
-    transition: color .2s;
+    transition: all .2s;
+
+    //To change the line height on Featured Learning Paths title
+    &.h3 {
+      line-height: 2rem;
+    }
   }
-  .linked-box:hover:not(.featured-link),
-  .linked-box:focus:not(.featured-link) {
-    background-color: $linkboxhover;
+  .linked-box:hover,
+  .linked-box:focus {
+    // background-color: $linkboxhover;
     .link {
       color: $link-hover-color;
-    }
-    p {
-      color: white;
     }
   }
   .bg-gray-dark p.link,
@@ -215,7 +265,7 @@ body {
   a {
     color: $link;
     -webkit-font-smoothing: auto;
-    transition: color .2s;
+    transition: all .2s;
     &:hover,
     &:focus {
       color: $link-hover-color;
@@ -373,7 +423,54 @@ body {
       color: white;
     }
   }
-  
+  .cta-btn-wrapper {
+    border: 2px solid $link;
+    box-sizing: border-box;
+    max-width: max-content;
+    
+    &:hover {
+      .arrow-box {
+        background: rgba(73, 175, 217, 1);
+        transition: all .2s ease-out;
+      }
+      .solid-rect {
+        transform: translateX(0);
+        transition: all .2s ease-out .2s;
+      }
+    }
+    .cta-btn {
+      top: 0;
+      right: 0;
+      transition: all .2s;
+      font-weight: 400;
+      color: white;
+      height: 100%;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+      z-index: 1;
+    }
+    .arrow-box {
+      height: 67px;
+      width: 67px;
+      background: rgba(73, 175, 217, .5);
+      transition: all .2s ease-out .2s;
+      z-index: 1;
+    }
+    .arrow-right {
+      width: 0; 
+      height: 0; 
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent; 
+      border-left: 5px solid white;
+    }
+    .solid-rect {
+      width: 100%;
+      height: 100%;
+      transform: translateX(100%);
+      background: rgba(73, 175, 217, .5);
+      transition: all .2s ease-out;
+    }
+  }
   .play-icon {
     background: $link;
     border-radius: 50%;
@@ -414,6 +511,9 @@ body {
   }
   footer {
     min-height: auto;
+    .col-lg-8 {
+      max-width: 800px;
+    }
     .copyright-legal-links {
       display: inline-block;
     }
@@ -619,13 +719,14 @@ body {
     height: 50px;
   }
   
-  .icon-md,
-  .td-content img.icon-md {
+  #hero .icon-md,
+  #hero .td-content img.icon-md {
     height: 66px;
   }
-  
-  .td-sidebar-nav__section-title a {
-    color: white;
+
+  .icon-md,
+  .td-content img.icon-md {
+    height: 50px;
   }
   
   .td-sidebar-nav__section-title img {
@@ -633,10 +734,16 @@ body {
     margin-right: 15px;
   }
   .guide .td-sidebar-nav__section-title a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
   }
-  
+  .guide .td-sidebar-nav__section-title .active {
+    color: $bright-green;
+  }
+  .guide table {
+    color: white;
+  }
+  .td-sidebar-nav__section-title a,
   .breadcrumb-item a,
   .td-sidebar-nav .td-sidebar-link__page,
   .td-sidebar-nav .td-sidebar-link__subsection {
@@ -659,10 +766,39 @@ body {
       top: -2px;
     }
   }
-  .topic {
+
+  .language {
+    a {
+      background: $dark;
+    }
+  }
+  .gs-tanzu {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem;
+    line-height: 1.5;
+    color: white;
+    background-color: $bright-green;
+    transition: top .2s, color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    user-select: none;
+    display: block;
+    &:hover {
+      background: $dark-green;
+      //border-color: $border;
+      color: $link-hover-color;
+    }
+  }
+
+  .learning-path-card {
+    // background: $dark;
+    margin: 0.375rem;
+    display: flex;
+    padding: 0%;
     a {
       border-radius: 0;
-      background: $gray-800;
       display: inline-block;
       font-weight: 400;
       text-align: center;
@@ -673,11 +809,6 @@ body {
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       width: 100%;
-      &:hover {
-        background: $linkboxhover;
-        border-color: $border;
-        color: $link-hover-color;
-      }
     }
     .h4 {
       font-size: 1.1rem;
@@ -686,7 +817,52 @@ body {
       margin: 0;
     }
   }
+  .learning-path-description {
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: middle;
+    user-select: none;
+    //padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+  }
+  .learning-path-duration {
+    color: $gray-500;
+    font-size: 0.8rem;
+  }
+  .learning-path-level {
+    color: $gray-500;
+    font-size: 0.8rem;
+  }
+
+  .card-type-id {
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    color: $dark;
+    padding: 2px 5px;
+    background-color: $blue;
+
+    img {
+      height: 15px;
+    }
+    .h5 {
+      font-weight: 400;
+    }
+    i {
+      font-size: .8rem;
+      margin-right: 2px !important;
+    }
+  }
   
+  .menu-split-right {
+    right: 0em;
+  }
+
   .person {
     .card {
       font-weight: 400;
@@ -700,16 +876,6 @@ body {
       z-index: 1;
       cursor: pointer;
       border: 0 !important;
-      &:hover,
-      &:focus {
-        background-color: $linkboxhover !important;  
-        .h4 a {
-          color: $link-hover-color !important;
-        }
-        p {
-          color: white !important;
-        }
-      }
     }
     a.social {
       border: 0;
@@ -853,7 +1019,7 @@ body {
   
   @media (max-width: 991px) {
     #hero.mt-7 {
-      margin-top: 3rem !important;
+      margin-top: 0 !important;
     }
   }
   
@@ -864,24 +1030,12 @@ body {
   .mt-9 {
     margin-top: 7rem !important;
   }
-  
+  .td-topic .linked-box,
+  .td-section .linked-box,
   .linked-box {
     display: block;
     height: 100%;
     transition: background-color .2s;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .h1,
-    .h2,
-    .h3,
-    .h5,
-    .h6 {
-      color: white;
-    }
   }
   
   .filters {
@@ -953,35 +1107,26 @@ body {
   }
   
   @media (min-width: 1600px) {
-    .container {
-      max-width: 1400px !important;
+    #navbar .container {
+      padding-left: 60px !important;
+      padding-right: 60px !important;
     }
-  
   }
   
   @media (min-width: 768px) {
     .container {
-      max-width: 1160px;
+      max-width: 1500px;
     }
   }
-  
   @media (max-width: 767px) {
-    #hero.mt-7 {
-      margin-top: 0 !important;
-    }
     #hero {
       background-image: none;
     }
   }
   
-  @media (min-width: 567px) {
-    .container {
-      max-width: 1160px;
-    }
-  }
-  
   .shows .teaser,
-  .episodes .countdown {
+  .episodes .countdown,
+  .workshop-row .badge {
     border-radius: 40px;
     background: $bright-green;
     font-size: 0.75em;
@@ -991,13 +1136,23 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .workshop-row .badge {
+    background: $dark;
+  }
+
+  .workshop-row .badge {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    padding: 3px 10px;
+  }
   .episodes .countdown {
     position: absolute;
     top: 2px;
     right: 10px;
     padding: 3px 15px;
   }
-  
+
   .episodes .teaser {
     margin-bottom: 0;
     color: $bright-green;
@@ -1020,6 +1175,12 @@ body {
     left: 0;
   }
   
+  body.tanzu-tv, body.tv-show, body#team-index {
+    .container {
+      max-width: 1400px;
+    }
+  }
+
   body.tv-episode {
     .fancybox-inner {
       background: $gray-800;
@@ -1048,7 +1209,9 @@ body {
       }
     }
   }
-  
+  .subtopic h2 {
+    max-width: 90%;
+  }
   #live-notify {
     display: none;
     width: 100%;
@@ -1081,17 +1244,6 @@ body {
     overflow: hidden;
   }
   
-  .hover-scale {
-    transform: scale(1);
-    transition: all 0.2s;
-    @media (min-width: 992px) {
-      &:hover,
-      &:focus {
-        transform: scale(1.04);
-      }
-    }
-  }
-  
   .hover-lift {
     position: relative;
     top: 0;
@@ -1115,41 +1267,42 @@ body {
     }
   }
 
-  .workshop-box:hover {
-    .description {
-      background-color: #45667b;
-    }
-  }
+
   .col-4-thumbnail {
     padding: 0;
     background-color: $border;
   
     img {
       width: 100%;
-      @media (min-width: 1160px) {
-        height: 200px;
-      }
-      @media (min-width: 1600px) {
-        height: 240px;
-      }
+      transform: scale(1);
+      transition: all .2s ease-out;
     }
   
     @media (min-width: 992px) {
       &:hover {
-        .video-description {
-          background-color: #45667b;
-        }
         .thumbnail-gradient {
           opacity: 0;
         }
+        img {
+          transform: scale(1.04);
+        }
+
       }
     }
   }
-  
+  #topics-section {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+
+    @media(max-width:991px) {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+  }
   .flex-315 {
     width: 100%;
     @media (min-width: 992px) {
-      flex: 0 0 31.5%;
+      flex: 0 0 30.5%;
     }
   }
   .thumbnail-gradient {
@@ -1160,8 +1313,10 @@ body {
       rgba(0, 0, 0, 1) 0%,
       rgba(255, 255, 255, 0) 100%
     );
-    opacity: 30%;
-    transition: opacity 0.25s;
+    opacity: 20%;
+    transition: opacity 0.5s;
+    top: 0;
+    z-index: 1;
   }
   .video-description {
     background-color: $border;
@@ -1177,27 +1332,41 @@ body {
       height: auto;
     }
   }
-  
-  //Workshops
+  @media(max-width:1540px) and (min-width: 1420px) {
+    .workshops-hero,
+    .workshops-hero + .td-content {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+  #workshops-index {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .workshop-box {
-    height: 400px;
+    background-color: #22343c;
+
     .workshop-hero {
+      background-color: $primary;
       height: 170px;
       width: 100%;
+
+      img {
+        transition: all .2s ease-out;
+        height: 80px;
+      }
     }
     .description {
       transition: all .2s;
-      background-color: $border;
-      height: 230px;
+      height: calc(100% - 170px);
     }
-  }
-  
-  @media (min-width: 992px) {
-    .workshop-description {
-      width: 35.5%;
-    }
-    .workshop-preview {
-      width: 58%;
+    &:hover {
+      .description .btn {
+        background: $link-hover-color !important;
+      }
+      .thumbnail-gradient {
+        opacity: 0;
+      }
     }
   }
   
@@ -1216,6 +1385,10 @@ body {
   
   a i.fa, a i.fas {
     margin-right: 5px;
+
+    &.fa-moon {
+      transform: translateX(-2px);
+    }
   }
   
   .opacity-4 {
@@ -1227,23 +1400,20 @@ body {
   }
   
   body .workshops-hero {
-    background-color: transparent !important;
-    padding-bottom: 0px !important;
-    min-height: auto !important;
+    background-color: $primary;
+    padding: 50px 0 !important;
+    min-height: 200px !important;
   }
-  body .outcomes-hero + .td-content {
+  body .learningpaths-hero + .td-content {
     margin-top: 2rem;
   }
-  body .outcomes-intro {
+  body .learningpaths-intro {
     max-width: 920px;
   }
-  body .outcomes-hero,
+  body .learningpaths-hero,
   body .workshops-hero {
     .lead {
       max-width: 920px;
-      @media (min-width: 992px) {
-        max-width: 620px;
-      }
     }
   }
   
@@ -1580,7 +1750,7 @@ body {
   /* Text .chroma . {  } */
   /* TextWhitespace .chroma .w {  } */
   
-  .outcomes {
+  .learningpaths {
     h2,
     a {
       padding-top: 0;
@@ -1600,8 +1770,8 @@ body {
   //   z-index: 1000;
   // }
   
-  .outcomes-pager,
-  .outcomes-pager-sticky {  
+  .learningpaths-pager,
+  .learningpaths-pager-sticky {  
     a {
       border: 1px solid #485764 !important;
       border-radius: 4px;
@@ -1621,16 +1791,16 @@ body {
     }
     
   }
-  .td-page .col-12 .outcomes-pager {
+  .td-page .col-12 .learningpaths-pager {
     @media(min-width: 1600px) {
       display: none !important;
     }
   }
   
-  .series .outcomes > .outcomes-pager {
+  .series .learningpaths > .learningpaths-pager {
     display: none !important;
   }
-  .td-page .outcomes > .outcomes-pager {
+  .td-page .learningpaths > .learningpaths-pager {
     display: none !important;
     z-index: 1;
     bottom: -1%;
@@ -1659,7 +1829,7 @@ body {
       display: flex !important;  
     }
   }
-  .outcomes-index {
+  .learningpaths-index {
     a {
       color: white;
     }
@@ -1990,10 +2160,43 @@ background: black;
     background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
   }
 }
-
-
-
-
+@media(min-width: 992px) {
+  //Highlighting hover effect on boxes
+  #team-index .row > .person,
+  .advocates .item,
+  .learningpaths-index .linked-box,
+  .topics-row .topic-card,
+  .row > .subtopic,
+  #topics-row-outer > .row
+  .learningpaths-index,
+  .topics-row,
+  .row,
+  .row > .flex-315,
+  #topics-row-outer {
+    transition: all .2s ease-out;
+    opacity: 1;
+  }
+  #team-index .row:hover > .person,
+  .advocates:hover .item,
+  .episodes:hover .col-lg-4,
+  .row:hover:not(.workshop-row) > .flex-315,
+  .learningpaths-index:hover .linked-box,
+  .topics-row:hover .topic-card,
+  .row:hover > .subtopic,
+  #topics-row-outer:hover > .row {
+    opacity: .5;
+  }
+  #team-index .row > .person:hover,
+  .advocates .item:hover,
+  .episodes .col-lg-4:hover,
+  .row > .flex-315:hover,
+  .learningpaths-index .linked-box:hover,
+  .row > .subtopic:hover,
+  .topics-row .topic-card:hover,
+  #topics-row-outer > .row:hover {
+    opacity: 1 !important;
+  }
+}
 /*** PRACTICES ***/
 
 .practices {
@@ -2091,3 +2294,33 @@ background: black;
       }
     }
   }
+.guide-icon {
+  top: .7rem;
+  left: -1.2rem;
+  
+  @media(max-width: 1560px) {
+    display: none;
+  }
+}
+.cursor-intial {
+  cursor: initial;
+}
+#rss {
+  color: $link;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+@media(max-width:1420px) and (min-width: 992px) {
+  main section:not(#featured-paths), 
+  .td-main section:not(#featured-paths),
+  .section-index,
+  .td-content:not(.topic-hero-content),
+  .tanzu-tv .td-main > .container > p,
+  .td-guides .td-main > .row > main,
+  footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

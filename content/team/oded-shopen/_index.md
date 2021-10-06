@@ -1,11 +1,9 @@
 ---
 name: Oded Shopen
 description: "Lead Specialist Solution Engineer"
-photo: "/images/team/oded-shopen.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "odedia"

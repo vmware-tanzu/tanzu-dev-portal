@@ -11,8 +11,5 @@ tags:
 - Spring
 - Reactive
 title: 'Spring Live: Reactive-O-Rama'
-topics:
-- Spring
-- Reactive
 youtube_id: F-EdDnjF6ao
 ---

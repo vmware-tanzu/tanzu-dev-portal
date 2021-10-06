@@ -1,3 +1,4 @@
+footer.bg-dark,
 .td-outer,
 body {
    background-color: white !important;
@@ -5,6 +6,10 @@ body {
 }
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
+}
+nav .nav-arrow {
+  border: solid #61717d !important;
+  border-width: 0 1px 1px 0 !important;
 }
 @media (max-width: 991.98px) {
  body .td-navbar .td-navbar-nav-hamburger .dropdown-toggle::after {
@@ -23,7 +28,13 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+.td-home .darken .dropdown-item:hover,
+nav .dropdown-item:hover,
+#hero:not(.workshops-hero),
+.topic-card,
 .col-4-thumbnail,
+.workshop-box,
+.workshop-box .description,
 .video-description,
 .outcomes-index .td-box--gray-850,
 body .bg-primary,
@@ -34,6 +45,7 @@ pre,
 p code, li > code, table code,
 body .bg-gray-dark, body .td-box--gray-darkest, body .td-box--gray-dark {
    background-color: #f4f8fa !important;
+   transition: all .2s;
 }
 body .bg-gray-dark.border {
   border: none !important;
@@ -58,6 +70,7 @@ p code, li > code, table code,
  body .td-sidebar-nav a.active, body h1, body h2, body h3, body h4, body h5, body h6, body .h1, body .h2, body .h3, body .h4:not(a), body .h5, body .h6, body .linked-box h1, body .linked-box h2, body .linked-box h3, body .linked-box h4, body .linked-box h5, body .linked-box h6, body .linked-box .h1, body .linked-box .h2, body .linked-box .h3, body .linked-box .h4, body .linked-box .h5, body .linked-box .h6, body .td-box--gray-darkest, body .td-box--gray-dark, body .navbar-dark .navbar-nav .nav-link, body p, body li, td, th {
    color: #28333c !important;
 }
+#search-results-info,
 body p {
   color: #61717d !important;
 }
@@ -84,14 +97,7 @@ body p {
    color: #1d428a !important;
   }
 }
-#team-index .card:hover,
-#team-index .card:focus,
-.topic.col-lg-4 a:focus,
-.topic.col-lg-4 a:hover,
-.workshop-box:hover .description,
-.col-4-thumbnail:hover .video-description {
-  background-color: #D9E4EA !important;
-}
+
 footer li.list-inline-item .text-white {
   color: #798893 !important;
 }
@@ -115,6 +121,16 @@ body p.link {
 .featured-section .featured-link:hover .link,
 .featured-section .featured-link:focus .link{
   color: #0E2B65 !important;
+}
+.workshop-box .cta-btn-wrapper .cta-btn {
+color: #49afd9 !important;
+}
+.workshop-box:hover .cta-btn,
+.cta-btn-wrapper:hover .cta-btn {
+  color: white !important;
+}
+.cta-btn-wrapper .cta-btn {
+  color: rgb(97, 113, 125) !important;
 }
 #live-notify,
 body a.btn {
@@ -171,6 +187,12 @@ body.tv-episode #register .mktoForm select {
 .episodes .teaser {
   color: #78be20!important;
 }
+.workshop-box .workshop-hero {
+  background-color: #BADEFF !important;
+}
+.workshop-box:hover .description .btn.btn-small {
+  background: #0E2B65 !important;
+}
 
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
@@ -209,9 +231,29 @@ body.tv-episode #register .mktoForm select {
    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
   }
 }
-nav .nav-item:last-child {
-  background-color: #ADBBC4 !important;
 
+.td-home .darken #dropdown-menus #scope {
+  background-color: white !important;
+}
+#navbar,
+.td-home footer.py-5,
+.td-home nav#navbar.darken {
+  box-shadow: none !important;
+  background-color: white !important;
+}
+nav #theme-select {
+  background-color: #ADBBC4 !important;
+  
+  .fa-sun {
+    color: #1B2A32 !important;
+  }
+  #dark-select {
+    background-color: transparent !important;
+  }
+  #theme-square {
+    transform: translateX(32px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
   .nav-select {
     transition: opacity .2s;
     &:nth-child(1) {
@@ -225,6 +267,7 @@ nav .nav-item:last-child {
     }
   }
 }
+#featured-paths,
 #live-notify .btn {
   background-color: white !important;
 }
@@ -234,7 +277,7 @@ nav .nav-item:last-child {
 #menu-toggle .menu-bar {
    background: #61717d !important;
 }
-
+#scope,
 #search-nav {
   background: white !important;
 }
@@ -313,14 +356,37 @@ div.aside div.aside-content {
   height: 12px;
 }
 
-.linked-box:hover:not(.workshop-box):not(.featured-link), 
-.linked-box:focus:not(.workshop-box):not(.featured-link),
-.card:hover {
+#hero .subtopic > .linked-box {
   background-color: #D9E4EA !important;
-  h4:not(.workshop-title), h5:not(.fs-80), .link, .h4 > a {
-    color: #0E2B65 !important;
+}
+.card-type-id {
+  background: #D9E4EA !important;
+}
+
+#featured-paths .row .learning-path-card {
+  .learning-path-description {
+    color: black !important;
+  }
+  &:nth-child(1) {
+    background: #f4f8fa;
+  }
+  &:nth-child(2) {
+    background: #f0f4f7;
+
+  }
+  &:nth-child(3) {
+    background: #e9edf0;
+
+  }
+  &:nth-child(4) {
+    background: #e6ebee;
+
+  }
+  &:nth-child(5) {
+    background: #e2eaee;
   }
 }
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }

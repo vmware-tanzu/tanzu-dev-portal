@@ -1,11 +1,9 @@
 ---
 name: Cora Iberkleid
 description: "Developer Advocate"
-photo: "/images/team/advocates/cora.jpg"
 roles: ["advocate"]
 skills: ["Spring", "Kubernetes", "Architecture", "Microservices"]
 location: "New York, NY"
-weight: 1
 
 # Social Media
 twitter: "ciberkleid"

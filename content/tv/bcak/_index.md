@@ -4,7 +4,7 @@ type: "tv-show"
 streaming: "twitch"
 #noPast: true
 id: "bcak"
-image: "/images/tv/shows/bcak.jpg"
+image: "bcak.jpg"
 og_image: "/images/og/TanzuTV-ChairKeyboard.png"
 weight: 4
 menu:

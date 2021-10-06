@@ -1,11 +1,9 @@
 ---
 name: Jorge Morales Pou
 description: "Developer Experience Engineer"
-photo: "/images/team/jorge-morales-pou.jpg"
 roles: ["author"]
 skills: []
 location: "Madrid, Spain"
-weight: 1
 
 # Social Media 
 twitter: "jorgemoralespou"

@@ -2,7 +2,7 @@
 date: '2021-02-09'
 description: Understand the problem from different team perspectives and generate
   many solution sketches using scenario as a guide
-image: default-cover.png
+
 lastmod: '2021-03-17'
 length: 60-90 min
 participants: Core team, subject matter experts (SMEs)
@@ -48,42 +48,42 @@ why:
 1. Instruct everyone to fold sheets of paper into 4, 6, or 8 sections, or make similar sections on your digital collaboration tool. The goal is to create lots of small ideas instead of detailed solutions.
 
    {{% callout %}}
-   Tip: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
+   **Tip**: If participants are uncomfortable with sketching, take 10 minutes to do drawing warm up exercises (basic shapes, expressions, stick figures, simple wire frame notations for pictures, text, and boxes).
    {{% /callout %}}
    
-   ![Design Studio Step 1](/images/practices/design-studio/ds-1.png)
+   ![Design Studio Step 1](images/ds-1.png)
 
 1. Next, set a timer for 5-10 minutes and have each person generate as many ideas as possible using the following prompt:
 
    _“How might we design an experience that addresses [the problem]? Use the sheets of paper to come up with as many ideas as possible and don’t over think how you draw it out.”_
 
    {{% callout %}}
-   Tip: It’s important not to not think of the paper as a computer or mobile screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
+   **Tip**: It’s important not to not think of the paper as a computer or mobile screen, and to not get too caught up in details. We are looking for lots of ideas of high-level concepts.
    {{% /callout %}}
    
 1. After time is up, ask each person to share their explorations (1-2 minutes per person). Encourage the team to write down questions or feedback on sticky notes and attach them to the sheet. Make sure everyone gets a turn to share.
 
-   ![Design Studio Example](/images/practices/design-studio/ds-example-1.png)
+   ![Design Studio Example](images/ds-example-1.png)
  
 1. After the share out, do a second round of idea generation. This time, instead of starting from scratch, build on the ideas you discussed and push the ideas further.
 
-   ![Design Studio Round 2](/images/practices/design-studio/ds-2.png)
+   ![Design Studio Round 2](images/ds-2.png)
  
 1. Have each person share out again (1-2 minutes per person).
 
-   ![Design Studio Example](/images/practices/design-studio/ds-example-4.png)
+   ![Design Studio Example](images/ds-example-4.png)
  
 1. Tape or add all designs to the whiteboard, spaced adequately to allow for silent review.
  
 1. Give each participant an appropriate number of dots (e.g. if there are 8 participants, give 5 dots; fewer/more if there are fewer/more participants; the goal is to make people think critically about their votes), set the timer for 5-7 minutes, and ask them to dot the sketch **elements** (i.e. not the entire sketch) that they think could be the most successful if implemented.
 
-   ![Design Studio Dot Vote](/images/practices/design-studio/ds-3.png)
+   ![Design Studio Dot Vote](images/ds-3.png)
  
 1. Once complete, look for clusters of dots and discuss the largest. Ask the group to elaborate on **why** they dotted what they did and catalog the rationale behind each on the whiteboard, piece of paper, or in the digital workspace.
 
-   ![Design Studio Discussion](/images/practices/design-studio/ds-4.png)
+   ![Design Studio Discussion](images/ds-4.png)
    
-   ![Design Studio Example](/images/practices/design-studio/ds-example-2.png)
+   ![Design Studio Example](images/ds-example-2.png)
 {{% /section %}}
 
 {{% section %}}
@@ -132,9 +132,9 @@ While many on-line collaboration solutions have drawing features, we suggest kee
 
 {{% section %}}
 ## Real World Examples
-![Design Studio Example](/images/practices/design-studio/ds-example-3.png)
+![Design Studio Example](images/ds-example-3.png)
 
-![Design Studio Example](/images/practices/design-studio/ds-example-5.png)
+![Design Studio Example](images/ds-example-5.png)
 
-![Design Studio Example](/images/practices/design-studio/ds-example-6.png)
+![Design Studio Example](images/ds-example-6.png)
 {{% /section %}}

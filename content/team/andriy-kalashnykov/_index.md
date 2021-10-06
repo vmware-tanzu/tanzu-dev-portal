@@ -1,11 +1,9 @@
 ---
 name: Andriy Kalashnykov
 description: "Staff Engineer"
-photo: "/images/team/andriy-kalashnykov.jpg"
 roles: ["author"]
 skills: ["Kubernetes", "Docker", "CI/CD", "DevOps","Architecture","Microservices","Frameworks","Spring Boot","Containerization"]
 location: "Miami, FL"
-weight: 1
 
 # Social Media 
 twitter: "AKalashnykov"

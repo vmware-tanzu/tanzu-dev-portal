@@ -1,11 +1,9 @@
 ---
 name: Rich Lander
 description: "Staff Platform Field Engineer"
-photo: "/images/team/rich-lander.jpg"
 roles: ["author"]
 skills: []
 location: "Tampa, Florida"
-weight: 1
 
 # Social Media 
 twitter: ""

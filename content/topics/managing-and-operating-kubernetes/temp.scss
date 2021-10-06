@@ -1,0 +1,26 @@
+@media (min-width: 1600px) {
+  #navbar .container,
+  footer .container {
+    // max-width: 1400px !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+}
+.learning-path-duration {
+  color: $gray-500;
+  font-size: 0.8rem;
+}
+.learning-path-level {
+  color: $gray-500;
+  font-size: 0.8rem;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: $bright-green;
+}
+
+::selection {
+  color: white;
+  background: $bright-green;
+}

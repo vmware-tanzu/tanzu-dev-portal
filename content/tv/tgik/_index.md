@@ -4,7 +4,7 @@ type: "tv-show"
 streaming: "youtube"
 channel: https://www.youtube.com/channel/UCdkGV51Nu0unDNT58bHt9bg
 id: "tgik"
-image: "/images/tv/shows/tgik.png"
+image: "tgik.png"
 og_image: "/images/og/TanzuTV-TGIK.png"
 weight: 3
 menu:

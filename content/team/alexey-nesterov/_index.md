@@ -1,11 +1,9 @@
 ---
 name: Alexey Nesterov
 description: "Software Engineer"
-photo: "/images/team/alexey-nesterov.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

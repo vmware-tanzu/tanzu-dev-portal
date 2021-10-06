@@ -59,6 +59,7 @@ Aletty
 Alexa
 Alexey
 Alibaba
+allenholub
 [Aa]llocatable
 Alpine(-based)?
 Amaro
@@ -140,6 +141,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
+backpressure
 Baeldung('s)?
 Bagher
 Bahhh
@@ -177,7 +179,9 @@ biome
 Biville
 BKPR
 BlackBox
+blazingly
 Blazor
+[Bb]lockchain
 BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
@@ -201,6 +205,7 @@ BucketRegion
 BucketRegion's
 BucketRegionDetails
 BucketRegions
+Buesing
 Bugsville
 buildout
 BuildPack
@@ -231,6 +236,7 @@ calicoctl
 callout
 Campuzano
 Cao
+Capili
 Carducci
 Carvel('s)?
 cass-operator
@@ -387,7 +393,7 @@ dastergon
 [Dd]ata(set|store)
 datacenter(s|'s)?
 Datadog
-Dataflow
+Dataflow(s)?
 datagram
 DataJpaTest
 datapath
@@ -421,6 +427,7 @@ deliverAgile
 deliverToAsyncEventQueue
 DellEMC
 deployable
+[Dd]eployable
 deserialize
 deserializes
 deserializing
@@ -447,6 +454,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+distributable
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
@@ -464,9 +472,12 @@ DistributionStats
 distroless
 distros
 django-prometheus
+DLT
+DNF
 DNS
 dnsNames
 dnsutil
+Dobb's
 Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
@@ -529,6 +540,7 @@ env
 EOF
 ESB
 etcd(ctl)?
+Ethereum
 [Ee]thernet(s)?
 ETL
 EventID
@@ -543,6 +555,7 @@ expensed
 expirations
 ExploreDDD
 [Ee]xternal-(dns|DNS)
+[Ee]xternality
 extraDeploy
 F5
 facto
@@ -573,6 +586,7 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+FOSS
 foundaments
 Foxwell
 FP
@@ -744,6 +758,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Holub
 Homebrew
 homogenous
 horizontally-scalable
@@ -774,10 +789,12 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+imgpkg
 [Ii]mmeasurability
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+[Ii]ncentivized
 [Ii]ncompressible
 InfoQ
 InfoSec
@@ -841,6 +858,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+JavaWorld
 JAX-RS
 JBaruch
 JBatch
@@ -910,7 +928,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
-[Kk]app(-controller|.)?
+[Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kat
 [Kk]ata(s)?
@@ -960,6 +978,7 @@ KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
 [Kk]ubeapps
+KubeApps
 [kK]ubebuilder
 KubeCon
 [Kk]ubeconfig
@@ -969,6 +988,7 @@ kubectl
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
+Kubernetes-compliant
 kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
@@ -1130,7 +1150,7 @@ MyPy
 mystream
 mytopic
 NameCheap
-[Nn]amespace(.|d|-scoped|s)?
+[Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
 Nana
 [Nn]ano
@@ -1148,6 +1168,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 NFJ?S
+NFT
 [Nn]ginx|NGINX
 NIC
 Nicoll
@@ -1163,6 +1184,7 @@ non-JVM
 non-Kubernetes
 non-routable
 non-schedulable
+nonblocking
 NoSQL
 NotificationListener
 npm
@@ -1223,12 +1245,14 @@ OSS
 Osterling
 OTT
 [oO]vercommit(ted|ting)?
+[oO]vercommitment
 overcomplicate
 overconsumption
 overengineer(ing)?
 [oO]verprovisioner('s)?
 [oO]verprovisioning
 oversample
+[oO]versized
 OWASP
 Özlü
 P2P
@@ -1337,9 +1361,11 @@ precompiled
 preconfigured
 [Pp]reemptionPolicy
 PreemptLowerPriority
+[Pp]refactoring
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepend
 prepending
 Presales
 preStop
@@ -1348,6 +1374,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+production-deployable
 ProductPlan
 Programadoras
 programmatically
@@ -1361,7 +1388,7 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
-PubSub
+PubSub(bing)?
 Pulkit
 pullPolicy
 pushable
@@ -1396,6 +1423,7 @@ realtime
 rearchitect(ing)
 rebalance
 [Rr]ebase
+rebase(d)
 rebasing
 Recommender
 [Rr]eddit
@@ -1418,6 +1446,7 @@ RegionStats-partition-Trades
 reimagine
 Reinertsen
 reissuance
+[Rr]emediation(s)?
 removeAll
 removeIf
 RemoveUnusedPdxTypesFunction
@@ -1441,9 +1470,11 @@ ResourcePermission
 ResourceQuota(s)?
 restaging
 RestAssured
+Restic
 RestrictedMethodAuthorizer
 Retrium
 revertibility
+rewatch
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1475,6 +1506,7 @@ Ruckle
 Rudd
 Rumans
 runnable
+Runtimes
 runtimes?
 Rushton
 [sS]3
@@ -1544,6 +1576,7 @@ Sharat_Chander
 sharded
 Sheasha
 Shellshock
+Shipley
 Shopen
 [Ss]howback
 Siddiq
@@ -1579,6 +1612,7 @@ SPIFFE
 Splunk
 Spock
 spoilt
+Spring-Cloud-Dataflow
 spring-petclinic
 springboot
 SpringBootTest
@@ -1618,13 +1652,13 @@ StringBuilder
 struct
 STT
 Styra
+sub(p|P)ath
 subclasses
 subcommand
 subdirectory
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
-subpath
 Subramaniam
 subregistry
 substring
@@ -1640,6 +1674,7 @@ symposia
 Sysdig
 SystemAdmin
 Szul
+tabpane
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1649,6 +1684,7 @@ Tatooine
 TBD
 tchotchke
 TCP
+tdc-carvel-examples
 tdp-guide
 TeamRetro
 TechRepublic
@@ -1657,7 +1693,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing|ing.|ize)
+[Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
 Teppanyaki
@@ -1692,7 +1728,8 @@ toolchain
 toolkits
 [Tt]oolset
 tooltip
-topologies
+[Tt]opolog(y|ies)?
+Torgerson
 toString
 totalProcessingTime
 totalQueueTime
@@ -1722,6 +1759,7 @@ UDP
 UI(s|-based)?
 (un)?marshalling
 unannotated
+unbundle
 uncomment
 Uncomment
 undersample
@@ -1799,6 +1837,7 @@ VisualVM
 VMCachedDeserializable
 VMs?
 VMSS
+vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
@@ -1853,7 +1892,7 @@ Yaron
 yay
 Yonis
 youtube
-ytt
+ytt(-templatized)?
 Zalando
 ZDNet
 [Zz]ipkin

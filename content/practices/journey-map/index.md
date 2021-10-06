@@ -2,7 +2,9 @@
 date: '2021-02-09'
 description: Using customer narratives and data, “map” what they are doing, thinking,
   feeling and interacting with over a set period of time.
-image: journey-map/cover.png
+resources:
+- name: cover
+  src: images/cover.png
 lastmod: '2021-03-17'
 length: 1 hour
 participants: Core team, subject matter experts
@@ -37,24 +39,24 @@ why:
 1. Map alone, together (10 minutes)
    - Have each person create a user journey in front of them, separating each step into individual sticky notes. This looks like a horizontal timeline of no-more-than 10 sticky notes
 
-   ![Individual user journey](/images/practices/journey-map/Step-1.png)
+   ![Individual user journey](images/Step-1.png)
 
 1. Share individual journeys with the team (10 minutes)
    - One at a time, each person sticks their timeline on the whiteboard. Each timeline should stack beneath the last so all are aligned from the first step onward
 
-   ![All user journeys](/images/practices/journey-map/Step-2.png)
+   ![All user journeys](images/Step-2.png)
 
 1. Dot voting (10 minutes)
    - Have everyone review each others journey and ask any clarifying questions. After questions, everyone is given dot stickers to vote on steps they think are interesting or important
 
-   ![All user journeys dot voted](/images/practices/journey-map/Step-3.png)
+   ![All user journeys dot voted](images/Step-3.png)
 
 1. Consolidate into one big story (10 minutes)
    - Throw out all sticky notes without dots
    - Combine duplicate stickies and rearranges the stacked timelines into one large timeline
    - Draw arrows between stickies and mark the amount of time between steps, if possible. If there are multiple “routes”, you can split the timeline up vertically
 
-   ![Consolidated user journeys](/images/practices/journey-map/Step-4.png)
+   ![Consolidated user journeys](images/Step-4.png)
 
 1. Mark customers emotions and pain points (10 minutes)
    - As a group, read through the finished timeline and mark points in time that the persona experiences a “pain point” (use a different color marker for this on the whiteboard or on sticky notes)
@@ -92,7 +94,7 @@ At the end of a Journey Map the team will have a shared holistic view of a Perso
 {{% section %}}
 ### Real World Examples
 
-![Journey map on a whiteboard example](/images/practices/journey-map/example-1.jpg)
+![Journey map on a whiteboard example](images/example-1.jpg)
 {{% /section %}}
 
 {{% section %}}

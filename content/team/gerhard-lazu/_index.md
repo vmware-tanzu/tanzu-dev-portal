@@ -1,11 +1,9 @@
 ---
 name: Gerhard Lazu
 description: "Staff Engineer"
-photo: "/images/team/gerhard-lazu.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: "gerhardlazu"
