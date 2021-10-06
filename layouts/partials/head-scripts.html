@@ -72,31 +72,6 @@ Sentry.init({
   }
 });
 // localStorage.clear();
-var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
-changeTheme(savedTheme, true);
-function changeTheme(mode, firstLoad) {
-  sendAmplitudeUserProps({"latest saved theme": mode}); 
-  if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
-  if (mode === "light") {
-    var iframe = document.getElementById('auth-iframe');
-    var head = document.head;
-    var link = document.createElement("link");
-
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = "{{ printf "%s" "/css/light-theme.css" | relURL }}";
-    link.id = "light-theme"
-
-    head.prepend(link);
-    if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.postMessage('light', '*');
-    }
-    document.documentElement.classList.add('light-mode')
-  } 
-  if (mode === "dark") {
-    localStorage.clear();
-  }
-}
 
 var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
