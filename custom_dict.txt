@@ -141,6 +141,7 @@ aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 Baeldung('s)?
+Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
@@ -158,6 +159,7 @@ Beda('s)?
 beforeEnqueue
 beforeTransmit
 behavioural
+Behrooz
 Belamaric
 benbravo73
 benchmark(ing)?
@@ -1736,6 +1738,7 @@ UnrestrictedMethodAuthorizer
 unschedulable
 unshared
 Unshared
+Unsplash
 [Uu]nstaged
 untar
 untrusted
