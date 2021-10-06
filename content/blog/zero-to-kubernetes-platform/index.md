@@ -11,9 +11,9 @@ team:
 - Rich Lander
 ---
 
-![Photo by Mohammad Bagher Adib Behrooz on Unsplash](images/mohammad-bagher-adib-behrooz-XHI-S_xWK28-unsplash.jpg "There are a lot of steps to building a Kubernetes platfrom.")
-
 Are you thinking about building an application platform with Kubernetes?  If so, this article is for you.  It discusses the major platform elements that you should consider. To some degree, every use case is different. You likely have your own edge cases and unique requirements, but by the time you solve the necessary items in this article, you will be familiar enough with the topic to get the job done.
+
+![Photo by Mohammad Bagher Adib Behrooz on Unsplash](images/mohammad-bagher-adib-behrooz-XHI-S_xWK28-unsplash.jpg "There are a lot of steps to building a Kubernetes platfrom.")
 
 The first thing to recognize is that Kubernetes is a container orchestrator. Scheduling and running containerized workloads across clusters of machines is a complex concern. Kubernetes uses sophisticated systems to achieve these ends but it’s purpose is fairly narrow. Kubernetes provides interfaces for container networking, persistent storage and container runtime, but it does not solve them directly, or provide enterprise-grade authentication for it's API.  Instead, Kubernetes allows you to configure a webhook to implement this functionality. It does not provide comprehensive tenancy, observability, service routing or policy control systems. Platform services must be installed to provide these.
 
