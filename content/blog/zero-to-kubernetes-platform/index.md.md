@@ -1,15 +1,17 @@
 ---
 title: "Zero to Kubernetes Platform"
 description: An introduction to the primary concerns organizations should consider when building a Kubernetes application platform.
-date: "2021-09-15"
-topics:
-- Kubernetes
+date: "2021-10-06"
+level1: Building a Kubernetes Runtime
+level2: Building Your Kubernetes Platform
 tags:
 - Kubernetes
 # Author(s)
 team:
 - Rich Lander
 ---
+
+![Photo by Mohammad Bagher Adib Behrooz on Unsplash](images/mohammad-bagher-adib-behrooz-XHI-S_xWK28-unsplash.jpg "There are a lot of steps to building a Kubernetes platfrom.")
 
 Are you thinking about building an application platform with Kubernetes?  If so, this article is for you.  It discusses the major platform elements that you should consider. To some degree, every use case is different. You will likely have your own edge cases and unique requirements, but by the time you solve for the necessary items in this article, you will be familiar enough with the topic to get the job done.
 
@@ -25,11 +27,11 @@ By the end of this article, you will have a sense of the engineering cost you ca
 
 Next, think about how you're going to deploy Kubernetes. Broadly speaking, there are three options to tackle deployment.
 
-Option 1: A managed service from a cloud provider, such as Amazon EKS, Azure AKS or Google GKE. This method requires the least platform engineering effort, but also has the least flexibility and customizability.
+* **Option 1**: A managed service from a cloud provider, such as Amazon EKS, Azure AKS or Google GKE. This method requires the least platform engineering effort, but also has the least flexibility and customizability.
 
-Option 2: A Kubernetes distribution, such as VMware Tanzu, Red Hat OpenShift, Rancher RKE or other open source, community-supported equivalent. This method provides a balance between engineering cost and flexibility, but also either comes with the dollar cost of enterprise support or the engineering cost of in-house support.
+* **Option 2****: A Kubernetes distribution, such as VMware Tanzu, Red Hat OpenShift, Rancher RKE or other open source, community-supported equivalent. This method provides a balance between engineering cost and flexibility, but also either comes with the dollar cost of enterprise support or the engineering cost of in-house support.
 
-Option 3: A custom-built Kubernetes platform. This method requires the most engineering effort but also provides complete flexibility and customizability. This option should only be tackled by teams with deep experience and unique requirements.
+* **Option 3**: A custom-built Kubernetes platform. This method requires the most engineering effort but also provides complete flexibility and customizability. This option should only be tackled by teams with deep experience and unique requirements.
 
 The correct answer for your organization depends on your budget, the expertise and size of the team you can devote to platform engineering, and the requirements your tenant applications and teams have for the platform.
 
@@ -45,17 +47,17 @@ You can skip this section if your initial release  does not host stateful worklo
 
 If persistent storage is a requirement, you must first identify a storage provider. If you are using a cloud provider, you can use Amazon EBS or Azure Disk Storage, for example. Where applicable, you may use an on-prem solution like NetApp or VMware vSAN, or your own storage appliances managed by an open source project like Ceph. Whatever the case, your storage vendor or system must offer a Container Storage Interface (CSI) implementation that allows the storage to be exposed to containerized workloads in your Kubernetes clusters. These CSI implementations will be workloads that run in your cluster, watch for storage requests and satisfy them with integrations into the underlying storage systems. Each of the examples mentioned here have CSI implementations but there are many others that you can find in the [CNCF storage landscape](https://landscape.cncf.io/card-mode?category=cloud-native-storage&grouping=category).
 
-![Storage Integration](images/blogs/zero-to-kubernetes-platform/storage-integration.jpg)
+![Storage Integration](images/storage-integration.jpg)
 
 ### Service Routing
 
 It is very likely your platform will host workloads that receive requests coming into your Kubernetes clusters from external clients. There are ways to solve this without using an ingress layer. For example, you can use a Kubernetes Service of type `LoadBalancer` if you have an infrastructure provider that will dynamically spin up a load balancer such as an ELB in AWS. However, if you do this for every distinct workload that needs to handle requests coming from external clients, you can quickly run up a significant bill on load balancers alone.
 
-![Load Balancer per Workload](images/blogs/zero-to-kubernetes-platform/lb-per-workload.jpg)
+![Load Balancer per Workload](images/lb-per-workload.jpg)
 
 Usually, it is preferable to connect one of these load balancers to an ingress layer. In this scenario, all requests into the cluster are routed to an ingress controller which proxies requests to the appropriate services in the cluster based on Ingress resource configurations. There are popular open source projects such as the [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx) and [Contour](https://github.com/projectcontour/contour) that can provide this functionality. There are several more in the [CNCF service proxy landscape](https://landscape.cncf.io/card-mode?category=service-proxy&grouping=category).
 
-![Ingress Controller](images/blogs/zero-to-kubernetes-platform/ingress-controller.jpg)
+![Ingress Controller](images/ingress-controller.jpg)
 
 On the topic of service routing, questions around service mesh often come up that extend beyond mere ingress concerns and include more sophisticated features for layer 7 traffic routing. If you have compelling requirements for features like mutual TLS or traffic control based on request contents or weighting, check out the projects in the [CNCF service mesh landscape](https://landscape.cncf.io/card-mode?category=service-mesh&grouping=category). It’s important to note that these systems are necessarily complex. Unless you _really_ need these features in your MVP, postpone this to a later release of your application platform.
 
@@ -73,7 +75,7 @@ Your requirements in this area will depend on the nature of the data you manage.
 
 I think it's fair to say everyone needs to manage TLS assets. Rotating TLS certificates can be a pain. But if you let them expire, you have a code red emergency. Strongly consider using [cert-manager](https://github.com/jetstack/cert-manager) to help automate this process of cert rotation. It integrates with several issuers, including [Let's Encrypt](https://letsencrypt.org/), [Venafi](https://www.venafi.com/) and [Vault](https://github.com/hashicorp/vault).
 
-Speaking of Hashicorp Vault, it is a general purpose secret management solution that you should consider if the use of native Kubernetes Secrets – even when encrypted in transit and at rest – are insufficient. Regardless of which secret management system you use, give careful thought to how the secrets get generated, stored, rotated and accessed by your applications. Plan this out with your security team to ensure sensitive data isn't inadvertently exposed.
+Speaking of HashiCorp Vault, it is a general purpose secret management solution that you should consider if the use of native Kubernetes Secrets – even when encrypted in transit and at rest – are insufficient. Regardless of which secret management system you use, give careful thought to how the secrets get generated, stored, rotated and accessed by your applications. Plan this out with your security team to ensure sensitive data isn't inadvertently exposed.
 
 You will almost certainly want to tie your Kubernetes API servers to your organization's identity systems, whether that be an LDAP, Active Directory server, or perhaps some OAuth provider. [Dex](https://github.com/dexidp/dex) is an OpenID Connect provider that integrates the Kubernetes API with your identity provider. Another project that has emerged more recently is [Pinniped](https://github.com/vmware-tanzu/pinniped) which is worth evaluating, too.
 
@@ -93,5 +95,4 @@ Suffice to say, smooth operation of your tenancy systems is critical to gaining 
 
 ## Summary
 
-The topics covered in this article cover the common essential platform components you will need. However, there is one essential component not addressed: the tenant applications. Don't build these platforms in isolation. Identify the tenant workload/s that will use the first release of your platform and ensure the platform meets their requirements. Make pre-release versions of it available for testing and maintain a healthy feedback loop with the teams that develop and manage these workloads. They are the entire reason for the platform, after all.  On that topic, If you'd also like to learn about building applications to run on such a platform with the popular Spring framework, check out the blog post [here]().
-
+The topics covered in this article cover the common essential platform components you will need. However, there is one essential component not addressed: the tenant applications. Don't build these platforms in isolation. Identify the tenant workload/s that will use the first release of your platform and ensure the platform meets their requirements. Make pre-release versions of it available for testing and maintain a healthy feedback loop with the teams that develop and manage these workloads. They are the entire reason for the platform, after all.  On that topic, If you'd also like to learn about building applications to run on such a platform with the popular Spring framework, check out the blog post [here](/guides/app-enhancements-spring-k8s/).
