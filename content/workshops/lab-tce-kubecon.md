@@ -12,7 +12,7 @@ tags:
 - Kubernetes
 - Spring Boot
 - Tanzu
-title: The Tanzu Community Edition KubeCon Workshop
+title: The Tanzu Community Edition KubeCon NA 2021 Workshop
 level1: Building Kubernetes Platform
 team:
 - Leigh Capili
