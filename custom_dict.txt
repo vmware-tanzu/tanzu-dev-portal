@@ -53,6 +53,7 @@ Agile-ific
 Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
+AKS
 Alertmanager
 Aletty
 Alexa
@@ -142,6 +143,7 @@ aws-encryption-provider
 [Bb]ackfill
 backpressure
 Baeldung('s)?
+Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
@@ -159,6 +161,7 @@ Beda('s)?
 beforeEnqueue
 beforeTransmit
 behavioural
+Behrooz
 Belamaric
 benbravo73
 benchmark(ing)?
@@ -370,6 +373,7 @@ CTRL-C
 currentClientConnections
 currentMetricValue(s)?
 CustomEntryConcurrentHashMap
+customizability
 customizable
 customization(s)?
 CustomResourceDefinition(s)?
@@ -497,6 +501,7 @@ e280e387f128e70537e37093d26f6422
 e2e
 Eads
 eBPF
+EBS
 EC2
 echoserver
 EclipseLink
@@ -994,6 +999,7 @@ kubeseal
 KUDO
 [kK]ustomize
 KUTTL
+Kyverno
 labelset
 lastAccessedTime
 latencies
@@ -1475,6 +1481,7 @@ RHEL
 Riak
 Rickard
 Ries
+RKE
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
@@ -1805,6 +1812,7 @@ vCenter
 VCS
 Vega
 Velero('s)?
+Venafi
 Vendio
 vendored
 Venkat
