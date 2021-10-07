@@ -1,10 +1,8 @@
 ---
 title:  "An Introduction to VMware Marketplace"
-linkTitle: "An Introduction to VMware Marketplace"
-subsection: An Introduction to VMware Marketplace
 description: Learn how developers can discover, try, download, and deploy over 2,000 open source and third-party solutions directly from VMware Marketplace.
-topics:
-- Containers
+level1: Building Modern Applications
+level2: Services
 tags:
 - Marketplace
 # Author(s)
