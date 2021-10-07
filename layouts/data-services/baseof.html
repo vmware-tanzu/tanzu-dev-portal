@@ -11,9 +11,14 @@
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
       <div class="td-main ">
-        <div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
-            <div class='container'>
-                {{ .Render "content" }}
+        <div class='container'>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    {{ .Render "content" }}
+                </div>
+                <div class="col-12 col-lg-3">
+
+                </div>
             </div>
         </div>
 

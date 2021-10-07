@@ -8,9 +8,6 @@ tags:
 team:
 - Tiffany Jernigan
 title: 'KubeCon NA 2020: For the Modern App Developer'
-topics:
-- Containers
-- Kubernetes
 ---
 
 [KubeCon North America](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/) is coming up soon! It will take place virtually November 17th-20th.

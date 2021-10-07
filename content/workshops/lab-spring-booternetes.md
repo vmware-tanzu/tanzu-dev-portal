@@ -1,22 +1,18 @@
 ---
 date: '2021-09-13'
-description: Look at different technologies that help with the technical complexity and technical debt when building and running microservices at scale.
-hero: /images/workshops/workshop-springboot.png
+description: Look at different technologies that help with the technical complexity
+  and technical debt when building and running microservices at scale.
 lab: lab-booternetes
 lastmod: '2021-09-13'
 length: 30
-preview: /images/workshops/img-spring-booternetes.png
-summary: Look at different technologies that help with the technical complexity and technical debt when building and running microservices at scale.
+summary: Look at different technologies that help with the technical complexity and
+  technical debt when building and running microservices at scale.
 tags:
 - Spring
 - Microservices
 - Kubernetes
 - Spring Boot
 title: Spring Booternetes
-topics:
-- Spring
-- Microservices
-- Kubernetes
 team:
 - Josh Long
 weight: 3

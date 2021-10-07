@@ -1,8 +1,11 @@
 ---
-title: "Blog"
-linkTitle: "Blog"
+title: Blog
+linkTitle: Blog
 menu:
-    main:
-        parent: "sections"
-        weight: 6
+  main:
+    parent: sections
+    params:
+      split: right
+    weight: 6
+tags: []
 ---

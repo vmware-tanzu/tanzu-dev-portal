@@ -18,8 +18,4 @@ tags:
 team:
 - Ben Wilcock
 title: Spring Cloud Data Flow Sample
-topics:
-- Spring
-- Microservices
-- Event Streaming
 ---

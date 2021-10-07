@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ partial "amplitude.html" (dict "context" . "event" "video viewed") }}
+
 {{ $class := replace .Page.Section "." "-" | lower }}
 <section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-7 pt-4 pb-5">
 	<div class="container">

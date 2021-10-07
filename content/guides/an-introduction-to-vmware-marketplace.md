@@ -35,7 +35,6 @@ If you are a cloud administrator or other type of administrator for your company
 
 For quick demos on how to deploy solutions directly to various VMware environments, be sure to check out our [Resources](https://www.vmware.com/products/vmware-marketplace.html#resources).  
 
-
 ## How to Find Solutions on the Marketplace 
 
 If you know what you’re looking for, use the keyword-based search to navigate to a solution.  

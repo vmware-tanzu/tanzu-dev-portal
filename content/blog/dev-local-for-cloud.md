@@ -8,6 +8,7 @@ patterns:
 team:
 - David Dieruf
 title: Developing Locally for the Cloud
+tags: []
 ---
 
 Your app is destined for the cloud, but it’s going to meet some challenges along the way. First stop is the always fun whiteboarding session(s). Then come the sticky notes, which inevitably yield a backlog. Only when those two steps are complete does the Zen art of coding begin.

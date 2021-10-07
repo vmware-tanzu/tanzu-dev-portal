@@ -6,8 +6,8 @@
         {{ range $pages }}
           
                 {{ if and .Params.name (not .Params.external) (not .Params.hidden) }}
-                <div class="person col-lg-4 mb-0 mb-lg-0">
-                    <div class="hover-lift card py-3 px-4 mb-4 text-left text-white rounded-0 bg-gray-dark d-inline-block w-100">
+                <div class="person col-lg-4 mb-0 mb-lg-4 mb-3 col-md-6 col-12">
+                    <div class="h-100 card py-3 px-4 text-left text-white rounded-0 bg-gray-dark d-inline-block w-100">
                         <div class="row">
                             <div class="col-3 pr-0">
                                 <a onclick="" href="{{ .RelPermalink }}">

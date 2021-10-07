@@ -10,11 +10,6 @@ patterns:
 tags:
 - Spring
 - Event Streaming
-- Kubernetes
 title: Creating a http-log stream with Spring Cloud Data Flow
-topics:
-- Event Streaming
-- Messaging and Integration
-- Spring
 youtube_id: ezsgWoMwnqM
 ---

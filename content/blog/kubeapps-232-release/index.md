@@ -1,15 +1,14 @@
 ---
-title: "Kubeapps Meets Tanzu Kubernetes Grid: a New Release is out"
-description: The new release of Kubeapps (v.2.3.2) is now available for deployment on VMware Tanzu™ Kubernetes Grid™ (TKG) workload clusters. Read this blog post to learn how to use this new capability in your TKG clusters.
-date: "2021-06-11"
-topics:
-- Kubernetes
+title: 'Kubeapps Meets Tanzu Kubernetes Grid: a New Release is out'
+description: The new release of Kubeapps (v.2.3.2) is now available for deployment
+  on VMware Tanzu™ Kubernetes Grid™ (TKG) workload clusters. Read this blog post to
+  learn how to use this new capability in your TKG clusters.
+date: '2021-06-11'
 tags:
 - Kubeapps
 - Containers
 - Helm
 - Kubernetes
-# Author(s)
 team:
 - Raquel Campuzano Godoy
 ---

@@ -11,7 +11,7 @@
             <div class='row d-flex justify-content-between mb-5 episodes'>
             {{if ( eq (.Title ) "SpringOne Tour")}}
                 {{ range after 2 ( first 5 (sort .RegularPages ".Date" "desc")) }}
-                    <a class='col-4-thumbnail hover-scale flex-315 col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+                    <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
                         <img src="{{ partial "tv-image-src" . }}" />
                         {{ if gt (len .Title) 70}}
@@ -31,7 +31,7 @@
                 {{ end }}
             {{ else }}
                 {{ range first 3 (sort .RegularPages ".Date" "desc") }}
-                    <a class='col-4-thumbnail hover-scale flex-315 col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+                    <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
                         <img src="{{ partial "tv-image-src" . }}" />
                         {{ if gt (len .Title) 70}}

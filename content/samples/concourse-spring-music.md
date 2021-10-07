@@ -11,7 +11,4 @@ tags:
 - Spring
 - Concourse
 title: Using Concourse to Deploy Spring Music
-topics:
-- CI-CD
-- Spring
 ---
