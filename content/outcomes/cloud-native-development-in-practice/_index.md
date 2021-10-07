@@ -4,7 +4,7 @@ weight: -1
 layout: single
 description: |
     Build a Cloud Native App.
-    Run it on TAS.
+    Run it on VMware Tanzu Application Service (TAS).
     Scale it on TAS.
     Then evolve it to Microservices.
 team:
