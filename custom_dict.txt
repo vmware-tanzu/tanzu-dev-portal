@@ -54,11 +54,13 @@ Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
 Akka
+AKS
 Alertmanager
 Aletty
 Alexa
 Alexey
 Alibaba
+allenholub
 [Aa]llocatable
 Alpine(-based)?
 Amaro
@@ -145,6 +147,7 @@ aws-encryption-provider
 [Bb]ackfill
 backpressure
 Baeldung('s)?
+Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
@@ -162,6 +165,7 @@ Beda('s)?
 beforeEnqueue
 beforeTransmit
 behavioural
+Behrooz
 Belamaric
 benbravo73
 benchmark(ing)?
@@ -374,6 +378,7 @@ CTRL-C
 currentClientConnections
 currentMetricValue(s)?
 CustomEntryConcurrentHashMap
+customizability
 customizable
 customization(s)?
 CustomResourceDefinition(s)?
@@ -456,6 +461,7 @@ DiskRegionStatistics
 DiskStore
 Disneyland
 [Dd]isposability
+distributable
 distributedCommand
 DistributedCommand
 DistributedCommandCacheWriter
@@ -475,9 +481,11 @@ distroless
 distros
 django-prometheus
 DLT
+DNF
 DNS
 dnsNames
 dnsutil
+Dobb's
 Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
@@ -503,6 +511,7 @@ e280e387f128e70537e37093d26f6422
 e2e
 Eads
 eBPF
+EBS
 EC2
 echoserver
 EclipseLink
@@ -588,6 +597,7 @@ Florent
 [fF]luentd('s)?
 flyyy
 formatter
+FOSS
 foundaments
 Foxwell
 FP
@@ -760,6 +770,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Holub
 Homebrew
 homogenous
 horizontally-scalable
@@ -790,6 +801,7 @@ IDP
 IIS
 ImagePolicyWebhook
 img
+imgpkg
 [Ii]mmeasurability
 IMmUjUjBzes
 [Ii]mpactful
@@ -859,6 +871,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+JavaWorld
 JAX-RS
 JBaruch
 JBatch
@@ -928,7 +941,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
-[Kk]app(-controller|.)?
+[Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kat
 [Kk]ata(s)?
@@ -979,6 +992,7 @@ KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
 [Kk]ubeapps
+KubeApps
 [kK]ubebuilder
 KubeCon
 [Kk]ubeconfig
@@ -988,6 +1002,7 @@ kubectl
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
+Kubernetes-compliant
 kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
@@ -997,6 +1012,7 @@ kubeseal
 KUDO
 [kK]ustomize
 KUTTL
+Kyverno
 labelset
 lastAccessedTime
 latencies
@@ -1150,7 +1166,7 @@ MyPy
 mystream
 mytopic
 NameCheap
-[Nn]amespace(.|d|-scoped|s)?
+[Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
 Nana
 [Nn]ano
@@ -1453,6 +1469,7 @@ reimagine
 [Rr]eimplement(ing)?
 Reinertsen
 reissuance
+[Rr]emediation(s)?
 removeAll
 removeIf
 RemoveUnusedPdxTypesFunction
@@ -1476,6 +1493,7 @@ ResourcePermission
 ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
 RestAssured
+Restic
 RestrictedMethodAuthorizer
 Retrium
 revertibility
@@ -1485,6 +1503,7 @@ RHEL
 Riak
 Rickard
 Ries
+RKE
 rkt
 [Rr]oadmap(s)?
 [Rr]oadmapping
@@ -1580,6 +1599,7 @@ Sharat_Chander
 sharded
 Sheasha
 Shellshock
+Shipley
 Shopen
 [Ss]howback
 Siddiq
@@ -1656,6 +1676,7 @@ StringBuilder
 struct
 STT
 Styra
+sub(p|P)ath
 subclasses
 subcommand
 subdirector(y|ies)
@@ -1689,6 +1710,7 @@ Tatooine
 TBD
 tchotchke
 TCP
+tdc-carvel-examples
 tdp-guide
 TeamRetro
 TechRepublic
@@ -1697,7 +1719,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
-[Tt]emplat(ed|ing|ing.|ize)
+[Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
 Teppanyaki
@@ -1733,7 +1755,7 @@ toolchain
 toolkits
 [Tt]oolset
 tooltip
-topologies
+[Tt]opolog(y|ies)?
 Torgerson
 toString
 totalProcessingTime
@@ -1764,6 +1786,7 @@ UDP
 UI(s|-based)?
 (un)?marshalling
 unannotated
+unbundle
 uncomment
 Uncomment
 undersample
@@ -1815,6 +1838,7 @@ vCenter
 VCS
 Vega
 Velero('s)?
+Venafi
 Vendio
 vendored
 Venkat
@@ -1841,6 +1865,7 @@ Vlissides
 VMCachedDeserializable
 VMs?
 VMSS
+vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
@@ -1895,7 +1920,7 @@ Yaron
 yay
 Yonis
 youtube
-ytt
+ytt(-templatized)?
 Zalando
 ZDNet
 [Zz]ipkin
