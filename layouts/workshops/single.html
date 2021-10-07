@@ -33,7 +33,7 @@
 	{{ end }}
 			<div class='container'>
 				<h1>{{ .Title }}</h1>
-				<h4 class='text-white mb-4'>{{ .Description }}</h4>
+				<p class='mb-4'>{{ .Description }}</p>
 				<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>{{ .Params.length }} minutes</p>
 				<a class="btn mt-4" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90 mt-4 align-middle d-inline-block" id="startinfo"></span>
 			</div>
