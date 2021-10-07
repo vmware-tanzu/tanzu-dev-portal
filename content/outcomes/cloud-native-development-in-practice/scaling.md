@@ -138,7 +138,7 @@ and you have good insights into the runtime characteristics:
 *Tanzu Application Service* supports automatic horizontal scaling based
 on either pre-defined or custom rules.
 
-For blocking web applications,
+For request/response (blocking) web applications,
 HTTP throughput is a good choice assuming you have a solid grasp of the
 performance, stability, and scaling characteristics of your app.
 

@@ -14,7 +14,7 @@ team:
 ## Why is this learning path important?
 
 This learning path will take you on a journey of building a
-greenfield blocking web application from scratch,
+greenfield web application from scratch,
 getting it to run on a modern cloud native platform,
 and how to deal with it after it goes to production.
 

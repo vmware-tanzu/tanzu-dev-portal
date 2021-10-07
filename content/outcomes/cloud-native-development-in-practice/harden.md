@@ -306,7 +306,8 @@ is it optimally tuned for production?
     account for concurrent planned and unplanned outage of individual
     instances?
 
-1.  Is the port health check optimal for a blocking Java web application?
+1.  Is the port health check optimal for a request/response (blocking)
+    Java web application?
     What if your `pal-tracker` application stalls on Java garbage
     collection?
     What if it runs out of threads?
