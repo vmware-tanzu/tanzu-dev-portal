@@ -365,7 +365,7 @@ Implement the *improved* migration:
 
 ## Hints
 
-### How do you create a database instance in TAS?
+### How do you create a database instance in Tanzu Application Service?
 
 This lab assumes that you have some kind of MySQL service available in your
 foundation, as shown through the `cf marketplace` command.
