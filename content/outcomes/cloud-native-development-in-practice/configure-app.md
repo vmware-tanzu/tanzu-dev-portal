@@ -247,7 +247,7 @@ to make this easier.
 This has the added benefit of documenting required environment variables
 and supporting multiple operating systems.
 
-## TAS Environment Variables
+## Tanzu Application Service Environment Variables
 
 When Tanzu Application Service starts your application, it will be running with
 a port provided by the runtime environment.
