@@ -10,8 +10,7 @@ tags:
 # Author(s)
 team:
 - Neeharika Palaka
-date: "2021-07-16"
-lastmod: "2021-07-16"
+date: "2021-10-08"
 ---
 
 For developers, VMware Marketplace is a one-stop shop to discover, try, purchase, and deploy VMware validated and certified ecosystem directly to VMware endpoints. From the Marketplace, developers have the convenience and flexibility to directly deploy solutions to VMware environments such as VMware Tanzu or VMware Cloud.  
