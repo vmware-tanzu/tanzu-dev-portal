@@ -5,7 +5,7 @@
 
 	const decodedToken = getCookie("nf_jwt")
 	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
-		document.getElementById("startinfo").innerHTML = "<em class='mt-4'>Login Required</em>"
+		document.getElementById("startinfo").innerHTML = "<em class='mt-4'>Login required</em>"
 	}
 	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
 
