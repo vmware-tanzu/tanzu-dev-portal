@@ -208,7 +208,7 @@ Read more about flyway naming conventions
     +------------+--------------+------+-----+---------+----------------+
     ```
 
-## Migrate on TAS
+## Migrate on Tanzu Application Service
 
 You are building a cloud native application which assumes that backing
 services (like a database) are provided by the platform.
