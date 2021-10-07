@@ -369,7 +369,7 @@ Notice that you are not configuring CPU resource allocation.
 
 Review the
 [Scaling slides](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
-about how scaling is handled on TAS.
+about how scaling is handled on Tanzu Application Service.
 
 Now that you have completed the lab, you should be able to:
 
