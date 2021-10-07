@@ -26,36 +26,38 @@
 	</div>
 </div>
 <div class='container d-flex flex-lg-row flex-column justify-content-between py-lg-5 py-2'>
-	<div class="td-main px-0 workshop-description">
+	{{ if .Params.preview }}
+		<div class="td-main px-0 workshop-description col-12 col-lg-6">
+	{{ else }}
+		<div class="td-main px-0 workshop-description">
+	{{ end }}
 			<div class='container'>
 				<h1>{{ .Title }}</h1>
 				<h4 class='text-white mb-4'>{{ .Description }}</h4>
 				<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>{{ .Params.length }} minutes</p>
 				<a class="btn mt-4" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90 mt-4 align-middle d-inline-block" id="startinfo"></span>
 			</div>
-	
-	
-		{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
-	
-		<div class="container pb-5">
+	{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
+			<div class="container pb-5">
 				<!-- {{ with $img := .Params.logo }}
 					<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
 				{{end}} -->
-		
-			{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-				{{ partial "feedback.html" .Site.Params.ui.feedback }}
-				<br />
-			{{ end }}
-			{{ if (.Site.DisqusShortname) }}
-				<br />
-				{{ partial "disqus-comment.html" . }}
-			{{ end }}
-			<!-- <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div> -->
+				
+				{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+					{{ partial "feedback.html" .Site.Params.ui.feedback }}
+					<br />
+				{{ end }}
+				{{ if (.Site.DisqusShortname) }}
+					<br />
+					{{ partial "disqus-comment.html" . }}
+				{{ end }}
+				<!-- <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div> -->
+			</div>
 		</div>
-	</div>
-	{{ with $preview := .Params.preview}}
-		<img class='align-self-start workshop-preview px-0 mt-2' src={{ $preview| relURL }}>
-	{{end}}
+		<div class="preview-container d-none d-lg-block col-12 col-lg-6 position-relative pl-lg-4">
+			<img src="{{ .Params.preview | relURL }}">
+			<img src="{{ .Params.logo | relURL }}" class="workshop-logo position-absolute">
+		</div>
 </div>
 <div class='container'>
 	<hr class='border-bottom'>

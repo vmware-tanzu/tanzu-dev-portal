@@ -1343,6 +1343,20 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .preview-container {
+
+    .workshop-logo {
+      height: 120px;
+      top: 270px;
+      right: 30px;
+      @media(max-width:1300px) {
+        height: 80px;
+      }
+      @media(max-width:1200px) {
+        display: none;
+      }
+    }
+  }
   .workshop-box {
     background-color: #22343c;
 
