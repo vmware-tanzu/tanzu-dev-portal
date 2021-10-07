@@ -50,7 +50,7 @@ This learning path is for software engineers and architects who wish to
 gain a deeper understanding of modern Cloud Native Platforms and how
 Spring Boot applications run on them.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the learning path, you will be able to
 
