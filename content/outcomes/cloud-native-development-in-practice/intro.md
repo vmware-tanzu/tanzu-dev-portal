@@ -46,7 +46,8 @@ The codebase structure will include a local Git repo:
 
 1.  Navigate to the `workspace` sub-directory of your home directory.
 
-    VMware Tanzu Labs engineers practice [pair programming](https://en.wikipedia.org/wiki/Pair_programming)
+    VMware Tanzu Labs engineers practice
+    [pair programming](https://en.wikipedia.org/wiki/Pair_programming)
     and rotate pairs quite frequently, usually two to three times per
     week.
     Because of this, a developer may be assigned to a different
@@ -61,10 +62,11 @@ The codebase structure will include a local Git repo:
     [`pal-tracker` linked zip file](https://github.com/platform-acceleration-lab/pal-tracker/releases/download/platform-acceleration-release-12.3.74/pal-tracker.zip).
 
 1.  Extract the codebase in the `~/workspace` directory.
-    The extracted `pal-tracker` directory will contain a single text file as well as
-    the (hidden) Git files.
-    You will be building up the code in this directory bit by bit, and
-    we have provided reference implementations at each stage identified by tags in the Git repository.
+    The extracted `pal-tracker` directory will contain a single text
+    file as well as the (hidden) Git files.
+    You will be building up the code in this directory bit by bit,
+    and you are provided reference implementations at each stage
+    identified by tags in the Git repository.
 
 1.  The `pal-tracker` codebase
     contains a local Git repository with the starting points and the
@@ -172,13 +174,14 @@ You will use Gradle as your build and dependency management system.
     git commit -m'added gradle wrapper to initial project'
     ```
 
-## TAS (CF) CLI
+## *Tanzu Application Service* (*Tanzu Application Service*) command line interface (CLI)
 
-You will interact with Tanzu Application Service is via the _Tanzu
+You will interact with *Tanzu Application Service* is via the _Tanzu
 Application Services CLI_.
-This command-line interface is common to all products, like TAS, based
-on the (open source) Cloud Foundry technology.
-For this reason it is usually known as the CF CLI.
+This command-line interface is common to all products,
+like *Tanzu Application Service*,
+based on the (open source) Cloud Foundry technology.
+For this reason it is usually known as the *Cloud Foundry CLI*.
 
 1.  Verify the CLI is installed correctly by running
 
@@ -188,12 +191,13 @@ For this reason it is usually known as the CF CLI.
 
     which will show a list of available tasks.
 
-2.  If the CLI is not installed, follow the
+1.  If the CLI is not installed, follow the
     [instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
     for your environment.
     Note that the labs have been written for version 6 of the CLI.
 
-1.  To view more information about each task, use the `--help` flag.
+1.  To view more information about each task,
+    use the `--help` flag.
     For example, use the following command to find more information
     about the `login` command:
 
@@ -203,17 +207,17 @@ For this reason it is usually known as the CF CLI.
 
 ### CF target
 
-The CF CLI can interact with multiple installations of TAS so you need
-to *target* a specific installation (also called a foundation).
+The CF CLI can interact with multiple installations of
+*Tanzu Application Service* so you need to *target* a specific
+installation (also called a foundation).
 Targeting means telling your CLI about the API endpoint for a
 foundation.
 
-1.  Use the `login` command to log in to your Tanzu Application Services foundation's
-    API endpoint.
+1.  Use the `login` command to log in to your
+    *Tanzu Application Service* foundation's API endpoint.
 
 1.  Verify the CLI has targeted the correct foundation by using the
     `target` command.
-
 
 ## Wrap up
 
@@ -224,7 +228,7 @@ Review the
 [Concepts slides](https://docs.google.com/presentation/d/18XyFmx1SoHU03arGPNVNfplJDxEKSi6dXdl5U_Atylk/present#slide=id.ge9c23810de_0_0)
 to get familiar with some basic concepts.
 
-## Git Primer
+## Git primer
 
 If you are not proficient with the Git CLI,
 you will get value from reviewing this section.
@@ -354,8 +358,8 @@ You can run the `git diff` command to view differences:
     ```
 
 1.  For example,
-    If wanting to view the difference between the `build.gradle` file you
-    created in this lab,
+    If wanting to view the difference between the `build.gradle` file
+    you created in this lab,
     to the one in the next lab:
 
     ```bash
@@ -447,8 +451,8 @@ solution files that you will not have to author.
 1.  The `git cherry-pick` command is used to apply a pre-existing commit
     into your workspace.
 
-    If you want to pull in the commit for the entire solution of a lab that
-    you are working on,
+    If you want to pull in the commit for the entire solution of a lab
+    that you are working on,
     you can run the cherry-pick as follows:
 
     ```bash
@@ -549,4 +553,5 @@ solution files that you will not have to author.
         ```
 
     Note that the fast-forward is the for the codebase only,
-    you will also have to push your application to TAS.
+    you will also have to push your application to
+    *Tanzu Application Service*.

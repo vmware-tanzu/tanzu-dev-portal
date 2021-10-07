@@ -45,12 +45,14 @@ PowerShell rather than Bash.
 If you have no experience with terminals or Java,
 you will struggle to get through the labs.
 
-## Tanzu Application Services Foundation
+## *Tanzu Application Service* (*Tanzu Application Service*) foundation
 
-For the best experience, you will need a Tanzu Application Services (TAS)
-Foundation where you will deploy your applications.
+For the best experience, you will need a
+*Tanzu Application Service* (TAS) foundation where you will deploy your
+applications.
 
-If you work for an organization that runs TAS foundations,
+If you work for an organization that runs *Tanzu Application Service*
+foundations,
 reach out to the Platform Operations Teams that maintain them to get
 access to a foundation used for development or training use only.
 
@@ -60,7 +62,7 @@ team:
 Bare Minimum:
 
 -   Java build pack that supports Java version 11
--   TAS *user*.
+-   *Tanzu Application Service* *user*.
 -   A dedicated *space*,
     where the *user* has *space developer* role for that *space*,
     with ability to push, scale and delete applications,
@@ -81,20 +83,21 @@ Desired:
 -   Container-to-container networking enabled - for the
     *Service Discovery* lab.
 
-## Without TAS Foundation Access
+## Without *Tanzu Application Service* Foundation Access
 
-If you do not have access to a TAS foundation you will not be able to
-follow the instructions in the labs to deploy your applications to
-a cloud environment.
-As a result, you will not get the most benefit out of this learning pathway.
+If you do not have access to a *Tanzu Application Service* foundation
+you will not be able to follow the instructions in the labs to deploy
+your applications to a cloud environment.
+As a result, you will not get the most benefit out of this learning
+path.
 
 You can, however, still perform many of the development operations in
 the labs in your local environment.
 This will give you some experience of good cloud-native development
 practices, such as testing for microservices.
-However, some labs will be impossible to complete without a TAS
-foundation and others may be hard to understand without experience
-of such an environment.
+However, some labs will be impossible to complete without a
+*Tanzu Application Service* foundation and others may be hard to
+understand without experience of such an environment.
 
 ## Development Workstation
 
@@ -124,6 +127,6 @@ Following are the tools you need to run the labs:
     Note that MariaDB 10+ is an acceptable alternative to MySQL 8+, and
     the lab instructions should work equally well with MariaDB.
 
--   TAS command line client `cf` cli
+-   *Tanzu Application Service* command line client `cf` cli
 
 -   Flyway command line

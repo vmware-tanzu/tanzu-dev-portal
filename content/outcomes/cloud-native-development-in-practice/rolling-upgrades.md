@@ -7,13 +7,13 @@ team:
 ---
 
 You will demonstrate how to achieve zero downtime upgrades of your
-`pal-tracker` application running on Tanzu Application Service.
+`pal-tracker` application running on *Tanzu Application Service*.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
-- Demonstrate zero downtime upgrades on Tanzu Application Service.
+- Demonstrate zero downtime upgrades on *Tanzu Application Service*.
 
 ## Getting started
 
@@ -26,7 +26,8 @@ slides.
 1.  You must have completed (or fast-forwarded to) the
     [Scaling lab](../scaling/).
     You must have your `pal-tracker` application associated with the
-    `scaling-availability-solution` codebase deployed and running on TAS.
+    `scaling-availability-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.

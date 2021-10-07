@@ -7,9 +7,10 @@ team:
 ---
 
 In this lab you will implement the database version of the Time Entry
-Repository using [Spring JDBC Template](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html).
+Repository using
+[Spring JDBC Template](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html).
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -17,8 +18,8 @@ After completing the lab, you will be able to:
     dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
--   Describe how to set up a Spring Boot app running on TAS to connect
-    to a MySQL Service
+-   Describe how to set up a Spring Boot app running on
+    *Tanzu Application Service* to connect to a MySQL Service
 -   Use JDBC Template to perform CRUD database operations
 
 ## Get started
@@ -26,8 +27,10 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Backing Services and Database Migrations lab](../database-migrations/).
     You must have your `pal-tracker` application associated with the
-    `migrations-solution` codebase deployed and running on TAS,
-    and your local and TAS databases must have been migrated.
+    `migrations-solution` codebase deployed and running on
+    *Tanzu Application Service*,
+    and your local and *Tanzu Application Service* databases must have
+    been migrated.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
@@ -92,8 +95,8 @@ Configure Flyway in your `build.gradle` file as follows:
       }
     ```
 
-1.  Define connection details we can use within the build system to
-    connect to the local databases we created earlier.
+1.  Define connection details you can use within the build system to
+    connect to the local databases you created earlier.
 
     ```diff
       test {
@@ -163,10 +166,10 @@ as the `routes` and `env` labels.
 ## Create the repository
 
 1.  Create a new class called `JdbcTimeEntryRepository` that:
-    - Implements the `TimeEntryRepository` interface.
-    - Takes a `DataSource` as a constructor argument.
-      Make sure to use the `DataSource` interface type, not the concrete `MysqlDataSource`
-      class type.
+    -   Implements the `TimeEntryRepository` interface.
+    -   Takes a `DataSource` as a constructor argument.
+        Make sure to use the `DataSource` interface type,
+        not the concrete `MysqlDataSource` class type.
 
     Use the `JdbcTimeEntryRepositoryTest` to guide your
     implementation.
@@ -227,8 +230,8 @@ Now that you have completed the lab, you should be able to:
     dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
--   Describe how to set up a Spring Boot app running on TAS to connect
-    to a MySQL Service
+-   Describe how to set up a Spring Boot app running on
+    *Tanzu Application Service* to connect to a MySQL Service
 -   Use JDBC Template to perform CRUD database operations
 
 ## Extras
@@ -256,8 +259,8 @@ in work.
 It replaces the Spring Boot auto-configured `DataSource` with one it
 creates from the service binding found in `VCAP_SERVICES`.
 
-One issue you may have noticed if you reviewed the app logs after deploying
-your JDBC code changes is this warning:
+One issue you may have noticed if you reviewed the app logs after
+deploying your JDBC code changes is this warning:
 
 ```nohighlight
 2020-12-18T13:03:59.98-0600 [APP/PROC/WEB/0] OUT 2020-12-18 19:03:59.988  INFO 14 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'tracker-database' bean
@@ -266,9 +269,9 @@ your JDBC code changes is this warning:
 
 But you did not see this when you ran this locally as a Spring Boot app!
 
-A trade-off of using the default Tanzu Application Service Java buildpack
-auto-reconfiguration behavior is that it hijacks backing service
-configuration,
+A trade-off of using the default *Tanzu Application Service* Java
+buildpack auto-reconfiguration behavior is that it hijacks backing
+service configuration,
 and replaces with the associated Spring beans configured separately by
 the auto-reconfiguration plugin.
 This includes any `DataSource` configuration you
@@ -323,25 +326,30 @@ how did both of the solution compare to the *JDBC Template* solution?
 
 ### Where do you get the `DataSource` from?
 
-It is obvious that, ultimately, the application will need a `DataSource` instance,
+It is obvious that, ultimately,
+the application will need a `DataSource` instance,
 connected to a real database.
 It is much less obvious how to create that.
-The good news is that you, the developer, do not need to create the datasource at all &mdash;
+The good news is that you, the developer,
+do not need to create the datasource at all &mdash;
 Spring Boot will do that for you!
 In order to do that it needs several things to be true:
 
--  Spring Boot auto-configuration is enabled, which it is by default.
+-   Spring Boot auto-configuration is enabled, which it is by default.
 
--  There is a valid value for the configuration property `spring.datasource.url` (in
-   this case provided via the environment), or the app is running in a cloud environment
-   (such as TAS) where information on bound database instances is available.
-   
--  There is an appropriate JDBC driver available on the classpath.
+-   There is a valid value for the configuration property
+    `spring.datasource.url` (in this case provided via the environment),
+    or the app is running in a cloud environment
+    (such as *Tanzu Application Service*) where information on bound
+    database instances is available.
 
-If these conditions are true, Spring Boot will create a datasource bean and place it
-in the application context.
+-   There is an appropriate JDBC driver available on the classpath.
+
+If these conditions are true,
+Spring Boot will create a datasource bean and place it in the
+application context.
 
 ### How do you inject the `DataSource` into the `JdbcTimeEntryRepository`?
 
-As well as Spring auto-wiring parameters into bean class constructors, it will
-also auto-wire the parameters of methods annotated with `@Bean`.
+As well as Spring auto-wiring parameters into bean class constructors,
+it will also auto-wire the parameters of methods annotated with `@Bean`.

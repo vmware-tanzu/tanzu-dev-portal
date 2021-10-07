@@ -7,9 +7,10 @@ team:
 ---
 
 You will demonstrate how to harden your `pal-tracker` application
-running on Tanzu Application Service for scaling and availability characteristics.
+running on *Tanzu Application Service* for scaling and availability
+characteristics.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -24,7 +25,8 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Health Monitoring lab](../health-monitoring/).
     You must have your `pal-tracker` application associated with the
-    `actuator-solution` codebase deployed and running on TAS.
+    `actuator-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
@@ -93,8 +95,8 @@ You can monitor the `pal-tracker` application through the following:
 -   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
-If you choose to monitor via the command line you will need a minimum of four
-terminal windows open.
+If you choose to monitor via the command line you will need a minimum of
+four terminal windows open.
 
 If you choose to monitor with *Apps Manager* you will need only one.
 
@@ -109,7 +111,8 @@ git show scaling-availability-start:manifest.yml
 ```
 
 Notice the new parameters added,
-they reflect the defaults the Tanzu Application Service sets on your behalf:
+they reflect the defaults the *Tanzu Application Service* sets on your
+behalf:
 
 1.  [`java_buildpack_offline`](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html#buildpack):
     Given that the `pal-tracker` app is a Java app,
@@ -160,7 +163,7 @@ they reflect the defaults the Tanzu Application Service sets on your behalf:
     endpoint you will use in this lab.
 
 You can see the entire list of
-[Tanzu Application Service manifest attributes](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html).
+[*Tanzu Application Service* manifest attributes](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html).
 
 ### Push and monitor the state of your app
 
@@ -247,7 +250,7 @@ Keep both these windows open and running for the rest of the lab.
     and when Diego cell detected the healthy `pal-tracker` application
     instance?
 
-#### Container Resources
+#### Container resources
 
 1.  Dedicate one of your open terminal windows to run some load against
     your application.
@@ -262,9 +265,11 @@ Keep both these windows open and running for the rest of the lab.
 
     where the
 
-    - `NUM_USERS` option value is number of simulated users/threads
-    - `DURATION` option value is the max duration of the test (seconds)
-    - `REQUESTS_PER_SECOND` option value is the number of requests per second.
+    -   `NUM_USERS` option value is number of simulated users/threads
+    -   `DURATION` option value is the max duration of the test
+        (seconds)
+    -   `REQUESTS_PER_SECOND` option value is the number of requests per
+        second.
 
 1.  In either *Apps Manager* or the `cf app` Watch window,
     monitor the amount of CPU, memory and disk resources taken for the
@@ -310,7 +315,7 @@ is it optimally tuned for production?
     health check?
 
 1.  What about CPU resources?
-    How does Tanzu Application Service handle that?
+    How does *Tanzu Application Service* handle that?
 
 ## Production hardening
 
@@ -363,13 +368,13 @@ git show scaling-availability-solution:manifest.yml
 ```
 
 Notice that you are not configuring CPU resource allocation.
-[Read about how Tanzu Application Service works with CPU](https://www.cloudfoundry.org/blog/better-way-split-cake-cpu-entitlements/).
+[Read about how *Tanzu Application Service* works with CPU](https://www.cloudfoundry.org/blog/better-way-split-cake-cpu-entitlements/).
 
 ## Wrap up
 
 Review the
 [Scaling slides](https://docs.google.com/presentation/d/1CAHQc2DPZHGGoS7cyYkzSchQgDQsd4UKg_olQs6LpUk/present#slide=id.ge9cac6b4b4_0_0)
-about how scaling is handled on Tanzu Application Service.
+about how scaling is handled on *Tanzu Application Service*.
 
 Now that you have completed the lab, you should be able to:
 

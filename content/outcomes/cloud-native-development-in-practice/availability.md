@@ -7,13 +7,13 @@ team:
 ---
 
 You will demonstrate how `pal-tracker` application
-works with Tanzu Application Service availability characteristics.
+works with *Tanzu Application Service* availability characteristics.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
-- Demonstrate how Tanzu Application Service handles availability.
+- Demonstrate how *Tanzu Application Service* handles availability.
 
 ## Getting started
 
@@ -26,7 +26,8 @@ slides.
 1.  You must have completed (or fast-forwarded to) the
     [Hardening lab](../harden/).
     You must have your `pal-tracker` application associated with the
-    `scaling-availability-solution` codebase deployed and running on TAS.
+    `scaling-availability-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
@@ -47,8 +48,8 @@ You can monitor the `pal-tracker` application through the following:
 -   [*Apps Manager*](https://docs.pivotal.io/application-service/2-11/console/dev-console.html)
     user interface.
 
-If you choose to monitor via the command line you will need a minimum of four
-terminal windows open.
+If you choose to monitor via the command line you will need a minimum of
+four terminal windows open.
 
 If you choose to monitor with *Apps Manager* you will need only one.
 
@@ -96,10 +97,11 @@ If you choose to monitor with *Apps Manager* you will need only one.
 
 Review the
 [Availability](https://docs.google.com/presentation/d/1FmUnMpbKKqnIH0y4CxDjB7Vzn7nY0hiGaWngYN6F1oU/present#slide=id.ge9cac6b40d_0_0)
-slides about how processes are monitored and recovered in TAS.
+slides about how processes are monitored and recovered in
+*Tanzu Application Service*.
 
 Now that you have completed the lab, you should be able to:
 
-- Demonstrate how Tanzu Application Service handles availability.
+- Demonstrate how *Tanzu Application Service* handles availability.
 
 ## Extras

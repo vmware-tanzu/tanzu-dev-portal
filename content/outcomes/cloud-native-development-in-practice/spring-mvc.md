@@ -16,7 +16,7 @@ The lab will introduce the fundamentals of
 [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc)
 for building web services.
 
-# Learning Outcomes
+# Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -33,7 +33,8 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Deployment pipelines lab](../pipelines/).
     You must have your `pal-tracker` application associated with the
-    `pipeline-solution` codebase deployed and running on TAS.
+    `pipeline-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker`
@@ -62,8 +63,8 @@ an interface used to define the operations of
 a repository for those entities, and an in-memory implementation of
 that repository interface.
 
-You will build a service that can do [CRUD (Create, Read, Update,
-Delete) operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+You will build a service that can do
+[CRUD (Create, Read, Update,Delete) operations](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 on time entries.
 
 ### Data layer
@@ -136,7 +137,7 @@ you will build out a REST service for time entries using a
 ### Implement the controller Java class
 
 1.  Review each test case in the `TimeEntryControllerTest` class:
-    
+
     -   Notice the pattern of setting up text fixtures,
         executing the controller methods under test,
         and verifying successful execution of each method.
@@ -206,9 +207,10 @@ signals to Spring that they are controllers.
 
     -   For convenience,
         use the `@RestController` annotation.
-        This is a regular Spring MVC controller, but it also includes the
-        `@ResponseBody` annotation which automatically serializes objects
-        into JSON when they are returned from a handler method.
+        This is a regular Spring MVC controller,
+        but it also includes the `@ResponseBody` annotation which
+        automatically serializes objects into JSON when they are
+        returned from a handler method.
 
     -   Controller handler methods are annotated with
         [`@RequestMapping`](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-ann-requestmapping)
@@ -279,14 +281,14 @@ that your application behaves as expected.
     ```
 
     **Note:** On UNIX-like systems, you can set the shell variable
-    `TIME_ENTRY_ID` to the value of the ID that was created by the previous
-    command.
+    `TIME_ENTRY_ID` to the value of the ID that was created by the
+    previous command.
     Assuming the ID value was 42, you would do that like this:
-    
+
     ```bash
     TIME_ENTRY_ID=42
     ```
-    
+
     You can then cut and paste the commands in the following sections
     directly.
     Otherwise, replace the placeholder `${TIME_ENTRY_ID}` with the value
@@ -315,14 +317,15 @@ that your application behaves as expected.
 
 ## Deploy
 
-1.  Push your code to GitHub and let the pipeline deploy to your TAS
-    environment.
+1.  Push your code to GitHub and let the pipeline deploy to your \
+    *Tanzu Application Service* environment.
 
-1.  Redo the [Exercise endpoints](#exercise-endpoints) section on TAS
-    by replacing `localhost:8080` with the TAS environment route.
+1.  Redo the [Exercise endpoints](#exercise-endpoints) section on
+    *Tanzu Application Service* by replacing `localhost:8080` with the
+    *Tanzu Application Service* environment route.
 
-1.  Make sure all the endpoints succeed in the TAS environment before
-    you move on.
+1.  Make sure all the endpoints succeed in the
+    *Tanzu Application Service* environment before you move on.
 
 ## Wrap up
 

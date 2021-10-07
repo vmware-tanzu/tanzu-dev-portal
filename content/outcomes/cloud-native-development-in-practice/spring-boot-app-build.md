@@ -11,12 +11,13 @@ This lab will walk you through setting up a Java application using
 At the end of this learning path you will have evolved this
 from a single application to a distributed application consisting of
 multiple microservices.
-In the spirit of the history of [Pivotal Tracker](https://www.pivotaltracker.com/),
+In the spirit of the history of
+[Pivotal Tracker](https://www.pivotaltracker.com/),
 the suite of applications will include the microservices supporting
 a software project management tool, an application for tracking time,
 and an application for allocating people to projects.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -84,7 +85,7 @@ you can begin building a Spring Boot _Hello World_ application.
 
 1.  If you are familiar with Gradle, make the following additions to
     your `build.gradle` file:
-    
+
     -   Add a `plugins` closure:
 
         -   Apply the `2.5.3.RELEASE` version of the
@@ -113,7 +114,7 @@ you can begin building a Spring Boot _Hello World_ application.
 
     Make sure that your `build.gradle` has all of the necessary elements
     before moving on.
-    
+
 1.  Add a `settings.gradle` file with the following contents:
 
     ```groovy
@@ -177,11 +178,11 @@ you can begin building a Spring Boot _Hello World_ application.
     This will be the task with a description that says:
     "Runs this project as a Spring Boot application".
     Once you find the task, use it to run your application.
-    
+
     Make sure that you run the Gradle wrapper command, `gradlew`,
     rather than the `gradle` command itself.
     You can do this from the command-line like this:
-    
+
     ```bash
     ./gradlew tasks
     ```
@@ -232,7 +233,7 @@ but for now, just follow along.
 
     You now have a small working web application.
     In the next lab,
-    you will push this application to Tanzu Application Service.
+    you will push this application to *Tanzu Application Service*.
 
 ## Wrap up
 
@@ -246,12 +247,13 @@ Now that you have completed the lab, you should be able to:
 
 If you have additional time, explore the dependencies included in the
 `spring-boot-starter-web` library.
-Go to the main Maven repository for [Spring Boot web starter](https://search.maven.org/artifact/org.springframework.boot/spring-boot-starter-web),
+Go to the main Maven repository for
+[Spring Boot web starter](https://search.maven.org/artifact/org.springframework.boot/spring-boot-starter-web),
 find the version you are using, and navigate to its page.
 You will see the Maven [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
 file (in XML format).
-The `<dependencies>` section of the file shows the immediate dependencies
-of the starter, for example:
+The `<dependencies>` section of the file shows the immediate
+dependencies of the starter, for example:
 
 ```xml
   <dependencies>
@@ -266,12 +268,13 @@ of the starter, for example:
 ```
 
 In Gradle syntax that corresponds to:
+
 ```groovy
   implementation 'org.springframework.boot:spring-boot-starter:2.5.3.RELEASE'
 ```
 
-There is a link to the pages for each of these dependencies at the bottom of the
-scrolling panel at the right of the screen.
+There is a link to the pages for each of these dependencies at the
+bottom of the scrolling panel at the right of the screen.
 
 Try to write the dependencies closure in the `build.gradle` file so that
 your application runs without using any starters.

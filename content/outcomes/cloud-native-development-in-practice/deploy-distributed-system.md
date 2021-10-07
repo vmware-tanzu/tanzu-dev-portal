@@ -12,9 +12,9 @@ the
 [App Continuum](https://courses.education.pivotal.io/appcontinuum).
 You will then use
 [GitHub Actions](https://github.com/features/actions) to
-deploy that system of four applications to Tanzu Application Service.
+deploy that system of four applications to *Tanzu Application Service*.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -60,8 +60,8 @@ Call them `tracker-allocations-database`, `tracker-backlog-database`,
 
 ## Explore the codebase
 
-Open the code in your IDE and take a look around. Make sure that the project is
-set up to use Java 11.
+Open the code in your IDE and take a look around.
+Make sure that the project is set up to use Java 11.
 
 Pay special attention to the new directory structure of
 your codebase.
@@ -92,8 +92,8 @@ your codebase.
 ```
 
 -   The `applications` directory contains four Spring Boot applications.
--   The `components` directory contains components of the application domains and
-    support libraries.
+-   The `components` directory contains components of the application
+    domains and support libraries.
 -   The `databases` directory contains migration information for the
     different database schemas.
 -   The `buildSrc` directory is a standard Gradle directory that gets
@@ -103,7 +103,8 @@ your codebase.
 ### A note on other tags
 
 You may see that the `pal-tracker-distributed` codebase contains a
-number of tags for code versions that are not referenced in these materials.
+number of tags for code versions that are not referenced in these
+materials.
 They are used in other materials beyond the current scope of this
 learning path.
 
@@ -125,7 +126,8 @@ well as basic tests for individual applications.
 However, there are also a set of integration tests that exercise
 all of the microservices, working together.
 This ability to test the system as a whole is greatly helped by
-having all the code, for all applications, together in a single repository.
+having all the code, for all applications, together in a single
+repository.
 It also makes it easier to extract and share common code.
 
 ### Run
@@ -174,9 +176,10 @@ system.
 Keep these commands handy, as they will be useful to test your system in
 future labs.
 
-Note that (on UNIX/Linux) if you define shell variables *USER_ID, PROJECT_ID* and
-*ACCOUNT_ID* with the values that you receive back at different stages then
-you will be able to cut and paste these commands directly.
+Note that (on UNIX/Linux) if you define shell variables
+*USER_ID, PROJECT_ID* and *ACCOUNT_ID* with the values that you receive
+back at different stages then you will be able to cut and paste these
+commands directly.
 For example, the first `curl` command will produce something like this:
 
 ```json
@@ -231,7 +234,7 @@ curl -v -XPOST -H"Content-Type: application/json" localhost:8084/time-entries/ -
 curl -v localhost:8084/time-entries?userId=${USER_ID}
 ```
 
-## Set up GitHub Actions for Continuous Integration
+## Set up *GitHub Actions* for continuous integration
 
 ### Get the pipeline
 
@@ -245,7 +248,7 @@ git cherry-pick pipeline
 
 Your new `.github/workflows/pipeline.yml` file configures the pipeline
 to build all four applications,
-deploy them to TAS,
+deploy them to *Tanzu Application Service*,
 and migrate all four databases.
 
 Take a few minutes to review the pipeline.
@@ -256,9 +259,9 @@ tasks.
 
 ## Confirm service creation
 
-Confirm that all of the MySQL instances you created earlier have been fully
-    provisioned using the `cf services` or `cf service` command.
-    The instances will be bound via an entry in the manifest.
+Confirm that all of the MySQL instances you created earlier have been
+fully provisioned using the `cf services` or `cf service` command.
+The instances will be bound via an entry in the manifest.
 
 ## Choose routes
 
@@ -292,11 +295,12 @@ other people's applications.
 
 1.  Commit your changes and push them to GitHub.
 
-    This will trigger a build on GitHub Actions, given that you have added
-    the workflow pipeline.
+    This will trigger a build on GitHub Actions,
+    given that you have added the workflow pipeline.
     Expect the build and deploy to succeed this time.
 
-1.  For each application, visit its root page on TAS and test manually.
+1.  For each application, visit its root page on
+    *Tanzu Application Service* and test manually.
     Each one should display `Noop!`.
 
 1.  Manually trigger a few requests to the various controllers to verify
@@ -307,11 +311,12 @@ other people's applications.
     exercise API endpoints that integrate with `registration`.
 
 You will note that a code change to any part of the codebase will cause
-all of the applications to be rebuilt, tested and pushed to TAS.
+all of the applications to be rebuilt, tested and pushed to
+*Tanzu Application Service*.
 This means that you have the highest degree of confidence that all
-the microservices will continue to work together, without having to worry
-about issues such as API compatibility between different
-deployed versions.
+the microservices will continue to work together,
+without having to worry about issues such as API compatibility between
+different deployed versions.
 
 ## Wrap up
 

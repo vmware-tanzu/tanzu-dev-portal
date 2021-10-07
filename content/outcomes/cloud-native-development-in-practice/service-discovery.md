@@ -6,16 +6,17 @@ team:
   - VMware Tanzu Labs
 ---
 
-In this lab we will enable our applications to use
+In this lab you will enable your applications to use
 [service discovery](https://docs.pivotal.io/spring-cloud-services/2-0/common/service-registry/)
 to register and locate microservices.
-The applications will be using Internal Routes on TAS.
+The applications will be using Internal Routes on
+*Tanzu Application Service*.
 
 At the end of the lab, each application will be able to discover
 microservices by name, reducing the configuration needed to deploy our
 system.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
@@ -35,16 +36,17 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Deploy a Distributed Application lab](../deploy-distributed-system/).
     You must have your `pal-tracker` application associated with the
-    `deploy-distributed-app-solution` codebase deployed and running on TAS.
+    `deploy-distributed-app-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
 
 You will make no code changes in the lab.
 You will make only configuration changes to your
-distributed app running on TAS.
+distributed app running on *Tanzu Application Service*.
 
-## Use Internal Routes instead of Spring Cloud Services Registry
+## Configure Internal Routes
 
 1.  Make sure your work is saved and committed to Github.
 

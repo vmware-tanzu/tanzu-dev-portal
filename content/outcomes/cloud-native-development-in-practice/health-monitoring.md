@@ -14,12 +14,12 @@ You will use
 to add production-ready monitoring features to your `pal-tracker`
 application.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
--   Explain how to set up Actuator for a Spring Boot app
--   Explain uses for health indicators and availability probes
+- Explain how to set up Actuator for a Spring Boot app
+- Explain uses for health indicators and availability probes
 
 ## Get started
 
@@ -30,7 +30,8 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Data Access lab](../jdbc-template/).
     You must have your `pal-tracker` application associated with the
-    `jdbc-solution` codebase deployed and running on TAS.
+    `jdbc-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
@@ -130,17 +131,20 @@ This lab will walk you through the more interesting and important ones.
     Custom metrics will also be shown here.
     There are several types of custom metrics that can be collected:
 
-    - *Gauge* - gives an instantaneous measurement of a value that
-      may increase or decrease over time, for example, the current amount
-      of free memory.
-    - *Counter* - counts the number of times an event has occurred, for
-      example, the total number of API requests processed.
-    - *DistributionSummary* - tracks aspects of the characteristics of a
-      set of events, including the total value, maximum value and count.
-      For example, the total number of bytes received in messages on a queue,
-      the maximum message size, and the total number of messages.
-    - *Timer* - similar to **DistributionSummary** but specialized for
-      tracking information about the duration large number of short running events
+    -   *Gauge* - gives an instantaneous measurement of a value that
+        may increase or decrease over time, for example,
+        the current amount of free memory.
+    -   *Counter* - counts the number of times an event has occurred,
+        for example, the total number of API requests processed.
+    -   *DistributionSummary* - tracks aspects of the characteristics of
+        a set of events, including the total value,
+        maximum value and count.
+        For example, the total number of bytes received in messages on a
+        queue, the maximum message size,
+        and the total number of messages.
+    -   *Timer* - similar to **DistributionSummary** but specialized for
+        tracking information about the duration large number of short
+        running events
 
 1.  Visit the [`/actuator/info`](http://localhost:8080/actuator/info)
     endpoint.
@@ -197,7 +201,7 @@ endpoint.
     -   Restart your application and visit the
         [`/actuator/health`](http://localhost:8080/actuator/health)
         endpoint again to see the more detailed health status.
-        
+
 1.  View the various components of the health status:
 
     -   `diskSpace`:
@@ -246,8 +250,8 @@ Modern application platforms support a contract with the applications
 they run that the platform will monitor the application instance health.
 This contract allows the platform to dispose of unhealthy application
 instances,
-and recover them according to the instructions given to it by application
-operators.
+and recover them according to the instructions given to it by
+application operators.
 
 Workloads can support the platform contract by exposing endpoints
 that allow the platform to answer the following questions:
@@ -258,11 +262,10 @@ that allow the platform to answer the following questions:
 The platform can block work being routed to a newly started applications
 until it tells the platform it is ready.
 
-The platform can also dispose of applications that indicate that they are
-in a state where they may not be able to reliably service
-requests.
+The platform can also dispose of applications that indicate that they
+are in a state where they may not be able to reliably service requests.
 
-## Availability Probes
+## Availability probes
 
 An availability probe is contract between an application and a runtime
 platform.
@@ -314,11 +317,12 @@ You will need to enable them.
     This is the `liveness` probe endpoint.
 
 **Note:**
-**Tanzu Application Service supports use the of the liveness probe
+***Tanzu Application Service* supports use the of the liveness probe
 with the `health-check` feature, which you will demonstrate in the
 next lab.**
 
-**TAS does not currently support the use of readiness checks.**
+***Tanzu Application Service* does not currently support the use of**
+**readiness checks.**
 
 ### Liveness
 
@@ -338,10 +342,10 @@ Perhaps the app encounters a fatal exception from which it cannot recover,
 or there is a *persistent* failure of a backing service.
 
 Unfortunately backing services health indicators are not suitable to
-use for the liveness probe of the application as a whole because they also
-indicate *transient* failures of the backing service.
-We will talk about this further in
-[Special Considerations](#special-considerations).
+use for the liveness probe of the application as a whole because they
+also indicate *transient* failures of the backing service.
+This is discussed further in the
+[Special Considerations](#special-considerations) section.
 
 The cherry-picked code provided a new tool that you will use to
 demonstrate a broken liveness state in your `pal-tracker` application:
@@ -386,7 +390,7 @@ demonstrate a broken liveness state in your `pal-tracker` application:
     curl -v -XDELETE localhost:8080/actuator/palTrackerFailure
     ```
 
-### Special Considerations
+### Special considerations
 
 It may be tempting to use the auto-configured backing service health
 indicators to override the liveness probe of your application.
@@ -470,8 +474,8 @@ Consider the following guidelines:
 
 Now that you have completed the lab, you should be able to:
 
--   Explain how to set up Actuator for a Spring Boot app
--   Explain uses for health indicators and availability probes
+- Explain how to set up Actuator for a Spring Boot app
+- Explain uses for health indicators and availability probes
 
 ## Extra
 

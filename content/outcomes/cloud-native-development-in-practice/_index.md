@@ -4,7 +4,7 @@ weight: -1
 layout: single
 description: |
     Build a Cloud Native App.
-    Run it on VMware Tanzu Application Service (TAS).
+    Run it on VMware *Tanzu Application Service* (TAS).
     Scale it on TAS.
     Then evolve it to Microservices.
 team:
@@ -28,11 +28,11 @@ complete that first.
 **codebase.**
 
 In this learning path you will build a greenfield Spring Boot
-application and deploy it on TAS.
+application and deploy it on *Tanzu Application Service* (TAS).
 
 Then you will run it and maintain it in production.
 
-You will gain an understanding of how Tanzu Application Service (TAS)
+You will gain an understanding of how *Tanzu Application Service*
 platform works,
 how its container orchestration compares to Kubernetes,
 and will recap some fundamentals of Spring and Spring Boot along the
@@ -42,7 +42,7 @@ You will also apply some of the previous concepts such as
 [Cloud Native Development](../cloud-native-development/),
 [Test Driven Development](../application-development/test-driven-development/)
 and
-[Continuous Integration and Continuous Delivery](../../guides/ci-cd/ci-cd-what-is/).
+[*Continuous Integration* and *Continuous Delivery*](../../guides/ci-cd/ci-cd-what-is/).
 
 ## Who is this learning path for?
 
@@ -56,7 +56,7 @@ After completing the learning path, you will be able to
 
 -   Demonstrate the ability to build greenfield, cloud native
     applications using Java, and Spring Boot
--   Use Tanzu Application Service for web application deployments
+-   Use *Tanzu Application Service* for web application deployments
 -   Discuss the pros and cons of moving a monolith to a
     microservice-based architecture
 -   Describe the steps to move from a monolith to a microservice-based

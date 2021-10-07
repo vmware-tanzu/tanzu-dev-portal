@@ -6,15 +6,16 @@ team:
   - VMware Tanzu Labs
 ---
 
-This lab will walk you through the process of deploying an application to
-[Tanzu Application Service](https://pivotal.io/platform).
-This is known as "pushing an app to TAS".
+This lab will walk you through the process of deploying an application
+to
+[*Tanzu Application Service* (*Tanzu Application Service*)](https://pivotal.io/platform).
+This is known as "pushing an app to *Tanzu Application Service*".
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
-- Use the Tanzu Application Services CLI to push an app
+- Use the *Tanzu Application Service* CLI to push an app
 
 ## Getting started
 
@@ -25,7 +26,7 @@ After completing the lab, you will be able to:
     make sure you start in the `~/workspace/pal-tracker` directory.
 
 1.  Make sure you view the
-    [TAS Push](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
+    [*Tanzu Application Service* Push](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
     slides after completing this lab for more information about how
     the push process works.
 
@@ -34,8 +35,8 @@ see the [Hints](#hints) section at the end.
 
 ## Deploy
 
-In order to deploy a JVM application to Tanzu Application Service you will
-first need to create a standalone executable jar file.
+In order to deploy a JVM application to *Tanzu Application Service* you
+will first need to create a standalone executable jar file.
 This will be a "fat jar" &mdash; a single jar file that contains
 all of its dependent libraries as well as your application code.
 
@@ -87,7 +88,8 @@ Use Gradle to build the jar file for your application using the
     Remember it,
     you will need it later in the lab.
 
-1.  Also notice the application is created on TAS,
+1.  Also notice the application is created on
+    *Tanzu Application Service*,
     but it is in a `down` state with no `instances`
     (processes) running.
 
@@ -108,8 +110,9 @@ Set an environment variable to tell the buildpack to use Java 11.
     cf start pal-tracker
     ```
 
-1.  Tanzu Application Services begins the staging process.
-    Once staging finishes, Tanzu Application Services will start your application.
+1.  *Tanzu Application Service* begins the staging process.
+    Once staging finishes, *Tanzu Application Service* will start your
+    application.
 
     When the command completes,
     look close at the output after the
@@ -139,8 +142,8 @@ Set an environment variable to tell the buildpack to use Java 11.
     You should now see your application is running one `instance`
     (web process),
     and is in an `up` state.
-    You can also see the command that TAS executed to run
-    your `pal-tracker` application,
+    You can also see the command that *Tanzu Application Service*
+    executed to run your `pal-tracker` application,
     and it is not the same one you used to run locally.
 
     You will see more details in the wrap up section.
@@ -158,7 +161,7 @@ variable to start the application.
 You should be able to explain why this is the case after
 completing the next module.
 
-### Verify your app on TAS
+### Verify your app on *Tanzu Application Service*
 
 Check that the application is running by visiting its URL
 in a browser and verifying that you see the correct message.
@@ -166,21 +169,23 @@ in a browser and verifying that you see the correct message.
 The application that you have built up to now is minimal,
 but there is now a solid foundation to build upon.
 
-## Learning Outcomes
+## Learning outcomes
 
 Now that you have completed the lab, you should be able to:
 
-- Use the Tanzu Application Services CLI to push an app
+- Use the *Tanzu Application Service* CLI to push an app
 
 ## Wrap up
 
-* Review the
-  [Push an App](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
-  slides for details of the interactions between the CLI and the TAS foundation
-  components during the push process.
-* Review the
-  [Staging an App](https://docs.google.com/presentation/d/1gWulATqi0WvV7SUEbAK3qVbNW80Y2pplsCD4NGy-fFE/present#slide=id.ge70b517444_0_0)
-  slides for details about the staging process and the role of buildpacks.
+-   Review the
+    [Push an App](https://docs.google.com/presentation/d/1J5pgV7DvHMcdTzg_ndIXtS-NgIXF-nreTDefjHSOlyY/present#slide=id.gb53c81140d_0_61)
+    slides for details of the interactions between the CLI and the
+    *Tanzu Application Service* foundation components during the push
+    process.
+-   Review the
+    [Staging an App](https://docs.google.com/presentation/d/1gWulATqi0WvV7SUEbAK3qVbNW80Y2pplsCD4NGy-fFE/present#slide=id.ge70b517444_0_0)
+    slides for details about the staging process and the role of
+    buildpacks.
 
 ## Hints
 
@@ -196,7 +201,8 @@ cd ~/workspace/pal-tracker
 ls build/libs
 ```
 
-You should see a `pal-tracker.jar` file, and you can run this locally using:
+You should see a `pal-tracker.jar` file,
+and you can run this locally using:
 
 ```bash
 java -jar build/libs/pal-tracker.jar

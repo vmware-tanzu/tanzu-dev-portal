@@ -12,7 +12,7 @@ which provides the ability to do continuous integration/continuous
 delivery (CI/CD) from within your GitHub projects.
 
 In this lab you will create a pipeline to deploy an application to
-Tanzu Application Service.
+*Tanzu Application Service*.
 The lab will lead you through the anatomy of how GitHub Actions solve
 this problem.
 You can apply the same pipeline structure to other CI tools like
@@ -21,7 +21,7 @@ Concourse or Jenkins.
 For the purpose of this lab there are two environments:
 
 - Local environment (i.e. your workstation)
-- Review environment (the `sandbox` space on TAS)
+- Review environment (the `sandbox` space on *Tanzu Application Service*)
 
 This is a small but realistic example of a deployment pipeline.
 In your actual experience there will likely be more environments such as
@@ -30,19 +30,19 @@ a QA, staging, pre-production, etc.
 When code is pushed to GitHub,
 GitHub Actions will build, test and deploy to the review environment
 automatically.
-The application can be observed running on Tanzu Application Service before deciding
-to deploy to production.
+The application can be observed running on *Tanzu Application Service*
+before deciding to deploy to production.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
--   Describe Continuous Integration and Continuous Delivery
+-   Describe *Continuous Integration* and *Continuous Delivery*
     and their importance
 -   Explain configuration for different environments and why it is
     important
 -   Use CLI commands to manage routes for an application
--   Describe the steps of an automated Continuous Integration build
+-   Describe the steps of an automated *Continuous Integration* build
 
 ## Get started
 
@@ -53,7 +53,8 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Configuring a Spring Boot application](../configure-app/).
     You must have your `pal-tracker` application associated with the
-    `configuration-solution` codebase deployed and running on TAS.
+    `configuration-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker`
@@ -87,7 +88,7 @@ further guidance.
 ## Configure environment variables
 
 [Add credentials as **pal-tracker** project GitHub repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
-for the following environment variables based on your TAS credentials:
+for the following environment variables based on your *Tanzu Application Service* credentials:
 
 1.  `CF_API_URL`
 
@@ -101,12 +102,13 @@ for the following environment variables based on your TAS credentials:
 
 ## Understanding routes
 
-All requests to apps that are running on Tanzu Application Service go through a
-router which holds a mapping between the route and an app.
+All requests to apps that are running on *Tanzu Application Service*
+go through a router which holds a mapping between the route and an app.
 When a request comes in, it is routed to one of the app instances in a
 round-robin fashion.
 You have been using `--random-route` and `random-route: true` in the
-class because the route an app is bound to is global to the TAS installation.
+class because the route an app is bound to is global to the
+*Tanzu Application Service* installation.
 In other words, if one user takes the route `pal-tracker` then nobody
 else is able to use that route.
 Anyone asking to take the `pal-tracker` route after that would be
@@ -117,8 +119,8 @@ blue-green deployment strategy.
 
 To get some familiarity with routing, run the following commands:
 
-1.  Map another route to your app with the `cf map-route` command, making
-    sure to view the help for the command first.
+1.  Map another route to your app with the `cf map-route` command,
+    making sure to view the help for the command first.
     Choose a unique hostname by following the
     [Route naming guide](../route-naming/).
 
@@ -133,8 +135,8 @@ To get some familiarity with routing, run the following commands:
 
 1.  You will also explicitly state routes for your app in your manifest
     file.
-    You will differentiate your route from others in the Tanzu Application Service
-    instance by following
+    You will differentiate your route from others in
+    *Tanzu Application Service* by following
     [this guide](../route-naming/).
 
 1.  Set this `route` for the application in your manifest.
@@ -162,12 +164,12 @@ environment and verify that the welcome message is correct.
 
 Now that you have completed the lab, you should be able to:
 
--   Describe Continuous Integration and Continuous Delivery
+-   Describe *Continuous Integration* and *Continuous Delivery*
     and their importance
 -   Explain configuration for different environments and why it is
     important
 -   Use CLI commands to manage routes for an application
--   Describe the steps of an automated Continuous Integration build
+-   Describe the steps of an automated *Continuous Integration* build
 
 ## Extra
 
@@ -193,15 +195,15 @@ and the domain.
 This is explained in [the route naming guide](../route-naming/).
 If you haven't read that already, it is worth doing so now.
 
-To recap, a foundation may support multiple domains, which you can list with
-the `cf domains` command.
+To recap, a foundation may support multiple domains, which you can list
+with the `cf domains` command.
 There will usually be at least one "shared" domain, that is not
 marked as "internal".
 This domain will form part of the route to your app that was
-generated when you pushed it to TAS.
+generated when you pushed it to *Tanzu Application Service*.
 Your app route may be something like this:
 
-```
+```bash
 pal-tracker-dangerous-dingo-ab.apps.tas.example.com
 ```
 
@@ -229,7 +231,8 @@ The most common cause of errors is a misconfiguration of the
 environment variables.
 
 The various environment variables starting with `CF_` should
-reflect the values that you use to login to your TAS foundation.
+reflect the values that you use to login to your
+*Tanzu Application Service* foundation.
 The `CF_API_URL` is the value that you used with the `-a` option
 at login.
 You can find values for `CF_ORG` and `CF_SPACE` by running `cf target`.
@@ -240,7 +243,7 @@ them again, only replace them.
 In particular, be careful to make sure that you have not included any
 extra spaces in the values.
 
-### What happens if your TAS foundation is not accessible from GitHub?
+### What happens if your *Tanzu Application Service* foundation is not accessible from GitHub?
 
 You will have seen that the GitHub actions use the `cf` CLI to login
 to your foundation, in order to deploy your app.
@@ -250,5 +253,5 @@ actions will not be able to complete successfully.
 In this case you will need to remove those steps from the `pipeline.yml`
 file.
 There is, however, still value to running the rest of the build in a
-completely separate environment as it may catch issues with your code that
-do not show up because of your local machine's configuration.
+completely separate environment as it may catch issues with your code
+that do not show up because of your local machine's configuration.

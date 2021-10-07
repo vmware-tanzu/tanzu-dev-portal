@@ -8,12 +8,12 @@ team:
 
 This lab introduces the concepts around logging.
 
-## Learning Outcomes
+## Learning outcomes
 
 After completing the lab, you will be able to:
 
--   Explain how Tanzu Application Service helps with logging of cloud native
-    applications
+-   Explain how *Tanzu Application Service* helps with logging of cloud
+    native applications
 
 ## Get started
 
@@ -24,7 +24,8 @@ After completing the lab, you will be able to:
 1.  You must have completed (or fast-forwarded to) the
     [Health Monitoring lab](../health-monitoring/).
     You must have your `pal-tracker` application associated with the
-    `actuator-solution` codebase deployed and running on TAS.
+    `actuator-solution` codebase deployed and running on
+    *Tanzu Application Service*.
 
 1.  In a terminal window,
     make sure you start in the `~/workspace/pal-tracker` directory.
@@ -37,13 +38,13 @@ It is discussion and demo only.
 Logs are a crucial part of monitoring and observability in a modern
 cloud native application.
 
-Tanzu Application Service (TAS) has rich support for handling logs in the
-following ways:
+*Tanzu Application Service* (TAS) has rich support for handling logs in
+the following ways:
 
 ### Log aggregation
 
-TAS has a rich log aggregation subsystem that supports cloud native
-applications
+*Tanzu Application Service* has a rich log aggregation subsystem that
+supports cloud native applications
 [writing to log streams](https://12factor.net/logs).
 
 1.  The Diego subsystem takes care of capturing your application
@@ -58,13 +59,15 @@ applications
     - Go Router access logs
     - Cloud controller events
 
-1.  Loggregator is also used to stream TAS system metrics.
+1.  Loggregator is also used to stream *Tanzu Application Service*
+    system metrics.
     You can read more about the
     [architecture](https://docs.pivotal.io/application-service/2-7/loggregator/architecture.html#system-metrics-agents).
 
 ### Agnostic to downstream monitoring collection tools
 
-TAS does not perform the roles of log collection or analytics tools.
+*Tanzu Application Service* does not perform the roles of log collection
+or analytics tools.
 It supports the ability to configure "drains" to output to a log
 collection or analytics tool of your choice,
 such as
@@ -73,19 +76,19 @@ or
 [Fluentd](https://docs.cloudfoundry.org/devguide/services/fluentd.html#drain).
 
 You can read more about the
-[Tanzu Application Service Loggregator Architecture](https://docs.cloudfoundry.org/loggregator/architecture.html).
+[*Tanzu Application Service* Loggregator Architecture](https://docs.cloudfoundry.org/loggregator/architecture.html).
 
 ## Wrap up
 
 Review the
 [Logs slides](https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/present#slide=id.gae083b4822_0_18)
-about how logging is handled on TAS.
+about how logging is handled on *Tanzu Application Service*.
 
 Now that you have completed the lab, you should be able to:
 
--   Explain how Tanzu Application Services help with logging of cloud native
-    applications
+-   Explain how *Tanzu Application Service* help with logging of cloud
+    native applications
 
 ## Resources
 
-- [Tanzu Application Service Logging and Metrics](https://docs.cloudfoundry.org/loggregator/data-sources.html)
+- [*Tanzu Application Service* Logging and Metrics](https://docs.cloudfoundry.org/loggregator/data-sources.html)
