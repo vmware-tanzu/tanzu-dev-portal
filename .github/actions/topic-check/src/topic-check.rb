@@ -36,7 +36,7 @@ contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
 #contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
 
-testsFailed = false
+testsFailed = true
 
 # Check the topics and subtopics
 contentFiles.each do |f|
@@ -44,15 +44,16 @@ contentFiles.each do |f|
     contentMetadata = YAML.load(fData)
     
     if contentMetadata.has_key? TOPIC_KEY
-        if not contentMetadata.has_key? SUBTOPIC_KEY
-            testsFailed = true
+        if not contentMetadata.has_key? TOPIC_KEY
+            puts "#{f} -- Does not define #{TOPIC_KEY}"
+        elsif contentMetadata.has_key? TOPIC_KEY and not contentMetadata.has_key? SUBTOPIC_KEY
             puts "#{f} -- Contains #{TOPIC_KEY} frontmatter but does not defined #{SUBTOPIC_KEY}"
         elsif not topics.has_key? contentMetadata[TOPIC_KEY]
-            testsFailed = true
             puts "#{f} -- Undefined #{TOPIC_KEY}: #{contentMetadata[TOPIC_KEY]}"
         elsif topics.has_key? contentMetadata[TOPIC_KEY] and not topics[contentMetadata[TOPIC_KEY]].include? contentMetadata[SUBTOPIC_KEY]
-            testsFailed = true
             puts "#{f} -- Unedfined #{SUBTOPIC_KEY}: #{contentMetadata[SUBTOPIC_KEY]}"
+        else
+            testsFailed = false
         end
     end
 end
