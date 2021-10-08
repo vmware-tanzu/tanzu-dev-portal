@@ -14,8 +14,11 @@ tags:
 title: VMware Tanzu Community Edition KubeCon NA 2021 Workshop
 level1: Building Kubernetes Platform
 team:
-- Leigh Capili
 - Boskey Savla
+- Bryan Friedman
+- Jesse Martinez
+- Lauren Dupuis
+- Leigh Capili
 weight: 1
 badge: Tanzu Community Edition
 ---
@@ -33,6 +36,6 @@ What you will do in the lab:
 - Get familiar with the `tanzu` CLI
 - List packages
 - Deploy an app with `kapp`
-- Scale the app
 - Monitor the app
+- Scale the app
 - Order swag
