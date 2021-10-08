@@ -25,12 +25,14 @@ Towards the end of the workshop, you’ll get a code that lets you order some so
 
 ![Tanzu Community Edition Socks or Beanie](/images/workshops/swag-tce-glowy.png)
 
-Tanzu Community Edition enables the creation of modern application platforms. These platforms can be created on local laptops or various cloud and infrastructure options. A platform deployed using Tanzu Community Edition provides a Kubernetes runtime, tooling, and additional repository of packages that can be installed/updated very easily.
+VMware Tanzu Community Edition is a full-featured, easy to manage Kubernetes platform for learners and users. It is a freely available, community supported, open source distribution of VMware Tanzu that can be installed and configured in minutes on your local workstation or your favorite cloud.
 
-Tanzu Community Edition is freely available, community supported, and built on open source software components.
+It includes a package repository for installing and updating components of your platform.
 
 What you will do in the lab:
-- Get familiar with Tanzu CLI
-- Deploy modern apps
-- Scale applications
-- Monitor applications
+- Get familiar with the `tanzu` CLI
+- List packages
+- Deploy an app with `kapp`
+- Scale the app
+- Monitor the app
+- Order swag
