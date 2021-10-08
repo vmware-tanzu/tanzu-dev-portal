@@ -71,7 +71,7 @@ miro_template_url: "URL for related Miro template"
 7. When you feel that the service design has improved, **validate assumptions** of the new model using usability tests or solution-assumption tests.
 
    {{% callout %}}
-   TIP: Work zoomed out when iterating services at a high level, and zoom in when figuring out the details.
+   TIP: Work with simpler concepts when iterating services at a high level, then at a more granular level when figuring out the details.
    {{% /callout %}}
 
 ## Success/Expected Outcomes
