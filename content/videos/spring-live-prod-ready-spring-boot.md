@@ -8,11 +8,7 @@ lastmod: '2020-05-06'
 patterns:
 - API
 tags:
-- Spring Boot
-- Microservices
-title: 'Spring Live: Production-Ready Spring Boot Applications'
-topics:
 - Spring
-- Microservices
+title: 'Spring Live: Production-Ready Spring Boot Applications'
 youtube_id: SSu7V-S5yec
 ---

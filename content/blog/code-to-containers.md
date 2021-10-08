@@ -8,11 +8,10 @@ patterns:
 tags:
 - Buildpacks
 - Concourse
+- Containers
 team:
 - Tyler Britten
 title: From Commit to Container
-topics:
-- Containers
 ---
 
 While running software in containers is very popular, it can be a little confusing to figure out the best way to get your code into a container. Now that the industry is mostly unified on Open Container Initiative (OCI) Standard container image formats, they can be built in any number of ways. 

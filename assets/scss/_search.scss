@@ -9,6 +9,7 @@
     text-transform: none;
     position: relative;
     cursor: pointer;
+    z-index: 100;
 }
   
 .search .search-icon:focus {
@@ -31,6 +32,7 @@
 #search-nav svg {
     height: 25px;
     width: 25px;
+    cursor: pointer;
 }
   
 .search-icon .b,
@@ -70,7 +72,7 @@
     position: absolute;
     top: 79px;
     width: 100%;
-    padding: 18px 0 0 18px;
+    padding: 18px 0 18px 18px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -87,7 +89,7 @@
 }
 
 // Mobile search
-@media (max-width: 1000px) {
+@media (max-width: 991px) {
     #search-nav {
       display: none !important;
     }

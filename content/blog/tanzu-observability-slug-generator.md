@@ -15,8 +15,6 @@ tags:
 team:
 - Dan Florea
 title: Introducing the Tanzu Observability Slug Generator
-topics:
-- Microservices
 ---
 
 A great feature of [Tanzu Observability](https://tanzu.vmware.com/observability) is that all context about the chart or dashboard that you are looking at is encoded in the URL, which makes it easy for you to share those links with your colleagues and to deep link into our product from other places such as wiki pages. A consequence of this is that the URL slug is rather involved. This is not a problem when the UI generates the URL, but it becomes very tedious when customers try to create the URL on their own in order to automate and embed Tanzu Observability charts and dashboards outside of the product itself.

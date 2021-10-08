@@ -6,13 +6,10 @@ lastmod: '2020-10-08'
 patterns:
 - Observability
 tags:
-- Terraform
 - Wavefront
 - Observability
 team:
 - Scott Rogers
 title: Tanzu Observability by Wavefront Terraform Integration
-topics:
-- Kubernetes
 youtube_id: AE6JhQwmboY
 ---

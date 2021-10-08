@@ -1,0 +1,17 @@
+{{ $title := .Get "title" }}
+{{ $length := .Get "length" }}
+{{ $level := .Get "level" }}
+<div class="learning-path-card col-lg-4 mb-2 mb-lg-0 ">
+  <a href="#">
+    <p><div class="py-3 px-4 mb-0 text-left h3 text-white">{{ $title }}</div></p>
+    <div class="learning-path-description py-3 px-4 mb-4 text-left text-white" >
+      {{ .Inner | markdownify }}
+    </div>
+    <div class="learning-path-duration">
+      {{ $length }}m
+    </div>
+    <div class="learning-path-level">
+      {{ $level }}
+    </div>
+  </a>
+</div>

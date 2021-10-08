@@ -11,7 +11,5 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Managing Global Packages'
-topics:
-- Python
 youtube_id: CKtaKhKOo-Y
 ---

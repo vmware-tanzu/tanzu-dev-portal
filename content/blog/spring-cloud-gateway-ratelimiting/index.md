@@ -12,8 +12,6 @@ tags:
 team:
 - Haytham Mohamed
 title: API Rate Limiting with Spring Cloud Gateway
-topics:
-- Spring
 ---
 
 One of the imperative architectural concerns for software architects is to protect APIs and service endpoints from harmful events such as denial-of-service attacks, cascading failures, or overuse of resources. Rate limiting is a technique used to control the rate by which an API or a service is consumed, which in turn can protect you from these events that can bring your services to a screeching halt. In a distributed system, no better option exists than to centralize configuring and managing the rate at which consumers can interact with APIs. Only those requests within a defined rate would make it to the API. Any more would return an HTTP 429 (“Too Many Requests”) error.

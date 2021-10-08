@@ -11,8 +11,6 @@ tags:
 team:
 - Thomas Kraus
 title: Data Science with Python & JupyterHub on Kubernetes - Part 2
-topics:
-- Python
 ---
 
 In a [previous post](/blog/data-science-with-python-jupyterhub-on-kubernetes-part-1), we discussed the advantages of running JupyterHub on Kubernetes. We also showed you how to install a local Kubernetes cluster using kind on your Mac, as well as how to install the JupyterHub Helm chart on a Kubernetes cluster. 

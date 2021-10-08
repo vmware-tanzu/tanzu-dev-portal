@@ -1,6 +1,6 @@
 ---
 date: 2020-09-17
-description: Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New
+description: Highlights of the SpringOne 2020 Self-Paced Workshops - and Their New
   Home
 lastmod: '2021-02-08'
 tags:
@@ -10,12 +10,10 @@ tags:
 - API
 - Spring Cloud Gateway
 - Kubernetes
+- Spring
 team:
 - Ivan Tarin
-title: Highlights of the SpringOne 2020 Self-Paced Workshops---and Their New Home
-topics:
-- Spring
-- Kubernetes
+title: Highlights of the SpringOne 2020 Self-Paced Workshops - and Their New Home
 ---
 
 SpringOne 2020 just wrapped, and the self-paced workshops were a complete success! Moreover, all of your requests to continue providing these workshops beyond the conference have been heard. Their future home will be the [Tanzu Developer Center](https://tanzu.vmware.com/developer/). _UPDATE: These workshops are available to [try out now](/workshops)!_

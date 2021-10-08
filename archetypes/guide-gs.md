@@ -1,17 +1,15 @@
 ---
-title:  "Getting Started with {{ replace (replace .Name "-" " " | title) " Gs" "" -}}"
-linkTitle: "Getting Started with {{ replace (replace .Name "-" " " | title) " Gs" "" -}}"
-parent: {{ replace (replace .Name "-" " " | title) " Gs" "" -}}
-weight: 2
-topics:
-- 
+title: "Getting Started with {{ replace (replace .Name "-" " " | title) " Gs" "" -}}"
+description: 
+date: "{{ now.Format "2006-01-02" }}"
+lastmod: "{{ now.Format "2006-01-02" }}"
+level1:
+level2:
 tags:
-- {{ replace (replace .Name "-" " " | title) " Gs" "" }}
+- 
 # Author(s)
 team:
 -
-date: "{{ now.Format "2006-01-02" }}"
-lastmod: "{{ now.Format "2006-01-02" }}"
 ---
 
 ### What Is {{ replace (replace .Name "-" " " | title) " Gs" "" }}?
