@@ -1,7 +1,7 @@
 ---
 title: Cloud Native Development in Practice
 weight: -1
-layout: single
+layout: intro
 description: |
     Build a Cloud Native App.
     Run it on VMware *Tanzu Application Service* (TAS).
@@ -9,6 +9,11 @@ description: |
     Then evolve it to Microservices.
 team:
   - VMware Tanzu Labs
+duration: 1800
+experience: Intermediate
+tags:
+- All Roles
+- Applications
 ---
 
 ## Why is this learning path important?
