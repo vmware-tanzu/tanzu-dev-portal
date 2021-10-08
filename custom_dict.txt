@@ -7,7 +7,7 @@
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
-[0-9]*(GB|MB|KB|Mi|m|m?s|k)
+[0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
@@ -53,6 +53,7 @@ Agile-ific
 Aino
 [Aa]ir-[Gg]apped
 airgap(ped)?
+Akka
 AKS
 Alertmanager
 Aletty
@@ -76,7 +77,7 @@ Ansari
 Ansible
 anthonyjvetter
 antifragility
-antipatterns?
+[Aa]ntipatterns?
 Antrea
 Apdex
 api
@@ -85,6 +86,7 @@ ApiResponse
 APIs?
 APM
 AppArmor
+AppDynamics
 appender
 application-centric
 ApplicationEvent
@@ -129,8 +131,10 @@ Authorizer
 authorizer
 authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
+[Aa]uto-reconfiguration
 AutoBuild
 autocompletion
+[Aa]utoconfiguration
 AutoDeploy
 autosave
 [Aa]utoscal(e|ers|er|ing)?
@@ -342,7 +346,8 @@ Cosgrove
 Coté('s)?
 counterintuitive
 COVID-19
-CPUs
+cpu(s)?
+CPU(s)?
 CQL
 CRD(s|-based)?
 create-load-balancer
@@ -382,6 +387,7 @@ CVE(s|-reported)?
 cybersecurity
 Cygwin
 D2iQ
+d3
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
@@ -454,6 +460,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+[Dd]isposability
 distributable
 distributedCommand
 DistributedCommand
@@ -469,6 +476,7 @@ DistributedSystemMXBean's
 DistributedSystems
 DistributionMessageObserver
 DistributionStats
+DistributionSummary
 distroless
 distros
 django-prometheus
@@ -492,10 +500,12 @@ dotnetsdk
 Dre
 drf
 dropdown
+Dropwizard
 Drotbohm
 DSL(s)?
 Dubois
 durations
+Dynatrace
 DZone
 e280e387f128e70537e37093d26f6422
 e2e
@@ -536,7 +546,7 @@ EntryEventImpl's
 enum
 EnumInfo
 Enums
-env
+[Ee]nv
 EOF
 ESB
 etcd(ctl)?
@@ -561,6 +571,7 @@ F5
 facto
 failback
 [Ff]ailover(s)?
+Fakhouri
 Falco
 Fani
 faq(s)?
@@ -703,6 +714,7 @@ GoDaddy
 Google('s)?
 goReflect
 Görkem
+Gorouter
 gotchas
 Gothelf
 GraalVM(-powered|.)?
@@ -801,6 +813,7 @@ InfoQ
 InfoSec
 IngressRoute
 init(Container)?
+InitialCapacity
 initializer
 initializeTotalDetails
 initializeTotalPrimaryDetails
@@ -935,6 +948,7 @@ Kat
 [Kk]ata(s)?
 KEK(s)?
 kendrickcoleman
+Kerievsky
 [Kk]ey[Ss]tore
 keychain
 keySet
@@ -1036,6 +1050,7 @@ logback
 Logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
+Loggregator
 LogPartitionedRegionBucketDetailsFunction
 logQueue
 [lL]ogrus
@@ -1098,6 +1113,7 @@ microservices-oriented
 Microsystems
 [Mm]iddleware
 Migros
+Mik
 Mikusa
 Minella
 Mini-Wheats
@@ -1216,11 +1232,13 @@ OneMagnify
 onRegion
 onServer
 onServers
+Onsi
 OOM
 oom_killer
 OOP
 OOTB
 OPA
+Opdyke
 OpenAPI(Tools)?
 OpenFeign
 OpenID
@@ -1337,10 +1355,12 @@ Poppendieck
 Postfacto
 [Pp]ostgres
 POSTROUTING
+PowerShell
 PR(s)?
 Pratik('s)?
 [pP]re-[pP]lanning
 pre-auth
+pre-author(ed)
 pre-built
 pre-configured
 pre-created
@@ -1356,6 +1376,7 @@ pre-release
 [pP]re-stop
 Pre-sync
 pre-work
+pre-written
 pre(-)?
 prebuilt
 precompiled
@@ -1430,6 +1451,7 @@ Recommender
 [Rr]eddit
 [rR]edis
 RedMonk('s)?
+Reenvisioning
 Reetro
 refactorings?
 RegExMethodAuthorizer
@@ -1445,6 +1467,7 @@ RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
 reimagine
+[Rr]eimplement(ing)?
 Reinertsen
 reissuance
 [Rr]emediation(s)?
@@ -1469,7 +1492,7 @@ requestor
 Resilience4J
 ResourcePermission
 ResourceQuota(s)?
-restaging
+[Rr]estag(e|ed|ing)
 RestAssured
 Restic
 RestrictedMethodAuthorizer
@@ -1621,6 +1644,7 @@ Springdom
 SpringOne(2020)?
 SpringSecurityManager
 SpringSecurityManagerDistributedTest
+SQL
 sqlite
 SqlServer
 SqlServer|sqlserver
@@ -1656,10 +1680,12 @@ Styra
 sub(p|P)ath
 subclasses
 subcommand
-subdirectory
+subdirector(y|ies)
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
+subpath
+[Ss]ubproject(s)?
 Subramaniam
 subregistry
 substring
@@ -1714,6 +1740,7 @@ Tikka
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
+[Tt]imesheet(s)?
 TimingGatewayEventFilter
 Timo
 TKG
@@ -1835,6 +1862,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vlissides
 VMCachedDeserializable
 VMs?
 VMSS
