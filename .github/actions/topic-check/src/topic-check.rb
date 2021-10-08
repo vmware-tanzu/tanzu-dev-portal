@@ -28,12 +28,14 @@ end
 
 # Gather the list of files to parse
 contentPath = File.join(options[:source], "/content/")
-contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) 
+contentFiles = []
+
+# contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) 
 contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md")) 
-contentFiles += Dir.glob(File.join(contentPath, "/learningpaths/**/*.md"))
-contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
-contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
-contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
+# contentFiles += Dir.glob(File.join(contentPath, "/learningpaths/**/*.md"))
+# contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
+# contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
+# contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
 #contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
 
 testsFailed = true
@@ -44,9 +46,7 @@ contentFiles.each do |f|
     contentMetadata = YAML.load(fData)
     
     if contentMetadata.has_key? TOPIC_KEY
-        if not contentMetadata.has_key? TOPIC_KEY
-            puts "#{f} -- Does not define #{TOPIC_KEY}"
-        elsif contentMetadata.has_key? TOPIC_KEY and not contentMetadata.has_key? SUBTOPIC_KEY
+        if not contentMetadata.has_key? SUBTOPIC_KEY
             puts "#{f} -- Contains #{TOPIC_KEY} frontmatter but does not defined #{SUBTOPIC_KEY}"
         elsif not topics.has_key? contentMetadata[TOPIC_KEY]
             puts "#{f} -- Undefined #{TOPIC_KEY}: #{contentMetadata[TOPIC_KEY]}"
@@ -55,6 +55,8 @@ contentFiles.each do |f|
         else
             testsFailed = false
         end
+    else
+        puts "#{f} -- Does not contain #{TOPIC_KEY} frontmatter"
     end
 end
 
