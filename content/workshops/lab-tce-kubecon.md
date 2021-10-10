@@ -2,6 +2,7 @@
 date: '2021-10-06'
 description: Learn how Tanzu Community Edition helps you install packages and deploy apps—and score some sweet swag in the process.
 lab: tce-kubecon
+hidden: true
 lastmod: '2021-10-06'
 length: 20
 preview: "/images/workshops/tce-dev-preview.png"
