@@ -36,7 +36,10 @@ contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md"))
 # contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
 # contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
 # contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
-#contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
+# contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
+
+# Remove the guides landing page, which does not require topic metadata
+contentFiles.delete("./content/guides/_index.md")
 
 testsFailed = true
 
