@@ -22,7 +22,12 @@ jobs:
         name: Checkout
         with:
           fetch-depth: 1
-          submodules: recursive
+      - uses: actions/checkout@v2
+        name: Checkout Docsy
+        with:
+          fetch-depth: 1
+          repository: 'https://github.com/google/docsy.git'
+          path: 'themes'
       - uses: ./.github/actions/link-check
         name: Link Check
         env:

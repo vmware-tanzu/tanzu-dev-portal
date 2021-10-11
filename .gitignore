@@ -11,6 +11,9 @@
 .vscode/
 .idea
 
+# backup files
+*~
+
 # Generated audit scripts
 /audit
 
@@ -19,3 +22,6 @@
 
 # Local Netlify folder
 .netlify
+
+# We clone docsy into themes/ as part of the build process
+themes/docsy

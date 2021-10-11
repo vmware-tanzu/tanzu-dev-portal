@@ -9,10 +9,20 @@ help:
 	@grep -E '[a-zA-Z\.\-]+:.*?@ .*$$' $(MAKEFILE_LIST)| tr -d '#' | awk 'BEGIN {FS = ":.*?@ "}; {printf "\t\033[32m%-30s\033[0m %s\n", $$1, $$2}'
 	@echo
 
-#theme: @ runs git module to update the theme
+#theme: @ clones remote repo, and its submodules, locally
 theme:
-	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
-	git submodule update --init --recursive
+	@if [[ -d "themes/docsy" && ( "$$(cd themes/docsy && git branch)" == *"HEAD detached"* || ! "$$(ls -A themes/docsy)" ) ]]; then \
+	    echo "Detected a previously-clones submodule: themes/docsy.  Removing it." && \
+	    echo "" ; \
+	    echo "**********************************************************************************" ; \
+	    echo "**  Please follow the steps in 'Removing Old Submodules' in the README.md file  **" ; \
+	    echo "**********************************************************************************" ; \
+	    echo "" ; \
+	   rm -rf themes/docsy ; \
+	fi
+	if [[ ! -d "themes/docsy" ]]; then \
+	    git clone https://github.com/google/docsy.git themes/docsy --depth 1 --recurse-submodules --shallow-submodules ; \
+	fi
 
 #npm: @ runs npm ci to install dependencies from package-lock.json
 npm: theme

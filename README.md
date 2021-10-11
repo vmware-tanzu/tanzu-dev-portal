@@ -67,7 +67,7 @@ To get a local copy of the Tanzu Developer Center up and running follow these st
 1. Clone the repository.
 
      ```sh
-     git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal.git
+     git clone https://github.com/vmware-tanzu/tanzu-dev-portal.git
      ```
 
 2. Build a preview of the website. The website will be available at [`http://localhost:1313/developer`](http://localhost:1313/developer).
@@ -75,28 +75,24 @@ To get a local copy of the Tanzu Developer Center up and running follow these st
      ```sh
      make preview
      ```
+### Removing Old Submodules
+
+A previous version of this repository used [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for the dependency on the Docsy Hugo theme.
+If you cloned the repo prior to this change, then you should modify the `.git` directory in your local copy of this repository:
+1. Remove the `modules` directory:
+    ```
+    rm -rf .git/modules
+    ```
+2. Edit the `.git/config` file and remove the `submodule` section (which should consist of the following 3 lines):
+    ```
+    [submodule "themes/docsy"]
+        active = true
+        url = https://github.com/google/docsy.git
+    ```
+
+If the above content does not exist, then no action is needed.
 
 ## Troubleshooting
-
-### Q. I'm receiving an error about cloning `themes/docsy`
-
-With the change with how the theme files are overridden, the first time you update your branch you may see the following issue when running `make preview`:
-
-```
-git submodule update --init --recursive
-Submodule 'themes/docsy' (https://github.com/google/docsy.git) registered for path 'themes/docsy'
-fatal: not a git repository: /private/tmp/tanzu-dev-portal/themes/docsy/../../.git/modules/themes/docsy
-Failed to clone 'themes/docsy'. Retry scheduled
-BUG: submodule considered for cloning, doesn't need cloning any more?
-fatal: could not get a repository handle for submodule 'themes/docsy'
-make: *** [theme] Error 1
-```
-
-You can run the following command for a one-time fix:
-
-```
-rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy
-```
 
 ### Q. `make preview` is throwing a `fatal error: pipe failed` error
 
