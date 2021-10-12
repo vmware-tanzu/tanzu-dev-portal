@@ -9,7 +9,7 @@
                     <div class="col-lg-3 col-md-12">
                         {{ with .Resources.GetMatch "cover" }}<img src={{ print .RelPermalink }}{{ else }}<img src={{(print "/images/practices/default-cover.png") | relURL }}{{ end }}
                         className="method-template__img-container"
-                        alt="cover"
+                        alt='{{ .Title }}'
                         />
                     </div>
                     <div class="col-12 col-lg-9 pt-5 pl-lg-5 mb-3 px-0">

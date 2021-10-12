@@ -54,7 +54,7 @@
 		</div>
 	</div>
 	{{ with $preview := .Params.preview}}
-		<img class='align-self-start workshop-preview px-0 mt-2' src={{ $preview| relURL }}>
+		<img alt="{{ .Title }}" class='align-self-start workshop-preview px-0 mt-2' src={{ $preview| relURL }}>
 	{{end}}
 </div>
 <div class='container'>
