@@ -1,0 +1,15 @@
+name: Validates topic and subtopic metadata for all content
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "**content**"
+jobs:
+  check-topics:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout
+    - uses: ./.github/actions/topic-check
+      name: Check Topics
