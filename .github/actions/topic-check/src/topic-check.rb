@@ -48,7 +48,7 @@ contentFiles.each do |f|
     fData = File.open(f).read
     contentMetadata = YAML.load(fData)
     
-    if contentMetadata.has_key? TOPIC_KEY
+    if contentMetadata.has_key? TOPIC_KEY and not contentMetadata[TOPIC_KEY].empty?
         if not contentMetadata.has_key? SUBTOPIC_KEY
             puts "#{f} -- Contains #{TOPIC_KEY} frontmatter but does not defined #{SUBTOPIC_KEY}"
             testsFailed = true
