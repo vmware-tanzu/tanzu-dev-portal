@@ -22,7 +22,7 @@ Application Development:
     - Metrics, Tracing, and Monitoring
     - Preparing and Deploying Kubernetes Workloads
 Kubernetes Platform:
-  Building a Kubernetes Runtime:
+  Building Kubernetes Runtime:
     - Application Platform on Kubernetes
     - Building Your Kubernetes Platform
   Managing and Operating Kubernetes:
