@@ -41,7 +41,7 @@ contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md"))
 # Remove the guides landing page, which does not require topic metadata
 contentFiles.delete("./content/guides/_index.md")
 
-testsFailed = true
+testsFailed = false
 
 # Check the topics and subtopics
 contentFiles.each do |f|
@@ -51,18 +51,21 @@ contentFiles.each do |f|
     if contentMetadata.has_key? TOPIC_KEY
         if not contentMetadata.has_key? SUBTOPIC_KEY
             puts "#{f} -- Contains #{TOPIC_KEY} frontmatter but does not defined #{SUBTOPIC_KEY}"
+            testsFailed = true
         elsif not topics.has_key? contentMetadata[TOPIC_KEY]
             puts "#{f} -- Undefined #{TOPIC_KEY}: #{contentMetadata[TOPIC_KEY]}"
+            testsFailed = true
         elsif topics.has_key? contentMetadata[TOPIC_KEY] and not topics[contentMetadata[TOPIC_KEY]].include? contentMetadata[SUBTOPIC_KEY]
             puts "#{f} -- Unedfined #{SUBTOPIC_KEY}: #{contentMetadata[SUBTOPIC_KEY]}"
-        else
-            testsFailed = false
+            testsFailed = true
         end
     else
         puts "#{f} -- Does not contain #{TOPIC_KEY} frontmatter"
+        testsFailed = true
     end
 end
 
+puts testsFailed
 if testsFailed
     exit(1)
 else
