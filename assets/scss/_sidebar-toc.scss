@@ -30,7 +30,7 @@
     a {
       color: $light;
 
-      &:hover {
+      &:hover, &:focus {
         color: $blue;
         text-decoration: none;
       }
@@ -82,7 +82,7 @@
     a {
       color: $light;
 
-      &:hover {
+      &:hover, &:focus {
         color: $blue;
         text-decoration: none;
       }

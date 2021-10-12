@@ -28,8 +28,8 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
-.td-home .darken .dropdown-item:hover,
-nav .dropdown-item:hover,
+.td-home .darken .dropdown-item:hover, .td-home .darken .dropdown-item:focus,
+nav .dropdown-item:hover, nav .dropdown-item:focus,
 #hero:not(.workshops-hero),
 .topic-card,
 .col-4-thumbnail,

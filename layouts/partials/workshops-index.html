@@ -4,7 +4,7 @@
     <a href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-315 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
       <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
         <div class='thumbnail-gradient position-absolute'></div>
-        <img src={{ .Params.logo | relURL }}>
+        <img alt="" src={{ .Params.logo | relURL }}>
       </div>
       <div class="description flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
         <div>

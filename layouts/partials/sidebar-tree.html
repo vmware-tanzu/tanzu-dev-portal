@@ -35,7 +35,7 @@
   {{ $l2page := index (where (where $p.Site.Pages "Section" "guides") ".Title" $p.Params.level2) 0 }}
   {{ $sid := $s.RelPermalink | anchorize }}
     <li class="td-sidebar-nav__section-title text-wrap" id="{{ $sid }}">
-      <a href="{{ $l2page.RelPermalink }}" class="position-relative align-left flex-nowrap row d-flex align-items-start pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img class="position-absolute guide-icon" src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' /><div>{{ $l2page.Title | markdownify }}</div></a>
+      <a href="{{ $l2page.RelPermalink }}" class="position-relative align-left flex-nowrap row d-flex align-items-start pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img alt="" class="position-absolute guide-icon" src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' /><div>{{ $l2page.Title | markdownify }}</div></a>
     </li>
 {{ else }} <!-- Subsection -->
   {{ $active := eq $p $c }}

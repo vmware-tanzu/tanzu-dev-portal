@@ -18,11 +18,11 @@
             </div>
             <div class="learning-path-level">
                 {{ if eq .Params.experience "Beginner" }}
-                    <h5><span class="badge badge-success mr-3 py-1 px-2 antialiased">Beginner</span></h5>
+                    <p class="h5"><span class="badge badge-success mr-3 py-1 px-2 antialiased">Beginner</span></p>
                 {{ else if eq .Params.experience "Intermediate" }}
-                    <h5><span class="badge badge-warning mr-3 py-1 px-2 antialiased">Intermediate</span></h5>
+                    <p class="h5"><span class="badge badge-warning mr-3 py-1 px-2 antialiased">Intermediate</span></p>
                 {{ else if eq .Params.experience "Advanced" }}
-                    <h5><span class="badge badge-danger mr-3 py-1 px-2 antialiased">Advanced</span></h5>
+                    <p class="h5"><span class="badge badge-danger mr-3 py-1 px-2 antialiased">Advanced</span></p>
                 {{ end }}
             </div>
         </div>
