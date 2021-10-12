@@ -2,7 +2,7 @@
 <div class="container"></div>
 <nav id="navbar" class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
 	<div class="container justify-space-between">
-		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}" tabindex="1">
 			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 		</a>
 		<div id="menu-toggle" class="d-block d-lg-none">
@@ -35,7 +35,7 @@
 				</li>
 				
 				<li class="search remove-menu search_icon">
-					<div class="search-icon d-flex align-items-center relative z-1" tabindex="0">
+					<div class="search-icon d-flex align-items-center relative z-1" tabindex="2">
 						<svg id="search-svg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="6.08696" cy="6.08696" r="5.33696" stroke="white" stroke-width="1.5"/>
 							<path d="M9.13049 10.3478L14.0001 15.2173" stroke="white" stroke-width="1.5"/>
@@ -53,7 +53,7 @@
 			</ul>
 
 			<div id="dropdown-menus" class="position-absolute">
-				<div id='scope' class='position-absolute'></div>
+				<div id='scope'></div>
 				<ul class="mb-0 p-0 position-relative w-100">
 					{{ range .Site.Menus.main }}
 						{{ if .HasChildren }}
@@ -127,47 +127,47 @@
 			<li class="mobile-nav-title font-weight-bold mb-3">Learn</li>
 			<li class="h5 fs-75">By Category</li>
 			<li class="font-weight-bold">Modern Applications</li>
-			<li><a class="pl-2" href="/developer/topics/modern-app-basics/">Modern App Basics</a></li>
-			<li><a class="pl-2" href="/developer/topics/modernizing-legacy-applications/">Modernizing Legacy Applications</a></li>
-			<li><a class="pl-2" href="/developer/topics/agile-transformation-and-practices/">Agile Transformation & Practices</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/modern-app-basics/">Modern App Basics</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/modernizing-legacy-applications/">Modernizing Legacy Applications</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/agile-transformation-and-practices/">Agile Transformation & Practices</a></li>
 			<br>
 			<li class="font-weight-bold">Application Development</li>
-			<li><a class="pl-2" href="/developer/topics/building-modern-applications/">Building Modern Applications</a></li>
-			<li><a class="pl-2" href="/developer/topics/deploying-modern-applications/">Deploying Modern Applications</a></li>
-			<li><a class="pl-2" href="/developer/topics/managing-and-operating-applications/">Managing & Operating Applications</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/building-modern-applications/">Building Modern Applications</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/deploying-modern-applications/">Deploying Modern Applications</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/managing-and-operating-applications/">Managing & Operating Applications</a></li>
 			<br>
 			<li class="font-weight-bold">Kubernetes Platform</li>
-			<li><a class="pl-2" href="/developer/topics/building-kubernetes-runtime/">Building Kubernetes Runtime</a></li>
-			<li><a class="pl-2" href="/developer/topics/managing-and-operating-kubernetes/">Managing & Operating Kubernetes</a></li>
-			<li><a class="pl-2" href="/developer/topics/securing-kubernetes/">Securing Kubernetes</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/building-kubernetes-runtime/">Building Kubernetes Runtime</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/managing-and-operating-kubernetes/">Managing & Operating Kubernetes</a></li>
+			<li><a tabindex=-1 class="pl-2" href="/developer/topics/securing-kubernetes/">Securing Kubernetes</a></li>
 			<br>
 			<li class="h5 fs-75">By Type</li>
-			<li><a href="/developer/guides/">Guides</a></li>
-			<li><a href="/developer/learningpaths/">Learning Paths</a></li>
-			<li><a href="/developer/workshops/">Workshops</a></li>
-			<li><a href="/developer/samples/">Samples</a></li>
-			<li><a href="/developer/videos/">Videos</a></li>
-			<li><a href="/developer/blog/">Blog</a></li>
-			<li><a href="/developer/practices/">Tanzu Practices</a></li>
-			<li><a href="/developer/data/">Data</a></li>
+			<li><a tabindex=-1 href="/developer/guides/">Guides</a></li>
+			<li><a tabindex=-1 href="/developer/learningpaths/">Learning Paths</a></li>
+			<li><a tabindex=-1 href="/developer/workshops/">Workshops</a></li>
+			<li><a tabindex=-1 href="/developer/samples/">Samples</a></li>
+			<li><a tabindex=-1 href="/developer/videos/">Videos</a></li>
+			<li><a tabindex=-1 href="/developer/blog/">Blog</a></li>
+			<li><a tabindex=-1 href="/developer/practices/">Tanzu Practices</a></li>
+			<li><a tabindex=-1 href="/developer/data/">Data</a></li>
 			<br>
 			<li class="mobile-nav-title font-weight-bold">Tanzu.TV</li>
-			<li><a href="/developer/tv/">All Shows</a></li>
-			<li><a href="/developer/tv/tanzu-tuesdays/">Tanzu Tuesday</a></li>
-			<li><a href="/developer/tv/code/">Code</a></li>
-			<li><a href="/developer/tv/tgik/">TGIK</a></li>
-			<li><a href="/developer/tv/bcak/">Between Chair & Keyboard</a></li>
-			<li><a href="/developer/tv/cloud-stream/">Cloud Stream by VMware</a></li>
-			<li><a href="/developer/tv/talk/">Tanzu Talk</a></li>
-			<li><a href="/developer/tv/springone-tour/">SpringOne Tour</a></li>
-			<li><a href="/developer/tv/spring-live/">Spring Live</a></li>
+			<li><a tabindex=-1 href="/developer/tv/">All Shows</a></li>
+			<li><a tabindex=-1 href="/developer/tv/tanzu-tuesdays/">Tanzu Tuesday</a></li>
+			<li><a tabindex=-1 href="/developer/tv/code/">Code</a></li>
+			<li><a tabindex=-1 href="/developer/tv/tgik/">TGIK</a></li>
+			<li><a tabindex=-1 href="/developer/tv/bcak/">Between Chair & Keyboard</a></li>
+			<li><a tabindex=-1 href="/developer/tv/cloud-stream/">Cloud Stream by VMware</a></li>
+			<li><a tabindex=-1 href="/developer/tv/talk/">Tanzu Talk</a></li>
+			<li><a tabindex=-1 href="/developer/tv/springone-tour/">SpringOne Tour</a></li>
+			<li><a tabindex=-1 href="/developer/tv/spring-live/">Spring Live</a></li>
 			<br>
 			<li class="mobile-nav-title font-weight-bold">Community</li>
-			<li><a href="/developer/community/">Overview</a></li>
-			<li><a href="/developer/advocates/">Advocates</a></li>
-			<li><a href="/developer/team/">Team</a></li>
+			<li><a tabindex=-1 href="/developer/community/">Overview</a></li>
+			<li><a tabindex=-1 href="/developer/advocates/">Advocates</a></li>
+			<li><a tabindex=-1 href="/developer/team/">Team</a></li>
 			<br>
-			<li><a href="/developer/search/">Search</a></li>
+			<li><a tabindex=-1 href="/developer/search/">Search</a></li>
 		</ul>
 	</div>
 </nav>

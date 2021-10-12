@@ -27,7 +27,7 @@
           {{ $subsectionParentPages := where .Pages "Params.subsection-parent-page" true }}
           {{ if gt (len $subsectionParentPages) 0 }}
           <div class='container py-5 border-bottom'>
-              <div class='d-flex align-items-center icon-title mb-4'><img class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
+              <div class='d-flex align-items-center icon-title mb-4'><img alt="" class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
                   {{ range $subsectionParentPages }}
                   <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -47,7 +47,7 @@
         {{ $videos := where .Pages  "Params.type" "videos" }}
         {{ if gt (len $videos) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $videos }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -64,7 +64,7 @@
           {{ $codeSamples := where .Pages  "Params.type" "samples" }}
           {{ if gt (len $codeSamples) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $codeSamples }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -79,7 +79,7 @@
         {{ $blogs := where .Pages  "Params.type" "blog" }}
         {{ if gt (len $blogs) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $blogs }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
