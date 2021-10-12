@@ -258,9 +258,8 @@
       padding-bottom: 4rem;
     }
   }
-  .darken .dropdown-item:hover {
+  .darken .dropdown-item:hover, .darken .dropdown-item:focus {
     background-color: #22343c !important;
-
   }
   .darken #search-nav,
   .darken #scope,

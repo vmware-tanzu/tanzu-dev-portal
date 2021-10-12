@@ -71,11 +71,14 @@ limitations under the License.
 
   $( ".dropdown-item" ).focus(function() {
     $(".dropdown").removeClass("show");
-    $(this).closest(".dropdown").addClass("show");
+    var parentDropdown = $(this).closest(".dropdown")
+    parentDropdown.addClass("show");
+    $("#scope").addClass(parentDropdown.attr("id") + "-scope");
   });
 
   $( "a:not(.dropdown-item)" ).focus(function() {
     $(".dropdown").removeClass("show");
+    $("#scope").removeClass();
   });
 
 
