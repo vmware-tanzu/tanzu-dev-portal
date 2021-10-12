@@ -426,8 +426,13 @@ limitations under the License.
   $("header li .search-icon").keypress(function (e) {
     if (e.which == 13) {
       $("#search-nav").slideToggle();
-      //$(this).toggleClass('close');
       $("#searchheaderform input").focus();
+    }
+  });
+
+  $("#search-nav").on('keydown', function(event) {
+    if (event.key == "Escape") {
+      $("#search-nav").slideToggle();
     }
   });
 
