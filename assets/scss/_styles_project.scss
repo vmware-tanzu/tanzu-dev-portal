@@ -33,7 +33,7 @@ body {
     > .container {
       max-width: 100% !important;
     }
-
+    
     .navbar-logo #dev-title {
       transition: all .3s;
       opacity: 1;
@@ -49,6 +49,8 @@ body {
       .dropdown-item:hover {
         background-color: $dark;
       }
+      
+      #search-nav,
       #scope {
         background: $gray-800;
       }
