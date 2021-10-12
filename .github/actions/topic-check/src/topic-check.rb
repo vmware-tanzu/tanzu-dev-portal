@@ -65,7 +65,6 @@ contentFiles.each do |f|
     end
 end
 
-puts testsFailed
 if testsFailed
     exit(1)
 else
