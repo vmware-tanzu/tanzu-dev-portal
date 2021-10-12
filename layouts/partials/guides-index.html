@@ -22,7 +22,7 @@
             {{ $topics := where (where .Site.Pages "Section" "topics") ".Params.topicgroups" .Title }}
             {{ range $topics }}
                 <div class="row mb-4 align-items-center flex-nowrap">
-                    <img class="icon icon-md d-block d-lg-inline-block mr-4" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
+                    <img alt="" class="icon icon-md d-block d-lg-inline-block mr-4" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
                     <div class='icon-title'><h2 class="mb-0 py-0">{{ .Title }} </h2></div>
                 </div>
                 <div class="row mb-5">
