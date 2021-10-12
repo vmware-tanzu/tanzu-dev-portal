@@ -53,9 +53,12 @@
 			<!-- <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div> -->
 		</div>
 	</div>
-	{{ with $preview := .Params.preview}}
-		<img alt="{{ .Title }}" class='align-self-start workshop-preview px-0 mt-2' src={{ $preview| relURL }}>
-	{{end}}
+	{{ if .Params.preview }}
+		<div class="preview-container d-none d-lg-block col-12 col-lg-6 position-relative pl-lg-4">
+			<img src="{{ .Params.preview | relURL }}">
+			<img src="{{ .Params.logo | relURL }}" class="workshop-logo position-absolute">
+		</div>
+	{{ end }}
 </div>
 <div class='container'>
 	<hr class='border-bottom'>
