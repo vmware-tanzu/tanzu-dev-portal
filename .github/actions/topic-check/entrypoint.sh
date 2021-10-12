@@ -15,8 +15,6 @@ if [[ -z "$GITHUB_REPOSITORY" ]]; then
 fi
 
 cd $GITHUB_WORKSPACE
-pwd
-ls -a .github/actions
 
 echo "--> Run the check"
 ruby ./.github/actions/topic-check/src/topic-check.rb -s . -t topics.yaml
