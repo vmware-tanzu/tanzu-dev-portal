@@ -5,7 +5,7 @@
 
 	const decodedToken = getCookie("nf_jwt")
 	if (!decodedToken || decodedToken.exp < new Date().getTime() / 1000) {
-		document.getElementById("startinfo").innerHTML = "<em class='mt-4'>Login Required</em>"
+		document.getElementById("startinfo").innerHTML = "<em class='mt-4'>Login required</em>"
 	}
 	if (window.location.href.indexOf("ws_status=unavailable") > -1) {
 
@@ -20,42 +20,46 @@
 	}
 
 </script>
-<div class='container mt-md-5 mt-2 pt-md-5 pt-3'>
+<div class='container mt-lg-5 pt-md-1 mt-2 pt-lg-5 pt-0 mt-0'>
 	<div class='mt-2'>
 		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 	</div>
 </div>
-<div class='container d-flex flex-lg-row flex-column justify-content-between py-lg-5 py-2'>
-	<div class="td-main px-0 workshop-description">
+<div class='container d-flex flex-lg-row flex-column justify-content-between py-lg-5 py-2 mb-lg-5'>
+	{{ if .Params.preview }}
+		<div class="td-main px-0 workshop-description col-12 col-lg-6">
+	{{ else }}
+		<div class="td-main px-0 workshop-description">
+	{{ end }}
 			<div class='container'>
 				<h1>{{ .Title }}</h1>
-				<h4 class='text-white mb-4'>{{ .Description }}</h4>
+				<p class='mb-4'>{{ .Description }}</p>
 				<p class='text-uppercase text-white fs-75 letter-spacing-wide'><i class="fas fa-hourglass-half mr-2"></i>{{ .Params.length }} minutes</p>
 				<a class="btn mt-4" href="/developer/get-workshop/{{ .Params.lab }}" id="startbutton" onclick="LoadingButton()" >Start Workshop</a><span class="text-muted pl-2 fs-90 mt-4 align-middle d-inline-block" id="startinfo"></span>
 			</div>
-	
-	
-		{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
-	
-		<div class="container pb-5">
+	{{ partial "amplitude.html" (dict "context" . "event" "workshop viewed") }}
+			<div class="container pb-5">
 				<!-- {{ with $img := .Params.logo }}
 					<img src={{ $img | relURL }} width="50" height="50"  Hspace="10" Vspace="5" align="left"/>
 				{{end}} -->
-		
-			{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-				{{ partial "feedback.html" .Site.Params.ui.feedback }}
-				<br />
-			{{ end }}
-			{{ if (.Site.DisqusShortname) }}
-				<br />
-				{{ partial "disqus-comment.html" . }}
-			{{ end }}
-			<!-- <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div> -->
+				
+				{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+					{{ partial "feedback.html" .Site.Params.ui.feedback }}
+					<br />
+				{{ end }}
+				{{ if (.Site.DisqusShortname) }}
+					<br />
+					{{ partial "disqus-comment.html" . }}
+				{{ end }}
+				<!-- <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div> -->
+			</div>
 		</div>
-	</div>
-	{{ with $preview := .Params.preview}}
-		<img class='align-self-start workshop-preview px-0 mt-2' src={{ $preview| relURL }}>
-	{{end}}
+	{{ if .Params.preview }}
+		<div class="preview-container d-none d-lg-block col-12 col-lg-6 position-relative pl-lg-4">
+			<img src="{{ .Params.preview | relURL }}">
+			<img src="{{ .Params.logo | relURL }}" class="workshop-logo position-absolute">
+		</div>
+	{{ end }}
 </div>
 <div class='container'>
 	<hr class='border-bottom'>

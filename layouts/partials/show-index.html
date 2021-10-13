@@ -13,7 +13,7 @@
                 {{ range after 2 ( first 5 (sort .RegularPages ".Date" "desc")) }}
                     <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
-                        <img src="{{ partial "tv-image-src" . }}" />
+                        <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
                         {{ if gt (len .Title) 70}}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
@@ -33,7 +33,7 @@
                 {{ range first 3 (sort .RegularPages ".Date" "desc") }}
                     <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
-                        <img src="{{ partial "tv-image-src" . }}" />
+                        <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
                         {{ if gt (len .Title) 70}}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>

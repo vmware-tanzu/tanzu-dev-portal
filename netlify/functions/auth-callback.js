@@ -89,7 +89,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
         const cookieUrlSearchParams = new URLSearchParams(cookies.OptanonConsent);
         const oneTrustCookieParsed = Object.fromEntries(cookieUrlSearchParams.entries());
-        if (oneTrustCookieParsed){
+        if (oneTrustCookieParsed && oneTrustCookieParsed.groups){
             const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
             if (oneTrustCookieParsed.groups[groupposition] === '0') {
                 jwtToken.id = randomToken();

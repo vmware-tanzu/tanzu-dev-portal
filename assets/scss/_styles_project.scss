@@ -33,7 +33,7 @@ body {
     > .container {
       max-width: 100% !important;
     }
-
+    
     .navbar-logo #dev-title {
       transition: all .3s;
       opacity: 1;
@@ -49,6 +49,8 @@ body {
       .dropdown-item:hover {
         background-color: $dark;
       }
+      
+      #search-nav,
       #scope {
         background: $gray-800;
       }
@@ -427,8 +429,8 @@ body {
     border: 2px solid $link;
     box-sizing: border-box;
     max-width: max-content;
-    
-    &:hover {
+
+    &:hover, &:focus {
       .arrow-box {
         background: rgba(73, 175, 217, 1);
         transition: all .2s ease-out;
@@ -491,7 +493,7 @@ body {
       border-width: 6px 0 6px 12px;
       border-color: transparent transparent transparent white;
     }
-    &:hover {
+    &:hover, &:focus {
       background: $link-hover-color;
     }
   }
@@ -785,7 +787,7 @@ body {
         border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     user-select: none;
     display: block;
-    &:hover {
+    &:hover, &:focus {
       background: $dark-green;
       //border-color: $border;
       color: $link-hover-color;
@@ -902,7 +904,7 @@ body {
     margin-right: 0.8rem;
   }
   
-  .advocates .social:hover {
+  .advocates .social:hover, .advocates .social:focus {
     color: $blue;
     font-size: 0.9rem;
     margin-right: 0.8rem;
@@ -1279,7 +1281,7 @@ body {
     }
   
     @media (min-width: 992px) {
-      &:hover {
+      &:hover, &:focus {
         .thumbnail-gradient {
           opacity: 0;
         }
@@ -1343,6 +1345,20 @@ body {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .preview-container {
+
+    .workshop-logo {
+      height: 120px;
+      top: 270px;
+      right: 30px;
+      @media(max-width:1300px) {
+        height: 80px;
+      }
+      @media(max-width:1200px) {
+        display: none;
+      }
+    }
+  }
   .workshop-box {
     background-color: #22343c;
 
@@ -1360,7 +1376,7 @@ body {
       transition: all .2s;
       height: calc(100% - 170px);
     }
-    &:hover {
+    &:hover, &:focus {
       .description .btn {
         background: $link-hover-color !important;
       }
@@ -1862,9 +1878,8 @@ body {
 
   .show-all-button {
     transition: background-color .2s;
-    &:hover {
+    &:hover, &:focus {
         background-color: $link-hover-color;
-
     }
   }
 

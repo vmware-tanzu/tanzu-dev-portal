@@ -69,6 +69,19 @@ limitations under the License.
     removeNavClasses();
   });
 
+  $( ".dropdown-item" ).focus(function() {
+    $(".dropdown").removeClass("show");
+    var parentDropdown = $(this).closest(".dropdown")
+    parentDropdown.addClass("show");
+    $("#scope").addClass(parentDropdown.attr("id") + "-scope");
+  });
+
+  $( "a:not(.dropdown-item)" ).focus(function() {
+    $(".dropdown").removeClass("show");
+    $("#scope").removeClass();
+  });
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
@@ -411,15 +424,18 @@ limitations under the License.
     $("#search-nav").slideToggle();
     //$(this).toggleClass('close');
     $("#searchheaderform input").focus();
-    $("#mega-menus").toggleClass("no-border");
   });
 
   $("header li .search-icon").keypress(function (e) {
     if (e.which == 13) {
       $("#search-nav").slideToggle();
-      //$(this).toggleClass('close');
       $("#searchheaderform input").focus();
-      $("#mega-menus").toggleClass("no-border");
+    }
+  });
+
+  $("#search-nav").on('keydown', function(event) {
+    if (event.key == "Escape") {
+      $("#search-nav").slideToggle();
     }
   });
 
@@ -427,7 +443,6 @@ limitations under the License.
     $("#search-nav").slideToggle();
     $(this).toggleClass("close");
     $("#searchheaderform input").focus();
-    $("#mega-menus").toggleClass("no-border");
   });
 
   // Featured Learning paths

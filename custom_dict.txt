@@ -575,6 +575,7 @@ Fakhouri
 Falco
 Fani
 faq(s)?
+Fastlane
 favourite(s)?
 FC
 FeignClient
@@ -889,6 +890,7 @@ Jetstack
 JFrog
 JHipster
 Jiang
+Jie
 JIRAs
 Jitsu
 Jiu
@@ -1913,6 +1915,7 @@ WSL
 Wujec('s)
 x509
 x64
+Xcode
 Xing
 XKCD
 XP
@@ -1926,6 +1929,7 @@ youtube
 ytt(-templatized)?
 Zalando
 ZDNet
+Zhen
 [Zz]ipkin
 ZOP
 Zou
