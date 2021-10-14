@@ -38,7 +38,7 @@ Join us for a hands-on session covering unit and integration testing techniques 
 <a class='btn mt-2 lightbox' href='#register'>Register for Workshop</a>
 
 <div id="register" class='p-5' style="display:none">
-	<h3 class='-text-white mb-3 hide'>Register</h3>
+	<h3 class='text-white mb-3 hide'>Register</h3>
 	<script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
 	<form id="mktoForm_8254"></form>
 	<script>
