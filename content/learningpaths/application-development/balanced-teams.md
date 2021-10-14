@@ -19,7 +19,7 @@ Many teams today have chosen to follow an Agile approach to software development
 
 One reason is that while these teams may place a priority on perfectly implementing their chosen Agile methodology, such as [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)), [XP](https://en.wikipedia.org/wiki/Extreme_programming), or [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)), they neglect to consider the impacts to the human side of those methodologies. One of the most promising of these human practices is the balanced team.
 
-![Balanced Team in a meeting room](/images/outcomes/application-development/balanced-team.jpg)
+{{< youtube id="N7kFpuE_f18" class="youtube-video-shortcode" >}}
 
 ## What you will learn
 In this article, you will learn to:
@@ -82,6 +82,8 @@ Product implementation has to be feasible and robust. Engineers’ primary quest
 **Reflection:** it doesn’t help for engineers to come up with feasible solutions that don’t solve problems for users, or to home in on solutions that are desirable and viable and yet not feasible. Engineers should offer alternative solutions that are more feasible (or cheaper) if they know them to be available.
 
 ## Identify four benefits of a balanced team {id=benefits}
+![Balanced Team in a meeting room](/images/outcomes/application-development/balanced-team.jpg)
+
 When sitting next to each other, or sharing virtual space, team members constantly communicate and collaborate. Teams are focused on delivering customer value through working software in small, iterative releases, and are self-organizing in that they can adapt common tools and practices to what works best for all members. Communication among team members tends to be informal, favoring spontaneous conversation over lengthy meetings. 
 
 Balanced teams have a host of benefits, some top ones are:
