@@ -29,6 +29,10 @@ speakers:
   - Sam Brannen
 
 ---
+<div class='flex align-items-center'>
+	<h5>November 17 &bullet; 09:00&ndash;13:15 CEST</h5>
+</div>
+
 Join us for a hands-on session covering unit and integration testing techniques using Spring Boot, API contracts, database schema management, and Testcontainers, followed by a Kubernetes-native build and deploy supply chain powered by kpack and ArgoCD. You’ll have your own test environment so you can follow along as we work through the deployment of a microservice-based application.
 
 <a class='btn mt-2 lightbox' href='#register'>Register for Workshop</a>
@@ -57,11 +61,11 @@ Join us for a hands-on session covering unit and integration testing techniques 
 			<strong>
 	      <script type="text/javascript">
 	          cal_single2 = ics();
-	          cal_single2.addEvent('Do or Do Not, There is No Try{} in Production (Europe) Workshop', 'https://vmware.zoom.us/j/96730890701?pwd=QTJmRXJDMWo5MjlSRG13S2Z2WWY5QT09', 'Zoom', '11/17/2021 12:00 am PT', '11/17/2021 04:15 am PT');
+	          cal_single2.addEvent('Do or Do Not, There is No Try{} in Production (Europe) Workshop', 'https://vmware.zoom.us/j/96730890701?pwd=QTJmRXJDMWo5MjlSRG13S2Z2WWY5QT09', 'Zoom', '11/17/2021 01:00 am PDT', '11/17/2021 05:15 am PDT');
 	      </script>
 				<a href="#" onclick="javascript:cal_single2.download('Do or Do Not, There is No Try{} in Production (Europe) Workshop')">Outlook/iCal</a>
 	      &nbsp;&bullet;&nbsp;
-	      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Do+or+Do+Not%2C+There+is+No+Try%7B%7D+in+Production+%28Europe%29&details=https%3A%2F%2Fvmware.zoom.us%2Fj%2F96730890701%3Fpwd%3DQTJmRXJDMWo5MjlSRG13S2Z2WWY5QT09&dates=20211117T150000Z%2F20211117T191500Z">Google</a>
+	      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Do+or+Do+Not%2C+There+is+No+Try%7B%7D+in+Production+%28Europe%29&details=https%3A%2F%2Fvmware.zoom.us%2Fj%2F96730890701%3Fpwd%3DQTJmRXJDMWo5MjlSRG13S2Z2WWY5QT09&dates=20211117T080000Z%2F20211117T121500Z">Google</a>
 	    </strong>
 	  </p>
 	</div>
