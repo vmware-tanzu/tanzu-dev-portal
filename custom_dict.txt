@@ -201,6 +201,7 @@ Bowei
 BPF
 br/
 Brandolini('s)?
+Brannen
 brd1
 Brindley
 Brodi
@@ -364,6 +365,7 @@ critiquers
 CRM
 [Cc]ron
 cross-subnet
+Crossplane
 CrossSubnet
 Crowdsourced?
 CRuby
@@ -481,6 +483,7 @@ distroless
 distros
 django-prometheus
 DLT
+DMs
 DNF
 DNS
 dnsNames
@@ -606,6 +609,7 @@ FP
 FQDN
 Frascati-Robinson
 freddygthatsme
+[Ff]rictionless
 frictionless
 [fF]rontend(-green)?
 Frontstage
@@ -1540,6 +1544,7 @@ SaaS
 SaaS(-based)?
 Sadogursky
 Saikali
+salaboy
 Salm
 Sam-Bodden
 SameSite
@@ -1638,6 +1643,7 @@ SPIFFE
 Splunk
 Spock
 spoilt
+Spotify
 Spring-Cloud-Dataflow
 spring-petclinic
 springboot
@@ -1925,6 +1931,7 @@ Yaron
 yay
 Yonis
 youtube
+YTT
 ytt(-templatized)?
 Zalando
 ZDNet
