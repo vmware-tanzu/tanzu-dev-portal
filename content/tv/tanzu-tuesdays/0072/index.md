@@ -1,7 +1,7 @@
 ---
-Date: '2021-10-26T09:00:00-11:30'
+Date: '2021-10-26T09:00:00-7:00'
 Description: "Testing with Spring and JUnit 5"
-PublishDate: '2021-10-20T12:00:00-07:00'
+PublishDate: '2020-01-04T00:00:00-07:00'
 aliases:
 - /tv/tanzu-tuesdays/72
 draft: false
