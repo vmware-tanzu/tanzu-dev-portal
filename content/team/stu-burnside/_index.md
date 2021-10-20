@@ -4,7 +4,7 @@ description: ""
 roles: ["guest"]
 
 # Social Media
-twitter: ""
+twitter: "@StuBurnside"
 website: ""
 facebook: ""
 linkedin: ""
