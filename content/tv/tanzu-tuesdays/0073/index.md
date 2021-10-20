@@ -1,7 +1,6 @@
 ---
 Date: '2021-10-26T12:00:00-07:00'
 Description: "Tinkering While Talking Tanzu (TAP Edition)"
-PublishDate: '2020-01-04T00:00:00-07:00'
 aliases:
 - /tv/tanzu-tuesdays/73
 draft: false
