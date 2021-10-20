@@ -1,5 +1,5 @@
 ---
-Date: '2021-10-26T12:00:00-7:00'
+Date: '2021-10-26T12:00:00-07:00'
 Description: "Tinkering While Talking Tanzu (TAP Edition)"
 aliases:
 - /tv/tanzu-tuesdays/73
@@ -7,12 +7,12 @@ draft: false
 episode: '73'
 explicit: 'no'
 guests:
-- Tiffany Jerrigan
+- Tiffany Jernigan
 - Brian Chang
 - Jonathan Regehr
 - Stu Burnside
 - Lenny Jaramillo
-- Jergen Sussner
+- Juergen Sussner
 hosts:
 - Whitney Lee
 - Leigh Capili

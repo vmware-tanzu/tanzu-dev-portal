@@ -1,5 +1,5 @@
 ---
-Date: '2021-10-26T09:00:00-7:00'
+Date: '2021-10-26T09:00:00-07:00'
 Description: "Testing with Spring and JUnit 5"
 aliases:
 - /tv/tanzu-tuesdays/72

@@ -1703,6 +1703,7 @@ sudo
 superset
 svc
 SVID(s)?
+SVP
 [Ss]wagger(-cli|2)?
 SweetKiller9
 Syer
