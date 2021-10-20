@@ -2,6 +2,7 @@
 name: Stu Burnside
 description: ""
 roles: ["guest"]
+# location: "Scotland, United Kingdom"
 
 # Social Media
 twitter: "@StuBurnside"
