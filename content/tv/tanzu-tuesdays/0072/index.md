@@ -1,7 +1,7 @@
 ---
-Date: "{{ now.Format "2006-01-02" }}"
+Date: '2021-10-26T09:00:00-11:30'
 Description: "Testing with Spring and JUnit 5"
-PublishDate: "{{ now.Format "2006-01-02" }}"
+PublishDate: '2021-10-20T12:00:00-07:00'
 aliases:
 - /tv/tanzu-tuesdays/72
 draft: false

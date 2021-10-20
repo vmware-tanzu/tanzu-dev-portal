@@ -1,7 +1,7 @@
 ---
-Date: "{{ now.Format "2006-01-02" }}"
+Date: '2021-10-26T12:00:00-6:30'
 Description: "Tinkering While Talking Tanzu (TAP Edition)"
-PublishDate: "{{ now.Format "2006-01-02" }}"
+PublishDate: '2021-10-20T09:00:00-11:30'
 aliases:
 - /tv/tanzu-tuesdays/73
 draft: false
