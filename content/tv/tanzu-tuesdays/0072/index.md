@@ -8,7 +8,7 @@ draft: false
 episode: '72'
 explicit: 'no'
 guests:
-- Sam Brennan
+- Sam Brannen
 hosts:
 - Tiffany Jernigan
 - Whitney Lee
