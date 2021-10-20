@@ -7,12 +7,12 @@ draft: false
 episode: '73'
 explicit: 'no'
 guests:
-- Tiffany Jerrigan
+- Tiffany Jernigan
 - Brian Chang
 - Jonathan Regehr
 - Stu Burnside
 - Lenny Jaramillo
-- Jergen Sussner
+- Juergen Sussner
 hosts:
 - Whitney Lee
 - Leigh Capili
