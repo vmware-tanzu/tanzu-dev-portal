@@ -1,24 +1,28 @@
 ---
-Date: '2021-10-26T09:00:00-07:00'
-Description: "Testing with Spring and JUnit 5"
+Date: '2021-10-26T12:00:00-07:00'
+Description: "Tinkering While Talking Tanzu (TAP Edition)"
 aliases:
 - /tv/tanzu-tuesdays/72
 draft: false
 episode: '72'
 explicit: 'no'
 guests:
-- Sam Brannen
-hosts:
 - Tiffany Jernigan
+- Brian Chang
+- Jonathan Regehr
+- Stu Burnside
+- Lenny Jaramillo
+- Juergen Sussner
+hosts:
 - Whitney Lee
 - Leigh Capili
 lastmod: '2021-10-26'
 minutes: 60
-title: "Testing with Spring and JUnit 5"
+title: "Tinkering While Talking Tanzu (TAP Edition)"
 truncate: ''
 twitch: vmwaretanzu
 youtube: ""
 type: tv-episode
 ---
 
-This session will be hands-on with live coding to give you an overview of the latest and greatest in the world of testing using JUnit Jupiter (a.k.a. JUnit 5) and the Spring Framework.  The focus will be major new features in JUnit Jupiter 5.7 and 5.8 as well as recent enhancements to Spring's integration testing support.
+What could be more fascinating than a room full of Tanzu Super Users and Cloud Operators gathered together to discuss the newest Tanzu product, Tanzu Application Platform (TAP)?  As many of you know, engineers are notorious tinkerers, whether it be programming on a Raspberry Pi, building a home gym, or building the latest master-level Lego set. Tune in to this episode of Tanzu Tuesday to hear the Vanguards - Tanzu customer super users - share their thoughts about Tanzu Application Platform (TAP) while building their current Lego set. Check in to find out what they have to say, how it will impact their current data centers, and see what they will be building! :) 
