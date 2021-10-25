@@ -15,7 +15,7 @@ minutes: 120
 episode: "45"
 explicit: "yes"
 title: "The next one with Ken Kousen"
-# youtube: "svDHGGzzJ5M"
+youtube: "SS_ibtdmW1c"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
