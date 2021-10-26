@@ -1273,7 +1273,7 @@ body {
   .col-4-thumbnail {
     padding: 0;
     background-color: $border;
-  
+
     img {
       width: 100%;
       transform: scale(1);
@@ -1301,10 +1301,16 @@ body {
       padding-bottom: 3rem !important;
     }
   }
-  .flex-315 {
+  .flex-305 {
     width: 100%;
     @media (min-width: 992px) {
       flex: 0 0 30.5%;
+    }
+  }
+  .flex-315 {
+    width: 100%;
+    @media (min-width: 992px) {
+      flex: 0 0 31.5%;
     }
   }
   .thumbnail-gradient {
