@@ -1198,6 +1198,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NNGroup
 no-brainer
 NODE_ENV
 NodeJS-Client
