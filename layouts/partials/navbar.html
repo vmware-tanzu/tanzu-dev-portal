@@ -124,48 +124,44 @@
 	</div>
 	<div id="mobile-nav" class="bg-dark">
 		<ul class="list-unstyled">
-			<li class="mobile-nav-title font-weight-bold mb-3">Learn</li>
-			<li class="h5 fs-75">By Category</li>
-			<li class="font-weight-bold">Modern Applications</li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/modern-app-basics/">Modern App Basics</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/modernizing-legacy-applications/">Modernizing Legacy Applications</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/agile-transformation-and-practices/">Agile Transformation & Practices</a></li>
-			<br>
-			<li class="font-weight-bold">Application Development</li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/building-modern-applications/">Building Modern Applications</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/deploying-modern-applications/">Deploying Modern Applications</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/managing-and-operating-applications/">Managing & Operating Applications</a></li>
-			<br>
-			<li class="font-weight-bold">Kubernetes Platform</li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/building-kubernetes-runtime/">Building Kubernetes Runtime</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/managing-and-operating-kubernetes/">Managing & Operating Kubernetes</a></li>
-			<li><a tabindex=-1 class="pl-2" href="/developer/topics/securing-kubernetes/">Securing Kubernetes</a></li>
-			<br>
-			<li class="h5 fs-75">By Type</li>
-			<li><a tabindex=-1 href="/developer/guides/">Guides</a></li>
-			<li><a tabindex=-1 href="/developer/learningpaths/">Learning Paths</a></li>
-			<li><a tabindex=-1 href="/developer/workshops/">Workshops</a></li>
-			<li><a tabindex=-1 href="/developer/samples/">Samples</a></li>
-			<li><a tabindex=-1 href="/developer/videos/">Videos</a></li>
-			<li><a tabindex=-1 href="/developer/blog/">Blog</a></li>
-			<li><a tabindex=-1 href="/developer/practices/">Tanzu Practices</a></li>
-			<li><a tabindex=-1 href="/developer/data/">Data</a></li>
-			<br>
-			<li class="mobile-nav-title font-weight-bold">Tanzu.TV</li>
-			<li><a tabindex=-1 href="/developer/tv/">All Shows</a></li>
-			<li><a tabindex=-1 href="/developer/tv/tanzu-tuesdays/">Tanzu Tuesday</a></li>
-			<li><a tabindex=-1 href="/developer/tv/code/">Code</a></li>
-			<li><a tabindex=-1 href="/developer/tv/tgik/">TGIK</a></li>
-			<li><a tabindex=-1 href="/developer/tv/bcak/">Between Chair & Keyboard</a></li>
-			<li><a tabindex=-1 href="/developer/tv/cloud-stream/">Cloud Stream by VMware</a></li>
-			<li><a tabindex=-1 href="/developer/tv/talk/">Tanzu Talk</a></li>
-			<li><a tabindex=-1 href="/developer/tv/springone-tour/">SpringOne Tour</a></li>
-			<li><a tabindex=-1 href="/developer/tv/spring-live/">Spring Live</a></li>
-			<br>
-			<li class="mobile-nav-title font-weight-bold">Community</li>
-			<li><a tabindex=-1 href="/developer/community/">Overview</a></li>
-			<li><a tabindex=-1 href="/developer/advocates/">Advocates</a></li>
-			<li><a tabindex=-1 href="/developer/team/">Team</a></li>
+			{{ range .Site.Menus.main }}
+				{{ if .HasChildren }}
+					{{ $split := false }}
+					{{ if ne (len (where .Children ".Params.split" "right")) 0 }}
+						{{ $split = true }}
+					{{ end }}
+					{{ if $split }}
+						<li class="mobile-nav-title font-weight-bold mb-3">{{ .Name }}</li>
+						<li class="h5 cursor-intial fs-75">By Category</li>
+						{{ $menuitems := where .Children ".Params.split" "left" }}
+						<!-- Group topic by topic group -->
+						{{ $topicgroups := (slice) }}
+						{{ range $menuitems }}
+							{{ $topicgroups = union $topicgroups (slice .Page.Params.topicgroups) }}
+						{{ end }}
+						{{ $topicgroups := uniq $topicgroups }}
+						{{ range $topicgroups }}
+							{{ $topicgroup := . }}
+							<li class="font-weight-bold">{{ $topicgroup }}</li>
+							{{ range $menuitems }}
+								{{ if eq .Page.Params.topicgroups $topicgroup }}
+									<li class="pl-2"><a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a></li>
+								{{ end }}
+							{{ end }}
+						{{ end }}
+						<p id="by-type" class="px-0 h5 cursor-intial fs-75">By Type</p>
+						{{ range (where .Children ".Params.split" "right") }}
+							<li><a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a></li>
+						{{ end }}
+				{{ else }}
+					<li class="mobile-nav-title font-weight-bold mt-4">{{ .Name }}</li>
+					{{ range .Children }}
+						<li><a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a></li>
+					{{ end }}
+				{{ end }}
+				{{ else }}
+				{{ end }}
+			{{ end }}
 			<br>
 			<li><a tabindex=-1 href="/developer/search/">Search</a></li>
 		</ul>
