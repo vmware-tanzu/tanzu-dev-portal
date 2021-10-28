@@ -17,7 +17,6 @@ hide_newsletter: true
 lastmod: '2021-10-13'
 no_episode_title: true
 no_streaming_label: true
-speakers: null
 subtitle: Workshop
 title: Do or Do Not, There is No Try{} in Production (Europe)
 twitch: vmwaretanzu

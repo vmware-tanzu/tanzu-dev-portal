@@ -1,7 +1,7 @@
 # Default build settings
 [context.production]
   publish = "public"
-  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -b https://tanzu.vmware.com/developer --minify"
+  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b https://tanzu.vmware.com/developer --minify"
 
 [context.production.environment]
   HUGO_VERSION = "0.82.0"

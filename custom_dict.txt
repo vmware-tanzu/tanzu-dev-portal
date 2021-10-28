@@ -737,6 +737,7 @@ Grasso
 GRE
 Greenaway
 Greenplum
+Groundbreaker
 Groupon
 gRPC
 Grygleski
@@ -1702,6 +1703,7 @@ sudo
 superset
 svc
 SVID(s)?
+SVP
 [Ss]wagger(-cli|2)?
 SweetKiller9
 Syer
