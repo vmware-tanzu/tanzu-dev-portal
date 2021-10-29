@@ -111,7 +111,7 @@ To make the switch from debt creation to debt resolution, choose to fix time and
 
 By assigning points to stories during the [iteration planning meeting](/practices/ipm/), teams can measure velocity. Velocity is the sum of the story points completed per iteration, usually calculated as a moving average over the last three iterations. Since velocity is determined on the basis of actual team performance, not optimistic or sandbagged time-based estimates, it gives you a much more accurate way to make predictions (not commitments) about future delivery.
 
-For more, please see our [short guide to estimation](/practices/ipm/#estimation) and primmer on (sprint planning vs. iteration planning)[practices/ipm/#sprint-planning-vs-iteration-planning].
+For more, please see our [short guide to estimation](/practices/ipm/#estimation) and primmer on [sprint planning vs. iteration planning](practices/ipm/#sprint-planning-vs-iteration-planning).
 
 ## Systematically Feel and Address Pain
 
