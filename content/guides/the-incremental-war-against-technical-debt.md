@@ -11,7 +11,7 @@ tags:
 team:
 - George Dean
 date: "2021-09-28"
-lastmod: "2021-09-28"
+lastmod: "2021-10-29"
 aliases:
 - "/guides/agile/the-incremental-war-against-technical-debt"
 level1: Agile Transformation and Practices
@@ -72,7 +72,7 @@ The path forward from here is not to devote a week/month/quarter to "fixing all 
 
 ## Pair On It
 
-Pair programming with daily pair rotation, ideally combined with trunk-based development, creates a fundamentally different set of constraints for your development team. Pair programming is a key asset in the war against technical debt.
+[Pair programming](/learningpaths/application-development/pair-programming/) with daily pair rotation, ideally combined with trunk-based development, creates a fundamentally different set of constraints for your development team. Pair programming is a key asset in the war against technical debt.
 
 ### Teams that Solo
 
@@ -109,7 +109,9 @@ The cycle often begins with an overcommitment. Software engineers are optimistic
 
 To make the switch from debt creation to debt resolution, choose to fix time and quality. Select a fixed iteration length, and commit to high quality with variable scope. High quality pays dividends over the long run, but also over the short run. The thirty minutes spent on refactoring and automated testing that were completed this morning make this afternoon's feature straightforward to implement with confidence.
 
-By assigning points to stories during the iteration planning meeting, teams can measure velocity. Velocity is the sum of the story points completed per iteration, usually calculated as a moving average over the last three iterations. Since velocity is determined on the basis of actual team performance, not optimistic or sandbagged time-based estimates, it gives you a much more accurate way to make predictions (not commitments) about future delivery.
+By assigning points to stories during the [iteration planning meeting](/practices/ipm/), teams can measure velocity. Velocity is the sum of the story points completed per iteration, usually calculated as a moving average over the last three iterations. Since velocity is determined on the basis of actual team performance, not optimistic or sandbagged time-based estimates, it gives you a much more accurate way to make predictions (not commitments) about future delivery.
+
+For more on this topic please see our [short guide to estimation](/practices/ipm/#estimation) and primmer on [sprint planning vs. iteration planning](practices/ipm/#sprint-planning-vs-iteration-planning).
 
 ## Systematically Feel and Address Pain
 
