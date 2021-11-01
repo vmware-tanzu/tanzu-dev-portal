@@ -26,6 +26,8 @@
   {{ $.Scratch.Set "streamUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
   {{ $.Scratch.Set "streamName" "on YouTube" }}
   {{ $.Scratch.Set "embedSite" "youtube" }}
+  <!-- The base domain is required to embed YT chat, this parses the page URL to get it -->
+  {{ $.Scratch.Set "siteDomain" (index (split (index (split (replaceRE "http[s]?://" "" .Site.BaseURL) "/") 0) ":") 0) }}
 {{ end }}
 <div class='container'>
   <div id="live" class="row justify-content-center mt-5 pt-3">
@@ -55,7 +57,10 @@
     <h2 class="mb-2"> {{- .Title -}}</h2>
     <div id="internal-embed" class="container justify-content-center mt-3 pt-3" style="text-align: center;">
       {{ if eq ($.Scratch.Get "embedSite") "youtube" }}
-        <iframe width="910" height="512" src='https://www.youtube.com/embed/{{ .Params.youtube }}' frameborder='0' allowfullscreen></iframe>
+      <div class="row">
+        <iframe class="col" width="910" height="512" src='https://www.youtube.com/embed/{{ .Params.youtube }}' frameborder='0' allowfullscreen></iframe>
+        <iframe style="border-style: none;" class="col-md-4" width=400 height=512 src="https://www.youtube.com/live_chat?v={{ .Params.youtube }}&embed_domain={{ $.Scratch.Get "siteDomain" }}"></iframe>
+      </div>
       {{ end }}
     </div>
   </div>
