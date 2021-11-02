@@ -3,7 +3,7 @@ Date: '2021-11-02T09:00:00-07:00'
 Description: "Prod-Like Integration Testing for Distributed Containerized Applications"
 aliases:
 - /tv/tanzu-tuesdays/73
-draft: true
+draft: false
 episode: '73'
 explicit: 'no'
 guests:
