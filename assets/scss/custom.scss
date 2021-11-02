@@ -84,6 +84,7 @@
       &.videos-hero {
         background-image: url({{ "/images/backgrounds/background-video.svg" | relURL }});
       }
+      &.data-hero,
       &.community-hero {
         background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
       }

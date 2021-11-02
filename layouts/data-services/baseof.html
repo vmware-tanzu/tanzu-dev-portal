@@ -10,8 +10,8 @@
     </header>
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
-      <div class="td-main ">
-        <div class='container mt-lg-7'>
+      <div class="td-main">
+        <div class='container mt-lg-5'>
             <div class="row">
                 <div class="col-12 col-lg-9">
                     {{ .Render "content" }}
@@ -26,7 +26,7 @@
 
           {{ $subsectionParentPages := where .Pages "Params.subsection-parent-page" true }}
           {{ if gt (len $subsectionParentPages) 0 }}
-          <div class='container py-5 border-bottom'>
+          <div class='container py-5'>
               <div class='d-flex align-items-center icon-title mb-4'><img alt="" class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
                   {{ range $subsectionParentPages }}
@@ -45,7 +45,7 @@
 
         {{ $videos := where .Pages  "Params.type" "videos" }}
         {{ if gt (len $videos) 0 }}
-        <div class='container py-5 border-bottom'>
+        <div class='container py-5'>
             <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $videos }}
@@ -62,7 +62,7 @@
 
           {{ $codeSamples := where .Pages  "Params.type" "samples" }}
           {{ if gt (len $codeSamples) 0 }}
-        <div class='container py-5 border-bottom'>
+        <div class='container py-5'>
             <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $codeSamples }}
