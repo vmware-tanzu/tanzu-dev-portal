@@ -103,6 +103,7 @@ Ardanlabs
 ARM64
 Artifactory
 artisanal
+Arun
 Asciidoctor
 ASG(s)?
 Ashok
@@ -715,6 +716,7 @@ GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
 GoDaddy
+Goel
 [Gg]olang
 Google('s)?
 goReflect
@@ -807,6 +809,7 @@ idempotency
 IDP
 IIS
 ImagePolicyWebhook
+imagineered
 img
 imgpkg
 [Ii]mmeasurability
@@ -1932,6 +1935,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+YCombinator
 Yonis
 youtube
 YTT
