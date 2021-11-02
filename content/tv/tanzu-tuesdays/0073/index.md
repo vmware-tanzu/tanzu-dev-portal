@@ -8,7 +8,7 @@ episode: '73'
 explicit: 'no'
 guests:
 - Cora Iberkleid
-- Maria Gabriella (Gabry) Brodi
+- Maria Gabriella Brodi
 hosts:
 - Tiffany Jernigan
 - Whitney Lee
