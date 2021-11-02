@@ -1,5 +1,6 @@
 ---
 Date: '2021-11-09T09:00:00-07:00'
+PublishDate: '2020-09-24T00:00:00-07:00'
 Description: "How to Build a Modern Marketplace Using Microservices"
 aliases:
 - /tv/tanzu-tuesdays/74
