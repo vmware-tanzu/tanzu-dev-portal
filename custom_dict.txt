@@ -1497,6 +1497,7 @@ ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
 RestAssured
 Restic
+restorable
 RestrictedMethodAuthorizer
 Retrium
 revertibility
@@ -1614,6 +1615,7 @@ SingleServer
 Sipe
 Siri
 [Ss]kaffold
+skillset
 Skyscanner
 SLA
 Sletten

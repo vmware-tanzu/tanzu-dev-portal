@@ -47,7 +47,7 @@ There are a couple of different ways to build a Kubernetes Operator. You can use
 
 ### Operator SDK
 
-Operator SDK is now a Kubebuilder plugin that you can use together with the Go programming language to build an operator. Operator SDK’s distinction is that it lets you use Ansible or Helm to manage Kubernetes resources. This is an attractive alternative to those that have used these tools extensively, but we recommend that you use a general purpose programming language such as Go because it provides flexibility in defining the logic that will control the actions of your operator.
+Operator SDK is now a Kubebuilder plugin that you can use together with the Go programming language to build an operator. Operator SDKs distinction is that it lets you use Ansible or Helm to manage Kubernetes resources. This is an attractive alternative to those that have used these tools extensively, but we recommend that you use a general purpose programming language such as Go because it provides flexibility in defining the logic that will control the actions of your operator.
 
 ### Metacontroller
 
@@ -128,19 +128,19 @@ For example, if you use one controller for each custom resource, you declare the
 
 Another way you can do this is to have a controller reconcile the state for a bunch of different resources. The problem with this design is you often end up with tangled logic. It is usually difficult to manage such a codebase because of the convoluted relationship between elements and entangled dependencies. You are already dealing with complex systems. Keeping the design relationship simple is a good start.
 
-### Endless Controller Reconciliation and Backoffs
+### Endless Controller Reconciliation and `BackOff`
 
 A controller will continue to attempt to reconcile a state for something forever. It will never stop trying to reconcile that step until the step is reconciled.
 
-A controller tries very quickly to reconcile the state of a custom resource. If a controller attempts to reconcile the state for a custom resource and it fails because some external condition prevents reconciliation, it will keep trying on the assumption that the condition will be remedied. This process is known as a backoff. 
+A controller tries very quickly to reconcile the state of a custom resource. If a controller attempts to reconcile the state for a custom resource and it fails because some external condition prevents reconciliation, it will keep trying on the assumption that the condition will be remedied. This process is known as a `BackOff`. 
 
-A backoff is the amount of time that the controller waits between attempts to reconcile the state of the custom resource. If the controller cannot reconcile the state, it will increase the time that it waits between each attempt until it reconciles the state, or until it reaches a predefined maximum interval. 
+A `BackOff` is the amount of time that the controller waits between attempts to reconcile the state of the custom resource. If the controller cannot reconcile the state, it will increase the time that it waits between each attempt until it reconciles the state, or until it reaches a predefined maximum interval. 
 
 Too many futile reconciliation attempts can result in additional network traffic, and a computational load for the controller that is not productive. One way to try and prevent this is to adjust the time intervals. 
 
 For example, the scheduler is a component in Kubernetes that assigns where a container will run. When the cluster is filled to compute capacity, no more containers can be run. The scheduler will keep trying to schedule a pod. If it cannot, the pod will enter a pending state until the scheduler can find another cluster node for the pod to run.
 
-After the first instance of not being able to schedule the pod, the scheduler immediately tries to schedule it again. This time, if it still cannot schedule the pod, the scheduler is going to wait, or backoff. This is because the scheduler now correctly determines that it should stop trying every 100th of a second to schedule the pod because there is not enough space in the cluster. 
+After the first instance of not being able to schedule the pod, the scheduler immediately tries to schedule it again. This time, if it still cannot schedule the pod, the scheduler is going to wait, or `BackOff`. This is because the scheduler now correctly determines that it should stop trying every 100th of a second to schedule the pod because there is not enough space in the cluster. 
 
 To remedy the problem of not enough space in the cluster, you can add new nodes to add more capacity, or shutdown other workloads. Even better, if you leverage cluster autoscaling, capacity is automatically added. When the scheduler discovers this, it schedules the pending pods.
 
