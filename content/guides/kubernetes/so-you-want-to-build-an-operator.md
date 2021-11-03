@@ -10,35 +10,37 @@ There are some things that the team is collectively going to need to discuss, in
 
 ### Kubernetes Experience is Essential to Building an Operator
 
-To assemble a team, take a look at the experience of the application and platform developers at your company to see if any of them have a background in Kubernetes. Building an operator is not a simple process. You want developers on the team who know how to build Kubernetes Clusters and how to extend the Kubernetes Control Plane, which is an extension to the Kubernetes Operator.
+Building an operator is not a simple process. You want developers on the team who know how to build Kubernetes Clusters and how to extend the Kubernetes Control Plane, which is an extension to the Kubernetes Operator.
 
-If there are no Kubernetes experts to be found at your company, try taking one more look at the skillset of the developers. Not everyone on the team has to be a Kubernetes expert to help build the operator, especially now that you have a good understanding of Kubernetes principles and can guide others. 
+The obvious place to start looking for other Kubernetes experts is your place of business. Find out of if there are application and platform developers with experience in Kubernetes. 
 
-### Programming Language Knowledge
+If there are no other Kubernetes experts at your company, try taking one more look at the skillset of the developers. Not everyone on the team has to be a Kubernetes expert to help build the operator, especially now that you have a good understanding of Kubernetes principles and can guide others.   
 
-Building an effective Kubernetes Operator is a relatively involved process. The reality is that most teams that are new to Kubernetes and Go programming will struggle on an operator project. That is why it is vital that you know the programming language being used to build the operator. Understanding the programming language makes the details of implementing the operator pattern that much more surmountable.
+### Programming Language Experience
 
-Yet, depending on your situation it may not be essential to have deep experience in both of these areas. For example, if the team has strong Kubernetes experts that are beginning Go programmers (assuming they are using Go), they will often have success and improve their Go skills as they work. 
+It is vital that someone on the team have a solid understanding of the programming language to build the operator. The reality is that most teams that are new to Kubernetes and new to the programming language will struggle on an operator project. 
 
-Alternatively, if you have expert Go programmers that are relatively new to Kubernetes, they could ramp up their understanding of how Kubernetes works and be successful. 
+Yet, depending on your situation it may not be essential to have deep experience in both of these areas. For example, if the team has strong Kubernetes experts that are learning the programming language, they will often have success and improve their programming language skills as they work. 
+
+Alternatively, if you have programming language experts that are relatively new to Kubernetes, they also could ramp up their understanding of how Kubernetes works and be successful. 
 
 ### Application Knowledge
 
-Finally, it cannot be forgotten that an operator usually exists to manage another software system. A detailed understanding of the application under management is indispensable. If the operator development team includes someone with such an understanding, that will be optimum. However, having access to the development team that manages the workload is perfectly acceptable. Just factor in the time for that knowledge transfer when planning the project.
+An operator usually exists to manage another software system. A detailed understanding of the application under management is indispensable. An optimum team includes someone who knows the software apps that the operator is going to manage. However, having access to the development team that manages the workload is perfectly acceptable. Just factor in the time for that knowledge transfer when planning the project.
 
 ## Kubernetes Operator Building Tools
 
 There are a couple of different ways to build a Kubernetes Operator. You can use:
 
-- Operator SDK, and leverage tools like Ansible and Helm.  
-- Metacontroller, which gives you the freedom to use almost any programming language.  
-- Kubebuilder, a command line that will scaffold the skeleton of a codebase for a Kubernetes Operator.
-- Operator Builder consumes YAML manifests for the resources that you want your operator to manage.
-- The Go programming language and Kubebuilder. This is the most common approach, and the one we most commonly recommend.
+- Operator SDK. Lets you leverage tools like Ansible and Helm.  
+- Metacontroller. Provides the freedom to use almost any programming language.  
+- Kubebuilder. A command line that will scaffold the skeleton of a codebase for a Kubernetes Operator.
+- Operator Builder. Consumes YAML manifests for the resources that you want your operator to manage.
+- Go programming language and Kubebuilder. This is the most common approach, and the one we most commonly recommend.
 
 ### Operator SDK
 
-Operator SDK is now a Kubebuilder plugin that you can use together with the Go programming language to build an operator. Operator SDK’s distinction is that it lets you use Ansible or Helm to manage Kubernetes resources. This is an attractive alternative to those that have used these tools extensively, but we recommend that you use a general purpose programming language such as Go because it provides flexibility in defining the logic that will control the actions of your operator.
+Operator SDK is a Kubebuilder plugin that you can use together with the Go programming language to build an operator. Operator SDK’s distinction is that it lets you use Ansible or Helm to manage Kubernetes resources. This is an attractive alternative to those that have used these tools extensively, but not the best solution. We recommend that you use a general purpose programming language such as Go because it provides flexibility in defining the logic that will control the actions of your operator.
 
 ### Metacontroller
 
@@ -151,4 +153,4 @@ For example, many companies like to use the Kubernetes deployment resource becau
 
 If you are reading this and evaluating the effort to build a Kubernetes Operator to manage workloads, you likely recognize the value of following this pattern because you understand that your company will need to follow it again. 
 
-In the future, we are likely going to use multi-cluster and platform operators to install your application as a part of a larger system. Therefore, as you move forward planning your operator, carefully consider leaving certain features out of the project scope that would best belong to another Kubernetes Operator to extend the work you are doing now.
+In the future, multi-cluster and platform operators are likely going to install your application as a part of a larger system. Therefore, as you move forward planning your operator, carefully consider leaving certain features out of the project scope that would best belong to another Kubernetes Operator to extend the work you are doing now.
