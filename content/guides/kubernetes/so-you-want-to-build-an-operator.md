@@ -86,7 +86,7 @@ An application upgrade is an excellent feature to build into a Kubernetes Operat
 
 ### Manual Upgrades Can Take All Night
 
-Manual application upgrades are not easy to perform. They are known to be labor intensive, manually cumbersome, and error prone. Many IT teams prefer to perform upgrades at night so that the application can be turned off for a short period of time when nobody is using it to make changes to the schema or the arrangement of tables in the database. 
+Manual application upgrades are not easy to perform. They are labor intensive, cumbersome, and error prone. Many IT teams prefer to perform upgrades at night so that they can turn off the application and make changes to the schema or the arrangement of tables in the database when nobody is using it. 
 
 The problem with having to make a change to the schema or database is that someone must manually complete each of the the following steps:
 
