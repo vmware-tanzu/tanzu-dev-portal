@@ -1,6 +1,6 @@
 ---
 name: Juergen Sussner
-description: "Senior Cloud Platform Engineer & Evangelist​ (DATEV)​"
+description: "Senior Cloud Platform Engineer & Evangelist"
 roles: ["guest"]
 skills: []
 location: ""

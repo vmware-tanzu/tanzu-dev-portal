@@ -103,6 +103,7 @@ Ardanlabs
 ARM64
 Artifactory
 artisanal
+Arun
 Asciidoctor
 ASG(s)?
 Ashok
@@ -201,6 +202,7 @@ Bowei
 BPF
 br/
 Brandolini('s)?
+Brannen
 brd1
 Brindley
 Brodi
@@ -364,6 +366,7 @@ critiquers
 CRM
 [Cc]ron
 cross-subnet
+Crossplane
 CrossSubnet
 Crowdsourced?
 CRuby
@@ -481,6 +484,7 @@ distroless
 distros
 django-prometheus
 DLT
+DMs
 DNF
 DNS
 dnsNames
@@ -606,6 +610,7 @@ FP
 FQDN
 Frascati-Robinson
 freddygthatsme
+[Ff]rictionless
 frictionless
 [fF]rontend(-green)?
 Frontstage
@@ -711,6 +716,7 @@ GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
 GoDaddy
+Goel
 [Gg]olang
 Google('s)?
 goReflect
@@ -733,6 +739,7 @@ Grasso
 GRE
 Greenaway
 Greenplum
+Groundbreaker
 Groupon
 gRPC
 Grygleski
@@ -802,6 +809,7 @@ idempotency
 IDP
 IIS
 ImagePolicyWebhook
+imagineered
 img
 imgpkg
 [Ii]mmeasurability
@@ -1193,6 +1201,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NNGroup
 no-brainer
 NODE_ENV
 NodeJS-Client
@@ -1541,6 +1550,7 @@ SaaS
 SaaS(-based)?
 Sadogursky
 Saikali
+salaboy
 Salm
 Sam-Bodden
 SameSite
@@ -1640,6 +1650,7 @@ SPIFFE
 Splunk
 Spock
 spoilt
+Spotify
 Spring-Cloud-Dataflow
 spring-petclinic
 springboot
@@ -1698,6 +1709,7 @@ sudo
 superset
 svc
 SVID(s)?
+SVP
 [Ss]wagger(-cli|2)?
 SweetKiller9
 Syer
@@ -1925,8 +1937,10 @@ Xu
 YAML|yaml
 Yaron
 yay
+YCombinator
 Yonis
 youtube
+YTT
 ytt(-templatized)?
 Zalando
 ZDNet

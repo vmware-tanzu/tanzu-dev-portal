@@ -13,9 +13,9 @@ PublishDate: "2020-09-30T00:00:00-07:00"
 Date: "2021-10-18T10:00:00-07:00"
 minutes: 120
 episode: "44"
-explicit: "no"
+explicit: "yes"
 title: "The one with Allen Holub"
-# youtube: "Fh6ZZ15KnUY"
+youtube: "svDHGGzzJ5M"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
