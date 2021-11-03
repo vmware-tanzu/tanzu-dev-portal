@@ -8,11 +8,13 @@ tags:
 - Kubernetes
 - Sealed Secrets
 team:
-- Raquel Campuzano and Juan Ariza
+- Raquel Campuzano
 title: Deploy Applications with Confidence and Control with VMware Application Catalog and Sealed Secrets  
 topics:
 - Kubernetes
 ---
+
+*Raquel Campuzano and Juan Ariza co-wrote this post*
 
 As more organizations adopt Kubernetes as the preferred infrastructure for running their IT resources, enterprise SRE teams tend to adopt a GitOps mindset.  
 
@@ -73,7 +75,7 @@ kubectl create secret generic mariadb-secret --dry-run=client \
 
 The command above creates a new `.yaml` file named `mariadb-sealedsecret.yaml` which contains the encrypted MariaDB credentials. That file should look like it is shown below:  
 
-![MariaDB Sealed Secret yaml file](images/mariadb-sealedsecret.png)
+![MariaDB Sealed Secret yaml file](images/mariadb-sealed-secrets.png)
 
 At this point, you can safely add this file to your Git repository. Once you have a Sealed Secret manifest, you can deploy it in your Kubernetes cluster running the command below: 
 
