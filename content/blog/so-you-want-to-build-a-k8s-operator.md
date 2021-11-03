@@ -1,7 +1,7 @@
 ---
 title: "So You want to Build an Operator?"
 description: An introduction to the primary concerns organizations should consider when building a Kubernetes application platform.
-date: "2021-11-3"
+date: "2021-11-03"
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 tags:
