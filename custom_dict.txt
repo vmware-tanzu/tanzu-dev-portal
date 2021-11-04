@@ -103,6 +103,7 @@ Ardanlabs
 ARM64
 Artifactory
 artisanal
+Arun
 Asciidoctor
 ASG(s)?
 Ashok
@@ -715,6 +716,7 @@ GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
 GoDaddy
+Goel
 [Gg]olang
 Google('s)?
 goReflect
@@ -807,6 +809,7 @@ idempotency
 IDP
 IIS
 ImagePolicyWebhook
+imagineered
 img
 imgpkg
 [Ii]mmeasurability
@@ -1503,6 +1506,7 @@ ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
 RestAssured
 Restic
+restorable
 RestrictedMethodAuthorizer
 Retrium
 revertibility
@@ -1621,6 +1625,7 @@ SingleServer
 Sipe
 Siri
 [Ss]kaffold
+skillset
 Skyscanner
 SLA
 Sletten
@@ -1932,6 +1937,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+YCombinator
 Yonis
 youtube
 YTT
