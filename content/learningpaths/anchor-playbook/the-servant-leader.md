@@ -21,17 +21,17 @@ A skillful leader does not make decisions in a vacuum; they make space for the t
 
 Many Tanzu Labs engineers feel that anchors are responsible for assessing what needs to be done — from an engineering perspective — and making sure those tasks get done through skillful facilitation and delegation. The trick here is providing enough leadership to move the team forward without taking control of the decision-making process. Much like [the Peer](/learningpaths/anchor-playbook/the-peer), it may be unclear to outsiders who the anchor (servant leader) actually is.
 
-## Responsibilities
+### Responsibilities
 - Bring the team to a higher level of situational awareness
 - Facilitate conversations, especially through activities
 - Keep the team moving forward
 - Model values and norms for the team to imitate
 - Make sure everyone has a voice in decision-making
 
-## Considerations
+### Considerations
 - A servant leader opens up the team for more diversity and safety for experimentation
 - Even while growing, the team needs to be held to a standard of excellence
 
-## Challenges
+### Challenges
 - Anchors may put unreasonable expectations on themselves and feel alone and stressed
 - Anchors with many other responsibilities have little time to pair and code

@@ -21,7 +21,7 @@ Sometimes the anchor may want to handle blockers and interruptions, especially i
 
 In many cases anchors are expected to protect the team from inefficiencies caused by near-term blockers, interruptions, and unreasonable requests. They tend to be the one who attends strategic technical meetings and fields questions, especially on an easily-distracted team.
 
-## Responsibilities
+### Responsibilities
 - Keep the project stakeholders informed of issues and action items
 - Create psychological safety for the team
 - Stay firm when others get off track
@@ -29,10 +29,10 @@ In many cases anchors are expected to protect the team from inefficiencies cause
 - Advocate for the team
 - Point out risks and harmful behaviors
 
-## Considerations
+### Considerations
 - Anchors work against unrealistic expectations and create safety for team members to not be afraid
 - Shielding efforts sometimes result in the anchor acting similarly to a project stakeholder or sponsor
 
-## Challenges
+### Challenges
 - On projects that require frequent, tough conversations, the anchor may experience greater risk of burnout
 - Hard to test for resiliency against difficult situations
