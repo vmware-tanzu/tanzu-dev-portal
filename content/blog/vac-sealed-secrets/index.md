@@ -16,6 +16,8 @@ topics:
 
 *Raquel Campuzano and Juan Ariza co-wrote this post*
 
+First published on [https://blog.bitnami.com/2021/11/deploy-applications-with-confidence-vmware-application.html](https://blog.bitnami.com/2021/11/deploy-applications-with-confidence-vmware-application.html)
+
 As more organizations adopt Kubernetes as the preferred infrastructure for running their IT resources, enterprise SRE teams tend to adopt a GitOps mindset.  
 
 The GitOps approach consists of embracing different practices that manage infrastructure configuration as a code. This means that Git becomes the single source of truth and as such, all operations are tracked via commits and pull requests. Thus, every action performed on the infrastructure will leave a trace and can be reverted if needed.  
@@ -36,7 +38,7 @@ Depending on your requirements, you can either navigate to the ongoing Open-Sour
 
 ## Deploy Sealed Secrets on Kubernetes through VMware Application Catalog 
 
-The following steps describe how to navigate to VMware Application Catalog and deploy Sealed Secrets in your cluster. Once you have it installed, you will be able to deploy any application — this blog post uses MariaDB as an example, but you can pick another solution existing in your catalog — and encrypt its secrets using a Sealed Secret.  
+The following steps describe how to navigate to VMware Application Catalog — [formerly known as Tanzu Application Catalog](https://tanzu.vmware.com/content/blog/announcing-evolution-vmware-application-catalog) — and deploy Sealed Secrets in your cluster. Once you have it installed, you will be able to deploy any application — this blog post uses MariaDB as an example, but you can pick another solution existing in your catalog — and encrypt its secrets using a Sealed Secret.  
 
 This post assumes that you already have: 
 
