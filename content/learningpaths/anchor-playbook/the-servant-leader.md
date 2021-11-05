@@ -13,7 +13,7 @@ tags:
 aliases:
 - "/outcomes/anchor-playbook/the-servant-leader"
 ---
-> MASTER FACILITATOR AND COACH; CAN STEP UP OR STEP BACK AS NEEDED.
+> AN EXPERT FACILITATOR AND COACH; CAN STEP UP OR STEP BACK AS NEEDED.
 
 {{% callout %}}
 A skillful leader does not make decisions in a vacuum; they make space for the team to make decisions as a group.

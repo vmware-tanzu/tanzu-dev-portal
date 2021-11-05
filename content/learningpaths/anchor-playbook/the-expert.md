@@ -19,7 +19,7 @@ aliases:
 The anchor can help build trust by being the first — but not the only — Engineer to jump in and demonstrate technical skill and good judgement.
 {{% /callout %}}
 
-The "consulting experience" and technical chops of this anchor often catches the eye of project stakeholders. The Expert often becomes the point of contact for  stakeholders as well as a hub of knowledge for other members of the team. It is typically expected that a skilled anchor will find opportunities to redirect questions and raise up their team members as fellow experts.
+The "consulting" experience and technical chops of this anchor often catches the eye of project stakeholders. The Expert often becomes the point of contact for  stakeholders as well as a hub of knowledge for other members of the team. It is typically expected that a skilled anchor will find opportunities to redirect questions and raise up their team members as fellow experts.
 
 ![An expert anchor pair programming](/learningpaths/anchor-playbook/images/pairing1.jpg)
 

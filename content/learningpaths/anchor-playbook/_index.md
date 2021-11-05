@@ -18,7 +18,7 @@ aliases:
 - "/outcomes/anchor-playbook/"
 ---
  
-## What Is an Anchor
+## The Anchor Role
 The anchor role tends to resist easy definition. In some ways, it is more clearly described by what it is not:
 
 {{< table "table" >}}
@@ -33,13 +33,14 @@ The anchor role tends to resist easy definition. In some ways, it is more clearl
 |  |  |
 {{< /table >}}
 
-At VMware Tanzu Labs, while architecture and technology leadership are fundamental to our practice, we don’t have traditional, top-down architects or framework-writing tech leads. Our teams need leadership of a different flavor, so we evolved to have **_anchors_** instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently here?
+At VMware Tanzu Labs, while architecture and technology leadership are fundamental to our practice, we don’t have traditional, top-down architects or framework-writing tech leads. Our teams need leadership of a different flavor, so we evolved to have **_anchors_** instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently?
 
-At Tanzu Labs, we value empowered [balanced teams](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is incompatible with hierarchical forms of leadership, which risk stifling initiative and ownership. Our teams don’t execute a plan: they own every step of the product development journey.
+At Tanzu Labs, we value empowered [balanced teams](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is often incompatible with traditional hierarchical forms of leadership which risk stifling initiative and ownership. Our teams don’t execute on an inflexible, pre-ordained plan: they own every step of the product development journey.
 
 ![This is an anchor](/learningpaths/anchor-playbook/images/standing.jpg)
 
-**So what is an anchor?** An anchor is the representative of the engineering practice who can explain and model the engineering practice in the same way that Product Managers and Designers anchor their practices in a balanced team. They monitor team dynamics, encourage best practices, and ask the tough questions needed to drive success. They will not be the only engineer or the only team member doing this, but they will make sure it gets done.
+### So what is an anchor? 
+An anchor is **_the representative of the engineering practice who can explain and model the engineering practice_** in the same way that Product Managers and Designers anchor their practices in a balanced team. They monitor team dynamics, encourage best practices, and ask the tough questions needed to drive success. They will not be the only engineer or the only team member doing this, but they will make sure it gets done.
 
 Okay, that’s a little more descriptive.
 
@@ -47,9 +48,9 @@ But what does an anchor do? What expectations do we have for anchors on our bala
 
 ## Anchortypes
 
-Anchorship is often performed differently depending on project context. The type of product, the team structure, and the overall experience level of the team are all factors that influence which style of anchorship will be most effective. One team may find that peer leadership is most effective, while another team finds that a more authoritative leadership style is necessary. The variety of anchor styles can make it difficult to nail down what is and what isn’t anchorship, but this variety is also what makes the role multi-faceted and resilient.
+Anchorship is often performed differently depending on project context. The type of product, the team structure, and the overall experience level of the team are all factors that influence which style of anchorship will be most effective. One team may find that [peer leadership](/learningpaths/anchor-playbook/the-peer) is most effective, while another team finds that a [more authoritative leadership style](/learningpaths/anchor-playbook/the-captain) is necessary. The variety of anchor styles can make it difficult to nail down what is and what isn’t anchorship, but this variety is also what makes the role multi-faceted and resilient.
 
-Not every team member will see the full variety of anchor modalities in the course of their first or first few projects. This playbook will describe the most common “anchortypes” observed in the wild. As you take on anchorship, think about the different modes you can operate in, and consider which will be the most effective for your team and your product.
+Not every team member will see the full variety of anchor modalities in the course of their first or first few projects. This playbook will describe the most common **_“anchortypes”_** observed in the wild. As you take on anchorship, think about the different modes you can operate in, and consider which will be the most effective for your team and your product.
 
 Choosing which anchortype you need for a given project can be a good conversation to have with experienced anchors as well as the project's sponsor(s). You can use the anchortypes described here to help prioritize the set of responsibilities most needed for your team. As you have this conversation, think about the trade-offs and challenges that arise with each form of the role. We’ve listed some of them here, as food for thought, but think about the context of your project and your own unique skill set as you set expectations for the leadership style that will be most effective for you and your team.
 
