@@ -50,7 +50,7 @@ It is not always possible to keep a much loved anchor on a project. Removing an 
 #### Recommendation
 Managers, project sponsors, and stakeholders should feel free to rotate the anchor to another project, either to support a new team or to provide opportunities for the employee that they might otherwise miss. In order to do this safely:
 1. Avoid setting the expectation that anchors always remain with a project until the end.
-2. Either provide time for a new team member to work with the outgoing anchor until they fully understand the context and issues (see [the Learner]((/learningpaths/anchor-playbook/the-learner)), or socialize that a trusted and experienced engineer will be taking over as the anchor.
+2. Either provide time for a new team member to work with the outgoing anchor until they fully understand the context and issues (see [the Learner](/learningpaths/anchor-playbook/the-learner)), or socialize that a trusted and experienced engineer will be taking over as the anchor.
 3. Try to avoid transitioning multiple members of the [balanced team](/outcomes/application-development/balanced-teams/) at the same time.
 4. Encourage teams to maintain lightweight architecture decision records (ADRs) to support continuity during a transition.
 
