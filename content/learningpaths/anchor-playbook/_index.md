@@ -27,7 +27,7 @@ The anchor role tends to resist easy definition. In some ways, it is more clearl
 | Is not "the tech lead" | Is Tanzu Labs' answer to the "tech lead" |
 | Is not "the decider" | Is a facilitator for good team decisions |
 | Is not "the boss" | Is a teacher |
-| Is not "the architect" | Is teh initiator of architectural conversations |
+| Is not "the architect" | Is the initiator of architectural conversations |
 | Is not "the manager" | Is an advocate for growth and empowerment |
 | Is not responsible for the business stakeholder's decisions | Is responsible for due diligence with regard to technical excellence |
 |  |  |

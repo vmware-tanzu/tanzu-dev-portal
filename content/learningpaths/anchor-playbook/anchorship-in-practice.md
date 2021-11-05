@@ -21,7 +21,7 @@ Common scenarios that come up frequently with recommendations for all anchortype
 A new team member has joined the project and the team is introducing roles and responsibilities, including the anchor role. The team wants to make it clear that the anchor has specific responsibilities, but they do not want to indicate that the anchor is the sole owner of those responsibilities or make it difficult to transition anchors if needed.
 
 #### Recommendation
-As you introduce the [balanced team](learningpaths/application-development/balanced-teams) to the new team members, include a description of the anchor role. Be aware that pre-conceptions people have around leadership in engineering may color their expectations of an anchor’s responsibilities. Be prepared to counter these expectations as needed (see table below). In addition, be aware that the current team anchor may need to transition into another role at some point for a variety of reasons, including possibly transitioning a [mentoring anchor](learningpaths/anchor-playbook/the-learner) to the primary anchor role. Do not imply that the anchor is the keeper of project lore: on the contrary, the team will function best when everyone has full context and any engineer is equally capable of helping to onboard new team members.
+As you introduce the [balanced team](learningpaths/application-development/balanced-teams) to the new team members, include a description of the anchor role. Be aware that preconceptions people have around leadership in engineering may color their expectations of an anchor’s responsibilities. Be prepared to counter these expectations as needed (see table below). In addition, be aware that the current team anchor may need to transition into another role at some point for a variety of reasons, including possibly transitioning a [mentoring anchor](learningpaths/anchor-playbook/the-learner) to the primary anchor role. Do not imply that the anchor is the keeper of project lore: on the contrary, the team will function best when everyone has full context and any engineer is equally capable of helping to onboard new team members.
 
 {{< table "table" >}}
 | The Anchor Is Not | The Anchor Is |
@@ -29,14 +29,14 @@ As you introduce the [balanced team](learningpaths/application-development/balan
 | Is not "the tech lead" | Is Tanzu Labs' answer to the "tech lead" |
 | Is not "the decider" | Is a facilitator for good team decisions |
 | Is not "the boss" | Is a teacher |
-| Is not "the architect" | Is teh initiator of architectural conversations |
+| Is not "the architect" | Is the initiator of architectural conversations |
 | Is not "the manager" | Is an advocate for growth and empowerment |
 | Is not responsible for the business stakeholder's decisions | Is responsible for due diligence with regard to technical excellence |
 |  |  |
 {{< /table >}}
 
 ### Scenario: Program Onboarding
-In a program with multiple projects, it is often true that one team — for instance, the initial team in an expanding portfolio — holds more context than the new team. In these cases the team or teams closer to a core group of stakeholders or technical approvers are responsible to ensure this context is shared across the program.
+In a program with multiple projects, it is often true that one team — for instance, the initial team in an expanding portfolio — holds more context than the new team. In these cases the team or teams closer to a core group of business or technical stakeholders are responsible to ensure this context is shared across the program.
 
 #### Recommendation
 Dedicate time for the program sponsor and a versed anchor to onboard new anchors as they join the program.

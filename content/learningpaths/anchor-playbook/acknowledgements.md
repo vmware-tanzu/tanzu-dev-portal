@@ -4,7 +4,7 @@ lastmod: '2021-11-04'
 layout: single
 team:
 - VMware Tanzu Labs
-title: Acknowledgements
+title: Acknowledgments
 weight: 90
 tags:
 - Teams

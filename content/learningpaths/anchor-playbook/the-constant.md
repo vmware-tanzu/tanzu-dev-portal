@@ -31,7 +31,7 @@ Many Tanzu Labs teams describe “The Constant” when they describe the anchor 
 
 ### Considerations
 - On most teams, the majority of the engineers are fully loaded on context, and capable of handling most of the responsibilities listed above
-- Some teams are now naming their own non-Tanzu Labs anchors, and are less dependent on the Tanzu Labs anchor for context
+- Some teams are now naming their own non Tanzu Labs anchors, and are less dependent on the Tanzu Labs anchor for context
 - Some engineers rotate more frequently in some projects, portfolios, or companies than others
 
 ### Challenges
