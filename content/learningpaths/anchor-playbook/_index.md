@@ -33,7 +33,7 @@ The anchor role tends to resist easy definition. In some ways, it is more clearl
 |  |  |
 {{< /table >}}
 
-At VMware Tanzu Labs, while architecture and technology leadership are fundamental to our practice, we don’t have traditional, top-down architects or product-owning tech leads. Our teams need leadership of a different flavor, so we evolved to have **_anchors_** instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently here?
+At VMware Tanzu Labs, while architecture and technology leadership are fundamental to our practice, we don’t have traditional, top-down architects or framework-writing tech leads. Our teams need leadership of a different flavor, so we evolved to have **_anchors_** instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently here?
 
 At Tanzu Labs, we value empowered [balanced teams](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is incompatible with hierarchical forms of leadership, which risk stifling initiative and ownership. Our teams don’t execute a plan: they own every step of the product development journey.
 
