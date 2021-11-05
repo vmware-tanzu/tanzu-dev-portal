@@ -847,6 +847,7 @@ IoC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
+iPhone(s)?
 IPM
 IPM(s)
 IPPool(s)?
@@ -1531,6 +1532,7 @@ Rodislav
 ROI
 [Rr]ole([Bb]inding(s)?)?
 [Rr]ollout
+[Rr]ollouts
 rom-com
 rootPassword
 Rosecrance
@@ -1632,7 +1634,7 @@ Siri
 [Ss]kaffold
 skillset
 Skyscanner
-SLA
+SLA(s)?
 Sletten
 SLI(s)
 slideshare
