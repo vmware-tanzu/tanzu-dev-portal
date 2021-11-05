@@ -196,7 +196,9 @@ spec:
       filters:
         - SetPath=/api/catalog/{segment}
       order: 0
+```
 
+```yaml
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGatewayRouteConfig
 metadata:
@@ -257,7 +259,9 @@ spec:
         - Path=/api/catalog/**
         - Header=User-Agent, iPhone
       order: 0
+```
 
+```yaml
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGatewayRouteConfig
 metadata:
