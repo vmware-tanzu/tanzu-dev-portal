@@ -21,6 +21,8 @@ The anchor can help build trust by being the first — but not the only — Engi
 
 The "consulting experience" and technical chops of this anchor often catches the eye of project stakeholders. The Expert often becomes the point of contact for  stakeholders as well as a hub of knowledge for other members of the team. It is typically expected that a skilled anchor will find opportunities to redirect questions and raise up their team members as fellow experts.
 
+![An expert anchor pair programming](/learningpaths/anchor-playbook/images/pairing1.jpg)
+
 ### Responsibilities
 - Draw upon deep/broad technical experience when team is making decisions
 - Readily admit when they don’t know, and find out whom does

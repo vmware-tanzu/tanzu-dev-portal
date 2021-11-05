@@ -15,6 +15,8 @@ aliases:
 ---
 Common scenarios that come up frequently with recommendations for all anchortypes.
 
+![Introducing a new anchor to the codebase](/learningpaths/anchor-playbook/images/pairing2.jpg)
+
 ### Scenario: Introducing the Anchor
 A new team member has joined the project and the team is introducing roles and responsibilities, including the anchor role. The team wants to make it clear that the anchor has specific responsibilities, but they do not want to indicate that the anchor is the sole owner of those responsibilities or make it difficult to transition anchors if needed.
 
@@ -54,6 +56,8 @@ Managers, project sponsors, and stakeholders should feel free to rotate the anch
 
 ### Scenario: Cross-Team Neural Network
 Projects are more likely than ever to require multiple teams, which may spin up in different offices or regions. Teams are using Slack or MS Teams channels, but communication is light, asynchronous, irregular and targeted (e.g., Slack is used to pose and answer specific questions, but it’s not a good venue for exploratory conversation). Teams need a way to communicate cross-cutting concerns, vet technical decisions, and align on shared direction in real time.
+
+![The anchor working across teams](/learningpaths/anchor-playbook/images/speaking.jpg)
 
 #### Recommendation
 **_NOTE from Author: This section feels outdated_**

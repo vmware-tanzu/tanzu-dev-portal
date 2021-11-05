@@ -1,5 +1,6 @@
 ---
 title: The Anchor Playbook
+subtitle: Workshop
 weight: -2
 featured: true
 featuredspot: 2
@@ -18,15 +19,31 @@ aliases:
 ---
  
 ## What Is an Anchor
-The anchor role tends to resist easy definition. In some ways, it is more clearly described by what it is not: at VMware Tanzu Labs, while architecture is fundamental to our practice, we don’t have traditional, top-down architects. Our teams need leadership of a different flavor, so we have anchors instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently here?
+The anchor role tends to resist easy definition. In some ways, it is more clearly described by what it is not:
 
-At Tanzu Labs, we value empowered [balanced team](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is incompatible with hierarchical forms of leadership, which stifle initiative and ownership. Our teams don’t execute a plan: they own every step of the product development journey.
+{{< table "table" >}}
+| The Anchor Is Not | The Anchor Is |
+| ---- | ----------- |
+| Is not "the tech lead" | Is Tanzu Labs' answer to the "tech lead" |
+| Is not "the decider" | Is a facilitator for good team decisions |
+| Is not "the boss" | Is a teacher |
+| Is not "the architect" | Is teh initiator of architectural conversations |
+| Is not "the manager" | Is an advocate for growth and empowerment |
+| Is not responsible for the business stakeholder's decisions | Is responsible for due diligence with regard to technical excellence |
+|  |  |
+{{< /table >}}
 
-So what is an anchor? An anchor is the representative of the engineering practice who can explain and model the engineering practice in the same way that Product Managers and Designers anchor their practices in a balanced team. They monitor team dynamics, encourage best practices, and ask the tough questions needed to drive success. They will not be the only engineer or the only team member doing this, but they will make sure it gets done.
+At VMware Tanzu Labs, while architecture and technology leadership are fundamental to our practice, we don’t have traditional, top-down architects or product-owning tech leads. Our teams need leadership of a different flavor, so we evolved to have **_anchors_** instead. This framing raises more questions than it answers. What do we need from technical leadership and why do we do it differently here?
+
+At Tanzu Labs, we value empowered [balanced teams](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is incompatible with hierarchical forms of leadership, which risk stifling initiative and ownership. Our teams don’t execute a plan: they own every step of the product development journey.
+
+![This is an anchor](/learningpaths/anchor-playbook/images/standing.jpg)
+
+**So what is an anchor?** An anchor is the representative of the engineering practice who can explain and model the engineering practice in the same way that Product Managers and Designers anchor their practices in a balanced team. They monitor team dynamics, encourage best practices, and ask the tough questions needed to drive success. They will not be the only engineer or the only team member doing this, but they will make sure it gets done.
 
 Okay, that’s a little more descriptive.
 
-But what does an anchor do? What expectations do we have for anchors on our balanced teams? For new team members and engineers new to the anchor role, it can be confusing to figure out how to anchor, especially because there are many ways to be an anchor.
+But what does an anchor do? What expectations do we have for anchors on our balanced teams? For new team members and engineers new to the anchor role, it can be confusing to figure out how to anchor, especially since there are many ways to approach anchoring a project depending on the situation.
 
 ## Anchortypes
 

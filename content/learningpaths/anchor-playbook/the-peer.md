@@ -21,6 +21,8 @@ While every team needs an anchor, the anchor role may be more or less prominent 
 
 Anchors often bring different types of leadership to the table: in many cases leadership is direct, and it’s clear who the anchor is. However, anchors can be very effective with indirect leadership. A very successful anchor or an anchor working with a very empowered team, may find that it is possible to step back and let the engineers on the team handle anchor responsibilities like stakeholder updates and cross-team planning on a rotating basis.
 
+![The peer anchor](/learningpaths/anchor-playbook/images/home2.jpg)
+
 ### Responsibilities
 - Emphasize that all engineers have these responsibilities, anchor or not
 - Promote more active feedback
