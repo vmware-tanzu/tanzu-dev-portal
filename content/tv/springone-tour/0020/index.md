@@ -26,6 +26,7 @@ speakers:
   - Michael Cote
   - Jakub Pilimon
   - Sam Brannen
+  - Oded Shopen
 
 ---
 <div class='flex align-items-center'>
