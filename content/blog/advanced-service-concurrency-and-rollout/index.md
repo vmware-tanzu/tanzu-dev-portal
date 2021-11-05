@@ -1,7 +1,7 @@
 ---
 title: Advanced Service Concurrency and Rollouts with Tanzu
 description: Release your applications to production more often with easy to implement, yet sophisticated rollout patterns.  Cloud Native Runtimes for VMware Tanzu and Spring Cloud Gateway for Kubernetes provide API driven control for service routing to concurrent application versions.  We will introduce these Tanzu components and walk through a transformation journey demonstrating common use cases.
-date: '2021-11-04'
+date: '2021-11-05'
 level1: Deploying Modern Applications
 level2: Packaging and Publishing
 tags:
