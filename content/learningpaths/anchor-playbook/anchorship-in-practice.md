@@ -60,14 +60,9 @@ Projects are more likely than ever to require multiple teams, which may spin up 
 ![The anchor working across teams](/learningpaths/anchor-playbook/images/speaking.jpg)
 
 #### Recommendation
-**_NOTE from Author: This section feels outdated_**
-
 For programs or project portfolios that have more than one parallel effort, use anchor planning meetings (APMs) to surface issues relevant to all portfolio teams.
-1. The program CL, with input from the relevant customer Journey Lead, initiates and facilitates this meeting so that they are aware of program level decisions and are well positioned to provide support, if needed.
-2. Anchors are responsible for recognizing and initiating topics relevant to the program.
-3. Planning questions:
-   a. Who needs to be present? CLs and balanced team representatives are needed. Does the BAT team need to be involved? Do you want to invite team members? What makes sense for your teams and your program?
-   b. How often do you want to meet? Meeting regularly enough to surface emergent issues is advisable, but cadence can be tailored to the frequency of change and/or the maturity of the project.
+1. Anchors are responsible for recognizing and initiating topics relevant to the portfolio.
+2. If you are working for a consulting company, be sure to keep your company's portfolio managers informed about what is happening across projects so they can make recommendations and adjustments to stakeholders as needed.
 
 ### Scenario: Learning Anchorship
 Anchors use a variety of skills depending on the context they are operating in and the problems they are trying to address. The different modes in which the anchor operates (the modalities described in the previous section) can be difficult to see and learn in the course of one project. Learning the many facets of anchorship over the course of several projects can contribute to role confusion and overall stress.
