@@ -745,7 +745,7 @@ Greenaway
 Greenplum
 Groundbreaker
 Groupon
-gRPC
+gRPC(-based)?
 Grygleski
 Grzejszczak
 GUID(s)?
