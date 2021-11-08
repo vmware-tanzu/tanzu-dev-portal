@@ -1,7 +1,7 @@
 ---
 Date: '2021-11-09T12:00:00-08:00'
 PublishDate: '2020-09-24T00:00:00-07:00'
-Description: "How to Build a Modern Marketplace Using Microservices"
+Description: "Carvel support in Kubeapps - New pluggable gRPC-based architecture”"
 aliases:
 - /tv/tanzu-tuesdays/74
 draft: false
@@ -15,12 +15,11 @@ hosts:
 - Leigh Capili
 lastmod: '2021-11-09'
 minutes: 60
-title: "How to Build a Modern Marketplace Using Microservices"
+title: "Carvel support in Kubeapps - New pluggable gRPC-based architecture”"
 truncate: ''
 twitch: vmwaretanzu
 youtube: ""
 type: tv-episode
 ---
 
-In this session, learn how VMware Marketplace, a one stop shop for third party and open source solutions, 
-was imagineered and built by Arun Goel and the VMware Marketplace team.
+At conception, Kubeapps was created as a Kubernetes application dashboard designed with the only packaging format of the time in mind: Helm charts. As the Kubernetes landscape for packages has grown, we needed an extensible way to expand Kubeapps to support new packaging formats such as declarative Flux resources, Carvel bundles and other future packaging formats.  In this session you'll learn about current technical limitations and how the team is overcoming them by designing a plugins-based, extensible, clear API boundary.
