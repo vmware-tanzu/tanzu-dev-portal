@@ -69,6 +69,8 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+[Aa]nchorship
+[Aa]nchortype(s)?
 Andriy
 Ango
 Anneliese
@@ -311,6 +313,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+Coby
 [Cc]odebase(s)?
 CodeFresh
 CodeOne
@@ -625,6 +628,7 @@ Gabbi
 Gabriella
 Gabry
 GAC
+Galliher
 Galystan
 [Gg]amestorming
 Gamez
@@ -1185,6 +1189,7 @@ Nana
 Natively
 natively
 Neatro
+née
 Neeharika
 Neha
 Nenad
@@ -1681,6 +1686,7 @@ startupProbe(s)?
 stateful
 StatefulSet(s)?
 Statistics
+Stauffer
 STDERR|stderr
 STDOUT|stdout
 Steeltoe
@@ -1914,6 +1920,7 @@ WebSocket
 WebSphere
 WeChat
 well-intentioned
+Wes
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
@@ -1926,6 +1933,7 @@ Wittrock
 WORKDIR
 WorkloadEndpoint
 workspaces
+workstream
 WSL
 Wujec('s)
 x509
