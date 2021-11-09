@@ -1,7 +1,7 @@
 ---
 Date: '2021-11-09T12:00:00-08:00'
 PublishDate: '2020-09-24T00:00:00-07:00'
-Description: "Carvel support in Kubeapps - New pluggable gRPC-based architecture”"
+Description: "Carvel support in Kubeapps - New pluggable gRPC-based architecture"
 aliases:
 - /tv/tanzu-tuesdays/74
 draft: false
@@ -9,13 +9,14 @@ episode: '74'
 explicit: 'no'
 guests:
 - Miguel Martinez
+- Antonio Gámez Díaz
 hosts:
 - Tiffany Jernigan
 - Whitney Lee
 - Leigh Capili
 lastmod: '2021-11-09'
 minutes: 60
-title: "Carvel support in Kubeapps - New pluggable gRPC-based architecture”"
+title: "Carvel support in Kubeapps - New pluggable gRPC-based architecture"
 truncate: ''
 twitch: vmwaretanzu
 youtube: ""
