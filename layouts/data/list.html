@@ -9,22 +9,23 @@
 
 <a id="td-block" class="td-offset-anchor"></a>
 <section class="featured-section td-box">
-    <div class='container'>
-    	<div class="col">
-        <h2 class="h2 mb-4">Featured</h2>
-            <div class="row jc-even">   
-                {{ range first 3 (where (where .Site.Pages "Section" "data") ".Params.data-featured" true).ByWeight }}
-                    <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0">
-                        <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
-                            <h3 class="mb-3 h5">{{ .Parent.Title | singularize }}</h3>
-                            <h4 class="h4">{{ .LinkTitle }}</h4>
-                            <p class="text-light">{{ .Description }}</p>
-                        </a>
-                    </div>
-                {{ end }}
-    		</div>
-        </div>
-	</div>
+
+  <div class="row w-100">
+    <div class="col-12 mb-4">
+        <h2 class="h2">Featured</h2>
+    </div>
+  </div>
+  <div class="row">   
+      {{ range first 3 (where (where .Site.Pages "Section" "data") ".Params.data-featured" true).ByWeight }}
+          <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0">
+              <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+                  <h3 class="mb-3 h5">{{ .Parent.Title | singularize }}</h3>
+                  <h4 class="h4">{{ .LinkTitle }}</h4>
+                  <p class="text-light">{{ .Description }}</p>
+              </a>
+          </div>
+      {{ end }}
+  </div>
 </section>
 
 <a id="td-block" class="td-offset-anchor"></a>
