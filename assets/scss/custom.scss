@@ -106,6 +106,7 @@
         min-height: 100px;
       }
       @media(max-width: 1200px) {
+        &.data-hero,
         &.learningpaths-hero {
           .lead {
             max-width: 620px;
@@ -116,6 +117,7 @@
         }
       }
       @media(max-width: 991px) {
+        &.data-hero,
         &.guides-hero,
         &.samples-hero,
         &.videos-hero,
