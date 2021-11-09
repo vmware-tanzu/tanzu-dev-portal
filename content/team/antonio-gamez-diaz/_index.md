@@ -1,16 +1,16 @@
 ---
 name: Antonio Gámez Díaz
-description: ""
+description: "Member of Technical Staff"
 roles: ["guest"]
 skills: ""
-location: ""
+location: "Sevilla, Spain"
 
 # Social Media
 twitter: ""
 website: ""
 facebook: ""
-linkedin: ""
-github: ""
+linkedin: "antoniogamezdiaz"
+github: "antgamdia"
 pinterest: ""
 instagram: ""
 youtube: ""
