@@ -88,7 +88,7 @@
       &.community-hero {
         background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
       }
-      &.practices-hero {
+      &.tanzupractices-hero {
         background-image: url({{ "/images/backgrounds/background-practices.svg" | relURL }});
       }
       &.team-hero,
@@ -118,6 +118,7 @@
       }
       @media(max-width: 991px) {
         &.data-hero,
+        &.tanzupractices-hero,
         &.guides-hero,
         &.samples-hero,
         &.videos-hero,

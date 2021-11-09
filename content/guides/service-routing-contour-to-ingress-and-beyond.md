@@ -42,10 +42,6 @@ for proxy and communication in modern service-oriented architectures, such as
 Kubernetes clusters. Envoy strives to make the network transparent to
 applications while maximizing observability to ease troubleshooting.
 
-{{< youtube id="Kz671dXioS0" class="youtube-video-shortcode" >}}
-<div align="center"><i><a href="https://www.youtube.com/watch?v=Kz671dXioS0&feature=youtu.be">Watch Paul livestream trying Contour 1.12.0 for the first time.</a></i></div>
-
-
 ### Before You Begin
 
 You'll need a Kubernetes cluster. This guide uses a
