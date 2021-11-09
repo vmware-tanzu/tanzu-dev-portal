@@ -455,6 +455,7 @@ DevOpsDays(KC)?
 DevSecOps
 Dex
 dex-federation
+Díaz
 diehard
 Dieruf
 Dieu
@@ -624,6 +625,7 @@ functionExecutionCalls
 functionExecutionQueueSize
 functionExecutionsCompleted
 [Ff]uturespective(s)?
+G[aá]mez
 Gabbi
 Gabriella
 Gabry
@@ -631,7 +633,6 @@ GAC
 Galliher
 Galystan
 [Gg]amestorming
-Gamez
 Gamov
 Gandhi
 Gangway
