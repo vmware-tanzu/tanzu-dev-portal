@@ -69,6 +69,8 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+[Aa]nchorship
+[Aa]nchortype(s)?
 Andriy
 Ango
 Anneliese
@@ -311,6 +313,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+Coby
 [Cc]odebase(s)?
 CodeFresh
 CodeOne
@@ -625,6 +628,7 @@ Gabbi
 Gabriella
 Gabry
 GAC
+Galliher
 Galystan
 [Gg]amestorming
 Gamez
@@ -741,7 +745,7 @@ Greenaway
 Greenplum
 Groundbreaker
 Groupon
-gRPC
+gRPC(-based)?
 Grygleski
 Grzejszczak
 GUID(s)?
@@ -843,6 +847,7 @@ IoC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
+iPhone(s)?
 IPM
 IPM(s)
 IPPool(s)?
@@ -1184,6 +1189,7 @@ Nana
 Natively
 natively
 Neatro
+née
 Neeharika
 Neha
 Nenad
@@ -1526,6 +1532,7 @@ Rodislav
 ROI
 [Rr]ole([Bb]inding(s)?)?
 [Rr]ollout
+[Rr]ollouts
 rom-com
 rootPassword
 Rosecrance
@@ -1627,7 +1634,7 @@ Siri
 [Ss]kaffold
 skillset
 Skyscanner
-SLA
+SLA(s)?
 Sletten
 SLI(s)
 slideshare
@@ -1679,6 +1686,7 @@ startupProbe(s)?
 stateful
 StatefulSet(s)?
 Statistics
+Stauffer
 STDERR|stderr
 STDOUT|stdout
 Steeltoe
@@ -1912,6 +1920,7 @@ WebSocket
 WebSphere
 WeChat
 well-intentioned
+Wes
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
@@ -1924,6 +1933,7 @@ Wittrock
 WORKDIR
 WorkloadEndpoint
 workspaces
+workstream
 WSL
 Wujec('s)
 x509

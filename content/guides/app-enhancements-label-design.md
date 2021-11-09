@@ -116,7 +116,7 @@ In the command above:
   `production`
 - `-A`: from all namespaces in Kubernetes.
 
-## Considerations when Creating Labeling Standards
+### Considerations when Creating Labeling Standards
 
 As you can see from the prior sections, labels have a fairly important place in
 successful application deployment within Kubernetes. It is important
