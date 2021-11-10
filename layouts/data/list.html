@@ -1,46 +1,40 @@
 {{ define "main" }}
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="td-box td-box--gray-dark position-relative td-box--gradient td-box--height-auto">
-	<div class="container text-center ">
-		<div class="col-12 mx-auto col-lg-9">
-			<span class="h1 mb-0 ">
-				Tanzu Data Services
-			</span>
-		</div>
-	</div>
+<section id="hero" class="data-hero td-box--gray-dark">
+  <div class="container">
+      <h1 class="h1">Tanzu Data Services</h1>
+      <div class="lead"><p>A portfolio of on-demand caching, messaging, and database software on VMware Tanzu for development teams building modern applications.</p></div>
+  </div>
 </section>
 
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="featured-section td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-    <div class='container'>
-    	<div class="col">
-            <div class="row jc-even">   
-                <div class="col-12 mb-4">
-                    <h2 class="text-center h5">Featured</h2>
-                </div> 
-                {{ range first 3 (where (where .Site.Pages "Section" "data") ".Params.data-featured" true).ByWeight }}
-                    <div class="col-lg-4 d-flex mb-3 mb-lg-0">
-                        <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
-                            <div class='gradient-edge-left animate'></div>
-                            <h3 class="mb-3 h5">{{ .Parent.Title | singularize }}</h3>
-                            <h4 class="h4">{{ .LinkTitle }}</h4>
-                            <p class="mb-0 text-light">{{ .Description }}</p>
-                            <p class="link">Read now</p>
-                        </a>
-                    </div>
-                {{ end }}
-    		</div>
-        </div>
-	</div>
+<section class="featured-section td-box">
+
+  <div class="row w-100">
+    <div class="col-12 mb-4">
+        <h2 class="h2">Featured</h2>
+    </div>
+  </div>
+  <div class="row">   
+      {{ range first 3 (where (where .Site.Pages "Section" "data") ".Params.data-featured" true).ByWeight }}
+          <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0">
+              <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+                  <h3 class="mb-3 h5">{{ .Parent.Title | singularize }}</h3>
+                  <h4 class="h4">{{ .LinkTitle }}</h4>
+                  <p class="text-light">{{ .Description }}</p>
+              </a>
+          </div>
+      {{ end }}
+  </div>
 </section>
 
 <a id="td-block" class="td-offset-anchor"></a>
-<section class="row td-box td-box--dark td-box--gradient td-box--height-auto">
+<section class="row td-box td-box--dark py-0 mb-5 pb-lg-5 pb-3">
 	<!-- <div class="col"> -->
 		<div class="row w-100">
 			<div class="col-12 mb-4">
-                <h2 class="text-center">Get Started</h2>
-            </div>
+          <h2 class="h2">Get Started</h2>
+      </div>
 		</div>
 	<!-- </div> -->
 
@@ -53,10 +47,8 @@
   {{ $link := replace $link " " "-" }}
   {{ $section_name := $link  }}
   {{ $link := printf "%s/%s" "/data" $link | relURL }}
-  <div class="col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
-  
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
     {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
-    <div class='data-service-left-edge left-edge-color-{{$left_border_color}} '></div>
   
     {{ with $.Site.GetPage "section" $section_name }}
     <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
@@ -77,10 +69,9 @@
   {{ $link := replace $link " " "-" }}
   {{ $section_name := $link  }}
   {{ $link := printf "%s/%s" "/data" $link | relURL }}
-  <div class="col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
   
     {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
-    <div class='data-service-left-edge left-edge-color-{{$left_border_color}} '></div>
   
     {{ with $.Site.GetPage "section" $section_name }}
     <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
@@ -101,10 +92,9 @@
   {{ $link := replace $link " " "-" }}
   {{ $section_name := $link  }}
   {{ $link := printf "%s/%s" "/data" $link | relURL }}
-  <div class="col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
   
     {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
-      <div class='data-service-left-edge left-edge-color-{{$left_border_color}} '></div>
   
       {{ with $.Site.GetPage "section" $section_name }}
       <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
