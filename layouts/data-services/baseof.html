@@ -10,8 +10,8 @@
     </header>
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
-      <div class="td-main ">
-        <div class='container'>
+      <div class="td-main">
+        <div class='container mt-lg-5'>
             <div class="row">
                 <div class="col-12 col-lg-9">
                     {{ .Render "content" }}
@@ -26,15 +26,14 @@
 
           {{ $subsectionParentPages := where .Pages "Params.subsection-parent-page" true }}
           {{ if gt (len $subsectionParentPages) 0 }}
-          <div class='container py-5 border-bottom'>
+          <div class='container py-5'>
               <div class='d-flex align-items-center icon-title mb-4'><img alt="" class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
                   {{ range $subsectionParentPages }}
                   <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                      <a class="linked-box border bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
-                          <h4 class="mt-2">{{ .Title }}</h4>
-                          <p>{{ .Description }}</p>
-                          <p class='link'>Read more</p>
+                      <a class="linked-box bg-gray-dark px-4 pt-4 pb-3" href="{{ .RelPermalink }}">
+                            <h2 class="link h4 pt-0">{{- .Title -}}</h2>
+                            <p>{{ .Description }}</p>
                       </a>
                   </div>
                   {{ end }}
@@ -46,13 +45,13 @@
 
         {{ $videos := where .Pages  "Params.type" "videos" }}
         {{ if gt (len $videos) 0 }}
-        <div class='container py-5 border-bottom'>
+        <div class='container py-5'>
             <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $videos }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
                         <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
-                        <p><a class="text-white lightbox" href="{{ .RelPermalink }}">{{- .Title -}}</a></p>
+                        <h2 class="fs-p"><a class="lightbox" href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
                     </div>
                 {{ end }}
             </div></div>
@@ -63,13 +62,15 @@
 
           {{ $codeSamples := where .Pages  "Params.type" "samples" }}
           {{ if gt (len $codeSamples) 0 }}
-        <div class='container py-5 border-bottom'>
+        <div class='container py-5'>
             <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $codeSamples }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class='h4' href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
+                        <a class='linked-box td-box--gray-dark px-4 py-2' href="{{ .RelPermalink }}">
+                            <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+                            {{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
+                        </a>
                     </div>
                 {{ end }}
             </div></div>
@@ -83,14 +84,15 @@
             <div class="col px-lg-0"><div class='row'>
                 {{ range $blogs }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
-                        <a class='h4' href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        {{ with .Params.description }}<p>{{ . | markdownify | truncate 150 }}</p>{{ end }}
+                        <a class='linked-box td-box--gray-dark px-4 py-2' href="{{ .RelPermalink }}">
+                            <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+                            {{ with .Params.description }}<p class="text-break">{{ . | markdownify }}</p>{{ end }}
+                        </a>                    
                     </div>
                 {{ end }}
             </div></div>
         </div>
           {{ end }}
-
       </div>
       {{ partial "footer.html" . }}
     </div>
