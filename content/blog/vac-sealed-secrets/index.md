@@ -72,11 +72,11 @@ kubectl create secret generic mariadb-secret --dry-run=client \
   --format yaml > mariadb-sealedsecret.yaml 
 ```
 
-| NOTE: Remember to replace the ROOT_PASSWORD, REPLICATION_PASSWORD and SOME_PASSWORD placeholders with the passwords you want to use to configure MariaDB. Also, replace the CONTROLLER_NAME and `CONTROLLER_NAMESPACE` with the name and namespace of your Sealed Secrets controller, respectively. This information is displayed in the NOTES when installing the Sealed Secret chart.
+{{% callout %}} NOTE: Remember to replace the `ROOT_PASSWORD`, `REPLICATION_PASSWORD` and `SOME_PASSWORD` placeholders with the passwords you want to use to configure MariaDB. Also, replace the `CONTROLLER_NAME` and `CONTROLLER_NAMESPACE` with the name and namespace of your Sealed Secrets controller, respectively. This information is displayed in the NOTES when installing the Sealed Secret chart. {{% /callout %}}
 
 The command above creates a new `.yaml` file named `mariadb-sealedsecret.yaml` which contains the encrypted MariaDB credentials. That file should look like it is shown below:  
 
-![MariaDB Sealed Secret yaml file](images/mariadb-sealed-secrets.jpeg)
+![MariaDB Sealed Secret yaml file](images/mariadb-sealed-secrets.png)
 
 At this point, you can safely add this file to your Git repository. Once you have a Sealed Secret manifest, you can deploy it in your Kubernetes cluster running the command below: 
 
