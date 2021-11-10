@@ -32,7 +32,7 @@ Before you begin, there are a few tools you will need:
 - [Postgres](https://www.postgresql.org/) or [Redis](https://redis.io/)
 - Your text editor or IDE of choice.
   [JDK 16+](https://www.oracle.com/java/technologies/javase-downloads.html) or newer.(if you don't want to use the records that are setup in the example code Java 11+ will work)
-- A understanding of Spring Boot and dependency injection.
+- An understanding of Spring Boot and dependency injection.
 
 You can see the [completed example on GitHub](https://github.com/estand64/distributed-lock).
 
@@ -87,7 +87,7 @@ If using `JDBC` import this:
 </dependency>
 ```
 
-One more note about running the JDBC version of the distributed lock is that it needs the database to have some tables and indexes set up before hand in order to work. If you don't set these up the first time you attempt to obtain the lock a JDBC Exception will be thrown. The current collection of sql files for this can be found in the [Spring Integration JDBC github repo](https://github.com/spring-projects/spring-integration/tree/e901c89fef3eea00ddf6d503ae9926667a1d6972/spring-integration-jdbc/src/main/resources/org/springframework/integration/jdbc). In the example here I'm using [Flyway](https://flywaydb.org/) to run the SQL script automatically, if you want to use this you'll also need to add the following dependency:
+One more note about running the JDBC version of the distributed lock is that it needs the database to have some tables and indexes set up before hand in order to work. If you don't set these up the first time you attempt to obtain the lock a JDBC Exception will be thrown. The current collection of SQL files for this can be found in the [Spring Integration JDBC github repo](https://github.com/spring-projects/spring-integration/tree/e901c89fef3eea00ddf6d503ae9926667a1d6972/spring-integration-jdbc/src/main/resources/org/springframework/integration/jdbc). In the example here I'm using [Flyway](https://flywaydb.org/) to run the SQL script automatically, if you want to use this you'll also need to add the following dependency:
 
 ```xml
 <dependency>
@@ -280,7 +280,7 @@ The above method while easy to read to understand how the lock should be used is
     }
 ```
 
-The most important change here is that `lock.tryLock()` has been moved inside a `try` block that has a `finally` condition that unlocks the lock. This is much better in that if the processing you do inside the lock fails and throws an exception the code still executes the `unlock()`. This substantially cuts down the risk of causing a thread to hold the lock indefinitely and bring our processing across the system to a halt. And if we call the propLock endpoint we'll get the same output as the simple lock.
+The most important change here is that `lock.tryLock()` has been moved inside a `try` block that has a `finally` condition that unlocks the lock. This is much better in that if the processing you do inside the lock fails and throws an exception the code still executes the `unlock()`. This substantially cuts down the risk of causing a thread to hold the lock indefinitely and bring our processing across the system to a halt. And if we call the `/propLock` endpoint we'll get the same output as the simple lock.
 
 Once we have this if we fire up our code and call our endpoint, everything should look the same.
 ![img](images/properLockOutput.png)
@@ -344,6 +344,6 @@ when(registry.obtain(anyString())).thenReturn(lock);
 
 ## Wrapping Up
 
-You should now have a good understanding of now of how the Spring Distributed Lock works and how to use it. From here you can take the sample code and fill in what the Redis service should look like, or try relocking the lock from within the same thread (the outcome might not be what you expect), or if you're ambitious you can run two instances to see how the lock preforms when interacting with more than one instance.
+You should now have a good understanding of now of how the Spring Distributed Lock works and how to use it. From here you can take the sample code and fill in what the Redis service should look like, or try re-locking the lock from within the same thread (the outcome might not be what you expect), or if you're ambitious you can run two instances to see how the lock preforms when interacting with more than one instance.
 
 [^1]: One of biggest pitfalls however is still possible with this, which is to use the same lock across different services. Please never do this as it's a good way to end up in a system wide race condition and these are painful to even figure out let alone solve.
