@@ -3,6 +3,7 @@ date: '2021-10-22'
 lastmod: '2021-10-22'
 title: Working With the Spring Distributed Lock
 linkTitle: Working With the Spring Distributed Lock
+description: A simple demonstration of how to implement a Spring Distributed Lock with in your Spring application
 patterns:
   - API
 tags:
