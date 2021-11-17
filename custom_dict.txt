@@ -521,6 +521,7 @@ Eads
 eBPF
 EBS
 EC2
+ECE
 echoserver
 EclipseLink
 ECMP
@@ -749,6 +750,7 @@ Groupon
 gRPC(-based)?
 Grygleski
 Grzejszczak
+GSB
 GUID(s)?
 Gunicorn
 Guntur
@@ -905,6 +907,7 @@ JFrog
 JHipster
 Jiang
 Jie
+jimwebber
 JIRAs
 Jitsu
 Jiu
@@ -1196,6 +1199,7 @@ Neeharika
 Neha
 Nenad
 Neo4j
+Neo4j's
 Nesterov
 NetApp('s)?
 Netty(-based)?
@@ -1808,6 +1812,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UC
 UCD
 UDP
 UI(s|-based)?
@@ -1914,6 +1919,7 @@ waypoints
 WCF
 webapp
 webapps_default
+Webber
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
