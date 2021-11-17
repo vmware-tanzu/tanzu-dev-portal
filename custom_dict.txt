@@ -1026,6 +1026,7 @@ Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
+Kubeseal
 KUDO
 [kK]ustomize
 KUTTL
@@ -1869,6 +1870,7 @@ Vendio
 vendored
 Venkat
 Venkateswara
+verifiably
 versioned
 VersionTag
 VerticalPodAutoscaler
