@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }} td-topic">
+    {{ partial "amplitude.html" (dict "context" . "event" "topic viewed") }}
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    
+    <div class="container-fluid td-outer">
+        {{ partial "live-notify.html" . }}
+        <div class="td-main ">
+            <div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5">
+                <div class='container'>
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-8 py-2 py-lg-5">
+                            {{ .Render "content" }}
+                        </div>
+                        <div class="col-12 col-lg-4 py-2 py-lg-5">
+                            <div class="">
+                                Video/GIF
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="topics-section">
+                <!-- Link Boxes -->
+                <div class='container py-0 py-lg-0'>
+                        <div class="row">
+                        <div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+                            <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .Params.link1link }}">
+                                <h2 class="link mt-3 h4 pt-0 mw-100">{{ .Params.link1title }}</h2>
+                            </a>
+                        </div>
+                        <div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+                            <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .Params.link2link }}">
+                                <h2 class="link mt-3 h4 pt-0 mw-100">{{ .Params.link2title }}</h2>
+                            </a>
+                        </div>  
+                        <div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+                            <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .Params.link3link }}">
+                                <h2 class="link mt-3 h4 pt-0 mw-100">{{ .Params.link3title }}</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Getting Started-->
+                {{ $guides := where (where .Site.Pages "Section" "guides") "Params.tanzu" .Params.tanzu }}
+                {{ $gettingstarted := slice }}
+                {{ range $guides }}
+                    {{ if in .Params.tags "Getting Started" }}
+                        {{ $gettingstarted = $gettingstarted | append . }}
+                    {{ end }}
+                {{ end }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $gettingstarted }}
+                            <!-- {{ partial (printf "%v-card.html" .Section) . }} -->
+                        {{ end }}
+                    </div>
+                </div>
+
+                <!-- Featured Content -->
+                {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $featured }}
+                            <!-- {{ partial (printf "%v-card.html" .Section) . }} -->
+                        {{ end }}
+                    </div>
+                </div>
+
+            </section>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+  <script>
+    $( ".show-all-button" ).click(function() {
+        $(this).parent().parent().find(".hidden-item:first").show( 20, function showNext() {
+            $(this).next( ".hidden-item" ).show( 20, showNext );
+        });
+        $(this).parent().hide();
+    });
+  </script>
+
+</html>
+
