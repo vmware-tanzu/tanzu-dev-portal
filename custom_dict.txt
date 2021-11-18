@@ -460,6 +460,7 @@ diehard
 Dieruf
 Dieu
 differentiators
+DigiSign
 Dikastes
 DirtiesContext
 disambiguated
@@ -558,6 +559,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+ESRI
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -707,6 +709,7 @@ ghostUsername
 Gibb
 GIDS
 Gilardi
+GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
