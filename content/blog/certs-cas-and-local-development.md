@@ -11,7 +11,6 @@ tags:
 team:
 - Steven Pousty
 ---
-# Plain English Description of Certificates, Certificate Authorities (CA), and Local Development
 
 Most of us do application development work on our local machine. We also come to understand that HTTPS (TLS/SSL) is the new standard for all our web applications. But we often skip using them on our local machine because either: \
 
