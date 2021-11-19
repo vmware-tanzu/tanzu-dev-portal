@@ -1114,7 +1114,7 @@ Masala
 matchers
 matchings
 mattstratton
-matty
+[Mm]atty
 maxUtilization
 Mayers
 MBeans
