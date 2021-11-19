@@ -89,6 +89,7 @@ APIs?
 APM
 AppArmor
 AppDynamics
+Appel
 appender
 application-centric
 ApplicationEvent
@@ -450,6 +451,7 @@ DestinationRule
 developer-centric
 DevNexus
 Devoops
+DEVOPS
 DevOps(-related)?
 DevOpsDays(KC)?
 DevSecOps
@@ -826,6 +828,7 @@ imgpkg
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+imposter
 [Ii]ncentivized
 [Ii]ncompressible
 InfoQ
@@ -1020,6 +1023,7 @@ KubeApps
 KubeCon
 [Kk]ubeconfig
 KUBECONFIG
+KUBECTL
 [kK]ubectl
 kubectl
 kubectx
@@ -1042,6 +1046,7 @@ lastAccessedTime
 latencies
 Lazu
 LDAP
+[Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
@@ -1108,6 +1113,8 @@ MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchers
 matchings
+mattstratton
+[Mm]atty
 maxUtilization
 Mayers
 MBeans
@@ -1439,6 +1446,7 @@ PSP(s)?
 PubSub(bing)?
 Pulkit
 pullPolicy
+Pulumi
 pushable
 putAll
 PuTTYgen
@@ -1593,6 +1601,7 @@ Schutta
 Schwaber
 screencaster
 SCS
+SDD
 SDK(s)?
 SDS
 seaborn
@@ -1705,6 +1714,7 @@ Storbakken
 StoreAllCachedDeserializable
 strategizing
 Strategyzer
+Stratton
 StringBuilder
 struct
 STT
