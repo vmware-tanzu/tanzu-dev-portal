@@ -28,14 +28,13 @@ miro_template_url: ""
 ## How to Use this Method
 
 {{< callout >}}
-**Note:** This technique is very effective for prioritizing and gaining alignment on ideas and problem, but is no longer viewed as a best practice for **_employee performance_**. Please refer to these two article for more details: 
+**Note:** This technique is very effective for prioritizing and gaining alignment on ideas and problems, but is no longer viewed as a best practice for **_employee performance_**. Please refer to these two article for more details: 
 - [How stack ranking corrupts culture, at Uber and Beyond](https://www.perdoo.com/resources/stack-ranking/)
 - [What Is ‘Stack Ranking’ and Why Is It a Problem \[for talent management\]? ](https://lattice.com/library/what-is-stack-ranking-and-why-is-it-a-problem)
 {{< /callout >}}
 
 ## Sample Agenda & Prompts
 1. Gather all the options to be prioritized and write each one on individual sticky notes (or digital equivalent).
-   Decide together on a criterion on which to evaluate and prioritize these options.
 
 2. Decide together on a criterion on which to evaluate and prioritize these options.
 
