@@ -15,7 +15,7 @@ minutes: 120
 episode: "47"
 explicit: "yes"
 title: "The one with Jim Webber"
-#youtube: ""
+youtube: "Gca8AqbDSx0"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
