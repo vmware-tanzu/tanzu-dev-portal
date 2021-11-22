@@ -49,29 +49,23 @@
                 </div>
 
                 <!-- Getting Started-->
-                {{ $guides := where (where .Site.Pages "Section" "guides") "Params.tanzu" .Params.tanzu }}
-                {{ $gettingstarted := slice }}
-                {{ range $guides }}
-                    {{ if in .Params.tags "Getting Started" }}
-                        {{ $gettingstarted = $gettingstarted | append . }}
-                    {{ end }}
-                {{ end }}
+                {{ $gettingstarted := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.gettingstarted" "eq" true }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
-                            <!-- {{ partial (printf "%v-card.html" .Section) . }} -->
+                            {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
                 </div>
 
                 <!-- Featured Content -->
-                {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+                {{ $featured := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.featured" "eq" true }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
                     <div class='row'>
                         {{ range first 3 $featured }}
-                            <!-- {{ partial (printf "%v-card.html" .Section) . }} -->
+                            {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
                 </div>
