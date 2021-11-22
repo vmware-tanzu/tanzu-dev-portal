@@ -51,10 +51,9 @@ miro_template_url: ""
    ![Vertical Axis with Blank Sticky Notes Ready](images/image1.png)
 
 
-### Variations: How many options did you generate? 
-From here, there are multiple techniques to engender team discussion as you collectively place the options along this single axis.
+**From here, there are multiple techniques to engender team discussion as you collectively place the options along this single axis.**
 
-#### [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort) Technique: 10 or fewer options
+### Variation - [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort) Technique: 10 or fewer options
 
 4. Pick an option at random and place it alongside the middle of the vertical line.
 
@@ -66,7 +65,7 @@ From here, there are multiple techniques to engender team discussion as you coll
 
 6. Continue placing remaining options relative to other items as done in steps 4 and 5 until all options are stacked vertically against the line.
 
-#### Triage Technique: 10 or more options
+### Variation - Triage Technique: 10 or more options
 
 4. As a group, divide the options into three groups based on the criterion: highest, moderate and least. Place the groups along the vertical axis accordingly.
 
@@ -74,7 +73,7 @@ From here, there are multiple techniques to engender team discussion as you coll
 
 6. Continue as needed or as time allows with the remaining stacks, until enough options to take action on are stacked vertically against the line.
 
-#### Individual Ranking and Group Comparison: 3-9 options and situations where there is an unbalanced power dynamic in the group
+### Variation - Individual Ranking and Group Comparison: 3-9 options and situations where there is an unbalanced power dynamic in the group
 4. Make copies of the options and the criterion axis for each individual in the group to rank on their own.
 
 5. Set a 5 minute timer for everyone to individually rank the options along their own criterion axis, with the most highly valued options (according to the criterion) placed vertically above lower valued options.
