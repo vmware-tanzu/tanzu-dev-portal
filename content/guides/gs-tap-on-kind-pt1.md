@@ -22,7 +22,7 @@ level2: Building Your Kubernetes Platform
 tanzu:
   label: tap
   featured: true
-  featuredweight: 1
+  featuredweight: 2
   gettingstarted: true
   gettingstartedweight: 2
 ---
