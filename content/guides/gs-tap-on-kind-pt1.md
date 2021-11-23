@@ -19,6 +19,12 @@ aliases:
 - /guides/kubernetes/gs-tap-on-kind-pt1/
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+tanzu:
+  label: tap
+  featured: true
+  featuredweight: 1
+  gettingstarted: true
+  gettingstartedweight: 2
 ---
 
 {{% callout %}} On October 5th, VMware Tanzu Application Platform Beta 2 was released. Read the [blog post](https://tanzu.vmware.com/content/blog/vmware-tanzu-application-platform-beta-2-announcement) for more details. This post is for getting started with Beta 1. This post will be updated, but that is not yet done. {{% /callout %}}

@@ -53,7 +53,7 @@
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
-                        {{ range first 3 $gettingstarted }}
+                        {{ range first 3 (sort $gettingstarted "Params.tanzu.gettingstartedweight" "asc") }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
@@ -64,7 +64,7 @@
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
                     <div class='row'>
-                        {{ range first 3 $featured }}
+                        {{ range first 3 (sort $featured "Params.tanzu.featuredweight" "asc") }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
