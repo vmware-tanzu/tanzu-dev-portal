@@ -69,6 +69,8 @@ amongst
 AMQP
 [Aa]nalytics
 Anchore
+[Aa]nchorship
+[Aa]nchortype(s)?
 Andriy
 Ango
 Anneliese
@@ -87,6 +89,7 @@ APIs?
 APM
 AppArmor
 AppDynamics
+Appel
 appender
 application-centric
 ApplicationEvent
@@ -103,6 +106,7 @@ Ardanlabs
 ARM64
 Artifactory
 artisanal
+Arun
 Asciidoctor
 ASG(s)?
 Ashok
@@ -310,6 +314,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+Coby
 [Cc]odebase(s)?
 CodeFresh
 CodeOne
@@ -446,15 +451,18 @@ DestinationRule
 developer-centric
 DevNexus
 Devoops
+DEVOPS
 DevOps(-related)?
 DevOpsDays(KC)?
 DevSecOps
 Dex
 dex-federation
+Díaz
 diehard
 Dieruf
 Dieu
 differentiators
+DigiSign
 Dikastes
 DirtiesContext
 disambiguated
@@ -516,6 +524,7 @@ Eads
 eBPF
 EBS
 EC2
+ECE
 echoserver
 EclipseLink
 ECMP
@@ -552,6 +561,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+ESRI
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -620,13 +630,14 @@ functionExecutionCalls
 functionExecutionQueueSize
 functionExecutionsCompleted
 [Ff]uturespective(s)?
+G[aá]mez
 Gabbi
 Gabriella
 Gabry
 GAC
+Galliher
 Galystan
 [Gg]amestorming
-Gamez
 Gamov
 Gandhi
 Gangway
@@ -700,6 +711,7 @@ ghostUsername
 Gibb
 GIDS
 Gilardi
+GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -715,6 +727,7 @@ GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
 GoDaddy
+Goel
 [Gg]olang
 Google('s)?
 goReflect
@@ -739,9 +752,10 @@ Greenaway
 Greenplum
 Groundbreaker
 Groupon
-gRPC
+gRPC(-based)?
 Grygleski
 Grzejszczak
+GSB
 GUID(s)?
 Gunicorn
 Guntur
@@ -807,12 +821,14 @@ idempotency
 IDP
 IIS
 ImagePolicyWebhook
+imagineered
 img
 imgpkg
 [Ii]mmeasurability
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+imposter
 [Ii]ncentivized
 [Ii]ncompressible
 InfoQ
@@ -840,6 +856,7 @@ IoC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
+iPhone(s)?
 IPM
 IPM(s)
 IPPool(s)?
@@ -896,6 +913,7 @@ JFrog
 JHipster
 Jiang
 Jie
+jimwebber
 JIRAs
 Jitsu
 Jiu
@@ -1005,6 +1023,7 @@ KubeApps
 KubeCon
 [Kk]ubeconfig
 KUBECONFIG
+KUBECTL
 [kK]ubectl
 kubectl
 kubectx
@@ -1017,6 +1036,7 @@ Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
+Kubeseal
 KUDO
 [kK]ustomize
 KUTTL
@@ -1026,6 +1046,7 @@ lastAccessedTime
 latencies
 Lazu
 LDAP
+[Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
@@ -1092,6 +1113,8 @@ MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchers
 matchings
+mattstratton
+[Mm]atty
 maxUtilization
 Mayers
 MBeans
@@ -1181,10 +1204,12 @@ Nana
 Natively
 natively
 Neatro
+née
 Neeharika
 Neha
 Nenad
 Neo4j
+Neo4j's
 Nesterov
 NetApp('s)?
 Netty(-based)?
@@ -1198,6 +1223,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NNGroup
 no-brainer
 NODE_ENV
 NodeJS-Client
@@ -1420,6 +1446,7 @@ PSP(s)?
 PubSub(bing)?
 Pulkit
 pullPolicy
+Pulumi
 pushable
 putAll
 PuTTYgen
@@ -1502,6 +1529,7 @@ ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
 RestAssured
 Restic
+restorable
 RestrictedMethodAuthorizer
 Retrium
 revertibility
@@ -1521,6 +1549,7 @@ Rodislav
 ROI
 [Rr]ole([Bb]inding(s)?)?
 [Rr]ollout
+[Rr]ollouts
 rom-com
 rootPassword
 Rosecrance
@@ -1572,6 +1601,7 @@ Schutta
 Schwaber
 screencaster
 SCS
+SDD
 SDK(s)?
 SDS
 seaborn
@@ -1620,8 +1650,9 @@ SingleServer
 Sipe
 Siri
 [Ss]kaffold
+skillset
 Skyscanner
-SLA
+SLA(s)?
 Sletten
 SLI(s)
 slideshare
@@ -1673,6 +1704,7 @@ startupProbe(s)?
 stateful
 StatefulSet(s)?
 Statistics
+Stauffer
 STDERR|stderr
 STDOUT|stdout
 Steeltoe
@@ -1682,6 +1714,7 @@ Storbakken
 StoreAllCachedDeserializable
 strategizing
 Strategyzer
+Stratton
 StringBuilder
 struct
 STT
@@ -1792,6 +1825,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UC
 UCD
 UDP
 UI(s|-based)?
@@ -1854,6 +1888,7 @@ Vendio
 vendored
 Venkat
 Venkateswara
+verifiably
 versioned
 VersionTag
 VerticalPodAutoscaler
@@ -1897,6 +1932,7 @@ waypoints
 WCF
 webapp
 webapps_default
+Webber
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
@@ -1906,6 +1942,7 @@ WebSocket
 WebSphere
 WeChat
 well-intentioned
+Wes
 Westrum
 whiteboard(ed|ing)
 [Ww]hitepaper
@@ -1918,6 +1955,7 @@ Wittrock
 WORKDIR
 WorkloadEndpoint
 workspaces
+workstream
 WSL
 Wujec('s)
 x509
@@ -1931,6 +1969,7 @@ Xu
 YAML|yaml
 Yaron
 yay
+YCombinator
 Yonis
 youtube
 YTT

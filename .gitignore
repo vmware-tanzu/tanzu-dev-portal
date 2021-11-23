@@ -19,3 +19,6 @@
 
 # Local Netlify folder
 .netlify
+
+# Hugo lock file
+.hugo_build.lock
