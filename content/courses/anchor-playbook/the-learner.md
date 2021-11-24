@@ -23,7 +23,7 @@ A strong team is a great opportunity to let a new anchor level up.
 
 On highly functioning teams with a deep bench of experience, or a low-risk project, the anchor role can be an opportunity to gain experience the engineer might not otherwise obtain and to do so with the full support of mentors who have been there before. Creating an environment where anchors rotate more frequently can make it feel safer to assign the role to a rising engineer.
 
-![The a new anchor learning from the experts](/learningpaths/anchor-playbook/images/meeting2.jpg)
+![The a new anchor learning from the experts](/courses/anchor-playbook/images/meeting2.jpg)
 
 ### Responsibilities
 - Learn in a low risk, low stress environment

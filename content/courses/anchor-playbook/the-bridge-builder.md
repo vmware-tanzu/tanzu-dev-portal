@@ -21,7 +21,7 @@ oldPath: "/content/learningpaths/anchor-playbook/the-bridge-builder.md"
 For enterprise and portfolio-style projects, having a strong Bridge-Builder on the team is highly correlated with success.
 {{% /callout %}}
 
-![Bridge builder leading a meeting](/learningpaths/anchor-playbook/images/home1.jpg)
+![Bridge builder leading a meeting](/courses/anchor-playbook/images/home1.jpg)
 
 Many teams, in order to be empowered, must rely upon the work of others outside their context. The Bridge Builder makes an extra effort to coordinate and align with other teams or strategic relationships in order to successfully deliver. Often, these relationships are crucial to the team’s outcomes.
 
