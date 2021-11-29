@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }} td-topic">
+    {{ partial "amplitude.html" (dict "context" . "event" "topic viewed") }}
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+
+    <!-- Gather subtopics -->
+    {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+    {{ $subtopics := (slice) }}
+    {{ range $guides }}
+        {{ $subtopics = union $subtopics ( slice .Params.level2 )}}
+    {{ end }}
+    
+    <div class="container-fluid td-outer">
+        {{ partial "live-notify.html" . }}
+        <div class="td-main ">
+            <div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5">
+                <div class='container'>
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-8 py-2 py-lg-5">
+                            {{ .Render "content" }}
+                        </div>
+                        <div class="col-12 col-lg-4 py-2 py-lg-5">
+                            <div class="">
+                                <!-- Build subtopic boxes -->
+                                {{ range $subtopics }}
+                                    <div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+                                        {{ $subtopic := index (where (where $.Site.Pages "Section" "guides") ".Title" .) 0 }}
+                                        <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ $subtopic.RelPermalink }}">
+                                            <h2 class="link mt-3 h4 pt-0 mw-100">{{ $subtopic.Title }}</h2>
+                                            <p>{{ $subtopic.Description }}</p>
+                                        </a>
+                                    </div>   
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="topics-section">
+                <!-- Featured Content -->
+                {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $featured }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+
+
+                <!-- Getting Started-->
+                {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
+                {{ $gettingstarted := slice }}
+                {{ range $guides }}
+                    {{ if in .Params.tags "Getting Started" }}
+                        {{ $gettingstarted = $gettingstarted | append . }}
+                    {{ end }}
+                {{ end }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $gettingstarted }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+  <script>
+    $( ".show-all-button" ).click(function() {
+        $(this).parent().parent().find(".hidden-item:first").show( 20, function showNext() {
+            $(this).next( ".hidden-item" ).show( 20, showNext );
+        });
+        $(this).parent().hide();
+    });
+  </script>
+
+</html>
+
