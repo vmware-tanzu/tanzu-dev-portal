@@ -382,6 +382,7 @@ crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
+CTF
 CTO
 CTRL-C
 currentClientConnections
