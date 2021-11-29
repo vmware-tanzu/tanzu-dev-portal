@@ -37,7 +37,7 @@ what:
 ---
 ## How to Use this Method
 ### Event Storming Background
-`Event Storming` is a workshop created by `Alberto Brandolini`, which aims to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. The fundamentals of this practice are already described in the `Tanzu Developer Center` [here](/practices/event-storming) and in `Alberto Brandolini`'s book [Introducing Event Storming](https://leanpub.com/introducing_eventstorming).
+Event Storming is a workshop created by Alberto Brandolini, which aims to discover a set of domain events, each represented as a colored sticky (usually orange) and ordered along a timeline. The fundamentals of this practice are already described in the Tanzu Developer Center [here](/practices/event-storming) and in Alberto Brandolini's book [Introducing Event Storming](https://leanpub.com/introducing_eventstorming).
 
 The book also describes Event Storming in 3 different exercises:
 - Bigger Picture
@@ -47,12 +47,12 @@ The book also describes Event Storming in 3 different exercises:
 This article focuses on the Process Modelling flavor
 
 ### Event Storming Grammar
-Additional `Event Storming` exercises have the aim of adding layers of notation in the form of different colored stickies, also referred to as `Grammar`, to capture more information and validate assumptions. `Alberto Brandolini` suggests it is like making a pizza, where events and a timeline give you a margarita, but you can add more grammar to make different pizzas. Though he did warn that you might be tempted to put grammar that isn't suited for Event Storming, such as data tables. He likens this to pineapple, and insists it should never be on your pizza.
+Additional Event Storming exercises have the aim of adding layers of notation in the form of different colored stickies, also referred to as Grammar, to capture more information and validate assumptions. Alberto Brandolini suggests it is like making a pizza, where events and a timeline give you a margarita, but you can add more grammar to make different pizzas. Though he did warn that you might be tempted to put grammar that isn't suited for Event Storming, such as data tables. He likens this to pineapple, and insists it should never be on your pizza.
 
 ### Process Modelling Exercise
-The Practice described below is the additional exercise used by `Process modelling`, as it was taught in `Alberto Brandolini`'s workshop, [Remote Event Storming](https://www.eventstorming.com/). 
+The Practice described below is the additional exercise used by Process modelling, as it was taught in Alberto Brandolini's workshop, [Remote Event Storming](https://www.eventstorming.com/). 
 
-While formally this method is best used for understanding many large, complex and high-level processes across an entire company, the general principles and grammar of `Process Modelling` have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
+While formally this method is best used for understanding many large, complex and high-level processes across an entire company, the general principles and grammar of Process Modelling have been adopted successfully to discover or validate workflows and pipelines at much smaller scales and through existing systems.
 
 The output from these workshops can be used to discover, validate or design software that supports an end-to-end business process. Engineers can see this as an algorithmic model of the problem space, as opposed to an Object Oriented model that you might achieve using Unified Modelling Language (UML).
 
@@ -78,21 +78,21 @@ The output from these workshops can be used to discover, validate or design soft
 2. #### Prioritize Processes
    To narrow down the scope of discovery a single process should be prioritized.
    This might be based on pain points and opportunities, business value etc.
-   There are many exercises described in the `Tanzu Developer Center` that can be used to identify priorities.
+   There are many exercises described in the Tanzu Developer Center that can be used to identify priorities.
 3. #### Arrange the process modelling board
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
    - Add a grammar legend to your board (as shown below with grammar definition).
-   - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title `Preconditions`.
+   - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title Preconditions.
    - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process.
    - Arrange any remaining events in chronological order from left to right between the preconditions and postconditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
 4. #### First Narration
-   As described in the prerequisites, when moving from the storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory `golden path` outcome. A `golden path` is a flow through a process, where everything goes smoothly and no failures or issues arise.
+   As described in the prerequisites, when moving from the storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory golden path outcome. A golden path is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
    ##### Roles:
    - There are typically 3 roles:
-     - A `Narrator` reads through the process from left to right.
-     - `The Audience` listens to the narrator and assists in discovering the process.
-     - A `Scribe` records the process on the board.
+     - A Narrator reads through the process from left to right.
+     - The Audience listens to the narrator and assists in discovering the process.
+     - A Scribe records the process on the board.
    - Any participant can take on any of these roles. Rotating roles should also be encouraged, so everyone develops both ownership of the process and a deeper familiarity with the exercise.
 
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. While you can add grammar in the first narration it is not necessary. The primary goal is to start from en entry point into the system and model the process until a final output that is agreed to be within the scope of your project.
@@ -132,7 +132,7 @@ The output from these workshops can be used to discover, validate or design soft
 5. #### Narrate the process again
    The goal is to capture enough of the process over several narrations to identify a thin slice. Each time capturing more information to improve the participants understanding of the process and build a consensus.
    - Correct inaccuracies and add additional grammar stickies where needed.
-   - If there is a prioritized pain point linked to a sticky that has not been included in the `golden path` flow, try to discover the flow that will include that sticky.
+   - If there is a prioritized pain point linked to a sticky that has not been included in the golden path flow, try to discover the flow that will include that sticky.
    - Repeat this until you are satisfied you have enough of the process to identify a thin slice to work on.
 
 6. #### Review Questions, Pain Points and Opportunities
@@ -184,13 +184,13 @@ Story Writing:
 
 ## Related Practices
 #### Event Storming 
-As mentioned `Process Modelling` is a form of `Event Storming`, and as taught by `Alberto Brandolini`, is a natural follow on exercise to the more common `Bigger Picture` workshop. Therefore the `Process Modelling` exercise naturally offers a way to enrich any `Event Storming` session with additional grammar. The exercise can also be carried out with smaller more focused groups of SMEs to help with planning and managing attendance.
+As mentioned Process Modelling is a form of Event Storming, and as taught by Alberto Brandolini, is a natural follow on exercise to the more common Bigger Picture workshop. Therefore the Process Modelling exercise naturally offers a way to enrich any Event Storming session with additional grammar. The exercise can also be carried out with smaller more focused groups of SMEs to help with planning and managing attendance.
 #### Software Design
-Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a different architectural model, such as Event and Domain Driven microservice architecture, a simple Pipeline or even `CQRS` and `Event Sourcing` patterns. However this is often where you lose `Subject Matter Experts`, and the conversation often continues from a more technical perspective. It can be useful to revisit this board and get both technical and business clarity on the problem and the solution being delivered.
+Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a different architectural model, such as Event and Domain Driven microservice architecture, a simple Pipeline or even CQRS and Event Sourcing patterns. However this is often where you lose Subject Matter Experts, and the conversation often continues from a more technical perspective. It can be useful to revisit this board and get both technical and business clarity on the problem and the solution being delivered.
 ##### Event Storming | Software Design
-As with `Process Modelling` exercise, `Software Design` offers additional grammar to enrich your `Bigger Picture` and `Process modelling` workshops.
+As with Process Modelling exercise, Software Design offers additional grammar to enrich your Bigger Picture and Process modelling workshops.
 ##### Unified Modelling Language (UML) / C4 Component Diagrams 
-If you are using an Object-Oriented based notation to model your architecture, `Process Modelling` offers an algorithmic view of the problem you are solving and can be used to complete a number of diagrams as the process is narrated.
+If you are using an Object-Oriented based notation to model your architecture, Process Modelling offers an algorithmic view of the problem you are solving and can be used to complete a number of diagrams as the process is narrated.
 ##### Boris and SNAP
 The grammar used by Process Modelling offers a lot of information that can be directly used in the completion of [Boris](/practices/boris) and [SNAP](/practices/boris) exercises, to map out the flow through the system from a technical perspective.
 #### User Journey Mapping
@@ -203,7 +203,7 @@ The thin slice defined in this exercise, can help focus user interviews and iden
 ##### Story Writing
 The process identifies both users and policy makers. These personas and their objectives for each policy can be used to write stories that deliver value to either the user or the business.
 #### Swift Methodology
-Process Modelling can be used as part of the [Swift Method](/practices/swift-method), created by `Shaun Anderson`. A further article will be published to detail how to use Process Modelling as part of the `Swift Method`
+Process Modelling can be used as part of the [Swift Method](/practices/swift-method), created by Shaun Anderson. A further article will be published to detail how to use Process Modelling as part of the Swift Method
 ## Facilitator Notes & Tips
 #### Ubiquitous Language: 
 - Naming can be contentious and often disagreements can be hard to settle. It is important not to spend too much time discussing names, and to use questions to allow for a less than perfect settlement to keep the conversation going.  
@@ -218,12 +218,12 @@ Finding suitable events is important to getting a good model
 #### Policies: 
 Writing Policies can be important to ensure you have the correct flow and capturing the correct business requirement
  - Policies should be written as a business decision that guides an actor or system to the correct action. 
- - The actor may be responsible for implementing the policy but are rarely responsible for defining the policy. When discovering Policies, it is always helpful to identify `Policy Makers`. 
+ - The actor may be responsible for implementing the policy but are rarely responsible for defining the policy. When discovering Policies, it is always helpful to identify Policy Makers. 
    - Add a sticky to each policy to identify a name and role of someone in the company that can both detail and influence the policy.
-   - If good Roles are identified in the `Event Storming` stage then you should be able to identify roles that influence the business decision.
+   - If good Roles are identified in the Event Storming stage then you should be able to identify roles that influence the business decision.
 
 #### Thin Slices: 
-Thin Slices can be heavily influenced by the goals of your project, but a good start might be to pick out a `golden path` and reduce it to the least set of events required to achieve the final outcome.
+Thin Slices can be heavily influenced by the goals of your project, but a good start might be to pick out a golden path and reduce it to the least set of events required to achieve the final outcome.
 
 ## Real World Examples
 ![This is the placeholder for sample 1](/images/practices/event-storming-process-modelling/process-modelling-a-short-story.jpg)
