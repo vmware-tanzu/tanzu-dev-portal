@@ -317,6 +317,7 @@ co-organiser
 Coby
 [Cc]odebase(s)?
 CodeFresh
+CodeItLive
 CodeOne
 CoffeeOps
 cognisant
@@ -934,6 +935,7 @@ JPA
 JProfiler
 JRE
 JRuby
+JS
 JSON-to-Java
 JSON(-formatted)?
 JSONFormatter
@@ -972,6 +974,7 @@ Karavi
 Kat
 [Kk]ata(s)?
 KEK(s)?
+Kendo
 kendrickcoleman
 Kerievsky
 [Kk]ey[Ss]tore
@@ -1220,6 +1223,7 @@ NFJ?S
 NFT
 [Nn]ginx|NGINX
 NIC
+Nicholl
 Nicoll
 NIST
 NLB(s)?

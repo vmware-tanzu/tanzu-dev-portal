@@ -1,27 +1,24 @@
 ---
-Date: '2021-12-07T16:30:00-00:00'
-Description: .NET in the Wild with Matty Stratton
-PublishDate: '2021-11-19T00:00:00-00:00'
+Date: '2021-11-30T16:30:00-00:00'
+Description: .NET in the Wild with Alyssa Nicholl
+PublishDate: '2021-11-24T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/2
 author: laylap
-date: '2021-12-07'
+date: '2021-11-30'
 episode: '2'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2021-11-19'
-title: Matty Stratton tries to teach Layla DevOps!
+lastmod: '2021-11-24'
+title: Alyssa Nicholl and Layla talk about being a JS Girl in a .NET World!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
 youtube: 
 ---
 
-Layla is joined by Matt Stratton, a Staff Developer Advocate at Pulumi, founder and co-host of the popular Arrested DevOps podcast, and the global chair of the DevOpsDays set of conferences.
+Layla is joined by Alyssa,  an Angular Developer Advocate for Kendo UI and a Google Developer Expert for Angular. Alyssa has spoken at over 30 conferences Internationally. She streams weekly on the Angular Air podcast and Twitch CodeItLive channel. She enjoys gaming, scuba diving, and has a little one that fondly goes by "Mr. Milks".
 
-Matt has over 20 years of experience in IT operations and is a sought-after speaker internationally, presenting at Agile, DevOps, and cloud engineering focused events worldwide. Demonstrating his keen insight into the changing landscape of technology, he recently changed his license plate from DEVOPS to KUBECTL.
-
-He lives in Chicago and has three awesome kids, whom he loves just a little bit more than he loves Diet Coke. Matt is the keeper of the Thought Leaderboard for the DevOps Party Games online game show and you can find him on Twitter at @mattstratton.
-
-- [Twitter](https://twitter.com/mattstratton)
+- [Twitter](https://twitter.com/AlyssaNicoll)
+- [Twitch](https://twitch.tv/CodeItLive)
