@@ -6,7 +6,7 @@ location: "Cardiff, UK"
 
 # Social Media
 twitter: "denhamparry"
-website: "denhamparry.co.uk"
+website: "https://denhamparry.co.uk/"
 facebook: ""
 linkedin: ""
 github: ""
@@ -21,7 +21,7 @@ attack and defend Cloud Native infrastructure.  He co-founded Cloud Native Wales
 to help people learn Cloud Native technologies and establish a community to support each other. 
 When he's not playing with tech, he's busy trying to act like an adult and spending time with his 
 family. Follow Lewis on his personal Twitter @denhamparry and Cloud Native Wales @cloudnativewal, 
-also check out his website at denhamparry.co.uk.
+also check out his website at [denhamparry.co.uk](https://denhamparry.co.uk/).
 
 
 <!--more-->
