@@ -1,10 +1,10 @@
 ---
-Date: '2021-10-26T09:00:00-07:00'
+Date: '2021-11-23T10:00:00-07:00'
 Description: "Testing with Spring and JUnit 5"
 aliases:
-- /tv/tanzu-tuesdays/72
+- /tv/tanzu-tuesdays/75
 draft: true
-episode: '72'
+episode: '75'
 explicit: 'no'
 guests:
 - Sam Brannen
@@ -12,7 +12,7 @@ hosts:
 - Tiffany Jernigan
 - Whitney Lee
 - Leigh Capili
-lastmod: '2021-10-26'
+lastmod: '2021-11-23'
 minutes: 60
 title: "Testing with Spring and JUnit 5"
 truncate: ''
