@@ -1226,7 +1226,6 @@ NFJ?S
 NFT
 [Nn]ginx|NGINX
 NIC
-Nicholl
 Nicoll
 NIST
 NLB(s)?
