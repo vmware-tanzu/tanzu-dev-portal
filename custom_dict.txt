@@ -1371,6 +1371,7 @@ Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
+pivnet
 PKCS
 PKI
 plaintext
