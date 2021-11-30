@@ -73,7 +73,7 @@ If we start to have all of the code globally scoped, we may come up against nami
 
 If it really doesn’t make sense to extract these using directives to the global usings file, then don’t. Only extract the using directives that are shared across multiple files.
 
-Now whether or not you put these locally scoped using statements inside or outside the namespace statement is an entirely different question. Check out this [Stack Overflow](https://stackoverflow.com/questions/125319/should-using-directives-be-inside-or-outside-the-namespace) question and make up your own mind 😉.
+Now, whether or not you put these locally scoped using statements inside or outside the namespace statement is an entirely different question. Check out this [Stack Overflow](https://stackoverflow.com/questions/125319/should-using-directives-be-inside-or-outside-the-namespace) question and make up your own mind 😉.
 
 Thanks for reading. If you have any thoughts or ideas, please say hello on any of the channels below:
 
