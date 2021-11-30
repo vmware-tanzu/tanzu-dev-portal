@@ -291,6 +291,7 @@ CloudEvents
 Cloudflare
 CloudHealth
 CloudNativeCon
+cloudnativewal
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -381,6 +382,7 @@ crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
+CTF
 CTO
 CTRL-C
 currentClientConnections
@@ -440,6 +442,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+denhamparry
 deployable
 [Dd]eployable
 deserialize
