@@ -15,7 +15,7 @@ minutes: 120
 episode: "48"
 explicit: "yes"
 title: "The one with Arun Goel"
-#youtube: ""
+youtube: "-9Blqnd3Td4"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
