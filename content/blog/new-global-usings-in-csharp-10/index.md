@@ -25,7 +25,7 @@ Before you can start making use of [Global Using Directive](https://docs.microso
 - The [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) installed
 - An IDE of your choice as long as it supports .NET 6
 
-## Creating a Global Usings file
+## Creating a global usings file
 
 Many of the most common using directives will already be in a global format out of the box, known as “implicit using directives”, but I find this obfuscation a little confusing.
 
