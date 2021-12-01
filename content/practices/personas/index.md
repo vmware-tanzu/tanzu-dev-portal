@@ -79,6 +79,8 @@ why:
 ### Success/Expected Outcomes
 Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible.
 
+### Variations
+
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
 
