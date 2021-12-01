@@ -74,7 +74,7 @@
 
     <div class="row justify-content-center flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
-        {{ range $learningpaths }} <!-- TODO: Get featured learning paths -->
+        {{ range first 5 $learningpaths }} <!-- TODO: Get featured learning paths -->
             {{ partial "learningpaths-card-home.html" . }}
         {{ end }}
 

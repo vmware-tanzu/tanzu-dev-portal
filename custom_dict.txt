@@ -89,6 +89,7 @@ APIs?
 APM
 AppArmor
 AppDynamics
+Appel
 appender
 application-centric
 ApplicationEvent
@@ -167,6 +168,7 @@ Becki
 Beda('s)?
 beforeEnqueue
 beforeTransmit
+behaviour
 behavioural
 Behrooz
 Belamaric
@@ -290,6 +292,7 @@ CloudEvents
 Cloudflare
 CloudHealth
 CloudNativeCon
+cloudnativewal
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -316,6 +319,7 @@ co-organiser
 Coby
 [Cc]odebase(s)?
 CodeFresh
+CodeItLive
 CodeOne
 CoffeeOps
 cognisant
@@ -379,6 +383,7 @@ crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
+CTF
 CTO
 CTRL-C
 currentClientConnections
@@ -438,6 +443,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+denhamparry
 deployable
 [Dd]eployable
 deserialize
@@ -450,6 +456,7 @@ DestinationRule
 developer-centric
 DevNexus
 Devoops
+DEVOPS
 DevOps(-related)?
 DevOpsDays(KC)?
 DevSecOps
@@ -460,6 +467,7 @@ diehard
 Dieruf
 Dieu
 differentiators
+DigiSign
 Dikastes
 DirtiesContext
 disambiguated
@@ -521,6 +529,7 @@ Eads
 eBPF
 EBS
 EC2
+ECE
 echoserver
 EclipseLink
 ECMP
@@ -557,6 +566,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+ESRI
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -706,6 +716,7 @@ ghostUsername
 Gibb
 GIDS
 Gilardi
+GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
 [Gg]ithub
@@ -749,6 +760,7 @@ Groupon
 gRPC(-based)?
 Grygleski
 Grzejszczak
+GSB
 GUID(s)?
 Gunicorn
 Guntur
@@ -821,6 +833,7 @@ imgpkg
 IMmUjUjBzes
 [Ii]mpactful
 implementors
+imposter
 [Ii]ncentivized
 [Ii]ncompressible
 InfoQ
@@ -905,6 +918,7 @@ JFrog
 JHipster
 Jiang
 Jie
+jimwebber
 JIRAs
 Jitsu
 Jiu
@@ -925,6 +939,7 @@ JPA
 JProfiler
 JRE
 JRuby
+JS
 JSON-to-Java
 JSON(-formatted)?
 JSONFormatter
@@ -963,6 +978,7 @@ Karavi
 Kat
 [Kk]ata(s)?
 KEK(s)?
+Kendo
 kendrickcoleman
 Kerievsky
 [Kk]ey[Ss]tore
@@ -1014,6 +1030,7 @@ KubeApps
 KubeCon
 [Kk]ubeconfig
 KUBECONFIG
+KUBECTL
 [kK]ubectl
 kubectl
 kubectx
@@ -1026,6 +1043,7 @@ Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
+Kubeseal
 KUDO
 [kK]ustomize
 KUTTL
@@ -1033,8 +1051,11 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+layla-p
+LaylaCodesIt
 Lazu
 LDAP
+[Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
@@ -1101,6 +1122,8 @@ MARIADB-(ADMIN|REPL)-PASSWORD
 Masala
 matchers
 matchings
+mattstratton
+[Mm]atty
 maxUtilization
 Mayers
 MBeans
@@ -1195,6 +1218,7 @@ Neeharika
 Neha
 Nenad
 Neo4j
+Neo4j's
 Nesterov
 NetApp('s)?
 Netty(-based)?
@@ -1431,6 +1455,7 @@ PSP(s)?
 PubSub(bing)?
 Pulkit
 pullPolicy
+Pulumi
 pushable
 putAll
 PuTTYgen
@@ -1465,6 +1490,7 @@ rebalance
 [Rr]ebase
 rebase(d)
 rebasing
+recognise
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1585,6 +1611,7 @@ Schutta
 Schwaber
 screencaster
 SCS
+SDD
 SDK(s)?
 SDS
 seaborn
@@ -1697,6 +1724,7 @@ Storbakken
 StoreAllCachedDeserializable
 strategizing
 Strategyzer
+Stratton
 StringBuilder
 struct
 STT
@@ -1807,6 +1835,7 @@ TypeRegistry
 (U)?UID(s)?
 UAA
 [Uu]ber
+UC
 UCD
 UDP
 UI(s|-based)?
@@ -1849,6 +1878,7 @@ url
 URL(s)?
 USD
 userDetails
+[Uu]sings
 Util(s)?
 UX
 [Vv][123]
@@ -1869,6 +1899,7 @@ Vendio
 vendored
 Venkat
 Venkateswara
+verifiably
 versioned
 VersionTag
 VerticalPodAutoscaler
@@ -1912,6 +1943,7 @@ waypoints
 WCF
 webapp
 webapps_default
+Webber
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?

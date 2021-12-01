@@ -5,6 +5,10 @@
 - [Getting Started Building a Local Deployment of the Tanzu Developer Center](#getting-started-building-a-local-deployment-of-the-tanzu-developer-center)
   - [Software Installation Prerequisites](#software-installation-prerequisites)
   - [Run a Local Copy of the Tanzu Developer Center](#run-a-local-copy-of-the-tanzu-developer-center)
+- [Troubleshooting](#troubleshooting)
+  - [Q. I'm receiving an error about cloning `themes/docsy`](#q-im-receiving-an-error-about-cloning-themesdocsy)
+  - [Q. `make preview` is throwing a `fatal error: pipe failed` error](#q-make-preview-is-throwing-a-fatal-error-pipe-failed-error)
+  - [Q. I am on Windows and `make preview` doesn't work](#q-i-am-on-windows-and-make-preview-doesnt-work)
 - [Open Projects, Issues, and Content Backlog](#open-projects-issues-and-content-backlog)
 - [Contributing](#contributing)
   - [Contributing Code](#contributing-code)
@@ -77,6 +81,7 @@ To get a local copy of the Tanzu Developer Center up and running follow these st
      make preview
      ```
 
+
 ## Troubleshooting
 
 ### Q. I'm receiving an error about cloning `themes/docsy`
@@ -109,6 +114,10 @@ ulimit -n 65535
 sudo sysctl -w kern.maxfiles=100000
 sudo sysctl -w kern.maxfilesperproc=65535
 ```
+
+### Q. I am on Windows and `make preview` doesn't work
+
+On Windows, you may need to use `hugo server -D` to start the application. The site will then be available on `http://localhost:1313/`
 
 ## Open Projects, Issues, and Content Backlog
 

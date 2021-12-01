@@ -214,13 +214,18 @@ body.tv-episode #register .mktoForm select {
  #hero.videos-hero {
    background-image: url({{ "/images/backgrounds/background-video-light.svg" | relURL }}) !important;
  }
+ #hero.data-hero,
  #hero.community-hero {
    background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }}) !important;
  }
  #hero.practices-hero {
    background-image: url({{ "/images/backgrounds/background-practices-light.svg" | relURL }}) !important;
  }
-
+ @media(max-width: 1300px) {
+  body #hero.data-hero {
+    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
+  }
+ }
 @media(max-width: 991px) {
   body #hero.guides-hero,
   body #hero.patterns-hero,

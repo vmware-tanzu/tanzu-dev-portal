@@ -287,16 +287,6 @@ body {
       padding-left: 0;
       padding-right: 0;
     }
-    .col-lg-4 {
-      padding-left: 0;
-      padding-right: 30px;
-      &:last-child {
-        padding-right: 0;
-      }
-      @media (max-width: 991px) {
-        padding-right: 0;
-      }
-    }
     a:hover,
     a:focus {
       .gradient-edge-left {
@@ -1432,6 +1422,7 @@ body {
   body .learningpaths-intro {
     max-width: 920px;
   }
+  body .data-hero,
   body .learningpaths-hero,
   body .workshops-hero {
     .lead {
