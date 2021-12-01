@@ -4,7 +4,7 @@ description:
 lastmod: '2021-11-30'
 team:
 - Layla Porter
-title: "The New Global Usings in C# 10"
+title: "The New Global Usings Directive in C# 10"
 languages:
 - dotnet
 url: "/blog/new-global-usings-in-csharp-10"
