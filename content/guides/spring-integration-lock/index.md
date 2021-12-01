@@ -23,7 +23,7 @@ level1: Building Modern Applications
 level2: Frameworks and Languages
 ---
 
-When designing microservices, you want to create code to handle multiple instances of services to run at the same time. When you only want to process something one time, or do something similar to the [Leader Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election), you cannot synchronize if the code runs in different pods. As a result, you have to use an external method that is fraught with pitfalls during implementation[^1]. 
+When designing microservices, the typical pattern is to design services that can handle multiple instances running at the same time. However, there are situations where only a single service is preferable. For example, in the [Leader Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election), you cannot synchronize if the code runs in different pods. As a result, you have to use an external method that is fraught with pitfalls during implementation[^1]. 
 
 Thankfully, Spring has done a lot of the hard work. All you need to do is provide it with a database connection and it will create a distributed lock. This example will show the lock with both Redis and JDBC.
 
@@ -43,8 +43,7 @@ Here is a [completed example on GitHub](https://github.com/estand64/distributed-
 To package imports, do the following:
 
 1. Import the necessary Spring Integration packages into your `pom.xml` file.
-2. Import the Spring Integration subpackages and drivers to connect to your datastore for either the Redis or JDBC version.
-3. All versions need the following:
+2. Ensure all versions include the following:
 
      ```xml
      <dependency\>
@@ -53,9 +52,7 @@ To package imports, do the following:
      </dependency>
      ```
 
----
-
-4. Do one of the following: 
+3. Do one of the following: 
 
    - If you are using `Redis`, import the following:
 
@@ -73,8 +70,6 @@ To package imports, do the following:
 	     <artifactId>lettuce-core</artifactId>
      </dependency>
      ```
-
----
 
    - If you are using `JDBC`, import the following:
 
@@ -112,8 +107,6 @@ To package imports, do the following:
 
 Once you import the necessary packages, you can start setting up your code. The first order of business is to create the lock repository beans that will be used to grab the locks later. 
 
----
-
 ### Redis
 
 With the Redis version, you need to create a `String` name to represent the `LockRegistry`. To learn more about how the `@Bean` provides access to an object [look here](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-spring-beans-and-dependency-injection.html).
@@ -126,8 +119,6 @@ public RedisLockRegistry redisLockRegistry(RedisConnectionFactory redisConnectio
     return new RedisLockRegistry(redisConnectionFactory, LOCK_NAME);
 }
 ```
-
----
 
 ### JDBC
 
@@ -195,8 +186,6 @@ It's OK if you don't understand everything that's happening here. The important 
 
 2. Set up the service class that will contain the logic that you want to lock. To do this, create a new class that implements `LockService`. Make sure it looks similar to the following:
 
-    ---
-
     - Redis:
 
       ```java
@@ -210,8 +199,6 @@ It's OK if you don't understand everything that's happening here. The important 
           }
       }
       ```
-
----
 
    - JDBC:
 
