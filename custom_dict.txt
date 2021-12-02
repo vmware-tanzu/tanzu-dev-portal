@@ -91,6 +91,7 @@ AppArmor
 AppDynamics
 Appel
 appender
+Applegate
 application-centric
 ApplicationEvent
 applicationPort
