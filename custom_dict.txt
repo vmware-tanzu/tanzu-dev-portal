@@ -169,6 +169,7 @@ Becki
 Beda('s)?
 beforeEnqueue
 beforeTransmit
+behaviour
 behavioural
 Behrooz
 Belamaric
@@ -1051,6 +1052,8 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+layla-p
+LaylaCodesIt
 Lazu
 LDAP
 [Ll]eaderboard
@@ -1219,6 +1222,7 @@ Neo4j
 Neo4j's
 Nesterov
 NetApp('s)?
+NetBase
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1227,7 +1231,6 @@ NFJ?S
 NFT
 [Nn]ginx|NGINX
 NIC
-Nicholl
 Nicoll
 NIST
 NLB(s)?
@@ -1489,6 +1492,7 @@ rebalance
 [Rr]ebase
 rebase(d)
 rebasing
+recognise
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1876,6 +1880,7 @@ url
 URL(s)?
 USD
 userDetails
+[Uu]sings
 Util(s)?
 UX
 [Vv][123]
