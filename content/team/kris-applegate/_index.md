@@ -3,6 +3,7 @@ name: Kris Applegate
 roles: ["guest"]
 skills: ""
 location: ""
+photo: "kris-applegate.jpg"
 
 # Social Media
 twitter: ""
