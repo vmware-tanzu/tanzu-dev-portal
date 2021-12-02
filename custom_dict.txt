@@ -168,6 +168,7 @@ Becki
 Beda('s)?
 beforeEnqueue
 beforeTransmit
+behaviour
 behavioural
 Behrooz
 Belamaric
@@ -291,6 +292,7 @@ CloudEvents
 Cloudflare
 CloudHealth
 CloudNativeCon
+cloudnativewal
 CloudWatch
 Clozel
 cluster-proportional-autoscaler
@@ -317,6 +319,7 @@ co-organiser
 Coby
 [Cc]odebase(s)?
 CodeFresh
+CodeItLive
 CodeOne
 CoffeeOps
 cognisant
@@ -380,6 +383,7 @@ crystal(l)?ize
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
+CTF
 CTO
 CTRL-C
 currentClientConnections
@@ -439,6 +443,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+denhamparry
 deployable
 [Dd]eployable
 deserialize
@@ -934,6 +939,7 @@ JPA
 JProfiler
 JRE
 JRuby
+JS
 JSON-to-Java
 JSON(-formatted)?
 JSONFormatter
@@ -972,6 +978,7 @@ Karavi
 Kat
 [Kk]ata(s)?
 KEK(s)?
+Kendo
 kendrickcoleman
 Kerievsky
 [Kk]ey[Ss]tore
@@ -1044,6 +1051,8 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+layla-p
+LaylaCodesIt
 Lazu
 LDAP
 [Ll]eaderboard
@@ -1212,6 +1221,7 @@ Neo4j
 Neo4j's
 Nesterov
 NetApp('s)?
+NetBase
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1481,6 +1491,7 @@ rebalance
 [Rr]ebase
 rebase(d)
 rebasing
+recognise
 Recommender
 [Rr]eddit
 [rR]edis
@@ -1868,6 +1879,7 @@ url
 URL(s)?
 USD
 userDetails
+[Uu]sings
 Util(s)?
 UX
 [Vv][123]

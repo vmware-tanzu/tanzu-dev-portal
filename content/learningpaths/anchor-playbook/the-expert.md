@@ -42,4 +42,4 @@ The "consulting" experience and technical chops of this anchor often catches the
 - Anchors can take on a significant emotional burden of making sure decisions are right
 - Anchors that take on this role raise expectations similar to those of a tech lead
 - It is an unreasonable expectation for an engineer to be the Expert for all the projects they anchor
-- Implicit and gender and other biases can determine the success an anchor has in this role, regardless of their skill
+- Implicit of gender and other biases can influence the success an anchor has in this role, regardless of their skill
