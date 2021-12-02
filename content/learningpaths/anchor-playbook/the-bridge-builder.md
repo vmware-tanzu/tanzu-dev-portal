@@ -16,12 +16,12 @@ aliases:
 > CONNECTS TEAMS WITHIN A PRODUCT PROGRAM OR PORTFOLIO
 
 {{% callout %}}
-For enterprise and portfolio-style projects, having a strong Bridge-Builder on the team is highly correlated with success.
+For enterprise and portfolio-style projects, having a strong Bridge Builder on the team is highly correlated with success.
 {{% /callout %}}
 
 ![Bridge builder leading a meeting](/learningpaths/anchor-playbook/images/home1.jpg)
 
-Many teams, in order to be empowered, must rely upon the work of others outside their context. The Bridge Builder makes an extra effort to coordinate and align with other teams or strategic relationships in order to successfully deliver. Often, these relationships are crucial to the team’s outcomes.
+Many teams, in order to be empowered, must rely upon the work of others outside their context. The Bridge Builder makes an extra effort to coordinate and align with other teams or strategic relationships in order to successfully deliver. Often, these relationships are crucial for the team to achieve their outcomes.
 
 ### Responsibilities
 - Leverage the relationships of others to influence stakeholders
@@ -31,8 +31,8 @@ Many teams, in order to be empowered, must rely upon the work of others outside 
 
 ### Considerations
 - Bring stakeholders into more of the technical conversations to inform them of decisions being made
-- Carry context/collaborate across account teams
-- While this anchortype is similar to [the Shield](/learningpaths/anchor-playbook/the-shield), it emphasizes collaboration other with teams rather than firefighting
+- Carry context and collaborate across teams in a portfolio of multiple teams and projects
+- While this anchortype is similar to [the Shield](/learningpaths/anchor-playbook/the-shield), it emphasizes collaboration other with teams rather than firefighting and protecting the team
 
 ### Challenges
 - Different projects, internal organizations, and companies might have different expectations for anchors, so coordinating with other anchors and teams can be challenging for anchors who have become very accustom to their own project's dynamics 
