@@ -23,7 +23,7 @@ level1: Building Modern Applications
 level2: Frameworks and Languages
 ---
 
-When designing microservices, the typical pattern is to design services that can handle multiple instances running at the same time. However, there are situations where only a single service is preferable. For example, in the [Leader Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election), you cannot synchronize if the code runs in different pods. As a result, you have to use an external method that is fraught with pitfalls during implementation[^1]. 
+When designing microservices, the typical pattern is to design services that can handle multiple instances running at the same time. However, there are situations where processing only on a single service is preferable. For example, in the [Leader Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election), you cannot synchronize if the code runs in different pods. As a result, you have to use an external method that is fraught with pitfalls during implementation[^1].
 
 Thankfully, Spring has done a lot of the hard work. All you need to do is provide it with a database connection and it will create a distributed lock. This example will show the lock with both Redis and JDBC.
 
@@ -45,67 +45,67 @@ To package imports, do the following:
 1. Import the necessary Spring Integration packages into your `pom.xml` file.
 2. Ensure all versions include the following:
 
-     ```xml
-     <dependency\>
-	     <groupId>org.springframework.boot</groupId>
-	     <artifactId>spring-boot-starter-integration</artifactId>
-     </dependency>
-     ```
+   ```xml
+   <dependency\>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-integration</artifactId>
+   </dependency>
+   ```
 
-3. Do one of the following: 
+3. Do one of the following:
 
    - If you are using `Redis`, import the following:
 
-    ```xml
-     <dependency>
-	     <groupId>org.springframework.boot</groupId>
-	     <artifactId>spring-boot-starter-data-redis</artifactId>
-     </dependency>
-     <dependency>
-	     <groupId>org.springframework.integration</groupId>
-	     <artifactId>spring-integration-redis</artifactId>
-     </dependency>
-     <dependency>
-	     <groupId>io.lettuce</groupId>
-	     <artifactId>lettuce-core</artifactId>
-     </dependency>
-     ```
+   ```xml
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <dependency>
+       <groupId>org.springframework.integration</groupId>
+       <artifactId>spring-integration-redis</artifactId>
+    </dependency>
+    <dependency>
+       <groupId>io.lettuce</groupId>
+       <artifactId>lettuce-core</artifactId>
+    </dependency>
+   ```
 
    - If you are using `JDBC`, import the following:
 
      ```xml
      <dependency>
-	     <groupId>org.springframework.integration</groupId>
-	     <artifactId>spring-integration-jdbc</artifactId>
+        <groupId>org.springframework.integration</groupId>
+        <artifactId>spring-integration-jdbc</artifactId>
      </dependency>
      <dependency>
-	     <groupId>org.springframework.boot</groupId>
-	     <artifactId>spring-boot-starter-jdbc</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
      </dependency>
      <dependency>
-	     <groupId>org.postgresql</groupId>
-	     <artifactId>postgresql</artifactId>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
      </dependency>
      ```
 
-     The JDBC version of the distributed lock needs the database to have some tables and indexes set up in order to work. If you do not set these up the first time you attempt to obtain the lock, a JDBC Exception will be thrown. The current collection of SQL files for this can be found in the [Spring Integration JDBC github repo](https://github.com/spring-projects/spring-integration/tree/e901c89fef3eea00ddf6d503ae9926667a1d6972/spring-integration-jdbc/src/main/resources/org/springframework/integration/jdbc). 
-     
+     The JDBC version of the distributed lock needs the database to have some tables and indexes set up in order to work. If you do not set these up the first time you attempt to obtain the lock, a JDBC Exception will be thrown. The current collection of SQL files for this can be found in the [Spring Integration JDBC github repo](https://github.com/spring-projects/spring-integration/tree/e901c89fef3eea00ddf6d503ae9926667a1d6972/spring-integration-jdbc/src/main/resources/org/springframework/integration/jdbc).
+
      In the following example, [Flyway](https://flywaydb.org/) runs the SQL script automatically. If you want to use this, you'll need to add the following dependency:
 
      ```xml
      <dependency>
-	     <groupId>org.flywaydb</groupId>
-	     <artifactId>flyway-core</artifactId>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
      </dependency>
      ```
 
      If you don't run the script to populate the table, the following SQL exception will appear:
-     
+
      ![img](images/sql_error.png)
 
 ## Create a Lock Repository
 
-Once you import the necessary packages, you can start setting up your code. The first order of business is to create the lock repository beans that will be used to grab the locks later. 
+Once you import the necessary packages, you can start setting up your code. The first order of business is to create the lock repository beans that will be used to grab the locks later.
 
 ### Redis
 
@@ -138,7 +138,7 @@ public JdbcLockRegistry jdbcLockRegistry(LockRepository lockRepository){
 
 ## Setup A Controller
 
-In order to interact with our lock, you'll need to set up a way to hit your code from the outside world. The easiest way is to set up a `RestController` with a few endpoints for you to hit. 
+In order to interact with our lock, you'll need to set up a way to hit your code from the outside world. The easiest way is to set up a `RestController` with a few endpoints for you to hit.
 
 Note: To do this the proper Spring way, you are going to have to inject our service class. Instructions are in the next section, Setup the Service Class.
 
@@ -176,29 +176,29 @@ It's OK if you don't understand everything that's happening here. The important 
 
 1. Create a simple interface to match the methods that we have in our controller, created in the above section.
 
-    ```java
-        public interface LockService {
-        String lock();
-        void failLock();
-        String properLock();
-    }
-    ```
+   ```java
+       public interface LockService {
+       String lock();
+       void failLock();
+       String properLock();
+   }
+   ```
 
 2. Set up the service class that will contain the logic that you want to lock. To do this, create a new class that implements `LockService`. Make sure it looks similar to the following:
 
-    - Redis:
+   - Redis:
 
-      ```java
-      @Service
-      public class RedisLockService implements LockService{
-          private static final String MY_LOCK_KEY = "someLockKey";
-          private final LockRegistry lockRegistry;
+     ```java
+     @Service
+     public class RedisLockService implements LockService{
+         private static final String MY_LOCK_KEY = "someLockKey";
+         private final LockRegistry lockRegistry;
 
-          public RedisLockService(LockRegistry redisLockRegistry) {
-              this.lockRegistry = redisLockRegistry;
-          }
-      }
-      ```
+         public RedisLockService(LockRegistry redisLockRegistry) {
+             this.lockRegistry = redisLockRegistry;
+         }
+     }
+     ```
 
    - JDBC:
 
@@ -214,7 +214,7 @@ It's OK if you don't understand everything that's happening here. The important 
      }
      ```
 
-Now, you might be wondering why you are injecting a 'LockRegistry' for the Redis implementation, but injecting a specific 'JDBCLockRegistry' for the JDBC implementation. In the case of the `RedisLockRegistry`, the class itself is `final`. If we inject that, we would have a hard time with most mocking frameworks when writing tests. 
+Now, you might be wondering why you are injecting a 'LockRegistry' for the Redis implementation, but injecting a specific 'JDBCLockRegistry' for the JDBC implementation. In the case of the `RedisLockRegistry`, the class itself is `final`. If we inject that, we would have a hard time with most mocking frameworks when writing tests.
 
 With the `JDBCLockRepository` it's easier to inject the actual class as you'll have two beans of type `LockRegistry` due to needing the `DefaultLockRepository` when initializing the `JDBCLockRepository` bean. Another option is to use Spring's `@Qualifier` to specify the registry you want. For more information, go to ([Qualifier Info](https://www.baeldung.com/spring-qualifier-annotation)).
 
@@ -324,7 +324,7 @@ The most common reason for the lock to fail is because another instance locked t
     }
 ```
 
-In here, you can see  `trylock()` is no longer being called. Instead, `lock.tryLock(1, TimeUnit.SECONDS)` is being called. Unlike the original call, this version of the lock doesn't return false if it can't grab the lock right away, but it will keep attempting to lock every 100ms until it hits the time limit given (in this case 1 second). If it can't obtain the lock in that time frame, then will it return false. So, once this is up and running, calling the endpoint will result in the following:
+In here, you can see `trylock()` is no longer being called. Instead, `lock.tryLock(1, TimeUnit.SECONDS)` is being called. Unlike the original call, this version of the lock doesn't return false if it can't grab the lock right away, but it will keep attempting to lock every 100ms until it hits the time limit given (in this case 1 second). If it can't obtain the lock in that time frame, then will it return false. So, once this is up and running, calling the endpoint will result in the following:
 
 ![img](images/failOutput.png)
 
