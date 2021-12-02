@@ -745,7 +745,7 @@ GraalVM(-powered|.)?
 Gradle
 gradle
 gradlew
-Grafana
+[gG]rafana
 GRAFANA-PASSWORD
 Grails
 GrantedAuthoritiesMapper
