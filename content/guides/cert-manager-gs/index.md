@@ -16,9 +16,9 @@ level2: Services
 
 ## What is cert-manager?
 
-TLS certificates are a popular way for clients and servers to authenticate (prove who they are) to each other. For instance, each time you connect to an address with the `https://` protocol, the server (the website) presents to the client (your web browser) its TLS certificate—a bit like an identity document proving "yes, I'm really `www.example.com`, and you're not about to send your precious banking login information to a malicious person trying to impersonate your banking website."
+TLS certificates are a popular way for clients and servers to authenticate (prove who they are) to each other. For instance, each time you connect to an address with the `https://` protocol, the server (the website) presents to the client (your web browser) its TLS certificate—a bit like an identity document proving "yes, I'm really `www.yourbanksite.com`, and you're not about to send your precious banking login information to a malicious person trying to impersonate your banking website."
 
-There is also **mTLS**, which stands for **mutual TLS**, when both the client and the server present a certificate to each other. While rarely used in web browsers, this method is frequently used by services that need to authenticate to each other in a secure fashion. For instance, in Kubernetes, each kubelet (the Kubernetes agents that run on every node of the cluster) authenticates to the API server using mTLS. This means that when new nodes join the cluster, Kubernetes needs to issue them their own certificate. Furthermore, since certificates have an expiration date, they need to be renewed regularly. Bottom line: you need a way to automatically issue and renew these certificates.
+There is also mutual TLS (mTLS), when both the client and the server present a certificate to each other. While rarely used in web browsers, this method is frequently used by services that need to authenticate to each other in a secure fashion. For instance, in Kubernetes, each kubelet (the Kubernetes agents that run on every node of the cluster) authenticates to the API server using mTLS. This means that when new nodes join the cluster, Kubernetes needs to issue them their own certificate. Furthermore, since certificates have an expiration date, they need to be renewed regularly. Bottom line: you need a way to automatically issue and renew these certificates.
 
 The Kubernetes API has a [`CertificateSigningRequest`](https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/) resource to automate certificate issuance and renewal, but currently it is mostly intended for Kubernetes’ internal use. It doesn't offer a lot of flexibility otherwise. This is where cert-manager shines. It supports numerous ways of generating certificates. It can be used as a standard certificate authority, but it can also use external authorities like [HashiCorp Vault](https://www.vaultproject.io), services like [Let’s Encrypt](https://letsencrypt.org), or it can generate self-signed certificates. Even better, all these methods can be supported side by side, so that a single cert-manager install can support everyone's TLS needs on the cluster.
 
@@ -131,7 +131,7 @@ You will use the Grafana dashboard for your website since it is a built-in packa
     kubectl -n grafana get service grafana -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
     ```
 
-To log in, the username and password are just `admin` by default. If you click on the set of four squares, you can go to the existing dashboards and see data from Prometheus.
+    To log in, the username and password are just `admin` by default. If you click on the set of four squares, you can go to the existing dashboards and see data from Prometheus.
 
 ## Ingress
 
@@ -300,12 +300,12 @@ Certificates specify a `secretName` that cert-manager will either create or upda
     kubectl apply -f cm-certificate-staging.yaml
     ```
 
-{{% callout %}} 
-You could have instead added an annotation and a certificate would be created for you.
-```sh
-kubectl annotate ingress grafana -n grafana "cert-manager.io/cluster-issuer=letsencrypt-staging"
-```
-{{% /callout %}}
+    {{% callout %}} 
+    You could have instead added an annotation and a certificate would be created for you.
+    ```sh
+    kubectl annotate ingress grafana -n grafana "cert-manager.io/cluster-issuer=letsencrypt-staging"
+    ```
+    {{% /callout %}}
 
 10. Wait for the certificate to be ready. Run `Ctrl-C` to terminate it when it’s ready.
 
@@ -437,16 +437,14 @@ Set up [Prometheus](https://prometheus.io/) for metrics collection so you can ac
 
     ![Setting up Grafana](images/image4.png "The Grafana GUI.")
 
-You should now see a large dashboard with a bunch of charts and data to poke around in, such as the following.
+    You should now see a large dashboard with a bunch of charts and data to poke around in, such as the following.
 
     ![Setting up Grafana](images/image1.png "A graph in Grafana.")
 
-You can also create your own dashboards.
+    You can also create your own dashboards.
 
 ## Resources
 
 * To discover the many rich use cases cert-manager supports, check out the [official docs](https://cert-manager.io/docs/) and [tutorials](https://cert-manager.io/docs/tutorials/).
 * Also, check out our guide [Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt](https://tanzu.vmware.com/developer/guides/kubernetes/harbor-gs/) if you haven’t already.
 * To learn more about Tanzu Community Edition and Carvel, go to [tanzucommunityedition.io](https://tanzucommunityedition.io/) and [carvel.dev](https://carvel.dev/).
-
-
