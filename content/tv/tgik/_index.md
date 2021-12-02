@@ -6,11 +6,11 @@ channel: https://www.youtube.com/channel/UCdkGV51Nu0unDNT58bHt9bg
 id: "tgik"
 image: "tgik.png"
 og_image: "/images/og/TanzuTV-TGIK.png"
-weight: 3
+weight: 4
 menu:
     main:
         parent: "tv"
-        weight: 4
+        weight: 5
 # Text that appears on show index page under show name
 description: TGI Kubernetes is a weekly live video stream all about Kubernetes.
 # Text that appears highlighted in green on show index page above show name
