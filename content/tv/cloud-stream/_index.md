@@ -4,11 +4,11 @@ type: "tv-show"
 streaming: "twitch"
 # noPast: true
 id: "cloud-stream"
-weight: 5
+weight: 6
 menu:
     main:
         parent: "tv"
-        weight: 5
+        weight: 7
 # Text that appears on show index page under show name
 description: Watch our Cloud Stream Team discuss Multi-Cloud Topics.
 # Text that appears highlighted in green on show index page above show name
