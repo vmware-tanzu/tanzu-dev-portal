@@ -301,10 +301,10 @@ Certificates specify a `secretName` that cert-manager will either create or upda
     ```
 
     {{% callout %}} 
-    You could have instead added an annotation and a certificate would be created for you.
-    ```sh
-    kubectl annotate ingress grafana -n grafana "cert-manager.io/cluster-issuer=letsencrypt-staging"
-    ```
+    You could instead add an annotation, and the certificate would be created for you.
+
+    kubectl annotate ingress grafana -n grafana \
+      "cert-manager.io/cluster-issuer=letsencrypt-staging"
     {{% /callout %}}
 
 10. Wait for the certificate to be ready. Run `Ctrl-C` to terminate it when it’s ready.
