@@ -26,52 +26,7 @@ function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().get
 if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
 </script>
 
-<!-- Sentry SDK-->
-<script
-  src="https://browser.sentry-cdn.com/6.3.1/bundle.tracing.min.js"
-  integrity="sha384-JRd2IdwDASXsWVxwzVNu8jQ9C2risDIvq5ocYjUTz2nFtG6NXzOiATXTdvWa4xNR"
-  crossorigin="anonymous"
-></script>
-
 <script>
-Sentry.init({
-  dsn: "https://91138cf7f17842fd8a57d45372bf538c@o448817.ingest.sentry.io/5712977",
-  integrations: [new Sentry.Integrations.BrowserTracing()],
-  release: '{{ getenv "COMMIT_REF" }}',
-  environment: '{{ getenv "CONTEXT" }}',
-  // We recommend adjusting this value in production, or using tracesSampler
-  // for finer control
-  tracesSampleRate: 0.2,
-  beforeSend: function(event, hint) {
-    var gtm = false;
-    try {
-      if (hint.originalException.stack)
-        gtm = hint.originalException.stack.indexOf('www.googletagmanager.com/gtm.js?id=') > -1;
-    } catch (error) {
-      console.error(error);
-    }
-    event.tags = event.tags || {};
-    if (gtm) {
-      event.tags.logger = 'gtm';
-    }
-    event.tags.logger = event.tags.logger || '_default_';
-    event.extra = event.extra || {};
-    if (gtm) {
-      event.tags.logger = 'gtm';
-      event.extra.dataLayer = dataLayer.map(
-        function(i) {
-          try {
-            return JSON.stringify(i, null, ' ');
-          } catch(error) {
-            return '[cannot be serialized]: ' + error.message;
-          }
-        }
-      );
-    }   
-    return event;
-  }
-});
-// localStorage.clear();
 
 var liveShowName, liveShowLink, liveShowStream;
 function isTvShowLive(showName) {   
