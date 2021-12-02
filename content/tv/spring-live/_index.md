@@ -4,9 +4,9 @@ type: "tv-show"
 id: "spring-live"
 description: 24 hours of cloud native content. 
 image: "spring-live.png"
-weight: 5
+weight: 8
 menu:
     main:
         parent: "tv"
-        weight: 8
+        weight: 9
 ---

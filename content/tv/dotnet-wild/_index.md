@@ -5,11 +5,11 @@ streaming: "twitch"
 id: "dotnet-wild"
 image: "dotnet-wild.png"
 og_image: ""
-weight: 7
+weight: 2
 menu:
     main:
         parent: "tv"
-        weight: 7
+        weight: 3
 # Text that appears on show index page under show name
 description: Join Layla and guest from the .NET community to chat and code.
 # Text that appears highlighted in green on show index page above show name
