@@ -1,7 +1,5 @@
 ---
 date: '2021-11-30'
-description:
-lastmod: '2021-11-30'
 team:
 - Layla Porter
 title: "The New Global Usings Directive in C# 10"

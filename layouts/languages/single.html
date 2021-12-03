@@ -43,30 +43,48 @@
             </section>
 
             <section id="topics-section">
-                <!-- Featured Content -->
-                {{ $featured := where (where .Site.Pages "Params.level1" .Params.topic ) "Params.featured" true }}
+
+                <!-- Blog -->
+                {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
                 <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
                     <div class='row'>
-                        {{ range first 3 $featured }}
+                        {{ range first 3 $blogs }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+
+                <!-- Videos -->
+                {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
+                {{ $videos := where .Site.Pages "Section" "videos" }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $videos }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+
+                <!-- Getting Started -->
+                {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $gettingstarted }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
                 </div>
 
 
-                <!-- Getting Started-->
-                {{ $guides := where (where .Site.Pages "Section" "guides") "Params.level1" .Params.topic }}
-                {{ $gettingstarted := slice }}
-                {{ range $guides }}
-                    {{ if in .Params.tags "Getting Started" }}
-                        {{ $gettingstarted = $gettingstarted | append . }}
-                    {{ end }}
-                {{ end }}
+                <!-- Latest Content -->
+                {{ $latest := where .Site.Pages "Params.languages" "intersect" (slice .Params.label) }}
                 <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Latest Content</h2></div>
                     <div class='row'>
-                        {{ range first 3 $gettingstarted }}
+                        {{ range first 3 $latest.ByDate }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
