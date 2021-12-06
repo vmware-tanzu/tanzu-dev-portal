@@ -31,7 +31,9 @@
                                 {{ .Content }}
                             </div>
                             <div class="col-4">
-                                bbbbbb
+                                <div class="flex-315 my-3">
+                                    <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
+                                </div>
                             </div>
                         {{ else }}
                             <div class="col-10">
@@ -40,9 +42,6 @@
                         {{ end }}
                     </div>
                 </div>
-            </section>
-
-            <section id="topics-section">
 
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
@@ -51,6 +50,8 @@
                     <div class='row'>
                         {{ range first 3 $blogs }}
                             {{ partial (printf "%v-card.html" .Section) . }}
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
@@ -68,12 +69,15 @@
                 </div>
 
                 <!-- Getting Started -->
-                {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
+                <!-- {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }} -->
+                {{ $gettingstarted := where .Site.Pages "Params.languages" "intersect" (slice .Params.label) }} <!-- DEMO -->
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
                             {{ partial (printf "%v-card.html" .Section) . }}
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
@@ -86,6 +90,8 @@
                     <div class='row'>
                         {{ range first 3 $latest.ByDate }}
                             {{ partial (printf "%v-card.html" .Section) . }}
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
+                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
