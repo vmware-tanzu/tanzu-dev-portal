@@ -19,7 +19,6 @@ featured = "featured"
 topicgroup = "topicgroups"
 tag = "tags"
 team = "team"
-language = "languages"
 
 # Configure how URLs look like per section.
 [permalinks]
