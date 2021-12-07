@@ -13,11 +13,11 @@ participants: "Core Team and a focused group of Business Analysts, Executives or
 image: "default-cover.png" 
 lastmod: "2021-05-21"
 why: 
-- To capture and model business processes, aligning balanced teams with stakeholders and SMEs on business practice.
+- To capture and model business processes, aligning balanced teams with stakeholders and Subject Matter Experts on business practice.
 - To identify user interaction within a process and identify where user journeys are required.
-- To align balanced teams with stakeholders and SMEs around a common and understandable language.
+- To align balanced teams with stakeholders and subject matter experts around a common and understandable language.
 - To build a feature oriented context for future development.
-- To draft, communicate and validate lean product assumptions, with stakeholders and SMEs.
+- To draft, communicate and validate lean product assumptions, with stakeholders and subject matter experts.
 - To identify a thin slice and first iteration with prioritized, lean assumptions.
 - To create an algorithmic model of a business process.
 - To break down large problem spaces into smaller more manageable problems.
@@ -83,8 +83,8 @@ The output from these workshops can be used to discover, validate or design soft
    Each board needs to be arranged to prepare for the exercise and introduce the new grammar. This can be done when you create a new board or as you start modelling a process.
    - Add a grammar legend to your board (as shown below with grammar definition).
    - Preconditions: Identify events which need to have happened before this process can begin and put them in a grayed area on the left under the title Preconditions.
-   - Postconditions: Identify at least one suitable event which describes the optimal outcome of the process.
-   - Arrange any remaining events in chronological order from left to right between the preconditions and postconditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
+   - Post-conditions: Identify at least one suitable event which describes the optimal outcome of the process.
+   - Arrange any remaining events in chronological order from left to right between the preconditions and post-conditions. Do not worry about accuracy. As the events are narrated, be prepared to change, add or remove events.
 4. #### First Narration
    As described in the prerequisites, when moving from the storming board you will have chosen a flow of interest to model. Usually the main goal of the first narration is to complete this flow to a satisfactory golden path outcome. A golden path is a flow through a process, where everything goes smoothly and no failures or issues arise.
 
@@ -101,7 +101,7 @@ The output from these workshops can be used to discover, validate or design soft
       
       | Term | Definition | Rules |
       | --- | --- | --- |
-      | <h4>Events</h4> | Represent a state change or notification that another part of the system wants to react upon. They can be raised as a result of an Action or raised automatically as a Timed Event. | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be timed or modelled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> |
+      | <h4>Events</h4> | Represent a state change or notification that another part of the system wants to react upon. They can be raised as a result of an Action or raised automatically as a Timed Event. | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be timed or modeled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> |
       | <tr><td colspan=3> ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-preconditions.jpg) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-timed-events.jpg) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-events.jpg)  </td></tr> |
       | <h4>Policies</h4> | Represent a decision to perform a task. Sometimes this is written as a short sentence or can be labeled and described somewhere else. Policies can be manually performed by an Actor or automated by an IT system. | <ul> <li>A Policy listens to a single Event.</li>  <li>A Policy should call one Action per decision outcome.</li> <li>Multiple Policies can call the same Action.</li> <li>A Policy description should include the Event they are listening to, an Actor if one is required, a decision to be made and an Action to take. </li> <li>A manual Policy should have an actor.</li> <li>An automated Policy should not have an actor.</li>  </ul> |
       | <tr><td colspan=3> ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policies.jpg) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-description.jpg) ![This is the placeholder for process modelling grammar](/images/practices/event-storming-process-modelling/process-modelling-grammar-policy-type.jpg)  </td></tr> |
@@ -177,14 +177,14 @@ Notional Architecture:
 
 Story Writing:
 - Actors identify the user of stories where value is achieved through improved human interaction, and offers a focused role from which to start investigation of user needs
-- Policy makers, SME's best suited to define the decision made in a policy on behalf of the business, identify the user of stories based on business requirements and offers a focused SME from whom to obtain further requirements
+- Policy makers, subject matter expert's best suited to define the decision made in a policy on behalf of the business, identify the user of stories based on business requirements and offers a focused subject matter expert from whom to obtain further requirements
 - All grammar can be used to better define a story and offer more detail as to it's value
 - Policies, can identify more opportunities to improve either the process and/or the user journey
 - Read Models can identify opportunities to improve a user or automated decision making process
 
 ## Related Practices
 #### Event Storming 
-As mentioned Process Modelling is a form of Event Storming, and as taught by Alberto Brandolini, is a natural follow on exercise to the more common Bigger Picture workshop. Therefore the Process Modelling exercise naturally offers a way to enrich any Event Storming session with additional grammar. The exercise can also be carried out with smaller more focused groups of SMEs to help with planning and managing attendance.
+As mentioned Process Modelling is a form of Event Storming, and as taught by Alberto Brandolini, is a natural follow on exercise to the more common Bigger Picture workshop. Therefore the Process Modelling exercise naturally offers a way to enrich any Event Storming session with additional grammar. The exercise can also be carried out with smaller more focused groups of subject matter experts to help with planning and managing attendance.
 #### Software Design
 Typically there will be a follow on exercise to rationalize the information and transform it from an algorithmic model to a different architectural model, such as Event and Domain Driven microservice architecture, a simple Pipeline or even CQRS and Event Sourcing patterns. However this is often where you lose Subject Matter Experts, and the conversation often continues from a more technical perspective. It can be useful to revisit this board and get both technical and business clarity on the problem and the solution being delivered.
 ##### Event Storming | Software Design
