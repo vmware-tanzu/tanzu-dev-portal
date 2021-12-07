@@ -1,5 +1,4 @@
 const cookie = require('cookie');
-const Sentry = require('@sentry/serverless');
 const jwt = require('jsonwebtoken');
 
 const {
@@ -13,13 +12,7 @@ const base64 = require('./util/base64');
 // eslint-disable-next-line import/no-unresolved
 const config = require("./util/config");
 
-Sentry.AWSLambda.init({
-    dsn: process.env.SENTRY_DSN_AUTH_START,
-    environment: config.context,
-    tracesSampleRate: 1.0,
-});
-
-exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+exports.handler = async (event) => {
     let path = '';
     if (event.path === '/.netlify/functions/auth-start') {
         path = 'developer/';
@@ -57,4 +50,4 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         },
         body: '',
     };
-});
+};

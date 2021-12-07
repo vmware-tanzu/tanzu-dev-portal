@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 const Amplitude = require('@amplitude/node');
-const Sentry = require('@sentry/serverless');
 
 // eslint-disable-next-line import/no-unresolved
 const config = require('./util/config');
@@ -20,13 +19,7 @@ const eventTypes = [
   'Session/Orphaned',
 ];
 
-Sentry.AWSLambda.init({
-  dsn: process.env.SENTRY_DSN_ANALYTICS,
-  environment: config.context,
-  tracesSampleRate: 0.1,
-});
-
-exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     console.error('Not a POST');
     return {
@@ -84,4 +77,4 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     statusCode: 200,
     body: JSON.stringify({ event: 'discarded' }),
   };
-});
+};

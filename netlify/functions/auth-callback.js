@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
-const Sentry = require('@sentry/serverless');
 
 const {
     makeAuth,
@@ -18,14 +17,7 @@ const config = require("./util/config");
 const netlifyCookieName = 'nf_jwt';
 
 
-
-Sentry.AWSLambda.init({
-    dsn: process.env.SENTRY_DSN_AUTH_CALLBACK,
-    environment: config.context,
-    tracesSampleRate: 1.0,
-});
-
-exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
+exports.handler = async (event) => {
     // we should only get here via a redirect from ESP, which would have
     // an authorization code in the querystring. if that's not present,
     // then someone didn't follow the correct flow - bail early
@@ -145,13 +137,12 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             body: redirectBody,
         };
     } catch (err) {
-        Sentry.captureException(err);
         return {
             statusCode: err.statusCode || 500,
             body: JSON.stringify({ error: err.message }),
         };
     }
-});
+};
 
 
 var redirectTemplate = `<html>
