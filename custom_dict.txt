@@ -226,6 +226,7 @@ Bundler
 [Bb]urstable
 Buschmann
 bytesOnlyOnDisk
+C4
 CA(s)?
 Cacheable
 CacheCallback
@@ -359,6 +360,7 @@ COVID-19
 cpu(s)?
 CPU(s)?
 CQL
+CQRS
 CRD(s|-based)?
 create-load-balancer
 createEntry
