@@ -38,6 +38,7 @@ Acknowledgement
 ActiveMQ
 Activiti
 ad-hoc
+add-on(s)?
 addAndReturnSize
 addAndReturnSizes
 additively
@@ -580,6 +581,7 @@ eventQueueSize
 eventsDistributed
 eventsQueued
 EventStorming
+Evie
 [Ee]xecutables
 expander(s)?
 expensed
