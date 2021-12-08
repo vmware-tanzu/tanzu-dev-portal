@@ -18,6 +18,10 @@ aliases:
 - "/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/"
 ---
 
+{{% callout %}} 
+This post is for getting started with Beta 1. On October 5th 2021, VMware Tanzu Application Platform Beta 2 was released. And since then, other Betas have been released. Get more information on Tanzu Application Platform [here](https://tanzu.vmware.com/application-platform). 
+{{% /callout %}}
+
 By now you may have seen the [announcement](https://tanzu.vmware.com/content/vmware-tanzu-application-platform-resources/announcing-vmware-tanzu-application-platform) at the recent [SpringOne](https://springone.io) conference for VMware's new [Tanzu Application Platform](https://tanzu.vmware.com/application-platform). You understand the power a platform like this can bring to your production environments, but have you considered what it can do for your [inner loop development](https://thenewstack.io/kubernetes-infrastructure-know-the-inner-dev-loop/)? Not every commit goes to production. That’s why you need a way to locally deploy and test your changes locally before going to production. 
 
 You also need a way to locally evaluate and use the Tanzu Application Platform. You want to understand how it works, and what it can do for your organization before a potential deployment. If this sounds like you, I have a 2-part series on installing and using Tanzu Application Platform Beta 1 locally, using [KIND](https://kind.sigs.k8s.io).
