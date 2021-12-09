@@ -2,7 +2,7 @@
     {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
     {{ $parent := .Page }}
     {{ range $pages }}
-    {{ if .IsSection }}
+    {{ if not .IsSection }}
     {{ if eq .Parent $parent }}
   
     <a class="h-auto linked-box td-box--gray-dark p-4 flex-315 col-12 mr-3 mb-3 px-0" href="{{ .RelPermalink }}">

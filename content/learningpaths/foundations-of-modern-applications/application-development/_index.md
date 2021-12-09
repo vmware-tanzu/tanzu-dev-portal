@@ -1,6 +1,7 @@
 ---
 title: Foundations of Modern Application Development Practices
 weight: -3
+course: 2
 featured: true
 featuredspot: 1
 level1: Building Modern Applications

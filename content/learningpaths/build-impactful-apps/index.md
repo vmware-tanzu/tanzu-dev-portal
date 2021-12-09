@@ -1,6 +1,6 @@
 ---
-title: Foundations of Modern Applications
-weight: 1
+title: Build Impactful Apps
+weight: 2
 tags:
 - All roles
 - Applications

@@ -1,6 +1,7 @@
 ---
 title: Cloud Native Application Development with Spring
 weight: -1
+course: 3
 featured: true
 featuredspot: 2
 duration: 60

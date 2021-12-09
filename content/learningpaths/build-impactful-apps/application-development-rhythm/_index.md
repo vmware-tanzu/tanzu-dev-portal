@@ -1,6 +1,7 @@
 ---
 title: Modern Application Development Rhythm
 weight: -2
+course: 3
 layout: intro
 duration: 120
 tags:
