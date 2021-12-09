@@ -30,7 +30,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Write the following categories on the whiteboard, taking care to leave ample space between them (to accommodate many sticky notes):
 
@@ -65,14 +64,10 @@ why:
 1. When all sticky notes have been grouped (or placed in the Parking Lot), do another pass to identify (a) actions to take and (b) findings to re-test
 
 1. Take pictures of the output on the wall, ensuring you get a nice wide shot (which are great for sharing out or using as deck backgrounds) and clear, close-up shots (which are perfect for re-reading the "verbatims" that make up each sentiment group)
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 The goal is to walk away from research with actionable insights and an understanding of whether we've validated or invalidated any research objectives and to give design and/or product a set of actionable next steps to take
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 As needed, build on the Persona data you've captured to-date. Take any new user insights and validate or invalidate the assumptions you have about your existing [personas](/practices/personas) or create a new persona if you find new information that will support it.
@@ -82,9 +77,6 @@ Try using Trello (or something like it) to track your assumptions
 It's also helpful to share out findings at the subsequent iteration planning meeting (IPM, similar to SCRUM Sprint planning) so that the entire team - including anyone who wasn't present during the actual research sessions - can benefit from what was learned.
 
 You can alternately create your categories from the questions you are asking to your identified [personas](/practices/personas). These categories only tend to work for users of the same persona (i.e. do not mix user interviews with stakeholder interviews while synthesizing)
-{{% /section %}}
 
-{{% section %}}
 ### Preceding
 - [Assumptions](/practices/assumptions)
-{{% /section %}}

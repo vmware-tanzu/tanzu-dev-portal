@@ -31,7 +31,7 @@ why:
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person aspects to the digital world, such as drawing and using sticky notes. For example: draw a digital 2x2 matrix rather than using a real whiteboard.    
    {{% /callout %}}
 
-{{% section %}}
+### Challenges
 ### Sample Agenda & Prompts
 1. Define "assumption" for the team and explain why the team is doing this workshop
 
@@ -70,20 +70,13 @@ why:
    {{% /callout %}}
    
 1. Finally, memorialize the 2x2 in some way, such as a photo, screenshot, or saved to a shared workspace.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 Success happens when you have a fully arranged 2x2 grid that maps out the riskiest assumptions that must be addressed with research
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 This exercise could go long if there are many assumptions or you're having trouble ranking each assumption. Your job is to keep discussions brief and remind the team that (a) there is no "right" answer and (b) the rankings are relative—the research we do will help us uncover anything we might have missed. Do your best to keep momentum moving forward.
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Image of a two by two chart plotting assumptions by likelihood to kill business and amount of evidence](images/example-2.jpg)
-{{% /section %}}

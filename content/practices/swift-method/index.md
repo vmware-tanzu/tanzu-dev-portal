@@ -40,7 +40,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. [Event Storm](/practices/event-storming) the system, using language that business and technical people understand.
 
@@ -71,9 +70,7 @@ why:
    **Tip**: User story impact mapping is a technique that can be applied for mapping stories to MVPs and releases. Here's a <a href="https://blog.eriksen.com.br/en/mapping-domain-knowledge" target="_blank">blog post</a> that explains how to combine User Story Mapping with DDD.
    {{% /callout %}}
 1. Start hands-on experimentation, feedback, and iterative progress.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 - Quickly discover current system capabilities, create an aspirational target architecture, identify underlying areas of concern and agree on prioritization
 - Discuss and understand notional solutions, tactical fixes, potential trade-offs, framed in an incremental, measured way
@@ -81,33 +78,25 @@ why:
 - Develop approach to incrementally modernize services
 - Definition of solution(s) with associated business outcomes using an “everything on the table” approach
 - A  plan of tactical steps that starts small, scales & enables customer developers and architects to move forward confidently.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 A good facilitator should be able to drive out how a system should be designed based on supporting the business capabilities from a DDD perspective.
 
 This notional architecture now represents a good first cut direction of the system. When used as a tool for modernizing existing systems, [Boris](/practices/boris) reveals the likely target architecture. Other activities in the Swift Method help define how to get from Current State to Modernized.
-{{% /section %}}
 
-{{% section %}}
 ### Related Practices
 Swift Method contains many activities, including:
 
 - [Event Storming](/practices/event-storming)
 - [Boris](/practices/boris)
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 
 See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event Storming and Boris Training Miro board</a> for a detailed description of [Boris](/practices/boris) and the Swift Method of modernization for an Uber Eats-style application
 
 ![Visual of the Swift Method's various steps and how they flow into one another](images/example-1.png)
-{{% /section %}}
 
-{{% section %}}
 ### Recommended Reading
 
 <a href="https://tanzu.vmware.com/content/white-papers/tackle-application-modernization-in-days-and-weeks-not-months-and-years" target="_blank">Tackle Application Modernization in Days and Weeks, Not Months and Years</a> (white paper)
@@ -119,4 +108,3 @@ See the <a href="https://miro.com/app/board/o9J_kzaSk0E=/" target="_blank">Event
 <a href="https://tanzu.vmware.com/content/slides/the-modern-family-modernizing-applications-to-pivotal-cloud-foundry-getting-out-of-the-big-ball-of-mud" target="_blank">Tools to Slay the Fire Breathing Monoliths in Your Enterprise</a> (blog post)
 
 <a href="https://www.eventstorming.com/" target="_blank">EventStorming.com</a> (website)
-{{% /section %}}

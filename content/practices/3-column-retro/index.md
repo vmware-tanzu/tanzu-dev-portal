@@ -39,7 +39,6 @@ why:
    There are many online tools that support team retrospectives. We've listed several in the ["For Remote Teams" section](#variations) below.
    {{% /callout %}}
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw three columns on the whiteboard or digital workspace: 
    - What went well (“I’m glad that”)
@@ -68,18 +67,14 @@ why:
    {{< /callout >}}
 
 1. For the remaining 5 minutes, review the Action Items, making sure each item has a person or pair assigned.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 Success is when the core team has a shared understanding of: 
 
 - The most important things that happened during   the week, Sprint, project planning iteration, or whichever time-span is the subject of the retrospective
 - The challenges they are currently facing
 - The actionable steps they will take to try and improve
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 - If this is the first retrospective run with the team, provide background and set the expectation on what a retrospective entails.
 - Keep conversations constructive and respectful
@@ -91,15 +86,11 @@ Success is when the core team has a shared understanding of:
 - To better keep track of Action Items from previous retrospectives, consider creating a Kanban board (‘Backlog’, ‘In Progress’, ‘Done’) on a whiteboard visible to the entire team (or on a Miro board if it is done remotely)
 - If possible, create a different environment when running the retro so that members can actively disconnect from the daily work tasks and solely focus on the retrospective. This may include moving to a different floor or providing snacks to the team.
 - At the end of the retrospective, consider asking the team whether there was any card not discussed which any individual feels strongly about. 
-{{% /section %}}
 
-{{% section %}}
 ### Related Practices
 ["Sailboat" Futurespective](/practices/futurespective)
-{{% /section %}}
 
 
-{{% section %}}
 ### Variations
 
 #### For Remote Teams
@@ -123,10 +114,8 @@ Sometimes it's worth paying for something that's being actively maintained and e
 | [Parabol](https://www.parabol.co/) | USD $6/user/month | Open-sourced. Established. |
 | [goReflect](https://www.goreflect.com/) | USD $2.67/user/month | Simple UI. |
 | [Reetro](https://reetro.io/) | Free to sign up, used to have paid upgraded features. | Less established than other options. |
-{{% /section %}}
 
 
-{{% section %}}
 ### Real World Examples
 
 #### Example using Postfacto
@@ -138,13 +127,10 @@ There are many free retrospective tools available.
 Online tools like this allow for people to get more engaged with fun themes.
 
 ![3 Column Retrospective in Miro](images/retro-2.png)
-{{% /section %}}
 
-{{% section %}}
 ### Recommended Reading
 [Agile Retrospectives - Making Good Teams Great](https://pragprog.com/titles/dlret/agile-retrospectives/)  by Esther Derby and Diana Larsen, Foreword by Ken Schwaber
 
 [How to Run a Really Good Retrospective](https://tanzu.vmware.com/content/blog/how-to-run-a-really-good-retrospective) - Blog Post by Nicola Rushton
 
 [Measure Success in Agile Retrospectives](https://tanzu.vmware.com/content/videos/measure-success-in-agile-retrospectives-enrico-teotti) – Video by Enrico Teotti
-{{% /section %}}

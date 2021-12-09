@@ -33,7 +33,6 @@ It is recommended that a person outside the team facilitates the Speedback sessi
    {{% /callout %}}
 
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. If needed, host a 15 minute session to explain Speedback in person using this deck. This is especially helpful if it’s the first time the team has participated in a Speedback style feedback session. 
 
@@ -80,9 +79,7 @@ It is recommended that a person outside the team facilitates the Speedback sessi
 1. At the end of the 10 minutes the next round of Speedback begins, with each participant paired up with a different teammate. This continues until all participants have had a chance to give feedback to one another.
 
 1. As the facilitator, keep time. If pairs are not switching or are going over their allotted time, let them know and encourage them to wrap up.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 At the end of all one-on-one interactions, gather the team together and perform a quick debrief about how the Speedback session went, anything they learned that they would like to share, suggestions for improving the session, when to schedule the next one, and whatever else is on their minds. 
 
@@ -91,11 +88,9 @@ Speedback can be intense and overwhelming and some restorative or reflection tim
    {{< callout >}}
    **Tip**: Proactively plan a team outing or other non-work (even remote-friendly) social activity! Feedback sessions can be cathartic. It's nice to have a bit of bonding-time afterwards.
    {{< /callout >}}
-{{% /section %}}
 
 
 
-{{% section %}}
 ### Facilitator Notes & Tips
 #### How do I present Speedback to hesitant team members to get them on board?
 
@@ -145,9 +140,7 @@ Feel free to use the following email template, modifying it as needed based on t
 >
 >
 > It's easy to heap on the praise; try to come up with at least one piece of constructive feedback for everyone.
-{{% /section %}}
 
-{{% section %}}
 ### Variations
 #### For Remote Teams
 If the entire team is co-located, try hosting Speedback in person. But if the team is even partially remote, set up the entire session as remote with video calls.
@@ -169,12 +162,9 @@ Try having two or more smaller sessions. Try to keep them somewhat close togethe
 
 #### What if there’s an odd number of participants, e.g. 5 people on the team?
 At any given time, one person will end up sitting out during each round. They can use that time to reflect, prepare, or just take a break.
-{{% /section %}}
 
-{{% section %}}
 ### Recommended Reading
 
 [Interpersonal Feedback - Talk and Workshop](https://tanzu.vmware.com/content/vmware-tanzu-developer-center-slides/interpersonal-feedback-talk-and-workshop) -- Presentation
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/uJ5WGVfjWpdrL1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/interpersonal-feedback-talk-and-workshop" title="Interpersonal feedback talk and workshop" target="_blank">Interpersonal feedback talk and workshop</a> </strong> from <strong><a href="https://www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
-{{% /section %}}

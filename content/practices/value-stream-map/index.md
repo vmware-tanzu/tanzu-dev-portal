@@ -33,7 +33,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Explain the purpose of the workshop.
    
@@ -76,14 +75,10 @@ why:
 1. When the value stream map feels the right visualization of current processes, calculate the total lead time for the whole process and discuss it with the team to find area that can be improved.
 
 1. Repeat steps 2-6 for the "to be" process.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You know you’re done when you have a visual value stream on the whiteboard and the team feels confident it accurately represents the current process. 
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 Some teams are sensitive to the idea of calling out “waste” in their processes. Another way to frame the purpose of this activity is to call it an opportunity to increase efficiency.
 
@@ -95,28 +90,20 @@ Some teams are sensitive to the idea of calling out “waste” in their process
 - Delays (because this slows the team down)
 - Task switching (because it leads to context switching which reduces our focus and slows us down)
 - Defects (because this adds work cycles)
-{{% /section %}}
 
-{{% section %}}
 ### Related Practices
 [Event Storming](/practices/event-storming)
 
 [Service Blueprint](/practices/service-blueprint)
-{{% /section %}}
 
-{{% section %}}
 ### Variations
 Path-to-production exercise
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 Example of a **product development life cycle**
 
 ![Value Stream Map image](images/value-stream-map-3.jpg)
-{{% /section %}}
 
-{{% section %}}
 ### Recommended Reading
 [Value Stream Mapping: How to Visualize Work and Align Leadership for Organizational Transformation](https://www.oreilly.com/library/view/value-stream-mapping/9780071828918/) by Mike Osterling & Karen Martin
 
@@ -127,4 +114,3 @@ Example of a **product development life cycle**
 [Lean Software Development: An Agile Toolkit](https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783) by Mary Poppendieck & Tom Poppendieck
 
 [DevOps Processes: Value Stream Mapping](https://cloud.vmware.com/community/2020/12/02/devops-processes-value-stream-mapping/) by Mandy Storbakken
-{{% /section %}}

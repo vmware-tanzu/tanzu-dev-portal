@@ -24,7 +24,6 @@ why:
 ---
 
 ## How to Use this Method
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Draw the primary persona on the whiteboard
 
@@ -41,10 +40,7 @@ why:
    {{% callout %}}
    **Tip**: If desired, clarify the relationships by using verbs with arrows like "supports", "reports to", or "is supported by"
    {{% /callout %}}
-{{% /section %}}
 
-{{% section %}}
   ### Success/Expected Outcomes
   The team has a shared understanding of all the users, what they care about, and how they relate to one another
-{{% /section %}}
 

@@ -32,7 +32,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Identify which users journey the team is mapping. Leverage existing [Personas](/practices/personas) and if multiple choose the most important one to start
 
@@ -64,43 +63,30 @@ why:
 
 1. Identify opportunities along the journey (10 minutes)
    - Have the team read through the completed journey map one more time, asking all participants to write “how might we” statements on a sticky note, whenever they identify a moment for intervention/improvement.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 At the end of a Journey Map the team will have a shared holistic view of a Persona’s experience. The process reveals opportunities to address user pain points and prevents misalignment during the “framing” process.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 - Create one Journey Map per Persona. If there are other [Personas](/practices/personas)
  to consider, map them as touch points from a single [Personas](/practices/personas) perspective.
 - To understand more detail and complexity consider using a Service Blueprint to map a product/service’s “backstage actions” and “support processes” to an individual customer journey.
-{{% /section %}}
 
-{{% section %}}
 ### Preceding
 - [Personas](/practices/personas)
 - [Research Synthesis](/practices/research-synthesis)
-{{% /section %}}
 
-{{% section %}}
 ### Following
 [Service Blueprint](/practices/service-blueprint)
 [Scenario Writing](/practices/scenario-writing)
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 
 ![Journey map on a whiteboard example](images/example-1.jpg)
-{{% /section %}}
 
-{{% section %}}
 ### Recommended Reading
 
 [Design Sprint journey mapping technique](https://sprintstories.com/the-design-sprint-note-n-map-a9bf0ca88f51)  
 [The difference between a journey map and a service blueprint](https://blog.practicalservicedesign.com/the-difference-between-a-journey-map-and-a-service-blueprint-31a6e24c4a6c)  
 [Adaptive Path's guide to Experience Mapping (PDF download)](https://adaptivepath.s3.amazonaws.com/apguide/download/Adaptive_Paths_Guide_to_Experience_Mapping.pdf)
-{{% /section %}}

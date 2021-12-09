@@ -29,7 +29,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Write the following prompts on the whiteboard:
         
@@ -57,26 +56,19 @@ why:
    - Type up the sticky notes written by the team, keeping them grouped. Be sure this document is in the team’s shared drive/folder
    - Summarize each group with one value statement. This might be an umbrella sentence that describes the group or one of the value statements in that group.
    - Take the list of summarized value statements and compile them into a single document. Print it out and hang it up in the team area.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You know you’re done when you’ve created a set of agreed on team values that can be put up in the team area and referred to during the project and/or consulting engagement.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 Every member of the “core” team should be involved in this activity. A helpful way to think about the “core” team is it’s the folks who will be working full time together, ideally co-located, for the lifecycle of the project and/or consulting engagement.
 
 These team values can be leveraged again at the end of the project and/or consulting engagement if you decide to do a How We Work transition activity. This will allow the team to adjust their values and identify aligned practices they’ve done during the engagement to keep doing after they return home.
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 
 ![Typed up list of grouped team values with a summarized value statement for each group](images/example-1.png)
 
 ![Summarized value statements up on the wall in team project area](images/example-2.jpeg)
 
-{{% /section %}}

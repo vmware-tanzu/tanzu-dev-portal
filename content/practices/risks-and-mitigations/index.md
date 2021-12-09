@@ -31,7 +31,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Have the group silently write project risks and obstacles this team may face. One item per sticky note.
         
@@ -68,14 +67,10 @@ why:
 1. Go around the room and have each pair read **one** (1) risk and **one** (1) mitigation strategy.
 
 1. Group similar risks/mitigations into categories. For example, "technical risks", "business risks", "product risks", etc.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 Success is when you have a shared understanding of the biggest risks and have a set of actions items to get started with
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 - Ensure that there is equal representation of different disciplines present
@@ -83,9 +78,6 @@ Success is when you have a shared understanding of the biggest risks and have a 
 - Create a space in which people feel comfortable being honest by setting up the right context for the session
 - Curtail finger pointing or unkind feedback
 - Ensure that the actions are actionable and not too general e.g., “Don’t do this…”  
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Whiteboard table showing risks in one column and related mitigation strategies in another](images/example-2.jpg)
-{{% /section %}}

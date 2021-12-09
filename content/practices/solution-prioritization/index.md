@@ -31,7 +31,6 @@ why:
 ---
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Construct a 2x2 matrix on the whiteboard using the blue painter's tape and label the axes clearly using parameters that make sense for your context. For example:
         
@@ -63,37 +62,24 @@ why:
    {{% /callout %}}
 
    ![Nested 2x2 quadrant](images/step-3.png)
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You know you are done when the team has prioritized their solutions and is comfortable that they've identified a manageable list of top solutions to explore.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 This is an activity that you can time box if it feels drawn out. Many of the tips embedded above are intended to help you avoid rabbit holes, but if that happens you should feel empowered to move things forward by refocusing the team, setting a timer, or forcing a decision.
-{{% /section %}}
 
-{{% section %}}
 ## Related Practices
 - [2x2 Prioritization](/practices/2x2)
-{{% /section %}}
 
-{{% section %}}
 ### Preceding
 - [Solution Brainstorming](/practices/solution-brainstorming)
 - Solution Grooming -- coming soon!
-{{% /section %}}
 
-{{% section %}}
 ### Following
 - Scenario Walkthrough -- coming soon!
 - [Design Studio](/practices/design-studio)
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Digital two by two with prioritized solutions](images/example-6.jpg)
-{{% /section %}}

@@ -20,7 +20,6 @@ miro_template_url: ""
 ---
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Write the agenda on the whiteboard or shared digital workspace:
    
@@ -94,32 +93,23 @@ miro_template_url: ""
    - Interviewer uses one of the team’s discussion guides to ask questions of Interviewee while Note-takers take notes that, to the extent possible, mimic “real” notes
    - Conduct the interview for 10 minutes
    - Reflect on the experience using a plus/delta format
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You’ve succeeded when the team feels like they’re confident they can conduct research in a way that the team can garner usable information. 
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 You can make as many or as few visual aids ahead of time as you like to support this session, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
 
 If the team feels like they want more practice conducting research before they do it with actual users, don’t hesitate to schedule a follow-up session or two. Role playing can do wonders to prep people who haven’t done a lot of research before but are excited to learn how.
 
 Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Research Workshop Example 1](images/example-1.jpg)
 
 ![Research Workshop Example 2](images/example-2.jpg)
-{{% /section %}}
 
-{{% section %}}
 ## Recommended Reading
 [Lean UX](https://www.oreilly.com/library/view/lean-ux/9781449366834/) by Jeff Gothelf and Josh Seiden
 
 [UX For Lean Startup](https://www.amazon.com/UX-Lean-Startups-Experience-Research/dp/1449334911) by Eric Ries
-{{% /section %}}

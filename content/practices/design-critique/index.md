@@ -29,7 +29,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. While the project team hangs up printouts of the design artifacts being critiqued, remind everyone that their job today is to help the project team find the challenges with their design, not the solutions, using language that is specific and kind.
         
@@ -72,26 +71,17 @@ Be sure to find the good, too, so that positive aspects of the design are not la
    **Tip**: Once a problem has been converted into a task (“Super-Duper widget doesn't make sense. Explore alternate designs.”), you shouldn’t keep talking about it
    {{% /callout %}}
 
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You know you’re done when all comments have been reviewed and all problems have been converted into tasks.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 Regardless of how you decide to run your design critique, you should ensure that a room is booked and any supplies (such as sticky notes, sharpies, and tape) are available.
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Design printout with feedback attached using sticky notes](images/example-2.jpg)
-{{% /section %}}
 
-{{% section %}}
 ## Recommended Reading
 
 <a href="http://shop.oreilly.com/product/0636920033561.do" target="_blank">Discussing Design</a> by Adam Conner and Aaron Irizarry
-{{% /section %}}

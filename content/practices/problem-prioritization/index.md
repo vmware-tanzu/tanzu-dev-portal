@@ -24,7 +24,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Gather all the problems you discovered from research
 
@@ -48,40 +47,27 @@ why:
    {{% callout %}}
    **Tip**: If there are too many priority problems in the top right quadrant, re-draw the axes within that quadrant to further separate the problems. Remember that this is possible because the axes are relative, not absolute. Keep adjusting until you land somewhere manageable.
    {{% /callout %}}
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 Success is achieved when the team agrees to the top 3-5 problems on which it will focus.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 The timing of this activity varies along with the number of problems identified in the research process, so prepare accordingly. It can also be beneficial to timebox conversation of each problem in order to ensure the team maintains forward momentum.
-{{% /section %}}
 
-{{% section %}}
 ### Variations
 - [2x2 Prioritization](/practices/2x2)
-{{% /section %}}
 
-{{% section %}}
 ### Preceding
 - [Research Synthesis](/practices/research-synthesis)
-{{% /section %}}
 
-{{% section %}}
 ### Following
 - [Insight Prioritization](/practices/insight-prioritization)
 - [Solution Brainstorming](/practices/solution-brainstorming)
-{{% /section %}}
 
-{{% section %}}
 ### Real World Examples
 ![Two by two chart plotting problems by frequency and intensity](images/example-2.jpg)
 
 ![A group of people discusses priority in front of a whiteboard with two by two chart on it](images/example-3.jpg)
 
 ![Two by two chart with top problems prioritized](images/example-5.jpg)
-{{% /section %}}

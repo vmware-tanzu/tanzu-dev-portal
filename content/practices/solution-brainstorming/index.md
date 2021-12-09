@@ -33,7 +33,6 @@ why:
    **Remote Tip:** For distributed teams, use [Miro](https://miro.com/) or a similar "digital whiteboard" and adapt the in-person steps to the digital world. For example, instead of passing out sheets of paper, have each team member work in their own section of the shared digital whiteboard.
    {{% /callout %}}
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Stick each problem or Insight to its own large sheet of paper, such as a sheet of tabloid (11"x17") / A3 paper, or section of the digital workspace.
 
@@ -60,28 +59,19 @@ why:
    {{% /callout %}}
    
 1. After the brainstorms make their way around the group and back to the person they started with, you'll have generated a slew of ideas.
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 
 Success is achieved when you have extracted ideas that directly relate to your top problems and insights and captured them for further refinement.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 You may need to adjust the timing depending on how many people are present. Be sure to give sufficient time for people to both read ideas and create new ideas (this is especially critical as you get further into the pass-and-brainstorm process).
-{{% /section %}}
 
-{{% section %}}
 ### Preceding
 - [Insight Prioritization](/practices/insight-prioritization)
 - [Problem Prioritization](/practices/problem-prioritization)
-{{% /section %}}
 
-{{% section %}}
 ### Following
 - Solution Grooming -- coming soon!
 - [Solution Prioritization](/practices/solution-prioritization)
-{{% /section %}}

@@ -35,7 +35,6 @@ why:
 
 ## How to Use this Method
 
-{{% section %}}
 ### Sample Agenda & Prompts
 1. Provide all attendees at Kickoff with a large sticky note and have them write their:
 
@@ -60,15 +59,10 @@ why:
 1. Create circles for departments and teams and connect people and/or teams with lines and directional arrows
 
 1. Star key points of contact, especially if a department circle contains multiple people
-{{% /section %}}
 
-{{% section %}}
 ### Success/Expected Outcomes
 You've succeeded when there exists a shared understanding of stakeholders involved so that teams can establish relationships, dive deeper where necessary and communicate appropriately.
-{{% /section %}}
 
-{{% section %}}
 ### Facilitator Notes & Tips
 
 This exercise has a tendency to go long. Your job is to keep each description brief and give the team people to follow up with.
-{{% /section %}}
