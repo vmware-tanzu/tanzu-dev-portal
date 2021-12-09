@@ -117,7 +117,7 @@ The output from these workshops can be used to discover, validate or design soft
       | Legend |  |
       | --- | --- |
       | ![This is the placeholder for process modelling grammar](images/process-modelling-grammar-legend.jpg) | ![This is the placeholder for process modelling grammar](images/process-modelling-grammar-overview.jpg) |
-
+      {{< /table >}}
    &nbsp;
    ##### Questions:
    If an assumption is being made or there is no way to clarify parts of the process with the people in the room, leave a question on the board and return to it later with the right people or new information.
