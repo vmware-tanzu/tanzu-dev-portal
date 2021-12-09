@@ -19,7 +19,7 @@ minutes: 60
 title: "Carvel support in Kubeapps - New pluggable gRPC-based architecture"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "rS2AhcIPQEs"
 type: tv-episode
 ---
 
