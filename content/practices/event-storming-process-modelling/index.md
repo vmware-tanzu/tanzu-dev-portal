@@ -98,7 +98,7 @@ The output from these workshops can be used to discover, validate or design soft
    Attempt to narrate the stickies on the board, describing the process of events as they happen from left to right. While you can add grammar in the first narration it is not necessary. The primary goal is to start from en entry point into the system and model the process until a final output that is agreed to be within the scope of your project.
 
    ##### Grammar:
-      {{< table "table" >}}
+   {{< table "table" >}}
       | Term | Definition | Rules |
       | --- | --- | --- |
       | <h4>Events</h4> | Represent a state change or notification that another part of the system wants to react upon. They can be raised as a result of an Action or raised automatically as a Timed Event. | <ul><li>An Event can be raised by many Actions.</li> <li>An Event can be listened to by many Policies.</li> <li>Events used in preconditions are assumed to be timed or modeled elsewhere and do not need additional grammar.</li> <li>Timed Events do not need to be raised by an Action.</li> <li>Timed Events should be identified with a symbol or tag on the Event sticky.</li></ul> |
