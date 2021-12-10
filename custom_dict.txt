@@ -847,6 +847,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+installable
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1758,6 +1759,7 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+[Tt]anzu
 Tanzu(Developer|'s)?
 targetPort
 Tarin
