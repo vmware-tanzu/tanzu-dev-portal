@@ -5,6 +5,7 @@ tags:
 - All roles
 - Applications
 experience: beginner
+layout: learningpath
 ---
 
 Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. 
