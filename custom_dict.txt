@@ -65,6 +65,7 @@ allenholub
 Alpine(-based)?
 Amaro
 amd64
+AMI
 amongst
 AMQP
 [Aa]nalytics
@@ -254,6 +255,7 @@ cass-operator
 CCM
 cd
 Cedrick
+CEIP
 CentOS
 Ceph
 CertificateRequests
@@ -1932,6 +1934,7 @@ VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
 VPA(s|'s)?
+VPC
 vRealize
 vRLI
 vSAN
