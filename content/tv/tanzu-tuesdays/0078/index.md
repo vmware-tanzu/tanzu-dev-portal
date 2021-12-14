@@ -23,7 +23,7 @@ type: tv-episode
 ---
 
 Sébastien will share the new features of this long-awaited Spring Native 0.11 release, like 
-the new Ahead-Of-Time engine, the reduced memory footprint, and the improvement on compatiblity 
+the new Ahead-Of-Time engine, the reduced memory footprint, and the improvement on compatibility 
 side. It will also be an opportunity to share more about the next steps for the General 
 Availability of GraalVM native support for Spring Boot.
 
