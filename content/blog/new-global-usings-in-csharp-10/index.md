@@ -75,6 +75,8 @@ If it really doesn’t make sense to extract these using directives to the globa
 
 Now, whether or not you put these locally scoped using statements inside or outside the namespace statement is an entirely different question. Check out this [Stack Overflow](https://stackoverflow.com/questions/125319/should-using-directives-be-inside-or-outside-the-namespace) question and make up your own mind 😉.
 
+This post was part of the [C# Advent Calendar](https://csadvent.christmas) 🎄.
+
 Thanks for reading. If you have any thoughts or ideas, please say hello on any of the channels below:
 
 Email: laylap@vmware.com  

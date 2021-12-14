@@ -31,10 +31,10 @@ Many Tanzu Labs teams describe “The Constant” when they describe the anchor 
 
 ### Considerations
 - On most teams, the majority of the engineers are fully loaded on context, and capable of handling most of the responsibilities listed above
-- Some teams are now naming their own non Tanzu Labs anchors, and are less dependent on the Tanzu Labs anchor for context
-- Some engineers rotate more frequently in some projects, portfolios, or companies than others
+- Consulting specific: Mature and/or highly skilled project teams should transition to a non-consultant anchor over time to reduce dependence on consultants
+- Some engineers transition to different projects, portfolios, or companies more often than others
 
 ### Challenges
 - Stakeholders can be very sensitive to rotating anchors
 - Anchors who stay on too long may develop anxiety around holding the majority of the context
-- The team might rely too heavily on the anchor to hold historical context, increasing project risk if the anchor become unavailable   
+- The team might rely too heavily on the anchor to hold historical context, increasing project risk if the anchor becomes unavailable   

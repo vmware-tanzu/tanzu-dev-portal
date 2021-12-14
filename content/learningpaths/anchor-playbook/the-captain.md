@@ -19,7 +19,8 @@ aliases:
 Sometimes it’s worth making unilateral decisions despite the tradeoffs, but this mode is considered a last resort.
 {{% /callout %}}
 
-In difficult situations, it may be necessary for someone to make an unpopular decision, despite the desire for collective ownership. This is a delicate line to walk, and requires care/skill in doing so. Once employed, this stance is difficult to reverse. Not all Captains are remembered for modeling good behavior. In our research, tales of Captain behavior usually got results, but indicated undesirable team dynamics and/or loss of trust, productivity, and morale.
+In difficult situations, it may be necessary for someone to make an unpopular decision, despite Tanzu Labs' long tradition of collective 
+team ownership. This is a delicate line to walk, and requires care/skill in doing so. Once employed, this stance is difficult to reverse. Not all Captains are remembered for modeling good behavior. In our research, tales of Captain behavior usually got results, but indicated undesirable team dynamics and/or loss of trust, productivity, and morale.
 
 ![The captain running a meeting](/learningpaths/anchor-playbook/images/meeting1.jpg)
 

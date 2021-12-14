@@ -91,6 +91,7 @@ AppArmor
 AppDynamics
 Appel
 appender
+Applegate
 application-centric
 ApplicationEvent
 applicationPort
@@ -744,7 +745,7 @@ GraalVM(-powered|.)?
 Gradle
 gradle
 gradlew
-Grafana
+[gG]rafana
 GRAFANA-PASSWORD
 Grails
 GrantedAuthoritiesMapper
@@ -1221,6 +1222,7 @@ Neo4j
 Neo4j's
 Nesterov
 NetApp('s)?
+NetBase
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
