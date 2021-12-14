@@ -1,14 +1,12 @@
-<div class="learningpaths-index row">
-    {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
-    {{ $parent := .Page }}
-    {{ range $pages }}
-    {{ if .IsSection }}
-    {{ if eq .Parent $parent }}
-  
-    <a class="h-auto linked-box td-box--gray-dark p-4 flex-315 col-12 mr-3 mb-3 px-0" href="{{ .RelPermalink }}">
-        <h2 class="h4 link mt-3 pt-0">{{- .Title -}}</h2>
-        <p>{{ .Description | markdownify }}</p>
-        <div class="row justify-content-between d-flex mt-4 mb-2">
+<div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+    <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
+        <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+        <div class="card-type-id">
+            <img class="d-inline-block" alt="" src='{{ "/images/icons/icon-list-ul.svg" | relURL }}'>
+            <span class="h5">Learning Path</span>
+        </div>
+        <p>{{ .Description }}</p>
+        <div class="row justify-content-between d-flex px-0 py-4">
             <div class="learning-path-duration">
                 <i class="fas fa-hourglass-half"></i>
                 {{ if gt .Params.duration 60 }}
@@ -29,8 +27,4 @@
             </div>
         </div>
     </a>
-
-    {{ end }}
-    {{ end }}
-    {{ end }}
 </div>
