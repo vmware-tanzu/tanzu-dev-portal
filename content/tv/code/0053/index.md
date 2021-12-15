@@ -5,8 +5,8 @@ hosts: ["Jakub Pilimon"]
 PublishDate: "2021-12-15T00:00:00-07:00"
 Date: "2021-12-15T12:00:00-07:00"
 minutes: 30
-aliases: ["/tv/code/45"] #redirect alias
-episode: "47"
+aliases: ["/tv/code/53"] #redirect alias
+episode: "53"
 image: "/tv/code/images/jakub-pilimon.jpg"
 explicit: "no"
 title: "One mistake while doing TDD with Jakub Pilimon"
