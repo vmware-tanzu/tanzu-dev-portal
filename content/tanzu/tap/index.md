@@ -1,6 +1,7 @@
 ---
 description: A superior developer experience for enterprises building and deploying cloud native applications on Kubernetes. Get to production faster by automating source to production pipelines.
 title: Tanzu Application Platform
+logo: logo-tap.svg
 alises:
 - /tap
 links:

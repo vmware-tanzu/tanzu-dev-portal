@@ -2190,7 +2190,7 @@ background: black;
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
-  .row:hover:not(.workshop-row) > .flex-315,
+  .row:hover:not(.workshop-row):not(.product-links) > .flex-315,
   .learningpaths-index:hover .linked-box,
   .topics-row:hover .topic-card,
   .row:hover > .subtopic,
@@ -2336,7 +2336,16 @@ background: black;
   }
 }
 
+.product-icon {
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  height: 225%;
+}
 .product-links .linked-box {
+  background-color: #1b2a32;
   &:nth-child(1) {
     background: #2e4150;
 
