@@ -417,6 +417,24 @@
   height: 225%;
   opacity: .25;
 }
+.product-links .linked-box {
+  background-color: #1b2a32;
+  &:nth-child(1) {
+    background: #2e4150;
+
+  }
+  &:nth-child(2) {
+    background: #293e4e;
+
+  }
+  &:nth-child(3) {
+    background: #233847;
+
+  }
+  &:nth-child(4) {
+    background: #1f3442;
+  }
+}
 .callout svg {
   opacity: .8;
 
