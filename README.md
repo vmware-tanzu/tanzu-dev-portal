@@ -41,11 +41,10 @@ Before you can build a local copy of the Tanzu Developer Center, there are softw
 
 ### Software Installation Prerequisites
 
-* **Install Hugo** — The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with built in SCSS/SASS support. This site pins hugo to a specific version (currently 0.82.0) to build so if you're using a different version, your experience may vary. To install this version, see the [gohugo GitHub releases page for 0.82.0](https://github.com/gohugoio/hugo/releases/tag/v0.82.0).
+* **Install Hugo** — The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with built in SCSS/SASS support. This site pins hugo to a specific version (currently **0.82.0**) to build so if you're using a different version, your experience may vary. To install this version: 
 
-     ```sh
-     brew install hugo
-     ```
+   - Download the correct binary for your OS from [gohugo GitHub releases page for 0.82.0](https://github.com/gohugoio/hugo/releases/tag/v0.82.0). 
+   - Move the `hugo` binary to an appropriate location and/or add it to your `PATH`.
 
 * **Install NPM** — Hugo uses NPM to manage its local packages. If you don’t already have it installed, you’ll need it to move further.
 
