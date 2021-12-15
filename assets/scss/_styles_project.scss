@@ -403,12 +403,11 @@ body {
     transition: background-color .2s;
     letter-spacing: 1px;
     -webkit-font-smoothing: auto;
-  
+    
     &.btn-small {
       padding: 8px 25px;
       font-size: 11px;
     }
-  
     &:hover,
     &:focus {
       background-color: $link-hover-color;
@@ -2334,5 +2333,23 @@ background: black;
   footer {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+}
+
+.product-links .linked-box {
+  &:nth-child(1) {
+    background: #2e4150;
+
+  }
+  &:nth-child(2) {
+    background: #293e4e;
+
+  }
+  &:nth-child(3) {
+    background: #233847;
+
+  }
+  &:nth-child(4) {
+    background: #1f3442;
   }
 }
