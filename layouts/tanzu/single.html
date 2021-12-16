@@ -19,12 +19,12 @@
                             <h1>{{ .Title }}</h1>
                             <p class="lead">{{ .Description }}</p>
                         </div>
-                        <div class="col-12 col-lg-6 py-2 py-lg-5 position-relative">
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 pr-lg-0 position-relative">
                             <img class="product-icon position-absolute" alt="" src='{{ "/images/icons/icon-tap.svg" | relURL }}'>
                             <!-- Link Boxes -->
-                            <div class="row align-bottom product-links position-relative z-1 justify-content-between">
+                            <div class="row flex-lg-nowrap product-links position-relative z-1 justify-content-between">
                                 {{ range .Params.links }}
-                                    <a class="linked-box flex-315 td-box--gray-dark px-4 py-3" href="{{ .link }}">
+                                    <a class="linked-box flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-100" href="{{ .link }}">
                                         <h2 class="h4 link">{{ .title }}</h2>
                                         <p>{{ .description }}</p>
                                     </a>
