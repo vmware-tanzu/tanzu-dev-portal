@@ -20,7 +20,7 @@
                             <p class="lead">{{ .Description }}</p>
                         </div>
                         <div class="col-12 col-lg-6 py-2 py-lg-5 pr-lg-0 position-relative">
-                            <img class="product-icon position-absolute" alt="" src='{{ "/images/icons/icon-tap.svg" | relURL }}'>
+                            <img class="product-icon position-absolute" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
                             <!-- Link Boxes -->
                             <div class="row flex-lg-nowrap product-links position-relative z-1 justify-content-between">
                                 {{ range .Params.links }}
