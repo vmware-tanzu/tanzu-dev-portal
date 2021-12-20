@@ -2,18 +2,18 @@
 description: A superior developer experience for enterprises building and deploying cloud native applications on Kubernetes. Get to production faster by automating source to production pipelines.
 title: Tanzu Application Platform
 icon: icon-tap
-alises:
+aliases:
 - /tap
 links:
 - title: Try
-  link: "#"
-  description: Begin with the workshop.
+  link: "/developer/guides/gs-tap-on-kind-pt1/"
+  description: Try TAP on KIND
 - title: Download
   link: https://network.tanzu.vmware.com/products/tanzu-application-platform/
-  description: Source code to get you started.
+  description: Downloads to get you started
 - title: Docs
-  link: "#"
-  description: Documentation, tutorials and guides.
+  link: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/index.html
+  description: Documentation, tutorials and guides
 tanzu: Tanzu Application Platform
 label: tap
 ---
