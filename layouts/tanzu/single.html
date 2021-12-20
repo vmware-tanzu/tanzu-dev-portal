@@ -53,6 +53,7 @@
 
                 <!-- Videos -->
                 {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
+                {{ if gt (len $videos) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
                     <div class='row'>
@@ -61,9 +62,11 @@
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
 
                 <!-- Featured Content -->
                 {{ $featured := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.featured" "eq" true }}
+                {{ if gt (len $featured) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
                     <div class='row'>
@@ -72,6 +75,7 @@
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
 
                 <!-- Newest Content -->
                 {{ $newest := where .Site.Pages "Params.tanzu.label" .Params.label }}
