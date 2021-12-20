@@ -16,6 +16,8 @@ instagram: ""
 youtube: ""
 ---
 
-Joe has been in the Software Industry for over 20 years. He has successfully designed, built and delivered enterprise grade software in the financial services and health sector. He has been using Spring for over 10 years and is very excited to have joined the Spring Security engineering team, in early 2016. Outside of his passion for crafty software, Joe continues to travel the world with his family, snowboarding the most challenging mountains, exploring nature on foot and doing his best to enjoy what life brings.
+Joe Grandja is a core committer on the Spring Security team. He has been leading the efforts in building the next generation of OAuth 2 and OpenID Connect support in Spring Security and Spring Authorization Server.  
+
+With over 25 years of industry experience, his job roles have covered Solution Architect, Software Engineer, Team Lead and Consultant. His past experience has been mainly focused in the Financial Services sector in the Toronto, Canada area. He has designed, built and delivered enterprise grade banking applications/platforms in the Personal/Commercial and Brokerage/Investing divisions. He has worked closely with the InfoSec teams within the banks to ensure security and regulatory compliance.
 
 <!--more-->
