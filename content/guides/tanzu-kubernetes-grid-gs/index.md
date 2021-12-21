@@ -189,6 +189,24 @@ A sample configuration file is provided below. This file will have the minimum c
     Here you can see various, high-level information about your cluster, including the Kubernetes version and the status of your infrastructure. 
 
 	Again, like your management cluster, familiarize yourself with what has been deployed by default on your cluster. 
+
+## Optional: Cleaning up
+
+If you intend to use these clusters for further learning, do not perform these steps. However, once you are done, it is a good idea to clean up your infrastructure. The following commands will delete the workload and management clusters you just provisioned. 
+
+If you simply want to reset your workload cluster by deleting and redeploying, this is also a good section to follow. Just delete the workload cluster and redeploy using the [Creating a workload cluster](#creating-a-workload-cluster) section above.
+
+1. Delete the workload cluster.
+
+    ```sh
+    tanzu cluster delete test-workload-cluster
+    ```
+
+2. Delete the management cluster.
+
+    ```sh
+    tanzu management-cluster delete test-management-cluster
+    ```
     
 ## Next steps
 
