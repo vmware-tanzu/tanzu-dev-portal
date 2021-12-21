@@ -10,7 +10,7 @@ tags:
 # Author(s)
 team:
 - Martin Perez
-- Raquel Campuzano
+- Raquel Campuzano Godoy
 ---
 
 On December 9, a vulnerability in one of the most popular Java libraries was revealed. Log4j (version 2) was affected by a zero-day exploit that resulted in Remote Code Execution (RCE), allowing attackers to do remote code execution in vulnerable environments. At this stage, everyone has heard about [CVE-2021-44228](https://www.randori.com/blog/cve-2021-44228/), also known as [Log4Shell](https://www.lunasec.io/docs/blog/log4j-zero-day/). 
@@ -23,7 +23,7 @@ In this blog post, we go over the responses and mitigations that have been relea
 
 Furthermore, we introduce the VMware Application Catalog as the definitive alternative for the enterprise to the endless manual fixes and component updates that development teams must perform when a huge vulnerability such as Log4Shell happens. As a library of prepackaged open source application components that are continuously maintained and verifiably tested, VMware Application Catalog brings developers and operators a way of consuming open source software without compromising security. 
 
-## **A retrospective of Log4Shell fixes and mitigations **
+## A retrospective of Log4Shell fixes and mitigations
 
 Many of the mitigations that were assumed to be viable have already been [discredited](https://logging.apache.org/log4j/2.x/security.html), as new attack vectors have appeared. Initially, it was thought that** newer Java Development Kits (JDK's) **were not affected,** **but some people [did prove](https://twitter.com/royvanrijn/status/1470308995038547969) that it was still possible to easily bypass the limitations introduced by those recent JDK's and reproduce the attack. 
 
