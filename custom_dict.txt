@@ -1127,6 +1127,7 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+Martín
 Masala
 matchers
 matchings
@@ -1368,6 +1369,7 @@ PeerAuthentication
 PEM
 per-namespace
 Percona
+Pérez
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 [Pp]et[Cc]linic
