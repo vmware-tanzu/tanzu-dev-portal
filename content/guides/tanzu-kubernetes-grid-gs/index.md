@@ -25,7 +25,7 @@ VMware Tanzu Kubernetes Grid is a production Kubernetes platform for organizatio
 
 For developers, Tanzu Kubernetes Grid represents an easy way for you to get up and running with Kubernetes. And not just for a small, "dev and test" environment, but also for environments that can scale from small, individual-use clusters all the way up to production multi-cloud environments—and everything in between. All while providing a uniform experience and environment for application deployment workflows. 
 
-In this guide, you will deploy Tanzu Kubernetes Grid. You will deploy a **management cluster**, as well as a single **workload cluster**. This workload cluster will be used in later guides as you build toward developing with Tanzu tools. 
+In this guide, you will deploy Tanzu Kubernetes Grid. You will deploy a **management cluster**, as well as a single **workload cluster**. This workload cluster can be used in later guides as you build toward developing with Tanzu tools. 
 
 ## Prerequisites
 
@@ -125,35 +125,47 @@ But since this guide is for learning purposes, you will be deploying the whole s
 
 You can now create your workload cluster. Much of the configuration for this cluster will use the same configuration as your workload cluster, unless you override the configuration options. 
 
-A sample configuration file is provided below. This file will have the minimum configuration options necessary to create your workload cluster. Other configuration options will be copied from your management cluster unless you override them in this file. 
+You can use the configuration file created from your workload cluster as a starting point. Since this is a known good-working file, it makes sense to start here.  
 
-1. Download the sample configuration file. 
+1. Find the name of the configuration file created. 
 
     ```sh
-    git clone https://gist.github.com/29d297d0cc2a5a15607f1f14a2906a87.git 
+    ls ~/.config/tanzu/tkg/clusterconfigs 
     ```
 
-2. Open the config file and edit it as necessary. You will need to, at a minimum, modify `AWS_SSH_KEY_NAME`. This is the same SSH key name you used to create your management cluster in the previous section. Modify other options as desired. Optional and common configuration options to change are highlighted in the file.
+    Example output:
 
     ```sh
-    code 29d297d0cc2a5a15607f1f14a2906a87/tkg-1-4-config
+    6oboxfbzg3.yaml
     ```
 
-3. Create the workload cluster.
+2. Copy this file into a new file you can edit for your workload cluster.
 
     ```sh
-    tanzu cluster create test-workload-cluster -f 29d297d0cc2a5a15607f1f14a2906a87/tkg-1-4-config
+    cp <file-name.yaml> test-workload-cluster-config.yaml
+    ```
+
+3. Open the config file and edit it as necessary. At a minimum **you will need to delete the line with `CLUSTER_NAME`. You will set this later in the CLI command. Modify other options as desired. Optional and common configuration options to change are highlighted in the file.
+
+    ```sh
+    code ~/.config/tanzu/tkg/clusterconfigs/test-workload-cluster-config.yaml
+    ```
+
+4. Create the workload cluster. The `-v 9` flag sets a very high verbosity on the streaming logs so you can see what is happening.
+
+    ```sh
+    tanzu cluster create test-workload-cluster -f ~/.config/tanzu/tkg/clusterconfigs test-workload-cluster-config.yaml -v 9
     ```
 
     This will begin the process of creating your workload cluster. This will take a few minutes to complete.
 
-4. Pull the kubeconfig context from the cluster. This command will allow you admin access to the cluster.
+5. Pull the kubeconfig context from the cluster. This command will allow you admin access to the cluster.
 
     ```sh
     tanzu cluster kubeconfig get test-workload-cluster --admin
     ```
 
-5. List your kubeconfig contexts and use the correct one for your new workload cluster.
+6. List your kubeconfig contexts and use the correct one for your new workload cluster.
 
     ```sh
     kubectl config get-contexts
@@ -163,7 +175,7 @@ A sample configuration file is provided below. This file will have the minimum c
     kubectl config use-context <context-name>
     ```
 
-6. Verify the cluster health by pulling some cluster details.
+7. Verify the cluster health by pulling some cluster details.
 
     ```sh
     tanzu cluster get test-workload-cluster -v 1
@@ -213,5 +225,5 @@ If you simply want to reset your workload cluster by deleting and redeploying, t
 There are many other management functions you can familiarize yourself with. Try running `tanzu cluster --help` to get an idea of what is possible, and start exploring.
 
 Next, try out installing VMware Tanzu Application Platform on top of your workload cluster as part of your development environment. 
-* Getting Started with VMware Tanzu Application Platform `dev` Profile (Coming Soon) - This guide will introduce Tanzu Application Platform and walk you through installing it on top of your workload cluster. This will later be used to create your Tanzu development environment. 
+* [Getting Started with VMware Tanzu Application Platform `dev` Profile](/guides/tanzu-application-platform-gs) - This guide will introduce Tanzu Application Platform and walk you through installing it on top of your workload cluster. This will later be used to create your Tanzu development environment. 
 
