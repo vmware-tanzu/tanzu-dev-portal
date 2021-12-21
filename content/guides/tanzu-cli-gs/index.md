@@ -14,7 +14,7 @@ team:
 ---
 
 {{% callout %}} 
-This guide was written for Tanzu CLI Core `v0.10.0` with a build date: of 2021-11-03. This guide also assumes a MacOS v12.0. Commands provided in this guide make these assumptions. This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands. 
+This guide was written for Tanzu CLI Core `v0.12.0` with a build date: of 2021-11-03. This guide also assumes a MacOS v12.0. Commands provided in this guide make these assumptions. This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands. 
 {{% /callout %}}
 
 ## What is the `tanzu` CLI?
@@ -44,7 +44,7 @@ You will need to create the install directory, download the `tar` file from the 
 
 2. Download the `tanzu` CLI package from the Tanzu Network. This download command can be found within the [`tanzu-cli`](https://network.pivotal.io/products/tanzu-application-platform/#/releases/992949/file_groups/5804) package of Tanzu Application Platform on the Tanzu Network. You may need to accept a EULA if this is your first time downloading this package. It can also be downloaded directly from the GUI as well.
     ```sh
-    pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='0.3.0' --product-file-id=1080177
+    pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='0.4.0' --product-file-id=1100107
     ```
 
 3. Extract the `tar` file into the install directory created in the previous step.
@@ -59,7 +59,7 @@ You will need to create the install directory, download the `tar` file from the 
 
 5. Run the install binary to complete the base installation.
     ```sh
-    sudo install cli/core/v0.10.0/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
+    sudo install cli/core/v0.12.0/tanzu-core-darwin_amd64 /usr/local/bin/tanzu
     ```
 
 6. Verify the installation.
@@ -68,10 +68,9 @@ You will need to create the install directory, download the `tar` file from the 
     ```
     Example output: 
     ```sh
-    tanzu version
-    version: v0.10.0
-    buildDate: 2021-11-03
-    sha: fd96bebe
+    version: v0.12.0
+    buildDate: 2021-11-25
+    sha: ff02d464
     ```
 
 7. Initialize the `tanzu` CLI.
@@ -85,6 +84,67 @@ You will need to create the install directory, download the `tar` file from the 
     ```
 
 You now have a basic installation of `tanzu`. In the next section, you will explore some of the more common functionality used with this tool.
+
+## Installing plugins
+
+The `tar` file you downloaded and expanded earlier contains a manifest file within it. In `~/tanzu/cli/manifest.yaml` there is a reference to all of the default CLI plugins. In this section, you will install those. 
+
+1. List your currently installed plugins.
+
+    ```sh
+    tanzu plugin list
+    ```
+
+    Example output:
+
+    ```sh
+    NAME                DESCRIPTION                                                        SCOPE       DISCOVERY  VERSION  STATUS
+    login               Login to the platform                                              Standalone  default    v0.12.0  not installed
+    management-cluster  Kubernetes management-cluster operations                           Standalone  default    v0.12.0  not installed
+    package             Tanzu package management                                           Standalone  default    v0.12.0  not installed
+    pinniped-auth       Pinniped authentication operations (usually not directly invoked)  Standalone  default    v0.12.0  not installed
+    secret              Tanzu secret management                                            Standalone  default    v0.12.0  not installed
+    ```
+
+    Notice that these plugin are listed as `not installed`. This is a clean CLI install. You will install the plugins next. 
+
+2. Disable the context-aware CLI feature. This will allow you to install these plugins from a local source.
+
+    ```sh
+    tanzu config set features.global.context-aware-cli-for-plugins false
+    ```
+
+3. Install the plugins using your local manifest file.
+
+    ```sh
+    tanzu plugin install --local cli all
+    ```
+
+4. List your plugins again. 
+
+    ```sh
+    tanzu plugin list
+    ```
+
+    Example output:
+
+    ```sh
+    NAME                LATEST VERSION  DESCRIPTION                                                        REPOSITORY  VERSION  STATUS
+    accelerator                         Manage accelerators in a Kubernetes cluster                                    v0.5.0   installed
+    apps                                Applications on Kubernetes                                                     v0.3.0   installed
+    cluster             v0.13.0         Kubernetes cluster operations                                      core        v0.12.0  upgrade available
+    kubernetes-release  v0.13.0         Kubernetes release operations                                      core        v0.12.0  upgrade available
+    login               v0.13.0         Login to the platform                                              core        v0.12.0  upgrade available
+    management-cluster  v0.13.0         Kubernetes management cluster operations                           core        v0.12.0  upgrade available
+    package             v0.13.0         Tanzu package management                                           core        v0.12.0  upgrade available
+    pinniped-auth       v0.13.0         Pinniped authentication operations (usually not directly invoked)  core        v0.12.0  upgrade available
+    secret              v0.13.0         Tanzu secret management                                            core        v0.12.0  upgrade available
+    services                            Discover Service Types and manage Service Instances (ALPHA)                    v0.1.0   installed    
+    ```
+
+    Notice here a few things. First that all of the previously listed plugins are now installed. Next, notice that you have some new plugins available too. These plugins are out side of the core plugins `tanzu` has configured, and are used for installing and managing Tanzu Application Platform. 
+    
+    Finally, see that many of these are listed as `upgrade available`. You can, if you want, run `tanzu plugin upgrade` to upgrade these. But this is outside of the scope of this guide and future commands will assume you are running at least these versions listed. 
 
 ## Optional: Using `tanzu`
 
@@ -238,10 +298,11 @@ Again, these instructions were written for MacOS. If you are running on another 
 
 1. Remove all of the created directories and the `tanzu` binary.
     ```sh
-    sudo rm -rf /
-      ~/tanzu/cli /
-      ~/.config/tanzu /
-      ~/Library/Application\ Support/tanzu-cli/* /
+    sudo rm -rf \
+      ~/tanzu/cli \
+      ~/.config/tanzu \
+      ~/.cache/tanzu \
+      ~/Library/Application\ Support/tanzu-cli/* \
       /usr/local/bin/tanzu
     ```	
 From here, you can go back through the install process above and reinstall if needed. 
