@@ -291,6 +291,7 @@ Clojure
 closeRegion
 CloudEvents
 Cloudflare
+CloudFlare
 CloudHealth
 CloudNativeCon
 cloudnativewal
@@ -396,6 +397,8 @@ customization(s)?
 CustomResourceDefinition(s)?
 CVE-[0-9]{4}-[0-9]+
 CVE(s|-reported)?
+CVSS
+[Cc]yber
 cybersecurity
 Cygwin
 D2iQ
@@ -1083,7 +1086,9 @@ LocalDataSet
 LocalDataSets
 localhost(:[0-9]*)?
 lockfile
+Log4Hell
 [Ll]og4j2?
+Log4Shell
 LogAllStatisticValuesFunction
 logback
 Logback
@@ -1095,6 +1100,7 @@ logQueue
 [lL]ogrus
 Logstash
 Lombok
+lookups
 lookups.
 lorem-ipsum
 Low-fi
@@ -1483,6 +1489,7 @@ RabbitMQ('s)?
 Raju
 Rakuten
 RBAC(-enabled)?
+RCE
 RDBMS
 reachability
 reactively
