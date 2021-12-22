@@ -1,5 +1,5 @@
 ---
-description: A superior developer experience for enterprises building and deploying cloud native applications on Kubernetes. Get to production faster by automating source to production pipelines.
+description:  TAP includes foundational elements that enable developers to quickly begin building and testing applications regardless of their familiarity with Kubernetes. Operations teams can create application scaffolding templates with baked-in security and compliance guardrails.
 title: Tanzu Application Platform
 icon: icon-tap
 aliases:
