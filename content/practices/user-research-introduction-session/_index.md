@@ -21,6 +21,10 @@ miro_template_url: ""
 ## How to Use this Method
 
 {{% section %}}
+Feel free to use this slide deck to help introduce your group to User Research.
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/iYAC2Vhv0ZEIml" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/user-research-at-vmware-tanzu-labs" title="User research at VMware Tanzu Labs" target="_blank">User research at VMware Tanzu Labs</a> </strong> from <strong><a href="https://www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
+
 ### Sample Agenda & Prompts
 1. Write the agenda on the whiteboard or shared digital workspace:
    
@@ -104,6 +108,9 @@ You’ve succeeded when the team feels like they’re confident they can conduct
 {{% section %}}
 ### Facilitator Notes & Tips
 You can make as many or as few visual aids ahead of time as you like to support this session, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
+
+You can also use this slide deck (embedded above) for your sessions: [User Research at VMware Tanzu Labs
+](https://tanzu.vmware.com/content/vmware-tanzu-developer-center-slides/user-research-at-vmware-tanzu-labs).
 
 If the team feels like they want more practice conducting research before they do it with actual users, don’t hesitate to schedule a follow-up session or two. Role playing can do wonders to prep people who haven’t done a lot of research before but are excited to learn how.
 
