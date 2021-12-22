@@ -3,16 +3,16 @@ description: Monitor everything from full-stack applications to cloud infrastruc
 title: Tanzu Observability
 icon: icon-tap
 aliases:
-- /tap
+- /to
 links:
 - title: Try
-  link: "/developer/guides/gs-tap-on-kind-pt1/"
-  description: Try TAP on KIND
-- title: Download
-  link: https://network.tanzu.vmware.com/products/tanzu-application-platform/
-  description: Downloads to get you started
+  link: "/developer/guides/spring-wavefront-gs"
+  description: Get Started with Wavefront for Spring Boot
+- title: Free Trial
+  link: https://tanzu.vmware.com/observability-trial
+  description: Try Tanzu Observability for Free
 - title: Docs
-  link: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/index.html
+  link: https://docs.wavefront.com/
   description: Documentation, tutorials and guides
 tanzu: Tanzu Observability
 label: to

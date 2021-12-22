@@ -3,16 +3,16 @@ description: A full-featured, easy to manage Kubernetes platform for learners an
 title: Tanzu Community Edition
 icon: icon-tap
 aliases:
-- /tap
+- /tce
 links:
 - title: Try
-  link: "/developer/guides/gs-tap-on-kind-pt1/"
-  description: Try TAP on KIND
+  link: "/developer/workshops/lab-tce-deploy/"
+  description: Try the TCE Workshop In-Browser
 - title: Download
-  link: https://network.tanzu.vmware.com/products/tanzu-application-platform/
+  link: https://tanzucommunityedition.io/download/
   description: Downloads to get you started
 - title: Docs
-  link: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/index.html
+  link: https://tanzucommunityedition.io/docs/latest/
   description: Documentation, tutorials and guides
 tanzu: Tanzu Community Edition
 label: tce
