@@ -18,7 +18,7 @@ minutes: 60
 title: "Leveraging Backstage for the Tanzu Application Platform GUI"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "E4KvQi-kmbg"
 type: tv-episode
 ---
 
