@@ -93,7 +93,7 @@ There are a couple quick steps necessary to perform against your Tanzu Kubernete
 6. Scale the number of worker nodes on your workload cluster. Since we turned off auto scaling when setting up the workload cluster, you will need to scale the cluster manually.
 
     ```sh
-    tanzu cluster scale test-workload-cluster --worker-machine-count 4
+    tanzu cluster scale test-workload-cluster --worker-machine-count 6
     ```
 
     This command will execute quickly, but in the background will still be provisioning machines. This process will take around 10 minutes to complete, but you can move on to the next steps as it is finishing. Use `tanzu cluster list` or `tanzu cluster get test-workload-cluster` to get the status of this provisioning. 
@@ -208,3 +208,18 @@ You can find a list of the packages installed in each profile [here](https://doc
     ```sh
     tanzu package install tap -p tap.tanzu.vmware.com -v 0.4.0 --values-file tap-values.yml -n tap-install
     ```
+
+**TODO: Failing on app-live-view and build service.**
+
+```
+❯ tanzu package installed get tap -n tap-install
+/ Retrieving installation details for tap... I1221 16:11:50.917462   17957 request.go:665] Waited for 1.049485332s due to client-side throttling, not priority and fairness, request: GET:https://workload-2-apiserver-299555843.us-west-2.elb.amazonaws.com:6443/apis/authentication.k8s.io/v1?timeout=32s
+| Retrieving installation details for tap...
+NAME:                    tap
+PACKAGE-NAME:            tap.tanzu.vmware.com
+PACKAGE-VERSION:         0.4.0
+STATUS:                  Reconcile failed: Error (see .status.usefulErrorMessage for details)
+CONDITIONS:              [{ReconcileFailed True  Error (see .status.usefulErrorMessage for details)}]
+USEFUL-ERROR-MESSAGE:    kapp: Error: waiting on reconcile packageinstall/buildservice (packaging.carvel.dev/v1alpha1) namespace: tap-install:
+  Finished unsuccessfully (Reconcile failed:  (message: Error (see .status.usefulErrorMessage for details)))
+```
