@@ -78,7 +78,8 @@
                 {{ end }}
 
                 <!-- Newest Content -->
-                {{ $newest := where .Site.Pages "Params.tanzu.label" .Params.label }}
+                {{ $newest :=  where (where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.featured" "ne" true) "Params.tanzu.gettingstarted" "ne" true }}
+                {{ if gt (len $newest) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Newest Content</h2></div>
                     <div class='row'>
@@ -87,6 +88,7 @@
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
 
             </section>
       </div>
