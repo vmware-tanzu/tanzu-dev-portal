@@ -1,7 +1,7 @@
 ---
 description: Monitor everything from full-stack applications to cloud infrastructures with metrics, traces, event logs, and analytics. Use Tanzu Observability to roll out monitoring as a service to all your DevOps teams, including developers and SREs across the enterprise.
 title: Tanzu Observability
-icon: icon-tap
+icon: icon-to
 aliases:
 - /to
 links:

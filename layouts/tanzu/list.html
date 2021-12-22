@@ -20,6 +20,7 @@
 		{{ .Content }}
 		<div class="row mb-5">
 			{{ range .Pages }}
+			<!-- TODO: Fix card height -->
 				{{ partial "tanzu-card.html" . }}
 			{{ end }}
 		</div>

@@ -1,7 +1,7 @@
 ---
 description: A full-featured, easy to manage Kubernetes platform for learners and users. It is a freely available, community supported, open source distribution of VMware Tanzu that can be installed and configured in minutes on your local workstation or your favorite cloud.
 title: Tanzu Community Edition
-icon: icon-tap
+icon: icon-tce
 aliases:
 - /tce
 links:
