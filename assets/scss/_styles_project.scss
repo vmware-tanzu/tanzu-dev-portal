@@ -403,12 +403,11 @@ body {
     transition: background-color .2s;
     letter-spacing: 1px;
     -webkit-font-smoothing: auto;
-  
+    
     &.btn-small {
       padding: 8px 25px;
       font-size: 11px;
     }
-  
     &:hover,
     &:focus {
       background-color: $link-hover-color;
@@ -970,7 +969,6 @@ body {
     z-index: 1;
     background: rgba(0, 0, 0, 0.1);
   }
-  
   .youtube-small {
     position: absolute;
     top: 0;
@@ -2191,7 +2189,7 @@ background: black;
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
-  .row:hover:not(.workshop-row) > .flex-315,
+  .row:hover:not(.workshop-row):not(.product-links) > .flex-315,
   .learningpaths-index:hover .linked-box,
   .topics-row:hover .topic-card,
   .row:hover > .subtopic,

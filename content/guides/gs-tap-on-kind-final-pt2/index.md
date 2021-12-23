@@ -16,6 +16,12 @@ level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 alises:
 - /guides/kubernetes/gs-tap-on-kind-final-pt2
+tanzu:
+  label: tap
+  featured: true
+  featuredweight: 3
+  gettingstarted: true
+  gettingstartedweight: 3
 ---
 
 {{% callout %}} 

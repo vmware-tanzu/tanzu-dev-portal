@@ -19,6 +19,12 @@ aliases:
 - /guides/kubernetes/gs-tap-on-kind-pt1/
 level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
+tanzu:
+  label: tap
+  featured: true
+  featuredweight: 2
+  gettingstarted: true
+  gettingstartedweight: 2
 ---
 
 {{% callout %}} 

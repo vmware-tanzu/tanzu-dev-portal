@@ -1,0 +1,30 @@
+<div class="bg-gray-light subtopic mr-3 mb-3 flex-315 transition-all">
+    <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
+        <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+        <div class="card-type-id">
+            <img class="d-inline-block" alt="" src='{{ "/images/icons/icon-list-ul.svg" | relURL }}'>
+            <span class="h5">Learning Path</span>
+        </div>
+        <p>{{ .Description }}</p>
+        <div class="row justify-content-between d-flex px-0 py-4">
+            <div class="learning-path-duration">
+                <i class="fas fa-hourglass-half"></i>
+                {{ if gt .Params.duration 60 }}
+                    <!-- Round up to closest full hour duration -->
+                    {{ math.Ceil (div .Params.duration 60.0) }}h    
+                {{ else }}
+                    {{ .Params.duration }}m
+                {{ end }}
+            </div>
+            <div class="learning-path-level">
+                {{ if eq .Params.experience "Beginner" }}
+                    <h5><span class="badge badge-success mr-3 py-1 px-2 antialiased">Beginner</span></h5>
+                {{ else if eq .Params.experience "Intermediate" }}
+                    <h5><span class="badge badge-warning mr-3 py-1 px-2 antialiased">Intermediate</span></h5>
+                {{ else if eq .Params.experience "Advanced" }}
+                    <h5><span class="badge badge-danger mr-3 py-1 px-2 antialiased">Advanced</span></h5>
+                {{ end }}
+            </div>
+        </div>
+    </a>
+</div>

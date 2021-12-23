@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }} td-topic">
+    {{ partial "amplitude.html" (dict "context" . "event" "tanzu viewed") }}
+    <header>
+      {{ partial "navbar.html" . }}
+    </header>
+    
+    <div class="container-fluid td-outer">
+        {{ partial "live-notify.html" . }}
+        <div class="td-main ">
+            <div id="hero" class="overflow-hidden td-box--gray-dark mt-lg-5 mt-7 py-lg-5">
+                <div class='container'>
+                    {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+                    <div class="row align-items-center py-lg-5">
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 pl-lg-0">
+                            <h1>{{ .Title }}</h1>
+                            <p class="lead">{{ .Description }}</p>
+                        </div>
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 pr-lg-0 position-relative">
+                            <img class="product-icon position-absolute" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
+                            <!-- Link Boxes -->
+                            <!-- TODO: Proper CSS fix for make link boxes the same size -->
+                            <div class="container h-100" style="display: grid;">
+                                <div class="row h-100 flex-lg-nowrap product-links position-relative z-1 justify-content-between">
+                                    {{ range .Params.links }}
+                                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-100" href="{{ .link }}">
+                                            <h2 class="h4 link">{{ .title }}</h2>
+                                            <p>{{ .description }}</p>
+                                        </a>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="topics-section">
+
+                <!-- Getting Started-->
+                {{ $gettingstarted := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.gettingstarted" "eq" true }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
+                    <div class='row'>
+                        {{ range first 3 (sort $gettingstarted "Params.tanzu.gettingstartedweight" "asc") }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+
+                <!-- Videos -->
+                {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
+                {{ if gt (len $videos) 0 }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $videos }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Featured Content -->
+                {{ $featured := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.featured" "eq" true }}
+                {{ if gt (len $featured) 0 }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Featured Content</h2></div>
+                    <div class='row'>
+                        {{ range first 3 (sort $featured "Params.tanzu.featuredweight" "asc") }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Videos Content -->
+                {{ $videos := where (where .Site.Pages "Params.tanzu.label" .Params.label) "Section" "videos" }}
+                {{ $shownvideos := first 3 $videos }}
+                {{ if gt (len $videos) 0 }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
+                    <div class='row'>
+                        {{ range $shownvideos}}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Newest Content -->
+                {{ $newestwritten :=  where (where (where .Site.Pages "Params.tanzu.label" .Params.label) "Params.tanzu.featured" "ne" true) "Params.tanzu.gettingstarted" "ne" true }}
+                {{ $newest := slice }}
+                {{ range $newestwritten }}
+                    {{ if not (in $shownvideos .) }}
+                        {{ $newest = $newest | append . }}
+                    {{ end }}
+                {{ end }}
+                {{ if gt (len $newest) 0 }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Newest Content</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $newest.ByDate }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+            </section>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+  <script>
+    $( ".show-all-button" ).click(function() {
+        $(this).parent().parent().find(".hidden-item:first").show( 20, function showNext() {
+            $(this).next( ".hidden-item" ).show( 20, showNext );
+        });
+        $(this).parent().hide();
+    });
+  </script>
+
+</html>
+
