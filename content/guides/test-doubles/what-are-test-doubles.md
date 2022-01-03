@@ -330,7 +330,7 @@ For a moment, let's turn our attention away from testing `Accountant` and instea
 - If an amount is deposited, then the balance increases to reflect the deposited amount.
 - If an amount is withdrawn, then the balance decreases to reflect the withdrawn amount.
 
-We can encapsuate this behavior in a test:
+We can encapsulate this behavior in a test:
 
 ```typescript
 function testBankAccount(createBankAccount: () => BankAccount) {
