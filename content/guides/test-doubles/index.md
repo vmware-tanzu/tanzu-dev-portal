@@ -1,11 +1,10 @@
 ---
 title:  "What Are Test Doubles?"
 featured: false
-linkTitle: What Are Test Doubles
+linkTitle: What Are Test Doubles?
 description: "An introduction to test doubles, the types of test doubles, and when/how to use them"
 date: "2022-01-01"
 lastmod: "2022-01-01"
-parent: Building Modern Applications
 topics:
 - Testing
 tags:
@@ -16,6 +15,8 @@ tags:
 - stubs
 - mocks
 - fakes
+level1: Building Modern Applications
+level2: Modern Development Practices
 # Author(s)
 team:
 - Alex Basson (abasson@vmware.com)
@@ -33,7 +34,7 @@ This means you want **test doubles**. Test doubles are stand-ins—they get thei
 
 Consider the diagram below. Here, the code being tested gets data from two data sources, adds them together, and sends the output to another dependency.
 
-![test doubles](TestDoubles.jpg)
+![test doubles](images/TestDoubles.jpg)
 
 When writing the tests for this code, we want to be able to control the inputs, so that we have predictable, known conditions under which we can test the code. For example, we might want to set things up such that when our code calls `getX()`, `dataSourceA` returns `3`, and when our code calls `getY()`, `dataSourceB` returns `5`. And we want to know that when our code calls `setOutput()`, it passes the value `8` to `dependencyC`.
 
