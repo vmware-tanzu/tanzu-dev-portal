@@ -101,6 +101,7 @@ miro_template_url: "URL for related Miro template"
    After the workshop, create a document that maps roles, accountabilities, and activities. Share it with the workshop attendees and anyone else in the organization would benefit from clarity on these roles. 
 
 1. Follow up
+   
    This workshop often generates follow up work. You may want to revisit job postings, adjust how you manage performance, or reorganize your team to better align to your organization’s needs. 
 
 
