@@ -19,7 +19,7 @@ level1: Building Modern Applications
 level2: Modern Development Practices
 # Author(s)
 team:
-- Alex Basson (abasson@vmware.com)
+- Alex Basson
 ---
 
 ## Why use test doubles?
