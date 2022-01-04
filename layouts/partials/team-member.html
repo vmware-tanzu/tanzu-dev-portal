@@ -1,9 +1,9 @@
 <div class="row team-member">
     <div class="col-lg-3 col-md-3 mr-4 mb-5">
         {{ if and (or (eq .display "summary") (eq .display "tv")) (not .context.Params.hidden) }}
-            <a href="{{ .context.RelPermalink }}"><img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/></a>
+            <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-src.html" .context }}'/></a>
         {{ else }}
-            <img class='' src='{{ (.context.Params.photo | default (print "/images/team/" (urlize .context.Params.name) ".jpg") | relURL) }}'/>
+            <img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-src.html" .context }}'/>
         {{ end }}
     </div>
     <div class="col-lg-8 col-md-8">

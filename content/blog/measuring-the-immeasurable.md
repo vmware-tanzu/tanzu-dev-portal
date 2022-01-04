@@ -7,6 +7,7 @@ lastmod: '2021-03-25'
 team:
 - VMware Tanzu Labs
 title: Measuring the Immeasurable
+tags: []
 ---
 
 _[How To Measure Anything](https://www.howtomeasureanything.com/)_ by Douglas Hubbard is a popular book at VMware Tanzu Labs. In it, Hubbard takes a strong, opinionated stance on both the concept of measurement, the value of measurement, and how to measure things that are considered immeasurable.

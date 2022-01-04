@@ -1,11 +1,9 @@
 ---
 name: Dave Tillman
 description: ""
-photo: "/images/team/dave-tillman.jpeg"
 roles: ["guest"]
 skills: [""]
 location: ""
-weight: 1
 
 # Social Media
 twitter: ""

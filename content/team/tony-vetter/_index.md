@@ -1,11 +1,9 @@
 ---
 name: Tony Vetter
 description: "Sr. Product Marketing Manager"
-photo: "/images/team/tony-vetter.jpg"
 roles: ["author"]
 skills: []
 location: "Seattle, WA"
-weight: 1
 
 # Social Media 
 twitter: "anthonyjvetter"

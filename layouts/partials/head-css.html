@@ -1,3 +1,32 @@
+{{ define "changeTheme" }}
+<script>
+var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
+changeTheme(savedTheme, true);
+function changeTheme(mode, firstLoad) {
+  sendAmplitudeUserProps({"latest saved theme": mode}); 
+  if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
+  if (mode === "light") {
+    var iframe = document.getElementById('auth-iframe');
+    var head = document.head;
+    var link = document.createElement("link");
+
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = "{{ .cssLight.RelPermalink }}";
+    link.id = "light-theme"
+
+    head.prepend(link);
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage('light', '*');
+    }
+    document.documentElement.classList.add('light-mode')
+  } 
+  if (mode === "dark") {
+    localStorage.clear();
+  }
+}
+</script>
+{{ end }}
 
 {{ $scssMain := "scss/main.scss" }}
 {{ $scssCustom := "scss/custom.scss" }}
@@ -15,16 +44,19 @@
 <link href="{{ $cssCustom.RelPermalink }}" rel="stylesheet">
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
+{{ template "changeTheme" (dict "cssLight" $cssLight) }}
 
 {{ else }}
 {{ $css := resources.Get $scssMain | resources.ExecuteAsTemplate "css/main.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
 {{ $cssCustom := resources.Get $scssCustom | resources.ExecuteAsTemplate "css/custom.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
-{{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS }}
+{{ $cssLight := resources.Get $scssLight | resources.ExecuteAsTemplate "css/light-theme.css" . | toCSS (dict "enableSourceMap" false) | postCSS | minify | fingerprint }}
 
 <link rel="preload" href="{{ $css.RelPermalink }}" as="style">
 <link rel="preload" href="{{ $cssCustom.RelPermalink }}" as="style">
 <link rel="preload" href="{{ $cssLight.RelPermalink }}" as="style">
 <link href="{{ $cssCustom.RelPermalink }}" rel="stylesheet" integrity="{{ $cssCustom.Data.integrity }}">
 <link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.integrity }}">
+
+{{ template "changeTheme" (dict "cssLight" $cssLight) }}
 
 {{ end }}

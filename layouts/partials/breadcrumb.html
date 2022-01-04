@@ -1,18 +1,47 @@
 <nav aria-label="breadcrumb" class="d-block d-md-block d-print-none">
 	<ol class="breadcrumb spb-1">
-		{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+
+		<!-- If not a guide, just show type and title -->
+		{{ if ne .Section "guides" }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ .FirstSection.RelPermalink }}">{{ .FirstSection.LinkTitle }}</a>
+			</li>
+		{{ end }}
+		
+		<!-- Topic -->
+		{{ if and .Params.level1 (eq .Section "guides" ) }}
+			{{ $topicpage := index (where (where .Site.Pages "Section" "topics") ".Title" .Params.level1) 0 }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ $topicpage.RelPermalink }}">{{ .Params.level1 }}</a>
+			</li>
+		{{ end }}
+
+		<!-- Subtopic -->
+		{{ if (and (and (eq .Section "guides") .Params.level2) (ne .Params.toppage true) ) }}
+			{{ $subtopic := .Site.GetPage (printf "/guides/%s" (replace (.Params.level2 | urlize) "/" "-")) }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ $subtopic.RelPermalink }}">{{ $subtopic.Params.level2 }}</a>
+			</li>
+		{{ end }}
+
+		<!-- If the guide has a parent, include in the breadcrumb -->
+		{{ if .Params.parent }}
+			<!-- Lookup section page -->
+			{{ $sspage := index (where .Site.Pages "Params.subsection" .Params.parent) 0 }}
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ $sspage.RelPermalink }}">{{ $sspage.LinkTitle }}</a>
+			</li>
+		{{ else if and (or (eq .Section "learningpaths") (eq .Section "tv")) (ne .FirstSection .Parent) }}
+			<!-- Subpage of a learning path or TTV show, include the learning path/TTV show name in the bread crumb -->
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
+			</li>
+		{{ end }}
+
+		<!-- Active page -->
+		<li class="breadcrumb-item active" aria-current="page">
+			<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+		</li>
+
 	</ol>
-</nav	>
-{{ define "breadcrumbnav" }}
-{{ if .p1.Parent }}
-{{ if not .p1.Parent.IsHome }}
-{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
-{{ end }}
-{{ else if not .p1.IsHome }}
-{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
-{{ end }}
-{{ $isActive :=  eq .p1 .p2  }}
-<li class="breadcrumb-item{{ if $isActive }} active{{ end }}" {{ if $isActive }}aria-current="page"{{ end }}>
-	<a href="{{ .p1.RelPermalink }}">{{ .p1.LinkTitle }}</a>
-</li>
-{{ end }}
+</nav>

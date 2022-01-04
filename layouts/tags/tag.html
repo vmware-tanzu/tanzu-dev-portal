@@ -9,7 +9,7 @@
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main ">
-        <div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+        <div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5 py-2">
             <div class='container'>
                 {{ .Render "content" }}
             </div>
@@ -20,7 +20,7 @@
         {{ $guides := where .Data.Pages "Section" "guides" }}
         {{ if gt (len $guides) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-4'><img class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
+            <div class='d-flex align-items-center icon-title mb-4'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
             <div class='col px-lg-0'><div class='row'>
                 {{ range $guides }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -38,7 +38,7 @@
         {{ $videos := where .Data.Pages "Section" "videos" }}
         {{ if gt (len $videos) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $videos }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -54,7 +54,7 @@
         {{ $samples := where .Data.Pages "Section" "samples" }}
         {{ if gt (len $samples) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{"/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{"/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $samples }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">
@@ -70,7 +70,7 @@
         {{ $blogs := where .Data.Pages "Section" "blog" }}
         {{ if gt (len $blogs) 0 }}
         <div class='container py-5 border-bottom'>
-            <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
+            <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div>
             <div class="col px-lg-0"><div class='row'>
                 {{ range $blogs }}
                     <div class="flex-315 col-12 mr-3 mb-3 px-0">

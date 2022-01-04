@@ -1,1 +1,1 @@
-<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+{{ if (and (not (or (strings.HasPrefix .Destination "/") (strings.HasPrefix .Destination "http"))) (or (eq .Page.File.BaseFileName "index") (eq .Page.File.BaseFileName "_index"))) }}<img src="{{ print .Page.Permalink .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ else }}<img src="{{ .Destination | relURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />{{ end }}

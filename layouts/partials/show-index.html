@@ -9,32 +9,10 @@
                 <p class='h5 text-uppercase text-white'>{{ .Params.teaser }} </p>
             </div>
             <div class='row d-flex justify-content-between mb-5 episodes'>
-            {{if ( eq (.Title ) "SpringOne Tour")}}
-                {{ range after 2 ( first 5 (sort .RegularPages ".Date" "desc")) }}
-                    <a class='col-4-thumbnail hover-scale flex-315 col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
-                        <div class='thumbnail-gradient position-absolute'></div>
-                        <img src="{{ .Params.episode_image | relURL }}" />
-                        {{ if gt (len .Title) 70}}
-                                <div class='video-description d-flex flex-column justify-content-between'>
-                                    <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
-                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
-                                </div>
-                            {{ else }}
-                                <div class='video-description d-flex flex-column justify-content-between'>
-                                    <p class='text-white mt-0'> {{.Title}} </p>
-                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
-                                </div>
-                            {{ end }}
-                        {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
-                        <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
-                        
-                    </a>
-                {{ end }}
-            {{ else }}
                 {{ range first 3 (sort .RegularPages ".Date" "desc") }}
-                    <a class='col-4-thumbnail hover-scale flex-315 col-lg-4 col-12 rounded overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+                    <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                         <div class='thumbnail-gradient position-absolute'></div>
-                        <img src="{{ .Params.episode_image | relURL }}" />
+                        <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
                         {{ if gt (len .Title) 70}}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
@@ -48,10 +26,8 @@
                             {{ end }}
                         {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
                         <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
-                        
                     </a>
                 {{ end }}
-            {{ end }}
             </div>
         {{ end }}
 

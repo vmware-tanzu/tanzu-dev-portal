@@ -1,11 +1,9 @@
 ---
 name: Madhura Bhave
 description: "Software Engineer"
-photo: "/images/team/madhura-bhave.jpeg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "madhurabhave23"

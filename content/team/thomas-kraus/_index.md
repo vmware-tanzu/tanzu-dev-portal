@@ -1,11 +1,9 @@
 ---
 name: Thomas Kraus
 description: "Field Principal at VMware"
-photo: "/images/team/thomas-kraus.png"
 roles: ["author"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media 
 twitter: "tkrausjr"

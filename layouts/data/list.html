@@ -1,0 +1,114 @@
+{{ define "main" }}
+<a id="td-block" class="td-offset-anchor"></a>
+<section id="hero" class="data-hero td-box--gray-dark">
+  <div class="container">
+      <h1 class="h1">Tanzu Data Services</h1>
+      <div class="lead"><p>A portfolio of on-demand caching, messaging, and database software on VMware Tanzu for development teams building modern applications.</p></div>
+  </div>
+</section>
+
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="featured-section td-box">
+
+  <div class="row w-100">
+    <div class="col-12 mb-4">
+        <h2 class="h2">Featured</h2>
+    </div>
+  </div>
+  <div class="row">   
+      {{ range first 3 (where (where .Site.Pages "Section" "data") ".Params.data-featured" true).ByWeight }}
+          <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0">
+              <a href="{{ .RelPermalink}}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+                  <h3 class="mb-3 h5">{{ .Parent.Title | singularize }}</h3>
+                  <h4 class="h4">{{ .LinkTitle }}</h4>
+                  <p class="text-light">{{ .Description }}</p>
+              </a>
+          </div>
+      {{ end }}
+  </div>
+</section>
+
+<a id="td-block" class="td-offset-anchor"></a>
+<section class="row td-box td-box--dark py-0 mb-5 pb-lg-5 pb-3">
+	<!-- <div class="col"> -->
+		<div class="row w-100">
+			<div class="col-12 mb-4">
+          <h2 class="h2">Get Started</h2>
+      </div>
+		</div>
+	<!-- </div> -->
+
+<div class="row">
+  {{ $url_text := "Tanzu GemFire" }}
+  {{$icon_path := "/images/icons/icon-tanzu-gemfire" }}
+  {{ $left_border_color := "blue" }}
+  {{ $link := replace (lower $url_text) "/" "-"  }}
+  {{ $link := replace $link "&" "and" }}
+  {{ $link := replace $link " " "-" }}
+  {{ $section_name := $link  }}
+  {{ $link := printf "%s/%s" "/data" $link | relURL }}
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+    {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+  
+    {{ with $.Site.GetPage "section" $section_name }}
+    <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
+        <div>
+          <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
+          <h4 class="h4">{{$url_text }}</h4>
+        </div>
+  
+    <p class="mb-0 text-light">{{ .Description }}</p>
+      </a>{{end}}{{ end }}
+  </div>
+  
+  {{ $url_text := "Tanzu SQL" }}
+  {{$icon_path := "/images/icons/icon-tanzu-sql" }}
+  {{ $left_border_color := "gray" }}
+  {{ $link := replace (lower $url_text) "/" "-"  }}
+  {{ $link := replace $link "&" "and" }}
+  {{ $link := replace $link " " "-" }}
+  {{ $section_name := $link  }}
+  {{ $link := printf "%s/%s" "/data" $link | relURL }}
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+  
+    {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+  
+    {{ with $.Site.GetPage "section" $section_name }}
+    <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
+        <div>
+          <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
+          <h4 class="h4">{{$url_text }}</h4>
+        </div>
+  
+    <p class="mb-0 text-light">{{ .Description }}</p>
+      </a>{{end}}{{ end }}
+  </div>
+  
+  {{ $url_text := "Tanzu RabbitMQ" }}
+  {{$icon_path := "/images/icons/icon-tanzu-rabbitmq" }}
+  {{ $left_border_color := "green" }}
+  {{ $link := replace (lower $url_text) "/" "-"  }}
+  {{ $link := replace $link "&" "and" }}
+  {{ $link := replace $link " " "-" }}
+  {{ $section_name := $link  }}
+  {{ $link := printf "%s/%s" "/data" $link | relURL }}
+  <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
+  
+    {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
+  
+      {{ with $.Site.GetPage "section" $section_name }}
+      <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
+          <div>
+            <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
+            <h4 class="h4">{{$url_text }}</h4>
+          </div>
+  
+      <p class="mb-0 text-light">{{ .Description }}</p>
+        </a>{{end}}{{ end }}
+  </div>
+</div>
+
+</section>
+
+<script>sendAmplitudeEventOnLoad('data home viewed', {'url path': window.location.pathname});</script>
+{{ end }}

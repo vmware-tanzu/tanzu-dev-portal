@@ -1,11 +1,9 @@
 ---
 name: David Dieruf
 description: "Technical Marketing Manager"
-photo: "/images/team/david-dieruf.jpg"
 roles: ["author"]
 skills: [".NET", "Kubernetes"]
 location: "Louisville, Kentucky"
-weight: 1
 hidden: true
 
 # Social Media 

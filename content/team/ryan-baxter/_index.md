@@ -1,11 +1,9 @@
 ---
 name: Ryan Baxter
 description: "Staff Software Engineer"
-photo: "/images/team/ryan-baxter.jpg"
 roles: ["guest"]
 skills: []
 location: "Concord, NH"
-weight: 1
 
 # Social Media
 twitter: "ryanjbaxter"

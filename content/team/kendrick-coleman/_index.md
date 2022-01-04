@@ -1,11 +1,9 @@
 ---
 name: Kendrick Coleman
 description: "Technical Product Marketing Manager"
-photo: "/images/team/kendrick-coleman.jpg"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 external: false
 
 # Social Media

@@ -1,8 +1,8 @@
 ---
 name: Cedrick Lunven
 description: "Developer Advocate at DataStax"
-photo: "/images/external/cedrick-lunven.png"
 roles: ["guest"]
+external: true
 
 # Social Media
 twitter: "clunven"

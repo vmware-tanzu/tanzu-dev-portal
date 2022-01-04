@@ -31,6 +31,11 @@
       <i class="fab fa-youtube fa-2x"></i>
     </a>
   {{ end }}
+  {{ if .Params.twitch }}
+  <a class="social mr-2"  href="https://www.twitch.tv/{{ .Params.twitch}}">
+    <i class="fab fa-twitch fa-2x"></i>
+  </a>
+  {{ end }}
   {{ if .Params.website -}}
   <a class="social mr-2"  href="{{ .Params.Website }}"><span class="fas fa-home fa-2x"></span></a>
   {{ end -}}

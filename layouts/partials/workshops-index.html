@@ -1,44 +1,64 @@
-<div class='d-flex container flex-wrap'>
-
-    <div class="section-index flex-1">
-        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
-        {{ $parent := .Page }}
-        {{ if $parent.Params.no_list }}
-        {{/* If no_list is true we don't show a list of subpages */}}
-        {{ else if $parent.Params.simple_list }}
-        {{/* If simple_list is true we show a bulleted list of subpages */}}
-            <ul>
-                {{ range $pages }}
-                    {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                        <li><a href="{{ .RelPermalink }}">{{- .Title -}}</a></li>
-                    {{ end }}
-                {{ end }}
-            </ul>
-        {{ else }}
-        {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
-        <!-- <hr class="panel-line"> -->
-            <!-- <div class="col"> --><div class="row">
-            {{ range $pages }}
-                {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item col-lg-4 mb-4 flex-315 px-0 mr-lg-3 {{ range .Params.tags }}{{ . | lower }} {{ end }} ">
-                    <a class="linked-box td-box--gray-darkest workshop-box hover-scale overflow-hidden rounded" href="{{ .RelPermalink }}">
-                        <div class='workshop-hero bg-transparent' style='background-image: url({{ (.Params.hero | default (print "/images/workshop/heroes/" (urlize .Params.name) ".jpg") | relURL) }});background-size:cover;background-position:center'></div>
-                        <div class='description px-4 pt-2 d-flex flex-column justify-content-between pb-4 bg-gray-dark'>
-                            <div>
-                                <h4 class="workshop-title mt-3">{{- .Title -}}</h4>
-                                {{ if gt (len .Description) 100}}
-                                    <p class='text-white workshop-text'>{{ print (substr .Description 0 100) "..." }}</p>
-                                {{ else }}
-                                    <p class='text-white workshop-text'>{{ .Description | markdownify }}</p>
-                                {{ end }}
-                            </div>
-                            <h5 class="fs-80 opacity-4"><span class="fa fa-hourglass-half mr-1">&nbsp;</span>{{ .Params.length }} minutes</h5>
-                        </div>
-                    </a>
-                </div>
-                {{ end }}
-            {{ end }}
-           <!--  </div> --></div>
+{{ define "workshopCard" }}
+  {{/* if and (eq .context.Parent .parent) (not .context.Params.hidden) */}}
+  {{ if not .Params.hidden }}
+    <a href="{{ print `/get-workshop/` .Params.lab | relURL }}" class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-305 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}">
+      <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
+        <div class='thumbnail-gradient position-absolute'></div>
+        <img alt="" src={{ .Params.logo | relURL }}>
+      </div>
+      <div class="description flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
+        <div>
+          <h4 class="workshop-title link">{{- .Title -}}</h4>
+          {{ if gt (len .Description) 90 }}
+            <p class="workshop-text text-light">
+              {{ print (substr .Description 0 90) "..." }}
+            </p>
+          {{ else }}
+            <p class="workshop-text text-light">
+              {{ .Description | markdownify }}
+            </p>
+          {{ end }}
+          <h5 class="fs-80 opacity-4 mb-4">
+            <i class="fa fa-hourglass-half mr-1"></i>
+            <span>{{ .Params.length }} minutes</span>
+          </h5>  
+        </div>
+        <div class="btn btn-small mb-2 mt-3 d-inline-block align-self-center">
+          Start Workshop
+        </div>
+      </div>
+      {{ with .Params.badge }}<span class="badge btn btn-small mb-4 mt-2 py-1">{{ . }}</span>{{ end }}
+    </a>
+  {{ end }}
+{{ end }}
+<div class="container mb-4">
+  <h2>Learn With Tanzu</h2>
+</div>
+<div class="d-flex container flex-wrap">
+  <div id="workshops-index" class="section-index flex-1">
+      <div class="row workshop-row mb-lg-5 mb-2">
+        {{ range (where .Pages "Params.tags" "intersect" (slice "Tanzu")).ByWeight }}
+          {{ template "workshopCard" . }}
         {{ end }}
-    </div>
+      </div>
+      <!-- <div class="col"> -->
+      <div class="row">
+        <!-- Groups content according to the "param_key" field in front matter -->
+        {{ range .Pages.GroupByParam "level1" }}
+          <!--
+          <div class="col">
+            -->
+          <div class="row">
+            <h2 class="mb-4">{{ .Key }}</h2>
+          </div>
+          <div class="row workshop-row mb-lg-5 mb-2" role="listbox">
+            {{ range .Pages }}
+              {{ template "workshopCard" . }}
+            {{ end }}
+          </div>
+          <!--  </div> -->
+          <!-- </div> -->
+        {{ end }}
+      </div>
+  </div>
 </div>

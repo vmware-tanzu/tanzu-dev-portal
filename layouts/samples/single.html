@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ partial "amplitude.html" (dict "context" . "event" "sample viewed") }}
 <div class="td-main ">
-	<div class="bg-gray-dark mt-lg-5 mt-0 py-lg-5 py-2">
+	<div id="hero" class="td-box--primary mt-lg-5 mt-0 py-lg-5">
 		<div class='container'>
 			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 			<h1>{{ .Title }}</h1>

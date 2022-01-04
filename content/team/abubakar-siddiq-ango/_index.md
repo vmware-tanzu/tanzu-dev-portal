@@ -1,11 +1,9 @@
 ---
 name: Abubakar Siddiq Ango
 description: "Developer Evangelism Program Manager at GitLab"
-photo: "/images/team/abubakar-siddiq-ango.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 external: true
 
 # Social Media

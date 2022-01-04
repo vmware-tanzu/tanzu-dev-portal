@@ -1,11 +1,9 @@
 ---
 name: Brian Clozel
 description: "Staff Engineer"
-photo: "/images/team/brian-clozel.jpeg"
 roles: ["guest"]
 skills: []
 location: "France"
-weight: 1
 
 # Social Media
 twitter: "bclozel"

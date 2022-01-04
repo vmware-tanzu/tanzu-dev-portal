@@ -1,11 +1,9 @@
 ---
 name: Scott Rogers
 description: "Technical Marketing Manager"
-photo: "/images/team/scott-rogers.png"
 roles: ["author"]
 skills: []
 location: "Atlanta, GA"
-weight: 1
 
 # Social Media 
 twitter: ""

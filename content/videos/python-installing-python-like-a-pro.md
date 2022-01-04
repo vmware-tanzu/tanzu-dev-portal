@@ -11,7 +11,5 @@ tags:
 team:
 - Ben Wilcock
 title: 'Python Like A Pro: Installing Python & Switching Versions'
-topics:
-- Python
 youtube_id: nXbe6Hmb_k0
 ---

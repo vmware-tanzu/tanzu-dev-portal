@@ -1,11 +1,9 @@
 ---
 name: "Stéphane Nicoll"
 description: "Staff Engineer"
-photo: "/images/team/stephane-nicoll.png"
 roles: ["guest"]
 skills: []
 location: "Belgium"
-weight: 1
 
 # Social Media
 twitter: "snicoll"

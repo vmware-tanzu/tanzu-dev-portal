@@ -17,6 +17,71 @@ limitations under the License.
 (function ($) {
   "use strict";
 
+
+  // Make nav dark after scrolling past hero
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+      document.querySelector("#navbar").classList.add("darken");
+    }
+    else {
+      document.querySelector("#navbar").classList.remove("darken");
+    }
+  }
+
+  // Dim body div when nav is activated
+  function dimBody () {
+    $("header + .container-fluid").addClass("dim");
+    $("#navbar").addClass("dropShadow");
+  }
+
+  // Hover nav w/ scope
+  function removeNavClasses () {
+    $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
+    $('.dropdown').removeClass('show');
+    $("header + .container-fluid").removeClass("dim");
+    $("#navbar").removeClass("dropShadow");
+  }
+  $('#learn-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('learn-scope');
+    $('#learn').addClass('show');
+    dimBody();
+  });
+  $('#tanzutv-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('tanzutv-scope');
+    $('#tanzutv').addClass('show');
+    dimBody();
+  });
+  $('#community-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('community-scope');
+    $('#community').addClass('show');
+    dimBody();
+  });
+  $('.drop-menu').mouseenter(function () {
+    $('this').addClass('show');
+    dimBody();
+  });
+  $('#main_navbar, #main_navbar .drop-menu').mouseleave(function () {
+    removeNavClasses();
+  });
+
+  $( ".dropdown-item" ).focus(function() {
+    $(".dropdown").removeClass("show");
+    var parentDropdown = $(this).closest(".dropdown")
+    parentDropdown.addClass("show");
+    $("#scope").addClass(parentDropdown.attr("id") + "-scope");
+  });
+
+  $( "a:not(.dropdown-item)" ).focus(function() {
+    $(".dropdown").removeClass("show");
+    $("#scope").removeClass();
+  });
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
@@ -64,7 +129,7 @@ limitations under the License.
       var iframe = document.getElementById("auth-iframe");
       $("#light-select").show();
       $("#dark-select").hide();
-
+      $("#theme-square").addClass("moveSquare");
       if ($("html").hasClass("light-mode")) {
         // if (iframe && iframe.contentWindow) {
         //   iframe.contentWindow.postMessage("dark", "*");
@@ -80,6 +145,7 @@ limitations under the License.
       var iframe = document.getElementById("auth-iframe");
       $("#dark-select").show();
       $("#light-select").hide();
+      $("#theme-square").removeClass("moveSquare");
 
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
@@ -152,8 +218,7 @@ limitations under the License.
 
     //Toggle mobile menu
     $("#menu-toggle").click(function () {
-      $(".td-navbar .td-navbar-nav-hamburger").toggleClass("open");
-      $(".td-navbar .td-navbar-nav-hamburger .navbar-nav .nav-item").toggle();
+      $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
     });
   });
 
@@ -359,15 +424,18 @@ limitations under the License.
     $("#search-nav").slideToggle();
     //$(this).toggleClass('close');
     $("#searchheaderform input").focus();
-    $("#mega-menus").toggleClass("no-border");
   });
 
   $("header li .search-icon").keypress(function (e) {
     if (e.which == 13) {
       $("#search-nav").slideToggle();
-      //$(this).toggleClass('close');
       $("#searchheaderform input").focus();
-      $("#mega-menus").toggleClass("no-border");
+    }
+  });
+
+  $("#search-nav").on('keydown', function(event) {
+    if (event.key == "Escape") {
+      $("#search-nav").slideToggle();
     }
   });
 
@@ -375,31 +443,14 @@ limitations under the License.
     $("#search-nav").slideToggle();
     $(this).toggleClass("close");
     $("#searchheaderform input").focus();
-    $("#mega-menus").toggleClass("no-border");
   });
 
-  //Nav hover
-  const $dropdown = $(".dropdown");
-  const $dropdownToggle = $(".dropdown-toggle");
-  const $dropdownMenu = $(".dropdown-menu");
-  const showClass = "show";
-  
-  $(window).on("load resize", function() {$dropdown.hover(
-      function() {
-          const $this = $(this);
-          $this.addClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "true");
-          $this.find($dropdownMenu).addClass(showClass);
-      },
-      function() {
-          const $this = $(this);
-          $this.removeClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "false");
-          $this.find($dropdownMenu).removeClass(showClass);
-      });
+  // Featured Learning paths
+  $( ".learning-path-card" ).mouseenter(function() {
+    $(".learning-path-card").removeClass("active");
+    $(this).addClass("active");
   });
+  
 }(jQuery));
 
-
-  
 

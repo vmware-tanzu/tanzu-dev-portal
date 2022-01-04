@@ -29,10 +29,10 @@
             <!-- <div class="col"> --><div class="row">
             {{ range $pages }}
                 {{ if and (eq .Parent $parent) (not .Params.hidden) }}
-                <div class="filter-item flex-315 mr-0 mr-lg-2 mb-2 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
+                <div class="filter-item flex-305 mr-0 mr-lg-3 mb-2 mb-lg-3 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
                     <a class="linked-box td-box--gray-dark px-4 py-2" href="{{ .RelPermalink }}">
                         <h2 class="pt-0 h4 link mt-3">{{- .Title -}}</h2>
-                        <h5 class="fs-90"><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }}</h5>
+                        <h5 class="fs-90 text-white mb-2"><span class="fa fa-hourglass-half">&nbsp;</span>{{ .Params.length }}</h5>
                         <p class="fs-90">{{ .Description | markdownify }}</p>
                     </a>
                 </div>

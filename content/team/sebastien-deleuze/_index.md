@@ -1,11 +1,9 @@
 ---
 name: "Sébastien Deleuze"
 description: "Staff Engineer"
-photo: "/images/team/sebastien-deleuze.jpg"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: "sdeleuze"

@@ -14,11 +14,6 @@ def filter(options, headers, row)
     if row[headers.index("tags")].size == 0
         matches.append("No Tags")
     end
-
-    # No Topic(s)
-    if row[headers.index("topics")].size == 0
-        matches.append("No Topics")
-    end
     
     # No Description
     if row[headers.index("description")].size == 0
@@ -48,10 +43,6 @@ OptionParser.new do |opts|
 
     opts.on("-t", "--tags PATH", "Path to write the tally results of the tags") do |t|
         options[:tags] = t
-    end
-
-    opts.on("-p", "--topics PATH", "Path to write the tally results of the topics") do |p|
-        options[:topics] = p
     end
 
     opts.on("-e", "--errors PATH", "Path to write the tally results of errors") do |e|
@@ -87,7 +78,6 @@ metaKeys.push("title")
 metaKeys.push("type")
 
 tagsTally = {}
-topicsTally = {}
 tanzuProductsTally = {}
 errorsTally = {}
 
@@ -96,6 +86,23 @@ contentFiles.each do |f|
     next if f.split("/").last == "_index.md" # Do not parse index files
     fData = File.open(f).read
     contentMetadata = YAML.load(fData)
+    newMetadata = {}
+    contentMetadata.keys.each do |k|
+        newMetadata[k.downcase] = contentMetadata[k]
+    end
+    contentMetadata = newMetadata
+
+    # Normalize dates
+    if contentMetadata.has_key? "date"
+        if contentMetadata["date"].is_a? String
+            contentMetadata["date"] = DateTime.parse(contentMetadata["date"])
+        elsif contentMetadata["date"].is_a? Date
+            contentMetadata["date"] = contentMetadata["date"].to_datetime
+        elsif contentMetadata["date"].is_a? Time
+            contentMetadata["date"] = contentMetadata["date"].to_datetime
+        end
+    end
+
     contentMetadata["path"] = f.gsub(contentPath, "")
 
     # Add a column for the type of content
@@ -116,40 +123,29 @@ contentFiles.each do |f|
     # Tally the tags
     if contentMetadata.has_key? "tags"
         contentMetadata["tags"].each do |t|
-            if tagsTally.has_key? t
-                tagsTally[t] += 1
+            if tagsTally.has_key? t.downcase
+                tagsTally[t.downcase] += 1
             else
-                tagsTally[t] = 1
-            end
-        end
-    end
-
-    # Tally the topics
-    if contentMetadata.has_key? "topics" and not contentMetadata["topics"].nil?
-        contentMetadata["topics"].each do |t|
-            if topicsTally.has_key? t
-                topicsTally[t] += 1
-            else
-                topicsTally[t] = 1
+                tagsTally[t.downcase] = 1
             end
         end
     end
    
-    # Tally the tags
+    # Tally the products
     if contentMetadata.has_key? "products"
         contentMetadata["products"].each do |t|
-            if tanzuProductsTally.has_key? t
-                tanzuProductsTally[t] += 1
+            if tanzuProductsTally.has_key? t.downcase
+                tanzuProductsTally[t.downcase] += 1
             else
-                tanzuProductsTally[t] = 1
+                tanzuProductsTally[t.downcase] = 1
             end
         end
     end
 
     # Add any newly discovered unique keys
     contentMetadata.keys.each do |k|
-        if not metaKeys.include? k
-            metaKeys.push(k)
+        if not metaKeys.include? k.downcase
+            metaKeys.push(k.downcase)
         end
     end
 
@@ -209,15 +205,6 @@ csv.close
 if options.has_key? :tags
     CSV.open(options[:tags], "wb") do |csv|
         tagsTally.each do |t|
-            csv << t
-        end
-    end
-end
-
-# If defined, write the topics tally to a CSV
-if options.has_key? :topics
-    CSV.open(options[:topics], "wb") do |csv|
-        topicsTally.each do |t|
             csv << t
         end
     end

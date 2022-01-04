@@ -3,7 +3,7 @@
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
 
-    <div class='container episodes' id='{{ replaceRE "(\\s)" "" (lower .Title) }}'>
+    <div class="container episodes" id='{{ replaceRE "(\\s)" "" (lower .Title) }}'>
         {{ range sort $pages "Params.Date" "asc" }}
             {{ if and (eq .Parent $parent) (gt .Params.Date.Unix now.Unix) }}
                 {{ $.Scratch.Set "upcoming" true }}
@@ -12,7 +12,7 @@
 
         {{ if eq ($.Scratch.Get "upcoming") true }}
             {{ if (isset .Params "streaming") }}
-                <div class="col px-0">
+                <div class="px-0">
                     <h3 class="mt-4 mb-4">Upcoming Episodes</h3>
                     <div class="row justify-content-between mb-5">
                         {{ range sort $pages "Params.Date" "asc" }}
@@ -45,7 +45,7 @@
                                 {{ end }}
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
 
-                                <a href="{{ $episodeLink }}"><img class="upcoming" src="{{ .Params.episode_banner | relURL }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
+                                <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src="{{ partial "tv-image-src" . }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
                                 {{ if .Params.no_streaming_label }}
                                     <p></p>
                                 {{ else }}
@@ -84,7 +84,7 @@
             {{ $noUpcoming := true }}
         {{ end }}
 
-        <div class="col px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5">
+        <div class="px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5">
             {{ if (isset .Params "streaming") }}
             {{ if not .Params.noPast }}
             <h3 class="mb-4">Watch Past Episodes</h3>
@@ -94,10 +94,9 @@
             {{ range sort $pages "Params.episode" "desc" }}
                 {{ if eq .Parent $parent }}
                     <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
-                        <div class='hover-scale col-4-thumbnail col-lg-11 col-12 px-0 rounded overflow-hidden position-relative'>
+                        <div class='col-4-thumbnail col-lg-11 col-12 px-0 overflow-hidden position-relative'>
                             <div class='thumbnail-gradient position-absolute'></div>
-                            <img src="{{ .Params.episode_image | relURL }}" />
-
+                            <img alt="{{ .Title }}" src='{{ partial "tv-image-src" . }}' />
                             {{ if gt (len .Title) 70}}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>

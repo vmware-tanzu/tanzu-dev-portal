@@ -1,11 +1,9 @@
 ---
 name: Josh Cummings
 description: "Staff Engineer"
-photo: "/images/team/josh-cummings.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media
 twitter: "@jzheaux"

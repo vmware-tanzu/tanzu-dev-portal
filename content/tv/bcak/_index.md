@@ -4,13 +4,13 @@ type: "tv-show"
 streaming: "twitch"
 #noPast: true
 id: "bcak"
-image: "/images/tv/shows/bcak.jpg"
+image: "bcak.jpg"
 og_image: "/images/og/TanzuTV-ChairKeyboard.png"
-weight: 4
+weight: 5
 menu:
     main:
         parent: "tv"
-        weight: 5
+        weight: 6
 # Text that appears on show index page under show name
 description: Nate Schutta hosts discussions with interesting people in software.
 # Text that appears highlighted in green on show index page above show name

@@ -12,8 +12,6 @@ tags:
 team:
 - Brian McClain
 title: 'Hello Python, My Old Friend: Revisiting Python in a Cloud-Native Climate'
-topics:
-- Python
 ---
 
 For quite a while now, I’ve kept an eye on [RedMonk’s programming language rankings](https://redmonk.com/sogrady/2020/07/27/language-rankings-6-20/) — which track the usage of all programming languages based on data from GitHub, as well as discussion about them on Stack Overflow —— to get insight into the various language trends. In the [January 2020 update,](https://redmonk.com/sogrady/2020/02/28/language-rankings-1-20/) something interesting happened: Python reached  No. 2 on the list, taking over Java. 
@@ -148,6 +146,6 @@ With this configuration, a file is created from the ConfigMap named `config.cfg`
 
 In putting together this post, I was reminded of what an enjoyable experience it is to write in Python. I was also very happy to see how easily we can use it to leverage more modern technologies, such as Kubernetes and Cloud Native Buildpacks. Indeed, Python is lightweight, and can result in fairly slim container images.  Flask, meanwhile, proves to be a great framework for developing modern applications. 
 
-Of course, there would be a lot more to consider if we were writing a production application, such as logging, metrics, a proper web server to back our code, and much more. But it makes sense that Python has had such a hold on the software community, and it’s exciting to see that it’s only getting stronger. If, like me, you want to learn more, I suggest checking out some of the other content that [Ben](/team/ben-wilcock) has been making, such as [running Python in production](/guides/python/cf-gs/). For even more Python content, make sure to check out the Python section of the [Python topic page](/topics/python/) for guides and videos!
+Of course, there would be a lot more to consider if we were writing a production application, such as logging, metrics, a proper web server to back our code, and much more. But it makes sense that Python has had such a hold on the software community, and it’s exciting to see that it’s only getting stronger. If, like me, you want to learn more, I suggest checking out some of the other content that [Ben](/team/ben-wilcock) has been making, such as [running Python in production](/guides/python/cf-gs/).
 
 {{< youtube JS_YIn49xuw >}}

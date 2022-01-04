@@ -18,8 +18,4 @@ tags:
 team:
 - Ben Wilcock
 title: Spring Boot RSocket Sample
-topics:
-- Spring
-- Reactive
-- Microservices
 ---

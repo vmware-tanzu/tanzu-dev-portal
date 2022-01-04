@@ -1,7 +1,6 @@
 ---
 name: "Neeharika Palaka"
 description: "Sr. Manager, Product Marketing & Strategy"
-photo: "images/team/neeharika-palaka.png"
 roles: ["author"]
 skills: [" "]
 location: "Austin, Texas"

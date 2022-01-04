@@ -6,8 +6,6 @@ description: "Level-set on user research best practices"
 tags: ["Discovery"]
 length: "45-60 min"
 participants: "Core team"
-# custom "cover" image example: "boris/boris.png"
-image: "default-cover.png" 
 lastmod: "2021-05-14"
 why: 
 - Continuous research helps ensure that we’re building something of value at each step. Needs and problems live with people, so in order to create value we need a deep understanding of how well we're solving those problems. This session offers an overview of research best practices in order to align the team prior to the first stakeholder or user interviews they conduct.
@@ -23,6 +21,10 @@ miro_template_url: ""
 ## How to Use this Method
 
 {{% section %}}
+Feel free to use this slide deck to help introduce your group to User Research.
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/iYAC2Vhv0ZEIml" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/VMwareTanzu/user-research-at-vmware-tanzu-labs" title="User research at VMware Tanzu Labs" target="_blank">User research at VMware Tanzu Labs</a> </strong> from <strong><a href="https://www.slideshare.net/VMwareTanzu" target="_blank">VMware Tanzu Developer Center Slides</a></strong> </div>
+
 ### Sample Agenda & Prompts
 1. Write the agenda on the whiteboard or shared digital workspace:
    
@@ -38,7 +40,7 @@ miro_template_url: ""
    - Validation — is this solution valuable?
    - Usability — is this solution easy to use?
 
-   ![Research Workshop Types](/images/practices/user-research-introduction-session/research-types.jpg)
+   ![Research Workshop Types](images/research-types.jpg)
 
 1. Next, describe the main **roles** involved in research, writing each on the board:
    
@@ -77,7 +79,7 @@ miro_template_url: ""
    - See Research Synthesis for more information
    
    {{< callout >}}
-   Tip: Drawing these four steps on the board showing a progression can be really helpful to visualize how they flow together
+   **Tip**: Drawing these four steps on the board showing a progression can be really helpful to visualize how they flow together
    {{< /callout >}}
    
 1. Share **biases** to be aware of and key **“dos”** and **“don’ts”** when conducting research by printing out or projecting this [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
@@ -107,6 +109,9 @@ You’ve succeeded when the team feels like they’re confident they can conduct
 ### Facilitator Notes & Tips
 You can make as many or as few visual aids ahead of time as you like to support this session, depending on your preference. It can be equally successful printing/hanging things you want to focus on as it is drawing them as you talk.
 
+You can also use this slide deck (embedded above) for your sessions: [User Research at VMware Tanzu Labs
+](https://tanzu.vmware.com/content/vmware-tanzu-developer-center-slides/user-research-at-vmware-tanzu-labs).
+
 If the team feels like they want more practice conducting research before they do it with actual users, don’t hesitate to schedule a follow-up session or two. Role playing can do wonders to prep people who haven’t done a lot of research before but are excited to learn how.
 
 Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-research-introduction-session/dos-and-donts).
@@ -114,9 +119,9 @@ Read through and use the  [User Research Dos & Don'ts Guide](/practices/user-res
 
 {{% section %}}
 ### Real World Examples
-![Research Workshop Example 1](/images/practices/user-research-introduction-session/example-1.jpg)
+![Research Workshop Example 1](images/example-1.jpg)
 
-![Research Workshop Example 2](/images/practices/user-research-introduction-session/example-2.jpg)
+![Research Workshop Example 2](images/example-2.jpg)
 {{% /section %}}
 
 {{% section %}}

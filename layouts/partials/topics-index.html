@@ -21,7 +21,7 @@
             {{ if eq .Parent $parent }}
 
             <div class="topic col-lg-4 mb-0 mb-lg-0 ">
-                <a class="py-3 px-4 mb-4 text-left h4 text-white" href="{{ .RelPermalink }}"><img class='icon mr-3' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon ".svg" | relURL }}'/> {{ .LinkTitle | default .Title }}</a> 
+                <a class="py-3 px-4 mb-4 text-left h4 text-white" href="{{ .RelPermalink }}"><img alt="" class='icon mr-3' src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'/> {{ .LinkTitle | default .Title }}</a> 
             </div>
 
             {{ end }}

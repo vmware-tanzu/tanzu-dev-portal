@@ -1,10 +1,8 @@
 ---
 name: "Glênio Damasceno Borges"
 description: "Staff Solution Engineer"
-photo: "/images/team/glenio-damasceno-borges.jpg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "gdambor"

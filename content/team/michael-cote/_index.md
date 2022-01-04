@@ -1,11 +1,9 @@
 ---
 name: Michael Coté
 description: "Developer Advocate"
-photo: "/images/team/advocates/cote.jpg"
 roles: ["advocate"]
 skills: ["Digital Transformation", "DevOps"]
 location: "Austin, TX"
-weight: 1
 
 # Social Media 
 twitter: "cote"

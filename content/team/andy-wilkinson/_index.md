@@ -1,10 +1,8 @@
 ---
 name: Andy Wilkinson
 description: "Spring Developer"
-photo: "/images/team/andy-wilkinson.jpeg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: "@ankinson"

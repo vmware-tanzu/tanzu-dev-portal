@@ -10,13 +10,8 @@ patterns:
 tags:
 - Knative
 - Event Streaming
-- Microservices
-- Kubernetes
-title: 'Spring Live: Processing CloudEvents with Spring and Knative'
-topics:
 - Spring
-- Event Streaming
-- Kubernetes
 - Serverless
+title: 'Spring Live: Processing CloudEvents with Spring and Knative'
 youtube_id: ok6FoZWte4U
 ---

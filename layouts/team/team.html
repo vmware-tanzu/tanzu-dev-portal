@@ -2,6 +2,8 @@
 <html lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>
     {{ partial "head.html" . }}
+
+    {{ partial "amplitude.html" (dict "context" . "event" "team member viewed") }}
     
     {{ if $.Params.hidden }}
         <meta http-equiv="refresh" content="0; url={{ "/404.html"  | relURL }}" />
@@ -24,7 +26,7 @@
           {{ $blogs := where .Data.Pages "Section" "blog" }}
           {{ if and (gt (len $blogs) 0) (not $.Params.hidden) }}
           <div id="blogs" class='border-top container py-5 d-flex flex-wrap'>
-            <div class="mb-4 col-lg-2 col-md-2 col-12 px-0 mr-5 mb-5"><div class='d-flex align-items-center icon-title'><img class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div></div>
+            <div class="mb-4 col-lg-2 col-md-2 col-12 px-0 mr-5 mb-5"><div class='d-flex align-items-center icon-title'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-blog.svg" | relURL }}'/><h3 class="mb-0">Blogs</h3></div></div>
             <div class='col-lg-8 col-md-8 col-12 px-0'>
                 {{ range $blogs }}
                   <h5 class="mt-2">{{ .Date.Format "January 2, 2006" }}</h5> <a class="d-block mb-4" href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -36,7 +38,7 @@
           {{ $guides := where .Data.Pages "Section" "guides" }}
           {{ if and (gt (len $guides) 0) (not $.Params.hidden) }}
           <div id="guides" class='container py-5 border-top'>
-              <div class='d-flex align-items-center icon-title mb-4'><img class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
+              <div class='d-flex align-items-center icon-title mb-4'><img alt="" class="icon mb-3 mr-3" src='{{ "/images/icons/icon-guides.svg" | relURL }}'/><h3 class="mb-0">Guides</h3></div>
               <div class='col px-lg-0'><div class='row'>
                   {{ range $guides }}
                       <div class="col-lg-4 col-12 px-lg-3 mb-5 mb-lg-5 mb-lg-0">
@@ -58,11 +60,11 @@
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
           {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
           <div id="tanzu-tv" class='container py-5 border-top'>
-              <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
+              <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
               <div class="col px-lg-0"><div class='row'>
                   {{ range $shows }}
                       <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
-                          {{ if (not (isset .Params "youtube")) | or (eq .Params.youtube "") }}<a href="{{ .RelPermalink }}"><img src="{{ .Params.episode_image | relURL }}"></a>
+                          {{ if (not (isset .Params "youtube")) | or (eq .Params.youtube "") }}<a href="{{ .RelPermalink }}"><img src='{{ partial "tv-image-src" . }}'></a>
                           {{ else }}<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
                           {{ end }}
                           <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
@@ -76,7 +78,7 @@
           {{ $videos := where .Data.Pages "Section" "videos" }}
           {{ if and (gt (len $videos) 0) (not $.Params.hidden) }}
           <div id="videos" class='container py-5 border-top'>
-              <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
+              <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Videos</h3></div>
               <div class="col px-lg-0"><div class='row'>
                   {{ range $videos }}
                       <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
@@ -92,7 +94,7 @@
           {{ $samples := where .Data.Pages "Section" "samples" }}
           {{ if and (gt (len $samples) 0) (not $.Params.hidden) }}
           <div class='container py-5 border-top'>
-              <div class='d-flex align-items-center icon-title mb-5'><img class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
+              <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-code-samples.svg" | relURL }}'/><h3 class="mb-0">Code Samples</h3></div>
               <div class="col px-lg-0"><div class='row'>
                   {{ range $samples }}
                       <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">

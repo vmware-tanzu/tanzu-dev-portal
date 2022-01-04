@@ -1,11 +1,9 @@
 ---
 name: Jared Ruckle
 description: "Group Product Line Marketing Manager"
-photo: "/images/team/jared-ruckle.png"
 roles: ["guest"]
 skills: []
 location: ""
-weight: 1
 hidden: true
 
 # Social Media

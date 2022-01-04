@@ -1,10 +1,8 @@
 ---
 name: Bella Bai
 description: "Software Engineer"
-photo: "/images/team/bella-bai.jpeg"
 roles: ["guest"]
 skills: []
-weight: 1
 
 # Social Media
 twitter: ""

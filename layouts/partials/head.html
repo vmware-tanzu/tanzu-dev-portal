@@ -14,11 +14,11 @@
 {{ partialCached "favicons.html" . }}
 <title>{{ with .Params.name }}{{ . }} | {{ else }}{{ with .Params.metaTitle }}{{ . }} | {{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ end }}{{ .Site.Title }}</title>
 <meta name="description" content="{{ with .Description }}{{ . | chomp }}{{ else }}{{if .IsPage}}{{ .Summary | chomp }}{{ else }}{{ with .Site.Params.description | chomp }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-{{ $ogImage := "images/TAN-DevSite-OG.png" }}
+{{ $ogImage := "images/og/TAN-DevSite-OG.png" }}
 {{ if .Params.og_image }}
 {{ $ogImage = trim .Params.og_image "/" }}
-{{ else if .Params.episode_image }}
-{{ $ogImage = trim .Params.episode_image "/" }}
+{{ else if eq .Type "tv-episode" }}
+{{ $ogImage = (partial "tv-image-src" .) }}
 {{ else if eq .Section "tv" }}
 {{ $ogImage = "images/og/TanzuTV.png" }}
 {{ end }}

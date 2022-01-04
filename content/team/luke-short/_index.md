@@ -1,11 +1,9 @@
 ---
 name: Luke Short
 description: "Senior Kubernetes Solutions Architect"
-photo: "/images/team/luke-short.jpg"
 roles: ["author"]
 skills: ["Go", "Kubernetes", "Python"]
 location: "Denver, CO"
-weight: 1
 
 # Social media
 twitter: LukeShortCloud

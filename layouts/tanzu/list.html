@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "tanzu list viewed") }}
+<div id="hero" class="overflow-hidden td-box--gray-dark py-lg-5">
+	<div class='container'>
+			<div class="row align-items-center py-lg-5">
+					<div class="col-12 col-lg-6 py-2 pl-lg-0">
+							<h1>{{ .Title }}</h1>
+							<p class="lead">{{ .Description }}</p>
+					</div>
+					<div class="col-12 col-lg-6 py-2 pr-lg-0 position-relative">
+
+					</div>
+			</div>
+	</div>
+</div>
+
+<div class="td-content">
+	<div class="container">
+		{{ .Content }}
+		<div class="row mb-5">
+			{{ range .Pages }}
+			<!-- TODO: Fix card height -->
+				{{ partial "tanzu-card.html" . }}
+			{{ end }}
+		</div>
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}

@@ -1,11 +1,9 @@
 ---
 name: Dave Syer
 description: "Spring Cloud Founder"
-photo: "/images/team/dave-syer.png"
 roles: ["guest"]
 skills: ["Spring", "Cloud", "Microservices"]
 location: "London, England"
-weight: 1
 
 # Social Media
 twitter: "david_syer"

@@ -1,10 +1,10 @@
 {{ $links := .Site.Params.links }}
-<footer class="bg-gray-dark py-5 d-print-none">
+<footer class="td-box--gray-dark py-5 pb-3 d-print-none">
 <div class='container'>
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container-fluid px-3 px-lg-0">
+    <div class="row justify-content-between">
       <div class="col-12 col-sm-6 col-lg-8 pl-0">
-        <a class="tvc-link h4" href="https://tanzu.vmware.com"><img class="icon mr-2" src='{{ "/images/icons/icon-tanzu.svg" | relURL }}'/> VMware Tanzu</a>
+        <a class="tvc-link h4 text-white" href="https://tanzu.vmware.com"><img alt="VMware Tanzu" class="icon mr-2" src='{{ "/images/icons/icon-tanzu.svg" | relURL }}'/> VMware Tanzu</a>
 
         <div class='copyright-legal-links mt-3'>
           {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} VMware, Inc </small>{{ end }}
@@ -27,13 +27,13 @@
       	{{ end }} -->
       </div>
 
-      <div class="col-12 col-sm-6 col-lg-4 pl-0">
+      <div class="col-12 col-sm-6 col-lg-4 pl-0 text-right">
         {{ if not (eq .Params.hide_newsletter true) }}
           <div class="newsletter mb-5">
             <p class="text-white">Sign up for the developer newsletter</p>
             <div class='btn btn-small click-to-show scroll-to-bottom'>Subscribe</div>
             <script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
-            <form id="mktoForm_1609" class="hidden"></form>
+            <form id="mktoForm_1609" class="hidden float-lg-right"></form>
             <script>
               MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
               MktoForms2.loadForm("https://connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){

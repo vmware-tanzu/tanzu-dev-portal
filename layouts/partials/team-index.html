@@ -4,15 +4,14 @@
     {{ $parent := .Page }}
     <div class="row">
         {{ range $pages }}
-            {{ if eq .Parent $parent }}
+          
                 {{ if and .Params.name (not .Params.external) (not .Params.hidden) }}
-                <div class="person col-lg-4 mb-0 mb-lg-0">
-                    <div class="hover-lift card py-3 px-4 mb-4 text-left text-white rounded-0 bg-gray-dark d-inline-block w-100">
+                <div class="person col-lg-4 mb-0 mb-lg-4 mb-3 col-md-6 col-12">
+                    <div class="h-100 card py-3 px-4 text-left text-white rounded-0 bg-gray-dark d-inline-block w-100">
                         <div class="row">
                             <div class="col-3 pr-0">
-                                <!-- <a onclick="" href="{{ .RelPermalink }}"><img class='' src='{{ (.Params.photo | default (print "/images/team/" (urlize .Params.name) ".jpg") | relURL) }}'/></a> -->
                                 <a onclick="" href="{{ .RelPermalink }}">
-                                    <div class='' style='background-image: url({{ (.Params.photo | default (print "/images/team/" (urlize .Params.name) ".jpg") | relURL) }}); height:69px;background-size:cover;background-position:center'/></div>
+                                    <div class='' style='background-image: url({{ partial "team-photo-src.html" . }}); height:69px;background-size:cover;background-position:center'/></div>
                                 </a>
 
                             </div>
@@ -27,7 +26,7 @@
                     </div> 
                 </div>
                 {{ end }}
-            {{ end }}
+
         {{ end }}
     </div>
 </div>

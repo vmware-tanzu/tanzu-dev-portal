@@ -1,11 +1,9 @@
 ---
 name: Josh Long
 description: "Developer Advocate"
-photo: "/images/team/advocates/joshlong.jpg"
 roles: ["advocate"]
 skills: ["Spring", "Microservices", "Kubernetes", "CloudFoundry", "EAI", "Cloud Computing", "YAML"]
 location: "San Francisco, CA"
-weight: 1
 
 # Social Media 
 twitter: "starbuxman"

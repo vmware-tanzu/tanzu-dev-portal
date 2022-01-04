@@ -1,11 +1,9 @@
 ---
 name: Ollie Drotbohm
 description: "Senior Principal Software Engineer"
-photo: "/images/team/ollie-drotbohm.jpg"
 roles: ["guest"]
 skills: ""
 location: ""
-weight: 1
 
 # Social Media
 twitter: "odrotbohm"

@@ -1,11 +1,10 @@
 ---
 name: David Gilardi
 description: "Developer Evangelist, DataStax"
-photo: "/images/external/david-gilardi.jpeg"
 roles: ["guest"]
 skills: [""]
 location: ""
-weight: 1
+external: true
 
 # Social Media
 twitter: "SonicDMG"

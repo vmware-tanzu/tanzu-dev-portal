@@ -1,11 +1,9 @@
 ---
 name: Tiffany Jernigan
 description: "Developer Advocate"
-photo: "/images/team/advocates/tiffany.jpg"
-roles: ["advocate","author"]
+roles: ["advocate","author","guest"]
 skills: ["Kubernetes"]
 location: "Seattle, WA"
-weight: 1
 
 # Social Media 
 twitter: "tiffanyfayj"

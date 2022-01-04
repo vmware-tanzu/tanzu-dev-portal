@@ -1,5 +1,8 @@
 <div class="td-content">
-	<h1><img class='icon icon-md mb-3 d-block d-lg-inline-block mr-4' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon ".svg" | relURL }}' />{{ .Title }}</h1>
+	<div class="row mb-4 pt-4 flex-nowrap">
+		<img alt="" class='icon icon-md d-block d-lg-inline-block mr-4 align-items-center' src='{{ printf "%s%s%s" "/images/icons/icon-" .Params.icon ".svg" | relURL }}' />
+		<h1 class="mb-0 align-self-center">{{ .Title }}</h1>
+	</div>
 	<!--{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}-->
 	<!--{{ .Content }}-->
 	<div class="lead">{{ .Content }}</div>

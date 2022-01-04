@@ -1,5 +1,88 @@
 {{ define "main" }}
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
+
+<a id="td-block" class="td-offset-anchor"></a>
+<section id="hero" class="td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
+	<div class="container row py-5 px-0">
+		<div class="col-12 mx-auto col-lg-6">
+			<span class="h1 mb-0 ">
+				{{ .Params.tagline }}
+			</span>
+            <p class="h4">The VMware Tanzu Developer Center provides you with everything you need to build, run & deploy modern apps.</p>
+            <a href={{ "/learn" | relURL }} class="cta-btn-wrapper my-5 overflow-hidden d-flex justify-content-between align-items-center position-relative">
+                <div class="solid-rect position-absolute"></div>
+                <div class="cta-btn p-4 m-0 d-inline-block text-uppercase fs-80">Get started with Tanzu</div>
+                <div class="arrow-box d-inline-block d-flex justify-content-center align-items-center">
+                    <div class="arrow-right"></div>
+                </div>
+            </a>
+		</div>
+        <div id="gradients" class="col-12 mx-auto col-lg-6 position-relative d-none d-md-block">
+            <img id="gradient-one" class="transition-all position-absolute" alt="" src='{{ "/images/backgrounds/gradient-one.svg" | relURL }}'>
+            <img id="gradient-two" class="transition-all position-absolute" alt="" src='{{ "/images/backgrounds/gradient-two.svg" | relURL }}'>
+		</div>
+	</div>
+</section>
+
+<!-- Gather topic groups -->
+{{ $topicgroups := (slice) }}
+{{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
+    {{ $topicgroups = union $topicgroups ( slice .Title )}}
+{{ end }}
+
+<!-- Topics -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section id="home-topics" class="td-box">
+    <div id="topics-row-outer" class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative transition-all">
+        {{ range $topicgroups }}
+        <div class="row mb-5 transition-all">
+            <div class="col-xl-3 col-12 d-flex d-xl-block justify-content-center mb-xl-0 mb-4">
+                <h2>{{ . }}</h2>
+            </div>
+            <div class="col-xl-9 col-12 mb-xl-0 mb-lg-4 mb-2">
+                <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row">
+                    {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
+                        <div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
+                            <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center py-4 py-lg-5 px-3">
+                                <img alt="" class="mb-2" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
+                                <h3 class="h3 pt-0 link mt-3 text-white mb-0">
+                                    {{ .Params.grouptitle }}
+                                </h3>
+                                <p class="mb-2 mb-lg-4 text-left text-center py-0 px-2" >
+                                    {{ .Description }}
+                                </p>
+                            </a>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+
+<!-- Featured Learning Paths -->
+<a id="td-block" class="td-offset-anchor"></a>
+<section id="featured-paths" class="row mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto pb-0">
+	
+    <div class="row justify-content-center w-100">
+        <div class="col-sm-12 pb-4 mb-lg-5 mb-3">
+            <h2 class="text-center">Featured Learning Paths</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
+        {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
+        {{ range first 5 $learningpaths }} <!-- TODO: Get featured learning paths -->
+            {{ partial "learningpaths-card-home.html" . }}
+        {{ end }}
+
+    </div>
+</section>
+
+<script>sendAmplitudeEventOnLoad('home viewed', {'url path': window.location.pathname});</script>
+
 {{ with .Content }}
 {{ . }}
 {{ end }}

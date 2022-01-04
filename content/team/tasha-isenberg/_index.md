@@ -1,11 +1,9 @@
 ---
 name: Tasha Isenberg
 description: "Developer Advocacy Manager"
-photo: "/images/team/advocates/tasha.jpg"
 roles: ["advocate","author"]
 skills: []
 location: "Pittsburgh, PA"
-weight: 1
 
 # Social Media 
 twitter: "TashaIsenberg"
@@ -18,6 +16,5 @@ instagram: ""
 youtube: ""
 ---
 
-Tasha runs the Advocacy team like a well-oiled machine. [Contact](mailto:tisenberg@vmware.com) her to talk about having an advocate work with you.
-
+Tasha leads a global group of Technical Advocates at VMware Tanzu where she inputs her vision and strategy for advocacy and empowers her team to deliver on them. She is a fearless advocate for her team, and for the various technical communities they support. Tasha resides in Pittsburgh, Pennsylvania with her amazing husband and wonderful 2 girls.
 <!--more-->

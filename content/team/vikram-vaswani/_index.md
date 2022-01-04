@@ -1,11 +1,9 @@
 ---
 name: Vikram Vaswani
 description: "Technical Writer"
-photo: "/images/team/vikram-vaswani.png"
 roles: ["author"]
 skills: ["Bitnami, Kubernetes"]
 location: ""
-weight: 1
 
 # Social Media 
 twitter: ""

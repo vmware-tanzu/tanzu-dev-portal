@@ -1,11 +1,9 @@
 ---
 name: Dan Florea
 description: "Product Line Manager"
-photo: "/images/team/dan-florea.jpg"
 roles: ["author"]
 skills: []
 location: ""
-weight: 1
 
 # Social Media 
 twitter: ""

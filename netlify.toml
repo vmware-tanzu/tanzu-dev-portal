@@ -1,7 +1,7 @@
 # Default build settings
 [context.production]
   publish = "public"
-  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -b https://tanzu.vmware.com/developer --minify"
+  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b https://tanzu.vmware.com/developer --minify"
 
 [context.production.environment]
   HUGO_VERSION = "0.82.0"
@@ -21,6 +21,7 @@
   framework = "#custom"
   targetPort = 1313
   autoLaunch = false
+  # jwtSecret = ""
   
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
@@ -65,7 +66,14 @@
 
 [[redirects]]
   from = "/developer/workshop-live"
-  to = "/developer/workshop-live"
+  to = "/developer/workshop-live/"
+  force = true
+  status = 200
+  conditions = {Role = ["user"]}
+
+[[redirects]]
+  from = "/developer/workshop-live/"
+  to = "/developer/workshop-live/"
   force = true
   status = 200
   conditions = {Role = ["user"]}

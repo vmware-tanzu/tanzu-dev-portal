@@ -9,10 +9,7 @@
     text-transform: none;
     position: relative;
     cursor: pointer;
-}
-  
-.search .search-icon:focus {
-    outline: none;
+    z-index: 100;
 }
   
 .search .search-icon svg:nth-child(2) {
@@ -31,6 +28,7 @@
 #search-nav svg {
     height: 25px;
     width: 25px;
+    cursor: pointer;
 }
   
 .search-icon .b,
@@ -70,7 +68,7 @@
     position: absolute;
     top: 79px;
     width: 100%;
-    padding: 18px 0 0 18px;
+    padding: 18px 0 18px 18px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -78,6 +76,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: none;
     z-index: -1;
+    transition: background-color .2s ease-out;
 }
   
 #search-nav svg {
@@ -87,7 +86,7 @@
 }
 
 // Mobile search
-@media (max-width: 1000px) {
+@media (max-width: 991px) {
     #search-nav {
       display: none !important;
     }
