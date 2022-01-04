@@ -19,6 +19,12 @@
 {{ else if eq .event "learning path content viewed" }}
     <script>sendAmplitudeEventOnLoad('learning path content viewed', {'learning path title': '{{ .context.Parent.Params.title | lower }}', 'learning path content title': '{{ .context.Title }}', 'url path': window.location.pathname}); </script>
 
+{{ else if eq .event "course viewed" }}
+    <script>sendAmplitudeEventOnLoad('course viewed', {'course title': '{{ .context.Title }}', 'url path': window.location.pathname}); </script>
+
+{{ else if eq .event "course content viewed" }}
+    <script>sendAmplitudeEventOnLoad('course content viewed', {'course title': '{{ .context.Parent.Params.title | lower }}', 'course content title': '{{ .context.Title }}', 'url path': window.location.pathname}); </script>
+
 {{ else if eq .event "pattern viewed" }}
     <script>sendAmplitudeEventOnLoad('pattern viewed', {'pattern name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
 
