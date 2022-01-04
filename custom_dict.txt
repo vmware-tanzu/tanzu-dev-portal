@@ -607,6 +607,7 @@ FelixConfiguration
 Fewell
 fiancé
 [Ff]ibonacci
+Figma
 fileshare
 [fF]ilesystem
 FileSystemXmlApplicationContext
