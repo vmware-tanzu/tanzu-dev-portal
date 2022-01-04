@@ -172,7 +172,6 @@ body {
       font-size: $h3-font-size;
     }
   }
-  
   .fs-p {
     font-size: 1.0625rem;
   }
@@ -2311,6 +2310,9 @@ background: black;
   @media(max-width: 1560px) {
     display: none;
   }
+}
+.pe-none {
+  pointer-events: none;
 }
 .cursor-intial {
   cursor: initial;
