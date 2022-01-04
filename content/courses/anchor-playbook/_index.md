@@ -39,7 +39,7 @@ At VMware Tanzu Labs, while architecture and technology leadership are fundament
 
 At Tanzu Labs, we value empowered [balanced teams](/outcomes/application-development/balanced-teams/). We want all members of the team to own their product, contribute ideas, and act on their ideas. The ethos of the empowered team is often incompatible with traditional hierarchical forms of leadership which risk stifling initiative and ownership. Our teams don’t execute on an inflexible, preordained plan: they own every step of the product development journey.
 
-![This is an anchor](/learningpaths/anchor-playbook/images/standing.jpg)
+![This is an anchor](/courses/anchor-playbook/images/standing.jpg)
 
 ### So what is an anchor? 
 An anchor is **_the representative of the engineering practice who can explain and model the engineering practice_** in the same way that Product Managers and Designers anchor their practices in a balanced team. They monitor team dynamics, encourage best practices, and ask the tough questions needed to drive success. They will not be the only engineer or the only team member doing this, but they will make sure it gets done.

@@ -23,7 +23,7 @@ Sometimes the anchor may want to handle blockers and interruptions, especially i
 
 In many cases anchors are expected to protect the team from inefficiencies caused by near-term blockers, interruptions, and unreasonable requests. They tend to be the one who attends strategic technical meetings and fields questions, especially on an easily-distracted team.
 
-![The shield anchor helping the team](/learningpaths/anchor-playbook/images/sitting.jpg)
+![The shield anchor helping the team](/courses/anchor-playbook/images/sitting.jpg)
 
 ### Responsibilities
 - Keep the project stakeholders informed of issues and action items
