@@ -362,7 +362,7 @@ Once you’ve hired a design contractor or vendor, it’s critical to get them u
 
 Here are a few questions the team can ask to help identify upcoming work that could benefit from dedicated design thinking. The goal is to point the designer in the right direction—and/or, if you’re early in the process, to help justify why you need a design contractor in the first place. 
 
-* Is there a problem or solution you identified during a [Discovery & Framing](/practices/\?filters\=discovery\,framing) that wasn’t a priority then but is quickly becoming the next priority now?
+* Is there a problem or solution you identified during a Discovery & Framing that wasn’t a priority then but is quickly becoming the next priority now?
 * Is there a feature set you’ve already implemented in a lean way that you need to extend to make even more impactful?
 * Were there any recent [research learnings](/practices/research-synthesis) that the team has found particularly compelling but which have taken a back seat to other in-flight priorities?
 * Is there another [persona](/practices/personas) whose experience the team is ready to investigate further?
