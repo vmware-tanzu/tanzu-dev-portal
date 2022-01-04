@@ -26,7 +26,9 @@ miro_template_url: "URL for related Miro template"
 ## How to Use this Method
 
 {{< callout >}}
-**Regarding Participants:** All members of the leadership team who need to define their roles should attend. For example, on a portfolio leadership team, you might include the Portfolio Manager, Portfolio Designer, and Portfolio Engineer.
+**Regarding Participants:** All members of the leadership team who need to define their roles should attend. For example, on a portfolio leadership team, you might include the Portfolio Manager, Portfolio Designer, and Portfolio Engineer. 
+
+Make sure not to leave out any team members, and don't attempt to define their role without them present to share their perspective.
 {{< /callout >}}
 
 {{% section %}}
@@ -98,7 +100,7 @@ miro_template_url: "URL for related Miro template"
 
 1. Document and radiate
 
-   After the workshop, create a document that maps roles, accountabilities, and activities. Share it with the workshop attendees and anyone else in the organization would benefit from clarity on these roles. 
+   After the workshop, create a document that maps roles, accountabilities, and activities. Share it with the workshop attendees, direct reports, superiors, and anyone else in the organization who would benefit from clarity on these roles.
 
 1. Follow up
    
@@ -111,7 +113,7 @@ miro_template_url: "URL for related Miro template"
 ### Success/Expected Outcomes
 At the end of this workshop, you should have improved your shared understanding of people’s roles and accountabilities. You may also have follow up action items to address any gaps or changes you want to make as a result. 
 
-It’s important to recognize that you won’t “get it right” in our first pass (or ever), but it’s safe to move forward and improve over time.
+It’s important to recognize that you won’t “get it right” in the first pass (or ever), but it’s safe to move forward and improve over time.
 {{% /section %}}
 
 {{% section %}}
