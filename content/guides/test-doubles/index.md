@@ -1,7 +1,7 @@
 ---
-title:  "What Are Test Doubles?"
+title:  "Choosing the Right Test Double"
 featured: false
-linkTitle: What Are Test Doubles?
+linkTitle: Choosing the Right Test Double
 description: "An introduction to test doubles, the types of test doubles, and when/how to use them"
 date: "2022-01-01"
 lastmod: "2022-01-01"
