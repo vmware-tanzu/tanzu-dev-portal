@@ -1,25 +1,17 @@
 ---
-title: Learning Paths
-linkTitle: Learning Paths
-description: 'Learning Paths are designed to enable you to achieve the outcomes that
-  are right for your business by way of a curated learning path. This content provides
+title: Courses
+linkTitle: Courses
+description: 'Courses are designed to enable you to achieve the outcomes that
+  are right for your business by way of a curated course. This content provides
   the "Why?" in the form of strategy content, as well as the "How?" in the form of
-  practical and proven tactical references.
-
-  '
-menu:
-  main:
-    parent: sections
-    params:
-      split: right
-    weight: 2
+  practical and proven tactical references.'
 aliases:
 - "/patterns"
 - "/patterns/api"
 - "/patterns/eventing"
 - "/outcomes"
 - "/outcomes/"
-- "/learningpaths/"
-oldPath: "/content/learningpaths/_index.md"
+- "/courses/"
+oldPath: "/content/courses/_index.md"
 tags: []
 ---
