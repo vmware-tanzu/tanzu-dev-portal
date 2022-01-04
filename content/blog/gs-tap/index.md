@@ -16,6 +16,12 @@ level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 aliases:
 - "/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/"
+tanzu:
+  label: tap
+  gettingstarted: true
+  gettingstartedweight: 1
+  featured: true
+  featuredweight: 1
 ---
 
 {{% callout %}} 

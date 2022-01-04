@@ -1,0 +1,14 @@
+<a class="workshop-box col-3 mr-3 mb-3 linked-box td-box--gray-dark position-relative px-0" href="{{ .RelPermalink }}">
+    <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
+        <!-- <div class="card-type-id">
+            <span class="h5">Tanzu</span>
+        </div> -->
+        <div class="thumbnail-gradient position-absolute"></div>
+        <img style="height:120px" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
+    </div>
+    <div class="p-4 td-box-dark d-flex flex-column description">
+        <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+        <div class="btn btn-small mb-2 mt-3 d-inline-block align-self-center">Learn more</div>
+    </div>
+</a>

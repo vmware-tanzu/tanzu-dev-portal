@@ -8,6 +8,8 @@ team:
 - Alex Barbato
 title: Overview of VMware Tanzu Application Platform Beta 3
 youtube_id: qTgPyhg5LQo
+tanzu:
+  label: tap
 ---
 
 If this is your first introduction to Tanzu Application Platform, be sure to check out the [Beta 2 video](https://tanzu.vmware.com/application-platform) for a quick overview. Or try the beta yourself [here](https://tanzu.vmware.com/application-platform).

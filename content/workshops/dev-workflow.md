@@ -1,7 +1,7 @@
 ---
 date: '2021-07-30'
 description: Demonstrate a modern application developer daily workflow.
-draft: false
+draft: true
 hidden: true
 logo: "/images/workshops/logo-tanzu.png"
 lab: dev-workflow-workshop

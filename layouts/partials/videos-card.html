@@ -1,0 +1,4 @@
+<div class="filter-item flex-315 mr-0 mr-lg-3 mb-lg-3 mb-2 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} ">
+    <a class='youtube-container w-100'><div class="youtube-overlay"></div><iframe class="w-100 h-100 youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
+    <h2 class="fs-p"><a href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+</div>
