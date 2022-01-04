@@ -33,6 +33,7 @@ AbstractRegionMap
 Abubakar
 Acceptor
 accessor
+[Aa]ccountabilities
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -443,6 +444,7 @@ Debroy
 debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
+[Dd]eduplicate
 DEK(s)?
 delayDuration
 Deleuze
@@ -846,6 +848,7 @@ imposter
 [Ii]ncompressible
 InfoQ
 InfoSec
+ing
 IngressRoute
 init(Container)?
 InitialCapacity
