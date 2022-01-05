@@ -372,6 +372,7 @@ createWavefrontRegistry
 credentialName
 CredHub
 crf
+Christos
 critiquers
 CRM
 [Cc]ron
@@ -774,6 +775,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+hackathons
 Hackenburg
 Hadlow
 Hamano
@@ -1085,6 +1087,7 @@ Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
+livestreaming
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -1131,10 +1134,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
 Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1848,6 +1853,7 @@ Turnquist
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
+Twilio
 [Tt]ypha
 (U)?UID(s)?
 UAA
@@ -1999,6 +2005,7 @@ Yaron
 yay
 YCombinator
 Yonis
+Yorker
 youtube
 YTT
 ytt(-templatized)?
