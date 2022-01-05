@@ -15,7 +15,7 @@ team:
 - VMware Tanzu Labs
 ---
 
-We highly recommend your product team be a [balanced team](/learningpaths/application-development/balanced-teams/) made up of a product manager, designer, and some number of engineers. Sometimes, however, your team may not have a dedicated designer who is able to help think through user experiences, [facilitate and synthesize research](/practices/research-synthesis), and develop designs for the team to implement—but it may want one. This guide will is meant to help teams who’d like to bring on a design contractor or vendor and need help interviewing, evaluating, and onboarding a designer once hired, but aren’t sure how to go about doing that.
+We highly recommend your product team be a [balanced team](/learningpaths/application-development/balanced-teams) made up of a product manager, designer, and some number of engineers. Sometimes, however, your team may not have a dedicated designer who is able to help think through user experiences, [facilitate and synthesize research](/practices/research-synthesis), and develop designs for the team to implement—but it may want one. This guide will is meant to help teams who’d like to bring on a design contractor or vendor and need help interviewing, evaluating, and onboarding a designer once hired, but aren’t sure how to go about doing that.
 
 _If you need help convincing your team or leadership to contract with a designer on a time & materials vs. fixed-deliverable basis, check back soon for our upcoming blog post on **Advocating for Outcome-Oriented Vendor Contracts** for tips on how to approach this conversation._
 
@@ -351,8 +351,8 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
 
 Once you’ve hired a design contractor or vendor, it’s critical to get them up-to-speed on your work. This is a non-comprehensive list of design and team artifacts that a new designer would likely appreciate having access to as they onboard.
 
-* Overview and access to the [team’s roadmap and backlog of work](/practices/outcome-oriented-roadmap/)
-* Location of the team’s collaborative visual work (e.g. [Miro](https://miro.com/), [Mural](https://www.mural.co/), etc.), pointing out anything that is specifically design-oriented (e.g. [design critiques](/practices/design-critique/) or brainstorming activities)
+* Overview and access to the [team’s roadmap and backlog of work](/practices/outcome-oriented-roadmap)
+* Location of the team’s collaborative visual work (e.g. [Miro](https://miro.com/), [Mural](https://www.mural.co/), etc.), pointing out anything that is specifically design-oriented (e.g. [design critiques](/practices/design-critique) or brainstorming activities)
 * Location where any existing designs live (e.g. [Figma](https://www.figma.com/), [Sketch](https://www.sketch.com/), etc.)
 * Overview, if possible, of how those designs are laid out (e.g. if there are multiple pages, what is the purpose of each?) so the design contractor can get up to speed quickly
 * Location, if any, where any existing [research notes or synthesis](/practices/research-synthesis) has taken place
@@ -364,9 +364,9 @@ Once you’ve hired a design contractor or vendor, it’s critical to get them u
 
 Here are a few questions the team can ask to help identify upcoming work that could benefit from dedicated design thinking. The goal is to point the designer in the right direction—and/or, if you’re early in the process, to help justify why you need a design contractor in the first place. 
 
-* Is there a problem or solution you identified during a Discovery & Framing that wasn’t a priority then but is quickly becoming the next priority now?
+* Is there a problem or solution you identified during a [Discovery & Framing](/practices/?filters=discovery,framing) that wasn’t a priority then but is quickly becoming the next priority now?
 * Is there a feature set you’ve already implemented in a lean way that you need to extend to make even more impactful?
 * Were there any recent [research learnings](/practices/research-synthesis) that the team has found particularly compelling but which have taken a back seat to other in-flight priorities?
 * Is there another [persona](/practices/personas) whose experience the team is ready to investigate further?
 * Are there mobile/tablet considerations that the team is ready to optimize for?
-* Is there anything lingering in the “unprioritized” section of the [team roadmap](/practices/outcome-oriented-roadmap/) that is worth digging into via some sort of research?
+* Is there anything lingering in the “unprioritized” section of the [team roadmap](/practices/outcome-oriented-roadmap) that is worth digging into via some sort of research?
