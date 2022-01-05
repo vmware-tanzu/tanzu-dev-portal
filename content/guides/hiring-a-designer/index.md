@@ -30,34 +30,34 @@ _If you need help convincing your team or leadership to contract with a designer
 
 ### Key Hiring Considerations
 
-These key hiring considerations are intended to help support any hiring conversations with prospective **design contractors** but could easily be repurposed to help with hiring a full-time designer. The list includes areas to investigate and, where appropriate, some sample questions that are rooted in asking about what the designer has _done_ vs. asking them to _speculate on the future_. 
+These key hiring considerations are intended to help support any hiring conversations with prospective **design contractors** but could easily be repurposed to help with hiring a full-time designer. The list includes areas to investigate and, where appropriate, some sample questions that are rooted in asking about what the designer has _done_ vs. asking them to _speculate on the future_.
 
 
 ### Things to Look For / Ask About
 
 1. Values collaboration across disciplines (e.g. wants to pair with developers to implement designs)
- 
-    > “Tell me a bit about how you worked with [PM/engineers] on this project?” 
-    >
-    > “Tell me a bit about your favorite [PM/engineer] working style? What do you like about it?"
+
+   > “Tell me a bit about how you worked with [PM/engineers] on this project?”
+   >
+   > “Tell me a bit about your favorite [PM/engineer] working style? What do you like about it?"
 
 2. Excited about shipping software vs. “just making designs”
-   
+
    > “What are your strategies for balancing between building ideal features and shipping production software?”
 
 3. Is able to start small and iterate vs. doing “big design up front” (i.e. solving for all things at once)
-   
-    > “Walk me through the process you took to reach this design.”
+
+   > “Walk me through the process you took to reach this design.”
 
 4. Advocates for getting user feedback on design decisions and is confident leading user research
-   
-    > “Can you elaborate more on the research you did [on feature / in phase]?
-    > 
-    > “Can you provide some examples of things you learned in research that you did not expect? How did this impact your design strategy or the product plan?”
+
+   > “Can you elaborate more on the research you did [on feature / in phase]?
+   >
+   > “Can you provide some examples of things you learned in research that you did not expect? How did this impact your design strategy or the product plan?”
 
 5. Has strong, but loosely held, opinions (i.e. is willing to push for things they think are right but is just as willing to compromise in the face of new information)
-   
-    > “Tell me about a time when you had a different opinion about [a feature / a direction] than others on your team. How did you navigate that?”
+
+   > “Tell me about a time when you had a different opinion about [a feature / a direction] than others on your team. How did you navigate that?”
 
 6. Has familiarity with the design tools that the team is using
 
@@ -364,7 +364,7 @@ Once you’ve hired a design contractor or vendor, it’s critical to get them u
 
 ### Areas for Design Exploration
 
-Here are a few questions the team can ask to help identify upcoming work that could benefit from dedicated design thinking. The goal is to point the designer in the right direction—and/or, if you’re early in the process, to help justify why you need a design contractor in the first place. 
+Here are a few questions the team can ask to help identify upcoming work that could benefit from dedicated design thinking. The goal is to point the designer in the right direction—and/or, if you’re early in the process, to help justify why you need a design contractor in the first place.
 
 * Is there a problem or solution you identified during a [Discovery & Framing](/practices/?filters=discovery,framing) that wasn’t a priority then but is quickly becoming the next priority now?
 * Is there a feature set you’ve already implemented in a lean way that you need to extend to make even more impactful?
