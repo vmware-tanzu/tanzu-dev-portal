@@ -20,7 +20,7 @@ team:
 
 ---
 
-We highly recommend your product team be a [balanced team](/learningpaths/application-development/balanced-teams) made up of a product manager, designer, and some number of engineers. Sometimes, however, your team may not have a dedicated designer who is able to help think through user experiences, [facilitate and synthesize research](/practices/research-synthesis), and develop designs for the team to implement—but it may want one. This guide will is meant to help teams who’d like to bring on a design contractor or vendor and need help interviewing, evaluating, and onboarding a designer once hired, but aren’t sure how to go about doing that.
+We highly recommend your product team be a [balanced team](/learningpaths/application-development/balanced-teams) made up of a product manager, designer, and some number of engineers. Sometimes, however, your team may not have a dedicated designer who is able to help think through user experiences, [facilitate and synthesize research](/practices/research-synthesis), and develop designs for the team to implement—but it may want one. This guide will help teams who’d like to bring on a design contractor or vendor and need help interviewing, evaluating, and onboarding a designer once hired, but aren’t sure how to go about doing that.
 
 _If you need help convincing your team or leadership to contract with a designer on a time & materials vs. fixed-deliverable basis, check back soon for our upcoming blog post on **Advocating for Outcome-Oriented Vendor Contracts** for tips on how to approach this conversation._
 
@@ -37,19 +37,16 @@ These key hiring considerations are intended to help support any hiring conversa
 
 1. Values collaboration across disciplines (e.g. wants to pair with developers to implement designs)
  
-    Examples: 
     > “Tell me a bit about how you worked with [PM/engineers] on this project?” 
     >
     > “Tell me a bit about your favorite [PM/engineer] working style? What do you like about it?"
 
 2. Excited about shipping software vs. “just making designs”
    
-   Example: 
    > “What are your strategies for balancing between building ideal features and shipping production software?”
 
 3. Is able to start small and iterate vs. doing “big design up front” (i.e. solving for all things at once)
    
-   Example: 
     > “Walk me through the process you took to reach this design.”
 
 4. Advocates for getting user feedback on design decisions and is confident leading user research
