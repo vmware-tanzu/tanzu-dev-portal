@@ -273,6 +273,7 @@ ChatOps
 checkboxes
 checkConnection
 Christoph
+Christos
 Chunyi
 ci
 CIDR(s)?
@@ -372,7 +373,6 @@ createWavefrontRegistry
 credentialName
 CredHub
 crf
-Christos
 critiquers
 CRM
 [Cc]ron
@@ -1849,10 +1849,10 @@ TTL(s)?
 tunable
 Turanski
 Turnquist
+Twilio
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
-Twilio
 [Tt]ypha
 (U)?UID(s)?
 UAA
