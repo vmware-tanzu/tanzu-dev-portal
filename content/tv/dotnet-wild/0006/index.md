@@ -1,7 +1,7 @@
 ---
 Date: '2022-01-18T16:30:00-00:00'
 Description: .NET in the Wild with Christos Matskas
-PublishDate: '2021-01-04T00:00:00-00:00'
+PublishDate: '2022-01-04T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/6
 author: laylap
@@ -10,7 +10,7 @@ episode: '6'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2021-01-04'
+lastmod: '2022-01-04'
 title: Christos Matskas and Layla talk about identity!
 truncate: ''
 twitch: vmwaretanzu
