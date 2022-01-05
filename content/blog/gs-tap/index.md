@@ -24,9 +24,7 @@ tanzu:
   featuredweight: 1
 ---
 
-{{% callout %}} 
-This post is for getting started with Beta 1. On October 5th 2021, VMware Tanzu Application Platform Beta 2 was released. And since then, other Betas have been released. Get more information on Tanzu Application Platform [here](https://tanzu.vmware.com/application-platform). 
-{{% /callout %}}
+> This post is for getting started with Beta 1. On October 5th 2021, VMware Tanzu Application Platform Beta 2 was released. And since then, other Betas have been released. Get more information on Tanzu Application Platform [here](https://tanzu.vmware.com/application-platform).
 
 By now you may have seen the [announcement](https://tanzu.vmware.com/content/vmware-tanzu-application-platform-resources/announcing-vmware-tanzu-application-platform) at the recent [SpringOne](https://springone.io) conference for VMware's new [Tanzu Application Platform](https://tanzu.vmware.com/application-platform). You understand the power a platform like this can bring to your production environments, but have you considered what it can do for your [inner loop development](https://thenewstack.io/kubernetes-infrastructure-know-the-inner-dev-loop/)? Not every commit goes to production. That’s why you need a way to locally deploy and test your changes locally before going to production. 
 

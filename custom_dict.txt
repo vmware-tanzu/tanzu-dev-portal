@@ -374,6 +374,7 @@ createWavefrontRegistry
 credentialName
 CredHub
 crf
+Christos
 critiquers
 CRM
 [Cc]ron
@@ -1133,10 +1134,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
 Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1851,6 +1854,7 @@ Turnquist
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
+Twilio
 [Tt]ypha
 (U)?UID(s)?
 UAA
