@@ -777,6 +777,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+hackathons
 Hackenburg
 Hadlow
 Hamano
@@ -1088,6 +1089,7 @@ Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
+livestreaming
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -2006,6 +2008,7 @@ Yaron
 yay
 YCombinator
 Yonis
+Yorker
 youtube
 YTT
 ytt(-templatized)?
