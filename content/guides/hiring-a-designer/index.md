@@ -12,7 +12,10 @@ tags:
 
 # Author(s)
 team:
-- VMware Tanzu Labs
+- Eric Cipra
+- Joe Moore
+
+
 ---
 
 We highly recommend your product team be a [balanced team](/learningpaths/application-development/balanced-teams) made up of a product manager, designer, and some number of engineers. Sometimes, however, your team may not have a dedicated designer who is able to help think through user experiences, [facilitate and synthesize research](/practices/research-synthesis), and develop designs for the team to implement—but it may want one. This guide will is meant to help teams who’d like to bring on a design contractor or vendor and need help interviewing, evaluating, and onboarding a designer once hired, but aren’t sure how to go about doing that.
