@@ -72,8 +72,8 @@ Additional explanations of each of the activities can be found below.
 
 ### Before Interviewing
 
-{{< table "table" >}}
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Clarify the type of work you’re looking for this designer to do</td>
@@ -94,7 +94,7 @@ Additional explanations of each of the activities can be found below.
     </tr>
     <tr><td></td><td></td></tr>
 </table>
-{{< table />}}
+
 
 
 ### Initial Screening
@@ -102,8 +102,8 @@ Additional explanations of each of the activities can be found below.
 
 _Note: if done by a partner agency, prep the agency with a high-level overview of the desired designer_
 
-{{< table "table" >}}
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Determine if a candidate is worth interviewing at length</td>
@@ -142,14 +142,14 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
     </tr>
     <tr><td></td><td></td></tr>
 </table>
-{{< table />}}
+
 
 
 ### Portfolio Review
 30 minutes run by Product Manager (or similar).
 
-{{< table "table" >}}
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Get a sense of work the candidate has done and how well they can explain their process</td>
@@ -189,14 +189,14 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
     </tr>
     <tr><td></td><td></td></tr>
 </table>
-{{< table />}}
+
 
 
 ### Option 1: Cross-Discipline Chat
 20-30 minutes run by an Engineer (ideally).
 
-{{< table "table" >}}
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Give the candidate a sense of how the client approaches cross-discipline work while getting a read on their collaboration skills</td>
@@ -237,13 +237,13 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
     </tr>
    <tr><td></td><td></td></tr>
 </table>
-{{< table />}}
+
 
 ### Option 2: Hands-On Activity
 30-45 minutes run by Product Manager (or similar).
 
-{{< table "table" >}}
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Get a sense of how the candidate approaches tackling a real problem</td>
@@ -291,10 +291,11 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
     </tr>
    <tr><td></td><td></td></tr>
 </table>
-{{< table />}}
+
 
 ### Final Decision
-<table>
+
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Determine whether or not to give the candidate an offer</td>
@@ -321,7 +322,7 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
 
 ## After Hiring - Onboarding a New Designer 👱🎨
 
-<table>
+<table class="table">
     <tr>
         <td><strong>Goal</strong></td>
         <td>Get new hire onboarded smoothly and quickly
@@ -344,6 +345,7 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
     </tr>
     <tr><td></td><td></td></tr>
 </table>
+
 
 ### Key Design Artifacts for New Hires
 
