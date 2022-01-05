@@ -338,7 +338,7 @@ _Note: if done by a partner agency, prep the agency with a high-level overview o
                 <a href="#areas-for-design-exploration">areas for design exploration</a>
             <p>
                 Share with them any
-                <a href="#key-design-artifacts">key design artifacts</a> the team has made (below in this article)
+                <a href="#key-design-artifacts-for-new-hires">key design artifacts</a> the team has made (below in this article)
             <p>
                 Schedule recurring 1-on-1s to make space for feedback (both directions)
         </td>
