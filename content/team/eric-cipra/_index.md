@@ -1,9 +1,8 @@
 ---
 name: "Eric Cipra"
-description: "Job Title"
-photo: ""
+description: "Staff Product Designer"
 roles: ["author","advocate"]
-skills: ["Spring", "Kubernetes"]
+skills: ["Design", "UX"]
 location: ""
 
 # Social Media 

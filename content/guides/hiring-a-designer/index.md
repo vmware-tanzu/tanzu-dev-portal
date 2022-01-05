@@ -13,8 +13,10 @@ tags:
 # Author(s)
 team:
 - Eric Cipra
+- Simon Holroyd
+- Paul Sullivan
+- Michele Molino
 - Joe Moore
-
 
 ---
 
