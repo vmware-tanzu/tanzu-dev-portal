@@ -372,6 +372,7 @@ createWavefrontRegistry
 credentialName
 CredHub
 crf
+Christos
 critiquers
 CRM
 [Cc]ron
@@ -1130,10 +1131,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
 Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
