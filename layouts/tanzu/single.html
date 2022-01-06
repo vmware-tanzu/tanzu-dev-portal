@@ -16,11 +16,11 @@
                 <div class='container'>
                     {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
                     <div class="row align-items-center py-lg-5">
-                        <div class="col-12 col-lg-6 py-2 py-lg-5 pl-lg-0">
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 pl-0 pr-lg-4 pr-0">
                             <h1>{{ .Title }}</h1>
                             <p class="lead">{{ .Description }}</p>
                         </div>
-                        <div class="col-12 col-lg-6 py-2 py-lg-5 pr-lg-0 position-relative">
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 px-0 pl-lg-4 position-relative">
                             <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
                             <!-- Link Boxes -->
                             <!-- TODO: Proper CSS fix for make link boxes the same size -->
