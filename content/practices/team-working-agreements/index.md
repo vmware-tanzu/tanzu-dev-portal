@@ -94,21 +94,19 @@ miro_template_url: "URL for related Miro template"
    Tip: email the agreements to everyone and add them to the weekly retro space as fuel for thought.
    {{% /callout %}}
 
+   Here is an example PDF: [Team working agreement document example](images/team-working-agreement-example.pdf)
+
+
 ## Success/Expected Outcomes
 You have successfully completed this task when you gave a clear set of working agreements that 100% of the team have voted on and agreed to.
-
 
 ## Facilitator Notes & Tips
 This is an activity that you can time box if it feels drawn out. Many of the tips embedded above are intended to help you avoid rabbit holes, but if that happens you should feel empowered to move things forward by refocusing the team, setting a timer, or forcing a decision.
 
 Also, just because a behavior does not get added to the working agreements does not mean that a team member cannot behave that way nor ask that others behave that way. On rare occasions you may need to remind the team of this if they end up in heated disagreement over an agreement.
 
-## Related Practices
-
-### Preceding
- 
-### Following
-
 ## Real World Examples
 
-## Recommended Reading
+Team working agreement document example:
+
+[![Team working agreement document example](images/team-working-agreement-large.png)](images/team-working-agreement-example.pdf)
