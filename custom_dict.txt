@@ -32,6 +32,7 @@ AbstractRegionMap
 Abubakar
 Acceptor
 accessor
+[Aa]ccountabilities
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -272,6 +273,7 @@ ChatOps
 checkboxes
 checkConnection
 Christoph
+Christos
 Chunyi
 ci
 CIDR(s)?
@@ -441,6 +443,7 @@ Debroy
 debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
+[Dd]eduplicate
 DEK(s)?
 delayDuration
 Deleuze
@@ -771,6 +774,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+hackathons
 Hackenburg
 Hadlow
 Hamano
@@ -843,6 +847,7 @@ imposter
 [Ii]ncompressible
 InfoQ
 InfoSec
+ing
 IngressRoute
 init(Container)?
 InitialCapacity
@@ -1081,6 +1086,7 @@ Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
+livestreaming
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -1127,10 +1133,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
 Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1841,6 +1849,7 @@ TTL(s)?
 tunable
 Turanski
 Turnquist
+Twilio
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
@@ -1995,6 +2004,7 @@ Yaron
 yay
 YCombinator
 Yonis
+Yorker
 youtube
 YTT
 ytt(-templatized)?
