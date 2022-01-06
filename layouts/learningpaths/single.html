@@ -36,8 +36,18 @@
         <h2>{{ .Title }}</h2>
         {{ partial "byline" (dict "context" . "withdate" false) }}
         {{ end }}
+        
 
         {{ $page.Content }}
+
+        <div class="container">
+          <div class="row">
+            {{ range .Params.courses }}
+              {{ $course := $.Site.GetPage (printf "/courses/%s" .) }}
+              {{ partial "courses-card.html" $course }}
+            {{ end }}
+          </div>
+        </div>
 
         {{ if $page.IsSection }}
         {{ partial "begin.html" . }}
@@ -73,6 +83,5 @@
       </div>
     </div>
   </div>
-  {{ partial "pager.html" . }}
 </div>
 {{ end }}

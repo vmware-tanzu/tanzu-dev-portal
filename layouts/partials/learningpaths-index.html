@@ -2,7 +2,6 @@
     {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
     {{ $parent := .Page }}
     {{ range $pages }}
-    {{ if .IsSection }}
     {{ if eq .Parent $parent }}
 
     {{ $totalDuration := 0 }}
@@ -42,7 +41,6 @@
         </div>
     </a>
 
-    {{ end }}
     {{ end }}
     {{ end }}
 </div>
