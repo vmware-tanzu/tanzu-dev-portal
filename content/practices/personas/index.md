@@ -77,7 +77,7 @@ why:
    **Tip**: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
 
-10. Plan out how to get access to people that this persona represents and the user research activities that you will do to validate this persona. Check out activities labeled Discovery in the Tanzu Practices center for different options. 
+10. Plan out how to get access to people that this persona represents and the [user research activities](/practices/user-research-introduction-session/) that you will do to validate this persona. Check out activities labeled Discovery in the Tanzu Practices center for different options. 
 
 
 ### Success/Expected Outcomes
