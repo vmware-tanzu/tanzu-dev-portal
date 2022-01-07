@@ -88,9 +88,9 @@ Success is when you've created a "master persona" and everyone in the room feels
 #### Machina Personas
 If you're building a "technical" product like an API and your user is a system (such as existing apps that you must integrate with), you may need to create machina personas. 
 
-The key difference are the quandrants you have
-   - Top left → drawing a personafication of the machina persona 
-   - Bottom left → About (facts like thename of the system, age, type, languages/formats it understands)
+The key difference are the quadrants you have
+   - Top left → drawing a personification of the machina persona 
+   - Bottom left → About (facts like the name of the system, age, type, languages/formats it understands)
    - Top right → Needs & Responsibilities (input it requires, what it does with that input, what it does in general)
    - Bottom right → Quirks (any difficulties or peculiarities when integrating/interacting with the system)
 
