@@ -81,7 +81,7 @@ why:
 
 
 ### Success/Expected Outcomes
-Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible. Remember that a critical next step is to then validate this persona with user research such as interviews
+Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible. Remember that a critical next step is to then validate this persona with [user research](/practices/user-research-introduction-session/) such as interviews
 
 ### Variations
 
