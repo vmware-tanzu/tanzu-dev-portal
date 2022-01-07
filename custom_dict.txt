@@ -452,6 +452,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+Denham-Parry
 denhamparry
 deployable
 [Dd]eployable
