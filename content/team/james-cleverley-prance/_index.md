@@ -18,9 +18,9 @@ youtube: ""
 James works as a Cloud Native Security Engineer at ControlPlane. In his 
 day to day, he focuses on static and dynamic security assessments covering
 cloud native, infrastructure as code, policy as code, CI/CD, and architecture
-appraisals. He specialises in offensive security, Kubernetes, and 
+appraisals. He specializes in offensive security, Kubernetes, and 
 cloud native technologies. He has reviewed the security posture of numerous
-organisations' cloud infrastructure and systems across a variety of retail,
+organizations' cloud infrastructure and systems across a variety of retail,
 financial, and regulated environments. James also enjoys participating and
 contributing to CTFs and community events, sharing experiences and ideas that
 he's had in client engagements. This has led to him being closely involved 

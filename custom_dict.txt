@@ -212,6 +212,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -329,6 +330,7 @@ CoffeeOps
 cognisant
 Cohn
 colocated
+ControlPlane
 commonName(.)?
 [Cc]omms
 compareAllValues
@@ -388,6 +390,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
