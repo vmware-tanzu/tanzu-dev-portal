@@ -330,7 +330,6 @@ CoffeeOps
 cognisant
 Cohn
 colocated
-ControlPlane
 commonName(.)?
 [Cc]omms
 compareAllValues

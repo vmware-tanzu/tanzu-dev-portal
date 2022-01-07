@@ -15,7 +15,7 @@ instagram: ""
 youtube: ""
 ---
 
-James works as a Cloud Native Security Engineer at ControlPlane. In his 
+James works as a Cloud Native Security Engineer at [Control Plane](https://control-plane.io/). In his 
 day to day, he focuses on static and dynamic security assessments covering
 cloud native, infrastructure as code, policy as code, CI/CD, and architecture
 appraisals. He specializes in offensive security, Kubernetes, and 
