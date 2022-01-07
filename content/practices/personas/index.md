@@ -71,7 +71,7 @@ why:
 
 8. Give each person four dots so that they can place a dot on the quadrant that they think best explains the user (so four dots in total, one on each quadrant across all papers)
 
-9. Tape together the highest scoring quadrants into one "master persona" and reads it to the group
+9. Tape together the highest scoring quadrants into one consolidated persona and reads it to the group
 
    {{% callout %}}
    **Tip**: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
