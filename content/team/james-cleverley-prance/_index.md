@@ -1,8 +1,7 @@
 ---
 name: James Cleverley-Prance
 roles: ["guest"]
-skills: "Security", "Kubernetes"
-location: 
+skills: ["Security", "Kubernetes"]
 
 # Social Media
 twitter: ""
