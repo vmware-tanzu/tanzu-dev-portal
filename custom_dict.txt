@@ -212,6 +212,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -388,6 +389,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
