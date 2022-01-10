@@ -1128,6 +1128,7 @@ m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
 MacBook
+[Mm]achina
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
@@ -1472,6 +1473,7 @@ PromQL
 Promtail
 PropertySource(s)?
 [Pp]roto
+[Pp]roto-[Pp]ersona(s)?
 Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
@@ -2022,5 +2024,3 @@ Zou
 Zuul
 Zynga
 μServices
-[Mm]achina
-[Pp]roto-[Pp]ersona(s)?
