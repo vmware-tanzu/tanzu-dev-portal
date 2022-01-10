@@ -15,9 +15,9 @@ instagram: ""
 youtube: ""
 ---
 
-Lewis works for Control Plane as Head of Training, helping others learn how to orchestrate 
+Lewis works for [Control Plane](https://control-plane.io/) as Head of Training, helping others learn how to orchestrate 
 the ocean of containers using Kubernetes and securing their infrastructure by teaching how to 
-attack and defend Cloud Native infrastructure.  He co-founded Cloud Native Wales, an initiative 
+attack and defend Cloud Native infrastructure. He co-founded [Cloud Native Wales](https://cloudnativewales.io/), an initiative 
 to help people learn Cloud Native technologies and establish a community to support each other. 
 When he's not playing with tech, he's busy trying to act like an adult and spending time with his 
 family. Follow Lewis on his personal Twitter @denhamparry and Cloud Native Wales @cloudnativewal, 
