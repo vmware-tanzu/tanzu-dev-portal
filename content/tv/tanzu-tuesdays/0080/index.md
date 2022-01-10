@@ -8,7 +8,7 @@ draft: false
 episode: '80'
 explicit: 'no'
 guests:
-- James Cleverly-Prance
+- James Cleverley-Prance
 - Lewis Denham-Parry
 hosts:
 - Tiffany Jernigan
