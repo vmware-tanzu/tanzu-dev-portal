@@ -7,7 +7,7 @@ tags:
 team:
 - Scott Sisl
 title: Introduction to VMware Tanzu Application Platform
-youtube_id: G9q34-rdbzM
+youtube_id: SDobPYHk_sQ
 tanzu:
   label: tap
 ---
