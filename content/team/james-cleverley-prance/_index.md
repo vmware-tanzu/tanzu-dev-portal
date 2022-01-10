@@ -4,7 +4,7 @@ roles: ["guest"]
 skills: ["Security", "Kubernetes"]
 
 # Social Media
-twitter: ""
+twitter: "jpts_"
 website: ""
 facebook: ""
 linkedin: ""
