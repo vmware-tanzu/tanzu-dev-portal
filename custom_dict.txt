@@ -1588,6 +1588,7 @@ ROI
 rom-com
 rootPassword
 Rosecrance
+Rosenberg
 Rosso
 Roussos
 [Rr]outable
@@ -1634,6 +1635,7 @@ schema(s)?
 Schimanski
 Schutta
 Schwaber
+Scott
 screencaster
 SCS
 SDD
