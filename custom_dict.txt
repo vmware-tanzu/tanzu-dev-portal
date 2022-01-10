@@ -32,6 +32,7 @@ AbstractRegionMap
 Abubakar
 Acceptor
 accessor
+[Aa]ccountabilities
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -211,6 +212,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -272,6 +274,7 @@ ChatOps
 checkboxes
 checkConnection
 Christoph
+Christos
 Chunyi
 ci
 CIDR(s)?
@@ -282,6 +285,7 @@ CKtaKhKOo-Y
 classpath
 clearnotifications
 clearNotifications
+Cleverley-Prance
 cli
 CLI(s|'s)?
 client[_-]golang
@@ -291,6 +295,7 @@ Clojure
 closeRegion
 CloudEvents
 Cloudflare
+CloudFlare
 CloudHealth
 CloudNativeCon
 cloudnativewal
@@ -385,6 +390,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
@@ -396,6 +402,8 @@ customization(s)?
 CustomResourceDefinition(s)?
 CVE-[0-9]{4}-[0-9]+
 CVE(s|-reported)?
+CVSS
+[Cc]yber
 cybersecurity
 Cygwin
 D2iQ
@@ -438,12 +446,14 @@ Debroy
 debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
+[Dd]eduplicate
 DEK(s)?
 delayDuration
 Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+Denham-Parry
 denhamparry
 deployable
 [Dd]eployable
@@ -748,6 +758,7 @@ gradlew
 [gG]rafana
 GRAFANA-PASSWORD
 Grails
+Grandja
 GrantedAuthoritiesMapper
 GrantedAuthority
 GraphQL
@@ -767,6 +778,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+hackathons
 Hackenburg
 Hadlow
 Hamano
@@ -839,6 +851,7 @@ imposter
 [Ii]ncompressible
 InfoQ
 InfoSec
+ing
 IngressRoute
 init(Container)?
 InitialCapacity
@@ -1077,12 +1090,15 @@ Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
+livestreaming
 LoadBalancer
 LocalDataSet
 LocalDataSets
 localhost(:[0-9]*)?
 lockfile
+Log4Hell
 [Ll]og4j2?
+Log4Shell
 LogAllStatisticValuesFunction
 logback
 Logback
@@ -1094,6 +1110,7 @@ logQueue
 [lL]ogrus
 Logstash
 Lombok
+lookups
 lookups.
 lorem-ipsum
 Low-fi
@@ -1120,9 +1137,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
+Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1193,6 +1213,7 @@ Multipass
 Mutating(Admission)?Webhook
 mutators
 [Mm]utli-Cloud
+Mutual-TLS
 Muzz
 MVB(-awarded)?
 MVC
@@ -1360,6 +1381,7 @@ PeerAuthentication
 PEM
 per-namespace
 Percona
+Pérez
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 [Pp]et[Cc]linic
@@ -1481,6 +1503,7 @@ RabbitMQ('s)?
 Raju
 Rakuten
 RBAC(-enabled)?
+RCE
 RDBMS
 reachability
 reactively
@@ -1830,6 +1853,7 @@ TTL(s)?
 tunable
 Turanski
 Turnquist
+Twilio
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
@@ -1984,6 +2008,7 @@ Yaron
 yay
 YCombinator
 Yonis
+Yorker
 youtube
 YTT
 ytt(-templatized)?
