@@ -212,6 +212,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -284,6 +285,7 @@ CKtaKhKOo-Y
 classpath
 clearnotifications
 clearNotifications
+Cleverley-Prance
 cli
 CLI(s|'s)?
 client[_-]golang
@@ -388,6 +390,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
@@ -450,6 +453,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+Denham-Parry
 denhamparry
 deployable
 [Dd]eployable
