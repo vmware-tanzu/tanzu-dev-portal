@@ -8,7 +8,7 @@ draft: false
 episode: '80'
 explicit: 'no'
 guests:
-- James Cleverly-Prance
+- James Cleverley-Prance
 - Lewis Denham-Parry
 hosts:
 - Tiffany Jernigan
@@ -25,5 +25,5 @@ type: tv-episode
 
 Our hosts had such fun playing Kubernetes CTF with Lewis Denham-Parry that they've 
 invited him back for another go-round!  This time we will see more advanced security
-scenarios, and the game will be co-lead by James Cleverly-Prance.  Come laugh, play, and learn with us!
+scenarios, and the game will be co-lead by James Cleverley-Prance.  Come laugh, play, and learn with us!
 
