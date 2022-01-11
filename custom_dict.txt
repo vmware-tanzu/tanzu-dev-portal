@@ -1790,6 +1790,7 @@ TaskRepository
 Tatooine
 TBD
 tchotchke
+TCE
 TCP
 tdc-carvel-examples
 tdp-guide
@@ -1804,6 +1805,7 @@ telecom
 Templeton
 Teotti
 Teppanyaki
+TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
