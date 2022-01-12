@@ -214,6 +214,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -286,6 +287,7 @@ CKtaKhKOo-Y
 classpath
 clearnotifications
 clearNotifications
+Cleverley-Prance
 cli
 CLI(s|'s)?
 client[_-]golang
@@ -390,6 +392,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
@@ -452,6 +455,7 @@ Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+Denham-Parry
 denhamparry
 deployable
 [Dd]eployable
@@ -1127,6 +1131,7 @@ m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
 MacBook
+[Mm]achina
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
@@ -1471,6 +1476,7 @@ PromQL
 Promtail
 PropertySource(s)?
 [Pp]roto
+[Pp]roto-[Pp]ersona(s)?
 Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
@@ -1588,6 +1594,7 @@ ROI
 rom-com
 rootPassword
 Rosecrance
+Rosenberg
 Rosso
 Roussos
 [Rr]outable
@@ -1634,6 +1641,7 @@ schema(s)?
 Schimanski
 Schutta
 Schwaber
+Scott
 screencaster
 SCS
 SDD
@@ -1788,6 +1796,7 @@ TaskRepository
 Tatooine
 TBD
 tchotchke
+TCE
 TCP
 tdc-carvel-examples
 tdp-guide
@@ -1802,6 +1811,7 @@ telecom
 Templeton
 Teotti
 Teppanyaki
+TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
@@ -1913,6 +1923,7 @@ ValidatingAdmissionWebhook
 validators
 ValueComparator
 ValueComparer
+Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VCAP
