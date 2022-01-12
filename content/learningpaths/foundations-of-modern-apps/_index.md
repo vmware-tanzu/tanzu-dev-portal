@@ -1,10 +1,7 @@
 ---
 title: Foundations of Modern Apps
 description: Accumsan lacus vel facilisis volutpat est velit egestas dui. Morbi tristique senectus et netus et malesuada fames. Mauris ultrices eros in cursus turpis massa tincidunt dui ut. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Diam donec adipiscing tristique risus nec feugiat in. Nulla facilisi nullam vehicula ipsum a. Nisl purus in mollis nunc sed id semper risus. Urna nunc id cursus metus aliquam eleifend mi in nulla. Nisl condimentum id venenatis a. Tristique magna sit amet purus gravida quis blandit. Vel turpis nunc eget lorem dolor.
-courses:
-    - application-development-how-we-work
-    - application-development
-    - cloud-native-development
+layout: top
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing at in tellus integer feugiat scelerisque. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Donec ac odio tempor orci dapibus ultrices in iaculis. Adipiscing tristique risus nec feugiat in. Dui id ornare arcu odio. Semper quis lectus nulla at volutpat diam. Id cursus metus aliquam eleifend mi. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Enim ut sem viverra aliquet eget sit amet tellus. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. A condimentum vitae sapien pellentesque habitant. Et tortor at risus viverra adipiscing. Ac placerat vestibulum lectus mauris ultrices eros.

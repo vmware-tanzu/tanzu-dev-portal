@@ -41,12 +41,7 @@
         {{ $page.Content }}
 
         <div class="container">
-          <div class="row">
-            {{ range .Params.courses }}
-              {{ $course := $.Site.GetPage (printf "/courses/%s" .) }}
-              {{ partial "courses-card.html" $course }}
-            {{ end }}
-          </div>
+          
         </div>
 
         {{ if $page.IsSection }}
