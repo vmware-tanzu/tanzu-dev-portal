@@ -2,19 +2,13 @@
 title:  "Choosing the Right Test Double"
 featured: false
 linkTitle: Choosing the Right Test Double
-description: "An introduction to test doubles, the types of test doubles, and when/how to use them"
+description: "An introduction to test doubles, the types of test doubles, and when and how to use them"
 date: "2022-01-01"
 lastmod: "2022-01-01"
 topics:
 - Testing
 tags:
 - testing
-- test doubles
-- dummies
-- spies
-- stubs
-- mocks
-- fakes
 level1: Building Modern Applications
 level2: Modern Development Practices
 # Author(s)
@@ -24,7 +18,7 @@ team:
 
 ## Why use test doubles?
 
-**Test doubles** help you write better unit tests. They do this by helping you to isolate the behavior of the code you're testing from the behavior of the components that code depends on.
+**Test doubles** help you write better unit tests. They do this by helping you isolate the behavior of the code you're testing from the behavior of the components that code depends on.
 
 Much of the time, the code you want to test will depend on other code—it has *dependencies*. Perhaps it gets some inputs from some data sources; perhaps it sends its outputs to some destinations. No matter how your code interacts with its dependencies, however, you want to make sure that its tests reflect only its behavior and not the behavior of its dependencies. And you want to avoid getting false positives or false negatives from your tests.
 
@@ -40,7 +34,7 @@ When writing the tests for this code, we want to be able to control the inputs, 
 
 Creating and injecting test doubles for `dataSourceA`, `dataSourceB`, and `dependencyC` allow us to do just this.
 
-## The Five Types of Test Doubles
+## The five types of test doubles
 
 There are five kinds of test doubles:
 
@@ -121,7 +115,7 @@ describe("compute401KContribution", () => {
 });
 ```
 
-Now you know that the `payroll` dependency will return `4000` for the monthly income and the `settings` will return `0.12` for the contribution percentage. So now you be assured that the `compute401KContribution()` function should multiply those two values together and return `480`.
+Now you know that the `payroll` dependency will return `4000` for the monthly income and the `settings` will return `0.12` for the contribution percentage. So now you can be assured that the `compute401KContribution()` function should multiply those two values together and return `480`.
 
 ### Notes
 
@@ -165,7 +159,7 @@ describe("when the user completes onboarding", () => {
 
 ### What is it?
 
-A **mock** is a combination of stub and spy—i.e. a test double that allows you control the data it returns while also recording the calls made to it so that you can check that it was called with the correct parameters.
+A **mock** is a combination of stub and spy, i.e., a test double that allows you to control the data it returns while also recording the calls made to it so that you can check that it was called with the correct parameters.
 
 ### When do I use it?
 
@@ -173,7 +167,7 @@ You use a mock for situations where you want to both control the data returned b
 
 ### Example
 
-Take the user onboarding flow above, and suppose the `send` method on the `emailManager` returns a boolean value that lets you know the email was sent successfully. When you test the onboarding flow, you want to know that `send()` got called with correct email address and subject header, and you also want to control its return value so that you can write a predictable test for the rest of your onboarding flow.
+Take the user onboarding flow above, and suppose the `send` method on the `emailManager` returns a Boolean value that lets you know the email was sent successfully. When you test the onboarding flow, you want to know that `send()` got called with the correct email address and subject header, and you also want to control its return value so that you can write a predictable test for the rest of your onboarding flow.
 
 You might use a mock like this:
 
@@ -198,7 +192,7 @@ In this example, `emailManagerMock` is doing a bunch of things. It's acting as a
 
 Notice the `verify()` method. It checks to make sure that the `send()` method not only got called, but got called with the parameters you expect.
 
-Remember that in order to be useful, you have to stub `send()` to return true before the `onboardingFlow.complete()` executes, but you have to wait until after it executes to check whether `send()` received the correct email and subject header. A mock allows you to stub the hard-coded return value in advance, while giving you a method—`verify()`—to call afterwards to confirm that it received the expected method invocations.
+Remember that in order to be useful, you have to stub `send()` to return `true` before the `onboardingFlow.complete()` executes, but you have to wait until after it executes to check whether `send()` received the correct email and subject header. A mock allows you to stub the hard-coded return value in advance, while giving you a method—`verify()`—to call afterward to confirm that it received the expected method invocations.
 
 
 ## Fake
@@ -315,12 +309,12 @@ describe("doing the taxes", () => {
 
 Which test double should you use for `BankAccount`?
 
-- Not a dummy, of course. No matter which code path you're testing, you'll want to be able call `getBalance()` without throwing an exception.
+- Not a dummy, of course. No matter which code path you're testing, you'll want to be able to call `getBalance()` without throwing an exception.
 - The problem with using a stub is that `getBalance()` will return a different value at the beginning of the method than at the end. A stub only allows you to configure it to return a hard-coded piece of data, not one that can change along the way.
 - You could use a spy to ensure that `deposit()` or `withdraw()` are called with the correct amount, but that doesn't resolve the problem with stubbing `getBalance()`.
 - The problem with a mock is the same as the problem with a stub.
 
-In fact, the problem with using any of these test doubles with `BankAccount` is that `BankAccount` has *stateful behavior*, i.e. that `getBalance()` will return different amounts depending on the other methods—`deposit()` and/or `withdraw()`—that get called. We need to make sure that whatever test double we use for `BankAccount` in our `Accountant` tests, that test double *behaves like a `BankAccount`*.
+In fact, the problem with using any of these test doubles with `BankAccount` is that `BankAccount` has *stateful behavior*, i.e., that `getBalance()` will return different amounts depending on the other methods—`deposit()` and/or `withdraw()`—that get called. We need to make sure that whatever test double we use for `BankAccount` in our `Accountant` tests, that test double *behaves like a `BankAccount`*.
 
 #### What does it mean to behave like a `BankAccount`?
 
@@ -439,7 +433,7 @@ testBankAccount(() => new FakeBankAccount());
 
 #### Why do we need to test `FakeBankAccount` at all?
 
-Because it's all too easy for us to create a poorly-behaving fake. Consider this one:
+Because it's all too easy for us to create a poorly behaving fake. Consider this one:
 
 ```typescript
 class BadBankAccount implements BankAccount {
@@ -457,4 +451,4 @@ class BadBankAccount implements BankAccount {
 
 Clearly, we wouldn't want to use `BadBankAccount` in our `Accountant` tests. If we did, those tests would never pass, because `getBalance()` would always return 0, every time.
 
-`BadBankAccount` correctly implements the `BankAccount` interface—but implementing the interface isn't enough to make it usable in our `Accountant` tests. For the `BankAccount` test double to be useful, it needs to have the *stateful behavior* that we expect of a `BankAccount`. We don't actually care *how* it implements that stateful behavior, only that it does so correctly. So we write a test for the stateful behavior, and we expect that even our test doubles can pass those tests.
+`BadBankAccount` correctly implements the `BankAccount` interface, but implementing the interface isn't enough to make it usable in our `Accountant` tests. For the `BankAccount` test double to be useful, it needs to have the *stateful behavior* that we expect of a `BankAccount`. We don't actually care *how* it implements that stateful behavior, only that it does so correctly. So we write a test for the stateful behavior, and we expect that even our test doubles can pass those tests.
