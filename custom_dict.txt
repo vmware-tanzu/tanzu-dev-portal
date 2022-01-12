@@ -1592,6 +1592,7 @@ ROI
 rom-com
 rootPassword
 Rosecrance
+Rosenberg
 Rosso
 Roussos
 [Rr]outable
@@ -1638,6 +1639,7 @@ schema(s)?
 Schimanski
 Schutta
 Schwaber
+Scott
 screencaster
 SCS
 SDD
@@ -1792,6 +1794,7 @@ TaskRepository
 Tatooine
 TBD
 tchotchke
+TCE
 TCP
 tdc-carvel-examples
 tdp-guide
@@ -1806,6 +1809,7 @@ telecom
 Templeton
 Teotti
 Teppanyaki
+TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
