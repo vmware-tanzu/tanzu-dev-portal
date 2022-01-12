@@ -12,11 +12,11 @@ level1: Building Modern Applications
 level2: Modern Development Practices
 ---
 
-Rip Van Winkle fell asleep for 20 years and the world moved underneath him. He woke up as a stranger in a familiar land, unable to recall details of the past. I empathize with him. When I wake up Monday morning I often ask, what did I do on Friday? How do I explain decisions I made six months ago? The details are lost to the sands of time.
+Rip Van Winkle fell asleep for 20 years and the world moved underneath him. He woke up as a stranger in a familiar land, unable to recall details of the past. I empathize with him. When I wake up Monday morning I often ask, what did I do on Friday? What did I do last month? And why? The details are lost to the sands of time.
 
-This happened to me recently. After I finished working with a client, a new project lead joined the project. They noticed I decided to fork the codebase and wanted to know why. That was about six months ago, and I did not remember.
+This happened to me recently. Six months after I finished working with a client, a new project lead joined. They wanted to know why I decided to fork the codebase, and I did not remember.
 
-Luckily I did something else 6 months ago: I wrote an architectural design record to explain why the fork was necessary. It also mentioned alternative approaches and highlighted potential future improvements. The project lead quickly understood the reasoning and moved on to the next concern. The best part? I didn’t have to say a word or explain further; the record was enough.
+Luckily I did something else 6 months ago: I wrote an architectural decision record to explain why the fork was necessary. In addition to my reasoning, it also mentioned alternative approaches and highlighted potential future improvements. The project lead quickly understood the reasoning and moved on to the next concern. The best part? I didn’t have to say a word or explain further; the record was enough.
 
 Architectural decision records (ADRs) document the thought process behind important engineering decisions. Topics can range from choosing an authorization back end to style guides or test refactor strategies. The record can be a single paragraph or multiple pages. The record serves as a snapshot of the past.
 
@@ -42,7 +42,7 @@ Your ADR is a story about a task, the steps taken, and a happy ending.
 
 When describing the importance of the decision:
 * Highlight your pain points. Example: Before forking the codebase, it had multiple projects working off the same repository. This led to situations where one project altered a UI component of another project, causing strange behavior across the other apps.
-* Consider framing the issue in terms of development speed. Everyone understands the pain of delayed releases, as that delays customer satisfaction (and customer money). Example: Before we forked the codebase, the strange behaviors required teams to debug, coordinate, and prioritize fixes that wouldn’t cause regressions in the other apps.
+* Consider framing the issue in terms of development speed. Everyone understands the pain of delayed releases, as that delays customer satisfaction (and customer money). Example: Before we forked the codebase, the strange behaviors required teams to spend time debugging, coordinating, and prioritizing fixes to avoid regressions in the other apps.
 * Avoid describing the solution immediately. It’s very easy to cling to the first idea that comes, but it may not be the best one. Give your mind (and the readers) time to think of their own solutions. This part of the ADR should highlight what we knew at the time. In the project I worked on, forking the project was the third of four ideas we considered.
 
 When describing your solution:
