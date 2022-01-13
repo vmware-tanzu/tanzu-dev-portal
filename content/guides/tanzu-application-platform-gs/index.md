@@ -34,6 +34,7 @@ You will do so quick prep work to get your Kubernetes cluster ready for the inst
 * [**You have the tanzu CLI installed and configured**](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool. 
 * **You have a Kubernetes cluster created and ready** - In this guide you will use a [GKE](https://cloud.google.com/kubernetes-engine) cluster, but most major Kubernetes cluster providers should work. Make sure you `kubectl` context is pointed to this cluster. Cluster and resource requirements can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-general.html).
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
+* **Optional: A custom domain you can use to access your install** - In this guide you will just use your `/etc/hosts` file to handle routing. However, you may decide you want to set up DNS routing and records to access your install. More on this [later](#accessing-the-tanzu-application-platform-ui) in this guide.
 
 ## Set up the environment
 
@@ -58,6 +59,20 @@ In order to make some commands easier to run, you should define some local envir
     ```sh
     export DOCKER_HUB_PASSWORD=your-docker-hub-password
     ```
+
+3. Define your GitHub credentials.
+
+    ```sh
+    export GITHUB_USERNAME=your-github-username
+    ```
+
+4. Define your custom domain name.
+
+    ```sh
+    export CUSTOM_DOMAIN=example.com
+    ```
+
+5. Define other miscellaneous environment variables. 
 
     ```sh
     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:82dfaf70656b54dcba0d4def85ccae1578ff27054e7533d08320244af7fb0343
@@ -193,55 +208,103 @@ You can find a list of the packages installed in each profile [here](https://doc
 1. Create the `tap-values.yml` file.
 
     ```sh
-cat << EOF > tap-values-test.yaml
-profile: light
-ceip_policy_disclosed: true 
+    cat << EOF > tap-values-test.yaml
+    profile: light
+    ceip_policy_disclosed: true 
 
-buildservice:
-  kp_default_repository: "$DOCKER_HUB_USERNAME/build-service"
-  kp_default_repository_username: "$DOCKER_HUB_USERNAME"
-  kp_default_repository_password: "$DOCKER_HUB_PASSWORD"
-  tanzunet_username: "$INSTALL_REGISTRY_USERNAME"
-  tanzunet_password: "$INSTALL_REGISTRY_PASSWORD"
+    buildservice:
+    kp_default_repository: "$DOCKER_HUB_USERNAME/build-service"
+    kp_default_repository_username: "$DOCKER_HUB_USERNAME"
+    kp_default_repository_password: "$DOCKER_HUB_PASSWORD"
+    tanzunet_username: "$INSTALL_REGISTRY_USERNAME"
+    tanzunet_password: "$INSTALL_REGISTRY_PASSWORD"
 
-supply_chain: basic
+    supply_chain: basic
 
-ootb_supply_chain_basic:
-  registry:
-    server: "index.docker.io"
-    repository: "$DOCKER_HUB_USERNAME"
+    ootb_supply_chain_basic:
+    registry:
+        server: "index.docker.io"
+        repository: "$DOCKER_HUB_USERNAME"
 
-tap_gui:
-  service_type: LoadBalancer
+    tap_gui:
+    service_type: ClusterIP
+    ingressEnabled: "true"
+    ingressDomain: "$CUSTOM_DOMAIN"
+    app_config:
+        app:
+        baseUrl: http://tap-gui.$CUSTOM_DOMAIN
+        catalog:
+        locations:
+            - type: url
+            target: https://github.com/$GITHUB_USERNAME/blank-catalog/blob/main/catalog-info.yaml
+        backend:
+        baseUrl: http://tap-gui.$CUSTOM_DOMAIN
+        cors:
+            origin: http://tap-gui.$CUSTOM_DOMAIN
 
-contour:
-  envoy:
-    service:
-      type: LoadBalancer
+    contour:
+    envoy:
+        service:
+        type: LoadBalancer
 
-EOF
+    EOF
     ```
 
-1. Install Tanzu Application Platform `light` profile.
+2. Install Tanzu Application Platform `light` profile.
 
     ```sh
     tanzu package install tap -p tap.tanzu.vmware.com -v 1.0.0 --values-file tap-values.yml -n tap-install
     ```
 
+{{% callout %}}
+Each time I have tried this, the command returns a deployment failure. Something similar to `Error: resource reconciliation failed`. This does not necessarily mean your deployment has failed, however. You can get a more useful error message by running `tanzu package installed get tap -n tap-install`. Likely, it will tell you that there was a timeout in the API response time. 
 
+You can run `watch kubectl get pods -A` to watch the progress of the install. In any case, this install can take up to 30 minutes for all pods to start and reconcile.
+{{% /callout %}}
 
+## Accessing the Tanzu Application Platform UI
 
-**TODO: Failing on app-live-view and build service.**
+As discussed in the [prerequisites](#prerequisites) section, there are a couple different methods for accessing your Tanzu Application Platform UI. In this guide, for simplicity of following along and not introducing too many variables, you will just use your `/etc/hosts` file. 
 
-```
-❯ tanzu package installed get tap -n tap-install
-/ Retrieving installation details for tap... I1221 16:11:50.917462   17957 request.go:665] Waited for 1.049485332s due to client-side throttling, not priority and fairness, request: GET:https://workload-2-apiserver-299555843.us-west-2.elb.amazonaws.com:6443/apis/authentication.k8s.io/v1?timeout=32s
-| Retrieving installation details for tap...
-NAME:                    tap
-PACKAGE-NAME:            tap.tanzu.vmware.com
-PACKAGE-VERSION:         0.4.0
-STATUS:                  Reconcile failed: Error (see .status.usefulErrorMessage for details)
-CONDITIONS:              [{ReconcileFailed True  Error (see .status.usefulErrorMessage for details)}]
-USEFUL-ERROR-MESSAGE:    kapp: Error: waiting on reconcile packageinstall/buildservice (packaging.carvel.dev/v1alpha1) namespace: tap-install:
-  Finished unsuccessfully (Reconcile failed:  (message: Error (see .status.usefulErrorMessage for details)))
-```
+If you are comfortable with setting up DNS and records with your custom domain, that is a supported and recommended workflow. Refer to the [official install documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install.html) for more information on this process.
+
+1. Get the IP address of your envoy ingress pod.
+
+    ```sh
+    kubectl get svc envoy -n tanzu-system-ingress
+    ```
+
+    Example output:
+
+    ```sh
+    NAME    TYPE           CLUSTER-IP   EXTERNAL-IP      PORT(S)                      AGE
+    envoy   LoadBalancer   10.24.9.37   34.121.244.203   80:32569/TCP,443:30160/TCP   22h
+    ```
+
+2. Save the `EXTERNAL-IP` into another environment variable.
+
+    ```sh
+    export ENVOY_EXTERNAL_IP=34.121.244.203   #change the IP address for your output of the above command
+    ```
+
+3. Append this IP address mapping to your configured domain name to `/etc/hosts`. You can use a text editor or other methods to add this line as well. This command is provided for simplicity.
+
+    ```sh
+    sudo echo "$ENVOY_EXTERNAL_IP  tap-gui.$CUSTOM_DOMAIN" | sudo tee -a /etc/hosts
+    ```
+
+4. Open the Tanzu Application Platform UI in your web browser. This may not work in the Safari browser since the connection is not secure. 
+
+    ```sh
+    open http://tap-gui.$CUSTOM_DOMAIN
+    ```
+
+5. Start to familiarize yourself with the Tanzu Application Platform interface. 
+
+In later guides, you will use Tanzu Application Platform to deploy a workload. And with this interface up, you can follow along with other Tanzu Application Platform content. 
+
+## Next steps
+
+Now you have your own instance of Tanzu Application Platform to use for your development projects. Continue following along to other guides to deploy a workload, and see how your development workflow might change in a Tanzu environment. 
+
+* Deploying a workload to Tanzu Application Platform **Coming Soon** - In this guide, you will use the `tanzu` CLI and Tanzu Application Platform to create a starter application, and access the web UI. 
