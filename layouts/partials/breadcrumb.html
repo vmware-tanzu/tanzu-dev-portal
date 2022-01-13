@@ -31,8 +31,18 @@
 			<li class="breadcrumb-item active" aria-current="page">
 				<a href="{{ $sspage.RelPermalink }}">{{ $sspage.LinkTitle }}</a>
 			</li>
-		{{ else if and (or (eq .Section "learningpaths") (eq .Section "tv")) (ne .FirstSection .Parent) }}
-			<!-- Subpage of a learning path or TTV show, include the learning path/TTV show name in the bread crumb -->
+		{{ else if (and (eq .Section "tv") (ne .FirstSection .Parent)) }}
+			<!-- Subpage of a TTV show, include the learning path/TTV show name in the bread crumb -->
+			<li class="breadcrumb-item active" aria-current="page">
+				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
+			</li>
+		{{ else if (and (eq .Section "learningpaths") (ne .FirstSection .Parent)) }}
+			<!-- Subpage of a TTV show, include the learning path/TTV show name in the bread crumb -->
+			{{ if eq .Parent.Params.layout "intro" }}
+				<li class="breadcrumb-item active" aria-current="page">
+					<a href="{{ .Parent.Parent.RelPermalink }}">{{ .Parent.Parent.LinkTitle }}</a>
+				</li>
+			{{ end }}
 			<li class="breadcrumb-item active" aria-current="page">
 				<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
 			</li>
