@@ -27,6 +27,7 @@ Aasta
 Abbie
 Abdellfetah
 Abo
+Abrahams
 AbstractGatewaySenderEventProcessor
 AbstractRegionEntry
 AbstractRegionMap
@@ -48,6 +49,7 @@ addon(s)?
 Adib
 Admission(Response|Review)
 adoptopenjdk
+ADR(s)?
 AES-GCM
 affordances
 afterAcknowledgement
