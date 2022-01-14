@@ -27,5 +27,28 @@
         </div>
         <i class="fas fa-arrow-right ml-4"></i>
     </a>
+    {{ else }}
+        <!-- End of course, direct to the next one if one exists -->
+        {{ $courses := .Parent.Parent.Pages }}
+        {{ $active := .Page }}
+        {{ $activeIndex := -1 }}
+        {{ range $index, $course := $courses }}
+            {{ if eq $course $active.Parent }}
+                {{ $activeIndex = $index }}
+            {{ end }}
+        {{ end }}
+        {{ $hasNext := (and (gt $activeIndex -1) (lt $activeIndex (sub (len $courses) 1))) }}
+        {{ if $hasNext }}
+            {{ $nextCourse := index $courses (add $activeIndex 1) }}
+            <a href="{{$nextCourse.RelPermalink}}"
+                class="bg-gray-dark flex-grow-1 flex-shrink-1 my-4 pl-4 pr-4 pt-2 pb-2 d-flex justify-content-between align-items-center ml-2">
+                <div class="align-self-baseline">
+                    <p class="text-left text-uppercase font-weight-light mb-0">Next Course</p>
+                    <p class="text-left mt-0">{{$nextCourse.Title}}</p>
+                </div>
+                <i class="fas fa-arrow-right ml-4"></i>
+            </a>
+        {{ end }}
     {{ end }}
+
 </div>

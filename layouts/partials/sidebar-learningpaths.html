@@ -8,9 +8,9 @@
       </li>
       {{ template "subpages" (dict "context" . "activepage" $activePage ) }}
     {{ end }}
+    <br /><br />
   {{ end }}
 {{ end }}
-
 
 <ul class="td-sidebar-nav__section mt-1 ">
 {{ template "subpages" (dict "context" .learningpath "activepage" .context.Page ) }}
