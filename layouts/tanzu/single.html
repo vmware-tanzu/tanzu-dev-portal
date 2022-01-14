@@ -16,18 +16,18 @@
                 <div class='container'>
                     {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
                     <div class="row align-items-center py-lg-5">
-                        <div class="col-12 col-lg-6 py-2 py-lg-5 pl-lg-0">
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 pl-0 pr-lg-4 pr-0">
                             <h1>{{ .Title }}</h1>
                             <p class="lead">{{ .Description }}</p>
                         </div>
-                        <div class="col-12 col-lg-6 py-2 py-lg-5 pr-lg-0 position-relative">
-                            <img class="product-icon position-absolute" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
+                        <div class="col-12 col-lg-6 py-2 py-lg-5 px-0 pl-lg-4 position-relative">
+                            <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>
                             <!-- Link Boxes -->
                             <!-- TODO: Proper CSS fix for make link boxes the same size -->
-                            <div class="container h-100" style="display: grid;">
+                            <div class="container h-100">
                                 <div class="row h-100 flex-lg-nowrap product-links position-relative z-1 justify-content-between">
                                     {{ range .Params.links }}
-                                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-100" href="{{ .link }}">
+                                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ .link }}">
                                             <h2 class="h4 link">{{ .title }}</h2>
                                             <p>{{ .description }}</p>
                                         </a>
