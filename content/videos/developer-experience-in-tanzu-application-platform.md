@@ -7,7 +7,7 @@ tags:
 team:
 - Scott Sisl
 title: Love the Developer Experience in VMware Tanzu Application Platform
-youtube_id: 9ETRIWmRuTc
+youtube_id: Sp9gH3MBobs
 tanzu:
   label: tap
 ---
