@@ -44,15 +44,15 @@ miro_template_url: "URL for related Miro template"
 
    {{% callout %}}
    Tip: If the team has not worked with a balanced team before you can prompt them by saying things like:
-   - “Do we need to agree to core working hours maybe?”
-   - “Does it feel fair if team members have their cameras off on standups?”
-   - “Can it be annoying when meetings aren’t properly scheduled”
+   - “Do we need to agree to core working hours?”
+   - “During our remote standups, some people have their cameras on, others have them off. How do you feel about that?”
+   - “How do you feel about the haphazard manner by which we are scheduling meetings?”
    {{% /callout %}}
 
-1. Now ask that each member of the team writes one agreement that they believe will help create a successful team and to add it to the “Ideas” column.
+1. Now ask that each member of the team write one agreement that they believe will help create a successful team and to add it to the “Ideas” column.
 
    {{% callout %}}
-   Tip: if your team has less than 5 people you may want everyone to write 2 agreements
+   Tip: if your team has fewer than 5 people you may want everyone to write 2 agreements
    {{% /callout %}}
 
    {{% callout %}}
