@@ -243,7 +243,7 @@ But what about keeping historical context? What about having a consistent face o
 ## Q: What is an engineering "Anchor" and what's the origin of the anchor role?{id="anchors"}
 {{< callout >}}
 Please see our [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors -- Tanzu Lab's answer to the tech-lead role.
-{{</ callout >}}
+{{< /callout >}}
 
 #### Aside: why the heck is called an "anchor?"
 Once upon a time, Tanzu Labs was called Pivotal Labs. The first Pivotal Labs office was in San Francisco. This was around 2005. We got our first few clients to come into the office with us. They were startups. And they were all using Ruby on Rails.
@@ -322,7 +322,7 @@ With a predictable velocity, the product manager can start to make hard decision
 ## Q: How can we scale these practices in large, traditional enterprises?
 {{< callout >}}
 See our white paper about [How to Scale Agile Software Development with Product Teams in the Enterprise](https://tanzu.vmware.com/content/white-papers/how-to-scale-agile-software-development-with-product-teams-in-the-enterprise)
-{{</ callout >}}
+{{< /callout >}}
 
 Build teams around architecture, not architecture around teams.
 
