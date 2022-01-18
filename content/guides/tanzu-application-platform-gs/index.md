@@ -225,7 +225,8 @@ You can find a list of the packages installed in each profile [here](https://doc
     registry:
         server: "index.docker.io"
         repository: "$DOCKER_HUB_USERNAME"
-
+    gitops:
+        ssh_secret: ""
     tap_gui:
     service_type: ClusterIP
     ingressEnabled: "true"
@@ -241,6 +242,8 @@ You can find a list of the packages installed in each profile [here](https://doc
         baseUrl: http://tap-gui.$CUSTOM_DOMAIN
         cors:
             origin: http://tap-gui.$CUSTOM_DOMAIN
+    cnrs:
+        domain_name: $CUSTOM_DOMAIN
 
     contour:
     envoy:
