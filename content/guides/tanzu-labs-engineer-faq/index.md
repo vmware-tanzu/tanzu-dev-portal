@@ -18,7 +18,7 @@ At VMware Tanzu Labs, we teach our clients, partners, and our peers [XP](https:/
 ## Q: Why Pair Programming?
 How many people on your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before your team is unable to function? Most companies that come to us have teams with a "bus count" or "lottery count" of 1.
 
-![alt_text](images/image9.jpg "image_tooltip")
+![The Bus Count](images/image9.jpg)
 
 When you have solo engineers, you end up with knowledge silos. You have an engineer that owns a particular part of the system. No one else knows how that code works; in fact, most engineers are afraid to touch it. It only makes sense to the engineer that created it and maintains it. If the product managers prioritize features that only touch that one part of the codebase that only that one engineer knows, then the rest of the team is left twiddling their thumbs. If that engineer becomes unavailable, the team can't function anymore. The longer this situation goes on, the worse it gets.
 
@@ -26,7 +26,7 @@ Knowledge silos may create job security for engineers, but they create risk for 
 
 What about productivity? The first question most people ask is "So I have to hire twice as many engineers to get the same amount of work done?" For example, imagine a team of four engineers. When those engineers solo, there's four independent work streams happening in parallel. When they pair, there's only two independent workstreams happening in parallel.
 
-![alt_text](images/image8.jpg "image_tooltip")
+![Solo vs. Pair Programming](images/image8.jpg)
 
 The question is perfectly reasonable. On the surface, it appears that you've cut the volume of work in half. However, underlying the question is an assumption that there's no productivity difference between solo engineers and paired engineers. But that assumption is demonstrably false -- just ask anyone who's ever paired, or worked with a partner on nearly any task in work or life. Solo engineers spend much less time focused on the task at hand than paired engineers. It's easy to get distracted while soloing. Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts -- you name it. It's much harder to check out while pairing. Your pair doesn't want to read your email, or answer your texts, or post a hilarious TikTok dance. And you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. That team of four engineers [is more productive](https://www.theregister.com/2016/10/18/pairing_programming_youll_never_guess_what_happens_next/) when they're pairing than when they're soloing.
 
@@ -59,14 +59,14 @@ See:[ https://www.researchgate.net/publication/301612260_Practice_and_Perception
 
 Consider these two graphs of team speed over time, and ask yourself which team you want to be on:
 
-![alt_text](images/image3.jpg "image_tooltip")
+![Fast at first](images/image3.jpg)
 
 
-![alt_text](images/image5.jpg "image_tooltip")
+![Go fast forever](images/image5.jpg)
 
 Many people work for companies or on products that look like the first curve. They went really fast at first – but it didn't last. Their speed dropped precipitously, until reaching a depressing stagnation. That stagnation kills teams. It kills their spirit.
 
-![alt_text](images/image4.jpg "image_tooltip")
+![Goal to go fast forever](images/image4.jpg)
 
 There are many reasons a team slows down. But one thing that will always slow a team down is **bad code.**
 
@@ -74,23 +74,23 @@ A team that looks like the first curve cut corners. You can go really fast if yo
 
 If you want to **go fast forever**, you have to have **clean code**. But you don't just clean code once. Cleaning your code is like taking a bath. You have to bathe regularly if you want to stay clean. The longer you wait, the worse you get. It's the same with code.
 
-![alt_text](images/image2.jpg "image_tooltip")
+![Have clean code](images/image2.jpg)
 
 So, to keep your code clean, you have to constantly [refactor](https://en.wikipedia.org/wiki/Code_refactoring) it. Every new feature you add to your codebase challenges the assumptions behind the code's design. You can either find a way to workaround the invalidated design in your code, or you can take the time right then to fix it -- to refactor it. The former leads to the first curve, to the death spiral. The latter leads to the second curve. Holding the behavior of the system constant while cleaning up the underlying design.
 
-![alt_text](images/image6.jpg "image_tooltip")
+![refactor to have clean code](images/image6.jpg)
 
 But most teams don't refactor – because they're afraid. They know the code is rotting, but they're not sure if everything will still work after they clean it up. To continuously refactor your code, you have to have **confidence** that the refactoring has still resulted in working software – that you haven't introduced regressions.
 
-![alt_text](images/image10.jpg "image_tooltip")
+![must have confidence](images/image10.jpg)
 
 Unfortunately, there's no magic wand you can wave to prove that your system still works. You have to do the work yourself. If that work is too hard, or takes too long, you're unlikely to do it. It takes too long for the engineers to know if the changes they made resulted in working software. The only way to get that confidence quickly is to write tests. **Automated tests** give you the **confidence** you need to **refactor** your code to keep it **clean** so that you can **go fast forever**.
 
-![alt_text](images/image1.jpg "image_tooltip")
+![tests give confidence](images/image1.jpg)
 
 So the question becomes: when do you do it? When do you write tests? And the answer is obvious. Everything depends on them. They're the most important thing. So when do you do the most important thing? Obviously, you do that first. That's why we **test drive the code by writing the tests first**.
 
-![alt_text](images/image7.jpg "image_tooltip")
+![test driven development all the time](images/image7.jpg)
 
 There are, of course, many more reasons why we write tests before, instead of after, we write the production code. Writing it first helps us tease out and think through our APIs. It forces us to clarify exactly what behavior we're trying to build, since we can't write a test without that clarity—and it also lets us know when we're done. It helps us triangulate on simple, maintainable implementations, by making each test pass one by one and writing just enough code to make each test pass. Furthermore, writing the test before the implementation gives us the confidence that our test suites aren't giving us false positives; we first watch the test fail for the reason we expect, and then do the simplest thing we can to make it pass.
 
@@ -118,7 +118,7 @@ So you and your team ask yourselves the question, "If we complete the story 'Log
 
 ## Q: How Do We Decide Which Story Comes First?
 
-At the beginning of a project, you may have a vision for a [minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic.), and several stories. For clarity, imagine that you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to their shopping cart, pay with credit card or PayPal, view past transactions, save their credit cards, and apply discount codes.
+At the beginning of a project, you may have a vision for a [minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. For clarity, imagine that you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to their shopping cart, pay with credit card or PayPal, view past transactions, save their credit cards, and apply discount codes.
 
 That's a lot of software! Where do you start? How do you pick which story to begin with?
 
@@ -241,6 +241,7 @@ Rotations are also an opportunity for:
 But what about keeping historical context? What about having a consistent face on the project? We do recommend having an **anchor** the project who rotates less frequently. See our section on [Anchors](#anchors) below.      
 
 ## Q: What is an engineering "Anchor" and what's the origin of the anchor role?{id="anchors"}
+
 {{< callout >}}
 Please see our [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors -- Tanzu Lab's answer to the tech-lead role.
 {{< /callout >}}
