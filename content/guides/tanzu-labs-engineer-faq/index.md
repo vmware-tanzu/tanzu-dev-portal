@@ -322,6 +322,10 @@ With a predictable velocity, the product manager can start to make hard decision
 
 
 # DATED TOPICS BELOW
+# DATED TOPICS BELOW
+# DATED TOPICS BELOW
+# DATED TOPICS BELOW
+# DATED TOPICS BELOW
 
 Below are sections that are dated. 
 
@@ -361,61 +365,31 @@ Let's set aside the funding and management adjustments you'll need to make to su
 1. As you start to optimize the underlying application codebases and infrastructure, you'll need to carefully retrofit automated tests on top of it so that your teams can refactor or rewrite portions of it in order to solve for the engineering pains present in the legacy architecture or meet the new business objectives. This isn't TDD 101; it's advanced testing. You'll need highly skilled practitioners in order to do this effectively. Work with your directors to find these practitioners, and to grow more of them.
 2. You'll need to align certain teams vertically, instead of slicing them up horizontally. You have all kinds of cross-cutting domains in your legacy architecture (take authentication as the universal example—a domain that cuts across most, if not all, of your applications). You'll need to organize teams around business capabilities, not technologies. As Martin Fowler[ points out](https://youtu.be/wgdBVIX9ifA?t=6m30s), the common misconception that companies have when it comes to microservices is that microservice architectures means that you have a team that only owns the microservice API and nothing else. But if you look at Amazon, the archetype for the microservice architecture playing out at scale in a company,[ they instead organized their teams around business capabilities.](https://aws.amazon.com/modern-apps/faqs/) They have an order team, a shipping team, a catalog team, etc. Each of these build services, true. But they also own their business capability end to end, all the way to the end user. They own the experience, and how that experience plays out in the various software products their particular business capability is present in.
 
-## (DATED) Q: Why do we prefer clients start by coming to us for product development, instead of us going to them?
+## (DATED) Q: Why do we prefer clients work with us in a collocated or virtual "Lab" environment?
 
-We didn't always encourage clients to join us in our offices. The product-development focused Services organization we know today has its roots in a small consulting company (Pivotal Labs) which originally had no offices at all. A hand-picked crew of uber-XP consultants would go to client sites (very often enterprises) and attempt incremental XP transformation.
+We didn't always encourage clients to join us in our offices or set up Labs-like office of their own. The Tanzu Labs services organization we know today has its roots in a small consulting company which originally had no offices at all, and long before our Zoom-enabled world. A hand-picked crew of uber-XP consultants would travel to client sites (very often enterprises) and attempt incremental XP transformation.
 
-The problem is, it didn't really work. That isn't to say that Pivotal Labs didn't succeed—they had plenty of great engagements.
+Even though we had many great clients and projects, the incremental XP transformation never really worked.
 
-The real challenge was this: XP is a system of practices that you "dial to 11." Pair—all the time. TDD—all the time. Colocate—all the time. Deliver—all the time. Improve—all the time. When you do all of these things, all of the time, you see their value. They complement each other and reinforce each other.
+The real challenge was this: XP is a system of practices that you "dial to 11." Pair—all the time. TDD—all the time. Deliver—all the time. Improve—all the time. When you do all of these things, all the time, you see their value. They complement each other and reinforce each other.
 
-This can be extremely hard to do while embedded within a client's existing office, surrounded by and constantly influenced by a company culture they hope to change. Clients struggled to escape all of their obligations and distractions in their workplace long enough to actually try all of the practices holistically, making it difficult to show them to experience and appreciate the full value of XP.
+This can be extremely hard to do while embedded within a client's existing office, surrounded by and constantly influenced by a company culture they hope to change. Clients struggled to escape all of their obligations and distractions in their workplace long enough to actually try all the practices holistically, making it difficult to show them to experience and appreciate the full value of XP.
 
-It doesn't really work if only some people on a team pair, while other people build up knowledge silos. It doesn't work if some people on a team TDD, while others don't TDD, breaking the tests. It doesn't really work if some of the teams works together physically, with constant high-bandwidth communication, while others are physically isolated, constantly trying to play catch up.
+It doesn't really work if only some people on a team pair, while other people build up knowledge silos. It doesn't work if some people on a team TDD, while others don't TDD, breaking the tests. It doesn't really work if some teams works together physically, with constant high-bandwidth communication, while others are physically isolated, constantly trying to play catch up.
 
 If you only crank up the knobs halfway, you don't get half the value.
 
-So we had a hypothesis—our clients would understand and adopt the practices better if they first had a chance to learn them in a sort of "clean room" environment. We built an office in San Francisco hired some amazing consultants there. We started working with SF-based clients who worked out of our office to validate the hypothesis.
+So we had a hypothesis—our clients would understand and adopt the practices better if they first had a chance to learn them in a "clean room" or lab environment. We built an office in San Francisco hired some amazing consultants there. We started working with SF-based clients who worked out of our office to validate the hypothesis.
 
 And it worked. Clients were able to extract much more value from engagements when we took them out of their environments and brought them into our labs. We were able to crank up all the knobs to 11—on day one!
 
 Often our clients are asking us to effect a profound behavior change in members of their organization. The leaders in our customer's organizations have 3 levers for behavior change:
-
-
 
 * They can change a person's understanding of what is expected of them
 * They can change the physical environment where someone is working
 * They can change the peers around the person
 
 By bringing clients into our space, we can profoundly change a person's peers, environment, and expectations. In contrast, when we work out of a clients space, we typically have no control over their environment, their peers, or their expectations, and as a result we find it much harder to deliver the desired changes.
-
-## (DATED) Q: Why do we value collocation?
-
-_(Note: We need to reevaluate this section from a 2020 viewpoint)_
-
-Telecommuting. The flexibility of working from home. Enterprise software development organizations all across the globe have embraced work from home arrangements over the past two decades. But why? The simplest answer is because their teams were already separated before they allowed them to work remotely.
-
-What do we mean? Consider a traditional waterfall software development team. The Product Owner passes a feature list over a wall to business analysts; business analysts pass detailed requirements documents over a wall to designers; designers pass detailed design briefs over a wall to architects; architects create detailed diagrams and implementation plans and pass them over a wall to project managers; project managers create detailed timelines and pass requirements and implementation plans over a wall to developers; developers create implementation and toss code over a wall to quality assurance engineers; quality assurance engineers create bug lists and toss them back over walls to developers, and send working software over a wall to release engineers; release engineers deploy software over a wall to users.
-
-Those walls aren't just metaphorical; in many enterprise IT organizations, they literally have walls between these team members. The enterprise will put different roles on different floors, or even in different buildings. They'll put walls up between developers, or even surround each developer with walls by seating them in cubes. They'll even saddle team members with roles on multiple teams.
-
-So it was only natural that enterprises embraced the cost-saving measure of telecommuting workforces. Their teams were already separated from each other. Separating them further was easy, and the cost-saving in facilities was sizable.
-
-So what's wrong with separating team members? If you make it hard for software teams to communicate in real time, you increase the cost of communication. Written communication takes longer. Especially when there's a back and forth.
-
-Thus, teams like the one described above spend significant amounts of time attempting to precisely write everything down to communicate to the next role in the waterfall, hoping to avoid costly and time-consuming back-and-forth written discussions. Product Owners create detailed business cases about the value of their product as they've envisioned it. Business Analysts spend inordinate amounts of time writing detailed requirements; project managers create complex plans and charts attempting to account for all possible eventualities in the hopes of delivering the product owners' desired features on time and on budget; and on and on.
-
-All of this careful communication is based on a single, foundational assumption: that software can be planned. That if you just spend enough time planning the software up front, you can make great software.
-
-But that assumption has been proven, time and time again, to be wrong. The best software in the world wasn't planned perfectly up front. Instead, it was built through a process of learning. Little bits of software were given to users, and their feedback led to new ideas for the software, which led to new little bits of software being built and given to users.
-
-Building software in this way requires teams to quickly respond to change. But teams that can't communicate easily can't respond to change quickly. What's the easiest, most efficient form of communication? Face to face communication – in person.
-
-When you take a team that's been physically separated and instead collocate them together – in person, face to face, in the same room, at the same table even – you're increasing their efficiency by orders of magnitude.
-
-Now, when developers have a question about requirements, they don't have to open up their email client, write down and send their question to a business analyst, and wait for a response. They can just turn around and ask the product owner directly – because their product owner is sitting right there with them. In fact, you likely don't need the business analyst role anymore at all, since you don't need anyone to expend great amounts of effort writing down precise, detailed requirements. It's more efficient for a product owner to simply jot down some high level notes in a backlog and talk through the details in person with designers and engineers.
-
-So many problems in an enterprise can be solved by simply talking to each other. Colocating software development teams together solves one class of those problems.
 
 ## (TBD) Q: What's our opinion of SAFe?
 Coming Soon!
@@ -427,7 +401,4 @@ Coming Soon!
 Coming Soon!
 
 ## (TBD) Q: What does our hiring process look like? How do we find the best candidates for the way we work?
-Coming Soon!
-
-## (TBD) Q: Why do we have tech talks?
 Coming Soon!
