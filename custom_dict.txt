@@ -17,6 +17,7 @@
 2x2
 3D
 [23]G
+401K
 [245]xx
 4x
 8PpgqEqkQWA
@@ -26,6 +27,7 @@ Aasta
 Abbie
 Abdellfetah
 Abo
+Abrahams
 AbstractGatewaySenderEventProcessor
 AbstractRegionEntry
 AbstractRegionMap
@@ -47,6 +49,7 @@ addon(s)?
 Adib
 Admission(Response|Review)
 adoptopenjdk
+ADR(s)?
 AES-GCM
 affordances
 afterAcknowledgement
@@ -157,6 +160,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+BankAccount
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -600,6 +604,7 @@ F5
 facto
 failback
 [Ff]ailover(s)?
+FakeBankAccount
 Fakhouri
 Falco
 Fani
@@ -1065,6 +1070,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1128,6 +1134,7 @@ m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
 MacBook
+[Mm]achina
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
@@ -1472,6 +1479,7 @@ PromQL
 Promtail
 PropertySource(s)?
 [Pp]roto
+[Pp]roto-[Pp]ersona(s)?
 Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
@@ -1509,6 +1517,7 @@ reachability
 reactively
 [Rr]eadiness([Pp]robe)?
 README
+RealBankAccount
 realtime
 rearchitect(ing)
 rebalance
@@ -1588,6 +1597,7 @@ ROI
 rom-com
 rootPassword
 Rosecrance
+Rosenberg
 Rosso
 Roussos
 [Rr]outable
@@ -1634,6 +1644,7 @@ schema(s)?
 Schimanski
 Schutta
 Schwaber
+Scott
 screencaster
 SCS
 SDD
@@ -1787,6 +1798,7 @@ TAS
 TaskRepository
 Tatooine
 TBD
+TCE
 tchotchke
 TCP
 tdc-carvel-examples
@@ -1802,6 +1814,7 @@ telecom
 Templeton
 Teotti
 Teppanyaki
+TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
@@ -1913,6 +1926,7 @@ ValidatingAdmissionWebhook
 validators
 ValueComparator
 ValueComparer
+Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VCAP
@@ -1964,6 +1978,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
