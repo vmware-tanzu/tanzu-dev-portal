@@ -319,7 +319,7 @@ So when we are working towards a deadline, we don't focus on thinking about "how
 
 With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. They're forced to think more critically about their  list of features, and will start to value evidence-based approaches to deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning, since it's really the only way they're going to ensure that they've created something valuable by the deadline.
 
-## (DATED) Q: How can we scale these practices in large, traditional enterprises?
+## Q: How can we scale these practices in large, traditional enterprises?
 {{< callout >}}
 See our white paper about [How to Scale Agile Software Development with Product Teams in the Enterprise](https://tanzu.vmware.com/content/white-papers/how-to-scale-agile-software-development-with-product-teams-in-the-enterprise)
 {{</ callout >}}
