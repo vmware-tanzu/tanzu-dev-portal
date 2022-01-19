@@ -1071,6 +1071,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1798,8 +1799,8 @@ TAS
 TaskRepository
 Tatooine
 TBD
-tchotchke
 TCE
+tchotchke
 TCP
 tdc-carvel-examples
 tdp-guide
@@ -1978,6 +1979,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
