@@ -291,7 +291,7 @@ public Mono<ReturnedItem> errorStatus(String endpoint){
 ```
 
 Here we can the new method `.onStatus()`. This method takes a predicate that will evaluate the status code of the response and if it comes back true will then execute the function that is also send into the method. In this example our `.onStatus()` handler will execute if we receive any status that that isn't in the 200s. As you can see if we get a 400 back we will return our new `BadRequestException` class, otherwise we just return a generic exception with some custom labels. Also you'll notice that we had to wrap our exceptions inside of a `Mono.error()`, this is just a wrapper so that the reactive library can pass the error down whatever chain of Mono methods that are lined up. If we now call our 400 returning endpoint we end up with:
-![img](images/400defaultHandle.png)
+![img](images/400basicHandle.png)
 
 Now that we have error handling for bad request what about exceptions that aren't status related? Take for example if the request were to timeout and we don't have a status problem? In that case there's one last method to use on the WebClient to handle those issues. First let's add a new endpoint to the `ReactiveExamplesController` class so we can setup a non status error method.
 
