@@ -1070,6 +1070,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1982,6 +1983,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
