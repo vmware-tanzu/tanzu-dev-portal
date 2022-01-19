@@ -224,7 +224,7 @@ public Mono<ReturnedItem> errorStatus(String endpoint){
 }
 ```
 
-And add the following to the ReactiveExamplesController:
+And add the following to the `ReactiveExamplesController`:
 
 ```java
 private static final String endpoint400 = "400error";
