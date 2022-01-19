@@ -137,7 +137,7 @@ public Mono<ReturnedItem> callOne() {
 public record ReturnedItem(UUID id, String info) {}
 ```
 
-Here you can see that the first method we call on our WebClient is the REST action we want to preform, in this case it's a `.get()`. All the common REST calls; GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS, have their own helper methods that can be called. The next method in the chain is the `.uri()`, this indicates what path we want appended to the base url we set this WebClient up with earlier. Next we have `.retrieve()`, this is where in the chain the WebClient will actually make the call out and we convert from methods that setup the call to methods dealing with the response. I would like to point out that instead of call `.retrieve()` there is also the `.exchangeToMono()` and `.exchangeToFlux()` methods, I won't be going over those but it is an alternative that you can look up. Lastly is the `.bodyToMono()` method which is going to give us the payload we want from our call. In this case it's expecting the call to return a JSON payload that is mappable to ReturnedItem record.
+Here you can see that the first method we call on our WebClient is the REST action we want to preform, in this case it's a `.get()`. All the common REST calls; GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS, have their own helper methods that can be called. The next method in the chain is the `.uri()`, this indicates what path we want appended to the base url we set this WebClient up with earlier. Next we have `.retrieve()`, this is where in the chain the WebClient will actually make the call out and we convert from methods that setup the call to methods dealing with the response. I would like to point out that instead of call `.retrieve()` there is also the `.exchangeToMono()` and `.exchangeToFlux()` methods, I won't be going over those but it is an alternative that you can look up. Lastly is the `.bodyToMono()` method which is going to give us the payload we want from our call. In this case it's expecting the call to return a JSON payload that is mappable to `ReturnedItem` record.
 
 Before we go farther we need to dive into that last part as it's key to how to use the WebClient and is quite different from how the old RestTemplate (or any synchronous http client library) handles things. The best way to think about this is to view any call the WebClient make as a thread process, so to compare the old vs new look at the following code:
 
@@ -166,7 +166,7 @@ public Mono<ReturnObject> simpleCall(){
 }
 ```
 
-Here you can see that the `.map()` function takes in a `Function<? super T, ? extends R>` parameter that takes the id out of the `returnedItem` to create a new returnObject object that has a list of ids. Now that we have our object that we need to return you might be wondering how to get the returnObject out of the Mono. While there are multiple way to get the value out of the Mono for now lets just let Spring handle it and thus our controller method can look like the following. Place this method in the ReactiveExamplesController class.
+Here you can see that the `.map()` function takes in a `Function<? super T, ? extends R>` parameter that takes the id out of the `returnedItem` to create a new `returnObject` object that has a list of ids. Now that we have our object that we need to return you might be wondering how to get the `returnObject` out of the Mono. While there are multiple way to get the value out of the Mono for now lets just let Spring handle it and thus our controller method can look like the following. Place this method in the `ReactiveExamplesController` class.
 
 ```java
 @GetMapping("/defaultStatus")
@@ -264,7 +264,7 @@ public class BadRequestException extends Exception{
 }
 ```
 
-Then add a new ExceptionHandler to the ReactiveExamplesController class to deal with our new exception.
+Then add a new `ExceptionHandler` to the `ReactiveExamplesController` class to deal with our new exception.
 
 ```java
 @ExceptionHandler(BadRequestException.class)

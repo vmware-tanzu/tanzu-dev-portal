@@ -582,6 +582,7 @@ Enums
 EOF
 ESB
 ESRI
+ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -1991,6 +1992,7 @@ webapp
 webapps_default
 Webber
 WebClient
+WebClient's
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
