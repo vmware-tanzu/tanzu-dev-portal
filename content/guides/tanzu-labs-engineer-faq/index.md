@@ -173,35 +173,35 @@ That's why we also seed engagements with the [practice of retrospectives](/pract
 
 Without that reflection and constant adjustment, the team's practices will deteriorate. What worked on day one won't necessarily work on day 30, or day 100. You have to constantly improve the team's efforts, or risk failure.
 
-## Q: Why Do We Rotate Engineers On and Off Engagements?{id="rotations"}
+## Q: Why do we recommend rotating engineers to other projects?{id="rotations"}
 
-Within Tanzu Labs, it's common to have engineers rotate between projects or even clients periodically. In other words, we might not join a client project at the beginning of a project, and any given consultant might be on a project to the end of the engagement.
+Within Tanzu Labs, it's common to have engineers **_rotate_** between projects periodically. In other words, an engineer might not join a project at its beginning, and any given team member might not be on a project to its conclusion. We feel this is a good pattern for all team members, including [engineering anchors](/learningpaths/anchor-playbook/).
 
-This can be difficult for everyone. Your team and product stakeholders might get attached to you, or other team members. They not want you to leave to join another project. They might even get scared, or angry. You might also feel emotionally attached to your project and team, and feel scared or angry about moving on to another project before this one is done.
+This can be difficult for everyone. Your team and product stakeholders might get attached to you. They not want you to leave to join another project. They might even get scared, or angry. You might also feel emotionally attached to your project and team, and feel scared or angry about moving on to another project before this one is finished.
 
-However, in our experience, rotation is in everyone's best interest, and if you adopt this practice it's important that you communicate early and often with everyone on the idea of rotation early in a project. Here are the basic talking points.
+However, in our experience, rotation is in the project's and everyone's best interest. Here's why.
 
-Every team needs a core group of engineers that understand the codebase inside and out, have context on the architectural decisions that have been made, and can efficiently churn through a backlog.
-
-However, if you leave that team together for too long, they'll start to become blind to their broken windows. They won't see annoying workarounds as annoying anymore; they'll have grown used to them. They'll become complacent about the warts in their codebase, or the intermittent failures in their CI build. Or the bureaucracy of their client's release process.
+First, if a team is unchanged for too long, they'll start to become blind to their [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory). They won't see the annoying workarounds as annoying anymore; they'll have grown used to them. They'll become complacent about the hacks in their codebase,  the intermittent failures in their CI build, and the inefficiency of the release process. 
 
 In other words, they'll become increasingly less effective at maintaining quality in the code base and in their engineering process.
 
-That's why every team needs something else in addition to that core group of engineers: they need fresh perspectives. Rotation's don't really slow teams down; they really speed them up. Because a peer that rotates onto the team will point out all the [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory) (kindly, of course); they'll point out flaws in the codebase that have been slowing the team down. They'll fix the flaky CI build. They'll raise hell (again, kindly) about the team's insane release process.
+It's true that every team needs a core group of engineers that understand the codebase inside and out, who have context on the architectural decisions that have been made, and can efficiently churn through a backlog. But every team also needs something else: **_they need fresh perspectives._** 
 
-If you rotate onto a team that's been together for a while, expect to find problems. But don't forget, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive; don't just complain—offer solutions! And don't assume you understand why things are the way they are—ask questions!
+"But," we often hear, "onboarding new team members slows us down!" Actually, rotations speed up a team's productivity. That's because the peer's fresh perspective allows them to immediately notice the team's "broken windows." They'll (kindly) point out flaws in the codebase that have been slowing the team down. They'll fix the flaky CI build. They'll raise a red flag (again, kindly) about the team's insane release process.
+
+If you rotate onto a team that's been together for a while, expect to find problems. But don't forget, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive; don't just complain -- offer solutions! And don't assume you understand why things are the way they are -- ask questions!
 
 Conversely, if you're part of that core team that's been together for a while, and a peer is just rotating onto the team, set the example for soliciting feedback. Tell them you need them to point out what's broken. Be a role model for receiving feedback, and acting on it.
 
 Rotation also eliminates the need for various kinds of organizational overhead:
 
 * Personal assessment and feedback happens inline (part of pairing more than rotation, but rotation ensures a balanced aggregate view)
-* The need for handbooks/playbooks/onboarding materials is greatly reduced as tribal knowledge moves with people
-* Transferring of existing skills and the sharing of new technologies happens organically, rather than needing artificial efforts like classes and workshops
-* It strengthens the connection between teams as friends rotate to other projects - increasing the likeliness of cross-team knowledge sharing and reducing duplicated efforts
-* Reduces the strain on any one relationship knowing that there's an end
+* The need for excessive handbooks/playbooks/onboarding materials is greatly reduced as knowledge silos are broken down
+* Transferring of existing skills and the sharing of new technologies happens organically, rather than needing artificial efforts like required classes and workshops
+* It strengthens the connection between teams as friends rotate to other projects, increasing the likeliness of cross-team knowledge sharing and reducing duplicated efforts
+* Reduces the strain on any one relationship knowing that one is not "trapped" on a project forever.
 
-We talk about how pairing de-risks our project. By having solution knowledge and context shared by the team, rather than locked up in a few people (or, worse, in a single person), the downside to a single person leaving the team is dramatically lowered. Rotation is the real-life manifestation of that lowered risk. "We believe that you should rotate developers regularly after you disengage with us—let us show you how that's done."
+We talk about how pair programming helps de-risks projects. **_Rotation is the real-life manifestation of that lowered risk.**_ By having solution knowledge and context shared by the team, rather than locked up in a few people -- or, worse, in a single person -- the downside to a single person rotating onto another team is dramatically lowered.
 
 Project stakeholders often object to rotating team members – not just developers! It's important to remember that organizations usually prioritize keeping (and sometimes hording) the best individual contributors that they can find. It takes time, trust, and proof to show them they can live in a better world that focuses on team dynamics rather than individual skills.
 
