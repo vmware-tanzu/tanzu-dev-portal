@@ -16,6 +16,11 @@ team:
 At VMware Tanzu Labs, we teach our clients, partners, and our peers [XP](https://en.wikipedia.org/wiki/Extreme_programming), [Lean](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK), and [User Centered Design](https://tanzu.vmware.com/campaigns/design) (UCD) principles and practices for product and application development. We are constantly asked about our practices. This FAQ explains the "why's" behind many of our engineering practices, and the real problem they're attempting to solve. It also provides some guidelines for how to answer questions enterprises have around scaling these practices within their organization.
 
 ## Q: Why Pair Programming?
+
+{{% callout %}}
+We have a wonderful overview of Pair Programming in our [**Fundamentals of Modern Application Development learning path**](/learningpaths/application-development/pair-programming/). Below is a deeper dive into the topic.
+{{% /callout %}}
+
 How many people on your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before your team is unable to function? Most companies that come to us have teams with a "bus count" or "lottery count" of 1.
 
 ![The Bus Count](images/image9.jpg)
