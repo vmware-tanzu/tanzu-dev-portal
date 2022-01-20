@@ -48,17 +48,18 @@ Some developers effortlessly make the transition to team code ownership. They im
 Others may struggle with team code ownership for several reasons:
 
 * Shifting psychological ownership may require a corresponding shift in an individual's identity. Psychological ownership refers to "the feeling of possessiveness and of being psychologically tied to an object." Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, "What do I feel is mine?"
-* Developers may struggle to transition to a caretaker mindset. An engineer struggled to describe the developer's relationship with the code on a very challenging project and settled on the caretaker metaphor: "Sometimes I feel like a janitor to [the code base]. Maybe "caretaker" would be better. Yeah, probably caretaker. I feel like a janitor just cleans up messes, but a caretaker makes things better."
+* Developers may struggle to transition to a caretaker mindset. One engineer we work with struggled to describe the developer's relationship with the code on a very challenging project and settled on the caretaker metaphor: 
+   > "Sometimes I feel like a janitor to [the code base]. Maybe _'caretaker'_ would be better. As the caretaker I'm not cleaning up messes -- I'm making things better."
 * A developer may be distraught at "seeing my work slowly removed from the app."
 * A developer may feel belittled when seeing their work changed or fixed "behind their back"
 * Developers can no longer take pride in functionality that they exclusively develop.
 * Existing knowledge silos, which hinder team code ownership, may be slow to break down.
 
-New hires struggling with the transition slowly realize that "Someone else is going to take over and they're going to do fine. I can move onto something else and that's okay." They recognize the lack of long-term individual authorship, learn to expect their code to be transitory, develop trust in their teammates and thus loosely hold personal contributions. "The code that I write today may be in the code base for a little while, and it will evolve into something better." Eventually, they experience the benefits of a collaborative environment: "People are a lot more flexible all across the board, with changing things or accepting feedback or collaborating," and the team can say "Hey, this is our code!"
+New hires struggling with the transition eventually realize that "Someone else is going to take over and they're going to do fine. I can move on to something else and that's okay." They recognize the lack of long-term individual authorship, learn to expect their code to be transitory, develop trust in their teammates and thus loosely hold personal contributions. "The code that I write today may be in the code base for a little while, and it will evolve into something better." Eventually, they experience the benefits of a collaborative environment: "People are a lot more flexible all across the board, with changing things or accepting feedback or collaborating," and the team can say "Hey, this is **_our_** code!"
 
-Shifting from individual to team code ownership may require multiple and complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group (where trust and communication come easier) may help. One engineer uses improvisation and collaboration games to help teams practice letting go of control, trusting the team, and learning to be pleasantly surprised by what emerges.
+Shifting from individual to team code ownership may require multiple and complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group (where trust and communication come easier) may help.
 
-See:[ https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership](https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership)
+See: [**Practice and Perception of Team Code Ownership**](https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership)
 
 ## Q: Why Test Driven Development (TDD)? (Also, Why Do We Refactor?){id="tdd"}
 
