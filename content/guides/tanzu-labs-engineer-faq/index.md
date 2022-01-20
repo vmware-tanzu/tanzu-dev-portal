@@ -211,26 +211,13 @@ Rotations are also an opportunity for:
 * Giving new or junior engineers the chance to take responsibility for core engineering knowledge on the project
 * Giving new or junior developers the opportunity to onboard new people onto the project
 
-But what about keeping historical context? What about having a consistent face on the project? We do recommend having an **anchor** the project who rotates less frequently. See our section on [Anchors](#anchors) below.      
+But what about keeping historical context? What about having a consistent face on the project? We do recommend having an **anchor** the project who rotates less frequently. See our section on [Anchors](#anchors).      
 
-## Q: What is an engineering "Anchor" and what's the origin of the anchor role?{id="anchors"}
+## Q: What is an engineering "Anchor"?{id="anchors"}
 
 {{< callout >}}
 Please see our [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors -- Tanzu Lab's answer to the tech-lead role.
 {{< /callout >}}
-
-#### Aside: why the heck is called an "anchor?"
-Once upon a time, Tanzu Labs was called Pivotal Labs. The first Pivotal Labs office was in San Francisco. This was around 2005. We got our first few clients to come into the office with us. They were startups. And they were all using Ruby on Rails.
-
-At the time, Ruby on Rails was pre 1.0. It had bugs, and the framework changed a lot between releases.
-
-The engineers in the Pivotal Labs office weren't assigned to one specific client. Instead, they all rotated between clients frequently, even daily. This was partly necessitated by the volatile nature of Rails at the time; when an engineer got one codebase upgraded to the latest version of Rails, or figured out a workaround for some new bug, that engineer would then rotate onto other clients to help them do the same.
-
-Clients weren't incredibly happy with this setup. They (rightly) asked, "who's on my team?" Furthermore, context on the decisions that had been made, both in the code and for the product, were sometimes lost.
-
-To solve this problem, we **_"anchored"_** an engineer to each client. That person didn't rotate onto other clients until their current client was no longer working with Pivotal Labs. The anchor became the team historian, and consistent face for the client. But, the burden of success for the engagement was also placed on their shoulders.
-
-We still consider [rotations very important](#rotations) -- just not daily!
 
 ## Q: What's the difference between XP and Scrum? And Why Do We Practice XP?
 
