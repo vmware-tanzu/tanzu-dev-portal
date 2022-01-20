@@ -62,43 +62,10 @@ Shifting from individual to team code ownership may require multiple and complem
 See: [**Practice and Perception of Team Code Ownership**](https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership)
 
 ## Q: Why Test Driven Development (TDD)? (Also, Why Do We Refactor?){id="tdd"}
+We have published extensively about our success using TDD as a crucial engineering practice. Please review the following articles. 
 
-Consider these two graphs of team speed over time, and ask yourself which team you want to be on:
-
-![Fast at first](images/image3.jpg)
-
-
-![Go fast forever](images/image5.jpg)
-
-Many people work for companies or on products that look like the first curve. They went really fast at first – but it didn't last. Their speed dropped precipitously, until reaching a depressing stagnation. That stagnation kills teams. It kills their spirit.
-
-![Goal to go fast forever](images/image4.jpg)
-
-There are many reasons a team slows down. But one thing that will always slow a team down is **bad code.**
-
-A team that looks like the first curve cut corners. You can go really fast if you cut all the corners – but only for a little while. It's false expedience. What made it easy to go super fast in the short term makes it impossible to go fast in the long term. The codebase very quickly resembles a [ball of mud](https://en.wikipedia.org/wiki/Big_ball_of_mud). Eventually, it reaches the point of no return, and those engineers will have no choice but to start over and try again.
-
-If you want to **go fast forever**, you have to have **clean code**. But you don't just clean code once. Cleaning your code is like taking a bath. You have to bathe regularly if you want to stay clean. The longer you wait, the worse you get. It's the same with code.
-
-![Have clean code](images/image2.jpg)
-
-So, to keep your code clean, you have to constantly [refactor](https://en.wikipedia.org/wiki/Code_refactoring) it. Every new feature you add to your codebase challenges the assumptions behind the code's design. You can either find a way to workaround the invalidated design in your code, or you can take the time right then to fix it -- to refactor it. The former leads to the first curve, to the death spiral. The latter leads to the second curve. Holding the behavior of the system constant while cleaning up the underlying design.
-
-![refactor to have clean code](images/image6.jpg)
-
-But most teams don't refactor – because they're afraid. They know the code is rotting, but they're not sure if everything will still work after they clean it up. To continuously refactor your code, you have to have **confidence** that the refactoring has still resulted in working software – that you haven't introduced regressions.
-
-![must have confidence](images/image10.jpg)
-
-Unfortunately, there's no magic wand you can wave to prove that your system still works. You have to do the work yourself. If that work is too hard, or takes too long, you're unlikely to do it. It takes too long for the engineers to know if the changes they made resulted in working software. The only way to get that confidence quickly is to write tests. **Automated tests** give you the **confidence** you need to **refactor** your code to keep it **clean** so that you can **go fast forever**.
-
-![tests give confidence](images/image1.jpg)
-
-So the question becomes: when do you do it? When do you write tests? And the answer is obvious. Everything depends on them. They're the most important thing. So when do you do the most important thing? Obviously, you do that first. That's why we **test drive the code by writing the tests first**.
-
-![test driven development all the time](images/image7.jpg)
-
-There are, of course, many more reasons why we write tests before, instead of after, we write the production code. Writing it first helps us tease out and think through our APIs. It forces us to clarify exactly what behavior we're trying to build, since we can't write a test without that clarity—and it also lets us know when we're done. It helps us triangulate on simple, maintainable implementations, by making each test pass one by one and writing just enough code to make each test pass. Furthermore, writing the test before the implementation gives us the confidence that our test suites aren't giving us false positives; we first watch the test fail for the reason we expect, and then do the simplest thing we can to make it pass.
+- [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
+- [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd): Matthew Parker elaborates on the benefits of practicing test-driven development, and also why you shouldn’t be afraid of refactoring.
 
 ## Q: What's a User Story?{id=stories}
 
