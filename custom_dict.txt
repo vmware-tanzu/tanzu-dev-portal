@@ -1797,8 +1797,8 @@ TAS
 TaskRepository
 Tatooine
 TBD
-tchotchke
 TCE
+tchotchke
 TCP
 tdc-carvel-examples
 tdp-guide
