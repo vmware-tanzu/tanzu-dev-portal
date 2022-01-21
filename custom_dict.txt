@@ -509,6 +509,7 @@ DistributionStats
 DistributionSummary
 distroless
 distros
+DIY
 django-prometheus
 DLT
 DMs
