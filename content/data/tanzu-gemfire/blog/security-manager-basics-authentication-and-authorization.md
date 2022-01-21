@@ -252,7 +252,7 @@ In the gfsh terminal run the following command to create a Region call `helloWor
 create region --name=helloWorld --type=PARTITION
 ```
 
-Ohh...something went wrong!
+Something went wrong!
 
 ```
 Unauthorized. Reason : operator not authorized for DATA:MANAGE
