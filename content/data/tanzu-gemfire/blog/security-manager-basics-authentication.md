@@ -210,9 +210,9 @@ HelloWorldValue
 Process finished with exit code 0
 ```
 
-It worked! It prints out the value we put in for key “1” - "HelloWorldValue". We can ignore the `ERROR` for the sake of this example.  If your application includes an authentication error though, confirm you have the correct username and password in your AuthInitialize class.
+It worked! It prints out the value we put in for key “1” - "HelloWorldValue". We can ignore the `ERROR` for the sake of this example.  If your application includes an authentication error though, confirm you have the correct username and password in your `AuthInitialize` class.
 
-We now have a GemFire system running with security enabled to aithenticate all clients trying to connect, and we have a client application that can connect and interact with our GemFire cluster.
+We now have a GemFire system running with security enabled to authenticate all clients trying to connect, and we have a client application that can connect and interact with our GemFire cluster.
 
 However, now everyone and every app gets the same username, password, AND access level! 
 - What if we need an Admin to be able to create the GemFire clusters but not have access to the data?
