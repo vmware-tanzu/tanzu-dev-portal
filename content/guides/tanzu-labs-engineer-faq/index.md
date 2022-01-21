@@ -62,11 +62,11 @@ Shifting from individual to team code ownership may require multiple and complem
 See: [**Practice and Perception of Team Code Ownership**](https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership)
 
 ## Q: Why Test Driven Development (TDD)? (Also, Why Do We Refactor?){id="tdd"}
-{{< callout >}}
+{{% callout %}}
 We have published extensively about our success using TDD as a crucial engineering practice. Please review the following articles.
 - [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
 - [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd): Matthew Parker elaborates on the benefits of practicing test-driven development, and also why you shouldn’t be afraid of refactoring.
-{{< /callout >}}
+{{% /callout %}}
 
 ## Q: What's a User Story?{id=stories}
 
@@ -214,9 +214,9 @@ But what about keeping historical context? What about having a consistent face o
 
 ## Q: What is an engineering "Anchor"?{id="anchors"}
 
-{{< callout >}}
+{{% callout %}}
 Please see our [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors -- Tanzu Lab's answer to the tech-lead role.
-{{< /callout >}}
+{{% /callout %}}
 
 ## Q: What's the difference between XP and Scrum? And Why Do We Practice XP?
 
@@ -228,9 +228,9 @@ Before answering it, it's important to keep in mind: our goal in these situation
 
 Often, one of our primary goals when working with a client is to expose them to a different way of working and thinking. We are sometimes asked if we can "just do Scrum" instead of XP. In a way we already are. Our process takes a lot of hints from Scrum and layers on many missing aspects, such as engineering practices. XP adds new tools to the software development toolbox. 
 
-{{< callout >}}
+{{% callout %}}
 **Consulting Tip:** If you are a consultant, be careful not to "remind" your client that they are there to learn from you and do exactly what you say -- only your clients can tell you why they are here, and one should not make assumptions about the circumstances by which they came to work with you.
-{{< /callout >}}
+{{% /callout %}}
 
 Before we talk about how XP and Scrum are different, let's talk about how they're the **same**. 
 * Both XP and Scrum strive to deliver useful software into the hands of users through short iterations via small teams employing continuous improvement. 
@@ -280,9 +280,9 @@ So when we are working towards a deadline, we don't focus on thinking about "how
 With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. They're forced to think more critically about their  list of features, and will start to value evidence-based approaches to deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning, since it's really the only way they're going to ensure that they've created something valuable by the deadline.
 
 ## Q: How can we scale these practices in large, traditional enterprises?
-{{< callout >}}
+{{% callout %}}
 See our white paper about [How to Scale Agile Software Development with Product Teams in the Enterprise](https://tanzu.vmware.com/content/white-papers/how-to-scale-agile-software-development-with-product-teams-in-the-enterprise)
-{{< /callout >}}
+{{% /callout %}}
 
 Build teams around architecture, not architecture around teams.
 
