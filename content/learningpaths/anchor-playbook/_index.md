@@ -57,7 +57,7 @@ Choosing which anchortype you need for a given project can be a good conversatio
 Anchortypes describe the variety of hats the anchor may wear on different projects. These are not prescriptive descriptions; the anchor role is always evolving and requires the freedom to evolve. However, these classifications can help us describe the anchor role to teams and each other. Anchors can use these touch-points to discuss and determine the appropriate anchor modality to meet the needs of the project and the team.
 
 ## History: why is called an "anchor?"
-Once upon a time, the group that became Tanzu Labs was a small consulting company in San Francisco working with startsup in our office, all using very early versions of [Ruby on Rails](https://rubyonrails.org/).
+Once upon a time, the group that became Tanzu Labs was a small consulting company in San Francisco working with startups in our office, all using very early versions of [Ruby on Rails](https://rubyonrails.org/).
 
 Though enabling rapid productivity, Ruby on Rails at the time had many bugs and shortcomings, and the framework was changing dramatically with each release.
 
