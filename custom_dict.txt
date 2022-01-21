@@ -114,6 +114,7 @@ artisanal
 Arun
 Asciidoctor
 ASG(s)?
+Ashby
 Ashok
 Asiedu-Ampem
 aspirational
@@ -459,6 +460,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+Depedency
 deployable
 [Dd]eployable
 deserialize
@@ -509,6 +511,7 @@ DistributionStats
 DistributionSummary
 distroless
 distros
+DIY
 django-prometheus
 DLT
 DMs
@@ -913,6 +916,7 @@ Jaeger
 JaFU
 Jakarta
 Jakub
+Jakub's
 Jarvinen
 Jasso
 JavaBean
@@ -1010,6 +1014,7 @@ KeyStore
 KIAM
 Kibana
 kitesurfing
+KlipTok
 KMS
 (KMS|kms)-plugin(s)?
 Knative
@@ -1070,6 +1075,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1091,6 +1097,7 @@ linter(s)?
 [Ll]inux
 Lippert
 Littleton
+livecoding
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
@@ -1797,8 +1804,8 @@ TAS
 TaskRepository
 Tatooine
 TBD
-tchotchke
 TCE
+tchotchke
 TCP
 tdc-carvel-examples
 tdp-guide
@@ -1977,6 +1984,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
@@ -2001,6 +2009,7 @@ Wildfly
 [Ww]ireframe(s)?
 WireMock
 Wittrock
+WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
