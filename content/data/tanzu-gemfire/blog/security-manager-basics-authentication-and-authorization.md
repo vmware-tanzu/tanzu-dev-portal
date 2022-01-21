@@ -1,10 +1,9 @@
- --- 
+--- 
 date: 2022-01-21
-description: This a basic example of the GemFire / Geode security manager for an authentication and authorization system.    
+description: This a basic example of the GemFire / Geode security manager for an authentication and authorization system.
 lastmod: '2022-01-21'
 team:
 - John Martin
-
 title: GemFire Security Manager Basics - Authentication/Authorization
 type: blog
 ---
@@ -253,13 +252,13 @@ In the gfsh terminal run the following command to create a Region call `helloWor
 create region --name=helloWorld --type=PARTITION
 ```
 
-Ohhh...something went wrong!
+Ohh...something went wrong!
 
 ```
 Unauthorized. Reason : operator not authorized for DATA:MANAGE
 ```
 
-This is because we are still connected to the cluster as the Operator, who does not have permission to create regions. To create the region we must disconnect as the Operator and connect as the appDevloper.
+This is because we are still connected to the cluster as the Operator, who does not have permission to create regions. To create the region we must disconnect as the Operator and connect as the `appDevloper`.
 
 Enter the following into your gfsh terminal: 
 
