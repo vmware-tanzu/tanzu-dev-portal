@@ -2,8 +2,8 @@
 type: "tv-episode"
 Description: "Refactoring towards Encapsulation with Jakub Pilimon"
 hosts: ["Jakub Pilimon"]
-PublishDate: "2021-12-15T00:00:00-07:00"
-Date: "2021-12-15T12:00:00-07:00"
+PublishDate: "2022-01-19T00:00:00-07:00"
+Date: "2022-01-19T12:00:00-07:00"
 minutes: 30
 aliases: ["/tv/code/54"] #redirect alias
 episode: "54"
