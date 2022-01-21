@@ -64,10 +64,9 @@ See: [**Practice and Perception of Team Code Ownership**](https://www.researchga
 ## Q: Why Test Driven Development (TDD)? (Also, Why Do We Refactor?){id="tdd"}
 {{< callout >}}
 We have published extensively about our success using TDD as a crucial engineering practice. Please review the following articles.
-
 - [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
 - [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd): Matthew Parker elaborates on the benefits of practicing test-driven development, and also why you shouldn’t be afraid of refactoring.
-{{</ callout >}}
+{{< /callout >}}
 
 ## Q: What's a User Story?{id=stories}
 
