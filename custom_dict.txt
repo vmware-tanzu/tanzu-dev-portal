@@ -916,6 +916,7 @@ Jaeger
 JaFU
 Jakarta
 Jakub
+Jakub's
 Jarvinen
 Jasso
 JavaBean
