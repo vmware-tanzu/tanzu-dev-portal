@@ -119,7 +119,7 @@ We are, however, very good at estimating chunks of work relative to each other. 
 
 But how does sorting stories relative to each other help us estimate when something will be done? Because of velocity. Assign points to each story that you've estimated. For example, your team may use a fibonacci pointing sequence: 1, 2, 3, 5, 8. That's five buckets to put stories in. The easiest stories go into the "1" bucket. The hardest stories go into the "8" bucket. Note that teams will also keep in mind estimates from previous iterations. Imagine a really complex story in a previous iteration got an 8, but the hardest story in this iteration isn't as complex. So maybe they put this iteration's hardest story in the "5" bucket.
 
-Next, keep track of how many story points the team delivers week over week (or better yet, let Tracker keep track of it for you). Figure out how many points the team can deliver in a given week by maintaining a rolling average of the last three week's of points delivered each week. That rolling average—the number of points a team can deliver in a week—is velocity.
+Next, keep track of how many story points the team delivers week over week (or better yet, let a tool like [Pivotal Tracker](https://www.pivotaltracker.com/) automatically keep track of it for you). Figure out how many points the team can deliver in a given week by maintaining a rolling average of the last three week's of points delivered each week. That rolling average—the number of points a team can deliver in a week—is velocity.
 
 [Velocity](https://martinfowler.com/bliki/XpVelocity.html) is the key to planning on XP teams. Instead of asking a team to estimate when something will be done based on their gut, we predict when something will be done based on data. We know how many points the team can deliver week over week. And we know where the story is in the prioritized list of stories (i.e., the backlog).
 
@@ -131,13 +131,11 @@ That's why engineers have to keep a very close watch on volatility on their team
 
 Velocity predicts when stories will be done. So why don't we estimate bugs and chores? Because if you do, you won't be able to rely on your velocity to predict when stories will be done anymore.
 
-Here's why: stories are planned, but bugs are an **unintended consequence of feature development** (and one that, as much as possible, we try to eliminate). A bug represents something that used to work, but now doesn't. You already got points for the work when it was a feature. You shouldn't get more points for breaking it and then fixing it again.
+Here's why: stories are planned, but bugs are an **unintended consequence of feature development** (and one that, as much as possible, we try to eliminate). A bug represents something that used to work, but now doesn't. The completion of the original story has already been accounted for in your team's velocity and forward progress. It would be inaccurate to get second "velocity boost" or to show additional forward progress from fixing what was accidentally broken, given that the bug can be though of as a step backwards in progress. If the team fixes the same bug 20 times then they did not make 20 steps of progress -- they're bogged down by that bug, and their velocity might slow to reflect the situation.
 
-Likewise, chores are a necessary aid to feature development, but typically aren't possible to plan up front—rather, they become apparent in reaction to the needs of the product as it evolves. If you start pointing bugs and chores, you'll artificially inflate your velocity.
+Likewise, "chores" -- non-feature or bug-related tasks -- are a necessary aid to feature development, but typically aren't possible to plan up front—rather, they become apparent in reaction to the needs of the product as it evolves. If you start pointing bugs and chores, you'll artificially inflate your velocity.
 
 Imagine you've been pointing bugs and chores as they've cropped up and adding them into the backlog; also, imagine that process has led you to a current "velocity" of 20 points per week. Your backlog is now empty, and your product manager shows your team 10 new stories. You and the other engineers estimate those stories at 40 points. So you all say, "It will take us two weeks to complete these!" But you'll be wrong. Because you won't just work on those stories; as you develop those stories, you'll have to deal with bugs and chores that crop up. Since your velocity was artificially inflated, you weren't able to accurately predict how long the stories would truly take.
-
-Here's another way to think about it: bugs in tracker are reserved for something that used to work before, but now doesn't. Therefore, a bug is something the team already got points for when it was originally developed. It wouldn't be fair to point the bug and get points all over again—we'd be "rewarding" ourselves for breaking features that used to work! Instead, by not pointing bugs, we force our velocity to get dragged down by the bugs, since now we're spending time during the week fixing things we broke instead of delivering new value.
 
 Bugs and chores have to bring velocity down. That's why we don't point them. We want our velocity to tell us how long it will take to complete stories (i.e., user value). If you inflate it with bugs and chores, then you've lost your ability to predict how long it will actually take you to deliver new value.
 
@@ -149,7 +147,7 @@ There are two questions you have to ask when considering shipping software:
 
 "Should we ship?" is ultimately a business decision. Is it valuable to the business to put the latest features in the hands of the users right now? The product manager (PM) represents the business interests on the team and must own this decision.
 
-However, the question "Can we ship?" is fundamentally an engineering question. Is the software in a working state? Are we confident it won't fail in production? The goal of the XP engineers is to **always** have a "yes" answer to this question. A team that can't ship, can't learn. And the longer you're not learning, the greater the risk that you're wasting time and money building the wrong thing.
+However, the question "Can we ship?" is fundamentally an engineering question. Is the software in a working state? Are we confident it won't fail in production? The goal of the XP engineers is to **always** have a "yes" answer to this question. A team that can't ship, can't learn, and can't immediately address bugs or critical security vulnerabilities. And the longer you're not learning, the greater the risk that you're wasting time and money building the wrong thing.
 
 The combination of three XP practices make it possible for teams to always have a "yes" answer to the question "Can We Ship?":
 
