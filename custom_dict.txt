@@ -154,7 +154,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
-backpressure
+[Bb]ackpressure
 Baeldung('s)?
 Bagher
 Bahhh
@@ -919,6 +919,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+[Jj]avascript
 JavaWorld
 JAX-RS
 JBaruch
@@ -1514,6 +1515,7 @@ RCE
 RDBMS
 reachability
 reactively
+ReactiveX
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1613,6 +1615,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+RxJS
 [sS]3
 SaaS
 SaaS(-based)?
