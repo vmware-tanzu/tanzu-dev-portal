@@ -15,7 +15,7 @@ minutes: 120
 episode: "52"
 explicit: "yes"
 title: "The one with Spencer Gibb"
-#youtube: ""
+youtube: "b9Sc07IIxFU"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
