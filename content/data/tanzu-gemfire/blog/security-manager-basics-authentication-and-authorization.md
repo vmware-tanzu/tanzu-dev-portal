@@ -50,35 +50,50 @@ The `USER` class looks like this:
 import java.io.Serializable;
 import java.util.List;
 
+
 import org.apache.geode.security.ResourcePermission;
+
 
 public class User implements Serializable {
 
-  List<ResourcePermission> userPermissions;
-  String userName;
-  String userPassword;
+   List<ResourcePermission> userPermissions;
+   String userName;
+   String userPassword;
 
-  public User(String userName, String userPassword, List<ResourcePermission> userPermissions) {
-    this.userName = userName;
-    this.userPassword = userPassword;
-    this.userPermissions = userPermissions;
-  }
+   public User(String userName, String userPassword, List<ResourcePermission> userPermissions) {
+      this.userName = userName;
+      this.userPassword = userPassword;
+      this.userPermissions = userPermissions;
+   }
 
-  public String getUserPassword() {
-    return userPassword;
-  }
+   public String getUserPassword() {
+      return userPassword;
+   }
 
-  @Override
-  public String toString() {
-    return userName;
-  }
+   @Override
+   public String toString() {
+      return userName;
+   }
 
-  public List<ResourcePermission> getPermissions() {
-    return this.userPermissions;
-  }
+   public List<ResourcePermission> getPermissions() {
+      return this.userPermissions;
+   }
+
+   public boolean hasPermission(ResourcePermission resourcePermissionRequested) {
+      boolean hasPermission = false;
+
+      for (ResourcePermission userPermission : userPermissions) {
+         if (userPermission.implies(resourcePermissionRequested)) {
+            hasPermission = true;
+            break;
+         }
+      }
+      return hasPermission;
+   }
 }
+
 ```
-It’s crucial that we implement the `Serializable` interface as this allows GemFire to deserialize the class when checking the client username.  Overriding `toString()` is necessary for the `authorize` method we’ll use later in the example.
+It’s crucial that we implement the `Serializable` interface as this allows GemFire to deserialize the class when checking the client username.  
 
 Now, in our `BasicSecurityManager` we
 
@@ -87,33 +102,49 @@ Now, in our `BasicSecurityManager` we
 - We then add the users to an “approved users” List, which allows the application to check incoming credentials. 
 
 ```java
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Properties;
+
+import org.apache.geode.security.AuthenticationFailedException;
+import org.apache.geode.security.ResourcePermission;
+import org.apache.geode.security.SecurityManager;
+
 public class BasicSecurityManager implements SecurityManager {
 
-  private HashMap<String, User> approvedUsersList = new HashMap<>();
+   private HashMap<String, User> approvedUsersList = new HashMap<>();
 
-  @Override
-  public void init(final Properties securityProperties){
+   @Override
+   public void init(final Properties securityProperties) {
 
       List<ResourcePermission> operatorPermissions = new ArrayList<>();
-      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER, ResourcePermission.Operation.MANAGE));
-      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER, ResourcePermission.Operation.WRITE));
-      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER, ResourcePermission.Operation.READ));
+      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER,
+              ResourcePermission.Operation.MANAGE));
+      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER,
+              ResourcePermission.Operation.WRITE));
+      operatorPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER,
+              ResourcePermission.Operation.READ));
 
       User operator = new User("operator", "secret", operatorPermissions);
 
-
       List<ResourcePermission> appDevPermissions = new ArrayList<>();
-      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER, ResourcePermission.Operation.READ));
-      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA, ResourcePermission.Operation.MANAGE));
-      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA, ResourcePermission.Operation.WRITE));
-      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA, ResourcePermission.Operation.READ));
+      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.CLUSTER,
+              ResourcePermission.Operation.READ));
+      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA,
+              ResourcePermission.Operation.MANAGE));
+      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA,
+              ResourcePermission.Operation.WRITE));
+      appDevPermissions.add(new ResourcePermission(ResourcePermission.Resource.DATA,
+              ResourcePermission.Operation.READ));
 
-      User appDeveloper = new User("appDeveloper","NotSoSecret",appDevPermissions);
+      User appDeveloper = new User("appDeveloper", "NotSoSecret", appDevPermissions);
 
       this.approvedUsersList.put("operator", operator);
-      this.approvedUsersList.put("appDeveloper",appDeveloper);
+      this.approvedUsersList.put("appDeveloper", appDeveloper);
 
-  }
+   }
+}
 ```
 
 ## Authentication
@@ -123,68 +154,70 @@ Now that we have our approved users list created, we need to implement our `auth
 In the `authenticate` method, we check the credentials passed into the `BasicSecurityManager` from the client against those in the `approvedUsers` List we created.  If the credentials match, instead of returning a Boolean of `true` and allowing all authenticated users full access to the system, we return a `USER` object, `authenticatedUser`.  This is the object that will be passed into the `authorize` method when the client application performs an operation.
 
 ```java
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Properties;
-
-
-import org.apache.geode.security.AuthenticationFailedException;
-import org.apache.geode.security.ResourcePermission;
-import org.apache.geode.security.SecurityManager;
-
 public class BasicSecurityManager implements SecurityManager {
 
+   private HashMap<String, User> approvedUsersList = new HashMap<>();
 
-  private HashMap<String, User> approvedUsersList = new HashMap<>();
+   @Override
+   public void init(final Properties securityProperties) {...}
 
-  @Override
-  public void init(final Properties securityProperties){...}
-
-  @Override
-  public Object authenticate(Properties credentials) throws AuthenticationFailedException {
+   @Override
+   public Object authenticate(Properties credentials) throws AuthenticationFailedException {
 
       String usernamePassedIn = credentials.getProperty(USER_NAME);
       String passwordPassedIn = credentials.getProperty(PASSWORD);
 
       User authenticatedUser = this.approvedUsersList.get(usernamePassedIn);
 
-      if (authenticatedUser == null){
-        throw new AuthenticationFailedException("Wrong username/password");
+      if (authenticatedUser == null) {
+         throw new AuthenticationFailedException("Wrong username/password");
       }
 
-      if (authenticatedUser != null  && !authenticatedUser.getUserPassword().equals(passwordPassedIn) && !"".equals(authenticatedUser)) {
-        throw new AuthenticationFailedException("Wrong username/password");
+      if (authenticatedUser != null && !authenticatedUser.getUserPassword().equals(passwordPassedIn)
+              && !"".equals(authenticatedUser)) {
+         throw new AuthenticationFailedException("Wrong username/password");
       }
 
       return authenticatedUser;
-    }
+   }
+}
 ```
 ## Authorization
 
 The object returned from the `authenticate` method above (our `authenticatedUser` object from above) is passed into the `authorize` method as the `Object principal`.  This object is used to authorize the action the client is attempting to perform. We compare the `resourcePermissionRequested` (the action the client wan'ts to perform) with the Users given permissions.  If the user is allowed to perform the requested action, then we return true, otherwise we return false and the action is denied. 
 
 ```java
-@Override
-public boolean authorize (Object principal, ResourcePermission resourcePermissionRequested) {
+public class BasicSecurityManager implements SecurityManager {
 
-    if (principal == null) {
-      return false;
-    }
+   private HashMap<String, User> approvedUsersList = new HashMap<>();
 
-    User user = this.approvedUsersList.get(principal.toString());
+   @Override
+   public void init(final Properties securityProperties) {...}
 
-    if (user == null) {
-      return false;
-    }
+   @Override
+   public Object authenticate(Properties credentials) throws AuthenticationFailedException {...}
 
-    for (ResourcePermission userPermission : user.getPermissions()) {
-        if (userPermission.implies(resourcePermissionRequested)) {
+   @Override
+   public boolean authorize(Object principal, ResourcePermission resourcePermissionRequested) {
+
+      if (principal == null) {
+         return false;
+      }
+
+      User user = this.approvedUsersList.get(principal.toString());
+
+      if (user == null) {
+         return false;
+      }
+
+      for (ResourcePermission userPermission : user.getPermissions()) {
+         if (userPermission.implies(resourcePermissionRequested)) {
             return true;
-       }
-    }
-        
-    return false;
+         }
+      }
+
+      return false;
+   }
 }
 ```
 
@@ -198,9 +231,9 @@ Now that we have our `BasicSecurityManager` implementation, we need to include i
 2. Start GemFire’s shell (gfsh) by running the `gfsh` command in a console / terminal.
 3. Start a locator and include the path to the jar file and class name of the `BasicSecurityManager`. The start locator command will look something like this:
       ```
-        start locator --name=locator1 --J=-Dgemfire.securitymanager=BasicSecurityManager.BasicSecurityManager --classpath=[path to your jar file]/BasicSecurityManager-1.0-SNAPSHOT.jar
+        start locator --name=locator1 --J=-Dgemfire.securitymanager=BasicSecurityManager --classpath=[path to your jar file]/BasicSecurityManager-1.0-SNAPSHOT.jar
       ```
-    - **`--J=-Dgemfire.securitymanager=BasicSecurityManager.BasicSecurityManager`** - Defines the package and class for your security manager and allows GemFire to find the class when starting up.
+    - **`--J=-Dgemfire.securitymanager=BasicSecurityManager`** - Defines the package and class for your security manager and allows GemFire to find the class when starting up.
     - **`--classpath=[path to your jar file]/BasicSecurityManager-1.0-SNAPSHOT.jar`** - Defines the path to the jar file that GemFire should use as the security manager.
 
 4. Once the locator has started you will see an output similar to this:
@@ -234,7 +267,7 @@ In gfsh, the command would look similar to the following:
 
 We should now be connected to the locator. Next, we will start a server. This will be very similar to starting the locator. In gfsh, use the `start server` command which will include the path to the same `BasicSecurityManager` jar file used when starting the locator.
 ```text 
-    start server --name=server1 --locators=localhost [10334] --classpath=[path to your security mnanager]/BasicSecurityManager-1.0-SNAPSHOT.jar --user=default --password=reallyBadPassword
+    start server --name=server1 --locators=localhost[10334] --classpath=[path to your security manager]/BasicSecurityManager-1.0-SNAPSHOT.jar --user=operator --password=secret
 ```
 - Repeat this step for each server you need to start, but make sure you change the `--name=` parameter to be unique for each server.
 
@@ -264,7 +297,7 @@ Enter the following into your gfsh terminal:
 
 ```text
 gfsh: disconnect
-gfsh: connect –user=appDevleoper –password=NotSoSecret
+gfsh: connect –-user=appDevleoper –-password=NotSoSecret
 ```
 
 Once connected, run the `create region` above again.
@@ -349,3 +382,56 @@ It worked! It prints out the value "HelloWorldValue" we put in for key “1”. 
 
 We now have a GemFire system running with security enabled to authenticate and authorize all clients trying to interact with the cluster, and a client application that can connect and interact with our GemFire cluster.
 
+### Client Authorization Error
+If we were to remove the `appDevelopers` permission to WRITE to the GemFire cluster, you would get an error that looks similar to this
+
+```text
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Exception in thread "main" org.apache.geode.cache.client.ServerOperationException: remote server on [your IP address]: org.apache.geode.security.NotAuthorizedException: appDeveloper not authorized for DATA:WRITE:helloWorld:1
+	at org.apache.geode.cache.client.internal.OpExecutorImpl.handleException(OpExecutorImpl.java:554)
+	at org.apache.geode.cache.client.internal.OpExecutorImpl.handleException(OpExecutorImpl.java:615)
+	at org.apache.geode.cache.client.internal.OpExecutorImpl.handleException(OpExecutorImpl.java:501)
+	at org.apache.geode.cache.client.internal.OpExecutorImpl.execute(OpExecutorImpl.java:142)
+	at org.apache.geode.cache.client.internal.OpExecutorImpl.execute(OpExecutorImpl.java:108)
+	at org.apache.geode.cache.client.internal.PoolImpl.execute(PoolImpl.java:776)
+	at org.apache.geode.cache.client.internal.PutOp.execute(PutOp.java:91)
+	at org.apache.geode.cache.client.internal.ServerRegionProxy.put(ServerRegionProxy.java:159)
+	at org.apache.geode.internal.cache.LocalRegion.serverPut(LocalRegion.java:3048)
+	at org.apache.geode.internal.cache.LocalRegion.cacheWriteBeforePut(LocalRegion.java:3165)
+	at org.apache.geode.internal.cache.ProxyRegionMap.basicPut(ProxyRegionMap.java:238)
+	at org.apache.geode.internal.cache.LocalRegion.virtualPut(LocalRegion.java:5613)
+	at org.apache.geode.internal.cache.LocalRegion.virtualPut(LocalRegion.java:5591)
+	at org.apache.geode.internal.cache.LocalRegionDataView.putEntry(LocalRegionDataView.java:156)
+	at org.apache.geode.internal.cache.LocalRegion.basicPut(LocalRegion.java:5049)
+	at org.apache.geode.internal.cache.LocalRegion.validatedPut(LocalRegion.java:1648)
+	at org.apache.geode.internal.cache.LocalRegion.put(LocalRegion.java:1635)
+	at org.apache.geode.internal.cache.AbstractRegion.put(AbstractRegion.java:442)
+	at Main.main(Main.java:21)
+Caused by: org.apache.geode.security.NotAuthorizedException: appDeveloper not authorized for DATA:WRITE:helloWorld:1
+	at org.apache.geode.internal.security.IntegratedSecurityService.authorize(IntegratedSecurityService.java:292)
+	at org.apache.geode.internal.security.IntegratedSecurityService.authorize(IntegratedSecurityService.java:275)
+	at org.apache.geode.internal.security.IntegratedSecurityService.authorize(IntegratedSecurityService.java:269)
+	at org.apache.geode.internal.cache.tier.sockets.command.Put70.cmdExecute(Put70.java:246)
+	at org.apache.geode.internal.cache.tier.sockets.BaseCommand.execute(BaseCommand.java:187)
+	at org.apache.geode.internal.cache.tier.sockets.ServerConnection.doNormalMessage(ServerConnection.java:881)
+	at org.apache.geode.internal.cache.tier.sockets.ServerConnection.doOneMessage(ServerConnection.java:1070)
+	at org.apache.geode.internal.cache.tier.sockets.ServerConnection.run(ServerConnection.java:1344)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.geode.internal.cache.tier.sockets.AcceptorImpl.lambda$initializeServerConnectionThreadPool$3(AcceptorImpl.java:690)
+	at org.apache.geode.logging.internal.executors.LoggingThreadFactory.lambda$newThread$0(LoggingThreadFactory.java:120)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.shiro.authz.UnauthorizedException: Subject does not have permission [DATA:WRITE:helloWorld:1]
+	at org.apache.shiro.authz.ModularRealmAuthorizer.checkPermission(ModularRealmAuthorizer.java:334)
+	at org.apache.shiro.mgt.AuthorizingSecurityManager.checkPermission(AuthorizingSecurityManager.java:141)
+	at org.apache.shiro.subject.support.DelegatingSubject.checkPermission(DelegatingSubject.java:214)
+	at org.apache.geode.internal.security.IntegratedSecurityService.authorize(IntegratedSecurityService.java:288)
+	... 12 more
+
+Process finished with exit code 1
+```
+
+You can see the error message points to an `org.apache.geode.security.NotAuthorizedException: appDeveloper not authorized for DATA:WRITE:helloWorld:1`, showing that the `appDeveloper` does not have the correct permissions to write to the cluster.
