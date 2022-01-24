@@ -1,13 +1,15 @@
 ---
-title: "Live Update Development with VMware Tanzu Application Platform"
+title: "Inner Loop Development with VMware Tanzu Application Platform"
 description: Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.  
-date: 2021-12-10
-lastmod: 2021-12-10
+date: 2022-01-30
+lastmod: 2022-01-30
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:
 - Tanzu
 - Tanzu Application Platform
+tanzu:
+  label: tap
 # Author(s)
 team:
 - Tony Vetter
@@ -19,18 +21,23 @@ You have probably heard how VMware Tanzu Application Platform will make develope
 
 In this guide, you will set up the Tanzu plugin for [VS Code](https://code.visualstudio.com), and use it to get a live view of your application while you are developing it. 
 
+By the end of this guide, you will be editing code in your application, and previewing your edits via a live update session deployed locally. 
+
 ## Assumptions
+
+These are some assumptions you should be aware of before proceeding with this guide:
+
 * This guide was written for [Tanzu Developer tools for VS Code `v1.0`](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-vscode-extension-install.html). 
-* This guide assumes you are running MacOS. Specifically, `v12.0`. 
-* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands. 
-* This guide heavily leverages the [official documentation for the Tanzu Developer tools for VS Code](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-vscode-extension-install.html). For any questions or further details, please refer to that documentation.
+* This guide assumes you are running MacOS. Specifically, the `v12.0` "Monterey" line. Commands provided in this guide make these assumptions.
+* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands if versions do not line up.
+* This guide heavily leverages the [official documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-vscode-extension-install.html) for installing the Tanzu Developer tools for VS Code. This guide is meant to be a simple setup to get you started quickly. For more complicated or production setups, refer to the official documentation.
 
 ## Prerequisites
-* [**You have a Tanzu Network account with pivnet installed**](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
-* [**You have the tanzu CLI installed and configured**](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
-* [**You have an install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
-* [**You have an application deployed on Tanzu Application Platform**](/guides/tanzu-application-platform-deploying-a-workload) - This guide walk you through deploying a sample application onto Tanzu Application Platform.
-* [Install Visual Studio (VS) Code](https://code.visualstudio.com/download) - This guide uses an extension specifically for VS Code to perform application updates. 
+* [A Tanzu Network account with `pivnet` installed](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
+* [The `tanzu` CLI installed and configured](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
+* [An install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
+* [An application deployed on Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload) - This guide walk you through deploying a sample application onto Tanzu Application Platform.
+* [An install of Visual Studio (VS) Code](https://code.visualstudio.com/download) - This guide uses an extension specifically for VS Code to perform application updates. 
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
 * [A GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) - You will use this account to `push` your sample application to, and later `clone`, modify, and `push` your code changes back to this repo. 
 

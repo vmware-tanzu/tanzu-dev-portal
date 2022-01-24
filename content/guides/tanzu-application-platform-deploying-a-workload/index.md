@@ -1,13 +1,15 @@
 ---
 title: "Deploying an Application to VMware Tanzu Application Platform"
 description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
-date: 2021-12-10
-lastmod: 2021-12-10
+date: 2022-01-30
+lastmod: 2022-01-30
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:
 - Tanzu
-- Tanzu Kubernetes Grid
+- Tanzu Application Platform
+tanzu:
+  label: tap
 # Author(s)
 team:
 - Tony Vetter
@@ -17,18 +19,23 @@ Deploying applications to VMware Tanzu Application Platform is a straight forwar
 
 Some things you need to do might be a bit different than you are used to. Things like creating the initial starter application, and deploying it via the included CI/CD pipeline. But hopefully, you will see the value in these steps, and this guide will highlight some of those benefits as you go through it. 
 
+In this guide, you will walk through all of these actions. From setting up your development namespace, to deploying a sample application. 
+
 By the end of this guide, you will have a working application running on Tanzu Application Platform, with local access to it via your web browser. 
 
 ## Assumptions
+
+These are some assumptions you should be aware of before proceeding with this guide:
+
 * This guide was written for [Tanzu Application Platform `v1.0`](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
-* This guide assumes you are running MacOS. Specifically, `v12.0`. 
-* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands. 
-* This guide heavily leverages the [official documentation for Tanzu Application Platform](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-intro.html). For any questions or further details, please refer to that documentation.
+* This guide assumes you are running MacOS. Specifically, the `v12.0` "Monterey" line. Commands provided in this guide make these assumptions. 
+* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands if versions do not line up.
+* This guide heavily leverages the [official documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-intro.html) for Getting Started with Tanzu Application Platform. This guide is meant to be a simple setup to get you started quickly. For more complicated or production setups, refer to the official documentation.
 
 ## Prerequisites
-* [**You have a Tanzu Network account with pivnet installed**](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
-* [**You have the tanzu CLI installed and configured**](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
-* [**You have an install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
+* [A Tanzu Network account with `pivnet` installed](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
+* [The `tanzu` CLI installed and configured](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
+* [An install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
 * [A GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) - You will use this account to `push` your sample application to, and later `clone`, modify, and `push` your code changes back to this repo. 
 
@@ -332,4 +339,5 @@ You now have an application deployed on to Tanzu Application Platform. Of course
 While this may make a good follow on for a future guide, for now check out the [Documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-getting-started.html#section-2-create-your-application-accelerator-10) for information about creating these for yourself and your own custom applications. 
 
 Moving forward, check out the next post in this series:
-* **Modifying your Application with Live Update** (coming soon) - In this guide, you will set up VS Code with the Tanzu plugin to enable you to see your code changes in real time, and in a production-like environment. 
+
+* [Inner Loop Development with VMware Tanzu Application Platform](/guides/tanzu-application-platform-inner-loop) - Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.

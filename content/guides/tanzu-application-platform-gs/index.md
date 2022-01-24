@@ -1,13 +1,15 @@
 ---
-title: "Getting Started with VMware Tanzu Application Platform dev Profile"
+title: "Getting Started with VMware Tanzu Application Platform light Profile"
 description: This guide will walk you through setting up a basic VMware Tanzu Kubernetes Grid workload cluster. This cluster will be useful for setting up an inner loop development workflow using Tanzu tooling. 
-date: 2021-12-10
-lastmod: 2021-12-10
+date: 2022-01-30
+lastmod: 2022-01-30
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:
 - Tanzu
-- Tanzu Kubernetes Grid
+- Tanzu Application Platform
+tanzu:
+  label: tap
 # Author(s)
 team:
 - Tony Vetter
@@ -19,22 +21,26 @@ In this guide, you will deploy Tanzu Application Platform using the `light` prof
 
 Using the `light` profile, you will be able to quickly and easily test and deploy your applications to your development Kubernetes cluster. You will receive rapid feedback from live code updates, as well as get a view for how your application is performing on a cluster that closely mimics the production environment. 
 
-You will do so quick prep work to get your Kubernetes cluster ready for the install. Then you will use a simple deployment YAML template and a single CLI command to kick off the install. And once installed, you can start exploring your test environment. 
+In this guide, you will do some quick prep work to get your Kubernetes cluster ready for the install. Then you will use a simple deployment YAML template and a single CLI command to kick off the install. And once installed, you can start exploring your test environment. 
+
+By the end of this guide, you will have a development platform deployed on top of Kubernetes, which is ready for you to deploy a workload on to. 
 
 ## Assumptions
 
+These are some assumptions you should be aware of before proceeding with this guide:
+
 * This guide was written for [Tanzu Application Platform `v1.0`](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
-* This guide assumes you are running MacOS. Specifically, `v12.0`. 
-* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands. 
-* This guide heavily leverages the [official documentation for Tanzu Application Platform](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-intro.html). For any questions or further details, please refer to that documentation.
+* This guide assumes you are running MacOS. Specifically, the `v12.0` "Monterey" line. Commands provided in this guide make these assumptions.
+* This guide will be updated regularly, but updates might not be timed exactly to new releases of these products or platforms. You may need to modify commands if versions do not line up.
+* This guide heavily leverages the [official documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-intro.html) for installing Tanzu Application Platform. This guide is meant to be a simple setup to get you started quickly. For more complicated or production setups, refer to the official documentation.
 
 ## Prerequisites
 
-* [**You have a Tanzu Network account with pivnet installed**](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
-* [**You have the tanzu CLI installed and configured**](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool. 
-* **You have a Kubernetes cluster created and ready** - In this guide you will use a [GKE](https://cloud.google.com/kubernetes-engine) cluster, but most major Kubernetes cluster providers should work. Make sure you `kubectl` context is pointed to this cluster. Cluster and resource requirements can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-general.html).
+* [A Tanzu Network account with `pivnet` installed](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
+* [The `tanzu` CLI installed and configured](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
+* **You have a Kubernetes cluster created and ready** - In this guide I am using a [GKE](https://cloud.google.com/kubernetes-engine) cluster, but most major Kubernetes cluster providers should work. Make sure you `kubectl` context is pointed to this cluster. Cluster and resource requirements can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-general.html).
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
-* **Optional: A custom domain you can use to access your install** - In this guide you will just use your `/etc/hosts` file to handle routing. However, you may decide you want to set up DNS routing and records to access your install. More on this [later](#accessing-the-tanzu-application-platform-ui) in this guide.
+* **Optional: A custom domain** - In this guide you will just use your `/etc/hosts` file to handle routing. However, you may decide you want to set up DNS routing and records to access your install. More on this [later](#accessing-the-tanzu-application-platform-ui) in this guide.
 
 ## Set up the environment
 
@@ -81,7 +87,6 @@ In order to make some commands easier to run, you should define some local envir
     ```sh
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     ```
-
 
 ## Setting up your Kubernetes Clusters
 
@@ -130,7 +135,6 @@ There are a couple quick steps necessary to perform against your Kubernetes clus
 
 Your cluster is now ready to start the install of Tanzu Application Platform. You will do that in the next section.
 
-
 ## Setting up the `tanzu` CLI
 
 As explained in the [tanzu CLI guide](/guides/tanzu-cli-gs), the `tanzu` CLI is plugin and package based. These packages come from separate repositories. In this section, you will set up these additional repositories to gain access to the Tanzu Application Platform packages. 
@@ -177,6 +181,7 @@ Application Accelerator is a component of Tanzu Application Platform where code 
 If you are deploying Tanzu Application Platform in an environment where this catalog already exists, you can skip this section and simply note the URL for the `catalog-info.yaml` file. If you do not have access to an accelerator catalog yet, this section will walk you through deploying a blank one. 
 
 1. Download the blank starter template.
+
     ```sh
     pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.0.0' --product-file-id=1099786
     ```
@@ -310,4 +315,6 @@ In later guides, you will use Tanzu Application Platform to deploy a workload. A
 
 Now you have your own instance of Tanzu Application Platform to use for your development projects. Continue following along to other guides to deploy a workload, and see how your development workflow might change in a Tanzu environment. 
 
-* Deploying a workload to Tanzu Application Platform **Coming Soon** - In this guide, you will use the `tanzu` CLI and Tanzu Application Platform to create a starter application, and access the web UI. 
+* [Deploying an Application to VMware Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload)
+description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
+* [Inner Loop Development with VMware Tanzu Application Platform](/guides/tanzu-application-platform-inner-loop) - Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.
