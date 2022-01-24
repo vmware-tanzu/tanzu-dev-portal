@@ -106,6 +106,9 @@ This is an activity that you can time box if it feels drawn out. Many of the tip
 
 Also, just because a behavior does not get added to the working agreements does not mean that a team member cannot behave that way nor ask that others behave that way. On rare occasions you may need to remind the team of this if they end up in heated disagreement over an agreement.
 
+## Related Practices
+[Team Values](/practices/team-values)
+
 ## Real World Examples
 
 Team working agreement document example:
