@@ -311,8 +311,25 @@ This is a very simple application. All that should show up is the single line `G
 
 2. Click **Register Entity** in the upper right of the UI. 
 
-    [The application accelerator service included in Tanzu Application Platform](images/image6.png "Click Choose under Tanzu Java Web App.")
+    [The front page of the Tanzu Application Platform UI](images/image6.png "Click register entity in the upper right hand corner.")
+
+3. In the field **Repository URL**, add the URL for the `catalog-info.yaml` file in your repository. It should be `https://github.com/$GITHUB_USERNAME/tanzu-java-web-app/blob/main/catalog-info.yaml`. Then click **Analyze**.
+
+    [The application registration page](images/image7.png "Register your application and click analyze.")
+
+4. Click **Import**. 
+
+    [The application registration page](images/image8.png "Register your application and click analyze.")
+
+5. Click back on to the home page icon and see that your application instance has been registered. Clicking into this application, you can explore your deployment, and various metrics regarding its health. 
+
+    [The front page of the Tanzu Application Platform UI](images/image9.png "Start exploring your application's metrics.")
 
 ## Next steps
 
-You now have an application deployed on to Tanzu Application Platform. 
+You now have an application deployed on to Tanzu Application Platform. Of course, several steps were completed for you. These include creating the initial application accelerator (the starter application) and adding it to Tanzu Application Platform. As well as creating the various files necessary to deploy including the `workload.yaml`, and the `catalog-info.yaml`. 
+
+While this may make a good follow on for a future guide, for now check out the [Documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-getting-started.html#section-2-create-your-application-accelerator-10) for information about creating these for yourself and your own custom applications. 
+
+Moving forward, check out the next post in this series:
+* **Modifying your Application with Live Update** (coming soon) - In this guide, you will set up VS Code with the Tanzu plugin to enable you to see your code changes in real time, and in a production-like environment. 
