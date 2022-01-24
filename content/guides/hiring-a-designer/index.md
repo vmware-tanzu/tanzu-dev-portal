@@ -4,7 +4,7 @@ description: "This guide will is meant to help teams who’d like to bring on a 
 date: "2021-12-17"
 lastmod: "2021-12-17"
 level1: Agile Transformation and Practices
-level2: Onboarding
+level2: Team Tips
 tags:
 - Onboarding
 - Agile
