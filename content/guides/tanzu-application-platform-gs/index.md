@@ -15,11 +15,11 @@ team:
 - Tony Vetter
 ---
 
-Tanzu Application Platform is a powerful layer built on top of Kubernetes. Utilizing native Kubernetes primitives, Tanzu Application Platform provides developers with an easier way to build, deploy, and manage application on top of Kubernetes. All while still exposing the powerful features that make Kubernetes so desirable. 
+[VMware Tanzu Application Platform](https://tanzu.vmware.com/application-platform) is a powerful layer built on top of Kubernetes. Utilizing native Kubernetes primitives, Tanzu Application Platform provides developers with an easier way to build, deploy, and manage applications on top of Kubernetes, all while still exposing the powerful features that make Kubernetes so desirable. 
 
-In this guide, you will deploy Tanzu Application Platform using the `light` profile. Tanzu Application Platform uses profile-based installations to install only the components necessary to complete tasks associated with certain roles. The `light` profile is meant for developers building applications, and using an inner-loop development workflow for rapid iteration and testing. 
+Following this guide, you will deploy Tanzu Application Platform using the `light` profile. Tanzu Application Platform uses profile-based installations to install only the components necessary to complete tasks associated with certain roles. The `light` profile is meant for developers building applications and using an inner-loop development workflow for rapid iteration and testing. 
 
-Using the `light` profile, you will be able to quickly and easily test and deploy your applications to your development Kubernetes cluster. You will receive rapid feedback from live code updates, as well as get a view for how your application is performing on a cluster that closely mimics the production environment. 
+Using the `light` profile, you will be able to quickly and easily test and deploy your applications to your development Kubernetes cluster. You will receive rapid feedback from live code updates, as well as get a view of how your application is performing on a cluster that closely mimics the production environment. 
 
 In this guide, you will do some quick prep work to get your Kubernetes cluster ready for the install. Then you will use a simple deployment YAML template and a single CLI command to kick off the install. And once installed, you can start exploring your test environment. 
 
@@ -44,7 +44,7 @@ These are some assumptions you should be aware of before proceeding with this gu
 
 ## Set up the environment
 
-In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
+In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information, such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
 
 1. Define your Tanzu Network credentials.
 
@@ -88,9 +88,9 @@ In order to make some commands easier to run, you should define some local envir
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     ```
 
-## Setting up your Kubernetes Clusters
+## Setting up your Kubernetes clusters
 
-There are a couple quick steps necessary to perform against your Kubernetes cluster before we get started with the Tanzu Application Platform install. In this section, you will install Cluster Essentials for VMware Tanzu. 
+here are a couple of quick steps necessary to perform against your Kubernetes cluster before we get started with the Tanzu Application Platform install. In this section, you will install Cluster Essentials for VMware Tanzu. 
 
 1. Download the bundle for Cluster Essentials for VMware Tanzu. For bundles for platforms other than MacOS, go [here](https://network.pivotal.io/products/tanzu-cluster-essentials/).
 
@@ -98,7 +98,7 @@ There are a couple quick steps necessary to perform against your Kubernetes clus
     pivnet download-product-files --product-slug='tanzu-cluster-essentials' --release-version='1.0.0' --product-file-id=1105820
     ```
 
-2. Create a local directory for Tanzu Cluster Essentials. This will be where the install scripts and other packages are placed.
+2. Create a local directory for Tanzu Cluster Essentials. This is where the install scripts and other packages will be placed.
    
     ```sh
     mkdir ~/tanzu-cluster-essentials
@@ -137,9 +137,9 @@ Your cluster is now ready to start the install of Tanzu Application Platform. Yo
 
 ## Setting up the `tanzu` CLI
 
-As explained in the [tanzu CLI guide](/guides/tanzu-cli-gs), the `tanzu` CLI is plugin and package based. These packages come from separate repositories. In this section, you will set up these additional repositories to gain access to the Tanzu Application Platform packages. 
+As explained in the [tanzu CLI guide](/guides/tanzu-cli-gs), the `tanzu` CLI is plug-in and package based. These packages come from separate repositories. In this section, you will set up these additional repositories to gain access to the Tanzu Application Platform packages. 
 
-1. Create a secret which the `tanzu` CLI will use to access packages in the Tanzu Network. This requires your user name and password for the Tanzu Network, set up in the [prerequisites section](#prerequisites).
+1. Create a secret, which the `tanzu` CLI will use to access packages in the Tanzu Network. This requires your username and password for the Tanzu Network, set up in the [prerequisites section](#prerequisites).
 
     ```sh
     tanzu secret registry add tap-registry \
@@ -176,7 +176,7 @@ As explained in the [tanzu CLI guide](/guides/tanzu-cli-gs), the `tanzu` CLI is 
 
 ## Setting up an empty Application Accelerator catalog
 
-Application Accelerator is a component of Tanzu Application Platform where code starters are stored. This gives developers access to starter applications which already include any necessary security and compliance frameworks which may be required by tour organization. 
+Application Accelerator is a component of Tanzu Application Platform where code starters are stored. This gives developers access to starter applications that already include any necessary security and compliance frameworks that may be required by their organization. 
 
 If you are deploying Tanzu Application Platform in an environment where this catalog already exists, you can skip this section and simply note the URL for the `catalog-info.yaml` file. If you do not have access to an accelerator catalog yet, this section will walk you through deploying a blank one. 
 
@@ -198,15 +198,15 @@ If you are deploying Tanzu Application Platform in an environment where this cat
     cd blank
     ```
 
-4. Follow your preferred method for pushing the files in this directory to your Git Hub account. [Here](https://docs.github.com/en/get-started/quickstart/create-a-repo) are the GitHub docs for creating a new repository. Call it `blank-catalog`.
+4. Follow your preferred method for pushing the files in this directory to your GitHub account. [Here](https://docs.github.com/en/get-started/quickstart/create-a-repo) are the GitHub docs for creating a new repository. Call it `blank-catalog`.
 
-You now have a repository deployed which you will later add as a reference for your deployment of Tanzu Application Platform.
+You now have a repository deployed that you will later add as a reference for your deployment of Tanzu Application Platform.
 
 ## Build out the `light` profile and install
 
-Tanzu Application Platform installs by use of profiles. These profiles take into account the user's role in an organization, and only install the portions of the Tanzu Application Platform which that users is likely to need. 
+Tanzu Application Platform installs by use of profiles. These profiles take into account the user's role in an organization, and only install the portions of the Tanzu Application Platform which that user is likely to need. 
 
-In this section, you will explore the different packages installed in the `light` profile. A profile yaml file will be provided for you, but you will be given all the tools and understanding necessary to find these settings, learn what they do, and what values are available for each.
+In this section, you will explore the different packages installed in the `light` profile. A profile YAML file will be provided for you, but you will be given all the tools and understanding necessary to find these settings, learn what they do, and what values are available for each.
 
 You can find a list of the packages installed in each profile [here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/0.4/tap/GUID-install.html#about-tanzu-application-platform-package-profiles-1).
 
