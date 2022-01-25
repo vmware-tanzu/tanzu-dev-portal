@@ -1,8 +1,8 @@
 ---
 title: "Getting Started with the VMware `tanzu` CLI"
 description: Working with the VMware Tanzu suite of tools starts with tooling to deploy and manage those products. Learn how to install the `tanzu` CLI, and explore some of the basic functionality.
-date: 2022-01-30
-lastmod: 2022-01-30
+date: 2022-01-23
+lastmod: 2022-01-23
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:

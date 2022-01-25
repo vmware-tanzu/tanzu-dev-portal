@@ -1,8 +1,8 @@
 ---
 title: "Deploying an Application to VMware Tanzu Application Platform"
 description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
-date: 2022-01-30
-lastmod: 2022-01-30
+date: 2022-01-23
+lastmod: 2022-01-23
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:

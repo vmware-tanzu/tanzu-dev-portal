@@ -1,8 +1,8 @@
 ---
 title: "Inner Loop Development with VMware Tanzu Application Platform"
 description: Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.  
-date: 2022-01-30
-lastmod: 2022-01-30
+date: 2022-01-23
+lastmod: 2022-01-23
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:

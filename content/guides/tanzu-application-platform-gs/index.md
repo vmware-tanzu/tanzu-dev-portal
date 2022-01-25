@@ -1,8 +1,8 @@
 ---
 title: "Getting Started with VMware Tanzu Application Platform light Profile"
 description: This guide will walk you through setting up a basic VMware Tanzu Kubernetes Grid workload cluster. This cluster will be useful for setting up an inner loop development workflow using Tanzu tooling. 
-date: 2022-01-30
-lastmod: 2022-01-30
+date: 2022-01-23
+lastmod: 2022-01-23
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:

@@ -1,8 +1,8 @@
 ---
 title: "Getting Started with the VMware Tanzu Network and the pivnet CLI"
 description: The Tanzu Network is where products, packages, and tools are hosted for download. This guide will walk you through setting up an account, and using the `pivnet` CLI to download packages.
-date: 2022-01-30
-lastmod: 2022-01-30
+date: 2022-01-23
+lastmod: 2022-01-23
 level1: Building Kubernetes Runtime
 level2: Application Platform on Kubernetes
 tags:
