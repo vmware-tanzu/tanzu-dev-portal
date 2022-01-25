@@ -17,6 +17,7 @@
 2x2
 3D
 [23]G
+401K
 [245]xx
 4x
 8PpgqEqkQWA
@@ -113,6 +114,7 @@ artisanal
 Arun
 Asciidoctor
 ASG(s)?
+Ashby
 Ashok
 Asiedu-Ampem
 aspirational
@@ -159,6 +161,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+BankAccount
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -253,6 +256,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Cartographer
 Carvel('s)?
 cass-operator
 CCM
@@ -457,6 +461,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+Depedency
 deployable
 [Dd]eployable
 deserialize
@@ -507,6 +512,7 @@ DistributionStats
 DistributionSummary
 distroless
 distros
+DIY
 django-prometheus
 DLT
 DMs
@@ -579,6 +585,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+Espejo
 ESRI
 etcd(ctl)?
 Ethereum
@@ -602,6 +609,7 @@ F5
 facto
 failback
 [Ff]ailover(s)?
+FakeBankAccount
 Fakhouri
 Falco
 Fani
@@ -910,6 +918,7 @@ Jaeger
 JaFU
 Jakarta
 Jakub
+Jakub's
 Jarvinen
 Jasso
 JavaBean
@@ -1007,6 +1016,7 @@ KeyStore
 KIAM
 Kibana
 kitesurfing
+KlipTok
 KMS
 (KMS|kms)-plugin(s)?
 Knative
@@ -1067,6 +1077,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1088,6 +1099,7 @@ linter(s)?
 [Ll]inux
 Lippert
 Littleton
+livecoding
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
@@ -1513,6 +1525,7 @@ reachability
 reactively
 [Rr]eadiness([Pp]robe)?
 README
+RealBankAccount
 realtime
 rearchitect(ing)
 rebalance
@@ -1973,6 +1986,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
@@ -1997,6 +2011,7 @@ Wildfly
 [Ww]ireframe(s)?
 WireMock
 Wittrock
+WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
