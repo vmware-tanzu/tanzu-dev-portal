@@ -5,11 +5,11 @@ streaming: "twitch"
 id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/TanzuTV-SpringOneTour.png"
-weight: 7
+# weight: 7
 menu:
     main:
-        parent: "tv"
-        weight: 8
+        parent: "community"
+        weight: 4
 notwitchicon: true
 # Text that appears on show index page under show name
 description: 
