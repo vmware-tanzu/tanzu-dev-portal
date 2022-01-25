@@ -15,9 +15,9 @@ team:
 - Tony Vetter
 ---
 
-Deploying applications to VMware Tanzu Application Platform is a straight forward process, but there is some initial setup involved. Some, you would need to do regardless of the platform. Things like setting up a development namespace, and access controls. 
+Deploying applications to VMware Tanzu Application Platform is a straightforward process, but there is some initial setup involved. Some things, like setting up a development namespace and access controls, you would need to do regardless of the platform.
 
-Some things you need to do might be a bit different than you are used to. Things like creating the initial starter application, and deploying it via the included CI/CD pipeline. But hopefully, you will see the value in these steps, and this guide will highlight some of those benefits as you go through it. 
+Other things you need to do might be a bit different than you are used to, such as creating the initial starter application and deploying it via the included CI/CD pipeline. But, hopefully, you will see the value in these steps, and this guide will highlight some of their benefits as you go through it. 
 
 In this guide, you will walk through all of these actions. From setting up your development namespace, to deploying a sample application. 
 
@@ -35,13 +35,13 @@ These are some assumptions you should be aware of before proceeding with this gu
 ## Prerequisites
 * [A Tanzu Network account with `pivnet` installed](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
 * [The `tanzu` CLI installed and configured](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
-* [An install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
+* [An install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application Platform. 
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
 * [A GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) - You will use this account to `push` your sample application to, and later `clone`, modify, and `push` your code changes back to this repo. 
 
 ## Set up the environment
 
-In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
+In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information, such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
 
 1. Define the name of your new namespace. A sample default is provided here that will make sense for your sample app.
 
@@ -210,11 +210,11 @@ Here you are going to use the Tanzu Application Platform UI and its application 
 
     [Configuration review page](images/image4.png "Review changes and click create.")
 
-6. This will take you to a page which shows a stream of activity logs. Once complete, click **Download ZIP File**. Save this to a workspace directory where you manage git projects. Mine is my `~/workloads/` directory.
+6. This will take you to a page that shows a stream of activity logs. Once complete, click **Download ZIP File**. Save this to a workspace directory where you manage git projects. Mine is my `~/workloads/` directory.
 
     [Activity logs page](images/image5.png "Click download zip file. Save the file to a directory you use for git projects.")
 
-7. Back in your terminal, change directories to your workloads directory, and unzip the file. 
+7. Back in your terminal, change directories to your workloads directory and unzip the file. 
 
     ```sh
     tar xvf tanzu-java-web-app.zip 
@@ -222,7 +222,7 @@ Here you are going to use the Tanzu Application Platform UI and its application 
 
 8. Follow your preferred method for creating a new repository in GitHub and pushing up the `tanzu-java-web-app` directory as a new GitHub project. [Here](https://docs.github.com/en/github/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line) is GitHub's documentation for one example of how to do this.
 
-9. Now that you have your project ready in GitHub, you have all you need to deploy your application onto Tanzu Application Platform. Run the following command to create your workload.
+9. Now that you have your project ready in GitHub, you have all you need to deploy your application on to Tanzu Application Platform. Run the following command to create your workload.
 
     ```sh
     tanzu apps workload create tanzu-java-web-app \
@@ -318,7 +318,7 @@ This is a very simple application. All that should show up is the single line `G
 
 2. Click **Register Entity** in the upper right of the UI. 
 
-    [The front page of the Tanzu Application Platform UI](images/image6.png "Click register entity in the upper right hand corner.")
+    [The front page of the Tanzu Application Platform UI](images/image6.png "Click register entity in the upper right-hand corner.")
 
 3. In the field **Repository URL**, add the URL for the `catalog-info.yaml` file in your repository. It should be `https://github.com/$GITHUB_USERNAME/tanzu-java-web-app/blob/main/catalog-info.yaml`. Then click **Analyze**.
 
@@ -328,15 +328,15 @@ This is a very simple application. All that should show up is the single line `G
 
     [The application registration page](images/image8.png "Register your application and click analyze.")
 
-5. Click back on to the home page icon and see that your application instance has been registered. Clicking into this application, you can explore your deployment, and various metrics regarding its health. 
+5. Click back on the home page icon and see that your application instance has been registered. Clicking into this application, you can explore your deployment and various metrics regarding its health. 
 
     [The front page of the Tanzu Application Platform UI](images/image9.png "Start exploring your application's metrics.")
 
 ## Next steps
 
-You now have an application deployed on to Tanzu Application Platform. Of course, several steps were completed for you. These include creating the initial application accelerator (the starter application) and adding it to Tanzu Application Platform. As well as creating the various files necessary to deploy including the `workload.yaml`, and the `catalog-info.yaml`. 
+You now have an application deployed on to Tanzu Application Platform. Of course, several steps were completed for you. These include creating the initial application accelerator (the starter application) and adding it to Tanzu Application Platform, as well as creating the various files necessary to deploy, including the `workload.yaml` and the `catalog-info.yaml`. 
 
-While this may make a good follow on for a future guide, for now check out the [Documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-getting-started.html#section-2-create-your-application-accelerator-10) for information about creating these for yourself and your own custom applications. 
+While this might make a good follow-on for a future guide, for now check out the [Documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-getting-started.html#section-2-create-your-application-accelerator-10) for information about creating these for yourself and your own custom applications.
 
 Moving forward, check out the next post in this series:
 
