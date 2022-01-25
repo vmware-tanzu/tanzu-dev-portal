@@ -8,24 +8,23 @@ description: "Short description about this practice or workshop"
 # Note: remove any tags that are not relevant.
 tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
 length: "Short sentence regarding how many minutes, hours, or days this workshop takes"
-participants: "Who should be in this workshop? Examples include Core team, product stakeholders, designers, developers, etc."
+participants: "Pair / Cross-discipline. Ideally done one on one."
 # custom "cover" image example: "boris/boris.png"
 image: "cover-image.png" 
 lastmod: "2022-01-19"
 date: "2022-01-19"
 why: 
-- The first reason why you might perform this practice
-- Second if needed
-- Third, etc.
+- To come to an understanding of what went well (plus), and what could be changed to improve collaboration in future (delta)
+- To introduce a regular feedback cycle at a 1:1 / individual level that allows for more personal feedback
+- It focuses on a more frequent, smaller audience for feedback sessions, so it will be easier to organize, compared to a retrospective
+- To allow the feedback to focus on individual actions rather than team / group based actions generated from a group setting
 when:
-- First great time to perform his practice or workshop
-- Second if needed
-- Third, etc.
+- After the first day of pairing with someone first time
+- With people who do not regularly provide input in larger meetings
+- Start doing this daily, scale down to less frequent as both participants feel comfortable
 what:
-- List of supplies and artifacts needed for this practice or workshop
-- Super sticky 4x6 multicolor post-its, 4 pack
-- Sharpies
-- etc.
+- In Person: pieces of paper and pen
+- Remote: a way to share remote notes / Miro
 
 # If this practice or workshop has a Miro template: remote: true
 remote: false
@@ -52,25 +51,31 @@ Things to keep in mind:
 ***WARNING!*** ***WARNING!*** ***WARNING!*** 
 
 ### Sample Agenda & Prompts
-1. This is a numbered list of steps. With markdown, just keep using the `1.` and it'll automatically create the numbers.
-
-   You'll often have multiple paragraphs in one step. Like this one.
+1. Find a quiet area or zoom room with just the two of you
+1. Set aside 3-5 minutes to think of any Pluses / Deltas during the day, ranging from small to large topics.
    
-   Just space them in 3 spaces `<space><space><space>` from the margin and they will fall under that step instead of creating a new step.
+   For example (Plus): 
+     - “We handled that external meeting with the Security team well.”
+     - “Thanks for teaching me those keyboard shortcuts.”
 
-1. This will be the next step. It should render as `2`.
+   For example (Delta):
+     - “We did not take any breaks at all today.”
+     - “I felt I did not get access to the keyboard very much during our pair-programming session today.”
+     - I notice you always join meetings 5 minutes late, so we end up not ending the meeting on time.
 
-   {{< callout >}}
-   Tip: This is a "callout". You can use it for Tips, Warnings, Info, Quotes, things like that. 
-   {{< /callout >}}
-
-1. You can embed images like this: 
+   (Convert the above example into an image to break monotony.)
+1. Take turns each going over a plus / delta, alternating between pluses and deltas.
+1. Depending on the feedback, suggest changes for future working sessions.
+   For example:
+     - Let us ensure that tomorrow at 11 AM and 3 PM we take a 10 minute break.
+     - Let us ensure we end meetings on time so we end up causing all our meetings to run over.
+<!-- 2. You can embed images like this: 
 
    ![This is the default cover image as an example](/images/default-cover.png)
    
    Use [page bundles](https://gohugo.io/content-management/organization/#page-bundles) for images, so they go in an `images` directory underneath the same directory that the index.md file is in.
    
-   Try not to make them to large either in pixels or disk space. 1280px on the longest side and 400KB or so max. 
+   Try not to make them to large either in pixels or disk space. 1280px on the longest side and 400KB or so max.  -->
 
 ## Success/Expected Outcomes
 How do people know if this workshop was successful? 
