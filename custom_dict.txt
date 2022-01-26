@@ -256,6 +256,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Cartographer
 Carvel('s)?
 cass-operator
 CCM
@@ -584,6 +585,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+Espejo
 ESRI
 etcd(ctl)?
 Ethereum

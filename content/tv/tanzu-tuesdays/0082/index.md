@@ -10,6 +10,7 @@ guests:
 - Cora Iberkleid
 hosts:
 - Tiffany Jernigan
+- Whitney Lee
 lastmod: '2021-01-20'
 minutes: 60
 title: "Building Production Ready Container Images at Scale with Cora Iberkleid"
