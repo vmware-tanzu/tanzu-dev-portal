@@ -17,9 +17,9 @@ team:
 
 Building out an enterprise-scale, production-ready platform built on top of Kubernetes is one thing. But what about the actual day-to-day job of a developer? It's not about deploying applications and securing supply chains. It's about developing the application itself. 
 
-You have probably heard how VMware Tanzu Application Platform will make developer's work lives easier by allowing them to spend more time coding and less time managing environments. But how exactly does it enable this?
+You have probably heard how VMware Tanzu Application Platform will make developers’ work lives easier by allowing them to spend more time coding and less time managing environments. But how exactly does it enable this?
 
-In this guide, you will set up the Tanzu plugin for [VS Code](https://code.visualstudio.com), and use it to get a live view of your application while you are developing it. 
+In this guide, you will set up the Tanzu plug-in for [VS Code](https://code.visualstudio.com) and use it to get a live view of your application while you are developing it. 
 
 By the end of this guide, you will be editing code in your application, and previewing your edits via a live update session deployed locally. 
 
@@ -43,7 +43,7 @@ These are some assumptions you should be aware of before proceeding with this gu
 
 ## Set up the environment
 
-In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
+In order to make some commands easier to run, you should define some local environment variables. These will include sensitive information, such as passwords. This information will be stored in your shell history file. Be aware of this before proceeding, and consider this section optional. 
 
 1. Define your Docker Hub credentials.
 
@@ -59,7 +59,7 @@ In order to make some commands easier to run, you should define some local envir
 
 ## Installing dependencies
 
-There is one dependency which you will need to deploy locally in order for this workflow to work. [Tilt](https://tilt.dev) is an application for enabling live updates of your application while in development. The Tanzu tools for VS code use Tilt to enable this functionality.
+There is one dependency that you will need to deploy locally in order for this workflow to work. [Tilt](https://tilt.dev) is an application for enabling live updates of your application while in development. The Tanzu tools for VS code use Tilt to enable this functionality.
 
 1. Install `tilt`. The below command will work by itself, but note that if you are using alternative install methods, you need `v0.23.2` or later. 
 
@@ -77,11 +77,11 @@ The Tanzu extension for Visual Studio (VS) Code can be downloaded from the Tanzu
     pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.0.0' --product-file-id=1115996
     ```
 
-2. Click on the **Extensions** icon on the left. Them chick the `...` dropdown. And finally click **Install from VSIX**. 
+2. Click on the **Extensions** icon on the left. Then click the `...` dropdown. And finally click **Install from VSIX**. 
 
     [VS Code Extensions menu](images/image1.png "Click Install from VSIX in the settings menu.")
 
-    Alternatively, you can open the VS Code Command Palette with `cmd + shift + P`, and start typing `Install from VSIX`, then selecting that option.
+    Alternatively, you can open the VS Code Command Palette with `cmd + shift + P`, start typing `Install from VSIX`, then select that option.
 
 3. Navigate to the downloaded `.VSIX` file and click **Install*. 
 
@@ -89,13 +89,13 @@ The Tanzu extension for Visual Studio (VS) Code can be downloaded from the Tanzu
 
 ## Configuring the Visual Studio Code Tanzu extension
 
-The Tanzu Extension for VS Code has minimal configuration options, but it does need to be configured per application which you are working on. This section will walk you through these settings.
+The Tanzu Extension for VS Code has minimal configuration options, but it does need to be configured for each application you are working on. This section will walk you through these settings.
 
-1. Open the Tanzu Developer Tools settings by staying on the **Extensions** screen and searching for `@installed tanzu`. Then clicking the **gear** icon and finally clicking on the **Extension Settings** option.
+1. Open the Tanzu Developer Tools settings by staying on the **Extensions** screen and searching for `@installed tanzu`. Then click the **gear** icon and finally click on the **Extension Settings** option.
 
-    [VS Code file Extensions UI](images/image3.png "Find the tanzu extension settings menu and open it.")
+    [VS Code file Extensions UI](images/image3.png "Find the Tanzu extension settings menu and open it.")
 
-2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace** enter the `$DEVELOPMENT_NAMESPACE` set in the guide for [deploying an application](/guides/tanzu-application-platform-deploying-a-workload). Under **Tanzu: Source Image** enter your Docker Hub account name and repository as shown. 
+2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the `$DEVELOPMENT_NAMESPACE` set in the guide for [deploying an application](/guides/tanzu-application-platform-deploying-a-workload). Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown. 
 
     [VS Code file Extensions Setting UI](images/image4.png "Fill out the fields as shown.")
 
@@ -115,9 +115,9 @@ You are now ready to do some development on your application. Here, you will uti
     code $PROJECT_PATH
     ```
 
-2. Open the VS Code Command Pallet by pressing `cmd + shift + P` and searching for `tanzu`. Then click **Tanzu: Live Update Start**. 
+2. Open the VS Code Command Palette by pressing `cmd + shift + P` and searching for `tanzu`. Then click **Tanzu: Live Update Start**. 
 
-    [VS Code command pallet](images/image5.png "Select tanzu live update start")
+    [VS Code command palette](images/image5.png "Select tanzu live update start")
 
     Many logs will stream by in the **Terminal** window within VS Code. This is first the build logs from Tanzu Application Platform building your code into a runnable container and pushing it to your Docker Hub repository. 
 
@@ -144,9 +144,9 @@ You are now ready to do some development on your application. Here, you will uti
 
 That's it! You are now developing with Tanzu! 
 
-Throughout this series, you have gone from zero familiarity with VMware Tanzu, to setting up your own local development environment, deploying an application, and updating that application using Tanzu tools. 
+Throughout this series, you have gone from zero familiarity with VMware Tanzu to setting up your own local development environment, deploying an application, and updating that application using Tanzu tools. 
 
-## Nest steps
+## Next steps
 
 There is a lot more to explore now that your environment is ready and functional. Perhaps getting a local environment up and running? Or maybe setting up DNS so others can collaborate without updating `/etc/hosts`. Of course, you will want to deploy your own projects to Tanzu Application Platform and try this flow out again. 
 
