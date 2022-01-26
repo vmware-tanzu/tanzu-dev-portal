@@ -316,8 +316,5 @@ Let's set aside the funding and management adjustments you'll need to make to su
 ## (TBD) Q: What's our opinion of SAFe?
 Coming Soon!
 
-## (TBD) Q: Why do XP teams need a PaaS? Why do our clients need a PaaS even if they don't have XP teams?
-Coming Soon!
-
 ## (TBD) Q: When is it okay to bend "the rules"?
 Coming Soon!
