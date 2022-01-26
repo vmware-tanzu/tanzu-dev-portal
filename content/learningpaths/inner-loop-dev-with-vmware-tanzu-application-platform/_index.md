@@ -1,11 +1,10 @@
 ---
 title: Inner-loop Development with VMware Tanzu Application Platform
-description: |
-  Your ability to bring software to production consistently, reliably, and securely is the most critical component for bringing value to your customers. Here we explore the components that drive successful outcomes through mature software delivery practices.
+description: Build, deploy, and utilize VMware Tanzu Application Platform for your local development environmet.
 weight: 1
 featured: true
 duration: 180
-experience: Beginner
+experience: Intermediate
 layout: intro
 team:
 - Tony Vetter
