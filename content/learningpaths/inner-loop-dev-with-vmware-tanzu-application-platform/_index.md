@@ -1,6 +1,6 @@
 ---
 title: Inner-loop Development with VMware Tanzu Application Platform
-description: Build, deploy, and utilize VMware Tanzu Application Platform for your local development environmet.
+description: Build, deploy, and utilize VMware Tanzu Application Platform for your local development environment.
 weight: 1
 featured: true
 duration: 180
