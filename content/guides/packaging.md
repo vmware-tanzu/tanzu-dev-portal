@@ -57,7 +57,7 @@ These types of differences cannot be accounted for by native resource references
 Value duplication can be solved by elevating the level of abstraction at which resources are specified: using a language in place of data files.
 A configuration language can be as simple as an interpolator or it can expose features such as expressions (`appName + ":" + appPort`) and conditionals (`if appPort != "80"`).
 
-Some languages suffer from readability issues through introducing interpolation symbols (for example: `foo: {{ .myBarVar }}` vs `foo: bar`).
+Some languages have from readability issues through introducing interpolation symbols (for example: `foo: {{ .myBarVar }}` vs `foo: bar`).
 Language features also bring complexity and complexity brings bugs.
 Both of these issues are more prominent in languages that lack support for the underlying data structures and formats.
 Generic text templating languages fall into this category.

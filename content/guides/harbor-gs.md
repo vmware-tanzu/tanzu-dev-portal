@@ -415,7 +415,7 @@ use the `ClusterIssuer` called letsencrypt-staging, the one you set up earlier.
 This will come up again later when you move to production certificates. Comments
 are provided in the file for further detail.
 
-Finally, this values file will disable the Harbor Notary service. At the time of
+Finally, this values file will deactivate the Harbor Notary service. At the time of
 this writing there is a bug in the Bitnami Helm chart (already reported) that
 doesn't allow a TLS certificate to be applied for both `notary.$DOMAIN` and
 `registry.$DOMAIN`. I will try to update this post once that bug is fixed.

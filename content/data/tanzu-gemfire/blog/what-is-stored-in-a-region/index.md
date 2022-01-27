@@ -47,10 +47,10 @@ The type of `RegionEntryFactory` created by a Region depends on several factors 
 
 There are several groupings of `RegionEntryFactory` types including:
 
-- `VersionedThin` — creates RegionEntry instances for Regions that have concurrency checking enabled and statistics disabled
+- `VersionedThin` — creates RegionEntry instances for Regions that have concurrency checking enabled and statistics deactivated
 - `VersionedStats` — creates RegionEntry instances for Regions that have both concurrency checking and statistics enabled
-- `VMThin` — creates RegionEntry instances for Regions that have both concurrency checking and statistics disabled
-- `VMStats` — creates RegionEntry instances for Regions that have concurrency checking disabled and statistics enabled
+- `VMThin` — creates RegionEntry instances for Regions that have both concurrency checking and statistics deactivated
+- `VMStats` — creates RegionEntry instances for Regions that have concurrency checking deactivated and statistics enabled
 
 Each of these groupings includes several different `RegionEntryFactory` types. For example, the `VersionedThin` grouping includes:
 
@@ -64,7 +64,7 @@ Off-heap versions of each of these `VersionedThin` factories also exist. In addi
 ### RegionEntry
 The base implementation of RegionEntry is called [AbstractRegionEntry](https://github.com/apache/geode/blob/develop/geode-core/src/main/java/org/apache/geode/internal/cache/entries/AbstractRegionEntry.java). It has several direct abstract subclasses including:
 
-- `VMThinRegionEntry` — is a RegionEntry that has statistics disabled
+- `VMThinRegionEntry` — is a RegionEntry that has statistics deactivated
 - `VMStatsRegionEntry` — is a RegionEntry that provides extra statistics including hit, miss and lastAccessedTime
 - `AbstractLRURegionEntry` — is a RegionEntry that provides LRU destroy eviction behavior
 - `AbstractDiskRegionEntry` — is a RegionEntry that provides persistence or LRU overflow eviction behavior
