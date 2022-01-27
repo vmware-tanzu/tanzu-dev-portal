@@ -1081,7 +1081,7 @@ tls.key:
 
 #### Access Privilege Required to Create a Certificate
 
-- An Application team can have following namespaces seperated by network policy.
+- An Application team can have following namespaces separated by network policy.
   - istio-system
   - cert-manager
   - Dev
@@ -1644,7 +1644,7 @@ spec:
 #### Access Privilege Required to Create a Certificate and Gateway
 
 - All application teams are responsible for their service mesh.
-- An application team can have the following namespaces seperated by network policy.
+- An application team can have the following namespaces separated by network policy.
   - istio-system
   - cert-manager
   - Dev
