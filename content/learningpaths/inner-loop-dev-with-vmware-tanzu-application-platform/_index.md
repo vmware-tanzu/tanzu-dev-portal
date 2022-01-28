@@ -1,10 +1,10 @@
 ---
 title: Inner-Loop Development with VMware Tanzu Application Platform
-description: Kubernetes might not be the most developer-friendly platform out there. But platforms built on top of Kubernetes can be. This path walks you through deploying and using VMware Tanzu Application Platform, a platform for developers, built on top of Kubernetes. 
+description: This Learning Path walks you through deploying and using VMware Tanzu Application Platform, a platform for developers, built on top of Kubernetes. 
 weight: 1
 featured: true
 duration: 180
-experience: Beginner
+experience: Intermediate
 layout: intro
 team:
 - Tony Vetter

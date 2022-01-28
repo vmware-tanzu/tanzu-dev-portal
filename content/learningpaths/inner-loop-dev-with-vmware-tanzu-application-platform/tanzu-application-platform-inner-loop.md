@@ -1,5 +1,5 @@
 ---
-contentPage: "/guides/tanzu-application-platform-iner-loop/index.md"
+contentPage: "/guides/tanzu-application-platform-inner-loop/index.md"
 date: '2022-01-23'
 lastmod: '2022-01-23'
 layout: single
