@@ -44,7 +44,6 @@ level2: Team Tips
     - https://codenames.game/
     - http://www.spyfall.app/
     - http://skribbl.io/
-    - https://houseparty.com/
 
 ### Building empathy 
 - Try user manuals:
