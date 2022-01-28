@@ -8,4 +8,6 @@ team:
 - Aaron Torgerson
 title: It Works For Me!
 youtube_id: aXUOSabBluY
+tanzu:
+  label: tap
 ---

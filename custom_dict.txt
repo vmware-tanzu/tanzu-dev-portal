@@ -17,6 +17,7 @@
 2x2
 3D
 [23]G
+401K
 [245]xx
 4x
 8PpgqEqkQWA
@@ -26,12 +27,14 @@ Aasta
 Abbie
 Abdellfetah
 Abo
+Abrahams
 AbstractGatewaySenderEventProcessor
 AbstractRegionEntry
 AbstractRegionMap
 Abubakar
 Acceptor
 accessor
+[Aa]ccountabilities
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -46,6 +49,7 @@ addon(s)?
 Adib
 Admission(Response|Review)
 adoptopenjdk
+ADR(s)?
 AES-GCM
 affordances
 afterAcknowledgement
@@ -111,6 +115,7 @@ artisanal
 Arun
 Asciidoctor
 ASG(s)?
+Ashby
 Ashok
 Asiedu-Ampem
 aspirational
@@ -157,6 +162,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+BankAccount
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -212,6 +218,7 @@ Brannen
 brd1
 Brindley
 Brodi
+BSides
 bucketCount
 BucketRegion
 BucketRegion's
@@ -250,6 +257,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Cartographer
 Carvel('s)?
 cass-operator
 CCM
@@ -274,6 +282,7 @@ ChatOps
 checkboxes
 checkConnection
 Christoph
+Christos
 Chunyi
 ci
 CIDR(s)?
@@ -284,6 +293,7 @@ CKtaKhKOo-Y
 classpath
 clearnotifications
 clearNotifications
+Cleverley-Prance
 cli
 CLI(s|'s)?
 client[_-]golang
@@ -388,6 +398,7 @@ CSI(-plugin)?
 CSR(s)?
 CSV(s)?
 CTF
+CTFs
 CTO
 CTRL-C
 currentClientConnections
@@ -443,13 +454,16 @@ Debroy
 debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
+[Dd]eduplicate
 DEK(s)?
 delayDuration
 Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
+Denham-Parry
 denhamparry
+Depedency
 deployable
 [Dd]eployable
 deserialize
@@ -500,6 +514,7 @@ DistributionStats
 DistributionSummary
 distroless
 distros
+DIY
 django-prometheus
 DLT
 DMs
@@ -572,6 +587,7 @@ Enums
 [Ee]nv
 EOF
 ESB
+Espejo
 ESRI
 etcd(ctl)?
 Ethereum
@@ -595,6 +611,7 @@ F5
 facto
 failback
 [Ff]ailover(s)?
+FakeBankAccount
 Fakhouri
 Falco
 Fani
@@ -773,6 +790,7 @@ Gunicorn
 Guntur
 gzip(ped)?
 H2
+hackathons
 Hackenburg
 Hadlow
 Hamano
@@ -845,6 +863,7 @@ imposter
 [Ii]ncompressible
 InfoQ
 InfoSec
+ing
 IngressRoute
 init(Container)?
 InitialCapacity
@@ -902,6 +921,7 @@ Jaeger
 JaFU
 Jakarta
 Jakub
+Jakub's
 Jarvinen
 Jasso
 JavaBean
@@ -999,6 +1019,7 @@ KeyStore
 KIAM
 Kibana
 kitesurfing
+KlipTok
 KMS
 (KMS|kms)-plugin(s)?
 Knative
@@ -1059,6 +1080,7 @@ Kyverno
 labelset
 lastAccessedTime
 latencies
+LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
@@ -1080,10 +1102,12 @@ linter(s)?
 [Ll]inux
 Lippert
 Littleton
+livecoding
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
+livestreaming
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -1121,6 +1145,7 @@ m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 Macanufo
 MacBook
+[Mm]achina
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
@@ -1130,10 +1155,12 @@ Madhura
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
+MarkIT
 Martín
 Masala
 matchers
 matchings
+Matskas
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1464,6 +1491,7 @@ PromQL
 Promtail
 PropertySource(s)?
 [Pp]roto
+[Pp]roto-[Pp]ersona(s)?
 Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
@@ -1501,6 +1529,7 @@ reachability
 reactively
 [Rr]eadiness([Pp]robe)?
 README
+RealBankAccount
 realtime
 rearchitect(ing)
 rebalance
@@ -1580,6 +1609,7 @@ ROI
 rom-com
 rootPassword
 Rosecrance
+Rosenberg
 Rosso
 Roussos
 [Rr]outable
@@ -1626,6 +1656,7 @@ schema(s)?
 Schimanski
 Schutta
 Schwaber
+Scott
 screencaster
 SCS
 SDD
@@ -1780,6 +1811,7 @@ TAS
 TaskRepository
 Tatooine
 TBD
+TCE
 tchotchke
 TCP
 tdc-carvel-examples
@@ -1795,6 +1827,7 @@ telecom
 Templeton
 Teotti
 Teppanyaki
+TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
@@ -1846,6 +1879,7 @@ TTL(s)?
 tunable
 Turanski
 Turnquist
+Twilio
 Twistlock
 type=RegionStats-partition-Trades
 TypeRegistry
@@ -1905,6 +1939,7 @@ ValidatingAdmissionWebhook
 validators
 ValueComparator
 ValueComparer
+Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VCAP
@@ -1958,6 +1993,7 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+Waterhouse
 WaveConfigObject
 waypoints
 WCF
@@ -1982,6 +2018,7 @@ Wildfly
 [Ww]ireframe(s)?
 WireMock
 Wittrock
+WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
@@ -2002,6 +2039,7 @@ Yaron
 yay
 YCombinator
 Yonis
+Yorker
 youtube
 YTT
 ytt(-templatized)?

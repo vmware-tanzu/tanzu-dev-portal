@@ -1,0 +1,30 @@
+{{ if eq .Params.featuredspot 1 }}
+    <div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative w-100 active linked-box p-0">
+{{ else }}
+    <div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative w-100 linked-box p-0">
+{{ end }}
+    <a href="{{ .RelPermalink }}" class="vw-33">
+        <p><div class="link p-4 mb-0 text-left h3">{{ .Title }} </div></p>
+        <div class="learning-path-description py-3 px-4 mb-4 text-left" >{{ .Description }}</div>
+        <div class="row justify-content-between d-flex px-4">
+            <div class="learning-path-duration">
+                <i class="fas fa-hourglass-half"></i>
+                {{ if gt .Params.duration 60 }}
+                    <!-- Round up to closest full hour duration -->
+                    {{ math.Ceil (div .Params.duration 60.0) }}h    
+                {{ else }}
+                    {{ .Params.duration }}m
+                {{ end }}
+            </div>
+            <div class="learning-path-level">
+                {{ if eq .Params.experience "Beginner" }}
+                    <p class="h5"><span class="badge badge-success mr-3 py-1 px-2 antialiased">Beginner</span></p>
+                {{ else if eq .Params.experience "Intermediate" }}
+                    <p class="h5"><span class="badge badge-warning mr-3 py-1 px-2 antialiased">Intermediate</span></p>
+                {{ else if eq .Params.experience "Advanced" }}
+                    <p class="h5"><span class="badge badge-danger mr-3 py-1 px-2 antialiased">Advanced</span></p>
+                {{ end }}
+            </div>
+        </div>
+    </a>
+</div>

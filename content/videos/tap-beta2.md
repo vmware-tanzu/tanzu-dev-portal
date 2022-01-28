@@ -8,6 +8,8 @@ team:
 - Alex Barbato
 title: Overview of VMware Tanzu Application Platform Beta 2
 youtube_id: CTUYmOewYhQ
+tanzu:
+  label: tap
 ---
 
 Learn more and try out the beta yourself [here](https://tanzu.vmware.com/application-platform).
