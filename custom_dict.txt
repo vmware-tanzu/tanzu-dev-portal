@@ -162,6 +162,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+Bam
 BankAccount
 Baruch
 base64(-encoded)?
@@ -1023,11 +1024,11 @@ kitesurfing
 KlipTok
 KMS
 (KMS|kms)-plugin(s)?
-Knative
 knative
 Knative-serving
 Knative-Serving
 knative-serving
+Knative('s|.)?
 KNN
 KoFu
 Kostadis
