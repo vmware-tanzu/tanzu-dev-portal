@@ -200,19 +200,19 @@ Here you are going to use the Tanzu Application Platform UI and its application 
 
 3. Find the application called **Tanzu Java Web App**, and click **Choose**. 
 
-    [The application accelerator service included in Tanzu Application Platform](images/image2.png "Click Choose under Tanzu Java Web App.")
+    ![The application accelerator service included in Tanzu Application Platform](images/image2.png "Click Choose under Tanzu Java Web App.")
 
 4. In the section "Prefix for the container image repository", add `index.docker.io` as shown in the following image. Then click **Next Step**.
 
-    [The Tanzu Java Web App starter application configuration page](images/image3.png "Fill out the required sections and click next step.")
+    ![The Tanzu Java Web App starter application configuration page](images/image3.png "Fill out the required sections and click next step.")
 
 5. Review your changes, then click **Create**.
 
-    [Configuration review page](images/image4.png "Review changes and click create.")
+    ![Configuration review page](images/image4.png "Review changes and click create.")
 
 6. This will take you to a page that shows a stream of activity logs. Once complete, click **Download ZIP File**. Save this to a workspace directory where you manage git projects. Mine is my `~/workloads/` directory.
 
-    [Activity logs page](images/image5.png "Click download zip file. Save the file to a directory you use for git projects.")
+    ![Activity logs page](images/image5.png "Click download zip file. Save the file to a directory you use for git projects.")
 
 7. Back in your terminal, change directories to your workloads directory and unzip the file. 
 
@@ -318,19 +318,19 @@ This is a very simple application. All that should show up is the single line `G
 
 2. Click **Register Entity** in the upper right of the UI. 
 
-    [The front page of the Tanzu Application Platform UI](images/image6.png "Click register entity in the upper right-hand corner.")
+    ![The front page of the Tanzu Application Platform UI](images/image6.png "Click register entity in the upper right-hand corner.")
 
 3. In the field **Repository URL**, add the URL for the `catalog-info.yaml` file in your repository. It should be `https://github.com/$GITHUB_USERNAME/tanzu-java-web-app/blob/main/catalog-info.yaml`. Then click **Analyze**.
 
-    [The application registration page](images/image7.png "Register your application and click analyze.")
+    ![The application registration page](images/image7.png "Register your application and click analyze.")
 
 4. Click **Import**. 
 
-    [The application registration page](images/image8.png "Register your application and click analyze.")
+    ![The application registration page](images/image8.png "Register your application and click analyze.")
 
 5. Click back on the home page icon and see that your application instance has been registered. Clicking into this application, you can explore your deployment and various metrics regarding its health. 
 
-    [The front page of the Tanzu Application Platform UI](images/image9.png "Start exploring your application's metrics.")
+    ![The front page of the Tanzu Application Platform UI](images/image9.png "Start exploring your application's metrics.")
 
 ## Next steps
 
