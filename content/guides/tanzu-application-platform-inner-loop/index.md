@@ -79,13 +79,13 @@ The Tanzu extension for Visual Studio (VS) Code can be downloaded from the Tanzu
 
 2. Click on the **Extensions** icon on the left. Then click the `...` dropdown. And finally click **Install from VSIX**. 
 
-    [VS Code Extensions menu](images/image1.png "Click Install from VSIX in the settings menu.")
+    ![VS Code Extensions menu](images/image1.png "Click Install from VSIX in the settings menu.")
 
     Alternatively, you can open the VS Code Command Palette with `cmd + shift + P`, start typing `Install from VSIX`, then select that option.
 
 3. Navigate to the downloaded `.VSIX` file and click **Install*. 
 
-    [VS Code file install UI](images/image2.png "Navigate to the downloaded file, and click install.")
+    ![VS Code file install UI](images/image2.png "Navigate to the downloaded file, and click install.")
 
 ## Configuring the Visual Studio Code Tanzu extension
 
@@ -93,11 +93,11 @@ The Tanzu Extension for VS Code has minimal configuration options, but it does n
 
 1. Open the Tanzu Developer Tools settings by staying on the **Extensions** screen and searching for `@installed tanzu`. Then click the **gear** icon and finally click on the **Extension Settings** option.
 
-    [VS Code file Extensions UI](images/image3.png "Find the Tanzu extension settings menu and open it.")
+    ![VS Code file Extensions UI](images/image3.png "Find the Tanzu extension settings menu and open it.")
 
 2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the `$DEVELOPMENT_NAMESPACE` set in the guide for [deploying an application](/guides/tanzu-application-platform-deploying-a-workload). Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown. 
 
-    [VS Code file Extensions Setting UI](images/image4.png "Fill out the fields as shown.")
+    ![VS Code file Extensions Setting UI](images/image4.png "Fill out the fields as shown.")
 
 3. Add your current `kubectl` context for your Kubernetes cluster to your projects `Tiltfile`.
 
@@ -117,7 +117,7 @@ You are now ready to do some development on your application. Here, you will uti
 
 2. Open the VS Code Command Palette by pressing `cmd + shift + P` and searching for `tanzu`. Then click **Tanzu: Live Update Start**. 
 
-    [VS Code command palette](images/image5.png "Select tanzu live update start")
+    ![VS Code command palette](images/image5.png "Select tanzu live update start")
 
     Many logs will stream by in the **Terminal** window within VS Code. This is first the build logs from Tanzu Application Platform building your code into a runnable container and pushing it to your Docker Hub repository. 
 
