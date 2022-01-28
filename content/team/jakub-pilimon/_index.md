@@ -16,9 +16,9 @@ instagram: ""
 youtube: ""
 ---
 
-[Jakub](https://twitter.com/JakubPilimon) is a developer advocate at [VMware](https://vmware.com), blogger, programmer, and trainer. He loves to tackle complex enterprises with domain-driven design, test-driven development, and Spring. Architecture is a main area of interest, too. When he doesn't program, he rides motorbikes, skis, or practices kitesurfing.
+[Jakub Pilimon](https://twitter.com/JakubPilimon) is a Staff Technologist at [VMware](https://vmware.com), blogger, programmer, and trainer. His main duty is to tackle complex enterprises with Domain-Driven Design and to propose a model and architecture that solves a problem. Sometimes he is involved in refactoring projects. When he isn’t coding, you can find him riding his bike, reading, or practicing kitesurfing.
 
-He writes a [DZone MVB-awarded blog](https://pillopl.github.io) and his pet projects can be found at [https://github.com/ddd-by-examples](https://github.com/ddd-by-examples).
+Jakub's pet projects can be found at [https://github.com/ddd-by-examples](https://github.com/ddd-by-examples).
 
 <!--more-->
 
