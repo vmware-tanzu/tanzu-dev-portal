@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with the VMware `tanzu` CLI"
+title: "Getting Started with the VMware Tanzu CLI Core"
 description: Working with the VMware Tanzu suite of tools starts with tooling to deploy and manage those products. Learn how to install the `tanzu` CLI, and explore some of the basic functionality.
 date: 2022-01-23
 lastmod: 2022-01-23
@@ -56,49 +56,49 @@ You will need to create the install directory, download the `tar` file from the 
 
 3. Extract the `tar` file into the install directory created in the previous step.
   
-	```sh
-	tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
-	```
+    ```sh
+    tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
+    ```
 
 4. Change your working directory to the install directory.
 
-	```sh
-	cd ~/tanzu
-	```
+    ```sh
+    cd ~/tanzu
+    ```
 
 5. Run the install binary to complete the base installation.
 
-	```sh
-	sudo install cli/core/v0.10.0/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
-	```
+    ```sh
+    sudo install cli/core/v0.10.0/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
+    ```
 
 6. Verify the installation.
 
-	```sh
-	tanzu version
-	```
+    ```sh
+    tanzu version
+    ```
 	
     Example output: 
 	
     ```sh
-	tanzu version
+    tanzu version
     version: v0.10.0
     buildDate: 2021-11-03
     sha: fd96bebe
-	```
+    ```
 
 7. Initialize the `tanzu` CLI.
 
-	```
-	tanzu init
-	```
+    ```
+    tanzu init
+    ```
 	
     Example output:
-	
+
     ```sh
-	tanzu init
+    tanzu init
     | initializing ✔  successfully initialized CLI
-	```
+    ```
 
 You now have a basic installation of `tanzu`. In the next section, you will explore some of the more common functionality used with this tool.
 
@@ -114,16 +114,16 @@ First things first, you need to make sure you are running the latest and greates
 
 1. Update the `tanzu` CLI.
 
-	```sh
-	tanzu update
-	```
+    ```sh
+    tanzu update
+    ```
 
     Example output:
 
     ```sh
     tanzu update
     ℹ  the following updates will take place:
-     core v0.10.0 → v0.12.0
+    core v0.10.0 → v0.12.0
 
     ? would you like to continue? [y/n]
     ```
@@ -131,14 +131,15 @@ First things first, you need to make sure you are running the latest and greates
     If there is an update available, go ahead and install it by typing a `y`.
 
 	Example output:
-	```sh
-	✔  successfully updated CLI
-	```
+	
+    ```sh
+    ✔  successfully updated CLI
+    ```
 
 2. Verify the update process.
 
-	```sh
-	tanzu version
+    ```sh
+    tanzu version
     ```
 
     Example output: 
@@ -160,32 +161,32 @@ Some of these plug-ins are built in. And for managing certain products, addition
 
 1. List the plug-ins currently available to you.
 
-	```sh
-	tanzu plugin list
-	```
+    ```sh
+    tanzu plugin list
+    ```
 	
     Example output:
 	
     ```sh
-	tanzu plugin list
-  	NAME                DESCRIPTION                                                        SCOPE       DISCOVERY  VERSION  STATUS
-  	login               Login to the platform                                              Standalone  default    v0.12.0  installed
-  	management-cluster  Kubernetes management-cluster operations                           Standalone  default    v0.12.0  installed
-  	package             Tanzu package management                                           Standalone  default    v0.12.0  installed
-  	pinniped-auth       Pinniped authentication operations (usually not directly invoked)  Standalone  default    v0.12.0  installed
-  	secret              Tanzu secret management                                            Standalone  default    v0.12.0  installed
-	```
+    tanzu plugin list
+    NAME                DESCRIPTION                                                        SCOPE       DISCOVERY  VERSION  STATUS
+    login               Login to the platform                                              Standalone  default    v0.12.0  installed
+    management-cluster  Kubernetes management-cluster operations                           Standalone  default    v0.12.0  installed
+    package             Tanzu package management                                           Standalone  default    v0.12.0  installed
+    pinniped-auth       Pinniped authentication operations (usually not directly invoked)  Standalone  default    v0.12.0  installed
+    secret              Tanzu secret management                                            Standalone  default    v0.12.0  installed
+    ```
 
 2. **Optional**: If your plug-ins are listed as `not installed`, this can sometimes happen after an upgrade, since the plug-ins and the `tanzu` CLI itself can have different release schedules. If this is the case, you can reinstall and upgrade each plug-in individually here.
 	
     ```sh
-	tanzu plugin install <package-name>
-	```
+    tanzu plugin install <package-name>
+    ```
 
 3. **Optional**: If your plug-ins are listed as `upgrade available`, again this can happen due to the separate release schedules and lifecycle management strategies of plug-ins versus the Tanzu CLI itself. You can upgrade each plug-in individually here.
 	
     ```sh
-	tanzu plugin upgrade <plugin-name>
+    tanzu plugin upgrade <plugin-name>
     ```
 
 There are other useful commands for managing plug-ins as well. Use the `--help` flag at any time to get a list of available commands and their usage.
@@ -198,39 +199,39 @@ Some packages are included by default. And like plug-ins, more can be added usin
 
 1. List packages currently available to you. 
 
-	```sh
-	tanzu package available list
-	```
+    ```sh
+    tanzu package available list
+    ```
 	
     Example output:
 	
     ```sh
-	\ Retrieving available packages...
-  	NAME                           DISPLAY-NAME  SHORT-DESCRIPTION                                                                                           LATEST-VERSION
-  	cert-manager.tanzu.vmware.com  cert-manager  Certificate management                                                                                      1.5.3+vmware.2-tkg.1-tf-v0.11.0
-  	contour.tanzu.vmware.com       contour       An ingress controller                                                                                       1.18.2+vmware.1-tkg.1-tf-v0.11.0
-  	external-dns.tanzu.vmware.com  external-dns  This package provides DNS synchronization functionality.                                                    0.10.0+vmware.1-tkg.1-tf-v0.11.0
-  	fluent-bit.tanzu.vmware.com    fluent-bit    Fluent Bit is a fast Log Processor and Forwarder                                                            1.7.5+vmware.1-tkg.2-tf-v0.11.0
-  	grafana.tanzu.vmware.com       grafana       Visualization and analytics software                                                                        7.5.7+vmware.1-tkg.2-tf-v0.11.0
-  	harbor.tanzu.vmware.com        harbor        OCI Registry                                                                                                2.3.3+vmware.1-tkg.1-tf-v0.11.0
-  	multus-cni.tanzu.vmware.com    multus-cni    This package provides the ability for enabling attaching multiple network interfaces to pods in Kubernetes  3.7.1+vmware.2-tkg.2-tf-v0.11.0
-  	prometheus.tanzu.vmware.com    prometheus    A time series database for your metrics                                                                     2.27.0+vmware.1-tkg.2-tf-v0.11.0
-	```
+    \ Retrieving available packages...
+    NAME                           DISPLAY-NAME  SHORT-DESCRIPTION                                                                                           LATEST-VERSION
+    cert-manager.tanzu.vmware.com  cert-manager  Certificate management                                                                                      1.5.3+vmware.2-tkg.1-tf-v0.11.0
+    contour.tanzu.vmware.com       contour       An ingress controller                                                                                       1.18.2+vmware.1-tkg.1-tf-v0.11.0
+    external-dns.tanzu.vmware.com  external-dns  This package provides DNS synchronization functionality.                                                    0.10.0+vmware.1-tkg.1-tf-v0.11.0
+    fluent-bit.tanzu.vmware.com    fluent-bit    Fluent Bit is a fast Log Processor and Forwarder                                                            1.7.5+vmware.1-tkg.2-tf-v0.11.0
+    grafana.tanzu.vmware.com       grafana       Visualization and analytics software                                                                        7.5.7+vmware.1-tkg.2-tf-v0.11.0
+    harbor.tanzu.vmware.com        harbor        OCI Registry                                                                                                2.3.3+vmware.1-tkg.1-tf-v0.11.0
+    multus-cni.tanzu.vmware.com    multus-cni    This package provides the ability for enabling attaching multiple network interfaces to pods in Kubernetes  3.7.1+vmware.2-tkg.2-tf-v0.11.0
+    prometheus.tanzu.vmware.com    prometheus    A time series database for your metrics                                                                     2.27.0+vmware.1-tkg.2-tf-v0.11.0
+    ```
 	
     Here you can see the package name, the display name, a brief description of each package, and its version.
 
 2. List repositories currently available to you. Since the only packages available are the ones built in, there won’t be any repositories added yet. 
 
-	```sh
-	tanzu package repository list
-	```
+    ```sh
+    tanzu package repository list
+    ```
 
 	Example output:
 
-	```sh
-	\ Retrieving repositories…
+    ```sh
+    \ Retrieving repositories…
     NAME  REPOSITORY  TAG  STATUS  DETAILS
-	```
+    ```
 
 There are other useful commands for managing packages as well. Use the `--help` flag at any time to get a list of available commands and their usage.
 
@@ -240,22 +241,22 @@ You haven’t created any clusters yet, so this section won’t be that interest
 
 1. List clusters currently connected to your Tanzu CLI.
 
-	```sh
-	tanzu cluster list
-	```
+    ```sh
+    tanzu cluster list
+    ```
 
 	Example output:
 
-	```sh
-	tanzu cluster list
+    ```sh
+    tanzu cluster list
     NAME  NAMESPACE  STATUS  CONTROLPLANE  WORKERS  KUBERNETES  ROLES  PLAN
-	```
+    ```
 
 2. Take a look at how easy it is to create a new Kubernetes cluster using the Tanzu CLI. You will create one in a future guide. 
 	
     ```sh
-	tanzu cluster create --help
-	```
+    tanzu cluster create --help
+    ```
 
 There is a lot more to unpack with managing clusters, but since you don’t have one to manage yet, this is all you are going to do as part of this guide. 
 
@@ -273,9 +274,9 @@ Before you delete the tool, make sure that any clusters you have created are del
 
 1. Remove all of the created directories and the Tanzu binary.
 
-	```sh
-	sudo rm -rf ~/tanzu/cli ~/.config/tanzu ~/Library/Application\ Support/tanzu-cli/* /usr/local/bin/tanzu ~/.cache/tanzu
-	```	
+    ```sh
+    sudo rm -rf ~/tanzu/cli ~/.config/tanzu ~/Library/Application\ Support/tanzu-cli/* /usr/local/bin/tanzu ~/.cache/tanzu
+    ```	
 
 From here, you can go back through the install process above and reinstall if needed. 
 
