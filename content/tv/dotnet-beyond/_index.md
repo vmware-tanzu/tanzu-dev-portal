@@ -11,5 +11,5 @@ menu:
         parent: "tv"
         weight: 10
 # Text that appears on show index page under show name
-description: Join Layla and guest from the .NET community to chat and code.
+description: A collection of conversations exploring the wider world of .NET
 ---

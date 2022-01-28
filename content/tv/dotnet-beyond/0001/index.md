@@ -38,10 +38,11 @@ hide_newsletter: true
 twitch: vmwaretanzu
 banner_only: true
 calendar: true
+beyond: true
 ---
 Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on Twitch as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale. We'll look not only at what they're building, but how they're doing it. No matter where you fit in the .NET spectrum, you're guaranteed to pick up something you haven't learned yet. 
 
-<a class='btn mt-2' href='https://www.twitch.tv/vmwaretanzu'>Watch on Twitch</a>
+<a class='btn mt-2 mb-5' href='https://www.twitch.tv/vmwaretanzu'>Watch on Twitch</a>
 
 <h2 class="mb-4 mt-4">Day 1</h2>
 
