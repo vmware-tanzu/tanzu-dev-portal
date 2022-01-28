@@ -589,6 +589,7 @@ EOF
 ESB
 Espejo
 ESRI
+ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -1152,6 +1153,7 @@ Maciaszek-Sharma
 Madhav
 Madhura
 [mM]akefile
+mappable
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
@@ -1587,9 +1589,12 @@ RestAssured
 Restic
 restorable
 RestrictedMethodAuthorizer
+RestTemplate
 Retrium
 revertibility
 rewatch
+rewrap
+rewrapping
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1754,6 +1759,7 @@ ssh-keygen
 SSL
 sso|SSO
 Stacker
+Standley
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
@@ -2000,6 +2006,8 @@ WCF
 webapp
 webapps_default
 Webber
+WebClient
+WebClient's
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
