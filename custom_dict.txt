@@ -69,6 +69,7 @@ allenholub
 Alpine(-based)?
 Amaro
 amd64
+AMI
 amongst
 AMQP
 [Aa]nalytics
@@ -262,6 +263,7 @@ cass-operator
 CCM
 cd
 Cedrick
+CEIP
 CentOS
 Ceph
 CertificateRequests
@@ -870,6 +872,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+installable
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1412,6 +1415,7 @@ Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
+pivnet
 PKCS
 PKI
 plaintext
@@ -1799,6 +1803,7 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+[Tt]anzu
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1975,11 +1980,13 @@ VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
 VPA(s|'s)?
+VPC
 vRealize
 vRLI
 vSAN
 vsd
 vsd's
+VSIX
 vSphere
 vSwitch
 Vue
