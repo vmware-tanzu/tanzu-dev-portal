@@ -1,5 +1,5 @@
 ---
-title: What is Knative Serving? (A Poorly Illustrated Guide)
+title: What is Knative Serving? (A Colorful Guide)
 description: What is Knative Serving, exactly? Read this poorly illustrated blog post to gain a high-level understanding of Knative Serving, its main components, and how it simplifies and improves the way that apps run on Kubernetes.
 date: 2022-01-31
 lastmod: 2022-01-31
