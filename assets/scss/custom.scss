@@ -515,13 +515,46 @@
   }
   #beyond-logo {
     height: 170px;
-    transform: translateX(-19px);
+    transform: translate(-19px, 6px);
   }
 }
 
 #beyond-main {
   background-color: #22343c !important;
 
+  .btn {
+    background: rgb(127,53,178);
+    background: linear-gradient(90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%);
+    border: none;
+    color: white;
+    span {
+      z-index: 3;
+    }
+  }
+  .btn:after {
+    background: linear-gradient(-90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%);
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: opacity .2s ease-out;
+  }
+  .btn:hover:after {
+    opacity: 1;
+  }
+
+  a:not(.btn) {
+    color: #AD48F1;
+    
+    &:hover {
+      color: #0091DA;
+    }
+  }
   #live {
     display: none !important;
   }

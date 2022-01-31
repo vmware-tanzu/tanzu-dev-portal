@@ -5,7 +5,7 @@ streaming: "twitch"
 id: "dotnet-beyond"
 image: "dotnet-wild.png"
 og_image: ""
-weight: 11
+weight: 3
 menu:
     main:
         parent: "tv"
