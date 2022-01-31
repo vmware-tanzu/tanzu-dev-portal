@@ -69,6 +69,7 @@ allenholub
 Alpine(-based)?
 Amaro
 amd64
+AMI
 amongst
 AMQP
 [Aa]nalytics
@@ -161,6 +162,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+Bam
 BankAccount
 Baruch
 base64(-encoded)?
@@ -262,6 +264,7 @@ cass-operator
 CCM
 cd
 Cedrick
+CEIP
 CentOS
 Ceph
 CertificateRequests
@@ -587,6 +590,7 @@ EOF
 ESB
 Espejo
 ESRI
+ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -870,6 +874,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+installable
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1019,11 +1024,11 @@ kitesurfing
 KlipTok
 KMS
 (KMS|kms)-plugin(s)?
-Knative
 knative
 Knative-serving
 Knative-Serving
 knative-serving
+Knative('s|.)?
 KNN
 KoFu
 Kostadis
@@ -1149,6 +1154,7 @@ Maciaszek-Sharma
 Madhav
 Madhura
 [mM]akefile
+mappable
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
@@ -1412,6 +1418,7 @@ Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
+pivnet
 PKCS
 PKI
 plaintext
@@ -1583,9 +1590,12 @@ RestAssured
 Restic
 restorable
 RestrictedMethodAuthorizer
+RestTemplate
 Retrium
 revertibility
 rewatch
+rewrap
+rewrapping
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1750,6 +1760,7 @@ ssh-keygen
 SSL
 sso|SSO
 Stacker
+Standley
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
@@ -1799,6 +1810,7 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+[Tt]anzu
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1975,11 +1987,13 @@ VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
 VPA(s|'s)?
+VPC
 vRealize
 vRLI
 vSAN
 vsd
 vsd's
+VSIX
 vSphere
 vSwitch
 Vue
@@ -1993,6 +2007,8 @@ WCF
 webapp
 webapps_default
 Webber
+WebClient
+WebClient's
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
