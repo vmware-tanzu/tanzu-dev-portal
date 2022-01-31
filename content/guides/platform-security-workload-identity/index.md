@@ -86,7 +86,7 @@ compromise. Again you need to ensure that secrets are distributed to all calling
 applications and kept in sync. There are many secret stores ([HashiCorp
 Vault](https://www.hashicorp.com/products/vault/) is a prominent and mature
 example) that offer integrations that get close to this goal however these still
-suffer from the initial _secure introduction problem_.
+have the initial _secure introduction problem_.
 
 The [secure introduction
 problem](https://learn.hashicorp.com/vault/identity-access-management/iam-secure-intro)
