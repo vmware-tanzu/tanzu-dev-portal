@@ -1,16 +1,16 @@
 ---
-Date: '2022-02-1T18:30:00-00:00'
+Date: '2022-02-01T18:30:00-00:00'
 Description: .NET in the Wild with Jeff Fritz
-PublishDate: '2022-01-19T00:00:00-00:00'
+PublishDate: '2022-02-1T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/7
 author: laylap
-date: '2022-02-1'
+date: '2022-02-01'
 episode: '7'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2022-01-19'
+lastmod: '2022-02-01'
 title: Jeff Fritz and Layla talk about KlipTok and livecoding!
 truncate: ''
 twitch: vmwaretanzu
