@@ -210,6 +210,7 @@ br/
 Brandolini('s)?
 Brannen
 brd1
+BrighterCommand
 Brindley
 Brodi
 bucketCount
@@ -460,6 +461,7 @@ DestinationRule
 [Dd]ev(s)?
 [Dd]ev[Rr]el
 developer-centric
+DevIntersection
 DevNexus
 Devoops
 DEVOPS
@@ -678,6 +680,7 @@ GatewaysSender
 Gaubert
 GBP
 GC(E|L|P|R|S)?
+geeking
 Geesaman
 Gemfiles
 GemFire
@@ -843,6 +846,7 @@ implementors
 imposter
 [Ii]ncentivized
 [Ii]ncompressible
+influencer
 InfoQ
 InfoSec
 ing
@@ -958,6 +962,7 @@ JSP
 JSR-352
 JST
 judgement
+julielerman
 Julien
 jumpstart
 Junio
@@ -1063,10 +1068,12 @@ layla-p
 LaylaCodesIt
 Lazu
 LDAP
+ldnug
 [Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
+Lerman
 letsencrypt-staging
 libnss-wrapper
 libs
@@ -1162,6 +1169,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
+mid-1990s
 [Mm]iddleware
 Migros
 Mik
@@ -1191,6 +1199,7 @@ MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
 MQ
 MSc
+MSDN
 msgpack(ed)?
 mTLS
 MTT(D|R)
@@ -1281,6 +1290,7 @@ Oleh
 olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
+Omniplan
 on-prem
 onboarded
 [Oo]nboarding
@@ -1491,6 +1501,7 @@ quokka
 (r)?syslog
 r0
 RabbitMQ('s)?
+Radware
 Raju
 Rakuten
 RBAC(-enabled)?
@@ -1591,6 +1602,7 @@ RSocket(-based)?
 Ruckle
 Rudd
 Rumans
+RunAs
 runnable
 Runtimes
 runtimes?
@@ -1738,6 +1750,7 @@ Stéphane
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
+Strangeloop
 strategizing
 Strategyzer
 Stratton
@@ -1771,6 +1784,7 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+Talkshow
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1789,6 +1803,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
+Telerik
 [Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
