@@ -1,12 +1,12 @@
 ---
-name: Matt Stratton
+name: Jeff Strauss
 description: ""
 roles: ["host"]
 skills: ""
 location: ""
 
 # Social Media
-twitter: "mattstratton"
+twitter: "jeffreystrauss"
 website: ""
 facebook: ""
 linkedin: ""
@@ -16,11 +16,10 @@ instagram: ""
 youtube: ""
 ---
 
-Matt Stratton is a Staff Developer Advocate at Pulumi, founder and co-host of the popular Arrested DevOps podcast, and the global chair of the DevOpsDays set of conferences.
+Jeff is an executive consultant, a community organizer, an open source advocate, and an attorney. As the Director of Community and Developer Relations at Accenture Product and Platform Engineering Services (formerly Headspring), he maintains a passion for bringing people together in ways that both evolve internal practices and promote technical thought leadership across our industry. In addition, he regularly consults with Fortune 500 business leaders to help them understand and chart their own community paths in a world of ever-changing and modernizing technology solutions.
 
-Matt has over 20 years of experience in IT operations and is a sought-after speaker internationally, presenting at Agile, DevOps, and cloud engineering focused events worldwide. Demonstrating his keen insight into the changing landscape of technology, he recently changed his license plate from DEVOPS to KUBECTL.
+A long-time dedicated member of the developer community, Jeff has been a director of the .NET Foundation and a Microsoft MVP, and travels internationally to speak on technical, business, and community-oriented topics. He serves as a lead organizer for the Kansas City Developer Conference, #MetaConference, and Dev Around The Sun.
 
-He lives in Chicago and has three awesome kids, whom he loves just a little bit more than he loves Diet Coke. Matt is the keeper of the Thought Leaderboard for the DevOps Party Games online game show and you can find him on Twitter at @mattstratton.
 
 
 <!--more-->
