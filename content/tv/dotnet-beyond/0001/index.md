@@ -29,6 +29,20 @@ hosts:
 - Jeff Strauss
 - Ed Charbeneau
 - Jakub Pilimon
+faqs:
+  faq:
+  - question: What is .NET Beyond?
+    answer: It's a community event spread over two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch.TV</a>. Some of the smartest voices in the .NET community will come together to present and discuss how they're using .NET to develop for the enterprise, and at scale. It'll be educational for all attendees, featuring interactive, live Q&A. 
+  - question: Sounds great! When does it all go down?
+    answer: The festivities take place over two exciting days. It kicks off on March 30, 2022 at 10:30 AM ET/7:30 AM PT/3:30 PM GMT, and on March 31, 2022 at 4:45 AM ET/1:45 AM PT/9:45 AM GMT. It's gonna be a worldwide jam.
+  - question: And how much does it cost?
+    answer: Keep your money, friend; this event is free. 
+  - question: Now we're talking. Also...what's Twitch? Do I need to have an account there?
+    answer: Twitch is an interactive streaming service for all kinds of content. You don't need an account to watch any of the .NET Beyond talks, but you will need to sign up and log in to participate in the chat. 
+  - question: What does VMware have to do with .NET?
+    answer: VMware is a big fan of .NET! Not only can .NET applications be deployed to VMware Tanzu, but we're part of the .NET Foundation and support Steeltoe.io.
+  - question: Do you have a Code of Conduct?
+    answer: Oh, most certainly we do! <a href="/developer/code-of-conduct/">Check it out</a>.
 lastmod: '2022-01-27'
 publishdate: '2022-01-27'
 title: .NET Beyond
@@ -40,6 +54,8 @@ twitch: vmwaretanzu
 banner_only: true
 calendar: true
 beyond: true
+contact: TanzuEvents@vmware.com
+code_of_conduct: true
 ---
 <div id='day-1-reminder' class='p-5' style='display: none; width: 500px'>
 <h3 class='text-white mb-3 text-center'>Add to calendar</h3>
@@ -60,7 +76,7 @@ beyond: true
 <p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and <a href="https://dotnetbeyond.io/youtube">YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale. We'll look not only at what they're building, but how they're doing it. No matter where you fit in the .NET spectrum, you're guaranteed to pick up something you haven't learned yet.</p>
 <p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check mr-1'></i>Add to calendar</a></strong></p>
 </div>
-<div class="col-3 text-right p-4" style="background-color: #1B2A32">
+<div class="col-3 text-center p-4" style="background-color: #1B2A32">
 <div class="newsletter">
   <p class="text-white mt-0">Sign up for the developer newsletter</p>
   <div class='btn beyond-btn btn-small click-to-show scroll-to-bottom position-relative'><span class="position-relative">Subscribe</span></div>

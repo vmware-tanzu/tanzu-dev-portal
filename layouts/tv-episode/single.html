@@ -221,7 +221,19 @@
   </div>
   {{ end }}
 
-  {{ if and (.Params.contact) (.Params.code_of_conduct) }}
+  <div class="row justify-content-center mb-5">
+		<div class="col-lg-9 px-0">
+      {{ partial "faqs.html" . }}
+    </div>
+  </div>
+
+  {{ if and (.Params.contact) (.Params.code_of_conduct) ( .Params.beyond ) }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ else if and (.Params.contact) (.Params.code_of_conduct) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
         <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
@@ -247,7 +259,6 @@
       </div>
     </div>
   </div>
-
 </div>
 
 {{ partial "amplitude.html" (dict "context" . "event" "episode played") }}
