@@ -74,7 +74,7 @@ code_of_conduct: true
 <div class="row mb-5">
 <div class="col-9 pl-0 pr-lg-5">
 <p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and <a href="https://dotnetbeyond.io/youtube">YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale. We'll look not only at what they're building, but how they're doing it. No matter where you fit in the .NET spectrum, you're guaranteed to pick up something you haven't learned yet.</p>
-<p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check mr-1'></i>Add to calendar</a></strong></p>
+<p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check ml-0 mr-1'></i>Add to calendar</a></strong></p>
 </div>
 <div class="col-3 text-center p-4" style="background-color: #1B2A32">
 <div class="newsletter">
