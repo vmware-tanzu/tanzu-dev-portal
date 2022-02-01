@@ -54,23 +54,24 @@ calendar: true
 beyond: true
 contact: TanzuEvents@vmware.com
 code_of_conduct: true
+description: A collection of conversations exploring the wider world of .NET
 ---
 <div id='day-1-reminder' class='p-5' style='display: none; width: 500px'>
 <h3 class='text-white mb-3 text-center'>Add to calendar</h3>
 <div class='d-flex justify-content-center'>
     <script type="text/javascript">
         cal_single = ics();
-        cal_single.addEvent('.NET Beyond', 'https://www.twitch.tv/vmwaretanzu', 'Twitch', '03/30/2022 08:00 am PT', '03/31/2022 05:00 pm PT');
+        cal_single.addEvent('.NET Beyond', 'https://www.twitch.tv/vmwaretanzu', 'Twitch', '03/30/2022 08:00 am PDT', '03/31/2022 05:00 pm PDT');
     </script>
     <a href="#"
       onclick="javascript:cal_single.download('.NET Beyond on Twitch')"
       class='beyond-btn btn mr-2 mb-2 position-relative z-1'><span class="position-relative">Outlook/iCal</span></a> 
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=.NET+Beyond&details=Join+some+of+the+smartest+voices+in+the+.NET+community+on+Twitch+as+they+come+together+to+present+and+discuss+how+they%27re+using+.NET+to+develop+for+the+enterprise+and+at+scale.%0A%0AWatch+here%3A+https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&dates=20220330T160000Z%2F20220331T160000Z" class='beyond-btn btn mb-2 position-relative z-1'><span class="position-relative">Google Calendar</span></a>
+    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=.NET+Beyond&details=Join+some+of+the+smartest+voices+in+the+.NET+community+on+Twitch+as+they+come+together+to+present+and+discuss+how+they%27re+using+.NET+to+develop+for+the+enterprise+and+at+scale.%0A%0AWatch+here%3A+https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&dates=20220330T150000Z%2F20220331T180000Z" class='beyond-btn btn mb-2 position-relative z-1'><span class="position-relative">Google Calendar</span></a>
 </div>
 </div>
 <div class="row mb-5">
 <div class="col-9 pl-0 pr-lg-5">
-<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and <a href="https://dotnetbeyond.io/youtube">YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale. We'll look not only at what they're building, but how they're doing it. No matter where you fit in the .NET spectrum, you're guaranteed to pick up something you haven't learned yet.</p>
+<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and <a href="https://dotnetbeyond.io/youtube">YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
 <p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check ml-0 mr-1'></i>Add to calendar</a></strong></p>
 </div>
 <div class="col-3 text-center p-4" style="background-color: #1B2A32">
@@ -82,14 +83,14 @@ code_of_conduct: true
   <script>
     MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
     MktoForms2.loadForm("https://connect.tanzu.vmware.com", "625-IUJ-009", 1609, function(form){
-      form.setValues({ "Function__c": "Developer" });
+      form.setValues({ "Function__c": "Developer", "utm_campaign__c": "NET Beyond"  });
       form.onSuccess(function(values, followUpUrl) {
         form.getFormElem().hide();
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event' : 'ctaSubmitted',  
             'eventCategory': 'Subscription',  
-            'eventAction': 'Form Submitted', 
+            'eventAction': 'Form Submitted',
             'eventLabel': 'Newsletter'
         });
         window.dataLayer.push({'event': 'logEvent', 'eventType': 'newsletter subscribed', 'eventProperties': {'page name': '{{ .Title }}', 'source': 'footer'} });
@@ -122,7 +123,7 @@ code_of_conduct: true
     <span class="company d-block fs-90 opacity-4">.NET Rocks</span>
   </div>
 </div>
-<div id="history" class='p-5' style='display: none;width:600px'><p>.NET continues to evolve - but how did it get here? Join Richard Campbell on a tour of the history of .NET, Visual Studio and the related tools that have been helping developers produce millions of applications. So many forces shape how development tools are created, and Richard ties together the story of the hardware, software, market and political forces that have brought .NET to be an open-source, cross-platform development platform. The winding path of .NET has been influenced by many things along the way, and the future looks bright!</p></div>
+<div id="history" class='p-5' style='display: none;width:600px'><p>.NET continues to evolve—but how did it get here? Join Richard Campbell on a tour of the history of .NET, Visual Studio, and the related tools that have been helping developers produce millions of applications. So many forces shape how development tools are created, and Richard ties together the story of the hardware, software, market, and political forces that have brought .NET to be an open source, cross-platform development platform. The winding path of .NET has been influenced by many things along the way, and the future looks bright!</p></div>
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">9:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#scalability-and-security">Scalability and Security with K8s and Azure Active Directory</a></div>
@@ -182,7 +183,7 @@ code_of_conduct: true
     <span class="company d-block fs-90 opacity-4">VMware</span>
   </div>
 </div>
-<div id="tap" class='p-5' style='display: none;width:600px'><p>Kubernetes may be a powerful platform for running your containerized applications, but that power comes with a steep learning curve. Developers are often required to wrestle with Dockerfiles and walls of YAML to get their application properly deployed. This session will introduce you to Tanzu Application Platform and show how it allows developers to stay focused on the application code and not have to worry about the complexities of containers and Kubernetes.</p></div>
+<div id="tap" class='p-5' style='display: none;width:600px'><p>Kubernetes may be a powerful platform for running your containerized applications, but that power comes with a steep learning curve. Developers are often required to wrestle with Dockerfiles and walls of YAML to get their application properly deployed. This session will introduce you to VMware Tanzu Application Platform and show how it allows developers to stay focused on the application code and not have to worry about the complexities of containers and Kubernetes.</p></div>
 <div class="row py-3">
   <div class="time col-2 pl-0 h4">14:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#mobile">Mobile DevOps at Scale</a></div>
@@ -194,7 +195,7 @@ code_of_conduct: true
     <span class="company d-block fs-90 opacity-4">Megsoft</span>
   </div>
 </div>
-<div id="mobile" class='p-5' style='display: none;width:600px'><p>DevOps is a practice that many organizations are using to increase their ability to reliably release software. In the world of mobile applications, we need to ensure that a binary is shipped and that it's in line with server side changes. In this world of binaries and distributed back end systems, how do we handle development operations at scale?  Continuous integration, releases, mobile binaries, signing, and testing all matter to an enterprise deploying mobile applications. We'll look at some good practices around how to version, build, test, sign, and release your mobile applications across an enterprise.</p></div>
+<div id="mobile" class='p-5' style='display: none;width:600px'><p>DevOps is a practice that many organizations are using to increase their ability to reliably release software. In the world of mobile applications, we need to ensure that a binary is shipped and that it's in line with server side changes. In this world of binaries and distributed back end systems, how do we handle development operations at scale? Continuous integration, releases, mobile binaries, signing, and testing all matter to an enterprise deploying mobile applications. We'll look at some good practices around how to version, build, test, sign, and release your mobile applications across an enterprise.</p></div>
 </div>
 <div id="day-2-agenda" class="agenda p-5">
 <div class="row border-bottom py-3">
@@ -224,7 +225,7 @@ code_of_conduct: true
 <div id="messaging" class='p-5' style='display: none;width:600px'><p>In this talk we will look at why we might use messaging, and how we use messaging in a .NET app. <p>We'll start by exploring distribution and why we can think about conversations between processes being synchronous or asynchronous, and exposing functionality or exchanging data. Then we will talk about where messaging fits, and the contexts in which we might prefer it. Along the way we should get a better understanding of messaging compared to alternatives like sharing a database or HTTTP/GRPC.</p><p>Then we will show an example of using messaging in a .NET app.</p><p>Finally, we will give pointers to resources for those who wish to explore this topic in greater detail, now that they have mastered the basics.</p></div>
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">12:00 GMT</div>
-  <div class="talk-title col-5 h4"><a class="lightbox" href="#misuse">The Hand That Feeds - How to Misuse Kubernetes</a></div>
+  <div class="talk-title col-5 h4"><a class="lightbox" href="#misuse">The Hand That Feeds: How to Misuse Kubernetes</a></div>
   <div class="col-1"></div>
   <div class="name col-4">
     <h3 class="h4 py-0">
@@ -233,7 +234,7 @@ code_of_conduct: true
     <span class="company d-block fs-90 opacity-4">Control Plane</span>
   </div>
 </div>
-<div id="misuse" class='p-5' style='display: none;width:600px'><p>We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?</p><p>In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.</p><p>Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. We’ll see what we have available from Kubernetes that can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.</p><p>From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.</p></div>
+<div id="misuse" class='p-5' style='display: none;width:600px'><p>We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?</p><p>In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a supply chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.</p><p>Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. We’ll see what we have available from Kubernetes that can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.</p><p>From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.</p></div>
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">13:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#monolith">From Monolith to Service Orientated and Beyond</a></div>
@@ -296,7 +297,3 @@ code_of_conduct: true
 </div>
 <div id="enterprise" class='p-5' style='display: none;width:600px'><p>Open source software has been in the tech news a lot over the past 12 months. Sometimes it's been for good reasons, and sometimes for bad. No matter how you approach it, your enterprise is now part of the open source community. How do you accept new software, plan for upgrades, and contribute to those projects? In this talk, Jeff Fritz will pilot you through onboarding, maintenance strategies, and inventory management for working with open source software.</p></div>
 </div>
-
-
-
-
