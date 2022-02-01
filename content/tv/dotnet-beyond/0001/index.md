@@ -59,19 +59,14 @@ description: A collection of conversations exploring the wider world of .NET
 <div id='day-1-reminder' class='p-5' style='display: none; width: 500px'>
 <h3 class='text-white mb-3 text-center'>Add to calendar</h3>
 <div class='d-flex justify-content-center'>
-    <script type="text/javascript">
-        cal_single = ics();
-        cal_single.addEvent('.NET Beyond', 'https://www.twitch.tv/vmwaretanzu', 'Twitch', '03/30/2022 08:00 am PDT', '03/31/2022 05:00 pm PDT');
-    </script>
-    <a href="#"
-      onclick="javascript:cal_single.download('.NET Beyond on Twitch')"
+    <a href="https://d1fto35gcfffzn.cloudfront.net/dev-portal/NET-Beyond.ics"
       class='beyond-btn btn mr-2 mb-2 position-relative z-1'><span class="position-relative">Outlook/iCal</span></a> 
     <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=.NET+Beyond&details=Join+some+of+the+smartest+voices+in+the+.NET+community+on+Twitch+as+they+come+together+to+present+and+discuss+how+they%27re+using+.NET+to+develop+for+the+enterprise+and+at+scale.%0A%0AWatch+here%3A+https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&dates=20220330T150000Z%2F20220331T180000Z" class='beyond-btn btn mb-2 position-relative z-1'><span class="position-relative">Google Calendar</span></a>
 </div>
 </div>
 <div class="row mb-5">
 <div class="col-9 pl-0 pr-lg-5">
-<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and <a href="https://dotnetbeyond.io/youtube">YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
+<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and YouTube as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
 <p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check ml-0 mr-1'></i>Add to calendar</a></strong></p>
 </div>
 <div class="col-3 text-center p-4" style="background-color: #1B2A32">
