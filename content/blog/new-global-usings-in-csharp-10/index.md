@@ -44,7 +44,7 @@ using System.Threading.Tasks;
 
 I prefer to be explicit and add all of the global usings to a new file in the root of every project. 
 
-To disable the implicit using directive feature, add `<ImplicitUsings>disable</ImplicitUsings>` to the `.csproj` file.
+To deactivate the implicit using directive feature, add `<ImplicitUsings>disable</ImplicitUsings>` to the `.csproj` file.
 
 What you call your file is up to you. I like to call it `usings.cs`, but I have seen `.usings` used also.
 

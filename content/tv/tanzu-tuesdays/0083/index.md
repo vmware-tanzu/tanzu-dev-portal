@@ -12,6 +12,7 @@ hosts:
 - Whitney Lee
 - Leigh Capili
 - DaShaun Carter
+- Dan Vega
 lastmod: '2021-11-23'
 minutes: 90
 title: "Testing with Spring and JUnit 5"
