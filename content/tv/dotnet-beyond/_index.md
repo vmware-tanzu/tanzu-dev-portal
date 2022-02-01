@@ -3,7 +3,7 @@ title: ".NET Beyond"
 type: "tv-show"
 streaming: "twitch"
 id: "dotnet-beyond"
-image: "dotnet-wild.png"
+image: "dotnet-beyond.png"
 og_image: ""
 weight: 3
 menu:

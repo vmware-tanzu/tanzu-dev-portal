@@ -1,6 +1,6 @@
 ---
 aliases:
-- /tv/dotnet-beyond
+- /tv/dotnet-beyond/conference
 date: '2022-03-30T19:48:16Z'
 episode: '1'
 guests:
@@ -41,8 +41,6 @@ faqs:
     answer: Twitch is an interactive streaming service for all kinds of content. You don't need an account to watch any of the .NET Beyond talks, but you will need to sign up and log in to participate in the chat. 
   - question: What does VMware have to do with .NET?
     answer: VMware is a big fan of .NET! Not only can .NET applications be deployed to VMware Tanzu, but we're part of the .NET Foundation and support Steeltoe.io.
-  - question: Do you have a Code of Conduct?
-    answer: Oh, most certainly we do! <a href="/developer/code-of-conduct/">Check it out</a>.
 lastmod: '2022-01-27'
 publishdate: '2022-01-27'
 title: .NET Beyond
@@ -59,7 +57,6 @@ code_of_conduct: true
 ---
 <div id='day-1-reminder' class='p-5' style='display: none; width: 500px'>
 <h3 class='text-white mb-3 text-center'>Add to calendar</h3>
-<p class="mb-5">Join some of the smartest voices in the .NET community on Twitch as they come together to present and discuss how they're using .NET to develop for the enterprise and at scale.</p>
 <div class='d-flex justify-content-center'>
     <script type="text/javascript">
         cal_single = ics();
@@ -68,7 +65,7 @@ code_of_conduct: true
     <a href="#"
       onclick="javascript:cal_single.download('.NET Beyond on Twitch')"
       class='beyond-btn btn mr-2 mb-2 position-relative z-1'><span class="position-relative">Outlook/iCal</span></a> 
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=.NET+Beyond&details=https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&dates=20220330T150000Z%2F20220331T160000Z" class='beyond-btn btn mb-2 position-relative z-1'><span class="position-relative">Google Calendar</span></a>
+    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=.NET+Beyond&details=Join+some+of+the+smartest+voices+in+the+.NET+community+on+Twitch+as+they+come+together+to+present+and+discuss+how+they%27re+using+.NET+to+develop+for+the+enterprise+and+at+scale.%0A%0AWatch+here%3A+https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&dates=20220330T160000Z%2F20220331T160000Z" class='beyond-btn btn mb-2 position-relative z-1'><span class="position-relative">Google Calendar</span></a>
 </div>
 </div>
 <div class="row mb-5">
@@ -188,15 +185,16 @@ code_of_conduct: true
 <div id="tap" class='p-5' style='display: none;width:600px'><p>Kubernetes may be a powerful platform for running your containerized applications, but that power comes with a steep learning curve. Developers are often required to wrestle with Dockerfiles and walls of YAML to get their application properly deployed. This session will introduce you to Tanzu Application Platform and show how it allows developers to stay focused on the application code and not have to worry about the complexities of containers and Kubernetes.</p></div>
 <div class="row py-3">
   <div class="time col-2 pl-0 h4">14:00 PT</div>
-  <div class="talk-title col-5 h4">Mobile apps at scale and devops</div>
+  <div class="talk-title col-5 h4"><a class="lightbox" href="#mobile">Mobile DevOps at Scale</a></div>
   <div class="col-1"></div>
   <div class="name col-4">
     <h3 class="h4 py-0">
-      Rodney Littles ii
+      <a href="/developer/team/rodney-littles-ii/">Rodney Littles II</a>
     </h3>
     <span class="company d-block fs-90 opacity-4">Megsoft</span>
   </div>
 </div>
+<div id="mobile" class='p-5' style='display: none;width:600px'><p>DevOps is a practice that many organizations are using to increase their ability to reliably release software. In the world of mobile applications, we need to ensure that a binary is shipped and that it's in line with server side changes. In this world of binaries and distributed back end systems, how do we handle development operations at scale?  Continuous integration, releases, mobile binaries, signing, and testing all matter to an enterprise deploying mobile applications. We'll look at some good practices around how to version, build, test, sign, and release your mobile applications across an enterprise.</p></div>
 </div>
 <div id="day-2-agenda" class="agenda p-5">
 <div class="row border-bottom py-3">
@@ -263,7 +261,7 @@ code_of_conduct: true
 </p></div>
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">15:00 GMT</div>
-  <div class="talk-title col-5 h4"><a class="lightbox" href="#observability">Observability for .NET Applications </a></div>
+  <div class="talk-title col-5 h4"><a class="lightbox" href="#observability">Observability for .NET Applications</a></div>
   <div class="col-1"></div>
   <div class="name col-4">
     <h3 class="h4 py-0">
@@ -275,26 +273,28 @@ code_of_conduct: true
 <div id="observability" class='p-5' style='display: none;width:600px'><p>Distributed application architectures enable enterprises to easily scale their applications to meet increasing growth and demand. At the same time, the very technology choices that make it easy to build at scale also make it more challenging to maintain at scale. The maintainability of a system is directly dependent on the ability to infer its internal states from available data.</p><p>This session will focus on using the fully OSS project OpenTelemetry to add observability to modern cloud native .NET applications and getting the insight and data needed to maintain enterprise applications. We'll see how the three pillars of observability (traces, metrics, and logs) together provide the solid foundation needed to make production your favorite place on the internet!</p></div>
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">16:00 GMT</div>
-  <div class="talk-title col-5 h4">YARP</div>
+  <div class="talk-title col-5 h4"><a class="lightbox" href="#yarp">Simplifying Microservice Security with YARP</a></div>
   <div class="col-1"></div>
   <div class="name col-4">
     <h3 class="h4 py-0">
-      Andrew Stakhov
+      <a href="/developer/team/andrew-stakhov/">Andrew Stakhov</a>
     </h3>
     <span class="company d-block fs-90 opacity-4">VMware</span>
   </div>
 </div>
+<div id="yarp" class='p-5' style='display: none;width:600px'><p>With constantly emerging attack vectors, evolving security standards, inherent complexity in implementation libraries, and lack of general security expertise, it's no wonder teams are scratching their heads when trying to secure their microservices. With API gateways becoming a common pattern to consolidate API surface, there's a golden opportunity to offload some of the security complexity into a centralized place. This session will look at how Microsoft's new .NET library called Yet Another Reverse Proxy (YARP) can be used to secure applications in a variety of scenarios.</p><p>Attendees will learn how to use YARP to create a uniform API surface for their apps, apply different security strategies, integrate with Federated Identity providers with OpenID Connect, and bridge line-of-business application security requirements with those of the greater organization.</p></div>
 <div class="row py-3">
   <div class="time col-2 pl-0 h4">17:00 GMT</div>
-  <div class="talk-title col-5 h4">Levelling up enterprise with open source and cloud</div>
+  <div class="talk-title col-5 h4"><a class="lightbox" href="#enterprise">Your Enterprise Open Source Journey</a></div>
   <div class="col-1"></div>
   <div class="name col-4">
     <h3 class="h4 py-0">
-      Jeff Fritz
+      <a href="/developer/team/jeff-fritz/">Jeff Fritz</a>
     </h3>
     <span class="company d-block fs-90 opacity-4">Microsoft</span>
   </div>
 </div>
+<div id="enterprise" class='p-5' style='display: none;width:600px'><p>Open source software has been in the tech news a lot over the past 12 months. Sometimes it's been for good reasons, and sometimes for bad. No matter how you approach it, your enterprise is now part of the open source community. How do you accept new software, plan for upgrades, and contribute to those projects? In this talk, Jeff Fritz will pilot you through onboarding, maintenance strategies, and inventory management for working with open source software.</p></div>
 </div>
 
 
