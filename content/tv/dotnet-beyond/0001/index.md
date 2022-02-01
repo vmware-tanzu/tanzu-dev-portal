@@ -107,12 +107,18 @@ code_of_conduct: true
 </div>
 </div>
 
-<h2 class="mb-4 mt-4">Day 1</h2>
+<div class="day-toggle row">
+<h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h2>
+<h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h2>
+</div>
 
+
+<div id="day-1-agenda" class="agenda p-5">
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">8:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#history">The History of .NET</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/richard-campbell/">Richard Campbell</a>
     </h3>
@@ -123,7 +129,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">9:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#scalability-and-security">Scalability and Security with K8s and Azure Active Directory</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/christos-matskas/">Christos Matskas</a>
     </h3>
@@ -134,7 +141,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">10:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#ddd">Getting to DDD: Pragmatic or Principled?</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/julie-lerman/">Julie Lerman</a>
     </h3>
@@ -145,7 +153,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">11:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#f-sharp">Why F# Works in the Enterprise</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/phillip-carter/">Phillip Carter</a>
     </h3>
@@ -156,7 +165,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">12:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#mongodb">Introducing MongoDB and .NET: SQL is Not the Only Way</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/luce-carter/">Luce Carter</a>
     </h3>
@@ -167,7 +177,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">13:00 PT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#tap">Kubernetes Made Easy with VMware Tanzu Application Platform</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/john-bush/">John Bush</a>
     </h3>
@@ -175,23 +186,24 @@ code_of_conduct: true
   </div>
 </div>
 <div id="tap" class='p-5' style='display: none;width:600px'><p>Kubernetes may be a powerful platform for running your containerized applications, but that power comes with a steep learning curve. Developers are often required to wrestle with Dockerfiles and walls of YAML to get their application properly deployed. This session will introduce you to Tanzu Application Platform and show how it allows developers to stay focused on the application code and not have to worry about the complexities of containers and Kubernetes.</p></div>
-<div class="row border-bottom py-3">
+<div class="row py-3">
   <div class="time col-2 pl-0 h4">14:00 PT</div>
   <div class="talk-title col-5 h4">Mobile apps at scale and devops</div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       Rodney Littles ii
     </h3>
     <span class="company d-block fs-90 opacity-4">Megsoft</span>
   </div>
 </div>
-
-<h2 class="mb-4 mt-4">Day 2</h2>
-
+</div>
+<div id="day-2-agenda" class="agenda p-5">
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">10:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#rest">REST, GraphQL, and gRPC: A Comparison</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/poornima-nayar/">Poornima Nayar</a>
     </h3>
@@ -203,7 +215,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">11:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#messaging">Messaging for .NET Developers</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/ian-cooper/">Ian Cooper</a>
     </h3>
@@ -214,7 +227,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">12:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#misuse">The Hand That Feeds - How to Misuse Kubernetes</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/lewis-denham-parry/">Lewis Denham-Parry</a>
     </h3>
@@ -225,7 +239,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">13:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#monolith">From Monolith to Service Orientated and Beyond</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/stacy-cashmore/">Stacy Cashmore</a>
     </h3>
@@ -236,7 +251,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">14:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#asp">ASP.NET Basics for Experts</a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/jakub-pilimon/">Jakub Pilimon</a>
     </h3>
@@ -248,7 +264,8 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">15:00 GMT</div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#observability">Observability for .NET Applications </a></div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/hananiel-sarella/">Hananiel Sarella</a>
     </h3>
@@ -259,20 +276,27 @@ code_of_conduct: true
 <div class="row border-bottom py-3">
   <div class="time col-2 pl-0 h4">16:00 GMT</div>
   <div class="talk-title col-5 h4">YARP</div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       Andrew Stakhov
     </h3>
     <span class="company d-block fs-90 opacity-4">VMware</span>
   </div>
 </div>
-<div class="row border-bottom py-3">
+<div class="row py-3">
   <div class="time col-2 pl-0 h4">17:00 GMT</div>
   <div class="talk-title col-5 h4">Levelling up enterprise with open source and cloud</div>
-  <div class="name col-5">
+  <div class="col-1"></div>
+  <div class="name col-4">
     <h3 class="h4 py-0">
       Jeff Fritz
     </h3>
     <span class="company d-block fs-90 opacity-4">Microsoft</span>
   </div>
 </div>
+</div>
+
+
+
+
