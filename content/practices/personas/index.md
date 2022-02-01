@@ -14,7 +14,7 @@ tags:
 - Kickoff
 - Discovery
 - Remote
-title: Personas
+title: Proto-Personas
 what:
 - Whiteboard or digital version like [Miro](https://miro.com/)
 - Paper
@@ -22,11 +22,12 @@ what:
 - Sticky dots
 - Scissors (optional)
 when:
-- We try to do this as early as possible on a project, usually during Kickoff.
+- There is no relevant validated persona available for the product and a starting point is needed to embark on discovery research.
+- As early as possible, usually during Kickoff.
 why:
-- The provisional persona anchors the discussions we have during the Kickoff and allows
+- The proto-persona creates alignment around the assumptions the team and stakeholders have with regard to the user. It allows
   the core team to make smart decisions about who to target for exploratory research
-  during the Discovery phase of the project.
+  during the Discovery phase of the project. 
 ---
 
 ## How to Use this Method
@@ -70,16 +71,28 @@ why:
 
 8. Give each person four dots so that they can place a dot on the quadrant that they think best explains the user (so four dots in total, one on each quadrant across all papers)
 
-9. Tape together the highest scoring quadrants into one "master persona" and reads it to the group
+9. Tape together the highest scoring quadrants into one consolidated persona and reads it to the group
 
    {{% callout %}}
    **Tip**: It's helpful to have scissors handy in case you need to cut quadrants apart in order to reassemble
    {{% /callout %}}
 
+10. Plan out how to get access to people that this persona represents and the [user research activities](/practices/user-research-introduction-session/) that you will do to validate this persona. Check out activities labeled Discovery in the Tanzu Practices center for different options. 
+
+
 ### Success/Expected Outcomes
-Success is when you've created a "master persona" and everyone in the room feels like it represents the target audience as best as possible.
+Success is when you've created a consolidated proto-persona and everyone in the room feels like it represents the target audience as best as possible. Remember that a critical next step is to then validate this persona with [user research](/practices/user-research-introduction-session/) such as interviews
 
 ### Variations
+
+#### Machina Personas
+If you're building a "technical" product like an API and your user is a system (such as existing apps that you must integrate with), you may need to create machina personas. 
+
+The key difference are the quadrants you have
+   - Top left → drawing a personification of the machina persona 
+   - Bottom left → About (facts like the name of the system, age, type, languages/formats it understands)
+   - Top right → Needs & Responsibilities (input it requires, what it does with that input, what it does in general)
+   - Bottom right → Quirks (any difficulties or peculiarities when integrating/interacting with the system)
 
 #### For Remote Teams
 You can still facilitate this workshop even if the team is remote. 
