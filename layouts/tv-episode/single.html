@@ -221,12 +221,13 @@
   </div>
   {{ end }}
 
-  <div class="row justify-content-center mb-5">
-		<div class="col-lg-9 px-0">
-      {{ partial "faqs.html" . }}
+  {{ if .Params.faqs }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 px-0 border-top pt-4">
+        {{ partial "faqs.html" . }}
+      </div>
     </div>
-  </div>
-
+  {{ end }}
   {{ if and (.Params.contact) (.Params.code_of_conduct) ( .Params.beyond ) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
