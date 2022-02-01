@@ -72,7 +72,7 @@ description: A collection of conversations exploring the wider world of .NET
 <div class="col-3 text-center p-4" style="background-color: #1B2A32">
 <div class="newsletter">
   <p class="text-white mt-0">Sign up for the developer newsletter</p>
-  <div class='btn beyond-btn btn-small click-to-show scroll-to-bottom position-relative'><span class="position-relative">Subscribe</span></div>
+  <div class='btn beyond-btn btn-small click-to-show position-relative'><span class="position-relative">Subscribe</span></div>
   <script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
   <form id="mktoForm_1609" class="hidden float-lg-right"></form>
   <script>

@@ -575,6 +575,29 @@
   #day-2-agenda {
     display: none;
   }
+  .mktoButton {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: rgb(127,53,178) !important;
+    background: linear-gradient(90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%) !important;
+    border: none;
+    color: white;
+  }
+  #mktoCheckbox_101244_0 {
+    transform: translateY(4px);
+  }
+  #LblmktoCheckbox_101244_0 {
+    width: auto;
+  }
+  #mktoForm_1609,
+  .mktoFieldDescriptor.mktoFormCol,
+  .mktoFieldWrap.mktoRequiredField,
+  .mktoCheckboxList.mktoHasWidth,
+  #Email {
+    width: 100% !important;
+  }
 }
 .pe-none {
   pointer-events: none;
