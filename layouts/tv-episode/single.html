@@ -182,7 +182,7 @@
       <h3 class="mb-3">Guests</h3>
       {{ range . }}
         {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="border-bottom mb-4 pb-5">
+          <div class="mb-4 pb-5">
           {{ partial "team-member.html" (dict "context" . "display" "tv") }}
           </div>
         {{ end }}
