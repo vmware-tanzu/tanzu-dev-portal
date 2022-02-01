@@ -6,7 +6,7 @@ skills: ""
 location: ""
 
 # Social Media
-twitter: ""
+twitter: "csharpfritz"
 website: ""
 facebook: ""
 linkedin: ""

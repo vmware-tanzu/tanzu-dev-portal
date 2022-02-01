@@ -6,7 +6,7 @@ skills: ""
 location: ""
 
 # Social Media
-twitter: ""
+twitter: "julielerman"
 website: ""
 facebook: ""
 linkedin: ""

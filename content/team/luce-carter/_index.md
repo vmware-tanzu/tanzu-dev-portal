@@ -6,7 +6,7 @@ skills: ""
 location: ""
 
 # Social Media
-twitter: ""
+twitter: "LuceCarter1"
 website: ""
 facebook: ""
 linkedin: ""
