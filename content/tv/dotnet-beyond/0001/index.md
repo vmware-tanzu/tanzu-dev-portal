@@ -28,6 +28,7 @@ hosts:
 - Michael Coté
 - Jeff Strauss
 - Ed Charbeneau
+- Jakub Pilimon
 lastmod: '2022-01-27'
 publishdate: '2022-01-27'
 title: .NET Beyond
