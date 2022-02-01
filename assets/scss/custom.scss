@@ -459,7 +459,7 @@
   }
 }
 #beyond-hero {
-  background-color: #1B2A32;
+  background-color: #1B2A32 !important;
   background-image: url({{ "/images/beyond/stars.svg" | relURL }});
 
   #left-blob-1 {
