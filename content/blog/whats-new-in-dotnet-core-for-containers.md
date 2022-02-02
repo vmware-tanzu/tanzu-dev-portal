@@ -83,7 +83,7 @@ In addition to smaller runtime images, the SDK includes a tool that analyzes an 
 
 ## Faster Start-up Time by Default
 
-.NET Core 2.x had tiered compilation disabled by default. Version 3.0 enables it by default. With tiered compilation, one can opt to have the first tier compilation load precompiled code from assemblies created using the `ReadytoRun` format (more details [here](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#readytorun-images)) ahead of time instead of just-in-time.
+.NET Core 2.x had tiered compilation deactivated by default. Version 3.0 enables it by default. With tiered compilation, one can opt to have the first tier compilation load precompiled code from assemblies created using the `ReadytoRun` format (more details [here](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#readytorun-images)) ahead of time instead of just-in-time.
 
 To compile a project using the `ReadyToRun` format, add the `<PublishReadyToRun>` setting:
 

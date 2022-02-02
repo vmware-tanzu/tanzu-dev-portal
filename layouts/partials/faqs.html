@@ -1,7 +1,7 @@
 {{ with .Params.faqs }}
     <link rel="stylesheet" href="{{ "/css/faq.css" | relURL }}">
     <div class="faqs" id="faqs">
-        <div class="flex-container jc-between"></div>
+        <div class="flex-container jc-between">
             <h2 class="h2 mb-md">Frequently Asked Questions</h2>
             {{ range .faq }}            
             <div class="faq">
@@ -17,7 +17,6 @@
             </div>
             {{ end }}
         </div>
-
     </div>
 
     <script type="text/javascript">

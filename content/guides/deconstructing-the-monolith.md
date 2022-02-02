@@ -39,7 +39,7 @@ There are nearly as many definitions of a microservice as there are developers t
 Ultimately, microservices are a reaction to monoliths and heavyweight [service oriented architectures](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html) as well as the capabilities of cloud environments. The issues with poorly structured monolithic architectures are legion, from low developer productivity caused by massive code bases to the inability to target compute resources to the bits that need more performance, there are no shortage of headaches. Software is not immune to the [second law of thermodynamics](https://www.grc.nasa.gov/WWW/K-12/airplane/thermo2.html), over time, the modularity of the monolith breaks down and it takes longer and longer to add new features and functionality.
 
 {{% callout %}}
-**Note**: It should be stressed that monoliths span the continuum of modularity and they can actually be structured in such a way that they don’t suffer all of the maladies normally associated with the term “monolith”. You can apply [microservice design principles](https://twitter.com/simonbrown/status/962945350737825793?lang=en) to monoliths!
+**Note**: It should be stressed that monoliths span the continuum of modularity and they can actually be structured in such a way that they don’t include all of the maladies normally associated with the term “monolith”. You can apply [microservice design principles](https://twitter.com/simonbrown/status/962945350737825793?lang=en) to monoliths!
 {{% /callout %}}
 
 Personally, I am a fan of “something that can be rewritten in two weeks or less” since that reminds us microservices should be, well, small. Others are partial to saying any service built and maintained by a two pizza team. While I support two pizza teams, that definition won’t help you determine just how many services said team can support. Of course there is no stock answer to that question, it depends on the volatility of the services in question. If the microservices are stable, a two pizza team might be able to support ten or twenty however if the services are constantly changing, the exact same team might struggle with more than five!
@@ -84,7 +84,7 @@ Domain language - where does a given term mean the same thing and more important
 Where are domain experts positioned in the org chart?
 What is the core domain of the company? Strategic differentiation should inform your breakdown.
 
-Once you have some candidate boundaries, you can test them! Are there any “schizophrenic contexts” aka where the context does too many things? A multitude of if statements indicates you probably have two or more domains. Is your context autonomous? Can it make decisions on its own or does it need to reach out to a dozen other modules? It may seem a bit fuzzy, but don’t forget to do a sanity check - do these boundaries feel right?
+Once you have some candidate boundaries, you can test them! Are there any “schizophrenic contexts” aka where the context does too many things? A multitude of if statements indicates you probably have two or more domains. Is your context autonomous? Can it make decisions on its own or does it need to reach out to a dozen other modules? It may seem a bit fuzzy, but don’t forget to do a confidence check - do these boundaries feel right?
 
 ## Next Steps
 
