@@ -810,6 +810,7 @@ hasResult
 HATEOAS
 Hayk
 Haytham
+Headspring
 Heartbleed
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
@@ -1081,6 +1082,7 @@ kubernetes-vault-kms-plugin
 kubeseal
 Kubeseal
 KUDO
+Kung
 [kK]ustomize
 KUTTL
 Kyverno
@@ -1110,6 +1112,7 @@ Linkerd
 linter(s)?
 [Ll]inux
 Lippert
+Littles
 Littleton
 livecoding
 Livelessons
@@ -1188,6 +1191,7 @@ messageQueueSize
 messagesProcessed
 MessagingBase
 metac
+MetaConference
 [Mm]etacontroller
 MeterRegistry
 MetricsProvider
@@ -1286,6 +1290,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NMica
 NNGroup
 no-brainer
 NODE_ENV
@@ -1542,6 +1547,7 @@ RCE
 RDBMS
 reachability
 reactively
+ReactiveUI
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -2061,6 +2067,7 @@ XSalsa20
 Xu
 YAML|yaml
 Yaron
+YARP
 yay
 YCombinator
 Yonis
