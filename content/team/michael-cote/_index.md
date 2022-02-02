@@ -16,7 +16,7 @@ instagram: ""
 youtube: ""
 ---
 
-Michael Coté studies how large organizations get better at building software to run more efficiently and grow their business. He covers this topic in his books, _Monolithic Transformation_ (O’Reilly Media, 2009) and _The Business Bottleneck_ (O’Reilly Media, 2020). He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including “Software Defined Talk.” Cf. cote.io, and is [@cote](https://twitter.com/cote) on Twitter. Texas forever!
+Michael Coté studies how large organizations get better at building software to run better and grow their business. His <a href="https://cote.io/books/">books</a> <a href="https://tanzu.vmware.com/content/ebooks/changing-mindsets-the-missing-ingredient-to-digital-transformation">Changing Mindsets</a>, <a href="https://pivotal.io/monolithictransformation">Monolithic Transformation</a>, and <a href="https://content.pivotal.io/ebooks/the-business-bottleneck">The Business Bottleneck</a> cover these topics. He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including <a href="https://www.softwaredefinedtalk.com/">Software Defined Talk</a>. Cf. <a href="https://cote.io/">cote.io</a>, and is <a href="https://twitter.com/cote">@cote</a> on Twitter. Texas Forever!
 
 <!--more-->
 
