@@ -1,5 +1,5 @@
 ---
-Date: '2022-02-01T10:30:00-07:00'
+Date: '2022-02-01T10:00:00-07:00'
 Description: "Testing with Spring and JUnit 5"
 aliases:
 - /tv/tanzu-tuesdays/83
@@ -12,12 +12,13 @@ hosts:
 - Whitney Lee
 - Leigh Capili
 - DaShaun Carter
+- Dan Vega
 lastmod: '2021-11-23'
-minutes: 60
+minutes: 90
 title: "Testing with Spring and JUnit 5"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "krA-A2HqWFQ"
 type: tv-episode
 ---
 

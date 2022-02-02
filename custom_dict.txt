@@ -69,6 +69,7 @@ allenholub
 Alpine(-based)?
 Amaro
 amd64
+AMI
 amongst
 AMQP
 [Aa]nalytics
@@ -114,6 +115,7 @@ artisanal
 Arun
 Asciidoctor
 ASG(s)?
+Ashby
 Ashok
 Asiedu-Ampem
 aspirational
@@ -160,6 +162,7 @@ Bagher
 Bahhh
 Bai
 [Bb]alancer(')?(s)?
+Bam
 BankAccount
 Baruch
 base64(-encoded)?
@@ -214,6 +217,7 @@ br/
 Brandolini('s)?
 Brannen
 brd1
+BrighterCommand
 Brindley
 Brodi
 BSides
@@ -255,11 +259,13 @@ Campuzano
 Cao
 Capili
 Carducci
+Cartographer
 Carvel('s)?
 cass-operator
 CCM
 cd
 Cedrick
+CEIP
 CentOS
 Ceph
 CertificateRequests
@@ -459,6 +465,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+Depedency
 deployable
 [Dd]eployable
 deserialize
@@ -469,6 +476,7 @@ DestinationRule
 [Dd]ev(s)?
 [Dd]ev[Rr]el
 developer-centric
+DevIntersection
 DevNexus
 Devoops
 DEVOPS
@@ -582,7 +590,9 @@ Enums
 [Ee]nv
 EOF
 ESB
+Espejo
 ESRI
+ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
@@ -689,6 +699,7 @@ GatewaysSender
 Gaubert
 GBP
 GC(E|L|P|R|S)?
+geeking
 Geesaman
 Gemfiles
 GemFire
@@ -799,6 +810,7 @@ hasResult
 HATEOAS
 Hayk
 Haytham
+Headspring
 Heartbleed
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
@@ -855,6 +867,7 @@ implementors
 imposter
 [Ii]ncentivized
 [Ii]ncompressible
+influencer
 InfoQ
 InfoSec
 ing
@@ -866,6 +879,7 @@ initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
 Initializr
+installable
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -914,6 +928,7 @@ Jaeger
 JaFU
 Jakarta
 Jakub
+Jakub's
 Jarvinen
 Jasso
 JavaBean
@@ -970,6 +985,7 @@ JSP
 JSR-352
 JST
 judgement
+julielerman
 Julien
 jumpstart
 Junio
@@ -1012,13 +1028,14 @@ KeyStore
 KIAM
 Kibana
 kitesurfing
+KlipTok
 KMS
 (KMS|kms)-plugin(s)?
-Knative
 knative
 Knative-serving
 Knative-Serving
 knative-serving
+Knative('s|.)?
 KNN
 KoFu
 Kostadis
@@ -1066,6 +1083,7 @@ kubernetes-vault-kms-plugin
 kubeseal
 Kubeseal
 KUDO
+Kung
 [kK]ustomize
 KUTTL
 Kyverno
@@ -1077,10 +1095,12 @@ layla-p
 LaylaCodesIt
 Lazu
 LDAP
+ldnug
 [Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
+Lerman
 letsencrypt-staging
 libnss-wrapper
 libs
@@ -1093,7 +1113,9 @@ Linkerd
 linter(s)?
 [Ll]inux
 Lippert
+Littles
 Littleton
+livecoding
 Livelessons
 LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
@@ -1143,6 +1165,8 @@ Maciaszek-Sharma
 Madhav
 Madhura
 [mM]akefile
+Manachi
+mappable
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
@@ -1168,6 +1192,7 @@ messageQueueSize
 messagesProcessed
 MessagingBase
 metac
+MetaConference
 [Mm]etacontroller
 MeterRegistry
 MetricsProvider
@@ -1180,6 +1205,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
+mid-1990s
 [Mm]iddleware
 Migros
 Mik
@@ -1209,6 +1235,7 @@ MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
 MQ
 MSc
+MSDN
 msgpack(ed)?
 mTLS
 MTT(D|R)
@@ -1264,6 +1291,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NMica
 NNGroup
 no-brainer
 NODE_ENV
@@ -1299,6 +1327,7 @@ Oleh
 olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
+Omniplan
 on-prem
 onboarded
 [Oo]nboarding
@@ -1406,9 +1435,11 @@ Pilani
 Pilimon
 [Pp]inniped
 [Pp]ip[Xx]('s)?
+pivnet
 PKCS
 PKI
 plaintext
+pluggability
 pluggable
 Pluggable
 Pluralsight
@@ -1422,6 +1453,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poornima
 Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
@@ -1510,6 +1542,7 @@ quokka
 (r)?syslog
 r0
 RabbitMQ('s)?
+Radware
 Raju
 Rakuten
 RBAC(-enabled)?
@@ -1517,6 +1550,7 @@ RCE
 RDBMS
 reachability
 reactively
+ReactiveUI
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1577,9 +1611,12 @@ RestAssured
 Restic
 restorable
 RestrictedMethodAuthorizer
+RestTemplate
 Retrium
 revertibility
 rewatch
+rewrap
+rewrapping
 RFC[0-9]{4}
 RHEL
 Riak
@@ -1612,6 +1649,7 @@ RSocket(-based)?
 Ruckle
 Rudd
 Rumans
+RunAs
 runnable
 Runtimes
 runtimes?
@@ -1744,6 +1782,7 @@ ssh-keygen
 SSL
 sso|SSO
 Stacker
+Standley
 [Ss]tandups?
 starbuxman
 STARGATE|Stargate
@@ -1760,6 +1799,7 @@ Stéphane
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
+Strangeloop
 strategizing
 Strategyzer
 Stratton
@@ -1793,6 +1833,8 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+Talkshow
+[Tt]anzu
 Tanzu(Developer|'s)?
 targetPort
 Tarin
@@ -1812,6 +1854,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
+Telerik
 [Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
@@ -1880,6 +1923,7 @@ UC
 UCD
 UDP
 UI(s|-based)?
+Umbraco
 (un)?marshalling
 unannotated
 unbundle
@@ -1969,11 +2013,13 @@ VMware(-hosted|'s|Tanzu)?
 VMworld
 Vonge
 VPA(s|'s)?
+VPC
 vRealize
 vRLI
 vSAN
 vsd
 vsd's
+VSIX
 vSphere
 vSwitch
 Vue
@@ -1987,6 +2033,8 @@ WCF
 webapp
 webapps_default
 Webber
+WebClient
+WebClient's
 WeBeFoods
 WebFlux
 [Ww]ebhook(-based|s)?
@@ -2005,6 +2053,7 @@ Wildfly
 [Ww]ireframe(s)?
 WireMock
 Wittrock
+WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
@@ -2022,6 +2071,7 @@ XSalsa20
 Xu
 YAML|yaml
 Yaron
+YARP
 yay
 YCombinator
 Yonis

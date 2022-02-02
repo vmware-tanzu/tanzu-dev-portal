@@ -141,7 +141,7 @@ this datastore are:
 - [BGPConfiguration](https://docs.projectcalico.org/reference/resources/bgpconfig)
 
   - Set global BGP configuration settings. Allows you to set an autonomous
-    system (AS) number for your network, disable node-to-node mesh (used when
+    system (AS) number for your network, deactivate node-to-node mesh (used when
     peering with route reflectors or top of rack switches), and settings to
     advertise clusterIPs.
 
@@ -389,7 +389,7 @@ This routing mode can be problematic in environments that:
    determine the host it should route the packet to.
 
 2. Enforce source/destination checks for inbound packets.
-   - Some networks such as AWS allow you to disable these checks.
+   - Some networks such as AWS allow you to deactivate these checks.
 
 ![Calico Inbound Checks](images/calico-src-dst-check.png)
 
@@ -607,7 +607,7 @@ configured to operate in this mode. Due to the changes in routing and route
 sharing between Native/IP-in-IP and VXLAN, **do not** change this setting in a
 running cluster. Instead, follow the steps below to ensure a cluster has VXLAN
 enabled. Unless you plan to peer IPPools with existing network hardware, **you
-should disable BGP peering to reduce overhead**:
+should deactivate BGP peering to reduce overhead**:
 
 1. The `calico-config` configmap has `backend` set to `vxlan` as shown below:
 
@@ -639,7 +639,7 @@ should disable BGP peering to reduce overhead**:
 1. The `calico-node` manifest is not setting `CALICO_IPVPOOL_IPIP`.
 
 1. The `calico-node` manifest has all BIRD-related liveness and readiness checks
-   disabled as shown below:
+   deactivated as shown below:
 
    ```yaml
    livenessProbe:
@@ -648,7 +648,7 @@ should disable BGP peering to reduce overhead**:
        - /bin/calico-node
        - -felix-live
 
-     # disable bird liveness test
+     # deactivate bird liveness test
      # - -bird-live
 
    periodSeconds: 10
@@ -660,7 +660,7 @@ should disable BGP peering to reduce overhead**:
          - /bin/calico-node
          - -felix-ready
 
-       # disable bird readiness test
+       # deactivate bird readiness test
        #- -bird-ready
 
      periodSeconds: 10
@@ -828,7 +828,7 @@ spec:
 ```
 
 With peering for the route reflectors setup, the cluster has the node-to-node
-BGP mesh disabled by modifying the `BGPConfiguration` CRD.
+BGP mesh deactivated by modifying the `BGPConfiguration` CRD.
 
 ```yaml
 apiVersion: projectcalico.org/v3
@@ -838,7 +838,7 @@ metadata:
 spec:
   logSeverityScreen: Info
 
-  # Set to disable node mesh and leverage route reflectors
+  # Set to deactivate node mesh and leverage route reflectors
   nodeToNodeMeshEnabled: false
 
   asNumber: 63400
@@ -915,7 +915,7 @@ spec:
 ```
 
 With peering for the switch or router setup, the cluster's node-to-node
-BGP mesh is disabled by modifying the `BGPConfiguration` CRD as follows:
+BGP mesh is deactivated by modifying the `BGPConfiguration` CRD as follows:
 
 ```yaml
 apiVersion: projectcalico.org/v3
@@ -925,7 +925,7 @@ metadata:
 spec:
   logSeverityScreen: Info
 
-  # Set to disable node mesh and leverage route reflectors
+  # Set to deactivate node mesh and leverage route reflectors
   nodeToNodeMeshEnabled: false
 
   asNumber: 63400
@@ -982,7 +982,7 @@ spec:
   asNumber: 64400
 ```
 
-Node-to-node meshing should be disabled.
+Node-to-node meshing should be deactivated.
 
 In this topology, the entire pod CIDR is routable. This can be non-desirable as
 a pod CIDR can often be as large as a `/16` and consuming that much IP space is

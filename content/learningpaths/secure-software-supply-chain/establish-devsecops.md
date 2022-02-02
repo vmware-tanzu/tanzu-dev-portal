@@ -17,8 +17,7 @@ code to production. Traditional methodologies typically took on a siloed
 approach: a development team writes the code, a security team ensures that this
 code adheres to organizational compliance requirements, and operations teams
 maintained the availability of the running service. While this organization of
-specific roles often met the demand for bringing code to production, it suffers
-from a number of drawbacks.
+specific roles often met the demand for bringing code to production, it also has a number of drawbacks.
 
 First, it was often slow. With different groups all involved in bringing code to
 production, responsibilities were often serialized. Once the code is ready, the

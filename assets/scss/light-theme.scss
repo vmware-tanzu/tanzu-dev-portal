@@ -1,5 +1,6 @@
 footer.bg-dark,
 .td-outer,
+#beyond-main.td-main,
 body {
    background-color: white !important;
    color: #61717d !important;
@@ -28,6 +29,7 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+
 .td-home .darken .dropdown-item:hover, .td-home .darken .dropdown-item:focus,
 nav .dropdown-item:hover, nav .dropdown-item:focus,
 #hero:not(.workshops-hero),
@@ -74,7 +76,13 @@ p code, li > code, table code,
 body p {
   color: #61717d !important;
 }
-
+.day.active, .agenda,
+#beyond-main .newsletter-outer {
+  background-color: #f4f8fa !important;
+}
+.day {
+  background: #ADBBC4 !important;
+}
  body .topic a,
  body .topic .text-white {
    background-color: #f4f8fa !important;
@@ -132,6 +140,7 @@ color: #49afd9 !important;
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
 }
+#beyond-hero p,
 #live-notify,
 body a.btn {
   color: white !important;
