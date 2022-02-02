@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{ if .Params.beyond }}
-  <section id="beyond-hero" class="bg-gray-dark mt-7 pt-5 pb-5 overflow-hidden position-relative">
+  <section id="beyond-hero" class="bg-gray-dark mt-7 py-lg-5 overflow-hidden position-relative">
     <img alt="" id="left-blob-1" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-1.svg" | relURL }}'>
     <img alt="" id="left-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-2.svg" | relURL }}'>
     <img alt="" id="left-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-3.svg" | relURL }}'>
@@ -10,8 +10,8 @@
     <img alt="" id="right-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-2.svg" | relURL }}'>
     <img alt="" id="right-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-3.svg" | relURL }}'>
 
-    <div class="container py-4">
-      <div class="col-lg-9 col-12 px-0 mt-5 mx-auto position-relative">
+    <div class="container py-0 py-lg-4">
+      <div class="col-xl-9 col-12 px-0 mt-5 mx-auto position-relative">
         <img alt="" id="shooting-star-1" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
         <img alt="" id="shooting-star-2" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
         <p class="white h3">March 30&ndash;31, 2022</p>
@@ -182,7 +182,7 @@
       <h3 class="mb-3">Guests</h3>
       {{ range . }}
         {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="mb-4 pb-5">
+          <div class=" mb-4 pb-5">
           {{ partial "team-member.html" (dict "context" . "display" "tv") }}
           </div>
         {{ end }}
@@ -228,6 +228,7 @@
       </div>
     </div>
   {{ end }}
+
   {{ if and (.Params.contact) (.Params.code_of_conduct) ( .Params.beyond ) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
@@ -260,6 +261,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 {{ partial "amplitude.html" (dict "context" . "event" "episode played") }}

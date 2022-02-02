@@ -598,6 +598,59 @@
   #Email {
     width: 100% !important;
   }
+  @media (max-width: 1199px) {
+    .justify-content-center > .col-lg-9 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    .newsletter {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #beyond-hero {
+      margin-top: 0 !important;
+    }
+    #beyond-logo {
+      height: 100px;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -580px;
+      left: -100px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -400px;
+    }
+  }
+  @media (max-width: 625px) {
+    .agenda .talk-title a, .agenda .name a, .agenda .time {
+      font-size: .9rem;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -520px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -300px;
+    }
+  }
+  @media (min-width: 576px){
+    .container-sm, .container {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 485px) {
+    .agenda .talk-title a, .agenda .name a, .agenda .time {
+      font-size: .9rem;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -420px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -200px;
+    }
+  }
 }
 .pe-none {
   pointer-events: none;
