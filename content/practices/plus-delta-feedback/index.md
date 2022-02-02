@@ -63,7 +63,7 @@ Things to keep in mind:
      - “I felt I did not get access to the keyboard very much during our pair-programming session today.”
      - I notice you always join meetings 5 minutes late, so we end up not ending the meeting on time.
 
-   (Convert the above example into an image to break monotony.)
+   ![Plus-Delta-Example](images/example-1.png)
 1. Take turns each going over a plus / delta, alternating between pluses and deltas.
 1. Depending on the feedback, suggest changes for future working sessions.
    For example:
