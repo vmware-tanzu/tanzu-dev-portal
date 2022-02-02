@@ -67,7 +67,7 @@ description: A collection of conversations exploring the wider world of .NET
 </div>
 <div class="row mb-5">
 <div class="col-lg-9 col-12 px-0 pr-lg-5">
-<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> and YouTube as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
+<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
 <p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check ml-0 mr-1'></i>Add to calendar</a></strong></p>
 </div>
 <div class="col-lg-3 col-12 mt-lg-0 mt-4 text-center p-4 newsletter-outer" style="background-color: #1B2A32">
