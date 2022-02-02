@@ -443,6 +443,6 @@ You can see the error message points to an `org.apache.geode.security.NotAuthori
 Working through this article, you learned how to:
 - Create your own custom GemFire `SecurityManager` implementation that can authenticate and authorize
 - Start a GemFire cluster using a custom `SecurityManager`
-- Create a Java client that can securly interact with a secured GemFire cluster.
+- Create a Java client that can securely interact with a secured GemFire cluster.
 
 In a future article will take a more in-depth look at how to implement a `SecurityManager` that interacts with a token-based authentication and authorization system, such as an OAuth2 or Kerberos server.
