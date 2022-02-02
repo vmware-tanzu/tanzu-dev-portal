@@ -7,7 +7,7 @@ location: "Austin, TX"
 
 # Social Media 
 twitter: "cote"
-website: "http://cote.pizza"
+website: "https://cote.io/"
 facebook: ""
 linkedin: ""
 github: "cote"
