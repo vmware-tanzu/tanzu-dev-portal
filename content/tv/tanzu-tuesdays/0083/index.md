@@ -18,7 +18,7 @@ minutes: 90
 title: "Testing with Spring and JUnit 5"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "krA-A2HqWFQ"
 type: tv-episode
 ---
 
