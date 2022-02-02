@@ -82,7 +82,7 @@ Containers:
 
 ## Services are unreachable or not available
 
-As a sanity check, it is always useful to verify that the service has endpoints.
+As a confidence check, it is always useful to verify that the service has endpoints.
 
 Use the `kubectl get endpoints` command to verify that a service has at least
 one endpoint:
