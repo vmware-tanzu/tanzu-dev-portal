@@ -1451,6 +1451,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poornima
 Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
@@ -1920,6 +1921,7 @@ UC
 UCD
 UDP
 UI(s|-based)?
+Umbraco
 (un)?marshalling
 unannotated
 unbundle
