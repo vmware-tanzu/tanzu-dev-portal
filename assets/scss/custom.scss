@@ -624,6 +624,11 @@
       right: -400px;
     }
   }
+  @media (max-width: 767px){
+    .container-sm, .container {
+      max-width: 100%;
+    }
+  }
   @media (max-width: 625px) {
     .agenda .talk-title a, .agenda .name a, .agenda .time {
       font-size: .9rem;
@@ -633,11 +638,6 @@
     }
     #right-blob-1, #right-blob-2, #right-blob-3 {
       right: -300px;
-    }
-  }
-  @media (min-width: 576px){
-    .container-sm, .container {
-      max-width: 100%;
     }
   }
   @media (max-width: 485px) {
