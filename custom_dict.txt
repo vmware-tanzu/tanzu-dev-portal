@@ -358,6 +358,7 @@ Connor
 containerd
 containerPort
 Containous
+controlplaneio
 copyDependencies
 core-dns
 CoreCLR
