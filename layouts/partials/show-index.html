@@ -8,6 +8,7 @@
                     <img class="transition-all h-100 w-100" src='{{ "/images/beyond/beyond-promo.png" | relURL }}'>
                     {{ printf "<div class=\"upcoming display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
                     <span class="countdown btn btn-small mb-4 mt-2 position-absolute z-1">Live&nbsp;</span>
+                    <div class='thumbnail-gradient position-absolute'></div>
                 </a>
                 {{ end }}
             {{ else }}
