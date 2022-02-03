@@ -17,7 +17,7 @@ minutes: 60
 title: "Carvel packaging as a unified package manager for Kubernetes with Scott Rosenberg"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "FiNK9hxDJTU"
 type: tv-episode
 ---
 
