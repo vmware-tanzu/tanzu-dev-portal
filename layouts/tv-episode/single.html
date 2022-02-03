@@ -176,35 +176,72 @@
     </div>
   </div>
 
-  {{ with .Params.guests }}
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9 col-12 px-0">
-      <h3 class="mb-3">Guests</h3>
-      {{ range . }}
-        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class=" mb-4 pb-5">
-          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
-          </div>
+  <!-- Display colored headshots on .NET Beyond page -->
+  {{ if .Params.beyond }}
+    {{ with .Params.guests }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Guests</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class=" mb-4 pb-5">
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  </div>
+    {{ end }}
+  {{ else }}
+    {{ with .Params.guests }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Guests</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class=" mb-4 pb-5">
+            {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   {{ end }}
 
-  {{ with .Params.hosts }}
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9 col-12 px-0">
-      <h3 class="mb-3">Hosts</h3>
-      {{ range . }}
-        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="mb-4">
-          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
-          </div>
+
+  {{ if .Params.beyond }}
+    {{ with .Params.hosts }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Hosts</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class="mb-4">
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  </div>
+    {{ end }}
+  {{ else }}
+    {{ with .Params.hosts }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Hosts</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class="mb-4">
+            {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   {{ end }}
+
 
   {{ with .Params.speakers }}
   <div class="row justify-content-center mb-5">

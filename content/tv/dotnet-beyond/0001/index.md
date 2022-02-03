@@ -5,31 +5,31 @@ aliases:
 date: '2022-03-30T19:48:16Z'
 episode: '1'
 guests:
-- Richard Campbell
-- Christos Matskas
-- Julie Lerman
-- Phillip Carter
-- Luce Carter
-- John Bush
-- Rodney Littles II
-- Poornima Nayar
-- Ian Cooper
-- Lewis Denham-Parry
-- Stacy Cashmore
-- Jakub Pilimon
-- Hananiel Sarella
 - Andrew Stakhov
+- Christos Matskas
+- Hananiel Sarella
+- Ian Cooper
+- Jakub Pilimon
 - Jeff Fritz
+- John Bush
+- Julie Lerman
+- Lewis Denham-Parry
+- Luce Carter
+- Phillip Carter
+- Poornima Nayar
+- Richard Campbell
+- Rodney Littles II
+- Stacy Cashmore
 hosts:
-- Layla Porter
-- Corey Weathers
-- Cora Iberkleid
 - Alyssa Nicoll
-- Matty Stratton
-- Michael Coté
-- Jeff Strauss
+- Cora Iberkleid
+- Corey Weathers
 - Ed Charbeneau
 - Jakub Pilimon
+- Jeff Strauss
+- Layla Porter
+- Matty Stratton
+- Michael Coté
 faqs:
   faq:
   - question: What is .NET Beyond?
