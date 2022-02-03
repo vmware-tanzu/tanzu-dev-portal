@@ -16,7 +16,10 @@ instagram: ""
 youtube: ""
 ---
 
-Cora Iberkleid is a Developer Advocate for Modern Applications at VMware, helping developers and enterprises navigate modern practices and technologies including Spring, Kubernetes, Cloud Foundry, Tanzu, and modern CI/CD. Prior to that she was an Advisory Cloud Application and Platform Architect at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications.
+Cora Iberkleid is a Developer Advocate for <a href="https://tanzu.vmware.com/modern-apps">Modern Applications at VMware Tanzu</a>, helping developers and enterprises navigate modern practices and technologies, focusing on cloud native architecture, modern CI/CD, Spring, and Kubernetes.
+
+Prior to joining VMware, Cora was an Advisory Solutions Engineer at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications. Through this experience, she developed an understanding and empathy for complex organizational challenges, and she strives to incorporate this empathy into her everyday work.
+
 
 <!--more-->
 

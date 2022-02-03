@@ -358,6 +358,7 @@ Connor
 containerd
 containerPort
 Containous
+controlplaneio
 copyDependencies
 core-dns
 CoreCLR
@@ -1016,6 +1017,7 @@ Kat
 KEK(s)?
 Kendo
 kendrickcoleman
+Kerberos
 Kerievsky
 [Kk]ey[Ss]tore
 keychain
@@ -1438,6 +1440,7 @@ pivnet
 PKCS
 PKI
 plaintext
+pluggability
 pluggable
 Pluggable
 Pluralsight
