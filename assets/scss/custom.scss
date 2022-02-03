@@ -653,6 +653,14 @@
     }
   }
 }
+.magnify-banner:hover,
+.magnify-banner:focus {
+  @media(min-width: 992px) {
+    img {
+      transform: scale(1.04);
+    }
+  }
+}
 .pe-none {
   pointer-events: none;
 }

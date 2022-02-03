@@ -2,7 +2,7 @@
 canonical: https://tanzu.vmware.com/developer/tv/dotnet-beyond
 aliases:
 - /tv/dotnet-beyond/conference
-date: '2022-03-30T19:48:16Z'
+Date: '2022-03-30T19:48:16Z'
 episode: '1'
 guests:
 - Andrew Stakhov
