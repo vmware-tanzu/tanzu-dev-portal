@@ -202,7 +202,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="day-2-agenda" class="agenda p-lg-5 p-3">
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 10:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 09:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#rest">REST, GraphQL, and gRPC: A Comparison</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -215,7 +215,7 @@ function convertTime(sessionTime) {
 <div id="rest" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">REST, GraphQL, and gRPC: A Comparison</div><p>No matter the industry, applications need to talk to each other. So, developers often build bridges—Application Programming Interfaces (API)—to allow one system to communicate to another.</p><p>Over time, different API architectural styles have been released. Each of them has its own characteristics, patterns of data exchange, pros and cons. REST, GraphQL, and gRPC are three main options when it comes to API development and implementation. In this session, Poornima will cover what REST, GraphQL, and gRPC are from a .NET perspective and give you a comprehensive comparison between them.
 </p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 11:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 10:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#messaging">Messaging for .NET Developers</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -227,7 +227,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="messaging" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">Messaging for .NET Developers</div><p>In this talk we will look at why we might use messaging, and how we use messaging in a .NET app. <p>We'll start by exploring distribution and why we can think about conversations between processes being synchronous or asynchronous, and exposing functionality or exchanging data. Then we will talk about where messaging fits, and the contexts in which we might prefer it. Along the way we should get a better understanding of messaging compared to alternatives like sharing a database or HTTTP/GRPC.</p><p>Then we will show an example of using messaging in a .NET app.</p><p>Finally, we will give pointers to resources for those who wish to explore this topic in greater detail, now that they have mastered the basics.</p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 12:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 11:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#misuse">The Hand That Feeds: How to Misuse Kubernetes</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -239,7 +239,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="misuse" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">The Hand That Feeds: How to Misuse Kubernetes</div><p>We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?</p><p>In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a supply chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.</p><p>Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. We’ll see what we have available from Kubernetes that can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.</p><p>From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.</p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 13:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 12:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#monolith">From Monolith to Service Orientated and Beyond</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -251,7 +251,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="monolith" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">From Monolith to Service Orientated and Beyond</div><p>In the autumn of 2018, we were faced with an application that wasn't performing and was very hard to change. Deployment was hit and miss almost every time.</p><p>We did the thing that you're warned against (for good reason!) and started from scratch.</p><p>This is our journey on taking that application from technical concept to production: how we included the experience of our team in our initial decisions, the things we learnt as the code was evolving, and during performance testing. And what our plans are for the future to make it even better—and raise our team at the same time!</p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 14:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 13:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#asp">ASP.NET Basics for Experts</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -264,7 +264,7 @@ function convertTime(sessionTime) {
 <div id="asp" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">ASP.NET Basics for Experts</div><p>People love to stay in their comfort zone; but what if you have to step outside of it and embrace a new programming language, one that happens to be ASP.NET?<p><p>Jakub is a Java/Spring developer and architect. He’s never used ASP.NET before and he has questions. Lots of questions.</p><p>Layla, a .NET developer, intends to answer Jakub’s questions and more in this demo-rich session.</p><p>But don’t worry, there will also be something for existing ASP.NET developers as we delve into the ways an ASP.NET application is configured to support services:</p><ul><li>Dependency injection and inversion of control</li><li>HTTP clients and policies</li><li>Fault tolerances and circuit breakers</li><li>Databases connections</li><li>Discovery clients</li><li>Monitoring</li><li>And more!</li></ul>
 </p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 15:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 14:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#observability">Observability for .NET Applications</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -276,7 +276,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="observability" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">Observability for .NET Applications</div><p>Distributed application architectures enable enterprises to easily scale their applications to meet increasing growth and demand. At the same time, the very technology choices that make it easy to build at scale also make it more challenging to maintain at scale. The maintainability of a system is directly dependent on the ability to infer its internal states from available data.</p><p>This session will focus on using the fully OSS project OpenTelemetry to add observability to modern cloud native .NET applications and getting the insight and data needed to maintain enterprise applications. We'll see how the three pillars of observability (traces, metrics, and logs) together provide the solid foundation needed to make production your favorite place on the internet!</p></div>
 <div class="row py-3 border-bottom flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 16:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 15:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#yarp">Simplifying Microservice Security with YARP</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
@@ -288,7 +288,7 @@ function convertTime(sessionTime) {
 </div>
 <div id="yarp" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">Simplifying Microservice Security with YARP</div><p>With constantly emerging attack vectors, evolving security standards, inherent complexity in implementation libraries, and lack of general security expertise, it's no wonder teams are scratching their heads when trying to secure their microservices. With API gateways becoming a common pattern to consolidate API surface, there's a golden opportunity to offload some of the security complexity into a centralized place. This session will look at how Microsoft's new .NET library called Yet Another Reverse Proxy (YARP) can be used to secure applications in a variety of scenarios.</p><p>Attendees will learn how to use YARP to create a uniform API surface for their apps, apply different security strategies, integrate with Federated Identity providers with OpenID Connect, and bridge line-of-business application security requirements with those of the greater organization.</p></div>
 <div class="row py-3 flex-nowrap">
-  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 17:00 UTC")</script></div>
+  <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 16:00 UTC")</script></div>
   <div class="talk-title col-5 h4"><a class="lightbox" href="#enterprise">Your Enterprise Open Source Journey</a></div>
   <div class="col-sm-1 col-0 px-0"></div>
   <div class="name col-4">
