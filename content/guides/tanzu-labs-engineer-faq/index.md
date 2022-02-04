@@ -33,68 +33,66 @@ Knowledge silos may create job security for engineers, but they also create risk
 
 What about productivity? It leaves people to wonder "Should I hire twice as many engineers to get the same amount of work done?" For example, imagine a team of four engineers. When those engineers solo, there's four independent work streams happening in parallel. When they pair, there's only two independent workstreams happening in parallel.
 
+The answer to the question is you won't have to hire more engineers. In an ideal scenario, the four engineers are going to [be more productive](https://www.theregister.com/2016/10/18/pairing_programming_youll_never_guess_what_happens_next/) when working paired than when working solo. However, reality isn't ideal. Many companies may still need to hire more engineers if they have a traditional IT culture. This is because it is also likely that they have a fair number of engineers in their current workforce who prefer not to pair. 
+
 ![Solo vs. Pair Programming](images/image8.jpg)
 
-On the surface, it appears that the volume of work is cut in half. Yet, underlying the question is an assumption that there's no difference in productivity between solo engineers and paired engineers. The assumption is demonstrably false. Solo engineers spend less time focused on a task than paired engineers. It's also easy to get distracted while soloing with apps such as Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts. They are much harder to check out while pairing. Your pair doesn't want to read your email, or answer your texts, or post a hilarious TikTok dance. And, you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. The team of four engineers [is more productive](https://www.theregister.com/2016/10/18/pairing_programming_youll_never_guess_what_happens_next/) when they're pairing rather than when they're soloing.
+On the surface, it appears that the volume of work is cut in half. Yet, underlying the question is an assumption that there's no difference in productivity between solo engineers and paired engineers. The assumption is demonstrably false. Solo engineers spend less time focused on a task than paired engineers. It's also easy to get distracted while soloing with apps such as Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts. They are much harder to check out while pairing. Your pair doesn't want to read your email, or answer your texts, or post a hilarious TikTok dance. And, you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. 
 
-That hyper-productivity caused by pairing comes is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why pairing requires a culture of taking breaks. Every hour or so, the pairs need to stand up and do something completely different. Zone out, listen to music, play a game, etc.
+Hyper-productivity caused by pairing is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different and it doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
 
-Pairing also means you can spend less time on asynchronous code reviews. On teams that don't pair, developers spend a good portion of their time reading pull-requested code and writing comments. Then the original author of that code has to respond to those comments, revise their code, and resubmit it. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so by substituting pairing for code review we lose nothing. In fact, we save time, because the real-time code review provided by pairing is more efficient than typing comments back and forth on Github.
+Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because of the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on Github.
 
-In answer to the question "So I have to hire twice as many engineers to get the same amount of work done?": in an ideal scenario, you won't have to hire more engineers. Those four engineers will be more productive paired up than when they were solo. However, reality isn't ideal. Many companies may still need to hire more engineers because if they have a traditional IT culture, it's likely they have a fair number of engineers in their current workforce who will refuse to pair. To achieve the level of effectiveness we expect from pairing, each person needs to value others' perspectives as much as their own, and be willing to be vulnerable, exposing what they don't know. Not everyone is willing to develop the empathy and relationship skills required to collaborate at this level. Pairing also exposes intellectual insecurities. To pair, you have to overcome your own ego – you have to be willing to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would rather quit than face their fears.
+To achieve the level of effectiveness from pairing, everyone needs to value each other's perspectives, be willing to be vulnerable, and express what they do not know. Pairing can reveal intellectual insecurities in people. Not everyone is going to develop the empathy and relationship skills required to collaborate at this level. To be successful at pairing, let go of any ego, and understand that it's OK to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would prefer to leave the company than overcome their fears.
 
-## Q: Why do some teams struggle with switching from individual code ownership to team code ownership?
+## Q: Why Do Some Teams Struggle with Switching from Individual Code Ownership to Team Code Ownership?
 
-Some developers effortlessly make the transition to team code ownership. They immediately see the benefits of being able to modify any part of the code base and quickly shift from "I made this" (personal ownership) to "we made this" (collective ownership.)
+Some developers effortlessly make the transition to team code ownership. They immediately see the benefits of being able to modify any part of the code base and quickly shift from personal ownership (i.e., "I made this.") to collective ownership (i.e., "The team made this.").
 
-Others may struggle with team code ownership for several reasons:
+Yet, others struggle with team code ownership for several reasons:
 
-* Shifting psychological ownership may require a corresponding shift in an individual's identity. Psychological ownership refers to "the feeling of possessiveness and of being psychologically tied to an object." Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, "What do I feel is mine?"
-* Developers may struggle to transition to a caretaker mindset. One engineer we work with struggled to describe the developer's relationship with the code on a very challenging project and settled on the caretaker metaphor: 
-   > "Sometimes I feel like a janitor to [the code base]. Maybe _'caretaker'_ would be better. As the caretaker I'm not cleaning up messes -- I'm making things better."
-* A developer may be distraught at "seeing my work slowly removed from the app."
-* A developer may feel belittled when seeing their work changed or fixed "behind their back"
+* Shifting psychological ownership may require a corresponding shift in your identity. Psychological ownership refers to "the feeling of possessiveness and of being psychologically tied to an object". Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, "What do I feel is mine?".
+* Developers may struggle to transition to a caretaker mindset. For example, an engineer may struggle to describe the developer's relationship with the code on a very challenging project and settle on the caretaker metaphor, "Sometimes I feel like a caretaker to [the code base].". A caretaker cleans up messes and makes things better.
+* A developer may be distraught at seeing their work slowly removed from the app.
+* A developer may feel belittled when seeing their work changed or fixed without them.
 * Developers can no longer take pride in functionality that they exclusively develop.
-* Existing knowledge silos, which hinder team code ownership, may be slow to break down.
+* Existing knowledge silos may be slow to break down. This can hinder team code ownership, 
 
-New hires struggling with the transition eventually realize that "Someone else is going to take over and they're going to do fine. I can move on to something else and that's okay." They recognize the lack of long-term individual authorship, learn to expect their code to be transitory, develop trust in their teammates and thus loosely hold personal contributions. "The code that I write today may be in the code base for a little while, and it will evolve into something better." Eventually, they experience the benefits of a collaborative environment: "People are a lot more flexible all across the board, with changing things or accepting feedback or collaborating," and the team can say "Hey, this is **_our_** code!"
+New hires who struggle with the transition eventually realize that someone else is going to take over. They know that it's OK to move on to something else. They recognize the lack of long-term individual authorship, learn to expect their code is transitory, develop trust in their teammates, and loosely hold personal contributions. They understand that even if the code that is written today is in the code base for a little while, it is going to evolve into something better. Eventually, new hires experience the benefits of a collaborative environment. People are more flexible with changing things, accepting feedback, or collaborating. A collaborative environment is a place where the team can say "Hey, this is **_our_** code!"
 
-Shifting from individual to team code ownership may require multiple and complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group (where trust and communication come easier) may help.
+Shifting from individual ownership to team code ownership may require multiple, complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group where trust and communication build quickly may help.
 
 See: [**Practice and Perception of Team Code Ownership**](https://www.researchgate.net/publication/301612260_Practice_and_Perception_of_Team_Code_Ownership)
 
-## Q: Why Test Driven Development (TDD)? (Also, Why Do We Refactor?){id="tdd"}
-{{% callout %}}
-We have published extensively about our success using TDD as a crucial engineering practice. Please review the following articles.
-- [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
-- [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd): Matthew Parker elaborates on the benefits of practicing test-driven development, and also why you shouldn’t be afraid of refactoring.
-{{% /callout %}}
+## Q: Why Test Driven Development? {id="tdd"}
 
-## Q: What's a User Story?{id=stories}
+Test Driven Development (TDD) is a crucial engineering practice. Review the article, [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
 
-"User stories", or simply "stories", are the primary unit of currency in an agile backlog, so it's important to have a crisp, clear understanding of them.
+## Q: Why Do We Refactor? {id="tdd"}
 
-A story is a narrative description of a single task or activity being performed by a user of the system. Usually this is a human being, but in some systems the "user" could be another construct, like another software system. It represents the smallest piece of incremental value that you could deliver into the hands of your users and learn from observing their reaction to it.
+**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd) Matthew Parker elaborates on the benefits of practicing test-driven development, and why you shouldn’t be afraid of refactoring.
 
-We use stories to focus all software implementation work on delivering real value to real people as early and often as possible.
+## Q: What is a User Story?{id=stories}
 
-However, this leads to a lot of questions. One common question is "How big should a story be?", or to phrase it another way, "How much user-facing functionality should go into a single story?"
+*User stories*, or *stories*, are the primary unit of currency in an Agile backlog. It's important for you to have a crisp, clear understanding of stories.
 
-You can answer that by asking yourself, "Could I make this story smaller and still deliver value to the user?" If the answer is yes, then the story is too big.
+A story is a narrative description of a single task or activity being performed by a user of the system. Usually, this is a person, but in some systems the user could be another construct such as a software system. It represents the smallest piece of incremental value that you can deliver into the hands of your users, that you can also learn from by observing their reaction to it.
 
-Conversely, another common question "Is it possible for a story to be too small?" To answer that question, ask yourself this question: "If I complete this story, will it actually provide value to our users?" If the answer is no, then the story is too small.
+Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions. A common one is "How big should a story be?". To know the answer, see if you can make the story smaller. Are you still able to provide real value to the user? If you are able to make the story smaller and still deliver real value to the customer, your story is too big.
 
-For example, imagine your story is about authentication. At first, the story includes not only the ability to log in, but also to log out, to recover your password, change your password, and recover your username.
+Conversely, another common question, "Is it possible for a story to be too small?" To answer that question, ask yourself this question: "If I complete this story, will it actually provide value to our users?" If the answer is no, then the story is too small.
 
-So you and your team ask yourselves the question, "Could we make this story smaller and still deliver value to the user?" After some discussion, you decide that much of the functionality in the story could actually be broken out into separate stories; for example, there could be a "Recover password" story, a "Log Out" story, a "Change Password" story, etc.
+For example, suppose your story is about authentication. At first, the story includes all the functionality, including the ability to sign in, sign out, recover your password, change your password, and recover your username.
 
-However, the team goes too far. They come up with a story called "Login Form", and another story called "Login Form Logs In". The first story, "Login Form", says that there should be a login form with a username and password field. And that's it! The form doesn't have to work. It just needs to look like a form. The second story, "Login Form Logs In" says that now that there's a login form, it should actually work.
+Your team collaborates, "Can we make this story smaller and still deliver value to the user?". Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones. These include a "Sign In" story, a "Sign Out" story, a "Recover Password" story, a "Change Password" story and a "Recover Your Username" story. 
 
-So you and your team ask yourselves the question, "If we complete the story 'Login Form', will it actually provide value to our users?" And of course, the answer is "No!" Delivering a login form to production that doesn't actually do anything does not help your users; in fact, it's likely only to frustrate them, or even put the product into an unreleasable state. You've made the story too small. So you combine the "Login Form" and "Login Form Logs In" into a single story.
+However, the team goes too far in making smaller stories out of bigger ones. They come up with a story called "Sign In Form", and another story called "Sign In Form Signsin". The first story, "Sign In Form" is for a sign in form that includes a username field and a password field. Creating the two field form is the story. There is nothing in the story that reads that the form has to work. It only has to look like what is described in the first story. In the second story, "Sign In Form Signsin" your team has to make the sign in form work. 
+
+Your team collaborates, "If we complete the first story, "Sign In Form", is it going to provide real value to our users?" The answer is no. Delivering a sign in form to production that doesn't work does is not going to help your users. If anything, it's more likely to frustrate them, or put the product into an unreleasable state. Individually, the two stories are too small. Your team can fix this by combining the "Sign In Form" story and the "Sign In Form SignIn" story into one.
 
 ## Q: How Do We Decide Which Story Comes First?
 
-At the beginning of a project, you may have a vision for a [minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. For clarity, imagine that you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to their shopping cart, pay with credit card or PayPal, view past transactions, save their credit cards, and apply discount codes.
+At the beginning of a project, you may have a vision for a [minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. For clarity, imagine that you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to their shopping cart, pay with credit card or another online payment app, view past transactions, save their credit cards, and apply discount codes.
 
 That's a lot of software! Where do you start? How do you pick which story to begin with?
 
@@ -180,7 +178,7 @@ Within Tanzu Labs, it's common to have engineers **_rotate_** between projects p
 
 This can be difficult for everyone. Your team and product stakeholders might get attached to you. They not want you to leave to join another project. They might even get scared, or angry. You might also feel emotionally attached to your project and team, and feel scared or angry about moving on to another project before this one is finished.
 
-However, in our experience, rotation is in the project's and everyone's best interest. Here's why.
+However, rotation is in the best interest of the project and everyone involved with it. Here's why.
 
 First, if a team is unchanged for too long, they'll start to become blind to their [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory). They won't see the annoying workarounds as annoying anymore; they'll have grown used to them. They'll become complacent about the hacks in their codebase,  the intermittent failures in their CI build, and the inefficiency of the release process. 
 
