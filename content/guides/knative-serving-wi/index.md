@@ -47,10 +47,10 @@ With Knative, you need to make only one resource—a Knative Service—and then 
 ## Knative simplifies application deployment
 
 How does it work?
-
+<!-- 
 ![alt_text](images/image5.png "image_tooltip")
-
-`kn create service sunshine –image=rainbows`
+-->
+`kn service create sunshine –image=rainbows`
 
 Run the **kn create** command*, supply your application name, application image, and any configuration (environment variables, preferred ports, that sort of thing), and Knative will create for you a Knative Service**.  
 
