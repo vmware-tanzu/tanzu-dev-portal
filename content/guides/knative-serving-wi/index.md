@@ -52,7 +52,7 @@ How does it work?
 -->
 `kn service create sunshine –image=rainbows`
 
-Run the **kn create** command*, supply your application name, application image, and any configuration (environment variables, preferred ports, that sort of thing), and Knative will create for you a Knative Service**.  
+Run the **kn service create** command*, supply your application name, application image, and any configuration (environment variables, preferred ports, that sort of thing), and Knative will create for you a Knative Service**.  
 
 ![alt_text](images/image6.png "image_tooltip")
 
@@ -63,7 +63,7 @@ The Knative Service automatically creates a _configuration_ and a _route_ for yo
 
 I will explain what each of these components is momentarily. But for now I want you to know two things:
 
-1. When you run the **kn create** command, all of these objects are created for you, and the command returns to you a URL where you can access your running application. It is that easy.  
+1. When you run the **kn service create** command, all of these objects are created for you, and the command returns to you a URL where you can access your running application. It is that easy.  
 2. You can view, access, and manipulate all of these Knative resources in your Kubernetes cluster, in addition to the Kubernetes resources that underpin the Knative ones. Knative builds on top of Kubernetes, but it does not obscure it.  
 
 ## Knative scales to zero
