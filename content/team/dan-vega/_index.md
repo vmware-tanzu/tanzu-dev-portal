@@ -32,25 +32,25 @@ Dan has a variety of talks and workshops on the following topics:
 
 ## Highlights
 
-#### Full-Stack Development with Spring Boot and Vue
+### Full-Stack Development with Spring Boot and Vue
 
-Are you interested in building full-stack web applications with Spring Boot and Vue? If so, this session is going to give you everything you need to get started. First, we’ll dive into some of the challenges of building full-stack applications. Next, we’ll look at some different approaches you can take depending on the types of applications you’re building along with the makeup of your team. Finally, we’ll spend most of the session building a sample application together so that when you leave this session, you’ll have everything you need to start building full-stack web applications with Spring Boot and Vue.
+Are you interested in building full-stack web applications with Spring Boot and Vue? If so, this session is going to give you everything you need to get started. First, you will dive into some of the challenges of building full-stack applications. Next, you will look at some different approaches you can take depending on the types of applications you’re building along with the makeup of your team. Finally, you will spend most of the session building a sample application so that when you leave this session, you’ll have everything you need to start building full-stack web applications with Spring Boot and Vue.
 
 {{< youtube id="VkrGHqwSPVA" class="youtube-video-shortcode" >}}
 
-#### How to create your First Spring Application (without Spring Boot)
+### How to create your First Spring Application (without Spring Boot)
 
 Spring Boot makes it easy for you to quickly get an application up and running. If you don't know what Spring Boot is doing for you behind the scenes though it can seem a little bit like magic. In this tutorial, you will learn how to create your first Spring Application from scratch without using Spring Boot. This will give you some perspective on what Spring Boot is and how it can make you a more productive developer.
 
 {{< youtube id="e8aSyQo0nHo" class="youtube-video-shortcode" >}}
 
-#### Spring JDBC Template Tutorial: Learn to build a full CRUD application in Spring Boot
+### Spring JDBC Template Tutorial: Learn to build a full CRUD application in Spring Boot
 
 In this tutorial, you will learn how to list, create, read, update, and delete records from a database in a Spring Boot application using JDBC Template. You will learn how to create a project from scratch, connect to a database, and the various methods in the JDBC Template that allow you to create a full CRUD application.
 
 {{< youtube id="0uLqdBpYAVA" class="youtube-video-shortcode" >}}
 
-#### Spring Boot REST Service: How to build a REST API in Java
+### Spring Boot REST Service: How to build a REST API in Java
 
 In this tutorial, you will learn how to build a basic REST API in Java using Spring Boot.
 
