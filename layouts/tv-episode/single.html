@@ -41,11 +41,22 @@
 <!-- IF UPCOMING -->
 {{ $.Scratch.Set "streamName" "" }}
 {{ $.Scratch.Set "streamUrl" "#" }}
-{{ if isset .Params "twitch" }} 
+{{ if (and (isset .Params "twitch") (and (isset .Params "youtube") (ne .Params.youtube ""))) }}
+  <!-- Dual Stream -->
+  {{ $.Scratch.Set "dualStream" true }}
+  {{ $.Scratch.Set "twitchUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
+  {{ $.Scratch.Set "youtubeUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
+  {{ $.Scratch.Set "embedSite" .Params.embedSite }}
+  {{ if and (ne ($.Scratch.Get "embedSite") "youtube") (ne ($.Scratch.Get "embedSite") "twitch") }}
+    {{ $.Scratch.Set "embedSite" "twitch" }}
+  {{ end }}
+{{ else if isset .Params "twitch" }} 
+  <!-- Twitch Stream -->
   {{ $.Scratch.Set "streamUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
   {{ $.Scratch.Set "streamName" "on Twitch" }}
   {{ $.Scratch.Set "embedSite" "twitch" }}
 {{ else if isset .Params "youtube" }}
+  <!-- YouTube stream -->
   {{ $.Scratch.Set "streamUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
   {{ $.Scratch.Set "streamName" "on YouTube" }}
   {{ $.Scratch.Set "embedSite" "youtube" }}
@@ -65,11 +76,20 @@
       <div class="col-lg-5 col-12 mb-5 pl-0">
         <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
         <div>
-          <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
-          <div class="float-left ml-3 pl-1">
-            <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
-            <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
-          </div>
+          {{ if $.Scratch.Get "dualStream" }}
+            <div class="play-icon float-left"></div>
+            <div class="float-left ml-3 pl-1">
+              <a href='{{ $.Scratch.Get "twitchUrl" }}'>Watch on Twitch</a><br/>
+              <a href='{{ $.Scratch.Get "youtubeUrl" }}'>Watch on YouTube</a><br/>
+              <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+            </div>
+          {{ else }}
+            <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
+            <div class="float-left ml-3 pl-1">
+              <a href='{{ $.Scratch.Get "streamUrl" }}'>Watch {{ ($.Scratch.Get "streamName") }}</a><br/>
+              <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+            </div>
+          {{ end }}
         </div>
       </div>
       <div class="col-lg-4 col-12 px-0">
@@ -135,12 +155,14 @@
     // Live event: Embed the twitch stream
     // Past event: Link/embed the VOD depending if it's on Twitch or YouTube
     if (currentTime < startTime) {
+      // Future
       live.style.display = "flex";
       embed.style.display = "none";
       vod.style.display = "none";
       episodeType = "live";
     } 
     else if (currentTime >= startTime && currentTime <= endTime) {
+      // Current
       live.style.display = "none";
       embed.style.display = "flex";
       vod.style.display = "none";
@@ -155,6 +177,7 @@
       {{ end }}
     }
     else {
+      // Past
       live.style.display = "none";
       embed.style.display = "none";
       vod.style.display = "flex";
