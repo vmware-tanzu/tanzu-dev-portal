@@ -36,8 +36,8 @@ Acceptor
 accessor
 [Aa]ccountabilities
 acknowledgedEvents
-acknowledgement
 Acknowledgement
+acknowledgement
 ActiveMQ
 Activiti
 add-on(s)?
@@ -138,8 +138,8 @@ AuthenticationManager
 AuthenticationProvider
 authenticator
 AuthorizationPolicy
-Authorizer
 authorizer
+Authorizer
 authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 [Aa]uto-reconfiguration
@@ -293,8 +293,8 @@ CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
-clearnotifications
 clearNotifications
+clearnotifications
 Cleverley-Prance
 cli
 CLI(s|'s)?
@@ -467,8 +467,8 @@ DellEMC
 Denham-Parry
 denhamparry
 Depedency
-deployable
 [Dd]eployable
+deployable
 deserialize
 deserializes
 deserializing
@@ -652,8 +652,8 @@ FP
 FQDN
 Frascati-Robinson
 freddygthatsme
-[Ff]rictionless
 frictionless
+[Ff]rictionless
 [fF]rontend(-green)?
 Frontstage
 Fu
@@ -737,8 +737,8 @@ GetStatisticValueFunction
 getters
 getValueAsString
 gfs
-GFSH
 gfsh
+GFSH
 ghostEmail
 ghostPassword
 ghostUsername
@@ -770,8 +770,8 @@ Gorouter
 gotchas
 Gothelf
 GraalVM(-powered|.)?
-Gradle
 gradle
+Gradle
 gradlew
 [gG]rafana
 GRAFANA-PASSWORD
@@ -990,8 +990,8 @@ julielerman
 Julien
 jumpstart
 Junio
-junit
 Junit
+junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
@@ -1033,9 +1033,9 @@ KlipTok
 KMS
 (KMS|kms)-plugin(s)?
 knative
-Knative-serving
 Knative-Serving
 knative-serving
+Knative-serving
 Knative('s|.)?
 KNN
 KoFu
@@ -1063,14 +1063,14 @@ Kube2IAM
 KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
-[Kk]ubeapps
 KubeApps
+[Kk]ubeapps
 [kK]ubebuilder
 KubeCon
 [Kk]ubeconfig
 KUBECONFIG
-KUBECTL
 [kK]ubectl
+KUBECTL
 kubectl
 kubectx
 [kK]ubelet(-probe)?
@@ -1081,8 +1081,8 @@ kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
-kubeseal
 Kubeseal
+kubeseal
 KUDO
 Kung
 [kK]ustomize
@@ -1117,8 +1117,8 @@ Lippert
 Littles
 Littleton
 livecoding
-Livelessons
 LiveLessons
+Livelessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
 livestreaming
@@ -1131,8 +1131,8 @@ Log4Hell
 [Ll]og4j2?
 Log4Shell
 LogAllStatisticValuesFunction
-logback
 Logback
+logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 Loggregator
@@ -1441,8 +1441,8 @@ PKCS
 PKI
 plaintext
 pluggability
-pluggable
 Pluggable
+pluggable
 Pluralsight
 PMC
 podcaster
@@ -1928,8 +1928,8 @@ Umbraco
 (un)?marshalling
 unannotated
 unbundle
-uncomment
 Uncomment
+uncomment
 undersample
 underutilization
 unencoded
