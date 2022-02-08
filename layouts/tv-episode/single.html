@@ -1,19 +1,42 @@
 {{ define "main" }}
 
-{{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-7 pt-4 pb-5">
-	<div class="container">
-		{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-    <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
-    {{ if .Params.description_episode }}
-      <div class="lead"><p>{{ .Params.description_episode | markdownify }}</p></div>
-    {{ else if .Parent.Params.description_episodes }}
-      <div class="lead"><p>{{- .Parent.Params.description_episodes | markdownify }}</p></div>
-    {{ else }}
-      <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
-    {{ end }}
-   </div>
-</section>
+{{ if .Params.beyond }}
+  <section id="beyond-hero" class="bg-gray-dark mt-7 py-lg-5 overflow-hidden position-relative">
+    <img alt="" id="left-blob-1" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-1.svg" | relURL }}'>
+    <img alt="" id="left-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-2.svg" | relURL }}'>
+    <img alt="" id="left-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-3.svg" | relURL }}'>
+
+    <img alt="" id="right-blob-1" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-1.svg" | relURL }}'>
+    <img alt="" id="right-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-2.svg" | relURL }}'>
+    <img alt="" id="right-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-3.svg" | relURL }}'>
+
+    <div class="container py-0 py-lg-4">
+      <div class="col-xl-9 col-12 px-0 mt-5 mx-auto position-relative">
+        <img alt="" id="shooting-star-1" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
+        <img alt="" id="shooting-star-2" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
+        <p class="white h3">March 30&ndash;31, 2022</p>
+        <img alt="" class="pe-none" id="beyond-logo" src='{{ "/images/beyond/glow-beyond.svg" | relURL }}'>
+        <p class="tagline white h3 pt-0 pb-4">A collection of conversations exploring the wider world of .NET</p>
+      </div>
+    </div>
+  </section>
+{{ else }}
+  {{ $class := replace .Page.Section "." "-" | lower }}
+  <section id="hero" class="{{ $class }}-episode-hero bg-gray-dark mt-7 pt-4 pb-5">
+    <div class="container">
+      {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+      <h1 class="h1 mt-4 pt-2"> {{ .Parent.Title -}}</h1>
+      {{ if .Params.description_episode }}
+        <div class="lead"><p>{{ .Params.description_episode | markdownify }}</p></div>
+      {{ else if .Parent.Params.description_episodes }}
+        <div class="lead"><p>{{- .Parent.Params.description_episodes | markdownify }}</p></div>
+      {{ else }}
+        <div class="lead"><p>{{- .Parent.Params.description | markdownify }}</p></div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+
 
 <!-- IF UPCOMING -->
 {{ $.Scratch.Set "streamName" "" }}
@@ -29,12 +52,15 @@
   <!-- The base domain is required to embed YT chat, this parses the page URL to get it -->
   {{ $.Scratch.Set "siteDomain" (index (split (index (split (replaceRE "http[s]?://" "" .Site.BaseURL) "/") 0) ":") 0) }}
 {{ end }}
+
 <div class='container'>
   <div id="live" class="row justify-content-center mt-5 pt-3">
     {{ if .Params.banner_only }}
-      <div class="col-lg-9 col-12 px-0">
-        <img src='{{ partial "tv-image-src" . }}' />
-      </div>
+      {{ if not .Params.beyond }}
+        <div class="col-lg-9 col-12 px-0">
+          <img src='{{ partial "tv-image-src" . }}' />
+        </div>
+      {{ end }}
     {{ else }}
       <div class="col-lg-5 col-12 mb-5 pl-0">
         <h2 class="pt-0 mb-4 pb-2"> {{- .Title -}}</h2>
@@ -150,35 +176,72 @@
     </div>
   </div>
 
-  {{ with .Params.guests }}
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9 col-12 px-0">
-      <h3 class="mb-3">Guests</h3>
-      {{ range . }}
-        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="border-bottom mb-4 pb-5">
-          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
-          </div>
+  <!-- Display colored headshots on .NET Beyond page -->
+  {{ if .Params.beyond }}
+    {{ with .Params.guests }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Guests</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class=" mb-4 pb-5">
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  </div>
+    {{ end }}
+  {{ else }}
+    {{ with .Params.guests }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Guests</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class=" mb-4 pb-5">
+            {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   {{ end }}
 
-  {{ with .Params.hosts }}
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9 col-12 px-0">
-      <h3 class="mb-3">Hosts</h3>
-      {{ range . }}
-        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-          <div class="mb-4">
-          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
-          </div>
+
+  {{ if .Params.beyond }}
+    {{ with .Params.hosts }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Hosts</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class="mb-4">
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  </div>
+    {{ end }}
+  {{ else }}
+    {{ with .Params.hosts }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 col-12 px-0">
+        <h3 class="mb-3">Hosts</h3>
+        {{ range . }}
+          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+            <div class="mb-4">
+            {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   {{ end }}
+
 
   {{ with .Params.speakers }}
   <div class="row justify-content-center mb-5">
@@ -195,7 +258,21 @@
   </div>
   {{ end }}
 
-  {{ if and (.Params.contact) (.Params.code_of_conduct) }}
+  {{ if .Params.faqs }}
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 px-0 pt-4">
+        {{ partial "faqs.html" . }}
+      </div>
+    </div>
+  {{ end }}
+
+  {{ if and (.Params.contact) (.Params.code_of_conduct) ( .Params.beyond ) }}
+    <div class="row justify-content-center mb-5 text-center">
+      <div class="col-lg-9 col-12 px-0">
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+      </div>
+    </div>
+  {{ else if and (.Params.contact) (.Params.code_of_conduct) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
         <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>

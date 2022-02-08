@@ -489,7 +489,7 @@ previous Application Owners section.
 
 _[Live restore](https://docs.docker.com/config/containers/live-restore/)_ is a
 feature of Docker that allows containers to continue running when the Docker
-daemon is unavailable. By default, this feature is disabled when installing
+daemon is unavailable. By default, this feature is not activated when installing
 Docker. Docker configuration is also out of scope for
 [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/),
 resulting in cluster managers often overlooking this setting. If using Docker

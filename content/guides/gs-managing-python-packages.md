@@ -48,7 +48,7 @@ Finally, if you'd prefer to watch a video on this guide, scroll down to the bott
 
 ## Managing Python Project Dependencies
 
-As a rule of thumb, it's best if each Python project you work on has its own set of dependencies, both on the version of Python it needs, but also on any dependencies you install via [pip][pip]. This model is especially true if your work involves tens or even hundreds of Python projects --- like a microservices project.
+As a guideline, it's best if each Python project you work on has its own set of dependencies, both on the version of Python it needs, but also on any dependencies you install via [pip][pip]. This model is especially true if your work involves tens or even hundreds of Python projects --- like a microservices project.
 
 In the past, giving each Python project its independence was difficult. There was no built-in way to achieve isolation between _all_ your Python projects.  Fortunately, the [Pyenv 'VirtualEnv'][peve] project can fix this issue, and it works with all Python versions including version 2.
 
