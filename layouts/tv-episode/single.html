@@ -45,11 +45,7 @@
   {{ $.Scratch.Set "dualStream" true }}
   {{ $.Scratch.Set "twitchUrl" (print "https://www.twitch.tv/" .Params.twitch) }}
   {{ $.Scratch.Set "youtubeUrl" (print "https://www.youtube.com/watch?v=" .Params.youtube) }}
-  {{ if ne .Params.embedSite }}
-    {{ $.Scratch.Set "embedSite" .Params.embedSite }}
-  {{ else }}
-    {{ $.Scratch.Set "embedSite" "twitch" }}
-  {{ end }}
+  {{ $.Scratch.Set "embedSite" .Params.embedSite }}
   {{ if and (ne ($.Scratch.Get "embedSite") "youtube") (ne ($.Scratch.Get "embedSite") "twitch") }}
     {{ $.Scratch.Set "embedSite" "twitch" }}
   {{ end }}
