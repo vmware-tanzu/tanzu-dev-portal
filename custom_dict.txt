@@ -36,8 +36,8 @@ Acceptor
 accessor
 [Aa]ccountabilities
 acknowledgedEvents
-Acknowledgement
 acknowledgement
+Acknowledgement
 ActiveMQ
 Activiti
 add-on(s)?
@@ -206,8 +206,8 @@ bookinfo(-ingressgateway-certs-ca)?
 BookService
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
-bootrun
 bootRun
+bootrun
 bootup
 Boris
 Boskey
@@ -304,8 +304,8 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
-Cloudflare
 CloudFlare
+Cloudflare
 CloudHealth
 CloudNativeCon
 cloudnativewal
@@ -467,8 +467,8 @@ DellEMC
 Denham-Parry
 denhamparry
 Depedency
-[Dd]eployable
 deployable
+[Dd]eployable
 deserialize
 deserializes
 deserializing
@@ -501,8 +501,8 @@ DiskStore
 Disneyland
 [Dd]isposability
 distributable
-distributedCommand
 DistributedCommand
+distributedCommand
 DistributedCommandCacheWriter
 DistributedMember
 DistributedMembers
@@ -738,8 +738,8 @@ GetStatisticValueFunction
 getters
 getValueAsString
 gfs
-gfsh
 GFSH
+gfsh
 ghostEmail
 ghostPassword
 ghostUsername
@@ -1034,9 +1034,9 @@ KlipTok
 KMS
 (KMS|kms)-plugin(s)?
 knative
+Knative-serving
 Knative-Serving
 knative-serving
-Knative-serving
 Knative('s|.)?
 KNN
 KoFu
@@ -1068,11 +1068,11 @@ KubeApps
 [Kk]ubeapps
 [kK]ubebuilder
 KubeCon
-[Kk]ubeconfig
 KUBECONFIG
+[Kk]ubeconfig
+kubectl
 [kK]ubectl
 KUBECTL
-kubectl
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
@@ -1082,8 +1082,8 @@ kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
-Kubeseal
 kubeseal
+Kubeseal
 KUDO
 Kung
 [kK]ustomize
@@ -1118,8 +1118,8 @@ Lippert
 Littles
 Littleton
 livecoding
-LiveLessons
 Livelessons
+LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
 livestreaming
