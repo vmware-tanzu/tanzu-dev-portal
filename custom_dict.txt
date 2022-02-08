@@ -627,6 +627,7 @@ FC
 FeignClient
 FelixConfiguration
 Fewell
+fgJ
 fiancé
 [Ff]ibonacci
 fileshare
@@ -2070,6 +2071,7 @@ XKCD
 XP
 XSalsa20
 Xu
+Y2ffgg
 YAML|yaml
 Yaron
 YARP
