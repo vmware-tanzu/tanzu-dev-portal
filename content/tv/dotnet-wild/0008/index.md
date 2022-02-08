@@ -1,16 +1,16 @@
 ---
-Date: '2022-02-8T16:30:00-00:00'
+Date: '2022-02-08T16:30:00-00:00'
 Description: .NET in the Wild with Katy Ashby
-PublishDate: '2022-01-19T00:00:00-00:00'
+PublishDate: '2022-02-08T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/8
 author: laylap
-date: '2022-02-8'
+date: '2022-02-08'
 episode: '8'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2022-01-19'
+lastmod: '2022-02-02'
 title: Katy Ashby and Layla talk about learning to code and more!
 truncate: ''
 twitch: vmwaretanzu

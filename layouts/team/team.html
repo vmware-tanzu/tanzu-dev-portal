@@ -67,7 +67,11 @@
                           {{ if (not (isset .Params "youtube")) | or (eq .Params.youtube "") }}<a href="{{ .RelPermalink }}"><img src='{{ partial "tv-image-src" . }}'></a>
                           {{ else }}<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
                           {{ end }}
-                          <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
+                          {{ if .Params.beyond }}
+                            <p><a class="text-white" href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+                          {{ else }}
+                            <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
+                          {{ end }}
                       </div>
                   {{ end }}
               </div></div>

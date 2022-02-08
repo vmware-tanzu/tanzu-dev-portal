@@ -2,9 +2,9 @@
 Date: '2022-01-25T12:00:00-08:00'
 Description: "Building Production Ready Container Images at Scale with Cora Iberkleid"
 aliases:
-- /tv/tanzu-tuesdays/84
+- /tv/tanzu-tuesdays/82
 draft: false
-episode: '84'
+episode: '82'
 explicit: 'no'
 guests:
 - Cora Iberkleid
@@ -16,7 +16,7 @@ minutes: 60
 title: "Building Production Ready Container Images at Scale with Cora Iberkleid"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "QTmix5yLq9A"
 type: tv-episode
 ---
 

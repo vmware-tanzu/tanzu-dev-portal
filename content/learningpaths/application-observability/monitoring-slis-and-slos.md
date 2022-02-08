@@ -23,7 +23,7 @@ represent the availability of these features. For example, if you are running an
 eCommerce service you may choose to measure the percentage of "add to shopping
 cart" operations that succeed. Next, choose an appropriate objective for each of
 these indicators. Avoid spending too much time debating the initial SLO - your
-first attempt will almost certainly need adjustment. A good rule of thumb is to
+first attempt will almost certainly need adjustment. A good guideline is to
 start with an initial SLO much lower than you think you’ll need, and fine-tune
 this number as necessary.
 

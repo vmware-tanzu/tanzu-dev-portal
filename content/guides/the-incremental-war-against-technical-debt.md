@@ -83,7 +83,7 @@ On teams of solo engineers, I have found that:
 - There is often fuzziness around team definition. This includes oversized teams of 20+ developers, or individual developers contributing to many teams’ codebases.
 - Standups end up being a hard place for product managers and designers. Developers who have not had an opportunity to share technical ideas throughout the day tend to  dominate the conversation. There is not a lot of room for product managers and designers to participate.
 - Code quality remains heterogeneous across the codebase. The level of simplicity, factoring and testing of the code is proportional to the level of the experience of the author, with no real ability to make an impact across silos.
-- Pain accumulates and becomes a long-term part of the development experience. The belief is that if you are feeling pain, it is probably your own fault and you should upskill to become a better developer. You are incentivized not to speak up, but instead to suffer through.
+- Pain accumulates and becomes a long-term part of the development experience. The belief is that if you are feeling pain, it is probably your own fault and you should upskill to become a better developer. You are incentivized not to speak up, but instead to endure through.
 - There is divergence of thought between teammates at every level, from file naming conventions to beliefs about automated testing.
 
 ### Teams that Pair Program

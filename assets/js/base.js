@@ -450,6 +450,21 @@ limitations under the License.
     $(".learning-path-card").removeClass("active");
     $(this).addClass("active");
   });
+
+  // Beyond Agenda Toggle
+  $( ".day" ).click(function() {
+    $(".day").removeClass("active");
+    $(this).addClass("active");
+
+    if( $(this).attr('id') === 'day-1') {
+      $("#day-2-agenda").hide();
+      $("#day-1-agenda").show();
+    }
+    else {
+      $("#day-1-agenda").hide();
+      $("#day-2-agenda").show();
+    }
+  });
   
 }(jQuery));
 

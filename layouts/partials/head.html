@@ -7,7 +7,7 @@
 {{ else }}
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
-<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="canonical" href="{{if .Params.canonical}}{{ .Params.canonical }}{{ else }}{{ with .Permalink }}{{ . }}{{ end }}{{ end }}" />
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
