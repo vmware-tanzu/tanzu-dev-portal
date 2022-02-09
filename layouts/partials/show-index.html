@@ -3,7 +3,14 @@
         <div class="px-0 mb-5 shows">
         {{ range sort .Sections }}
             {{ if eq .Title ".NET Beyond" }}
-                <a class="mb-5 d-block" href="/developer/tv/dotnet-beyond/"><img src='{{ "/images/beyond/beyond-promo.png" | relURL }}'></a>
+                {{ range first 1 (sort .RegularPages ".Date" "desc") }}
+                <a class="magnify-banner mb-5 episodes d-block position-relative overflow-hidden" href="/developer/tv/dotnet-beyond/">
+                    <img class="transition-all h-100 w-100" src='{{ "/images/beyond/beyond-promo.png" | relURL }}'>
+                    {{ printf "<div class=\"upcoming display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
+                    <span class="countdown btn btn-small mb-4 mt-2 position-absolute z-1">Live&nbsp;</span>
+                    <div class='thumbnail-gradient position-absolute'></div>
+                </a>
+                {{ end }}
             {{ else }}
                 <div class="row d-flex justify-content-between align-items-baseline mb-3" >
                     <h2 class="h4">
