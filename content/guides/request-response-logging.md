@@ -116,7 +116,7 @@ Once this is configured, every request/response payload is logged to your defaul
 
 ## Enabling or Disabling Logging
 
-There are potential impacts to application performance when this filter is activated. Every request/response payload is copied to an in-memory buffer, creating additional garbage collection and CPU overhead. To reduce overhead or to avoid logging sensitive data, add the following to your `application.properties` to disable access logging by default:
+There are potential impacts to application performance when this filter is activated. Every request/response payload is copied to an in-memory buffer, creating additional garbage collection and CPU overhead. To reduce overhead or to avoid logging sensitive data, add the following to your `application.properties` to deactivate access logging by default:
 
 `logback.access.enabled=false`
 

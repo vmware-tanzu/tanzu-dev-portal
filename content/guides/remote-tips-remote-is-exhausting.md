@@ -35,7 +35,7 @@ level2: Team Tips
 - Block time for personal care.
 - 🔥 Monitor your potential for burnout using [Burnoutindex.org](https://burnoutindex.org/).
 - Take an occasional “mental health day.”
-- Don't suffer in silence; help each other and keep each other accountable.
+- Help each other and keep each other accountable.
 - Ask each other the right questions.
 - Discuss in retros how to support each other and reduce fatigue.
 

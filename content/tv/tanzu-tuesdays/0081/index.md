@@ -18,7 +18,7 @@ minutes: 60
 title: "How to Customize TCE and Add Additional Value Using the Carvel Tool Set"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "fswcYhohNB4"
 type: tv-episode
 ---
 

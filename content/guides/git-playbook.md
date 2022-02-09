@@ -22,7 +22,7 @@ Git is a free and open source version control system that is widely used in the 
 
 ## Gitflow
 
-Gitflow enables you to work on your own feature branch in isolation before committing to the main project branches, i.e. develop and master.  Features may be driven from your preferred project planning tool as assigned tasks.  Gitflow helps manage the Git history to reflect the progress against specific issues.
+Gitflow enables you to work on your own feature branch in isolation before committing to the main project branches, i.e. develop and main.  Features may be driven from your preferred project planning tool as assigned tasks.  Gitflow helps manage the Git history to reflect the progress against specific issues.
 
 ## Install GitFlow
 
