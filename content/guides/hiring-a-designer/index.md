@@ -161,7 +161,7 @@ _Note: If done by a partner agency, prep the agency with a high-level overview o
             <p>
                 Portfolio review (20–25 minutes)
             <ul>
-                <li>Prompt them first then ask follow-up questions from the <a href="#things-to-look-for--ask-about">things to look for</a> section above.
+                <li>Prompt them first then ask follow-up questions from the <a href="#things-to-look-for-and-ask-about">things to look for and ask about</a> section above.
                 <li>Prompt: <em>“For the portfolio review, I’m looking for you to show one, at most two projects that show your process as a designer. Ideally I’d like to see projects that have made it to production and are being used by users. If you need two projects in order to speak to your whole process, that’s OK.”</em>
             </ul>
             <p>
