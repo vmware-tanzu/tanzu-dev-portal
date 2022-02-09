@@ -4,13 +4,13 @@ description: This a basic implementation of the GemFire security manager for an 
 lastmod: '2022-02-03'
 team:
 - John Martin 
-title: "GemFire Security Manager Basics: Authentication-only"
+title: "GemFire Security Manager Basics: Authentication-Only"
 type: blog
 ---
 
 [VMware Tanzu GemFire](https://tanzu.vmware.com/gemfire) is an in-memory data grid that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Starting with GemFire 9.0.0, the `SecurityManager` interface was introduced to manage the authentication and authorization mechanisms in a single place, simplifying the implementation and interactions with all components in a consistent manner.
 
-In this example you will go through a basic implementation of a custom `SecurityManager` for an authentication only system.
+In this example, you will go through a basic implementation of a custom `SecurityManager` for an authentication-only system.
 
 {{% callout %}}
 It’s important to note that I am not a security expert. The purpose of this article is to introduce the GemFire `SecurityManager`.
@@ -23,13 +23,13 @@ To secure a GemFire cluster, the user needs to deploy a custom implementation of
 
 This example focuses on a basic authentication example, with the goal of understanding how the `SecurityManager` works on the server and how to connect a Java application to the cluster.
 
-In this example, you will
-- Create a `BasicSecurityManager` implementation that uses the `SecurityManager`'s authentication method.
+In this example, you will:
+- Create a `BasicSecurityManager` implementation that uses the `SecurityManager`'s authentication method
 - Start a GemFire cluster with the `BasicSecurityManager`
-- Create a Java client application that authenticates against the application and `PUT`s and `GET`s data into a region.
+- Create a Java client application that authenticates against the application and `PUT`s and `GET`s data into a region
 
-## Implementing the Security Manager interface
-First you will create a basic `SecurityManager` implementation. The `SecurityManager` interface requires the `authenticate` method to be implemented in your custom solution. In the example below the expected username (“default") and password (“reallyBadPassword”) have been hardcoded for the cluster.
+## Implementing the security manager interface
+First you will create a basic `SecurityManager` implementation. The `SecurityManager` interface requires the `authenticate` method to be implemented in your custom solution. In the example below, the expected username (“default") and password (“reallyBadPassword”) have been hard-coded for the cluster.
 
 ```java  
 package BasicSecurityManager;
@@ -68,10 +68,10 @@ The `Properties` object passed into the `authenticate` method has two credential
 After evaluating the credentials that are passed into the `SecurityManager`, a Boolean is returned from the method. If the credentials passed in match, the user is authenticated and can interact with the GemFire cluster. If the credentials don’t match, then the authentication fails, and the user cannot interact with the GemFire cluster and receives an exception with the message “Wrong username/password".
 
 ---
-## Starting a GemFire cluster with the Security Manager
+## Starting a GemFire cluster with the security manager
 Now that you have a `BasicSecurityManager` implementation, you need to include it when starting the GemFire cluster.
 
-1. Build the `.jar` file for the `BasicSecurityManager` created above. Note the directory and file path that the jar file is created in, it will be used in Step 3.
+1. Build the `.jar` file for the `BasicSecurityManager` created above. Note the directory and file path that the jar file is created in; it will be used in Step 3.
 2. Start GemFire’s shell (`gfsh`) by running the `gfsh` command in a console / terminal.
 3. Start a locator and include the path to the jar file and class name of the `BasicSecurityManager`. The start locator command will look something like this:
       ```
@@ -101,7 +101,7 @@ Now that you have a `BasicSecurityManager` implementation, you need to include i
 
 There's a problem though. The locator started, but it says that it was unable to connect.
 
-Once the security manager is included to start the cluster, it is immediately used to authenticate the user. To continue you must now connect to the cluster (in `gfsh`) using the username and password defined in the `BasicSecurityManager` class.
+Once the security manager is included to start the cluster, it is immediately used to authenticate the user. To continue, you must now connect to the cluster (in `gfsh`) using the username and password defined in the `BasicSecurityManager` class.
 
 In `gfsh`, the command would look similar to the following:
 
@@ -109,12 +109,11 @@ In `gfsh`, the command would look similar to the following:
     connect --locator= [IP Address that GemFire is running on] [10334] --user=default --password=reallyBadPassword
 ```
 
-You should now be connected to the locator. Next, you will start a server. This will be very similar to starting the locator. In `gfsh`, use the `start server` command which will include the path to the same `BasicSecurityManager` `.jar` file used when starting the locator.
+You should now be connected to the locator. Next, you will start a server. This will be very similar to starting the locator. In `gfsh`, use the `start server` command, which will include the path to the same `BasicSecurityManager` `.jar` file used when starting the locator.
 ```text 
     start server --name=server1 --locators=localhost [10334] --classpath=[path to your security mnanager]/BasicSecurityManager-1.0-SNAPSHOT.jar --user=default --password=reallyBadPassword
 ```
 - Repeat this step for each server you need to start, but make sure you change the `--name=` parameter to be unique for each server.
-
 
 Good work! You now have a GemFire cluster running with your `BasicSecurityManager` !
 
@@ -123,7 +122,7 @@ Good work! You now have a GemFire cluster running with your `BasicSecurityManage
 
 Before you create the client application, you need to create a Region on the GemFire cluster for the app to interact with.
 
-In the `gfsh` terminal run the following command to create a region called `helloWorld`. This will create a [partitioned region](https://gemfire.docs.pivotal.io/910/geode/developing/partitioned_regions/chapter_overview.html) in your GemFire cluster that you can `PUT` and `GET` data from.
+In the `gfsh` terminal, run the following command to create a region called `helloWorld`. This will create a [partitioned region](https://gemfire.docs.pivotal.io/910/geode/developing/partitioned_regions/chapter_overview.html) in your GemFire cluster that you can `PUT` and `GET` data from.
 
 ```
 create region --name=helloWorld --type=PARTITION
@@ -132,15 +131,14 @@ create region --name=helloWorld --type=PARTITION
 
 There are three important steps to connect a client application to the GemFire cluster.
 
-1. The client application must have a class that implements the `AuthInitialize` interface.  This class is used by GemFire to provide the credentials to the cluster.
-2. The client application must set its credentials composed of two properties - `security username` and `security-password`.
+1. The client application must have a class that implements the `AuthInitialize` interface. This class is used by GemFire to provide the credentials to the cluster.
+2. The client application must set its credentials composed of two properties, `security username` and `security-password`.
 3. The client application must set the `security-client-auth-init` property, which indicates to GemFire the class that implements the `AuthInitialize` interface
 
 
-In this example you will set the `security-username` and `security-password` in the class that implements the `AuthInitialize` interface. In your company, these credentials might come from an external source, such as a credentials database, ActiveDirectory, or some other external system. The goal for this article is to keep things as simple as possible to help get a basic understanding of how the security manager works, so you will be hard-coding them into the application.
+In this example, you will set the `security-username` and `security-password` in the class that implements the `AuthInitialize` interface. In your organization, these credentials might come from an external source, such as a credentials database, ActiveDirectory, or some other external system. The goal for this article is to keep things as simple as possible to help give a basic understanding of how the security manager works, so you will be hard-coding them into the application.
 
-
-First create a class that implements the `AuthInitialize` interface.
+First, create a class that implements the `AuthInitialize` interface.
 
 ```java
 import java.util.Properties;
