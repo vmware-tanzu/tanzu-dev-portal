@@ -24,7 +24,6 @@ We highly recommend your product team be a [balanced team](/learningpaths/applic
 
 _If you need help convincing your team or leadership to contract with a designer on a time-and-materials basis vs. a fixed-deliverable basis, check back soon for our upcoming blog post on **Advocating for Outcome-Oriented Vendor Contracts** with tips on how to approach this conversation._
 
-
 ## Preparing for and running interviews 🔎
 
 
@@ -63,7 +62,7 @@ These key hiring considerations are intended to help support any hiring conversa
 
 ## Possible hiring logistics/flow
 
-This set of hiring logistics is intended to give one possible fast approach to hiring a design contractor into a team that does not have a designer but does have a product manager-like role and/or at least one engineer. Naturally this will vary based on how much recruiting/sourcing is done by you vs. by a partner agency, and it can always be adjusted to fit the parameters of your existing hiring processes. A general flow might include these touchpoints with the option to simplify further as time and availability require:
+This set of hiring logistics is intended to give one possible fast approach to hiring a design contractor into a team that does not have a designer but does have a product manager-like role and/or at least one engineer. Naturally this will vary based on how much recruiting/sourcing is done by you vs. by a partner agency, and it can always be adjusted to fit the parameters of your existing hiring processes. A general flow might include these touch-points with the option to simplify further as time and availability require:
 
 1. Initial screening by you **OR** partner agency locates a potential candidate
    * Decision (move forward or end)
