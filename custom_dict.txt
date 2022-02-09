@@ -138,8 +138,8 @@ AuthenticationManager
 AuthenticationProvider
 authenticator
 AuthorizationPolicy
-Authorizer
 authorizer
+Authorizer
 authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 [Aa]uto-reconfiguration
@@ -206,8 +206,8 @@ bookinfo(-ingressgateway-certs-ca)?
 BookService
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
-bootrun
 bootRun
+bootrun
 bootup
 Boris
 Boskey
@@ -293,8 +293,8 @@ CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
-clearnotifications
 clearNotifications
+clearnotifications
 Cleverley-Prance
 cli
 CLI(s|'s)?
@@ -304,8 +304,8 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
-Cloudflare
 CloudFlare
+Cloudflare
 CloudHealth
 CloudNativeCon
 cloudnativewal
@@ -501,8 +501,8 @@ DiskStore
 Disneyland
 [Dd]isposability
 distributable
-distributedCommand
 DistributedCommand
+distributedCommand
 DistributedCommandCacheWriter
 DistributedMember
 DistributedMembers
@@ -627,6 +627,7 @@ FC
 FeignClient
 FelixConfiguration
 Fewell
+fgJ
 fiancé
 [Ff]ibonacci
 fileshare
@@ -652,8 +653,8 @@ FP
 FQDN
 Frascati-Robinson
 freddygthatsme
-[Ff]rictionless
 frictionless
+[Ff]rictionless
 [fF]rontend(-green)?
 Frontstage
 Fu
@@ -770,8 +771,8 @@ Gorouter
 gotchas
 Gothelf
 GraalVM(-powered|.)?
-Gradle
 gradle
+Gradle
 gradlew
 [gG]rafana
 GRAFANA-PASSWORD
@@ -990,8 +991,8 @@ julielerman
 Julien
 jumpstart
 Junio
-junit
 Junit
+junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
@@ -1063,15 +1064,15 @@ Kube2IAM
 KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
-[Kk]ubeapps
 KubeApps
+[Kk]ubeapps
 [kK]ubebuilder
 KubeCon
-[Kk]ubeconfig
 KUBECONFIG
-KUBECTL
-[kK]ubectl
+[Kk]ubeconfig
 kubectl
+[kK]ubectl
+KUBECTL
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
@@ -1131,8 +1132,8 @@ Log4Hell
 [Ll]og4j2?
 Log4Shell
 LogAllStatisticValuesFunction
-logback
 Logback
+logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 Loggregator
@@ -1441,8 +1442,8 @@ PKCS
 PKI
 plaintext
 pluggability
-pluggable
 Pluggable
+pluggable
 Pluralsight
 PMC
 podcaster
@@ -1928,8 +1929,8 @@ Umbraco
 (un)?marshalling
 unannotated
 unbundle
-uncomment
 Uncomment
+uncomment
 undersample
 underutilization
 unencoded
@@ -2070,6 +2071,7 @@ XKCD
 XP
 XSalsa20
 Xu
+Y2ffgg
 YAML|yaml
 Yaron
 YARP
