@@ -1,12 +1,14 @@
 ---
-title: "SpringOne Tour"
+Date: '2022-12-31T00:00:00-07:00'
+PublishDate: '2022-01-01T00:00:00-07:00'
+aliases:
+- /tv/springone-tour
+title: "Past Events"
+type: "tv-show"
+streaming: "twitch"
 id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/TanzuTV-SpringOneTour.png"
-menu:
-    main:
-        parent: "community"
-        weight: 4
 notwitchicon: true
 # Text that appears on show index page under show name
 description: 

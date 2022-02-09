@@ -1,5 +1,6 @@
 <div class="section-index">
-    {{ $pages := sort (where .Site.Pages "Section" "tv") }}
+    <!--Grab pages for SpringOne Tour page if on list page, otherwise use tv-->
+    {{ $pages := sort (where .Site.Pages "Section" (cond (eq .Title "Past Events") "springone-tour" "tv")) }}
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
 

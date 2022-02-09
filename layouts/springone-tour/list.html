@@ -1,0 +1,84 @@
+{{ define "main" }}
+
+{{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
+
+{{ $class := replace .Page.Section "." "-" | lower }}
+<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-4">
+    <div class="container">
+        <div class='row justify-content-between'>
+            <div class='col-lg-9 px-0'>
+                <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1>
+                <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description |
+                    markdownify }}</p>
+                {{ .Content }}
+                {{ if (isset .Params "streaming") }}
+
+                <div id="twitch-embed"></div>
+
+                <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                <script type="text/javascript">
+
+                    var check = isTvShowLive("{{ .Title }}");
+                    if (check) {
+
+                        if (liveShowStream == "twitch") {
+                            new Twitch.Embed("twitch-embed", {
+                                width: 1130,
+                                height: 480,
+                                channel: "vmwaretanzu",
+                            });
+                        } else {
+                            document.write("<div class='youtube-video-shortcode'>");
+                            document.write("<iframe src='https://www.youtube.com/embed/" + liveShowStream + "' frameborder='0' allowfullscreen></iframe>");
+                            document.write("</div>");
+                        }
+                    }
+
+                </script>
+                {{ end }}
+            </div>
+            <div class='col-lg-3 px-0'>
+                {{ if (isset .Params "streaming") }}
+                {{ if not .Params.notwitchicon }}
+                <a class="btn px-4 float-lg-right mt-lg-5 mt-4 mb-2"
+                    href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{
+                    .Params.streaming }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="upcomingCities" class="">
+    <div class="container">
+        <h2>S1T Destinations 2022</h2>
+        <div class="row align-items-baseline mb-3">
+            {{ range .Pages.ByDate }}
+            {{ if eq .Parent .Page.Parent }}
+            <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
+                <div class='col-4-thumbnail col-lg-11 col-12 px-0 overflow-hidden position-relative'>
+                    <div class='thumbnail-gradient position-absolute'></div>
+                    {{ if eq .Title "Past Events"}}
+                    <div class='video-description d-flex flex-column justify-content-between pb-0'>
+                        <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
+                    </div>
+                    {{ else }}
+                    <div class='video-description d-flex flex-column justify-content-between'>
+                        <p class='text-white mt-0'> {{.Title}} </p>
+                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+                    </div>
+                    {{ end }}
+                    {{ printf "<div class=\"previous col-lg-6 col-12 display-none\" data-episode-date=\"%s\">"
+                        (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
+                </div>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}
