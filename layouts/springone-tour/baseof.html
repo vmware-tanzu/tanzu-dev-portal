@@ -5,12 +5,11 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="td-{{ .Kind }} tanzu-tv" id="team-index">
+<body class="td-{{ .Kind }} springone-tour" id="s1t-index">
     <header>
         {{ partial "navbar.html" . }}
     </header>
     <div class="container-fluid td-outer">
-        {{ partial "live-notify.html" . }}
         <div class="td-main">
             {{ block "main" . }}{{ end }}
         </div>

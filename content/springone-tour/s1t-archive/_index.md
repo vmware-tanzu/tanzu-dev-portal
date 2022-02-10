@@ -6,7 +6,7 @@ aliases:
 title: "Past Events"
 type: "tv-show"
 streaming: "twitch"
-id: "springone-tour"
+# id: "previous-springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/TanzuTV-SpringOneTour.png"
 notwitchicon: true
