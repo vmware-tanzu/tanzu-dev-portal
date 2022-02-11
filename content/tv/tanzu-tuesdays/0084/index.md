@@ -18,7 +18,7 @@ minutes: 60
 title: "TAP Overview and Impressions with Scott Rosenberg"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "P3cw4omhbjA"
 type: tv-episode
 ---
 
