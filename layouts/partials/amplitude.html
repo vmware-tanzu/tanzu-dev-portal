@@ -49,6 +49,9 @@
 {{ else if eq .event "practice viewed" }}
     <script>sendAmplitudeEventOnLoad('practice viewed', {'practice name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
 
+{{ else if eq .event "tanzu viewed" }}
+    <script>sendAmplitudeEventOnLoad('tanzu viewed', {'tanzu name': '{{ .context.Title }}', 'url path': window.location.pathname, 'label': '{{ .context.Params.label }}' });</script>
+
 {{ else if eq .event "search viewed" }}
     <script>
         let params = (new URL(document.location)).searchParams;

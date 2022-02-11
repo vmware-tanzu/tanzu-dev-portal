@@ -139,7 +139,7 @@ of logs. Ideally, this component should be resilient to node failures, so that
 logging does not become unavailable in case of infrastructure failures.
 [Elasticsearch](https://www.elastic.co/products/elasticsearch) is one of the
 options, as it can ingest logs from fluentd, creates inverted indices on
-structured log data making efficient search possible, and has multi-master
+structured log data making efficient search possible, and has multi-coordinator
 architecture with ability to shard data for high availability.
 
 #### UI and Alerting

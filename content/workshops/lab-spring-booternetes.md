@@ -12,10 +12,12 @@ tags:
 - Microservices
 - Kubernetes
 - Spring Boot
+level1: Building Modern Applications
 title: Spring Booternetes
 team:
 - Josh Long
-weight: 3
+logo: /images/workshops/logo-spring.svg
+weight: 12
 ---
 
 When we talk about cloud native computing, it refers not to any single technology but more to an approach that optimizes for frequent and fast releases, and the speed of iteration. Faster organizations learn and grow faster. There are many work queues for each new production release, which must be done and take wall-clock time. Some things like integration and integration testing must happen serially, after all the contributions to the codebase settle, while other work may be done concurrently. The smaller the size of the codebase, the more quickly all the serialized work finishes. The goal is to do as much work in parallel and reduce the amount of serialized work to reduce wall-clock time between releases. Microservices, with their smaller codebases and smaller teams, reduce the wall-clock time between having an idea and seeing it deployed into production.

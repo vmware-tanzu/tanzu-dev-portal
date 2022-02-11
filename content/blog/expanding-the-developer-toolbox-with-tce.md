@@ -11,6 +11,12 @@ team:
 title: 'Expanding the Developer Toolbox with VMware Tanzu Community Edition'
 Level1: Building a Kubernetes Runtime
 Level2: Building Your Kubernetes Platform
+tanzu:
+  label: tce
+  gettingstarted: true
+  gettingstartedweight: 1
+  featured: true
+  featuredweight: 1
 ---
 
 Kubernetes is a wonderful piece of software and provides developers capabilities they have not had readily available to them in most organizations. This is a game changer for what developer productivity can look like in the future. I am excited about the commitment of VMware to make Kubernetes accessible to the masses by simplifying not only the operational use of the platform, but also creating and collaborating on tools targeted specifically for developers and their applications.
