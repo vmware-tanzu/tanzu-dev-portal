@@ -631,6 +631,7 @@ Fewell
 fgJ
 fiancé
 [Ff]ibonacci
+Figma
 fileshare
 [fF]ilesystem
 FileSystemXmlApplicationContext
