@@ -13,5 +13,4 @@ lastmod: '2020-10-09'
 title: Dockerfiles vs Cloud Native Buildpacks
 twitch: vmwaretanzu
 type: tv-episode
-youtube:
 ---
