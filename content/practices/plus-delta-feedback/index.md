@@ -1,113 +1,93 @@
 ---
-# remove "draft:true" when ready for final publication 
-draft: true
-
 title: "Plus / Delta Feedback"
 linkTitle: "Plus / Delta Feedback"
-description: "Short description about this practice or workshop"
+description: "A short reflection exercise between Core team members. Commonly accomplished at the end of a pairing day."
 # Note: remove any tags that are not relevant.
-tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Transition", "Modernization", "Delivery"]
-length: "Short sentence regarding how many minutes, hours, or days this workshop takes"
-participants: "Pair / Cross-discipline. Ideally done one on one."
+tags: ["Delivery"]
+length: "5-15 minutes"
+participants: "Pair or Cross-discipline team member (1 on 1)"
 # custom "cover" image example: "boris/boris.png"
 image: "cover-image.png" 
 lastmod: "2022-01-19"
 date: "2022-01-19"
 why: 
-- To come to an understanding of what went well (plus), and what could be changed to improve collaboration in future (delta)
-- To introduce a regular feedback cycle at a 1:1 / individual level that allows for more personal feedback
-- It focuses on a more frequent, smaller audience for feedback sessions, so it will be easier to organize, compared to a retrospective
-- To allow the feedback to focus on individual actions rather than team / group based actions generated from a group setting
+- To come to an understanding of what went well (plus), and what could be changed to improve collaboration in future (delta).
+- To introduce a regular feedback cycle at a 1:1 / individual level that allows for  personal feedback.
 when:
-- After the first day of pairing with someone first time
-- With people who do not regularly provide input in larger meetings
-- Start doing this daily, scale down to less frequent as both participants feel comfortable
+- After pairing or otherwise working with someone for the first time.
+- After a meeting with people who do not regularly provide input.
 what:
-- In Person: pieces of paper and pen
-- Remote: a way to share remote notes / Miro
-
-# If this practice or workshop has a Miro template: remote: true
-remote: false
-miro_template_url: "URL for related Miro template" 
+- In Person -- pieces of paper and pen
+- Remote -- a way to share remote notes / [Miro](https://miro.com/)
 
 ---
+{{% section %}}
+
 ## How to Use this Method
-If needed, write any valuable history or context here prior to the Sample Agenda and Prompts.
+Plus/Delta allows feedback to focus on individual actions rather than team or group based actions generated from a group setting. It focuses on a more frequent feedback with a small audience.
 
-***WARNING!*** ***WARNING!*** ***WARNING!*** 
- 
-This page will be available on public Internet! Think of the various audiences: future customers, current customers, partners, VMware employees, and anybody who happens to find this page. 
+{{% callout %}}
+For teams that do not currently have a culture of feedback, the Plus / Delta is a light-weight technique to introduce a regular feedback cycle at a 1:1, individual level.
+{{% /callout %}}
 
-Things to keep in mind: 
- 
-- Assume someone at a software company found this page via Google.
-- Avoid any company-specific terms or content. If in doubt about something: don't include it.
-- Have several people read and vet this content before submitting it.   
-- Don't assume the reader is a consultant or part of a consulting engagement. I'm looking at you, Tanzu Labs 😉. 
-- No images that show customer-specific content like company names, sticky-notes, or design mock-ups
-- No images of people's faces without written permission
-- No links to internal sources, such as GDrive, SharePoint 
-  
-***WARNING!*** ***WARNING!*** ***WARNING!*** 
-
+{{% /section %}}
+{{% section %}}
 ### Sample Agenda & Prompts
-1. Find a quiet area or zoom room with just the two of you
-1. Set aside 3-5 minutes to think of any Pluses / Deltas during the day, ranging from small to large topics.
-   
-   For example (Plus): 
-     - “We handled that external meeting with the Security team well.”
-     - “Thanks for teaching me those keyboard shortcuts.”
+1. Preparation: Set aside 3-5 minutes to think of any Pluses / Deltas during the day, ranging from small to large topics.
 
-   For example (Delta):
-     - “We did not take any breaks at all today.”
-     - “I felt I did not get access to the keyboard very much during our pair-programming session today.”
-     - I notice you always join meetings 5 minutes late, so we end up not ending the meeting on time.
+   **For example _(Plus)_:**
+   - “We handled that external meeting with the Security team well.”
+   - “Thanks for teaching me those keyboard shortcuts.”
+   - "Your suggestion that we should talk to the Design lead when starting the next user story was spot-on."
+
+   **For example _(Delta)_:**
+   - “We did not take any breaks at all today.”
+   - “I felt I did not get access to the keyboard very much during our pair-programming session today.”
+   - "I notice you always join meetings 5 minutes late, so we end up not ending the meeting on time."
 
    ![Plus-Delta-Example](images/example-1.png)
-1. Take turns each going over a plus / delta, alternating between pluses and deltas.
-1. Depending on the feedback, suggest changes for future working sessions.
+
+2. Find a quiet area or video conference session with just the two of you.
+
+3. Take turns each going over a plus / delta, alternating between pluses and deltas.
+
+5. Depending on the feedback, suggest changes for future working sessions.
+   
    For example:
-     - Let us ensure that tomorrow at 11 AM and 3 PM we take a 10 minute break.
-     - Let us ensure we end meetings on time so we end up causing all our meetings to run over.
-<!-- 2. You can embed images like this: 
+     - "Let's ensure that tomorrow at 11 AM and 3 PM we take a 10-minute break."
+     - "Let's try the [Pomodoro technique](/learningpaths/application-development/pair-programming/#describe-the-mechanics-of-the-drivernavigator-style-of-pair-programming) tomorrow and see if it helps us have more balanced pairing sessions."
+     - "If we have back-to-back meetings, let's make sure we end the first meeting on time, so we're not late to the next one."
+{{% /section %}}
 
-   ![This is the default cover image as an example](/images/default-cover.png)
-   
-   Use [page bundles](https://gohugo.io/content-management/organization/#page-bundles) for images, so they go in an `images` directory underneath the same directory that the index.md file is in.
-   
-   Try not to make them to large either in pixels or disk space. 1280px on the longest side and 400KB or so max.  -->
-
+{{% section %}}
 ## Success/Expected Outcomes
-How do people know if this workshop was successful? 
+Both parties feel comfortable regularly providing feedback to each other in a clear and concise way. Eventually evolving to feedback that can be given when needed rather than a plus/delta session.
+
+After a session of plus/delta both parties will take away actions they should continue doing and activities they can improve during their daily work day.
+{{% /section %}}
+{{% section %}}
 
 ## Facilitator Notes & Tips
-Are there common ways by which this workshop gets off track? Notes like that are great for this section.
+If the process took longer than 10-15 minutes a longer, more formal feedback session might be warranted.
 
+Start doing this daily, scale down to less frequent as both participants feel comfortable.
+
+Sometimes one or both parties are uncomfortable providing deltas or other constructive feedback. If plus/delta sessions consistently do not yield any deltas, try the following techniques: 
+- start the session by describing how the day went. Both parties can then work together to extract the pluses and deltas based on these descriptions.
+- implementing a format of “two pluses, one delta” to prompt both parties to suggest deltas in a more structured, blameless manner.
+{{% /section %}}
+
+{{% section %}}
 ## Related Practices
-If there are any related practices list them here.
+- [Speedback Feedback](/practices/speedback)
+{{% /section %}}
 
-- [Related Practice 1](/practices/related-practice-1)
-- [Related Practice 2](/practices/related-practice-2)
 
-Delete if unused.
+{{% section %}}
+## Recommended References 
+[Thanks for the Feedback](
+https://www.penguinrandomhouse.com/books/313485/thanks-for-the-feedback-by-douglas-stone-and-sheila-heen/) By Douglas Stone and Sheila Heen
+– Recommended reading as a way to understand how people may interpret your feedback.
 
-## Variations
-Are there alternative ways of performing this practice or workshop? Call out the differences here.
-
-Delete if unused.
-
-### Preceding
-Optional. Delete if unused.
-
-- [Specific practice that takes place before this one](/practices/related-practice-before)
- 
-### Following
-Optional. Delete if unused.
-
-- [Specific practice that takes place after one](/practices/related-practice-after)
-
-## Real World Examples
-Images, diagrams, or other interesting examples of this practice in the real world. Remember: no customer-identifying photos or notes, no faces. 
-
-## Recommended Reading
-Provide links to helpful books, slide decks, videos, etc. Remember: do not include links to internal resources.
+[REwork](https://basecamp.com/books/rework) by Jason Fried and David Heinemeier Hansson
+{{% /section %}}
