@@ -169,4 +169,4 @@ endpoint than the `livenessProbe`.
 
 ![startup probe](images/startup-probe.png#diagram)
 
-When a `startupProbe` is defined, all other checks are disabled until it succeeds.
+When a `startupProbe` is defined, all other checks are deactivated until it succeeds.

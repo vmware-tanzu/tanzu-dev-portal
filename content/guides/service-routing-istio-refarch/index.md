@@ -366,7 +366,7 @@ Warning  Failed     9s               kubelet, ip-10-0-1-75.us-east-2.compute.int
 
 For any pod which is already running and a new security vulnerability is
 detected, int is continuously monitored by security team and it is for them to
-decide whether to kill the pod or keep it running depending upon the level and
+decide whether to halt the pod or keep it running depending upon the level and
 nature of vulnerability.
 
 ### Sidecar Injection
@@ -1081,7 +1081,7 @@ tls.key:
 
 #### Access Privilege Required to Create a Certificate
 
-- An Application team can have following namespaces segregated by network policy.
+- An Application team can have following namespaces separated by network policy.
   - istio-system
   - cert-manager
   - Dev
@@ -1644,7 +1644,7 @@ spec:
 #### Access Privilege Required to Create a Certificate and Gateway
 
 - All application teams are responsible for their service mesh.
-- An application team can have the following namespaces segregated by network policy.
+- An application team can have the following namespaces separated by network policy.
   - istio-system
   - cert-manager
   - Dev
