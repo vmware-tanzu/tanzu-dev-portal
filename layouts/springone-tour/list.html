@@ -3,22 +3,25 @@
 {{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-episode-hero td-box--gray-dark mt-7 pt-4 pb-4">
+<section id="hero" class="{{ $class }}-event-hero td-box--gray-dark mt-7 pt-4 pb-4">
     <div class="container">
         <div class='row justify-content-between'>
-            <div class='col-lg-9 px-0'>
+            <div class='col-lg-11 px-0'>
                 <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1>
                 <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description |
                     markdownify }}</p>
                 {{ .Content }}
+                </p>
             </div>
+            <p class='-text-bright-green fs-90 pl-1'><img class='icon-gift' src='images/gift.svg' /> Workshop
+                attendees will receive special edition swag</p>
         </div>
     </div>
 </section>
 
 <section id="s1t-destinations-2022" class="">
     <div class="container">
-        <h2>S1T Destinations 2022</h2>
+        <h2>Destinations 2022</h2>
         <div class="row align-items-baseline mb-3">
             {{ range .Pages.ByDate }}
             <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
@@ -27,13 +30,12 @@
                     {{ if eq .Title "Past Events"}}
                     <div class='video-description d-flex flex-column justify-content-between pb-0'>
                         <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
-                        <p class="text-right h1">>></p>
                     </div>
                     {{ else }}
                     <div class='video-description d-flex flex-column justify-content-between'>
                         <p class='text-white mt-0'> {{.Title}} </p>
-                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 02" (substr .Date 0 10)}}-{{ dateFormat "02" (substr .Params.enddate 0 10)}}</p>
-                        <p class="text-right h1">>></p>
+                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 02" (substr .Date 0 10)}}-{{
+                            dateFormat "02" (substr .Params.enddate 0 10)}}</p>
                     </div>
                     {{ end }}
                 </div>
