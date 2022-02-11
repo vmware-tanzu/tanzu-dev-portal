@@ -579,6 +579,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Enlightning
 Enqueueing
 entriesInVM
 entriesOnlyOnDisk
@@ -1108,6 +1109,7 @@ letsencrypt-staging
 libnss-wrapper
 libs
 [Ll]ifecycle
+lightboard
 Liles
 LimitRanger
 LimitRanges
@@ -2092,3 +2094,4 @@ Zou
 Zuul
 Zynga
 μServices
+ϟ
