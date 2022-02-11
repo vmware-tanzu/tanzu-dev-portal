@@ -58,7 +58,7 @@ Yet, others struggle with team code ownership for several reasons:
 * Developers can no longer take pride in functionality that they exclusively develop.
 * Existing knowledge silos may be slow to break down. This can hinder team code ownership, 
 
-New hires who struggle with the transition eventually realize that someone else is going to take over. They know that it's OK to move on to something else. They recognize the lack of long-term individual authorship, learn to expect their code is transitory, develop trust in their teammates, and loosely hold personal contributions. They understand that even if the code that is written today is in the code base for a little while, it is going to evolve into something better. Eventually, new hires experience the benefits of a collaborative environment. People are more flexible with changing things, accepting feedback, or collaborating. A collaborative environment is a place where the team can say "Hey, this is **_our_** code!"
+New hires who are also struggling with the transition eventually realize that someone else is going to take over. They know that it's OK to move on to something else. They recognize the lack of long-term individual authorship, learn to expect their code is transitory, develop trust in their team mates, and loosely hold personal contributions. They understand that even if the code that is written today is in the code base for a little while, it is going to evolve into something better. Eventually, new hires experience the benefits of a collaborative environment. People are more flexible with changing things, accepting feedback, or collaborating. A collaborative environment is a place where the team can say "Hey, this is **_our_** code!"
 
 Shifting from individual ownership to team code ownership may require multiple, complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group where trust and communication build quickly may help.
 
@@ -68,37 +68,39 @@ See: [**Practice and Perception of Team Code Ownership**](https://www.researchga
 
 Test Driven Development (TDD) is a crucial engineering practice. Review the article, [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
 
-## Q: Why Do We Refactor? {id="tdd"}
+## Q: Why Refactor? {id="tdd"}
 
 **Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd) Matthew Parker elaborates on the benefits of practicing test-driven development, and why you shouldn’t be afraid of refactoring.
 
 ## Q: What is a User Story?{id=stories}
 
-*User stories*, or *stories*, are the primary unit of currency in an Agile backlog. It's important for you to have a crisp, clear understanding of stories.
+A *user story*, or *story*, is the primary unit of currency in an Agile backlog. It is a narrative description of a single task or activity being performed by a user of a system. A user story represents the smallest piece of incremental value that you can deliver into the hands of a user. 
 
-A story is a narrative description of a single task or activity being performed by a user of the system. Usually, this is a person, but in some systems the user could be another construct such as a software system. It represents the smallest piece of incremental value that you can deliver into the hands of your users, that you can also learn from by observing their reaction to it.
+Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions, beginning with "How big should a story be?". To know the answer, shorten the story. Does the shortened story still provide real value to the user? If you can make the story smaller and still deliver real value to the customer, then your story is too big.
 
-Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions. A common one is "How big should a story be?". To know the answer, see if you can make the story smaller. Are you still able to provide real value to the user? If you are able to make the story smaller and still deliver real value to the customer, your story is too big.
-
-Conversely, another common question, "Is it possible for a story to be too small?" To answer that question, ask yourself this question: "If I complete this story, will it actually provide value to our users?" If the answer is no, then the story is too small.
+Conversely, "Is it possible for a story to be too small?". To answer the question, ask yourself: "If I complete this story, will it provide real value to our users?" If the answer is no, then your story is too small.
 
 For example, suppose your story is about authentication. At first, the story includes all the functionality, including the ability to sign in, sign out, recover your password, change your password, and recover your username.
 
-Your team collaborates, "Can we make this story smaller and still deliver value to the user?". Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones. These include a "Sign In" story, a "Sign Out" story, a "Recover Password" story, a "Change Password" story and a "Recover Your Username" story. 
+Your team collaborates, "How do we make this story smaller and still deliver value to the user?". Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones, including a "Sign In" story, a "Sign Out" story, a "Recover Password" story, a "Change Password" story and a "Recover Your Username" story. 
 
 However, the team goes too far in making smaller stories out of bigger ones. They come up with a story called "Sign In Form", and another story called "Sign In Form Signsin". The first story, "Sign In Form" is for a sign in form that includes a username field and a password field. Creating the two field form is the story. There is nothing in the story that reads that the form has to work. It only has to look like what is described in the first story. In the second story, "Sign In Form Signsin" your team has to make the sign in form work. 
 
 Your team collaborates, "If we complete the first story, "Sign In Form", is it going to provide real value to our users?" The answer is no. Delivering a sign in form to production that doesn't work does is not going to help your users. If anything, it's more likely to frustrate them, or put the product into an unreleasable state. Individually, the two stories are too small. Your team can fix this by combining the "Sign In Form" story and the "Sign In Form SignIn" story into one.
 
-## Q: How Do We Decide Which Story Comes First?
+## Q: Which Story Comes First?
 
-At the beginning of a project, you may have a vision for a [minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. For clarity, imagine that you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to their shopping cart, pay with credit card or another online payment app, view past transactions, save their credit cards, and apply discount codes.
+At the beginning of a project, you may have a vision for a [minimum viable product (MVP)](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. 
 
-That's a lot of software! Where do you start? How do you pick which story to begin with?
+For example, imagine you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to a shopping cart, pay with credit card or another online payment app, view past transactions, save credit cards, and apply discount codes.
 
-There's no one right answer here, but there's a few wrong answers that are worth pointing out.
+That's a lot of software! 
 
-For example, it might be tempting, after mapping out a user's flow through the application, to decide that the first story should be "User Can Log In".
+Where do you start? How do you pick which story should be first?
+
+The answer to both questions is up to you. When you start and how you pick  than another but there's a few incorrect ones that require discussing.
+
+For example, after mapping out a user's flow through the application,you may decide that the first story should be "User can Sign In" it might be tempting,  to decide that the first story should be "User Can Log In".
 
 But remember, the definition of a story is "the smallest piece of incremental value that you could deliver into the hands of your users and learn from their reaction to it." So when you're starting from nothing, does the story "User Can Log In" deliver value into the hands of your users? No! It wouldn't add any value to the user's life; no one wants to log in to an application that does nothing.
 
@@ -106,7 +108,7 @@ At the beginning of an engagement, you'll need to get creative with how you thin
 
 Of course, this is a highly idealized scenario; real projects will require weighing many options for deciding on the first story—and you likely won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value; perhaps there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that will be impacted by it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weight the tradeoffs and find the first starting point.
 
-## Q: Why Do We Estimate In Points, Not Time?
+## Q: Why Estimate In Points, Not Time?
 
 It doesn't matter if the organization is agile or [waterfall](https://en.wikipedia.org/wiki/Waterfall_model): it's generally valuable to know when something will be done. When will a feature be delivered? Will the release contain everything that we hoped to put in it? Delivery estimates help our product managers plan.
 
@@ -126,7 +128,7 @@ However, it's also important to know that predictions made with velocity are sti
 
 That's why engineers have to keep a very close watch on volatility on their team; when they're experiencing high degrees of volatility, they have to figure out the cause of the volatility and eliminate it. Otherwise, they won't be able to predict when things will be done with confidence—and the PMs won't be able to plan.
 
-## Q: Why Don't We Estimate Bugs and Chores?
+## Q: Why Not Estimate Bugs and Chores?
 
 Velocity predicts when stories will be done. So why don't we estimate bugs and chores? Because if you do, you won't be able to rely on your velocity to predict when stories will be done anymore.
 
@@ -138,7 +140,7 @@ Imagine you've been pointing bugs and chores as they've cropped up and adding th
 
 Bugs and chores have to bring velocity down. That's why we don't point them. We want our velocity to tell us how long it will take to complete stories (i.e., user value). If you inflate it with bugs and chores, then you've lost your ability to predict how long it will actually take you to deliver new value.
 
-## Q: What's the value of CI/CD?
+## Q: What is the Value of CI/CD?
 
 There are two questions you have to ask when considering shipping software:
 * Can we ship?
@@ -162,7 +164,7 @@ Of course, there are all kinds of other benefits to CI. [To paraphrase Martin Fo
 
 It's worth noting that some PMs automate their responsibility with respect to shipping. Some always have the default answer: "Ship on green." In effect, they've asked the engineers to add another step to their build pipeline to automatically promote code to production on a green build. That's called "continuous deployment." However, although the mechanics of it are facilitated by engineers, shipping is still a business responsibility. The default answer of "ship on green" doesn't abdicate the responsibility of the decision to the engineers. The PM still has the responsibility of understanding how the features are working in production and how users are responding to it – which means the PM has to prioritize all engineering work necessary to build automated production monitoring capabilities that make continuous deployment responsible.
 
-## Q: Why do we have Retrospectives?
+## Q: Why Are There Retrospectives?
 
 We seed engagements with a number of key practices that we've found valuable over an incredible number of engagements, like pairing, test driven development, IPMs, standup, CI/CD, etc.
 
@@ -172,7 +174,7 @@ That's why we also seed engagements with the [practice of retrospectives](/pract
 
 Without that reflection and constant adjustment, the team's practices will deteriorate. What worked on day one won't necessarily work on day 30, or day 100. You have to constantly improve the team's efforts, or risk failure.
 
-## Q: Why do we recommend rotating engineers to other projects?{id="rotations"}
+## Q: Why Do We Recommend Rotating Engineers to Other Projects?{id="rotations"}
 
 Within Tanzu Labs, it's common to have engineers **_rotate_** between projects periodically. In other words, an engineer might not join a project at its beginning, and any given team member might not be on a project to its conclusion. We feel this is a good pattern for all team members, including [engineering anchors](/learningpaths/anchor-playbook/).
 
@@ -212,21 +214,34 @@ Rotations are also an opportunity for:
 
 But what about keeping historical context? What about having a consistent face on the project? We do recommend having an **anchor** the project who rotates less frequently. See our section on [Anchors](#anchors).      
 
-## Q: What is an engineering "Anchor"?{id="anchors"}
+## Q: What is an Engineering "Anchor"?{id="anchors"}
 
 {{% callout %}}
-Please see our [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors -- Tanzu Lab's answer to the tech-lead role.
+Read the [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth look into Anchors. It is Tanzu Lab's answer to the tech-lead role.
 {{% /callout %}}
 
-## Q: What's the difference between XP and Scrum? And Why Do We Practice XP?
+## Q: What is the Difference Between Scrum and XP? 
 
-We are often asked "Why don't you do Scrum?", or "What's the difference between XP and Scrum?" 
+The fundamental difference between Scrum and XP is that Scrum is based on project structure, whereas XP is based on delivery practices and project structure.
 
-So what is Scrum? And how is it different from XP? And why do we practice XP, not Scrum?
+- Scrum was a reaction to inefficient, poisonous projects, where teams were dictated how to do their jobs by outsiders who didn't know what they were doing, and often did not have any real "skin in the game" regarding the outcomes. Scrum defines a set of rules that say "the delivery team decides _how they deliver_, while the business team decides _what is delivered_." Both groups are on the hook for the outcomes. If you're not in either of those groups or are not impacted by the outcomes then you don't get a say. If you're a member of one group you don't get to tell the other group how to do their job, though you can, and should, collaborate. 
 
-Before answering it, it's important to keep in mind: our goal in these situations is not to create a religious war of XP versus Scrum, or to tell anyone that practices Scrum that they're somehow "wrong" and that XP is "right."
+  That's Scrum -- a protective "bubble" for projects to work within.
 
-Often, one of our primary goals when working with a client is to expose them to a different way of working and thinking. We are sometimes asked if we can "just do Scrum" instead of XP. In a way we already are. Our process takes a lot of hints from Scrum and layers on many missing aspects, such as engineering practices. XP adds new tools to the software development toolbox. 
+- Scrum teams also typically practice something called a sprint "commit." That is, the developers, at the outset of a sprint, will decide on a certain amount of work that they'll "commit" to completing during their sprint.[ SAFe](https://en.wikipedia.org/wiki/Scaled_agile_framework) has a [similar commitment model](https://www.scaledagileframework.com/pi-objectives/). There are Pros and Cons to this. There can be a lot of positive energy and motivation that can come from a shared team goal like the sprint "commit," and high-functioning Scrum teams do a lot to harness and leverage that positive energy. Furthermore, a high-functioning Scrum team will also consider re-negotiating a sprint's scope with their product manager during the sprint if they discover something that leads them to believe they should adjust things mid-sprint.
+
+  Of course, not all Scrum teams are "high-functioning" (nor are all XP teams!). With a sprint "commit", sometimes the product manager will tell the powers that be that they will **_definitely_** complete a certain scope by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip they might be under pressure to "get things done", which often ends in sacrificing code quality and taking on tech debt. Because of that, it's not uncommon in organizations that practice firm sprint "commits" to see engineers "pad" their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that engineers padded the estimate and can probably do a few more things.
+
+- Iterations in Scrum, called "sprints", are a time-box of one month or less, during which a "Done", usable, potentially releasable product increment is created by the end of the sprint.
+- Scrum doesn't prescribe any specific engineering practices—instead, Scrum gives the team complete freedom to use any engineering practices that they see fit during a sprint, and to change them from Sprint to Sprint through continuous improvement (e.g., retrospectives).   
+-  XP was also a reaction to inefficient projects and product delivery. It also set up a "bubble" around the product teams and rules about who gets to dictate what. But, XP came from software engineers who were frustrated with how poorly software was written and maintained, and how hard it was to change software in reaction to the needs of the business. Thus, XP suggested engineering practices within the project bubble, such as pair programming, test driven development, and refactoring.
+-  XP teams also vary their practices week to week through continuous improvement (e.g. retrospectives... sounds familiar, right?). However, there are some practices that XP teams don't vary, but instead consider to be "core practices", and apply them always; namely, TDD and pair programming.
+- XP teams always have a "Done", usable, potentially releasable product—every single story (even every single commit to the primary branch) should result in a working, usable, releasable product. For an interesting perspective on sprints, please see Ron Jeffries' article [Hills to Die On: Sprints](https://ronjeffries.com/articles/018-01ff/ds-hill-sprints/)
+- XP teams don't have sprints defined by Scrum and time-spans are referred to as iterations. At the start of a week, a team will [review what's currently in the backlog and icebox](/practices/ipm), estimate (with points, not time) any stories that seem worthy of estimation at that time, and prioritize the next most important things to work on. Throughout the week, they'll work on stories and deliver them to production—but at any time, they may adjust the prioritized list in the backlog, or even slot in, estimate, and prioritize all new stories. That's because they believe that the best software is built through learning. They know that by **_embracing change_**, they can build better software. So they're always ready and willing to change priorities based on what they're learning as they put working software in the hands of users.
+
+It's important to keep in mind: our goal in these situations is not to start a war of XP versus Scrum, or to tell anyone that practices Scrum that they're wrong for doing it and that XP is right choice.
+
+Often, one of the primary goals when working with a client is to introduce them to a different way of working and thinking. We are sometimes asked if we can "just do Scrum" instead of XP. In a way we already are. Our process takes a lot of hints from Scrum and layers on many missing aspects, such as engineering practices. XP adds new tools to the software development toolbox. 
 
 {{% callout %}}
 **Consulting Tip:** If you are a consultant, be careful not to "remind" your client that they are there to learn from you and do exactly what you say -- only your clients can tell you why they are here, and one should not make assumptions about the circumstances by which they came to work with you.
@@ -236,27 +251,8 @@ Before we talk about how XP and Scrum are different, let's talk about how they'r
 * Both XP and Scrum strive to deliver useful software into the hands of users through short iterations via small teams employing continuous improvement. 
 * Both Scrum and XP teams regularly reflect on what's working, what's not, and what they can do to iterate on the process.
 
-The **fundamental difference** is this: Scrum is about project structure but not practices, while XP is about project structure **_and_** delivery practices. Let's break that down.
 
-Scrum "by the book" was a reaction to inefficient, poisonous projects, where teams were dictated how to do their jobs by outsiders who didn't really know what they were doing, and often did not have any real "skin in the game" regarding the outcomes. Scrum defines a set of rules that say "the delivery team gets to decide _how they deliver_, while the business team gets to decide _what is delivered_." Both groups are on the hook for the outcomes. If you're not in either of those groups or are not impacted by the outcomes then you don't get a say. If you're a member of one group you don't get to tell the other group how to do their job, though you can, and should, collaborate. 
-
-That's Scrum -- a protective "bubble" for projects to work within.
-
-XP was also a reaction to inefficient projects and product delivery. It also set up a "bubble" around the product teams and rules about who gets to dictate what. But, XP came from software engineers who were frustrated with how poorly software was written and maintained, and how hard it was to change software in reaction to the needs of the business. Thus, XP suggested engineering practices within the project bubble, such as pair programming, test driven development, and refactoring.
-
-By contrast, Scrum doesn't prescribe any specific engineering practices—instead, Scrum gives the team complete freedom to use any engineering practices that they see fit during a sprint, and to change them from Sprint to Sprint through continuous improvement (e.g., retrospectives).
-
-XP teams also vary their practices week to week through continuous improvement (e.g. retrospectives... sounds familiar, right?). However, there are some practices that XP teams don't vary, but instead consider to be "core practices", and apply them always; namely, TDD and pair programming.
-
-There are a few more differences. Iterations in Scrum, called "sprints", are a time-box of one month or less, during which a "Done", usable, potentially releasable product increment is created by the end of the sprint. XP teams, on the other hand, always have a "Done", usable, potentially releasable product—every single story (even every single commit to the primary branch) should result in a working, usable, releasable product. For an interesting perspective on sprints, please see Ron Jeffries' article [Hills to Die On: Sprints](https://ronjeffries.com/articles/018-01ff/ds-hill-sprints/)
-
-Scrum teams also typically practice something called a sprint "commit." That is, the developers, at the outset of a sprint, will decide on a certain amount of work that they'll "commit" to completing during their sprint.[ SAFe](https://en.wikipedia.org/wiki/Scaled_agile_framework) has a [similar commitment model](https://www.scaledagileframework.com/pi-objectives/). There are Pros and Cons to this. There can be a lot of positive energy and motivation that can come from a shared team goal like the sprint "commit," and high-functioning Scrum teams do a lot to harness and leverage that positive energy. Furthermore, a high-functioning Scrum team will also consider re-negotiating a sprint's scope with their product manager during the sprint if they discover something that leads them to believe they should adjust things mid-sprint.
-
-Of course, not all Scrum teams are "high-functioning" (nor are all XP teams!). With a sprint "commit", sometimes the product manager will tell the powers that be that they will **_definitely_** complete a certain scope by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip they might be under pressure to "get things done", which often ends in sacrificing code quality and taking on tech debt. Because of that, it's not uncommon in organizations that practice firm sprint "commits" to see engineers "pad" their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that engineers padded the estimate and can probably do a few more things.
-
-XP teams, on the other hand, don't have sprints as defined by Scrum. Time-spans in XP are called iterations, often one-week iterations. At the start of a week, they'll [review what's currently in the backlog and icebox](/practices/ipm), estimate (with points, not time) any stories that seem worthy of estimation at that time, and prioritize the next most important things to work on. Throughout the week, they'll work on stories and deliver them to production—but at any time, they may adjust the prioritized list in the backlog, or even slot in, estimate, and prioritize all new stories. That's because they believe that the best software is built through learning. They know that by **_embracing change_**, they can build better software. So they're always ready and willing to change priorities based on what they're learning as they put working software in the hands of users.
-
-## Q: Do we think deadlines are bad?
+## Q: Are Deadlines Bad?
 
 No! Deadlines aren't bad. They're great! In our process, having a deadline is really a chance for our process to shine.
 
@@ -279,7 +275,7 @@ So when we are working towards a deadline, we don't focus on thinking about "how
 
 With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. They're forced to think more critically about their  list of features, and will start to value evidence-based approaches to deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning, since it's really the only way they're going to ensure that they've created something valuable by the deadline.
 
-## Q: How can we scale these practices in large, traditional enterprises?
+## Q: How Do You Scale Practices into Large, Traditional Enterprises?
 {{% callout %}}
 See our white paper about [How to Scale Agile Software Development with Product Teams in the Enterprise](https://tanzu.vmware.com/content/white-papers/how-to-scale-agile-software-development-with-product-teams-in-the-enterprise)
 {{% /callout %}}
@@ -290,11 +286,11 @@ With new products and startup companies it is common to start off with a handful
 
 We've learned quite a few lessons about how to successfully scale these practices ourselves while building [TAS - Tanzu Application Services](https://tanzu.vmware.com/application-service). We have hundreds of engineers, product managers, designers, program managers, and directors spread across the globe.
 
-#### Rule #1: Scale slowly
+#### Rule #1: Scale Slowly
 
 Don't go from 20 to 200 overnight. Don't jump from 1 team in 1 location to 10 teams in 10 locations. Don't lower your hiring bar in order to scale. Start small, and build slowly. Go from one team to two teams – in the same location. Go from one location to two locations – in the same time zone. Retrospect on scaling all along the way, adding just enough leadership and inventing new practices and communication patterns to keep teams efficient and healthy.
 
-#### Rule #2: Distribute teams based on architectural boundaries
+#### Rule #2: Distribute Teams Based on Architectural Boundaries
 
 This second rule is sometimes referred to as the "inverse Conway maneuver" in reference to [Mel Conway's "law"](https://en.wikipedia.org/wiki/Conway%27s_law):
 
@@ -313,8 +309,8 @@ Let's set aside the funding and management adjustments you'll need to make to su
 1. As you start to optimize the underlying application codebases and infrastructure, you'll need to carefully retrofit automated tests on top of it so that your teams can refactor or rewrite portions of it in order to solve for the engineering pains present in the legacy architecture or meet the new business objectives. This isn't [TDD 101](/learningpaths/application-development/test-driven-development/); it's advanced testing. You'll need highly skilled practitioners in order to do this effectively. Work with your engineering leadership to find these practitioners, and to grow more of them.
 2. You'll need to align certain teams vertically, instead of slicing them up horizontally. You have all kinds of cross-cutting domains in your legacy architecture (take authentication as the universal example—a domain that cuts across most, if not all, of your applications). You'll need to organize teams around business capabilities, not technologies. As Martin Fowler[ points out](https://youtu.be/wgdBVIX9ifA?t=6m30s), the common misconception that companies have when it comes to microservices is that microservice architectures means that you have a team that only owns the microservice API and nothing else. But if you look at Amazon, the archetype for the microservice architecture playing out at scale in a company,[ they instead organized their teams around business capabilities.](https://aws.amazon.com/modern-apps/faqs/) They have an order team, a shipping team, a catalog team, etc. Each of these build services, true. But they also own their business capability end to end, all the way to the end user. They own the experience, and how that experience plays out in the various software products their particular business capability is present in.
 
-## (TBD) Q: What's our opinion of SAFe?
+## (TBD) Q: What's Do You Think About SAFe?
 Coming Soon!
 
-## (TBD) Q: When is it okay to bend "the rules"?
+## (TBD) Q: Is It Ever Okay to Bend "the Rules"?
 Coming Soon!
