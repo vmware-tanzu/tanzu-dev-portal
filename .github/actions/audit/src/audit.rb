@@ -84,8 +84,7 @@ errorsTally = {}
 # Gather the metadata from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
     next if f.split("/").last == "_index.md" # Do not parse index files
-    fData = File.open(f).read
-    puts f
+    fData = File.open(f).read    
     contentMetadata = YAML.load(fData)
     newMetadata = {}
     contentMetadata.keys.each do |k|
