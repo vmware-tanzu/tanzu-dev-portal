@@ -90,71 +90,70 @@ Your team collaborates, "If we complete the first story, "Sign In Form", is it g
 
 ## Q: Which Story Comes First?
 
+There's no right answer here, but there's a few wrong answers to discuss.
+
 At the beginning of a project, you may have a vision for a [minimum viable product (MVP)](https://en.wikipedia.org/wiki/Minimum_viable_product#:~:text=%22The%20minimum%20viable%20product%20is,means%20it%20is%20not%20formulaic), and several stories. 
 
-For example, imagine you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP includes the ability for people to shop the store's entire catalog online, add multiple items to a shopping cart, pay with credit card or another online payment app, view past transactions, save credit cards, and apply discount codes.
+For example, you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP gives people the ability to shop the store's online catalog, add multiple items to a shopping cart, pay with a credit card or using an online payment app, view past transactions, save credit cards, and apply discount codes.
 
-That's a lot of software! 
+You map out a user's flow through the application, then decide that the first story is going to be: "User Can Sign In".
 
-Where do you start? How do you pick which story should be first?
+But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
 
-The answer to both questions is up to you. When you start and how you pick  than another but there's a few incorrect ones that require discussing.
+So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it would test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
 
-For example, after mapping out a user's flow through the application,you may decide that the first story should be "User can Sign In" it might be tempting,  to decide that the first story should be "User Can Log In".
-
-But remember, the definition of a story is "the smallest piece of incremental value that you could deliver into the hands of your users and learn from their reaction to it." So when you're starting from nothing, does the story "User Can Log In" deliver value into the hands of your users? No! It wouldn't add any value to the user's life; no one wants to log in to an application that does nothing.
-
-At the beginning of an engagement, you'll need to get creative with how you think about creating that first piece of user value for the users. You might decide that a simple page listing a "product of the week" and a phone number users can call to purchase it would test important assumptions you have about the problem you're trying to solve for your users. After delivering that, you might get feedback from users that they don't want to call anyone—or that they want the store to call them. And so you write and prioritize the next story accordingly.
-
-Of course, this is a highly idealized scenario; real projects will require weighing many options for deciding on the first story—and you likely won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value; perhaps there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that will be impacted by it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weight the tradeoffs and find the first starting point.
+Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
 
 ## Q: Why Estimate In Points, Not Time?
 
-It doesn't matter if the organization is agile or [waterfall](https://en.wikipedia.org/wiki/Waterfall_model): it's generally valuable to know when something will be done. When will a feature be delivered? Will the release contain everything that we hoped to put in it? Delivery estimates help our product managers plan.
+It doesn't matter if the organization is Agile or [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model), it's generally valuable to know when something will be done. When will a feature be delivered? Will the release contain everything that we hoped to put in it? Delivery estimates help our product managers plan.
 
-The mistake most companies make is that they ask their engineers to estimate software in chunks of time. They ask "How long will this feature take?", or "When will this feature be done?"
+The mistake most often made by companies is the ongoing request for engineers to estimate software in chunks of time. For example, "How long will this feature take?", or "When will this feature be done?"
 
-It's so tempting to answer their question directly by estimating how long you think something will take. Don't do it. We have literally decades of proof by this point that engineers are terrible at estimating in time.
+You could answer the question by estimating how long you think something will take. Don't do it! There are decades of proof to indicate engineers are terrible when estimating in time.
 
-We are, however, very good at estimating chunks of work relative to each other. This feature is harder than this feature. This story touches more moving pieces than that one. Teams can very quickly estimate stories in an iteration by comparing the stories in the iteration relative to each other (and relative to stories they've completed in the past). Line up the stories in an iteration, and sort them easy to hard.
+Engineers are very good at estimating chunks of work relative to each other. For example, this feature is harder than that feature. Teams can quickly estimate stories in an iteration by comparing them relative to each other (and relative to stories they've completed in the past). Line up the stories in an iteration, and sort them by levels of difficulty.
 
-But how does sorting stories relative to each other help us estimate when something will be done? Because of velocity. Assign points to each story that you've estimated. For example, your team may use a fibonacci pointing sequence: 1, 2, 3, 5, 8. That's five buckets to put stories in. The easiest stories go into the "1" bucket. The hardest stories go into the "8" bucket. Note that teams will also keep in mind estimates from previous iterations. Imagine a really complex story in a previous iteration got an 8, but the hardest story in this iteration isn't as complex. So maybe they put this iteration's hardest story in the "5" bucket.
+Does sorting stories relative to each other help us estimate when something will be done? Yes, because of velocity. 
 
-Next, keep track of how many story points the team delivers week over week (or better yet, let a tool like [Pivotal Tracker](https://www.pivotaltracker.com/) automatically keep track of it for you). Figure out how many points the team can deliver in a given week by maintaining a rolling average of the last three week's of points delivered each week. That rolling average—the number of points a team can deliver in a week—is velocity.
+For example, Your team is going to assign points to each story that is estimated. Your team is also going to use a Fibonacci pointing sequence: 1, 2, 3, 5, 8. That gives you five buckets for you to add your stories. The easiest stories go into the "1" bucket and the hardest stories go into the "8" bucket. 
 
-[Velocity](https://martinfowler.com/bliki/XpVelocity.html) is the key to planning on XP teams. Instead of asking a team to estimate when something will be done based on their gut, we predict when something will be done based on data. We know how many points the team can deliver week over week. And we know where the story is in the prioritized list of stories (i.e., the backlog).
+Note that teams also keep in mind estimates from previous iterations. A complex story in a previous iteration might be given an "8", but the hardest story in this iteration isn't as complex so it could be go in the "5" bucket.
 
-However, it's also important to know that predictions made with velocity are still just that: predictions. They're not foolproof. That's because a team probably does not deliver the exact same amount of points week over week. There's variation each week in how many points they deliver. That variation we call "volatility." The more volatility, the higher the margin of error in velocity-based predictions.
+Next, keep track of how many story points the team delivers weekly. Consider using a tool like [Pivotal Tracker](https://www.pivotaltracker.com/) to automatically keep track of it for you. You can figure out how many points the team can deliver in a given week by maintaining a rolling average of points for the last three weeks. The rolling average for the number of points a team can deliver in a week is *velocity*.
 
-That's why engineers have to keep a very close watch on volatility on their team; when they're experiencing high degrees of volatility, they have to figure out the cause of the volatility and eliminate it. Otherwise, they won't be able to predict when things will be done with confidence—and the PMs won't be able to plan.
+[Velocity](https://martinfowler.com/bliki/XpVelocity.html) is the key to planning on XP teams. Instead of asking a team to estimate a completion date based on their gut, the team predicts the completion date based on data. This makes it possible to know how many points the team can deliver weekly. It also helps prioritize a story in the backlog.
+
+It's also important to know that predictions made with velocity are not foolproof. Your team is probably not going to deliver the same amount of points each week. There is always going to be variation in the number of points your team delivers each week. The variation is also known as *volatility*. The more volatility, the higher the margin of error in velocity-based predictions.
+
+It's important for your team to monitor volatility, especially when there is high degrees of it. Together, your team has to figure out the cause of the volatility and eliminate it. Otherwise, your team won't be able to predict completion dates with confidence, and the project managers won't be able to plan.
 
 ## Q: Why Not Estimate Bugs and Chores?
 
-Velocity predicts when stories will be done. So why don't we estimate bugs and chores? Because if you do, you won't be able to rely on your velocity to predict when stories will be done anymore.
+If velocity predicts when stories will be done, why not estimate bugs and chores? Because you won't be able to rely on velocity to predict when stories are going to be done.
 
-Here's why: stories are planned, but bugs are an **unintended consequence of feature development** (and one that, as much as possible, we try to eliminate). A bug represents something that used to work, but now doesn't. The completion of the original story has already been accounted for in your team's velocity and forward progress. It would be inaccurate to get second "velocity boost" or to show additional forward progress from fixing what was accidentally broken, given that the bug can be though of as a step backwards in progress. If the team fixes the same bug 20 times then they did not make 20 steps of progress -- they're bogged down by that bug, and their velocity might slow to reflect the situation.
+Here why: Stories are planned, but bugs are an **unintended consequence of feature development**. A bug represents something that used to work, but now doesn't. The completion of the original story is already accounted for in your team's velocity and forward progress. It would be inaccurate to get a second "velocity boost", or to show additional forward progress from fixing what is accidentally broken, given that the bug can be thought of as a step backwards in progress. If the team fixes the same bug twenty times, they did not make twenty steps of progress. Instead, the team is bogged down by the bug, and its velocity might slowdown to reflect the situation.
 
-Likewise, "chores" -- non-feature or bug-related tasks -- are a necessary aid to feature development, but typically aren't possible to plan up front—rather, they become apparent in reaction to the needs of the product as it evolves. If you start pointing bugs and chores, you'll artificially inflate your velocity.
+Likewise, non-feature or bug-related tasks known as "chores" are a necessary aid to feature development. It is usually not possible to plan for these up front. They become apparent in reaction to the needs of the product as it evolves. If you start pointing bugs and chores, you'll artificially inflate your velocity.
 
-Imagine you've been pointing bugs and chores as they've cropped up and adding them into the backlog; also, imagine that process has led you to a current "velocity" of 20 points per week. Your backlog is now empty, and your product manager shows your team 10 new stories. You and the other engineers estimate those stories at 40 points. So you all say, "It will take us two weeks to complete these!" But you'll be wrong. Because you won't just work on those stories; as you develop those stories, you'll have to deal with bugs and chores that crop up. Since your velocity was artificially inflated, you weren't able to accurately predict how long the stories would truly take.
+Imagine you've been pointing bugs and chores as they've cropped up, and adding them to the backlog. Also, imagine that the process has led you to a current "velocity" of twenty points per week. Your backlog is now empty, and your product manager shows your team 10 new stories. You and the other engineers estimate those stories at forty points. So you all say, "It will take us two weeks to complete these!" But you'll be wrong. Because you won't just work on those stories; as you develop those stories, you'll have to deal with bugs and chores that crop up. Since your velocity was artificially inflated, you weren't able to accurately predict how long the stories would truly take.
 
 Bugs and chores have to bring velocity down. That's why we don't point them. We want our velocity to tell us how long it will take to complete stories (i.e., user value). If you inflate it with bugs and chores, then you've lost your ability to predict how long it will actually take you to deliver new value.
 
-## Q: What is the Value of CI/CD?
+## Q: What is the Value of Continuous Integration/Continuous Delivery?
 
-There are two questions you have to ask when considering shipping software:
-* Can we ship?
+There are two questions to consider when shipping software:
 * Should we ship?
+* Can we ship?
 
-"Should we ship?" is ultimately a business decision. Is it valuable to the business to put the latest features in the hands of the users right now? The product manager (PM) represents the business interests on the team and must own this decision.
+* "Should we ship?" is ultimately a business decision. Is it valuable for the business to put the latest features in the hands of the users right now? The product manager (PM) represents the business interests on the team and must own this decision.
+* "Can we ship?" is fundamentally an engineering question. Is the software in a working state? Is the team confident it won't fail in production? The goal of the XP engineers is to **always** have a "Yes" answer to this question. A team that can't ship, can't learn, and can't immediately address bugs or critical security vulnerabilities. The longer a team spends not learning, the greater the risk that it is wasting time and money building the wrong thing.
 
-However, the question "Can we ship?" is fundamentally an engineering question. Is the software in a working state? Are we confident it won't fail in production? The goal of the XP engineers is to **always** have a "yes" answer to this question. A team that can't ship, can't learn, and can't immediately address bugs or critical security vulnerabilities. And the longer you're not learning, the greater the risk that you're wasting time and money building the wrong thing.
-
-The combination of three XP practices make it possible for teams to always have a "yes" answer to the question "Can We Ship?":
+The combination of three XP practices make it possible for teams to always have a "Yes" answer to the question "Can We Ship?". These include:
 
 * Stories
 * TDD
-* Continuous Integration/Continuous Delivery
+* Continuous Integration/Continuous Delivery (CI/CD)
 
 If your backlog consists of stories that conform [the definition in this FAQ](#stories), and your engineers only commit implementations of those stories once the team (PM, Designers, and Engineers) agree the implementation completes the story, then you'll never have any half-implemented features in the build.
 
@@ -174,15 +173,15 @@ That's why we also seed engagements with the [practice of retrospectives](/pract
 
 Without that reflection and constant adjustment, the team's practices will deteriorate. What worked on day one won't necessarily work on day 30, or day 100. You have to constantly improve the team's efforts, or risk failure.
 
-## Q: Why Do We Recommend Rotating Engineers to Other Projects?{id="rotations"}
+## Q: Why Rotate Engineers to Other Projects?{id="rotations"}
 
-Within Tanzu Labs, it's common to have engineers **_rotate_** between projects periodically. In other words, an engineer might not join a project at its beginning, and any given team member might not be on a project to its conclusion. We feel this is a good pattern for all team members, including [engineering anchors](/learningpaths/anchor-playbook/).
+Within Tanzu Labs, it's common to have engineers **_rotate_** between projects periodically. For example, an engineer might not join a project at its beginning, and any given team member might not be on a project to its conclusion. We feel this is a good pattern for all team members, including [engineering anchors](/learningpaths/anchor-playbook/).
 
 This can be difficult for everyone. Your team and product stakeholders might get attached to you. They not want you to leave to join another project. They might even get scared, or angry. You might also feel emotionally attached to your project and team, and feel scared or angry about moving on to another project before this one is finished.
 
 However, rotation is in the best interest of the project and everyone involved with it. Here's why.
 
-First, if a team is unchanged for too long, they'll start to become blind to their [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory). They won't see the annoying workarounds as annoying anymore; they'll have grown used to them. They'll become complacent about the hacks in their codebase,  the intermittent failures in their CI build, and the inefficiency of the release process. 
+If a team is unchanged for too long, they'll start to become blind to their [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory). They won't see annoying workarounds as annoying anymore; they'll have grown used to them. They'll become complacent about the hacks in their codebase,  the intermittent failures in their CI build, and the inefficiency of the release process. 
 
 In other words, they'll become increasingly less effective at maintaining quality in the code base and in their engineering process.
 
