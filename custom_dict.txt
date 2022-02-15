@@ -259,6 +259,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Carta
 Cartographer
 Carvel('s)?
 cass-operator
@@ -579,6 +580,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Enlightning
 Enqueueing
 entriesInVM
 entriesOnlyOnDisk
@@ -630,6 +632,7 @@ Fewell
 fgJ
 fiancé
 [Ff]ibonacci
+Figma
 fileshare
 [fF]ilesystem
 FileSystemXmlApplicationContext
@@ -1107,6 +1110,7 @@ letsencrypt-staging
 libnss-wrapper
 libs
 [Ll]ifecycle
+lightboard
 Liles
 LimitRanger
 LimitRanges
@@ -1958,7 +1962,7 @@ upgradability
 upleveled
 upskill
 upstream(s)?
-uptime
+[uU]ptime
 UR[IL](s)?
 urandom
 url
@@ -2091,3 +2095,4 @@ Zou
 Zuul
 Zynga
 μServices
+ϟ
