@@ -3,7 +3,7 @@ title: "Team Working Agreements"
 linkTitle: "Team Working Agreements"
 description: "Setting and agreeing on expected standards and behaviors defined by a team as best practices to work together smoothly and ensure the success of the task/project at hand."
 # Note: remove any tags that are not relevant.
-tags: ["Scoping", "Kickoff", "Discovery", Framing", "Inception", "Delivery"]
+tags: ["Scoping", "Kickoff", "Discovery", "Framing", "Inception", "Delivery"]
 length: "1 Hour"
 participants: "Core team: Product Manager, Designer, Engineers"
 image: "cover-image.png"
