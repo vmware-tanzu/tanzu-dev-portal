@@ -16,6 +16,7 @@ guests:
 - Lance Brown
 hosts:
 - Tiffany Jernigan
+- Whitney Lee
 lastmod: '2021-02-14'
 minutes: 60
 title: "Tinkering While Talking Tanzu - Thoughts on Uptime"
