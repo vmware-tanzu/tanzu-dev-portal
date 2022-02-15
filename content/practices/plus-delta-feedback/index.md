@@ -13,9 +13,12 @@ date: "2022-01-19"
 why: 
 - To come to an understanding of what went well (plus), and what could be changed to improve collaboration in future (delta).
 - To introduce a regular feedback cycle at a 1:1 / individual level that allows for  personal feedback.
+- A lightweight and casual feedback tool for fostering a healthy feedback culture.
 when:
-- After pairing or otherwise working with someone for the first time.
-- After a meeting with people who do not regularly provide input.
+- Want to obtain casual feedback from:
+   - someone who you are working for the first time.
+   - coworkers you work frequently or long periods of time.
+   - people who do not regularly provide input.
 what:
 - In Person -- pieces of paper and pen
 - Remote -- a way to share remote notes / [Miro](https://miro.com/)
