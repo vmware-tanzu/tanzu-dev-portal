@@ -70,7 +70,7 @@ Test Driven Development (TDD) is a crucial engineering practice. Review the arti
 
 ## Q: Why Refactor? {id="tdd"}
 
-**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd) Matthew Parker elaborates on the benefits of practicing test-driven development, and why you shouldn’t be afraid of refactoring.
+[Refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is a crucial engeineering practice. In [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd), Matthew Parker elaborates why you shouldn't be afraid of refactoring, and how refactoring on how TDD and refactoring are related.
 
 ## Q: What is a User Story?{id=stories}
 
