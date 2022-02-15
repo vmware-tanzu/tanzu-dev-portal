@@ -259,6 +259,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Carta
 Cartographer
 Carvel('s)?
 cass-operator
@@ -1961,7 +1962,7 @@ upgradability
 upleveled
 upskill
 upstream(s)?
-uptime
+[uU]ptime
 UR[IL](s)?
 urandom
 url
