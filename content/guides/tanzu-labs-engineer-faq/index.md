@@ -100,7 +100,7 @@ You map out a user's flow through the application, then decide that the first st
 
 But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
 
-So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it would test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
+So, at the beginning of a project, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it would test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
 
 Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
 
@@ -169,9 +169,9 @@ It's worth noting that some product managers automate their responsibility with 
 
 ## Q: Why Are There Retrospectives?
 
-There are a number of key practices that are valuable over all types of engagements, including pairing, test driven development, IPMs, standup, and CI/CD. However, there is not one set of practices that work effectively with all engagements. Practices are intended to solve problems, but not all engagements have the same set of problems. Furthermore, the problems a team faces change over time.
+There are a number of key practices that are valuable over all types of software development projects, including pairing, test driven development, IPMs, standup, and CI/CD. However, there is not one set of practices that work effectively with all projects. Practices are intended to solve problems, but not all projects have the same set of problems. Furthermore, the problems a team faces change over time.
 
-That's why you should seed engagements with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
+That's why you should seed projects with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
 
 Without this reflection and constant adjustment, the team's practices will deteriorate. What worked on the first day is not necessarily going to work on the 30th day 30, or the 100th day. You have to constantly improve the team's efforts, or risk failure.
 
@@ -245,7 +245,7 @@ The fundamental difference between Scrum and XP is that Scrum is based on projec
 
 It's important to keep in mind that the goal in these situations is not to start a war of XP versus Scrum, or to tell anyone that practices Scrum that they shouldn't use it because XP is the better choice.
 
-Often, one of the primary goals when working with a client is to introduce them to a different way of working and thinking. It's not uncommon for a client to prefer to "just do Scrum" instead of XP. In a way, you already are. The process takes a lot of hints from Scrum and layers on many missing aspects, such as engineering practices. XP adds new tools to the software development toolbox. 
+As consultants, often one of our client's goals is for Tanzu Labs to introduce them to a different way of working and thinking. It's not uncommon for a client to prefer to "just do Scrum" instead of XP. In a way, you already are. The process takes a lot of hints from Scrum and layers on many missing aspects, such as engineering practices. XP adds new tools to the software development toolbox. 
 
 {{% callout %}}
 **Consulting Tip:** If you are a consultant, you never want to remind the client that they are there to learn from you and do exactly as you say. Only your clients can tell you why they are here. It is never a good idea to make assumptions about the circumstances by which they came to work with you.
@@ -265,7 +265,7 @@ This problem is sometimes referred to as the [Iron Triangle](https://en.wikipedi
 
 That is why fixed scope and fixed time is so problematic, and the death march inevitable. And, the more the team sacrifices the quality of their work, the harder the work is to do. Though they might meet the deadline, the software will be of such low quality that maintaining it is going be challenging.
 
-Of course, none of this is caused by the actual deadline. It's caused by Waterfall incentive structures, and how the client's organization measures success as "on time, and on budget". But, at what quality?
+Of course, none of this is caused by the actual deadline. It's caused by Waterfall incentive structures, and how company's organization measures success as "on time, and on budget". But, at what quality?
 
 There is another way to measure success in software development. It doesn't matter if you build something "on time and on budget" if the software isn't valuable to the users or the business in the first place.
 
