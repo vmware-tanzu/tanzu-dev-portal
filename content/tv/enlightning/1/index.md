@@ -14,3 +14,7 @@ title: Dockerfiles vs Cloud Native Buildpacks
 twitch: vmwaretanzu
 type: tv-episode
 ---
+
+Have you been deploying your applications with Dockerfiles?  Are you wondering whether it is worth your time to switch 
+to Cloud Native Buildpacks? Watch the premiere episode of Enlightning ϟ to learn along with host Whitney Lee as Cora 
+Iberkleid teaches about the benefits of Cloud Native Buildpacks.  

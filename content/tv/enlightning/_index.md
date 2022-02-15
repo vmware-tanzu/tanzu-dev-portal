@@ -3,8 +3,8 @@ title: "Enlightning"
 type: "tv-show"
 streaming: "twitch"
 id: "enlightning"
-image: "tanzu-tuesdays.png"
-og_image: "/images/og/TanzuTV-Tuesdays.png"
+image: "enlightning.jpg"
+og_image: "/images/og/TanzuTV-Enlightning.jpg"
 weight: 2
 menu:
     main:

@@ -4,7 +4,7 @@ type: "tv-show"
 streaming: "twitch"
 id: "dotnet-beyond"
 image: "dotnet-beyond.png"
-og_image: ""
+og_image: "/images/og/TanzuTV-Dotnet-Beyond.png"
 weight: 4
 menu:
     main:
