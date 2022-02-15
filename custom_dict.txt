@@ -138,8 +138,8 @@ AuthenticationManager
 AuthenticationProvider
 authenticator
 AuthorizationPolicy
-Authorizer
 authorizer
+Authorizer
 authorizers
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 [Aa]uto-reconfiguration
@@ -206,8 +206,8 @@ bookinfo(-ingressgateway-certs-ca)?
 BookService
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
-bootrun
 bootRun
+bootrun
 bootup
 Boris
 Boskey
@@ -217,6 +217,7 @@ br/
 Brandolini('s)?
 Brannen
 brd1
+BrighterCommand
 Brindley
 Brodi
 BSides
@@ -258,6 +259,7 @@ Campuzano
 Cao
 Capili
 Carducci
+Carta
 Cartographer
 Carvel('s)?
 cass-operator
@@ -292,8 +294,8 @@ CircleCI
 CIS
 CKtaKhKOo-Y
 classpath
-clearnotifications
 clearNotifications
+clearnotifications
 Cleverley-Prance
 cli
 CLI(s|'s)?
@@ -303,8 +305,8 @@ ClientProxyMembershipID
 Clojure
 closeRegion
 CloudEvents
-Cloudflare
 CloudFlare
+Cloudflare
 CloudHealth
 CloudNativeCon
 cloudnativewal
@@ -357,6 +359,7 @@ Connor
 containerd
 containerPort
 Containous
+controlplaneio
 copyDependencies
 core-dns
 CoreCLR
@@ -475,6 +478,7 @@ DestinationRule
 [Dd]ev(s)?
 [Dd]ev[Rr]el
 developer-centric
+DevIntersection
 DevNexus
 Devoops
 DEVOPS
@@ -498,8 +502,8 @@ DiskStore
 Disneyland
 [Dd]isposability
 distributable
-distributedCommand
 DistributedCommand
+distributedCommand
 DistributedCommandCacheWriter
 DistributedMember
 DistributedMembers
@@ -576,6 +580,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Enlightning
 Enqueueing
 entriesInVM
 entriesOnlyOnDisk
@@ -624,8 +629,10 @@ FC
 FeignClient
 FelixConfiguration
 Fewell
+fgJ
 fiancé
 [Ff]ibonacci
+Figma
 fileshare
 [fF]ilesystem
 FileSystemXmlApplicationContext
@@ -649,8 +656,8 @@ FP
 FQDN
 Frascati-Robinson
 freddygthatsme
-[Ff]rictionless
 frictionless
+[Ff]rictionless
 [fF]rontend(-green)?
 Frontstage
 Fu
@@ -697,6 +704,7 @@ GatewaysSender
 Gaubert
 GBP
 GC(E|L|P|R|S)?
+geeking
 Geesaman
 Gemfiles
 GemFire
@@ -766,8 +774,8 @@ Gorouter
 gotchas
 Gothelf
 GraalVM(-powered|.)?
-Gradle
 gradle
+Gradle
 gradlew
 [gG]rafana
 GRAFANA-PASSWORD
@@ -807,6 +815,7 @@ hasResult
 HATEOAS
 Hayk
 Haytham
+Headspring
 Heartbleed
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
@@ -863,6 +872,7 @@ implementors
 imposter
 [Ii]ncentivized
 [Ii]ncompressible
+influencer
 InfoQ
 InfoSec
 ing
@@ -981,11 +991,12 @@ JSP
 JSR-352
 JST
 judgement
+julielerman
 Julien
 jumpstart
 Junio
-junit
 Junit
+junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
@@ -1011,6 +1022,7 @@ Kat
 KEK(s)?
 Kendo
 kendrickcoleman
+Kerberos
 Kerievsky
 [Kk]ey[Ss]tore
 keychain
@@ -1056,15 +1068,15 @@ Kube2IAM
 KubeAcademy
 kubeadm
 KubeadmConfigSpec(.)?
-[Kk]ubeapps
 KubeApps
+[Kk]ubeapps
 [kK]ubebuilder
 KubeCon
-[Kk]ubeconfig
 KUBECONFIG
-KUBECTL
-[kK]ubectl
+[Kk]ubeconfig
 kubectl
+[kK]ubectl
+KUBECTL
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
@@ -1077,6 +1089,7 @@ kubernetes-vault-kms-plugin
 kubeseal
 Kubeseal
 KUDO
+Kung
 [kK]ustomize
 KUTTL
 Kyverno
@@ -1088,14 +1101,17 @@ layla-p
 LaylaCodesIt
 Lazu
 LDAP
+ldnug
 [Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
 lego
+Lerman
 letsencrypt-staging
 libnss-wrapper
 libs
 [Ll]ifecycle
+lightboard
 Liles
 LimitRanger
 LimitRanges
@@ -1104,6 +1120,7 @@ Linkerd
 linter(s)?
 [Ll]inux
 Lippert
+Littles
 Littleton
 livecoding
 Livelessons
@@ -1120,8 +1137,8 @@ Log4Hell
 [Ll]og4j2?
 Log4Shell
 LogAllStatisticValuesFunction
-logback
 Logback
+logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 Loggregator
@@ -1182,6 +1199,7 @@ messageQueueSize
 messagesProcessed
 MessagingBase
 metac
+MetaConference
 [Mm]etacontroller
 MeterRegistry
 MetricsProvider
@@ -1194,6 +1212,7 @@ Microk8s
 microservice.
 microservices-oriented
 Microsystems
+mid-1990s
 [Mm]iddleware
 Migros
 Mik
@@ -1223,6 +1242,7 @@ MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
 MQ
 MSc
+MSDN
 msgpack(ed)?
 mTLS
 MTT(D|R)
@@ -1278,6 +1298,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NMica
 NNGroup
 no-brainer
 NODE_ENV
@@ -1313,6 +1334,7 @@ Oleh
 olehdokuka
 OLGA_MACIASZEK
 [Oo]makase
+Omniplan
 on-prem
 onboarded
 [Oo]nboarding
@@ -1424,8 +1446,9 @@ pivnet
 PKCS
 PKI
 plaintext
-pluggable
+pluggability
 Pluggable
+pluggable
 Pluralsight
 PMC
 podcaster
@@ -1437,6 +1460,7 @@ POJO(s)?
 POJP
 Poly1305
 Pomodoro
+Poornima
 Poppendieck
 [Pp]ortieris
 [Pp]ortlet(s)?
@@ -1525,6 +1549,7 @@ quokka
 (r)?syslog
 r0
 RabbitMQ('s)?
+Radware
 Raju
 Rakuten
 RBAC(-enabled)?
@@ -1532,6 +1557,7 @@ RCE
 RDBMS
 reachability
 reactively
+ReactiveUI
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1630,6 +1656,7 @@ RSocket(-based)?
 Ruckle
 Rudd
 Rumans
+RunAs
 runnable
 Runtimes
 runtimes?
@@ -1779,6 +1806,7 @@ Stéphane
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
+Strangeloop
 strategizing
 Strategyzer
 Stratton
@@ -1812,6 +1840,7 @@ Sysdig
 SystemAdmin
 Szul
 tabpane
+Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
 targetPort
@@ -1832,6 +1861,7 @@ Tekton('s)?
 [Tt]elco(s)*
 telecom
 [Tt]elematics
+Telerik
 [Tt]emplat(ed|ing|ing.|ize|able)
 Templeton
 Teotti
@@ -1901,11 +1931,12 @@ UC
 UCD
 UDP
 UI(s|-based)?
+Umbraco
 (un)?marshalling
 unannotated
 unbundle
-uncomment
 Uncomment
+uncomment
 undersample
 underutilization
 unencoded
@@ -1933,7 +1964,7 @@ upgradability
 upleveled
 upskill
 upstream(s)?
-uptime
+[uU]ptime
 UR[IL](s)?
 urandom
 url
@@ -2046,8 +2077,10 @@ XKCD
 XP
 XSalsa20
 Xu
+Y2ffgg
 YAML|yaml
 Yaron
+YARP
 yay
 YCombinator
 Yonis
@@ -2064,3 +2097,4 @@ Zou
 Zuul
 Zynga
 μServices
+ϟ
