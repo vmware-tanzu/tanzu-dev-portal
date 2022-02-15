@@ -1,17 +1,19 @@
 ---
 date: '2022-02-15'
-lastmod: '2021-02-15'
-parent: Debugging Kubernetes
+lastmod: '2022-02-15'
 tags:
 - Kubernetes
 - Debugging Kubernetes
-title: Controlling Ingress with Contour
-weight: 1
-oldPath: "/content/guides/kubernetes/debugging-kubernetes.md"
-aliases:
-- "/guides/kubernetes/debugging-kubernetes"
+- DISO
+team:
+- David Wu
+- Carlos Nunez
+title: Debugging the Kubernetes Platform
 level1: Managing and Operating Kubernetes
 description: Learn debugging techniques to help you debug common Kubernetes pitfalls
+parent: Debugging Kubernetes
+linkTitle: Debugging the Kubernetes Platform
+metaTitle: Debugging the Kubernetes Platform
 ---
 
 
