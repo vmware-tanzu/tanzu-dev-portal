@@ -6,7 +6,9 @@ lastmod: "2022-01-14"
 level1: Agile Transformation and Practices
 level2: Agile Development
 tags:
-- 
+- Agile
+- Onboarding
+- XP
 # Author(s)
 team: 
 - Joe Moore
@@ -39,9 +41,9 @@ The answer to the question is you won't have to hire more engineers. In an ideal
 
 On the surface, it appears that the volume of work is cut in half. Yet, underlying the question is an assumption that there's no difference in productivity between solo engineers and paired engineers. The assumption is demonstrably false. Solo engineers spend less time focused on a task than paired engineers. It's also easy to get distracted while soloing with apps such as Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts. They are much harder to check out while pairing. Your pair doesn't want to read your email, or answer your texts, or post a hilarious TikTok dance. And, you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. 
 
-Hyper-productivity caused by pairing is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different and it doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
+Hyper-productivity caused by pairing is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different, and it doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
 
-Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on Github.
+Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on GitHub.
 
 To achieve the level of effectiveness from pairing, everyone needs to value each other's perspectives, be willing to be vulnerable, and express what they do not know. Pairing can reveal intellectual insecurities in people. Not everyone is going to develop the empathy and relationship skills required to collaborate at this level. To be successful at pairing, let go of any ego, and understand that it's OK to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would prefer to leave the company than overcome their fears.
 
@@ -111,11 +113,11 @@ At the beginning of a project, you may have a vision for a [minimum viable produ
 
 For example, you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP gives people the ability to shop the store's online catalog, add multiple items to a shopping cart, pay with a credit card or using an online payment app, view past transactions, save credit cards, and apply discount codes.
 
-You map out a user's flow through the application, then decide that the first story is going to be: "User Can Sign In".
+You map out a user's flow through the application, then decide that the first story is going to be: _"User can sign in"_.
 
-But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
+But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, _"User can sign in"_ deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign in to an application that does nothing.
 
-So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it to test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
+So, at the beginning of a project, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it to test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
 
 Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
 
@@ -133,7 +135,7 @@ Engineers are very good at estimating chunks of work relative to each other. For
 
 For example, Your team is going to assign points to each story that is estimated. Your team is also going to use a Fibonacci pointing sequence: 1, 2, 3, 5, 8. That gives you five buckets for you to add your stories. The easiest stories go into the "1" bucket and the hardest stories go into the "8" bucket. 
 
-Note that teams also keep in mind estimates from previous iterations. A complex story in a previous iteration might be given an "8", but the hardest story in this iteration isn't as complex so it could go in the "5" bucket.
+Note that teams also keep in mind estimates from previous iterations. A complex story in a previous iteration might be given an "8", but the hardest story in this iteration isn't as complex, it could go in the "5" bucket.
 
 Next, keep track of how many story points the team delivers weekly. Consider using a tool like [Pivotal Tracker](https://www.pivotaltracker.com/) to automatically keep track of it for you. You can figure out how many points the team can deliver in a given week by maintaining a rolling average of points for the last three weeks. The rolling average for the number of points a team can deliver in a week is *velocity*.
 
@@ -182,11 +184,11 @@ Of course, there are all kinds of other benefits to CI. [To paraphrase Martin Fo
 
 It's worth noting that some product managers automate their responsibility with respect to shipping. Some have the default answer to "Ship on Green". In effect, they've asked the engineers to add another step to their build pipeline to automatically promote code to production on a green build. That's called "continuous deployment." Shipping is still a business responsibility, although the mechanics of it are facilitated by engineers. The default answer to "Ship on Green." doesn't abdicate the responsibility of the decision to the engineers. The product manager remains responsible for understanding how the features work in production, and how users are responding to it. This means the project has to prioritize all engineering work necessary to build automated production monitoring capabilities that make continuous deployment responsible.
 
-## Q: Why Are There Retrospectives?
+## Q: Why Should Teams Host Retrospectives?
 
 There are a number of key practices that are valuable over all types of software development projects, including pairing, test driven development, IPMs, standup, and CI/CD. However, there is not one set of practices that work effectively with all projects. Practices are intended to solve problems, but not all projects have the same set of problems. Furthermore, the problems a team faces change over time.
 
-That's why it is important to seed engagements with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
+That's why it is important to seed projects with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
 
 Without this reflection and constant adjustment, the team's practices will deteriorate. What worked on the first day is not necessarily going to work on the 30th day, or the 100th day. You have to constantly improve the team's efforts, or risk failure.
 
@@ -286,7 +288,7 @@ There is another way to measure success in software development. It doesn't matt
 
 So, when you are working towards a deadline, do not focus on how you are going to build all the features on time. Instead, think about what the most valuable things to build are, and have them ready to go by the deadline.
 
-With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant reprioritization based on learning. It really is the only way to ensure that they have created something valuable by the deadline.
+With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning. It really is the only way to ensure that they have created something valuable by the deadline.
 
 ## Q: How Do You Scale Practices into Large, Traditional Enterprises?
 {{% callout %}}
@@ -302,7 +304,7 @@ Read the white paper, [How to Scale Agile Software Development with Product Team
 
 #### Rule #1: Scale Slowly
 
-Consider the following "Dont's:
+Consider the following "Dont's":
 
 - Don't go from a team of 20 to a team of 200 overnight. 
 - Don't jump from one team in one location to 10 teams in 10 locations. 
