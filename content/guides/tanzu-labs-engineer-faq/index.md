@@ -15,7 +15,7 @@ team:
 ---
 VMware Tanzu Labs teaches clients, partners, and peers [XP](https://en.wikipedia.org/wiki/Extreme_programming), [Lean](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK), and [User Centered Design](https://tanzu.vmware.com/campaigns/design) (UCD) principles and practices for product and application development. 
 
-This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, and includes examples of real problems the team worked together to solve. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
+This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, and includes examples of real problems the team solved. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
 
 ## Q: Why Pair Programming?
 
@@ -23,35 +23,35 @@ This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, an
 There is an overview of Pair Programming in [**Fundamentals of Modern Application Development learning path**](/learningpaths/application-development/pair-programming/). The following is a deeper dive into the topic.
 {{% /callout %}}
 
-How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before it is unable to function? Most companies that come to Tanzu Labs have teams with a "bus count" or "lottery count" of 1.
+How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before it is unable to function? Most companies that come to Tanzu Labs have teams with a *bus count* or *lottery count* of 1.
 
 ![The Bus Count](images/image9.jpg)
 
 When you have solo engineers, you end up with knowledge silos. For example, suppose there is an engineer in your organization that owns a particular part of the system. Because no one else knows how the code works most engineers are afraid to touch it. The engineer who created and maintains the system is the only one who understands how the system works. If a decision is made to prioritize features in the part of the codebase that only one engineer knows, the rest of the team is left twiddling their thumbs. If the same engineer becomes unavailable, the team cannot function anymore. The longer this situation continues, the worse it gets.
 
-Knowledge silos may create job security for engineers, but they also create risk for companies. XP practitioners break down knowledge silos. Instead of making themselves "indispensable" by not sharing what they know, they share knowledge through pair programming. XP practitioners maintain collective ownership of the code so that every engineer on the team can work on any part of the codebase. No one gets to specialize, own one area, or hold the team hostage with their singular expertise. Everyone agrees to work on the **most important thing**. That means each pair pulls from the top of the backlog. No one owns a particular module, and it's everyone's job to keep the code clean. They never end up with code that only makes sense to one engineer, because they get instantaneous feedback on the readability of the code through pairing.
+Knowledge silos may create job security for engineers, but they also create risk for companies. XP practitioners break down knowledge silos. Instead of making themselves indispensable by not sharing what they know, they share knowledge through pair programming. XP practitioners maintain collective ownership of the code so that every engineer on the team can work on any part of the codebase. No one gets to specialize, own one area, or hold the team hostage with their singular expertise. Everyone agrees to work on the **most important thing**. This means each pair pulls from the top of the backlog. No one owns a particular module, and it's everyone's job to keep the code clean. They never end up with code that only makes sense to one engineer because they get instantaneous feedback on the readability of the code through pairing.
 
-What about productivity? It leaves people to wonder "Should I hire twice as many engineers to get the same amount of work done?" For example, imagine a team of four engineers. When those engineers solo, there's four independent work streams happening in parallel. When they pair, there's only two independent workstreams happening in parallel.
+What about productivity? It leaves people to wonder, "Is it necessary to hire twice as many engineers to get the same amount of work done?" For example, imagine a team of four engineers. When those engineers solo, there's four independent work streams happening in parallel. When the engineers pair, there's only two independent workstreams happening in parallel.
 
-The answer to the question is you won't have to hire more engineers. In an ideal scenario, the four engineers are going to [be more productive](https://www.theregister.com/2016/10/18/pairing_programming_youll_never_guess_what_happens_next/) when working paired than when working solo. However, reality isn't ideal. Many companies may still need to hire more engineers if they have a traditional IT culture. This is because it is also likely that they have a fair number of engineers in their current workforce who prefer not to pair. 
+The answer to the question is that it's unnecessary to hire more engineers. In an ideal scenario, the four engineers are going to [be more productive](https://www.theregister.com/2016/10/18/pairing_programming_youll_never_guess_what_happens_next/) when working paired than when working solo. However, reality isn't ideal. There are companies that may still need to hire more engineers, especially if they have a traditional IT culture. This is because it is likely becauset the companies have a fair number of engineers in their current workforce who prefer not to pair. 
 
 ![Solo vs. Pair Programming](images/image8.jpg)
 
-On the surface, it appears that the volume of work is cut in half. Yet, underlying the question is an assumption that there's no difference in productivity between solo engineers and paired engineers. The assumption is demonstrably false. Solo engineers spend less time focused on a task than paired engineers. It's also easy to get distracted while soloing with apps such as Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts. They are much harder to check out while pairing. Your pair doesn't want to read your email, or answer your texts, or post a hilarious TikTok dance. And, you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. 
+On the surface, it appears that the volume of work is cut in half. Yet, underlying the question is an assumption that there's no difference in productivity between solo engineers and paired engineers. The assumption is demonstrably false. Solo engineers spend less time focused on a task than paired engineers. It's also easy to get distracted while soloing with apps such as Twitter, TikTok, Hacker News, email, Reddit, Slack, YouTube, texts, etc. They are much harder to check out while pairing. Your pair doesn't want to read your email, answer your texts, or post a hilarious TikTok dance. And, you probably wouldn't want them to anyways. Pairing is a state of hyper-productivity. 
 
-Hyper-productivity caused by pairing is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different and it doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
+Hyper-productivity is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different. It doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
 
 Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on Github.
 
-To achieve the level of effectiveness from pairing, everyone needs to value each other's perspectives, be willing to be vulnerable, and express what they do not know. Pairing can reveal intellectual insecurities in people. Not everyone is going to develop the empathy and relationship skills required to collaborate at this level. To be successful at pairing, let go of any ego, and understand that it's OK to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would prefer to leave the company than overcome their fears.
+To achieve the level of effectiveness from pairing, everyone needs to value one another's perspectives, be willing to be vulnerable, and express what they do not know. Pairing can reveal intellectual insecurities in people. Not everyone is going to develop the empathy and relationship skills required to collaborate at this level. To be successful at pairing, let go of your ego, and understand that it's OK to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would prefer to leave the company rather than overcome their fears.
 
 ## Q: Why Do Some Teams Struggle with Switching from Individual Code Ownership to Team Code Ownership?
 
-Some developers effortlessly make the transition to team code ownership. They immediately see the benefits of being able to modify any part of the code base and quickly shift from personal ownership (i.e., "I made this.") to collective ownership (i.e., "The team made this.").
+Some developers effortlessly make the transition to team code ownership. They immediately see the benefits of being able to modify any part of the code base and quickly shift from personal ownership, i.e., "I made this.", to collective ownership, i.e., "The team made this.".
 
 Yet, others struggle with team code ownership for several reasons:
 
-* Shifting psychological ownership may require a corresponding shift in your identity. Psychological ownership refers to "the feeling of possessiveness and of being psychologically tied to an object". Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, "What do I feel is mine?".
+* Shifting psychological ownership may require a corresponding shift in your identity. Psychological ownership refers to the feeling of possessiveness and of being psychologically tied to an object. Psychological ownership occurs when the object becomes part of the psychological owner's identity. Psychological ownership answers the question, "What do I believe is mine?".
 * Developers may struggle to transition to a caretaker mindset. For example, an engineer may struggle to describe the developer's relationship with the code on a very challenging project and settle on the caretaker metaphor, "Sometimes I feel like a caretaker to [the code base].". A caretaker cleans up messes and makes things better.
 * A developer may be distraught at seeing their work slowly removed from the app.
 * A developer may feel belittled when seeing their work changed or fixed without them.
@@ -76,17 +76,17 @@ Test Driven Development (TDD) is a crucial engineering practice. Review the arti
 
 A *user story*, or *story*, is the primary unit of currency in an Agile backlog. It is a narrative description of a single task or activity being performed by a user of a system. A user story represents the smallest piece of incremental value that you can deliver into the hands of a user. 
 
-Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions, beginning with "How big should a story be?". To know the answer, shorten the story. Does the shortened story still provide real value to the user? If you can make the story smaller and still deliver real value to the customer, then your story is too big.
+Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions, beginning with, "How big should a story be?". To know the answer, shorten the story. Does the shortened story still provide real value to the user? If you can make the story smaller and still deliver real value to the customer, then your story is too big.
 
-Conversely, "Is it possible for a story to be too small?". To answer the question, ask yourself: "If I complete this story, will it provide real value to our users?" If the answer is no, then your story is too small.
+Conversely, "Is it possible for a story to be too small?". To answer the question, ask yourself, "If I complete this story, will it provide real value to our users?" If the answer is no, then your story is too small.
 
 For example, suppose your story is about authentication. At first, the story includes all the functionality, including the ability to sign in, sign out, recover your password, change your password, and recover your username.
 
 Your team collaborates on how to make the story smaller and still deliver value to the user. Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones, including a "Sign In" story, a "Sign Out" story, a "Recover Password" story, a "Change Password" story and a "Recover Your Username" story. 
 
-However, the team goes too far in making smaller stories out of bigger ones. They come up with a story called "Sign In Form", and another story called "Sign In Form Signsin". The first story, "Sign In Form" is for a sign in form that includes a username field and a password field. Creating the two field form is the story. There is nothing in the story that reads that the form has to work. It only has to look like what is described in the first story. In the second story, "Sign In Form Signsin" your team has to make the sign in form work. 
+However, the team goes too far in making smaller stories out of bigger ones. They come up with a story called "Sign In Form", and another story called "Sign In Form Signsin". The first story, "Sign In Form" is for a sign in form that includes a username field and a password field. Creating the two field form is the story. There is nothing in the story that indicates that the form has to work. It only has to look like what is described in the first story. In the second story, "Sign In Form Signsin", your team has to make the sign in form work. 
 
-Your team collaborates, "Is the first story, "Sign In Form", going to provide real value to the users?" The answer is no. Delivering a sign in form to production that doesn't work is not going to help your users. If anything, it's likely to frustrate them, or put the product into an unreleasable state. Individually, the two stories are too small. Your team can fix this by combining the "Sign In Form" story and the "Sign In Form SignIn" story into one.
+Your team collaborates, "Is the first story, "Sign In Form", going to provide real value to users?" The answer is no! Delivering a sign in form to production that doesn't work is not going to help your users. If anything, it's likely to frustrate them, or put the product into an unreleasable state. Individually, the two stories are too small. Your team can fix this by combining "Sign In Form" and "Sign In Form SignIn" into one story.
 
 ## Q: Which Story Comes First?
 
@@ -96,13 +96,13 @@ At the beginning of a project, you may have a vision for a [minimum viable produ
 
 For example, you're building an e-commerce shopping site for a boutique clothing store. Your vision of the MVP gives people the ability to shop the store's online catalog, add multiple items to a shopping cart, pay with a credit card or using an online payment app, view past transactions, save credit cards, and apply discount codes.
 
-You map out a user's flow through the application, then decide that the first story is going to be: "User Can Sign In".
+You map out a user's flow through the application, then decide that the first story is going to be, "User Can Sign In".
 
-But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
+But, then you recall that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is no! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
 
-So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it to test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
+So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it to test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefer to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize accordingly.
 
-Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
+Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from the first one. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
 
 ## Q: Why Estimate In Points, Not Time?
 
@@ -110,9 +110,7 @@ It doesn't matter if the organization is Agile or [Waterfall](https://en.wikiped
 
 The mistake most often made by companies is the ongoing request for engineers to estimate software in chunks of time. For example, "How long will this feature take?", or "When will this feature be done?"
 
-You could answer the question by estimating how long you think something will take. Don't do it! There are decades of proof to indicate engineers are terrible when estimating in time.
-
-Engineers are very good at estimating chunks of work relative to each other. For example, this feature is harder than that feature. Teams can quickly estimate stories in an iteration by comparing them relative to each other (and relative to stories they've completed in the past). Line up the stories in an iteration, and sort them by levels of difficulty.
+You could answer the question by estimating how long you think something will take. Don't do it! There are decades of proof to indicate engineers are terrible when estimating in time. However, engineers are very good at estimating chunks of work relative to each other. For example, this feature is harder than that feature. Teams can quickly estimate stories in an iteration by comparing them relative to one another (and relative to stories they've completed in the past). Line up the stories in an iteration, and sort them by levels of difficulty.
 
 "Does sorting stories relative to each other help a team estimate when something is going to be done?" Yes, because of velocity. 
 
@@ -161,7 +159,7 @@ The combination of three XP practices make it possible for teams to always have 
 
 If the stories in your backlog conform to the [definition of stories in this FAQ](#stories), and your team only commits implementations of the stories once the product manager, designers, and engineers agree the implementation completes the story, then you'll never have half-implemented features in the build.
 
-A pair can run tests to determine if all the features in their copy of the code works correctly. On a large team, there are many pairs working in parallel. This results in the codebase simultaneously existing in multiple states where the tests might be passing on one pairing station, but failing on another. The team needs a single source of truth to point to in order to answer the question "Does it work?". If the CI build is green, it works. You can ship the software. Now the product manager has to decide if the team should ship the software.
+A pair can run tests to determine if all the features in their copy of the code works correctly. On a large team, there are many pairs working in parallel. This results in the codebase simultaneously existing in multiple states where the tests might be passing on one pairing station, but failing on another. The team needs a single source of truth to point to in order to answer the question, "Does it work?". If the CI build is Green, it worksNow, the product manager has to decide if the team should ship the software.
 
 Of course, there are all kinds of other benefits to CI. [To paraphrase Martin Fowler](https://www.martinfowler.com/articles/continuousIntegration.html), CI reduces risk by letting you know what works and what does not work at all times. It drastically raises awareness of bugs, allowing you to find and remove them quickly, and without fuss. As a result, projects that continuously integrate generally have fewer bugs. Of course, this is all predicated on the quality of your automated test suite.
 
@@ -191,7 +189,7 @@ It's true that every team needs a core group of engineers that understand the co
 
 "It is not uncommon for some team members to say, "Onboarding new team members slows everyone down!". This is not true. Rotations speed up a team's productivity. This is because the peer's fresh perspective allows them to immediately notice the team's "broken windows." They'll point out flaws in the codebase that have been slowing the team down. They'll fix the CI build. They'll raise a red flag about the team's unrealistic release process.
 
-If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't just complain, bugs offer solutions. Finally, don't assume you understand why thin. Ask questions!
+If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't complain. Bugs offer solutions. Finally, don't assume you understand why the problems exist. Ask questions!
 
 Conversely, if you're part of that core team that's been together for a while, and a peer is just rotating onto the team, set the example for soliciting feedback. Tell them to point out what's broken. Be a role model for receiving feedback, and acting on it.
 
@@ -201,7 +199,7 @@ Rotation eliminates the need for various kinds of organizational overhead:
 * The need for excessive handbooks/playbooks/onboarding materials is greatly reduced as knowledge silos are broken down.
 * Transferring of existing skills and the sharing of new technologies happens organically, rather than needing artificial efforts like required classes and workshops.
 * It strengthens the connection between teams as friends rotate to other projects, increasing the likeliness of cross-team knowledge sharing and reducing duplicated efforts.
-* Reduces the strain on any one relationship, understanding that no one is "trapped" on a project forever.
+* Reduces the strain on any one relationship, understanding that no one is *trapped* on a project forever.
 
 Pair programming helps lower risk in projects. Rotation is the real-life manifestation of that lowered risk, by having solution knowledge and context shared by the team rather than locked up in a few people, or worse, in a single person. The downside to a single person rotating onto another team is greatly lowered.
 
@@ -228,17 +226,17 @@ Before discussing how XP and Scrum are different, it's to understand how they ar
 * XP and Scrum teams regularly reflect on what is working, what is not working, and what a team can do to iterate on the process.
 
 The fundamental difference between Scrum and XP is that Scrum is based on project structure, whereas XP is based on delivery practices and project structure.
-- Scrum is a reaction to inefficient, poisonous projects, where teams are instructed how to do their jobs by inexperienced outsiders, who often have no real "skin in the game" regarding the outcomes. Scrum defines a set of rules that say "the delivery team decides _how they deliver_, while the business team decides _what is delivered_." Both groups are responsible for the outcomes. If you're not in either group, or are not impacted by the outcomes then you don't get a say. If you're a member of one group, you do not instruct the other group on how to do their job. Although, you can, and should collaborate.
+- Scrum is a reaction to inefficient, poisonous projects, where teams are instructed how to do their jobs by inexperienced outsiders, who often have no real *skin in the game* regarding the outcomes. Scrum defines a set of rules that say the delivery team decides _how they deliver_, while the business team decides _what is delivered_. Both groups are responsible for the outcomes. If you're not in either group, or are not impacted by the outcomes then you don't get a say. If you're a member of one group, you do not instruct the other group on how to do their job. Although, you can, and should collaborate.
 
-  That's Scrum, a protective "bubble" for projects to work within.
+  That's Scrum, a protective *bubble* for projects to work within.
 
 - Scrum teams practice sprint commits. At the outset of a sprint, the developers decide on a certain amount of work that they'll "commit" to completing in a sprint.[ SAFe](https://en.wikipedia.org/wiki/Scaled_agile_framework) has a [similar commitment model](https://www.scaledagileframework.com/pi-objectives/). There are pros and cons to this. There is a lot of positive energy and motivation that comes from a shared team goal like the sprint commit, and high-functioning Scrum teams do a lot to harness and leverage that positive energy. Furthermore, a high-functioning Scrum team always discusses renegotiating a sprint's scope during the sprint with the product manager, if they discover something to adjust mid-sprint.
 
-  Of course, not all Scrum teams are "high-functioning" (nor are all XP teams!). With a sprint commit, the product manager might tell the powers-that-be that a certain scope of work is **_definitely_** going to be done by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip, they might be under pressure to "get things done", which often ends in sacrificing code quality and taking on technical debt. It's also not uncommon in organizations that practice firm sprint commits to see engineers pad their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that engineers padded the estimate and can probably do a few more things.
+  Of course, not all Scrum teams are high-functioning (nor are all XP teams!). With a sprint commit, the product manager might tell the powers-that-be that a certain scope of work is **_definitely_** going to be done by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip, they might be under pressure to finish on time, which often ends in sacrificing code quality and taking on technical debt. It's also not uncommon in organizations that practice firm sprint commits to see engineers pad their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that the engineers padded their estimates and can probably do a few more things.
 
 - Iterations in Scrum are called sprints. The time-box for a sprint is one month or less, during which a done, usable, potentially releasable product increment is created by the end of the sprint.
 - Scrum doesn't prescribe to any specific engineering practices. Instead, Scrum gives a team complete freedom to use any engineering practices during a Sprint, and to change them from sprint to sprint, through continuous improvement (e.g., retrospectives).   
--  XP is also a reaction to inefficient projects and product delivery and has a "bubble" set up around the product teams and rules about who manages the work. The difference is XP came from software engineers who were frustrated with how poorly software was written and maintained, and how hard it was to change software in reaction to the needs of the business. Thus, XP suggested engineering practices within the project bubble, such as pair programming, test driven development, and refactoring.
+-  XP is also a reaction to inefficient projects and product delivery and has a bubble set up around the product teams and rules about who manages the work. The difference is XP came from software engineers who were frustrated with how poorly software was written and maintained, and how hard it was to change software in reaction to the needs of the business. Thus, XP suggested engineering practices within the project bubble, such as pair programming, test driven development, and refactoring.
 -  XP teams also vary their practices week to week through continuous improvement (e.g. Retrospectives... Sounds familiar, right?). However, there are some core practices that XP teams always apply, such as TDD and pair programming.
 - XP teams always have a done, usable, potentially releasable product for every single story. Even the single commits to the primary branch should result in a working, usable, releasable product. For an interesting perspective on sprints, read Ron Jeffries' article [Hills to Die On: Sprints](https://ronjeffries.com/articles/018-01ff/ds-hill-sprints/)
 - XP teams do not have sprints defined by Scrum and time-spans are referred to as iterations. At the start of a week, a team will [review what's currently in the backlog and icebox](/practices/ipm), estimate with points (not time), all stories that are worthy of estimation at that time, and prioritize the next most important things to work on. Throughout the week, the team will work on stories and deliver them to production. It's important to note that at any time, the team may adjust the prioritized list in the backlog, or slot in, estimate, and prioritize all new stories. This is because they believe that the best software is built through learning and they know that by **_embracing change_**, they can build better software. This means the team is always ready and willing to change priorities based on what they are learning as they put working software in the hands of users.
@@ -257,7 +255,7 @@ No! Deadlines aren't bad. They're great! A deadline is a chance for your process
 
 A lot of software development teams have had bad experiences with deadlines. They've been subjected to the dreaded [death march](https://en.wikipedia.org/wiki/Death_march_(project_management)). In other words, they've been given a fixed scope that they must complete by a certain date, and are already burned out working nights and weekends, potentially compromising the quality of their work, trying to meet the deadline.
 
-This problem is sometimes referred to as the [Iron Triangle](https://en.wikipedia.org/wiki/Project_management_triangle). On any team, you have three qualities you're trying to achieve: fast, inexpensive, and high quality. In other words, you want the team to deliver quality software as quickly as possible, for as little cost as possible. Unfortunately, you can't have all three qualities at once. You can only have **two of the three dimensions:**
+This problem is sometimes referred to as the [Iron Triangle](https://en.wikipedia.org/wiki/Project_management_triangle). On any team, you have three qualities you're trying to achieve: fast, inexpensive, and high quality. In other words, you want the team to deliver quality software as quickly as possible, for as little cost as possible. Unfortunately, you can't have all three qualities at once. You can only have **two of the three dimensions**.
 
 - You can get something **fast and inexpensive**, but the team will have to sacrifice quality to do it.
 - You can get something **fast with high quality**, but you will pay a lot of money for it. 
@@ -265,9 +263,9 @@ This problem is sometimes referred to as the [Iron Triangle](https://en.wikipedi
 
 That is why fixed scope and fixed time is so problematic, and the death march inevitable. And, the more the team sacrifices the quality of their work, the harder the work is to do. Though they might meet the deadline, the software will be of such low quality that maintaining it is going to be challenging.
 
-Of course, none of this is caused by the actual deadline. It's caused by Waterfall incentive structures, and how the client's organization measures success as "on time, and on budget". But, at what quality?
+Of course, none of this is caused by the actual deadline. It's caused by Waterfall incentive structures, and how the client's organization measures success as on time, and on budget. But, what about the quality?
 
-There is another way to measure success in software development. It doesn't matter if you build something "on time and on budget" if the software isn't valuable to the users or the business in the first place.
+There is another way to measure success in software development. It doesn't matter if you build something on time and on budget if the software isn't valuable to the users or the business in the first place.
 
 So, when you are working towards a deadline, do not focus on how you are going to build all the features on time. Instead, think about what the most valuable things to build are, and have them ready to go by the deadline.
 
@@ -287,7 +285,7 @@ Read the white paper, [How to Scale Agile Software Development with Product Team
 
 #### Rule #1: Scale Slowly
 
-Consider the following "Dont's:
+Consider the following *Dont's*.
 
 - Don't go from a team of 20 to a team of 200 overnight. 
 - Don't jump from one team in one location to 10 teams in 10 locations. 
@@ -298,7 +296,7 @@ Consider the following "Dont's:
 
 #### Rule #2: Distribute Teams Based on Architectural Boundaries
 
-This rule is sometimes referred to as the "inverse Conway maneuver" in reference to [Mel Conway's "Law"](https://en.wikipedia.org/wiki/Conway%27s_law):
+This rule is sometimes referred to as the *inverse Conway maneuver* in reference to [Mel Conway's "Law"](https://en.wikipedia.org/wiki/Conway%27s_law):
 
 > Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations".
 
@@ -306,7 +304,7 @@ In other words, if you're not careful, your architecture will reflect the struct
 
 Consider the Tanzu Application Service (TAS). Like many well-designed systems, TAS has a plugin architecture, a set of well-defined APIs and extension points. You can plug in Buildpacks, service brokers, logging utilities, performance monitoring systems, and more. But, underneath the hood TAS also has a core distributed system, built by distributed teams that must collaborate closely.
 
-Always keep closely collaborating teams in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well "in one place." The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
+Always keep closely collaborating teams in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well *in one place*. The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
 
 "That's all well and good for the new products that the team scales," you might think, "but, what about all the existing teams and products? When the team wants to apply Lean, UCD, and Agile engineering practices to them to optimize the existing business, how does the team do it?"
 
