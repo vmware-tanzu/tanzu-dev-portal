@@ -19,10 +19,10 @@ ENV MUFFET_URL="https://github.com/raviqqe/muffet/releases/download/v${MUFFET_VE
 
 RUN wget "${HUGO_URL}" && \
     tar -zxvf "${HUGO_NAME}.tar.gz" && \
-    mv ./hugo /go/bin/ && \
+    mv ./hugo /usr/local/bin/ && \
     wget "${MUFFET_URL}" && \
     tar -zxvf "${MUFFET_NAME}.tar.gz" && \
-    mv muffet /go/bin/
+    mv muffet /usr/local/bin/
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
