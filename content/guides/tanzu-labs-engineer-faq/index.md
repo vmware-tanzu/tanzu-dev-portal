@@ -23,7 +23,7 @@ This FAQ explains the "why's" behind many of Tanzu Labs engineering practices, a
 There is an overview of Pair Programming in [**Fundamentals of Modern Application Development learning path**](/learningpaths/application-development/pair-programming/). The following is a deeper dive into the topic.
 {{% /callout %}}
 
-How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before your team is unable to function? Most companies that come to Tanzuy Labs have teams with a "bus count" or "lottery count" of 1.
+How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before your team is unable to function? Most companies that come to Tanzu Labs have teams with a "bus count" or "lottery count" of 1.
 
 ![The Bus Count](images/image9.jpg)
 
@@ -70,7 +70,7 @@ Test Driven Development (TDD) is a crucial engineering practice. Review the arti
 
 ## Q: Why Refactor? {id="tdd"}
 
-[Refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is a crucial engeineering practice. In [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd), Matthew Parker elaborates why you shouldn't be afraid of refactoring, and how refactoring on how TDD and refactoring are related.
+[Refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is a crucial engineering practice. In [**Why TDD?**](https://tanzu.vmware.com/content/blog/why-tdd), Matthew Parker elaborates why you shouldn't be afraid of refactoring, and how refactoring on how TDD and refactoring are related.
 
 ## Q: What is a User Story?{id=stories}
 
@@ -80,13 +80,28 @@ Stories focus all software implementation work on delivering real value to real 
 
 Conversely, "Is it possible for a story to be too small?". To answer the question, ask yourself: "If I complete this story, will it provide real value to our users?" If the answer is no, then your story is too small.
 
-For example, suppose your story is about authentication. At first, the story includes all the functionality, including the ability to sign in, sign out, recover your password, change your password, and recover your username.
+For example, suppose your story is about authentication: 
+- _"User can sign in, **_and_** sign out, **_and_** recover their password, **_and_** change their password, **_and_** recover their username"_
 
-Your team collaborates, "How do we make this story smaller and still deliver value to the user?". Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones, including a "Sign In" story, a "Sign Out" story, a "Recover Password" story, a "Change Password" story and a "Recover Your Username" story. 
+Your team collaborates, "How do we make this story smaller and still deliver value to the user?". Together, everyone decides to make smaller stories about authentication. So, now instead of having one large story, you have several smaller ones, including the following: 
+- _"User can sign in"_ 
+- _"User can sign out"_ 
+- _"User can recover their password"_ 
+- _"User can change their password"_ 
+- _"User can recover their username"_
 
-However, the team goes too far in making smaller stories out of bigger ones. They come up with a story called "Sign In Form", and another story called "Sign In Form Signsin". The first story, "Sign In Form" is for a sign in form that includes a username field and a password field. Creating the two field form is the story. There is nothing in the story that reads that the form has to work. It only has to look like what is described in the first story. In the second story, "Sign In Form Signsin" your team has to make the sign in form work. 
+{{% callout %}}
+**Tip:** If a user story contains an **_"and"_**, try splitting the story at that point and evaluate whether the two (or more) stories provide value on their own.
+{{% /callout %}}
 
-Your team collaborates, "If we complete the first story, "Sign In Form", is it going to provide real value to our users?" The answer is no. Delivering a sign in form to production that doesn't work does is not going to help your users. If anything, it's more likely to frustrate them, or put the product into an unreleasable state. Individually, the two stories are too small. Your team can fix this by combining the "Sign In Form" story and the "Sign In Form SignIn" story into one.
+However, the team goes too far in making smaller stories out of bigger ones. They decide to break down _"User can sign in"_ into the following tiny stories: 
+- _"User can view the Username field on the Sign In form"_
+- _"User can view the Password field on the Sign In form"_
+- _"User can view the 'Sign In' button on the Sign In form"_
+- _"User can view the entire Sign In form"_
+- _"User can sign-in using the Sign In form"_
+
+Your team collaborates, "If we complete the two or three stories, is the Sign In form going to provide real value to our users?" The answer is no. Delivering a sign-in form to production that doesn't work does is not going to help your users. If anything, it's more likely to frustrate them, or put the product into an unreleasable state. In this case, _"User can sign in"_ was an appropriately-sized story. 
 
 ## Q: Which Story Comes First?
 
@@ -191,7 +206,7 @@ It's true that every team needs a core group of engineers that understand the co
 
 "But," we often hear, "onboarding new team members slows us down!". Actually, rotations speed up a team's productivity. That's because the peer's fresh perspective allows them to immediately notice the team's "broken windows." They'll point out flaws in the codebase that have been slowing the team down. They'll fix the CI build. They'll raise a red flag about the team's unrealistic release process.
 
-If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't just complain, bugt offer solutions. Finally, don't assume you understand why things are the way they are. Ask questions!
+If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't just complain, but offer solutions. Finally, don't assume you understand why things are the way they are. Ask questions!
 
 Conversely, if you're part of that core team that's been together for a while, and a peer is just rotating onto the team, set the example for soliciting feedback. Tell them to point out what's broken. Be a role model for receiving feedback, and acting on it.
 
@@ -271,7 +286,7 @@ There is another way to measure success in software development. It doesn't matt
 
 So, when you are working towards a deadline, do not focus on "How can we build _all of these features_ by this date?". Instead, consider, "What are the _most valuable things_ to build by this date?"
 
-With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant reprioritization based on learning. It really the only way to ensure that they have created something valuable by the deadline.
+With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning. Really, the only way to ensure that they have created something valuable by the deadline.
 
 ## Q: How Do You Scale Practices into Large, Traditional Enterprises?
 {{% callout %}}
@@ -306,7 +321,7 @@ In other words, if you're not careful, your architecture will reflect the struct
 
 Consider the Tanzu Application Service (TAS). Like many well-designed systems, TAS has a plugin architecture, a set of well-defined APIs and extension points. You can plug in Buildpacks, service brokers, logging utilities, performance monitoring systems, and more. But, underneath the hood TAS also has a core distributed system, built by distributed teams that must collaborate closely.
 
-Alwas keep closely collaborating teams like these in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well "in one place." The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
+Always keep closely collaborating teams like these in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well "in one place." The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
 
 "That's all well and good for the new products that the team scales," you might think, "but, what about all the existing teams and products? When the team wants to apply Lean, UCD, and Agile engineering practices to them to optimize the existing business, how does the team do it?"
 
