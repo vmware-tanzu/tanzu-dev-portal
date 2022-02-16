@@ -1,21 +1,20 @@
 ---
 date: '2022-02-15'
-lastmod: '2022-02-15'
 tags:
 - Kubernetes
 - Debugging Kubernetes
 - DISO
+- "Dump In, Sort Out brainstorming"
 team:
 - David Wu
 - Carlos Nunez
 title: Debugging the Kubernetes Platform
 level1: Managing and Operating Kubernetes
-description: Learn debugging techniques to help you debug common Kubernetes pitfalls
+description: Learn debugging techniques to help you effectively and efficiently debug issues on a Kubernetes platform
 parent: Debugging Kubernetes
 linkTitle: Debugging the Kubernetes Platform
 metaTitle: Debugging the Kubernetes Platform
 ---
-
 
 ## Introduction
 One of the most commonly needed and important skills in the world of Kubernetes
@@ -154,67 +153,67 @@ the key feature here is that an ephemeral container can be attached to pod that 
 it's process namespace](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/). This means 
 that it is possible to see a target debug pod container's processes and it's filesystem. There are a number of variations of the `kubectl debug` command and its usage varies depending on what is required for debugging. One additional note to consider is that these debug containers will remain running after exit and needs to be manually deleted, for example, `kubectl delete pod <name-of-debug-pod>`.
 
-##### __The target container is running but does not have a shell__
+- __The target container is running but does not have a shell__:
 
-A no shell container means that it is not possible `kubectl exec` into a container using a shell command, such as `sh` and `bash`.
-For this scenario, the follow command can be run:
+    A no shell container means that it is not possible `kubectl exec` into a container using a shell command, such as `sh` and `bash`.
+    For this scenario, the follow command can be run:
 
-```sh
-kubectl debug <name-of-existing-pod> -it --image=nicolaka/netshoot --target=<name-of-container-in-existing-pod>
-```
+    ```sh
+    kubectl debug <name-of-existing-pod> -it --image=nicolaka/netshoot --target=<name-of-container-in-existing-pod>
+    ```
 
-This will utilize the `netshoot` image, with all the network debugging utilities 
-as a separate ephemeral container running in the existing pod named `<name-of-existing-pod>` 
-and opens an interactive command prompt through using `-it`. `--target` is a means of 
-targeting the existing process namespace of the other existing running container.  This
-is usually the same name as the pod itself. 
+    This will utilize the `netshoot` image, with all the network debugging utilities 
+    as a separate ephemeral container running in the existing pod named `<name-of-existing-pod>` 
+    and opens an interactive command prompt through using `-it`. `--target` is a means of 
+    targeting the existing process namespace of the other existing running container.  This
+    is usually the same name as the pod itself. 
 
-##### __The target container has crashed or completed and/or does not have a shell__
+- __The target container has crashed or completed and/or does not have a shell__:
 
-This scenario introduces the problem where a container has crashed or completed. This presents a 
-problem with debugging because it is not possible to `kubectl exec`, since the container no longer
-exists. This can be addressed by making a copy of that target pod attached with an ephemeral container 
-to inspect its process and filesystem. The following command can be used for this:
+    This scenario introduces the problem where a container has crashed or completed. This presents a 
+    problem with debugging because it is not possible to `kubectl exec`, since the container no longer
+    exists. This can be addressed by making a copy of that target pod attached with an ephemeral container 
+    to inspect its process and filesystem. The following command can be used for this:
 
-```sh
-kubectl debug <name-of-existing-pod> -it --image=nicolaka/netshoot --share-processes --copy-to==<new-name-of-existing-pod>
-```
+    ```sh
+    kubectl debug <name-of-existing-pod> -it --image=nicolaka/netshoot --share-processes --copy-to==<new-name-of-existing-pod>
+    ```
 
-This will create a debug container using `netshoot`, which shares the process namespace 
-in a new pod, named `<new-name-of-existing-pod>` as a copy of  `<name-of-existing-pod>`.
+    This will create a debug container using `netshoot`, which shares the process namespace 
+    in a new pod, named `<new-name-of-existing-pod>` as a copy of  `<name-of-existing-pod>`.
 
-##### __The target container has crashed or completed and the container start command needs to be changed__
+- __The target container has crashed or completed and the container start command needs to be changed__:
 
-This scenario differs from the previous with having the startup command changed 
-and there is no additional debug ephemeral container but instead a copy of the 
-target pod.  This is particular useful for situations where a target container has
-crashed or ends immediately on startup and the goal is to interactively 
-tryout the process or review it's filesystem. In order to do this, the startup command 
-would require a change such that it does not end the container or that the command 
-helps provide more information, e.g. changing the debug verbosity parameter to an 
-application, issue some long sleep command or run as a shell.  We can achieve 
-this with the following command:
+    This scenario differs from the previous with having the startup command changed 
+    and there is no additional debug ephemeral container but instead a copy of the 
+    target pod.  This is particular useful for situations where a target container has
+    crashed or ends immediately on startup and the goal is to interactively 
+    tryout the process or review it's filesystem. In order to do this, the startup command 
+    would require a change such that it does not end the container or that the command 
+    helps provide more information, e.g. changing the debug verbosity parameter to an 
+    application, issue some long sleep command or run as a shell.  We can achieve 
+    this with the following command:
 
-```sh
-kubectl debug <name-of-existing-pod> -it --copy-to=<new-name-of-existing-pod> --container=<name-of-container-in-pod>  -- sh
-```
+    ```sh
+    kubectl debug <name-of-existing-pod> -it --copy-to=<new-name-of-existing-pod> --container=<name-of-container-in-pod>  -- sh
+    ```
 
-Take note of the command specifier `-- sh`. The example here changes the start 
-command to call the shell on the copied container. This may need to be replaced 
-with an appropriate start command that would enable debugging of the pod.
+    Take note of the command specifier `-- sh`. The example here changes the start 
+    command to call the shell on the copied container. This may need to be replaced 
+    with an appropriate start command that would enable debugging of the pod.
 
-##### __The target container needs to utilize a different container image__
+- __The target container needs to utilize a different container image__:
 
-This scenario creates a copy of a target container having a different container image. This is 
-useful in situations where a production container may not contain all the utilities that allow 
-debugging or does not have debug level outputs. This again makes a copy of the target pod 
-and is run with the follow command:
+    This scenario creates a copy of a target container having a different container image. This is 
+    useful in situations where a production container may not contain all the utilities that allow 
+    debugging or does not have debug level outputs. This again makes a copy of the target pod 
+    and is run with the follow command:
 
-```sh
-kubectl debug <name-of-existing-pod> --copy-to=<new-name-of-existing-pod> --set-image=*=nicolaka/netshoot
-```
+    ```sh
+    kubectl debug <name-of-existing-pod> --copy-to=<new-name-of-existing-pod> --set-image=*=nicolaka/netshoot
+    ```
 
-The one difference here is the parameter `--set-image=*=nicolaka/netshoot`, which works in the same fashion as `kubectl set image`, where it sets all existing container images, specified by `*`, with the new image `nicolaka/netshoot`.
+    The one difference here is the parameter `--set-image=*=nicolaka/netshoot`, which works in the same fashion as `kubectl set image`, where it sets all existing container images, specified by `*`, with the new image `nicolaka/netshoot`.
 
 ### Accessing and debugging nodes
 
@@ -264,68 +263,68 @@ Described previously was where to find information on a node needed in order to
 debug an issue on the node.  For readers unfamiliar with how to access nodes, 
 this sub-section will describe three methods of how to get on a node.
 
-#### __Using SSH__
+1) __Using SSH__:
 
-Generally, SSH access is, in best practice, performed via SSH keys.
-Access to nodes via SSH keys is performed via the command, 
+    Generally, SSH access is, in best practice, performed via SSH keys.
+    Access to nodes via SSH keys is performed via the command, 
 
-```sh
-ssh -i <certificate.pem> <username>@<ip/fqdn of node>
-```
+    ```sh
+    ssh -i <certificate.pem> <username>@<ip/fqdn of node>
+    ```
 
-If only password access is setup, one can SSH with command
+    If only password access is setup, one can SSH with command
 
-```sh
-ssh <username>@<ip/fqdn of node>` 
-```
+    ```sh
+    ssh <username>@<ip/fqdn of node>
+    ```
 
-and enter the password thereafter, when prompted. 
+    and enter the password thereafter, when prompted. 
 
-#### __Accessing the nodes via `kubectl exec`__
+2) __Accessing the nodes via `kubectl exec`__:
 
-If the RBAC permits and privileged container permissions, it is possible to mount 
-a node's log as a hostpath into a pod and inspect those logs after 
-`kubectl exec`'ing into a container.  The following yaml will create a 
-debugging pod to help with this:
+    If the RBAC permits and privileged container permissions, it is possible to mount 
+    a node's log as a hostpath into a pod and inspect those logs after 
+    `kubectl exec`'ing into a container.  The following yaml will create a 
+    debugging pod to help with this:
 
-```sh
-kubectl apply -f - <<-EOF
-apiVersion: v1
-kind: Deployment
-metadata:
-  name: debugging
-  labels:
-    app: debugging
-spec:
-  template:
+    ```sh
+    kubectl apply -f - <<-EOF
+    apiVersion: v1
+    kind: Deployment
     metadata:
+      name: debugging
       labels:
         app: debugging
     spec:
-      containers:
-      - image: nicolaka/netshoot
-        volumeMounts:
-        - mountPath: /node-logs
-          name: node-logs
-      volumes:
-      - name: node-logs
-        hostPath:
-          directory: /var/logs
-          type: Directory
-EOF
-```
+      template:
+        metadata:
+          labels:
+            app: debugging
+        spec:
+          containers:
+          - image: nicolaka/netshoot
+            volumeMounts:
+            - mountPath: /node-logs
+              name: node-logs
+          volumes:
+          - name: node-logs
+            hostPath:
+              directory: /var/logs
+              type: Directory
+    EOF
+    ```
 
-#### __Debugging nodes using ephemeral debug containers__
+3) __Debugging nodes using ephemeral debug containers__:
 
-In addition to the other uses cases of debug containers, it is also 
-possible to create an ephemeral privileged container on a target node of interest 
-with it's filesystem mounted at `/host`. Using ephemeral debug containers opens 
-access to the node's host filesystem, it's network and process namespace. This is 
-run with an interactive shell, with the following command:
+    In addition to the other uses cases of debug containers, it is also 
+    possible to create an ephemeral privileged container on a target node of interest 
+    with it's filesystem mounted at `/host`. Using ephemeral debug containers opens 
+    access to the node's host filesystem, it's network and process namespace. This is 
+    run with an interactive shell, with the following command:
 
-```sh
-kubectl debug node/<name-of-node> -it --image=nicolaka/netshoot
-```
+    ```sh
+    kubectl debug node/<name-of-node> -it --image=nicolaka/netshoot
+    ```
 
 ## Section 2 - A heuristic approach
 
@@ -395,7 +394,7 @@ system that you are troubleshooting from:
     You can also test routing by using `traceroute [IP_ADDRESS]` (`tracert` on
 Windows) to see which gateway serves the initial hop. This uses ICMP ECHO by
 default; consult the `man` page for your version of `traceroute` to find options
-that enable TCP- or UDP-based traceroute.
+that enable TCP- or UDP-based `traceroute`.
 
 
 3. **Firewall** - Generally there are firewall rules preventing access to resources. 
@@ -520,7 +519,7 @@ previously in Section 2, can be assigned as a hypotheses.  Having this picture
 on hand, we can prioritize where we wish to perform our tests, usually starting 
 with components that are closely related to where our issue first originated. 
 
-### Group based brainstorming - DISO - "Dump In, Sink Out"
+### Group based brainstorming - Dump In, Sink Out
 
 In the content above we looked at forming contexts of a system and hypothesizing 
 where issues maybe originating from. Resolution of most problems, a single person
@@ -530,7 +529,7 @@ This is because experience and different knowledge/perspectives to a problem
 can be gathered and used to form additional hypotheses to tests. However, how does 
 one effectively conduct this?  The key to this is using brainstorming techniques, 
 such as those discussed [here](https://www.mindtools.com/brainstm.html).  This section
-introduces the "Dump In, Sink Out" approach, that was utilized and devised
+introduces the "Dump In, Sink Out" (DISO) approach, that was utilized and devised
 by S. Wittenkamp and D. Wu for the context of a problem in a very large complex 
 software system with a team of developers. This idea is furthered in this article 
 by incorporating the concept of the context system diagram.
@@ -548,7 +547,7 @@ The steps to conducting DISO are as follows:
 1) **Setup**: Before starting and the having the session, a whiteboard should be 
 setup as follows:
 
-![](images/debugging-kubernetes-dands-setup.png)
+![Setting up DISO](images/debugging-kubernetes-dands-setup.png)
 
 
 2) **Introduction**: All participants are introduced, in a short statement to 
@@ -557,7 +556,7 @@ additional debug information that has been obtained. The goal of the exercise
 should be defined. Once introduced, show a drawing of the system and explain 
 what it represents. 
 
-![](images/debugging-kubernetes-dands-introduction.png)
+![Introducing the problem and goal in DISO](images/debugging-kubernetes-dands-introduction.png)
 
 3) **Hypothesize**: This is the dump in phase. All participants should be 
 provided with sticky notes and markers. Participants asked to write down each
@@ -567,27 +566,27 @@ and in a limited time, for example, 10 mins.  All participants should be encoura
 write down any ideas that they might come up with. There are no 'bad ideas' and 
 there should be no concern with duplicating ideas independent of other participants.
 
-![](images/debugging-kubernetes-dands-hypothesis.png)
+![The Dump In phase](images/debugging-kubernetes-dands-hypothesis.png)
 
 4) **Grouping**: Have a facilitator go through each sticky note
 and asked the participant who wrote it to explain the idea and the reason. Move
 the sticky note into the `Grouping & Priority` area.  Ideas that overlap 
 should be grouped together. 
 
-![](images/debugging-kubernetes-dands-group.png)
+![Grouping the sticky notes](images/debugging-kubernetes-dands-group.png)
 
 5) **Prioritization**: A facilitator should now look at prioritizing the stick 
 notes (or groups of sticky notes), as to which ones are closer to the problem. 
 Order these notes from most likely, at the top, to least likely, at the bottom.
 
-![](images/debugging-kubernetes-dands-prioritize.png)
+![Prioritizing the issues to test](images/debugging-kubernetes-dands-prioritize.png)
 
 6) **Testing**: This is the sink out phase.  Each participant, preferably in pairs, 
 should each take the prioritize groups of sticky notes, from the top
 of the list and test each hypothesis and move it to the `Tested` area and 
 the result. Be sure to document testing methodology. 
 
-![](images/debugging-kubernetes-dands-testing.png)
+![The Sink Out phase](images/debugging-kubernetes-dands-testing.png)
 
 Eventually, the above tests should converge to an answer to where or what the 
 cause of the problem is.  If there is still no answer, consider what other 
