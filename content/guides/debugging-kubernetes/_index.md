@@ -27,16 +27,16 @@ first effectively.  It is assumed that the reader is comfortable with Linux,
 is familiar with running `kubectl` commands and understands the deployment 
 lifecycle of applications on Kubernetes. 
 
-We'll kick off with [Section 1](#section-1---the-general-kubernetes-debugging-workflow-and-techniques) 
+[Section 1](#section-1---the-general-kubernetes-debugging-workflow-and-techniques) kicks off
 on a general workflow and techniques of Kubernetes debugging. This will build into [Section 2](#section-2---a-heuristic-approach) 
 where the focus is on using a heuristic approach, where given some limited initial 
-set of information of the problem, we can hypothesize where a problem lies based 
-on a set of class of issues that appear most in practice and what we could do to 
-validate whether an issue lies within these classes. Finally, in [Section 3](#section-3---refining-heuristics-with-context-test-debugging) 
-we refine what we learnt from Section 2, by taking a step back to look through the lens 
-of the problem scope of the system and assign this, the heuristic classes and prioritize 
-where to run validating tests. We'll also introduce a brainstorming approach for
-group based problem solving.
+set of information of the problem, one can hypothesize where a problem lies based 
+on a set of class of issues that appear most in practice and what one could do to 
+validate whether an issue lies within these classes. Finally, [Section 3](#section-3---refining-heuristics-with-context-test-debugging) 
+refines what was learnt in Section 2 by taking a step back to look through the lens 
+of the problem scope of the system and assign the heuristic classes and prioritize 
+where to run validating tests. This section also introduces a brainstorming approach for
+group based problem solver for much more larger and complex problems.
 
 ## Section 1 - The general Kubernetes debugging workflow and techniques
 The general workflow is to first dive into the events, learn about the pod state and get into the logs. 
@@ -88,7 +88,7 @@ on how to do this are discussed in ["Accessing and debugging nodes"](#accessing-
 4. If the cluster is still accessible and existing logs pinpoints to another system issue,
 it is possible to access the pod container to perform tests such as validating the 
 state of a running process, it's configuration or to check a container's network 
-connectivity.  We'll visit this in detail in ["Accessing containers"](#accessing-containers).
+connectivity. This is visited in detail in ["Accessing containers"](#accessing-containers).
 
 Keep in mind the above is a good general workflow to start debugging. The 
 documentation on [Kubernetes Monitoring, Logging and Debugging](https://kubernetes.io/docs/tasks/debug-application-cluster/) 
@@ -116,7 +116,7 @@ a GUI.
 Do note that sometimes there is no accessible shell.  One other method is to start 
 a pod with a container having all the network debugging tools. 
 The [netshoot](https://github.com/nicolaka/netshoot) container image has a 
-number of tools that will make it easy to debug networking issues, we can 
+number of tools that will make it easy to debug networking issues, one can 
 instantiate a netshoot container and exec into it to perform tests as follows,
 
 ```sh
@@ -126,22 +126,25 @@ kubectl exec -it -n netshoot "--" sh -c "clear; (bash || ash || sh)"
 
 However, note that this is a new pod and itself would not have access to a target
 pod's filesystem.  This approach is useful for debugging aspects such as
-network connectivity. We'll dive deeper into these aspects in [Section 2](#section-2---a-heuristic-approach).
+network connectivity. A deep dive of these aspects as classes is explored 
+in [Section 2](#section-2---a-heuristic-approach).
 
 #### __Using ephemeral debug containers__
 
 As realized in the previous section, using `kubectl exec` may be insufficient 
 due to the target container having no shell or that the container has already 
-crashed and is inaccessible.  We could overcome this using a different image 
-deployed via `kubectl run`, however, this would be a different pod that is not sharing the 
-process namespace of the pod we wish to debug, meaning we cannot access the 
-process details or its filesystem. This limitation can be alleviated using debug ephemeral containers.
+crashed and is inaccessible.  One could overcome this using a different image 
+deployed via `kubectl run`, however, this would be a different pod that is not 
+sharing the process namespace of the pod of interest for debugging, meaning that 
+one cannot access the process details or its filesystem in a different pod. This 
+limitation can be alleviated using debug ephemeral containers.
 
-Introduced as an alpha in Kubernetes 1.16 and currently as a [beta in Kubernetes 1.23](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#ephemeralcontainer-v1-core), ephemeral containers are helpful for troubleshooting issues. 
-By default, the `EphemeralContainer` feature-gate [is enabled](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/) as a beta in Kubernetes 1.23. Otherwise, the feature-gate will need to be enabled first before it can be used.
-The documentation for [debug containers](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/#ephemeral-container),
-demonstrate with examples of how to use `debug containers` but for brevity and completeness sake, this is included below together
-with content aligning to this article.
+Introduced as an alpha in Kubernetes 1.16 and currently as a [beta in Kubernetes 1.23](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#ephemeralcontainer-v1-core), ephemeral containers are helpful for troubleshooting 
+issues. By default, the `EphemeralContainer` feature-gate [is enabled](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/) as a beta in Kubernetes 1.23. Otherwise, the feature-gate will need to be enabled first before 
+it can be used. The documentation for [debug containers](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/#ephemeral-container),
+demonstrate with examples of how to use `debug containers` but for brevity and 
+completeness sake, this is included below together with content aligning to this 
+article.
 
 Ephemeral containers are similar to regular containers, except that they are 
 limited in functionality. For example, having no restart capability, no ports, 
@@ -149,9 +152,12 @@ no scheduling guarantees and no startup/liveness probes. A list of its limitatio
 is documented [here](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/#what-is-an-ephemeral-container). 
 
 Compared to what was previously done with `netshoot` and `kubectl exec`, 
-the key feature here is that an ephemeral container can be attached to pod that we are debugging, the target pod, by [sharing
-it's process namespace](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/). This means 
-that it is possible to see a target debug pod container's processes and it's filesystem. There are a number of variations of the `kubectl debug` command and its usage varies depending on what is required for debugging. One additional note to consider is that these debug containers will remain running after exit and needs to be manually deleted, for example, `kubectl delete pod <name-of-debug-pod>`.
+the key feature here is that an ephemeral container can be attached to a pod that 
+one wishes to debug, that is, the target pod, by [sharing it's process namespace](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/). This means that it is possible to see a target debug pod container's processes and 
+it's filesystem. There are a number of variations of the `kubectl debug` command 
+and its usage varies depending on what is required for debugging. One additional 
+note to consider is that these debug containers will remain running after exit 
+and needs to be manually deleted, for example, `kubectl delete pod <name-of-debug-pod>`.
 
 - __The target container is running but does not have a shell__:
 
@@ -191,7 +197,7 @@ that it is possible to see a target debug pod container's processes and it's fil
     tryout the process or review it's filesystem. In order to do this, the startup command 
     would require a change such that it does not end the container or that the command 
     helps provide more information, e.g. changing the debug verbosity parameter to an 
-    application, issue some long sleep command or run as a shell.  We can achieve 
+    application, issue some long sleep command or run as a shell.  One can achieve 
     this with the following command:
 
     ```sh
@@ -340,8 +346,8 @@ However, if no resolution could be found, it is generally accepted from field
 experience that the top problems encountered can be usually classed as the usual suspects
 of DNS, Routing/Proxy, Firewalls, Certificates, Configuration and Bugs. With this knowledge,
 one can infer where to look first based on the symptoms and information gleaned from
-the previous section. We'll go into detail for each of these classes and describe 
-popular tools that will help with debugging tests.
+the previous section. The detail for each of these classes and popular tools that 
+will help with debugging tests, are described below:
 
 1. **DNS** - DNS resolves hostname to IP addresses. Usual issues are 
 when an application is unable to reach the DNS server or the DNS server 
@@ -504,7 +510,7 @@ determination and curiosity of wanting to know it with an open mind.  Once a pic
 of the system is available, the focus would be on identifying what parts of the system
 are in context to the problem, for example, components that are closely related/connected to
 where the issue is first seen. Once the context of the system is identified, 
-we can start hypothesizing issues and prioritizing what issues and tests to perform.
+one can start hypothesizing issues and prioritizing what issues and tests to perform.
 Note that it is not necessary to hypothesize within the context of the system but
 it does help limit the amount of hypotheses and test that need to be performed to
 areas that are likely to be the source of an issue. 
@@ -514,14 +520,14 @@ areas that are likely to be the source of an issue.
 From the example diagram above, it can be seen there are number of places where 
 an issue may occur. Having a diagram with its data flows on hand, allows hypotheses 
 and prioritization of where issues may lie and perform tests at each point to see 
-if the hypothesis holds. It is here that the classes of problems we described 
+if the hypothesis holds. It is here that the classes of problems described 
 previously in Section 2, can be assigned as a hypotheses.  Having this picture 
-on hand, we can prioritize where we wish to perform our tests, usually starting 
+on hand, one can prioritize where to perform our tests, usually starting 
 with components that are closely related to where our issue first originated. 
 
 ### Group based brainstorming - Dump In, Sink Out
 
-In the content above we looked at forming contexts of a system and hypothesizing 
+The content above looked at forming contexts of a system and hypothesizing 
 where issues maybe originating from. Resolution of most problems, a single person
 or a pair is sufficient. However, for much larger scale, complex and unknown 
 systems - a team of people are best utilized for identifying and solving complex problems. 
@@ -603,14 +609,12 @@ this methodical approach will help form good consistent habits and that will hel
 foundational aspect to debugging on Kubernetes, with the key factor of
 efficiently and effectively finding and understanding a problem first before solutioning. 
 
-We started off with a general debugging workflow and techniques, which gives us 
+Section 1 started off with a general debugging workflow and techniques, which gives us 
 the ability to do the primary and basic debugging on Kubernetes. In the next 
-section, we visited a heuristic classes approach gleaned from field experience 
-and what tools and tests are available to use to test whether an issue falls 
-into a class. In the final section, we combine heuristic classes and look at the 
-problem from the perspective of a big picture, where we assign these classes to 
-our big picture to help us hypothesis and prioritize where issues may lie.  Finally, 
-we introduced the "Dump In, Sink Out" method for a group based brainstorming 
-problem solver.
-
-
+section, heuristic classes were introduced, which are classes of known problems 
+developed through field experience. These class showed what tools and tests are 
+available to determine if a problem belongs to a class. In section 3, heuristic classes were 
+utilized and looked at the problem from the perspective of a big picture. Classes 
+are subsequently applied to our big picture to help us hypothesis and prioritize 
+where issues may lie.  Finally, the "Dump In, Sink Out" (DISO) method was introduced 
+for group  based brainstorming to solve large complex problems. 
