@@ -13,9 +13,9 @@ team:
 - Matt Parker
 - VMware Tanzu Labs
 ---
-VMware Tanzu Labs teaches clients, partners, and peers [XP](https://en.wikipedia.org/wiki/Extreme_programming), [Lean](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK), and [User Centered Design](https://tanzu.vmware.com/campaigns/design) (UCD) principles and practices for product and application development. We are constantly asked about our practices. 
+VMware Tanzu Labs teaches clients, partners, and peers [XP](https://en.wikipedia.org/wiki/Extreme_programming), [Lean](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK), and [User Centered Design](https://tanzu.vmware.com/campaigns/design) (UCD) principles and practices for product and application development. 
 
-This FAQ explains the "why's" behind many of Tanzu Labs engineering practices, and includes examples of the real problem the team is attempting to solve. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
+This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, and includes examples of real problems the team worked together to solve. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
 
 ## Q: Why Pair Programming?
 
@@ -23,7 +23,7 @@ This FAQ explains the "why's" behind many of Tanzu Labs engineering practices, a
 There is an overview of Pair Programming in [**Fundamentals of Modern Application Development learning path**](/learningpaths/application-development/pair-programming/). The following is a deeper dive into the topic.
 {{% /callout %}}
 
-How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before your team is unable to function? Most companies that come to Tanzu Labs have teams with a "bus count" or "lottery count" of 1.
+How many people from your team have to [get hit by a bus (or win the lottery and retire)](https://en.wikipedia.org/wiki/Bus_factor) before it is unable to function? Most companies that come to Tanzu Labs have teams with a "bus count" or "lottery count" of 1.
 
 ![The Bus Count](images/image9.jpg)
 
@@ -41,7 +41,7 @@ On the surface, it appears that the volume of work is cut in half. Yet, underlyi
 
 Hyper-productivity caused by pairing is exhausting. If you stay exhausted too long, you'll start to make bad decisions. [Science indicates](https://hbr.org/2017/05/your-brain-can-only-take-so-much-focus) that the human brain works best when it gets to alternate between states of focus and distraction. That's why there is a culture of taking breaks in pair programming. Every hour or so, the pair needs to stand up and do something completely different and it doesn't have to be work-related. You can relax, listen to music, read emails, or play a game.
 
-Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because of the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on Github.
+Pairing also reduces the amount of time that you spend on asynchronous code reviews. A developer who doesn't pair is likely to spend a good portion of each day reading pull-requested code and writing comments. The extra overhead of code review and code revision can easily take up ~50% of a team's working hours, so there is nothing to lose by substituting pairing for code review. Instead, the developer saves time because the real-time code review provided by pairing is more efficient than going back and forth typing and submitting comments on Github.
 
 To achieve the level of effectiveness from pairing, everyone needs to value each other's perspectives, be willing to be vulnerable, and express what they do not know. Pairing can reveal intellectual insecurities in people. Not everyone is going to develop the empathy and relationship skills required to collaborate at this level. To be successful at pairing, let go of any ego, and understand that it's OK to make mistakes in front of your pair. Some engineers are terrified of this prospect, and would prefer to leave the company than overcome their fears.
 
@@ -58,7 +58,7 @@ Yet, others struggle with team code ownership for several reasons:
 * Developers can no longer take pride in functionality that they exclusively develop.
 * Existing knowledge silos may be slow to break down. This can hinder team code ownership, 
 
-New hires who are also struggling with the transition eventually realize that someone else is going to take over. They know that it's OK to move on to something else. They recognize the lack of long-term individual authorship, learn to expect their code is transitory, develop trust in their team mates, and loosely hold personal contributions. They understand that even if the code that is written today is in the code base for a little while, it is going to evolve into something better. Eventually, new hires experience the benefits of a collaborative environment. People are more flexible with changing things, accepting feedback, or collaborating. A collaborative environment is a place where the team can say "Hey, this is **_our_** code!"
+New hires who are also struggling with the transition eventually realize that someone else is going to take over. They know that it's OK to move on to something else. They recognize the lack of long-term individual authorship, learn to expect their code to be transitory, develop trust in their teammates, and loosely hold personal contributions. They understand that even if the code that is written today is in the code base for a little while, it is going to evolve into something better. Eventually, new hires experience the benefits of a collaborative environment. People are more flexible with changing things, accepting feedback, or collaborating. A collaborative environment is a place where the team can say, "Hey, this is **_our_** code!"
 
 Shifting from individual ownership to team code ownership may require multiple, complementary practices to actively remove knowledge silos. In this case, daily pair rotation helped combat knowledge silos. Moreover, for developers with strong individual ownership tendencies, sharing ownership first with a small group where trust and communication build quickly may help.
 
@@ -66,7 +66,7 @@ See: [**Practice and Perception of Team Code Ownership**](https://www.researchga
 
 ## Q: Why Test Driven Development? {id="tdd"}
 
-Test Driven Development (TDD) is a crucial engineering practice. Review the article, [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of our Fundamentals of Modern Application Development learning path.
+Test Driven Development (TDD) is a crucial engineering practice. Review the article, [**Test Driven Development**](/learningpaths/application-development/test-driven-development/) as part of the Fundamentals of Modern Application Development learning path.
 
 ## Q: Why Refactor? {id="tdd"}
 
@@ -115,13 +115,13 @@ You map out a user's flow through the application, then decide that the first st
 
 But, then you remember that the definition of a story is "the smallest piece of incremental value that you can deliver into the hands of your users". So, when you're starting from nothing, ask yourself, does the story, "User Can Sign In" deliver value into the hands of your users? The answer is No! It doesn't add any value to the user because it's pointless to sign into an application that does nothing.
 
-So, at the beginning of a project, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it would test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
+So, at the beginning of an engagement, creatively think about how you want to introduce the first piece of user value to users. For example, you might want to provide a page listing the product of the week and a phone number for people to call who want to purchase it to test important assumptions about the problem you're trying to solve for your users. It's possible to get feedback from users who do not to call back anyone, or who prefers to have someone from the store to call them. When your first story is written, move onto the next one, remembering to write and prioritize, accordingly.
 
 Of course, this is an idealized scenario. Real projects require weighing and deciding many options on the first story. You won't have the luxury of waiting to write and prioritize the second story until you've gotten feedback from that first story. You might also decide that it's more important to prioritize the first story based on technical risk instead of user value. Perhaps, there's a potentially risky technical integration that you want to make sure the team has a handle on before moving forward with too many features that could impact it. At the end of the day, it's up to you and your balanced team to put your heads together to effectively weigh the tradeoffs and find the first starting point.
 
 ## Q: Why Estimate In Points, Not Time?
 
-It doesn't matter if the organization is Agile or [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model), it's generally valuable to know when something will be done. When will a feature be delivered? Will the release contain everything that we hoped to put in it? Delivery estimates help our product managers plan.
+It doesn't matter if the organization is Agile or [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model), it's generally valuable to know when something is going to be done. "When a feature is going to be delivered?", "Is the release going to contain everything that the team agreed to add?", Delivery estimates help product managers plan.
 
 The mistake most often made by companies is the ongoing request for engineers to estimate software in chunks of time. For example, "How long will this feature take?", or "When will this feature be done?"
 
@@ -129,11 +129,11 @@ You could answer the question by estimating how long you think something will ta
 
 Engineers are very good at estimating chunks of work relative to each other. For example, this feature is harder than that feature. Teams can quickly estimate stories in an iteration by comparing them relative to each other (and relative to stories they've completed in the past). Line up the stories in an iteration, and sort them by levels of difficulty.
 
-Does sorting stories relative to each other help us estimate when something will be done? Yes, because of velocity. 
+"Does sorting stories relative to each other help a team estimate when something is going to be done?" Yes, because of velocity. 
 
 For example, Your team is going to assign points to each story that is estimated. Your team is also going to use a Fibonacci pointing sequence: 1, 2, 3, 5, 8. That gives you five buckets for you to add your stories. The easiest stories go into the "1" bucket and the hardest stories go into the "8" bucket. 
 
-Note that teams also keep in mind estimates from previous iterations. A complex story in a previous iteration might be given an "8", but the hardest story in this iteration isn't as complex so it could be go in the "5" bucket.
+Note that teams also keep in mind estimates from previous iterations. A complex story in a previous iteration might be given an "8", but the hardest story in this iteration isn't as complex so it could go in the "5" bucket.
 
 Next, keep track of how many story points the team delivers weekly. Consider using a tool like [Pivotal Tracker](https://www.pivotaltracker.com/) to automatically keep track of it for you. You can figure out how many points the team can deliver in a given week by maintaining a rolling average of points for the last three weeks. The rolling average for the number of points a team can deliver in a week is *velocity*.
 
@@ -141,13 +141,13 @@ Next, keep track of how many story points the team delivers weekly. Consider usi
 
 It's also important to know that predictions made with velocity are not foolproof. Your team is probably not going to deliver the same amount of points each week. There is always going to be variation in the number of points your team delivers each week. The variation is also known as *volatility*. The more volatility, the higher the margin of error in velocity-based predictions.
 
-It's important for your team to monitor volatility, especially when there is high degrees of it. Together, your team has to figure out the cause of the volatility and eliminate it. Otherwise, your team won't be able to predict completion dates with confidence, and the product managers won't be able to plan.
+It's important for your team to monitor volatility, especially when there are high degrees of it. Together, your team has to figure out the cause of the volatility and eliminate it. Otherwise, your team won't be able to predict completion dates with confidence, and the product managers won't be able to plan.
 
 ## Q: Why Not Estimate Bugs and Chores?
 
-The reason you don't want to estimate bugs and chores is because you won't be able to rely on velocity to predict when stories are going to be done.
+You don't want to estimate bugs and chores because you cannot rely on velocity to predict when stories are going to be done.
 
-Here's why. Stories are planned, but bugs are an **unintended consequence of feature development**. A bug represents something that used to work, but no longer does. The completion of the original story is already accounted for in your team's velocity and forward progress. It would be inaccurate to get a second "velocity boost", or to show additional forward progress from fixing what is accidentally broken, given that the bug can be thought of as a step backwards in progress. If the team fixes the same bug twenty times, they did not make twenty steps forward. Instead, the team is bogged down by the bug, and its velocity might - or even _should_ - slow down to reflect the situation.
+Here's why. Stories are planned, but bugs are an **unintended consequence of feature development**. A bug represents something that used to work, but no longer does. The completion of the original story is already accounted for in your team's velocity and forward progress. It would be inaccurate to get a second "velocity boost", or to show additional forward progress from fixing what is accidentally broken, given that the bug can be thought of as a step backwards in progress. If the team fixes the same bug twenty times, they did not make twenty steps of progress. Instead, the team is bogged down by the bug, and its velocity might slow down to reflect the situation.
 
 Likewise, non-feature or bug-related tasks known as "chores" are a necessary aid to feature development. It is usually not possible to plan for these up front. They become apparent in reaction to the needs of the product as it evolves. If you start pointing bugs and chores, your velocity will artificially inflate.
 
@@ -155,20 +155,20 @@ For example, You are pointing bugs and chores as they crop up, then adding them 
 
 The information that your team provided to the product manager is inaccurate.
 
-Here's why. Your team is not just going to work on the 10 stories. As you develop the stories, you'll encounter bugs and chores. Because your velocity was artificially inflated, you were unable to accurately predict how long the stories would take to complete.
+Here's why. Your team is not just going to work on the 10 stories. As you develop the stories, you'll encounter bugs and chores. Because your velocity was artificially inflated, you are unable to accurately predict how long the stories would take to complete.
 
-Bugs and chores have to bring velocity down. That's why we don't point them. We want our velocity to tell us how long it will take to complete stories (i.e., user value). If you inflate velocity with bugs and chores, then you've lost your ability to predict how long it will actually take to deliver new value.
+Bugs and chores have to bring velocity down. It's the reason why engineers don't point them. Velocity helps you determine how long it will take to complete stories (i.e., user value). If you inflate velocity with bugs and chores, then you've lost your ability to predict how long it will actually take to deliver new value.
 
 ## Q: What is the Value of Continuous Integration/Continuous Delivery?
 
 There are two questions to consider when planning to ship software:
-* Should we ship?
-* Can we ship?
+* Should the product ship?
+* Can the product ship?
 
-* "Should we ship?" is a business decision. Is it valuable for the business to put the latest features in the hands of the users right now? The product manager (PM) represents the business interests on the team and must own this decision.
-* "Can we ship?" is an engineering question. Does the software work? Is the team confident it is going to pass in production? The goal of the XP engineers is to **always** answer "Yes" when asked this question. A team that unable to ship, is unable to learn, and unable to immediately address bugs or critical security vulnerabilities. The longer a team spends not learning, the greater the risk that it is wasting time and money building the wrong thing.
+* "Should the product ship?" is a business decision. Is it valuable for the business to put the latest features in the hands of the users right now? The product manager (PM) represents the business interests on the team and must own this decision.
+* "Can the product ship?" is an engineering question. Does the software work? Is the team confident it is going to pass in production? The goal of the XP engineers is to always answer "Yes" to this question. A team that is unable to ship, is unable to learn, and unable to immediately address bugs or critical security vulnerabilities. The longer a team spends not learning, the greater the risk that it is wasting time and money building the wrong thing.
 
-The combination of three XP practices make it possible for teams to always have a "Yes" answer to the question "Can We Ship?". These include:
+The combination of three XP practices make it possible for teams to always have a "Yes" answer to the question "Can the Product Ship?". These include:
 
 * Stories
 * TDD
@@ -180,19 +180,19 @@ A pair can run tests to determine if all the features in their copy of the code 
 
 Of course, there are all kinds of other benefits to CI. [To paraphrase Martin Fowler](https://www.martinfowler.com/articles/continuousIntegration.html), CI reduces risk by letting you know what works and what does not work at all times. It drastically raises awareness of bugs, allowing you to find and remove them quickly, and without fuss. As a result, projects that continuously integrate generally have fewer bugs. Of course, this is all predicated on the quality of your automated test suite.
 
-It's worth noting that some product managers automate their responsibility with respect to shipping. Some have the default answer to: "Ship on green." In effect, they've asked the engineers to add another step to their build pipeline to automatically promote code to production on a green build. That's called "continuous deployment." Shipping is still a business responsibility, although the mechanics of it are facilitated by engineers. The default answer to "ship on green" doesn't abdicate the responsibility of the decision to the engineers. The product manager remains responsible for understanding how the features work in production, and how users are responding to it. This means the project has to prioritize all engineering work necessary to build automated production monitoring capabilities that make continuous deployment responsible.
+It's worth noting that some product managers automate their responsibility with respect to shipping. Some have the default answer to "Ship on Green". In effect, they've asked the engineers to add another step to their build pipeline to automatically promote code to production on a green build. That's called "continuous deployment." Shipping is still a business responsibility, although the mechanics of it are facilitated by engineers. The default answer to "Ship on Green." doesn't abdicate the responsibility of the decision to the engineers. The product manager remains responsible for understanding how the features work in production, and how users are responding to it. This means the project has to prioritize all engineering work necessary to build automated production monitoring capabilities that make continuous deployment responsible.
 
 ## Q: Why Are There Retrospectives?
 
 There are a number of key practices that are valuable over all types of software development projects, including pairing, test driven development, IPMs, standup, and CI/CD. However, there is not one set of practices that work effectively with all projects. Practices are intended to solve problems, but not all projects have the same set of problems. Furthermore, the problems a team faces change over time.
 
-That's why you should seed projects with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
+That's why it is important to seed engagements with the [practice of retrospectives](/practices/3-column-retro). It's the seed of improvement. Each week, teams meet to discuss what is working, what is not working, and what they can do about it.
 
-Without this reflection and constant adjustment, the team's practices will deteriorate. What worked on the first day is not necessarily going to work on the 30th day 30, or the 100th day. You have to constantly improve the team's efforts, or risk failure.
+Without this reflection and constant adjustment, the team's practices will deteriorate. What worked on the first day is not necessarily going to work on the 30th day, or the 100th day. You have to constantly improve the team's efforts, or risk failure.
 
 ## Q: Why Rotate Engineers to Other Projects?{id="rotations"}
 
-At Tanzu Labs, it's common to have engineers periodically **_rotate_** between projects. For example, an engineer might not join a project at its beginning, and a team member might not be on a project to its conclusion. This is a good pattern for all team members to follow, including [engineering anchors](/learningpaths/anchor-playbook/).
+At Tanzu Labs, it is common to have engineers periodically **_rotate_** between projects. For example, an engineer might not join a project at its beginning, while another team member might not be on a project to its conclusion. This is a good pattern for all team members to follow, including [engineering anchors](/learningpaths/anchor-playbook/).
 
 Engineer rotation can be difficult for everyone that it impacts. For example, your team and product stakeholders might get attached to you, and may not want you to leave to join another project. They might even get scared, or angry. You might also be emotionally attached to your project and team, and feel scared or angry about moving on to another project before this one is finished.
 
@@ -204,9 +204,9 @@ In other words, you and your team will increasingly become less effective at mai
 
 It's true that every team needs a core group of engineers that understand the codebase inside and out, who have context on the architectural decisions that have been made, and can efficiently churn through a backlog. But, every team also needs something else. They need fresh perspectives.
 
-"But," we often hear, "onboarding new team members slows us down!". Actually, rotations speed up a team's productivity. That's because the peer's fresh perspective allows them to immediately notice the team's "broken windows." They'll point out flaws in the codebase that have been slowing the team down. They'll fix the CI build. They'll raise a red flag about the team's unrealistic release process.
+"It is not uncommon for some team members to say, "Onboarding new team members slows everyone down!". This is not true. Rotations speed up a team's productivity. This is because the peer's fresh perspective allows them to immediately notice the team's "broken windows." They'll point out flaws in the codebase that have been slowing the team down. They'll fix the CI build. They'll raise a red flag about the team's unrealistic release process.
 
-If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't just complain, but offer solutions. Finally, don't assume you understand why things are the way they are. Ask questions!
+If you rotate onto a team that's been together for a while, expect to find problems. But, remember, your peers are humans, just like you. You can hurt their feelings if you're not careful. Be constructive. Don't just complain, bugs offer solutions. Finally, don't assume you understand why thin. Ask questions!
 
 Conversely, if you're part of that core team that's been together for a while, and a peer is just rotating onto the team, set the example for soliciting feedback. Tell them to point out what's broken. Be a role model for receiving feedback, and acting on it.
 
@@ -218,9 +218,9 @@ Rotation eliminates the need for various kinds of organizational overhead:
 * It strengthens the connection between teams as friends rotate to other projects, increasing the likeliness of cross-team knowledge sharing and reducing duplicated efforts.
 * Reduces the strain on any one relationship, understanding that no one is "trapped" on a project forever.
 
-Pair programming helps de-risks projects. Rotation is the real-life manifestation of that lowered risk, by having solution knowledge and context shared by the team rather than locked up in a few people, or worse, in a single person. The downside to a single person rotating onto another team is greatly lowered.
+Pair programming helps lower risk in projects. Rotation is the real-life manifestation of that lowered risk, by having solution knowledge and context shared by the team rather than locked up in a few people, or worse, in a single person. The downside to a single person rotating onto another team is greatly lowered.
 
-Project stakeholders often object to rotating any team member, not just developers. It's important to note that organizations usually prioritize keeping (and sometimes hording) the best individual contributors that they can find. It takes time, trust, and proof to show them they can live in a better world that focuses on team dynamics rather than individual skills.
+Project stakeholders often object to rotating any team member, not just developers. It's important to note that organizations usually prioritize keeping the best individual contributors that they can find. It takes time, trust, and proof to show them they can live in a better world that focuses on team dynamics rather than individual skills.
 
 Rotations are also an opportunity for:
 
@@ -238,7 +238,7 @@ Read the [**Anchor Playbook**](/learningpaths/anchor-playbook/) for an in-depth 
 
 ## Q: What is the Difference Between Scrum and XP? 
 
-Before we talk about how XP and Scrum are different, let's talk about how they're the **same**. 
+Before discussing how XP and Scrum are different, it's to understand how they are similar. 
 * XP and Scrum strive to deliver useful software into the hands of users through short iterations via small teams employing continuous improvement. 
 * XP and Scrum teams regularly reflect on what is working, what is not working, and what a team can do to iterate on the process.
 
@@ -247,9 +247,9 @@ The fundamental difference between Scrum and XP is that Scrum is based on projec
 
   That's Scrum, a protective "bubble" for projects to work within.
 
-- Scrum teams practice sprint commits. At the outset of a sprint, the developers decide on a certain amount of work that they'll "commit" to completing in a sprint.[ SAFe](https://en.wikipedia.org/wiki/Scaled_agile_framework) has a [similar commitment model](https://www.scaledagileframework.com/pi-objectives/). There are pros and cons to this. There is a lot of positive energy and motivation that comes from a shared team goal like the sprint commit, and high-functioning Scrum teams do a lot to harness and leverage that positive energy. Furthermore, a high-functioning Scrum team always discuss renegotiating a sprint's scope during the sprint with the product manager, if they discover something to adjust mid-sprint.
+- Scrum teams practice sprint commits. At the outset of a sprint, the developers decide on a certain amount of work that they'll "commit" to completing in a sprint.[ SAFe](https://en.wikipedia.org/wiki/Scaled_agile_framework) has a [similar commitment model](https://www.scaledagileframework.com/pi-objectives/). There are pros and cons to this. There is a lot of positive energy and motivation that comes from a shared team goal like the sprint commit, and high-functioning Scrum teams do a lot to harness and leverage that positive energy. Furthermore, a high-functioning Scrum team always discusses renegotiating a sprint's scope during the sprint with the product manager, if they discover something to adjust mid-sprint.
 
-  Of course, not all Scrum teams are "high-functioning" (nor are all XP teams!). With a sprint commit, the product manager might tell the powers-that-be that a certain scope of work is **_definitely_** going to be done by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip, they might be under pressure to "get things done", which often ends in sacrificing code quality and taking on technical debt. It's also not uncommon in organizations that practice firm sprint "commits" to see engineers "pad" their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that engineers padded the estimate and can probably do a few more things.
+  Of course, not all Scrum teams are "high-functioning" (nor are all XP teams!). With a sprint commit, the product manager might tell the powers-that-be that a certain scope of work is **_definitely_** going to be done by a certain date. Fixing time and scope in this way can have a very negative effect on the code and the team. If the team starts to slip, they might be under pressure to "get things done", which often ends in sacrificing code quality and taking on technical debt. It's also not uncommon in organizations that practice firm sprint commits to see engineers pad their estimates, eroding trust between different roles and parts of the organization. Even worse, this sometimes results in management putting even more pressure on the team because they know that engineers padded the estimate and can probably do a few more things.
 
 - Iterations in Scrum are called sprints. The time-box for a sprint is one month or less, during which a done, usable, potentially releasable product increment is created by the end of the sprint.
 - Scrum doesn't prescribe to any specific engineering practices. Instead, Scrum gives a team complete freedom to use any engineering practices during a Sprint, and to change them from sprint to sprint, through continuous improvement (e.g., retrospectives).   
@@ -268,7 +268,7 @@ As consultants, often one of our client's goals is for Tanzu Labs to introduce t
 
 ## Q: Are Deadlines Bad?
 
-No! Deadlines aren't bad. They're great! In our process, having a deadline is a chance for our process to shine.
+No! Deadlines aren't bad. They're great! A deadline is a chance for your process to shine.
 
 A lot of software development teams have had bad experiences with deadlines. They've been subjected to the dreaded [death march](https://en.wikipedia.org/wiki/Death_march_(project_management)). In other words, they've been given a fixed scope that they must complete by a certain date, and are already burned out working nights and weekends, potentially compromising the quality of their work, trying to meet the deadline.
 
@@ -278,15 +278,15 @@ This problem is sometimes referred to as the [Iron Triangle](https://en.wikipedi
 - You can get something **fast with high quality**, but you will pay a lot of money for it. 
 - You can get something **inexpensive with high quality**, but you will have to wait a long time to get it.
 
-That is why fixed scope and fixed time is so problematic, and the death march inevitable. And, the more the team sacrifices the quality of their work, the harder the work is to do. Though they might meet the deadline, the software will be of such low quality that maintaining it is going be challenging.
+That is why fixed scope and fixed time is so problematic, and the death march inevitable. And, the more the team sacrifices the quality of their work, the harder the work is to do. Though they might meet the deadline, the software will be of such low quality that maintaining it is going to be challenging.
 
 Of course, none of this is caused by the actual deadline. It's caused by Waterfall incentive structures, and how company's organization measures success as "on time, and on budget". But, at what quality?
 
 There is another way to measure success in software development. It doesn't matter if you build something "on time and on budget" if the software isn't valuable to the users or the business in the first place.
 
-So, when you are working towards a deadline, do not focus on "How can we build _all of these features_ by this date?". Instead, consider, "What are the _most valuable things_ to build by this date?"
+So, when you are working towards a deadline, do not focus on how you are going to build all the features on time. Instead, think about what the most valuable things to build are, and have them ready to go by the deadline.
 
-With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant re-prioritization based on learning. Really, the only way to ensure that they have created something valuable by the deadline.
+With a predictable velocity, the product manager can start to make hard decisions and weigh tradeoffs between features. It causes them to think more critically about their list of features, and to determine value evidence-based approaches when deciding what to build. Deadlines are forcing functions for lean validation and constant reprioritization based on learning. It really is the only way to ensure that they have created something valuable by the deadline.
 
 ## Q: How Do You Scale Practices into Large, Traditional Enterprises?
 {{% callout %}}
@@ -302,11 +302,11 @@ Read the white paper, [How to Scale Agile Software Development with Product Team
 
 #### Rule #1: Scale Slowly
 
-Consider the following "Do Not's:
+Consider the following "Dont's:
 
-- Do not go from a team of 20 to a team of 200 overnight. 
-- Do not jump from one team in one location to 10 teams in 10 locations. 
-- Do not lower your hiring bar in order to scale. Start small, and build slowly. 
+- Don't go from a team of 20 to a team of 200 overnight. 
+- Don't jump from one team in one location to 10 teams in 10 locations. 
+- Don't lower your hiring bar in order to scale. Start small, and build slowly. 
   - Go from one team to two teams in the same location. 
   - Go from one location to two locations in the same time zone. 
   - Retrospect on scaling all along the way, adding just enough leadership and inventing new practices and communication patterns to keep teams efficient and healthy.
@@ -321,7 +321,7 @@ In other words, if you're not careful, your architecture will reflect the struct
 
 Consider the Tanzu Application Service (TAS). Like many well-designed systems, TAS has a plugin architecture, a set of well-defined APIs and extension points. You can plug in Buildpacks, service brokers, logging utilities, performance monitoring systems, and more. But, underneath the hood TAS also has a core distributed system, built by distributed teams that must collaborate closely.
 
-Always keep closely collaborating teams like these in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well "in one place." The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
+Always keep closely collaborating teams in the same time zone, or a close time zone ideally in the same location. Only spread them out geographically once you have proven it works well "in one place." The teams building at the well-defined architectural boundaries are much easier to distribute to other locations. The plugin teams have minimal communication requirements with folks working on the core distributed system, since they're operating at a well-defined plugin point and working in largely independent problem domains.
 
 "That's all well and good for the new products that the team scales," you might think, "but, what about all the existing teams and products? When the team wants to apply Lean, UCD, and Agile engineering practices to them to optimize the existing business, how does the team do it?"
 
@@ -330,7 +330,7 @@ There are a couple of different engineering challenges to consider:
 1. As you start to optimize the underlying application codebases and infrastructure, you'll need to carefully retrofit automated tests on top of it so that your teams can refactor or rewrite portions of it in order to solve the engineering pains present in the legacy architecture or meet the new business objectives. This isn't [TDD 101](/learningpaths/application-development/test-driven-development/). It is advanced testing. You are going to need highly skilled practitioners to do this effectively. Work with your engineering leadership to find these practitioners, and to grow more of them.
 2. You'll need to align certain teams vertically, instead of slicing them up horizontally. You have all kinds of cross-cutting domains in your legacy architecture (take authentication as the universal Example A domain that cuts across most, if not all, of your applications). You'll need to organize teams around business capabilities, not technologies. As [Martin Fowler points out](https://youtu.be/wgdBVIX9ifA?t=6m30s), the common misconception that companies have when it comes to microservices is that microservice architectures means that you have a team that only owns the microservice API and nothing else. However, if you look at Amazon, the archetype for the microservice architecture playing out at scale in a company,[Amazon organizes its teams around business capabilities.](https://aws.amazon.com/modern-apps/faqs/) They have an order team, a shipping team, a catalog team, etc. While it is true that each of these build services own their business capability end to end, all the way to the end user, they also own the experience, and how that experience plays out in the various software products their particular business capability is present in.
 
-## (TBD) Q: What's Do You Think About SAFe?
+## (TBD) Q: What Do You Think About SAFe?
 Coming Soon!
 
 ## (TBD) Q: Is It Ever Okay to Bend "the Rules"?

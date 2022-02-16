@@ -12,7 +12,6 @@ guests:
 hosts:
 - Leigh Capili
 - Dan Vega
-- Whitney Lee
 lastmod: '2021-02-02'
 minutes: 60
 title: "Carvel packaging as a unified package manager for Kubernetes with Scott Rosenberg"
