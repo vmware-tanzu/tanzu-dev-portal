@@ -34,6 +34,7 @@ This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, an
 - [Q: What is the Difference Between Scrum and XP?](#q-what-is-the-difference-between-scrum-and-xp)
 - [Q: Are Deadlines Bad?](#q-are-deadlines-bad)
 - [Q: How Do You Scale Practices into Large, Traditional Enterprises?](#q-how-do-you-scale-practices-into-large-traditional-enterprises)
+- [Learn more](#learn-more)
 
 ## Q: Why Pair Programming?
 
