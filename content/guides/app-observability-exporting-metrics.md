@@ -187,7 +187,7 @@ static_configs:
 # The HTTP resource path on which to fetch metrics from targets.
 metrics_path: /metrics
 
-# Default to scraping over https. If required, just disable this or change to `http`.
+# Default to scraping over https. If required, just deactivate this or change to `http`.
 scheme: https
 
 # Configures the scrape request's TLS settings.

@@ -39,11 +39,11 @@ While this is a handy feature and allows for some interesting possibilities whil
 
 * The Java buildpack will automatically enable the **cloud** profile when your application is pushed to Cloud Foundry
 * Spring Boot Profiles are not inherently mutually exclusive. You can have multiple active profiles at once.
-* If you need to disable local configuration while running under the cloud profile, the local configuration class should have an annotation that looks like this: `@Profile("!cloud")` and the cloud configuration class should be annotated as `@Profile("cloud")`
+* If you need to deactivate local configuration while running under the cloud profile, the local configuration class should have an annotation that looks like this: `@Profile("!cloud")` and the cloud configuration class should be annotated as `@Profile("cloud")`
 
 If multiple profiles are active, and you have multiple classes serving up beans of the same data type with the same qualifier, you run into situations where it may not be entirely obvious as to the source of objects being injected into your Data Access Objects (DAOs) or other classes receiving spring injections. This gets even more complicated if you have two classes, both with active profiles, and one class actually provides more beans than the other. You could very easily end up with *some* of your classes being fed hard-coded "local" configuration while others receive legitimate cloud configuration from bound user-provided services.
 
-To keep things clean, and to preserve the sanity of developers as much as possible, we *strongly* recommend that if you are using Spring Profiles as a toggle for local and cloud configuration, that you ensure they are mutually exclusive and never active at the same time.
+To keep things clean, we *strongly* recommend that if you are using Spring Profiles as a toggle for local and cloud configuration, that you ensure they are mutually exclusive and never active at the same time.
 
 ## Cloud Foundry Connectors
 

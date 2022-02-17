@@ -1,5 +1,6 @@
 footer.bg-dark,
 .td-outer,
+#beyond-main.td-main,
 body {
    background-color: white !important;
    color: #61717d !important;
@@ -28,6 +29,7 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+
 .td-home .darken .dropdown-item:hover, .td-home .darken .dropdown-item:focus,
 nav .dropdown-item:hover, nav .dropdown-item:focus,
 #hero:not(.workshops-hero),
@@ -74,7 +76,13 @@ p code, li > code, table code,
 body p {
   color: #61717d !important;
 }
-
+.day.active, .agenda,
+#beyond-main .newsletter-outer {
+  background-color: #f4f8fa !important;
+}
+.day {
+  background: #ADBBC4 !important;
+}
  body .topic a,
  body .topic .text-white {
    background-color: #f4f8fa !important;
@@ -132,6 +140,7 @@ color: #49afd9 !important;
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
 }
+#beyond-hero p,
 #live-notify,
 body a.btn {
   color: white !important;
@@ -214,13 +223,18 @@ body.tv-episode #register .mktoForm select {
  #hero.videos-hero {
    background-image: url({{ "/images/backgrounds/background-video-light.svg" | relURL }}) !important;
  }
+ #hero.data-hero,
  #hero.community-hero {
    background-image: url({{ "/images/backgrounds/background-community-light.svg" | relURL }}) !important;
  }
  #hero.practices-hero {
    background-image: url({{ "/images/backgrounds/background-practices-light.svg" | relURL }}) !important;
  }
-
+ @media(max-width: 1300px) {
+  body #hero.data-hero {
+    background-image: url({{ "/images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
+  }
+ }
 @media(max-width: 991px) {
   body #hero.guides-hero,
   body #hero.patterns-hero,
@@ -360,6 +374,10 @@ div.aside div.aside-content {
   background-color: #D9E4EA !important;
 }
 .card-type-id {
+  background: #D9E4EA !important;
+}
+
+#hero .product-links > .linked-box {
   background: #D9E4EA !important;
 }
 

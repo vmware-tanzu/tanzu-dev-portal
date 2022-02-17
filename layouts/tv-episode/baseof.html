@@ -3,12 +3,16 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} tv-episode">
+    <body class="td-{{ .Kind }} tv-episode">
     <header>
       {{ partial "navbar.html" . }}
     </header>
     <div class="container-fluid td-outer">
-      <div class="td-main">
+      {{ if .Params.beyond }}
+        <div id="beyond-main" class="td-main">
+      {{ else }}
+        <div class="td-main">
+      {{ end }}
         
         {{ block "main" . }}{{ end }}
 

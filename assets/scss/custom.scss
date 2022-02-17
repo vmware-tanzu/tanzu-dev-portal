@@ -84,10 +84,11 @@
       &.videos-hero {
         background-image: url({{ "/images/backgrounds/background-video.svg" | relURL }});
       }
+      &.data-hero,
       &.community-hero {
         background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
       }
-      &.practices-hero {
+      &.tanzupractices-hero {
         background-image: url({{ "/images/backgrounds/background-practices.svg" | relURL }});
       }
       &.team-hero,
@@ -105,6 +106,7 @@
         min-height: 100px;
       }
       @media(max-width: 1200px) {
+        &.data-hero,
         &.learningpaths-hero {
           .lead {
             max-width: 620px;
@@ -115,6 +117,8 @@
         }
       }
       @media(max-width: 991px) {
+        &.data-hero,
+        &.tanzupractices-hero,
         &.guides-hero,
         &.samples-hero,
         &.videos-hero,
@@ -403,6 +407,265 @@
       }
     }
   }
+}
+.product-icon {
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  height: 225%;
+  opacity: .25;
+}
+.tanzu-product-icon {
+  height: 200px;
+}
+.product-links .linked-box {
+  background-color: #1b2a32;
+  &:nth-child(1) {
+    background: #2e4150;
+
+  }
+  &:nth-child(2) {
+    background: #293e4e;
+
+  }
+  &:nth-child(3) {
+    background: #233847;
+
+  }
+  &:nth-child(4) {
+    background: #1f3442;
+  }
+}
+@keyframes skew {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  
+  100% {
+    transform: skew(2deg, 2deg);
+  }
+}
+@keyframes shootingstar {
+  0% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(-600px, 600px);
+    opacity: 0;
+  }
+}
+#beyond-hero {
+  background-color: #1B2A32 !important;
+  background-image: url({{ "/images/beyond/stars.svg" | relURL }});
+
+  #left-blob-1 {
+    height: 675px;
+    top: -540px;
+    left: 0px;
+    animation: skew 2s ease-in-out infinite alternate;
+  }
+  #left-blob-2 {
+    height: 645px;
+    top: -540px;
+    left: 12px;
+    animation: skew 2s ease-in-out infinite alternate .5s;
+  }
+  #left-blob-3 {
+    height: 615px;
+    top: -540px;
+    left: 25px;
+    animation: skew 2s ease-in-out infinite alternate 1s;
+  }
+  #right-blob-1 {
+    height: 800px;
+    bottom: -550px;
+    right: -100px;
+    animation: skew 3s ease-in-out infinite alternate;
+  }
+  #right-blob-2 {
+    height: 770px;
+    bottom: -550px;
+    right: -85px;
+    animation: skew 3s ease-in-out infinite alternate .5s;
+  }
+  #right-blob-3 {
+    height: 740px;
+    bottom: -550px;
+    right: -70px;
+    animation: skew 3s ease-in-out infinite alternate 1s;
+  }
+  #shooting-star-1 {
+    top: -200px;
+    right: 0;
+    height: 50px;
+    animation: shootingstar 4s ease-in-out 7s infinite;
+  }
+  #shooting-star-2 {
+    top: -200px;
+    right: 50%;
+    height: 40px;
+    animation: shootingstar 6s ease-in-out 5s infinite;
+  }
+  .tagline {
+    transform: translateY(-30px);
+  }
+  #beyond-logo {
+    height: 170px;
+    transform: translate(-19px, 6px);
+  }
+}
+
+.btn.beyond-btn {
+  background: rgb(127,53,178);
+  background: linear-gradient(90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%);
+  border: none;
+  color: white;
+  span {
+    z-index: 3;
+  }
+}
+.btn.beyond-btn:after {
+  background: linear-gradient(-90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%);
+  z-index: 2;
+  opacity: 0;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: opacity .2s ease-out;
+}
+.btn.beyond-btn:hover:after {
+  opacity: 1;
+}
+
+#beyond-main {
+  background-color: #0B1C23 !important;
+  
+  a:not(.btn) {
+    color: #B66DFC;
+    
+    &:hover {
+      color: #0091DA;
+    }
+  }
+  #live {
+    display: none !important;
+  }
+  + footer {
+    background-color: #1B2A32;
+  }
+  .faqs {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .day {
+    background-color: #1B2A32;
+    cursor: pointer;
+  }
+  .day.active, .agenda {
+    background-color: #22343c;
+  }
+  #day-2-agenda {
+    display: none;
+  }
+  .mktoButton {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: rgb(127,53,178) !important;
+    background: linear-gradient(90deg, rgba(127,53,178,1) 0%, rgba(0,145,218,1) 100%) !important;
+    border: none;
+    color: white;
+  }
+  #mktoCheckbox_101244_0 {
+    transform: translateY(4px);
+  }
+  #LblmktoCheckbox_101244_0 {
+    width: auto;
+  }
+  #mktoForm_1609,
+  .mktoFieldDescriptor.mktoFormCol,
+  .mktoFieldWrap.mktoRequiredField,
+  .mktoCheckboxList.mktoHasWidth,
+  #Email {
+    width: 100% !important;
+  }
+  @media (max-width: 1199px) {
+    .justify-content-center > .col-lg-9 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    .newsletter {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #beyond-hero {
+      margin-top: 0 !important;
+    }
+    #beyond-logo {
+      height: 100px;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -580px;
+      left: -100px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -400px;
+    }
+  }
+  @media (max-width: 767px){
+    .container-sm, .container {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 625px) {
+    .agenda .talk-title a, .agenda .name a, .agenda .time {
+      font-size: .9rem;
+      vertical-align: top;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -520px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -300px;
+    }
+  }
+  @media (max-width: 485px) {
+    .agenda .talk-title a, .agenda .name a, .agenda .time {
+      font-size: .9rem;
+    }
+    #left-blob-1, #left-blob-2, #left-blob-3 {
+      top: -420px;
+    }
+    #right-blob-1, #right-blob-2, #right-blob-3 {
+      right: -200px;
+    }
+  }
+}
+.magnify-banner:hover,
+.magnify-banner:focus {
+  @media(min-width: 992px) {
+    .thumbnail-gradient {
+      opacity: 0;
+    }
+    img {
+      transform: scale(1.04);
+    }
+  }
+}
+.pe-none {
+  pointer-events: none;
 }
 .callout svg {
   opacity: .8;

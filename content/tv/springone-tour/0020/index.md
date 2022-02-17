@@ -17,7 +17,6 @@ hide_newsletter: true
 lastmod: '2021-10-13'
 no_episode_title: true
 no_streaming_label: true
-speakers: null
 subtitle: Workshop
 title: Do or Do Not, There is No Try{} in Production (Europe)
 twitch: vmwaretanzu
@@ -27,6 +26,7 @@ speakers:
   - Michael Cote
   - Jakub Pilimon
   - Sam Brannen
+  - Oded Shopen
 
 ---
 <div class='flex align-items-center'>
@@ -35,9 +35,8 @@ speakers:
 
 Join us for a hands-on session covering unit and integration testing techniques using Spring Boot, API contracts, database schema management, and Testcontainers, followed by a Kubernetes-native build and deploy supply chain powered by kpack and ArgoCD. You’ll have your own test environment so you can follow along as we work through the deployment of a microservice-based application.
 
-<a class='btn mt-2 lightbox' href='#register'>Register for Workshop</a>
 
-<div id="register" class='p-5' style="display:none">
+<!-- <div id="register" class='p-5' style="display:none">
 	<h3 class='text-white mb-3 hide'>Register</h3>
 	<script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
 	<form id="mktoForm_8254"></form>
@@ -69,4 +68,4 @@ Join us for a hands-on session covering unit and integration testing techniques 
 	    </strong>
 	  </p>
 	</div>
-</div>
+</div> -->
