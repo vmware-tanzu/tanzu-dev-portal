@@ -63,7 +63,7 @@ For teams that do not currently have a culture of feedback, the Plus / Delta is 
 
 {{% section %}}
 ## Success/Expected Outcomes
-Both parties feel comfortable regularly providing feedback to each other in a clear and concise way. Eventually evolving to feedback that can be given when needed rather than a plus/delta session.
+Both parties feel comfortable regularly providing feedback to each other in a clear and concise way, ideally evolving to feedback that can be given as needed rather than during plus/delta session.
 
 After a session of plus/delta both parties will take away actions they should continue doing and activities they can improve during their daily work day.
 {{% /section %}}
