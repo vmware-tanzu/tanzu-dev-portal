@@ -354,5 +354,5 @@ If you'd like to learn more about how Tanzu Labs approaches modern application d
 - [Cloud Native Application Development with Spring](/learningpaths/application-development-rhythm/)
 - [Cloud Native Development in Practice](/learningpaths/cloud-native-development-in-practice/)
 
-If you are a Tanzu Labs team member, please [submit your updates to this FAQ!](https://github.com/vmware-tanzu/tanzu-dev-portal/issues)
+If you are a [Tanzu Labs](https://tanzu.vmware.com/labs) team member, please [submit your updates to this FAQ!](https://github.com/vmware-tanzu/tanzu-dev-portal/issues)
 
