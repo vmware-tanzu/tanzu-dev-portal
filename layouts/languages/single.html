@@ -12,15 +12,7 @@
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
         <div class="td-main ">
-            <div class="td-box--primary mt-lg-5 mt-0 py-lg-0">
-                <div class='container'>
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-8 py-2 py-lg-5">
-                            {{ .Render "content" }}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{ partial "hero.html" . }}
 
             <!-- Description and optional video -->
             <section id="language-header">
