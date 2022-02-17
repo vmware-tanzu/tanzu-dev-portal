@@ -20,9 +20,11 @@ function changeTheme(mode, firstLoad) {
       iframe.contentWindow.postMessage('light', '*');
     }
     document.documentElement.classList.add('light-mode')
+    $("#mobile-nav").removeClass("bg-dark").addClass("bg-light")
   } 
   if (mode === "dark") {
     localStorage.clear();
+    $("#mobile-nav").removeClass("bg-light").addClass("bg-dark")
   }
 }
 </script>
