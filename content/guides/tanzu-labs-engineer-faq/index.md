@@ -19,6 +19,22 @@ VMware Tanzu Labs teaches clients, partners, and peers [XP](https://en.wikipedia
 
 This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, and includes examples of real problems the team solved. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
 
+- [Q: Why Pair Programming?](#q-why-pair-programming)
+- [Q: Why Do Some Teams Struggle with Switching from Individual Code Ownership to Team Code Ownership?](#q-why-do-some-teams-struggle-with-switching-from-individual-code-ownership-to-team-code-ownership)
+- [Q: Why Test Driven Development?](#tdd)
+- [Q: Why Refactor?](#tdd)
+- [Q: What is a User Story?](#stories)
+- [Q: Which Story Comes First?](#q-which-story-comes-first)
+- [Q: Why Estimate In Points, Not Time?](#q-why-estimate-in-points-not-time)
+- [Q: Why Not Estimate Bugs and Chores?](#q-why-not-estimate-bugs-and-chores)
+- [Q: What is the Value of Continuous Integration/Continuous Delivery?](#q-what-is-the-value-of-continuous-integrationcontinuous-delivery)
+- [Q: Why Should Teams Host Retrospectives?](#q-why-should-teams-host-retrospectives)
+- [Q: Why Rotate Engineers to Other Projects?](#rotations)
+- [Q: What is an Engineering “Anchor”?](#anchors)
+- [Q: What is the Difference Between Scrum and XP?](#q-what-is-the-difference-between-scrum-and-xp)
+- [Q: Are Deadlines Bad?](#q-are-deadlines-bad)
+- [Q: How Do You Scale Practices into Large, Traditional Enterprises?](#q-how-do-you-scale-practices-into-large-traditional-enterprises)
+
 ## Q: Why Pair Programming?
 
 {{% callout %}}
@@ -330,8 +346,13 @@ There are a couple of different engineering challenges to consider:
 1. As you start to optimize the underlying application codebases and infrastructure, you'll need to carefully retrofit automated tests on top of it so that your teams can refactor or rewrite portions of it in order to solve the engineering pains present in the legacy architecture or meet the new business objectives. This isn't [TDD 101](/learningpaths/application-development/test-driven-development/). It is advanced testing. You are going to need highly skilled practitioners to do this effectively. Work with your engineering leadership to find these practitioners, and to grow more of them.
 2. You'll need to align certain teams vertically, instead of slicing them up horizontally. You have all kinds of cross-cutting domains in your legacy architecture (take authentication as the universal Example A domain that cuts across most, if not all, of your applications). You'll need to organize teams around business capabilities, not technologies. As [Martin Fowler points out](https://youtu.be/wgdBVIX9ifA?t=6m30s), the common misconception that companies have when it comes to microservices is that microservice architectures means that you have a team that only owns the microservice API and nothing else. However, if you look at Amazon, the archetype for the microservice architecture playing out at scale in a company,[Amazon organizes its teams around business capabilities.](https://aws.amazon.com/modern-apps/faqs/) They have an order team, a shipping team, a catalog team, etc. While it is true that each of these build services own their business capability end to end, all the way to the end user, they also own the experience, and how that experience plays out in the various software products their particular business capability is present in.
 
-## (TBD) Q: What Do You Think About SAFe?
-Coming Soon!
+## Learn more
+If you'd like to learn more about how Tanzu Labs approaches modern application development and engineering, please check out these amazing resources.
+- [How VMware Tanzu Labs Works and Why](/learningpaths/cloud-native-development-in-practice/)
+- [Fundamentals of Modern Application Development](/learningpaths/application-development/)
+- [Modern Application Development Rhythm](/learningpaths/application-development-rhythm/)
+- [Cloud Native Application Development with Spring](/learningpaths/application-development-rhythm/)
+- [Cloud Native Development in Practice](/learningpaths/cloud-native-development-in-practice/)
 
-## (TBD) Q: Is It Ever Okay to Bend "the Rules"?
-Coming Soon!
+If you are a Tanzu Labs team member, please [submit your updates to this FAQ!](https://github.com/vmware-tanzu/tanzu-dev-portal/issues)
+
