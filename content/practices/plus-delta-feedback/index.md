@@ -75,8 +75,8 @@ A longer, more formal feedback session might be warranted if the process took lo
 Start doing this daily, scale down to less frequent as both participants feel comfortable.
 
 Sometimes one or both parties are uncomfortable providing deltas or other constructive feedback. If plus/delta sessions consistently do not yield any deltas, try the following techniques: 
-- start the session by describing how the day went. Both parties can then work together to extract the pluses and deltas based on these descriptions.
-- implementing a format of “two pluses, one delta” to prompt both parties to suggest deltas in a more structured, blameless manner.
+- Start the session by describing how the day went. Both parties can then work together to extract the pluses and deltas based on these descriptions.
+- Implementing a format of “two pluses, one delta” to prompt both parties to suggest deltas in a more structured, blameless manner.
 {{% /section %}}
 
 {{% section %}}
