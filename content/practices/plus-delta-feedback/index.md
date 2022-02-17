@@ -70,7 +70,7 @@ After a session of plus/delta both parties will take away actions they should co
 {{% section %}}
 
 ## Facilitator Notes & Tips
-If the process took longer than 10-15 minutes a longer, more formal feedback session might be warranted.
+A longer, more formal feedback session might be warranted if the process took longer than 10-15 minutes.
 
 Start doing this daily, scale down to less frequent as both participants feel comfortable.
 
