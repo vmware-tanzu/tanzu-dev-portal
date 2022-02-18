@@ -456,7 +456,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
-de-risk
+de-risk(s)?
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -959,6 +959,7 @@ JDBC
 jdbcUrl
 [SJ]DK
 JDK's
+Jeffries
 Jernigan
 JetBrains
 Jetstack
@@ -1887,6 +1888,7 @@ Thunderdome
 tiffanyfayj
 Tigera
 Tikka
+TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
@@ -2073,7 +2075,7 @@ WomenOfDotNet
 WORKDIR
 WorkloadEndpoint
 workspaces
-workstream
+[Ww]orkstream(s)?
 WSL
 Wujec('s)
 x509
