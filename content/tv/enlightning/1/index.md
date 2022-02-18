@@ -9,6 +9,7 @@ guests:
 - Cora Iberkleid
 hosts:
 - Whitney Lee
+youtube: "vfhfJ98ApwE"
 lastmod: '2020-10-09'
 title: Dockerfiles vs Cloud Native Buildpacks
 twitch: vmwaretanzu
