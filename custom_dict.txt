@@ -18,6 +18,7 @@
 3D
 [23]G
 401K
+GTM
 [245]xx
 4x
 8PpgqEqkQWA
@@ -288,6 +289,8 @@ Christoph
 Christos
 Chunyi
 ci
+CICD
+CI/CD
 CIDR(s)?
 CIO
 CircleCI
