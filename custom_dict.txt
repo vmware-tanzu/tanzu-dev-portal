@@ -18,6 +18,7 @@
 3D
 [23]G
 401K
+GTM
 [245]xx
 4x
 8PpgqEqkQWA
@@ -290,6 +291,8 @@ MAPBU
 Christos
 Chunyi
 ci
+CICD
+CI/CD
 CIDR(s)?
 CIO
 CircleCI
@@ -810,6 +813,7 @@ Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
+Hansson
 HAProxy
 [hH]ardcoded
 HashiCorp('s)?
@@ -819,6 +823,8 @@ Hayk
 Haytham
 Headspring
 Heartbleed
+Heen
+Heinemeier
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
 [Hh]elmfiles?
