@@ -30,6 +30,7 @@ jobs:
           MUFFET_OPTIONS: "-t 30 -e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
   topic-check:
       runs-on: ubuntu-latest
+      needs: broken-link-check
       steps:
         - uses: actions/checkout@v2
           name: Checkout
