@@ -284,7 +284,9 @@ chartPath
 ChatOps
 checkboxes
 checkConnection
+Salaboy
 Christoph
+MAPBU
 Christos
 Chunyi
 ci
@@ -2016,6 +2018,7 @@ VMs?
 VMSS
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
+VMware
 VMworld
 Vonge
 VPA(s|'s)?
