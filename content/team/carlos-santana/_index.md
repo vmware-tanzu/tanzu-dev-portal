@@ -1,7 +1,7 @@
 ---
 name: Carlos Santana
 roles: ["guest"]
-skills: "Knative"
+skills: ["Knative"]
 location: ""
 
 # Social Media

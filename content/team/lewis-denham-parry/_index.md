@@ -1,7 +1,7 @@
 ---
 name: Lewis Denham-Parry
 roles: ["guest"]
-skills: "Security"
+skills: ["Security"]
 location: "Cardiff, UK"
 
 # Social Media
