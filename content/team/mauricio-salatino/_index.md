@@ -2,7 +2,7 @@
 name: Mauricio Salatino
 description: "Staff Engineer"
 roles: ["guest"]
-skills: "Knative"
+skills: ["Knative"]
 location: "United Kingdom"
 
 # Social Media
