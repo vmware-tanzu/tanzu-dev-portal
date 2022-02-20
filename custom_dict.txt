@@ -2027,6 +2027,7 @@ VMSS
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMware
+reusability
 VMworld
 Vonge
 VPA(s|'s)?
