@@ -5,10 +5,10 @@ skills: ["Kubernetes","Solution Architecture"]
 location: "Chicago, IL"
 
 # Social Media
-twitter: ""
+twitter: "rosowski"
 website: ""
 facebook: ""
-linkedin: ""
+linkedin: "rosowski"
 github: ""
 pinterest: ""
 instagram: ""
