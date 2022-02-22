@@ -15,7 +15,7 @@ title: Matty Stratton tries to teach Layla DevOps!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 
+youtube: 'eS-7lTI8jaU'
 ---
 
 Layla is joined by Matt Stratton, a Staff Developer Advocate at Pulumi, founder and co-host of the popular Arrested DevOps podcast, and the global chair of the DevOpsDays set of conferences.

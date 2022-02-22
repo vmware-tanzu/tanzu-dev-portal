@@ -15,7 +15,7 @@ title: Steve Collins and Layla talk about .NET, conference speaking and the move
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 
+youtube: 'Sjo0odZ4bwc'
 ---
 
 Layla is joined by Steve Collins, an independent software developer/architect with over 25 years’ experience in the industry working with Microsoft technologies.
