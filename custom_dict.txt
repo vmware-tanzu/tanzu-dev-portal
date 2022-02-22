@@ -288,6 +288,8 @@ Christoph
 Christos
 Chunyi
 ci
+CI/CD
+CICD
 CIDR(s)?
 CIO
 CircleCI
@@ -369,6 +371,7 @@ CoRoutines
 Corry
 CORS
 cortado
+CORTX
 Cosgrove
 Coté('s)?
 counterintuitive
@@ -451,7 +454,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
-de-risk
+de-risk(s)?
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -795,6 +798,7 @@ gRPC(-based)?
 Grygleski
 Grzejszczak
 GSB
+GTM
 GUID(s)?
 Gunicorn
 Guntur
@@ -808,6 +812,7 @@ Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
+Hansson
 HAProxy
 [hH]ardcoded
 HashiCorp('s)?
@@ -817,6 +822,8 @@ Hayk
 Haytham
 Headspring
 Heartbleed
+Heen
+Heinemeier
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
 [Hh]elmfiles?
@@ -951,6 +958,7 @@ JDBC
 jdbcUrl
 [SJ]DK
 JDK's
+Jeffries
 Jernigan
 JetBrains
 Jetstack
@@ -1172,6 +1180,7 @@ Madhav
 Madhura
 [mM]akefile
 Manachi
+MAPBU
 mappable
 MapRepository
 Marcin
@@ -1369,6 +1378,7 @@ org(s)?
 ORM(-based)?
 OSI
 OSM
+Osowski
 OSS
 Osterling
 OTT
@@ -1619,6 +1629,7 @@ restorable
 RestrictedMethodAuthorizer
 RestTemplate
 Retrium
+reusability
 revertibility
 rewatch
 rewrap
@@ -1665,6 +1676,7 @@ SaaS
 SaaS(-based)?
 Sadogursky
 Saikali
+Salaboy
 salaboy
 Salm
 Sam-Bodden
@@ -1697,6 +1709,7 @@ SDD
 SDK(s)?
 SDS
 seaborn
+Seagate
 SealedSecret
 Sébastien
 SecondaryRoutingFunction
@@ -1879,6 +1892,7 @@ Thunderdome
 tiffanyfayj
 Tigera
 Tikka
+TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
@@ -2014,6 +2028,7 @@ Vlissides
 VMCachedDeserializable
 VMs?
 VMSS
+VMware
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
@@ -2064,7 +2079,7 @@ WomenOfDotNet
 WORKDIR
 WorkloadEndpoint
 workspaces
-workstream
+[Ww]orkstream(s)?
 WSL
 Wujec('s)
 x509
