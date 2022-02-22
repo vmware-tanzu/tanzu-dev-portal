@@ -15,7 +15,7 @@ minutes: 120
 episode: "54"
 explicit: "yes"
 title: "The next one with Jim Webber"
-#youtube: ""
+youtube: "AFtiEvIe1N4"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
