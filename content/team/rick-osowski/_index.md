@@ -9,10 +9,11 @@ twitter: "rosowski"
 website: ""
 facebook: ""
 linkedin: "rosowski"
-github: ""
+github: "osowski"
 pinterest: ""
 instagram: ""
 youtube: ""
+twitch: "rosowski"
 ---
 
 Rick Osowski is a Principal Engineer at Seagate Technology, pulling from over 18 years in the IT
