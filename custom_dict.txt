@@ -371,6 +371,7 @@ CoRoutines
 Corry
 CORS
 cortado
+CORTX
 Cosgrove
 Coté('s)?
 counterintuitive
@@ -1377,6 +1378,7 @@ org(s)?
 ORM(-based)?
 OSI
 OSM
+Osowski
 OSS
 Osterling
 OTT
@@ -1707,6 +1709,7 @@ SDD
 SDK(s)?
 SDS
 seaborn
+Seagate
 SealedSecret
 Sébastien
 SecondaryRoutingFunction
@@ -1993,9 +1996,6 @@ Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VCAP
-Seagate
-Osowski
-CORTX
 vCenter
 VCS
 Vega
