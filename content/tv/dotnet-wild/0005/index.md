@@ -15,7 +15,7 @@ title: Corey and Layla catch up and talk all things .NET!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 
+youtube: 'Qhd4anc2AbU'
 ---
 
 Layla is joined by Corey Weathers, a Developer Evangelist at Twilio who is passionate about sharing how magical 
