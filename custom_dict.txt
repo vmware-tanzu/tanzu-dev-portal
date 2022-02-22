@@ -1993,6 +1993,9 @@ Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VCAP
+Seagate
+Osowski
+CORTX
 vCenter
 VCS
 Vega
