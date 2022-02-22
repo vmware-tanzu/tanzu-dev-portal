@@ -26,12 +26,12 @@
                             {{ if gt (len .Title) 70}}
                                     <div class='video-description d-flex flex-column justify-content-between'>
                                         <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
-                                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+                                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
                                     </div>
                                 {{ else }}
                                     <div class='video-description d-flex flex-column justify-content-between'>
                                         <p class='text-white mt-0'> {{.Title}} </p>
-                                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+                                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
                                     </div>
                                 {{ end }}
                             {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
