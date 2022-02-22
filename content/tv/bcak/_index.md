@@ -6,7 +6,7 @@ streaming: "twitch"
 id: "bcak"
 image: "bcak.jpg"
 og_image: "/images/og/TanzuTV-ChairKeyboard.png"
-weight: 5
+weight: 6
 menu:
     main:
         parent: "tv"

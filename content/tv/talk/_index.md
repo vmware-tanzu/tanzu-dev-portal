@@ -6,11 +6,11 @@ streaming: "twitch"
 id: "talk"
 image: "talk.png"
 og_image: "/images/og/TanzuTV-TanzuTalk.png"
-weight: 4
+weight: 7
 menu:
     main:
         parent: "tv"
-        weight: 6
+        weight: 8
 # Text that appears on show index page under show name
 description: See interviews and discussions about cloud native, software modernization, and news in the Tanzu community.
 # Text that appears highlighted in green on show index page above show name
