@@ -1,6 +1,6 @@
 ---
 title: "FAQ: Tanzu Labs Engineering"
-description: 
+description: "This FAQ explains the 'whys' behind many Tanzu Labs engineering practices, and provides guidelines for scaling these practices within organizations."
 date: "2022-01-14"
 lastmod: "2022-01-14"
 level1: Agile Transformation and Practices
@@ -17,7 +17,7 @@ team:
 ---
 VMware Tanzu Labs teaches clients, partners, and peers [XP](https://en.wikipedia.org/wiki/Extreme_programming), [Lean](https://www.amazon.com/Lean-Startup-Eric-Ries/dp/B007YXSYTK), and [User Centered Design](https://tanzu.vmware.com/campaigns/design) (UCD) principles and practices for product and application development. 
 
-This FAQ explains the "whys" behind many of Tanzu Labs engineering practices, and includes examples of real problems the team solved. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within their organization.
+This FAQ explains the "whys" behind many Tanzu Labs engineering practices, and includes examples of real problems our teams have solved. It also provides guidelines on how to answer questions from enterprises about ways to scale these practices within organizations.
 
 - [Q: Why Pair Programming?](#q-why-pair-programming)
 - [Q: Why Do Some Teams Struggle with Switching from Individual Code Ownership to Team Code Ownership?](#q-why-do-some-teams-struggle-with-switching-from-individual-code-ownership-to-team-code-ownership)
