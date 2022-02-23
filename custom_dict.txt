@@ -204,6 +204,7 @@ BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
 BookService
+bootcamps
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootRun
@@ -1278,6 +1279,7 @@ mydb
 MyPy
 mystream
 mytopic
+n8n
 NameCheap
 [Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
@@ -1967,8 +1969,6 @@ Unshared
 Unsplash
 [Uu]nstaged
 untar
-n8n
-bootcamps
 untrusted
 untuned
 unvalidated
