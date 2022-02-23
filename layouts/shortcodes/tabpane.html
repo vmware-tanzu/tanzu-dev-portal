@@ -1,9 +1,9 @@
 <!-- Scratchpad gets populated through call to .Inner -->
 {{- .Inner -}}
 
-<ul class="nav nav-tabs" id="tabs-{{- $.Ordinal -}}" role="tablist">
+<ul class="nav nav-tabs flex-nowrap" id="tabs-{{- $.Ordinal -}}" role="tablist">
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
-    <li class="nav-item">
+    <li class="nav-item mb-0">
       <!-- Generate the IDs for the <a> and the <div> elements -->
       {{- $tabid := printf "tabs-%v-%v-tab" $.Ordinal $index | anchorize -}}
       {{- $entryid := printf "tabs-%v-%v" $.Ordinal $index | anchorize -}}

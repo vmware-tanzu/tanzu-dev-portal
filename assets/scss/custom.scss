@@ -664,6 +664,30 @@
     }
   }
 }
+.nav-tabs {
+  border-bottom: 2px solid #304250 !important;
+
+  .nav-link.active {
+    border: 0;
+    color: #78be20 !important;
+    box-shadow: 0 2px 0px 0px #78be20;  
+    margin-bottom: 0px;
+  }
+  .nav-link {
+    color: #adbbc4;
+    border: 0 !important;
+
+    &:hover {
+      color: white;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    font-size: .8rem;
+  }
+}
+.nav-link.active {
+  background: transparent !important;
+}
 .pe-none {
   pointer-events: none;
 }
