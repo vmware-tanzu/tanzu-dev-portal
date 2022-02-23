@@ -12,28 +12,34 @@
     <div class="container-fluid td-outer">
         {{ partial "live-notify.html" . }}
         <div class="td-main ">
-            {{ partial "hero.html" . }}
-
-            <!-- Description and optional video -->
-            <section id="language-header">
+            {{ $class := replace .Params.linkTitle "." "-" | lower }}
+            {{ $class := replace $class " " "" }}
+            <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7  ">
                 <div class="container">
-                    <div class="row">
-                        {{ if isset .Params "video" }}
-                            <div class="col-8">
-                                {{ .Content }}
-                            </div>
-                            <div class="col-4">
-                                <div class="flex-315 my-3">
-                                    <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
-                                </div>
-                            </div>
-                        {{ else }}
-                            <div class="col-10">
-                                {{ .Content }}
-                            </div>
-                        {{ end }}
-                    </div>
+                    <h1 class="h1"> {{- .Title | markdownify }}</h1>
+                    <!-- <div class="lead"><p>{{- .Params.description | markdownify }}</p></div> -->
                 </div>
+
+                <!-- Description and optional video -->
+                    <div class="container">
+                        <div class="row">
+                            {{ if isset .Params "video" }}
+                                <div class="col-8">
+                                    {{ .Content }}
+                                </div>
+                                <div class="col-4">
+                                    <div class="flex-315 my-3">
+                                        <a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
+                                    </div>
+                                </div>
+                            {{ else }}
+                                <div class="col-10">
+                                    {{ .Content }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
