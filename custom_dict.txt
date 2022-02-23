@@ -1686,6 +1686,7 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sanitization
 Sardana
 Sarella
 SAT(s)?
