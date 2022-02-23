@@ -2,8 +2,8 @@
 type: "tv-episode"
 Description: "What's new in Spring Boot 2.6 with Dan Vega"
 hosts: ["Dan Vega"]
-PublishDate: "2022-02-23T00:00:00-07:00"
-Date: "2022-02-23T12:00:00-07:00"
+PublishDate: "2022-02-22T00:15:00-05:00"
+Date: "2022-02-23T12:15:00-05:00"
 minutes: 120
 aliases: ["/tv/code/62"] #redirect alias
 episode: "62"
