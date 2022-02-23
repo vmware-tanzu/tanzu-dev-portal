@@ -19,7 +19,7 @@ In this episode, we will cover the new features in Spring Boot 2.6. We will go t
 
 - Upgrading from Spring Boot 2.5
   - Release Versioning
-  - Deprecations
+  - Deprecation
   - Circular References
   - Path Matching Strategy
   - Actuator Env
@@ -34,4 +34,4 @@ In this episode, we will cover the new features in Spring Boot 2.6. We will go t
   - Health Support
   - Metrics Support
   - Docker Image Building Support
-  - WebTestClient for Spring MVC
+  - `WebTestClient` for Spring MVC
