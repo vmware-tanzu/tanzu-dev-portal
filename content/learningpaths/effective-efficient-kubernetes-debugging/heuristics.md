@@ -1,44 +1,17 @@
 ---
-date: '2022-02-15'
-tags:
-- Kubernetes
-- Debugging Kubernetes
-- DISO
-- "Dump In, Sort Out brainstorming"
+date: '2022-02-23'
+layout: single
 team:
 - David Wu
 - Carlos Nunez
-title: Debugging the Kubernetes Platform
-level1: Managing and Operating Kubernetes
-description: Learn debugging techniques to help you effectively and efficiently debug issues on a Kubernetes platform
-parent: Debugging Kubernetes
-linkTitle: Debugging the Kubernetes Platform
-metaTitle: Debugging the Kubernetes Platform
+title: Kubernetes debugging workflow and techniques
+weight: 10
+tags:
+- Debugging techniques
+- Kubernetes
 ---
 
-## Introduction
-One of the most commonly needed and important skills in the world of Kubernetes
-is how does one approach debugging of issues on the Platform.  While much easier 
-said than done in practice, the first step is to know what is the exact problem 
-before solutioning and not to overthink it.  However, how does one efficiently 
-and effectively do this? This article aims to enable a reader with skills to help 
-with debugging Kubernetes platform issues through finding the source problems 
-first effectively.  It is assumed that the reader is comfortable with Linux, 
-is familiar with running `kubectl` commands and understands the deployment 
-lifecycle of applications on Kubernetes. 
-
-[Section 1](#section-1---the-general-kubernetes-debugging-workflow-and-techniques) kicks off
-on a general workflow and techniques of Kubernetes debugging. This will build into [Section 2](#section-2---a-heuristic-approach) 
-where the focus is on using a heuristic approach, where given some limited initial 
-set of information of the problem, one can hypothesize where a problem lies based 
-on a set of class of issues that appear most in practice and what one could do to 
-validate whether an issue lies within these classes. Finally, [Section 3](#section-3---refining-heuristics-with-context-test-debugging) 
-refines what was learnt in Section 2 by taking a step back to look through the lens 
-of the problem scope of the system and assign the heuristic classes and prioritize 
-where to run validating tests. This section also introduces a brainstorming approach for
-group based problem solver for much more larger and complex problems.
-
-## Section 1 - The general Kubernetes debugging workflow and techniques
+## The general Kubernetes debugging workflow and techniques
 The general workflow is to first dive into the events, learn about the pod state and get into the logs. 
 If these steps do not provide sufficient information, further steps would be needed. For example, 
 checking the configuration and network connectivity of within a container.
@@ -72,16 +45,15 @@ deployment/daemonset perspective, which will simply pick a pod to get logs from.
 
     A useful commandline tool is [stern](https://github.com/wercker/stern), 
 which allows tailing of logs from multiple pods and containers. Stern can 
-also apply regular expressions to filter specific logs. However, for most debugging
-purposes, do try to limit the logging scope to avoid cognitive overload
-that may distract from finding the real problem.
-
-    [kail](https://github.com/boz/kail) is another, similar, alternative.
+also apply regular expressions to filter specific logs. Alternatively,
+[kail](https://github.com/boz/kail) is another similar log helper tool. However, 
+for most debugging purposes, do try to limit the logging scope to avoid cognitive 
+overload that may distract from finding the real problem.  
 
     If it is not possible to access the cluster, check the log aggregation platform
 such as Splunk, ELK and so forth, if this is setup. Within the log platforms,
-try searching by the node name/ip and/or components such as kubelet and 
-kube-proxy.  If the cluster is not accessible, that is, kubectl commands do not 
+try searching by the node name/ip and/or components such as `kubelet` and 
+`kube-proxy`.  If the cluster is not accessible, that is, `kubectl` commands do not 
 work, the cluster nodes will need to be accessed in order to find more details.  Details 
 on how to do this are discussed in ["Accessing and debugging nodes"](#accessing-and-debugging-nodes).
 
