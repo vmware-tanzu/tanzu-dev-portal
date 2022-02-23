@@ -43,20 +43,20 @@
 
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
+                {{ if gt (len $blogs) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
                     <div class='row'>
                         {{ range first 3 $blogs }}
                             {{ partial (printf "%v-card.html" .Section) . }}
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
 
                 <!-- Videos -->
                 {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
-                {{ $videos := where .Site.Pages "Section" "videos" }}
+                {{ if gt (len $videos) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
                     <div class='row'>
@@ -65,34 +65,55 @@
                         {{ end }}
                     </div>
                 </div>
+                {{ else if .Params.show }}
+                    {{ $alleps := where .Site.Pages "Section" "tv" }}
+                    {{ $id := .Params.show }}
+                    {{ $eps := slice }}
+                    {{ range $alleps }}
+                        {{ if eq .Parent.Params.id $id }}
+                            {{ $eps = $eps | append . }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $showtitle := (index $eps 0).Parent.Title }}
+
+                    <div class='container py-3 py-lg-5'>
+                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
+                        <div class='row'>
+                            {{ range first 3 $eps }}
+                                {{ partial "episode-card.html" . }}
+                            {{ end }}
+                        </div>
+                    </div>
+
+                {{ end }}
 
                 <!-- Getting Started -->
-                <!-- {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }} -->
-                {{ $gettingstarted := where .Site.Pages "Params.languages" "intersect" (slice .Params.label) }} <!-- DEMO -->
+                {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
+                {{ if gt (len $gettingstarted) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
                             {{ partial (printf "%v-card.html" .Section) . }}
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
 
 
                 <!-- Latest Content -->
                 {{ $latest := where .Site.Pages "Params.languages" "intersect" (slice .Params.label) }}
+                {{ if gt (len $latest) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Latest Content</h2></div>
                     <div class='row'>
                         {{ range first 3 $latest.ByDate }}
                             {{ partial (printf "%v-card.html" .Section) . }}
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
-                            {{ partial (printf "%v-card.html" .Section) . }} <!-- DEMO -->
                         {{ end }}
                     </div>
                 </div>
+                {{ end }}
+                
             </section>
       </div>
       {{ partial "footer.html" . }}
