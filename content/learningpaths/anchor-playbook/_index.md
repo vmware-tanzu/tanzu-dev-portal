@@ -55,3 +55,14 @@ Not every team member will see the full variety of anchor modalities in the cour
 Choosing which anchortype you need for a given project can be a good conversation to have with experienced anchors as well as the project's sponsor(s). You can use the anchortypes described here to help prioritize the set of responsibilities most needed for your team. As you have this conversation, think about the trade-offs and challenges that arise with each form of the role. We’ve listed some of them here, as food for thought, but think about the context of your project and your own unique skill set as you set expectations for the leadership style that will be most effective for you and your team.
 
 Anchortypes describe the variety of hats the anchor may wear on different projects. These are not prescriptive descriptions; the anchor role is always evolving and requires the freedom to evolve. However, these classifications can help us describe the anchor role to teams and each other. Anchors can use these touch-points to discuss and determine the appropriate anchor modality to meet the needs of the project and the team.
+
+## History: why is called an "anchor?"
+Once upon a time, the group that became Tanzu Labs was a small consulting company in San Francisco working with startups in our office, all using very early versions of [Ruby on Rails](https://rubyonrails.org/).
+
+Though enabling rapid productivity, Ruby on Rails at the time had many bugs and shortcomings, and the framework was changing dramatically with each release.
+
+For this and other reasons (read: fun!) our engineers were not assigned to one specific project. Instead, they all rotated between projects frequently, even daily. This was partly necessitated by the volatile nature of Rails at the time; when an engineer manged to upgrade one project's codebase to the latest version of Rails, or figured out a workaround for a new bug, that engineer would then rotate onto other project to help them do the same.
+
+This arrangement was wonderful for the above reasons, but also had its shortcomings. Project stakeholders weren't incredibly happy with this setup, rightly asking, "who's on my team?" Furthermore, decisions on product and engineering direction were sometimes lost as every engineer rapidly rotated from project to project. 
+
+To solve this problem, we **_"anchored"_** one engineer to each project. That person didn't rotate onto another project until their current project was finished, or until another engineer was ready to take over (see [Scenarios: Anchorship in Practice](/learningpaths/anchor-playbook/anchorship-in-practice) later in this Playbook). This arrangement eventually evolved into the Anchortypes we describe here.
