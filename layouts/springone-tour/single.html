@@ -49,8 +49,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action='{{ cond .Site.IsServer "http://localhost:8448/api/register" "//TODO Input aws url" }}' method="post">
-                    <div class="form-group">
+                <form id="user-registration">
+                    <div class="form-group" disabled="true">
                         <label for="firstName">First name</label>
                         <input type="text" class="form-control" id="firstName" name="firstName" />
                     </div>
@@ -337,8 +337,25 @@
                         <label for="dietaryRestrictions">Dietary Restrictions </label>
                         <textarea name="dietaryRestrictions" id="dietaryRestrictions" cols="50" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </form>
+                <script>
+                    $('#user-registration').on('submit', function (e) {
+                        e.preventDefault();
+                        $(this).children('.form-group').hide();
+                        $(this).children('button').attr('disabled', 'true').html('<span class="spinner-border spinner-border-sm me-2"></span>\nProcessing...');
+                        $.ajax({
+                            url: '{{ cond .Site.IsServer "http://localhost:8448/api/register" "//TODO Input aws url" }}',
+                            type: 'post',
+                            data: $(this).serialize(),
+                            success: function () {
+                                setTimeout(() => {
+                                    window.location.reload();
+                                }, 3000);
+                            },
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
