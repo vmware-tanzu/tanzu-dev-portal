@@ -683,6 +683,7 @@ Galystan
 Gamov
 Gandhi
 Gangway
+Gapped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -1804,6 +1805,7 @@ Sri
 SSD
 ssh-keygen
 SSL
+SSM
 sso|SSO
 Stacker
 Standley
@@ -1820,6 +1822,7 @@ STDERR|stderr
 STDOUT|stdout
 Steeltoe
 Stéphane
+STIG
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
@@ -1829,6 +1832,7 @@ Strategyzer
 Stratton
 StringBuilder
 struct
+STS
 STT
 Styra
 sub(p|P)ath
