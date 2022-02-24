@@ -66,6 +66,7 @@ Alexey
 Alibaba
 allenholub
 [Aa]llocatable
+Almar
 Alpine(-based)?
 Amaro
 amd64
@@ -1725,6 +1726,7 @@ Sedano
 Seiden
 SELinux
 Semver
+Sergi
 SerialGatewaySenderQueueEntrySizer
 server1
 server2
