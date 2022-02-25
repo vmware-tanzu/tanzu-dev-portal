@@ -31,11 +31,6 @@
                 <h1 class="text-center">Map Placeholder</h1>
             </div>
         </div>
-        <script>
-            $('#{{ $class }}-city-registration button.btn-primary').click(function () {
-                $('#register').modal('toggle');
-            });
-        </script>
     </div>
 </section>
 
@@ -43,36 +38,36 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" style="color: white; background-color: #1b2a32">
             <div class="modal-header success">
-                <h4 class="modal-title">Register</h4>
+                <h2 class="modal-title">Register</h2>
                 <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" style="color: white">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form id="user-registration">
+                <form>
                     <div class="form-group" disabled="true">
                         <label for="firstName">First name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" />
+                        <input type="text" class="form-control" id="firstName" name="firstName" required aria-required="First Name" />
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" />
+                        <input type="text" class="form-control" id="lastName" name="lastName" required aria-required="Last Name" />
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" />
+                        <input type="email" class="form-control" id="email" name="email" required aria-required="Email Address" />
                     </div>
                     <div class="form-group">
                         <label for="jobTitle">Job Title</label>
-                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" />
+                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" required aria-required="Job Title" />
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
-                        <input type="text" class="form-control" id="company" name="company" />
+                        <input type="text" class="form-control" id="company" name="company" required aria-required="Company" />
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" />
+                        <input type="tel" class="form-control" id="phone" name="phone" required aria-required="Phone Number" />
                     </div>
                     <div class="form-group">
                         <label for="country">Country</label>
@@ -339,27 +334,48 @@
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </form>
-                <script>
-                    $('#user-registration').on('submit', function (e) {
-                        e.preventDefault();
-                        $(this).children('.form-group').hide();
-                        $(this).children('button').attr('disabled', 'true').html('<span class="spinner-border spinner-border-sm me-2"></span>\nProcessing...');
-                        $.ajax({
-                            url: '{{ cond .Site.IsServer "http://localhost:8448/api/register" "//TODO Input aws url" }}',
-                            type: 'post',
-                            data: $(this).serialize(),
-                            success: function () {
-                                setTimeout(() => {
-                                    window.location.reload();
-                                }, 3000);
-                            },
-                        });
-                    });
-                </script>
             </div>
         </div>
     </div>
 </div>
+<script>
+    const regButton = $('#{{ $class }}-city-registration button.btn-primary');
+    const regModal = $('#register');
+    const regForm = $('#register form');
+    const showProcessing = () => {
+        regButton.text('Registering...').append('<div class="spinner-border spinner-border-sm text-primary"></div>');
+        regModal.modal('toggle');
+    };
+
+    regButton.click(() => regModal.modal('toggle'));
+
+    regForm.on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            beforeSend: () => {
+                // Remove error message if exists
+                regButton.siblings('br, small').empty();
+                showProcessing();
+            },
+            url: '{{ cond .Site.IsServer "http://localhost:8448/api/register" "//TODO Input aws url" }}',
+            type: 'post',
+            data: $(this).serialize(),
+            success: (resp) => {
+                regButton.before('Registration is set!').remove();
+            },
+            error: (resp) => {
+                regButton.after('<br><small>There was an error during registration please try again</small>');
+                regButton.empty().text('Try again');
+                alert(`${resp.statusText}: ${resp.responseText}`);
+            },
+            complete: () => {
+                setTimeout(() => {
+                    console.log('Complete');
+                }, 1000);
+            },
+        });
+    });
+</script>
 
 <section class="{{ $class }}-details">
     <div class="container">
