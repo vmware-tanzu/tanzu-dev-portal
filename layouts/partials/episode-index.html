@@ -44,8 +44,15 @@
                                     {{ $.Scratch.Set "episodeLink" .Params.register }}
                                 {{ end }}
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
+                                
+                                {{ $img := ""}}
+                                {{ if gt (len (.Resources.Match "images/*.gif")) 0 }}
+                                    {{ $img = (.Resources.GetMatch "images/*.gif").RelPermalink }}
+                                {{ else }}
+                                    {{ $img = (partial "tv-image-src" .) }}
+                                {{ end }}
 
-                                <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src="{{ partial "tv-image-src" . }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
+                                <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src="{{ $img }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
                                 {{ if .Params.no_streaming_label }}
                                     <p></p>
                                 {{ else }}

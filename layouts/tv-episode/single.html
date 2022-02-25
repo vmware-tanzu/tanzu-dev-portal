@@ -93,7 +93,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-12 px-0">
-        <img src='{{ partial "tv-image-src" . }}' />
+        {{ if gt (len (.Resources.Match "images/*.gif")) 0 }}
+        <img src='{{ .Resources.GetMatch "images/*.gif" }}' />
+        {{ else }}
+          <img src='{{ partial "tv-image-src" . }}' />
+        {{ end }}
       </div>
     {{ end }}
 
