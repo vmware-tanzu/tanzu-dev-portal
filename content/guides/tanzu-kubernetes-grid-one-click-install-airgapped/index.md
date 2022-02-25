@@ -1,10 +1,10 @@
 ---
 title: "Tanzu Kubernetes Grid 1-click Install into an Air Gapped Environment"
-description: This blog posts walks you through installing a security technical implementation guide (STIG) hardened Tanzu Kubernetes Grid for multi-cloud cluster with federal information processing standards(FIPS) enabled on Amazon Web Services(AWS). After all of the prerequisites are met it is as simple as exporting some environment variables and running 1 script to deploy.
+description: This blog posts walks you through installing a security technical implementation guide (STIG) hardened Tanzu Kubernetes Grid for multi-cloud cluster with federal information processing standards (FIPS) enabled on Amazon Web Services (AWS). After all of the prerequisites are met it is as simple as exporting some environment variables and running 1 script to deploy.
 date: 2022-02-24
 lastmod: 2022-02-24
 level1: Building Kubernetes Runtime
-level2: Application Platform on Kubernetes
+level2: Building Your Kubernetes Platform
 tags:
 - Tanzu
 - Tanzu Kubernetes Grid
@@ -18,7 +18,7 @@ team:
 This blog posts walks you through installing a security technical implementation guide (STIG) hardened Tanzu Kubernetes Grid for multi-cloud cluster with federal information processing standards(FIPS) enabled on Amazon Web Services(AWS). After all of the prerequisites are met it is as simple as exporting some environment variables and running 1 script to deploy.
 
 ## Prerequisites
-In order to install TKG into a 1 click deployment there are numerous prerequisites that are outlined below.
+In order to install Tanzu Kubernetes Grid for multi-cloud into a 1 click deployment there are numerous prerequisites that are outlined below.
 
 1. A preexisting `AirGapped` Virtual Private Network (VPC) in AWS. This AWS VPC should have VPC endpoints enabled to allow access within the VPC to the following AWS services
     * STS
@@ -33,7 +33,7 @@ In order to install TKG into a 1 click deployment there are numerous prerequisit
 2. An AWS S3 bucket that is accessible from within the `AirGapped` VPC. This can be accomplished by applying a bucket policy to your S3 bucket. The S3 bucket should be in the same region as the region where Tanzu Kubernetes Grid for multi-cloud is installed
 
 3. A portable media device with
-    * The TKG 1 click dependencies
+    * The Tanzu Kubernetes Grid for multi-cloud 1 click dependencies
     * 1 click installer repo
  
     ![](images/debs-to-usb.png) 
