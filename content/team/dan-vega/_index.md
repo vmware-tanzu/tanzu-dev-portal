@@ -46,7 +46,7 @@ In almost every application you’re building these days there needs to be a mec
 
 REST stands for REpresentational State Transfer and it's a standard for exposing your API in a uniform and stateless manner. Before you begin writing REST services you need to learn the underlying principles such as Resources, HTTP Verbs, Headers & status codes.
 
-In this session, you will learn the basics of how to create a new web application in Spring Boot, with the focus on building REST APIs. To accomplish that you will need to learn the mechanics of a RestController and the annotations you will encounter. You will also learn how to ensure data integrity by validating the data being passed into your API. By the end of this presentation, you will be able to stand up a CRUD API.
+In this session, you will learn the basics of how to create a new web application in Spring Boot, with the focus on building REST APIs. To accomplish that you will need to learn the mechanics of a Rest Controller and the annotations you will encounter. You will also learn how to ensure data integrity by validating the data being passed into your API. By the end of this presentation, you will be able to stand up a CRUD API.
 
 {{< youtube id="q_RLfOB7axQ" class="youtube-video-shortcode" >}}
 
@@ -59,7 +59,7 @@ The release notes for each major upgrade are broken down into 2 sections, Upgrad
 **Upgrading from Spring Boot 2.5**
 
 - Release Versioning
-- Deprecations
+- Deprecated
 - Circular References
 - Path Matching Strategy
 - Actuator Env
@@ -74,7 +74,7 @@ The release notes for each major upgrade are broken down into 2 sections, Upgrad
 - SameSite Cookie Attribute
 - Pluggable Sanitization Rules
 - Java Runtime Information
-- WebTestClient for Spring MVC
+- `@WebTestClient` for Spring MVC
 - Metrics Support
 - Docker Image Building Support
 
