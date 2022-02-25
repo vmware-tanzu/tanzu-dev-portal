@@ -3,6 +3,7 @@ date: '2021-11-30'
 team:
 - Layla Porter
 title: "The New Global Usings Directive in C# 10"
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 languages:
 - dotnet
 url: "/blog/new-global-usings-in-csharp-10"

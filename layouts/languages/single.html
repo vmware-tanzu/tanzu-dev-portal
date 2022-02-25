@@ -42,11 +42,12 @@
                 </section>
 
                 {{ if eq .Params.label "dotnet" }}
+                <!-- .NET Steeltoe Banner -->
                     <div class="container my-4">
                         <div class="row">
                             <a href="https://steeltoe.io/" class="w-100">
-                                <div class="col-12 td-box--gray-dark text-center">
-                                    <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' style="width: 50px; height: 50px;"> 
+                                <div class="col-12 text-center d-flex align-items-center justify-content-center" style="height: 75px; font-size: 2em; color: white; background-image: linear-gradient(to right, #d6455b , #893470, #583068);">
+                                    <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
                                     Get Started With Steeltoe
                                 </div>
                             </a>
