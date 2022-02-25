@@ -84,8 +84,8 @@ platform such as Splunk, ELK and so forth, if this is setup. Within the log
 platforms, try searching by the node name/ip and/or components such as `kubelet`
 and `kube-proxy`.  If the cluster is not accessible, that is, `kubectl` commands
 do not work, the cluster nodes will need to be accessed in order to find more
-details.  Details on how to do this are discussed in ["Accessing and debugging
-nodes"](#accessing-and-debugging-nodes).
+details.  Details on how to do this are discussed in ["Accessing 
+nodes"](#accessing-nodes).
 
 4. If the cluster is still accessible and existing logs pinpoints to another
 system issue, it is possible to access the pod container to perform tests such
@@ -106,7 +106,7 @@ view log files and/or perform further debugging commands, such as validating
 running configuration.  Listed below are some possible techniques to get on
 containers.  
 
-### __Using `kubectl exec`__
+### Using `kubectl exec`
 Accessing a container can be achieved through the `kubectl exec` command.
 However, be aware that this may also not be permitted on a cluster due to RBAC
 permissions. To exec into a container, run:
@@ -132,9 +132,9 @@ kubectl exec -it -n netshoot "--" sh -c "clear; (bash || ash || sh)"
 However, note that this is a new pod and itself would not have access to a
 target pod's filesystem.  This approach is useful for debugging aspects such as
 network connectivity. A deep dive of these aspects as classes is explored in
-[Section 2](#section-2---a-heuristic-approach).
+the next learning path on Heuristic Approach.
 
-### __Using ephemeral debug containers__
+### Using ephemeral debug containers
 
 As realized in the previous section, using `kubectl exec` may be insufficient
 due to the target container having no shell or that the container has already
@@ -150,7 +150,7 @@ ephemeral containers are helpful for troubleshooting issues. By default, the
 `EphemeralContainer` feature-gate [is
 enabled](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/)
 as a beta in Kubernetes 1.23. Otherwise, the feature-gate will need to be
-enabled first before it can be used. The documentation for [debug
+enabled first before it can be used. This would require enabling the . The documentation for [debug
 containers](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/#ephemeral-container),
 demonstrate with examples of how to use `debug containers` but for brevity and
 completeness sake, this is included below together with content aligning to this
@@ -173,7 +173,7 @@ additional note to consider is that these debug containers will remain running
 after exit and needs to be manually deleted, for example, `kubectl delete pod
 <name-of-debug-pod>`.
 
-#### __The target container is running but does not have a shell__:
+#### The target container is running but does not have a shell:
 
 A no shell container means that it is not possible `kubectl exec` into a
 container using a shell command, such as `sh` and `bash`.  For this scenario,
@@ -190,7 +190,7 @@ as a separate ephemeral container running in the existing pod named
 other existing running container.  This is usually the same name as the pod
 itself. 
 
-#### __The target container has crashed or completed and/or does not have a shell__:
+#### The target container has crashed or completed and/or does not have a shell:
 
 This scenario introduces the problem where a container has crashed or completed.
 This presents a problem with debugging because it is not possible to `kubectl
@@ -206,7 +206,7 @@ This will create a debug container using `netshoot`, which shares the process
 namespace in a new pod, named `<new-name-of-existing-pod>` as a copy of
 `<name-of-existing-pod>`.
 
-#### __The target container has crashed or completed and the container start command needs to be changed__:
+#### The target container has crashed or completed and the container start command needs to be changed:
 
 This scenario differs from the previous with having the startup command changed
 and there is no additional debug ephemeral container but instead a copy of the
@@ -226,7 +226,7 @@ Take note of the command specifier `-- sh`. The example here changes the start
 command to call the shell on the copied container. This may need to be replaced
 with an appropriate start command that would enable debugging of the pod.
 
-#### __The target container needs to utilize a different container image__:
+#### The target container needs to utilize a different container image:
 
 This scenario creates a copy of a target container having a different container
 image. This is useful in situations where a production container may not contain
@@ -291,7 +291,7 @@ Described previously was where to find information on a node needed in order to
 debug an issue on the node.  For readers unfamiliar with how to access nodes,
 this sub-section will describe three methods of how to get on a node.
 
-1) __Using SSH__:
+1) Using SSH:
 
     Generally, SSH access is, in best practice, performed via SSH keys. Access
     to nodes via SSH keys is performed via the command, 
@@ -308,7 +308,7 @@ this sub-section will describe three methods of how to get on a node.
 
     and enter the password thereafter, when prompted. 
 
-2) __Accessing the nodes via `kubectl exec`__:
+2) Accessing the nodes via `kubectl exec`:
 
     If the RBAC permits and privileged container permissions, it is possible to
     mount a node's log as a hostpath into a pod and inspect those logs after
@@ -342,7 +342,7 @@ this sub-section will describe three methods of how to get on a node.
     EOF
     ```
 
-3) __Debugging nodes using ephemeral debug containers__:
+3) Debugging nodes using ephemeral debug containers:
 
     In addition to the other uses cases of debug containers, it is also possible
     to create an ephemeral privileged container on a target node of interest
