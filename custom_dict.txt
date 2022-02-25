@@ -297,6 +297,7 @@ CIDR(s)?
 CIO
 CircleCI
 CIS
+CISA
 CKtaKhKOo-Y
 classpath
 clearNotifications
@@ -865,6 +866,7 @@ HyperKit
 ℹ
 (I|P)aaS
 IAM
+IAVM('s)
 Iberkleid
 ideate(d)?
 ideation
@@ -910,6 +912,7 @@ IoC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
+IPC
 iPhone(s)?
 IPM
 IPM(s)
@@ -1483,8 +1486,10 @@ Postfacto
 [Pp]ostgres
 POSTROUTING
 PowerShell
+PPSM
 PR(s)?
 Pratik('s)?
+Pre
 [pP]re-[pP]lanning
 pre-auth
 pre-author(ed)
@@ -1753,6 +1758,7 @@ Shipley
 Shopen
 [Ss]howback
 Siddiq
+SIEM
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
 siloed
@@ -1821,6 +1827,7 @@ STDERR|stderr
 STDOUT|stdout
 Steeltoe
 Stéphane
+STIG
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
@@ -1853,6 +1860,7 @@ SVP
 [Ss]wagger(-cli|2)?
 SweetKiller9
 Syer
+symlink
 symposia
 Sysdig
 SystemAdmin
@@ -1967,6 +1975,7 @@ unregister
 unreleasable
 UnrestrictedMethodAuthorizer
 unschedulable
+unselected
 unshared
 Unshared
 Unsplash
@@ -2019,6 +2028,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+VID
 Vikram
 Viktor
 Villnow
