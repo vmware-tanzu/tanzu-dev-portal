@@ -353,10 +353,10 @@
                             <input class="cc-number" type="text" name="ccNumber" placeholder="Credit card" maxlength="19" />
                         </div>
                         <div class="col-sm-6">
-                            <input class="cc-exp" type="text" name="ccExp" placeholder="Exp" />
+                            <input class="cc-exp" type="text" name="ccExp" placeholder="Exp" maxlength="5" />
                         </div>
                         <div class="col-sm-6">
-                            <input class="cc-cvc" type="text" name="ccCvc" placeholder="CVC" />
+                            <input class="cc-cvc" type="text" name="ccCvc" placeholder="CVC" maxlength="3" />
                         </div>
                     </div>
                     <textarea name="dietaryRestrictions" placeholder="Enter dietary restrictions here..."></textarea>
@@ -374,19 +374,10 @@
         regButton.text('Registering...').append('<div class="spinner-border spinner-border-sm text-primary"></div>');
         regModal.modal('toggle');
     };
-
     const ccn = $('.cc-number');
-    const ccnPattern = /^\d{0,16}$/g;
-    const ccnSeparator = ' ';
-    let ccnOldValue, ccnOldCursor;
-
     const exp = $('.cc-exp');
-    const expPattern = /^\d{0,4}$/g;
-    const expSeparator = '/';
-    let ccExpOldValue, ccExpOldCursor;
-
     const cvc = $('.cc-cvc');
-    const ccCVCPattern = /^\d{0,3}$/g;
+
     const mask = (value, limit, separator) => {
         const output = [];
         for (let i = 0; i < value.length; i++) {
@@ -395,62 +386,26 @@
             }
             output.push(value[i]);
         }
+        return output.join('');
     };
 
     const unmask = (value) => value.replace(/[^\d]/g, '');
-    const checkSeparator = (position, interval) => Math.floor(position / (interval + 1));
-    const ccnInputKeyDownHandler = (e) => {
-        let el = e.target;
-        ccnOldValue = el.value;
-        ccnOldCursor = el.selectionEnd;
-    };
-
-    const ccnInputHandler = (e) => {
-        let el = e.target;
-        console.log(el.value)
-        let newValue = unmask(el.value);
-        console.log(newValue)
-        let newCursorPosition;
-
-        if (newValue.match(ccnPattern)) {
-            newValue = mask(newValue, 4, ccnSeparator);
-
-            newCursorPosition =
-                ccnOldCursor -
-                checkSeparator(ccnOldCursor, 4) +
-                checkSeparator(ccnOldCursor + (newValue.length - ccnOldValue.length), 4) +
-                (unmask(newValue).length - unmask(ccnOldValue).length);
-            el.value = newValue !== '' ? newValue : '';
+ 
+    const inputHandler = (event, pattern, hasMask, maskLimit, maskSeparator) => {
+        let el = event.target,
+            original = el.value,
+            input = unmask(original);
+        if (input.match(pattern)) {
+            if (hasMask) input = mask(input, maskLimit, maskSeparator);
+            el.value = input;
         } else {
-            el.value = ccnOldValue;
-            newCursorPosition = ccnOldCursor;
+            el.value = original;
         }
-
-        el.setSelectionRange(newCursorPosition, newCursorPosition);
     };
 
-    const ccExpInputKeyDownHandler = (e) => {
-            let el = e.target;
-            ccExpOldValue = el.value;
-            ccExpOldCursor = el.selectionEnd;
-        },
-        ccExpInputHandler = (e) => {
-            let el = e.target,
-                newValue = el.value;
-            newValue = unmask(newValue);
-            if (newValue.match(expPattern)) {
-                newValue = mask(newValue, 2, expSeparator);
-                el.value = newValue;
-            } else {
-                el.value = ccExpOldValue;
-            }
-        };
-
-    ccn.on('keydown', ccnInputKeyDownHandler);
-    ccn.on('input', ccnInputHandler);
-
-    exp.on('keydown', ccExpInputKeyDownHandler);
-    exp.on('input', ccExpInputHandler);
+    ccn.on('input', (e) => inputHandler(e, /^\d{0,16}$/g, true, 4, " "));
+    exp.on('input', (e) => inputHandler(e, /^\d{0,4}$/g, true, 2, "/"))
+    cvc.on('input', (e) => inputHandler(e, /^\d{0,3}$/g, false))
 
     regButton.click(() => regModal.modal('toggle'));
 
