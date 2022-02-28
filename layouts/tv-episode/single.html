@@ -93,8 +93,8 @@
         </div>
       </div>
       <div class="col-lg-4 col-12 px-0">
-        {{ if gt (len (.Resources.Match "images/*.gif")) 0 }}
-        <img src='{{ .Resources.GetMatch "images/*.gif" }}' />
+        {{ if gt (len (.Resources.Match "images/*.webm")) 0 }}
+        <video autoplay loop muted playsinline src='{{ .Resources.GetMatch "images/*.webm" }}' style="height: auto; width: 100%; border: none;"></video>
         {{ else }}
           <img src='{{ partial "tv-image-src" . }}' />
         {{ end }}
