@@ -46,7 +46,7 @@
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
                                 
                                 {{ if gt (len (.Resources.Match "images/*.webm")) 0 }}
-                                    <video autoplay loop muted playsinline src='{{ (.Resources.GetMatch "images/*.webm").RelPermalink }}' style="height: auto; width: 100%; border: none;"></video>
+                                <a href="{{ $episodeLink }}"><video autoplay loop muted playsinline src='{{ (.Resources.GetMatch "images/*.webm").RelPermalink }}' style="height: auto; width: 100%; border: none;"></video><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
                                 {{ else }}
                                     <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src='{{ (partial "tv-image-src" .) }}'><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
                                 {{ end }}
