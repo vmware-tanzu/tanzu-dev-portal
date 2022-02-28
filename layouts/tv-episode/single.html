@@ -134,7 +134,12 @@
       {{ else }}
       <div>
         <a href="https://www.twitch.tv/{{ .Params.twitch }}">
-        <img src='{{ partial "tv-image-src" . }}' /></a><br>
+        {{ if gt (len (.Resources.Match "images/*.mp4")) 0 }}
+          <video autoplay loop muted playsinline src='{{ .Resources.GetMatch "images/*.mp4" }}' style="height: auto; width: 100%; border: none;"></video>
+        {{ else }}
+          <img src='{{ partial "tv-image-src" . }}' /></a><br>
+        {{ end }}
+        </a>
       </div>
       {{ end }}
       {{ end }}
