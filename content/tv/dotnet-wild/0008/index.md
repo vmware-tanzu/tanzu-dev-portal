@@ -15,7 +15,7 @@ title: Katy Ashby and Layla talk about learning to code and more!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 
+youtube: 'Dw5aRqJBca8'
 ---
 
 Layla is joined by Katy Ashby,  a Principle Software Engineer & Team Lead based in the UK. She has 4+ years of industry experience working with C#/.NET. Katy is a keen advocate of clean, maintainable, and well-tested code. Outside of .NET, she works with Angular & TypeScript and has recently started learning React. When not working, she likes to keep fit at the gym, unwind in front of Netflix and spend time with friends.
