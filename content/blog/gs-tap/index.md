@@ -18,9 +18,9 @@ aliases:
 - "/blog/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-1/"
 tanzu:
   label: tap
-  gettingstarted: true
+  gettingstarted: false
   gettingstartedweight: 1
-  featured: true
+  featured: false
   featuredweight: 1
 ---
 
