@@ -249,6 +249,7 @@
     </div>
     {{ end }}
   {{ else }}
+    {{ .Params.hosts }}
     {{ with .Params.hosts }}
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
@@ -270,6 +271,21 @@
   <div class="row justify-content-center mb-5">
     <div class="col-lg-9 col-12 px-0">
       <h3 class="mb-3">Speakers</h3>
+      {{ range . }}
+        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          <div class="mb-4">
+          {{ partial "team-member.html" (dict "context" . "display" "tv") }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with .Params.workshop }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Workshop</h3>
       {{ range . }}
         {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
           <div class="mb-4">
