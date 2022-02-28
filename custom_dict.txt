@@ -66,6 +66,7 @@ Alexey
 Alibaba
 allenholub
 [Aa]llocatable
+Almar
 Alpine(-based)?
 Amaro
 amd64
@@ -134,6 +135,7 @@ audit2rbac
 Auditable
 auditd
 [Aa]uth(z|n)?
+Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
@@ -1725,6 +1727,7 @@ Sedano
 Seiden
 SELinux
 Semver
+Sergi
 SerialGatewaySenderQueueEntrySizer
 server1
 server2

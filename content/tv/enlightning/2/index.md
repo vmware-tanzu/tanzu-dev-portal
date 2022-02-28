@@ -1,6 +1,6 @@
 ---
-Date: '2022-02-24T09:00:00-07:00'
-Description: Dockerfiles vs Cloud Native Buildpacks
+Date: '2022-02-28T09:00:00-07:00'
+Description: Who Should Use Kubernetes?
 PublishDate: '2020-04-07T00:00:00-07:00'
 date: '2020-06-03'
 episode: '2'
@@ -9,7 +9,7 @@ guests:
 - Leigh Capili
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "DjNFiEBOrGY"
 lastmod: '2020-10-09'
 title: Who Should Use Kubernetes?
 twitch: vmwaretanzu
