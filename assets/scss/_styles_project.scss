@@ -559,6 +559,10 @@ body {
     .mktoFormRow:nth-child(3) {
       display: none;
     }
+    .form-row {
+        width: -webkit-fill-available;
+        margin: 15px 0px;
+    }
     .mktoLabelToLeft input[type="checkbox"] {
       left: 0.3em !important;
     }
@@ -568,12 +572,12 @@ body {
       width: 285px !important;
       height: 46px;
       border: 1px solid #ccc !important;
-      margin-right: 20px;
+    //   margin-right: 20px;
       box-shadow: none;
       background-color: white;
       border-radius: 2px;
       font-size: 15px;
-      padding: 1px 15px 3px !important;
+    //   padding: 1px 15px 3px !important;
       border-radius: 0 !important;
     }
     @media (max-width: 390px) {
@@ -662,8 +666,10 @@ body {
       ::placeholder {
         color: white;
       }
-      select,
-      input:not([type="checkbox"]):not([type="radio"]) {
+      textarea, button {
+          margin: 25px auto;
+      }
+      select, textarea, input:not([type="checkbox"]):not([type="radio"]) {
         width: 100% !important;
         border: 0 !important;
         background: transparent;
@@ -672,7 +678,7 @@ body {
         color: white;
         padding-left: 0 !important;
         padding-bottom: 5px !important;
-        margin-top: 5px !important;
+        // margin-top: 5px !important;
         height: 46px;
         font-family: "Metropolis";
       }
