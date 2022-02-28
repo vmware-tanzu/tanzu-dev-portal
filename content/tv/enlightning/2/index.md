@@ -9,7 +9,7 @@ guests:
 - Leigh Capili
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "DjNFiEBOrGY"
 lastmod: '2020-10-09'
 title: Who Should Use Kubernetes?
 twitch: vmwaretanzu
