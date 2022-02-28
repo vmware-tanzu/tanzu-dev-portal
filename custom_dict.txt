@@ -135,6 +135,7 @@ audit2rbac
 Auditable
 auditd
 [Aa]uth(z|n)?
+Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
