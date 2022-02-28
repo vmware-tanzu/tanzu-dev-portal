@@ -1,6 +1,6 @@
 ---
 title: Effective Efficient Kubernetes Debugging
-weight: -3
+weight: 1
 featured: true
 featuredspot: 1
 duration: 60
@@ -10,11 +10,8 @@ team:
 - David Wu
 - Carlos Nunez
 tags:
-- All Roles
-- Applications
 - Kubernetes
 - Debugging
-- DISO
 experience: Beginner
 ---
 

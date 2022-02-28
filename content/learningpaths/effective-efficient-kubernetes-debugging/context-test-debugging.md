@@ -7,10 +7,8 @@ team:
 title: Context test debugging
 weight: 30
 tags:
-- Debugging techniques
+- Debugging
 - Kubernetes
-- Dump In, Sort Out
-- DISO
 ---
 
 In the previous learning path on [a heuristic approach to
@@ -38,8 +36,8 @@ However, sustainable debugging of systems is best served with a good
 understanding of how a system works followed by debugging practice to get
 proficient and efficient.  Understanding how a system works means to understand 
 how the 'engines' run, what are the components involved? True understanding is not
-simply being able to describe it in plain words but to be able to draw it - `can
-you draw out the system and data flows?`.  Even if the diagram is simple, draw
+simply being able to describe it in plain words but to be able to draw it - can
+you draw out the system and data flows?.  Even if the diagram is simple, draw
 it - as this reduces cognitive load while thinking of the problem at hand for
 large complex problems. Some typical diagramming tools can assist, which include,
 [Miro](https://miro.com), [LucidChart](https://www.lucidchart.com) and
@@ -89,13 +87,13 @@ article by incorporating the concept of the context system diagram.
 
 The basic requirements for this to work would be that:
 
-**1)** all participants have a base knowledge to the problem, for example, knows
+1. all participants have a base knowledge to the problem, for example, knows
 Kubernetes; and 
 
-**2)** they should have an understanding or is an expert of the system or any other
+2. they should have an understanding or is an expert of the system or any other
 interacting internal or external components; and 
 
-**3)** they have access to the system, preferably in pairs. 
+3. they have access to the system, preferably in pairs. 
 
 Materials, if done in person, should include sticky notes, painter tape and
 markers. The assumption here is that the facilitator is yourself but you may
@@ -103,22 +101,21 @@ assign this to someone else to conduct.
 
 The steps to conducting DISO are as follows:
 
-1) **Setup**: Before starting and the having the session, a whiteboard should be
+1. **Setup**: Before starting and the having the session, a whiteboard should be
 setup as follows:
 
-![Setting up DISO](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-setup.png#center)
+   ![Setting up DISO](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-setup.png#center)
 
 
-2) **Introductions**: All participants are introduced with in a short statement
+2. **Introductions**: All participants are introduced with in a short statement
 to the scope of the system and the problem encountered, alongside with any
 additional debug information that has been obtained. The goal of the exercise
 should be defined. Once introduced, show a drawing of the system and explain
 what it represents. 
 
-![Introducing the problem and goal in
-DISO](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-introduction.png#center)
+   ![Introducing the problem and goal in DISO](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-introduction.png#center)
 
-3) **Hypothesize**: This is the dump in phase. All participants should be
+3. **Hypothesize**: This is the dump in phase. All participants should be
 provided with sticky notes and markers. Participants asked to write down each
 idea on a sticky note and place these on the diagram of the system, in the
 `Hypotheses` area on where/what the problem might be. This should be done alone
@@ -127,28 +124,27 @@ should be encouraged to write down any ideas that they might come up with. There
 are no 'bad ideas' and there should be no concern with duplicating ideas
 independent of other participants.
 
-![The Dump In phase](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-hypothesis.png#center)
+   ![The Dump In phase](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-hypothesis.png#center)
 
-4) **Grouping**: Have a facilitator go through each sticky note and asked the
+4. **Grouping**: Have a facilitator go through each sticky note and asked the
 participant who wrote it to explain the idea and the reason. Move the sticky
 note into the `Grouping & Priority` area.  Ideas that overlap should be grouped
 together. 
 
-![Grouping the sticky notes](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-group.png#center)
+   ![Grouping the sticky notes](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-group.png#center)
 
-5) **Prioritization**: A facilitator should now look at prioritizing the stick
+5. **Prioritization**: A facilitator should now look at prioritizing the stick
 notes (or groups of sticky notes), as to which ones are closer to the problem.
 Order these notes from most likely, at the top, to least likely, at the bottom.
 
-![Prioritizing the issues to
-test](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-prioritize.png#center)
+   ![Prioritizing the issues to test](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-prioritize.png#center)
 
-6) **Testing**: This is the sink out phase.  Each participant, preferably in
+6. **Testing**: This is the sink out phase.  Each participant, preferably in
 pairs, should each take the prioritize groups of sticky notes, from the top of
 the list and test each hypothesis and move it to the `Tested` area and the
 result. Be sure to document testing methodology. 
 
-![The Sink Out phase](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-testing.png#center)
+   ![The Sink Out phase](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-testing.png#center)
 
 Eventually, the above tests should converge to an answer to where or what the
 cause of the problem is.  If there is still no answer, consider what other

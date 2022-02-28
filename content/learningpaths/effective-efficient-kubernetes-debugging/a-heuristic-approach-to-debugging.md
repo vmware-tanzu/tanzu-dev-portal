@@ -7,7 +7,7 @@ team:
 title: A heuristic approach to debugging
 weight: 20
 tags:
-- Debugging techniques
+- Debugging
 - Kubernetes
 ---
 
@@ -59,6 +59,7 @@ in no particular order:
    computer. Note the certificate tree is going from the server/lead certificate 
    (top) to the pre-installed root certificate, where the `Subject` and `Issuer`
    are identical, on the host computer's trust store (bottom). 
+
     ```sh
         ./cert info --host www.google.com 443
 
@@ -109,7 +110,7 @@ in no particular order:
    fingered configuration, usually induced by non-obvious characters, such as
    spaces and tabs. 
 
-6. **Bugs** There is a possibility that a problem could be a software bug and
+6. **Bugs** - There is a possibility that a problem could be a software bug and
    support will be needed. However, be aware that the other sources of problems
    described above are more likely to occur than a bug. 
 
@@ -130,17 +131,19 @@ In order to use these heuristics, we would require validating tests for each and
 tools.  Here, we present some common tests and tools for each source:
 
 1. **DNS** - The command 
+
     ```sh
-      nc -vz <ip-of-dns> 53
+    nc -vz <ip-of-dns> 53
     ```
-    can be used to check 
-connectivity to a DNS server. Alternatively, using `ping <fqdn>` can also be
+
+    This can be used to check connectivity to a DNS server. Alternatively, using `ping <fqdn>` can also be
 used to check if a hostname can be resolved, which is usually indicated on the
 first line of the ping output.  Other similar tools, such as `dig`, `nslookup`
 or `host` commands can be used to test access to DNS or if the DNS server can
 resolve a hostname. Do be aware of DNS caching of results that maybe stale.
 While it is not possible to change the caching behaviour of a DNS, this could be 
 alleviated with, 
+
     ```sh 
     dig example.com +trace
     ```
@@ -171,14 +174,18 @@ CAs to be trusted the target hosts
 
     There are tools to assist with determining whether there is a trust chain, 
 for example, using openssl, 
+
     ```sh
     openssl s_client -connect <fqdn/ip>:<port>
     ```
+
     will retrieve all the certificates and display them. There is an option in `openssl` to check
 certificate trust as well, 
+
     ```sh
     openssl verify -CAfile rootcert.pem -untrusted intermediateCert.pem servercert.pem
     ```  
+    
     Alternative tools, such as [dawu415’s cert tool](https://github.com/dawu415/PCFToolkit/tree/master/cert), 
 will retrieve certificates from hosts and make it easier to check the trust chain from a set of
 certificates in a file that are on hand or from a server.  A secondary issue with 
@@ -189,6 +196,7 @@ Code could help convert CRLF to LF.  In some situations, some applications requi
 a single line PEM and escaped line breaks, that is, the 'invisible' LF character 
 is converted to a character pair `\n`.  This can be achieved with this command 
 in Linux: 
+    
     ```sh
     cat certificates.pem | awk -v ORS='\\n' '1' | tr -d '\r'
     ```
@@ -202,9 +210,11 @@ to be installed on the host that is running the docker daemon.  After installing
 the CA, the docker daemon service needs to be restarted in order
 to pick up the new CA certificate. Restarting the docker daemon is usually performed
 with the command:
+
     ```sh
     sudo systemctl restart docker
     ```
+
     If on MacOS or Windows, restart the service that is available on the graphical 
     user interface. 
 
@@ -215,13 +225,17 @@ an `SSL_SYSCALL_ERROR` in the browser or an SSL handshake failure in `cURL`. Use
 
 3. **Routing & Proxy** - To see if a server can be accessed, use 
 netcat, 
+
     ```sh
       nc -vz <ip/fqdn> <port>
     ```
+
     Or, if `nc` is not available,
+
     ```sh
     curl -kL telnet://<ip/fqdn>:<port> -vvv
     ```
+
     This would do ultimately a Layer 4 check to test for connectivity. 
 
     Proxy servers are another aspect that should be considered. Check for
@@ -230,17 +244,21 @@ need to be set. In some instances, complex configuration will require the
 `NO_PROXY` environment variable to be set for hosts that should not go through
 any proxy. The existence of these environment variables in Linux can be checked
 via the command 
+
     ```sh
     env | grep -i proxy
     ```
+
     For incorrect routing causing high latency, perform load test 
 tools could be used to ascertain access time or simpler checks using `curl`'s
 [writeout timing variables](https://everything.curl.dev/usingcurl/verbose/writeout#available-write-out-variables)
 , which will output useful information such as total time and hostname
 resolution time. An example usage of this is: 
+
     ```sh
     curl -s -w 'Total time: %{time_total}s\n' https://tanzu.vmware.com
     ```
+
     You would need to compare the timing results to some gold standard or be 
 able to reason about whether it is long time, for example, loading a simple page
 might take 300 ms, but if it takes 5 minutes, there's likely an issue.
@@ -255,9 +273,11 @@ the operating system that you are troubleshooting from:
 
     You can also test routing by using trace route tool to see which gateway
     serves the initial hop,
+
     ```sh
         traceroute <ip_address>
     ```
+
     On Windows, the command is `tracert`.  Note that this uses ICMP ECHO by
 default. Consult the `man` page for your version of `traceroute` to find options
 that enable TCP- or UDP-based `traceroute` and ensure that ICMP packets are allowed.
@@ -297,5 +317,3 @@ without checking release notes, having discussions with authors/teams and have
 concrete workings with logs on hand.  If possible, try looking through the
 source code and reference lines in discussion or build tests against to validate
 your assumptions. 
-
-

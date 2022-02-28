@@ -7,7 +7,7 @@ team:
 title: Kubernetes debugging workflow and techniques
 weight: 10
 tags:
-- Debugging techniques
+- Debugging
 - Kubernetes
 ---
 
@@ -44,6 +44,7 @@ further steps would be needed. For example, checking the application
 configuration and network connectivity within a container.
 
 1. Always run:
+
     ```sh
     kubectl get events -n <namespace> --sort-by .lastTimestamp [-w]
     ```
@@ -53,14 +54,17 @@ with the most recent event at the bottom of the list. Adding the optional `-w`
 flag will allow the output to be watched. 
 
 2. Run:
+
     ```sh
-      kubectl describe pod/<pod-name> -n <namespace>
+    kubectl describe pod/<pod-name> -n <namespace>
     ```
+
     to get more details of a pod. 
 
 3. Run:
+
     ```sh
-      kubectl logs <pod-name> -n <namespace> [name-of-container, if multiple] [-f]
+    kubectl logs <pod-name> -n <namespace> [name-of-container, if multiple] [-f]
     ```
 
     This will get the logs from a pod. Adding the optional `-f` flag enables
@@ -69,7 +73,7 @@ possible to do logs from a deployment/daemonset perspective, which will simply
 pick a pod to get logs from. For example, 
 
     ```sh
-      kubectl logs ds/<daemonset-name> -n <namespace> [name-of-container, if multiple] [-f]
+    kubectl logs ds/<daemonset-name> -n <namespace> [name-of-container, if multiple] [-f]
     ```
 
     A useful commandline tool is [stern](https://github.com/wercker/stern),
@@ -93,7 +97,7 @@ as validating the state of a running process, it's configuration or to check a
 container's network connectivity. This is visited in detail in ["Accessing
 containers"](#accessing-containers).
 
-Keep in mind the above is a good general workflow to start debugging. The
+  Keep in mind the above is a good general workflow to start debugging. The
 documentation on [Kubernetes Monitoring, Logging and
 Debugging](https://kubernetes.io/docs/tasks/debug-application-cluster/) provides
 a good outline of other debugging approaches and techniques that could be
@@ -291,7 +295,7 @@ Described previously was where to find information on a node needed in order to
 debug an issue on the node.  For readers unfamiliar with how to access nodes,
 this sub-section will describe three methods of how to get on a node.
 
-1) Using SSH:
+1. Using SSH:
 
     Generally, SSH access is, in best practice, performed via SSH keys. Access
     to nodes via SSH keys is performed via the command, 
@@ -308,7 +312,7 @@ this sub-section will describe three methods of how to get on a node.
 
     and enter the password thereafter, when prompted. 
 
-2) Accessing the nodes via `kubectl exec`:
+2. Accessing the nodes via `kubectl exec`:
 
     If the RBAC permits and privileged container permissions, it is possible to
     mount a node's log as a hostpath into a pod and inspect those logs after
@@ -342,7 +346,7 @@ this sub-section will describe three methods of how to get on a node.
     EOF
     ```
 
-3) Debugging nodes using ephemeral debug containers:
+3. Debugging nodes using ephemeral debug containers:
 
     In addition to the other uses cases of debug containers, it is also possible
     to create an ephemeral privileged container on a target node of interest
