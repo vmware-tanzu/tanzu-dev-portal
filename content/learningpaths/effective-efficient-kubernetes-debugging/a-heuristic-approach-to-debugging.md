@@ -12,7 +12,7 @@ tags:
 ---
 
 In the previous section on [Kubernetes debugging workflow and
-techniques](../kubernetes-debugging-workflow-and-technique), a general workflow
+techniques](learningpaths/effective-efficient-kubernetes-debugging/kubernetes-debugging-workflow-and-techniques), a general workflow
 with a set of debugging commands were established. While seemingly simple, it is
 an effective start to resolving most direct issues such as mistype errors
 causing crash loopback errors. Further, it provides a glimpse
@@ -156,7 +156,7 @@ services and pods within a Kubernetes cluster via CoreDNS. First check if these
 pods are running on a cluster and if not follow through with the general
 workflow and techniques in the previous section to see what else is preventing
 the CoreDNS pods from starting. Once these are working, access a container to
-test out the in-cluster DNS resolution. See ["Accessing containers"](../kubernetes-debugging-workflow-and-techniques#accessing-containers) 
+test out the in-cluster DNS resolution. See ["Accessing containers"](learningpaths/effective-efficient-kubernetes-debugging/kubernetes-debugging-workflow-and-techniques#accessing-containers) 
 for more details on how to get on to a container.  For further details, this 
 [Kubernetes
 document](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/) 

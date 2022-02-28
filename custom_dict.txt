@@ -924,6 +924,8 @@ IPM
 IPM(s)
 IPPool(s)?
 IPs.
+IPV4
+IPV6
 IPVS
 Irizarry
 IRSA
@@ -1037,6 +1039,7 @@ Kanban
 Kaniko
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Kaspersky
 Kat
 [Kk]ata(s)?
 KEK(s)?
@@ -1344,6 +1347,7 @@ NoSQL
 NotificationListener
 npm
 NSX(-T|-SM)?
+NTP
 nullable
 NYJavaSIG
 OAuth2?
@@ -2109,8 +2113,9 @@ WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
-workspaces
 [Ww]orkstream(s)?
+[Ww]orkspace(s)?
+writeout
 WSL
 Wujec('s)
 x509
