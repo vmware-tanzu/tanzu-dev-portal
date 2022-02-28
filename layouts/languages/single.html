@@ -16,7 +16,11 @@
             {{ $class := replace $class " " "" }}
             <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7 py-3" style="background-image: linear-gradient(to right, #d6455b , #893470, #583068);">
                 <div class="container">
-                    <h1 class="h1" style="color: white;"> {{- .Title | markdownify }}</h1>
+                    {{ $herotitle := .Params.title }}
+                    {{ if isset .Params "herotitle" }}
+                        {{ $herotitle = .Params.herotitle}}
+                    {{ end }}
+                    <h1 class="h1" style="color: white;"> {{ $herotitle | markdownify }}</h1>
                     <!-- <div class="lead"><p>{{- .Params.description | markdownify }}</p></div> -->
                 </div>
 
