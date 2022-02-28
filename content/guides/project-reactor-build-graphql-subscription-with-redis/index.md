@@ -55,7 +55,7 @@ Next, we incorporate Redis subscriber listening to the messages in the topic. Th
 
 The final piece of the puzzle is the GraphQL subscription; we will create the GraphQL controller and link it with the `valueFlux` bean to receive the messages published by the Redis publisher and emitted in the sink by the Redis subscriber.
 
-The GraphQL schema file has a type declared for the subscription, that which outputs string values.
+The GraphQL schema file has a type declared for the subscription, that outputs string values.
 
 ![drawing](images/image-07.png)
 
