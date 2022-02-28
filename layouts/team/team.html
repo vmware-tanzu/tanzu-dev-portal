@@ -64,7 +64,7 @@
           {{ $speakers := where (where .Site.Pages "Section" "tv") "Params.speakers" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows = $shows | append $speakers }}
           <!-- Host on Code -->
-          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
+          {{ $hosts := where ((.Site.GetPage "tv/code").Pages) "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows = $shows | append $hosts }}
           
           {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
