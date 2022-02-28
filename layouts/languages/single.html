@@ -14,9 +14,9 @@
         <div class="td-main ">
             {{ $class := replace .Params.linkTitle "." "-" | lower }}
             {{ $class := replace $class " " "" }}
-            <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7 py-3 ">
+            <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7 py-3" style="background-image: linear-gradient(to right, #d6455b , #893470, #583068);">
                 <div class="container">
-                    <h1 class="h1"> {{- .Title | markdownify }}</h1>
+                    <h1 class="h1" style="color: white;"> {{- .Title | markdownify }}</h1>
                     <!-- <div class="lead"><p>{{- .Params.description | markdownify }}</p></div> -->
                 </div>
 
@@ -24,7 +24,7 @@
                     <div class="container">
                         <div class="row">
                             {{ if isset .Params "video" }}
-                                <div class="col-8">
+                                <div class="col-8 lang-desc">
                                     {{ .Content }}
                                 </div>
                                 <div class="col-4">
@@ -33,7 +33,7 @@
                                     </div>
                                 </div>
                             {{ else }}
-                                <div class="col-10">
+                                <div class="col-10 lang-desc">
                                     {{ .Content }}
                                 </div>
                             {{ end }}
@@ -46,7 +46,7 @@
                     <div class="container my-4">
                         <div class="row">
                             <a href="https://steeltoe.io/" class="w-100">
-                                <div class="col-12 text-center d-flex align-items-center justify-content-center" style="height: 75px; font-size: 2em; color: white; background-image: linear-gradient(to right, #d6455b , #893470, #583068);">
+                                <div class="col-12 text-center d-flex align-items-center justify-content-center" style="height: 75px; font-size: 2em; color: white; background-image: linear-gradient(to right, #00376e , #349aff, #00376e);">
                                     <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
                                     Get Started With Steeltoe
                                 </div>

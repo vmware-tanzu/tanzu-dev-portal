@@ -145,7 +145,7 @@ body {
   h5 {
     letter-spacing: 1px;
     -webkit-font-smoothing: auto;
-  }
+  } 
   
   blockquote {
     border-left: 3px solid $quote-bar-blue;
@@ -851,6 +851,10 @@ body {
   
   .menu-split-right {
     right: 0em;
+  }
+
+  .lang-desc > p {
+    color: white !important;
   }
 
   .person {
