@@ -693,3 +693,10 @@
   -webkit-hyphens: auto;
   hyphens: auto;
 }}
+
+#tour-hero {
+  background-color: #1B2A32 !important;
+  background-size: cover;
+  background-image: url({{ "/images/s1tour/hero.svg" | relURL }});
+  min-height: 60vh;
+}
