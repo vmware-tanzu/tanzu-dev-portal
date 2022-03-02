@@ -15,7 +15,7 @@ function changeTheme(mode, firstLoad) {
     link.href = "{{ .cssLight.RelPermalink }}";
     link.id = "light-theme"
 
-    head.prepend(link);
+    head.append(link);
     if (iframe && iframe.contentWindow) {
       iframe.contentWindow.postMessage('light', '*');
     }
