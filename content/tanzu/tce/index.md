@@ -16,6 +16,13 @@ links:
   description: Documentation, tutorials and guides
 tanzu: Tanzu Community Edition
 label: tce
+menu:
+  main:
+    parent: sections
+    params:
+      split: right
+      section: tanzu
+    weight: 2
 ---
 
 A full-featured, easy to manage Kubernetes platform for learners and users. It is a freely available, community supported, open source distribution of VMware Tanzu that can be installed and configured in minutes on your local workstation or your favorite cloud.

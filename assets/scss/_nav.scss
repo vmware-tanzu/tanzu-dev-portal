@@ -244,14 +244,14 @@ nav {
         width: 130px;
 
         .drop-menu {
-            width: 530px;
+            width: 650px;
             left: -170px;
             
             .menu-split-left {
                 width: 320px;
             }
             .menu-split-right {
-                width: 180px;
+                width: 280px;
             }
         }
     }
@@ -309,7 +309,7 @@ nav {
         
         &.learn-scope {
             left: -227px;
-            width: 570px;
+            width: 750px;
             height: 485px;
         }
         &.tanzutv-scope {
@@ -328,7 +328,7 @@ nav {
         background: $dark;
         border-radius: 2px;
     }
-    #by-type {
+    #by-type #by-product {
         padding: 0.25rem 1.5rem;
     }
     b {

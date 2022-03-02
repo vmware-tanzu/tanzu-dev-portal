@@ -86,8 +86,12 @@
 										{{ end }}
 									</div>
 									<div>
+										<p id="by-type" class="h5 cursor-intial fs-75">By Product</p>
+										{{ range (where (where .Children ".Params.split" "right") ".Params.section" "tanzu") }}
+											<a class="dropdown-item menu-split-right" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
+										{{ end }}
 										<p id="by-type" class="h5 cursor-intial fs-75">By Type</p>
-										{{ range (where .Children ".Params.split" "right") }}
+										{{ range (where (where .Children ".Params.split" "right") ".Params.section" "type") }}
 											<a class="dropdown-item menu-split-right" href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a>
 										{{ end }}
 									</div>
@@ -149,8 +153,12 @@
 								{{ end }}
 							{{ end }}
 						{{ end }}
+						<p id="by-type" class="px-0 h5 cursor-intial fs-75">By Product</p>
+						{{ range (where (where .Children ".Params.split" "right") ".Params.section" "tanzu") }}
+							<li><a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a></li>
+						{{ end }}
 						<p id="by-type" class="px-0 h5 cursor-intial fs-75">By Type</p>
-						{{ range (where .Children ".Params.split" "right") }}
+						{{ range (where (where .Children ".Params.split" "right") ".Params.section" "type") }}
 							<li><a href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .RelPermalink | relLangURL }}{{ end }}" {{ if ne $url.Host $baseurl.Host }}target="_blank" {{ end }}>{{ .Name }}</a></li>
 						{{ end }}
 				{{ else }}
