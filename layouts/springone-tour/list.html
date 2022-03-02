@@ -3,23 +3,38 @@
 {{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
 
 {{ $class := replace .Page.Section "." "-" | lower }}
-<section id="hero" class="{{ $class }}-event-hero td-box--gray-dark mt-7 pt-4 pb-4">
+
+<!-- <section id="beyond-hero" class="bg-gray-dark mt-7 py-lg-5 overflow-hidden position-relative">
+  <img alt="" id="left-blob-1" class="position-absolute pe-none" src="/developer/images/beyond/left-blob-1.svg">
+<img alt="" id="right-blob-3" class="position-absolute pe-none" src="/developer/images/beyond/right-blob-3.svg">
+<div class="container py-0 py-lg-4">
+  <div class="col-xl-9 col-12 px-0 mt-5 mx-auto position-relative">
+    <img alt="" id="shooting-star-1" class="position-absolute" src="/developer/images/beyond/shooting-star.svg">
+<img alt="" id="shooting-star-2" class="position-absolute" src="/developer/images/beyond/shooting-star.svg">
+<p class="white h3">March 30–31, 2022</p>
+<img alt="" class="pe-none" id="beyond-logo" src="/developer/images/beyond/glow-beyond.svg">
+<p class="tagline white h3 pt-0 pb-4">A collection of conversations exploring the wider world of .NET
+</p></div></div></section> -->
+
+
+<section id="tour-hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 py-lg-5">
     <div class="container">
         <div class='row justify-content-between'>
             <div class='col-lg-11 px-0'>
-                <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1>
+              <!-- <img alt="" src='{{ "/images/s1tour/hero.svg" | relURL }}'/> -->
+                <!-- <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1> -->
                 <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description |
                     markdownify }}</p>
                 {{ .Content }}
                 </p>
             </div>
-            <p class='-text-bright-green fs-90 pl-1'><img class='icon-gift' src='images/gift.svg' /> Workshop
-                attendees will receive special edition swag</p>
+            <!-- <p class='-text-bright-green fs-90 pl-1'><img class='icon-gift' src='images/gift.svg' /> Workshop -->
+                <!-- attendees will receive special edition swag</p> -->
         </div>
     </div>
 </section>
 
-<section id="s1t-destinations-2022" class="">
+<section id="s1t-destinations-2022" class="row justify-content-center mb-5">
     <div class="container">
         <h2>Destinations 2022</h2>
         <div class="row align-items-baseline mb-3">
@@ -34,8 +49,8 @@
                     {{ else }}
                     <div class='video-description d-flex flex-column justify-content-between'>
                         <p class='text-white mt-0'> {{.Title}} </p>
-                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 02" (substr .Date 0 10)}}-{{
-                            dateFormat "02" (substr .Params.enddate 0 10)}}</p>
+                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2" (substr .Date 0 10)}}-{{
+                            dateFormat "2" (substr .Params.enddate 0 10)}}</p>
                     </div>
                     {{ end }}
                 </div>
