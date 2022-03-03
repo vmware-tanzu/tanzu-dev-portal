@@ -523,6 +523,7 @@ DistributedSystems
 DistributionMessageObserver
 DistributionStats
 DistributionSummary
+distro
 distroless
 distros
 DIY
@@ -2104,6 +2105,7 @@ yay
 YCombinator
 Yonis
 Yorker
+young-ish
 youtube
 YTT
 ytt(-templatized)?
