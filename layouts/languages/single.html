@@ -4,7 +4,7 @@
     {{ partial "head.html" . }}
   </head>
   <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }} py-3">
-    {{ partial "amplitude.html" (dict "context" . "event" "topic viewed") }}
+    {{ partial "amplitude.html" (dict "context" . "event" "language viewed") }}
     <header>
       {{ partial "navbar.html" . }}
     </header>
