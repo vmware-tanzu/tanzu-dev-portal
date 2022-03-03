@@ -112,9 +112,14 @@ archived_version = false
 
 [menu]
   [[menu.main]]
+    identifier = "try"
+    name = "Try"
+    weight = 1
+
+  [[menu.main]]
     identifier = "sections"
     name = "Learn"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "tv"
@@ -124,7 +129,7 @@ archived_version = false
   [[menu.main]]
     identifier = "community"
     name = "Community"
-    weight = 50
+    weight = 4
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.

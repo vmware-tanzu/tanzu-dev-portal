@@ -17,12 +17,9 @@ links:
 tanzu: Tanzu Application Platform
 label: tap
 menu:
-  main:
-    parent: sections
-    params:
-      split: right
-      section: tanzu
-    weight: 1
+    main:
+        parent: "try"
+        weight: 1
 ---
 
 VMware Tanzu Application Platform delivers a superior developer experience for enterprises building and deploying cloud native applications on Kubernetes. It enables application teams to get to production faster by automating source to production pipelines, and it clearly defines the roles of developers and operators so they can work collaboratively instead of stepping on each other’s toes.

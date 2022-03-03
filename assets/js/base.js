@@ -38,11 +38,17 @@ limitations under the License.
 
   // Hover nav w/ scope
   function removeNavClasses () {
-    $('#scope').removeClass('learn-scope topics-scope tanzutv-scope community-scope');
+    $('#scope').removeClass('try-scope learn-scope topics-scope tanzutv-scope community-scope');
     $('.dropdown').removeClass('show');
     $("header + .container-fluid").removeClass("dim");
     $("#navbar").removeClass("dropShadow");
   }
+  $('#try-target').mouseenter(function(){
+    removeNavClasses();
+    $('#scope').addClass('try-scope');
+    $('#try').addClass('show');
+    dimBody();
+  });
   $('#learn-target').mouseenter(function(){
     removeNavClasses();
     $('#scope').addClass('learn-scope');

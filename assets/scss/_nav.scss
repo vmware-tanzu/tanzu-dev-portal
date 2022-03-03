@@ -239,6 +239,12 @@ nav {
         } 
             
     }
+    
+    #try {        
+        right: 535px;
+        width: 135px;
+    }
+
     #learn {
         right: 435px;
         width: 130px;
@@ -307,20 +313,25 @@ nav {
         box-shadow: 0px 6px 15px -3px rgba(0,0,0,0.2);
         position: absolute;
         
+        &.try-scope {
+            left: -22px;
+            width: 270px;
+            height: 120px;
+        }
         &.learn-scope {
-            left: -227px;
-            width: 750px;
+            left: -110px;
+            width: 650px;
             height: 485px;
         }
         &.tanzutv-scope {
-            left: 87px;
+            left: 210px;
             width: 296px;
             height: 410px;
         }
         &.community-scope {
-            left: 237px;            
+            left: 357px;            
             width: 150px;
-            height: 130px;
+            height: 120px;
         }
     }
 
