@@ -18,7 +18,7 @@ minutes: 90
 title: "Supply Chain Choreography with Cartographer"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "Qr-DO0E9R1Y"
 type: tv-episode
 ---
 
