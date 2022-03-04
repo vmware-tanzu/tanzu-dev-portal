@@ -29,7 +29,7 @@ Before you begin you will need:
 
 - An understanding of ASP.NET and C#
 - The [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) installed
-- A C# code editor such as [Visual Studio](https://visualstudio.microsoft.com/), [Jetbrains Rider](https://www.jetbrains.com/rider/promo/) or [VS Code](https://code.visualstudio.com/Download)
+- A C# code editor such as [Visual Studio](https://visualstudio.microsoft.com/), [JetBrains Rider](https://www.jetbrains.com/rider/promo/) or [VS Code](https://code.visualstudio.com/Download)
 - A local copy of this [GitHub Repository](https://github.com/Layla-P/APIGatewayWithYarpEureka) (either downloaded or forked+cloned)
 - [Docker for desktop](https://www.docker.com/get-started) installed
 - To have gone through the  [Build an API gateway with .NET 6, C# and YARP](https://tanzu.vmware.com/blog/build-api-gateway-csharp-yarp) blog post
