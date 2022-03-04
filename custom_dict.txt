@@ -70,7 +70,7 @@ Almar
 Alpine(-based)?
 Amaro
 amd64
-AMI
+AMI('s)?
 amongst
 AMQP
 [Aa]nalytics
