@@ -1,14 +1,4 @@
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
-  <head>
-    {{ partial "head.html" . }}
-  </head>
-  <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} guide" data-section="{{ .Parent.Params.title | lower }}">
-    {{ partial "amplitude.html" (dict "context" . "event" "guide viewed") }}
-    <header>
-      {{ partial "navbar.html" . }}
-    </header>
-    <div class="container-fluid td-outer">
-      {{ partial "live-notify.html" . }}
+{{ define "main" }}
       <div class="td-main">
         <div class="row flex-xl-nowrap container mx-auto">
           <div class="d-none d-xl-block col-2 td-sidebar d-print-none pl-0 pr-4">
@@ -24,7 +14,7 @@
           	<br/>
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-            {{ block "main" . }}{{ end }}
+            
             {{ .Render "content" }}
             {{ if .IsSection }}
                 {{ partial "guides-section-index.html" . }}
@@ -40,8 +30,4 @@
           </main>
         </div>
       </div>
-      {{ partial "footer.html" . }}
-    </div>
-    {{ partial "scripts.html" . }}
-  </body>
-</html>
+{{ end }}
