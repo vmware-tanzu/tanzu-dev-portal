@@ -1,6 +1,6 @@
 ---
-title: "Tanzu Kubernetes Grid 1-Click Install into an Air-Gapped Environment"
-description: This blog post walks you through installing a Security Technical Implementation Guide–hardened Tanzu Kubernetes Grid for multi-cloud clusters with Federal Information Processing Standards enabled on Amazon Web Services. After all of the prerequisites are met, it is as simple as exporting some environment variables and running one script to deploy.
+title: "STIG Compliant Tanzu Kubernetes Grid 1-click install into an air-gapped environment"
+description: This blog post walks you through installing a Security Technical Implementation Guide–hardened Tanzu Kubernetes Grid for multi-cloud clusters with Federal Information Processing Standards enabled on Amazon Web Services. 
 date: 2022-02-24
 lastmod: 2022-02-24
 level1: Building Kubernetes Runtime
@@ -25,10 +25,10 @@ In order to install Tanzu Kubernetes Grid for multi-cloud into an air-gapped env
     * STS
     * SSM
     * EC2
-    * `ec2messages`
-    * `elasticloadbalancing`
-    * `secretsmanager`
-    * `ssmmessages`
+    * ec2messages
+    * elasticloadbalancing
+    * secretsmanager
+    * ssmmessages
     * S3
 
 2. An AWS S3 bucket that is in the same AWS region as your `AirGapped` VPC. This will be used to store and retrieve the Tanzu Kubernetes Grid `1click` dependencies.
