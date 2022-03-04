@@ -27,33 +27,33 @@
     padding-left: 5px;
     content: url({{ "/images/icons/arrow-right.svg" | relURL }});
   }
-  
+
   .guide .td-sidebar-nav__subsection-title a.active:after,
   .guide .td-sidebar-nav__subsection-title a.selected:after {
     content: url({{ "/images/icons/arrow-down.svg" | relURL }});
   }
-  
+
   .guide .td-sidebar-nav h5 {
     margin-top: 30px;
   }
-  
+
   .guide .td-sidebar-nav h5 a {
     font-size: .75rem;
     color: white;
   }
-  
+
   .guide .td-sidebar-nav h5 a:before {
     padding-right: 10px;
     content: url({{ "/images/icons/arrow-left-white.svg" | relURL }});
   }
-  
+
   .guide a.linked-box {
     @media(min-width: 992px) {
       min-height: 200px;
     }
     height: 100%;
   }
-  
+
   .relative {
     position: relative;
   }
@@ -164,12 +164,12 @@
 
   footer {
       min-height: 150px;
-  
+
       @include media-breakpoint-down(md) {
            min-height: 200px;
       }
   }
-  
+
   // Adjust anchors vs the fixed menu.
   @include media-breakpoint-up(md) {
     .td-offset-anchor:target {
@@ -442,7 +442,7 @@
   0% {
     transform: skew(0deg, 0deg);
   }
-  
+
   100% {
     transform: skew(2deg, 2deg);
   }
@@ -452,7 +452,7 @@
     transform: translate(0,0);
     opacity: 1;
   }
-  
+
   100% {
     transform: translate(-600px, 600px);
     opacity: 0;
@@ -547,10 +547,10 @@
 
 #beyond-main {
   background-color: #0B1C23 !important;
-  
+
   a:not(.btn) {
     color: #B66DFC;
-    
+
     &:hover {
       color: #0091DA;
     }
@@ -694,9 +694,17 @@
   hyphens: auto;
 }}
 
-#tour-hero {
+#hero.springone-tour-event-hero {
   background-color: #1B2A32 !important;
   background-size: cover;
-  background-image: url({{ "/images/s1tour/hero.svg" | relURL }});
+  background-position: top;
+  background-image: url({{ "/images/springonetour/hero.svg" | relURL }});
   min-height: 60vh;
+}
+.light-mode #hero.springone-tour-event-hero {
+  background-color: #fff !important;
+  // filter: brightness(100%);
+  path {
+    fill: #000;
+  }
 }

@@ -1,5 +1,5 @@
 ---
-title: "SpringOne Tour"
+title: 
 id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/TanzuTV-SpringOneTour.png"
@@ -13,7 +13,7 @@ description:
 # Text that appears highlighted in green on show index page above show name
 <!-- teaser: Live Every Month -->
 # Text that shows on show page under show name
-subheader: SpringOne Tour is back, in person, and coming to a city near you!
+<!-- subheader: SpringOne Tour is back, in person, and coming to a city near you! -->
 # Text that appears on single episode page under show name
 description_episodes:
 # Any content below here shows up above episode index

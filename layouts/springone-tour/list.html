@@ -4,39 +4,18 @@
 
 {{ $class := replace .Page.Section "." "-" | lower }}
 
-<!-- <section id="beyond-hero" class="bg-gray-dark mt-7 py-lg-5 overflow-hidden position-relative">
-  <img alt="" id="left-blob-1" class="position-absolute pe-none" src="/developer/images/beyond/left-blob-1.svg">
-<img alt="" id="right-blob-3" class="position-absolute pe-none" src="/developer/images/beyond/right-blob-3.svg">
-<div class="container py-0 py-lg-4">
-  <div class="col-xl-9 col-12 px-0 mt-5 mx-auto position-relative">
-    <img alt="" id="shooting-star-1" class="position-absolute" src="/developer/images/beyond/shooting-star.svg">
-<img alt="" id="shooting-star-2" class="position-absolute" src="/developer/images/beyond/shooting-star.svg">
-<p class="white h3">March 30–31, 2022</p>
-<img alt="" class="pe-none" id="beyond-logo" src="/developer/images/beyond/glow-beyond.svg">
-<p class="tagline white h3 pt-0 pb-4">A collection of conversations exploring the wider world of .NET
-</p></div></div></section> -->
-
-
-<section id="tour-hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 py-lg-5">
+<section id="hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 py-lg-5">
     <div class="container">
-        <div class='row justify-content-between'>
-            <div class='col-lg-11 px-0'>
-              <!-- <img alt="" src='{{ "/images/s1tour/hero.svg" | relURL }}'/> -->
-                <!-- <h1 class="h1 mt-2 pt-2"> {{- .Title -}}</h1> -->
-                <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description |
-                    markdownify }}</p>
-                {{ .Content }}
-                </p>
-            </div>
-            <!-- <p class='-text-bright-green fs-90 pl-1'><img class='icon-gift' src='images/gift.svg' /> Workshop -->
-                <!-- attendees will receive special edition swag</p> -->
-        </div>
+      <p class="white h3 col-lg-3 px-0">SpringOne Tour is back, in person, and coming to a city near you!</p>
     </div>
 </section>
 
 <section id="s1t-destinations-2022" class="row justify-content-center mb-5">
-    <div class="container">
-        <h2>Destinations 2022</h2>
+    <div class="container col-lg-9 col-12 px-0 mt-5">
+      <p class='text-white text-uppercase h5 mt-3 mb-5'>{{- .Params.subheader | default .Params.description |
+          markdownify }}</p>
+      {{ .Content }}
+        <h2>Cities</h2>
         <div class="row align-items-baseline mb-3">
             {{ range .Pages.ByDate }}
             <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
