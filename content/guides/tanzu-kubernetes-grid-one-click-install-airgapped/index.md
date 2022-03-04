@@ -399,7 +399,7 @@ The 1-click script has the following flow by default.
     ==> ubuntu-18.04: Waiting for instance (i-0d30b0d0342676867) to become ready...
     ```
 
-You will see the following upon completion.
+    You will see the following upon completion.
     
     ```sh
     ==> ubuntu-18.04: Waiting for AMI to become ready...
