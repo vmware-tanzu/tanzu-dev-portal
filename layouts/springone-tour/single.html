@@ -1,4 +1,6 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
+{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
+
 <section id="hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 pt-4 pb-5">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
@@ -10,7 +12,7 @@
                 </div>
             </div>
             <!-- <p class="-text-bright-green fs-90 pl-1"> -->
-                <!-- <img class="icon-gift" src="../../images/gift.svg" /> Workshop attendees will receive special edition swag -->
+            <!-- <img class="icon-gift" src="../../images/gift.svg" /> Workshop attendees will receive special edition swag -->
             <!-- </p> -->
         </div>
     </div>
@@ -25,7 +27,10 @@
                     {{ .Params.Date.Format "January 02" }}-{{ dateFormat "02" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
                 <p class="pt-0 mb-4 pb-2">{{ .Params.location }}</p>
-                <button type="button" class="btn btn-primary" data-bs-target="#register">Register Now</button>
+                <button id="register-btn" type="button" class="btn btn-primary" data-bs-target="#register">
+                    <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
+                    <span id="register-btn-text">Register Now</span>
+                </button>
             </div>
             <div id="s1t-map" class="col-lg-4 col-12">
                 <h1 class="text-center">Map Placeholder</h1>
@@ -74,7 +79,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6">
-                            <input type="email" class="form-control" name="email" placeholder="Email *" aria-required="Email Address" required />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" aria-required="Email Address" required />
                         </div>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job Title *" />
@@ -336,7 +341,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" name="discountCode" placeholder="Discount Code" />
+                            <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="Discount Code" />
                         </div>
                         <div class="col-sm-6">
                             <select name="tshirtSize" class="form-control">
@@ -355,9 +360,10 @@
                             <div id="card-element"></div>
                         </div>
                     </div>
+                    <div id="card-errors" role="alert"><p></p></div>
                     <button type="submit" id="submit" class="btn btn-primary" disabled aria-disabled="true">
-                        <div class="spinner hidden" id="spinner"></div>
-                        <span id="button-text">Pay now</span>
+                        <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
+                        <span id="payment-btn-text">Pay now</span>
                     </button>
                     <div id="payment-message" class="hidden"></div>
                 </form>
@@ -365,130 +371,6 @@
         </div>
     </div>
 </div>
-<script>
-    const regButton = $('#{{ $class }}-city-registration button.btn-primary');
-    const submitButton = $('#submit');
-    const regModal = $('#register');
-    const regForm = $('#register form');
-    const showRegistering = () => {
-        regButton.text('Registering...').append('<div class="spinner-border spinner-border-sm text-primary"></div>');
-        regModal.modal('toggle');
-    };
-
-    const stripe = Stripe('pk_test_AFX7PJdNXmyYWaGJw4iKa8Yh');
-    const order = { name: '{{ .Title}}' };
-    let card;
-    let clientSecret;
-
-    async function initialize() {
-        $.ajax({
-            url: '{{ cond .Site.IsServer "http://localhost:8448/api/stripe/create-payment-intent" "//TODO AWS URL" }}',
-            type: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify(order),
-            success: (resp) => {
-                clientSecret = resp.clientSecret;
-                const style = {
-                    base: {
-                        color: 'white',
-                        fontFamily: 'Arial, sans-serif',
-                        fontSmoothing: 'antialiased',
-                        fontSize: '16px',
-                        '::placeholder': {
-                            color: 'white',
-                        },
-                    },
-                    invalid: {
-                        fontFamily: 'Arial, sans-serif',
-                        color: '#fa755a',
-                        iconColor: '#fa755a',
-                    },
-                };
-                card = stripe.elements().create('card', { style: style });
-                card.mount('#card-element');
-                card.on('change', (e) => {
-                    console.log(e.empty);
-                    submitButton.attr({ disabled: e.empty, ['aria-disabled']: e.empty });
-                });
-            },
-            error: (resp) => {
-                $('#card-element').text(resp.responseText ? 'There was an issue setting up stripe: ' + resp.responseText : 'Unknown issue occurred.');
-            },
-        });
-    }
-
-    async function payWithCard(e) {
-        e.preventDefault();
-        setLoading(true);
-        const { error } = await stripe.confirmPayment({
-            elements,
-            confirmParams: {
-                return_url: '{{ .Permalink | absURL }}',
-            },
-        });
-        if (error.type === 'card_error' || error.type === 'validation_error') {
-            showMessage(error.message);
-        } else {
-            showMessage('An unexpected error occurred.');
-        }
-
-        setLoading(false);
-    }
-
-    async function checkStatus() {
-        const clientSecret = new URLSearchParams(window.location.search).get('payment_intent_client_secret');
-        if (!clientSecret) return;
-        const { paymentIntent } = await stripe.retrievePaymentIntent(clientSecret);
-        switch (paymentIntent.status) {
-            case 'succeeded':
-                showMessage('Payment succeeded!');
-                break;
-            case 'processing':
-                showMessage('Payment processing...');
-                break;
-            case 'requires_payment_method':
-                showMessage('Payment not successful, please try again.');
-                break;
-            default:
-                showMessage('Something went wrong.');
-                break;
-        }
-    }
-
-    async function handleSubmit(e) {
-        $.ajax({
-            beforeSend: () => {
-                // Remove error message if exists
-                regButton.siblings('br, small').empty();
-                showRegistering();
-            },
-            url: '{{ cond .Site.IsServer "http://localhost:8448/api/register" "//TODO Input aws url" }}',
-            type: 'post',
-            data: $(this).serialize(),
-            success: (resp) => {
-                regButton.before('Registration is set!').remove();
-            },
-            error: (resp) => {
-                regButton.after('<br><small>There was an error during registration please try again</small>');
-                regButton.empty().text('Try again');
-                alert(`${resp.statusText}: ${resp.responseText}`);
-            },
-            complete: () => {
-                setTimeout(() => {
-                    console.log('Complete');
-                }, 1000);
-            },
-        });
-    }
-
-    regButton.click(() => {
-        regModal.modal('toggle');
-        initialize();
-        checkStatus();
-    });
-    regForm.on('submit', handleSubmit);
-    
-</script>
 
 <section class="{{ $class }}-details">
     <div class="container">
@@ -541,4 +423,152 @@
         </div>
     </div>
 </section>
+
+<script>
+    const regBtn = $('#register-btn');
+    const subBtn = $('#submit');
+    const regModal = $('#register');
+    const regForm = $('#register form');
+
+    const stripe = Stripe('pk_test_AFX7PJdNXmyYWaGJw4iKa8Yh');
+
+    let card;
+    let clientSecret;
+
+    const setLoading = (el, bool) => {
+        if (bool) {
+            el.children('span').hide();
+            el.children('div').show();
+        } else {
+            el.children('span').show();
+            el.children('div').hide();
+        }
+    };
+
+    const disableRegistration = (resp) => {
+        if (resp.status === 'full') {
+            regBtn.attr('disabled', 'true');
+            regBtn.text('Registration is Full');
+        }
+    };
+
+    const handleSubmit = async () => {
+        let email = $('#email').val();
+        $.ajax({
+            url: '{{ print $apiEndpoint "/register/check-for-existing-registration"}}',
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            data: JSON.stringify({ email: email }),
+            success: (resp) => {
+                if (resp.status === 'not registered') {
+                    processStripePayment(email);
+                } else {
+                    alert(`${email} is already registered for {{ .Title }}`);
+                }
+            },
+            error: (err) => {
+                alert(`${err.statusText}: ${err.responseText}`);
+            },
+        });
+    };
+
+    const initStripe = () => {
+        const order = { name: '{{ .Title}}' };
+        $.ajax({
+            url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
+            type: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            data: JSON.stringify(order),
+            success: (resp) => {
+                clientSecret = resp.clientSecret;
+                const style = {
+                    base: {
+                        color: 'white',
+                        fontFamily: 'Arial, sans-serif',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '16px',
+                        '::placeholder': {
+                            color: 'white',
+                        },
+                    },
+                    invalid: {
+                        fontFamily: 'Arial, sans-serif',
+                        color: '#fa755a',
+                        iconColor: '#fa755a',
+                    },
+                };
+                card = stripe.elements().create('card', { style: style });
+                card.mount('#card-element');
+                card.on('change', (e) => {
+                    subBtn.attr({ disabled: e.empty, ['aria-disabled']: e.empty });
+                    $('#card-errors p').text(event.error ? event.error.message : '');
+                });
+            },
+            error: (resp) => {
+                $('#card-element').text(resp.responseText ? 'There was an issue setting up stripe: ' + resp.responseText : 'Unknown issue occurred.');
+            },
+        });
+    };
+
+    const processStripePayment = (email) => {
+        setLoading($('#submit'), true);
+        stripe
+            .confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: card,
+                    billing_details: { email: email },
+                },
+            })
+            .then((result) => {
+                if (result.error) {
+                    $('#card-errors p').text(result.error + ' please try again');
+                    setLoading($('#submit'), false);
+                } else {
+                    $('#card-errors p').empty();
+                    setLoading($('#submit'), false);
+                    registerUser(result.paymentIntent.id);
+                }
+            })
+            .catch((err) => {
+                setLoading($('#submit'), false);
+                alert(err);
+            });
+    };
+
+    const registerUser = (paymentIntent) => {
+        setLoading(regBtn, true);
+        regModal.modal('toggle');
+        $.ajax({
+            url: '{{ print $apiEndpoint "/register" }}' + `?intentId=${paymentIntent}`,
+            type: 'post',
+            data: regForm.serialize(),
+            success: (resp) => {
+                regBtn.before('Registration is set!').remove();
+            },
+            error: (resp) => {
+                $('#register-btn-text').text('Registration issue try again');
+                alert(`${resp.statusText}: ${resp.responseText}`);
+            },
+        });
+        setLoading(regBtn, false);
+    };
+
+    regForm.on('submit', (e) => {
+        e.preventDefault();
+        handleSubmit();
+    });
+
+    regBtn.click(() => {
+        regModal.modal('toggle');
+        initStripe();
+    });
+
+    $().ready(() => {
+        $.ajax({
+            url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
+            method: 'get',
+            success: disableRegistration,
+        });
+    });
+</script>
 {{ end }}
