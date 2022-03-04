@@ -562,6 +562,7 @@ Eads
 eBPF
 EBS
 EC2
+ec2messages
 ECE
 echoserver
 EclipseLink
@@ -575,6 +576,7 @@ EFS
 eg.
 egoless
 EKS
+elasticloadbalancing
 ElasticSearch
 ELB(s)?
 Eleftheria
@@ -1722,6 +1724,7 @@ Sébastien
 SecondaryRoutingFunction
 secretbox
 secretname
+secretsmanager
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -1808,6 +1811,7 @@ SSD
 ssh-keygen
 SSL
 SSM
+ssmmessages
 sso|SSO
 Stacker
 Standley

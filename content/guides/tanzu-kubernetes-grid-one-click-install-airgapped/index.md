@@ -25,10 +25,10 @@ In order to install Tanzu Kubernetes Grid for multi-cloud into an air-gapped env
     * STS
     * SSM
     * EC2
-    * `ec2messages`
-    * `elasticloadbalancing`
-    * `secretsmanager`
-    * `ssmmessages`
+    * ec2messages
+    * elasticloadbalancing
+    * secretsmanager
+    * ssmmessages
     * S3
 
 2. An AWS S3 bucket that is in the same AWS region as your `AirGapped` VPC. This will be used to store and retrieve the Tanzu Kubernetes Grid `1click` dependencies.
