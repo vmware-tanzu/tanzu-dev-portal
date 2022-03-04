@@ -135,6 +135,7 @@ audit2rbac
 Auditable
 auditd
 [Aa]uth(z|n)?
+Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
@@ -522,6 +523,7 @@ DistributedSystems
 DistributionMessageObserver
 DistributionStats
 DistributionSummary
+distro
 distroless
 distros
 DIY
@@ -2107,6 +2109,7 @@ yay
 YCombinator
 Yonis
 Yorker
+young-ish
 youtube
 YTT
 ytt(-templatized)?
