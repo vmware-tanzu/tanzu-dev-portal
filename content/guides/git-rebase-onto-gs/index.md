@@ -75,7 +75,7 @@ To put this into a semi-readable English sentence, you would say something like 
 
 Clear as mud? Here is an example.
 
-### Scenario 1: Move new-feature to a specific commit in main
+## Scenario 1: Move new-feature to a specific commit in main
 
 Go back to the previous example where you have a `new-feature` branch based on another `feature` branch. Say there was some bug fix, or a more stable implementation of a dependency merged into the main branch. 
 
