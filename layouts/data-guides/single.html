@@ -2,7 +2,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }} guide">
+  <body class="td-{{ .Kind }} td-{{ .Parent.Params.title | lower }}">
     {{ partial "amplitude.html" (dict "context" . "event" "guide viewed") }}
     <header>
       {{ partial "navbar.html" . }}
