@@ -696,14 +696,41 @@
 
 #hero.springone-tour-event-hero {
   background-color: #1B2A32 !important;
-  background-size: cover;
-  background-position: top;
-  background-image: url({{ "/images/springonetour/hero.svg" | relURL }});
-  min-height: 60vh;
+  background-size: contain;
+  background-position: top 50px right;
+  // background-position: right 50px;
+  background-image: url({{ "/images/springonetour/hero_skyline.svg" | relURL }});
+  .logo {
+    max-width: 20%;
+  }
+  @media(max-width: 1250px) {
+    background-size: cover;
+    background-position: bottom right;
+    min-height: 60vh;
+    background-size: 65%;
+  }
+  @media(max-width: 1000px) {
+    .logo {
+      display: none;
+    }
+    background-position: bottom;
+    padding-top: 2em;
+    .container p {
+      justify-content: center;
+    }
+  }
+}
+body#s1t-index {
+.city-tile a {
+  width: 33%;
+}
 }
 .light-mode #hero.springone-tour-event-hero {
   background-color: #fff !important;
   // filter: brightness(100%);
+  .logo,.logo-by {
+    fill: #000 !important;
+  }
   path {
     fill: #000;
   }
