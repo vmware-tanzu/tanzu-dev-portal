@@ -5,10 +5,6 @@
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
 
-Voicify
-PubConf
-Bixby
-SME
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -202,6 +198,7 @@ Bikewise
 biome
 [Bb]itnami('s)?
 Biville
+Bixby
 BKPR
 BlackBox
 blazingly
@@ -831,8 +828,8 @@ handleWANEvent
 handoff(s)?
 Hansson
 HAProxy
-[hH]ardcoded
 hardcode
+[hH]ardcoded
 HashiCorp('s)?
 hasResult
 HATEOAS
@@ -1559,6 +1556,7 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
+PubConf
 PubSub(bing)?
 Pulkit
 pullPolicy
@@ -1792,6 +1790,7 @@ slideshare
 SLO(s)?
 Sloka
 SmartTV
+SME
 SMI
 Smythe
 Snapchat
@@ -2064,6 +2063,7 @@ VMware
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
+Voicify
 Vonge
 VPA(s|'s)?
 VPC
