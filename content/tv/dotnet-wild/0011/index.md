@@ -11,7 +11,7 @@ explicit: 'yes'
 hosts:
 - Layla Porter
 lastmod: '2022-03-07'
-title: Alex Dunn and Layla talk about .NET, and playing video games with tyour voice!
+title: Alex Dunn and Layla talk about .NET, and playing video games with your voice!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
