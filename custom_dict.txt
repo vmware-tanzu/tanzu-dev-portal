@@ -70,7 +70,7 @@ Almar
 Alpine(-based)?
 Amaro
 amd64
-AMI
+AMI('s)?
 amongst
 AMQP
 [Aa]nalytics
@@ -565,6 +565,7 @@ Eads
 eBPF
 EBS
 EC2
+ec2messages
 ECE
 echoserver
 EclipseLink
@@ -578,6 +579,7 @@ EFS
 eg.
 egoless
 EKS
+elasticloadbalancing
 ElasticSearch
 ELB(s)?
 Eleftheria
@@ -689,6 +691,7 @@ Galystan
 Gamov
 Gandhi
 Gangway
+Gapped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -1734,6 +1737,7 @@ Sébastien
 SecondaryRoutingFunction
 secretbox
 secretname
+secretsmanager
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -1819,6 +1823,8 @@ Sri
 SSD
 ssh-keygen
 SSL
+SSM
+ssmmessages
 sso|SSO
 Stacker
 Standley
@@ -1835,6 +1841,7 @@ STDERR|stderr
 STDOUT|stdout
 Steeltoe
 Stéphane
+STIG
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
@@ -1844,6 +1851,7 @@ Strategyzer
 Stratton
 StringBuilder
 struct
+STS
 STT
 Styra
 sub(p|P)ath
