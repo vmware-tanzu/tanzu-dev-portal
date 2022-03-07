@@ -33,35 +33,101 @@ The first step is to include the dependencies and configuration needed to bring 
 
 The additional dependencies for Redis topics, GraphQL subscriptions, and Project Reactor are listed below. These have to be included along with the ones for Spring Boot. 
 
-![drawing](images/image-02.png)
-
+```java
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:7.0.1")
+}
+```
 Once the dependencies are added, the next step is to set up the reactive sink and flux configuration. The sink and flux are created as beans that will be injected into the subscriber and the GraphQL controller.
 
-![drawing](images/image-03.png)
+```java
+@Configuration
+class SubscriptionConfig {
+
+	@Bean
+	fun valueSink(): Sinks.Many<String> {
+		return Sinks.many().multicast().onBackpressureBuffer(20)
+	}
+
+	@Bean
+	fun valueFlux(): Flux<String> {
+		return valueSink().asFlux()
+	}
+}
+```
 
 Subsequent configuration is for Redis topic publishers and subscribers. The publisher will use the Redis template to put the messages in the topic queue and the subscriber class is passed to the `listenerAdapter` bean.
 
-![drawing](images/image-04.png)
+```java
+@Bean
+	fun redisCustomTemplate( 
+redisConnectionFactory: RedisConnectionFactory
+):RedisTemplate<String, Int> {
+		val redisTemplate =  RedisTemplate<String, Int>()
+		redisTemplate.setConnectionFactory(redisConnectionFactory)
+		return redisTemplate
+	}
+
+
+@Bean
+	fun listenerAdapter(redisSubscriber: RedisSubscriber): MessageListenerAdapter {
+		val messageListenerAdapter = MessageListenerAdapter(redisSubscriber)
+		return messageListenerAdapter
+	}
+```
 
 ## Redis publisher and subscriber with reactive programming
 
 Now that the Redis template configuration is completed, we will create the publisher. In this case, the publisher is simply scheduled to publish the numbers incremented by 5 to a Redis topic named “my-topic” every 5 seconds.
 
-![drawing](images/image-05.png)
+```java
+@Service
+class PublisherService(val redisCustomTemplate: RedisTemplate<String, String>) 
+{
+
+    private val topic: String = "my-topic"
+    private val counter: AtomicInteger = AtomicInteger()
+
+    @Scheduled(fixedRate = 5000)
+    fun publish() {
+        redisCustomTemplate.convertAndSend(topic, "${counter.addAndGet(5)}")
+    }
+}
+```
 
 Next, we incorporate Redis subscriber listening to the messages in the topic. The subscriber utilizes reactive programming to emit the same message in the sink for the GraphQL controller to consume. 
 
-![drawing](images/image-06.png)
+```java
+@Service
+class RedisSubscriber(val valueSink: Many<String>) {
+        fun handleMessage(value: String) {
+            valueSink.tryEmitNext(value)
+        }
+}
+```
 
 The final piece of the puzzle is the GraphQL subscription; we will create the GraphQL controller and link it with the `valueFlux` bean to receive the messages published by the Redis publisher and emitted in the sink by the Redis subscriber.
 
 The GraphQL schema file has a type declared for the subscription, that outputs string values.
 
-![drawing](images/image-07.png)
+```java
+type Subscription {
+    topicReads: String
+}
+```
 
 The subscription resolver uses the `valueFlux` bean to output messages emitted by the Redis subscriber, to the client.
 
-![drawing](images/image-08.png)
+```java
+class GraphQlController(val valueFlux: Flux<String>) : GraphQLSubscriptionResolver {
+
+    fun topicReads(): Publisher<String> {
+        return valueFlux.map { "The counter now sits at $it" }
+    }
+}
+```
 
 If the server has started on port 8080, then the GraphQL subscription can be run locally on [`http://localhost:8080/graphql`](http://localhost:8080/graphql) by providing the following body:
 
@@ -95,13 +161,53 @@ Finally, we can test out the entire integration as a Spring Boot test. In this e
 
 To begin, we should set up the `GraphQLTestSubscription` by auto-wiring the environment and object mapper.
 
-![drawing](images/image-09.png)
+```java
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class TopicReadSubscriptionTest {
+    
+
+   private lateinit var graphQLTestSubscription: GraphQLTestSubscription
+    
+   @Autowired
+    protected lateinit var environment: Environment
+    
+    @Autowired
+    protected lateinit var objectMapper: ObjectMapper
+    
+   @BeforeEach
+    fun setUp() {
+        graphQLTestSubscription = GraphQLTestSubscription(environment, objectMapper, "subscriptions")
+    }
+
+    @AfterEach
+    fun tearDown() {
+        graphQLTestSubscription.reset()
+    }
+```
+
 
 To write the test, we will start the subscription, pass it the path of the test subscription schema, and wait for 6 seconds, so we will have exactly two outputs from the subscription (the publisher is scheduled to publish every 5 seconds).
 
 Lastly, we will assert that response data contains the expected output from the controller and we have received exactly two of these outputs.
 
-![drawing](images/image-10.png)
+```java
+@Test
+    fun `can receive incremental numbers ` () {
+        val graphQLResponses: List<GraphQLResponse> =  graphQLTestSubscription
+            .start("subscription.graphql")
+            .awaitAndGetAllResponses(Duration.ofSeconds(6));
+
+        assertThat(graphQLResponses)
+            .extracting( {response: GraphQLResponse ->
+                response.get(
+                    "$.data.topicReads",
+                    String::class.java
+                )
+            })
+            .containsExactly(tuple("The counter now sits at 5"), tuple("The counter now sits at 10"))
+        assertThat(graphQLTestSubscription.isStopped)
+    }
+```
 
 ## Conclusion
 
