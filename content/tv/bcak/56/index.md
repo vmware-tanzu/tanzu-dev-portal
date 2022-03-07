@@ -15,7 +15,7 @@ minutes: 120
 episode: "56"
 explicit: "yes"
 title: "The next one about Ted Lasso"
-#youtube: ""
+youtube: "bQevF1gRN-M"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
