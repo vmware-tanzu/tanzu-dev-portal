@@ -5,6 +5,10 @@
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
 
+Voicify
+PubConf
+Bixby
+SME
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -139,6 +143,7 @@ Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
+authorisation
 AuthorizationPolicy
 authorizer
 Authorizer
@@ -414,6 +419,7 @@ CTRL-C
 currentClientConnections
 currentMetricValue(s)?
 CustomEntryConcurrentHashMap
+customisable
 customizability
 customizable
 customization(s)?
@@ -548,6 +554,7 @@ DoSec
 dotnetsdk
 Dre
 drf
+DrinkService
 dropdown
 Dropwizard
 Drotbohm
@@ -657,6 +664,7 @@ Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
 flyyy
+FoodService
 formatter
 FOSS
 foundaments
@@ -758,7 +766,9 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gif
 Gilardi
+Giphy
 GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
@@ -822,6 +832,7 @@ handoff(s)?
 Hansson
 HAProxy
 [hH]ardcoded
+hardcode
 HashiCorp('s)?
 hasResult
 HATEOAS
@@ -861,6 +872,8 @@ HSQLDB
 (Http|HTTP)ie
 (Http|HTTP)Proxy
 HttpBase
+HttpClientFactory
+HttpClients
 https?|HTTPS?
 HttpSession
 HumanOps
@@ -968,6 +981,8 @@ JDK's
 Jeffries
 Jernigan
 JetBrains
+Jetbrains
+jetbrains
 Jetstack
 JFrog
 JHipster
@@ -1119,6 +1134,7 @@ ldnug
 [Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
+learnt
 lego
 Lerman
 letsencrypt-staging
@@ -1331,6 +1347,7 @@ NoSQL
 NotificationListener
 npm
 NSX(-T|-SM)?
+NuGet
 nullable
 NYJavaSIG
 OAuth2?
@@ -2062,10 +2079,12 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+WASM
 Waterhouse
 WaveConfigObject
 waypoints
 WCF
+WebAPI
 webapp
 webapps_default
 Webber
@@ -2109,6 +2128,8 @@ Y2ffgg
 YAML|yaml
 Yaron
 YARP
+Yarp
+YARP's
 yay
 YCombinator
 Yonis
