@@ -637,6 +637,7 @@ FakeBankAccount
 Fakhouri
 Falco
 Fani
+fanout
 faq(s)?
 Fastlane
 favourite(s)?
@@ -1592,6 +1593,7 @@ RDBMS
 reachability
 reactively
 ReactiveUI
+ReactiveX
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
