@@ -274,6 +274,7 @@ Cedrick
 CEIP
 CentOS
 Ceph
+Cerner
 CertificateRequests
 CEST
 CF_API_ENDPOINT_URL
