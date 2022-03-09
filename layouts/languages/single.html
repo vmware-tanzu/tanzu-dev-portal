@@ -84,19 +84,9 @@
                     </div>
                 </div>
                 {{ end }}
-
-                <!-- Videos -->
-                {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
-                {{ if gt (len $videos) 0 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
-                    <div class='row'>
-                        {{ range first 3 $videos }}
-                            {{ partial (printf "%v-card.html" .Section) . }}
-                        {{ end }}
-                    </div>
-                </div>
-                {{ else if .Params.show }}
+               
+                <!-- Optional Show -->
+                {{ if .Params.show }}
                     {{ $alleps := where .Site.Pages "Section" "tv" }}
                     {{ $id := .Params.show }}
                     {{ $eps := slice }}
@@ -115,7 +105,19 @@
                             {{ end }}
                         </div>
                     </div>
+                {{ end }}
 
+                <!-- Videos -->
+                {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
+                {{ if gt (len $videos) 0 }}
+                <div class='container py-3 py-lg-5'>
+                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
+                    <div class='row'>
+                        {{ range first 3 $videos }}
+                            {{ partial (printf "%v-card.html" .Section) . }}
+                        {{ end }}
+                    </div>
+                </div>
                 {{ end }}
 
                 <!-- Getting Started -->
