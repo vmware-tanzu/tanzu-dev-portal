@@ -40,10 +40,11 @@
 </section>
 
 <script src="https://js.stripe.com/v3/"></script>
+
 <div id="register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="color: white; background-color: #1b2a32">
-            <div class="modal-header success">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
+        <div class="modal-content">
+            <div class="modal-header">
                 <h2 class="modal-title">Register</h2>
                 <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" style="color: white">&times;</span>
@@ -54,10 +55,10 @@
                     <input type="hidden" name="chargeValue" value="200" />
                     <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
                     <div class="form-row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3 pl-4 pr-0 mktoFormCol">
                             <input
                                 type="text"
-                                class="form-control"
+                                class="form-control pr-0"
                                 name="firstName"
                                 placeholder="First Name *"
                                 maxlength="50"
@@ -65,10 +66,10 @@
                                 required
                             />
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3 pl-0 pr-4 mktoFormCol">
                             <input
                                 type="text"
-                                class="form-control"
+                                class="form-control pl-0"
                                 name="lastName"
                                 placeholder="Last Name *"
                                 maxlength="50"
@@ -76,20 +77,20 @@
                                 required
                             />
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 mktoFormCol">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Email *" aria-required="Email Address" required />
                         </div>
-                        <div class="col-sm-6">
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6 mktoFormCol">
                             <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job Title *" />
+                        </div>
+                        <div class="col-sm-6 mktoFormCol">
+                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company *" maxlength="50" />
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company *" maxlength="50" />
-                        </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 mktoFormCol">
                             <select class="mktoField form-control" name="country" aria-selected="None">
                                 <option value="None" selected disabled hidden>Select a country *</option>
                                 <option value="United States">United States</option>
@@ -340,27 +341,61 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="Discount Code" />
+                        <div class="col-sm-6 mktoFormCol">
+                            <select id="dietaryRestrictions" name="dietaryRestrictions" class="mktoField form-control">
+                                <option value="None" selected hidden>Select dietary restrictions</option>
+                                <option value="None">None</option>
+                                <option value="Vegetarian">Vegetarian</option>
+                                <option value="Vegan">Vegan</option>
+                                <option value="Gluten-Free">Gluten-Free</option>
+                                <option value="Kosher">Kosher</option>
+                                <option value="Halal">Halal</option>
+                                <option value="Custom">Other/Allergies</option>
+                            </select>
+                            <input
+                                name="dietaryCustom"
+                                class="mktoField form-control"
+                                type="text"
+                                placeholder="Enter custom dietary restrictions."
+                                style="display: none"
+                            />
                         </div>
-                        <div class="col-sm-6">
-                            <select name="tshirtSize" class="form-control">
+                        <div class="col-sm-6 mktoFormCol">
+                            <select name="tshirtSize" class="mktoField form-control">
                                 <option value="none" selected hidden>Select T-Shirt Size *</option>
+                                <option value="xss">XX Small</option>
+                                <option value="xs">X Small</option>
                                 <option value="s">Small</option>
                                 <option value="m">Medium</option>
                                 <option value="l">Large</option>
                                 <option value="xl">X Large</option>
                                 <option value="xxl">XX Large</option>
+                                <option value="xxxl">XXX Large</option>
                             </select>
                         </div>
                     </div>
-                    <textarea name="dietaryRestrictions" placeholder="Enter dietary restrictions here..."></textarea>
+                    <div id="card-errors" role="alert"><p></p></div>
                     <div class="form-row">
                         <div class="col-12">
                             <div id="card-element"></div>
                         </div>
                     </div>
-                    <div id="card-errors" role="alert"><p></p></div>
+                    <div class="form-row">
+                        <div class="col-sm-4 col-6 mt-3 mktoFormCol">
+                            <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
+                        </div>
+                        <div class="col-sm-2 col-6">
+                            <button id="discount-btn" type="button" class="btn-apply">Apply</button>
+                        </div>
+                        <div class="col-sm-3 col-6 text-left">
+                            <p>Charge amount:</p>
+                            <p class="discount-notice" style="display: none">Discount Code Applied:</p>
+                        </div>
+                        <div class="col-sm-3 col-6 text-left">
+                            <p id="charge-amount">$0</p>
+                            <p class="discount-amount" style="display: none"></p>
+                        </div>
+                    </div>
                     <button type="submit" id="submit" class="btn btn-primary" disabled aria-disabled="true">
                         <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
                         <span id="payment-btn-text">Pay now</span>
@@ -426,6 +461,7 @@
 
 <script>
     const regBtn = $('#register-btn');
+    const discBtn = $('#discount-btn');
     const subBtn = $('#submit');
     const regModal = $('#register');
     const regForm = $('#register form');
@@ -434,6 +470,7 @@
 
     let card;
     let clientSecret;
+    let intentId;
 
     const setLoading = (el, bool) => {
         if (bool) {
@@ -452,28 +489,8 @@
         }
     };
 
-    const handleSubmit = async () => {
-        let email = $('#email').val();
-        $.ajax({
-            url: '{{ print $apiEndpoint "/register/check-for-existing-registration"}}',
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ email: email }),
-            success: (resp) => {
-                if (resp.status === 'not registered') {
-                    processStripePayment(email);
-                } else {
-                    alert(`${email} is already registered for {{ .Title }}`);
-                }
-            },
-            error: (err) => {
-                alert(`${err.statusText}: ${err.responseText}`);
-            },
-        });
-    };
-
     const initStripe = () => {
-        const order = { name: '{{ .Title}}' };
+        const order = { city: '{{ $cityName }}' };
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
             type: 'post',
@@ -481,6 +498,8 @@
             data: JSON.stringify(order),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
+                intentId = resp.id;
+                $('#charge-amount').text(`$${resp.amount}`);
                 const style = {
                     base: {
                         color: 'white',
@@ -506,6 +525,48 @@
             },
             error: (resp) => {
                 $('#card-element').text(resp.responseText ? 'There was an issue setting up stripe: ' + resp.responseText : 'Unknown issue occurred.');
+            },
+        });
+    };
+
+    const applyDiscounts = async (discountElement) => {
+        $.ajax({
+            url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            data: JSON.stringify({ city: '{{ $cityName }}', discount: discountElement.val() }),
+            success: (resp) => {
+                clientSecret = resp.clientSecret;
+                $('#charge-amount').text(`$${resp.amount}`);
+                $('.discount-notice').show().text('Successfully applied:');
+                $('.discount-amount').show().text(discountElement.val());
+            },
+            error: (resp) => {
+                console.log(resp);
+                $('.discount-notice').show().text('Error:');
+                $('.discount-amount')
+                    .show()
+                    .text(resp.responseText ? resp.responseText : 'Unknown error occurred');
+            },
+        });
+    };
+
+    const handleSubmit = async () => {
+        let email = $('#email').val();
+        $.ajax({
+            url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityName}}',
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            data: JSON.stringify({ email: email, firstCheck: true }),
+            success: (resp) => {
+                if (resp.status === 'not registered') {
+                    processStripePayment(email);
+                } else {
+                    alert(`${email} is already registered for {{ .Title }}`);
+                }
+            },
+            error: (err) => {
+                alert(`${err.statusText}: ${err.responseText}`);
             },
         });
     };
@@ -539,7 +600,7 @@
         setLoading(regBtn, true);
         regModal.modal('toggle');
         $.ajax({
-            url: '{{ print $apiEndpoint "/register" }}' + `?intentId=${paymentIntent}`,
+            url: '{{ print $apiEndpoint "/register?city=" $cityName }}' + `&intentId=${paymentIntent}`,
             type: 'post',
             data: regForm.serialize(),
             success: (resp) => {
@@ -552,6 +613,28 @@
         });
         setLoading(regBtn, false);
     };
+
+    $('#dietaryRestrictions').change((e) => {
+        if (e.target.value === 'Custom') {
+            $('#dietaryRestrictions').siblings('input').show();
+        } else {
+            $('#dietaryRestrictions').siblings('input').hide();
+        }
+    });
+
+    $('#discount-code').keyup((e) => {
+        const start = e.target.selectionStart;
+        const end = e.target.selectionEnd;
+        e.target.value = e.target.value.toUpperCase();
+        e.target.setSelectionRange(start, end);
+    });
+
+    discBtn.on('click', () => {
+        const el = $('#discount-code');
+        if (el.val() !== '') {
+            applyDiscounts(el);
+        }
+    });
 
     regForm.on('submit', (e) => {
         e.preventDefault();
@@ -569,6 +652,8 @@
             method: 'get',
             success: disableRegistration,
         });
+        regModal.modal('toggle');
+        initStripe();
     });
 </script>
 {{ end }}
