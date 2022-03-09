@@ -2,6 +2,7 @@
 Date: '2022-04-26T00:00:00-07:00'
 enddate: '2022-04-27T00:00:00-07:00'
 PublishDate: '2022-01-01T00:00:00-07:00'
+publish: true
 aliases:
   - /springone-tour/2022/chicago
 location:
