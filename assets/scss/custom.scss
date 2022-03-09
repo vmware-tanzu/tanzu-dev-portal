@@ -741,8 +741,8 @@
 body#s1t-index #s1t-destinations-2022 {
   .city-tile {
     background-repeat: no-repeat;
-    background-size: 50% 90%;
-    background-position: bottom right -0.5em;
+    background-size: auto 90%;
+    background-position: bottom right;
     &.toronto-tile {
       background-position: bottom right -1.5em;
     }

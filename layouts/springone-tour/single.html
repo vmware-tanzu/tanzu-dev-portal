@@ -409,28 +409,11 @@
             <div class="col-lg-9 col-12 px-0 mt-5">
                 {{ if .Params.calendar }}
                 <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
-                {{ end }} {{ .Content }}
-            </div>
+                {{ end }}
 
-            {{ with .Params.guests }}
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9 col-12 px-0">
-                    <h3 class="mb-3">Guests</h3>
-                    {{ range . }} {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-                    <div class="mb-4 pb-5">{{ partial "team-member.html" (dict "context" . "display" "tv") }}</div>
-                    {{ end }} {{ end }}
-                </div>
+                <p>SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.</p>
+                {{ .Content }}
             </div>
-            {{ end }} {{ with .Params.speakers }}
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-9 col-12 px-0">
-                    <h3 class="mb-3">Speakers</h3>
-                    {{ range . }} {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
-                    <div class="mb-4">{{ partial "team-member.html" (dict "context" . "display" "tv") }}</div>
-                    {{ end }} {{ end }}
-                </div>
-            </div>
-            {{ end }}
         </div>
         <div class="row justify-content-center mb-5 text-center">
             <div class="col-lg-9 col-12 px-0">
