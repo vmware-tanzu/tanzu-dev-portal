@@ -5,7 +5,6 @@
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
 
-Ϟ
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -663,6 +662,7 @@ Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
+FluxCD
 flyyy
 FoodService
 formatter
@@ -1535,6 +1535,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepaved
 prepend
 prepending
 Presales
@@ -2151,4 +2152,5 @@ Zou
 Zuul
 Zynga
 μServices
+Ϟ
 ϟ
