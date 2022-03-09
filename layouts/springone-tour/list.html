@@ -1,19 +1,16 @@
 {{ define "main" }}
-
 {{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
-
 {{ $class := replace .Page.Section "." "-" | lower }}
 
-<section id="hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 py-lg-5">
+<section id="hero" class="{{ $class }}-event-hero s1t-index mt-7">
     <div class="ml-5 container">
       <p class="mb-5 white h3 col-lg-3 px-0">SpringOne Tour is back, in person, and coming to a city near you!</p>
-      <img class="logo" src='{{"/images/springonetour/hero_logo_white.svg" | relURL }}'/>
+      <img class="logo mb-5" src='{{"/images/springonetour/hero_logo_white.svg" | relURL }}'/>
     </div>
 </section>
 
 <section id="s1t-destinations-2022" class="row justify-content-center mb-5">
     <div class="container col-lg-9 col-12">
-      <!-- px-0  -->
 <div class="mt-5 mb-5">
       {{ .Content }}
 </div>
@@ -28,7 +25,8 @@
                         <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
                     </div>
                     {{ else }} -->
-                    <div class='video-description d-flex flex-column justify-content-between'>
+                    <div class='video-description d-flex flex-column'>
+<!--                        <h3 class='text-white mt-0'> {{.Title}} </h3>-->
                         <p class='text-white mt-0'> {{.Title}} </p>
                         <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2" (substr .Date 0 10)}}-{{
                             dateFormat "2" (substr .Params.enddate 0 10)}}</p>

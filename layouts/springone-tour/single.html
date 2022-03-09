@@ -1,40 +1,36 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
+{{ define "main" }}
+{{ $class := replace .Page.Section "." "-" | lower }}
+{{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
 {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
+{{ $logo_path := .Params.logo_path | relURL }}
 
-<section id="hero" class="{{ $class }}-event-hero bg-gray-dark mt-7 pt-4 pb-5">
+<style>
+  #hero.springone-tour-event-hero.s1t-city {
+      background-image: url({{ $logo_path }});
+  }
+</style>
+
+<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 pt-4 pb-5">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
         <div class="row justify-content-between">
-            <div class="col-lg-11 px-0">
-                <h1 class="h1 mt-4 pt-2">{{ .Parent.Title -}}</h1>
-                <div class="lead">
-                    <p>{{- .Parent.Params.description_episodes | markdownify }}</p>
-                </div>
-            </div>
-            <!-- <p class="-text-bright-green fs-90 pl-1"> -->
-            <!-- <img class="icon-gift" src="../../images/gift.svg" /> Workshop attendees will receive special edition swag -->
-            <!-- </p> -->
-        </div>
-    </div>
-</section>
-
-<section id="{{ $class }}-city-registration">
-    <div class="container">
-        <div class="row justify-content-center mt-5 pt-3">
-            <div class="col-lg-4 col-12 mb-5 pl-0">
-                <h2 class="pt-0 mb-4 pb-2">{{- .Title -}}</h2>
-                <h3 class="pt-0 mb-4 pb-2">
+            <div class="ml-5 container">
+                <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Title -}}</h1>
+                <h3 class="h3 pt-0 mb-4 pb-2">
                     {{ .Params.Date.Format "January 02" }}-{{ dateFormat "02" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
-                <p class="pt-0 mb-4 pb-2">{{ .Params.location }}</p>
-                <button id="register-btn" type="button" class="btn btn-primary" data-bs-target="#register">
+                {{ range .Params.location }}
+                <p class="mt-0 mb-0">
+                    {{ . }}
+                </p>
+                {{ end }}
+
+                <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
                     <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
                     <span id="register-btn-text">Register Now</span>
                 </button>
             </div>
-            <div id="s1t-map" class="col-lg-4 col-12">
-                <h1 class="text-center">Map Placeholder</h1>
-            </div>
+
         </div>
     </div>
 </section>
@@ -450,14 +446,15 @@
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
                     <a
-                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
-                        ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
+                            href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
+                    ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
                     >
                 </div>
             </div>
         </div>
     </div>
 </section>
+</div>
 
 <script>
     const regBtn = $('#register-btn');
