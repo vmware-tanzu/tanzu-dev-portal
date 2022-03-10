@@ -1,8 +1,7 @@
-{{ define "main" }} 
-{{ $class := replace .Page.Section "." "-" | lower }} 
+{{ define "main" }}
+{{ $class := replace .Page.Section "." "-" | lower }}
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
-{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} 
-{{ $logo_path := .Params.logo_path | relURL }}
+{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }}
 
 <style>
     #hero.springone-tour-event-hero.s1t-city {
@@ -411,10 +410,19 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-                <p>SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.</p>
-                <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
-                <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
-                    <a href="mailto:tanzu-fieldmarketing@vmware.com">tanzu-fieldmarketing@vmware.com</a>.</p>
+                <p>
+                    SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to
+                    see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.
+                </p>
+                <p>
+                    Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the
+                    city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.
+                </p>
+                <p>
+                    Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your
+                    business needs. For more information, please reach out to
+                    <a href="mailto:tanzu-fieldmarketing@vmware.com">tanzu-fieldmarketing@vmware.com</a>.
+                </p>
 
                 {{ .Content }}
             </div>
@@ -432,7 +440,10 @@
         <div class="row justify-content-center mb-5 text-center">
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
-                    <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+                    <a
+                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
+                        ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
+                    >
                 </div>
             </div>
         </div>
@@ -570,6 +581,7 @@
             type: 'post',
             data: regForm.serialize(),
             success: (resp) => {
+                setLoading($('#submit'), false);
                 $('#register .modal-title').text('Successful Payment and Registration');
                 $('#register form').hide();
                 $('#register .success-banner').show();
@@ -580,7 +592,6 @@
                 alert(`${resp.statusText}: ${resp.responseText}`);
             },
         });
-        setLoading($('#submit'), false);
     };
 
     $('#dietaryRestrictions').change((e) => {
@@ -619,6 +630,12 @@
         $.ajax({
             url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
             method: 'get',
+            success: (resp) => {
+                if (resp.status === 'not open') {
+                    regBtn.attr('disabled', 'true');
+                    regBtn.text(`Registration is ${resp.status}`);
+                }
+            },
             error: (resp) => {
                 regBtn.attr('disabled', 'true');
                 regBtn.text(`Registration is ${resp.responseJSON.status}`);
