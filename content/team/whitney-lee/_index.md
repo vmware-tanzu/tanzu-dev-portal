@@ -6,7 +6,7 @@ skills: ["Kubernetes"]
 location: "Austin"
 
 # Social Media 
-twitter: "@wiggitywhitney"
+twitter: "wiggitywhitney"
 website: ""
 facebook: ""
 linkedin: "whitneylee"
