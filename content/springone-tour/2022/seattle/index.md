@@ -12,7 +12,6 @@ code_of_conduct: true
 logo_path: /images/springonetour/seattle_cityscape.svg
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
-# date: '2022-04-26'
 hide_newsletter: true
 lastmod: '2022-02-09'
 no_episode_title: true

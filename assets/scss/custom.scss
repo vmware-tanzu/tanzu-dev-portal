@@ -743,12 +743,6 @@ body#s1t-index #s1t-destinations-2022 {
     background-repeat: no-repeat;
     background-size: auto 90%;
     background-position: bottom right;
-    &.toronto-tile {
-      // background-position: bottom right -1.5em;
-    }
-    &.amsterdam-tile {
-      // background-position: bottom -0.5em right -0.5em;
-    }
   }
   a {
     width: 33%;
@@ -762,5 +756,31 @@ body#s1t-index #s1t-destinations-2022 {
     transition: background-color 0.25s;
     font-size: 1.0625rem;
     height: 177px;
+  }
+}
+body#s1t-index {
+  #register {
+    display: none;
+  }
+  .agenda, .talk-modal {
+    background-color: #22343c;
+  }
+  .day-toggle .day {
+    &:not(.active) {
+      border: #1b2a32 2px solid;
+      background-color:  #1b2a32;
+    }
+    &.active {
+      background-color:  #22343c;
+      border: none;
+    }
+  }
+  .name .lightbox {
+    display: block;
+  }
+  .talk-modal, .speaker-modal {
+    display:none;
+    width:600px;
+    max-width:100%;
   }
 }
