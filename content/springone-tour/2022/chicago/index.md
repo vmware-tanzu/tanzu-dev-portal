@@ -6,6 +6,7 @@ publish: true
 aliases:
     - /springone-tour/2022/chicago
 location:
+    - 'Convene'
     - '16 West Adams Street'
     - 'Chicago, IL'
 calendar: true
@@ -19,7 +20,7 @@ lastmod: '2022-02-09'
 no_episode_title: true
 no_streaming_label: true
 title: Chicago
-city_takeover: "As a part of the citywide takeover, Spring Developer Advocates DaShaun Carter and Josh Long will be presenting their talk, “Bootiful GraalVM”, at the Chicago Java User Group on Monday, April 25, at 7 PM."
+meetup: "As a part of the citywide takeover, Spring Developer Advocates DaShaun Carter and Josh Long will be presenting their talk, “Bootiful GraalVM”, at the Chicago Java User Group on Monday, April 25, at 7 PM."
 ---
 
 <div class="day-toggle row mt-5">

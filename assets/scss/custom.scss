@@ -697,24 +697,12 @@
   }
 }
 
+.springone-tour .td-main {
+  background-color: #0B1C23 !important;
+}
 #hero.springone-tour-event-hero {
-  background-color: #1b2a32;
-}
-#hero.springone-tour-event-hero.s1t-city {
-  background-size: auto 90%;
-  background-position: bottom right;
-  #register-btn {
-    font-weight: 400;
-    background: #80ea6e;
-    color: #1b2a32;
-    &:hover {
-      background: #02bc67;
-      color: #fff;
-    }
-  }
-}
-#hero.springone-tour-event-hero.s1t-index {
   background-size: 65%;
+  background-color: #1b2a32;
   background-position: bottom -0.7rem right;
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
   max-height: 60vh;
@@ -738,10 +726,28 @@
     }
   }
 }
-.springone-tour .td-main {
-  background-color: #0B1C23 !important;
+#hero.springone-tour-event-hero.s1t-city {
+  @media(max-width: 991px) {
+    background-size: 60%;
+    background-position: bottom right;
+  }
+  #register-btn {
+    font-weight: 400;
+    background: #80ea6e;
+    color: #1b2a32;
+    &:hover {
+      background: #02bc67;
+      color: #fff;
+    }
+  }
 }
 body#s1t-index #s1t-destinations-2022 {
+  a {
+    width: 33%;
+    @media(max-width: 990px) {
+      width: 40%;
+    }
+  }
   .city-tile {
     background-repeat: no-repeat;
     background-size: auto 90%;
@@ -751,14 +757,7 @@ body#s1t-index #s1t-destinations-2022 {
       background-color: #324f61;
     }
   }
-  a {
-    width: 33%;
-    @media(max-width: 990px) {
-      width: 40%;
-    }
-  }
   .city-tile-text {
-    // background-color: #1b2a32;
     padding: 20px 25px;
     transition: background-color 0.25s;
     font-size: 1.0625rem;
@@ -774,9 +773,6 @@ body#s1t-index {
       }
     }
   }
-  .agenda {
-    background-color: #22343c;
-  }
   .day-toggle .day {
     &:not(.active) {
       border: #1b2a32 2px solid;
@@ -786,6 +782,9 @@ body#s1t-index {
       background-color: #22343c;
       border: none;
     }
+  }
+  .agenda {
+    background-color: #22343c;
   }
   .name .lightbox {
     display: block;
@@ -806,7 +805,7 @@ body#s1t-index {
   .td-main {
     background-color: #ffffff !important;
   }
-  #hero.springone-tour-event-hero {
+  #hero {
     background-color: #fff !important;
     .logo {
       content: url('{{ "/images/springonetour/hero_logo_black.svg" | relURL }}');

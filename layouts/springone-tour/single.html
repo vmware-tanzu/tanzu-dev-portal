@@ -6,7 +6,7 @@
 
 <style>
     #hero.springone-tour-event-hero.s1t-city {
-        background-image: url('{{ $logo_path }}');
+        /* background-image: url('{{ $logo_path }}'); */
     }
 </style>
 
@@ -418,15 +418,14 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-              {{ if isset .Params "city_takeover" }}
-                <h3 class="">City Takeover</h3>
-                {{- .Params.city_takeover -}}
-                &nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.
-              {{ else }}
-                <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
-              {{ end }}
+              <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
 
               {{ .Content }}
+
+              {{ if isset .Params "meetup" }}
+              <h3 class="mt-5">Meetup</h3>
+                <p>{{- .Params.meetup -}}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+              {{ end }}
 
               <h3 class="mt-5">Lead/Forward</h3>
               <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
@@ -634,7 +633,7 @@
             url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
             method: 'get',
             error: (resp) => {
-                regBtn.attr('disabled', 'true');
+                // regBtn.attr('disabled', 'true');
                 regBtn.text(`Registration is ${resp.responseJSON.status}`);
             },
         });
