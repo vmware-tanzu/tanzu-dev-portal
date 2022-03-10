@@ -3,6 +3,7 @@
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
 {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
 {{ $logo_path := .Params.logo_path | relURL }}
+{{ $isRegOpen := isset .Params "location" }}
 
 <style>
     #hero.springone-tour-event-hero.s1t-city {
@@ -19,7 +20,7 @@
                 <h3 class="h3 pt-0 mb-4 pb-2">
                     {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
-                {{ if isset .Params "location" }}
+                {{ if $isRegOpen }}
                   {{ range .Params.location }}
                   <p class="mt-0 mb-0">
                       {{ . }}
@@ -37,9 +38,8 @@
     </div>
 </section>
 
-{{ if isset .Params "location" }}
+{{ if $isRegOpen }}
 <script src="https://js.stripe.com/v3/"></script>
-
 <div id="register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
         <div class="modal-content">
@@ -418,7 +418,10 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-              <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
+              <p>
+                Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community.
+                {{ if not $isRegOpen }} Stay tuned for more details.{{ end }}
+              </p>
 
               {{ .Content }}
 

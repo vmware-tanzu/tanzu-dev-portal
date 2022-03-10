@@ -806,7 +806,7 @@ body#s1t-index {
 }
 .light-mode body#s1t-index {
   .td-main {
-    background-color: #ffffff !important;
+    background-color: #fff !important;
   }
   #hero {
     background-color: #fff !important;
@@ -814,15 +814,28 @@ body#s1t-index {
       content: url('{{ "/images/springonetour/hero_logo_black.svg" | relURL }}');
     }
   }
-  .agenda, .talk-modal, .speaker-modal {
+  .agenda, .talk-modal, .speaker-modal, .city-tile {
     background-color: #f4f8fa!important;
   }
-  #register-btn {
-    background-color: #28333c !important;
-    color: white !important;
+  .city-tile {
     &:hover {
-        color: #28333c !important;
-        background-color: white !important;
+      background-color: #fff !important;
+    }
+  }
+  #register-btn {
+
+    // a {
+    //   color: #02bc67;
+    //   &:hover {
+    //     color: #80ea6e;
+    //   }
+    // }
+    //
+    color: #02bc67 !important;
+    background-color: white !important;
+    &:hover {
+        background-color: #02bc67 !important;
+        color: white !important;
     }
   }
 }

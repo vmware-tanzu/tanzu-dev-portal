@@ -18,7 +18,7 @@ description_episodes:
 # Any content below here shows up above episode index
 ---
 
-It’s our vibrant, in-person, two-day event for the Spring developer community, and it’s touring across the world. It’s the SpringOne Tour!
+It’s our vibrant, in-person, two-day event for the Spring developer community, and it’s touring across the world. Join us for the SpringOne Tour!
 
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 
