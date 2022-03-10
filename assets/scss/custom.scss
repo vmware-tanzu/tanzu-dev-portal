@@ -703,6 +703,15 @@
 #hero.springone-tour-event-hero.s1t-city {
   background-size: 26%;
   background-position: bottom right;
+  #register-btn {
+    font-weight: 400;
+    background: #80ea6e;
+    color: #1b2a32;
+    &:hover {
+      background: #02bc67;
+      color: #fff;
+    }
+  }
 }
 #hero.springone-tour-event-hero.s1t-index {
   background-size: 65%;
@@ -743,12 +752,6 @@ body#s1t-index #s1t-destinations-2022 {
     background-repeat: no-repeat;
     background-size: auto 90%;
     background-position: bottom right;
-    &.toronto-tile {
-      background-position: bottom right -1.5em;
-    }
-    &.amsterdam-tile {
-      background-position: bottom -0.5em right -0.5em;
-    }
   }
   a {
     width: 33%;
@@ -762,5 +765,40 @@ body#s1t-index #s1t-destinations-2022 {
     transition: background-color 0.25s;
     font-size: 1.0625rem;
     height: 177px;
+  }
+}
+body#s1t-index {
+  .springone-tour-details {
+    a {
+      color: #02bc67;
+      &:hover {
+        color: #80ea6e;
+      }
+    }
+  }
+  .agenda, .talk-modal {
+    background-color: #22343c;
+    a[title=Close].fancybox-close:before {
+      color: #02bc67;
+    }
+  }
+  .day-toggle .day {
+    &:not(.active) {
+      border: #1b2a32 2px solid;
+      background-color: #1b2a32;
+    }
+    &.active {
+      background-color: #22343c;
+      border: none;
+    }
+  }
+  .name .lightbox {
+    display: block;
+  }
+  .talk-modal, .speaker-modal {
+    display: none;
+    width: 700px;
+    max-width: 100%;
+    background-color: #1b2a32;
   }
 }
