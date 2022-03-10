@@ -1,7 +1,7 @@
-{{ define "main" }} 
-{{ $class := replace .Page.Section "." "-" | lower }} 
+{{ define "main" }}
+{{ $class := replace .Page.Section "." "-" | lower }}
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
-{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} 
+{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
 {{ $logo_path := .Params.logo_path | relURL }}
 
 <style>
@@ -17,21 +17,25 @@
             <div class="ml-5 container">
                 <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Title -}}</h1>
                 <h3 class="h3 pt-0 mb-4 pb-2">
-                    {{ .Params.Date.Format "January 02" }}-{{ dateFormat "02" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
+                    {{ .Params.Date.Format "January 2" }}-{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
-                {{ range .Params.location }}
-                <p class="mt-0 mb-0">{{ . }}</p>
-                {{ end }}
-
-                <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
-                    <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
-                    <span id="register-btn-text">Register Now</span>
-                </button>
+                {{ if isset .Params "location" }}
+                  {{ range .Params.location }}
+                  <p class="mt-0 mb-0">
+                      {{ . }}
+                  </p>
+                  {{ end }}
+                  <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
+                      <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
+                      <span id="register-btn-text">Register Now</span>
+                  </button>
+                  {{ end }}
             </div>
         </div>
     </div>
 </section>
 
+{{ if isset .Params "location" }}
 <script src="https://js.stripe.com/v3/"></script>
 
 <div id="register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
@@ -406,6 +410,7 @@
         </div>
     </div>
 </div>
+{{ end }}
 
 <section class="{{ $class }}-details">
     <div class="container">

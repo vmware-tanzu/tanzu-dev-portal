@@ -11,13 +11,13 @@
 
 <section id="s1t-destinations-2022" class="row justify-content-center mb-5">
     <div class="container col-lg-9 col-12">
-<div class="mt-5 mb-5">
-      {{ .Content }}
-</div>
-        <h2>Cities</h2>
-        <div class="row justify-content-lg-start mb-3">
-            {{ range .Pages.ByDate }}
-              {{ if .Params.publish }}
+      <div class="mt-5 mb-5">
+        {{ .Content }}
+      </div>
+      <h2>Cities</h2>
+      <div class="row justify-content-lg-start mb-3">
+          {{ range .Pages.ByDate }}
+            {{ if .Params.publish }}
             <a class='mb-5' href="{{ .RelPermalink }}">
                 <div class='city-tile {{ .Params.title | lower }}-tile col-4-thumbnail col-lg-11 col-12 px-0 overflow-hidden position-relative'
                 style='background-image: url("{{ .Params.logo_path | relURL }}");'>
@@ -29,8 +29,8 @@
                 </div>
             </a>
             {{ end }}
-            {{ end }}
-        </div>
+          {{ end }}
+      </div>
     </div>
 </section>
 
