@@ -9,7 +9,7 @@ guests:
 - Rick Osowski
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "UgzIwoxX7Wg"
 lastmod: '2020-10-09'
 title: How Do You Deploy a Stateless Application on Kubernetes?
 twitch: vmwaretanzu
@@ -21,4 +21,4 @@ Where exactly does your application run in the cluster, and how does Kubernetes 
 it?  How do different parts of an application communicate with one another?  Join host Whitney Lee
 and her guest (and mentor!) Rick Osowski as they discuss the answers to these questions and more!
 
-\(^-^)/
+\\(^-^)/
