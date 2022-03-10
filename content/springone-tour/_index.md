@@ -22,4 +22,4 @@ It’s our vibrant, in-person, two-day event for the Spring developer community,
 
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 
-It’s time to take your existing applications to the next level. Join us for the SpringOne Tour.
+It’s time to take your existing applications to the next level.

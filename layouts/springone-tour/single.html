@@ -17,7 +17,7 @@
             <div class="ml-5 container">
                 <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Title -}}</h1>
                 <h3 class="h3 pt-0 mb-4 pb-2">
-                    {{ .Params.Date.Format "January 2" }}-{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
+                    {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
                 {{ if isset .Params "location" }}
                   {{ range .Params.location }}
@@ -29,7 +29,9 @@
                       <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
                       <span id="register-btn-text">Register Now</span>
                   </button>
-                  {{ end }}
+                {{ else }}
+                  <p class="mt-0 mb-0">More details coming soon!</p>
+                {{ end }}
             </div>
         </div>
     </div>
@@ -416,15 +418,22 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-                <p>SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.</p>
+              {{ if isset .Params "city_takeover" }}
+                <h3 class="">City Takeover</h3>
+                {{- .Params.city_takeover -}}
+                &nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.
+              {{ else }}
                 <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
-                <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
-                    <a href="mailto:tanzu-fieldmarketing@vmware.com">tanzu-fieldmarketing@vmware.com</a>.</p>
+              {{ end }}
 
-                {{ .Content }}
+              {{ .Content }}
+
+              <h3 class="mt-5">Lead/Forward</h3>
+              <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
+              <a href="mailto:tanzu-fieldmarketing@vmware.com">tanzu-fieldmarketing@vmware.com</a>.</p>
             </div>
         </div>
-        <div class="row justify-content-center mb-5 text-center">
+        <div class="row justify-content-center mb-5 mt-5 text-center">
             <div class="col-lg-9 col-12 px-0">
                 <p>
                     Questions?
