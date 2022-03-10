@@ -1,13 +1,13 @@
-{{ define "main" }}
-{{ $class := replace .Page.Section "." "-" | lower }}
+{{ define "main" }} 
+{{ $class := replace .Page.Section "." "-" | lower }} 
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
-{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
+{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} 
 {{ $logo_path := .Params.logo_path | relURL }}
 
 <style>
-  #hero.springone-tour-event-hero.s1t-city {
-      background-image: url({{ $logo_path }});
-  }
+    #hero.springone-tour-event-hero.s1t-city {
+        background-image: url('{{ $logo_path }}');
+    }
 </style>
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 pt-4 pb-5">
@@ -20,9 +20,7 @@
                     {{ .Params.Date.Format "January 02" }}-{{ dateFormat "02" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
                 {{ range .Params.location }}
-                <p class="mt-0 mb-0">
-                    {{ . }}
-                </p>
+                <p class="mt-0 mb-0">{{ . }}</p>
                 {{ end }}
 
                 <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
@@ -30,7 +28,6 @@
                     <span id="register-btn-text">Register Now</span>
                 </button>
             </div>
-
         </div>
     </div>
 </section>
@@ -335,8 +332,6 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="col-sm-6 mktoFormCol">
                             <select id="dietaryRestrictions" name="dietaryRestrictions" class="mktoField form-control">
                                 <option value="None" selected hidden>Select dietary restrictions</option>
@@ -348,14 +343,9 @@
                                 <option value="Halal">Halal</option>
                                 <option value="Custom">Other/Allergies</option>
                             </select>
-                            <input
-                                name="dietaryCustom"
-                                class="mktoField form-control"
-                                type="text"
-                                placeholder="Enter custom dietary restrictions."
-                                style="display: none"
-                            />
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="col-sm-6 mktoFormCol">
                             <select name="tshirtSize" class="mktoField form-control">
                                 <option value="none" selected hidden>Select T-Shirt Size *</option>
@@ -369,6 +359,15 @@
                                 <option value="xxxl">XXX Large</option>
                             </select>
                         </div>
+                        <div class="col-sm-6 mktoFormCol">
+                            <input
+                                name="dietaryCustom"
+                                class="mktoField form-control dietary-custom"
+                                type="text"
+                                placeholder="Enter custom dietary restrictions."
+                                style="display: none"
+                            />
+                        </div>
                     </div>
                     <div id="card-errors" role="alert"><p></p></div>
                     <div class="form-row">
@@ -379,17 +378,18 @@
                     <div class="form-row">
                         <div class="col-sm-4 col-6 mt-3 mktoFormCol">
                             <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
+                            <p class="discount-notice" style="display: none"></p>
                         </div>
                         <div class="col-sm-2 col-6">
                             <button id="discount-btn" type="button" class="btn-apply">Apply</button>
                         </div>
                         <div class="col-sm-3 col-6 text-left">
-                            <p>Charge amount:</p>
-                            <p class="discount-notice" style="display: none">Discount Code Applied:</p>
+                            <p class="charge-label">Charge total:</p>
+                            <p class="discount-label" style="display: none">After discount:</p>
                         </div>
                         <div class="col-sm-3 col-6 text-left">
-                            <p id="charge-amount">$0</p>
-                            <p class="discount-amount" style="display: none"></p>
+                            <p class="charge-total">$0</p>
+                            <p class="discount-total" style="display: none"></p>
                         </div>
                     </div>
                     <button type="submit" id="submit" class="btn btn-primary" disabled aria-disabled="true">
@@ -398,6 +398,10 @@
                     </button>
                     <div id="payment-message" class="hidden"></div>
                 </form>
+                <div class="success-banner" style="display: none">
+                    <h3>Thank you for registering!</h3>
+                    <p>We look forward to seeing you soon!</p>
+                </div>
             </div>
         </div>
     </div>
@@ -411,7 +415,10 @@
                 <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
                 {{ end }}
 
-                <p>SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.</p>
+                <p>
+                    SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to
+                    see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.
+                </p>
                 {{ .Content }}
             </div>
         </div>
@@ -429,15 +436,14 @@
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
                     <a
-                            href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
-                    ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
+                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
+                        ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
                     >
                 </div>
             </div>
         </div>
     </div>
 </section>
-</div>
 
 <script>
     const regBtn = $('#register-btn');
@@ -462,24 +468,16 @@
         }
     };
 
-    const disableRegistration = (resp) => {
-        if (resp.status === 'full') {
-            regBtn.attr('disabled', 'true');
-            regBtn.text('Registration is Full');
-        }
-    };
-
     const initStripe = () => {
-        const order = { city: '{{ $cityName }}' };
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
             type: 'post',
             headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify(order),
+            data: JSON.stringify({ city: '{{ $cityName }}' }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
-                $('#charge-amount').text(`$${resp.amount}`);
+                $('.charge-total').text(`$${resp.amount}`);
                 const style = {
                     base: {
                         color: 'white',
@@ -517,15 +515,19 @@
             data: JSON.stringify({ city: '{{ $cityName }}', discount: discountElement.val() }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
-                $('#charge-amount').text(`$${resp.amount}`);
-                $('.discount-notice').show().text('Successfully applied:');
-                $('.discount-amount').show().text(discountElement.val());
+                $('.charge-label').text('Before discount:');
+                $('.discount-notice').show().text(`${discountElement.val()} applied`).css('color', 'green');
+                $('.discount-label').show();
+                $('.discount-total').show().text(`$${resp.amount}`).css('color', 'green');
             },
             error: (resp) => {
-                $('.discount-notice').show().text('Error:');
-                $('.discount-amount')
+                $('.charge-label').text('Charge total:');
+                $('.discount-label').hide();
+                $('.discount-total').hide();
+                $('.discount-notice')
                     .show()
-                    .text(resp.responseText ? resp.responseText : 'Unknown error occurred');
+                    .text(resp.responseText ? resp.responseText : 'Unknown issue with discount code')
+                    .css('color', 'red');
             },
         });
     };
@@ -534,15 +536,12 @@
         $.ajax({
             url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityName}}',
             method: 'post',
-            headers: { 'Content-Type': 'application/json' },
             data: regForm.serialize(),
             success: (resp) => {
                 processStripePayment(resp);
             },
             error: (err) => {
                 alert(`${err.statusText}: ${err.responseText}`);
-                regModal.modal('toggle');
-                regBtn.text(err.responseText);
             },
         });
     };
@@ -562,7 +561,6 @@
                     setLoading($('#submit'), false);
                 } else {
                     $('#card-errors p').empty();
-                    setLoading($('#submit'), false);
                     registerUser(result.paymentIntent.id);
                 }
             })
@@ -573,28 +571,29 @@
     };
 
     const registerUser = (paymentIntent) => {
-        setLoading(regBtn, true);
-        regModal.modal('toggle');
         $.ajax({
             url: '{{ print $apiEndpoint "/register?city=" $cityName }}' + `&intentId=${paymentIntent}`,
             type: 'post',
             data: regForm.serialize(),
             success: (resp) => {
-                regBtn.before('Registration is set!').remove();
+                $('#register .modal-title').text('Successful Payment and Registration');
+                $('#register form').hide();
+                $('#register .success-banner').show();
+                regBtn.before('Registration is all set!').remove();
             },
             error: (resp) => {
                 $('#register-btn-text').text('Registration issue try again');
                 alert(`${resp.statusText}: ${resp.responseText}`);
             },
         });
-        setLoading(regBtn, false);
+        setLoading($('#submit'), false);
     };
 
     $('#dietaryRestrictions').change((e) => {
         if (e.target.value === 'Custom') {
-            $('#dietaryRestrictions').siblings('input').show();
+            $('.dietary-custom').show();
         } else {
-            $('#dietaryRestrictions').siblings('input').hide();
+            $('.dietary-custom').hide();
         }
     });
 
@@ -626,7 +625,10 @@
         $.ajax({
             url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
             method: 'get',
-            success: disableRegistration,
+            error: (resp) => {
+                regBtn.attr('disabled', 'true');
+                regBtn.text(`Registration is ${resp.responseJSON.status}`);
+            },
         });
     });
 </script>

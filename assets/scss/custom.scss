@@ -25,12 +25,12 @@
 
 .guide .td-sidebar-nav__subsection-title a:after {
     padding-left: 5px;
-    content: url({{ "/images/icons/arrow-right.svg" | relURL }});
+    content: url('{{ "/images/icons/arrow-right.svg" | relURL }}');
   }
 
   .guide .td-sidebar-nav__subsection-title a.active:after,
   .guide .td-sidebar-nav__subsection-title a.selected:after {
-    content: url({{ "/images/icons/arrow-down.svg" | relURL }});
+    content: url('{{ "/images/icons/arrow-down.svg" | relURL }}');
   }
 
   .guide .td-sidebar-nav h5 {
@@ -44,7 +44,7 @@
 
   .guide .td-sidebar-nav h5 a:before {
     padding-right: 10px;
-    content: url({{ "/images/icons/arrow-left-white.svg" | relURL }});
+    content: url('{{ "/images/icons/arrow-left-white.svg" | relURL }}');
   }
 
   .guide a.linked-box {
@@ -73,23 +73,23 @@
         min-height: auto;
       }
       &.guides-hero {
-        background-image: url({{ "/images/backgrounds/background-guides.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-guides.svg" | relURL }}');
       }
       &.learningpaths-hero {
-        background-image: url({{ "/images/backgrounds/background-patterns.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-patterns.svg" | relURL }}');
       }
       &.samples-hero {
-        background-image: url({{ "/images/backgrounds/background-samples.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-samples.svg" | relURL }}');
       }
       &.videos-hero {
-        background-image: url({{ "/images/backgrounds/background-video.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-video.svg" | relURL }}');
       }
       &.data-hero,
       &.community-hero {
-        background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-community.svg" | relURL }}');
       }
       &.tanzupractices-hero {
-        background-image: url({{ "/images/backgrounds/background-practices.svg" | relURL }});
+        background-image: url('{{ "/images/backgrounds/background-practices.svg" | relURL }}');
       }
       &.team-hero,
       &.advocates-hero {
@@ -111,7 +111,7 @@
           .lead {
             max-width: 620px;
           }
-          background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
+          background-image: url('{{ "/images/backgrounds/header-mobile.svg" | relURL }}') !important;
           background-position: right -50px bottom;
           padding-bottom: 220px;
         }
@@ -124,7 +124,7 @@
         &.videos-hero,
         &.practices-hero,
         &.community-hero {
-          background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
+          background-image: url('{{ "/images/backgrounds/header-mobile.svg" | relURL }}') !important;
           background-position: right -50px bottom;
           padding-bottom: 160px;
         }
@@ -460,7 +460,7 @@
 }
 #beyond-hero {
   background-color: #1B2A32 !important;
-  background-image: url({{ "/images/beyond/stars.svg" | relURL }});
+  background-image: url('{{ "/images/beyond/stars.svg" | relURL }}');
 
   #left-blob-1 {
     height: 675px;
@@ -707,11 +707,11 @@
 #hero.springone-tour-event-hero.s1t-index {
   background-size: 65%;
   background-position: bottom -0.7rem right;
-  background-image: url({{ "/images/springonetour/hero_skyline.svg" | relURL }});
+  background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
   max-height: 60vh;
   padding-bottom: 40px;
   .logo {
-    content: url({{ "/images/springonetour/hero_logo_white.svg" | relURL }});
+    content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
     max-width: 20%;
   }
   @media(max-width: 1250px) {
@@ -735,7 +735,7 @@
 .light-mode #hero.springone-tour-event-hero {
   background-color: #fff !important;
   .logo {
-    content: url({{ "/images/springonetour/hero_logo_black.svg" | relURL }});
+    content: url('{{ "/images/springonetour/hero_logo_black.svg" | relURL }}');
   }
 }
 body#s1t-index #s1t-destinations-2022 {

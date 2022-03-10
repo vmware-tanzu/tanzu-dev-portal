@@ -4,8 +4,9 @@ enddate: '2022-10-12T00:00:00-07:00'
 PublishDate: '2022-01-01T00:00:00-07:00'
 publish: true
 aliases:
-  - /springone-tour/2022/amsterdam
-# location:
+    - /springone-tour/2022/amsterdam
+location:
+    - McCaw Hall 321 Mercer St Seattle, WA 98109
 calendar: true
 code_of_conduct: true
 logo_path: /images/springonetour/amsterdam_cityscape.svg

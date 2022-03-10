@@ -4,9 +4,9 @@ enddate: '2022-06-08T00:00:00-07:00'
 PublishDate: '2022-01-01T00:00:00-07:00'
 publish: true
 aliases:
-  - /springone-tour/2022/toronto
+    - /springone-tour/2022/toronto
 location:
-- McCaw Hall 321 Mercer St Seattle, WA 98109
+    - McCaw Hall 321 Mercer St Seattle, WA 98109
 calendar: true
 code_of_conduct: true
 logo_path: /images/springonetour/toronto_cityscape.svg
