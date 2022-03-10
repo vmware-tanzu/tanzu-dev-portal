@@ -782,6 +782,9 @@ body#s1t-index {
       background-color: #22343c;
       border: none;
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
   .agenda {
     background-color: #22343c;
