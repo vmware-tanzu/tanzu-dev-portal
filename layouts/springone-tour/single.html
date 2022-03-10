@@ -542,7 +542,6 @@
                 $('.discount-amount').show().text(discountElement.val());
             },
             error: (resp) => {
-                console.log(resp);
                 $('.discount-notice').show().text('Error:');
                 $('.discount-amount')
                     .show()
@@ -552,32 +551,29 @@
     };
 
     const handleSubmit = async () => {
-        let email = $('#email').val();
         $.ajax({
             url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityName}}',
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ email: email, firstCheck: true }),
+            data: regForm.serialize(),
             success: (resp) => {
-                if (resp.status === 'not registered') {
-                    processStripePayment(email);
-                } else {
-                    alert(`${email} is already registered for {{ .Title }}`);
-                }
+                processStripePayment(resp);
             },
             error: (err) => {
                 alert(`${err.statusText}: ${err.responseText}`);
+                regModal.modal('toggle');
+                regBtn.text(err.responseText);
             },
         });
     };
 
-    const processStripePayment = (email) => {
+    const processStripePayment = (registrant) => {
         setLoading($('#submit'), true);
         stripe
             .confirmCardPayment(clientSecret, {
                 payment_method: {
                     card: card,
-                    billing_details: { email: email },
+                    billing_details: { email: registrant.email },
                 },
             })
             .then((result) => {
@@ -652,8 +648,6 @@
             method: 'get',
             success: disableRegistration,
         });
-        regModal.modal('toggle');
-        initStripe();
     });
 </script>
 {{ end }}
