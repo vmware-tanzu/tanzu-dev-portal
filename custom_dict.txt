@@ -5,7 +5,6 @@
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
 
-Ϟ
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -277,6 +276,7 @@ CentOS
 Ceph
 Cerner
 CertificateRequests
+certified-kubernetes
 CEST
 CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
@@ -1988,6 +1988,7 @@ undersample
 underutilization
 unencoded
 unencrypted
+unmanaged
 unpause
 Unported
 unprioritized
@@ -2151,4 +2152,5 @@ Zou
 Zuul
 Zynga
 μServices
+Ϟ
 ϟ
