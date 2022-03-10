@@ -2,26 +2,22 @@
 Date: '2022-07-12T00:00:00-07:00'
 enddate: '2022-07-13T00:00:00-07:00'
 PublishDate: '2022-01-01T00:00:00-07:00'
+publish: true
 aliases:
-  - /springone-tour/2020/seattle
-location: McCaw Hall 321 Mercer St Seattle, WA 98109
+  - /springone-tour/2022/seattle
+location:
+- McCaw Hall 321 Mercer St Seattle, WA 98109
 calendar: true
 code_of_conduct: true
+logo_path: /images/springonetour/seattle_cityscape.svg
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 # date: '2022-04-26'
-guests: []
 hide_newsletter: true
 lastmod: '2022-02-09'
 no_episode_title: true
 no_streaming_label: true
-subtitle: Workshop
 title: Seattle
-speakers:
-  - Michael Cote
-  - Jakub Pilimon
-  - Sam Brannen
-  - Oded Shopen
 ---
 
 Join us for a hands-on session covering unit and integration testing techniques using Spring Boot, API contracts, database schema management, and Testcontainers, followed by a Kubernetes-native build and deploy supply chain powered by kpack and ArgoCD. You’ll have your own test environment so you can follow along as we work through the deployment of a microservice-based application.
