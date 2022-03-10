@@ -703,6 +703,15 @@
 #hero.springone-tour-event-hero.s1t-city {
   background-size: 26%;
   background-position: bottom right;
+  #register-btn {
+    font-weight: 400;
+    background: #80ea6e;
+    color: #1b2a32;
+    &:hover {
+      background: #02bc67;
+      color: #fff;
+    }
+  }
 }
 #hero.springone-tour-event-hero.s1t-index {
   background-size: 65%;
@@ -759,19 +768,27 @@ body#s1t-index #s1t-destinations-2022 {
   }
 }
 body#s1t-index {
-  #register {
-    display: none;
+  .springone-tour-details {
+    a {
+      color: #02bc67;
+      &:hover {
+        color: #80ea6e;
+      }
+    }
   }
   .agenda, .talk-modal {
     background-color: #22343c;
+    a[title=Close].fancybox-close:before {
+      color: #02bc67;
+    }
   }
   .day-toggle .day {
     &:not(.active) {
       border: #1b2a32 2px solid;
-      background-color:  #1b2a32;
+      background-color: #1b2a32;
     }
     &.active {
-      background-color:  #22343c;
+      background-color: #22343c;
       border: none;
     }
   }
@@ -779,8 +796,9 @@ body#s1t-index {
     display: block;
   }
   .talk-modal, .speaker-modal {
-    display:none;
-    width:600px;
-    max-width:100%;
+    display: none;
+    width: 700px;
+    max-width: 100%;
+    background-color: #1b2a32;
   }
 }

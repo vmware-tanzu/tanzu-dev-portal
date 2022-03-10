@@ -21,7 +21,8 @@ no_episode_title: true
 no_streaming_label: true
 title: Chicago
 ---
-<div class="day-toggle row">
+
+<div class="day-toggle row mt-5">
     <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
     <h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h5>
 </div>
@@ -68,6 +69,12 @@ title: Chicago
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-3 pl-0 h4">10:40 — 11:00 CDT</div>
+        <div class="talk-title col-5 h4">Break</div>
+        <div class="col-sm-1 col-0 px-0"></div>
+        <div class="name col-4"></div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-3 pl-0 h4">11:00 — 11:40 CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#login-page">Do the Login Page First</a>
@@ -112,6 +119,12 @@ title: Chicago
         <div class="name col-4">
             <h3 class="h4 py-0"><a class="lightbox" href="#spencer-gibb">Spencer Gibb</a></h3>
         </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-3 pl-0 h4">14:50 — 15:10 CDT</div>
+        <div class="talk-title col-5 h4">Break</div>
+        <div class="col-sm-1 col-0 px-0"></div>
+        <div class="name col-4"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-3 pl-0 h4">15:10 — 15:30 CDT</div>
@@ -267,7 +280,7 @@ title: Chicago
     </div>
     <div class="row py-3 flex-nowrap">
         <div class="time col-3 pl-0 h4">16:40 — 17:00 CDT</div>
-        <div class="talk-title col-5 h4">Q & A</div>
+        <div class="talk-title col-5 h4">Q&A</div>
         <div class="col-sm-1 col-0 px-0"></div>
         <div class="name col-4"></div>
     </div>
@@ -296,7 +309,8 @@ title: Chicago
 </div>
 <div id="k8-native-java" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Kubernetes-Native Java</div>
-    <p>Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how Spring Boot makes writing blisteringly fast, cloud native, and scalable services more effortless than ever.</p>
+    <p>Spring is all about helping developers get to production quickly and safely. These days, “production” is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate Josh Long (<a href="https://twitter.com/@starbuxman" target="_blank">@starbuxman</a>), and we'll look at how Spring Boot makes writing blisteringly fast, cloud native, and scalable services more effortless than ever.
+    </p>
 </div>
 <div id="sidecars-with-spring" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Sidecars with Spring on VMware Tanzu Application Platform</div>
@@ -354,125 +368,177 @@ title: Chicago
     <p>Come join this session to learn about the prerequisites of retained RED metrics and SRE practices, as well as tools that can orchestrate this exciting deployment technique.</p>
 </div>
 
-<div id="cora-iberkleid" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/cora-iberkleid/"><img alt="Cora Iberkleid" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/cora-iberkleid/">Cora Iberkleid</a></h3>
-        <p>Cora Iberkleid is a Developer Advocate for Modern Applications at VMware Tanzu, helping developers and enterprises navigate modern practices and technologies, focusing on cloud native architecture, modern CI/CD, Spring, and Kubernetes.</p>
-        <p>Prior to joining VMware, Cora was an Advisory Solutions Engineer at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications. Through this experience, she developed an understanding and empathy for complex organizational challenges, and she strives to incorporate this empathy into her everyday work.</p>
-    </div>
-</div>
-<div id="dan-vega" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/dan-vega/"><img alt="Dan Vega" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0">
-            <a href="/developer/team/dan-vega/">Dan Vega</a>
-        </h3>
-        <p>Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been developing software for the web for over 20 years and his superpower is problem-solving. Dan is a blogger, YouTuber, course creator, and speaker. He is a lifelong learner and his passion is sharing his knowledge with the developer community. Dan lives near Cleveland Ohio with his beautiful wife and 2 daughters. When he isn’t writing code or teaching he enjoys spending time with his family, lifting weights, running, or reading a good book.</p>
+<div id="cora-iberkleid" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/cora-iberkleid/"><img alt="Cora Iberkleid" src="/developer/team/cora-iberkleid/images/cora-iberkleid.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/cora-iberkleid/">Cora Iberkleid</a></h3>
+            <p>Cora Iberkleid is a Developer Advocate for Modern Applications at VMware Tanzu, helping developers and enterprises navigate modern practices and technologies, focusing on cloud native architecture, modern CI/CD, Spring, and Kubernetes.</p>
+            <p>Prior to joining VMware, Cora was an Advisory Solutions Engineer at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications. Through this experience, she developed an understanding and empathy for complex organizational challenges, and she strives to incorporate this empathy into her everyday work.</p>
+        </div>
     </div>
 </div>
-<div id="dashaun-carter" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/dashaun-carter/"><img alt="DaShaun Carter" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/dashaun-carter/">DaShaun Carter</a></h3>
-        <p>DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu. Deliberately practicing to build better software, faster.</p>
-    </div>
-</div>
-<div id="jonatan-ivanov" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/jonatan-ivanov/"><img alt="Jonatan Ivanov" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/jonatan-ivanov/">Jonatan Ivanov</a></h3>
-        <p>Jonatan Ivanov is an enthusiastic Software Engineer working in the Spring Cloud Team, one of the leaders of the Seattle Java User Group, speaker, author, certified dragon trainer. He has hands-on experience in developing and shipping innovative, production-ready software for industry-leader companies. He likes Distributed Systems, Production, Open Source, Math, Linux, Cloud environments; he is passionate about the Java Ecosystem and the Java Community. He is an Open Source contributor, writes a “develotters”-focused blog (<a href="https://develotters.com" target="_blank">https://develotters.com</a>), sometimes can be found on Twitter (<a href="https://twitter.com/@jonatan_ivanov" target="_blank">@jonatan_ivanov</a>) and in the Seattle area but he is originally from Hungary.
-        </p>
+<div id="dan-vega" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/dan-vega/"><img alt="Dan Vega" src="/developer/team/dan-vega/images/dan-vega.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0">
+                <a href="/developer/team/dan-vega/">Dan Vega</a>
+            </h3>
+            <p>Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been developing software for the web for over 20 years and his superpower is problem-solving. Dan is a blogger, YouTuber, course creator, and speaker. He is a lifelong learner and his passion is sharing his knowledge with the developer community. Dan lives near Cleveland Ohio with his beautiful wife and 2 daughters. When he isn’t writing code or teaching he enjoys spending time with his family, lifting weights, running, or reading a good book.</p>
+        </div>
     </div>
 </div>
-<div id="josh-long" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/josh-long/"><img alt="Josh Long" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/josh-long/">Josh Long</a></h3>
-        <p>Josh (<a href="https://twitter.com/@starbuxman" target="_blank">@starbuxman</a>) has (officially) been a Spring developer advocate since 2010. Josh is a Java Champion, author of six books (including <span class="title">Cloud Native Java: Designing Resilient Systems with Spring Boot, Spring Cloud, and Cloud Foundry</span> (O’Reilly Media, 2017) and the upcoming (self-published) <span class="title">Reactive Spring</span>, as well as the creator of numerous best-selling training videos, including <span class="title">Building Microservices with Spring Boot Livelessons with Spring Boot</span> co-founder Phil Webb. He is also an open source contributor (Spring Boot, Spring Integration, Spring Cloud, Activiti, and Vaadin), a podcaster (A Bootiful Podcast), and a screencaster.</p>
-    </div>
-</div>
-<div id="layla-porter" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/layla-porter/"><img alt="Layla Porter" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/layla-porter/">Layla Porter</a></h3>
-        <p>Layla is a Developer Advocate at VMware serving the .NET community. She is a Live Coder on Twitch, a Microsoft MVP, A GitHub Star, and founder of the #WomenOfDotNet Initiative. Layla loves sharing knowledge whilst having fun. No question is stupid and beginners are always welcome.</p>
+<div id="dashaun-carter" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/dashaun-carter/"><img alt="DaShaun Carter" src="/developer/team/dashaun-carter/images/dashaun-carter.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/dashaun-carter/">DaShaun Carter</a></h3>
+            <p>DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu. Deliberately practicing to build better software, faster.</p>
+        </div>
     </div>
 </div>
-<div id="leigh-capili" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/leigh-capili/"><img alt="Leigh Capili" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/leigh-capili/">Leigh Capili</a></h3>
-        <p>Leigh is an empathetic speaker and developer with niches in cloud native systems and security. Leigh comes from a background of building software to manage infrastructure. He contributes to Kubernetes and Flux and is frequently working on his next software demo</p>
-    </div>
-</div>
-<div id="mario-gray" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/mario-gray/"><img alt="Mario Gray" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/mario-gray/">Mario Gray</a></h3>
-        <p>Mario is a principal technologist at VMware with more than 20 years of experience in software development and software architecture. He is co-author of <span class="title">Pro Spring Integration</span> (Apress, 2011). He’s helped organizations large and small build service-based architectures in a number of different runtimes and platforms over the decades, but adopting Spring in 2004, and using it whenever possible since, was a no-brainer that culminated in joining the Spring team in 2017. As a Spring developer advocate, Mario loves to engage and inspire developers and businesses in the Pivotal ecosystem.</p>
+<div id="jakub-pilimon" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/jakub-pilimon/"><img alt="Jonatan Ivanov" src="/developer/team/jakub-pilimon/images/jakub-pilimon.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/jakub-pilimon/">Jonatan Ivanov</a></h3>
+            <p>Jakub Pilimon is a Staff Technologist at VMware, blogger, programmer, and trainer. His main duty is to tackle complex enterprises with Domain-Driven Design and to propose a model and architecture that solves a problem. Sometimes he is involved in refactoring projects. When he isn’t coding, you can find him riding his bike, reading, or practicing kitesurfing.</p>
+            <p>Jakub’s pet projects can be found at
+                <a href="https://github.com/ddd-by-examples" target="_blank">https://github.com/ddd-by-examples</a>.</p>
+        </div>
     </div>
 </div>
-<div id="michael-cote" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/michael-cote/"><img alt="Michael Coté" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/michael-cote/">Michael Coté</a></h3>
-        <p>Michael Coté studies how large organizations get better at building software to run better and grow their business. His books <span class="title">Changing Mindsets</span>, <span class="title">Monolithic Transformation</span>, and <span class="title">The Business Bottleneck</span> cover these topics. He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including Software Defined Talk. Cf. cote.io, and is <a href="https://twitter.com/@cote" target="_blank">@cote</a> on Twitter. Texas Forever!</p>
-    </div>
-</div>
-<div id="nate-schutta" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/nate-schutta/"><img alt="Nate Schutta" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/nate-schutta/">Nate Schutta</a></h3>
-        <p>Nathaniel T. Schutta is a software architect focused on cloud computing and building usable applications. A proponent of polyglot programming, Nate has written multiple books and appeared in various videos. He is a seasoned speaker, regularly presenting at conferences worldwide, No Fluff Just Stuff symposia, meetups, universities, and user groups. In addition to his day job, Nate is an adjunct professor at the University of Minnesota where he teaches students to embrace (and evaluate) technical change. Driven to rid the world of bad presentations, Nate co-authored the book <span class="title">Presentation Patterns</span> (O’Reilly Media, 2016) with Neal Ford and Matthew McCullough. He also recently published <span class="title">Thinking Architecturally</span> (O’Reilly Media, 2018), available as a free download from VMware.</p>
-        <p>Nate’s presentations cover a variety of topics, ranging from architecture fundamentals to mobile design, usability, cloud computing, JavaScript, and everything in between. His current slate of talks can be found in Talk Abstracts, however additional presentations can also be found at his NFJS Speaker Page. If you are interested in having Nate speak at your event, please reach out."</p>
+<div id="jonatan-ivanov" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/jonatan-ivanov/"><img alt="Jonatan Ivanov" src="/developer/team/jonatan-ivanov/images/jonatan-ivanov.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/jonatan-ivanov/">Jonatan Ivanov</a></h3>
+            <p>Jonatan Ivanov is an enthusiastic Software Engineer working in the Spring Cloud Team, one of the leaders of the Seattle Java User Group, speaker, author, certified dragon trainer. He has hands-on experience in developing and shipping innovative, production-ready software for industry-leader companies. He likes Distributed Systems, Production, Open Source, Math, Linux, Cloud environments; he is passionate about the Java Ecosystem and the Java Community. He is an Open Source contributor, writes a “develotters”-focused blog (<a href="https://develotters.com" target="_blank">https://develotters.com</a>), sometimes can be found on Twitter (<a href="https://twitter.com/@jonatan_ivanov" target="_blank">@jonatan_ivanov</a>) and in the Seattle area but he is originally from Hungary.
+            </p>
+        </div>
     </div>
 </div>
-<div id="spencer-gibb" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/spencer-gibb/"><img alt="Spencer Gibb" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/spencer-gibb/">Spencer Gibb</a></h3>
-        <p>Spencer Gibb is a software engineer at VMware focusing on Spring Cloud. Spencer’s interests include distributed systems, JVM languages, web services frameworks, message-driven architectures, and making software development simpler. He loves to create software to solve a pain point (for example, by creating a tool to automate workstation setup in his free time). Spencer’s industry experience has taken him from early e-commerce platforms to government and nonprofit organizations to business intelligence startups. He has extensive experience in Java and other languages such as Scala and Python. His database experience runs from Oracle and MySQL to Riak and Cassandra. You can find out more on his blog.</p>
-    </div>
-</div>
-<div id="tiffany-jernigan" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/tiffany-jernigan/"><img alt="Tiffany Jernigan" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
-    </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/tiffany-jernigan/">Tiffany Jernigan</a></h3>
-        <p>Tiffany is a senior developer advocate at VMware and is focused on Kubernetes. She previously worked as a software developer and developer advocate (nerd whisperer) for containers at Amazon. She also formerly worked at Docker and Intel. Prior to that, she graduated from Georgia Tech with a degree in electrical engineering. In her free time she likes to spend time with her fiancé, family, and friends, as well as dabble in photography. You can find her on Twitter <a href="https://twitter.com/@tiffanyfayj" target="_blank">@tiffanyfayj</a>.</p>
+<div id="josh-long" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/josh-long/"><img alt="Josh Long" src="/developer/team/josh-long/images/josh-long.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/josh-long/">Josh Long</a></h3>
+            <p>Josh (<a href="https://twitter.com/@starbuxman" target="_blank">@starbuxman</a>) has (officially) been a Spring developer advocate since 2010. Josh is a Java Champion, author of six books (including
+                <span class="title">Cloud Native Java: Designing Resilient Systems with Spring Boot, Spring Cloud, and Cloud Foundry</span> (O’Reilly Media, 2017) and the upcoming (self-published)
+                <span class="title">Reactive Spring</span>, as well as the creator of numerous best-selling training videos, including
+                <span class="title">Building Microservices with Spring Boot Livelessons with Spring Boot</span> co-founder Phil Webb. He is also an open source contributor (Spring Boot, Spring Integration, Spring Cloud, Activiti, and Vaadin), a podcaster (A Bootiful Podcast), and a screencaster.
+            </p>
+        </div>
     </div>
 </div>
-<div id="whitney-lee" class="speaker-modal row p-md-5 p-3">
-    <div class="col-lg-3 col-md-3 mr-4 mb-5">
-        <a href="/developer/team/whitney-lee/"><img alt="Whitney Lee" src="/developer/team/andrew-stakhov/images/andrew-stakhov-beyond.png"></a>
+<div id="layla-porter" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/layla-porter/"><img alt="Layla Porter" src="/developer/team/layla-porter/images/layla-porter.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/layla-porter/">Layla Porter</a></h3>
+            <p>Layla is a Developer Advocate at VMware serving the .NET community. She is a Live Coder on Twitch, a Microsoft MVP, A GitHub Star, and founder of the #WomenOfDotNet Initiative. Layla loves sharing knowledge whilst having fun. No question is stupid and beginners are always welcome.</p>
+        </div>
     </div>
-    <div class="col-lg-8 col-md-8">
-        <h3 class="pt-0"><a href="/developer/team/whitney-lee/">Whitney Lee</a></h3>
-        <p>Whitney traveled the scenic route but is absolutely chuffed to have found her way to Kubernetes and cloud technologies. She began her professional career as a fine artist before owning her own photography business for over a decade. Then, after a year-long tour playing keys and singing harmonies in the band Mutual Benefit, Whitney went back to school to learn full-stack web development. Shortly after graduation Whitney was employed by IBM as a cloud developer, using none of the skills she had just learned at school. However Whitney quickly developed an insatiable appetite for all things cloud, and a passion for teaching others as she acquired knowledge herself. She has made many light board videos for IBM Cloud, from topics ranging from creating a Pod in Kubernetes, to event-driven architecture, to cloud native API solutions. At VMware Whitney’s contagious excitement drives her to continue to explore, collaborate, teach, and play!</p>
+</div>
+<div id="leigh-capili" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/leigh-capili/"><img alt="Leigh Capili" src="/developer/team/leigh-capili/images/leigh-capili.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/leigh-capili/">Leigh Capili</a></h3>
+            <p>Leigh is an empathetic speaker and developer with niches in cloud native systems and security. Leigh comes from a background of building software to manage infrastructure. He contributes to Kubernetes and Flux and is frequently working on his next software demo</p>
+        </div>
+    </div>
+</div>
+<div id="mario-gray" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/mario-gray/"><img alt="Mario Gray" src="/developer/team/mario-gray/images/mario-gray.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/mario-gray/">Mario Gray</a></h3>
+            <p>Mario is a principal technologist at VMware with more than 20 years of experience in software development and software architecture. He is co-author of
+                <span class="title">Pro Spring Integration</span> (Apress, 2011). He’s helped organizations large and small build service-based architectures in a number of different runtimes and platforms over the decades, but adopting Spring in 2004, and using it whenever possible since, was a no-brainer that culminated in joining the Spring team in 2017. As a Spring developer advocate, Mario loves to engage and inspire developers and businesses in the Pivotal ecosystem.
+            </p>
+        </div>
+    </div>
+</div>
+<div id="michael-cote" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/michael-cote/"><img alt="Michael Coté" src="/developer/team/michael-cote/images/michael-cote.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/michael-cote/">Michael Coté</a></h3>
+            <p>Michael Coté studies how large organizations get better at building software to run better and grow their business. His books
+                <span class="title">Changing Mindsets</span>, <span class="title">Monolithic Transformation</span>, and
+                <span class="title">The Business Bottleneck</span> cover these topics. He’s been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&A, and was a programmer. He also co-hosts several podcasts, including Software Defined Talk. Cf. cote.io, and is
+                <a href="https://twitter.com/@cote" target="_blank">@cote</a> on Twitter. Texas Forever!</p>
+        </div>
+    </div>
+</div>
+<div id="nate-schutta" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/nate-schutta/"><img alt="Nate Schutta" src="/developer/team/nate-schutta/images/nate-schutta.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/nate-schutta/">Nate Schutta</a></h3>
+            <p>Nathaniel T. Schutta is a software architect focused on cloud computing and building usable applications. A proponent of polyglot programming, Nate has written multiple books and appeared in various videos. He is a seasoned speaker, regularly presenting at conferences worldwide, No Fluff Just Stuff symposia, meetups, universities, and user groups. In addition to his day job, Nate is an adjunct professor at the University of Minnesota where he teaches students to embrace (and evaluate) technical change. Driven to rid the world of bad presentations, Nate co-authored the book
+                <span class="title">Presentation Patterns</span> (O’Reilly Media, 2016) with Neal Ford and Matthew McCullough. He also recently published
+                <span class="title">Thinking Architecturally</span> (O’Reilly Media, 2018), available as a free download from VMware.
+            </p>
+            <p>Nate’s presentations cover a variety of topics, ranging from architecture fundamentals to mobile design, usability, cloud computing, JavaScript, and everything in between. His current slate of talks can be found in Talk Abstracts, however additional presentations can also be found at his NFJS Speaker Page. If you are interested in having Nate speak at your event, please reach out."</p>
+        </div>
+    </div>
+</div>
+<div id="spencer-gibb" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/spencer-gibb/"><img alt="Spencer Gibb" src="/developer/team/spencer-gibb/images/spencer-gibb.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/spencer-gibb/">Spencer Gibb</a></h3>
+            <p>Spencer Gibb is a software engineer at VMware focusing on Spring Cloud. Spencer’s interests include distributed systems, JVM languages, web services frameworks, message-driven architectures, and making software development simpler. He loves to create software to solve a pain point (for example, by creating a tool to automate workstation setup in his free time). Spencer’s industry experience has taken him from early e-commerce platforms to government and nonprofit organizations to business intelligence startups. He has extensive experience in Java and other languages such as Scala and Python. His database experience runs from Oracle and MySQL to Riak and Cassandra. You can find out more on his blog.</p>
+        </div>
+    </div>
+</div>
+<div id="tiffany-jernigan" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/tiffany-jernigan/"><img alt="Tiffany Jernigan" src="/developer/team/tiffany-jernigan/images/tiffany-jernigan.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/tiffany-jernigan/">Tiffany Jernigan</a></h3>
+            <p>Tiffany is a senior developer advocate at VMware and is focused on Kubernetes. She previously worked as a software developer and developer advocate (nerd whisperer) for containers at Amazon. She also formerly worked at Docker and Intel. Prior to that, she graduated from Georgia Tech with a degree in electrical engineering. In her free time she likes to spend time with her fiancé, family, and friends, as well as dabble in photography. You can find her on Twitter
+                <a href="https://twitter.com/@tiffanyfayj" target="_blank">@tiffanyfayj</a>.</p>
+        </div>
+    </div>
+</div>
+<div id="whitney-lee" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mr-4 mb-5">
+            <a href="/developer/team/whitney-lee/"><img alt="Whitney Lee" src="/developer/team/whitney-lee/images/whitney-lee.jpg"></a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h3 class="pt-0"><a href="/developer/team/whitney-lee/">Whitney Lee</a></h3>
+            <p>Whitney traveled the scenic route but is absolutely chuffed to have found her way to Kubernetes and cloud technologies. She began her professional career as a fine artist before owning her own photography business for over a decade. Then, after a year-long tour playing keys and singing harmonies in the band Mutual Benefit, Whitney went back to school to learn full-stack web development. Shortly after graduation Whitney was employed by IBM as a cloud developer, using none of the skills she had just learned at school. However Whitney quickly developed an insatiable appetite for all things cloud, and a passion for teaching others as she acquired knowledge herself. She has made many light board videos for IBM Cloud, from topics ranging from creating a Pod in Kubernetes, to event-driven architecture, to cloud native API solutions. At VMware Whitney’s contagious excitement drives her to continue to explore, collaborate, teach, and play!</p>
+        </div>
     </div>
 </div>

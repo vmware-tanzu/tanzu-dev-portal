@@ -5,9 +5,9 @@
 {{ $logo_path := .Params.logo_path | relURL }}
 
 <style>
-  #hero.springone-tour-event-hero.s1t-city {
-      background-image: url({{ $logo_path }});
-  }
+    #hero.springone-tour-event-hero.s1t-city {
+        background-image: url({{ $logo_path }});
+    }
 </style>
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 pt-4 pb-5">
@@ -407,11 +407,11 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-                {{ if .Params.calendar }}
-                <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
-                {{ end }}
-
                 <p>SpringOne Tour is back and in-person for a two-day developer community event, but that’s not all that is happening in the city! Expect to see VMware Tanzu folks around the city during the week of SpringOne Tour, from executive events to meets up to giving back to the community.</p>
+                <p>Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community. Stay tuned for more details.</p>
+                <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
+                    <a href="mailto:tanzu-fieldmarketing@vmware.com">tanzu-fieldmarketing@vmware.com</a>.</p>
+
                 {{ .Content }}
             </div>
         </div>
@@ -428,10 +428,7 @@
         <div class="row justify-content-center mb-5 text-center">
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
-                    <a
-                            href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
-                    ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
-                    >
+                    <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
                 </div>
             </div>
         </div>
