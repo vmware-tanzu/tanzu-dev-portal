@@ -410,16 +410,11 @@ Update the `LoadFromMemory` method with the following:
 ```csharp
 public static IReverseProxyBuilder LoadFromMemory(this IReverseProxyBuilder builder)
 {
-	var serviceProvider = builder.Services.BuildServiceProvider();
-	var discoveryClient = serviceProvider.GetRequiredService<IDiscoveryClient>();
+	builder.Services.AddSingleton<InMemoryConfigProvider>();
 
-	var inMemoryConfigProvider = new InMemoryConfigProvider(discoveryClient);
+	builder.Services.AddSingleton<IHostedService>(ctx => ctx.GetRequiredService<InMemoryConfigProvider>());
 
-	builder.Services
-		.AddSingleton<IHostedService>(inMemoryConfigProvider);
-
-	builder.Services
-		.AddSingleton<IProxyConfigProvider>(inMemoryConfigProvider);
+	builder.Services.AddSingleton<IProxyConfigProvider>(ctx => ctx.GetRequiredService<InMemoryConfigProvider>());
 
 	return builder;
 
