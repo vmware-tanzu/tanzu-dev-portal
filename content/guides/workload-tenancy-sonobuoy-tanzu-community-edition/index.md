@@ -8,7 +8,7 @@ tags:
 - tanzu community edition
 team:
 - Tiffany Jernigan
-title: Sonobuoy and Tanzu Community Edition
+title: Sonobuoy for CNCF Conformance and VMware Tanzu Community Edition
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
