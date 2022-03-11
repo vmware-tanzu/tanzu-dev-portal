@@ -572,12 +572,12 @@ body {
       width: 285px !important;
       height: 46px;
       border: 1px solid #ccc !important;
-    //   margin-right: 20px;
+      margin-right: 20px;
       box-shadow: none;
       background-color: white;
       border-radius: 2px;
       font-size: 15px;
-    //   padding: 1px 15px 3px !important;
+      padding: 1px 15px 3px !important;
       border-radius: 0 !important;
     }
     @media (max-width: 390px) {
@@ -653,6 +653,111 @@ body {
       color: white;
     }
   }
+
+  #s1t-register {
+      form {
+          .s1t-form-col{
+              width: 100%;
+              padding: 0 1.5rem;
+              @media (max-width: 575px) {
+                  padding: 0 !important;
+                }
+            }
+          #submit {
+              background-color: #02bc67 !important;
+              color: white;
+              &:hover{
+                  background-color: #80ea6e !important;
+                }
+                &:disabled{
+                    background-color: grey !important;
+                    color:#000
+                }
+          }
+
+        }
+      ::placeholder{
+          color: white;
+        }
+        textarea, button {
+          margin: 25px auto;
+        }
+      select, textarea, input:not([type="checkbox"]){
+          width: 100% !important;
+          border: 0 !important;
+          background: transparent;
+          border-bottom: 1px solid white !important;
+          border-radius: 0;
+          font-size: 16px;
+          color: white;
+          padding-left: 0 !important;
+          padding-bottom: 5px !important;
+          height: 46px;
+          font-family: 'Metropolis';
+        }
+        select {
+            background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-white.png)
+            no-repeat transparent right 10px center !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 0;
+            display: block;
+            &:hover{
+                border-bottom: 1px solid #02bc67 !important;
+            }
+        }
+        input[type=text]:focus, input[type=email]:focus{
+            outline: none !important;
+            border-bottom: 1px solid #02bc67 !important;
+            box-shadow: none;
+        }
+        .btn-apply {
+            color: #02bc67;
+            background-color: transparent;
+            border: none;
+            &:hover{
+                color: #80ea6e;
+            }
+        }
+        .charge-currency, .discount-currency {
+            padding-right: 1.5rem;
+            text-align: right;
+        }
+        .discount-details{
+            display: none;
+        }
+        .modal-content {
+            color: white;
+            background-color: #1B2A32;
+        }
+        .stripe-card-element {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid white !important;
+        }
+
+  }
+
+  .light-mode #s1t-register {
+      ::placeholder {
+          color: #000 !important;
+      }
+      select, textarea, input:not([type="checkbox"]){
+        border-bottom: 1px solid black !important;
+        color: black;
+      }
+      .modal-content{
+          color: #000;
+          background-color: white;
+      }
+      select {
+        background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown.png)
+        no-repeat transparent right 10px center !important;
+        &:hover{
+            border-bottom: 1px solid #02bc67 !important;
+        }
+    }
+    
+  }
   
   #register {
       .modal-content {
@@ -674,14 +779,6 @@ body {
       ::placeholder {
         color: white;
       }
-      .btn-apply {
-          color: #49afd9;
-          background-color: transparent;
-          border: none;
-          &:hover{
-              color: #8dddff;
-          }
-      }
       textarea, button {
           margin: 25px auto;
       }
@@ -695,7 +792,7 @@ body {
         color: white;
         padding-left: 0 !important;
         padding-bottom: 5px !important;
-        // margin-top: 5px !important;
+        margin-top: 5px !important;
         height: 46px;
         font-family: "Metropolis";
       }

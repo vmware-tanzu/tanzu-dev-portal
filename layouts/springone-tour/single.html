@@ -1,8 +1,5 @@
-{{ define "main" }}
-{{ $class := replace .Page.Section "." "-" | lower }}
-{{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
-{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
-{{ $logo_path := .Params.logo_path | relURL }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
+{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }}
 
 <style>
     #hero.springone-tour-event-hero.s1t-city {
@@ -19,17 +16,14 @@
                 <h3 class="h3 pt-0 mb-4 pb-2">
                     {{ .Params.Date.Format "January 2" }}-{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
-                {{ if isset .Params "location" }}
-                  {{ range .Params.location }}
-                  <p class="mt-0 mb-0">
-                      {{ . }}
-                  </p>
-                  {{ end }}
-                  <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
-                      <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
-                      <span id="register-btn-text">Register Now</span>
-                  </button>
-                  {{ end }}
+                {{ if isset .Params "location" }} {{ range .Params.location }}
+                <p class="mt-0 mb-0">{{ . }}</p>
+                {{ end }}
+                <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
+                    <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
+                    <span id="register-btn-text">Register Now</span>
+                </button>
+                {{ end }}
             </div>
         </div>
     </div>
@@ -38,12 +32,12 @@
 {{ if isset .Params "location" }}
 <script src="https://js.stripe.com/v3/"></script>
 
-<div id="register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div id="s1t-register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Register</h2>
-                <button class="close" data-dismiss="modal" aria-label="Close">
+                <h2 class="modal-title w-100 text-center">Register for {{ .Title }}</h2>
+                <button class="close ml-0" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" style="color: white">&times;</span>
                 </button>
             </div>
@@ -52,44 +46,44 @@
                     <input type="hidden" name="chargeValue" value="200" />
                     <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
                     <div class="form-row">
-                        <div class="col-sm-3 pl-4 pr-0 mktoFormCol">
+                        <div class="col-sm-3 s1t-form-col">
                             <input
                                 type="text"
-                                class="form-control pr-0"
+                                class="form-control"
                                 name="firstName"
-                                placeholder="First Name *"
+                                placeholder="First name *"
                                 maxlength="50"
-                                aria-required="First Name"
+                                aria-required="First name"
                                 required
                             />
                         </div>
-                        <div class="col-sm-3 pl-0 pr-4 mktoFormCol">
+                        <div class="col-sm-3 s1t-form-col">
                             <input
                                 type="text"
-                                class="form-control pl-0"
+                                class="form-control"
                                 name="lastName"
-                                placeholder="Last Name *"
+                                placeholder="Last name *"
                                 maxlength="50"
-                                aria-required="Last Name"
+                                aria-required="Last name"
                                 required
                             />
                         </div>
-                        <div class="col-sm-6 mktoFormCol">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" aria-required="Email Address" required />
+                        <div class="col-sm-6 s1t-form-col">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" aria-required="Email address" required />
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-6 mktoFormCol">
-                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job Title *" />
+                        <div class="col-sm-6 s1t-form-col">
+                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job title *" />
                         </div>
-                        <div class="col-sm-6 mktoFormCol">
+                        <div class="col-sm-6 s1t-form-col">
                             <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company *" maxlength="50" />
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-6 mktoFormCol">
+                        <div class="col-sm-6 s1t-form-col">
                             <select class="mktoField form-control" name="country" aria-selected="None">
-                                <option value="None" selected disabled hidden>Select a country *</option>
+                                <option value="None" selected disabled hidden>Country *</option>
                                 <option value="United States">United States</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
@@ -336,9 +330,9 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                        <div class="col-sm-6 mktoFormCol">
+                        <div class="col-sm-6 s1t-form-col">
                             <select id="dietaryRestrictions" name="dietaryRestrictions" class="mktoField form-control">
-                                <option value="None" selected hidden>Select dietary restrictions</option>
+                                <option value="None" selected hidden>Dietary restrictions</option>
                                 <option value="None">None</option>
                                 <option value="Vegetarian">Vegetarian</option>
                                 <option value="Vegan">Vegan</option>
@@ -350,9 +344,9 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-6 mktoFormCol">
+                        <div class="col-sm-6 s1t-form-col">
                             <select name="tshirtSize" class="mktoField form-control">
-                                <option value="none" selected hidden>Select T-Shirt Size *</option>
+                                <option value="none" selected hidden>T-Shirt Size *</option>
                                 <option value="xss">XX Small</option>
                                 <option value="xs">X Small</option>
                                 <option value="s">Small</option>
@@ -363,7 +357,7 @@
                                 <option value="xxxl">XXX Large</option>
                             </select>
                         </div>
-                        <div class="col-sm-6 mktoFormCol">
+                        <div class="col-sm-6 s1t-form-col">
                             <input
                                 name="dietaryCustom"
                                 class="mktoField form-control dietary-custom"
@@ -373,38 +367,62 @@
                             />
                         </div>
                     </div>
-                    <div id="card-errors" role="alert"><p></p></div>
+                    <div id="card-errors" role="alert" class="col-sm-6 s1t-form-col"><p></p></div>
                     <div class="form-row">
-                        <div class="col-12">
-                            <div id="card-element"></div>
+                        <div class="col-12 s1t-form-col">
+                            <div id="card-element" class="stripe-card-element"></div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-4 col-6 mt-3 mktoFormCol">
+                        <div class="col-sm-4 col-6 mt-3 s1t-form-col">
                             <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
                             <p class="discount-notice" style="display: none"></p>
                         </div>
-                        <div class="col-sm-2 col-6">
+                        <div class="col-sm-2 col-6 text-right s1t-form-col">
                             <button id="discount-btn" type="button" class="btn-apply">Apply</button>
                         </div>
-                        <div class="col-sm-3 col-6 text-left">
-                            <p class="charge-label">Charge total:</p>
-                            <p class="discount-label" style="display: none">After discount:</p>
-                        </div>
-                        <div class="col-sm-3 col-6 text-left">
-                            <p class="charge-total">$0</p>
-                            <p class="discount-total" style="display: none"></p>
+                        <div class="col-sm-6 text-left s1t-form-col">
+                            <div class="row">
+                                <div class="col-6 p-0">
+                                    <p class="charge-label">Charge total:</p>
+                                </div>
+                                <div class="col-3 pr-0 text-right">
+                                    <p class="charge-total">$0</p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="charge-currency">USD</p>
+                                </div>
+                            </div>
+                            <div class="row discount-details">
+                                <div class="col-6 p-0">
+                                    <p class="discount-label">After discount:</p>
+                                </div>
+                                <div class="col-3 pr-0 text-right">
+                                    <p class="discount-total"></p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="discount-currency">USD</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" id="submit" class="btn btn-primary" disabled aria-disabled="true">
+                    <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
                         <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
-                        <span id="payment-btn-text">Pay now</span>
+                        <span id="payment-btn-text">Submit</span>
                     </button>
                     <div id="payment-message" class="hidden"></div>
                 </form>
                 <div class="success-banner" style="display: none">
-                    <h3>Thank you for registering!</h3>
-                    <p>We look forward to seeing you soon!</p>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="text-center">Thank you for registering!</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-center">We look forward to seeing you soon!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -460,8 +478,8 @@
     const regBtn = $('#register-btn');
     const discBtn = $('#discount-btn');
     const subBtn = $('#submit');
-    const regModal = $('#register');
-    const regForm = $('#register form');
+    const regModal = $('#s1t-register');
+    const regForm = $('#s1t-register form');
 
     const stripe = Stripe('pk_test_AFX7PJdNXmyYWaGJw4iKa8Yh');
 
@@ -505,11 +523,16 @@
                         iconColor: '#fa755a',
                     },
                 };
+                if ($('html').hasClass('light-mode')) {
+                    style.base.color = 'black';
+                    style.base['::::placeholder'] = { color: 'black' };
+                }
                 card = stripe.elements().create('card', { style: style });
                 card.mount('#card-element');
                 card.on('change', (e) => {
-                    subBtn.attr({ disabled: e.empty, ['aria-disabled']: e.empty });
-                    $('#card-errors p').text(event.error ? event.error.message : '');
+                    subBtn.attr({ disabled: !e.complete, ['aria-disabled']: !e.complete });
+                    $('#card-errors p').empty();
+                    $('#card-errors p').text(e.error ? e.error.message : '');
                 });
             },
             error: (resp) => {
@@ -527,14 +550,13 @@
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 $('.charge-label').text('Before discount:');
+                $('.discount-details').css('display', 'flex');
                 $('.discount-notice').show().text(`${discountElement.val()} applied`).css('color', 'green');
-                $('.discount-label').show();
-                $('.discount-total').show().text(`$${resp.amount}`).css('color', 'green');
+                $('.discount-total').text(`$${resp.amount}`).css('color', 'green');
             },
             error: (resp) => {
                 $('.charge-label').text('Charge total:');
-                $('.discount-label').hide();
-                $('.discount-total').hide();
+                $('.discount-details').css('display', 'none');
                 $('.discount-notice')
                     .show()
                     .text(resp.responseText ? resp.responseText : 'Unknown issue with discount code')
@@ -588,10 +610,10 @@
             data: regForm.serialize(),
             success: (resp) => {
                 setLoading($('#submit'), false);
-                $('#register .modal-title').text('Successful Payment and Registration');
-                $('#register form').hide();
-                $('#register .success-banner').show();
-                regBtn.before('Registration is all set!').remove();
+                $('#s1t-register .modal-title').text('Successful Payment and Registration');
+                $('#s1t-register form').hide();
+                $('#s1t-register .success-banner').show();
+                regBtn.after('<p class="mt-4" style="color: #80ea6e">Registration is all set!</p>').remove();
             },
             error: (resp) => {
                 $('#register-btn-text').text('Registration issue try again');
