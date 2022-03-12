@@ -575,6 +575,9 @@
   #day-2-agenda {
     display: none;
   }
+  #sponsors img {
+    height: 80px;
+  }
   .mktoButton {
     text-align: center;
     margin-left: auto;
@@ -653,6 +656,7 @@
     }
   }
 }
+
 .magnify-banner:hover,
 .magnify-banner:focus {
   @media(min-width: 992px) {
@@ -667,6 +671,10 @@
 
 .pe-none {
   pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .callout svg {

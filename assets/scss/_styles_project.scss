@@ -2328,6 +2328,7 @@ background: black;
     transition: all .2s ease-out;
     opacity: 1;
   }
+  .sponsor-container:hover > a,
   #team-index .row:hover > .person,
   .advocates:hover .item,
   .episodes:hover .col-lg-4,
@@ -2338,6 +2339,7 @@ background: black;
   #topics-row-outer:hover > .row {
     opacity: .5;
   }
+  .sponsor-container > a:hover,
   #team-index .row > .person:hover,
   .advocates .item:hover,
   .episodes .col-lg-4:hover,
