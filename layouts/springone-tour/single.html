@@ -229,10 +229,15 @@
                     more details.{{ end }}
                 </p>
 
-                {{ .Content }} {{ if isset .Params "meetup" }}
-                <h3 class="mt-5">Meetup</h3>
-                <p>{{- .Params.meetup -}}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
-                {{ end }}
+              {{ .Content }}
+
+              {{ if isset .Params "meetup" }}
+              <h3 class="mt-5">Meetup</h3>
+              <div class="row" id="">
+                <a class="col-sm-2" href="#city-takeover" class="lightbox"><img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' style="color: #fff;"></a>
+                <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+              </div>
+              {{ end }}
 
                 <h3 class="mt-5">Lead/Forward</h3>
                 <p>
@@ -264,6 +269,7 @@
     </div>
 </section>
 
+{{ if $isRegOpen }}
 <script>
     const regBtn = $('#register-btn');
     const discBtn = $('#discount-btn');
@@ -506,4 +512,6 @@
         });
     });
 </script>
+{{ end }}
+
 {{ end }}

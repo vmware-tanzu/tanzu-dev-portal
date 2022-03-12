@@ -14,6 +14,7 @@
       <div class="mt-5 mb-5">
         {{ .Content }}
       </div>
+      {{ if ne .Title "SpringOne Tour Terms & Conditions" }}
       <h2>Cities</h2>
       <div class="row justify-content-lg-start mb-3">
           {{ range .Pages.ByDate }}
@@ -31,6 +32,7 @@
             {{ end }}
           {{ end }}
       </div>
+      {{ end }}
     </div>
 </section>
 

@@ -705,7 +705,7 @@
   background-color: #1b2a32;
   background-position: bottom -0.7rem right;
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  max-height: 60vh;
+  max-height: 70vh;
   padding-bottom: 40px;
   .logo {
     content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
@@ -765,13 +765,14 @@ body#s1t-index #s1t-destinations-2022 {
   }
 }
 body#s1t-index {
-  .springone-tour-details, .talk-modal, .speaker-modal {
-    a {
-      color: #02bc67;
-      &:hover {
-        color: #80ea6e;
-      }
+  .td-main a, .talk-modal a, .speaker-modal a {
+    color: #02bc67;
+    &:hover {
+      color: #80ea6e;
     }
+  }
+  #meetup {
+    align-items: center;
   }
   .day-toggle .day {
     &:not(.active) {
@@ -803,6 +804,9 @@ body#s1t-index {
       font-style: italic;
     }
   }
+  .speaker-modal {
+    max-width: 800px;
+  }
 }
 .light-mode body#s1t-index {
   .td-main {
@@ -822,15 +826,12 @@ body#s1t-index {
       background-color: #fff !important;
     }
   }
+  .day-toggle .day {
+    &:not(.active) {
+      border: none;
+    }
+  }
   #register-btn {
-
-    // a {
-    //   color: #02bc67;
-    //   &:hover {
-    //     color: #80ea6e;
-    //   }
-    // }
-    //
     color: #02bc67 !important;
     background-color: white !important;
     &:hover {
