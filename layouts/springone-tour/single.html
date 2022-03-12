@@ -229,15 +229,15 @@
                     more details.{{ end }}
                 </p>
 
-              {{ .Content }}
-
-              {{ if isset .Params "meetup" }}
-              <h3 class="mt-5">Meetup</h3>
-              <div class="row" id="">
-                <a class="col-sm-2" href="#city-takeover" class="lightbox"><img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' style="color: #fff;"></a>
-                <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
-              </div>
-              {{ end }}
+                {{ .Content }} {{ if isset .Params "meetup" }}
+                <h3 class="mt-5">Meetup</h3>
+                <div class="row" id="">
+                    <a class="col-sm-2" href="#city-takeover" class="lightbox"
+                        ><img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' style="color: #fff"
+                    /></a>
+                    <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+                </div>
+                {{ end }}
 
                 <h3 class="mt-5">Lead/Forward</h3>
                 <p>
@@ -395,6 +395,7 @@
             },
             error: (err) => {
                 errElement.text(`${err.statusText}: ${err.responseText}`);
+                setLoading($('#submit'), false);
             },
         });
     };
@@ -436,6 +437,7 @@
                 regBtn.after('<p class="mt-4" style="color: #80ea6e">Registration is all set!</p>').remove();
             },
             error: (resp) => {
+                setLoading($('#submit'), false);
                 $('#register-btn-text').text('Registration issue try again');
                 errElement.text(`${resp.statusText}: ${resp.responseText}`);
             },
@@ -512,6 +514,4 @@
         });
     });
 </script>
-{{ end }}
-
-{{ end }}
+{{ end }} {{ end }}
