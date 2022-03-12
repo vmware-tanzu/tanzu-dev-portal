@@ -559,10 +559,6 @@ body {
     .mktoFormRow:nth-child(3) {
       display: none;
     }
-    .form-row {
-        width: -webkit-fill-available;
-        margin: 15px 0px;
-    }
     .mktoLabelToLeft input[type="checkbox"] {
       left: 0.3em !important;
     }
@@ -656,6 +652,10 @@ body {
 
   #s1t-register {
       form {
+          .form-row {
+              width: -webkit-fill-available;
+              margin: 15px 0px;
+           }
           .s1t-form-col{
               width: 100%;
               padding: 0 1.5rem;
@@ -664,14 +664,19 @@ body {
                 }
             }
           #submit {
-              background-color: #02bc67 !important;
+              border: 1px solid #02bc67 !important;
+              background-color: transparent;
               color: white;
               &:hover{
-                  background-color: #80ea6e !important;
+                  background-color: #02bc67 !important;
                 }
                 &:disabled{
-                    background-color: grey !important;
-                    color:#000
+                    border: 1px solid grey;
+                    background-color: transparent;
+                    color: grey
+                }
+                &:active{
+                   background-color: #80ea6e !important
                 }
           }
 
@@ -682,7 +687,7 @@ body {
         textarea, button {
           margin: 25px auto;
         }
-      select, textarea, input:not([type="checkbox"]){
+      select, textarea, input:not([type="checkbox"]):not([type="radio"]){
           width: 100% !important;
           border: 0 !important;
           background: transparent;
@@ -712,12 +717,27 @@ body {
             box-shadow: none;
         }
         .btn-apply {
-            color: #02bc67;
+            color: white;
             background-color: transparent;
-            border: none;
+            border: solid #02bc67;
+            border-radius: .25rem;
+            padding: 0.25rem .5rem;
             &:hover{
-                color: #80ea6e;
+                color: white;
+                background-color: #02bc67;
             }
+            &:active{
+                background-color: #80ea6e;
+            }
+        }
+        #discount-btn{
+            margin-top: 12px;
+        }
+        #discount-code{
+            margin-top: 4px;
+        }
+        #response-message {
+            color: red;
         }
         .charge-currency, .discount-currency {
             padding-right: 1.5rem;
@@ -725,6 +745,9 @@ body {
         }
         .discount-details{
             display: none;
+        }
+        .discount-notice{
+            margin-top: 1.5rem;
         }
         .modal-content {
             color: white;

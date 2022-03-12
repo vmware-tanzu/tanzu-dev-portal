@@ -1,9 +1,6 @@
-{{ define "main" }}
-{{ $class := replace .Page.Section "." "-" | lower }}
-{{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "TODO AWS URL" }}
-{{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}}
-{{ $logo_path := .Params.logo_path | relURL }}
-{{ $isRegOpen := isset .Params "location" }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
+"http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
+.Params.logo_path | relURL }} {{ $isRegOpen := isset .Params "location" }}
 
 <style>
     #hero.springone-tour-event-hero.s1t-city {
@@ -20,18 +17,15 @@
                 <h3 class="h3 pt-0 mb-4 pb-2">
                     {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
-                {{ if $isRegOpen }}
-                  {{ range .Params.location }}
-                  <p class="mt-0 mb-0">
-                      {{ . }}
-                  </p>
-                  {{ end }}
-                  <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
-                      <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
-                      <span id="register-btn-text">Register Now</span>
-                  </button>
+                {{ if $isRegOpen }} {{ range .Params.location }}
+                <p class="mt-0 mb-0">{{ . }}</p>
+                {{ end }}
+                <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
+                    <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
+                    <span id="register-btn-text">Register Now</span>
+                </button>
                 {{ else }}
-                  <p class="mt-0 mb-0">Stay tuned for more details!</p>
+                <p class="mt-0 mb-0">Stay tuned for more details!</p>
                 {{ end }}
             </div>
         </div>
@@ -51,7 +45,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-inline mktoForm">
+                <form class="form-inline">
                     <input type="hidden" name="chargeValue" value="200" />
                     <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
                     <div class="form-row">
@@ -60,288 +54,32 @@
                                 type="text"
                                 class="form-control"
                                 name="firstName"
-                                placeholder="First name *"
+                                placeholder="First name"
                                 maxlength="50"
                                 aria-required="First name"
                                 required
                             />
                         </div>
                         <div class="col-sm-3 s1t-form-col">
-                            <input
-                                type="text"
-                                class="form-control"
-                                name="lastName"
-                                placeholder="Last name *"
-                                maxlength="50"
-                                aria-required="Last name"
-                                required
-                            />
+                            <input type="text" class="form-control" name="lastName" placeholder="Last name" maxlength="50" aria-required="Last name" required />
                         </div>
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" aria-required="Email address" required />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" aria-required="Email address" required />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job title *" />
+                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job title" />
                         </div>
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company *" maxlength="50" />
+                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company" maxlength="50" />
                         </div>
                     </div>
                     <div class="form-row">
+                        <div class="col-sm-6 s1t-form-col">{{ partial "country-select-dropdown.html" . }}</div>
                         <div class="col-sm-6 s1t-form-col">
-                            <select class="mktoField form-control" name="country" aria-selected="None">
-                                <option value="None" selected disabled hidden>Country *</option>
-                                <option value="United States">United States</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Åland Islands">Åland Islands</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="American Samoa">American Samoa</option>
-                                <option value="Andorra">Andorra</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Anguilla">Anguilla</option>
-                                <option value="Antarctica">Antarctica</option>
-                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Armenia">Armenia</option>
-                                <option value="Aruba">Aruba</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Azerbaijan">Azerbaijan</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Bangladesh">Bangladesh</option>
-                                <option value="Barbados">Barbados</option>
-                                <option value="Belarus">Belarus</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Belize">Belize</option>
-                                <option value="Benin">Benin</option>
-                                <option value="Bermuda">Bermuda</option>
-                                <option value="Bhutan">Bhutan</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                <option value="Botswana">Botswana</option>
-                                <option value="Bouvet Island">Bouvet Island</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                <option value="Brunei Darussalam">Brunei Darussalam</option>
-                                <option value="Bulgaria">Bulgaria</option>
-                                <option value="Burkina Faso">Burkina Faso</option>
-                                <option value="Burundi">Burundi</option>
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Cameroon">Cameroon</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Cape Verde">Cape Verde</option>
-                                <option value="Cayman Islands">Cayman Islands</option>
-                                <option value="Central African Republic">Central African Republic</option>
-                                <option value="Chad">Chad</option>
-                                <option value="Chile">Chile</option>
-                                <option value="China">China</option>
-                                <option value="Christmas Island">Christmas Island</option>
-                                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Comoros">Comoros</option>
-                                <option value="Congo">Congo</option>
-                                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                                <option value="Cook Islands">Cook Islands</option>
-                                <option value="Costa Rica">Costa Rica</option>
-                                <option value="Cote D'ivoire">Cote D'ivoire</option>
-                                <option value="Croatia">Croatia</option>
-                                <option value="Cuba">Cuba</option>
-                                <option value="Cyprus">Cyprus</option>
-                                <option value="Czech Republic">Czech Republic</option>
-                                <option value="Denmark">Denmark</option>
-                                <option value="Djibouti">Djibouti</option>
-                                <option value="Dominica">Dominica</option>
-                                <option value="Dominican Republic">Dominican Republic</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Egypt">Egypt</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                <option value="Eritrea">Eritrea</option>
-                                <option value="Estonia">Estonia</option>
-                                <option value="Ethiopia">Ethiopia</option>
-                                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-                                <option value="Faroe Islands">Faroe Islands</option>
-                                <option value="Fiji">Fiji</option>
-                                <option value="Finland">Finland</option>
-                                <option value="France">France</option>
-                                <option value="French Guiana">French Guiana</option>
-                                <option value="French Polynesia">French Polynesia</option>
-                                <option value="French Southern Territories">French Southern Territories</option>
-                                <option value="Gabon">Gabon</option>
-                                <option value="Gambia">Gambia</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Gibraltar">Gibraltar</option>
-                                <option value="Greece">Greece</option>
-                                <option value="Greenland">Greenland</option>
-                                <option value="Grenada">Grenada</option>
-                                <option value="Guadeloupe">Guadeloupe</option>
-                                <option value="Guam">Guam</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Guernsey">Guernsey</option>
-                                <option value="Guinea">Guinea</option>
-                                <option value="Guinea-bissau">Guinea-bissau</option>
-                                <option value="Guyana">Guyana</option>
-                                <option value="Haiti">Haiti</option>
-                                <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
-                                <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
-                                <option value="Honduras">Honduras</option>
-                                <option value="Hong Kong">Hong Kong</option>
-                                <option value="Hungary">Hungary</option>
-                                <option value="Iceland">Iceland</option>
-                                <option value="India">India</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                <option value="Iraq">Iraq</option>
-                                <option value="Ireland">Ireland</option>
-                                <option value="Isle of Man">Isle of Man</option>
-                                <option value="Israel">Israel</option>
-                                <option value="Italy">Italy</option>
-                                <option value="Jamaica">Jamaica</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Jersey">Jersey</option>
-                                <option value="Jordan">Jordan</option>
-                                <option value="Kazakhstan">Kazakhstan</option>
-                                <option value="Kenya">Kenya</option>
-                                <option value="Kiribati">Kiribati</option>
-                                <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
-                                <option value="Korea, Republic of">Korea, Republic of</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-                                <option value="Latvia">Latvia</option>
-                                <option value="Lebanon">Lebanon</option>
-                                <option value="Lesotho">Lesotho</option>
-                                <option value="Liberia">Liberia</option>
-                                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-                                <option value="Liechtenstein">Liechtenstein</option>
-                                <option value="Lithuania">Lithuania</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Macao">Macao</option>
-                                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
-                                <option value="Madagascar">Madagascar</option>
-                                <option value="Malawi">Malawi</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Mali">Mali</option>
-                                <option value="Malta">Malta</option>
-                                <option value="Marshall Islands">Marshall Islands</option>
-                                <option value="Martinique">Martinique</option>
-                                <option value="Mauritania">Mauritania</option>
-                                <option value="Mauritius">Mauritius</option>
-                                <option value="Mayotte">Mayotte</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
-                                <option value="Moldova, Republic of">Moldova, Republic of</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="Mongolia">Mongolia</option>
-                                <option value="Montenegro">Montenegro</option>
-                                <option value="Montserrat">Montserrat</option>
-                                <option value="Morocco">Morocco</option>
-                                <option value="Mozambique">Mozambique</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Namibia">Namibia</option>
-                                <option value="Nauru">Nauru</option>
-                                <option value="Nepal">Nepal</option>
-                                <option value="Netherlands">Netherlands</option>
-                                <option value="Netherlands Antilles">Netherlands Antilles</option>
-                                <option value="New Caledonia">New Caledonia</option>
-                                <option value="New Zealand">New Zealand</option>
-                                <option value="Nicaragua">Nicaragua</option>
-                                <option value="Niger">Niger</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Niue">Niue</option>
-                                <option value="Norfolk Island">Norfolk Island</option>
-                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                <option value="Norway">Norway</option>
-                                <option value="Oman">Oman</option>
-                                <option value="Pakistan">Pakistan</option>
-                                <option value="Palau">Palau</option>
-                                <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
-                                <option value="Panama">Panama</option>
-                                <option value="Papua New Guinea">Papua New Guinea</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Philippines">Philippines</option>
-                                <option value="Pitcairn">Pitcairn</option>
-                                <option value="Poland">Poland</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Puerto Rico">Puerto Rico</option>
-                                <option value="Qatar">Qatar</option>
-                                <option value="Reunion">Reunion</option>
-                                <option value="Romania">Romania</option>
-                                <option value="Russian Federation">Russian Federation</option>
-                                <option value="Rwanda">Rwanda</option>
-                                <option value="Saint Helena">Saint Helena</option>
-                                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                <option value="Saint Lucia">Saint Lucia</option>
-                                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
-                                <option value="Samoa">Samoa</option>
-                                <option value="San Marino">San Marino</option>
-                                <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                <option value="Senegal">Senegal</option>
-                                <option value="Serbia">Serbia</option>
-                                <option value="Seychelles">Seychelles</option>
-                                <option value="Sierra Leone">Sierra Leone</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Slovakia">Slovakia</option>
-                                <option value="Slovenia">Slovenia</option>
-                                <option value="Solomon Islands">Solomon Islands</option>
-                                <option value="Somalia">Somalia</option>
-                                <option value="South Africa">South Africa</option>
-                                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
-                                <option value="Spain">Spain</option>
-                                <option value="Sri Lanka">Sri Lanka</option>
-                                <option value="Sudan">Sudan</option>
-                                <option value="Suriname">Suriname</option>
-                                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                <option value="Swaziland">Swaziland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Switzerland">Switzerland</option>
-                                <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                                <option value="Taiwan">Taiwan</option>
-                                <option value="Tajikistan">Tajikistan</option>
-                                <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Timor-leste">Timor-leste</option>
-                                <option value="Togo">Togo</option>
-                                <option value="Tokelau">Tokelau</option>
-                                <option value="Tonga">Tonga</option>
-                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                <option value="Tunisia">Tunisia</option>
-                                <option value="Turkey">Turkey</option>
-                                <option value="Turkmenistan">Turkmenistan</option>
-                                <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                <option value="Tuvalu">Tuvalu</option>
-                                <option value="Uganda">Uganda</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="United Arab Emirates">United Arab Emirates</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                                <option value="Uruguay">Uruguay</option>
-                                <option value="Uzbekistan">Uzbekistan</option>
-                                <option value="Vanuatu">Vanuatu</option>
-                                <option value="Venezuela">Venezuela</option>
-                                <option value="Viet Nam">Viet Nam</option>
-                                <option value="Virgin Islands, British">Virgin Islands, British</option>
-                                <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                                <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                <option value="Western Sahara">Western Sahara</option>
-                                <option value="Yemen">Yemen</option>
-                                <option value="Zambia">Zambia</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-6 s1t-form-col">
-                            <select id="dietaryRestrictions" name="dietaryRestrictions" class="mktoField form-control">
-                                <option value="None" selected hidden>Dietary restrictions</option>
+                            <select id="dietaryRestrictions" name="dietaryRestrictions" class="form-control">
+                                <option value="None" selected disabled>Dietary restrictions</option>
                                 <option value="None">None</option>
                                 <option value="Vegetarian">Vegetarian</option>
                                 <option value="Vegan">Vegan</option>
@@ -354,8 +92,8 @@
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">
-                            <select name="tshirtSize" class="mktoField form-control">
-                                <option value="none" selected hidden>T-Shirt Size *</option>
+                            <select name="tshirtSize" class="form-control">
+                                <option value="none" selected disabled>T-Shirt Size</option>
                                 <option value="xss">XX Small</option>
                                 <option value="xs">X Small</option>
                                 <option value="s">Small</option>
@@ -369,25 +107,25 @@
                         <div class="col-sm-6 s1t-form-col">
                             <input
                                 name="dietaryCustom"
-                                class="mktoField form-control dietary-custom"
+                                class="form-control dietary-custom"
                                 type="text"
                                 placeholder="Enter custom dietary restrictions."
                                 style="display: none"
                             />
                         </div>
                     </div>
-                    <div id="card-errors" role="alert" class="col-sm-6 s1t-form-col"><p></p></div>
+                    <div id="card-errors" class="s1t-form-col" role="alert"><p></p></div>
                     <div class="form-row">
                         <div class="col-12 s1t-form-col">
                             <div id="card-element" class="stripe-card-element"></div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-4 col-6 mt-3 s1t-form-col">
+                        <div class="col-sm-4 col-9 mt-1 s1t-form-col">
                             <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
                             <p class="discount-notice" style="display: none"></p>
                         </div>
-                        <div class="col-sm-2 col-6 text-right s1t-form-col">
+                        <div class="col-sm-2 col-3 text-right s1t-form-col">
                             <button id="discount-btn" type="button" class="btn-apply">Apply</button>
                         </div>
                         <div class="col-sm-6 text-left s1t-form-col">
@@ -415,11 +153,53 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
-                        <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
-                        <span id="payment-btn-text">Submit</span>
-                    </button>
-                    <div id="payment-message" class="hidden"></div>
+                    <div id="s1t-tac-container" style="display: none">
+                        <div class="col-12 justify-content-start s1t-form-col">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="s1t-tac-consent" name="tacAccepted" value="true" />
+                                <label class="form-check-label ml-3" for="s1t-tac-consent"
+                                    >I agree to SpringOne Tour's <a href='{{ print .Parent.RelPermalink "/terms"  }}' class="p-1">Terms & Conditions.</a></label
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gdpr-consent-container" style="display: none">
+                        <div class="col-12 s1t-form-col">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="gdpr-yes" name="gdprPreference" value="yes" />
+                                <label class="form-check-label ml-3" for="gdpr-yes"
+                                    >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
+                                    and events.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 s1t-form-col">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="gdpr-no" name="gdprPreference" value="no" />
+                                <label class="form-check-label ml-3" for="gdpr-no"
+                                    >No, I would not like to be contacted by VMware and/or its affiliates regarding products and services, newsletters, and
+                                    events.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="default-consent-container" style="display: none">
+                        <div class="col-12 justify-content-start s1t-form-col">
+                            <div class="form-check">
+                                <input type="checkbox" name="vmwarePrivacyPolicy" id="vmware-privacy-policy" class="form-check-input" value="true" />
+                                <label class="form-check-label ml-3" for="vmware-privacy-policy"
+                                    >I agree to VMware's <a href="https://www.vmware.com/help/privacy.html" class="p-1">Privacy Policy</a></label
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="response-error-message" class="s1t-form-col" role="alert"><p></p></div>
+                    <div class="form-row">
+                        <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
+                            <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
+                            <span id="payment-btn-text">Submit</span>
+                        </button>
+                    </div>
                 </form>
                 <div class="success-banner" style="display: none">
                     <div class="row">
@@ -443,21 +223,22 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 px-0 mt-5">
-              <p>
-                Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the city during the week, everywhere from executive events to meetups to giving back to the community.
-                {{ if not $isRegOpen }} Stay tuned for more details.{{ end }}
-              </p>
+                <p>
+                    Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the
+                    city during the week, everywhere from executive events to meetups to giving back to the community. {{ if not $isRegOpen }} Stay tuned for
+                    more details.{{ end }}
+                </p>
 
-              {{ .Content }}
-
-              {{ if isset .Params "meetup" }}
-              <h3 class="mt-5">Meetup</h3>
+                {{ .Content }} {{ if isset .Params "meetup" }}
+                <h3 class="mt-5">Meetup</h3>
                 <p>{{- .Params.meetup -}}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
-              {{ end }}
+                {{ end }}
 
-              <h3 class="mt-5">Lead/Forward</h3>
-              <p>Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to
-              <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.</p>
+                <h3 class="mt-5">Lead/Forward</h3>
+                <p>
+                    Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your
+                    business needs. For more information, please reach out to <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
+                </p>
             </div>
         </div>
         <div class="row justify-content-center mb-5 mt-5 text-center">
@@ -489,12 +270,14 @@
     const subBtn = $('#submit');
     const regModal = $('#s1t-register');
     const regForm = $('#s1t-register form');
-
-    const stripe = Stripe('pk_test_AFX7PJdNXmyYWaGJw4iKa8Yh');
+    const countryInput = $('select.country-select');
+    const errElement = $('#response-error-message p');
+    const stripe = Stripe('pk_test_spvxO15DDJ4xn3jcJATwg8pw');
 
     let card;
     let clientSecret;
     let intentId;
+    let requiresGDPR;
 
     const setLoading = (el, bool) => {
         if (bool) {
@@ -515,7 +298,7 @@
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
-                $('.charge-total').text(`$${resp.amount}`);
+                $('.charge-total').text(`$${resp.amount / 100}`);
                 const style = {
                     base: {
                         color: 'white',
@@ -561,7 +344,9 @@
                 $('.charge-label').text('Before discount:');
                 $('.discount-details').css('display', 'flex');
                 $('.discount-notice').show().text(`${discountElement.val()} applied`).css('color', 'green');
-                $('.discount-total').text(`$${resp.amount}`).css('color', 'green');
+                $('.discount-total')
+                    .text(`$${resp.amount / 100}`)
+                    .css('color', 'green');
             },
             error: (resp) => {
                 $('.charge-label').text('Charge total:');
@@ -575,6 +360,26 @@
     };
 
     const handleSubmit = async () => {
+        errElement.empty();
+        setLoading($('#submit'), true);
+        if (!$('#s1t-tac-consent').prop('checked')) {
+            errElement.text('You must accept the SpringOne Tour Terms and Conditions.');
+            setLoading($('#submit'), false);
+            return;
+        }
+        if (requiresGDPR) {
+            if (!$('#gdpr-yes').prop('checked') && !$('#gdpr-no').prop('checked')) {
+                errElement.text('You must select yes or no for preferences.');
+                setLoading($('#submit'), false);
+                return;
+            }
+        } else {
+            if (!$('#vmware-privacy-policy').prop('checked')) {
+                errElement.text('You must accept VMware Privacy Policy.');
+                setLoading($('#submit'), false);
+                return;
+            }
+        }
         $.ajax({
             url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityName}}',
             method: 'post',
@@ -583,13 +388,12 @@
                 processStripePayment(resp);
             },
             error: (err) => {
-                alert(`${err.statusText}: ${err.responseText}`);
+                errElement.text(`${err.statusText}: ${err.responseText}`);
             },
         });
     };
 
     const processStripePayment = (registrant) => {
-        setLoading($('#submit'), true);
         stripe
             .confirmCardPayment(clientSecret, {
                 payment_method: {
@@ -608,7 +412,7 @@
             })
             .catch((err) => {
                 setLoading($('#submit'), false);
-                alert(err);
+                errElement.text(err);
             });
     };
 
@@ -619,14 +423,15 @@
             data: regForm.serialize(),
             success: (resp) => {
                 setLoading($('#submit'), false);
-                $('#s1t-register .modal-title').text('Successful Payment and Registration');
+                errElement.empty();
+                $('#s1t-register .modal-title').text(resp);
                 $('#s1t-register form').hide();
                 $('#s1t-register .success-banner').show();
                 regBtn.after('<p class="mt-4" style="color: #80ea6e">Registration is all set!</p>').remove();
             },
             error: (resp) => {
                 $('#register-btn-text').text('Registration issue try again');
-                alert(`${resp.statusText}: ${resp.responseText}`);
+                errElement.text(`${resp.statusText}: ${resp.responseText}`);
             },
         });
     };
@@ -663,19 +468,40 @@
         initStripe();
     });
 
+    countryInput.on('change', () => {
+        if (countryInput.val() !== 'None') {
+            try {
+                let country = countries.filter((country) => country.name === countryInput.val())[0];
+                if (country.gdpr) {
+                    $('#s1t-tac-container').show();
+                    $('#gdpr-consent-container').show();
+                    $('#default-consent-container').hide();
+                    requiresGDPR = true;
+                } else {
+                    $('#s1t-tac-container').show();
+                    $('#default-consent-container').show();
+                    $('#gdpr-consent-container').hide();
+                    requiresGDPR = false;
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    });
+
     $().ready(() => {
         $.ajax({
             url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
             method: 'get',
             success: (resp) => {
-                if (resp.status === 'not open') {
+                if (resp.status === 'full') {
                     regBtn.attr('disabled', 'true');
                     regBtn.text(`Registration is ${resp.status}`);
                 }
             },
-            error: (resp) => {
+            error: (err) => {
                 // regBtn.attr('disabled', 'true');
-                regBtn.text(`Registration is ${resp.responseJSON.status}`);
+                regBtn.text(`Registration is ${err.responseJSON.status}`);
             },
         });
     });
