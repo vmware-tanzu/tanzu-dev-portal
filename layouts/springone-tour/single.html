@@ -2,13 +2,7 @@
 "http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
 .Params.logo_path | relURL }} {{ $isRegOpen := isset .Params "location" }}
 
-<style>
-    #hero.springone-tour-event-hero.s1t-city {
-        /* background-image: url('{{ $logo_path }}'); */
-    }
-</style>
-
-<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 pt-4 pb-5">
+<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4 pb-5">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
         <div class="row justify-content-between">
@@ -83,7 +77,7 @@
                                 <option value="None">None</option>
                                 <option value="Vegetarian">Vegetarian</option>
                                 <option value="Vegan">Vegan</option>
-                                <option value="Gluten-Free">Gluten-Free</option>
+                                <option value="Gluten-Free">Gluten-free</option>
                                 <option value="Kosher">Kosher</option>
                                 <option value="Halal">Halal</option>
                                 <option value="Custom">Other/Allergies</option>
@@ -93,7 +87,7 @@
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">
                             <select name="tshirtSize" class="form-control">
-                                <option value="none" selected disabled>T-Shirt Size</option>
+                                <option value="none" selected disabled>T-shirt size</option>
                                 <option value="xss">XX Small</option>
                                 <option value="xs">X Small</option>
                                 <option value="s">Small</option>
@@ -194,12 +188,12 @@
                         </div>
                     </div>
                     <div id="response-error-message" class="s1t-form-col" role="alert"><p></p></div>
-                    <div class="form-row">
-                        <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
-                            <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
-                            <span id="payment-btn-text">Submit</span>
-                        </button>
-                    </div>
+                    <!-- <div class="form-row"> -->
+                    <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
+                        <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
+                        <span id="payment-btn-text">Submit</span>
+                    </button>
+                    <!-- </div> -->
                 </form>
                 <div class="success-banner" style="display: none">
                     <div class="row">
@@ -230,12 +224,15 @@
                 </p>
 
                 {{ .Content }} {{ if isset .Params "meetup" }}
-                <h3 class="mt-5">Meetup</h3>
-                <div class="row" id="">
-                    <a class="col-sm-2" href="#city-takeover" class="lightbox"
-                        ><img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' style="color: #fff"
-                    /></a>
+                <div id="meetup">
+                  <h3 class="mt-5">Meetup</h3>
+                  <div class="row align-items-center">
+                    <a class="col-sm-2" href="#city-takeover" class="lightbox">
+                      <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode"/>
+                      <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode"/>
+                    </a>
                     <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+                  </div>
                 </div>
                 {{ end }}
 

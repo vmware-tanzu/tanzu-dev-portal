@@ -19,7 +19,7 @@
       <div class="row justify-content-lg-start mb-3">
           {{ range .Pages.ByDate }}
             {{ if .Params.publish }}
-            <a class='mb-5' href="{{ .RelPermalink }}">
+            <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
                 <div class='city-tile transition-all {{ .Params.title | lower }}-tile col-4 col-lg-11 col-12 px-0 overflow-hidden position-relative'
                 style='background-image: url("{{ .Params.logo_path | relURL }}");'>
                       <div class='city-tile-text d-flex flex-column'>

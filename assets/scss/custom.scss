@@ -715,6 +715,9 @@
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
   max-height: 70vh;
   padding-bottom: 40px;
+  .container.ml-5 {
+    margin-left: 0 !important;
+  }
   .logo {
     content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
     max-width: 20%;
@@ -737,7 +740,18 @@
 #hero.springone-tour-event-hero.s1t-city {
   @media(max-width: 991px) {
     background-size: 60%;
-    background-position: bottom right;
+    background-position: bottom left 15px;
+    min-height: 450px;
+    &.chicago {
+      background-position: bottom right;
+    }
+  }
+  @media(max-width: 850px) {
+    &.chicago {
+      background-size: 60%;
+      background-position: bottom left 15px;
+      min-height: 650px;
+    }
   }
   #register-btn {
     font-weight: 400;
@@ -750,12 +764,6 @@
   }
 }
 body#s1t-index #s1t-destinations-2022 {
-  a {
-    width: 33%;
-    @media(max-width: 990px) {
-      width: 40%;
-    }
-  }
   .city-tile {
     background-repeat: no-repeat;
     background-size: auto 90%;
@@ -763,6 +771,9 @@ body#s1t-index #s1t-destinations-2022 {
     background-color: #1b2a32;
     &:hover {
       background-color: #324f61;
+    }
+    @media(max-width: 991px) {
+      max-width: 400px;
     }
   }
   .city-tile-text {
@@ -777,6 +788,11 @@ body#s1t-index {
     color: #02bc67;
     &:hover {
       color: #80ea6e;
+    }
+  }
+  @media (max-width: 767px){
+    .container-sm, .container {
+      max-width: 100%;
     }
   }
   #meetup {
@@ -797,16 +813,35 @@ body#s1t-index {
   }
   .agenda {
     background-color: #22343c;
-  }
-  .name .lightbox {
-    display: block;
+    .name {
+      margin-left: 1rem;
+      .lightbox {
+        display: block;
+      }
+    }
+    @media (max-width: 767px) {
+      .time, .talk-title, .name a {
+        font-size: .9rem !important;
+        vertical-align: top !important;
+      }
+      .talk-title {
+        word-break: break-word;
+      }
+      .name.ml-3 {
+        margin-left: 0 !important;
+      }
+    }
   }
   .talk-modal, .speaker-modal {
     background-color: #1b2a32;
     display: none;
     max-width: 700px;
-    a.fancybox-close {
-      color: #02bc67 !important;
+    @media(max-width: 991px) {
+      max-width: 500px !important;
+      img {
+        max-width: 30%;
+        min-width: 200px;
+      }
     }
     .title {
       font-style: italic;
@@ -815,8 +850,23 @@ body#s1t-index {
   .speaker-modal {
     max-width: 800px;
   }
+  a.fancybox-close:before {
+    color: #02bc67 !important;
+  }
+  .display-in-light-mode {
+    display: none;
+  }
+  .hide-in-light-mode {
+    display: block;
+  }
 }
 .light-mode body#s1t-index {
+  .display-in-light-mode {
+    display: block;
+  }
+  .hide-in-light-mode {
+    display: none;
+  }
   .td-main {
     background-color: #fff !important;
   }
@@ -840,11 +890,14 @@ body#s1t-index {
     }
   }
   #register-btn {
-    color: #02bc67 !important;
-    background-color: white !important;
+    color: #000000 !important;
+    background-color: #f4f8fa !important;
     &:hover {
-        background-color: #02bc67 !important;
-        color: white !important;
+      color: #1D428A !important;
+      background-color: #ffffff !important;
     }
+  }
+  a.fancybox-close:before {
+    color: #1D428A !important
   }
 }
