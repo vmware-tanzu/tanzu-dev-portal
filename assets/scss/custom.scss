@@ -713,44 +713,43 @@
   background-color: #1b2a32;
   background-position: bottom -0.7rem right;
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  max-height: 70vh;
+  min-height: 60vh;
   padding-bottom: 40px;
   .container.ml-5 {
     margin-left: 0 !important;
-  }
-  .logo {
-    content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
-    max-width: 20%;
   }
   @media(max-width: 1250px) {
     background-position: bottom right;
     padding-top: 8vh;
     padding-bottom: 0vh;
   }
-  @media(max-width: 991px) {
-    background-size: 75%;
-    background-position: bottom center;
-    padding-top: 2em;
-    min-height: 400px;
+  &.s1t-index {
     .logo {
-      display: none;
+      content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
+      max-width: 20%;
     }
+    @media(max-width: 991px) {
+      background-size: 75%;
+      background-position: bottom center;
+      padding-top: 2em;
+      min-height: 400px;
+      .logo {
+        display: none;
+      }
+    }
+  }
+  .small-screen-hero {
+    display: none;
   }
 }
 #hero.springone-tour-event-hero.s1t-city {
-  @media(max-width: 991px) {
-    background-size: 60%;
-    background-position: bottom left 15px;
-    min-height: 450px;
-    &.chicago {
-      background-position: bottom right;
-    }
+  &.chicago {
+    min-height: 70vh;
   }
-  @media(max-width: 850px) {
-    &.chicago {
-      background-size: 60%;
-      background-position: bottom left 15px;
-      min-height: 650px;
+  @media(max-width: 767px) {
+    background-image: none;
+    .small-screen-hero {
+      display: block;
     }
   }
   #register-btn {
@@ -797,6 +796,15 @@ body#s1t-index {
   }
   #meetup {
     align-items: center;
+    @media(max-width: 575px) {
+      img {
+        width: 30%;
+        margin-top: 1rem;
+      }
+      .row > * {
+        padding-left: 0 !important;
+      }
+    }
   }
   .day-toggle .day {
     &:not(.active) {

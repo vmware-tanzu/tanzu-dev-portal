@@ -2,7 +2,7 @@
 "http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
 .Params.logo_path | relURL }} {{ $isRegOpen := isset .Params "location" }}
 
-<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4 pb-5">
+<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
         <div class="row justify-content-between">
@@ -21,6 +21,7 @@
                 {{ else }}
                 <p class="mt-0 mb-0">Stay tuned for more details!</p>
                 {{ end }}
+                <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}'/>
             </div>
         </div>
     </div>
@@ -227,7 +228,7 @@
                 <div id="meetup">
                   <h3 class="mt-5">Meetup</h3>
                   <div class="row align-items-center">
-                    <a class="col-sm-2" href="#city-takeover" class="lightbox">
+                    <a class="col-sm-2 lightbox" href="#city-takeover">
                       <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode"/>
                       <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode"/>
                     </a>
