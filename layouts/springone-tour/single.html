@@ -1,6 +1,6 @@
 {{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
-.Params.logo_path | relURL }} {{ $isRegOpen := isset .Params "location" }}
+"https://staging.s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
+isset .Params "location" }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
     <div class="container">
@@ -21,7 +21,7 @@
                 {{ else }}
                 <p class="mt-0 mb-0">Stay tuned for more details!</p>
                 {{ end }}
-                <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}'/>
+                <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}' />
             </div>
         </div>
     </div>
@@ -189,12 +189,14 @@
                         </div>
                     </div>
                     <div id="response-error-message" class="s1t-form-col" role="alert"><p></p></div>
-                    <!-- <div class="form-row"> -->
-                    <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
-                        <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
-                        <span id="payment-btn-text">Submit</span>
-                    </button>
-                    <!-- </div> -->
+                    <div class="form-row">
+                        <div class="col-12 s1t-form-col text-right">
+                            <button type="submit" id="submit" class="btn" disabled aria-disabled="true">
+                                <div class="spinner-border spinner-border-sm" id="payment-spinner" style="display: none"></div>
+                                <span id="payment-btn-text">Submit</span>
+                            </button>
+                        </div>
+                    </div>
                 </form>
                 <div class="success-banner" style="display: none">
                     <div class="row">
@@ -226,14 +228,14 @@
 
                 {{ .Content }} {{ if isset .Params "meetup" }}
                 <div id="meetup">
-                  <h3 class="mt-5">Meetup</h3>
-                  <div class="row align-items-center">
-                    <a class="col-sm-2 lightbox" href="#city-takeover">
-                      <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode"/>
-                      <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode"/>
-                    </a>
-                    <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
-                  </div>
+                    <h3 class="mt-5">Meetup</h3>
+                    <div class="row align-items-center">
+                        <a class="col-sm-2 lightbox" href="#city-takeover">
+                            <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode" />
+                            <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode" />
+                        </a>
+                        <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+                    </div>
                 </div>
                 {{ end }}
 
