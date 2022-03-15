@@ -667,19 +667,21 @@ body {
               border: 1px solid #02bc67 !important;
               background-color: transparent;
               color: white;
-              &:hover{
+              &:hover:not(:disabled){
                   background-color: #02bc67 !important;
-                }
-                &:disabled{
-                    border: 1px solid grey;
-                    background-color: transparent;
-                    color: grey
-                }
-                &:active{
-                   background-color: #80ea6e !important
-                }
+              }
+              &:disabled{
+                  border: 1px solid grey;
+                  background-color: transparent;
+                  color: grey
+              }
+              &:active{
+                 background-color: #80ea6e !important
+              }
           }
-
+          button.close span {
+            color: #fff;
+          }
         }
       ::placeholder{
           color: white;
@@ -698,6 +700,8 @@ body {
           padding-left: 0 !important;
           padding-bottom: 5px !important;
           height: 46px;
+          outline: none !important;
+          box-shadow: none;
           font-family: 'Metropolis';
         }
         select {
@@ -712,9 +716,7 @@ body {
             }
         }
         input[type=text]:focus, input[type=email]:focus{
-            outline: none !important;
             border-bottom: 1px solid #02bc67 !important;
-            box-shadow: none;
         }
         .btn-apply {
             color: white;
@@ -767,6 +769,9 @@ body {
       select, textarea, input:not([type="checkbox"]){
         border-bottom: 1px solid black !important;
         color: black;
+      }
+      input[type=text]:focus, input[type=email]:focus{
+          border-bottom: 1px solid #02bc67 !important;
       }
       .modal-content{
           color: #000;
