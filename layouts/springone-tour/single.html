@@ -1,5 +1,5 @@
 {{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://staging.s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
+"https://s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
 isset .Params "location" }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
@@ -318,7 +318,7 @@ isset .Params "location" }}
     const regForm = $('#s1t-register form');
     const countryInput = $('select.country-select');
     const errElement = $('#response-error-message p');
-    const stripe = Stripe('pk_test_spvxO15DDJ4xn3jcJATwg8pw');
+    const stripe = Stripe('pk_live_DWJQ1rhJItm7apoecrDZjmPU');
 
     let card;
     let clientSecret;

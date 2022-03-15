@@ -653,6 +653,8 @@ body {
   #s1t-register {
       form {
           .form-row {
+              width: 100%;
+              width: -moz-available;
               width: -webkit-fill-available;
               margin: 12px auto;
            }
