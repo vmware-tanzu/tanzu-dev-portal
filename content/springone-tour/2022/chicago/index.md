@@ -71,7 +71,7 @@ meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:00 AM–11:40 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="testing-love-hate">Testing: Love, Hate, Love</a>
+            <a class="lightbox" href="#testing-love-hate">Testing: Love, Hate, Love</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a></h3>
