@@ -154,7 +154,7 @@ isset .Params "location" }}
                             </div>
                         </div>
                     </div>
-                    <div id="s1t-tac-container" style="display: none">
+                    <div id="s1t-tac-container" style="display: none" class="mt-3">
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="s1t-tac-consent" name="tacAccepted" value="true" />
@@ -419,7 +419,7 @@ isset .Params "location" }}
             }
         } else {
             if (!$('#vmware-privacy-policy').prop('checked')) {
-                errElement.text('You must accept VMware Privacy Policy.');
+                errElement.text('You must accept VMware‘s Privacy Policy.');
                 setLoading($('#submit'), false);
                 return;
             }
@@ -432,7 +432,7 @@ isset .Params "location" }}
                 processStripePayment(resp);
             },
             error: (err) => {
-                errElement.text(`${err.statusText}: ${err.responseText}`);
+                errElement.text(`${err.responseText}`);
                 setLoading($('#submit'), false);
             },
         });
