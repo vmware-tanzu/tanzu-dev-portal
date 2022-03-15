@@ -16,6 +16,7 @@
 12SwitchRestoresSansCheckOuts
 2x2
 3D
+Salatino
 [23]G
 401K
 [245]xx
@@ -94,6 +95,7 @@ ApiResponse
 APIs?
 APM
 AppArmor
+AppDev
 AppDynamics
 Appel
 appender
@@ -276,6 +278,7 @@ CentOS
 Ceph
 Cerner
 CertificateRequests
+certified-kubernetes
 CEST
 CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
@@ -1545,6 +1548,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Prodan
 production-deployable
 ProductPlan
 Programadoras
@@ -1989,6 +1993,7 @@ undersample
 underutilization
 unencoded
 unencrypted
+unmanaged
 unpause
 Unported
 unprioritized

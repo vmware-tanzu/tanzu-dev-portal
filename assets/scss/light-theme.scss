@@ -417,6 +417,10 @@ div.aside div.aside-content {
   }
 }
 
+.sponsor-container img {
+  filter: invert(1);
+}
+
 /* SYNTAX HIGHLIGHTING */
 
 /* Background */ .chroma, pre, code { color: #0f171c !important; background-color: #f4f8fa !important }
