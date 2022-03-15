@@ -1,5 +1,4 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := "https://staging.s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
 isset .Params "location" }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
@@ -231,7 +230,7 @@ isset .Params "location" }}
                     <div id="nongdpr-consent-container" class="mt-3" style="display: none;">
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
-                                <input type="checkbox" name="vmwarePrivacyPolicy" id="nongdpr-consent" class="form-check-input" value="true" />
+                                <input type="checkbox" name="vmwarePrivacyPolicy" id="nongdpr-consent" class="form-check-input" value="true" required />
                                 <label class="form-check-label ml-3" for="nongdpr-consent"
                                     >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
                                     and events.</label>
