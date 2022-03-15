@@ -437,8 +437,8 @@
                 payment_method: {
                     card: card,
                     billing_details: { email: registrant.email },
-                    receipt_email: registrant.email,
                 },
+                receipt_email: registrant.email,
             })
             .then((result) => {
                 if (result.error) {
@@ -446,10 +446,12 @@
                     setLoading($('#submit'), false);
                 } else {
                     $('#card-errors p').empty();
+                    console.log(result);
                     registerUser(result.paymentIntent.id);
                 }
             })
             .catch((err) => {
+                console.log(err);
                 setLoading($('#submit'), false);
                 errElement.text(err);
             });
