@@ -670,7 +670,8 @@
 }
 
 .nav-tabs {
-  border-bottom: 2px solid #304250 !important;
+  // border-bottom: 2px solid #304250 !important;
+  border-bottom: 0 !important;
 
   .nav-link.active {
     border: 0;
@@ -692,6 +693,10 @@
 }
 .nav-link.active {
   background: transparent !important;
+}
+
+.nav-tabs + .tab-content {
+  border: solid #304250 2px;
 }
 
 .pe-none {
