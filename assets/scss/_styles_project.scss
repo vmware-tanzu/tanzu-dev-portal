@@ -662,8 +662,11 @@ body {
               @media (max-width: 575px) {
                   padding: 0 !important;
                 }
-              &#card-errors p {
-                margin-bottom: 0;
+              &#card-errors {
+                display: none;
+                p {
+                  margin-bottom: 0;
+                }
               }
             }
           #submit {
@@ -764,13 +767,7 @@ body {
         }
         .StripeElement {
           padding: 13px 10px;
-          border-bottom: 1px solid black !important;
-        }
-        .StripeElement--invalid {
-          border-color: #fa755a;
-        }
-        .StripeElement--webkit-autofill {
-          background-color: #fefde5 !important;
+          border-bottom: 1px solid white !important;
         }
         button.close span {
           color: #fff;
@@ -798,6 +795,9 @@ body {
         &:hover{
             border-bottom: 1px solid #02bc67 !important;
         }
+      }
+      .StripeElement {
+        border-bottom: 1px solid black !important;
       }
       #discount-btn.btn-apply {
         color: #000;
