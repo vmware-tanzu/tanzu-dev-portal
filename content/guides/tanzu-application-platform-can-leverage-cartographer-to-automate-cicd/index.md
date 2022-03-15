@@ -1,5 +1,5 @@
 ---
-title: "Understanding How Tanzu Application Platform Leverages Cartographer's Supply Chain to Automate the CI/CD Process"
+title: "Understanding How Tanzu Application Platform can use Cartographer's Supply Chain to Automate the CI/CD Process"
 description: Cartographer allows users to create secure, reusable supply chains. In this guide, learn how Cartographer is used within VMware Tanzu Application Platform to automate CI/CD pipelines.  
 date: 2022-03-09
 lastmod: 2022-03-09
@@ -64,6 +64,8 @@ A `ClusterTemplate` instructs the supply chain to instantiate a Kubernetes objec
 
 ![Code definition](images/image7.jpg)
 
+Download the above code snippets from [here](https://github.com/gowthamshankar99/tanzu_tap_supplychains/blob/main/cartographer_files/cartographer_objects.yml).
+
 ## How does Cartographer apply/connect these objects in order?
 
 Cartographer uses the `ClusterSupplyChain` object to link the different Cartographer objects in order to convert the source -> image -> Kubernetes object. In Cartographer terminology, this looks something like `ClusterSourceTemplate` -> `ClusterImageTemplate` -> `ClusterTemplate`.
@@ -77,6 +79,8 @@ With a `ClusterSupplyChain`, app operators describe which “shape of applicatio
 `ClusterSupplyChain` connects all the underlying Cartographer objects (`ClusterTemplate`, `ClusterImageTemplate`, ClusterSourceTemplate, etc.) to form a supply chain pipeline for deploying a workload into the Kubernetes cluster.
 
 ![Code definitions](images/image8.jpg)
+
+Download the above code snippet [here](https://github.com/gowthamshankar99/tanzu_tap_supplychains/blob/main/supply_chain.yml).
 
 ## Tying all the pieces together
 
