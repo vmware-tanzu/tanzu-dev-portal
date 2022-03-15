@@ -116,12 +116,18 @@ isset .Params "location" }}
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="col-sm-4 col-9 mt-1 s1t-form-col">
-                            <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
-                            <p class="discount-notice" style="display: none"></p>
-                        </div>
-                        <div class="col-sm-2 col-3 text-right s1t-form-col">
-                            <button id="discount-btn" type="button" class="btn-apply">Apply</button>
+                        <div class="col-sm-6 col-12 mt-1 s1t-form-col">
+                            <div class="row">
+                                <div class="col-9 p-0">
+                                    <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
+                                </div>
+                                <div class="col-3 text-right">
+                                    <button id="discount-btn" type="button" class="btn-apply">Apply</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="discount-notice" style="display: none"></p>
+                            </div>
                         </div>
                         <div class="col-sm-6 text-left s1t-form-col">
                             <div class="row">
@@ -153,7 +159,8 @@ isset .Params "location" }}
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="s1t-tac-consent" name="tacAccepted" value="true" />
                                 <label class="form-check-label ml-3" for="s1t-tac-consent"
-                                    >I agree to SpringOne Tour's <a href='{{ print .Parent.RelPermalink "/terms"  }}' class="p-1">Terms & Conditions.</a></label
+                                    >I agree to SpringOne Tour's
+                                    <a href='{{ print .Parent.RelPermalink "/terms"  }}' class="p-1" target="_blank">Terms & Conditions.</a></label
                                 >
                             </div>
                         </div>
@@ -183,11 +190,47 @@ isset .Params "location" }}
                             <div class="form-check">
                                 <input type="checkbox" name="vmwarePrivacyPolicy" id="vmware-privacy-policy" class="form-check-input" value="true" />
                                 <label class="form-check-label ml-3" for="vmware-privacy-policy"
-                                    >I agree to VMware's <a href="https://www.vmware.com/help/privacy.html" class="p-1">Privacy Policy</a></label
+                                    >I agree to VMware's
+                                    <a href="https://www.vmware.com/help/privacy.html" class="p-1" target="_blank">Privacy Policy</a></label
                                 >
                             </div>
                         </div>
                     </div>
+                    <div class="covid-attestation-container">
+                        <div class="col-12 justify-content-start s1t-form-col">
+                            <div class="form-check">
+                                <input
+                                    type="checkbox"
+                                    name="COVID19VaccinationAttestation"
+                                    id="COVID-19-vaccination-attestation"
+                                    class="form-check-input"
+                                    value="true"
+                                />
+                                <label class="form-check-label ml-3" for="COVID-19-vaccination-attestation"
+                                    >I attest that I am fully vaccinated against COVID-19 as defined by the
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" class="p-1" target="_blank"
+                                        >CDC</a
+                                    >/<a
+                                        href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
+                                        class="p-1"
+                                        target="_blank"
+                                        >WHO</a
+                                    >.</label
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <small class="s1t-form-col" style="margin-left: 2.25rem">
+                        *COVID-19 Vaccination: VMware requires that all attendees affirm that they have been fully vaccinated (as defined by the CDC/WHO) as a
+                        precursor to attending this event. Per
+                        <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" class="p-1" target="_blank">CDC</a>/<a
+                            href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
+                            class="p-1"
+                            target="_blank"
+                            >WHO</a
+                        >, people are considered fully vaccinated if they are ≥2 weeks following receipt of the second dose in a 2-dose vaccine series or ≥2
+                        weeks following receipt of a single-dose vaccine.
+                    </small>
                     <div id="response-error-message" class="s1t-form-col" role="alert"><p></p></div>
                     <div class="form-row">
                         <div class="col-12 s1t-form-col text-right">
@@ -199,11 +242,6 @@ isset .Params "location" }}
                     </div>
                 </form>
                 <div class="success-banner" style="display: none">
-                    <div class="row">
-                        <div class="col">
-                            <h3 class="text-center">Thank you for registering!</h3>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col">
                             <p class="text-center">We look forward to seeing you soon!</p>
@@ -504,7 +542,7 @@ isset .Params "location" }}
             success: (resp) => {
                 if (resp.status === 'full') {
                     regBtn.attr('disabled', 'true');
-                    regBtn.text(`Registration is ${resp.status}`);
+                    regBtn.after('<p class="mt-4" style="color: #fff">Registration is all set!</p>').remove();
                 }
             },
             error: (err) => {
