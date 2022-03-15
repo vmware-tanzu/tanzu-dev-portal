@@ -11,7 +11,7 @@ contact_text: the SpringOne Tour Team
 date: '2021-02-16'
 description_episode: A series of live online events where your favorites from the
   community go in depth on different topics at the intersection of Spring and Kubernetes.
-  </p><p class='-text-bright-green fs-90'><img class='icon-gift' src='../images/gift.svg'/>
+  </p><p class='-text-bright-green fs-90'><img class='icon-gift' src='../../images/gift.svg'/>
   Workshop attendees will receive special edition swag</p>
 episode: '15'
 guests: []

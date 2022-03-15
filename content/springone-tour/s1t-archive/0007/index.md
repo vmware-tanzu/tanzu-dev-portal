@@ -3,6 +3,7 @@ Date: '2020-08-19T09:00:00-07:00'
 PublishDate: '2020-06-25T00:00:00-07:00'
 aliases:
 - /tv/springone-tour/7
+- /tv/springone-tour/0007
 date: '2020-08-10'
 episode: '7'
 guests:
