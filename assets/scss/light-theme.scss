@@ -8,6 +8,13 @@ body {
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
 }
+nav{
+    &.isOpen {
+        > .container {
+            background-color: white !important;
+        }
+    }
+}
 nav .nav-arrow {
   border: solid #61717d !important;
   border-width: 0 1px 1px 0 !important;
@@ -150,7 +157,7 @@ body a.btn {
    body .td-navbar .td-navbar-nav-hamburger .navbar-nav a[href*='/'] {
       color: #1d428a !important;
    }
-   body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
+   body .td-navbar #menu-toggle #menu-close .a {
       stroke: #61717d !important;
    }
 }
@@ -255,6 +262,11 @@ body.tv-episode #register .mktoForm select {
   box-shadow: none !important;
   background-color: white !important;
 }
+
+#mobile-nav {
+    background-color: white !important;
+}
+
 nav #theme-select {
   background-color: #ADBBC4 !important;
   
@@ -405,6 +417,7 @@ div.aside div.aside-content {
   }
 }
 
+
 .nav.nav-tabs {
   border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
   
@@ -422,6 +435,10 @@ div.aside div.aside-content {
       color: black;
     }
   }
+}
+
+.sponsor-container img {
+  filter: invert(1);
 }
 
 /* SYNTAX HIGHLIGHTING */
