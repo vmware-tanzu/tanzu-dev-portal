@@ -662,6 +662,9 @@ body {
               @media (max-width: 575px) {
                   padding: 0 !important;
                 }
+              &#card-errors p {
+                margin-bottom: 0;
+              }
             }
           #submit {
               border: 1px solid #02bc67 !important;
@@ -751,9 +754,6 @@ body {
         .discount-details{
             display: none;
         }
-        .discount-notice{
-            margin-top: 1.5rem;
-        }
         .modal-content {
             color: white;
             background-color: #1B2A32;
@@ -761,14 +761,20 @@ body {
         .stripe-card-element {
             padding-bottom: 0.7rem;
             border-bottom: 1px solid white !important;
-            .ElementsApp, .ElementsApp .InputElement {
-              font-family: 'Metropolis';
-            }
+        }
+        .StripeElement {
+          padding: 13px 10px;
+          border-bottom: 1px solid black !important;
+        }
+        .StripeElement--invalid {
+          border-color: #fa755a;
+        }
+        .StripeElement--webkit-autofill {
+          background-color: #fefde5 !important;
         }
         button.close span {
           color: #fff;
         }
-
   }
 
   .light-mode #s1t-register {

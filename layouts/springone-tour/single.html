@@ -244,6 +244,11 @@ isset .Params "location" }}
                 <div class="success-banner" style="display: none">
                     <div class="row">
                         <div class="col">
+                            <h3 class="text-center">Thank you for registering!</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
                             <p class="text-center">We look forward to seeing you soon!</p>
                         </div>
                     </div>
@@ -346,7 +351,7 @@ isset .Params "location" }}
                 const style = {
                     base: {
                         color: 'white',
-                        fontFamily: 'Arial, sans-serif',
+                        fontFamily: 'Metropolis',
                         fontSmoothing: 'antialiased',
                         fontSize: '16px',
                         '::placeholder': {
@@ -354,7 +359,7 @@ isset .Params "location" }}
                         },
                     },
                     invalid: {
-                        fontFamily: 'Arial, sans-serif',
+                        fontFamily: 'Metropolis',
                         color: '#fa755a',
                         iconColor: '#fa755a',
                     },
@@ -372,7 +377,7 @@ isset .Params "location" }}
                 });
             },
             error: (resp) => {
-                $('#card-element').text(resp.responseText ? 'There was an issue setting up stripe: ' + resp.responseText : 'Unknown issue occurred.');
+                $('#card-element').text(resp.responseText ? 'There was an issue setting up Stripe: ' + resp.responseText : ' Unknown issue occurred.');
             },
         });
     };
@@ -397,7 +402,7 @@ isset .Params "location" }}
                 $('.discount-details').css('display', 'none');
                 $('.discount-notice')
                     .show()
-                    .text(resp.responseText ? resp.responseText : 'Unknown issue with discount code')
+                    .text(resp.responseText ? resp.responseText : 'Error with discount code')
                     .css('color', 'red');
             },
         });
@@ -407,7 +412,7 @@ isset .Params "location" }}
         errElement.empty();
         setLoading($('#submit'), true);
         if (!$('#s1t-tac-consent').prop('checked')) {
-            errElement.text('You must accept the SpringOne Tour Terms and Conditions.');
+            errElement.text('You must accept the Terms and Conditions.');
             setLoading($('#submit'), false);
             return;
         }
@@ -419,7 +424,7 @@ isset .Params "location" }}
             }
         } else {
             if (!$('#vmware-privacy-policy').prop('checked')) {
-                errElement.text('You must accept VMware‘s Privacy Policy.');
+                errElement.text('You must accept the Privacy Policy.');
                 setLoading($('#submit'), false);
                 return;
             }
@@ -448,7 +453,7 @@ isset .Params "location" }}
             })
             .then((result) => {
                 if (result.error) {
-                    $('#card-errors p').text(result.error + ' please try again');
+                    $('#card-errors p').text('Something went wrong with the payment.');
                     setLoading($('#submit'), false);
                 } else {
                     $('#card-errors p').empty();
