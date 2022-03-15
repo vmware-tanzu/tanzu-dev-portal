@@ -16,7 +16,6 @@
 12SwitchRestoresSansCheckOuts
 2x2
 3D
-Salatino
 [23]G
 401K
 [245]xx
@@ -883,6 +882,7 @@ Huynh
 HyperKit
 ℹ
 (I|P)aaS
+i7
 IAM
 Iberkleid
 ideate(d)?
@@ -1701,6 +1701,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1708,6 +1709,7 @@ Sadogursky
 Saikali
 Salaboy
 salaboy
+Salatino
 Salm
 Sam-Bodden
 SameSite
