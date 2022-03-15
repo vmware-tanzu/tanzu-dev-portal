@@ -1,4 +1,5 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := "http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
+"http://staging-s1t-api-lb-tf-1645450367.us-east-2.elb.amazonaws.com/" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path :=
 .Params.logo_path | relURL }} {{ $isRegOpen := isset .Params "location" }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
