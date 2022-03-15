@@ -1,6 +1,6 @@
 {{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen :=
-isset .Params "location" }}
+"https://s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen := isset
+.Params "location" }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
     <div class="container">
@@ -177,8 +177,7 @@ isset .Params "location" }}
                                 />
                                 <label class="form-check-label ml-3" for="COVID-19-vaccination-attestation"
                                     >I attest that I am fully vaccinated against COVID-19 as defined by the&nbsp;
-                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a
-                                    >/<a
+                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                                         href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                                         target="_blank"
                                         >WHO</a
@@ -222,8 +221,7 @@ isset .Params "location" }}
                             <div class="form-check">
                                 <input type="checkbox" name="vmwarePrivacyPolicy" id="vmware-privacy-policy" class="form-check-input" value="true" />
                                 <label class="form-check-label ml-3" for="vmware-privacy-policy"
-                                    >I agree to VMware's&nbsp;
-                                    <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
+                                    >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
                                 >
                             </div>
                         </div>
@@ -239,11 +237,6 @@ isset .Params "location" }}
                     </div>
                 </form>
                 <div class="success-banner" style="display: none">
-                    <div class="row">
-                        <div class="col">
-                            <h3 class="text-center">Thank you for registering!</h3>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col">
                             <p class="text-center">We look forward to seeing you soon!</p>
@@ -390,9 +383,7 @@ isset .Params "location" }}
                 $('.charge-label').text('Before discount:');
                 $('.discount-details').css('display', 'flex');
                 $('.discount-notice').show().text(`${discountElement.val()} applied`).css('color', '#02bc67');
-                $('.discount-total')
-                    .text(`$${resp.amount / 100}`)
-                    // .css('color', '#02bc67');
+                $('.discount-total').text(`$${resp.amount / 100}`);
             },
             error: (resp) => {
                 $('.charge-label').text('Charge total:');
@@ -446,6 +437,7 @@ isset .Params "location" }}
                 payment_method: {
                     card: card,
                     billing_details: { email: registrant.email },
+                    receipt_email: registrant.email,
                 },
             })
             .then((result) => {
