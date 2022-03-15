@@ -783,8 +783,13 @@ body {
         &:hover{
             border-bottom: 1px solid #02bc67 !important;
         }
-    }
-    
+      }
+      #discount-btn.btn-apply {
+        color: #000;
+        &.hover {
+          color: #fff;
+        }
+      }
   }
   
   #register {
