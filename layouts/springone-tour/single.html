@@ -196,6 +196,16 @@
                         >, people are considered fully vaccinated if they are ≥2 weeks following receipt of the second dose in a 2-dose vaccine series or ≥2
                         weeks following receipt of a single-dose vaccine.
                     </small>
+                    <div id="privacy-consent-container" class="mt-3">
+                        <div class="col-12 justify-content-start s1t-form-col">
+                            <div class="form-check">
+                                <input type="checkbox" name="vmwarePrivacyPolicy" id="vmware-privacy-policy" class="form-check-input" value="true" />
+                                <label class="form-check-label ml-3" for="vmware-privacy-policy"
+                                    >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
+                                >
+                            </div>
+                        </div>
+                    </div>
                     <div id="gdpr-consent-container" style="display: none" class="mt-3">
                         <div class="col-12 s1t-form-col">
                             <div class="form-check">
@@ -216,12 +226,13 @@
                             </div>
                         </div>
                     </div>
-                    <div id="default-consent-container" style="display: none" class="mt-3">
+                    <div id="nongdpr-consent-container" class="mt-3" style="display: none">
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
-                                <input type="checkbox" name="vmwarePrivacyPolicy" id="vmware-privacy-policy" class="form-check-input" value="true" />
-                                <label class="form-check-label ml-3" for="vmware-privacy-policy"
-                                    >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
+                                <input type="checkbox" name="nongdprConsent" id="nongdpr-consent" class="form-check-input" value="true" />
+                                <label class="form-check-label ml-3" for="nongdpr-consent"
+                                    >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
+                                    and events.</label
                                 >
                             </div>
                         </div>
@@ -415,6 +426,10 @@
                 errElement.text('You must accept the Privacy Policy.');
                 setLoading($('#submit'), false);
                 return;
+            } else if (!$('#nongdpr-consent').prop('checked')) {
+                errElement.text('You must consent to receive communications.');
+                setLoading($('#submit'), false);
+                return;
             }
         }
         $.ajax({
@@ -517,11 +532,11 @@
                 if (country.gdpr) {
                     // $('#s1t-tac-container').show();
                     $('#gdpr-consent-container').show();
-                    $('#default-consent-container').hide();
+                    $('#nongdpr-consent-container').hide();
                     requiresGDPR = true;
                 } else {
                     // $('#s1t-tac-container').show();
-                    $('#default-consent-container').show();
+                    $('#nongdpr-consent-container').show();
                     $('#gdpr-consent-container').hide();
                     requiresGDPR = false;
                 }
