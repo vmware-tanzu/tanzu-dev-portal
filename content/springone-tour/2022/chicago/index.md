@@ -71,7 +71,7 @@ meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:00 AM–11:40 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#testing-love-hate">Testing: Love, Hate, Love</a>
+            <a class="lightbox" href="testing-love-hate">Testing: Love, Hate, Love</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a></h3>
@@ -404,10 +404,10 @@ meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="
 <div id="jakub-pilimon" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
     <div class="row">
         <div class="col-lg-3 col-md-3 mr-4 mb-5">
-            <a target="_blank" href="/developer/team/jakub-pilimon/"><img alt="Jonatan Ivanov" src="/developer/team/jakub-pilimon/images/jakub-pilimon.jpg"></a>
+            <a target="_blank" href="/developer/team/jakub-pilimon/"><img alt="Jakub Pilimon" src="/developer/team/jakub-pilimon/images/jakub-pilimon.jpg"></a>
         </div>
         <div class="col-lg-8 col-md-8">
-            <h3 class="pt-0"><a target="_blank" href="/developer/team/jakub-pilimon/">Jonatan Ivanov</a></h3>
+            <h3 class="pt-0"><a target="_blank" href="/developer/team/jakub-pilimon/">Jakub Pilimon</a></h3>
             <p>Jakub Pilimon is a Staff Technologist at VMware, blogger, programmer, and trainer. His main duty is to tackle complex enterprises with Domain-Driven Design and to propose a model and architecture that solves a problem. Sometimes he is involved in refactoring projects. When he isn’t coding, you can find him riding his bike, reading, or practicing kitesurfing.</p>
             <p>Jakub’s pet projects can be found at
                 <a href="https://github.com/ddd-by-examples" target="_blank">https://github.com/ddd-by-examples</a>.</p>
