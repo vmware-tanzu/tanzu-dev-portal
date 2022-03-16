@@ -11,7 +11,8 @@ location:
     - 'Chicago, IL'
 calendar: true
 code_of_conduct: true
-logo_path: /images/springonetour/chicago_cityscape.svg
+logo_path: "/images/springonetour/chicago_cityscape.svg"
+og_image: "/images/og/s1t_2022_og.png"
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 date: '2022-04-26'
@@ -198,7 +199,7 @@ meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM–12:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:40 AM–12:20 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#graphql">Getting Started with GraphQL in Spring Boot</a>
         </div>

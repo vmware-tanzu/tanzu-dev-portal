@@ -1,5 +1,6 @@
 ---
 title: "SpringOne Tour Terms & Conditions"
+og_image: "/images/og/s1t_2022_og.png"
 ---
 
 ## Event Terms & Conditions

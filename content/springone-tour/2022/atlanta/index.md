@@ -9,7 +9,8 @@ aliases:
 #    - McCaw Hall 321 Mercer St Seattle, WA 98109
 calendar: true
 code_of_conduct: true
-logo_path: /images/springonetour/atlanta_cityscape.svg
+logo_path: "/images/springonetour/atlanta_cityscape.svg"
+og_image: "/images/og/s1t_2022_og.png"
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 # date: '2022-04-26'

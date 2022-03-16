@@ -2,7 +2,7 @@
 title: "SpringOne Tour"
 id: "springone-tour"
 image: "springone-tour.png"
-og_image: "/images/og/TanzuTV-SpringOneTour.png"
+og_image: "/images/og/s1t_2022_og.png"
 menu:
     main:
         parent: "community"
