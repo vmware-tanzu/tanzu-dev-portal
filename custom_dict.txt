@@ -665,6 +665,7 @@ Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
+FluxCD
 flyyy
 FoodService
 formatter
@@ -1537,6 +1538,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepaved
 prepend
 prepending
 Presales
