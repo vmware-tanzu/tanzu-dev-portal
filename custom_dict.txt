@@ -883,6 +883,7 @@ Huynh
 HyperKit
 ℹ
 (I|P)aaS
+i7
 IAM
 Iberkleid
 ideate(d)?
@@ -1702,6 +1703,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1862,6 +1864,7 @@ strategizing
 Strategyzer
 Stratton
 StringBuilder
+Strobl
 struct
 STS
 STT
@@ -2159,4 +2162,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-Strobl
