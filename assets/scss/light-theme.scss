@@ -417,6 +417,26 @@ div.aside div.aside-content {
   }
 }
 
+
+.nav.nav-tabs {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
+  
+  .nav-link.active {
+    border: 0;
+    color: #1d428a !important;
+    box-shadow: 0 2px 0px 0px #1d428a !important;  
+    margin-bottom: 0px;
+  }
+  .nav-link {
+    color: #61717d !important;
+    border: 0 !important;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
 .sponsor-container img {
   filter: invert(1);
 }
