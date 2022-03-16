@@ -15,8 +15,8 @@
         {{ .Content }}
       </div>
       {{ if ne .Title "SpringOne Tour Terms & Conditions" }}
-      <h2>Cities</h2>
-      <div class="row justify-content-lg-start mb-3">
+      <h2 class="mb-3">Cities</h2>
+      <div class="row justify-content-lg-start mb-5">
           {{ range .Pages.ByDate }}
             {{ if .Params.publish }}
             <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
@@ -32,6 +32,9 @@
             {{ end }}
           {{ end }}
       </div>
+
+      <h2>Sponsorship</h2>
+      <p class="mb-5 content-container">Want to become a sponsor? <a href='https://d18qp689yd19g7.cloudfront.net/2022/s1t_prospectus.pdf'>Download the prospectus</a> or email <a href='mailto:springone@vmware.com'>springone@vmware.com</a>.</p>
       {{ end }}
     </div>
 </section>
