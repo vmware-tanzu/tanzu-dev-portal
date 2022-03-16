@@ -1,7 +1,7 @@
 ---
 name: "Christoph Strobl"
 description: "Staff Engineer"
-roles: ["host"]
+roles: ["guest"]
 location: "Austria"
 
 # Social Media
