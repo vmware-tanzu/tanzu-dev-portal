@@ -5,7 +5,7 @@
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-        <div class="row justify-content-between">
+        <div class="row justify-content-between" id="hero-content">
             <div class="ml-5 container">
                 <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Title -}}</h1>
                 <h3 class="h3 pt-0 mb-4 pb-2">

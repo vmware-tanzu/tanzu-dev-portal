@@ -3,9 +3,9 @@
 {{ $class := replace .Page.Section "." "-" | lower }}
 
 <section id="hero" class="{{ $class }}-event-hero s1t-index mt-7">
-    <div class="pl-5 ml-10 container">
+    <div class="pl-5 ml-3 container">
       <p class="mb-5 white h3 col-lg-3 px-0">SpringOne Tour is back, in person, and coming to a city near you!</p>
-      <img class="logo mb-5" src='{{"/images/springonetour/hero_logo_white.svg" | relURL }}'/>
+      <a href="/developer/springone-tour"><img class="logo mb-5" src='{{"/images/springonetour/hero_logo_white.svg" | relURL }}'/></a>
     </div>
 </section>
 

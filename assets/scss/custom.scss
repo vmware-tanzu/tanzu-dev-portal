@@ -713,8 +713,9 @@
   background-color: #1b2a32;
   background-position: bottom right;
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  padding-top: 10vh;
-  padding-bottom: 8vh;
+  &:not(.chicago) #hero-content {
+    padding-bottom: 8vh;
+  }
   &.s1t-index {
     .logo {
       content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
@@ -735,9 +736,6 @@
   }
 }
 #hero.springone-tour-event-hero.s1t-city {
-  &.chicago {
-    min-height: 65vh;
-  }
   @media(max-width: 767px) {
     background-image: none;
     .small-screen-hero {
