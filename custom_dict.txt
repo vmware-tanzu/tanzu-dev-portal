@@ -16,7 +16,6 @@
 12SwitchRestoresSansCheckOuts
 2x2
 3D
-Salatino
 [23]G
 401K
 [245]xx
@@ -852,6 +851,7 @@ Helming
 Heptio
 Herbrich
 hermeticism
+HeroDevs
 Heroku('s)?
 High-Cardinality
 Hillegass
@@ -1032,6 +1032,7 @@ junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
+JVASays
 JVM's
 JVM(-based)?
 JVMs
