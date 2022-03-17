@@ -94,6 +94,7 @@ ApiResponse
 APIs?
 APM
 AppArmor
+AppDev
 AppDynamics
 Appel
 appender
@@ -663,6 +664,7 @@ Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
+FluxCD
 flyyy
 FoodService
 formatter
@@ -849,6 +851,7 @@ Helming
 Heptio
 Herbrich
 hermeticism
+HeroDevs
 Heroku('s)?
 High-Cardinality
 Hillegass
@@ -1029,6 +1032,7 @@ junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
+JVASays
 JVM's
 JVM(-based)?
 JVMs
@@ -1535,6 +1539,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepaved
 prepend
 prepending
 Presales
@@ -1544,6 +1549,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Prodan
 production-deployable
 ProductPlan
 Programadoras
@@ -1705,6 +1711,7 @@ Sadogursky
 Saikali
 Salaboy
 salaboy
+Salatino
 Salm
 Sam-Bodden
 SameSite
@@ -1857,6 +1864,7 @@ strategizing
 Strategyzer
 Stratton
 StringBuilder
+Strobl
 struct
 STS
 STT

@@ -15,7 +15,7 @@ minutes: 120
 episode: "57"
 explicit: "yes"
 title: "The one with Ben Wilcock"
-#youtube: ""
+youtube: "GR5atMBiWF4"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
