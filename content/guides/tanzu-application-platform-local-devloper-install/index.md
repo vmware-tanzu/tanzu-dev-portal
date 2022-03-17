@@ -1,5 +1,5 @@
 ---
-title: "TAP on Your Lap: Running Tanzu Application Platform Locally on Your Laptop "
+title: "Running Tanzu Application Platform Locally on Your Laptop "
 description: TODO  
 date: 2022-03-15
 lastmod: 2022-03-15
@@ -22,9 +22,9 @@ team:
 
 ## Introduction 
  
-Installing [Tanzu Application Platform](https://tanzu.vmware.com/application-platform) (TAP) locally is a bit more involved than some other development tools that you’re used to but it's totally worth it. That’s because Tanzu Application Platform is 'DevOps in a box,' with all the rich functionality you’d expect from such an offering. Installed on the public cloud or in a private data center, Tanzu Application Platform offers a modular, application-aware platform that abstracts Kubernetes and can serve the needs of hundreds of developers at the same time. 
+Installing [VMware Tanzu Application Platform](https://tanzu.vmware.com/application-platform) locally is a bit more involved than some other development tools that you’re used to, but it's totally worth it. That’s because Tanzu Application Platform is "DevOps in a box". With all the rich functionality you’d expect from such an offering. Installed on the public cloud or in a private data center, Tanzu Application Platform offers a modular, application-aware platform that abstracts Kubernetes and can serve the needs of hundreds of developers at the same time. 
 
-Stick with this tutorial and you’ll be part of an exclusive group of trailblazing developers who've tried TAP and experienced its modern software supply-chain, effortless Kubernetes application scheduling, and serverless computing capabilities first-hand. Let’s get started! 
+Stick with this tutorial and you’ll be part of an exclusive group of trailblazing developers who've tried Tanzu Application Platform and experienced its modern software supply-chain, effortless Kubernetes application scheduling, and serverless computing capabilities first-hand. Let’s get started! 
 
 {{% callout %}}
 The steps below have been tested with Tanzu Application Platform version 1.0.2 of  (the most current at the time of writing). The official documentation for Tanzu Application Platform can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
@@ -34,16 +34,18 @@ The steps below have been tested with Tanzu Application Platform version 1.0.2 o
  
 There are a few things that you must have before you begin installing Tanzu Application Platform: 
 
-* **Hardware**: A PC or Laptop with a modern Intel i7 or AMD Ryzen 7 processor (or better). You'll need 8 threads, 16GB of RAM, and 40 GB of free disk space at your disposal. 
-* **Operating System**: Windows 10 Pro, Enterprise, or Education, or MacOS (_coming soon_), or Ubuntu 20.04 LTS (_coming soon_). You'll also need administrator access to this system. 
+* **Hardware**: A computer with a modern Intel i7 or AMD Ryzen 7 processor (or better). You'll need 8 threads, 16 GB of RAM, and 40 GB of free disk space at your disposal. 
+* **Operating System**: Windows 10 Pro, Enterprise, or Education, or MacOS, or Ubuntu 20.04 LTS. You'll also need administrator access to this system.  
 * **Software**: You'll need [Minikube](https://minikube.sigs.k8s.io/docs/start/) (a laptop friendly version of Kubernetes), [Kubectl](https://kubernetes.io/docs/tasks/tools/) (the command-line tool used to work with Kubernetes).  
 * **Accounts**: You’ll need the username and password for your [Docker Hub](https://hub.docker.com/) account and the username and password for your account on the [Tanzu Network](https://network.pivotal.io) (registration is free). 
 * **Time**: You'll need about 1 hour (but this can vary depending on your network, processor, RAM, etc.). 
 * **Network**: A stable internet connection capable of at least 30 Mb/s download and 10 Mb/s upload. 
 
+_For a full list of system requirements, see the [official documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-prerequisites.html)._
+
 ## Stage 1: Install the Tanzu CLI.
 
-To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the Tanzu Application Platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the tanzu cli tool in the past, you can skip this step. The instructions for updating (replacing) older versions can be found in the [TAP documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html).
+To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the Tanzu Application Platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the `tanzu` cli tool in the past, you can skip this step. The instructions for updating (replacing) older versions can be found in the [official documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html).
 
 1. Download the Tanzu CLI from the [Tanzu Application Platform page on the Tanzu Network](https://network.pivotal.io/products/tanzu-application-platform/). 
 
@@ -72,25 +74,23 @@ mkdir "C:\Program Files\tanzu"
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-Open a new Terminal window.
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+# in a new Terminal window.
+mkdir ~/tanzu
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-Open a new Terminal window.
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+# in a new Terminal window.
+mkdir ~/tanzu
+```
 
 {{< /tab >}}
 {{< /tabpane >}}
 
-3. Add the location of the Tanzu CLI folder to your System’s `PATH`.
+1. Add the location of the Tanzu CLI folder to your System’s `PATH`.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
@@ -107,9 +107,7 @@ Coming soon!
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+Unnecessary. Move to next step.
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -126,7 +124,7 @@ Coming soon!
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-Back in your Admin PowerShell window, follow these steps to extract and install the tanzu cli (assumes the downloaded file is in your `Downloads` folder):
+Back in your Admin PowerShell window, follow these steps to extract and install the `tanzu` CLI (assumes the downloaded file is in your `Downloads` folder):
 
 ```powershell
 # Move to the folder containing the downloaded file.
@@ -149,9 +147,22 @@ tanzu plugin install --local cli all
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+In your Terminal, follow these steps to extract and install the `tanzu` CLI:
+
+```sh
+# Extract the tar file into your ~/tanzu directory
+tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
+
+# Change your working directory to the install directory.
+cd ~/tanzu
+
+# Run the install binary to complete the base installation.
+sudo install cli/core/v0.10.0/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
+
+# Install the tanzu cli plug-ins needed for TAP installation
+export TANZU_CLI_NO_INIT = "true"
+tanzu plugin install --local cli all
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -163,7 +174,7 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-Check that the Tanzu CLI and the plug-ins are installed correctly by checking the output from the following commands:
+4. Check that the `tanzu` CLI and the plug-ins are installed correctly by checking the output from the following commands:
 
 {{< tabpane >}}
 {{< tab header="All Operating Systems" >}}
@@ -178,15 +189,15 @@ tanzu plugin list
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Stage 2: Run Minikube
+## Stage 2: Run minikube
 
-Now that the `tanzu` cli and plugins are installed, we can continue with the rest of the installation. The Tanzu Application Platform supports Minikube for local installations so you must start Minikube on your PC using specific settings as detailed below. 
+Now that the `tanzu` CLI and plugins are installed, we can continue with the rest of the installation. The Tanzu Application Platform supports minikube for local installations so you must start minikube on your PC using specific settings as detailed below. 
 
 {{% callout %}}
-**Note:** If you have existing applications running on Minikube already, it may be best to define a new Minikube profile for your Tanzu Application Platform installation using the switch "`–p tap`". If you choose to do this, remember to use the same profile for each Minikube command below.
+**Note:** If you have existing applications running on Minikube already, it may be best to define a new minikube profile for your Tanzu Application Platform installation using the switch "`–p tap`". If you choose to do this, remember to use the same profile for each minikube command below.
 {{% /callout %}}
 
-1. Start Minikube with 8 CPUs, 12Gb RAM, and version 1.22 of Kubernetes using the following command:
+1. Start minikube with 8 CPUs, 12 GB RAM, and version 1.22 of Kubernetes using the following command:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
@@ -196,15 +207,15 @@ minikube start --cpus='8' --memory='12g' --kubernetes-version='1.22.6'
 ```
 
 {{% callout %}}
-**Note:** We tested using the [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) driver as Minikube's  [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). To discover your Minikube VM driver, use the command `minikube profile list` after minikube has started. [Hyper-V can be added as a Windows feature](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)  in the Pro, Enterprise, or Education versions of Windows 10.
+**Note:** We tested using the [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) driver as minikube's  [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). To discover your minikube VM driver, use the command `minikube profile list` after minikube has started. [Hyper-V can be added as a Windows feature](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)  in the Pro, Enterprise, or Education versions of Windows 10.
 {{% /callout %}}
 
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+minikube start --cpus=`8` --memory=`12g` --kubernetes-version='1.22.6'
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -256,9 +267,14 @@ In Notepad, add a new line to your hosts file as follows...
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+# Define environment variables
+export MINIKUBE_IP=<your-minikube-ip-address>
+export LOCAL_DOMAIN=example.com #replace this if you would like a different domain
+
+# Add the entry to your /etc/hosts file
+sudo echo "$MINIKUBE_IP tap-gui.$LOCAL_DOMAIN tanzu-java-web-app.default.apps.$LOCAL_DOMAIN" | sudo tee -a /etc/hosts
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -279,10 +295,10 @@ In Nano, add a new line to your hosts file as follows...
 {{< /tabpane >}}
 
 {{% callout %}}
-**Important:** When working locally on Minikube, any workloads that you deploy to the Tanzu Application Platform will need to have their URL added to your `hosts` file. This will allow your HTTP calls to be routed correctly.
+**Important:** When working locally on minikube, any workloads that you deploy to the Tanzu Application Platform will need to have their URL added to your `hosts` file. This will allow your HTTP calls to be routed correctly.
 {{% /callout %}}
 
-4. Finally, open the Minikube network tunnel. This tunnel allows Kubernetes services of type ‘LoadBalancer’ to be addressable from your PC's network. You will need to start this tunnel whenever you want to access resources on the Tanzu Application Platform.
+4. Open the minikube network tunnel. This tunnel allows Kubernetes services of type ‘LoadBalancer’ to be addressable from your PC's network. You will need to start this tunnel whenever you want to access resources on the Tanzu Application Platform.
 
 {{< tabpane >}}
 {{< tab header="All Operating Systems" >}}

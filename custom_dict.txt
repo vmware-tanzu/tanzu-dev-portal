@@ -1124,6 +1124,7 @@ KUDO
 Kung
 [kK]ustomize
 KUTTL
+KVM2
 Kyverno
 labelset
 lastAccessedTime
@@ -1255,8 +1256,8 @@ Minella
 Mini-Wheats
 [Mm]inibroker
 minideb
-[Mm]inikube
-MiniKube
+[Mm]inikube('s)?
+MiniKube('s)?
 minimalistic
 Minio|MinIO
 minReplicas
@@ -1888,6 +1889,7 @@ svc
 SVID(s)?
 SVP
 [Ss]wagger(-cli|2)?
+[Ss]wappable
 SweetKiller9
 Syer
 symposia
