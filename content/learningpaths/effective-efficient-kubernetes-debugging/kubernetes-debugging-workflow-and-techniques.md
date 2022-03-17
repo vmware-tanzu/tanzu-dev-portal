@@ -13,7 +13,7 @@ tags:
 
 A fundamental skill needed by all practitioners deploying to Kubernetes is
 debugging issues as they arise on the Kubernetes Platform.  Issues can range
-from application deployment issues, to Kubernetes system issues, to network issues.
+from application deployment issues, to Kubernetes system issues, or to network issues.
 The problem is, what is a good starting point for debugging?
 
 ## What You Will Learn
@@ -38,8 +38,8 @@ enable this feature.
 
 ## The General Kubernetes Debugging Workflow and Techniques
 
-The general workflow is to first dive into the events, learn about the pod state,
-then dive into the logs. If these steps do not provide sufficient information,
+The general workflow is to get the events, learn about the pod state,
+then get the pod logs. If these steps do not provide sufficient information,
 further steps are needed. For example, checking the application
 configuration and network connectivity within a container.
 
@@ -153,7 +153,7 @@ ephemeral containers are helpful for troubleshooting issues. By default, the
 enabled](https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/)
 as a beta in Kubernetes 1.23. Otherwise, you must enable the feature-gate first before it can be used. 
 The documentation for [debug containers](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/#ephemeral-container)
-use examples to demonstrate how to use `debug containers`. It is included ias follows, along with content aligning to this
+use examples to demonstrate how to use `debug containers`. It is included as follows, along with content aligning to this
 article.
 
 Ephemeral containers are similar to regular containers. The difference is that they are

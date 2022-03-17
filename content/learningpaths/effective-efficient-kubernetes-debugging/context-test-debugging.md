@@ -15,9 +15,9 @@ In the previous learning path on [a heuristic approach to
 debugging](../a-heuristic-approach-to-debugging), you learned about the
 the top six common sources of problems. You also learned how to use
 these top six sources as heuristics that help pinpoint the issue when there are
-too many possibilities, or when you don't have enough information to begin.
+too many possibilities, or when you don't have enough information to know where to begin.
 One practical aspect of the heuristics approach is how it limits the scope of
-a problem space, but can fail to account for other factors in a system at the same
+a problem space, but it can fail to account for other factors in a system at the same
 time. For example, NTP. Is there a way to avoid this? Yes, this learning path presents a concept and
 technique on how to do this. 
  
@@ -30,8 +30,8 @@ In this section, you will learn:
 ## Refined Heuristics with Context Test Debugging
  
 The most important aspect to consider is, "Where do you look in a large system?".
-It is possible to infer and search for all areas previously described. 
-However, sustainable debugging of systems is best served with a good
+We describe this as the contest. It is possible to infer and search for all areas previously described
+without context. However, sustainable debugging of systems is best served with a good
 understanding of how a system works, followed by debugging practices to become
 proficient and efficient. Understanding how a system works means you know 
 how the 'engines' run. 
@@ -131,9 +131,8 @@ together.
   ![Grouping the sticky notes](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-group.png#center)
  
 5. **Prioritization**: The facilitator prioritizes the sticky
-notes (or groups of sticky notes) by moving those that relate
-to the problem to the top, and those that do not relate to the
-problem to the bottom.
+notes (or groups of sticky notes) by moving those that have a greater liklihood
+of cause to the problem to the top, and those that are not likely to the bottom.
  
   ![Prioritizing the issues to test](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-prioritize.png#center)
  
