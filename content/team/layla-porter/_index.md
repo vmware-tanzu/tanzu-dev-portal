@@ -8,7 +8,7 @@ photo: "layla-porter.png"
 
 # Social Media
 twitter: "LaylaCodesIt"
-website: "https://www.laylacodes.it/"
+website: "https://layla.dev"
 facebook: ""
 linkedin: "layla-porter"
 github: "layla-p"

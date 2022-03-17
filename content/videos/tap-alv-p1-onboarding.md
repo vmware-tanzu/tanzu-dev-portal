@@ -10,6 +10,8 @@ title: "App Development with Tanzu Application Platform and Application Live Vie
 youtube_id: fgJ--Y2ffgg
 tanzu:
   label: tap
+  featured: true
+  featuredweight: 2
 ---
 
 In this first part, you will see how to configure the Tanzu VS Code extension to enable live previews of your application running in a local dev environment. This setup utilized Tanzu Application Platform’s “light” profile as well as the Tanzu extension for VS Code.

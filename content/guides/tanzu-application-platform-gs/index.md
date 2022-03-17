@@ -10,6 +10,10 @@ tags:
 - Tanzu Application Platform
 tanzu:
   label: tap
+  featured: false
+  featuredweight: 2
+  gettingstarted: true
+  gettingstartedweight: 1
 # Author(s)
 team:
 - Tony Vetter
