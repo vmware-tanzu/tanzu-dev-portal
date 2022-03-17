@@ -1,6 +1,6 @@
 ---
-Date: '2022-03-15T12:00:00-15:00'
-PublishDate: '2022-03-10T00:00:00-07:00'
+Date: '2022-03-22T12:00:00-15:00'
+PublishDate: '2022-03-17T00:00:00-07:00'
 Description: "Persistence with spring data, what it is and what comes next?"
 aliases:
 - /tv/tanzu-tuesdays/90
@@ -12,7 +12,7 @@ guests:
 hosts:
 - Dan Vega
 - DaShaun Carter
-lastmod: '2022-03-16'
+lastmod: '2022-03-176'
 minutes: 60
 title: "Persistence with spring data, what it is and what comes next?"
 truncate: ''
