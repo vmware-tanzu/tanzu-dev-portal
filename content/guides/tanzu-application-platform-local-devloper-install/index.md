@@ -1,5 +1,5 @@
 ---
-title: "TAP on Your Lap: Running VMware Tanzu Application Platform Locally on Your Laptop "
+title: "TAP on Your Lap: Running Tanzu Application Platform Locally on Your Laptop "
 description: TODO  
 date: 2022-03-15
 lastmod: 2022-03-15
@@ -17,82 +17,71 @@ tanzu:
 # Author(s)
 team:
 - Ben Wilcock
+- Tony Vetter
 ---
 
 ## Introduction 
  
-The installation of VMware Tanzu Application Platform (TAP for short) is possibly more involved than some other development tools you’re used to. That’s because TAP is DevOps in a box, with all the functionality you’d expect. Installed on the public cloud or in a data center, TAP brings a fully-featured development platform that can serve the needs of hundreds of developers and operators at the same time. Stick with this tutorial and you’ll gain access to a modern software supply chain, effortless Kubernetes application scheduling, and even serverless computing. Let’s begin! 
+Installing [Tanzu Application Platform](https://tanzu.vmware.com/application-platform) (TAP) locally is a bit more involved than some other development tools that you’re used to but it's totally worth it. That’s because Tanzu Application Platform is 'DevOps in a box,' with all the rich functionality you’d expect from such an offering. Installed on the public cloud or in a private data center, Tanzu Application Platform offers a modular, application-aware platform that abstracts Kubernetes and can serve the needs of hundreds of developers at the same time. 
+
+Stick with this tutorial and you’ll be part of an exclusive group of trailblazing developers who've tried TAP and experienced its modern software supply-chain, effortless Kubernetes application scheduling, and serverless computing capabilities first-hand. Let’s get started! 
 
 {{% callout %}}
-These steps have been verified against version 1.0.1 of Tanzu Application platform, the most current at the time of writing (March 2022). The official documentation for Tanzu Application Platform can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
+The steps below have been tested with Tanzu Application Platform version 1.0.2 of  (the most current at the time of writing). The official documentation for Tanzu Application Platform can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
 {{% /callout %}}
 
 ## Before You Start 
  
-There are a few things you must have ready before you begin your TAP installation: 
+There are a few things that you must have before you begin installing Tanzu Application Platform: 
 
-* **Hardware**: A PC or Laptop with a modern Intel i7 or AMD Ryzen 7 processor (or better) with at least 8 threads, 16GB of RAM, and 40 GB of disk space. 
-* **Operating System**: Windows 10, MacOS (_coming soon_), or Ubuntu 20.04 LTS (_coming soon_) and full administrator access. 
-* **Software**: [Minikube]() (a laptop friendly version of Kubernetes which is supported by TAP). [Kubectl](https://kubernetes.io/docs/tasks/tools/) (the command-line tool used to work with Kubernetes). (Windows only ) Hyper-V (The hypervisor we tested with Minikube, which [can be added as a Windows feature](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)). 
+* **Hardware**: A PC or Laptop with a modern Intel i7 or AMD Ryzen 7 processor (or better). You'll need 8 threads, 16GB of RAM, and 40 GB of free disk space at your disposal. 
+* **Operating System**: Windows 10 Pro, Enterprise, or Education, or MacOS (_coming soon_), or Ubuntu 20.04 LTS (_coming soon_). You'll also need administrator access to this system. 
+* **Software**: You'll need [Minikube](https://minikube.sigs.k8s.io/docs/start/) (a laptop friendly version of Kubernetes), [Kubectl](https://kubernetes.io/docs/tasks/tools/) (the command-line tool used to work with Kubernetes).  
 * **Accounts**: You’ll need the username and password for your [Docker Hub](https://hub.docker.com/) account and the username and password for your account on the [Tanzu Network](https://network.pivotal.io) (registration is free). 
-* **Time**: About 1 hour (but this can vary depending on your bandwidth, processor, RAM, etc.). 
-* **Connectivity**: A stable broadband connection capable of at least 30 Mb/s download and 10 Mb/s upload. 
+* **Time**: You'll need about 1 hour (but this can vary depending on your network, processor, RAM, etc.). 
+* **Network**: A stable internet connection capable of at least 30 Mb/s download and 10 Mb/s upload. 
 
-## Stage 1: Installing the Tanzu CLI Tool v0.11.1.
+## Stage 1: Install the Tanzu CLI.
 
-This process installs the Tanzu CLI command-line tool that you’ll use to install TAP and interact with it. This guide assumes you have not done this before. If you have installed this version of the tanzu cli before, you can skip this step. The instructions for replacing older versions are in the [TAP documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html).
+To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the Tanzu Application Platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the tanzu cli tool in the past, you can skip this step. The instructions for updating (replacing) older versions can be found in the [TAP documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html).
 
-First, download the Tanzu CLI from the [Tanzu Application Platform page](https://network.pivotal.io/products/tanzu-application-platform/) on the Tanzu Network. Choose `tanzu-cli-v0.11.1` and then choose the download link for the `tanzu-framework-bundle` binary that matches your operating system (either -windows, -mac, or -linux).
+1. Download the Tanzu CLI from the [Tanzu Application Platform page on the Tanzu Network](https://network.pivotal.io/products/tanzu-application-platform/). 
 
-![The Tanzu Application Platform download page](images/screenshots/image1.png "Download the proper package for your OS")
+    Choose the `tanzu-cli-v0.11.1` dropdown on the Tanzu Application Platform page and then choose the download link for the `tanzu-framework-bundle` binary that matches your operating system (either `-windows`, `-mac`, or `-linux`) as shown below.
+
+    ![The Tanzu Application Platform download page](images/screenshots/image1.png "Download the correct package bundle for your operating system")
 
 {{% callout %}}
 **Note**: You will be asked to agree to the Tanzu Application Platform EULA (the VMware End User License Agreement) in order to download the Tanzu CLI application.
 {{% /callout %}}
 
-1. Open a new PowerShell window with administrator privileges, or on macOS or Ubuntu, begin a new Terminal window.  
+2. Create a new folder for the Tanzu CLI tool.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-`Click the Windows Start Menu > Right-click Terminal > More > Run as administrator`
+To open a new PowerShell Terminal with Administrator privileges click on the 'Start' button, right-click 'Terminal', select 'More' then 'Run as administrator'.
 
-{{< /tab >}}
-{{< tab header="MacOS" >}}
+![Open an Admin PowerShell Terminal window](images/screenshots/image3.png)
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< /tabpane >}}
-
-2. Next, create a new folder for the Tanzu CLI tool.
-
-{{< tabpane >}}
-{{< tab header="Windows" >}}
-
-```sh
-# Create a new home for the Tanzu CLI in "Program Files"
+```powershell
+# Create a new home for the Tanzu CLI tool in the "Program Files" folder
 mkdir "C:\Program Files\tanzu"
 ```
 
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
+Open a new Terminal window.
+
 {{% callout %}}
 Coming soon!
 {{% /callout %}}
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
+
+Open a new Terminal window.
 
 {{% callout %}}
 Coming soon!
@@ -101,7 +90,7 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-3. Add the location of this new folder to your System’s PATH environment variable as follows:
+3. Add the location of the Tanzu CLI folder to your System’s `PATH`.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
@@ -109,13 +98,11 @@ Coming soon!
 1.  Use Windows Search to search for `environment`. 
 2.  Select **Edit the system environment variables** to open the System Properties dialogue. 
 3.  Click the **Environment Variables** button to open the user and system environment variables dialogue box.
-4.  Under the System variables list, find the entry for `PATH` and double click it
+4.  Under the **System** variables list, find the entry for `PATH` and double click it
 5.  Add a new entry for `C:\Program Files\tanzu\tanzu.exe` as shown in the image below.
 6.  Click `OK`.
 
-    ![The front page of the Tanzu Network](images/screenshots/image2.png "Click **Create** in the left-hand navigation bar")
-    
-    _Add an environment variable to your system’s PATH for the directory where you installed the Tanzu CLI tool._
+![Adding a Windows Environment Variable](images/screenshots/image2.png "Adding an environment variable to your system’s PATH for the directory where you installed the Tanzu CLI tool.")
 
 {{< /tab >}}
 {{< tab header="MacOS" >}}
@@ -134,13 +121,15 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-3. Next, back in your PowerShell or Terminal window, extract `tanzu` cli tool, install it, and install the plug-ins that it requires in order to work with TAP.  Follow these steps (assuming the downloaded file is in your `Downloads` folder):
+3. Extract the `tanzu` cli tool, install it, and install the plug-ins that it requires.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
-# Move to the folder containing the file you downloaded.
+Back in your Admin PowerShell window, follow these steps to extract and install the tanzu cli (assumes the downloaded file is in your `Downloads` folder):
+
+```powershell
+# Move to the folder containing the downloaded file.
 cd "C:\Users\$env:USERNAME\Downloads"
 
 # Extract the zip
@@ -149,10 +138,10 @@ Expand-Archive .\tanzu-framework-windows-amd64.zip
 # Move to the extracted Tanzu CLI directory
 cd tanzu-framework-windows-amd64
 
-# Copy the Tanzu CLI tool to Program Files
+# Copy the Tanzu CLI tool to your new tanzu folder
 cp "cli\core\v0.11.1\tanzu-core-windows_amd64.exe" "C:\Program Files\tanzu\tanzu.exe"
 
-# Install the tanzu cli plugins needed for TAP
+# Install the tanzu cli plug-ins needed for TAP installation
 $Env:TANZU_CLI_NO_INIT = "true"
 tanzu plugin install --local cli all
 ```
@@ -174,52 +163,40 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-4. Check if the Tanzu CLI and the plug-ins are installed correctly by checking the output from the following commands:
+Check that the Tanzu CLI and the plug-ins are installed correctly by checking the output from the following commands:
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
+{{< tab header="All Operating Systems" >}}
 
-```sh
+```powershell
 # Expect version: v0.11.1
 tanzu version 
 
-# Expect a list of installed plugins
+# Expect the package, secret, apps, services, and accelerator plugins to have a STATUS of 'installed'
 tanzu plugin list 
 ```
-{{% callout %}}
-Check that you have the package, secret, apps, services, and accelerator plugins available to you.
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="MacOS" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Stage 2: Running Minikube
+## Stage 2: Run Minikube
 
-1. Start Minikube with 8 CPUs, and version 1.22 of Kubernetes using the following command:
+Now that the `tanzu` cli and plugins are installed, we can continue with the rest of the installation. The Tanzu Application Platform supports Minikube for local installations so you must start Minikube on your PC using specific settings as detailed below. 
+
+{{% callout %}}
+**Note:** If you have existing applications running on Minikube already, it may be best to define a new Minikube profile for your Tanzu Application Platform installation using the switch "`–p tap`". If you choose to do this, remember to use the same profile for each Minikube command below.
+{{% /callout %}}
+
+1. Start Minikube with 8 CPUs, 12Gb RAM, and version 1.22 of Kubernetes using the following command:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
-
-```sh
+```powershell
 # Start Minikube
 minikube start --cpus='8' --memory='12g' --kubernetes-version='1.22.6' 
 ```
+
 {{% callout %}}
-On Windows, we used Hyper-V as the VM driver in our testing. To discover your VM driver, after you have run `minikube start` use the command ‘minikube profile list’.
+**Note:** We tested using the [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) driver as Minikube's  [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). To discover your Minikube VM driver, use the command `minikube profile list` after minikube has started. [Hyper-V can be added as a Windows feature](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)  in the Pro, Enterprise, or Education versions of Windows 10.
 {{% /callout %}}
 
 {{< /tab >}}
@@ -232,53 +209,50 @@ Coming soon!
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
+```sh
+# Start Minikube
+minikube start --cpus='8' --memory='12g' --kubernetes-version='1.22.6' # --driver='kvm2'
+```
+
 {{% callout %}}
-Coming soon!
+**Note:** For Ubuntu we tested with Docker as the VM driver. For Fedora, we used KVM2 as the VM driver. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
 {{% /callout %}}
 
 {{< /tab >}}
 {{< /tabpane >}}
 
-If you have existing applications running on Minikube, it may be best to define a new profile for your TAP install using `–p <profile-name>`. Remember to give the same profile name for each Minikube command.
-
-2. Next, find the IP address for the Minikube cluster and make a note of it:
+2. Find the IP address of the Minikube cluster and make a note of it:
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
+{{< tab header="All Operating Systems" >}}
 
-```sh
+```powershell
 # Get the minikube IP address
 minikube ip
 ```
 {{< /tab >}}
-{{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
 {{< /tabpane >}}
 
-3. Next, add a couple of network hostname entries to your operating systems hosts file using a combination of the IP address for Minikube and the web addresses we will use locally once TAP is fully installed:
+3. Add a new network hostname entry to your operating system's `hosts` file.
+
+    This new entry in your `hosts` file uses a combination of the IP address for Minikube and the URLs required to reach application workloads once they're running on the Tanzu Application Platform inside Minikube.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
-# Open the hosts in Notepad (as Admin).
-Start-Process notepad -Verb runas "c:\Windows\System32\Drivers\etc\hosts"
+Open the `hosts` file in Notepad.
 
-# Manually add a new line to the hosts file as follows...
+```powershell
+# Open the hosts file in Notepad (as Admin).
+Start-Process notepad -Verb runas "c:\Windows\System32\Drivers\etc\hosts"
+```
+
+In Notepad, add a new line to your hosts file as follows...
+```text
 <your-minikube-ip-address> tap-gui.made-up-name.net tanzu-java-web-app.default.apps.made-up-name.net
 ```
+
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
@@ -289,61 +263,69 @@ Coming soon!
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+Open the `hosts` file in Nano.
+
+```sh
+# Open the hosts file in Nano (as sudo).
+sudo nano /etc/hosts
+```
+
+In Nano, add a new line to your hosts file as follows...
+```text
+<your-minikube-ip-address> tap-gui.made-up-name.net tanzu-java-web-app.default.apps.made-up-name.net
+```
 
 {{< /tab >}}
 {{< /tabpane >}}
 
-    When working locally like this, workloads that you deploy to TAP will need to have their name added to this file. This is necessary for your calls to be routed properly in this kind of local environment.
+{{% callout %}}
+**Important:** When working locally on Minikube, any workloads that you deploy to the Tanzu Application Platform will need to have their URL added to your `hosts` file. This will allow your HTTP calls to be routed correctly.
+{{% /callout %}}
 
-4. Finally, open the ‘Minikube Tunnel.’ This allows Kubernetes services of type ‘LoadBalancer’ to be addressable from your PC. You will need this tunnel running whenever you want to access your developer workloads or the TAP GUI.
+4. Finally, open the Minikube network tunnel. This tunnel allows Kubernetes services of type ‘LoadBalancer’ to be addressable from your PC's network. You will need to start this tunnel whenever you want to access resources on the Tanzu Application Platform.
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
+{{< tab header="All Operating Systems" >}}
+
+Start Minikube's network tunnel process in the terminal.
 
 ```sh
 minikube tunnel
 ```
-{{< /tab >}}
-{{< tab header="MacOS" >}}
 
 {{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
+**Important:** Leave the Minikube tunnel command running in the current PowerShell or Terminal window and open a new Admin PowerShell or Terminal when you begin the next stage.
 {{% /callout %}}
 
 {{< /tab >}}
 {{< /tabpane >}}
 
-Leave Minikube tunnel running in the current PowerShell or Terminal and open a new Admin PowerShell or Terminal for the next stage.
 
-## Stage 3: Installing Tanzu Cluster Essentials onto Minikube
 
-The Tanzu CLI acts as an agent. It passes your instructions to the TAP system so they can be carried out inside of Kubernetes. For this to work, the agent needs a command broker (in the form of a [`kapp-controller`](https://carvel.dev/kapp-controller/)) and a method for managing the generation of platform secrets (in the form of a [`secretgen-controller`](https://github.com/vmware-tanzu/carvel-secretgen-controller)). 
 
-The `kapp-controller` and `secretgen-controller` both form part of Cluster Essentials for VMware Tanzu which you will install next. For Windows, this involves issuing some kubectl commands. For macOS and Ubuntu, there is a dedicated installer.
+## Stage 3: Install Tanzu Cluster Essentials onto Minikube
 
-1. Set up the cluster with the necessary packages.
+The `tanzu` cli you installed earlier acts as an agent. It passes instructions to the Tanzu Application Platform so they can be carried out inside Kubernetes. For this to work, the tanzu cli needs a command broker inside Kubernetes in the form of a [`kapp-controller`](https://carvel.dev/kapp-controller/) and a method for managing the generation of platform secrets in the form of a [`secretgen-controller`](https://github.com/vmware-tanzu/carvel-secretgen-controller). 
+
+The `kapp-controller` and `secretgen-controller` are part of [Cluster Essentials for VMware Tanzu](https://network.pivotal.io/products/tanzu-cluster-essentials) which you will install next. For Windows, this involves issuing some `kubectl` commands. For macOS and Linux, there is a dedicated installer.
+
+1. Add Cluster Essentials for VMware Tanzu to your Minikube Kubernetes cluster.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
-# First, create the required Kubernetes namespaces.
+In a new Admin PowerShell window...
+
+```powershell
+# Create the required Kubernetes namespaces.
 kubectl create namespace tanzu-cluster-essentials
 kubectl create namespace kapp-controller
 kubectl create namespace secretgen-controller
-# Next, apply the YAML configurations for the required apps:
+
+# Apply the YAML configuration for the kapp-controller
 kubectl apply -f https://github.com/vmware-tanzu/carvel-kapp-controller/releases/download/v0.30.0/release.yml -n kapp-controller
 
+# Apply the YAML configuration for the secretgen-controller
 kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/releases/download/v0.7.1/release.yml -n secretgen-controller
 ```
 {{< /tab >}}
@@ -363,50 +345,40 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-2. Wait until the `kapp-controller` and `secretgen-controller` pods reach the `running` state before continuing to the next stage. You can view their current state with this command:
+Wait until the `kapp-controller` and `secretgen-controller` pods reach the `running` state before continuing to the next stage. You can view the current state of all pods with this command:
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
+{{< tab header="All Operating Systems" >}}
 
-```sh
+```powershell
 # Ensure that kapp-controller and secretgen-controller are ‘running’ 
 kubectl get pods --all-namespaces 
 ```
 {{< /tab >}}
-{{< tab header="MacOS" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
 {{< /tabpane >}}
 
-## Stage 4: Installing Tanzu Application Platform onto Minikube
+## Stage 4: Install Tanzu Application Platform onto Minikube
 
-1. You are now ready to install TAP onto your Minikube cluster. First, to make the process much easier, create some environment variables in the shell you’ll be using for the rest of the installation.
+You are now ready to install the Tanzu Application Platform onto your Minikube cluster. First, to make this task easier, you will create some environment variables in the terminal you’ll be using for the rest of the installation. These variables include usernames and passwords for the Tanzu Network and the Docker Registry that you are using to store your application container images.
+
+1. Create the Tanzu Application Platform installation environment variables:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
-# Tanzu Cluster Essentials & TAP Environment Variables
+Fill in the missing details below as necessary.
+
+```powershell
+# Create Tanzu Application Platform Install Environment Variables
 $Env:TAP_VERSION = "1.0.2"
 $Env:TAP_NAMESPACE = "tap-install"
  
-# Installation registry (holds the TAP system images)
+# Set the TAP installation registry details
 $Env:INSTALL_REGISTRY_HOSTNAME = "registry.tanzu.vmware.com"
-$Env:INSTALL_REGISTRY_USERNAME = "" # < insert tanzu network username
-$Env:INSTALL_REGISTRY_PASSWORD = "" # < insert tanzu network password
+$Env:INSTALL_REGISTRY_USERNAME = "" # < insert your tanzu network username
+$Env:INSTALL_REGISTRY_PASSWORD = "" # < insert your tanzu network password
 
-# Developer’s ‘push able’ container registry
+# Set the developer’s ‘push’ capable docker container registry details
 $Env:DOCKER_SERVER = "https://index.docker.io/v1/"
 $Env:DOCKER_USERNAME = "" # < insert docker username
 $Env:DOCKER_PASSWORD = "" # < insert docker password
@@ -428,12 +400,12 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-2. Next, create a Kubernetes namespace for the TAP installation.
+2. Create the Kubernetes namespace used for the Tanzu Application Platform installation.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
+```powershell
 kubectl create ns $env:TAP_NAMESPACE 
 ```
 {{< /tab >}}
@@ -453,12 +425,12 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-3. Then, add a secret needed to pull container images from the Tanzu Network to the Tanzu CLI.
+3. Add the registry secret needed to pull the Tanzu Application Platform container images from the Tanzu Network.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
+```powershell
 tanzu secret registry add tap-registry `
   --username $env:INSTALL_REGISTRY_USERNAME `
   --password $env:INSTALL_REGISTRY_PASSWORD `
@@ -484,12 +456,12 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-4. Now, add a `package repository` record for the TAP container registry to the Tanzu CLI:
+4. Add a new repository record for the Tanzu Application Platform packages:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
+```powershell
 tanzu package repository add tanzu-tap-repository `
   --url $env:INSTALL_REGISTRY_HOSTNAME/tanzu-application-platform/tap-packages:$env:TAP_VERSION `
   --namespace $env:TAP_NAMESPACE
@@ -511,12 +483,12 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-5. The above step will take a few minutes to complete. When finished, the final status should read ‘reconcile succeeded.’ If it gets interrupted for any reason it has failed. You can check the status of the process at any time with the following commands:
+The above steps may take a few minutes to complete. When finished, the final status of the package installation should read `Reconcile succeeded`. If it gets interrupted for any reason it might fail to reconcile or give an error. You can always check the status of the process at any time with the following commands:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
+```powershell
 # Check for STATUS: “Reconcile succeeded”
 tanzu package repository get tanzu-tap-repository --namespace $env:TAP_NAMESPACE 
 
@@ -540,12 +512,16 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-6. Now that all the TAP packages, registries, and secrets have been added to the cluster we are almost ready to install TAP. Installing TAP requires a set of configuration instructions. These configuration instructions take the form of a YAML file. The file has setup instructions required by various components in the TAP system and must be customized to fit your setup. To make this easier for you, a template file called `template-tap-values.yml` file can be downloaded from GitHub to your local working directory and customized using your favorite text editor or IDE.
+Now that all the required packages, registries, and secrets have been added to the Kubernetes cluster we are almost ready to install the Tanzu Application Platform itself. 
+
+Installing Tanzu Application Platform requires a configuration file in YAML format. This file contains the configuration details required by various components in the Tanzu Application Platform and must be customized to fit your setup. To make this easier for you, a template has been provided which you can download and customize using your favorite text editor or IDE.
+
+5. Download the template `tap-values.yml` to your working directory as follows:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 
-```sh
+```powershell
 curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
 ```
 {{< /tab >}}
@@ -565,16 +541,30 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-7. Open the downloaded tap-values.yml file in your editor and manually replace all the capitalized placeholders in the file with the same information you used for your environment variables earlier.
+6. Open the downloaded `tap-values.yml` file in your text editor and manually replace all the CAPITALIZED placeholders with the same details you used earlier as environment variables.
+
+{{< tabpane >}}
+{{< tab header="All Operating Systems" >}}
+
+Replace the placeholder `DOCKER_USERNAME` with the same details you used earlier for the environment variable `$Env:DOCKER_USERNAME` (Windows) or `export DOCKER_USERNAME=` (macOS or Linux). 
+
+**Do this for all the placeholders in the file.**
+
+> Take care with the above step. Any mistakes you make here can be hard to rectify and could prevent the Tanzu Application Platform from installing or working correctly.
+
+{{< /tab >}}
+{{< /tabpane >}}
+
+With your `tap-values.yml` file fully edited, you are now ready to install Tanzu Application Platform. This process can take a while and creates a lot of internet traffic. If you are sharing your network with others, you may prefer to do this installation at a less disruptive time of the day.
+
+7. Install Tanzu Application Platform onto Minikube with the following command. Notice that the location of the YAML file that you edited earlier step is required:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
-
-For example: 
-```
-In the downloaded `tap-values.yml` file, replace the placeholder DOCKER_USERNAME with the same details you used earlier for the environment variable $Env:DOCKER_USERNAME
-
-Do this for each of the placeholders in the tap-values.yml file.
+```powershell
+tanzu package install tap -p tap.tanzu.vmware.com -v $env:TAP_VERSION `
+  --values-file tap-values.yml `
+  --namespace $env:TAP_NAMESPACE
 ```
 {{< /tab >}}
 {{< tab header="MacOS" >}}
@@ -594,95 +584,53 @@ Coming soon!
 {{< /tabpane >}}
 
 {{% callout %}}
-Take care with the above step. Mistakes made here can be hard to rectify and could prevent TAP from working properly or at all.
+**Be Patient!**
+Installing Tanzu Application Platform can take 30 minutes or more. The platform is essentially an integrated collection of self-healing microservice components. It takes lots of time, significant CPU, memory, and network bandwidth to fully stand up the system. 
 {{% /callout %}}
 
-8. With your `tap-values.yml` file fully edited, you are ready to install TAP into Minikube. This process can take a long time (30 minutes or more) and will needs many gigabytes of internet bandwidth. If you share a home network with others, you may prefer to do this off-peak so that you don’t disrupt other users on the same network.
-
-    Install TAP onto Minikube with the following command. Notice that the location of the YAML file that you edited earlier step is required by the –f argument:
+You can check the installation’s progress at any time by asking the Tanzu CLI for the status of the Tanzu Application Platform's package installation:
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
-```
-tanzu package install tap -p tap.tanzu.vmware.com -v $env:TAP_VERSION --values-file tap-values.yml --namespace $env:TAP_NAMESPACE
-```
-{{< /tab >}}
-{{< tab header="MacOS" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< /tabpane >}}
-
-{{% callout %}}
-**Warning: Patience Required!**
-Installing Tanzu Application Platform can take 30 minutes or more. TAP is essentially an integrated collection of 40+ microservice components. It takes lots of time, significant CPU, memory, and network bandwidth to fully stand up the system. 
-{{% /callout %}}
-
-8. You can check the installation’s progress at any time by asking the Tanzu CLI for the status of the TAP package installation:
-
-{{< tabpane >}}
-{{< tab header="Windows" >}}
-```sh
+{{< tab header="All Operating Systems" >}}
+```powershell
 tanzu package installed list -A
 ```
-{{< /tab >}}
-{{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
+> All the Tanzu Application Platform packages in the list should eventually reach the status `“Reconcile Succeeded”`. This takes time and is dependent on the Minikube Tunnel process being active in another Terminal window as described in [Stage 2: Run Minikube](#stage-2-run-minikube).
 {{< /tab >}}
 {{< /tabpane >}}
 
-Eventually, all the TAP packages should reach the status “Reconcile Succeeded”, but this is dependent on the Minikube Tunnel being active as described in Stage 1. 
+Once the system is fully reconciled, you may like to pause for a moment to check out the Tanzu Application Platform user interface. In your web browser open the URL [http:// tap-gui.made-up-name.net](http://tap-gui.made-up-name.net). If `minikube tunnel` is active, and your `hosts` file has been edited as described in [Stage 2: Run Minikube](#stage-2-run-minikube), you should see the Tanzu Application Platform's graphical user interface which is based on the CNCF [Backstage](https://backstage.io/) project. 
 
-Once fully reconciled, you can pause for a moment to check out the TAP user interface. In your web browser open the URL [http:// tap-gui.made-up-name.net](http://tap-gui.made-up-name.net). If minikube tunnel is active, and your hosts file has been edited as described in Step 1, you should see the TAP server’s user interface. 
+{{% callout %}}
+Tanzu Application Platform is designed to make everyone's life easier. For example, the ‘Accelerators’ dashboard allows developers in an organization to easily create and customize new coding projects by offering templates that you collectively own.
+{{% /callout %}}
 
-_Tanzu Application Platform is designed to make everyone's life easier. For example, check out the ‘Accelerators’ dashboard which allows developers in your organization to easily start and customize coding projects using templates you collectively own._
+## Step 5: Create A Developer Workspace
 
-## Step 5: Creating A Developer Workspace
+Developers using Tanzu Application Platform need a Kubernetes namespace so they can work in isolation away from the rest of the system. This developer namespace also needs access to a container registry where the application containers (docker images) built by the Tanzu Application Platform can be stored.  This developer namespace also needs certain Kubernetes roles and privileges in order to integrate with the rest of the Tanzu Application Platform.
 
-Developers using TAP need a Kubernetes workspace where they can work in isolation from the rest of the TAP system. This developer namespace also needs access to a container registry where it can store the application containers (docker images) built by TAP’s on-board build system.  The developer namespace also needs certain roles and privileges to integrate with the TAP system.
-
-1. Add your developer namespace, registry, roles, and privileges as follows:
+1. Add a developer namespace, registry, roles, and privileges as follows:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
-```sh
+```powershell
 $Env:TAP_DEV_NAMESPACE = "default"
 
-# Create a namespace for the developer to work in
+# Create a namespace for the developer
 kubectl create ns $env:TAP_DEV_NAMESPACE
 
-# Add the secret for the BUILD Container Registry
+# Add a secret for the developer container registry
 tanzu secret registry add registry-credentials `
   --server $env:DOCKER_SERVER `
   --username $env:DOCKER_USERNAME `
   --password $env:DOCKER_PASSWORD `
   --namespace $env:TAP_DEV_NAMESPACE
 
-# Obtain the service accounts file
+# Obtain the service accounts YAML configuration file
 curl.exe -o serviceaccounts.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/serviceaccounts.yml
 
-# Add the necessary RBAC Roles, Accounts, Bindings etc...
+# Apply the necessary RBAC Roles, Accounts, Bindings etc. to Kubernetes.
 kubectl -n $env:TAP_DEV_NAMESPACE apply -f "serviceaccounts.yml"
 ```
 {{< /tab >}}
@@ -702,15 +650,13 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Step 6: Using TAP to Run Application Workloads
+## Step 6: Run An Application Workload
 
-TAP uses the term ‘workload’ to describe applications running in containers on TAP. Now that TAP is installed, building and running your code on the platform requires only one simple instruction.
-
-1. Add your first workload to TAP with the following command:
+Tanzu Application Platform uses the term ‘workload’ to describe an application running on the platform. Now that Tanzu Application Platform is installed, building and running your code on the platform requires only one simple instruction.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
-```sh
+```powershell
 tanzu apps workload create tanzu-java-web-app `
   --git-repo https://github.com/sample-accelerators/tanzu-java-web-app `
   --git-branch main `
@@ -738,73 +684,101 @@ Coming soon!
 {{< /tab >}}
 {{< /tabpane >}}
 
-TAP does not need an application binary or a container image in order to build and deploy applications. TAP features an integrated ‘build-service’ — part of what is called a supply-chain in TAP parlance. TAP only needs the URL of the source code repository and a branch name of the code you wish to run (in this case a Java application written in Spring, but other languages are supported). If this code ever changes, the application will be rebuilt and redeployed automatically. 
+The Tanzu Application Platform does not need an application binary or a container image in order to build and deploy applications. Tanzu Application Platform includes a built-in (but swappable) 'build-service' as part of what is called a software 'supply-chain'. Tanzu Application Platform only needs the URL and branch name of the source code repository you wish to run. If the source code ever changes, the application will be rebuilt and redeployed automatically. In the example above, the workload is a Java application written in Spring. Spring and many other programming languages are supported out-of-the-box.  
 
-Second, the workload type of ‘web’ allows TAP to follow some simple conventions, for example, assigning the application a HTTP route in its built-in ingress system.
 
-2. Check the progress of the workload with the following command. It will take several minutes to become `Ready` as TAP must obtain the source code, compile it, create a hardened container, store it, and run the application.
+The `tanzu` cli offers commands that allow you to check the progress of the workload's deployment.
 
 {{< tabpane >}}
-{{< tab header="Windows" >}}
-```sh
+{{< tab header="All Operating Systems" >}}
+
+Check the progress of the application's deployment:
+
+```powershell
 tanzu apps workload get tanzu-java-web-app
 ```
+
+You will see output similar that shown below when the application is ready and has a URL assigned.
+
+```powershell
+# tanzu-java-web-app: Ready
+---
+lastTransitionTime: "2022-03-17T08:08:03Z"
+message: ""
+reason: Ready
+status: "True"
+type: Ready
+
+Workload pods
+NAME                                                  STATUS      RESTARTS   AGE
+tanzu-java-web-app-00001-deployment-b4b456f65-9kpgq   Running     0          4h19m
+tanzu-java-web-app-build-1-build-pod                  Succeeded   0          18h
+tanzu-java-web-app-config-writer-2gjwm-pod            Succeeded   0          18h
+tanzu-java-web-app-config-writer-lr8fr-pod            Succeeded   0          5h35m
+
+Workload Knative Services
+NAME                 READY   URL
+tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.made-up-name.net
+```
+
+Once fully deployed, the workload has a status of `Ready` and the URL  http://tanzu-java-web-app.default.apps.made-up-name.net has been assigned. 
+
 {{< /tab >}}
-{{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
-{{< tab header="Linux" >}}
-
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
-
-{{< /tab >}}
 {{< /tabpane >}}
 
-3. Once deployed, the workload has a status of `Ready` and has the URL:  http://tanzu-java-web-app.default.apps.made-up-name.net. Test the application using a browser or by issuing a CURL command:
+{{% callout %}}
+**Note:** It may take several minutes for a workload to become `Ready` as the Tanzu Application Platform must first obtain the source code, compile it, create a hardened container, store it in the container registry, setup the network routing, and run the application.
+{{% /callout %}}
+
+Test the application with a browser or by using the following:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
-```sh
+```powershell
 curl.exe http://tanzu-java-web-app.default.apps.made-up-name.net
 ```
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+curl http://tanzu-java-web-app.default.apps.made-up-name.net
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+curl http://tanzu-java-web-app.default.apps.made-up-name.net
+```
 
 {{< /tab >}}
 {{< /tabpane >}}
 
-4. After a few seconds (in your browser window or as curl output) you should see the following text:
+After a few seconds (in your browser window or as curl output) you should see the following text:
 
-```
+{{< tabpane >}}
+{{< tab header="All Operating Systems" >}}
+```sh
 Greetings from Spring Boot + Tanzu!
 ```
+{{< /tab >}}
+{{< /tabpane >}}
+
 
 ## Wrapping Up
 
-Although it took a while, you’ve done something amazing! You’ve manually installed an enterprise-grade software platform onto Minikube on your local Laptop or PC which you can experiment with and show to others. Using a single command, you’ve made the platform build raw source code into a binary application, created a hardened container for the application and run the container inside Kubernetes — all without having to write any of the YAML usually needed to describe pods, replica sets, deployments, or services. Plus, if the code ever changes, the application will automatically get rebuilt and redeployed. And that’s just the tip of the iceberg. TAP is a fully customizable platform, so the opportunities for improved developer productivity and supply-chain excellence are endless.
+Congratulations! You have installed the Tanzu Application Platform and tested it by running a Java application workload. Although it took a while, you’ve done something amazing! 
+
+You’ve manually installed an enterprise-grade software platform onto Minikube on your local Laptop or PC which you can now experiment with and show to others. Using a single command, you’ve made the platform build source code into a binary application, created a hardened container for the application, and run the container inside Kubernetes — all without having to write any of the Kubernetes YAML configuration usually required to describe pods, replica sets, deployments, or services. And, if the code ever changes, Tanzu Application Platform will automatically re-build and re-deploy the application for you. 
+
+And that’s just the tip of the iceberg. Tanzu Application Platform is fully customizable. The opportunities for improved developer productivity and supply-chain excellence are truly mind boggling!
 
 ## Tearing Down
 
-Once you’re done with TAP for the day, you can shut it down with the command ‘minikube stop’ and start it up again the next day with ‘minikube start’. If you want to remove TAP on Minikube completely, use the simplest approach is to use ‘minikube delete’. 
+Once you’re done with TAP for the day, you can shut it down with the command `minikube stop` and start it up again the next day with `minikube start`. If you want to remove Tanzu Application Platform on Minikube completely, the simplest approach is to use `minikube delete`. 
 
-1. You can remove the Tanzu CLI with the following command:
+You can remove the Tanzu CLI with the following command:
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
@@ -827,3 +801,15 @@ Coming soon!
 
 {{< /tab >}}
 {{< /tabpane >}}
+
+Don't forget to also remove the `PATH` and `hosts` file entries that you added.
+
+## Next Steps
+
+Continue your Tanzu Application Platform learning journey with more great content right here on the Tanzu Developer Network:
+
+1.
+2.
+3.
+4.
+
