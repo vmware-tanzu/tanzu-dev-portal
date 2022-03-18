@@ -18,8 +18,6 @@ tanzu:
 team:
 - Ben Wilcock
 - Tony Vetter
-aliases:
-- "/guides/tap/dev-gs-installation"
 ---
 
 ## Introduction 
