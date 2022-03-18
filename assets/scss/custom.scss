@@ -676,7 +676,7 @@
   .nav-link.active {
     border: 0;
     color: #78be20 !important;
-    box-shadow: 0 2px 0px 0px #78be20;  
+    box-shadow: 0 2px 0px 0px #78be20;
     margin-bottom: 0px;
   }
   .nav-link {
@@ -743,8 +743,17 @@
   background-color: #1b2a32;
   background-position: bottom right;
   background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  &:not(.chicago) #hero-content {
-    padding-bottom: 8vh;
+  @media only screen and (min-width: 1500px){
+    background-size: 60%;
+  }
+  @media only screen and (min-width: 1900px){
+    background-size: 50%;
+  }
+  @media only screen and (min-width: 2100px){
+    background-size: 35%;
+  }
+  .small-screen-hero {
+    display: none;
   }
   &.s1t-index {
     .logo {
@@ -761,24 +770,28 @@
       }
     }
   }
-  .small-screen-hero {
-    display: none;
-  }
-}
-#hero.springone-tour-event-hero.s1t-city {
-  @media(max-width: 767px) {
-    background-image: none;
-    .small-screen-hero {
-      display: block;
+  &.s1t-city {
+    &:not(.chicago) #hero-content {
+      padding: 30px 0;
     }
-  }
-  #register-btn {
-    font-weight: 400;
-    background: #80ea6e;
-    color: #1b2a32;
-    &:hover {
-      background: #02bc67;
-      color: #fff;
+    @media(max-width: 767px) {
+      padding-bottom: 0 !important;
+      background-image: none;
+      .small-screen-hero {
+        display: block;
+      }
+      #hero-content {
+        padding: 0 !important;
+      }
+    }
+    #register-btn {
+      font-weight: 400;
+      background: #80ea6e;
+      color: #1b2a32;
+      &:hover {
+        background: #02bc67;
+        color: #fff;
+      }
     }
   }
 }
