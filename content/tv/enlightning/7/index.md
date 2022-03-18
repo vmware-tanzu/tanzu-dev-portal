@@ -16,9 +16,10 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-What is Knative Eventing? How does it work? What components are at play? In what ways is running an 
-app on Knative superior to running it directly on Kubernetes?  Join in the conversation as host 
-Whitney Lee and her guest Mauricio Salatino discuss (and draw!) the answers to these questions and more!
+Knative Eventing resources are loosely coupled, and can be developed and deployed independently of one another.  
+This enables developers to use an event-driven architecture with their Kubernetes applications.  How does it work, 
+and what does it take to get started?  Come hang out with Whitney and Mauricio as they discuss (and draw!) the main 
+concepts of Knative Eventing.
 
 
 \\(^-^)/
