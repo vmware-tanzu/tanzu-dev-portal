@@ -1,13 +1,11 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://s1tapi.com/api" }} {{ $cityName := (replaceRE "(\\s)" "" .Title) | lower}} {{ $logo_path := .Params.logo_path | relURL }} {{ $isRegOpen := isset
-.Params "location" }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
 
-<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityName }} pt-4">
+<section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityNameLowercase }} pt-4">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
         <div class="row justify-content-between" id="hero-content">
             <div class="ml-5 container">
-                <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Title -}}</h1>
+                <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Params.city_name -}}</h1>
                 <h3 class="h3 pt-0 mb-4 pb-2">
                     {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                 </h3>
@@ -34,7 +32,7 @@
     <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title w-100 text-center">Register for {{ .Title }}</h2>
+                <h2 class="modal-title w-100 text-center">Register for {{ .Params.city_name }}</h2>
                 <button class="close ml-0" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -323,7 +321,7 @@
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
                     <a
-                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Tanzu.TV Issue: {{ .Title }}"
+                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=SpringOne Tour Issue: {{ . }}"
                         ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
                     >
                 </div>
@@ -363,7 +361,7 @@
             url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
             type: 'post',
             headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityName }}' }),
+            data: JSON.stringify({ city: '{{ $cityNameLowercase }}' }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
@@ -407,7 +405,7 @@
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityName }}', discount: discountElement.val() }),
+            data: JSON.stringify({ city: '{{ $cityNameLowercase }}', discount: discountElement.val() }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 $('.charge-label').text('Before discount:');
@@ -443,7 +441,7 @@
             }
         }
         $.ajax({
-            url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityName}}',
+            url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityNameLowercase}}',
             method: 'post',
             data: regForm.serialize(),
             success: (resp) => {
@@ -484,7 +482,7 @@
 
     const registerUser = (paymentIntent) => {
         $.ajax({
-            url: '{{ print $apiEndpoint "/register?city=" $cityName }}' + `&intentId=${paymentIntent}`,
+            url: '{{ print $apiEndpoint "/register?city=" $cityNameLowercase }}' + `&intentId=${paymentIntent}`,
             type: 'post',
             data: regForm.serialize(),
             success: (resp) => {
@@ -558,7 +556,7 @@
 
     $().ready(() => {
         $.ajax({
-            url: '{{ print $apiEndpoint "/cities?city=" $cityName }}',
+            url: '{{ print $apiEndpoint "/cities?city=" $cityNameLowercase }}',
             method: 'get',
             success: (resp) => {
                 if (resp.status === 'full') {
