@@ -107,7 +107,7 @@ resource on Layer 7 (HTTP).
  
 ## The Heuristic Approach to Debugging
  
-This section describes how to use the heuristic approach to debug the top six common sources of problems (see the previous section, *Top Six Common Sources of Problems*). The heuretics approach is an effective, efficient way for you to identify the cause of a problem.
+This section describes how to use the heuristic approach to debug the top six common sources of problems (see the previous section, *Top Six Common Sources of Problems*). The heuristic approach is an effective, efficient way for you to identify the cause of a problem.
  
 If information gleaned from the initial debugging workflow yielded no results, or had
 multiple possibilities, you could start to reason about where to begin and use
@@ -271,7 +271,7 @@ To check Layer 7, do a `curl -kL <fqdn/ip>` command.
    Note that `-k` only skips SSL validation for cases where HTTPS is not used or
 when using untrusted/self-signed certificates. Be aware that it is possible for Layer 7
 HTTP firewall rules that are in place, and sometimes Layer 4 TCP/IP & UDP is not
-blocked when running a Netcat check command. This could indicate that there is a firewall in place.
+blocked when running a netcat check command. This could indicate that there is a firewall in place.
  
    `tcpdump` is tool that you can use to inspect packets on the host machine, including TCP packets
 for an `RST` or `Reject` on `ACK`.  A reference for `tcpdump` can be found [here]

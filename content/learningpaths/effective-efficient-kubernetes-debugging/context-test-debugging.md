@@ -91,7 +91,7 @@ The following are the basic requirements for all participants:
 1. A basic knowledge of the problem. For example, all participants knows
 Kubernetes.
  
-2. An good understanding of the system, a system expert, or an expert who can
+2. A good understanding of the system, a system expert, or an expert who can
 interact with internal or external components.
  
 3. Access to the system, preferably in pairs.
@@ -131,7 +131,7 @@ together.
   ![Grouping the sticky notes](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-group.png#center)
  
 5. **Prioritization**: The facilitator prioritizes the sticky
-notes (or groups of sticky notes) by moving those that have a greater liklihood
+notes (or groups of sticky notes) by moving those that have a greater likelihood
 of cause to the problem to the top, and those that are not likely to the bottom.
  
   ![Prioritizing the issues to test](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-prioritize.png#center)
