@@ -74,12 +74,18 @@ mkdir "C:\Program Files\tanzu"
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-Not required. Move on to the next step!
+```sh
+# in a new Terminal window.
+mkdir ~/tanzu
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-Not required. Move on to the next step!
+```sh
+# in a new Terminal window.
+mkdir ~/tanzu
+```
 
 {{< /tab >}}
 {{< /tabpane >}}
@@ -142,9 +148,6 @@ tanzu plugin install --local cli all
 In your Terminal, follow these steps to extract and install the `tanzu` CLI:
 
 ```sh
-# in a new Terminal window.
-mkdir ~/tanzu
-
 # Extract the tar file into your ~/tanzu directory
 tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
 
@@ -332,7 +335,7 @@ Leave this command running in your PowerShell or Terminal window and open a new 
 
 ## Stage 3: Install Cluster Essentials for VMware Tanzu onto Minikube
 
-The `tanzu` cli you installed earlier acts as an agent. It passes instructions to the Tanzu Application Platform so they can be carried out inside Kubernetes. For this to work, the tanzu cli needs a command broker inside Kubernetes in the form of a [`kapp-controller`][kapp-controller] and a method for managing the generation of platform secrets in the form of a [`secretgen-controller`][secretgen-controller]. 
+The `tanzu` CLI you installed earlier acts as an agent. It passes instructions to the Tanzu Application Platform so they can be carried out inside Kubernetes. For this to work, the `tanzu` CLI needs a command broker inside Kubernetes in the form of a [`kapp-controller`][kapp-controller] and a method for managing the generation of platform secrets in the form of a [`secretgen-controller`][secretgen-controller]. 
 
 The `kapp-controller` and `secretgen-controller` are part of [Cluster Essentials for VMware Tanzu][tanzunet-cluster-essentials] which you will install next. For Windows, this involves issuing some `kubectl` commands. For macOS and Linux, there is a dedicated installer which you will download and run.
 
@@ -361,12 +364,28 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network][tanzunet-cluster-essentials]
 
 2. Download the `tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz` file.
+ 
+3. Open a new Terminal window and issue the following commands:
 
-3. Open a new Terminal window and issue the following commands...
+```sh
+# Create a directory for these packages
+mkdir $HOME/tanzu-cluster-essentials
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+# Unpack the TAR file into the tanzu-cluster-essentials directory by running:
+tar -xvf tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz -C ~/tanzu-cluster-essentials
+
+# Define environment variables nesessary for the install scripts
+export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:82dfaf70656b54dcba0d4def85ccae1578ff27054e7533d08320244af7fb0343
+export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
+export INSTALL_REGISTRY_USERNAME=<tanzunet-username>
+export INSTALL_REGISTRY_PASSWORD=<tanzunet-password>
+
+# Change the directory 
+cd $HOME/tanzu-cluster-essentials
+
+# Run the install script
+./install.sh
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -445,9 +464,21 @@ $Env:DOCKER_PASSWORD = "" # < insert your docker password
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+# Create Tanzu Application Platform Install Environment Variables
+export TAP_VERSION="1.0.2"
+export TAP_NAMESPACE="tap-install"
+ 
+# Set the TAP installation registry details
+export INSTALL_REGISTRY_HOSTNAME="registry.tanzu.vmware.com"
+export INSTALL_REGISTRY_USERNAME="" # < insert your tanzu network username
+export INSTALL_REGISTRY_PASSWORD="" # < insert your tanzu network password
+
+# Set the developer’s ‘push’ capable docker container registry details
+export DOCKER_SERVER="https://index.docker.io/v1/"
+export DOCKER_USERNAME="" # < insert your docker username
+export DOCKER_PASSWORD="" # < insert your docker password
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -482,9 +513,9 @@ kubectl create ns $env:TAP_NAMESPACE
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```powershell
+kubectl create ns $TAP_NAMESPACE 
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -513,9 +544,15 @@ tanzu secret registry add tap-registry `
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+tanzu secret registry add tap-registry \
+  --username $INSTALL_REGISTRY_USERNAME \
+  --password $INSTALL_REGISTRY_PASSWORD \
+  --server $INSTALL_REGISTRY_HOSTNAME \
+  --namespace $TAP_NAMESPACE \
+  --export-to-all-namespaces \
+  --yes 
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -546,9 +583,11 @@ tanzu package repository add tanzu-tap-repository `
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+tanzu package repository add tanzu-tap-repository \
+  --url $INSTALL_REGISTRY_HOSTNAME/tanzu-application-platform/tap-packages:$TAP_VERSION \
+  --namespace $TAP_NAMESPACE 
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -592,9 +631,9 @@ curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-ap
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -638,9 +677,11 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $env:TAP_VERSION `
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
+  --values-file secret-$REPOSITORY_TYPE-tap-values.yml \
+  --namespace $TAP_NAMESPACE
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -741,9 +782,26 @@ kubectl -n $env:TAP_DEV_NAMESPACE apply -f "serviceaccounts.yml"
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+# Set the developer namespace value to 'default'
+export TAP_DEV_NAMESPACE="default"
+
+# Create a namespace for the developer to work in 
+kubectl create ns $TAP_DEV_NAMESPACE
+
+# Add the secret for the BUILD Container Registry 
+tanzu secret registry add registry-credentials \
+  --server $DOCKER_SERVER \
+  --username $DOCKER_USERNAME \
+  --password $DOCKER_PASSWORD \
+  --namespace $TAP_DEV_NAMESPACE 
+
+# Obtain the service accounts file 
+curl -o serviceaccounts.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/serviceaccounts.yml 
+
+# Add the necessary RBAC Roles, Accounts, Bindings etc... 
+kubectl -n $TAP_DEV_NAMESPACE apply -f "serviceaccounts.yml" 
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -792,9 +850,17 @@ tanzu apps workload create tanzu-java-web-app `
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-{{% callout %}}
-Coming soon!
-{{% /callout %}}
+```sh
+tanzu apps workload create tanzu-java-web-app \
+  --git-repo https://github.com/sample-accelerators/tanzu-java-web-app \
+  --git-branch main \
+  --type web \
+  --label app.kubernetes.io/part-of=tanzu-java-web-app \
+  --label tanzu.app.live.view=true \
+  --label tanzu.app.live.view.application.name=tanzu-java-web-app \
+  --namespace $TAP_DEV_NAMESPACE \
+  --yes 
+```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -860,7 +926,7 @@ tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.made-up-name
 {{< /tabpane >}}
 
 {{% warning %}}
-It may take several minutes for a workload to become `Ready`. To run your code the Tanzu Application Platform supply-chain will download the source code, compile it, package it, create a container image, store the container image in the container registry, setup network routing, configure Kuberenetes, and run the application.
+It may take several minutes for a workload to become `Ready`. To run your code the Tanzu Application Platform supply-chain will download the source code, compile it, package it, create a container image, store the container image in the container registry, setup network routing, configure Kubernetes, and run the application.
 {{% /warning %}}
 
 Test the application in your browser or with the following `curl` command:
