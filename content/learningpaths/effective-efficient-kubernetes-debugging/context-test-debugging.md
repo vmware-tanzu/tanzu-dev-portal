@@ -150,23 +150,3 @@ For example, IaaS providers and support is required from them if they
 are not part of the current group of participants.
  
    ![Grouping the sticky notes](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-group.png#center)
-
-5. **Prioritization**: The facilitator prioritizes the sticky
-notes (or groups of sticky notes) by moving those that relate 
-to the problem to the top, and those that do not relate to the
-problem to the bottom. 
-
-   ![Prioritizing the issues to test](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-prioritize.png#center)
-
-6. **Testing**: This is the sink out phase.  Each participant, grouped in
-pairs, tests each hypothesis for the prioritize groups of sticky notes at the top of
-the list. Once each hypothesis is tested, the pair moves the sticky note and the results 
-to the `Tested` area. The pair must also document their testing methodology. 
-
-   ![The Sink Out phase](/learningpaths/effective-efficient-kubernetes-debugging/images/debugging-kubernetes-dands-testing.png#center)
-
-Eventually, the test results should provide an answer as to where, or what is the
-cause of the problem. If the test results does not provide an answer, look at any other
-components or system that interacts. If there is a bug, reach out to support. 
-For example, IaaS providers and support is required from them if they
-are not part of the current group of participants.
