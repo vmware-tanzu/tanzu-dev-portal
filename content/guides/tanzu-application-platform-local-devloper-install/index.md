@@ -148,9 +148,12 @@ tanzu plugin install --local cli all
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-In your Terminal, follow these steps to extract and install the `tanzu` CLI:
+In your Terminal, follow these steps to extract and install the `tanzu` CLI (assumes the downloaded file is in your `Downloads` folder):
 
 ```sh
+# Move to the folder containing the downloaded file.
+cd ~/Downloads
+
 # Extract the tar file into your ~/tanzu directory
 tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
 
@@ -168,7 +171,7 @@ tanzu plugin install --local cli all
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-In your Terminal, follow these steps to extract and install the `tanzu` CLI:
+In your Terminal, follow these steps to extract and install the `tanzu` CLI (assumes the downloaded file is in your `Downloads` folder):
 
 ```sh
 # Move to the folder containing the downloaded file.
