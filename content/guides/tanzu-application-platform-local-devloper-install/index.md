@@ -43,7 +43,7 @@ There are a few things that you must have before you begin installing Tanzu Appl
 
 _For a full list of system requirements, see the [official documentation][tap-prereq]._
 
-## Stage 1: Install the Tanzu CLI.
+## Stage 1: Download and Install the Tanzu CLI.
 
 To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the Tanzu Application Platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the `tanzu` cli tool in the past, you can skip this step. The instructions for updating (replacing) older versions can be found in the [official documentation][tap-cli-docs].
 
@@ -82,10 +82,9 @@ mkdir ~/tanzu
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-```sh
-# in a new Terminal window.
-mkdir ~/tanzu
-```
+{{% info %}}
+Not required, move on to the next step.
+{{% /info %}}
 
 {{< /tab >}}
 {{< /tabpane >}}
@@ -107,12 +106,16 @@ mkdir ~/tanzu
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-Not required. Move on to the next step!
+{{% info %}}
+Not required, move on to the next step.
+{{% /info %}}
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-Not required. Move on to the next step!
+{{% info %}}
+Not required, move on to the next step.
+{{% /info %}}
 
 {{< /tab >}}
 {{< /tabpane >}}
@@ -275,19 +278,22 @@ Start-Process notepad -Verb runas "c:\Windows\System32\Drivers\etc\hosts"
 
 In Notepad, add a new line to your hosts file as follows...
 ```text
-<your-minikube-ip-address> tap-gui.made-up-name.net tanzu-java-web-app.default.apps.made-up-name.net
+<your-minikube-ip-address> tap-gui.example.com tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-```sh
-# Define environment variables
-export MINIKUBE_IP=<your-minikube-ip-address>
-export LOCAL_DOMAIN=example.com #replace this if you would like a different domain
+Open the `hosts` file in Nano (or your favorite alternative) as follows:
 
-# Add the entry to your /etc/hosts file
-sudo echo "$MINIKUBE_IP tap-gui.$LOCAL_DOMAIN tanzu-java-web-app.default.apps.$LOCAL_DOMAIN" | sudo tee -a /etc/hosts
+```sh
+# Open the hosts file in Nano (as sudo).
+sudo nano /etc/hosts
+```
+
+In Nano, add a new line to your hosts file as follows...
+```text
+<your-minikube-ip-address> tap-gui.example.com tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
@@ -302,7 +308,7 @@ sudo nano /etc/hosts
 
 In Nano, add a new line to your hosts file as follows...
 ```text
-<your-minikube-ip-address> tap-gui.made-up-name.net tanzu-java-web-app.default.apps.made-up-name.net
+<your-minikube-ip-address> tap-gui.example.com tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
@@ -361,7 +367,7 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network][tanzunet-cluster-essentials]
+1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz` file.
  
@@ -390,7 +396,7 @@ cd $HOME/tanzu-cluster-essentials
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network][tanzunet-cluster-essentials]
+1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-linux-amd64-1.0.0.tgz` file to your `Downloads` folder.
 
@@ -402,6 +408,9 @@ cd ~/Downloads
 
 # Specify the VMware Cluster Essentials for Tanzu bundle details
 export INSTALL_BUNDLE="registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:82dfaf70656b54dcba0d4def85ccae1578ff27054e7533d08320244af7fb0343"
+export INSTALL_REGISTRY_HOSTNAME="registry.tanzu.vmware.com"
+export INSTALL_REGISTRY_USERNAME='' # <- Your Tanzu Network username
+export INSTALL_REGISTRY_PASSWORD='' # <- Your Tanzu Network username
 
 # Make a folder for the extracted archive files
 mkdir tanzu-cluster-essentials
@@ -468,11 +477,6 @@ $Env:DOCKER_PASSWORD = "" # < insert your docker password
 # Create Tanzu Application Platform Install Environment Variables
 export TAP_VERSION="1.0.2"
 export TAP_NAMESPACE="tap-install"
- 
-# Set the TAP installation registry details
-export INSTALL_REGISTRY_HOSTNAME="registry.tanzu.vmware.com"
-export INSTALL_REGISTRY_USERNAME="" # < insert your tanzu network username
-export INSTALL_REGISTRY_PASSWORD="" # < insert your tanzu network password
 
 # Set the developer’s ‘push’ capable docker container registry details
 export DOCKER_SERVER="https://index.docker.io/v1/"
@@ -488,15 +492,10 @@ export DOCKER_PASSWORD="" # < insert your docker password
 export TAP_VERSION="1.0.2"
 export TAP_NAMESPACE="tap-install"
  
-# Set the TAP installation registry details
-export INSTALL_REGISTRY_HOSTNAME="registry.tanzu.vmware.com"
-export INSTALL_REGISTRY_USERNAME="" # < insert your tanzu network username
-export INSTALL_REGISTRY_PASSWORD="" # < insert your tanzu network password
-
 # Set the developer’s ‘push’ capable docker container registry details
 export DOCKER_SERVER="https://index.docker.io/v1/"
-export DOCKER_USERNAME="" # < insert your docker username
-export DOCKER_PASSWORD="" # < insert your docker password
+export DOCKER_USERNAME='' # < insert your docker username
+export DOCKER_PASSWORD='' # < insert your docker password
 ```
 
 {{< /tab >}}
@@ -604,7 +603,7 @@ tanzu package repository add tanzu-tap-repository \
 The above steps may take a few minutes to complete. When finished, the final status of the package installation should read `Reconcile succeeded`. If it gets interrupted for any reason it might fail to reconcile or give an error. You can always check the status of the process at any time with the following commands:
 
 {{< tabpane >}}
-{{< tab header="All Operating Systems" >}}
+{{< tab header="Windows" >}}
 
 ```sh
 # Check for STATUS: “Reconcile succeeded”
@@ -612,6 +611,26 @@ tanzu package repository get tanzu-tap-repository --namespace $env:TAP_NAMESPACE
 
 # Check for a big list of ready to use packages
 tanzu package available list --namespace $env:TAP_NAMESPACE 
+```
+{{< /tab >}}
+{{< tab header="macOS" >}}
+
+```sh
+# Check for STATUS: “Reconcile succeeded”
+tanzu package repository get tanzu-tap-repository --namespace $TAP_NAMESPACE 
+
+# Check for a big list of ready to use packages
+tanzu package available list --namespace $TAP_NAMESPACE 
+```
+{{< /tab >}}
+{{< tab header="Linux" >}}
+
+```sh
+# Check for STATUS: “Reconcile succeeded”
+tanzu package repository get tanzu-tap-repository --namespace $TAP_NAMESPACE 
+
+# Check for a big list of ready to use packages
+tanzu package available list --namespace $TAP_NAMESPACE 
 ```
 {{< /tab >}}
 {{< /tabpane >}}
@@ -679,7 +698,7 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $env:TAP_VERSION `
 
 ```sh
 tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
-  --values-file secret-$REPOSITORY_TYPE-tap-values.yml \
+  --values-file tap-values.yml \
   --namespace $TAP_NAMESPACE
 ```
 
@@ -688,7 +707,7 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
 
 ```sh
 tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
-  --values-file secret-$REPOSITORY_TYPE-tap-values.yml \
+  --values-file tap-values.yml \
   --namespace $TAP_NAMESPACE
 ```
 
@@ -699,7 +718,7 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
 This process can take a while and creates a lot of internet traffic. The amount of time needed depends on your network bandwidth, cpu, disk, and memory. If you are sharing your network with others or you are pressed for time you may prefer to do this part of the installation at a less disruptive time of the day. 
 {{% /note %}}
 
-You can check the progress of the installation at any time by asking the `tanzu` CLI for the reconciliation status of the Tanzu Application Platform packages.
+You can check the progress of the installation at any time by opening another PowerShell or Terminal window and asking the `tanzu` cli for the reconciliation status of the Tanzu Application Platform packages as follows.
 
 {{< tabpane >}}
 {{< tab header="All Operating Systems" >}}
@@ -744,7 +763,7 @@ This process of reconciliation takes time and needs the Minikube Tunnel command 
 {{< /tab >}}
 {{< /tabpane >}}
 
-Once the system is fully reconciled, you may like to pause for a moment to check out the Tanzu Application Platform user interface. In your web browser open the URL [http:// tap-gui.made-up-name.net](http://tap-gui.made-up-name.net). If `minikube tunnel` is active, and your `hosts` file has been edited as described in [Stage 2: Run Minikube](#stage-2-run-minikube), you should see the Tanzu Application Platform's graphical user interface which is based on the CNCF [Backstage](https://backstage.io/) project. 
+Once the system is fully reconciled, you may like to pause for a moment to check out the Tanzu Application Platform user interface. In your web browser open the URL [http:// tap-gui.example.com](http://tap-gui.example.com). If `minikube tunnel` is active, and your `hosts` file has been edited as described in [Stage 2: Run Minikube](#stage-2-run-minikube), you should see the Tanzu Application Platform's graphical user interface which is based on the CNCF [Backstage](https://backstage.io/) project. 
 
 ![The Tanzu Application Platform graphical user interface.](images/image4.png "Image of the Tanzu Application Platform graphical user interface.")
 
@@ -919,7 +938,7 @@ tanzu-java-web-app-config-writer-lr8fr-pod            Succeeded   0          5h3
 
 Workload Knative Services
 NAME                 READY   URL
-tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.made-up-name.net
+tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
@@ -934,20 +953,20 @@ Test the application in your browser or with the following `curl` command:
 {{< tabpane >}}
 {{< tab header="Windows" >}}
 ```powershell
-curl.exe http://tanzu-java-web-app.default.apps.made-up-name.net
+curl.exe http://tanzu-java-web-app.default.apps.example.com
 ```
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
 ```sh
-curl http://tanzu-java-web-app.default.apps.made-up-name.net
+curl http://tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
 ```sh
-curl http://tanzu-java-web-app.default.apps.made-up-name.net
+curl http://tanzu-java-web-app.default.apps.example.com
 ```
 
 {{< /tab >}}
