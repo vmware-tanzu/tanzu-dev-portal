@@ -73,6 +73,6 @@ level2: Team Tips
 - Use a separate screen for side-channel communication with other facilitators.
 
 ## Other remote facilitation resources
-- [5 tips for effective remote pair programming](https://tanzu.vmware.com/content/resources-for-remote-software-teams/5-tips-for-effective-remote-pair-programming-while-working-from-home)
+- [5 tips for effective remote pair programming](https://tanzu.vmware.com/content/practitioners-blog/5-tips-for-effective-remote-pair-programming-while-working-from-home)
 - [How to conduct a remote event storming session](https://tanzu.vmware.com/content/resources-for-remote-software-teams/how-to-conduct-a-remote-event-storming-session)
 - [VMware Tanzu Blog | Resources for Remote Software Teams](https://tanzu.vmware.com/content/resources-for-remote-software-teams)

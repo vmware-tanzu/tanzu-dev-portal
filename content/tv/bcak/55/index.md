@@ -15,7 +15,7 @@ minutes: 120
 episode: "55"
 explicit: "yes"
 title: "The one with Sergi Almar"
-youtube: "rOxi7nlSmsY"
+#youtube: ""
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false

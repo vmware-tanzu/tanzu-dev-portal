@@ -25,35 +25,35 @@
 
 .guide .td-sidebar-nav__subsection-title a:after {
     padding-left: 5px;
-    content: url('{{ "/images/icons/arrow-right.svg" | relURL }}');
+    content: url({{ "/images/icons/arrow-right.svg" | relURL }});
   }
-
+  
   .guide .td-sidebar-nav__subsection-title a.active:after,
   .guide .td-sidebar-nav__subsection-title a.selected:after {
-    content: url('{{ "/images/icons/arrow-down.svg" | relURL }}');
+    content: url({{ "/images/icons/arrow-down.svg" | relURL }});
   }
-
+  
   .guide .td-sidebar-nav h5 {
     margin-top: 30px;
   }
-
+  
   .guide .td-sidebar-nav h5 a {
     font-size: .75rem;
     color: white;
   }
-
+  
   .guide .td-sidebar-nav h5 a:before {
     padding-right: 10px;
-    content: url('{{ "/images/icons/arrow-left-white.svg" | relURL }}');
+    content: url({{ "/images/icons/arrow-left-white.svg" | relURL }});
   }
-
+  
   .guide a.linked-box {
     @media(min-width: 992px) {
       min-height: 200px;
     }
     height: 100%;
   }
-
+  
   .relative {
     position: relative;
   }
@@ -73,23 +73,23 @@
         min-height: auto;
       }
       &.guides-hero {
-        background-image: url('{{ "/images/backgrounds/background-guides.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-guides.svg" | relURL }});
       }
       &.learningpaths-hero {
-        background-image: url('{{ "/images/backgrounds/background-patterns.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-patterns.svg" | relURL }});
       }
       &.samples-hero {
-        background-image: url('{{ "/images/backgrounds/background-samples.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-samples.svg" | relURL }});
       }
       &.videos-hero {
-        background-image: url('{{ "/images/backgrounds/background-video.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-video.svg" | relURL }});
       }
       &.data-hero,
       &.community-hero {
-        background-image: url('{{ "/images/backgrounds/background-community.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-community.svg" | relURL }});
       }
       &.tanzupractices-hero {
-        background-image: url('{{ "/images/backgrounds/background-practices.svg" | relURL }}');
+        background-image: url({{ "/images/backgrounds/background-practices.svg" | relURL }});
       }
       &.team-hero,
       &.advocates-hero {
@@ -111,7 +111,7 @@
           .lead {
             max-width: 620px;
           }
-          background-image: url('{{ "/images/backgrounds/header-mobile.svg" | relURL }}') !important;
+          background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
           background-position: right -50px bottom;
           padding-bottom: 220px;
         }
@@ -124,7 +124,7 @@
         &.videos-hero,
         &.practices-hero,
         &.community-hero {
-          background-image: url('{{ "/images/backgrounds/header-mobile.svg" | relURL }}') !important;
+          background-image: url({{ "/images/backgrounds/header-mobile.svg" | relURL }}) !important;
           background-position: right -50px bottom;
           padding-bottom: 160px;
         }
@@ -164,12 +164,12 @@
 
   footer {
       min-height: 150px;
-
+  
       @include media-breakpoint-down(md) {
            min-height: 200px;
       }
   }
-
+  
   // Adjust anchors vs the fixed menu.
   @include media-breakpoint-up(md) {
     .td-offset-anchor:target {
@@ -442,7 +442,7 @@
   0% {
     transform: skew(0deg, 0deg);
   }
-
+  
   100% {
     transform: skew(2deg, 2deg);
   }
@@ -452,7 +452,7 @@
     transform: translate(0,0);
     opacity: 1;
   }
-
+  
   100% {
     transform: translate(-600px, 600px);
     opacity: 0;
@@ -460,7 +460,7 @@
 }
 #beyond-hero {
   background-color: #1B2A32 !important;
-  background-image: url('{{ "/images/beyond/stars.svg" | relURL }}');
+  background-image: url({{ "/images/beyond/stars.svg" | relURL }});
 
   #left-blob-1 {
     height: 675px;
@@ -547,10 +547,10 @@
 
 #beyond-main {
   background-color: #0B1C23 !important;
-
+  
   a:not(.btn) {
     color: #B66DFC;
-
+    
     &:hover {
       color: #0091DA;
     }
@@ -574,9 +574,6 @@
   }
   #day-2-agenda {
     display: none;
-  }
-  #sponsors img {
-    height: 80px;
   }
   .mktoButton {
     text-align: center;
@@ -656,7 +653,6 @@
     }
   }
 }
-
 .magnify-banner:hover,
 .magnify-banner:focus {
   @media(min-width: 992px) {
@@ -668,264 +664,32 @@
     }
   }
 }
-
-.nav-tabs {
-  // border-bottom: 2px solid #304250 !important;
-  border-bottom: 0 !important;
-
-  .nav-link.active {
-    border: 0;
-    color: #78be20 !important;
-    box-shadow: 0 2px 0px 0px #78be20;  
-    margin-bottom: 0px;
-  }
-  .nav-link {
-    color: #adbbc4;
-    border: 0 !important;
-
-    &:hover {
-      color: white;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    font-size: .8rem;
-  }
-}
-.nav-link.active {
-  background: transparent !important;
-}
-
-.nav-tabs + .tab-content {
-  border: solid #304250 2px;
-}
-
 .pe-none {
   pointer-events: none;
 }
-
-.pointer {
-  cursor: pointer;
-}
-
 .callout svg {
   opacity: .8;
 
-  .tab-content {
-    margin: 0rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: 100%;
-    box-shadow: inset 0 0 5px rgb(0, 3, 0);
-    border: 2px solid rgba(20, 0, 0, 0.521);
-    /* These are technically the same, but use both */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+.tab-content {
+  margin: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+  box-shadow: inset 0 0 5px rgb(0, 3, 0);
+  border: 2px solid rgba(20, 0, 0, 0.521);
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
-    -ms-word-break: break-all;
-    /* This is the dangerous one in WebKit, as it breaks things wherever */
-    word-break: break-all;
-    /* Instead use this non-standard one: */
-    word-break: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
 
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
-.springone-tour .td-main {
-  background-color: #0B1C23 !important;
-}
-#hero.springone-tour-event-hero {
-  background-size: 65%;
-  background-color: #1b2a32;
-  background-position: bottom right;
-  background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  &:not(.chicago) #hero-content {
-    padding-bottom: 8vh;
-  }
-  &.s1t-index {
-    .logo {
-      content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
-      max-width: 20%;
-    }
-    @media(max-width: 991px) {
-      background-size: 75%;
-      background-position: bottom center;
-      padding-top: 2em;
-      min-height: 400px;
-      .logo {
-        display: none;
-      }
-    }
-  }
-  .small-screen-hero {
-    display: none;
-  }
-}
-#hero.springone-tour-event-hero.s1t-city {
-  @media(max-width: 767px) {
-    background-image: none;
-    .small-screen-hero {
-      display: block;
-    }
-  }
-  #register-btn {
-    font-weight: 400;
-    background: #80ea6e;
-    color: #1b2a32;
-    &:hover {
-      background: #02bc67;
-      color: #fff;
-    }
-  }
-}
-body#s1t-index #s1t-destinations-2022 {
-  .city-tile {
-    background-repeat: no-repeat;
-    background-size: auto 90%;
-    background-position: bottom right;
-    background-color: #1b2a32;
-    &:hover {
-      background-color: #324f61;
-    }
-    @media(max-width: 991px) {
-      max-width: 400px;
-    }
-  }
-  .city-tile-text {
-    padding: 20px 25px;
-    transition: background-color 0.25s;
-    font-size: 1.0625rem;
-    height: 177px;
-  }
-}
-body#s1t-index {
-  .td-main a, .talk-modal a, .speaker-modal a {
-    color: #02bc67;
-    &:hover {
-      color: #80ea6e;
-    }
-  }
-  @media (max-width: 767px){
-    .container-sm, .container {
-      max-width: 100%;
-    }
-  }
-  #meetup {
-    align-items: center;
-    @media(max-width: 575px) {
-      img {
-        width: 30%;
-        margin-top: 1rem;
-      }
-      .row > * {
-        padding-left: 0 !important;
-      }
-    }
-  }
-  .day-toggle .day {
-    &:not(.active) {
-      border: #1b2a32 2px solid;
-      background-color: #1b2a32;
-    }
-    &.active {
-      background-color: #22343c;
-      border: none;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .agenda {
-    background-color: #22343c;
-    .name {
-      margin-left: 1rem;
-      .lightbox {
-        display: block;
-      }
-    }
-    @media (max-width: 767px) {
-      .time, .talk-title, .name a {
-        font-size: .9rem !important;
-        vertical-align: top !important;
-      }
-      .talk-title {
-        word-break: break-word;
-      }
-      .name.ml-3 {
-        margin-left: 0 !important;
-      }
-    }
-  }
-  .talk-modal, .speaker-modal {
-    background-color: #1b2a32;
-    display: none;
-    max-width: 700px;
-    @media(max-width: 991px) {
-      max-width: 500px !important;
-      img {
-        max-width: 30%;
-        min-width: 200px;
-      }
-    }
-    .title {
-      font-style: italic;
-    }
-  }
-  .speaker-modal {
-    max-width: 800px;
-  }
-  a.fancybox-close:before {
-    color: #02bc67 !important;
-  }
-  .display-in-light-mode {
-    display: none;
-  }
-  .hide-in-light-mode {
-    display: block;
-  }
-}
-.light-mode body#s1t-index {
-  .display-in-light-mode {
-    display: block;
-  }
-  .hide-in-light-mode {
-    display: none;
-  }
-  .td-main {
-    background-color: #fff !important;
-  }
-  #hero {
-    background-color: #fff !important;
-    .logo {
-      content: url('{{ "/images/springonetour/hero_logo_black.svg" | relURL }}');
-    }
-  }
-  .agenda, .talk-modal, .speaker-modal, .city-tile {
-    background-color: #f4f8fa!important;
-  }
-  .city-tile {
-    &:hover {
-      background-color: #fff !important;
-    }
-  }
-  .day-toggle .day {
-    &:not(.active) {
-      border: none;
-    }
-  }
-  #register-btn {
-    color: #000000 !important;
-    background-color: #f4f8fa !important;
-    &:hover {
-      color: #1D428A !important;
-      background-color: #ffffff !important;
-    }
-  }
-  a.fancybox-close:before {
-    color: #1D428A !important
-  }
-}
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}}

@@ -18,9 +18,9 @@ alises:
 - /guides/kubernetes/gs-tap-on-kind-final-pt2
 tanzu:
   label: tap
-  featured: false
+  featured: true
   featuredweight: 3
-  gettingstarted: false
+  gettingstarted: true
   gettingstartedweight: 3
 ---
 

@@ -21,9 +21,9 @@ level1: Building a Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 tanzu:
   label: tap
-  featured: false
+  featured: true
   featuredweight: 2
-  gettingstarted: false
+  gettingstarted: true
   gettingstartedweight: 2
 ---
 

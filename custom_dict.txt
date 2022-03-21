@@ -18,7 +18,6 @@
 12SwitchRestoresSansCheckOuts
 2x2
 3D
-Salatino
 [23]G
 401K
 [245]xx
@@ -73,7 +72,7 @@ Almar
 Alpine(-based)?
 Amaro
 amd64
-AMI('s)?
+AMI
 amongst
 AMQP
 [Aa]nalytics
@@ -97,7 +96,6 @@ ApiResponse
 APIs?
 APM
 AppArmor
-AppDev
 AppDynamics
 Appel
 appender
@@ -143,7 +141,6 @@ Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
-authorisation
 AuthorizationPolicy
 authorizer
 Authorizer
@@ -202,7 +199,6 @@ Bikewise
 biome
 [Bb]itnami('s)?
 Biville
-Bixby
 BKPR
 BlackBox
 blazingly
@@ -278,9 +274,7 @@ Cedrick
 CEIP
 CentOS
 Ceph
-Cerner
 CertificateRequests
-certified-kubernetes
 CEST
 CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
@@ -424,7 +418,6 @@ CTRL-C
 currentClientConnections
 currentMetricValue(s)?
 CustomEntryConcurrentHashMap
-customisable
 customizability
 customizable
 customization(s)?
@@ -537,7 +530,6 @@ DistributedSystems
 DistributionMessageObserver
 DistributionStats
 DistributionSummary
-distro
 distroless
 distros
 DIY
@@ -562,7 +554,6 @@ DoSec
 dotnetsdk
 Dre
 drf
-DrinkService
 dropdown
 Dropwizard
 Drotbohm
@@ -577,7 +568,6 @@ Eads
 eBPF
 EBS
 EC2
-ec2messages
 ECE
 echoserver
 EclipseLink
@@ -591,7 +581,6 @@ EFS
 eg.
 egoless
 EKS
-elasticloadbalancing
 ElasticSearch
 ELB(s)?
 Eleftheria
@@ -646,7 +635,6 @@ FakeBankAccount
 Fakhouri
 Falco
 Fani
-fanout
 faq(s)?
 Fastlane
 favourite(s)?
@@ -672,9 +660,7 @@ Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
-FluxCD
 flyyy
-FoodService
 formatter
 FOSS
 foundaments
@@ -705,7 +691,6 @@ Galystan
 Gamov
 Gandhi
 Gangway
-Gapped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -776,9 +761,7 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
-Gif
 Gilardi
-Giphy
 GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
@@ -841,7 +824,6 @@ handleWANEvent
 handoff(s)?
 Hansson
 HAProxy
-hardcode
 [hH]ardcoded
 HashiCorp('s)?
 hasResult
@@ -859,7 +841,6 @@ Helming
 Heptio
 Herbrich
 hermeticism
-HeroDevs
 Heroku('s)?
 High-Cardinality
 Hillegass
@@ -884,8 +865,6 @@ HSQLDB
 (Http|HTTP)ie
 (Http|HTTP)Proxy
 HttpBase
-HttpClientFactory
-HttpClients
 https?|HTTPS?
 HttpSession
 HumanOps
@@ -996,8 +975,6 @@ JDK's
 Jeffries
 Jernigan
 JetBrains
-Jetbrains
-jetbrains
 Jetstack
 JFrog
 JHipster
@@ -1044,7 +1021,6 @@ junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
-JVASays
 JVM's
 JVM(-based)?
 JVMs
@@ -1372,7 +1348,6 @@ NotificationListener
 npm
 NSX(-T|-SM)?
 NTP
-NuGet
 nullable
 NYJavaSIG
 OAuth2?
@@ -1561,7 +1536,6 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
-prepaved
 prepend
 prepending
 Presales
@@ -1571,7 +1545,6 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
-Prodan
 production-deployable
 ProductPlan
 Programadoras
@@ -1587,7 +1560,6 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
-PubConf
 PubSub(bing)?
 Pulkit
 pullPolicy
@@ -1621,7 +1593,6 @@ RDBMS
 reachability
 reactively
 ReactiveUI
-ReactiveX
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1733,7 +1704,6 @@ Sadogursky
 Saikali
 Salaboy
 salaboy
-Salatino
 Salm
 Sam-Bodden
 SameSite
@@ -1772,7 +1742,6 @@ Sébastien
 SecondaryRoutingFunction
 secretbox
 secretname
-secretsmanager
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -1823,7 +1792,6 @@ slideshare
 SLO(s)?
 Sloka
 SmartTV
-SME
 SMI
 Smythe
 Snapchat
@@ -1861,8 +1829,6 @@ SSD
 ssh-keygen
 SSL
 SSL_SYSCALL_ERROR
-SSM
-ssmmessages
 sso|SSO
 Stacker
 Standley
@@ -1879,7 +1845,6 @@ STDERR|stderr
 STDOUT|stdout
 Steeltoe
 Stéphane
-STIG
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
@@ -1888,9 +1853,7 @@ strategizing
 Strategyzer
 Stratton
 StringBuilder
-Strobl
 struct
-STS
 STT
 Styra
 sub(p|P)ath
@@ -2024,7 +1987,6 @@ undersample
 underutilization
 unencoded
 unencrypted
-unmanaged
 unpause
 Unported
 unprioritized
@@ -2104,7 +2066,6 @@ VMware
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
-Voicify
 Vonge
 VPA(s|'s)?
 VPC
@@ -2120,12 +2081,10 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
-WASM
 Waterhouse
 WaveConfigObject
 waypoints
 WCF
-WebAPI
 webapp
 webapps_default
 Webber
@@ -2171,13 +2130,10 @@ Y2ffgg
 YAML|yaml
 Yaron
 YARP
-Yarp
-YARP's
 yay
 YCombinator
 Yonis
 Yorker
-young-ish
 youtube
 YTT
 ytt(-templatized)?
@@ -2190,5 +2146,4 @@ Zou
 Zuul
 Zynga
 μServices
-Ϟ
 ϟ
