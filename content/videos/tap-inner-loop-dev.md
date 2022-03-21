@@ -10,6 +10,4 @@ title: It Works For Me!
 youtube_id: aXUOSabBluY
 tanzu:
   label: tap
-  featured: true
-  featuredweight: 3
 ---

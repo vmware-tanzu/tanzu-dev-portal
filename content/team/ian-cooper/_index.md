@@ -7,7 +7,7 @@ location: ""
 
 # Social Media
 twitter: "ICooper"
-website: "https://www.justeattakeaway.com/"
+website: ""
 facebook: ""
 linkedin: ""
 github: ""

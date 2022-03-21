@@ -1,6 +1,5 @@
 <div class="section-index">
-    <!--Grab pages for SpringOne Tour page if on list page, otherwise use tv-->
-    {{ $pages := sort (where .Site.Pages "Section" (cond (eq .Title "Past Events") "springone-tour" "tv")) }}
+    {{ $pages := sort (where .Site.Pages "Section" "tv") }}
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
 
@@ -45,13 +44,8 @@
                                     {{ $.Scratch.Set "episodeLink" .Params.register }}
                                 {{ end }}
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
-                                
-                                {{ if gt (len (.Resources.Match "images/*.mp4")) 0 }}
-                                <a href="{{ $episodeLink }}"><video autoplay loop muted playsinline src='{{ (.Resources.GetMatch "images/*.mp4").RelPermalink }}' style="height: auto; width: 100%; border: none;"></video><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
-                                {{ else }}
-                                    <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src='{{ (partial "tv-image-src" .) }}'><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
-                                {{ end }}
- 
+
+                                <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src="{{ partial "tv-image-src" . }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
                                 {{ if .Params.no_streaming_label }}
                                     <p></p>
                                 {{ else }}

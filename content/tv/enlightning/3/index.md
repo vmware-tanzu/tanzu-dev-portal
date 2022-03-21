@@ -9,7 +9,7 @@ guests:
 - Jessica Rose
 hosts:
 - Whitney Lee
-youtube: "r_SPWqB1l-c"
+youtube: ""
 lastmod: '2020-10-09'
 title: How Do You Structure Learning for Technical Concepts?
 twitch: vmwaretanzu
