@@ -98,7 +98,7 @@ Not required, move on to the next step.
 2.  Select **Edit the system environment variables** to open the System Properties dialogue. 
 3.  Click the **Environment Variables** button to open the user and system environment variables dialogue box.
 4.  Under the **System** variables list, find the entry for `PATH` and double click it
-5.  Add a new entry for `C:\Program Files\tanzu\tanzu.exe` as shown in the image below.
+5.  Add a new entry for `C:\Program Files\tanzu\` as shown in the image below.
 6.  Click `OK`.
 
 ![Adding a Windows Environment Variable](images/image2.png "Adding an environment variable to your system’s PATH for the directory where you installed the Tanzu CLI tool.")
@@ -445,7 +445,7 @@ kubectl get pods --all-namespaces
 You are now ready to install the Tanzu Application Platform onto your Minikube cluster. First, to make this task easier, you will create some environment variables in the terminal you’ll be using for the rest of the installation. These variables include usernames and passwords for the Tanzu Network and the Docker Registry that you are using to store your application container images.
 
 {{% note %}}
-In the code below [Docker Hub][dockerhub] is recommended as the `DOCKER_SERVER`. Personal (free) Docker Hub accounts have [usage limits](https://www.docker.com/pricing/) that may interrupt your installation depending on your daily use. 
+In the code below [Docker Hub](https://hub.docker.com/) is recommended as the `DOCKER_SERVER`. Personal (free) Docker Hub accounts have [usage limits](https://www.docker.com/pricing/) that may interrupt your installation depending on your daily use. 
 {{% /note %}}
 
 1. Create the Tanzu Application Platform installation environment variables:
@@ -715,7 +715,7 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
 {{< /tabpane >}}
 
 {{% note %}}
-This process can take a while and creates a lot of internet traffic. The amount of time needed depends on your network bandwidth, cpu, disk, and memory. If you are sharing your network with others or you are pressed for time you may prefer to do this part of the installation at a less disruptive time of the day. 
+This process can take a while and creates a lot of load on your PC and a lot of internet traffic on your network. The amount of time needed depends on your network, cpu, disk, and memory. If you are sharing your network with others or you are pressed for time you may prefer to do this part of the installation at a less disruptive time of the day. 
 {{% /note %}}
 
 You can check the progress of the installation at any time by opening another PowerShell or Terminal window and asking the `tanzu` cli for the reconciliation status of the Tanzu Application Platform packages as follows.
@@ -763,7 +763,7 @@ This process of reconciliation takes time and needs the Minikube Tunnel command 
 {{< /tab >}}
 {{< /tabpane >}}
 
-Once the system is fully reconciled, you may like to pause for a moment to check out the Tanzu Application Platform user interface. In your web browser open the URL [http:// tap-gui.example.com](http://tap-gui.example.com). If `minikube tunnel` is active, and your `hosts` file has been edited as described in [Stage 2: Run Minikube](#stage-2-run-minikube), you should see the Tanzu Application Platform's graphical user interface which is based on the CNCF [Backstage](https://backstage.io/) project. 
+Once the system is fully reconciled, you may like to pause for a moment to check out the Tanzu Application Platform user interface. In your web browser open the URL [http://tap-gui.example.com](http://tap-gui.example.com). If `minikube tunnel` is active, and your `hosts` file has been edited as described in [Stage 2: Run Minikube](#stage-2-run-minikube), you should see the Tanzu Application Platform's graphical user interface which is based on the CNCF [Backstage](https://backstage.io/) project. 
 
 ![The Tanzu Application Platform graphical user interface.](images/image4.png "Image of the Tanzu Application Platform graphical user interface.")
 
@@ -945,7 +945,7 @@ tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.example.com
 {{< /tabpane >}}
 
 {{% warning %}}
-It may take several minutes for a workload to become `Ready`. To run your code the Tanzu Application Platform supply-chain will download the source code, compile it, package it, create a container image, store the container image in the container registry, setup network routing, configure Kubernetes, and run the application.
+It may take several minutes for a workload to become `Ready`. To run your code, the Tanzu Application Platform supply-chain will download the source, compile it, package it, create a container image, store the container image in the container registry, setup network routing, configure Kubernetes, and run the application.
 {{% /warning %}}
 
 Test the application in your browser or with the following `curl` command:
