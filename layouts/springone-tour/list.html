@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ partial "amplitude.html" (dict "context" . "event" "show viewed") }}
+{{ $class := replace .Page.Section "." "-" | lower }}
+
+<section id="hero" class="{{ $class }}-event-hero s1t-index mt-7">
+    <div class="pl-5 ml-3 container">
+      <p class="mb-5 white h3 col-lg-3 px-0">SpringOne Tour is back, in person, and coming to a city near you!</p>
+      <a href="/developer/springone-tour"><img class="logo mb-5" src='{{"/images/springonetour/hero_logo_white.svg" | relURL }}'/></a>
+    </div>
+</section>
+
+<section id="s1t-destinations-2022" class="row justify-content-center mb-5">
+    <div class="container col-lg-9 col-12">
+      <div class="mt-5 mb-5">
+        {{ .Content }}
+      </div>
+      {{ if ne .Title "SpringOne Tour Terms & Conditions" }}
+      <h2 class="mb-3">Cities</h2>
+      <div class="row justify-content-lg-start mb-5">
+          {{ range .Pages.ByDate }}
+            {{ if .Params.publish }}
+            <a class='col-lg-4 col-12 mb-5 px-0' href="{{ .RelPermalink }}">
+                <div class='city-tile transition-all {{ .Params.title | lower }}-tile col-4 col-lg-11 col-12 px-0 overflow-hidden position-relative'
+                style='background-image: url("{{ .Params.logo_path | relURL }}");'>
+                      <div class='city-tile-text d-flex flex-column'>
+                        <h3 class='text-white mt-0'> {{.Params.city_name}} </h3>
+                        <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2" (substr .Date 0 10)}}–{{
+                            dateFormat "2" (substr .Params.enddate 0 10)}}</p>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+          {{ end }}
+      </div>
+
+      <h2>Sponsorship</h2>
+      <p class="mb-5 content-container">Want to become a sponsor? <a href='https://d18qp689yd19g7.cloudfront.net/2022/s1t_prospectus.pdf'>Download the prospectus</a> or email <a href='mailto:sponsors1@vmware.com'>sponsors1@vmware.com</a>.</p>
+      {{ end }}
+    </div>
+</section>
+
+{{ end }}

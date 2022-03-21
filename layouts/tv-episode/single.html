@@ -290,6 +290,31 @@
   </div>
   {{ end }}
 
+  {{ if .Params.beyond }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Sponsors</h3>
+      <div id="sponsors">
+        <div class="sponsor-container">
+          <a href="https://headspring.com/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-headspring-white.svg" | relURL }}'>
+          </a>
+          <a href="https://www.microsoft.com/en-us/security/business/identity-access-management/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-microsoft-white.svg" | relURL }}'>
+          </a>
+          <a href="http://www.telerik.com" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-progress-white.svg" | relURL }}'>
+          </a>
+          <a href="https://www.twilio.com/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-twilio-white.svg" | relURL }}'>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+
   {{ if .Params.faqs }}
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 px-0 pt-4">
