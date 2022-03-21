@@ -1052,7 +1052,7 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
-kail
+[Kk]ail
 Kalashnykov
 Kamus
 Kanban
@@ -1276,6 +1276,7 @@ Minio|MinIO
 minReplicas
 misconfiguration
 misconfigured
+[Mm]istype(d)?
 [Mm]itigations
 MiXiT
 Mkyong
@@ -1979,6 +1980,7 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+traceroute
 tradeoff(s)?
 Traefik
 transactional
