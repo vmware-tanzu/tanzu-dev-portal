@@ -1,7 +1,6 @@
 ---
 name: "David Wu"
 description: "Senior Staff Solutions Architect"
-photo: "/images/david-wu.jpg"
 roles: ["author"]
 skills: ["Kubernetes", ".NET", "Platform Observability", "SRE", "Image & Video Processing & Compression", "Quality Metrics", "Product Development","Agile Delivery", "Software Development", "Embedded Development", "Cameras", "Cloud Application Development", "Medical Devices", "Imaging Forensics"]
 location: "Austin, TX"
