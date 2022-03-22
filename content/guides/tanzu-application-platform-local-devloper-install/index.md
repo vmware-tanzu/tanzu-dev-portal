@@ -80,10 +80,9 @@ mkdir "C:\Program Files\tanzu"
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-```sh
-# in a new Terminal window.
-mkdir ~/tanzu
-```
+{{% info %}}
+Not required, move on to the next step.
+{{% /info %}}
 
 {{< /tab >}}
 {{< tab header="Linux" >}}
@@ -164,11 +163,14 @@ In your Terminal, follow these steps to extract and install the `tanzu` cli (ass
 # Move to the folder containing the downloaded file.
 cd ~/Downloads
 
+# Make a directory to extract the archive into
+mkdir tanzu
+
 # Extract the tar file into your ~/tanzu directory
-tar -xvf tanzu-framework-darwin-amd64.tar -C ~/tanzu
+tar -xvf tanzu-framework-darwin-amd64.tar -C ./tanzu
 
 # Change your working directory to the install directory.
-cd ~/tanzu
+cd tanzu
 
 # Run the install binary to complete the base installation.
 sudo install cli/core/v0.11.1/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
