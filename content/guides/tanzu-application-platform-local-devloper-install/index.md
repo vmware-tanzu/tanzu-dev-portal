@@ -176,7 +176,7 @@ cd tanzu
 sudo install cli/core/v0.11.1/tanzu-core-darwin_amd64  /usr/local/bin/tanzu
 
 # Install the tanzu cli plug-ins needed for TAP installation
-export TANZU_CLI_NO_INIT = "true"
+export TANZU_CLI_NO_INIT="true"
 tanzu plugin install --local cli all
 ```
 
@@ -254,7 +254,7 @@ In Windows 10 we tested using [Hyper-V](https://docs.microsoft.com/en-us/virtual
 {{< tab header="MacOS" >}}
 
 ```sh
-minikube start --cpus=`8` --memory=`12g` --kubernetes-version='1.22.6'
+minikube start --cpus='8' --memory='12g' --kubernetes-version='1.22.6'
 ```
 
 {{< /tab >}}
@@ -405,11 +405,14 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 3. Open a new Terminal window and issue the following commands:
 
 ```sh
+# back into the ~/Downloads directory
+cd ..
+
 # Create a directory for these packages
-mkdir $HOME/tanzu-cluster-essentials
+mkdir tanzu-cluster-essentials
 
 # Unpack the TAR file into the tanzu-cluster-essentials directory by running:
-tar -xvf tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz -C ~/tanzu-cluster-essentials
+tar -xvf tanzu-cluster-essentials-darwin-amd64-1.0.0.tar -C ./tanzu-cluster-essentials
 
 # Define environment variables nesessary for the install scripts
 export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:82dfaf70656b54dcba0d4def85ccae1578ff27054e7533d08320244af7fb0343
@@ -418,7 +421,7 @@ export INSTALL_REGISTRY_USERNAME=<tanzunet-username>
 export INSTALL_REGISTRY_PASSWORD=<tanzunet-password>
 
 # Change the directory 
-cd $HOME/tanzu-cluster-essentials
+cd tanzu-cluster-essentials
 
 # Run the install script
 ./install.sh
@@ -531,8 +534,8 @@ export TAP_NAMESPACE="tap-install"
  
 # Set the developer’s ‘push’ capable docker container registry details
 export DOCKER_SERVER="https://index.docker.io/v1/"
-export DOCKER_USERNAME='' # < insert your docker username
-export DOCKER_PASSWORD='' # < insert your docker password
+export DOCKER_USERNAME="" # < insert your docker username
+export DOCKER_PASSWORD="" # < insert your docker password
 ```
 
 {{< /tab >}}
@@ -698,6 +701,9 @@ curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-ap
 {{< tab header="MacOS" >}}
 
 ```sh
+# cd back to the ~/Downloads directory
+cd ..
+
 curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
 ```
 
