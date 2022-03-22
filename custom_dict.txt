@@ -1220,6 +1220,7 @@ Madhav
 Madhura
 [mM]akefile
 Manachi
+Manulife
 MAPBU
 mappable
 MapRepository
@@ -1286,6 +1287,7 @@ MockMvc
 [Mm]odelling
 [Mm]odularity
 Momcilovic
+Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
@@ -1691,6 +1693,7 @@ Rickard
 Ries
 RKE
 rkt
+RMIT
 [Rr]oadmap(s)?
 [Rr]oadmapping
 RocksDB
