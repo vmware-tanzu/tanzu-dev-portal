@@ -1,6 +1,6 @@
 ---
 title: "Running Tanzu Application Platform Locally on Your Laptop "
-description: TODO  
+description: VMware Tanzu Application Platform is a powerful tool for developers for running production workloads. But it can also significantly enhance your local development process. This guide walks you through installing a local development environment with Tanzu Application Platform, whether you are running Windows, MacOS, or Linux. 
 date: 2022-03-15
 lastmod: 2022-03-15
 level1: Building Kubernetes Runtime
