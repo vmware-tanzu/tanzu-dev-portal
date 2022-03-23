@@ -518,8 +518,8 @@ export TAP_NAMESPACE="tap-install"
 
 # Set the developer’s ‘push’ capable docker container registry details
 export DOCKER_SERVER="https://index.docker.io/v1/"
-export DOCKER_USERNAME="" # < insert your docker username
-export DOCKER_PASSWORD="" # < insert your docker password
+export DOCKER_USERNAME='' # < insert your docker username
+export DOCKER_PASSWORD='' # < insert your docker password
 ```
 
 {{< /tab >}}
