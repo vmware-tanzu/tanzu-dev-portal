@@ -1,16 +1,16 @@
 ---
-Date: '2022-03-15T16:30:00-00:00'
-Description: .NET in the Wild with Steve Collins
+Date: '2022-05-17T17:30:00-00:00'
+Description: .NET in the Wild with Alex Dunn
 PublishDate: '2022-03-07T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/11
 author: laylap
-date: '2022-03-15'
+date: '2022-05-17'
 episode: '11'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2022-03-07'
+lastmod: '2022-03-21'
 title: Alex Dunn and Layla talk about .NET, and playing video games with your voice!
 truncate: ''
 twitch: vmwaretanzu
