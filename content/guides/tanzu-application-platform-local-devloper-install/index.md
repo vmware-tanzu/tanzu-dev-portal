@@ -774,7 +774,7 @@ This process can take a while. It creates a lot of load on your PC and a lot of 
 
 Sometimes, the process will appear to end in failure but really it has just timed out. You can check the true status of the installation at any time by opening another PowerShell or Terminal window and asking the `tanzu` cli for the reconciliation status of the Tanzu Application Platform packages. Use the command described below to check the current status. 
 
-Be patient. The Tanzu Application Platform is self-healing but downloading the various microservice containers can take quite a while. A system monitor like Performance Monitor (Windows), top (macOS), [bpytop](https://github.com/aristocratos/bpytop) (Linux), or a Kubernetes dashboard like [k9s](https://k9scli.io/) may offer some useful insights while the installation progresses.
+Be patient. The Tanzu Application Platform is self-healing but downloading the various microservice containers can take quite a while. A system monitor like Performance Monitor (Windows), `top` (macOS), [`bpytop`](https://github.com/aristocratos/bpytop) (Linux), or a Kubernetes dashboard like [k9s](https://k9scli.io/) may offer some useful insights while the installation progresses.
 
 {{< tabpane >}}
 {{< tab header="All Operating Systems" >}}
@@ -1013,7 +1013,7 @@ tanzu-java-web-app   Ready   http://tanzu-java-web-app.default.apps.example.com
 {{< /tabpane >}}
 
 {{% warning %}}
-It may take several minutes for a workload to become `Ready`. The Tanzu Application Platform does a lot of work on your behalf. The built-in supply-chain must download the source code, compile it, package it, and create a container image. This image must be then stored in the container registry, network routing set up, Kubernetes pods, deployments, and replicasets configured, and the application scheduled to run on the cluster.
+It may take several minutes for a workload to become `Ready`. The Tanzu Application Platform does a lot of work on your behalf. The built-in supply-chain must download the source code, compile it, package it, and create a container image. This image must be then stored in the container registry, network routing set up, Kubernetes pods, deployments, and ReplicaSets configured, and the application scheduled to run on the cluster.
 {{% /warning %}}
 
 <p><strong>

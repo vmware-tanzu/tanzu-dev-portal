@@ -1197,6 +1197,7 @@ Lyft
 Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
+M1
 Macanufo
 MacBook
 [Mm]achina
@@ -1642,7 +1643,6 @@ Renaud
 Renfro
 Renner
 replatforming
-replicaset
 ReplicaSet(s)?
 replicationcontrollers
 replumb
