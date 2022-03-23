@@ -711,6 +711,9 @@ curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-applic
 {{< tab header="Linux" >}}
 
 ```sh
+# Move to your home folder
+cd $HOME
+
 curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
 ```
 
