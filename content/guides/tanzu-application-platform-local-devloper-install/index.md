@@ -405,8 +405,8 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 3. Open a new Terminal window and issue the following commands:
 
 ```sh
-# back into the ~/Downloads directory
-cd ..
+# Move to the folder containing the downloaded file.
+cd ~/Downloads
 
 # Create a directory for these packages
 mkdir tanzu-cluster-essentials
