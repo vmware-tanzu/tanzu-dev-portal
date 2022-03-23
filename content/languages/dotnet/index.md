@@ -14,4 +14,6 @@ menu:
     weight: 2
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+.NET is a free, cross-platform, open source developer platform for building many different types of applications. Here you'll find content of all types here from how-to videos and blogs to quick starts and features reviews. We even have a [cookbook](LINK) with loads of helpful tips for developing enterprise solutions with both .NET and .NET Framework.
+
+If you have any ideas or questions, you can reach out to our .NET focused developer advocate [Layla](/team/layla-porter) for assistance. Layla also hosts a chat show on Twitch called [.NET in the Wild](/tv/dotnet-wild) along with curating a .NET playlist on the [VMware Developers YouTube channel](LINK).
