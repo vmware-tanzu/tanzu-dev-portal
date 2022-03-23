@@ -21,7 +21,7 @@ He co-founded [Cloud Native Wales](https://cloudnativewales.io/), an initiative
 to help people learn Cloud Native technologies and establish a community to support each other. 
 When he's not playing with tech, he's busy trying to understand his children, trying to find a comfy chair to read a book or trying to find some snow to ski on. 
 
-Follow Lewis at, @denhamparry, @controlplaneio, and @cloudnativewal.
+Follow Lewis at, [@denhamparry](https://twitter.com/denhamparry), [@controlplaneio](https://twitter.com/controlplaneio), and [@cloudnativewal](https://twitter.com/cloudnativewal).
 
 <!--more-->
 
