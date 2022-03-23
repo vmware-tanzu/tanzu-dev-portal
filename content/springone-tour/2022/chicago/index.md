@@ -1,7 +1,7 @@
 ---
+PublishDate: '2022-03-15T00:00:00-07:00'
 Date: '2022-04-26T00:00:00-07:00'
 enddate: '2022-04-27T00:00:00-07:00'
-PublishDate: '2022-01-01T00:00:00-07:00'
 publish: true
 aliases:
     - /springone-tour/2022/chicago
@@ -9,18 +9,17 @@ location:
     - 'Convene'
     - '16 West Adams Street'
     - 'Chicago, IL'
-calendar: true
-code_of_conduct: true
-logo_path: /images/springonetour/chicago_cityscape.svg
+logo_path: "/images/springonetour/chicago_cityscape.svg"
+og_image: "/images/og/s1t_2022_og.png"
+Description: SpringOne Tour Chicago
+Title: SpringOne Tour Chicago
+LinkTitle: Chicago
+city_name: Chicago
+meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> and <a href="/developer/team/josh-long" target="_blank">Josh Long</a> will be presenting their talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
-date: '2022-04-26'
+code_of_conduct: true
 hide_newsletter: true
-lastmod: '2022-02-09'
-no_episode_title: true
-no_streaming_label: true
-title: Chicago
-meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> and <a href="/developer/team/josh-long" target="_blank">Josh Long</a> will be presenting their talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
 ---
 
 <div class="day-toggle row mt-5">
@@ -198,7 +197,7 @@ meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM–12:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:40 AM–12:20 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#graphql">Getting Started with GraphQL in Spring Boot</a>
         </div>

@@ -13,6 +13,7 @@ guests:
 - Jeff Fritz
 - John Bush
 - Julie Lerman
+- Layla Porter
 - Lewis Denham-Parry
 - Luce Carter
 - Phillip Carter
@@ -222,7 +223,7 @@ function convertTime(sessionTime) {
     <h3 class="h4 py-0">
       <a href="/developer/team/ian-cooper/">Ian Cooper</a>
     </h3>
-    <span class="company d-block fs-90 opacity-4"></span>
+    <span class="company d-block fs-90 opacity-4" style="overflow-wrap: break-word;">JustEatTakeaway.com</span>
   </div>
 </div>
 <div id="messaging" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">Messaging for .NET Developers</div><p>In this talk we will look at why we might use messaging, and how we use messaging in a .NET app. <p>We'll start by exploring distribution and why we can think about conversations between processes being synchronous or asynchronous, and exposing functionality or exchanging data. Then we will talk about where messaging fits, and the contexts in which we might prefer it. Along the way we should get a better understanding of messaging compared to alternatives like sharing a database or HTTTP/GRPC.</p><p>Then we will show an example of using messaging in a .NET app.</p><p>Finally, we will give pointers to resources for those who wish to explore this topic in greater detail, now that they have mastered the basics.</p></div>
@@ -257,6 +258,8 @@ function convertTime(sessionTime) {
   <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/jakub-pilimon/">Jakub Pilimon</a>
+      <br>
+      <a href="/developer/team/layla-porter/">Layla Porter</a>
     </h3>
     <span class="company d-block fs-90 opacity-4">VMware</span>
   </div>

@@ -399,6 +399,7 @@ credentialName
 CredHub
 crf
 critiquers
+CRLF
 CRM
 [Cc]ron
 cross-subnet
@@ -432,6 +433,7 @@ cybersecurity
 Cygwin
 D2iQ
 d3
+daemonset
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
@@ -454,6 +456,7 @@ dataStoreBytesInUse
 dataStoreEntryCount
 DATEV('s)?
 DawsCon
+dawu415('s)?
 DAZN
 dbkey
 dbuser
@@ -512,6 +515,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+DISO
 [Dd]isposability
 distributable
 DistributedCommand
@@ -851,6 +855,7 @@ Helming
 Heptio
 Herbrich
 hermeticism
+HeroDevs
 Heroku('s)?
 High-Cardinality
 Hillegass
@@ -867,6 +872,7 @@ HorizontalPodAutoscaler(s)?
 HostEndpoint
 [Hh]ostname(s)?
 hostPath
+hostpath
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -886,6 +892,7 @@ HyperKit
 i7
 IAM
 Iberkleid
+ICMP
 ideate(d)?
 ideation
 idempotency
@@ -935,6 +942,8 @@ IPM
 IPM(s)
 IPPool(s)?
 IPs.
+IPV4
+IPV6
 IPVS
 Irizarry
 IRSA
@@ -1032,6 +1041,7 @@ junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
+JVASays
 JVM's
 JVM(-based)?
 JVMs
@@ -1043,12 +1053,14 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+[Kk]ail
 Kalashnykov
 Kamus
 Kanban
 Kaniko
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Kaspersky
 Kat
 [Kk]ata(s)?
 KEK(s)?
@@ -1142,6 +1154,7 @@ learnt
 lego
 Lerman
 letsencrypt-staging
+LF
 libnss-wrapper
 libs
 [Ll]ifecycle
@@ -1183,6 +1196,7 @@ Logstash
 Lombok
 lookups
 lookups.
+[Ll]oopback
 lorem-ipsum
 Low-fi
 LRU
@@ -1191,6 +1205,7 @@ lTwaivWHzk
 Lua
 Lubomir
 Luca
+LucidChart
 Lum
 Lunven
 Lyft
@@ -1208,6 +1223,7 @@ Madhav
 Madhura
 [mM]akefile
 Manachi
+Manulife
 MAPBU
 mappable
 MapRepository
@@ -1264,6 +1280,7 @@ Minio|MinIO
 minReplicas
 misconfiguration
 misconfigured
+[Mm]istype(d)?
 [Mm]itigations
 MiXiT
 Mkyong
@@ -1273,6 +1290,7 @@ MockMvc
 [Mm]odelling
 [Mm]odularity
 Momcilovic
+Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
@@ -1324,6 +1342,8 @@ Neo4j's
 Nesterov
 NetApp('s)?
 NetBase
+netcat
+netshoot
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1352,6 +1372,7 @@ NoSQL
 NotificationListener
 npm
 NSX(-T|-SM)?
+NTP
 NuGet
 nullable
 NYJavaSIG
@@ -1674,6 +1695,7 @@ Rickard
 Ries
 RKE
 rkt
+RMIT
 [Rr]oadmap(s)?
 [Rr]oadmapping
 RocksDB
@@ -1892,6 +1914,7 @@ SVP
 [Ss]wappable
 SweetKiller9
 Syer
+symlink
 symposia
 Sysdig
 SystemAdmin
@@ -1909,6 +1932,7 @@ TBD
 TCE
 tchotchke
 TCP
+TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
@@ -1963,6 +1987,7 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+traceroute
 tradeoff(s)?
 Traefik
 transactional
@@ -1987,6 +2012,7 @@ UAA
 UC
 UCD
 UDP
+UDP-based
 UI(s|-based)?
 Umbraco
 (un)?marshalling
@@ -2122,6 +2148,7 @@ Wilcock('s)?
 Wildfly
 [Ww]ireframe(s)?
 WireMock
+Wittenkamp
 Wittrock
 WomenOfDotNet
 [wW]ordpress
@@ -2129,6 +2156,7 @@ WORKDIR
 WorkloadEndpoint
 workspaces
 [Ww]orkstream(s)?
+writeout
 WSL
 Wujec('s)
 x509

@@ -2,7 +2,7 @@
 name: Dan Vega
 description: "Spring Developer Advocate, VMware Tanzu"
 roles: ["advocate"]
-skills: ["Spring","Java","Architecture","Microservices","Cloud"]
+skills: ["Spring","Java","Architecture","Cloud","Microservices","Full Stack"]
 location: "Cleveland, OH USA"
 
 # Social Media
@@ -52,39 +52,21 @@ In this session, you will learn the basics of how to create a new web applicatio
 
 ### What’s new in Spring Boot 2.6
 
-I was asked to speak at the San Francisco Java User Group and jumped on the opportunity. In this presentation, I gave an overview of what’s new in Spring Boot 2.6. I spent a lot of time going through the [release notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes) for Spring Boot 2.6.
+In this tutorial, you will learn about what is new in Spring Boot 2.6. The release notes are a great way to get caught up with what has changed and what is new in each release. You will learn about some of the changes and new features in Spring Boot 2.6 by going through some examples.
 
-The release notes for each major upgrade are broken down into 2 sections, Upgrading from the previous version and New & Noteworthy. I was prepared to talk about the following and we ended up getting to most of them:
-
-**Upgrading from Spring Boot 2.5**
-
-- Release Versioning
-- Deprecated
-- Circular References
-- Path Matching Strategy
-- Actuator Env
-- Application Startup (2.4)
-- Records & Configuration Properties
-
-**New & Noteworthy**
-
-- Dependency Upgrades
-- Reactive Server Session Properties
-- Build Info Property Exclusion
-- SameSite Cookie Attribute
-- Pluggable Sanitization Rules
-- Java Runtime Information
-- `@WebTestClient` for Spring MVC
-- Metrics Support
-- Docker Image Building Support
-
-{{< youtube id="oNs8sLbbAT4" class="youtube-video-shortcode" >}}
+{{< youtube id="4L4LEnawcO8" class="youtube-video-shortcode" >}}
 
 ### How to create your First Spring Application (without Spring Boot)
 
 Spring Boot makes it easy for you to quickly get an application up and running. If you don't know what Spring Boot is doing for you behind the scenes though it can seem a little bit like magic. In this tutorial, you will learn how to create your first Spring Application from scratch without using Spring Boot. This will give you some perspective on what Spring Boot is and how it can make you a more productive developer.
 
 {{< youtube id="e8aSyQo0nHo" class="youtube-video-shortcode" >}}
+
+### Spring Constructor Injection
+
+In this tutorial, you will learn why Constructor Injection is the recommended approach to dependency injection in Spring. To accomplish this you will learn some of the basics around Spring Beans, Application Context, Dependency (DI) Injection, and Inversion of Control (IoC).
+
+{{< youtube id="aX-bgylmprA" class="youtube-video-shortcode" >}}
 
 ### Spring JDBC Template Tutorial: Learn to build a full CRUD application in Spring Boot
 
