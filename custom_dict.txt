@@ -5,6 +5,8 @@
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
 
+Elahn
+Danee
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
