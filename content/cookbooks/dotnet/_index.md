@@ -1,9 +1,8 @@
 +++
 date = "2017-04-21T15:28:50-06:00"
-pre = "<i class='fa fa-home'></i> "
-title = "Introduction"
+title = ".Net Cookbook"
 weight = 1
-
+layout = "top"
 +++
 
 Here are some useful tips for getting started with .NET on Pivotal Cloud Foundry. Search with words like "steeltoe", "dotnet", "kerberos", or "buildpack" to find helpful .NET things.
@@ -22,6 +21,6 @@ Along with the many recipes in this cookbook, there are also full projects avail
 
 [Windows Services Final Buildpack ](https://github.com/cloudfoundry-community/windows-services-buildpack) - For bootstrapping Windows Services without converting to a console app (used instead of the HWC buildpack)
 
-[Web Config Transform Extension Buildpack](https://github.com/cloudfoundry-community/web-config-transform-buildpack) - For automating cloud-friendly configuration changes 
+[Web Config Transform Extension Buildpack](https://github.com/cloudfoundry-community/web-config-transform-buildpack) - For automating cloud-friendly configuration changes
 
-Using IWA Kerberos with WCF - This group of tools includes a [Route Service](https://github.com/cloudfoundry-community/kerberos-auth-route-service), Route Service Extension Buildpacks for [Ingress] (https://github.com/cloudfoundry-community/kerberos-auth-buildpack) and [Egress] (https://github.com/cloudfoundry-community/kerberos-auth-egress-buildpack) scenarios, and a supporting [Nuget package](https://github.com/cloudfoundry-community/kerberos-auth-egress-wcf-client-interceptor).
+Using IWA Kerberos with WCF - This group of tools includes a [Route Service](https://github.com/cloudfoundry-community/kerberos-auth-route-service), Route Service Extension Buildpacks for [Ingress](https://github.com/cloudfoundry-community/kerberos-auth-buildpack) and [Egress](https://github.com/cloudfoundry-community/kerberos-auth-egress-buildpack) scenarios, and a supporting [Nuget package](https://github.com/cloudfoundry-community/kerberos-auth-egress-wcf-client-interceptor).

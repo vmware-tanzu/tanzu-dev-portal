@@ -1,0 +1,25 @@
+{{ define "subpages" }}
+  {{ $activePage := .activepage }}
+  {{ if .context.Pages }}
+    {{ range .context.Pages}}
+      {{ $active := eq .Page $activePage }}
+      {{ if eq .Params.layout "single" }}
+        {{ if or (eq .Parent $activePage.Parent) (eq .Parent $activePage) }}
+          <li class="td-sidebar-nav__section-title">
+            <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      {{ else if eq .Params.layout "intro" }}
+        <li class="td-sidebar-nav__section-title">
+          <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><b>{{ .Title }}</b></a>
+        </li>
+      {{ end }}
+      {{ template "subpages" (dict "context" . "activepage" $activePage ) }}
+    {{ end }}
+    <br /><br />
+  {{ end }}
+{{ end }}
+
+<ul class="td-sidebar-nav__section mt-1 ">
+{{ template "subpages" (dict "context" .cookbook "activepage" .context.Page ) }}
+</ul>

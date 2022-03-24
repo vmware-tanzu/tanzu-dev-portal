@@ -36,13 +36,8 @@
         <h2>{{ .Title }}</h2>
         {{ partial "byline" (dict "context" . "withdate" false) }}
         {{ end }}
-        
 
         {{ $page.Content }}
-
-        <div class="container">
-          
-        </div>
 
         {{ if $page.IsSection }}
         {{ partial "begin.html" . }}
@@ -78,5 +73,6 @@
       </div>
     </div>
   </div>
+  {{ partial "pager.html" . }}
 </div>
 {{ end }}

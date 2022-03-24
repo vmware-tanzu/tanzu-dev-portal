@@ -1,12 +1,20 @@
 {{ define "main" }}
 
-{{ partial "hero.html" . }}
+{{ $class := replace .Params.linkTitle "." "-" | lower }}
+{{ $class := replace $class " " "" }}
+<section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7  ">
+    <div class="container">
+        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+        <h1 class="h1"> {{- .Title | markdownify }}</h1>
+        <div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
+    </div>
+</section>
 
 <div class="td-content">
   <div class='container'>
     {{ .Content }}
     <br />
-    {{ partial "cookbooks-index.html" . }}
+    {{ partial "cookbooks-top.html" . }}
     {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
     {{ partial "feedback.html" .Site.Params.ui.feedback }}
     <br />
