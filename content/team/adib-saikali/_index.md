@@ -17,7 +17,7 @@ youtube: ""
 twitch: ""
 ---
 
-Adib Saikali is a global field principal solutions engineer at VMWare Tanzu, 
+Adib Saikali is a global field principal solutions engineer at VMware Tanzu, 
 focused on helping VMware’s largest customers design and build cloud native applications 
 and platforms using Spring and Kubernetes. Adib is the author of “Securing Cloud Applications” 
 a book that teaches application developers the fundamental security technologies and protocols 
