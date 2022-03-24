@@ -2,7 +2,11 @@
     <div class="col-lg-3 col-md-3 mr-4 mb-5">
         {{ if and (or (eq .display "summary") (eq .display "tv")) (not .context.Params.hidden) }}
             {{ if eq .conf "beyond" }}
-                <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-beyond-src.html" .context }}'/></a>
+                {{if not (modBool .index 2)}}
+                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (urlize .context.Params.name) "-beyond-red.png" }}'/></a>
+                {{ else }}
+                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (urlize .context.Params.name) "-beyond-blue.png" }}'/></a>
+                {{end}}
             {{ else }}
                 <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-src.html" .context }}'/></a>
             {{ end }}
