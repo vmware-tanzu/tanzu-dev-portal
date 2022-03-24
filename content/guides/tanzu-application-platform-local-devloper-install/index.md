@@ -51,7 +51,7 @@ To begin the installation of the Tanzu Application Platform you must first insta
 1. Download the Tanzu CLI.
 </strong></p>
 
-Login to the Tanzu Network and go to the [VMware Tanzu Application Platform product page](https://network.pivotal.io/products/tanzu-application-platform/).
+Login to the Tanzu Network and go to the [VMware Tanzu Application Platform product page](https://network.tanzu.vmware.com/products/tanzu-application-platform/).
 
 Select the `tanzu-cli-v0.11.1` option from the dropdown menu and then choose the download link for the `tanzu-framework-bundle` binary that matches your operating system (either `-windows`, `-mac`, or `-linux`) as shown below.
 
@@ -398,7 +398,7 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
+1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz` file.
  
@@ -430,7 +430,7 @@ cd tanzu-cluster-essentials
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
+1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-linux-amd64-1.0.0.tgz` file to your `Downloads` folder.
 
@@ -1101,11 +1101,11 @@ Finally, check out this video demonstrating the deployment of an application to 
 [tap-hol]: https://via.vmw.com/TAP-HOL
 [tap-prereq]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-prerequisites.html
 [tap-cli-docs]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html
-[tanzunet-tap]: https://network.pivotal.io/products/tanzu-application-platform/
+[tanzunet-tap]: https://network.tanzu.vmware.com/products/tanzu-application-platform/
 [hyperv]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
 [hyperv-enable]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 [minikube-vms]: https://minikube.sigs.k8s.io/docs/drivers/
 [kapp-controller]: https://carvel.dev/kapp-controller/
 [secretgen-controller]: https://github.com/vmware-tanzu/carvel-secretgen-controller
-[tanzunet-cluster-essentials]: https://network.pivotal.io/products/tanzu-cluster-essentials
+[tanzunet-cluster-essentials]: https://network.tanzu.vmware.com/products/tanzu-cluster-essentials
 [remove-tanzu-cli]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-uninstall.html#remove-tanzu-cli-plugins-and-associated-files-2
