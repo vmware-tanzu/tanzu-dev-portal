@@ -197,18 +197,3 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 
 [frontmatter]
   lastmod = ["lastmod", ":git", "date"]
-
-
-# See https://github.com/gohugoio/hugo/releases/tag/v0.91.0
-[security]
-  enableInlineShortcodes = false
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
-    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
-
-  [security.funcs]
-    getenv = ['^HUGO_', '^COMMIT_', '^CONTEXT']
-
-  [security.http]
-    methods = ['(?i)GET|POST']
-    urls = ['.*']
