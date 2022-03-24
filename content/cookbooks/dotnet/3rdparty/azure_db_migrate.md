@@ -15,9 +15,9 @@ A target SQL Server database in Azure must exist that is provisioned by the Azur
 
 Below is a Service Creation Pipeline Bash Script Template which demonstrates how to automate the CF CLI to create the SQL Service via the broker, a JSON Service Configuration File Template which provides the specifics of the database to the CLI, and a Service Creation Concourse Task Template which triggers the script as part of the deployment process. The SQL Server Service broker will automatically create a username and password for application when it binds to the service.
 
-{{% notice note %}}
+{{% callout note %}}
 Note that this process is engineered to **NOT** overwrite or destroy the underlying database/service if it already exists.
-{{% /notice %}}
+{{% /callout %}}
 
 JSON Service Configuration File Template For Azure SQL DB, notice you'll need to replace the arguments surrounded by brackets:
 

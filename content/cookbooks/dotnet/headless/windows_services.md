@@ -31,6 +31,6 @@ While process level healthchecks are a good starting point and may be enough for
 
 The port healthcheck is pretty simple to setup, just listen on the $PORT specified by PCF if the application's self check tests pass. A further in depth test could be done by opening a TCP port and implementing a small listener the knows how to respond to HTTP requests. [Here is a simple example](https://github.com/sneal/SocketConsoleApp).
 
-{{% notice note %}}
+{{% callout note %}}
 You cannot directly use the .NET HTTP libraries because the process does not have CAS permissions to open a port. Opening a direct TCP port which doesn't use the HTTP.sys library works fine.
-{{% /notice %}}
+{{% /callout %}}

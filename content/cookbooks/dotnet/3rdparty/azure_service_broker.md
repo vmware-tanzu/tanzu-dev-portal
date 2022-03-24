@@ -15,9 +15,9 @@ weight = 11
 * MySQL Service
 * PostgresSQL Service
 
-{{% notice note %}}
+{{% callout note %}}
 In testing we noticed some failures provisioning services in Azure do not bubble back to PCF. For instance in the region I was using Gen4 MySQL instances were not supported and the deployment would fail yet the broker would create the service and bind to applications, some of the credentials where `undefined`.
-{{% /notice %}}
+{{% /callout %}}
 
 ## Steeltoe
 

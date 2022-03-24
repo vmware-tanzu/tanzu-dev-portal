@@ -113,9 +113,9 @@ Login to your OpsManager VM go to the Authentication and Enterprise SSO tab of t
 - Last Name Attribute: `sn`
 - Email Attribute: `mail`
 
-{{% notice tip %}}
+{{% callout tip %}}
 This configuration assumes you're _not_ using secure ldaps. If you were then you'd use `ldaps://10.1.0.100`. You might also need to provide the Server SSL Cert and Server SSL Cert AltName.
-{{% /notice %}}
+{{% /callout %}}
 
 Click `Save`. Go back to the OpsManager installation dashboard and click `Apply Changes`. Once the deployment completes you should be able to login to Apps Manager using the same AD account you used to login to the Windows AD Server.
 

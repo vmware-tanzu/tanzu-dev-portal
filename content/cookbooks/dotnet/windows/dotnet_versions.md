@@ -19,15 +19,15 @@ Microsoft .NET Framework = CLR + managed libraries and tools
 
 The CLR is short for Common Language Runtime. The CLR is the virtual machine component which manages the execution of .NET programs. The CLR is included in the .NET Framework installer alongside the libraries and tools. 
 
-{{% notice tip %}}
+{{% callout tip %}}
 With .NET Core you can install the CLR _separately_ from the libraries and tools.
-{{% /notice %}}
+{{% /callout %}}
 
 The .NET Framework has four major CLR versions: 1.0, 1.1, 2.0, and 4. Typically you'll only ever see CLR 2.0 and 4 still in use today as each new version of the .NET Framework adds libraries and features but still runs on the same CLR. For example .NET 2.0, 3.0 and 3.5 all run on the 2.0 CLR while .NET 4.0, 4.5.2 and 4.7 all run on the 4 CLR.
 
-{{% notice note %}}
+{{% callout note %}}
 Notice that CLR 3.0 doesn't exist and goes directly from 2.0 to 4.
-{{% /notice %}}
+{{% /callout %}}
 
 ## .NET Framework 4.x
 
@@ -35,15 +35,15 @@ Notice that CLR 3.0 doesn't exist and goes directly from 2.0 to 4.
 
 Windows stemcells include the latest .NET 4 Framework version available from Microsoft at the time the stemcells are published. As of now all Windows stemcells ship with [.NET Framework 4.7](https://en.wikipedia.org/wiki/.NET_Framework_version_history#.NET_Framework_4.7). You can [check the installed .NET Framework version](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed) by querying the cell's registry.
 
-{{% notice warning %}}
+{{% callout warning %}}
 For vSphere and OpenStack it's possible admins have built their own stemcells which contain an older .NET 4.x version.
-{{% /notice %}}
+{{% /callout %}}
 
 The .NET framework is installed system wide on a Windows cell, therefore applications can't choose to install a different version than is already available to them on the Windows2012R2 stack. Fortunately all .NET 4.x versions are backwards compatible, so an application which requires .NET 4.5.2 can run without any changes or even being recompiled to run on .NET 4.7.
 
-{{% notice tip %}}
+{{% callout tip %}}
 The rule of thumb is: your app must be hosted on a .NET Framework (CLR) version >= than it was built for.
-{{% /notice %}}
+{{% /callout %}}
 
 ## .NET Framework 3.5
 

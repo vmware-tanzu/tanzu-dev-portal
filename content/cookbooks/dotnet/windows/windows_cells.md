@@ -100,9 +100,9 @@ Active Directory is typically meant for long lived servers that are treated well
 
 You might think that you may need access to a stemcell for troubleshooting, but in general there are other ways to troubleshoot cells without logging in. Applications which run on Cloud Foundry have their logs collected in the centralized Cloud Foundry loggregator logging system. Even Windows event logs are collected in the loggregator should you need to troubleshoot a systemic cell configuration issue.
 
-{{% notice note %}}
+{{% callout note %}}
 .NET applications cannot use integrated authentication _even_ if you were to domain join the cell. The hostable web core provided by Cloud Foundry explicitly disallows Windows auth even if it's been "enabled" in the application's `web.config`.
-{{% /notice %}}
+{{% /callout %}}
 
 Another difference between the way BOSH managed cells and AD managed servers is that it's considered best practice to automate, version control and test all changes in non-production environments before rolling them out to production environments. Typically Active Directory configuration is applied at the domain or OU level manually thus potentially leading to inconsistent configuration between sites. Additionally this type of configuration is difficult to version control and validate when compared to a version controlled BOSH addon. While you could do the same with PowerShell and some discipline, following the BOSH way forces you to use best practices.
 

@@ -39,9 +39,9 @@ There are times when it's necessary to temporarily configure the ASP.NET yellow 
 
 This will allow you to see the underlying error message and stack trace from your browser and is typically the first debugging action you'll take after checking the PCF logs. If you added a global error handler you will also see the underlying exception in your PCF logs.
 
-{{% notice warning %}}
+{{% callout warning %}}
 Do not leave custom errors mode set to off outside development environments as this may leak sensitive information to an attacker.
-{{% /notice %}}
+{{% /callout %}}
 
 ### App won't start, reports crashed
 

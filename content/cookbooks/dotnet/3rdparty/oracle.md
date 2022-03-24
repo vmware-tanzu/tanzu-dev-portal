@@ -46,6 +46,6 @@ This allows you to quickly configure the ODP.NET managed driver and push your ap
 
 The better way to configure the connection is to write some custom code that will read the configuration settings from CUPS and directly provide those when opening an Oracle connection.
 
-{{% notice note %}}
+{{% callout note %}}
 This should be generalized into a reusable CloudFoundry connector library.
-{{% /notice %}}
+{{% /callout %}}

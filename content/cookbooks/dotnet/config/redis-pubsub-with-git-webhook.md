@@ -9,9 +9,9 @@ date = 2018-07-18T13:32:38-05:00
 
   - Using Redis pub/sub as described in this sample 
   - Directly adding a controller into the application with Actions using WebHook attributes [Attribute: `GitHubWebHook`] and other specific WebHook attributes. 
-  {{% notice note %}}
+  {{% callout note %}}
   The target url to the controller should be `/api/webhooks/incoming/github`
-  {{% /notice %}}
+  {{% /callout %}}
 
 ##### Step 1: Configuring GitHub WebHook ([Reference](https://developer.github.com/webhooks/creating/))
 - Navigate to `repository` --> `settings` --> `webhook`

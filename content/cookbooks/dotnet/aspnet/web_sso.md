@@ -61,9 +61,9 @@ Add Owin Startup class using VS template: Add New Item -> Search for OWIN Startu
 
 You should be able to run the app and verify that Startup is invoked.
 
-{{% notice tip %}}
+{{% callout tip %}}
 **[optional]** Therefore the Global.asax.cs `protected void Application_Start()` code can be move to `Startup.cs`. Proceed if this adds minimal overhead.
-{{% /notice %}}
+{{% /callout %}}
 
 ```c#
 // OWIN Startup.cs
@@ -107,9 +107,9 @@ namespace demo.values
 
 Sample code to illustrate III	factor from [The Twelve Factors][12factors] methodology.
 
-{{% notice note %}}
+{{% callout note %}}
 Config - Configuration that varies between deployments should be stored in the environment.
-{{% /notice %}}
+{{% /callout %}}
 
 ```c#
 // File: App_Start/AppConfig.cs

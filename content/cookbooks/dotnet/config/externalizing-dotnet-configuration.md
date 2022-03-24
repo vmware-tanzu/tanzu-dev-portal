@@ -29,8 +29,8 @@ Example configuration in `web.config`:
 If you remove this entirely, then the application will likely not be able to work remotely. So the accepted practice for _short term replatforming_ rather than _modernization_ would be to leave the `web.config` settings as the _local default_, and then detect bound services that potentially override that.
 
 You might have centralized code that provides a connection string to the rest of your code, as shown in this example:
-{{< tabs "code" >}}
-  {{< tab "VB.NET" >}}
+{{< tabpane "code" >}}
+  {{< tab header="VB.NET" >}}
   ```vb
   Protected Friend Shared Function EFConnectionString() as String
       Return System.Web.Configuration.WebConfigurationManager.ConnectionStrings("EFSQLConnStr").ConnectionString
@@ -41,7 +41,7 @@ You might have centralized code that provides a connection string to the rest of
   End Function
   ```
   {{< /tab >}}
-  {{< tab "C#" >}}
+  {{< tab header="C#" >}}
   ```csharp
     protected string EFConnectionString()
     {
@@ -54,7 +54,7 @@ You might have centralized code that provides a connection string to the rest of
     }
   ```
   {{< /tab >}}
-{{< /tabs >}}
+{{< /tabpane >}}
 
 Application settings are usually retreived from environment variables using the following format _['MY_APPLICATION__MY_SETTING']_, however conection strings can often be retreived from the Cloud Foundry `VCAP_SERVICES` environment variable
 In this case, you would want to perform the following steps in a re-write of this function:
@@ -68,8 +68,8 @@ In this case, you would want to perform the following steps in a re-write of thi
 In some cases, applications just use the default parameterless constructor for Entity Framework entity sets, which uses a default naming convention in `web.config`. You will want to _override_ this behavior such that your application is directly responsible for providing the connection string. This will allow your application to go through the 4 logical steps outlined above prior to delivering a connection string to the code requesting it.
 
 The following is an example of how to update your configuration provider:
-{{< tabs "code" >}}
-  {{< tab "VB.NET" >}}
+{{< tabpane >}}
+  {{< tab header="VB.NET" >}}
   ```vb
       Protected Friend Shared Function EFConnectionString() As String
         Dim connectionString = Nothing
@@ -97,7 +97,7 @@ The following is an example of how to update your configuration provider:
     End Function
   ```
   {{< /tab >}}
-  {{< tab "C#" >}}
+  {{< tab header="C#" >}}
   ```csharp
   protected string EFConnectionString()
   {
@@ -128,7 +128,7 @@ The following is an example of how to update your configuration provider:
   }
   ```
   {{< /tab >}}
-{{< /tabs >}}
+{{< /tabpane >}}
 
 While there are other ways of getting environment variables into configuration, such as the [EnvironmentConfigBuilder](https://github.com/aspnet/MicrosoftConfigurationBuilders#environmentconfigbuilder), the above is the most low level and works with most legacy frameworks
 
