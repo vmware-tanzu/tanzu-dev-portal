@@ -891,6 +891,7 @@ Huynh
 HyperKit
 ℹ
 (I|P)aaS
+i7
 IAM
 Iberkleid
 ICMP
@@ -1137,6 +1138,7 @@ KUDO
 Kung
 [kK]ustomize
 KUTTL
+KVM2
 Kyverno
 labelset
 lastAccessedTime
@@ -1212,6 +1214,7 @@ Lyft
 Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
+M1
 Macanufo
 MacBook
 [Mm]achina
@@ -1272,8 +1275,8 @@ Minella
 Mini-Wheats
 [Mm]inibroker
 minideb
-[Mm]inikube
-MiniKube
+[Mm]inikube('s)?
+MiniKube('s)?
 minimalistic
 Minio|MinIO
 minReplicas
@@ -1663,7 +1666,6 @@ Renaud
 Renfro
 Renner
 replatforming
-replicaset
 ReplicaSet(s)?
 replicationcontrollers
 replumb
@@ -1726,6 +1728,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1910,6 +1913,7 @@ svc
 SVID(s)?
 SVP
 [Ss]wagger(-cli|2)?
+[Ss]wappable
 SweetKiller9
 Syer
 symlink
