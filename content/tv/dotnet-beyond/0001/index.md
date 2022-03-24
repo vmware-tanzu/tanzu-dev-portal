@@ -29,8 +29,9 @@ hosts:
 - Jakub Pilimon
 - Jeff Strauss
 - Layla Porter
-- Matty Stratton
+- Matt Stratton
 - Michael Coté
+- Nate Schutta
 faqs:
   faq:
   - question: What is .NET Beyond?

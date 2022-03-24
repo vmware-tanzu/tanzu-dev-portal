@@ -214,10 +214,10 @@
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Guests</h3>
-        {{ range . }}
+        {{ range $i, $e := $.Params.guests }}
           {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
             <div class=" mb-4 pb-5">
-            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+              {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
           {{ end }}
         {{ end }}
@@ -247,10 +247,10 @@
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Hosts</h3>
-        {{ range . }}
+        {{ range $i, $e := $.Params.hosts }}
           {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
             <div class="mb-4">
-            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
           {{ end }}
         {{ end }}
