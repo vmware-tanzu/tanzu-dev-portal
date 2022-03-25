@@ -48,21 +48,31 @@ _For a full list of system requirements, see the [official Tanzu Application Pla
 To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the `tanzu` cli tool previously, you can skip this step. The instructions for updating (replacing) or removing older versions can be found in the [official documentation][tap-cli-docs].
 
 <p><strong>
-1. Download the Tanzu CLI.
+1. Agree to the necessary TanzuNet EULAs (End User Licensing Agreements).  
+</strong></p>
+You will need to accept each of these in order to progress with the rest of this guide. 
+
+- [Tanzu Application Platform](https://network.tanzu.vmware.com/products/tanzu-application-platform/)
+- [Tanzu Cluster Essentials](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials/)
+- [Tanzu Build Service](https://network.tanzu.vmware.com/products/build-service/)
+- [Tanzu Build Service Dependencies](https://network.tanzu.vmware.com/products/tbs-dependencies/)
+- [Tanzu Buildpacks Suite](https://network.tanzu.vmware.com/products/tanzu-buildpacks-suite)
+- [Tanzu Stacks Suite](https://network.tanzu.vmware.com/products/tanzu-stacks-suite)
+
+<p><strong>
+2. Download the Tanzu CLI.
 </strong></p>
 
-Login to the Tanzu Network and go to the [VMware Tanzu Application Platform product page](https://network.pivotal.io/products/tanzu-application-platform/).
+Login to the Tanzu Network and go to the [VMware Tanzu Application Platform product page](https://network.tanzu.vmware.com/products/tanzu-application-platform/).
 
 Select the `tanzu-cli-v0.11.1` option from the dropdown menu and then choose the download link for the `tanzu-framework-bundle` binary that matches your operating system (either `-windows`, `-mac`, or `-linux`) as shown below.
 
 ![The VMware Tanzu Application Platform download page](images/image1.png "Download the correct package bundle for your operating system")
 
-{{% note %}}
-You will be asked to agree to the Tanzu Application Platform EULA (the VMware End User License Agreement) in order to download the Tanzu CLI application.
-{{% /note %}}
+
 
 <p><strong>
-2. Create a new system folder for the <code>tanzu</code> cli.
+3. Create a new system folder for the <code>tanzu</code> cli.
 </strong></p>
 
 {{< tabpane >}}
@@ -95,7 +105,7 @@ Not required, move on to the next step.
 {{< /tabpane >}}
 
 <p><strong>
-3. Add the location of the <code>tanzu</code> cli folder to your System’s <code>PATH</code>.
+4. Add the location of the <code>tanzu</code> cli folder to your System’s <code>PATH</code>.
 </strong></p>
 
 {{< tabpane >}}
@@ -128,7 +138,7 @@ Not required, move on to the next step.
 {{< /tabpane >}}
 
 <p><strong>
-4. Extract the <code>tanzu</code> cli, install it, and install the plug-ins that it requires.
+5. Extract the <code>tanzu</code> cli, install it, and install the plug-ins that it requires.
 </strong></p>
 
 {{< tabpane >}}
@@ -210,7 +220,7 @@ tanzu plugin install --local cli all
 {{< /tabpane >}}
 
 <p><strong>
-5. Check the <code>tanzu</code> cli is working.
+6. Check the <code>tanzu</code> cli is working.
 </strong></p>
 
 The following commands will help you check that the `tanzu` cli and its plugins are installed correctly.
@@ -398,7 +408,7 @@ kubectl apply -f https://github.com/vmware-tanzu/carvel-secretgen-controller/rel
 {{< /tab >}}
 {{< tab header="MacOS" >}}
 
-1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
+1. Open your browser and navigate to the [Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-darwin-amd64-1.0.0.tgz` file.
  
@@ -430,7 +440,7 @@ cd tanzu-cluster-essentials
 {{< /tab >}}
 {{< tab header="Linux" >}}
 
-1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.pivotal.io/products/tanzu-cluster-essentials)
+1. Open your browser and [navigate to the Cluster Essentials for VMware Tanzu product page on the Tanzu Network](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials)
 
 2. Download the `tanzu-cluster-essentials-linux-amd64-1.0.0.tgz` file to your `Downloads` folder.
 
@@ -1101,11 +1111,11 @@ Finally, check out this video demonstrating the deployment of an application to 
 [tap-hol]: https://via.vmw.com/TAP-HOL
 [tap-prereq]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-prerequisites.html
 [tap-cli-docs]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-install-tanzu-cli.html
-[tanzunet-tap]: https://network.pivotal.io/products/tanzu-application-platform/
+[tanzunet-tap]: https://network.tanzu.vmware.com/products/tanzu-application-platform/
 [hyperv]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/
 [hyperv-enable]: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 [minikube-vms]: https://minikube.sigs.k8s.io/docs/drivers/
 [kapp-controller]: https://carvel.dev/kapp-controller/
 [secretgen-controller]: https://github.com/vmware-tanzu/carvel-secretgen-controller
-[tanzunet-cluster-essentials]: https://network.pivotal.io/products/tanzu-cluster-essentials
+[tanzunet-cluster-essentials]: https://network.tanzu.vmware.com/products/tanzu-cluster-essentials
 [remove-tanzu-cli]: https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-uninstall.html#remove-tanzu-cli-plugins-and-associated-files-2
