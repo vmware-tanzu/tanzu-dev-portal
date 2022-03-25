@@ -22,9 +22,9 @@ team:
 
 ## Introduction 
  
-Installing [VMware Tanzu Application Platform][tap] on your personal computer is a bit more involved than some other development tools out there but it's totally worth it. That’s because Tanzu Application Platform is next generation "DevOps in a box" — with all the rich functionality you’d expect from such an offering. Installed on Kubernetes in the public cloud or in a private data center, Tanzu Application Platform offers a modular, application-aware platform that can serve the needs of hundreds of developers at the same time. 
+Installing [VMware Tanzu Application Platform][tap] on your PC can be a bit more involved than other development tools, but it's totally worth it. That’s because Tanzu Application Platform is a next generation "DevOps in a box" solution — with all the rich functionality you’d expect from such an offering. Installed on Kubernetes in the public cloud or in a private data center, Tanzu Application Platform offers a modular, application-aware platform that can serve the needs of hundreds of developers at the same time. 
 
-Stick with this tutorial and you’ll be part of an elite group of first-movers — developers who've tried Tanzu Application Platform and experienced its modern software supply-chain, effortless Kubernetes application scheduling, and serverless computing capabilities for themselves. Let’s get to it! 
+Stick with this tutorial and you’ll be part of an elite group of first-movers: developers who've tried Tanzu Application Platform and experienced its modern software supply-chain, effortless Kubernetes application scheduling, and serverless computing capabilities for themselves. Let’s get started! 
 
 {{% info %}}
 The process below has been tested using VMware Tanzu Application Platform version 1.0.2 (the most current available at the time of writing). We tested using Windows 10, macOS Monterey, Ubuntu 20.04 LTS and Fedora 35. If you get stuck, the official documentation for Tanzu Application Platform can be found [here](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html). 
@@ -32,7 +32,7 @@ The process below has been tested using VMware Tanzu Application Platform versio
 
 ## Before You Start 
  
-There are a few things that need before you install the Tanzu Application Platform: 
+There are a few things that you'll need before you install the Tanzu Application Platform: 
 
 * **Hardware**: A computer with a modern Intel i7 or AMD Ryzen 7 processor (or better). ARM based architectures like Apple M1 aren't supported. You'll need 8 threads, 16 GB of RAM, and 40 GB of free disk space. 
 * **Operating System**: Windows 10 Pro, Enterprise, or Education, or MacOS, or Ubuntu 20.04 LTS, or Fedora 35. You'll also need administrator access to this system.  
@@ -646,7 +646,7 @@ tanzu package repository add tanzu-tap-repository \
 {{< /tab >}}
 {{< /tabpane >}}
 
-The above steps may take a few minutes to complete. When finished, the final status of the package installation should read `Reconcile succeeded`. If it gets interrupted for any reason it might fail to reconcile or give an error. If that happens, just check the status using the commands below and retry if necessary.
+The above steps may take a few minutes to complete. When finished, the final status of the package installation should read `Reconcile succeeded`. If it gets interrupted for any reason it might fail to reconcile or give an error. If that happens, just check the status using the commands below and try again if necessary.
 
 {{< tabpane >}}
 {{< tab header="Windows" >}}
@@ -731,7 +731,7 @@ For example, in the `tap-values.yml` file replace the placeholder "`DOCKER_USERN
 {{% /info %}}
 
 {{% warning %}}
-Take care with this step. Any mistakes you make here can be hard to rectify and could prevent the Tanzu Application Platform from installing or working properly.
+Take care with this step. Any mistakes you make here can be time-consuming to troubleshoot and may prevent the Tanzu Application Platform from installing or working properly.
 {{% /warning %}}
 
 <strong><p>
@@ -769,7 +769,7 @@ tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
 {{< /tabpane >}}
 
 {{% note %}}
-This process can take a while. It creates a lot of load on your PC and a lot of internet traffic on your network. The amount of time needed depends on your network, cpu, disk, and memory. If you are sharing your network with others, or if you are pressed for time, you may prefer to perform this part of the installation at a less disruptive time of the day. 
+This process can take a while. It creates a lot of load on your PC and some internet traffic on your network. The amount of time needed depends on your network, cpu, disk, and memory. If you are sharing a home network with others, or if you are pressed for time, you may prefer to perform this part of the installation at a less disruptive time of the day. 
 {{% /note %}}
 
 Sometimes, the process will appear to end in failure but really it has just timed out. You can check the true status of the installation at any time by opening another PowerShell or Terminal window and asking the `tanzu` cli for the reconciliation status of the Tanzu Application Platform packages. Use the command described below to check the current status. 
@@ -815,7 +815,7 @@ Retrieving installed packages...
 ```
 
 {{% warning %}}
-To be 'healthy' the Tanzu Application Platform needs the `minikube tunnel` process to be running as described in [Stage 2: Run Minikube](#stage-2-run-minikube).
+To reach a 'healthy' state, the Tanzu Application Platform needs the `minikube tunnel` process to be running as described in [Stage 2: Run Minikube](#stage-2-run-minikube).
 {{% /warning %}}
 
 {{< /tab >}}
@@ -963,7 +963,7 @@ tanzu apps workload create tanzu-java-web-app \
 {{< /tab >}}
 {{< /tabpane >}}
 
-The Tanzu Application Platform does not need an application binary or a container image in order to build and deploy an application.The platform includes a built-in (but swappable) build-service — part of its software 'supply-chain'. 
+The Tanzu Application Platform does not need an application binary or a container image in order to build and deploy an application. The platform includes a built-in (but swappable) build-service — part of its software 'supply-chain'. 
 
 The Tanzu Application Platform needs only the GitHub repository URL, branch name or tag of the source code you wish to run. If the code ever changes, the platform will rebuild and redeploy the application automatically. 
 
