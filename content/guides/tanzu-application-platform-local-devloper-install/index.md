@@ -48,7 +48,7 @@ _For a full list of system requirements, see the [official Tanzu Application Pla
 To begin the installation of the Tanzu Application Platform you must first install the `tanzu` command-line tool that you’ll use to install the platform and interact with it. This guide assumes you have not installed the `tanzu` tool previously. If you have installed the same version of the `tanzu` cli tool previously, you can skip this step. The instructions for updating (replacing) or removing older versions can be found in the [official documentation][tap-cli-docs].
 
 <p><strong>
-1. Agree to the necessary TanzuNet EULAs (End User Licensing Agreements). 
+1. Agree to the necessary TanzuNet EULAs (End User Licensing Agreements).  
 </strong></p>
 You will need to accept each of these in order to progress with the rest of this guide. 
 
