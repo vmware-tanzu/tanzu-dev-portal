@@ -50,7 +50,8 @@ To begin the installation of the Tanzu Application Platform you must first insta
 <p><strong>
 1. Agree to the necessary TanzuNet EULAs (End User Licensing Agreements).  
 </strong></p>
-You will need to accept each of these in order to progress with the rest of this guide. 
+
+You will need to accept each of these EULAs in order to progress with the rest of this guide. 
 
 - [Tanzu Application Platform](https://network.tanzu.vmware.com/products/tanzu-application-platform/)
 - [Tanzu Cluster Essentials](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials/)
