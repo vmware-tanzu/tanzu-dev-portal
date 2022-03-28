@@ -2,6 +2,7 @@
 date = "2019-04-31T12:00:00-07:00"
 title = "WCF"
 pre = "<i class='fa fa-phone'></i> "
+layout = "intro"
 +++
 
 

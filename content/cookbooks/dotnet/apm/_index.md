@@ -2,6 +2,7 @@
 title = "APM"
 date =  2017-08-30T16:08:52-07:00
 pre = "<i class='fa fa-heartbeat'></i> "
+layout = "intro"
 +++
 
 Application Performance Management (APM) is the monitoring and management of performance and availability of software applications. APM strives to detect and diagnose complex application performance problems to maintain an expected level of service.

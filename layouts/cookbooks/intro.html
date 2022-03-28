@@ -83,11 +83,6 @@
 
         <!-- End Content -->
 
-        {{ if $page.IsSection }}
-        {{ partial "begin.html" . }}
-        {{ else }}
-        {{ partial "pager.html" . }}
-        {{ end }}
         <div class="feedback my-4 pt-4 border-top">
           <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Learning Path Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
         </div>

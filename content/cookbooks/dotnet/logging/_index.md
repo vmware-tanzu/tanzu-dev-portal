@@ -1,6 +1,7 @@
 +++
 date = 2020-11-30T15:59:56Z
 title = "Logging"
+layout = "intro"
 +++
 
 For many applications, logging is written to a rolling log file or the `Windows Event Log`. In a cloud application, this becomes an anti-pattern because you need to either depend on a distributed logging system, or a platform feature.
