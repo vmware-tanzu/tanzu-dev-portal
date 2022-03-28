@@ -13,6 +13,7 @@ guests:
 - Jeff Fritz
 - John Bush
 - Julie Lerman
+- Layla Porter
 - Lewis Denham-Parry
 - Luce Carter
 - Phillip Carter
@@ -28,8 +29,9 @@ hosts:
 - Jakub Pilimon
 - Jeff Strauss
 - Layla Porter
-- Matty Stratton
+- Matt Stratton
 - Michael Coté
+- Nate Schutta
 faqs:
   faq:
   - question: What is .NET Beyond?
