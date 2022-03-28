@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "amplitude.html" (dict "context" . "event" "guide viewed") }}
+{{ partial "amplitude.html" (dict "context" . "event" "data guide viewed") }}
       <div class="td-main">
         <div class="row flex-xl-nowrap container mx-auto">
           <div class="d-none d-xl-block col-2 td-sidebar d-print-none pl-0 pr-4">
@@ -25,7 +25,7 @@
             {{ end }}
             {{ if ne .Parent.Params.title "Guides" }}
               <div class="feedback pt-4 mt-4 border-top">
-                <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Guides Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
+                <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Data Guide Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
               </div>
             {{ end }}
           </main>
