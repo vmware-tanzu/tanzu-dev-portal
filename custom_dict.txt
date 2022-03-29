@@ -567,6 +567,7 @@ Drotbohm
 DSL(s)?
 Dubois
 durations
+Dutchie
 Dynatrace
 DZone
 e280e387f128e70537e37093d26f6422
@@ -965,6 +966,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+ITQ
 ITSM
 Ivanov
 IvanTarin2
@@ -1082,6 +1084,7 @@ KIAM
 Kibana
 kitesurfing
 KlipTok
+Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
@@ -1891,6 +1894,7 @@ Strategyzer
 Stratton
 StringBuilder
 Strobl
+stroopwafels
 struct
 STS
 STT
