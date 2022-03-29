@@ -8,7 +8,6 @@ title: "Build an API gateway with .NET 6, C# and YARP"
 languages:
 - dotnet
 url: "/blog/build-api-gateway-csharp-yarp"
-draft: true
 ---
 
 Consider an API gateway to be a virtual "garden gate" to all your backend services. Implementing one means that all external traffic must pass through the gateway. This is great as it increases security and simplifies a lot of processes such as rate limiting and throttling.

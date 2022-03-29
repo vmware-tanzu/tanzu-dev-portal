@@ -8,7 +8,6 @@ title: "Build an API gateway with .NET 6, C#, YARP, and Netflix Eureka"
 languages:
 - dotnet
 url: "/blog/build-api-gateway-csharp-yarp-eureka"
-draft: true
 ---
 
 In this previous [blog](https://tanzu.vmware.com/blog/build-api-gateway-csharp-yarp), you learnt how to implement an API gateway in .NET 6 with _YARP_, a reverse proxy library.
