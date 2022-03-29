@@ -1,6 +1,5 @@
 ---
 date: '2022-03-9'
-description:
 lastmod: '2022-03-01'
 team:
 - Layla Porter
