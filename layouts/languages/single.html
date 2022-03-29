@@ -59,6 +59,9 @@
                     </div>
                 {{ end }}
 
+                <!-- Track what pieces of content are rendered so they're not shown in latest content -->
+                {{ $rendered := slice }}
+
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $blogs) 0 }}
@@ -66,6 +69,7 @@
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
                     <div class='row'>
                         {{ range first 3 $blogs }}
+                            {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
@@ -79,6 +83,7 @@
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Guides</h2></div>
                     <div class='row'>
                         {{ range first 3 $guides }}
+                            {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
@@ -87,9 +92,9 @@
                
                 <!-- Optional Show -->
                 {{ if .Params.show }}
+                    {{ $eps := slice }}
                     {{ $alleps := where .Site.Pages "Section" "tv" }}
                     {{ $id := .Params.show }}
-                    {{ $eps := slice }}
                     {{ range $alleps }}
                         {{ if eq .Parent.Params.id $id }}
                             {{ $eps = $eps | append . }}
@@ -101,6 +106,7 @@
                         <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
                         <div class='row'>
                             {{ range first 3 $eps }}
+                                {{ $rendered = $rendered | append . }}
                                 {{ partial "episode-card.html" . }}
                             {{ end }}
                         </div>
@@ -114,6 +120,7 @@
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
                     <div class='row'>
                         {{ range first 3 $videos }}
+                            {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
@@ -127,6 +134,7 @@
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
                     <div class='row'>
                         {{ range first 3 $gettingstarted }}
+                            {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}
                     </div>
@@ -136,7 +144,13 @@
 
                 <!-- Latest Content -->
                 {{ $latest := where .Site.Pages "Params.languages" "intersect" (slice .Params.label) }}
-                {{ if gt (len $latest) 0 }}
+                {{ $showlatest := slice }}
+                {{ range $latest }}
+                    {{ if not (in $rendered .) }}
+                        {{ $showlatest = $showlatest | append . }}
+                    {{ end }}
+                {{ end }}
+                {{ if gt (len $showlatest) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Latest Content</h2></div>
                     <div class='row'>
