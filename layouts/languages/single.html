@@ -121,7 +121,7 @@
                 {{ end }}
 
                 <!-- Getting Started -->
-                {{ $gettingstarted := where (where .Site.Pages "Params.langues" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
+                {{ $gettingstarted := where (where .Site.Pages "Params.languages" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
                 {{ if gt (len $gettingstarted) 0 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>

@@ -12,6 +12,9 @@ tags:
 - Observability
 - Prometheus
 - Grafana
+languages:
+- java
+langgettingstarted: true
 team:
 - Brian McClain
 title: Gathering Metrics from Spring Boot on Kubernetes with Prometheus and Grafana
