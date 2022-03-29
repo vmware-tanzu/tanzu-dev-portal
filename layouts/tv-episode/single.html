@@ -104,7 +104,9 @@
   </div>
 
   <div class="row justify-content-center" id="stream-embed">
-    <h2 class="mb-2"> {{- .Title -}}</h2>
+    {{ if not .Params.beyond }}
+      <h2 class="mb-2"> {{- .Title -}}</h2>
+    {{ end }}
     <div id="internal-embed" class="container justify-content-center mt-3 pt-3" style="text-align: center;">
       {{ if eq ($.Scratch.Get "embedSite") "youtube" }}
       <div class="row">
@@ -158,6 +160,8 @@
     var startTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
     var duration = "{{default 60 .Params.minutes }}" * 60000;
     var endTime = new Date(startTime + duration).getTime();
+    var beyond = "{{ .Params.beyond }}"
+
 
     // Display content based on the current state:
     // Future event: Show the air time and link to Twitch
@@ -184,12 +188,30 @@
             channel: "vmwaretanzu",
         });
       {{ end }}
+
+      if(beyond) {
+        var breakStart = new Date("Wed Mar 30 2022 15:00:00 GMT-0700 (Pacific Daylight Time)").getTime()
+        var breakEnd = new Date("Thu Mar 31 2022 02:00:00 GMT-0700 (Pacific Daylight Time)").getTime()
+
+        if(currentTime >= breakStart && currentTime <= breakEnd) {
+          live.style.display = "none";
+          embed.style.display = "none";
+          vod.style.display = "none";
+          episodeType = "vod";
+        } 
+      }
     }
     else {
       // Past
       live.style.display = "none";
       embed.style.display = "none";
-      vod.style.display = "flex";
+      
+      if(beyond) {
+        vod.style.display = "none";
+      }
+      else {
+        vod.style.display = "flex";
+      }
       episodeType = "vod";
     }
   </script>
