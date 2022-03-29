@@ -39,7 +39,7 @@ If you followed along with the Build an API gateway with .NET 6, C# and _YARP_ b
 If you didn’t build the application yourself, you can download or clone a copy from this [repository](https://github.com/Layla-P/APIGatewayWithYarpEureka). If you would just like to see the finished code, switch to the `completed` branch within the same repository.
 
 First, let’s test that everything is working. You’ll need to start all four projects; the `Client`, `Gateway`, `DrinkService`, and finally, the `FoodService`.
-If you are unsure on how to do this, there are full instructions in the [blog post]((/blog/build-api-gateway-csharp-yarp)).
+If you are unsure on how to do this, there are full instructions in the [blog post](/blog/build-api-gateway-csharp-yarp).
 
 If you are satisfied that everything is working, then it’s time to start with _Eureka_!
 
