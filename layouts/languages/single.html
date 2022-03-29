@@ -92,15 +92,34 @@
                
                 <!-- Optional Show -->
                 {{ if .Params.show }}
-                    {{ $eps := slice }}
+                    {{ $langeps := slice }}
                     {{ $alleps := where .Site.Pages "Section" "tv" }}
                     {{ $id := .Params.show }}
                     {{ range $alleps }}
                         {{ if eq .Parent.Params.id $id }}
-                            {{ $eps = $eps | append . }}
+                            {{ $langeps = $langeps | append . }}
                         {{ end }}
                     {{ end }}
-                    {{ $showtitle := (index $eps 0).Parent.Title }}
+
+                    <!-- Show soonest episode fist -->
+                    {{ $upcoming := slice }}
+                    {{ $previous := slice }}
+                    {{ range $langeps }}
+                        {{ if gt .Params.Date.Unix now.Unix }}
+                            {{ $upcoming = $upcoming | append . }}
+                        {{ else }}
+                            {{ $previous = $previous | append .}}
+                        {{ end }}
+                    {{ end }}
+
+                    {{ $eps := slice }}
+                    {{ range $upcoming.ByDate }}
+                        {{ $eps = $eps | append . }}
+                    {{ end }}
+                    {{ range $previous }}
+                        {{ $eps = $eps | append . }}
+                    {{ end }}
+                    {{ $showtitle := (index $langeps 0).Parent.Title }}
 
                     <div class='container py-3 py-lg-5'>
                         <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>

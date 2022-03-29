@@ -6,6 +6,7 @@
             <img alt="" class="d-inline-block" src='{{ "/images/icons/icon-videos-label.svg" | relURL }}'>
             <span class="h5">TV</span>
         </div>
+            <p class="teaser auto mt-4 pt-3">{{ if gt .Params.Date.Unix now.Unix }}Streaming{{ else }}Recorded{{ end }} {{ .Params.Date.Format "January 2, 2006" }}</p>
         <p class="link">{{ .Title }}</p>
     </a>
 </div>
