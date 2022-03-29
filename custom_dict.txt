@@ -47,6 +47,7 @@ additively
 addNotificationListener
 addon(s)?
 Adib
+Adib's
 Admission(Response|Review)
 adoptopenjdk
 ADR(s)?
@@ -399,6 +400,7 @@ credentialName
 CredHub
 crf
 critiquers
+CRLF
 CRM
 [Cc]ron
 cross-subnet
@@ -432,9 +434,11 @@ cybersecurity
 Cygwin
 D2iQ
 d3
+daemonset
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+Danee
 danluu
 DAO
 DaoAuthenticationProvider
@@ -454,6 +458,7 @@ dataStoreBytesInUse
 dataStoreEntryCount
 DATEV('s)?
 DawsCon
+dawu415('s)?
 DAZN
 dbkey
 dbuser
@@ -512,6 +517,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+DISO
 [Dd]isposability
 distributable
 DistributedCommand
@@ -561,6 +567,7 @@ Drotbohm
 DSL(s)?
 Dubois
 durations
+Dutchie
 Dynatrace
 DZone
 e280e387f128e70537e37093d26f6422
@@ -583,6 +590,7 @@ EFS
 eg.
 egoless
 EKS
+Elahn
 elasticloadbalancing
 ElasticSearch
 ELB(s)?
@@ -868,6 +876,7 @@ HorizontalPodAutoscaler(s)?
 HostEndpoint
 [Hh]ostname(s)?
 hostPath
+hostpath
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -884,8 +893,10 @@ Huynh
 HyperKit
 ℹ
 (I|P)aaS
+i7
 IAM
 Iberkleid
+ICMP
 ideate(d)?
 ideation
 idempotency
@@ -935,6 +946,8 @@ IPM
 IPM(s)
 IPPool(s)?
 IPs.
+IPV4
+IPV6
 IPVS
 Irizarry
 IRSA
@@ -953,6 +966,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+ITQ
 ITSM
 Ivanov
 IvanTarin2
@@ -1044,12 +1058,14 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+[Kk]ail
 Kalashnykov
 Kamus
 Kanban
 Kaniko
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Kaspersky
 Kat
 [Kk]ata(s)?
 KEK(s)?
@@ -1068,6 +1084,7 @@ KIAM
 Kibana
 kitesurfing
 KlipTok
+Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
@@ -1125,6 +1142,7 @@ KUDO
 Kung
 [kK]ustomize
 KUTTL
+KVM2
 Kyverno
 labelset
 lastAccessedTime
@@ -1142,6 +1160,7 @@ learnt
 lego
 Lerman
 letsencrypt-staging
+LF
 libnss-wrapper
 libs
 [Ll]ifecycle
@@ -1183,6 +1202,7 @@ Logstash
 Lombok
 lookups
 lookups.
+[Ll]oopback
 lorem-ipsum
 Low-fi
 LRU
@@ -1191,12 +1211,14 @@ lTwaivWHzk
 Lua
 Lubomir
 Luca
+LucidChart
 Lum
 Lunven
 Lyft
 Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
+M1
 Macanufo
 MacBook
 [Mm]achina
@@ -1207,6 +1229,7 @@ Madhav
 Madhura
 [mM]akefile
 Manachi
+Manulife
 MAPBU
 mappable
 MapRepository
@@ -1256,13 +1279,14 @@ Minella
 Mini-Wheats
 [Mm]inibroker
 minideb
-[Mm]inikube
-MiniKube
+[Mm]inikube('s)?
+MiniKube('s)?
 minimalistic
 Minio|MinIO
 minReplicas
 misconfiguration
 misconfigured
+[Mm]istype(d)?
 [Mm]itigations
 MiXiT
 Mkyong
@@ -1272,6 +1296,7 @@ MockMvc
 [Mm]odelling
 [Mm]odularity
 Momcilovic
+Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
@@ -1323,6 +1348,8 @@ Neo4j's
 Nesterov
 NetApp('s)?
 NetBase
+netcat
+netshoot
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1351,6 +1378,7 @@ NoSQL
 NotificationListener
 npm
 NSX(-T|-SM)?
+NTP
 NuGet
 nullable
 NYJavaSIG
@@ -1642,7 +1670,6 @@ Renaud
 Renfro
 Renner
 replatforming
-replicaset
 ReplicaSet(s)?
 replicationcontrollers
 replumb
@@ -1674,6 +1701,7 @@ Rickard
 Ries
 RKE
 rkt
+RMIT
 [Rr]oadmap(s)?
 [Rr]oadmapping
 RocksDB
@@ -1704,6 +1732,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
@@ -1865,6 +1894,7 @@ Strategyzer
 Stratton
 StringBuilder
 Strobl
+stroopwafels
 struct
 STS
 STT
@@ -1888,8 +1918,10 @@ svc
 SVID(s)?
 SVP
 [Ss]wagger(-cli|2)?
+[Ss]wappable
 SweetKiller9
 Syer
+symlink
 symposia
 Sysdig
 SystemAdmin
@@ -1907,6 +1939,7 @@ TBD
 TCE
 tchotchke
 TCP
+TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
@@ -1961,6 +1994,7 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+traceroute
 tradeoff(s)?
 Traefik
 transactional
@@ -1985,6 +2019,7 @@ UAA
 UC
 UCD
 UDP
+UDP-based
 UI(s|-based)?
 Umbraco
 (un)?marshalling
@@ -2120,6 +2155,7 @@ Wilcock('s)?
 Wildfly
 [Ww]ireframe(s)?
 WireMock
+Wittenkamp
 Wittrock
 WomenOfDotNet
 [wW]ordpress
@@ -2127,6 +2163,7 @@ WORKDIR
 WorkloadEndpoint
 workspaces
 [Ww]orkstream(s)?
+writeout
 WSL
 Wujec('s)
 x509

@@ -1,25 +1,23 @@
 ---
-Date: '2022-05-17T16:30:00-00:00'
-Description: .NET in the Wild with Steve Collins
-PublishDate: '2022-03-07T00:00:00-00:00'
+Date: '2022-04-12T17:30:00-00:00'
+Description: .NET in the Wild with Richard Campbell
+PublishDate: '2022-03-24T00:00:00-00:00'
 aliases:
 - /tv/dotnet-wild/11
 author: laylap
-date: '2022-05-17'
+date: '2022-04-12'
 episode: '11'
 explicit: 'yes'
 hosts:
 - Layla Porter
-lastmod: '2022-03-11'
-title: Alex Dunn and Layla talk about .NET, and playing video games with your voice!
+lastmod: '2022-03-24'
+title: Richard Campbell and Layla talk about .NET and the universe!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 'FPcDKfL6-qs'
+youtube: 'NUHt5wGwqOU'
 ---
 
-Alex Dunn leads the product team at Voicify and is the founder of Enabled Play. He's also a Microsoft MVP, PubConf Champion, Bixby Premier Developer, and AWS Alexa SME. His background in accessibility, application development, and conversational AI has leaned into enabling applications to do more for businesses and consumers using scalable architectures and design, distributed services, cloud infrastructure, and innovative edge technologies. Alex does his best to remain platform agnostic in his practices and development with specialties in C#, Kotlin, and TypeScript while building for cross-platform compatibility. You might find him co-organizing the Boston Mobile C# Meetup with Microsoft, speaking at all sorts of conferences and events around the world, streaming on Twitch, and on Pluralsight. You can read his regular tips and thoughts in the development community at https://alexdunn.org/ or watch him live at https://twitch.tv/suave_pirate
+Richard Campbell wrote his first line of code in 1977. His career has spanned the computing industry both on the hardware and software sides, development and operations. He was a co-founder of Strangeloop Networks, acquired by Radware in 2013 and was on the board of directors of Telerik that was acquired by Progress Software in 2014. Today he is a consultant and advisor to several successful technology firms and is the founder and chairman of Humanitarian Toolbox (www.htbox.org), a public charity that builds open-source software for disaster relief. Richard is also the host of two podcasts: [.NET Rocks!](https://www.dotnetrocks.com) the Internet Audio Talkshow for .NET developers and [RunAs Radio](https://www.runasradio.com), a weekly show for IT Professionals. He also produces the [DevIntersection](https://www.devintersection.com) series of conferences.
 
-Outside technology, you can find him playing guitar, working with animal rescue, or exploring the great outdoors.
-
-- [Twitter](https://twitter.com/suave_pirate)
+- [Twitter](https://twitter.com/richcampbell)

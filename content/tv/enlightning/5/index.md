@@ -9,7 +9,7 @@ guests:
 - Rick Osowski
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "q9pYsss8huk"
 lastmod: '2020-10-09'
 title: How Do You Add Persistent Storage to Your Kubernetes Application?
 twitch: vmwaretanzu
