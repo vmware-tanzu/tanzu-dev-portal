@@ -770,17 +770,39 @@
   &.s1t-city {
     padding-bottom: 0;
     .container-sm {
-      background-size: 50%;
       background-repeat: no-repeat;
-      background-position: bottom right 25%;
+      background-position: bottom right 21%;
       margin: auto;
       @media(max-width: 1200px) {
         background-size: 47%;
       }
       @media(max-width: 991px) {
         background-size: 60% !important;
-        background-position: bottom right 4% !important;
+        background-position: bottom right !important;
       }
+      @media(max-width: 500px) {
+        background-image: none !important;
+      }
+    }
+    &.chicago .container-sm {
+      background-size: 50%;
+      background-position: bottom right 25%;
+    }
+    &.newyork .container-sm {
+      background-size: 45%;
+      @media(max-width: 790px) {
+        background-size: 50% !important;
+      }
+    }
+    &.seattle .container-sm {
+      background-size: 46%;
+      background-position: bottom right 22%;
+    }
+    &.toronto .container-sm {
+      background-size: 42%;
+    }
+    &.atlanta .container-sm {
+    background-position: bottom right 22%;
     }
     #hero-content {
       max-width: 75%;
@@ -811,14 +833,14 @@
 body#s1t-index #s1t-destinations-2022 {
   .city-tile {
     background-repeat: no-repeat;
-    background-size: auto 80%;
+    background-size: auto 70%;
     background-position: bottom right;
     background-color: #1b2a32;
     &:hover {
       background-color: #324f61;
     }
-    @media(max-width: 991px) {
-      max-width: 400px;
+    @media(max-width: 1000px) {
+      width: 400px;
     }
   }
   .city-tile-text {

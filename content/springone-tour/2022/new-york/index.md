@@ -5,11 +5,11 @@ enddate: '2022-06-29T00:00:00-07:00'
 publish: true
 aliases:
     - /springone-tour/2022/new-york
-location:
-    - Convene
-    - 237 Park Ave
-    - New York, NY
-logo_path: "/images/springonetour/ny_cityscape.svg"
+#location:
+#    - Convene
+#    - 237 Park Ave
+#    - New York, NY
+logo_path: "/images/springonetour/nyc_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour New York
 Title: SpringOne Tour New York

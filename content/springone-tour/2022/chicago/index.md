@@ -264,7 +264,7 @@ hide_newsletter: true
     <div class="h3 text-white">Responsible Microservices</div>
     <p>Hi, Spring fans! Spring Framework 6 and Spring Boot 3 imply a new baseline, bringing the Spring ecosystem in line with the needs of tomorrow‘s workloads. A huge part of that is the new baselines of Jakarta EE and Java 17 and the new support for GraalVM native images, based on the work of Spring Native. Join Spring Developer Advocates Josh Long (<a href="https://twitter.com/@starbuxman" target="_blank">@starbuxman</a>) and Dashaun Carter (<a href="https://twitter.com/@dashaun" target="_blank">@dashaun</a>) as we explore the implications of this exciting new technology for your Spring Boot applications and services.</p>
     <p>We‘ll look at things like using the GraalVM AOT compiler to produce native images that take up a markedly smaller memory footprint and start up in 10s or maybe hundreds of milliseconds. We‘ll look at how to containerize those workloads. We‘ll look at how to tame the GraalVM compiler when something goes wrong. And we‘ll look at how to teach GraalVM about your custom workloads.</p>
-    <p>For more info on the meetup including how to register, please visit: <a href="https://www.meetup.com/ChicagoJUG" target="_blank">https://www.meetup.com/ChicagoJUG</a>.</p>
+    <p>For more info on the meetup including how to register, please visit: <a href="https://www.meetup.com/ChicagoJUG/events/283784010/" target="_blank">https://www.meetup.com/ChicagoJUG/events/283784010/</a>.</p>
 </div>
 
 <div id="responsible-microservices" class="talk-modal p-md-5 p-3">

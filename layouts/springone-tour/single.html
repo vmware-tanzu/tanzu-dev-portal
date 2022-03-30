@@ -1,7 +1,7 @@
 {{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
 
 <style>
-  #hero.springone-tour-event-hero.chicago .container-sm {
+  #hero.springone-tour-event-hero .container-sm {
     background-image: url({{ .Params.logo_path | relURL }});
   }
 </style>
