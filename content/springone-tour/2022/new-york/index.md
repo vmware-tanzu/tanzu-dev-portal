@@ -9,7 +9,9 @@ aliases:
 #    - Convene
 #    - 237 Park Ave
 #    - New York, NY
-logo_path: "/images/springonetour/nyc_cityscape.svg"
+logo:
+  path: "/images/springonetour/"
+  filename: "nyc_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour New York
 Title: SpringOne Tour New York

@@ -9,7 +9,9 @@ aliases:
 #    - Vantage Venues
 #    - 150 King St W
 #    - Toronto, ON
-logo_path: "/images/springonetour/toronto_cityscape.svg"
+logo:
+  path: "/images/springonetour/"
+  filename: "toronto_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Toronto
 Title: SpringOne Tour Toronto

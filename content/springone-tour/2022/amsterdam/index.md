@@ -7,7 +7,9 @@ aliases:
     - /springone-tour/2022/amsterdam
 #location:
 #    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo_path: "/images/springonetour/amsterdam_cityscape.svg"
+logo:
+  path: "/images/springonetour/"
+  filename: "amsterdam_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Amsterdam
 Title: SpringOne Tour Amsterdam

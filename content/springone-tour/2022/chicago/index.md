@@ -9,7 +9,9 @@ location:
     - 'Convene'
     - '16 West Adams Street'
     - 'Chicago, IL'
-logo_path: "/images/springonetour/chicago_cityscape.svg"
+logo:
+  path: "/images/springonetour/"
+  filename: "chicago_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Chicago
 Title: SpringOne Tour Chicago

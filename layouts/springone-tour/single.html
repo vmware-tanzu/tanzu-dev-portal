@@ -2,7 +2,7 @@
 
 <style>
   #hero.springone-tour-event-hero .container-sm {
-    background-image: url({{ .Params.logo_path | relURL }});
+    background-image: url({{ .Params.logo.path | relURL }}{{ .Params.logo.filename }});
   }
 </style>
 
