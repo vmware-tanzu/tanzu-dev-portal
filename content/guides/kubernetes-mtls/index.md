@@ -241,7 +241,7 @@ This specifically interacts with Redis:
 kubectl port-forward svc/spring-boot-redis-client-app 8080:8080 -n mtls-demo
 
 # In another terminal window/tab
-curl -XGET http://localhost:8080/.
+curl -XGET http://localhost:8080/
 
 # You should receive a random UUID string as a response.
 ```
@@ -680,7 +680,7 @@ Verify that the application has now connected to a TLS-enabled Redis server:
 kubectl port-forward svc/spring-boot-redis-client-app 8080:8080 -n mtls-demo
 
 # In another terminal window/tab
-curl -XGET http://localhost:8080/.
+curl -XGET http://localhost:8080/
 
 # You should receive a random UUID string as a response.
 ```
@@ -849,7 +849,7 @@ kubectl logs deploy/spring-boot-redis-client-app -n mtls-demo | head -n1
 kubectl port-forward svc/spring-boot-redis-client-app 8080:8080 -n mtls-demo
 
 # In another terminal window/tab
-curl -XGET http://localhost:8080/.
+curl -XGET http://localhost:8080/
 
 # You should receive a random UUID string as a response.
 ```
