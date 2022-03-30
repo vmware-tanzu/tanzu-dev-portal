@@ -269,7 +269,7 @@ minikube start --cpus='8' --memory='12g' --kubernetes-version='1.22.6'
 ```
 
 {{% info %}}
-In MacOS we tested with Docker as the VM driver. If you hit issues with this driver, you could try `--driver='hyperkit'` to force the use of [Hyperkit](https://github.com/moby/hyperkit) as Minikube's VM driver. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
+In MacOS we tested with Docker as the VM driver. If you hit issues with this driver, you could try `--driver='hyperkit'` to force the use of [HyperKit](https://github.com/moby/hyperkit) as Minikube's VM driver. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
 {{% /info %}}
 
 {{< /tab >}}
