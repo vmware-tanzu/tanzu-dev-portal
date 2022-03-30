@@ -14,28 +14,9 @@
         <h2 class="h4 link mt-3 pt-0">{{- .Title -}}</h2>
         <p>{{ .Description | markdownify }}</p>
         <div class="row justify-content-between d-flex mt-4 mb-2">
-            <div class="learning-path-duration">
-                <i class="fas fa-hourglass-half"></i>
-                {{ if gt $totalDuration 60 }}
-                    <!-- Round up to closest full hour duration -->
-                    {{ math.Ceil (div $totalDuration 60.0) }}h    
-                {{ else }}
-                    {{ $totalDuration }}m
-                {{ end }}
-            </div>
             <div class="course-lp-count">
                 <i class="fas fa-graduation-cap"></i>
                 {{ len .Pages }}
-            </div>
-            <div class="learning-path-level">
-                {{ $experience := .Params.experience | default "Beginner" }}
-                {{ if eq $experience "Beginner" }}
-                    <h5><span class="badge badge-success mr-3 py-1 px-2 antialiased">Beginner</span></h5>
-                {{ else if eq $experience "Intermediate" }}
-                    <h5><span class="badge badge-warning mr-3 py-1 px-2 antialiased">Intermediate</span></h5>
-                {{ else if eq $experience "Advanced" }}
-                    <h5><span class="badge badge-danger mr-3 py-1 px-2 antialiased">Advanced</span></h5>
-                {{ end }}
             </div>
         </div>
     </a>
