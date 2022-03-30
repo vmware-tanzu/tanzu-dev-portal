@@ -16,6 +16,12 @@ Title: SpringOne Tour Chicago
 LinkTitle: Chicago
 city_name: Chicago
 meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> and <a href="/developer/team/josh-long" target="_blank">Josh Long</a> will be presenting their talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
+sponsors:
+    - name: Rollbar
+      sponsorship_level: gold
+      logo_path_dark: "/images/springonetour/sponsors/logo-color-rollbar.svg"
+      logo_path_light: "/images/springonetour/sponsors/logo-white-rollbar.svg"
+      url: https://rollbar.com/
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 code_of_conduct: true
