@@ -121,9 +121,9 @@
                     {{ end }}
                     {{ $showtitle := (index $langeps 0).Parent.Title }}
 
-                    <div class='container py-3 py-lg-5'>
+                    <div class="container px-0 mb-5 shows">
                         <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
-                        <div class='row'>
+                        <div class='row d-flex justify-content-between mb-5 episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
                                 {{ partial "episode-card.html" . }}

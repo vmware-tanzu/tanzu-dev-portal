@@ -1,12 +1,17 @@
-<div class="td-box--gray-dark episode-card mr-3 mb-3 flex-315 transition-all">
-    <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
-        <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
-        <div class="card-type-id">
-            <!-- <i class="fas fa-book"></i> -->
-            <img alt="" class="d-inline-block" src='{{ "/images/icons/icon-videos-label.svg" | relURL }}'>
-            <span class="h5">TV</span>
-        </div>
-            <p class="teaser auto mt-4 pt-3">{{ if gt .Params.Date.Unix now.Unix }}Streaming{{ else }}Recorded{{ end }} {{ .Params.Date.Format "January 2, 2006" }}</p>
-        <p class="link">{{ .Title }}</p>
-    </a>
-</div>
+<a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+    <div class='thumbnail-gradient position-absolute'></div>
+    <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
+    {{ if gt (len .Title) 70}}
+            <div class='video-description d-flex flex-column justify-content-between'>
+                <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
+                <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
+            </div>
+        {{ else }}
+            <div class='video-description d-flex flex-column justify-content-between'>
+                <p class='text-white mt-0'> {{.Title}} </p>
+                <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
+            </div>
+        {{ end }}
+    {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
+    <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
+</a>
