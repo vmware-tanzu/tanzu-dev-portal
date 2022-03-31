@@ -988,6 +988,7 @@ JavaWorld
 JAX-RS
 JBaruch
 JBatch
+JBCNConf
 JBoss
 jchen21
 JConsole
@@ -1227,6 +1228,7 @@ Maciaszek-Sharma
 [Mm]acOS
 Madhav
 Madhura
+Mahoney
 [mM]akefile
 Manachi
 Manulife
@@ -1553,6 +1555,7 @@ Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
+pre-seed
 [pP]re-stop
 Pre-sync
 pre-work
@@ -1741,6 +1744,7 @@ Saikali
 Salaboy
 salaboy
 Salatino
+Salgado
 Salm
 Sam-Bodden
 SameSite
@@ -2074,6 +2078,7 @@ ValueComparer
 Vanderburg
 vault-kubernetes-authenticator
 Vavr
+VC
 VCAP
 vCenter
 VCS
