@@ -3,6 +3,7 @@ date = "2017-04-21T15:28:50-06:00"
 title = ".Net Cookbook"
 weight = 1
 layout = "top"
+description = "Useful tips for getting started with .NET"
 +++
 
 Here are some useful tips for getting started with .NET on Pivotal Cloud Foundry. Search with words like "steeltoe", "dotnet", "kerberos", or "buildpack" to find helpful .NET things.

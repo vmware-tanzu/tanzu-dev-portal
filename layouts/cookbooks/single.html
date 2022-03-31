@@ -23,7 +23,7 @@
     <div class="row flex-xl-nowrap container mx-auto mb-4">
       <div class="col-12 col-md-12 col-lg-12 col-xl-12 d-print-none px-0 pt-2">
         {{ partial "version-banner.html" . }}
-        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb-cookbook.html" . }}{{ end }}
         <h1>{{ $cookbook.Title }}</h1>
       </div>
     </div>

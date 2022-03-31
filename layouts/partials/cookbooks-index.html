@@ -15,8 +15,8 @@
         <p>{{ .Description | markdownify }}</p>
         <div class="row justify-content-between d-flex mt-4 mb-2">
             <div class="course-lp-count">
-                <i class="fas fa-graduation-cap"></i>
-                {{ len .Pages }}
+                <i class="fas fa-carrot"></i> 
+              {{ len .Pages }} recipe{{ if gt (len .Pages) 1}}s{{ end }}
             </div>
         </div>
     </a>

@@ -4,7 +4,7 @@
 {{ $class := replace $class " " "" }}
 <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-7  ">
     <div class="container">
-        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+        {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb-cookbook.html" . }}{{ end }}
         <h1 class="h1"> {{- .Title | markdownify }}</h1>
         <div class="lead"><p>{{- .Params.description | markdownify }}</p></div>
     </div>
