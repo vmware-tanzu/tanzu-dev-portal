@@ -27,32 +27,9 @@
         <h1>{{ $cookbook.Title }}</h1>
         <!-- Tags -->
         <div class="cookbook-tags d-flex">
-            <div class="duration mr-3">
-                <i class="fas fa-hourglass-half"></i>
-                {{ if gt .Params.duration 60 }}
-                    <!-- Round up to closest full hour duration -->
-                    {{ math.Ceil (div .Params.duration 60.0) }}h    
-                {{ else }}
-                    {{ .Params.duration }}m
-                {{ end }}
-            </div>
             <div class="lesson-count mr-3">
-                <i class="fas fa-graduation-cap"></i>
-                {{ len .Pages }} lessons
-            </div>
-            <div class="experience">
-                {{ if eq .Params.experience "Beginner" }}
-                    <h4><span class="badge badge-success mr-3">Beginner</span></h4>
-                {{ else if eq .Params.experience "Intermediate" }}
-                    <h4><span class="badge badge-warning mr-3">Intermediate</span></h4>
-                {{ else if eq .Params.experience "Advanced" }}
-                    <h4><span class="badge badge-danger mr-3">Advanced</span></h4>
-                {{ end }}
-            </div>
-            <div class="tags d-flex">
-                {{ range .Params.tags }}
-                    <h4><span class="badge badge-secondary mr-3">{{ . }}</span></h4>
-                {{ end }}
+              <i class="fas fa-carrot"></i> 
+              {{ len .Pages }} recipe{{ if gt (len .Pages) 1}}s{{ end }}
             </div>
         </div>
         
