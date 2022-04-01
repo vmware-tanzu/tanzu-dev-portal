@@ -78,8 +78,8 @@
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">{{ partial "country-select-dropdown.html" . }}</div>
                         <div class="col-sm-6 s1t-form-col">
-                            <select id="dietaryRestrictions" name="dietaryRestrictions" class="form-control">
-                                <option value="None" selected disabled>Dietary restrictions</option>
+                            <select id="dietaryRestrictions" name="dietaryRestrictions" class="form-control" required>
+                                <option value="" selected disabled>Dietary restrictions</option>
                                 <option value="None">None</option>
                                 <option value="Vegetarian">Vegetarian</option>
                                 <option value="Vegan">Vegan</option>
@@ -92,8 +92,8 @@
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">
-                            <select name="tshirtSize" class="form-control">
-                                <option value="none" selected disabled>T-shirt size (Unisex)</option>
+                            <select name="tshirtSize" class="form-control" required>
+                                <option value="" selected disabled>T-shirt size (Unisex)</option>
                                 <option value="xss">XX Small</option>
                                 <option value="xs">X Small</option>
                                 <option value="s">Small</option>
