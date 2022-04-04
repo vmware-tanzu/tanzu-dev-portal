@@ -25,13 +25,6 @@
         {{ partial "version-banner.html" . }}
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb-cookbook.html" . }}{{ end }}
         <h1>{{ $cookbook.Title }}</h1>
-        <!-- Tags -->
-        <div class="cookbook-tags d-flex">
-            <div class="lesson-count mr-3">
-              <i class="fas fa-carrot"></i> 
-              {{ len .Pages }} recipe{{ if gt (len .Pages) 1}}s{{ end }}
-            </div>
-        </div>
         
       </div>
     </div>
@@ -42,6 +35,13 @@
       <div class="col-12 col-md-9 col-lg-7 d-print-none position-relative pb-lg-4 px-0 px-md-3">
         {{ if ne $cookbook .Page }}
         <h2>{{ .Title }}</h2>
+        <!-- Tags -->
+        <div class="cookbook-tags d-flex">
+          <div class="lesson-count mr-3">
+            <i class="fas fa-carrot"></i> 
+            {{ len .Pages }} recipe{{ if gt (len .Pages) 1}}s{{ end }}
+          </div>
+        </div>
         {{ partial "byline" (dict "context" . "withdate" false) }}
         {{ end }}
 
@@ -49,14 +49,14 @@
 
         {{ .Content }}
 
-        <h2>Lessons</h2>
+        <!-- <h2>Lessons</h2>
         <ul>
             {{ range .Pages}}
             <li class="">
                 <a  href="{{ .RelPermalink }}" class="align-left pr-2">{{ .Title }}</a>
             </li>
             {{ end }}
-        </ul>
+        </ul> -->
 
         <!-- End Content -->
 
