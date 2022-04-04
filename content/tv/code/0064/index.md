@@ -11,7 +11,7 @@ hosts:
 - Dan Vega
 lastmod: '2022-04-04'
 minutes: 120
-title: "Spring for GrqphQL"
+title: "Spring for GraphQL"
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
