@@ -5,7 +5,7 @@ PublishDate: '2022-04-04T10:00:00-05:00'
 aliases:
 - /tv/code/67
 episode: '67'
-image: /tv/code/images/dan-vega.jpg
+image: /tv/code/images/dan-vega.png
 explicit: 'no'
 hosts:
 - Dan Vega
