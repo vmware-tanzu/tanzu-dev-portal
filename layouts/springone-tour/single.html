@@ -1,34 +1,35 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
+"https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
 
 <style>
-  #hero.springone-tour-event-hero .container-sm {
-    background-image: url({{ .Params.logo.path | relURL }}{{ .Params.logo.filename }});
-  }
+    #hero.springone-tour-event-hero .container-sm {
+        background-image: url('{{ .Params.logo.path | relURL }}{{ .Params.logo.filename }}');
+    }
 </style>
 
 <section id="hero" class="{{ $class }}-event-hero s1t-city mt-7 {{ $cityNameLowercase }} pt-4">
     <div class="container">
         {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
         <div class="container-sm">
-          <div class="row justify-content-between" id="hero-content">
-              <div class="col-lg-9 px-0 mt-3">
-                  <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Params.city_name -}}</h1>
-                  <h3 class="h3 pt-0 mb-4 pb-2">
-                      {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
-                  </h3>
-                  {{ if $isRegOpen }} {{ range .Params.location }}
-                  <p class="mt-0 mb-0">{{ . }}</p>
-                  {{ end }}
-                  <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
-                      <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
-                      <span id="register-btn-text">Register Now</span>
-                  </button>
-                  {{ else }}
-                  <p class="mt-0 mb-0">Stay tuned for more details!</p>
-                  {{ end }}
-                  <!-- <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}' /> -->
-              </div>
-          </div>
+            <div class="row justify-content-between" id="hero-content">
+                <div class="col-lg-9 px-0 mt-3">
+                    <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Params.city_name -}}</h1>
+                    <h3 class="h3 pt-0 mb-4 pb-2">
+                        {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
+                    </h3>
+                    {{ if $isRegOpen }} {{ range .Params.location }}
+                    <p class="mt-0 mb-0">{{ . }}</p>
+                    {{ end }}
+                    <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
+                        <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
+                        <span id="register-btn-text">Register Now</span>
+                    </button>
+                    {{ else }}
+                    <p class="mt-0 mb-0">Stay tuned for more details!</p>
+                    {{ end }}
+                    <!-- <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}' /> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -224,8 +225,7 @@
                                     required
                                 />
                                 <label class="form-check-label ml-3" for="vmware-privacy-policy"
-                                    >I agree to VMware's&nbsp;
-                                    <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
+                                    >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
                                 >
                             </div>
                         </div>
@@ -318,10 +318,10 @@
                     <h3 class="mt-5">Sponsors</h3>
                     <h4 class="mt-3">Gold</h4>
                     {{ range .Params.sponsors }}
-                        <a class="col-sm-2 lightbox" href="{{ .url }}">
-                            <img src='{{ .logo_path_light | relURL }}' class="hide-in-light-mode" />
-                            <img src='{{ .logo_path_dark | relURL }}'  class="display-in-light-mode" />
-                        </a>
+                    <a class="col-sm-2 lightbox" href="{{ .url }}">
+                        <img src="{{ .logo_path_light | relURL }}" class="hide-in-light-mode" />
+                        <img src="{{ .logo_path_dark | relURL }}" class="display-in-light-mode" />
+                    </a>
                     {{ end }}
                 </div>
                 {{ end }}
@@ -420,17 +420,17 @@
         });
     };
 
-    const applyDiscounts = async (discountElement) => {
-        $.ajax({
+    const applyDiscounts = async (value) => {
+        await $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityNameLowercase }}', discount: discountElement.val() }),
+            data: JSON.stringify({ city: '{{ $cityNameLowercase }}', discount: value }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 $('.charge-label').text('Before discount:');
                 $('.discount-details').css('display', 'flex');
-                $('.discount-notice').show().text(`${discountElement.val()} applied`).css('color', '#02bc67');
+                $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
                 $('.discount-total').text(`$${resp.amount / 100}`);
             },
             error: (resp) => {
@@ -442,6 +442,11 @@
                     .css('color', '#adbbc4');
             },
         });
+        if (value == 'reset') {
+            $('.charge-label').text('Charge total:');
+            $('.discount-details').css('display', 'none');
+            $('.discount-notice').hide();
+        }
     };
 
     const handleSubmit = async () => {
@@ -539,7 +544,9 @@
     discBtn.on('click', () => {
         const el = $('#discount-code');
         if (el.val() !== '') {
-            applyDiscounts(el);
+            applyDiscounts(el.val());
+        } else {
+            applyDiscounts('reset');
         }
     });
 
