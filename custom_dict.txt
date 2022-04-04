@@ -2205,3 +2205,4 @@ Zynga
 μServices
 Ϟ
 ϟ
+GraphQL
