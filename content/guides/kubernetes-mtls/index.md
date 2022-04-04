@@ -1,25 +1,19 @@
 ---
-date: '2022-02-07'
+date: '2022-03-04'
 description: Learn how to secure workload traffic in Kubernetes using mutual TLS.
 title: Using mutual TLS to secure Kubernetes workload traffic
 linkTitle: Securing workload traffic with mutual TLS
 metaTitle: Securing workload traffic with mutual TLS
 parent: Kubernetes
-patterns:
-- Deployment
 tags:
 - Kubernetes
-- mutual-TLS
 - mTLS
 - cert-manager
-- Redis
 - Spring-Boot
-- certificates
 team:
 - Dmitriy Dubson
-topics:
-- Kubernetes
-- mutual TLS
+level1: Securing Kubernetes
+level2: Access and Security
 ---
 
 This guide is going to walk you through the steps for building a working implementation of Kubernetes workloads communicating internally using mutual TLS (mTLS). The example client application and service in this guide depict a
