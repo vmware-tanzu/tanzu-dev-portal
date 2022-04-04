@@ -3,8 +3,8 @@ Date: '2022-04-06T15:00:00-05:00'
 Description: "Spring Tips Live with Josh Long"
 PublishDate: '2022-04-04T10:00:00-05:00'
 aliases:
-- /tv/code/64
-episode: '64'
+- /tv/code/67
+episode: '67'
 image: /tv/code/images/dan-vega.jpg
 explicit: 'no'
 hosts:
