@@ -667,7 +667,7 @@ certificate (`tls.crt`).
 certificate (`ca.crt` - our root certificate).
 
 > Refer to [Java Secure Socket Extension (JSSE) Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#CustomizingStores)
-> for more about keystores and truststores.
+> for more about keystores and truststores .
 
 cert-manager creates the keystore and truststore files on the fly as part of its Certificate issuance
 process, so you get it out of the box. Keystore and truststore passwords are in plain text. Obfuscating the password is
