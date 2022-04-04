@@ -1,5 +1,6 @@
 <div class="section-index">
-    {{ $pages := sort (where .Site.Pages "Section" "tv") }}
+    <!--Grab pages for SpringOne Tour page if on list page, otherwise use tv-->
+    {{ $pages := sort (where .Site.Pages "Section" (cond (eq .Title "Past Events") "springone-tour" "tv")) }}
     {{ $parent := .Page }}
     {{ $.Scratch.Set "upcoming" false }}
 
@@ -44,8 +45,13 @@
                                     {{ $.Scratch.Set "episodeLink" .Params.register }}
                                 {{ end }}
                                 {{ $episodeLink := $.Scratch.Get "episodeLink" }}
-
-                                <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src="{{ partial "tv-image-src" . }}"><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
+                                
+                                {{ if gt (len (.Resources.Match "images/*.mp4")) 0 }}
+                                <a href="{{ $episodeLink }}"><video autoplay loop muted playsinline src='{{ (.Resources.GetMatch "images/*.mp4").RelPermalink }}' style="height: auto; width: 100%; border: none;"></video><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
+                                {{ else }}
+                                    <a href="{{ $episodeLink }}"><img alt={{ .Title }} class="upcoming" src='{{ (partial "tv-image-src" .) }}'><span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;<script>document.write(whenLive);</script></span></a>
+                                {{ end }}
+ 
                                 {{ if .Params.no_streaming_label }}
                                     <p></p>
                                 {{ else }}
@@ -100,12 +106,12 @@
                             {{ if gt (len .Title) 70}}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{ print (substr .Title 0 70) "..." }} </p>
-                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
                                 </div>
                             {{ else }}
                                 <div class='video-description d-flex flex-column justify-content-between'>
                                     <p class='text-white mt-0'> {{.Title}} </p>
-                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2 2006" (substr .Date 0 10)}}</p>
+                                    <p class='show-date mt-4 text-white h5'>{{ dateFormat "Jan 2, 2006" (substr .Date 0 10)}}</p>
                                 </div>
                             {{ end }}
                             {{ printf "<div class=\"previous col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>

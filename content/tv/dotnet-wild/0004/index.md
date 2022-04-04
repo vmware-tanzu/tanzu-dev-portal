@@ -15,7 +15,7 @@ title: Luce Carter and Layla talk imposter syndrome with a bit of MongoDB!
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode
-youtube: 
+youtube: 'pBwkB8kZsLs'
 ---
 
 Layla is joined by Luce Carter, a Developer Advocate at MongoDB. Luce is also a proud Microsoft MVP. When not writing code, creating videos, streaming on Twitch or working on her upcoming book on MongoDB Atlas and .NET, she can be found at the gym, going for walks or trying to help people battle imposter syndrome one line of code or story at a time!

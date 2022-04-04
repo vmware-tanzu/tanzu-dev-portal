@@ -10,6 +10,10 @@ tags:
 - Tanzu Application Platform
 tanzu:
   label: tap
+  featured: false
+  featuredweight: 3
+  gettingstarted: true
+  gettingstartedweight: 3
 # Author(s)
 team:
 - Tony Vetter
@@ -151,3 +155,7 @@ Throughout this series, you have gone from zero familiarity with VMware Tanzu to
 There is a lot more to explore now that your environment is ready and functional. Perhaps getting a local environment up and running? Or maybe setting up DNS so others can collaborate without updating `/etc/hosts`. Of course, you will want to deploy your own projects to Tanzu Application Platform and try this flow out again. 
 
 I hope going through this process has been beneficial to you and helped you get started developing with VMware Tanzu. Please check out our [documentation](https://docs.vmware.com/en/Tanzu-Application-Platform/1.0/tap/GUID-overview.html) for additional questions. Or feel free to [reach out to us](https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=feedback&template=feedback.md&title=) if you have any questions, or want to find out more. 
+
+Finally, check out this video demo of onboarding an application to Tanzu Application Platform and using the Live Update feature! It uses an environment very similar to the one you just set up, and goes through many of the same processes. 
+
+{{< youtube id="fgJ--Y2ffgg" class="youtube-video-shortcode" >}}

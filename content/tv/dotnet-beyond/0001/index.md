@@ -2,7 +2,8 @@
 canonical: https://tanzu.vmware.com/developer/tv/dotnet-beyond
 aliases:
 - /tv/dotnet-beyond/conference
-Date: '2022-03-30T19:48:16Z'
+Date: '2022-03-30T08:00:00-07:00'
+minutes: 1560
 episode: '1'
 guests:
 - Andrew Stakhov
@@ -13,6 +14,7 @@ guests:
 - Jeff Fritz
 - John Bush
 - Julie Lerman
+- Layla Porter
 - Lewis Denham-Parry
 - Luce Carter
 - Phillip Carter
@@ -28,8 +30,9 @@ hosts:
 - Jakub Pilimon
 - Jeff Strauss
 - Layla Porter
-- Matty Stratton
+- Matt Stratton
 - Michael Coté
+- Nate Schutta
 faqs:
   faq:
   - question: What is .NET Beyond?
@@ -67,7 +70,7 @@ description: A collection of conversations exploring the wider world of .NET
 </div>
 <div class="row mb-5">
 <div class="col-lg-9 col-12 px-0 pr-lg-5">
-<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
+<p class="m-0">Are there any boundaries to what you can build with .NET? Not really! Join us for two full days on <a href="https://www.twitch.tv/vmwaretanzu">Twitch</a> or <a href='https://dotnetbeyond.io/youtube'>YouTube</a> as we look at how some of the smartest voices in the .NET community are using it to develop for the enterprise—and at scale.</p><p>No matter where you fit in the .NET spectrum, you’re guaranteed to pick up something you haven’t learned yet.</p>
 <p class="mb-0"><strong><a class='lightbox' href='#day-1-reminder'><i class='fa fa-calendar-check ml-0 mr-1'></i>Add to calendar</a></strong></p>
 </div>
 <div class="col-lg-3 col-12 mt-lg-0 mt-4 text-center p-4 newsletter-outer" style="background-color: #1B2A32">
@@ -222,7 +225,7 @@ function convertTime(sessionTime) {
     <h3 class="h4 py-0">
       <a href="/developer/team/ian-cooper/">Ian Cooper</a>
     </h3>
-    <span class="company d-block fs-90 opacity-4"></span>
+    <span class="company d-block fs-90 opacity-4" style="overflow-wrap: break-word;">JustEatTakeaway.com</span>
   </div>
 </div>
 <div id="messaging" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">Messaging for .NET Developers</div><p>In this talk we will look at why we might use messaging, and how we use messaging in a .NET app. <p>We'll start by exploring distribution and why we can think about conversations between processes being synchronous or asynchronous, and exposing functionality or exchanging data. Then we will talk about where messaging fits, and the contexts in which we might prefer it. Along the way we should get a better understanding of messaging compared to alternatives like sharing a database or HTTTP/GRPC.</p><p>Then we will show an example of using messaging in a .NET app.</p><p>Finally, we will give pointers to resources for those who wish to explore this topic in greater detail, now that they have mastered the basics.</p></div>
@@ -257,11 +260,13 @@ function convertTime(sessionTime) {
   <div class="name col-4">
     <h3 class="h4 py-0">
       <a href="/developer/team/jakub-pilimon/">Jakub Pilimon</a>
+      <br>
+      <a href="/developer/team/layla-porter/">Layla Porter</a>
     </h3>
     <span class="company d-block fs-90 opacity-4">VMware</span>
   </div>
 </div>
-<div id="asp" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">ASP.NET Basics for Experts</div><p>People love to stay in their comfort zone; but what if you have to step outside of it and embrace a new programming language, one that happens to be ASP.NET?<p><p>Jakub is a Java/Spring developer and architect. He’s never used ASP.NET before and he has questions. Lots of questions.</p><p>Layla, a .NET developer, intends to answer Jakub’s questions and more in this demo-rich session.</p><p>But don’t worry, there will also be something for existing ASP.NET developers as we delve into the ways an ASP.NET application is configured to support services:</p><ul><li>Dependency injection and inversion of control</li><li>HTTP clients and policies</li><li>Fault tolerances and circuit breakers</li><li>Databases connections</li><li>Discovery clients</li><li>Monitoring</li><li>And more!</li></ul>
+<div id="asp" class='p-md-5 p-3' style='display: none;width:600px;max-width:100%;'><div class="h3 text-white">ASP.NET Basics for Experts</div><p>People love to stay in their comfort zone; but what if you have to step outside of it and embrace a new programming language, one that happens to be ASP.NET?<p><p>Jakub is a Java/Spring developer and architect. He’s never used ASP.NET before and he has questions. Lots of questions.</p><p>Layla, a .NET developer, intends to answer Jakub’s questions and more in this demo-rich session.</p><p>But don’t worry, there will also be something for existing ASP.NET developers as we delve into the ways an ASP.NET application is configured to support services:</p><ul><li>Dependency injection and inversion of control</li><li>HTTP clients and policies</li><li>Resiliency and circuit breakers</li><li>Databases connections</li><li>Discovery clients</li><li>And more!</li></ul>
 </p></div>
 <div class="row py-3 border-bottom flex-nowrap">
   <div class="time col-2 pl-0 h4"><script>convertTime("3/31/2022 14:00 UTC")</script></div>
