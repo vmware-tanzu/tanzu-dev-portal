@@ -1080,7 +1080,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
-[Kk]ey[Ss]tore(s)
+[Kk]ey[Ss]tore(s)?
 KIAM
 Kibana
 kitesurfing
@@ -2008,7 +2008,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
-truststore(s)
+truststore(s)?
 TTL(s)?
 tunable
 Turanski
