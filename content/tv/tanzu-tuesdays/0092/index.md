@@ -16,7 +16,7 @@ minutes: 60
 title: "Carvel: vendir + ytt with Leigh Capili"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "0WT7O3kJwjw"
 type: tv-episode
 ---
 
