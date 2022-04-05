@@ -237,6 +237,7 @@ Buesing
 Bugsville
 buildout
 BuildPack
+[Bb]uildpack-built
 [Bb]uildpack(s|'s|ages)?
 BuildPacks
 Bundler
@@ -1074,13 +1075,12 @@ Kendo
 kendrickcoleman
 Kerberos
 Kerievsky
-[Kk]ey[Ss]tore
 keychain
 keySet
 keySetOnServer
 keySets
 keyspace
-KeyStore
+[Kk]ey[Ss]tore(s)?
 KIAM
 Kibana
 kitesurfing
@@ -1268,7 +1268,7 @@ MetricsServicePublisher
 MetricsSession
 Mezzalira
 micro-frontends
-Microk8s
+Micro[Kk]8s
 microservice.
 microservices-oriented
 Microsystems
@@ -1307,6 +1307,7 @@ MSc
 MSDN
 msgpack(ed)?
 mTLS
+mtls-demo
 MTT(D|R)
 MTU
 (multi-)?namespace
@@ -2007,7 +2008,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
-truststore
+truststore(s)?
 TTL(s)?
 tunable
 Turanski
@@ -2086,6 +2087,7 @@ Vega
 Velero('s)?
 Venafi
 Vendio
+vendir
 vendored
 Venkat
 Venkateswara
@@ -2204,3 +2206,4 @@ Zynga
 μServices
 Ϟ
 ϟ
+GraphQL

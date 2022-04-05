@@ -15,7 +15,7 @@ minutes: 120
 episode: "59"
 explicit: "yes"
 title: "The one with Caitlin Mahoney"
-#youtube: ""
+youtube: "lRzKuDVJZ_Y"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
