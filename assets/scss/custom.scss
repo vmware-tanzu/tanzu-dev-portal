@@ -761,9 +761,23 @@
       background-size: 75%;
       background-position: bottom center;
       padding-top: 2em;
-      min-height: 400px;
+      min-height: 62vh;
+      .container {
+        padding-left: 0 !important;
+        p {
+          text-align: center;
+        }
+      }
       .logo {
         display: none;
+      }
+    }
+    @media(max-width: 767px) {
+      background: none;
+      padding-bottom: 0 !important;
+      min-height: 0;
+      .small-screen-hero {
+        display: block;
       }
     }
   }
