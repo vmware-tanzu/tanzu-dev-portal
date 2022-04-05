@@ -415,38 +415,54 @@
                 });
             },
             error: (resp) => {
-                $('#card-element').text(resp.responseText ? 'There was an issue setting up Stripe: ' + resp.responseText : ' Unknown issue occurred.');
+                let errText = resp.responseJSON.message ? resp.responseJSON.message : resp.responseText ? resp.responseText : 'Potential network related issue with Stripe, please try a different network';
+                $('#card-element').text(errText);
             },
         });
     };
 
     const applyDiscounts = async (value) => {
-        await $.ajax({
+        $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             data: JSON.stringify({ city: '{{ $cityNameLowercase }}', discount: value }),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
-                $('.charge-label').text('Before discount:');
-                $('.discount-details').css('display', 'flex');
-                $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
-                $('.discount-total').text(`$${resp.amount / 100}`);
+                if (value != '') {
+                    $('.charge-label').text('Before discount:');
+                    $('.discount-details').css('display', 'flex');
+                    $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
+                    $('.discount-total').text(`$${resp.amount / 100}`);
+                } else {
+                    $('.charge-label').text('Charge total:');
+                    $('.discount-details').css('display', 'none');
+                    $('.discount-notice').hide();
+                }
             },
             error: (resp) => {
+                let errText = resp.responseJSON ? resp.responseJSON.message : resp.responseText ? resp.responseText : 'Error applying discount code';
                 $('.charge-label').text('Charge total:');
                 $('.discount-details').css('display', 'none');
-                $('.discount-notice')
-                    .show()
-                    .text(resp.responseText ? resp.responseText : 'Error with discount code')
-                    .css('color', '#adbbc4');
+                $('.discount-notice').show().text(errText).css('color', '#adbbc4');
+                resetPaymentIntent('');
             },
         });
-        if (value == 'reset') {
-            $('.charge-label').text('Charge total:');
-            $('.discount-details').css('display', 'none');
-            $('.discount-notice').hide();
-        }
+    };
+
+    const resetPaymentIntent = async () => {
+        $.ajax({
+            url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            data: JSON.stringify({ city: '{{ $cityNameLowercase }}' }),
+            success: (resp) => {
+                clientSecret = resp.clientSecret;
+            },
+            error: (resp) => {
+                console.log(resp);
+            },
+        });
     };
 
     const handleSubmit = async () => {
@@ -542,12 +558,7 @@
     });
 
     discBtn.on('click', () => {
-        const el = $('#discount-code');
-        if (el.val() !== '') {
-            applyDiscounts(el.val());
-        } else {
-            applyDiscounts('reset');
-        }
+        applyDiscounts($('#discount-code').val());
     });
 
     regForm.on('submit', (e) => {
