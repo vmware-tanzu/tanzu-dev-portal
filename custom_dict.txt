@@ -1075,12 +1075,12 @@ Kendo
 kendrickcoleman
 Kerberos
 Kerievsky
+[Kk]ey[Ss]tore(s)?
 keychain
 keySet
 keySetOnServer
 keySets
 keyspace
-[Kk]ey[Ss]tore(s)?
 KIAM
 Kibana
 kitesurfing
@@ -2206,4 +2206,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-GraphQL

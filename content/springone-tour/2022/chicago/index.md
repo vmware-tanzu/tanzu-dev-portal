@@ -24,6 +24,12 @@ sponsors:
       logo_path_dark: "/images/springonetour/sponsors/logo-color-rollbar.svg"
       logo_path_light: "/images/springonetour/sponsors/logo-white-rollbar.svg"
       url: https://rollbar.com/
+giveback:
+  title: <a href="https://www.chicagosfoodbank.org/volunteer/">Repacking Volunteer Session</a> on April 28th from 9AM-11:45AM CT.
+  description: The SpringOne Tour Team will be partnering with the Greater Chicago Food Depository on April 28 to help repack bulk products into family-sized portions, sort and categorize donated food items, and glean fresh produce items and bread.
+  url: https://www.chicagosfoodbank.org/volunteer/
+  logo_path_dark: "/images/springonetour/chicago_giveback_color.png"
+  logo_path_light: "/images/springonetour/chicago_giveback_light.png"
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 code_of_conduct: true
@@ -328,9 +334,11 @@ hide_newsletter: true
 </div>
 <div id="graphql" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Getting Started with GraphQL in Spring Boot</div>
-    <p>Now that we deconstructed our monolithic application into a microservice architecture, all of our API calls are going through our gateway. This is great because all of our REST API endpoints are in a single place but we still have a problem.</p>
-    <p>With web, mobile, and IoT applications each requiring different views of our data, how can we support them all? We could continue down the path we‘re on and add new endpoints each time a new requirement comes in, but there‘s a more scalable solution.</p>
-    <p>GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools. In this session, you‘ll learn the basic concepts of GraphQL, and then learn how to use GraphQL in your Spring Boot applications with Spring for GraphQL. We‘ll add a GraphQL layer to WaffleCorp and let each of the clients tell us what they want and how they want it.</p>
+    <p>WaffleCorp is a major provider of breakfast products available direct to consumer or through our strategic partnerships. The current implementation of the e-commerce platform is a monolithic Spring MVC application that serves data through a collection of REST APIs.</p>
+    <p>Currently, the only provider of the REST API is our e-commerce web application. We've been tasked with opening up our APIs to our new iOS and Android apps, partner microservices, and IoT applications.</p>
+    <p>The issue we ran into is that a REST API is not a one-size-fits-all approach. We need a more flexible solution to meet the requirements of all of our client applications. This is a perfect use case for the speed and flexibility of GraphQL.</p>
+    <p>GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.</p>
+    <p>In this session, you’ll learn what GraphQL is and why you should consider it in your next project. You’ll learn how to use GraphQL in your Spring Boot applications by leveraging the Spring for GraphQL project. By the end of this session, you’ll understand how to stand up a GraphQL endpoint and request the data you need, and nothing more.</p>
 </div>
 <div id="observability" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Observability: Beyond the Three Pillars with Spring</div>
