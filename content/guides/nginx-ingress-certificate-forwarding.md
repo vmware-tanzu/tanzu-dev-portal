@@ -9,7 +9,7 @@ team:
 - Ray Chuan Tay
 topic:
 - Kubernetes
-level1: Building a Kubernetes Runtime
+level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---
 
