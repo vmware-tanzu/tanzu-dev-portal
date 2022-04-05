@@ -18,7 +18,7 @@ minutes: 60
 title: "Secure Production with Spring Authorization Server and SPIFFE/SPIRE"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "LXyz36bbxMM"
 type: tv-episode
 ---
 

@@ -56,7 +56,7 @@
           {{ .Scratch.Set "memberName" "" }}
           {{ with .Site.GetPage (print "/team/" .Data.Term) }}{{ .Scratch.Set "memberName" .Params.name }}{{ end }}
           {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (.Scratch.Get "memberName")) }}
-          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
+          {{ $hosts := where ((.Site.GetPage "tv/code").Pages) "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows := (append $guests $hosts).ByDate.Reverse }}
           {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
           <div id="tanzu-tv" class='container py-5 border-top'>

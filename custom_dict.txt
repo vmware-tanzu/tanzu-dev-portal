@@ -47,6 +47,7 @@ additively
 addNotificationListener
 addon(s)?
 Adib
+Adib's
 Admission(Response|Review)
 adoptopenjdk
 ADR(s)?
@@ -66,10 +67,11 @@ Alexey
 Alibaba
 allenholub
 [Aa]llocatable
+Almar
 Alpine(-based)?
 Amaro
 amd64
-AMI
+AMI('s)?
 amongst
 AMQP
 [Aa]nalytics
@@ -93,6 +95,7 @@ ApiResponse
 APIs?
 APM
 AppArmor
+AppDev
 AppDynamics
 Appel
 appender
@@ -134,9 +137,11 @@ audit2rbac
 Auditable
 auditd
 [Aa]uth(z|n)?
+Auth0
 AuthenticationManager
 AuthenticationProvider
 authenticator
+authorisation
 AuthorizationPolicy
 authorizer
 Authorizer
@@ -195,6 +200,7 @@ Bikewise
 biome
 [Bb]itnami('s)?
 Biville
+Bixby
 BKPR
 BlackBox
 blazingly
@@ -204,6 +210,7 @@ BOM
 Bongiovanni
 bookinfo(-ingressgateway-certs-ca)?
 BookService
+bootcamps
 Booternetes
 [Bb]ootif(ul|y|ying|ied|ication)
 bootRun
@@ -230,6 +237,7 @@ Buesing
 Bugsville
 buildout
 BuildPack
+[Bb]uildpack-built
 [Bb]uildpack(s|'s|ages)?
 BuildPacks
 Bundler
@@ -269,7 +277,9 @@ Cedrick
 CEIP
 CentOS
 Ceph
+Cerner
 CertificateRequests
+certified-kubernetes
 CEST
 CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
@@ -288,6 +298,8 @@ Christoph
 Christos
 Chunyi
 ci
+CI/CD
+CICD
 CIDR(s)?
 CIO
 CircleCI
@@ -369,6 +381,7 @@ CoRoutines
 Corry
 CORS
 cortado
+CORTX
 Cosgrove
 Coté('s)?
 counterintuitive
@@ -388,6 +401,7 @@ credentialName
 CredHub
 crf
 critiquers
+CRLF
 CRM
 [Cc]ron
 cross-subnet
@@ -408,6 +422,7 @@ CTRL-C
 currentClientConnections
 currentMetricValue(s)?
 CustomEntryConcurrentHashMap
+customisable
 customizability
 customizable
 customization(s)?
@@ -420,9 +435,11 @@ cybersecurity
 Cygwin
 D2iQ
 d3
+daemonset
 [Dd]aemonSet(s)?
 Dalia
 Damasceno
+Danee
 danluu
 DAO
 DaoAuthenticationProvider
@@ -442,6 +459,7 @@ dataStoreBytesInUse
 dataStoreEntryCount
 DATEV('s)?
 DawsCon
+dawu415('s)?
 DAZN
 dbkey
 dbuser
@@ -451,7 +469,7 @@ de
 de-duplicate
 de-facto
 [Dd]e-referenced
-de-risk
+de-risk(s)?
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -500,6 +518,7 @@ DiscoveryClient
 DiskRegionStatistics
 DiskStore
 Disneyland
+DISO
 [Dd]isposability
 distributable
 DistributedCommand
@@ -517,6 +536,7 @@ DistributedSystems
 DistributionMessageObserver
 DistributionStats
 DistributionSummary
+distro
 distroless
 distros
 DIY
@@ -541,12 +561,14 @@ DoSec
 dotnetsdk
 Dre
 drf
+DrinkService
 dropdown
 Dropwizard
 Drotbohm
 DSL(s)?
 Dubois
 durations
+Dutchie
 Dynatrace
 DZone
 e280e387f128e70537e37093d26f6422
@@ -555,6 +577,7 @@ Eads
 eBPF
 EBS
 EC2
+ec2messages
 ECE
 echoserver
 EclipseLink
@@ -568,6 +591,8 @@ EFS
 eg.
 egoless
 EKS
+Elahn
+elasticloadbalancing
 ElasticSearch
 ELB(s)?
 Eleftheria
@@ -622,6 +647,7 @@ FakeBankAccount
 Fakhouri
 Falco
 Fani
+fanout
 faq(s)?
 Fastlane
 favourite(s)?
@@ -647,7 +673,9 @@ Florea
 Florent
 [fF]luent[Bb]it
 [fF]luentd('s)?
+FluxCD
 flyyy
+FoodService
 formatter
 FOSS
 foundaments
@@ -678,6 +706,7 @@ Galystan
 Gamov
 Gandhi
 Gangway
+Gapped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -748,7 +777,9 @@ ghostPassword
 ghostUsername
 Gibb
 GIDS
+Gif
 Gilardi
+Giphy
 GIS
 [Gg]it[Ff]low
 [Gg]it[Ll]ab('s|-managed)?
@@ -795,6 +826,7 @@ gRPC(-based)?
 Grygleski
 Grzejszczak
 GSB
+GTM
 GUID(s)?
 Gunicorn
 Guntur
@@ -808,7 +840,9 @@ Hananiel
 handleNotification
 handleWANEvent
 handoff(s)?
+Hansson
 HAProxy
+hardcode
 [hH]ardcoded
 HashiCorp('s)?
 hasResult
@@ -817,6 +851,8 @@ Hayk
 Haytham
 Headspring
 Heartbleed
+Heen
+Heinemeier
 HelloWorldCommand
 HELM_UPGRADE_EXTRA_ARGS
 [Hh]elmfiles?
@@ -824,6 +860,7 @@ Helming
 Heptio
 Herbrich
 hermeticism
+HeroDevs
 Heroku('s)?
 High-Cardinality
 Hillegass
@@ -840,6 +877,7 @@ HorizontalPodAutoscaler(s)?
 HostEndpoint
 [Hh]ostname(s)?
 hostPath
+hostpath
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -847,6 +885,8 @@ HSQLDB
 (Http|HTTP)ie
 (Http|HTTP)Proxy
 HttpBase
+HttpClientFactory
+HttpClients
 https?|HTTPS?
 HttpSession
 HumanOps
@@ -854,8 +894,10 @@ Huynh
 HyperKit
 ℹ
 (I|P)aaS
+i7
 IAM
 Iberkleid
+ICMP
 ideate(d)?
 ideation
 idempotency
@@ -905,6 +947,8 @@ IPM
 IPM(s)
 IPPool(s)?
 IPs.
+IPV4
+IPV6
 IPVS
 Irizarry
 IRSA
@@ -923,6 +967,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+ITQ
 ITSM
 Ivanov
 IvanTarin2
@@ -944,6 +989,7 @@ JavaWorld
 JAX-RS
 JBaruch
 JBatch
+JBCNConf
 JBoss
 jchen21
 JConsole
@@ -951,8 +997,11 @@ JDBC
 jdbcUrl
 [SJ]DK
 JDK's
+Jeffries
 Jernigan
 JetBrains
+Jetbrains
+jetbrains
 Jetstack
 JFrog
 JHipster
@@ -999,6 +1048,7 @@ junit
 JUnit
 junky
 Jupyter(Hub|Lab)?
+JVASays
 JVM's
 JVM(-based)?
 JVMs
@@ -1010,12 +1060,14 @@ k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
 Kafka
+[Kk]ail
 Kalashnykov
 Kamus
 Kanban
 Kaniko
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Kaspersky
 Kat
 [Kk]ata(s)?
 KEK(s)?
@@ -1023,17 +1075,17 @@ Kendo
 kendrickcoleman
 Kerberos
 Kerievsky
-[Kk]ey[Ss]tore
 keychain
 keySet
 keySetOnServer
 keySets
 keyspace
-KeyStore
+[Kk]ey[Ss]tore(s)?
 KIAM
 Kibana
 kitesurfing
 KlipTok
+Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
@@ -1091,6 +1143,7 @@ KUDO
 Kung
 [kK]ustomize
 KUTTL
+KVM2
 Kyverno
 labelset
 lastAccessedTime
@@ -1104,9 +1157,11 @@ ldnug
 [Ll]eaderboard
 LeafRegionEntry
 [Ll]earnings
+learnt
 lego
 Lerman
 letsencrypt-staging
+LF
 libnss-wrapper
 libs
 [Ll]ifecycle
@@ -1148,6 +1203,7 @@ Logstash
 Lombok
 lookups
 lookups.
+[Ll]oopback
 lorem-ipsum
 Low-fi
 LRU
@@ -1156,12 +1212,14 @@ lTwaivWHzk
 Lua
 Lubomir
 Luca
+LucidChart
 Lum
 Lunven
 Lyft
 Lyu
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
+M1
 Macanufo
 MacBook
 [Mm]achina
@@ -1170,8 +1228,11 @@ Maciaszek-Sharma
 [Mm]acOS
 Madhav
 Madhura
+Mahoney
 [mM]akefile
 Manachi
+Manulife
+MAPBU
 mappable
 MapRepository
 Marcin
@@ -1207,7 +1268,7 @@ MetricsServicePublisher
 MetricsSession
 Mezzalira
 micro-frontends
-Microk8s
+Micro[Kk]8s
 microservice.
 microservices-oriented
 Microsystems
@@ -1220,13 +1281,14 @@ Minella
 Mini-Wheats
 [Mm]inibroker
 minideb
-[Mm]inikube
-MiniKube
+[Mm]inikube('s)?
+MiniKube('s)?
 minimalistic
 Minio|MinIO
 minReplicas
 misconfiguration
 misconfigured
+[Mm]istype(d)?
 [Mm]itigations
 MiXiT
 Mkyong
@@ -1236,6 +1298,7 @@ MockMvc
 [Mm]odelling
 [Mm]odularity
 Momcilovic
+Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
@@ -1244,6 +1307,7 @@ MSc
 MSDN
 msgpack(ed)?
 mTLS
+mtls-demo
 MTT(D|R)
 MTU
 (multi-)?namespace
@@ -1269,6 +1333,7 @@ mydb
 MyPy
 mystream
 mytopic
+n8n
 NameCheap
 [Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
@@ -1286,6 +1351,8 @@ Neo4j's
 Nesterov
 NetApp('s)?
 NetBase
+netcat
+netshoot
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1314,6 +1381,8 @@ NoSQL
 NotificationListener
 npm
 NSX(-T|-SM)?
+NTP
+NuGet
 nullable
 NYJavaSIG
 OAuth2?
@@ -1369,6 +1438,7 @@ org(s)?
 ORM(-based)?
 OSI
 OSM
+Osowski
 OSS
 Osterling
 OTT
@@ -1486,6 +1556,7 @@ Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
+pre-seed
 [pP]re-stop
 Pre-sync
 pre-work
@@ -1500,6 +1571,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+prepaved
 prepend
 prepending
 Presales
@@ -1509,6 +1581,7 @@ PrimaryRoutingFunction
 PriorityClass(es)?
 processServerMetrics
 Procfile
+Prodan
 production-deployable
 ProductPlan
 Programadoras
@@ -1524,6 +1597,7 @@ Protobuf
 [Pp]roxy(-ing|ing)?
 PSAT(s)?
 PSP(s)?
+PubConf
 PubSub(bing)?
 Pulkit
 pullPolicy
@@ -1557,6 +1631,7 @@ RDBMS
 reachability
 reactively
 ReactiveUI
+ReactiveX
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1599,7 +1674,6 @@ Renaud
 Renfro
 Renner
 replatforming
-replicaset
 ReplicaSet(s)?
 replicationcontrollers
 replumb
@@ -1619,6 +1693,7 @@ restorable
 RestrictedMethodAuthorizer
 RestTemplate
 Retrium
+reusability
 revertibility
 rewatch
 rewrap
@@ -1630,6 +1705,7 @@ Rickard
 Ries
 RKE
 rkt
+RMIT
 [Rr]oadmap(s)?
 [Rr]oadmapping
 RocksDB
@@ -1660,12 +1736,16 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
 Sadogursky
 Saikali
+Salaboy
 salaboy
+Salatino
+Salgado
 Salm
 Sam-Bodden
 SameSite
@@ -1674,6 +1754,7 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sanitization
 Sardana
 Sarella
 SAT(s)?
@@ -1697,11 +1778,13 @@ SDD
 SDK(s)?
 SDS
 seaborn
+Seagate
 SealedSecret
 Sébastien
 SecondaryRoutingFunction
 secretbox
 secretname
+secretsmanager
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -1709,6 +1792,7 @@ Sedano
 Seiden
 SELinux
 Semver
+Sergi
 SerialGatewaySenderQueueEntrySizer
 server1
 server2
@@ -1751,6 +1835,7 @@ slideshare
 SLO(s)?
 Sloka
 SmartTV
+SME
 SMI
 Smythe
 Snapchat
@@ -1786,6 +1871,8 @@ Sri
 SSD
 ssh-keygen
 SSL
+SSM
+ssmmessages
 sso|SSO
 Stacker
 Standley
@@ -1802,6 +1889,7 @@ STDERR|stderr
 STDOUT|stdout
 Steeltoe
 Stéphane
+STIG
 StorageClass(es)?
 Storbakken
 StoreAllCachedDeserializable
@@ -1810,7 +1898,10 @@ strategizing
 Strategyzer
 Stratton
 StringBuilder
+Strobl
+stroopwafels
 struct
+STS
 STT
 Styra
 sub(p|P)ath
@@ -1832,8 +1923,10 @@ svc
 SVID(s)?
 SVP
 [Ss]wagger(-cli|2)?
+[Ss]wappable
 SweetKiller9
 Syer
+symlink
 symposia
 Sysdig
 SystemAdmin
@@ -1851,6 +1944,7 @@ TBD
 TCE
 tchotchke
 TCP
+TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
@@ -1879,6 +1973,7 @@ Thunderdome
 tiffanyfayj
 Tigera
 Tikka
+TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
@@ -1904,6 +1999,7 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+traceroute
 tradeoff(s)?
 Traefik
 transactional
@@ -1912,7 +2008,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
-truststore
+truststore(s)?
 TTL(s)?
 tunable
 Turanski
@@ -1928,6 +2024,7 @@ UAA
 UC
 UCD
 UDP
+UDP-based
 UI(s|-based)?
 Umbraco
 (un)?marshalling
@@ -1939,6 +2036,7 @@ undersample
 underutilization
 unencoded
 unencrypted
+unmanaged
 unpause
 Unported
 unprioritized
@@ -1981,6 +2079,7 @@ ValueComparer
 Vanderburg
 vault-kubernetes-authenticator
 Vavr
+VC
 VCAP
 vCenter
 VCS
@@ -1988,6 +2087,7 @@ Vega
 Velero('s)?
 Venafi
 Vendio
+vendir
 vendored
 Venkat
 Venkateswara
@@ -2014,9 +2114,11 @@ Vlissides
 VMCachedDeserializable
 VMs?
 VMSS
+VMware
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
+Voicify
 Vonge
 VPA(s|'s)?
 VPC
@@ -2032,10 +2134,12 @@ Vue
 VXLAN
 [Ww]alkthrough
 WanVerificationService
+WASM
 Waterhouse
 WaveConfigObject
 waypoints
 WCF
+WebAPI
 webapp
 webapps_default
 Webber
@@ -2058,13 +2162,15 @@ Wilcock('s)?
 Wildfly
 [Ww]ireframe(s)?
 WireMock
+Wittenkamp
 Wittrock
 WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
 workspaces
-workstream
+[Ww]orkstream(s)?
+writeout
 WSL
 Wujec('s)
 x509
@@ -2079,10 +2185,13 @@ Y2ffgg
 YAML|yaml
 Yaron
 YARP
+Yarp
+YARP's
 yay
 YCombinator
 Yonis
 Yorker
+young-ish
 youtube
 YTT
 ytt(-templatized)?
@@ -2095,4 +2204,6 @@ Zou
 Zuul
 Zynga
 μServices
+Ϟ
 ϟ
+GraphQL

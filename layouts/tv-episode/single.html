@@ -93,14 +93,20 @@
         </div>
       </div>
       <div class="col-lg-4 col-12 px-0">
-        <img src='{{ partial "tv-image-src" . }}' />
+        {{ if gt (len (.Resources.Match "images/*.mp4")) 0 }}
+        <video autoplay loop muted playsinline src='{{ .Resources.GetMatch "images/*.mp4" }}' style="height: auto; width: 100%; border: none;"></video>
+        {{ else }}
+          <img src='{{ partial "tv-image-src" . }}' />
+        {{ end }}
       </div>
     {{ end }}
 
   </div>
 
   <div class="row justify-content-center" id="stream-embed">
-    <h2 class="mb-2"> {{- .Title -}}</h2>
+    {{ if not .Params.beyond }}
+      <h2 class="mb-2"> {{- .Title -}}</h2>
+    {{ end }}
     <div id="internal-embed" class="container justify-content-center mt-3 pt-3" style="text-align: center;">
       {{ if eq ($.Scratch.Get "embedSite") "youtube" }}
       <div class="row">
@@ -130,7 +136,12 @@
       {{ else }}
       <div>
         <a href="https://www.twitch.tv/{{ .Params.twitch }}">
-        <img src='{{ partial "tv-image-src" . }}' /></a><br>
+        {{ if gt (len (.Resources.Match "images/*.mp4")) 0 }}
+          <video autoplay loop muted playsinline src='{{ .Resources.GetMatch "images/*.mp4" }}' style="height: auto; width: 100%; border: none;"></video>
+        {{ else }}
+          <img src='{{ partial "tv-image-src" . }}' /></a><br>
+        {{ end }}
+        </a>
       </div>
       {{ end }}
       {{ end }}
@@ -149,6 +160,8 @@
     var startTime = new Date('{{ printf (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}').getTime();
     var duration = "{{default 60 .Params.minutes }}" * 60000;
     var endTime = new Date(startTime + duration).getTime();
+    var beyond = "{{ .Params.beyond }}"
+
 
     // Display content based on the current state:
     // Future event: Show the air time and link to Twitch
@@ -175,12 +188,30 @@
             channel: "vmwaretanzu",
         });
       {{ end }}
+
+      if(beyond) {
+        var breakStart = new Date("Wed Mar 30 2022 15:00:00 GMT-0700 (Pacific Daylight Time)").getTime();
+        var breakEnd = new Date("Thu Mar 31 2022 02:00:00 GMT-0700 (Pacific Daylight Time)").getTime();
+
+        if(currentTime >= breakStart && currentTime <= breakEnd) {
+          live.style.display = "none";
+          embed.style.display = "none";
+          vod.style.display = "none";
+          episodeType = "vod";
+        } 
+      }
     }
     else {
       // Past
       live.style.display = "none";
       embed.style.display = "none";
-      vod.style.display = "flex";
+
+      if(beyond) {
+        vod.style.display = "none";
+      }
+      else {
+        vod.style.display = "flex";
+      }
       episodeType = "vod";
     }
   </script>
@@ -205,10 +236,10 @@
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Guests</h3>
-        {{ range . }}
+        {{ range $i, $e := $.Params.guests }}
           {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
             <div class=" mb-4 pb-5">
-            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+              {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
           {{ end }}
         {{ end }}
@@ -238,10 +269,10 @@
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Hosts</h3>
-        {{ range . }}
+        {{ range $i, $e := $.Params.hosts }}
           {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
             <div class="mb-4">
-            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond") }}
+            {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
           {{ end }}
         {{ end }}
@@ -280,6 +311,31 @@
     </div>
   </div>
   {{ end }}
+
+  {{ if .Params.beyond }}
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-9 col-12 px-0">
+      <h3 class="mb-3">Sponsors</h3>
+      <div id="sponsors">
+        <div class="sponsor-container">
+          <a href="https://headspring.com/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-headspring-white.svg" | relURL }}'>
+          </a>
+          <a href="https://www.microsoft.com/en-us/security/business/identity-access-management/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-microsoft-white.svg" | relURL }}'>
+          </a>
+          <a href="http://www.telerik.com" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-progress-white.svg" | relURL }}'>
+          </a>
+          <a href="https://www.twilio.com/" class="mr-5 py-2 d-inline-block">
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-twilio-white.svg" | relURL }}'>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
 
   {{ if .Params.faqs }}
     <div class="row justify-content-center mb-5">

@@ -13,6 +13,10 @@ tags:
 - Tanzu Application Platform
 tanzu:
   label: tap
+  featured: true
+  featuredweight: 1
+  gettingstarted: true
+  gettingstartedweight: 1
 ---
 
 ## Key Concepts
