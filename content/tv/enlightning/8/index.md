@@ -1,25 +1,25 @@
 ---
-Date: '2022-04-07T08:00:00-07:00'
-Description: What Is Knative Eventing?
-PublishDate: '2020-04-07T00:00:00-07:00'
+Date: '2022-04-21T08:00:00-07:00'
+Description: Security for Application Developers
+PublishDate: '2020-04-21T00:00:00-07:00'
 date: '2020-06-03'
-episode: '7'
+episode: '8'
 explicit: 'no'
 guests:
-- Mauricio Salatino
+- Adib Saikali
 hosts:
 - Whitney Lee
 youtube: ""
 lastmod: '2020-10-09'
-title: What Is Knative Eventing?
+title: Security for Application Developers
 twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Knative Eventing resources are loosely coupled, and can be developed and deployed independently of one another.  
-This enables developers to use an event-driven architecture with their Kubernetes applications.  How does it work, 
-and what does it take to get started?  Come hang out with Whitney and Mauricio as they discuss (and draw!) the main 
-concepts of Knative Eventing.
+We are going to talk about the best way for developers to up-level security skills so you never 
+get stuck not understanding what a security exception means, and never again will you use trial 
+and error to get something working. We will talk about how to do passwordless logins, and we'll discuss key 
+cryptography concepts all devs should know.
 
 
 \\(^-^)/
