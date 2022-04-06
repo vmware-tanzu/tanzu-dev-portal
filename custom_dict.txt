@@ -11,6 +11,7 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
+passwordless
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
