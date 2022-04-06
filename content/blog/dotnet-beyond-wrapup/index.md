@@ -2,8 +2,8 @@
 title: Net Beyond 2022 Wrap Up
 description: A wrap up of the exciting .NET Beyond 2022 conference. 
 tags:
-- .NET
-- F#
+- Dot NET
+- F Sharp
 - Tanzu Application Platform
 team:
 - Lizz Smullen
