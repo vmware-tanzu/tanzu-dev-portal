@@ -710,7 +710,7 @@ Your installation of Tanzu Application Platform must be customized. To help, a t
 {{< tab header="Windows" >}}
 
 ```powershell
-curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
+curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/TAPonLAP/main/TAPonLAPv1.0/template-tap-values-all.yml
 ```
 {{< /tab >}}
 {{< tab header="MacOS" >}}
@@ -719,7 +719,7 @@ curl.exe -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-ap
 # cd back to the ~/Downloads directory
 cd ..
 
-curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
+curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/TAPonLAP/main/TAPonLAPv1.0/template-tap-values-all.yml
 ```
 
 {{< /tab >}}
@@ -729,7 +729,7 @@ curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-applic
 # Move to your home folder
 cd $HOME
 
-curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/tanzu-application-platform-scripts/main/minikube-win/template-tap-values.yml
+curl -o tap-values.yml https://raw.githubusercontent.com/benwilcock/TAPonLAP/main/TAPonLAPv1.0/template-tap-values-all.yml
 ```
 
 {{< /tab >}}
