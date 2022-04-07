@@ -270,6 +270,7 @@ Carducci
 Carta
 Cartographer
 Carvel('s)?
+Cashmore
 cass-operator
 CCM
 cd
@@ -385,6 +386,7 @@ CORTX
 Cosgrove
 Coté('s)?
 counterintuitive
+COVID
 COVID-19
 cpu(s)?
 CPU(s)?
@@ -939,6 +941,7 @@ intra-namespace
 intra-service
 intra-subnet
 IoC
+IOC
 IoT
 (IP|ip)(v6|v4|s)?
 (IP|ip)tables
