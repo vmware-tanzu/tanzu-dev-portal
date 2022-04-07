@@ -1,7 +1,7 @@
 ---
 title: .NET Beyond 2022 Wrap Up
 slug: dotnet-beyond-2022-wrap-up
-description: A wrap up of the exciting .NET Beyond 2022 conference. 
+description: A wrap up of the exciting .NET Beyond 2022 event. 
 tags:
 - Dot NET
 - F Sharp
