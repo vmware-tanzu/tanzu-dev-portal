@@ -1,5 +1,5 @@
 ---
-title: Net Beyond 2022 Wrap Up
+title: .NET Beyond 2022 Wrap Up
 description: A wrap up of the exciting .NET Beyond 2022 conference. 
 tags:
 - Dot NET
@@ -16,15 +16,15 @@ The whirlwind that was .NET Beyond 2022 just wrapped up. If you had a chance to 
 
 Python and Java developers who have tried using F# in a .NET ecosystem are in awe over the succinctness in their code.
 
-"It's not like [Python](http://python.net/)", said Philip Carter, a senior product manager at HoneyComb, "It has a heritage based on functional programming, not out of smorgasbord programming that Python does."
+"It's not like [Python](http://python.net/)," said Philip Carter, a senior product manager at HoneyComb, "It has a heritage based on functional programming, not out of smorgasbord programming that Python does."
 
 Carter, who spent six years working at Microsoft, and five years working with F# for Visual Studio Code, said that F# got its start as a basic Microsoft research project, "It's really hard for a research project to become a real product," said Carter.
 
 According to Carter, F# provides excellent Visual Studio Code integration because it lets you use first class software development kits (SDKs) such as Badger, AWS, or any other service that has a standard .NET or small library. He also likes _Immutable first_, a feature that forces developers to structure their programming so that everything flows cleanly, from top to bottom. He said you can declare something as mutable by just turning off the Immutable first feature.
 
-Immutable first makes the declaration explicit, rather than everything implicitly being always changeable. "It's one of the reason F# programmers love using it." said Carter, especially for more complicated systems where they don't want to be debugging things all the time.
+Immutable first makes the declaration explicit, rather than everything implicitly being always changeable. "It's one of the reason F# programmers love using it," said Carter, especially for more complicated systems where they don't want to be debugging things all the time.
 
-Carter said that you can also define a web server in F# in just 11 lines of code, and that you can define two API routes with just three lines of code in F#, "Anything that you can do with .NET, you can do with F# on the server".
+Carter said that you can also define a web server in F# in just 11 lines of code, and that you can define two API routes with just three lines of code in F#, "Anything that you can do with .NET, you can do with F# on the server."
 
 ## Kubernetes Made Easy with VMware Tanzu Application Platform
 
@@ -32,7 +32,7 @@ If there are two things that Kubernetes is known for it is for being the ultimat
 
 John Bush, a senior solutions engineer at VMware, says that the learning curve is a result of people not knowing how to deploy apps as packages in containers using software like Docker, and not knowing how to use YAML. "YAML tells Kubernetes how to run your application," said Bush, adding that YAML also tells Kubernetes how to route, scale, event, deploy, and traffic services.
 
-Bush said he would like to see Kubernetes start to be built with a higher-level platform and a higher-level abstraction because it is more developer friendly. He also said that he doesn't like the idea of developers having to deploy directly onto Kubernetes when it is built as a low-level platform. One way you can change this is to use the VMware Tanzu Application Platform.
+Bush said he would like to see Kubernetes start to be built with a higher-level platform and a higher-level abstraction because it is more developer friendly. He also said that he doesn't like the idea of developers having to deploy directly onto Kubernetes when it is built as a low-level platform. One way he said you can change this is to use the VMware Tanzu Application Platform.
 
 Tanzu Application Platform provides customizable application accelerators that provide a starting point for you to build an app. "If I was a developer who wanted to do a .NET app, I would select a template accelerator," said Bush. "In Tanzu Application Platform, you can configure the accelerator before it renders the template." The templates in Tanzu Application Platform are sophisticated and internal to how your company does software. Tanzu Application Platform includes a starter template. "The starter template is a skeleton," said Bush, "You can add whatever business logic you've been tasked to write."
 
@@ -54,7 +54,7 @@ Two of the most exciting changes to the .NET 6 release that are making developer
 
 With top level statements, the program's entry point in .NET 6 is now in a static method class. "It removes the extra ceremony of previous versions," said Layla Porter, a developer advocate at VMware, and founder of #WomenOfDotNet. As a result, Porter said that the .NET 6 release is going to look different to developers who are familiar with C# apps. Porter said that with the new web application builder, you can add content such as controllers, Swagger to test endpoints, middleware, and default controller mappings to the startup class.
 
-Porter likes the new minimal APIs feature and believes that is going to be a big hit with developers from other platforms. "If you've done node development, this will be in a similar format.", she said.
+Porter likes the new minimal APIs feature and believes that is going to be a big hit with developers from other platforms. "If you've done node development, this will be in a similar format," she said.
 
 Another great feature in .NET 6 is Dependency Injection and Inversion of Control (IOC) because it lets you add services to the IOC container. Porter said that it is easy to use and implement because you can isolate business models.
 
@@ -66,7 +66,7 @@ The Steeltoe Project was also highly recommended by Porter. The Steeltoe Project
 
 After spending 2.5 years on a complex financial app project that was due to be released twelve months later, Stacy Cashmore, a DevOps tech explorer from Omniplan, and her team, asked management if they could start again.
 
-Cashmore described the conversation as difficult, but said "Surprisingly, management agreed,". There was one condition. "Management said OK, but you have one year left," she said.
+Cashmore described the conversation as difficult, but said "Surprisingly, management agreed." There was one condition. "Management said OK, but you have one year left," she said.
 
 According to Cashmore, one of the problems with the financial app was that it was massive, had over 140 projects, and took five minutes to open. When the team got together to collaborate in the middle of the COVID pandemic, the tech leads were asked to share their knowledge, too.
 
@@ -83,5 +83,3 @@ When the team discussed which resources to run in the new system, Cashmore said 
 If these talks sound interesting, and you would like to know more, the entire schedule of talks from .NET Beyond is now up on YouTube. [Check it out](https://www.youtube.com/playlist?list=PLAdzTan_eSPRDT8g6FcjSFlL1i5JtnV3i)!
 
 And for ongoing .NET content so you can stay up to date, be sure to watch [.NET in the Wild](https://tanzu.vmware.com/developer/tv/dotnet-wild/) every week, with host Layla Porter. Each week she interviews someone from the .NET community. The discussions are always informative, and fun!
-
- 
