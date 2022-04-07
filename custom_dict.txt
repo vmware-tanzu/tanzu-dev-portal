@@ -237,6 +237,7 @@ Buesing
 Bugsville
 buildout
 BuildPack
+[Bb]uildpack-built
 [Bb]uildpack(s|'s|ages)?
 BuildPacks
 Bundler
@@ -988,6 +989,7 @@ JavaWorld
 JAX-RS
 JBaruch
 JBatch
+JBCNConf
 JBoss
 jchen21
 JConsole
@@ -1073,13 +1075,12 @@ Kendo
 kendrickcoleman
 Kerberos
 Kerievsky
-[Kk]ey[Ss]tore
+[Kk]ey[Ss]tore(s)?
 keychain
 keySet
 keySetOnServer
 keySets
 keyspace
-KeyStore
 KIAM
 Kibana
 kitesurfing
@@ -1227,6 +1228,7 @@ Maciaszek-Sharma
 [Mm]acOS
 Madhav
 Madhura
+Mahoney
 [mM]akefile
 Manachi
 Manulife
@@ -1266,7 +1268,7 @@ MetricsServicePublisher
 MetricsSession
 Mezzalira
 micro-frontends
-Microk8s
+Micro[Kk]8s
 microservice.
 microservices-oriented
 Microsystems
@@ -1305,6 +1307,7 @@ MSc
 MSDN
 msgpack(ed)?
 mTLS
+mtls-demo
 MTT(D|R)
 MTU
 (multi-)?namespace
@@ -1475,6 +1478,7 @@ PartitionedRegionStorageException
 passcode|PASSCODE
 passthrough
 passwd
+passwordless
 pb('s)?
 pb&jelly
 (pc|C)zarkowski('s)?
@@ -1553,6 +1557,7 @@ Pre-IPM
 pre-optimize
 pre-programmed
 pre-release
+pre-seed
 [pP]re-stop
 Pre-sync
 pre-work
@@ -1741,6 +1746,7 @@ Saikali
 Salaboy
 salaboy
 Salatino
+Salgado
 Salm
 Sam-Bodden
 SameSite
@@ -2003,7 +2009,7 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
-truststore
+truststore(s)?
 TTL(s)?
 tunable
 Turanski
@@ -2074,6 +2080,7 @@ ValueComparer
 Vanderburg
 vault-kubernetes-authenticator
 Vavr
+VC
 VCAP
 vCenter
 VCS
@@ -2081,6 +2088,7 @@ Vega
 Velero('s)?
 Venafi
 Vendio
+vendir
 vendored
 Venkat
 Venkateswara
