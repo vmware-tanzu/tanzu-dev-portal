@@ -37,7 +37,7 @@
 {{ if $isRegOpen }}
 <script src="https://js.stripe.com/v3/"></script>
 <div id="s1t-register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered" style='max-width:750px'>
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title w-100 text-center">Register for {{ .Params.city_name }}</h2>
@@ -192,8 +192,7 @@
                                     required
                                 />
                                 <label class="form-check-label ml-3" for="COVID-19-vaccination-attestation"
-                                    >I attest that I am fully vaccinated against COVID-19 as defined by the&nbsp;
-                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
+                                    >I attest that I am fully vaccinated against COVID-19 as defined by&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                                         href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                                         target="_blank"
                                         >WHO</a
@@ -204,7 +203,7 @@
                     </div>
                     <small class="s1t-form-col" style="margin-left: 2.25rem">
                         *COVID-19 Vaccination: VMware requires that all attendees affirm that they have been fully vaccinated (as defined by the CDC/WHO) as a
-                        precursor to attending this event. Per&nbsp;
+                        precursor to attending this event. Per
                         <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                             href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                             target="_blank"
