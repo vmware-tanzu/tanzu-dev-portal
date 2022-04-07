@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Tanzu Build Service helps get from source code to containers securely and repeatably.
-lab: tanzu-build-service-overview
+lab: lab-tbs
 lastmod: '2021-10-03'
 length: 15
 logo: "/images/workshops/logo-tbs.svg"
