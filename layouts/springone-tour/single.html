@@ -37,7 +37,7 @@
 {{ if $isRegOpen }}
 <script src="https://js.stripe.com/v3/"></script>
 <div id="s1t-register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
+    <div class="modal-dialog modal-dialog-centered" style='max-width:750px'>
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title w-100 text-center">Register for {{ .Params.city_name }}</h2>
@@ -192,8 +192,7 @@
                                     required
                                 />
                                 <label class="form-check-label ml-3" for="COVID-19-vaccination-attestation"
-                                    >I attest that I am fully vaccinated against COVID-19 as defined by the&nbsp;
-                                    <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
+                                    >I attest that I am fully vaccinated against COVID-19 as defined by&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                                         href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                                         target="_blank"
                                         >WHO</a
@@ -204,7 +203,7 @@
                     </div>
                     <small class="s1t-form-col" style="margin-left: 2.25rem">
                         *COVID-19 Vaccination: VMware requires that all attendees affirm that they have been fully vaccinated (as defined by the CDC/WHO) as a
-                        precursor to attending this event. Per&nbsp;
+                        precursor to attending this event. Per
                         <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                             href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                             target="_blank"
@@ -222,7 +221,6 @@
                                     class="form-check-input"
                                     value="true"
                                     aria-required="true"
-                                    required
                                 />
                                 <label class="form-check-label ml-3" for="vmware-privacy-policy"
                                     >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
@@ -287,14 +285,16 @@
 <section class="{{ $class }}-details">
     <div class="container-sm">
         <div class="row justify-content-center mb-5">
-            <div class="col-lg-9 col-12 px-0 mt-5">
+            <div class="col-lg-9 col-12 mt-5">
                 <p>
                     Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the
                     city during the week, everywhere from executive events to meetups to giving back to the community. {{ if not $isRegOpen }} Stay tuned for
                     more details.{{ end }}
                 </p>
 
-                {{ .Content }} {{ if isset .Params "meetup" }}
+                {{ .Content }}
+
+                {{ if isset .Params "meetup" }}
                 <div id="meetup">
                     <h3 class="mt-5">Meetup</h3>
                     <div class="row align-items-center">
@@ -307,10 +307,23 @@
                 </div>
                 {{ end }}
 
+                {{ if isset .Params "giveback" }}
+                <div id="meetup">
+                    <h3 class="mt-5">Give Back</h3>
+                    <p>{{ .Params.giveback.title | markdownify }}</p>
+                    <div class="row align-items-center">
+                        <a class="col-sm-3" href="{{ .Params.giveback.url }}">
+                            <img src='{{ .Params.giveback.logo_path_dark | relURL }}' class="hide-in-light-mode" />
+                            <img src='{{ .Params.giveback.logo_path_light | relURL }}' class="display-in-light-mode" />
+                        </a>
+                        <p class="col-sm-9">{{ .Params.giveback.description | markdownify }}</p>
+                    </div>
+                </div>
+                {{ end }}
+
                 <h3 class="mt-5">Lead/Forward</h3>
                 <p>
-                    Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your
-                    business needs. For more information, please reach out to <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
+                  Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
                 </p>
 
                 {{ if isset .Params "sponsors" }}
@@ -327,7 +340,7 @@
                 {{ end }}
             </div>
         </div>
-        <div class="row justify-content-center mb-5 mt-5 text-center">
+        <div class="row justify-content-center mb-5 mt-7 text-center">
             <div class="col-lg-9 col-12 px-0">
                 <p>
                     Questions?
