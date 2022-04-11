@@ -27,7 +27,7 @@ Installing [VMware Tanzu Application Platform][tap] on your PC can be a bit more
 Stick with this tutorial and you’ll be part of an elite group of first-movers — developers just like you who've tried Tanzu Application Platform for themselves and experienced its modern software supply-chain, effortless Kubernetes application deployment, and serverless computing capabilities. Let’s get started! 
 
 {{% info %}}
-The process below has been tested using [VMware Tanzu Application Platform v1.1](https://network.tanzu.vmware.com/products/tanzu-application-platform/) (the most current available at the time of writing) using the <strong>`iterate`</strong> profile. We tested using Windows 11, MacOS Monterey, and Fedora 35. 
+The process below has been tested using [VMware Tanzu Application Platform v1.1](https://network.tanzu.vmware.com/products/tanzu-application-platform/) (the most current available at the time of writing) using the <strong>`iterate`</strong> profile. We tested using Windows 11, MacOS Monterey, Ubuntu 20.04 LTS, and Fedora 35.
 {{% /info %}}
 
 ## Before You Start 
@@ -35,7 +35,7 @@ The process below has been tested using [VMware Tanzu Application Platform v1.1]
 There are a few things that you'll need before you install the Tanzu Application Platform: 
 
 * **Hardware**: A computer with a modern Intel i7 or AMD Ryzen 7 processor (or better). You'll need 8 threads, 16 GB of RAM, and 40 GB of free disk space. ARM based architectures like Apple M1 aren't yet supported.
-* **Operating System**: Windows 11 Pro, Enterprise, or Education, or MacOS, or Fedora 35. You'll also need administrator access to this system.  
+* **Operating System**: Windows 11 Pro, Enterprise, or Education, or MacOS, or Ubuntu 20.04 LTS, or Fedora 35. You'll also need administrator access to this system.  
 * **Software**: [Minikube v1.25][minikube] (a laptop friendly version of Kubernetes), [Kubectl v1.23][kubectl] (the command-line tool used to work with Kubernetes).  
 * **Online Accounts**: You’ll need a username and password for [Docker Hub][dockerhub] and a username and password for the [Tanzu Network][tanzunet] (registration for both is free). 
 * **Network**: An internet connection capable of at least 30 Mb/s download and 10 Mb/s upload. 
@@ -260,11 +260,11 @@ In MacOS we tested with Docker as Minikube's [VM driver](https://minikube.sigs.k
 {{< tab header="Linux" >}}
 
 ```sh
-minikube start --kubernetes-version='1.22.8' --memory='12g' --cpus='8' --driver='kvm2'
+minikube start --kubernetes-version='1.22.8' --memory='12g' --cpus='8' 
 ```
 
 {{% info %}}
-In Fedora we tested with KVM2 as Minikube's [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
+In Ubuntu 20.04 LTS we used Docker as Minikube's [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). In Fedora 35 we used KVM2 as the VM driver by adding `--driver='kvm2'` to the above command. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
 {{% /info %}}
 
 {{< /tab >}}
