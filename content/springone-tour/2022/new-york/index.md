@@ -6,8 +6,12 @@ publish: true
 aliases:
     - /springone-tour/2022/new-york
 #location:
-#    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo_path: "/images/springonetour/ny_cityscape.svg"
+#    - Convene
+#    - 237 Park Ave
+#    - New York, NY
+logo:
+  path: "/images/springonetour/"
+  filename: "nyc_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour New York
 Title: SpringOne Tour New York

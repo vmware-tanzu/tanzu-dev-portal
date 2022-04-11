@@ -6,8 +6,12 @@ publish: true
 aliases:
     - /springone-tour/2022/toronto
 #location:
-#    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo_path: "/images/springonetour/toronto_cityscape.svg"
+#    - Vantage Venues
+#    - 150 King St W
+#    - Toronto, ON
+logo:
+  path: "/images/springonetour/"
+  filename: "toronto_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Toronto
 Title: SpringOne Tour Toronto
