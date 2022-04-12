@@ -253,7 +253,7 @@ minikube start --kubernetes-version='1.22.8' --memory='12g' --cpus='8'
 ```
 
 {{% info %}}
-In MacOS we tested with Docker as Minikube's [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). Your Docker daemon should have at least 8CPUs and 12GB of RAM allocated. These settings can be found in Docker -> Preferences -> Resources. If you hit issues with this driver, you could try `--driver='hyperkit'` to force the use of [HyperKit](https://github.com/moby/hyperkit) as Minikube's VM driver. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
+In MacOS we tested with Docker as Minikube's [VM driver](https://minikube.sigs.k8s.io/docs/drivers/). Your Docker daemon should have at least 8 CPUs and 12 GB of RAM allocated. These settings can be found in Docker -> Preferences -> Resources. If you hit issues with this driver, you could try `--driver='hyperkit'` to force the use of [HyperKit](https://github.com/moby/hyperkit) as Minikube's VM driver. To discover your VM driver, after you have run `minikube start` use the command `minikube profile list`.
 {{% /info %}}
 
 {{< /tab >}}
@@ -360,7 +360,7 @@ Minikube provides a network tunnel process which allows Kubernetes services of t
 {{< tab header="Windows" >}}
 
 {{% warning %}}
-Requires an Administrator Powershell.
+Requires an Administrator PowerShell.
 {{% /warning %}}
 
 ```powershell
