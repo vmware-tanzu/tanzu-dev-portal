@@ -14,6 +14,7 @@
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
+2FA
 2x2
 3D
 [23]G
