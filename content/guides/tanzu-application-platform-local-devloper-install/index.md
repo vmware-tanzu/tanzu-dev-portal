@@ -773,7 +773,7 @@ Retrieving installed packages...
 ```
 
 {{% warning %}}
-To reach a 'healthy' state, the Tanzu Application Platform needs the <strong>`minikube tunnel`</strong> process to be running as described in [Stage 2: Run Minikube](#stage-2-run-minikube).
+To reach a 'healthy' state, the Tanzu Application Platform needs the <strong>`minikube tunnel`</strong> process to be running with administrator privileges as described in [Stage 2: Run Minikube](#stage-2-run-minikube).
 {{% /warning %}}
 
 {{< /tab >}}
@@ -909,8 +909,6 @@ tanzu apps workload get tanzu-java-web-app
 The workload deployment has finished when the `Workload Knative Services` entry says `Ready` and the workload has a `URL` (as shown below).
 
 ```sh
-# tanzu-java-web-app: Ready
----
 lastTransitionTime: "2022-03-17T08:08:03Z"
 message: ""
 reason: Ready
@@ -956,7 +954,7 @@ Greetings from Spring Boot + Tanzu!
 ```
 
 {{% warning %}}
-Remember, this test can only work if your PC's <strong>`\etc\hosts`</strong> file has been edited correctly and the <strong>`minikube tunnel`</strong> process is running as described in [Stage 2](#stage-2-run-minikube).
+Remember, this test can only work if your PC's <strong>`\etc\hosts`</strong> file has been edited correctly and the <strong>`minikube tunnel`</strong> process is running with administrator privileges as described in [Stage 2](#stage-2-run-minikube).
 {{% /warning %}}
 
 {{< /tab >}}
