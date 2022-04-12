@@ -429,8 +429,10 @@
             },
             error: (resp) => {
                 let errText;
-                if(resp.responseJSON.message){
-                    errText = `Stripe payment setup issue: ${resp.responseJSON.message}`;
+                if(resp.responseJSON){
+                    if(resp.responseJSON.message){
+                        errText = `Stripe payment setup issue: ${resp.responseJSON.message}`;
+                    }
                 }else if(resp.responseText){
                     errText = `Stripe payment setup issue: ${resp.responseText}`;
                 }else{
