@@ -991,7 +991,7 @@ And that’s just the tip of the iceberg. The Tanzu Application Platform is desi
 
 ## Tearing Down
 
-Once you’re done with the Tanzu Application Platform for the day, you can shut it down with the command `minikube stop` and start it up again the next day with `minikube start`. Before you use the platform you will need to wait for it to become healthy as discussed in [Stage 4](#stage-4-install-the-tanzu-application-platform-onto-minikube) and ensured you have the `minikube tunnel` process running as discussed in [Stage 2](#stage-2-run-minikube). 
+Once you’re done with the Tanzu Application Platform for the day, you can shut it down with the command `minikube stop` and start it up again the next day with `minikube start`. Before you use the platform you will need to wait for it to become healthy as discussed in [Stage 4](#stage-4-install-the-tanzu-application-platform) and ensured you have the `minikube tunnel` process running as discussed in [Stage 2](#stage-2-run-minikube). 
 
 If you want to remove Tanzu Application Platform from your PC, the simplest approach is to use the `minikube delete` command. The instructions for [removing the `tanzu` cli are in the official docs][remove-tanzu-cli].
 
