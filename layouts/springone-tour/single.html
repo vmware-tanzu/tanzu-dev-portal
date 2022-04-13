@@ -47,7 +47,7 @@
             </div>
             <div class="modal-body">
                 <form class="form-inline">
-                    <input type="hidden" name="chargeValue" value="200" />
+                    <input type="hidden" name="chargeValue" value="150" />
                     <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
                     <div class="form-row">
                         <div class="col-sm-3 s1t-form-col">
@@ -269,6 +269,7 @@
                         </div>
                     </div>
                 </form>
+
                 <div class="success-banner" style="display: none">
                     <div class="row">
                         <div class="col">
@@ -428,17 +429,7 @@
                 });
             },
             error: (resp) => {
-                let errText;
-                if(resp.responseJSON){
-                    if(resp.responseJSON.message){
-                        errText = `Stripe payment setup issue: ${resp.responseJSON.message}`;
-                    }
-                }else if(resp.responseText){
-                    errText = `Stripe payment setup issue: ${resp.responseText}`;
-                }else{
-                    errText = 'Stipe payment setup issue: Unknown potential network related issue with Stripe initialization, please try a different network';
-                }
-                console.log(errText);
+                let errText = resp.responseJSON.message ? resp.responseJSON.message : resp.responseText ? resp.responseText : 'Potential network related issue with Stripe, please try a different network';
                 $('#card-element').text(errText);
             },
         });
@@ -453,10 +444,14 @@
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 if (value != '') {
+                    let totalAfterDiscount = resp.amount / 100;
                     $('.charge-label').text('Before discount:');
                     $('.discount-details').css('display', 'flex');
                     $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
-                    $('.discount-total').text(`$${resp.amount / 100}`);
+                    $('.discount-total').text(`$${totalAfterDiscount}`);
+                    if (totalAfterDiscount == 0) {
+                      $('input[name="chargeValue"]').val(totalAfterDiscount);
+                    }
                 } else {
                     $('.charge-label').text('Charge total:');
                     $('.discount-details').css('display', 'none');
@@ -509,7 +504,13 @@
             method: 'post',
             data: regForm.serialize(),
             success: (resp) => {
+              let hasDiscountApplied = $('.discount-details').is(':visible');
+              let isCompedPass = parseInt($('input[name="chargeValue"]').val()) == 0;
+              if (hasDiscountApplied && isCompedPass) {
+                registerUser(resp);
+              } else {
                 processStripePayment(resp);
+              }
             },
             error: (err) => {
                 errElement.text(`${err.responseText}`);
