@@ -17,18 +17,18 @@ aliases:
 - /guides/kubernetes/getting-started-with-vmware-tanzu-application-platform-beta-1-on-kind-part-2/
 - /guides/kubernetes/gs-tap-on-kind-pt2/
 - /guides/kubernetes/gs-tap-on-kind-pt1/
-level1: Building a Kubernetes Runtime
+level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 tanzu:
   label: tap
-  featured: true
+  featured: false
   featuredweight: 2
-  gettingstarted: true
+  gettingstarted: false
   gettingstartedweight: 2
 ---
 
 {{% callout %}} 
-This post is for getting started with Beta 1. On October 5th 2021, VMware Tanzu Application Platform Beta 2 was released. And since then, other Betas have been released. Get more information on Tanzu Application Platform [here](https://tanzu.vmware.com/application-platform). 
+This post is for getting started with Tanzu Application Platform **Beta 1**. For an updated guide on installing Tanzu Application Platform (not on KIND), see [this updated guide](/guides/tanzu-application-platform-gs). 
 {{% /callout %}}
 
 In my [previous post](/blog/getting-started-with-vmware-tanzu-application-platform-beta-1/) you were introduced to the individual parts that make up the VMware Tanzu Application Platform, and how they come together to build a powerful development platform. In this post, you will learn the install process that locally deploys this platform on [KIND](https://kind.sigs.k8s.io).

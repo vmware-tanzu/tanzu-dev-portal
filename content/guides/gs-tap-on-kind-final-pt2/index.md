@@ -12,15 +12,15 @@ team:
 - Tony Vetter
 date: '2021-09-16'
 lastmod: '2021-09-16'
-level1: Building a Kubernetes Runtime
+level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 alises:
 - /guides/kubernetes/gs-tap-on-kind-final-pt2
 tanzu:
   label: tap
-  featured: true
+  featured: false
   featuredweight: 3
-  gettingstarted: true
+  gettingstarted: false
   gettingstartedweight: 3
 ---
 

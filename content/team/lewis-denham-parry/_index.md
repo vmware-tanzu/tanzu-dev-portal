@@ -1,7 +1,7 @@
 ---
 name: Lewis Denham-Parry
 roles: ["guest"]
-skills: "Security"
+skills: ["Security"]
 location: "Cardiff, UK"
 
 # Social Media
@@ -15,14 +15,13 @@ instagram: ""
 youtube: ""
 ---
 
-Lewis works for [Control Plane](https://control-plane.io/) as Head of Training, helping others learn how to orchestrate 
-the ocean of containers using Kubernetes and securing their infrastructure by teaching how to 
-attack and defend Cloud Native infrastructure. He co-founded [Cloud Native Wales](https://cloudnativewales.io/), an initiative 
-to help people learn Cloud Native technologies and establish a community to support each other. 
-When he's not playing with tech, he's busy trying to act like an adult and spending time with his 
-family. Follow Lewis on his personal Twitter @denhamparry and Cloud Native Wales @cloudnativewal, 
-also check out his website at [denhamparry.co.uk](https://denhamparry.co.uk/).
+Lewis works for [Control Plane](https://control-plane.io/) as the Head of Training, orchestrating the ocean of containers with Kubernetes whilst defending them from piratical attacks (which is usually from himself).
 
+He co-founded [Cloud Native Wales](https://cloudnativewales.io/), an initiative 
+to help people learn Cloud Native technologies and establish a community to support each other. 
+When he's not playing with tech, he's busy trying to understand his children, trying to find a comfy chair to read a book or trying to find some snow to ski on. 
+
+Follow Lewis at, [@denhamparry](https://twitter.com/denhamparry), [@controlplaneio](https://twitter.com/controlplaneio), and [@cloudnativewal](https://twitter.com/cloudnativewal).
 
 <!--more-->
 

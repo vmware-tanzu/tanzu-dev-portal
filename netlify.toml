@@ -79,6 +79,12 @@
   conditions = {Role = ["user"]}
 
 [[redirects]]
+  from = "/developer/tv/dotnet-beyond/"
+  to = "/developer/tv/dotnet-beyond/0001/"
+  force = true
+  status = 200
+
+[[redirects]]
   from = "/developer/get-workshop/*"
   to = "/.netlify/functions/auth-start/:splat"
   force = true

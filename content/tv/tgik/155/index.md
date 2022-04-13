@@ -24,7 +24,7 @@ draft: "False"
 - 01:41:33 - Create new component from template
 - 01:53:38 - Summing up
 
-The live chat replay got cut disabled somehow! Sorry about that!
+The live chat replay got cut somehow! Sorry about that!
 
 Full notes at https://github.com/vmware-tanzu/tgik/blob/master/episodes/155/README.md.
 

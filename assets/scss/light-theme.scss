@@ -1,11 +1,19 @@
 footer.bg-dark,
 .td-outer,
+#beyond-main.td-main,
 body {
    background-color: white !important;
    color: #61717d !important;
 }
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
+}
+nav{
+    &.isOpen {
+        > .container {
+            background-color: white !important;
+        }
+    }
 }
 nav .nav-arrow {
   border: solid #61717d !important;
@@ -28,6 +36,7 @@ body .td-navbar {
 body .border-bottom {
   border-color: #d9e4ea !important;
 }
+
 .td-home .darken .dropdown-item:hover, .td-home .darken .dropdown-item:focus,
 nav .dropdown-item:hover, nav .dropdown-item:focus,
 #hero:not(.workshops-hero),
@@ -74,7 +83,13 @@ p code, li > code, table code,
 body p {
   color: #61717d !important;
 }
-
+.day.active, .agenda,
+#beyond-main .newsletter-outer {
+  background-color: #f4f8fa !important;
+}
+.day {
+  background: #ADBBC4 !important;
+}
  body .topic a,
  body .topic .text-white {
    background-color: #f4f8fa !important;
@@ -132,6 +147,7 @@ color: #49afd9 !important;
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
 }
+#beyond-hero p,
 #live-notify,
 body a.btn {
   color: white !important;
@@ -141,7 +157,7 @@ body a.btn {
    body .td-navbar .td-navbar-nav-hamburger .navbar-nav a[href*='/'] {
       color: #1d428a !important;
    }
-   body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
+   body .td-navbar #menu-toggle #menu-close .a {
       stroke: #61717d !important;
    }
 }
@@ -246,6 +262,11 @@ body.tv-episode #register .mktoForm select {
   box-shadow: none !important;
   background-color: white !important;
 }
+
+#mobile-nav {
+    background-color: white !important;
+}
+
 nav #theme-select {
   background-color: #ADBBC4 !important;
   
@@ -394,6 +415,30 @@ div.aside div.aside-content {
   &:nth-child(5) {
     background: #e2eaee;
   }
+}
+
+
+.nav.nav-tabs {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
+  
+  .nav-link.active {
+    border: 0;
+    color: #1d428a !important;
+    box-shadow: 0 2px 0px 0px #1d428a !important;  
+    margin-bottom: 0px;
+  }
+  .nav-link {
+    color: #61717d !important;
+    border: 0 !important;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.sponsor-container img {
+  filter: invert(1);
 }
 
 /* SYNTAX HIGHLIGHTING */

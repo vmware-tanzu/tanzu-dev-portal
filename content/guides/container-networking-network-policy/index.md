@@ -154,7 +154,7 @@ For now, all traffic will be allowed.
 
    # This GlobalNetworkPolicy uses Calico's CRD
    # (https://docs.projectcalico.org/v3.5/reference/calicoctl/resources/globalnetworkpolicy) to
-   # disable all traffic on namespace containing the label: value of netpol_deny_all: true. The only
+   # deactivate all traffic on namespace containing the label: value of netpol_deny_all: true. The only
    # exception is UDP (port 53) traffic, which is allowed.
    apiVersion: projectcalico.org/v3
    kind: GlobalNetworkPolicy
