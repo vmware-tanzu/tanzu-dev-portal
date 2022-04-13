@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div id="card-errors" class="s1t-form-col" role="alert"><p></p></div>
-                    <div class="form-row">
+                    <div id="card-container" class="form-row">
                         <div class="col-12 s1t-form-col">
                             <div id="card-element" class="stripe-card-element"></div>
                         </div>
@@ -436,6 +436,8 @@
     };
 
     const applyDiscounts = async (value) => {
+        $('#card-container').show();
+        $('input[name="chargeValue"]').val(150);
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
@@ -450,6 +452,8 @@
                     $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
                     $('.discount-total').text(`$${totalAfterDiscount}`);
                     if (totalAfterDiscount == 0) {
+                      subBtn.attr({ disabled: false, ['aria-disabled']: false });
+                      $('#card-container').hide();
                       $('input[name="chargeValue"]').val(totalAfterDiscount);
                     }
                 } else {
