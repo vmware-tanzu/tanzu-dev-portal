@@ -8,11 +8,7 @@
       {{ partial "navbar.html" . }}
     </header>
     <div class="container-fluid td-outer">
-      {{ if .Params.beyond }}
-        <div id="beyond-main" class="td-main">
-      {{ else }}
         <div class="td-main">
-      {{ end }}
         
         {{ block "main" . }}{{ end }}
 
