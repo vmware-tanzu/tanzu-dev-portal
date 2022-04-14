@@ -3,5 +3,7 @@ title: "ASP.NET Basics for Experts"
 description: ""
 topics:
 - 
-youtube_id: "SJH0YvKZ2RQ"
+youtube: "SJH0YvKZ2RQ"
+type: tv-episode
+Date: '2020-03-31'
 ---

@@ -3,5 +3,7 @@ title: "Simplifying Microservice Security with YARP"
 description: ""
 topics:
 - 
-youtube_id: "JlhoBji4OWc"
+youtube: "JlhoBji4OWc"
+type: tv-episode
+Date: '2020-03-31'
 ---

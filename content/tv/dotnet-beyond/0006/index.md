@@ -3,5 +3,7 @@ title: "Kubernetes Made Easy with VMware Tanzu Application Platform"
 description: ""
 topics:
 - 
-youtube_id: "yeknuF_WhBw"
+youtube: "yeknuF_WhBw"
+type: tv-episode
+Date: '2020-03-30'
 ---

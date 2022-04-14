@@ -3,5 +3,7 @@ title: "Mobile DevOps at Scale"
 description: ""
 topics:
 - 
-youtube_id: "oGd1x7fD5Uk"
+youtube: "oGd1x7fD5Uk"
+type: tv-episode
+Date: '2020-03-30'
 ---

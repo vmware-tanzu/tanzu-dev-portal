@@ -3,5 +3,7 @@ title: "The History of .NET"
 description: ""
 topics:
 - 
-youtube_id: "K15ualMsm1s"
+youtube: "K15ualMsm1s"
+type: tv-episode
+Date: '2020-03-30'
 ---

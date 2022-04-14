@@ -3,5 +3,7 @@ title: "Introducing MongoDB and .NET: SQL is Not the Only Way"
 description: ""
 topics:
 - 
-youtube_id: "4bBR6xJY0bQ"
+youtube: "4bBR6xJY0bQ"
+type: tv-episode
+Date: '2020-03-30'
 ---

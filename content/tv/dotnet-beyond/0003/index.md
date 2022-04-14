@@ -3,5 +3,7 @@ title: "Messaging for .NET Developers"
 description: ""
 topics:
 - 
-youtube_id: "9I0bTcF3Npw"
+youtube: "9I0bTcF3Npw"
+type: tv-episode
+Date: '2020-03-31'
 ---
