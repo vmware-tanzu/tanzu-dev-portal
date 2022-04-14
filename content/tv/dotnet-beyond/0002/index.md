@@ -6,4 +6,5 @@ topics:
 youtube: "IhpgoIjvQK8"
 type: tv-episode
 Date: '2020-03-30'
+episode: 0002
 ---
