@@ -428,7 +428,17 @@
                 });
             },
             error: (resp) => {
-                let errText = resp.responseJSON.message ? resp.responseJSON.message : resp.responseText ? resp.responseText : 'Potential network related issue with Stripe, please try a different network';
+                let errText;
+                if(resp.responseJSON){
+                    if(resp.responseJSON.message){
+                        errText = `Stripe payment setup issue: ${resp.responseJSON.message}`;
+                    }
+                }else if(resp.responseText){
+                    errText = `Stripe payment setup issue: ${resp.responseText}`;
+                }else{
+                    errText = 'Stipe payment setup issue: Unknown potential network related issue with Stripe initialization, please try a different network';
+                }
+                console.log(errText);
                 $('#card-element').text(errText);
             },
         });
