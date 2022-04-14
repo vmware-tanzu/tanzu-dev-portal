@@ -145,7 +145,7 @@ To learn more about Retrospectives and how to facilitate them, go [here](https:/
 - [Yesterday’s Weather](http://wiki.c2.com/?YesterdaysWeather)
 - [Planning Poker](https://en.wikipedia.org/wiki/Planning_poker)
 - Chapter 12 of [Extreme Programming Explained](https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained) by Kent Beck, Cynthia Andres
-- [ExtremeProgramming.org]([http://www.extremeprogramming.org/rules/iterationplanning.html](http://www.extremeprogramming.org/rules/iterationplanning.html))
+- [ExtremeProgramming.org](http://www.extremeprogramming.org/rules/iterationplanning.html)
 - [Agile Retrospectives - Making Good Teams Great](https://pragprog.com/titles/dlret/agile-retrospectives/)  by Esther Derby and Diana Larsen, Foreword by Ken Schwaber
 - [How to Run a Really Good Retrospective](https://tanzu.vmware.com/content/blog/how-to-run-a-really-good-retrospective) - Blog Post by Nicola Rushton
 - [Measure Success in Agile Retrospectives](https://tanzu.vmware.com/content/videos/measure-success-in-agile-retrospectives-enrico-teotti) – Video by Enrico Teotti
