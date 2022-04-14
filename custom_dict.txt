@@ -11,9 +11,6 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
-<<<<<<< HEAD
-=======
->>>>>>> 6db7607c69922802ae33ef5abc8804aa384f99e9
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
@@ -483,6 +480,7 @@ debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
 [Dd]eduplicate
+defence
 DEK(s)?
 delayDuration
 Deleuze
@@ -828,6 +826,7 @@ Greenaway
 Greenplum
 Groundbreaker
 Groupon
+GRPC
 gRPC(-based)?
 Grygleski
 Grzejszczak
@@ -1637,6 +1636,7 @@ Rakuten
 RBAC(-enabled)?
 RCE
 RDBMS
+RDMS
 reachability
 reactively
 ReactiveUI
