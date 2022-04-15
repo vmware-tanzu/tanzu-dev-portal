@@ -15,6 +15,11 @@ menu:
     params:
       split: left
     weight: 4
+aliases:
+- /topics/agile
+- /guides/python
+- /guides/spring
+- /tags/.net
 ---
 
 Your language, framework, data services, and practices are all tools in your toolbox. Understanding how they work and what their strengths are will yield tremendous results.

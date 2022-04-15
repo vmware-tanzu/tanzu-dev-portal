@@ -51,7 +51,7 @@ You will need to create the install directory, download the `tar` file from the 
 2. Download the `tanzu` CLI package from the Tanzu Network. This download command can be found within the [`tanzu-cli`](https://network.pivotal.io/products/tanzu-application-platform/#/releases/992949/file_groups/5804) package of Tanzu Application Platform on the Tanzu Network. You may need to accept a EULA if this is your first time downloading this package. It can also be downloaded directly from the GUI as well.
 
     ```sh
-    pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='0.3.0' --product-file-id=1080177
+    pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.1.0-build.17' --product-file-id=1190780
     ```
 
 3. Extract the `tar` file into the install directory created in the previous step.
