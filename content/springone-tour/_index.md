@@ -8,6 +8,8 @@ menu:
         parent: "community"
         weight: 4
 notwitchicon: true
+aliases:
+- /tv/springone-tour/0016/
 # Text that appears on show index page under show name
 # Text that appears highlighted in green on show index page above show name
 <!-- teaser: Live Every Month -->

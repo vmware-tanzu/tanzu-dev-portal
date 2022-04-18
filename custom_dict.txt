@@ -14,6 +14,7 @@
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
+2FA
 2x2
 3D
 [23]G
@@ -161,7 +162,7 @@ Awaitility
 aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
-backpressure
+[Bb]ackpressure
 Baeldung('s)?
 Bagher
 Bahhh
@@ -479,6 +480,7 @@ debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
 [Dd]eduplicate
+defence
 DEK(s)?
 delayDuration
 Deleuze
@@ -824,6 +826,7 @@ Greenaway
 Greenplum
 Groundbreaker
 Groupon
+GRPC
 gRPC(-based)?
 Grygleski
 Grzejszczak
@@ -988,6 +991,7 @@ JavaBean
 JavaBeanAccessorMethodAuthorizer
 JavaEE
 JavaOne
+[Jj]avascript
 JavaWorld
 JAX-RS
 JBaruch
@@ -1632,6 +1636,7 @@ Rakuten
 RBAC(-enabled)?
 RCE
 RDBMS
+RDMS
 reachability
 reactively
 ReactiveUI
@@ -1740,6 +1745,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+RxJS
 Ryzen
 [sS]3
 SaaS

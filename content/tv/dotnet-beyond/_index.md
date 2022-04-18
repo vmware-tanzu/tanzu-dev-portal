@@ -1,7 +1,6 @@
 ---
 title: ".NET Beyond"
 type: "tv-show"
-streaming: "twitch"
 id: "dotnet-beyond"
 image: "dotnet-beyond.png"
 og_image: "/images/og/TanzuTV-Dotnet-Beyond.png"
