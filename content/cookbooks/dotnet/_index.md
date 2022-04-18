@@ -1,6 +1,6 @@
 +++
 date = "2017-04-21T15:28:50-06:00"
-title = ".Net Cookbook"
+title = ".NET Cookbook"
 weight = 1
 layout = "top"
 description = "Useful tips for getting started with .NET"

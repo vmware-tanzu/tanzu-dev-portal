@@ -5,6 +5,7 @@ label: dotnet
 video: true
 youtube: Dw5aRqJBca8
 show: dotnet-wild
+event: dotnet-beyond
 menu:
   main:
     parent: sections

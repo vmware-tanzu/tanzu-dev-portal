@@ -132,6 +132,30 @@
                     </div>
                 {{ end }}
 
+                <!-- Optional Event -->
+                {{ if .Params.event }}
+                    {{ $eps := slice }}
+                    {{ $alleps := where .Site.Pages "Section" "tv" }}
+                    {{ $id := .Params.event }}
+                    {{ range $alleps }}
+                        {{ if eq .Parent.Params.id $id }}
+                            {{ $eps = $eps | append . }}
+                        {{ end }}
+                    {{ end }}
+
+                    {{ $showtitle := (index $eps 0).Parent.Title }}
+
+                    <div class="container px-0 mb-5 shows">
+                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
+                        <div class='row d-flex justify-content-between mb-5 episodes'>
+                            {{ range first 3 $eps }}
+                                {{ $rendered = $rendered | append . }}
+                                {{ partial "episode-card.html" . }}
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+
                 <!-- Videos -->
                 {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $videos) 0 }}
@@ -169,7 +193,7 @@
                         {{ $showlatest = $showlatest | append . }}
                     {{ end }}
                 {{ end }}
-                {{ if gt (len $showlatest) 0 }}
+                {{ if ge (len $showlatest) 3 }}
                 <div class='container py-3 py-lg-5'>
                     <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Latest Content</h2></div>
                     <div class='row'>
