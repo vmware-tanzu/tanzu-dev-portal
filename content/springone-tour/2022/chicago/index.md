@@ -326,7 +326,7 @@ hide_newsletter: true
 </div>
 <div id="cloud-native-architectures" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Cloud Native Architectures</div>
-    <p>Nate and Layla talk about architecture. And stuff like this: By now your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservices anyway? How do you deal with massively distributed applications? How can event storming fix the gap between your business problems and domain model?</p>
+    <p>By now your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservices anyway? How do you deal with massively distributed applications? What are the 12 Factors? How do you migrate the monolith to the valley beyond? Listen in as Layla and Nate explore the pitfalls and possiblities of cloud native architectures!</p>
 </div>
 <div id="platform-as-a-product" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Platform as a Product</div>
