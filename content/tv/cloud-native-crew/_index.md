@@ -11,7 +11,7 @@ menu:
         parent: "tv"
         weight: 4
 # Text that appears on show index page under show name
-description: Explore all things cloud native every other Thursday at 6 PM PT/9 PM ET!
+description: Explore all things cloud native every other Thursday at 6 PM PT/9 PM ET
 # Text that appears highlighted in green on show index page above show name
 teaser: Live every other Thursday at 6 PM PT/9 PM ET!
 # Text that shows on show page under show name
