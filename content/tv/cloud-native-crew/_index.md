@@ -13,7 +13,7 @@ menu:
 # Text that appears on show index page under show name
 description: Explore all things cloud native every other Thursday at 6 PM PT/9 PM ET!
 # Text that appears highlighted in green on show index page above show name
-teaser: Cloud Native Crew
+teaser: Live every other Thursday at 6 PM PT/9 PM ET!
 # Text that shows on show page under show name
 #subheader: Cloud Native Crew
 # Any content below here shows up above episode index
