@@ -17,25 +17,18 @@ Description: SpringOne Tour Chicago
 Title: SpringOne Tour Chicago
 LinkTitle: Chicago
 city_name: Chicago
-meetup: As a part of the citywide takeover, Spring Developer Advocates <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> and <a href="/developer/team/josh-long" target="_blank">Josh Long</a> will be presenting their talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
+meetup: As a part of the citywide takeover, Spring Developer Advocate <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> will be presenting his talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
 sponsors:
     - name: Rollbar
       sponsorship_level: gold
       logo_path_dark: "/images/springonetour/sponsors/logo-color-rollbar.svg"
       logo_path_light: "/images/springonetour/sponsors/logo-white-rollbar.svg"
       url: https://rollbar.com/
-giveback:
-  title: <a href="https://www.chicagosfoodbank.org/volunteer/">Repacking Volunteer Session</a> on April 28th from 9AM-11:45AM CT.
-  description: The SpringOne Tour Team will be partnering with the Greater Chicago Food Depository on April 28 to help repack bulk products into family-sized portions, sort and categorize donated food items, and glean fresh produce items and bread.
-  url: https://www.chicagosfoodbank.org/volunteer/
-  logo_path_dark: "/images/springonetour/chicago_giveback_color.png"
-  logo_path_light: "/images/springonetour/chicago_giveback_light.png"
 contact: springone@vmware.com
 contact_text: the SpringOne Tour Team
 code_of_conduct: true
 hide_newsletter: true
 ---
-
 
 <div class="day-toggle row mt-5">
     <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
@@ -52,16 +45,6 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">9:00 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#cloud-native-architectures">Cloud Native Architectures</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#nate-schutta">Nate Schutta</a></h3>
-            <h3 class="h4 py-0"><a class="lightbox" href="#layla-porter">Layla Porter</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:40 AM CDT</div>
-        <div class="talk-title col-5 h4">
             <a class="lightbox" href="#omgdevsecopsbbq">OMGDEVSECOPSBBQ</a>
         </div>
         <div class="name col-3">
@@ -69,7 +52,16 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:25 AM CDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#cloud-native-architectures">Cloud Native Architectures</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#nate-schutta">Nate Schutta</a></h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">10:10 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#login-page">Do the Login Page First</a>
         </div>
@@ -78,12 +70,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:40 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:00 AM CDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:15 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#testing-love-hate">Testing: Love, Hate, Love</a>
         </div>
@@ -92,7 +84,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM CDT</div>
+        <div class="time col-4 pl-0 h4">12:00 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#change-data-capture">Change Data Capture: A Primer</a>
         </div>
@@ -101,36 +93,13 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:10 PM CDT</div>
+        <div class="time col-4 pl-0 h4">12:35 PM CDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:10 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#k8-native-java">Kubernetes-Native Java</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#josh-long">Josh Long</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:10 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#sidecars-with-spring">Sidecars with Spring on TAP</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#spencer-gibb">Spencer Gibb</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:50 PM CDT</div>
-        <div class="talk-title col-5 h4">Break</div>
-        <div class="name col-3"></div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:10 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#intro-k8s">Intro to Kubernetes</a>
         </div>
@@ -139,32 +108,32 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:30 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:15 PM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#who-should-use-k8s">Who Should Use Kubernetes?</a>
+            <a class="lightbox" href="#k8-native-java">Kubernetes Native Java</a>
         </div>
         <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#whitney-lee">Whitney Lee</a></h3>
+            <h3 class="h4 py-0"><a class="lightbox" href="#josh-long">Josh Long</a></h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:50 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
+        <div class="talk-title col-5 h4">Break</div>
+        <div class="name col-3"></div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">3:40 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#canz-u-tanzu">Canz U Tanzu?</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a></h3>
-            <h3 class="h4 py-0"><a class="lightbox" href="#leigh-capili">Leigh Capili</a></h3>
+            <h3 class="h4 py-0"><a class="lightbox" href="#dashaun-carter">DaShaun Carter</a></h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:10 PM CDT</div>
-        <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
-        <div class="name col-3"></div>
-    </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">5:00 PM CDT</div>
-        <div class="talk-title col-5 h4">Networking reception</div>
+        <div class="time col-4 pl-0 h4">4:20 PM CDT</div>
+        <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
         <div class="name col-3"></div>
     </div>
 </div>
@@ -179,15 +148,6 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">9:00 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#platform-as-a-product">Platform as a Product</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#michael-cote">Michael Coté</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:40 AM CDT</div>
-        <div class="talk-title col-5 h4">
             <a class="lightbox" href="#dependency-injection">More Maintainable, Testable Applications with Dependency Injection in Spring Boot</a>
         </div>
         <div class="name col-3">
@@ -198,21 +158,21 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:40 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:45 AM CDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#spring-cloud-gateway-recipes">Spring Cloud Gateway Recipes</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#spencer-gibb">Spencer Gibb</a></h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">10:30 AM CDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:00 AM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#jonatan-ivanov">Jonatan Ivanov</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM CDT</div>
+        <div class="time col-4 pl-0 h4">10:45 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#graphql">Getting Started with GraphQL in Spring Boot</a>
         </div>
@@ -221,45 +181,30 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:20 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:30 AM CDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#platform-as-a-product">Platform as a Product</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#michael-cote">Michael Coté</a></h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">12:35 PM CDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:20 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#bootful-k8s-operators">Bootiful Kubernetes Operators</a>
+            <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
         <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#tiffany-jernigan">Tiffany Jernigan</a></h3>
-            <h3 class="h4 py-0"><a class="lightbox" href="#josh-long">Josh Long</a></h3>
+            <h3 class="h4 py-0"><a class="lightbox" href="#jonatan-ivanov">Jonatan Ivanov</a></h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:20 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
-        <div class="talk-title col-5 h4">Break</div>
-        <div class="name col-3"></div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:40 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#knative">What is Knative Serving?</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#whitney-lee">Whitney Lee</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:15 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#progressive-delivery">Doing Progressive Delivery with Your Team</a>
         </div>
@@ -267,16 +212,34 @@ hide_newsletter: true
             <h3 class="h4 py-0"><a class="lightbox" href="#leigh-capili">Leigh Capili</a></h3>
         </div>
     </div>
-    <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:40 PM CDT</div>
-        <div class="talk-title col-5 h4">Q&A</div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">3:00 PM CDT</div>
+        <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a></h3>
+        </div>
+    </div>
+    <div class="row py-3 flex-nowrap">
+        <div class="time col-4 pl-0 h4">4:25 PM CDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#knative">What is Knative Serving?</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#whitney-lee">Whitney Lee</a></h3>
+        </div>
     </div>
 </div>
 
 <div id="city-takeover" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Responsible Microservices</div>
-    <p>Hi, Spring fans! Spring Framework 6 and Spring Boot 3 imply a new baseline, bringing the Spring ecosystem in line with the needs of tomorrow‘s workloads. A huge part of that is the new baselines of Jakarta EE and Java 17 and the new support for GraalVM native images, based on the work of Spring Native. Join Spring Developer Advocates Josh Long (<a href="https://twitter.com/@starbuxman" target="_blank">@starbuxman</a>) and Dashaun Carter (<a href="https://twitter.com/@dashaun" target="_blank">@dashaun</a>) as we explore the implications of this exciting new technology for your Spring Boot applications and services.</p>
+    <p>Hi, Spring fans! Spring Framework 6 and Spring Boot 3 imply a new baseline, bringing the Spring ecosystem in line with the needs of tomorrow‘s workloads. A huge part of that is the new baselines of Jakarta EE and Java 17 and the new support for GraalVM native images, based on the work of Spring Native. Join Spring Developer Advocate Dashaun Carter (<a href="https://twitter.com/@dashaun" target="_blank">@dashaun</a>) as he explores the implications of this exciting new technology for your Spring Boot applications and services.</p>
     <p>We‘ll look at things like using the GraalVM AOT compiler to produce native images that take up a markedly smaller memory footprint and start up in 10s or maybe hundreds of milliseconds. We‘ll look at how to containerize those workloads. We‘ll look at how to tame the GraalVM compiler when something goes wrong. And we‘ll look at how to teach GraalVM about your custom workloads.</p>
     <p>For more info on the meetup including how to register, please visit: <a href="https://www.meetup.com/ChicagoJUG/events/283784010/" target="_blank">https://www.meetup.com/ChicagoJUG/events/283784010/</a>.</p>
 </div>
@@ -326,7 +289,7 @@ hide_newsletter: true
 </div>
 <div id="cloud-native-architectures" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Cloud Native Architectures</div>
-    <p>By now your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservices anyway? How do you deal with massively distributed applications? What are the 12 Factors? How do you migrate the monolith to the valley beyond? Listen in as Layla and Nate explore the pitfalls and possiblities of cloud native architectures!</p>
+    <p>Nate and Layla talk about architecture. And stuff like this: By now your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservices anyway? How do you deal with massively distributed applications? How can event storming fix the gap between your business problems and domain model?</p>
 </div>
 <div id="platform-as-a-product" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Platform as a Product</div>
@@ -368,6 +331,10 @@ hide_newsletter: true
     <div class="h3 text-white">Testing: Love, Hate, Love</div>
     <p>“TDD leads to a great design,” they said. “Mocking is bad,” they said. “Integration testing is slow,” they said. “Testable architecture to the rescue,” they said. “If you don’t test, don’t call yourself a developer,” they said. “Code coverage must be 100%,” they said. And so on and so forth.</p>
     <p>In this talk, we’ll tackle some of the testing gotchas. There will be live coding, architecture rants, some slides, and (hopefully) much fun. Both senior and junior developers should find something interesting in that testing example.</p>
+</div>
+<div id="spring-cloud-gateway-recipes" class="talk-modal p-md-5 p-3">
+    <div class="h3 text-white">Spring Cloud Gateway Recipes</div>
+    <p>Spring Cloud Gateway is a developer-centric API gateway. An API gateway is an abstraction over a distributed systems architecture. The API Gateway is a natural place to provide cross-cutting concerns such as security, resiliency, and transformation. In this talk, we'll discuss practical use cases that you may encounter. Some recipes we'll discuss include: securing gateway with OAuth 2 and Spring Security and relaying tokens to services, rate-limiting using Spring Security and the logged-in user, implementing a backend for frontend using a scatter-gather technique, and more.</p>
 </div>
 
 <div id="cora-iberkleid" class="speaker-modal col-lg-9 col-12 p-md-5 p-3">
