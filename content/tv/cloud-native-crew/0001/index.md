@@ -1,5 +1,6 @@
 ---
 Date: '2022-04-07T18:00:00-07:00'
+PublishDate: '2020-04-21T00:00:00-07:00'
 Description: "Pilot"
 aliases:
 - /tv/cloud-native-crew/1
