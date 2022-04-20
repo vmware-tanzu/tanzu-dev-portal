@@ -265,6 +265,7 @@ calico-kube-controller
 calicoctl
 callout
 Campuzano
+Canz
 Cao
 Capili
 Carducci
@@ -1138,6 +1139,7 @@ KUBECTL
 kubectx
 [kK]ubelet(-probe)?
 kubelet(s)?
+Kuberneato
 Kubernetes-compliant
 kubernetes-kms
 kubernetes-master
