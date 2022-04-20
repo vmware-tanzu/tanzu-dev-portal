@@ -13,5 +13,17 @@
             </div>
         {{ end }}
     {{ printf "<div class=\"upcoming col-lg-6 col-12 display-none\" data-episode-date=\"%s\">" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTML }}</div>
-    <span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;</span>
+    <!-- Helper method for countdown-->
+    <script>
+        var currentDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
+        var epDate = new Date({{ printf "%s" (.Date.Format "2006-01-02T15:04:05-07:00") }});
+        var diffTime = epDate - currentDate;
+        var diffDays = Math.floor(diffTime / (1000 * 3600 * 24));
+        if (diffTime > 0) {
+            var whenLive = "in " + diffDays + " days";
+            if (diffDays == 0) whenLive = "today";
+            document.write('<span class="countdown btn btn-small mb-4 mt-2">Live&nbsp;' + whenLive);
+        }
+    </script>
+    
 </a>
