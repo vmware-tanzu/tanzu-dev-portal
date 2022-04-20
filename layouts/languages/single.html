@@ -47,16 +47,14 @@
 
                 {{ if eq .Params.label "dotnet" }}
                 <!-- .NET Steeltoe Banner -->
-                    <div class="container my-4">
                         <div class="row">
-                            <a href="https://steeltoe.io/" class="w-100 py-3">
-                                <div class="col-12 text-center d-flex align-items-center justify-content-center" style="height: 75px; font-size: 3vh; color: white; background-image: linear-gradient(to right, #00376e , #2268ad, #00376e);">
+                            <a href="https://steeltoe.io/" class="w-100 py-0">
+                                <div class="col-12 text-center d-flex align-items-center justify-content-center" style="height: 75px; font-size: 3vh; color: white; background-color: #324f61;">
                                     <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
                                     Get Started With Steeltoe
                                 </div>
                             </a>
                         </div>
-                    </div>
                 {{ end }}
 
                 <!-- Track what pieces of content are rendered so they're not shown in latest content -->
