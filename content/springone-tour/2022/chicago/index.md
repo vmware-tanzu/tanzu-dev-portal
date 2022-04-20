@@ -285,10 +285,9 @@ hide_newsletter: true
 </div>
 <div id="change-data-capture" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Change Data Capture: A Primer</div>
-    <p>How will Change Data Capture (CDC) help transform your enterprise data architecture? What is CDC for? Is it for
-        everyone? Let's tackle this and more in this lightning talk. This talk will provide a peek into the the nature
-        and intention of this this architectural concept, but also some frameworks that let us take advantage of it
-        now.</p>
+    <p>How will change data capture (CDC) help transform your enterprise data architecture? What *is* CDC for? Is it for
+        everyone? Let's tackle this and more in this Lightning Talk. This talk will provide a peek into the nature and
+        intention of this architectural concept, but also some frameworks that let us take advantage of it now.</p>
 </div>
 <div id="k8-native-java" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Kubernetes-Native Java</div>
@@ -331,8 +330,8 @@ hide_newsletter: true
 <div id="cloud-native-architectures" class="talk-modal p-md-5 p-3">
     <div class="h3 text-white">Cloud Native Architectures</div>
     <p>By now, your organization has planted a flag in “the Cloud” and it is up to you to figure out just what that
-        means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservices
-        anyway? How do you deal with massively distributed applications? How can event storming fix the gap between your
+        means to your application portfolio. Should everything be a microservice? Wait, what *is* a microservice anyway?
+        How do you deal with massively distributed applications? How can event storming fix the gap between your
         business problems and domain model?</p>
 </div>
 <div id="platform-as-a-product" class="talk-modal p-md-5 p-3">
