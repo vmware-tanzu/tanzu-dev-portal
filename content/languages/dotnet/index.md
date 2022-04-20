@@ -2,8 +2,6 @@
 title: .NET
 herotitle: Welcome to .NET at VMware
 label: dotnet
-video: true
-youtube: Dw5aRqJBca8
 show: dotnet-wild
 event: dotnet-beyond
 menu:
