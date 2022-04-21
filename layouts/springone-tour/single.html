@@ -1,9 +1,9 @@
 {{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
+"https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := .Params.isRegOpen }}
 
 <style>
     #hero.springone-tour-event-hero .container-sm {
-        background-image: url('{{ .Params.logo.path | relURL }}{{ .Params.logo.filename }}');
+        background-image: url('{{ "/images/springonetour/" | relURL }}{{ .Params.logo_filename }}');
     }
 </style>
 
@@ -296,7 +296,15 @@
                     city during the week, everywhere from executive events to meetups. {{ if not $isRegOpen }} Stay tuned more details.{{ end }}
                 </p>
 
-                {{ .Content }} {{ if isset .Params "meetup" }}
+                {{ if $isRegOpen }}
+                  <div class="day-toggle row mt-5">
+                    <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
+                    <h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h5>
+                  </div>
+                  {{ .Content }}
+                {{ end }}
+
+                {{ if isset .Params "meetup" }}
                 <div id="meetup">
                     <h3 class="mt-5">Meetup</h3>
                     <div class="row align-items-center">
@@ -345,7 +353,7 @@
             <div class="col-lg-9 col-12 px-0">
                 <p>
                     Questions?
-                    <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a>
+                    <a href="mailto:springone@vmware.com">Contact the SpringOne Tour Team</a>
                     &bullet;
                     <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a>
                 </p>
@@ -363,6 +371,8 @@
         </div>
     </div>
 </section>
+
+{{ partial "s1t-speakers-talks.html" . }}
 
 {{ if $isRegOpen }}
 <script>

@@ -7,16 +7,11 @@ aliases:
     - /springone-tour/2022/seattle
 #location:
 #    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo:
-  path: "/images/springonetour/"
-  filename: "seattle_cityscape.svg"
+logo_filename: "seattle_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Seattle
 Title: SpringOne Tour Seattle
 LinkTitle: Seattle
 city_name: Seattle
-contact: springone@vmware.com
-contact_text: the SpringOne Tour Team
-code_of_conduct: true
 hide_newsletter: true
 ---
