@@ -61,7 +61,7 @@ hide_newsletter: true
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#dan-veda">Dan Veda</a>
+                <a class="lightbox" href="#dan-vega">Dan Vega</a>
             </h3>
         </div>
     </div>
