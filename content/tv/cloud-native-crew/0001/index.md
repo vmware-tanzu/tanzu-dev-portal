@@ -15,7 +15,7 @@ hosts:
 - Josh Long
 lastmod: '2022-4-19'
 minutes: 60
-title: "Pilot"
+title: "Pilot, with Rob Rose"
 truncate: ''
 twitch: vmwaretanzu
 youtube: "PzFp7_6heaY"

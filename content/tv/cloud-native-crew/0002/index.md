@@ -4,20 +4,20 @@ PublishDate: '2020-04-21T00:00:00-07:00'
 Description: "With guest Matthew Campbell, Solutions Architect for Application Modernization at VMware Tanzu"
 aliases:
 - /tv/cloud-native-crew/2
-draft: false
-episode: '2'
-explicit: 'no'
-guests:
+  draft: false
+  episode: '2'
+  explicit: 'no'
+  guests:
 - Matthew Campbell
-hosts:
+  hosts:
 - Cora Iberkleid
 - DaShaun Carter
 - Josh Long
-lastmod: '2022-4-21'
-minutes: 60
-title: "Episode 2, with Matthew Campbell"
-truncate: ''
-twitch: vmwaretanzu
-youtube: ""
-type: tv-episode
+  lastmod: '2022-4-21'
+  minutes: 102
+  title: "Episode 2, with Matthew Campbell"
+  truncate: ''
+  twitch: vmwaretanzu
+  youtube: "1vxy4lZWHd0"
+  type: tv-episode
 ---
