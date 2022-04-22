@@ -14,10 +14,10 @@ hosts:
 - DaShaun Carter
 - Josh Long
 lastmod: '2022-4-21'
-minutes: 60
+minutes: 102
 title: "Episode 2, with Matthew Campbell"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "1vxy4lZWHd0"
 type: tv-episode
 ---
