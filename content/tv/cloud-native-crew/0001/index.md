@@ -14,7 +14,7 @@ hosts:
 - DaShaun Carter
 - Josh Long
 lastmod: '2022-4-19'
-minutes: 60
+minutes: 65
 title: "Pilot, with Rob Rose"
 truncate: ''
 twitch: vmwaretanzu
