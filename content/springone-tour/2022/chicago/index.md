@@ -189,6 +189,16 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
         <div class="talk-title col-5 h4">
+            Introducing Tanzu Vanguard
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0">Brian Chang</h3>
+            <h3 class="h4 py-0">Cami Hough</h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
+        <div class="talk-title col-5 h4">
             <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
         <div class="name col-3">
