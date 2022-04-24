@@ -32,7 +32,7 @@
                         <span id="register-btn-text">Register Now</span>
                     </button>
                     {{ else if $isRegOver }}
-                    <p class="mb-0">Registration is now closed.</p>
+                    <p class="mt-5 mb-0">Registration is now closed.</p>
                     {{ else }}
                     <p class="mt-0 mb-0">Stay tuned for more details!</p>
                     {{ end }}
@@ -417,7 +417,7 @@
             url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
             type: 'post',
             headers: {'Content-Type': 'application/json'},
-            data: JSON.stringify({city: '{{ $cityNameLowercase }}',cityDisplayName: '{{ .Params.city_name }}'}),
+            data: JSON.stringify({city: '{{ $cityNameLowercase }}', cityDisplayName: '{{ .Params.city_name }}'}),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
