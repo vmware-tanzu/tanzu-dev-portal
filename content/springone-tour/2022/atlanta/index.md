@@ -7,16 +7,11 @@ aliases:
     - /springone-tour/2022/atlanta
 #location:
 #    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo:
-  path: "/images/springonetour/"
-  filename: "atlanta_cityscape.svg"
+logo_filename: "atlanta_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Atlanta
 Title: SpringOne Tour Atlanta
 LinkTitle: Atlanta
 city_name: Atlanta
-contact: springone@vmware.com
-contact_text: the SpringOne Tour Team
-code_of_conduct: true
 hide_newsletter: true
 ---
