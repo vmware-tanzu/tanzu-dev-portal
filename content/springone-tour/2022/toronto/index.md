@@ -84,9 +84,7 @@ hide_newsletter: true
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#spring-native">Spring Native By Example</a>
-        </div>
+        <div class="talk-title col-5 h4">Spring Native By Example</div>
         <div class="name col-3">
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#dashaun-carter">DaShaun Carter</a>
@@ -134,9 +132,14 @@ hide_newsletter: true
             </h3>
         </div>
     </div>
-    <div class="row py-3 flex-nowrap">
+    <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">4:30 PM CDT</div>
         <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
+        <div class="name col-3"></div>
+    </div>
+    <div class="row py-3 flex-nowrap">
+        <div class="time col-4 pl-0 h4">5:00 PM CDT</div>
+        <div class="talk-title col-5 h4">Networking Reception</div>
         <div class="name col-3"></div>
     </div>
 </div>
