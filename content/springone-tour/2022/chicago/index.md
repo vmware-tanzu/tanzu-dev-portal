@@ -167,7 +167,7 @@ hide_newsletter: true
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:10 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
@@ -176,7 +176,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:45 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:55 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#progressive-delivery">Doing Progressive Delivery with Your Team</a>
         </div>
@@ -185,12 +185,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:30 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:40 PM CDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:50 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:00 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
         </div>
@@ -199,7 +199,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:55 PM CDT</div>
+        <div class="time col-4 pl-0 h4">4:05 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#knative">What is Knative Serving?</a>
         </div>
