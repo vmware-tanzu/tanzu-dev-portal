@@ -66,16 +66,7 @@ hide_newsletter: true
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:15 AM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#testing">Testing: Love, Hate, Love</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:20 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#change-data-capture">Change Data Capture: A Primer</a>
         </div>
@@ -84,13 +75,13 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:35 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:55 AM CDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:00 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#k8s-intro">Intro to Kubernetes</a>
         </div>
@@ -99,21 +90,21 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:15 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:45 PM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#k8s-native-java">Kubernetes Native Java</a>
+            <a class="lightbox" href="#k8s-native-java">Kubernetes-Native Java</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#josh-long">Josh Long</a></h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:50 PM CDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:40 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:10 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#canz-u-tanzu">Canz U Tanzu?</a>
         </div>
@@ -123,7 +114,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:20 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:50 PM CDT</div>
         <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
         <div class="name col-3"></div>
     </div>
@@ -139,12 +130,10 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">9:00 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#dependency-injection">More Maintainable, Testable Applications with Dependency
-                Injection in Spring Boot</a>
+            <a class="lightbox" href="#tdd">TDD and the Terminator — An Introduction to Test Driven Development</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a>
                 <a class="lightbox" href="#layla-porter">Layla Porter</a>
             </h3>
         </div>
@@ -164,16 +153,7 @@ hide_newsletter: true
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:45 AM CDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#graphql">Getting Started with GraphQL in Spring Boot</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#dan-vega">Dan Vega</a></h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:30 AM CDT</div>
+        <div class="time col-4 pl-0 h4">10:50 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#platform-as-a-product">Platform as a Product</a>
         </div>
@@ -182,22 +162,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:35 PM CDT</div>
+        <div class="time col-4 pl-0 h4">11:55 AM CDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
-        <div class="talk-title col-5 h4">
-            Introducing Tanzu Vanguard
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0">Brian Chang</h3>
-            <h3 class="h4 py-0">Cami Hough</h3>
-        </div>
-    </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:30 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:10 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
@@ -206,7 +176,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:15 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:55 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#progressive-delivery">Doing Progressive Delivery with Your Team</a>
         </div>
@@ -215,12 +185,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:40 PM CDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:00 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
         </div>
@@ -229,7 +199,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:25 PM CDT</div>
+        <div class="time col-4 pl-0 h4">4:05 PM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#knative">What is Knative Serving?</a>
         </div>
