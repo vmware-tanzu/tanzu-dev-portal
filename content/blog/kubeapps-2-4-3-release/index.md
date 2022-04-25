@@ -61,7 +61,7 @@ The process of deploying Carvel and/or Flux packages from the Kubeapps UI and ma
 
 #### Deploy and Manage Carvel Packages with Kubeapps 
 
-_Check out this step-by-step guide to[ ](https://github.com/vmware-tanzu/kubeapps/blob/main/docs/tutorials/managing-carvel-packages.md)learn how to [manage Carvel packages with Kubeapps](https://github.com/vmware-tanzu/kubeapps/blob/main/docs/tutorials/managing-carvel-packages.md). _
+_Check out this step-by-step guide to[ ](https://github.com/vmware-tanzu/kubeapps/blob/main/docs/tutorials/managing-carvel-packages.md)learn how to [manage Carvel packages with Kubeapps](https://github.com/vmware-tanzu/kubeapps/blob/main/docs/tutorials/managing-carvel-packages.md)._
 
 [Carvel](https://carvel.dev/) offers a set of tools that help you build and configure applications for their deployment on Kubernetes. To enable the consumption of Carvel packages from the Kubeapps UI, you must make some configurations first. 
 
