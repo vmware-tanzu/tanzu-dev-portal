@@ -56,7 +56,7 @@
             </div>
             <div class="modal-body">
                 <form class="form-inline">
-                    <input type="hidden" name="amountPaid"/>
+                    <input type="hidden" name="amountPaid" value="0"/>
                     <input type="hidden" name="city" value="{{ $cityNameLowercase }}"/>
                     <div class="form-row">
                         <div class="col-sm-3 s1t-form-col">
@@ -395,7 +395,7 @@
     const regForm = $('#s1t-register form');
     const countryInput = $('select.country-select');
     const errElement = $('#response-error-message p');
-    const amountPaid = $('#amountPaid');
+    const amountPaid = $('input[name=amountPaid]');
     const stripe = Stripe({{ $stripePublicKey }});
     const stripeStyle = {
         base: {
@@ -441,8 +441,8 @@
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
                 initialChargeValue = resp.amount / 100;
-
                 $('#charge-total').text(initialChargeValue);
+                amountPaid.val(initialChargeValue);
                 $('.currency-code').text(resp.currency.toUpperCase());
                 if ($('html').hasClass('light-mode')) {
                     stripeStyle.base.color = 'black';
@@ -511,7 +511,8 @@
     };
 
     const resetPaymentIntent = async () => {
-        $.ajax({
+      amountPaid.val(initialChargeValue)
+      $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: {'Content-Type': 'application/json'},
