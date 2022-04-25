@@ -1,6 +1,6 @@
 ---
 title: Kubeapps 2.4.3 Now Supports Carvel and Flux Packages
-description: 
+description: The newest release of Kubeapps, version 2.4.3, adds support for Carvel and Flux packages, no longer making Halm chars the only option to choose from
 team:
 - Raquel Campuzano Godoy
 - Michael Nelson
