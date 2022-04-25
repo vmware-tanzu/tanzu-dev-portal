@@ -25,7 +25,7 @@ There are some limitations and changes required for the application to use this 
 
 * Application should use "x64" CPU as a platform
 
-* Copy C++ runtime `redist` DLLs to driver 'bin' directory. (PCF windows cells do not have C++ runtime DLLs installed). Required DLL's could be found in installed nuget package   
+* Copy C++ runtime `redist` DLLs to driver 'bin' directory. (PCF windows cells do not have C++ runtime DLLs installed). Required DLLs could be found in installed nuget package   
 
 ```
   packages\IBM.Data.DB.Provider.11.1.2020.4\build\clidriver\bin\amd64.VC12.CRT\

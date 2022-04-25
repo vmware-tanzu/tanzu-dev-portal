@@ -99,6 +99,7 @@ Apigee
 ApiResponse
 APIs?
 APM
+APM[s]
 AppArmor
 AppD
 AppDev
@@ -874,6 +875,7 @@ HATEOAS
 Hayk
 Haytham
 Headspring
+healthcheck
 Heartbleed
 Heen
 Heinemeier
@@ -1642,6 +1644,7 @@ Procfile(s)?
 Prodan
 production-deployable
 ProductPlan
+Profiler
 profiler
 Programadoras
 programmatically
@@ -1974,6 +1977,7 @@ sub(p|P)ath
 subclasses
 subcommand
 subdirector(y|ies)
+Subdirectory
 subjectAltName
 [Ss]ubnet(s)?
 suboptimal
@@ -2098,6 +2102,7 @@ Umbraco
 (un)?marshalling
 unannotated
 unbundle
+UNC
 Uncomment
 uncomment
 undersample
