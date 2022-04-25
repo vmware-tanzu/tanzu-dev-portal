@@ -4,11 +4,11 @@ title = "SMB Shares"
 weight = 60
 +++
 
-ASP.NET applications deployed to PCF are running on Diego Windows Cells which are not joined to any domain. Typically in a non-PCF environment connecting to an enterprise SMB share requires domain authentication and as a result consuming a SMB share from a Windows cell requires some additional configuration that is usually handled by a Windows server admin. 
+ASP.NET applications deployed to PCF are running on Diego Windows Cells which are not joined to any domain. Typically in a Cloud Foundry environment connecting to an enterprise SMB share requires domain authentication and as a result consuming a SMB share from a Windows cell requires some additional configuration that is usually handled by a Windows server admin. 
 
 ### !UPDATE
 
-Please refer to the updated smb shares recipe [here](https://dotnet-cookbook.cfapps.io/windows/smb).
+Please refer to the updated SMB shares recipe [here](https://dotnet-cookbook.cfapps.io/windows/smb).
 
 ## PAS
 
@@ -16,13 +16,13 @@ Pivotal Application Service using an Ubuntu stemcell doesn't have a native SMB d
 
 ## PASW
 
-SMB shares requires authentication which can be enabled by using .NET wrapper around the native [Windows Networking API][winapi] via the [Steeltoe Common .NET Network library](nuget). Note this is an experimental feature and is currently limited to IP address-UNC paths
+SMB shares requires authentication which can be enabled by using .NET wrapper around the native [Windows Networking API][winapi] via the [Steeltoe Common .NET Network library](nuget). Note this is an experimental feature and is currently limited to IP address UNC paths
 
 ```ps
 Install-Package Steeltoe.Common.Net
 ```
 
-Use Disposable `WindowsNetworkFileShare` class to enable FileOperations on Shared Drives
+Use Disposable `WindowsNetworkFileShare` class to enable `FileOperations` on Shared Drives
 
 ```c#
 using Steeltoe.Common.Net;

@@ -48,6 +48,7 @@ addAndReturnSize
 addAndReturnSizes
 additively
 addNotificationListener
+Addon
 addon(s)?
 Adib
 Adib's
@@ -167,6 +168,7 @@ aws-encryption-provider
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 [Bb]ackpressure
+BACPAC
 Baeldung('s)?
 Bagher
 Bahhh
@@ -759,6 +761,7 @@ Gemfiles
 GemFire
 gemfire.
 GemFire's
+Gen4
 Geneve
 geode-async-listener-spring-jpa
 geode-dunit
@@ -1346,6 +1349,7 @@ msi
 MSI
 MSMQ
 MSTDC
+MSVCRT
 mTLS
 mtls-demo
 MTT(D|R)
@@ -1434,6 +1438,7 @@ ObjectGraphSizer
 OCI(-compliant)?
 Octant
 Octoverse
+ODBC
 Oded
 OIDC
 ok
@@ -1548,6 +1553,7 @@ Pérez
 [Pp]erformant
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 [Pp]et[Cc]linic
+PetaBridge
 petclinc
 PetClinic
 Petclinic
@@ -2132,6 +2138,7 @@ userDetails
 [Uu]sings
 Util(s)?
 UX
+v[0-9]
 [Vv][123]
 Vaadin
 ValidatingAdmissionWebhook

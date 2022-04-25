@@ -88,7 +88,7 @@ Generate BACPAC DB from clean DB in Staging Server (must have admin user credent
 sqlpackage.exe /Action:Export /ssn::<DATABASE HOSTNAME> /sdn:<DATABASE NAME> /su:<ADMIN USER ID> /sp:<ADMIN PASSWORD> /tf:<PATH TO BACPAC FILE>
 ```
 
-### Restore BACKPAC
+### Restore BACPAC
 
 Restore BACPAC from file into Azure DB. It Requires server admin role
 

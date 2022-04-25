@@ -6,7 +6,7 @@ weight = 50
 +++
 
 
-IBM will soon support the bin-deployable package via Nuget for .NET Framework, estimated to be March 2018.
+IBM will soon support the `bin-deployable` package via Nuget for .NET Framework, estimated to be March 2018.
 
 They have the package updated for Pivotal Cloud Foundry based on customer requests and will externalize it in DB2 11.1 M3FP3 (currently scheduled for March). IBM Customers can request early access to the PCF supported version directly from IBM.
 
@@ -25,7 +25,7 @@ There are some limitations and changes required for the application to use this 
 
 * Application should use "x64" CPU as a platform
 
-* Copy C++ runtime redist dlls to driver 'bin' directory. (PCF windows cells do not have C++ runtime dlls installed). Required dll's could be found in installed nuget package   
+* Copy C++ runtime `redist` DLLs to driver 'bin' directory. (PCF windows cells do not have C++ runtime DLLs installed). Required DLL's could be found in installed nuget package   
 
 ```
   packages\IBM.Data.DB.Provider.11.1.2020.4\build\clidriver\bin\amd64.VC12.CRT\
@@ -33,7 +33,7 @@ There are some limitations and changes required for the application to use this 
     msvcr120.dll
 ```
 
-Build the application and copy these two dlls under application bin\clidriver\bin
+Build the application and copy these two DLLs under application `bin\clidriver\bin`
 
 * The full connection string may be provided in the application configuration, (there is NO strong requirement to set it up in `db2dsdriver.cfg` as mentioned in IBM docs) Example connection string:
 

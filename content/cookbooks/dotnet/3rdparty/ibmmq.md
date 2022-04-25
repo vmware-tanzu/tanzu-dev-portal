@@ -19,13 +19,13 @@ There are three alternatives:
 
     IBM MQ 8 introduced support for AMQP 1.0 with an additional service pack and AMQP is standard on v9 and above.
 
-    There are many AMQP 1.0 libraries available to .NET and dotnet core. These libraries are more recent and better maintained than any of the MQTT libraires. If the customer is running IBM MQ 8 or above AMQP might be the better solution.
+    There are many AMQP 1.0 libraries available to .NET and dotnet core. These libraries are more recent and better maintained than any of the MQTT libraries. If the customer is running IBM MQ 8 or above AMQP might be the better solution.
 
 3. **MQTT (MQ Telemetry Transport)**
 
     MQTT was developed by IBM as a lightweight network protocol for pub/sub messaging between devices and IBM MQ. Originally intended for lightweight clients like sensors. MQTT is available as an additional service on MQ since version 7. Once the service is running MQTT clients connect and register a `client_id` and can either publish messages and/or subscribe to a TOPIC. Messages can be sent to the MQTT client via the normal (non MQTT) TOPIC publish channels using the TOPIC string registered by the MQTT client or the `client_id`.
 
-    A REMOTE QUEUE can also be defined within MQ that forwards messages to the MQTT client. This should mean most existing MQ message flows can be modifyed to support an MQTT client.
+    A REMOTE QUEUE can also be defined within MQ that forwards messages to the MQTT client. This should mean most existing MQ message flows can be modified to support an MQTT client.
 
     MQTT supports durable messaging along with three QoS such as *deliver at least once*, *deliver only once*, *deliver exactly once*.
     Higher levels of QoS are more reliable, but involve higher latency and have higher bandwidth requirements.
@@ -36,7 +36,7 @@ There are three alternatives:
 
     **2**: The broker/client will deliver the message exactly once by using a four step handshake.
 
-    For .NET there are several packages available with [M2MQTT](http://www.eclipse.org/paho/clients/dotnet/) seemingly being the best supported and maintained although it has a few querks. M2MQTT is a nuget package and requires no client to be installed. There is a dotnet core version but I have not tested it.
+    For .NET there are several packages available with [M2MQTT](http://www.eclipse.org/paho/clients/dotnet/) seemingly being the best supported and maintained although it has a few quirks. M2MQTT is a nuget package and requires no client to be installed. There is a dotnet core version but I have not tested it.
 
     Topic string length is limited to 65536 bytes (utf-8) and message payload is limited to 268,435,456 bytes as per MQTT spec.
 
@@ -132,6 +132,6 @@ namespace MQBinDeployTest
 ### Resources:
 
 * [Good video on setting up a MQ lab on Red Hat Enterprise using IBM MQ for Developers (all free).](https://www.imwuc.org/blog/trob)
-* [What is MQTT and how does it work with Websphere MQ](https://www.ibm.com/developerworks/community/blogs/aimsupport/entry/what_is_mqtt_and_how_does_it_work_with_websphere_mq?lang=en)
+* [What is MQTT and how does it work with WebSphere MQ](https://www.ibm.com/developerworks/community/blogs/aimsupport/entry/what_is_mqtt_and_how_does_it_work_with_websphere_mq?lang=en)
 * [IBM MQ Developer Downloads](https://www.ibm.com/developerworks/community/blogs/messaging/entry/downloads?lang=en)
 * [Sending a test message to a MQTT Client via WebSphere Explorer](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.5.0/com.ibm.mq.pro.doc/q002910_.htm)

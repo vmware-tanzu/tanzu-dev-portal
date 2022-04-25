@@ -25,7 +25,7 @@ Akka has seed nodes that are designated as contact points for joining the cluste
 
 ### .NET Core & Linux
 
-When pushing akka nodes to Linux cells on PCF you must disable IPv6 and enable the enforce-ip-family flag within the Remote configuration section. Linux cells on PCF have the IPv6 interfaces disabled and this results in an error.
+When pushing akka nodes to Linux cells on PCF you must disable IPv6 and enable the `enforce-ip-family` flag within the Remote configuration section. Linux cells on PCF have the IPv6 interfaces disabled and this results in an error.
  
 ```
  remote {

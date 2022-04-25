@@ -23,6 +23,6 @@ These DLLs create a complication when a .NET application is using a library whic
 
 After nuget installing the SQLite driver, you'll need to copy the `bin\x64\SQLite.Interop.dll` to the parent folder `bin\SQLite.Interop.dll`.
 
-### Gemfire
+### GemFire
 
-The .NET Gemfire driver is a wrapper around the C++ driver for Windows, so you'll need ensure you put the appropriate `MSVCR*.dll` files in the ASP.NET application's bin directory. [This](http://gemfire82.docs.pivotal.io/docs-gemfire/gemfire_nativeclient/dotnet-caching-api/private-assembly.html) help topic may be relevant?
+The .NET GemFire driver is a wrapper around the C++ driver for Windows, so you'll need ensure you put the appropriate `MSVCR*.dll` files in the ASP.NET application's bin directory. [This](http://gemfire82.docs.pivotal.io/docs-gemfire/gemfire_nativeclient/dotnet-caching-api/private-assembly.html) help topic may be relevant?
