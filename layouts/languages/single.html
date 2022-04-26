@@ -23,7 +23,7 @@
 
                 {{ if eq .Params.label "dotnet" }}
                 <!-- .NET Steeltoe Banner -->
-                        <div class="row pb-3">
+                        <div class="row pb-5">
                             <a href="https://steeltoe.io/" class="w-100 py-0">
                                 <div class="col-12 text-center d-flex align-items-center justify-content-center steeltoe-banner">
                                     <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
@@ -45,7 +45,17 @@
                         <div class='row d-flex justify-content-between mb-5'>
                         {{ range first 3 $blogs }}
                             {{ $rendered = $rendered | append . }}
-                            {{ partial (printf "%v-card.html" .Section) . }}
+                            <div class="td-box--gray-dark subtopic mr-0 mb-3 flex-315 transition-all">
+                                <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
+                                    <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+                                    <div class="card-type-id">
+                                        <!-- <i class="fas fa-book"></i> -->
+                                        <img alt="" class="d-inline-block" src='{{ "/images/icons/icon-blog-label.svg" | relURL }}'>
+                                        <span class="h5">Blog</span>
+                                    </div>
+                                    <p>{{ .Description }}</p>
+                                </a>
+                            </div>
                         {{ end }}
                     </div>
                 </div>
