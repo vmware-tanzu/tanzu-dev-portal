@@ -531,6 +531,7 @@ DigiSign
 Dikastes
 DirtiesContext
 disambiguated
+[Dd]iscoverable
 DiscoveryClient
 DiskRegionStatistics
 DiskStore

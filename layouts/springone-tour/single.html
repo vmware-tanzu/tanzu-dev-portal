@@ -2,7 +2,7 @@
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }}
 {{ $stripePublicKey := cond .Site.IsServer "pk_test_spvxO15DDJ4xn3jcJATwg8pw" "pk_live_DWJQ1rhJItm7apoecrDZjmPU" }}
 {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower }}
-{{ $isRegOver := lt (sub .Params.Date.YearDay now.YearDay) 1 }}
+{{ $isRegOver := lt (sub .Params.Date.YearDay now.YearDay) 2 }}
 {{ $isRegOpen := and .Params.isRegOpen (not $isRegOver) }}
 
 <style>
@@ -56,7 +56,8 @@
             </div>
             <div class="modal-body">
                 <form class="form-inline">
-                    <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
+                    <input type="hidden" name="amountPaid" value="0"/>
+                    <input type="hidden" name="city" value="{{ $cityNameLowercase }}"/>
                     <div class="form-row">
                         <div class="col-sm-3 s1t-form-col">
                             <input
@@ -149,10 +150,10 @@
                                     <p class="charge-label">Charge total:</p>
                                 </div>
                                 <div class="col-3 pr-0 text-right">
-                                    <p class="charge-total"></p>
+                                    <p><span class="currency-symbol">$</span><span id="charge-total"></span></p>
                                 </div>
                                 <div class="col-3">
-                                    <p class="charge-currency"></p>
+                                    <p class="currency-code"></p>
                                 </div>
                             </div>
                             <div class="row discount-details">
@@ -160,10 +161,10 @@
                                     <p class="discount-label">After discount:</p>
                                 </div>
                                 <div class="col-3 pr-0 text-right">
-                                    <p class="discount-total"></p>
+                                    <p><span class="currency-symbol">$</span><span id="discount-total"></span></p>
                                 </div>
                                 <div class="col-3">
-                                    <p class="discount-currency"></p>
+                                    <p class="currency-code"></p>
                                 </div>
                             </div>
                         </div>
@@ -394,12 +395,30 @@
     const regForm = $('#s1t-register form');
     const countryInput = $('select.country-select');
     const errElement = $('#response-error-message p');
+    const amountPaid = $('input[name=amountPaid]');
     const stripe = Stripe({{ $stripePublicKey }});
+    const stripeStyle = {
+        base: {
+            color: 'white',
+            fontFamily: 'Metropolis',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+                color: 'white',
+            },
+        },
+        invalid: {
+            fontFamily: 'Metropolis',
+            color: '#fa755a',
+            iconColor: '#fa755a',
+        },
+    };
 
     let card;
     let clientSecret;
     let intentId;
     let requiresGDPR;
+    let initialChargeValue;
 
     const setLoading = (el, bool) => {
         if (bool) {
@@ -421,31 +440,15 @@
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
-                $('.charge-total').text(`$${resp.amount / 100}`);
-                var currency = resp.currency.toUpperCase();
-                $('.charge-currency').text(currency);
-                $('.discount-currency').text(currency);
-                const style = {
-                    base: {
-                        color: 'white',
-                        fontFamily: 'Metropolis',
-                        fontSmoothing: 'antialiased',
-                        fontSize: '16px',
-                        '::placeholder': {
-                            color: 'white',
-                        },
-                    },
-                    invalid: {
-                        fontFamily: 'Metropolis',
-                        color: '#fa755a',
-                        iconColor: '#fa755a',
-                    },
-                };
+                initialChargeValue = resp.amount / 100;
+                $('#charge-total').text(initialChargeValue);
+                amountPaid.val(initialChargeValue);
+                $('.currency-code').text(resp.currency.toUpperCase());
                 if ($('html').hasClass('light-mode')) {
-                    style.base.color = 'black';
-                    style.base['::::placeholder'] = {color: 'black'};
+                    stripeStyle.base.color = 'black';
+                    stripeStyle.base['::::placeholder'] = {color: 'black'};
                 }
-                card = stripe.elements().create('card', {style: style});
+                card = stripe.elements().create('card', {style: stripeStyle});
                 card.mount('#card-element');
                 card.on('change', (e) => {
                     subBtn.attr({disabled: !e.complete, ['aria-disabled']: !e.complete});
@@ -470,22 +473,28 @@
         });
     };
 
-    const applyDiscounts = async (value) => {
+    const applyDiscounts = async (discountCode) => {
         $('#card-container').show();
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: {'Content-Type': 'application/json'},
-            data: JSON.stringify({city: '{{ $cityNameLowercase }}', discount: value}),
+            data: JSON.stringify({city: '{{ $cityNameLowercase }}', discount: discountCode}),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
-                if (value != '') {
+                if (discountCode != '') {
                     let totalAfterDiscount = resp.amount / 100;
                     $('.charge-label').text('Before discount:');
                     $('.discount-details').css('display', 'flex');
-                    $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
-                    $('.discount-total').text(`$${totalAfterDiscount}`);
+                    $('.discount-notice').show().text(`${discountCode} applied`).css('color', '#02bc67');
+                    $('#discount-total').text(`${totalAfterDiscount}`);
+                    amountPaid.val(`${totalAfterDiscount}`);
+                    if (totalAfterDiscount == 0) {
+                        subBtn.attr({disabled: false, ['aria-disabled']: false});
+                        $('#card-container').remove();
+                    }
                 } else {
+                    amountPaid.val(initialChargeValue)
                     $('.charge-label').text('Charge total:');
                     $('.discount-details').css('display', 'none');
                     $('.discount-notice').hide();
@@ -502,7 +511,8 @@
     };
 
     const resetPaymentIntent = async () => {
-        $.ajax({
+      amountPaid.val(initialChargeValue)
+      $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
             headers: {'Content-Type': 'application/json'},
@@ -532,12 +542,19 @@
                 return;
             }
         }
+        let data = regForm.serialize();
         $.ajax({
             url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityNameLowercase}}',
             method: 'post',
-            data: regForm.serialize(),
+            data: data,
             success: (resp) => {
-                processStripePayment(resp);
+                let isCompedPass = $('.discount-details').is(':visible')
+                    && parseInt($('#discount-total').text()) == 0;
+                if (isCompedPass) {
+                    registerUser('');
+                } else {
+                    processStripePayment(resp);
+                }
             },
             error: (err) => {
                 errElement.text(`${err.responseText}`);
