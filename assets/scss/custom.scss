@@ -886,17 +886,24 @@ body#s1t-index #s1t-destinations-2022 {
     height: 177px;
   }
 }
-body#s1t-index {
+#s1t-index {
   .td-main a, .talk-modal a, .speaker-modal a {
     color: #02bc67;
     &:hover {
       color: #80ea6e;
     }
   }
+  .speaker-modal h3 {
+    color: #adbbc4;
+  }
   @media (max-width: 767px){
     .container-sm, .container {
       max-width: 100%;
     }
+  }
+  #sponsors .sponsor img {
+    opacity: 0.8;
+    max-width: 200px;
   }
   #meetup {
     align-items: center;
