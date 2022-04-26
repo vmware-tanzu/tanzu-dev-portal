@@ -23,7 +23,7 @@
 
                 {{ if eq .Params.label "dotnet" }}
                 <!-- .NET Steeltoe Banner -->
-                        <div class="row">
+                        <div class="row pb-3">
                             <a href="https://steeltoe.io/" class="w-100 py-0">
                                 <div class="col-12 text-center d-flex align-items-center justify-content-center steeltoe-banner">
                                     <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
@@ -39,9 +39,10 @@
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $blogs) 0 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
-                    <div class='row'>
+                <div class="container px-0 mb-5 shows">
+                    <div class="container px-0 mb-5 shows">
+                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
+                        <div class='row d-flex justify-content-between mb-5'>
                         {{ range first 3 $blogs }}
                             {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
