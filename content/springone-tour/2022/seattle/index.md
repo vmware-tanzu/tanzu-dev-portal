@@ -13,5 +13,11 @@ Description: SpringOne Tour Seattle
 Title: SpringOne Tour Seattle
 LinkTitle: Seattle
 city_name: Seattle
+sponsors:
+    - name: Contrast Security
+      sponsorship_level: gold
+      logo_path_dark: "/images/springonetour/sponsors/logo-color-contrast-security.svg"
+      logo_path_light: "/images/springonetour/sponsors/logo-white-contrast-security.svg"
+      url: https://www.contrastsecurity.com/
 hide_newsletter: true
 ---
