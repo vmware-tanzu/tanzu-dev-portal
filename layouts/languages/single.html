@@ -14,7 +14,7 @@
         <div class="td-main ">
             {{ $class := replace .Params.linkTitle "." "-" | lower }}
             {{ $class := replace $class " " "" }}
-            <section id="hero" class="dotnet-hero td-box--gray-dark mt-6 pt-4 pb-4">
+            <section id="hero" class="dotnet-hero td-box--gray-dark mt-6 pt-4 pb-2">
                 <div class="container">
                     <h1 class="h1"> {{- .Params.herotitle | markdownify }}</h1>
                     <div class="lead col-7"><p>{{- .Content | markdownify }}</p></div>
