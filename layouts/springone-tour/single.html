@@ -7,7 +7,7 @@
 
 <style>
     #hero.springone-tour-event-hero .container-sm {
-        background-image: url('{{ "/images/springonetour/" | relURL }}{{ .Params.logo_filename }}');
+      background-image: url('{{ "/images/springonetour/" | relURL }}{{ .Params.logo_filename }}');
     }
 </style>
 
@@ -352,7 +352,7 @@
                     <h3 class="mt-5">Sponsors</h3>
                     <h4 class="mt-3">Gold</h4>
                     {{ range .Params.sponsors }}
-                    <a class="col-sm-2 lightbox" href="{{ .url }}">
+                    <a class="col-sm-2 lightbox sponsor" href="{{ .url }}">
                         <img src="{{ .logo_path_light | relURL }}" class="hide-in-light-mode"/>
                         <img src="{{ .logo_path_dark | relURL }}" class="display-in-light-mode"/>
                     </a>
