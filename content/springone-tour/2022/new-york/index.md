@@ -125,7 +125,9 @@ hide_newsletter: true
         <div class="time col-4 pl-0 h4">3:20 PM CDT</div>
         <div class="talk-title col-5 h4">To be determined</div>
         <div class="name col-3">
-            <h3 class="h4 py-0">Tony Scully</h3>
+            <h3 class="h4 py-0">
+                <a class="lightbox" href="#tony-scully">Tony Scully</a>
+            </h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
