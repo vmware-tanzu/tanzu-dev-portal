@@ -863,7 +863,7 @@ body#s1t-index #s1t-destinations-2022 {
     height: 177px;
   }
 }
-body#s1t-index {
+#s1t-index {
   .td-main a, .talk-modal a, .speaker-modal a {
     color: #02bc67;
     &:hover {
@@ -874,6 +874,10 @@ body#s1t-index {
     .container-sm, .container {
       max-width: 100%;
     }
+  }
+  #sponsors .sponsor img {
+    opacity: 0.8;
+    max-width: 200px;
   }
   #meetup {
     align-items: center;
