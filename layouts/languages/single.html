@@ -14,7 +14,7 @@
         <div class="td-main ">
             {{ $class := replace .Params.linkTitle "." "-" | lower }}
             {{ $class := replace $class " " "" }}
-            <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-6" {{ if eq .Params.label "dotnet" }} style="background-image: linear-gradient(to right, #d6455b , #893470, #583068);"{{ end }}>
+            <section id="hero" class="{{ $class }}-hero td-box--gray-dark mt-6" {{ if eq .Params.label "dotnet" }} style="background-image: url('{{ "/images/languages/dotnet/hero.svg" | relURL }} ')"{{ end }}>
                 <div class="container">
                     {{ $herotitle := .Params.title }}
                     {{ if isset .Params "herotitle" }}
