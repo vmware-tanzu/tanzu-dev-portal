@@ -6,11 +6,11 @@ skills: ["Kubernetes", "Cartographer"]
 location: ""
 
 # Social Media 
-twitter: ""
-website: ""
+twitter: "waciuma"
+website: "http://www.waciuma.com/"
 facebook: ""
-linkedin: ""
-github: ""
+linkedin: "waciuma"
+github: "waciumawanjohi"
 pinterest: ""
 instagram: ""
 youtube: ""

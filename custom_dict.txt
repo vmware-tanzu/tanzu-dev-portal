@@ -12,6 +12,8 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+Waciuma
+Wanjohi
 10x
 12SwitchRestoresSansCheckOuts
 2FA
