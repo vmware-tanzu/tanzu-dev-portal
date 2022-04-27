@@ -222,6 +222,7 @@ biome
 [Bb]itnami('s)?
 Biville
 Bixby
+Biztalk
 BKPR
 BlackBox
 blazingly
@@ -390,6 +391,7 @@ commonName(.)?
 compareAllValues
 compareKeySets
 compareSingleValues
+composability
 [Cc]omposable
 [Cc]onfig-server
 [Cc]onfig(s|-drift)?
@@ -663,6 +665,7 @@ entriesOnlyOnDisk
 EntryEvent
 EntryEventImpl
 EntryEventImpl's
+entrypoint
 enum
 EnumInfo
 Enums
@@ -1942,6 +1945,7 @@ Sghiouar
 Sharat
 Sharat_Chander
 sharded
+Sharepoint
 Sheasha
 Shellshock
 Shipley
@@ -2225,6 +2229,8 @@ ValueComparer
 Vanderburg
 vault-kubernetes-authenticator
 Vavr
+VB6
+VBscript
 VC
 vcap
 VCAP

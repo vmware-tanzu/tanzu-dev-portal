@@ -4,9 +4,9 @@ date =  2020-11-30T15:59:56Z
 weight = 5
 +++
 
-#### Create a custom listner and configure .NET applications using Microsoft Enterprise Logging
+#### Create a custom listener and configure .NET applications using Microsoft Enterprise Logging
 
-##### Create a custom listner
+##### Create a custom listener
 
 ```csharp
     [ConfigurationElementType(typeof(CustomTraceListenerData))] 
@@ -45,7 +45,7 @@ weight = 5
   </configSections>
   <...>
 ```
-2. Add the custom listner and a formatter
+2. Add the custom listener and a formatter
 ```xml
   <...>
   <loggingConfiguration name="" tracingEnabled="false" defaultCategory="General" logWarningsWhenNoCategoriesMatch="false">
@@ -60,7 +60,7 @@ weight = 5
     <...>
   </loggingConfiguration>
 ```
-3. Add the listner to all sources
+3. Add the listener to all sources
 ```xml
   <loggingConfiguration name="" tracingEnabled="false" defaultCategory="General" logWarningsWhenNoCategoriesMatch="false">
     <...>
