@@ -11,7 +11,7 @@ This recipe should be followed when .NET applications pushed to Cloud Foundry re
 
 Logging is one of the most critical aspects of a modern application’s stack of cross cutting concerns.  This is because Logging, as a feature, serves many audiences and many use-cases. In times of “business as usual”, logging can be used to glean summary data regarding request volume, average response times, and other helpful data points that drive both operational excellence and executive decision making. When troubleshooting production environments, log data is often our first line of defense.  
 
-The rub is, each of the above use-cases and audiences often require different levels of granularity from logging. The same feature must support multiple perspectives.  Leaving logging in a detailed mode at all times would make troubleshooting easier but would place a drag on performance and increase costs for log storage, while logging too coarsly omits crucial information required to trace down complex issues in code. It makes sense, therefore, that we want a way to adjust the amount of detail provided by our logging solution, and it also makes sense that we’ll want to accomplish these adjustments without restarting our deployed applications, perhaps flushing out the source of any transient defective behavior.
+The rub is, each of the above use-cases and audiences often require different levels of granularity from logging. The same feature must support multiple perspectives.  Leaving logging in a detailed mode at all times would make troubleshooting easier but would place a drag on performance and increase costs for log storage, while logging too coarsely omits crucial information required to trace down complex issues in code. It makes sense, therefore, that we want a way to adjust the amount of detail provided by our logging solution, and it also makes sense that we’ll want to accomplish these adjustments without restarting our deployed applications, perhaps flushing out the source of any transient defective behavior.
 
 Thankfully, Steeltoe makes runtime adjustment of logging levels possible within a .NET application.  These adjustments are initiated by authorized operators via the Apps Manager, as long as dynamic logging is configured for the target app.  Because Steeltoe’s Dynamic Logging is implemented as an Actuator, no additional installations are required in Apps Manager to follow this recipe.
 
@@ -102,6 +102,6 @@ The below example depicts the logging categories and their configured levels for
 	 
 ### Experiment
 
-Once dynamic logging has been added to your application, try adding new filters and categories to your application’s logging configuration.  Toggle the various logging levels and tail your appliation’s logs to see the impact.  Understanding the experience your operators will have with dynamic logging available can inform your perspective as you plan out the logging strategy for your application.
+Once dynamic logging has been added to your application, try adding new filters and categories to your application’s logging configuration.  Toggle the various logging levels and tail your application's logs to see the impact.  Understanding the experience your operators will have with dynamic logging available can inform your perspective as you plan out the logging strategy for your application.
 
 #### Happy coding!

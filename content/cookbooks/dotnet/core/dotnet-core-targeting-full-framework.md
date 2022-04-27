@@ -1,5 +1,5 @@
 +++
-title = "Dotnet Core Targeting Full Framework"
+title = ".NET Core Targeting Full Framework"
 date = 2018-06-13T08:20:27-07:00
 +++
 

@@ -8,7 +8,7 @@ date = 2019-01-22T14:54:55-06:00
 
 
 ## Summary
-CF Tasks provide a mechanism for executing processes that don't qualify as long running and are best suited for execution within a CF environment.  Some cononical examples of operations well suited for CF Tasks are:
+CF Tasks provide a mechanism for executing processes that don't qualify as long running and are best suited for execution within a CF environment.  Some canonical examples of operations well suited for CF Tasks are:
 
     - Database migrations
     - Data export or backup
@@ -19,7 +19,7 @@ One might conclude, based on the above examples, that CF Tasks are the perfect m
 
 ## When to use this recipe
 
-If you're planning on using CF Tasks for boostrapping your application, this recipe is for you.
+If you're planning on using CF Tasks for bootstrapping your application, this recipe is for you.
 
 ## Overview
 Why do we need special consideration when bootstrapping our app using CF Tasks?  
@@ -28,7 +28,7 @@ Imagine a scenario where we want to accomplish the following:
 
   1. Push our app without starting it
   2. Execute tasks within our app dedicated to bootstrapping our environment
-  3. Once all tasks have been comlpeted, we want to start our app
+  3. Once all tasks have been completed, we want to start our app
 
 We craft the below script in support of our goals, which at first glance looks correct:
 
@@ -45,7 +45,7 @@ cf run-task MyApp "/home/vcap/app/MyApp -- task=db-migrate" --name MyTask
 cf start MyApp
 ```
 
-If our app has never been pushed before, the above script will fail with `cf run-task` reporting `App Not Staged: MyApp`.  You'll find the only way to eliminate this error is to remove the `--no-start` from our `cf push`, but without the bootstrapping we need before app startup, we're guaraunteed a crash by any instance of our app that starts.  
+If our app has never been pushed before, the above script will fail with `cf run-task` reporting `App Not Staged: MyApp`.  You'll find the only way to eliminate this error is to remove the `--no-start` from our `cf push`, but without the bootstrapping we need before app startup, we're guaranteed a crash by any instance of our app that starts.  
 
 Why is this happening, and how can we escape this vicious cycle?
 
@@ -62,7 +62,7 @@ Revisiting our initial goals, let's get a little more specific on what we really
 
   1. Push our app without any instances starting before bootstrapping
   2. Execute tasks within our app dedicated to bootstrapping.
-  3. Once all tasks have been comlpeted, we want our app instance(s) to start.
+  3. Once all tasks have been completed, we want our app instance(s) to start.
 
 
 

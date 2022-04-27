@@ -75,7 +75,7 @@ namespace Foo.Core.Service
 }
 ```
 
-When configuring an application to allow local default configuration as well as PCF-overriding configuration, the key components are to enable the Steeltoe CloudFoundry configuration source via the `AddCloudFoundry()` call in the `Startup` constructor, and then to make parsed `VCAP_*` configuration values available via POCOs using the following two lines of code:
+When configuring an application to allow local default configuration as well as PCF overriding configuration, the key components are to enable the Steeltoe Cloud Foundry configuration source via the `AddCloudFoundry()` call in the `Startup` constructor, and then to make parsed `VCAP_*` configuration values available via POCOs using the following two lines of code:
 
 ```c#
 services.Configure<CloudFoundryApplicationOptions>(Configuration);

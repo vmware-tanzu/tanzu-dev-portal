@@ -9,11 +9,11 @@ This covers some basic troubleshooting techniques to use for any full .NET appli
 
 ## Developer Troubleshooting
 
-Assuming you've followed the recommedations for logging and error handling in the [getting started guide](/intro/getting_started) you shouldn't have a hard time diagnosing issues with your deployed .NET app. Below are some common failures and possible corrective actions that you as a devloper may take to fix the issue.
+Assuming you've followed the recommendations for logging and error handling in the [getting started guide](/intro/getting_started) you shouldn't have a hard time diagnosing issues with your deployed .NET app. Below are some common failures and possible corrective actions that you as a developer may take to fix the issue.
 
-### StackOverflowException, AccessViolationException
+### `StackOverflowException`, `AccessViolationException`
 
-If you see one of these exceptions in the PCF logs, but not locally, it usually means your application is getting killed by the PCF runtime because it's attempting to use more RAM than has been allocated to the container. Check your manifest.yml and bump up the memory setting, 4G is a good starting point.
+If you see one of these exceptions in the PCF logs, but not locally, it usually means your application is getting killed by the PCF runtime because it's attempting to use more RAM than has been allocated to the container. Check your manifest.yml and bump up the memory setting, 4GB is a good starting point.
 
 ### 502 Gateway Error
 
@@ -115,7 +115,7 @@ $ cf app APPNAME --guid
 c6d1259c-8057-489e-9ac2-beaa896c2bf3
 ```
 
-Then use [cf curl](http://cli.cloudfoundry.org/en-US/cf/curl.html) and [jq](https://stedolan.github.io/jq/) to extract the information from the stats endpoint:
+Then use [cf curl](http://cli.cloudfoundry.org/en-US/cf/curl.html) and [`jq`](https://stedolan.github.io/jq/) to extract the information from the stats endpoint:
 
 ```sh
 $ cf curl /v2/apps/c6d1259c-8057-489e-9ac2-beaa896c2bf3/stats | jq 'with_entries(.value = .value.stats.host)'
@@ -136,7 +136,7 @@ $ cf app myappname --guid
 9caddd73-706c-4f82-bb63-b1435bd6240d
 ```
 
-Create a tmp dir, download the container to the tmp dir, and extract the downloaded tar file.
+Create a temporary directory, download the container to the temporary directory, and extract the downloaded tar file.
 
 ```sh
 $ mkdir /tmp/droplet && cd /tmp/droplet

@@ -13,9 +13,9 @@ Note that this recipe comes with some tradeoffs:
 
 1. Tests that run in isolated app domains will take longer to run due to the overhead of loading and unloading an app domain to support test execution.
 
-2. The concept of app domains is being depricated in .NET Core. For this reason, test projects must target full framework for the runtime.
+2. The concept of app domains is being deprecated in .NET Core. For this reason, test projects must target full framework for the runtime.
 
-The best medicine for the above is a refactor to eliminate the anti-pattern of static property access from instance classes. If such a refactor is not an option, the above tradeoffs may be wortwhile in exchange for better test coverage.
+The best medicine for the above is a refactor to eliminate the anti-pattern of static property access from instance classes. If such a refactor is not an option, the above tradeoffs may be worthwhile in exchange for better test coverage.
 
 ## Overview
 
@@ -130,7 +130,7 @@ public class ServiceBusConfigTests : IDisposible
 }
 ```
 
-Step 2. Wrap each test’s implementation in an AppDomain callback:
+Step 2. Wrap each test’s implementation in an `AppDomain` callback:
 
 {{<highlight cs "hl_lines=4-5 9 15-16 20">}}
 [Fact]

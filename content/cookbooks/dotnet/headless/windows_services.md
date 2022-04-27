@@ -7,7 +7,7 @@ weight = 160
 
 Windows Services written using .NET have become very common especially in conjunction with a front end ASP.NET application. Typically these types of applications poll a DB table for work or listen on an event queue to process work in an async fashion.
 
-Windows Services are not supported on PCF because they integate at the OS layer and duplicate and lot of the process life cycle management already built into PCF. However, the work load typically performed by Windows Services can usually be ported with minimal effort to PCF.
+Windows Services are not supported on PCF because they integrate at the OS layer and duplicate and lot of the process life cycle management already built into PCF. However, the work load typically performed by Windows Services can usually be ported with minimal effort to PCF.
 
 ## Replatforming
 
@@ -23,7 +23,7 @@ Sometimes you may need to support running the Windows Service the old way as a W
 
 TopShelf supports installing and running a console application as a Windows Service, or just running the app normally as a console application. This duality allows you to support both installation scenarios with minimal changes to the application code.
 
-Even if you don't plan on needing this long term, this technique can make for a reasonable method to iteratively deliver changes in the existing environment while supporting PCF replaforming.
+Even if you don't plan on needing this long term, this technique can make for a reasonable method to iteratively deliver changes in the existing environment while supporting PCF replatforming.
 
 ## Advanced Healthcheck
 

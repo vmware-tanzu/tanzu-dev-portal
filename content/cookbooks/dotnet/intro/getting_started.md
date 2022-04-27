@@ -21,13 +21,13 @@ applications:
   buildpack: hwc_buildpack
 ```
 
-This application manifest is minimal, but specifes a few important details for hosting an ASP.NET app in PCF. It specifies that the container RAM should be 2GB, the app should run on a Windows 2016 cell, and use the Hostable Web Core to start the application (HWC is what IIS uses to run apps under the covers). There are many more tunables available in the [application manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html) you may want to tweak later on.
+This application manifest is minimal, but specifies a few important details for hosting an ASP.NET app in PCF. It specifies that the container RAM should be 2GB, the app should run on a Windows 2016 cell, and use the Hostable Web Core to start the application (HWC is what IIS uses to run apps under the covers). There are many more tunables available in the [application manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html) you may want to tweak later on.
 
 ## Memory Configuration
 
 Don't set the application memory below 2G when _first_ pushing the app to PCF. Once you have the app successfully running it's recommended to then go back and tune the memory down to the amount the application requires. Generally that means you should never configure an ASP.NET application with anything less than 512MB of memory.
 
-While an application that goes over the configured memory limit will be killed by the container it's possible for your application to fail in other ways in low memory situations, such as failing some requests because of OutOfMemoryExceptions. This is why it's important to test your application settings but more importantly implement proper health checks and application level monitoring.
+While an application that goes over the configured memory limit will be killed by the container it's possible for your application to fail in other ways in low memory situations, such as failing some requests because of `OutOfMemoryExceptions`. This is why it's important to test your application settings but more importantly implement proper health checks and application level monitoring.
 
 ## Health Check Configuration
 
@@ -37,9 +37,9 @@ All ASP.NET applications should use the `http` [health check type](https://docs.
 
 > The http health check performs a GET request to the configured HTTP endpoint on the app’s default port. When the health check receives an HTTP 200 response, the app is declared healthy. We recommend using the http health check type whenever possible. A healthy HTTP response ensures that the web app is ready to serve HTTP requests. The configured endpoint must respond within 1 second to be considered healthy.
 
-Changing from the default health check type is a minimal first step. It's highly recommended that you also change the [health check http endpoint setting](health-check-http-endpoint) and configure it to use a custom health endpoint that validates the application health at a deeper level. This deeper introspection validates that the application instance is healthy and can sucessfully serve requests. This could be as simple as an MVC controller which queries the application's DB.
+Changing from the default health check type is a minimal first step. It's highly recommended that you also change the [health check http endpoint setting](health-check-http-endpoint) and configure it to use a custom health endpoint that validates the application health at a deeper level. This deeper introspection validates that the application instance is healthy and can successfully serve requests. This could be as simple as an MVC controller which queries the application's DB.
 
-A better solution is to use the [Steeltoe Management Health](http://steeltoe.io/docs/steeltoe-management/#1-2-3-health) endpoint along with your own custom IHealthContributor implementations. These health contributors should validate things like each application instance can succesfully communicate it's dependant services or watch for an increased error rate over a sliding time window. Basically anything an operations team might put into a script to monitor an application should be built into the application's health check system.
+A better solution is to use the [Steeltoe Management Health](http://steeltoe.io/docs/steeltoe-management/#1-2-3-health) endpoint along with your own custom `IHealthContributor` implementations. These health contributors should validate things like each application instance can successfully communicate it's dependant services or watch for an increased error rate over a sliding time window. Basically anything an operations team might put into a script to monitor an application should be built into the application's health check system.
 
 ## Application Error Handling
 
@@ -55,9 +55,9 @@ void Application_Error(object sender, EventArgs e)
 }
 ```
 
-If you already have a global exception handler you'll need to ensure it's logging to stdout. For example if using a logging framework like [log4net](https://logging.apache.org/log4net/) you'll need to configure a console appender so log statements write to stdout.
+If you already have a global exception handler you'll need to ensure it's logging to stdout. For example if using a logging framework like [`log4net`](https://logging.apache.org/log4net/) you'll need to configure a console appender so log statements write to stdout.
 
-For production applications it's highly recommended to use a configurable logging framework like log4net or NLog instead of writing directly to the Console.
+For production applications it's highly recommended to use a configurable logging framework like `log4net` or NLog instead of writing directly to the Console.
 
 Once you have added a global error handler you'll see any unhandled execptions along with their stack trace logged to PCF. You can view the logs in the PCF Apps Manager or from the command line: `cf logs myappname --recent`
 

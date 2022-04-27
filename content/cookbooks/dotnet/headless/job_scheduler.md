@@ -15,7 +15,7 @@ To complete the need of running jobs/tasks on a particular schedule, using PCF t
 1. The `Scheduler for PCF` is installed on the platform
 1. CF CLI plugin for `Scheduler for PCF` is installed. If not already, install `scheduler-for-pcf-cliplugin-windows64-exe` from https://network.pivotal.io/products/p-scheduler-for-pcf
     - `cf install-plugin C\path\to\scheduler-for-pcf-cliplugin-windows64-exe`
-1. A .NET/.NET Core headless/console app is availabale, which does the specific job. However, the exmple below uses a .NET console app
+1. A .NET/.NET Core headless/console app is available, which does the specific job. However, the example below uses a .NET console app
 
 ### High level steps
 1. Create the app manifest file
@@ -25,7 +25,7 @@ To complete the need of running jobs/tasks on a particular schedule, using PCF t
 
 ### Create the app manifest file
 
-To prevent the application from starting up immediately, **set the instance count to zero** in the manifest file. In addition, the buildpacks should be set to binary_buildpack. Lastly, ensure the command attribute is set. Take notice of the stack when setting the command. In the example below, the windows stack defaults to the classic batch command.
+To prevent the application from starting up immediately, **set the instance count to zero** in the manifest file. In addition, the buildpacks should be set to `binary_buildpack`. Lastly, ensure the command attribute is set. Take notice of the stack when setting the command. In the example below, the windows stack defaults to the classic batch command.
 
 For example:
 ```yml

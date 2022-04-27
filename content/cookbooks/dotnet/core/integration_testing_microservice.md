@@ -18,7 +18,7 @@ We must _assume_ that all individual components and classes within an applicatio
 
 Given that assumption, our goal for an integration test is to ensure that all of these components work together when connected in a fully functioning service. We don't need to assert that we get the right values or that individual calculators are calculating the right values, we need to ensure that when we submit input to the service, all components are activated and function without error, and we get _reasonable_ output as a result.
 
-For example, if we're integration testing a service, we would connect this service to a live (but still _test only_) data source, connect it to a live (but preferably isolated) queue, and submit a message and await the  output. We then assert that the output is parseable, in a format we expect, and contains enough indicators to reasonably assure us that all the components have contributed to the output.
+For example, if we're integration testing a service, we would connect this service to a live (but still _test only_) data source, connect it to a live (but preferably isolated) queue, and submit a message and await the  output. We then assert that the output is parsable, in a format we expect, and contains enough indicators to reasonably assure us that all the components have contributed to the output.
 
 In our case, if we know what we should expect for an output, and we can fill the test database with predictable data, then we can assert expected values.
 

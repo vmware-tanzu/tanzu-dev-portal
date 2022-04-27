@@ -5,7 +5,7 @@ date =  2018-11-08T13:30:18-05:00
 weight = 5
 +++
 
-#### Remote debuging .NET Core application running in PCF Linux containers
+#### Remote debugging .NET Core application running in PCF Linux containers
 
 {{% callout %}}
 This process works best when application is scaled down to one instance

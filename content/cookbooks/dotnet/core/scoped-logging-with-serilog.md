@@ -7,16 +7,16 @@ date = 2018-08-08T20:02:01-05:00
 
 The sample application, [here](https://github.com/pivotalservices/scoped_logging_with_serilog), lets you understand how to integrate Serilog with Microsoft `ILogger`, including scoped context (for both Serilog and Microsoft console loggers)
 
-### Why we need scopped logging?
+### Why we need scoped logging?
 
 In case of distributed systems, if you need to track logs for a particular request across the systems, it will be very challenging to find the exact logs associated with that particular request. This allows you to add any unique identifier so that you can track the log message across the systems. Another good example of application would be, tracking logs across distributed transaction across database systems.
 
 
-### How to enable scopped logging using Microsoft `ILogger` (with or without Serilog integration) in a .NET Core application?
+### How to enable scoped logging using Microsoft `ILogger` (with or without Serilog integration) in a .NET Core application?
 
 ### 1. Using Microsoft `ILogger` only
 
-- Nuget package required (version depends on sdk framework, preferebly the latest one): `   Microsoft.Extensions.Logging`
+- Nuget package required (version depends on SDK framework, preferably the latest one): `   Microsoft.Extensions.Logging`
 
 - In `Program.cs`, add the console logger under `ConfigureLogging` extension method as below 
 
@@ -31,7 +31,7 @@ In case of distributed systems, if you need to track logs for a particular reque
 })
 ```
 
-- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject LoggerFactory into the service collection
+- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject `LoggerFactory` into the service collection
 
 ```c#
 services.AddLogging();
@@ -79,7 +79,7 @@ public ActionResult<IEnumerable<string>> Get()
 }
 ```
 
-- Now we are all set to run and test the application, when you run the application you will see that all the logs under a single scope will be grouped by the unique/correlation id, as below. Here CorrelationID is the property we set as unique identifier for a request
+- Now we are all set to run and test the application, when you run the application you will see that all the logs under a single scope will be grouped by the unique/correlation id, as below. Here `CorrelationID` is the property we set as unique identifier for a request
 
 ```shell
 info: Scoped.logging.Serilog.Controllers.ValuesController[0]
@@ -89,7 +89,7 @@ info: Scoped.logging.Serilog.Controllers.ValuesController[0]
 
 ### 2. Using Microsoft `ILogger` integrated with Serilog (Using `Microsoft.Logger.BeginScope()`)
 
-- Nuget package required (preferebly the latest one)
+- Nuget package required (preferably the latest one)
 
 ```xml
 <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
@@ -108,7 +108,7 @@ info: Scoped.logging.Serilog.Controllers.ValuesController[0]
 })
 ```
 
-- In `Startup.cs`, under the constructor, add the below code to create the serilog logger, based on the configuration provided in `appsettings.json`. `Serilog.Settings.Configuration` package enables the logger creater based on a given configuration 
+- In `Startup.cs`, under the constructor, add the below code to create the Serilog logger, based on the configuration provided in `appsettings.json`. `Serilog.Settings.Configuration` package enables the logger creator based on a given configuration 
 
 ```c#
 Log.Logger = new LoggerConfiguration()
@@ -116,7 +116,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 ```
 
-- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject `LoggerFactory` with serilog as logging provider into the service collection
+- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject `LoggerFactory` with Serilog as logging provider into the service collection
 
 ```c#
 services.AddLogging((builder) => 
@@ -125,7 +125,7 @@ services.AddLogging((builder) =>
 });
 ```
 
-- Add the below section in `appsettings.json`, which sets the log levels and other configurations as below. Here you can setup your own output template with your own custom properties, which need to part of scopped logging for a particular request. In this sample, I have used `CorrelationID` as my custom property.
+- Add the below section in `appsettings.json`, which sets the log levels and other configurations as below. Here you can setup your own output template with your own custom properties, which need to part of scoped logging for a particular request. In this sample, I have used `CorrelationID` as my custom property.
 
 - `MinimumLevel:Default` - default log level
 - `MinimumLevel:Override` - overrides on default log level
@@ -173,7 +173,7 @@ using (logger.BeginScope<Dictionary<string, object>>(loggerState))
 }
 ```
 
-- In `Startup.cs`, under `Configure` method, add the below code to use the middleware you created, at the very begining of the request pipeline
+- In `Startup.cs`, under `Configure` method, add the below code to use the middleware you created, at the very beginning of the request pipeline
 
 ```c#
 app.UseMiddleware<ScopedLoggingMiddleware>();
@@ -209,7 +209,7 @@ Scoped.logging.Serilog.Controllers.ValuesController
 
 - This method will be useful if you are using any custom `ILogger` interface other than Microsoft `ILogger`
 
-- Nuget package required (preferebly the latest one)
+- Nuget package required (preferably the latest one)
 
 ```xml
 <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
@@ -228,7 +228,7 @@ Scoped.logging.Serilog.Controllers.ValuesController
 })
 ```
 
-- In `Startup.cs`, under the constructor, add the below code to create the serilog logger, based on the configuration provided in `appsettings.json`. `Serilog.Settings.Configuration` package enables the logger creater based on a given configuration 
+- In `Startup.cs`, under the constructor, add the below code to create the Serilog logger, based on the configuration provided in `appsettings.json`. `Serilog.Settings.Configuration` package enables the logger creator based on a given configuration 
 
 ```c#
 Log.Logger = new LoggerConfiguration()
@@ -236,7 +236,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 ```
 
-- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject `LoggerFactory` with serilog as logging provider into the service collection
+- In `Startup.cs`, under `ConfigureServices` method, add the below code to inject `LoggerFactory` with Serilog as logging provider into the service collection
 
 ```c#
 services.AddLogging((builder) => 
@@ -245,7 +245,7 @@ services.AddLogging((builder) =>
 });
 ```
 
-- Add the below section in `appsettings.json`, which sets the log levels and other configurations as below. Here you can setup your own output template with your own custom properties, which need to part of scopped logging for a particular request. In this sample, I have used `CorrelationID` as my custom property.
+- Add the below section in `appsettings.json`, which sets the log levels and other configurations as below. Here you can setup your own output template with your own custom properties, which need to part of scoped logging for a particular request. In this sample, I have used `CorrelationID` as my custom property.
 
 - `MinimumLevel:Default` - default log level
 - `MinimumLevel:Override` - overrides on default log level
@@ -278,7 +278,7 @@ services.AddLogging((builder) =>
 }
 ```
 
-- Create a middleware which creates a log scope using `LogContext.PushProperty()` enricher as below, under the invoke operation, for complete details, please refer to `ScopedSerilogSpecificLoggingMiddleware.cs` in the sample application. Nest as many as usings for addidional properties
+- Create a middleware which creates a log scope using `LogContext.PushProperty()` enricher as below, under the invoke operation, for complete details, please refer to `ScopedSerilogSpecificLoggingMiddleware.cs` in the sample application. Nest as many as usings for additional properties
 
 ```c#
 using(LogContext.PushProperty("CorrelationID", correlationId, true))
@@ -287,7 +287,7 @@ using(LogContext.PushProperty("CorrelationID", correlationId, true))
 }
 ```
 
-- In `Startup.cs`, under `Configure` method, add the below code to use the middleware you created, at the very begining of the request pipeline
+- In `Startup.cs`, under `Configure` method, add the below code to use the middleware you created, at the very beginning of the request pipeline
 
 ```c#
 app.UseMiddleware<ScopedSerilogSpecificLoggingMiddleware>();
@@ -321,7 +321,7 @@ Scoped.logging.Serilog.Controllers.ValuesController
 
 ### 4. Adding filters in Serilog
 
-- Nuget package required (preferebly the latest one)
+- Nuget package required (preferably the latest one)
 
 ```xml
 <PackageReference Include="Serilog.Filters.Expressions" Version="2.0.0" />

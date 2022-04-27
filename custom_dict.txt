@@ -108,6 +108,7 @@ APM[s]
 AppArmor
 AppD
 AppDev
+AppDomain
 AppDynamics
 Appel
 appender
@@ -118,12 +119,14 @@ applicationPort
 Applitools
 AppSec
 AppServer
+AppsManager
 Apress
 AquaSecurity
 Aravena
 [Aa]rchitecting
 Ardanlabs
 [Aa]rgo(CD|cd)(-k8s)?
+args
 ARM64
 Artifactory
 artisanal
@@ -134,6 +137,7 @@ Ashby
 Ashok
 Asiedu-Ampem
 aspirational
+ASPX
 Astra
 async
 AsyncEventListener
@@ -517,6 +521,7 @@ DellEMC
 Denham-Parry
 denhamparry
 Depedency
+dependant
 deployable
 [Dd]eployable
 deps
@@ -553,6 +558,7 @@ DiskStore
 Disneyland
 DISO
 [Dd]isposability
+distinguisher
 distributable
 DistributedCommand
 distributedCommand
@@ -645,6 +651,7 @@ Endnotes
 enforce-node-allocatable
 Enlightning
 Enqueueing
+enricher
 entriesInVM
 entriesOnlyOnDisk
 EntryEvent
@@ -670,6 +677,7 @@ eventQueueSize
 eventsDistributed
 eventsQueued
 Evie
+exceptions
 [Ee]xecutables
 expander(s)?
 expensed
@@ -908,6 +916,7 @@ Heroku('s)?
 High-Cardinality
 Hillegass
 Hinojosa
+hl_lines=4-5
 HMAC
 Hobsons
 hoc
@@ -917,6 +926,7 @@ Homebrew
 homogenous
 horizontally-scalable
 HorizontalPodAutoscaler(s)?
+Hostable
 HostEndpoint
 [Hh]ostname(s)?
 hostPath
@@ -972,6 +982,7 @@ IngressRoute
 init(Container)?
 InitialCapacity
 initializer
+initializers
 initializeTotalDetails
 initializeTotalPrimaryDetails
 initializeTotalRedundantDetails
@@ -1251,6 +1262,7 @@ localhost(:[0-9]*)?
 lockfile
 Log4Hell
 [Ll]og4j2?
+log4net
 Log4Shell
 LogAllStatisticValuesFunction
 Logback
@@ -1369,6 +1381,7 @@ MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
 MQ
 MQTT
+MSBuild
 MSc
 MSCVRT
 MSDN
@@ -1553,6 +1566,7 @@ parallelizing
 [Pp]arameteriz(e|ation|ing)?
 parameterless
 Parrit
+parsable
 PARTITION_REDUNDANT_HEAP_LRU
 PartitionedRegion
 PartitionedRegion's
@@ -1607,7 +1621,7 @@ Pluggable
 pluggable
 Pluralsight
 PMC
-POCO
+POCO(s)?
 podcaster
 PodDisruptionBudget
 PodMetrics
@@ -1769,6 +1783,7 @@ Ren
 Renaud
 Renfro
 Renner
+[Rr]eplatforming
 replatforming
 ReplicaSet(s)?
 replicationcontrollers
@@ -1894,6 +1909,7 @@ SELinux
 Semver
 Sergi
 SerialGatewaySenderQueueEntrySizer
+Serilog
 server1
 server2
 ServerConnection
@@ -2069,6 +2085,8 @@ TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
 testability
+TestServiceBusConfigIsConfiguredReturnsFalse
+TestServiceBusConfigIsConfiguredReturnsTrue
 TGI(K)?
 tgz
 Thanos
@@ -2101,6 +2119,7 @@ toolkits
 [Tt]oolset
 tooltip
 [Tt]opolog(y|ies)?
+TopShelf
 Torgerson
 toString
 totalProcessingTime
@@ -2108,6 +2127,7 @@ totalQueueTime
 totalTransmissionTime
 traceroute
 tradeoff(s)?
+Tradeoffs
 Traefik
 transactional
 transformational
@@ -2146,6 +2166,7 @@ undersample
 underutilization
 unencoded
 unencrypted
+unhandled
 [Uu]nmanaged
 unpause
 Unported
@@ -2201,6 +2222,7 @@ Venafi
 Vendio
 vendir
 vendored
+vendoring
 Venkat
 Venkateswara
 verifiably
@@ -2266,6 +2288,7 @@ WebHook
 [Ww]ebhook(-based|s)?
 WebLogic
 Webpage
+WebRequest
 WebSocket
 WebSphere
 WeChat
@@ -2300,6 +2323,7 @@ XKCD
 XP
 XSalsa20
 Xu
+xUnit
 Y2ffgg
 yaml
 YAML|yaml
@@ -2313,6 +2337,7 @@ Yonis
 Yorker
 young-ish
 youtube
+YSoD
 YTT
 ytt(-templatized)?
 Zalando
