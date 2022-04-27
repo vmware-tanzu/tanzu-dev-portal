@@ -28,13 +28,13 @@ hide_newsletter: true
 
 <div id="day-1-agenda" class="agenda p-lg-5 p-3">
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">8:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">8:00 AM CST</div>
         <div class="talk-title col-5 h4">Registration & Breakfast</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:00 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#omgdevsecopsbbq">OMGDEVSECOPSBBQ</a>
         </div>
@@ -43,7 +43,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:25 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:25 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#cloud-native-architectures">Cloud Native Architectures</a>
         </div>
@@ -52,7 +52,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:10 AM CDT</div>
+        <div class="time col-4 pl-0 h4">10:10 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#login-page">Do the Login Page First</a>
         </div>
@@ -61,12 +61,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:00 AM CST</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:20 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:20 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#change-data-capture">Change Data Capture: A Primer</a>
         </div>
@@ -75,13 +75,13 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:55 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:55 AM CST</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:00 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#k8s-intro">Intro to Kubernetes</a>
         </div>
@@ -90,7 +90,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:45 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:45 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#k8s-native-java">Kubernetes-Native Java</a>
         </div>
@@ -99,12 +99,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:50 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:50 PM CST</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:10 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:10 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#canz-u-tanzu">Canz U Tanzu?</a>
         </div>
@@ -114,7 +114,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:50 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:50 PM CST</div>
         <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
         <div class="name col-3"></div>
     </div>
@@ -122,13 +122,13 @@ hide_newsletter: true
 
 <div id="day-2-agenda" class="agenda p-lg-5 p-3" style="display: none">
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">8:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">8:00 AM CST</div>
         <div class="talk-title col-5 h4">Registration & Breakfast</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:00 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:00 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#tdd">TDD and the Terminator — An Introduction to Test Driven Development</a>
         </div>
@@ -139,7 +139,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:45 AM CDT</div>
+        <div class="time col-4 pl-0 h4">9:45 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#spring-cloud-gateway-recipes">Spring Cloud Gateway Recipes</a>
         </div>
@@ -148,12 +148,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:30 AM CDT</div>
+        <div class="time col-4 pl-0 h4">10:30 AM CST</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:50 AM CDT</div>
+        <div class="time col-4 pl-0 h4">10:50 AM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#platform-as-a-product">Platform as a Product</a>
         </div>
@@ -162,12 +162,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:55 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:55 AM CST</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:10 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:10 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
@@ -176,7 +176,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">1:55 PM CDT</div>
+        <div class="time col-4 pl-0 h4">1:55 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#progressive-delivery">Doing Progressive Delivery with Your Team</a>
         </div>
@@ -185,12 +185,12 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:40 PM CDT</div>
+        <div class="time col-4 pl-0 h4">2:40 PM CST</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:00 PM CDT</div>
+        <div class="time col-4 pl-0 h4">3:00 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
         </div>
@@ -199,7 +199,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:05 PM CDT</div>
+        <div class="time col-4 pl-0 h4">4:05 PM CST</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#knative">What is Knative Serving?</a>
         </div>
