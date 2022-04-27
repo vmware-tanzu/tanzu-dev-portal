@@ -7,9 +7,9 @@ date = 2019-03-14T09:08:44-05:00
 *[!TIP]
 Before continuing, please refer to recipe named `Core like Startup` under `ASP.NET`*
 
-This recipe guides you on, how to make use of redis, for session persistance in classic ASP.NET applications, using Steeltoe connectors.
+This recipe guides you on, how to make use of redis, for session persistence in classic ASP.NET applications, using Steeltoe connectors.
 
-### Pre-requisites
+### Prerequisites
 
 - Install Redis version 2.6 or higher to support session
 - Visual studio 15.3 or more
@@ -18,7 +18,7 @@ This recipe guides you on, how to make use of redis, for session persistance in 
 
 - Follow the instructions from the recipe `Core like Startup` This will add the support for .NET Core like DI, Configuration injection, use of Steeltoe Core extension methods, etc.
 - Add nuget package reference to `Steeltoe.Extensions.Configuration.CloudFoundryCore`
-- Add the IConfigurationBuilder extensions methods (as below) to pull in configurations from environment variables and VCAP_SERVICES (user provided). Optional to add json files, yaml files, etc as needed. 
+- Add the `IConfigurationBuilder` extensions methods (as below) to pull in configurations from environment variables and `VCAP_SERVICES` (user provided). Optional to add JSON files, YAML files, etc as needed. 
 
     ```c#
         public class BootConfig
@@ -39,7 +39,7 @@ This recipe guides you on, how to make use of redis, for session persistance in 
     ```
 
 - Add nuget package reference to `Steeltoe.CloudFoundry.ConnectorCore`
-- Add the Steeltoe's IServiceCollection extension method (as below) which injects an implementation of IConnectionMultiplexer. Steeltoe is smart to pull the configurations from VCAP_SERVICES, if app is bounded to a redis instance, else use the default host and port for Redis
+- Add the Steeltoe's `IServiceCollection` extension method (as below) which injects an implementation of `IConnectionMultiplexer`. Steeltoe is smart to pull the configurations from `VCAP_SERVICES`, if app is bounded to a redis instance, else use the default host and port for Redis
 
     ```c#
         public class BootConfig
@@ -58,7 +58,7 @@ This recipe guides you on, how to make use of redis, for session persistance in 
         }
     ```
 
-- Create a class called RedisConfig as below, which serves the connection string to `RedisSessionStateProvider` mentioned in the `web.config` (later in the steps)
+- Create a class called `RedisConfig` as below, which serves the connection string to `RedisSessionStateProvider` mentioned in the `web.config` (later in the steps)
     
     ```c#
         public class RedisConfig
@@ -91,7 +91,7 @@ This recipe guides you on, how to make use of redis, for session persistance in 
     ```
 
 - Use a generator like [this one](https://www.developerfusion.com/tools/generatemachinekey) to create and update the `machineKey` section
-- Application is all set to use Redis as its backing store for Sesion.
+- Application is all set to use Redis as its backing store for session.
 
 For more details and sample application, you can refer to [this article](https://www.initpals.com/cloud/asp-net-app-using-redis-backed-session-using-steeltoe-io/)
 

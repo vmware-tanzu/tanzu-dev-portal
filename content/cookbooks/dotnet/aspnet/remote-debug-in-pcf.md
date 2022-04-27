@@ -6,12 +6,12 @@ date = 2018-09-21T09:08:44-05:00
 
 ## Remote debug an ASP.NET application running in Windows 2016 PCF containers
 
-### Pre-requisites
+### Prerequisites
 
 - Visual Studio 2012 (any edition) or higher (I used VS 2017 / 15.4)
 - Remote Tools should be installed (Ref: https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2017#download-and-install-the-remote-tools)
 - Application should run in a remote machine or container where SSH is enabled. In PCF, please use `cf ssh-enabled <app_name>` to ensure.
-- Windows2016 stacks are necessary in PCF, ensure using `cf stacks` command
+- `Windows2016` stacks are necessary in PCF, ensure using `cf stacks` command
 
 ### Steps
 
@@ -26,11 +26,11 @@ date = 2018-09-21T09:08:44-05:00
     - Under `Settings` tab, select `Debug` as `Configuration`
     - Expand `File Publish Options` and select all the check boxes
     - Click on `Configure` link near to `Precompile during publish option`, a new window will be opened
-    - Make sure to check `Emit debug information`. It is very important to select debug info emmit option, elso no sumbols will be loaded for debugging.
+    - Make sure to check `Emit debug information`. It is very important to select debug info emit option, else no symbols will be loaded for debugging.
     - Other options are optional and make it as appropriate. In my case, I checked `Allow precompiled site to be updatable` and selected `Do not merge` options
     - Press `Ok` button takes you to the parent form where you can click `Publish`
-    - Once publish is successfully completed, you can navigate to the targetted location, in my case `c:\AppArtifacts\RemoteDebugging`, where I should see all the buplished artifacts. 
-- Now, we need to find the appropriate remote debugging tools, for the version of Visusl studio you are using. In my case I used VS2017.
+    - Once publish is successfully completed, you can navigate to the targeted location, in my case `c:\AppArtifacts\RemoteDebugging`, where I should see all the published artifacts. 
+- Now, we need to find the appropriate remote debugging tools, for the version of Visual Studio you are using. In my case I used Visual Studio 2017.
     - You can use some simple tips to find it out. In windows explorer, navigate to `c:\` and search for `msvsmon.exe`. This will show you number of locations based on the number of Visual Studio version you have.
     - In my case, since I have Visual studio 2017, I chose `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64`
     - Create a new folder called `vs_dubugger` under our artifacts directory, e.g. `c:\AppArtifacts\RemoteDebugging\vs_dubugger`

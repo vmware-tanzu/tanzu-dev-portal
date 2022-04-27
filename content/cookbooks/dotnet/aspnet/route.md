@@ -37,7 +37,7 @@ config.Routes.MapHttpRoute(
 RouteTable.Routes.RouteExistingFiles = true;		
 ```
 
-Another possible approaches are to implement HttpModule or Owin Middleware, or .NET Core Middleware
+Another possible approaches are to implement `HttpModule` or OWIN Middleware, or .NET Core Middleware
 
 ## References
 * https://kasperholdum.dk/2016/03/09/reverse-proxy-in-asp-net-web-api/

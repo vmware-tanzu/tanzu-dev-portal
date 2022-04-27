@@ -46,7 +46,7 @@ When pushing akka nodes to Linux cells on PCF you must disable IPv6 and enable t
 
 The challenge with running Akka on PCF is first ensuring the Lighthouse nodes are UP prior to any non-seed nodes joining the cluster. Secondly as the address changes the non-seed needs to discover the seed node addresses when starting so they can join the cluster.
 
-One simple approach is to use Redis as a basic discovery mechanism. Lighthouse nodes start and register their IP in Redis, non-seed nodes wait for an address to be present in Redis. Ligthhouse nodes also use the list of seed node IPs as they need to connect to each other.
+One simple approach is to use Redis as a basic discovery mechanism. Lighthouse nodes start and register their IP in Redis, non-seed nodes wait for an address to be present in Redis. Lighthouse nodes also use the list of seed node IPs as they need to connect to each other.
 
 This repo contains a basic approach for doing this on PCF: https://github.com/miclip/AkkaCluster
 

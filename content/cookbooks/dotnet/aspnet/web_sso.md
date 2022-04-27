@@ -6,14 +6,14 @@ weight = 50
 
 ## Prerequisites
 
-1. Pivotal CloudFoundry (PCF) instance 
+1. Pivotal Cloud Foundry (PCF) instance 
 1. Windows support on PCF instance 
 1. SSO Tile installed and configured
 1. ASP.NET Application with .NET Framework 4.6.1+
 
 ## High level steps
 
-1. Confgure ASP.NET Application for OpenIDConnect (OIDC)
+1. Configure ASP.NET Application for `OpenIDConnect` (OIDC)
 1. Push the application to PCF
 1. Bind the application to [Pivotal SSO Tile][websso]
 
@@ -148,11 +148,11 @@ namespace demo.values
 
 #### Configure OIDC
 
-In this example, change the pipeline to use OpenId Connect and use the login path `/Account/AuthorizeSSO` which is unprotected and redirects the unauthenicated user to the IdP.  
+In this example, change the pipeline to use OpenId Connect and use the login path `/Account/AuthorizeSSO` which is unprotected and redirects the unauthenticated user to the IdP.  
 
 Add SSO configuration to Startup by adding information from bound SSO `VCAPS_SERVICES` (client_id, client_secret, authentication domain, and app host)
 
-For more info on the [OpenIDConnectOptions](https://steeltoe.io/docs/steeltoe-security/#1-3-2-configure-settings).
+For more info on the [`OpenIDConnectOptions`](https://steeltoe.io/docs/steeltoe-security/#1-3-2-configure-settings).
 
 ```c#
 // File: App_Start/AuthConfig.cs
@@ -336,7 +336,7 @@ Here is simplified diagram:
 
 To see more detailed SSO with ADFS flow refer to [Detailed SSO flow][sso]
 
-## OWIN Midddleware
+## OWIN Middleware
 
 The standard way to offload common code such as Authentication from the application functionality is creating interceptor - OIDC/OAuth 2.0 OWIN Middleware - and wiring it the application.
 
@@ -351,7 +351,7 @@ The following steps were tested with classic .NET Web Forms and MVC projects.
 1. Make sure VS project is set to use to use local IIS express server (not dev server)
 2. Update following properties:
   - Enable SSL (OIDC requires it)
-  - Enable Anomymous Authentication
+  - Enable Anonymous Authentication
   - Disable Windows Authentication
   - Managed pipeline set to integrated
   ![Project properties](/sso_img/project_props.png)  
@@ -429,7 +429,7 @@ Add following to web.config services configuration.
 <bindings>
 ```
 
-### [Optional] ASP.NET Aapplication LDAP Groups Authorization
+### [Optional] ASP.NET Application LDAP Groups Authorization
 
 Many legacy .NET forms apps are using **RoleManager ASP.NET role checks** - Perform entitlements checks by using configured **RoleManager**. Roles are not set on the Principal, but are verified by invoking configured RoleManager Provider which will verify the roles. In code it is usually done by invoking configured RoleManager:
 
@@ -457,7 +457,7 @@ Configure `web.config`
 </system.web>
 ```
 
-Programatic imperative checking of role access:
+Programmatic imperative checking of role access:
 
 ```c#
 bool isInRole = Roles.IsUserInRole("<role name>");

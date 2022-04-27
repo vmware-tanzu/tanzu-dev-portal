@@ -41,6 +41,7 @@ acknowledgedEvents
 acknowledgement
 Acknowledgement
 ACL(s)?
+ActiveDirectory
 ActiveMQ
 Activiti
 add-on(s)?
@@ -50,6 +51,7 @@ additively
 addNotificationListener
 Addon
 addon(s)?
+ADFS
 Adib
 Adib's
 Admission(Response|Review)
@@ -159,6 +161,7 @@ AutoBuild
 autocompletion
 [Aa]utoconfiguration
 AutoDeploy
+Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
 Autowired
@@ -233,6 +236,7 @@ br/
 Brandolini('s)?
 Brannen
 brd1
+breakpoint
 BrighterCommand
 Brindley
 Brodi
@@ -878,7 +882,7 @@ HATEOAS
 Hayk
 Haytham
 Headspring
-healthcheck
+healthcheck(s)?
 Heartbleed
 Heen
 Heinemeier
@@ -989,6 +993,7 @@ IPV4
 IPV6
 IPVS
 Irizarry
+IronFrame
 IRSA
 Isenberg
 ISTIO_MUTUAL
@@ -1478,6 +1483,7 @@ OPA
 Opdyke
 OpenAPI(Tools)?
 OpenFeign
+OpenId
 OpenID
 OpenShift
 OpenSource
@@ -1511,6 +1517,8 @@ overengineer(ing)?
 oversample
 [oO]versized
 OWASP
+OWIN
+Owin
 OWIN(-ize)?
 Özlü
 P2P
@@ -1715,6 +1723,7 @@ rebasing
 recognise
 Recommender
 [Rr]eddit
+RedirectUri
 [rR]edis
 RedMonk('s)?
 Reenvisioning
@@ -1786,6 +1795,8 @@ Rockstar
 Rodislav
 ROI
 [Rr]ole([Bb]inding(s)?)?
+RoleManager
+RoleProvider
 [Rr]ollout
 [Rr]ollouts
 rom-com
@@ -1963,6 +1974,7 @@ Stauffer
 STDERR|stderr
 STDOUT|stdout
 Steeltoe('s)?
+SteeltoeOSS
 stemcell
 Stéphane
 STIG
@@ -2110,6 +2122,7 @@ Umbraco
 unannotated
 unbundle
 UNC
+uncheck
 Uncomment
 uncomment
 undersample
@@ -2222,6 +2235,7 @@ WaveConfigObject
 waypoints
 WCF
 WebAPI
+WebApp
 webapp
 webapps_default
 Webber
@@ -2229,6 +2243,7 @@ WebClient
 WebClient's
 WeBeFoods
 WebFlux
+[Ww]ebforms
 [Ww]ebhook(-based|s)?
 WebLogic
 Webpage
@@ -2257,6 +2272,7 @@ workspaces
 writeout
 WSL
 Wujec('s)
+X509
 x509
 x64
 Xcode

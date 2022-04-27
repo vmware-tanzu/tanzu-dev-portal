@@ -5,11 +5,11 @@ tags = [ "SSL", "TLS", "mutual TLS" ]
 weight = 150
 +++
 
-PCF apps run under a non-priviledged container account they do not have access to install or access certs in the Windows Machine cert store.
+PCF apps run under a non-privileged container account they do not have access to install or access certs in the Windows Machine cert store.
 
 To resolve this, there are few approaches:
 
-* The app could install certificate into Current User Store and point configuration to load cert from `StoreLocation.CurrentUser`. For the system to use client cert in TLS hadshake private key should be stored in the Windows store - use `X509KeyStorageFlags.PersistKeySet` when loading the certificate.
+* The app could install certificate into Current User Store and point configuration to load cert from `StoreLocation.CurrentUser`. For the system to use client cert in TLS handshake private key should be stored in the Windows store - use `X509KeyStorageFlags.PersistKeySet` when loading the certificate.
 
     ```c#
     X509Certificate2 xcert = new X509Certificate2(cert, passw, X509KeyStorageFlags.PersistKeySet);
