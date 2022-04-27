@@ -5,7 +5,7 @@ title = "VCAP Configuration"
 
 Applications running at PCF leverage Services for environment specific settings. All `web.config` settings that are specific to environment are moved into CF services that are bound to the application. There services provided by PCF Service Brokers or User Provided Services.
 
-To enable .NET applications to read  and use CF services information Configuration library is provided. Library will use `web.config` settings if it detects that it runs in NON-Cloud and CF services informatcion if run on PCF. It will essentialy parse `VCAPS_SERVICES` json information and provide it as set of classes for the application to use. The concept and structure is borrowed from Steeltoe and Spring CloudConnectors.
+To enable .NET applications to read  and use CF services information Configuration library is provided. Library will use `web.config` settings if it detects that it runs in NON-Cloud and CF services information if run on PCF. It will essentially parse `VCAPS_SERVICES` JSON information and provide it as set of classes for the application to use. The concept and structure is borrowed from Steeltoe and Spring CloudConnectors.
 
 ## Configuration
 

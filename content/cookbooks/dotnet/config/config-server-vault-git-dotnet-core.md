@@ -13,7 +13,7 @@ date = 2018-07-18T13:26:58-05:00
     cf create-service p-vault standard <vault-service-name>
     ```
 
-- Bind it to a simple application to get the vault paramaters like host, port and token via environment variables (`Apps Manager` --> `Application` --> `Settings` --> `REVEAL ENV VARS`). Settings should be something similar to below..
+- Bind it to a simple application to get the vault parameters like host, port and token via environment variables (`Apps Manager` --> `Application` --> `Settings` --> `REVEAL ENV VARS`). Settings should be something similar to below..
 
     ```json
     "p-vault": [
@@ -37,10 +37,10 @@ date = 2018-07-18T13:26:58-05:00
     ---
     ```
 
-- Make sure you have the yml file in github repository you are targetting at. Point to note is that the name of the yml file should match with the `spring:application:name` in `appsettings.json`, in this case it is `mysampleconfigserver.yml`
+- Make sure you have the `yml` file in github repository you are targeting at. Point to note is that the name of the `yml` file should match with the `spring:application:name` in `appsettings.json`, in this case it is `mysampleconfigserver.yml`
 - Make a note of the git repo url, username and password
 
-- Create an instance of config-server in pcf with the below vault configuration
+- Create an instance of config-server in PCF with the below vault configuration
 
     ```json
     {
@@ -162,9 +162,9 @@ date = 2018-07-18T13:26:58-05:00
     Property logging:level=Debug
     ```
 
-- Now you can modify the yml file in github and vault entries to test the dynamic reload of configurations without restarting the application. To trigger the refresh, click the link [`Reload Config From Vault`] on the app.
+- Now you can modify the `yml` file in github and vault entries to test the dynamic reload of configurations without restarting the application. To trigger the refresh, click the link [`Reload Config From Vault`] on the app.
 
-- You can make this auto refresh upon any change and push on the github yml file as well. To get more info please refer to [this guide](https://github.com/pivotalservices/redis_pub_sub_with_git_webhook) and follow the instructions on ReadMe
+- You can make this auto refresh upon any change and push on the GitHub `yml` file as well. To get more info please refer to [this guide](https://github.com/pivotalservices/redis_pub_sub_with_git_webhook) and follow the instructions on `ReadMe`
 
 #### Important points to keep in mind
 
@@ -205,7 +205,7 @@ date = 2018-07-18T13:26:58-05:00
     services.AddConfiguration(Configuration);
     ```
 
-2. Just add `IConfigurationRoot` as one of the constructor arguments, where you want to trigger the reload and call `Reload()` method of IConfigurationRoot, as below
+2. Just add `IConfigurationRoot` as one of the constructor arguments, where you want to trigger the reload and call `Reload()` method of `IConfigurationRoot`, as below
 
     ```
     Imp: Please make sure all the configuration options are wrapped by IOptionsSnapshot (as below)
@@ -226,11 +226,11 @@ date = 2018-07-18T13:26:58-05:00
     }
     ```
 
-#### Interesting stuff down here, enabling dynamic configuraion refresh...
+#### Interesting stuff down here, enabling dynamic configuration refresh...
 
 - This application is integrated with `redis_messaging_library` ([found here](https://github.com/pivotalservices/redis_pub_sub_with_git_webhook/tree/master/redis_messaging/src)) to enable dynamic refresh of configuration.
 
-- Refer to the readme [here](https://github.com/pivotalservices/redis_pub_sub_with_git_webhook) to have the publisher app running
+- Refer to the `ReadMe` [here](https://github.com/pivotalservices/redis_pub_sub_with_git_webhook) to have the publisher app running
 
 - Add `RedisConnector` and `Consumer` services into service collection
 

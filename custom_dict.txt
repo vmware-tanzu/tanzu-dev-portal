@@ -47,6 +47,9 @@ Activiti
 add-on(s)?
 addAndReturnSize
 addAndReturnSizes
+AddCloudFoundry
+AddConfigServer
+AddEnvironmentVariables
 additively
 addNotificationListener
 Addon
@@ -331,6 +334,8 @@ ClientMetadataService
 ClientProxyMembershipID
 Clojure
 closeRegion
+CloudConnectors
+CloudController
 CloudEvents
 CloudFlare
 Cloudflare
@@ -377,8 +382,12 @@ compareAllValues
 compareKeySets
 compareSingleValues
 [Cc]omposable
+[Cc]onfig-server
 [Cc]onfig(s|-drift)?
 [Cc]onfig[Mm]ap(s)?
+configbrowser
+ConfigServer
+ConfigurationBuilder
 ConfigurationMap(s)?
 ConfigurationProperties
 [Cc]onformant
@@ -719,6 +728,7 @@ frictionless
 [fF]rontend(-green)?
 Frontstage
 Fu
+FullFrameworkWebApi
 fullnameOverride
 fully-deserialized
 functionExecutionCalls
@@ -920,6 +930,7 @@ HSQLDB
 HttpBase
 HttpClientFactory
 HttpClients
+HttpConfiguration
 https?|HTTPS?
 HttpSession
 HumanOps
@@ -996,6 +1007,7 @@ Irizarry
 IronFrame
 IRSA
 Isenberg
+IServiceProvider
 ISTIO_MUTUAL
 ISTIO_PROMETHEUS_ANNOTATIONS
 istio-cni
@@ -1074,9 +1086,11 @@ JProfiler
 JRE
 JRuby
 JS
+json
 JSON-to-Java
 JSON(-formatted)?
 JSONFormatter
+JsonMediaTypeFormatter
 Jsonnet
 JSONPatch
 JsonPdxConverter
@@ -1265,6 +1279,7 @@ Lum
 Lunven
 Lyft
 Lyu
+m_serviceProvider
 m'étonner
 ([Mm]|multi-m)icroservice(s)?(-related|-based)?
 M1
@@ -1923,6 +1938,7 @@ SmartTV
 SMB
 SME
 SMI
+SMTP
 Smythe
 Snapchat
 SNI
@@ -1974,6 +1990,7 @@ Stauffer
 STDERR|stderr
 STDOUT|stdout
 Steeltoe('s)?
+SteeltoeConfigManager
 SteeltoeOSS
 stemcell
 Stéphane
@@ -2235,6 +2252,7 @@ WaveConfigObject
 waypoints
 WCF
 WebAPI
+WebApiConfig
 WebApp
 webapp
 webapps_default
@@ -2244,6 +2262,7 @@ WebClient's
 WeBeFoods
 WebFlux
 [Ww]ebforms
+WebHook
 [Ww]ebhook(-based|s)?
 WebLogic
 Webpage
@@ -2282,6 +2301,7 @@ XP
 XSalsa20
 Xu
 Y2ffgg
+yaml
 YAML|yaml
 Yaron
 YARP

@@ -96,13 +96,13 @@ At this point we’ll be able to access the configuration data contained in our 
 
 #### Noteworthy
 
-Notice that the previous code snippet includes two calls to the `AddEnvironmentVariables()` extension method of the `ConfigurationBuilder`. The first call is decorated with the comment “boostrap config-server” and the second call is decorated with the comment “override config-server”. The first call exists to do what is implied by its comment; config-server requires some minimal information to bootstrap (such as active profiles, auth tokens, etc). Such settings used for bootstrapping can be stored in `appsettings.json` or in the Environment, so we need to ensure both are added prior to config-server. Once config-server is added, we want to ensure that any variables defined directly in our environment continue to override any settings brought down from config-server. Therefore, it is necessary to call `AddEnvironmentVariables()` before we invoke `AddConfigServer()` and then once again after we’ve invoked `AddConfigServer()`.
+Notice that the previous code snippet includes two calls to the `AddEnvironmentVariables()` extension method of the `ConfigurationBuilder`. The first call is decorated with the comment “bootstrap config-server” and the second call is decorated with the comment “override config-server”. The first call exists to do what is implied by its comment; config-server requires some minimal information to bootstrap (such as active profiles, auth tokens, etc). Such settings used for bootstrapping can be stored in `appsettings.json` or in the Environment, so we need to ensure both are added prior to config-server. Once config-server is added, we want to ensure that any variables defined directly in our environment continue to override any settings brought down from config-server. Therefore, it is necessary to call `AddEnvironmentVariables()` before we invoke `AddConfigServer()` and then once again after we’ve invoked `AddConfigServer()`.
 
 ### Load Options
 
 In order to make our wrapper more useful we have to enable configuration options. Configuration Options require use of the Dependency Injection framework provided by .NET core, so first we have to set up a service provider with options enabled.  To do this, we’ll add a new private static member, `m_serviceProvider`, as well as a few lines of code to the type initializer:
 
-{{<highlight cs "hl_lines=1 12-17">}}
+{{<highlight cs "hl_lines=12-17">}}
 private static IServiceProvider m_serviceProvider;
 
 static SteeltoeConfigManager()
@@ -177,7 +177,7 @@ namespace FullFrameworkWebApi.Controllers
 
 The above controller action will print the contents of `CloudFoundryServicesOptions.Services` to the screen in JSON format.  
 
-Since we’re returning JSON, we’ll also want to modify our WebApiConfig to use a JSON formatter; to make it readable, we’ll set `Indent = true` on construction:
+Since we’re returning JSON, we’ll also want to modify our `WebApiConfig` to use a JSON formatter; to make it readable, we’ll set `Indent = true` on construction:
 
 {{<highlight cs "hl_lines=10-12">}}
 using System.Web.Http;
@@ -259,7 +259,7 @@ Finally, to simulate a Cloud Foundry environment with Redis bound to our app, ad
 
 Launch the solution in the debugger and view the output at `api/configbrowser`:
 
-![api/configbrowser output](/steeltoe-config-legacy-framework/configbrowser-json.png)
+![`api/configbrowser` output](/steeltoe-config-legacy-framework/configbrowser-json.png)
 
 ### Experiment
 

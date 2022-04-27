@@ -56,7 +56,7 @@ You might have centralized code that provides a connection string to the rest of
   {{< /tab >}}
 {{< /tabpane >}}
 
-Application settings are usually retreived from environment variables using the following format _['MY_APPLICATION__MY_SETTING']_, however conection strings can often be retreived from the Cloud Foundry `VCAP_SERVICES` environment variable
+Application settings are usually retrieved from environment variables using the following format _['MY_APPLICATION__MY_SETTING']_, however connection strings can often be retrieved from the Cloud Foundry `VCAP_SERVICES` environment variable
 In this case, you would want to perform the following steps in a re-write of this function:
 
 1. Detect the presence of the `VCAP_SERVICES` environment variable
@@ -130,7 +130,7 @@ The following is an example of how to update your configuration provider:
   {{< /tab >}}
 {{< /tabpane >}}
 
-While there are other ways of getting environment variables into configuration, such as the [EnvironmentConfigBuilder](https://github.com/aspnet/MicrosoftConfigurationBuilders#environmentconfigbuilder), the above is the most low level and works with most legacy frameworks
+While there are other ways of getting environment variables into configuration, such as the [`EnvironmentConfigBuilder`](https://github.com/aspnet/MicrosoftConfigurationBuilders#environmentconfigbuilder), the above is the most low level and works with most legacy frameworks
 
 
 ## Backing Services (Web and others)

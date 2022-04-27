@@ -47,7 +47,7 @@ services.Configure<Custom>(Configuration.GetSection("Custom"));
 
 ## References
 
-Here are some links to to additional information:
+Here are some links to additional information:
 
 * [http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/](http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/)
 * [.NET Core Documentation on Configuration with Options](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration#using-options-and-configuration-objects)

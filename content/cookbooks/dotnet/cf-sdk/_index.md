@@ -5,7 +5,7 @@ pre = "<i class='fa fa-book'></i> "
 layout = "intro"
 +++
 
-The Cloud Foundry .NET SDK enables you to access the CloudController API programtically. The CloudFoundry API lets you manage applications and automate functions typlically available via Apps Manager and the CF CLI.
+The Cloud Foundry .NET SDK enables you to access the CloudController API programmatically. The Cloud Foundry API lets you manage applications and automate functions typically available via Apps Manager and the CF CLI.
 
 The full CF API Documentation is available at http://apidocs.cloudfoundry.org/ 
 

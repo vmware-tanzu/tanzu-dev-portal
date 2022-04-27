@@ -41,7 +41,7 @@ date = 2018-07-18T13:32:38-05:00
     ```
 
 - Add method attribute `[GitHubWebHook]` to the above Action method
-- Add SecretKey to the configuration file as below
+- Add `SecretKey` to the configuration file as below
 
     ```json
     "WebHooks": {
