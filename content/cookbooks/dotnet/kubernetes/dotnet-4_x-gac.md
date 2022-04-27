@@ -14,7 +14,7 @@ The `Dockerfile` assumes that your solution is named COMClient and is placed at 
 
 The `Dockerfile` downloads and installs the VC++ redistributable in a special way due to the fact that the installer is asynchronous. The PowerShell `Start-Process` and `Wait-Process` Cmdlets synchronize the operation so the docker build doesn't terminate prematurely.
 
-The `Dockerfile` then registers the ATL/COM dll that the .NET 2.0 project depends on. Care is taken to use the 32-bit `regsvr.exe` which is located in `c:\Windows\SysWOW64`.
+The `Dockerfile` then registers the ATL/COM DLL that the .NET 2.0 project depends on. Care is taken to use the 32-bit `regsvr.exe` which is located in `c:\Windows\SysWOW64`.
 
 Just before putting the published artifacts into `c:\inetpub\wwwroot` 32-bit execution is enabled in IIS.
 

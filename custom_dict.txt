@@ -1926,6 +1926,7 @@ Serilog
 server1
 server2
 ServerConnection
+servercore
 [Ss]erverless
 ServiceAccount(s)?
 ServiceEntry

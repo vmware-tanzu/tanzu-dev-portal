@@ -12,7 +12,7 @@ Running an ASP.NET 2.0 WebForm app that relies on a 32 bit COM library.
 
 The `Dockerfile` assumes that your solution is named COMClient and is placed at the same level as the `Dockerfile`. The `Dockerfile` also assume that you've published the application to the `bin\Release\Publish` folder.
 
-The `Dockerfile` downloads and installs the VC++ redistributable in a special way due to the fact that the installer is asynchronous. The powershell `Start-Process` and `Wait-Process` Cmdlets synchronize the operation so the docker build doesn't terminate prematurely.
+The `Dockerfile` downloads and installs the VC++ redistributable in a special way due to the fact that the installer is asynchronous. The PowerShell `Start-Process` and `Wait-Process` Cmdlets synchronize the operation so the docker build doesn't terminate prematurely.
 
 The `Dockerfile` then registers the ATL/COM DLL that the .NET 2.0 project depends on. Care is taken to use the 32-bit `regsvr.exe` which is located in `c:\Windows\SysWOW64`.
 

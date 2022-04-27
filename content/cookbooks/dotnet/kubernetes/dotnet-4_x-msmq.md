@@ -50,7 +50,7 @@ This project demonstrates a pod hosting a WebAPI front end and a pod hosting a W
       "{Start-Sleep -Seconds 1}"]
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---
@@ -121,11 +121,11 @@ This project demonstrates a pod hosting a WebAPI front end and a pod hosting a W
     type: NodePort
   ```
   
-## Testing through KubeProxy
+## Testing through `KubeProxy`
 
-  The api `Service` specs have been left out of the sample K8 manifest. You can either create your own `Service` or you can use KubeProxy.
+  The api `Service` specs have been left out of the sample Kubernetes manifest. You can either create your own `Service` or you can use KubeProxy.
 
-  Assuming you have kubeproxy running with `kubectl proxy` you can
+  Assuming you have `kubeproxy` running with `kubectl proxy` you can
 
   `curl -X POST http://localhost:8001/api/v1/namespaces/<YOUR NAMESPACE>/pods/<YOUR API POD NAME>/proxy/api/message -H "Content-Type: application/x-www-form-urlencoded" --data 'message=data1'|more`
 
