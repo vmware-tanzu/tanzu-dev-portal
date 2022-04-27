@@ -55,7 +55,7 @@ This recipe explains, on using .NET standard extension methods in full framework
     ```
 5. You can also access the registered services using `BootConfig.GetService<T>()` method, anywhere from the applications. 
 
-> *Note: Incase if the application uses any DI framework, you can populate these services into their containers, where you may no need the `BootConfig.GetService<T>()` method.*
+> *Note: In case the application uses any DI framework, you can populate these services into their containers, where you may no need the `BootConfig.GetService<T>()` method.*
 
 
 ##### Hope you have fun!

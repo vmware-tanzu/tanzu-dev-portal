@@ -48,7 +48,7 @@ namespace Microsoft.Extensions.Logging
 }
 ```
 
-An `ILoggerProvider` is responsible for instantiation, configuration and shutdown/cleanup (via `IDisposable`) of one or more `ILogger` implementations.  For example, an `ILoggerProvider` implementation for a database-based logger might do things like verify database connectivity, or ensure the existance of certain tables/views as part of startup.  These types of tasks can (and should) be handled by the `ILoggerProvider` implementation, while the `ILogger` implementation is left to do what it does best (logging).
+An `ILoggerProvider` is responsible for instantiation, configuration and shutdown/cleanup (via `IDisposable`) of one or more `ILogger` implementations.  For example, an `ILoggerProvider` implementation for a database-based logger might do things like verify database connectivity, or ensure the existence of certain tables/views as part of startup.  These types of tasks can (and should) be handled by the `ILoggerProvider` implementation, while the `ILogger` implementation is left to do what it does best (logging).
 
 Now that we’re familiar with the subject matter, we can break down our custom logger into two high level tasks:
 

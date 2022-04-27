@@ -124,4 +124,4 @@ cf logs YourApp --recent | grep Graceful
 ## References
 [1] [Microsoft Docs: SetConsoleCtrlHandler](https://github.com/MicrosoftDocs/Console-Docs/blob/master/docs/setconsolectrlhandler.md)
 
-[2] [Microsoft Docs: HandlerRoutine callback function](https://github.com/MicrosoftDocs/Console-Docs/blob/master/docs/handlerroutine.md#remarks)
+[2] [Microsoft Docs: `HandlerRoutine` callback function](https://github.com/MicrosoftDocs/Console-Docs/blob/master/docs/handlerroutine.md#remarks)

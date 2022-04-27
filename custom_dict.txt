@@ -426,6 +426,7 @@ CRuby
 crypto
 [Cc]ryptographic(ally)?
 crystal(l)?ize
+csharp
 CSI(-plugin)?
 CSR(s)?
 CSV(s)?
@@ -505,6 +506,7 @@ denhamparry
 Depedency
 deployable
 [Dd]eployable
+deps
 deserialize
 deserializes
 deserializing
@@ -934,6 +936,8 @@ IDP
 IdP(s)?
 ie(.)?
 IIS
+ILogger
+ILoggerProvider
 ImagePolicyWebhook
 imagineered
 img
@@ -959,6 +963,7 @@ initializeTotalRedundantDetails
 Initializr
 injectable
 installable
+instantiation
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1412,6 +1417,7 @@ NIC
 Nicoll
 NIST
 NLB(s)?
+NLog
 NMica
 NNGroup
 no-brainer
@@ -2155,6 +2161,7 @@ Vanderburg
 vault-kubernetes-authenticator
 Vavr
 VC
+vcap
 VCAP
 vCenter
 VCS

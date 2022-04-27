@@ -16,7 +16,7 @@ Enable-WindowsOptionalFeature -Online -All -FeatureName IIS-HostableWebCore
 Enable-WindowsOptionalFeature -Online -All -FeatureName IIS-ASPNET45
 ```
 
-- Restart your machine, after successul execution of the above commands
+- Restart your machine, after successful execution of the above commands
 - Place the downloaded `hwc.exe` file in the folder where your applications `web.config` resides OR optionally you can can pass the path of the application as argument `-appRootPath`
 - In PowerShell, navigate to the folder and run the following command, with your choice of port. Make sure that you are running as **Administrator** to work properly
 

@@ -9,7 +9,7 @@ weight = 5
 
 ## When To Use This Recipe
 
-With legacy .NET it is common to use ODBC based connections to databases. MS SQL, PostgreSQL, Oracle, and MySQL are the popular choices. The following recipe can be used to create the ODBC registry values in a windows container, point to the correct driver DLL's, and consume a simple connection string. The example will use PostgreSQL as the data store of choice but everything can be easily adapted for other types of database.
+With legacy .NET it is common to use ODBC based connections to databases. MS SQL, PostgreSQL, Oracle, and MySQL are the popular choices. The following recipe can be used to create the ODBC registry values in a windows container, point to the correct driver DLLs, and consume a simple connection string. The example will use PostgreSQL as the data store of choice but everything can be easily adapted for other types of database.
 
 PostgreSQL: [https://odbc.postgresql.org/](https://odbc.postgresql.org/)
 
@@ -20,15 +20,15 @@ MySQL ODBC driver: [https://dev.mysql.com/downloads/connector/odbc/](https://dev
 ## Overview
 
 1. Create a working environment locally using the intended ODBC drivers and data store.
-1. Run provided powershell script to extract the settings and create a registry file (.reg).
+1. Run provided PowerShell script to extract the settings and create a registry file (.reg).
 1. Add everything created from script to the app and set to be included in final artifact.
-1. Example conenction string using Steeltoe
+1. Example connection string using Steeltoe
 
 ## Local working environment
 
 1. Install the driver by downloading and running msi: [https://ftp.postgresql.org/pub/odbc/versions/msi/psqlodbc_11_01_0000-x64.zip](https://ftp.postgresql.org/pub/odbc/versions/msi/psqlodbc_11_01_0000-x64.zip)
-1. Using powershell create a temporary folder `mkdir c:\cf_odbc_driver` and go in to folder `cd c:\cf_odbc_driver`.
-1. Save the following script as a .ps1 file in the new folder
+1. Using PowerShell create a temporary folder `mkdir c:\cf_odbc_driver` and go in to folder `cd c:\cf_odbc_driver`.
+1. Save the following script as a `.ps1 `file in the new folder
 
   ```bash
   $ErrorActionPreference = "Stop"
@@ -53,11 +53,11 @@ MySQL ODBC driver: [https://dev.mysql.com/downloads/connector/odbc/](https://dev
       #write the registry entry values to a temp location
       reg export $key "tmp\$i.reg"
 
-      #Copy the driver and setup DLL's used to the deps folder
+      #Copy the driver and setup DLLs used to the deps folder
       Copy-Item -Path $item.Driver -Destination "output\deps" -Force
       Copy-Item -Path $item.Setup -Destination "output\deps" -Force
 
-      #Get the file names of the DLL's for parsing below
+      #Get the file names of the DLLs for parsing below
       $driverFileName = (Split-Path -Path $item.Driver -Leaf -Resolve)
       $setupFileName = (Split-Path -Path $item.Setup -Leaf -Resolve)
 
@@ -90,13 +90,13 @@ MySQL ODBC driver: [https://dev.mysql.com/downloads/connector/odbc/](https://dev
 
 ## Extract settings and create registry file
 
-The powershell script is going to look in the registry where ODBC driver information is stored, and match all the drivers with the value of the `$odbc_driver_name` variable. For each one it finds, it will copy the driver details to a .reg file and copy the associated driver dll(s) as well. During writing the driver details it sets the location of the driver dll to what it will be in a windows conatiner on Cloud Foundry.
+The PowerShell script is going to look in the registry where ODBC driver information is stored, and match all the drivers with the value of the `$odbc_driver_name` variable. For each one it finds, it will copy the driver details to a .reg file and copy the associated driver DLL(s) as well. During writing the driver details it sets the location of the driver DLL to what it will be in a windows container on Cloud Foundry.
 
 Once all that is finished, the script then creates a .profile.bat script that simply has a command to execute the new .reg file. The profile file will be automatically run when the container is started up, thus installing the registry values, thus making the ODBC driver available to the app within the container.
 
 ## Prepare Visual Studio project
 
-1. With the driver information now extracted copy the `.profile.bat` file and the `/deps` folder (with contents) to the root of your application's project (it's where the .csproj is).
+1. With the driver information now extracted copy the `.profile.bat` file and the `/deps` folder (with contents) to the root of your application's project (it's where the `.csproj` is).
 1. Right click on each file in the project, choose 'properties', set 'Build Action' to 'None' and 'Copy To Output Directory' to 'Copy Always'. This means every time the project is either built or published these files (keeping the folder structure) will be copied to the artifact.
   
 ## Example connection string
@@ -152,7 +152,7 @@ public IEnumerable<Person> Get() {
 
 To add a DSN to your app's container, we can follow a similar approach to adding ODBC drivers by exporting the registry key settings. The following code assumes there exists a driver called "PostgreSQL Unicode(x64)" and requires you to fill in your database host information (<YOUR DATABASE HOST>). 
 
-``
+```bash
 $ErrorActionPreference="Stop"
 
 mkdir $PSScriptRoot\app\deps
@@ -173,7 +173,7 @@ Copy-item -Recurse -Path "C:\Program Files\psqlODBC\1101\bin\*" $depDir
 
 dir $depDir
 
-``
+```
 
 To import the DSN registry settings, add "reg import C:\Users\vcap\app\deps\odbc-dsn.reg" to your existing profile.bat script.
 
