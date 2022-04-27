@@ -12,7 +12,7 @@ On Windows workers volumes can only be mounted on directories rather than also o
 
 ## Dockerfile
 
-  The `Dockerfile` assume that you've published the application to the `bin\Release\Publish` folder, and also assumes that your solution is named WebConfigConfigMap and is placed at the same level as the `Dockerfile`.
+  The `Dockerfile` assume that you've published the application to the `bin\Release\Publish` folder, and also assumes that your solution is named `WebConfigConfigMap` and is placed at the same level as the `Dockerfile`.
 
   ```bash
   FROM mcr.microsoft.com/dotnet/framework/aspnet:3.5
@@ -41,7 +41,7 @@ On Windows workers volumes can only be mounted on directories rather than also o
   C:\ServiceMonitor.exe w3svc
   ```
 
-## K8 configmap.yml
+## Kubernetes configmap.yml
 
   The ConfigMap containing our cloudy Web.config is located in `configmap.yml`. As is the case with all ConfigMaps this must be created before the deployment. Alternatively the spec for the ConfigMap could be included into the same YAML file as the deployment.
 
@@ -65,7 +65,7 @@ On Windows workers volumes can only be mounted on directories rather than also o
       </configuration>
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

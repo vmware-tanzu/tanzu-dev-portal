@@ -17,6 +17,7 @@
 2012R2
 2FA
 2x2
+32bit
 3D
 [23]G
 401K
@@ -146,6 +147,7 @@ AsyncEventQueue's
 AsyncEventQueues
 AsyncEvents
 AsyncEventsQueues
+ATL
 Atlassian
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
@@ -291,6 +293,7 @@ Carducci
 Carta
 Cartographer
 Carvel('s)?
+CAS
 Cashmore
 cass-operator
 CCM
@@ -361,6 +364,7 @@ ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
+Cmdlets
 CMS
 CNAME
 CNB-speak
@@ -380,6 +384,7 @@ CoffeeOps
 cognisant
 Cohn
 colocated
+COMClient
 commonName(.)?
 [Cc]omms
 compareAllValues
@@ -592,6 +597,7 @@ Dobrin
 [Dd]ocker[Hh]ub(-[\w|-]+)?
 DockerCon
 [Dd]ockerfile(s|-built)?
+dockerized
 DocumentDB
 Documentum
 Doerr
@@ -900,7 +906,7 @@ HATEOAS
 Hayk
 Haytham
 Headspring
-healthcheck(s)?
+[Hh]ealthcheck(s)?
 Heartbleed
 Heen
 Heinemeier
@@ -1017,6 +1023,7 @@ IPVS
 Irizarry
 IronFrame
 IRSA
+ISAPI
 Isenberg
 IServiceProvider
 ISTIO_MUTUAL
@@ -1328,6 +1335,7 @@ MBeans
 MBeanServer
 McGraw-Hill
 McLuckie
+MDAC
 MDN
 [Mm]entorship
 MeshAdmin
@@ -1487,6 +1495,7 @@ ok
 OKR(s)?
 Okta
 old-checkout-desc
+OLEDB
 Oleh
 olehdokuka
 OLGA_MACIASZEK
@@ -1520,6 +1529,7 @@ OpenStack
 OpenTelemetry
 OpenTracing
 operationalized
+operationalizing
 OperatorHub
 oplog
 oplogs
@@ -1615,6 +1625,7 @@ Pilimon
 pivnet
 PKCS
 PKI
+PKS
 plaintext
 pluggability
 Pluggable
@@ -1745,6 +1756,7 @@ README
 RealBankAccount
 realtime
 rearchitect(ing)
+rearchitected
 rebalance
 [Rr]ebase
 rebase(d)
@@ -1754,6 +1766,7 @@ Recommender
 [Rr]eddit
 RedirectUri
 [rR]edis
+redistributable
 RedMonk('s)?
 Reenvisioning
 Reetro
@@ -2283,6 +2296,7 @@ WebClient
 WebClient's
 WeBeFoods
 WebFlux
+WebForm(s)?
 [Ww]ebforms
 WebHook
 [Ww]ebhook(-based|s)?

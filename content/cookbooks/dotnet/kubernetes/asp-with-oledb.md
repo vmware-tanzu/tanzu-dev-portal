@@ -14,7 +14,7 @@ Note, this pattern in isolation is achievable on Pivotal Application Service for
 
   Because the MDAC is generally available on Windows Server nothing special is required during the build of this docker image. This Dockerfile can be considered the bare minimum to run a classic ASP application on PKS with or without database access.
 
-  The Dockerfile assumes that you have the contents of your web application in the wwwroot directory at the same level as the Dockerfile. 
+  The Dockerfile assumes that you have the contents of your web application in the `wwwroot` directory at the same level as the Dockerfile
 
   ```bash
   FROM microsoft/iis
@@ -32,7 +32,7 @@ Note, this pattern in isolation is achievable on Pivotal Application Service for
   COPY wwwroot/* .
   ```
 
-## wwwroot/default.asp
+## `wwwroot/default.asp`
 
   In default.asp you'll have to specify the connection string relevant to your environment.
 
@@ -61,7 +61,7 @@ Note, this pattern in isolation is achievable on Pivotal Application Service for
   </html>
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

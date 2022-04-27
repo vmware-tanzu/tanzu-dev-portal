@@ -44,7 +44,7 @@ This project demonstrates a Windows Service hosting a WCF Service. You could arg
       "{Start-Sleep -Seconds 1}"]
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

@@ -1,5 +1,5 @@
 +++
-title = "Isapi Module"
+title = "ISAPI Module"
 tags = ["[isapi,vc++]"]
 summary = "Deploy a 64-bit ISAPI module in a pod"
 date =  2019-04-15T13:58:50-04:00
@@ -39,7 +39,7 @@ This project demonstrates a dockerized 64-bit ISAPI module.
   EXPOSE 80
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

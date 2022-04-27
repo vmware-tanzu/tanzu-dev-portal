@@ -59,7 +59,7 @@ If you already have a global exception handler you'll need to ensure it's loggin
 
 For production applications it's highly recommended to use a configurable logging framework like `log4net` or NLog instead of writing directly to the Console.
 
-Once you have added a global error handler you'll see any unhandled execptions along with their stack trace logged to PCF. You can view the logs in the PCF Apps Manager or from the command line: `cf logs myappname --recent`
+Once you have added a global error handler you'll see any unhandled exceptions along with their stack trace logged to PCF. You can view the logs in the PCF Apps Manager or from the command line: `cf logs myappname --recent`
 
 ## `web.config`
 

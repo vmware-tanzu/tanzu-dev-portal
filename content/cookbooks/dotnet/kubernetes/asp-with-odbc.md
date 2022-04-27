@@ -37,7 +37,7 @@ This project demonstrates a classic ASP application connecting to a SQL Server d
   COPY wwwroot/* .
   ```
 
-## wwwroot/default.asp
+## `wwwroot/default.asp`
 
   In `default.asp` you'll have to specify the DSN, username, and password relevant to your environment. 
 
@@ -68,7 +68,7 @@ This project demonstrates a classic ASP application connecting to a SQL Server d
     </body>
   </html>
   ```
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

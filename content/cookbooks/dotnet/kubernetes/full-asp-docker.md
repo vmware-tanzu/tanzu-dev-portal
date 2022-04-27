@@ -8,9 +8,9 @@ weight = 1
 
 This is a Dockerfile that "installs" an entire .NET environment. The only layer brought in, is the required base file system. Which makes the resulting container compatible with the host it is running on (Windows Server 2019 in this example). This is not meant to be used in a project but more an example to see what the Microsoft distributed images like `mcr.microsoft.com/dotnet/framework/aspnet:3.5` or `microsoft/iis` are doing "under the hood".
 
-Highlevel steps:
+High level steps:
     - Create a base file system
-    - Set powershell as shell
+    - Set PowerShell as shell
     - Install .NET runtime
     - Install IIS and features
     - Copy in app

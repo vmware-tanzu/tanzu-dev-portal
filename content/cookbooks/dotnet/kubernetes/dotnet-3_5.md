@@ -26,7 +26,7 @@ Running a .NET Framework 3.5 app.
   COPY wwwroot/* .
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---

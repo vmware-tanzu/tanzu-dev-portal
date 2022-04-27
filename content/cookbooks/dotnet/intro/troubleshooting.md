@@ -29,7 +29,7 @@ There are times when it's necessary to temporarily configure the ASP.NET yellow 
 2. You lack the ability to modify the application and add a global error handler method.
 3. .NET cannot start the app domain.
 
- Outputting detailed error messages to the browser can be enabled by modifying the `web.config` and setting the customErrors mode attribute to `Off`, like so:
+ Outputting detailed error messages to the browser can be enabled by modifying the `web.config` and setting the `customErrors` mode attribute to `Off`, like so:
 
 ```xml
 <system.web>

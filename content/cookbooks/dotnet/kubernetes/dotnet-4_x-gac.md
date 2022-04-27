@@ -12,7 +12,7 @@ Running an ASP.NET 4.x app that consumes an assembly from the Global Assembly Ca
 
 The `Dockerfile` assumes that your solution is named COMClient and is placed at the same level as the `Dockerfile`. The `Dockerfile` also assume that you've published the application to the `bin\Release\Publish` folder.
 
-The `Dockerfile` downloads and installs the VC++ redistributable in a special way due to the fact that the installer is asynchronous. The powershell `Start-Process` and `Wait-Process` Cmdlets synchronize the operation so the docker build doesn't terminate prematurely.
+The `Dockerfile` downloads and installs the VC++ redistributable in a special way due to the fact that the installer is asynchronous. The PowerShell `Start-Process` and `Wait-Process` Cmdlets synchronize the operation so the docker build doesn't terminate prematurely.
 
 The `Dockerfile` then registers the ATL/COM dll that the .NET 2.0 project depends on. Care is taken to use the 32-bit `regsvr.exe` which is located in `c:\Windows\SysWOW64`.
 
@@ -30,7 +30,7 @@ Just before putting the published artifacts into `c:\inetpub\wwwroot` 32-bit exe
 
 ## gac.ps1
 
-  THis powershell script will be executed during container build and will add the library into the container's GAC.
+  THis PowerShell script will be executed during container build and will add the library into the container's GAC.
 
   ```csharp
   [System.Reflection.Assembly]::Load('System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a')
@@ -38,7 +38,7 @@ Just before putting the published artifacts into `c:\inetpub\wwwroot` 32-bit exe
   $publish.GacInstall('\Library.dll')
   ```
 
-## K8 manifest.yml
+## Kubernetes manifest.yml
 
   ```yml
   ---
