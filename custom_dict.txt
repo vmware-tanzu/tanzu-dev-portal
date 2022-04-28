@@ -499,6 +499,7 @@ datagram
 DataJpaTest
 datapath
 dataset
+DataSet
 [Dd]atasource(s)?
 DataStax('s|Examples)?
 dataStoreBytesInUse
