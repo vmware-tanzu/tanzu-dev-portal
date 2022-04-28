@@ -6,7 +6,7 @@ layout = "intro"
 +++
 
 
-WCF services can typically run in Cloud Foundry with minimal changes. WCF is a large framework so the guidance here is for the most common type of configurations. The most common of these being SOAP or REST based services using an http(s) transport hosted either in IIS or self hosted.
+WCF services can typically run in Cloud Foundry with minimal changes. WCF is a large framework so the guidance here is for the most common type of configurations. The most common of these being SOAP or REST based services using a http(s) transport hosted either in IIS or self hosted.
 
 ## Common Issues
 
@@ -26,7 +26,7 @@ Since Cloud Foundry cells and their containers are not domain joined, they canno
 
 ### Certificate Authentication
 
-Since apps run under a non-priviledged container account they do not have access to install certs in the Windows cert store and have the WCF runtime automatically load the cert. To work around this, the app will need to dynamically load the cert from a location it has access too. One way is with a custom ServicePointManager integration that allow the app to load the cert from the local file system, env var, or secrets store and implement a validate method itself.
+Since apps run under a non-privileged container account they do not have access to install certs in the Windows cert store and have the WCF runtime automatically load the cert. To work around this, the app will need to dynamically load the cert from a location it has access too. One way is with a custom `ServicePointManager` integration that allow the app to load the cert from the local file system, env var, or secrets store and implement a validate method itself.
 
 - TODO: Example with more specific guidance.
 - [Implementing a WCF Client with Certificate-Based Mutual Authentication without using Windows Certificate Store](https://blog.kloud.com.au/2015/11/23/implementing-a-wcf-client-with-certificate-based-mutual-authentication-without-using-windows-certificate-store/)
@@ -40,7 +40,7 @@ SSL offload will affect metadata generation for WCF SOAP services, so instead of
 
 ### Transports
 
-WCF supports a multiude of transport options, however Cloud Foundry does not support all available WCF transport options. The most common WCF transport is http(s) which fortunately is the bread and butter of Cloud Foundry. Other more esoteric transports like MSMQ and named pipes are not supported within Cloud Foundry.
+WCF supports a multitude of transport options, however Cloud Foundry does not support all available WCF transport options. The most common WCF transport is http(s) which fortunately is the bread and butter of Cloud Foundry. Other more esoteric transports like MSMQ and named pipes are not supported within Cloud Foundry.
 
 The WCF TCP transport will work (provided TCP Routing is enabled on your PCF installation) as long as your application is self hosted with a custom port. You cannot use the TCP transport with HWC (hwc_buildpack), therefore you need to self host the app as a console app and push it using the binary_buildpack.
 
@@ -48,7 +48,7 @@ You must also configure PCF to route traffic using the same port as configured i
 
 ### Self Hosted WCF Services
 
-WCF has the ability to be self hosted or in other words hosted outside IIS. Self hosting outside PCF is typically done programatically from a .NET Windows Service, although sometimes from console applications. Self hosting is not compatibile with Cloud Foundry when using an http(s) transport because the container doesn't have permissions to register a listener with Windows' HTTP.sys subsystem. Self hosted WCF apps must use the TCP transport within PCF, http will not work.
+WCF has the ability to be self hosted or in other words hosted outside IIS. Self hosting outside PCF is typically done programmatically from a .NET Windows Service, although sometimes from console applications. Self hosting is not compatible with Cloud Foundry when using a http(s) transport because the container doesn't have permissions to register a listener with Windows' HTTP.sys subsystem. Self hosted WCF apps must use the TCP transport within PCF, http will not work.
 
 While migrating a self hosted WCF service to Cloud Foundry is more work than one that is already hosted in IIS, it's not a significant amount of work. [Here's a sample WCF service](https://github.com/sneal/WCFServiceSample) with a separate project for hosting it in IIS or HWC in Cloud Foundry.
 

@@ -87,7 +87,7 @@ An example of applying a named JWT Authorization Manager behavior and applying i
 </service>  
 ```
 
--  Configure Audience and scopes - JWT obtained by clients will have audience elements listing its client_id  in it. Service should configure which clients(audiences it trusts) - they will be validated as part of JWT validation process. For Authorization checks Enable list of the Required Scopes to be used with ScopePermission Attribute or in code.
+-  Configure Audience and scopes - JWT obtained by clients will have audience elements listing its client_id  in it. Service should configure which clients(audiences it trusts) - they will be validated as part of JWT validation process. For Authorization checks Enable list of the Required Scopes to be used with `ScopePermission` attribute or in code.
 
   ```xml
   <appSettings>
@@ -116,7 +116,7 @@ An example of applying a named JWT Authorization Manager behavior and applying i
   Install-Package Steeltoe.Security.Authentication.CloudFoundryWcf
   ```
 
-- Setup resources and available scopes for the application in [PCF SSO Tile][pcfsso]. If you want to have the roles (ldap groups) and user attributes (e.g. empuniqueid) in the Id Token (available when the openid scope is selected), make sure you have the roles and user_attributes selected.
+- Setup resources and available scopes for the application in [PCF SSO Tile][pcfsso]. If you want to have the roles (LDAP groups) and user attributes (e.g. `empuniqueid`) in the Id Token (available when the `openid` scope is selected), make sure you have the roles and user_attributes selected.
 
 - Configure the WCF service behavior to include the JWT Authentication and AD group retrieval to the `Principal using Steeltoe.Security.Authentication.CloudFoundryWcf.JwtAuthorizationManager` globally for all services:
 
@@ -161,7 +161,7 @@ principal.IsInRole(<specific role>);
 [PrincipalPermissionEnv(SecurityAction.Demand, Role = "AdminRole")]
 ```
 
-Declaratively test the permissions on the service using an attribute on the service. Replace the existing `[PrincipalPermission]` (or add new to the service you need to secure) with the extended PrincipalPermissionEnv attribute that will read the role configuration from environment variable in PCF or `web.config` locally, instead of hardcoded roles.
+Declaratively test the permissions on the service using an attribute on the service. Replace the existing `[PrincipalPermission]` (or add new to the service you need to secure) with the extended `PrincipalPermissionEnv` attribute that will read the role configuration from environment variable in PCF or `web.config` locally, instead of hardcoded roles.
 
 ```xml
 <appSettings>
@@ -185,15 +185,15 @@ public class TestRestService : ITestRestService
 
 ## JWT Library Reference
 
-The SSO integration is plugged to WCF extensibility point to apply Authentication/Authorization in the behavior for the services implementing custom ServiceAuthorizationManager:
+The SSO integration is plugged to WCF extensibility point to apply Authentication/Authorization in the behavior for the services implementing custom `ServiceAuthorizationManager`:
 
-- `Steeltoe.Security.Authentication.CloudFoundry.Wcf.JwtAuthorizationManager` - implements the `ServiceAuthorizationManager` and validates the JWT token based on SSO jwt keys , validates  signature, lifetime, scopes, audience and issuer.
+- `Steeltoe.Security.Authentication.CloudFoundry.Wcf.JwtAuthorizationManager` - implements the `ServiceAuthorizationManager` and validates the JWT token based on SSO JWT keys , validates  signature, lifetime, scopes, audience and issuer.
 
 - `PrincipalPermissionEnv` – custom Attribute to validate Roles based on the configured in environment Roles. Works with `JwtAuthorizationManager` configured as it checks the Principal roles. `[PrincipalPermissionEnv(SecurityAction.Demand, Role = "AdminRole")]`
 
 - `ScopePermission` - custom Attribute to validate Scopes based on the configured in environment settings. `[ScopePermission(SecurityAction.Demand, ConfigurationName = "RequiredScopes")]`
 
-- **Error Handling** - Jwt validation interceptor will return HTTP 401 code (with error code and error description in WWW-Authenticate Header) for authentication failures and authorization checks according to:
+- **Error Handling** - JWT validation interceptor will return HTTP 401 code (with error code and error description in WWW-Authenticate Header) for authentication failures and authorization checks according to:
 https://tools.ietf.org/html/rfc6750
 
 

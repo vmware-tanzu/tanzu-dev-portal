@@ -3,7 +3,7 @@ date = "2017-06-14T12:00:00-07:00"
 title = "OAuth 2.0 and PCF SSO - Client"
 +++
 
-In the scenarios where APIs are consumed by other systems without involvement of user – batch processes, nightly schedules etc – Consumer application is authenticated using Oauth2.0 Client Credentials Flow – it provides the client_id, client_secret to OIDC/Oauth2 provider and receives back signed Access token with the scopes this application is authorized for. This access token is passed in the HTTP header to the API for validation and authorization according to [JWT Bearer Profile](https://tools.ietf.org/html/rfc7523) and [Authorization profile](https://tools.ietf.org/html/rfc6750)
+In the scenarios where APIs are consumed by other systems without involvement of user – batch processes, nightly schedules etc – Consumer application is authenticated using Oauth2.0 Client Credentials Flow – it provides the client_id, client_secret to OIDC/OAuth2 provider and receives back signed Access token with the scopes this application is authorized for. This access token is passed in the HTTP header to the API for validation and authorization according to [JWT Bearer Profile](https://tools.ietf.org/html/rfc7523) and [Authorization profile](https://tools.ietf.org/html/rfc6750)
 
 Solution is based on WCF Client JWT Interceptor that will Connect PCF SSO and get Access Token and will embed it into HTTP Header for the service being invoked. Here is a simplified diagram:
 
@@ -11,7 +11,7 @@ Solution is based on WCF Client JWT Interceptor that will Connect PCF SSO and ge
 
 ## WCF Services Clients
 
-Jwt interceptor implements WCF `IClientMessageInspector`  to get and inject the JWT token. To allow for configuration based setup behavior extension - `Steeltoe.Security.Authentication.CloudFoundryWcf.JwtHeaderEndpointBehavior` is provided and could be configured in `web.config` for the endpoints.  
+JWT interceptor implements WCF `IClientMessageInspector`  to get and inject the JWT token. To allow for configuration based setup behavior extension - `Steeltoe.Security.Authentication.CloudFoundryWcf.JwtHeaderEndpointBehavior` is provided and could be configured in `web.config` for the endpoints.  
 
 ### Configuration
 
@@ -21,7 +21,7 @@ Install the [JWT Library][jwtlib] that authenticates and gets Jwt Tokens
 Install-Package Steeltoe.Security.Authentication.CloudFoundryWcf
 ```
 
-Configure SSO service on [PCF for Service-to-Service][pcfsso] and bind it to your application. Add scopes that need to be requested by the client to your appSettings:
+Configure SSO service on [PCF for Service-to-Service][pcfsso] and bind it to your application. Add scopes that need to be requested by the client to your `appSettings`:
 
 ```xml
 <appSettings>
@@ -29,7 +29,7 @@ Configure SSO service on [PCF for Service-to-Service][pcfsso] and bind it to you
 </appSettings>
 ```
 
-Configure Jwt Behavior extension – Configure Jwt endpoint behavior which will get `Access_Token` and add it to the HTTP Headers before calling webservice
+Configure JWT Behavior extension – Configure JWT endpoint behavior which will get `Access_Token` and add it to the HTTP Headers before calling webservice
 
 ```xml
 <system.serviceModel>
