@@ -9,7 +9,7 @@ guests:
 - Adib Saikali
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "g1Bmxg4DSug"
 lastmod: '2020-10-09'
 title: Security for Application Developers
 twitch: vmwaretanzu
