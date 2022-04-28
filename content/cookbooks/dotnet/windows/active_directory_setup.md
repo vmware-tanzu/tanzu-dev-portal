@@ -46,7 +46,7 @@ $ gcloud compute firewall-rules create allow-rdp \
   --source-ranges ${mypublicip}/32
 ```
 
-Create the Windows Server 2016 VM in the us-west1-b zone with an IP of `10.1.0.100`.
+Create the Windows Server 2016 VM in the `us-west1-b` zone with an IP of `10.1.0.100`.
 
 ```sh
 $ gcloud compute instances create ad-dc1 --machine-type n1-standard-2 \
@@ -104,7 +104,7 @@ PS C:\> Install-ADDSForest -CreateDnsDelegation:$false `
 Login to your OpsManager VM go to the Authentication and Enterprise SSO tab of the Pivotal Application Service tile. These instructions assume you've already installed the PAS tile on your OpsManager installation. Select the LDAP Server radio button. Enter the following information into the tile:
 
 - Server URL: `ldap://10.1.0.100`
-- LDAP Credentials: The Windows user name and password you used to intially login with. For non-toy installs use a service account. In some scenarios you may need to specify the full distinguished name of the service account, for example `cn=ldapsvc,ou=service,dc=ad,dc=pcf,dc=example,dc=com`.
+- LDAP Credentials: The Windows user name and password you used to initially login with. For non-toy installs use a service account. In some scenarios you may need to specify the full distinguished name of the service account, for example `cn=ldapsvc,ou=service,dc=ad,dc=pcf,dc=example,dc=com`.
 - User Search Base: `dc=ad,dc=pcf,dc=example,dc=com` adjust as needed to match your domain name
 - User Search Filter: `sAMAccountName={0}` this allows users to login with their short user name, no email
 - Group Search Base: `dc=ad,dc=pcf,dc=example,dc=com`
@@ -114,7 +114,7 @@ Login to your OpsManager VM go to the Authentication and Enterprise SSO tab of t
 - Email Attribute: `mail`
 
 {{% callout tip %}}
-This configuration assumes you're _not_ using secure ldaps. If you were then you'd use `ldaps://10.1.0.100`. You might also need to provide the Server SSL Cert and Server SSL Cert AltName.
+This configuration assumes you're _not_ using secure LDAPS. If you were then you'd use `ldaps://10.1.0.100`. You might also need to provide the Server SSL Cert and Server SSL Cert AltName.
 {{% /callout %}}
 
 Click `Save`. Go back to the OpsManager installation dashboard and click `Apply Changes`. Once the deployment completes you should be able to login to Apps Manager using the same AD account you used to login to the Windows AD Server.
@@ -139,20 +139,20 @@ First of all let's make sure you have connectivity to the AD server from OpsMana
 $ nc -z -v -w5 10.1.0.100 389
 ```
 
-The above command assumes you're _not_ using secure ldaps. If you were using ldaps you'd need to change the port to `636`. Next let's make sure you can successfully query LDAP with the provided service account and filter. To do that install the `ldapsearch` tool.
+The above command assumes you're _not_ using secure LDAPS. If you were using LDAPS you'd need to change the port to `636`. Next let's make sure you can successfully query LDAP with the provided service account and filter. To do that install the `ldapsearch` tool.
 
 ```sh
 $ sudo apt-get update
 $ sudo apt-get install ldap-utils
 ```
 
-Once installed run the following query to ensure it can successfully bind to ldap and retrieve a user account. Replace both usages of `myadaccount` with the actual account you used to login to the Windows VM/Apps Manager.
+Once installed run the following query to ensure it can successfully bind to LDAPS and retrieve a user account. Replace both usages of `myadaccount` with the actual account you used to login to the Windows VM/Apps Manager.
 
 ```sh
 $ ldapsearch -H "ldap://10.1.0.100:389" -D "myadaccount" -W -b "ou=users,dc=ad,dc=pcf,dc=example,dc=com" 'sAMAccountName=myadaccount'
 ```
 
-Most of the time you'll find what went wrong, usually a bad config setting. Sometimes you need more information. In that case you'll want to tail the UAA logs in PAS. Assuming you've already aliased your OpsMan BOSH director as `pcf`, then run (replacing `cf-someguid` with your actual CF deployment):
+Most of the time you'll find what went wrong, usually a bad config setting. Sometimes you need more information. In that case you'll want to tail the UAA logs in PAS. Assuming you've already aliased your OpsManager BOSH director as `pcf`, then run (replacing `cf-someguid` with your actual CF deployment):
 
 ```sh
 $ bosh -e pcf -d cf-someguid logs uaa -f

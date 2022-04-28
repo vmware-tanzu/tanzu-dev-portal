@@ -16,7 +16,7 @@ Some terminology you should be familiar with before continuing:
 
 According to [bosh.io](https://bosh.io/docs/stemcell.html), a stemcell is simply a versioned Operating System image wrapped with IaaS specific packaging. While that's the most basic definition of a stemcell, there are specific requirements that must be met by a Windows stemcell.
 
-A Windows stemcell contains a bare minimum Windows Server 2019 OS with a few Windows features pre-installed, a BOSH agent and some applied policies to securley configure the OS. All Windows stemcells are configured this way regardless of IaaS or who built them. This property of stemcells allows Cloud Foundry operators to easily and reliably deploy to multiple infrastructures without worrying about differences between images.
+A Windows stemcell contains a bare minimum Windows Server 2019 OS with a few Windows features pre-installed, a BOSH agent and some applied policies to securely configure the OS. All Windows stemcells are configured this way regardless of IaaS or who built them. This property of stemcells allows Cloud Foundry operators to easily and reliably deploy to multiple infrastructures without worrying about differences between images.
 
 Windows stemcells do not contain any specific information about any software that will be installed once that stemcell becomes a specialized machine in the cluster. This clear separation between base Operating System and later-installed software is what makes stemcells a powerful concept.
 
@@ -46,21 +46,21 @@ For all public clouds, Pivotal provides publicly available Cloud Foundry stemcel
 
 For private infrastructures like vSphere you'll need to build your own stemcell carefully following the [same procedures that Pivotal uses internally](https://github.com/cloudfoundry-incubator/bosh-windows-stemcell-builder) to build your stemcell. Any deviation from the recommended practices will lead to inconsistencies and ultimately an unsupported configuration that could cause problems for you and your application developers.
 
-The Windows stemcell builder will work with any supported IaaS, but you should only ever need to run it yourself for private cloud scenarios like vSphere. To get started it's recommended to follow the [vSphere manual instructions](https://docs.pivotal.io/pivotalcf/2-6/windows/create-vsphere-stemcell-automatically.html). These instructions walk you through the process of creating a Windows stemcell including installing and configuring all the prereqs mentioned previously. Once the manual process is understood and proved to be working in your environment, it's recommended to automate the process with a pipeline as you'll want to build stemcells at least monthly to rollout updates.
+The Windows stemcell builder will work with any supported IaaS, but you should only ever need to run it yourself for private cloud scenarios like vSphere. To get started it's recommended to follow the [vSphere manual instructions](https://docs.pivotal.io/pivotalcf/2-6/windows/create-vsphere-stemcell-automatically.html). These instructions walk you through the process of creating a Windows stemcell including installing and configuring all the prerequisites mentioned previously. Once the manual process is understood and proved to be working in your environment, it's recommended to automate the process with a pipeline as you'll want to build stemcells at least monthly to rollout updates.
 
 ### Corporate "Golden" Images
 
-Often times enterprises have an IT group that is reponsible for producing blessed Windows templates. In some ways what these groups provide is similar to a Cloud Foundy stemcell, however they're usually a bit more heavy weight and aren't necessarily optimized for hosting in the cloud.
+Often times enterprises have an IT group that is responsible for producing blessed Windows templates. In some ways what these groups provide is similar to a Cloud Foundry stemcell, however they're usually a bit more heavy weight and aren't necessarily optimized for hosting in the cloud.
 
 While you could theoretically use one of these corporate base images as a starting point for your Cloud Foundry stemcells, tread with caution here. These images tend to be bloated and contain many features you shouldn't deploy to Cloud Foundry. Additionally, it's typically better to build stemcells as close as possible to what Pivotal provides for public clouds.
 
 ## Windows Updates
 
-Ensuring all your Windows cells have the latest Windows updates is critically important to securing your Cloud Foundry environment. The Windows update process you're probably accustomed to involves WSUS and applying updates to servers during off hours or scheduled maintainence periods to allow for the server to reboot. The process for rolling out Windows updates for Windows cells is very different, and as you'll soon discover much better!
+Ensuring all your Windows cells have the latest Windows updates is critically important to securing your Cloud Foundry environment. The Windows update process you're probably accustomed to involves WSUS and applying updates to servers during off hours or scheduled maintenance periods to allow for the server to reboot. The process for rolling out Windows updates for Windows cells is very different, and as you'll soon discover much better!
 
 If you remember from our building a Windows stemcell section, we apply Windows updates when building a stemcell. We don't apply Windows updates to already running cells, instead we replace them with a new base stemcell image that _already_ includes all the patches. Following the immutable infrastructure pattern, each cell instance is then replaced without any downtime and completely managed by Cloud Foundry as it moves workloads from the old running cells to the newly patched cells. This allows patches and all the required reboots to happen _once_ on the base image without needing to do it across hundreds or even thousands of servers.
 
-Since Microsoft typically releases new Windows updates monthly on [patch tuesday](https://en.wikipedia.org/wiki/Patch_Tuesday) it's recommended to follow that schedule to build a new stemcell and replace all of your Windows cells. While you may have the ability to replace all your production cells _on_ patch Tuesday, it's recommened that you first deploy newly built stemcells to your pre-production Cloud Foundry environments and let those bake for a few days before promoting them to your production Cloud Foundry foundations. This will give the apps running on those foundations a chance to validate the patches haven't broken anything in any of the applications which are running within the containers on it.
+Since Microsoft typically releases new Windows updates monthly on [patch tuesday](https://en.wikipedia.org/wiki/Patch_Tuesday) it's recommended to follow that schedule to build a new stemcell and replace all of your Windows cells. While you may have the ability to replace all your production cells _on_ patch Tuesday, it's recommend that you first deploy newly built stemcells to your pre-production Cloud Foundry environments and let those bake for a few days before promoting them to your production Cloud Foundry foundations. This will give the apps running on those foundations a chance to validate the patches haven't broken anything in any of the applications which are running within the containers on it.
 
 ## Cell Customization with BOSH Addons
 
@@ -68,7 +68,7 @@ The best practice for installing additional software or applying custom configur
 
 If you're not familiar with BOSH, it is the underlying technology that deploys Cloud Foundry and all of it's components - including Windows cells. A BOSH addon is an extensibility point to a stemcell that allows the Cloud Foundry operator to inject custom software or configuration in a consistent and repeatable manner across all cells and IaaSs. Using the BOSH runtime config a addon can even be targeted to a specific OS, like Windows, so an addon only runs on a compatible OS.
 
-When installing additional Windows software with a BOSH addon it is extremely important that the installation can run unattended or in silent mode without user intervention. An addon runs everytime a new cell is spun up from a stemcell, so it's important to follow these addon guidelines:
+When installing additional Windows software with a BOSH addon it is extremely important that the installation can run unattended or in silent mode without user intervention. An addon runs every time a new cell is spun up from a stemcell, so it's important to follow these addon guidelines:
 
 - Software installation _should not_ require large binaries.
 - Software installation _should_ be fast.

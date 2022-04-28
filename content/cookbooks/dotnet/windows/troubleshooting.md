@@ -7,11 +7,11 @@ weight = 5
 
 Windows cell troubleshooting from an abstract perspective isn't much different than Linux cell troubleshooting. The main differences appear in the commands and tools you use, but the techniques and approaches are very similar.
 
-Here's a braindump of a some Windows commands you might find useful, especially from a remote `bosh ssh` or `cf ssh` terminal. All the commands below assume you're running from a Powershell session unless otherwise stated. You can start powershell by typing `powershell` from your SSH session's CMD prompt.
+Here's a braindump of a some Windows commands you might find useful, especially from a remote `bosh ssh` or `cf ssh` terminal. All the commands below assume you're running from a PowerShell session unless otherwise stated. You can start PowerShell by typing `powershell` from your SSH session's CMD prompt.
 
 ### Test Network Connectivity
 
-Windows doesn't have netcat (nc) to test IP and port connectivty, but it does have the `Test-NetConnection` cmdlet built into powershell which does a similar job.
+Windows doesn't have netcat (nc) to test IP and port connectivity, but it does have the `Test-NetConnection` cmdlet built into PowerShell which does a similar job.
 
 ```powershell
 PS C:\> Test-NetConnection 8.8.8.8 -Port 53
@@ -24,17 +24,17 @@ SourceAddress    : 10.0.2.15
 TcpTestSucceeded : True
 ```
 
-### Wget
+### `Wget`
 
-Powershell has wget aliased to the `Invoke-WebRequest` cmdlet. You can use wget to test an http endpoint or download a file.
+PowerShell has `wget` aliased to the `Invoke-WebRequest` cmdlet. You can use `wget` to test a http endpoint or download a file.
 
 ```powershell
 wget https://api.example.com -UseBasicParsing
 ```
 
-It's important to provide the `-UseBasicParsing` flag otherwise you'll see a questionable error about some InternetExplorer setting that you can't get to without a GUI.
+It's important to provide the `-UseBasicParsing` flag otherwise you'll see a questionable error about some Internet Explorer setting that you can't get to without a GUI.
 
-If want to download a file, I highly recommend that you turn off the progress stream via `$ProgressPreference = 'SilentlyContinue'` in powershell as it slows your download times by an order of magnitude. 
+If want to download a file, I highly recommend that you turn off the progress stream via `$ProgressPreference = 'SilentlyContinue'` in PowerShell as it slows your download times by an order of magnitude. 
 
 ```powershell
 PS C:\> $ProgressPreference = 'SilentlyContinue'
@@ -43,7 +43,7 @@ PS C:\> wget https://example.com/somefile.msi -OutFile somefile.msi
 
 ### View Windows Event Logs
 
-Viewing event logs from Windows Server Core can be a bit challenging at first since there's no Event Viewer (eventvwr). If you've enabled the Syslog configuration in the PASW tile you can view your event logs through the firehose, otherwise keep reading.
+Viewing event logs from Windows Server Core can be a bit challenging at first since there's no Event Viewer (`eventvwr`). If you've enabled the Syslog configuration in the PASW tile you can view your event logs through the firehose, otherwise keep reading.
 
 ```powershell
 PS> Get-EventLog -LogName system -EntryType error
@@ -110,7 +110,7 @@ PS C:\> .\nano C:\var\vcap\jobs\clamav-windows\clamd.conf
 
 ### Network Tracing
 
-You may encounter network issues which will require you to run tcpdump, but unfortunatley there's no builtin tcp dump in Windows. In these cases Windows has the ability to capture network traffic with `netsh trace`. These traces are written to binary .etl files which can then be read by [Microsoft Message Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=44226) or by Powershell's `Get-WinEvent` cmdlet.
+You may encounter network issues which will require you to run `tcpdump`, but unfortunatley there's no builtin TCP dump in Windows. In these cases Windows has the ability to capture network traffic with `netsh trace`. These traces are written to binary `.etl` files which can then be read by [Microsoft Message Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=44226) or by Powershell's `Get-WinEvent` cmdlet.
 
 To start a capture run the `netsh trace start` command.
 
@@ -124,7 +124,7 @@ Do your network operations you want to capture, then stop the trace
 netsh trace stop
 ```
 
-You can either open the trace file in Message Analyzer or using Powershell. Here's how you do it in Powershell. Note that the `-Oldest` flag is required otherwise you'll get an error.
+You can either open the trace file in Message Analyzer or using PowerShell. Here's how you do it in PowerShell. Note that the `-Oldest` flag is required otherwise you'll get an error.
 
 ```powershell
 PS C:\> $l = Get-WinEvent -Path "$env:TEMP\nettrace.etl" -Oldest
@@ -135,7 +135,7 @@ PS C:\> $l | Select-Object
 
 Sometimes you may need to troubleshoot a running container or a sidecar container without using `cf ssh` or _with_ local Administrator privileges. You can use `winc exec` similar to `docker exec` from a running container's host VM. This of course requires that you `bosh ssh` into the host container's VM first.
 
-Assuming you're logged into the host VM and have a powershell shell, find the container `Id` by running
+Assuming you're logged into the host VM and have a PowerShell shell, find the container `Id` by running
 
 ```powershell
 PS C:\> Get-ComputeProcess
@@ -150,7 +150,7 @@ RuntimeImagePath  :
 Owner             :
 ```
 
-With the container Id in hand, use winc to start a powershell session on the container, for example:
+With the container Id in hand, use `winc` to start a PowerShell session on the container, for example:
 
 ```powershell
 PS C:\> C:\var\vcap\packages\winc\winc.exe exec 97cfaf3b-d385-4746-7a3d-af00 powershell
@@ -160,7 +160,7 @@ You can instead login as the vcap container user by adding `--user vcap`.
 
 ### Get Running Process Command Line
 
-If you need to find the command line used to start a running process you can use Get-CimInstance. Here's an example that gets all the running nginx processes command lines.
+If you need to find the command line used to start a running process you can use `Get-CimInstance`. Here's an example that gets all the running nginx processes command lines.
 
 ```powershell
 PS C:\> Get-CimInstance Win32_Process -Filter "name = 'nginx.exe'" | Select CommandLine | Out-String -Width 160

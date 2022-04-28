@@ -15,7 +15,7 @@ JWT interceptor implements WCF `IClientMessageInspector`  to get and inject the 
 
 ### Configuration
 
-Install the [JWT Library][jwtlib] that authenticates and gets Jwt Tokens
+Install the [JWT Library][jwtlib] that authenticates and gets JWT Tokens
 
 ```ps
 Install-Package Steeltoe.Security.Authentication.CloudFoundryWcf

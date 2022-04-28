@@ -11,7 +11,7 @@ The version of the .NET Framework that an application runs with on PCF is contro
 
 ## Query PASW Installed .NET Version
 
-You can find what version of .NET is installed on your Windows stack by running a powershell script pushed as an application in PCF without needing `cf ssh`. Copy the below script to a new file named `dotnetversion.ps1` on your workstation.
+You can find what version of .NET is installed on your Windows stack by running a PowerShell script pushed as an application in PCF without needing `cf ssh`. Copy the below script to a new file named `dotnetversion.ps1` on your workstation.
 
 ```PS
 function GetDotNetVersion($k) {

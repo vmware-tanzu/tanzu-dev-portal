@@ -3,7 +3,7 @@ title = "Server Message Block (SMB) File Shares"
 date =  2019-06-27T16:12:05-04:00
 weight = 10
 tags = [ "smb","file", "share" ]
-description = "Consuming smb network share in Cloud Foundry, with Steeltoe."
+description = "Consuming SMB network share in Cloud Foundry, with Steeltoe."
 +++
 
 ## SMB Network Shares on Cloud Foundry

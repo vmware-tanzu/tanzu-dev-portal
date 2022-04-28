@@ -29,7 +29,7 @@ Or declaratively using Attributes
 
 ### Claims Based Checks
 
-For server to server (batch) scenarios there is no end user and communication is secured by an Oauth2 token with scopes. Scopes represent claims about permissions that the consumer has based on it's authentication. There is no user principal in context of the application in this case. To obtain the identity:
+For server to server (batch) scenarios there is no end user and communication is secured by an OAuth2 token with scopes. Scopes represent claims about permissions that the consumer has based on it's authentication. There is no user principal in context of the application in this case. To obtain the identity:
 
 ```c#
 ClaimsIdentity identity = ClaimsPrincipal.Current.Identity as ClaimsIdentity;

@@ -55,6 +55,7 @@ additively
 addNotificationListener
 Addon
 addon(s)?
+[Aa]ddons
 ADFS
 Adib
 Adib's
@@ -80,6 +81,7 @@ allenholub
 [Aa]llocatable
 Almar
 Alpine(-based)?
+AltName
 Amaro
 amd64
 AMI('s)?
@@ -245,6 +247,7 @@ Boskey
 Bowei
 BPF
 br/
+braindump
 Brandolini('s)?
 Brannen
 brd1
@@ -367,6 +370,7 @@ ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
 CMD
+cmdlet
 Cmdlets
 CMS
 CNAME
@@ -723,6 +727,7 @@ FileSystemXmlApplicationContext
 Finchley
 FinTech
 FIPS(-enabled|-approved)?
+firehose
 firewalling
 Fiscus
 Flake8
@@ -962,6 +967,7 @@ HyperKit
 ℹ
 (I|P)aaS
 i7
+IaaS(s)?
 IAM
 Iberkleid
 ICMP
@@ -1282,6 +1288,7 @@ logback
 LogGatewaySenderQueueFunction
 LoggingJmxNotificationHandler
 Loggregator
+loggregator
 LogPartitionedRegionBucketDetailsFunction
 logQueue
 [lL]ogrus
@@ -1539,6 +1546,7 @@ OperatorHub
 oplog
 oplogs
 OpsGenie
+OpsManager
 optimizeForWrite
 OQL
 orchestrator(s)?
@@ -1568,6 +1576,7 @@ P2P
 Pacak
 Packer
 Packt('s)?
+[Pp]agefile
 PagerDuty
 Pairmate
 Paketo
@@ -1673,6 +1682,7 @@ pre-exist(s|ing)?
 pre-installed
 Pre-IPM
 pre-optimize
+pre-production
 pre-programmed
 pre-release
 pre-seed
@@ -1752,6 +1762,7 @@ RCE
 RDBMS
 RDLC
 RDMS
+RDP
 reachability
 reactively
 ReactiveUI
@@ -1823,6 +1834,7 @@ Restic
 restorable
 RestrictedMethodAuthorizer
 RestTemplate
+retarget
 Retrium
 reusability
 revertibility
@@ -1849,6 +1861,7 @@ RoleProvider
 [Rr]ollout
 [Rr]ollouts
 rom-com
+[Rr]oot[Ff][Ss]
 rootPassword
 Rosecrance
 Rosenberg
@@ -2030,6 +2043,7 @@ Steeltoe('s)?
 SteeltoeConfigManager
 SteeltoeOSS
 stemcell
+[Ss]temcell(s)?
 Stéphane
 STIG
 StorageClass(es)?
@@ -2072,6 +2086,7 @@ Syer
 symlink
 symposia
 Sysdig
+Syslog
 SystemAdmin
 Szul
 tabpane
@@ -2326,7 +2341,9 @@ whiteboard(ed|ing)
 [Ww]hitepaper
 Wilcock('s)?
 Wildfly
+Windows2012R2
 Windows2012r2
+WinRM
 [Ww]ireframe(s)?
 WireMock
 Wittenkamp
@@ -2339,6 +2356,7 @@ workspaces
 [Ww]orkstream(s)?
 writeout
 WSL
+WSUS
 Wujec('s)
 X509
 x509

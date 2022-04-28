@@ -9,11 +9,11 @@ Generally you can access and troubleshoot your PASW deployment using standard bo
 
 ### vSphere Remote Access
 
-In vSphere you can generally access the failing compilation VM using the standard VMWare console available in vCenter. The issue you might encounter is not knowing the what the administrator password is even if you set it to a known password in PASW because that job may not have run yet.
+In vSphere you can generally access the failing compilation VM using the standard VMware console available in vCenter. The issue you might encounter is not knowing the what the administrator password is even if you set it to a known password in PASW because that job may not have run yet.
 
 ### GCP Remote Access
 
-To access a failed GCP deployed PASW cell that doesn't yet have SSH enabled, you can get a powershell console on the VM using GCP serial port access. Use the below steps replacing the project, zone, and instance_name placeholders in each command.
+To access a failed GCP deployed PASW cell that doesn't yet have SSH enabled, you can get a PowerShell console on the VM using GCP serial port access. Use the below steps replacing the project, zone, and instance_name placeholders in each command.
 
 Reset the administrator password (might be easier to use web portal) unless you already know what it is.
 ```
@@ -36,4 +36,4 @@ cmd
 ch -sn Cmd0001
 ```
 
-login as administrator using password you reset too and start powershell by typing `powershell.exe`
+login as administrator using password you reset too and start PowerShell by typing `powershell.exe`
