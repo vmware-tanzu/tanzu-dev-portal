@@ -19,9 +19,9 @@ A best practice to avoid any accidental tight coupling with IIS would be to **ne
 
 ### IIS Settings and Web Server Configuration
 
-As mentioned, you should not be configuring any of this in the new configuration system. If you have custom listeners and modules defined in your existing `web.config`, you will need to evaluate each one of them and find an equivalent or a migration strategy. One very common example that we find in legacy `web.config` files are custom Http listeners that were used to provide aspect-style header manipulation, security, logging, etc. These should be converted into _middleware_ and configured according to the new .NET Core/OWIN middleware design.
+As mentioned, you should not be configuring any of this in the new configuration system. If you have custom listeners and modules defined in your existing `web.config`, you will need to evaluate each one of them and find an equivalent or a migration strategy. One very common example that we find in legacy `web.config` files are custom HTTP listeners that were used to provide aspect-style header manipulation, security, logging, etc. These should be converted into _middleware_ and configured according to the new .NET Core/OWIN middleware design.
 
-### Custom ConfigSections
+### Custom `ConfigSections`
 
 While the new configuration system does support reading XML files, it doesn't actually know how to parse the `web.config` XML schema. You won't be able to simply drag over code that converted from a configuration section. Our recommended approach is to first evaluate whether you even need this configuration at all in the new system.
 
@@ -31,7 +31,7 @@ If you do, then one best practice is to convert the custom configuration section
 
 There are few hard and fast rules when it comes to migrating to .NET Core and building cloud-native applications. One of these few rules is to **never**, **ever** store data source credentials and connection strings in configuration. The only exception to this is the use of [local defaults](/core/local_vcap_override_by_pcf). These local defaults should **only** work against localhost or other completely throwaway systems that do not ever contain meaningful information. In other words - if the information in the local defaults were to be compromised and published on the public internet, could it cause any harm?
 
-Consult the EF Core documentation as well as some EF Core samples and the Steeltoe OSS samples for illustrations of how to use things like Cloud Foundry Connectors and Steeltoe configuration to pull connection string and data source credentials from local defaults and from PCF environment variables.
+Consult the Entity Framework Core documentation as well as some Entity Framework Core samples and the Steeltoe OSS samples for illustrations of how to use things like Cloud Foundry Connectors and Steeltoe configuration to pull connection string and data source credentials from local defaults and from PCF environment variables.
 
 ### URLs/Credentials for Backing Services
 

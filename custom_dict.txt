@@ -104,6 +104,7 @@ Antrea
 Apdex
 api
 Apigee
+APIPort
 ApiResponse
 APIs?
 APM
@@ -1460,6 +1461,7 @@ NetApp('s)?
 NetBase
 netcat
 netshoot
+[Nn]etstandard
 Netty(-based)?
 NetWeaver
 Network(Policy|Set)
@@ -1494,6 +1496,7 @@ NTP
 [Nn]uget
 NuGet
 nullable
+NUnit
 NYJavaSIG
 OAuth2?
 ObjectFilter
@@ -1554,6 +1557,7 @@ OQL
 orchestrator(s)?
 org(s)?
 ORM(-based)?
+ORM(s)?
 OSI
 OSM
 Osowski
@@ -1765,6 +1769,7 @@ RCE
 RDBMS
 RDLC
 RDMS
+RDMS(s)?
 RDP
 reachability
 reactively
@@ -2371,6 +2376,7 @@ XKCD
 XP
 XSalsa20
 Xu
+XUnit
 xUnit
 Y2ffgg
 yaml

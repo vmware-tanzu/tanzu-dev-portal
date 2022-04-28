@@ -11,11 +11,11 @@ weight = 60
 
 The main reason for this migration is the lack of availability of a reliable NUnit alternative in NuGet for .NET Core.
 
-For documentation on the differences between NUnit and Xunit, please check out this [document in github](https://xunit.github.io/docs/comparisons.html)
+For documentation on the differences between NUnit and XUnit, please check out this [document in github](https://xunit.github.io/docs/comparisons.html)
 
 ## Test Runners and Tooling
 
-Just include the right xUnit dependency and `dotnet test` will automatically figure out how to run your tests.
+Just include the right XUnit dependency and `dotnet test` will automatically figure out how to run your tests.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
