@@ -162,7 +162,7 @@ Now while following the UAA logs (across all instances), login to App Manager, o
 
 #### Troubleshooting from Windows
 
-Sometimes it's convenient to validate your ldap search expressions on Windows. You can easily do this using PowerShell.
+Sometimes it's convenient to validate your LDAP search expressions on Windows. You can easily do this using PowerShell.
 
 ```ps
 Get-ADUser -SearchBase 'dc=ad,dc=pcf,dc=example,dc=com' -LdapFilter 'sAMAccountName=yourUserName'

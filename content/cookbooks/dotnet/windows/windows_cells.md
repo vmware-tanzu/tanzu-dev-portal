@@ -60,7 +60,7 @@ Ensuring all your Windows cells have the latest Windows updates is critically im
 
 If you remember from our building a Windows stemcell section, we apply Windows updates when building a stemcell. We don't apply Windows updates to already running cells, instead we replace them with a new base stemcell image that _already_ includes all the patches. Following the immutable infrastructure pattern, each cell instance is then replaced without any downtime and completely managed by Cloud Foundry as it moves workloads from the old running cells to the newly patched cells. This allows patches and all the required reboots to happen _once_ on the base image without needing to do it across hundreds or even thousands of servers.
 
-Since Microsoft typically releases new Windows updates monthly on [patch tuesday](https://en.wikipedia.org/wiki/Patch_Tuesday) it's recommended to follow that schedule to build a new stemcell and replace all of your Windows cells. While you may have the ability to replace all your production cells _on_ patch Tuesday, it's recommend that you first deploy newly built stemcells to your pre-production Cloud Foundry environments and let those bake for a few days before promoting them to your production Cloud Foundry foundations. This will give the apps running on those foundations a chance to validate the patches haven't broken anything in any of the applications which are running within the containers on it.
+Since Microsoft typically releases new Windows updates monthly on [patch Tuesday](https://en.wikipedia.org/wiki/Patch_Tuesday) it's recommended to follow that schedule to build a new stemcell and replace all of your Windows cells. While you may have the ability to replace all your production cells _on_ patch Tuesday, it's recommend that you first deploy newly built stemcells to your pre-production Cloud Foundry environments and let those bake for a few days before promoting them to your production Cloud Foundry foundations. This will give the apps running on those foundations a chance to validate the patches haven't broken anything in any of the applications which are running within the containers on it.
 
 ## Cell Customization with BOSH Addons
 
@@ -82,7 +82,7 @@ Additional Windows features, configuration, security, or local group policy shou
 
 While AV software isn't supported out of the box with Cloud Foundry Windows cells, it is possible to install and configure AV software if it's required by your corporate security standards.
 
-It's important when creating a new BOSH addon to install your AV software that the installation can be performed silently without user intervention. It's also important to configure the AV agent so that any on-access scanners exclude some of the underlying Cloud Foundry runtime directories, otherwise intermittment deployment failures may occur. The following directories should be excluded from on-demand scanning:
+It's important when creating a new BOSH addon to install your AV software that the installation can be performed silently without user intervention. It's also important to configure the AV agent so that any on-access scanners exclude some of the underlying Cloud Foundry runtime directories, otherwise intermittent deployment failures may occur. The following directories should be excluded from on-demand scanning:
 
 - `C:\bosh`
 - `C:\var\vcap`
@@ -132,11 +132,11 @@ The stemcell builder automation doesn't currently configure the Windows pagefile
 
 ### D: drive?
 
-Windows cells do not have multiple paritions or drives. Traditionally with bare metal Windows Servers you would reserve the C: drive for the OS and D: drive for programs etc. With completely virtualized environments along with the short lived nature of Windows cells this advice no longer provides any benefits. While you could add another drive to your stemcell buildout process, it's not recommended or supported.
+Windows cells do not have multiple partitions or drives. Traditionally with bare metal Windows Servers you would reserve the C: drive for the OS and D: drive for programs etc. With completely virtualized environments along with the short lived nature of Windows cells this advice no longer provides any benefits. While you could add another drive to your stemcell buildout process, it's not recommended or supported.
 
 ### .NET Versions
 
-It's recommended that the latest version of .NET be installed on your stemcell. Unfortunately the way the .NET 4.x framework and CLR are installed is globall at the cell level. While the mutlitude of .NET versions are generally backwards compatible, applications pushed to Cloud Foundry can only target the latest version already deployed on the cell. This is different for .NET Core where the CLR version is independently deployed along with the application and doesn't require that it be preinstalled by a Cloud Foundry operator.
+It's recommended that the latest version of .NET be installed on your stemcell. Unfortunately the way the .NET 4.x framework and CLR are installed is global at the cell level. While the multitude of .NET versions are generally backwards compatible, applications pushed to Cloud Foundry can only target the latest version already deployed on the cell. This is different for .NET Core where the CLR version is independently deployed along with the application and doesn't require that it be preinstalled by a Cloud Foundry operator.
 
 ### Remote Cell Access
 

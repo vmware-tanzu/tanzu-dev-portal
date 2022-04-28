@@ -900,6 +900,7 @@ gzip(ped)?
 H2
 hackathons
 Hackenburg
+hacky
 Hadlow
 Hamano
 Hananiel
@@ -943,6 +944,7 @@ homogenous
 horizontally-scalable
 HorizontalPodAutoscaler(s)?
 Hostable
+hostable
 HostEndpoint
 [Hh]ostname(s)?
 hostPath
@@ -1242,7 +1244,7 @@ LaunchDarkly
 layla-p
 LaylaCodesIt
 Lazu
-LDAP
+LDAP(S)?
 ldnug
 [Ll]eaderboard
 LeafRegionEntry
@@ -1558,6 +1560,7 @@ Osowski
 OSS
 Osterling
 OTT
+OU
 [oO]vercommit(ted|ting)?
 [oO]vercommitment
 overcomplicate
@@ -2087,6 +2090,7 @@ symlink
 symposia
 Sysdig
 Syslog
+[Ss]ysprep
 SystemAdmin
 Szul
 tabpane

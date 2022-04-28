@@ -110,7 +110,7 @@ PS C:\> .\nano C:\var\vcap\jobs\clamav-windows\clamd.conf
 
 ### Network Tracing
 
-You may encounter network issues which will require you to run `tcpdump`, but unfortunatley there's no builtin TCP dump in Windows. In these cases Windows has the ability to capture network traffic with `netsh trace`. These traces are written to binary `.etl` files which can then be read by [Microsoft Message Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=44226) or by Powershell's `Get-WinEvent` cmdlet.
+You may encounter network issues which will require you to run `tcpdump`, but unfortunately there's no builtin TCP dump in Windows. In these cases Windows has the ability to capture network traffic with `netsh trace`. These traces are written to binary `.etl` files which can then be read by [Microsoft Message Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=44226) or by the PowerShell `Get-WinEvent` cmdlet.
 
 To start a capture run the `netsh trace start` command.
 
