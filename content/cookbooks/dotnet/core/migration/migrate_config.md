@@ -29,7 +29,7 @@ If you do, then one best practice is to convert the custom configuration section
 
 ### Data Sources and Connection Strings
 
-There are few hard and fast rules when it comes to migrating to .NET Core and building cloud-native applications. One of these few rules is to **never**, **ever** store data source credentials and connection strings in configuration. The only exception to this is the use of [local defaults](/core/local_vcap_override_by_pcf). These local defaults should **only** work against localhost or other completely throwaway systems that do not ever contain meaningful information. In other words - if the information in the local defaults were to be compromised and published on the public internet, could it cause any harm?
+There are few hard and fast rules when it comes to migrating to .NET Core and building cloud-native applications. One of these few rules is to **never**, **ever** store data source credentials and connection strings in configuration. The only exception to this is the use of [local defaults](../../local_vcap_override_by_pcf). These local defaults should **only** work against localhost or other completely throwaway systems that do not ever contain meaningful information. In other words - if the information in the local defaults were to be compromised and published on the public internet, could it cause any harm?
 
 Consult the Entity Framework Core documentation as well as some Entity Framework Core samples and the Steeltoe OSS samples for illustrations of how to use things like Cloud Foundry Connectors and Steeltoe configuration to pull connection string and data source credentials from local defaults and from PCF environment variables.
 

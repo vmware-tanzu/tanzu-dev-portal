@@ -14,7 +14,7 @@ This recipe provides information on how you can set up your application code and
 
 ### Injecting Steeltoe Service Binding Objects via DI
 
-As we showed in the [Creating a Microservice Skeleton](/core/creating_microservice_skeleton) recipe, we can have a `Startup` class that looks as follows that will enable the discovered PCF application service bindings to be injectable through .NET Core's default DI mechanism, e.g. the `IOptions<T>` system.
+As we showed in the [Creating a Microservice Skeleton](../creating_microservice_skeleton) recipe, we can have a `Startup` class that looks as follows that will enable the discovered PCF application service bindings to be injectable through .NET Core's default DI mechanism, e.g. the `IOptions<T>` system.
 
 ```c#
 using Microsoft.AspNetCore.Builder;
@@ -120,11 +120,3 @@ Next, you need to make sure your configuration matches the format that Steeltoe 
   }
 }
 ```
-
-## See Also
-
-Here is a list of some other recipes and links that might prove useful when working on this problem in your environment.
-
-* [Configuration in .NET Core](/recipes/configuration_in_core)
-* [Creating a Microservice Skeleton in .NET Core](/recipes/creating_microservice_skeleton)
-* [Steeltoe OSS](http://steeltoe.io)

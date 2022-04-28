@@ -9,7 +9,7 @@ This covers some basic troubleshooting techniques to use for any full .NET appli
 
 ## Developer Troubleshooting
 
-Assuming you've followed the recommendations for logging and error handling in the [getting started guide](/intro/getting_started) you shouldn't have a hard time diagnosing issues with your deployed .NET app. Below are some common failures and possible corrective actions that you as a developer may take to fix the issue.
+Assuming you've followed the recommendations for logging and error handling in the [getting started guide](../getting_started) you shouldn't have a hard time diagnosing issues with your deployed .NET app. Below are some common failures and possible corrective actions that you as a developer may take to fix the issue.
 
 ### `StackOverflowException`, `AccessViolationException`
 
@@ -21,7 +21,7 @@ If your application is reporting back a 502 Gateway Error, this will happen if t
 
 ### ASP.NET Yellow Screen of Death
 
-When you see an ASP.NET Yellow Screen of Death (YSoD) this means the application cannot start because of a misconfiguration or has crashed. Typically you'll want to check your PCF application logs when you see a YSoD, assuming you've [put a global error handler](/intro/getting_started/#application-error-handling) in place.
+When you see an ASP.NET Yellow Screen of Death (YSoD) this means the application cannot start because of a misconfiguration or has crashed. Typically you'll want to check your PCF application logs when you see a YSoD, assuming you've [put a global error handler](../getting_started/#application-error-handling) in place.
 
 There are times when it's necessary to temporarily configure the ASP.NET yellow screen of death to output errors directly to the browser. These scenarios include:
 

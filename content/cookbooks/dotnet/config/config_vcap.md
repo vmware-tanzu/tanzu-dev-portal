@@ -35,6 +35,6 @@ svc.Credentials["value_key"];
 ```
 
 Following are Classes Hierarchy available for usage:
-![Configuration Connector Classes](/sso_img/vcaps_config.png)
+![Configuration Connector Classes](/images/cookbooks/dotnet/sso_img/vcaps_config.png)
  
 [conflib]: https://github.com/pivotalservices/Manulife-App-Replatforming/tree/master/net-libraries/CloudFoundry-Config "Config Library"

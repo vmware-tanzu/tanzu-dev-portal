@@ -259,7 +259,7 @@ Finally, to simulate a Cloud Foundry environment with Redis bound to our app, ad
 
 Launch the solution in the debugger and view the output at `api/configbrowser`:
 
-![`api/configbrowser` output](/steeltoe-config-legacy-framework/configbrowser-json.png)
+![`api/configbrowser` output](/images/cookbooks/dotnet/steeltoe-config-legacy-framework/configbrowser-json.png)
 
 ### Experiment
 

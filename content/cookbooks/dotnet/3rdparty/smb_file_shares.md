@@ -16,7 +16,7 @@ Pivotal Application Service using an Ubuntu stemcell doesn't have a native SMB d
 
 ## PASW
 
-SMB shares requires authentication which can be enabled by using .NET wrapper around the native [Windows Networking API][winapi] via the [Steeltoe Common .NET Network library](nuget). Note this is an experimental feature and is currently limited to IP address UNC paths
+SMB shares requires authentication which can be enabled by using .NET wrapper around the native [Windows Networking API][winapi] via the [Steeltoe Common .NET Network library][nuget]. Note this is an experimental feature and is currently limited to IP address UNC paths
 
 ```ps
 Install-Package Steeltoe.Common.Net

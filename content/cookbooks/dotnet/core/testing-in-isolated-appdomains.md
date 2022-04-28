@@ -81,17 +81,17 @@ namespace SampleApp.Configuration
 Given the above, our unit tests are going to produce frustrating results: either test will pass if run in isolation, but only one test will pass if both tests execute in the same test run. The following figures demonstrate this problem:
 
 <center>
-![Figure 1](/testing-in-isolated-appdomains/testing-problem-1.png)
+![Figure 1](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-problem-1.png)
 
 Figure 1 - Executing both tests in one test run - run fails.
 
-![Figure 2a](/testing-in-isolated-appdomains/testing-problem-2.png)
-![Figure 2b](/testing-in-isolated-appdomains/testing-problem-3.png)
+![Figure 2a](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-problem-2.png)
+![Figure 2b](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-problem-3.png)
 
 Figures 2a, 2b - Running the failed test in isolation shows a passing test.
 
-![Figure 3a](/testing-in-isolated-appdomains/testing-problem-4.png)
-![Figure 3b](/testing-in-isolated-appdomains/testing-problem-5.png)
+![Figure 3a](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-problem-4.png)
+![Figure 3b](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-problem-5.png)
 
 Figures 3a, 3b - Running the passing test in isolation shows it also passes when run in isolation.
 </center>
@@ -158,4 +158,4 @@ public void TestServiceBusConfigIsConfiguredReturnsTrue()
 
 Step 3. Re-run the tests:
 
-![Figure 4](/testing-in-isolated-appdomains/testing-solution.png)
+![Figure 4](/images/cookbooks/dotnet/testing-in-isolated-appdomains/testing-solution.png)

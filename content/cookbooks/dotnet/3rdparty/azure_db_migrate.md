@@ -5,7 +5,7 @@ tags = [ "Azure", "SQL Server" ]
 weight = 10
 +++
 
-![SQL Server Migration](/sso_img/db_migrate.png)
+![SQL Server Migration](/images/cookbooks/dotnet/sso_img/db_migrate.png)
  
 ## Process Description
  

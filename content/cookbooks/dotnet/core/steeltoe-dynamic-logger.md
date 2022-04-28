@@ -94,11 +94,11 @@ public class Program
 
 Once the above code has been added to your application and pushed to Cloud Foundry, the Logging Actuator Endpoint will be detected by Cloud Foundry as enabled for the application; a button entitled `Configure Logging Levels` should appear in the upper-right hand side of the logging screen.  Click this button to toggle the granularity at which the application logs; no restart is required for the app instance(s).
 
-![Screenshot - App Manager Logging](/steeltoe-dynamic-logger/configure-logging-levels.png)
+![Screenshot - App Manager Logging](/images/cookbooks/dotnet/steeltoe-dynamic-logger/configure-logging-levels.png)
 
 The below example depicts the logging categories and their configured levels for a sample application:
 
-![Screenshot - App Manager Logging](/steeltoe-dynamic-logger/configure-logging-levels-details.png)
+![Screenshot - App Manager Logging](/images/cookbooks/dotnet/steeltoe-dynamic-logger/configure-logging-levels-details.png)
 	 
 ### Experiment
 

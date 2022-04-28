@@ -332,7 +332,7 @@ For the applications running on PCF it is straightforward to use [PCF SSO][pcfss
 
 Here is simplified diagram:
 
-![WebApp SSO Flow](/sso_img/sso_flow.png)
+![WebApp SSO Flow](/images/cookbooks/dotnet/sso_img/sso_flow.png)
 
 To see more detailed SSO with ADFS flow refer to [Detailed SSO flow][sso]
 
@@ -354,7 +354,7 @@ The following steps were tested with classic .NET Web Forms and MVC projects.
   - Enable Anonymous Authentication
   - Disable Windows Authentication
   - Managed pipeline set to integrated
-  ![Project properties](/sso_img/project_props.png)  
+  ![Project properties](/images/cookbooks/dotnet/sso_img/project_props.png)  
 
 ## Webforms login page example
 
@@ -480,7 +480,7 @@ For more details [Custom Role Providers][roleprov]
 [oidc]: https://openid.net/specs/openid-connect-basic-1_0.html "OIDC Implicit flow"
 [pcfsso]: https://docs.pivotal.io/p-identity/1-3/configure-apps/web-app.html "PCF SSO"
 [websso]: https://docs.pivotal.io/p-identity/1-3/getting-started.html#install "Setup SSO"
-[sso]:  /sso_img/detailed_sso_flow.png "Detailed SSO Flow"
+[sso]:  /images/cookbooks/dotnet/sso_img/detailed_sso_flow.png "Detailed SSO Flow"
 [owin]: http://www.c-sharpcorner.com/UploadFile/4b0136/introduction-of-owin-startup-class-in-visual-studio-2013-rc/ "OWIN Startup class"
 [oidcazure]: http://www.cloudidentity.com/blog/2014/07/24/protecting-an-asp-net-webforms-app-with-openid-connect-and-azure-ad/ "OIDC for WebForms"
 [roleprov]: https://www.codeproject.com/Articles/607392/Custom-Role-Providers "Custom Role Providers"

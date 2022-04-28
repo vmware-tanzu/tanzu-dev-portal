@@ -7,7 +7,7 @@ In the scenarios where APIs are consumed by other systems without involvement of
 
 Solution is based on WCF Client JWT Interceptor that will Connect PCF SSO and get Access Token and will embed it into HTTP Header for the service being invoked. Here is a simplified diagram:
 
-![JWT SSO Flow](/sso_img/client_cred.png)
+![JWT SSO Flow](/images/cookbooks/dotnet/sso_img/client_cred.png)
 
 ## WCF Services Clients
 

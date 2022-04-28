@@ -21,17 +21,17 @@ In order to provide an iterative pathway to modernization, it may be necessary t
 
 With a command window open, create a directory for your new project and execute `dotnet new webapi`. This will scaffold a .NET Core WebAPI project targeting the .NET Core as the runtime.  
 
-![new web api](/dotnet-core-targeting-full-framework/dotnet-new-webapi.png)
+![new web api](/images/cookbooks/dotnet/dotnet-core-targeting-full-framework/dotnet-new-webapi.png)
 
 Using Visual Studio’s Add Project wizard would produce a similar result at the project level:
 
-![project structure](/dotnet-core-targeting-full-framework/dotnet-new-webapi-result.png)
+![project structure](/images/cookbooks/dotnet/dotnet-core-targeting-full-framework/dotnet-new-webapi-result.png)
 
 ### 2. Modify the Project File
 
 Open the `.csproj` file in your editor of choice. The default output should look similar to the below:
 
-![default project file](/dotnet-core-targeting-full-framework/csproj-default.png)
+![default project file](/images/cookbooks/dotnet/dotnet-core-targeting-full-framework/csproj-default.png)
 
 Change the value of `<TargetFramework>` to the desired framework version. Remove the `PackageReference` element for `Microsoft.AspNetCore.All` and replace it with the more granular references shown below:
 
@@ -65,7 +65,7 @@ Change the value of `<TargetFramework>` to the desired framework version. Remove
 
 Switching back to the console, execute the command `dotnet build`.
 
-![dotnet build](/dotnet-core-targeting-full-framework/dotnet-build.png)
+![dotnet build](/images/cookbooks/dotnet/dotnet-core-targeting-full-framework/dotnet-build.png)
 
 ## Conclusion
 

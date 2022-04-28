@@ -5,7 +5,7 @@ title = "OAuth 2.0 and PCF SSO - Server"
 
 WCF WebServices (both SOAP and REST) are  protected by requiring all communication to present OAuth 2.0 Access Token. Access tokens are obtained by the client from Pivotal SSO and is signed and encoded and is passed in HTTP `Authorization` Header according to [JWT Bearer Profile](https://tools.ietf.org/html/rfc7523) and [Authorization profile](https://tools.ietf.org/html/rfc6750). The WCF JWT interceptor will validate the access token by retrieving the keys from the bound PCF SSO tile and ensuring the JWT token is valid (signature, lifespan, scopes etc). If token is valid the authenticated identity will be created and passed to the application context. Here is a simplified diagram:
 
-![JWT SSO Flow](/sso_img/client_cred.png)
+![JWT SSO Flow](/images/cookbooks/dotnet/sso_img/client_cred.png)
 
 ## WCF Application Security Checks
 

@@ -20,6 +20,6 @@ In addition to libraries supporting netstandard you need to make sure the librar
 
 ## 1st Party Libraries
 
-If you are looking to analyze first party libraries (libraries developed in-house, to which you have the source code), then you will want to check out the recipe on using the API Port tool to evaluate how much of the code in the existing library might be easily ported to core: [Using APIPort to Analyze Legacy Code](/core/migration/migrate_apiport_tool/).
+If you are looking to analyze first party libraries (libraries developed in-house, to which you have the source code), then you will want to check out the recipe on using the API Port tool to evaluate how much of the code in the existing library might be easily ported to core: [Using APIPort to Analyze Legacy Code](../../migration/migrate_apiport_tool/).
 
 For additional reference, check out this article written by *Microsoft* - [Porting to .NET Core - Analyzing Dependencies](https://docs.microsoft.com/en-us/dotnet/articles/core/porting/third-party-deps)
