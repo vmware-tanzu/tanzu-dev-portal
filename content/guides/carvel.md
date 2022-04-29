@@ -34,7 +34,7 @@ It currently[^2] contains the following tools:
 * **[vendir](https://carvel.dev/vendir/)**: Declaratively state what files should be in a directory.
 
 ## Learn more
-[carvel.dev]((https://carvel.dev/))
+[carvel.dev](https://carvel.dev/)
 
 **Guides**
 * [Getting Started with kapp](/guides/kubernetes/kapp-gs/)

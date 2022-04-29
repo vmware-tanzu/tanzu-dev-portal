@@ -221,7 +221,9 @@
   <div class="row justify-content-center mb-5">
     <div class="col-lg-9 col-12 px-0 mt-5">
       {{ if not .Params.no_episode_title }}
-        <h3>In this episode</h3>
+        {{ with .Content }}
+          <h3>In this episode</h3>
+        {{ end }}
       {{ end }}
       {{ if .Params.calendar }}
         <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
@@ -230,6 +232,14 @@
     </div>
   </div>
 
+  <!-- Determine if bios exist for each guest -->
+  {{ $guests := slice }}
+  {{ range .Params.guests }}
+    {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+      {{ $guests = $guests | append . }}
+    {{ end }}
+  {{ end }}
+  
   <!-- Display colored headshots on .NET Beyond page -->
   {{ if .Params.beyond }}
     {{ with .Params.guests }}
@@ -247,16 +257,14 @@
     </div>
     {{ end }}
   {{ else }}
-    {{ with .Params.guests }}
+    {{ with $guests }}
     <div class="row justify-content-center mb-5">
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Guests</h3>
         {{ range . }}
-          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
             <div class=" mb-4 pb-5">
             {{ partial "team-member.html" (dict "context" . "display" "tv") }}
             </div>
-          {{ end }}
         {{ end }}
       </div>
     </div>

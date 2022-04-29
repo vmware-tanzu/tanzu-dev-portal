@@ -15,7 +15,7 @@ minutes: 120
 episode: "60"
 explicit: "yes"
 title: "The one with Abel Salgado"
-#youtube: ""
+youtube: "DPG9b6onI20"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false

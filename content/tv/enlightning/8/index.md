@@ -1,7 +1,7 @@
 ---
-Date: '2022-04-21T08:00:00-07:00'
+Date: '2022-04-28T08:00:00-07:00'
 Description: Security for Application Developers
-PublishDate: '2020-04-21T00:00:00-07:00'
+PublishDate: '2020-04-28T00:00:00-07:00'
 date: '2020-06-03'
 episode: '8'
 explicit: 'no'
@@ -9,7 +9,7 @@ guests:
 - Adib Saikali
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "g1Bmxg4DSug"
 lastmod: '2020-10-09'
 title: Security for Application Developers
 twitch: vmwaretanzu

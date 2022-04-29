@@ -7,16 +7,17 @@ aliases:
     - /springone-tour/2022/seattle
 #location:
 #    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo:
-  path: "/images/springonetour/"
-  filename: "seattle_cityscape.svg"
+logo_filename: "seattle_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
 Description: SpringOne Tour Seattle
 Title: SpringOne Tour Seattle
 LinkTitle: Seattle
 city_name: Seattle
-contact: springone@vmware.com
-contact_text: the SpringOne Tour Team
-code_of_conduct: true
+sponsors:
+    - name: Contrast Security
+      sponsorship_level: gold
+      logo_path_dark: "/images/springonetour/sponsors/logo-color-contrast-security.svg"
+      logo_path_light: "/images/springonetour/sponsors/logo-white-contrast-security.svg"
+      url: https://www.contrastsecurity.com/
 hide_newsletter: true
 ---

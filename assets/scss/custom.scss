@@ -803,17 +803,16 @@
       background-position: bottom right 25%;
     }
     &.newyork .container-sm {
-      background-size: 45%;
-      @media(max-width: 790px) {
-        background-size: 50% !important;
-      }
+      background-size: 55%;
+      background-position: bottom right 2%;
+    }
+    &.toronto .container-sm {
+      background-size: 51%;
+      background-position: 75% 100%;
     }
     &.seattle .container-sm {
       background-size: 46%;
       background-position: bottom right 22%;
-    }
-    &.toronto .container-sm {
-      background-size: 42%;
     }
     &.atlanta .container-sm {
     background-position: bottom right 22%;
@@ -864,17 +863,24 @@ body#s1t-index #s1t-destinations-2022 {
     height: 177px;
   }
 }
-body#s1t-index {
+#s1t-index {
   .td-main a, .talk-modal a, .speaker-modal a {
     color: #02bc67;
     &:hover {
       color: #80ea6e;
     }
   }
+  .speaker-modal h3 {
+    color: #adbbc4;
+  }
   @media (max-width: 767px){
     .container-sm, .container {
       max-width: 100%;
     }
+  }
+  #sponsors .sponsor img {
+    opacity: 0.8;
+    max-width: 200px;
   }
   #meetup {
     align-items: center;

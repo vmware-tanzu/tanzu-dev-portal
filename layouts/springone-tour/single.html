@@ -1,9 +1,13 @@
-{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }} {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api"
-"https://s1tapi.com/api" }} {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower}} {{ $isRegOpen := isset .Params "location" }}
+{{ define "main" }} {{ $class := replace .Page.Section "." "-" | lower }}
+{{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }}
+{{ $stripePublicKey := cond .Site.IsServer "pk_test_spvxO15DDJ4xn3jcJATwg8pw" "pk_live_DWJQ1rhJItm7apoecrDZjmPU" }}
+{{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower }}
+{{ $isRegOver := lt (sub .Params.Date.YearDay now.YearDay) 2 }}
+{{ $isRegOpen := and .Params.isRegOpen (not $isRegOver) }}
 
 <style>
     #hero.springone-tour-event-hero .container-sm {
-        background-image: url('{{ .Params.logo.path | relURL }}{{ .Params.logo.filename }}');
+      background-image: url('{{ "/images/springonetour/" | relURL }}{{ .Params.logo_filename }}');
     }
 </style>
 
@@ -17,13 +21,18 @@
                     <h3 class="h3 pt-0 mb-4 pb-2">
                         {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
                     </h3>
-                    {{ if $isRegOpen }} {{ range .Params.location }}
+
+                    {{ range .Params.location }}
                     <p class="mt-0 mb-0">{{ . }}</p>
                     {{ end }}
+
+                    {{ if $isRegOpen }}
                     <button id="register-btn" type="button" class="mt-4 btn btn-primary" data-bs-target="#register">
                         <div class="spinner-border spinner-border-sm" id="register-spinner" style="display: none"></div>
                         <span id="register-btn-text">Register Now</span>
                     </button>
+                    {{ else if $isRegOver }}
+                    <p class="mt-5 mb-0">Registration is now closed.</p>
                     {{ else }}
                     <p class="mt-0 mb-0">Stay tuned for more details!</p>
                     {{ end }}
@@ -37,7 +46,7 @@
 {{ if $isRegOpen }}
 <script src="https://js.stripe.com/v3/"></script>
 <div id="s1t-register" class="p-5 modal fade" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style='max-width:750px'>
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 750px">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title w-100 text-center">Register for {{ .Params.city_name }}</h2>
@@ -47,33 +56,33 @@
             </div>
             <div class="modal-body">
                 <form class="form-inline">
-                    <input type="hidden" name="chargeValue" value="200" />
-                    <input type="hidden" name="tourCity" value="{{ .Params.location }}" />
+                    <input type="hidden" name="amountPaid" value="0"/>
+                    <input type="hidden" name="city" value="{{ $cityNameLowercase }}"/>
                     <div class="form-row">
                         <div class="col-sm-3 s1t-form-col">
                             <input
-                                type="text"
-                                class="form-control"
-                                name="firstName"
-                                placeholder="First name"
-                                maxlength="50"
-                                aria-required="First name"
-                                required
+                                    type="text"
+                                    class="form-control"
+                                    name="firstName"
+                                    placeholder="First name"
+                                    maxlength="50"
+                                    aria-required="First name"
+                                    required
                             />
                         </div>
                         <div class="col-sm-3 s1t-form-col">
-                            <input type="text" class="form-control" name="lastName" placeholder="Last name" maxlength="50" aria-required="Last name" required />
+                            <input type="text" class="form-control" name="lastName" placeholder="Last name" maxlength="50" aria-required="Last name" required/>
                         </div>
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" aria-required="Email address" required />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" aria-required="Email address" required/>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job title" />
+                            <input type="text" class="form-control" name="jobTitle" required aria-required="Job Title" placeholder="Job title"/>
                         </div>
                         <div class="col-sm-6 s1t-form-col">
-                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company" maxlength="50" />
+                            <input type="text" class="form-control" name="company" required aria-required="Company" placeholder="Company" maxlength="50"/>
                         </div>
                     </div>
                     <div class="form-row">
@@ -107,16 +116,16 @@
                         </div>
                         <div class="col-sm-6 s1t-form-col">
                             <input
-                                name="dietaryCustom"
-                                class="form-control dietary-custom"
-                                type="text"
-                                placeholder="Enter custom dietary restrictions."
-                                style="display: none"
+                                    name="dietaryCustom"
+                                    class="form-control dietary-custom"
+                                    type="text"
+                                    placeholder="Enter custom dietary restrictions."
+                                    style="display: none"
                             />
                         </div>
                     </div>
                     <div id="card-errors" class="s1t-form-col" role="alert"><p></p></div>
-                    <div class="form-row">
+                    <div id="card-container" class="form-row">
                         <div class="col-12 s1t-form-col">
                             <div id="card-element" class="stripe-card-element"></div>
                         </div>
@@ -125,7 +134,7 @@
                         <div class="col-sm-6 col-12 mt-1 s1t-form-col">
                             <div class="row">
                                 <div class="col-9 p-0">
-                                    <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE" />
+                                    <input type="text" class="form-control" name="discountCode" id="discount-code" placeholder="DISCOUNT CODE"/>
                                 </div>
                                 <div class="col-3 text-right">
                                     <button id="discount-btn" type="button" class="btn-apply">Apply</button>
@@ -141,10 +150,10 @@
                                     <p class="charge-label">Charge total:</p>
                                 </div>
                                 <div class="col-3 pr-0 text-right">
-                                    <p class="charge-total">$0</p>
+                                    <p><span class="currency-symbol">$</span><span id="charge-total"></span></p>
                                 </div>
                                 <div class="col-3">
-                                    <p class="charge-currency">USD</p>
+                                    <p class="currency-code"></p>
                                 </div>
                             </div>
                             <div class="row discount-details">
@@ -152,10 +161,10 @@
                                     <p class="discount-label">After discount:</p>
                                 </div>
                                 <div class="col-3 pr-0 text-right">
-                                    <p class="discount-total"></p>
+                                    <p><span class="currency-symbol">$</span><span id="discount-total"></span></p>
                                 </div>
                                 <div class="col-3">
-                                    <p class="discount-currency">USD</p>
+                                    <p class="currency-code"></p>
                                 </div>
                             </div>
                         </div>
@@ -164,16 +173,16 @@
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
                                 <input
-                                    type="checkbox"
-                                    class="form-check-input"
-                                    id="s1t-tac-consent"
-                                    name="tacAccepted"
-                                    value="true"
-                                    aria-required="true"
-                                    required
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="s1t-tac-consent"
+                                        name="tacAccepted"
+                                        value="true"
+                                        aria-required="true"
+                                        required
                                 />
                                 <label class="form-check-label ml-3" for="s1t-tac-consent"
-                                    >I agree to SpringOne Tour's&nbsp;
+                                >I agree to SpringOne Tour's&nbsp;
                                     <a href='{{ print .Parent.RelPermalink "/terms"  }}' target="_blank">Terms & Conditions.</a></label
                                 >
                             </div>
@@ -183,20 +192,24 @@
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
                                 <input
-                                    type="checkbox"
-                                    name="COVID19VaccinationAttestation"
-                                    id="COVID-19-vaccination-attestation"
-                                    class="form-check-input"
-                                    value="true"
-                                    aria-required="true"
-                                    required
+                                        type="checkbox"
+                                        name="COVID19VaccinationAttestation"
+                                        id="COVID-19-vaccination-attestation"
+                                        class="form-check-input"
+                                        value="true"
+                                        aria-required="true"
+                                        required
                                 />
                                 <label class="form-check-label ml-3" for="COVID-19-vaccination-attestation"
-                                    >I attest that I am fully vaccinated against COVID-19 as defined by&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
+                                >I attest that I am fully vaccinated against COVID-19 as defined by&nbsp;<a
+                                        href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated"
+                                        target="_blank"
+                                >CDC</a
+                                >/<a
                                         href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                                         target="_blank"
-                                        >WHO</a
-                                    >.</label
+                                >WHO</a
+                                >.</label
                                 >
                             </div>
                         </div>
@@ -207,23 +220,24 @@
                         <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/fully-vaccinated.html#vaccinated" target="_blank">CDC</a>/<a
                             href="https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection"
                             target="_blank"
-                            >WHO</a
-                        >, people are considered fully vaccinated if they are ≥2 weeks following receipt of the second dose in a 2-dose vaccine series or ≥2
+                    >WHO</a
+                    >, people are considered fully vaccinated if they are ≥2 weeks following receipt of the second dose in a 2-dose vaccine series or ≥2
                         weeks following receipt of a single-dose vaccine.
                     </small>
                     <div id="privacy-consent-container" class="mt-3">
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
                                 <input
-                                    type="checkbox"
-                                    name="vmwarePrivacyPolicy"
-                                    id="vmware-privacy-policy"
-                                    class="form-check-input"
-                                    value="true"
-                                    aria-required="true"
+                                        type="checkbox"
+                                        name="vmwarePrivacyPolicy"
+                                        id="vmware-privacy-policy"
+                                        class="form-check-input"
+                                        value="true"
+                                        aria-required="true"
                                 />
                                 <label class="form-check-label ml-3" for="vmware-privacy-policy"
-                                    >I agree to VMware's&nbsp; <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
+                                >I agree to VMware's&nbsp;
+                                    <a href="https://www.vmware.com/help/privacy.html" target="_blank">Privacy Policy</a>.</label
                                 >
                             </div>
                         </div>
@@ -231,18 +245,18 @@
                     <div id="gdpr-consent-container" style="display: none" class="mt-3">
                         <div class="col-12 s1t-form-col">
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="gdpr-yes" name="gdprPreference" value="yes" />
+                                <input type="radio" class="form-check-input" id="gdpr-yes" name="gdprPreference" value="yes"/>
                                 <label class="form-check-label ml-3" for="gdpr-yes"
-                                    >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
+                                >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
                                     and events.
                                 </label>
                             </div>
                         </div>
                         <div class="col-12 s1t-form-col">
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="gdpr-no" name="gdprPreference" value="no" />
+                                <input type="radio" class="form-check-input" id="gdpr-no" name="gdprPreference" value="no"/>
                                 <label class="form-check-label ml-3" for="gdpr-no"
-                                    >No, I would not like to be contacted by VMware and/or its affiliates regarding products and services, newsletters, and
+                                >No, I would not like to be contacted by VMware and/or its affiliates regarding products and services, newsletters, and
                                     events.
                                 </label>
                             </div>
@@ -251,9 +265,9 @@
                     <div id="nongdpr-consent-container" class="mt-3" style="display: none">
                         <div class="col-12 justify-content-start s1t-form-col">
                             <div class="form-check">
-                                <input type="checkbox" name="nongdprConsent" id="nongdpr-consent" class="form-check-input" value="true" />
+                                <input type="checkbox" name="nongdprConsent" id="nongdpr-consent" class="form-check-input" value="true"/>
                                 <label class="form-check-label ml-3" for="nongdpr-consent"
-                                    >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
+                                >Yes, I would like to receive communications from VMware and/or its affiliates regarding products and services, newsletters,
                                     and events.</label
                                 >
                             </div>
@@ -269,6 +283,7 @@
                         </div>
                     </div>
                 </form>
+
                 <div class="success-banner" style="display: none">
                     <div class="row">
                         <div class="col">
@@ -288,33 +303,37 @@
             <div class="col-lg-9 col-12 mt-5">
                 <p>
                     Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the
-                    city during the week, everywhere from executive events to meetups to giving back to the community. {{ if not $isRegOpen }} Stay tuned for
-                    more details.{{ end }}
+                    city during the week, everywhere from executive events to meetups. {{ if not $isRegOpen }} Stay tuned more details.{{ end }}
                 </p>
 
-                {{ .Content }}
+                {{ with .Content }}
+                <div class="day-toggle row mt-5">
+                    <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
+                    <h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h5>
+                </div>
+                {{- . -}}
+                {{ end }}
 
                 {{ if isset .Params "meetup" }}
                 <div id="meetup">
                     <h3 class="mt-5">Meetup</h3>
                     <div class="row align-items-center">
                         <a class="col-sm-2 lightbox" href="#city-takeover">
-                            <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode" />
-                            <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode" />
+                            <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode"/>
+                            <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode"/>
                         </a>
-                        <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.</p>
+                        <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.
+                        </p>
                     </div>
                 </div>
-                {{ end }}
-
-                {{ if isset .Params "giveback" }}
+                {{ end }} {{ if isset .Params "giveback" }}
                 <div id="meetup">
                     <h3 class="mt-5">Give Back</h3>
                     <p>{{ .Params.giveback.title | markdownify }}</p>
                     <div class="row align-items-center">
                         <a class="col-sm-3" href="{{ .Params.giveback.url }}">
-                            <img src='{{ .Params.giveback.logo_path_dark | relURL }}' class="hide-in-light-mode" />
-                            <img src='{{ .Params.giveback.logo_path_light | relURL }}' class="display-in-light-mode" />
+                            <img src="{{ .Params.giveback.logo_path_dark | relURL }}" class="hide-in-light-mode"/>
+                            <img src="{{ .Params.giveback.logo_path_light | relURL }}" class="display-in-light-mode"/>
                         </a>
                         <p class="col-sm-9">{{ .Params.giveback.description | markdownify }}</p>
                     </div>
@@ -323,7 +342,9 @@
 
                 <h3 class="mt-5">Lead/Forward</h3>
                 <p>
-                  Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your business needs. For more information, please reach out to <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
+                    Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your
+                    business needs. For more information, please reach out to
+                    <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
                 </p>
 
                 {{ if isset .Params "sponsors" }}
@@ -331,9 +352,9 @@
                     <h3 class="mt-5">Sponsors</h3>
                     <h4 class="mt-3">Gold</h4>
                     {{ range .Params.sponsors }}
-                    <a class="col-sm-2 lightbox" href="{{ .url }}">
-                        <img src="{{ .logo_path_light | relURL }}" class="hide-in-light-mode" />
-                        <img src="{{ .logo_path_dark | relURL }}" class="display-in-light-mode" />
+                    <a class="col-sm-2 lightbox sponsor" href="{{ .url }}">
+                        <img src="{{ .logo_path_light | relURL }}" class="hide-in-light-mode"/>
+                        <img src="{{ .logo_path_dark | relURL }}" class="display-in-light-mode"/>
                     </a>
                     {{ end }}
                 </div>
@@ -344,7 +365,7 @@
             <div class="col-lg-9 col-12 px-0">
                 <p>
                     Questions?
-                    <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a>
+                    <a href="mailto:springone@vmware.com">Contact the SpringOne Tour Team</a>
                     &bullet;
                     <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a>
                 </p>
@@ -353,15 +374,17 @@
         <div class="row justify-content-center mb-5 text-center">
             <div class="col-lg-9 col-12 px-0 d-flex">
                 <div class="feedback mt-4 pt-4 w-100 text-left border-top">
-                    <a
-                        href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=SpringOne Tour Issue: {{ . }}"
-                        ><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a
-                    >
+                    <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=SpringOne Tour Issue: {{ . }}">
+                        <i class="fab fa-github mr-2"></i>
+                        <span class="align-top">Report an issue</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+{{ partial "s1t-speakers-talks.html" . }}
 
 {{ if $isRegOpen }}
 <script>
@@ -372,12 +395,30 @@
     const regForm = $('#s1t-register form');
     const countryInput = $('select.country-select');
     const errElement = $('#response-error-message p');
-    const stripe = Stripe('pk_live_DWJQ1rhJItm7apoecrDZjmPU');
+    const amountPaid = $('input[name=amountPaid]');
+    const stripe = Stripe({{ $stripePublicKey }});
+    const stripeStyle = {
+        base: {
+            color: 'white',
+            fontFamily: 'Metropolis',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+                color: 'white',
+            },
+        },
+        invalid: {
+            fontFamily: 'Metropolis',
+            color: '#fa755a',
+            iconColor: '#fa755a',
+        },
+    };
 
     let card;
     let clientSecret;
     let intentId;
     let requiresGDPR;
+    let initialChargeValue;
 
     const setLoading = (el, bool) => {
         if (bool) {
@@ -390,74 +431,70 @@
     };
 
     const initStripe = () => {
+        $('#card-element').removeClass('error');
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/create-payment-intent" }}',
             type: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityNameLowercase }}' }),
+            headers: {'Content-Type': 'application/json'},
+            data: JSON.stringify({city: '{{ $cityNameLowercase }}', cityDisplayName: '{{ .Params.city_name }}'}),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
                 intentId = resp.id;
-                $('.charge-total').text(`$${resp.amount / 100}`);
-                const style = {
-                    base: {
-                        color: 'white',
-                        fontFamily: 'Metropolis',
-                        fontSmoothing: 'antialiased',
-                        fontSize: '16px',
-                        '::placeholder': {
-                            color: 'white',
-                        },
-                    },
-                    invalid: {
-                        fontFamily: 'Metropolis',
-                        color: '#fa755a',
-                        iconColor: '#fa755a',
-                    },
-                };
+                initialChargeValue = resp.amount / 100;
+                $('#charge-total').text(initialChargeValue);
+                amountPaid.val(initialChargeValue);
+                $('.currency-code').text(resp.currency.toUpperCase());
                 if ($('html').hasClass('light-mode')) {
-                    style.base.color = 'black';
-                    style.base['::::placeholder'] = { color: 'black' };
+                    stripeStyle.base.color = 'black';
+                    stripeStyle.base['::::placeholder'] = {color: 'black'};
                 }
-                card = stripe.elements().create('card', { style: style });
+                card = stripe.elements().create('card', {style: stripeStyle});
                 card.mount('#card-element');
                 card.on('change', (e) => {
-                    subBtn.attr({ disabled: !e.complete, ['aria-disabled']: !e.complete });
+                    subBtn.attr({disabled: !e.complete, ['aria-disabled']: !e.complete});
                     $('#card-errors p').empty();
                     $('#card-errors p').text(e.error ? e.error.message : '');
                 });
             },
             error: (resp) => {
-                let errText;
-                if(resp.responseJSON){
-                    if(resp.responseJSON.message){
-                        errText = `Stripe payment setup issue: ${resp.responseJSON.message}`;
+                let errText = `Stripe payment setup issue.`;
+                if (resp.responseJSON) {
+                    if (resp.responseJSON.message) {
+                        console.log(`Stripe error: ${resp.responseJSON.message}`);
                     }
-                }else if(resp.responseText){
-                    errText = `Stripe payment setup issue: ${resp.responseText}`;
-                }else{
-                    errText = 'Stipe payment setup issue: Unknown potential network related issue with Stripe initialization, please try a different network';
+                } else if (resp.responseText) {
+                    console.log(`Stripe error: ${resp.responseText}`);
+                } else {
+                    errText = 'Issue with Stripe initialization. Please try a different network';
                 }
-                console.log(errText);
                 $('#card-element').text(errText);
+                $('#card-element').addClass('error');
             },
         });
     };
 
-    const applyDiscounts = async (value) => {
+    const applyDiscounts = async (discountCode) => {
+        $('#card-container').show();
         $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityNameLowercase }}', discount: value }),
+            headers: {'Content-Type': 'application/json'},
+            data: JSON.stringify({city: '{{ $cityNameLowercase }}', discount: discountCode}),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
-                if (value != '') {
+                if (discountCode != '') {
+                    let totalAfterDiscount = resp.amount / 100;
                     $('.charge-label').text('Before discount:');
                     $('.discount-details').css('display', 'flex');
-                    $('.discount-notice').show().text(`${value} applied`).css('color', '#02bc67');
-                    $('.discount-total').text(`$${resp.amount / 100}`);
+                    $('.discount-notice').show().text(`${discountCode} applied`).css('color', '#02bc67');
+                    $('#discount-total').text(`${totalAfterDiscount}`);
+                    amountPaid.val(`${totalAfterDiscount}`);
+                    if (totalAfterDiscount == 0) {
+                        subBtn.attr({disabled: false, ['aria-disabled']: false});
+                        $('#card-container').remove();
+                    }
                 } else {
+                    amountPaid.val(initialChargeValue)
                     $('.charge-label').text('Charge total:');
                     $('.discount-details').css('display', 'none');
                     $('.discount-notice').hide();
@@ -474,11 +511,12 @@
     };
 
     const resetPaymentIntent = async () => {
-        $.ajax({
+      amountPaid.val(initialChargeValue)
+      $.ajax({
             url: '{{ print $apiEndpoint "/stripe/update-payment-intent?intentId=" }}' + intentId,
             method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            data: JSON.stringify({ city: '{{ $cityNameLowercase }}' }),
+            headers: {'Content-Type': 'application/json'},
+            data: JSON.stringify({city: '{{ $cityNameLowercase }}'}),
             success: (resp) => {
                 clientSecret = resp.clientSecret;
             },
@@ -504,12 +542,19 @@
                 return;
             }
         }
+        let data = regForm.serialize();
         $.ajax({
             url: '{{ print $apiEndpoint "/register/check-for-existing-registration?city=" $cityNameLowercase}}',
             method: 'post',
-            data: regForm.serialize(),
+            data: data,
             success: (resp) => {
-                processStripePayment(resp);
+                let isCompedPass = $('.discount-details').is(':visible')
+                    && parseInt($('#discount-total').text()) == 0;
+                if (isCompedPass) {
+                    registerUser('');
+                } else {
+                    processStripePayment(resp);
+                }
             },
             error: (err) => {
                 errElement.text(`${err.responseText}`);
@@ -523,7 +568,7 @@
             .confirmCardPayment(clientSecret, {
                 payment_method: {
                     card: card,
-                    billing_details: { email: registrant.email },
+                    billing_details: {email: registrant.email},
                 },
                 receipt_email: registrant.email,
             })
@@ -624,7 +669,7 @@
                 }
             },
             error: (err) => {
-                // regBtn.attr('disabled', 'true');
+                regBtn.attr('disabled', 'true');
                 regBtn.text(`Registration is ${err.responseJSON.status}`);
             },
         });
