@@ -75,7 +75,7 @@ To allow the application to work with Tanzu GemFire and utilize the Spring Boot 
 **Gradle**
 ```groovy
 ext {
-  set('springGeodeVersion', "1.4.0")
+  set('springGeodeVersion', "1.6.7")
 }
 
 dependencies {
@@ -96,7 +96,7 @@ dependencyManagement {
 
 <properties>
     ...
-    <spring-geode.version>1.4.0</spring-geode.version>
+    <spring-geode.version>1.6.7</spring-geode.version>
     ...
 </properties>
 
