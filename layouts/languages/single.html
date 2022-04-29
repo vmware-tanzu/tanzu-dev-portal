@@ -47,7 +47,7 @@
                 <div class="container py-5">
                     <div class="container mb-5 blogs">
                         <h2 class="mb-4">Blogs</h2>
-                        <div class='row d-flex justify-content-between mb-5'>
+                        <div class='row justify-content-between'>
                         {{ range first 3 $blogs }}
                             {{ $rendered = $rendered | append . }}
                             <div class="td-box--gray-dark subtopic mr-0 mb-3 flex-315 transition-all">
@@ -71,7 +71,7 @@
                 {{ if gt (len $guides) 0 }}
                 <div class='container mb-5 guides'>
                     <h2 class="mb-4">Guides</h2>
-                    <div class='row'>
+                    <div class='row justify-content-between'>
                         {{ range first 3 $guides }}
                             {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
@@ -111,9 +111,9 @@
                     {{ end }}
                     {{ $showtitle := (index $langeps 0).Parent.Title }}
 
-                    <div class="container px-0 mb-5 shows">
+                    <div class="container mb-5 shows">
                         <h2 class="mb-4">{{ $showtitle }}</h2>
-                        <div class='row justify-content-between mb-5 episodes'>
+                        <div class='row justify-content-between episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
                                 {{ partial "episode-card.html" . }}
