@@ -23,3 +23,6 @@ book for Manning and he is passionate about Open Source, Cloud Native, and Kuber
 
 <!--more-->
 
+## Highlights
+
+{{< youtube id="eRKR53nOKyA" class="youtube-video-shortcode" >}}
