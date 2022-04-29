@@ -3,7 +3,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }} py-3">
+  <body id='{{ replaceRE "(\\s)" "" (lower .Title) }}'class="td-{{ .Kind }}">
     {{ partial "amplitude.html" (dict "context" . "event" "language viewed") }}
     <header>
       {{ partial "navbar.html" . }}
@@ -14,10 +14,15 @@
         <div class="td-main ">
             {{ $class := replace .Params.linkTitle "." "-" | lower }}
             {{ $class := replace $class " " "" }}
-            <section id="hero" class="dotnet-hero td-box--gray-dark mt-6 pt-4 pb-2">
-                <div class="container">
-                    <h1 class="h1"> {{- .Params.herotitle | markdownify }}</h1>
-                    <div class="lead col-7"><p>{{- .Content | markdownify }}</p></div>
+            <section id="hero" class="language-hero td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
+                <div class="container row py-lg-5 py-0 px-0 align-items-center">
+                    <div class="col-12 mx-auto col-lg-6">                        
+                        <h1 class="h1"> {{- .Params.herotitle | markdownify }}</h1>
+                        <div class="lead px-0"><p>{{- .Content | markdownify }}</p></div>
+                    </div>
+                    <div class="col-12 mx-auto col-lg-6 position-relative d-none d-md-block">
+                        <img src="{{ "/images/languages/dotnet/language-hero-transparent-fixed.svg" | relURL }}">
+                    </div>
                 </div>
             </section>
 
@@ -25,9 +30,9 @@
                 <!-- .NET Steeltoe Banner -->
                         <div class="row pb-5">
                             <a href="https://steeltoe.io/" class="w-100 py-0">
-                                <div class="col-12 text-center d-flex align-items-center justify-content-center steeltoe-banner">
-                                    <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2" style="width: 50px; height: 50px;"> 
-                                    Get Started With Steeltoe
+                                <div class="col-12 text-center d-flex align-items-center justify-content-center steeltoe-banner py-2">
+                                    <img src='{{ "/images/languages/dotnet/steeltoe.png" | relURL }}' class="mx-2 h-100"> 
+                                    <span class="h4 mb-0">Get started with Steeltoe</span>
                                 </div>
                             </a>
                         </div>
@@ -39,9 +44,9 @@
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $blogs) 0 }}
-                <div class="container px-0 mb-5 shows">
-                    <div class="container px-0 mb-5 shows">
-                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Blogs</h2></div>
+                <div class="container py-5">
+                    <div class="container mb-5 blogs">
+                        <h2 class="mb-4">Blogs</h2>
                         <div class='row d-flex justify-content-between mb-5'>
                         {{ range first 3 $blogs }}
                             {{ $rendered = $rendered | append . }}
@@ -64,8 +69,8 @@
                 <!-- Guides -->
                 {{ $guides := where (where .Site.Pages "Section" "guide") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $guides) 0 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Guides</h2></div>
+                <div class='container mb-5 guides'>
+                    <h2 class="mb-4">Guides</h2>
                     <div class='row'>
                         {{ range first 3 $guides }}
                             {{ $rendered = $rendered | append . }}
@@ -107,8 +112,8 @@
                     {{ $showtitle := (index $langeps 0).Parent.Title }}
 
                     <div class="container px-0 mb-5 shows">
-                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
-                        <div class='row d-flex justify-content-between mb-5 episodes'>
+                        <h2 class="mb-4">{{ $showtitle }}</h2>
+                        <div class='row justify-content-between mb-5 episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
                                 {{ partial "episode-card.html" . }}
@@ -130,9 +135,9 @@
 
                     {{ $showtitle := (index $eps 0).Parent.Title }}
 
-                    <div class="container px-0 mb-5 shows">
-                        <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">{{ $showtitle }}</h2></div>
-                        <div class='row d-flex justify-content-between mb-5 episodes'>
+                    <div class="container mb-5 shows">
+                        <h2 class="mb-4">{{ $showtitle }}</h2>
+                        <div class='row justify-content-between episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
                                 {{ partial "episode-card.html" . }}
@@ -144,9 +149,9 @@
                 <!-- Videos -->
                 {{ $videos := where (where .Site.Pages "Section" "videos") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $videos) 0 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Videos</h2></div>
-                    <div class='row'>
+                <div class='container mb-5 videos'>
+                    <h2 class="mb-4">Videos</h2>
+                    <div class='row justify-content-between'>
                         {{ range first 3 $videos }}
                             {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
@@ -158,9 +163,9 @@
                 <!-- Getting Started -->
                 {{ $gettingstarted := where (where .Site.Pages "Params.languages" "intersect" (slice .Params.label)) "Params.langgettingstarted" true }}
                 {{ if gt (len $gettingstarted) 0 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Getting Started</h2></div>
-                    <div class='row'>
+                <div class='container mb-5'>
+                    <h2 class="mb-4">Getting Started</h2>
+                    <div class='row justify-content-between'>
                         {{ range first 3 $gettingstarted }}
                             {{ $rendered = $rendered | append . }}
                             {{ partial (printf "%v-card.html" .Section) . }}
@@ -179,9 +184,9 @@
                     {{ end }}
                 {{ end }}
                 {{ if ge (len $showlatest) 3 }}
-                <div class='container py-3 py-lg-5'>
-                    <div class='d-flex align-items-center icon-title mb-4'><h2 class="mb-0">Latest Content</h2></div>
-                    <div class='row'>
+                <div class='container mb-5'>
+                    <h2 class="mb-4">Latest Content</h2>
+                    <div class='row justify-content-between'>
                         {{ range first 3 $latest.ByDate }}
                             {{ partial (printf "%v-card.html" .Section) . }}
                         {{ end }}

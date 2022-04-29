@@ -59,8 +59,7 @@
   }
 
   .steeltoe-banner {
-    height: 75px; 
-    font-size: 3vh; 
+    height: 65px; 
     color: white; 
     background-color: #324f61;
     transition: all .2s ease-out;
@@ -74,7 +73,7 @@
     color: #49afd9 !important;
   }
   .lead p > a:hover {
-    color: #adbbc4 !important;
+    color: #5ACFFF !important;
   }
 
   #hero {
@@ -102,10 +101,6 @@
       }
       &.videos-hero {
         background-image: url('{{ "/images/backgrounds/background-video.svg" | relURL }}');
-      }
-      &.dotnet-hero {
-        background-image: url('{{ "/images/languages/dotnet/hero.svg" | relURL }}');
-        background-color: #1b2a32;
       }
       &.data-hero,
       &.community-hero {
