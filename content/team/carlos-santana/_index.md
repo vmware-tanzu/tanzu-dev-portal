@@ -23,3 +23,6 @@ Open Source Project [Knative](https://knative.dev/).
 
 <!--more-->
 
+## Highlights
+
+{{< youtube id="Z9epsn52M6s" class="youtube-video-shortcode" >}}
