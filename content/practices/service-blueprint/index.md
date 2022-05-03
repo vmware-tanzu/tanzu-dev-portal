@@ -112,5 +112,5 @@ Create blueprints asynchronously from a workshop when synthesizing with many sma
 
 [Miro's Guide to Service Blueprints](https://miro.com/guides/service-blueprints/) by Miro
 
-[Practical Service Design's Guide to Service Blueprints](http://www.practicalservicedesign.com/the-guide) By Erik Flowers and Meganerin Miller
+[Practical Service Design's Guide to Service Blueprints](http://www.practicalservicedesign.com/the-guide) By Erik Flowers and Megan Miller
 
