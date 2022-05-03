@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="row flex-xl-nowrap container mx-auto">
-      <div class="col-12 col-md-3 cookbooks-sidebar td-sidebar td-sidebar-nav d-print-none d-none d-lg-block pl-0">
+      <div class="col-12 col-md-3 cookbooks-sidebar td-sidebar td-sidebar-nav d-print-none d-none d-lg-block pl-0 pt-0">
         {{ partial "sidebar-cookbooks.html" (dict "context" . "cookbook" $cookbook) }}
       </div>
       <div class="col-12 col-md-9 col-lg-7 d-print-none position-relative pb-lg-4 px-0 px-md-3">
@@ -48,8 +48,8 @@
           <a href="https://github.com/vmware-tanzu/tanzu-dev-portal/issues/new?assignees=&labels=bug&template=bug_report.md&title=Learning Path Issue: {{ .Title }}"><i class="fab fa-github mr-2"></i><span class="align-top">Report an issue</span></a>
         </div>
       </div>
-      <div class="col-12 col-md-2 mt-1 d-print-none d-none d-lg-block">
-        <div class="cookbooks-toc pl-3 pr-0">
+      <div class="d-none d-xl-block col-2 td-toc d-print-none pt-0">
+        <div class="cookbooks-toc">
         {{ if ne $page.TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
         {{ with $page.TableOfContents }}
         <h5 class="mb-4">On This Page</h5>
