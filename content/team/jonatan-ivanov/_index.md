@@ -1,13 +1,13 @@
 ---
 name: Jonatan Ivanov
-description: "Software Engineer"
+description: "Staff Software Engineer"
 roles: ["guest"]
 skills: ["Spring"]
 location: "Seattle, WA"
 
 # Social Media
 twitter: "@jonatan_ivanov"
-website: ""
+website: "https://develotters.com/"
 facebook: ""
 linkedin: ""
 github: "jonatan-ivanov"
