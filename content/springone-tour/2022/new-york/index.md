@@ -228,7 +228,7 @@ hide_newsletter: true
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#steve-pousty">Steve Pousty</a>
+                <a class="lightbox" href="#steven-pousty">Steven Pousty</a>
             </h3>
         </div>
     </div>
