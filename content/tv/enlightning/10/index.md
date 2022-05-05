@@ -18,8 +18,8 @@ type: tv-episode
 
 Is Observability really just logging, metrics, and distributed tracing? Are we done? 
 Mission accomplished? Can we go home for the week even if it is just Tuesday? You can often hear 
-about the "Three Pillars of Observability" but having access to logs, metrics, and traces does n
-ot necessarily mean more observable systems. In this session, you'll learn what Observability is, 
+about the "Three Pillars of Observability" but having access to logs, metrics, and traces does not
+necessarily mean more observable systems. In this session, you'll learn what Observability is, 
 what problems the three pillars solve, what problems they generate, and how deep the rabbit hole 
 goes behind them. We will explore the basics of the three pillars and what Spring has to offer to 
 implement them. We will also talk about how to take your system to the next level, and what else 
