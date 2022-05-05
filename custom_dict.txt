@@ -519,6 +519,7 @@ DigiSign
 Dikastes
 DirtiesContext
 disambiguated
+[Dd]iscoverable
 DiscoveryClient
 DiskRegionStatistics
 DiskStore
@@ -2144,7 +2145,9 @@ vSphere
 vSwitch
 Vue
 VXLAN
+Waciuma
 [Ww]alkthrough
+Wanjohi
 WanVerificationService
 WASM
 Waterhouse

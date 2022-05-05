@@ -756,7 +756,7 @@ body {
         #s1t-tac-container {
             margin-top: 1.5rem;
         }
-        .charge-currency, .discount-currency {
+        .currency-code {
             padding-right: 1.5rem;
             text-align: right;
         }
@@ -770,6 +770,11 @@ body {
         .stripe-card-element {
             padding-bottom: 0.7rem;
             border-bottom: 1px solid white !important;
+            &.error {
+              border-bottom: none !important;
+              padding-top: 1rem;
+              font-style: italic;
+            }
         }
         .StripeElement {
           padding: 13px 10px;
