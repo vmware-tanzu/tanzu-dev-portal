@@ -23,5 +23,7 @@ create a cloud native path to production; a path that lets you verify that all a
 safe and secure for your customers.  Join Whitney and her guest Waciuma Wanjohi to learn 
 more about getting your code to production with Cartographer!
 
+[Check out the 25-minute show recap!](https://youtu.be/1dpkcVTDzes)
+
 
 \\(^-^)/
