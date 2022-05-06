@@ -27,4 +27,6 @@ Waciuma was a teacher in schools around the world and worked with students ages 
 
 ## Highlights
 
+{{< youtube id="RKP3xvWphFg" class="youtube-video-shortcode" >}}
+
 {{< youtube id="TJPGn0-hpPY" class="youtube-video-shortcode" >}}
