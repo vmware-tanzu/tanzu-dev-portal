@@ -4,6 +4,7 @@ herotitle: Welcome to Java at VMware
 label: java
 youtube: Spzug_SjJnM
 video: true
+heroimage: /images/languages/java/language-hero-transparent-fixed-java.svg
 menu:
   main:
     parent: sections

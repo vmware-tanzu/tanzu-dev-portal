@@ -4,6 +4,7 @@ herotitle: Welcome to .NET at VMware
 label: dotnet
 show: dotnet-wild
 event: dotnet-beyond
+heroimage: /images/languages/dotnet/language-hero-transparent-fixed-dotnet.svg
 menu:
   main:
     parent: sections
