@@ -28,3 +28,7 @@ software systems quickly, efficiently, and economically. Adib’s favourite quot
 are going to die tomorrow, learn like you are going to live forever” attributed to Mahatma Gandhi.
 
 <!--more-->
+
+## Highlights
+
+{{< youtube id="g1Bmxg4DSug" class="youtube-video-shortcode" >}}

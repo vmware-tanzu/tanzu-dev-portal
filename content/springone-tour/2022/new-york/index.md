@@ -133,7 +133,7 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">3:50 PM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#who-should-use-k8s">Who should use Kubernetes?</a>
+            <a class="lightbox" href="#who-should-use-k8s">Who Should Use Kubernetes?</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -213,18 +213,27 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:20 AM EDT</div>
+        <div class="time col-4 pl-0 h4">11:20 AM CDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#platform-as-a-product">Platform as a Product</a>
+            <a class="lightbox" href="#omgdevsecopsbbq">OMGDEVSECOPSBBQ</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0"><a class="lightbox" href="#michael-cote">Michael Coté</a></h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">11:40 AM EDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#k8s-rdbms">RDBMS on Kubernetes: Data Science Done Right</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#michael-cote">Michael Coté</a>
+                <a class="lightbox" href="#steven-pousty">Steven Pousty</a>
             </h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:10 PM EDT</div>
+        <div class="time col-4 pl-0 h4">12:00 PM EDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>

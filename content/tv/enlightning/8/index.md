@@ -9,7 +9,7 @@ guests:
 - Adib Saikali
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "g1Bmxg4DSug"
 lastmod: '2020-10-09'
 title: Security for Application Developers
 twitch: vmwaretanzu
@@ -21,5 +21,6 @@ get stuck not understanding what a security exception means, and never again wil
 and error to get something working. We will talk about how to do passwordless logins, and we'll discuss key 
 cryptography concepts all devs should know.
 
+[Check out the 11-minute show recap!](https://youtu.be/7AsoVOZRikY)
 
 \\(^-^)/
