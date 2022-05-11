@@ -1007,6 +1007,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+JEP
 Jernigan
 JetBrains
 Jetbrains
@@ -2221,4 +2222,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-JEP
