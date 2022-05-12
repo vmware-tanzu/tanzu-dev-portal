@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how Tanzu Community Edition provides a platform to simplify deploying Modern Apps.
-lab: lab-tce-dev-guide-kubecon
+lab: tce-dev-guide-kubecon
 kubecon: true
 hidden: true
 lastmod: '2021-10-03'
