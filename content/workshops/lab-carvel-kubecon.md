@@ -1,13 +1,13 @@
 ---
 date: '2021-09-13'
-description: Learn how kpack can help you build images securely and efficiently
+description: Introducing to Carvel, simple and composable tools for application
 lab: lab-carvel-kubecon
 kubecon: true
 hidden: true
 lastmod: '2021-10-03'
 length: 15
 logo: "/images/workshops/logo-tce.svg"
-summary: Learn how kpack can help you build images securely and efficiently
+summary: Introducing to Carvel, simple and composable tools for application
 tags:
 - Spring
 - Microservices
