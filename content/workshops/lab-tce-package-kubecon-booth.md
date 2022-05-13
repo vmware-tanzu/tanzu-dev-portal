@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how Tanzu Community Edition can help you install addons/packages
-lab: lab-tce-package-guide-kubecon-booth
+lab: tce-package-guide-kubecon-booth
 kubeconbooth: true
 hidden: true
 lastmod: '2021-10-03'

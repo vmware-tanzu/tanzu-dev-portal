@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Introducing to Carvel, simple and composable tools for application
-lab: lab-carvel-kubecon-booth
+lab: tce-carvel-kubecon-booth
 kubeconbooth: true
 hidden: true
 lastmod: '2021-10-03'

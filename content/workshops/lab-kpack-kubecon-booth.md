@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how kpack can help you build images securely and efficiently
-lab: lab-kpack-kubecon-booth
+lab: tce-kpack-kubecon-booth
 kubeconbooth: true
 hidden: true
 lastmod: '2021-10-03'
