@@ -40,6 +40,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     try {
         const remoteUrl = `${baseurl}/${ws}`;
         console.log("Useing remoteUrl: %s", remoteUrl);
+        console.log ("API Key: %s", apikey);
         const availability = await got.get(remoteUrl, {
             headers: {
                 Authorization: `Api-Key ${apikey}`,
