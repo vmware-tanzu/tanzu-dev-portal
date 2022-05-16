@@ -39,12 +39,14 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
 
     try {
         const remoteUrl = `${baseurl}/${ws}`;
+        console.log("Useing remoteUrl: %s", remoteUrl);
         const availability = await got.get(remoteUrl, {
             headers: {
                 Authorization: `Api-Key ${apikey}`,
                 'Content-Type': undefined,
             },
         });
+        console.log("Availability statusCode: %d", availability.statusCode);
         if (availability.statusCode !== 200 || availability.body.error) {
             throw new Error(
                 availability.body.error ||
@@ -52,6 +54,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             );
         }
         let redirectURL = '';
+        console.log("src: %s", event.queryStringParameters.src);
         if (event.queryStringParameters.src) {
             const { src } = event.queryStringParameters;
             redirectURL = src;
@@ -60,6 +63,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         }
         redirectURL = redirectURL.replace(/\?ws_status=unavailable/, '');
         const jsonavailbody = JSON.parse(availability.body);
+        console.log("Availability Body: %s", jsonavailbody);
         if (jsonavailbody.available === 0) {
             return {
                 statusCode: 302,
