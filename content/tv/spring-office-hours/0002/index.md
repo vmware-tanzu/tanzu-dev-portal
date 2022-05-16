@@ -21,10 +21,10 @@ Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Sp
 ## Show Notes
 
 - [Spring Release Calendar](https://calendar.spring.io/)
-- [Spring Data 2021.2 and 2022.0 M4 released.](https://spring.io/blog/2022/05/13/spring-data-2021-2-and-2022-0-m4-released)
+- [Spring Data 2021.2 and 2022.0 Milestone 4 released.](https://spring.io/blog/2022/05/13/spring-data-2021-2-and-2022-0-m4-released)
 - [Spring Framework 6.0.0-M4 available now](https://spring.io/blog/2022/05/12/spring-framework-6-0-0-m4-available-now)
 - [This Week in Spring - May 10th, 2022](https://spring.io/blog/2022/05/10/this-week-in-spring-may-10th-2022)
 - [Dan Vega's Newsletter](https://www.danvega.dev/newsletter/website-updates/)
-- [New in Spring Framework 6: Http interfaces & Declaritive Htttp Clients](https://www.youtube.com/watch?v=A1V71peRNn0)
+- [New in Spring Framework 6: Http interfaces](https://www.youtube.com/watch?v=A1V71peRNn0)
 - [GraphQL Paging Demo](https://github.com/danvega/graphql-paging)
-- [DaShaun's Github](https://github.com/dashaun/)
+- [DaShaun on Github](https://github.com/dashaun/)
