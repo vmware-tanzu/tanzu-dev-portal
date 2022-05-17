@@ -1,6 +1,5 @@
 ---
 date: '2022-03-9'
-description:
 lastmod: '2022-03-01'
 team:
 - Layla Porter
@@ -8,7 +7,7 @@ title: "Build an API gateway with .NET 6, C# and YARP"
 languages:
 - dotnet
 url: "/blog/build-api-gateway-csharp-yarp"
-draft: true
+description: "Build a basic API Gateway using YARP, a highly customisable open-source reverse proxy library built by developers from within Microsoft"
 ---
 
 Consider an API gateway to be a virtual "garden gate" to all your backend services. Implementing one means that all external traffic must pass through the gateway. This is great as it increases security and simplifies a lot of processes such as rate limiting and throttling.
@@ -19,7 +18,7 @@ Consider an API gateway to be a virtual "garden gate" to all your backend servic
 
 There are many paid for services that offer API management but they can be costly and you may not need all the features they offer.
 
-In this tutorial, you will build a basic API Gateway using [YARP](https://microsoft.github.io/reverse-proxy/) or "Yet Another Reverse Proxy". YARP is an open-source library  built by developers from within Microsoft. It’s highly customisable, but you are just going to use a simple implementation today.
+In this tutorial, you will build a basic API Gateway using [YARP](https://microsoft.github.io/reverse-proxy/) or "Yet Another Reverse Proxy". YARP is an open-source library built by developers from within Microsoft. It’s highly customisable, but you are just going to use a simple implementation today.
 
 Before you begin you will need:
 

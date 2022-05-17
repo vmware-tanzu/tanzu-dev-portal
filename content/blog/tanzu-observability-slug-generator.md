@@ -12,6 +12,8 @@ tags:
 - Spring
 - Spring Boot
 - Wavefront
+languages:
+- java
 team:
 - Dan Florea
 title: Introducing the Tanzu Observability Slug Generator

@@ -10,6 +10,8 @@ team:
 - Lizz Smullen
 date: '2022-04-11'
 publishDate: '2022-04-11'
+languages:
+- dotnet
 ---
 
 The whirlwind that was .NET Beyond 2022 just wrapped up. If you had a chance to attend, we hope you learned a lot, and had some fun in the process. If you couldn’t attend, check out some talk summaries below. If you want to know more, check out all the talks on [YouTube](https://www.youtube.com/playlist?list=PLAdzTan_eSPRDT8g6FcjSFlL1i5JtnV3i).

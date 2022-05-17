@@ -28,6 +28,9 @@
 {{ else if eq .event "topic viewed" }}
     <script>sendAmplitudeEventOnLoad('topic viewed', {'topic name': '{{ .context.Title | lower }}', 'url path': window.location.pathname});</script>
 
+{{ else if eq .event "language viewed" }}
+    <script>sendAmplitudeEventOnLoad('language viewed', {'language name': '{{ .context.Title | lower }}', 'language label': '{{ .context.Params.label | lower }}', 'url path': window.location.pathname});</script>
+
 {{ else if eq .event "show viewed" }}
     <script>sendAmplitudeEventOnLoad('show viewed', {'show name': '{{ .context.Title }}', 'url path': window.location.pathname});</script>
     
