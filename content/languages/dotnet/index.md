@@ -14,6 +14,6 @@ menu:
     weight: 2
 ---
 
-.NET is a free, cross-platform, open source developer platform for building many different types of applications. Here Explore all angles of .NET, from how-to videos and blogs to quick starts and feature reviews, along with a [cookbook](/cookbooks/dotnet) full of helpful tips for developing enterprise solutions with both .NET and .NET Framework.
+.NET is a free, cross-platform, open source developer platform for building many different types of applications. Here explore all angles of .NET, from how-to videos and blogs to quick starts and feature reviews, along with a [cookbook](/cookbooks/dotnet) full of helpful tips for developing enterprise solutions with both .NET and .NET Framework.
 
 Check out our .NET-focused developer advocate [Layla's](/team/layla-porter) Twitch show, [.NET in the Wild](/tv/dotnet-wild)!
