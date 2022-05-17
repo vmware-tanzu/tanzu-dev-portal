@@ -112,7 +112,8 @@
                     {{ $showtitle := (index $langeps 0).Parent.Title }}
 
                     <div class="container mb-5 shows">
-                        <h2 class="mb-4">{{ $showtitle }}</h2>
+                        <h2 class="mb-2">{{ $showtitle }}</h2>
+                        <a href="{{ (index $langeps 0).Parent.RelPermalink }}"><h4 class="mb-4">See All</h4></a>
                         <div class='row justify-content-between episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
@@ -136,7 +137,8 @@
                     {{ $showtitle := (index $eps 0).Parent.Title }}
 
                     <div class="container mb-5 shows">
-                        <h2 class="mb-4">{{ $showtitle }}</h2>
+                        <h2 class="mb-2">{{ $showtitle }}</h2>
+                        <a href="{{ (index $eps 0).Parent.RelPermalink }}"><h4 class="mb-4">See All</h4></a>
                         <div class='row justify-content-between episodes'>
                             {{ range first 3 $eps }}
                                 {{ $rendered = $rendered | append . }}
