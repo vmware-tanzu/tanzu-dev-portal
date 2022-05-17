@@ -889,6 +889,7 @@ HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
 HSQLDB
+Http
 (Http|HTTP)ie
 (Http|HTTP)Proxy
 HttpBase
@@ -2222,5 +2223,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-Http
-DaShaun
