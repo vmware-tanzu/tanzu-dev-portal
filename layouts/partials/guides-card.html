@@ -6,6 +6,7 @@
             <img alt="" class="d-inline-block" src='{{ "/images/icons/icon-book.svg" | relURL }}'>
             <span class="h5">Guide</span>
         </div>
-        <p>{{ .Description }}</p>
+        <p>{{ if (isset .Params "description") }}{{.Description}}{{ else }}{{ .Summary }}{{ end }}</p>
+
     </a>
 </div>
