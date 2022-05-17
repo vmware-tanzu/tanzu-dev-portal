@@ -1811,6 +1811,7 @@ RegionStats-partition-Trades
 (registry_)?external_url
 [rR]ego
 rehostable
+Reif
 reimagine
 [Rr]eimplement(ing)?
 Reinertsen
