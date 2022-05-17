@@ -1,0 +1,27 @@
+<nav aria-label="breadcrumb" class="d-block d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		<!-- Section -->
+		<li class="breadcrumb-item active" aria-current="page">
+			<a href="{{ .FirstSection.RelPermalink }}">{{ .FirstSection.LinkTitle }}</a>
+		</li>
+
+		{{ if eq .Parent.Layout "intro" }}
+		<!-- Cookbook -->
+		<li class="breadcrumb-item active" aria-current="page">
+			<a href="{{ .Parent.Parent.RelPermalink }}">{{ .Parent.Parent.LinkTitle }}</a>
+		</li>
+		{{ end }}
+
+		{{ if ne .Layout "top" }}
+		<li class="breadcrumb-item active" aria-current="page">
+			<a href="{{ .Parent.RelPermalink }}">{{ .Parent.LinkTitle }}</a>
+		</li>
+		{{ end }}
+
+		<!-- Active page -->
+		<li class="breadcrumb-item active" aria-current="page">
+			<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+		</li>
+
+	</ol>
+</nav>

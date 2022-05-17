@@ -1035,6 +1035,17 @@ body {
     right: 0em;
   }
 
+  .lang-desc > p {
+    color: white !important;
+    padding-left: 0px;
+
+    a {
+      color: $link;
+      -webkit-font-smoothing: auto;
+      transition: all .2s;
+    }
+  }
+
   .person {
     .card {
       font-weight: 400;
@@ -1337,6 +1348,18 @@ body {
     height: 24px;
     margin-right: 10px;
   }
+
+  .episode-card > a {
+    padding: 0px !important;
+
+    p {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 0em;
+    }
+  }
+
+  
 
   .episodes .upcoming {
     position: relative;

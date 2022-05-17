@@ -1,6 +1,6 @@
 ---
 Date: '2022-05-05T08:00:00-07:00'
-Description: Security for Application Developers
+Description: Getting Your Code to Production with Cartographer
 PublishDate: '2020-05-05T00:00:00-07:00'
 date: '2020-06-03'
 episode: '9'
@@ -9,7 +9,7 @@ guests:
 - Waciuma Wanjohi
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "RKP3xvWphFg"
 lastmod: '2020-10-09'
 title: Getting Your Code to Production with Cartographer
 twitch: vmwaretanzu
@@ -22,6 +22,8 @@ testing and deploying software. [Cartographer](https://cartographer.sh/) makes i
 create a cloud native path to production; a path that lets you verify that all apps are 
 safe and secure for your customers.  Join Whitney and her guest Waciuma Wanjohi to learn 
 more about getting your code to production with Cartographer!
+
+[Check out the 25-minute show recap!](https://youtu.be/1dpkcVTDzes)
 
 
 \\(^-^)/

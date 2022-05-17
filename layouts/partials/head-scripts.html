@@ -82,8 +82,8 @@ function isTvShowLive(showName) {
   episodes = [];
   {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" (sub now.Unix 604800) }}
     var epInfo = {
-      startTime: new Date("{{ .Params.Date }}"),
-      endTime: new Date(new Date("{{ .Params.Date }}").getTime() + ({{ default 60 .Params.minutes }} * 60000)),
+      startTime: new Date({{ .Params.Date }}),
+      endTime: new Date(new Date({{ .Params.Date }}).getTime() + ({{ default 60 .Params.minutes }} * 60000)),
       show: "{{ .Parent.Title }}",
       link: "{{ .Permalink | relURL }}"
     };

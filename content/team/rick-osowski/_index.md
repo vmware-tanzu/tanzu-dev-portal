@@ -29,3 +29,8 @@ health advocate, [podcast host](https://www.anthologiesofhope.com/), and non-pro
 
 <!--more-->
 
+## Highlights
+
+{{< youtube id="UgzIwoxX7Wg" class="youtube-video-shortcode" >}}
+
+{{< youtube id="q9pYsss8huk" class="youtube-video-shortcode" >}}

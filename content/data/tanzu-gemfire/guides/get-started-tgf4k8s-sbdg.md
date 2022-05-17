@@ -14,7 +14,7 @@ This guide walks you through creating and testing a Tanzu GemFire cluster on Kub
 
 
 ## Before you start!
-This guide assumes that the [Tanzu GemFire Operator](http://docs-tgf-staging.cfapps.io/tgf/1-0/install.html) has been installed in your Kubernetes cluster. 
+This guide assumes that the [Tanzu GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/1.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
 
 In order to create a GemFire cluster, you will need a [Tanzu Net](https://network.pivotal.io/products/tanzu-gemfire-for-kubernetes/) account, in order to pull the image from the registry. 
 
@@ -66,7 +66,7 @@ You will also need permission to use `kubectl`.
                     
    
         
-> For the full list of GemFire CRD configuration options and explanations check out the Tanzu GemFire [Customer Resource Definition template](http://docs-tgf-staging.cfapps.io/tgf/1-0/crd.html).
+> For the full list of GemFire CRD configuration options and explanations check out the Tanzu GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/1.0/tgf-k8s/GUID-crd.html).
     
    
 5. Apply your Tanzu GemFire CRD YAML from *Step 4* to create the Tanzu GemFire cluster

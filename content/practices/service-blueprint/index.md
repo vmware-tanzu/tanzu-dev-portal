@@ -109,3 +109,8 @@ Create blueprints asynchronously from a workshop when synthesizing with many sma
 [Service Blueprints: Laying the Foundation](https://www.izacross.com/thoughts/blueprintfoundations) by Izac Ross of Cooper
 
 [Service Design 101](https://www.nngroup.com/articles/service-design-101/) by NNGroup
+
+[Miro's Guide to Service Blueprints](https://miro.com/guides/service-blueprints/) by Miro
+
+[Practical Service Design's Guide to Service Blueprints](http://www.practicalservicedesign.com/the-guide) By Erik Flowers and Megan Miller
+
