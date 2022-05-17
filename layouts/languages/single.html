@@ -103,8 +103,10 @@
                     {{ end }}
 
                     {{ $eps := slice }}
-                    {{ range $upcoming.ByDate }}
-                        {{ $eps = $eps | append . }}
+                    {{ if gt (len $upcoming) 0 }}
+                        {{ range $upcoming.ByDate }}
+                            {{ $eps = $eps | append . }}
+                        {{ end }}
                     {{ end }}
                     {{ range $previous }}
                         {{ $eps = $eps | append . }}
