@@ -1,5 +1,5 @@
 ---
-Date: '2022-05-17T17:30:00-00:00'
+Date: '2022-05-17T8:30:00-07:00'
 Description: .NET in the Wild with Alex Dunn
 PublishDate: '2022-03-07T00:00:00-00:00'
 aliases:

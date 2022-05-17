@@ -955,6 +955,7 @@ HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
 HSQLDB
+Http
 (Http|HTTP)ie
 (Http|HTTP)Proxy
 HttpBase
@@ -1088,6 +1089,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+JEP
 Jernigan
 JetBrains
 Jetbrains
@@ -2408,4 +2410,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-JEP
