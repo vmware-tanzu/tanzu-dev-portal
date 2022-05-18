@@ -740,6 +740,7 @@ Florent
 [fF]luentd('s)?
 FluxCD
 flyyy
+focussing
 FoodService
 formatter
 FOSS
@@ -1136,7 +1137,7 @@ judgement
 julielerman
 Julien
 jumpbox
-jumpstart
+jumpstart(s)?
 Junio
 Junit
 junit

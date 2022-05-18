@@ -36,5 +36,5 @@ Each section in this learning path provides details on specific skills or techno
 This learning path is adequate preparation for teams that will start pairing with Lab engineers on a Tanzu Labs Swift engagement.
 
 {{% callout %}}
-This learning path is currently beeing elaborated. Expect more updates soon.
+This learning path is currently being elaborated. Expect more updates soon.
 {{% /callout %}}
