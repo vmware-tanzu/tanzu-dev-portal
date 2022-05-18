@@ -1507,6 +1507,7 @@ ObjectGraphSizer
 [Oo]bservability
 OCI(-compliant)?
 Octant
+OCTO
 Octoverse
 ODBC
 Oded
