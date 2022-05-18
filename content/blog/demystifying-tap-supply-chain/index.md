@@ -1,6 +1,6 @@
 ---
 title: "Demystifying VMware Tanzu Application Platform’s Out-of-the-Box Supply Chain"
-description:
+description: In this post, we’ll take a closer look at the OOTB Testing and Scanning Supply Chain. The Out-of-the-Box Testing and Scanning Supply Chain contains all of the same elements as the Out-of-the-Box Testing Supply Chain, but it also includes integrations with the secure scanning components of Tanzu Application Platform.
 date: "2022-05-18"
 tags:
 - Kubeapps
