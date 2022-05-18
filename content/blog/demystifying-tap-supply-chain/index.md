@@ -55,7 +55,7 @@ The source provider step is the first step in the OOTB Supply Chain. As the name
 
 The CRDs that are involved as part of the source provider step are: 
 
-**SourceTemplate **– This is a top-level Cartographer-based CRD that wraps the `GitRepository` CRD
+**SourceTemplate**– This is a top-level Cartographer-based CRD that wraps the `GitRepository` CRD
 
 **GitRepository** – This is a `FluxCD`-based CRD that polls for any changes happening in the source code repository
 
@@ -66,7 +66,7 @@ The deliverable step creates the deliverable object that flows through the deliv
 
 The different CRDs that are involved as part of the deliverable step are: 
 
-**ClusterTemplate** – A ClusterTemplate is the Cartographer-level CRD that wraps the existing Kubernetes resources, ensuring that objects conform to one of the standard template interfaces
+**ClusterTemplate** – A `ClusterTemplate` is the Cartographer-level CRD that wraps the existing Kubernetes resources, ensuring that objects conform to one of the standard template interfaces
 
 **Deliverable** – The deliverable is the unit of work that will flow through a delivery. The respective delivery is picked based on the deliverable-type annotation passed to the deliverable object
 
@@ -76,14 +76,14 @@ The source of the deliverable could be a git repository or an image repository. 
 
 ## SourceTester
 
-The source tester step runs the test cases defined within the source code. The OOTB Supply Chain is shipped with the Tekton CI tool. The runnable object is wrapped by the Cartographer-level SourceTemplate CRD. 
+The source tester step runs the test cases defined within the source code. The OOTB Supply Chain is shipped with the Tekton CI tool. The runnable object is wrapped by the Cartographer-level `SourceTemplate` CRD. 
 
 ![alt_text](images/image4.png "image_tooltip")
 
 ![alt_text](images/image5.png "image_tooltip")
 
 
-The RunTemplateRef defines which `PipelineRun` template is picked for running the test cases. The `Pipeline` is selected based on the label selector. From the above screenshot, the pipeline with the label of  `apps.tanzu.vmware.com/pipeline: test` will be picked to be run. 
+The `RunTemplateRef` defines which `PipelineRun` template is picked for running the test cases. The `Pipeline` is selected based on the label selector. From the above screenshot, the pipeline with the label of  `apps.tanzu.vmware.com/pipeline: test` will be picked to be run. 
 
 The different Tekton-based CRDs used in this process are: 
 
@@ -106,7 +106,7 @@ ScanPolicy defines the different vulnerabilities to be captured and blocked befo
 
 ![alt_text](images/image7.png "image_tooltip")
 
-In the above case, any vulnerabilities that are classified as Critical, High, or UnknownSeverity will be blocked and the supply chain will be forced to error, preventing the code from being deployed into the respective environment.
+In the above case, any vulnerabilities that are classified as `Critical`, `High`, or `UnknownSeverity` will be blocked and the supply chain will be forced to error, preventing the code from being deployed into the respective environment.
 
 
 ### Where are scan results stored?
@@ -119,7 +119,7 @@ The CRDs used in this scan process are:
 
 **ScanPolicy** – ScanPolicy defines the different vulnerabilities to be captured and blocked before the code is deployed to production 
 
-**ScanTemplate – **ScanTemplate defines the script that needs to be executed to complete the scan process 
+**ScanTemplate** – ScanTemplate defines the script that needs to be executed to complete the scan process 
 
 
 ## Image-Builder
@@ -155,7 +155,7 @@ For every workload, a PodIntent is created and, once the conventions are applied
 ![alt_text](images/image13.png "image_tooltip")
 
 
-The different CRDs involved in the config-provider step are: 
+The different CRDs involved in the Config-Provider step are: 
 
 **PodIntent** – PodIntent applies conventions to a workload  
 
