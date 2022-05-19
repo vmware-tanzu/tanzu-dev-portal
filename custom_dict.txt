@@ -880,6 +880,7 @@ Görkem
 Gorouter
 gotchas
 Gothelf
+Gowtham
 GraalVM(-powered|.)?
 gradle
 Gradle
