@@ -112,6 +112,7 @@ body p a,
 h5 a,
 a.h4 {
   color: #17242C !important;
+  
   &:hover {
     color: white !important;
   }
@@ -154,7 +155,7 @@ a.h4 {
     animation: gradient 3.5s ease infinite;
   }
 }
-#hero {
+#hero:not(.springone-tour-event-hero) {
   background-image: none !important;
 }
 .topic .text-left,
@@ -167,6 +168,8 @@ a.h4 {
 .gradient-edge-top {
   display: none !important;
 }
+.workshop-box .badge,
+.workshop-box,
 .linked-box,
 .topic-card,
 .td-topic .linked-box {
@@ -179,6 +182,54 @@ a.h4 {
 footer a {
   color: white !important;
 }
+#s1t-index .day-toggle .day.active {
+  background-color: #17242C !important;
+}
+.workshop-box {
+  h4 {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    -webkit-background-clip: text;
+    color: transparent !important;
+  }
+  h5 {
+    color: white;
+  }
+  .btn:not(.badge) {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    border: 0;
+  }
+  &:hover .description .btn:not(.badge) {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500% !important;
+    animation: gradient 2s linear infinite;
+  }
+}
+.agenda {
+  background-color: #17242C !important;
+  
+  a {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    -webkit-background-clip: text;
+    color: transparent !important;
+  }
+}
+.workshop-box:nth-child(1) .workshop-hero {
+  animation: gradient 2.5s ease infinite 1.25s;  
+}
+.workshop-box:nth-child(2n) .workshop-hero {
+  animation: gradient 2.5s ease infinite 1.5s;   
+}
+.workshop-box:nth-child(3n) .workshop-hero {
+  animation: gradient 2.5s ease infinite 1.75s;   
+}
+.workshop-box:nth-child(4n) .workshop-hero {
+  animation: gradient 2.5s ease infinite 2s;   
+}
+.workshop-box:nth-child(5n) .workshop-hero {
+  animation: gradient 2.5s ease infinite 2.25s;   
+}
+
+.workshop-hero,
 .card-type-id {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
   background-size: 500% 500%;
@@ -276,4 +327,8 @@ nav #theme-select #theme-square {
   .arrow-box {
     background: rgba(255, 255, 255, 0.5) !important;
   }
+}
+.td-page.springone-tour .td-main,
+.td-section.springone-tour .td-main {
+  background-color: transparent !important;
 }
