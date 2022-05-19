@@ -181,11 +181,12 @@ nav {
         display: none;
         }
     }
+    
     #theme-square {
         left: 0;
         top: 0;
         height: 101%;
-        width: 50%;
+        width: 33%;
         position: absolute;
         background: $gray-200;
         transform: translateX(0px);
@@ -195,6 +196,15 @@ nav {
     i {
         color: white;
     }
+    #toggle-pride-mode {
+        cursor: pointer;
+        margin-left: 3px;
+        img {
+            height: 22px;
+            transform: translateY(-2px);
+        }
+    }
+    
     #toggle-dark-mode {
         left: 2px;
         i {

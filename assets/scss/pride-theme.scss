@@ -3,10 +3,10 @@ html  {
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite;
 
+  .td-section.td-topic #hero,
   .td-sidebar,
   body,
   .td-outer,
-  .td-box--gray-dark,
   section,
   .td-main,
   .bg-gray-dark:not(footer):not(.card):not(.linked-box),
@@ -90,11 +90,14 @@ nav .nav-item:last-child {
     border: 0px !important;
   }
 }
-.pride-mode footer.bg-gray-dark {
+.pride-mode footer {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite 1s;
 }
+#hero .lead p > a,
+.td-main a,
+h2 a,
 #TableOfContents a,
 .practices a,
 main ul a,
@@ -137,6 +140,8 @@ a.h4 {
 #team-index .person .card .h4 a {
   color: white !important;
 }
+.learning-path-card,
+.topic-card,
 #team-index .person .card,
 .topic a,
 .linked-box,
@@ -162,6 +167,8 @@ a.h4 {
 .gradient-edge-top {
   display: none !important;
 }
+.linked-box,
+.topic-card,
 .td-topic .linked-box {
   border: 0px !important;
   background-color: #17242C !important;
@@ -172,6 +179,21 @@ a.h4 {
 footer a {
   color: white !important;
 }
+.card-type-id {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+  background-size: 500% 500%;
+  animation: gradient 2s linear infinite;
+
+}
+.steeltoe-banner {
+  background-color: #17242C !important;
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 2s linear infinite;
+  }
+}
+.play-icon.float-left,
 .btn {
   background-color: #17242C !important;
   &:hover {
@@ -227,4 +249,31 @@ img.pride-mode-only {
 }
 img.pride-mode-hide {
   display: none !important;
+}
+nav #theme-select #theme-square {
+  transform: translateX(64px);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.sparkleItem {
+  pointer-events: none;
+}
+.td-home #hero a.cta-btn-wrapper {
+  border: 2px solid #17242C !important;
+  transition: all .2s;
+  background: #17242C;
+  opacity: 1;
+  animation: none;
+
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 1s linear infinite;
+  }
+
+  .solid-rect {
+    opacity: 0;
+  }
+  .arrow-box {
+    background: rgba(255, 255, 255, 0.5) !important;
+  }
 }
