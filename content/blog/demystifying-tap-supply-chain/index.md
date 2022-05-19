@@ -50,8 +50,7 @@ Let's dissect the OOTB Testing and Scanning Supply Chain and take a look at the 
 
 The source provider step is the first step in the OOTB Supply Chain. As the name implies, this step polls for any changes or commits that may get pushed into the git repository. 
 
-![alt_text](images/image2.png "image_tooltip")
-
+<img src="images/image2.png" width="50%">
 
 The CRDs that are involved as part of the source provider step are: 
 
@@ -78,7 +77,7 @@ The source of the deliverable could be a git repository or an image repository. 
 
 The source tester step runs the test cases defined within the source code. The OOTB Supply Chain is shipped with the Tekton CI tool. The runnable object is wrapped by the Cartographer-level `SourceTemplate` CRD. 
 
-![alt_text](images/image4.png "image_tooltip")
+<img src="images/image4.png" width="40%">
 
 ![alt_text](images/image5.png "image_tooltip")
 
@@ -98,7 +97,7 @@ The different Tekton-based CRDs used in this process are:
 
 The Source-Scanner/Image Scanner step scans the source code and the image using the Grype Scanning Tool that comes embedded in the OOTB Supply Chain.
 
-![alt_text](images/image6.png "image_tooltip")
+<img src="images/image6.png" width="40%">
 
 ScanPolicy defines the different vulnerabilities to be captured and blocked before the code is deployed to production. 
 
@@ -126,7 +125,7 @@ The CRDs used in this scan process are:
 
 The image builder step converts the source code into a deployable image automatically with the help of [Tanzu Build Service](https://tanzu.vmware.com/build-service), which is installed into the Tanzu Application Platform cluster by default.
 
-![alt_text](images/image9.png "image_tooltip")
+<img src="images/image9.png" width="40%">
 
 
 The different CRDs used in this process are: 
@@ -142,7 +141,7 @@ The different CRDs used in this process are:
 
 Config-provider calls the [convention services](https://docs.vmware.com/en/Tanzu-Application-Platform/1.1/tap/GUID-developer-conventions-about.html), which enables people in operational roles to  efficiently apply their expertise. Convention services specify the runtime best practices, policies, and conventions of the respective organization to workloads as they are created on the platform.
 
-![alt_text](images/image10.png "image_tooltip")
+<img src="images/image10.png" width="50%">
 
 In the above case, there are three pod conventions that every workload goes through. Every pod convention is assigned a priority number, and the conventions are applied based on the priority. If all conventions have the same priority number, the conventions are applied based on the alphabetical order of the name. 
 
@@ -150,7 +149,7 @@ For every workload, a PodIntent is created and, once the conventions are applied
 
 ![alt_text](images/image11.png "image_tooltip")
 
-![alt_text](images/image12.png "image_tooltip")
+<img src="images/image12.png" width="50%">
 
 ![alt_text](images/image13.png "image_tooltip")
 
@@ -170,7 +169,7 @@ The App-Config step creates the Knative serving, service binding, resource claim
 
 **Service binding **–** **If any service references has been passed to the workload, a service binding object is created alone with a **ResourceClaim** 
 
-![alt_text](images/image14.png "image_tooltip")
+<img src="images/image14.png" width="40%">
 
 ## Config-Writer
 
