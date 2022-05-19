@@ -168,6 +168,7 @@ a.h4 {
 .gradient-edge-top {
   display: none !important;
 }
+nav #scope,
 .workshop-box .badge,
 .workshop-box,
 .linked-box,
@@ -202,6 +203,19 @@ footer a {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     background-size: 500% 500% !important;
     animation: gradient 2s linear infinite;
+  }
+}
+.drop-menu .dropdown-item {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+  -webkit-background-clip: text;
+  color: transparent !important;
+
+  &:hover {
+    background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+    background-size: 500% 500%;
+    animation: gradient 2s linear infinite;
+    -webkit-background-clip: unset;
+    color: white !important;
   }
 }
 .agenda {
@@ -260,6 +274,7 @@ footer a {
   overflow: hidden;
   height: 90px;
   width: 500px;
+  z-index: 999;
 
   iframe {
     height: 80px;
@@ -311,7 +326,7 @@ nav #theme-select #theme-square {
 .td-home #hero a.cta-btn-wrapper {
   border: 2px solid #17242C !important;
   transition: all .2s;
-  background: #17242C;
+  background: transparent;
   opacity: 1;
   animation: none;
 
