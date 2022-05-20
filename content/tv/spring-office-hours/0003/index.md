@@ -11,7 +11,7 @@ hosts:
 - DaShaun Carter
 youtube: ""
 lastmod: '2022-05-13'
-title: "Episode: 02"
+title: "Episode: 03"
 twitch: vmwaretanzu
 type: tv-episode
 ---
