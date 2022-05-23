@@ -4,7 +4,7 @@ description: Tanzu Build Service helps get from source code to containers secure
 lab: lab-tbs
 lastmod: '2021-10-03'
 length: 15
-logo: "/images/workshops/logo-tbs.svg"
+logo: "/images/workshops/logo-tanzu.png"
 summary: Tanzu Build Service helps get from source code to containers securely and repeatably.
 tags:
 - Spring
