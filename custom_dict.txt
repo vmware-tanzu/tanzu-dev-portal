@@ -2348,6 +2348,7 @@ WCF
 WCF-TCP
 [Ww]eb[Hh]ook('s)?
 [wW]eb[sS]ervice(s)?
+webAPI
 WebAPI
 WebApiConfig
 WebApp
@@ -2380,6 +2381,7 @@ Windows2012r2
 WinRM
 [Ww]ireframe(s)?
 WireMock
+withfile-scoped
 Wittenkamp
 Wittrock
 WomenOfDotNet
