@@ -205,7 +205,11 @@ body.tv-episode #register .mktoForm select {
   color: #78be20!important;
 }
 .workshop-box .workshop-hero {
-  background-color: #BADEFF !important;
+  // background-color: #BADEFF !important;
+
+  .thumbnail-gradient {
+    display: none;
+  }
 }
 .workshop-box:hover .description .btn.btn-small {
   background: #0E2B65 !important;
