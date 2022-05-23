@@ -17,3 +17,10 @@ type: tv-episode
 ---
 
 Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
+
+## Show Notes
+
+- [Spring Release Calendar](https://calendar.spring.io/)
+- [Spring Blog](https://spring.io/blog)
+- [Spring Authorization Server Project Page](https://github.com/spring-projects/spring-authorization-server)
+- [Getting Started with Spring Authorization Server](https://springone.io/2021/sessions/getting-started-with-spring-authorization-server)
