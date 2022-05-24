@@ -9,7 +9,7 @@ explicit: 'no'
 hosts:
 - Dan Vega
 - DaShaun Carter
-youtube: ""
+youtube: "rMu-QBEFG7U"
 lastmod: '2022-05-23'
 title: "Episode: 04"
 twitch: vmwaretanzu
