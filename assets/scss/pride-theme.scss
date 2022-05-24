@@ -186,10 +186,12 @@ footer a {
 #s1t-index .day-toggle .day.active {
   background-color: #17242C !important;
 }
+
 .workshop-box {
   h4 {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     -webkit-background-clip: text;
+    filter: brightness(1.25);
     color: transparent !important;
   }
   h5 {
@@ -208,6 +210,7 @@ footer a {
 .drop-menu .dropdown-item {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
   -webkit-background-clip: text;
+  filter: brightness(1.25);
   color: transparent !important;
 
   &:hover {
@@ -215,6 +218,7 @@ footer a {
     background-size: 500% 500%;
     animation: gradient 2s linear infinite;
     -webkit-background-clip: unset;
+    filter: brightness(1);
     color: white !important;
   }
 }
@@ -224,6 +228,7 @@ footer a {
   a {
     background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
     -webkit-background-clip: text;
+    filter: brightness(1.25);
     color: transparent !important;
   }
 }
@@ -316,8 +321,13 @@ img.pride-mode-only {
 img.pride-mode-hide {
   display: none !important;
 }
+nav #theme-select {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+  background-size: 500% 500%;
+  animation: gradient 4s linear infinite;
+}
 nav #theme-select #theme-square {
-  transform: translateX(64px);
+  transform: translateX(72px);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .sparkleItem {
@@ -350,4 +360,10 @@ nav #theme-select #theme-square {
 .learningpaths .learningpaths-pager a,
 .learningpaths .learningpaths-pager-sticky a {
   border: 1px solid #17242C !important;
+}
+.learning-path-card.active .h3 {
+  background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
+  -webkit-background-clip: text;
+  filter: brightness(1.25);
+  color: transparent !important;
 }

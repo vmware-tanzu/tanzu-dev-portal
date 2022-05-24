@@ -127,8 +127,8 @@ limitations under the License.
     $("#toggle-pride-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "pride");
       var iframe = document.getElementById("auth-iframe");
-      $("#light-select, #dark-select").hide();
-      $("#pride-select").show();
+      // $("#light-select, #dark-select").hide();
+      // $("#pride-select").show();
 
       if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
@@ -150,10 +150,17 @@ limitations under the License.
     $("#toggle-light-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
-      $("#light-select").show();
-      $("#dark-select").hide();
-      $("#theme-square").addClass("moveSquare");
+      // $("#light-select").show();
+      // $("#dark-select").hide();
+      // $("#theme-square").addClass("moveSquare");
       if ($("html").hasClass("light-mode")) {
+        // if (iframe && iframe.contentWindow) {
+        //   iframe.contentWindow.postMessage("dark", "*");
+        // }
+      }
+      else if ($("html").hasClass("pride-mode")) {
+        $("html").removeClass("pride-mode");
+
         // if (iframe && iframe.contentWindow) {
         //   iframe.contentWindow.postMessage("dark", "*");
         // }
