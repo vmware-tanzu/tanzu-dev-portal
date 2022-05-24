@@ -127,68 +127,51 @@ limitations under the License.
     $("#toggle-pride-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "pride");
       var iframe = document.getElementById("auth-iframe");
-      // $("#light-select, #dark-select").hide();
-      // $("#pride-select").show();
 
       if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
         document.getElementById("light-theme").remove();
-        $("html").addClass("pride-mode");
-        changeTheme("pride");
-        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
-        testMode("light");
       }
-      else {
-        $("html").addClass("pride-mode");
-        testMode("dark");
-        changeTheme("pride")      
-        $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
-      }
+
+      $("html").addClass("pride-mode");
+      changeTheme("pride")      
+      $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
     });
 
     //Light toggle
     $("#toggle-light-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
-      // $("#light-select").show();
-      // $("#dark-select").hide();
-      // $("#theme-square").addClass("moveSquare");
-      if ($("html").hasClass("light-mode")) {
-        // if (iframe && iframe.contentWindow) {
-        //   iframe.contentWindow.postMessage("dark", "*");
-        // }
-      }
-      else if ($("html").hasClass("pride-mode")) {
-        $("html").removeClass("pride-mode");
 
-        // if (iframe && iframe.contentWindow) {
-        //   iframe.contentWindow.postMessage("dark", "*");
-        // }
+      if ($("html").hasClass("pride-mode")) {
+        $("html").removeClass("pride-mode");
+        document.getElementById("pride-theme").remove();
       }
-      else {
-        $("html").addClass("light-mode");
-        changeTheme("light");
-      }
+
+      $("html").addClass("light-mode");
+      changeTheme("light");
     });
 
+    // Dark toggle
     $("#toggle-dark-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
-      $("#dark-select").show();
-      $("#light-select").hide();
-      $("#theme-square").removeClass("moveSquare");
 
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
       }
       changeTheme('dark');
       localStorage.setItem("light-dark-mode-storage", "dark");
-      var hasLight = document.getElementById("light-theme");
 
-      if(hasLight) {
-        document.getElementById("light-theme").remove();
+      if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
+        document.getElementById("light-theme").remove();
+      }
+      else if ($("html").hasClass("pride-mode")) {
+        $("html").removeClass("pride-mode");
+        document.getElementById("pride-theme").remove();
       }
     });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
