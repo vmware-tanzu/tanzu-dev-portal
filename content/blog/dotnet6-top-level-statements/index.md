@@ -16,6 +16,8 @@ When the community first saw .NET 6 there was a little bit of uproar, myself inc
 
 In earlier versions of .NET Core, we had grown familiar with the symbiotic relationship between the Startup and Program classes. We even engineered ways to add a Startup class to Azure Functions and console applications.
 
+![Cover image of a stack of four rocks on a wooden table](images/cover.jpg)
+
 The Startup class was the place to register all of the application’s dependencies, set up the middleware, and of course, configure the configuration.
 
 Yet, in .NET 6, all of that changed with the launch of top-level statements. By making the program’s entry point a static method, the new Program class could relinquish its hold on ceremony including all of the set up we used to do in the Startup class—so no more Startup class!
