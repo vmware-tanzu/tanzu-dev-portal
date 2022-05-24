@@ -131,14 +131,9 @@ hide_newsletter: true
             </h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
+    <div class="row py-3 flex-nowrap">
         <div class="time col-4 pl-0 h4">4:00 PM EDT</div>
         <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
-        <div class="name col-3"></div>
-    </div>
-    <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:30 PM EDT</div>
-        <div class="talk-title col-5 h4">Networking Reception</div>
         <div class="name col-3"></div>
     </div>
 </div>
