@@ -1,5 +1,5 @@
 ---
-title: Instrumenting TGK with Tanzu Observability
+title: Instrumenting TKG with Tanzu Observability
 description: Tanzu Observability enables you to monitor your Kubernetes infrastructure metrics from Wavefront dashboards, as well as create alerts from those dashboards
 tags:
 - Tanzu Observability
