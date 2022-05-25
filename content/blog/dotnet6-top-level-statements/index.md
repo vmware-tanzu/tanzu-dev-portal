@@ -6,8 +6,8 @@ tags:
 - Dot NET
 team:
 - Layla Porter
-date: '2022-05-23'
-publishDate: '2022-05-23'
+date: '2022-05-25'
+publishDate: '2022-05-25'
 og_image: "/blog/dotnet6-top-level-statements/images/cover.jpg"
 languages:
 - dotnet
