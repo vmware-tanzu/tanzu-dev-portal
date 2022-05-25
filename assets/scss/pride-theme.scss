@@ -1,4 +1,5 @@
 html  {
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💅</text></svg>") 16 0,auto !important; /*!emojicursor.app*/
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
 	background-size: 500% 150%;
 	animation: gradient 7s ease infinite;
@@ -369,3 +370,4 @@ nav #theme-select #theme-square {
   filter: brightness(1.25);
   color: transparent !important;
 }
+
