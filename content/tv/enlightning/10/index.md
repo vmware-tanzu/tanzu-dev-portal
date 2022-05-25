@@ -9,7 +9,7 @@ guests:
 - Jonatan Ivanov
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "-fCOxnu6FYA"
 lastmod: '2020-10-09'
 title: What Is Observability?
 twitch: vmwaretanzu

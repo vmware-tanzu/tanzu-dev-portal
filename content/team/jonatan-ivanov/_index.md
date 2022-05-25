@@ -26,3 +26,8 @@ and sometimes he can be found on Twitter (@jonatan_ivanov) and in the Seattle ar
 from Hungary.
 
 <!--more-->
+
+
+## Highlights
+
+{{< youtube id="-fCOxnu6FYA" class="youtube-video-shortcode" >}}
