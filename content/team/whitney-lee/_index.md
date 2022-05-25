@@ -13,7 +13,7 @@ linkedin: "whitneylee"
 github: ""
 pinterest: ""
 instagram: "sweetlovewhitney"
-youtube: ""
+youtube: "UCaGYZkSCN3MPwqRpt24KBKA"
 twitch: "wiggitywhitney"
 ---
 
