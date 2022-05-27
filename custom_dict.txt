@@ -817,6 +817,7 @@ gemfire.
 GemFire's
 Gen4
 Geneve
+geo-distributed
 geode-async-listener-spring-jpa
 geode-dunit
 geode-kafka-connector
