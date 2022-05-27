@@ -77,6 +77,7 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
     for item in list.items:
         print("----> Processing metadata for video " + item.snippet.resourceId.videoId)
         videoId = item.snippet.resourceId.videoId
+        print("Video ID: " + videoId)
         response = requests.get(YT_API_BASE_URL + YT_API_QS + "&id=" + videoId)
         videoList = json.loads(response.text)
         videoInfo = {}
@@ -84,12 +85,13 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
             videoInfo = videoList["items"][0]["snippet"]
         except:
             continue
+        print(videoInfo)
         liveInfo = {}
         try:
             liveInfo = videoList["items"][0]["liveStreamingDetails"]
         except:
             liveInfo["scheduledStartTime"] = None
-
+        print(liveInfo)
         episodeDate = fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
 
         video = {
