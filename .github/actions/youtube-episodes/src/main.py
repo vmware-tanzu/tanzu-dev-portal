@@ -90,9 +90,9 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
         except:
             liveInfo["scheduledStartTime"] = None
 
-        if liveInfo.has_key("scheduledStartTime"):
+        if "scheduledStartTime" in liveInfo:
             episodeDate = fuzzyDate(liveInfo["scheduledStartTime"])
-        elif videoInfo.has_key("publishedAt"):
+        elif "publishedAt" in videoInfo:
             episodeDate = fuzzyDate(videoInfo["publishedAt"])
         else:
             episodeDate = datetime.time()
