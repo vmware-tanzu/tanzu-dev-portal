@@ -109,6 +109,7 @@ ApiResponse
 APIs?
 APM
 APM[s]
+App-Config
 AppArmor
 AppD
 AppDev
@@ -342,6 +343,7 @@ clearNotifications
 clearnotifications
 Cleverley-Prance
 cli
+CLI.
 CLI(s|'s)?
 client[_-]golang
 ClientMetadataService
@@ -365,11 +367,14 @@ cluster1
 cluster1-server
 cluster2
 cluster2-server
+ClusterBuilder(s)?
+ClusterImageTemplate
 [Cc]lusterIPs?
 ClusterIssuer
 ClusterRole(s)?
 ClusterRoleBinding(s)?
 ClusterRoleBindings.
+ClusterTemplate
 CMD
 cmdlet
 Cmdlets
@@ -400,7 +405,9 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Config-[Pp]rovider
 [Cc]onfig-server
+Config-Writer
 [Cc]onfig(s|-drift)?
 [Cc]onfig[Mm]ap(s)?
 configbrowser
@@ -434,6 +441,7 @@ COVID-19
 cpu(s)?
 CPU(s)?
 CQL
+CRD.
 CRD(s|-based)?
 create-load-balancer
 createEntry
@@ -716,6 +724,7 @@ faq(s)?
 Fastlane
 favourite(s)?
 FC
+fCOxnu6FYA
 FeignClient
 FelixConfiguration
 Fewell
@@ -740,6 +749,7 @@ Florent
 [fF]luentd('s)?
 FluxCD
 flyyy
+focussing
 FoodService
 formatter
 FOSS
@@ -807,6 +817,7 @@ gemfire.
 GemFire's
 Gen4
 Geneve
+geo-distributed
 geode-async-listener-spring-jpa
 geode-dunit
 geode-kafka-connector
@@ -871,6 +882,7 @@ Görkem
 Gorouter
 gotchas
 Gothelf
+Gowtham
 GraalVM(-powered|.)?
 gradle
 Gradle
@@ -892,6 +904,7 @@ Groupon
 GRPC
 gRPC(-based)?
 Grygleski
+Grype
 Grzejszczak
 GSB
 GTM
@@ -1136,7 +1149,7 @@ judgement
 julielerman
 Julien
 jumpbox
-jumpstart
+jumpstart(s)?
 Junio
 Junit
 junit
@@ -1194,6 +1207,7 @@ Kostadis
 kotlin
 Kousen
 Kpack
+kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
 Kravitz
@@ -1507,6 +1521,7 @@ ObjectGraphSizer
 [Oo]bservability
 OCI(-compliant)?
 Octant
+OCTO
 Octoverse
 ODBC
 Oded
@@ -1659,6 +1674,7 @@ PMC
 POCO(s)?
 podcaster
 PodDisruptionBudget
+PodIntent
 PodMetrics
 PodSecurityPolicy
 PodsPerCore
@@ -1838,6 +1854,7 @@ reproducibility
 RequestAuthentication
 requestor
 Resilience4J
+ResourceClaim
 ResourcePermission
 ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
@@ -1923,6 +1940,8 @@ SBDG
 scaffolded
 [Ss]calable
 scaledown(s)?
+[Ss]can[Pp]olicy
+ScanTemplate
 ScatterSpoke
 SCDF('s)?
 SCG
@@ -2009,6 +2028,7 @@ Soluto('s)?
 SomeRegion
 SonicDMG
 [Ss]onobuoy
+SourceTester
 Sox
 [Ss]peedback
 SPEL
@@ -2121,6 +2141,7 @@ tdp-guide
 TeamRetro
 TechRepublic
 TeeFilter
+Tekton-based
 Tekton('s)?
 [Tt]elco(s)*
 telecom
@@ -2327,7 +2348,9 @@ WaveConfigObject
 waypoints
 WCF
 WCF-TCP
+[Ww]eb[Hh]ook('s)?
 [wW]eb[sS]ervice(s)?
+webAPI
 WebAPI
 WebApiConfig
 WebApp
@@ -2340,7 +2363,6 @@ WeBeFoods
 WebFlux
 WebForm(s)?
 [Ww]ebforms
-WebHook
 [Ww]ebhook(-based|s)?
 WebLogic
 Webpage
@@ -2361,6 +2383,7 @@ Windows2012r2
 WinRM
 [Ww]ireframe(s)?
 WireMock
+withfile-scoped
 Wittenkamp
 Wittrock
 WomenOfDotNet

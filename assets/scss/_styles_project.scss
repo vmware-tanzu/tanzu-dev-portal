@@ -730,6 +730,9 @@ body {
         input[type=text]:focus, input[type=email]:focus{
             border-bottom: 1px solid #02bc67 !important;
         }
+        .display-none {
+              display: none;
+        }
         .btn-apply {
             color: white;
             background-color: transparent;
@@ -782,6 +785,24 @@ body {
         }
         button.close span {
           color: #fff;
+        }
+        .conditional-row {
+          display: none;
+        }
+        .consent-field, .consent-field p {
+          font-size: 0.85rem;
+          color: white;
+          input[type="checkbox"] {
+            vertical-align: middle;
+          }
+        }
+        #gdpr-consent-container {
+          label {
+            display: inline-block;
+          }
+        }
+        #phone {
+          margin: 12px 0;
         }
   }
 
@@ -1359,7 +1380,7 @@ body {
     }
   }
 
-  
+
 
   .episodes .upcoming {
     position: relative;

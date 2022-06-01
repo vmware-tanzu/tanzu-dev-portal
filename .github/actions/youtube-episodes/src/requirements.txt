@@ -1,6 +1,6 @@
-Jinja2==2.11.3
-python-youtube==0.6.0
-urllib3==1.26.5
-requests==2.24.0
-pyyaml==5.4
-python-dateutil==2.7.3
+Jinja2==3.1.2
+python-youtube==0.8.2
+urllib3==1.26.9
+requests==2.27.1
+pyyaml==6.0
+python-dateutil==2.8.2
