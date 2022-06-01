@@ -324,6 +324,7 @@ img.pride-mode-only {
 img.pride-mode-hide {
   display: none !important;
 }
+a > code,
 nav #theme-select {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
   background-size: 500% 500%;
@@ -364,10 +365,18 @@ nav #theme-select #theme-square {
 .learningpaths .learningpaths-pager-sticky a {
   border: 1px solid #17242C !important;
 }
+.callout .col-11 p > a,
 .learning-path-card.active .h3 {
   background: linear-gradient(-45deg, #EC7700, #7932A9, #0091DA, #78BE20);
   -webkit-background-clip: text;
   filter: brightness(1.25);
   color: transparent !important;
 }
-
+.data-service-landing-page-product-tile a h4,
+.data-service-landing-page-product-tile a h5,
+.featured-section a h3,
+.featured-section a h4,
+#startbutton,
+#startinfo {
+  color: white !important;
+}
