@@ -136,7 +136,7 @@ limitations under the License.
       $("html").addClass("pride-mode");
       changeTheme("pride")   
       $('body').append('<script id="sparkletrailsinit">cursorTrail({pattern: "colorGlitter",animationType: "flash",theme: "dark"});</script>');
-      $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+      $('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/22A3uUhwnwvlUuRz7CjNFy"><img src="/developer/images/pride/playlist-lockup-2022.svg"></a><iframe src="https://open.spotify.com/embed/playlist/22A3uUhwnwvlUuRz7CjNFy?utm_source=generator" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
       cursorTrail.start();
     });
 
@@ -490,6 +490,6 @@ limitations under the License.
 }(jQuery));
 
 if ($('html').hasClass('pride-mode')) {
-$('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/2QuVSrZPsWRl1zqt4YCv31?si=SNMYlGHDRjmmXPrGi4g8oQ"><img src="/developer/images/pride/playlist-lockup.svg"></a><iframe src="https://open.spotify.com/embed/playlist/2QuVSrZPsWRl1zqt4YCv31" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
+$('body').append('<div class="rounded bg-white align-items-center row flex-nowrap justify-content-between px-2" id="pride-playlist"><a href="https://open.spotify.com/playlist/22A3uUhwnwvlUuRz7CjNFy"><img src="/developer/images/pride/playlist-lockup-2022.svg"></a><iframe src="https://open.spotify.com/embed/playlist/22A3uUhwnwvlUuRz7CjNFy?utm_source=generator" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>');
 $('body').append('<script id="sparkletrailsinit">cursorTrail({pattern: "colorGlitter",animationType: "flash",theme: "dark"});</script>');
 }
