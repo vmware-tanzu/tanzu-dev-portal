@@ -105,6 +105,11 @@ Create blueprints asynchronously from a workshop when synthesizing with many sma
 ## Related Practices
 [Customer Journey Map](/practices/journey-map)
 
+
+[Event Storming](/practices/event-storming) is similar but different.
+
+[![Event Storming vs. Service Blueprint](/practices/event-storming/images/event-storming-vs-service-blueprint.png)](/practices/event-storming/images/event-storming-vs-service-blueprint.png)
+
 ## Recommended Reading
 [Service Blueprints: Laying the Foundation](https://www.izacross.com/thoughts/blueprintfoundations) by Izac Ross of Cooper
 
