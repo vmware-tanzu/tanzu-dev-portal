@@ -125,7 +125,7 @@ Event Storming is an activity within the [Swift Method](/practices/swift-method)
 
 [Service Blueprint](/practices/service-blueprint) is similar but different.
 
-[![Event Stormings vs. Service Blueprint](images/event-storming-vs-service-blueprint.png)](images/event-storming-vs-service-blueprint.png)
+[![Event Storming vs. Service Blueprint](images/event-storming-vs-service-blueprint.png)](images/event-storming-vs-service-blueprint.png)
 
 [Boris](/practices/boris) often follows Event Storming.
 
