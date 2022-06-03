@@ -1,7 +1,7 @@
 ---
 name: "Brian Watkins"
-description: "Engineer, Tanzu Labs"
-photo: ""
+description: "Senior Staff Engineer, Tanzu Labs"
+photo: "brian.png"
 roles: ["author"]
 location: "Boston, MA"
 
@@ -16,4 +16,4 @@ instagram: ""
 youtube: ""
 ---
 
-Brian has been a member of the Tanzu Labs team since 2016. 
+Brian has been a member of the Tanzu Labs team since 2015.
