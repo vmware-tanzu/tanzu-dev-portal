@@ -16,7 +16,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Event-driven architecture is beginning to emerge as a default approach to building systems, challenging the client-server pardigm that has reigned in one form or another for forty years. As our applications become collections of services coordinating their work with one another, and user expectations move more and more towards the realm of the real time, events have taken center stage. In this conversation, we'll discuss those motivations, the basic architectures that are emerging, and what the new frontier is in data infrastructure to make the event-first world queryable and its value easily visible to internal stakeholders and users alike.
+Event-driven architecture is beginning to emerge as a default approach to building systems, challenging the client-server paradigm that has reigned in one form or another for forty years. As our applications become collections of services coordinating their work with one another, and user expectations move more and more towards the realm of the real time, events have taken center stage. In this conversation, we'll discuss those motivations, the basic architectures that are emerging, and what the new frontier is in data infrastructure to make the event-first world queryable and its value easily visible to internal stakeholders and users alike.
 
 
 \\(^-^)/
