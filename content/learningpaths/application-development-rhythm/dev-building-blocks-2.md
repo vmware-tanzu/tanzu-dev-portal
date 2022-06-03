@@ -204,8 +204,8 @@ frameworks you choose,
 or perhaps to facilitate working in a secure path to production.
 
 See [Spring Initializr](https://start.spring.io/)
-as an example of a new project accelerator in the
-Java/Spring ecosystem.
+and [Application Accelerator for VMware Tanzu](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html) are examples of a new project accelerators in the
+Java/Spring and Tanzu ecosystems.
 
 ### Code Katas
 
