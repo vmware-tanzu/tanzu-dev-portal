@@ -51,6 +51,7 @@ addAndReturnSizes
 AddCloudFoundry
 AddConfigServer
 AddEnvironmentVariables
+StarTree
 additively
 addNotificationListener
 Addon
