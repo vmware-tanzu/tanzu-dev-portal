@@ -10,6 +10,7 @@
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+queryable
 .tgz
 1:1s
 10x
