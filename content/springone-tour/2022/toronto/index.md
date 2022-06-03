@@ -15,6 +15,10 @@ location:
     - 'Vantage Venues'
     - '150 King St W'
     - 'Toronto, ON'
+meetup:
+  description: "Level Up Your Integration Testing With Testcontainers with <a class='lightbox' href='#cora-iberkleid'>Cora Iberkleid</a> and <a class='lightbox' href='#dan-vega'>Dan Vega</a>. Join in a pizza lunch on Monday, June 6. Register <a href='https://www.meetup.com/toronto-spring-users-group/events/286270337' target='_blank'>here</a>."
+  link: https://www.meetup.com/toronto-spring-users-group/events/286270337
+  learn_more: false
 logo_filename: "toronto_cityscape.svg"
 hide_newsletter: true
 ---
