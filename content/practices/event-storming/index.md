@@ -122,12 +122,13 @@ You know you’ve finished when you have:
 ### Related Practices
 
 Event Storming is an activity within the [Swift Method](/practices/swift-method).
-{{% /section %}}
 
-{{% section %}}
-### Following
+[Service Blueprint](/practices/service-blueprint) is similar but different.
 
-[Boris](/practices/boris)
+[![Event Storming vs. Service Blueprint](images/event-storming-vs-service-blueprint.png)](images/event-storming-vs-service-blueprint.png)
+
+[Boris](/practices/boris) often follows Event Storming.
+
 {{% /section %}}
 
 {{% section %}}
