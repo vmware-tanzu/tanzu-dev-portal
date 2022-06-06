@@ -2,7 +2,7 @@
 {{ $apiEndpoint := cond .Site.IsServer "http://localhost:8448/api" "https://s1tapi.com/api" }}
 {{ $stripePublicKey := cond .Site.IsServer "pk_test_spvxO15DDJ4xn3jcJATwg8pw" "pk_live_DWJQ1rhJItm7apoecrDZjmPU" }}
 {{ $cityNameLowercase := (replaceRE "(\\s)" "" .Params.city_name) | lower }}
-{{ $isRegOver := lt (sub .Params.Date.YearDay now.YearDay) 2 }}
+{{ $isRegOver := lt (sub .Params.Date.YearDay now.YearDay) 1 }}
 {{ $isRegOpen := and .Params.isRegOpen (not $isRegOver) }}
 
 <style>
