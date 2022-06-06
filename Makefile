@@ -30,6 +30,11 @@ build: npm
 test: npm
 	act pull_request
 
+#test-docker @ Build a Docker container and runs the tests
+test-docker: npm
+	docker build -t tanzu-dev-center-tests:latest .
+	docker run -it --entrypoint ./test/run.sh -v ${PWD}:/home/tdc tanzu-dev-center-tests:latest
+
 #spell: @ runs act to perform spellcheck
 spell: npm
 	act -j spell-check
