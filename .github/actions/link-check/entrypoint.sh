@@ -6,8 +6,11 @@ MAX_WAIT_TIME=600 # 5 min
 HUGO_OPTIONS="${HUGO_OPTIONS:=-b http://localhost:1313/developer}"
 MUFFET_OPTIONS="${MUFFET_OPTIONS:=-t 30 -e 'https?' --exclude='/developer/get-workshop'}"
 
+echo "HUGO_OPTIONS=$HUGO_OPTIONS"
+echo "MUFFET_OPTIONS=$MUFFET_OPTIONS"
+
 echo "--> Start hugo server"
-eval hugo server "${HUGO_OPTIONS}" > /dev/null &
+eval hugo server "${HUGO_OPTIONS}" &
 echo -n "--> Wait for hugo server to start..."
 for i in $(seq 0 ${MAX_WAIT_TIME}); do # 5 min
     sleep 0.5
