@@ -11,7 +11,7 @@ Description: SpringOne Tour Seattle
 Title: SpringOne Tour Seattle
 LinkTitle: Seattle
 city_name: Seattle
-#isRegOpen: true
+isRegOpen: true
 location:
     - W Seattle
     - 1112 4th Ave
