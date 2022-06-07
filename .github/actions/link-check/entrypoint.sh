@@ -9,6 +9,9 @@ MUFFET_OPTIONS="${MUFFET_OPTIONS:=-t 30 -e 'https?' --exclude='/developer/get-wo
 echo "HUGO_OPTIONS=$HUGO_OPTIONS"
 echo "MUFFET_OPTIONS=$MUFFET_OPTIONS"
 
+# Ensure that the git log can be pulled
+git config --global --add safe.directory /github/workspace
+
 echo "--> Start hugo server"
 eval hugo server "${HUGO_OPTIONS}" &
 echo -n "--> Wait for hugo server to start..."
