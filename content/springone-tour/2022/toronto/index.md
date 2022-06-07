@@ -10,7 +10,7 @@ Description: SpringOne Tour Toronto
 Title: SpringOne Tour Toronto
 LinkTitle: Toronto
 city_name: Toronto
-isRegOpen: true
+isRegOpen: false
 location:
     - 'Vantage Venues'
     - '150 King St W'
