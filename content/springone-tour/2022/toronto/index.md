@@ -6,6 +6,7 @@ publish: true
 aliases:
     - /springone-tour/2022/chicago
 og_image: "/images/og/s1t_2022_og.png"
+logo_filename: "toronto_cityscape.svg"
 Description: SpringOne Tour Toronto
 Title: SpringOne Tour Toronto
 LinkTitle: Toronto
@@ -19,7 +20,6 @@ meetup:
   description: "Level Up Your Integration Testing With Testcontainers<br/>Join <a class='lightbox' href='#cora-iberkleid'>Cora Iberkleid</a> and <a class='lightbox' href='#dan-vega'>Dan Vega</a> for a pizza lunch on Monday, June 6. Register <a href='https://www.meetup.com/toronto-spring-users-group/events/286270337' target='_blank'>here</a>."
   link: https://www.meetup.com/toronto-spring-users-group/events/286270337
   learn_more: false
-logo_filename: "toronto_cityscape.svg"
 hide_newsletter: true
 ---
 
