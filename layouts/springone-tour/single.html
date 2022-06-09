@@ -34,7 +34,7 @@
                     {{ else if $isRegOver }}
                     <p class="mt-5 mb-0">Registration is now closed.</p>
                     {{ else }}
-                    <p class="mt-0 mb-0">Stay tuned for more details!</p>
+                    <p class="mt-5 mb-0">Stay tuned for more details!</p>
                     {{ end }}
                     <!-- <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}' /> -->
                 </div>
@@ -345,11 +345,14 @@
                 <div id="meetup">
                     <h3 class="mt-5">Meetup</h3>
                     <div class="row align-items-center">
-                        <a class="col-sm-2 lightbox" href="#city-takeover">
+                        <a class="col-sm-2 lightbox" href="{{ .Params.meetup.link }}">
                             <img src='{{ "/images/springonetour/meetup_logo_script.svg" | relURL }}' class="hide-in-light-mode"/>
                             <img src='{{ "/images/springonetour/meetup_logo_script_light.svg" | relURL }}' class="display-in-light-mode"/>
                         </a>
-                        <p class="col-sm-10">{{ .Params.meetup | markdownify }}&nbsp;<a href="#city-takeover" class="lightbox">Learn more</a>.
+                        <p class="col-sm-10">{{ .Params.meetup.description | markdownify }}&nbsp;
+                          {{ if .Params.meetup.learn_more }}
+                            <a href="#city-takeover" class="lightbox">Learn more</a>.
+                          {{ end }}
                         </p>
                     </div>
                 </div>

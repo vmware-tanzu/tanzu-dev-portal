@@ -1775,6 +1775,7 @@ Pythonic
 QCon
 QoS
 Querier
+queryable
 queuedEvents
 QueueStatistics
 Quickstart
@@ -2066,6 +2067,7 @@ Standley
 starbuxman
 STARGATE|Stargate
 Starlark
+StarTree
 startupProbe(s)?
 stateful
 StatefulSet(s)?

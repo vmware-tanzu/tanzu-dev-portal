@@ -1,4 +1,4 @@
-FROM golang:1.12.7-buster
+FROM alpine:3.16.0
 
 LABEL "com.github.actions.name"="Hugo broken link check with muffet"
 LABEL "com.github.actions.description"="Hugo broken link check quickly with raviqqe/muffet"
@@ -17,12 +17,15 @@ ENV MUFFET_VERSION='2.4.4'
 ENV MUFFET_NAME="muffet_${MUFFET_VERSION}_Linux_x86_64"
 ENV MUFFET_URL="https://github.com/raviqqe/muffet/releases/download/v${MUFFET_VERSION}/${MUFFET_NAME}.tar.gz"
 
+# Add required packages (libc6-compat required to get hugo to work)
+RUN apk add --no-cache curl libc6-compat git bash libstdc++
+
 RUN wget "${HUGO_URL}" && \
     tar -zxvf "${HUGO_NAME}.tar.gz" && \
-    mv ./hugo /go/bin/ && \
+    mv ./hugo /usr/local/bin/ && \
     wget "${MUFFET_URL}" && \
     tar -zxvf "${MUFFET_NAME}.tar.gz" && \
-    mv muffet /go/bin/
+    mv muffet /usr/local/bin/
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
