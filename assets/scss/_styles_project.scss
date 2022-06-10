@@ -657,12 +657,16 @@ body {
               width: -moz-available;
               width: -webkit-fill-available;
               margin: 12px auto;
+              @media (max-width: 575px) {
+                margin: 0 !important;
+              }
            }
           .s1t-form-col{
               width: 100%;
               padding: 0 1.5rem;
               @media (max-width: 575px) {
                   padding: 0 !important;
+                  margin-bottom: 15px;
                 }
               &#card-errors {
                 display: none;
@@ -726,6 +730,9 @@ body {
         input[type=text]:focus, input[type=email]:focus{
             border-bottom: 1px solid #02bc67 !important;
         }
+        .display-none {
+              display: none;
+        }
         .btn-apply {
             color: white;
             background-color: transparent;
@@ -752,7 +759,7 @@ body {
         #s1t-tac-container {
             margin-top: 1.5rem;
         }
-        .charge-currency, .discount-currency {
+        .currency-code {
             padding-right: 1.5rem;
             text-align: right;
         }
@@ -766,6 +773,11 @@ body {
         .stripe-card-element {
             padding-bottom: 0.7rem;
             border-bottom: 1px solid white !important;
+            &.error {
+              border-bottom: none !important;
+              padding-top: 1rem;
+              font-style: italic;
+            }
         }
         .StripeElement {
           padding: 13px 10px;
@@ -773,6 +785,24 @@ body {
         }
         button.close span {
           color: #fff;
+        }
+        .conditional-row {
+          display: none;
+        }
+        .consent-field, .consent-field p {
+          font-size: 0.85rem;
+          color: white;
+          input[type="checkbox"] {
+            vertical-align: middle;
+          }
+        }
+        #gdpr-consent-container {
+          label {
+            display: inline-block;
+          }
+        }
+        #phone {
+          margin: 12px 0;
         }
   }
 
@@ -1024,6 +1054,17 @@ body {
 
   .menu-split-right {
     right: 0em;
+  }
+
+  .lang-desc > p {
+    color: white !important;
+    padding-left: 0px;
+
+    a {
+      color: $link;
+      -webkit-font-smoothing: auto;
+      transition: all .2s;
+    }
   }
 
   .person {
@@ -1329,6 +1370,18 @@ body {
     margin-right: 10px;
   }
 
+  .episode-card > a {
+    padding: 0px !important;
+
+    p {
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 0em;
+    }
+  }
+
+
+
   .episodes .upcoming {
     position: relative;
     top: 0;
@@ -1544,7 +1597,7 @@ body {
     }
     &:hover, &:focus {
       .description .btn {
-        background: $link-hover-color !important;
+        background: $link-hover-color;
       }
       .thumbnail-gradient {
         opacity: 0;

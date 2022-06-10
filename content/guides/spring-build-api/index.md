@@ -16,6 +16,9 @@ tags:
 - Microservices
 team:
 - Brian McClain
+languages:
+- java
+langgettingstarted: true
 title: Building an API with Spring Boot
 weight: 2
 oldPath: "/content/guides/spring/spring-build-api.md"

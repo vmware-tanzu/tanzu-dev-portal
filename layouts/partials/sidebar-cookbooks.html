@@ -1,0 +1,25 @@
+{{ define "cbsubpages" }}
+  {{ $activePage := .activepage }}
+  {{ if .context.Pages }}
+    {{ range .context.Pages}}
+      {{ $active := eq .Page $activePage }}
+      {{ if eq .Parent.Params.layout "intro" }}
+        {{ if or (eq .Parent $activePage.Parent) (eq .Parent $activePage) }}
+          <li class="td-sidebar-nav__section-title">
+            <a href="{{ .RelPermalink }}" class="align-left pl-4 pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      {{ else if eq .Params.layout "intro" }}
+        <li class="td-sidebar-nav__section-title">
+          <a  href="{{ .RelPermalink }}" class="align-left pr-2{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><b class="antialiased">{{ .Title }}</b></a>
+        </li>
+      {{ end }}
+      {{ template "cbsubpages" (dict "context" . "activepage" $activePage ) }}
+    {{ end }}
+    
+  {{ end }}
+{{ end }}
+
+<ul class="td-sidebar-nav__section mt-1 ">
+{{ template "cbsubpages" (dict "context" .cookbook "activepage" .context.Page ) }}
+</ul>

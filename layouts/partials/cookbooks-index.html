@@ -1,0 +1,26 @@
+<div class="learningpaths-index row">
+    {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+    {{ $parent := .Page }}
+    {{ range $pages }}
+    {{ if eq .Parent $parent }}
+
+    {{ $totalDuration := 0 }}
+    {{ range .Pages }}
+        {{ $totalDuration = add $totalDuration (int .Params.duration) }}
+    {{ end }}
+
+
+    <a class="h-auto linked-box td-box--gray-dark p-4 flex-315 col-12 mr-3 mb-3 px-0" href="{{ .RelPermalink }}">
+        <h2 class="h4 link mt-3 pt-0">{{- .Title -}}</h2>
+        <p>{{ .Description | markdownify }}</p>
+        <div class="row justify-content-between d-flex mt-4 mb-2">
+            <div class="course-lp-count">
+                <i class="fas fa-carrot"></i> 
+              {{ len .Pages }} recipe{{ if gt (len .Pages) 1}}s{{ end }}
+            </div>
+        </div>
+    </a>
+
+    {{ end }}
+    {{ end }}
+</div>

@@ -94,7 +94,7 @@ team’s repository,
 and having an automation tool verify that   the integration works.
 
 With a *pull* based model,
-the you *pull the latest* changes into a local
+ you *pull the latest* changes into a local
 development environment and verify integration *locally* before
 merging the changes back to a shared repository.
 Integrating locally prevents the automated test and build from
@@ -160,8 +160,7 @@ Timeboxing lets you chunk specific times for work
 and specific times to rest in so that
 the workflow cadence is more consistent and sustainable.
 
-The
-[Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro*Technique)
+The [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)
 is a good tool to help you timebox.
 
 ## Summary

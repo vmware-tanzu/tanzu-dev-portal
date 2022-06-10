@@ -90,7 +90,13 @@ def getNewEpisodesInPlaylist(playlistId, above, existingVideoIDs):
         except:
             liveInfo["scheduledStartTime"] = None
 
-        episodeDate = fuzzyDate(liveInfo["scheduledStartTime"]) or fuzzyDate(videoInfo["publishedAt"]) or datetime.time()
+        episodeDate = None
+        if "scheduledStartTime" in liveInfo:
+            episodeDate = fuzzyDate(liveInfo["scheduledStartTime"])
+        if "publishedAt" in videoInfo and episodeDate == None:
+            episodeDate = fuzzyDate(videoInfo["publishedAt"])
+        if episodeDate == None:
+            episodeDate = datetime.time()
 
         video = {
             "videoId": videoId,

@@ -121,7 +121,7 @@ footer li.list-inline-item .text-white {
    border-color: #d9e4ea !important;
 }
 // body a:hover, body a:focus,
-
+.language-hero .lead a,
 body a code,
 body .td-box--gray-850 p > a, 
 body .td-box--gray-darkest p > a, 
@@ -147,6 +147,7 @@ color: #49afd9 !important;
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
 }
+.steeltoe-banner .h4,
 #beyond-hero p,
 #live-notify,
 body a.btn {
@@ -204,12 +205,15 @@ body.tv-episode #register .mktoForm select {
   color: #78be20!important;
 }
 .workshop-box .workshop-hero {
-  background-color: #BADEFF !important;
+
+  .thumbnail-gradient {
+    display: none;
+  }
 }
 .workshop-box:hover .description .btn.btn-small {
   background: #0E2B65 !important;
 }
-
+.steeltoe-banner,
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
@@ -277,7 +281,7 @@ nav #theme-select {
     background-color: transparent !important;
   }
   #theme-square {
-    transform: translateX(32px);
+    transform: translateX(36px);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
   .nav-select {

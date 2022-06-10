@@ -13,7 +13,7 @@ linkedin: "whitneylee"
 github: ""
 pinterest: ""
 instagram: "sweetlovewhitney"
-youtube: ""
+youtube: "channel/UCaGYZkSCN3MPwqRpt24KBKA"
 twitch: "wiggitywhitney"
 ---
 
@@ -29,7 +29,7 @@ and a passion for teaching others as she acquired knowledge herself. Whitney has
 cloud-related [lightboard videos](https://youtu.be/BgrQ16r84pM) that together have 400,000+ views.
 At VMware, you can find Whitney writing lighthearted yet informative 
 [guides](https://tanzu.vmware.com/developer/guides/knative-serving-wi/?utm_source=whitney&utm_campaign=devrel), or behind the 
-lightboard during her weekly streaming show [Ϟ Enlightning](https://tanzu.vmware.com/developer/tv/enlightning/?utm_source=whitney&utm_campaign=devrel).  Whitney’s contagious excitement 
+lightboard during her weekly streaming show [ϟ Enlightning](https://tanzu.vmware.com/developer/tv/enlightning/?utm_source=whitney&utm_campaign=devrel).  Whitney’s contagious excitement 
 drives her to collaborate and play!
 
 <!--more-->
@@ -37,6 +37,6 @@ drives her to collaborate and play!
 
 ## Highlights
 
-{{< youtube id="vfhfJ98ApwE" class="youtube-video-shortcode" >}}
+{{< youtube id="eRKR53nOKyA" class="youtube-video-shortcode" >}}
 
-{{< youtube id="UgzIwoxX7Wg" class="youtube-video-shortcode" >}}
+{{< youtube id="g1Bmxg4DSug" class="youtube-video-shortcode" >}}

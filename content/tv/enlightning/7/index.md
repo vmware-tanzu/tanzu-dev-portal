@@ -9,7 +9,7 @@ guests:
 - Mauricio Salatino
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "eRKR53nOKyA"
 lastmod: '2020-10-09'
 title: What Is Knative Eventing?
 twitch: vmwaretanzu
