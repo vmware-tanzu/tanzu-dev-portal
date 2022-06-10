@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how Tanzu Community Edition provides a platform to simplify deploying Modern Apps.
-lab: tce-dev-guide
+lab: lab-tce-dev-guide
 lastmod: '2021-10-03'
 length: 15
 logo: "/images/workshops/logo-tce.svg"

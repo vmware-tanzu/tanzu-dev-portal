@@ -9,6 +9,8 @@ tags:
 - Spring Boot
 - Spring Cloud
 - Rate Limiting
+languages:
+- java
 team:
 - Haytham Mohamed
 title: API Rate Limiting with Spring Cloud Gateway

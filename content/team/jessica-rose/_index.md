@@ -22,3 +22,7 @@ developer bootcamps](https://www.freecodecamp.org/news/author/jessica/) and alwa
 
 <!--more-->
 
+## Highlights
+
+{{< youtube id="r_SPWqB1l-c" class="youtube-video-shortcode" >}}
+

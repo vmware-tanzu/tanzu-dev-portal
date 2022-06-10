@@ -8,6 +8,13 @@ body {
  body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
    fill: #717074 !important;
 }
+nav{
+    &.isOpen {
+        > .container {
+            background-color: white !important;
+        }
+    }
+}
 nav .nav-arrow {
   border: solid #61717d !important;
   border-width: 0 1px 1px 0 !important;
@@ -114,7 +121,7 @@ footer li.list-inline-item .text-white {
    border-color: #d9e4ea !important;
 }
 // body a:hover, body a:focus,
-
+.language-hero .lead a,
 body a code,
 body .td-box--gray-850 p > a, 
 body .td-box--gray-darkest p > a, 
@@ -140,6 +147,7 @@ color: #49afd9 !important;
 .cta-btn-wrapper .cta-btn {
   color: rgb(97, 113, 125) !important;
 }
+.steeltoe-banner .h4,
 #beyond-hero p,
 #live-notify,
 body a.btn {
@@ -150,7 +158,7 @@ body a.btn {
    body .td-navbar .td-navbar-nav-hamburger .navbar-nav a[href*='/'] {
       color: #1d428a !important;
    }
-   body .td-navbar .td-navbar-nav-hamburger #menu-toggle #menu-close .a {
+   body .td-navbar #menu-toggle #menu-close .a {
       stroke: #61717d !important;
    }
 }
@@ -197,12 +205,15 @@ body.tv-episode #register .mktoForm select {
   color: #78be20!important;
 }
 .workshop-box .workshop-hero {
-  background-color: #BADEFF !important;
+
+  .thumbnail-gradient {
+    display: none;
+  }
 }
 .workshop-box:hover .description .btn.btn-small {
   background: #0E2B65 !important;
 }
-
+.steeltoe-banner,
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
@@ -255,6 +266,11 @@ body.tv-episode #register .mktoForm select {
   box-shadow: none !important;
   background-color: white !important;
 }
+
+#mobile-nav {
+    background-color: white !important;
+}
+
 nav #theme-select {
   background-color: #ADBBC4 !important;
   
@@ -265,7 +281,7 @@ nav #theme-select {
     background-color: transparent !important;
   }
   #theme-square {
-    transform: translateX(32px);
+    transform: translateX(36px);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
   .nav-select {
@@ -403,6 +419,30 @@ div.aside div.aside-content {
   &:nth-child(5) {
     background: #e2eaee;
   }
+}
+
+
+.nav.nav-tabs {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
+  
+  .nav-link.active {
+    border: 0;
+    color: #1d428a !important;
+    box-shadow: 0 2px 0px 0px #1d428a !important;  
+    margin-bottom: 0px;
+  }
+  .nav-link {
+    color: #61717d !important;
+    border: 0 !important;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.sponsor-container img {
+  filter: invert(1);
 }
 
 /* SYNTAX HIGHLIGHTING */

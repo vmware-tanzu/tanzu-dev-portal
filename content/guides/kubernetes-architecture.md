@@ -4,7 +4,7 @@ description: Learn exactly how Kubernetes works
 weight: -100
 linkTitle: Kubernetes Architecture
 title: Kubernetes Architecture
-level1: Building Kubernetes Runtime
+level1: Managing and Operating Kubernetes
 level2: Kubernetes Architecture
 toppage: true
 tags: []

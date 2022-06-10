@@ -15,8 +15,6 @@ if [[ -z "$GITHUB_REPOSITORY" ]]; then
 fi
 
 cd $GITHUB_WORKSPACE
-echo "--> Install spellchecker"
-npm install --global spellchecker-cli retext-syntax-urls retext-indefinite-article retext-repeated-words remark-frontmatter
 
 echo "--> spellcheck markdown files"
 IGNORE_REGEX="[0-9a-f]{7} (?=.*[0-9])[0-9A-Za-z_\-]{11}" # GitHub hashes and YouTube IDs

@@ -8,7 +8,7 @@ weight: 72
 oldPath: "/content/guides/kubernetes/storage-integration.md"
 aliases:
 - "/guides/kubernetes/storage-integration"
-level1: Building a Kubernetes Runtime
+level1: Managing and Operating Kubernetes
 level2: Kubernetes Architecture
 tags:
 - Kubernetes

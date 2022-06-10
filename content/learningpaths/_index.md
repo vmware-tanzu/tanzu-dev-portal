@@ -7,6 +7,7 @@ menu:
   main:
     parent: sections
     params:
+      section: type
       split: right
     weight: 2
 aliases:

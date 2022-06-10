@@ -150,7 +150,26 @@
 
 nav {
     z-index: 1000 !important;
-    
+
+    #theme-select {
+        width: 108px;
+        height: 36px;
+        padding: 0px !important;
+
+        a {
+            height: 36px !important;
+            width: 36px !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            left: 0 !important;
+            text-align: center !important;
+
+            i.fas.fa-moon {
+                transform: translate(0) !important;
+                margin-right: 0 !important;
+            }
+        }
+    }
     > .container {
         opacity: 0;
         animation: fadeIn 1s ease-out 0s forwards;
@@ -181,11 +200,12 @@ nav {
         display: none;
         }
     }
+    
     #theme-square {
         left: 0;
         top: 0;
-        height: 101%;
-        width: 50%;
+        height: 37px;
+        width: 36px;
         position: absolute;
         background: $gray-200;
         transform: translateX(0px);
@@ -195,10 +215,17 @@ nav {
     i {
         color: white;
     }
+    #toggle-pride-mode {
+        cursor: pointer;
+        img {
+            height: 22px;
+        }
+    }
+    
     #toggle-dark-mode {
         left: 2px;
         i {
-        color: #1B2A32;
+            color: #1B2A32;
         }
     }
     @media(max-width: 991.98px){
@@ -240,7 +267,7 @@ nav {
             
     }
     #learn {
-        right: 435px;
+        right: 492px;
         width: 130px;
 
         .drop-menu {
@@ -256,15 +283,15 @@ nav {
         }
     }
     #topics {        
-        right: 435px;
+        right: 490px;
         width: 135px;
     }
     #tanzutv {
-        right: 286px;
+        right: 336px;
         width: 149px;
     }
     #community {
-        right: 130px;
+        right: 180px;
         width: 156px; 
     }
     .drop-target {
@@ -314,13 +341,13 @@ nav {
         }
         &.tanzutv-scope {
             left: 87px;
-            width: 296px;
-            height: 410px;
+            width: 310px;
+            height: 450px;
         }
         &.community-scope {
             left: 237px;            
-            width: 150px;
-            height: 130px;
+            width: 200px;
+            height: 160px;
         }
     }
 

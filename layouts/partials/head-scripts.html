@@ -26,6 +26,8 @@ function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().get
 if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-TQ9H33K'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
 </script>
 
+<script id="sparkletrails" src="https://tanzu-dev-center.s3.amazonaws.com/cursor-trail.min.js"></script>
+
 <!-- Sentry SDK-->
 <script
   src="https://browser.sentry-cdn.com/6.3.1/bundle.tracing.min.js"
@@ -82,8 +84,8 @@ function isTvShowLive(showName) {
   episodes = [];
   {{ range where (where .Site.Pages "Type" "tv-episode") "Date.Unix" "ge" (sub now.Unix 604800) }}
     var epInfo = {
-      startTime: new Date("{{ .Params.Date }}"),
-      endTime: new Date(new Date("{{ .Params.Date }}").getTime() + ({{ default 60 .Params.minutes }} * 60000)),
+      startTime: new Date({{ .Params.Date }}),
+      endTime: new Date(new Date({{ .Params.Date }}).getTime() + ({{ default 60 .Params.minutes }} * 60000)),
       show: "{{ .Parent.Title }}",
       link: "{{ .Permalink | relURL }}"
     };
@@ -106,6 +108,15 @@ function isTvShowLive(showName) {
         liveShowLink = episode["link"];
         liveShowStream = episode["stream"];
         isLive = true;
+
+        if(liveShowName === ".NET Beyond") {
+          var breakStart = new Date("Wed Mar 30 2022 15:00:00 GMT-0700 (Pacific Daylight Time)").getTime();
+          var breakEnd = new Date("Thu Mar 31 2022 02:00:00 GMT-0700 (Pacific Daylight Time)").getTime();
+
+          if (currentTime >= breakStart && currentTime <= breakEnd) {      
+            isLive = false;
+          }
+        }
       }
     }
   };

@@ -1,13 +1,13 @@
 ---
 name: Jonatan Ivanov
-description: "Software Engineer"
+description: "Staff Software Engineer"
 roles: ["guest"]
 skills: ["Spring"]
-location: "Bellevue, WA"
+location: "Seattle, WA"
 
 # Social Media
 twitter: "@jonatan_ivanov"
-website: ""
+website: "https://develotters.com/"
 facebook: ""
 linkedin: ""
 github: "jonatan-ivanov"
@@ -16,6 +16,18 @@ instagram: ""
 youtube: ""
 ---
 
-Jonatan Ivanov is an enthusiastic Software Engineer working in the Spring Cloud Team, one of the leaders of the Seattle Java User Group, speaker, author, certified dragon trainer. He has hands-on experience in developing and shipping innovative, production-ready software for industry-leader companies. He likes Distributed Systems, Production, Open Source, Math, Linux, Cloud environments; he is passionate about the Java Ecosystem and the Java Community. He is an Open Source contributor, writes a "develotters"-focused blog (https://develotters.com), sometimes can be found on Twitter(@jonatan_ivanov) and in the Seattle area but he is originally from Hungary.
+Jonatan Ivanov is an enthusiastic Software Engineer working in the Spring Engineering Team. He is one of
+the leaders of the Seattle Java User Group, a speaker, an author, and a certified dragon trainer. He has 
+hands-on experience in developing and shipping innovative, production-ready software for 
+industry-leader companies. He likes distributed systems, production, open source, math, Linux, and
+cloud environments, and he is passionate about the Java Ecosystem and the Java Community. He is an 
+Open Source contributor, writes a ["develotters"-focused blog](https://develotters.com), 
+and sometimes he can be found on Twitter (@jonatan_ivanov) and in the Seattle area, but he is originally 
+from Hungary.
 
 <!--more-->
+
+
+## Highlights
+
+{{< youtube id="-fCOxnu6FYA" class="youtube-video-shortcode" >}}

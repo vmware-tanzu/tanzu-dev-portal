@@ -1,0 +1,34 @@
+Modern Applications: 
+  Modern App Basics:
+    - Modern Development Concepts
+    - DevOps Practices
+    - Kubernetes Platform
+  Modernizing Legacy Applications:
+    - Deconstruction
+    - Packaging, Operating, and Outside Enhancements
+  Agile Transformation and Practices:
+    - Agile Development
+    - Team Tips
+Application Development:
+  Building Modern Applications:
+    - Microservice Patterns
+    - Frameworks and Languages
+    - Modern Development Practices
+    - Services
+  Deploying Modern Applications:
+    - Packaging and Publishing
+    - CI/CD, Release Pipelines
+  Managing and Operating Applications:
+    - Metrics, Tracing, and Monitoring
+    - Preparing and Deploying Kubernetes Workloads
+Kubernetes Platform:
+  Building Kubernetes Runtime:
+    - Application Platform on Kubernetes
+    - Building Your Kubernetes Platform
+  Managing and Operating Kubernetes:
+    - Monitoring and Observing Kubernetes
+    - Kubernetes Architecture
+    - Preparing and Deploying Kubernetes Workloads
+  Securing Kubernetes:
+    - Backup and Restore
+    - Access and Security
