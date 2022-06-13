@@ -28,7 +28,7 @@ level2: Team Tips
   - Sharing documents
   - Product backlog
   - Team TODOs
-- Check out the [Best Tools for Remote Work](https://remote.com/tools) for tooling ideas.
+
 - When working with other teams (e.g., clients, collaborators) understand their tooling limitations and find the best alternatives you can.
 - Ensure everyone knows how to use the chosen tools before the project.
 
