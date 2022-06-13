@@ -60,12 +60,17 @@
           <!-- Guest on any show -->
           {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows = $shows | append $guests }}
+          
           <!-- Speaker on any show -->
           {{ $speakers := where (where .Site.Pages "Section" "tv") "Params.speakers" "intersect" (slice (.Scratch.Get "memberName")) }}
           {{ $shows = $shows | append $speakers }}
-          <!-- Host on Code -->
-          {{ $hosts := where ((.Site.GetPage "tv/code").Pages) "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
-          {{ $shows = $shows | append $hosts }}
+          
+          <!-- Host on shows identified in header, or on Code -->
+          {{ $hostShows := union (slice "code") .Params.include_host }}
+          {{ range $hostShows }}
+            {{ $hosts := where ($.Site.GetPage (printf "/tv/%s" .)).Pages "Params.hosts" "intersect" (slice ($.Scratch.Get "memberName")) }}
+            {{ $shows = $shows | append $hosts }} 
+          {{ end }}
           
           {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
           <div id="tanzu-tv" class='container py-5 border-top'>
