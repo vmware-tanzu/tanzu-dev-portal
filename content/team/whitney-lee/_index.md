@@ -15,6 +15,11 @@ pinterest: ""
 instagram: "sweetlovewhitney"
 youtube: "channel/UCaGYZkSCN3MPwqRpt24KBKA"
 twitch: "wiggitywhitney"
+
+# Metadata
+include_host:
+- enlightning
+
 ---
 
 Whitney traveled the scenic route but is chuffed to have found her way to Kubernetes 
