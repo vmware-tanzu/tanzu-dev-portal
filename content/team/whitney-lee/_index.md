@@ -17,6 +17,10 @@ youtube: "channel/UCaGYZkSCN3MPwqRpt24KBKA"
 twitch: "wiggitywhitney"
 ---
 
+# Metadata
+include_host:
+- enlightning
+
 Whitney traveled the scenic route but is chuffed to have found her way to Kubernetes 
 and cloud technologies. Whitney began her professional career as a 
 [fine artist](images/whitney-artist.jpg) before owning her own
