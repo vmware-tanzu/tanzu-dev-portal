@@ -11,4 +11,4 @@ youtube: "beT4umjUAA4"
 draft: "False"
 ---
 
-Building an internal developer platform and standing up a platform engineering practice isn’t enough. You also need to do some serious marketing! Check out @VMware's  toolkit for building platforms here: https://tanzu.vmware.com/content/webinars/jan-19-emea-the-adaptive-enterprise-can-your-application-platform-cope-with-a-crisis?utm_source=cote&utm_campaign=devrel&utm_content=internalplatformmarketing
+Building an internal developer platform and standing up a platform engineering practice isn’t enough. You also need to do some serious marketing! Check out @VMware's  toolkit for building platforms here: https://tanzu.vmware.com/application-platform?utm_source=cote&utm_campaign=devrel&utm_content=internalplatformmarketing
