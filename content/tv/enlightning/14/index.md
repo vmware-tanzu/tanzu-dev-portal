@@ -16,7 +16,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Everyone loves infrastructure as code! It’s a lot more fun to write terraform plans or Pulumi programs instead of clicking around in a console, right? Despite what the name implies, the “code” part of “infrastructure as code” isn’t even the most important part! While it’s tempting to just hit up Stack Overflow and some example repos to copy in some existing code, if we don’t consider the larger concepts we’ll quickly find ourselves simply doing things faster, but not necessarily better. We will illustrate some of the core concepts around infrastructure as code, including abstraction and reuse, breaking down infrastructure into components, the verifiable nature, and review/testing/sharing concepts. After this, you will walk away with an expanded understanding of what makes Infrastructure as Code more than just the code!
+Everyone loves infrastructure as code! It’s a lot more fun to write Terraform plans or Pulumi programs instead of clicking around in a console, right? Despite what the name implies, the “code” part of “infrastructure as code” isn’t even the most important part! While it’s tempting to just hit up Stack Overflow and some example repos to copy in some existing code, if we don’t consider the larger concepts we’ll quickly find ourselves simply doing things faster, but not necessarily better. We will illustrate some of the core concepts around infrastructure as code, including abstraction and reuse, breaking down infrastructure into components, the verifiable nature, and review/testing/sharing concepts. After this, you will walk away with an expanded understanding of what makes Infrastructure as Code more than just the code!
 
 
 \\(^-^)/
