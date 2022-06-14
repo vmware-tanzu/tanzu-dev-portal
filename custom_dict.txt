@@ -1876,6 +1876,7 @@ RHEL
 Riak
 Rickard
 Ries
+Riesenberg
 RKE
 rkt
 RMIT
@@ -2436,4 +2437,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-Riesenberg
