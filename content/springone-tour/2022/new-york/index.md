@@ -287,12 +287,11 @@ hide_newsletter: true
     <div class="row py-3 flex-nowrap">
         <div class="time col-4 pl-0 h4">4:00 PM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#codezillas">Codezillas: The Universal Truths of Software Development</a>
+            <a class="lightbox" href="#responsible-microservices">Responsible Microservices</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#nate-schutta">Nate Schutta</a>
-                <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
     </div>
