@@ -248,7 +248,7 @@ hide_newsletter: true
             </h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
+    <div class="row py-3 flex-nowrap">
         <div class="time col-4 pl-0 h4">4:10 PM PDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#codezillas">Codezillas: The Universal Truths of Software Development</a>
@@ -259,10 +259,5 @@ hide_newsletter: true
                 <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
-    </div>
-    <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">5:00 PM PDT</div>
-        <div class="talk-title col-5 h4">Q&A</div>
-        <div class="name col-3"></div>
     </div>
 </div>
