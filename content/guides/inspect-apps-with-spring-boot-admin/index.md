@@ -224,7 +224,7 @@ Open the URL in your browser.
 ![Image of Spring Boot Admin running on TAP](images/SbaOnTapClip.gif "Image showing a Spring Boot Admin running on TAP.")
 
 {{%warning%}}
-If you're not using Tanzu Application Platform, expose the application as a Kubernetes service in the usual way and then navigate your browser to the application's URL.
+If you're not using Tanzu Application Platform, [expose the application as a Kubernetes service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose) in the usual way and then navigate your browser to the application's URL.
 {{%/warning%}}
 
 The Spring Boot Admin server dashboard is now ready to help you inspect and troubleshoot your application setup. You can register all your Spring applications as clients of Spring Boot Admin, and hopefully, you'll never again struggle to remember your configuration details! 
