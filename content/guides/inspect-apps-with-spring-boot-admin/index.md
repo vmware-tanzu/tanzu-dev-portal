@@ -170,7 +170,7 @@ git add --all # Add all the source code
 git commit -am "initial commit" # Create the first commit
 ```
 
-The code must then be pushed to a new remote repository on GitHub. You can do this using the GitHub command line tool as follows. 
+The code must then be pushed to a new remote repository on GitHub. You can do this using the [GitHub command line tool](https://cli.github.com/) as follows. 
 
 ```bash
 gh repo create spring-boot-admin-server --public --source=. --remote=origin --push
