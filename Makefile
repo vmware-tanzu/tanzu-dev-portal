@@ -18,7 +18,6 @@ theme:
 npm: theme
 	npm ci
 
-
 #preview: @ preview hugo
 preview: npm
 	ulimit -n 65535; hugo server -b http://localhost:1313/developer
@@ -35,6 +34,11 @@ build: npm
 test: npm
 	act pull_request
 
+#clean: @ Remove /public, test containers, etc
+clean:
+	rm -rf public
+	docker rmi -f act-github-actions-topic-check-dockeraction act-github-actions-link-check-dockeraction act-github-actions-spell-check-dockeraction catthehacker/ubuntu:act-latest
+	
 #spell: @ runs act to perform spellcheck
 spell: npm
 	act -j spell-check
