@@ -61,7 +61,6 @@ You begin by creating a Spring Boot application project using [start.spring.io][
 
 * Spring Web, 
 * Spring Actuators, 
-* Spring DevTools, 
 * Spring Security, 
 * Spring Boot Admin Server, 
 * Spring Boot Admin Client.
