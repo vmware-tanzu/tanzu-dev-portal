@@ -6,6 +6,7 @@ publish: true
 aliases:
     - /springone-tour/2022/new-york
 og_image: "/images/og/s1t_2022_og.png"
+logo_filename: "nyc_cityscape.svg"
 Description: SpringOne Tour New York
 Title: SpringOne Tour New York
 LinkTitle: New York
@@ -15,7 +16,10 @@ location:
     - Convene
     - 237 Park Ave
     - New York, NY
-logo_filename: "nyc_cityscape.svg"
+meetup:
+  description: "Come join us on Monday. June 27 at 5:30 pm to learn about the finer details of moving from a monolithic architecture to a microservices architecture with examples in .NET 6 from <a class='lightbox' href='#layla-porter'>Layla Porter</a>. Register for the Meetup <a href='https://www.meetup.com/nyc-net-developers/events/286495438' target='_blank'>here</a>."
+  link: https://www.meetup.com/nyc-net-developers/events/286495438
+  learn_more: false
 hide_newsletter: true
 ---
 
@@ -283,12 +287,11 @@ hide_newsletter: true
     <div class="row py-3 flex-nowrap">
         <div class="time col-4 pl-0 h4">4:00 PM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#codezillas">Codezillas: The Universal Truths of Software Development</a>
+            <a class="lightbox" href="#responsible-microservices">Responsible Microservices</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#nate-schutta">Nate Schutta</a>
-                <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
     </div>
