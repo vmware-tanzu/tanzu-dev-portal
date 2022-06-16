@@ -25,3 +25,7 @@ fight each other to explore application metrics; and
 [Game On! Text Adventure](https://gameontext.org) for exploring cloud native development.
 
 <!--more-->
+
+## Highlights
+
+{{< youtube id="MFhgCHAUkDw" class="youtube-video-shortcode" >}}
