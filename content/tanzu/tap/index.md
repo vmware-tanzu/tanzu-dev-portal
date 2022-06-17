@@ -6,8 +6,8 @@ aliases:
 - /tap
 links:
 - title: Try
-  link: "/developer/guides/gs-tap-on-kind-pt1/"
-  description: Try TAP on KIND
+  link: "/developer/guides/tanzu-application-platform-local-devloper-install"
+  description: Try Tanzu Application Platform on Your Laptop
 - title: Download
   link: https://network.tanzu.vmware.com/products/tanzu-application-platform/
   description: Downloads to get you started
