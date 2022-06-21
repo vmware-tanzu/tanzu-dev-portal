@@ -405,6 +405,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Conf
 Config-[Pp]rovider
 [Cc]onfig-server
 Config-Writer
@@ -535,6 +536,7 @@ debuggable
 decrypt(ed|ing)?
 [Dd]eduplicate
 defence
+degradations
 DEK(s)?
 delayDuration
 Deleuze
@@ -547,6 +549,7 @@ Depedency
 dependant
 deployable
 [Dd]eployable
+deprioritized
 deps
 deserialize
 deserializes
@@ -749,6 +752,7 @@ Florent
 [fF]luentd('s)?
 FluxCD
 flyyy
+focussed
 focussing
 FoodService
 formatter
@@ -2013,7 +2017,7 @@ skillset
 Skyscanner
 SLA(s)?
 Sletten
-SLI(s)
+SLI(s)?
 slideshare
 SLO(s)?
 Sloka
