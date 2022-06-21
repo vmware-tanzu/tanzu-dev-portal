@@ -123,10 +123,12 @@ contentFiles.each do |f|
     # Tally the tags
     if contentMetadata.has_key? "tags"
         contentMetadata["tags"].each do |t|
-            if tagsTally.has_key? t.downcase
-                tagsTally[t.downcase] += 1
-            else
-                tagsTally[t.downcase] = 1
+            if not t.nil?
+                if tagsTally.has_key? t.downcase
+                    tagsTally[t.downcase] += 1
+                else
+                    tagsTally[t.downcase] = 1
+                end
             end
         end
     end

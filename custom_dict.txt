@@ -405,6 +405,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Conf
 Config-[Pp]rovider
 [Cc]onfig-server
 Config-Writer
@@ -751,6 +752,7 @@ Florent
 [fF]luentd('s)?
 FluxCD
 flyyy
+focussed
 focussing
 FoodService
 formatter
@@ -2439,5 +2441,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-Conf
-focussed
