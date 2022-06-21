@@ -1878,6 +1878,7 @@ RHEL
 Riak
 Rickard
 Ries
+Riesenberg
 RKE
 rkt
 RMIT

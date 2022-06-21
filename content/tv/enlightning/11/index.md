@@ -9,7 +9,7 @@ guests:
 - Tim Berglund
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "WTZmTcvDAB8"
 lastmod: '2020-10-09'
 title: Event-driven Architecture and Real-Time Analytics
 twitch: vmwaretanzu

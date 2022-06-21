@@ -9,7 +9,7 @@ guests:
 - Erin Schnabel
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "MFhgCHAUkDw"
 lastmod: '2020-10-09'
 title: What Should Application Developers Know about Metrics?
 twitch: vmwaretanzu

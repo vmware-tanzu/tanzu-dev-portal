@@ -148,15 +148,14 @@ Provisioning complex instances composed of several services that need to be upgr
 
 A project that  helps tackle these challenges is [Knative](http://knative.dev). Knative builds on top of the Kubernetes APIs to provide mechanisms to deliver and scale your applications in a more efficient way. Knative Serving (a module inside Knative) provides advanced traffic management, allowing multiple versions (Knative revisions) of a service to run at the same time, allowing us to control how much traffic is going to be sent to each version. This mechanism highly simplifies the implementation of different release strategies, such as canary releases and blue/green deployments. Knative Serving also deals with scaling your services based on the traffic that they are receiving, using a custom Kubernetes autoscaler. This autoscaler can handle scaling your services down to zero to save resources if your service is not being used. 
 
-![Knative enables applications to scale up and down based on the number of events emitted and consumed](images/diagrams/image4.png)
+![Knative can also be used to split traffic between different versions of a service](images/diagrams/image5.png)
 
 You can easily define how many service revisions are running at the same time. For example, as shown in the previous figure, you can see Revision 1.2 of Service A running alongside Revision 1.3, as well as how much traffic is being routed to each of these revisions. For this example, 80 percent of the traffic is routed to Revision 1.2, which is the version that we know is stable, and 20 percent to Revision 1.3, which is a new version that we are testing to see how it behaves. By default, these services can be scaled up or down based on utilization; Knative automatically monitors the traffic that is being routed to these services and scales them up or down accordingly. All these configurations are done by using Knative resources, which build on top of Kubernetes built-in resources. 
 
 Another aspect Knative covers is around events. Kubernetes by default doesn’t provide any constructs to define event consumers or producers, or any way to route events from one service to another. Knative Eventing was designed with this purpose in mind. By relying on CloudEvents as the de facto language to share events data, it offer us broker and trigger resources that allow our events to be routed from producers to any number of consumers.
 
-![Knative can also be used to split traffic between different versions of a service](images/diagrams/image5.png)
+![Knative enables applications to scale up and down based on the number of events emitted and consumed](images/diagrams/image4.png)
  
-
 You can build full event-driven architectures or just rely on events for monitoring or third-party integrations. But another great thing about Knative Eventing is that you can plug your own broker implementation, such as Kafka, RabbitMQ, or even cloud-provider-specific tools. This facilitates the multi-cloud strategy and easy integration with tools like Crossplane. 
 
 ## Learn more
