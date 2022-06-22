@@ -6,6 +6,10 @@ canonifyURLs = false
 enableRobotsTXT = true
 removePathAccents = true
 
+# Continue build even if we hit GitHub API rate limit
+# This only affects code sample page READMEs
+ignoreErrors = ["error-remote-getjson"]
+
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
 

@@ -16,7 +16,7 @@ minutes: 60
 title: "Doing More With Less and Tanzu Community Edition with DaShaun Carter"
 truncate: ''
 twitch: vmwaretanzu
-youtube: ""
+youtube: "87NxiUDlTOo"
 type: tv-episode
 ---
 
