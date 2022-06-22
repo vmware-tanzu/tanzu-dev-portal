@@ -69,6 +69,18 @@
     transition: all .2s ease-out;
   }
 
+  .homepage-banner {
+    height: 65px; 
+    color: white; 
+    background-color: #3c7995;
+    transition: all .2s ease-out;
+  }
+  .homepage-banner:hover {
+    background-color: #45a3c7;
+    color: white;
+    transition: all .2s ease-out;
+  }
+
   .lead p > a {
     color: #49afd9 !important;
   }
