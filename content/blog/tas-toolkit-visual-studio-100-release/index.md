@@ -1,4 +1,11 @@
-# Announcing General Availability of Tanzu Toolkit for Visual Studio
+---
+title: Announcing General Availability of Tanzu Toolkit for Visual Studio
+description: We're pleased to announce that the Tanzu Toolkit for Visual Studio is now generally available. Tanzu Toolkit for Visual Studio is an extension for Visual Studio 2019 and 2022 that enables users of Tanzu Application Service or other Cloud Foundry distributions to manage applications directly from within Visual Studio IDE.
+team:
+- Tim Hess
+date: '2022-06-22'
+publishDate: '2022-06-22'
+---
 
 We're pleased to announce that the Tanzu Toolkit for Visual Studio is now generally available. [Tanzu Toolkit for Visual Studio](https://github.com/vmware-tanzu/tanzu-toolkit-for-visual-studio) is an extension for Visual Studio 2019 and 2022 that enables users of Tanzu Application Service ("TAS") or other Cloud Foundry distributions to manage applications directly from within Visual Studio IDE.
 
@@ -53,7 +60,7 @@ This extension will retrieve recent logs for an application and connect to the l
 
 ### Remote Debugging Applications on Tanzu Application Service
 
-One of the big challenges when working with cloud native applications is understanding what goes wrong in your application.  Often the best way to figure out what’s going on is by stepping through the code. There has been [a relatively involved way](https://dotnetcookbook.com/core/remote-debug/) to do this for a while, but Tanzu Toolkit for Visual Studio provides a much more streamlined experience that enables you to step through code while your application is running in a remote TAS environment with only a few mouse clicks.
+One of the big challenges when working with cloud native applications is understanding what goes wrong in your application.  Often the best way to figure out what’s going on is by stepping through the code. There has been [a relatively involved way](/cookbooks/dotnet/core/remote-debug/) to do this for a while, but Tanzu Toolkit for Visual Studio provides a much more streamlined experience that enables you to step through code while your application is running in a remote TAS environment with only a few mouse clicks.
 
 Start the remote debug process by right-clicking on the project you want to deploy and select "Remote Debug on Tanzu Application Service"
 
