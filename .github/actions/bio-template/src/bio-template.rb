@@ -44,13 +44,17 @@ def processTemplate(inPath, outPath, dryrun)
             writeToFile(l, outFD, dryrun)
         end 
     end
+
+    if outFD != nil
+        outFD.close
+    end
 end
 
 def writeToFile(text, outFD, dryrun)
     if dryrun
         puts text
     else
-        outFD.write("#{text}\n")
+        outFD.write("#{text}")
     end
 end
 
