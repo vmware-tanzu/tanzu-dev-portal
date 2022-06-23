@@ -2,7 +2,7 @@ require 'optparse'
 require 'uri'
 require 'net/http'
 
-TEMPLATE_FILENAME = "template.md"
+TEMPLATE_FILENAME = "_index.template"
 INDEX_FILENAME = "_index.md"
 MARKER_REGEX = /<!\-\- ?URL: ?(.*) ?\-\->/
 
