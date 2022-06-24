@@ -60,4 +60,3 @@ Josh is the host of a podcast called [_A Bootiful Podcast_](https://bootifulpodc
 ## Livelessons 
 
 Josh has done longer-form training courses - seen by hundreds of thousands of people worldwide - [on the Livelessons platform](https://joshlong.com/livelessons.html) since 2013. 
-
