@@ -23,3 +23,8 @@ Paris has spent the last 20 years helping communities grow and flourish — from
 
 <!--more-->
 
+
+## Highlights
+
+{{< youtube id="qeW9epuirzU" class="youtube-video-shortcode" >}}
+
