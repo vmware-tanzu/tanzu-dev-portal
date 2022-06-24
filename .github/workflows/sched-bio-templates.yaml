@@ -1,4 +1,4 @@
-name: Process Bio Template PAges
+name: Process Bio Template Pages
 on:
   schedule:
     - cron: "0 8 * * *"
@@ -11,14 +11,12 @@ jobs:
         name: Checkout
         with:
           fetch-depth: 1
-          token: ${{ secrets.PA_TOKEN }}
+          token: ${{ secrets.BIO_PA_TOKEN }}
       - name: Checkout Bio Page Branch
         run: |
           git checkout -B bio-template-${{ github.run_id }}
       - uses: ./.github/actions/bio-template
         name: Process Bio Template Pages
-        env:
-          API_KEY: ${{ secrets.YT_API_KEY }}
       - name: Check for modified files
         id: git-check
         run: |
