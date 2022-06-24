@@ -1,0 +1,33 @@
+name: Process Bio Template PAges
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+jobs:
+  bio-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.PA_TOKEN }}
+      - name: Checkout Bio Page Branch
+        run: |
+          git checkout -B bio-template-${{ github.run_id }}
+      - uses: ./.github/actions/bio-template
+        name: Process Bio Template Pages
+        env:
+          API_KEY: ${{ secrets.YT_API_KEY }}
+      - name: Check for modified files
+        id: git-check
+        run: |
+          git add --all
+          echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
+      - name: Commit files
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update bio page from template" -a
+          git push origin bio-template-${{ github.run_id }}
