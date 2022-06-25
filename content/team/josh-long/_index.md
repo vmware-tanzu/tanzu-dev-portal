@@ -144,7 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
-* [Spring Tips: Learn Spring for GraphQL (the last two episodes: parts 7 and 8)](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8) (2022-06-23) 
+* [Spring Tips: Learn Spring for GraphQL (the last two episodes: parts 7 and 8)](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8) (2022-06-24) 
 * [A Bootiful Podcast: JVM and .NET legend Ted Neward on... just about everything](https://spring.io/blog/2022/06/23/a-bootiful-podcast-jvm-and-net-legend-ted-neward-on-just-about-everything) (2022-06-23) 
 * [This Week in Spring - June 21st, 2022](https://spring.io/blog/2022/06/21/this-week-in-spring-june-21st-2022) (2022-06-21) 
 * [Bootiful Podcast: Spring Framework contributor Sébastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
@@ -190,18 +190,22 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Service Registration and Discovery</em> - In this section we'll look at how to register and discover services dynamically with a service registry like Netflix Eureka or Hashicorp Consul. (Spring Cloud)</p></li>
 <li><p><em>Functions-as-a-service</em> - In this section we'll look at how to build serverless-style applications (Spring Cloud Function)</p></li></ul>
 
+
 ### Bootiful Testing (1-3h)
 
 <p>How would you feel if you knew that any pat of the code was at most a few minutes away from being shippable and delivered into production? How would you feel if you knew that any part of the code is a few ctrl+z's away from being shippable and delivered into production? Emboldened and confident? Test driven development (TDD) gives you that. TDD allows you to proceed with confidence that you're building the right thing. It provides you with imminent-horizons that you can meet and measure. TDD gives developers the confidence to go faster, secure in the knowledge that what they break they will fix and be able to improve. In this talk, join Spring Developer Advocate Josh Long (@starbuxman) as he looks at how to test Spring applications and services. We'll look at how to test basic components, mocks, how to take advantage of test slices, and how to test web applications. We'll also look at how to ensure that API producers and API consumers work well together using consumer driven contract testing (CDCT) without sacrificing the testing pyramid for end-to-end integration tests.</p>
+
 
 ### Bootiful GraphQL
 
 <p>Hi Spring fans! Data wants to be free and so much of what we do in the wide and wonderful world of microservices is all about connecting data. It's difficult. There's a tension between how we build well-encapsulated microservices and how we connect their data in our clients. Until now. Facebook open sourced GraphQL in 2015 (also the same year that "Avengers: Age of Ultron," a movie about a psychotic super computer that wanted to take over the world came out. No coincidence, surely...). GraphQL is an alternative to the REST constraint on HTTP. It provides an easy way to model queries (reads, like an HTTP <code>GET</code>), subscriptions (longer-lived, asynchronous notifications sent to the client) and mutations (updates). Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how to build data gateways for every clients' needs with Spring GraphQL.</p>
 
+
 ### Cloud Native Java (3-6h)
 
 <p>“It is not necessary to change. Survival is not mandatory.” -W. Edwards Deming</p>
 <p>Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage. Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms automate operations work and break down the need for ITIL tickets and change management boards. But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.</p>
+
 
 ### Bootiful Kotlin
 
@@ -209,13 +213,16 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <p>Kotlin, the productivity-focused language from our friends at JetBrains, takes up the slack to make the experience leaner, cleaner and even more pleasant!</p>
 <p>The Spring and Kotlin teams have worked hard to make sure that Kotlin and Spring Boot are a first-class experience for all developers trying to get to production, faster and safer. Come for the Spring and stay for the Bootiful Kotlin.</p>
 
+
 ### Kubernetes Native Java
 
 <p>Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a>, and we'll look at how Spring Boot makes writing blisteringly fast, cloud-native, and scalable services more effortless than ever.</p>
 
+
 ### New Year, New Spring
 
 <p>Hi, Spring fans! It's 2022, a brand new year, and this year's going to be a big one! There's a lot in store - Spring Framework 6 and Spring Boot 3, Spring GraphQL, GraalVM native image support, and so much more. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at a new Spring for a new year and new paradigms.</p>
+
 
 ### Cloud Native Java (2 days)
 
@@ -263,4 +270,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
   <li>the Refresh Scope</li>
   <li>The Spring Cloud Config Server</li>
   <li>Reading data from config trees and environment variables in a Kubernetes environment</li>
-  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernetes' Conf
+  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernete
