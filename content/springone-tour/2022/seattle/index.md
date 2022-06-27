@@ -25,7 +25,6 @@ sponsors:
 hide_newsletter: true
 ---
 
-
 <div id="day-1-agenda" class="agenda p-lg-5 p-3">
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">8:00 AM PDT</div>
@@ -96,11 +95,12 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">2:00 PM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#tap">TAP and Spring: The Quickest Path To Production</a>
+            <a class="lightbox" href="#azure-spring-apps">Simplify and Scale Enterprise Spring Apps in the Cloud</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#ryan-baxter">Ryan Baxter</a>
+                <a class="lightbox" href="#adib-saikali">Adib Saikali</a>
+                Asir Selvasingh
             </h3>
         </div>
     </div>
