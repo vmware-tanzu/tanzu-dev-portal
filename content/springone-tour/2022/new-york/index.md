@@ -176,7 +176,7 @@ hide_newsletter: true
         <div class="time col-4 pl-0 h4">9:00 AM EDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#dependency-injection">More Maintainable, Testable Applications with Dependency
-                Injection in Spring Boot</a>
+                Injection in Spring</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
