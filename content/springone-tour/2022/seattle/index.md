@@ -16,6 +16,10 @@ location:
     - W Seattle
     - 1112 4th Ave
     - Seattle, WA
+meetup:
+  description: "Join us on Monday, July 11 at 6:00 pm in a code walkthrough with <a class='lightbox' href='#mario-gray'>Mario Gray</a>, where he will distinguish RSocket Controllers, Clients, and the security implementation that makes the application aware of who is calling, and what the caller is capable of. Register for the Meetup <a href='https://www.meetup.com/seajug/events/285809782' target='_blank'>here</a>."
+  link: https://www.meetup.com/seajug/events/285809782
+  learn_more: false
 sponsors:
     - name: Contrast Security
       sponsorship_level: gold

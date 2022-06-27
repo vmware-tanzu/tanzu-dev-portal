@@ -5,13 +5,15 @@ enddate: '2022-10-05T00:00:00-07:00'
 publish: true
 aliases:
     - /springone-tour/2022/atlanta
-#location:
-#    - McCaw Hall 321 Mercer St Seattle, WA 98109
-logo_filename: "atlanta_cityscape.svg"
 og_image: "/images/og/s1t_2022_og.png"
+logo_filename: "atlanta_cityscape.svg"
 Description: SpringOne Tour Atlanta
 Title: SpringOne Tour Atlanta
 LinkTitle: Atlanta
 city_name: Atlanta
+location:
+    - Hotel Colee
+    - 3377 Peachtree Rd NE
+    - Atlanta, GA
 hide_newsletter: true
 ---
