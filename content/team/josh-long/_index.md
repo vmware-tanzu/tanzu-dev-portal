@@ -96,9 +96,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Upcoming Appearances
 
-### Korea Spring Meetup, June 2022
-**2022-06-21** - I'm so looking forward to presenting at the (virtual) <a href="https://connect.tanzu.vmware.com/korea-spring-meetup-june.html">Korean Spring Meetup in June, 2022</a>
-
 ### new york springone tour 2022
 **2022-06-27** - I'm so looking forward to being at the SpringOne Tour New York 2022 event! It's been so long since I've been to the big apple and I can't wait to return! 
 
@@ -270,4 +267,13 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
   <li>the Refresh Scope</li>
   <li>The Spring Cloud Config Server</li>
   <li>Reading data from config trees and environment variables in a Kubernetes environment</li>
-  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernete
+  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernetes' ConfigMap support</li>
+ </ul></li>
+<li><p>Service Registration and Discovery</p>
+ <ul>
+  <li>Discovery Servers</li>
+  <li>Client-side Loadbalancing</li>
+ </ul></li>
+<li><p>Packaging for Production</p>
+ <ul>
+  <li>Doc
