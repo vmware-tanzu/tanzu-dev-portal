@@ -2,6 +2,8 @@
 title: Java
 herotitle: Welcome to Java at VMware
 label: java
+type: languages
+layout: single
 youtube: Spzug_SjJnM
 video: true
 heroimage: /images/languages/java/language-hero-transparent-fixed-java.svg

@@ -59,13 +59,25 @@
   }
 
   .steeltoe-banner {
-    height: 65px; 
-    color: white; 
+    height: 65px;
+    color: white;
     background-color: #324f61;
     transition: all .2s ease-out;
   }
   .steeltoe-banner:hover {
     background-color: #446a82;
+    transition: all .2s ease-out;
+  }
+
+  .homepage-banner {
+    height: 65px;
+    color: white;
+    background-color: #3c7995;
+    transition: all .2s ease-out;
+  }
+  .homepage-banner:hover {
+    background-color: #45a3c7;
+    color: white;
     transition: all .2s ease-out;
   }
 
@@ -821,19 +833,22 @@
       background-position: bottom right 25%;
     }
     &.newyork .container-sm {
-      background-size: 55%;
-      background-position: bottom right 2%;
+      background-size: 58%;
+      background-position: bottom right 30%;
     }
     &.toronto .container-sm {
       background-size: 51%;
       background-position: 75% 100%;
     }
     &.seattle .container-sm {
-      background-size: 46%;
-      background-position: bottom right 22%;
+      background-size: 56%;
+      background-position: bottom right 29%;
+    }
+    &.amsterdam .container-sm {
+      background-size: 57%;
     }
     &.atlanta .container-sm {
-    background-position: bottom right 22%;
+      background-position: bottom right 35%;
     }
     #hero-content {
       max-width: 75%;

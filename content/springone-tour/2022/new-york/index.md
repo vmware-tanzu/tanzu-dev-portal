@@ -6,6 +6,7 @@ publish: true
 aliases:
     - /springone-tour/2022/new-york
 og_image: "/images/og/s1t_2022_og.png"
+logo_filename: "nyc_cityscape.svg"
 Description: SpringOne Tour New York
 Title: SpringOne Tour New York
 LinkTitle: New York
@@ -15,7 +16,10 @@ location:
     - Convene
     - 237 Park Ave
     - New York, NY
-logo_filename: "nyc_cityscape.svg"
+meetup:
+  description: "Come join us on Monday. June 27 at 5:30 pm to learn about the finer details of moving from a monolithic architecture to a microservices architecture with examples in .NET 6 from <a class='lightbox' href='#layla-porter'>Layla Porter</a>. Register for the Meetup <a href='https://www.meetup.com/nyc-net-developers/events/286495438' target='_blank'>here</a>."
+  link: https://www.meetup.com/nyc-net-developers/events/286495438
+  learn_more: false
 hide_newsletter: true
 ---
 
@@ -29,13 +33,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">9:00 AM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#dependency-injection">More Maintainable, Testable Applications with Dependency
-                Injection in Spring Boot</a>
+            <a class="lightbox" href="#responsible-microservices">Responsible Microservices</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#layla-porter">Layla Porter</a>
-                <a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a>
+                <a class="lightbox" href="#nate-schutta">Nate Schutta</a>
             </h3>
         </div>
     </div>
@@ -155,15 +157,9 @@ hide_newsletter: true
             </h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:30 PM EDT</div>
-        <div class="talk-title col-5 h4">Tanzu Sandbox time and Q&A</div>
-        <div class="col-sm-1 col-0 px-0 px-0"></div>
-        <div class="name col-3"></div>
-    </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">5:00 PM EDT</div>
-        <div class="talk-title col-5 h4">Networking Reception</div>
+        <div class="time col-4 pl-0 h4">4:30 PM EDT</div>
+        <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
@@ -179,17 +175,18 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">9:00 AM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#cloud-native-architectures">Cloud Native Architectures</a>
+            <a class="lightbox" href="#dependency-injection">More Maintainable, Testable Applications with Dependency
+                Injection in Spring</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#nate-schutta">Nate Schutta</a>
                 <a class="lightbox" href="#layla-porter">Layla Porter</a>
+                <a class="lightbox" href="#jakub-pilimon">Jakub Pilimon</a>
             </h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">9:30 AM EDT</div>
+        <div class="time col-4 pl-0 h4">9:40 AM EDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
@@ -200,13 +197,13 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:10 AM EDT</div>
+        <div class="time col-4 pl-0 h4">10:20 AM EDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">10:30 AM EDT</div>
+        <div class="time col-4 pl-0 h4">10:40 AM EDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#spring-cli">A New CLI For Spring Developer Productivity</a>
         </div>
@@ -215,7 +212,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:20 AM CDT</div>
+        <div class="time col-4 pl-0 h4">11:30 AM CDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#omgdevsecopsbbq">OMGDEVSECOPSBBQ</a>
         </div>
@@ -224,7 +221,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM EDT</div>
+        <div class="time col-4 pl-0 h4">11:50 AM EDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#k8s-rdbms">RDBMS on Kubernetes: Data Science Done Right</a>
         </div>
@@ -235,7 +232,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">12:00 PM EDT</div>
+        <div class="time col-4 pl-0 h4">12:10 PM EDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
@@ -269,7 +266,7 @@ hide_newsletter: true
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
+    <div class="row py-3 flex-nowrap">
         <div class="time col-4 pl-0 h4">3:20 PM EDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#securing-gitops">Securing GitOps Debug Access with Pinniped, Dex, and GitHub</a>
@@ -277,18 +274,6 @@ hide_newsletter: true
         <div class="name col-3">
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#leigh-capili">Leigh Capili</a>
-            </h3>
-        </div>
-    </div>
-    <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:00 PM EDT</div>
-        <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#codezillas">Codezillas: The Universal Truths of Software Development</a>
-        </div>
-        <div class="name col-3">
-            <h3 class="h4 py-0">
-                <a class="lightbox" href="#nate-schutta">Nate Schutta</a>
-                <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
     </div>

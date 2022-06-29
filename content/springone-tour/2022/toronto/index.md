@@ -6,16 +6,20 @@ publish: true
 aliases:
     - /springone-tour/2022/chicago
 og_image: "/images/og/s1t_2022_og.png"
+logo_filename: "toronto_cityscape.svg"
 Description: SpringOne Tour Toronto
 Title: SpringOne Tour Toronto
 LinkTitle: Toronto
 city_name: Toronto
-isRegOpen: true
+isRegOpen: false
 location:
     - 'Vantage Venues'
     - '150 King St W'
     - 'Toronto, ON'
-logo_filename: "toronto_cityscape.svg"
+meetup:
+  description: "Level Up Your Integration Testing With Testcontainers<br/>Join <a class='lightbox' href='#cora-iberkleid'>Cora Iberkleid</a> and <a class='lightbox' href='#dan-vega'>Dan Vega</a> for a pizza lunch on Monday, June 6. Register <a href='https://www.meetup.com/toronto-spring-users-group/events/286270337' target='_blank'>here</a>."
+  link: https://www.meetup.com/toronto-spring-users-group/events/286270337
+  learn_more: false
 hide_newsletter: true
 ---
 
@@ -68,7 +72,7 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:20 AM EDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#supply-chain-choreography">Path to Production using Supply Chain Choreography</a>
+            <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -128,6 +132,7 @@ hide_newsletter: true
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
                 <a class="lightbox" href="#leigh-capili">Leigh Capili</a>
+                <a class="lightbox" href="#dashaun-carter">DaShaun Carter</a>
             </h3>
         </div>
     </div>

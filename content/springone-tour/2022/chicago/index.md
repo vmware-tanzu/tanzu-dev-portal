@@ -16,7 +16,10 @@ Description: SpringOne Tour Chicago
 Title: SpringOne Tour Chicago
 LinkTitle: Chicago
 city_name: Chicago
-meetup: As a part of the citywide takeover, Spring Developer Advocate <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> will be presenting his talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
+meetup:
+  description: As a part of the citywide takeover, Spring Developer Advocate <a href="/developer/team/dashaun-carter" target="_blank">DaShaun Carter</a> will be presenting his talk, “Bootiful GraalVM,” at the Chicago Java User Group on Monday, April 25, at 7 PM.
+  learn_more: true
+  link: https://www.meetup.com/ChicagoJUG/events/283784010/
 sponsors:
     - name: Rollbar
       sponsorship_level: gold

@@ -25,9 +25,10 @@ speakers:
 - Cora Iberkleid
 - Paul Czarkowski
 - Ryan Baxter
-- Tyler Britten
 - Mario Gray
 - Shawn Sherwood
+workshop:
+- Tyler Britten
 subtitle: Livestream and Workshop
 title: Booternetes
 twitch: vmwaretanzu

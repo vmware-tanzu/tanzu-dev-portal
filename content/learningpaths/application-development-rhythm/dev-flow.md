@@ -61,7 +61,7 @@ work.
 Before a developer starts work,
 the work must be specified and prioritized in a backlog.
 
-The work is specified as discrete *Stories* that are:
+The work is specified as discrete [*User Stories*](/learningpaths/application-development/prioritizing-outcomes/#stories) that are:
 
 - Specifications of *what* to build (or fix).
 - Estimated by the team.

@@ -405,6 +405,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Conf
 Config-[Pp]rovider
 [Cc]onfig-server
 Config-Writer
@@ -535,6 +536,7 @@ debuggable
 decrypt(ed|ing)?
 [Dd]eduplicate
 defence
+degradations
 DEK(s)?
 delayDuration
 Deleuze
@@ -547,6 +549,7 @@ Depedency
 dependant
 deployable
 [Dd]eployable
+deprioritized
 deps
 deserialize
 deserializes
@@ -724,6 +727,7 @@ faq(s)?
 Fastlane
 favourite(s)?
 FC
+fCOxnu6FYA
 FeignClient
 FelixConfiguration
 Fewell
@@ -748,6 +752,7 @@ Florent
 [fF]luentd('s)?
 FluxCD
 flyyy
+focussed
 focussing
 FoodService
 formatter
@@ -816,6 +821,7 @@ gemfire.
 GemFire's
 Gen4
 Geneve
+geo-distributed
 geode-async-listener-spring-jpa
 geode-dunit
 geode-kafka-connector
@@ -1771,6 +1777,7 @@ Pythonic
 QCon
 QoS
 Querier
+queryable
 queuedEvents
 QueueStatistics
 Quickstart
@@ -1873,6 +1880,7 @@ RHEL
 Riak
 Rickard
 Ries
+Riesenberg
 RKE
 rkt
 RMIT
@@ -2009,7 +2017,7 @@ skillset
 Skyscanner
 SLA(s)?
 Sletten
-SLI(s)
+SLI(s)?
 slideshare
 SLO(s)?
 Sloka
@@ -2062,6 +2070,7 @@ Standley
 starbuxman
 STARGATE|Stargate
 Starlark
+StarTree
 startupProbe(s)?
 stateful
 StatefulSet(s)?
@@ -2348,6 +2357,7 @@ WCF
 WCF-TCP
 [Ww]eb[Hh]ook('s)?
 [wW]eb[sS]ervice(s)?
+webAPI
 WebAPI
 WebApiConfig
 WebApp
@@ -2380,6 +2390,7 @@ Windows2012r2
 WinRM
 [Ww]ireframe(s)?
 WireMock
+withfile-scoped
 Wittenkamp
 Wittrock
 WomenOfDotNet

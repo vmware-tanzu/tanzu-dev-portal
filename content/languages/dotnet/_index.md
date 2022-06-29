@@ -2,6 +2,8 @@
 title: .NET
 herotitle: Welcome to .NET at VMware
 label: dotnet
+type: languages
+layout: single
 show: dotnet-wild
 event: dotnet-beyond
 heroimage: /images/languages/dotnet/language-hero-transparent-fixed-dotnet.svg

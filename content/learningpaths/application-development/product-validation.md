@@ -97,15 +97,13 @@ By measuring the impact that a certain feature has on our business, we can deter
 ## Define hypothesis, test, and validation criteria {id=hypothesis}
 The **hypothesis** is a falsifiable version of our _assumption_. We _learn_ from the outcome of our hypothesis. Only test one variable or idea in each hypothesis. Otherwise, you won’t get reliable data because you won’t be able to tell which of the variables led to a particular outcome. 
 
-{{% callout %}}
-"We think X change/feature will impact Y metric in Z way for a certain group of users."
-{{% /callout %}}
+Example: 
+> We think X change/feature will impact Y metric in Z way for a certain group of users.
 
 The **test** is how we intend to validate our hypothesis, proving it to be true or false. The test is the thing you will _build_. 
 
-{{% callout %}}
-"To test this hypothesis we will put this feature/product/prototype in front of some segment of users."
-{{% /callout %}}
+Example: 
+> To test this hypothesis we will put this feature/product/prototype in front of some segment of users.
 
 Test examples:
 - [A/B test](https://tanzu.vmware.com/developer/practices/lean-experiments/)
@@ -115,9 +113,8 @@ Test examples:
 
 The **validation criteria** is the evidence that proves the hypothesis. This is what we _measure_. 
 
-{{% callout %}}
-"We will know if we were successful if this business metric has moved by X% by the end of our test."
-{{% /callout %}}
+Example: 
+> We will know if we were successful if this business metric has moved by X% by the end of our test.
 
 Business metric examples: 
 - [Net Promoter Score](https://delighted.com/blog/nps-matters-product-management)
@@ -128,13 +125,12 @@ Business metric examples:
 
 Here is an example of a hypothesis, a test, and the validation criteria for a hypothetical video baby monitor app seeking to expand their market share.
 
-{{% callout %}}
-"We believe that allowing parents to share clips of their children with friends from the video monitor will lead to a significant usage of the share feature and exposure to new potential customers."
-
-"We will run an A/B test and deliver a Share feature to half of our “recording-happy” user segment for 16 weeks."
-
-"We will know if we were successful if we see an average of one clip shared per household,  per week in the test group."
-{{% /callout %}}
+Full example: 
+> We believe that allowing parents to share clips of their children with friends from the video monitor will lead to a significant usage of the share feature and exposure to new potential customers.
+>
+> We will run an A/B test and deliver a Share feature to half of our “recording-happy” user segment for 16 weeks.
+>
+> We will know if we were successful if we see an average of one clip shared per household,  per week in the test group.
 
 This is a relatively low-risk test that will give them a lot of confidence as to whether their customer will benefit from the proposed feature.
 

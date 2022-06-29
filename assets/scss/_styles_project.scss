@@ -1597,7 +1597,7 @@ body {
     }
     &:hover, &:focus {
       .description .btn {
-        background: $link-hover-color !important;
+        background: $link-hover-color;
       }
       .thumbnail-gradient {
         opacity: 0;

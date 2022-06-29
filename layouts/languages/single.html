@@ -47,6 +47,7 @@
                 <div class="container py-5">
                     <div class="container mb-5 blogs">
                         <h2 class="mb-4">Blogs</h2>
+                        <a href='{{ printf "/languages/%s/blogs" .Params.label | relURL }}'><h4 class="mb-4">See All</h4></a>
                         <div class='row justify-content-between'>
                         {{ range first 3 $blogs }}
                             {{ $rendered = $rendered | append . }}

@@ -14,6 +14,10 @@ github: "danvega"
 pinterest: ""
 instagram: ""
 youtube: "danvega"
+
+# Metadata
+include_host:
+- spring-office-hours
 ---
 
 Dan Vega is a Spring Developer Advocate at VMware Tanzu. He has been developing software for the web for over 20 years and his superpower is problem-solving. Dan is a [blogger](https://www.danvega.dev/blog), [YouTuber](http://www.youtube.com/danvega), [course creator](https://www.danvega.dev/courses), and speaker. He is a lifelong learner and his passion is sharing his knowledge with the developer community. Dan lives near Cleveland Ohio with his beautiful wife and 2 daughters. When he isn't writing code or teaching he enjoys spending time with his family, lifting weights, running, or reading a good book.

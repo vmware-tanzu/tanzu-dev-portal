@@ -2,7 +2,7 @@
 title: Effective Efficient Kubernetes Debugging
 weight: 1
 featured: true
-featuredspot: 1
+featuredspot: 2
 duration: 60
 layout: intro
 description: Learn how to effectively and efficiently debug issues on Kubernetes
