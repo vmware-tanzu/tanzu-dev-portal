@@ -29,6 +29,7 @@ sponsors:
 hide_newsletter: true
 ---
 
+
 <div id="day-1-agenda" class="agenda p-lg-5 p-3">
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">8:00 AM PDT</div>
@@ -109,7 +110,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:40 PM PDT</div>
+        <div class="time col-4 pl-0 h4">2:30 PM PDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
@@ -125,7 +126,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:20 PM PDT</div>
+        <div class="time col-4 pl-0 h4">3:30 PM PDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#who-should-use-k8s">Who Should Use Kubernetes?</a>
         </div>
@@ -136,7 +137,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">3:40 PM PDT</div>
+        <div class="time col-4 pl-0 h4">3:50 PM PDT</div>
         <div class="talk-title col-5 h4">
             <a class="lightbox" href="#canz-u-tanzu">Canz U Tanzu?</a>
         </div>
@@ -149,7 +150,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 flex-nowrap">
-        <div class="time col-4 pl-0 h4">4:00 PM PDT</div>
+        <div class="time col-4 pl-0 h4">4:10 PM PDT</div>
         <div class="talk-title col-5 h4">Tanzu Sandbox Time and Q&A</div>
         <div class="name col-3"></div>
     </div>
