@@ -74,11 +74,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:20 AM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#graphql">Getting Started with Spring for GraphQL</a>
+            <a class="lightbox" href="#k8s-rdbms">RDBMS on Kubernetes: Data Science Done Right</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#dan-vega">Dan Vega</a>
+                <a class="lightbox" href="#steven-pousty">Steven Pousty</a>
             </h3>
         </div>
     </div>
@@ -205,11 +205,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:20 AM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#k8s-rdbms">RDBMS on Kubernetes: Data Science Done Right</a>
+            <a class="lightbox" href="#graphql">Getting Started with Spring for GraphQL</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#steven-pousty">Steven Pousty</a>
+                <a class="lightbox" href="#dan-vega">Dan Vega</a>
             </h3>
         </div>
     </div>
