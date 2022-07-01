@@ -1,7 +1,7 @@
 name: Process Bio Template Pages
 on:
   schedule:
-    - cron: "0/30 * * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 jobs:
   bio-pages:
@@ -14,7 +14,8 @@ jobs:
           token: ${{ secrets.BIO_PA_TOKEN }}
       - name: Checkout Bio Page Branch
         run: |
-          git checkout -B bio-template-${{ github.run_id }}
+          git fetch
+          git checkout main
       - uses: ./.github/actions/bio-template
         name: Process Bio Template Pages
       - name: Check for modified files
@@ -28,4 +29,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Update bio page from template" -a
-          git push origin bio-template-${{ github.run_id }}
+          git push origin main

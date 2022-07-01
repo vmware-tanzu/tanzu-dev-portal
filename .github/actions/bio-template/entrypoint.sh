@@ -14,6 +14,6 @@ if [[ -z "$GITHUB_REPOSITORY" ]]; then
   exit 1
 fi
 
-echo "--> Run the audit"
+echo "--> Process the bio pages"
 cd $GITHUB_WORKSPACE
 ruby .github/actions/bio-template/src/bio-template.rb --source .
