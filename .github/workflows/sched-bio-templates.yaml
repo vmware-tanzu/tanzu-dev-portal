@@ -12,9 +12,10 @@ jobs:
         with:
           fetch-depth: 1
           token: ${{ secrets.BIO_PA_TOKEN }}
-      # - name: Checkout Bio Page Branch
-      #   run: |
-      #     git checkout main
+      - name: Checkout Bio Page Branch
+        run: |
+          git fetch
+          git checkout main
       - uses: ./.github/actions/bio-template
         name: Process Bio Template Pages
       - name: Check for modified files
