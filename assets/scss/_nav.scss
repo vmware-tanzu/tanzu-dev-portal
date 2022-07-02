@@ -152,7 +152,7 @@ nav {
     z-index: 1000 !important;
 
     #theme-select {
-        width: 108px;
+        width: 72px;
         height: 36px;
         padding: 0px !important;
 
@@ -267,7 +267,7 @@ nav {
             
     }
     #learn {
-        right: 492px;
+        right: 456px;
         width: 130px;
 
         .drop-menu {
@@ -283,15 +283,15 @@ nav {
         }
     }
     #topics {        
-        right: 490px;
+        right: 454px;
         width: 135px;
     }
     #tanzutv {
-        right: 336px;
+        right: 300px;
         width: 149px;
     }
     #community {
-        right: 180px;
+        right: 144px;
         width: 156px; 
     }
     .drop-target {
@@ -335,17 +335,17 @@ nav {
         position: absolute;
         
         &.learn-scope {
-            left: -227px;
+            left: -226px;
             width: 570px;
             height: 485px;
         }
         &.tanzutv-scope {
-            left: 87px;
+            left: 86px;
             width: 310px;
             height: 450px;
         }
         &.community-scope {
-            left: 237px;            
+            left: 240px;            
             width: 200px;
             height: 160px;
         }
