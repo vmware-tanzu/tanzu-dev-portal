@@ -66,8 +66,8 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 ### JVM and .NET legend Ted Neward on... just about everything 
 **2022-06-23** [listen](https://api.bootifulpodcast.fm/podcasts/032bfb82-673f-4a24-9521-4316161e615d/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">I (@starbuxman)</a> talk to my old friend, world-famous polyglot, code curmudgeon, software philosopher, industry veteran, and legend of ecosystems aplenty, <a href="https://twitter.com/tedneward">Ted Neward (@tedneward)</a></p>
 
-### Spring Framework contributor Sébastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly
-**2022-06-16** [listen](https://api.bootifulpodcast.fm/podcasts/0083a911-e923-4982-8c22-d024a1eee2c7/produced-audio) <p>Hi, Spring fans! In this installment Josh Long (@starbuxman) talks to Spring Framework contributor Sébastien Deleuze (@sdeleuze) on GraalVM, AOT, project Leyden, and WebAssembly.</p>
+### Spring Framework contributor S?bastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly
+**2022-06-16** [listen](https://api.bootifulpodcast.fm/podcasts/0083a911-e923-4982-8c22-d024a1eee2c7/produced-audio) <p>Hi, Spring fans! In this installment Josh Long (@starbuxman) talks to Spring Framework contributor S?bastien Deleuze (@sdeleuze) on GraalVM, AOT, project Leyden, and WebAssembly.</p>
 
 ### Kubernetes legend and friend Cora Iberkleid on Tanzu, Cartographer, and more 
 **2022-06-09** [listen](https://api.bootifulpodcast.fm/podcasts/564cc3c0-378f-45cb-86c3-e652da8067b0/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to Kubernetes legend and fellow Tanzu Developer Advocate Cora Iberkleid (@ciberkleid) about Kubernetes and Cartographer supply chains.</p>
@@ -144,7 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [Spring Tips: Learn Spring for GraphQL (the last two episodes: parts 7 and 8)](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8) (2022-06-24) 
 * [A Bootiful Podcast: JVM and .NET legend Ted Neward on... just about everything](https://spring.io/blog/2022/06/23/a-bootiful-podcast-jvm-and-net-legend-ted-neward-on-just-about-everything) (2022-06-23) 
 * [This Week in Spring - June 21st, 2022](https://spring.io/blog/2022/06/21/this-week-in-spring-june-21st-2022) (2022-06-21) 
-* [Bootiful Podcast: Spring Framework contributor Sébastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
+* [Bootiful Podcast: Spring Framework contributor S??bastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
 * [Spring Tips: Learn Spring for GraphQL (parts 5 and 6 of an ongoing series)](https://spring.io/blog/2022/06/14/spring-tips-learn-spring-for-graphql-parts-5-and-6-of-an-ongoing-series) (2022-06-14) 
 * [This Week in Spring - June 14th, 2022](https://spring.io/blog/2022/06/14/this-week-in-spring-june-14th-2022) (2022-06-14) 
 * [Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)](https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series) (2022-06-10) 
@@ -153,10 +153,10 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### Cloud Native Java (5-10 Days)
 
-<p>“It is not necessary to change. Survival is not mandatory.” -W. Edwards Deming</p>
-<p>Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage.</p>
-<p>Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms automate operations work and break down the need for ITIL tickets and change management boards.</p>
-<p>But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.</p>
+<p>?It is not necessary to change. Survival is not mandatory.? -W. Edwards Deming</p>
+<p>Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It?s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage.</p>
+<p>Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget ?devops,? cloud-based services and platforms automate operations work and break down the need for ITIL tickets and change management boards.</p>
+<p>But velocity, for velocity?s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we?ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.</p>
 <p>In this workshop we'll look at how to build cloud-native Java applications. A cloud native application is:</p>
 <ul><li>elastic</li>
 <li>agile</li>
@@ -178,109 +178,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
 <li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
 <li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distribute these longer-running workloads across a cloud fabric. (Spring Batch, Spring Cloud Task, Spring Cloud Data Flow)</p></li>
-<li><p><em>Workflow</em> - In this section we'll look at how to use a workflow engine to choreograph work across a cloud platform, using messaging-centric microservics and incorporating human actors to achieve a result. (Activiti, Spring Cloud Stream)</p></li>
-<li><p><em>Edge-services</em> - In this section we'll look at how to build client-centric adapter APIs. and concerns like rate limiting, backends-for-front-ends, proxying, and other cross-cutting concerns. (Spring Cloud, Zuul, Spring Cloud Gateway)</p></li>
-<li><p><em>Security</em> - In this section we'll look at how to secure individual microservices. We'll look at how to perpetuate authenticated principals across service invocations with OAuth. (Spring Boot, Spring Security OAuth, Spring Cloud Security)</p></li>
-<li><p><em>Service Registration and Discovery</em> - In this section we'll look at how to register and discover services dynamically with a service registry like Netflix Eureka or Hashicorp Consul. (Spring Cloud)</p></li>
-<li><p><em>Functions-as-a-service</em> - In this section we'll look at how to build serverless-style applications (Spring Cloud Function)</p></li></ul>
-
-
-### Bootiful Testing (1-3h)
-
-<p>How would you feel if you knew that any pat of the code was at most a few minutes away from being shippable and delivered into production? How would you feel if you knew that any part of the code is a few ctrl+z's away from being shippable and delivered into production? Emboldened and confident? Test driven development (TDD) gives you that. TDD allows you to proceed with confidence that you're building the right thing. It provides you with imminent-horizons that you can meet and measure. TDD gives developers the confidence to go faster, secure in the knowledge that what they break they will fix and be able to improve. In this talk, join Spring Developer Advocate Josh Long (@starbuxman) as he looks at how to test Spring applications and services. We'll look at how to test basic components, mocks, how to take advantage of test slices, and how to test web applications. We'll also look at how to ensure that API producers and API consumers work well together using consumer driven contract testing (CDCT) without sacrificing the testing pyramid for end-to-end integration tests.</p>
-
-
-### Bootiful GraphQL
-
-<p>Hi Spring fans! Data wants to be free and so much of what we do in the wide and wonderful world of microservices is all about connecting data. It's difficult. There's a tension between how we build well-encapsulated microservices and how we connect their data in our clients. Until now. Facebook open sourced GraphQL in 2015 (also the same year that "Avengers: Age of Ultron," a movie about a psychotic super computer that wanted to take over the world came out. No coincidence, surely...). GraphQL is an alternative to the REST constraint on HTTP. It provides an easy way to model queries (reads, like an HTTP <code>GET</code>), subscriptions (longer-lived, asynchronous notifications sent to the client) and mutations (updates). Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how to build data gateways for every clients' needs with Spring GraphQL.</p>
-
-
-### Cloud Native Java (3-6h)
-
-<p>“It is not necessary to change. Survival is not mandatory.” -W. Edwards Deming</p>
-<p>Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage. Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms automate operations work and break down the need for ITIL tickets and change management boards. But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.</p>
-
-
-### Bootiful Kotlin
-
-<p>Spring Boot, the convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring's flexibility with conventional, common sense defaults to make application development on the JVM not just fly, but pleasant! Spring Boot aims to make address the common functional and non-functional requirements that gate quickly moving to production. The framework is as clean as it gets, wouldn't it be nice if the language matched its elegance?</p>
-<p>Kotlin, the productivity-focused language from our friends at JetBrains, takes up the slack to make the experience leaner, cleaner and even more pleasant!</p>
-<p>The Spring and Kotlin teams have worked hard to make sure that Kotlin and Spring Boot are a first-class experience for all developers trying to get to production, faster and safer. Come for the Spring and stay for the Bootiful Kotlin.</p>
-
-
-### Kubernetes Native Java
-
-<p>Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a>, and we'll look at how Spring Boot makes writing blisteringly fast, cloud-native, and scalable services more effortless than ever.</p>
-
-
-### New Year, New Spring
-
-<p>Hi, Spring fans! It's 2022, a brand new year, and this year's going to be a big one! There's a lot in store - Spring Framework 6 and Spring Boot 3, Spring GraphQL, GraalVM native image support, and so much more. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at a new Spring for a new year and new paradigms.</p>
-
-
-### Cloud Native Java (2 days)
-
-<p>In this workshop we'll look at how to build cloud-native Java systems that are elastic, agile, observable and robust.</p>
-<ul><li><p>Bootcamp: this will be our first hands-on experience. It'll be useful as a way to validate that we have most everything required for the course</p>
- <ul>
-  <li>First Steps with Spring</li>
-  <li>First Steps with Spring Boot</li>
-  <li>First Steps with Kubernetes</li>
- </ul></li>
-<li><p>Reactive Programming</p>
- <ul>
-  <li>Motivating Reactive Programming</li>
-  <li>Reactor</li>
-  <li>Spring Webflux and Spring Data R2DBC</li>
-  <li>Testing Reactive Applications</li>
- </ul></li>
-<li><p>Kotlin</p>
- <ul>
-  <li>Reactive Streams and coroutines</li>
- </ul></li>
-<li><p>RSocket</p>
- <ul>
-  <li>basic client/services</li>
-  <li>bidirection client/services</li>
-  <li>Spring Integration</li>
- </ul></li>
-<li><p>Edge Services</p>
- <ul>
-  <li>API Gateways with Spring Cloud Gateway</li>
-  <li>Reactive service orchestration and composition</li>
-  <li>Reliability Patterns like circuit breakers</li>
-  <li>GraphQL</li>
- </ul></li>
-<li><p>Building Observable Services</p>
- <ul>
-  <li>the Spring Boot Actuator</li>
-  <li>TSDBs and Micrometer</li>
-  <li>Distributed Tracing with Spring Cloud Sleuth</li>
-  <li>The Spring Boot Admin</li>
- </ul></li>
-<li><p>Configuration</p>
- <ul>
-  <li>The Spring Environment abstraction</li>
-  <li>the Refresh Scope</li>
-  <li>The Spring Cloud Config Server</li>
-  <li>Reading data from config trees and environment variables in a Kubernetes environment</li>
-  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernetes' ConfigMap support</li>
- </ul></li>
-<li><p>Service Registration and Discovery</p>
- <ul>
-  <li>Discovery Servers</li>
-  <li>Client-side Loadbalancing</li>
- </ul></li>
-<li><p>Packaging for Production</p>
- <ul>
-  <li>Docker, Buildpacks, KPack, etc.</li>
-  <li>Spring Native and GraalVM</li>
- </ul></li>
-<li><p>Working with the Kubernetes API from Spring</p>
- <ul>
-  <li>using the Kubernetes Java API</li>
-  <li>Turning the application into a native binary with GraalVM and Spring Native</li>
- </ul></li></ul>
-
-
-### The R
+<li><p><em>Workflow</em> - In this section we'll look at how to use a workflow engine to choreograph
