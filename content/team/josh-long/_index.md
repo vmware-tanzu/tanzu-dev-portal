@@ -96,9 +96,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Upcoming Appearances
 
-### new york springone tour 2022
-**2022-06-27** - I'm so looking forward to being at the SpringOne Tour New York 2022 event! It's been so long since I've been to the big apple and I can't wait to return! 
-
 ### LATAM Spring AMA
 **2022-07-06** - I'm joining Spring teammate Alberto Rios to do a live Q&A on all things Spring for the Spanish-speaking world! Join us!
 
@@ -279,4 +276,11 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
   <li>Docker, Buildpacks, KPack, etc.</li>
   <li>Spring Native and GraalVM</li>
  </ul></li>
-<li><p>Work
+<li><p>Working with the Kubernetes API from Spring</p>
+ <ul>
+  <li>using the Kubernetes Java API</li>
+  <li>Turning the application into a native binary with GraalVM and Spring Native</li>
+ </ul></li></ul>
+
+
+### The R
