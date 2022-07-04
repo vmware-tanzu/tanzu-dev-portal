@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Spring Developer Advocate Dan Vega 
+**2022-06-30** [listen](https://api.bootifulpodcast.fm/podcasts/1396a2af-8cf3-42e1-8083-71aa8c18eeb8/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Spring Developer Advocate Dan Vega (@therealdanvega)</p>
+
 ### JVM and .NET legend Ted Neward on... just about everything 
 **2022-06-23** [listen](https://api.bootifulpodcast.fm/podcasts/032bfb82-673f-4a24-9521-4316161e615d/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">I (@starbuxman)</a> talk to my old friend, world-famous polyglot, code curmudgeon, software philosopher, industry veteran, and legend of ecosystems aplenty, <a href="https://twitter.com/tedneward">Ted Neward (@tedneward)</a></p>
 
@@ -89,9 +92,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### Simon Ritter, Java Champion and deputy CTO at Azul
 **2022-04-28** [listen](https://api.bootifulpodcast.fm/podcasts/272ca14a-2d03-4ae0-a414-b57b9dd1a519/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to Azul Deputy CTO and Java's own mad scientist and luminary <a href="https://twitter.com/SpeakJava">Simon Ritter (@speakjava)</a></p>
-
-### Spring Cloud legend Glenn Renfro about batch processing, tasks, stream processing, data flow, and t-shirts 
-**2022-04-22** [listen](https://api.bootifulpodcast.fm/podcasts/f1482b8f-c370-48b1-85b1-7cabc9dbf954/produced-audio) <p>Hi, Spring fans! Welcome to another installment of <em>A Bootiful Podcast</em>! In this installment Josh Long (@starbuxman) talks to Spring Cloud luminary and all around lovable guy Glenn Renfro (@cppwfs) about batch processing, tasks, messaging, integration, data flow, and a million other things. Also: t-shirts!</p>
 
 
 ## Upcoming Appearances
@@ -283,4 +283,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
  </ul></li></ul>
 
 
-### The R
+### The RSocket Revolution
+
+<p><a href="http://RSocket.io">RSocket is here!</a> RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they 
