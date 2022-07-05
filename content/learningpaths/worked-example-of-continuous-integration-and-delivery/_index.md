@@ -23,17 +23,9 @@ Although this learning path is presented as a tutorial to follow along, the pipe
 
 The diagram below shows the overall picture of this example, which consists of a single Kubernetes cluster running Jenkins, kpack, and the application test and production environments, each in separate namespaces. Docker Hub, Github, and the application databases are all outside the cluster. 
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image1.jpg "image_tooltip")
 
-
 These are the items in the diagram above: 
-
-
 
 1. Kubernetes cluster: For simplicity, you can use a minikube cluster running on your local machine. The only thing that doesn’t work in this scenario is connecting a webhook from Docker Hub to Jenkins. We’ll show you a workaround to get the example working, but it isn’t suitable for production use. 
 2. Jenkins namespace hosting a Jenkins instance 
@@ -69,11 +61,7 @@ This article assumes that you have some basic Kubernetes knowledge, and that you
 * A [GitHub](http://github.com) account. Storing your sources on GitHub is the simplest way to make them accessible to kpack, which is going to build your container images. You can use private repositories with kpack, but this is outside the scope of this article. See the [kpack documentation](https://buildpacks.io/docs/tools/kpack/) for more information. 
 * A Kubernetes cluster on which you have credentials to create Namespaces, Deployments, Secrets, ConfigMaps, and Services. You’ll also need kubectl installed on your local machine. Minikube is the simplest way to get started with Kubernetes on your local machine, although it lacks some of the features you need for production deployments (mainly external networking and multi-cluster support). As an alternative, you could use [Tanzu Community Edition](https://tanzucommunityedition.io/), which has more features than minikube and is also free to use but will take a little longer to set up. 
 * A Docker Hub account for pushing and pulling images. Alternatively, you can set up your own registry (for example, using [Harbor](https://goharbor.io/)). If you set up your own registry, you will need an SSL certificate signed by a recognized Certificate Authority, as kpack will only connect over https. Using a self-signed certificate is possible but not easy with kpack, and it is beyond the scope of this article. 
-* You’ll need to create a kubeconfig file for Jenkins running on your cluster so that it can deploy the application. This is explained in more detail in the section 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Create a Jenkins Kubeconfig"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Create a Jenkins Kubeconfig](#heading=h.jspjre41ha1n). 
+* You’ll need to create a kubeconfig file for Jenkins running on your cluster so that it can deploy the application. This is explained in more detail in the section [Create a Jenkins Kubeconfig](/learningpaths/worked-example-of-continuous-integration-and-delivery/03-install-jenkins/#install-jenkins-with-helm). 
 * Docker (or Docker Desktop) for running the PostgreSQL database. This is optional. You can install PostgreSQL directly onto your host machine, but the instructions here are for running it in containers. You can also use an alternative container runtime like Podman, as long as it can process Docker Compose files. 
 * The [Helm command line interface (CLI)](https://helm.sh/docs/intro/quickstart/) 
 * The curl command line utility 

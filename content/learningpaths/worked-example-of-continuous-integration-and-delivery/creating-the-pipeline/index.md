@@ -6,19 +6,11 @@ title: Creating The Pipeline
 weight: 40
 ---
 
-The diagram below shows the flow of jobs in the pipeline. The first job is triggered by a source code commit. Each subsequent job only runs if the preceding one succeeds. We will use Jenkins pipeline jobs so that the configuration can be stored as source code. The Jenkins files for all of the jobs are stored in the application repository, under the Jenkins directory. 
+The diagram below shows the flow of jobs in the pipeline. The first job is triggered by a source code commit. Each subsequent job only runs if the preceding one succeeds. We will use Jenkins pipeline jobs so that the configuration can be stored as source code. The Jenkins files for all of the jobs are stored in the application repository, under the Jenkins directory.
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.jpg "image_tooltip")
-
+![alt_text](./images/image2.jpg "image_tooltip")
 
 In the next few sections, you will create the following pipeline:
-
-
 
 * Set up a Docker Hub repository
 * Add job 1 - 01-toybank-build
