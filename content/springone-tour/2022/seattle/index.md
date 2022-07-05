@@ -109,7 +109,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:30 PM PDT</div>
+        <div class="time col-4 pl-0 h4">2:40 PM PDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
