@@ -138,6 +138,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
 * [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
 * [Today is the last day to submit to the SpringOne 2022 Call For Papers!](https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers) (2022-06-28) 
 * [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
@@ -147,7 +148,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [Bootiful Podcast: Spring Framework contributor Sébastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
 * [Spring Tips: Learn Spring for GraphQL (parts 5 and 6 of an ongoing series)](https://spring.io/blog/2022/06/14/spring-tips-learn-spring-for-graphql-parts-5-and-6-of-an-ongoing-series) (2022-06-14) 
 * [This Week in Spring - June 14th, 2022](https://spring.io/blog/2022/06/14/this-week-in-spring-june-14th-2022) (2022-06-14) 
-* [Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)](https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series) (2022-06-10) 
 
 ## Abstracts
 
@@ -285,4 +285,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### The RSocket Revolution
 
-<p><a href="http://RSocket.io">RSocket is here!</a> RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they 
+<p><a href="http://RSocket.io">RSocket is here!</a> RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they moved to Facebook. RSocket was the fledgling project for the Reactive Founda
