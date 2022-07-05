@@ -202,7 +202,18 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM PDT</div>
+        <div class="time col-4 pl-0 h4">11:20 AM PDT</div>
+        <div class="talk-title col-5 h4">
+            <a class="lightbox" href="#securing-gitops">Securing GitOps Debug Access with Pinniped, Dex, and GitHub</a>
+        </div>
+        <div class="name col-3">
+            <h3 class="h4 py-0">
+                <a class="lightbox" href="#leigh-capili">Leigh Capili</a>
+            </h3>
+        </div>
+    </div>
+    <div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-4 pl-0 h4">12:00 PM PDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="name col-3"></div>
     </div>
