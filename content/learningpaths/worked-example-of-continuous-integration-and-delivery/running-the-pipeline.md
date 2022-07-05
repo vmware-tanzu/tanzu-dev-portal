@@ -29,19 +29,11 @@ To trigger the end-to-end tests, you can use Postman to trigger this job directl
  \
 <code>http://localhost:<em>port</em>/generic-webhook-trigger/invoke?token=1231</code> \
  \
-where <code><em>port</em></code> is the one provided by the Minikube tunnel to Jenkins (see 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Configure Your Jenkins Installation"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Configure Your Jenkins Installation](#heading=h.ptptfpmsgvkp)). 
+where <code><em>port</em></code> is the one provided by the Minikube tunnel to Jenkins (see "Configure Your Jenkins Installation"). 
 2. Set header <code>Content-Type</code> to <code>application/json</code>. 
 3. Set the Body to raw, and include the payload from the Docker Hub webhook. 
 
-If you were able to set up the webhook-listener as described in 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Viewing Webhook Calls"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Viewing Webhook Calls](#heading=h.y7ocgtsi962) you can use the actual data that was sent by the repository when kpack pushed your image. If you weren’t able to do that, the data looks like this (although it won’t have been formatted for readability like the example here): 
+If you were able to set up the webhook-listener as described in "Viewing Webhook Calls" you can use the actual data that was sent by the repository when kpack pushed your image. If you weren’t able to do that, the data looks like this (although it won’t have been formatted for readability like the example here): 
 
 
 ```

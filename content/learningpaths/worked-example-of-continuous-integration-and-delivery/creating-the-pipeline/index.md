@@ -64,17 +64,13 @@ The first job in the pipeline builds the code and runs the unit tests. You can i
 
 
 
-1. Edit the toybank/jenkins-jobs/01-toybank-build.xml file and change the contents of the `&lt;remote>` element to point to your fork of the toybank repository.  
+1. Edit the toybank/jenkins-jobs/01-toybank-build.xml file and change the contents of the `<remote>` element to point to your fork of the toybank repository.  
 2. From the command line:  \
 <code>curl -X POST      \
  'http://admin:<em>api-token</em>@<em>jenkins-url</em>/createItem?name=01-toybank-build' \
   --header "Content-Type: application/xml" -d @01-toybank-build.xml \
 </code> \
-where <em>api-token</em> is the API token you created when configuring Jenkins (see 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Generate Jenkins API token"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Generate Jenkins API token](#heading=h.t5ttdb5vn1ci)), and <em>jenkins-url </em>is the URL and port-number to connect to your local Jenkins. 
+where <em>api-token</em> is the API token you created when configuring Jenkins, and <em>jenkins-url </em>is the URL and port-number to connect to your local Jenkins. 
 3. Go to the Jenkins dashboard and you should see a new job, 01-toybank-build.
 
 The job you have added: 
@@ -246,11 +242,7 @@ You can also get extra information about the state of an image by viewing the in
 
 ## Job 2: Deploy to test 
 
-The second job in this pipeline pulls an image from Docker Hub, deploys it into a test namespace, and runs the end-to-end tests. This job is triggered by a webhook. In a production environment, your image repository would be able to call the Jenkins endpoint for the trigger directly, but as explained earlier in 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Set up a Docker Hub repository "). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Set up a Docker Hub repository ](#heading=h.brwfee5qlcrq)that isn’t very practical if you are building the pipeline on your laptop. To set up the job: 
+The second job in this pipeline pulls an image from Docker Hub, deploys it into a test namespace, and runs the end-to-end tests. This job is triggered by a webhook. In a production environment, your image repository would be able to call the Jenkins endpoint for the trigger directly, but as explained earlier in "Set up a Docker Hub repository" that isn’t very practical if you are building the pipeline on your laptop. To set up the job: 
 
 
 
@@ -284,17 +276,9 @@ Before triggering this build, edit the pipeline steps for this job.
 
 
 1. Open toybank/pipeline-steps/02-toybank-test-e2e, and in the very first `withCredentials `step, edit the `git clone` statement to point to your forked toybank repository. 
-2. The `withEnv` statement in the final `withCredentials` step provides a `DATABASE_URL` which is correct for a minikube cluster with the PostgreSQL server running on port 5432 on the host machine. If you set up the database as explained in 
+2. The `withEnv` statement in the final `withCredentials` step provides a `DATABASE_URL` which is correct for a minikube cluster with the PostgreSQL server running on port 5432 on the host machine. If you set up the database as explained in "Set up local database" earlier, and you are using minikube, this URL should be correct, otherwise you will need to change it. 
 
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Set up local database"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Set up local database](#heading=h.xy9ga3jsrsce) earlier, and you are using minikube, this URL should be correct, otherwise you will need to change it. 
-
-The pipeline has three separate steps under the run-tests stage. The first step clones the toybank repository. The second step deploys an image to your cluster. It has one `withCredentials` block nested inside another. The first block puts the database credentials into environment variables, and the second block makes the Kubernetes configuration you set up in 
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: undefined internal link (link text: "Create a Jenkins Kubeconfig"). Did you generate a TOC? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-[Create a Jenkins Kubeconfig](#heading=h.jspjre41ha1n) available. 
+The pipeline has three separate steps under the run-tests stage. The first step clones the toybank repository. The second step deploys an image to your cluster. It has one `withCredentials` block nested inside another. The first block puts the database credentials into environment variables, and the second block makes the Kubernetes configuration you set up in "Create a Jenkins Kubeconfig" available. 
 
 In this step, the following command sets up yaml files ready to deploy the application to the test namespace: 
 
