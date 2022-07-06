@@ -151,6 +151,11 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Abstracts
 
+### Bootiful Kafka: Get the Message!
+
+<p>Hi, Spring fans! I once met Dave Chapelle (no, not <em>that</em> Dave Chapelle!), who was a legend from the messaging industry. He worked on SonicMQ and a bunch of other famous messaging initiatives. He also wrote <em>the</em> O'Reilly book on the Java Messaging Service. I met him once, asked him to sign my copy of the book. He wrote, "Get the message!" and then signed it. I always loved him for that. And that's what I want you to do. Spring Boot and Apache Kafka are leaders in their respective fields and it's no surprise that they work well together. Join me, Spring Developer Advocate <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> and we'll look at how to use Spring Boot and Apache Kafka to build better, scalable systems and services so that you, too, can <em>get the message</em>!</p>
+
+
 ### Cloud Native Java (5-10 Days)
 
 <p>“It is not necessary to change. Survival is not mandatory.” -W. Edwards Deming</p>
@@ -264,25 +269,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
   <li>the Refresh Scope</li>
   <li>The Spring Cloud Config Server</li>
   <li>Reading data from config trees and environment variables in a Kubernetes environment</li>
-  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Cloud Kubernetes' ConfigMap support</li>
- </ul></li>
-<li><p>Service Registration and Discovery</p>
- <ul>
-  <li>Discovery Servers</li>
-  <li>Client-side Loadbalancing</li>
- </ul></li>
-<li><p>Packaging for Production</p>
- <ul>
-  <li>Docker, Buildpacks, KPack, etc.</li>
-  <li>Spring Native and GraalVM</li>
- </ul></li>
-<li><p>Working with the Kubernetes API from Spring</p>
- <ul>
-  <li>using the Kubernetes Java API</li>
-  <li>Turning the application into a native binary with GraalVM and Spring Native</li>
- </ul></li></ul>
-
-
-### The RSocket Revolution
-
-<p><a href="http://RSocket.io">RSocket is here!</a> RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they moved to Facebook. RSocket was the fledgling project for the Reactive Founda
+  <li>Reading and re-reading configuration data directly from the Kubernetes <code>ConfigMap</code> structure itself using the API and Spring Clou
