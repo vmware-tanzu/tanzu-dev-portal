@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Spring Developer Advocate Dan Vega 
+**2022-06-30** [listen](https://api.bootifulpodcast.fm/podcasts/1396a2af-8cf3-42e1-8083-71aa8c18eeb8/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Spring Developer Advocate Dan Vega (@therealdanvega)</p>
+
 ### JVM and .NET legend Ted Neward on... just about everything 
 **2022-06-23** [listen](https://api.bootifulpodcast.fm/podcasts/032bfb82-673f-4a24-9521-4316161e615d/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">I (@starbuxman)</a> talk to my old friend, world-famous polyglot, code curmudgeon, software philosopher, industry veteran, and legend of ecosystems aplenty, <a href="https://twitter.com/tedneward">Ted Neward (@tedneward)</a></p>
 
@@ -90,14 +93,8 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 ### Simon Ritter, Java Champion and deputy CTO at Azul
 **2022-04-28** [listen](https://api.bootifulpodcast.fm/podcasts/272ca14a-2d03-4ae0-a414-b57b9dd1a519/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to Azul Deputy CTO and Java's own mad scientist and luminary <a href="https://twitter.com/SpeakJava">Simon Ritter (@speakjava)</a></p>
 
-### Spring Cloud legend Glenn Renfro about batch processing, tasks, stream processing, data flow, and t-shirts 
-**2022-04-22** [listen](https://api.bootifulpodcast.fm/podcasts/f1482b8f-c370-48b1-85b1-7cabc9dbf954/produced-audio) <p>Hi, Spring fans! Welcome to another installment of <em>A Bootiful Podcast</em>! In this installment Josh Long (@starbuxman) talks to Spring Cloud luminary and all around lovable guy Glenn Renfro (@cppwfs) about batch processing, tasks, messaging, integration, data flow, and a million other things. Also: t-shirts!</p>
-
 
 ## Upcoming Appearances
-
-### new york springone tour 2022
-**2022-06-27** - I'm so looking forward to being at the SpringOne Tour New York 2022 event! It's been so long since I've been to the big apple and I can't wait to return! 
 
 ### LATAM Spring AMA
 **2022-07-06** - I'm joining Spring teammate Alberto Rios to do a live Q&A on all things Spring for the Spanish-speaking world! Join us!
@@ -141,6 +138,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
 * [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
 * [Today is the last day to submit to the SpringOne 2022 Call For Papers!](https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers) (2022-06-28) 
 * [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
@@ -150,7 +148,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [Bootiful Podcast: Spring Framework contributor Sébastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
 * [Spring Tips: Learn Spring for GraphQL (parts 5 and 6 of an ongoing series)](https://spring.io/blog/2022/06/14/spring-tips-learn-spring-for-graphql-parts-5-and-6-of-an-ongoing-series) (2022-06-14) 
 * [This Week in Spring - June 14th, 2022](https://spring.io/blog/2022/06/14/this-week-in-spring-june-14th-2022) (2022-06-14) 
-* [Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)](https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series) (2022-06-10) 
 
 ## Abstracts
 
@@ -279,4 +276,13 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
   <li>Docker, Buildpacks, KPack, etc.</li>
   <li>Spring Native and GraalVM</li>
  </ul></li>
-<li><p>Work
+<li><p>Working with the Kubernetes API from Spring</p>
+ <ul>
+  <li>using the Kubernetes Java API</li>
+  <li>Turning the application into a native binary with GraalVM and Spring Native</li>
+ </ul></li></ul>
+
+
+### The RSocket Revolution
+
+<p><a href="http://RSocket.io">RSocket is here!</a> RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they moved to Facebook. RSocket was the fledgling project for the Reactive Founda
