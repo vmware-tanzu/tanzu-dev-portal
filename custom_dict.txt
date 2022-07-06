@@ -1106,6 +1106,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+Jenkinsfile
 JEP
 Jernigan
 JetBrains
@@ -1145,6 +1146,7 @@ JSONFormatter
 JsonMediaTypeFormatter
 Jsonnet
 JSONPatch
+JSONPath
 JsonPdxConverter
 JSP
 JSR-352
@@ -1441,6 +1443,7 @@ MTT(D|R)
 MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
+multibranch
 [Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
@@ -1679,6 +1682,7 @@ POCO(s)?
 podcaster
 PodDisruptionBudget
 PodIntent
+Podman
 PodMetrics
 PodSecurityPolicy
 PodsPerCore
@@ -2235,6 +2239,7 @@ Umbraco
 (un)?marshalling
 unannotated
 unbundle
+unbundled
 UNC
 uncheck
 Uncomment

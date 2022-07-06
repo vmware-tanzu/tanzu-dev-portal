@@ -40,13 +40,13 @@ Each time code is committed to the main branch on the source repository, the fol
 
 
 
-1. Jenkins builds the source and runs unit tests (job 01-toybank-build). 
-2. If the unit tests pass, Jenkins updates the Git branch image-build-branch from main (job 01-toybank-build). 
+1. Jenkins builds the source and runs unit tests (job `01-toybank-build`). 
+2. If the unit tests pass, Jenkins updates the Git branch image-build-branch from main (job `01-toybank-build`). 
 3. Kpack builds an image from the image-build-branch and pushes it to the image repository. 
 4. The image repository calls a webhook on Jenkins to trigger the next job in the pipeline.
-5. Jenkins updates the test application definition and the cluster starts pods based on the latest image (job 02-toybank-test-e2e).
-6. Jenkins runs the end-to-end test (job 02-toybank-test-e2e). 
-7. If the end-to-end tests pass, Jenkins updates the application definition on the production environment and the cluster starts pods based on the latest image (job 03-toybank-deploy).
+5. Jenkins updates the test application definition and the cluster starts pods based on the latest image (job `02-toybank-test-e2e`).
+6. Jenkins runs the end-to-end test (job `02-toybank-test-e2e`). 
+7. If the end-to-end tests pass, Jenkins updates the application definition on the production environment and the cluster starts pods based on the latest image (job `03-toybank-deploy`).
 
 The pipeline shown above is built with Jenkins as it is the most well-known CI tool, is very flexible, and works well in heterogeneous environments. However, Jenkins can be complex to set up and administer, and unless you are careful you can create “snowflake” Jenkins environments that are difficult to reconstruct when something goes wrong. Here, you will deploy Jenkins using a container image and configuration that can mostly be reconstructed from configuration files that can be stored in source control.
 

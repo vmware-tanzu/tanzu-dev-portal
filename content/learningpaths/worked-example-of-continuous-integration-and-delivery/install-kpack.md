@@ -9,7 +9,7 @@ weight: 20
 These are some of the different ways you might create a container image for your application: 
 
 * Use a Dockerfile and `docker build` 
-* Use the spring-boot:build-image plug-in to create a container image
+* Use the `spring-boot:build-image` plug-in to create a container image
 * Use kpack to build the image
 
 Defining your own image using Dockerfiles is a long-established way of creating container images, but it has several drawbacks. For example, you are responsible for choosing a secure base image, deciding how your application should be installed on it, and updating the base image whenever security patches are issued.  
@@ -42,4 +42,4 @@ brew install kp
 ```
 
 
-Once kp is installed, it uses the same credentials and context as your kubectl command to communicate with kpack on your cluster.
+Once `kp` is installed, it uses the same credentials and context as your `kubectl` command to communicate with kpack on your cluster.

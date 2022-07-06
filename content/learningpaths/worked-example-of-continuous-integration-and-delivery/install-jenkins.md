@@ -81,26 +81,36 @@ Without the label and annotations, Helm will complain about the resources it doe
 
 ## Edit installation defaults
 
-The overridable installation values are defined in a values.yaml that you can pass to Helm at the time of installation. You are going to change the image used for Jenkins agents, increase the amount of memory available, and also specify some extra plug-ins: 
+The installation values that may be overridden are defined in a values.yaml that you can pass to Helm at the time of installation. You are going to change the image used for Jenkins agents, increase the amount of memory available, and also specify some extra plug-ins: 
 
 
 
 1. Create a file called values.yaml from the contents here: [https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml](https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml) 
-2. Edit this file to increase the memory limit for Jenkins agents to 1024Mi, under \
-`agent: \
-  resources: \
-    limits: \
-      memory:`   
-3. In the same file, change the image used for creating agents to: `pkatpivotal/jenkins-agent-plus:latest`. Under `agent`:  \
- \
-`  image: "pkatpivotal/jenkins-agent-plus" \
-  tag: "latest"` \
- \
+2. Edit this file to increase the memory limit for Jenkins agents to 1024Mi, under
+
+```
+agent: 
+  resources: 
+    limits: 
+      memory:
+```
+
+3. In the same file, change the image used for creating agents to: `pkatpivotal/jenkins-agent-plus:latest`. Under `agent`:
+
+```
+image: "pkatpivotal/jenkins-agent-plus" 
+tag: "latest"
+```
+ 
 This image is based on image `jenkins/inbound-agent `but adds command line tools kubectl and ytt. Jenkins runs your build jobs inside pods created from the agent image. 
-4. Open jenkins-values.yaml in a text editor and add the following values under `installPlugins:`  \
-`   - kubernetes-cli:1.10.3 \
-    - generic-webhook-trigger:1.83 \
-    - pipeline-maven:3.10.0`
+4. Open jenkins-values.yaml in a text editor and add the following values under `installPlugins:`  
+
+```
+- kubernetes-cli:1.10.3 
+- generic-webhook-trigger:1.83 
+- pipeline-maven:3.10.0
+```
+
 5. Save the changes. 
 
 
@@ -152,7 +162,7 @@ Something to look out for in these logs are problems caused by mismatches betwee
 
 ## Configure your Jenkins installation
 
-Jenkins should now be running inside your cluster. You need to expose the service outside the cluster so that you can access the Jenkins UI. The Helm installation has created a Cluster IP service called **jenkins** in namespace **jenkins**. On most Kubernetes clusters you would set up an ingress to access the service, but if you are running on minikube, you can start a tunnel: 
+Jenkins should now be running inside your cluster. You need to expose the service outside the cluster so that you can access the Jenkins UI. The Helm installation has created a Cluster IP service called `jenkins` in namespace `jenkins`. On most Kubernetes clusters you would set up an ingress to access the service, but if you are running on minikube, you can start a tunnel: 
 
 
 ```
@@ -215,7 +225,7 @@ Jenkins needs to be able to access your GitHub repository and be able to push ch
 
 ### Create a Jenkins kubeconfig
 
-You need to provide Jenkins with configuration and credentials to access your cluster. Jenkins has a kubeconfig credential type you can copy and paste a configuration file into. You can see Kubernetes documentation on creating a new configuration file [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/). If you already have a local kubeconfig file for accessing the cluster, you can copy the cluster, context, and user entries using ~/.kube/config, provided the certificate fields contain certificate data and not paths to certificate files. 
+You need to provide Jenkins with configuration and credentials to access your cluster. Jenkins has a kubeconfig credential type you can copy and paste a configuration file into. You can see Kubernetes documentation on creating a new configuration file [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/). If you already have a local kubeconfig file for accessing the cluster, you can copy the cluster, context, and user entries using `~/.kube/config`, provided the certificate fields contain certificate data and not paths to certificate files. 
 
 If you are using a local minikube cluster, the configuration fields certificate-authority, client-certificate, and client-key for your cluster will all point to local certificate files on the host machine. You can’t use these from Jenkins running on the cluster as it won’t have access to the files on the host. However, you can create the configuration information as follows: 
 
@@ -223,9 +233,12 @@ If you are using a local minikube cluster, the configuration fields certificate-
 
 1. Create a kubeconfig file for accessing your cluster (copy and paste the example file from the Kubernetes documentation above). 
 2. Change the field names to certificate-authority-data, client-certificate-data, and client-key-data in the configuration file. 
-3. Get the paths to the certificate authority, client certificate, and key from your own Kubeconfig file (~/.kube/config), and get the Base64 encoding for each one. For example:  \
- \
-`cat ~/.minikube/profiles/minikube/client.key | base64 `
+3. Get the paths to the certificate authority, client certificate, and key from your own Kubeconfig file (`~/.kube/config`), and get the base64 encoding for each one. For example:
+
+```
+cat ~/.minikube/profiles/minikube/client.key | base64
+```
+
 4. Copy and paste the text into your Jenkins configuration file. 
 
 Now, add the credentials to Jenkins: 
