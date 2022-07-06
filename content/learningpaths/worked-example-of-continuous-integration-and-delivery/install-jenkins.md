@@ -25,7 +25,7 @@ At a high level, the steps are:
 4. Install Jenkins with Helm  
 5. Configure the plug-ins and credentials
 
-These instructions were correct at the time publication, and following them should give you a Jenkins installation running on your Kubernetes cluster. However, software is always being updated, so if you run into problems, please see the official instructions for[ installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/). The Helm charts are stored on this GitHub repository, so similarly, if you run into problems with the Jenkins installation, please check the list of issues maintained on this repository. 
+These instructions were correct at the time publication, and following them should give you a Jenkins installation running on your Kubernetes cluster. However, software is always being updated, so if you run into problems, please see the official instructions for [installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/). The Helm charts are stored on this GitHub repository, so similarly, if you run into problems with the Jenkins installation, please check the list of issues maintained on this repository. 
 
 
 ## Add Jenkins repository to Helm 
