@@ -6,7 +6,7 @@ on:
 
 jobs:
   create-pr:
-    if: github.repository == "vmware-tanzu/tanzu-dev-portal"
+    if: github.repository == 'vmware-tanzu/tanzu-dev-portal'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
