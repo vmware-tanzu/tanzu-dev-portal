@@ -11,6 +11,9 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
+Farcic
+Upbound
+CDF
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
