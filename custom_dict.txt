@@ -11,9 +11,6 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
-Farcic
-Upbound
-CDF
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
@@ -309,6 +306,7 @@ Cashmore
 cass-operator
 CCM
 cd
+CDF
 Cedrick
 CEIP
 CentOS
@@ -727,6 +725,7 @@ Falco
 Fani
 fanout
 faq(s)?
+Farcic
 Fastlane
 favourite(s)?
 FC
@@ -2264,6 +2263,7 @@ untar
 untrusted
 untuned
 unvalidated
+Upbound
 UpdateMessage
 updateServerMetric
 updateServerMetrics
