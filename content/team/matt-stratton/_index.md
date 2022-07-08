@@ -23,3 +23,7 @@ Matt has over 20 years of experience in IT operations and is a sought-after spea
 He lives in Chicago and has three awesome kids, whom he loves just a little bit more than he loves Diet Coke. Matt is the keeper of the Thought Leaderboard for the DevOps Party Games online game show and you can find him on Twitter at <a href='https://twitter.com/mattstratton'>@mattstratton</a>.
 
 <!--more-->
+
+## Highlights
+
+{{< youtube id="X2EcLX_R6QQ" class="youtube-video-shortcode" >}}
