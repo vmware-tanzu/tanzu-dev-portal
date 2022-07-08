@@ -1,7 +1,7 @@
 ---
 name: Viktor Farcic
 description: "Developer Advocate"
-roles: [""]
+roles: ["guest"]
 skills: ["Kubernetes", "Crossplane"]
 location: "Barcelona, Spain"
 
@@ -22,4 +22,6 @@ Viktor Farcic is a Developer Advocate at [Upbound](https://www.upbound.io/), a m
 <!--more-->
 
 
-## Highlights
+<!-- ## Highlights
+
+{{< youtube id="CHBA34a0KEQ" class="youtube-video-shortcode" >}} -->

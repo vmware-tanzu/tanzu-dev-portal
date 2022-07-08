@@ -1,7 +1,7 @@
 ---
 name: Matt Stratton
 description: ""
-roles: ["host"]
+roles: ["host", "guest"]
 skills: ""
 location: ""
 
