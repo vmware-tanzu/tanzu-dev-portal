@@ -11,6 +11,8 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
+Jahn
+Keptn
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
