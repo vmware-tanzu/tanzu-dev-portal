@@ -11,8 +11,6 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
-Jahn
-Keptn
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
@@ -201,6 +199,7 @@ base64(-encoded)?
 BaseFunction
 basicBridgeDestroy
 basicBridgePut
+bastien
 batchesDistributed
 BatchScheduler
 Baxter
@@ -1087,6 +1086,7 @@ J2EE
 JAAS(-based)?
 Jaeger
 JaFU
+Jahn
 Jakarta
 Jakub
 Jakub's
@@ -1189,6 +1189,7 @@ Kat
 KEK(s)?
 Kendo
 kendrickcoleman
+Keptn
 Kerberos
 Kerievsky
 [Kk]ey[Ss]tore(s)?
@@ -1279,6 +1280,7 @@ learnt
 lego
 Lerman
 letsencrypt-staging
+Leyden
 LF
 libnss-wrapper
 libs
@@ -1491,6 +1493,7 @@ Netty(-based)?
 NetWeaver
 Network(Policy|Set)
 Neumann
+Neward
 NewRelic
 NFJ?S
 NFT
@@ -2368,6 +2371,7 @@ WebApiConfig
 WebApp
 webapp
 webapps_default
+WebAssembly
 Webber
 WebClient
 WebClient's
