@@ -27,14 +27,16 @@ The diagram below shows the overall picture of this example, which consists of a
 
 These are the items in the diagram above: 
 
-1. Kubernetes cluster: For simplicity, you can use a minikube cluster running on your local machine. The only thing that doesn’t work in this scenario is connecting a webhook from Docker Hub to Jenkins. We’ll show you a workaround to get the example working, but it isn’t suitable for production use. 
-2. Jenkins namespace hosting a Jenkins instance 
-3. Source code for the application stored in the Github repository 
-4. Namespace for the test environment 
-5. Namespace for the production environment 
-6. Image repository where your container images are stored. You can use a free account on [Docker Hub](http://hub.docker.com) for your repository, but we’ll discuss alternatives later in this article. 
-7. Kpack installation: kpack builds the container images for your application 
-8. Database instances for test and production environments 
+<ol type="a">
+    <li>Kubernetes cluster: For simplicity, you can use a minikube cluster running on your local machine. The only thing that doesn’t work in this scenario is connecting a webhook from Docker Hub to Jenkins. We’ll show you a workaround to get the example working, but it isn’t suitable for production use.</li>
+    <li>Jenkins namespace hosting a Jenkins instance</li>
+    <li>Source code for the application stored in the Github repository</li>
+    <li>Namespace for the test environment</li>
+    <li>Namespace for the production environment</li>   
+    <li>Image repository where your container images are stored. You can use a free account on [Docker Hub](http://hub.docker.com) for your repository, but we’ll discuss alternatives later in this article.</li>
+    <li>Kpack installation: kpack builds the container images for your application</li> 
+    <li>Database instances for test and production environments</li>
+</ol>
 
 Each time code is committed to the main branch on the source repository, the following happens: 
 
