@@ -142,7 +142,6 @@ hide_newsletter: true
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
                 <a class="lightbox" href="#leigh-capili">Leigh Capili</a>
                 <a class="lightbox" href="#dashaun-carter">DaShaun Carter</a>
             </h3>
@@ -208,7 +207,6 @@ hide_newsletter: true
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
                 <a class="lightbox" href="#dan-vega">Dan Vega</a>
             </h3>
         </div>
@@ -233,11 +231,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">2:00 PM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
+            <a class="lightbox" href="#what-is-knative">Knative Core Concepts! And Spiders!</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
+                <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
     </div>
