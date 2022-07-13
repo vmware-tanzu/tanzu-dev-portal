@@ -65,7 +65,9 @@ To find, quantify, and, thus, rank developer toil, add up the Likert answers for
 ![How to quantify the results](images/image1.png)
 
 
-Creating, running, and analyzing this survey should not become a new type of toil. You can create and run this survey easily with Google Forms, Microsoft Forms in Office 365, whatever internal survey tool you use, or even paper if you like the smell of crisp copy paper. Choose a survey tool that's quick and easy to use. We have [links to a starter survey and spreadsheet form tool that you can clone in the Appendix](/learningpaths/developer-toil/removing-developer-toil/).
+Creating, running, and analyzing this survey should not become a new type of toil. You can create and run this survey easily with Google Forms, Microsoft Forms in Office 365, whatever internal survey tool you use, or even paper if you like the smell of crisp copy paper. Choose a survey tool that's quick and easy to use. 
+
+<!-- We have [links to a starter survey and spreadsheet form tool that you can clone in the Appendix](/learningpaths/developer-toil/removing-developer-toil/). -->
 
 Once the survey and quick analysis is done, you now have a single metric for each type of developer toil. And by combining all the questions, you now have metrics to track overall developer toil. If you're the type of person who likes dashboards and gauges, you can go wild with some new visualizations.
 
