@@ -4,6 +4,7 @@ weight: 40
 layout: single
 team:
 - Michael Coté
+- Danielle Burrow
 - Susie Forbath
 - Tyson McNulty
 ---

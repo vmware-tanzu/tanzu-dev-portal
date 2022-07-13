@@ -6,6 +6,7 @@ experience: Beginner
 layout: intro
 team:
 - Michael Cote
+- Danielle Burrow
 - Susie Forbath
 - Tyson McNulty
 ---
