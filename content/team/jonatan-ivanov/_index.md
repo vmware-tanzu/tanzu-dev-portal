@@ -9,7 +9,7 @@ location: "Seattle, WA"
 twitter: "@jonatan_ivanov"
 website: "https://develotters.com/"
 facebook: ""
-linkedin: ""
+linkedin: "jonatan-ivanov"
 github: "jonatan-ivanov"
 pinterest: ""
 instagram: ""
@@ -26,7 +26,6 @@ and sometimes he can be found on Twitter (@jonatan_ivanov) and in the Seattle ar
 from Hungary.
 
 <!--more-->
-
 
 ## Highlights
 
