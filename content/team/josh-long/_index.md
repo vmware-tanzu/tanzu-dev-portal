@@ -135,6 +135,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [Spring Tips: Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/17/spring-tips-kubernetes-native-java-redux-2022) (2022-07-17) 
 * [A Bootiful Podcast: Nate Schutta: The Thinking Person's Architect, My Friend, and Teammate](https://spring.io/blog/2022/07/14/a-bootiful-podcast-nate-schutta-the-thinking-person-s-architect-my-friend-and-teammate) (2022-07-14) 
 * [This Week in Spring - July 12th, 2022](https://spring.io/blog/2022/07/12/this-week-in-spring-july-12th-2022) (2022-07-12) 
 * [A Bootiful Podcast: Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili](https://spring.io/blog/2022/07/07/a-bootiful-podcast-kubernetes-contributor-and-fellow-tanzu-developer-advocate-leigh-capili) (2022-07-07) 
@@ -144,7 +145,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
 * [Spring Tips: Learn Spring for GraphQL (the last two episodes: parts 7 and 8)](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8) (2022-06-24) 
 * [A Bootiful Podcast: JVM and .NET legend Ted Neward on... just about everything](https://spring.io/blog/2022/06/23/a-bootiful-podcast-jvm-and-net-legend-ted-neward-on-just-about-everything) (2022-06-23) 
-* [This Week in Spring - June 21st, 2022](https://spring.io/blog/2022/06/21/this-week-in-spring-june-21st-2022) (2022-06-21) 
 
 ## Abstracts
 
@@ -178,5 +178,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
-<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-ho
+<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p

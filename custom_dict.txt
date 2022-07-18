@@ -1060,6 +1060,7 @@ Irizarry
 IronFrame
 IRSA
 ISAPI
+iSCSI
 Isenberg
 IServiceProvider
 ISTIO_MUTUAL
@@ -1914,6 +1915,7 @@ Route53
 RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
+RPi
 RSA
 RSocket(-based)?
 Ruckle
