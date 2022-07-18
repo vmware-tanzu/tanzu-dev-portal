@@ -1824,6 +1824,7 @@ RedirectUri
 [rR]edis
 redistributable
 RedMonk('s)?
+[Rr]edux
 Reenvisioning
 Reetro
 refactorings?
