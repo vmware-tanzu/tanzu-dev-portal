@@ -99,33 +99,19 @@ We have a special name for stories that do not deliver business value: chores. C
 To create stories for developer toil, we recommend the following format:
 
 
-    **To improve** &lt;tech debt categories>
-
-
-    **We should** &lt;do activity>
-
-
-    **So that** &lt;impact>
+> **To improve** [tech debt categories]  
+> **We should** [do activity]  
+> **So that** [impact]  
 
 Here are two examples of this format:
 
 
-    **To improve** our release process and committing changes
-
-
-    **We should** add linting to our CI pipeline
-
-
-    **So that** we catch code style errors before they're integrated
-
-
-    **To improve** production support
-
-
-    **We should** run multiple instances of our app in acceptance
-
-
-    **So that** we can discover session persistence problems earlier
+> **To improve** our release process and committing changes  
+> **We should** add linting to our CI pipeline  
+> **So that** we catch code style errors before they're integrated  
+> **To improve** production support  
+> **We should** run multiple instances of our app in acceptance  
+> **So that** we can discover session persistence problems earlier  
 
 Product managers may also find it helpful to identify who the direct "customer" is for each story. If you think of the customer as the beneficiary of the story, in many cases, the customers are developers. The customers for chore stories may also be security and compliance staff, or even operations staff. Or, you could just leave it in the passive voice and assume the customer is something akin to "the greater good."
 
