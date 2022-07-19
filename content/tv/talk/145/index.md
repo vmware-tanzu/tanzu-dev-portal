@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: The Security Bottleneck - 14 Digital Transformation Bottlenecks (01/14) #shorts"
-description: "Tanzu Talk: The Security Bottleneck - 14 Digital Transformation Bottlenecks (01/14) #shorts"
+title: "Tanzu Talk: The Security Bottleneck - 14 Digital Transformation Bottlenecks (02/14) #shorts"
+description: "Tanzu Talk: The Security Bottleneck - 14 Digital Transformation Bottlenecks (02/14) #shorts"
 episode: "145"
 aliases: ["0145"]
 publishdate: "2020-04-01T00:00:00-07:00"
