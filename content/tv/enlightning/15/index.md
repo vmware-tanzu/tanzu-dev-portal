@@ -16,9 +16,10 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-You may already think of Kubernetes as a *container* orchestration platform.  With [Crossplane](https://crossplane.io/), Kubernetes can become an *infrastructure* and/or *application* orchestration platform as well.  
+You may already think of Kubernetes as a container orchestration platform.  With [Crossplane](https://crossplane.io/), Kubernetes can become an infrastructure and/or application orchestration platform as well.  
 
-Kubernetes is much more than a platform that runs containers. We can extend it to manage (almost) any infrastructure, or to manage applications running outside of Kubernetes, or to manage other things too. The way to do this is to use Custom Resource Definitions (CRDs) to add custom resources, coupled with operators that will manage said resources.  We can even take a step further and create our own CRDs to enable other people in our organization to manage groups of resources. 
+Kubernetes is much more than a platform that runs containers. We can extend it to manage (almost) any infrastructure, like AWS, Azure, Google Cloud, and other cloud resources. The way to do this is to use Custom Resource Definitions (CRDs) to add custom resources, coupled with operators that will manage said resources.  Crossplane additionally allows you to create compositions (groups of cloud resources) to allow teams to package and distribute complex infrastructure setups.
+
 
 Watch this episode to learn how we can accomplish this and many other goals with Crossplane!
 
