@@ -5,7 +5,6 @@ streaming: "twitch"
 id: "spring-office-hours"
 #image: "enlightning.jpg"
 og_image: "/images/og/TanzuTV.png"
-youtube: "Aus9qnh2Dao"
 weight: 3
 menu:
     main:
@@ -21,11 +20,3 @@ subheader: Explore what’s new in Spring and get your questions answered
 ---
 
 Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
-
-## Show Notes
-
-- [Spring Release Calendar](https://calendar.spring.io/)
-- [SpringOne Tour Seattle](https://tanzu.vmware.com/developer/springone-tour/2022/seattle/)
-- [Tanzu Developer Center Blog](https://tanzu.vmware.com/developer/blog/)
-- [Dan Vega's Newsletter](https://www.danvega.dev/newsletter/spring-one-tour-seattle/)
-- [Spring Cloud Config](https://spring.io/projects/spring-cloud-config)
