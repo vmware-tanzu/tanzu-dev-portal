@@ -199,6 +199,7 @@ base64(-encoded)?
 BaseFunction
 basicBridgeDestroy
 basicBridgePut
+bastien
 batchesDistributed
 BatchScheduler
 Baxter
@@ -306,6 +307,7 @@ Cashmore
 cass-operator
 CCM
 cd
+CDF
 Cedrick
 CEIP
 CentOS
@@ -724,6 +726,7 @@ Falco
 Fani
 fanout
 faq(s)?
+Farcic
 Fastlane
 favourite(s)?
 FC
@@ -1057,6 +1060,7 @@ Irizarry
 IronFrame
 IRSA
 ISAPI
+iSCSI
 Isenberg
 IServiceProvider
 ISTIO_MUTUAL
@@ -1083,6 +1087,7 @@ J2EE
 JAAS(-based)?
 Jaeger
 JaFU
+Jahn
 Jakarta
 Jakub
 Jakub's
@@ -1187,6 +1192,7 @@ Kat
 KEK(s)?
 Kendo
 kendrickcoleman
+Keptn
 Kerberos
 Kerievsky
 [Kk]ey[Ss]tore(s)?
@@ -1277,6 +1283,7 @@ learnt
 lego
 Lerman
 letsencrypt-staging
+Leyden
 LF
 libnss-wrapper
 libs
@@ -1490,6 +1497,7 @@ Netty(-based)?
 NetWeaver
 Network(Policy|Set)
 Neumann
+Neward
 NewRelic
 NFJ?S
 NFT
@@ -1820,6 +1828,7 @@ RedirectUri
 [rR]edis
 redistributable
 RedMonk('s)?
+[Rr]edux
 Reenvisioning
 Reetro
 refactorings?
@@ -1911,6 +1920,7 @@ Route53
 RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
+RPi
 RSA
 RSocket(-based)?
 Ruckle
@@ -2266,6 +2276,7 @@ untar
 untrusted
 untuned
 unvalidated
+Upbound
 UpdateMessage
 updateServerMetric
 updateServerMetrics
@@ -2368,6 +2379,7 @@ WebApiConfig
 WebApp
 webapp
 webapps_default
+WebAssembly
 Webber
 WebClient
 WebClient's
@@ -2446,3 +2458,5 @@ Zynga
 μServices
 Ϟ
 ϟ
+JDBC
+R2DBC
