@@ -144,5 +144,5 @@ The response body will look like the following:
 ```
 
 
-You can view the record either using the `pgAdmin` tool, or by pointing your browser at [http://localhost:8080/transaction/1](http://localhost:8080/transaction/1). To use the pgAdmin tool, in the right hand pane under `Servers`, click `Refresh` then expand `postgres-db`, `Databases`, `Schemas`, `Tables`, then right-click 
+You can view the record either using the `pgAdmin` tool, or by pointing your browser at [http://localhost:8080/transaction/1](http://localhost:8080/transaction/1). To use the `pgAdmin` tool, in the right hand pane under `Servers`, click `Refresh` then expand `postgres-db`, `Databases`, `Schemas`, `Tables`, then right-click 
 `account_transaction` and select `View/Edit Data`, `All Rows`. 
