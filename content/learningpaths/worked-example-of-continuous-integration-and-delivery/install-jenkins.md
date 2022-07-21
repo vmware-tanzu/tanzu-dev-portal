@@ -47,6 +47,13 @@ helm search repo jenkinsci
 ```
 
 
+You should see output similar to this (version numbers might be later than these): 
+
+```
+NAME             	CHART VERSION	APP VERSION	DESCRIPTION                                       
+jenkinsci/jenkins	4.1.12       	2.346.1    	Jenkins - Build great things at any scale! The ...
+```
+
 
 ## Create a namespace and service account
 
@@ -62,7 +69,7 @@ Next, create a Service Account that will give Jenkins permission to interact wit
 
 
 
-1. Create a jenkins-sa.yaml file from the contents of [https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-sa.yaml](https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-sa.yaml) 
+1. Create a `jenkins-sa.yaml` file from the contents of [https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-sa.yaml](https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-sa.yaml) 
 2. Add the following labels and annotations in the metadata section, without deleting the labels and annotations that are already there:  
 
     ```
@@ -85,7 +92,7 @@ The installation values that may be overridden are defined in a values.yaml that
 
 
 
-1. Create a file called values.yaml from the contents here: [https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml](https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml) 
+1. Create a file called `jenkins-values.yaml` from the contents here: [https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml](https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml) 
 2. Edit this file to increase the memory limit for Jenkins agents to 1024Mi, under
 
 ```
@@ -103,7 +110,7 @@ tag: "latest"
 ```
  
 This image is based on image `jenkins/inbound-agent `but adds command line tools kubectl and ytt. Jenkins runs your build jobs inside pods created from the agent image. 
-4. Open jenkins-values.yaml in a text editor and add the following values under `installPlugins:`  
+4. In the same file, add the following values under `installPlugins:`  
 
 ```
 - kubernetes-cli:1.10.3 
@@ -120,11 +127,11 @@ To install Jenkins into the Jenkins namespace:
 
 
 ```
-helm install jenkins -n jenkins -f values.yaml jenkinsci/jenkins
+helm install jenkins -n jenkins -f jenkins-values.yaml jenkinsci/jenkins
 ```
 
 
-Depending on the speed of your computer and internet connection, it might take a couple of minutes to download the images and start the pods. When the installation is complete, check whether the Jenkins pods are running: 
+Depending on the speed of your computer and internet connection, it might take a few minutes to download the images and start the pods. When the installation is complete, check whether the Jenkins pod is running: 
 
 
 ```
@@ -141,7 +148,7 @@ jenkins-0   2/2     Running   0           1m
 ```
 
 
-If the pods aren’t running, you will need to debug the installation. Look at the events in the Jenkins namespace to see whether that highlights any issues: 
+If the pod isn't running, you will need to debug the installation. Look at the events in the Jenkins namespace to see whether that highlights any issues: 
 
 
 ```
@@ -157,7 +164,7 @@ kubectl logs jenkins-0 init -n jenkins
 ```
 
 
-Something to look out for in these logs are problems caused by mismatches between plug-in versions. 
+Something to look out for in these logs are problems caused by mismatches between plug-in versions. Plug-ins are updated all the time, and sometimes one plug-in mandates a minimum version of another plug-in it depends on. 
 
 
 ## Configure your Jenkins installation
@@ -170,7 +177,16 @@ minikube service jenkins -n jenkins --url
 ```
 
 
-This displays the URL and port you can use to access Jenkins from the host machine. The tunnel is provided by the process you just started, so leave it running. Point your web browser at the URL given and you should see the Jenkins log-in screen. In the next few sections, you will: 
+This displays the URL and port you can use to access Jenkins from the host machine. The tunnel is provided by the process you just started, so leave it running. Point your web browser at the URL given and you should see the Jenkins log-in screen. 
+
+This does not work with all minikube drivers; if you have problems getting the tunnel working, try Kubernetes port-forwarding instead: 
+
+```
+kubectl port-forward svc/jenkins 8080:8080 -n jenkins
+```
+
+
+In the next few sections, you will: 
 
 
 
@@ -219,7 +235,7 @@ Jenkins needs to be able to access your GitHub repository and be able to push ch
 5. Create an SSH key without a passphrase and add it to your GitHub account (please see [this GitHub document](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) if you are unsure how).
 6. From the main Jenkins dashboard, go to Manage Jenkins, Manage Credentials. Next, click the Jenkins Store under “Stores scoped to Jenkins”, and click Global Credentials, then Add Credentials on the left-hand side of the page. 
 7. Set the Kind to **SSH Username with Private Key**.
-8. Set the ID field to “git_automation”. The ID enables you to refer to the key in your pipeline scripts, and if you don’t set a specific value, Jenkins will assign a UUID. 
+8. Set the ID field to `git_automation`. The ID enables you to refer to the key in your pipeline scripts, and if you don’t set a specific value, Jenkins will assign a UUID. 
 9. Copy and paste the private key into the Key field. 
 
 
@@ -227,11 +243,47 @@ Jenkins needs to be able to access your GitHub repository and be able to push ch
 
 You need to provide Jenkins with configuration and credentials to access your cluster. Jenkins has a kubeconfig credential type you can copy and paste a configuration file into. You can see Kubernetes documentation on creating a new configuration file [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/). If you already have a local kubeconfig file for accessing the cluster, you can copy the cluster, context, and user entries using `~/.kube/config`, provided the certificate fields contain certificate data and not paths to certificate files. 
 
-If you are using a local minikube cluster, the configuration fields certificate-authority, client-certificate, and client-key for your cluster will all point to local certificate files on the host machine. You can’t use these from Jenkins running on the cluster as it won’t have access to the files on the host. However, you can create the configuration information as follows: 
+If you are using a local minikube cluster, the configuration fields certificate-authority, client-certificate, and client-key for your cluster will all point to local certificate files on the host machine. You can’t use these from Jenkins running on the cluster as it won’t have access to the files on the host. However, you can create the configuration information from this template:
+
+```
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: <BASE64-ENCODED-CA.CRT>
+    extensions:
+    - extension:
+        last-update: Mon, 11 Jul 2022 16:24:32 BST
+        provider: minikube.sigs.k8s.io
+        version: v1.26.0
+      name: cluster_info
+    server: https://127.0.0.1:54481
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Mon, 11 Jul 2022 16:24:32 BST
+        provider: minikube.sigs.k8s.io
+        version: v1.26.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate-data: <BASE64-ENCODED-CLIENT.CRT>
+    client-key-data: <BASE64-ENCODED-CLIENT.KEY>
+
+```
 
 
 
-1. Create a kubeconfig file for accessing your cluster (copy and paste the example file from the Kubernetes documentation above). 
+1. Create a kubeconfig file for accessing your cluster (copy and paste the example file above). 
 2. Change the field names to certificate-authority-data, client-certificate-data, and client-key-data in the configuration file. 
 3. Get the paths to the certificate authority, client certificate, and key from your own Kubeconfig file (`~/.kube/config`), and get the base64 encoding for each one. For example:
 
@@ -239,7 +291,7 @@ If you are using a local minikube cluster, the configuration fields certificate-
 cat ~/.minikube/profiles/minikube/client.key | base64
 ```
 
-4. Copy and paste the text into your Jenkins configuration file. 
+4. Copy and paste the text into the placeholders in the example config file. The base 64 encoded text for each file is a single line of text that should be pasted directly next to its corresponding YAML name in the file. 
 
 Now, add the credentials to Jenkins: 
 

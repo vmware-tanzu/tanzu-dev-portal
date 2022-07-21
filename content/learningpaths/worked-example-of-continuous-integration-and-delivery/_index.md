@@ -1,8 +1,8 @@
 ---
 title: Worked Example of Continuous Integration and Delivery
 weight: -1
-duration: 60
-experience: Beginner
+duration: 180
+experience: Intermediate
 layout: intro
 description:  Work through building an example continuous integration and delivery (CI/CD) pipeline step-by-step 
 team:
@@ -27,7 +27,7 @@ The diagram below shows the overall picture of this example, which consists of a
 
 These are the items in the diagram above: 
 
-<ol type="a">
+<ol type="A">
     <li>Kubernetes cluster: For simplicity, you can use a minikube cluster running on your local machine. The only thing that doesn’t work in this scenario is connecting a webhook from Docker Hub to Jenkins. We’ll show you a workaround to get the example working, but it isn’t suitable for production use.</li>
     <li>Jenkins namespace hosting a Jenkins instance</li>
     <li>Source code for the application stored in the Github repository</li>

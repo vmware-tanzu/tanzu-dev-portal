@@ -68,36 +68,42 @@ To run the database and admin containers:
 
 
 
-1. Create a `docker-compose.yml` file with the contents above. Edit the values `your-db-password`, `your-email`, and `your-admin-password` to set credentials for your database and for the admin application. From the directory with `docker-compose.yml`:
+1. Create a `docker-compose.yml` file with the contents above. Edit the values `your-db-password`, `your-email`, and `your-admin-password` to set credentials for your database and for the admin application. The value of`your-email` is only used as the login user for the Postgres admin application. 
+
+2.  Run the following command from the directory with `docker-compose.yml`:
 
 ```
-docker-compose -up -d
+docker-compose up -d
 ```
 
-2. Run the `docker ps` command afterwards. There should now be two new containers running.
+3. Run the `docker ps` command afterwards. There should now be two new containers running. You should see output similar to this (IDs will be different and you might have other containers running as well as the two you just started): 
+```
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS         PORTS                           NAMES
+49cde7079787   dpage/pgadmin4          "/entrypoint.sh"         11 seconds ago   Up 8 seconds   443/tcp, 0.0.0.0:8880->80/tcp   postgres_pgadmin_1
+60906366563e   bitnami/postgresql:11   "/opt/bitnami/script…"   11 seconds ago   Up 8 seconds   0.0.0.0:5432->5432/tcp          postgres_postgresql_1\
+```
 
 This file also creates a Docker bridge network for the two containers to communicate with each other. `pgAdmin` is available on the host at port 8880, so to administer the database, point your browser at [http://localhost:8880](http://localhost:8880) and sign in using `your-email` and `your-admin-password`. Then, create a new server connection as follows: 
 
 
 
-3. Right-click on Servers, Create, Server. 
-4. Set name to `postgres-db`, then go to the connection tab and enter the name of the PostgreSQL container. It is probably `postgres_postgresql_1`, but you can check the names of running containers with the `docker ps` command.  
-5. Set `Username` to `postgres` and `Password` to `your-db-password` and Save the server connection. 
+4. Click **Add new server** under **Quick Links**.  
+5. Set name to `postgres-db`, then go to the connection tab and enter the name of the PostgreSQL container. It is probably `postgres_postgresql_1`, but you can check the names of running containers with the `docker ps` command.  
 
-You can now administer the database server. Create databases `dev`, `test`, and `production`. To create a new database: 
+6. Set `Username` to `postgres` and `Password` to `your-db-password` and Save the server connection. 
 
+You can now administer the database server. Create databases `test`, and `production` (the `dev` database was created by the `docker-compose` command). To create a new database: 
 
-
-6. Right-click on **Databases** under `postgres-db`, then click **Create**, **Database** to add a new database. 
+7. Right-click on **Databases** under `postgres-db`, then click **Create**, **Database** to add a new database. 
 
 
 ## Run the application
 
-You can run the application on your host machine before deploying it to a Kubernetes cluster. Set the following environment variables: 
+You can run the application on your host machine before deploying it to a Kubernetes cluster. Set the following environment variables (the value for DATABASE_PASSWORD must be the same as the one for `POSTGRESQL_PASSWORD` in your `docker-compose.yml` file): 
 
 
 ```
-DATABASE_PASSWORD=secret-root
+DATABASE_PASSWORD=your-postgresql-password
 DATABASE_URL=jdbc:postgresql://localhost:5432/dev
 DATABASE_USER=postgres
 ```
@@ -138,4 +144,5 @@ The response body will look like the following:
 ```
 
 
-You can view the record either using the `pgAdmin` tool, or by pointing your browser at [http://localhost:8080/transaction/1](http://localhost:8080/transaction/1). 
+You can view the record either using the `pgAdmin` tool, or by pointing your browser at [http://localhost:8080/transaction/1](http://localhost:8080/transaction/1). To use the pgAdmin tool, in the right hand pane under `Servers`, click `Refresh` then expand `postgres-db`, `Databases`, `Schemas`, `Tables`, then right-click 
+`account_transaction` and select `View/Edit Data`, `All Rows`. 
