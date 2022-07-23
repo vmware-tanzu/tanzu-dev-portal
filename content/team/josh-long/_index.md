@@ -96,11 +96,12 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Upcoming Appearances
 
-### JBCNConf
-**2022-07-17** - I'll be speaking at JBCNConf (live, in Barcelona, Spain, on 18-20 July, 2022)! Nos vemos!
 
 
 ## Recent Spring Tips
+
+### 2022-07-21 - [Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022)
+<iframe width="560" height="315" src="https://youtube.com/embed/Xe7K1biKcs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 2022-06-23 - [Spring for GraphQL: Data](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8)
 <iframe width="560" height="315" src="https://youtube.com/embed/ahBjkmkltcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,9 +129,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### 2022-03-31 - [Brave, Bold, and Boring YugabyteDB](https://spring.io/blog/2022/03/31/spring-tips-brave-bold-and-boring-yugabytedb)
 <iframe width="560" height="315" src="https://youtube.com/embed/BjWJ8a2YJlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 2022-03-23 - [Multitenant JDBC](https://spring.io/blog/2022/03/23/spring-tips-multitenant-jdbc)
-<iframe width="560" height="315" src="https://youtube.com/embed/hjJ6ODxgYqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Recent Blog Posts
@@ -178,4 +176,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
-<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracef
+<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Ret
