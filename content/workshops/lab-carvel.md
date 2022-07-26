@@ -3,7 +3,6 @@ date: '2021-09-13'
 description: Introducing to Carvel, simple and composable tools for application
 lab: tce-carvel
 kubecon: true
-hidden: true
 lastmod: '2021-10-03'
 length: 15
 logo: "/images/workshops/logo-tce.svg"
