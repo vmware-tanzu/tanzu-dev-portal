@@ -1796,6 +1796,7 @@ Quickstart
 quokka
 (r)?syslog
 r0
+R2DBC
 RabbitMQ('s)?
 Radware
 Raju
@@ -2458,5 +2459,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-JDBC
-R2DBC
