@@ -1,6 +1,6 @@
 ---
 name: Priyanka “Pinky” Ravi
-description: "Developer Experience Engineer, WeaveWorks"
+description: "Developer Experience Engineer, Weaveworks"
 roles: ["guest"]
 skills: ["Flux", "GitOps"]
 location: ""

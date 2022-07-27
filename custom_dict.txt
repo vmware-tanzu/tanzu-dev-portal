@@ -15,6 +15,9 @@
 10x
 OpenGitOps
 Codefresh
+Weaveworks
+Priyanka
+Ravi
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
