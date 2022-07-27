@@ -13,6 +13,11 @@
 .tgz
 1:1s
 10x
+OpenGitOps
+Codefresh
+Weaveworks
+Priyanka
+Ravi
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
@@ -568,6 +573,7 @@ DEVOPS
 DevOps(-related)?
 DevOpsDays(KC)?
 DevSecOps
+DevX
 Dex
 dex-federation
 Díaz
@@ -759,6 +765,7 @@ focussed
 focussing
 FoodService
 formatter
+Forrester
 FOSS
 foundaments
 Foxwell
@@ -1290,6 +1297,7 @@ libs
 [Ll]ifecycle
 lightboard
 Lighthouse
+Likert
 Liles
 LimitRanger
 LimitRanges
@@ -1586,6 +1594,7 @@ oplogs
 OpsGenie
 OpsManager
 optimizeForWrite
+optionality
 OQL
 orchestrator(s)?
 org(s)?
@@ -1616,6 +1625,7 @@ P2P
 Pacak
 Packer
 Packt('s)?
+[Pp]addleboarding
 [Pp]agefile
 PagerDuty
 Pairmate
@@ -1696,6 +1706,7 @@ PodSecurityPolicy
 PodsPerCore
 POJO(s)?
 POJP
+Pokémon
 Poly1305
 Pomodoro
 Poornima
