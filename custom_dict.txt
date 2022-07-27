@@ -12,6 +12,9 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+DefMacro
+looselytyped
+LLC
 10x
 OpenGitOps
 Codefresh
