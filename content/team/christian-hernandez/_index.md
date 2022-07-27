@@ -7,10 +7,10 @@ location: "Los Angeles, CA"
 
 # Social Media 
 twitter: "christianh814"
-website: "https://developers.redhat.com/e-books/path-gitops"
+website: "https://chernand.io"
 facebook: ""
 linkedin: "chernandez1982"
-github: ""
+github: "christianh814"
 pinterest: ""
 instagram: ""
 youtube: ""
