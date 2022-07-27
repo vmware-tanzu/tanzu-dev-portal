@@ -63,6 +63,15 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Spring Cloud Kubernetes contributor Ryan Baxter 
+**2022-07-21** [listen](https://api.bootifulpodcast.fm/podcasts/6fa8d806-2e62-4782-bd15-e232b1e22eee/produced-audio) <p>Hi, Spring fans! In this episode, Josh Long (@starbuxman) talks to a person who knows more than most about the awesome implications of both the words &quot;Spring&quot; and &quot;Cloud,&quot; Spring Cloud Kubernetes ninja Ryan Baxter (@ryanjbaxter).</p>
+
+### Nate Schutta: The Thinking Person's Architect, My Friend, and Teammate
+**2022-07-14** [listen](https://api.bootifulpodcast.fm/podcasts/4ace9390-2c06-4d3c-a0f8-b61e0ca5f917/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to his friend, teammate, and architect extraordinaire, Nate Schutta (@ntschutta)</p>
+
+### Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili
+**2022-07-07** [listen](https://api.bootifulpodcast.fm/podcasts/3ace4fe7-4a10-4a96-a2d1-c90d40c7da6f/produced-audio) <p>Hi, Spring fans! In this installment <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to fellow teammate and Kubernetes ecosystem legend <a href="https://twitter.com/capileigh">Leigh Capili (@capileigh)</a> about Gitops, Kubernetes, Puppet/Chef, continuous delivery, how zoom scales if you deploy on-prem, being a developer advocate, Flux, and so much more.</p>
+
 ### Spring Developer Advocate Dan Vega 
 **2022-06-30** [listen](https://api.bootifulpodcast.fm/podcasts/1396a2af-8cf3-42e1-8083-71aa8c18eeb8/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Spring Developer Advocate Dan Vega (@therealdanvega)</p>
 
@@ -84,23 +93,15 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 ### Devoxx UK organizer and VoxxedDays cofounder Mark Hazel on running great conferences 
 **2022-05-19** [listen](https://api.bootifulpodcast.fm/podcasts/618b6602-f3f0-4c97-86a7-8cc22418fc7b/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to Devoxx UK organizer and Voxxed Days cofounder <a href="https://twitter.com/mrhazell">Mark Hazell (@mrhazell)</a>.</p>
 
-### EasyMock contributor, Java Champion, and Java luminary Henri Tremblay 
-**2022-05-12** [listen](https://api.bootifulpodcast.fm/podcasts/aa1abf06-ca95-426c-b200-f3669ab3839d/produced-audio) <p>Hi, Spring fans! In this episode, Josh Long (@starbuxman) talks to fellow  Java Champion, EasyMock engineer, and Java luminary, JUG leader, and legend Henri Tremblay (@henri_tremblay)</p>
-
-### Java Champion and Spring Katas legend Chandra Guntur 
-**2022-05-06** [listen](https://api.bootifulpodcast.fm/podcasts/c82fb7d3-2854-4b31-8d5e-f183e7b87643/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Java Champion and Java ecosystem luminary Chandra Guntur (@cguntur) about Java, Spring, and the Spring Katas, among other things.</p>
-
-### Simon Ritter, Java Champion and deputy CTO at Azul
-**2022-04-28** [listen](https://api.bootifulpodcast.fm/podcasts/272ca14a-2d03-4ae0-a414-b57b9dd1a519/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to Azul Deputy CTO and Java's own mad scientist and luminary <a href="https://twitter.com/SpeakJava">Simon Ritter (@speakjava)</a></p>
-
 
 ## Upcoming Appearances
 
-### JBCNConf
-**2022-07-17** - I'll be speaking at JBCNConf (live, in Barcelona, Spain, on 18-20 July, 2022)! Nos vemos!
 
 
 ## Recent Spring Tips
+
+### 2022-07-21 - [Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022)
+<iframe width="560" height="315" src="https://youtube.com/embed/Xe7K1biKcs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 2022-06-23 - [Spring for GraphQL: Data](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8)
 <iframe width="560" height="315" src="https://youtube.com/embed/ahBjkmkltcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -129,22 +130,19 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 ### 2022-03-31 - [Brave, Bold, and Boring YugabyteDB](https://spring.io/blog/2022/03/31/spring-tips-brave-bold-and-boring-yugabytedb)
 <iframe width="560" height="315" src="https://youtube.com/embed/BjWJ8a2YJlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 2022-03-23 - [Multitenant JDBC](https://spring.io/blog/2022/03/23/spring-tips-multitenant-jdbc)
-<iframe width="560" height="315" src="https://youtube.com/embed/hjJ6ODxgYqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 ## Recent Blog Posts
 
+* [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
+* [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
+* [Spring Tips: Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022) (2022-07-20) 
+* [This Week in Spring - July 19th, 2022](https://spring.io/blog/2022/07/19/this-week-in-spring-july-19th-2022) (2022-07-19) 
+* [A Bootiful Podcast: Nate Schutta: The Thinking Person's Architect, My Friend, and Teammate](https://spring.io/blog/2022/07/14/a-bootiful-podcast-nate-schutta-the-thinking-person-s-architect-my-friend-and-teammate) (2022-07-14) 
 * [This Week in Spring - July 12th, 2022](https://spring.io/blog/2022/07/12/this-week-in-spring-july-12th-2022) (2022-07-12) 
 * [A Bootiful Podcast: Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili](https://spring.io/blog/2022/07/07/a-bootiful-podcast-kubernetes-contributor-and-fellow-tanzu-developer-advocate-leigh-capili) (2022-07-07) 
 * [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
 * [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
 * [Today is the last day to submit to the SpringOne 2022 Call For Papers!](https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers) (2022-06-28) 
-* [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
-* [Spring Tips: Learn Spring for GraphQL (the last two episodes: parts 7 and 8)](https://spring.io/blog/2022/06/23/spring-tips-learn-spring-for-graphql-the-last-two-episodes-parts-7-and-8) (2022-06-24) 
-* [A Bootiful Podcast: JVM and .NET legend Ted Neward on... just about everything](https://spring.io/blog/2022/06/23/a-bootiful-podcast-jvm-and-net-legend-ted-neward-on-just-about-everything) (2022-06-23) 
-* [This Week in Spring - June 21st, 2022](https://spring.io/blog/2022/06/21/this-week-in-spring-june-21st-2022) (2022-06-21) 
-* [Bootiful Podcast: Spring Framework contributor S??bastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly](https://spring.io/blog/2022/06/16/bootiful-podcast-spring-framework-contributor-s-bastien-deleuze-on-graalvm-aot-project-leyden-and-webassembly) (2022-06-16) 
 
 ## Abstracts
 
@@ -178,4 +176,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
-<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Sprin
+<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Ret

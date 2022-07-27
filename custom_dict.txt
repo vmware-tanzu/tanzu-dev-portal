@@ -13,6 +13,11 @@
 .tgz
 1:1s
 10x
+OpenGitOps
+Codefresh
+Weaveworks
+Priyanka
+Ravi
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
@@ -1062,6 +1067,7 @@ Irizarry
 IronFrame
 IRSA
 ISAPI
+iSCSI
 Isenberg
 IServiceProvider
 ISTIO_MUTUAL
@@ -1112,6 +1118,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+Jenkinsfile
 JEP
 Jernigan
 JetBrains
@@ -1151,6 +1158,7 @@ JSONFormatter
 JsonMediaTypeFormatter
 Jsonnet
 JSONPatch
+JSONPath
 JsonPdxConverter
 JSP
 JSR-352
@@ -1450,6 +1458,7 @@ MTT(D|R)
 MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
+multibranch
 [Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
@@ -1691,6 +1700,7 @@ POCO(s)?
 podcaster
 PodDisruptionBudget
 PodIntent
+Podman
 PodMetrics
 PodSecurityPolicy
 PodsPerCore
@@ -1829,6 +1839,7 @@ RedirectUri
 [rR]edis
 redistributable
 RedMonk('s)?
+[Rr]edux
 Reenvisioning
 Reetro
 refactorings?
@@ -1920,6 +1931,7 @@ Route53
 RouteAuthSpecs
 routeToSecondaryMembers
 RoutingAsyncEventListener
+RPi
 RSA
 RSocket(-based)?
 Ruckle
@@ -2248,6 +2260,7 @@ Umbraco
 (un)?marshalling
 unannotated
 unbundle
+unbundled
 UNC
 uncheck
 Uncomment
@@ -2456,3 +2469,5 @@ Zynga
 μServices
 Ϟ
 ϟ
+JDBC
+R2DBC
