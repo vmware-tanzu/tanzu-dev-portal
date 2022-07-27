@@ -133,6 +133,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 * [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
 * [Spring Tips: Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022) (2022-07-20) 
 * [This Week in Spring - July 19th, 2022](https://spring.io/blog/2022/07/19/this-week-in-spring-july-19th-2022) (2022-07-19) 
@@ -142,7 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
 * [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
 * [Today is the last day to submit to the SpringOne 2022 Call For Papers!](https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers) (2022-06-28) 
-* [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
 
 ## Abstracts
 
