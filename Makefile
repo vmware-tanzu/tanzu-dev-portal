@@ -22,6 +22,10 @@ npm: theme
 preview: npm
 	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
+#preview: @ preview hugo
+preview-ip: npm
+	ulimit -n 65535; hugo server --panicOnWarning --bind 0.0.0.0 -b http://${MYIP}:1313/developer
+
 #build: @ build site into `public` directory
 build: npm
 	hugo -b http://localhost:1313/developer
@@ -30,6 +34,11 @@ build: npm
 test: npm
 	act pull_request
 
+#clean: @ Remove /public, test containers, etc
+clean:
+	rm -rf public
+	docker rmi -f act-github-actions-topic-check-dockeraction act-github-actions-link-check-dockeraction act-github-actions-spell-check-dockeraction catthehacker/ubuntu:act-latest
+	
 #spell: @ runs act to perform spellcheck
 spell: npm
 	act -j spell-check

@@ -15,7 +15,7 @@ minutes: 120
 episode: "58"
 explicit: "yes"
 title: "The one with Joshua Van Allen"
-#youtube: "GR5atMBiWF4"
+youtube: "aiCpW5i2y5E"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false

@@ -2,9 +2,9 @@
 name: Ben Wilcock
 description: "Technical Marketing Manager"
 roles: ["author"]
-skills: ["Spring", "Python", "Kubernetes", "Cloud Foundry"]
+skills: ["Tanzu Application Platform", "Spring", "Python", "Kubernetes", "Tanzu Application Server"]
 location: "Glastonbury, UK"
-hidden: true
+hidden: false
 
 # Social Media
 twitter: "benbravo73"

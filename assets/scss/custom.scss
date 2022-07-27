@@ -58,6 +58,36 @@
     position: relative;
   }
 
+  .steeltoe-banner {
+    height: 65px;
+    color: white;
+    background-color: #324f61;
+    transition: all .2s ease-out;
+  }
+  .steeltoe-banner:hover {
+    background-color: #446a82;
+    transition: all .2s ease-out;
+  }
+
+  .homepage-banner {
+    height: 65px;
+    color: white;
+    background-color: #3c7995;
+    transition: all .2s ease-out;
+  }
+  .homepage-banner:hover {
+    background-color: #45a3c7;
+    color: white;
+    transition: all .2s ease-out;
+  }
+
+  .lead p > a {
+    color: #49afd9 !important;
+  }
+  .lead p > a:hover {
+    color: #5ACFFF !important;
+  }
+
   #hero {
       background-repeat: no-repeat;
       background-position: right;
@@ -739,23 +769,20 @@
   background-color: #0B1C23 !important;
 }
 #hero.springone-tour-event-hero {
-  background-size: 65%;
   background-color: #1b2a32;
-  background-position: bottom right;
-  background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
-  @media only screen and (min-width: 1500px){
-    background-size: 60%;
-  }
-  @media only screen and (min-width: 1900px){
-    background-size: 50%;
-  }
-  @media only screen and (min-width: 2100px){
-    background-size: 35%;
-  }
-  .small-screen-hero {
-    display: none;
-  }
   &.s1t-index {
+    background-size: 65%;
+    background-position: bottom right;
+    background-image: url('{{ "/images/springonetour/hero_skyline.svg" | relURL }}');
+    @media only screen and (min-width: 1900px){
+      background-size: 50%;
+    }
+    @media only screen and (min-width: 2100px){
+      background-size: 35%;
+    }
+    .small-screen-hero {
+      display: none;
+    }
     .logo {
       content: url('{{ "/images/springonetour/hero_logo_white.svg" | relURL }}');
       max-width: 20%;
@@ -764,24 +791,78 @@
       background-size: 75%;
       background-position: bottom center;
       padding-top: 2em;
-      min-height: 400px;
+      min-height: 62vh;
+      .container {
+        padding-left: 0 !important;
+        p {
+          text-align: center;
+        }
+      }
       .logo {
         display: none;
       }
     }
+    @media(max-width: 767px) {
+      background: none;
+      padding-bottom: 0 !important;
+      min-height: 0;
+      .small-screen-hero {
+        display: block;
+      }
+    }
   }
   &.s1t-city {
-    &:not(.chicago) #hero-content {
-      padding: 30px 0;
+    padding-bottom: 0;
+    .container-sm {
+      background-repeat: no-repeat;
+      background-position: bottom right 21%;
+      margin: auto;
+      @media(max-width: 1200px) {
+        background-size: 47%;
+      }
+      @media(max-width: 991px) {
+        background-size: 60% !important;
+        background-position: bottom right !important;
+      }
+      @media(max-width: 500px) {
+        background-image: none !important;
+      }
+    }
+    &.chicago .container-sm {
+      background-size: 50%;
+      background-position: bottom right 25%;
+    }
+    &.newyork .container-sm {
+      background-size: 58%;
+      background-position: bottom right 30%;
+    }
+    &.toronto .container-sm {
+      background-size: 51%;
+      background-position: 75% 100%;
+    }
+    &.seattle .container-sm {
+      background-size: 56%;
+      background-position: bottom right 29%;
+    }
+    &.amsterdam .container-sm {
+      background-size: 57%;
+    }
+    &.atlanta .container-sm {
+      background-position: bottom right 35%;
+    }
+    #hero-content {
+      max-width: 75%;
+      margin: auto;
+      padding-bottom: 80px;
+      @media(max-width: 991px) {
+        max-width: 100% !important;
+      }
     }
     @media(max-width: 767px) {
       padding-bottom: 0 !important;
       background-image: none;
       .small-screen-hero {
         display: block;
-      }
-      #hero-content {
-        padding: 0 !important;
       }
     }
     #register-btn {
@@ -804,8 +885,8 @@ body#s1t-index #s1t-destinations-2022 {
     &:hover {
       background-color: #324f61;
     }
-    @media(max-width: 991px) {
-      max-width: 400px;
+    @media(max-width: 1000px) {
+      width: 400px;
     }
   }
   .city-tile-text {
@@ -815,17 +896,24 @@ body#s1t-index #s1t-destinations-2022 {
     height: 177px;
   }
 }
-body#s1t-index {
+#s1t-index {
   .td-main a, .talk-modal a, .speaker-modal a {
     color: #02bc67;
     &:hover {
       color: #80ea6e;
     }
   }
+  .speaker-modal h3 {
+    color: #adbbc4;
+  }
   @media (max-width: 767px){
     .container-sm, .container {
       max-width: 100%;
     }
+  }
+  #sponsors .sponsor img {
+    opacity: 0.8;
+    max-width: 200px;
   }
   #meetup {
     align-items: center;

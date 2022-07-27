@@ -6,6 +6,10 @@ canonifyURLs = false
 enableRobotsTXT = true
 removePathAccents = true
 
+# Continue build even if we hit GitHub API rate limit
+# This only affects code sample page READMEs
+ignoreErrors = ["error-remote-getjson"]
+
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
 
@@ -202,3 +206,17 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 
 [frontmatter]
   lastmod = ["lastmod", ":git", "date"]
+
+# See https://github.com/gohugoio/hugo/releases/tag/v0.91.0
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_', '^COMMIT_', '^CONTEXT']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']

@@ -11,7 +11,7 @@ menu:
 
 ## We are many things, among them: ## {class="h4"} 
 
-- Experts in our field (DevOps, CF/PAS, Spring, DDD, Kubernetes, architecture, microservices, containers, Java, digital transformation)
+- Experts in our field (DevSecOps, TAS, TKG, Spring, domain driven development, test driven development, Kubernetes, architecture, microservices, containers, Java, digital transformation, software supply chains, cloud native data)
 - Dedicated open source maintainers and contributors
 - Respected inside and outside of VMware
 - Experienced conference keynote speakers and presenters

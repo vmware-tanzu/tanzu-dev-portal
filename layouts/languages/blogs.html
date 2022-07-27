@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ partial "amplitude.html" (dict "context" . "event" "blog viewed") }}
+<section id="hero" class="no-bg mt-7 pb-4">
+	<div class="container">
+		<div class='d-flex'>
+			<img alt="" class='icon mr-4' src='{{ "/images/icons/icon-tanzu.svg" | relURL }}'/> <h1 class="h1">{{- .Title -}}</h1>
+		</div>
+	</div>
+</section>
+
+<div class="td-content mt-0">
+	<div class='container'>
+		{{ .Content }}
+		<br/>
+	        
+
+
+
+<div class="section-index blog-index-list">
+    {{ $pages := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-10 px-0 ">
+         {{ range $pages }}
+             <div class="item mb-3 position-relative" >
+                 <div class='gradient-edge-top'></div>
+                 <div class='border p-4 bg-gray-dark '>
+                     <h2 class="pt-0"><a class="h3" href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+                     {{ partial "byline" (dict "context" . "withdate" true) }}
+
+                     <p>{{ .Content | markdownify | truncate 1400 }}</p>
+                     <p><a href="{{ .RelPermalink }}">Read more</a></p>
+                 </div>
+             </div>
+         {{ end }}
+         </div>
+     </div>
+</div>
+
+
+
+
+
+
+
+		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+			{{ partial "feedback.html" .Site.Params.ui.feedback }}
+			<br />
+		{{ end }}
+		{{ if (.Site.DisqusShortname) }}
+			<br />
+			{{ partial "disqus-comment.html" . }}
+		{{ end }}
+		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+	</div>
+</div>
+{{ end }}

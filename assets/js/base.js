@@ -133,38 +133,27 @@ limitations under the License.
     $("#toggle-light-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
-      $("#light-select").show();
-      $("#dark-select").hide();
-      $("#theme-square").addClass("moveSquare");
-      if ($("html").hasClass("light-mode")) {
-        // if (iframe && iframe.contentWindow) {
-        //   iframe.contentWindow.postMessage("dark", "*");
-        // }
-      }
-      else {
-        $("html").addClass("light-mode");
-        changeTheme("light");
-      }
+
+      $("html").addClass("light-mode");
+      changeTheme("light");
     });
 
+    // Dark toggle
     $("#toggle-dark-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
-      $("#dark-select").show();
-      $("#light-select").hide();
-      $("#theme-square").removeClass("moveSquare");
 
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
       }
       changeTheme('dark');
       localStorage.setItem("light-dark-mode-storage", "dark");
-      var hasLight = document.getElementById("light-theme");
 
-      if(hasLight) {
-        document.getElementById("light-theme").remove();
+      if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
+        document.getElementById("light-theme").remove();
       }
     });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
@@ -473,5 +462,3 @@ limitations under the License.
   });
   
 }(jQuery));
-
-

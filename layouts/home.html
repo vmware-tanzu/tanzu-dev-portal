@@ -8,7 +8,7 @@
 			<span class="h1 mb-0 ">
 				{{ .Params.tagline }}
 			</span>
-            <p class="h4">The VMware Tanzu Developer Center provides you with everything you need to build, run & deploy modern apps.</p>
+            <p class="h4">The VMware Tanzu Developer Center provides you with everything you need to build, run, and deploy.</p>
             <a href={{ "/learn" | relURL }} class="cta-btn-wrapper my-5 overflow-hidden d-flex justify-content-between align-items-center position-relative">
                 <div class="solid-rect position-absolute"></div>
                 <div class="cta-btn p-4 m-0 d-inline-block text-uppercase fs-80">Get started with Tanzu</div>
@@ -23,6 +23,16 @@
 		</div>
 	</div>
 </section>
+
+<!-- State of Observability Report banner -->
+<div class="row">
+    <a href="https://hello-tanzu.vmware.com/state-of-observability-2022" class="w-100 py-0">
+        <div class="col-12 text-center d-flex align-items-center justify-content-center homepage-banner py-2" >
+            <span class="h4 mb-0">Read the State of Observability 2022 Report</span>
+        </div>
+    </a>
+</div>
+<!-- End Banner -->
 
 <!-- Gather topic groups -->
 {{ $topicgroups := (slice) }}

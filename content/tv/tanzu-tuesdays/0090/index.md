@@ -1,5 +1,5 @@
 ---
-Date: '2022-03-22T12:00:00-8:00'
+Date: '2022-03-22T11:00:00-08:00'
 PublishDate: '2022-03-17T00:00:00-07:00'
 Description: "Persistence with Spring Data, what it is and what comes next?"
 aliases:
