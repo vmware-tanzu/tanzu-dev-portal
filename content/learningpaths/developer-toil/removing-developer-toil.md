@@ -15,4 +15,4 @@ Through our experience as consultants working with product teams in different in
 
 Hopefully we've helped you understand the value of finding and fixing developer toil. Each time you fix tech debt, you gain more capacity and capabilities to create new features and improve your software. This is how you use a modern software culture to increase business agility. Or, put more simply: less developer toil leads to better software, and better software leads to better business.
 
-To get started, take a look at the sample survey and customize it to fit your organization. If you'd like help, please reach out.
+To get started, take a look at the sample survey and customize it to fit your organization. If you'd like help, you can [request a free consultation](https://tanzu.vmware.com/office-hours) with a product management leaders from Tanzu Labs.
