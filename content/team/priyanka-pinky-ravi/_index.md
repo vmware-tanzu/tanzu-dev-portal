@@ -6,7 +6,7 @@ skills: ["Flux", "GitOps"]
 location: ""
 
 # Social Media 
-twitter: ""
+twitter: "PinkyyRavi"
 website: ""
 facebook: ""
 linkedin: "priyanka-ravi-8a31bb1b6"
