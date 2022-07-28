@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how kpack can help you build images securely and efficiently
-lab: tce-kpack-kubecon
+lab: tce-kpack
 kubecon: true
 hidden: true
 lastmod: '2021-10-03'
