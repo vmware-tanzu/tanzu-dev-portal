@@ -169,7 +169,7 @@ If you need to define a custom type like a date you can do so but this needs to 
 
 ### Root Operation Types
 
-After you have set up your object types you will need a way to read and write data from your API. There are 3 root operation types in GraqphQL:
+After you have set up your object types you will need a way to read and write data from your API. There are 3 root operation types in GraphQL:
 
 ![GraphQL Root Operation Types](./images/root_operation_types.png)
 

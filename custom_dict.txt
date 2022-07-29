@@ -2461,6 +2461,8 @@ Zynga
 JDBC
 R2DBC
 GraphiQL
+graphiql
 GraphQL
+graphql
 Airbnb
 autowired
