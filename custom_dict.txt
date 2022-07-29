@@ -2460,3 +2460,7 @@ Zynga
 ϟ
 JDBC
 R2DBC
+GraphiQL
+GraphQL
+Airbnb
+autowired

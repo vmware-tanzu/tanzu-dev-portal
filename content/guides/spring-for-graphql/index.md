@@ -40,7 +40,7 @@ GraphQL was created by Facebook and now powers many applications on Facebook and
 
 ## What is GraphQL?
 
-The word graph in GraphQL describes a way to represent your data in a graph-like data structure. The QL stands for query language and is a way for the client to query your API. GraphQL is a query language for your API and a server-side runtime for executing queries using a type system you define for your data. It is an alternative to REST & SOAP and in most cases will replace those, not sit alongside them.
+The word graph in GraphQL describes a way to represent your data in a graph-like data structure. The `QL` stands for query language and is a way for the client to query your API. GraphQL is a query language for your API and a server-side runtime for executing queries using a type system you define for your data. It is an alternative to REST & SOAP and in most cases will replace those, not sit alongside them.
 
 GraphQL **isn't tied to any specific database or storage engine** and is instead backed by your existing code and data. This is an important concept to understand so we should start there.
 
@@ -70,13 +70,13 @@ To build your first GraphQL API head over to [start.spring.io](http://start.spr
 - Spring Web
 - Spring GraphQL
 
-![Spring Initailizr](./images/spring-initializr.png)
+![Spring Initializr](./images/spring-initializr.png)
 
 ### The Data Layer
 
 GraphQL isn’t tied to any specific database and is backed by your existing code + data. To demonstrate this you are going to create an application that isn’t tied to any specific database and hold its data in memory.
 
-The application is called JavaBucks and manages a Coffee API. To get started you will need to model the *Coffee* and *Size* objects. You could write a normal class with constructors, getters & setters, equals & hash code, and a toString, or you can save yourself some keystrokes and use a Record type thanks to us selecting a modern JDK like 17.
+The application is called `JavaBucks` and manages a Coffee API. To get started you will need to model the *Coffee* and *Size* objects. You could write a normal class with constructors, getters & setters, equals & hash code, and a toString, or you can save yourself some keystrokes and use a Record type thanks to us selecting a modern JDK like 17.
 
 ```java
 public record Coffee(Integer id, String name, Size size) {
@@ -95,7 +95,7 @@ public enum Size {
 
 Now that you have your data models in place you need a way to store data and retrieve it. With Spring data you could connect to a database quickly to retrieve and persist data. To keep this simple and less focused on the data layer we are going to remove the database and store the data in a collection.
 
-Create a `CoffeeService class using the following code:
+Create a `CoffeeService` class using the following code:
 
 ```java
 @Service
@@ -125,7 +125,7 @@ The `@PostConstruct` annotation will tell Spring to run this method after the cl
 
 ### GraphQL Schema
 
-With your data layer in place, it’s time to turn your attention to the GraphQL schema. By convention, Spring will look for GraphQL Schemas in the `/src/main/resources/graphql` directory which is configurable but for this example, you will use the default. Create a new file `schema.graphqls` in that directory with the following content:
+With your data layer in place, it’s time to turn your attention to the GraphQL schema. By convention, Spring will look for GraphQL Schema's in the `/src/main/resources/graphql` directory which is configurable but for this example, you will use the default. Create a new file `schema.graphqls` in that directory with the following content:
 
 ```graphql
 type Coffee {
@@ -149,7 +149,7 @@ If this is the first time you’re seeing a GraphQL schema you can probably gues
     - Coffee and Size are **Object Types** that you define
     - ID and String are built-in Scalar types
 - The `!` simply tells us that you can always expect a value back and will never need to check for null.
-- The schema supports enums, lists, interfaces, and [more](https://graphql.org/learn/).
+- The schema supports Enum's, Lists, Interfaces, and [more](https://graphql.org/learn/).
 
 **Object Types**
 
@@ -161,15 +161,15 @@ As you learned in the previous section there are built-in Scalar types. GraphQL 
 
 - `Int`: A signed 32-bit integer.
 - `Float`: A signed double-precision floating-point value.
-- `String`: A UTF-8 character sequence.
+- `String`: A `UTF-8` character sequence.
 - `Boolean`: `true` or `false`.
-- `ID`: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an `ID` signifies that it is not intended to be human-readable.
+- `ID`: The ID scalar type represents a unique identifier, often used to re fetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an `ID` signifies that it is not intended to be human-readable.
 
 If you need to define a custom type like a date you can do so but this needs to be configured on the server side. GraphQL Java comes with some [additional Scalar Types](https://www.notion.so/Getting-started-with-Spring-for-GraphQL-9e17a62b25e843658bdd07a3beef6e62) as well as the ability to define your own.
 
 ### Root Operation Types
 
-After you have set up your object types you will need a way to read and write data from your API. There are 3 root operation types in GrqphQL:
+After you have set up your object types you will need a way to read and write data from your API. There are 3 root operation types in GraqphQL:
 
 ![GraphQL Root Operation Types](./images/root_operation_types.png)
 
@@ -257,7 +257,7 @@ There is some default help text that you should go through to familiarize yourse
 
 If you click on ***Coffee*** which is the return type you will see all of the fields available to you. This makes your GraphQL APIs self documenting and without having to talk to anyone you already have what you need to get started writing queries.
 
-Remove the comments from the graphql editor on the left. It’s time to write your first query and it starts with the operation type and the field name. Notice as you start writing findAll you will get some code assistance from the IDE. This is because it’s reading the GraphQL schema and it knows what fields are available on each object.
+Remove the comments from the graphql editor on the left. It’s time to write your first query and it starts with the operation type and the field name. Notice as you start writing `findAll` you will get some code assistance from the IDE. This is because it’s reading the GraphQL schema and it knows what fields are available on each object.
 
 ```graphql
 query {
