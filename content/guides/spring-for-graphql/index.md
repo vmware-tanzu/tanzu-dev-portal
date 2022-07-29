@@ -149,7 +149,7 @@ If this is the first time you’re seeing a GraphQL schema you can probably gues
     - Coffee and Size are **Object Types** that you define
     - ID and String are built-in Scalar types
 - The `!` simply tells us that you can always expect a value back and will never need to check for null.
-- The schema supports Enum's, Lists, Interfaces, and [more](https://graphql.org/learn/).
+- The schema supports Enums, Lists, Interfaces, and [more](https://graphql.org/learn/).
 
 **Object Types**
 
