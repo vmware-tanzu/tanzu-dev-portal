@@ -2474,3 +2474,11 @@ Zynga
 ϟ
 JDBC
 R2DBC
+GraphiQL
+graphiql
+GraphQL
+graphql
+Airbnb
+autowired
+Enum
+Enums
