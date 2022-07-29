@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### RabbitMQ rabbit-herder Dan Carwin
+**2022-07-28** [listen](https://api.bootifulpodcast.fm/podcasts/24972224-9272-4325-8a9b-a381291ec189/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to a very busy rabbit-herder on the RabbitMQ team, Dan Carwin (@dcarwin)</p>
+
 ### Spring Cloud Kubernetes contributor Ryan Baxter 
 **2022-07-21** [listen](https://api.bootifulpodcast.fm/podcasts/6fa8d806-2e62-4782-bd15-e232b1e22eee/produced-audio) <p>Hi, Spring fans! In this episode, Josh Long (@starbuxman) talks to a person who knows more than most about the awesome implications of both the words &quot;Spring&quot; and &quot;Cloud,&quot; Spring Cloud Kubernetes ninja Ryan Baxter (@ryanjbaxter).</p>
 
@@ -89,9 +92,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### The good Dr. David Syer on the new and novel in Spring and Kubernetes 
 **2022-05-27** [listen](https://api.bootifulpodcast.fm/podcasts/b2235d45-e450-4638-b4f6-1188c625d311/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long talks to Spring Boot and Spring Cloud luminary, the good Dr. @David_Syer, about the latest and greatest on Spring and Kubernetes</p>
-
-### Devoxx UK organizer and VoxxedDays cofounder Mark Hazel on running great conferences 
-**2022-05-19** [listen](https://api.bootifulpodcast.fm/podcasts/618b6602-f3f0-4c97-86a7-8cc22418fc7b/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to Devoxx UK organizer and Voxxed Days cofounder <a href="https://twitter.com/mrhazell">Mark Hazell (@mrhazell)</a>.</p>
 
 
 ## Upcoming Appearances
@@ -133,6 +133,8 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [A Bootiful Podcast: RabbitMQ rabbit-herder Dan Carwin](https://spring.io/blog/2022/07/28/a-bootiful-podcast-rabbitmq-rabbit-herder-dan-carwin) (2022-07-28) 
+* [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 * [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
 * [Spring Tips: Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022) (2022-07-20) 
 * [This Week in Spring - July 19th, 2022](https://spring.io/blog/2022/07/19/this-week-in-spring-july-19th-2022) (2022-07-19) 
@@ -141,8 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [A Bootiful Podcast: Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili](https://spring.io/blog/2022/07/07/a-bootiful-podcast-kubernetes-contributor-and-fellow-tanzu-developer-advocate-leigh-capili) (2022-07-07) 
 * [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
 * [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
-* [Today is the last day to submit to the SpringOne 2022 Call For Papers!](https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers) (2022-06-28) 
-* [This Week in Spring - June 28th, 2022](https://spring.io/blog/2022/06/28/this-week-in-spring-june-28th-2022) (2022-06-28) 
 
 ## Abstracts
 
@@ -176,4 +176,5 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
-<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Ret
+<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
+<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distr
