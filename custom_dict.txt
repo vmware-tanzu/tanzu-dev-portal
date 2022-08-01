@@ -12,15 +12,7 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
-DefMacro
-looselytyped
-LLC
 10x
-OpenGitOps
-Codefresh
-Weaveworks
-Priyanka
-Ravi
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
@@ -76,6 +68,7 @@ afterAcknowledgement
 Agile-ific
 Aino
 [Aa]ir-[Gg]apped
+Airbnb
 airgap(ped)?
 akka
 Akka
@@ -187,6 +180,7 @@ Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
 Autowired
+autowired
 autowires
 Aviv
 Awaitility
@@ -310,6 +304,7 @@ Carducci
 Carta
 Cartographer
 Carvel('s)?
+Carwin
 CAS
 Cashmore
 cass-operator
@@ -400,6 +395,7 @@ CNI-specific
 co-organiser
 Coby
 [Cc]odebase(s)?
+Codefresh
 CodeFresh
 CodeItLive
 CodeOne
@@ -546,6 +542,7 @@ debuggable
 decrypt(ed|ing)?
 [Dd]eduplicate
 defence
+DefMacro
 degradations
 DEK(s)?
 delayDuration
@@ -697,6 +694,7 @@ EntryEventImpl
 EntryEventImpl's
 entrypoint
 enum
+Enum
 EnumInfo
 Enums
 [Ee]nv
@@ -910,7 +908,10 @@ Grails
 Grandja
 GrantedAuthoritiesMapper
 GrantedAuthority
+GraphiQL
+graphiql
 GraphQL
+graphql
 GraphQL(-based)?
 Grasso
 GRE
@@ -1317,6 +1318,7 @@ LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
 livestreaming
+LLC
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -1341,6 +1343,7 @@ Lombok
 lookups
 lookups.
 [Ll]oopback
+looselytyped
 lorem-ipsum
 Low-fi
 LRU
@@ -1581,6 +1584,7 @@ OPA
 Opdyke
 OpenAPI(Tools)?
 OpenFeign
+OpenGitOps
 OpenId
 OpenID
 OpenShift
@@ -1764,6 +1768,7 @@ preStop
 primaryBucketCount
 PrimaryRoutingFunction
 PriorityClass(es)?
+Priyanka
 processServerMetrics
 Procfile
 Procfile(s)?
@@ -1810,10 +1815,12 @@ Quickstart
 quokka
 (r)?syslog
 r0
+R2DBC
 RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+Ravi
 RBAC(-enabled)?
 RCE
 RDBMS
@@ -2385,6 +2392,7 @@ WaveConfigObject
 waypoints
 WCF
 WCF-TCP
+Weaveworks
 [Ww]eb[Hh]ook('s)?
 [wW]eb[sS]ervice(s)?
 webAPI
@@ -2472,13 +2480,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-JDBC
-R2DBC
-GraphiQL
-graphiql
-GraphQL
-graphql
-Airbnb
-autowired
-Enum
-Enums
