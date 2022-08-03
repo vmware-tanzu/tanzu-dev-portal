@@ -676,6 +676,7 @@ ElasticSearch
 ELB(s)?
 Eleftheria
 Emad
+embodiments
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -1168,6 +1169,7 @@ JSP
 JSR-352
 JST
 judgement
+judgements
 julielerman
 Julien
 jumpbox
@@ -2349,6 +2351,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+viewport
 Vikram
 Viktor
 Villnow
