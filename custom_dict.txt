@@ -12,6 +12,7 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+Arellano
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
