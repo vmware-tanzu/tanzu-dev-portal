@@ -558,6 +558,7 @@ deployable
 [Dd]eployable
 deprioritized
 deps
+[Dd]eserialize
 deserialize
 deserializes
 deserializing
@@ -1214,6 +1215,7 @@ keySets
 keyspace
 KIAM
 Kibana
+KitchenService
 kitesurfing
 KlipTok
 Kloosterhuis
@@ -1465,6 +1467,7 @@ MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
 multibranch
+multicast
 [Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
@@ -1604,6 +1607,7 @@ optimizeForWrite
 optionality
 OQL
 orchestrator(s)?
+OrderService
 org(s)?
 ORM(-based)?
 ORM(s)?
