@@ -133,6 +133,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - August 1st, 2022](https://spring.io/blog/2022/08/02/this-week-in-spring-august-1st-2022) (2022-08-02) 
 * [A Bootiful Podcast: RabbitMQ rabbit-herder Dan Carwin](https://spring.io/blog/2022/07/28/a-bootiful-podcast-rabbitmq-rabbit-herder-dan-carwin) (2022-07-28) 
 * [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 * [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
@@ -142,7 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - July 12th, 2022](https://spring.io/blog/2022/07/12/this-week-in-spring-july-12th-2022) (2022-07-12) 
 * [A Bootiful Podcast: Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili](https://spring.io/blog/2022/07/07/a-bootiful-podcast-kubernetes-contributor-and-fellow-tanzu-developer-advocate-leigh-capili) (2022-07-07) 
 * [This Week in Spring - July 5th, 2022](https://spring.io/blog/2022/07/05/this-week-in-spring-july-5th-2022) (2022-07-05) 
-* [A Bootiful Podcast: Spring Developer Advocate Dan Vega](https://spring.io/blog/2022/06/30/a-bootiful-podcast-spring-developer-advocate-dan-vega) (2022-06-30) 
 
 ## Abstracts
 
@@ -177,4 +177,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
 <li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distr
+<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distribute these longer-running workloa
