@@ -12,12 +12,14 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+Arellano
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
 2x2
 32bit
+Pinky
 3D
 [23]G
 401K
