@@ -74,7 +74,7 @@ To demonstrate the topic exchange you will use this simple flow:
 
 1. An order will come into the `OrderService` via an API call
 2. A message will be created with the routing key `order.cookwaffle` and passed to RabbitMQ
-3. The `KitchenService` will listen for any messages with a routing key that contain `cookwaffle`
+3. The `KitchenService` will listen for any messages with a routing key that contains `cookwaffle`
 4. The `KitchenService` will then create a new Order object and pass it to the `SignalR` hub to be displayed on the UI
 
 The bare bones of this project have been created for you in the following [repo](https://github.com/Layla-P/RabbitMQTopicExchange/tree/start) on GitHub. This is the `start` branch. If you would like to see the completed code, checkout the `complete` branch.
@@ -95,7 +95,7 @@ This project is the "Consumer".
 
 ### Messaging.Common
 
-A *class library* where you will store shared code to do with RabbitMQ setup. This class library has a model called `RabbitMQSettings` consisting of three fields: `HostName`, `ExchangeName` and `ExchangeType` which will be used to define these properties in RabbitMQ. It also has a class called `IServiceCollectionExtensions` which you will use in your other two projects to set up RabbitMQ client connections.
+A *class library* where you will store shared code to do with RabbitMQ setup. This project has a model called `RabbitMQSettings` consisting of three fields: `HostName`, `ExchangeName` and `ExchangeType` which will be used to define these properties in RabbitMQ. It also has a class called `IServiceCollectionExtensions` which you will use in your other two projects to set up RabbitMQ client connections.
 
 ## Connecting to RabbitMQ
 
@@ -117,7 +117,7 @@ public static IServiceCollection SetUpRabbitMq(this IServiceCollection services,
 }
 ```
 
-Next, you will need to create an instance of `ConnectionFactory` and add it to the IoC container, using the `HostName` from the `RabbitMQSettings` object. As you'll be using an async consumer later on in this demo, you will also need to tell the `ConnectionFactory` this by setting `DispatchConsumersAsync ` to `true.
+Next, you will need to create an instance of `ConnectionFactory` and add it to the IoC container, using the `HostName` from the `RabbitMQSettings` object. As you'll be using an async consumer later on in this demo, you will also need to tell the `ConnectionFactory` this by setting `DispatchConsumersAsync` to `true.
 
 ```csharp
 services.AddSingleton<IConnectionFactory>(sp => new ConnectionFactory
@@ -282,7 +282,7 @@ The above code serializes the C# object to JSON, encodes it to `UTF8` and then p
 
 The key and serialized message will both be printed to the console for monitoring. This could be changed at a later date to print to logs.
 
-Now you can add the `RabbitSender` to the IoC container. Back in "Program.cs", add the following immediately after you call `SetUpRabbitMq`:
+Now you can add the `RabbitSender` to the IoC container. Back in "Program.cs". add the following immediately after you call `SetUpRabbitMq`:
 
 ```csharp
 builder.Services.SetUpRabbitMq(builder.Configuration);
@@ -360,9 +360,9 @@ You will then tell the `IModel channel` to declare a queue and return the genera
 
 Next, the queue is bound to the `IModel` and set to listen to any message with a routing key matching `cookwaffle` .
 
-Next you will declare the `consumer` and add an expression to the `Received` event on that consumer. The `BasicConsume` at the end of this code block will actually start the consumption process.
+Finally, you will declare the `consumer` and add an expression to the `Received` event on that consumer. The `BasicConsume` at the end of this code block will actually start the consumption process.
 
-Add the following code to the `DoStuff` method.
+Add the following code to the `DoStuff` method:
 
 ```csharp
 var consumerAsync = new AsyncEventingBasicConsumer(_channel);
@@ -433,7 +433,7 @@ You'll, of course, need to have RabbitMQ running in Docker as outlined at the st
 
 Once the "OrderService" has started you can navigate to [https://localhost:7196/swagger/index.html](https://localhost:7196/swagger/index.html) to see the API explorer provided by [Swagger]([https://swagger.io/](https://swagger.io/)).
 
-The "KitchenService" UI is available on [https://localhost:7193/](https://localhost:7193/)` and should be a simple web view.
+The "KitchenService" UI is available on [https://localhost:7193/](https://localhost:7193/) and should be a simple web view.
 
 On swagger, click on the endpoint `/waffleorder` and then on the "Try it out" button. You can either modify the message body or leave it as is - it will seed automatically if not set - then click on "Execute".
 
