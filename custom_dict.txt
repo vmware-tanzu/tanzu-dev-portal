@@ -19,6 +19,7 @@ Arellano
 2FA
 2x2
 32bit
+Pinky
 3D
 [23]G
 401K
