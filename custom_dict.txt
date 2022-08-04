@@ -751,6 +751,7 @@ fileshare
 FileSystemXmlApplicationContext
 Finchley
 FinTech
+fintech
 FIPS(-enabled|-approved)?
 firehose
 firewalling
@@ -1103,6 +1104,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+Janeiro
 Jarvinen
 Jasso
 JavaBean
@@ -1960,6 +1962,7 @@ Ryzen
 SaaS
 SaaS(-based)?
 Sadogursky
+Saïd
 Saikali
 Salaboy
 salaboy
@@ -2363,6 +2366,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vitor
 Vlissides
 VMCachedDeserializable
 VMs?
