@@ -2,14 +2,14 @@
 name: "Vitor Kneipp"
 description: "Product Manager"
 roles: ["author"]
-skills: ["Product Management", "Agile"]
+skills: ["Product Management", "Agile", "Product Strategy", "Systems Thinking", "Digital Transformation", "OKRs", "Startup Mentorship"]
 location: "London"
 
 # Social Media
 twitter: ""
 website: ""
 facebook: ""
-linkedin: ""
+linkedin: "vitorkneipp"
 github: ""
 pinterest: ""
 instagram: ""
