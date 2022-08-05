@@ -22,6 +22,6 @@ Christian Hernandez leads developer experience at [Codefresh](https://codefresh.
 <!--more-->
 
 
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="CHBA34a0KEQ" class="youtube-video-shortcode" >}} -->
+{{< youtube id="fQ9846hRiFo" class="youtube-video-shortcode" >}}
