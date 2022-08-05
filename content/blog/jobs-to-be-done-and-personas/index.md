@@ -6,6 +6,10 @@ team:
 - Vitor Kneipp
 title: How Might We Better Use Loaded Terms Like "Personas" and "Jobs to be Done"?
 ---
+_The article below came to life in early 2019, when few people talked about marrying jobs to personas. More importantly, the example product is quite technical, an application platform, which is seldom the example of choice of most write-ups on the internet. For this reason, it is a rare jewel, a jewel that has aged well._
+
+_The most precious jewelry have stories behind them. This story starts in the old Pivotal blog, where the article used to live, while Pivotal still existed as an independent company. There it inspired a generation of product thinkers at Pivotal, including myself. Until one day most (but not all) blog posts moved to the new Tanzu blog, on the occasion of the VMware acquisition. Hundreds of articles moved to their new home. Some, like this one, slipped through our fingers, and stayed buried in the bowels of the former company's old archives, as an unauthored draft. Sooner or later, a scavenger would find this jewel and bring it back to light. This time it was me. I hope you enjoy your reading._
+
 
 ![alt_text](images/image2.gif "image_tooltip")
 
