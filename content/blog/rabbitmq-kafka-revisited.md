@@ -1,4 +1,5 @@
 ---
+hide_newsletter: true
 aliases:
 - "/blog/revisited-understanding-when-to-use-rabbitmq-or-apache-kafka/"
 date: 2020-11-16
@@ -104,4 +105,34 @@ If you would like to take a deeper dive on this topic, check out [this video](ht
 
 If you’re new to messaging services in general, a great place to start learning is with this video on [event-driven architectures](https://tanzu.vmware.com/developer/tv/code/0034/). If you’re a Spring developer, make sure to check out our guides to get started with [RabbitMQ](/guides/messaging-and-integration/rabbitmq-gs), [Kafka](/guides/messaging-and-integration/kafka-gs/), and [Spring Cloud Stream](/guides/event-streaming/scs-gs/).
 
-And if you would like to know more about the VMware Tanzu RabbitMQ offering, check out [this page](https://tanzu.vmware.com/rabbitmq).
+And if you would like to know more about the VMware Tanzu RabbitMQ offering, check out [this page](https://tanzu.vmware.com/rabbitmq) or <a class='lightbox' href='#contact'>contact us</a>.
+
+
+<div id="contact" class='p-5' style="display:none">
+  <h3 class='text-white mb-3 hide'>Contact us</h3>
+  <script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
+  <form id="mktoForm_7985"></form>
+  <script>
+    MktoForms2.setOptions({formXDPath : "/rs/pivotal/images/marketo-xdframe-relative.html"});
+    MktoForms2.loadForm("https://connect.tanzu.vmware.com", "625-IUJ-009", 7985, function(form){
+      form.setValues({ "Product_Selection__c":"VMware Tanzu RabbitMQ", "Most_Recent_Lead_Source_Description__c": "Global_WS_Website_Contact_Us", "Original_Lead_Source_Description__c":"Global_WS_Website_Contact_Us"});
+      form.onSuccess(function(values, followUpUrl) {
+        form.getFormElem().hide();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event' : 'ctaSubmitted',
+            'eventCategory': 'Contact Us Form',
+            'eventAction': 'Form Submitted',
+            'eventLabel': "Product: VMware Tanzu RabbitMQ (TDC)"
+        });
+        $('.hide').hide();
+        $('.confirmation').show();
+        return false;
+      });
+    });
+  </script>
+  <div class='confirmation' style="display:none">
+    <h3 class="-text-white mt-0">Thank you for your interest!</h3>
+    <p>We will get back to you shortly.</p>
+  </div>
+</div>

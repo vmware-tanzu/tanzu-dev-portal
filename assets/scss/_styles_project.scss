@@ -842,6 +842,7 @@ body {
       }
   }
 
+  #contact,
   #register {
       .modal-content {
         color: white;
@@ -903,6 +904,21 @@ body {
       max-width: 290px;
       .zoom-link {
         word-break: break-all;
+      }
+    }
+  }
+
+  #contact {
+    .mktoForm {
+      .mktoFormCol, .mktoFieldWrap {
+        padding: 0;
+      }
+      .mktoHtmlText {
+        color: white;
+      }
+      .mktoCheckboxList > label {
+        margin-bottom: 5px !important;
+        margin-top: 0;
       }
     }
   }
