@@ -39,9 +39,9 @@ drives her to collaborate and play!
 
 <!--more-->
 
-
+<!-- 
 ## Highlights
 
 {{< youtube id="eRKR53nOKyA" class="youtube-video-shortcode" >}}
 
-{{< youtube id="g1Bmxg4DSug" class="youtube-video-shortcode" >}}
+{{< youtube id="g1Bmxg4DSug" class="youtube-video-shortcode" >}} -->
