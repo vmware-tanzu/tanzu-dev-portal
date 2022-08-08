@@ -11,7 +11,7 @@ tags:
   - Carvel
   - Kubernetes
   - Development
-title: Getting Started with Carvel (formerly k14s)
+title: Getting Started with Carvel
 level1: Building Kubernetes Platform
 ---
 
