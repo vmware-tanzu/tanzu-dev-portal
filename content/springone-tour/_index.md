@@ -3,10 +3,6 @@ title: "SpringOne Tour"
 id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/s1t_2022_og.png"
-menu:
-    main:
-        parent: "community"
-        weight: 4
 notwitchicon: true
 aliases:
 - /tv/springone-tour/0016/
