@@ -90,15 +90,15 @@ Regardless of which system you use, or whether you use one at all, there are ple
 
 
 
-* **Rems vs Pixels** \
+* **Rems vs Pixels** 
 _Are we using Rems for sizing? What’s our Rem value?_
-* **Pixel grid** \
+* **Pixel grid** 
 _If we’re using an 8px grid, is a 7px measurement in Figma just a small mistake?_
-* **Responsive column grid layouts ** \
+* **Responsive column grid layouts ** 
 _If we have a 12 column grid, what does it mean when something spans 6 columns on a XL screen and 12 on a small screen?_
-* **Alignment and positioning  \
+* **Alignment and positioning**  
 _Am I saying this is 748 px from the top of the page, or am I saying this is bottom-aligned to a content element that has 16px padding?_**
-* **Font classification and type scale** \
+* **Font classification and type scale** 
 _Is this a 28px medium weight font used everywhere or, is this an H4?_
 
 

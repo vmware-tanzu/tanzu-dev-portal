@@ -166,147 +166,47 @@ _What we mean_**
 Fully adopting an existing open-source system and staying largely (or entirely) within the lanes it provides. For example: [Google Material](https://material.io/design/introduction), [IBM Carbon](https://www.carbondesignsystem.com/), [VMware Clarity](https://clarity.design/) or [Microsoft Fluent](https://www.microsoft.com/design/fluent/#/).
 
 
-<table>
-  <tr>
-   <td><strong>  Pros</strong>
-   </td>
-   <td><strong>  Cons</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-<ul>
-
-<li>Low cost.
-
-<li>Shortcut to polish/fidelity.
-
-<li>Vetted patterns and interactions.
-
-<li>Can make things like responsive behavior more attainable.
-
-<li>More likely to find familiarity among designers and developers.
-
-<li>Usually include some ability to customize colors and fonts.
-
-<li>Good systems have invested in accessibility and browser compatibility, which you will get for free.
-
-<li>You get bug fixes and updates for free.
-</li>
-</ul>
-   </td>
-   <td>
-<ul>
-
-<li>Low brand differentiation.
-
-<li>Less customization.
-
-<li>Made for everyone, and for no one.
-
-<li>Like or fight the template.
-
-<li>More consumer-leaning patterns.
-
-<li>Sheer number of options can create challenges in consistency (especially for portfolios).
-
-<li>Tethered to the maintainers of the system—no input in direction.
-
-<li>Difficult decision to walk back from.
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
+{{< table "table" >}}
+| Pros | Cons |
+| ---- | ---- |
+| Low cost | Low brand differentiation. | 
+| Shortcut to polish/fidelity. | Less customization. |
+| Vetted patterns and interactions. | Made for everyone, and for no one. |
+| Can make things like responsive behavior more attainable. | Like or fight the template. |
+| More likely to find familiarity among designers and developers. | More consumer-leaning patterns. |
+| Usually include some ability to customize colors and fonts. | Sheer number of options can create challenges in consistency (especially for portfolios). |
+| Good systems have invested in accessibility and browser compatibility, which you will get for free. | Tethered to the maintainers of the system—no input in direction. |
+| You get bug fixes and updates for free. | Difficult decision to walk back from. |
+ {{< table />}}
 
 **Adapting a System  
 _What we mean_** 
 
 Starting with an open-source system as a foundation, but building custom translation layers for things like themes or domain-specific components. For example: KesselRun UI (KRUI), which is a set of branded themes built on a [Material UI](https://mui.com/') foundation.
 
-
-<table>
-  <tr>
-   <td><strong>  Pros</strong>
-   </td>
-   <td><strong>  Cons</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-<ul>
-
-<li>Provides a <em>little</em> more customization and differentiation than straight adopting.
-
-<li>Lower-cost than a custom system.
-</li>
-</ul>
-   </td>
-   <td>
-<ul>
-
-<li>Higher cost than adopting a system.
-
-<li>Adds a translation layer to build, learn and maintain.
-
-<li>Requires <em>some</em> resources to manage and maintain (maybe not dedicated).
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
+{{< table "table" >}}
+| Pros | Cons |
+| ---- | ---- |
+| Provides a <em>little</em> more customization and differentiation than straight adopting. | Higher cost than adopting a system. |
+| Lower-cost than a custom system. | Adds a translation layer to build, learn and maintain. |
+| | Requires <em>some</em> resources to manage and maintain (maybe not dedicated). |
+ {{< table />}}
 
 **Creating a System  
 _What we mean_**
 
 Taking the DIY option and creating a custom system entirely from scratch. From color choices to browser compatibility, type scale to responsive grids, design assets, coded components, and contribution and maintenance processes. Everything according to your needs and vision. 
 
-
-<table>
-  <tr>
-   <td><strong>  Pros</strong>
-   </td>
-   <td><strong>  Cons</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-<ul>
-
-<li>Full customization.
-
-<li>High brand differentiation.
-
-<li>Long-term gain of replication at scale.
-
-<li>Full control over choices, processes, direction and maintenance.
-</li>
-</ul>
-   </td>
-   <td>
-<ul>
-
-<li>Likely requires a dedicated team.
-
-<li>Takes time to get going.
-
-<li><strong>You don’t get <em>anything</em> for free.</strong>
-
-<li><strong>High cost (possibly <em>extremely </em>high).</strong>
-
-<li>Requires creation of documentation. and training materials.
-
-<li>Difficult decision to walk back from.
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
-
-
+{{< table "table" >}}
+| Pros | Cons |
+| ---- | ---- |
+| Full customization. | Likely requires a dedicated team. |
+| High brand differentiation. | Takes time to get going. |
+| Long-term gain of replication at scale. | <strong>You don’t get <em>anything</em> for free.</strong> |
+| Full control over choices, processes, direction and maintenance. | <strong>High cost (possibly <em>extremely </em>high).</strong> |
+| | Requires creation of documentation. and training materials. |
+| | Difficult decision to walk back from. |
+ {{< table />}}
 
 **Skipping a system (or growing one slowly)**
 
@@ -314,47 +214,15 @@ _What we mean_
 
 Taking the option to skip a design system entirely or to let one evolve from an organic need. Maybe a key stakeholder loves the Craigslist look and you can meet their needs without any fancy UI. More likely than the Craigslist lover, you might have a young portfolio of apps who choose to start with only common styles—as they grow together, they can then identify valuable places for consistency and create a shared library of common components over time, if doing so would provide needed value.
 
-
-<table>
-  <tr>
-   <td><strong>  Pros</strong>
-   </td>
-   <td><strong>  Cons</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>
-<ul>
-
-<li>Cheaper than starting off with a design system
-
-<li>Creates a unique learning opportunity for practitioners
-
-<li>Provides a way to test components that might later become a system
-
-<li>Benefit of customization without cost of a dedicated team
-
-<li>Can be speedy
-</li>
-</ul>
-   </td>
-   <td>
-<ul>
-
-<li>Scaling is not trivial
-
-<li>Limited by the skills of the team
-
-<li>Risky (can be short-sighted)
-
-<li>Difficult decision to walk back from
-</li>
-</ul>
-   </td>
-  </tr>
-</table>
-
-
+{{< table "table" >}}
+| Pros | Cons |
+| ---- | ---- |
+| Cheaper than starting off with a design system | Scaling is not trivial |
+| Creates a unique learning opportunity for practitioners | Limited by the skills of the team |
+| Provides a way to test components that might later become a system | Risky (can be short-sighted) |
+| Benefit of customization without cost of a dedicated team | Risky (can be short-sighted) |
+| Can be speedy | Difficult decision to walk back from |
+ {{< table />}}
 
 > This is worth repeating: **not everyone needs a design system**. With their current surging popularity, this can be a difficult idea to sell. If you think a design system might not be the right choice, consider starting with something lightweight like a style guide paired with a basic process for sharing reusable patterns, and then pulling the design system lever when (and if) you’re confident that you’ve hit the value-add tipping point.
 
@@ -383,7 +251,7 @@ Seek to understand as much as you can about the current ecosystem, and keep an e
     * Is there an opportunity to influence upcoming changes or additions?
 * Is the system still being built out?
     * If the system is half-baked, are there areas where you could influence?
-    * _We have spent serious time here and have some additional thoughts below******_
+    * _We have spent serious time here and have some additional thoughts below\*\*_
 * Who manages the design system? 
     * Do they have processes in place to handle contributions and feedback? 
     * How are updates and/or breaking changes communicated?
@@ -395,7 +263,7 @@ Seek to understand as much as you can about the current ecosystem, and keep an e
 * How “good” are the designer assets (i.e. figma library)? 
     * If they’re less-than-ideal, could you offer your fancy-shmancy help?
 
-_**If you find yourself inheriting a half-baked client system, see if there are places you might gently inject yourself and some of your expertise while the bun is still in the oven. In our experience, there are often places where design system teams can benefit from collaboration, guidance, and influence, but these opportunities won’t be gift-wrapped—you will have to seek them out and build relationships in order to have a positive influence.**_
+_\*\*If you find yourself inheriting a half-baked client system, see if there are places you might gently inject yourself and some of your expertise while the bun is still in the oven. In our experience, there are often places where design system teams can benefit from collaboration, guidance, and influence, but these opportunities won’t be gift-wrapped—you will have to seek them out and build relationships in order to have a positive influence._
 
 
 ## Get into the weeds
