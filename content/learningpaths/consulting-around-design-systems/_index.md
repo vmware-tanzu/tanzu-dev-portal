@@ -1,7 +1,7 @@
 ---
 title: "Consulting Around Design Systems"
 description:  "Wrap your head around the complexities involved in working with design systems, so that we can all be better together."
-duration: 60
+duration: 45
 experience: Beginner
 layout: intro
 team:
