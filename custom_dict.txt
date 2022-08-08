@@ -881,6 +881,7 @@ GIS
 [Gg]ithub
 GitLabCI
 Gitops
+GITOPS-SECRET
 GitOps(-type)?
 Gitrepo
 GKE
@@ -969,6 +970,7 @@ High-Cardinality
 Hillegass
 Hinojosa
 hl_lines=4-5
+HL7
 HMAC
 Hobsons
 hoc
@@ -1223,6 +1225,7 @@ Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
+KNative
 Knative-serving
 Knative-Serving
 knative-serving
@@ -1870,6 +1873,7 @@ RegionObjectFilter
 RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
+REGISTRY-REPO
 [rR]ego
 rehostable
 Reif
@@ -2067,6 +2071,7 @@ SMB
 SME
 SMI
 SMTP
+smtp-sink
 Smythe
 Snapchat
 SNI
@@ -2183,6 +2188,7 @@ TBD
 TCE
 tchotchke
 TCP
+tcp
 TCP-
 tdc-carvel-examples
 tdp-guide
@@ -2454,6 +2460,7 @@ x64
 Xcode
 Xing
 XKCD
+XMPP
 XP
 XSalsa20
 Xu
