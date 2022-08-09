@@ -1,5 +1,6 @@
 ---
 date: '2021-03-09'
+hidden: true
 description:
   Create a Spring Boot application. Containerize it, and push the container
   to a registry. Deploy it to Kubernetes.
@@ -17,11 +18,9 @@ tags:
   - Kubernetes
   - Spring Boot
 title: Spring on Kubernetes
-level1: Deploying Modern Applications
 ---
 
-During this workshop you will learn the finer details of how to create, build, run, and debug a basic Spring Boot app on
-Kubernetes by doing the following:
+During this workshop you will learn the finer details of how to create, build, run, and debug a basic Spring Boot app on Kubernetes by doing the following:
 
 - Create a basic Spring Boot app
 - Build a Docker image for the app
