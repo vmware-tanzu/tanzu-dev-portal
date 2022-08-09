@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Learn how Application Toolkit can help you create an end-to-end workflow
-lab: lab-app-toolkit-kubecon
+lab: lab-app-toolkit
 kubecon: true
 hidden: true
 lastmod: '2021-10-03'
