@@ -11,8 +11,8 @@ tags:
 team:
 - Greg Meyer
 title: Extended Workload Capabilities on Tanzu Application Platform
-level1: Deploying Modern Applications
-level2: Tanzu Application Platform
+level1: Building Kubernetes Runtime
+level2: Application Platform on Kubernetes
 ---
 
 
