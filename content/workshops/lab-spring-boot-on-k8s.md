@@ -1,4 +1,6 @@
 ---
+aliases:
+  - '/workshops/lab-microservice'
 description: Spring Boot on Kubernetes
 lab: lab-spring-boot-on-k8s
 length: 60
