@@ -17,6 +17,6 @@ instagram: ""
 youtube: ""
 ---
 
-Greg (@Greg_Meyer93) is a 20+ year Java veteran and a VMWare App Architect focused on making Tanzu Application Platform the best place to develop and deploy Spring application. He recently completed a 25-year tenure as a Distinguished and Principal Engineer in Health IT fostering cloud native micro-services development with Spring Boot, Spring Cloud, and Cloud Foundry. In addition, he was chief architect for multiple open source HealthIT reference implementations and served as a workgroup chair and contributing member of several national health care informatics, standards, and governance initiatives. Greg is also an accomplished musician and enjoys running and weightlifting.
+Greg is a 20+ year Java veteran and a VMware App Architect focused on making Tanzu Application Platform the best place to develop and deploy Spring application. He recently completed a 25-year tenure as a Distinguished and Principal Engineer in Health IT fostering cloud native micro-services development with Spring Boot, Spring Cloud, and Cloud Foundry. In addition, he was chief architect for multiple open source HealthIT reference implementations and served as a work group chair and contributing member of several national health care informatics, standards, and governance initiatives. Greg is also an accomplished musician and enjoys running and weightlifting.
 
 <!-- more -->
