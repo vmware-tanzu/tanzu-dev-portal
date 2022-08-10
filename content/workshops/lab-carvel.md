@@ -7,10 +7,12 @@ length: 15
 logo: "/images/workshops/logo-kubernetes.svg"
 summary: Introduction to Carvel, simple and composable tools for application
 tags:
-- Spring
-- Microservices
-- Kubernetes
-- Spring Boot
-- Tanzu
+  - Spring
+  - Microservices
+  - Kubernetes
+  - Spring Boot
+  - Tanzu
 title: Introduction to the Carvel tools
+aliases:
+  - /workshops/lab-getting-started-with-carvel
 ---
