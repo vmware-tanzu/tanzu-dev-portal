@@ -271,7 +271,7 @@ public void PublishMessage<T>(T entity, string key) where T : class
 	_channel.BasicPublish(exchange: _rabbitSettings.ExchangeName,
                                         routingKey: key,
                                         basicProperties: null,
-                                        body: key);
+                                        body: body);
 
 	Console.WriteLine(" [x] Sent '{0}':'{1}'", key, message);
 
@@ -379,7 +379,7 @@ consumerAsync.Received += async (_, ea) =>
 
 };
 
-_channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+_channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumerAsync);
 ```
 
 When the consumer receives a message with the required routing key pattern `#.cookwaffle` it will:
