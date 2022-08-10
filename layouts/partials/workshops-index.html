@@ -1,7 +1,7 @@
 {{ define "workshopCard" }}{{ if not .Params.hidden }}
 <a
     href="{{ print `/get-workshop/` .Params.lab | relURL }}"
-    class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-305 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower }}{{ end }}"
+    class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-305 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} "
 >
     <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
         <div class="thumbnail-gradient position-absolute"></div>
@@ -34,6 +34,7 @@
         </ul>
     </div>
     <div id="workshops-index" class="section-index flex-1">
-        <div class="row workshop-row mb-lg-5 mb-2" role="listbox">{{ range .Pages }} {{ template "workshopCard" . }} {{ end }}</div>
+        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }} 
+        <div class="row">{{ range $pages }} {{ template "workshopCard" . }} {{ end }}</div>
     </div>
 </div>
