@@ -188,17 +188,30 @@ body.tv-episode .fancybox-inner {
     background-color: white !important;
 }
 
-body.tv-episode #register .mktoForm select, body.tv-episode #register .mktoForm input:not([type=checkbox]):not([type=radio]) {
+body.blog #contact .mktoForm select, body.blog #contact .mktoForm input:not([type=checkbox]):not([type=radio]), body.tv-episode #register .mktoForm select, body.tv-episode #register .mktoForm input:not([type=checkbox]):not([type=radio]) {
   border-bottom: 1px solid black!important;
   color: black!important;
 }
 
-body.tv-episode #register .confirmation .-text-white {
+body.blog #contact .confirmation .-text-white, body.tv-episode #register .confirmation .-text-white {
   color: #61717d !important;
 }
 
-body.tv-episode #register .mktoForm select {
+body.blog #contact .mktoForm select, body.tv-episode #register .mktoForm select {
   background: url(https://d1fto35gcfffzn.cloudfront.net/images/icons/icon-angledown-999.png) no-repeat transparent right 10px center !important
+}
+
+body.blog .fancybox-inner {
+  background: white;
+}
+
+body.blog #contact .mktoForm .mktoCheckboxList > label,
+body.blog #contact .mktoForm .mktoHtmlText {
+  color: #61717d !important;
+}
+
+body.blog #contact .mktoForm select {
+  color: rgb(97, 113, 125) !important;
 }
 
 .episodes .teaser {

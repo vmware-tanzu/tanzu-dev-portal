@@ -11,4 +11,4 @@ youtube: "qr1w4Dp5tSA"
 draft: "False"
 ---
 
-Download free book for more: https://tanzu.vmware.com/content/ebooks/the-business-bottleneck?utm_source=cote&utm_campaign=devrel&utm_content=14hurdlesTechDebt
+Get started: https://tanzu.vmware.com/content/white-papers/developer-toil-the-hidden-tech-debt?utm_source=cote&utm_campaign=devrel&utm_content=14hurdlesTechDebt
