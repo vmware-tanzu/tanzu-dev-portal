@@ -13,4 +13,6 @@ menu:
       section: type
     weight: 3
 tags: []
+featured:
+  - lab-
 ---

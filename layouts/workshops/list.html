@@ -1,19 +1,26 @@
-{{ define "main" }}
-
-{{ partial "hero.html" . }}
+{{ define "main" }} {{/* {{ partial "hero.html" . }} */}}
+<div id="hero" class="overflow-hidden td-box--gray-dark mt-lg-5 my t-7 py-lg-5">
+    <div class="container">
+        <div class="row align-items-center py-lg-5">
+            <div class="col-12 col-lg-6 py-2 py-lg-5 pl-0 pr-lg-4 pr-0">
+                <h1>{{ .Title }}</h1>
+                <p class="lead">{{ .Description }}</p>
+            </div>
+            <div class="col-12 col-lg-6 py-2 py-lg-5 px-0 pl-lg-4 position-relative">
+                {{/* TODO: Add featured section. Will need to pull card defined in workshop-index or move to partial */}}
+                {{/*  <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}'>  */}}
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="td-content">
-
-	{{ .Content }}
-        {{ partial "workshops-index.html" . }}
-	{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-		{{ partial "feedback.html" .Site.Params.ui.feedback }}
-		<br />
-	{{ end }}
-	{{ if (.Site.DisqusShortname) }}
-		<br />
-		{{ partial "disqus-comment.html" . }}
-	{{ end }}
-	<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+    {{ .Content }} {{ partial "workshops-index.html" . }} {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+    {{ partial "feedback.html" .Site.Params.ui.feedback }}
+    <br />
+    {{ end }} {{ if (.Site.DisqusShortname) }}
+    <br />
+    {{ partial "disqus-comment.html" . }} {{ end }}
+    <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
 </div>
 {{ end }}
