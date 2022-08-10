@@ -34,7 +34,6 @@
         </ul>
     </div>
     <div id="workshops-index" class="section-index flex-1">
-        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }} 
-        <div class="row">{{ range $pages }} {{ template "workshopCard" . }} {{ end }}</div>
+        <div class="row workshop-row mb-lg-5 mb-2" role="listbox">{{ range .Pages }} {{ template "workshopCard" . }} {{ end }}</div>
     </div>
 </div>
