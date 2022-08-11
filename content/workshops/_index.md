@@ -15,13 +15,13 @@ menu:
 tags: []
 links:
 - title: Introduction to the Carvel tools
-  link: "/workshops/lab-carvel"
+  link: "/get-workshop/lab-carvel/"
   description: Introduction to Carvel, simple and composable tools for application
 - title: Installing Application Packages with kapp-controller
-  link: "/workshops/lab-kapp-controller"
+  link: "/get-workshop/lab-kapp-controller"
   description: Installing Application Packages with kapp-controller
 - title: Spring Boot on Kubernetes
-  link: "/workshops/lab-spring-boot-on-k8s"
+  link: "/get-workshop/lab-spring-boot-on-k8s"
   description: Spring Boot on Kubernetes
 icon: icon-to
 ---
