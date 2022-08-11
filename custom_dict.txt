@@ -68,6 +68,7 @@ afterAcknowledgement
 Agile-ific
 Aino
 [Aa]ir-[Gg]apped
+Airbnb
 airgap(ped)?
 akka
 Akka
@@ -130,6 +131,7 @@ AquaSecurity
 Aravena
 [Aa]rchitecting
 Ardanlabs
+Arellano
 [Aa]rgo(CD|cd)(-k8s)?
 args
 ARM64
@@ -179,6 +181,7 @@ Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
 Autowired
+autowired
 autowires
 Aviv
 Awaitility
@@ -302,6 +305,7 @@ Carducci
 Carta
 Cartographer
 Carvel('s)?
+Carwin
 CAS
 Cashmore
 cass-operator
@@ -392,6 +396,7 @@ CNI-specific
 co-organiser
 Coby
 [Cc]odebase(s)?
+Codefresh
 CodeFresh
 CodeItLive
 CodeOne
@@ -538,6 +543,7 @@ debuggable
 decrypt(ed|ing)?
 [Dd]eduplicate
 defence
+DefMacro
 degradations
 DEK(s)?
 delayDuration
@@ -553,6 +559,7 @@ deployable
 [Dd]eployable
 deprioritized
 deps
+[Dd]eserialize
 deserialize
 deserializes
 deserializing
@@ -568,6 +575,7 @@ DEVOPS
 DevOps(-related)?
 DevOpsDays(KC)?
 DevSecOps
+DevX
 Dex
 dex-federation
 Díaz
@@ -688,6 +696,7 @@ EntryEventImpl
 EntryEventImpl's
 entrypoint
 enum
+Enum
 EnumInfo
 Enums
 [Ee]nv
@@ -759,6 +768,7 @@ focussed
 focussing
 FoodService
 formatter
+Forrester
 FOSS
 foundaments
 Foxwell
@@ -871,6 +881,7 @@ GIS
 [Gg]ithub
 GitLabCI
 Gitops
+GITOPS-SECRET
 GitOps(-type)?
 Gitrepo
 GKE
@@ -900,7 +911,10 @@ Grails
 Grandja
 GrantedAuthoritiesMapper
 GrantedAuthority
+GraphiQL
+graphiql
 GraphQL
+graphql
 GraphQL(-based)?
 Grasso
 GRE
@@ -940,6 +954,7 @@ Hayk
 Haytham
 Headspring
 [Hh]ealthcheck(s)?
+HealthIT
 Heartbleed
 Heen
 Heinemeier
@@ -956,6 +971,7 @@ High-Cardinality
 Hillegass
 Hinojosa
 hl_lines=4-5
+HL7
 HMAC
 Hobsons
 hoc
@@ -1203,12 +1219,14 @@ keySets
 keyspace
 KIAM
 Kibana
+KitchenService
 kitesurfing
 KlipTok
 Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
+KNative
 Knative-serving
 Knative-Serving
 knative-serving
@@ -1290,6 +1308,7 @@ libs
 [Ll]ifecycle
 lightboard
 Lighthouse
+Likert
 Liles
 LimitRanger
 LimitRanges
@@ -1306,6 +1325,7 @@ LiveLessons
 [lL]iveness(-probe|[Pp]robe)?
 Livestream
 livestreaming
+LLC
 LoadBalancer
 LocalDataSet
 LocalDataSets
@@ -1330,6 +1350,7 @@ Lombok
 lookups
 lookups.
 [Ll]oopback
+looselytyped
 lorem-ipsum
 Low-fi
 LRU
@@ -1451,6 +1472,7 @@ MTU
 (multi-)?namespace
 [Mm]ulti-[Ss]ubnet
 multibranch
+multicast
 [Mm]ulticloud
 Multipass
 [Mm]ultitenan(t|cy)
@@ -1570,6 +1592,7 @@ OPA
 Opdyke
 OpenAPI(Tools)?
 OpenFeign
+OpenGitOps
 OpenId
 OpenID
 OpenShift
@@ -1586,8 +1609,10 @@ oplogs
 OpsGenie
 OpsManager
 optimizeForWrite
+optionality
 OQL
 orchestrator(s)?
+OrderService
 org(s)?
 ORM(-based)?
 ORM(s)?
@@ -1616,6 +1641,7 @@ P2P
 Pacak
 Packer
 Packt('s)?
+[Pp]addleboarding
 [Pp]agefile
 PagerDuty
 Pairmate
@@ -1674,6 +1700,7 @@ pickab(le|ility)?
 PID
 Pilani
 Pilimon
+Pinky
 [Pp]inniped
 [Pp]ip[Xx]('s)?
 pivnet
@@ -1696,6 +1723,7 @@ PodSecurityPolicy
 PodsPerCore
 POJO(s)?
 POJP
+Pokémon
 Poly1305
 Pomodoro
 Poornima
@@ -1750,6 +1778,7 @@ preStop
 primaryBucketCount
 PrimaryRoutingFunction
 PriorityClass(es)?
+Priyanka
 processServerMetrics
 Procfile
 Procfile(s)?
@@ -1796,10 +1825,12 @@ Quickstart
 quokka
 (r)?syslog
 r0
+R2DBC
 RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+Ravi
 RBAC(-enabled)?
 RCE
 RDBMS
@@ -1843,6 +1874,7 @@ RegionObjectFilter
 RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
+REGISTRY-REPO
 [rR]ego
 rehostable
 Reif
@@ -2040,6 +2072,7 @@ SMB
 SME
 SMI
 SMTP
+smtp-sink
 Smythe
 Snapchat
 SNI
@@ -2156,6 +2189,7 @@ TBD
 TCE
 tchotchke
 TCP
+tcp
 TCP-
 tdc-carvel-examples
 tdp-guide
@@ -2371,6 +2405,7 @@ WaveConfigObject
 waypoints
 WCF
 WCF-TCP
+Weaveworks
 [Ww]eb[Hh]ook('s)?
 [wW]eb[sS]ervice(s)?
 webAPI
@@ -2426,6 +2461,7 @@ x64
 Xcode
 Xing
 XKCD
+XMPP
 XP
 XSalsa20
 Xu
@@ -2458,5 +2494,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-JDBC
-R2DBC
