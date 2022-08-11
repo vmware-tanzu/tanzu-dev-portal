@@ -1,7 +1,7 @@
 ---
 date: '2021-09-13'
 description: Introduction to Carvel, simple and composable tools for application
-lab: tce-carvel
+lab: lab-carvel
 lastmod: '2021-10-03'
 length: 15
 logo: "/images/workshops/logo-kubernetes.svg"
