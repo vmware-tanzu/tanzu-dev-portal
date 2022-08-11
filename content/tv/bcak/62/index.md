@@ -15,7 +15,7 @@ minutes: 120
 episode: "62"
 explicit: "yes"
 title: "The one with Jennifer Reif"
-#youtube: ""
+youtube: "OkuG58_IlCw"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
