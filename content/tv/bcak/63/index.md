@@ -15,7 +15,7 @@ minutes: 120
 episode: "63"
 explicit: "yes"
 title: "The one with Jonatan Ivanov"
-#youtube: ""
+youtube: "WJtFW0o4Hho"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
