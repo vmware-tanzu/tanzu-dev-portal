@@ -24,7 +24,7 @@ This guide will discuss RSocket tracing with Spring Cloud Sleuth and Zipkin. We 
 
 ## Motivation
 
-So, you're thinking: I have an application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. So you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
+So, you're thinking: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. So you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
 
 Spring Cloud Sleuth represents an overlay component between the app and a tracing library. It is based heavily on the [Brave](https://github.com/openzipkin/brave) library but focuses on enrichment to mix in trace logic. We want to utilize a tracing library and not have to touch much of our app componentry.
 
@@ -355,7 +355,7 @@ Metadata:
 
 ### Removing the Boilerplate
 
-There is much boilerplate in creating/setting/accessing trace state as in the above example. The developer will be required to also perform all the span closing and error handling logic. This work is better done in a specific component. That's is where the [ReactorSleuth](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/reactor/ReactorSleuth.java) class comes in to help us. 
+There is much boilerplate in creating/setting/accessing trace state as in the above example. The developer will be required to also perform all the span closing and error handling logic. This work is better done in a specific component. That is where the [ReactorSleuth](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/reactor/ReactorSleuth.java) class comes in to help us. 
 
 Luckily, the `ReactorSleuth` class acts as a factory for creating instrumented [Publishers](https://github.com/reactive-streams/reactive-streams-jvm/blob/master/api/src/main/java/org/reactivestreams/Publisher.java) of which both Mono and Flux descend from. Let's take it for a spin!
 
@@ -609,7 +609,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship spans through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the AMQP/rabbitMQ connection as shown below:
+Tell Sleuth we want to ship spans through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the AMQP/RabbitMQ connection as shown below:
 
 application-rabbit.properties
 ```properties
@@ -620,7 +620,7 @@ spring.zipkin.sender.type=rabbit
 spring.zipkin.rabbitmq.queue=zipkin
 ```
 
-Above, we set rabbitmq specific [sleuth properties](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/html/appendix.html) that tell sleuth things like 'remote-service-name' and which 'queue' to send to.
+Above, we set RabbitMQ specific [sleuth properties](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/html/appendix.html) that tell sleuth things like 'remote-service-name' and which 'queue' to send to.
 
 The code side is similar to what we did with Kafka. Subclass `RequestResponseTests` with one marked with `@ActiveProfiles`. The profile we choose this time is 'rabbit'.
 
@@ -676,7 +676,7 @@ services:
         condition: service_healthy
 ```
 
-Importantly, as noted above we need to let the Zipkin server know where RabbitMQ is by setting the `RABBIT_URI` to the host of the rabbitMQ server. However, by default we let Zipkin specify its default queue 'zipkin'. You can override this by setting the 'RABBIT_QUEUE' environment. For more information related to Zipkin/Rabbit collection, check out the [openzipkin github](https://github.com/openzipkin/zipkin/tree/master/zipkin-collector/rabbitmq) document related to these options.
+Importantly, as noted above we need to let the Zipkin server know where RabbitMQ is by setting the `RABBIT_URI` to the host of the RabbitMQ server. However, by default we let Zipkin specify its default queue 'zipkin'. You can override this by setting the 'RABBIT_QUEUE' environment. For more information related to Zipkin/Rabbit collection, check out the [openzipkin github](https://github.com/openzipkin/zipkin/tree/master/zipkin-collector/rabbitmq) document related to these options.
 
 Perform the next necessary step - standing up the servers - by executing the docker-compose file:
 
