@@ -271,7 +271,7 @@ class RequestResponseTests : TestBase() {
 Running the test will generate some output from the `FrameLogger` on the requester side:
 
 ```
-2022-08-09 23:18:11.764 DEBUG [EDDIEVALIANT,,] 93802 --- [actor-tcp-nio-3] io.rsocket.FrameLogger                   : sending -> 
+DEBUG [EDDIEVALIANT,,] 93802 --- [actor-tcp-nio-3] io.rsocket.FrameLogger                   : sending -> 
 Frame => Stream ID: 1 Type: REQUEST_RESPONSE Flags: 0b100000000 Length: 29
 Metadata:
          +-------------------------------------------------+
@@ -285,7 +285,7 @@ Metadata:
 Without a trace in context from the requester, the server will create one anew. This trace will not get propagated back to the client. We will see output from the server as such:
 
 ```
-2022-08-09 23:18:11.788 DEBUG [EDDIEVALIANT,0eb1253f5539d5a0,0eb1253f5539d5a0] 93802 --- [ctor-http-nio-5] io.rsocket.FrameLogger                   : sending -> 
+DEBUG [EDDIEVALIANT,0eb1253f5539d5a0,0eb1253f5539d5a0] 93802 --- [ctor-http-nio-5] io.rsocket.FrameLogger                   : sending -> 
 Frame => Stream ID: 1 Type: NEXT_COMPLETE Flags: 0b1100000 Length: 11
 Data:
          +-------------------------------------------------+
@@ -340,7 +340,7 @@ class RequestResponseTests : TestBase() {
 Instead of a plain request, we will also have metadata describing the trace context using [B3 Propagation](https://github.com/openzipkin/b3-propagation):
 
 ```
-2022-08-09 23:29:34.178 DEBUG [EDDIEVALIANT,,] 96092 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : sending -> 
+DEBUG [EDDIEVALIANT,,] 96092 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : sending -> 
 Frame => Stream ID: 1 Type: REQUEST_RESPONSE Flags: 0b100000000 Length: 63
 Metadata:
          +-------------------------------------------------+
