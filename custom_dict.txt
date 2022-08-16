@@ -2487,3 +2487,14 @@ Zynga
 Ϟ
 ϟ
 [Nn]orming
+[0-9]*px
+[Ff]lexbox
+H[0-9]
+Haines
+[Rr]edline(s)?
+[Pp]roactivity
+Craigslist
+Figma
+[Ss]heetrock
+[Mm]iddleground
+UX/UI
