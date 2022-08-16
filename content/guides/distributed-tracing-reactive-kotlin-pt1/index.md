@@ -237,7 +237,7 @@ class TestBase {
 
 This `TestBase` class forms the configuration for all our downstream tests. It simply uses [@SpringBootTest](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) for full autoconfiguration and then connects to the local RSocket server with [RSocketRequester](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java).
 
-Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, spans will ship to zipkin via HTTP/REST unless no zipking server is available.
+Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, traces will ship to zipkin via HTTP/REST unless no zipking server is available.
 
 ### The Unit Tests
 
@@ -425,10 +425,36 @@ RequestResponseTests.kt
 Running these tests shows our output to be similar to before, but you will notice spans are named
 as specified with the `@NewSpan` annotated method.
 
-We made testing more uncomplicated and removed even more boilerplate that would become error-prone later in the development cycle. In the next section, we will configure the application to ship traces to a trace collection server - Zipkin.
+In the next section, we will configure the application to ship traces to a trace collection server - OpenZipkin.
 ## Shipping traces
 
 To understand the trace and not just keep logs, we need to send traces somewhere that can correlate them in a human-readable way. This is where [OpenZipkin](https://zipkin.io/) comes in. 
+
+But before we progress further, lets find out some behaviour that determines how often we can send data - especially helpful for preventing server trace overload on both the sending and collecting sides)
+
+### Sample Rate of Trace Shipping
+
+Sleuth supports a few ways to tell it how often it should ship traces. The configuration is exposed in a couple ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` 
+
+* NEVER
+* ALWAYS
+* RateLimited (per minute)
+* Probablistic ( 0.0 -> 1.0 )
+
+Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default).
+
+In our case, we want `ALWAYS` sampling:
+
+Application.kt
+```kotlin
+    @Bean
+    @ConditionalOnMissingBean
+    fun sleuthTraceSampler(): Sampler {
+        return Sampler.ALWAYS_SAMPLE
+    }
+```
+
+Above, we will _always_ ship traces to the configured collector. Collectors are the means which traces can arrive to our trace server (like OpenZipkin).
 
 Spring Cloud Sleuth supports several traces sending strategies that are controlled through the `spring.zipkin.sender.type` property in [ZipkinSenderProperties](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/zipkin2/ZipkinSenderProperties.java). The supported ones are (of this writing):
 
@@ -437,7 +463,7 @@ Spring Cloud Sleuth supports several traces sending strategies that are controll
  * RabbitMQ 
  * ActiveMQ
 
-Let's configure a few of these span collection strategies. First, by activating separate application profiles we will simplify Zipkin transmission configuration.
+Let's configure a few of these trace collection strategies. First, by activating separate application profiles we will simplify Zipkin transmission configuration.
 ### By Web
 
 This solution involves [docker compose](https://www.docker.com/products/docker-desktop/) and some YAML to bring up a Zipkin server. The following compose file will start up and leave Zipkin listening on port `9411`.
@@ -482,7 +508,7 @@ ZipkinRequestResponseTests.kt
 class ZipkinRequestResponseTestsTests : RequestResponseTests()
 ```
 
-Running these tests will emit spans that show similar logging data as before. Additionally, it will send those spans to the local Zipkin server. Next, we will take a look at viewing these logs in the Zipkin WebUI.
+Running these tests will emit traces that show similar logging data as before. Additionally, it will send those traces to the local Zipkin server. Next, we will take a look at viewing these logs in the Zipkin WebUI.
 
 ### Accessing Trace Graphs in Zipkin
 
@@ -501,9 +527,9 @@ docker compose -f zipkin-compose.yml down
 ```
 ## Zipkin by way of Kafka
 
-As an alternative to HTTP/REST, we can also push messages to Zipkin via Kafka. On the app side, Sleuth `spring-kafka` dependency on the classpath enables us to set up connectivity for Sleuth to send spans over Kafka topics. 
+As an alternative to HTTP/REST, we can also push messages to Zipkin via Kafka. On the app side, Sleuth `spring-kafka` dependency on the classpath enables us to set up connectivity for Sleuth to send traces over Kafka topics. 
 
-The Kafka dependency is of the `org.springramework.kafka:spring-kafka` variety and lets us send spans directly into Kafka for reception by a Zipkin server downstream. This is enabled on our application with a few edits.
+The Kafka dependency is of the `org.springramework.kafka:spring-kafka` variety and lets us send traces directly into Kafka for reception by a Zipkin server downstream. This is enabled on our application with a few edits.
 
 First, update to pom.xml for Kafka connectivity:
 
@@ -515,7 +541,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship spans through the Kafka topic by setting `spring.zipkin.sender.type` to 'kafka'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the Kafka connection as shown below:
+Tell Sleuth we want to ship traces through the Kafka topic by setting `spring.zipkin.sender.type` to 'kafka'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the Kafka connection as shown below:
 
 application-kafka.properties
 ```properties
@@ -599,7 +625,7 @@ docker compose -f kafka-compose.yml up
 
 ## Zipkin by way of RabbitMQ
 
-Another alternative lets us push spans to Zipkin via [RabbitMQ](https://www.rabbitmq.com). Including the `spring-boot-starter-amqp` dependency on the classpath enables us to set up connectivity for Sleuth to send spans over Rabbit Queues.
+Another alternative lets us push traces to Zipkin via [RabbitMQ](https://www.rabbitmq.com). Including the `spring-boot-starter-amqp` dependency on the classpath enables us to set up connectivity for Sleuth to send traces over Rabbit Queues.
 
 pom.xml
 ```xml
@@ -609,7 +635,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship spans through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the AMQP/RabbitMQ connection as shown below:
+Tell Sleuth we want to ship traces through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the AMQP/RabbitMQ connection as shown below:
 
 application-rabbit.properties
 ```properties
@@ -684,7 +710,7 @@ Perform the next necessary step - standing up the servers - by executing the doc
 docker compose -f rabbit-compose.yml up
 ```
 
-Running `RabbitRequestResponseTests` will show very similar results - only the spanIDs will differ. With that, we conclude shipping spans through RabbitMQ.
+Running `RabbitRequestResponseTests` will show very similar results - only the spanIDs will differ. With that, we conclude shipping traces through RabbitMQ.
 
 ## Wrapup
 
