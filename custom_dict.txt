@@ -954,6 +954,7 @@ Hayk
 Haytham
 Headspring
 [Hh]ealthcheck(s)?
+HealthIT
 Heartbleed
 Heen
 Heinemeier
