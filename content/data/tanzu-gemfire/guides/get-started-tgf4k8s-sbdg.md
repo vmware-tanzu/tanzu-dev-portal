@@ -53,12 +53,14 @@ You will also need permission to use `kubectl`.
     Below is a simple yaml file that will create a Tanzu GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html). Save this as a YAML file in your current working directory.
     
   ```yaml
-    apiVersion: gemfire.tanzu.vmware.com/v1
-    kind: GemFireCluster
-    metadata:
-        name: hello-world-gemfire-cluster
-    spec:
-        image: registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.1
+  apiVersion: gemfire.tanzu.vmware.com/v1
+  kind: GemFireCluster
+  metadata:
+     name: hello-world-gemfire-cluster
+  spec:
+    image: registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.1
+    security:
+      tls: {}
   ```
    
         
