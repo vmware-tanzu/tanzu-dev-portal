@@ -22,6 +22,6 @@ Natalie Arellano is a maintainer for the Cloud Native Buildpacks project and a s
 <!--more-->
 
 
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="-n9H8KnYjVI" class="youtube-video-shortcode" >}} -->
+{{< youtube id="-n9H8KnYjVI" class="youtube-video-shortcode" >}}
