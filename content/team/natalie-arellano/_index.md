@@ -17,7 +17,7 @@ youtube: ""
 twitch: ""
 ---
 
-Natalie Arellano is a maintainer for the Cloud Native Buildpacks project and a software engineer at VMware.
+Natalie Arellano is a maintainer for the [Cloud Native Buildpacks](https://buildpacks.io/) project and a software engineer at VMware.
 
 <!--more-->
 
