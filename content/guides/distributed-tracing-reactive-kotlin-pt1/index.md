@@ -1,6 +1,6 @@
 ---
 date: '2022-08-11'
-description: Distributed tracing with Spring Cloud Sleuth for reactive microservices.
+description: Distributed tracing with Spring Cloud Sleuth for reactive microservices. Part 1
 lastmod: '2022-08-11'
 metaTitle: Tracing a Reactive Kotlin App with Spring Cloud Sleuth
 patterns:
@@ -117,7 +117,7 @@ The code presented here can be cloned from [this git repository](https://github.
 Its easiest to follow along in your favorite IDE as we will sample test classes individually. Or if you want, just use Maven to run a single test by editing the following command:
 
 ```bash
-mvn -Dtest=RequestResponseTests test
+mvn -Dtest=ManualSpanTests test
 ```
 
 Changing the test class to the one in focus later in this guide is all that is needed. Additionally, you 
@@ -194,7 +194,7 @@ Without going into too much detail, we can see that we have exposed a couple of 
 
   "Allows to create a new span around a public method. The new span will be either a child of an existing span if a trace is already in progress or a new span will be created if there was no previous trace". 
 
-Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the rsocket FrameLogger scope to debug. Also, we can see what the reactor tracing instrumentation is doing by setting `trace` debugging to the `reactor` package scope :
+Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the rsocket FrameLogger scope to debug. Also, we can see what the reactor tracing instrumentation is doing by setting `trace` debugging to the `logging.level.org.springframework.cloud.sleuth.instrument.reactor` package:
 
 application.properties
 ```properties
@@ -243,12 +243,12 @@ Next, lets write a couple tests that will invoke our messaging endpoints. The fi
 
 The test that follows will demonstrate minimun instrumentation from the client side. Because this requester is not instrumented, the application will generate a single span originating only at the server.
 
-RequestResponseTests.kt:
+ManualSpanTests.kt:
 ```kotlin
-class RequestResponseTests : TestBase() {
+class ManualSpanTests : TestBase() {
 
     @Test
-    fun `non request-traced request`() {
+    fun `no trace is sent with request`() {
         val unTracedRequester = RSocketRequester.builder().tcp("localhost", 10001)
 
         StepVerifier.create(
@@ -301,12 +301,12 @@ Autoconfiguration being enabled on these tests means that we also get a Sleuth c
 
 Of course, this means we must instrument the client side programmatically. This means extra code and of course the possibility of bugs. Hence, test your trace code well!
 
-RequestResponseTests.kt:
+ManualSpanTests.kt:
 ```kotlin
-class RequestResponseTests : TestBase() {
+class ManualSpanTests : TestBase() {
 // ...
     @Test
-    fun `manual span bearing publisher`(@Autowired
+    fun `trace gets propagated with request`(@Autowired
                                         tracer: Tracer) {
         val manualSpan = tracer.spanBuilder()
                 .kind(Span.Kind.CLIENT)
@@ -321,10 +321,12 @@ class RequestResponseTests : TestBase() {
                         .contextWrite { ctx ->
                             ctx.put(TraceContext::class.java, manualSpan.context())
                         }
+                        .doOnError{ thrown ->
+                            manualSpan.error(thrown)
+                        }                        
                         .doFinally { sig ->
                             manualSpan.end()
                         }
-
         )
                 .assertNext {
                     Assertions
@@ -353,15 +355,17 @@ Metadata:
 +--------+-------------------------------------------------+----------------+
 ```
 
+In the end, all other trace logs will look similar to what you've seen in the above scenarios. Next, we will code less
+and make better use of components that assist us in cases where we manually generate our Spans.
 ### Removing the Boilerplate
 
 There is much boilerplate in creating/setting/accessing trace state as in the above example. The developer will be required to also perform all the span closing and error handling logic. This work is better done in a specific component. That is where the [ReactorSleuth](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/reactor/ReactorSleuth.java) class comes in to help us. 
 
 Luckily, the `ReactorSleuth` class acts as a factory for creating instrumented [Publishers](https://github.com/reactive-streams/reactive-streams-jvm/blob/master/api/src/main/java/org/reactivestreams/Publisher.java) of which both Mono and Flux descend from. Let's take it for a spin!
 
-RequestResponseTests.kt
+ManualSpanTests.kt
 ```kotlin
-class RequestResponseTests : TestBase() {
+class ManualSpanTests : TestBase() {
 //...
     @Test
     fun `reactorSleuth span bearing request`(@Autowired
@@ -406,7 +410,7 @@ class SleuthyClient() {
 
 Then testing client calls becomes trivial.
 
-RequestResponseTests.kt
+ManualSpanTests.kt
 ```kotlin
     @Test
     fun `client originated request`(@Autowired client: SleuthyClient) {
@@ -430,25 +434,24 @@ In the next section, we will configure the application to ship traces to a trace
 
 To understand the trace and not just keep logs, we need to send traces somewhere that can correlate them in a human-readable way. This is where [OpenZipkin](https://zipkin.io/) comes in. 
 
-But before we progress further, lets find out some behaviour that determines how often we can send data - especially helpful for preventing server trace overload on both the sending and collecting sides)
+To ensure we have enough trace data and not too much (or too little), lets setup the behaviour that determines how often our app will send trace data. This is especially helpful for preventing overload of any one kind of trace.
 
 ### Sample Rate of Trace Shipping
 
-Sleuth supports a few ways to tell it how often it should ship traces. The configuration is exposed in a couple ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` 
+Sleuth supports a few ways to tell it how often it should ship traces. This is configured in one of 2 ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` or `spring.sleuth.sampler.rate=10`. Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default) but you can even instantiate the `RateLimited and `Probablistic` samplers this way.
 
-* NEVER
-* ALWAYS
+For clarity, here are the 4 sampler strategies that are configurable through Spring Cloud Sleuth:
+
+* NEVER_SAMPLE
+* ALWAYS_SAMPLE
 * RateLimited (per minute)
 * Probablistic ( 0.0 -> 1.0 )
-
-Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default).
 
 In our case, we want `ALWAYS` sampling:
 
 Application.kt
 ```kotlin
     @Bean
-    @ConditionalOnMissingBean
     fun sleuthTraceSampler(): Sampler {
         return Sampler.ALWAYS_SAMPLE
     }
@@ -463,7 +466,7 @@ Spring Cloud Sleuth supports several traces sending strategies that are controll
  * RabbitMQ 
  * ActiveMQ
 
-Let's configure a few of these trace collection strategies. First, by activating separate application profiles we will simplify Zipkin transmission configuration.
+In this example, we create one profile per transmission stragtegy. First we will use the `Web` kind.
 ### By Web
 
 This solution involves [docker compose](https://www.docker.com/products/docker-desktop/) and some YAML to bring up a Zipkin server. The following compose file will start up and leave Zipkin listening on port `9411`.
@@ -486,7 +489,7 @@ networks:
     name: sleuthy-rsocket_default
 ```
 
-Time to start the zipkin server by executing the following command:
+We can start the Zipkin server by executing the following command:
 
 ```bash
 docker compose -f zipkin-compose.yml up
@@ -500,12 +503,12 @@ spring.zipkin.sender.type=web
 spring.zipkin.base-url=http://localhost:9411/
 ```
 
-Finally, subclass the `RequestResponseTests` class we created earlier and set the active profile during the test as seen below:
+Finally, subclass the `ManualSpanTests` class we created earlier and set the active profile during the test as seen below:
 
-ZipkinRequestResponseTests.kt
+ZipkinManualSpanTests.kt
 ```kotlin
 @ActiveProfiles("rest")
-class ZipkinRequestResponseTestsTests : RequestResponseTests()
+class ZipkinManualSpanTests : ManualSpanTests()
 ```
 
 Running these tests will emit traces that show similar logging data as before. Additionally, it will send those traces to the local Zipkin server. Next, we will take a look at viewing these logs in the Zipkin WebUI.
@@ -554,12 +557,12 @@ spring.zipkin.kafka.topic=zipkin
 
 Above, we set Kafka specific [sleuth properties](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/html/appendix.html) that tell sleuth things like 'remote-service-name' and which 'topic' to send to.
 
-On the code side, we will subclass the `RequestResponseTests` class with one marked with `@ActiveProfiles` annotation. In this way, each test class runs the same tests but ships to a different collector.
+On the code side, we will subclass the `ManualSpanTests` class with one marked with `@ActiveProfiles("kafka")` annotation. In this way, each test class runs the same tests but ships to a kafka server for collection later on by Zipkin's Kafka Collector.
 
-KafkaRequestResponseTests.kt
+KafkaManualSpanTests.kt
 ```kotlin
 @ActiveProfiles("kafka")
-class KafkaRequestResponseTests : RequestResponseTests()
+class KafkaManualSpanTests : ManualSpanTests()
 ```
 
 ### Starting up Kafka for Zipkin
@@ -648,12 +651,12 @@ spring.zipkin.rabbitmq.queue=zipkin
 
 Above, we set RabbitMQ specific [sleuth properties](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/html/appendix.html) that tell sleuth things like 'remote-service-name' and which 'queue' to send to.
 
-The code side is similar to what we did with Kafka. Subclass `RequestResponseTests` with one marked with `@ActiveProfiles`. The profile we choose this time is 'rabbit'.
+The code side is similar to what we did with Kafka. Subclass `ManualSpanTests` with one marked with `@ActiveProfiles`. The profile we choose this time is 'rabbit'.
 
-KafkaRequestResponseTests.kt
+KafkaManualSpanTests.kt
 ```kotlin
 @ActiveProfiles("kafka")
-class KafkaRequestResponseTests : RequestResponseTests()
+class KafkaManualSpanTests : ManualSpanTests()
 ```
 
 When testing is complete, shut down the Kafka infrastructure using the following command:
@@ -710,13 +713,18 @@ Perform the next necessary step - standing up the servers - by executing the doc
 docker compose -f rabbit-compose.yml up
 ```
 
-Running `RabbitRequestResponseTests` will show very similar results - only the spanIDs will differ. With that, we conclude shipping traces through RabbitMQ.
+Running `RabbitManualSpanTests` will show very similar results - only the SpanIDs will differ. With that, we conclude shipping traces through RabbitMQ.
+
+To tear down the RabbitMQ scenario in compose:
+
+```bash
+docker compose -f rabbit-compose.yml down
+```
 
 ## Wrapup
 
-This guide was meant to introduce you to Spring Boot, Kotlin, and distributed tracing as a topic of interest to enterprise-driven or even startup-driven developers. The main concepts in this topic described the flexibility in options given when configuring a traced RSocket microservice. The key takeaways for you are that Sleuth is based on research and tested technology that is well understood
-and in use on a global scale on the internet right now. That RSocket microservices can be instrumented 
-in Spring Boot, with the Kotlin side being well supported.
+This guide was meant to introduce you to Spring Boot, Kotlin, and distributed tracing as a topic of interest to enterprise-driven or even startup-driven developers. The main concepts in this topic described the flexibility in options given when configuring a traced RSocket microservice. The key takeaways for you are that Sleuth is based on research and tested technology that is well understood and in use on a global scale on the internet right now. That RSocket microservices can be instrumented 
+in Spring Boot, with the Kotlin side being well supported - even with [coroutines](https://docs.spring.io/spring-framework/docs/5.2.0.M1/spring-framework-reference/languages.html#coroutines)!
 
 ## Informational and Learning Material
 
@@ -731,6 +739,7 @@ in Spring Boot, with the Kotlin side being well supported.
 [Git Issue Adding Prometheus Exemplars Support #2039 Thanks to Jonatan Ivanov](https://github.com/spring-cloud/spring-cloud-sleuth/issues/2039)
 
 [Zipkin Kafka Storage](https://github.com/openzipkin-contrib/zipkin-storage-kafka)
+
 [R2dbc Proxies](http://r2dbc.io/r2dbc-proxy/docs/current-snapshot/docs/html/)
 
 ## Technologies: 
