@@ -12,14 +12,12 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
-Arellano
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
 2x2
 32bit
-Pinky
 3D
 [23]G
 401K
@@ -133,6 +131,7 @@ AquaSecurity
 Aravena
 [Aa]rchitecting
 Ardanlabs
+Arellano
 [Aa]rgo(CD|cd)(-k8s)?
 args
 ARM64
@@ -884,6 +883,7 @@ GIS
 [Gg]ithub
 GitLabCI
 Gitops
+GITOPS-SECRET
 GitOps(-type)?
 Gitrepo
 GKE
@@ -956,6 +956,7 @@ Hayk
 Haytham
 Headspring
 [Hh]ealthcheck(s)?
+HealthIT
 Heartbleed
 Heen
 Heinemeier
@@ -972,6 +973,7 @@ High-Cardinality
 Hillegass
 Hinojosa
 hl_lines=4-5
+HL7
 HMAC
 Hobsons
 hoc
@@ -1228,6 +1230,7 @@ Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
+KNative
 Knative-serving
 Knative-Serving
 knative-serving
@@ -1701,6 +1704,7 @@ pickab(le|ility)?
 PID
 Pilani
 Pilimon
+Pinky
 [Pp]inniped
 [Pp]ip[Xx]('s)?
 pivnet
@@ -1874,6 +1878,7 @@ RegionObjectFilter
 RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
+REGISTRY-REPO
 [rR]ego
 rehostable
 Reif
@@ -2072,6 +2077,7 @@ SMB
 SME
 SMI
 SMTP
+smtp-sink
 Smythe
 Snapchat
 SNI
@@ -2188,6 +2194,7 @@ TBD
 TCE
 tchotchke
 TCP
+tcp
 TCP-
 tdc-carvel-examples
 tdp-guide
@@ -2461,6 +2468,7 @@ x64
 Xcode
 Xing
 XKCD
+XMPP
 XP
 XSalsa20
 Xu

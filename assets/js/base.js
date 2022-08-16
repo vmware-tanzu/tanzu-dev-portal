@@ -176,6 +176,27 @@ limitations under the License.
       padding: 0,
     });
 
+    //Show contact form lightbox if #contact in URL
+    if (window.location.hash.indexOf("contact") > -1) {
+      $("a.lightbox[href*=contact]").trigger("click");
+    }
+
+    //Adjust styles on embedded Marketo contact form on rabbmq-vs-kafka blog
+    if (location.href.indexOf("rabbitmq-vs-kafka") > -1) {
+      var checkContactFormExistsConsent = setInterval(function(){
+        if ($('#contact .mktoForm input[id*=First]').length) {
+          $('#contact .mktoForm select#Country').change(function(){
+            if ($('#contact .mktoForm input[name=Phone_Consent__c]').length) {
+              $("#contact .mktoForm input[type=checkbox]").parents("#contact .mktoForm .mktoFormCol").attr('style', 'width: auto');
+              $(".fancybox-inner").attr('style','overflow-x: hidden');
+            }
+          });
+          clearInterval(checkContactFormExistsConsent);
+        }
+      }, 100);
+    }
+
+
     //Copy videos index iframe embed URLs to parent for lightbox
     $(".youtube-container").each(function () {
       var src = $(this)

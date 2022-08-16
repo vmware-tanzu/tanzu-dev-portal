@@ -5,7 +5,7 @@ description:
   to a registry. Deploy it to Kubernetes.
 draft: false
 logo: /images/workshops/logo-spring.svg
-lab: spring-on-kubernetes
+lab: lab-spring-on-kubernetes
 lastmod: '2021-05-03'
 length: 120
 summary:

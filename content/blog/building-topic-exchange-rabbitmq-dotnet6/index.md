@@ -20,7 +20,7 @@ languages:
 
 At a high level, [RabbitMQ](https://www.rabbitmq.com/) is an open source message broker. A message broker accepts messages from a producer (the message sender) and holds it in a queue so that a consumer (the message receiver) can retrieve it. This allows for multiple producers and consumers to share the same queue without having to directly pass messages between each other. What RabbitMQ excels at is doing this at scale whilst staying lightweight and easy to deploy.
 
-To get started with a basic RabbitMQ implementation, checkout this [guide]([https://tanzu.vmware.com/developer/guides/rabbitmq-gs/](https://tanzu.vmware.com/developer/guides/rabbitmq-gs/)).
+To get started with a basic RabbitMQ implementation, checkout this [guide](https://tanzu.vmware.com/developer/guides/rabbitmq-gs).
 
 
 ## Why use a message broker?
@@ -31,7 +31,7 @@ If you were not using a message broker, you would most likely be using an HTTP o
 
 The addition of a message broker improves the fault tolerance and resiliency of the systems in which they are employed. 
 
-They are easy to scale as their [publish/subscribe pattern]([https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)) means the addition of many more services can be easily supported - without having to modify existing systems.
+They are easy to scale as their [publish/subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) means the addition of many more services can be easily supported - without having to modify existing systems.
 
 
 ## What is a Topic Exchange?
@@ -40,7 +40,7 @@ RabbitMQ has four types of exchanges (or message routers) available to route the
 
 Topic exchanges route messages to one or many queues based on matching a message routing key and the pattern that was used to bind a queue to an exchange. The topic exchange type is often used to implement various publish/subscribe pattern variations. Topic exchanges are commonly used for the multicast routing of messages.
 
-If you would like to learn more about the three other types of exchange available in RabbitMQ, then checkout the [documentation]([https://www.rabbitmq.com/tutorials/amqp-concepts.html](https://www.rabbitmq.com/tutorials/amqp-concepts.html)).
+If you would like to learn more about the three other types of exchange available in RabbitMQ, then checkout the [documentation](https://www.rabbitmq.com/tutorials/amqp-concepts.html).
 
 
 ## Before You Begin
@@ -87,7 +87,7 @@ A *webAPI* application which, when its API endpoint is called, will create a new
 
 ### KitchenService
 
-A *[Blazor Server](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-6.0)* application with [`SignalR`]([https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr)). `SignalR` will be used to update the kitchen UI browser window as orders come in.
+A *[Blazor Server](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-6.0)* application with [`SignalR`](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr). `SignalR` will be used to update the kitchen UI browser window as orders come in.
 
 You will need to add a listener to this application to listen for messages with a specific routing key pattern matching `#.cookwaffle`, to publish an order to the kitchen UI. This is a wildcard routing key as it contains the `#`. This service will look for any messages relating to `cookwaffle` regardless of suffixes.
 
@@ -271,7 +271,7 @@ public void PublishMessage<T>(T entity, string key) where T : class
 	_channel.BasicPublish(exchange: _rabbitSettings.ExchangeName,
                                         routingKey: key,
                                         basicProperties: null,
-                                        body: key);
+                                        body: body);
 
 	Console.WriteLine(" [x] Sent '{0}':'{1}'", key, message);
 
@@ -379,7 +379,7 @@ consumerAsync.Received += async (_, ea) =>
 
 };
 
-_channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+_channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumerAsync);
 ```
 
 When the consumer receives a message with the required routing key pattern `#.cookwaffle` it will:
@@ -445,7 +445,7 @@ Almost instantaneously, you should see an order pop up on the "KitchenService" U
 
 You have covered a very happy path above that software seldom follows!
 
-RabbitMQ is a powerful, enterprise-level message broker with a plethora of features including those that deal with the unhappy path. I strongly urge you to check out the [documentation]([https://www.rabbitmq.com/documentation.html](https://www.rabbitmq.com/documentation.html)) and learn more about what to do when things go wrong.
+RabbitMQ is a powerful, enterprise-level message broker with a plethora of features including those that deal with the unhappy path. I strongly urge you to check out the [documentation](https://www.rabbitmq.com/documentation.html) and learn more about what to do when things go wrong.
 
 I hope you enjoyed this tutorial. If you have any thoughts or ideas please say hello on any of the channels below:
 
