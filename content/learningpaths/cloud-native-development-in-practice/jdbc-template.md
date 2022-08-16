@@ -14,8 +14,6 @@ Repository using
 
 After completing the lab, you will be able to:
 
--   Recall why *Object Relational Mappers* encourage circular
-    dependencies
 -   Describe how to set up a Spring Boot app to connect to a MySQL
     database locally
 -   Describe how to set up a Spring Boot app running on

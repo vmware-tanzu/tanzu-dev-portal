@@ -167,7 +167,7 @@ GitSHA: eb9343dbd96ebc225d076630be5c348a57dfc430
 
 #### Executing Sonobuoy
 
-To run a quick sanity test and make sure your environment is working correctly
+To run a quick confidence test and make sure your environment is working correctly
 execute:
 
 ```

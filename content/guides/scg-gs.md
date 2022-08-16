@@ -14,6 +14,9 @@ tags:
 - Messaging and Integration
 team:
 - Brian McClain
+languages:
+- java
+langgettingstarted: true
 title: Getting Started with Spring Cloud Gateway
 oldPath: "/content/guides/spring/scg-gs.md"
 aliases:

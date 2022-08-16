@@ -1,10 +1,9 @@
 ---
 date: '2021-11-30'
-description:
-lastmod: '2021-11-30'
 team:
 - Layla Porter
 title: "The New Global Usings Directive in C# 10"
+description: "Learn all about the new global 'using' directive in C# 10!"
 languages:
 - dotnet
 url: "/blog/new-global-usings-in-csharp-10"
@@ -44,7 +43,7 @@ using System.Threading.Tasks;
 
 I prefer to be explicit and add all of the global usings to a new file in the root of every project. 
 
-To disable the implicit using directive feature, add `<ImplicitUsings>disable</ImplicitUsings>` to the `.csproj` file.
+To deactivate the implicit using directive feature, add `<ImplicitUsings>disable</ImplicitUsings>` to the `.csproj` file.
 
 What you call your file is up to you. I like to call it `usings.cs`, but I have seen `.usings` used also.
 

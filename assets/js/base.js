@@ -127,38 +127,27 @@ limitations under the License.
     $("#toggle-light-mode").click(function () {
       localStorage.setItem("light-dark-mode-storage", "light");
       var iframe = document.getElementById("auth-iframe");
-      $("#light-select").show();
-      $("#dark-select").hide();
-      $("#theme-square").addClass("moveSquare");
-      if ($("html").hasClass("light-mode")) {
-        // if (iframe && iframe.contentWindow) {
-        //   iframe.contentWindow.postMessage("dark", "*");
-        // }
-      }
-      else {
-        $("html").addClass("light-mode");
-        changeTheme("light");
-      }
+
+      $("html").addClass("light-mode");
+      changeTheme("light");
     });
 
+    // Dark toggle
     $("#toggle-dark-mode").click(function () {
       var iframe = document.getElementById("auth-iframe");
-      $("#dark-select").show();
-      $("#light-select").hide();
-      $("#theme-square").removeClass("moveSquare");
 
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage("dark", "*");
       }
       changeTheme('dark');
       localStorage.setItem("light-dark-mode-storage", "dark");
-      var hasLight = document.getElementById("light-theme");
 
-      if(hasLight) {
-        document.getElementById("light-theme").remove();
+      if ($("html").hasClass("light-mode")) {
         $("html").removeClass("light-mode");
+        document.getElementById("light-theme").remove();
       }
     });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
@@ -186,6 +175,27 @@ limitations under the License.
     $(".lightbox").fancybox({
       padding: 0,
     });
+
+    //Show contact form lightbox if #contact in URL
+    if (window.location.hash.indexOf("contact") > -1) {
+      $("a.lightbox[href*=contact]").trigger("click");
+    }
+
+    //Adjust styles on embedded Marketo contact form on rabbmq-vs-kafka blog
+    if (location.href.indexOf("rabbitmq-vs-kafka") > -1) {
+      var checkContactFormExistsConsent = setInterval(function(){
+        if ($('#contact .mktoForm input[id*=First]').length) {
+          $('#contact .mktoForm select#Country').change(function(){
+            if ($('#contact .mktoForm input[name=Phone_Consent__c]').length) {
+              $("#contact .mktoForm input[type=checkbox]").parents("#contact .mktoForm .mktoFormCol").attr('style', 'width: auto');
+              $(".fancybox-inner").attr('style','overflow-x: hidden');
+            }
+          });
+          clearInterval(checkContactFormExistsConsent);
+        }
+      }, 100);
+    }
+
 
     //Copy videos index iframe embed URLs to parent for lightbox
     $(".youtube-container").each(function () {
@@ -450,7 +460,20 @@ limitations under the License.
     $(".learning-path-card").removeClass("active");
     $(this).addClass("active");
   });
+
+  // Beyond Agenda Toggle
+  $( ".day" ).click(function() {
+    $(".day").removeClass("active");
+    $(this).addClass("active");
+
+    if( $(this).attr('id') === 'day-1') {
+      $("#day-2-agenda").hide();
+      $("#day-1-agenda").show();
+    }
+    else {
+      $("#day-1-agenda").hide();
+      $("#day-2-agenda").show();
+    }
+  });
   
 }(jQuery));
-
-

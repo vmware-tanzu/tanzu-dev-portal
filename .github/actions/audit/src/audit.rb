@@ -84,7 +84,7 @@ errorsTally = {}
 # Gather the metadata from all the files, collecting the keys as the files are read
 contentFiles.each do |f|
     next if f.split("/").last == "_index.md" # Do not parse index files
-    fData = File.open(f).read
+    fData = File.open(f).read    
     contentMetadata = YAML.load(fData)
     newMetadata = {}
     contentMetadata.keys.each do |k|
@@ -123,10 +123,12 @@ contentFiles.each do |f|
     # Tally the tags
     if contentMetadata.has_key? "tags"
         contentMetadata["tags"].each do |t|
-            if tagsTally.has_key? t.downcase
-                tagsTally[t.downcase] += 1
-            else
-                tagsTally[t.downcase] = 1
+            if not t.nil?
+                if tagsTally.has_key? t.downcase
+                    tagsTally[t.downcase] += 1
+                else
+                    tagsTally[t.downcase] = 1
+                end
             end
         end
     end

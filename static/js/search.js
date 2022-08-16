@@ -127,7 +127,7 @@ if (query) {
 		jsElm.type = "application/javascript";
 
 		// make the script element load file
-		jsElm.src = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBnXTSF8N2EJNAb7D5UkFfVwbyxte7hjh0&cx=012029519579280034868:"+searchEngineID+"&start="+start+"&q=" +query +"&callback=hndlr" + filter;
+		jsElm.src = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD_aVlrRn-KnfbfaikuKvwc1iJh5bOiLGk&cx=012029519579280034868:"+searchEngineID+"&start="+start+"&q=" +query +"&callback=hndlr" + filter;
 
 		// finally insert the element to the body element in order to load the script
 		document.body.appendChild(jsElm);	

@@ -5,6 +5,7 @@ changeTheme(savedTheme, true);
 function changeTheme(mode, firstLoad) {
   sendAmplitudeUserProps({"latest saved theme": mode}); 
   if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
+
   if (mode === "light") {
     var iframe = document.getElementById('auth-iframe');
     var head = document.head;
@@ -15,7 +16,7 @@ function changeTheme(mode, firstLoad) {
     link.href = "{{ .cssLight.RelPermalink }}";
     link.id = "light-theme"
 
-    head.prepend(link);
+    head.append(link);
     if (iframe && iframe.contentWindow) {
       iframe.contentWindow.postMessage('light', '*');
     }

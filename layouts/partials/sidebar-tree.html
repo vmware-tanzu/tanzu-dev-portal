@@ -29,6 +29,8 @@
 {{ $shouldDelayActive := .delayActive }}
 {{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
 
+{{ $ss }}
+
 {{ if not $ss }} <!-- Top-Level Section -->
   <ul class="td-sidebar-nav__section">
   {{ $active := or (eq $p $s) ($p.Params.toppage) }}

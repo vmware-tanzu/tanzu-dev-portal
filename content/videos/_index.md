@@ -9,6 +9,7 @@ menu:
     parent: sections
     params:
       split: right
+      section: type
     weight: 5
 tags: []
 ---

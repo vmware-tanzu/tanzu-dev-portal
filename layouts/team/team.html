@@ -55,19 +55,37 @@
   
           {{ .Scratch.Set "memberName" "" }}
           {{ with .Site.GetPage (print "/team/" .Data.Term) }}{{ .Scratch.Set "memberName" .Params.name }}{{ end }}
+          
+          {{ $shows := slice }}
+          <!-- Guest on any show -->
           {{ $guests := where (where .Site.Pages "Section" "tv") "Params.guests" "intersect" (slice (.Scratch.Get "memberName")) }}
-          {{ $hosts := where (where .Site.RegularPages "File.Dir" "tv/code/") "Params.hosts" "intersect" (slice (.Scratch.Get "memberName")) }}
-          {{ $shows := (append $guests $hosts).ByDate.Reverse }}
+          {{ $shows = $shows | append $guests }}
+          
+          <!-- Speaker on any show -->
+          {{ $speakers := where (where .Site.Pages "Section" "tv") "Params.speakers" "intersect" (slice (.Scratch.Get "memberName")) }}
+          {{ $shows = $shows | append $speakers }}
+          
+          <!-- Host on shows identified in header, or on Code -->
+          {{ $hostShows := union (slice "code") .Params.include_host }}
+          {{ range $hostShows }}
+            {{ $hosts := where ($.Site.GetPage (printf "/tv/%s" .)).Pages "Params.hosts" "intersect" (slice ($.Scratch.Get "memberName")) }}
+            {{ $shows = $shows | append $hosts }} 
+          {{ end }}
+          
           {{ if and (gt (len $shows) 0) (not $.Params.hidden) }}
           <div id="tanzu-tv" class='container py-5 border-top'>
               <div class='d-flex align-items-center icon-title mb-5'><img alt="" class="icon mr-3" src='{{ "/images/icons/icon-videos.svg" | relURL }}'/><h3 class="mb-0">Tanzu.TV Episodes</h3></div>
               <div class="col px-lg-0"><div class='row'>
-                  {{ range $shows }}
+                  {{ range $shows.ByDate.Reverse }}
                       <div class="col-lg-4 col-12 px-lg-3 px-0 mb-5 mb-lg-5 mb-lg-0 ">
                           {{ if (not (isset .Params "youtube")) | or (eq .Params.youtube "") }}<a href="{{ .RelPermalink }}"><img src='{{ partial "tv-image-src" . }}'></a>
                           {{ else }}<a class='youtube-container'><div class="youtube-overlay"></div><iframe class="youtube-small" type="text/html" src="https://www.youtube.com/embed/{{ .Params.youtube }}?wmode=transparent&amp;rel=0&amp;modestbranding=1" wmode="Opaque" frameborder="0" allowfullscreen="true"></iframe></a>
                           {{ end }}
-                          <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
+                          {{ if .Params.beyond }}
+                            <p><a class="text-white" href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+                          {{ else }}
+                            <p><a class="text-white" href="{{ .RelPermalink }}">{{- print .Parent.Title ": " .Title -}}</a></p>
+                          {{ end }}
                       </div>
                   {{ end }}
               </div></div>

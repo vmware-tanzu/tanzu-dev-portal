@@ -5,7 +5,7 @@ tags:
 - CI-CD
 team:
 - Daniel de Repentigny
-title: Software Supply Chain Choreography, Part 1
+title: Software Supply Chain Choreography
 level1: Deploying Modern Applications
 level2: CI/CD, Release Pipelines
 aliases:

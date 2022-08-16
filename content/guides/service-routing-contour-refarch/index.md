@@ -171,7 +171,7 @@ The following diagram shows the request flow:
 ![HTTPS Ingress](images/contour-ingress-patterns-https.drawio.png#diagram)
 
 When TLS is enabled, Envoy redirects HTTP clients to the HTTPS endpoint. The
-redirect is enabled by default when using TLS, but it can be disabled on
+redirect is enabled by default when using TLS, but it can be deactivated on
 specific routes by setting `permitInsecure: true`. The following diagram shows
 the redirect to the secure endpoint:
 

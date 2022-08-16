@@ -188,7 +188,7 @@ support for standards to collect tool selection criteria.
 
 It's also a good idea to become proficient in how each of the tools and
 technologies work, as this is the best way to minimize
-friction in the Modern Apps Practitioner Workflow.
+friction in the **_Modern Apps Practitioner Workflow_**, which is the next page in this Learning Path.
 
 ## Trade Offs, Costs and Technical Debt
 

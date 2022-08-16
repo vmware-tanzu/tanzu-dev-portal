@@ -83,7 +83,7 @@ Some ideas related to your Kafka topic responsibilities:
 
 ## Order Service
 
-This is where you create the order ID — which can have simple validation checks for sanity. Having a lookup can reduce a lot of complexities and at the same time introduce new challenges that we will discuss later.
+This is where you create the order ID — which can have simple validation checks for confidence. Having a lookup can reduce a lot of complexities and at the same time introduce new challenges that we will discuss later.
 
 #### Note: You will only have one **Write** but many **Reads** operations at a time, per order.
 

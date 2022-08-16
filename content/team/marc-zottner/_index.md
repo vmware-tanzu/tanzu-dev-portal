@@ -1,23 +1,23 @@
 ---
 name: Marc Zottner
-description: "Field CTO"
+description: "Field Principal, VMware OCTO"
 roles: ["guest"]
 skills: ""
-location: ""
+location: "Stuttgart, Germany"
 
 # Social Media
 twitter: "marczottner"
-website: ""
+website: "https://www.zottner.com/"
 facebook: ""
-linkedin: ""
-github: ""
+linkedin: "marczottner"
+github: "Maarc"
 pinterest: ""
 instagram: ""
 youtube: ""
 ---
 
+Marc is a French technologist living in Germany with over 15 years of experience gathered in many projects for more than 60 customers in over 12 countries in the finance, software, retail, energy, medical, public, manufacturing and telecommunications sectors.  
 
-Marc is a French technologist living in Germany with over 14 years of experience which he has collected in many projects for more than 60 customers over 12 countries in the finance, software, retail, energy, medical, public, manufacturing and telecommunications sectors.  His main interests are application modernization, architecture, security, platform as a service, user experience, front-end technologies, open source software, and Java enterprise.
+Passionate about **application modernization**, his main interests gravitate towards architecture, security, platform as a service, user experience, front-end technologies, open-source software, and Java enterprise.
 
 <!--more-->
-

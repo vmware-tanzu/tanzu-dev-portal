@@ -1,0 +1,33 @@
+name: Process Bio Template Pages
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+jobs:
+  bio-pages:
+    if: github.repository == 'vmware-tanzu/tanzu-dev-portal'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.BIO_PA_TOKEN }}
+      - name: Checkout Bio Page Branch
+        run: |
+          git fetch
+          git checkout main
+      - uses: ./.github/actions/bio-template
+        name: Process Bio Template Pages
+      - name: Check for modified files
+        id: git-check
+        run: |
+          git add --all
+          echo ::set-output name=modified::$(if git diff --quiet HEAD --; then echo "false"; else echo "true"; fi)
+      - name: Commit files
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update bio page from template" -a
+          git push origin main

@@ -11,6 +11,8 @@ tags:
 - Spring Cloud Gateway
 - Kubernetes
 - Spring
+languages:
+- java
 team:
 - Ivan Tarin
 title: Highlights of the SpringOne 2020 Self-Paced Workshops - and Their New Home
