@@ -12,6 +12,11 @@
 (?:[APMCEI][ESD]T|UTC)
 .tgz
 1:1s
+Syntasso
+Kratix
+Zino
+#CoffeeOps
+SLOConf
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
