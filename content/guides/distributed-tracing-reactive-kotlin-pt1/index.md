@@ -41,7 +41,7 @@ Tracing data will give detailed information about the single request, but not al
 You've come here because you're curious about this 'tracing' component, and you want to learn how to integrate it into your existing Spring Boot projects. Here are some tips to know whether you need tracing.
 
  * Re-writing legacy apps or embarking on a new project.
- * Inter-connected [microservices](https://tanzu.vmware.com/microservices) and it's time to add tracing.
+ * An Inter-connected [microservices](https://tanzu.vmware.com/microservices) project that lacks tracing.
  * Monitoring specific service zones ( regions, etc ) for hotspot activity.
 
 This guide helps to answer the following questions:
@@ -154,11 +154,11 @@ Settings for `spring.sleuth.reactor.instrumentation-type`:
     Wraps every operator in the least invasive way, does not pass a tracing context. That is up to the user. 
 
 
-> **_NOTE:_**  To opt-out of tracing altogether, it's best to set the value of `spring.sleuth.rsocket.enabled` to false. Alternatively you can configure your RSocketRequester's and RSocketServer's by hand - autoconfiguration will leave them alone if they're already present.
+> **_NOTE:_**  To opt-out of tracing altogether, its best to set the value of `spring.sleuth.rsocket.enabled` to false. Alternatively you can configure your RSocketRequester and RSocketServer by hand - autoconfiguration will leave them alone if they're already present.
 
 ### Back to The Demo
 
-You will need to decide an application name as it will appear in trace logs. Also decide on an instrumentation type that feels comforatable. 
+You will need to decide an application name as it will appear in trace logs. Also decide on an instrumentation strategy that fits with your use case.
 
 Those settings and more can be applied in application.properties:
 
@@ -190,7 +190,7 @@ class SimpleTracedController {
 }
 ```
 
-Without going into too much detail, we can see that we have exposed a couple of message routes - `justMono` and `justMonoNewSpan` - whereas the latter endpoint utilizes [@NewSpan](https://github.com/spring-cloud/spring-cloud-sleuth/blob/3.1.x/spring-cloud-sleuth-api/src/main/java/org/springframework/cloud/sleuth/annotation/NewSpan.java) annotation to mark that endpoint in it's own span per documentation: 
+Without going into too much detail, we can see that we have exposed a couple of message routes - `justMono` and `justMonoNewSpan` - whereas the latter endpoint utilizes [@NewSpan](https://github.com/spring-cloud/spring-cloud-sleuth/blob/3.1.x/spring-cloud-sleuth-api/src/main/java/org/springframework/cloud/sleuth/annotation/NewSpan.java) annotation to mark that endpoint in its own span per documentation: 
 
   "Allows to create a new span around a public method. The new span will be either a child of an existing span if a trace is already in progress or a new span will be created if there was no previous trace". 
 
@@ -206,7 +206,7 @@ logging.level.org.springframework.cloud.sleuth.instrument.reactor=trace
 ## Tests for Traced Services
 
 We'll write some tests using JUnit5, AssertJ, and reactive-tests components.
-But first we need to re-use an [RSocketRequester](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/RSocketRequester.html) in tests, so it's easier subclass the configuration of this component and remove some boiletplate in each test.
+But first we need to re-use an [RSocketRequester](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/RSocketRequester.html) in tests, so it is easier subclass the configuration of this component and remove some boiletplate in each test.
 
 The following listing shows our test superclass.
 
@@ -237,7 +237,7 @@ class TestBase {
 
 This `TestBase` class forms the configuration for all our downstream tests. It simply uses [@SpringBootTest](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) for full autoconfiguration and then connects to the local RSocket server with [RSocketRequester](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java).
 
-Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, traces will ship to zipkin via HTTP/REST unless no zipking server is available.
+Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, traces will ship to zipkin via HTTP/REST unless no zipkin server is available.
 
 ### The Unit Tests
 
