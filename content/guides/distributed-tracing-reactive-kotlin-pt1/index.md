@@ -24,7 +24,7 @@ This guide will discuss RSocket tracing with Spring Cloud Sleuth and Zipkin. We 
 
 ## Motivation
 
-So, you're thinking: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. So you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
+So, you're thinking: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. Then you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
 
 Spring Cloud Sleuth represents an overlay component between the app and a tracing library. It is based heavily on the [Brave](https://github.com/openzipkin/brave) library but focuses on enrichment to mix in trace logic. We want to utilize a tracing library and not have to touch much of our app componentry.
 
@@ -310,7 +310,7 @@ class ManualSpanTests : TestBase() {
                                         tracer: Tracer) {
         val manualSpan = tracer.spanBuilder()
                 .kind(Span.Kind.CLIENT)
-                .name("tracedJustMonoRequest")
+                .name("justMonoRequest")
                 .remoteServiceName("EDDIEVALIANT")
                 .start()
 
