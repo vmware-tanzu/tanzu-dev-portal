@@ -1,16 +1,15 @@
 ---
-date: '2021-09-13'
-description: Learn how kpack can help you build images securely and efficiently
+title: Building Images with kpack
+description: Learn how kpack can help you build images securely and efficiently.
+summary: Learn how kpack can help you build images securely and efficiently.
 lab: lab-kpack
-lastmod: '2021-10-03'
 length: 15
-logo: "/images/workshops/logo-tce.svg"
-summary: Learn how kpack can help you build images securely and efficiently
+logo: "/images/workshops/logo-kubernetes.svg"
 tags:
-- Spring
 - Microservices
 - Kubernetes
 - Spring Boot
-- Tanzu
-title: Building Images with kpack
+- Docker
+- kpack
+weight: 7
 ---

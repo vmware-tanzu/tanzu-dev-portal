@@ -1,14 +1,15 @@
 ---
+title: Installing Application Packages with kapp-controller
+description: A workshop looking at the role of `kapp-controller` and how to use it to install application packages.
+summary: A workshop looking at the role of `kapp-controller` and how to use it to install application packages.
+lab: lab-kapp-controller
+length: 30
+logo: /images/workshops/logo-carvel-2.png
+tags:
+  - Kubernetes
+  - Carvel
 aliases:
   - '/workshops/lab-tce-dependencies'
   - '/workshops/lab-tce-deploy'
-description: Installing Application Packages with kapp-controller
-lab: lab-kapp-controller
-length: 60
-logo: /images/workshops/logo-kubernetes.svg
-summary:
-  - Installing Application Packages with kapp-controller
-tags:
-  - Kubernetes
-title: Installing Application Packages with kapp-controller
+weight: 6
 ---

@@ -1,18 +1,15 @@
 ---
-date: '2021-09-13'
-description: Introduction to Carvel, simple and composable tools for application
+title: Introduction to the Carvel tools
+description: An introduction to many of the tools in the Carvel tool set and how they can be composed together to help in Kubernetes application deployment.
+summary:  An introduction to many of the tools in the Carvel tool set and how they can be composed together to help in Kubernetes application deployment.
 lab: lab-carvel
-lastmod: '2021-10-03'
 length: 15
-logo: "/images/workshops/logo-kubernetes.svg"
-summary: Introduction to Carvel, simple and composable tools for application
+logo: "/images/workshops/logo-carvel-2.png"
 tags:
-  - Spring
   - Microservices
   - Kubernetes
-  - Spring Boot
-  - Tanzu
-title: Introduction to the Carvel tools
+  - Carvel
+weight: 4
 aliases:
   - /workshops/lab-getting-started-with-carvel
 ---

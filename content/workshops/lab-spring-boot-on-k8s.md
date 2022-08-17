@@ -1,14 +1,15 @@
 ---
-aliases:
-  - '/workshops/lab-microservice'
-description: Spring Boot on Kubernetes
+title: Spring Boot on Kubernetes
+description: A workshop which steps through creating a Spring Boot application, containerizing it, and deploying it to Kubernetes.
+summary: A workshop which steps through creating a Spring Boot application, containerizing it, and deploying it to Kubernetes.
 lab: lab-spring-boot-on-k8s
-length: 60
-logo: /images/workshops/logo-kubernetes.svg
-summary:
-  - Spring Boot on Kubernetes
+length: 30
+logo: /images/workshops/logo-spring-kubernetes.png
 tags:
   - Kubernetes
   - Spring
-title: Spring Boot on Kubernetes
+  - Spring Boot
+weight: 8
+aliases:
+  - '/workshops/lab-microservice'
 ---

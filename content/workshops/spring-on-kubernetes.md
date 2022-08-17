@@ -1,23 +1,16 @@
 ---
-date: '2021-03-09'
 hidden: true
-description:
-  Create a Spring Boot application. Containerize it, and push the container
-  to a registry. Deploy it to Kubernetes.
-draft: false
-logo: /images/workshops/logo-spring.svg
+title: Spring on Kubernetes
+description: Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
+summary: Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
 lab: lab-spring-on-kubernetes
-lastmod: '2021-05-03'
 length: 120
-summary:
-  - Create a Spring Boot application. Containerize it, and push the container to a registry.
-    Deploy it to Kubernetes.
+logo: /images/workshops/logo-spring.svg
 tags:
   - Spring
   - Microservices
   - Kubernetes
   - Spring Boot
-title: Spring on Kubernetes
 ---
 
 During this workshop you will learn the finer details of how to create, build, run, and debug a basic Spring Boot app on Kubernetes by doing the following:
