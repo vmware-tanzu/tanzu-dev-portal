@@ -457,7 +457,7 @@ AnnotatedSpanTests.kt
     }
 ```
 
-Running these tests shows our output to be similar to before but with differnt ID's. 
+Running these tests shows our output to be similar to before but with different ID's. 
 
 ```txt
 DEBUG [EDDIEVALIANT,,] 65632 --- [actor-tcp-nio-2] o.s.c.s.i.r.TracingRequesterRSocketProxy : Extracted result from context or thread local RealSpan(48291c184ddfb160/59252278c0be24d4)
@@ -476,13 +476,13 @@ Metadata:
 ```
 
 In the next section, we will configure the application to ship traces to a trace collection server - OpenZipkin.
-## Shipping traces
+## Ship Traces to Zipkin
 
-To understand the trace and not just keep logs, we need to send traces somewhere that can correlate them in a human-readable way. This is where [OpenZipkin](https://zipkin.io/) comes in. 
+To understand the trace and not just keep logs, we need to send traces somewhere that can correlate them in a human-readable way. This is where [OpenZipkin](https://zipkin.io/) comes in. Zipkin supports a variety of trace [collection](https://zipkin.io/pages/architecture.html) transports - including Web, Kafka and RabbitMQ. The collector transport is configured at server startup. We will see examples of each configuration as the example progresses.
 
-To ensure we have enough trace data and not too much (or too little), lets setup the behaviour that determines how often our app will send trace data. This is especially helpful for preventing overload of any one kind of trace.
+To ensure we have a satisfactory amount of trace data, lets setup the behaviour that determines how often our app will send trace data. This is especially helpful for preventing overload of any one kind of trace.
 
-### Sample Rate of Trace Shipping
+### Sample Rate of Trace Shipments
 
 Sleuth supports a few ways to tell it how often it should ship traces. This is configured in one of 2 ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` or `spring.sleuth.sampler.rate=10`. Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default) but you can even instantiate the `RateLimited and `Probablistic` samplers this way.
 
@@ -505,14 +505,14 @@ Application.kt
 
 Above, we will _always_ ship traces to the configured collector. Collectors are the means which traces can arrive to our trace server (like OpenZipkin).
 
-Spring Cloud Sleuth supports several traces sending strategies that are controlled through the `spring.zipkin.sender.type` property in [ZipkinSenderProperties](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/zipkin2/ZipkinSenderProperties.java). The supported ones are (of this writing):
+Spring Cloud Sleuth supports several traces transport strategies that are configured through the `spring.zipkin.sender.type` property in [ZipkinSenderProperties](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/zipkin2/ZipkinSenderProperties.java). The supported ones are (of this writing):
 
  * Web (Directly to Zipkin REST)
  * Kafka (Zipkin via Kafka topic)
  * RabbitMQ 
  * ActiveMQ
 
-In this example, we create one profile per transmission stragtegy. First we will use the `Web` kind.
+In this example, we create one profile per transmission strategy. First we will use the `Web` kind.
 ### By Web
 
 This solution involves [docker compose](https://www.docker.com/products/docker-desktop/) and some YAML to bring up a Zipkin server. The following compose file will start up and leave Zipkin listening on port `9411`.
@@ -541,7 +541,7 @@ We can start the Zipkin server by executing the following command:
 docker compose -f zipkin-compose.yml up
 ```
 
-On the application side, create a properties file called `application-zipkin.properties` and store it in `src/main/resources`. This properties file is bound to the profile "rest" as its purpose is to set the URL for Zipkin connectivity as well as opt-in for HTTP/REST trace sending. 
+On the application side, create a properties file called `application-zipkin.properties` and store it in `src/main/resources`. This properties file is bound to the profile "rest" as its purpose is to set the URL for Zipkin connectivity as well as opt-in for HTTP/REST trace transport. 
 
 application-rest.properties:
 ```properties
