@@ -12,7 +12,7 @@ facebook: ""
 linkedin: "whitneylee"
 github: ""
 pinterest: ""
-instagram: "sweetlovewhitney"
+instagram: ""
 youtube: "channel/UCaGYZkSCN3MPwqRpt24KBKA"
 twitch: "wiggitywhitney"
 
@@ -22,20 +22,7 @@ include_host:
 
 ---
 
-Whitney traveled the scenic route but is chuffed to have found her way to Kubernetes 
-and cloud technologies. Whitney began her professional career as a 
-[fine artist](images/whitney-artist.jpg) before owning her own
-[photography](images/whitney-photographer1.jpg) [business](images/whitney-photographer2.jpg) 
-for over a decade. After a year-long tour [playing keys](https://m.youtube.com/watch?v=F4TFVwHJANE) 
-in the band Mutual Benefit, Whitney went back to school in 2019 to learn full-stack web 
-development. After graduation, Whitney was employed by IBM as a cloud developer, using none of 
-the skills she had just learned. She developed an insatiable appetite for all things cloud, 
-and a passion for teaching others as she acquired knowledge herself. Whitney has made many 
-cloud-related [lightboard videos](https://youtu.be/BgrQ16r84pM) that together have 400,000+ views.
-At VMware, you can find Whitney writing lighthearted yet informative 
-[guides](https://tanzu.vmware.com/developer/guides/knative-serving-wi/?utm_source=whitney&utm_campaign=devrel), or behind the 
-lightboard during her weekly streaming show [ϟ Enlightning](https://tanzu.vmware.com/developer/tv/enlightning/?utm_source=whitney&utm_campaign=devrel).  Whitney’s contagious excitement 
-drives her to collaborate and play!
+Whitney is a full stack developer who enjoys understanding and using tools in the cloud native landscape. Creative and driven, Whitney recently pivoted from an art-related career to one in tech. She is active in the open source community, especially around CNCF projects focused on developer productivity. You can catch her lightboard streaming show [ϟ Enlightning](https://tanzu.vmware.com/developer/tv/enlightning/) on Tanzu.TV. And not only does she rock at tech - she literally has toured playing in the band [Mutual Benefit](https://www.mutualbenef.it/) on keyboards and vocals.
 
 <!--more-->
 
