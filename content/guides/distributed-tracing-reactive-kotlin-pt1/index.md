@@ -102,7 +102,7 @@ Once you have Spring Cloud Sleuth on the CLASSPATH, it will automatically instru
 
   * Messaging like Kafka or RabbitMQ
   * HTTP headers via WebMVC and WebFlux controllers
-  * Request headers made through webClient, and restTemplate
+  * Request headers made through `WebClient`, and `RestTemplate`
 
 # Demo Application
 
@@ -115,7 +115,7 @@ The code presented here can be cloned from [this git repository](https://github.
   * Using JVM 17.
   * Kotlin
 
-> **_NOTE:_** If you are familiar with [reactive basics](https://www.youtube.com/watch?v=jB-zvQnfQb8) this next sections will make sense, otherwise I implore you to watch the aformentioned video on reactive.
+> **_NOTE:_** If you are familiar with [reactive basics](https://www.youtube.com/watch?v=jB-zvQnfQb8) this next sections will make sense, otherwise I implore you to watch the video or even head to [spring.io](https://spring.io/reactive) for a refresher.
 
 Its easiest to follow along in your favorite IDE as we will sample test classes individually. Or if you want, just use Maven to run a single test by editing the following command:
 
@@ -138,7 +138,7 @@ When you add `spring-cloud-sleuth` to the classpath, Spring's [autoconfiguration
 
 Most notably are the configuration properties such as [SleuthRSocketProperties](https://github.com/spring-cloud/spring-cloud-sleuth/blob/3.1.x/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/instrument/rsocket/SleuthRSocketProperties.java) that will be used to determine if/where Sleuth will instrument reactive streams. 
 
-One such class: [SleuthReactorProperties](https://github.com/spring-cloud/spring-cloud-sleuth/tree/3.1.x/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/instrument/reactor) tells sleuth where to decorate reactor operators. It enables different styles of decoration by degrees of invasiveness:
+One such class: [SleuthReactorProperties](https://github.com/spring-cloud/spring-cloud-sleuth/tree/3.1.x/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/instrument/reactor) tells sleuth where to decorate reactor operators. It enables several styles of operator decoration as outlined below.
 
 This is expressed through the property enum class [InstrumentationType](https://github.com/spring-cloud/spring-cloud-sleuth/blob/3.1.x/spring-cloud-sleuth-autoconfigure/src/main/java/org/springframework/cloud/sleuth/autoconfig/instrument/reactor/SleuthReactorProperties.java) which gives a few options on when instrumentation happens in reactive streams as described below:
 
@@ -151,7 +151,7 @@ Settings for `spring.sleuth.reactor.instrumentation-type`:
     Every operator is wrapped. This method will pass a tracing context in most cases, and thus may bear major performance implications.
 
   * DECORATE_ON_LAST
-    Only the last operator is wrapped in a trace. This passes the trace context in some cases, and may even cause MDC to not work (for your SLF4J logs). The performance penaty is medium in this mode. This method is also marked for deprecation.
+    Only the last operator is wrapped in a trace. This passes the trace context in some cases, and may even cause MDC to not work (for your SLF4J logs). The performance penalty is medium in this mode. This method is also marked for deprecation.
 
   * MANUAL
     Wraps every operator in the least invasive way, does not pass a tracing context. That is up to the user. 
@@ -209,9 +209,9 @@ logging.level.org.springframework.cloud.sleuth.instrument=trace
 ## Tests for Traced Services
 
 We'll write some tests using JUnit5, AssertJ, and reactive-tests components.
-But first we need to re-use an [RSocketRequester](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/RSocketRequester.html) in tests, so it is easier subclass the configuration of this component and remove some boiletplate in each test.
+But first we need to re-use an [RSocketRequester](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/RSocketRequester.html) in tests, so it is easier subclass the configuration of this component and remove some boilerplate in each test.
 
-The following listing shows our test superclass.
+The following listing shows our test Superclass.
 
 TestBase.kt
 ```kotlin
@@ -244,7 +244,7 @@ Next, lets write a couple tests that will invoke our messaging endpoints. The fi
 
 ### The Unit Tests
 
-The test that follows will demonstrate minimun instrumentation from the client side. Because this requester is not instrumented, the application will generate a single span originating only at the server.
+The test that follows will demonstrate minimum instrumentation from the client side. Because this requester is not instrumented, the application will generate a single span originating only at the server.
 
 ManualSpanTests.kt:
 ```kotlin
@@ -551,7 +551,7 @@ ZipkinManualSpanTests.kt
 class ZipkinManualSpanTests : ManualSpanTests()
 ```
 
-Running these tests will emit traces that show similar logging data as before. Additionally, it will send those traces to the local Zipkin server. Next, we will take a look at viewing these logs in the Zipkin WebUI.
+Running these tests will emit traces that show similar logging data as before. Additionally, it will send those traces to the local Zipkin server. Next, we will take a look at viewing these logs in the Zipkin user interface.
 
 ### Accessing Trace Graphs in Zipkin
 
@@ -584,7 +584,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship traces through the Kafka topic by setting `spring.zipkin.sender.type` to 'kafka'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the Kafka connection as shown below:
+Tell Sleuth we want to ship traces through the Kafka topic by setting `spring.zipkin.sender.type` to 'kafka'. Additionally, by introducing a new profile-specific properties, we can configure the Kafka connection as shown below:
 
 application-kafka.properties
 ```properties
