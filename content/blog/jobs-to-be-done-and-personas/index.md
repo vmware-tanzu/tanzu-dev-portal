@@ -1,7 +1,7 @@
 ---
-date: 2022-08-03
+date: 2022-08-17
 description: It’s true that these terms are well defined and widely used, the problem is that they each have many different formal definitions associated with them and many more informal definitions too.
-lastmod: '2022-08-03'
+lastmod: '2022-08-17'
 team:
 - Vitor Kneipp
 title: How Might We Better Use Loaded Terms Like "Personas" and "Jobs to be Done"?
