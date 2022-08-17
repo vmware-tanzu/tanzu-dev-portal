@@ -2,22 +2,25 @@
 date: '2022-08-11'
 description: Distributed tracing with Spring Cloud Sleuth for reactive microservices. Part 1
 lastmod: '2022-08-11'
+linkTitle: Tracing Reactive Microservices w/ Spring Cloud Sleuth
 metaTitle: Tracing a Reactive Kotlin App with Spring Cloud Sleuth
 patterns:
 - API
 tags:
-- Microservices
 - Distributed Tracing
 - Getting Started
 - Kotlin
 - Reactive
 - Spring Boot
+- Spring Cloud Sleuth
 - Zipkin
 Team:
 - Mario Gray
 title: Tracing a Reactive Kotlin App with Spring Cloud Sleuth and OpenZipkin
 aliases:
 - "/guides/microservices/reactive-distributed-tracing"
+level1: Building Modern Applications
+level2: Metrics, Tracing, and Monitoring
 ---
 
 This guide will discuss RSocket tracing with Spring Cloud Sleuth and Zipkin. We will ship data to Zipkin through HTTP/REST, Kafka, and RabbitMQ. This guide will inform you of the additional configuration carried out when configuring for distributed tracing on a Spring Boot 2.7.x/Reactive application. 
@@ -26,7 +29,7 @@ This guide will discuss RSocket tracing with Spring Cloud Sleuth and Zipkin. We 
 
 So, you're thinking: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. Then you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
 
-Spring Cloud Sleuth represents an overlay component between the app and a tracing library. It is based heavily on the [Brave](https://github.com/openzipkin/brave) library but focuses on enrichment to mix in trace logic. We want to utilize a tracing library and not have to touch much of our app componentry.
+Spring Cloud Sleuth represents an overlay component between the app and a tracing library. It is based heavily on the [Brave](https://github.com/openzipkin/brave) library but focuses on enrichment to mix in trace logic. We want to utilize a tracing library and not have to make invasive modifications to our application.
 
 ### How Tracing Differs From Metrics
 
@@ -171,7 +174,7 @@ spring.rsocket.server.port=10001
 #...
 ```
 
-Additionally per the above, we also set the server port and explicitly enabled sleuth on rsocket.
+Additionally per the above, we also set the server port and explicitly enabled sleuth on rsocket. I also chose `MANUAL` instrumentation-type because it is least invasive, and allows us to 'stack up' on tracing capabilities as we need.
 
 Next step is to create a couple of messaging endpoints:
 
@@ -194,13 +197,13 @@ Without going into too much detail, we can see that we have exposed a couple of 
 
   "Allows to create a new span around a public method. The new span will be either a child of an existing span if a trace is already in progress or a new span will be created if there was no previous trace". 
 
-Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the rsocket FrameLogger scope to debug. Also, we can see what the reactor tracing instrumentation is doing by setting `trace` debugging to the `logging.level.org.springframework.cloud.sleuth.instrument.reactor` package:
+Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the rsocket FrameLogger scope to debug. Also, we can see what the trace instrumentation is doing by setting `trace` debugging to the `logging.level.org.springframework.cloud.sleuth.instrument` package:
 
 application.properties
 ```properties
 #...
 logging.level.io.rsocket.FrameLogger=DEBUG
-logging.level.org.springframework.cloud.sleuth.instrument.reactor=trace
+logging.level.org.springframework.cloud.sleuth.instrument=trace
 ```
 
 ## Tests for Traced Services
@@ -235,7 +238,7 @@ class TestBase {
 }
 ```
 
-This `TestBase` class forms the configuration for all our downstream tests. It simply uses [@SpringBootTest](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) for full autoconfiguration and then connects to the local RSocket server with [RSocketRequester](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java).
+This `TestBase` class forms the configuration for all our downstream tests. It simply uses [@SpringBootTest](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) for full autoconfiguration - with service exposition - and then connects to the local RSocket server with [RSocketRequester](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java).
 
 Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, traces will ship to zipkin via HTTP/REST unless no zipkin server is available.
 
@@ -297,9 +300,11 @@ Data:
 
 As expected, the server created its span and thus starts and ends the trace as there are no downstream components. 
 
+### Sleuth Tracer
+
 Autoconfiguration being enabled on these tests means that we also get a Sleuth component called [Tracer](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-api/src/main/java/org/springframework/cloud/sleuth/Tracer.java) that gives us flexibility in generating spans and trace contexts programmatically. 
 
-Of course, this means we must instrument the client side programmatically. This means extra code and of course the possibility of bugs. Hence, test your trace code well!
+Of course, this means we must instrument the client side programmatically. This means extra code and of course the possibility of bugs. lets take a look at what this can mean for 'maximal' contact with the Tracer library.
 
 ManualSpanTests.kt:
 ```kotlin
@@ -311,6 +316,7 @@ class ManualSpanTests : TestBase() {
         val manualSpan = tracer.spanBuilder()
                 .kind(Span.Kind.CLIENT)
                 .name("justMonoRequest")
+                .tag("message","olleh")
                 .remoteServiceName("EDDIEVALIANT")
                 .start()
 
@@ -355,8 +361,23 @@ Metadata:
 +--------+-------------------------------------------------+----------------+
 ```
 
-In the end, all other trace logs will look similar to what you've seen in the above scenarios. Next, we will code less
-and make better use of components that assist us in cases where we manually generate our Spans.
+On the server side with our created span in scope, we can observe it through the logs:
+
+```txt
+DEBUG [EDDIEVALIANT,a74a00e560eb60b7,3b339cb08d66a3f0] 57758 --- [ctor-http-nio-4] io.rsocket.FrameLogger                   : sending -> 
+Frame => Stream ID: 1 Type: NEXT_COMPLETE Flags: 0b1100000 Length: 11
+Data:
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 6f 6c 6c 65 68                                  |olleh           |
++--------+-------------------------------------------------+----------------+
+```
+
+This is the server returning a payload 'olleh', with the FrameLogger output also bearing trace/span IDs. On the first line, we see a DEBUG log with trace info having a format by default `[SERVICE_NAME, TRACE_ID, CURRENT_SPAN_ID]`. Further info on logging formats are visible at the [Sleuth Github](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/htmlsingle/logback-spring.xml). In the end, all other trace logs will look similar to what you've seen in the above scenarios. 
+
+Next, we will focus on the code side by utilizing some Spring Cloud Sleuth reactor instrumentation tools to do the work of wrapping our publishers. The next section will cover one such tool.
+
 ### Removing the Boilerplate
 
 There is much boilerplate in creating/setting/accessing trace state as in the above example. The developer will be required to also perform all the span closing and error handling logic. This work is better done in a specific component. That is where the [ReactorSleuth](https://github.com/spring-cloud/spring-cloud-sleuth/blob/6ce9a43f462b1695ac78867eae652f61778a93cb/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/reactor/ReactorSleuth.java) class comes in to help us. 
@@ -367,13 +388,17 @@ ManualSpanTests.kt
 ```kotlin
 class ManualSpanTests : TestBase() {
 //...
-    @Test
-    fun `reactorSleuth span bearing request`(@Autowired
-                                             tracer: Tracer) {
+     @Test
+    fun `ReactorSleuth will propagate hand-built span to justMono`(@Autowired tracer: Tracer) {
+        val span = tracer.spanBuilder()
+                .kind(Span.Kind.CLIENT)
+                .name("reactorSleuth")
+                .remoteServiceName("EDDIEVALLIANT")
+                .start()
+
         StepVerifier
                 .create(
-                        ReactorSleuth.tracedMono(tracer,
-                                tracer.currentTraceContext()!!, "tracedJustMonoNewSpanRequest") {
+                        ReactorSleuth.tracedMono(tracer, span) {
                             requester
                                     .route("justMono")
                                     .retrieveMono<String>()
@@ -394,7 +419,7 @@ Upon execution of this test, you should see an output similar in structure to th
 
 ### Better Instrumentation Through Annotations
 
-For us to make the code even cleaner (and easier to read) let's create a client class with a `@NewSpan` annotated method that utilizes the `RSocketRequester` as we did in earlier tests. This client will do all the work of setting up a span in trace context without all the componentry setup:
+For us to make the code even cleaner (and easier to read) let's create a client class with a `@NewSpan` annotated method that utilizes the `RSocketRequester` as we did in earlier tests. This client will do all the work of setting up a span in trace context:
 
 SleuthyClient.kt:
 ```kotlin
@@ -408,12 +433,12 @@ class SleuthyClient() {
 }
 ```
 
-Then testing client calls becomes trivial.
+Then testing client calls becomes trivial. There exists a annotation specific test class `AnnotatedSpanTests` to highlight coverage of annotation based trace instrumentation.
 
-ManualSpanTests.kt
+AnnotatedSpanTests.kt
 ```kotlin
     @Test
-    fun `client originated request`(@Autowired client: SleuthyClient) {
+    fun `client propagates trace to justMono endpoint`(@Autowired client: SleuthyClient) {
         StepVerifier
                 .create(client.justMono(requester))
                 .assertNext {
@@ -426,8 +451,23 @@ ManualSpanTests.kt
     }
 ```
 
-Running these tests shows our output to be similar to before, but you will notice spans are named
-as specified with the `@NewSpan` annotated method.
+Running these tests shows our output to be similar to before but with differnt ID's. 
+
+```txt
+DEBUG [EDDIEVALIANT,,] 65632 --- [actor-tcp-nio-2] o.s.c.s.i.r.TracingRequesterRSocketProxy : Extracted result from context or thread local RealSpan(48291c184ddfb160/59252278c0be24d4)
+DEBUG [EDDIEVALIANT,,] 65632 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : sending -> 
+Frame => Stream ID: 1 Type: REQUEST_RESPONSE Flags: 0b100000000 Length: 63
+Metadata:
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| fe 00 00 09 08 6a 75 73 74 4d 6f 6e 6f 01 62 33 |.....justMono.b3|
+|00000010| 00 00 23 34 38 32 39 31 63 31 38 34 64 64 66 62 |..#48291c184ddfb|
+|00000020| 31 36 30 2d 35 39 32 35 32 32 37 38 63 30 62 65 |160-59252278c0be|
+|00000030| 32 34 64 34 2d 31                               |24d4-1          |
++--------+-------------------------------------------------+----------------+
+
+```
 
 In the next section, we will configure the application to ship traces to a trace collection server - OpenZipkin.
 ## Shipping traces
@@ -731,6 +771,8 @@ in Spring Boot, with the Kotlin side being well supported - even with [coroutine
 [Distributed Tracing Best Practices](https://tanzu.vmware.com/content/blog/7-best-practices-for-distributed-tracing-how-to-go-from-zero-to-full-app-instrumentation)
 
 [Documentation on Sleuth](https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/integrations.html)
+
+[How to change the context propagation mechanism](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/htmlsingle/spring-cloud-sleuth.html#how-to-change-context-propagation)
 
 [Another Sleuth Zipkin Guide](https://refactorfirst.com/distributed-tracing-with-spring-cloud-sleuth.html)
 
