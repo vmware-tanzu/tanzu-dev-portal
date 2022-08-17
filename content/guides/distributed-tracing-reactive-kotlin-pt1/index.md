@@ -784,12 +784,10 @@ in Spring Boot, with the Kotlin side being well supported - even with [coroutine
 
 [R2dbc Proxies](http://r2dbc.io/r2dbc-proxy/docs/current-snapshot/docs/html/)
 
-## Technologies: 
-
 [Bitnami Containers](https://bitnami.com/stacks/containers)
 
-[https://hub.docker.com/_/rabbitmq](Rabbit MQ Docker Usages)
+[Rabbit MQ Docker Usages](https://hub.docker.com/_/rabbitmq)
 
-[https://hub.docker.com/r/bitnami/rabbitmq](The Bitnami RabbitMQ)
+[The Bitnami RabbitMQ](https://hub.docker.com/r/bitnami/rabbitmq)
 
-[https://developer.confluent.io/quickstart/kafka-docker/](Kafka Docker Usage)
+[Kafka Docker Usage](https://developer.confluent.io/quickstart/kafka-docker/)
