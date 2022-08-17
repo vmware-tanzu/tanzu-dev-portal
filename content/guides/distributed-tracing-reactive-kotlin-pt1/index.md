@@ -761,7 +761,7 @@ To tear down the RabbitMQ scenario in compose:
 docker compose -f rabbit-compose.yml down
 ```
 
-## Wrapup
+## Closing
 
 This guide was meant to introduce you to Spring Boot, Kotlin, and distributed tracing as a topic of interest to enterprise-driven or even startup-driven developers. The main concepts in this topic described the flexibility in options given when configuring a traced RSocket microservice. The key takeaways for you are that Sleuth is based on research and tested technology that is well understood and in use on a global scale on the internet right now. That RSocket microservices can be instrumented 
 in Spring Boot, with the Kotlin side being well supported - even with [coroutines](https://docs.spring.io/spring-framework/docs/5.2.0.M1/spring-framework-reference/languages.html#coroutines)!
