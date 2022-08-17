@@ -159,6 +159,12 @@ Settings for `spring.sleuth.reactor.instrumentation-type`:
 
 > **_NOTE:_**  To opt-out of tracing altogether, its best to set the value of `spring.sleuth.rsocket.enabled` to false. Alternatively you can configure your RSocketRequester and RSocketServer by hand - autoconfiguration will leave them alone if they're already present.
 
+### Sleuth and Kotlin
+
+Because Kotlin is the language used in this example - developers have been keen to use [co-routines](https://docs.spring.io/spring-framework/docs/5.2.0.M1/spring-framework-reference/languages.html#coroutines) as opposed to raw reactive publishers - I'm happy to say that [Sleuth supports co-routines](https://github.com/spring-cloud/spring-cloud-sleuth/tree/3.1.x/spring-cloud-sleuth-instrumentation/src/main/kotlin/org/springframework/cloud/sleuth/instrument/kotlin)! 
+
+The basics are exactly the same as with ordinary publisher usage, so we wont be going into that in this example. However, the repository containing this example does highlight usage of [controllers](https://github.com/marios-code-path/distributed-tracing-sleuth-reactive-kotlin/blob/main/src/main/kotlin/com/example/sleuthy/rsocket/CoRoutineControllers.kt) declared with the `suspend` keyword. Additionally [there are tests](https://github.com/marios-code-path/distributed-tracing-sleuth-reactive-kotlin/blob/0dc9ecbfb8dc8f19743269bbf10d6cd154180a09/src/test/kotlin/com/example/sleuthy/rsocket/AnnotatedSpanTests.kt#L24) to compare output (hint: it's the same).
+
 ### Back to The Demo
 
 You will need to decide an application name as it will appear in trace logs. Also decide on an instrumentation strategy that fits with your use case.
