@@ -15,7 +15,7 @@ team:
 
 The environment around design systems is brimming with loaded and context-dependent terminology, conflicting and evolving definitions, and way too many people claiming to have it all figured out. We aren’t those people.
 
-There are lots of ways to define, interpret, and categorize many of the terms you’ll hear in relation to design systems. We aren’t in the business of being right. We’re in the business of communicating and solving problems. It is in pursuit of communication, not righteousness, that we put together this list of commonly conflated, loaded, and context-dependent terms you’re likely to encounter when talking about design systems. The goal here isn’t to become Deputy Definitions. It’s to be aware of terms with squishy definitions so that you can recognize potential miscommunication, swoop in, and firm up any squishiness. 
+There are lots of ways to define, interpret, and categorize many of the terms you’ll hear in relation to design systems. We aren’t in the business of being right. We’re in the business of communicating and solving problems. It is in pursuit of communication, not righteousness, that we put together this list of commonly conflated, loaded, and context-dependent terms you’re likely to encounter when talking about design systems. The goal here isn’t to become Deputy Definitions. It’s to be aware of terms with squishy definitions so that you can recognize potential miscommunication, swoop in, and firm things up. 
 
 
 ## Design system*
@@ -196,21 +196,25 @@ We don’t want to dissuade you from aligning on standard definitions for some o
 
 In more ways than you might think, design systems are a lot like hot dogs: lots of people love them, some people have odd opinions about them, and it’s not uncommon for their recipes to be steeped in mystery. Despite their popularity, design systems can stump the best of us. Lots of people harbor misconceptions about them that can make your life unnecessarily difficult. Get to know some of these commonly heard phrases, so that you can impress everyone in your Zoom room with your insightful ability to head off the future trouble they may cause. 
 
+
 **“Design systems are easy.”**
 
-Design systems are often spoken about as simple, easy, magic-bullet-type solutions to all our product problems, which is a_ _huge_ _misconception. Their out-of-the-box polish and the seeming straight-forwardness with which they can be used to build professional-_looking_ software has likely contributed to this reputation. 
+Design systems are often spoken about as simple, easy, magic-bullet-type solutions to all our product problems, which is a _huge_ misconception. Their out-of-the-box polish and the seeming straight-forwardness with which they can be used to build professional-_looking_ software has likely contributed to this reputation. 
 
 To someone without mountains of experience, the complexities that come with design systems may not be obvious. They can seem like magic libraries, where patterns are copied off a virtual shelf and pasted into apps. The reality is that there are loads of nuance, quirks, opinions, and limitations baked into every system. They require resources, processes, and dedication to use and maintain. It requires time, training, and practice to master them, and they will _still_ surprise you. Design systems can be powerful tools, but they are not to be taken lightly.
 
+
 **“Design systems are for designers.”**
 
-Language shapes perception. The name “design system” can lead to the assumption that designers “own” all the design system things in their designerly bubbles. This is a dangerous assumption, and could not be further from the truth.
+Language shapes perception. The name “design system” can lead to the assumption that designers “own” all the design system things in their designer bubbles. This is a dangerous assumption, and could not be further from the truth.
 
 In reality, design systems live in the evolving (perhaps even shrinking) middleground between design and development. _Design is not a territory, it’s a capability_. We all have roles to play when it comes to engaging with design systems. The systems do not absolve you of the need for meaningful cross-discipline communication and collaboration. They _require_ it in order to be effective tools.
+
 
 **“We should use Material — it’s the best design system.”**
 
 The belief that any one design system is universally “the best” ignores the fact that each product, each team, and each organization exists within its own ecosystem of needs and constraints. The best design system is the one that meets the needs of your organization and your teams. The one that loses you the least, and gains you the most in terms of trade-offs; the one you know, or are committed to learning how to use. It may be the one that doesn’t exist yet, because you need to build it. It’s even possible that the best design system for you may be no design system at all. (see "Consider Options and Trade-off" in [Is a Design System Right for Your Team?](/learningpaths/consulting-around-design-systems/is-a-design-system-right-for-your-team/) on choosing to skip a design system entirely)
+
 
 **“A design system will make our products consistent.”**
 
@@ -219,9 +223,9 @@ A design system provides a common starting point from which designers and develo
 Having a design system in place does not guarantee consistent (or even good) design. It’s a tool that many people are going to use in many contexts, giving it the potential to be used in many different ways. 
 
 
-
 * If the goal is consistency and familiarity across multiple products, develop processes to achieve these goals. 
 * Do not count on a design system to achieve them for you. You will be disappointed.
+
 
 **“If we have a design system, why do we need designers?”**
 
