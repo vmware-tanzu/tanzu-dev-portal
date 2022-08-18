@@ -1,6 +1,6 @@
 ---
 title: "Consulting Around Design Systems"
-description:  "Wrap your head around the complexities involved in working with design systems, so that we can all be better together."
+description:  "Understand the complexities involved in working with design systems, so that you can navigate common challenges and make good decisions."
 duration: 45
 experience: Beginner
 layout: intro
@@ -9,7 +9,7 @@ team:
 - Lauren Manuel
 ---
 
-Howdy, Labs friends! 
+Howdy, Tanzu Labs friends! 
 
 This learning path details learnings and experiences that will help practitioners, partners, and leaders wrap their heads around the complexities involved in working with design systems, so that we can all be better together. It will teach you how to avoid traps and make good decisions. It is a perspective on how software teams can harness the power of design systems effectively, efficiently, and responsibly.
 
