@@ -11,7 +11,18 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
+Zenika
+moby
+TektonCD
+tektoncd
+NixOS
 1:1s
+Syntasso
+Kratix
+Zino
+#CoffeeOps
+n9H8KnYjVI
+SLOConf
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
@@ -678,6 +689,7 @@ ElasticSearch
 ELB(s)?
 Eleftheria
 Emad
+embodiments
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -752,6 +764,7 @@ fileshare
 FileSystemXmlApplicationContext
 Finchley
 FinTech
+fintech
 FIPS(-enabled|-approved)?
 firehose
 firewalling
@@ -1107,6 +1120,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+Janeiro
 Jarvinen
 Jasso
 JavaBean
@@ -1173,6 +1187,7 @@ JSP
 JSR-352
 JST
 judgement
+judgements
 julielerman
 Julien
 jumpbox
@@ -1969,6 +1984,7 @@ Ryzen
 SaaS
 SaaS(-based)?
 Sadogursky
+Saïd
 Saikali
 Salaboy
 salaboy
@@ -2362,6 +2378,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+viewport
 Vikram
 Viktor
 Villnow
@@ -2373,6 +2390,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vitor
 Vlissides
 VMCachedDeserializable
 VMs?
@@ -2494,3 +2512,4 @@ Zynga
 μServices
 Ϟ
 ϟ
+KCDC
