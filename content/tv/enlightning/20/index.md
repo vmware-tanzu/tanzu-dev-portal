@@ -18,7 +18,7 @@ type: tv-episode
 
 Your organization wants to ship valuable products faster. You either have or are considering an internal platform to centralize common services and provide a self-service developer experience.
 
-To deliver this experience, as a platform team, you need to balance software engineers vying for the newest tools and business stakeholders requiring assurances and visibility. Configuring the right solution to meet organisation specific needs is hard. 
+To deliver this experience, as a platform team, you need to balance software engineers vying for the newest tools and business stakeholders requiring assurances and visibility. Configuring the right solution to meet organization specific needs is hard. 
 
 You have to frequently context switch as you divide your requirements across a number of different tools.
 
