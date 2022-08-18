@@ -17,7 +17,7 @@ Design systems are no exception to Plato’s insightful observation of this basi
 
 ## Risky Business
 
-There’s no getting around this one. Some big decisions around design systems are  difficult to walk back. Once you’ve decided to start using a system, it is almost always going to be a very expensive decision to unmake. 
+There’s no getting around this one. Some big decisions around design systems are difficult to walk back. Once you’ve decided to start using a system, it is almost always going to be a very expensive decision to unmake. 
 
 
 ### What you can do
@@ -51,7 +51,7 @@ It’s possible that your experience working with a system did not go _smoothly_
 
 ### _What you can do_ 
 
-Again, empathy first. Assume that everyone is doing their best and try to see where you may be able to offer some feedback, guidance, or influence. Consider disguising it as help if there are fragile egos in the mix. If there’s a meeting where updates to the system are discussed, ask if you can attend. If there’s a Slack channel where QandA takes place, join the conversation. 
+Again, empathy first. Assume that everyone is doing their best and try to see where you may be able to offer some feedback, guidance, or influence. Consider disguising it as help if there are fragile egos in the mix. If there’s a meeting where updates to the system are discussed, ask if you can attend. If there’s a Slack channel where questions are asked and discussion takes place, join the conversation. 
 
 In general, try to kindly identify gaps, inefficiencies, or problems where you see them, and always be sure to offer possible solutions if you have them. Designers are problem-solvers, after all.
 
@@ -111,7 +111,7 @@ At Tanzu Labs, we love Lean and Agile because of the flexibility it affords us t
 
 There are ways to avoid making bad decisions. If you or your team is in the position to choose***** the design system you use (or whether you use one at all),  there are plenty of things to do to buy down your risk and feel confident in the decisions you’re about to make. Rallying as a balanced team to ask the right questions about yourselves, and your product can make all the difference. 
 
-_*If you’re in a position where these decisions have been made or will be made for you, we gotchu! Mosey on down to these pointers around [Inheriting a Design System](#heading=h.dprmrsiz082i)_
+_*If you’re in a position where these decisions have been made or will be made for you, check out these pointers around [Inheriting a Design System](#heading=h.dprmrsiz082i)_
 
 
 ## Learn About Your Team
@@ -182,7 +182,7 @@ Fully adopting an existing open-source system and staying largely (or entirely) 
 **Adapting a System  
 _What we mean_** 
 
-Starting with an open-source system as a foundation, but building custom translation layers for things like themes or domain-specific components. For example: KesselRun UI (KRUI), which is a set of branded themes built on a [Material UI](https://mui.com/') foundation.
+Starting with an open-source system as a foundation, but building custom translation layers for things like themes or domain-specific components. For example: Layering a set of branded themes built on a [Material UI](https://mui.com/') foundation.
 
 {{< table "table" >}}
 | Pros | Cons |
@@ -260,8 +260,8 @@ Seek to understand as much as you can about the current ecosystem, and keep an e
     * Interview existing teams to learn about their experiences
     * Interview existing teams to learn about benefits and limitations of the system
 * What training resources exist? (documentation, classes, cross-pairing, etc)
-* How “good” are the designer assets (i.e. figma library)? 
-    * If they’re less-than-ideal, could you offer your fancy-shmancy help?
+* How “good” are the designer assets (i.e. Figma library)? 
+    * If they’re less-than-ideal, could you offer to help improve them?
 
 _\*\*If you find yourself inheriting a half-baked client system, see if there are places you might gently inject yourself and some of your expertise while the bun is still in the oven. In our experience, there are often places where design system teams can benefit from collaboration, guidance, and influence, but these opportunities won’t be gift-wrapped—you will have to seek them out and build relationships in order to have a positive influence._
 
@@ -272,11 +272,11 @@ If products have already been built using the system, get to know them
 
 
 
-* Attend design crits or product demos
+* Attend design critiques or product demos
 * Study how components are used for standard interaction patterns
 * Read product training materials if they exist
 
-Circle back to the interviewing of current teams. You’ll probably dig up some good dirt. Liiiiike:
+Circle back to the interviewing of current teams. You’ll probably dig up some good dirt. For example:
 
 
 
