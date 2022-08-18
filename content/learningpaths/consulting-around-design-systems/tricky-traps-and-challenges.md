@@ -213,7 +213,7 @@ In reality, design systems live in the evolving (perhaps even shrinking) middleg
 
 ### “We should use Material — it’s the best design system.”
 
-The belief that any one design system is universally “the best” ignores the fact that each product, each team, and each organization exists within its own ecosystem of needs and constraints. The best design system is the one that meets the needs of your organization and your teams. The one that loses you the least, and gains you the most in terms of trade-offs; the one you know, or are committed to learning how to use. It may be the one that doesn’t exist yet, because you need to build it. It’s even possible that the best design system for you may be no design system at all. (see "Consider Options and Trade-off" in [Is a Design System Right for Your Team?](/learningpaths/consulting-around-design-systems/is-a-design-system-right-for-your-team/) on choosing to skip a design system entirely)
+The belief that any one design system is universally “the best” ignores the fact that each product, each team, and each organization exists within its own ecosystem of needs and constraints. The best design system is the one that meets the needs of your organization and your teams. The one that loses you the least, and gains you the most in terms of trade-offs; the one you know, or are committed to learning how to use. It may be the one that doesn’t exist yet, because you need to build it. It’s even possible that the best design system for you is [no design system at all](/learningpaths/consulting-around-design-systems/is-a-design-system-right-for-your-team/).
 
 
 ### “A design system will make our products consistent.”
