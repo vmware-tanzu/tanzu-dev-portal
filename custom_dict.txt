@@ -11,6 +11,11 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
+Zenika
+moby
+TektonCD
+tektoncd
+NixOS
 1:1s
 Syntasso
 Kratix
