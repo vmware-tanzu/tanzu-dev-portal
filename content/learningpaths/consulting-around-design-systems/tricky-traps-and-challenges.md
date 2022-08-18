@@ -197,26 +197,26 @@ We don’t want to dissuade you from aligning on standard definitions for some o
 In more ways than you might think, design systems are a lot like hot dogs: lots of people love them, some people have odd opinions about them, and it’s not uncommon for their recipes to be steeped in mystery. Despite their popularity, design systems can stump the best of us. Lots of people harbor misconceptions about them that can make your life unnecessarily difficult. Get to know some of these commonly heard phrases, so that you can impress everyone in your Zoom room with your insightful ability to head off the future trouble they may cause. 
 
 
-###“Design systems are easy.”
+### “Design systems are easy.”
 
 Design systems are often spoken about as simple, easy, magic-bullet-type solutions to all our product problems, which is a _huge_ misconception. Their out-of-the-box polish and the seeming straight-forwardness with which they can be used to build professional-_looking_ software has likely contributed to this reputation. 
 
 To someone without mountains of experience, the complexities that come with design systems may not be obvious. They can seem like magic libraries, where patterns are copied off a virtual shelf and pasted into apps. The reality is that there are loads of nuance, quirks, opinions, and limitations baked into every system. They require resources, processes, and dedication to use and maintain. It requires time, training, and practice to master them, and they will _still_ surprise you. Design systems can be powerful tools, but they are not to be taken lightly.
 
 
-###“Design systems are for designers.”
+### “Design systems are for designers.”
 
 Language shapes perception. The name “design system” can lead to the assumption that designers “own” all the design system things in their designer bubbles. This is a dangerous assumption, and could not be further from the truth.
 
 In reality, design systems live in the evolving (perhaps even shrinking) middleground between design and development. _Design is not a territory, it’s a capability_. We all have roles to play when it comes to engaging with design systems. The systems do not absolve you of the need for meaningful cross-discipline communication and collaboration. They _require_ it in order to be effective tools.
 
 
-###“We should use Material — it’s the best design system.”
+### “We should use Material — it’s the best design system.”
 
 The belief that any one design system is universally “the best” ignores the fact that each product, each team, and each organization exists within its own ecosystem of needs and constraints. The best design system is the one that meets the needs of your organization and your teams. The one that loses you the least, and gains you the most in terms of trade-offs; the one you know, or are committed to learning how to use. It may be the one that doesn’t exist yet, because you need to build it. It’s even possible that the best design system for you may be no design system at all. (see "Consider Options and Trade-off" in [Is a Design System Right for Your Team?](/learningpaths/consulting-around-design-systems/is-a-design-system-right-for-your-team/) on choosing to skip a design system entirely)
 
 
-###“A design system will make our products consistent.”
+### “A design system will make our products consistent.”
 
 A design system provides a common starting point from which designers and developers immediately and inevitably diverge. Think of it like this: you give the same 100 LEGO pieces to ten different people, and ask them to build a house. The result is you end up with ten very different houses. Nobody did anything wrong. It’s just the nature of the beast.
 
@@ -227,7 +227,7 @@ Having a design system in place does not guarantee consistent (or even good) des
 * Do not count on a design system to achieve them for you. You will be disappointed.
 
 
-###“If we have a design system, why do we need designers?”
+### “If we have a design system, why do we need designers?”
 
 Imagine you buy an empty plot of land for your future home. Then someone drops off a few tons of framing lumber and sheetrock. You wonder, “Do I really _need_ the architect?” The answer is Yes. Unless you’re cool with being 80% complete when you realize your picture window gives an excellent view of a brick wall, you’re going to need a professional planning how things will fit together.
 
