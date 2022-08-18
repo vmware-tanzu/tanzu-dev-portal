@@ -16,7 +16,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Tekton is a powerful and flexible open-source framework for creating CI/CD systems, allowing developers to build, test, and deploy across cloud providers and on-premise estates. Cloud-native and built on top of Kubernetes, Tekton is composed of several components that can work well together.  We'll explore these building blocks, as well as the most important concepts of Tekton as a whole. We'll also discuss the current scope of the entire Tekton project, and where it may be headed in the future.
+[Tekton](https://tekton.dev/) is a powerful and flexible open-source framework for creating CI/CD systems, allowing developers to build, test, and deploy across cloud providers and on-premise estates. Cloud-native and built on top of Kubernetes, Tekton is composed of several components that can work well together.  We'll explore these building blocks, as well as the most important concepts of Tekton as a whole. We'll also discuss the current scope of the entire Tekton project, and where it may be headed in the future.
 
 
 
