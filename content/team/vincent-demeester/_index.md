@@ -17,7 +17,7 @@ youtube: ""
 twitch: ""
 ---
 
-I'm a French developer 🐻, Gopher 🐹, sysadmin 🐺, factotum 🦁, free-software fan 👼 and Unicode lover 🐸. I'm working at Red Hat 🎩 as a senior principal software engineer, previously at Docker 🐳 and Zenika 🐯. I am a maintainer of the docker project (moby/moby, docker/cli, …), the TektonCD project (tektoncd/*) and a tiny bit of NixOS.
+Vincent is a French developer 🐻, Gopher 🐹, sysadmin 🐺, factotum 🦁, free-software fan 👼 and Unicode lover 🐸. He is working at Red Hat 🎩 as a senior principal software engineer, previously at Docker 🐳 and Zenika 🐯. He is a maintainer of the docker project (moby/moby, docker/cli, …), the TektonCD project (tektoncd/*) and a tiny bit of NixOS.
 
 <!--more-->
 
