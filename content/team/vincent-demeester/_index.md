@@ -6,7 +6,7 @@ skills: ["Kubernetes", "Tekton"]
 location: "France"
 
 # Social Media 
-twitter: ""
+twitter: "vdemeest"
 website: "https://vincent.demeester.fr"
 facebook: ""
 linkedin: ""
