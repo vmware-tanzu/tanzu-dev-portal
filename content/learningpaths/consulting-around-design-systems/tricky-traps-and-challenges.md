@@ -18,10 +18,10 @@ The environment around design systems is brimming with loaded and context-depend
 There are lots of ways to define, interpret, and categorize many of the terms you’ll hear in relation to design systems. We aren’t in the business of being right. We’re in the business of communicating and solving problems. It is in pursuit of communication, not righteousness, that we put together this list of commonly conflated, loaded, and context-dependent terms you’re likely to encounter when talking about design systems. The goal here isn’t to become Deputy Definitions. It’s to be aware of terms with squishy definitions so that you can recognize potential miscommunication, swoop in, and firm things up. 
 
 
-## Design system*
+### Design system*
 
 
-### In general
+#### In general
 
 A design system is generally an umbrella that covers an opinionated collection of assets created to help teams build consistent UI. Typically they include:
 
@@ -33,7 +33,7 @@ A design system is generally an umbrella that covers an opinionated collection o
 * Documentation site
 
 
-### The squish
+#### The squish
 
 For some folks, the lines drawn around a design system may be more narrow, more broad, more rigid, or more blurry. You may also hear “design system” used to include, exclude, or refer to:
 
@@ -46,13 +46,13 @@ For some folks, the lines drawn around a design system may be more narrow, more 
 * Training materials and processes 
 * Photography or illustration libraries
 
-*This is the single most critical piece of terminology to _immediately_ norm around. Conflicting understandings of what constitutes the design system can have a _huge_ impact
+***This is the single most critical piece of terminology to _immediately_ norm around. Conflicting understandings of what constitutes the design system can have a _huge_ impact**
 
 
-## Brand Guide (a.k.a. brand system)
+### Brand Guide (a.k.a. brand system)
 
 
-### In general
+#### In general
 
 A brand guide or brand system is typically a document aimed at capturing a brand’s overall vibe, and includes rules and resources to help it be reproduced consistently across media. A brand guide will usually include:
 
@@ -67,7 +67,7 @@ A brand guide or brand system is typically a document aimed at capturing a brand
 * Various templates (presentations, email signatures, documents, etc.)
 
 
-### The squish
+#### The squish
 
 Many things can be interpreted as guides or systems, and anything an organization creates _technically_ falls under their brand, so this one is a real crap shoot. 
 
@@ -79,10 +79,10 @@ Many things can be interpreted as guides or systems, and anything an organizatio
 * You may hear brand guide and style guide used interchangeably
 
 
-## Style guide
+### Style guide
 
 
-### In general
+#### In general
 
 Generally a style guide is like a lightweight version of a brand guide. It’s often a subset of the most visible aspects of a brand’s look and feel that’s easy to apply across media. If the brand guide is a full study, the style guide is like the abstract. They often include:
 
@@ -94,21 +94,21 @@ Generally a style guide is like a lightweight version of a brand guide. It’s o
 * Basic components such as buttons, text fields, icons (the “atoms” if you dig Atomic Design).
 
 
-### The squish
+#### The squish
 
 The above definition assumes a context of design. In the context of development, a style guide may be a set of guidance for how developers should be writing their code so the codebase remains clean, familiar and navigable across teams. In a marketing or branding context, a style guide may refer to on-brand voice, tone, verbal and grammar usage.
 
 Further still, a team may create something called a style guide in lieu of a design system. In this context, we’re usually talking about an internal library of UI components and patterns that can be easily reused.
 
-## Component
+### Component
 
 
-### In general
+#### In general
 
 A component is simply a reusable pattern. 
 
 
-### The squish
+#### The squish
 
 Designers & developers both understand components to mean reusable patterns, but the content of the patterns and the contexts in which we apply them are usually different.
 
@@ -122,15 +122,15 @@ Designers & developers both understand components to mean reusable patterns, but
 A good place to start a conversation between developers and designers is to talk about the pieces of the interface that design believes are components (or patterns) in an attempt to model the software code to match how the designer is thinking about reusable patterns.
 
 
-## Library (a.k.a. pattern library)
+### Library (a.k.a. pattern library)
 
 
-### In general
+#### In general
 
 A library is a collection of resources, organized and shared across teams.
 
 
-### The squish
+#### The squish
 
 Libraries may have shared code, shared assets, or a shared set of UI components. 
 
@@ -144,15 +144,15 @@ Libraries may have shared code, shared assets, or a shared set of UI components.
 There can easily be confusion on a team when both designers and developers are talking about "libraries". Our best advice is to get comfortable asking “which library do you mean?”
 
 
-## Framework (a.k.a. front-end framework)
+### Framework (a.k.a. front-end framework)
 
 
-### In general
+#### In general
 
 A framework is a kind of opinionated and vetted scaffolding on top of which we build something.
 
 
-### The squish
+#### The squish
 
 People use the word “framework” to talk about following an established pattern or conceptual template. They also use it to talk about a specific type of technical product called a framework.
 
@@ -162,28 +162,28 @@ People use the word “framework” to talk about following an established patte
 * I can use React as a front-end framework for building my app (product).
 
 
-## Documentation
+### Documentation
 
 
-### In general
+#### In general
 
 Documentation is usually a website that spells out everything that’s available as part of a design system, descriptions of how it all works, and instructions/recommendations for how to use it. For example, this is the [documentation for Clarity](https://clarity.design/get-started/) (VMware’s design system).
 
 
-### The squish
+#### The squish
 
 Documentation can be anything that has been documented, so this is another place to get comfy asking, “which documentation are you talking about?”
 
 
 
 * Design files can be called documentation because they document what the UI should look like and how the experience should flow
-* Teams practicing TDD would often say that their automated testing is their documentation / specifications
+* Teams practicing Test-Driven Development (TDD) would often say that their automated testing is their documentation / specifications
 * We’ve seen organizations who chose to adapt existing systems end up with 2 sets of relevant but competing documentation
     * The documentation for the source system (e.g. Material)
     * The documentation for their in-house adapted system
 
 
-## One final thought on terminology
+### One final thought on terminology
 
 Knowing the impact that loaded terminology can have on communication, you may be tempted to align on team-specific definitions for these terms, via something like a [ubiquitous language workshop](https://tanzu.vmware.com/developer/practices/ubiquitous-language/). This could be a great solution to the problem. The word of caution we will share is this: 
 
@@ -192,7 +192,7 @@ Knowing the impact that loaded terminology can have on communication, you may be
 
 We don’t want to dissuade you from aligning on standard definitions for some of these terms with your team. We’re simply saying that even with the best intentions and the most bought-in team members, people may still slip. If the norm is to quickly check-in with each other when these loaded terms are used, you’re likely to catch any slips and still communicate effectively. If the norm is that “when we say library we _always_ mean _____”, you might not catch an unintentional straying from the established norm.
 
-## Common Misconceptions 
+### Common Misconceptions 
 
 In more ways than you might think, design systems are a lot like hot dogs: lots of people love them, some people have odd opinions about them, and it’s not uncommon for their recipes to be steeped in mystery. Despite their popularity, design systems can stump the best of us. Lots of people harbor misconceptions about them that can make your life unnecessarily difficult. Get to know some of these commonly heard phrases, so that you can impress everyone in your Zoom room with your insightful ability to head off the future trouble they may cause. 
 
