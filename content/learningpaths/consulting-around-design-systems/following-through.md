@@ -9,14 +9,14 @@ team:
 
 ## Norming and endurance
 
-Like any healthy relationship, your working relationship with your design system needs commitment, attention, and maintenance to ensure it stays strong. Whether you’ve chosen your own design system or it was chosen for you, working with design systems in the long-term requires ongoing discipline and endurance to be continuously successful. It’s not a sprint, babes, it’s a marathon. To help set yourself and your team up for long-term success, we recommend doing some team norming around your UI design / design system processes and practices, and knowing what kinds of things to keep an eye on over time. 
+Like any healthy relationship, your working relationship with your design system needs commitment, attention, and maintenance to ensure it stays strong. Whether you’ve chosen your own design system or it was chosen for you, working with design systems in the long-term requires ongoing discipline and endurance to be continuously successful. It’s not a sprint, it’s a marathon. To help set yourself and your team up for long-term success, we recommend doing some team norming around your UI design / design system processes and practices, and knowing what kinds of things to keep an eye on over time. 
 
 
 ## Good, gritty norming
 
-While some [team norms](https://tanzu.vmware.com/developer/practices/team-working-agreements/) can be defined as early as week one of an engagement (e.g. what are our rituals and when do they happen) the kind of nitty gritty norms we’re about to propose are usually best to discuss once your team has had a chance to get their legs under them a bit—it’s not always helpful to norm around story structure before you have a backlog. That being said, every team is different, and you will need to read your own tea leaves in order to know exactly what to norm around, and when the right time is to define, revisit, or refresh your norms. 
+While some [team norms](https://tanzu.vmware.com/developer/practices/team-working-agreements/) can be defined as early as week one of an engagement (e.g. what are our rituals and when do they happen) the kind of gritty, granular norms we’re about to propose are usually best to discuss once your team has had a chance to get their legs under them a bit—it’s not always helpful to norm around story structure before you have a backlog. That being said, every team is different, and you will need to read your own tea leaves in order to know exactly what to norm around, and when the right time is to define, revisit, or refresh your norms. 
 
-Here are some design system-y things we’ve commonly found valuable to norm around:
+Here are some things related to design systems that we’ve commonly found valuable to norm around:
 
 **Roles and advocacy**
 
@@ -38,13 +38,13 @@ Design systems are complex, ever-changing things. Even if you’re not using a s
 As an offering of vulnerability, here are questions we’ve asked our teammates in the past:
 
 
-> Q: **Mkay so, what are design tokens?**  
+> Q: **What are design tokens?**  
 > A: _A clever method of capturing everything from color values to border radii as variables that can be quickly updated, translated, and propagated across platforms._
 >
-> Q: **Back up a beat, what does it mean to “pass a prop” into a component?**  
+> Q: **What does it mean to “pass a prop” into a component?**  
 > A: _Many components can accept different types of data, or properties (“props”), and adapt their display or behavior dynamically based on these properties we pass into them._
 >
-> Q: **Hang on, what’s a variant?**  
+> Q: **What’s a variant?**  
 > A: _A variation of a component, with a consistent purpose but slightly different look or behavior (e.g. determinate vs indeterminate progress indicators)._
 
 **Story structure**
@@ -67,7 +67,7 @@ Discuss with your team how the design file is structured, where to find importan
 
 * Where to find the latest backlog-ready files
 * How precise is the UI design in Figma/Sketch/etc? 
-    * Is it pixel-perfect? Loosey-goosey?
+    * Is it pixel-perfect? Is it "close enough"?
 * Review Dev handoff features (i.e. the ‘code’ panel in Figma)
     * Is there CSS that should be routinely ignored?
     * Are component names visible?
@@ -81,12 +81,12 @@ As we harped on for an entire section earlier, conflating terminology can lead t
 
 * Typography terms like line-height, font-weight, letter-spacing, etc.
 * Margin and padding_ (hello, box model)_
-* Align and justify _(i see you, flexbox)_
-* Rows, columns and grid area _(oh hey, css grid)_
+* Align and justify _(i see you, Flexbox)_
+* Rows, columns and grid area _(oh hey, CSS grid)_
 
 **UI details**
 
-Regardless of which system you use, or whether you use one at all, there are plenty of nitty-gritty UI decisions that the system will make for you, and some you will need to make for yourselves. It’s extremely helpful if developers and designers norm around these details, and how to interpret certain things that will commonly appear in design files:
+Regardless of which system you use, or whether you use one at all, there are plenty of granular UI decisions that the system will make for you, and some you will need to make for yourselves. It’s extremely helpful if developers and designers norm around these details, and how to interpret certain things that will commonly appear in design files:
 
 
 
@@ -104,18 +104,18 @@ _Is this a 28px medium weight font used everywhere or, is this an H4?_
 
 ## The LEGO trap
 
-One of the long-term risks that comes with using design systems is falling into what we affectionately call the LEGO trap. In a nutshell, the idea is that by giving practitioners a predefined set of solutions à la a design system (the LEGO set), they are no longer encouraged to develop creative solutions to problems, but rather, to follow directions. This can be an easy trap to fall into, especially when using the existing patterns from a design system is rewarded with fast delivery and a polished UI. 
+One of the long-term risks that comes with using design systems is falling into what we affectionately call the LEGO trap. In a nutshell, the idea is that by giving practitioners a predefined set of solutions via a design system (the LEGO set), they are no longer encouraged to develop creative solutions to problems, but rather, to follow directions. This can be an easy trap to fall into, especially when using the existing patterns from a design system is rewarded with fast delivery and a polished UI. 
 
 > When we’ve fallen into the LEGO trap, we find ourselves asking, _“What patterns exist in the system to solve this problem?”_ instead of asking, _“What patterns would offer the best solution to this problem?”_
 >
 > Problems get jammed into existing solutions, rather than solutions being crafted to solve problems—this is not where we want to be. 
 
-As usual, there’s a fine line to walk here. Although we don’t want the existing design system to impede our crafting of the right experience for users, we also can’t go all "pimp my ride" with customizations either. In reality, these kinds of decisions should probably be… a balanced team approach (surprise!). Decide what your users need, talk as a team about the tradeoffs, and have a conversation. Maybe you use an out-of-the-box component that _mostly _works for v1, or maybe you have enough evidence that the juice is worth the custom squeeze. And if it really is the latter, bring your juice to the design system team—it might be sweet enough to add to the system. 
+As usual, there’s a fine line to walk here. Although we don’t want the existing design system to impede our crafting of the right experience for users, we also can’t go all "pimp my ride" with customizations either. In reality, these kinds of decisions should probably be… a balanced team approach (surprise!). Decide what your users need, talk as a team about the tradeoffs, and have a conversation. Maybe you use an out-of-the-box component that _mostly_ works for v1, or maybe you have enough evidence that the juice is worth the custom squeeze. And if it really is the latter, bring your juice to the design system team—it might be sweet enough to add to the system. 
 
 
 ## Endurance
 
-Working with, in, and around design systems is rarely a short-term thing. More often it’s a long-term commitment organizations are making. No matter how long or at which stage of the design system lifecycle we are at, it’s important to stay vigilant and true to our processes; to ask the right questions; to accurately assess risk and effort; to check-in with each other when using alllll the loaded terminology; to constantly toe the line between out-of-the-box and custom solutions; and to be open with each other as we’re doing it. 
+Working with, in, and around design systems is rarely a short-term thing. More often it’s a long-term commitment organizations are making. No matter how long or at which stage of the design system lifecycle we are at, it’s important to stay vigilant and true to our processes; to ask the right questions; to accurately assess risk and effort; to check-in with each other when using loaded terminology; to constantly toe the line between out-of-the-box and custom solutions; and to be open with each other as we’re doing it. 
 
 If we don’t take the time to cover these bases, we run the risk of overlooking mountains of nuance, and learning only how to wield the system. What is much, much more important is the ability to wield an effective process for solving tough problems—and to know what to do when the right solution isn’t part of the LEGO set.
 
@@ -124,7 +124,7 @@ If we don’t take the time to cover these bases, we run the risk of overlooking
 
 We love you all! Goodnight!
 
-Welp, we love saying thanks and hate saying goodbye, so **thank you**, for completing this learning path. We hope that sharing our perspectives and experience will help you in your consulting journey.
+Well, we love saying thanks and hate saying goodbye, so **thank you**, for completing this learning path. We hope that sharing our perspectives and experience will help you in your consulting journey.
 
 If you have thoughts or feedback, don’t be shy: 
 
