@@ -124,7 +124,7 @@ If we don’t take the time to cover these bases, we run the risk of overlooking
 
 We love you all! Goodnight!
 
-Well, we love saying thanks and hate saying goodbye, so **thank you**, for completing this learning path. We hope that sharing our perspectives and experience will help you in your consulting journey.
+Well, we love saying thanks and hate saying goodbye, so **thank you**, for completing this learning path. We hope that sharing our perspectives and experience will help you in your professional journey.
 
 If you have thoughts or feedback, don’t be shy: 
 
