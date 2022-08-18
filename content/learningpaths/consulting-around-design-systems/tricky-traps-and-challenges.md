@@ -233,4 +233,4 @@ Imagine you buy an empty plot of land for your future home. Then someone drops o
 
 As discussed, a design system provides a common starting point in the form of some patterns and some decisions. _Some_ decisions! Not all decisions. You can have the most robust system in the world, and there will still be countless decisions and judgment calls that the system cannot make for you. Designers are trained to make these decisions in ways no system ever could. No matter how fancy your system is, it’s still a tool, and tools can’t use themselves. 
 
-It’s also worth mentioning that designers do a LOT more than assemble UI components. Design is a multifaceted discipline, and the points discussed here are just scratching the surface.
+> It’s also worth mentioning that designers do a LOT more than assemble UI components. Design is a multifaceted discipline, and the points discussed here are just scratching the surface.
