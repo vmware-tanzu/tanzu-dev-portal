@@ -183,7 +183,7 @@ Documentation can be anything that has been documented, so this is another place
     * The documentation for their in-house adapted system
 
 
-### One final thought on terminology
+## One final thought on terminology
 
 Knowing the impact that loaded terminology can have on communication, you may be tempted to align on team-specific definitions for these terms, via something like a [ubiquitous language workshop](https://tanzu.vmware.com/developer/practices/ubiquitous-language/). This could be a great solution to the problem. The word of caution we will share is this: 
 
@@ -192,7 +192,7 @@ Knowing the impact that loaded terminology can have on communication, you may be
 
 We don’t want to dissuade you from aligning on standard definitions for some of these terms with your team. We’re simply saying that even with the best intentions and the most bought-in team members, people may still slip. If the norm is to quickly check-in with each other when these loaded terms are used, you’re likely to catch any slips and still communicate effectively. If the norm is that “when we say library we _always_ mean _____”, you might not catch an unintentional straying from the established norm.
 
-### Common Misconceptions 
+## Common Misconceptions 
 
 In more ways than you might think, design systems are a lot like hot dogs: lots of people love them, some people have odd opinions about them, and it’s not uncommon for their recipes to be steeped in mystery. Despite their popularity, design systems can stump the best of us. Lots of people harbor misconceptions about them that can make your life unnecessarily difficult. Get to know some of these commonly heard phrases, so that you can impress everyone in your Zoom room with your insightful ability to head off the future trouble they may cause. 
 
