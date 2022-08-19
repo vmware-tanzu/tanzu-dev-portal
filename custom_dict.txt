@@ -4,6 +4,7 @@
 # one word per line to define a file override use ' - filename'
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
+#CoffeeOps
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
@@ -11,18 +12,7 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
-Zenika
-moby
-TektonCD
-tektoncd
-NixOS
 1:1s
-Syntasso
-Kratix
-Zino
-#CoffeeOps
-n9H8KnYjVI
-SLOConf
 10x
 12SwitchRestoresSansCheckOuts
 2012R2
@@ -1220,6 +1210,7 @@ Karavi
 Kaspersky
 Kat
 [Kk]ata(s)?
+KCDC
 KEK(s)?
 Kendo
 kendrickcoleman
@@ -1255,6 +1246,7 @@ Kpack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
+Kratix
 Kravitz
 krf
 Krisp
@@ -1458,6 +1450,7 @@ misconfigured
 [Mm]itigations
 MiXiT
 Mkyong
+moby
 Mockito
 MockMvc
 [Mm]ockup(s)?
@@ -1510,6 +1503,7 @@ MyPy
 mystream
 mytopic
 n8n
+n9H8KnYjVI
 NameCheap
 [Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
@@ -1542,6 +1536,7 @@ NFT
 NIC
 Nicoll
 NIST
+NixOS
 NLB(s)?
 NLog
 NMica
@@ -1610,6 +1605,7 @@ OpenFeign
 OpenGitOps
 OpenId
 OpenID
+OpenLDAP
 OpenShift
 OpenSource
 OpenSSL
@@ -2082,6 +2078,7 @@ Sletten
 SLI(s)?
 slideshare
 SLO(s)?
+SLOConf
 Sloka
 SmartTV
 SMB
@@ -2187,6 +2184,7 @@ SweetKiller9
 Syer
 symlink
 symposia
+Syntasso
 Sysdig
 Syslog
 [Ss]ysprep
@@ -2214,6 +2212,8 @@ TechRepublic
 TeeFilter
 Tekton-based
 Tekton('s)?
+TektonCD
+tektoncd
 [Tt]elco(s)*
 telecom
 [Tt]elematics
@@ -2246,6 +2246,7 @@ Tilt(file|Cloud)?
 TimingGatewayEventFilter
 Timo
 TKG
+TKGm
 tlberglund
 TLS(-enabled)?
 TNS
@@ -2503,7 +2504,9 @@ YTT
 ytt(-templatized)?
 Zalando
 ZDNet
+Zenika
 Zhen
+Zino
 [Zz]ipkin
 ZOP
 Zou
@@ -2512,4 +2515,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-KCDC
