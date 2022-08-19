@@ -413,6 +413,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Computas
 Conf
 Config-[Pp]rovider
 [Cc]onfig-server
@@ -1410,6 +1411,7 @@ McGraw-Hill
 McLuckie
 MDAC
 MDN
+Mehmandarov
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1974,6 +1976,7 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Rustam
 RxJS
 Ryzen
 [sS]3
