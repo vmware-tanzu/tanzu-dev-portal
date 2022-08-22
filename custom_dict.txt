@@ -198,6 +198,7 @@ Bai
 [Bb]alancer(')?(s)?
 Bam
 BankAccount
+Barrez
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -413,6 +414,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Computas
 Conf
 Config-[Pp]rovider
 [Cc]onfig-server
@@ -679,6 +681,7 @@ ElasticSearch
 ELB(s)?
 Eleftheria
 Emad
+embodiments
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -753,6 +756,7 @@ fileshare
 FileSystemXmlApplicationContext
 Finchley
 FinTech
+fintech
 FIPS(-enabled|-approved)?
 firehose
 firewalling
@@ -761,6 +765,7 @@ Flake8
 flatlined
 Florea
 Florent
+Flowable
 [fF]luent[Bb]it
 [fF]luentd('s)?
 FluxCD
@@ -1108,6 +1113,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+Janeiro
 Jarvinen
 Jasso
 JavaBean
@@ -1156,6 +1162,7 @@ johnharris85
 Jonatan
 jonatan_ivanov
 JOP
+Joram
 JPA
 JProfiler
 JRE
@@ -1174,6 +1181,7 @@ JSP
 JSR-352
 JST
 judgement
+judgements
 julielerman
 Julien
 jumpbox
@@ -1406,6 +1414,7 @@ McGraw-Hill
 McLuckie
 MDAC
 MDN
+Mehmandarov
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1446,6 +1455,7 @@ misconfigured
 [Mm]itigations
 MiXiT
 Mkyong
+moby
 Mockito
 MockMvc
 [Mm]ockup(s)?
@@ -1531,6 +1541,7 @@ NFT
 NIC
 Nicoll
 NIST
+NixOS
 NLB(s)?
 NLog
 NMica
@@ -1599,6 +1610,7 @@ OpenFeign
 OpenGitOps
 OpenId
 OpenID
+OpenLDAP
 OpenShift
 OpenSource
 OpenSSL
@@ -1967,12 +1979,14 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Rustam
 RxJS
 Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
 Sadogursky
+Saïd
 Saikali
 Salaboy
 salaboy
@@ -2204,6 +2218,8 @@ TechRepublic
 TeeFilter
 Tekton-based
 Tekton('s)?
+TektonCD
+tektoncd
 [Tt]elco(s)*
 telecom
 [Tt]elematics
@@ -2236,6 +2252,7 @@ Tilt(file|Cloud)?
 TimingGatewayEventFilter
 Timo
 TKG
+TKGm
 tlberglund
 TLS(-enabled)?
 TNS
@@ -2368,6 +2385,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+viewport
 Vikram
 Viktor
 Villnow
@@ -2379,6 +2397,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vitor
 Vlissides
 VMCachedDeserializable
 VMs?
@@ -2491,6 +2510,7 @@ YTT
 ytt(-templatized)?
 Zalando
 ZDNet
+Zenika
 Zhen
 Zino
 [Zz]ipkin

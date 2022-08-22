@@ -1,8 +1,8 @@
 ---
 data-featured: false
-date: '2021-04-22'
+date: '2022-08-15'
 description: How to set up a Tanzu GemFire instance on Kubernetes.
-lastmod: '2021-04-22'
+lastmod: '2022-08-15'
 link-title: Getting Started with Tanzu GemFire for Kubernetes
 parent: Spring for Apache Geode
 title: Getting Started with Tanzu GemFire for Kubernetes
@@ -14,7 +14,7 @@ This guide walks you through creating and testing a Tanzu GemFire cluster on Kub
 
 
 ## Before you start!
-This guide assumes that the [Tanzu GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/1.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
+This guide assumes that the [Tanzu GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
 
 In order to create a GemFire cluster, you will need a [Tanzu Net](https://network.pivotal.io/products/tanzu-gemfire-for-kubernetes/) account, in order to pull the image from the registry. 
 
@@ -40,33 +40,31 @@ You will also need permission to use `kubectl`.
 3. Create an image pull secret that will be used to pull down the Tanzu GemFire images needed to create the cluster
 
     ```
-    kubectl create secret docker-registry image-pull-secret --namespace=tanzu-gemfire --docker-server=registry.pivotal.io --docker-username='TANZU NET USERNAME' --docker-password='TANZU NET PASSWD'
+    $ kubectl create secret docker-registry image-pull-secret --namespace=tanzu-gemfire --docker-server=registry.tanzu.vmware.com --docker-username='TANZU NET USERNAME' --docker-password='TANZU NET PASSWD'
     ```  
      
    * Replace `tanzu-gemfire` with the name of your namespace, if different.
    * Replace `TANZU NET USERNAME` with your Tanzu Net Username
    * Replace `TANZU NET PASSWD` with your Tanzu Net Password
+     
+
+4. Create your Tanzu GemFire CRD file. 
     
-      
-       
-4.  Create your Tanzu GemFire CRD file. 
+    Below is a simple yaml file that will create a Tanzu GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html). Save this as a YAML file in your current working directory.
     
-    Below is a simple yaml file that will create a Tanzu GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://geode.apache.org/docs/guide/13/configuring/running/running_the_locator.html) and 2 [servers](https://geode.apache.org/docs/guide/13/configuring/running/running_the_cacheserver.html). Save this as a YAML file in your current working directory.
-    
-    ```yaml
-    apiVersion: gemfire.tanzu.vmware.com/v1
-    kind: GemFireCluster
-    metadata:
-        name: hello-world-gemfire-cluster
-    spec:
-        image: registry.pivotal.io/tanzu-gemfire-for-kubernetes/gemfire-k8s:1.0.0
-    ```
-           
-           
-                    
+  ```yaml
+  apiVersion: gemfire.tanzu.vmware.com/v1
+  kind: GemFireCluster
+  metadata:
+     name: hello-world-gemfire-cluster
+  spec:
+    image: registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.1
+    security:
+      tls: {}
+  ```
    
         
-> For the full list of GemFire CRD configuration options and explanations check out the Tanzu GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/1.0/tgf-k8s/GUID-crd.html).
+> For the full list of GemFire CRD configuration options and explanations check out the Tanzu GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-crd.html).
     
    
 5. Apply your Tanzu GemFire CRD YAML from *Step 4* to create the Tanzu GemFire cluster
