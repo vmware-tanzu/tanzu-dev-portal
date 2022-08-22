@@ -198,6 +198,7 @@ Bai
 [Bb]alancer(')?(s)?
 Bam
 BankAccount
+Barrez
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -764,6 +765,7 @@ Flake8
 flatlined
 Florea
 Florent
+Flowable
 [fF]luent[Bb]it
 [fF]luentd('s)?
 FluxCD
@@ -1160,6 +1162,7 @@ johnharris85
 Jonatan
 jonatan_ivanov
 JOP
+Joram
 JPA
 JProfiler
 JRE
