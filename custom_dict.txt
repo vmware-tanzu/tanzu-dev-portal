@@ -1610,6 +1610,7 @@ OpenFeign
 OpenGitOps
 OpenId
 OpenID
+OpenLDAP
 OpenShift
 OpenSource
 OpenSSL
@@ -2251,6 +2252,7 @@ Tilt(file|Cloud)?
 TimingGatewayEventFilter
 Timo
 TKG
+TKGm
 tlberglund
 TLS(-enabled)?
 TNS
