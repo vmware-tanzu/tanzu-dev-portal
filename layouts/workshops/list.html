@@ -1,19 +1,43 @@
-{{ define "main" }}
-
-{{ partial "hero.html" . }}
+{{ define "main" }} {{/* {{ partial "hero.html" . }} */}}
+<div id="hero" class="overflow-hidden td-box--gray-dark mt-lg-5 mt-7 py-lg-5">
+    <div class="container">
+        <div class="row align-items-center py-lg-5">
+            <div class="col-12 col-lg-5 py-2 py-lg-5 pl-0 pr-lg-4 pr-0">
+                <h1>{{ .Title }}</h1>
+                <p class="lead">{{ .Description }}</p>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-12 col-lg-6 py-2 py-lg-5 px-0 pl-lg-4 position-relative">
+                <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}' />
+                <!-- Link Boxes -->
+                <!-- TODO: Proper CSS fix for make link boxes the same size -->
+                <div class="container h-100">
+                    <div class="row">
+                        <div class="col-12 px-4">
+                            <!-- <h3>Featured Workshops</h3> -->
+                        </div>
+                    </div>
+                    <div class="row h-100 flex-lg-nowrap product-links position-relative z-1 justify-content-between">
+                        {{ range .Params.links }}
+                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ .link | relURL }}">
+                            <h2 class="h4 link">{{ .title }}</h2>
+                            <p>{{ .description }}</p>
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="td-content">
-
-	{{ .Content }}
-        {{ partial "workshops-index.html" . }}
-	{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-		{{ partial "feedback.html" .Site.Params.ui.feedback }}
-		<br />
-	{{ end }}
-	{{ if (.Site.DisqusShortname) }}
-		<br />
-		{{ partial "disqus-comment.html" . }}
-	{{ end }}
-	<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+    {{ .Content }} {{ partial "workshops-index.html" . }} {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+    {{ partial "feedback.html" .Site.Params.ui.feedback }}
+    <br />
+    {{ end }} {{ if (.Site.DisqusShortname) }}
+    <br />
+    {{ partial "disqus-comment.html" . }} {{ end }}
+    <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
 </div>
 {{ end }}
