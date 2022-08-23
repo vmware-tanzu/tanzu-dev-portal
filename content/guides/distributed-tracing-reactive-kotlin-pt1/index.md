@@ -59,7 +59,7 @@ Maybe the next question you will ask about tracing: what the heck IS a Span and 
 
 Let's get through some nomenclature to help understand what will happen in context at the application level. Check out this [Getting Started Guide](https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/getting-started.html#getting-started) that will prepare you further for a deeper understanding. For now, here are the basics.
 
-Tracing is the concept that describes how our application identifies a single signal/request from one component to the next, until the terminus. Tracers do the work of applying tracing logic to a component, and propagating a unique trace ID where the signal originated ( e.g. HTTP POST endpoint ). A unique `spanID` gets assigned to the trace for each component this signal touches. Thus, a trace represents the entire scope of a signal, and a span represents the individual component such signal passed through. 
+Tracing is the concept that describes how our application identifies a single signal/request from one component to the next, until the terminus. Tracers do the work of applying tracing logic to a component, and propagating a unique trace ID where the signal originated ( e.g. HTTP POST endpoint ). A unique `spanId` gets assigned to the trace for each component this signal touches. Thus, a trace represents the entire scope of a signal, and a span represents the individual component such signal passed through. 
 
 A `Trace` is a set of spans forming a tree-like structure. For example, if you run a distributed microservice constellation, a trace might be formed at the edge from a GraphQL API or REST Controller.
 
@@ -98,7 +98,7 @@ The Sleuth Library includes support for Managing Spans with annotations. Per the
  * Reduced surface area for basic span operations. Without this feature, you must use the span api, which has lifecycle commands that could be used incorrectly. By only exposing scope, tag, and log functionality, you can collaborate without accidentally breaking span lifecycle.
  * Collaboration with runtime generated code. With libraries such as Spring Data and Feign, the implementations of interfaces are generated at runtime. Consequently, span wrapping of objects was tedious. Now you can provide annotations over interfaces and the arguments of those interfaces.
 
-Once you have Spring Cloud Sleuth on the CLASSPATH, it will automatically instrument common communication channels such as:
+Once you have Spring Cloud Sleuth on the classpath, it will automatically instrument common communication channels such as:
 
   * Messaging like Kafka or RabbitMQ
   * HTTP headers via WebMVC and WebFlux controllers
@@ -157,11 +157,11 @@ Settings for `spring.sleuth.reactor.instrumentation-type`:
     Wraps every operator in the least invasive way, does not pass a tracing context. That is up to the user. 
 
 
-> **_NOTE:_**  To opt-out of tracing altogether, its best to set the value of `spring.sleuth.rsocket.enabled` to false. Alternatively you can configure your RSocketRequester and RSocketServer by hand - autoconfiguration will leave them alone if they're already present.
+> **_NOTE:_**  To opt-out of tracing altogether, its best to set the value of `spring.sleuth.rsocket.enabled` to false. Alternatively you can configure your `RSocketRequester` and `RSocketServer` by hand - autoconfiguration will leave them alone if they're already present.
 
 ### Sleuth and Kotlin
 
-Because Kotlin is the language used in this example - developers have been keen to use [co-routines](https://docs.spring.io/spring-framework/docs/5.2.0.M1/spring-framework-reference/languages.html#coroutines) as opposed to raw reactive publishers - I'm happy to say that [Sleuth supports co-routines](https://github.com/spring-cloud/spring-cloud-sleuth/tree/3.1.x/spring-cloud-sleuth-instrumentation/src/main/kotlin/org/springframework/cloud/sleuth/instrument/kotlin)! 
+Because Kotlin is the language used in this example - developers have been keen to use [coroutines](https://docs.spring.io/spring-framework/docs/5.2.0.M1/spring-framework-reference/languages.html#coroutines) as opposed to raw reactive publishers - I'm happy to say that [Sleuth supports coroutines](https://github.com/spring-cloud/spring-cloud-sleuth/tree/3.1.x/spring-cloud-sleuth-instrumentation/src/main/kotlin/org/springframework/cloud/sleuth/instrument/kotlin)! 
 
 The basics are exactly the same as with ordinary publisher usage, so we wont be going into that in this example. However, the repository containing this example does highlight usage of [controllers](https://github.com/marios-code-path/distributed-tracing-sleuth-reactive-kotlin/blob/main/src/main/kotlin/com/example/sleuthy/rsocket/CoRoutineControllers.kt) declared with the `suspend` keyword. Additionally [there are tests](https://github.com/marios-code-path/distributed-tracing-sleuth-reactive-kotlin/blob/0dc9ecbfb8dc8f19743269bbf10d6cd154180a09/src/test/kotlin/com/example/sleuthy/rsocket/AnnotatedSpanTests.kt#L24) to compare output (hint: it's the same).
 
@@ -180,7 +180,7 @@ spring.rsocket.server.port=10001
 #...
 ```
 
-Additionally per the above, we also set the server port and explicitly enabled sleuth on rsocket. I also chose `MANUAL` instrumentation-type because it is least invasive, and allows us to 'stack up' on tracing capabilities as we need.
+Additionally per the above, we also set the server port and explicitly enabled sleuth on RSocket. I also chose `MANUAL` instrumentation-type because it is least invasive, and allows us to 'stack up' on tracing capabilities as we need.
 
 Next step is to create a couple of messaging endpoints:
 
@@ -203,7 +203,7 @@ Without going into too much detail, we can see that we have exposed a couple of 
 
   "Allows to create a new span around a public method. The new span will be either a child of an existing span if a trace is already in progress or a new span will be created if there was no previous trace". 
 
-Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the rsocket FrameLogger scope to debug. Also, we can see what the trace instrumentation is doing by setting `trace` debugging to the `logging.level.org.springframework.cloud.sleuth.instrument` package:
+Finally, we should enable debug logging. For wiretap debugging of RSocket connections, we can set the RSocket FrameLogger scope to debug. Also, we can see what the trace instrumentation is doing by setting `trace` debugging to the `logging.level.org.springframework.cloud.sleuth.instrument` package:
 
 application.properties
 ```properties
@@ -214,7 +214,7 @@ logging.level.org.springframework.cloud.sleuth.instrument=trace
 
 ## Tests for Traced Services
 
-We'll write some tests using JUnit5, AssertJ, and reactive-tests components.
+We'll write some tests using JUnit 5, AssertJ, and reactive-tests components.
 But first we need to re-use an [RSocketRequester](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/RSocketRequester.html) in tests, so it is easier subclass the configuration of this component and remove some boilerplate in each test.
 
 The following listing shows our test Superclass.
@@ -246,7 +246,7 @@ class TestBase {
 
 This `TestBase` class forms the configuration for all our downstream tests. It simply uses [@SpringBootTest](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) for full autoconfiguration - with service exposition - and then connects to the local RSocket server with [RSocketRequester](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java).
 
-Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their traceId, and spanID. By default, traces will ship to zipkin via HTTP/REST unless no zipkin server is available.
+Next, lets write a couple tests that will invoke our messaging endpoints. The first ones will log just the payloads, their `traceId`, and `spanId`. By default, traces will ship to zipkin via HTTP/REST unless no zipkin server is available.
 
 ### The Unit Tests
 
@@ -484,14 +484,14 @@ To ensure we have a satisfactory amount of trace data, lets setup the behaviour 
 
 ### Sample Rate of Trace Shipments
 
-Sleuth supports a few ways to tell it how often it should ship traces. This is configured in one of 2 ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` or `spring.sleuth.sampler.rate=10`. Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default) but you can even instantiate the `RateLimited and `Probablistic` samplers this way.
+Sleuth supports a few ways to tell it how often it should ship traces. This is configured in one of 2 ways: through the property prefix `spring.sleuth.sampler`, by setting a rate or probability property - e.g. `spring.sleuth.sampler.probability=1.0` or `spring.sleuth.sampler.rate=10`. Alternately, we can create a `@Bean` of a `brave.sampler.Sampler` instance which also include static instances for `Always` and `NEVER` (the default) but you can even instantiate the `RateLimited and `Probabilistic` samplers this way.
 
 For clarity, here are the 4 sampler strategies that are configurable through Spring Cloud Sleuth:
 
 * NEVER_SAMPLE
 * ALWAYS_SAMPLE
 * RateLimited (per minute)
-* Probablistic ( 0.0 -> 1.0 )
+* Probabilistic ( 0.0 -> 1.0 )
 
 In our case, we want `ALWAYS` sampling:
 
@@ -590,7 +590,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship traces through the Kafka topic by setting `spring.zipkin.sender.type` to 'kafka'. Additionally, by introducing a new profile-specific properties, we can configure the Kafka connection as shown below:
+Tell Sleuth we want to ship traces through the Kafka topic by setting the `spring.zipkin.sender.type`. Additionally, by introducing a new profile-specific properties, we can configure the Kafka connection as shown below:
 
 application-kafka.properties
 ```properties
@@ -603,7 +603,7 @@ spring.zipkin.kafka.topic=zipkin
 
 Above, we set Kafka specific [sleuth properties](https://docs.spring.io/spring-cloud-sleuth/docs/current/reference/html/appendix.html) that tell sleuth things like 'remote-service-name' and which 'topic' to send to.
 
-On the code side, we will subclass the `ManualSpanTests` class with one marked with `@ActiveProfiles("kafka")` annotation. In this way, each test class runs the same tests but ships to a kafka server for collection later on by Zipkin's Kafka Collector.
+On the code side, we will subclass the `ManualSpanTests` class with one marked with `@ActiveProfiles("kafka")` annotation. In this way, each test class runs the same tests but ships to a kafka server for collection later on by the Zipkin Kafka Collector.
 
 KafkaManualSpanTests.kt
 ```kotlin
@@ -664,7 +664,7 @@ services:
       - JAVA_OPTS=-Dlogging.level.zipkin=INFO -Dlogging.level.zipkin2=INFO -Dlogging.level.org.apache.kafka=INFO
 ```
 
-Importantly, as noted above we need to let the Zipkin server know where Kafka is by setting the `KAFKA_BOOTSTRAP_SERVERS` to the host of the Kafka server. However, by default we let Zipkin specify its default topic 'zipkin'. You can override this by setting the 'KAFKA_TOPIC' environment. For more information related to Zipkin/Kafka collection, check out the [openzipkin github](https://github.com/openzipkin/zipkin/blob/master/zipkin-server/README.md#kafka-collector.) document related to these options.
+Importantly, as noted above we need to let the Zipkin server know where Kafka is by setting the `KAFKA_BOOTSTRAP_SERVERS` to the host of the Kafka server. However, by default we let Zipkin specify its default topic 'zipkin'. You can override this by setting the 'KAFKA_TOPIC' environment. For more information related to Zipkin/Kafka collection, check out the [OpenZipkin github](https://github.com/openzipkin/zipkin/blob/master/zipkin-server/README.md#kafka-collector.) document related to these options.
 
 Perform the next necessary step - standing up the servers - by executing the docker-compose file:
 
@@ -684,7 +684,7 @@ pom.xml
 		</dependency>
 ```
 
-Tell Sleuth we want to ship traces through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to enforce specificities of the AMQP/RabbitMQ connection as shown below:
+Tell Sleuth we want to ship traces through queue by setting `spring.zipkin.sender.type` to 'rabbit'. Additionally, by introducing a new profile-specific properties file to fill in parameters of the AMQP/RabbitMQ connection as shown below:
 
 application-rabbit.properties
 ```properties
@@ -712,7 +712,7 @@ docker compose -f kafka-compose.yml down
 ```
 ### Starting up RabbitMQ for Zipkin
 
-Another infrastructure scenario is needed to furnish our application with connectivity to Zipkin and RabbitMQ. This next docker-compose file will configure a full distribution of RabbitMQ and Zipkin. The configuration properties we are interested in are shown in the compose file below:
+Another infrastructure scenario is needed to furnish our application with connectivity to Zipkin and RabbitMQ. The configuration properties we are interested in are shown in the compose file below:
 
 rabbit-compose.yml
 ```yaml
@@ -759,7 +759,7 @@ Perform the next necessary step - standing up the servers - by executing the doc
 docker compose -f rabbit-compose.yml up
 ```
 
-Running `RabbitManualSpanTests` will show very similar results - only the SpanIDs will differ. With that, we conclude shipping traces through RabbitMQ.
+Running `RabbitManualSpanTests` will show very similar results - only the SpanIds will differ. With that, we conclude shipping traces through RabbitMQ.
 
 To tear down the RabbitMQ scenario in compose:
 
@@ -787,8 +787,6 @@ in Spring Boot, with the Kotlin side being well supported - even with [coroutine
 [Git Issue Adding Prometheus Exemplars Support #2039 Thanks to Jonatan Ivanov](https://github.com/spring-cloud/spring-cloud-sleuth/issues/2039)
 
 [Zipkin Kafka Storage](https://github.com/openzipkin-contrib/zipkin-storage-kafka)
-
-[R2dbc Proxies](http://r2dbc.io/r2dbc-proxy/docs/current-snapshot/docs/html/)
 
 [Bitnami Containers](https://bitnami.com/stacks/containers)
 

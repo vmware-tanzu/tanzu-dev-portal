@@ -46,6 +46,7 @@ ACL(s)?
 ActiveDirectory
 ActiveMQ
 Activiti
+Acyclic
 add-on(s)?
 addAndReturnSize
 addAndReturnSizes
@@ -187,6 +188,7 @@ autowires
 Aviv
 Awaitility
 aws-encryption-provider
+B3
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 [Bb]ackpressure
@@ -396,6 +398,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+[Cc]o[Rr]outines
 Coby
 [Cc]odebase(s)?
 Codefresh
@@ -439,7 +442,6 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
-CoRoutines
 Corry
 CORS
 cortado
@@ -780,6 +782,7 @@ foundaments
 Foxwell
 FP
 FQDN
+FrameLogger
 Frascati-Robinson
 freddygthatsme
 frictionless
@@ -993,6 +996,7 @@ HostEndpoint
 [Hh]ostname(s)?
 hostPath
 hostpath
+hotspot
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -1054,6 +1058,7 @@ Initializr
 injectable
 installable
 instantiation
+InstrumentationType
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1065,6 +1070,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+io
 IoC
 IOC
 IoT
@@ -1413,6 +1419,7 @@ MBeanServer
 McGraw-Hill
 McLuckie
 MDAC
+MDC
 MDN
 Mehmandarov
 [Mm]entorship
@@ -1535,6 +1542,7 @@ Network(Policy|Set)
 Neumann
 Neward
 NewRelic
+NewSpan
 NFJ?S
 NFT
 [Nn]ginx|NGINX
@@ -1617,6 +1625,7 @@ OpenSSL
 OpenStack
 OpenTelemetry
 OpenTracing
+OpenZipkin
 operationalized
 operationalizing
 OperatorHub
@@ -1846,6 +1855,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+RateLimited
 Ravi
 RBAC(-enabled)?
 RCE
@@ -1858,6 +1868,7 @@ reachability
 reactively
 ReactiveUI
 ReactiveX
+ReactorSleuth
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1971,6 +1982,8 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketRequester
+RSocketServer
 Ruckle
 Rudd
 Rumans
@@ -2081,6 +2094,9 @@ skillset
 Skyscanner
 SLA(s)?
 Sletten
+SleuthReactorProperties
+SleuthRSocketProperties
+SLF4J
 SLI(s)?
 slideshare
 SLO(s)?
@@ -2102,6 +2118,7 @@ SonicDMG
 [Ss]onobuoy
 SourceTester
 Sox
+SpanIDs
 [Ss]peedback
 SPEL
 SPIFFE
@@ -2180,6 +2197,7 @@ subregistry
 substring
 Sudesh
 sudo
+Superclass
 superset
 svc
 SVID(s)?
@@ -2273,7 +2291,9 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+TraceReactorAutoConfiguration
 traceroute
+TracingRSocketConnectorConfigurer
 tradeoff(s)?
 Tradeoffs
 Traefik
@@ -2449,6 +2469,7 @@ WebForm(s)?
 [Ww]ebforms
 [Ww]ebhook(-based|s)?
 WebLogic
+WebMVC
 Webpage
 WebRequest
 WebSocket
@@ -2514,6 +2535,7 @@ Zenika
 Zhen
 Zino
 [Zz]ipkin
+ZipkinSenderProperties
 ZOP
 Zou
 Zuul
