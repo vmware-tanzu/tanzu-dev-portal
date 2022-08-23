@@ -2118,7 +2118,7 @@ SonicDMG
 [Ss]onobuoy
 SourceTester
 Sox
-SpanIDs
+SpanI[Dd](s)?
 [Ss]peedback
 SPEL
 SPIFFE
