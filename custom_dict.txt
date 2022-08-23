@@ -1113,6 +1113,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+jakubpilimon
 Janeiro
 Jarvinen
 Jasso
@@ -1297,6 +1298,7 @@ KUTTL
 KVM2
 Kyverno
 labelset
+Lampson
 lastAccessedTime
 latencies
 LaunchDarkly
@@ -1534,6 +1536,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 Neward
+newing
 NewRelic
 NFJ?S
 NFT
@@ -2231,6 +2234,7 @@ Teppanyaki
 TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
+[Tt]estability
 testability
 TestServiceBusConfigIsConfiguredReturnsFalse
 TestServiceBusConfigIsConfiguredReturnsTrue

@@ -19,9 +19,9 @@ An understanding of object-oriented programming (OOP) is beneficial for this pos
 ## A lack of extensibility and testability
 
 I have created a small demo application (waffle app) that creates waffle orders with this program flow: 
-A request to create a waffle gets handled by the `WaffleCreator`’s prepare method
-`WaffleCreator` creates the `MacronutrientsProvider`
-`WaffleCreator’ uses the `MacronutrientsProvider`
+- A request to create a waffle gets handled by the `WaffleCreator`’s prepare method
+- `WaffleCreator` creates the `MacronutrientsProvider`
+- `WaffleCreator` uses the `MacronutrientsProvider`
 
 The code for this demo is as follows:
 
@@ -237,10 +237,10 @@ class Config {
 }
 ```
 
-To summarise, before introducing the "Service Locator Pattern", the flow of the program looked like this:
+To summarize, before introducing the "Service Locator Pattern", the flow of the program looked like this:
 1. A request to create a waffle gets handled by `WaffleCreator`’s prepare method
 2. `WaffleCreator` creates the `MacronutrientsProvider`
-3. `WaffleCreator’ uses the `MacronutrientsProvider`
+3. `WaffleCreator` uses the `MacronutrientsProvider`
 
 After introducing  the `ServiceLocator` class, the flow looks like this:
 1. Config class creates `MacronutrientsProvider` and puts it into the `ServiceLocator` class
@@ -401,7 +401,7 @@ class ServiceLocator {
 
 Both `BeanFactory` and the type-agnostic service locator serve as containers for dependencies. `ServiceLocator` was called by the application code whereas `BeanFactory` calls the code. Once again, the program flow is inverted.
  
-In fact, the "BeanFactory API" provides the underlying code for Spring’s IoC functionality.
+In fact, the `BeanFactory` API provides the underlying code for Spring’s IoC functionality.
 
 In Spring, objects that form the backbone of your application and are managed by the Spring IoC container are called *beans*. A *bean* is simply one of many objects in your application and is instantiated, assembled and then disposed of by the Spring IoC container. 
 
