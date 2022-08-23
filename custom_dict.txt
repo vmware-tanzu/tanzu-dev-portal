@@ -1209,7 +1209,7 @@ k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
-Kafka
+[Kk]afka
 [Kk]ail
 Kalashnykov
 Kamus
@@ -1613,6 +1613,7 @@ OOP
 OOTB
 OPA
 Opdyke
+[Oo]pen[Zz]ipkin
 OpenAPI(Tools)?
 OpenFeign
 OpenGitOps
@@ -1625,7 +1626,6 @@ OpenSSL
 OpenStack
 OpenTelemetry
 OpenTracing
-OpenZipkin
 operationalized
 operationalizing
 OperatorHub

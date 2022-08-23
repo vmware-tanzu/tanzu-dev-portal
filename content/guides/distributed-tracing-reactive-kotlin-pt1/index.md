@@ -65,10 +65,10 @@ A `Trace` is a set of spans forming a tree-like structure. For example, if you r
 
 `Spans` also have other data, such as descriptions, timestamped events, key-value annotations (tags), the ID of the span that caused them, and process IDs (normally IP or MAC addresses). Spans can be started and stopped, and they keep track of their timing information. Once you create a span, you must stop it in the future.
 
-Distributed tracing platforms like [Open Zipkin](https://zipkin.io/) record trace data. Trace data is composed of a parent:child tree structure called a Directed Acyclic Graph
+Distributed tracing platforms like [OpenZipkin](https://zipkin.io/) record trace data. Trace data is composed of a parent:child tree structure called a Directed Acyclic Graph
 (DAG for short). A root node represents the `trace` or overall journey, and each
 `span` represents an individual hop along the service route. To illustrate better, I 
-have included an ASCII diagram from [https://github.com/openzipkin/zipkin](openzipkin github).
+have included an ASCII diagram from [https://github.com/openzipkin/zipkin](OpenZipkin github).
 
 ```
    Client Tracer                                                  Server Tracer     
@@ -88,7 +88,7 @@ have included an ASCII diagram from [https://github.com/openzipkin/zipkin](openz
 └────────────────-----──┘                                       └───────────────-----───┘
 ```
 
-For further visualization of what a span and trace look like in a system wired with Zipkin.
+For further visualization of what a span and trace logically look like: 
 
 ![zipkin diagram](images/spring-cloud-tracing-graphic.png)
 
@@ -751,7 +751,7 @@ services:
         condition: service_healthy
 ```
 
-Importantly, as noted above we need to let the Zipkin server know where RabbitMQ is by setting the `RABBIT_URI` to the host of the RabbitMQ server. However, by default we let Zipkin specify its default queue 'zipkin'. You can override this by setting the 'RABBIT_QUEUE' environment. For more information related to Zipkin/Rabbit collection, check out the [openzipkin github](https://github.com/openzipkin/zipkin/tree/master/zipkin-collector/rabbitmq) document related to these options.
+Importantly, as noted above we need to let the Zipkin server know where RabbitMQ is by setting the `RABBIT_URI` to the host of the RabbitMQ server. However, by default we let Zipkin specify its default queue 'zipkin'. You can override this by setting the 'RABBIT_QUEUE' environment. For more information related to Zipkin/Rabbit collection, check out the [OpenZipkin github](https://github.com/openzipkin/zipkin/tree/master/zipkin-collector/rabbitmq) document related to these options.
 
 Perform the next necessary step - standing up the servers - by executing the docker-compose file:
 
@@ -759,7 +759,7 @@ Perform the next necessary step - standing up the servers - by executing the doc
 docker compose -f rabbit-compose.yml up
 ```
 
-Running `RabbitManualSpanTests` will show very similar results - only the SpanIds will differ. With that, we conclude shipping traces through RabbitMQ.
+Running `RabbitManualSpanTests` will show very similar results - only the SpanId will differ. With that, we conclude shipping traces through RabbitMQ.
 
 To tear down the RabbitMQ scenario in compose:
 
