@@ -63,6 +63,12 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Flowable founder (and my friend) Joram Barrez on a Bootiful Podcast on workflow, business process management, and more
+**2022-08-18** [listen](https://api.bootifulpodcast.fm/podcasts/506f11ef-e763-43b0-9990-615dcad86acd/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to Flowable founder Joram Barrez (@jbarrez) about workflow, business process management (BPM), decision management, rules, and so much more</p>
+
+### The Good Dr. Venkat Subramaniam
+**2022-08-11** [listen](https://api.bootifulpodcast.fm/podcasts/eeb62787-a2ec-4cdc-9852-2fe29b4c1540/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long talks to the good Dr. Venkat Subramaniam about the art of writing software, his latest projects, and more</p>
+
 ### Observability guru Jonatan Ivanov on the future of observability in Spring Boot 
 **2022-08-04** [listen](https://api.bootifulpodcast.fm/podcasts/4129c4bc-ce86-49e0-a6c0-5891819599d2/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to Spring observability guru Jonatan Ivanov (@jonatan_ivanov)</p>
 
@@ -86,12 +92,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### Spring Framework contributor S?bastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly
 **2022-06-16** [listen](https://api.bootifulpodcast.fm/podcasts/0083a911-e923-4982-8c22-d024a1eee2c7/produced-audio) <p>Hi, Spring fans! In this installment Josh Long (@starbuxman) talks to Spring Framework contributor S?bastien Deleuze (@sdeleuze) on GraalVM, AOT, project Leyden, and WebAssembly.</p>
-
-### Kubernetes legend and friend Cora Iberkleid on Tanzu, Cartographer, and more 
-**2022-06-09** [listen](https://api.bootifulpodcast.fm/podcasts/564cc3c0-378f-45cb-86c3-e652da8067b0/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to Kubernetes legend and fellow Tanzu Developer Advocate Cora Iberkleid (@ciberkleid) about Kubernetes and Cartographer supply chains.</p>
-
-### Spring I/O founder, Spring trainer and community legend Sergi Almar 
-**2022-06-02** [listen](https://api.bootifulpodcast.fm/podcasts/052a1708-7ab9-4c57-ba2d-fb1ff2b29840/produced-audio) <p>Hi, Spring fans! At long last, against all odds, Josh Long (@starbuxman) finally gets to talk to Spring I/O founder and more-than-a-decade-long friend Sergi Almar (@sergialmar) about an edition of Spring I/O after 2019!</p>
 
 
 ## Upcoming Appearances
@@ -133,6 +133,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
+* [This Week in Spring - August 16th, 2022](https://spring.io/blog/2022/08/16/this-week-in-spring-august-16th-2022) (2022-08-16) 
+* [A Bootiful Podcast: the good Dr. Venkat Subramaniam](https://spring.io/blog/2022/08/11/a-bootiful-podcast-the-good-dr-venkat-subramaniam) (2022-08-11) 
 * [This Week in Spring - August 9th, 2022](https://spring.io/blog/2022/08/09/this-week-in-spring-august-9th-2022) (2022-08-09) 
 * [A Bootiful Podcast: Observability guru Jonatan Ivanov on the future of observability in Spring Boot](https://spring.io/blog/2022/08/04/a-bootiful-podcast-observability-guru-jonatan-ivanov-on-the-future-of-observability-in-spring-boot) (2022-08-04) 
 * [This Week in Spring - August 1st, 2022](https://spring.io/blog/2022/08/02/this-week-in-spring-august-1st-2022) (2022-08-02) 
@@ -140,9 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 * [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
 * [Spring Tips: Kubernetes Native Java (Redux, 2022)](https://spring.io/blog/2022/07/20/spring-tips-kubernetes-native-java-redux-2022) (2022-07-20) 
-* [This Week in Spring - July 19th, 2022](https://spring.io/blog/2022/07/19/this-week-in-spring-july-19th-2022) (2022-07-19) 
-* [A Bootiful Podcast: Nate Schutta: The Thinking Person's Architect, My Friend, and Teammate](https://spring.io/blog/2022/07/14/a-bootiful-podcast-nate-schutta-the-thinking-person-s-architect-my-friend-and-teammate) (2022-07-14) 
-* [This Week in Spring - July 12th, 2022](https://spring.io/blog/2022/07/12/this-week-in-spring-july-12th-2022) (2022-07-12) 
 
 ## Abstracts
 
@@ -177,4 +177,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
 <li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distribute these longer-running workloads across a cloud
+<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distribute thes

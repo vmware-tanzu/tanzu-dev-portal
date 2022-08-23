@@ -4,6 +4,7 @@
 # one word per line to define a file override use ' - filename'
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
+#CoffeeOps
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
@@ -197,6 +198,7 @@ Bai
 [Bb]alancer(')?(s)?
 Bam
 BankAccount
+Barrez
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -412,6 +414,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Computas
 Conf
 Config-[Pp]rovider
 [Cc]onfig-server
@@ -678,6 +681,7 @@ ElasticSearch
 ELB(s)?
 Eleftheria
 Emad
+embodiments
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -752,6 +756,7 @@ fileshare
 FileSystemXmlApplicationContext
 Finchley
 FinTech
+fintech
 FIPS(-enabled|-approved)?
 firehose
 firewalling
@@ -760,6 +765,7 @@ Flake8
 flatlined
 Florea
 Florent
+Flowable
 [fF]luent[Bb]it
 [fF]luentd('s)?
 FluxCD
@@ -1107,6 +1113,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+Janeiro
 Jarvinen
 Jasso
 JavaBean
@@ -1155,6 +1162,7 @@ johnharris85
 Jonatan
 jonatan_ivanov
 JOP
+Joram
 JPA
 JProfiler
 JRE
@@ -1173,6 +1181,7 @@ JSP
 JSR-352
 JST
 judgement
+judgements
 julielerman
 Julien
 jumpbox
@@ -1205,6 +1214,7 @@ Karavi
 Kaspersky
 Kat
 [Kk]ata(s)?
+KCDC
 KEK(s)?
 Kendo
 kendrickcoleman
@@ -1240,6 +1250,7 @@ Kpack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
+Kratix
 Kravitz
 krf
 Krisp
@@ -1403,6 +1414,7 @@ McGraw-Hill
 McLuckie
 MDAC
 MDN
+Mehmandarov
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1443,6 +1455,7 @@ misconfigured
 [Mm]itigations
 MiXiT
 Mkyong
+moby
 Mockito
 MockMvc
 [Mm]ockup(s)?
@@ -1495,6 +1508,7 @@ MyPy
 mystream
 mytopic
 n8n
+n9H8KnYjVI
 NameCheap
 [Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
@@ -1527,6 +1541,7 @@ NFT
 NIC
 Nicoll
 NIST
+NixOS
 NLB(s)?
 NLog
 NMica
@@ -1595,6 +1610,7 @@ OpenFeign
 OpenGitOps
 OpenId
 OpenID
+OpenLDAP
 OpenShift
 OpenSource
 OpenSSL
@@ -1963,12 +1979,14 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Rustam
 RxJS
 Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
 Sadogursky
+Saïd
 Saikali
 Salaboy
 salaboy
@@ -2066,6 +2084,7 @@ Sletten
 SLI(s)?
 slideshare
 SLO(s)?
+SLOConf
 Sloka
 SmartTV
 SMB
@@ -2171,6 +2190,7 @@ SweetKiller9
 Syer
 symlink
 symposia
+Syntasso
 Sysdig
 Syslog
 [Ss]ysprep
@@ -2198,6 +2218,8 @@ TechRepublic
 TeeFilter
 Tekton-based
 Tekton('s)?
+TektonCD
+tektoncd
 [Tt]elco(s)*
 telecom
 [Tt]elematics
@@ -2230,6 +2252,7 @@ Tilt(file|Cloud)?
 TimingGatewayEventFilter
 Timo
 TKG
+TKGm
 tlberglund
 TLS(-enabled)?
 TNS
@@ -2362,6 +2385,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+viewport
 Vikram
 Viktor
 Villnow
@@ -2373,6 +2397,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vitor
 Vlissides
 VMCachedDeserializable
 VMs?
@@ -2485,7 +2510,9 @@ YTT
 ytt(-templatized)?
 Zalando
 ZDNet
+Zenika
 Zhen
+Zino
 [Zz]ipkin
 ZOP
 Zou
