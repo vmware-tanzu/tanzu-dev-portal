@@ -14,12 +14,13 @@ tags:
 - Spring Boot
 - Spring Cloud Sleuth
 - Zipkin
-Team:
+team:
 - Mario Gray
 title: Tracing a Reactive Kotlin App with Spring Cloud Sleuth and OpenZipkin
+oldPath: "/content/guides/spring/distributed-tracing-reactive-kotlin-pt1.md"
 aliases:
 - "/guides/microservices/reactive-distributed-tracing"
-level1: Building Modern Applications
+level1: Managing and Operating Applications
 level2: Metrics, Tracing, and Monitoring
 ---
 
@@ -27,7 +28,7 @@ This guide will discuss RSocket tracing with Spring Cloud Sleuth and Zipkin. We 
 
 ## Motivation
 
-So, you're thinking: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. Then you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
+So, you might think: I have a reactive application built with [Spring Boot](https://start.spring.io/), but I want to discover performance characteristics and have a mindset of resiliency. Then you embark on the tried and true method of 'google hunting' and arrive at [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth), and you would be correct!
 
 Spring Cloud Sleuth represents an overlay component between the app and a tracing library. It is based heavily on the [Brave](https://github.com/openzipkin/brave) library but focuses on enrichment to mix in trace logic. We want to utilize a tracing library and not have to make invasive modifications to our application.
 
@@ -423,7 +424,7 @@ class ManualSpanTests : TestBase() {
 
 Upon execution of this test, you should see an output similar in structure to the manual trace generated in the previous example. At least this time we can expect that spans will be properly activated and ended while tagging any errors along the way.
 
-### Better Instrumentation Through Annotations
+### Instrumentation Through Annotations
 
 For us to make the code even cleaner (and easier to read) let's create a client class with a `@NewSpan` annotated method that utilizes the `RSocketRequester` as we did in earlier tests. This client will do all the work of setting up a span in trace context:
 
