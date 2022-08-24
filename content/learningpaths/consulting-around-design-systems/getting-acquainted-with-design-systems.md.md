@@ -6,6 +6,7 @@ team:
 - Carolyn Haines
 - Lauren Manuel
 ---
+![A close crop of a designers working on a tablet](https://user-images.githubusercontent.com/105306536/186534692-9d8727de-18fe-4db6-8477-9368c6453146.jpg)
 
 ## A Brief and Unofficial History
 
