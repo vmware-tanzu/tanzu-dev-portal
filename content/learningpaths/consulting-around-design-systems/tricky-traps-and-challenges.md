@@ -235,3 +235,104 @@ Imagine you buy an empty plot of land for your future home. Then someone drops o
 As discussed, a design system provides a common starting point in the form of some patterns and some decisions. _Some_ decisions! Not all decisions. You can have the most robust system in the world, and there will still be countless decisions and judgment calls that the system cannot make for you. Designers are trained to make these decisions in ways no system ever could. No matter how fancy your system is, it’s still a tool, and tools can’t use themselves. 
 
 > It’s also worth mentioning that designers do a LOT more than assemble UI components. Design is a multifaceted discipline, and the points discussed here are just scratching the surface.
+
+
+![Person speaking in a meeting](https://user-images.githubusercontent.com/105306536/186536000-9b0a0c53-3d9b-4b21-8c00-6a1b77fac0eb.jpg)
+
+
+## Common Challenges
+
+> “No matter how hard you fight the darkness, every light casts a shadow…”  
+> — Plato
+
+Design systems are no exception to Plato’s insightful observation of this basic reality. For all the value there is to be gained by using them,  design systems do not come without some very real challenges. While some of these challenges are inherent, requiring vigilance and discipline to navigate, others are entirely avoidable. Let’s muse on some common challenges around design systems, and how  you can approach navigating them.
+
+
+### Risky Business
+
+There’s no getting around this one. Some big decisions around design systems are difficult to walk back. Once you’ve decided to start using a system, it is almost always going to be a very expensive decision to unmake. 
+
+
+#### What you can do
+
+It’s important that you do everything in your power to make good, well-informed decisions. Check out some of the sections below to help navigate these choices whether you’re [choosing a design system](#heading=h.d37dn5mmcyqr) or [inheriting one](#heading=h.dprmrsiz082i).
+
+
+### Proficiency and Experience
+
+Software folk come from all manner of backgrounds, so it’s not uncommon for you to be working with stakeholders, partners, or practitioners who have little to no experience working with design systems. 
+
+
+#### What you can do
+
+Remember, empathy first. It’s no fun to not know something you feel like you should. Look for ways to help your team deepen their understanding of design systems, and remember to stay open to learning yourself. We work in an ever-changing industry, and “knowing” anything is always risky. Treat every team and every system like a new opportunity, and consider doing some [design-system-focused norming](#heading=h.4n5kqmvhy0ii) among product teams.
+
+
+### Management and Maintenance
+
+Managing and maintaining any kind of in-house system is a beast of a job. No matter how you slice it, there are a lot of plates to keep spinning: 
+
+
+
+* What kind of resources are needed to build and maintain the system? 
+* How often are updates made? How are they communicated? 
+* How are contributions handled? How do teams get help or training? 
+* How many tints and shades of blue do we need?
+
+It’s possible that your experience working with a system did not go _smoothly_. It’s also possible that the folks who need help handling all this business are working outside the explicit boundaries of a specific project or team, making them a little more difficult to influence. 
+
+
+#### What you can do 
+
+Again, empathy first. Assume that everyone is doing their best and try to see where you may be able to offer some feedback, guidance, or influence. Consider disguising it as help if there are fragile egos in the mix. If there’s a meeting where updates to the system are discussed, ask if you can attend. If there’s a Slack channel where questions are asked and discussion takes place, join the conversation. 
+
+In general, try to kindly identify gaps, inefficiencies, or problems where you see them, and always be sure to offer possible solutions if you have them. Designers are problem-solvers, after all.
+
+
+### Supporting Resources
+
+The availability of high-quality supporting resources for practitioners is another challenge with adapted or custom systems. . Issues exist from incomplete or contradictory documentation, to incorrect color values in the published design library. This can be frustrating as a practitioner, especially when it slows down the ability to do your work. These resources are often owned by outside teams, and perhaps sitting outside your sphere of influence.
+
+
+#### What you can do 
+
+If you find yourself working with resources owned by another team consider it an opportunity. If you notice that designers are constantly detaching the instances of a design component because it’s built incorrectly, point out to your teammates what you’re doing, and why you’re doing it. This is a good opportunity to demonstrate proactivity, as well. If you come across missing documentation or sloppy assets, find out what the process is for making fixes. In all likelihood, whoever has that in their job description is going to be glad to have some help. See if you can gently inject yourself and some of your expertise. If you can help improve these resources, you’ll not only be helping your team, but every other team who uses the system.
+
+
+### Consistency
+
+Consistency—the white whale. The idea of in-app and cross-app consistency is one riddled with nuance and strong opinions. You may run across leaders who insist on the consistent use of patterns regardless of domain. You may encounter a designer who believes they’ve revolutionized the dropdown, rejecting basic system components in favor of their own custom creations. You may discover that the teams building parts of a single large product offering have entirely different navigation patterns and applications of the color palette. And you will almost certainly run into someone with a desire for consistency, and an inability to tell you what that means.
+
+
+#### What you can do 
+
+First,  remember that consistency does not mean uniformity. There is, and should be, room for autonomy. Second, try to suss out what “consistency” means in your particular situation. Think about what it might take to achieve, and determine the value that the consistency provides to the organization, users, practitioners, and product teams. 
+
+Achieving the consistency that’s initially desired is a grossly underestimated effort that provides overestimated value. That’s not to say there is _no_ value to be gained. If inconsistencies in major design patterns are causing confusion and frustration for users, or if they are resulting in a sloppy look for an organization, something should be done about it. 
+
+Should you encounter a similar issue it’s best to proceed with caution, and do what you can to:
+
+
+
+* Facilitate a clear articulation of the desired outcomes.
+* Measure the impact inconsistency is having on the users/teams/org.
+    * Run quantitative or qualitative studies with users to get data on perceived brand consistency, pattern consistency/familiarity, etc.
+    * Collect data on the frequency of inconsistent pattern usage or implementation.
+    * Talk to teams to gauge the impact of inconsistency has on their velocity.
+    * Talk to stakeholders to gain insight on perceived brand impact.
+* Size-up the effort involved in achieving the desired outcomes.
+    * Talk to all disciplines to understand what would be involved.
+    * Run a small consistency experiment to help estimate timelines and effort.
+* Balance all the info above and prioritize ruthlessly
+
+
+### Attitudes
+
+There is no shortage of spicy opinions to be found around design systems. There are designers who are upset by the feeling of their autonomy being taken away, and there are plenty of folks who are not the biggest fans of Material. Still, others are excited by the prospect of having to make fewer design decisions. It’s important  to allow people space to have their own emotions and opinions, but there is a point where attitudes can become unproductive, risky, or even toxic.
+
+
+#### What you can do 
+
+Talk about attitudes that you encounter around design systems openly, and honestly with your team about handling attitudes around design systems. Try having a one-on-one, or sharing a different perspective with someone who may be harboring an attitude. From a practical perspective, try finding fun ways to [embrace creative constraints](https://www.psychologytoday.com/us/blog/slow-gains/201401/the-weird-strategy-dr-seuss-create-his-greatest-work). 
+
+For example, we once ran a creative constraints workshop with a team of client designers who had mixed feelings (and mixed adoption) of their design system. It turned into a great bonding experience. We witnessed an emotional saga told exclusively with emojis,  that actually helped cool down some of the spicier attitudes on the team.
