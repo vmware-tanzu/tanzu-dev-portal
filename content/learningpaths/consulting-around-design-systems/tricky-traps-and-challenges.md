@@ -184,7 +184,7 @@ Documentation can be anything that has been documented, so this is another place
     * The documentation for their in-house adapted system
 
 
-## One final thought on terminology
+### One final thought on terminology
 
 Knowing the impact that loaded terminology can have on communication, you may be tempted to align on team-specific definitions for these terms, via something like a [ubiquitous language workshop](https://tanzu.vmware.com/developer/practices/ubiquitous-language/). This could be a great solution to the problem. The word of caution we will share is this: 
 
