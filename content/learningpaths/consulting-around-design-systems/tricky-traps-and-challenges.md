@@ -6,6 +6,7 @@ team:
 - Carolyn Haines
 - Lauren Manuel
 ---
+![1 person showing their laptop screen to another](https://user-images.githubusercontent.com/105306536/186534985-fab1ca8d-5632-4b59-a91e-f3e9da44c06e.jpg)
 
 ## Terminology and Communication Traps 
 
