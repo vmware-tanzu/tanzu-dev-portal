@@ -9,7 +9,7 @@ team:
 - Lauren Manuel
 ---
 
-![2 designers reviewing work together](https://user-images.githubusercontent.com/105306536/185506155-0a466ee2-622f-42c9-9d1d-4c6480b6daf7.jpg)
+![2 designers reviewing work together](https://user-images.githubusercontent.com/105306536/186534547-c47a0e7b-f4e6-480a-b5ad-4c3105471bb4.jpg)
 
 # Welcome
 Howdy, Tanzu Labs friends! 
