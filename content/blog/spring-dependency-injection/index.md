@@ -451,6 +451,14 @@ This article has covered dependency injection in the context of Spring and solve
 
 I hope you enjoyed this overview of dependency inversion. If you have any thoughts or ideas please say hello on any of the channels below:
 
+**Jakub Pilimon**  
 Email: jpilimon@vmware.com  
 Twitter: [@jakubpilimon](https://twitter.com/JakubPilimon)  
 GitHub: [pillopl](https://github.com/pilloPl)
+
+**Layla Porter**  
+Email: [laylap@vmware.com](mailto:laylap@vmware.com)  
+Twitter: [@LaylaCodesIt](http://twitter.com/laylacodesit)  
+GitHub: [layla-p](https://github.com/Layla-P)  
+Twitch: [LaylaCodesIt](https://www.twitch.tv/laylacodesit/)  
+YouTube: [LaylaCodesIt](https://www.youtube.com/channel/UCrgujxhBlukMz4YH-o1cogQ)  
