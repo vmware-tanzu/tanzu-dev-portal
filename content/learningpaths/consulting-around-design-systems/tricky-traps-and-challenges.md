@@ -193,6 +193,9 @@ Knowing the impact that loaded terminology can have on communication, you may be
 
 We don’t want to dissuade you from aligning on standard definitions for some of these terms with your team. We’re simply saying that even with the best intentions and the most bought-in team members, people may still slip. If the norm is to quickly check-in with each other when these loaded terms are used, you’re likely to catch any slips and still communicate effectively. If the norm is that “when we say library we _always_ mean _____”, you might not catch an unintentional straying from the established norm.
 
+![Person speaking to others in a meeting](https://user-images.githubusercontent.com/105306536/186536650-ff167b25-a78e-4ea9-adfe-2ceb9b10a046.jpg)
+
+
 ## Common Misconceptions 
 
 In more ways than you might think, design systems are a lot like hot dogs: lots of people love them, some people have odd opinions about them, and it’s not uncommon for their recipes to be steeped in mystery. Despite their popularity, design systems can stump the best of us. Lots of people harbor misconceptions about them that can make your life unnecessarily difficult. Get to know some of these commonly heard phrases, so that you can impress everyone in your Zoom room with your insightful ability to head off the future trouble they may cause. 
