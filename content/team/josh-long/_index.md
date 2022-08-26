@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert 
+**2022-08-25** [listen](https://api.bootifulpodcast.fm/podcasts/5020a28e-206f-4edf-bbae-a5c8517cc417/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert (@noctarius2k) about PostgreSQL, Java, time series databases, observability, and so much more.</p>
+
 ### Flowable founder (and my friend) Joram Barrez on a Bootiful Podcast on workflow, business process management, and more
 **2022-08-18** [listen](https://api.bootifulpodcast.fm/podcasts/506f11ef-e763-43b0-9990-615dcad86acd/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to Flowable founder Joram Barrez (@jbarrez) about workflow, business process management (BPM), decision management, rules, and so much more</p>
 
@@ -89,9 +92,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### JVM and .NET legend Ted Neward on... just about everything 
 **2022-06-23** [listen](https://api.bootifulpodcast.fm/podcasts/032bfb82-673f-4a24-9521-4316161e615d/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">I (@starbuxman)</a> talk to my old friend, world-famous polyglot, code curmudgeon, software philosopher, industry veteran, and legend of ecosystems aplenty, <a href="https://twitter.com/tedneward">Ted Neward (@tedneward)</a></p>
-
-### Spring Framework contributor S?bastien Deleuze on GraalVM, AOT, project Leyden, and WebAssembly
-**2022-06-16** [listen](https://api.bootifulpodcast.fm/podcasts/0083a911-e923-4982-8c22-d024a1eee2c7/produced-audio) <p>Hi, Spring fans! In this installment Josh Long (@starbuxman) talks to Spring Framework contributor S?bastien Deleuze (@sdeleuze) on GraalVM, AOT, project Leyden, and WebAssembly.</p>
 
 
 ## Upcoming Appearances
@@ -133,6 +133,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
 * [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
 * [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
 * [This Week in Spring - August 16th, 2022](https://spring.io/blog/2022/08/16/this-week-in-spring-august-16th-2022) (2022-08-16) 
@@ -142,7 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - August 1st, 2022](https://spring.io/blog/2022/08/02/this-week-in-spring-august-1st-2022) (2022-08-02) 
 * [A Bootiful Podcast: RabbitMQ rabbit-herder Dan Carwin](https://spring.io/blog/2022/07/28/a-bootiful-podcast-rabbitmq-rabbit-herder-dan-carwin) (2022-07-28) 
 * [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
-* [A Bootiful Podcast: Spring Cloud and Spring Cloud Kubernetes contributor Ryan Baxter](https://spring.io/blog/2022/07/21/a-bootiful-podcast-spring-cloud-and-spring-cloud-kubernetes-contributor-ryan-baxter) (2022-07-21) 
 
 ## Abstracts
 
@@ -177,4 +177,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
 <li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this section we'll look at a few ways to distribute these longer-running wo
+<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this sect
