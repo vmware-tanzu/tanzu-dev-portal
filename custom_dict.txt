@@ -8,6 +8,7 @@
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
+[0-9]*px
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
@@ -449,6 +450,7 @@ COVID-19
 cpu(s)?
 CPU(s)?
 CQL
+Craigslist
 CRD.
 CRD(s|-based)?
 create-load-balancer
@@ -758,6 +760,7 @@ firewalling
 Fiscus
 Flake8
 flatlined
+[Ff]lexbox
 Florea
 Florent
 [fF]luent[Bb]it
@@ -932,11 +935,13 @@ GUID(s)?
 Gunicorn
 Guntur
 gzip(ped)?
+H[0-9]
 H2
 hackathons
 Hackenburg
 hacky
 Hadlow
+Haines
 Hamano
 Hananiel
 handleNotification
@@ -1420,6 +1425,7 @@ microservice.
 microservices-oriented
 Microsystems
 mid-1990s
+[Mm]iddleground
 [Mm]iddleware
 Migros
 Mik
@@ -1538,6 +1544,7 @@ non-Kubernetes
 non-routable
 non-schedulable
 nonblocking
+[Nn]orming
 NoSQL
 NotificationListener
 npm
@@ -1775,6 +1782,7 @@ primaryBucketCount
 PrimaryRoutingFunction
 PriorityClass(es)?
 Priyanka
+[Pp]roactivity
 processServerMetrics
 Procfile
 Procfile(s)?
@@ -1854,6 +1862,7 @@ Recommender
 RedirectUri
 [rR]edis
 redistributable
+[Rr]edline(s)?
 RedMonk('s)?
 [Rr]edux
 Reenvisioning
@@ -2041,6 +2050,7 @@ Sharat_Chander
 sharded
 Sharepoint
 Sheasha
+[Ss]heetrock
 Shellshock
 Shipley
 Shopen
@@ -2321,6 +2331,7 @@ userDetails
 [Uu]sings
 Util(s)?
 UX
+UX/UI
 v[0-9]
 [Vv][123]
 Vaadin
@@ -2486,15 +2497,3 @@ Zynga
 μServices
 Ϟ
 ϟ
-[Nn]orming
-[0-9]*px
-[Ff]lexbox
-H[0-9]
-Haines
-[Rr]edline(s)?
-[Pp]roactivity
-Craigslist
-Figma
-[Ss]heetrock
-[Mm]iddleground
-UX/UI
