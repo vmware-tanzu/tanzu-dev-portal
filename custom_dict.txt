@@ -690,6 +690,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Engelbert
 Enlightning
 Enqueueing
 enricher
@@ -2248,6 +2249,7 @@ TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
+TimescaleDB
 [Tt]imesheet(s)?
 TimingGatewayEventFilter
 Timo
