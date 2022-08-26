@@ -692,6 +692,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Engelbert
 Enlightning
 Enqueueing
 enricher
@@ -1105,6 +1106,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+iTerm2
 ITQ
 ITSM
 Ivanov
@@ -1396,6 +1398,7 @@ Maciaszek-Sharma
 Madhav
 Madhura
 Mahoney
+Majumder
 [mM]akefile
 Manachi
 Manulife
@@ -2116,6 +2119,7 @@ Soluto('s)?
 SomeRegion
 SonicDMG
 [Ss]onobuoy
+Soumik
 SourceTester
 Sox
 SpanI[Dd](s)?
@@ -2266,6 +2270,7 @@ TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
+TimescaleDB
 [Tt]imesheet(s)?
 TimingGatewayEventFilter
 Timo
@@ -2433,6 +2438,7 @@ VPC
 vRealize
 vRLI
 vSAN
+VSCode(-bash)?
 vsd
 vsd's
 VSIX
