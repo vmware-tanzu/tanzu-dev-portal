@@ -1392,6 +1392,7 @@ Maciaszek-Sharma
 Madhav
 Madhura
 Mahoney
+Majumder
 [mM]akefile
 Manachi
 Manulife
@@ -2102,6 +2103,7 @@ Soluto('s)?
 SomeRegion
 SonicDMG
 [Ss]onobuoy
+Soumik
 SourceTester
 Sox
 [Ss]peedback
