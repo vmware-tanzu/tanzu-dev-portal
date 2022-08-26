@@ -516,6 +516,7 @@ Datadog
 Dataflow(s)?
 datagram
 DataJpaTest
+Datalog
 datapath
 dataset
 DataSet
@@ -556,6 +557,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+denylist
 Depedency
 dependant
 deployable
@@ -2062,6 +2064,7 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+SHA
 Sharat
 Sharat_Chander
 sharded
