@@ -1100,6 +1100,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+iTerm2
 ITQ
 ITSM
 Ivanov
@@ -2417,6 +2418,7 @@ VPC
 vRealize
 vRLI
 vSAN
+VSCode(-bash)?
 vsd
 vsd's
 VSIX
