@@ -4,6 +4,7 @@
 # one word per line to define a file override use ' - filename'
 # where filename is relative to this configuration file
 # add entries to bottom of file, will be sorted on commit
+#CoffeeOps
 
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
@@ -46,6 +47,7 @@ ACL(s)?
 ActiveDirectory
 ActiveMQ
 Activiti
+Acyclic
 add-on(s)?
 addAndReturnSize
 addAndReturnSizes
@@ -187,6 +189,7 @@ autowires
 Aviv
 Awaitility
 aws-encryption-provider
+B3
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 [Bb]ackpressure
@@ -198,6 +201,7 @@ Bai
 [Bb]alancer(')?(s)?
 Bam
 BankAccount
+Barrez
 Baruch
 base64(-encoded)?
 BaseFunction
@@ -395,6 +399,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+[Cc]o[Rr]outines
 Coby
 [Cc]odebase(s)?
 Codefresh
@@ -413,6 +418,7 @@ compareKeySets
 compareSingleValues
 composability
 [Cc]omposable
+Computas
 Conf
 Config-[Pp]rovider
 [Cc]onfig-server
@@ -437,7 +443,6 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
-CoRoutines
 Corry
 CORS
 cortado
@@ -680,6 +685,7 @@ ElasticSearch
 ELB(s)?
 Eleftheria
 Emad
+embodiments
 EMC
 EMEA
 EnableCachingDefinedRegions
@@ -688,6 +694,7 @@ EnableClusterConfiguration
 [Ee]nablement
 Endnotes
 enforce-node-allocatable
+Engelbert
 Enlightning
 Enqueueing
 enricher
@@ -754,6 +761,7 @@ fileshare
 FileSystemXmlApplicationContext
 Finchley
 FinTech
+fintech
 FIPS(-enabled|-approved)?
 firehose
 firewalling
@@ -763,6 +771,7 @@ flatlined
 [Ff]lexbox
 Florea
 Florent
+Flowable
 [fF]luent[Bb]it
 [fF]luentd('s)?
 FluxCD
@@ -777,6 +786,7 @@ foundaments
 Foxwell
 FP
 FQDN
+FrameLogger
 Frascati-Robinson
 freddygthatsme
 frictionless
@@ -884,6 +894,7 @@ GIS
 [Gg]ithub
 GitLabCI
 Gitops
+GITOPS-SECRET
 GitOps(-type)?
 Gitrepo
 GKE
@@ -958,6 +969,7 @@ Hayk
 Haytham
 Headspring
 [Hh]ealthcheck(s)?
+HealthIT
 Heartbleed
 Heen
 Heinemeier
@@ -974,6 +986,7 @@ High-Cardinality
 Hillegass
 Hinojosa
 hl_lines=4-5
+HL7
 HMAC
 Hobsons
 hoc
@@ -989,6 +1002,7 @@ HostEndpoint
 [Hh]ostname(s)?
 hostPath
 hostpath
+hotspot
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -1050,6 +1064,7 @@ Initializr
 injectable
 installable
 instantiation
+InstrumentationType
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1061,6 +1076,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+io
 IoC
 IOC
 IoT
@@ -1095,6 +1111,7 @@ istiod(-1-7-3)?
 IstioOperator
 ISV(s)
 iteratively
+iTerm2
 ITQ
 ITSM
 Ivanov
@@ -1109,6 +1126,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+Janeiro
 Jarvinen
 Jasso
 JavaBean
@@ -1157,6 +1175,7 @@ johnharris85
 Jonatan
 jonatan_ivanov
 JOP
+Joram
 JPA
 JProfiler
 JRE
@@ -1175,6 +1194,7 @@ JSP
 JSR-352
 JST
 judgement
+judgements
 julielerman
 Julien
 jumpbox
@@ -1196,7 +1216,7 @@ k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
-Kafka
+[Kk]afka
 [Kk]ail
 Kalashnykov
 Kamus
@@ -1207,6 +1227,7 @@ Karavi
 Kaspersky
 Kat
 [Kk]ata(s)?
+KCDC
 KEK(s)?
 Kendo
 kendrickcoleman
@@ -1228,6 +1249,7 @@ Kloosterhuis
 KMS
 (KMS|kms)-plugin(s)?
 knative
+KNative
 Knative-serving
 Knative-Serving
 knative-serving
@@ -1241,6 +1263,7 @@ Kpack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
+Kratix
 Kravitz
 krf
 Krisp
@@ -1380,6 +1403,7 @@ Maciaszek-Sharma
 Madhav
 Madhura
 Mahoney
+Majumder
 [mM]akefile
 Manachi
 Manulife
@@ -1403,7 +1427,9 @@ MBeanServer
 McGraw-Hill
 McLuckie
 MDAC
+MDC
 MDN
+Mehmandarov
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1445,6 +1471,7 @@ misconfigured
 [Mm]itigations
 MiXiT
 Mkyong
+moby
 Mockito
 MockMvc
 [Mm]ockup(s)?
@@ -1497,6 +1524,7 @@ MyPy
 mystream
 mytopic
 n8n
+n9H8KnYjVI
 NameCheap
 [Nn]amespace(.|d|-scoped|s|-managing|-level)?
 [Nn]amespacing
@@ -1523,12 +1551,14 @@ Network(Policy|Set)
 Neumann
 Neward
 NewRelic
+NewSpan
 NFJ?S
 NFT
 [Nn]ginx|NGINX
 NIC
 Nicoll
 NIST
+NixOS
 NLB(s)?
 NLog
 NMica
@@ -1593,11 +1623,13 @@ OOP
 OOTB
 OPA
 Opdyke
+[Oo]pen[Zz]ipkin
 OpenAPI(Tools)?
 OpenFeign
 OpenGitOps
 OpenId
 OpenID
+OpenLDAP
 OpenShift
 OpenSource
 OpenSSL
@@ -1834,6 +1866,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+RateLimited
 Ravi
 RBAC(-enabled)?
 RCE
@@ -1846,6 +1879,7 @@ reachability
 reactively
 ReactiveUI
 ReactiveX
+ReactorSleuth
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1879,6 +1913,7 @@ RegionObjectFilter
 RegionQueues
 RegionStats-partition-Trades
 (registry_)?external_url
+REGISTRY-REPO
 [rR]ego
 rehostable
 Reif
@@ -1959,6 +1994,8 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketRequester
+RSocketServer
 Ruckle
 Rudd
 Rumans
@@ -1967,12 +2004,14 @@ runnable
 Runtimes
 runtimes?
 Rushton
+Rustam
 RxJS
 Ryzen
 [sS]3
 SaaS
 SaaS(-based)?
 Sadogursky
+Saïd
 Saikali
 Salaboy
 salaboy
@@ -2068,15 +2107,20 @@ skillset
 Skyscanner
 SLA(s)?
 Sletten
+SleuthReactorProperties
+SleuthRSocketProperties
+SLF4J
 SLI(s)?
 slideshare
 SLO(s)?
+SLOConf
 Sloka
 SmartTV
 SMB
 SME
 SMI
 SMTP
+smtp-sink
 Smythe
 Snapchat
 SNI
@@ -2085,8 +2129,10 @@ Soluto('s)?
 SomeRegion
 SonicDMG
 [Ss]onobuoy
+Soumik
 SourceTester
 Sox
+SpanI[Dd](s)?
 [Ss]peedback
 SPEL
 SPIFFE
@@ -2165,6 +2211,7 @@ subregistry
 substring
 Sudesh
 sudo
+Superclass
 superset
 svc
 SVID(s)?
@@ -2175,6 +2222,7 @@ SweetKiller9
 Syer
 symlink
 symposia
+Syntasso
 Sysdig
 Syslog
 [Ss]ysprep
@@ -2193,6 +2241,7 @@ TBD
 TCE
 tchotchke
 TCP
+tcp
 TCP-
 tdc-carvel-examples
 tdp-guide
@@ -2201,6 +2250,8 @@ TechRepublic
 TeeFilter
 Tekton-based
 Tekton('s)?
+TektonCD
+tektoncd
 [Tt]elco(s)*
 telecom
 [Tt]elematics
@@ -2229,10 +2280,12 @@ TikTok
 Tilt(file|Cloud)?
 [Tt]imebox(ed)?
 [Tt]imeboxing
+TimescaleDB
 [Tt]imesheet(s)?
 TimingGatewayEventFilter
 Timo
 TKG
+TKGm
 tlberglund
 TLS(-enabled)?
 TNS
@@ -2253,7 +2306,9 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+TraceReactorAutoConfiguration
 traceroute
+TracingRSocketConnectorConfigurer
 tradeoff(s)?
 Tradeoffs
 Traefik
@@ -2366,6 +2421,7 @@ VerticalPodAutoscaler
 veth-jelly
 Vetter
 vExpert
+viewport
 Vikram
 Viktor
 Villnow
@@ -2377,6 +2433,7 @@ virtualized
 VirtualService
 visualise
 VisualVM
+Vitor
 Vlissides
 VMCachedDeserializable
 VMs?
@@ -2392,6 +2449,7 @@ VPC
 vRealize
 vRLI
 vSAN
+VSCode(-bash)?
 vsd
 vsd's
 VSIX
@@ -2428,6 +2486,7 @@ WebForm(s)?
 [Ww]ebforms
 [Ww]ebhook(-based|s)?
 WebLogic
+WebMVC
 Webpage
 WebRequest
 WebSocket
@@ -2465,6 +2524,7 @@ x64
 Xcode
 Xing
 XKCD
+XMPP
 XP
 XSalsa20
 Xu
@@ -2488,8 +2548,11 @@ YTT
 ytt(-templatized)?
 Zalando
 ZDNet
+Zenika
 Zhen
+Zino
 [Zz]ipkin
+ZipkinSenderProperties
 ZOP
 Zou
 Zuul
