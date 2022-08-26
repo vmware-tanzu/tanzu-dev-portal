@@ -15,7 +15,7 @@ At Tanzu Labs, we love Lean and Agile because of the flexibility it affords us t
 
 There are ways to avoid making bad decisions. If you or your team is in the position to choose***** the design system you use (or whether you use one at all),  there are plenty of things to do to buy down your risk and feel confident in the decisions you’re about to make. Rallying as a balanced team to ask the right questions about yourselves, and your product can make all the difference. 
 
-_*If you’re in a position where these decisions have been made or will be made for you, check out these pointers around [Inheriting a Design System](#heading=h.dprmrsiz082i)_
+_*If you’re in a position where these decisions have been made or will be made for you, check out these pointers around Inheriting a Design System in the section later on in this guide_
 
 
 ### Learn About Your Team
@@ -27,7 +27,7 @@ Early in your engagement, try to have a session with your team that allows you t
 * **Start building shared ownership** with the understanding that design systems are not a “design thing”—they’re a balanced team thing. 
 * Gauge your team members’ experience and familiarity with design systems as a whole.
 * Gauge your team members’ experience and familiarity with a _specific _design system that you might be using.
-* Discuss potentially [confusing terminology](#heading=h.z4rp9g4nvq19) in the design system space and start to align on ubiquitous language (if doing so makes sense for your team).
+* Discuss potentially confusing terminology in the design system space and start to align on ubiquitous language (if doing so makes sense for your team).
 * Set expectations and build relationships that allow lean negotiations to take place around design/features/UI.
 
 The following are suggestions for prompts and questions to help get the conversation started:

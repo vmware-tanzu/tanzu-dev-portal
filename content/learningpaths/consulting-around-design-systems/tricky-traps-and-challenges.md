@@ -258,7 +258,7 @@ There’s no getting around this one. Some big decisions around design systems a
 
 #### What you can do
 
-It’s important that you do everything in your power to make good, well-informed decisions. Check out some of the sections below to help navigate these choices whether you’re [choosing a design system](#heading=h.d37dn5mmcyqr) or [inheriting one](#heading=h.dprmrsiz082i).
+It’s important that you do everything in your power to make good, well-informed decisions. Check out some of the sections below to help navigate these choices whether you’re choosing a design system or inheriting one.
 
 
 ### Proficiency and Experience
@@ -268,7 +268,7 @@ Software folk come from all manner of backgrounds, so it’s not uncommon for yo
 
 #### What you can do
 
-Remember, empathy first. It’s no fun to not know something you feel like you should. Look for ways to help your team deepen their understanding of design systems, and remember to stay open to learning yourself. We work in an ever-changing industry, and “knowing” anything is always risky. Treat every team and every system like a new opportunity, and consider doing some [design-system-focused norming](#heading=h.4n5kqmvhy0ii) among product teams.
+Remember, empathy first. It’s no fun to not know something you feel like you should. Look for ways to help your team deepen their understanding of design systems, and remember to stay open to learning yourself. We work in an ever-changing industry, and “knowing” anything is always risky. Treat every team and every system like a new opportunity, and consider doing some design-system-focused norming among product teams.
 
 
 ### Management and Maintenance
