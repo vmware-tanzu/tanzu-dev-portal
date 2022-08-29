@@ -1287,6 +1287,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
+Kubernetes-wide
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 Kubeseal
@@ -1729,6 +1730,7 @@ Pluggable
 pluggable
 Pluralsight
 PMC
+POC
 POCO(s)?
 podcaster
 PodDisruptionBudget
@@ -1873,6 +1875,7 @@ Recommender
 [Rr]eddit
 RedirectUri
 [rR]edis
+redis-test
 redistributable
 RedMonk('s)?
 [Rr]edux
@@ -2033,6 +2036,8 @@ SecondaryRoutingFunction
 secretbox
 secretname
 secretsmanager
+SecretTemplate
+SecretTemplates
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -2112,6 +2117,7 @@ Spotify
 Spring-Cloud-Dataflow
 spring-petclinic
 springboot
+SpringBoot
 SpringBootTest
 Springdom
 SpringOne(2020)?
