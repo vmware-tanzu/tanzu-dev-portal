@@ -15,7 +15,7 @@ minutes: 120
 episode: "64"
 explicit: "yes"
 title: "The one with Rustam Mehmandarov"
-youtube: "WJtFW0o4Hho"
+youtube: "cwGFgYNJzno"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
