@@ -15,7 +15,7 @@ minutes: 120
 episode: "65"
 explicit: "yes"
 title: "The one with Soumik Majumder"
-#youtube: "cwGFgYNJzno"
+youtube: "tM79Z08WDkM"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
