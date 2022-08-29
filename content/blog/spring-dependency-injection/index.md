@@ -295,7 +295,7 @@ how to prepare them and put them into the ‘ServiceLocator’.
 
 If any dependency or feature of ‘ServiceLocator’ changes, the production code and tests need to change too.
 
-Imagine adding  a new dependency to the `prepare` method. First, it  needs to be put into the ’ServiceLocator’. This might imply questions like: 
+Imagine adding a new dependency to the `prepare` method. First, it  needs to be put into the `ServiceLocator`. This might imply questions like: 
 - “Is the dependency already there?”, 
 - “How is it cleaned up?”, 
 - “Can it handle duplicates?”, 
@@ -333,7 +333,7 @@ The constructor can be called and the required dependencies provided. The additi
 
 ```java
     @Test
-    void canCreateFitWaffle() {
+    void canCreateLowSugarWaffle() {
         //given
         MacronutrientsProvider lowSugarProvider = mock(MacronutrientsProvider.class);
         Mockito.when(lowSugarProvider.fetch()).thenReturn(new Macronutrients(5, 50, 10));
