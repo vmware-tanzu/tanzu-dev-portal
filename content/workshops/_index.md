@@ -15,7 +15,7 @@ menu:
 tags: []
 links:
 - title: Introduction to the Carvel tools
-  link: "/get-workshop/lab-carvel/"
+  link: "/get-workshop/lab-carvel"
   description: Introduction to Carvel, simple and composable tools for application
 - title: Installing Application Packages with kapp-controller
   link: "/get-workshop/lab-kapp-controller"
