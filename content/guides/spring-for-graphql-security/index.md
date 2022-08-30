@@ -26,7 +26,7 @@ level1: Building Modern Applications
 level2: Frameworks and Languages
 ---
 
-In a [previous guide](https://tanzu.vmware.com/developer/guides/spring-for-graphql/), I taught you how to create your first GraphQL API in Spring using Spring for GraphQL. This guide will walk you through the process of securing your APIs using Spring Security. If you have ever gone through the process of securing a REST API you will find this process slightly different.
+In a [previous guide](/guides/spring-for-graphql/), I taught you how to create your first GraphQL API in Spring using Spring for GraphQL. This guide will walk you through the process of securing your APIs using Spring Security. If you have ever gone through the process of securing a REST API you will find this process slightly different.
 
 For starters, there is a single entry point (`/graphql` by default) to your API. You can certainly secure that endpoint to make sure only authenticated users can access your API but how do you apply a more fine-grained control to individual queries or mutations? Those are the questions I will answer in this guide and by the end of it, you will be able to secure your GraphQL API with Spring Security.
 
