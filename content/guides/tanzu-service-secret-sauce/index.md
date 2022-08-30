@@ -74,7 +74,7 @@ Now that the operator is deployed, you can create a Redis cluster and database. 
 ytt -f https://raw.githubusercontent.com/gm2552/redis-secret-template/main/templates/redisEnterpriseClusterOperator/redisEnterpriseClusterTemplate.yaml -v service_namespace=service-instances -v instance_name=redis-test | kubectl apply -f-
 ```
 
-This will create a cluster and database named _redis-test_.  Once the cluster is ready, its configuration is written to a secret and service resource.
+This will create a cluster and database named `redis-test`.  Once the cluster is ready, its configuration is written to a secret and service resource.
 
 First validate that the cluster has been created and is operational by running the following command:
 ```sh
