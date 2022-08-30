@@ -34,7 +34,7 @@ For starters, there is a single entry point (`/graphql` by default) to your API.
 
 Please review the prerequisites before going through this guide.
 
-- This guide assumes that you have read my previous guide on “[Getting Started with Spring for GraphQL](https://tanzu.vmware.com/developer/guides/spring-for-graphql/)”.
+- This guide assumes that you have read my previous guide on “[Getting Started with Spring for GraphQL](/guides/spring-for-graphql/)”.
 - This guide will follow the [code in this branch](https://github.com/danvega/javabacks-secure/tree/start-here). Starting from scratch would just duplicate what we covered in the previous guide.
 - You have a basic understanding of Spring Security.
 
