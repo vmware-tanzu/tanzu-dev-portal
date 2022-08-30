@@ -1301,6 +1301,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
+Kubernetes-wide
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 Kubeseal
@@ -1751,6 +1752,7 @@ Pluggable
 pluggable
 Pluralsight
 PMC
+POC
 POCO(s)?
 podcaster
 PodDisruptionBudget
@@ -2061,6 +2063,8 @@ SecondaryRoutingFunction
 secretbox
 secretname
 secretsmanager
+SecretTemplate
+SecretTemplates
 security-spring-security-xml
 securityContext
 SecurityManager
