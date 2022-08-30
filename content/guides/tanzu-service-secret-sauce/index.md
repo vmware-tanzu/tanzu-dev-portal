@@ -33,7 +33,7 @@ This guide assumes the following prerequisites are met:
 * **kubectl** – You will use this to manage Kubernetes resources. Installation instructions are[ here](https://kubernetes.io/docs/tasks/tools/).
 * **Tanzu CLI** – You will use this to execute Tanzu specific operations. Install instructions are[ here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-install-tanzu-cli.html).
 * **YTT** – You will use this to install a supply chain with user provided values. Install instructions are[ here](https://carvel.dev/ytt/docs/v0.42.0/install/).
-* You will need permissive access to the TAP Kubernetes cluster with kubectl and Tanzu cli tools
+* You will need permissive access to the TAP Kubernetes cluster with kubectl and Tanzu CLI tools
 
 ## Service Bindings
 
