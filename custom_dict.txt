@@ -2116,7 +2116,6 @@ Spotify
 Spring-Cloud-Dataflow
 spring-petclinic
 springboot
-SpringBoot
 SpringBootTest
 Springdom
 SpringOne(2020)?
