@@ -133,8 +133,8 @@ public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
 1. Disable Cross-Site Request Forgery (CSRF)
 2. The user should be authenticated for any request in the application.
-3. Spring Security will never create an HttpSession and it will never use it to obtain the SecurityContext
-4. Spring Security’s HTTP Basic Authentication support is enabled by default. However, as soon as any servlet-based configuration is provided, HTTP Basic must be explicitly provided.
+3. Spring Security will never create an HttpSession and it will never use it to obtain the Security Context
+4. Spring Security’s HTTP Basic Authentication support is enabled by default. However, as soon as any servlet based configuration is provided, HTTP Basic must be explicitly provided.
 
 With this configuration in place restart the application and visit [http://localhost:8080/graphiql](http://localhost:8080/graphiql) and you will be presented with a browser login dialog. If you enter the username `user` and the generated password from the console you should be able to see the GraphiQL tool.
 
@@ -263,7 +263,7 @@ You can also test your queries with basic authentication in Postman
 
 ### Authenticated Principal
 
-Another scenario you might need to solve for is finding out who the logged-in user is. Let’s take the example of orders in our JavaBucks application. When I log in as a user and execute a query to find all orders I would expect to find all of the orders that belong to me, not every single order in the system.
+Another scenario you might need to solve for is finding out who the logged-in user is. Let’s take the example of orders in our sample application. When I log in as a user and execute a query to find all orders I would expect to find all of the orders that belong to me, not every single order in the system.
 
 If you open up `OrderController.java` you will notice the method `findAllOrders`. Currently, this method calls a method `findAll` in the `OrderService`. This isn’t exactly what you want because it will return all the orders in the collection.
 
