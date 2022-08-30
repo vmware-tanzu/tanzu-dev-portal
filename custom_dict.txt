@@ -1875,7 +1875,6 @@ Recommender
 [Rr]eddit
 RedirectUri
 [rR]edis
-redis-test
 redistributable
 RedMonk('s)?
 [Rr]edux
