@@ -133,6 +133,8 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [Microsoft is committed to the success of Java developers](https://spring.io/blog/2022/08/30/microsoft-is-committed-to-the-success-of-java-developers) (2022-08-30) 
+* [This Week in Spring - August 30th, 2022](https://spring.io/blog/2022/08/30/this-week-in-spring-august-30th-2022) (2022-08-30) 
 * [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
 * [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
 * [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
@@ -141,8 +143,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - August 9th, 2022](https://spring.io/blog/2022/08/09/this-week-in-spring-august-9th-2022) (2022-08-09) 
 * [A Bootiful Podcast: Observability guru Jonatan Ivanov on the future of observability in Spring Boot](https://spring.io/blog/2022/08/04/a-bootiful-podcast-observability-guru-jonatan-ivanov-on-the-future-of-observability-in-spring-boot) (2022-08-04) 
 * [This Week in Spring - August 1st, 2022](https://spring.io/blog/2022/08/02/this-week-in-spring-august-1st-2022) (2022-08-02) 
-* [A Bootiful Podcast: RabbitMQ rabbit-herder Dan Carwin](https://spring.io/blog/2022/07/28/a-bootiful-podcast-rabbitmq-rabbit-herder-dan-carwin) (2022-07-28) 
-* [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 
 ## Abstracts
 
@@ -177,4 +177,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
 <li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
 <li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this sect
+<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? I
