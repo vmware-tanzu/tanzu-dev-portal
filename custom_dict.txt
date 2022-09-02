@@ -537,6 +537,7 @@ dbkey
 dbuser
 DDD
 DDL
+De
 de
 de-duplicate
 de-facto
@@ -2451,6 +2452,7 @@ vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Voicify
+Volder
 Vonge
 VPA(s|'s)?
 VPC
