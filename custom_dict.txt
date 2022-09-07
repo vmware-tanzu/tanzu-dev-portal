@@ -520,6 +520,7 @@ Datadog
 Dataflow(s)?
 datagram
 DataJpaTest
+Datalog
 datapath
 dataset
 DataSet
@@ -537,6 +538,7 @@ dbkey
 dbuser
 DDD
 DDL
+De
 de
 de-duplicate
 de-facto
@@ -560,6 +562,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+denylist
 Depedency
 dependant
 deployable
@@ -2091,6 +2094,7 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+SHA
 Sharat
 Sharat_Chander
 sharded
@@ -2451,6 +2455,7 @@ vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Voicify
+Volder
 Vonge
 VPA(s|'s)?
 VPC
