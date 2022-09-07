@@ -9,6 +9,7 @@
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
+[0-9]*px
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tgz
@@ -46,6 +47,7 @@ ACL(s)?
 ActiveDirectory
 ActiveMQ
 Activiti
+Acyclic
 add-on(s)?
 addAndReturnSize
 addAndReturnSizes
@@ -187,6 +189,7 @@ autowires
 Aviv
 Awaitility
 aws-encryption-provider
+B3
 ([Bb]ack|[Ff]ront)end(s)?
 [Bb]ackfill
 [Bb]ackpressure
@@ -396,6 +399,7 @@ CNI
 CNI-[Pp]lugin(s)?
 CNI-specific
 co-organiser
+[Cc]o[Rr]outines
 Coby
 [Cc]odebase(s)?
 Codefresh
@@ -439,7 +443,6 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
-CoRoutines
 Corry
 CORS
 cortado
@@ -452,6 +455,7 @@ COVID-19
 cpu(s)?
 CPU(s)?
 CQL
+Craigslist
 CRD.
 CRD(s|-based)?
 create-load-balancer
@@ -534,6 +538,7 @@ dbkey
 dbuser
 DDD
 DDL
+De
 de
 de-duplicate
 de-facto
@@ -766,6 +771,7 @@ firewalling
 Fiscus
 Flake8
 flatlined
+[Ff]lexbox
 Florea
 Florent
 Flowable
@@ -783,6 +789,7 @@ foundaments
 Foxwell
 FP
 FQDN
+FrameLogger
 Frascati-Robinson
 freddygthatsme
 frictionless
@@ -942,11 +949,13 @@ GUID(s)?
 Gunicorn
 Guntur
 gzip(ped)?
+H[0-9]
 H2
 hackathons
 Hackenburg
 hacky
 Hadlow
+Haines
 Hamano
 Hananiel
 handleNotification
@@ -996,6 +1005,7 @@ HostEndpoint
 [Hh]ostname(s)?
 hostPath
 hostpath
+hotspot
 HPA(s)?
 (HPA|hpa)-(S|s)ender
 HSM(s)?
@@ -1057,6 +1067,7 @@ Initializr
 injectable
 installable
 instantiation
+InstrumentationType
 Integrallis
 [Ii]ntegrations
 IntelliJ
@@ -1068,6 +1079,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+io
 IoC
 IOC
 IoT
@@ -1117,6 +1129,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+jakubpilimon
 Janeiro
 Jarvinen
 Jasso
@@ -1207,7 +1220,7 @@ k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
-Kafka
+[Kk]afka
 [Kk]ail
 Kalashnykov
 Kamus
@@ -1291,6 +1304,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
+Kubernetes-wide
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 Kubeseal
@@ -1301,6 +1315,7 @@ KUTTL
 KVM2
 Kyverno
 labelset
+Lampson
 lastAccessedTime
 latencies
 LaunchDarkly
@@ -1418,6 +1433,7 @@ MBeanServer
 McGraw-Hill
 McLuckie
 MDAC
+MDC
 MDN
 Mehmandarov
 [Mm]entorship
@@ -1441,6 +1457,7 @@ microservice.
 microservices-oriented
 Microsystems
 mid-1990s
+[Mm]iddleground
 [Mm]iddleware
 Migros
 Mik
@@ -1539,7 +1556,9 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 Neward
+newing
 NewRelic
+NewSpan
 NFJ?S
 NFT
 [Nn]ginx|NGINX
@@ -1562,6 +1581,7 @@ non-Kubernetes
 non-routable
 non-schedulable
 nonblocking
+[Nn]orming
 NoSQL
 NotificationListener
 npm
@@ -1610,6 +1630,7 @@ OOP
 OOTB
 OPA
 Opdyke
+[Oo]pen[Zz]ipkin
 OpenAPI(Tools)?
 OpenFeign
 OpenGitOps
@@ -1734,6 +1755,7 @@ Pluggable
 pluggable
 Pluralsight
 PMC
+POC
 POCO(s)?
 podcaster
 PodDisruptionBudget
@@ -1800,6 +1822,7 @@ primaryBucketCount
 PrimaryRoutingFunction
 PriorityClass(es)?
 Priyanka
+[Pp]roactivity
 processServerMetrics
 Procfile
 Procfile(s)?
@@ -1851,6 +1874,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+RateLimited
 Ravi
 RBAC(-enabled)?
 RCE
@@ -1863,6 +1887,7 @@ reachability
 reactively
 ReactiveUI
 ReactiveX
+ReactorSleuth
 [Rr]eadiness([Pp]robe)?
 README
 RealBankAccount
@@ -1879,6 +1904,7 @@ Recommender
 RedirectUri
 [rR]edis
 redistributable
+[Rr]edline(s)?
 RedMonk('s)?
 [Rr]edux
 Reenvisioning
@@ -1976,6 +2002,8 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketRequester
+RSocketServer
 Ruckle
 Rudd
 Rumans
@@ -2038,6 +2066,8 @@ SecondaryRoutingFunction
 secretbox
 secretname
 secretsmanager
+SecretTemplate
+SecretTemplates
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -2070,6 +2100,7 @@ Sharat_Chander
 sharded
 Sharepoint
 Sheasha
+[Ss]heetrock
 Shellshock
 Shipley
 Shopen
@@ -2087,6 +2118,9 @@ skillset
 Skyscanner
 SLA(s)?
 Sletten
+SleuthReactorProperties
+SleuthRSocketProperties
+SLF4J
 SLI(s)?
 slideshare
 SLO(s)?
@@ -2109,6 +2143,7 @@ SonicDMG
 Soumik
 SourceTester
 Sox
+SpanI[Dd](s)?
 [Ss]peedback
 SPEL
 SPIFFE
@@ -2187,6 +2222,7 @@ subregistry
 substring
 Sudesh
 sudo
+Superclass
 superset
 svc
 SVID(s)?
@@ -2238,6 +2274,7 @@ Teppanyaki
 TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
+[Tt]estability
 testability
 TestServiceBusConfigIsConfiguredReturnsFalse
 TestServiceBusConfigIsConfiguredReturnsTrue
@@ -2281,7 +2318,9 @@ toString
 totalProcessingTime
 totalQueueTime
 totalTransmissionTime
+TraceReactorAutoConfiguration
 traceroute
+TracingRSocketConnectorConfigurer
 tradeoff(s)?
 Tradeoffs
 Traefik
@@ -2359,6 +2398,7 @@ userDetails
 [Uu]sings
 Util(s)?
 UX
+UX/UI
 v[0-9]
 [Vv][123]
 Vaadin
@@ -2415,6 +2455,7 @@ vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Voicify
+Volder
 Vonge
 VPA(s|'s)?
 VPC
@@ -2458,6 +2499,7 @@ WebForm(s)?
 [Ww]ebforms
 [Ww]ebhook(-based|s)?
 WebLogic
+WebMVC
 Webpage
 WebRequest
 WebSocket
@@ -2523,6 +2565,7 @@ Zenika
 Zhen
 Zino
 [Zz]ipkin
+ZipkinSenderProperties
 ZOP
 Zou
 Zuul

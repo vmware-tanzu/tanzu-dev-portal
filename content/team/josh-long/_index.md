@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Dr. Kris De Volder on Spring Tools, VS Code, and so much more
+**2022-09-01** [listen](https://api.bootifulpodcast.fm/podcasts/6f27d0b7-7324-4828-9c15-dc7c85e0978f/produced-audio) <p>Hi, Spring fans! In this episode Josh Long talks to Dr. Kris De Volder, a longtime member of the Spring Tools team, about all the cool stuff he's worked on and is going to work on. And then we get knee deep into a discussion around building IDE integrations.</p>
+
 ### Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert 
 **2022-08-25** [listen](https://api.bootifulpodcast.fm/podcasts/5020a28e-206f-4edf-bbae-a5c8517cc417/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert (@noctarius2k) about PostgreSQL, Java, time series databases, observability, and so much more.</p>
 
@@ -90,12 +93,23 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 ### Spring Developer Advocate Dan Vega 
 **2022-06-30** [listen](https://api.bootifulpodcast.fm/podcasts/1396a2af-8cf3-42e1-8083-71aa8c18eeb8/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to fellow Spring Developer Advocate Dan Vega (@therealdanvega)</p>
 
-### JVM and .NET legend Ted Neward on... just about everything 
-**2022-06-23** [listen](https://api.bootifulpodcast.fm/podcasts/032bfb82-673f-4a24-9521-4316161e615d/produced-audio) <p>Hi, Spring fans! In this installment, <a href="https://twitter.com/starbuxman">I (@starbuxman)</a> talk to my old friend, world-famous polyglot, code curmudgeon, software philosopher, industry veteran, and legend of ecosystems aplenty, <a href="https://twitter.com/tedneward">Ted Neward (@tedneward)</a></p>
-
 
 ## Upcoming Appearances
 
+### Devoxx Ukraine charity event
+**2022-09-02** - I'll be speaking at the Devoxx Ukraine charity event about 'Kubernetes Native Java' - join us!
+
+### J4K 2022
+**2022-09-28** - I'll be speaking at this year's J4K event online! Let's see how Spring and Kubernetes play well together.
+
+### Kafka Summit
+**2022-10-04** - I'll be speaking at the Kafka Summit in Las Vegas! Join me and we'll look at stream processing, together!
+
+### i Code Java conference
+**2022-10-12** - Join me virtually, won't you, for the I Code Java show
+
+### JavaOne
+**2022-10-18** - I'm so elated to be returning to the first in-person JavaOne event in more than a couple of years! I'll see you there!
 
 
 ## Recent Spring Tips
@@ -133,16 +147,16 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - September 5th, 2022](https://spring.io/blog/2022/09/06/this-week-in-spring-september-5th-2022) (2022-09-06) 
+* [A Bootiful Podcast: Dr. Kris De Volder on Spring Tools, VS Code, and so much more](https://spring.io/blog/2022/09/01/a-bootiful-podcast-dr-kris-de-volder-on-spring-tools-vs-code-and-so-much-more) (2022-09-01) 
+* [Price Reduction - Azure Spring Apps does more, costs less!](https://spring.io/blog/2022/08/31/price-reduction-azure-spring-apps-does-more-costs-less) (2022-08-31) 
+* [Microsoft is committed to the success of Java developers](https://spring.io/blog/2022/08/30/microsoft-is-committed-to-the-success-of-java-developers) (2022-08-30) 
+* [This Week in Spring - August 30th, 2022](https://spring.io/blog/2022/08/30/this-week-in-spring-august-30th-2022) (2022-08-30) 
 * [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
 * [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
 * [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
 * [This Week in Spring - August 16th, 2022](https://spring.io/blog/2022/08/16/this-week-in-spring-august-16th-2022) (2022-08-16) 
 * [A Bootiful Podcast: the good Dr. Venkat Subramaniam](https://spring.io/blog/2022/08/11/a-bootiful-podcast-the-good-dr-venkat-subramaniam) (2022-08-11) 
-* [This Week in Spring - August 9th, 2022](https://spring.io/blog/2022/08/09/this-week-in-spring-august-9th-2022) (2022-08-09) 
-* [A Bootiful Podcast: Observability guru Jonatan Ivanov on the future of observability in Spring Boot](https://spring.io/blog/2022/08/04/a-bootiful-podcast-observability-guru-jonatan-ivanov-on-the-future-of-observability-in-spring-boot) (2022-08-04) 
-* [This Week in Spring - August 1st, 2022](https://spring.io/blog/2022/08/02/this-week-in-spring-august-1st-2022) (2022-08-02) 
-* [A Bootiful Podcast: RabbitMQ rabbit-herder Dan Carwin](https://spring.io/blog/2022/07/28/a-bootiful-podcast-rabbitmq-rabbit-herder-dan-carwin) (2022-07-28) 
-* [This Week in Spring - July 26th, 2022](https://spring.io/blog/2022/07/26/this-week-in-spring-july-26th-2022) (2022-07-26) 
 
 ## Abstracts
 
@@ -175,6 +189,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Routing and Load-Balancing</em> - where does your service live? How do your clients find it? How do you handle custom routing requirements? How do you handle custom load-balancing? (Spring Cloud, Ribbon)</p></li>
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
-<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as our processing needs demand. (Spring Batch, Spring Integration)</p></li>
-<li><p><em>Reliability Patterns</em> - In this section we'll look at how to employ retries and circuit breakers to build fault-tolerence into service invocations. We'll look at approaches to gracefully degrade if a service invocation should fail. (Spring Cloud Hystrix, Spring Retry, Spring Boot)</p></li>
-<li><p><em>Ad-hoc Task Processing</em> - Need to send an email? Resize an image? Generate a report? In this sect
+<li><p><em>Partitioned Batch Processing</em> - In this section we'll loo
