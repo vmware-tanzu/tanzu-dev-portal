@@ -79,7 +79,7 @@ To install `kapp-controller`, follow the [Getting Started with kapp-controller g
 
 The Kubernetes [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is an API object that provides routes for traffic (`HTTP` and `HTTPS`) from outside the cluster to services within the cluster.
 
-To satisfy an Ingress, you need an [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The reposirtory that was added has a package for the [Contour](https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/) Ingress Controller.
+To satisfy an Ingress, you need an [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The repository that was added has a package for the [Contour](https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/) Ingress Controller.
 
 The Grafana package, which you will be installing in the next section, needs an Ingress Controller. Additionally, you will need this Ingress Controller for enabling TLS later.
 
