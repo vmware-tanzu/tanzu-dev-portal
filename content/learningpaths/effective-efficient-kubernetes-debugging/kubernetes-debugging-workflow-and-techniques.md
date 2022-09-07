@@ -27,9 +27,6 @@ In this section, you will learn:
 
 To help solidify your learning, it is recommended that you learn
 these commands, because they work on vanilla and a majority of Kubernetes releases. 
-You can use the [Tanzu Community Edition
-(TCE)](https://tanzu.vmware.com/tanzu/community) to stand up a local single 
-node cluster on your laptop for learning purposes.
 
 Note: A discussion about ephemeral debug containers is further in this section. It is
 recommended that you use Kubernetes version 1.23 for the beta release of this feature,

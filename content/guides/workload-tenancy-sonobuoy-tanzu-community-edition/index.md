@@ -2,13 +2,12 @@
 date: '2021-03-09'
 lastmod: '2021-02-22'
 parent: Workload Tenancy
-description: Using Sonobuoy for cluster conformance testing with Tanzu Community Edition
+description: Using Sonobuoy for cluster conformance testing with Kubernetes
 tags:
 - sonobuoy
-- tanzu community edition
 team:
 - Tiffany Jernigan
-title: Sonobuoy for CNCF Conformance and VMware Tanzu Community Edition
+title: Sonobuoy for CNCF Conformance and Kubernetes
 level1: Building Kubernetes Runtime
 level2: Building Your Kubernetes Platform
 ---

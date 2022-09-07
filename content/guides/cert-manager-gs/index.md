@@ -28,18 +28,14 @@ Alright, you're sold on cert-manager. How do you get started with it? In the fol
 
 ## Prerequisites
 
-* A Kubernetes cluster – This guide assumes you are using a [VMware Tanzu Community Edition](https://tanzucommunityedition.io/) cluster. It has all the software you will be using as packages. However, guidance will be provided for other cluster types.
+* A Kubernetes cluster
 * [Docker](https://docs.docker.com/get-docker/) installed –  or have a tool like `getent` to get an IP address from a load balancer.
 
-### Optional: For a non–Tanzu Community Edition Cluster
-
-If you’re not using a Tanzu Community Edition cluster, you can still use its package repository with your cluster. To install it that way, you will need the Carvel tool, [kapp-controller](https://carvel.dev/kapp-controller/). 
+Add the package repository with your cluster. To install it, you will need the Carvel tool, [kapp-controller](https://carvel.dev/kapp-controller/). 
 
 To install `kapp-controller`, follow the [Getting Started with kapp-controller guide](/guides/kubernetes/kapp-controller-gs/) and use the [Package Consumption section](/guides/kubernetes/kapp-controller-gs/) for the packages you install in this guide.
 
 ## Install cert-manager
-
-cert-manager is available within Tanzu Community Edition and will often be one of the first packages you install in a cluster.
 
 1. Add the package repository.
 
@@ -83,7 +79,7 @@ cert-manager is available within Tanzu Community Edition and will often be one o
 
 The Kubernetes [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is an API object that provides routes for traffic (`HTTP` and `HTTPS`) from outside the cluster to services within the cluster.
 
-To satisfy an Ingress, you need an [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). Tanzu Community Edition has a package for the [Contour](https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/) Ingress Controller.
+To satisfy an Ingress, you need an [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). The repository that was added has a package for the [Contour](https://tanzu.vmware.com/developer/guides/service-routing-contour-to-ingress-and-beyond/) Ingress Controller.
 
 The Grafana package, which you will be installing in the next section, needs an Ingress Controller. Additionally, you will need this Ingress Controller for enabling TLS later.
 
@@ -103,7 +99,7 @@ The Grafana package, which you will be installing in the next section, needs an 
 
 ## Grafana
 
-You will use the Grafana dashboard for your website since it is a built-in package for Tanzu Community Edition.
+You will use the Grafana dashboard for your website.
 
 1. List available packages in your repository.
 
@@ -447,4 +443,4 @@ Set up [Prometheus](https://prometheus.io/) for metrics collection so you can ac
 
 * To discover the many rich use cases cert-manager supports, check out the [official docs](https://cert-manager.io/docs/) and [tutorials](https://cert-manager.io/docs/tutorials/).
 * Also, check out our guide [Installing Harbor on Kubernetes with Project Contour, Cert Manager, and Let’s Encrypt](https://tanzu.vmware.com/developer/guides/kubernetes/harbor-gs/) if you haven’t already.
-* To learn more about Tanzu Community Edition and Carvel, go to [tanzucommunityedition.io](https://tanzucommunityedition.io/) and [carvel.dev](https://carvel.dev/).
+* To learn more about Carvel, go to [carvel.dev](https://carvel.dev/).
