@@ -65,6 +65,7 @@ title: 'Price Reduction - Azure Spring Apps does more, costs less!'
   <li>Deploy Spring Boot applications by leveraging enterprise best practices ?&nbsp;<a href="https://docs.microsoft.com/en-us/azure/spring-cloud/reference-architecture">Azure Spring Apps Reference Architecture</a></li>
   <li>Migrate your&nbsp;<a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud">Spring Boot</a>,&nbsp;<a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud">Spring Cloud</a>,&nbsp;and&nbsp;<a href="https://aka.ms/migrate-tomcat-to-azure-spring-cloud-service">Tomcat</a>&nbsp;applications to Azure Spring Apps</li>
   <li>Wire Spring applications to&nbsp;<a href="https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/">interact with Azure services</a></li>
+  <li>For feedback and questions, please&nbsp;<a href="/cdn-cgi/l/email-protection#b1f0cbc4c3d4e2c1c3d8dfd6f2dddec4d59ce5d0dddaf1c2d4c3c7d8d2d49fdcd8d2c3dec2ded7c59fd2dedc">e-mail</a>&nbsp;us.</li>
  </ul>
 </div>
 
