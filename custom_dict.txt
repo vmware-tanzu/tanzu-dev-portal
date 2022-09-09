@@ -1183,6 +1183,7 @@ Joram
 JPA
 JProfiler
 JRE
+jreock
 JRuby
 JS
 json
@@ -1937,6 +1938,7 @@ Ren
 Renaud
 Renfro
 Renner
+Reock
 replatformed
 [Rr]eplatforming
 replatforming
