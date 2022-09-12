@@ -15,7 +15,7 @@ minutes: 120
 episode: "66"
 explicit: "yes"
 title: "The one with Justin Reock"
-#youtube: ""
+youtube: "7vXgOw6KMeQ"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
