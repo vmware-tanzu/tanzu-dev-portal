@@ -12,6 +12,7 @@
 [0-9]*px
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+.tanzuignore
 .tgz
 1:1s
 10x
@@ -2137,6 +2138,7 @@ smtp-sink
 Smythe
 Snapchat
 SNI
+Snyk
 SolidFire
 Soluto('s)?
 SomeRegion
@@ -2245,6 +2247,7 @@ tabpane
 Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
+tanzuignore
 targetPort
 Tarin
 TAS
@@ -2259,6 +2262,7 @@ TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
+Techdocs
 TechRepublic
 TeeFilter
 Tekton-based
