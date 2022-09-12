@@ -12,6 +12,7 @@
 [0-9]*px
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+.tanzuignore
 .tgz
 1:1s
 10x
@@ -2246,6 +2247,7 @@ tabpane
 Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
+tanzuignore
 targetPort
 Tarin
 TAS
