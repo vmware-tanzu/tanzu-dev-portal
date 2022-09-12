@@ -2137,6 +2137,7 @@ smtp-sink
 Smythe
 Snapchat
 SNI
+Snyk
 SolidFire
 Soluto('s)?
 SomeRegion
@@ -2259,6 +2260,7 @@ TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
+Techdocs
 TechRepublic
 TeeFilter
 Tekton-based
