@@ -1,6 +1,6 @@
 ---
 # Episode Live Time
-Date: '2022-09-13T14:30:00-07:00'
+Date: '2022-09-13T12:30:00-07:00'
 Description: "Episode: 11"
 PublishDate: '2022-09-12T00:00:00-07:00'
 date: '2022-09-13'
