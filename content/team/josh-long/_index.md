@@ -144,6 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - September 13th, 2022](https://spring.io/blog/2022/09/13/this-week-in-spring-september-13th-2022) (2022-09-13) 
 * [A Bootiful Podcast: Hashicorp's Rosemary Wang on securing the intersection of apps and ops with Hashicorp Vault](https://spring.io/blog/2022/09/08/a-bootiful-podcast-hashicorp-s-rosemary-wang-on-securing-the-intersection-of-apps-and-ops-with-hashicorp-vault) (2022-09-08) 
 * [This Week in Spring - September 5th, 2022](https://spring.io/blog/2022/09/06/this-week-in-spring-september-5th-2022) (2022-09-06) 
 * [A Bootiful Podcast: Dr. Kris De Volder on Spring Tools, VS Code, and so much more](https://spring.io/blog/2022/09/01/a-bootiful-podcast-dr-kris-de-volder-on-spring-tools-vs-code-and-so-much-more) (2022-09-01) 
@@ -153,7 +154,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
 * [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
 * [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
-* [This Week in Spring - August 16th, 2022](https://spring.io/blog/2022/08/16/this-week-in-spring-august-16th-2022) (2022-08-16) 
 
 ## Abstracts
 
@@ -185,4 +185,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Testing</em> - we'll look at the concepts of test-driven development. We'll cover unit testing individual components and mock them out. We'll look at how to test service interfaces. We'll look at how to write integration tests that don't sacrifice speed in order to be exhaustive using consumer driven contracts and consumer driven contract testing. (JUnit, Spring Boot, Spring MVC Test Framework, Spring Cloud Contract)</p></li>
 <li><p><em>Routing and Load-Balancing</em> - where does your service live? How do your clients find it? How do you handle custom routing requirements? How do you handle custom load-balancing? (Spring Cloud, Ribbon)</p></li>
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
-<li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Sprin
+<li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream,
