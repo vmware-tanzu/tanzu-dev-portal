@@ -284,6 +284,7 @@ Bundler
 [Bb]urstable
 Buschmann
 bytesOnlyOnDisk
+C4
 CA(s)?
 Cacheable
 CacheCallback
@@ -2112,6 +2113,7 @@ Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
 siloed
+simonbrown
 SingleMemberRegionSize
 SingleServer
 Sipe
@@ -2208,6 +2210,7 @@ StringBuilder
 Strobl
 stroopwafels
 struct
+Structurizr
 STS
 STT
 Styra
