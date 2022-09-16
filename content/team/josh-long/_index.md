@@ -63,6 +63,9 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Podcasts
 
+### Big data legend, former Pivot, and friend to the Spring community, Tim Spann 
+**2022-09-15** [listen](https://api.bootifulpodcast.fm/podcasts/486db005-2e7f-4c64-a6a5-c4835a525b5b/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to big data legend, former Pivot, and friend to the Spring community, Tim Spann (@PaaSDev), about big data, StreamNative, and Apache Pulsar. Get your notebooks ready for this one, class!</p>
+
 ### Hashicorp's Rosemary Wang on securing the intersection of apps and ops with Hashicorp Vault 
 **2022-09-08** [listen](https://api.bootifulpodcast.fm/podcasts/1b3a5bc8-9402-4343-b027-0532fc4cde45/produced-audio) <p>Hi, Spring fans! In this episode, Josh Long (@starbuxman) talks to Hashicorp Developer Advocate Rosemary Wang (@joatmon08) about a few Hashicorp technologies and their integrations with Spring Boot.</p>
 
@@ -89,9 +92,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ### Nate Schutta: The Thinking Person's Architect, My Friend, and Teammate
 **2022-07-14** [listen](https://api.bootifulpodcast.fm/podcasts/4ace9390-2c06-4d3c-a0f8-b61e0ca5f917/produced-audio) <p>Hi, Spring fans! In this installment, Josh Long (@starbuxman) talks to his friend, teammate, and architect extraordinaire, Nate Schutta (@ntschutta)</p>
-
-### Kubernetes contributor and fellow Tanzu Developer Advocate Leigh Capili
-**2022-07-07** [listen](https://api.bootifulpodcast.fm/podcasts/3ace4fe7-4a10-4a96-a2d1-c90d40c7da6f/produced-audio) <p>Hi, Spring fans! In this installment <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a> talks to fellow teammate and Kubernetes ecosystem legend <a href="https://twitter.com/capileigh">Leigh Capili (@capileigh)</a> about Gitops, Kubernetes, Puppet/Chef, continuous delivery, how zoom scales if you deploy on-prem, being a developer advocate, Flux, and so much more.</p>
 
 
 ## Upcoming Appearances
@@ -144,6 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [A Bootiful Podcast: big data legend, former Pivot, and friend to the Spring community, Tim Spann](https://spring.io/blog/2022/09/15/a-bootiful-podcast-big-data-legend-former-pivot-and-friend-to-the-spring-community-tim-spann) (2022-09-15) 
 * [This Week in Spring - September 13th, 2022](https://spring.io/blog/2022/09/13/this-week-in-spring-september-13th-2022) (2022-09-13) 
 * [A Bootiful Podcast: Hashicorp's Rosemary Wang on securing the intersection of apps and ops with Hashicorp Vault](https://spring.io/blog/2022/09/08/a-bootiful-podcast-hashicorp-s-rosemary-wang-on-securing-the-intersection-of-apps-and-ops-with-hashicorp-vault) (2022-09-08) 
 * [This Week in Spring - September 5th, 2022](https://spring.io/blog/2022/09/06/this-week-in-spring-september-5th-2022) (2022-09-06) 
@@ -153,7 +154,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [This Week in Spring - August 30th, 2022](https://spring.io/blog/2022/08/30/this-week-in-spring-august-30th-2022) (2022-08-30) 
 * [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
 * [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
-* [A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more](https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more) (2022-08-18) 
 
 ## Abstracts
 
@@ -185,4 +185,5 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Testing</em> - we'll look at the concepts of test-driven development. We'll cover unit testing individual components and mock them out. We'll look at how to test service interfaces. We'll look at how to write integration tests that don't sacrifice speed in order to be exhaustive using consumer driven contracts and consumer driven contract testing. (JUnit, Spring Boot, Spring MVC Test Framework, Spring Cloud Contract)</p></li>
 <li><p><em>Routing and Load-Balancing</em> - where does your service live? How do your clients find it? How do you handle custom routing requirements? How do you handle custom load-balancing? (Spring Cloud, Ribbon)</p></li>
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
-<li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream,
+<li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
+<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the pro
