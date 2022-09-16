@@ -1,19 +1,19 @@
 ---
-# TODO Episode Live Time UTC 2:30PM Central
-Date: "{{ now.Format "2006-01-02" }}T12:30:00-07:00"
-lastmod: "{{ now.Format "2006-01-02" }}"
-PublishDate: "{{ now.Format "2006-01-02" }}"
+# TODO Episode Live Time UTC?
+Date: "2022-09-27T12:30:00-07:00"
+lastmod: "2022-09-16"
+PublishDate: "2022-09-16"
 type: "tv-episode"
 # TODO
-title: "Coming Soon"
+title: "Episode 13 - Observablity with Jonatan Ivanov"
 # TODO
-episode: "0000"
+episode: "0013"
 explicit: 'no'
 hosts:
 - DaShaun Carter
 - Dan Vega
 # guests:
-# -
+- Jonatan Ivanov
 minutes: 60
 # TODO YouTube ID after posted
 youtube: ""
