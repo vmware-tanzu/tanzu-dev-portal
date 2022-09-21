@@ -1,13 +1,13 @@
 ---
-# TODO Episode Live Time UTC 2:30PM Central
-Date: "{{ now.Format "2006-01-02" }}T12:30:00-07:00"
-lastmod: "{{ now.Format "2006-01-02" }}"
-PublishDate: "{{ now.Format "2006-01-02" }}"
+# TODO Episode Live Time UTC?
+Date: "2022-09-20T12:30:00-07:00"
+lastmod: "2022-09-20"
+PublishDate: "2022-09-16"
 type: "tv-episode"
 # TODO
-title: "Coming Soon"
+title: "Episode 12"
 # TODO
-episode: "0000"
+episode: "0012"
 explicit: 'no'
 hosts:
 - DaShaun Carter
