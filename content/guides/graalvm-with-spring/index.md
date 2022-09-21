@@ -1,9 +1,9 @@
 ---
-title: Getting Started with GraalVM and Spring
-linkTitle: Getting Started with GraalVM and Spring
-description: Learn how to use GraalVM for JIT and AOT with Spring Boot
-date: "2022-08-10"
-lastmod: "2022-08-10"
+title: Getting Started with GraalVM and Spring Native
+linkTitle: Getting Started with GraalVM and Spring Native
+description: Learn how to use GraalVM for JIT and AOT with Spring Boot 2.7 and Spring Native
+date: "2022-09-21"
+lastmod: "2022-09-21"
 level1: Building Modern Applications
 level2: Frameworks and Languages
 tags:
@@ -66,10 +66,10 @@ with the Spring Initializr Web API.
 
 You are going to configure 4 different options for this guide.
 
+- choose Spring Boot 2.7.3
 - name the artifact
 - choose Java 17
 - include the `web`,`actuator` and `spring native` dependencies
-- use the latest version of Spring Boot
 
 ```bash
 # Make a new directory for your application
@@ -78,6 +78,7 @@ mkdir graalvm-with-spring
 cd graalvm-with-spring
 # Initialize a project via the Spring Initializer Web API
 curl https://start.spring.io/starter.tgz \
+-d bootVersion=2.7.3.RELEASE \
 -d groupId=dev.dashaun \
 -d artifactId=graalvm-with-spring \
 -d name=graalvm-with-spring \
@@ -112,7 +113,6 @@ Example output:
 Your application is up and running.
 Your application is reporting that its healthy.
 GraalVM with JIT compiling, doesn't require any extra thought, it just works, similar to other JVMs.
-You have just used the GraalVM JDK with JIT Compiling!
 
 #### Startup Time
 
@@ -164,18 +164,20 @@ $
 
 The size of the `jar` file is 19M.
 
+#### You have just used the GraalVM JDK with JIT Compiling!
 
 #### AOT compiling
 
-Spring Initializr created a `native` profile when we added the `spring-native` dependency.
+Spring Initializr created a `native` profile when you added the `spring-native` dependency.
 
 #### Packaging
 
-In order to use AOT compilation, use the `native` profile.
+In order to use AOT compilation, you need to use the `native` profile.
 
 ```bash
 ./mvnw -Pnative clean package -DskipTests
 ```
+> The warnings can safely be ignored for this guide.
 
 You will see that this approach takes much longer.
 AOT compiling evaluates all the accessible branches of code.
@@ -188,7 +190,7 @@ Additionally, the resulting binary can only be executed on the same OS+CPU archi
 
 #### Running
 
-The package output is a statically linked binary that can be ran natively.
+The package output is a statically linked binary that can be executed natively.
 Everything needed to run the application is included.
 
 ```bash
@@ -248,3 +250,7 @@ AOT compiling takes longer, up front.
 The result is a statically linked binary.
 It will consume less resources at runtime
 It will start up faster.
+
+#### Keep Learning
+
+[Spring Native Documentation](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/)
