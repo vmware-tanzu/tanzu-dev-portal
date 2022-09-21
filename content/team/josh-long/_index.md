@@ -144,6 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [This Week in Spring - September 20th, 2022](https://spring.io/blog/2022/09/20/this-week-in-spring-september-20th-2022) (2022-09-20) 
 * [A Bootiful Podcast: big data legend, former Pivot, and friend to the Spring community, Tim Spann](https://spring.io/blog/2022/09/15/a-bootiful-podcast-big-data-legend-former-pivot-and-friend-to-the-spring-community-tim-spann) (2022-09-15) 
 * [This Week in Spring - September 13th, 2022](https://spring.io/blog/2022/09/13/this-week-in-spring-september-13th-2022) (2022-09-13) 
 * [A Bootiful Podcast: Hashicorp's Rosemary Wang on securing the intersection of apps and ops with Hashicorp Vault](https://spring.io/blog/2022/09/08/a-bootiful-podcast-hashicorp-s-rosemary-wang-on-securing-the-intersection-of-apps-and-ops-with-hashicorp-vault) (2022-09-08) 
@@ -153,7 +154,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [Microsoft is committed to the success of Java developers](https://spring.io/blog/2022/08/30/microsoft-is-committed-to-the-success-of-java-developers) (2022-08-30) 
 * [This Week in Spring - August 30th, 2022](https://spring.io/blog/2022/08/30/this-week-in-spring-august-30th-2022) (2022-08-30) 
 * [A Bootiful Podcast: Fellow Java Champion and TimescaleDB developer advocate Christoph Engelbert](https://spring.io/blog/2022/08/25/a-bootiful-podcast-fellow-java-champion-and-timescaledb-developer-advocate-christoph-engelbert) (2022-08-25) 
-* [This Week in Spring - August 23rd, 2022](https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022) (2022-08-23) 
 
 ## Abstracts
 
@@ -186,4 +186,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Routing and Load-Balancing</em> - where does your service live? How do your clients find it? How do you handle custom routing requirements? How do you handle custom load-balancing? (Spring Cloud, Ribbon)</p></li>
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
-<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the pro
+<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale t

@@ -15,7 +15,7 @@ minutes: 120
 episode: "67"
 explicit: "yes"
 title: "The one with Simon Brown"
-#youtube: "7vXgOw6KMeQ"
+youtube: "VgfoqtPNA8s"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
