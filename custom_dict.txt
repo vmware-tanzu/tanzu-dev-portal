@@ -13,6 +13,8 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
+ServerlessDays
+Lian
 .tgz
 1:1s
 10x
