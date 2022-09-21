@@ -18,7 +18,7 @@ team:
 - Josh Long
 title: 'Spring Tips: Learn Spring for GraphQL (parts 5 and 6 of an ongoing series)'
 ---
-aaaaaaaa
+
 <div>
  <p>Hi, Spring fans! In thi^^^ these installments, we continue our series introducing the Spring for GraphQL project. This series features Spring for GraphQL lead <a href="https://twitter.com/rstoya05">Rossen Stoyanchev (@rstoya05)</a> - whose work you may know from basically everything in the wide and wonderful world of Springdom having to do with the web (HTTP, RSocket, WebSockets, GraphQL, JSF, MVC, etc) - and GraphQL Java engine founder and lead <a href="https://twitter.com/andimarek">Andi Marek (@andimarek)</a> and of course yours truly, Spring Developer Advocate <a href="https://twitter.com/starbuxman">Josh Long (@starbuxman)</a>. It provides an in-depth look at all things Spring for GraphQL.</p>
  <p>This week I?m publishing two new installments. </p>
