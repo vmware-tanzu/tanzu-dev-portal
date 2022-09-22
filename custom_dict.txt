@@ -13,8 +13,6 @@
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
-ServerlessDays
-Lian
 .tgz
 1:1s
 10x
@@ -1338,6 +1336,7 @@ Lerman
 letsencrypt-staging
 Leyden
 LF
+Lian
 libnss-wrapper
 libs
 [Ll]ifecycle
@@ -2089,6 +2088,7 @@ server2
 ServerConnection
 servercore
 [Ss]erverless
+ServerlessDays
 ServiceAccount(s)?
 ServiceEntry
 ServiceInfo(Creator)?
