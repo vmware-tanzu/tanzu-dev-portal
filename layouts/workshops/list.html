@@ -18,10 +18,11 @@
                         </div>
                     </div>
                     <div class="row h-100 flex-lg-nowrap product-links position-relative z-1 justify-content-between">
-                        {{ range .Params.links }}
-                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ .link | relURL }}">
-                            <h2 class="h4 link">{{ .title }}</h2>
-                            <p>{{ .description }}</p>
+                        {{ $featured := where (where .Site.Pages "Section" "workshops") ".Params.featured" true }}
+                        {{ range sort $featured ".Params.featuredweight" }}
+                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ printf "/get-workshop/%s" .Params.lab | relURL }}">
+                            <h2 class="h4 link">{{ .Params.title }}</h2>
+                            <p>{{ .Params.description }}</p>
                         </a>
                         {{ end }}
                     </div>

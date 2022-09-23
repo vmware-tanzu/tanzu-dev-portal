@@ -37,7 +37,6 @@ kapp-controller utilizes [`kapp`](https://carvel.dev/kapp/) to track the resourc
 
 Before you get started, you will need to do the following:
 * Create a Kubernetes cluster
-	* If you use a [Tanzu Community Edition](https://tanzucommunityedition.io/) cluster, it will have kapp-controller installed and package management integrated.
 * Install [`kubectl`](https://kubernetes.io/docs/tasks/tools/) locally
 * Install the **latest** `kapp`, `ytt`, and `imgpkg` CLIs via one of these options:
 	* [Homebrew](https://github.com/vmware-tanzu/homebrew-carvel)  

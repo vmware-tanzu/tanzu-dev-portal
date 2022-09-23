@@ -9,8 +9,10 @@
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
+[0-9]*px
 [R,r]eplatform
 (?:[APMCEI][ESD]T|UTC)
+.tanzuignore
 .tgz
 1:1s
 10x
@@ -282,6 +284,7 @@ Bundler
 [Bb]urstable
 Buschmann
 bytesOnlyOnDisk
+C4
 CA(s)?
 Cacheable
 CacheCallback
@@ -454,6 +457,7 @@ COVID-19
 cpu(s)?
 CPU(s)?
 CQL
+Craigslist
 CRD.
 CRD(s|-based)?
 create-load-balancer
@@ -518,6 +522,7 @@ Datadog
 Dataflow(s)?
 datagram
 DataJpaTest
+Datalog
 datapath
 dataset
 DataSet
@@ -535,6 +540,7 @@ dbkey
 dbuser
 DDD
 DDL
+De
 de
 de-duplicate
 de-facto
@@ -558,6 +564,7 @@ deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+denylist
 Depedency
 dependant
 deployable
@@ -766,6 +773,7 @@ firewalling
 Fiscus
 Flake8
 flatlined
+[Ff]lexbox
 Florea
 Florent
 Flowable
@@ -943,11 +951,13 @@ GUID(s)?
 Gunicorn
 Guntur
 gzip(ped)?
+H[0-9]
 H2
 hackathons
 Hackenburg
 hacky
 Hadlow
+Haines
 Hamano
 Hananiel
 handleNotification
@@ -1121,6 +1131,7 @@ Jahn
 Jakarta
 Jakub
 Jakub's
+jakubpilimon
 Janeiro
 Jarvinen
 Jasso
@@ -1174,6 +1185,7 @@ Joram
 JPA
 JProfiler
 JRE
+jreock
 JRuby
 JS
 json
@@ -1295,6 +1307,7 @@ kubernetes-kms
 kubernetes-master
 Kubernetes-Secrets-Store-CSI-Driver
 kubernetes-vault-kms-plugin
+Kubernetes-wide
 [Kk]ubernetes(.|-native|-specific|-centric|-based|-related)?
 kubeseal
 Kubeseal
@@ -1305,6 +1318,7 @@ KUTTL
 KVM2
 Kyverno
 labelset
+Lampson
 lastAccessedTime
 latencies
 LaunchDarkly
@@ -1322,6 +1336,7 @@ Lerman
 letsencrypt-staging
 Leyden
 LF
+Lian
 libnss-wrapper
 libs
 [Ll]ifecycle
@@ -1446,6 +1461,7 @@ microservice.
 microservices-oriented
 Microsystems
 mid-1990s
+[Mm]iddleground
 [Mm]iddleware
 Migros
 Mik
@@ -1544,6 +1560,7 @@ NetWeaver
 Network(Policy|Set)
 Neumann
 Neward
+newing
 NewRelic
 NewSpan
 NFJ?S
@@ -1568,6 +1585,7 @@ non-Kubernetes
 non-routable
 non-schedulable
 nonblocking
+[Nn]orming
 NoSQL
 NotificationListener
 npm
@@ -1741,6 +1759,7 @@ Pluggable
 pluggable
 Pluralsight
 PMC
+POC
 POCO(s)?
 podcaster
 PodDisruptionBudget
@@ -1807,6 +1826,7 @@ primaryBucketCount
 PrimaryRoutingFunction
 PriorityClass(es)?
 Priyanka
+[Pp]roactivity
 processServerMetrics
 Procfile
 Procfile(s)?
@@ -1888,6 +1908,7 @@ Recommender
 RedirectUri
 [rR]edis
 redistributable
+[Rr]edline(s)?
 RedMonk('s)?
 [Rr]edux
 Reenvisioning
@@ -1920,6 +1941,7 @@ Ren
 Renaud
 Renfro
 Renner
+Reock
 replatformed
 [Rr]eplatforming
 replatforming
@@ -2049,6 +2071,8 @@ SecondaryRoutingFunction
 secretbox
 secretname
 secretsmanager
+SecretTemplate
+SecretTemplates
 security-spring-security-xml
 securityContext
 SecurityManager
@@ -2064,6 +2088,7 @@ server2
 ServerConnection
 servercore
 [Ss]erverless
+ServerlessDays
 ServiceAccount(s)?
 ServiceEntry
 ServiceInfo(Creator)?
@@ -2075,11 +2100,13 @@ setValue(Template)?s
 severities
 Sevilla
 Sghiouar
+SHA
 Sharat
 Sharat_Chander
 sharded
 Sharepoint
 Sheasha
+[Ss]heetrock
 Shellshock
 Shipley
 Shopen
@@ -2088,6 +2115,7 @@ Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
 siloed
+simonbrown
 SingleMemberRegionSize
 SingleServer
 Sipe
@@ -2114,6 +2142,7 @@ smtp-sink
 Smythe
 Snapchat
 SNI
+Snyk
 SolidFire
 Soluto('s)?
 SomeRegion
@@ -2183,6 +2212,7 @@ StringBuilder
 Strobl
 stroopwafels
 struct
+Structurizr
 STS
 STT
 Styra
@@ -2222,6 +2252,7 @@ tabpane
 Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
+tanzuignore
 targetPort
 Tarin
 TAS
@@ -2236,6 +2267,7 @@ TCP-
 tdc-carvel-examples
 tdp-guide
 TeamRetro
+Techdocs
 TechRepublic
 TeeFilter
 Tekton-based
@@ -2253,6 +2285,7 @@ Teppanyaki
 TeraSky
 Terraform(-ing)?
 [Tt]est[Cc]ontainers
+[Tt]estability
 testability
 TestServiceBusConfigIsConfiguredReturnsFalse
 TestServiceBusConfigIsConfiguredReturnsTrue
@@ -2376,6 +2409,7 @@ userDetails
 [Uu]sings
 Util(s)?
 UX
+UX/UI
 v[0-9]
 [Vv][123]
 Vaadin
@@ -2432,6 +2466,7 @@ vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
 Voicify
+Volder
 Vonge
 VPA(s|'s)?
 VPC
