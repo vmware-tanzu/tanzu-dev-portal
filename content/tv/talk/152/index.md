@@ -21,7 +21,7 @@ Developer toil whitepaper: https://tanzu.vmware.com/content/white-papers/develop
 
 Tanzu Application Platform: https://tanzu.vmware.com/application-platform?utm_campaign=devrel&utm_source=cote&utm_content=tt20220802
 
-Tanzu Kubernetes for Operations: https://tanzu.vmware.com/kubernetes-operations?utm_campaign=devrel&utm_source=cote&utm_content=tt20220802
+Tanzu for Kubernetes Operations: https://tanzu.vmware.com/kubernetes-operations?utm_campaign=devrel&utm_source=cote&utm_content=tt20220802
 
 JP Morgan Chase presentation: https://www.youtube.com/watch?v=QOvBWlf7Cgg
 
