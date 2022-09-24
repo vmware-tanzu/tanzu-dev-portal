@@ -144,6 +144,7 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 
 ## Recent Blog Posts
 
+* [My SpringOne 2022](https://spring.io/blog/2022/09/23/my-springone-2022) (2022-09-23) 
 * [A Bootiful Podcast: Couchbase and Cloud legend Laurent Doguin](https://spring.io/blog/2022/09/22/a-bootiful-podcast-couchbase-and-cloud-legend-laurent-doguin) (2022-09-22) 
 * [This Week in Spring - September 20th, 2022](https://spring.io/blog/2022/09/20/this-week-in-spring-september-20th-2022) (2022-09-20) 
 * [A Bootiful Podcast: big data legend, former Pivot, and friend to the Spring community, Tim Spann](https://spring.io/blog/2022/09/15/a-bootiful-podcast-big-data-legend-former-pivot-and-friend-to-the-spring-community-tim-spann) (2022-09-15) 
@@ -153,7 +154,6 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 * [A Bootiful Podcast: Dr. Kris De Volder on Spring Tools, VS Code, and so much more](https://spring.io/blog/2022/09/01/a-bootiful-podcast-dr-kris-de-volder-on-spring-tools-vs-code-and-so-much-more) (2022-09-01) 
 * [Price Reduction - Azure Spring Apps does more, costs less!](https://spring.io/blog/2022/08/31/price-reduction-azure-spring-apps-does-more-costs-less) (2022-08-31) 
 * [Microsoft is committed to the success of Java developers](https://spring.io/blog/2022/08/30/microsoft-is-committed-to-the-success-of-java-developers) (2022-08-30) 
-* [This Week in Spring - August 30th, 2022](https://spring.io/blog/2022/08/30/this-week-in-spring-august-30th-2022) (2022-08-30) 
 
 ## Abstracts
 
@@ -186,4 +186,4 @@ Josh has done longer-form training courses - seen by hundreds of thousands of pe
 <li><p><em>Routing and Load-Balancing</em> - where does your service live? How do your clients find it? How do you handle custom routing requirements? How do you handle custom load-balancing? (Spring Cloud, Ribbon)</p></li>
 <li><p><em>Message-driven and integration-centric architectures</em> - We'll look at how to build microservices that talk to each other over messaging fabrics like Apache Kafka or RabbitMQ. We'll look at how to integrate existing systems and how to use messaging to connect disparate systems. (RabbitMQ, Spring Integration, Spring Cloud Stream)</p></li>
 <li><p><em>Stream Processing</em> - We'll look at how to build solutions that process ongoing data over time. We'll look at how to compose messaging-based microservices and orchestrate them over a cloud-based fabric. (Spring Cloud Stream, Spring Cloud Data Flow)</p></li>
-<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at 
+<li><p><em>Partitioned Batch Processing</em> - In this section we'll look at how to process large amounts of sequential data and scale the processing across a cloud fabric. We'll look at how to scale processing horizontally as o
