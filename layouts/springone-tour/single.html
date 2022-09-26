@@ -19,7 +19,11 @@
                 <div class="col-lg-9 px-0 mt-3">
                     <h1 class="h1 col-lg-6 mt-4 mb-4 pt-2 pl-0">{{- .Params.city_name -}}</h1>
                     <h3 class="h3 pt-0 mb-4 pb-2">
+                      {{ if .Params.oneDay}}
+                        {{ .Params.Date.Format "January 2" }}
+                      {{ else }}
                         {{ .Params.Date.Format "January 2" }}–{{ dateFormat "2" (substr .Params.enddate 0 10) }}, {{ .Params.Date.Format "2006" }}
+                      {{ end }}
                     </h3>
 
                     {{ range .Params.location }}
