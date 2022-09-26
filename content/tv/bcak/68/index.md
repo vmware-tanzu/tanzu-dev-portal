@@ -15,7 +15,7 @@ minutes: 120
 episode: "68"
 explicit: "yes"
 title: "The one with Coté"
-#youtube: "VgfoqtPNA8s"
+youtube: "6wJ69TPWRZg"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
