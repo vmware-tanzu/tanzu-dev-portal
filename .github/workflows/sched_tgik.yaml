@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   get-episodes:
+    if: github.repository == 'vmware-tanzu/tanzu-dev-portal'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

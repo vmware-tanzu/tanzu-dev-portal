@@ -2,14 +2,14 @@
 name: Jonatan Ivanov
 description: "Staff Software Engineer"
 roles: ["guest"]
-skills: ["Spring"]
+skills: ["Spring", "Observability", "Micrometer"]
 location: "Seattle, WA"
 
 # Social Media
 twitter: "@jonatan_ivanov"
 website: "https://develotters.com/"
 facebook: ""
-linkedin: ""
+linkedin: "jonatan-ivanov"
 github: "jonatan-ivanov"
 pinterest: ""
 instagram: ""
@@ -22,11 +22,10 @@ hands-on experience in developing and shipping innovative, production-ready soft
 industry-leader companies. He likes distributed systems, production, open source, math, Linux, and
 cloud environments, and he is passionate about the Java Ecosystem and the Java Community. He is an 
 Open Source contributor, writes a ["develotters"-focused blog](https://develotters.com), 
-and sometimes he can be found on Twitter (@jonatan_ivanov) and in the Seattle area, but he is originally 
+and sometimes he can be found on Twitter ([@jonatan_ivanov](https://twitter.com/jonatan_ivanov)) and in the Seattle area, but he is originally 
 from Hungary.
 
 <!--more-->
-
 
 ## Highlights
 

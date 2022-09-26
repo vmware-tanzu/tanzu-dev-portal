@@ -29,7 +29,6 @@ sponsors:
 hide_newsletter: true
 ---
 
-
 <div id="day-1-agenda" class="agenda p-lg-5 p-3">
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">8:00 AM PDT</div>
@@ -63,11 +62,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">10:40 AM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#change-data-capture">Change Data Capture: A Primer</a>
+            <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#mario-gray">Mario Gray</a>
+                <a class="lightbox" href="#jonatan-ivanov">Jonatan Ivanov</a>
             </h3>
         </div>
     </div>
@@ -110,7 +109,7 @@ hide_newsletter: true
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">2:30 PM PDT</div>
+        <div class="time col-4 pl-0 h4">2:40 PM PDT</div>
         <div class="talk-title col-5 h4">Break</div>
         <div class="name col-3"></div>
     </div>
@@ -143,7 +142,6 @@ hide_newsletter: true
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
                 <a class="lightbox" href="#leigh-capili">Leigh Capili</a>
                 <a class="lightbox" href="#dashaun-carter">DaShaun Carter</a>
             </h3>
@@ -194,27 +192,27 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">10:40 AM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#observability">Observability: Beyond the Three Pillars with Spring</a>
+            <a class="lightbox" href="#change-data-capture">Change Data Capture: A Primer</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#jonatan-ivanov">Jonatan Ivanov</a>
+                <a class="lightbox" href="#mario-gray">Mario Gray</a>
             </h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">11:20 AM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#k8s-rdbms">RDBMS on Kubernetes: Data Science Done Right</a>
+            <a class="lightbox" href="#testcontainers">Level Up Your Integration Testing With Testcontainers</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#steven-pousty">Steven Pousty</a>
+                <a class="lightbox" href="#dan-vega">Dan Vega</a>
             </h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-4 pl-0 h4">11:40 AM PDT</div>
+        <div class="time col-4 pl-0 h4">12:00 PM PDT</div>
         <div class="talk-title col-5 h4">Lunch</div>
         <div class="name col-3"></div>
     </div>
@@ -233,11 +231,11 @@ hide_newsletter: true
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">2:00 PM PDT</div>
         <div class="talk-title col-5 h4">
-            <a class="lightbox" href="#supply-chain-choreography">Path to Production Using Supply Chain Choreography</a>
+            <a class="lightbox" href="#what-is-knative">Knative Core Concepts! And Spiders!</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
-                <a class="lightbox" href="#cora-iberkleid">Cora Iberkleid</a>
+                <a class="lightbox" href="#whitney-lee">Whitney Lee</a>
             </h3>
         </div>
     </div>

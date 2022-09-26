@@ -1,21 +1,13 @@
 ---
-date: '2021-03-04'
-description:
-  Learn the basics of how to build container images and run them. We’ll
-  be using the Docker tool.
-featured: false
-logo: /images/workshops/logo-docker.png
+title: Container Basics
+description: Learn the basics of how to build container images and run them using Docker.
+summary: Learn the basics of how to build container images and run them using Docker.
 lab: lab-container-basics
-lastmod: '2021-05-19'
-length: 60
-summary:
-  - Learn the basics of how to build container images and run them. We’ll be using the
-    Docker tool.
+length: 30
+logo: /images/workshops/logo-docker.png
 tags:
   - Containers
   - Docker
-title: Container Basics
-level1: Modern App Basics
 weight: 2
 ---
 

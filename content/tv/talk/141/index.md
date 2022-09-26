@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "What is the difference between the Tanzu Application Service and the Tanzu Application Platform?"
-description: "What is the difference between the Tanzu Application Service and the Tanzu Application Platform?"
+title: "Tanzu Talk: What is the difference between Tanzu Application Service and Tanzu Application Platform?"
+description: "Tanzu Talk: What is the difference between Tanzu Application Service and Tanzu Application Platform?"
 episode: "141"
 aliases: ["0141"]
 publishdate: "2020-04-01T00:00:00-07:00"

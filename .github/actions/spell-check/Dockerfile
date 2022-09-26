@@ -9,7 +9,7 @@ LABEL "com.github.actions.description"="Markdown Spell Checker"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="green"
 
-RUN npm install --global spellchecker-cli retext-syntax-urls retext-indefinite-article retext-repeated-words remark-frontmatter
+RUN npm install --location=global spellchecker-cli@4.11.0 retext-syntax-urls retext-indefinite-article retext-repeated-words remark-frontmatter
 
 COPY entrypoint.sh /entrypoint.sh
 
