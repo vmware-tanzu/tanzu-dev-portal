@@ -4,6 +4,10 @@ id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/s1t_2022_og.png"
 notwitchicon: true
+menu:
+    main:
+        parent: "community"
+        weight: 4
 aliases:
 - /tv/springone-tour/0016/
 # Text that appears on show index page under show name
