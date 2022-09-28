@@ -387,6 +387,10 @@ body {
   .jc-even {
     justify-content: space-evenly;
   }
+  .springone-tour #register .mktoForm .mktoFormCol,
+  .springone-tour #register .mktoForm .mktoFieldWrap {
+    padding: 0;
+  }
   .springone-tour #register .mktoForm button,
   .btn.green {
     background-color: #02bc67 !important;
