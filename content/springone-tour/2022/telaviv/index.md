@@ -56,7 +56,7 @@ It’s time to take your existing applications to the next level.
 	</div>
 </div>
 
-<div id="day-1-agenda" class="agenda p-lg-5 p-3">
+<div id="day-1-agenda" class="agenda p-lg-5 p-3 mb-5">
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-4 pl-0 h4">8:30</div>
         <div class="talk-title col-5 h4">Registration & Breakfast</div>
@@ -182,3 +182,9 @@ It’s time to take your existing applications to the next level.
         </div>
     </div>
 </div>
+
+### Sponsors
+
+#### Diamond
+
+#### Gold
