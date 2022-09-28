@@ -120,7 +120,7 @@ Maturity levels 4 and 5 can be considered two waypoints in this process of colle
 
 **Your software ...** can evolve with reference to service level objectives. When new features are rolled out to production, automatically track the rate of change with respect to relevant service level indicators. Use this to determine whether new features are degrading reliability and take steps to remediate. Treat automated performance testing as a ‘fitness function’ that provides fast feedback on changes in service level before software is released.
 
-**Your team ...** treats SLI’s and remaining error budget as feedback that informs product decisions around implementation, prioritization, and further research.
+**Your team ...** treats SLIs and remaining error budget as feedback that informs product decisions around implementation, prioritization, and further research.
 
 **You'll know you're at Maturity Level 5 when ...**
 
