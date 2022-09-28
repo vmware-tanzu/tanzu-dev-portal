@@ -122,7 +122,7 @@ Maturity levels 4 and 5 can be considered two waypoints in this process of colle
 
 **Your team ...** treats SLI’s and remaining error budget as feedback that informs product decisions around implementation, prioritization, and further research.
 
-**You’ll know you’re at Maturity Level 5 when ...**
+**You'll know you're at Maturity Level 5 when ...**
 
 **Your software ...** can be (for example) subjected to chaos testing in a production environment.
 
