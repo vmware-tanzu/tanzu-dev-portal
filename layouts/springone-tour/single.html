@@ -38,7 +38,10 @@
                     {{ else if $isRegOver }}
                     <p class="mt-5 mb-0">Registration is now closed.</p>
                     {{ else }}
-                    <p class="mt-4 mb-0">Stay tuned for more details!</p>
+                      {{ if .Params.isFree}}
+                      {{ else }}
+                        <p class="mt-4 mb-0">Stay tuned for more details!</p>
+                      {{ end }}
                     {{ end }}
                     <!-- <img class="small-screen-hero mt-5" src='{{"/images/springonetour/hero_skyline.svg" | relURL }}' /> -->
                 </div>
@@ -332,16 +335,19 @@
     <div class="container-sm">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 col-12 mt-5">
+                {{ if .Params.noIntroCopy }}
+                {{ else }}
                 <p>
                     Beyond all the excellent content at SpringOne Tour, we’ve got a lot planned all around town! Expect to see VMware Tanzu folks around the
                     city during the week, everywhere from executive events to meetups. {{ if not $isRegOpen }} Stay tuned more details.{{ end }}
                 </p>
+                {{ end }}
 
                 {{ with .Content }}
-                <div class="day-toggle row mt-5">
-                    <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
-                    <h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h5>
-                </div>
+                  <div class="day-toggle row mt-5">
+                      <h5 id="day-1" class="p-4 d-inline-block mb-0 day active">DAY 1</h5>
+                      <h5 id="day-2" class="p-4 d-inline-block mb-0 day">DAY 2</h5>
+                  </div>
                 {{- . -}}
                 {{ end }}
 
@@ -374,12 +380,15 @@
                 </div>
                 {{ end }}
 
+                {{ if .Params.noLeadForward }}
+                {{ else }}
                 <h3 class="mt-5">Lead/Forward</h3>
                 <p>
                     Lead/Forward at SpringOne Tour is an invite-only executive event. The series will dive into why the developer experience is critical to your
                     business needs. For more information, please reach out to
                     <a href="mailto:tanzu-fieldmarketing@vmware.com">VMware Tanzu Field Marketing</a>.
                 </p>
+                {{ end }}
 
                 {{ if isset .Params "sponsors" }}
                 <div id="sponsors">
