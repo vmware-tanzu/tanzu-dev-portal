@@ -184,6 +184,7 @@ AutoDeploy
 Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
+autowire
 Autowired
 autowired
 autowires

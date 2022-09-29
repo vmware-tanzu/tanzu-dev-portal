@@ -61,7 +61,7 @@ By marking the class `@Configuration` we are telling the IoC to scan this class 
 
 In most scenarios, we want to assemble a component that depends on other components. Spring already does the right thing to collect all dependencies and determine instantiating order and which components they belong to. It is up to the developer to inform Spring where dependencies get injected. There are a number of approaches to this, but we will look into the most common (and recommended) of them - Constructor Injection.
 
-In the Constructor Injection technique, an Object’s required components become arguments on its constructor. Spring will recognize public constructors as valid sites of injection. This is also the preferred method since we are typically sure once an object gets created, its composition doesn't change. This allows for immutability, however, It doesn't follow the JavaBeans style which states an empty constructor.
+In the Constructor Injection technique, an Object’s required components become arguments on its constructor. Spring will recognize public constructors as valid sites of injection. This is also the preferred method since we are typically sure once an object gets created, its composition doesn't change. This allows for immutability, however, It doesn't follow the Java Beans style which states an empty constructor.
 
 ```java
 public class ComponentA {
@@ -152,9 +152,9 @@ public ArticleRepository() {
 }
 ```
 
-With the domain model and repository in place, it's time to create the REST Controller. Create a new class names ArticleController in a package named controller. The controller suffix is not required but is a commonly used convection for creating controllers.
+With the domain model and repository in place, it's time to create the REST Controller. Create a new class names `ArticleController` in a package named controller. The controller suffix is not required but is a commonly used convection for creating controllers.
 
-If you’re new to building REST APIs in Spring Boot the @RestController annotation marks this class as one that will accept requests and return responses. The @RequestMapping annotation allows you to map web requests to methods. In the following example, you will map the article controller to the path `/api/articles`.
+If you’re new to building REST APIs in Spring Boot the `@RestController` annotation marks this class as one that will accept requests and return responses. The `@RequestMapping` annotation allows you to map web requests to methods. In the following example, you will map the article controller to the path `/api/articles`.
 
 ```java
 @RestController
@@ -164,7 +164,7 @@ public class ArticleController {
 }
 ```
 
-The controller needs a way to retrieve all of the articles in the application. You already have that in place and delegated that responsibility to the ArticleController. This means that for your controller to work you are dependent on the `ArticleRepository`. Now the question becomes how can you get an instance of that class that you already created?
+The controller needs a way to retrieve all of the articles in the application. You already have that in place and delegated that responsibility to the `ArticleController`. This means that for your controller to work you are dependent on the `ArticleRepository`. Now the question becomes how can you get an instance of that class that you already created?
 
 The basic constructs of the Java language give us a way to do this by creating a new instance of the `ArticleRepository`. The next question becomes where should you create this instance? You are going to need this instance throughout your controller so it might make sense to create an instance variable and initialize it in the constructor.
 
@@ -313,7 +313,7 @@ public record Article(
 }
 ```
 
-Next you need to create a class that can take in the title of the article and returns a slug. There is a lot that goes into creating a slug but for now, we are going to create a simple slug service. To ensure that we aren’t tied to this simple slug service in the future you will create an interface that defines a contract for a single method named slugify. In a package, named `service` create a new interface named `Slugify`.
+Next you need to create a class that can take in the title of the article and returns a slug. There is a lot that goes into creating a slug but for now, we are going to create a simple slug service. To ensure that we aren’t tied to this simple slug service in the future you will create an interface that defines a contract for a single method named `slugify`. In a package, named `service` create a new interface named `Slugify`.
 
 ```java
 public interface SlugService {
@@ -323,7 +323,7 @@ public interface SlugService {
 }
 ```
 
-With the contract in place you can create a class named `SimpleSlugService` that implements the `Slugify` interface. This is a simplified version of what a slugify method might do but it will be sufficient for what you’re trying to do in this application.
+With the contract in place you can create a class named `SimpleSlugService` that implements the `Slugify` interface. This is a simplified version of what a `slugify` method might do but it will be sufficient for what you’re trying to do in this application.
 
 ```java
 public class SimpleSlugService implements SlugService {
@@ -337,7 +337,7 @@ public class SimpleSlugService implements SlugService {
    }
 ```
 
-Now that you have a simple slug service you will need an instance of it in your `ArticleRepository` class. Like you did in the controller you can create a new instance of this class in the constructor. In this case, you will use the interface as the type in case you want to replace this with a more sophisticated version of the slugify service later.
+Now that you have a simple slug service you will need an instance of it in your `ArticleRepository` class. Like you did in the controller you can create a new instance of this class in the constructor. In this case, you will use the interface as the type in case you want to replace this with a more sophisticated version of the `slugify` service later.
 
 ```java
 public class ArticleRepository {
@@ -349,7 +349,7 @@ public class ArticleRepository {
    }
 ```
 
-Now that you have an instance of the `SimpleSlugService` you can use it to create slugs for each of your articles. I have refactored the code a bit that creates our 3 sample articles so that you don’t have to repeat the title for the title and slug arguments. Take note that for the slug you are using the slug service to slugify the title. If you want to take a look at the Github repository there are a couple of tests for this service in `SimpleSlugServiceTest`.
+Now that you have an instance of the `SimpleSlugService` you can use it to create slugs for each of your articles. I have refactored the code a bit that creates our 3 sample articles so that you don’t have to repeat the title for the title and slug arguments. Take note that for the slug you are using the slug service to `slugify` the title. If you want to take a look at the Github repository there are a couple of tests for this service in `SimpleSlugServiceTest`.
 
 ```java
 public class ArticleRepository {
@@ -384,7 +384,7 @@ As you can imagine you are going to have the same problem testing the `ArticleRe
 
 ### Dependency Injection to the Rescue
 
-Now that we have identified the problem we need to look at how we can solve the problem. A starting point to solving this problem would be to accept the `ArticleRepository` as an argument ot the controller's constructor.
+Now that we have identified the problem we need to look at how we can solve the problem. A starting point to solving this problem would be to accept the `ArticleRepository` as an argument to the controller's constructor.
 
 ```java
 @RestController
@@ -462,7 +462,7 @@ public class ArticleRepository {
 }
 ```
 
-If you run the application now everything should start up without error and if you visit http://localhost:8080/api/articles you should see the 3 articles in the application. Now that you know how to fix this let’s do the same for our SimpleSlugService. There is another specialized version of the `@Component` annotation `@Service`.
+If you run the application now everything should start up without error and if you visit http://localhost:8080/api/articles you should see the 3 articles in the application. Now that you know how to fix this let’s do the same for our `SimpleSlugService`. There is another specialized version of the `@Component` annotation `@Service`.
 
 ```java
 @Service
