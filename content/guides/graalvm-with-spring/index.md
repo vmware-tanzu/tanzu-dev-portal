@@ -1,7 +1,7 @@
 ---
 title: Getting Started with GraalVM and Spring Native
 linkTitle: Getting Started with GraalVM and Spring Native
-description: Learn how to use GraalVM for JIT and AOT with Spring Boot 2.7 and Spring Native
+description: Learn how to use GraalVM for JIT and AOT compilations with Spring Boot 2.7 and Spring Native
 date: "2022-09-21"
 lastmod: "2022-09-21"
 level1: Building Modern Applications
@@ -30,17 +30,17 @@ The resulting native executable will require less RAM, startup in milliseconds a
 
 For the purpose of this guide, think of GraalVM as a JDK with two modes.
 
-1. Just In Time (JIT) compiling
-2. Ahead Of Time (AOT) compiling
+* Just in time (JIT) compiling 
+* Ahead of time (AOT) compiling
 
 The [GraalVM documentation](https://www.graalvm.org/docs/introduction/) has more information if you are interested.
 
 ### Before You Begin
 
-There a few things you need to do before starting this guide:
+You'll need to make sure two items are installed before starting this guide:
 
-- Install the latest version of GraalVM JDK
-- Install the native image extensions for the GraalVM JDK
+1. GraalVM JDK (latest version)
+2. Native image extensions for the GraalVM JDK
 
 ```bash
 # Install sdkman
@@ -58,18 +58,18 @@ gu install native-image
 You are probably familiar with [start.spring.io](https://start.spring.io).
 
 If not, there are other guides that show you how to use the website.
-- [Building an API with Spring Boot](https://tanzu.vmware.com/developer/guides/spring-build-api/)
-- [Spring for GraphQL](https://tanzu.vmware.com/developer/guides/spring-for-graphql/)
+* [Building an API with Spring Boot](https://tanzu.vmware.com/developer/guides/spring-build-api/)
+* [Spring for GraphQL](https://tanzu.vmware.com/developer/guides/spring-for-graphql/)
 
-You can use the website, or you can use curl, to initialize your project,
+You can use the website or `curl` to initialize your project
 with the Spring Initializr Web API.
 
-You are going to configure 4 different options for this guide.
+You are going to configure four different options for this guide.
 
-- choose Spring Boot 2.7.3
-- name the artifact
-- choose Java 17
-- include the `web`,`actuator` and `spring native` dependencies
+1. Choose Spring Boot 2.7.3
+2. Name the artifact
+3. Choose Java 17
+4. Include the `web`,`actuator` and `spring native` dependencies
 
 ```bash
 # Make a new directory for your application
@@ -92,7 +92,7 @@ You now have application sources needed for your Spring Boot app, ready to run!
 #### JIT compiling
 
 Compile the Spring Boot app using the [Spring Boot Maven Plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/).
-The Spring Initializr included the plugin and a usable version of Maven along with our application sources.
+Note that Spring Initializr included the plugin and a usable version of Maven along with our application sources.
 
 ```bash
 ./mvnw spring-boot:run
@@ -110,11 +110,10 @@ http :8080/actuator/health
 Example output:
 ![http :8080/actuator/health](images/endpoint-access.png)
 
-Your application is up and running.
-Your application is reporting that its healthy.
-GraalVM with JIT compiling, doesn't require any extra thought, it just works, similar to other JVMs.
+Your application is up and running and reporting that its healthy.
+GraalVM with JIT compiling, doesn't require any extra thought it works similar to other Java Virtual Machines (JVM).
 
-#### Startup Time
+#### Start up time
 
 From the last line of the image above:
 ```
@@ -125,9 +124,9 @@ Note that the process ID (PID) of the application is included in each log line, 
 In the example above `INFO 24853` shows up on each log line.
 The PID is therefore `24853` you will use the PID later in the guide.
 
-#### Memory Usage
+#### Memory usage
 
-Look at how much memory your application is using, by using your PID.
+Check how much memory your application is using, by using the PID.
 
 ```bash
 #On Mac use `vmmap`
@@ -140,7 +139,8 @@ $
 #### Packaging
 
 Terminate your running application.
-Package your application into a `jar` file, for the last two metrics we will look at in this guide.
+Package your application into a `jar` file.
+This will be used for the last two metrics in this guide.
 
 ```bash
 ./mvnw clean package -DskipTests
@@ -150,8 +150,7 @@ Example output:
 ![./mvnw clean package -DskipTests](images/jit-package.png)
 
 In the above example it took `12.578s` to package.
-
-The `jar` file that was created, will run on any JVM.
+The `jar` file that was created will run on any JVM.
 
 #### Size on Disk
 
@@ -172,21 +171,21 @@ Spring Initializr created a `native` profile when you added the `spring-native` 
 
 #### Packaging
 
-In order to use AOT compilation, you need to use the `native` profile.
+In order to use the AOT compilation, you need to use the `native` profile.
 
 ```bash
 ./mvnw -Pnative clean package -DskipTests
 ```
 > The warnings can safely be ignored for this guide.
 
-You will see that this approach takes much longer.
-AOT compiling evaluates all the accessible branches of code.
+You will see that this approach takes much longer, 
+as AOT compiling evaluates all the accessible branches of code.
 
 ![./mvnw -Pnative clean package -DskipTests](images/aot-package.png)
 
 In this example, the build took over 5 minutes.
 
-Additionally, the resulting binary can only be executed on the same OS+CPU architecture.
+Additionally, the resulting binary can only be executed on the same operating system (OS) and CPU architecture.
 
 #### Running
 
@@ -201,16 +200,16 @@ Everything needed to run the application is included.
 Example output:
 ![./target/graalvm-with-spring](images/run-with-aot.png)
 
-We can verify the output, at the same location, with the same commands.
+We can verify the output, at the same location, using the same commands.
 
 ```bash
-# Use httpie to access the healthcheck endpoint
+# Use HTTPie to access the healthcheck endpoint
 http :8080/actuator/health
 ```
 
-#### Startup Time
+#### Start up time
 
-From the above example we can see the startup time, again, on the last line of the output.
+From the above example we can see the startup time on the last line of the output.
 
 ```
 Started GraalvmWithSpringApplication in 0.149 seconds (JVM running for 0.152)
@@ -232,7 +231,7 @@ $
 
 This execution uses less than 30% of the memory from the previous example.
 
-#### Size on Disk
+#### Size on disk
 
 ```bash
 #On Mac look at the file size of the jar
@@ -245,12 +244,12 @@ The statically linked binary is `62M` but includes everything it needs from the 
 
 #### Summary
 
-For some workloads, AOT compiling is the right choice.
-AOT compiling takes longer, up front.
-The result is a statically linked binary.
-It will consume less resources at runtime
-It will start up faster.
+For some workloads, AOT compiling is the right choice 
+even though it takes longer up front.
+The result is a statically linked binary
+that will consume less resources at runtime and starts up faster.
 
 #### Keep Learning
 
 [Spring Native Documentation](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/)
+[GraalVM](https://www.graalvm.org/)
