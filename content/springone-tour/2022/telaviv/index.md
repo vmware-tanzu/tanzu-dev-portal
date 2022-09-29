@@ -69,7 +69,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">9:45</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#cloud-native-architectures">Keynote: Introducing Spring Framework 6</a>
+            Keynote: Introducing Spring Framework 6
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#juergen-hoeller">Juergen Hoeller</a></h3>
@@ -77,7 +77,9 @@ It’s time to take your existing applications to the next level.
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">10:45</div>
-        <div class="talk-title col-7 h4"><a class="lightbox" href="#spring-native">Introducing Spring Boot 3 & Spring Native</a></div>
+        <div class="talk-title col-7 h4">
+            Introducing Spring Boot 3 & Spring Native
+        </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
                 <a class="lightbox" href="#dashaun-carter">DaShaun Carter</a>
@@ -92,7 +94,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">11:45</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#observability">Protect Your Microservices with Spring Cloud Gateway</a>
+            Protect Your Microservices with Spring Cloud Gateway
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -103,7 +105,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">12:15</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#graphql">Running Untrusted Code as WASM in Spring Cloud Gateway and Spring Cloud Function</a>
+            Running Untrusted Code as WASM in Spring Cloud Gateway and Spring Cloud Function
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -120,16 +122,16 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">13:40</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#k8s-native-java">Our Cloud Native Journey with Spring</a>
+            Our Cloud Native Journey with Spring
         </div>
         <div class="name col-3">
-            <h3 class="h4 py-0"><a class="lightbox" href="#ronen-yair">Ronen Yair</a></h3>
+            <h3 class="h4 py-0">Ronen Yair</h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">14:00</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#azure-spring-apps">Introduction to Testcontainers</a>
+            Introduction to Testcontainers
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -150,7 +152,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:45</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#k8s-intro">What’s New in Spring Cloud?</a>
+            What’s New in Spring Cloud?
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -161,7 +163,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">16:30</div>
         <div class="talk-title col-7 h4">
-            <a class="lightbox" href="#who-should-use-k8s">Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform</a>
+            Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
