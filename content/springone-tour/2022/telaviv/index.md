@@ -184,6 +184,20 @@ It’s time to take your existing applications to the next level.
 
 ### Sponsors
 
+<br>
+<br>
+
 #### Diamond
 
+<br>
+<img src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5">
+<img src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5">
+
+<br>
+
 #### Gold
+
+<br>
+<img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5">
+<img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5">
+<img src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5">
