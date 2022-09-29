@@ -5,7 +5,7 @@ lastmod: "2022-09-16"
 PublishDate: "2022-09-16"
 type: "tv-episode"
 # TODO
-title: "Episode 13 - Observablity with Jonatan Ivanov"
+title: "Episode 13 - Observability with Jonatan Ivanov"
 # TODO
 episode: "0013"
 explicit: 'no'
