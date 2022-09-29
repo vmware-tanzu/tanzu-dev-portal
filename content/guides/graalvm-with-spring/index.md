@@ -181,7 +181,7 @@ In order to use the AOT compilation, you need to use the `native` profile.
 You will see that this approach takes much longer, 
 as AOT compiling evaluates all the accessible branches of code.
 
-![./mvnw -Pnative clean package -DskipTests](images/aot-package.png)
+![AOT package](images/aot-package.png)
 
 In this example, the build took over 5 minutes.
 
@@ -198,7 +198,7 @@ Everything needed to run the application is included.
 ```
 
 Example output:
-![./target/graalvm-with-spring](images/run-with-aot.png)
+![AOT run](images/run-with-aot.png)
 
 We can verify the output, at the same location, using the same commands.
 
