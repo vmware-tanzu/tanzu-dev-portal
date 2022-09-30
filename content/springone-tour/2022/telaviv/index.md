@@ -50,7 +50,11 @@ It’s time to take your existing applications to the next level.
 	</script>
 	<div class='confirmation' style="display:none">
 		<h3 class="-text-white mt-0">Thank you for registering!</h3>
-        <p>Save the date:&nbsp;<a href="https://connect.tanzu.vmware.com/rs/625-IUJ-009/images/SpringOne-Tour-Tel-Aviv.ics" target="_blank" id="">Outlook/iCal</a> <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=SpringOne+Tour+Tel+Aviv&amp;details=Come+meet+other+Spring+enthusiasts%2C+experts%2C+and+advocates+from+your+local+community.+Interact+with+VMware+speakers+and+fellow+attendees.+Learn+about+new+Spring+developments%2C+AppDev+best+practices%2C+plus+tools+and+techniques+that+are+quickly+becoming+industry+standard.+It%E2%80%99s+time+to+take+your+existing+applications+to+the+next+level.&amp;location=Tel+Aviv&amp;dates=20221117T060000Z%2F20221117T160000Z" target="_blank" id="">Google</a><p>
+        <p>Save the date:</p>
+        <p>
+            <a href="https://connect.tanzu.vmware.com/rs/625-IUJ-009/images/SpringOne-Tour-Tel-Aviv.ics" target="_blank" id="">Outlook/iCal</a> 
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=SpringOne+Tour+Tel+Aviv&amp;details=Come+meet+other+Spring+enthusiasts%2C+experts%2C+and+advocates+from+your+local+community.+Interact+with+VMware+speakers+and+fellow+attendees.+Learn+about+new+Spring+developments%2C+AppDev+best+practices%2C+plus+tools+and+techniques+that+are+quickly+becoming+industry+standard.+It%E2%80%99s+time+to+take+your+existing+applications+to+the+next+level.&amp;location=Tel+Aviv&amp;dates=20221117T060000Z%2F20221117T160000Z" target="_blank" id="">Google</a>
+        <p>
 	</div>
 </div>
 
