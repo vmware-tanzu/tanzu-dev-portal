@@ -51,7 +51,7 @@ When a team holds this kind of workshop early on, it serves multiple purposes:
 
 - It sets the tone that reliability is important.
 - It helps the team understand reliability in terms that are specific to their particular domain.
-- It gives a chance to each participant to share their reliability-related fears, fostering psychological safety and a feeling of belonging.
+- It gives a chance for each participant to share their reliability-related fears, fostering psychological safety and a feeling of belonging.
 - It helps the team agree on which aspects of reliability are most important based on our understanding of what our users expect from our software and on what the business hopes to achieve. 
 
 A team then knows where to focus, and can then consider the best way to make progress on specific reliability outcomes: How can we measure this particular outcome? What sorts of objectives should we establish for those metrics? How is our system doing today? If we aren't currently meeting our objectives, what investments are necessary to do so?
