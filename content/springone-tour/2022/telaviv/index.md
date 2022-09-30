@@ -17,6 +17,8 @@ location:
     - 'Ahuzat Bayit St 2'
     - 'Tel Aviv-Yafo'
 hide_newsletter: true
+aliases:
+    - /springone-tour/2022/tel-aviv
 ---
 _We’re excited to announce that SpringOne Tour is coming to Israel for the first time!_
 
