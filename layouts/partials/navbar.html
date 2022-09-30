@@ -1,5 +1,4 @@
 {{ $cover := .HasShortcode "blocks/cover" }}
-<div class="container"></div>
 <nav id="navbar" class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
 	<div class="container justify-space-between">
 		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}" tabindex="1">
@@ -177,3 +176,5 @@
 		</ul>
 	</div>
 </nav>
+
+{{ partial "spring-one-banner.html" }}

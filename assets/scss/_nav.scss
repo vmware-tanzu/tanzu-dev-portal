@@ -408,3 +408,17 @@ nav {
 @media(max-width:1000px) and (min-width: 992px) {
     
 }
+.promo-nav-banner {
+    top: 0;
+    position: fixed;
+    padding-top: 4.5rem !important;;
+    width: 100%;
+    z-index: 3;
+}
+@media(max-width: 991px){
+    .promo-nav-banner {
+        position: static;
+        width: 100%;
+        padding: 0 !important;
+    }
+}
