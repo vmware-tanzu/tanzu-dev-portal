@@ -106,6 +106,7 @@ anthonyjvetter
 antifragility
 [Aa]ntipatterns?
 Antrea
+AOT
 Apdex
 api
 Apigee
@@ -1166,6 +1167,7 @@ Jiang
 Jie
 jimwebber
 JIRAs
+JIT
 Jitsu
 Jiu
 jks
@@ -1523,6 +1525,7 @@ Mutual-TLS
 Muzz
 MVB(-awarded)?
 MVC
+mvnw
 MVP(s)?
 my-mongodb
 [mM]y[sS]ql
