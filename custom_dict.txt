@@ -159,6 +159,7 @@ AsyncEvents
 AsyncEventsQueues
 ATL
 Atlassian
+AtomicJar
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -996,6 +997,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Hoeller
 Holub
 Homebrew
 homogenous
@@ -1202,6 +1204,7 @@ JSR-352
 JST
 judgement
 judgements
+Juergen
 julielerman
 Julien
 jumpbox
@@ -1612,6 +1615,7 @@ OKR(s)?
 Okta
 old-checkout-desc
 OLEDB
+Oleg
 Oleh
 olehdokuka
 OLGA_MACIASZEK
@@ -2078,6 +2082,7 @@ securityContext
 SecurityManager
 Sedano
 Seiden
+Šelajev
 SELinux
 Semver
 Sergi
@@ -2453,6 +2458,7 @@ VirtualBox
 [Vv]irtualenv
 virtualhost
 virtualized
+VirtualJUG
 VirtualService
 visualise
 VisualVM
