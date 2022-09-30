@@ -19,6 +19,7 @@ weight: 2
 aliases:
 - "/guides/spring/depedency-injection/"
 level1: Modern App Basics
+level2: Modern Development Concepts
 ---
 
 
