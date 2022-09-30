@@ -3,6 +3,8 @@ PublishDate: '2022-09-26T00:00:00-07:00'
 Date: '2022-11-17T00:00:00-07:00'
 oneDay: true
 publish: true
+aliases:
+    - /springone-tour/2022/tel-aviv
 og_image: "/images/og/s1t_2022_og.png"
 logo_filename: "telaviv_cityscape.svg"
 Description: SpringOne Tour Tel Aviv
@@ -17,8 +19,7 @@ location:
     - 'Ahuzat Bayit St 2'
     - 'Tel Aviv-Yafo'
 hide_newsletter: true
-aliases:
-    - /springone-tour/2022/tel-aviv
+
 ---
 _We’re excited to announce that SpringOne Tour is coming to Israel for the first time!_
 
