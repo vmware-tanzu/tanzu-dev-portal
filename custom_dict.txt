@@ -14,6 +14,10 @@
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
 .tgz
+Andreas
+Grabner
+keptn
+Covid
 1:1s
 10x
 12SwitchRestoresSansCheckOuts
