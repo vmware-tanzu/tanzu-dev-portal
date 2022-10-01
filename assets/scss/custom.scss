@@ -765,6 +765,9 @@
   }
 }
 
+.telaviv + .springone-tour-details .day-toggle {
+  display: none;
+}
 .springone-tour .td-main {
   background-color: #0B1C23 !important;
 }
@@ -844,6 +847,9 @@
       background-size: 56%;
       background-position: bottom right 29%;
     }
+    &.telaviv .container-sm {
+      background-size: 51%;
+    }
     &.amsterdam .container-sm {
       background-size: 57%;
     }
@@ -897,7 +903,7 @@ body#s1t-index #s1t-destinations-2022 {
   }
 }
 #s1t-index {
-  .td-main a, .talk-modal a, .speaker-modal a {
+  .confirmation a, .mktoHtmlText.mktoHasWidth a, .td-main a, .talk-modal a, .speaker-modal a {
     color: #02bc67;
     &:hover {
       color: #80ea6e;
