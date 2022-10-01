@@ -16,6 +16,7 @@
 .tgz
 Andreas
 Grabner
+Jira
 keptn
 Covid
 1:1s
