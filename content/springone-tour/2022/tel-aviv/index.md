@@ -200,8 +200,8 @@ It’s time to take your existing applications to the next level.
 
 <br>
 <div class="sponsor-container">
-<img src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5">
-<img src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5">
+<img id="terasky-sponsor" src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5 d-block d-lg-inline">
+<img id="dell-sponsor" src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5 d-block d-lg-inline">
 </div>
 
 <br>
@@ -210,8 +210,8 @@ It’s time to take your existing applications to the next level.
 
 <br>
 <div class="sponsor-container">
-<img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5">
-<img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5">
-<img src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5">
-<img src="../../images/logo-portworx.png" style="height:80px" class="mb-5">
+<img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img id="bynet-sponsor" src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img src="../../images/logo-portworx.png" style="height:80px" class="mb-5 d-block d-lg-inline">
 </div>
