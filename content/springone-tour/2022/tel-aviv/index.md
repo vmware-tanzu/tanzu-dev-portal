@@ -182,7 +182,7 @@ It’s time to take your existing applications to the next level.
             </h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
+    <div class="row py-3 flex-nowrap">
         <div class="time col-2 pl-0 h4">17:00</div>
         <div class="talk-title col-7 h4">
             Happy Hour
