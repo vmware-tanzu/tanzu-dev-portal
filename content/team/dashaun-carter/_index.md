@@ -18,7 +18,8 @@ include_host:
 - spring-office-hours
 ---
 
-DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu. Deliberately practicing to build better software, faster.
+DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu.
+Deliberately practicing to build, manage, and run, better software, faster.
 
 <!--more-->
 
@@ -37,19 +38,20 @@ DaShaun has a variety of talks and workshops on the following topics:
 
 ## Upcoming Appearances
 
-### Seattle SpringOne Tour 2022
-**2022-07-12** - Seattle WA
+### VMware Explore Europe 2022
+**2022-11-7** - Barcelona, Spain
 
-### VMware Explore US 2022
-**2022-08-29** - San Francisco CA
+### SpringOne Tour Tel Aviv 2022
+**2022-11-17** - Tel Aviv, Israel
 
-### Atlanta SpringOne Tour 2022
-**2022-10-04** - Atlanta GA
-
-### SpringOne 2022
-**2022-12-06** - San Francisco CA
+### CodeMash 2023
+**2023-01-11** - Sandusky, Ohio
 
 ## Highlights
+
+{{< youtube id="yDpRDh9Lt_A" class="youtube-video-shortcode" >}}
+
+{{< youtube id="3rn53oM2Afk" class="youtube-video-shortcode" >}}
 
 {{< youtube id="mJGYeBSkS_c" class="youtube-video-shortcode" >}}
 
@@ -59,5 +61,6 @@ DaShaun has a variety of talks and workshops on the following topics:
 
 ## Recent Blog Posts
 
+# [GraalVM with Spring](https://tanzu.vmware.com/developer/guides/graalvm-with-spring/)
 * [Spring Native Edge RPi](https://dev.to/dashaun/spring-native-edge-rpi-5c7) (2022-04-18)
 * [iSCSI boot with Raspberry Pi](https://dev.to/dashaun/raspberry-pi-3b-iscsi-boot-with-raspios-arm64-a2a) (2022-02-11)
