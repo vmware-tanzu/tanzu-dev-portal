@@ -113,7 +113,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">12:15</div>
         <div class="talk-title col-7 h4">
-            Running Untrusted Code as WASM in Spring Cloud Gateway and Spring Cloud Function
+            Running Untrusted Code in Spring Using WebAssembly
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -160,7 +160,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:45</div>
         <div class="talk-title col-7 h4">
-            What’s New in Spring Cloud?
+            Declarative Clients in Spring
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
