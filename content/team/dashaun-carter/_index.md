@@ -44,8 +44,11 @@ DaShaun has a variety of talks and workshops on the following topics:
 ### SpringOne Tour Tel Aviv 2022
 **2022-11-17** - Tel Aviv, Israel
 
+### SpringOne 2022
+**2022-12-6** - San Francisco, California
+
 ### CodeMash 2023
-**2023-01-11** - Sandusky, Ohio
+**2023-1-11** - Sandusky, Ohio
 
 ## Highlights
 
