@@ -22,6 +22,6 @@ Priyanka “Pinky” Ravi is a Developer Experience Engineer at Weaveworks. She 
 <!--more-->
 
 
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="_8Zobz7qbqo" class="youtube-video-shortcode" >}} -->
+{{< youtube id="_8Zobz7qbqo" class="youtube-video-shortcode" >}}
