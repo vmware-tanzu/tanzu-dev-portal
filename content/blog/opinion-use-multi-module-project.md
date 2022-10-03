@@ -1,6 +1,6 @@
 ---
 date: 2022-10-03
-description: There are two choices for a product development repository: a multiple 12-factor codebase or a multi-module project in a single repository (monorepo). For me, the only issue with 12-factor applications lies with the first factor of the codebase.
+description: "There are two choices for a product development repository: a multiple 12-factor codebase or a multi-module project in a single repository (monorepo). For me, the only issue with 12-factor applications lies with the first factor of the codebase."
 lastmod: '2022-10-03'
 team:
 - Brad Davidson
