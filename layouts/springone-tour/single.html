@@ -408,9 +408,18 @@
             <div class="col-lg-9 col-12 px-0">
                 <p>
                     Questions?
+                    {{ if .Params.telavivContact}}
+                    Contact
+                    <a href="mailto:iirit@vmware.com">iirit@vmware.com</a>
+                    or
+                    <a href="mailto:eshani@vmware.com">eshani@vmware.com</a>
+                    &bullet;
+                    <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a>
+                    {{ else }}
                     <a href="mailto:springone@vmware.com">Contact the SpringOne Tour Team</a>
                     &bullet;
                     <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a>
+                    {{ end }}
                 </p>
             </div>
         </div>

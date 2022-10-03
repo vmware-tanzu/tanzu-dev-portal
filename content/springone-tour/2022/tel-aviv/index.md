@@ -14,10 +14,11 @@ city_name: Tel Aviv
 isFree: true
 noIntroCopy: true
 noLeadForward: true
+telavivContact: true
 location:
+    - 'Peres Center'
     - 'The Israeli Innovation Center'
-    - 'Ahuzat Bayit St 2'
-    - 'Tel Aviv-Yafo'
+    - 'Kedem 32 St, Jaffa'
 hide_newsletter: true
 
 ---
@@ -198,14 +199,19 @@ It’s time to take your existing applications to the next level.
 #### Diamond
 
 <br>
+<div class="sponsor-container">
 <img src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5">
 <img src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5">
+</div>
 
 <br>
 
 #### Gold
 
 <br>
+<div class="sponsor-container">
 <img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5">
 <img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5">
 <img src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5">
+<img src="../../images/logo-portworx.png" style="height:80px" class="mb-5">
+</div>
