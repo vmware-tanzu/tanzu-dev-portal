@@ -413,6 +413,7 @@ Coby
 Codefresh
 CodeFresh
 CodeItLive
+CodeMash
 CodeOne
 CoffeeOps
 cognisant
@@ -2054,6 +2055,7 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sandusky
 Sanitization
 Sardana
 Sarella
