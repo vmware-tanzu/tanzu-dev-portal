@@ -20,7 +20,7 @@ The problem with this is that:
 
 
 
-* There is no indication of the related codebases, consequently, the order of checking changes across multiple12-factor codebases can result in broken builds.
+* There is no indication of the related codebases, consequently, the order of checking changes across multiple 12-factor codebases can result in broken builds.
 * GitFlow, a branching model for Git, can be more complex since each 12-factor codebase may or may not have the branch. Therefore, making sure all branches are applied to the main branch of each 12-factor codebase could be challenging.
 * There’s a question as to when (not if) the project/product level repository will be forgotten or ignored.
 

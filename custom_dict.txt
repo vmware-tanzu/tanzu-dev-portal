@@ -16,6 +16,7 @@
 .tgz
 1:1s
 10x
+12Factor
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
@@ -1504,6 +1505,7 @@ Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+[Mm]onorepo(s)?
 MQ
 MQTT
 MSBuild
