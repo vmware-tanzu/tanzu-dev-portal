@@ -255,7 +255,7 @@ RSocket Security can be applied at the setup and or request levels. If an connec
 
 We can secure the entire RSocket connection by sending metadata in the [SETUP](https://github.com/rsocket/rsocket/blob/master/Protocol.md#frame-setup) frame. The `RSocketRequester.Builder` builder lets us specify `setupMetadata` that contains authentication metadata.
 
-Our custom `RequestFactory` class makes it so we dont repeat the connection builder every time a requester is needed. We either need an authenticated connection or a non-authenticated connection. We will create the authenticating Requester below:
+Our custom `RequestFactory` class makes it so we don't repeat the connection builder every time a requester is needed. We either need an authenticated connection or a non-authenticated connection. We will create the authenticating Requester below:
 
 ```kotlin
 open class RequesterFactory(private val port: String) {
@@ -376,7 +376,7 @@ This test will:
 
 ## Closing and Next Step
 
-This guide was meant to introduce you to Spring Boot and Spring Security with Kotlin. One key takeaway, that Spring Security configuration can allow `Simple` or other authentication schemes such as JWT and Kerberos. Understanding how permissions work out of the box in Spring Security, and applying authorization to Reactive Methods. Then next step on this topic will take advantage of Spring Security's JWT interface. For in-depth implementation details on that topic now, please see the [Spring Security Samples](https://github.com/spring-projects/spring-security-samples) project on Github. 
+This guide introduced you to Spring Boot and Spring Security with RSocket. One key take-away, that Spring Security configuration can allow `Simple` or other authentication schemes such as JWT and Kerberos. Understanding how permissions work out of the box in Spring Security, and applying authorization to Reactive Methods helps when custom logic is needed. Then next step on this topic will take advantage of Spring Security's JWT interface. For in-depth implementation details on that topic now, please see the [Spring Security Samples](https://github.com/spring-projects/spring-security-samples) project on Github. 
 
 ## Informational and Learning Material
 
