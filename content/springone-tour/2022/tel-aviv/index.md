@@ -14,10 +14,11 @@ city_name: Tel Aviv
 isFree: true
 noIntroCopy: true
 noLeadForward: true
+telavivContact: true
 location:
+    - 'Peres Center'
     - 'The Israeli Innovation Center'
-    - 'Ahuzat Bayit St 2'
-    - 'Tel Aviv-Yafo'
+    - 'Kedem 32 St, Jaffa'
 hide_newsletter: true
 
 ---
@@ -113,7 +114,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">12:15</div>
         <div class="talk-title col-7 h4">
-            Running Untrusted Code as WASM in Spring Cloud Gateway and Spring Cloud Function
+            Running Untrusted Code in Spring Using WebAssembly
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -160,7 +161,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:45</div>
         <div class="talk-title col-7 h4">
-            What’s New in Spring Cloud?
+            Declarative Clients in Spring
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -182,7 +183,7 @@ It’s time to take your existing applications to the next level.
             </h3>
         </div>
     </div>
-    <div class="row py-3 border-bottom flex-nowrap">
+    <div class="row py-3 flex-nowrap">
         <div class="time col-2 pl-0 h4">17:00</div>
         <div class="talk-title col-7 h4">
             Happy Hour
@@ -198,14 +199,19 @@ It’s time to take your existing applications to the next level.
 #### Diamond
 
 <br>
-<img src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5">
-<img src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5">
+<div class="sponsor-container">
+<img id="terasky-sponsor" src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5 d-block d-lg-inline">
+<img id="dell-sponsor" src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5 d-block d-lg-inline">
+</div>
 
 <br>
 
 #### Gold
 
 <br>
-<img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5">
-<img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5">
-<img src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5">
+<div class="sponsor-container">
+<img src="../../images/logo-wizards.svg" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img src="../../images/logo-bezeq.png" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img id="bynet-sponsor" src="../../images/logo-bynet.svg" style="height:80px" class="mr-5 mb-5 d-block d-lg-inline">
+<img src="../../images/logo-portworx.png" style="height:80px" class="mb-5 d-block d-lg-inline">
+</div>

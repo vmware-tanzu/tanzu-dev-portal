@@ -251,5 +251,5 @@ that will consume less resources at runtime and starts up faster.
 
 #### Keep Learning
 
-[Spring Native Documentation](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/)
-[GraalVM](https://www.graalvm.org/)
+* [Spring Native Documentation](https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/)
+* [GraalVM](https://www.graalvm.org/)
