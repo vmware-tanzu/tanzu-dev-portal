@@ -37,7 +37,7 @@ This example will focus on username and password authentication to illustrate th
 
 ## The Application
 
-The [Example app](https://start.spring.io/#!type=maven-project&language=kotlin&platformVersion=2.7.3&packaging=jar&jvmVersion=17&groupId=example&artifactId=rsocket-security&name=rsocket-security&description=Reactive%20RSocket%20Security%20Demo&packageName=example.rsocket.security&dependencies=rsocket,security,spring-shell) is an RSocket service we will use to test authentication and authorization.
+The [Example app](https://github.com/Mario5Gray/simple-spring-reactive-security) is an RSocket service we will use to test authentication and authorization.
 
 The service interface is as follows:
 
