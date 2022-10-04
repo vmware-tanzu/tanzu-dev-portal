@@ -22,6 +22,6 @@ Mae Large is currently a Staff Field Engineer at VMware. She has worked as a sof
 <!--more-->
 
 
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="_8Zobz7qbqo" class="youtube-video-shortcode" >}} -->
+{{< youtube id="_8Zobz7qbqo" class="youtube-video-shortcode" >}}
