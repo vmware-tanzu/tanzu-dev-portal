@@ -2602,6 +2602,7 @@ WinRM
 [Ww]ireframe(s)?
 WireMock
 withfile-scoped
+WithUserDetails
 Wittenkamp
 Wittrock
 WomenOfDotNet

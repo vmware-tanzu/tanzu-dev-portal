@@ -1,9 +1,9 @@
 ---
 date: '2022-09-22'
-description: Implementing RSocket Security with Spring Boot. Part 1
+description: RSocket Security with Spring Boot
 lastmod: '2022-08-11'
-linkTitle: Implementing RSocket Security with Spring Boot.
-metaTitle: Simple RSocket Security with Spring Boot via Spring Security
+linkTitle: RSocket Security with Spring Boot
+metaTitle: RSocket Security with Spring Boot via Spring Security
 patterns:
 - API
 tags:
@@ -299,7 +299,7 @@ Next, we can create some tests to demonstrate connectivity and test whether our 
 
 ## Testing the Client and Server
 
-The first thing we want to is test whether authenticated connections are acting secure by ensuring proper rejection of an unauthenticated setup. This listing, we will look at the options chosen in this test case:
+Lets produce some integration tests. We want to standup the RSocketServer on it's network port, then send real authenticated frames over the wire. We will also know whether authenticated connections are acting secure by ensuring proper rejection of an unauthenticated setup. In this listing, we will look at the options chosen in this test case:
 
 ```kotlin
 @SpringBootTest         // 1
@@ -348,7 +348,7 @@ This test case is very similar to the previous one except:
 1) We only authenticate the request with `Simple` authentication. 
 2) This wont work, and will result with RejectedSetupException since our server expects authentication in the `setup` frame.
 
-### Authorization in tests
+### Authorization integration tests
 
 Next, we will test for authentication and to check that our `@PreAuthorize` rules are functioning. Recall earlier we have a `TreeServiceSecurity` class that adds `@PreAuthorize` to our service methods. Lets test this using a user of insufficient privilege:
 
@@ -374,6 +374,49 @@ This test will:
 
 > **_NOTE TO FUTURE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for credential payloads.
 
+## Method Security tests
+
+We can get closer to unit isolation by removing the RSocketServer, and issuing requests directly to the service instance.  This can be done using a compliment of [method testing supports](https://docs.spring.io/spring-security/reference/servlet/test/method.html) provided out of the box by Spring Security.
+
+For example, we want to test that authorization on the 'shake' method works. The 'shakeForLeaf' method requires a user with 'shake' privileges. We can mock a user having such authority:
+
+```kotlin
+@SpringBootTest
+class MethodSecurityTests {
+    @Test
+    @WithMockUser("testuser", roles = ["SHAKE"])
+    fun `should serve the mock user`(@Autowired svc: TreeService) {
+        StepVerifier
+                .create(svc.shakeForLeaf())
+                .assertNext {
+                    Assertions
+                            .assertThat(it)
+                            .isNotNull
+                            .containsAnyOf(*TreeService.LEAF_COLORS.toTypedArray())
+                }
+    }
+```
+
+We can also test with users populated from our own `ReactiveUserDetailsService` with help from the [WithUserDetails](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/test/context/support/WithUserDetails.html) annotation as follows:
+
+```kotlin
+    @Test
+    @WithUserDetails("shaker")
+    fun `should serve the withUserDetails user`(@Autowired svc: TreeService) {
+        StepVerifier
+                .create(svc.shakeForLeaf())
+                .assertNext {
+                    Assertions
+                            .assertThat(it)
+                            .isNotNull
+                            .containsAnyOf(*TreeService.LEAF_COLORS.toTypedArray())
+                }
+                .verifyComplete()
+    }
+```
+
+There is more to testing secure methods in reactive environments. To learn more about Spring Security test support, check out the [docs](https://docs.spring.io/spring-security/reference/servlet/test/index.html) which give detailed explanation and examples for the above mentioned supports and more!
+
 ## Closing and Next Step
 
 This guide introduced you to Spring Boot and Spring Security with RSocket. One key take-away, that Spring Security configuration can allow `Simple` or other authentication schemes such as JWT and Kerberos. Understanding how permissions work out of the box in Spring Security, and applying authorization to Reactive Methods helps when custom logic is needed. Then next step on this topic will take advantage of Spring Security's JWT interface. For in-depth implementation details on that topic now, please see the [Spring Security Samples](https://github.com/spring-projects/spring-security-samples) project on Github. 
@@ -385,6 +428,8 @@ Ben Wilcock's [Getting Started to RSocket Security](https://spring.io/blog/2020/
 [Going coroutine with Reactive Spring Boot](https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow)
 
 [Spring Security Reference](https://docs.spring.io/spring-security/reference/)
+
+[Spring Security Testing](https://docs.spring.io/spring-security/reference/servlet/test/index.html)
 
 [Spring Shell Reference](https://docs.spring.io/spring-shell/docs/2.1.0/site/reference/htmlsingle/#_what_is_spring_shell)
 
