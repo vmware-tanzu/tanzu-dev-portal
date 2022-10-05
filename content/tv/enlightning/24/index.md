@@ -1,9 +1,9 @@
 ---
-Date: '2022-10-06T08:00:00-07:00'
+Date: '2022-11-10T08:00:00-07:00'
 Description: "Empower Your Dev Teams with Virtual Clusters!"
-PublishDate: '2022-10-06T00:00:00-07:00'
-date: '2022-10-06'
-episode: '22'
+PublishDate: '2022-11-10T00:00:00-07:00'
+date: '2022-11-10'
+episode: '24'
 explicit: 'no'
 guests:
 - Lian Li
