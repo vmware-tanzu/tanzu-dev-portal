@@ -99,7 +99,7 @@ interface TreeServiceSecurity : TreeService {
 
 Finally, we can put the whole thing together and expose it as an RSocket server with help from Spring Boot!
 
-### Putting the App together
+## Putting the App Together
 
 The production application will merge security rules, messaging routes and backing implementation. Using Spring Security's supp and provide a user database where run-time authentication and authorization can be derived. In the next listing, we will look at enabling Spring Security for RSocket services.
 
@@ -172,7 +172,7 @@ The above code sample reads well, but there is some nuance with password setup:
  1) The builder supports the algorithm hint using curly braces. Here we specify `noop` (plaintext) password encoding. In the background, Spring Security uses an [DelegatingPasswordEncoder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/DelegatingPasswordEncoder.html) to determine the proper encoder to use such as pbkdf2, scrypt, sha256, etc...
 
 > **_WARNING:_**  Please do not use plaintext `{noop}` in production!
-### Review of RSocket Server Security
+## Review of RSocket Server Security
 
 By using `@EnableRSocketSecurity`, we gain RSocket security through [Payload Interceptors](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/rsocket/api/PayloadInterceptor.html). Interceptors themselves are cross-cutting, and Spring Security uses them to work on processing at various parts of an interaction such as:
 
@@ -217,7 +217,7 @@ The `authorizePayload` method decides how we can apply authorization at the serv
 
 > **_Request vs Setup:_** The [PayloadExchangeType](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/api/PayloadExchangeType.java) defines any `request` exchange as one of the following internal [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md#terminology) units of operation; FIRE_AND_FORGET, REQUEST_RESPONSE, REQUEST_STREAM, REQUEST_CHANNEL and METADATA_PUSH. SETUP and PAYLOAD (payload frames can have metadata) units are considered `SETUP` exchanges.
 
-### Security in Reactive Streams
+## Security in Reactive Streams
 
 With the usage of `@EnableReactiveMethodSecurity` in our main class, we gained the ability to annotate reactive streams with rules for authorization. This happens mainly in the [ReactiveAuthorizationManager](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/authorization/ReactiveAuthorizationManager.java) instances for specific use cases. Out of the box, we get the support for a variety of expressions with [@PreAuthorize](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/access/prepost/PostAuthorize.java) to introspect the authenticated user for necessary privileges. There are a variety of built-in expressions that we can use. 
 
@@ -251,7 +251,7 @@ Spring RSocket creates a [RSocketRequesterBuilder](https://github.com/spring-pro
 
 RSocket Security can be applied at the setup and or request levels. If a connection is shared across multiple users, then it is recommended to authenticate the setup with its own 'connectivity' user,then each request with its specific user. We will discuss both methods below.  
 
-### Authentication Styles on the Client
+## Authentication Styles on the Client
 
 We can secure the entire RSocket connection by sending metadata in the [SETUP](https://github.com/rsocket/rsocket/blob/master/Protocol.md#frame-setup) frame. The `RSocketRequester.Builder` builder lets us specify `setupMetadata` that contains authentication metadata.
 
@@ -374,7 +374,7 @@ This test will:
 
 > **_NOTE TO FUTURE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for credential payloads.
 
-## Method Security tests
+## Method Security Tests
 
 We can get closer to unit isolation by removing the RSocketServer, and issuing requests directly to the service instance.  This can be done using a compliment of [method testing supports](https://docs.spring.io/spring-security/reference/servlet/test/method.html) provided out of the box by Spring Security.
 
