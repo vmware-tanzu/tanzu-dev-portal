@@ -70,7 +70,7 @@
   }
 
   .homepage-banner {
-    height: 65px;
+    height: 50px;
     color: white;
     background-color: #6db33f;
     transition: all .2s ease-out;
@@ -338,7 +338,7 @@
   }
 }
 .td-home #hero {
-  padding-top: 3rem;
+//   padding-top: 3rem;
   padding-bottom: 3rem;
 
   .h1 {
@@ -770,6 +770,17 @@
 }
 .springone-tour .td-main {
   background-color: #0B1C23 !important;
+}
+@media(max-width: 991px) {
+  .springone-tour {
+    #dell-sponsor,
+    #terasky-sponsor {
+      height: 30px !important;
+    }
+    #bynet-sponsor {
+      height: 60px !important;
+    }
+  }
 }
 #hero.springone-tour-event-hero {
   background-color: #1b2a32;
