@@ -18,7 +18,7 @@ telavivContact: true
 location:
     - 'Peres Center'
     - 'The Israeli Innovation Center'
-    - 'Kedem 32 St, Jaffa'
+    - 'Kedem 132 St, Jaffa'
 hide_newsletter: true
 
 ---
@@ -56,8 +56,8 @@ It’s time to take your existing applications to the next level.
 		<h3 class="-text-white mt-0">Thank you for registering!</h3>
         <p>Save the date:</p>
         <p>
-            <a href="https://connect.tanzu.vmware.com/rs/625-IUJ-009/images/SpringOne-Tour-Tel-Aviv.ics" target="_blank" id="">Outlook/iCal</a> 
-            <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=SpringOne+Tour+Tel+Aviv&amp;details=Come+meet+other+Spring+enthusiasts%2C+experts%2C+and+advocates+from+your+local+community.+Interact+with+VMware+speakers+and+fellow+attendees.+Learn+about+new+Spring+developments%2C+AppDev+best+practices%2C+plus+tools+and+techniques+that+are+quickly+becoming+industry+standard.+It%E2%80%99s+time+to+take+your+existing+applications+to+the+next+level.&amp;location=Tel+Aviv&amp;dates=20221117T060000Z%2F20221117T160000Z" target="_blank" id="">Google</a>
+            <a href="https://d18qp689yd19g7.cloudfront.net/2022/SpringOne%2BTour%2BTel%2BAviv.ics" target="_blank" id="">Outlook/iCal</a> 
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=SpringOne+Tour+Tel+Aviv&details=Come+meet+other+Spring+enthusiasts%2C+experts%2C+and+advocates+from+your+local+community.+Interact+with+VMware+speakers+and+fellow+attendees.+Learn+about+new+Spring+developments%2C+AppDev+best+practices%2C+plus+tools+and+techniques+that+are+quickly+becoming+industry+standard.+It%E2%80%99s+time+to+take+your+existing+applications+to+the+next+level.&location=Peres+Center%2C+The+Israeli+Innovation+Center%2C+Kedem+132+St%2C+Jaffa&dates=20221117T060000Z%2F20221117T160000Z" target="_blank" id="">Google</a>
         <p>
 	</div>
 </div>
