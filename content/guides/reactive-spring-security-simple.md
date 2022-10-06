@@ -43,8 +43,7 @@ The service interface is as follows:
 
 ```kotlin
 interface TreeService {
-    fun shakeForLeaf(): Mono<String> // 1
-    fun rakeForLeaves(): Flux<String> // 2
+    fun shakeForLeaf(): Mono<String>
 
     companion object {
         val LEAF_COLORS = listOf("Green", "Yellow", "Orange", "Brown", "Red")
@@ -52,23 +51,13 @@ interface TreeService {
 }
 ```
 
-Above, we have 2 functions and a static list that:
-
-1) Return a `Mono<String>` of leaf colors.
-2) Return a `Flux<String>` of leaf colors.
+Above, we have a function that returns a `Mono<String>` of colors.
 
 We can then write the backing implementation:
 
 ```kotlin
 class TreeServiceImpl : TreeService {
-
     override fun shakeForLeaf(): Mono<String> = Mono.just(LEAF_COLORS.get(Random.nextInt(LEAF_COLORS.size)))
-
-    override fun rakeForLeaves(): Flux<String> = Flux
-            .fromStream(
-                    Stream.generate { Random.nextInt(LEAF_COLORS.size) }
-                            .limit(10)
-            ).map { LEAF_COLORS[it] }
 }
 ```
 
@@ -79,29 +68,28 @@ interface TreeControllerMapping : TreeService {
     @MessageMapping("shake")
     override fun shakeForLeaf(): Mono<String>
 
-    @MessageMapping("rake")
-    override fun rakeForLeaves(): Flux<String>
+    @MessageMapping("status")
+    fun status(@AuthenticationPrincipal user: Mono<UserDetails>): Mono<String> =
+            user.hasElement().map (Boolean::toString)    
 }
 ```
+
+The open 'status' route contains an argument decorated with [@AuthenticationPrincipal](https://github.com/spring-projects/spring-security/blob/main/web/src/main/java/org/springframework/security/web/bind/annotation/AuthenticationPrincipal.java) to inject - if available - the current logged in user.
 
 Next, subclass our service once more and apply Spring Security annotations. Use [@PreAuthorize](https://docs.spring.io/spring-security/reference/5.6.8/servlet/authorization/expression-based.html#_access_control_using_preauthorize_and_postauthorize), which is the preferred way for securing reactive streams through annotation.
 
 ```kotlin
 interface TreeServiceSecurity : TreeService {
-
     @PreAuthorize("hasRole('SHAKE')")
     override fun shakeForLeaf(): Mono<String>
-
-    @PreAuthorize("hasRole('RAKE')")
-    override fun rakeForLeaves(): Flux<String>
 }
 ```
 
 Finally, we can put the whole thing together and expose it as an RSocket server with help from Spring Boot!
 
-## Putting the App Together
+## Configuring the App
 
-The production application will merge security rules, messaging routes and backing implementation. Using Spring Security's supp and provide a user database where run-time authentication and authorization can be derived. In the next listing, we will look at enabling Spring Security for RSocket services.
+The production application will turn on various subsystems for Spring Security to work with Reactive streams, and RSocket services. We also expose the service using `@Controller` by composing security, message-mapping routes, and backing service implementation. The listing below shows this configuration:
 
 ```kotlin
 @EnableReactiveMethodSecurity  // 1
@@ -113,10 +101,7 @@ class App {
 
     @Controller
     class ServerTreeController : TreeControllerMapping,
-            TreeServiceSecurity, TreeService by TreeServiceImpl() {  // 3
-        fun status(@AuthenticationPrincipal user: Mono<UserDetails>): Mono<String> =
-                user.hasElement().map (Boolean::toString)
-    }
+            TreeServiceSecurity, TreeService by TreeServiceImpl()  // 3
 
 // ...
 
@@ -128,22 +113,17 @@ class App {
     }
 }
 ```
+Here are the steps in enabling Reactive method, and RSocket security:
 
-Spring Security uses a [ReactiveSecurityContextHolder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/core/context/ReactiveSecurityContextHolder.html) to place the [SecurityContext](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/core/context/SecurityContext.html) into [Reactor's Context](https://projectreactor.io/docs/core/release/reference/#context).
+1) Enable the [RSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/RSocketSecurity.java) bean by decorating a configuration class with [@EnableRSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/EnableRSocketSecurity.java). What this does is as stated in documentation -  it allows configuring RSocket based security. 
+2) Enable security-specific annotations on Reactive Streams (return types of [Publisher](https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true)) with the @[EnableReactiveMethodSecurity](https://github.com/spring-projects/spring-security/blob/210693eb6bd0cba51874ce150c73090c95d4e08b/docs/modules/ROOT/pages/reactive/authorization/method.adoc) annotation to the main configuration class. 
+3) The RSocket messaging controller is fully configured here. 
 
-Since reactive operators like map, flatmap, etc.. have access to this `SecurityContext`, Spring Security (or the developer) can then apply an advice to determine things like the current logged in user and its privileges. The way to enable this goes as follows:
+## Review of User Management
 
-1) Enabled the [RSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/RSocketSecurity.java) bean by decorating a configuration class with [@EnableRSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/EnableRSocketSecurity.java). What this does is as stated in documentation -  it allows configuring RSocket based security. 
-2) Enable security-specific annotations on Reactive Streams (return types of [Publisher](https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true)), add the @[EnableReactiveMethodSecurity](https://github.com/spring-projects/spring-security/blob/210693eb6bd0cba51874ce150c73090c95d4e08b/docs/modules/ROOT/pages/reactive/authorization/method.adoc) annotation to the main configuration class. 
-3) The RSocket messaging controller is fully configured here, along with the third unsecure `status` route. The status route is decorated by [@AuthenticationPrincipal](https://github.com/spring-projects/spring-security/blob/main/web/src/main/java/org/springframework/security/web/bind/annotation/AuthenticationPrincipal.java) which uses the `SecurityContext` to inject - if available - the UserDetails object.
+Spring Security provides concrete [User](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/User.java) objects that implement the [UserDetails](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/UserDetails.java) interface. The [User.UserBuilder](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/User.java#L215) object provides a fluent builder for describing instances of `User`.
 
-> **_Customize the User:_** There is a nice to know informal example that describes how one would resolve a custom User object with the [AuthenticationPrincipalArgumentResolver](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/bind/support/AuthenticationPrincipalArgumentResolver.html).
-
-## Application Users
-
-Spring Security provides concrete [User](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/User.java) objects that implement the [UserDetails](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/UserDetails.java) interface. This interface is used internally and should be subclassed when you have specific needs. The [User.UserBuilder](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/User.java#L215) object provides a fluent builder for describing instances of UserDetail.
-
-Spring Security comes with components to handle UserDetail storage. This activity is exposed for Reactive services, through [ReactiveUserDetailsService](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/ReactiveUserDetailsService.java). The easiest way to use this is by creating an instance of the in-memory [MapReactiveUserDetailService](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/MapReactiveUserDetailsService.java).
+We will also need to reactively read/write users to some kind of storage. This activity is exposed for Reactive services through [ReactiveUserDetailsService](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/ReactiveUserDetailsService.java). The easiest way to use this is by creating an instance of the in-memory [MapReactiveUserDetailService](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/userdetails/MapReactiveUserDetailsService.java).
 
 To review, we can completely populate a `ReactiveUserDetailService` in our production app:
 
@@ -171,7 +151,14 @@ The above code sample reads well, but there is some nuance with the password spe
 
  1) The builder supports the algorithm hint using curly braces. Here we specify `noop` (plaintext) password encoding. In the background, Spring Security uses an [DelegatingPasswordEncoder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/DelegatingPasswordEncoder.html) to determine the proper encoder to use such as pbkdf2, scrypt, sha256, etc...
 
-> **_WARNING:_**  Please do not use plaintext `{noop}` in production! A good writeup describing the evolution of password storage can be found in [the Spring Security docs](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
+> **_WARNING:_**  Please do not use plaintext `{noop}` in production! A good writeup describing the evolution of password storage and hints for what you can do to prevent tampering can be found in [the Spring Security docs](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
+
+### About User Resolution
+
+Spring Security uses a [ReactiveSecurityContextHolder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/core/context/ReactiveSecurityContextHolder.html) to manage a [SecurityContext](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/core/context/SecurityContext.html) in  [Reactor's Context](https://projectreactor.io/docs/core/release/reference/#context). Spring Security (or the developer) can then use a [AuthenticationPrincipalArgumentResolver](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver.html) by way of an [RSocketMessageHandler](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/rsocket/annotation/support/RSocketMessageHandler.html) to access this context, and resolve the logged in user at method level. 
+
+There is a nice to know informal example that describes how one would resolve a custom `User` object with the [AuthenticationPrincipalArgumentResolver](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/method/annotation/AuthenticationPrincipalArgumentResolver.html) docs.
+
 ## Review of RSocket Server Security
 
 By using `@EnableRSocketSecurity`, we gain RSocket security through [Payload Interceptors](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/rsocket/api/PayloadInterceptor.html). Interceptors themselves are cross-cutting, and Spring Security uses them to work on processing at various parts of an interaction such as:
@@ -181,13 +168,13 @@ By using `@EnableRSocketSecurity`, we gain RSocket security through [Payload Int
 * Performing requests
 * Responding to requests
 
-Since a payload can have many metadata formats to confer credential exchange, Spring's [RSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/RSocketSecurity.java) bean provides a fluent builder for configuring [Simple](https://github.com/rsocket/rsocket/blob/master/Extensions/Security/Simple.md), Basic, JWT, and custom authentication methods, in addition to RBAC authorization.
+Since a payload can have many metadata formats to confer credential exchange, Spring's [RSocketSecurity](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/RSocketSecurity.java) bean provides a fluent builder for configuring [Simple](https://github.com/rsocket/rsocket/blob/master/Extensions/Security/Simple.md), Basic, [JWT](https://docs.spring.io/spring-security/reference/reactive/integrations/rsocket.html#rsocket-authentication-jwt), and custom authentication methods, in addition to RBAC authorization.
 
 The `RSocketSecurity` provided builder will describe a set of [AuthenticationPayloadInterceptors](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/authentication/AuthenticationPayloadInterceptor.java) that converts payload metadata into an [Authentication](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/core/Authentication.java) instances inside the `SecurityContext`. 
 
 To further our understanding of the configuration, lets examine the [SecuritySocketAcceptorInterceptorConfiguration](https://github.com/spring-projects/spring-security/blob/main/config/src/main/java/org/springframework/security/config/annotation/rsocket/SecuritySocketAcceptorInterceptorConfiguration.java) class, which sets up the default security configuration for RSocket.
 
- This class, imported by `@EnableRSocketSecurty`, will configure a [PayloadSocketAcceptorInterceptor](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/core/PayloadSocketAcceptorInterceptor.java) for [Simple](https://github.com/rsocket/rsocket/blob/master/Extensions/Security/Simple.md) and basic (deprecated) authentications. The [PayloadExchangeMatchers](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/util/matcher/PayloadExchangeMatcher.java) describe which exchanges require authentication:
+ This class, imported by `@EnableRSocketSecurty`, will configure a [PayloadSocketAcceptorInterceptor](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/core/PayloadSocketAcceptorInterceptor.java) for [Simple](https://github.com/rsocket/rsocket/blob/master/Extensions/Security/Simple.md) and basic authentications. The [PayloadExchangeMatchers](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/util/matcher/PayloadExchangeMatcher.java) describe which exchanges require authentication:
 
 ```java
 package org.springframework.security.config.annotation.rsocket;
@@ -217,7 +204,7 @@ The `authorizePayload` method decides how we can apply authorization at connecti
 
 > **_Request vs Setup:_** The [PayloadExchangeType](https://github.com/spring-projects/spring-security/blob/main/rsocket/src/main/java/org/springframework/security/rsocket/api/PayloadExchangeType.java) defines any `request` exchange as one of the following internal [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md#terminology) units of operation; FIRE_AND_FORGET, REQUEST_RESPONSE, REQUEST_STREAM, REQUEST_CHANNEL and METADATA_PUSH. SETUP and PAYLOAD (payload frames can have metadata) units are considered `SETUP` exchanges.
 
-## Security in Reactive Streams
+## Review of Reactive Method Security
 
 With the usage of `@EnableReactiveMethodSecurity` in our main class, we gained the ability to annotate reactive streams with rules for authorization. This happens mainly in the [ReactiveAuthorizationManager](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/authorization/ReactiveAuthorizationManager.java) instances for specific use cases. Out of the box, we get the support for a variety of expressions with [@PreAuthorize](https://github.com/spring-projects/spring-security/blob/main/core/src/main/java/org/springframework/security/access/prepost/PostAuthorize.java) to introspect the authenticated user for necessary privileges. There are a variety of built-in expressions that we can use. 
 
