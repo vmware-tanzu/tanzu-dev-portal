@@ -151,7 +151,7 @@ The above code sample reads well, but there is some nuance with the password spe
 
  1) The builder supports the algorithm hint using curly braces. Here we specify `noop` (plaintext) password encoding. In the background, Spring Security uses an [DelegatingPasswordEncoder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/DelegatingPasswordEncoder.html) to determine the proper encoder to use such as pbkdf2, scrypt, sha256, etc...
 
-> **_WARNING:_**  Please do not use plaintext `{noop}` in production! A good writeup describing the evolution of password storage and hints for what you can do to prevent tampering can be found in [the Spring Security docs](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
+> **_WARNING:_**  Please do not use plaintext `{noop}` in production! A good write-up describing the evolution of password storage and hints for what you can do to prevent tampering can be found in [the Spring Security docs](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
 
 ### About User Resolution
 
@@ -358,7 +358,7 @@ This test will:
 2) Send a request to the 'shake' route. This service method is `@PreAuthorized` protected for users having 'SHAKE' role.
 3) Since we don't have this kind of permission for the 'raker' user, we will get [ApplicationErrorException](https://github.com/rsocket/rsocket-java/blob/master/rsocket-core/src/main/java/io/rsocket/exceptions/ApplicationErrorException.java) with the message 'Denied'.
 
-> **_NOTE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for un-encrypted authentication payloads.
+> **_NOTE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for unencrypted authentication payloads.
 
 ## Method Security Tests
 
