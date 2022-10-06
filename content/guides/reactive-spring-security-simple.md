@@ -167,11 +167,11 @@ class App {
 }
 ```
 
-The above code sample reads well, but there is some nuance with password setup:
+The above code sample reads well, but there is some nuance with the password specification:
 
  1) The builder supports the algorithm hint using curly braces. Here we specify `noop` (plaintext) password encoding. In the background, Spring Security uses an [DelegatingPasswordEncoder](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/DelegatingPasswordEncoder.html) to determine the proper encoder to use such as pbkdf2, scrypt, sha256, etc...
 
-> **_WARNING:_**  Please do not use plaintext `{noop}` in production!
+> **_WARNING:_**  Please do not use plaintext `{noop}` in production! A good writeup describing the evolution of password storage can be found in [the Spring Security docs](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
 ## Review of RSocket Server Security
 
 By using `@EnableRSocketSecurity`, we gain RSocket security through [Payload Interceptors](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/rsocket/api/PayloadInterceptor.html). Interceptors themselves are cross-cutting, and Spring Security uses them to work on processing at various parts of an interaction such as:
@@ -206,7 +206,7 @@ class SecuritySocketAcceptorInterceptorConfiguration {
 }
 ```
 
-The `authorizePayload` method decides how we can apply authorization at the server setup and request exchange. The default exchange we see configured above include:
+The `authorizePayload` method decides how we can apply authorization at connection `setup` and `request` exchanges. The configuration above include:
 
 1) Basic credential passing for backwards compatibility; this is deprecated in favor of #2
 2) [Simple](https://github.com/rsocket/rsocket/blob/master/Extensions/Security/Simple.md) credential passing is supported by default; this is the winning spec and supersedes Basic.
@@ -249,7 +249,7 @@ To gain fundamental understanding of the underpinnings of Authorization, I encou
 
 Spring RSocket creates a [RSocketRequesterBuilder](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java#L164) bean at startup. This bean provides a builder for creating new [RSocketRequesters](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketRequester.java). An `RSocketRequester` provides a single connection interface to RSocket operations usually across a network.
 
-RSocket Security can be applied at the setup and or request levels. If a connection is shared across multiple users, then it is recommended to authenticate the setup with its own 'connectivity' user,then each request with its specific user. We will discuss both methods below.  
+RSocket Security can be applied at the `setup` and or `request` levels. We will discuss both methods next.  
 
 ## Authentication Styles on the Client
 
@@ -274,13 +274,13 @@ open class RequesterFactory(private val port: String) {
  //..
 }    
 ```
-The lines of code we want to inspect here relate to the specifics for setup frame authentication metadata:
+The lines of code we want to inspect here relate to the specifics for `setup` frame authentication metadata:
 
 1) Requester needs to know how to encode our `Simple` authentication metadata.
 2) Which needs to be registered as an encoder in Spring's [RSocketStrategies](https://github.com/spring-projects/spring-framework/blob/main/spring-messaging/src/main/java/org/springframework/messaging/rsocket/RSocketStrategies.java).
 3) Then use `setupMetadata` to encode credentials going into the setup frame.
 
-Next, we need a non-authenticated setup requester:
+Next, we need a non-authenticated requester:
 
 ```kotlin
     open fun requester(): RSocketRequester =
@@ -299,7 +299,7 @@ Next, we can create some tests to demonstrate connectivity and test whether our 
 
 ## Testing the Client and Server
 
-Lets produce some integration tests. We want to standup the RSocketServer on it's network port, then send real authenticated frames over the wire. We will also know whether authenticated connections are acting secure by ensuring proper rejection of an unauthenticated setup. In this listing, we will look at the options chosen in this test case:
+Lets produce some integration tests. We want to standup the RSocketServer on it's network port, then send real authenticated frames over the wire. We will also know whether authenticated connections are acting secure by ensuring proper rejection of an unauthenticated `setup` frame.
 
 ```kotlin
 @SpringBootTest         // 1
@@ -318,14 +318,14 @@ class RequesterFactoryTests {
     }
 
 ```
-Whats happening is a usual test setup, but lets inspect what our test means:
+Lets inspect what this test means:
 
-1) Using `@SpringBootTest` ensures we get full autowiring of our production code to setup the RSocket server.
-2) Create a requester that omits setup authentication metadata.
+1) Using `@SpringBootTest` ensures we get full autowiring of our production code to configure the RSocket server.
+2) Create a requester that omits authentication metadata in the `setup` frame.
 3) The test site is simple and merely sends a request to the `status` route that returns whether we are authenticated or not.
-4) Because our server configuration states that setup must be authenticated, we should expect a [RejectedSetupExeption](https://github.com/rsocket/rsocket-java/blob/master/rsocket-core/src/main/java/io/rsocket/exceptions/RejectedSetupException.java) error upon request.
+4) The 'status' route is not locked down, but our server configuration states that connection setup must be authenticated. Thus, we will expect a [RejectedSetupExeption](https://github.com/rsocket/rsocket-java/blob/master/rsocket-core/src/main/java/io/rsocket/exceptions/RejectedSetupException.java) error upon request.
 
-Next, we will test when we send authenticated requests without authentication setup:
+Next, we will test when we send authenticated requests without sending the authentication `setup` frame:
 
 ```kotlin
     @Test
@@ -345,47 +345,46 @@ Next, we will test when we send authenticated requests without authentication se
 
 This test case is very similar to the previous one except:
 
-1) We only authenticate the request with `Simple` authentication. 
-2) This wont work, and will result with RejectedSetupException since our server expects authentication in the `setup` frame.
+1) We only authenticate the request alone with `Simple` authentication. 
+2) This still wont work, and will result with RejectedSetupException since our server expects authentication in the `setup` frame.
 
-### Authorization integration tests
+### Authorization Tests
 
-Next, we will test for authentication and to check that our `@PreAuthorize` rules are functioning. Recall earlier we have a `TreeServiceSecurity` class that adds `@PreAuthorize` to our service methods. Lets test this using a user of insufficient privilege:
+Next, we will perform proper `setup`, and test for route authorization. Recall earlier we have a `TreeServiceSecurity` class that adds `@PreAuthorize` to our service methods. Lets test this with a User of insufficient privilege:
 
 ```kotlin
     @Test
     fun `underprivileged shake request is APPLICATIONERROR Denied`(@Autowired requesterFactory: RequesterFactory) {
-        val request = requesterFactory
-                .requester("raker", "nopassword") //1
-                .route("shake")  // 2
+        val request = requesterFactory.requester("raker", "nopassword")
+                .route("shake")
                 .retrieveMono<String>()
 
         StepVerifier
                 .create(request)
-                .verifyError(ApplicationErrorException::class.java) //3
+                .verifyError(ApplicationErrorException::class.java)
     }
 ```
 
 This test will:
 
-1) create the authenticated requester. But this user is the 'raker' and does not have 'shake' authority.
-2) sends a request to the 'shake' route. This route is `@PreAuthorized` protected for users having 'shake' authority.
+1) Create the authenticated requester. Remember; this sends authentication in the `setup` frame. Thus, requests will be allowed.
+2) Send a request to the 'shake' route. This service method is `@PreAuthorized` protected for users having 'SHAKE' role.
 3) Since we don't have this kind of permission for the 'raker' user, we will get [ApplicationErrorException](https://github.com/rsocket/rsocket-java/blob/master/rsocket-core/src/main/java/io/rsocket/exceptions/ApplicationErrorException.java) with the message 'Denied'.
 
-> **_NOTE TO FUTURE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for credential payloads.
+> **_NOTE:_** To ensure safer communication while using `Simple` authentication, you might apply TLS security across the transport. This way, no one can snoop the network for un-encrypted authentication payloads.
 
 ## Method Security Tests
 
-We can get closer to unit isolation by removing the RSocketServer, and issuing requests directly to the service instance.  This can be done using a compliment of [method testing supports](https://docs.spring.io/spring-security/reference/servlet/test/method.html) provided out of the box by Spring Security.
+We can get better test unit isolation by removing or ignoring the RSocketServer, and issuing requests directly to the service instance.  This can be done using a compliment of [method testing supports](https://docs.spring.io/spring-security/reference/servlet/test/method.html) provided out of the box by Spring Security.
 
-For example, we want to test that authorization on the 'shake' method works. The 'shakeForLeaf' method requires a user with 'shake' privileges. We can mock a user having such authority:
+For example, we want to test that authorization on the `shakeForLeaves()` service method which requires Users with the 'shake' role. We can actually mock a user in tests by decorating our test method using the [@WithMockUser](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/test/context/support/WithMockUser.html) annotation:
 
 ```kotlin
 @SpringBootTest
 class MethodSecurityTests {
     @Test
-    @WithMockUser("testuser", roles = ["SHAKE"])
-    fun `should serve the mock user`(@Autowired svc: TreeService) {
+    @WithMockUser("testuser", roles = ["SHAKE"]) //1
+    fun `should return success calling shake with given mockUser`(@Autowired svc: TreeService) {
         StepVerifier
                 .create(svc.shakeForLeaf())
                 .assertNext {
@@ -397,13 +396,13 @@ class MethodSecurityTests {
     }
 ```
 
-We can also test with users populated from our own `ReactiveUserDetailsService` with help from the [WithUserDetails](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/test/context/support/WithUserDetails.html) annotation as follows:
+We can also test with users populated from our own `ReactiveUserDetailsService` with help from the [@WithUserDetails](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/test/context/support/WithUserDetails.html) annotation as follows:
 
 ```kotlin
     @Test
     @WithUserDetails("shaker")
-    fun `should serve the withUserDetails user`(@Autowired svc: TreeService) {
-        StepVerifier
+    fun `should return success calling shake with given withUserDetails`(@Autowired svc: TreeService) {
+            StepVerifier
                 .create(svc.shakeForLeaf())
                 .assertNext {
                     Assertions
@@ -417,9 +416,11 @@ We can also test with users populated from our own `ReactiveUserDetailsService` 
 
 There is more to testing secure methods in reactive environments. To learn more about Spring Security test support, check out the [docs](https://docs.spring.io/spring-security/reference/servlet/test/index.html) which give detailed explanation and examples for the above mentioned supports and more!
 
-## Closing and Next Step
+## Closing and Next Steps
 
-This guide introduced you to Spring Boot and Spring Security with RSocket. One key take-away, that Spring Security configuration can allow `Simple` or other authentication schemes such as JWT and Kerberos. Understanding how permissions work out of the box in Spring Security, and applying authorization to Reactive Methods helps when custom logic is needed. Then next step on this topic will take advantage of Spring Security's JWT interface. For in-depth implementation details on that topic now, please see the [Spring Security Samples](https://github.com/spring-projects/spring-security-samples) project on Github. 
+This guide introduced you to Spring Boot and Spring Security with RSocket. One key take-away, that Spring Security configuration can allow `Simple` or other authentication schemes such as JWT and Kerberos. Understanding how permissions work out of the box in Spring Security, and applying authorization to Reactive Methods helps when custom logic is needed. Furthermore, it is safer to use some form of transport security when implementing `simple` RSocket security because authentication frames are transmitted plaintext. We will discuss securing RSocket connections with TLS in another guide.
+
+Then next step on this topic will take advantage of Spring Security's JWT interface. For in-depth implementation details on that topic now, please see the [Spring Security Samples](https://github.com/spring-projects/spring-security-samples) project on Github. 
 
 ## Informational and Learning Material
 
