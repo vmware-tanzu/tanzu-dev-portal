@@ -2061,6 +2061,7 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketMessageHandler
 RSocketRequester
 RSocketRequesterBuilder
 RSocketRequesters
@@ -2602,6 +2603,7 @@ WinRM
 [Ww]ireframe(s)?
 WireMock
 withfile-scoped
+WithMockUser
 WithUserDetails
 Wittenkamp
 Wittrock
