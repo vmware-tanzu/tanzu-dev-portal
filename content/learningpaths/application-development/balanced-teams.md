@@ -31,7 +31,7 @@ In this article, you will learn to:
 ## Define balanced team for your team members {id=definition}
 > “A team management philosophy that has people with a variety of skills and perspectives that support each other towards a shared goal.” - *balancedteam.org*
 
-The typical balanced team mix for product development is a product manager, product designer, and engineer(s) dedicated to a single product development effort. This is in contrast to another common team structure where roles some roles, such as product management and design, are shared across many product efforts.
+The typical balanced team mix for product development is a product manager, product designer, and engineer(s) dedicated to a single product development effort. This is in contrast to another common team structure where some roles, such as product management and design, are shared across many product efforts.
 
 When we work within the construct of a balanced team, we ensure that all these perspectives blend and inform each other so that we build products that are desirable, usable, feasible, and viable.
 
