@@ -37,7 +37,7 @@ Circuit breakers in your code function the same way as the electrical circuit br
 
 Vulnerable calls are wrapped in a circuit breaker, which monitors the results. When the number of failed calls exceeds the configured limit, the circuit is “opened,” meaning the calls no longer pass through to the protected service.
 
-![Diagram showing calls completing when the circuit is closed but when the error threashold is exceeded, the circuit is opened redirecting calls the fallback mechanism.](./images/circuit-breaker.png)
+![Diagram showing calls completing when the circuit is closed but when the error threshold is exceeded, the circuit is opened redirecting calls the fallback mechanism.](./images/circuit-breaker.png)
 
 In this situation, the circuit breaker redirects to whatever fallback method you’ve configured. Periodically, the circuit breaker pings the underlying service and, if it is healthy, the circuit is “closed” and calls flow to the underlying endpoint once again.
 
