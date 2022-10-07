@@ -6,6 +6,8 @@
 # add entries to bottom of file, will be sorted on commit
 #CoffeeOps
 
+quickstart
+Kadourah
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -16,6 +18,7 @@
 .tgz
 1:1s
 10x
+12Factor
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
@@ -27,6 +30,7 @@
 [245]xx
 4x
 8PpgqEqkQWA
+8Zobz7qbqo
 A3
 AAAA
 Aasta
@@ -66,6 +70,7 @@ Adib's
 Admission(Response|Review)
 adoptopenjdk
 ADR(s)?
+advices
 AES-GCM
 affordances
 afterAcknowledgement
@@ -96,6 +101,7 @@ AMQP
 Anchore
 [Aa]nchorship
 [Aa]nchortype(s)?
+Andreas
 Andriy
 Ango
 Anneliese
@@ -106,6 +112,7 @@ anthonyjvetter
 antifragility
 [Aa]ntipatterns?
 Antrea
+AOT
 Apdex
 api
 Apigee
@@ -124,6 +131,7 @@ Appel
 appender
 Applegate
 application-centric
+ApplicationErrorException
 ApplicationEvent
 applicationPort
 Applitools
@@ -159,6 +167,7 @@ AsyncEvents
 AsyncEventsQueues
 ATL
 Atlassian
+AtomicJar
 attemptToConnectToMBeanServer
 Attribution-NonCommercial-ShareAlike
 audit2rbac
@@ -167,6 +176,9 @@ auditd
 [Aa]uth(z|n)?
 Auth0
 AuthenticationManager
+AuthenticationPayloadInterceptors
+AuthenticationPrincipal
+AuthenticationPrincipalArgumentResolver
 AuthenticationProvider
 authenticator
 authorisation
@@ -184,9 +196,11 @@ AutoDeploy
 Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
+autowire
 Autowired
 autowired
 autowires
+autowiring
 Aviv
 Awaitility
 aws-encryption-provider
@@ -407,6 +421,7 @@ Coby
 Codefresh
 CodeFresh
 CodeItLive
+CodeMash
 CodeOne
 CoffeeOps
 cognisant
@@ -445,6 +460,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+coroutine
 Corry
 CORS
 cortado
@@ -452,6 +468,7 @@ CORTX
 Cosgrove
 Coté('s)?
 counterintuitive
+Covid
 COVID
 COVID-19
 cpu(s)?
@@ -553,17 +570,21 @@ debuggable
 [Dd]eclaratively
 decrypt(ed|ing)?
 [Dd]eduplicate
+defaultRolePrefix
+DefaultWebSecurityExpressionHandler
 defence
 DefMacro
 degradations
 DEK(s)?
 delayDuration
+DelegatingPasswordEncoder
 Deleuze
 deliverAgile
 deliverToAsyncEventQueue
 DellEMC
 Denham-Parry
 denhamparry
+denyAll
 denylist
 Depedency
 dependant
@@ -697,6 +718,8 @@ EnableCachingDefinedRegions
 EnableClusterAware
 EnableClusterConfiguration
 [Ee]nablement
+EnableReactiveMethodSecurity
+EnableRSocketSecurity
 Endnotes
 enforce-node-allocatable
 Engelbert
@@ -920,6 +943,7 @@ gotchas
 Gothelf
 Gowtham
 GraalVM(-powered|.)?
+Grabner
 gradle
 Gradle
 gradlew
@@ -967,8 +991,13 @@ Hansson
 HAProxy
 hardcode
 [hH]ardcoded
+hasAnyAuthority
+hasAnyRole
+hasAuthority
 HashiCorp('s)?
+hasPermission
 hasResult
+hasRole
 HATEOAS
 Hayk
 Haytham
@@ -996,6 +1025,7 @@ HMAC
 Hobsons
 hoc
 Hockin
+Hoeller
 Holub
 Homebrew
 homogenous
@@ -1098,10 +1128,14 @@ IPVS
 Irizarry
 IronFrame
 IRSA
+isAnonymous
 ISAPI
+isAuthenticated
 iSCSI
 Isenberg
 IServiceProvider
+isFullyAuthenticated
+isRememberMe
 ISTIO_MUTUAL
 ISTIO_PROMETHEUS_ANNOTATIONS
 istio-cni
@@ -1165,7 +1199,9 @@ JHipster
 Jiang
 Jie
 jimwebber
+Jira
 JIRAs
+JIT
 Jitsu
 Jiu
 jks
@@ -1202,6 +1238,7 @@ JSR-352
 JST
 judgement
 judgements
+Juergen
 julielerman
 Julien
 jumpbox
@@ -1238,6 +1275,7 @@ KCDC
 KEK(s)?
 Kendo
 kendrickcoleman
+keptn
 Keptn
 Kerberos
 Kerievsky
@@ -1420,12 +1458,14 @@ Manachi
 Manulife
 MAPBU
 mappable
+MapReactiveUserDetailService
 MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 MarkIT
 Martín
 Masala
+matcher
 matchers
 matchings
 Matskas
@@ -1444,6 +1484,7 @@ Mehmandarov
 [Mm]entorship
 MeshAdmin
 Mesos
+MessageMapping
 messageQueueSize
 messagesProcessed
 MessagingBase
@@ -1493,6 +1534,7 @@ Monash
 [Mm]ongo(db)?
 MONGODB-(ROOT|USER)-PASSWORD
 MONGODB-IP-ADDRESS
+[Mm]onorepo(s)?
 MQ
 MQTT
 MSBuild
@@ -1524,6 +1566,7 @@ Mutual-TLS
 Muzz
 MVB(-awarded)?
 MVC
+mvnw
 MVP(s)?
 my-mongodb
 [mM]y[sS]ql
@@ -1614,6 +1657,7 @@ OKR(s)?
 Okta
 old-checkout-desc
 OLEDB
+Oleg
 Oleh
 olehdokuka
 OLGA_MACIASZEK
@@ -1716,8 +1760,13 @@ passthrough
 passwd
 passwordless
 PASW
+PayloadExchangeMatcher
+PayloadExchangeMatchers
+PayloadExchangeType
+PayloadSocketAcceptorInterceptor
 pb('s)?
 pb&jelly
+pbkdf2
 (pc|C)zarkowski('s)?
 PCF
 PDB(s)?
@@ -1735,6 +1784,7 @@ per-namespace
 Percona
 Pérez
 [Pp]erformant
+permitAll
 PersistentVolumeClaim|persistentvolumeclaim(s)?
 [Pp]et[Cc]linic
 PetaBridge
@@ -1810,6 +1860,7 @@ Pre-sync
 pre-work
 pre-written
 pre(-)?
+PreAuthorize
 prebuilt
 precompiled
 preconfigured
@@ -1890,8 +1941,11 @@ RDMS
 RDMS(s)?
 RDP
 reachability
+ReactiveAuthorizationManager
 reactively
+ReactiveSecurityContextHolder
 ReactiveUI
+ReactiveUserDetailsService
 ReactiveX
 ReactorSleuth
 [Rr]eadiness([Pp]robe)?
@@ -1935,6 +1989,8 @@ reimagine
 [Rr]eimplement(ing)?
 Reinertsen
 reissuance
+RejectedSetupException
+RejectedSetupExeption
 [Rr]emediation(s)?
 removeAll
 removeIf
@@ -2009,8 +2065,13 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketMessageHandler
 RSocketRequester
+RSocketRequesterBuilder
+RSocketRequesters
+RSocketSecurity
 RSocketServer
+RSocketStrategies
 Ruckle
 Rudd
 Rumans
@@ -2040,6 +2101,7 @@ samplehost(:[0-9]*)?
 sandbox(ing)?
 sandboxed
 Sanderson
+Sandusky
 Sanitization
 Sardana
 Sarella
@@ -2077,9 +2139,13 @@ SecretTemplate
 SecretTemplates
 security-spring-security-xml
 securityContext
+SecurityContext
+SecurityExpressionOperations
 SecurityManager
+SecuritySocketAcceptorInterceptorConfiguration
 Sedano
 Seiden
+Šelajev
 SELinux
 Semver
 Sergi
@@ -2219,6 +2285,7 @@ STS
 STT
 Styra
 sub(p|P)ath
+subclassed
 subclasses
 subcommand
 subdirector(y|ies)
@@ -2255,7 +2322,9 @@ Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
 tanzuignore
+targetId
 targetPort
+targetType
 Tarin
 TAS
 TaskRepository
@@ -2385,6 +2454,7 @@ unregister
 unreleasable
 UnrestrictedMethodAuthorizer
 unschedulable
+unsecure
 unshared
 Unshared
 Unsplash
@@ -2407,7 +2477,9 @@ urandom
 url
 URL(s)?
 USD
+UserDetail
 userDetails
+UserDetails
 [Uu]sings
 Util(s)?
 UX
@@ -2420,6 +2492,7 @@ validators
 ValueComparator
 ValueComparer
 Vanderburg
+vararg
 vault-kubernetes-authenticator
 Vavr
 VB[Ss]cript
@@ -2455,6 +2528,7 @@ VirtualBox
 [Vv]irtualenv
 virtualhost
 virtualized
+VirtualJUG
 VirtualService
 visualise
 VisualVM
@@ -2501,6 +2575,7 @@ WebAPI
 WebApiConfig
 WebApp
 webapp
+WebApps
 webapps_default
 WebAssembly
 Webber
@@ -2532,6 +2607,8 @@ WinRM
 [Ww]ireframe(s)?
 WireMock
 withfile-scoped
+WithMockUser
+WithUserDetails
 Wittenkamp
 Wittrock
 WomenOfDotNet
@@ -2547,6 +2624,7 @@ Wujec('s)
 X509
 x509
 x64
+XACML
 Xcode
 Xing
 XKCD
