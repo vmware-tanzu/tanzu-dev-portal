@@ -6,6 +6,8 @@
 # add entries to bottom of file, will be sorted on commit
 #CoffeeOps
 
+quickstart
+Kadourah
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -235,7 +237,7 @@ behavioural
 Behrooz
 Belamaric
 benbravo73
-benchmark(ing)?
+[Bb]enchmark(ing)?
 benefitting
 Berglund
 BestEffort
@@ -1446,6 +1448,7 @@ MacBook
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
+MacronutrientsProvider
 Madhav
 Madhura
 Mahoney
@@ -1636,6 +1639,7 @@ NTP
 NuGet
 nullable
 NUnit
+Nygard
 NYJavaSIG
 OAuth2?
 ObjectFilter
@@ -2061,6 +2065,7 @@ RoutingAsyncEventListener
 RPi
 RSA
 RSocket(-based)?
+RSocketMessageHandler
 RSocketRequester
 RSocketRequesterBuilder
 RSocketRequesters
@@ -2602,6 +2607,7 @@ WinRM
 [Ww]ireframe(s)?
 WireMock
 withfile-scoped
+WithMockUser
 WithUserDetails
 Wittenkamp
 Wittrock

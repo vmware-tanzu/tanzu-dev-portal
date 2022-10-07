@@ -1,7 +1,7 @@
 ---
 name: "Greg Meyer"
 description: "Staff II Engineer/Application Architect"
-roles: ["author","advocate"]
+roles: ["author"]
 skills: ["Tanzu Application Platform", "Spring", "Tanzu Application Server"]
 location: "Kansas City, MO"
 hidden: false
