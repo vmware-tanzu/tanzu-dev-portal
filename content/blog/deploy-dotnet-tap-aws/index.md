@@ -1,6 +1,6 @@
 ---
-date: '2022-10-7'
-lastmod: '2022-10-7'
+date: '2022-10-07'
+lastmod: '2022-10-07'
 team:
 - Layla Porter
 - Cal Kadourah
