@@ -237,7 +237,7 @@ behavioural
 Behrooz
 Belamaric
 benbravo73
-benchmark(ing)?
+[Bb]enchmark(ing)?
 benefitting
 Berglund
 BestEffort
@@ -1448,6 +1448,7 @@ MacBook
 machine-centric
 Maciaszek-Sharma
 [Mm]acOS
+MacronutrientsProvider
 Madhav
 Madhura
 Mahoney
@@ -1638,6 +1639,7 @@ NTP
 NuGet
 nullable
 NUnit
+Nygard
 NYJavaSIG
 OAuth2?
 ObjectFilter
