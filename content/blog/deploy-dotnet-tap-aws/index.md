@@ -23,7 +23,7 @@ If you have any questions or ideas please feel free to reach out to Layla on one
 Email: laylap@vmware.com  
 Twitter: [@LaylaCodesIt](http://twitter.com/laylacodesit)  
 GitHub: [layla-p](https://github.com/Layla-P)  
-Twitch: [LaylaCodesIt](https://www.twitch.tv/laylacodesit/)
+Twitch: [LaylaCodesIt](https://www.twitch.tv/laylacodesit/)  
 YouTube: [LaylaCodesIt](https://www.youtube.com/channel/UCrgujxhBlukMz4YH-o1cogQ)
 
 
