@@ -90,7 +90,7 @@ limitations under the License.
       trigger: "focus",
     });
 
-    //Samples filters
+    //Samples and Workshop page filters
     $(".filters .filter").click(function () {
       if (this.classList.contains("active")) {
         this.classList.remove("active");

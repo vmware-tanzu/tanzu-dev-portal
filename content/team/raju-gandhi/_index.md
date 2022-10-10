@@ -22,6 +22,6 @@ Raju Gandhi is the founder of DefMacro Software, LLC. He lives in Columbus, Ohio
 <!--more-->
 
 
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="CHBA34a0KEQ" class="youtube-video-shortcode" >}} -->
+{{< youtube id="OedzEb5HVPs" class="youtube-video-shortcode" >}}
