@@ -6,8 +6,6 @@
 # add entries to bottom of file, will be sorted on commit
 #CoffeeOps
 
-quickstart
-Kadourah
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -292,11 +290,9 @@ BucketRegionDetails
 BucketRegions
 Buesing
 Bugsville
+[Bb]uild[Pp]ack(s|'s|ages)?
 buildout
-BuildPack
 [Bb]uildpack-built
-[Bb]uildpack(s|'s|ages)?
-BuildPacks
 Bundler
 [Bb]urstable
 Buschmann
@@ -1263,6 +1259,7 @@ k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
+Kadourah
 [Kk]afka
 [Kk]ail
 Kalashnykov
@@ -1307,7 +1304,7 @@ KoFu
 Kostadis
 kotlin
 Kousen
-Kpack
+[Kk]pack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
@@ -1502,7 +1499,7 @@ MetricsSession
 Mezzalira
 micro-frontends
 Micro[Kk]8s
-microservice.
+[Mm]icroservice(s)?.
 microservices-oriented
 Microsystems
 mid-1990s
@@ -1925,6 +1922,7 @@ Querier
 queryable
 queuedEvents
 QueueStatistics
+quickstart
 Quickstart
 quokka
 (r)?syslog
