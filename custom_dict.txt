@@ -839,7 +839,7 @@ Galystan
 Gamov
 Gandhi
 Gangway
-Gapped
+[Gg]apped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -2385,6 +2385,7 @@ tlberglund
 TLS(-enabled)?
 TNS
 [Tt]o[Dd]o
+[Tt]odays
 TODOs?
 TokenRequest
 TokenReview
@@ -2644,6 +2645,7 @@ Yarp
 YARP's
 yay
 YCombinator
+[Yy]ml
 Yonis
 Yorker
 young-ish
