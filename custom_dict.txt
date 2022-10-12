@@ -142,6 +142,7 @@ Aravena
 [Aa]rchitecting
 Ardanlabs
 Arellano
+Aret
 [Aa]rgo(CD|cd)(-k8s)?
 args
 ARM64
@@ -1185,6 +1186,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+Jelle
 Jenkinsfile
 JEP
 Jernigan

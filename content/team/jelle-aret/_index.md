@@ -3,7 +3,7 @@ name: Jelle Aret
 description: ""
 roles: ["guest"]
 skills: [""]
-location: ""
+location: "The Netherlands"
 
 # Social Media
 twitter: ""
@@ -16,7 +16,7 @@ instagram: ""
 youtube: ""
 ---
 
-Jelle Aret is a Solution Architect within VMware Tanzu Labs, stationed in The Netherlands, where he is helping
+Jelle is a Solution Architect within VMware Tanzu Labs, stationed in The Netherlands, where he is helping
 client teams in how they can streamline their software engineering process.
 
 Before joining VMware, he was active at several companies as Solution Architect, Software Engineer and Team Lead.

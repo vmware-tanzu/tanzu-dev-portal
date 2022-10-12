@@ -93,7 +93,7 @@ In the first iteration, let’s work on two stories:
 - When I enter the same meal again it gets rejected.
 
 
-Event Storming leads naturally to Domain-Driven Design (DDD); Boris to an Event-Driven architecture, and SNAP to CQRS. But we still have to choose a layering architecture and which patterns to apply. Should we use an ORM? What persistence technology do we need?
+Event Storming leads naturally to Domain-Driven Design (DDD); Boris to an Event-Driven architecture, and SNAP to Command Query Responsibility Segregation (CQRS). But we still have to choose a layering architecture and which patterns to apply. Should we use an ORM? What persistence technology do we need?
 
 Hexagonal Architecture is a good layering choice as it separates the core domain neatly from the technology. In this scenario we have at least one Domain Object which can serve as an Aggregate Root: `Restaurant`.
 
@@ -102,7 +102,7 @@ The requirement to register a meal implies the need for long-term persistence, a
 ### Infrastructure & Technology Stack
 There are many technology stacks and platforms available. For this article we’re going to use Spring Boot , PostgreSQL for the persistence of Entity states  and Tanzu Application Platform for both the CI/CD pipelines as well the deployment platform (built upon Kubernetes and Knative). Java provides us with a good Object Oriented paradigm usable for Hexagonal Architecture and Spring Boot provides us a HTTP web server for our API exposure. PostgreSQL is a well-known open-source database supporting ACID transactions for which paid support is available.
 
-### RetrieveMenu
+### Retrieving the menu
 #### Core
 The core domain for retrieving the menu is fairly simple: every Restaurant has a menu listing meals it can prepare. The core service needs to be able to provide a list of menus for the API. Starting with the domain we will start testing that if a Restaurant has a menu it can provide these.
 
@@ -278,10 +278,10 @@ public interface RestaurantRepositoryPort {
 ````
 
 {{% callout %}}
-Instead of passing an JPA entity through the Port, we deliberately instruct the Port to return Domain Object `Restaurant`. Whenever a business transaction is run in the future against the `Restaurant` instance, it will for sure be in a valid state. In contrast, a valid state cannot be guaranteed if getter and setter of individual attributes are allowed against JPA entities.
+Instead of passing an JPA entity through the Port, we deliberately instruct the Port to return Domain Object `Restaurant`. Whenever a business transaction is run in the future against the `Restaurant` instance, it will for sure be in a valid state. In contrast, a valid state cannot be guaranteed if `getter` and `setter` of individual attributes are allowed against JPA entities.
 {{% /callout %}}
 
-To have the above test pass, we implement RestaurantApplicationService:
+To have the above test pass, we implement `RestaurantApplicationService`:
 
 ````java
 @Service
@@ -332,8 +332,7 @@ class JpaRestaurantRepositoryAdapterSpec extends Specification {
 }
 ````
 
-The code above will test if loaded JPA Entities are transformed properly to Aggregate by asserting the state of the Restaurant and by asserting the behavior towards the Spring Data JPA Repository RestaurantRepository.
-
+The code above will test if loaded JPA Entities are transformed properly to Aggregate by asserting the state of the Restaurant and by asserting the behavior towards the Spring Data JPA Repository `RestaurantRepository`.
 
 This leads us to the following classes:
 
@@ -501,7 +500,7 @@ logging:
 
 With the code changes above we now have a working application. You can start it with `mvn spring-boot:run`.
 
-### RegisterMeal
+### Register a meal
 #### Core
 Let's implement the story to register meals, so that a menu is built up for a Restaurant.
 We start by developing the behavior of the core Domain Object: Restaurant. As `Restaurant` is our Aggregate Root, the Menu will be another Entity within the same Aggregate. The Root will make sure the Aggregate is in consistent state: checking that a meal cannot be registered twice.
