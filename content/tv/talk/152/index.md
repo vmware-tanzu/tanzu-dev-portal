@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Tanzu Talk: Platform as a Product, Platform Engineering, Building a Platform Strategy for Kubernetes"
-description: "Tanzu Talk: Platform as a Product, Platform Engineering, Building a Platform Strategy for Kubernetes"
+title: "Tanzu Talk: What is platform engineering? Platform as a Product, Building a Platform for Kubernetes"
+description: "Tanzu Talk: What is platform engineering? Platform as a Product, Building a Platform for Kubernetes"
 episode: "152"
 aliases: ["0152"]
 publishdate: "2020-04-01T00:00:00-07:00"
@@ -11,7 +11,7 @@ youtube: "gsKGvr3t1wA"
 draft: "False"
 ---
 
-Coté goes over his new presentation about platform as a product, platform engineering, and all that. The thinking and recommendations here are based on real world stories from several large organizations. There's also a little overview of how @VMware can help. 
+What is platform engineering? Coté goes over his new presentation about platform as a product, platform engineering, and all that. The thinking and recommendations here are based on real world stories from several large organizations. There's also a little overview of how @VMware can help. 
 
 💾 Links Mentioned
 
