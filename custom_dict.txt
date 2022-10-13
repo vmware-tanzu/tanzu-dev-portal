@@ -2213,6 +2213,7 @@ SMTP
 smtp-sink
 Smythe
 Snapchat
+SNAPe
 SNI
 Snyk
 SolidFire
