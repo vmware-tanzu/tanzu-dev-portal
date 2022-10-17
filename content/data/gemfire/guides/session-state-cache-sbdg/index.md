@@ -40,10 +40,10 @@ To complete this guide you need:
 * The Spring Boot for Apache Geode dependency.
 
 **If running on the Tanzu Application Service for VMs**
-* A [VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
+* A [VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
 
 **If running on Kubernetes**
-* A [VMware GemFire Cluster](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+* A [VMware GemFire Cluster](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
 
     For this example:
      * Our **namespace** is `tanzu-gemfire`
@@ -284,7 +284,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  
  {{% alert title="VMware GemFire Service Instance" color="warning" %}}
   To deploy the application to the Tanzu Application
-   Service (TAS) make sure you have [created a VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
+   Service (TAS) make sure you have [created a VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/).
  {{% /alert %}} 
  
 
@@ -307,7 +307,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 
         
  {{% alert title="VMware GemFire Kubernetes Cluster" color="warning" %}}
- To deploy the Session State Example application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+ To deploy the Session State Example application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
  
  For this example:
  * Our **namespace** is `tanzu-gemfire`

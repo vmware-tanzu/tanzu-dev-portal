@@ -44,10 +44,10 @@ To complete this guide you need:
 * The Spring Boot for Apache Geode dependency.
 
 **If running on the Tanzu Application Service for VMs**
-* A [VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
+* A [VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
 
 **If running on Kubernetes**
-* A [VMware GemFire Cluster](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+* A [VMware GemFire Cluster](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
 
     For this example:
     * Our **namespace** is `tanzu-gemfire`
@@ -279,7 +279,7 @@ If you click the search button again with the same ZIP code, you will see that t
 
        
 {{% alert title="VMware GemFire Service Instance" color="warning" %}}
-To deploy the Bike Incident application to Tanzu Application Service (TAS) make sure you have [created a VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
+To deploy the Bike Incident application to Tanzu Application Service (TAS) make sure you have [created a VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/).
 {{% /alert %}} 
        
 
@@ -302,7 +302,7 @@ To deploy the Bike Incident application to Tanzu Application Service (TAS) make 
 
         
  {{% alert title="VMware GemFire Kubernetes Cluster" color="warning" %}}
- To deploy the Bike Incident application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+ To deploy the Bike Incident application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
  
  For this example:
  * Our **namespace** is `tanzu-gemfire`
@@ -450,4 +450,4 @@ This shows that the Spring Boot for Apache Geode app has connected to the VMware
 
 ## Learn More
 
- * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).

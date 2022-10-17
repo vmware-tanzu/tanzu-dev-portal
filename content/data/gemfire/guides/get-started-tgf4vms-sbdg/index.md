@@ -189,6 +189,6 @@ Congratulations! You’re ready to start using VMware GemFire. You will need to 
  
  Now that you have successfully created a running VMware GemFire service instance, check out some other guides.
  
-  * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
+  * You can get started by implementing the [cache-aside pattern](/data/gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
    
-  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/tanzu-gemfire/guides/session-state-cache-sbdg).
+  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).

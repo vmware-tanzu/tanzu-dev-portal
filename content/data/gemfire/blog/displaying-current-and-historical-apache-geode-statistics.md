@@ -9,7 +9,7 @@ type: blog
 ---
 
 ## Introduction
-Apache Geode produces a variety of statistics in each member of the DistributedSystem. See my article [here](/data/tanzu-gemfire/blog/most-useful-statistics) for the most useful ones.
+Apache Geode produces a variety of statistics in each member of the DistributedSystem. See my article [here](/data/gemfire/blog/most-useful-statistics) for the most useful ones.
 
 There are several ways to display these statistics. The main way to display historical statistics (contained in a gfs archive file) is to use the [Visual Statistics Display](https://gemtalksystems.com/products/vsd/) (vsd) tool. See the documentation [here](https://gemfire.docs.pivotal.io/910/gemfire/tools_modules/vsd/chapter_overview.html) for additional details on vsd.
 
@@ -112,7 +112,7 @@ server1, 88564, LinuxSystemStats: "2021/05/14 16:14:05.539 BST" samples=14161
 ```
 
 ### The displaystatistics.sh Script
-All of the most useful statistics described in my article [here](/data/tanzu-gemfire/blog/most-useful-statistics) can be displayed using the [*`displaystatistics.sh`*](https://github.com/boglesby/display-statistics/blob/master/bin/displaystatistics.sh) script. Several of the functions from that script are shown below.
+All of the most useful statistics described in my article [here](/data/gemfire/blog/most-useful-statistics) can be displayed using the [*`displaystatistics.sh`*](https://github.com/boglesby/display-statistics/blob/master/bin/displaystatistics.sh) script. Several of the functions from that script are shown below.
 
 The `get_stat` function retrieves a statistic from the archive file.
 
