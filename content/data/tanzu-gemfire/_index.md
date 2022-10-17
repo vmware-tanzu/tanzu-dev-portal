@@ -1,8 +1,8 @@
 ---
-title: Tanzu GemFire
-linkTitle: Tanzu GemFire
+title: VMware Tanzu GemFire
+linkTitle: VMware Tanzu GemFire
 type: data-services
-icon: tanzu-gemfire
+icon: tanzu
 dataServiceType: In-memory Data Grid
 description: >
   Scale your data services on demand to support high-performance, real-time apps.

@@ -40,7 +40,7 @@
 
 <div class="row">
   {{ $url_text := "Tanzu GemFire" }}
-  {{$icon_path := "/images/icons/icon-tanzu-gemfire" }}
+  {{$icon_path := "/images/icons/icon-tanzu" }}
   {{ $left_border_color := "blue" }}
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
@@ -54,7 +54,7 @@
     <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
         <div>
           <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
-          <h4 class="h4">{{$url_text }}</h4>
+          <h4 class="h4">VMware Tanzu Gemfire</h4>
         </div>
   
     <p class="mb-0 text-light">{{ .Description }}</p>
@@ -62,7 +62,7 @@
   </div>
   
   {{ $url_text := "Tanzu SQL" }}
-  {{$icon_path := "/images/icons/icon-tanzu-sql" }}
+  {{$icon_path := "/images/icons/icon-tanzu" }}
   {{ $left_border_color := "gray" }}
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
@@ -77,7 +77,7 @@
     <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
         <div>
           <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
-          <h4 class="h4">{{$url_text }}</h4>
+          <h4 class="h4">VMware Tanzu SQL</h4>
         </div>
   
     <p class="mb-0 text-light">{{ .Description }}</p>
@@ -99,8 +99,7 @@
       {{ with $.Site.GetPage "section" $section_name }}
       <h5 class="mb-3">{{ .Params.dataServiceType }}</h5>
           <div>
-            <img alt="" class="icon mr-3" src="{{ $icon_path | relURL }}.svg"/>
-            <h4 class="h4">{{$url_text }}</h4>
+            <h4 class="h4">VMware RabbitMQ</h4>
           </div>
   
       <p class="mb-0 text-light">{{ .Description }}</p>

@@ -1,9 +1,9 @@
 ---
-title: Tanzu SQL
-linkTitle: Tanzu SQL
+title: VMware Tanzu SQL
+linkTitle: VMware Tanzu SQL
 type: data-services
 dataServiceType: Relational DBaaS
-icon: tanzu-sql
+icon: tanzu
 
 description: >
     A relational database-as-a-service for developers that is fully compatible with MySQL and Postgres.
