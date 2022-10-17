@@ -4,7 +4,7 @@ description: This is a sample code that uses client.properties file along with c
   
 lastmod: '2021-05-24'
 repo: https://github.com/dkhopade/gemfire-dotnet-nc
-title: Tanzu GemFire .NET Client - Using Client Cache XML & Properties File
+title: VMware GemFire .NET Client - Using Client Cache XML & Properties File
 type: samples
 weight: 
 ---

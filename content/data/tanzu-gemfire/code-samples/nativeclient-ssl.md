@@ -1,10 +1,10 @@
 ---
 date: '2021-07-28'
-description: Demonstrates basic SSL connection of a Tanzu GemFire .NET client with a GemFire cluster. It's a simple command line program that connects to a region using the cache factory object and does not involve a dependency on Java. 
+description: Demonstrates basic SSL connection of a VMware GemFire .NET client with a GemFire cluster. It's a simple command line program that connects to a region using the cache factory object and does not involve a dependency on Java. 
   
 lastmod: '2021-05-24'
 repo: https://github.com/dkhopade/gemfire-dotnet-nc
-title: Tanzu GemFire .NET Client - SSL
+title: VMware GemFire .NET Client - SSL
 type: samples
 weight:
 ---

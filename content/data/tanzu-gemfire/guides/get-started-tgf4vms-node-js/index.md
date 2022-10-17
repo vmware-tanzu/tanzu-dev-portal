@@ -1,28 +1,28 @@
 ---
 data-featured: false
 date: '2021-05-28'
-description: How to set up a Tanzu GemFire service instance on the Tanzu Application
+description: How to set up a VMware GemFire service instance on the Tanzu Application
   Service and use the node.js client.
 lastmod: '2021-05-28'
-link-title: Getting Started with Tanzu GemFire on TAS
+link-title: Getting Started with VMware GemFire for TAS
 parent: Node.js
-title: Getting Started with Tanzu GemFire on TAS
+title: Getting Started with VMware GemFire for TAS
 type: data-guides
 weight: 2
 ---
 
-This guide walks you through creating a Tanzu GemFire service instance on the Tanzu Application Service using the `Book Service` example to confirm that it is working.
+This guide walks you through creating a VMware GemFire service instance on the Tanzu Application Service using the `Book Service` example to confirm that it is working.
 
-## Create A Tanzu GemFire Service Instance
+## Create A VMware GemFire Service Instance
 
 ### Option 1: Create the service instance using the cf CLI
 Starting in a terminal
 
 1. Run `cf login`, and create or target your organization’s space.
 
-2. Run `cf marketplace -s p-cloudcache` to list your available VMware Tanzu GemFire plans. Take note of the `service plan` as this will be your `<PLAN-NAME>` in the following step. Note that Tanzu GemFire was previously called Pivotal Cloud Cache).
+2. Run `cf marketplace -s p-cloudcache` to list your available VMware GemFire plans. Take note of the `service plan` as this will be your `<PLAN-NAME>` in the following step. Note that VMware GemFire was previously called Pivotal Cloud Cache).
 
-3. Create a Tanzu GemFire service instance within the space with the following command:
+3. Create a VMware GemFire service instance within the space with the following command:
    
    `cf create-service p-cloudcache <PLAN-NAME> <SERVICE-INSTANCE-NAME>`
    
@@ -37,7 +37,7 @@ Starting in a terminal
     
     `Create in progress. Use 'cf services' or 'cf service <your-service-name>' to check operation status.`
    
-5. Confirm the Tanzu GemFire service instance has been created by running  
+5. Confirm the VMware GemFire service instance has been created by running  
    
    `$ cf services`
    
@@ -56,7 +56,7 @@ Starting in a terminal
 
 &nbsp;
 
-1. Within your org, create a space or navigate to the space that will hold your Tanzu GemFire service instance.
+1. Within your org, create a space or navigate to the space that will hold your VMware GemFire service instance.
 
 &nbsp;
 
@@ -70,8 +70,8 @@ Starting in a terminal
 
 &nbsp;
 
-4.  Click on ***Tanzu GemFire***.
-    ![Click on Tanzu GemFire in Apps Manager](images/tanzu_gemfire_apps_manager.png)
+4.  Click on ***VMware GemFire***.
+    ![Click on VMware GemFire in Apps Manager](images/tanzu_gemfire_apps_manager.png)
 
 &nbsp;
 
@@ -87,7 +87,7 @@ Starting in a terminal
 ![Click CREATE in Apps Manager](images/click_CREATE_button.png)
 
 
-7.  After clicking create you will see Tanzu GemFire service instance provisioning begin and in the **Last Operation** column it will say `create in progress`.
+7.  After clicking create you will see VMware GemFire service instance provisioning begin and in the **Last Operation** column it will say `create in progress`.
 
     ![Create in progress in Apps Manager](images/create_in_progress.png)
 
@@ -106,15 +106,15 @@ Starting in a terminal
 
 ## Set Up Your Tanzu Application Service Environment
 
-This section will guide you through testing a `Book Service` client application on the Tanzu Application Service to confirm that your Tanzu GemFire service instance and node.js client are set up correctly.
+This section will guide you through testing a `Book Service` client application on the Tanzu Application Service to confirm that your VMware GemFire service instance and node.js client are set up correctly.
 
  
 ### What You'll Need**
 
 * The [Book Service](https://github.com/gemfire/node-examples/tree/master/book-service) example
 * Node.js, version 10.16.3 or above
-* The Tanzu GemFire Node.js client
-* A running Tanzu GemFire service instance on the Tanzu Application Service
+* The VMware GemFire Node.js client
+* A running VMware GemFire service instance on the Tanzu Application Service
 
 ### 1. Clone the Book Service Example
  
@@ -123,30 +123,30 @@ This section will guide you through testing a `Book Service` client application 
  `$ git clone https://github.com/gemfire/node-examples.git`
 
 
-### 2. Download Node.js for Tanzu GemFire
-To run the `Book Service` example, you must download and install the Tanzu GemFire Node.js client library.
+### 2. Download Node.js for VMware GemFire
+To run the `Book Service` example, you must download and install the VMware GemFire Node.js client library.
 
-* Go to the [Tanzu GemFire](https://network.pivotal.io/products/p-cloudcache/) product page.
+* Go to the [VMware GemFire](https://network.pivotal.io/products/p-cloudcache/) product page.
 * In the "Releases" drop down, find and select the NodeJS-Client.
 * Click on the file icon to download the tar file (.tgz.).
 * Once downloaded, copy it to your `Book Service` project directory. Do not untar the tar file -- the npm command installs the Node.js API directly from the compressed .tgz archive.
  
-### 3. Install the Tanzu GemFire Node.js Client
+### 3. Install the VMware GemFire Node.js Client
  
-In a terminal, change your working directory to `node-examples/book-service`, and `npm install` the Tanzu GemFire Node.js client you downloaded above, into your project directory.
+In a terminal, change your working directory to `node-examples/book-service`, and `npm install` the VMware GemFire Node.js client you downloaded above, into your project directory.
 
 ```bash
 $ npm install /project/gemfire-nodejs-client-2.0.0.tgz 
 $ npm update
 ```
 
-### 4. Create a Tanzu GemFire Service Key
+### 4. Create a VMware GemFire Service Key
 
-In order to connect to your Tanzu GemFire service instance and create the needed regions, you must first create a service key. 
+In order to connect to your VMware GemFire service instance and create the needed regions, you must first create a service key. 
 
 In a terminal
 
-* Run `cf login`, and create or target your organization’s space where your Tanzu GemFire service instance is running.
+* Run `cf login`, and create or target your organization’s space where your VMware GemFire service instance is running.
 
 * Create a service key
 
@@ -162,9 +162,9 @@ In a terminal
    
 ### 5. Create the Region Used by the Book Service
 
-Start the Tanzu GemFire CLI by typing `gfsh` in your terminal.
+Start the VMware GemFire CLI by typing `gfsh` in your terminal.
 
-With `gfsh` running, Use the connect string from above to connect to the Tanzu GemFire service instance. Use the `return` key when prompted for the keystore and truststore values (in this example you don't need to enter any information in them).
+With `gfsh` running, Use the connect string from above to connect to the VMware GemFire service instance. Use the `return` key when prompted for the keystore and truststore values (in this example you don't need to enter any information in them).
 
 ```
 gfsh>connect --url=https://TAS-name.cf-app.com/gemfire/v1 --user=cluster_operator_BhKM --password=xucZ --skip-ssl-validation
@@ -197,14 +197,14 @@ Type `exit` to quit GFSH.
 
 * Navigate to the project root directory. 
 * Open the `manifest.yml file`. 
-* Replace `PCC-TLS` with the name of your Tanzu GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
+* Replace `PCC-TLS` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
 
 ### 7. Push your application to TAS
 
 * In a terminal, navigate to the project root directory.
 * Push the application to your TAS environment using `cf push`
 
-The `cf push` operation will bind the *Book Service* app to the Tanzu GemFire service instance named in your `manifest.yaml` file  and then start the app.
+The `cf push` operation will bind the *Book Service* app to the VMware GemFire service instance named in your `manifest.yaml` file  and then start the app.
 
 ### 8.  Interact with the Book Service
 
@@ -248,7 +248,7 @@ The curl command responds with the requested data:
 
 ## Delete the app and the Service Instance
 
-There are two ways to delete the app and the Tanzu GemFire service instance
+There are two ways to delete the app and the VMware GemFire service instance
 
 ### Option 1: Delete the app and service using the cf cli
 
@@ -260,7 +260,7 @@ There are two ways to delete the app and the Tanzu GemFire service instance
 
     ```cf delete cloudcache-node-sample -r -f```
 
-* If the Tanzu GemFire service instance is no longer needed, delete the service 
+* If the VMware GemFire service instance is no longer needed, delete the service 
     ```
     $ cf delete-service <YOUR SERVICE NAME>
     Really delete the service <YOUR SERVICE NAME>?> y
@@ -268,7 +268,7 @@ There are two ways to delete the app and the Tanzu GemFire service instance
 
 ### Option 2: Delete the app and service using Apps Manager
 
-1. Navigate to the org and space that has your Tanzu GemFire service instance and click on the ***App*** tab.
+1. Navigate to the org and space that has your VMware GemFire service instance and click on the ***App*** tab.
 2. Click on the name of the app.
 3. Click on the ***Settings*** tab.
 4. Click on ***DELETE APP*** (at the bottom of the page), and confirm that you want to delete the app.
@@ -277,4 +277,4 @@ There are two ways to delete the app and the Tanzu GemFire service instance
 7. Click on the ***Settings*** tab.
 8. Click on the ***DELETE SERVICE INSTANCE*** button, and confirm the deletion.
 
-Congratulations! You’re ready to start using Tanzu GemFire. You will need to create a new Tanzu GemFire Service Instance when working with your own application.
+Congratulations! You’re ready to start using VMware GemFire. You will need to create a new VMware GemFire Service Instance when working with your own application.

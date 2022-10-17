@@ -1,6 +1,6 @@
 ---
 Date: '2020-11-03T13:00:00-08:00'
-Description: What Can Tanzu RabbitMQ Do Better for You?
+Description: What Can VMware RabbitMQ Do Better for You?
 PublishDate: '2020-09-24T00:00:00-07:00'
 aliases:
 - /tv/tanzu-tuesdays/29
@@ -14,7 +14,7 @@ hosts:
 - Tiffany Jernigan
 - Paul Czarkowski
 lastmod: '2020-11-05'
-title: What Can Tanzu RabbitMQ Do Better for You? with Gerhard Lazu
+title: What Can VMware RabbitMQ Do Better for You? with Gerhard Lazu
 truncate: ''
 twitch: vmwaretanzu
 type: tv-episode

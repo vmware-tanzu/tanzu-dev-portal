@@ -4,7 +4,7 @@ description: This is a sample code with minimum functions like put, get and remo
   
 lastmod: '2021-03-19'
 repo: https://github.com/dkhopade/gemfire-dotnet-nc
-title: Tanzu GemFire .NET Client - Put, Get, Remove
+title: VMware GemFire .NET Client - Put, Get, Remove
 type: samples
 weight: 
 ---

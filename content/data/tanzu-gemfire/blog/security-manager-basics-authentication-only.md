@@ -8,7 +8,7 @@ title: "GemFire Security Manager Basics: Authentication-Only"
 type: blog
 ---
 
-[VMware Tanzu GemFire](https://tanzu.vmware.com/gemfire) is an in-memory data grid that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Starting with GemFire 9.0.0, the `SecurityManager` interface was introduced to manage the authentication and authorization mechanisms in a single place, simplifying the implementation and interactions with all components in a consistent manner.
+[VMware GemFire](https://tanzu.vmware.com/gemfire) is an in-memory data grid that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures. Starting with GemFire 9.0.0, the `SecurityManager` interface was introduced to manage the authentication and authorization mechanisms in a single place, simplifying the implementation and interactions with all components in a consistent manner.
 
 In this example, you will go through a basic implementation of a custom `SecurityManager` for an authentication-only system.
 

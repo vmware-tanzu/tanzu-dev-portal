@@ -1,11 +1,11 @@
 ---
 data-featured: true
 date: 2020-11-10
-description: Getting Started with Tanzu SQL - Postgres
+description: Getting Started with VMware SQL - Postgres
 lastmod: '2021-04-07'
 team:
 - Jing Li
-title: 'VMware Tanzu SQL, Now GA for Kubernetes: A Consistent Postgres Experience
+title: 'VMware SQL, Now GA for Kubernetes: A Consistent Postgres Experience
   Everywhere'
 type: blog
 weight: 3

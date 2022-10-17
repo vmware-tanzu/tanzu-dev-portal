@@ -1,6 +1,6 @@
 ---
 date: '2021-04-22'
-description: Session state cache using Tanzu GemFire in a Spring Boot application.
+description: Session state cache using VMware GemFire in a Spring Boot application.
 lastmod: '2021-04-22'
 link-title: Session State Caching
 parent: Spring for Apache Geode
@@ -9,7 +9,7 @@ type: data-guides
 weight: 5
 ---
 
-This guide walks you through how to implement a session state cache using Tanzu GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
+This guide walks you through how to implement a session state cache using VMware GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
 ## When should I use a session state cache?
 
 Session state caching is useful for storing data associated with an HTTP session. Storing this data in a cache allows it to be retrieved quickly and persisted across log-ins. Some examples where this might be useful include:
@@ -40,10 +40,10 @@ To complete this guide you need:
 * The Spring Boot for Apache Geode dependency.
 
 **If running on the Tanzu Application Service for VMs**
-* A [Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
+* A [VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
 
 **If running on Kubernetes**
-* A [Tanzu GemFire Cluster](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+* A [VMware GemFire Cluster](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
 
     For this example:
      * Our **namespace** is `tanzu-gemfire`
@@ -60,7 +60,7 @@ The back end (in the `src/main/java/sessionstate/` directory) handles all the se
 
 The front end (in the `frontend/` directory) is provided to illustrate how a web app can interact with the session data. The example front end is written using the React framework, but clients can use any language or framework capable of interacting with a REST endpoint.
 
-You can download the complete application from the [Tanzu GemFire examples](https://github.com/gemfire/spring-for-apache-geode-examples) GitHub repository.
+You can download the complete application from the [VMware GemFire examples](https://github.com/gemfire/spring-for-apache-geode-examples) GitHub repository.
 
 ```
 $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
@@ -68,7 +68,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 
 
 ### Add the Spring Boot for Apache Geode Dependency
-To allow the application to work with Tanzu GemFire and utilize the Spring Boot for Apache Geode dependency, add the following dependency information (the example code uses Gradle)
+To allow the application to work with VMware GemFire and utilize the Spring Boot for Apache Geode dependency, add the following dependency information (the example code uses Gradle)
 
 **Gradle**
 ```groovy
@@ -282,9 +282,9 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 
 
  
- {{% alert title="Tanzu GemFire Service Instance" color="warning" %}}
+ {{% alert title="VMware GemFire Service Instance" color="warning" %}}
   To deploy the application to the Tanzu Application
-   Service (TAS) make sure you have [created a Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
+   Service (TAS) make sure you have [created a VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/).
  {{% /alert %}} 
  
 
@@ -294,7 +294,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 
 
 ### Push the app to your TAS space 
- Once the Tanzu GemFire service instance is running (you can check the status by running the `cf services` command), push your app to TAS with `cf push`.
+ Once the VMware GemFire service instance is running (you can check the status by running the `cf services` command), push your app to TAS with `cf push`.
  
  After the app has successfully been pushed, in the output find the `route`.  Then open a browser and copy and paste the route into the browser.  
  
@@ -306,8 +306,8 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  
 
         
- {{% alert title="Tanzu GemFire Kubernetes Cluster" color="warning" %}}
- To deploy the Session State Example application on Kubernetes make sure you have [created a Tanzu GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
+ {{% alert title="VMware GemFire Kubernetes Cluster" color="warning" %}}
+ To deploy the Session State Example application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/).
  
  For this example:
  * Our **namespace** is `tanzu-gemfire`
@@ -320,7 +320,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 * Navigate to the application directory. 
 * Open the `application.properties`. 
 * Uncomment the two listed properties.
-* Replace the value for `spring.data.gemfire.pool.locators:` with your Tanzu GemFire cluster information, for each locator (in this example we only have one locator).  The information will follow the form:
+* Replace the value for `spring.data.gemfire.pool.locators:` with your VMware GemFire cluster information, for each locator (in this example we only have one locator).  The information will follow the form:
 
    ```
    [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][10334]
@@ -334,7 +334,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
    * Replace `tanzu-gemfire` with your namespace if different.
   
 
-* Replace the value for `spring.data.gemfire.management.http.host:` with your Tanzu GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to your Tanzu GemFire cluster.  The information follows a similar form as above:
+* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to your VMware GemFire cluster.  The information follows a similar form as above:
 
    ```
    [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][GEMFIRE LOCATOR PORT]
@@ -414,7 +414,7 @@ In your browser, go to the `EXTERNAL-IP` of the `notes-app-deployment` and you s
 
 ![img](images/session-state-frontend.jpg)
 
-### Confirm your app is connected to your Tanzu GemFire cluster
+### Confirm your app is connected to your VMware GemFire cluster
 
 * Open a terminal
 
@@ -424,7 +424,7 @@ In your browser, go to the `EXTERNAL-IP` of the `notes-app-deployment` and you s
     ```  
 
   * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
-  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your Tanzu GemFire cluster. 
+  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your VMware GemFire cluster. 
 
 * Once you see that `GFSH` has started, connect to your cluster with the `connect` command
 
@@ -444,7 +444,7 @@ You should see something similar to
     ------------------
     ClusteredSpringSessions
   ```
-This shows that the Spring Boot for Apache Geode app has connected to the Tanzu GemFire cluster and pushed the initial Session configuration, including a region called `ClusteredSpringSessions`), to the cluster.
+This shows that the Spring Boot for Apache Geode app has connected to the VMware GemFire cluster and pushed the initial Session configuration, including a region called `ClusteredSpringSessions`), to the cluster.
 
 > If the `ClusteredSpringSessions` region IS NOT listed, the first item to check is the `application.properties` file.  Confirm that the spring data property values are set correctly.  If you need to update them, make sure you also increment your build number of your image.  This will force [Kubernetes to pull the new image](https://kubernetes.io/docs/concepts/containers/images/) (as opposed to using a cached version of the image).
 

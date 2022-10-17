@@ -1,7 +1,7 @@
 ---
-title: "The Most Useful Statistics for Troubleshooting Tanzu GemFire Deployments"
+title: "The Most Useful Statistics for Troubleshooting VMware GemFire Deployments"
 description: >
-    This article describes the most useful statistics for troubleshooting Tanzu GemFire Deployments.
+    This article describes the most useful statistics for troubleshooting VMware GemFire Deployments.
 date: 2021-07-01
 type: blog
 
@@ -12,7 +12,7 @@ team:
 ---
 
 ## Introduction
-Each member of the Tanzu GemFire `DistributedSystem` produces a variety of statistics including ones in these categories:
+Each member of the VMware GemFire `DistributedSystem` produces a variety of statistics including ones in these categories:
 
 - Operating System
 - Java Virtual Machine (JVM)

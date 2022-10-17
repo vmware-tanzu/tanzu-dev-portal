@@ -11,11 +11,11 @@ type: data-guides
 weight: 1
 ---
 
-This guide walks you through setting up your local development environment using Apache Geode, the Tanzu GemFire node.js client, and a `Book Service` example.    
+This guide walks you through setting up your local development environment using Apache Geode, the VMware GemFire node.js client, and a `Book Service` example.    
 
 ## What is Apache Geode?
 
-Tanzu GemFire, an enterprise offering, is powered by Apache Geode and adds additional enterprise functionality and integrations.  Apache Geode is the open source core of Tanzu GemFire.   This means that you can use Apache Geode on your local machine when developing and testing your Tanzu GemFire applications.
+VMware GemFire, an enterprise offering, is powered by Apache Geode and adds additional enterprise functionality and integrations.  Apache Geode is the open source core of VMware GemFire.   This means that you can use Apache Geode on your local machine when developing and testing your VMware GemFire applications.
 
 
 ## Install Apache Geode for Local Development
@@ -85,7 +85,7 @@ Apache Geode is now installed on your machine.
 ## Setup Your Local Development Environment
 
 
-This guide allows you to test that your local environment is set up correctly and demonstrates how Tanzu GemFire will improve the read performance of your application.  
+This guide allows you to test that your local environment is set up correctly and demonstrates how VMware GemFire will improve the read performance of your application.  
 
 This guide uses a `Book Service` example that allows a user to look up books by ISBN or put new books into the service.  
 
@@ -93,7 +93,7 @@ This guide uses a `Book Service` example that allows a user to look up books by 
 ### What You'll Need
 * The [Book Service](https://github.com/gemfire/node-examples/tree/master/book-service) example
 * Node.js, version 10.16.3 or above
-* The Tanzu GemFire Node.js client
+* The VMware GemFire Node.js client
 * Apache Geode installed on your local machine. 
 
 ### 1. Clone the Book Service Example
@@ -103,17 +103,17 @@ This guide uses a `Book Service` example that allows a user to look up books by 
  `$ git clone https://github.com/gemfire/node-examples.git`
 
 
-### 2. Download Node.js for Tanzu GemFire
-To run the `Book Service` example, you must download and install the Tanzu GemFire Node.js client library.
+### 2. Download Node.js for VMware GemFire
+To run the `Book Service` example, you must download and install the VMware GemFire Node.js client library.
 
-* Go to the [Tanzu GemFire](https://network.pivotal.io/products/p-cloudcache/) product page.
+* Go to the [VMware GemFire](https://network.pivotal.io/products/p-cloudcache/) product page.
 * In the "Releases" drop down, find and select the NodeJS-Client.
 * Click on the file icon to download the tar file (.tgz).
 * Once downloaded, copy it to your `Book Service` project directory. Do not untar the tar file -- the npm command installs the Node.js API directly from the compressed .tgz archive.
  
- ### 3. Install the Tanzu GemFire Node.js Client
+ ### 3. Install the VMware GemFire Node.js Client
  
-In a terminal, change your working directory to `node-examples/book-service`, and `npm install` the Tanzu GemFire Node.js client you downloaded above, into your project directory.
+In a terminal, change your working directory to `node-examples/book-service`, and `npm install` the VMware GemFire Node.js client you downloaded above, into your project directory.
 
 ```bash
 $ npm install /project/gemfire-nodejs-client-2.0.0.tgz 
@@ -252,4 +252,4 @@ When finished running the example locally, shut down the client and server proce
   
   Now that you have successfully set up your local development environment, check out some other guides
  
-  * Set up your [Tanzu GemFire service instance](data/tanzu-gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service.
+  * Set up your [VMware GemFire service instance](data/tanzu-gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service.

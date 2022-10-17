@@ -14,7 +14,7 @@ This guide walks you through setting up your local development environment using
 
 ## What is Apache Geode?
 
-Tanzu GemFire, an enterprise offering, is powered by Apache Geode and adds additional enterprise functionality and integrations.  Apache Geode is the open source core of Tanzu GemFire.   This means that you can use Apache Geode on your local machine when developing and testing your Tanzu GemFire applications.
+VMware GemFire, an enterprise offering, is powered by Apache Geode and adds additional enterprise functionality and integrations.  Apache Geode is the open source core of VMware GemFire.   This means that you can use Apache Geode on your local machine when developing and testing your VMware GemFire applications.
 
 
 ## Install Apache Geode for Local Development
@@ -75,7 +75,7 @@ This section will guide you through testing a *Hello, World!* client app on your
 
 ### 1. Download the Hello, World! Example
 
-Clone the *Hello, World!* app from the Tanzu GemFire [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
+Clone the *Hello, World!* app from the VMware GemFire [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
 
 ```
 $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
@@ -213,9 +213,9 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
  
  Now that you have successfully set up your local development environment, check out some other guides
   
- * Set up your [Tanzu GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service. 
+ * Set up your [VMware GemFire service instance](/data/tanzu-gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service. 
 
- * Set up [Tanzu GemFire for Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/). 
+ * Set up [VMware GemFire for Kubernetes](/data/tanzu-gemfire/guides/get-started-tgf4k8s-sbdg/). 
   
  * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
  

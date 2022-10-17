@@ -1,43 +1,43 @@
 ---
 data-featured: false
 date: '2022-08-15'
-description: How to set up a Tanzu GemFire instance on Kubernetes.
+description: How to set up a VMware GemFire instance on Kubernetes.
 lastmod: '2022-08-15'
-link-title: Getting Started with Tanzu GemFire for Kubernetes
+link-title: Getting Started with VMware GemFire for Kubernetes
 parent: Spring for Apache Geode
-title: Getting Started with Tanzu GemFire for Kubernetes
+title: Getting Started with VMware GemFire for Kubernetes
 type: data-guides
 weight: 3
 ---
 
-This guide walks you through creating and testing a Tanzu GemFire cluster on Kubernetes using a *Hello, World!* client application.
+This guide walks you through creating and testing a VMware GemFire cluster on Kubernetes using a *Hello, World!* client application.
 
 
 ## Before you start!
-This guide assumes that the [Tanzu GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
+This guide assumes that the [VMware GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
 
 In order to create a GemFire cluster, you will need a [Tanzu Net](https://network.pivotal.io/products/tanzu-gemfire-for-kubernetes/) account, in order to pull the image from the registry. 
 
 You will also need permission to use `kubectl`. 
  
 
-## Create A Tanzu GemFire Cluster
+## Create A VMware GemFire Cluster
 
-1. Verify that you are in the Kubernetes cluster you want to use for Tanzu GemFire
+1. Verify that you are in the Kubernetes cluster you want to use for VMware GemFire
 
     ```
     kubectl config current-context
     ```
    
    
-2. Create a namespace for the Tanzu GemFire cluster (We use the creative *namespace* name of `tanzu-gemfire` for this example)
+2. Create a namespace for the VMware GemFire cluster (We use the creative *namespace* name of `tanzu-gemfire` for this example)
     
     ```
     kubectl create namespace tanzu-gemfire
     ```
    
    
-3. Create an image pull secret that will be used to pull down the Tanzu GemFire images needed to create the cluster
+3. Create an image pull secret that will be used to pull down the VMware GemFire images needed to create the cluster
 
     ```
     $ kubectl create secret docker-registry image-pull-secret --namespace=tanzu-gemfire --docker-server=registry.tanzu.vmware.com --docker-username='TANZU NET USERNAME' --docker-password='TANZU NET PASSWD'
@@ -48,9 +48,9 @@ You will also need permission to use `kubectl`.
    * Replace `TANZU NET PASSWD` with your Tanzu Net Password
      
 
-4. Create your Tanzu GemFire CRD file. 
+4. Create your VMware GemFire CRD file. 
     
-    Below is a simple yaml file that will create a Tanzu GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html). Save this as a YAML file in your current working directory.
+    Below is a simple yaml file that will create a VMware GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html). Save this as a YAML file in your current working directory.
     
   ```yaml
   apiVersion: gemfire.tanzu.vmware.com/v1
@@ -64,10 +64,10 @@ You will also need permission to use `kubectl`.
   ```
    
         
-> For the full list of GemFire CRD configuration options and explanations check out the Tanzu GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-crd.html).
+> For the full list of GemFire CRD configuration options and explanations check out the VMware GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-crd.html).
     
    
-5. Apply your Tanzu GemFire CRD YAML from *Step 4* to create the Tanzu GemFire cluster
+5. Apply your VMware GemFire CRD YAML from *Step 4* to create the VMware GemFire cluster
 
     ```
     kubectl --namespace=tanzu-gemfire apply -f CLUSTER-CRD-YAML
@@ -83,7 +83,7 @@ You will also need permission to use `kubectl`.
 
 
 
-7. Confirm that Tanzu GemFire is up and ready to use
+7. Confirm that VMware GemFire is up and ready to use
     
     ```
     kubectl --namespace=tanzu-gemfire get GemFireClusters
@@ -111,7 +111,7 @@ This section will guide you through testing a *Hello, World!* client application
 * JDK 8 or 11
 * Spring Boot 2.3 or above
 * Spring Boot for Apache Geode 1.3 or above
-* A running Tanzu GemFire cluster on Kubernetes
+* A running VMware GemFire cluster on Kubernetes
 * [Docker](https://docs.docker.com/get-docker/) installed 
 * An image repository for the `Hello, World!` example.
 
@@ -129,7 +129,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 * Navigate to the `spring-for-apache-geode-examples/hello-world` directory. 
 * Open the `application.properties`. 
 * Uncomment the two listed properties.
-* Replace the value for `spring.data.gemfire.pool.locators:` with your Tanzu GemFire cluster information, for each locator (in this example we only have one locator).  The information will follow the form:
+* Replace the value for `spring.data.gemfire.pool.locators:` with your VMware GemFire cluster information, for each locator (in this example we only have one locator).  The information will follow the form:
 
    ```
    [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][10334]
@@ -141,7 +141,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
     ```
 
   
-* Replace the value for `spring.data.gemfire.management.http.host:` with your Tanzu GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to GemFire.  The information follows a similar form as above:
+* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to GemFire.  The information follows a similar form as above:
 
    ```
    [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][GEMFIRE LOCATOR PORT]
@@ -228,11 +228,11 @@ You should see something similar to this, which represents an artificial time de
 >
 >time to look up: 6ms (quantity of time that it took to acquire the key-value pair).
 
-Note that the ***time to look up*** has been significantly reduced. This represents the app getting the information from the cache, Tanzu GemFire, instead of querying the database.
+Note that the ***time to look up*** has been significantly reduced. This represents the app getting the information from the cache, VMware GemFire, instead of querying the database.
 
 
 ### 8.  Confirm that the Hello, World! App is connected
-If you would like to confirm that your Bike Incident app is actually connected to your Tanzu GemFire cluster you can connect through the Tanzu GemFire / Apache Geode shell - commonly referred to as *gfsh*
+If you would like to confirm that your Bike Incident app is actually connected to your VMware GemFire cluster you can connect through the VMware GemFire / Apache Geode shell - commonly referred to as *gfsh*
 
 In a terminal
 
@@ -242,7 +242,7 @@ In a terminal
     ```  
 
   * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
-  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your Tanzu GemFire cluster. 
+  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your VMware GemFire cluster. 
 
 * Once you see that `GFSH` has started, connect to your cluster with the `connect` command
 
@@ -289,7 +289,7 @@ You should see something similar to this, where the "Value" listed in your termi
     time to look up: 2ms
    ```
 
-**Congratulations! You’re ready to start using Tanzu GemFire.**
+**Congratulations! You’re ready to start using VMware GemFire.**
 
 ---
 
@@ -312,9 +312,9 @@ kubectl -n tanzu-gemfire delete service hello-world-deployment
 
 ---
 
-## Delete the Tanzu GemFire Cluster
+## Delete the VMware GemFire Cluster
 
-If you need to delete your Tanzu GemFire cluster, first remove the cluster
+If you need to delete your VMware GemFire cluster, first remove the cluster
 
   ```
   kubectl -n tanzu-gemfire delete GemFireCluster hello-world-gemfire-cluster
@@ -322,7 +322,7 @@ If you need to delete your Tanzu GemFire cluster, first remove the cluster
    * Replace `tanzu-gemfire` with your namespace if different.
    * Replace `hello-world-gemfire-cluster` with the name of your GemFire instance if different.       
 
-When the Tanzu GemFire cluster has been completely deleted, remove the persistent volume claims of the Kubernetes cluster. These are disk claims that Kubernetes makes on the underlying system. 
+When the VMware GemFire cluster has been completely deleted, remove the persistent volume claims of the Kubernetes cluster. These are disk claims that Kubernetes makes on the underlying system. 
 
    ```
     kubectl -n tanzu-gemfire get persistentvolumeclaims
@@ -342,7 +342,7 @@ Then delete each persistent volume claim listed.
 
  ## Learn More
  
- Now that you have successfully created a running Tanzu GemFire cluster on Kubernetes, check out some other guides.
+ Now that you have successfully created a running VMware GemFire cluster on Kubernetes, check out some other guides.
  
  * You can get started by implementing the [cache-aside pattern](/data/tanzu-gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
   

@@ -1,6 +1,6 @@
 ---
-title: Tanzu SQL
-linkTitle: Tanzu SQL
+title: VMware SQL
+linkTitle: VMware SQL
 type: data-services
 dataServiceType: Relational DBaaS
 icon: tanzu-sql
@@ -10,7 +10,7 @@ description: >
 
 ---
 
-VMware Tanzu SQL provides a relational database-as-a-service for developers that is fully compatible with MySQL and Postgres.  
+VMware SQL provides a relational database-as-a-service for developers that is fully compatible with MySQL and Postgres.  
 
 MySQL is a fast, multithreaded, multi-user relational database that enables enterprises to develop, test, and deliver high-performance and scalable Online Transaction Processing (OLTP) applications. >
 

@@ -10,4 +10,4 @@ type: samples
 
 This example demonstrates use of the Node.js client with a simple Next.js web app.
 
-The rendered site displays a count of page renderings, backed either by a Tanzu GemFire cluster.
+The rendered site displays a count of page renderings, backed either by a VMware GemFire cluster.
