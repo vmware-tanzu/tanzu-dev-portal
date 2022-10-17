@@ -191,7 +191,7 @@ Now that you have an instance of the `ArticleRepository` you can use the methods
 @RequestMapping("/api/articles")
 public class ArticleController {
 
-    private final ArticleRepository articles;
+    private final ArticleRepository articleRepository;
 
     public ArticleController(ArticleRepository articles) {
         this.articles = new ArticleRepository();
@@ -199,12 +199,12 @@ public class ArticleController {
 
     @GetMapping
     public List<Article> findAll() {
-      return articles;
+      return articleRepository.findAll();
     }
 
     @GetMapping("/{id}")
     public Article findById(@PathVariable Integer id) {
-      return articles.stream().filter(a -> a.id().equals(id)).findFirst().orElse(null);
+      return articleRepository.findById(id);
     }
 
 }
