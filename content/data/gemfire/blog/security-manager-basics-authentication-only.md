@@ -216,4 +216,4 @@ However, now everyone and every app can use the same username, password, AND gai
 - What if you need an operator to be able to create the GemFire clusters but not have access to the data?
 - What if you need an application developer to be able to interact with the data, without accidentally deleting the cluster?
 
-To grant users different permissions and access levels you will need to implement **authentication** and **authorization**. [This next article](data/tanzu-gemfire/blog/security-manager-basics-authentication-and-authorization) will walk you through an example of how to implement those two methods for a GemFire cluster and utilize GemFire's `ResourcePermissions` to set user permissions. 
+To grant users different permissions and access levels you will need to implement **authentication** and **authorization**. [This next article](/data/gemfire/blog/security-manager-basics-authentication-and-authorization) will walk you through an example of how to implement those two methods for a GemFire cluster and utilize GemFire's `ResourcePermissions` to set user permissions. 

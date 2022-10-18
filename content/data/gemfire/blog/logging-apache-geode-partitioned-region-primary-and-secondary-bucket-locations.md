@@ -14,7 +14,7 @@ An Apache Geode [PartitionedRegion](https://github.com/apache/geode/blob/develop
 
 In addition, the [`redundancy-zone`](https://geode.apache.org/docs/guide/114/developing/partitioned_regions/set_redundancy_zones.html) property helps determine where buckets are located. If two redundancy zones are defined and `redundant-copies` is one (meaning 2 copies of each bucket), then the primary bucket will be in a member in one zone, and the secondary bucket will be in a member in the other zone.
 
-This article is a companion to my [Logging Apache Geode PartitionedRegion Entry Details Per Bucket](data/tanzu-gemfire/blog/logging-partitionedregion-entry-details-per-bucket) article. It provides an example of a compact view of the primary and secondary bucket locations per server and redundancy zone.
+This article is a companion to my [Logging Apache Geode PartitionedRegion Entry Details Per Bucket](/data/gemfire/blog/logging-partitionedregion-entry-details-per-bucket) article. It provides an example of a compact view of the primary and secondary bucket locations per server and redundancy zone.
 
 ## Implementation
 

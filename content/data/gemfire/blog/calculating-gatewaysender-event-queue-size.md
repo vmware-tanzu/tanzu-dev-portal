@@ -15,7 +15,7 @@ The in-memory size of an Apache Geode [GatewaySender](https://github.com/apache/
 
 This article describes how to use the ObjectGraphSizer to calculate the size of a GatewaySender queue.
 
-Note: See the [GatewaySender Queue Implementation](data/tanzu-gemfire/blog/logging-apache-geode-gatewaysender-queue-events/#gatewaysender-queue-implementation) section of my **Logging Apache Geode GatewaySender Queue Events** blog for details on the architecture of GatewaySenders.
+Note: See the [GatewaySender Queue Implementation](/data/gemfire/blog/logging-apache-geode-gatewaysender-queue-events/#gatewaysender-queue-implementation) section of my **Logging Apache Geode GatewaySender Queue Events** blog for details on the architecture of GatewaySenders.
 
 ## Implementation
 All source code described in this article as well as an example usage is available [here](https://github.com/boglesby/calculate-gateway-sender-queue-size).

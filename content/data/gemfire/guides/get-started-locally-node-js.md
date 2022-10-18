@@ -252,4 +252,4 @@ When finished running the example locally, shut down the client and server proce
   
   Now that you have successfully set up your local development environment, check out some other guides
  
-  * Set up your [VMware GemFire service instance](data/tanzu-gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service.
+  * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-node-js) on the Tanzu Application Service.
