@@ -10,7 +10,7 @@ explicit: 'no'
 hosts:
 - Dan Vega
 - DaShaun Carter
-youtube: ""
+youtube: "YhM-ZWV9hOA"
 lastmod: '2022-09-12'
 title: "Episode: 11"
 twitch: vmwaretanzu
