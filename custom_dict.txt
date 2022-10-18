@@ -139,6 +139,7 @@ AppsManager
 Apress
 AquaSecurity
 Aravena
+architected
 [Aa]rchitecting
 Ardanlabs
 Arellano
@@ -247,6 +248,7 @@ bikeshedding
 Bikewise
 binary_buildpack
 biome
+biometric
 [Bb]itnami('s)?
 Biville
 Bixby
@@ -561,6 +563,7 @@ de-duplicate
 de-facto
 [Dd]e-referenced
 de-risk(s)?
+de-risked
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -678,6 +681,7 @@ Drotbohm
 DSL(s)?
 DSN
 Dubois
+duplicative
 durations
 Dutchie
 Dynatrace
@@ -2209,9 +2213,11 @@ SMTP
 smtp-sink
 Smythe
 Snapchat
+SNAPe
 SNI
 Snyk
 SolidFire
+solutioning
 Soluto('s)?
 SomeRegion
 SonicDMG
