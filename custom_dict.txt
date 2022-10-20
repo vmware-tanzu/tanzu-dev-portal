@@ -6,8 +6,6 @@
 # add entries to bottom of file, will be sorted on commit
 #CoffeeOps
 
-quickstart
-Kadourah
 [0-9]*(a|b|c)
 [0-9]*(am|pm|AM|PM)
 [0-9]*(GB|MB|M|KB|Mi|m|m?s|k)
@@ -141,6 +139,7 @@ AppsManager
 Apress
 AquaSecurity
 Aravena
+architected
 [Aa]rchitecting
 Ardanlabs
 Arellano
@@ -249,6 +248,7 @@ bikeshedding
 Bikewise
 binary_buildpack
 biome
+biometric
 [Bb]itnami('s)?
 Biville
 Bixby
@@ -563,6 +563,7 @@ de-duplicate
 de-facto
 [Dd]e-referenced
 de-risk(s)?
+de-risked
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -680,6 +681,7 @@ Drotbohm
 DSL(s)?
 DSN
 Dubois
+duplicative
 durations
 Dutchie
 Dynatrace
@@ -1260,6 +1262,7 @@ k8s-add-global-label
 k8s-cloudkms-plugin
 k8s-prometheus-adapter
 k8s-prometheus-operator
+Kadourah
 [Kk]afka
 [Kk]ail
 Kalashnykov
@@ -1922,6 +1925,7 @@ Querier
 queryable
 queuedEvents
 QueueStatistics
+quickstart
 Quickstart
 quokka
 (r)?syslog
@@ -2209,9 +2213,11 @@ SMTP
 smtp-sink
 Smythe
 Snapchat
+SNAPe
 SNI
 Snyk
 SolidFire
+solutioning
 Soluto('s)?
 SomeRegion
 SonicDMG

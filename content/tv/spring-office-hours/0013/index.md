@@ -16,7 +16,7 @@ hosts:
 - Jonatan Ivanov
 minutes: 60
 # TODO YouTube ID after posted
-youtube: ""
+youtube: "zgaAEZ4Y_uI"
 twitch:  "vmwaretanzu"
 ---
 
