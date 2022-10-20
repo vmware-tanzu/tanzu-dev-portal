@@ -102,6 +102,30 @@
   force = true
   status = 200
 
+[[redirects]]
+  from = "/developer/data/tanzu-gemfire/*"
+  to = "/developer/data/gemfire/:splat"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/data/tanzu-rabbitmq/*"
+  to = "/developer/data/rabbitmq/:splat"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/data/tanzu-sql/*"
+  to = "/developer/data/sql/:splat"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/data/tanzu-greenplum/*"
+  to = "https://tanzu.vmware.com/greenplum"
+  force = true
+  status = 301
+
 # Global 404 handler
 [[redirects]]
   from = "/*"
