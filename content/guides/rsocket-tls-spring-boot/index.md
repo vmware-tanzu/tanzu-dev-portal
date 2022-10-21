@@ -361,6 +361,12 @@ The next step in this topic will take advantage of [Spring Vault](https://spring
 
 [SSL Self-signing guide](https://knowledge.broadcom.com/external/article/166370/how-to-create-a-selfsigned-ssl-certifica.html)
 
-[Another Process of Generating SSL](https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm)
+[Common Distinguished Names](https://www.ibm.com/docs/en/ibm-mq/7.5?topic=certificates-distinguished-names)
+
+[Great Writeup of OpenSSL Workings](https://opensource.com/article/19/6/cryptography-basics-openssl-part-2)
+
+[Another great writup on SSL](https://docs.apigee.com/api-platform/system-administration/about-ssl)
+
+[Example Process of Generating SSL](https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm)
 
 [Converting Certs to PKCS#12](https://docs.vmware.com/en/VMware-Horizon-7/7.13/horizon-scenarios-ssl-certificates/GUID-17AD1631-E6D6-4853-8D9B-8E481BE2CC68.html)
