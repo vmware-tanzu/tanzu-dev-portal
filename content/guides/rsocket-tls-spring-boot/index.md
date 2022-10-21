@@ -1,7 +1,7 @@
 ---
 date: '2022-10-21'
 description: Learn how to apply TLS to Spring RSocket
-lastmod: '2022-08-11'
+lastmod: '2022-10-21'
 linkTitle: Securing RSocket TCP with TLS
 metaTitle: Securing RSocket TCP with TLS
 patterns:
