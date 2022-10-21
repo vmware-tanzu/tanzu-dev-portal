@@ -1,5 +1,5 @@
 ---
-title: Designing a Software Application Architecture Following Event Storming
+title: Develop iteratively tested and working code
 weight: 2
 layout: single
 team:
@@ -8,12 +8,35 @@ tags: []
 ---
 
 ## Introduction
-This post explains how to translate the outcomes of an Event Storming workshop into a flexible software architecture. Our example scenario pertains to a chain of restaurants where different meals can be ordered and will be delivered by an external fulfillment service. (More on this shortly.)
+This article explains how to translate the outcomes of an Event Storming workshop and Boris exercise into flexible software architecture. It covers the last step of the Swift method through one concrete example.
 
-Let's set the stage with the results of a theoretical event storming followed by a Boris, and SNAP exercises:
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <td><b>Purpose</b></td>
+      <td>To turn the desired notional architecture into tested, running code by iterating on the backlog of work.</td>
+    </tr>
+    <tr>
+      <td><b>Duration</b></td>
+      <td>Several 1-week iterations.</td>
+    </tr>
+    <tr>
+      <td><b>Activities</b></td>
+      <td>Iterate on the backlog of work to take low-level design decisions, document learning, apply technical patterns to use, and implement user stories.</td>
+    </tr>
+    <tr>
+      <td><b>Outcomes</b></td>
+      <td>Tested and working code running on production implementing the desired system.</td>
+    </tr>
+  </tbody>
+</table>
+
+Our example scenario pertains to a chain of restaurants where different meals can be ordered and will be delivered by an external fulfillment service. More on this shortly!
+
+Let's set the stage with the results of a theoretical event storming followed by Boris, and SNAP exercises:
 - business processes are defined
 - domain events are mapped
-- first slice of functionality is defined (using the Swift Method)
+- a first slice of functionality is defined (using the Swift Method)
 - a notional architecture exists (using BORIS)
 - SNAP stickies are written, defining APIs, the accompanying data flow, and the necessary external systems
 
@@ -32,58 +55,59 @@ From the diagram, these actors and their actions are defined:
 - Customer that wants to order a Meal from a specific Restaurant
 - Chef that needs to know what to prepare and when
 - Restaurant Owner that manages the  business
-- Driver that is picks up and delivers the meals
+- Driver that picks up and delivers the meals
 
 ### Notional Architecture (a.k.a. Boris Diagram)
 This diagram is the result of collaboration with the technical stakeholder to determine what Services (blue) and interactions between those Services should exist.
 
 ![Notional Architecture](/learningpaths/swift-monolith-modernization/images/notional-architecture-01.jpg#center)
 
-And the SNAP diagrams, which documents the API definitions, corresponding data, and external systems needed to support the flow:
+And the SNAP diagrams, which document the API definitions, corresponding data, and external systems needed to support the flow:
 
 ![SNAP Diagram](/learningpaths/swift-monolith-modernization/images/snap-01.jpg#center)
 
 ## Implementation
-In this article, we’re going to focus on the Restaurant and Driver business capabilities and not implement the User Interface, but implement the API so the User Interfaces could be developed separately.
+In this article, we’re going to focus on the `Restaurant` and `Driver` business capabilities and not implement the User Interface, but implement the API so the User Interfaces could be developed separately.
 
 ### Options
 
-While there are many ways to implement the business capabilities, from my experience, these  options appear the most promising:
+While there are many ways to implement the business capabilities, from my experience, these three options appear the most promising:
 
-1. The first option is a three-layered architecture where Business Layer Services are able to execute CRUD (Create Read Update Delete) operations on multiple entities at the Data Access Layer. The Presentation Layer provides the API which translates the API model into one or multiple Business Layer Services method calls. Note that the Business Layer Services usually consists of more fine grained methods than the API.
-
-
-2. A second option is also a three-layered architecture in which Business Layer Services apply the Repository Pattern to load and persist entities as a whole aggregate (combination of multiple (database) entities) to make sure the aggregate is always in a valid state. The Business Layer Services are then modeled after the API and the  Presentation Layer is only translating the API model towards the Business model. This strategy limits the logic in the Presentation Layer which is a good thing as business decisions are done within the Business Layer and the Presentation Layer can easily be extended with other (technology) channels.
+1. The first option is a __three-layered architecture__ where Business Layer Services leverage CRUD (Create Read Update Delete) operations on multiple entities at the Data Access Layer. The Presentation Layer provides the API which translates the API model into one or multiple Business Layer Services method calls. Note that the Business Layer usually consists of more fine-grained methods than the API.
 
 
-3. A third option is to combine Hexagonal Architecture with a core containing Domain Driven Design (DDD) Aggregates and Services. Hexagonal Architecture is also known as Ports and Adapters as the core is available by defined interfaces (Ports) and the core can communicate with dependent services by interfaces. These Ports are implemented by Adapters which are technology dependent, e.g. database interaction or user interaction by HTTP JSON/API. More information about Driving (Primary) and/or Driven (Secondary) adapters can be found here.
+2. A second option is also a __three-layered architecture__ in which Business Layer Services apply the __[Repository Pattern](https://martinfowler.com/eaaCatalog/repository.html)__ to load and persist entities as a whole aggregate (combination of multiple (database) entities) to make sure the aggregate is always in a valid state. The Business Layer Services are then modeled after the API and the  Presentation Layer is only translating the API model towards the Business model. This strategy limits the logic in the Presentation Layer which is a good thing as business decisions are done within the Business Layer and the Presentation Layer can easily be extended with other (technology) channels.
+
+
+3. A third option is to combine __[Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software))__ with a core containing Domain Driven Design (DDD) Aggregates and Services. Hexagonal Architecture is also known as Ports and Adapters as the core is available by defined interfaces (Ports) and the core can communicate with dependent services by interfaces. These Ports are implemented by Adapters that are technology dependent, e.g. database interaction or user interaction by HTTP JSON/API. More information about Driving (Primary) and/or Driven (Secondary) adapters can be found here.
 Every Aggregate Root will handle Commands and submit Domain events and make sure the Aggregate is always in a consistent and valid state. The persistence of the Aggregate will be taken care of by Repositories, implemented as an Adapter. Another Adapter provides the API as HTTP/JSON endpoint.
 
 ![Implementation options](/learningpaths/swift-monolith-modernization/images/implementation-options.jpg#center)
 
 The first two options have the benefit of implementing a common application architecture in which a lot of functionality is bundled in a single runtime.
 
-With the first option the Business Layer is able to read all the database entities or create even an intermediate view upon multiple entity states to handle business logic. A downside of this is the potential tight-coupling between entities that is not necessarily needed. Another potential problem is that in order to test the Business Layer correctly one should have a lot of test data combinations, scattered over multiple entities, available to support the business logic. In the future, this same highly coupled architecture can quickly make the codebase unmaintainable, especially after a few iterations or if the shared knowledge base is compromised because a development team member rotates out. In order to test one needs both the Business Layer and Data Layer in place.
+With the first option, the Business Layer can read all the database entities or create even an intermediate view upon multiple entity states to handle business logic. A downside of this is the potential tight coupling between entities that are not necessarily needed. Another potential problem is that in order to test the Business Layer correctly one should have a lot of test data combinations, scattered over multiple entities, available to support the business logic. In the future, this same highly coupled architecture can quickly make the codebase unmaintainable, especially after a few iterations or if the shared knowledge base is compromised because a development team member rotates out. To test one service, both the Business Layer and Data Layer need to be in place.
 
-The second option already provides some safeguards regarding tight-coupling: using the Repository Pattern the Business Layer could only load and persist whole Aggregates: entities that are always in valid state according to business rules. This option makes it also easier to test: the Aggregate can be tested in isolation, apart from the loading and persisting: separating the concerns.
+The second option already provides some safeguards regarding tight coupling: using the Repository Pattern the Business Layer could only load and persist whole Aggregates: entities that are always in a valid state according to business rules. This option makes it also easier to test: the Aggregate can be tested in isolation, apart from the loading and persisting: separating the concerns.
 
-A possible downside of the third option is that time is required upfront to model what belongs to the Core. During the Event Storming and Boris exercise the Aggregates are already roughly sketched. As the Aggregates are part of the Core and do not share any technology dependency (except the programming language constructs) one could test the business logic in isolation. Any dependency -like persistence of Aggregates or messaging infrastructure- are modeled as Ports and can be tested in isolation with the technology of the implementation (e.g. ORM Framework).
+A possible downside of the third option is that time is required upfront to model what belongs to the Core. During the Event Storming and Boris exercises, the Aggregates are already roughly sketched. As the Aggregates are part of the Core and do not share any technology dependency (except the programming language constructs) one could test the business logic in isolation. Any dependency -like persistence of Aggregates or messaging infrastructure- is modeled as Ports and can be tested in isolation with the technology of the implementation (e.g. ORM Framework).
 
-As each Aggregate has its own Repository, and communication between Aggregates is via Ports (or via Domain Events) it is fairly easy to separate out multiple microservices in the future.
+As each Aggregate has its own Repository, and communication between Aggregates is via Ports (or via Domain Events) it is fairly easy to separate multiple microservices in the future.
 
 Eventually, this Hexagonal Architecture could be extended with other application architectures such as Event Sourcing for Aggregate state and Command Query Responsibility Segregation (CQRS) to separate read from write models.
 
-For this article we'll continue with the third option as it provides an improved modularity.
+For this article, we'll opt for the third option as it provides improved modularity.
 
 
 ## First iteration
+
 In the first iteration, let’s work on two stories:
 
 1. As a customer
    I want to know what meals are available
    so that I can make an informed decision on what to order.
    Acceptance criteria:
-   When I retrieve the menu I get all meals that are available
+   When I retrieve the menu I get all available meals.
 
 
 2. As a restaurant owner
@@ -95,15 +119,18 @@ In the first iteration, let’s work on two stories:
 
 Event Storming leads naturally to Domain-Driven Design (DDD); Boris to an Event-Driven architecture, and SNAP to Command Query Responsibility Segregation (CQRS). But we still have to choose a layering architecture and which patterns to apply. Should we use an ORM? What persistence technology do we need?
 
-Hexagonal Architecture is a good layering choice as it separates the core domain neatly from the technology. In this scenario we have at least one Domain Object which can serve as an Aggregate Root: `Restaurant`.
+Hexagonal Architecture is a good layering choice as it separates the core domain neatly from the technology. In this scenario, we have at least one Domain Object which can serve as an Aggregate Root: `Restaurant`.
 
 The requirement to register a meal implies the need for long-term persistence, and, as we do not want to write plain SQL queries and do not have extreme requirements in terms of performance (yet!), an ORM framework that abstracts away the persistence technology is preferable.
 
 ### Infrastructure & Technology Stack
-There are many technology stacks and platforms available. For this article we’re going to use Spring Boot , PostgreSQL for the persistence of Entity states  and Tanzu Application Platform for both the CI/CD pipelines as well the deployment platform (built upon Kubernetes and Knative). Java provides us with a good Object Oriented paradigm usable for Hexagonal Architecture and Spring Boot provides us a HTTP web server for our API exposure. PostgreSQL is a well-known open-source database supporting ACID transactions for which paid support is available.
+
+There are many technology stacks and platforms available. For this article we’re going to use Spring Boot, PostgreSQL for the persistence of Entity states and Tanzu Application Platform for both the CI/CD pipelines as well the deployment platform (built upon Kubernetes and Knative). Java provides us with a good Object Oriented paradigm usable for Hexagonal Architecture and Spring Boot provides us with an HTTP web server exposing our APIs. PostgreSQL is a well-known open-source database supporting [ACID](https://en.wikipedia.org/wiki/ACID) transactions for which enterprise support is available.
 
 ### Retrieving the menu
+
 #### Core
+
 The core domain for retrieving the menu is fairly simple: every Restaurant has a menu listing meals it can prepare. The core service needs to be able to provide a list of menus for the API. Starting with the domain we will start testing that if a Restaurant has a menu it can provide these.
 
 {{% callout %}}
@@ -165,9 +192,9 @@ public class Restaurant {
 ````
 
 #### API
-Although the core Domain is `Restaurant` the API prescribes that a Customer be able to see the menus of all Restaurants. To test that `RetrieveMenu` works, we verify that the public facing API is using a new core port `RestaurantApplicationPort` to retrieve the menu, and that the menu is translated to JSON.
+Although the core Domain is `Restaurant` the API prescribes that a Customer be able to see the menus of all Restaurants. To test that `RetrieveMenu` works, we verify that the public-facing API is using a new core port `RestaurantApplicationPort` to retrieve the menu and that the menu is translated to JSON.
 
-Here we make use of Spring Web to expose a JSON based API. It provides annotations for classes and methods to designate certain methods as handlers for API routes. It also serializes and deserializes HTTP Request and Response bodies to and from Java classes, so there is no need to develop your own parser or serializer.
+Here we make use of Spring Web to expose a JSON-based API. It provides annotations for classes and methods to designate certain methods as handlers for API routes. It also serializes and deserializes HTTP Request and Response bodies to and from Java classes, so there is no need to develop your own parser or serializer.
 
 ````groovy
 @WebMvcTest(value = RestaurantAPI.class)
@@ -239,7 +266,7 @@ public class RestaurantApplicationService implements RestaurantApplicationPort {
 ````
 
 #### Persistence
-The Restaurant name and its menu is to be retrieved from a persistent data store. As said, we will use PostgreSQL as a datastore. Java provides JDBC as the primary database connection driver. Java EE provides JPA (Java Persistence API) as ORM, which has been implemented by multiple vendors. By leveraging the Spring Framework we opt in to use Spring Data JPA, an abstraction to read and persist JPA entities without the boilerplate code. We need only define the JPA Entity and a Spring Data Repository.
+The Restaurant name and its menu is to be retrieved from a persistent data store. As said, we will use PostgreSQL as a data store. Java provides JDBC as the primary database connection driver. Java EE provides JPA (Java Persistence API) as ORM, which has been implemented by multiple vendors. By leveraging the Spring Framework we opt-in to use Spring Data JPA, an abstraction to read and persist JPA entities without the boilerplate code. We need only define the JPA Entity and a Spring Data Repository.
 
 To make our Aggregate consistent when persisting it, we keep the simple rule: One Aggregate = One Repository. This makes it easy to persist the whole Aggregate in the database in a single database transaction.
 
@@ -252,7 +279,7 @@ class RestaurantApplicationServiceSpec extends Specification {
 
    private RestaurantApplicationService subject = new RestaurantApplicationService(restaurantRepositoryPort)
 
-   def "When retrieving the menu we expect the menu is composed from all Restaurants available in the repository"() {
+   def "When retrieving the menu we expect the menu is composed of all Restaurants available in the repository"() {
       given:
          def restaurantOne = new Restaurant("New York", ["pizza"])
          def restaurantTwo = new Restaurant("Washington DC", ["spaghetti"])
@@ -278,7 +305,7 @@ public interface RestaurantRepositoryPort {
 ````
 
 {{% callout %}}
-Instead of passing an JPA entity through the Port, we deliberately instruct the Port to return Domain Object `Restaurant`. Whenever a business transaction is run in the future against the `Restaurant` instance, it will for sure be in a valid state. In contrast, a valid state cannot be guaranteed if `getter` and `setter` of individual attributes are allowed against JPA entities.
+Instead of passing a JPA entity through the Port, we deliberately instruct the Port to return Domain Object `Restaurant`. Whenever a business transaction is run in the future against the `Restaurant` instance, it will for sure be in a valid state. In contrast, a valid state cannot be guaranteed if `getter` and `setter` of individual attributes are allowed against JPA entities.
 {{% /callout %}}
 
 To have the above test pass, we implement `RestaurantApplicationService`:
@@ -300,7 +327,7 @@ public class RestaurantApplicationService implements RestaurantApplicationPort {
 }
 ````
 
-Let's implement the `RestaurantRepositoryPort` by using Spring Data JPA. See Spring Data JPA Repositories for more information about how Spring Data JPA works by defining marker interfaces, ID and Entity types.
+Let's implement the `RestaurantRepositoryPort` by using Spring Data JPA. See Spring Data JPA Repositories for more information about how Spring Data JPA works by defining marker interfaces, ID, and Entity types.
 
 ````groovy
 class JpaRestaurantRepositoryAdapterSpec extends Specification {
@@ -432,7 +459,7 @@ I've chosen not to generate a primary key for the Restaurant aggregate. The name
 {{% /callout %}}
 
 {{% callout %}}
-The `version` attribute is (already) part of the JPA Entity. This provides out of the box optimistic locking. Persisting changes to the aggregate should be done sequentially, to be sure that it stays in a consistent state and not to overwrite concurrent changes.
+The `version` attribute is (already) part of the JPA Entity. This provides out-of-the-box optimistic locking. Persisting changes to the aggregate should be done sequentially, to be sure that it stays in a consistent state and does not overwrite concurrent changes.
 {{% /callout %}}
 
 Finally the adapter itself:
@@ -460,7 +487,7 @@ public class JpaRestaurantRepositoryAdapter implements RestaurantRepositoryPort 
 ````
 
 #### Application
-Up to this point, during testing the code is working in isolation. But to start up the Spring Container and the (integrated) web server, we need to add the main method along with an (external) configuration. Fortunately, Spring Boot provides an Inversion of Control (IoC) mechanism so the components work together, injecting each dependency as required.
+Up to this point, during testing, the code is working in isolation. But to start up the Spring Container and the (integrated) web server, we need to add the main method along with an (external) configuration. Fortunately, Spring Boot provides an Inversion of Control (IoC) mechanism so the components work together, injecting each dependency as required.
 
 ````java
 @SpringBootApplication
@@ -472,7 +499,7 @@ public class RestaurantServiceApplication {
 }
 ````
 
-The following configuration is to configure Spring: know which database to use, Jackson for JSON serialization and enabling Flyway:
+The following configuration is to configure Spring: know which database to use, Jackson for JSON serialization, and enabling [Flyway](https://github.com/flyway/flyway):
 
 ````yaml
 spring:
@@ -502,10 +529,10 @@ With the code changes above we now have a working application. You can start it 
 
 ### Register a meal
 #### Core
-Let's implement the story to register meals, so that a menu is built up for a Restaurant.
-We start by developing the behavior of the core Domain Object: Restaurant. As `Restaurant` is our Aggregate Root, the Menu will be another Entity within the same Aggregate. The Root will make sure the Aggregate is in consistent state: checking that a meal cannot be registered twice.
+Let's implement the story to register meals so that a menu is built up for a Restaurant.
+We start by developing the behavior of the core Domain Object: Restaurant. As `Restaurant` is our Aggregate Root, the Menu will be another Entity within the same Aggregate. The Root will make sure the Aggregate is in a consistent state: checking that a meal cannot be registered twice.
 
-We add two more tests for registering meals: one happy path, one exceptional path.
+We add two more tests for registering meals: one happy path, and one exceptional path.
 
 ````groovy
 class RestaurantSpec extends Specification {
@@ -530,7 +557,7 @@ class RestaurantSpec extends Specification {
 }
 ````
 
-With the above tests we need to extend the `Restaurant` core domain model with extra behavior, this will turn our Restaurant into the Root of the Aggregate:
+With the above tests, we need to extend the `Restaurant` core domain model with extra behavior, this will turn our Restaurant into the Root of the Aggregate:
 
 ````java
 @EqualsAndHashCode
@@ -606,7 +633,7 @@ class RestaurantAPISpec extends Specification {
 ````
 
 {{% callout %}}
-`registerMeal` method represents a Command: a task to execute with the intention to change state. Hence it will not return a value but it does have the side-effect of changing the menu of the restaurant (or maybe an exception when some business rule is violated). Currently it is a synchronous call, which can be easily changed to an asynchronous execution in the future if needed.
+`registerMeal` method represents a Command: a task to execute to change a state. Hence it will not return a value but it does have the side-effect of changing the menu of the restaurant (or maybe an exception when some business rule is violated). Currently, it is a synchronous call, which can be easily changed to an asynchronous execution in the future if needed.
 {{% /callout %}}
 
 The above will change our `RestaurantAPI`:
@@ -636,7 +663,7 @@ public class RestaurantAPI {
 HTTP Status 200 will be returned when successfully registered. Any exception thrown by `registerMeal` will result in an HTTP error code.
 
 #### Core
-When `registerMeal` command is being handled it must read the Restaurant Aggregate from the repository, register the meal and persist it.
+When `registerMeal` command is being handled it must read the Restaurant Aggregate from the repository, register the meal, and persist it.
 
 ````groovy
 class RestaurantApplicationServiceSpec extends Specification {
@@ -712,7 +739,7 @@ class JpaRestaurantRepositoryAdapterSpec extends Specification {
 }
 ````
 
-This is the completion of the first iteration. Source code of all the above can be found at GitHub: https://github.com/vmware-jaret/app-architecture-sample-restaurant/  
+This concludes the first iteration. The source code of all the above can be found in [this GitHub project](https://github.com/vmware-jaret/app-architecture-sample-restaurant/).
 
 ## Deployment
 
