@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "How to solve the skills problem - Digital Transformation Bottlenecks (07/14) - Tanzu Talk"
-description: "How to solve the skills problem - Digital Transformation Bottlenecks (07/14) - Tanzu Talk"
+title: "How to solve the skills problem - Digital Transformation Bottlenecks (08/14) - Tanzu Talk"
+description: "How to solve the skills problem - Digital Transformation Bottlenecks (08/14) - Tanzu Talk"
 episode: "156"
 aliases: ["0156"]
 publishdate: "2020-04-01T00:00:00-07:00"
