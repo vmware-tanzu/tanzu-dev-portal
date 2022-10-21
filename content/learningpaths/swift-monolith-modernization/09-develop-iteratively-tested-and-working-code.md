@@ -194,7 +194,7 @@ public class Restaurant {
 #### API
 Although the core Domain is `Restaurant` the API prescribes that a Customer be able to see the menus of all Restaurants. To test that `RetrieveMenu` works, we verify that the public-facing API is using a new core port `RestaurantApplicationPort` to retrieve the menu and that the menu is translated to JSON.
 
-Here we make use of Spring Web to expose a JSON-based API. It provides annotations for classes and methods to designate certain methods as handlers for API routes. It also serializes and deserializes HTTP Request and Response bodies to and from Java classes, so there is no need to develop your own parser or serializer.
+Here we make use of Spring Web to expose a JSON based API. It provides annotations for classes and methods to designate certain methods as handlers for API routes. It also serializes and deserializes HTTP Request and Response bodies to and from Java classes, so there is no need to develop your own parser or serializer.
 
 ````groovy
 @WebMvcTest(value = RestaurantAPI.class)
