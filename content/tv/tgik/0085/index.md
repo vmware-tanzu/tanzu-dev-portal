@@ -13,6 +13,6 @@ youtube: gzzq7TGBsL8
 
 Episode directory on GitHub: https://github.com/heptio/tgik/tree/master/episodes/085
 
-Join Josh Rosso as he returns to TGIK to explore Network Policies in Kubernetes. We&#39;ll explore how Kubernetes networking operates without policy, with policy, and how Container Networking Interface (CNI) plugins impact your capabilities.
+Join Josh Rosso as he returns to TGIK to explore Network Policies in Kubernetes. We&#39;ll explore how Kubernetes networking operates without policy, with policy, and how [Container Networking Interface (CNI)](/guides/container-networking/) plugins impact your capabilities.
 
 Come hangout, ask questions, and share you experiences!

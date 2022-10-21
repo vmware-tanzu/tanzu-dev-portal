@@ -21,7 +21,7 @@ level1: Deploying Modern Applications
 level2: Packaging and Publishing
 ---
 
-Packaging your application code into Docker containers is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.
+Packaging your application code into Docker [containers](https://tanzu.vmware.com/containers) is a tricky business. Python code is no exception. There are a _ton_ of best practices that you need to know about if you're going to build a container that is safe, secure, and maintainable over the long term. [Buildpacks][bp-website] codify these best practices, and they're open-source, so they're a great way to turn your application code into runnable containers.
 
 And because buildpacks completely remove the need for a `Dockerfile`, they dramatically simplify the maintenance of your container images --- particularly useful if you have multiple images to maintain. They're no 'flash-in-the-pan' either. Developed by Heroku in 2011, and also used in Cloud Foundry, buildpacks have built and run millions of production workloads!
 
