@@ -23,7 +23,7 @@ oldPath: "/content/guides/spring/rsocket-tls-spring-boot.md"
 aliases:
 - "/guides/spring/tls-rsocket-spring-boot"
 level1: Building Modern Applications
-level2: Access and Security
+level2: Frameworks and Languages
 ---
 
 This guide will explore TLS credential generation, and configuration for RSocket services with Spring Boot 2.7.x. We will review a few options for generating the certificate, as well as importing and utilizing that certificate in your Spring Boot application.
