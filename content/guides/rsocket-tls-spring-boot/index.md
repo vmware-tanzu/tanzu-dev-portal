@@ -363,9 +363,9 @@ The next step in this topic will take advantage of [Spring Vault](https://spring
 
 [Common Distinguished Names](https://www.ibm.com/docs/en/ibm-mq/7.5?topic=certificates-distinguished-names)
 
-[Great Writeup of OpenSSL Workings](https://opensource.com/article/19/6/cryptography-basics-openssl-part-2)
+[Write-up of OpenSSL Workings](https://opensource.com/article/19/6/cryptography-basics-openssl-part-2)
 
-[Another great writup on SSL](https://docs.apigee.com/api-platform/system-administration/about-ssl)
+[Another write-up on SSL](https://docs.apigee.com/api-platform/system-administration/about-ssl)
 
 [Example Process of Generating SSL](https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm)
 
