@@ -1,8 +1,8 @@
 ---
 name: Jelle Aret
-description: ""
+description: "Solution Architect"
 roles: ["guest"]
-skills: [""]
+skills: ""
 location: "The Netherlands"
 
 # Social Media
