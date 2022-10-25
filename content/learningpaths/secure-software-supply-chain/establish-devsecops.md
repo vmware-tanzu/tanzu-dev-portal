@@ -46,7 +46,7 @@ common goal of delivering customer value through software delivery.
 Members of a development organization will still maintain their respective areas
 of expertise, but they will now be asked to work more collaboratively towards
 this common goal of bringing code to production. Instead of serialized tasks,
-within DevSecOps each of these groups are working together in parallel. Needs
+within [DevSecOps](https://tanzu.vmware.com/devsecops) each of these groups are working together in parallel. Needs
 and solutions are clearly communicated on a regular basis. And, because these
 lines of responsibility are becoming blurred, members can come to shared
 understandings of how the system works through code. After all, they are now

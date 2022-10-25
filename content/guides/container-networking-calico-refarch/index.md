@@ -18,8 +18,8 @@ tags: []
 ---
 
 This document details a reference architecture for running
-[Calico](https://docs.projectcalico.org/introduction) as the container
-networking plugin (CNI) for a Kubernetes cluster, such as [Tanzu Kubernetes Grid
+[Calico](https://docs.projectcalico.org/introduction) as the [container
+networking](/guides/container-networking/) plugin (CNI) for a Kubernetes cluster, such as [Tanzu Kubernetes Grid
 (TKG)](https://my.vmware.com/web/vmware/info/slug/infrastructure_operations_management/vmware_tanzu_kubernetes_grid/1_16).
 It covers architectural considerations, network integration approaches, and best
 practices. This document represents how the VMware field team approaches Calico

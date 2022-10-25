@@ -34,7 +34,7 @@ tanzu:
 
 ## Monitoring Kubernetes 
 
-The Wavefront service can measure, correlate, and analyze data across containers and Kubernetes clusters and can display various information, including metrics, histograms, span logs, traces and distributed tracing analysis. 
+The Wavefront service can measure, correlate, and analyze data across [containers](https://tanzu.vmware.com/containers) and Kubernetes clusters and can display various information, including metrics, histograms, span logs, traces and distributed tracing analysis. 
 Because Wavefront can correlate Kubernetes performance with the performance of applications, it can help you scale faster while maintaining high quality. With Wavefront you can:
 
 * See a real-time, full-stack picture of your Kubernetes environment
