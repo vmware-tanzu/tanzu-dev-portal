@@ -5,7 +5,7 @@ lastmod: "2022-10-25"
 PublishDate: "2022-10-25"
 type: "tv-episode"
 # TODO
-title: "Spring Boot 3 RC1"
+title: "Spring Boot 3 Release Candidate 1"
 # TODO
 episode: "0017"
 explicit: 'no'
