@@ -75,7 +75,7 @@ Ultimately, we need to get the certificate(s) installed onto hosts in a format t
 
 In this guide we will explore exporting keystores in the PKCS#12 format, on the premise that JKS being deprecated at a later date.
 
-## A Spring Boot application
+## A Spring Boot Application
 
 The server is a simple RSocket process. It only needs to respond to a message endpoint, and be encrypted along the way. Lets begin at [start.spring.io](https://start.spring.io) and add code bits from there.
 
