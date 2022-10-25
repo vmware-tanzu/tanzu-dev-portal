@@ -11,7 +11,7 @@ youtube: "JYHEDO3Bg1A"
 draft: "False"
 ---
 
-Despite programmers dislike of the phrase, some people call it a "software factory." Whatever it is, if you're transforming how your organization does software, focus on building out all the tools and cloud infrastructure your developers need and leave the programming to them. To get started, check out:
+Despite programmers dislike of the phrase, some people call it a "[software factory](https://tanzu.vmware.com/software-factory)." Whatever it is, if you're transforming how your organization does software, focus on building out all the tools and cloud infrastructure your developers need and leave the programming to them. To get started, check out:
 
 The Tanzu Application Platform, our development platform for kubernetes: 
 

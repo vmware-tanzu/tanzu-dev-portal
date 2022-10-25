@@ -20,7 +20,7 @@ level1: Deploying Modern Applications
 level2: Packaging and Publishing
 ---
 
-[Cloud Native Buildpacks](https://buildpacks.io/) turn your code into OCI-compliant containers. They examine your source code, build it, and create a container image with all the required dependencies to run your application. 
+[Cloud Native Buildpacks](https://buildpacks.io/) turn your code into OCI-compliant [containers](https://tanzu.vmware.com/containers). They examine your source code, build it, and create a container image with all the required dependencies to run your application. 
 
 ## Why Are They Important? 
 

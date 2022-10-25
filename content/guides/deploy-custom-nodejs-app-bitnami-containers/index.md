@@ -23,7 +23,7 @@ level1: Deploying Modern Applications
 level2: Packaging and Publishing
 ---
 
-Developers like using containers for development because they are easy to use, portable, and require less maintenance overhead compared to bare metal or virtual machines. [Docker](https://www.docker.com/) is a popular choice, because it provides tools that make it simple for developers to build, run and publish applications in containers.
+Developers like using [containers](https://tanzu.vmware.com/containers) for development because they are easy to use, portable, and require less maintenance overhead compared to bare metal or virtual machines. [Docker](https://www.docker.com/) is a popular choice, because it provides tools that make it simple for developers to build, run and publish applications in containers.
 
 If you've seen Docker in action and then wondered "can I use this with my own application", then you're in the right place.
 
