@@ -131,10 +131,10 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">13:40</div>
         <div class="talk-title col-7 h4">
-            Our Cloud Native Journey with Spring
+            Production Considerations for Spring on Kubernetes
         </div>
         <div class="name col-3">
-            <h3 class="h4 py-0">Ronen Yair</h3>
+            <h3 class="h4 py-0"><a class="lightbox" href="#oded-shopen">Oded Shopen</a></h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">

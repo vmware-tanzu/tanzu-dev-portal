@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Transformation without belief is waste  - Digital Transformation Bottlenecks (08/14) - Tanzu Talk"
-description: "Transformation without belief is waste  - Digital Transformation Bottlenecks (08/14) - Tanzu Talk"
+title: "Transformation without belief is waste  - Digital Transformation Bottlenecks (09/14) - Tanzu Talk"
+description: "Transformation without belief is waste  - Digital Transformation Bottlenecks (09/14) - Tanzu Talk"
 episode: "157"
 aliases: ["0157"]
 publishdate: "2020-04-01T00:00:00-07:00"

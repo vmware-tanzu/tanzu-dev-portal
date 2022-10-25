@@ -2,7 +2,7 @@
 title: Swift Monolith Modernization  
 weight: 1
 layout: intro
-duration: 30
+duration: 60
 tags:
 - All Roles
 - Applications
