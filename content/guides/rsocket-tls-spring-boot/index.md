@@ -30,7 +30,7 @@ This guide will explore TLS credential generation, and configuration for RSocket
 
 It is assumed the developer knows about OpenSSL, Kotlin or at least JAVA 11 and uses Spring Boot. Do not worry if you're new to RSocket for Spring Boot or Reactive streams. All of the TLS security concerns relate to the Transport, not the protocol itself. Of course, the best place to understand are [the reference docs](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#appendix.application-properties.rsocket), so please read them!
 
-## Background on the PKI
+## A Brief Background on PKI
 
 SSL/TLS is a type of Public Key Infrastructure. PKI have concepts of a private and public key pair. Servers of an encrypted message will use the private key to generate the encrypted bits and ensure the identity of the creator. Meanwhile, clients or other non-trusted parties can use the public portion to decrypt the message.
 
@@ -44,34 +44,32 @@ A `chain-of-trust` is the relationship model that forms around a repository call
 
 The keystore contains a private key and certificates that an app will present to other parties. In this example, our server will have a keystore containing it's own private key along with the signed certificate.
 
-A truststore will contain the Root certificates that the holding entity (e.g. client) trusts. By installing all of the known CA Root certificates into the client truststore, we allow the client to trust third parties that present certificates signed by one of these Root CA's.
+A truststore will contain the Root certificates that the holding entity (e.g. client) trusts. The Root certificates are those owned by top-level certificate signers known as the Certificate Authority - called CA. By installing all of the known CA Root certificates into the client truststore, we allow the client to trust third parties that present certificates signed by one of these CA's.
 
 When developing apps, you will find (confusingly conflated names) that truststores are a _kind_ of keystore.
 
 ### One-Way TLS vs Two-Way TLS
 
-In most day-to-day scenarios, you are using whats called [one way TLS](https://www.ibm.com/docs/en/sim/7.0.1.13?topic=communication-one-way-two-way-ssl-authentication). One-Way TLS is similar to every web browsing experience where the client identifies the TLS server by looking up the certificate fingerprint in it's truststore. In one-way TLS, a server creates a keystore holding it's private key and certificate while a client creates a truststore holding the Root certificate.
+In most day-to-day scenarios, you are using whats called [one way TLS](https://www.ibm.com/docs/en/sim/7.0.1.13?topic=communication-one-way-two-way-ssl-authentication). One-Way TLS is similar to every web browsing experience where the client identifies the TLS server by looking up the certificate fingerprint in it's truststore. In one-way TLS, a server creates a keystore holding it's private key and certificate while a client creates a truststore holding the Root certificate. In this example, we will make use of one-way TLS.
 
-In [two way TLS](https://www.ibm.com/docs/en/sim/7.0.1.13?topic=communication-one-way-two-way-ssl-authentication), both parties offer TLS certificates. In addition to the above scenario, the server will perform the operation the client took while the client will present to the server it's own certificate. In two-way TLS, a server creates a keystore as above, but also a truststore for validating client certificates. Additionally, the client creates a keystore for holding it's own private key and certificate.
-
-This example makes use of one-way TLS.
+In [two way TLS](https://www.ibm.com/docs/en/sim/7.0.1.13?topic=communication-one-way-two-way-ssl-authentication), both parties offer TLS certificates. In addition to the above scenario, the client will present it's certificate to the server. In two-way TLS, a server creates a keystore as above, but also a truststore for validating client certificates. Additionally, the client creates a keystore for holding it's own private key and certificate.
 
 ## Establishing or Breaking the Chain of Trust 
 
-TLS Certificates are usually issued by well known and trusted Certificate Authorities (CA). It's sometimes feasible to get around this by issuing a [self signed](https://en.wikipedia.org/wiki/Self-signed_certificate) certificate in that _only_ the user issuing it trusts. Self-signed certificates cannot be trusted anywhere outside the scope of the user who created it. For this reason, it does not scale well.
+TLS Certificates are usually issued by well known and trusted Certificate Authorities (CA). It's sometimes feasible to get around this by issuing a [self signed](https://en.wikipedia.org/wiki/Self-signed_certificate) certificate in that _only_ the user issuing it trusts. Self-signed certificates cannot be trusted outside the scope of the user/app who created it; they are really useful for one-off (test/proving) situations.
 
 A Self Signed certificate is easy to generate with one command:
 ```bash
 openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
 ```
 
-Clients talking to servers that hold this certificate may not allow the connection to continue, since the `chain-of-trust` does not encompass this certificate! 
+Clients talking to servers that hold this certificate may not allow the connection to continue, since the `chain-of-trust` does not encompass this certificate! The next section will discuss another option, however which gives us more flexibility.
 
 ### The In-House Certificate Authority
 
-Another option - the in house CA - allows organizations to create their own trusted CA, and sign TLS certs from it. This is ideal for wider deployments since we will have little in the way of logistics - everyone involved can trust our Root cert or will implicitly do so if the in-house Root cert is signed by an already trusted CA such as Verisign.
+In this option, organizations create their own trusted CA, and sign TLS certs from it. This is ideal for wider deployments since we will have little in the way of logistics - everyone involved can trust the Root cert or will implicitly do so if the in-house Root cert is signed by an already trusted CA such as Verisign.
 
-In this example, we will create the private key, then generate a Root certificate. This Root certificate gets distributed to all devices and software. This establishes the `chain of trust` and allows us to sign other (application specific) certificates with it.
+We will create the private key, then generate a Root certificate. This Root certificate gets distributed to all devices and software. This establishes the `chain of trust` and allows us to sign other (application specific) certificates with it.
 
 Ultimately, we need to get the certificate(s) installed onto hosts in a format that our server/client/device can understand. Since we are securing an RSocket server, we have a couple options for that format: [JKS](https://vdc-download.vmware.com/vmwb-repository/dcr-public/93c0444e-a6cb-46a0-be25-b27a20f8c551/ac6ea73b-569b-4fff-80f1-e4144f541ac8/GUID-7FB0CDA2-BE63-49A4-B76C-BB806C3194AC.html) which is a JAVA specification for storing certificates, and [PKCS#12](https://en.wikipedia.org/wiki/PKCS_12) which is the platform agnostic format.
 
@@ -142,17 +140,17 @@ openssl req -x509 -new -key ca.key -passout pass:111111 -out ca.cer -days 365 -s
 
 This tells OpenSSL to generate a CSR using the `key` flag to specify our private key for signing the request. The `subj` flag allows us to place [Distinguished Name](https://docs.oracle.com/cd/E19182-01/820-6573/ghusi/index.html) metadata for this instance.
 
-The output is a file `ca.cer` containing the root X.509 certificate. Now for the fun part; lets create some certificates signed by our Root CA!
+The output is a file `ca.cer` containing the root X.509 certificate. Now for the fun part; lets create some certificates signed by our in-house CA!
 
 ### Create a Server Certificate
 
-We can start the [CSR](https://en.wikipedia.org/wiki/Certificate_signing_request) process by generating a private key for the entity we wish to represent; In this case, an RSocket server:
+We can start the [Certificate Signing Request](https://en.wikipedia.org/wiki/Certificate_signing_request) (CSR) process by generating a private key for the entity we wish to represent; In this case, an RSocket server:
 
 ```bash
 openssl genrsa -out server.key 2048 -aes256 -sha256 -passout pass:111111
 ```
 
-This private key is similar to the one we created earlier. 
+This private key is similar but to the one we created earlier; it is just a different giant number.
 
 The CSR file contains a public key with some organizational metadata used to identify the originating entity. Since we will be the signing party that uses our Root certificate to sign a CSR. The resultant certificate will have the fingerprint of our Root, and establishes the `chain-of-trust`.
 
@@ -170,7 +168,7 @@ We can create the CSR file using the private key we just generated:
 ```bash
 openssl req -new -key server.key -sha256 -out server.csr -subj "/CN=server,OU=Unknown,O=Unknown,L=Unknown,ST=Unknown,C=Unknown" -passin pass:111111
 ```
-The output is 'server.csr' containing the Base64 encoded Certificate Request
+The output is 'server.csr' containing the Base64 encoded CSR.
 
 Now, we can sign the server's CSR with our Root certificate.
 
