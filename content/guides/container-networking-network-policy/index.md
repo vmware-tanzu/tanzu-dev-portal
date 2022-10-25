@@ -22,13 +22,13 @@ Kubernetes cluster. This is achieved using Calico's
 [GlobalNetworkPolicy](https://docs.projectcalico.org/v3.5/reference/calicoctl/resources/globalnetworkpolicy)
 and the Kubernetes
 [NetworkPolicy](https://docs.kubernetes.io/concepts/services-networking/network-policies/)
-objects. It operates based on labels attached to namespaces.
+objects. It operates based on labels attached to [namespaces](/blog/a-container-is-a-linux-namespace-and-networking-basics/).
 
 Creating rules that allow traffic is done by adding Kubernetes `NetworkPolicy`
 objects to the namespace. These objects are portable across CNI plugins that
 enforce Kubernetes `NetworkPolicy`. Calico supports mixing Calico-specific
 policies with Kubernetes policy. This is not true for all CNI plugins such as
-Cilium. Calico-specific policies honor an `order` attribute for specifying
+[Cilium](/guides/container-networking/). Calico-specific policies honor an `order` attribute for specifying
 precedence of policy evaluation. Lower values take precedence. Kubernetes policy
 does not support order, as it only supports additive allow rules. Under the
 hood, Calico sets Kubernetes policy to an order of `100`. Thus, Calico policies

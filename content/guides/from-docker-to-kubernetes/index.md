@@ -29,7 +29,7 @@ faqs:
     answer: A Docker pod is a similar group of containers with shared namespaces and
       filesystem volumes.
   - question: Can Kubernetes run Docker containers?
-    answer: Kubernetes can run Docker containers and 'docker build' images, but it
+    answer: <a href='https://tanzu.vmware.com/kubernetes-vs-docker'>Kubernetes can run Docker containers</a> and 'docker build' images, but it
       is important to note that Kubernetes has depreciated support for Docker as a
       container runtime.
   - question: How do you run Kubernetes on Docker?
