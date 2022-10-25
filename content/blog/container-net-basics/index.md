@@ -1,6 +1,6 @@
 ---
 date: 2020-06-29
-description: Learn how to create two rudimentary containers that can communicate between one another through virtual networks and networking basics with VMware Tanzu.
+description: Learn how to create two rudimentary containers that can communicate between one another through virtual networks and networking basics with VMware Tanzu
 featured: false
 lastmod: '2021-02-08'
 patterns:
