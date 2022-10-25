@@ -15,6 +15,7 @@ Come to the VMware booth during expo hours October 26–28, 2022, to try out som
 If you’re unable to come to KubeCon in person, don’t worry; you can do these workshops from the [virtual booth](https://via.vmw.com/kubecon-workshops) as well. 
 
 ![Millennium Falcon Lego set](images/image1.png)  
+  
  **Each workshop you do will give you another chance to win a Millennium Falcon Lego set!**
 
 For the virtual booth, there will be one winner for the week. For the booth workshops, we will contact one winner each day!
