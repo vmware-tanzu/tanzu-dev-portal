@@ -387,7 +387,23 @@ body {
   .jc-even {
     justify-content: space-evenly;
   }
-
+  .springone-tour #register .mktoHtmlText.mktoHasWidth {
+    color: white;
+  }
+  .springone-tour #register .mktoForm .mktoFormCol,
+  .springone-tour #register .mktoForm .mktoFieldWrap {
+    padding: 0;
+  }
+  .springone-tour #register .mktoForm button,
+  .btn.green {
+    background-color: #02bc67 !important;
+    color: black !important;
+    
+    &:hover,
+    &:focus {
+      background-color: #80EB6E !important;
+    }
+  }
   .btn-primary {
     box-shadow: none;
   }

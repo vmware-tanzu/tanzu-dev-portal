@@ -3,7 +3,7 @@ Date: '2022-09-22T08:00:00-07:00'
 Description: "What the Flux?! GitOps at Your Fingertips"
 PublishDate: '2022-09-22T00:00:00-07:00'
 date: '2022-09-22'
-episode: '18'
+episode: '21'
 explicit: 'no'
 guests:
 - Mae Large

@@ -33,7 +33,7 @@ Most importantly, **all the Bitnami solutions are free to use and open source*
 
 ## Where can I find Bitnami apps? 
 
-The Bitnami catalog is exclusively available on the VMware Marketplace – VMware’s one-stop shop for tools and ecosystem solutions. Clicking any app in the Marketplace catalog will bring you to its individual page where you can find out how to deploy a solution as a virtual machine or as a container.  
+The Bitnami catalog is exclusively available on the VMware Marketplace – VMware’s one-stop shop for tools and ecosystem solutions. Clicking any app in the Marketplace catalog will bring you to its individual page where you can find out how to deploy a solution as a virtual machine or as a [container](https://tanzu.vmware.com/containers).  
 
 For public clouds, browse the [Bitnami Application Catalog](https://bitnami.com/stacks) and deploy cloud images onto [Google Cloud](https://google.bitnami.com/), [AWS](https://aws.bitnami.com/), or [Azure](https://azure.bitnami.com/) using Bitnami launchpads. You can also access Bitnami containers from [Docker Hub](https://hub.docker.com/u/bitnami), [AWS ECR Public](https://gallery.ecr.aws/?searchTerm=bitnami), and helm charts from the Bitnami chart repository. 
 

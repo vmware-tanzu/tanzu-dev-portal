@@ -1,6 +1,6 @@
 ---
 date: 2020-06-29
-description: Demystify containers and cover some networking basics
+description: Learn how to create two rudimentary containers that can communicate between one another through virtual networks and networking basics with VMware Tanzu
 featured: false
 lastmod: '2021-02-08'
 patterns:
@@ -14,7 +14,7 @@ tags: []
 ![open source image @freddygthatsme see sources](images/freddy-g-1i1zPbkQJNg-unsplash.jpg)
 
 
-Understanding the way containers communicate will make your life easier in many ways. Technologies like Kubernetes and Docker abstract away details that make containers special, but can also abstract away intuition and understanding. Without that knowledge, challenges arise—educated problem-solving adds confidence to decision-making!   
+Understanding the way [containers](https://tanzu.vmware.com/containers) communicate will make your life easier in many ways. Technologies like [Kubernetes and Docker](https://tanzu.vmware.com/kubernetes-vs-docker) abstract away details that make containers special, but can also abstract away intuition and understanding. Without that knowledge, challenges arise—educated problem-solving adds confidence to decision-making!   
 
 In this post, we will demystify containers and cover some networking basics by explaining how to create two rudimentary containers and connecting them with a virtual network so they can talk to each other. The host machine, which is the machine where the network lives, views this network as if it were completely external. So, we will connect the network to the host. We’ve also included a bonus section about connecting the network to the internet so your containers can reach Google. You do not need a Linux machine to run through the exercises. 
 
@@ -25,7 +25,7 @@ A container can be considered synonymous with a Linux network namespace. Keep th
 
 Each container runtime uses a namespace differently. For example, containers in [Docker](https://docs.docker.com/get-started/overview/#the-underlying-technology) get their own namespace, while in CoreOS’ [rkt](https://coreos.com/rkt/docs/latest/networking/overview.html), groups of containers share namespaces, each of which is called a pod.
 
-Containers are based on Linux networking, and so insights learned in either can be applied to both. You can apply these concepts to anything with Linux, including containers, VMs, computers, servers, the cloud, IoT, Raspberry Pi, and supercomputers. 
+Containers are based on Linux networking, and so insights learned in either can be applied to both. You can apply these concepts to anything with Linux, including containers, [VMs](https://www.vmware.com/topics/glossary/content/virtual-machine.html), computers, servers, the cloud, IoT, [Raspberry Pi](https://tanzu.vmware.com/content/blog/using-a-raspberry-pi-as-an-information-radiator), and supercomputers. 
 
 When you think of networking, you might think of applications communicating over HTTP, but actually a network refers more generally to a group of objects that communicate with each other by way of their unique addresses. The point is that networking refers to things communicating with things, and not necessarily an application or a container — it could be any device.
 
@@ -38,7 +38,7 @@ Now that we have defined containers are Linux namespaces, let’s see how the tw
 
 ### View Interfaces on Your Host
 
-If you do not have access to a Linux operating system or don’t want to use what is available, you can install Multipass to easily spin up a virtual machine (VM). It’s a decent solution for what we are doing. A lot of the commands below have sudo prepending them due to Multipass.
+If you do not have access to a Linux operating system or don’t want to use what is available, you can install Multipass to easily spin up a [virtual machine (VM)](https://www.vmware.com/topics/glossary/content/virtual-machine.html). It’s a decent solution for what we are doing. A lot of the commands below have sudo prepending them due to Multipass.
 
 
 
