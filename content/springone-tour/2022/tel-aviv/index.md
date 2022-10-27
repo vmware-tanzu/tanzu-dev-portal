@@ -27,7 +27,7 @@ _We’re excited to announce that SpringOne Tour is coming to Israel for the fir
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 It’s time to take your existing applications to the next level.
 
-<p class="closed-reg"><em>Registration has closed due to the venue reaching full capacity. Be the first to know if spots open up by joining the waitlist!</em><p>
+<p class="closed-reg"><em>Registration has closed due to reaching full capacity. Be the first to know if spots open up by joining the waitlist!</em><p>
 
 <a class='btn mt-2 lightbox mb-5 green' href='#register'>Join the waitlist</a>
 
