@@ -93,7 +93,7 @@ Test Driven Development (TDD) is a crucial engineering practice. Review the arti
 
 ## Q: What is a User Story?{id=stories}
 
-A *user story*, or *story*, is the primary unit of currency in an Agile backlog. It is a narrative description of a single task or activity being performed by a user of a system. A user story represents the smallest piece of incremental value that you can deliver into the hands of a user. 
+A *user story*, or *story*, is the primary unit of currency in an [Agile](https://tanzu.vmware.com/agile) backlog. It is a narrative description of a single task or activity being performed by a user of a system. A user story represents the smallest piece of incremental value that you can deliver into the hands of a user. 
 
 Stories focus all software implementation work on delivering real value to real people as early and often as possible. This leads to a lot of questions, beginning with, "How big should a story be?". To know the answer, shorten the story. Does the shortened story still provide real value to the user? If you can make the story smaller and still deliver real value to the customer, then your story is too big.
 

@@ -117,7 +117,7 @@ You will have the option of creating these environments using your own GitHub an
 
 ## Install ArgoCD
 
-Now that you have created your Kubernetes clusters, you can start the install process. It’s really just two commands. The first is to create a namespace where you will install ArgoCD.
+Now that you have created your Kubernetes clusters, you can start the install process. It’s really just two commands. The first is to create a [namespace](/blog/a-container-is-a-linux-namespace-and-networking-basics/) where you will install ArgoCD.
 
 ```
 kubectl create namespace argocd

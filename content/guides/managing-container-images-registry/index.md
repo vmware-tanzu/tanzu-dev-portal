@@ -18,7 +18,7 @@ level1: Deploying Modern Applications
 level2: Packaging and Publishing
 ---
 
-A key reason why enterprises are turning to Kubernetes is that cloud native services and practices boost developer productivity. As you put containerized applications into production, you need a secure way to store, scan, and sign your container images. A container image registry without management and security puts your cloud native environment at risk.
+A key reason why enterprises are turning to Kubernetes is that cloud native services and practices boost developer productivity. As you put [containerized applications](https://tanzu.vmware.com/containers) into production, you need a secure way to store, scan, and sign your container images. A [container](https://tanzu.vmware.com/containers) image registry without management and security puts your cloud native environment at risk.
 
 Container images present some security challenges. Images are usually built by layering other images, which could contain vulnerabilities, and those vulnerabilities can find their way into production systems. Defects and malware can also affect container images. When the provenance of a container is dubious or unknown these risks increase.
 
