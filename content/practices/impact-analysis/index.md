@@ -87,7 +87,7 @@ In addition, by attaching a value to the key business metric, the Product Manage
 - While several variables can be discovered through impact analysis, it is suggested to focus on one for each impact analysis activity.
 - Oftentimes, quantifying a manual process and identifying business opportunities leads to employee redundancy. Sensitivity and consideration may be required where the business metric involves operational costs incurred from headcount. It is advisable to discuss with stakeholder(s) how deep you want to conduct the analyses in front of participants, and which parts to discuss in private.
 - Be sure to include at least 2 Subject Matter Experts (SMEs) in this exercise to avoid missed steps and inaccurate estimations.
-You can use an existing Tanzu practice ([Journey Map](/practices/jouney-map)) here as a reference when mapping out the workflows.
+You can use an existing Tanzu practice ([Journey Map](/practices/journey-map)) here as a reference when mapping out the workflows.
 - The journey for which we are measuring the business impact may not always be the same as that for the primary user of the product
 - Optional: Add notes (insights, pain points) to any step in the workflow. This may come in handy for future product development.
 {{% /section %}}
