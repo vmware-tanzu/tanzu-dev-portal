@@ -31,7 +31,7 @@ There are a few things you need to do before getting started with `pack`:
 
 - Install [Docker Desktop](https://hub.docker.com/search?type=edition&offering=community). The `pack` CLI requires the Docker daemon, so you'll need to have that installed and running locally. 
 
-- Check out [Containers 101](https://kube.academy/courses/containers-101) on KubeAcademy, particularly if you've never worked with containers or Docker before.
+- Check out [Containers 101](https://kube.academy/courses/containers-101) on KubeAcademy, particularly if you've never worked with [containers](https://tanzu.vmware.com/containers) or Docker before.
 
 - Follow the documentation for [installing `pack`](https://buildpacks.io/docs/install-pack/) in your local environment.
 

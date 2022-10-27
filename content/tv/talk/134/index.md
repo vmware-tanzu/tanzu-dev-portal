@@ -13,7 +13,7 @@ draft: "False"
 
 Read about the other two parts, and more details here: https://tanzu.vmware.com/content/blog/devops-vs-devsecops?utm_campaign=devrel&utm_source=cote&utm_content=VideoSeries01_SSC
 
-I’ve been trying to figure out what exactly the Sec in DevSecOps is for a couple years no, I think I’ve got something. Three things in fact. Keep in mind that DevSecOps isn’t all of security, it’s just a small subset that focuses on the software you write and run.
+I’ve been trying to figure out what exactly the Sec in [DevSecOps](https://tanzu.vmware.com/devsecops) is for a couple years no, I think I’ve got something. Three things in fact. Keep in mind that DevSecOps isn’t all of security, it’s just a small subset that focuses on the software you write and run.
 
 Anyhow, here’s the first.
 
