@@ -27,7 +27,7 @@ _We’re excited to announce that SpringOne Tour is coming to Israel for the fir
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 It’s time to take your existing applications to the next level.
 
-_Registration is full. Be the first to know if spots open up by joining the waitlist!_
+<p class="closed-reg"><em>Registration has closed due to the venue reaching full capacity. Be the first to know if spots open up by joining the waitlist!</em><p>
 
 <a class='btn mt-2 lightbox mb-5 green' href='#register'>Join the waitlist</a>
 
@@ -55,7 +55,7 @@ _Registration is full. Be the first to know if spots open up by joining the wait
 	  });
 	</script>
 	<div class='confirmation' style="display:none">
-		<h3 class="-text-white mt-0">Thank you for registering!</h3>
+		<h3 class="-text-white mt-0">Thank you for joining the waitlist!</h3>
         <p>Save the date:</p>
         <p>
             <a href="https://d18qp689yd19g7.cloudfront.net/2022/SpringOne%2BTour%2BTel%2BAviv.ics" target="_blank" id="">Outlook/iCal</a> 
