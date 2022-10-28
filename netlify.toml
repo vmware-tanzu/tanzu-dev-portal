@@ -9,7 +9,7 @@
   TZ='America/Los_Angeles'
 
 [context.deploy-preview]
-  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer"
+  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer && mv public/developer/_redirects public/_redirects"
   
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.0"
