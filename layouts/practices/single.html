@@ -5,6 +5,9 @@
         <div class="bg-gray-dark mt-md-5 mt-0 pt-lg-5 pb-lg-0 py-2">
             <div class='container pt-2'>
                 {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
+                {{ range .Translations }}
+                    {{ . }}
+                {{ end }}
                 <div class="row mt-lg-5">
                     <div class="col-lg-3 col-md-12">
                         {{ with .Resources.GetMatch "cover" }}<img src={{ print .RelPermalink }}{{ else }}<img src={{(print "/images/practices/default-cover.png") | relURL }}{{ end }}
