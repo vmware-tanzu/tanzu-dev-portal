@@ -5,13 +5,13 @@
 {{- range $p := .Site.Pages -}}
     {{- range .Aliases -}}
         {{- $from := . -}}
-        {{- if not (hasPrefix $from "/") -}}
-            {{- $from = print "/" $from -}}
+        {{- if not (hasPrefix $from "/developer") -}}
+            {{- $from = path.Join "/developer" $from -}}
         {{- end -}}
         {{- $to := $p.RelPermalink -}}
-        {{- if not (hasPrefix $to "/") -}}
-            {{- $to = print "/" $to -}}
+        {{- if not (hasPrefix $to "/developer") -}}
+            {{- $to = path.Join "/developer" $to -}}
         {{- end -}}
-{{- printf "%s %s 301\n" $from $to -}}
+        {{- printf "%s %s 301\n" $from $to -}}
     {{- end -}}
 {{- end -}}
