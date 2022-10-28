@@ -4,14 +4,14 @@
 
 {{- range $p := .Site.Pages -}}
     {{- range .Aliases -}}
-        {{ $from := . }}
-        {{ if not (hasPrefix $from "/") }}
-            {{ $from = print "/" $from }}
-        {{ end }}
-        {{ $to := $p.RelPermalink }}
-        {{ if not (hasPrefix $to "/") }}
-            {{ $to = print "/" $to }}
-        {{ end }}
-        {{- printf "%s %s 301\n" $from $to -}}
+        {{- $from := . -}}
+        {{- if not (hasPrefix $from "/") -}}
+            {{- $from = print "/" $from -}}
+        {{- end -}}
+        {{- $to := $p.RelPermalink -}}
+        {{- if not (hasPrefix $to "/") -}}
+            {{- $to = print "/" $to -}}
+        {{- end -}}
+{{- printf "%s %s 301\n" $from $to -}}
     {{- end -}}
 {{- end -}}
