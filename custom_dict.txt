@@ -2578,6 +2578,7 @@ vSwitch
 Vue
 VXLAN
 Waciuma
+waitlist
 [Ww]alkthrough
 Wanjohi
 WanVerificationService
