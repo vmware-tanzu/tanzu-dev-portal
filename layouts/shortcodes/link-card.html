@@ -1,0 +1,18 @@
+<a
+    href="{{ .Get "link" }}"
+    class="col-12 col-lg-6 mb-3 mb-lg-4 px-0 mr-lg-4"
+>
+    <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
+        <div class="thumbnail-gradient position-absolute"></div>
+        <img alt="" src="{{ .Get "imageURL" }}" class="h-100" />
+    </div>
+    <div class="description flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box--gray-dark">
+        <div>
+            <h4 class="workshop-title link">{{- .Get "title" -}}</h4>
+            <p class="workshop-text text-light">{{ .Get "description" }}</p>
+            <h5 class="fs-80 opacity-4 mb-4">
+            </h5>
+        </div>
+        <div class="btn btn-small mb-2 mt-3 d-inline-block align-self-start">Read More</div>
+    </div>
+</a>

@@ -73,6 +73,7 @@ adoptopenjdk
 ADR(s)?
 advices
 AES-GCM
+AES256
 affordances
 afterAcknowledgement
 Agile-ific
@@ -142,9 +143,11 @@ AppsManager
 Apress
 AquaSecurity
 Aravena
+architected
 [Aa]rchitecting
 Ardanlabs
 Arellano
+Aret
 [Aa]rgo(CD|cd)(-k8s)?
 args
 ARM64
@@ -219,6 +222,7 @@ Bam
 BankAccount
 Barrez
 Baruch
+Base64
 base64(-encoded)?
 BaseFunction
 basicBridgeDestroy
@@ -250,6 +254,7 @@ bikeshedding
 Bikewise
 binary_buildpack
 biome
+biometric
 [Bb]itnami('s)?
 Biville
 Bixby
@@ -371,6 +376,7 @@ Cleverley-Prance
 cli
 CLI.
 CLI(s|'s)?
+client-auth
 client[_-]golang
 ClientMetadataService
 ClientProxyMembershipID
@@ -405,6 +411,7 @@ CMD
 cmdlet
 Cmdlets
 CMS
+CN
 CNAME
 CNB-speak
 CNB(s)?
@@ -562,6 +569,7 @@ de-duplicate
 de-facto
 [Dd]e-referenced
 de-risk(s)?
+de-risked
 (de)*serialize[dr]
 [Dd]ebian
 Debroy
@@ -651,6 +659,7 @@ django-prometheus
 DLL(s)?
 DLT
 DMs
+DN
 DNF
 DNS
 dnsNames
@@ -679,6 +688,7 @@ Drotbohm
 DSL(s)?
 DSN
 Dubois
+duplicative
 durations
 Dutchie
 Dynatrace
@@ -1186,6 +1196,7 @@ jdbcUrl
 [SJ]DK
 JDK's
 Jeffries
+Jelle
 Jenkinsfile
 JEP
 Jernigan
@@ -1285,6 +1296,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+Keytool
 KIAM
 Kibana
 KitchenService
@@ -1639,6 +1651,7 @@ NTP
 NuGet
 nullable
 NUnit
+Nuru's
 Nygard
 NYJavaSIG
 OAuth2?
@@ -2210,9 +2223,11 @@ SMTP
 smtp-sink
 Smythe
 Snapchat
+SNAPe
 SNI
 Snyk
 SolidFire
+solutioning
 Soluto('s)?
 SomeRegion
 SonicDMG
@@ -2246,6 +2261,7 @@ Sri
 SSD
 ssh-keygen
 SSL
+SSLContextBuilder
 SSM
 ssmmessages
 sso|SSO
@@ -2336,6 +2352,7 @@ tchotchke
 TCP
 tcp
 TCP-
+TcpClientTransport
 tdc-carvel-examples
 tdp-guide
 TeamRetro
@@ -2414,6 +2431,8 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
+trustfile
+TrustManager
 truststore(s)?
 TTL(s)?
 tunable
@@ -2514,6 +2533,7 @@ vendoring
 Venkat
 Venkateswara
 verifiably
+Verisign
 versioned
 VersionTag
 VerticalPodAutoscaler
@@ -2560,6 +2580,7 @@ vSwitch
 Vue
 VXLAN
 Waciuma
+waitlist
 [Ww]alkthrough
 Wanjohi
 WanVerificationService

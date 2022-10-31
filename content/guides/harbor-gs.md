@@ -50,7 +50,7 @@ Kubernetes cluster.
 
 ## Harbor and Contour
 
-[Harbor](https://goharbor.io) is a powerful registry for containers and Helm
+[Harbor](https://goharbor.io) is a powerful registry for [containers](https://tanzu.vmware.com/containers) and Helm
 charts. It is fully open source and backed by the
 [Cloud Native Computing Foundation (CNCF)](https://landscape.cncf.io/selected=harbor).
 But getting it up and running, with automated TLS certificate renewal in
