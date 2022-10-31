@@ -496,6 +496,7 @@ critiquers
 CRLF
 CRM
 [Cc]ron
+CRON
 cross-subnet
 Crossplane
 CrossSubnet
@@ -1119,6 +1120,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+Invoker
 io
 IoC
 IOC
