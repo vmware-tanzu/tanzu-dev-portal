@@ -14,6 +14,9 @@
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
 .tgz
+<<<<<<< HEAD
+=======
+>>>>>>> 073fad32983447cdec6aed55edda74edecdbe3b3
 1:1s
 10x
 12Factor
@@ -292,11 +295,9 @@ BucketRegionDetails
 BucketRegions
 Buesing
 Bugsville
+[Bb]uild[Pp]ack(s|'s|ages)?
 buildout
-BuildPack
 [Bb]uildpack-built
-[Bb]uildpack(s|'s|ages)?
-BuildPacks
 Bundler
 [Bb]urstable
 Buschmann
@@ -849,7 +850,7 @@ Galystan
 Gamov
 Gandhi
 Gangway
-Gapped
+[Gg]apped
 Garmin
 Gartner('s)?
 GatewayAck
@@ -1317,7 +1318,7 @@ KoFu
 Kostadis
 kotlin
 Kousen
-Kpack
+[Kk]pack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
@@ -1512,7 +1513,7 @@ MetricsSession
 Mezzalira
 micro-frontends
 Micro[Kk]8s
-microservice.
+[Mm]icroservice(s)?.
 microservices-oriented
 Microsystems
 mid-1990s
@@ -2403,6 +2404,7 @@ tlberglund
 TLS(-enabled)?
 TNS
 [Tt]o[Dd]o
+[Tt]odays
 TODOs?
 TokenRequest
 TokenReview
@@ -2666,6 +2668,7 @@ Yarp
 YARP's
 yay
 YCombinator
+[Yy]ml
 Yonis
 Yorker
 young-ish
