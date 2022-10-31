@@ -285,7 +285,7 @@ OK
 
 ## Keep Learning
 
-Most Cloud Foundry installations include a Python Buildpack. But did you know that you can use buildpacks without using Cloud Foundry? Buildpacks are a fabulous, sustainable, stress-free way to get code into Docker containers. To find out how to use them in your Python tool chain take a look at our [Python buildpack guide][python-cnb-guide].
+Most Cloud Foundry installations include a Python Buildpack. But did you know that you can use buildpacks without using Cloud Foundry? Buildpacks are a fabulous, sustainable, stress-free way to get code into Docker [containers](https://tanzu.vmware.com/containers). To find out how to use them in your Python tool chain take a look at our [Python buildpack guide][python-cnb-guide].
 
 Did you know that can push Docker images directly to Cloud Foundry? You use the same `cf push` command but add the `--docker-image` option. Take a look at the help for the push command for more information or read the docs [here](http://cli.cloudfoundry.org/en-US/cf/push.html).
 

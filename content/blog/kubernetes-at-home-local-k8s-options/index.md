@@ -156,7 +156,7 @@ minikube delete
 
 ## kind
 
-kind is quickly gaining popularity over Minikube. Short for “Kubernetes in Docker,” kind takes a somewhat different approach to running Kubernetes than Minikube. As the name suggests, kind only runs Kubernetes inside of Docker, yet provides options more closely related to its original purpose: testing Kubernetes. This makes it a great fit for both running Kubernetes in CI environments and locally in a development environment.
+kind is quickly gaining popularity over Minikube. Short for “Kubernetes in Docker,” kind takes a somewhat different approach to running Kubernetes than Minikube. As the name suggests, kind only runs [Kubernetes inside of Docker](https://tanzu.vmware.com/kubernetes-vs-docker), yet provides options more closely related to its original purpose: testing Kubernetes. This makes it a great fit for both running Kubernetes in CI environments and locally in a development environment.
 
 Let’s look at the same scenario that we worked though with Kubernetes, and assume that you already have kind and Docker installed. If we were only standing up a standard, single-node Kubernetes instance with no custom configuration, you would be able to get going with a single command. But in order to mount our local development directory into the Kubernetes node, we’ll need to provide it a config, which you can find at [`kind/kind.yaml`](https://github.com/BrianMMcClain/local-k8s-demo/blob/main/kind/kind.yaml) in the demo repository. Take a quick look at what this file contains:
 

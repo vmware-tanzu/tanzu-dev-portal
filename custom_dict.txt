@@ -70,6 +70,7 @@ adoptopenjdk
 ADR(s)?
 advices
 AES-GCM
+AES256
 affordances
 afterAcknowledgement
 Agile-ific
@@ -218,6 +219,7 @@ Bam
 BankAccount
 Barrez
 Baruch
+Base64
 base64(-encoded)?
 BaseFunction
 basicBridgeDestroy
@@ -373,6 +375,7 @@ Cleverley-Prance
 cli
 CLI.
 CLI(s|'s)?
+client-auth
 client[_-]golang
 ClientMetadataService
 ClientProxyMembershipID
@@ -407,6 +410,7 @@ CMD
 cmdlet
 Cmdlets
 CMS
+CN
 CNAME
 CNB-speak
 CNB(s)?
@@ -654,6 +658,7 @@ django-prometheus
 DLL(s)?
 DLT
 DMs
+DN
 DNF
 DNS
 dnsNames
@@ -1290,6 +1295,7 @@ keySet
 keySetOnServer
 keySets
 keyspace
+Keytool
 KIAM
 Kibana
 KitchenService
@@ -1644,6 +1650,7 @@ NTP
 NuGet
 nullable
 NUnit
+Nuru's
 Nygard
 NYJavaSIG
 OAuth2?
@@ -2253,6 +2260,7 @@ Sri
 SSD
 ssh-keygen
 SSL
+SSLContextBuilder
 SSM
 ssmmessages
 sso|SSO
@@ -2343,6 +2351,7 @@ tchotchke
 TCP
 tcp
 TCP-
+TcpClientTransport
 tdc-carvel-examples
 tdp-guide
 TeamRetro
@@ -2420,6 +2429,8 @@ transmittedEvents
 Trello
 Trivy(.)?
 TRS-80
+trustfile
+TrustManager
 truststore(s)?
 TTL(s)?
 tunable
@@ -2520,6 +2531,7 @@ vendoring
 Venkat
 Venkateswara
 verifiably
+Verisign
 versioned
 VersionTag
 VerticalPodAutoscaler
@@ -2566,6 +2578,7 @@ vSwitch
 Vue
 VXLAN
 Waciuma
+waitlist
 [Ww]alkthrough
 Wanjohi
 WanVerificationService

@@ -18,9 +18,9 @@ level2: Building Your Kubernetes Platform
 description: An introduction to Container Network Interface (CNI) plugins
 ---
 
-Kubernetes uses the [Container Network
+[Kubernetes](https://tanzu.vmware.com/developer/guides/what-is-kubernetes/) uses the [Container Network
 Interface](https://github.com/containernetworking/cni) (CNI) to provide
-networking functionality to containers. Networking is implemented in CNI
+networking functionality to [containers](https://tanzu.vmware.com/containers). Networking is implemented in CNI
 plugins. The interface / plugin model enables Kubernetes to support many
 networking options implemented via plugins such as Calico, Antrea, and Cilium.
 
@@ -33,7 +33,7 @@ These operations include:
 - `DEL`: Delete a container from the network.
 - `CHECK`: Check whether the container's network is as expected.
 
-CNI Plugins are often only concerned with container to container networking.
+CNI Plugins are often only concerned with container to [container networking](/blog/a-container-is-a-linux-namespace-and-networking-basics/).
 Kubernetes constructs such as
 [services](https://kubernetes.io/docs/concepts/services-networking/service/) are
 still handled by kube-proxy. This means selecting a target pod for a service may
@@ -166,7 +166,7 @@ facilitate networking in datacenters around the world. As such, it is very
 uncommon to see the NSX-T CNI plugin used unless an existing NSX-T deployment
 exists. Introducing a net new NSX-T deployment for a Kubernetes platform
 introduces a lot of operational overhead. It is also common for teams running
-Kubernetes on top of vSphere + NSX-T to run a different CNI-plugin (such as
+Kubernetes on top of [vSphere](https://core.vmware.com/vmware-vsphere-tanzu) + NSX-T to run a different CNI-plugin (such as
 Calico or Flannel) on top of it.
 
 With this in mind, we only recommend considering the NSX-T CNI plugin if there

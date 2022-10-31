@@ -17,7 +17,7 @@ level1: Managing and Operating Kubernetes
 level2: Preparing and Deploying Kubernetes Workloads
 ---
 
-When developing applications to be deployed on Kubernetes, additional steps are
+When developing applications to be deployed on [Kubernetes](https://tanzu.vmware.com/kubernetes-vs-docker), additional steps are
 needed during the development workflow. Source code must be packaged into a
 container and deployed to a respective test environment. A common workflow is
 outlined below.

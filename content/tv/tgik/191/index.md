@@ -2,8 +2,8 @@
 type: "tv-episode"
 title: "TGI Kubernetes 177: Tanzu Community Edition"
 description: "TGI Kubernetes 177: Tanzu Community Edition"
-episode: "177"
-aliases: ["0177"]
+episode: "191"
+aliases: ["0191"]
 publishdate: "2020-04-01T00:00:00-07:00"
 date: "2021-12-03 21:00:00"
 minutes: 120

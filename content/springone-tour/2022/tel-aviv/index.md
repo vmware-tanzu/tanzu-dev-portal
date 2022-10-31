@@ -27,7 +27,9 @@ _We’re excited to announce that SpringOne Tour is coming to Israel for the fir
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 It’s time to take your existing applications to the next level.
 
-<a class='btn mt-2 lightbox mb-5 green' href='#register'>Register</a>
+<p class="closed-reg"><em>Registration has closed due to reaching full capacity. Be the first to know if spots open up by joining the waitlist!</em><p>
+
+<a class='btn mt-2 lightbox mb-5 green' href='#register'>Join the waitlist</a>
 
 ### What to expect
 <ul class="mb-5">
@@ -38,7 +40,7 @@ It’s time to take your existing applications to the next level.
 </ul>
 
 <div id="register" class='p-5' style="display:none">
-	<h3 class='-text-white mb-3 hide'>Register</h3>
+	<h3 class='-text-white mb-3 hide'>Join the waitlist</h3>
 	<script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
 	<form id="mktoForm_9174"></form>
 	<script>
@@ -53,7 +55,7 @@ It’s time to take your existing applications to the next level.
 	  });
 	</script>
 	<div class='confirmation' style="display:none">
-		<h3 class="-text-white mt-0">Thank you for registering!</h3>
+		<h3 class="-text-white mt-0">Thank you for joining the waitlist!</h3>
         <p>Save the date:</p>
         <p>
             <a href="https://d18qp689yd19g7.cloudfront.net/2022/SpringOne%2BTour%2BTel%2BAviv.ics" target="_blank" id="">Outlook/iCal</a> 
@@ -78,7 +80,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">9:45</div>
         <div class="talk-title col-7 h4">
-            Keynote: Introducing Spring Framework 6
+            <a href="#introducing-framework" class="lightbox">Keynote: Introducing Spring Framework 6</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0"><a class="lightbox" href="#juergen-hoeller">Juergen Hoeller</a></h3>
@@ -87,7 +89,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">10:45</div>
         <div class="talk-title col-7 h4">
-            Introducing Spring Boot 3 & Spring Native
+            <a href="#introducing-boot" class="lightbox">Introducing Spring Boot 3 & Spring Native</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -103,7 +105,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">11:45</div>
         <div class="talk-title col-7 h4">
-            Protect Your Microservices with Spring Cloud Gateway
+            <a href="#protect" class="lightbox">Protect Your Microservices with Spring Cloud Gateway</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -114,7 +116,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">12:15</div>
         <div class="talk-title col-7 h4">
-            Running Untrusted Code in Spring Using WebAssembly
+            <a href="#running" class="lightbox">Running Untrusted Code in Spring Using WebAssembly</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -131,16 +133,16 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">13:40</div>
         <div class="talk-title col-7 h4">
-            Our Cloud Native Journey with Spring
+            <a href="#considerations" class="lightbox">Production Considerations for Spring on Kubernetes</a>
         </div>
         <div class="name col-3">
-            <h3 class="h4 py-0">Ronen Yair</h3>
+            <h3 class="h4 py-0"><a href="#oded-shopen" class="lightbox">Oded Shopen</a></h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">14:00</div>
         <div class="talk-title col-7 h4">
-            Introduction to Testcontainers
+            <a href="#testcontainers-intro" class="lightbox">Introduction to Testcontainers</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -161,7 +163,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:45</div>
         <div class="talk-title col-7 h4">
-            Declarative Clients in Spring
+            <a href="#declarative" class="lightbox">Declarative Clients in Spring</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -172,7 +174,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">16:30</div>
         <div class="talk-title col-7 h4">
-            Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform
+            <a href="#endtoend" class="lightbox">Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
