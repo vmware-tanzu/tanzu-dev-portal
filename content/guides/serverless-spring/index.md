@@ -47,7 +47,7 @@ You just saw one good use case for serverless but we want to leave you with a fe
 -   Backend as a Service (BaaS)
 -   REST API
 -   Authentication
--   Multiimedia Transformation
+-   Multimedia Transformation
 -   Email Notification
 -   Data Transformation
 -   CRON Jobs
@@ -56,7 +56,7 @@ You just saw one good use case for serverless but we want to leave you with a fe
 
 Now that you have a better understanding of what serverless functions are and when you might reach for them, how can you build them? You could build them in Java without the need of any additional libraries or frameworks. After moving past the quintessential hello world application you will quickly realize that you need features like logging, configuration, database access and more.
 
-This is where Spring Boot + [Spring Cloud Function](https://spring.io/projects/spring-cloud-function) enter the conversation. You can use the tools you are already familiar with to get all of those features and more. In addtion you can write all of your functions with the same consistent programming model across serverless providers as well as the ability to run standalone (locally or in a PaaS).
+This is where Spring Boot + [Spring Cloud Function](https://spring.io/projects/spring-cloud-function) enter the conversation. You can use the tools you are already familiar with to get all of those features and more. In addition you can write all of your functions with the same consistent programming model across serverless providers as well as the ability to run standalone (locally or in a PaaS).
 
 ### Serverless Spring Guide
 
@@ -78,7 +78,7 @@ When you’re done you can click on the generate button at the bottom which will
 
 ### Functional Catalog and Flexible Function Signatures
 
-One of the main features of Spring Cloud Function is to adapt and support a range of type signatures for user-defiend functions, while providing a consistent execution model. That’s why all user defined functions are transformed into a canonical representation by `FunctionalCatalog`. While users don’t normally have to care about the `FunctionalCatalog` at all, it is useful to understand what kind of functions are supported in user code.
+One of the main features of Spring Cloud Function is to adapt and support a range of type signatures for user-defined functions, while providing a consistent execution model. That’s why all user defined functions are transformed into a canonical representation by `FunctionalCatalog`. While users don’t normally have to care about the `FunctionalCatalog` at all, it is useful to understand what kind of functions are supported in user code.
 
 #### Java 8 Function Support
 
@@ -92,7 +92,7 @@ In a nutshell, any bean in your Application Context that is of type `Supplier`, 
 
 ### Creating you first Function
 
-Now that you have some background on the functional catalog and flexible function signatures at your disposal it’s time to create your first function. For this simple example you will create a function that takes a String as input and returns the uppercased value of that input.
+Now that you have some background on the functional catalog and flexible function signatures at your disposal it’s time to create your first function. For this simple example you will create a function that takes a String as input and returns the uppercase value of that input.
 
 Based on your knowledge from the previous section what functional interface would you choose to meet those requirements? If you said `Function<I,O>` you are correct! To create a new function you can either create a class that implements that interface or because it is a functional interface it is a target for a lambda expression. Your main class that is annotated with `@SpringBootApplication` is a configuration class so you can define your beans there if you wish. Open up your main class and add the following method:
 
@@ -250,9 +250,9 @@ Your functions are now ready to go. You manually tested them but you can easily 
 
 ### Deploying your Serverless Functions
 
-I mentioned this earlier but one of the benefits of using Spring Cloud Function is that you can write your serverelss applications the same way regardless of what platform you’re deploying to. This means that you just became a serverless developer for AWS, Google, Microsoft and more by learning what you did today.
+I mentioned this earlier but one of the benefits of using Spring Cloud Function is that you can write your serverless applications the same way regardless of what platform you’re deploying to. This means that you just became a serverless developer for AWS, Google, Microsoft and more by learning what you did today.
 
-In the project there are adapters for AWS Lambda, Azure, and Apache OpenWhisk. The Oracle Fn platform has its own Spring Cloud Function adapter. And Riff supports Java functions and its Java Function Invoker acts natively is an adapter for Spring Cloud Function jars.
+In the project there are adapters for `AWS Lambda`, `Azure`, and `Apache OpenWhisk`. The `Oracle Fn` platform has its own Spring Cloud Function adapter. And `Riff` supports Java functions and its Java Function Invoker acts natively is an adapter for Spring Cloud Function jars.
 
 While the examples below are all using Maven everything we go through can also be used with Gradle. If you’re interested in learning more about the adapters please check out the documentation.
 
@@ -322,7 +322,7 @@ After the function has been created select upload from and select the jar file t
 
 ![AWS Upload](./images/aws-upload-jar.png)
 
-Next you will need to edit the runtime settings. When asked about the handler you can specifiy `org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest` which is a generic request handler.
+Next you will need to edit the runtime settings. When asked about the handler you can specify `org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest` which is a generic request handler.
 
 ![AWS Runtime Settings](./images/aws-runtime-settings.png)
 
@@ -330,7 +330,7 @@ Now your environment is ready to go you will probably want to test your function
 
 #### Function URLs
 
-A function URL is a dedicated HTTP(S) endpoint for your function. When your function URL is configured, you can use it to invoke your function through a browser, curl, Postman, or any HTTP client. In the past you woud have had to create an API gateway endpoint in AWS and allowed access to your lambda function. This new feature simplifies exposing your functions to the outside world.
+A function URL is a dedicated HTTP(S) endpoint for your function. When your function URL is configured, you can use it to invoke your function through a browser, curl, Postman, or any HTTP client. In the past you would have had to create an API gateway endpoint in AWS and allowed access to your lambda function. This new feature simplifies exposing your functions to the outside world.
 
 ![AWS Function URL](./images/aws-function-url.png)
 
@@ -340,16 +340,16 @@ Create a new function URL and be sure to configure Cross-Origin Resource Sharing
 **Note**: This is a good time to mention why we did this. Sure you can create individual applications for each function you will deploy but this becomes quite tedious. Think about a REST API that talks to a database. For each function you deploy you will have a lot of shared functionality, configuration and logging that you would have to duplicate across projects. With this approach you can package up everything together and then call the individual functions.
 {{% /callout %}}
 
-You can now copy the function URL and use a tool like curl or Postman to test our your functions. Usually when you deploy configuration (non-custom runtime) with a single function it is automatically recognized and bound as AWS Lambda by `org.springframework.cloud.function.adapter.aws.FunctionInvoker` (FunctionInvoker).
+You can now copy the function URL and use a tool like curl or Postman to test our your functions. Usually when you deploy configuration (non-custom runtime) with a single function it is automatically recognized and bound as AWS Lambda by `org.springframework.cloud.function.adapter.aws.FunctionInvoker`.
 
-However when you have multiple functions present in your configuration you need to tell FunctionInvoker the target function definition. You can provide the `spring_cloud_function_definition` header in the request along with the name of the function you wish to call. In the following examples I am calling the create method first with an email address in the body and then invoking the findAll function to display all of the subscribers in the collection.
+However when you have multiple functions present in your configuration you need to tell FunctionInvoker the target function definition. You can provide the `spring_cloud_function_definition` header in the request along with the name of the function you wish to call. In the following examples I am calling the create method first with an email address in the body and then invoking the find all function to display all of the subscribers in the collection.
 
 ![Postman - POST Test](./images/postman_post_test.png)
 
 ![Postman - GET Test](./images/postman_get_test.png)
 
-Congratulations, you just deployed your first serverless functions to AWS Lambda. With a function URL you can now consume these functions from any client. If this is a project you are interested in building out you should look into AWS SES which stands for Simple Email Service. If you have your email addresses stored in a database it should be fairly simple to send a new email to all of your subscribers. That is one of the benefits of being on a platform like AWS, there is a service for anything you need.
+Congratulations, you just deployed your first serverless functions to AWS Lambda. With a function URL you can now consume these functions from any client. If this is a project you are interested in building out you should look into `AWS SES` which stands for Simple Email Service. If you have your email addresses stored in a database it should be fairly simple to send a new email to all of your subscribers. That is one of the benefits of being on a platform like AWS, there is a service for anything you need.
 
 ## Final Thoughts
 
-I hope you enoyed this introduction to building serverless functions in Spring. If you’re interested learning more about Spring Cloud Function you should check out the [reference documentation](https://docs.spring.io/spring-cloud-function/docs/current/reference/html/index.html). In Spring Boot 3 we have introduced ahead-of-time (AOT) compilation which will allow you to create a native executable. This means less memory and faster startup times for your serverless functions.
+I hope you enjoyed this introduction to building serverless functions in Spring. If you’re interested learning more about Spring Cloud Function you should check out the [reference documentation](https://docs.spring.io/spring-cloud-function/docs/current/reference/html/index.html). In Spring Boot 3 we have introduced ahead-of-time (AOT) compilation which will allow you to create a native executable. This means less memory and faster startup times for your serverless functions.
