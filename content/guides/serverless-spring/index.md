@@ -342,7 +342,7 @@ Create a new function URL and be sure to configure Cross-Origin Resource Sharing
 
 You can now copy the function URL and use a tool like curl or Postman to test our your functions. Usually when you deploy configuration (non-custom runtime) with a single function it is automatically recognized and bound as AWS Lambda by `org.springframework.cloud.function.adapter.aws.FunctionInvoker`.
 
-However when you have multiple functions present in your configuration you need to tell FunctionInvoker the target function definition. You can provide the `spring_cloud_function_definition` header in the request along with the name of the function you wish to call. In the following examples I am calling the create method first with an email address in the body and then invoking the find all function to display all of the subscribers in the collection.
+However when you have multiple functions present in your configuration you need to tell Function Invoker the target function definition. You can provide the `spring_cloud_function_definition` header in the request along with the name of the function you wish to call. In the following examples I am calling the create method first with an email address in the body and then invoking the find all function to display all of the subscribers in the collection.
 
 ![Postman - POST Test](./images/postman_post_test.png)
 
