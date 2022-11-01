@@ -1315,6 +1315,7 @@ knative-serving
 Knative('s|.)?
 KNN
 KoFu
+Korando
 Kostadis
 kotlin
 Kousen
