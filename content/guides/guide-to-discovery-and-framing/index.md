@@ -7,8 +7,8 @@ subsection: Spring Cloud
 team:
 - Luke Malcher
 title: A Guide to Discovery and Framing 
-level1: Modern App Basics
-level2: Modern Development Concepts
+level1: Agile Transformation and Practices
+level2: Agile Development
 ---
 
 ![alt_text](images/image2.png "image_tooltip")
