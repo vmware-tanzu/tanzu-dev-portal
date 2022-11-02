@@ -4,6 +4,7 @@ description: A guide to the Discovery and Framing "Double Diamond" process
 lastmod: '2022-10-27'
 linkTitle: A Guide to Discovery and Framing 
 subsection: Spring Cloud
+featured: true
 team:
 - Luke Malcher
 title: A Guide to Discovery and Framing 
