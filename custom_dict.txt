@@ -1185,6 +1185,7 @@ Jarvinen
 Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
+JavaBeans
 JavaEE
 JavaOne
 [Jj]avascript
