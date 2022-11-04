@@ -6,7 +6,7 @@ lab: lab-carvel
 length: 15
 featured: true
 featuredweight: 1
-logo: "images/workshops/logo-carvel-2.png"
+logo: "/images/workshops/logo-carvel-2.png"
 tags:
   - Microservices
   - Kubernetes

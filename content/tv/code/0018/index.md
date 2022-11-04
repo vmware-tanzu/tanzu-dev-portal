@@ -6,7 +6,7 @@ aliases:
 - /tv/code/18
 date: '2021-01-25'
 episode: '18'
-image: tv/code/images/josh-long.jpg
+image: /tv/code/images/josh-long.jpg
 explicit: 'no'
 guests:
 - Oleh Dokuka

@@ -6,7 +6,7 @@
         {{ if $page.Params.hidden }}
             {{ . }}
         {{ else }}
-            <a href='{{ (print "team/" . | urlize) | relURL }}'>{{ . }}</a>
+            <a href='{{ (print "/team/" . | urlize) | relURL }}'>{{ . }}</a>
         {{ end }}
     {{ else}}
         {{ . }}

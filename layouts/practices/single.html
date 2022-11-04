@@ -7,7 +7,7 @@
                 {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
                 <div class="row mt-lg-5">
                     <div class="col-lg-3 col-md-12">
-                        {{ with .Resources.GetMatch "cover" }}<img src={{ print .RelPermalink }}{{ else }}<img src={{(print "images/practices/default-cover.png") | relURL }}{{ end }}
+                        {{ with .Resources.GetMatch "cover" }}<img src={{ print .RelPermalink }}{{ else }}<img src={{(print "/images/practices/default-cover.png") | relURL }}{{ end }}
                         className="method-template__img-container"
                         alt='{{ .Title }}'
                         />
@@ -83,7 +83,7 @@
                         <h4 class="mt-3">1.
                             Open Miro. In the side menu, select 'Templates'</h4>
                         <p>
-                            <img src='{{"images/practices/remote-1.png" | relURL }}'
+                            <img src='{{"/images/practices/remote-1.png" | relURL }}'
                                  alt="Open Miro. In the side menu, select 'Templates'"
                             />
                         </p>
@@ -94,7 +94,7 @@
                                 click here</a> to use this template</h4>
                         <p>
                             <a href="{{ .Params.miro_template_url }}" title="Miro Template">
-                                <img src='{{"images/practices/remote-2.png" | relURL }}'
+                                <img src='{{"/images/practices/remote-2.png" | relURL }}'
                                  alt="Search for the template and click ADD"/>
                             </a>
                         </p>

@@ -6,7 +6,7 @@ aliases:
 - /tv/code/2
 date: '2020-08-27'
 episode: '2'
-image: tv/code/images/mario-gray.jpg
+image: /tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

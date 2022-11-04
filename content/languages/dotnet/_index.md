@@ -6,8 +6,8 @@ type: languages
 layout: single
 show: dotnet-wild
 event: dotnet-beyond
-heroimage: images/languages/dotnet/language-hero-transparent-fixed-dotnet.svg
-promo: images/languages/dotnet/DotNetS1_badge.svg
+heroimage: /images/languages/dotnet/language-hero-transparent-fixed-dotnet.svg
+promo: /images/languages/dotnet/DotNetS1_badge.svg
 promolink: https://springone.io/dotnet-beyond?utm_source=tdc-dotnet-page
 menu:
   main:

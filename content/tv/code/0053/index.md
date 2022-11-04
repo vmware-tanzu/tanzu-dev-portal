@@ -7,7 +7,7 @@ Date: "2021-12-15T12:00:00-07:00"
 minutes: 30
 aliases: ["/tv/code/53"] #redirect alias
 episode: "53"
-image: "tv/code/images/jakub-pilimon.jpg"
+image: "/tv/code/images/jakub-pilimon.jpg"
 explicit: "no"
 title: "One mistake while doing TDD with Jakub Pilimon"
 # youtube: ""

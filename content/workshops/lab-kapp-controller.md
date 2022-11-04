@@ -6,7 +6,7 @@ lab: lab-kapp-controller
 length: 30
 featured: true
 featuredweight: 2
-logo: images/workshops/logo-carvel-2.png
+logo: /images/workshops/logo-carvel-2.png
 tags:
   - Kubernetes
   - Carvel

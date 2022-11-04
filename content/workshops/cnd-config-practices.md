@@ -4,7 +4,7 @@ date: '2021-04-22'
 description:
   You will externalize environment configuration and consume it from a
   web application on a modern container orchestration platform.
-logo: images/workshops/logo-cloud-native.svg
+logo: /images/workshops/logo-cloud-native.svg
 lab: cnd-config-practices
 lastmod: '2021-05-03'
 length: 180

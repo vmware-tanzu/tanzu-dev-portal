@@ -5,7 +5,7 @@ description:
   Build and deploy a web application on a modern container orchestration
   platform, and learn cloud native principles along the way.
 featured: true
-logo: images/workshops/logo-spring-boot.svg
+logo: /images/workshops/logo-spring-boot.svg
 lab: cnd-deploy-practices
 lastmod: '2021-05-19'
 length: 180

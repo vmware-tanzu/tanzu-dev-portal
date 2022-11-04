@@ -5,7 +5,7 @@ PublishDate: '2020-04-14T00:00:00-07:00'
 aliases:
 - /tv/code/36
 episode: '36'
-image: tv/code/images/josh-long.jpg
+image: /tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

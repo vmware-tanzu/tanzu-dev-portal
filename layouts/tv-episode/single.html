@@ -2,20 +2,20 @@
 
 {{ if .Params.beyond }}
   <section id="beyond-hero" class="bg-gray-dark mt-7 py-lg-5 overflow-hidden position-relative">
-    <img alt="" id="left-blob-1" class="position-absolute pe-none" src='{{ "images/beyond/left-blob-1.svg" | relURL }}'>
-    <img alt="" id="left-blob-2" class="position-absolute pe-none" src='{{ "images/beyond/left-blob-2.svg" | relURL }}'>
-    <img alt="" id="left-blob-3" class="position-absolute pe-none" src='{{ "images/beyond/left-blob-3.svg" | relURL }}'>
+    <img alt="" id="left-blob-1" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-1.svg" | relURL }}'>
+    <img alt="" id="left-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-2.svg" | relURL }}'>
+    <img alt="" id="left-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/left-blob-3.svg" | relURL }}'>
 
-    <img alt="" id="right-blob-1" class="position-absolute pe-none" src='{{ "images/beyond/right-blob-1.svg" | relURL }}'>
-    <img alt="" id="right-blob-2" class="position-absolute pe-none" src='{{ "images/beyond/right-blob-2.svg" | relURL }}'>
-    <img alt="" id="right-blob-3" class="position-absolute pe-none" src='{{ "images/beyond/right-blob-3.svg" | relURL }}'>
+    <img alt="" id="right-blob-1" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-1.svg" | relURL }}'>
+    <img alt="" id="right-blob-2" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-2.svg" | relURL }}'>
+    <img alt="" id="right-blob-3" class="position-absolute pe-none" src='{{ "/images/beyond/right-blob-3.svg" | relURL }}'>
 
     <div class="container py-0 py-lg-4">
       <div class="col-xl-9 col-12 px-0 mt-5 mx-auto position-relative">
-        <img alt="" id="shooting-star-1" class="position-absolute" src='{{ "images/beyond/shooting-star.svg" | relURL }}'>
-        <img alt="" id="shooting-star-2" class="position-absolute" src='{{ "images/beyond/shooting-star.svg" | relURL }}'>
+        <img alt="" id="shooting-star-1" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
+        <img alt="" id="shooting-star-2" class="position-absolute" src='{{ "/images/beyond/shooting-star.svg" | relURL }}'>
         <p class="white h3">March 30&ndash;31, 2022</p>
-        <img alt="" class="pe-none" id="beyond-logo" src='{{ "images/beyond/glow-beyond.svg" | relURL }}'>
+        <img alt="" class="pe-none" id="beyond-logo" src='{{ "/images/beyond/glow-beyond.svg" | relURL }}'>
         <p class="tagline white h3 pt-0 pb-4">A collection of conversations exploring the wider world of .NET</p>
       </div>
     </div>
@@ -327,16 +327,16 @@
       <div id="sponsors">
         <div class="sponsor-container">
           <a href="https://headspring.com/" class="mr-5 py-2 d-inline-block">
-            <img alt="" style="height:50px" class="pe-none" src='{{ "images/beyond/logo-headspring-white.svg" | relURL }}'>
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-headspring-white.svg" | relURL }}'>
           </a>
           <a href="https://www.microsoft.com/en-us/security/business/identity-access-management/" class="mr-5 py-2 d-inline-block">
-            <img alt="" style="height:50px" class="pe-none" src='{{ "images/beyond/logo-microsoft-white.svg" | relURL }}'>
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-microsoft-white.svg" | relURL }}'>
           </a>
           <a href="http://www.telerik.com" class="mr-5 py-2 d-inline-block">
-            <img alt="" style="height:50px" class="pe-none" src='{{ "images/beyond/logo-progress-white.svg" | relURL }}'>
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-progress-white.svg" | relURL }}'>
           </a>
           <a href="https://www.twilio.com/" class="mr-5 py-2 d-inline-block">
-            <img alt="" style="height:50px" class="pe-none" src='{{ "images/beyond/logo-twilio-white.svg" | relURL }}'>
+            <img alt="" style="height:50px" class="pe-none" src='{{ "/images/beyond/logo-twilio-white.svg" | relURL }}'>
           </a>
         </div>
       </div>
@@ -356,13 +356,13 @@
   {{ if and (.Params.contact) (.Params.code_of_conduct) ( .Params.beyond ) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
-        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
       </div>
     </div>
   {{ else if and (.Params.contact) (.Params.code_of_conduct) }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
-        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+        <p>Questions?  <a href="mailto:{{ .Params.contact }}">Contact {{ .Params.contact_text | default "us" }}</a> &bullet; <a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
       </div>
     </div>
   {{ else if .Params.contact}}
@@ -374,7 +374,7 @@
   {{ else if .Params.code_of_conduct }}
     <div class="row justify-content-center mb-5 text-center">
       <div class="col-lg-9 col-12 px-0">
-        <p><a href='{{ print "code-of-conduct" | relURL }}'>Code of Conduct</a></p>
+        <p><a href='{{ print "/code-of-conduct" | relURL }}'>Code of Conduct</a></p>
       </div>
     </div>
   {{ end }}

@@ -6,7 +6,7 @@ aliases:
 - /tv/code/31
 date: '2021-06-01'
 episode: '31'
-image: tv/code/images/jakub-pilimon.jpg
+image: /tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon

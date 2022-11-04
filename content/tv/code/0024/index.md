@@ -6,7 +6,7 @@ aliases:
 - /tv/code/24
 date: '2021-03-23'
 episode: '24'
-image: tv/code/images/mario-gray.jpg
+image: /tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

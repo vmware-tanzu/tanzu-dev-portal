@@ -6,7 +6,7 @@ aliases:
 - /tv/code/5
 date: '2020-10-06'
 episode: '5'
-image: tv/code/images/josh-long.jpg
+image: /tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

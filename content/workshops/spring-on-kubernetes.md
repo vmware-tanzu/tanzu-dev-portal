@@ -5,7 +5,7 @@ description: Create a Spring Boot application. Containerize it, and push the con
 summary: Create a Spring Boot application. Containerize it, and push the container to a registry. Deploy it to Kubernetes.
 lab: lab-spring-on-kubernetes
 length: 120
-logo: images/workshops/logo-spring.svg
+logo: /images/workshops/logo-spring.svg
 tags:
   - Spring
   - Microservices

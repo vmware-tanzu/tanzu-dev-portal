@@ -7,7 +7,7 @@ Date: "2021-06-23T12:00:00-07:00"
 minutes: 120
 aliases: ["/tv/code/35"] #redirect alias
 episode: "35"
-image: "tv/code/images/mario-gray.jpg"
+image: "/tv/code/images/mario-gray.jpg"
 explicit: "no"
 title: "OpenID Connect with Spring cloud Gateway with Mario Gray"
 youtube: ""

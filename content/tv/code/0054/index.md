@@ -7,7 +7,7 @@ Date: "2022-01-19T12:00:00-07:00"
 minutes: 30
 aliases: ["/tv/code/54"] #redirect alias
 episode: "54"
-image: "tv/code/images/jakub-pilimon.jpg"
+image: "/tv/code/images/jakub-pilimon.jpg"
 explicit: "no"
 title: "Refactoring towards Encapsulation"
 # youtube: ""
