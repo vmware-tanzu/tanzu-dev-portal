@@ -7,7 +7,7 @@ Date: "2022-02-23T15:00:00-05:00"
 minutes: 120
 aliases: ["/tv/code/62"] #redirect alias
 episode: "62"
-image: "/tv/code/images/dan-vega.png"
+image: "tv/code/images/dan-vega.png"
 explicit: "no"
 title: "What's New in Spring Boot 2.6"
 # youtube: ""

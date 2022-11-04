@@ -6,7 +6,7 @@ aliases:
 - /tv/code/14
 date: '2020-12-08'
 episode: '14'
-image: /tv/code/images/jakub-pilimon.jpg
+image: tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon

@@ -7,7 +7,7 @@ aliases:
 - /tv/code/25
 date: '2021-03-30'
 episode: '25'
-image: /tv/code/images/josh-long.jpg
+image: tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

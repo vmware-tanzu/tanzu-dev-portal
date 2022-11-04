@@ -4,7 +4,7 @@ description: An introduction to using ytt templates when deploying application r
 summary: An introduction to using ytt templates when deploying application resources to a Kubernetes cluster.
 lab: lab-carvel-ytt
 length: 15
-logo: "/images/workshops/logo-carvel-2.png"
+logo: "images/workshops/logo-carvel-2.png"
 tags:
   - Microservices
   - Kubernetes

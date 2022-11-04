@@ -11,7 +11,7 @@ Date: "2020-09-09T12:00:00-07:00" # the time the stream starts
 minutes: 120 # approx length, estimate longer
 episode: "0"
 # change all images to `static/images/tv/shows/code/name-of-guest.jpg` when created.
-image: "/images/tv/show/code.jpg"
+image: "images/tv/show/code.jpg"
 # swearbear notification
 explicit: "no"
 title: "TBD"

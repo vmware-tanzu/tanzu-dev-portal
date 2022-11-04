@@ -8,7 +8,7 @@ aliases:
 date: '2020-08-28'
 draft: false
 episode: '3'
-image: /tv/code/images/mark-heckler.jpg
+image: tv/code/images/mark-heckler.jpg
 explicit: 'no'
 hosts:
 - Mark Heckler

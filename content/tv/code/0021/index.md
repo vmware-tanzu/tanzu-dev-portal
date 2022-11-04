@@ -6,7 +6,7 @@ aliases:
 - /tv/code/21
 date: '2021-02-22'
 episode: '21'
-image: /tv/code/images/josh-long.jpg
+image: tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

@@ -6,7 +6,7 @@ aliases:
 - /tv/code/13
 date: '2020-12-08'
 episode: '13'
-image: /tv/code/images/josh-long.jpg
+image: tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

@@ -5,7 +5,7 @@ PublishDate: '2020-04-14T00:00:00-07:00'
 aliases:
 - /tv/code/37
 episode: '37'
-image: /tv/code/images/greg-turnquist.jpg
+image: tv/code/images/greg-turnquist.jpg
 explicit: 'no'
 hosts:
 - Greg Turnquist

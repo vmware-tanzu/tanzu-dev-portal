@@ -7,7 +7,7 @@ aliases:
 - /tv/code/15
 date: '2020-12-14'
 episode: '15'
-image: /tv/code/images/mark-heckler.jpg
+image: tv/code/images/mark-heckler.jpg
 explicit: 'no'
 hosts:
 - Mark Heckler
