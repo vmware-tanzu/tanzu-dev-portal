@@ -6,7 +6,7 @@ aliases:
 - /tv/code/32
 date: '2021-06-09'
 episode: '32'
-image: /tv/code/images/josh-long.jpg
+image: tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

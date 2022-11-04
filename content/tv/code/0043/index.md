@@ -5,7 +5,7 @@ PublishDate: '2020-09-01T00:00:00-07:00'
 aliases:
 - /tv/code/43
 episode: '43'
-image: /tv/code/images/mario-gray.jpg
+image: tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

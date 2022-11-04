@@ -6,7 +6,7 @@ aliases:
 - /tv/code/23
 date: '2021-03-16'
 episode: '23'
-image: /tv/code/images/jakub-pilimon.jpg
+image: tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon

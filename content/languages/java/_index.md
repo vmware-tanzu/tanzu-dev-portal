@@ -6,7 +6,7 @@ type: languages
 layout: single
 youtube: Spzug_SjJnM
 video: true
-heroimage: /images/languages/java/language-hero-transparent-fixed-java.svg
+heroimage: images/languages/java/language-hero-transparent-fixed-java.svg
 menu:
   main:
     parent: sections

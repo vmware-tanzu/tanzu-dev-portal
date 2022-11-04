@@ -6,7 +6,7 @@ aliases:
 - /tv/code/19
 date: '2021-02-09'
 episode: '19'
-image: /tv/code/images/mark-heckler.jpg
+image: tv/code/images/mark-heckler.jpg
 explicit: 'no'
 hosts:
 - Mark Heckler

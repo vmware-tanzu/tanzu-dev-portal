@@ -7,7 +7,7 @@ aliases:
 - /tv/code/27
 date: '2021-04-13'
 episode: '27'
-image: /tv/code/images/mario-gray.jpg
+image: tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

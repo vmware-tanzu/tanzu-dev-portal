@@ -6,7 +6,7 @@ aliases:
 - /tv/code/28
 date: '2021-04-21'
 episode: '28'
-image: /tv/code/images/jakub-pilimon.jpg
+image: tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon
