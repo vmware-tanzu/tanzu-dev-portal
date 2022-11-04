@@ -14,9 +14,6 @@
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
 .tgz
-<<<<<<< HEAD
-=======
->>>>>>> 073fad32983447cdec6aed55edda74edecdbe3b3
 1:1s
 10x
 12Factor
@@ -46,6 +43,7 @@ Abubakar
 Acceptor
 accessor
 [Aa]ccountabilities
+ACEM
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -197,6 +195,7 @@ AutoBuild
 autocompletion
 [Aa]utoconfiguration
 AutoDeploy
+Autodiscovery
 Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
@@ -942,6 +941,7 @@ globalDefault
 GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
+GNS
 GoDaddy
 Goel
 [Gg]olang
@@ -980,10 +980,12 @@ Grygleski
 Grype
 Grzejszczak
 GSB
+GSLB
 GTM
 GUID(s)?
 Gunicorn
 Guntur
+GW\.?
 gzip(ped)?
 H[0-9]
 H2
@@ -1062,6 +1064,7 @@ HttpConfiguration
 https?|HTTPS?
 HttpSession
 HumanOps
+[Hh]ungryman
 Huynh
 HWC
 hwc
@@ -1279,6 +1282,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
+kapp-controller
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kaspersky
@@ -1571,6 +1575,7 @@ MTU
 multibranch
 multicast
 [Mm]ulticloud
+multicluster
 Multipass
 [Mm]ultitenan(t|cy)
 [Mm]ultiuser
@@ -1816,12 +1821,14 @@ Pilani
 Pilimon
 Pinky
 [Pp]inniped
+pinniped-auth
 [Pp]ip[Xx]('s)?
 pivnet
 PKCS
 PKI
 PKS
 plaintext
+PlatformAP
 pluggability
 Pluggable
 pluggable
@@ -2150,6 +2157,7 @@ SealedSecret
 Sébastien
 SecondaryRoutingFunction
 secretbox
+secretgen-controller
 secretname
 secretsmanager
 SecretTemplate
@@ -2342,6 +2350,7 @@ Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
 tanzuignore
+TanzuNet
 targetId
 targetPort
 targetType
@@ -2437,6 +2446,7 @@ TRS-80
 trustfile
 TrustManager
 truststore(s)?
+TSM
 TTL(s)?
 tunable
 tunables
