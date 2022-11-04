@@ -91,9 +91,9 @@ The final code for this guide can be located on [Github](https://github.com/danv
 
 ### Getting started
 
-The application you will build today is modeled around the idea of a blog. A blog is a place where you can write and publish new articles for others to read. You will be creating the backend (REST API) for the application which could be consumed by a frontend (client) later on. To create your application, head over to [start.spring.io](start.spring.io), fill in the metadata about the project, and select the Spring Web dependency. 
+The application you will build today is modeled around the idea of a blog. A blog is a place where you can write and publish new articles for others to read. You will be creating the backend (REST API) for the application which could be consumed by a frontend (client) later on. To create your application, head over to [start.spring.io](https://start.spring.io), fill in the metadata about the project, and select the Spring Web dependency. 
 
-![The start.spring.io homepage](images/start-spring-io.png "The start.spring.io homepage")
+![The start dot spring dot io homepage](images/start-spring-io.png "The start dot spring dot io homepage")
 
 
 When you’re done, click on the generate button at the bottom of the screen, which will download a zipped file with the starting code for your project. You can open that project in whatever text editor or IDE you’re comfortable with. In this article, we are using [IntelliJ IDEA](https://www.jetbrains.com/idea/). 
