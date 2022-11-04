@@ -330,7 +330,7 @@ public record Article(
 ```
 
 
-Next, you need to create a class that can take in the title of the article and will return a slug. There is a lot that goes into creating a slug, but for now, we are going to create a simple slug service. To ensure that we aren’t tied to this simple slug service in the future, you will create an interface that defines a contract for a single method and name it slugify. In a package, the name service creates a new interface named `Slugify`.
+Next, you need to create a class that can take in the title of the article and will return a slug. There is a lot that goes into creating a slug, but for now, we are going to create a simple slug service. To ensure that we aren’t tied to this simple slug service in the future, you will create an interface that defines a contract for a single method and name it `slugify`. In a package, the name service creates a new interface named `Slugify`.
 
 
 ```java
@@ -342,7 +342,7 @@ public interface SlugService {
 ```
 
 
-With the contract in place, you can create a class named `SimpleSlugService` that implements the `Slugify` interface. This is a simplified version of what a slugify method is capable of, but it will be sufficient for what you’re trying to do in this application. 
+With the contract in place, you can create a class named `SimpleSlugService` that implements the `Slugify` interface. This is a simplified version of what a `slugify` method is capable of, but it will be sufficient for what you’re trying to do in this application. 
 
 
 ```java
@@ -358,7 +358,7 @@ public class SimpleSlugService implements SlugService {
 ```
 
 
-Now that you have a simple slug service, you will need an instance of it in your `ArticleRepository` class. Similar to the controller, you can create a new instance of this class in the constructor. In this case, you will use the interface as the type, in case you want to replace this with a more sophisticated version of the slugify service later. 
+Now that you have a simple slug service, you will need an instance of it in your `ArticleRepository` class. Similar to the controller, you can create a new instance of this class in the constructor. In this case, you will use the interface as the type, in case you want to replace this with a more sophisticated version of the `slugify` service later. 
 
 
 ```java
@@ -372,7 +372,7 @@ public class ArticleRepository {
 ```
 
 
-Now that you have an instance of the `SimpleSlugService` you can use it to create slugs for each of your articles. I have refactored the code a bit to create our three sample articles, so that you don’t have to repeat the title and slug arguments. Take note that you are using the slug service to slugify the title. If you want to take a look at the Github repository, there are a couple of tests for this service in `SimpleSlugServiceTest`.
+Now that you have an instance of the `SimpleSlugService` you can use it to create slugs for each of your articles. I have refactored the code a bit to create our three sample articles, so that you don’t have to repeat the title and slug arguments. Take note that you are using the slug service to `slugify` the title. If you want to take a look at the Github repository, there are a couple of tests for this service in `SimpleSlugServiceTest`.
 
 
 ```java
@@ -483,7 +483,7 @@ Parameter 0 of constructor in dev.danvega.demo.controller.ArticleController requ
 
 While this error might seem like a foreign language, it will make more sense when you realize what the Spring Framework is trying to do for you. When you have a single constructor in your class and the signature of that constructor accepts arguments, Spring will try to automatically wire those up for you. 
 
-Spring is looking in the pool (`ApplicationContext`) of classes (beans) that it manages for you and tries to find one of the ArticleRepository. When Spring realizes that it doesn’t have a bean of that type, it can’t satisfy the contract of that constructor, and therefore decides there is no reason to move forward. This is known as constructor injection because you are trying to inject an instance of that class by using the constructor, and it’s the preferred method of dependency injection in Spring.
+Spring is looking in the pool (`ApplicationContext`) of classes (beans) that it manages for you and tries to find one of the `ArticleRepository`. When Spring realizes that it doesn’t have a bean of that type, it can’t satisfy the contract of that constructor, and therefore decides there is no reason to move forward. This is known as constructor injection because you are trying to inject an instance of that class by using the constructor, and it’s the preferred method of dependency injection in Spring.
 
 To resolve this issue, you need to tell Spring about the `ArticleRepository` class that you have created. To do this, you can add the `@Component annotation`, or one of the specialized versions of this annotation (e.g., `@Repository`) to the class. 
 
@@ -505,7 +505,7 @@ public class SimpleSlugService implements SlugService { }
 ```
 
 
-Back in the `ArticleRepository`, you can adjust the constructor to take in the `SlugService` as an argument, and because Spring knows about your `SimpleSlugService`, which is a type of SlugService, that will satisfy the constructor contract. 
+Back in the `ArticleRepository`, you can adjust the constructor to take in the `SlugService` as an argument, and because Spring knows about your `SimpleSlugService`, which is a type of `SlugService`, that will satisfy the constructor contract. 
 
 
 ```java
@@ -544,7 +544,7 @@ Could not autowire. There is more than one bean of 'SlugService' type.
 ```
 
 
-When you have more than one type that can satisfy a contract, you need to be specific about which one you would like autowired. You can tell Spring exactly which bean you expect to be injected into the constructor by using the <code>[@Qualifier annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html)</code>. There is also a <code>[@Primay annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html)</code> that you can use to indicate that a bean should be given preference when multiple candidates are qualified to autowire a dependency. 
+When you have more than one type that can satisfy a contract, you need to be specific about which one you would like autowired. You can tell Spring exactly which bean you expect to be injected into the constructor by using the <code>[@Qualifier annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html)</code>. There is also a <code>[@Primary annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html)</code> that you can use to indicate that a bean should be given preference when multiple candidates are qualified to autowire a dependency. 
 
 
 ```java
