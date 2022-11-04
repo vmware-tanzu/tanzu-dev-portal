@@ -5,7 +5,7 @@ PublishDate: '2020-08-04T00:00:00-07:00'
 aliases:
 - /tv/code/39
 episode: '39'
-image: tv/code/images/josh-long.jpg
+image: /tv/code/images/josh-long.jpg
 explicit: 'no'
 hosts:
 - Josh Long

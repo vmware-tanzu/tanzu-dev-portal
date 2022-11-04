@@ -7,7 +7,7 @@ aliases:
 date: '2020-11-16'
 draft: false
 episode: '11'
-image: tv/code/images/jakub-pilimon.jpg
+image: /tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon

@@ -7,7 +7,7 @@ aliases:
 - /tv/code/26
 date: '2021-04-06'
 episode: '26'
-image: tv/code/images/mark-heckler.jpg
+image: /tv/code/images/mark-heckler.jpg
 explicit: 'no'
 hosts:
 - Mark Heckler

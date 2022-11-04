@@ -7,7 +7,7 @@ Date: "2021-08-11T12:00:00-07:00"
 minutes: 120
 aliases: ["/tv/code/40"] #redirect alias
 episode: "40"
-image: "tv/code/images/mario-gray.jpg"
+image: "/tv/code/images/mario-gray.jpg"
 explicit: "no"
 title: "Securing Spring Dataflows with Mario Gray"
 youtube: ""

@@ -6,7 +6,7 @@ aliases:
 - /tv/code/20
 date: '2021-02-19'
 episode: '20'
-image: tv/code/images/jakub-pilimon.jpg
+image: /tv/code/images/jakub-pilimon.jpg
 explicit: 'no'
 hosts:
 - Jakub Pilimon

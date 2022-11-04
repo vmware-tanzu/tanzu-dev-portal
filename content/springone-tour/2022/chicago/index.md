@@ -23,8 +23,8 @@ meetup:
 sponsors:
     - name: Rollbar
       sponsorship_level: gold
-      logo_path_dark: "/images/springonetour/sponsors/logo-color-rollbar.svg"
-      logo_path_light: "/images/springonetour/sponsors/logo-white-rollbar.svg"
+      logo_path_dark: "images/springonetour/sponsors/logo-color-rollbar.svg"
+      logo_path_light: "images/springonetour/sponsors/logo-white-rollbar.svg"
       url: https://rollbar.com/
 hide_newsletter: true
 ---

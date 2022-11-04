@@ -6,7 +6,7 @@ aliases:
 - /tv/code/16
 date: '2020-12-14'
 episode: '16'
-image: tv/code/images/mario-gray.jpg
+image: /tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

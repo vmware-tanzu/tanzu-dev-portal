@@ -6,7 +6,7 @@ aliases:
 - /tv/code/30
 date: '2021-05-18'
 episode: '30'
-image: tv/code/images/mario-gray.jpg
+image: /tv/code/images/mario-gray.jpg
 explicit: 'no'
 hosts:
 - Mario Gray

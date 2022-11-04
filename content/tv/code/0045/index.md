@@ -7,7 +7,7 @@ Date: "2021-09-15T12:00:00-07:00"
 minutes: 120
 aliases: ["/tv/code/45"] #redirect alias
 episode: "45"
-image: "tv/code/images/jakub-pilimon.jpg"
+image: "/tv/code/images/jakub-pilimon.jpg"
 explicit: "no"
 title: "State or events? Which shall I keep? with Jakub Pilimon"
 # youtube: ""

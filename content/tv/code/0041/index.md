@@ -7,7 +7,7 @@ Date: "2021-06-16T12:00:00-07:00"
 minutes: 120
 aliases: ["/tv/code/41"] #redirect alias
 episode: "41"
-image: "tv/code/images/jakub-pilimon.jpg"
+image: "/tv/code/images/jakub-pilimon.jpg"
 explicit: "no"
 title: "Spring Actuator with Jakub Pilimon"
 # youtube: ""
