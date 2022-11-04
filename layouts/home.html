@@ -44,7 +44,7 @@
                     {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
                         <div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
                             <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center py-4 py-lg-5 px-3">
-                                <img alt="" class="mb-2" src='{{ printf "%s%s%s" "/images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
+                                <img alt="" class="mb-2" src='{{ printf "%s%s%s" "images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
                                 <h3 class="h3 pt-0 link mt-3 text-white mb-0">
                                     {{ .Params.grouptitle }}
                                 </h3>
