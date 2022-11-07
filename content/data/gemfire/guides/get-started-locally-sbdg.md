@@ -217,6 +217,4 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
 
  * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/). 
   
- * You can get started by implementing the [cache-aside pattern](/data/gemfire/guides/cache-aside-pattern-sbdg) which will improve the read performance of your application. 
- 
-* Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
+ * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).

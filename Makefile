@@ -22,7 +22,7 @@ npm: theme
 preview: npm
 	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
-#preview: @ preview hugo
+#preview-ip: @ preview hugo with IP
 preview-ip: npm
 	ulimit -n 65535; hugo server --panicOnWarning --bind 0.0.0.0 -b http://${MYIP}:1313/developer
 
