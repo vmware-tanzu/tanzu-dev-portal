@@ -126,6 +126,12 @@
   force = true
   status = 301
 
+[[redirects]]
+  from = "/developer/blog/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation/"
+  to = "https://blogs.vmware.com/security/2022/10/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation.html"
+  force = true
+  status = 301
+
 # Global 404 handler
 [[redirects]]
   from = "/*"
