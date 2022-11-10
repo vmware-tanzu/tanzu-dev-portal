@@ -22,9 +22,6 @@
 2FA
 2x2
 32bit
-Mårten
-Rånge
-Schibsted
 3D
 [23]G
 401K
@@ -1486,6 +1483,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 MarkIT
+Mårten
 Martín
 Masala
 matcher
@@ -1959,6 +1957,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+Rånge
 RateLimited
 Ravi
 RBAC(-enabled)?
@@ -2146,6 +2145,7 @@ ScatterSpoke
 SCDF('s)?
 SCG
 schema(s)?
+Schibsted
 Schimanski
 Schutta
 Schwaber
