@@ -155,13 +155,20 @@ It’s time to take your existing applications to the next level.
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:00</div>
-        <div class="talk-title col-7 h4">TBD</div>
+        <div class="talk-title col-7 h4">Modernize Core Systems to Accelerate Digital Transformation</div>
         <div class="name col-3">
-            <!-- <h3 class="h4 py-0"><a class="lightbox" href="#nate-schutta">Nate Schutta</a></h3> -->
+            <h3 class="h4 py-0"><a class="lightbox" href="#yuri-fux">Yuri Fux</a></h3>
+        </div>
+    </div>
+<div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-2 pl-0 h4">15:20</div>
+        <div class="talk-title col-7 h4">Precision - Developer’s Powerhouse</div>
+        <div class="name col-3">
+            <h3 class="h4 py-0">Dell Oran Dotan</h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">15:45</div>
+        <div class="time col-2 pl-0 h4">15:35</div>
         <div class="talk-title col-7 h4">
             <a href="#declarative" class="lightbox">Declarative Clients in Spring</a>
         </div>
@@ -172,7 +179,7 @@ It’s time to take your existing applications to the next level.
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">16:30</div>
+        <div class="time col-2 pl-0 h4">16:20</div>
         <div class="talk-title col-7 h4">
             <a href="#endtoend" class="lightbox">Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform</a>
         </div>
