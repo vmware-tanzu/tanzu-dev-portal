@@ -4,7 +4,7 @@ description: "Software Engineer"
 roles: [""]
 # skills: ["""]
 # location: 
-hidden: false
+hidden: true
 
 # Social Media 
 twitter: "dmikusa"

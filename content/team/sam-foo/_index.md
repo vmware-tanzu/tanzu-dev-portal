@@ -4,6 +4,7 @@ description: "Software Engineer"
 roles: ["author"]
 skills: []
 location: "Seattle, WA"
+hidden: true
 
 # Social Media 
 twitter: "GuessWhoSamFoo"

@@ -4,6 +4,7 @@ description: "Staff Engineer"
 roles: ["guest"]
 skills: [""]
 location: "Philadelphia, PA"
+hidden: true
 
 # Social Media
 twitter: "@dturanski"

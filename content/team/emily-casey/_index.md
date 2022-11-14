@@ -4,6 +4,7 @@ description: "Staff Software Engineer"
 roles: ["guest"]
 skills: []
 location: "New York"
+hidden: true
 
 # Social Media
 twitter: ""

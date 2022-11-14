@@ -4,6 +4,7 @@ description: "Sr Solutions Engineer"
 roles: ["author"]
 skills: []
 location: ""
+hidden: true
 
 # Social Media 
 twitter: ""

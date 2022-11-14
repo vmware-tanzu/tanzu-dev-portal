@@ -3,6 +3,7 @@ name: Carlos Santana
 roles: ["guest"]
 skills: ["Knative"]
 location: ""
+external: true
 
 # Social Media
 twitter: "csantanapr"

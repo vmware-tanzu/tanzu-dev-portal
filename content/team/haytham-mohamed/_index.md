@@ -4,6 +4,7 @@ description: "Advisory Solutions Architect"
 roles: ["author"]
 skills: []
 location: "Austin, TX"
+hidden: true
 
 # Social Media 
 twitter: "haymahmoh"

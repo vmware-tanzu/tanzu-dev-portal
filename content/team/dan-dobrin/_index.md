@@ -4,6 +4,7 @@ description: "Senior Platform Architect"
 roles: ["author"]
 skills: ["Architecture","Microservices","Frameworks","Kubernetes","Patterns","Performance Tuning"]
 location: "Toronto, ON"
+hidden: true
 
 # Social Media 
 twitter: "ddobrin"

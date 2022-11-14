@@ -4,6 +4,7 @@ description: "Americas DevRel Lead, Auth0"
 roles: ["host"]
 skills: ""
 location: ""
+external: true
 
 # Social Media
 twitter: "coreylweathers"
