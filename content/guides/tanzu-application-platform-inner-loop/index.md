@@ -99,7 +99,7 @@ The Tanzu Extension for VS Code has minimal configuration options, but it does n
 
     ![VS Code file Extensions UI](images/image3.png "Find the Tanzu extension settings menu and open it.")
 
-2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the `$DEVELOPMENT_NAMESPACE` set in the guide for [deploying an application](/guides/tanzu-application-platform-deploying-a-workload). Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown. 
+2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the Namespace. Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown.
 
     ![VS Code file Extensions Setting UI](images/image4.png "Fill out the fields as shown.")
 
