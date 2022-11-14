@@ -11,7 +11,7 @@ hosts:
     - Greg Turnquist
 guests:
 minutes: 60
-youtube: ''
+youtube: 'rjdiGdRHryU'
 twitch: 'vmwaretanzu'
 ---
 

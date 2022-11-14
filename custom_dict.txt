@@ -851,6 +851,7 @@ Gandhi
 Gangway
 [Gg]apped
 Garmin
+Garnier-Moiroux
 Gartner('s)?
 GatewayAck
 GatewayenderQueueStatistics
