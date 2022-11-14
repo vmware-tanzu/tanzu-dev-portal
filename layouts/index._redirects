@@ -12,6 +12,8 @@
         {{- if not (hasPrefix $to "/developer") -}}
             {{- $to = path.Join "/developer" $to -}}
         {{- end -}}
-        {{- printf "%s %s 301!\n" $from $to -}}
+        {{ if ne (trim $from "/") (trim $to "/") }}
+            {{- printf "%s %s 301!\n" $from $to -}}
+        {{ end }}
     {{- end -}}
 {{- end -}}
