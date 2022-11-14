@@ -40,7 +40,7 @@ These are some assumptions you should be aware of before proceeding with this gu
 * [A Tanzu Network account with `pivnet` installed](/guides/tanzu-network-gs) - This guide walks you through setting up your account on the Tanzu Network, as well as installing the `pivnet` CLI tool.
 * [The `tanzu` CLI installed and configured](/guides/tanzu-cli-gs) - This guide walks you through downloading, installing, and using the `tanzu` CLI tool.
 * [An install of Tanzu Application Platform](/guides/tanzu-application-platform-gs) - This guide walks you through the install process for Tanzu Application platform. 
-* [An application deployed on Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload) - This guide walk you through deploying a sample application onto Tanzu Application Platform.
+* [An application deployed on Tanzu Application Platform](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html) - This document will walk you through deploying a sample application onto Tanzu Application Platform.
 * [An install of Visual Studio (VS) Code](https://code.visualstudio.com/download) - This guide uses an extension specifically for VS Code to perform application updates. 
 * [A Docker Hub account](https://hub.docker.com/signup) - Other repositories are supported, but for ease of use and configuration, this guide uses Docker Hub.
 * [A GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) - You will use this account to `push` your sample application to, and later `clone`, modify, and `push` your code changes back to this repo. 
@@ -99,7 +99,7 @@ The Tanzu Extension for VS Code has minimal configuration options, but it does n
 
     ![VS Code file Extensions UI](images/image3.png "Find the Tanzu extension settings menu and open it.")
 
-2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the `$DEVELOPMENT_NAMESPACE` set in the guide for [deploying an application](/guides/tanzu-application-platform-deploying-a-workload). Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown. 
+2. In the settings screen, under **Tanzu: Local Path**, enter the full path for the directory of the local clone of your git project. Under **Tanzu: Namespace**, enter the Namespace. Under **Tanzu: Source Image**, enter your Docker Hub account name and repository as shown.
 
     ![VS Code file Extensions Setting UI](images/image4.png "Fill out the fields as shown.")
 

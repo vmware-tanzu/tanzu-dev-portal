@@ -285,6 +285,4 @@ From here, you can go back through the install process above and reinstall if ne
 If you have completed the Tanzu Network guide as well as this one, congratulations! You are now ready to really start playing with the power of the Tanzu ecosystem for developers.
 
 * [Getting Started with VMware Tanzu Application Platform light Profile](/guides/tanzu-application-platform-gs) - This guide will walk you through setting up a basic VMware Tanzu Kubernetes Grid workload cluster. This cluster will be useful for setting up an inner loop development workflow using Tanzu tooling. 
-* [Deploying an Application to VMware Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload)
-description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
 * [Inner Loop Development with VMware Tanzu Application Platform](/guides/tanzu-application-platform-inner-loop) - Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.
