@@ -24,5 +24,4 @@ You can also refer to the [Spring Boot for Apache Geode compatibility matrix](ht
 - [Getting Started Locally](/data/gemfire/guides/get-started-locally-sbdg/): A guide to help get your local development environment up and running.
 - [Getting Started with VMware GemFire for TAS](/data/gemfire/guides/get-started-tgf4vms-sbdg/): A guide to help set up a VMware GemFire for Tanzu Application Service service instance on the Tanzu Application Service.
 - [Getting Started with VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/): A guide to help set up a  VMware GemFire instance on Kubernetes.
-- [Cache-Aside Pattern](/data/gemfire/guides/cache-aside-pattern-sbdg): Use the Cache Aside pattern with your Spring Boot application to improve your applications performance.
 - [Session State Caching](/data/gemfire/guides/session-state-cache-sbdg): This guide walks you through how to implement a session state cache using VMware GemFire, Spring Boot for Apache Geode, and Spring Session.
