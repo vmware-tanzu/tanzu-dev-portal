@@ -4,6 +4,7 @@ description: 'Development & Infrastructure Director of "Tevel" program at Nation
 roles: ["guest"]
 skills: ""
 location: "Israel"
+external: true
 
 # Social Media
 twitter: ""

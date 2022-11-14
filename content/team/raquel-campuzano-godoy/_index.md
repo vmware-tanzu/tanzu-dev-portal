@@ -4,6 +4,7 @@ description: "Technical Marketing Manager"
 roles: ["author"]
 skills: []
 location: "Seville, Spain"
+hidden: true
 
 # Social Media
 twitter: "RaquelCampuzano"

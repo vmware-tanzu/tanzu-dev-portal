@@ -4,6 +4,7 @@ description: ""
 roles: ["Author"]
 skills: ["Spring", "Cloud", "Java", "React"]
 location: "Denver, CO"
+hidden: true
 
 # Social Media 
 twitter: ""

@@ -4,6 +4,7 @@ description: ""
 roles: ["host"]
 skills: ""
 location: ""
+external: true
 
 # Social Media
 twitter: "jeffreystrauss"

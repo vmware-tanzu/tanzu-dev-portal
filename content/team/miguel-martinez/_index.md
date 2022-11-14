@@ -5,6 +5,7 @@ roles: ["guest"]
 skills:
 location:
 photo: "miguel-martinez.png"
+hidden: true
 
 # Social Media 
 twitter: "@migmartri"

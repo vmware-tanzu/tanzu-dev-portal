@@ -4,6 +4,7 @@ description: "Chief Solution Finder & Sr Problem Mender"
 roles: ["author"]
 skills: []
 location: "Atlanta, GA"
+hidden: true
 
 # Social Media 
 twitter: "servicexen"
