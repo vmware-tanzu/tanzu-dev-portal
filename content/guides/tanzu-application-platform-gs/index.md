@@ -319,6 +319,4 @@ In later guides, you will use Tanzu Application Platform to deploy a workload. A
 
 Now you have your own instance of Tanzu Application Platform to use for your development projects. Continue following along to other guides to deploy a workload, and see how your development workflow might change in a Tanzu environment. 
 
-* [Deploying an Application to VMware Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload)
-description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
 * [Inner Loop Development with VMware Tanzu Application Platform](/guides/tanzu-application-platform-inner-loop) - Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.

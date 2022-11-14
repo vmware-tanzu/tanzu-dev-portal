@@ -851,6 +851,7 @@ Gandhi
 Gangway
 [Gg]apped
 Garmin
+Garnier-Moiroux
 Gartner('s)?
 GatewayAck
 GatewayenderQueueStatistics
@@ -1483,6 +1484,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 MarkIT
+Mårten
 Martín
 Masala
 matcher
@@ -1956,6 +1958,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+Rånge
 RateLimited
 Ravi
 RBAC(-enabled)?
@@ -2143,6 +2146,7 @@ ScatterSpoke
 SCDF('s)?
 SCG
 schema(s)?
+Schibsted
 Schimanski
 Schutta
 Schwaber

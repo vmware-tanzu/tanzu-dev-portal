@@ -184,6 +184,4 @@ This is just the start of getting involved in the Tanzu ecosystem. If you are in
 
 * [Getting Started with the VMware `tanzu` CLI](/guides/tanzu-cli-gs) - Working with the VMware Tanzu suite of tools starts with tooling to deploy and manage those products. Learn how to install the `tanzu` CLI, and explore some of the basic functionality.
 * [Getting Started with VMware Tanzu Application Platform light Profile](/guides/tanzu-application-platform-gs) - This guide will walk you through setting up a basic VMware Tanzu Kubernetes Grid workload cluster. This cluster will be useful for setting up an inner loop development workflow using Tanzu tooling. 
-* [Deploying an Application to VMware Tanzu Application Platform](/guides/tanzu-application-platform-deploying-a-workload)
-description: This guide will walk you through deploying a demo application on to VMware Tanzu Application Platform.  
 * [Inner Loop Development with VMware Tanzu Application Platform](/guides/tanzu-application-platform-inner-loop) - Local application development is a critical workflow for application developers. Getting fast feedback on each code change iteration is an important capability of this workflow. This guide will walk you through setting up a local development workflow which will enable live, local updates with each code save.  
