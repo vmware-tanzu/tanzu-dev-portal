@@ -4,6 +4,7 @@ description: "Developer Advocate at Loft Labs"
 roles: ["guest"]
 skills: ["Kubernetes", "VCluster"]
 location: "Amsterdam"
+external: true
 
 # Social Media 
 twitter: "lianmakesthings"

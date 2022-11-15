@@ -4,6 +4,7 @@ description: "OpenGitOps Maintainer"
 roles: ["guest"]
 skills: ["Argo CD", "Kubernetes", "DevOps"]
 location: "Los Angeles, CA"
+external: true
 
 # Social Media 
 twitter: "christianh814"

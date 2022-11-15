@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: 
 location: "Norway"
+external: true
 
 # Social Media 
 twitter: "range_marten"

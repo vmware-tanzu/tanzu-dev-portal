@@ -4,6 +4,7 @@ description: "Principal Engineer at Syntasso"
 roles: ["guest"]
 skills: ["Kubernetes", "Kratix"]
 location: "United Kingdom"
+external: true
 
 # Social Media 
 twitter: "a_bangser"

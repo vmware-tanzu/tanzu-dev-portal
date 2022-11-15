@@ -4,6 +4,7 @@ description: "Software Engineer"
 roles: ["author"]
 skills: []
 location: "Singapore"
+hidden: true
 
 # Social Media
 twitter: ""

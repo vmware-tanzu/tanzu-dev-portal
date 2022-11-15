@@ -3,6 +3,7 @@ name: Judy Wang
 description: "Product Manager"
 roles: ["guest"]
 skills: []
+hidden: true
 
 # Social Media
 twitter: ""

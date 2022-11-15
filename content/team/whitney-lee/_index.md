@@ -32,9 +32,9 @@ Whitney is a full stack developer who enjoys understanding and using tools in th
 {{< link-card title="VMware’s Inspirational Women: Spotlight on Whitney Lee" link="https://blogs.vmware.com/opensource/2022/10/20/inspirational-women-in-open-source-spotlight-on-whitney-lee/" description="An interview with Whitney Lee, Staff Technical Advocate for the VMware Tanzu Team, who funnels her insatiable appetite for all things cloud and passion for teaching others into streaming ⚡Enlightning lightboard videos on subjects such as Kubernetes, Knative and Infrastructure as Code." imageURL="https://blogs.vmware.com/opensource/files/2022/09/Picture1-576x324.jpg">}}
 </div>
 
-<!-- 
+
 ## Highlights
 
-{{< youtube id="eRKR53nOKyA" class="youtube-video-shortcode" >}}
+{{< youtube id="eJG7uIU9NpM" class="youtube-video-shortcode" >}}
 
-{{< youtube id="g1Bmxg4DSug" class="youtube-video-shortcode" >}} -->
+

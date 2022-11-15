@@ -3,8 +3,6 @@ PublishDate: '2022-03-15T00:00:00-07:00'
 Date: '2022-04-26T00:00:00-07:00'
 enddate: '2022-04-27T00:00:00-07:00'
 publish: true
-aliases:
-    - /springone-tour/2022/chicago
 isRegOpen: true
 location:
     - 'Convene'

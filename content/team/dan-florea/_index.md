@@ -4,6 +4,7 @@ description: "Product Line Manager"
 roles: ["author"]
 skills: []
 location: ""
+hidden: true
 
 # Social Media 
 twitter: ""

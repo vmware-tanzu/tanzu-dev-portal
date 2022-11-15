@@ -2480,6 +2480,7 @@ uncheck
 Uncomment
 uncomment
 undersample
+underserved
 underutilization
 unencoded
 unencrypted

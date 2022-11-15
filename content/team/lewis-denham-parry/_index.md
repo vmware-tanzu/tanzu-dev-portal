@@ -3,6 +3,7 @@ name: Lewis Denham-Parry
 roles: ["guest"]
 skills: ["Security"]
 location: "Cardiff, UK"
+external: true
 
 # Social Media
 twitter: "denhamparry"

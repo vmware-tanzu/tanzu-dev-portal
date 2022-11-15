@@ -13,6 +13,7 @@ github: ""
 pinterest: ""
 instagram: ""
 youtube: ""
+hidden: true
 ---
 
 Bob is Senior Manager, Product Marketing for VMware Tanzu Data Services

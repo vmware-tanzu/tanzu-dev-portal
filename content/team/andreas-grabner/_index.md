@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: ["Kubernetes", "Keptn"]
 location: ""
+external: true
 
 # Social Media 
 twitter: "grabnerandi"
