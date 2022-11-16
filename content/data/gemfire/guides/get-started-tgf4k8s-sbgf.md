@@ -8,6 +8,8 @@ parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for Kubernetes
 type: data-guides
 weight: 3
+aliases:
+    - get-started-tgf4k8s-sbdg/
 ---
 
 This guide walks you through creating and testing a VMware GemFire cluster on Kubernetes using a *Hello, World!* client application.

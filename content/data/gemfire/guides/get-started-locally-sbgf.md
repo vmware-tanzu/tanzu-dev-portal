@@ -8,6 +8,9 @@ parent: Spring for VMware GemFire
 title: Getting Started Locally
 type: data-guides
 weight: 1
+aliases:
+    - get-started-locally-sbdg/
+
 ---
 
 This guide walks you through setting up your local development environment using Apache Geode and a *Hello, World!* client application.    

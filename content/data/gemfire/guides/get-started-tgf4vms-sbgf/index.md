@@ -8,6 +8,8 @@ parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for TAS
 type: data-guides
 weight: 2
+aliases:
+    - get-started-tgf4vms-sbdg/
 ---
 
 This guide will walk you through creating and testing a VMware GemFire service instance on the Tanzu Application Service (TAS) using a `Hello, World!` client application.

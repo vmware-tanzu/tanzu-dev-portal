@@ -7,6 +7,8 @@ parent: Spring for VMware GemFire
 title: Session State Caching
 type: data-guides
 weight: 5
+aliases:
+    - session-state-cache-sbdg
 ---
 
 This guide walks you through how to implement a session state cache using VMware GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
