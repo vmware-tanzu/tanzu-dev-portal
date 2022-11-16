@@ -13,54 +13,33 @@ aliases:
 
 ---
 
-This guide walks you through setting up your local development environment using Apache Geode and a *Hello, World!* client application.    
+This guide walks you through setting up your local development environment using VMware GemFire and a *Hello, World!* client application.    
 
-## What is Apache Geode?
+## What is VMware GemFire?
 
-VMware GemFire, an enterprise offering, is powered by Apache Geode and adds additional enterprise functionality and integrations.  Apache Geode is the open source core of VMware GemFire.   This means that you can use Apache Geode on your local machine when developing and testing your VMware GemFire applications.
+VMware GemFire is an enterprise-grade, high-speed, in-memory data and compute grid that serves a variety of use cases. From high-performance, low-latency applications where data must be processed with sub-millisecond delivery times, to caching and key-value stores, GemFire shines as an ultra-fast system of record.
+
+In all GemFire use cases, data remains consistent, secure, and up to date. GemFire can be deployed and replicated across multiple data centers with unlimited scale and extremely fast performance. Plus, it can be deployed on-premises, in the public cloud, in virtual machines, containers, or even orchestrated via Kubernetes.
+
+GemFire is used by customers in many real-world applications (e.g., banking, billing, insurance, inventory, logistics, etc.) to replace NoSQL databases, achieve massive parallel processing at incredibly fast speeds, and supercharge intelligent, modern applications.
 
 
-## Install Apache Geode for Local Development
+## Starting VMware GemFire for Local Development
 
-There are multiple ways to install Apache Geode for local development.  We will highlight two different ways below (brew or a .zip/.tar file), however you can find [additional installation options here](https://geode.apache.org/docs/guide/13/getting_started/installation/install_standalone.html).
+For this getting started locally guide, we will walk through the quickest way to get a GemFire cluster up and running for local development purposes.  For full installation instructions, please refer to the [GemFire Install documentation](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-getting_started-installation-install_intro.html). 
 
- ### Option 1: Using brew
- 
- In a terminal run the following command:
- 
- `brew install apache-geode`
- 
- This will install the most recent version of Apache Geode.
+### Download the .tgz file from the Tanzu Network 
 
-### Option 2: Download a .zip or .tar file.
+1. Download VMware GemFire .tgz from the [Tanzu Network](https://network.tanzu.vmware.com/products/pivotal-gemfire/).
+2. Unzip or expand the file.
+3. Open a terminal and navigate to the GemFire folder that was unzipped in Step 2.
+4. In the terminal, navigate to the `bin` folder.
+5. run the following command to start the GemFire SHell (GFSH)
+    ```./gfsh```
 
-1. Download the .zip or .tar file from the [Apache Releases page](https://geode.apache.org/releases/).
-2.  Unzip or expand the file.
-3. Add the Geode bin directory to your PATH environment variable.
-     
-     **macOS/Unix/Linux**
-     ```
-    PATH=$PATH:$JAVA_HOME/bin:path_to_product/bin
-    export PATH
-    ```
-    
-     **Windows**
-    `set PATH=%PATH%;%JAVA_HOME%\bin;path_to_product\bin`
+6. You should see the GemFire Shell start with a version similar to the following image
 
-### Check your installation
-
-In a terminal type
-
-```gfsh version```
-
-You should see something similar to
-
-```
-gfsh version
-1.13.1
-```
-
-Apache Geode is now installed on your machine.
+   ![GFSH Starting Up](images/gfsh_start_up.png)
 
 ---
 
@@ -72,9 +51,9 @@ This section will guide you through testing a *Hello, World!* client app on your
 ### What You'll Need
 * The [Hello, World!](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/hello-world) example.
 * JDK 8 or 11
-* Spring Boot 2.1 or above
-* Spring Boot for Apache Geode 
-* Apache Geode installed on your local machine.
+* Spring Boot 2.6 or above
+* Spring Boot for VMware GemFire
+* GemFire 9.15.3+
 
 ### 1. Download the Hello, World! Example
 
@@ -84,20 +63,20 @@ Clone the *Hello, World!* app from the VMware GemFire [examples repo](https://gi
 $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 ```
 
-### 2. Start an Apache Geode Cluster
+### 2. Start an VMware GemFire Cluster
 
 {{% alert title="Required" color="warning" %}}
-Make sure that you have installed Apache Geode on your machine before proceeding.
+Make sure that you have downloaded and started VMware GemFire before proceeding.
 {{% /alert %}} 
 
-This will start a small local cluster for the *Hello, World!* app to connect.   
+The following steps will start a small local cluster for the *Hello, World!* app to connect.   
 
-* In a terminal start the Geode Shell (gfsh)
+* In a terminal start the GemFire Shell (gfsh) if it is not currently running
 
     ```
-    gfsh
+    ./gfsh
     ```
-* Start a **locator**.  Locators provide both discovery and load balancing services. 
+* Start a **locator**.  [Locators](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) provide both discovery and load balancing services. 
 
     ```
     start locator --name=hello-world-locator
@@ -108,21 +87,26 @@ This will start a small local cluster for the *Hello, World!* app to connect.
     start server --name=hello-world-server
     ```
 
-* Once those commands have finished you can run the `list members` command and you should see something similar to
+* Once those commands have finished run the `list members` command 
 
-```
-Member Count : 2
+  ```list members```
 
-       Name         | Id
-------------------- | ---------------------------------------------------------------------------
-hello-world-locator | 192.168.1.14(hello-world-locator:33323:locator)<ec><v0>:41000 [Coordinator]
-hello-world-server  | 192.168.1.14(hello-world-server:33423)<v1>:41001
-```
+  You should see an output similar to the following
+  
+  
+  ```
+  Member Count : 2
+  
+         Name         | Id
+  ------------------- | ---------------------------------------------------------------------------
+  hello-world-locator | 192.168.1.14(hello-world-locator:33323:locator)<ec><v0>:41000 [Coordinator]
+  hello-world-server  | 192.168.1.14(hello-world-server:33423)<v1>:41001
+  ```
 
 
 ### 3. Build and Run the App
 
-In a different terminal, navigate to the working directory of `spring-for-apache-geode-examples/hello-world`, and build the application
+Open a different terminal session, navigate to the working directory of `spring-for-apache-geode-examples/hello-world`, and build the application
 
 ```
 ./gradlew build
@@ -196,10 +180,10 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
     time to look up: 2ms
     ```
 
-### 4. Stop the App and Tear Down the Apache Geode Cluster
+### 4. Stop the App and the VMware GemFire Cluster
 
 * Stop the *Hello, World! app. 
-* Then shutdown the Apache Geode cluster - this will stop the locator and server, and delete any data you may have in the cluster. 
+* Then shutdown the VMware GemFire cluster - this will stop the locator and server, and **delete any data you may have in the cluster**. 
 
     In your gfsh terminal run the following command 
 
@@ -216,8 +200,8 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
  
  Now that you have successfully set up your local development environment, check out some other guides
   
- * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service. 
+ * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-gf4vms-sbgf/) on the Tanzu Application Service. 
 
- * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/). 
+ * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbdg/). 
   
  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
