@@ -4,7 +4,7 @@ description: How to set up a VMware GemFire service instance on the Tanzu Applic
   Service.
 lastmod: '2021-04-22'
 link-title: Getting Started with VMware GemFire for TAS
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for TAS
 type: data-guides
 weight: 2

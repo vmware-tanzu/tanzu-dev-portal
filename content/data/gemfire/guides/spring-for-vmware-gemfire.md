@@ -3,14 +3,16 @@ date: '2021-04-07'
 description: Utilizing the auto-configuration of Spring Boot with VMware GemFire and
   Apache Geode.
 lastmod: '2021-05-28'
-subsection: Spring for Apache Geode
+subsection: Spring for VMware GemFire
 subsection-parent-page: true
-title: Spring for Apache Geode
+title: Spring for VMware GemFire
 type: data-guides
 weight: 1
+aliases:
+  - spring-for-apache-geode/
 ---
 
-Utilizing the auto-configuration of Spring Boot with VMware GemFire/Apache Geode.  The [Spring Boot for Apache Geode documentation](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/) further discusses the details of many of these topics.
+Utilizing the auto-configuration of Spring Boot with VMware GemFire.  The [Spring Boot for Apache Geode documentation](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/) further discusses the details of many of these topics.
 
 ## Version Compatibility
 The best way to determine the correct version of Spring Boot for Apache Geode for your project, is to use [start.spring.io](https://start.spring.io/).

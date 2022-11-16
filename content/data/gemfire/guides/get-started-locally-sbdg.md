@@ -4,7 +4,7 @@ date: '2021-04-07'
 description: A guide to help get your local development environment up and running.
 lastmod: '2021-04-22'
 link-title: Getting Started Locally
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Getting Started Locally
 type: data-guides
 weight: 1

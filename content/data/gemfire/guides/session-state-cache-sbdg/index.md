@@ -3,7 +3,7 @@ date: '2021-04-22'
 description: Session state cache using VMware GemFire in a Spring Boot application.
 lastmod: '2021-04-22'
 link-title: Session State Caching
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Session State Caching
 type: data-guides
 weight: 5

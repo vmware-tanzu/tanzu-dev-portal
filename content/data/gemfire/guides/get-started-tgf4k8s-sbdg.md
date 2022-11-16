@@ -4,7 +4,7 @@ date: '2022-08-15'
 description: How to set up a VMware GemFire instance on Kubernetes.
 lastmod: '2022-08-15'
 link-title: Getting Started with VMware GemFire for Kubernetes
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for Kubernetes
 type: data-guides
 weight: 3
