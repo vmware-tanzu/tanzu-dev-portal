@@ -1,7 +1,6 @@
 ---
 date: '2021-04-07'
-description: Utilizing the auto-configuration of Spring Boot with VMware GemFire and
-  Apache Geode.
+description: Utilizing the auto-configuration of Spring Boot with VMware GemFire.
 lastmod: '2021-05-28'
 subsection: Spring for VMware GemFire
 subsection-parent-page: true

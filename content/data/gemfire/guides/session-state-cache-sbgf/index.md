@@ -1,7 +1,7 @@
 ---
 date: '2021-04-22'
-description: Session state cache using VMware GemFire in a Spring Boot application.
-lastmod: '2021-04-22'
+description: Session state cache using VMware GemFire and Spring Boot.
+lastmod: '2022-11-17'
 link-title: Session State Caching
 parent: Spring for VMware GemFire
 title: Session State Caching
@@ -11,7 +11,7 @@ aliases:
     - session-state-cache-sbdg
 ---
 
-This guide walks you through how to implement a session state cache using VMware GemFire and [Spring Boot for Apache Geode](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/).
+This guide walks you through how to implement a session state cache using VMware GemFire and [Spring Boot for VMware GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html).
 ## When should I use a session state cache?
 
 Session state caching is useful for storing data associated with an HTTP session. Storing this data in a cache allows it to be retrieved quickly and persisted across log-ins. Some examples where this might be useful include:
@@ -36,22 +36,24 @@ The session UUID is used as a key in a data store holding information associated
 To complete this guide you need:
 
 * The [Session State example](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/session-state)
-* Your favorite text editor or IDE
 * JDK 8 or 11
-* A Spring Boot application (using 2.3 or greater)
-* The Spring Boot for Apache Geode dependency.
+* Spring Boot 2.6 or above
+* [Spring Boot for VMware GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html)
+* [A Pivotal Commercial Maven Repo account (free)](https://commercial-repo.pivotal.io/login/auth)
+* GemFire 9.15.3+
 
-**If running on the Tanzu Application Service for VMs**
-* A [VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/) on the Tanzu Application Service.
+
+**If running on Tanzu Application Service**
+* A [VMware GemFire for TAS service instance](/data/gemfire/guides/get-started-gf4tas-sbgf/) on the Tanzu Application Service.
 
 **If running on Kubernetes**
-* A [VMware GemFire Cluster](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
+* A [VMware GemFire for Kubernetes Cluster](/data/gemfire/guides/get-started-gf4k8s-sbgf/).
 
     For this example:
-     * Our **namespace** is `tanzu-gemfire`
+     * Our **namespace** is `gemfire-app-ns`
      * Our **GemFire cluster** is `notes-app-gemfire-cluster` 
-* [Docker](https://docs.docker.com/get-docker/) installed. 
-* An image repository for the Session State Example example (we used Docker Hub).
+* [Docker](https://docs.docker.com/get-docker/). 
+* An image repository for the Session State Example (this example uses Docker Hub).
 
 ---
 
@@ -62,78 +64,108 @@ The back end (in the `src/main/java/sessionstate/` directory) handles all the se
 
 The front end (in the `frontend/` directory) is provided to illustrate how a web app can interact with the session data. The example front end is written using the React framework, but clients can use any language or framework capable of interacting with a REST endpoint.
 
-You can download the complete application from the [VMware GemFire examples](https://github.com/gemfire/spring-for-apache-geode-examples) GitHub repository.
+You can download the complete application from the [VMware GemFire examples](https://github.com/gemfire/spring-for-gemfire-examples) GitHub repository.
 
 ```
-$ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
+$ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
 ```
 
 
-### Add the Spring Boot for Apache Geode Dependency
-To allow the application to work with VMware GemFire and utilize the Spring Boot for Apache Geode dependency, add the following dependency information (the example code uses Gradle)
+### Add the Spring Boot for VMware GemFire Dependency
+The Spring Boot for VMware GemFire dependencies are available from the [Pivotal Commercial Maven Repository](https://commercial-repo.pivotal.io/login/auth). Access to the Pivotal Commercial Maven Repository is free and requires a one-time registration step to create an account.
 
-**Gradle**
-```groovy
-ext {
-  set('springGeodeVersion', "1.6.7")
-}
+After registering, you will receive a confirmation email. Follow the instruction in this email to activate your account.
 
-dependencies {
-  implementation 'org.springframework.geode:spring-geode-starter'
-  implementation 'org.springframework.geode:spring-geode-starter-session'
-  testImplementation 'org.springframework.geode:spring-geode-starter-test'
-  ...
-}
+Spring Boot for VMware GemFire requires users to add the GemFire repository to their projects. 
 
-dependencyManagement {
-  imports {
-    mavenBom "org.springframework.geode:spring-geode-bom:${springGeodeVersion}"
-  }
-}
-```
+1. Add the GemFire repository to your project:
 
-**Maven**
-```xml
-<properties>
-    ...
-    <spring-geode.version>1.6.7</spring-geode.version>
-    ...
-</properties>
+    **Gradle**
+    Add the following to the repositories section of the `build.gradle` file:
+    ```groovy
+    repositories {
+        mavenCentral()
+        maven {
+            credentials {
+                username "$gemfireRepoUsername"
+                password "$gemfireRepoPassword"
+            }
+            url = uri("https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire")
+        }
+    }
+    ```
+    **Maven**
+    Add the following to the `pom.xml` file:
+    ```xml
+    <repository>
+        <id>gemfire-release-repo</id>
+        <name>Pivotal GemFire Release Repository</name>
+        <url>https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire</url>
+    </repository>
+    ```
 
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.geode</groupId>
-        <artifactId>spring-geode-starter</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.geode</groupId>
-        <artifactId>spring-geode-starter-session</artifactId>
-    </dependency>
+2. Add your Pivotal Commercial Maven Repository credentials.
+   
+    **Gradle**
+
+    Add the following to the local (`.gradle/gradle.properties`) or project `gradle.properties` file. Replace *`YOUR_PIVOTAL_COMMERCIAL_MAVEN_REPO_USERNAME`* and *`YOUR_PIVOTAL_COMMERCIAL_MAVEN_REPO_PASSWORD`* with your Pivotal Commercial Maven Repository credentials.
     
-    <dependency>
-            <groupId>org.springframework.geode</groupId>
-            <artifactId>spring-geode-starter-test</artifactId>
-    </dependency>
-</dependencies>
+    ```groovy
+    gemfireRepoUsername=YOUR_PIVOTAL_COMMERCIAL_MAVEN_REPO_USERNAME
+    gemfireRepoPassword=YOUR_PIVOTAL_COMMERCIAL_MAVEN_REPO_PASSWORD
+    ```
+   **Maven**
+   Add the following to the `.m2/settings.xml` file. Replace `MY-USERNAME@example` and `MY-DECRYPTED-PASSWORD` with your Pivotal Commercial Maven Repository credentials.
 
-<dependencyManagement>
+    ```xml
+    <settings>
+        <servers>
+            <server>
+                <id>gemfire-release-repo</id>
+                <username>MY-USERNAME@example.com</username>
+                <password>MY-DECRYPTED-PASSWORD</password>
+            </server>
+        </servers>
+    </settings>
+    ```
+    
+    
+
+3. Add the Spring for VMware GemFire dependencies to your project:
+
+
+    **Gradle**
+    ```groovy
+    dependencies {
+        implementation "com.vmware.gemfire:spring-boot-2.7-gemfire-9.15:1.0.0"
+        implementation "com.vmware.gemfire:spring-boot-session2.7-gemfire-9.15:1.0.0"
+      ...
+    }
+    
+    ```
+    
+    **Maven**
+    ```xml
     <dependencies>
-      <dependency>
-        <groupId>org.springframework.geode</groupId>
-        <artifactId>spring-geode-bom</artifactId>
-        <version>${spring-geode.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-</dependencyManagement>
-```
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>spring-boot-2.7-gemfire-9.15</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vmware.gemfire</groupId>
+            <artifactId>spring-boot-session-2.7-gemfire-9.15</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    ...
+    <dependencies>
+    ```
 
 {{% alert title="Version" color="warning" %}}
-Make sure that the minor version of Spring Boot you are using, matches the Spring Boot for Apache Geode version you declare in your dependency.
+Make sure that the major.minor version of Spring Boot and GemFire you are using match the Spring Boot for VMware GemFire artifactId.
 {{% /alert %}} 
 
-### Add Spring Boot for Apache Geode Annotations
+### Add Spring Boot for VMware GemFire Annotations
 The Spring Boot application will need the following annotations
 
 ```java
@@ -146,9 +178,9 @@ public class SessionStateApplication {
 }
 ```
 [@EnableClusterAware](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware)
-Allows the application to seamlessly switch between local-only (application running on local machine) and client/server (in a managed environment such as Tanzu Application Service). This annotation includes the [@EnableClusterConfiguration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) annotation, which dynamically creates regions if they do not exist already. Note that the @EnableClusterConfiguration annotation will only create Regions, it will not delete or update existing regions.
+Allows the application to seamlessly switch between local-only (application running on local machine) and client/server (in a managed environment such as Tanzu Application Service). This annotation includes the [@EnableClusterConfiguration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) annotation, which dynamically creates regions if they do not exist already. Note that the `@EnableClusterConfiguration` annotation will **only create Regions**, it will not delete or update existing regions.
 
-The example Spring Boot application uses a `RestController` that allows the front end application to interact with a REST API to read, update, and destroy session data.
+The example Spring Boot application uses a `RestController` that allows the front end application to interact with a REST API to read, update, and destroy session data (notes in this example application).
 
 ```java
 @RestController
@@ -236,7 +268,7 @@ public class SessionControllerTest {
 
        assertEquals(NOTE1, (notesList.get(0)));
    }
-...
+  ...
 ```
 
 ---
@@ -245,21 +277,27 @@ public class SessionControllerTest {
 ## Run the App Locally
 Navigate to the root of the project  in a command line and run the Spring Boot run command.
 
+### Start a VMware GemFire cluster
+Follow the instructions in the [Getting Started Locally]((/data/gemfire/guides/get-started-locally-sbgf/)) guide to start a small GemFire cluster on your local machine.
+
 ### Build the App
-To run the app on your local machine, in a terminal, navigate to the root of the project and build the app  
+Once you have a cluster running, in a new terminal, navigate to the root of the project and build the app.  
 
-**Gradle**
-```
-./gradlew clean build
-```
+   **Gradle**
 
- **Maven**
-```
-mvn clean package
-``` 
+   ```
+   ./gradlew clean build
+   ```
+
+**Maven**
+
+   ```
+    mvn clean package
+   ``` 
+
 
 ### Start the Spring Boot App
-Then run the Spring Boot command.
+One the application has finished building, start the Spring Boot application.
 
 **Gradle**
 ```
