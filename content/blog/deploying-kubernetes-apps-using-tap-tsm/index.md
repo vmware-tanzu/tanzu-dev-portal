@@ -3,14 +3,8 @@ title: "Deploying Kubernetes Apps Using VMware Tanzu Application Platform and Ta
 description: Modern applications are comprised of microservices and require services such as service discovery, encryption, traffic controls, and access controls. For applications created on VMware Tanzu Application Platform, these network and security services are enabled with VMware Tanzu Service Mesh, an Istio-based solution that connects and secures microservices across any cluster or cloud boundary. This document showcases the first phase of the integration, where Tanzu Application Platform Kubernetes workloads are connected and secured within clusters, across clusters and across clouds.
 date: "2022-11-14"
 lastmod: "2022-11-14"
-level1: Tanzu Service Mesh
-level2: Tanzu Application Platform
-tags:
-- TAP
-- TSM
-# Author(s)
 team:
-- 
+- Vishal Narayan 
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -201,7 +195,7 @@ ytt -f https://raw.githubusercontent.com/gm2552/hungryman-tap-tsm/main/workloads
 
 Assuming you are using a GitOps workflow with your build cluster, once the workloads have been successfully built, the deployment information will be pushed to your GitOps repository.
 
-**NOTE:** If you execute the instructions above without pull requests in the GitOps workflow, it is possible that the `config-writer` pods that commit deployment information to the GtiOps repository may fail due to concurrency conflicts. A dirty (but usable) workaround for this is to delete the failed workloads from the build cluster and re-run the command provided in the instructions above.
+**NOTE:** If you execute the instructions above without pull requests in the GitOps workflow, it is possible that the `config-writer` pods that commit deployment information to the GitOps repository may fail due to concurrency conflicts. A dirty (but usable) workaround for this is to delete the failed workloads from the build cluster and re-run the command provided in the instructions above.
 
 #### Service and resource claim installation
 
