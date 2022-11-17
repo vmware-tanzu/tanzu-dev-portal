@@ -49,19 +49,21 @@ This section will guide you through testing a *Hello, World!* client app on your
 
 
 ### What You'll Need
-* The [Hello, World!](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/hello-world) example.
+* The [Hello, World!](https://github.com/gemfire/spring-for-gemfire-examples/tree/main/hello-world) example.
 * JDK 8 or 11
 * Spring Boot 2.6 or above
-* Spring Boot for VMware GemFire
-* GemFire 9.15.3+
+* [Spring Boot for VMware GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html)
+* GemFire 9.15+ 
+* [A Pivotal Commercial Maven Repo account (free)](https://commercial-repo.pivotal.io/login/auth)
 
 ### 1. Download the Hello, World! Example
 
-Clone the *Hello, World!* app from the VMware GemFire [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
+* Clone the *Hello, World!* app from the VMware GemFire [examples repo](https://github.com/gemfire/spring-for-gemfire-examples). 
 
-```
-$ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
-```
+  ```
+  $ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
+  ```
+* Update the `gradle.properties` file with your Pivotal Commercial Maven Repo username and password. For additional instructions, please review the [Spring Boot for VMware GemFire QuickStart guide](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html).
 
 ### 2. Start an VMware GemFire Cluster
 
@@ -106,7 +108,7 @@ The following steps will start a small local cluster for the *Hello, World!* app
 
 ### 3. Build and Run the App
 
-Open a different terminal session, navigate to the working directory of `spring-for-apache-geode-examples/hello-world`, and build the application
+Open a different terminal session, navigate to the working directory of `spring-for-gemfire-examples/hello-world`, and build the application
 
 ```
 ./gradlew build
@@ -200,7 +202,7 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
  
  Now that you have successfully set up your local development environment, check out some other guides
   
- * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-gf4vms-sbgf/) on the Tanzu Application Service. 
+ * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-gf4tas-sbgf/) on the Tanzu Application Service. 
 
  * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbdg/). 
   

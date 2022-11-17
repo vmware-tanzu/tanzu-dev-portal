@@ -112,23 +112,25 @@ This section will guide you through testing a `Hello, World!` client application
 
 ### What You'll Need
 
-* The [Hello, World!](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/hello-world) example.
+* The [Hello, World!](https://github.com/gemfire/spring-for-gemfire-examples/tree/main/hello-world) example.
 * JDK 8 or 11
-* Spring Boot 2.1 or above
-* Spring Boot for Apache Geode
-* A running VMware GemFire service instance on TAS
+* Spring Boot 2.6 or above
+* Spring Boot for VMware GemFire
+* VMware GemFire for TAS 1.14.5+
+* [A Pivotal Commercial Maven Repo account (free)](https://commercial-repo.pivotal.io/login/auth)
+
 
 ###  1. Download the Hello, World! Example
 
-Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
+Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-gemfire-examples). 
 
 ```
-$ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
+$ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
 ```
 
 ### 2. Edit the `manifest.yaml` File
 
-* Navigate to the `spring-for-apache-geode-examples/hello-world` directory. 
+* Navigate to the `spring-for-gemfire-examples/hello-world` directory. 
 * Open the `manifest.yml file`. 
 * Replace the string `<your-tanzu-gemfire-service>` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
 
@@ -141,7 +143,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 
 The `cf push` operation will bind the Hello,World! app to the VMware GemFire service instance named in your `manifest.yaml` file  and then start the app.
 
- When the app is up and running, the `cf push` command should output information about the app in the terminal.  One the fields listed will be the `route`.  In a browser copy and paste the `[route from cf push]/hello`.
+ When the app is up and running, the `cf push` command should output information about the app in the terminal.  One of the fields listed will be the `route`.  In a browser copy and paste the `route from cf push`.
  
  You should see something similar to the below, which represents an artificial time delay simulating a database query.
  
@@ -191,4 +193,4 @@ Congratulations! You’re ready to start using VMware GemFire. You will need to 
  
  Now that you have successfully created a running VMware GemFire service instance, check out some other guides.
     
-  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
+  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
