@@ -104,7 +104,7 @@ You will also need permission to use `kubectl`.
 
 ## Run a Spring Boot for VMware GemFire app on Kubernetes
 
-This section will guide you through testing a *Hello, World!* client application, that utilizes Spring Boot for Apache Geode.
+This section will guide you through testing a *Hello, World!* client application, that utilizes Spring Boot for VMware GemFire.
 
 ### What You'll Need
 

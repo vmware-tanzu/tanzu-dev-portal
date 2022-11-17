@@ -74,7 +74,7 @@ Starting in a terminal
 
 
 4.  Click on ***VMware GemFire***.
-    ![Click on VMware GemFire in Apps Manager](images/tanzu_gemfire_apps_manager.png)
+    ![Click on VMware GemFire in Apps Manager](images/gemfire_apps_manager.png)
 
 
 
@@ -132,7 +132,7 @@ $ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
 
 * Navigate to the `spring-for-gemfire-examples/hello-world` directory. 
 * Open the `manifest.yml file`. 
-* Replace the string `<your-tanzu-gemfire-service>` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
+* Replace the string `<your-gemfire-for-tas-service-instance-name>` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
 
 
 ### 3. Push your application to TAS
@@ -193,4 +193,4 @@ Congratulations! You’re ready to start using VMware GemFire. You will need to 
  
  Now that you have successfully created a running VMware GemFire service instance, check out some other guides.
     
-  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
+  * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).

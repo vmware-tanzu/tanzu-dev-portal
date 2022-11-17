@@ -141,7 +141,7 @@ You should see something similar to the below, which represents an artificial ti
 >
 >time to look up: 6ms (quantity of time that it took to acquire the key-value pair).
 
-Note that the ***time to look up*** has been significantly reduced. This represents the app getting the information from the cache (Apache Geode), instead of querying the database.
+Note that the ***time to look up*** has been significantly reduced. This represents the app getting the information from the cache (VMware GemFire), instead of querying the database.
 
 To confirm that your app is connected to your local cluster, in your **gfsh** terminal run the following commands
 
@@ -204,6 +204,6 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
   
  * Set up your [VMware GemFire service instance](/data/gemfire/guides/get-started-gf4tas-sbgf/) on the Tanzu Application Service. 
 
- * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbdg/). 
+ * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbgf/). 
   
- * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
+ * Create an application that utilizes Spring Boot for Vmware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
