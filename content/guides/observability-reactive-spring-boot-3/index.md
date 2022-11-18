@@ -1,6 +1,6 @@
 ---
 date: '2022-11-18'
-description: This guide will introduce you to Micrometer in Spring Boot 3, gathering metrics from reactive streams and producing output to a host of observation infrastructure.
+description: This guide will introduce you to Micrometer in Spring Boot 3, gathering metrics from WebFlux, Reactive streams and producing output to a host of observation infrastructure.
 lastmod: '2022-11-18'
 linkTitle: Micrometer Observability with Reactive Spring Boot 3
 metaTitle: Using Micrometer Observation API with Reactive Spring Boot 3
@@ -362,7 +362,7 @@ cd infra/
 docker compose up
 ```
 
-This might take a minute or two since containers need to be transferred over the network. Next, we can move on and examine this infrastructure.
+This might take a minute or two since containers need to be transferred over the network. Next, we can move on and examine this infrastructure as it relates to our example app.
 
 ### Prometheus Setup
 
@@ -388,8 +388,6 @@ scrape_configs:
 ```
 
 First, we set scraping to 2 second intervals, then we enable prometheus to scrape itself - that is monitor its own activity. Finally, we have added a scrape endpoint to actuator prometheus metrics. You may add additional 'actuator/prometheus' endpoints to the `targets` declaration under `spring-apps`.
-
-Since we have already added `micrometer-registry-prometheus` to our project, no further app side configuration is necessary.
 
 ### Enable the Prometheus Actuator endpoint
 
@@ -457,9 +455,9 @@ And the source to our `logback-spring.xml` should be found under `resources`:
 
 ### Tempo configuration
 
-This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships traces over to Tempo. With help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [micrometer bridge](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges) for Brave, we can ship traces to Tempo directly from Micrometer.
+This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships traces over to Tempo. With help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges), we can ship traces to Tempo directly from Micrometer.
 
-For `exemplars` to work for '/actuator' endpoints, we need to enable traces there. Add the following lines to application.properties:
+We also need to enable traces in '/actuator' endpoints to get `exemplars` functioning on actuator endpoints. Add the following lines to application.properties:
 
 ```properties
 management.tracing.enabled=true
