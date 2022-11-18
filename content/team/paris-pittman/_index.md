@@ -4,6 +4,7 @@ description: ""
 roles: [""]
 skills: ["Kubernetes", "CNCF"]
 location: "Seattle"
+external: true
 
 # Social Media 
 twitter: "ParisInBmore"

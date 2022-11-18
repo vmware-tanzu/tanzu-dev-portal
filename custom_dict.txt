@@ -20,6 +20,7 @@
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
+underserved
 2x2
 32bit
 3D
@@ -43,6 +44,7 @@ Abubakar
 Acceptor
 accessor
 [Aa]ccountabilities
+ACEM
 acknowledgedEvents
 acknowledgement
 Acknowledgement
@@ -194,6 +196,7 @@ AutoBuild
 autocompletion
 [Aa]utoconfiguration
 AutoDeploy
+Autodiscovery
 Autofac
 autosave
 [Aa]utoscal(e|ers|er|ing)?
@@ -292,11 +295,9 @@ BucketRegionDetails
 BucketRegions
 Buesing
 Bugsville
+[Bb]uild[Pp]ack(s|'s|ages)?
 buildout
-BuildPack
 [Bb]uildpack-built
-[Bb]uildpack(s|'s|ages)?
-BuildPacks
 Bundler
 [Bb]urstable
 Buschmann
@@ -496,6 +497,7 @@ critiquers
 CRLF
 CRM
 [Cc]ron
+CRON
 cross-subnet
 Crossplane
 CrossSubnet
@@ -848,8 +850,9 @@ Galystan
 Gamov
 Gandhi
 Gangway
-Gapped
+[Gg]apped
 Garmin
+Garnier-Moiroux
 Gartner('s)?
 GatewayAck
 GatewayenderQueueStatistics
@@ -940,6 +943,7 @@ globalDefault
 GlobalNetwork(Policy|Set)
 [Gg]mail
 GmbH
+GNS
 GoDaddy
 Goel
 [Gg]olang
@@ -978,10 +982,12 @@ Grygleski
 Grype
 Grzejszczak
 GSB
+GSLB
 GTM
 GUID(s)?
 Gunicorn
 Guntur
+GW\.?
 gzip(ped)?
 H[0-9]
 H2
@@ -1060,6 +1066,7 @@ HttpConfiguration
 https?|HTTPS?
 HttpSession
 HumanOps
+[Hh]ungryman
 Huynh
 HWC
 hwc
@@ -1119,6 +1126,7 @@ intra-cluster
 intra-namespace
 intra-service
 intra-subnet
+Invoker
 io
 IoC
 IOC
@@ -1179,6 +1187,7 @@ Jarvinen
 Jasso
 JavaBean
 JavaBeanAccessorMethodAuthorizer
+JavaBeans
 JavaEE
 JavaOne
 [Jj]avascript
@@ -1276,6 +1285,7 @@ Kalashnykov
 Kamus
 Kanban
 Kaniko
+kapp-controller
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
 Kaspersky
@@ -1312,10 +1322,11 @@ knative-serving
 Knative('s|.)?
 KNN
 KoFu
+Korando
 Kostadis
 kotlin
 Kousen
-Kpack
+[Kk]pack
 kpack-level
 kpack(-hosted)?
 kpack(.|-hosted)?
@@ -1474,6 +1485,7 @@ MapRepository
 Marcin
 MARIADB-(ADMIN|REPL)-PASSWORD
 MarkIT
+Mårten
 Martín
 Masala
 matcher
@@ -1510,7 +1522,7 @@ MetricsSession
 Mezzalira
 micro-frontends
 Micro[Kk]8s
-microservice.
+[Mm]icroservice(s)?.
 microservices-oriented
 Microsystems
 mid-1990s
@@ -1567,6 +1579,7 @@ MTU
 multibranch
 multicast
 [Mm]ulticloud
+multicluster
 Multipass
 [Mm]ultitenan(t|cy)
 [Mm]ultiuser
@@ -1812,12 +1825,14 @@ Pilani
 Pilimon
 Pinky
 [Pp]inniped
+pinniped-auth
 [Pp]ip[Xx]('s)?
 pivnet
 PKCS
 PKI
 PKS
 plaintext
+PlatformAP
 pluggability
 Pluggable
 pluggable
@@ -1944,6 +1959,7 @@ RabbitMQ('s)?
 Radware
 Raju
 Rakuten
+Rånge
 RateLimited
 Ravi
 RBAC(-enabled)?
@@ -2131,6 +2147,7 @@ ScatterSpoke
 SCDF('s)?
 SCG
 schema(s)?
+Schibsted
 Schimanski
 Schutta
 Schwaber
@@ -2146,6 +2163,7 @@ SealedSecret
 Sébastien
 SecondaryRoutingFunction
 secretbox
+secretgen-controller
 secretname
 secretsmanager
 SecretTemplate
@@ -2338,6 +2356,7 @@ Talkshow
 [Tt]anzu
 Tanzu(Developer|'s)?
 tanzuignore
+TanzuNet
 targetId
 targetPort
 targetType
@@ -2401,6 +2420,7 @@ tlberglund
 TLS(-enabled)?
 TNS
 [Tt]o[Dd]o
+[Tt]odays
 TODOs?
 TokenRequest
 TokenReview
@@ -2432,6 +2452,7 @@ TRS-80
 trustfile
 TrustManager
 truststore(s)?
+TSM
 TTL(s)?
 tunable
 tunables
@@ -2578,6 +2599,7 @@ vSwitch
 Vue
 VXLAN
 Waciuma
+waitlist
 [Ww]alkthrough
 Wanjohi
 WanVerificationService
@@ -2663,6 +2685,7 @@ Yarp
 YARP's
 yay
 YCombinator
+[Yy]ml
 Yonis
 Yorker
 young-ish

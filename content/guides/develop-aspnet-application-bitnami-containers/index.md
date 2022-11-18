@@ -22,7 +22,7 @@ level1: Deploying Modern Applications
 level2: Packaging and Publishing
 ---
 
-[Docker](https://www.docker.com) containers have become increasingly popular amongst developers on account of their ease of use, consistency and portability. For .NET developers looking to develop and publish applications using containers, Bitnami offers a number of options:
+[Docker](https://www.docker.com) containers have become increasingly popular amongst developers on account of their ease of use, consistency and portability. For .NET developers looking to develop and publish applications using [containers](https://tanzu.vmware.com/containers), Bitnami offers a number of options:
 
 * [Bitnami's .NET SDK container](https://github.com/bitnami/bitnami-docker-dotnet-sdk) provides the complete .NET SDK for application development;
 * [Bitnami's .NET container](https://github.com/bitnami/bitnami-docker-dotnet) provides the .NET runtime environment for application execution;

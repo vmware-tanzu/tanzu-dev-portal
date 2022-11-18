@@ -4,6 +4,7 @@ description: ""
 roles: ["host", "guest"]
 skills: ""
 location: ""
+external: true
 
 # Social Media
 twitter: "mattstratton"

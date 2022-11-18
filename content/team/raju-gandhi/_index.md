@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: ["Git"]
 location: "Columbus, OH"
+external: true
 
 # Social Media 
 twitter: "looselytyped"

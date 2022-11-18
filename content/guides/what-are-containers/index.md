@@ -15,7 +15,7 @@ level2: Kubernetes Platform
 description: The very basics of container anatomy
 ---
 
-Containers are logical constructs that contain the binaries for an application. Container binaries run at a higher level of infrastructure abstraction than virtual machines. In contrast to a virtual machine, which provides an entire operating system to provide a runtime environment for an application's binaries, a container bundles only an application's binaries and its required libraries. 
+[Containers](https://tanzu.vmware.com/containers) are logical constructs that contain the binaries for an application. Container binaries run at a higher level of [infrastructure abstraction](https://tanzu.vmware.com/cloud-native) than [virtual machines](https://tanzu.vmware.com/content/analyst-reports/the-synergies-between-containers-and-virtual-machines). In contrast to a virtual machine, which provides an entire operating system to provide a runtime environment for an application's binaries, a container bundles only an application's binaries and its required libraries. 
 
 It’s important to note that VMs and containers are not mutually exclusive.  The infrastructure (networks, servers, and storage) required to support containers can often be more easily managed using virtualization, and therefore the two technologies are complementary.
 
@@ -23,7 +23,7 @@ In general, the term **container** is used to refer to either a container image 
 
 ## The Container Runtime
 
-Although Docker is the most popular example of a container runtime, there are others, such as containerd, rkt etc. 
+Although [Docker](https://docs.docker.com/get-started/overview/) is the most popular example of a container runtime, there are others, such as containerd, rkt etc. 
 
 Similar to how a Linux kernel helps run application processes by providing hardware resources, a container runtime helps partition the Linux kernel to run isolated Linux processes with specific resource limits around CPU, memory, etc. The runtime also helps isolate application processes using two Linux kernel primitives: [control groups \(cgroups\)](https://man7.org/linux/man-pages/man7/cgroups.7.html) and [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html). Cgroups limit resources to a set of processes running on a Linux host, and namespaces isolate processes from one another. 
 
@@ -50,7 +50,7 @@ Because containers operate at a higher level of abstraction than VMs, they impro
 
 All of these benefits produce a compelling result: Containers shorten the time it takes to build, test, and ship applications.
 
-Containers help accelerate development pipelines by streamlining dev/test cycles and reducing the effort needed to deploy applications. They execute consistently in each deployment, providing portability between platforms and between clouds. Containers increase the efficiency and agility of an organization. 
+Containers help accelerate development pipelines by streamlining dev/test cycles and reducing the effort needed to deploy applications. They execute consistently in each deployment, providing portability between platforms and between [clouds](https://www.vmware.com/topics/glossary/content/cloud.html). Containers increase the efficiency and agility of an organization. 
 
 ## Keep Learning
 

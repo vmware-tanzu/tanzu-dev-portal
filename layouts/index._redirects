@@ -1,0 +1,19 @@
+# Generate a Netlify _redirects file so that aliases redirect via a 301 instead of a meta refresh
+
+{{ printf "\n" }}
+
+{{- range $p := .Site.Pages -}}
+    {{- range .Aliases -}}
+        {{- $from := . -}}
+        {{- if not (hasPrefix $from "/developer") -}}
+            {{- $from = path.Join "/developer" $from -}}
+        {{- end -}}
+        {{- $to := $p.RelPermalink -}}
+        {{- if not (hasPrefix $to "/developer") -}}
+            {{- $to = path.Join "/developer" $to -}}
+        {{- end -}}
+        {{ if ne (trim $from "/") (trim $to "/") }}
+            {{- printf "%s %s 301!\n" $from $to -}}
+        {{ end }}
+    {{- end -}}
+{{- end -}}

@@ -4,7 +4,7 @@ description: "Sr. Director, Tanzu Developer Experience"
 roles: ["author"]
 skills: []
 location: ""
-external: false
+hidden: true
 
 # Social Media
 twitter: "gshipley"

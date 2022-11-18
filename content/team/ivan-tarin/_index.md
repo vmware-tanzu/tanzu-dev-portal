@@ -4,6 +4,7 @@ description: "Product Marketing Manager"
 roles: ["author"]
 skills: []
 location: "Denver, CO"
+hidden: true
 
 # Social Media 
 twitter: "IvanTarin2"

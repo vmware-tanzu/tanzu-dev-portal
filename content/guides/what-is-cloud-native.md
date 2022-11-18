@@ -17,7 +17,7 @@ level1: Modern App Basics
 level2: DevOps Practices
 ---
 
-Cloud native is an approach to building and running applications that exploit the advantages of the cloud computing delivery model. Cloud native development—also increasingly referred to as modern application development—is appropriate for public, hybrid, and private clouds; it’s about how applications are created and deployed, not where.
+[Cloud native](https://tanzu.vmware.com/cloud-native) is an approach to building and running applications that exploit the advantages of the cloud computing delivery model. Cloud native development—also increasingly referred to as modern application development—is appropriate for public, hybrid, and private clouds; it’s about how applications are created and deployed, not where.
 
 The more important thing is the ability to offer on-demand access to computing power along with modern data and application services for developers. Cloud native development incorporates the concepts of DevOps, continuous delivery, [microservices](/guides/microservices/what-is-microservices-architecture), and [containers](/guides/containers/what-are-containers). At its root, cloud native is about structuring teams, culture, and technology to utilize automation and architectures to manage complexity and unlock velocity.
 

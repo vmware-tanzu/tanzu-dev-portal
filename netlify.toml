@@ -1,7 +1,7 @@
 # Default build settings
 [context.production]
   publish = "public"
-  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b https://tanzu.vmware.com/developer --minify"
+  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b https://tanzu.vmware.com/developer --minify && cp public/developer/_redirects public/_redirects"
 
 [context.production.environment]
   HUGO_VERSION = "0.82.0"
@@ -9,7 +9,7 @@
   TZ='America/Los_Angeles'
 
 [context.deploy-preview]
-  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer"
+  command = "git submodule update -f --init --recursive && npm ci && make function-config && hugo -F -b $DEPLOY_PRIME_URL/developer && cp public/developer/_redirects public/_redirects && cat public/_redirects"
   
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.0"
@@ -124,6 +124,17 @@
   from = "/developer/data/tanzu-greenplum/*"
   to = "https://tanzu.vmware.com/greenplum"
   force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/blog/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation/"
+  to = "https://blogs.vmware.com/security/2022/10/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation.html"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/guides/tanzu-application-platform-deploying-a-workload/"
+  to = "https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html"
   status = 301
 
 # Global 404 handler

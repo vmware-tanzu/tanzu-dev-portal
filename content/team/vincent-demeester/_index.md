@@ -4,6 +4,7 @@ description: "Principal Software Engineer at Red Hat"
 roles: ["guest"]
 skills: ["Kubernetes", "Tekton"]
 location: "France"
+external: true
 
 # Social Media 
 twitter: "vdemeest"

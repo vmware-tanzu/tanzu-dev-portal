@@ -4,6 +4,8 @@ description: ""
 roles: ["guest"]
 # location: "Scotland, United Kingdom"
 photo: "stu-burnside.jpg"
+external: true
+
 # Social Media
 twitter: "@StuBurnside"
 website: ""

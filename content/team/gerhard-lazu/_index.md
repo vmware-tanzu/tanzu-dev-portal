@@ -4,6 +4,7 @@ description: "Staff Engineer"
 roles: ["guest"]
 skills: []
 location: ""
+hidden: true
 
 # Social Media
 twitter: "gerhardlazu"

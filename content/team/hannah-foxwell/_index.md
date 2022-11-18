@@ -4,6 +4,7 @@ description: "Director for Platform Services at VMware Tanzu Labs"
 roles: ["guest"]
 skills: ""
 location: ""
+hidden: true
 
 # Social Media
 twitter: "hannahfoxwell"

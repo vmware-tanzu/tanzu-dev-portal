@@ -4,6 +4,7 @@ description: "Staff Product Designer"
 roles: ["author"]
 skills: ["User-Centered Design", "UX/UI", "Workshop & Activity Facilitation", "User Research"]
 location: "Brooklyn, NY"
+hidden: true
 
 # Social Media 
 twitter: "ericcipra"
