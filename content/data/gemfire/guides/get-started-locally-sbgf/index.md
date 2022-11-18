@@ -206,4 +206,4 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
 
  * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbgf/). 
   
- * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
+ * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf/).
