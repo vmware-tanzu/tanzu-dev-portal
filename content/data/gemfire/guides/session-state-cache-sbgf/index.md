@@ -35,7 +35,7 @@ The session UUID is used as a key in a data store holding information associated
 ## What you'll need
 To complete this guide you need:
 
-* The [Session State example](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/session-state)
+* The [Session State example](https://github.com/gemfire/spring-for-gemfire-examples/tree/main/session-state)
 * JDK 8 or 11
 * Spring Boot 2.6 or above
 * [Spring Boot for VMware GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html)
@@ -50,7 +50,7 @@ To complete this guide you need:
 * A [VMware GemFire for Kubernetes Cluster](/data/gemfire/guides/get-started-gf4k8s-sbgf/).
 
     For this example:
-     * Our **namespace** is `gemfire-app-ns`
+     * Our **namespace** is `notes-app`
      * Our **GemFire cluster** is `notes-app-gemfire-cluster` 
 * [Docker](https://docs.docker.com/get-docker/). 
 * An image repository for the Session State Example (this example uses Docker Hub).
@@ -177,10 +177,11 @@ public class SessionStateApplication {
   }
 }
 ```
-[@EnableClusterAware](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware)
-Allows the application to seamlessly switch between local-only (application running on local machine) and client/server (in a managed environment such as Tanzu Application Service). This annotation includes the [@EnableClusterConfiguration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) annotation, which dynamically creates regions if they do not exist already. Note that the `@EnableClusterConfiguration` annotation will **only create Regions**, it will not delete or update existing regions.
+- [@EnableClusterAware](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware)
+Allows the application to seamlessly switch between local-only (application running on local machine) and client/server (in a managed environment such as Tanzu Application Service). 
+- This annotation transitively includes the [@EnableClusterConfiguration](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) annotation, which dynamically creates regions if they do not exist already. Note that the `@EnableClusterConfiguration` annotation will **only create Regions**, it will not delete or update existing regions.
 
-The example Spring Boot application uses a `RestController` that allows the front end application to interact with a REST API to read, update, and destroy session data (notes in this example application).
+The example Spring Boot application uses a [@RestController](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-controller) that allows the front end application to interact with a REST API to read, update, and destroy session data (notes in this example application).
 
 ```java
 @RestController
@@ -314,7 +315,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
 - The "Enter your note:" form can be used to enter notes. 
 - The "DESTROY SESSION" button can be used to clear the session data and delete the notes.
 
-![img](images/session-state-frontend.jpg)
+    ![img](images/session-state-frontend.jpg)
 
 ---
 
@@ -324,7 +325,7 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  
  {{% alert title="VMware GemFire Service Instance" color="warning" %}}
   To deploy the application to the Tanzu Application
-   Service (TAS) make sure you have [created a VMware GemFire service instance](/data/gemfire/guides/get-started-tgf4vms-sbdg/).
+   Service (TAS) make sure you have [created a VMware GemFire service instance](/data/gemfire/guides/get-started-gf4tas-sbgf/).
  {{% /alert %}} 
  
 
@@ -344,13 +345,12 @@ When the app is running, open a browser and go to <http://localhost:8080>.
  
  ## Run the App on Kubernetes
  
-
         
- {{% alert title="VMware GemFire Kubernetes Cluster" color="warning" %}}
- To deploy the Session State Example application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/gemfire/guides/get-started-tgf4k8s-sbdg/).
+ {{% alert title="VMware GemFire for Kubernetes Cluster" color="warning" %}}
+ To deploy the Session State Example application on Kubernetes make sure you have [created a VMware GemFire cluster on Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbgf/) using the **namespace** and **GemFire cluster** names below.
  
  For this example:
- * Our **namespace** is `tanzu-gemfire`
+ * Our **namespace** is `notes-app`
  * Our **GemFire cluster** is `notes-app-gemfire-cluster` 
  {{% /alert %}} 
          
@@ -368,32 +368,32 @@ When the app is running, open a browser and go to <http://localhost:8080>.
     For our example the value looks like this:
 
     ```
-    spring.data.gemfire.pool.locators: notes-app-gemfire-cluster-locator-0.notes-app-gemfire-cluster-locator.tanzu-gemfire[10334]
+    notes-app-gemfire-cluster-locator-0.notes-app-gemfire-cluster-locator.notes-app[10334]
     ```
    * Replace `notes-app-gemfire-cluster` with the name of your GemFire cluster if different.
-   * Replace `tanzu-gemfire` with your namespace if different.
+   * Replace `notes-app` with your namespace if different.
   
 
-* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to your VMware GemFire cluster.  The information follows a similar form as above:
+* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for VMware GemFire to push your initial cluster configuration to your VMware GemFire cluster.  The information follows a similar form as above:
 
    ```
-   [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][GEMFIRE LOCATOR PORT]
+   [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME]
    ```
     For our example the value looks like this:
     
      ```
-      spring.data.gemfire.management.http.host: notes-app-gemfire-cluster-locator-0.notes-app-gemfire-cluster-locator.tanzu-gemfire
+      notes-app-gemfire-cluster-locator-0.notes-app-gemfire-cluster-locator.notes-app
      ```
   
    * Replace `notes-app-gemfire-cluster` with the name of your GemFire cluster if different.
-   * Replace `tanzu-gemfire` with your namespace if different.
+   * Replace `notes-app` with your namespace if different.
       
 ### Build a Docker Image with Gradle or Maven
 
 Starting with Spring Boot 2.3, you can now customize and create an OCI image using Spring Boot. In this example we're using the [Gradle - packaging OCI images option](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/#build-image).  If you are using Maven check out the instructions found [here](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#build-image).
 
 * In a terminal, navigate to the application directory.
-* Build the application with ` ./gradlew clean build`
+* Build the application with ` ./gradlew clean build -x test`. We skip the tests in this build because when the Spring properties are active, the tests use these properties to find a GemFire cluster and will fail as there's no cluster running locally at that location. 
 * Open the `build.gradle` file and update the `bootBuildImage` section, with your Docker repository username. This will build an image with the name `docker.io/[YOUR DOCKER USERNAME]/notes-app:0.0.1-SNAPSHOT`.  
 * Build the image with `./gradlew bootBuildImage`
 
@@ -415,9 +415,9 @@ In a terminal
 Create a Kubernetes deployment for your *Notes* app. This will create a deployment, replicaset, and pod using the image we created above.
 
    ```
-     kubectl --namespace=tanzu-gemfire create deployment notes-app-deployment --image=docker.io/[YOUR DOCKER USERNAME]/notes-app:0.0.1-SNAPSHOT
+     kubectl -n notes-app create deployment notes-app-deployment --image=docker.io/[YOUR DOCKER USERNAME]/notes-app:0.0.1-SNAPSHOT
    ```  
- * Replace `tanzu-gemfire` with your namespace if different.
+ * Replace `notes-app` with your namespace if different.
  
 If successful you should see `deployment.apps/notes-app-deployment created`
 
@@ -425,10 +425,10 @@ If successful you should see `deployment.apps/notes-app-deployment created`
 In order to access the `Notes` app from a browser, we need to expose the deployment.
 
 ```
-kubectl --namespace=tanzu-gemfire expose deployment/notes-app-deployment --type="LoadBalancer" --port=80 --target-port=8080
+kubectl -n notes-app expose deployment/notes-app-deployment --type="LoadBalancer" --port=80 --target-port=8080
 ```
 
-* Replace `tanzu-gemfire` with your namespace if different.
+* Replace `notes-app` with your namespace if different.
 
 > If you're trying this locally with MiniKube, you will need to replace `LoadBalancer` with `NodePort`.
 
@@ -437,9 +437,9 @@ kubectl --namespace=tanzu-gemfire expose deployment/notes-app-deployment --type=
 Once the Load Balancer has been created, you can now access the *Notes* app using the `External IP` on the LoadBalancer service.
 
 ```
-kubectl -n tanzu-gemfire get services
+kubectl -n notes-app get services
 ``` 
-* Replace `tanzu-gemfire` with your namespace if different.
+* Replace `notes-app` with your namespace if different.
 
 This should output something similar to (your *locator* and *server* names may be different).
 
@@ -460,21 +460,21 @@ In your browser, go to the `EXTERNAL-IP` of the `notes-app-deployment` and you s
 
 * Start gfsh for kubernetes
     ```
-    kubectl -n tanzu-gemfire exec -it GEMFIRE-CLUSTER-NAME-locator-0 -- gfsh
+    kubectl -n notes-app exec -it notes-app-gemfire-cluster-locator-0 -- gfsh
     ```  
 
-  * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
-  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your VMware GemFire cluster. 
+  * Replace `notes-app` with the name of your namespace, if it's different.
+  * Replace `notes-app-gemfire-cluster` with the name of your VMware GemFire cluster if it's different. 
 
 * Once you see that `GFSH` has started, connect to your cluster with the `connect` command
 
     ```
-    gfsh> connect
+    connect --locator=notes-app-gemfire-cluster-locator-0.notes-app-gemfire-cluster-locator.notes-app[10334]
     ``` 
 * Once connected run the `list regions` command
 
     ```
-    gfsh> list regions
+    list regions
     ``` 
 
 You should see something similar to
@@ -484,11 +484,11 @@ You should see something similar to
     ------------------
     ClusteredSpringSessions
   ```
-This shows that the Spring Boot for Apache Geode app has connected to the VMware GemFire cluster and pushed the initial Session configuration, including a region called `ClusteredSpringSessions`), to the cluster.
+This shows that the Spring Boot for VMware GemFire app has connected to the VMware GemFire cluster and pushed the initial Session configuration, including a region called `ClusteredSpringSessions`), to the cluster.
 
-> If the `ClusteredSpringSessions` region IS NOT listed, the first item to check is the `application.properties` file.  Confirm that the spring data property values are set correctly.  If you need to update them, make sure you also increment your build number of your image.  This will force [Kubernetes to pull the new image](https://kubernetes.io/docs/concepts/containers/images/) (as opposed to using a cached version of the image).
+> If the `ClusteredSpringSessions` region IS NOT listed, the first item to check is the `application.properties` file.  Confirm that the spring data property values are set correctly.  If you need to update them, make sure you also increment your version number of your image in the `build.gradle` file.  This will force [Kubernetes to pull the new image](https://kubernetes.io/docs/concepts/containers/images/) (as opposed to using a cached version of the image).
 
 
 ---
 
-**Congratulations! You have now deployed a Spring Boot for Apache Geode app that implements Session State Caching**
+**Congratulations! You have now deployed a Spring Boot for VMware GemFire app that implements Session State Caching**
