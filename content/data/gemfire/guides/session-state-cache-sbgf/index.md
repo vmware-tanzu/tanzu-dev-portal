@@ -162,7 +162,7 @@ Spring Boot for VMware GemFire requires users to add the GemFire repository to t
     ```
 
 {{% alert title="Version" color="warning" %}}
-Make sure that the major.minor version of Spring Boot and GemFire you are using match the Spring Boot for VMware GemFire artifactId.
+Make sure that the major.minor version of Spring Boot and GemFire you are using match the Spring Boot for VMware GemFire `artifactId`.
 {{% /alert %}} 
 
 ### Add Spring Boot for VMware GemFire Annotations
@@ -181,7 +181,7 @@ public class SessionStateApplication {
 Allows the application to seamlessly switch between local-only (application running on local machine) and client/server (in a managed environment such as Tanzu Application Service). 
 - This annotation transitively includes the [@EnableClusterConfiguration](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) annotation, which dynamically creates regions if they do not exist already. Note that the `@EnableClusterConfiguration` annotation will **only create Regions**, it will not delete or update existing regions.
 
-The example Spring Boot application uses a [@RestController](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-controller) that allows the front end application to interact with a REST API to read, update, and destroy session data (notes in this example application).
+The example Spring Boot application uses a [`@RestController`](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-controller) that allows the front end application to interact with a REST API to read, update, and destroy session data (notes in this example application).
 
 ```java
 @RestController

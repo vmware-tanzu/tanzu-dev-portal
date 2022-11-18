@@ -63,7 +63,7 @@ This section will guide you through testing a *Hello, World!* client app on your
   ```
   $ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
   ```
-* Update the `gradle.properties` file with your Pivotal Commercial Maven Repo username and password. For additional instructions, please review the [Spring Boot for VMware GemFire QuickStart guide](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html).
+* Update the `gradle.properties` file with your Pivotal Commercial Maven Repo username and password. For additional instructions, please review the [Spring Boot for VMware GemFire Quick Start guide](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html).
 
 ### 2. Start an VMware GemFire Cluster
 
@@ -206,4 +206,4 @@ To confirm that your app is connected to your local cluster, in your **gfsh** te
 
  * Set up [VMware GemFire for Kubernetes](/data/gemfire/guides/get-started-gf4k8s-sbgf/). 
   
- * Create an application that utilizes Spring Boot for Vmware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
+ * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
