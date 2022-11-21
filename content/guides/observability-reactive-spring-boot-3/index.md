@@ -207,7 +207,7 @@ curl -G https://start.spring.io/starter.zip -o observable.zip -d dependencies=we
 -d packaging=jar -d jvmVersion=17 -d groupId=com.example -d artifactId=observation -d name=observation  
 ```
 
-First thing after we unzip this, is to add 2 necessary dependencies: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave` that bring in Micrometer Observation, the Micrometer tracing API and Zipkin reporting bridge for reporting traces to Brave compatible tracing endpoints.
+First thing after we unzip this, is to add 2 necessary dependencies: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave` that bring in Micrometer Observation, the Micrometer tracing API and Zipkin reporting bridge for reporting traces to Brave compatible tracing endpoints. 
 
 Additional dependencies in pom.xml:
 
@@ -267,7 +267,6 @@ class GreetingService {
         return Mono
                 .just(new Greeting(name))
                 .delayElement(Duration.ofMillis(lat))
-                .doOnNext(g -> log.info(String.format("Latency: %d", lat)))
                 ;
     }
 }
@@ -296,9 +295,11 @@ class GreetingController {
 
 > **_TIP:_** [WebFluxObservationAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/observation/web/reactive/WebFluxObservationAutoConfiguration.java) is the autoconfiguration class for observation in WebFlux. It includes all of the `ObservationHandler` and `WebFilter`s needed to observe (draw traces and meters from) HTTP requests and responses.
 
-Now, with the basic shape of our main sample out of the way, we can gain some insights as to how observation gets implemented into raw reactive streams. The next section will review necessary steps to gain full interoperability between reactor and micrometer.
+Now, with the basic shape of our main sample out of the way, we can gain some insights as to how observation gets injected into raw reactive streams. The next section will review necessary steps to gain full interoperability between reactor and micrometer.
 
 ## Reactive stream observation
+
+Project reactor comes with [built-in support for micrometer](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/metrics.adoc) instrumentation including opt-in API dependencies that turn `no-op` instrumentation into ones that are fully implemented. 
 
 We will make use of the reactive `tap` operator to instrument the streams in this sample. The `tap` operator makes use of a stateful per-subscription [SignalListener](https://projectreactor.io/docs/core/3.5.0-M2/api/reactor/core/observability/SignalListener.html) to manage the state of the observation in progress.
 
@@ -508,7 +509,7 @@ call - the reactive stream observation made as a child trace to the main HTTP re
 We learned to configure Spring Boot 3 reactive apps with Micrometer. With additional supports,
 we were able to broaden the scope of our monitoring objectives and provide tracing and distributed logging alongside metrics. Furthermore tying concerns together allowed us to demonstrate the powerful `exemplar` feature in Prometheus. 
 
-Project reactor comes with built-in support for micrometer instrumentation including opt-in API enhancements that allow micrometer to engage reactive streams. A fully observed reactive application can be brought up in just a few minutes with Spring Boot 3!
+As we learned, project reactor comes with baked-in support for micrometer instrumentation through opt-in API dependencies.  A fully observed reactive application can be brought up in just a few minutes with Spring Boot 3!
 
 ## Links and Readings
 
