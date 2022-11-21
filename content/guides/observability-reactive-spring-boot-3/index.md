@@ -222,7 +222,7 @@ Additional dependencies in pom.xml:
 		</dependency>
 ```
 
-Open this project in your favorite IDE and follow along, or simply [browse](https://github.com/marios-code-path/path-to-springboot-3) the source for reference. For clarification, we will be adding dependencies as this guide progresses.
+Open this project in your favorite IDE and follow along, or simply [browse](https://github.com/marios-code-path/path-to-springboot-3/tree/main/webflux-observation) the source for reference. For clarification, we will be adding dependencies as this guide progresses.
 
 Lets move on and establish some basic application properties; app name, server port and logging format.
 
