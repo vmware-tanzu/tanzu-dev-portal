@@ -20,7 +20,6 @@
 12SwitchRestoresSansCheckOuts
 2012R2
 2FA
-underserved
 2x2
 32bit
 3D
@@ -2481,6 +2480,7 @@ uncheck
 Uncomment
 uncomment
 undersample
+underserved
 underutilization
 unencoded
 unencrypted
