@@ -1211,6 +1211,7 @@ JetBrains
 Jetbrains
 jetbrains
 Jetstack
+Jfokus
 JFrog
 JHipster
 Jiang
@@ -1287,6 +1288,7 @@ Kaniko
 kapp-controller
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Karlsson
 Kaspersky
 Kat
 [Kk]ata(s)?
@@ -1491,6 +1493,7 @@ matcher
 matchers
 matchings
 Matskas
+Mattias
 mattstratton
 [Mm]atty
 maxUtilization
