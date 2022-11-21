@@ -26,7 +26,7 @@ Please follow the subsequent instructions to set up a Tanzu Application Platform
 
 ![Tanzu Service Mesh Global Controller Diagram](images/image1.png "image_tooltip")
 
-* Activate your Tanzu Service Mesh subscription in [cloud.vmware.com](cloud.vmware.com). Upon purchasing your Tanzu Service Mesh subscription, you should receive instructions from the VMware Cloud team, otherwise follow [these instructions](https://pathfinder.vmware.com/v3/path/tsm_activation).
+* Activate your Tanzu Service Mesh subscription in [cloud.vmware.com](https://cloud.vmware.com). Upon purchasing your Tanzu Service Mesh subscription, you should receive instructions from the VMware Cloud team, otherwise follow [these instructions](https://pathfinder.vmware.com/v3/path/tsm_activation).
 
 #### Step 1: Onboard clusters
 
