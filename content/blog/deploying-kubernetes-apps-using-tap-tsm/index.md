@@ -1,8 +1,8 @@
 ---
 title: "Deploying Kubernetes Apps Using VMware Tanzu Application Platform and Tanzu Service Mesh (Beta)"
 description: Modern applications are comprised of microservices and require services such as service discovery, encryption, traffic controls, and access controls. For applications created on VMware Tanzu Application Platform, these network and security services are enabled with VMware Tanzu Service Mesh, an Istio-based solution that connects and secures microservices across any cluster or cloud boundary. This document showcases the first phase of the integration, where Tanzu Application Platform Kubernetes workloads are connected and secured within clusters, across clusters and across clouds.
-date: "2022-11-14"
-lastmod: "2022-11-14"
+date: "2022-11-21"
+lastmod: "2022-11-21"
 team:
 - Vishal Narayan 
 ---
