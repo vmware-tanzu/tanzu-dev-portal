@@ -42,7 +42,7 @@ This simple app will not can be started with the following settings in `start.sp
 
 Dependencies: 
 
-  * lombok
+  * Lombok
 
 Platform Version:
 
@@ -529,14 +529,10 @@ As we learned, project reactor comes with baked-in support for micrometer instru
 
 [When to use the Pushgateway?](https://prometheus.io/docs/practices/pushing/)
 
-[Marcin Grzejszczak's Observability in Spring Boot 3 write-up](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3)
+[Observability in Spring Boot 3 write-up](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3)
 
 [Exposing Reactor metrics with Micrometer](https://projectreactor.io/docs/core/release/reference/#metrics)
 
 [Observability Migration from Sleuth](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API)
-
-[Jack Neeley's Blog on Exemplars](https://linuxczar.net/blog/2022/01/17/java-spring-boot-prometheus-exemplars/)
-
-[Simon Basle's Blog on Contextual Logging with Reactor and MDC](https://simonbasle.github.io/2018/02/contextual-logging-with-reactor-context-and-mdc/)
 
 [Reactor - Contextual Logging Pattern](https://projectreactor.io/docs/core/release/reference/#faq.mdc)
