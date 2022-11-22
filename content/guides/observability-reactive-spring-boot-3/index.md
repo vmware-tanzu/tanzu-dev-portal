@@ -207,7 +207,7 @@ curl -G https://start.spring.io/starter.zip -o observable.zip -d dependencies=we
 -d packaging=jar -d jvmVersion=17 -d groupId=com.example -d artifactId=observation -d name=observation  
 ```
 
-First thing after we unzip this, is to add 2 necessary dependencies: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave` that bring in Micrometer Observation, the Micrometer tracing API and Zipkin reporting bridge for reporting traces to Brave compatible tracing endpoints. 
+First thing after we unzip this, is to add 2 necessary dependencies: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave` that bring in Micrometer Observation, the Micrometer tracing API and Zipkin reporting bridge for reporting traces to Zipkin compatible tracing endpoints. 
 
 Additional dependencies in pom.xml:
 
@@ -367,11 +367,9 @@ This might take a minute or two since containers need to be transferred over the
 
 ### Prometheus Setup
 
-One of the Prometheus side, we have [scrape config](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) that configures ingest of the actuator endpoint. 
+On the application-facing side of our Prometheus setup, we need to configure a set of [scrape config](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) for ingesting our app's `/actuator/prometheus` endpoint. 
 
-> **_NOTE:_** In this configuration, we are running a docker hosted instance of Prometheus; You may need to change the host names as needed for your specific setup.
-
-The specific `scrape config` block goes into `infra/docker/prometheus/prometheus.yml`:
+The specific `scrape config` is listed below:
 
 ```yaml
 global:
@@ -388,26 +386,23 @@ scrape_configs:
         - targets: ['host.docker.internal:8787']
 ```
 
-First, we set scraping to 2 second intervals, then we enable prometheus to scrape itself - that is monitor its own activity. Finally, we have added a scrape endpoint to actuator prometheus metrics. You may add additional 'actuator/prometheus' endpoints to the `targets` declaration under `spring-apps`.
-
 ### Enable the Prometheus Actuator endpoint
 
-Here, we will configure our app to expose the specific `/actuator/prometheus` endpoint
-used during the scrape process from Prometheus:
+Here, we will configure our app to expose the specific `/actuator/prometheus` endpoint used during the scrape process in Prometheus:
 
 In `application.properties`, add:
 ```properties
-management.endpoints.web.exposure.include=health, prometheus
+management.endpoints.web.exposure.include=prometheus
 ```
 
-Also, because we are going to use support for [exemplars](https://grafana.com/docs/grafana/v9.0/basics/exemplars/) in Prometheus, we will need to enable histogram buckets for our named observations. 
-
-The following configuration adds percentile histogram buckets for `http.server.requests` which is the prefix to the stat names that represents `WebMVC`/`WebFlux` requests. 
+Micrometer [supports](https://micrometer.io/docs/concepts#_histograms_and_percentiles) publishing histograms for computing percentile distributions with the `management.metrics.distribution.percentiles-histogram` property. We can apply a [per meter customization](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.metrics.customizing.per-meter-properties) to the WebFlux/WebMVC `http.server.requests` metrics and produce the target percentiles histogram as follows:
 
 In `application.properties`, add:
 ```properties
 management.metrics.distribution.percentiles-histogram.http.server.requests=true
 ```
+
+> **NOTE:_** That percentiles histograms are needed for Exemplars to function. This has no effect on systems that do not support histogram-based percentile approximations.
 
 ### Configure Loki log aggregation
 
@@ -456,9 +451,30 @@ And the source to our `logback-spring.xml` should be found under `resources`:
 
 ### Tempo configuration
 
-This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships traces over to Tempo. With help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges), we can ship traces to Tempo directly from Micrometer.
+This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships traces over to Tempo. We can ship traces to Tempo's Zipkin receiver With help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges). No additional items in terms of project dependencies are required because we already placed them during sample setup. However, for reference, they are: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave`.
 
-We also need to enable traces in '/actuator' endpoints to get `exemplars` functioning on actuator endpoints. Add the following lines to application.properties:
+We will make use of local filesystem storage, since provisioning a block storage is a bit complex for this example. 
+
+Note that enabling the Zipkin receiver will create a demand for TCP port `9411` (Zipkin). This configuration is using the 'Push with HTTP' option per [Tempo documentation](https://grafana.com/docs/tempo/latest/api_docs/pushing-spans-with-http/).
+
+
+tempo-local.yaml:
+```yaml
+server:
+    http_listen_port: 3200
+
+distributor:
+    receivers:
+        zipkin:
+
+storage:
+    trace:
+        backend: local
+        local:
+            path: /tmp/tempo/blocks
+```
+
+Finally, we will ensure every trace gets to our Zipkin receiver endpoints by adding the following lines to `application.properties`:
 
 ```properties
 management.tracing.enabled=true
@@ -467,11 +483,9 @@ management.tracing.sampling.probability=1.0
 
 ### Grafana dashboards
 
-Grafana will be provisioned with external data given from configuration within `infra/docker/grafana/provisioning/datasources/datasource.yml`. This tells grafana where to find each external source of data we will be querying. We will be tracking spans from Tempo, logs from Loki and Metrics from Prometheus.
+Grafana will be provisioned with external data given from configuration within [infra/docker/grafana/provisioning/datasources/datasource.yml](https://github.com/marios-code-path/path-to-springboot-3/blob/main/infra/docker/grafana/provisioning/datasources/datasource.yml). This tells grafana where to find each external source of data we will be querying. We will be tracking spans from Tempo, logs from Loki and Metrics from Prometheus.
 
-To connect visualization with Prometheus, we will configure our dashboards with Prometheus [queries](https://prometheus.io/docs/prometheus/latest/querying/basics/). This dashboard will visualize our metric/span data and enable us to select a specific sample - an exemplar - to gather a in-depth view at that sample point.
-
-This dashboard configuration is provided in `infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json` and acts as our standard example dashboard called `logs_traces_metrics`.
+This dashboard configuration is provided in [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) and acts as our standard example dashboard called `logs_traces_metrics`. This bit of dashboard code is borrowed mainly from [a recent observability blog post](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
 
 ## Observing the WebFlux app
 
@@ -536,3 +550,5 @@ As we learned, project reactor comes with baked-in support for micrometer instru
 [Observability Migration from Sleuth](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API)
 
 [Reactor - Contextual Logging Pattern](https://projectreactor.io/docs/core/release/reference/#faq.mdc)
+
+[Tempo configuration](https://grafana.com/docs/tempo/latest/configuration/) 
