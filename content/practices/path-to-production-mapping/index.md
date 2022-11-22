@@ -13,8 +13,7 @@ why:
     - This process helps to create a detailed overview of the Path to Production and can help resolve misalignment on the process between different teams and roles. It can also help to identify and resolve process bottlenecks and find opportunities to improve the process.
 when:
     - During the technical discovery before deploying the application.
-    - When you are able to run a highly collaborative session, with multiple people contributing at the same time. If your tools or situation do not allow for this, [Value Stream Map](/practices/value-stream-map/)
-      is an alternative where one person drives the mapping.
+    - When you are able to run a highly collaborative session, with multiple people contributing at the same time. If your tools or situation do not allow for this, Value Stream Map is an alternative where one person drives the mapping.
 what:
     - 'Whiteboard or digital version like [Miro](https://miro.com/)'
     - Dry erase markers
