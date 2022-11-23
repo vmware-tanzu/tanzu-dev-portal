@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "All that digital transformation, DevOps, whatever is going to require organization change"
-description: "All that digital transformation, DevOps, whatever is going to require organization change"
+title: "All that digital transformation, DevOps, etc. requires organization change (14/14) - Tanzu Talk"
+description: "All that digital transformation, DevOps, etc. requires organization change (14/14) - Tanzu Talk"
 episode: "166"
 aliases: ["0166"]
 publishdate: "2020-04-01T00:00:00-07:00"
