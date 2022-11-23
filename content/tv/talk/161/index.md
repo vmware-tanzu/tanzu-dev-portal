@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "All talk and no tools -  - Digital Transformation Bottlenecks (11/14) - Tanzu Talk"
-description: "All talk and no tools -  - Digital Transformation Bottlenecks (11/14) - Tanzu Talk"
+title: "All talk and no tools -  Digital Transformation Bottlenecks (12/14) - Tanzu Talk"
+description: "All talk and no tools -  Digital Transformation Bottlenecks (12/14) - Tanzu Talk"
 episode: "161"
 aliases: ["0161"]
 publishdate: "2020-04-01T00:00:00-07:00"
