@@ -4,10 +4,12 @@ description: How to set up a VMware GemFire service instance on the Tanzu Applic
   Service.
 lastmod: '2021-04-22'
 link-title: Getting Started with VMware GemFire for TAS
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for TAS
 type: data-guides
 weight: 2
+aliases:
+    - get-started-tgf4vms-sbdg/
 ---
 
 This guide will walk you through creating and testing a VMware GemFire service instance on the Tanzu Application Service (TAS) using a `Hello, World!` client application.
@@ -72,7 +74,7 @@ Starting in a terminal
 
 
 4.  Click on ***VMware GemFire***.
-    ![Click on VMware GemFire in Apps Manager](images/tanzu_gemfire_apps_manager.png)
+    ![Click on VMware GemFire in Apps Manager](images/gemfire_apps_manager.png)
 
 
 
@@ -110,25 +112,27 @@ This section will guide you through testing a `Hello, World!` client application
 
 ### What You'll Need
 
-* The [Hello, World!](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/hello-world) example.
+* The [Hello, World!](https://github.com/gemfire/spring-for-gemfire-examples/tree/main/hello-world) example.
 * JDK 8 or 11
-* Spring Boot 2.1 or above
-* Spring Boot for Apache Geode
-* A running VMware GemFire service instance on TAS
+* Spring Boot 2.6 or above
+* Spring Boot for VMware GemFire
+* VMware GemFire for TAS 1.14.5+
+* [A Pivotal Commercial Maven Repo account (free)](https://commercial-repo.pivotal.io/login/auth)
+
 
 ###  1. Download the Hello, World! Example
 
-Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
+Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-gemfire-examples). 
 
 ```
-$ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
+$ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
 ```
 
 ### 2. Edit the `manifest.yaml` File
 
-* Navigate to the `spring-for-apache-geode-examples/hello-world` directory. 
+* Navigate to the `spring-for-gemfire-examples/hello-world` directory. 
 * Open the `manifest.yml file`. 
-* Replace the string `<your-tanzu-gemfire-service>` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
+* Replace the string `<your-gemfire-for-tas-service-instance-name>` with the name of your VMware GemFire service instance. If you're not sure of the instance name, run the `cf services` command.
 
 
 ### 3. Push your application to TAS
@@ -139,7 +143,7 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
 
 The `cf push` operation will bind the Hello,World! app to the VMware GemFire service instance named in your `manifest.yaml` file  and then start the app.
 
- When the app is up and running, the `cf push` command should output information about the app in the terminal.  One the fields listed will be the `route`.  In a browser copy and paste the `[route from cf push]/hello`.
+ When the app is up and running, the `cf push` command should output information about the app in the terminal.  One of the fields listed will be the `route`.  In a browser copy and paste the `route from cf push`.
  
  You should see something similar to the below, which represents an artificial time delay simulating a database query.
  
@@ -189,4 +193,4 @@ Congratulations! You’re ready to start using VMware GemFire. You will need to 
  
  Now that you have successfully created a running VMware GemFire service instance, check out some other guides.
     
-  * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
+  * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).
