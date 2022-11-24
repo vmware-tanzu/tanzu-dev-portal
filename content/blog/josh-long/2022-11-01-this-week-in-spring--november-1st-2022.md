@@ -21,7 +21,7 @@ title: 'This Week in Spring - November 1st, 2022'
 
 <div>
  <p>Hi, Spring fans! Welcome to another installment of <em>This Week in Spring</em>! How?re you doin?? I hope you?re doing well and had a great Halloween if you celebrate. I?m doing great. I?m in sunny Kuala Lumpur, Malaysia, eating delicious food and hanging out with amazing people. Tomorrow, I?m off to Penang, Malaysia, for a little tourism before I get back to a more code-driven kinda fun: I?ll be <a href="https://kubernetes-native-java-josh-long-developerkaki.peatix.com/">doing a developer event looking at the latest-and-greatest from Spring Boot 3</a> here in <strong>Kuala Lumpur</strong> on the 11th of November - ten short days from now! - so please join me!</p>
- <p>Also, I just joined <em>Mastodon</em> - a decentralized and open-source Twitter; I?m not leaving Twitter, of course, but I would love to make new friends and grow the community there: <a href="https://mastodon.online/@starbuxman">@<span class="__cf_email__" data-cfemail="8cfff8edfeeef9f4e1ede2cce1edfff8e3e8e3e2a2e3e2e0e5e2e9">[email&nbsp;protected]</span></a>! </p>
+ <p>Also, I just joined <em>Mastodon</em> - a decentralized and open-source Twitter; I?m not leaving Twitter, of course, but I would love to make new friends and grow the community there: <a href="https://mastodon.online/@starbuxman">@<span class="__cf_email__" data-cfemail="3a494e5b48584f42575b547a575b494e555e55541455545653545f">[email&nbsp;protected]</span></a>! </p>
  <p>Anyway, my friends, housekeeping aside, we?ve got a <em>ton</em> of amazing things to talk about today so let?s dive right into it!</p>
  <ul>
   <li><a href="https://www.youtube.com/watch?v=qkgdjIsNYA0">Automated Code Migrations With Spring Boot Migrator | Fabian Krueger (EN)</a></li>
