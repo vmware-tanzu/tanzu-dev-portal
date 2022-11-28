@@ -52,43 +52,43 @@ other = "Posts in"
 
 # Practices
 [why_do_it]
-other = "Why do it?"
+other = "수행 이유"
 
 [when_to_do_it]
-other = "When to do it?"
+other = "수행 시기"
 
 [what_supplies_are_needed]
-other = "What supplies are needed?"
+other = "필요한 물품"
 
 [how_to_use_this_method_remotely_title]
-other = "How to use this method remotely?"
+other = "이 방식을 원격으로 사용하는 방법"
 
 [how_to_use_this_method_remotely_text]
-other = "There is currently a remote template available in Miro. Here you will find step instructions on how to conduct this practice remotely including general tips and info."
+other = "현재 Miro에서 원격 템플릿을 사용할 수 있습니다. 여기에서 일반적인 팁과 정보를 비롯하여 이 사례를 원격으로 수행하는 방법에 관한 단계 지침을 찾을 수 있습니다."
 
 [open_miro]
-other = "Open Miro. In the side menu, select 'Templates'"
+other = "Miro를 엽니다. 측면 메뉴에서 ‘Templates’(템플릿)를 선택합니다."
 
 [search_for_tanzu]
-other = "2. Search for \"Tanzu\" to see all, or"
+other = "2. “Tanzu”를 검색하여 모두 확인하거나"
 
 [click_here]
-other = "click here"
+other = "여기를 클릭하여 "
 
 [to_use_this_template]
-other = "to use this template"
+other = "이 템플릿을 사용합니다."
 
 [suggested_time]
-other = "Suggested Time"
+other = "제안 시간"
 
 [participants]
-other = "Participants"
+other = "참가자"
 
 [phases]
-other = "Phases"
+other = "단계"
 
 [filter]
-other = "Filter"
+other = "필터"
 
 [view_all]
-other = "View all"
+other = "필터"

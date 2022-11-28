@@ -1,0 +1,241 @@
+---
+date: '2021-02-09'
+description: 사용자 스토리를 단계별로 분할된 흐름에 정리하여 릴리스 주기를 계획합니다.
+
+lastmod: '2021-03-17'
+length: 1시간
+participants: 핵심 팀, 이해관계자
+tags:
+- 프레이밍
+- 인셉션
+title: 스토리 매핑
+what:
+- 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
+- 스티커 메모
+- 마커
+- 파란색 마스킹 테이프
+when:
+- During inception, to translate Discovery & Framing outcomes (likely a product prototype
+  and user journeys) into a prioritized product backlog.
+why:
+- We use story mapping to collaboratively translate the users’ journey into tasks,
+  broken down into epics and user stories as we transition from Discovery & Framing
+  to delivery. This helps us to sequence user tasks, create a prioritized product
+  backlog and chunk initial product releases. A story map also creates shared understanding
+  about the functionality of the product.
+---
+
+<h2 id="how-to-use-this-method">이 방식을 활용하는
+방법</h2>
+
+<div class="bg-gray-dark p-lg-5 p-3 mb-4"><div
+class="col-lg-9"><h3
+id="sample-agenda--prompts">샘플 안건 및 메시지</h3>
+
+<ol>
+
+<li>
+
+<p>매핑하기 전에 짧은 제품 또는 기능 개요를 작성하여 매핑하는 대상의 틀을 짜고 범위를 제한합니다. 이를 하나의
+거대한 스토리로 생각하십시오. 생성하는 제품 또는 해결하는 문제는 무엇입니까? 고객 또는 사용자는 누구입니까? 각 사용자는
+어떤 이점을 얻을 수 있습니까? 이 스토리를 구축하는 데 관심이 있는 이유는 무엇이며 자신에게 어떤 이점이
+있습니까?</p>
+
+</li>
+
+<li>
+
+<p>각 참가자에게 동일한 색상의 스티커 메모 뭉치를 나누어 줍니다. 모든 사람이 이 스티커 메모를 사용하여 사용자
+작업을 통한 제품의 스토리를 이야기하게 될 것이라고 설명합니다.</p>
+
+<div class="callout td-box--gray-darkest p-3 my-5
+border-bottom border-right border-left border-top row"><div
+class="col-1 row align-items-center
+justify-content-center"><svg height="30"
+aria-hidden="true" focusable="false"
+data-prefix="far" data-icon="lightbulb"
+role="img" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 352 512" class="svg-inline--fa
+fa-lightbulb"><path fill="currentColor"
+d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16
+16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06
+459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32
+7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7
+2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0
+44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42
+92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64
+59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24
+60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0
+0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55
+260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"
+class=""></path></svg></div><div
+class="col-11"><p><strong>팁</strong>:
+“기본 사용자”가 수행하는 첫 번째 작업으로 스토리를 시작해야 합니다. 스토리가 전개됨에 따라 다른 사용자가 스토리에
+개입되어야 할 수 있으며, 그래도 괜찮습니다. (때때로 서사적인 관점에서 컴퓨터 또는 기기를 사용자로 엮어 넣어야 할 수도
+있습니다.) 참가자들이 특정 스티커 메모에서 어떤 사용자가 작업을 수행하는지만 알 수 있도록 하면
+됩니다.</p></div></div>
+
+</li>
+
+<li>
+
+<p>모든 사람에게 몇 분간 조용히 제품 또는 솔루션의 서사적인 흐름을 함께 구성하는 사용자 작업을 생각해 내라고
+요청합니다.</p>
+
+<div class="callout td-box--gray-darkest p-3 my-5
+border-bottom border-right border-left border-top row"><div
+class="col-1 row align-items-center
+justify-content-center"><svg height="30"
+aria-hidden="true" focusable="false"
+data-prefix="far" data-icon="lightbulb"
+role="img" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 352 512" class="svg-inline--fa
+fa-lightbulb"><path fill="currentColor"
+d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16
+16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06
+459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32
+7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7
+2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0
+44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42
+92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64
+59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24
+60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0
+0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55
+260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"
+class=""></path></svg></div><div
+class="col-11"><p><strong>팁</strong>: 이
+시점에서는 스토리를 얕고 폭넓게 유지하는 것이 중요합니다. 이 시점에서는 모든 세부적인 내용을 끄집어내기보다는 전체 스토리를
+떠올려야 합니다.</p></div></div>
+
+</li>
+
+<li>
+
+<p>한 번에 하나씩 개별 작업의 각 참가자에게 질문하여 화이트보드에 사용자 작업을 놓기 시작합니다. 중복 항목이
+있는 경우 단계를 가장 잘 포착하는 항목을 사용하고 나머지는 버립니다.</p>
+
+<div class="callout td-box--gray-darkest p-3 my-5
+border-bottom border-right border-left border-top row"><div
+class="col-1 row align-items-center
+justify-content-center"><svg height="30"
+aria-hidden="true" focusable="false"
+data-prefix="far" data-icon="lightbulb"
+role="img" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 352 512" class="svg-inline--fa
+fa-lightbulb"><path fill="currentColor"
+d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16
+16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06
+459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32
+7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7
+2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0
+44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42
+92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64
+59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24
+60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0
+0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55
+260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"
+class=""></path></svg></div><div
+class="col-11"><p><strong>팁</strong>: 이
+단계에 대해 만족스러운 하나의 경로에 집중하십시오. 그런 다음 차후에 부차적인 작업을 통합할
+것입니다.</p></div></div>
+
+<p>각 작업을 추가한 후 그룹과 함께 순서가 올바른지, 그리고 중요한 작업을 건너뛰지 않았는지
+확인합니다.</p>
+
+</li>
+
+<li>
+
+<p><strong>선택 사항:</strong> 스티커 메모를 사용하여 사용자 스토리 그룹에
+해당 에픽으로 레이블을 지정합니다.</p>
+
+</li>
+
+<li>
+
+<p>참가자들이 화이트보드 앞으로 나와 매핑 작업에 참여하도록 합니다. 이들에게 이미 개괄적으로 작성한 “만족스러운
+경로”에서 변형이나 편차가 있는지 생각해 보라고 요청합니다.</p>
+
+<div class="callout td-box--gray-darkest p-3 my-5
+border-bottom border-right border-left border-top row"><div
+class="col-1 row align-items-center
+justify-content-center"><svg height="30"
+aria-hidden="true" focusable="false"
+data-prefix="far" data-icon="lightbulb"
+role="img" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 352 512" class="svg-inline--fa
+fa-lightbulb"><path fill="currentColor"
+d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16
+16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06
+459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32
+7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7
+2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0
+44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42
+92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64
+59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24
+60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0
+0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55
+260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"
+class=""></path></svg></div><div
+class="col-11"><p><strong>팁</strong>:
+“~한다면 좋지 않겠습니까?” 놀이를 진행하여 원하는 만큼 공상적인 스토리를 생각해 보는 것도 좋습니다. 제안된 UI 또는
+비즈니스 규칙과 같은 제품 세부 사항을 추가합니다.</p></div></div>
+
+</li>
+
+<li>
+
+<p>참여자들에게 스티커 메모에 부차적인 작업을 적도록 요청하고 기반 스티커 메모 아래에 이를 적절한 순서로
+배치합니다.</p>
+
+</li>
+
+<li>
+
+<p>맵을 분할할 릴리스의 수를 결정합니다(이것은 나중에 언제든 조정할 수 있습니다).</p>
+
+</li>
+
+<li>
+
+<p>상대적으로 동등한 가치를 제공하도록 테이프를 사용하여 스토리 맵을 사용자 스토리 세그먼트(릴리스)로
+나눕니다.</p>
+
+</li>
+
+<li>
+
+<p>각 릴리스의 목표를 정의하고 해당하는 각 릴리스 옆에 적습니다.</p>
+
+</li>
+
+<li>
+
+<p>각 사용자 스토리의 배치를 재평가합니다. 필요한 경우 스토리를 옮깁니다.</p>
+
+</li>
+
+</ol>
+
+</div></div>
+
+<div class="bg-gray-dark p-lg-5 p-3 mb-4"><div
+class="col-lg-9"><h3
+id="successexpected-outcomes">성공/예상되는 성과</h3>
+
+<p>팀이 자신들이 구축해야 할 항목과 사용자 스토리의 백로그가 정확하게 표현되었다고 느끼면 완료된
+것입니다.</div></div>
+
+<div class="bg-gray-dark p-lg-5 p-3 mb-4"><div
+class="col-lg-9"><h3
+id="facilitator-notes--tips">진행자 메모 및 팁</h3>
+
+<p>사용자 작업은 “e-메일 읽기” 또는 “메시지에 응답하기”와 같은 짧은 동사구입니다. 너무 자세하게 작성하지
+말고 기능적인 수준으로 작업을 유지하십시오. 이는 개인이 작업 도중에 휴식을 취하지 않고도 마칠 수 있을 정도가 작업의 적절한
+규모라는 의미입니다. 예를 들어, 일상적인 루틴 스토리에서 작업은 “샤워를 하는 것”일 수 있습니다. 샤워의 “수온 변경”은
+너무 상세하고(하위 기능), “출근 준비”는 너무 광범위합니다.</p>
+
+<p>만족스러운 경로를 먼저 작업한 다음 심층 탐구 부분에서 사용자가 제품에 대해 수행할 수 있는 대체 경로를
+포착하십시오.</p>
+
+</div></div>
