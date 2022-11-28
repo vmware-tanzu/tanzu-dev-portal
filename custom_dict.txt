@@ -330,6 +330,7 @@ Campuzano
 Canz
 Cao
 Capili
+cardinality
 Carducci
 Carta
 Cartographer
@@ -1222,6 +1223,7 @@ JetBrains
 Jetbrains
 jetbrains
 Jetstack
+Jfokus
 JFrog
 JHipster
 Jiang
@@ -1298,6 +1300,7 @@ Kaniko
 kapp-controller
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Karlsson
 Kaspersky
 Kat
 [Kk]ata(s)?
@@ -1452,6 +1455,8 @@ LogPartitionedRegionBucketDetailsFunction
 logQueue
 [lL]ogrus
 Logstash
+loki
+loki4j
 Lombok
 lookups
 lookups.
@@ -1504,6 +1509,7 @@ matcher
 matchers
 matchings
 Matskas
+Mattias
 mattstratton
 [Mm]atty
 maxUtilization
@@ -1528,6 +1534,7 @@ MessagingBase
 metac
 MetaConference
 [Mm]etacontroller
+MeterObservationHandler
 MeterRegistry
 MetricsProvider
 MetricsPublishingService
@@ -1686,6 +1693,8 @@ OAuth2?
 ObjectFilter
 ObjectGraphSizer
 [Oo]bservability
+ObservationHandler
+ObservationTextPublisher
 OCI(-compliant)?
 Octant
 OCTO
@@ -1950,6 +1959,7 @@ Pulkit
 pullPolicy
 Pulumi
 pushable
+Pushgateway
 putAll
 PuTTYgen
 PVC?s?
@@ -2233,6 +2243,7 @@ Shopen
 Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
+SignalListener
 siloed
 simonbrown
 SingleMemberRegionSize
@@ -2330,6 +2341,7 @@ Strangeloop
 strategizing
 Strategyzer
 Stratton
+StreamListener
 StringBuilder
 Strobl
 stroopwafels
@@ -2462,6 +2474,7 @@ totalQueueTime
 totalTransmissionTime
 TraceReactorAutoConfiguration
 traceroute
+TracingAwareMeteredObservationHandler
 TracingRSocketConnectorConfigurer
 tradeoff(s)?
 Tradeoffs
@@ -2651,6 +2664,8 @@ WebClient
 WebClient's
 WeBeFoods
 WebFlux
+Webflux
+WebFluxObservationAutoConfiguration
 WebForm(s)?
 [Ww]ebforms
 [Ww]ebhook(-based|s)?
