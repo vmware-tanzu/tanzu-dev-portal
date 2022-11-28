@@ -11,20 +11,15 @@ tags:
 title: 솔루션 브레인스토밍
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
-- Prioritized insights & problems
-- Large sheets (11"x17") of paper / A3 paper
-- Large sticky notes
-- Small sticky notes
+- 우선순위가 정해진 통찰력 및 문제
+- 큰 (11"x17") 용지 / A3 용지
+- 큰 접착식 메모
+- 작은 접착식 메모
 - 네임펜
 when:
-- Solution Brainstorming is often one of the first times that we begin to explore
-  solutions and features. We run this activity after identifying and prioritizing
-  insights & problems because we want to solve for the most important things first.
+- 솔루션 브레인스토밍이 솔루션과 기능을 탐색하기 시작하는 첫 번째 시점인 경우가 많습니다. 일반적으로 가장 중요한 문제를 먼저 해결해야 하므로 통찰력과 문제들을 파악하고 우선순위를 정한 후에 이 활동을 수행합니다.
 why:
-- We do this activity so that the entire team -— product managers, designers, and
-  engineers -— is able to document their ideas and contribute to the overall solution,
-  enhancing our shared responsibility for the success of the product. After all, no
-  single discipline has a monopoly on good ideas!
+- 제품 관리자, 디자이너 및 엔지니어를 비롯한 전체 팀이 아이디어를 문서화하고 전체 솔루션에 기여할 수 있도록 이 활동을 수행하여 제품의 성공에 대한 공동 책임을 강화합니다. 결국, 좋은 아이디어를 한 부서가 독차지하는 일이 없도록 해야 합니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

@@ -5,18 +5,16 @@ description: 스피드백 피드백은 그룹(일반적으로 팀) 내에서 피
 lastmod: '2021-03-26'
 length: 세션+준비당 10분
 linkTitle: 스피드백 피드백
-participants: 'Delivery team: PMs, Designers, and Engineers'
+participants: "제공 팀: PM, 디자이너, 엔지니어"
 tags:
 - 제공
 title: 스피드백 피드백
 what:
-- Note-taking materials or app
+- 필기물 또는 앱
 when:
-- As needed; suggest Quarterly
+- 필요 시, 분기별로 제시
 why:
-- Speedback is an opportunity for all participants to give and receive a wide breadth
-  of feedback within a relatively short amount of time. Speedback is also an accessible
-  means to introduce a culture of feedback.
+- 스피드백은 모든 참가자가 비교적 짧은 시간 내에 다양한 피드백을 주고받을 기회입니다. 스피드백은 피드백 문화를 도입하는 데 접근성이 뛰어난 수단이기도 합니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

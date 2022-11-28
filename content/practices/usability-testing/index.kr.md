@@ -11,11 +11,11 @@ image: "cover-image.png"
 lastmod: "2022-04-15"
 date: "2022-04-15"
 why: 
-- Validation of designs through usability testing helps ensure that we are building a user-centered design that will be impactful to the users and their needs. In order to create value to the user, we need to assure that we are solving a problem in a way that makes sense to them. This session offers an overview of best practices in order to align the team before they conduct usability tests.
+- 사용성 테스트를 통한 디자인 검증은 사용자와 이들의 요구에 영향을 미칠 수 있는 사용자 중심 디자인을 수립하는 데 도움이 됩니다. 사용자에게 가치를 창출하기 위해서는 사용자에게 맞는 방식으로 문제를 해결하고 있는지 확인해야 합니다. 이 세션은 사용성 테스트를 수행하기 전에 팀을 조정하기 위한 모범 사례에 대한 개요를 제공합니다.
 when:
-- Given the importance of research early in the project, usability tests are typically done early and often when you want to validate the design of a feature or flow before it is developed. Please ensure that there are prototypes designed and created for the users to test accordingly.
+- 프로젝트 초기 연구의 중요성을 고려해 사용성 테스트는 일반적으로 초기에 이루어지며, 기능 또는 흐름을 개발하기 전에 디자인의 유효성을 검사하려는 경우에 이루어지기도 합니다. 사용자가 적절히 테스트할 수 있도록 디자인되고 제작된 프로토타입이 있어야 합니다.
 what:
-- Prototyping tool(s) such as [Invision](https://www.invisionapp.com/) or [Figma](https://www.figma.com/)
+- Invision 또는 Figma와 같은 프로토타이핑 툴
 
 # If this practice or workshop has a Miro template: remote: true
 remote: false

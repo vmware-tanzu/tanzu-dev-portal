@@ -6,9 +6,7 @@ resources:
   src: images/example-3.png
 lastmod: '2021-03-25'
 length: 매우 다양
-participants: Everyone with a vested interest. The core team should be involved in
-  initial brainstorming (step 1) and direct stakeholder should be brought along as
-  estimates shape up (steps 2-5).
+participants: 기득권을 가진 모든 사람입니다. 핵심 팀은 초기 브레인스토밍(1단계)에 참여해야 하며, 예측이 구체화될 때에는 직접적인 이해관계자가 동반해야 합니다(2~5단계).
 tags:
 - 검색
 - 프레이밍
@@ -16,16 +14,12 @@ tags:
 title: 제품 평가
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
-- Spreadsheet app (like Excel)
-- Paper and Pens or shared collaboration documents
+- "스프레드시트 앱(예: Excel)"
+- 종이 및 펜 또는 공유되는 협업 문서
 when:
-- A product valuation can be generated at any stage, and is useful at any stage. It
-  is most important to do any time that there is not an abundance of clarity into
-  the value that the team is creating, and stakeholders need a better understanding
-  to inform staffing or product decisions.
+- 제품 평가는 모든 단계에서 이루어질 수 있으며, 모든 단계에서 유용합니다. 팀이 창출하는 가치에 대한 명확한 설명이 부족할 때 언제든지 제품을 평가하는 것이 가장 중요하며, 이해관계자는 직원 배치나 제품 관련 의사 결정에 대해 더 잘 알고 있어야 합니다.
 why:
-- It builds trust and transparency with stakeholders, supports alignment on product
-  decisions, and creates visibility into the importance of the team’s work.
+- 그러면 이해관계자와의 신뢰와 투명성을 구축하고, 제품 관련 의사 결정에 대한 지지를 받고, 팀 작업의 중요성을 알릴 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

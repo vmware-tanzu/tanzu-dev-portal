@@ -15,14 +15,9 @@ what:
 - 마커
 - 파란색 마스킹 테이프
 when:
-- During inception, to translate Discovery & Framing outcomes (likely a product prototype
-  and user journeys) into a prioritized product backlog.
+- 시작 단계에서 탐색 및 구성 결과(제품 프로토타입 및 사용자 여정 등)를 우선순위가 지정된 제품 백로그로 변환합니다.
 why:
-- We use story mapping to collaboratively translate the users’ journey into tasks,
-  broken down into epics and user stories as we transition from Discovery & Framing
-  to delivery. This helps us to sequence user tasks, create a prioritized product
-  backlog and chunk initial product releases. A story map also creates shared understanding
-  about the functionality of the product.
+- 사례 매핑을 사용하여 협업을 통해 사용자의 여정을 작업으로 변환하고, 탐색 및 구성에서 제공으로 전환하는 과정에서 뛰어난 성과 및 사용자 사례로 구분합니다. 이를 통해 사용자 작업 순서를 지정하고, 우선순위가 지정된 제품 백로그를 생성하고, 초기 제품 릴리스의 청크를 사용할 수 있습니다. 사례 맵을 통해 제품의 기능에 대한 지식을 공유할 수도 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

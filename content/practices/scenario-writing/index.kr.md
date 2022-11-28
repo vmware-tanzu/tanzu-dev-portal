@@ -13,18 +13,12 @@ title: 시나리오 작성
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
 - 화이트보드용 마커
-- Output from **Personas** workshop
+- 개인 워크숍의 결과
 - 마스킹 테이프
 when:
-- You can write scenarios during Discovery to outline the existing experience, but
-  they are usually written in Framing (or Delivery) to capture an idealized experience
-  and often followed by a Design Studio
+- 탐색 중에 시나리오를 작성하여 기존 경험을 개략적으로 설명할 수 있지만, 시나리오는 일반적으로 이상적인 경험을 포착하기 위해 구성 또는 제공 과정에서 작성된 후에 디자인 스튜디오로 넘어가는 경우가 많습니다.
 why:
-- This activity allows the team to tell a story about either the user's current, potentially
-  frustrating experience with the core problem or their future, ideally positive experience
-  after the team’s solution is in place. Doing this provides structure in advance
-  of exploratory research—drawing out areas to probe—or leverages what the team has
-  learned to support solution sketching.
+- 이 활동을 통해 팀은 핵심 문제로 인해 사용자가 현재 좌절감을 느낄 만한 경험 또는 팀의 해결책이 적용된 후 앞으로의 긍정적인 경험에 대해 이야기할 수 있습니다. 이 작업을 통해 탐색 연구에 앞서 연구할 영역을 도출하는 구조를 제공하거나 팀이 배운 내용을 활용하여 해결책을 작성해 볼 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

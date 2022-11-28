@@ -5,16 +5,16 @@ description: 스토리와 기능을 반복적으로 제공할 수 있는 작은 
 # Note: remove any tags that are not relevant.
 tags: ["제공"]
 length: "다양: 1분~1시간 이상"
-participants: "Product Manager, with input from designers and developers"
+participants: 디자이너 및 개발자의 의견을 수렴하는 제품 관리자
 image: "cover-image.png" 
 lastmod: "2021-10-06"
 date: "2021-10-06"
 why: 
-- User stories are a critical and ubiquitous form of documentation on a Balanced Team. With user stories, you translate big ideas into independently deliverable pieces of value, which are then prioritized in a backlog for implementation. Getting user stories right is crucial for having a healthy process and an effective team dynamic.
+- 사용자 사례는 균형 잡힌 팀에 대해 중요하면서도 범용적인 형태를 가집니다. 사용자 사례를 통해 큰 아이디어를 개별적으로 제공할 수 있는 가치로 변환한 다음, 구현을 위해 백로그에서 우선순위를 지정합니다. 사용자 사례를 올바르게 파악하는 것은 건전한 프로세스와 효과적인 팀 역학 관계를 수립하는 데 매우 중요합니다.
 when:
-- User stories are written throughout the lifecycle of product development. Having user stories in various states of readiness is key to keeping a healthy flow of value through the backlog.
+- 사용자 사례는 제품 개발 수명주기 전반에 걸쳐 작성됩니다. 다양한 준비 상태의 사용자 사례를 보유하는 것은 백로그를 통해 가치의 건전한 흐름을 유지하는 데 중요합니다.
 what:
-- Your backlog management tool (e.g. Pivotal Tracker)
+- "백로그 관리 툴(예: Pivotal Tracker)"
 remote: false
 miro_template_url: "URL for related Miro template" 
 ---

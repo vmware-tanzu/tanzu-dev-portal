@@ -7,7 +7,7 @@ lastmod: '2021-03-17'
 length: 2시간 이상
 linkTitle: 성과 중심 로드맵
 miro_template_url: ''
-participants: Product Manager(s), 핵심 팀, 이해관계자
+participants: 제품 관리자, 핵심 팀, 이해관계자
 remote: false
 tags:
 - 검색
@@ -20,16 +20,15 @@ what:
 - 마스킹 테이프
 - '원격의 경우: [Miro](https://miro.com/)'
 when:
-- You’ve started development but don’t have a roadmap
-- During development, you need a way to align your backlog with your goals and metrics
-- Product sponsors and stakeholders ask for more visibility into the product direction
-  and your progress
+- 개발을 시작했지만 로드맵이 없음
+- 개발 과정에서 목표 및 측정지표에 맞게 백로그를 조정할 방법이 필요함
+- 제품 후원자와 이해관계자가 제품의 방향과 진행 상황을 더 잘 알 수 있게 해달라고 요청
 why:
-- Align our day-to-day work with the product vision and strategy
-- Keep focused on one goal at a time, and move metrics incrementally
-- Prioritize based on business & user value
-- Establish and maintain stakeholder and cross-team alignment, collaboration and visibility
-- Create a backlog
+- 제품 비전 및 전략에 따라 일상 작업 조정
+- 한 번에 하나의 목표에 집중하고 측정지표를 점진적으로 이동
+- 비즈니스 및 사용자 가치에 따라 우선순위 지정
+- 이해관계자 및 팀 간 조율, 협업 및 가시성을 수립하고 유지
+- 백로그 생성
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

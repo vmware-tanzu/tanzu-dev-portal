@@ -4,15 +4,15 @@ linkTitle: 사후 분석
 description: 제품이나 사용자에게 영향을 미치는 인시던트로부터 교훈을 얻는 연습입니다. SRE 커뮤니티에서는 이 연습을 인시던트 회고라고 합니다.
 tags: ["제공"]
 length: 1시간
-participants: "핵심 제공 팀, 이해관계자, and support team"
+participants: "핵심 제공 팀, 이해관계자, 및 지원 팀"
 lastmod: "2021-07-28"
 date: "2021-07-28"
 why: 
-- Postmortems help to reduce the recurrence of negative incidents
+- 사후 검토는 부정적인 인시던트의 재발을 줄이는 데 도움이 됨
 when:
-- When the team agrees that there is something to learn about the incident or near miss
-- During the incident or soon after it is resolved, as long as the session would not interfere with resolving the incident
-- Stakeholders or another team (e.g. support team) has asked for a postmortem session
+- 팀이 인시던트 또는 실수할 뻔한 사건에 대해 배울 점이 있다는 데 동의할 때
+- 세션이 인시던트를 해결하는 데 방해가 되지 않는 한 인시던트 도중 또는 해결된 직후
+- "이해관계자 또는 다른 팀(예: 지원 팀)이 사후 검토 세션을 요청함"
 
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전

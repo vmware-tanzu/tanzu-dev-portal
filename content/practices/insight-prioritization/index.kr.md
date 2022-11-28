@@ -12,14 +12,11 @@ title: 통찰력 우선순위 지정
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
 - 마스킹 테이프
-- Any insights you've identified in previous workshops
+- 이전 워크숍에서 식별한 통찰력
 when:
-- During Discovery & Framing, after conducting and synthesizing exploratory research.
+- 탐색 및 구성 진행 중, 탐색 연구를 수행하고 합성한 이후입니다.
 why:
-- Insight Prioritization helps us understand "what are the first set of problems that
-  need solving?". It looks at insights—"aha!" moments where critical thinking results
-  in a meaningful conclusion—in order to help provide color to our problem space and
-  eventual solutions.
+- 통찰력 우선순위 지정을 통해 "해결해야 할 첫 번째 문제"를 더 효과적으로 이해할 수 있습니다. 이는 문제 영역과 궁극적인 솔루션을 밝혀내기 위한 비판적 사고로 의미 있는 결론을 도출함으로써 "깨달음", 즉 통찰력을 얻는 것을 목표로 합니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

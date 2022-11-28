@@ -17,16 +17,11 @@ what:
 - 스티커 메모
 - 마커
 - 작은 원형 스티커
-- Persona(s)
+- 개인
 when:
-- The best time to do a Journey Map is after a few rounds of user research, when synthesizing
-  data into insights. Alternatively, Journey Maps can be used to align the stakeholder’s
-  vision of a Customer Journey, before starting User Research. During Framing, the
-  map can be modified to match a “future” state where the proposed solution exists.
+- 여정 맵을 사용하기에 가장 좋은 시기는 데이터를 통찰력으로 합성할 때 사용자 연구를 몇 차례 수행한 후입니다. 사용자 연구를 시작하기 전에 고객 여정 이해관계자의 비전에 부합하기 위해 여정 맵을 사용할 수도 있습니다. 구성 과정에서 제안된 솔루션이 존재하는 "미래" 상태와 일치하도록 맵을 수정할 수 있습니다.
 why:
-- During Discovery, a journey map can help arrange individual data points into chronological
-  order. During Framing, the team can return to a journey map to identify the point
-  in the journey when a proposed solution will be used by a customer.
+- 탐색 과정에서 여정 맵은 개별 데이터 지점을 시간 순으로 배열하는 데 도움이 될 수 있습니다. 구성 과정에서 팀은 제안한 솔루션을 고객이 사용할 시점을 파악하기 위해 여정 맵으로 돌아갈 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

@@ -7,16 +7,16 @@ linkTitle: 반복 사전 계획
 description: 필요한 경우 IPM(반복 계획 회의)의 생산성을 높이기 위한 선택적 계획 세션입니다.
 tags: ["제공"]
 length: 30분~1시간
-participants: "Product managers, 1-2 engineers"
+participants: 제품 관리자, 1~2명의 엔지니어
 lastmod: "2021-07-15"
 date: "2021-07-14"
 why: 
-- If a team finds that an excessive amount of time in the [Iteration Planning Meeting (IPM)](/developer/practices/ipm) is spent on revising stories before estimation, editing or grooming them in a smaller group beforehand can help the larger meeting produce better results.
+- <a href="/developer/kr/practices/ipm">반복 계획 회의(IPM)</a>에서 추정 전에 팀이 사례를 수정하는 데 과도한 시간이 소요되는 경우, 소규모 그룹에서 미리 사례를 편집하거나 정리해 두면 큰 회의에서 더 나은 결과를 얻을 수 있습니다.
 when:
-- Shortly before IPM
-- Only when it is needed
+- IPM 직전
+- 필요한 경우에만
 what:
-- A product backlog, or set of stories that may be promoted to the product backlog, which are not necessarily ready to be estimated
+- 제품 백로그 또는 제품 백로그로 승격될 수 있는 사례로, 반드시 추정할 필요는 없음
 
 # If this practice or workshop has a Miro template: remote: true
 remote: false

@@ -11,24 +11,17 @@ tags:
 title: 설계 스튜디오
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
-- User journey(s)
-- Persona(s)
-- Scenario (if already available)
-- 마스킹 테이프
-- 네임펜 / fine-tipped markers
-- Red pens
-- Paper
+- 사용자 여정
+- 개인
+- 시나리오(이미 있는 경우)
+- 네임펜/팁이 얇은 마커
+- 빨간색 펜
+- 종이
 - 작은 원형 스티커
 when:
-- Design studios can help with generating areas to explore and prioritize a range
-  of different problem areas early in the Discovery process. They can also be used
-  to generate a great number of ideas to address more granular user needs later on.
+- 디자인 스튜디오는 탐색 프로세스 초기에 다양한 문제 영역을 탐색하고 우선순위를 정할 수 있는 영역을 생성하는 데 도움이 됩니다. 또한 나중에 더 세분화된 사용자 요구 사항을 해결하기 위해 많은 아이디어를 낼 때에도 활용 가능합니다.
 why:
-- By encouraging cross-disciplinary roles to think deeply about a problem simultaneously,
-  we discover many more unknowns than if a designer sketched alone. Additionally,
-  when developers are in the process they understand where the product and/or service
-  are going and are able to make better decisions. It can save them time later as
-  they're developing the product we create as a team.
+- 다양한 역할의 인원이 어떤 문제에 대해 동시에 심사숙고하도록 하면, 몰랐던 사실에 대해 디자이너가 혼자 구상하는 경우에 비해 훨씬 더 많이 발견할 수 있습니다. 또한 개발자가 프로세스를 진행할 때 제품 또는 서비스의 방향을 파악하고 더 나은 의사 결정을 내릴 수 있습니다. 팀을 이루어 만든 제품을 개발하면 나중에 시간을 절약할 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

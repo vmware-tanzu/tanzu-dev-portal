@@ -68,8 +68,10 @@
                     {{ partial "practices/info-box" (dict "context" . "title" $translatedWhenToDoItText "info" .Params.when ) }}
                 </div>
                 <div class="col-lg-4 col-12 mr-3 mb-3">
-                    {{ $translatedWhatSuppliesAreNeededText := T "what_supplies_are_needed" }}
-                    {{ partial "practices/info-box" (dict "context" . "title" $translatedWhatSuppliesAreNeededText "info" .Params.what ) }}
+                    {{ if .Params.what }}
+                        {{ $translatedWhatSuppliesAreNeededText := T "what_supplies_are_needed" }}
+                        {{ partial "practices/info-box" (dict "context" . "title" $translatedWhatSuppliesAreNeededText "info" .Params.what ) }}
+                    {{ end }}
                 </div>
             </div>
             {{ if .Params.remote }}

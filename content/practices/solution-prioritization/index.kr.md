@@ -6,26 +6,20 @@ resources:
   src: images/cover.png
 lastmod: '2021-03-17'
 length: 1~2시간
-participants: Core team members (PM, designer, engineers)
+participants: 핵심 팀원(PM, 디자이너, 엔지니어)
 tags:
 - 프레이밍
 title: 솔루션 우선순위 지정
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
-- Solution ideas on sticky notes (or cluster sticky notes from Solution Grooming --
-  coming soon!)
+- 접착식 메모의 솔루션 관련 아이디어(또는 솔루션을 다듬는 단계에서 사용한 접착식 메모 취합, 곧 지원됨)
 - 화이트보드용 마커
 - 파란색 마스킹 테이프
 when:
-- This activity is usually done during Framing and is often preceded by the **Solution
-  Brainstorming**, **Solution Rolestorming**, and **Solution Grooming** workshops
-- This activity is often followed by the **Scenario Walkthrough** and/or **Design
-  Studio** workshops
+- 이 활동은 대개 구성 중에 이루어지며 솔루션 브레인스토밍, 솔루션 롤스토밍, 솔루션 그루밍 워크숍이 선행됨
+- 이 활동은 시나리오 워크스루 또는 디자인 스튜디오 워크숍으로 이어지는 경우가 많음
 why:
-- Unless you have a systematic way to approach your pile of solutions, you may find
-  yourself overwhelmed with opportunities. Solution Prioritization lets you walk away
-  with a clear idea of the relative priority / complexity of your many groomed ideas
-  as well as the ones you plan to start with first.
+- 다양한 솔루션에 체계적으로 접근할 방법이 없다면 오히려 그러한 많은 기회에 부담을 느낄 수 있습니다. 솔루션 우선순위를 지정하면 먼저 시작할 아이디어뿐만 아니라 다듬어진 많은 아이디어의 상대적 우선순위 및 복잡성에 대해서도 명확히 알 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

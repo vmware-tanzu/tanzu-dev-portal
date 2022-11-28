@@ -5,13 +5,13 @@ description: 중복 작업을 줄이고, 충족되지 않은 격차를 파악하
 # Note: remove any tags that are not relevant.
 tags: ["확장"]
 length: 2시간
-participants: "Leadership Team"
+participants: 경영진
 lastmod: "2022-01-03"
 date: "2022-01-03"
 why: 
-- We often assume we know what our peers’ accountabilities are, which results in objectives not being met and duplication of effort. This workshop is especially useful for leadership teams, where accountabilities are less clear than on a product team.
+- 우리는 동료들이 어떤 책임을 지고 있는지 알고 있다고 간주하며, 이로 인해 목표를 달성하지 못하거나 일을 중복해서 하기도 합니다. 이 워크숍은 제품 팀보다 책임이 명확하지 않은 경영진에 특히 유용합니다.
 when:
-- When you change the makeup of a leadership team, or when it has been a year or more since you last clarified roles and accountabilities.
+- 경영진의 구성을 변경하거나 역할 및 책임을 마지막으로 명시한 후 1년 이상 지난 경우입니다.
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
 - 화이트보드용 마커

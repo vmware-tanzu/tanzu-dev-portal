@@ -24,13 +24,9 @@ what:
 - 원형 스티커
 - 마스킹 테이프
 when:
-- During Framing of a D&F, at an Inception or throughout product development. Usually
-  an **Assumptions** workshop has already been done.
+- D&F 구성 중, 시작 시 또는 제품 개발 중에 이루어집니다. 일반적으로 가정(Assumption) 워크숍은 이미 완료한 상태입니다.
 why:
-- Lean experiments are useful when your team lacks evidence that a new product or
-  feature will achieve its intended results. Running lean experiments alongside product
-  development helps validate what is truly valuable to your customers/users, without
-  incurring the cost of developing and maintaining production ready software.
+- 린(Lean) 실험은 팀에서 새 제품이나 기능이 의도한 결과를 얻을 수 있다는 증거가 부족할 때 유용합니다. 제품 개발과 함께 린 실험을 수행하면 즉시 운영 가능한 소프트웨어를 개발하고 유지 관리하는 비용 없이 고객/사용자에게 진정으로 가치 있는 것이 무엇인지 검증할 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

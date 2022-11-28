@@ -11,14 +11,11 @@ title: 문제 우선순위 지정
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
 - 마스킹 테이프
-- All problems you've identified in previous workshops
+- 이전 워크숍에서 모든 문제
 when:
-- During Discovery & Framing, after conducting and synthesizing exploratory research.
+- 탐색 및 구성 진행 중, 탐색 연구를 수행하고 합성한 이후입니다.
 why:
-- Problem Prioritization helps us understand "what are the first set of problems that
-  need solving?". We do this by factoring in the intersection of all the things that
-  are important to the business and the users. This exercise gives us the ability
-  to focus our solution generation on a specific problem.
+- 문제 우선순위 지정을 통해 "해결해야 할 첫 번째 문제"를 이해할 수 있습니다. 비즈니스와 사용자에게 중요한 모든 요소의 교차점을 고려하여 이를 수행합니다. 이 연습을 통해 특정 문제에 대한 해결책을 내는 데 집중하는 능력을 얻을 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

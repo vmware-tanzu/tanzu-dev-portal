@@ -5,22 +5,22 @@ description: 핵심 팀원 간 수행할 수 있는 간단한 되돌아보기 �
 # Note: remove any tags that are not relevant.
 tags: ["제공"]
 length: 5~15분
-participants: "Pair or Cross-discipline team member (1 on 1)"
+participants: 부서를 초월하여 팀 구성(일대일)
 # custom "cover" image example: "boris/boris.png"
 image: "cover-image.png" 
 lastmod: "2022-01-19"
 date: "2022-01-19"
 why: 
-- To come to an understanding of what went well (plus), and what could be changed to improve collaboration in future (delta).
-- To introduce a regular feedback cycle at a 1:1 / individual level that allows for  personal feedback.
-- To introduce a lightweight and casual feedback tool for fostering a healthy team feedback culture.
+- 무엇이 잘 되었는지(추가), 그리고 향후 협업을 개선하기 위해 무엇을 바꿀 수 있는지(델타) 이해합니다.
+- 개인 피드백이 가능한 1:1 또는 개인 차원의 정기적인 피드백 주기를 도입합니다.
+- 건전한 팀 피드백 문화를 조성하기 위해 가볍고 일상적인 피드백 툴을 도입합니다.
 when:
-- End of day or after a working session with a teammate. 
-- After working with someone for the first time.
-- After working with someone whom you don't regularly interact.
+- 일과 후 또는 팀원과의 업무 세션 이후입니다.
+- 누군가와 처음으로 협력한 이후입니다.
+- 정기적으로 소통하지 않는 누군가와 협력한 이후입니다.
 what:
-- In Person -- pieces of paper and pen
-- Remote -- a way to share remote notes / [Miro](https://miro.com/)
+- 대면 - 종이 및 펜
+- 원격 - 원격으로 메모를 공유할 수단 / Miro
 
 ---
 <p><div class="bg-gray-dark p-lg-5 p-3

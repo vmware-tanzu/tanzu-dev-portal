@@ -4,7 +4,7 @@ description: 선호도 다이어그램을 사용하여 생성 또는 평가 리�
 
 lastmod: '2021-03-17'
 length: 인터뷰당 30~60분
-participants: Interviewers, researchers, observers, note-takers
+participants: 인터뷰 진행자, 연구자, 관찰자, 서기
 tags:
 - 검색
 - 프레이밍
@@ -12,19 +12,12 @@ tags:
 title: 연구 합성
 what:
 - 화이트보드 또는 [Miro](https://miro.com/)와 같은 디지털 버전
-- Sticky notes with findings on them (stemming from research sessions), color-coded
-  by research participant
+- 연구 세션으로부터 나온 연구 결과가 담겨 있으며 연구 참가자에 따라 색상으로 분류된 접착식 메모
 - 화이트보드용 마커
 when:
-- Ideally we do this after each user interview in order to analyze the information
-  we captured during our user interview session while it’s still fresh in our minds.
+- 사용자 인터뷰 세션에서 얻은 정보를 분석하기 위해 각 사용자 인터뷰 후에 이 작업을 수행하는 것이 이상적입니다.
 why:
-- We use the output of this activity to identify patterns in collected research data,
-  improve our understanding of users, and identify action items we can take (including
-  any re-testing to confirm any inconclusive findings). These findings can either
-  validate or invalidate assumptions we’ve made about our persona (i.e. demographics,
-  behaviors, concerns, motivators, etc). Output also supports conversations on the
-  why of behaviors and what actions to take.
+- 이 활동의 결과를 사용하여 수집된 연구 데이터의 패턴을 식별하고, 사용자에 대한 이해도를 향상하며, 취할 수 있는 조치 항목(결론이 나지 않는 결과를 확인하기 위한 재검사 포함)을 식별합니다. 이러한 결과는 개인(즉, 인구 통계, 행동, 우려 사항, 동기 부여 요인 등)을 대상으로 수행한 가정의 옳고 그름을 판별할 수 있습니다. 결과를 바탕으로 행동의 원인과 취해야 할 조치에 대해 대화를 나눌 수 있습니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

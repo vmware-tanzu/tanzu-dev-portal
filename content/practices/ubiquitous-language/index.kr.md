@@ -14,14 +14,11 @@ what:
 - 스티커 메모
 - 네임펜/마커
 when:
-- We try to do this during Discovery or Framing in order to establish a baseline vocabulary.
-  It’s advisable to do this prior to delivery so the code that’s written reflects
-  the business domain language from day one. It’s also worth revisiting this throughout
-  the project as new domain terms are uncovered.
+- 탐색 또는 구성 중에 이 작업을 수행하여 기본 용어를 설정합니다. 작성된 코드가 처음부터 비즈니스 도메인 언어를 반영하도록 제공 전에 이 작업을 수행하는 것이 좋습니다. 이는 새로운 도메인 용어가 발견되면 프로젝트 전반에 걸쳐 이를 다시 검토해야 할 정도로 가치가 있는 작업이기도 합니다.
 why:
-- Helps establish clear names and definitions for domain concepts
-- Helps eliminate duplication and inconsistency in the codebase and in team conversations
-- Helps Give new team members an easy way to onboard into the domain
+- 도메인 개념에 대한 명확한 이름 및 정의를 설정할 수 있음
+- 코드베이스 및 팀 대화에서 중복 및 불일치를 제거할 수 있음
+- 새로운 팀원이 도메인에 쉽게 온보딩할 수 있는 수단 제공
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는

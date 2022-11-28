@@ -10,20 +10,16 @@ description: 프로젝트 팀이 더 많은 노력이 필요한지 결정할 수
 
 lastmod: '2021-03-04'
 length: 30~60분
-participants: 핵심 팀, 이해관계자, other designers
+participants: 핵심 팀, 이해관계자, 기타 디자이너
 tags:
 - 검색
 - 프레이밍
 title: 설계 크리틱
 what: null
 when:
-- Integrate design critiques into your workflow by having them regularly or whenever
-  there is a need for feedback from the team. They are most helpful after a design
-  artifact is created or iterated upon.
+- 정기적으로 또는 팀의 피드백이 필요할 때마다 디자인 비평을 워크플로우에 통합합니다. 디자인 비평은 디자인 아티팩트가 생성되거나 반복된 후에 가장 유용합니다.
 why:
-- It provides valuable design feedback to help the project team refine their solution.
-  It helps the team find consensus when deciding what actions to take next. And it
-  holds the whole team accountable for making design decisions.
+- 프로젝트 팀이 솔루션을 개선할 수 있도록 지원하는 값진 디자인 피드백을 제공합니다. 다음에 취할 조치를 결정할 때 팀이 합의점을 찾는 데 도움이 됩니다. 또한 팀 전체가 디자인 관련 의사 결정에 책임을 지도록 합니다.
 ---
 
 <h2 id="how-to-use-this-method">이 방식을 활용하는
