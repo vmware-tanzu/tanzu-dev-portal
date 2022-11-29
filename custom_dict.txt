@@ -417,6 +417,7 @@ ClusterTemplate
 CMD
 cmdlet
 Cmdlets
+CMO
 CMS
 CN
 CNAME
