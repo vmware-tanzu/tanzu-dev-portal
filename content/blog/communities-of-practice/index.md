@@ -1,9 +1,9 @@
 ---
 title: Cultivating Vibrant Communities of Practice
 description: 'We have found the most effective way to scale practices across an organization is through the cultivation of vibrant communities of practice where learning, growth, and mastery of the craft are celebrated.'
-date: '2022-11-22'
-publishDate: '2022-11-22'
-lastmod: '2022-10-27'
+date: '2022-11-29'
+publishDate: '2022-11-29'
+lastmod: '2022-11-29'
 slug: communities-of-practice
 tags:
 - Agile
