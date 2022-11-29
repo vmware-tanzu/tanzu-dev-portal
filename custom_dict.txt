@@ -14,8 +14,6 @@
 (?:[APMCEI][ESD]T|UTC)
 .tanzuignore
 .tgz
-CISOs
-Chainguard
 1:1s
 10x
 12Factor
@@ -357,6 +355,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chainguard
 Chander
 changeAlertLevel
 [Cc]hangemaker(s)
@@ -376,6 +375,7 @@ CIDR(s)?
 CIO
 CircleCI
 CIS
+CISOs
 CKtaKhKOo-Y
 classpath
 clearNotifications
@@ -1682,7 +1682,7 @@ non-schedulable
 nonblocking
 [Nn]orming
 NoSQL
-NotificationListene
+NotificationListener
 Novoseltseva
 npm
 ns
