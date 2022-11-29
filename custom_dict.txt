@@ -120,6 +120,7 @@ Apigee
 APIPort
 ApiResponse
 APIs?
+Apiumhub
 APM
 APM[s]
 App-Config
@@ -722,6 +723,7 @@ EFS
 eg
 eg.
 egoless
+Ekaterina
 EKS
 Elahn
 elasticloadbalancing
@@ -1674,7 +1676,8 @@ non-schedulable
 nonblocking
 [Nn]orming
 NoSQL
-NotificationListener
+NotificationListene
+Novoseltseva
 npm
 ns
 NSX(-T|-SM)?
