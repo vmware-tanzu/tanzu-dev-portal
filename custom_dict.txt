@@ -766,6 +766,7 @@ ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
+Etienne
 ETL
 EventID
 [Ee]venting
@@ -1517,12 +1518,14 @@ maxUtilization
 Mayers
 MBeans
 MBeanServer
+McDermott
 McGraw-Hill
 McLuckie
 MDAC
 MDC
 MDN
 Mehmandarov
+mentee(s)?
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -2675,7 +2678,10 @@ WebRequest
 WebSocket
 WebSphere
 WeChat
+Wegner
 well-intentioned
+Wenger
+Wenger-Trayner
 Wes
 Westrum
 WF
