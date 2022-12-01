@@ -135,11 +135,13 @@
 [[redirects]]
   from = "/developer/guides/tanzu-application-platform-deploying-a-workload/"
   to = "https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html"
+  force = true
   status = 301
 
 [[redirects]]
   from = "/developer/learningpaths/inner-loop-dev-with-vmware-tanzu-application-platform/tanzu-application-platform-deploying-a-workload/"
   to = "https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html"
+  force = true
   status = 301
 
 # Global 404 handler
