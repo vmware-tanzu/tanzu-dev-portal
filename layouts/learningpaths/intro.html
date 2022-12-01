@@ -77,7 +77,7 @@
         <ul>
             {{ range .Pages}}
             <li class="">
-                <a  href="{{ .RelPermalink }}" class="align-left pr-2">{{ .Title }}</a>
+                <a  href="{{ .RelPermalink }}" class="align-left pr-2" target="{{if .Params.externalDocument}}_blank{{else}}_self{{end}}">{{ .Title }}</a>
             </li>
             {{ end }}
         </ul>

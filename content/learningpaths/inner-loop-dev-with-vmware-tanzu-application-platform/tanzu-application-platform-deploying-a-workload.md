@@ -8,4 +8,7 @@ tags: []
 externalDocument: true
 ---
 
-This document is hosted on VMware docs site [here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html).
+This guide is hosted on the VMware docs site [here](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html")
+
+<!-- markdownlint-disable-next-line MD033-->
+<!-- <meta http-equiv="refresh" content="0;https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html"> -->
