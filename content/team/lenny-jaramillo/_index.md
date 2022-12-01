@@ -3,6 +3,8 @@ name: Lenny Jaramillo
 description: "SVP, Sr Manager, Solution Architecture"
 roles: ["guest"]
 photo: "lenny-jaramillo.jpg"
+external: true
+
 # Social Media
 twitter: "ScubaArchitect"
 website: ""

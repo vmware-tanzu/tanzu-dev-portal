@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: ""
 location: ""
+external: true
 
 # Social Media
 twitter: "Stacy_Cash"

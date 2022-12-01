@@ -4,6 +4,7 @@ description: "Staff Engineer"
 roles: ["author"]
 skills: ["Kubernetes", "Docker", "Continuous Delivery", "DevOps"]
 location: "Seattle, WA"
+hidden: true
 
 # Social Media 
 twitter: "johnharris85"

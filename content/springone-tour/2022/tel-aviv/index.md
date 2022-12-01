@@ -3,8 +3,6 @@ PublishDate: '2022-09-26T00:00:00-07:00'
 Date: '2022-11-17T00:00:00-07:00'
 oneDay: true
 publish: true
-aliases:
-    - /springone-tour/2022/tel-aviv
 og_image: "/images/og/s1t_2022_og.png"
 logo_filename: "telaviv_cityscape.svg"
 Description: SpringOne Tour Tel Aviv
@@ -27,9 +25,7 @@ _We’re excited to announce that SpringOne Tour is coming to Israel for the fir
 Come meet other Spring enthusiasts, experts, and advocates from your local community. Interact with VMware speakers and fellow attendees. Learn about new Spring developments, AppDev best practices, plus tools and techniques that are quickly becoming industry standard.
 It’s time to take your existing applications to the next level.
 
-<p class="closed-reg"><em>Registration has closed due to reaching full capacity. Be the first to know if spots open up by joining the waitlist!</em><p>
-
-<a class='btn mt-2 lightbox mb-5 green' href='#register'>Join the waitlist</a>
+<p class="closed-reg"><em>Registration has closed due to reaching full capacity.</em><p>
 
 ### What to expect
 <ul class="mb-5">
@@ -39,7 +35,7 @@ It’s time to take your existing applications to the next level.
     <li>Learn about new Spring developments, AppDev best practices, and the latest tools and techniques.</li>
 </ul>
 
-<div id="register" class='p-5' style="display:none">
+<!-- <div id="register" class='p-5' style="display:none">
 	<h3 class='-text-white mb-3 hide'>Join the waitlist</h3>
 	<script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
 	<form id="mktoForm_9174"></form>
@@ -62,23 +58,23 @@ It’s time to take your existing applications to the next level.
             <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=SpringOne+Tour+Tel+Aviv&details=Come+meet+other+Spring+enthusiasts%2C+experts%2C+and+advocates+from+your+local+community.+Interact+with+VMware+speakers+and+fellow+attendees.+Learn+about+new+Spring+developments%2C+AppDev+best+practices%2C+plus+tools+and+techniques+that+are+quickly+becoming+industry+standard.+It%E2%80%99s+time+to+take+your+existing+applications+to+the+next+level.&location=Peres+Center%2C+The+Israeli+Innovation+Center%2C+Kedem+132+St%2C+Jaffa&dates=20221117T060000Z%2F20221117T160000Z" target="_blank" id="">Google</a>
         <p>
 	</div>
-</div>
+</div> -->
 
 <div id="day-1-agenda" class="agenda p-lg-5 p-3 mb-5">
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">8:30</div>
+        <div class="time col-2 pl-0 h4">08:30</div>
         <div class="talk-title col-7 h4">Registration & Breakfast</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">9:30</div>
+        <div class="time col-2 pl-0 h4">09:30</div>
         <div class="talk-title col-7 h4">Opening</div>
         <div class="col-sm-1 col-0 px-0 px-0"></div>
         <div class="name col-3"></div>
     </div>        
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">9:45</div>
+        <div class="time col-2 pl-0 h4">09:45</div>
         <div class="talk-title col-7 h4">
             <a href="#introducing-framework" class="lightbox">Keynote: Introducing Spring Framework 6</a>
         </div>
@@ -89,7 +85,7 @@ It’s time to take your existing applications to the next level.
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">10:45</div>
         <div class="talk-title col-7 h4">
-            <a href="#introducing-boot" class="lightbox">Introducing Spring Boot 3 & Spring Native</a>
+            <a href="#introducing-boot" class="lightbox">Introducing Spring Boot 3.0</a>
         </div>
         <div class="name col-3">
             <h3 class="h4 py-0">
@@ -155,13 +151,20 @@ It’s time to take your existing applications to the next level.
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
         <div class="time col-2 pl-0 h4">15:00</div>
-        <div class="talk-title col-7 h4">TBD</div>
+        <div class="talk-title col-7 h4">Modernizing Core Systems to Accelerate Digital Transformation</div>
         <div class="name col-3">
-            <!-- <h3 class="h4 py-0"><a class="lightbox" href="#nate-schutta">Nate Schutta</a></h3> -->
+            <h3 class="h4 py-0"><a class="lightbox" href="#yuri-fux">Yuri Fux</a></h3>
+        </div>
+    </div>
+<div class="row py-3 border-bottom flex-nowrap">
+        <div class="time col-2 pl-0 h4">15:20</div>
+        <div class="talk-title col-7 h4">Precision - Developer’s Powerhouse by Dell</div>
+        <div class="name col-3">
+            <h3 class="h4 py-0">Oran Dotan</h3>
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">15:45</div>
+        <div class="time col-2 pl-0 h4">15:35</div>
         <div class="talk-title col-7 h4">
             <a href="#declarative" class="lightbox">Declarative Clients in Spring</a>
         </div>
@@ -172,7 +175,7 @@ It’s time to take your existing applications to the next level.
         </div>
     </div>
     <div class="row py-3 border-bottom flex-nowrap">
-        <div class="time col-2 pl-0 h4">16:30</div>
+        <div class="time col-2 pl-0 h4">16:20</div>
         <div class="talk-title col-7 h4">
             <a href="#endtoend" class="lightbox">Build an End-to-End App with Spring Boot and VMware Tanzu Application Platform</a>
         </div>

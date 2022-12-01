@@ -3,6 +3,7 @@ name: Pulkit Chandra
 description: "Manger, Product"
 roles: ["guest"]
 skills: []
+hidden: true
 
 # Social Media
 twitter: "pulkitchandra"

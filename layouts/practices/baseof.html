@@ -13,6 +13,17 @@
 
         {{ block "main" . }}{{ end }}
 
+        <script>
+          //If preferred browser language is Korean, show link to Korean version
+          var usrlang = navigator.language || navigator.userLanguage;
+          var koreanAcceptLanguageCodes = ["ko","ko-KR","ko-kr"];
+          var url = window.location.pathname;
+          var krURL = url.replace("/developer/practices/","/developer/kr/practices/");
+          if (koreanAcceptLanguageCodes.includes(usrlang)) {
+            $("html[lang=en] h1").append("<a style='font-size:17px;margin-left:20px' href='" + krURL + "'>한국어</a>");
+          }
+        </script>
+
       </div>
       {{ partial "footer.html" . }}
     </div>

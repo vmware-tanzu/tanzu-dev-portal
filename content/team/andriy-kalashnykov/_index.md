@@ -14,6 +14,7 @@ github: "AndriyKalashnykov"
 pinterest: ""
 instagram: ""
 youtube: ""
+hidden: true
 ---
 
 Andriy Kalashnykov is a cloud technologist, architect and coder in the VMware Tanzu Labs team, helping developers, architects and enterprises adopt modern patterns, practices and technologies including Tanzu, Kubernetes, Spring, CI/CD, Tanzu Build Service, Tanzu Application Accelerator, Tanzu Cloud Gateway and more.

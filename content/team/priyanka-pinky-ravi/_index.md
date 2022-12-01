@@ -4,6 +4,7 @@ description: "Developer Experience Engineer, Weaveworks"
 roles: ["guest"]
 skills: ["Flux", "GitOps"]
 location: ""
+external: true
 
 # Social Media 
 twitter: "PinkyyRavi"

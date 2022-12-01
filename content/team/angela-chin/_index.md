@@ -14,6 +14,7 @@ github: ""
 pinterest: ""
 instagram: ""
 youtube: ""
+hidden: true
 ---
 
 Angela Chin is a Senior Engineer at VMware, working on Tanzu Application Service (for both VMs and Kubernetes!).

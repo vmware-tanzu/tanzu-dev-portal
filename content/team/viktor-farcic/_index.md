@@ -4,6 +4,7 @@ description: "Developer Advocate"
 roles: ["guest"]
 skills: ["Kubernetes", "Crossplane"]
 location: "Barcelona, Spain"
+external: true
 
 # Social Media 
 twitter: "vfarcic"

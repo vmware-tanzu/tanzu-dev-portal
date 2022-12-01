@@ -3,8 +3,6 @@ PublishDate: '2022-03-15T00:00:00-07:00'
 Date: '2022-06-07T00:00:00-07:00'
 enddate: '2022-06-08T00:00:00-07:00'
 publish: true
-aliases:
-    - /springone-tour/2022/chicago
 og_image: "/images/og/s1t_2022_og.png"
 logo_filename: "toronto_cityscape.svg"
 Description: SpringOne Tour Toronto

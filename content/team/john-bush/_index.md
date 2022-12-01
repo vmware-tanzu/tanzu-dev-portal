@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: ""
 location: ""
+hidden: true
 
 # Social Media
 twitter: ""

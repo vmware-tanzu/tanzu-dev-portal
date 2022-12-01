@@ -14,6 +14,7 @@ github: "bryanl"
 pinterest: ""
 instagram: ""
 youtube: ""
+hidden: true
 ---
 
 Bryan Liles is a Senior Staff Engineer at VMware where he writes software and leads teams.

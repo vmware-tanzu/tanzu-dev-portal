@@ -4,6 +4,7 @@ description: ""
 roles: ["Author"]
 skills: ["Product Management", "SWIFT", "Facilitation", "Lean Agile"]
 location: "Berlin, DE"
+hidden: true
 
 # Social Media 
 twitter: ""
