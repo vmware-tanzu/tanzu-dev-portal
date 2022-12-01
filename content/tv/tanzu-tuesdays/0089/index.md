@@ -22,5 +22,5 @@ type: tv-episode
 
 For this Tanzu Tuesday, Flux project maintainer Stefan Prodan joins us for a demo of Flux.
 Stefan will showcase how the project's high-quality tools
-scale from simple use-cases to custom GitOps platforms.
+scale from simple use-cases to custom [GitOps](https://tanzu.vmware.com/gitops) platforms.
 Come learn how Flux helps your team collaborate on apps and infrastructure.

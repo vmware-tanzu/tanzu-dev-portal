@@ -30,7 +30,7 @@ It currently[^2] contains the following tools:
 * **[kbld](https://carvel.dev/kbld/)**: Build or reference container images in Kubernetes configuration in an immutable way.
 * **[kapp](https://carvel.dev/kapp/)**: Install, upgrade, and delete multiple Kubernetes resources as one "application". Be confident your application is fully reconciled.
 * **[imgpkg](https://carvel.dev/imgpkg/)**: Bundle and relocate application configuration (with images) via Docker registries. Be assured app contents are immutable.
-* **[kapp-controller](https://github.com/vmware-tanzu/carvel-kapp-controller)**: Capture application deployment workflow declaratively via App CRD. Reliable GitOps experience powered by kapp.
+* **[kapp-controller](https://github.com/vmware-tanzu/carvel-kapp-controller)**: Capture application deployment workflow declaratively via App CRD. Reliable [GitOps](https://tanzu.vmware.com/gitops) experience powered by kapp.
 * **[vendir](https://carvel.dev/vendir/)**: Declaratively state what files should be in a directory.
 
 ## Learn more
