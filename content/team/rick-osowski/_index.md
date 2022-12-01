@@ -3,6 +3,7 @@ name: Rick Osowski
 roles: ["guest"]
 skills: ["Kubernetes","Solution Architecture"]
 location: "Chicago, IL"
+external: true
 
 # Social Media
 twitter: "rosowski"

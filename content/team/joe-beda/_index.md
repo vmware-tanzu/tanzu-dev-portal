@@ -4,6 +4,7 @@ description: "Principal Engineer"
 roles: ["guest"]
 skills: ["Kubernetes"]
 location: "Seattle, WA"
+hidden: true
 
 # Social Media
 twitter: "@jbeda"

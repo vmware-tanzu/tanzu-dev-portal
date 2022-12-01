@@ -4,6 +4,7 @@ description: "Staff Platform Field Engineer"
 roles: ["author"]
 skills: []
 location: "Tampa, Florida"
+hidden: true
 
 # Social Media 
 twitter: ""

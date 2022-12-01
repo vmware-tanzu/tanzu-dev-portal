@@ -4,6 +4,7 @@ description: ""
 roles: ["guest"]
 skills: ["Keptn", "Open Source Software"]
 location: "Boston, MA"
+external: true
 
 # Social Media
 twitter: "TheRealRobJahn"

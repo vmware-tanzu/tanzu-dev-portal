@@ -3,6 +3,7 @@ name: Jessica Rose
 roles: ["guest"]
 skills: ["Outreach Strategy"]
 location: "United Kingdom"
+external: true
 
 # Social Media
 twitter: "jesslynnrose"

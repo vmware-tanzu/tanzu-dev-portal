@@ -4,6 +4,7 @@ description: "Technical Writer"
 roles: ["author"]
 skills: ["Bitnami, Kubernetes"]
 location: ""
+hidden: true
 
 # Social Media 
 twitter: ""
