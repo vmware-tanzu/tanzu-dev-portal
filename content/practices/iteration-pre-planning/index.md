@@ -11,7 +11,7 @@ participants: "Product managers, 1-2 engineers"
 lastmod: "2021-07-15"
 date: "2021-07-14"
 why: 
-- If a team finds that an excessive amount of time in the [Iteration Planning Meeting (IPM)](/developer/practices/ipm) is spent on revising stories before estimation, editing or grooming them in a smaller group beforehand can help the larger meeting produce better results.
+- If a team finds that an excessive amount of time in the [Iteration Planning Meeting (IPM)](/practices/ipm) is spent on revising stories before estimation, editing or grooming them in a smaller group beforehand can help the larger meeting produce better results.
 when:
 - Shortly before IPM
 - Only when it is needed
