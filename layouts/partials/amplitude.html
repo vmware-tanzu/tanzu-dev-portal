@@ -11,7 +11,7 @@
     <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .context.Params.level1 | lower }}', 'subtopic name': '{{ .context.Params.level2 | lower }}', 'guide title': '{{ .context.Title }}', 'guide authors': authors, 'url path': window.location.pathname}); </script>
 
 {{ else if eq .event "blog post viewed" }}
-    <script>sendAmplitudeEventOnLoad('blog post viewed', {'blog post title': '{{ .context.Title }}', 'blog post publish date': '{{ .context.Date.Format "2006-01-02T15:04:05Z0700" }}', 'blog post length': '{{if isset .context "Content"}}{{ .context.Content | len }}{{else}}0{{end}}' ,'blog post authors': authors, 'url path': window.location.pathname});</script>
+    <script>sendAmplitudeEventOnLoad('blog post viewed', {'blog post title': '{{ .context.Title }}', 'blog post publish date': '{{ .context.Date.Format "2006-01-02T15:04:05Z0700" }}', 'blog post length': '{{ .context.Content | len }}' ,'blog post authors': authors, 'url path': window.location.pathname});</script>
 
 {{ else if eq .event "learning path viewed" }}
     <script>sendAmplitudeEventOnLoad('learning path viewed', {'learning path title': '{{ .context.Title }}', 'url path': window.location.pathname}); </script>
