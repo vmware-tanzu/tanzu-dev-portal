@@ -25,7 +25,7 @@ type: tv-episode
 With the adoption of API-enabled microservices increasing at a rapid rate, centrally-managed enterprise services are having a hard time keeping up. More and more, development teams are performing quick API releases, straining central API management approaches, and leading to days and weeks of delay.  That’s why enterprises must harness the agility that distributed source control and API management can provide.
 
 In this webinar, we’ll cover:
-- Utilizing GitOps for releases through continuously integrated and delivered software processes.
+- Utilizing [GitOps](https://tanzu.vmware.com/gitops) for releases through continuously integrated and delivered software processes.
 - How to align APIs with our GitOps delivery model and route definitions with their associated source code.
 - How Spring Cloud Gateway for Kubernetes applies this GitOps for APIs model to enable agility across your development teams.
 Get the reliable, consistent software delivery controls needed in a high-performance operations environment.
