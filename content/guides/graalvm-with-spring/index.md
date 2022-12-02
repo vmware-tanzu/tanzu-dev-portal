@@ -24,7 +24,7 @@ weight: 2
 ---
 
 In this guide, you will learn how to create native images with Spring and GraalVM.
-The resulting native executable will require less RAM, startup in milliseconds and be suitable for serverless use cases. 
+The resulting native executable will require less RAM, startup in milliseconds and be suitable for [serverless](https://tanzu.vmware.com/serverless) use cases. 
 
 ### What Is GraalVM?
 

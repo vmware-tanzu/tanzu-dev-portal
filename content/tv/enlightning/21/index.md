@@ -17,7 +17,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-GitOps with Flux brings you security, reliability, velocity and more - no more pagers on Saturdays! No more breaches to the cluster that you can’t roll back. No more worrying about how you’ll fare in the next security audit. Pinky & Mae will share an overview of Flux and how it works, as well as their personal experience on why Flux has been an essential part of achieving a best-in-class delivery and platform team.
+[GitOps](https://tanzu.vmware.com/gitops) with Flux brings you security, reliability, velocity and more - no more pagers on Saturdays! No more breaches to the cluster that you can’t roll back. No more worrying about how you’ll fare in the next security audit. Pinky & Mae will share an overview of Flux and how it works, as well as their personal experience on why Flux has been an essential part of achieving a best-in-class delivery and platform team.
 
 
 

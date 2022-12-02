@@ -44,7 +44,7 @@ faqs:
       workloads.
 ---
 
-As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and DevOps tools and techniques.
+As development velocity increases, it's now become essential for enterprises to have a reliable and readily-available Continuous Integration/Continuous Delivery (CI/CD) pipeline integrated with cloud infrastructure. But although the requirements of such infrastructure are well understood, setting up this pipeline is still a complex task involving knowledge of cloud platforms, containerization tools like Docker, Docker Compose and others, container orchestration tools like Kubernetes and Helm, and [DevOps](https://tanzu.vmware.com/devops) tools and techniques.
 
 Bitnami eases the task of building an enterprise-ready CI/CD pipeline with its application stacks and container images. 
 

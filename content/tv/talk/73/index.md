@@ -15,7 +15,7 @@ youtube: 5GW6R0DRuy8
 
 DevSecOps alert! Container security alert! 
 
-Coté talks with Henri van den Bulk about the ideas of a “secure software supply chain.” When you’re building, running, and managing your own software, how you secure your software goes all the way back to development - it shifts left! Henri goes what it means do security governance needed in the development phase through deploying to production. We also discuss thinking about “risk management” in security, a sort of obtuse topic for those of us who aren’t security-heads.
+Coté talks with Henri van den Bulk about the ideas of a “[secure software supply chain](https://tanzu.vmware.com/what-is-a-secure-software-supply-chain).” When you’re building, running, and managing your own software, how you secure your software goes all the way back to development - it shifts left! Henri goes what it means do security governance needed in the development phase through deploying to production. We also discuss thinking about “risk management” in security, a sort of obtuse topic for those of us who aren’t security-heads.
 
 Mentioned:
 

@@ -120,6 +120,7 @@ Apigee
 APIPort
 ApiResponse
 APIs?
+Apiumhub
 APM
 APM[s]
 App-Config
@@ -354,6 +355,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chainguard
 Chander
 changeAlertLevel
 [Cc]hangemaker(s)
@@ -373,6 +375,7 @@ CIDR(s)?
 CIO
 CircleCI
 CIS
+CISOs
 CKtaKhKOo-Y
 classpath
 clearNotifications
@@ -416,6 +419,7 @@ ClusterTemplate
 CMD
 cmdlet
 Cmdlets
+CMO
 CMS
 CN
 CNAME
@@ -722,6 +726,7 @@ EFS
 eg
 eg.
 egoless
+Ekaterina
 EKS
 Elahn
 elasticloadbalancing
@@ -764,6 +769,7 @@ ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
+Etienne
 ETL
 EventID
 [Ee]venting
@@ -1515,12 +1521,14 @@ maxUtilization
 Mayers
 MBeans
 MBeanServer
+McDermott
 McGraw-Hill
 McLuckie
 MDAC
 MDC
 MDN
 Mehmandarov
+mentee(s)?
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1675,6 +1683,7 @@ nonblocking
 [Nn]orming
 NoSQL
 NotificationListener
+Novoseltseva
 npm
 ns
 NSX(-T|-SM)?
@@ -2673,7 +2682,10 @@ WebRequest
 WebSocket
 WebSphere
 WeChat
+Wegner
 well-intentioned
+Wenger
+Wenger-Trayner
 Wes
 Westrum
 WF

@@ -4,19 +4,21 @@ date: '2022-08-15'
 description: How to set up a VMware GemFire instance on Kubernetes.
 lastmod: '2022-08-15'
 link-title: Getting Started with VMware GemFire for Kubernetes
-parent: Spring for Apache Geode
+parent: Spring for VMware GemFire
 title: Getting Started with VMware GemFire for Kubernetes
 type: data-guides
 weight: 3
+aliases:
+    - get-started-tgf4k8s-sbdg/
 ---
 
 This guide walks you through creating and testing a VMware GemFire cluster on Kubernetes using a *Hello, World!* client application.
 
 
 ## Before you start!
-This guide assumes that the [VMware GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-install.html) has been installed in your Kubernetes cluster. 
+This guide assumes that the [VMware GemFire Operator](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-install.html) and a **cert-manager** have been installed in your Kubernetes cluster. 
 
-In order to create a GemFire cluster, you will need a [Tanzu Net](https://network.pivotal.io/products/tanzu-gemfire-for-kubernetes/) account, in order to pull the image from the registry. 
+In order to create a GemFire cluster, you will need a [Tanzu Net](https://network.pivotal.io/products/tanzu-gemfire-for-kubernetes/) account, in order to pull the GemFire image from the registry. 
 
 You will also need permission to use `kubectl`. 
  
@@ -30,38 +32,38 @@ You will also need permission to use `kubectl`.
     ```
    
    
-2. Create a namespace for the VMware GemFire cluster (We use the creative *namespace* name of `tanzu-gemfire` for this example)
+2. Create a namespace for the VMware GemFire cluster (We use the creative *namespace* name of `gemfire-cluster` for this example)
     
     ```
-    kubectl create namespace tanzu-gemfire
+    kubectl create namespace gemfire-cluster
     ```
    
    
 3. Create an image pull secret that will be used to pull down the VMware GemFire images needed to create the cluster
 
     ```
-    $ kubectl create secret docker-registry image-pull-secret --namespace=tanzu-gemfire --docker-server=registry.tanzu.vmware.com --docker-username='TANZU NET USERNAME' --docker-password='TANZU NET PASSWD'
+    $ kubectl create secret docker-registry image-pull-secret --namespace=gemfire-cluster --docker-server=registry.tanzu.vmware.com --docker-username='TANZU NET USERNAME' --docker-password='TANZU NET PASSWD'
     ```  
      
-   * Replace `tanzu-gemfire` with the name of your namespace, if different.
-   * Replace `TANZU NET USERNAME` with your Tanzu Net Username
-   * Replace `TANZU NET PASSWD` with your Tanzu Net Password
+   * Replace `--namepsace=gemfire-cluster` with the name of your namespace, if different.
+   * Replace `--docker-username='TANZU NET USERNAME'` with your Tanzu Net Username
+   * Replace `--docker-password='TANZU NET PASSWD'` with your Tanzu Net Password
      
 
 4. Create your VMware GemFire CRD file. 
     
-    Below is a simple yaml file that will create a VMware GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html). Save this as a YAML file in your current working directory.
+    Below is a simple yaml file that will create a VMware GemFire cluster named `hello-world-gemfire-cluster` with 1 [locator](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_locator.html) and 2 [servers](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-configuring-running-running_the_cacheserver.html), with TLS turned off. Save this as a YAML file in your current working directory.
     
-  ```yaml
-  apiVersion: gemfire.tanzu.vmware.com/v1
-  kind: GemFireCluster
-  metadata:
-     name: hello-world-gemfire-cluster
-  spec:
-    image: registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.1
-    security:
-      tls: {}
-  ```
+      ```yaml
+      apiVersion: gemfire.vmware.com/v1
+      kind: GemFireCluster
+      metadata:
+        name: hello-world-gemfire-cluster
+      spec:
+        image: registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.3
+        security:
+          tls: {}
+      ```
    
         
 > For the full list of GemFire CRD configuration options and explanations check out the VMware GemFire [Customer Resource Definition template](https://docs.vmware.com/en/VMware-Tanzu-GemFire-for-Kubernetes/2.0/tgf-k8s/GUID-crd.html).
@@ -70,63 +72,63 @@ You will also need permission to use `kubectl`.
 5. Apply your VMware GemFire CRD YAML from *Step 4* to create the VMware GemFire cluster
 
     ```
-    kubectl --namespace=tanzu-gemfire apply -f CLUSTER-CRD-YAML
+    kubectl -n gemfire-cluster apply -f CLUSTER-CRD-YAML
     ``` 
-    * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
-    * Replace `CLUSTER-CRD-YAML` with the name of the yaml file you created. 
+    * Replace `-n gemfire-cluster` with the name of your namespace, if it's different.
+    * Replace `CLUSTER-CRD-YAML` with the name of the yaml file you created in Step 4. 
    
-   
-   
+      
 6.  If successful you should see in your terminal
 
-    ` gemfirecluster.gemfire.tanzu.vmware.com/hello-world-gemfire-cluster created`      
+    `gemfirecluster.gemfire.vmware.com/hello-world-gemfire-cluster created`      
 
 
 
 7. Confirm that VMware GemFire is up and ready to use
     
     ```
-    kubectl --namespace=tanzu-gemfire get GemFireClusters
+    kubectl -n gemfire-cluster get GemFireClusters
     ```
-   * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
+   * Replace `-n gemfire-cluster` with the name of your namespace, if it's different.
    
 
    When the cluster is ready to use the output should look similar to
     
     ```
-    NAME                          LOCATORS   SERVERS
-    hello-world-gemfire-cluster   1/1        2/2
+    NAME                          LOCATORS   SERVERS   CLUSTER IMAGE                                                     OPERATOR VERSION
+    hello-world-gemfire-cluster   1/1        2/2       registry.tanzu.vmware.com/pivotal-gemfire/vmware-gemfire:9.15.3   2.0.0-build.73
     ```
    Where the `NAME` will be the value you have for the `name` entry in your CRD file from *Step 4* . 
         
 ---
 
-## Run a Spring Boot for Apache Geode app on Kubernetes
+## Run a Spring Boot for VMware GemFire app on Kubernetes
 
-This section will guide you through testing a *Hello, World!* client application, that utilizes Spring Boot for Apache Geode.
+This section will guide you through testing a *Hello, World!* client application, that utilizes Spring Boot for VMware GemFire.
 
 ### What You'll Need
 
-* The [Hello, World!](https://github.com/gemfire/spring-for-apache-geode-examples/tree/main/hello-world) example.
+* The [Hello, World!](https://github.com/gemfire/spring-for-gemfire-examples/tree/main/hello-world) example.
 * JDK 8 or 11
-* Spring Boot 2.3 or above
-* Spring Boot for Apache Geode 1.3 or above
-* A running VMware GemFire cluster on Kubernetes
-* [Docker](https://docs.docker.com/get-docker/) installed 
-* An image repository for the `Hello, World!` example.
+* Spring Boot 2.6 or above
+* [Spring Boot for VMware GemFire](https://docs.vmware.com/en/Spring-Boot-for-VMware-GemFire/index.html) 
+* VMware GemFire for Kubernetes 2.0+
+* [Docker](https://docs.docker.com/get-docker/)
+* [A Pivotal Commercial Maven Repo account (free)](https://commercial-repo.pivotal.io/login/auth)
+* An image repository to push the `Hello, World!` image that is created in the guide.
 
 
 ###  1. Download the Hello, World! Example
 
-Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-apache-geode-examples). 
+Clone the Hello, World! app from the [examples repo](https://github.com/gemfire/spring-for-gemfire-examples). 
 
 ```
-$ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
+$ git clone https://github.com/gemfire/spring-for-gemfire-examples.git
 ```
 
 ### 2. Edit the `application.properties` File 
 
-* Navigate to the `spring-for-apache-geode-examples/hello-world` directory. 
+* Navigate to the `spring-for-gemfire-examples/hello-world` directory. 
 * Open the `application.properties`. 
 * Uncomment the two listed properties.
 * Replace the value for `spring.data.gemfire.pool.locators:` with your VMware GemFire cluster information, for each locator (in this example we only have one locator).  The information will follow the form:
@@ -137,19 +139,19 @@ $ git clone https://github.com/gemfire/spring-for-apache-geode-examples.git
     For our example the value looks like this:
 
     ```
-    spring.data.gemfire.pool.locators: hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.tanzu-gemfire[10334]
+    spring.data.gemfire.pool.locators: hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.gemfire-cluster[10334]
     ```
 
   
-* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for Apache Geode to push your [initial cluster configuration](https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/current/reference/html5/#geode-configuration-declarative-annotations-productivity-enableclusteraware) to GemFire.  The information follows a similar form as above:
+* Replace the value for `spring.data.gemfire.management.http.host:` with your VMware GemFire cluster information.  This will allow Spring Boot for VMware GemFire to push your initial cluster configuration to GemFire.  The information follows a similar form as above:
 
    ```
-   [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME][GEMFIRE LOCATOR PORT]
+   [GEMFIRE-CLUSTER-NAME]-locator-[LOCATOR-NUMBER].[GEMFIRE-CLUSTER-NAME]-locator.[NAMESPACE-NAME]
    ```
     For our example the value looks like this:
     
      ```
-      spring.data.gemfire.management.http.host: hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.tanzu-gemfire
+      spring.data.gemfire.management.http.host: hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.gemfire-cluster
      ```
       
 ### 3. Build a Docker Image with Gradle or Maven
@@ -179,7 +181,7 @@ In a terminal
 Create a Kubernetes deployment for your *Hello, World!* app. This will create a deployment, replicaset, and pod using the hello-world image we created above.
 
    ```
-     kubectl --namespace=tanzu-gemfire create deployment hello-world-deployment --image=docker.io/[YOUR DOCKER USERNAME]/hello-world:0.0.1-SNAPSHOT
+     kubectl -n gemfire-cluster create deployment hello-world-deployment --image=docker.io/[YOUR DOCKER USERNAME]/hello-world:0.0.1-SNAPSHOT
    ```  
 If successful you should see `deployment.apps/hello-world-deployment created`
 
@@ -187,7 +189,7 @@ If successful you should see `deployment.apps/hello-world-deployment created`
 In order to access `Hello, World!` app from a browser, we need to expose the deployment.
 
 ```
-kubectl --namespace=tanzu-gemfire expose deployment/hello-world-deployment --type="LoadBalancer" --port=80 --target-port=8080
+kubectl -n gemfire-cluster expose deployment/hello-world-deployment --type="LoadBalancer" --port=80 --target-port=8080
 ```
 
 > If you're trying this locally with MiniKube, you will need to replace `LoadBalancer` with `NodePort`.
@@ -197,7 +199,7 @@ kubectl --namespace=tanzu-gemfire expose deployment/hello-world-deployment --typ
 Once the Load Balancer has been created, you can now access the *Hello, World!* application using the `External IP` on the LoadBalancer service.
 
 ```
-kubectl -n tanzu-gemfire get services
+kubectl -n gemfire-cluster get services
 ``` 
 
 This should output something similar to
@@ -232,27 +234,27 @@ Note that the ***time to look up*** has been significantly reduced. This represe
 
 
 ### 8.  Confirm that the Hello, World! App is connected
-If you would like to confirm that your Bike Incident app is actually connected to your VMware GemFire cluster you can connect through the VMware GemFire / Apache Geode shell - commonly referred to as *gfsh*
+If you would like to confirm that your Hello World! app is connected to your VMware GemFire cluster you can connect through the VMware GemFire shell - commonly referred to as *gfsh*
 
 In a terminal
 
 * Start gfsh for kubernetes
     ```
-    kubectl -n tanzu-gemfire exec -it GEMFIRE-CLUSTER-NAME-locator-0 -- gfsh
+    kubectl -n gemfire-cluster exec -it hello-world-gemfire-cluster-locator-0 -- gfsh
     ```  
 
-  * Replace `tanzu-gemfire` with the name of your namespace, if it's different.
-  * Replace `GEMFIRE-CLUSTER-NAME` with the name of your VMware GemFire cluster. 
+  * Replace `-n gemfire-cluster` with the name of your namespace, if it's different.
+ 
 
 * Once you see that `GFSH` has started, connect to your cluster with the `connect` command
 
     ```
-    gfsh> connect
+    connect --locator=hello-world-gemfire-cluster-locator-0.hello-world-gemfire-cluster-locator.gemfire-cluster[10334]
     ``` 
 * Once connected run the `list regions` command
 
     ```
-    gfsh> list regions
+    list regions
     ``` 
 
 You should see something similar to
@@ -278,18 +280,18 @@ You should see something similar to this, where the "Value" listed in your termi
     Key Class   : java.lang.String
     Key         : hello
     Value Class : java.lang.String
-    Value       : "2020-12-08T13:46:47.322"
+    Value       : "2022-11-17T19:22:30.894"
    ```
     
    **Shown on the Webpage**
    
    ```
     key: hello
-    value: 2020-12-08T13:46:47.322
+    value: 2022-11-17T19:22:30.894
     time to look up: 2ms
    ```
 
-**Congratulations! You’re ready to start using VMware GemFire.**
+**Congratulations! You’re ready to start using VMware GemFire for Kubernetes.**
 
 ---
 
@@ -301,13 +303,13 @@ To delete the *Hello, World!* app you will need to delete the deployment and the
 This will remove the *Hello, World!* deployment, replicaset, and pod.
 
 ```
-kubectl -n tanzu-gemfire delete deployment hello-world-deployment
+kubectl -n gemfire-cluster delete deployment hello-world-deployment
 ```
 
 This will remove the *Hello, World!* service.
 
 ```
-kubectl -n tanzu-gemfire delete service hello-world-deployment
+kubectl -n gemfire-cluster delete service hello-world-deployment
 ```
 
 ---
@@ -317,31 +319,30 @@ kubectl -n tanzu-gemfire delete service hello-world-deployment
 If you need to delete your VMware GemFire cluster, first remove the cluster
 
   ```
-  kubectl -n tanzu-gemfire delete GemFireCluster hello-world-gemfire-cluster
+  kubectl -n gemfire-cluster delete GemFireCluster hello-world-gemfire-cluster
   ```
-   * Replace `tanzu-gemfire` with your namespace if different.
+   * Replace `-n gemfire-cluster` with your namespace if different.
    * Replace `hello-world-gemfire-cluster` with the name of your GemFire instance if different.       
 
 When the VMware GemFire cluster has been completely deleted, remove the persistent volume claims of the Kubernetes cluster. These are disk claims that Kubernetes makes on the underlying system. 
 
    ```
-    kubectl -n tanzu-gemfire get persistentvolumeclaims
+    kubectl -n gemfire-cluster get persistentvolumeclaims
    ```
     
-   * Replace `tanzu-gemfire` with your namespace if different.
+   * Replace `-n gemfire-cluster` with your namespace if different.
 
-Then delete each persistent volume claim listed.
+To delete all the persistent volume claim listed, run the following command
 
    ```
-    kubectl -n tanzu-gemfire delete persistentvolumeclaim PVC_NAME_1 PVC_NAME_2 PVC_NAME_3 ...
+    kubectl delete pvc -n gemfire-cluster --all
    ```
-   * Replace `tanzu-gemfire` with your namespace if different.
-   * Replace `PVC_NAME_1 PVC_NAME_2 PVC_NAME_3` with each persistent volume claim listed.
-
+   * Replace `-n gemfire-cluster` with your namespace if different.
+   
 ---
 
  ## Learn More
  
  Now that you have successfully created a running VMware GemFire cluster on Kubernetes, check out some other guides.
   
- * Create an application that utilizes Spring Boot for Apache Geode and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbdg).
+ * Create an application that utilizes Spring Boot for VMware GemFire and Spring Session for [session state caching](/data/gemfire/guides/session-state-cache-sbgf).

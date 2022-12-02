@@ -23,7 +23,7 @@ level1: Building Modern Applications
 level2: Frameworks and Languages
 ---
 
-When you sit down to learn something new It’s important to not only understand what it is but why you should learn it. In this guide I will attempt to explain what serverless is and where Spring fits into the conversation. After that you will go through a step by step guide on how to create a serverless function and deploy it to a cloud provider like AWS. By the end of this article you will have an understanding of when to reach for serverless and how to create functions using Spring.
+When you sit down to learn something new It’s important to not only understand what it is but why you should learn it. In this guide I will attempt to explain what [serverless](https://tanzu.vmware.com/serverless) is and where Spring fits into the conversation. After that you will go through a step by step guide on how to create a serverless function and deploy it to a cloud provider like AWS. By the end of this article you will have an understanding of when to reach for serverless and how to create functions using Spring.
 
 ## What, When & Why
 

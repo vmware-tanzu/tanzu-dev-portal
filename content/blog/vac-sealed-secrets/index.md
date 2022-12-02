@@ -17,7 +17,7 @@ topics:
 
 > First published on [https://blog.bitnami.com/2021/11/deploy-applications-with-confidence-vmware-application.html](https://blog.bitnami.com/2021/11/deploy-applications-with-confidence-vmware-application-catalog.html).
 
-As more organizations adopt Kubernetes as the preferred infrastructure for running their IT resources, enterprise SRE teams tend to adopt a GitOps mindset.  
+As more organizations adopt Kubernetes as the preferred infrastructure for running their IT resources, enterprise SRE teams tend to adopt a [GitOps](https://tanzu.vmware.com/gitops) mindset.  
 
 The GitOps approach consists of embracing different practices that manage infrastructure configuration as a code. This means that Git becomes the single source of truth and as such, all operations are tracked via commits and pull requests. Thus, every action performed on the infrastructure will leave a trace and can be reverted, if needed.  
 
