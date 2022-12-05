@@ -49,7 +49,7 @@ level2: Preparing and Deploying Kubernetes Workloads
 
 _Note: If you're not familiar with Helm, start with our [Getting Started with Helm](../helm-what-is) guide._
 
-In addition to the Templating and Packaging Helm gives you for your Kubernetes manifests, Helmfile provides a way to apply GitOps style CI/CD methodologies over your Helm charts by:
+In addition to the Templating and Packaging Helm gives you for your Kubernetes manifests, Helmfile provides a way to apply [GitOps](https://tanzu.vmware.com/gitops) style CI/CD methodologies over your Helm charts by:
 
 * Separating out your Environment specific information from your Chart
 * Performing a diff of your existing deployment and only applying the changes

@@ -17,7 +17,7 @@ For more information, visit: https://tanzu.vmware.com/application-platform
 * 00:06 Welcome
 * 00:10 Tanzu Application Platform GUI - Catalog
 * 00:30 Viewing Multi-Cluster Workloads
-* 00:57 GitOps Supply Chain - Updating Apps
+* 00:57 [GitOps](https://tanzu.vmware.com/gitops) Supply Chain - Updating Apps
 * 02:16 Viewing Application Test Logs
 * 02:30 Source Code Vulnerability Scanning with Grype 
 * 03:19 Building A Container Image with Buildpacks

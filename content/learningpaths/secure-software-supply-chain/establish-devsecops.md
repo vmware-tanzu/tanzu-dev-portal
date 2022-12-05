@@ -35,7 +35,7 @@ usually have nuanced understanding of the code to effectively operate it, and
 security teams struggle to keep the business secure in the face of rapidly
 evolving technical requirements.
 
-While Secure Software Supply Chains are primarily a component of getting code
+While [Secure Software Supply Chains](https://tanzu.vmware.com/what-is-a-secure-software-supply-chain) are primarily a component of getting code
 into production, they are also an opportunity to reduce the friction between the
 various stakeholders attached to software development efforts. When implemented
 properly, each part of the organization will be working together towards the

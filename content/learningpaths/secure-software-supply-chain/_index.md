@@ -60,7 +60,7 @@ seeking to derive value from their work. When properly implemented, a secure
 software supply chain has the ability to close this gap across the entirety of
 your software portfolio.
 
-A secure software supply chain is a term that refers to the full suite of
+A [secure software supply chain](https://tanzu.vmware.com/what-is-a-secure-software-supply-chain) is a term that refers to the full suite of
 software that will move your code from a developer’s laptop, through source
 control, and eventually onto production systems. This is not a one-way
 transaction. This supply chain, when implemented properly, will become a

@@ -12,4 +12,4 @@ type: tv-episode
 youtube: F70wRexHIwg
 ---
 
-This will be the first tgik presented wiht a guest! Welcome Steve Wade as we explore gitops and Steve's direct experience around it.
+This will be the first tgik presented wiht a guest! Welcome Steve Wade as we explore [GitOps](https://tanzu.vmware.com/gitops) and Steve's direct experience around it.

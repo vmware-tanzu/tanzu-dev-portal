@@ -150,7 +150,7 @@ $ tanzu package install tap -p tap.tanzu.vmware.com -v $TAP_VERSION \
 
 #### Set up a namespace for deployment
 
-Follow [these instructions](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-set-up-namespaces.html) to set up a namespace for deployment. These steps need to be repeated for each namespace configured.  If you are using a GitOps workflow with the delivery and/or service bindings yaml files located in a Git repo, make sure you create a secret in your run cluster namespace that matches the secret on the “deliverable” resource used to deploy the workloads. 
+Follow [these instructions](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-set-up-namespaces.html) to set up a namespace for deployment. These steps need to be repeated for each namespace configured.  If you are using a [GitOps](https://tanzu.vmware.com/gitops) workflow with the delivery and/or service bindings yaml files located in a Git repo, make sure you create a secret in your run cluster namespace that matches the secret on the “deliverable” resource used to deploy the workloads. 
 
 
 #### Exposing a Workload via Istio VirtualService
