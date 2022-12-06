@@ -23,11 +23,11 @@ npm: theme
 
 #hugo-check: @ checks system version of hugo 
 hugo-check:
-ifneq ($(hugo_local),$(hugo_prod))
+ifeq ($(hugo_local),$(hugo_prod))
 	@echo hugo $(hugo_local) validated
 else
 	@echo $@ failure: Your hugo version \($(hugo_local)\) does not match production \($(hugo_prod)\) 
-	@echo run \'brew upgrade hugo\' or download and install from the releases page (https://github.com/gohugoio/hugo/releases/tag/v0.107.0).
+	@echo run \'brew upgrade hugo\' or download and install the extended version from the releases page (https://github.com/gohugoio/hugo/releases/tag/v0.107.0).
 	@exit 1
 endif
 
