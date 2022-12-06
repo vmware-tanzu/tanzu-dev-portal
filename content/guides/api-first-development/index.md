@@ -466,7 +466,6 @@ Here's a widely used, opinionated list of things you should be aware of to make 
 4. [Open API Editor](https://editor.swagger.io/)
 
 The specifications used in this document can be found here:
-TODO: FIX THESE LINKS
 1. [The start API First specification](./specs/apifirst_openapi.yaml)
 2. [The ApiResponse component object](./schemas/response.yaml)
 3. [The Order component object](./schemas/order.yaml)
