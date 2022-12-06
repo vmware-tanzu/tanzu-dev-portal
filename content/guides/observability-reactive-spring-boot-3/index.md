@@ -87,6 +87,9 @@ public class SimpleObservationApplication {
         SpringApplication.run(SimpleObservationApplication.class, args);
     }
 
+    @Autowired
+	  ObservationRegistry registry;
+
     @Bean
     public ApplicationListener<ApplicationStartedEvent> doOnStart() {
         return event -> {
@@ -116,9 +119,9 @@ public class SimpleObservationApplication {
 ```
 
 A few things are happening in this code: 
- 1. Create an instance of `Observation` bound to an `ObservationRegistry` as stated in [The Doc](https://micrometer.io/docs/observation).
- 2. To better track our invocation, set Low cardinality keys - that is keys which have little or no variations in value. For High cardinality keys - which is many value possibilities - use the `.highCardinalityKeyValue()` method.
- 3. Rather than manually calling `.start()` and `.stop()`, use the [observe(Runnable)] to isolate any monitored code in it's own `Runnable` closure.
+ 1. Create an instance of `Observation` and bind it to an `ObservationRegistry` as stated in [The Doc](https://micrometer.io/docs/observation).
+ 2. To better track our invocation, set Low cardinality keys - these are tags which have little or no variations in value. For High cardinality keys - which is many value possibilities - use the `.highCardinalityKeyValue()` method.
+ 3. Rather than manually calling `.start()` and `.stop()`, use the `observe(Runnable)]` method to isolate the monitored code in it's own `Runnable` closure.
 
 ## How Micrometer observation works
 
@@ -166,7 +169,7 @@ INFO 90538 --- [           main] i.m.o.ObservationTextPublisher           :  STO
 INFO 90538 --- [           main] c.e.o.ManualObservationApplication       : Result was: SOMETHING
 ```
 
-Our `ObservationTextPublisher` shows the various stages this Observation went through, along with it's metadata.  Notice that once a Observation scope gets started, that our logging also shows a `traceId` and `spanId`. The auto-configured handlers such as a [TracingAwareMeteredObservationHandler](https://github.com/micrometer-metrics/tracing/blob/main/micrometer-tracing/src/main/java/io/micrometer/tracing/handler/TracingAwareMeterObservationHandler.java#L24) - have already taken care of those objectives.
+Our `ObservationTextPublisher` shows the various stages this Observation went through, along with it's metadata.  Notice that we have no `traceId` or `spanId` as usual since the bare minimum tracers are of the `NOOP` variety. The next section will add `Zipkin/Brave` implementations that are auto-configured with additional dependencies. 
 
 ## The reactive sample setup
 
