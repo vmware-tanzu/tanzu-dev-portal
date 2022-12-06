@@ -2,6 +2,8 @@
 .PHONY: test preview build theme spell node_modules
 
 word-dot = $(word $2,$(subst ., ,$1))
+hugo_prod := 0.107.0
+hugo_local := $(shell hugo version | awk -F v '{print substr($$2,1,7)}')
 
 #help: @ List available tasks on this project
 help:
@@ -18,8 +20,19 @@ theme:
 npm: theme
 	npm ci
 
+
+#hugo-check: @ checks system version of hugo 
+hugo-check:
+ifneq ($(hugo_local),$(hugo_prod))
+	@echo hugo $(hugo_local) validated
+else
+	@echo $@ failure: Your hugo version \($(hugo_local)\) does not match production \($(hugo_prod)\) 
+	@echo run \'make hugo-update\' or \'brew upgrade hugo\'
+	@exit 1
+endif
+
 #preview: @ preview hugo
-preview: npm
+preview: hugo-check npm
 	ulimit -n 65535; hugo server -b http://localhost:1313/developer
 
 #preview-ip: @ preview hugo with IP
@@ -27,7 +40,7 @@ preview-ip: npm
 	ulimit -n 65535; hugo server --panicOnWarning --bind 0.0.0.0 -b http://${MYIP}:1313/developer
 
 #build: @ build site into `public` directory
-build: npm
+build: hugo-check npm
 	hugo -b http://localhost:1313/developer
 
 #test: @ runs act to simulate a github pull request test suite
