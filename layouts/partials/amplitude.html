@@ -8,7 +8,7 @@
 {{ end }}
 
 {{ if eq .event "guide viewed" }}
-    <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .context.Params.level1 | lower }}', 'subtopic name': '{{ .context.Params.level2 | lower }}', 'guide title': '{{ .context.Title }}', 'guide authors': authors, 'url path': window.location.pathname}); </script>
+    <script>sendAmplitudeEventOnLoad('guide viewed', {'topic name': '{{ .context.Params.level1 | lower }}', 'guide publish date': '{{ .context.Date.Format "2006-01-02T15:04:05Z0700" }}', 'subtopic name': '{{ .context.Params.level2 | lower }}', 'guide title': '{{ .context.Title }}', 'guide authors': authors, 'url path': window.location.pathname}); </script>
 
 {{ else if eq .event "blog post viewed" }}
     <script>sendAmplitudeEventOnLoad('blog post viewed', {'blog post title': '{{ .context.Title }}', 'blog post publish date': '{{ .context.Date.Format "2006-01-02T15:04:05Z0700" }}', 'blog post length': '{{ .context.Content | len }}' ,'blog post authors': authors, 'url path': window.location.pathname});</script>
