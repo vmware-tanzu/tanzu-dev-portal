@@ -73,7 +73,6 @@ title: 'Do more with Azure Spring Apps ??? scale to zero and enhance productivit
   <li>Deploy Spring Boot apps by leveraging enterprise best practices ? <a href="https://learn.microsoft.com/en-us/azure/spring-apps/reference-architecture?tabs=azure-spring-standard">Azure Spring Apps Reference Architecture</a></li>
   <li>Migrate your <a href="https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-apps">Spring Boot</a>, <a href="https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-apps?pivots=sc-standard-tier">Spring Cloud</a>, and <a href="https://learn.microsoft.com/en-us/azure/developer/java/migration/migrate-tomcat-to-azure-spring-apps">Tomcat</a> applications to Azure Spring Apps</li>
   <li>Wire Spring applications to <a href="https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/">interact with Azure services</a></li>
-  <li>For feedback and questions, <a href="/cdn-cgi/l/email-protection#e3a299969186b093918a8d84a08f8c9687ceb7828f88a3908691958a8086cd8e8a80918c908c8597cd808c8e">please e-mail us.</a></li>
  </ul>
 </div>
 
