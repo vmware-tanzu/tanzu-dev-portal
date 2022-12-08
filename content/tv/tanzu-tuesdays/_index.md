@@ -13,8 +13,8 @@ menu:
 # Text that appears on show index page under show name
 description: See live demos of modern application development technologies.
 # Text that appears highlighted in green on show index page above show name
-teaser: Live Every Tuesday at 12pm PT
+#teaser: Live Every Tuesday at 12pm PT
 # Text that shows on show page under show name
-subheader: Live demos on Twitch, every Tuesday at 12pm PT.
+#subheader: Live demos on Twitch, every Tuesday at 12pm PT.
 # Any content below here shows up above episode index
 ---
