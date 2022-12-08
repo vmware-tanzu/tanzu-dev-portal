@@ -1,5 +1,5 @@
 {{/* The "active" toggle here may delay rendering, so we only cache this side bar menu for bigger sites. */}}
-{{ $shouldCache := ge (len .Site.Pages) 2000 }}
+{{ $shouldCache := ge (len .Site.Pages) 5000 }}
 
 {{if eq .Section "data"}}
         {{ if $shouldCache }}

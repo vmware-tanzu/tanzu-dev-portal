@@ -70,29 +70,32 @@ Go to the [VMware Tanzu Application Platform product page](https://network.tanzu
 3. Create a new system folder for the <code>tanzu</code> cli.
 </strong></p>
 
-{{< tabpane >}}
-{{< tab header="Windows" >}}
+<!-- Hardcoding the tabpanes in HTML for this section because for some reason the nested image doesn't work within the tabpane shortcode; render-image doesn't get the page object -->
+<ul class="nav nav-tabs flex-nowrap" id="tabs-1" role="tablist">
+  <li class="nav-item mb-0">
+    <a class="nav-link active tab-Windows" id="tabs-1-0-tab" data-toggle="tab" href="#tabs-1-0" role="tab" aria-controls="tabs-1-0" aria-selected="true">Windows</a>
+  </li>
+  <li class="nav-item mb-0">
+    <a class="nav-link tab-MacOS-&amp;-Linux" id="tabs-1-1-tab" data-toggle="tab" href="#tabs-1-1" role="tab" aria-controls="tabs-1-1" aria-selected="false">MacOS &amp; Linux</a>
+  </li>
+</ul>
+<div class="tab-content p-4 mb-4" id="tabs-1-content"><div class="tab-pane fade show active" id="tabs-1-0" role="tabpanel" aria-labelled-by="tabs-1-0-tab">
+  Open a new PowerShell Terminal with Administrator privileges. Do this by clicking on the 'Start' button -> right-click 'Terminal' -> and select 'Run as administrator' as shown in the image below.
 
-Open a new PowerShell Terminal with Administrator privileges. Do this by clicking on the 'Start' button -> right-click 'Terminal' -> and select 'Run as administrator' as shown in the image below.
+  ![Open an Admin PowerShell Terminal window](images/image5.png "Image showing how to open an Admin PowerShell Terminal window.")
 
-![Open an Admin PowerShell Terminal window](images/image5.png "Image showing how to open an Admin PowerShell Terminal window.")
+  Now create a `tanzu` folder under `C:\Program Files` that will be the home of your Tanzu CLI.
 
-Now create a `tanzu` folder under `C:\Program Files` that will be the home of your Tanzu CLI.
-
-```powershell
-# Create a new home for the Tanzu CLI tool in the "Program Files" folder
-mkdir "C:\Program Files\tanzu"
-```
-
-{{< /tab >}}
-{{< tab header="MacOS & Linux" >}}
-
-{{% info %}}
-Not required, move on to the next step.
-{{% /info %}}
-
-{{< /tab >}}
-{{< /tabpane >}}
+  ```powershell
+  # Create a new home for the Tanzu CLI tool in the "Program Files" folder
+  mkdir "C:\Program Files\tanzu"
+  ```
+</div>
+<div class="tab-pane fade" id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab">
+  {{% info %}}
+  Not required, move on to the next step.
+  {{% /info %}}
+</div></div>
 
 <p><strong>
 4. Add the location of the <code>tanzu</code> folder to your System’s <code>PATH</code>.

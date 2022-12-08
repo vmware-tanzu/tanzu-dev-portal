@@ -5,7 +5,7 @@ description: An introduction to Knative Eventing for users of VMware Tanzu Cloud
 summary: An introduction to Knative Eventing for users of VMware Tanzu Cloud Native Runtimes.
 lab: lab-cnr-eventing
 length: 15
-logo: "/images/workshops/logo-tanzu.png"
+logo: "images/workshops/logo-tanzu.png"
 tags:
 - Spring
 - Microservices
