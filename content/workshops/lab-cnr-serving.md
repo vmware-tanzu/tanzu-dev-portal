@@ -4,7 +4,7 @@ description: Get started with serverless on Kubernetes using Knative.
 summary: Get started with serverless on Kubernetes using Knative, an open source tool to simplify deploying microservices on Kubernetes.
 lab: lab-cnr-serving
 length: 15
-logo: "/images/workshops/logo-knative.png"
+logo: "images/workshops/logo-knative.png"
 tags:
 - Spring
 - Microservices

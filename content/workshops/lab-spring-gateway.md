@@ -4,7 +4,7 @@ description: This workshop walks you through getting started with the Spring Clo
 summary: This workshop walks you through getting started with the Spring Cloud Gateway.
 lab: lab-spring-gateway
 length: 20
-logo: "/images/workshops/logo-spring-cloud.png"
+logo: "images/workshops/logo-spring-cloud.png"
 tags:
   - Spring
   - Spring Cloud Gateway

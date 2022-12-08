@@ -38,7 +38,7 @@ You can extend Spring Cloud Connectors to support additional services, including
 
 ## Application Framework Support
 
-The Spring Cloud Spring Service Connector creates service connectors with Spring Data data types. You can extend Spring Cloud Connectors to provide service connection objects using another framework.
+The Spring Cloud Spring Service Connector creates service connectors with data types for Spring Data. You can extend Spring Cloud Connectors to provide service connection objects using another framework.
 
 Spring Cloud Connectors uses the `ServiceConnectorCreator` interface to provide framework support. A `ServiceConnectorCreator` creates service connectors using the service connection information provided by a `ServiceInfo` object.
 

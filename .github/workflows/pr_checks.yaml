@@ -8,17 +8,28 @@ jobs:
   spell-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Checkout
         with:
           fetch-depth: 1
-      - uses: ./.github/actions/spell-check
+      - uses: tbroadley/spellchecker-cli-action@v1
         name: Spell Check
+        with:
+          # Don't spellcheck auto-scraped content (YouTube descriptions for Tanzu.TV and Josh Long content); Also don't spellcheck Korean content
+          files: "content/**/*.md !content/tv/tgik/**/index.md !content/tv/talk/**/index.md !content/team/josh-long/_index.md !content/blog/josh-long/*.md !content/**/*.kr.md"
+          # GitHub hashes and YouTube IDs
+          ignore: "[0-9a-f]{7} [0-9A-Za-z_\\-]{11}"
+          quiet: true
+          noSuggestions: true
+          language: en-US
+          frontmatterKeys: "title Title description Description"
+          dictionaries: "custom_dict.txt"
+          plugins: "frontmatter spell syntax-urls indefinite-article repeated-words"
   broken-link-check:
     needs: spell-check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Checkout
         with:
           fetch-depth: 1
@@ -32,7 +43,7 @@ jobs:
       runs-on: ubuntu-latest
       needs: broken-link-check
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
           name: Checkout
           with:
             fetch-depth: 1

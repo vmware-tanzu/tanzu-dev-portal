@@ -2568,7 +2568,7 @@ UserDetails
 Util(s)?
 UX
 UX/UI
-v[0-9]
+v[0-9]\.*[0-9]*
 [Vv][123]
 Vaadin
 ValidatingAdmissionWebhook

@@ -466,10 +466,9 @@ Here's a widely used, opinionated list of things you should be aware of to make 
 4. [Open API Editor](https://editor.swagger.io/)
 
 The specifications used in this document can be found here:
-TODO: FIX THESE LINKS
-1. [The start API First specification](specs/apifirst_openapi.yaml)
-2. [The ApiResponse component object](schemas/response.yaml)
-3. [The Order component object](schemas/order.yaml)
-4. [The bundled API First specification](specs/apifirst_openapi_bundled.yaml)
+1. [The start API First specification](./specs/apifirst_openapi.yaml)
+2. [The ApiResponse component object](./schemas/response.yaml)
+3. [The Order component object](./schemas/order.yaml)
+4. [The bundled API First specification](./specs/apifirst_openapi_bundled.yaml)
 
 Need to get up to date on what’s happening around APIs? [The 2020 State of the API Report](https://www.postman.com/state-of-api/) describes the latest trends based on a worldwide survey.

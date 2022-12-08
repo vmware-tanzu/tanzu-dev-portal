@@ -6,7 +6,7 @@ lab: lab-spring-boot-on-k8s
 length: 30
 featured: true
 featuredweight: 3
-logo: /images/workshops/logo-spring-kubernetes.png
+logo: images/workshops/logo-spring-kubernetes.png
 tags:
   - Kubernetes
   - Spring

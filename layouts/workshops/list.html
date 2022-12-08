@@ -8,7 +8,7 @@
             </div>
             <div class="col-lg-1"></div>
             <div class="col-12 col-lg-6 py-2 py-lg-5 px-0 pl-lg-4 position-relative">
-                <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "/images/icons/" .Params.icon ".svg" | relURL }}' />
+                <img class="product-icon position-absolute pe-none" alt="" src='{{ printf "%s%s%s" "images/icons/" .Params.icon ".svg" | relURL }}' />
                 <!-- Link Boxes -->
                 <!-- TODO: Proper CSS fix for make link boxes the same size -->
                 <div class="container h-100">
@@ -20,7 +20,7 @@
                     <div class="row h-100 flex-lg-nowrap product-links position-relative z-1 justify-content-between">
                         {{ $featured := where (where .Site.Pages "Section" "workshops") ".Params.featured" true }}
                         {{ range sort $featured ".Params.featuredweight" }}
-                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ printf "/get-workshop/%s" .Params.lab | relURL }}">
+                        <a class="linked-box h-100 flex-315 td-box--gray-dark px-4 py-3 mb-3 mb-lg-0 h-auto" href="{{ printf "get-workshop/%s" .Params.lab | relURL }}">
                             <h2 class="h4 link">{{ .Params.title }}</h2>
                             <p>{{ .Params.description }}</p>
                         </a>
