@@ -2,6 +2,7 @@
     <div>
         <div class="px-0 mb-5 shows">
         {{ range sort .Sections }}
+        {{ if not .Params.hidden }}
                 <div class="row d-flex justify-content-between align-items-baseline mb-3" >
                     <h2 class="h4">
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -29,6 +30,7 @@
                         </a>
                     {{ end }}
                 </div>
+        {{ end }}
         {{ end }}
 
         </div>
