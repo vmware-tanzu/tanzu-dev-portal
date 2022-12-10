@@ -9,7 +9,7 @@ guests:
 - Leigh Capili
 hosts:
 - Whitney Lee
-youtube: "QUVN0Sr8hF0"
+youtube: "gsyGOv_Nwb0"
 lastmod: '2020-10-09'
 title: "Carvel: Clean Tools for Cloud Native Problems"
 twitch: vmwaretanzu
