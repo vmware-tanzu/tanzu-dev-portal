@@ -42,13 +42,13 @@ Let's start with a quick [example](https://github.com/marios-code-path/path-to-s
 Create the sample application with the following settings on [the Spring Initializr](https://start.spring.io):
 
 Artifact ID:
- * `sample-observation`
+ * `simple-observation`
 
 Dependencies: 
   * Lombok
   * Actuator
 
-Platform Version:
+Spring Boot:
   * 3.0.0
 
 Packaging: 
@@ -59,7 +59,6 @@ Java Version:
 
 Type:
   * Maven
-
 
 
 The full sample listing follows in `SimpleObservationApplication.java`:
@@ -74,13 +73,11 @@ public class SimpleObservationApplication {
     }
 
     @Bean
-    public ApplicationListener<ApplicationStartedEvent> doOnStart(ObservationRegistry registry) {
-        return event -> {
-            generateString(registry);
-        };
+    ApplicationListener<ApplicationStartedEvent> doOnStart(ObservationRegistry registry) {
+        return event -> generateString(registry);
     }
 
-    public static void generateString(ObservationRegistry registry) {
+    private static void generateString(ObservationRegistry registry) {
         String something = Observation
                 .createNotStarted("server.job", registry)    // 1
                 .lowCardinalityKeyValue("jobType", "string") // 2                
@@ -129,14 +126,19 @@ The Spring Boot autoconfiguration creates an `ObservationRegistry` responsible f
 
 Additionally, non-auto-configured handlers exist, such as the [ObservationTextPublisher](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationTextPublisher.java#L24). This handler logs the context during each handled event.
 
-Log observation events by declaring a bean of type `ObservationTextPublisher`:
+Log observation events by declaring a bean of type `ObservationTextPublisher` in the main application configuration:
 
 ```java
-@Component
-public class TextPublishingObservationHandler extends ObservationTextPublisher { }
+public class ManualObservationApplication {
+  ...
+	@Bean
+	ObservationTextPublisher otp() {
+		return new ObservationTextPublisher();
+	}
+}
 ```
 
-We will see logs that the `ObservationTextPublisher` emitted when we execute our `SimpleObservationApplication`. I've removed timestamps and only included one descriptive log line for brevity:
+You will see logs that the `ObservationTextPublisher` emitted when we execute our `SimpleObservationApplication`. I've removed timestamps and only included one descriptive log line for brevity:
 
 ```log
 INFO 90538 --- [           main] i.m.o.ObservationTextPublisher           : START - name='server.job', contextualName='null', error='null', lowCardinalityKeyValues=[jobType='string'], highCardinalityKeyValues=[], map=[]
@@ -206,9 +208,9 @@ The first thing to do after unzipping the project is to add two necessary depend
 		</dependency>
 ```
 
-Open this project in your favorite IDE and follow along, or simply [browse](https://github.com/marios-code-path/path-to-springboot-3/tree/main/webflux-observation) the source for reference. For clarification, we will be adding dependencies as this guide progresses.
+Open this project in your favorite IDE and follow along, or simply [browse](https://github.com/marios-code-path/path-to-springboot-3/tree/main/webflux-observation) the source for reference. For clarification, you will add dependencies as this guide progresses.
 
-Let's move on and establish some basic application properties; app name, server port, and logging format.
+Next, establish some basic application properties: app name, server port, and logging format.
 
 application.properties:
 
@@ -246,7 +248,7 @@ class GreetingService {
         this.registry = registry;
     }
 
-    public Mono<Greeting> greeting(String name) {
+    Mono<Greeting> greeting(String name) {
 
         Long lat = latencySupplier.get();
         return Mono
@@ -261,7 +263,7 @@ The class is a standard REST endpoint, with nothing notable except the inclusion
 
 ### Add a REST endpoint
 
-Next, we will add a REST endpoint that returns a greeting for a name derived from the path parameter `{name}`:
+Next, add a REST endpoint that returns a greeting for a name derived from the path parameter `{name}`:
 
 ```kotlin
 @RestController
@@ -271,7 +273,7 @@ class GreetingController {
     GreetingController(GreetingService service) { this.service = service; }
 
     @GetMapping("/hello/{name}")
-    public Mono<Greeting> greeting(@PathVariable("name") String name) {
+    Mono<Greeting> greeting(@PathVariable("name") String name) {
         return service
                 .greeting(name);
     }
@@ -280,17 +282,15 @@ class GreetingController {
 
 > **_TIP:_** [WebFluxObservationAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/observation/web/reactive/WebFluxObservationAutoConfiguration.java) is the autoconfiguration class for observation in WebFlux. It includes all of the `ObservationHandler` and `WebFilter` instances needed to observe (draw traces and meters from) HTTP requests and responses.
 
-Now, with the basic shape of our primary sample out of the way, we can gain some insights as to how observation gets injected into raw reactive streams. The following section will review the necessary steps to achieve full interoperability between Reactor and Micrometer.
-
 ## Reactive stream observation
 
 Project reactor comes with [built-in support for Micrometer](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/metrics.adoc) instrumentation implementations.
 
-We will use the reactive `tap` operator to instrument the streams in this sample. The `tap` operator uses a stateful per-subscription [SignalListener](https://projectreactor.io/docs/core/3.5.0-M2/api/reactor/core/observability/SignalListener.html) to manage the state of the `Observation` in progress.
+Use the reactive `tap` operator to instrument the streams in this sample. The `tap` operator uses a stateful per-subscription [SignalListener](https://projectreactor.io/docs/core/3.5.0-M2/api/reactor/core/observability/SignalListener.html) to manage the state of the `Observation` in progress.
 
 To get a micrometer signal listener, import the [reactor-core-micrometer](https://github.com/reactor/reactor-core/tree/main/reactor-core-micrometer) dependency. Note that this API also relies on [context-propagation](https://micrometer.io/docs/contextPropagation) to propagate observability information along the lifetime of the reactive stream.
 
-Here are the additions we will add to `pom.xml` to enable Micrometer Reactive Stream APIs:
+Here are the additions to `pom.xml` that enable Micrometer Reactive Stream integration:
 
 ```xml
 		<!-- Micrometer API -->
@@ -305,11 +305,10 @@ Here are the additions we will add to `pom.xml` to enable Micrometer Reactive St
 		</dependency>
 ```
 
-In this example, we are interested in the `reactor.core.observability.micrometer.Micrometer` API that provides us with the `StreamListener` needed to observe the stream. This API supports instrumentation of `reactor.core.scheduler.Scheudler`'s, as well as applying Meters and Observations on a per-subscription basis to the reactive stream. This example will observe our stream using the `Micrometer.observation` API that hooks into Micrometer's `Observation` framework.
+The `reactor.core.observability.micrometer.Micrometer` API provides the `StreamListener` to observe a stream. The `StreamListener` allows `ObservationHandlers` to respond to the observed lifecycle of a stream. This example observes the stream using the `Micrometer.observation` API that hooks into Micrometer's `Observation` framework.
 
-We can take our `GreetingService` from earlier and embellish it with additional `Observation` related sections.
+Modify the `GreetingService` from earlier to use the `Observation` API:
 
-GreetingService.java:
 ```java
         return Mono
                 .just(new Greeting(name))
@@ -319,19 +318,17 @@ GreetingService.java:
                 .tap(Micrometer.observation(registry))  // 3
 ```
 
-Given the above, we will have a child span for the parent HTTP controller span. The main additions are as follows:
+This code sample creates a child span for the parent HTTP controller span. The main additions are as follows:
 
-1. Using `.name` to specify the `Observation` name.
+1. Use `.name` to specify the `Observation` name.
 2. Add low cardinality tags and attributes to the measurements with `.tag`.
-3. Produce the `Observation`-specific signal listener for the `tap` operator. This operator covers the entire length of the reactive sequence.
+3. Produce the `Observation`-specific signal listener for the `tap` operator. This operator covers the entire length of the reactive stream.
 
-You can read more about Micrometer Metrics in streams in the [Micrometer Observation Docs](https://micrometer.io/docs/observation).
+Read more about Micrometer Metrics in streams in the [Micrometer Observation Docs](https://micrometer.io/docs/observation).
 
 ## Introduction of the Monitoring Platform
 
-In this guide, we will have the experience of a single-page observation. With this idea going forward, we can move through logs, traces, and metrics in one location. To achieve this kind of integration, we will make use of a specific `operations` service infrastructure:
-
-Infra:
+Next, configure a Grafana dashboard to view logs, traces, and metrics in one location. You need the following additional projects to get started:
 
   * [Prometheus](https://prometheus.io) - Metrics
 
@@ -341,20 +338,20 @@ Infra:
   
   * [Grafana](https://grafana.com/grafana/) - Dashboard Visualization
 
-For this example, there are pre-configured instances of Prometheus, Grafana, Tempo, and Loki located within the `infra` directory. Provided in this directory are the Docker Compose scripts and server configuration files. You can bring the whole thing up with the following command:
+There are pre-configured instances of Prometheus, Grafana, Tempo, and Loki located within the `infra` directory. Docker Compose scripts and server configuration files are provided in this directory. Bring the whole thing up with the following command:
 
 ```bash
 cd infra/
 docker compose up
 ```
 
-This startup may take a minute or two since it may need to download containers over the network. So have a few sips of that tea, coffee, or water you might have on hand! Next, we can move on and examine this infrastructure as it relates to our example app.
+This startup may take a minute or two since it may need to download containers over the network. So have a few sips of that tea, coffee, or water you might have on hand! Next, move on and examine this infrastructure as it relates to the example app.
 
 ### Prometheus Setup
 
-On the application-facing side of our Prometheus setup, we need to configure a set of [scrape config](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) for ingesting our app's `/actuator/prometheus` endpoint. 
+On the application-facing side of Prometheus, you will configure a set of [scrape configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/) for ingesting the application's `/actuator/prometheus` endpoint.
 
-The specific `scrape config` is listed below:
+The specific scrape configuration is listed below:
 
 ```yaml
 global:
@@ -373,29 +370,29 @@ scrape_configs:
 
 ### Enable the Prometheus Actuator endpoint
 
-Here, we will configure our app to expose the specific `/actuator/prometheus` endpoint used during the scrape process in Prometheus:
+Configure the application to expose the specific `/actuator/prometheus` endpoint used for Prometheus's scraping process:
 
 In `application.properties`, add:
 ```properties
 management.endpoints.web.exposure.include=prometheus
 ```
 
-Micrometer [supports](https://micrometer.io/docs/concepts#_histograms_and_percentiles) publishing histograms for computing percentile distributions with the `management.metrics.distribution.percentiles-histogram` property. We can apply a [per meter customization](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.metrics.customizing.per-meter-properties) to the WebFlux/WebMVC `http.server.requests` metrics and produce the target percentiles histogram as follows:
+Micrometer [supports](https://micrometer.io/docs/concepts#_histograms_and_percentiles) publishing histograms for computing percentile distributions with the `management.metrics.distribution.percentiles-histogram` property. We can apply a [per Meter customization](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.metrics.customizing.per-meter-properties) to the WebFlux or MVC `http.server.requests` metrics and produce the target percentiles histogram as follows:
 
 In `application.properties`, add:
 ```properties
 management.metrics.distribution.percentiles-histogram.http.server.requests=true
 ```
 
-> **NOTE:** percentiles histograms are required for Exemplars to function. Percentile histograms do not affect systems that do not support histogram-based percentile approximations.
+> **_NOTE:_** percentiles histograms are required for Prometheus Exemplars to function. Percentile histograms do not affect systems that do not support histogram-based percentile approximations.
 
 ### Configure Loki log aggregation
 
-Grafana will query Loki to add log correlation with our traces and metrics. Then, we will configure a Logback appender to emit our logs directly to Loki. This appender - `com.github.loki4j.logback.Loki4jAppender` -  comes from [Loki4J](https://loki4j.github.io/loki-logback-appender/).
+Grafana queries Loki to add log correlation with traces and metrics. Then, configure a Logback appender to emit logs directly to Loki. This appender - `com.github.loki4j.logback.Loki4jAppender` -  comes from [Loki4J](https://loki4j.github.io/loki-logback-appender/).
 
 Place `logback-spring.xml` into `src/main/resources` of the project and ensure the appender for Loki has the correct URL configured.
 
-To make this work, we use the `loki-logback-appender` dependency as configured with maven:
+To make this work, use the `loki-logback-appender` dependency:
 
 ```xml
 		<dependency>
@@ -405,7 +402,7 @@ To make this work, we use the `loki-logback-appender` dependency as configured w
 		</dependency>
 ```
 
-Put the  source to our `logback-spring.xml` under `resources`:
+Put `logback-spring.xml` under `resources`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -436,11 +433,11 @@ Put the  source to our `logback-spring.xml` under `resources`:
 
 ### Tempo configuration
 
-This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships trace data to Tempo. We can ship traces to Tempo's Zipkin receiver with the help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges). No additional project dependencies are required because we already placed them during the sample setup. However, for reference, they are: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave`.
+This example uses [Micrometer Tracing](https://micrometer.io/docs/tracing) to ship trace data to Tempo. The [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges) ships the trace data to Tempo's Zipkin receiver.
 
-We will use local filesystem storage since provisioning block storage is a bit complex for this example. 
+Use local filesystem storage since provisioning block storage is a bit complex for this example. 
 
-Enabling the Zipkin receiver requires TCP port `9411` (Zipkin). This configuration uses the 'Push with HTTP' option per [Tempo documentation](https://grafana.com/docs/tempo/latest/api_docs/pushing-spans-with-http/).
+The Zipkin receiver requires the default TCP port `9411` (Zipkin). This configuration uses the "Push with HTTP" option per [Tempo documentation](https://grafana.com/docs/tempo/latest/api_docs/pushing-spans-with-http/).
 
 
 tempo-local.yaml:
@@ -459,7 +456,7 @@ storage:
             path: /tmp/tempo/blocks
 ```
 
-Finally, we will ensure every trace gets to our Zipkin receiver endpoints by adding the following lines to `application.properties`:
+Ensure every trace gets to Zipkin endpoints by adding the following lines to `application.properties`:
 
 ```properties
 management.tracing.enabled=true
@@ -468,11 +465,357 @@ management.tracing.sampling.probability=1.0
 
 ### Grafana dashboards
 
-Grafana provisions with external data from configuration within [infra/docker/grafana/provisioning/datasources/datasource.yml](https://github.com/marios-code-path/path-to-springboot-3/blob/main/infra/docker/grafana/provisioning/datasources/datasource.yml). This tells Grafana where to find each external source of data. We will track spans from Tempo, Loki logs, and Prometheus Metrics.
+Grafana provisions external data with configuration from [infra/docker/grafana/provisioning/datasources/datasource.yml](https://github.com/marios-code-path/path-to-springboot-3/blob/main/infra/docker/grafana/provisioning/datasources/datasource.yml). The following datasource configuration tells Grafana where to find each external source of data:
 
-This dashboard configuration is provided in [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) and acts as our standard example dashboard called `logs_traces_metrics`. This dashboard code is borrowed mainly from [a recent observability blog post](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
+```yaml
+apiVersion: 1
 
-## Observing the WebFlux app
+datasources:
+    - name: Prometheus
+      type: prometheus
+      access: proxy
+      url: http://host.docker.internal:9090
+      editable: false
+      jsonData:
+        httpMethod: POST
+        exemplarTraceIdDestinations:
+          - name: trace_id
+            datasourceUid: 'tempo'
+    - name: Tempo
+      type: tempo
+      access: proxy
+      orgId: 1
+      url: http://tempo:3200
+      basicAuth: false
+      isDefault: true
+      version: 1
+      editable: false
+      apiVersion: 1
+      uid: tempo
+      jsonData:
+          httpMethod: GET
+          tracesToLogs:
+              datasourceUid: 'loki'
+    - name: Loki
+      type: loki
+      uid: loki
+      access: proxy
+      orgId: 1
+      url: http://loki:3100
+      basicAuth: false
+      isDefault: false
+      version: 1
+      editable: false
+      apiVersion: 1
+      jsonData:
+          derivedFields:
+              -   datasourceUid: 'tempo'
+                  matcherRegex: \[.+,(.+?),
+                  name: TraceID
+                  url: $${__value.raw}
+
+```
+
+This dashboard configuration is provided in [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) is called `logs_traces_metrics`. This dashboard code is borrowed mainly from [a recent observability blog post](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
+
+```yaml
+{
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "target": {
+                    "limit": 100,
+                    "matchAny": false,
+                    "tags": [],
+                    "type": "dashboard"
+                },
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 6,
+    "iteration": 1654517000502,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+        {
+            "datasource": {
+                "type": "loki",
+                "uid": "loki"
+            },
+            "description": "",
+            "gridPos": {
+                "h": 10,
+                "w": 23,
+                "x": 0,
+                "y": 0
+            },
+            "id": 2,
+            "options": {
+                "dedupStrategy": "none",
+                "enableLogDetails": true,
+                "prettifyLogMessage": true,
+                "showCommonLabels": true,
+                "showLabels": true,
+                "showTime": true,
+                "sortOrder": "Ascending",
+                "wrapLogMessage": true
+            },
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "loki",
+                        "uid": "loki"
+                    },
+                    "editorMode": "builder",
+                    "expr": "{traceID=\"$traceID\"}",
+                    "queryType": "range",
+                    "refId": "A"
+                }
+            ],
+            "title": "Logs with trace ID $traceID",
+            "type": "logs"
+        },
+        {
+            "datasource": {
+                "type": "tempo",
+                "uid": "tempo"
+            },
+            "description": "",
+            "gridPos": {
+                "h": 15,
+                "w": 23,
+                "x": 0,
+                "y": 10
+            },
+            "id": 6,
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "tempo",
+                        "uid": "tempo"
+                    },
+                    "query": "$traceID",
+                    "queryType": "traceId",
+                    "refId": "A"
+                }
+            ],
+            "title": "Trace View for trace with id $traceID",
+            "type": "traces"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 0,
+                        "drawStyle": "line",
+                        "fillOpacity": 0,
+                        "gradientMode": "none",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "linear",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "s"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 10,
+                "w": 23,
+                "x": 0,
+                "y": 25
+            },
+            "id": 4,
+            "options": {
+                "legend": {
+                    "calcs": [],
+                    "displayMode": "list",
+                    "placement": "bottom"
+                },
+                "tooltip": {
+                    "mode": "single",
+                    "sort": "none"
+                }
+            },
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(1.00, sum(rate(http_server_requests_seconds_bucket{uri=~\".*\"}[$__rate_interval])) by (le))",
+                    "legendFormat": "max",
+                    "range": true,
+                    "refId": "A"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.99, sum(rate(http_server_requests_seconds_bucket{uri=~\".*\"}[$__rate_interval])) by (le))",
+                    "hide": false,
+                    "legendFormat": "tp99",
+                    "range": true,
+                    "refId": "B"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket{uri=~\".*\"}[$__rate_interval])) by (le))",
+                    "hide": false,
+                    "legendFormat": "tp95",
+                    "range": true,
+                    "refId": "C"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(1.00, sum(rate(server_job_seconds_bucket[$__rate_interval])) by (le))",
+                    "legendFormat": "max",
+                    "range": true,
+                    "refId": "D"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.99, sum(rate(server_job_seconds_bucket[$__rate_interval])) by (le))",
+                    "hide": false,
+                    "legendFormat": "tp99",
+                    "range": true,
+                    "refId": "E"
+                },
+                {
+                    "datasource": {
+                        "type": "prometheus",
+                        "uid": "PBFA97CFB590B2093"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "histogram_quantile(0.95, sum(rate(server_job_seconds_bucket[$__rate_interval])) by (le))",
+                    "hide": false,
+                    "legendFormat": "tp95",
+                    "range": true,
+                    "refId": "F"
+                }
+            ],
+            "title": "latency for All",
+            "type": "timeseries"
+        }
+    ],
+    "schemaVersion": 36,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": [
+            {
+                "current": {
+                    "selected": false,
+                    "text": "0003776c79e02b6c",
+                    "value": "0003776c79e02b6c"
+                },
+                "datasource": {
+                    "type": "loki",
+                    "uid": "loki"
+                },
+                "definition": "label_values(traceID)",
+                "hide": 0,
+                "includeAll": false,
+                "label": "Trace ID",
+                "multi": false,
+                "name": "traceID",
+                "options": [],
+                "query": "label_values(traceID)",
+                "refresh": 1,
+                "regex": "",
+                "skipUrlSync": false,
+                "sort": 0,
+                "type": "query"
+            }
+        ]
+    },
+    "time": {
+        "from": "now-15m",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Logs, Traces, Metrics",
+    "uid": "szVLMe97z",
+    "version": 7,
+    "weekStart": ""
+}
+```
+
+## Observing the WebFlux Application
 
 Execute the application as-is:
 
@@ -480,58 +823,43 @@ Execute the application as-is:
 mvn spring-boot:run
 ```
 
-Prometheus will scrape the  `/actuator/prometheus` endpoint, populating the metrics when the application starts. But first, let's create some traffic.
+Prometheus scrapes the `/actuator/prometheus` endpoint, populating metrics when the application runs. Generate traffic to the application by executing this script: 
 
 ```bash
 while true; do http :8787/hello/spring-boot-3 ; sleep 1; done
 ```
 
-Run that on your local Unix-compatible shell. You could use tools like `ab` alternatively. The script uses `curl` to call our endpoint every second. Allow it to run for a minute or two so Prometheus can collect metrics. Then go to `http://localhost:3000/dashboards` and select `General`, then select the  `Logs, Traces, Metrics` dashboard. You'll see something like this:
+Run that on your local Unix-compatible shell. You could use tools like [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) alternatively. This script uses `curl` to call the `/hello` endpoint every second. Allow it to run for a minute or two so Prometheus can collect metrics. Go to `http://localhost:3000/dashboards` and select `General`, then select the `Logs, Traces, Metrics` dashboard. You will see something like this:
 
 ![dashboard 1st](images/first-dashboard-screen.png)
 
-Notice that we have several gray squares - these are the `exemplars` correlating metrics with traces. The exemplar data is located by hovering over a square and revealing the popup DIV. 
+Notice the several gray squares - these are the Prometheus Exemplars correlating metrics with traces. The Prometheus Exemplar data is located by hovering over a square and revealing the popup box. 
 
 <img src="images/exemplar-data.png" alt="exemplar" width="480">
 
-Search for the trace in Loki at the top of the dashboard. Tempo data will display. Click on  `Query with Tempo` to produce similar information.
+Search for the trace in Loki at the top of the dashboard. The Tempo panel displays trace information coorelated by a `traceId`.
 
 ![dashboard 2nd](images/second-dashboard-screen.png)
 
-The full trace view can be expanded. Note we also see the trace generated through our service call - the reactive stream observation made as a child trace to the main HTTP request.
+The service call has it's own distinct span that is tied to the parent span.
 
 ![dashboard full](images/full-trace-view.png)
 
 ## Conclusion
 
-We learned to configure Spring Boot 3 reactive apps with Micrometer. With additional support, we broadened the scope of our monitoring objectives and provided tracing and distributed logging alongside metrics. Furthermore, tying concerns together allowed us to demonstrate Prometheus's powerful `exemplar` feature. 
-
-Project Reactor comes with baked-in support for Micrometer instrumentation, allowing us to stand up a fully observed, reactive Spring Boot 3 application in just a few minutes!
+You configured a Spring Boot 3 reactive application with Micrometer. Micrometer now supports both metrics and traces. In addition, you integrated Prometheus Exemplars.
 
 ## Links and Readings
 
-[Spring Actuator Reference](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.enabling)
-
-[Spring Metrics Docs](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
-
-[Micrometer Docs](https://micrometer.io/docs)
-
-[Prometheus Docs](https://prometheus.io/docs/introduction/overview/)
-
-[Grafana Tempo Docs](https://grafana.com/docs/tempo/latest/?pg=oss-tempo)
-
-[Grafana Loki Docs](https://grafana.com/docs/loki/latest/?pg=oss-loki)
-
-[Grafana Docs](https://grafana.com/docs/grafana/latest/introduction/)
-
-[When to use the Pushgateway?](https://prometheus.io/docs/practices/pushing/)
-
-[Observability in Spring Boot 3 write-up](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3)
-
-[Exposing Reactor metrics with Micrometer](https://projectreactor.io/docs/core/release/reference/#metrics)
-
-[Observability Migration from Sleuth](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API)
-
-[Reactor - Contextual Logging Pattern](https://projectreactor.io/docs/core/release/reference/#faq.mdc)
-
-[Tempo configuration](https://grafana.com/docs/tempo/latest/configuration/) 
+* [Spring Boot Actuator Reference](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.enabling)
+* [Micrometer Docs](https://micrometer.io/docs)
+* [Prometheus Docs](https://prometheus.io/docs/introduction/overview/)
+* [Grafana Tempo Docs](https://grafana.com/docs/tempo/latest/?pg=oss-tempo)
+* [Grafana Loki Docs](https://grafana.com/docs/loki/latest/?pg=oss-loki)
+* [Grafana Docs](https://grafana.com/docs/grafana/latest/introduction/)
+* [When to use the Pushgateway?](https://prometheus.io/docs/practices/pushing/)
+* [Observability in Spring Boot 3 write-up](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3)
+* [Exposing Reactor metrics with Micrometer](https://projectreactor.io/docs/core/release/reference/#metrics)
+* [Observability Migration from Sleuth](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API)
+* [Reactor - Contextual Logging Pattern](https://projectreactor.io/docs/core/release/reference/#faq.mdc)
+* [Tempo configuration](https://grafana.com/docs/tempo/latest/configuration/) 
