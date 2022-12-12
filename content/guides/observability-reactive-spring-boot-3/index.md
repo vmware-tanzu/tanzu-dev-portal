@@ -25,6 +25,7 @@ aliases:
 - "/guides/microservices/observability-reactive-spring-boot-3"
 level1: Managing and Operating Applications
 level2: Metrics, Tracing, and Monitoring
+draft: true
 ---
 
 Since Spring Framework 6, metrics and tracing get handled by [Micrometer](https://micrometer.io) - a vendor-neutral API for instrumenting code. Micrometer also makes available and sends metrics to aggregators such as [Prometheus](https://prometheus.io), [InfluxDB](https://influxdata.com), [Netflix Atlas](https://netflix.github.io/atlas-docs/overview/) and more. Furthermore, Spring Actuator and Micrometer work together - Micrometer gathers metrics and can make them available on `management` endpoints via Actuator.
