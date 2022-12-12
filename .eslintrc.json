@@ -1,7 +1,6 @@
 {
   "env": {
-    "node": true,
-    "jest": true
+    "node": true
   },
   "extends": ["airbnb-base", "plugin:node/recommended", "prettier"],
   "rules": {

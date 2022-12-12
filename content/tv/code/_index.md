@@ -10,13 +10,13 @@ weight: 5
 menu:
     main:
         parent: "tv"
-        weight: 6
+        weight: 5
 # Text that appears on show index page under show name
-description: Watch our Developer Advocates code live every week.
+description: Watch our Developer Advocates code live
 # Text that appears highlighted in green on show index page above show name
-teaser: Live Every Wednesday at 12pm PT
+teaser: Watch our Developer Advocates code live
 # Text that shows on show page under show name
-subheader: Live coding on Twitch, every Wednesday at 12pm PT.
+subheader: Watch our Developer Advocates code live on Twitch
 # Any content below here shows up above episode index
 ---
 

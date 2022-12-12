@@ -4,7 +4,7 @@ description: A quick, hands-on introduction to using Kubernetes.
 summary: A quick, hands-on introduction to using Kubernetes.
 lab: lab-k8s-fundamentals
 length: 30
-logo: /images/workshops/logo-kubernetes.svg
+logo: images/workshops/logo-kubernetes.svg
 tags:
   - Kubernetes
   - Containers

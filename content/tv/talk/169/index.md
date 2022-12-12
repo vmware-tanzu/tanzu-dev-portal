@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "What is GraaVM? What is Spring Native? And why do you need native Java? - Tanzu Talk News"
-description: "What is GraaVM? What is Spring Native? And why do you need native Java? - Tanzu Talk News"
+title: "What is GraalVM? What is Spring Native? And why do you need native Java? - Tanzu Talk News"
+description: "What is GraalVM? What is Spring Native? And why do you need native Java? - Tanzu Talk News"
 episode: "169"
 aliases: ["0169"]
 publishdate: "2020-04-01T00:00:00-07:00"

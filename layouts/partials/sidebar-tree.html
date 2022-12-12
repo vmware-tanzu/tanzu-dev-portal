@@ -1,5 +1,5 @@
 {{/* We cache this partial for bigger sites and set the active class client side. */}}
-{{ $shouldDelayActive := ge (len .Site.Pages) 2000 }}
+{{ $shouldDelayActive := ge (len .Site.Pages) 5000 }}
 
 <div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }} nocontent">
   <nav class="collapse td-sidebar-nav pt-2" id="td-section-nav">
@@ -29,15 +29,13 @@
 {{ $shouldDelayActive := .delayActive }}
 {{ $show := or (and (not $p.Site.Params.ui.sidebar_menu_compact) ($p.IsAncestor $s)) ($p.IsDescendant $s) }}
 
-{{ $ss }}
-
 {{ if not $ss }} <!-- Top-Level Section -->
   <ul class="td-sidebar-nav__section">
   {{ $active := or (eq $p $s) ($p.Params.toppage) }}
   {{ $l2page := index (where (where $p.Site.Pages "Section" "guides") ".Title" $p.Params.level2) 0 }}
   {{ $sid := $s.RelPermalink | anchorize }}
     <li class="td-sidebar-nav__section-title text-wrap" id="{{ $sid }}">
-      <a href="{{ $l2page.RelPermalink }}" class="position-relative align-left flex-nowrap row d-flex align-items-start pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img alt="" class="position-absolute guide-icon" src='{{ print "/images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' /><div>{{ $l2page.Title | markdownify }}</div></a>
+      <a href="{{ $l2page.RelPermalink }}" class="position-relative align-left flex-nowrap row d-flex align-items-start pr-2{{ if not $show }} collapsed{{ end }}{{ if $active}} active{{ end }} td-sidebar-link td-sidebar-link__section"><img alt="" class="position-absolute guide-icon" src='{{ print "images/icons/icon-" ($s.Params.icon | default $s.Title | lower) ".svg" | relURL }}' /><div>{{ $l2page.Title | markdownify }}</div></a>
     </li>
 {{ else }} <!-- Subsection -->
   {{ $active := eq $p $c }}
@@ -59,7 +57,7 @@
         {{ $sspages := where (where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true) ".Params.parent" $ss }}
         {{ $pages = union $pages $sspages }}
       {{ else if .page.Params.parent }}
-        <!-- Page is a chile page, gather the parent page -->
+        <!-- Page is a child page, gather the parent page -->
         {{ $ppage := where (where (union $s.Pages $s.Sections) ".Params.toc_hide" "!=" true) ".Params.subsection" .page.Params.parent }}
         {{ $pages = union $pages $ppage }}
       {{ end }}

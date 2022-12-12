@@ -4,7 +4,7 @@
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
-  {{ $link := printf "%s/%s" "/topics" $link | relURL }}
+  {{ $link := printf "%s/%s" "topics" $link | relURL }}
   {{ $link := "#" }} <!-- TODO: Replace -->
   {{ with $url_text }}
   <p>

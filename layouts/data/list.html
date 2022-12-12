@@ -40,13 +40,13 @@
 
 <div class="row">
   {{ $url_text := "GemFire" }}
-  {{$icon_path := "/images/icons/icon-tanzu-gemfire" }}
+  {{$icon_path := "images/icons/icon-tanzu-gemfire" }}
   {{ $left_border_color := "blue" }}
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
   {{ $section_name := $link  }}
-  {{ $link := printf "%s/%s" "/data" $link | relURL }}
+  {{ $link := printf "%s/%s" "data" $link | relURL }}
   <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
     {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
   
@@ -62,13 +62,13 @@
   </div>
   
   {{ $url_text := "SQL" }}
-  {{$icon_path := "/images/icons/icon-tanzu-sql" }}
+  {{$icon_path := "images/icons/icon-tanzu-sql" }}
   {{ $left_border_color := "gray" }}
   {{ $link := replace (lower $url_text) "/" "-"  }}
   {{ $link := replace $link "&" "and" }}
   {{ $link := replace $link " " "-" }}
   {{ $section_name := $link  }}
-  {{ $link := printf "%s/%s" "/data" $link | relURL }}
+  {{ $link := printf "%s/%s" "data" $link | relURL }}
   <div class="flex-315 col-lg-4 d-flex mb-3 mb-lg-0 data-service-landing-page-product-tile">
   
     {{ with $url_text }} <a href="{{ $link }}" class="position-relative linked-box col-12 featured-link td-box--gray-850 p-4 px-5 overflow-hidden">
