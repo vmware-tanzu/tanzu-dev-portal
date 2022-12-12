@@ -1,9 +1,9 @@
 ---
 date: '2022-11-18'
-description: This guide will introduce you to Micrometer in Spring Boot 3, gathering metrics from WebFlux, Reactive streams and producing output to a host of observation infrastructure.
+description: This guide will introduce you to Micrometer in Spring Boot 3, gathering metrics from WebFlux, Reactive streams, and producing output to a host of observation infrastructure.
 lastmod: '2022-11-18'
-linkTitle: Micrometer Observability with Reactive Spring Boot 3
-metaTitle: Using Micrometer Observation API with Reactive Spring Boot 3
+linkTitle: Reactive Micrometer Observability with Spring Boot 3
+metaTitle: Using the Micrometer Observation API  in a reactive Spring Boot 3 application
 patterns:
 - API
 tags:
@@ -19,7 +19,7 @@ tags:
 - Prometheus
 team:
 - Mario Gray
-title: Observability in Reactive Spring Boot 3
+title: Reactive Observability in  Spring Boot 3
 oldPath: "/content/guides/spring/observability-reactive-spring-boot-3.md"
 aliases:
 - "/guides/microservices/observability-reactive-spring-boot-3"
@@ -28,56 +28,41 @@ level2: Metrics, Tracing, and Monitoring
 draft: true
 ---
 
-Since Spring Framework 6, metrics and tracing get handled by [Micrometer](https://micrometer.io) - a vendor-neutral API for instrumenting code. Micrometer also makes available and sends metrics to aggregators such as [Prometheus](https://prometheus.io), [InfluxDB](https://influxdata.com), [Netflix Atlas](https://netflix.github.io/atlas-docs/overview/) and more. Furthermore, Spring Actuator and Micrometer work together - Micrometer gathers metrics and can make them available on `management` endpoints via Actuator.
+Since Spring Framework 6, metrics and tracing get handled by [Micrometer](https://micrometer.io) - a vendor-neutral API for instrumenting code. Micrometer also makes available and sends metrics to aggregators such as [Prometheus](https://prometheus.io), [InfluxDB](https://influxdata.com), [Netflix Atlas](https://netflix.github.io/atlas-docs/overview/) and more. Furthermore, Spring Actuator and Micrometer work together - Micrometer gathers metrics and can make them available on `management` endpoints via the Actuator.
 
 In this guide, we will take a look at the updated support for [Micrometer Tracing](https://micrometer.io/docs/tracing), which replaces [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth) support. There is a great [write-up](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3) on this, which takes care of explaining a good chunk of details in a `WebMVC` setting.
 
-In case you are looking to migrate from Sleuth to Micrometer, please see [this useful WIKI](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API)
-as it describes and gives samples related to the scenarios you will encounter when deciding/making the change from Sleuth to the new Micrometer API.
+In case you are looking to migrate from Sleuth to Micrometer, please see [this helpful Wiki page](https://github.com/micrometer-metrics/micrometer/wiki/Migrating-to-new-1.10.0-Observation-API). 
+It describes and gives samples related to the scenarios you will encounter when deciding/making the change from Sleuth to the new Micrometer API.
 
-## Start with an Observation example
+## Start with an `Observation` example
 
-Lets start with a quick example that demonstrates Micrometer's Observation API in an imperative thread-friendly setting. This kind of observation can be applied to a `Runnable` that might be submitted to an `Executor`. In this sample (that can be browsed [here](https://github.com/marios-code-path/path-to-springboot-3/tree/main/manual-observation)), we wrap a method call or code block in an Observation `Runnable` closure on the main thread.
+Let's start with a quick [example](https://github.com/marios-code-path/path-to-springboot-3/tree/main/manual-observation) demonstrating Micrometer's `Observation` API in a thread-friendly setting. For instance, we can use it to observe a `Runnable` submitted to an `Executor`. 
 
-This simple app will not can be started with the following settings in `start.spring.io`:
+Create the sample application with the following settings on [the Spring Initializr](https://start.spring.io):
+
+Artifact ID:
+ * `sample-observation`
 
 Dependencies: 
-
   * Lombok
+  * Actuator
 
 Platform Version:
-
   * 3.0.0
 
 Packaging: 
-
   * Jar
 
-JvmVersion:
-
+Java Version:
   * 17
 
 Type:
-
   * Maven
 
-We also need to add the Micrometer dependencies as for now we just need to exercise the basic Observation capability.
 
-```xml
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-observation</artifactId>
-			<version>1.10.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-core</artifactId>
-			<version>1.10.1</version>
-			<scope>compile</scope>
-		</dependency>
-```
 
-The full sample listing follows in SimpleObservationApplication.java:
+The full sample listing follows in `SimpleObservationApplication.java`:
 
 ```java
 @Slf4j
@@ -88,17 +73,14 @@ public class SimpleObservationApplication {
         SpringApplication.run(SimpleObservationApplication.class, args);
     }
 
-    @Autowired
-	  ObservationRegistry registry;
-
     @Bean
-    public ApplicationListener<ApplicationStartedEvent> doOnStart() {
+    public ApplicationListener<ApplicationStartedEvent> doOnStart(ObservationRegistry registry) {
         return event -> {
-            generateString();
+            generateString(registry);
         };
     }
 
-    public void generateString() {
+    public static void generateString(ObservationRegistry registry) {
         String something = Observation
                 .createNotStarted("server.job", registry)    // 1
                 .lowCardinalityKeyValue("jobType", "string") // 2                
@@ -120,41 +102,41 @@ public class SimpleObservationApplication {
 ```
 
 A few things are happening in this code: 
- 1. Create an instance of `Observation` and bind it to an `ObservationRegistry` as stated in [The Doc](https://micrometer.io/docs/observation).
- 2. To better track our invocation, set Low cardinality keys - these are tags which have little or no variations in value. For High cardinality keys - which is many value possibilities - use the `.highCardinalityKeyValue()` method.
- 3. Rather than manually calling `.start()` and `.stop()`, use the `observe(Runnable)]` method to isolate the monitored code in it's own `Runnable` closure.
+ 1. Create an instance of `Observation` and bind it to an `ObservationRegistry` as stated in [the documentation](https://micrometer.io/docs/observation).
+ 2. To better observe our invocation - to be able to filter it later - add some _low cardinality_ keys. These are tags that have little or no variations in value. For _high cardinality_ keys - which have many possible values - use the `.highCardinalityKeyValue()` method.
+ 3. Rather than manually calling `.start()` and `.stop()`, use the `observe(Runnable)]` method to isolate the monitored code in its own `Runnable` closure.
 
 ## How Micrometer observation works
 
-Micrometer's [Observation](https://github.com/micrometer-metrics/micrometer/tree/main/micrometer-observation/src/main/java/io/micrometer/observation) API employs "handlers" that are notified about the lifecycle event of an observation. An [ObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationHandler.java) wraps around the observation lifecycle and execute it's methods on lifecycle events. An `ObservationHandler` reacts only to supported implementations of an `Observation.Context` - this context passes state between handler methods - and can create all kinds of instrumentation like metrics, spans or logs by reacting to the lifecycle events of an observation, such as:
+An [ObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationHandler.java) wraps the `Observation` lifecycle and execute its methods on lifecycle events. An `ObservationHandler` reacts only to supported implementations of an `Observation.Context` - this context passes state between handler methods - and can create all kinds of instrumentation like metrics, spans, or logs by reacting to the lifecycle events of an observation, such as:
 
-* `start` - Observation has been started. Happens when the `Observation#start()` method gets called.
-* `stop` - Observation has been stopped. Happens when the `Observation#stop()` method gets called.
-* `error` - An error occurred while observing. Happens when the `Observation#error(exception)` method gets called.
-* `event` - An event happened when observing. Happens when the `Observation#event(event)` method gets called.
-* `scope started` - Observation opens a scope. The scope must be closed when no longer used. Handlers can create thread local variables on start that are cleared upon closing of the scope. Happens when the `Observation#openScope()` method gets called.
-* `scope stopped` - Observation stops a scope. Happens when the `Observation.Scope#close()` method gets called.
+* `start` -  This happens when the `Observation#start()` method is called.
+* `stop` - This happens when the `Observation#stop()` method is called.
+* `error` - This event happens when the `Observation#error(exception)` method is called.
+* `event` -  This happens when the `Observation#event(event)` method gets called.
+* `scope started` - Observation opens a scope. The scope must be closed when no longer used. Handlers can create thread-local variables on start that are cleared when the scope is completed. This event happens when the `Observation#openScope()` method is called.
+* `scope stopped` - Observation stops a scope. This event happens when the `Observation.Scope#close()` method is called.
 
-An observation state diagram looks like:
+An observation state diagram:
 
 <img src="images/observation-state-dia.png" alt="observation state diagram" width="480">
 
-For observation scopes, the state diagram looks like:
+The state diagram for observation scopes:
 
 <img src="images/observation-scope-state-dia.png" alt="observation scope state diagram" width="480">
 
-The autoconfiguration in Spring Boot will create an `ObservationRegistry` which is responsible for managing the state of observations. Additionally, we get multiple `ObservationHandlers` that handle various instrumentation objectives (e.g. tracing, metrics, logging, etc..). As an  example, the [MeterObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-core/src/main/java/io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.java#L23) provides micrometer [Timer](https://micrometer.io/docs/concepts#_timers) and [Counter](https://micrometer.io/docs/concepts#_counters) metrics to observations. 
+The Spring Boot autoconfiguration creates an `ObservationRegistry` responsible for managing the observations state. Additionally, we get multiple `ObservationHandlers` that handle various instrumentation objectives (e.g., tracing, metrics, logging, etc..). As an  example, the [MeterObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-core/src/main/java/io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.java#L23) provides micrometer [Timer](https://micrometer.io/docs/concepts#_timers) and [Counter](https://micrometer.io/docs/concepts#_counters) metrics to observations. 
 
-Additionally, non auto-configured handlers exist such as the [ObservationTextPublisher](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationTextPublisher.java#L24). This handler logs the context during each handled event.
+Additionally, non-auto-configured handlers exist, such as the [ObservationTextPublisher](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationTextPublisher.java#L24). This handler logs the context during each handled event.
 
-Our simple app can be made to log observation events by declaring a bean of this type `ObservationTextPublisher`:
+Log observation events by declaring a bean of type `ObservationTextPublisher`:
 
 ```java
 @Component
 public class TextPublishingObservationHandler extends ObservationTextPublisher { }
 ```
 
-When we execute our `SimpleObservationApplication`, we will see logs that `ObservationTextPublisher` emitted. Timestamps are removed, while just 1 descriptive log line appear to keep things brief in this sample.
+We will see logs that the `ObservationTextPublisher` emitted when we execute our `SimpleObservationApplication`. I've removed timestamps and only included one descriptive log line for brevity:
 
 ```log
 INFO 90538 --- [           main] i.m.o.ObservationTextPublisher           : START - name='server.job', contextualName='null', error='null', lowCardinalityKeyValues=[jobType='string'], highCardinalityKeyValues=[], map=[]
@@ -170,11 +152,11 @@ INFO 90538 --- [           main] i.m.o.ObservationTextPublisher           :  STO
 INFO 90538 --- [           main] c.e.o.ManualObservationApplication       : Result was: SOMETHING
 ```
 
-Our `ObservationTextPublisher` shows the various stages this Observation went through, along with it's metadata.  Notice that we have no `traceId` or `spanId` as usual since the bare minimum tracers are of the `NOOP` variety. The next section will add `Zipkin/Brave` implementations that are auto-configured with additional dependencies. 
+Our `ObservationTextPublisher` shows the various stages this Observation went through, along with its metadata.  Notice that we have no `traceId` or `spanId` as usual since the bare minimum tracers are of the `NOOP` variety. The following section will add `Zipkin/Brave` implementations that are auto-configured with additional dependencies. 
 
 ## The reactive sample setup
 
-The main goal of this guide is to introduce the Observation API for Reactive apps. We will begin by creating a REST controller application. It can be started by either starting at our favorite website - [start dot spring dot io](https://start.spring.io) - there by selecting a few options:
+Let's create a REST application. But, first, go to our second favorite website, the Spring Initializr - [start dot spring dot io](https://start.spring.io), and make the following selections:
 
 Dependencies: 
 
@@ -191,7 +173,7 @@ Packaging:
 
   * Jar
 
-JvmVersion:
+JVM Version:
 
   * 17
 
@@ -203,7 +185,7 @@ Here is a screenshot (for reference) of what the configuration on `start.spring.
 
 ![start dot spring io](images/start-spring-io.png)
 
-Alternatively, if you have the `curl` client installed then copy and paste the following script as it will execute a similar function from the command-line.
+Alternatively, if you have the `curl` client installed, you can generate the same application from the command line:
 
 ```shell
 curl -G https://start.spring.io/starter.zip -o observable.zip -d dependencies=web,actuator,prometheus,lombok -d packageName=com.example.observation \
@@ -211,9 +193,7 @@ curl -G https://start.spring.io/starter.zip -o observable.zip -d dependencies=we
 -d packaging=jar -d jvmVersion=17 -d groupId=com.example -d artifactId=observation -d name=observation  
 ```
 
-First thing after we unzip this, is to add 2 necessary dependencies: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave` that bring in Micrometer Observation, the Micrometer tracing API and Zipkin reporting bridge for reporting traces to Zipkin compatible tracing endpoints. 
-
-Additional dependencies in pom.xml:
+The first thing to do after unzipping the project is to add two necessary dependencies that bring in the  Micrometer Observation, the Micrometer tracing API, and the Zipkin reporting bridge for reporting traces to Zipkin-compatible tracing endpoints:
 
 ```xml
 		<dependency>
@@ -228,7 +208,7 @@ Additional dependencies in pom.xml:
 
 Open this project in your favorite IDE and follow along, or simply [browse](https://github.com/marios-code-path/path-to-springboot-3/tree/main/webflux-observation) the source for reference. For clarification, we will be adding dependencies as this guide progresses.
 
-Lets move on and establish some basic application properties; app name, server port and logging format.
+Let's move on and establish some basic application properties; app name, server port, and logging format.
 
 application.properties:
 
@@ -241,7 +221,7 @@ logging.pattern.level=%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-
 
 ### A greeting service
 
-The example will use a REST endpoint which calls a service for a small amount of indirection, allowing us to establish service hand-offs during traces. In this example, we only return a specific payload: `Greeting`.
+The following sample creates a simple controller that calls another HTTP endpoint, allowing us to establish service hand-offs during traces. In this example, we only return a specific payload: `Greeting`.
 
 The payload is a simple record:
 
@@ -257,6 +237,7 @@ GreetingService.java:
 @Service
 @Slf4j
 class GreetingService {
+
     private final Supplier<Long> latencySupplier = () -> new Random(System.currentTimeMillis()).nextLong(250);
 
     private final ObservationRegistry registry;
@@ -276,11 +257,11 @@ class GreetingService {
 }
 ```
 
-This is a standard REST endpoint, with nothing notable except the inclusion of an `ObservationRegistry` we will make use of as we describe reactive observation in the following sections.
+The class is a standard REST endpoint, with nothing notable except the inclusion of an `ObservationRegistry`.
 
 ### Add a REST endpoint
 
-Next, we will add a REST endpoint that returns a salutations/greetings to a name derived from the path parameter `{name}`:
+Next, we will add a REST endpoint that returns a greeting for a name derived from the path parameter `{name}`:
 
 ```kotlin
 @RestController
@@ -297,19 +278,19 @@ class GreetingController {
 }
 ```
 
-> **_TIP:_** [WebFluxObservationAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/observation/web/reactive/WebFluxObservationAutoConfiguration.java) is the autoconfiguration class for observation in WebFlux. It includes all of the `ObservationHandler` and `WebFilter`s needed to observe (draw traces and meters from) HTTP requests and responses.
+> **_TIP:_** [WebFluxObservationAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/observation/web/reactive/WebFluxObservationAutoConfiguration.java) is the autoconfiguration class for observation in WebFlux. It includes all of the `ObservationHandler` and `WebFilter` instances needed to observe (draw traces and meters from) HTTP requests and responses.
 
-Now, with the basic shape of our main sample out of the way, we can gain some insights as to how observation gets injected into raw reactive streams. The next section will review necessary steps to gain full interoperability between reactor and micrometer.
+Now, with the basic shape of our primary sample out of the way, we can gain some insights as to how observation gets injected into raw reactive streams. The following section will review the necessary steps to achieve full interoperability between Reactor and Micrometer.
 
 ## Reactive stream observation
 
-Project reactor comes with [built-in support for micrometer](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/metrics.adoc) instrumentation including opt-in API dependencies that turn `no-op` instrumentation into ones that are fully implemented. 
+Project reactor comes with [built-in support for Micrometer](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/metrics.adoc) instrumentation implementations.
 
-We will make use of the reactive `tap` operator to instrument the streams in this sample. The `tap` operator makes use of a stateful per-subscription [SignalListener](https://projectreactor.io/docs/core/3.5.0-M2/api/reactor/core/observability/SignalListener.html) to manage the state of the observation in progress.
+We will use the reactive `tap` operator to instrument the streams in this sample. The `tap` operator uses a stateful per-subscription [SignalListener](https://projectreactor.io/docs/core/3.5.0-M2/api/reactor/core/observability/SignalListener.html) to manage the state of the `Observation` in progress.
 
-To get a micrometer signal listener, import the [reactor-core-micrometer](https://github.com/reactor/reactor-core/tree/main/reactor-core-micrometer) dependency. This API provides all of the necessary components that supply Observation and Meter metrics gathering in Reactive streams. Note, that this API also relies on [context-propagation](https://micrometer.io/docs/contextPropagation) to populate thread locals around the opening of Observations/Meters upon stream subscription.
+To get a micrometer signal listener, import the [reactor-core-micrometer](https://github.com/reactor/reactor-core/tree/main/reactor-core-micrometer) dependency. Note that this API also relies on [context-propagation](https://micrometer.io/docs/contextPropagation) to propagate observability information along the lifetime of the reactive stream.
 
-Here are the additions we will add to pom.xml to enable micrometer reactive stream APIs:
+Here are the additions we will add to `pom.xml` to enable Micrometer Reactive Stream APIs:
 
 ```xml
 		<!-- Micrometer API -->
@@ -324,9 +305,9 @@ Here are the additions we will add to pom.xml to enable micrometer reactive stre
 		</dependency>
 ```
 
-In this example, we are interested in the `reactor.core.observability.micrometer.Micrometer` API that provides us the StreamListener needed to observe the stream. This API supports instrumentation of `reactor.core.scheduler.Scheudler`'s, as well as applying Meters and Observations on a per-subscription basis to the reactive stream. This example will observe our stream using the `Micrometer.observation` API that hooks into micrometer's Observation framework.
+In this example, we are interested in the `reactor.core.observability.micrometer.Micrometer` API that provides us with the `StreamListener` needed to observe the stream. This API supports instrumentation of `reactor.core.scheduler.Scheudler`'s, as well as applying Meters and Observations on a per-subscription basis to the reactive stream. This example will observe our stream using the `Micrometer.observation` API that hooks into Micrometer's `Observation` framework.
 
-We can take our `GreetingService` from earlier and embellish it with additional observation related sections.
+We can take our `GreetingService` from earlier and embellish it with additional `Observation` related sections.
 
 GreetingService.java:
 ```java
@@ -341,14 +322,14 @@ GreetingService.java:
 Given the above, we will have a child span for the parent HTTP controller span. The main additions are as follows:
 
 1. Using `.name` to specify the `Observation` name.
-2. Add low cardinality tags add attributes to the measurements with `.tag`.
-3. Produce the `Observation` specific signal listener for the `tap` operator. This covers the entire length of the sequence.
+2. Add low cardinality tags and attributes to the measurements with `.tag`.
+3. Produce the `Observation`-specific signal listener for the `tap` operator. This operator covers the entire length of the reactive sequence.
 
-The core details of how you can further work in micrometer metrics into your streams can be read at the [Micrometer Observation Docs](https://micrometer.io/docs/observation).
+You can read more about Micrometer Metrics in streams in the [Micrometer Observation Docs](https://micrometer.io/docs/observation).
 
 ## Introduction of the Monitoring Platform
 
-In this guide, we will have the experience of a single page observation. With this idea going forward, we can move through logs, traces and metrics in one location. In order to achieve this kind of integration, we will make use of a specific `operations` service infrastructure:
+In this guide, we will have the experience of a single-page observation. With this idea going forward, we can move through logs, traces, and metrics in one location. To achieve this kind of integration, we will make use of a specific `operations` service infrastructure:
 
 Infra:
 
@@ -360,14 +341,14 @@ Infra:
   
   * [Grafana](https://grafana.com/grafana/) - Dashboard Visualization
 
-For this example, there are pre-configured instances of Prometheus, Grafana, Tempo, and Loki located within the `infra` directory. Provided in this directory are the docker compose scripts, and server configuration files. You can bring the whole thing up with the following command:
+For this example, there are pre-configured instances of Prometheus, Grafana, Tempo, and Loki located within the `infra` directory. Provided in this directory are the Docker Compose scripts and server configuration files. You can bring the whole thing up with the following command:
 
 ```bash
 cd infra/
 docker compose up
 ```
 
-This might take a minute or two since containers need to be transferred over the network. Next, we can move on and examine this infrastructure as it relates to our example app.
+This startup may take a minute or two since it may need to download containers over the network. So have a few sips of that tea, coffee, or water you might have on hand! Next, we can move on and examine this infrastructure as it relates to our example app.
 
 ### Prometheus Setup
 
@@ -406,13 +387,13 @@ In `application.properties`, add:
 management.metrics.distribution.percentiles-histogram.http.server.requests=true
 ```
 
-> **NOTE:_** That percentiles histograms are needed for Exemplars to function. This has no effect on systems that do not support histogram-based percentile approximations.
+> **NOTE:** percentiles histograms are required for Exemplars to function. Percentile histograms do not affect systems that do not support histogram-based percentile approximations.
 
 ### Configure Loki log aggregation
 
-Loki will be queried by Grafana to add log correlation with our traces and metrics. We will configure a logback appender to emit our logs directly to Loki. This appender comes from [loki4j](https://loki4j.github.io/loki-logback-appender/) and is implemented in `com.github.loki4j.logback.Loki4jAppender`.
+Grafana will query Loki to add log correlation with our traces and metrics. Then, we will configure a Logback appender to emit our logs directly to Loki. This appender - `com.github.loki4j.logback.Loki4jAppender` -  comes from [Loki4J](https://loki4j.github.io/loki-logback-appender/).
 
-Simply place `logback-spring.xml` into `src/main/resources` of the project and ensure the appender for loki has the right URL configured.
+Place `logback-spring.xml` into `src/main/resources` of the project and ensure the appender for Loki has the correct URL configured.
 
 To make this work, we use the `loki-logback-appender` dependency as configured with maven:
 
@@ -424,7 +405,7 @@ To make this work, we use the `loki-logback-appender` dependency as configured w
 		</dependency>
 ```
 
-And the source to our `logback-spring.xml` should be found under `resources`:
+Put the  source to our `logback-spring.xml` under `resources`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -455,11 +436,11 @@ And the source to our `logback-spring.xml` should be found under `resources`:
 
 ### Tempo configuration
 
-This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships traces over to Tempo. We can ship traces to Tempo's Zipkin receiver With help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges). No additional items in terms of project dependencies are required because we already placed them during sample setup. However, for reference, they are: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave`.
+This example will use [Micrometer tracing](https://micrometer.io/docs/tracing) that ships trace data to Tempo. We can ship traces to Tempo's Zipkin receiver with the help of [Openzipkin Brave](https://github.com/openzipkin/zipkin-reporter-java/tree/master/brave) and the [Micrometer bridge for Brave](https://github.com/micrometer-metrics/tracing/tree/main/micrometer-tracing-bridges). No additional project dependencies are required because we already placed them during the sample setup. However, for reference, they are: `micrometer-tracing-bridge-brave` and `zipkin-reporter-brave`.
 
-We will make use of local filesystem storage, since provisioning a block storage is a bit complex for this example. 
+We will use local filesystem storage since provisioning block storage is a bit complex for this example. 
 
-Note that enabling the Zipkin receiver will create a demand for TCP port `9411` (Zipkin). This configuration is using the 'Push with HTTP' option per [Tempo documentation](https://grafana.com/docs/tempo/latest/api_docs/pushing-spans-with-http/).
+Enabling the Zipkin receiver requires TCP port `9411` (Zipkin). This configuration uses the 'Push with HTTP' option per [Tempo documentation](https://grafana.com/docs/tempo/latest/api_docs/pushing-spans-with-http/).
 
 
 tempo-local.yaml:
@@ -487,47 +468,45 @@ management.tracing.sampling.probability=1.0
 
 ### Grafana dashboards
 
-Grafana will be provisioned with external data given from configuration within [infra/docker/grafana/provisioning/datasources/datasource.yml](https://github.com/marios-code-path/path-to-springboot-3/blob/main/infra/docker/grafana/provisioning/datasources/datasource.yml). This tells grafana where to find each external source of data we will be querying. We will be tracking spans from Tempo, logs from Loki and Metrics from Prometheus.
+Grafana provisions with external data from configuration within [infra/docker/grafana/provisioning/datasources/datasource.yml](https://github.com/marios-code-path/path-to-springboot-3/blob/main/infra/docker/grafana/provisioning/datasources/datasource.yml). This tells Grafana where to find each external source of data. We will track spans from Tempo, Loki logs, and Prometheus Metrics.
 
-This dashboard configuration is provided in [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) and acts as our standard example dashboard called `logs_traces_metrics`. This bit of dashboard code is borrowed mainly from [a recent observability blog post](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
+This dashboard configuration is provided in [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) and acts as our standard example dashboard called `logs_traces_metrics`. This dashboard code is borrowed mainly from [a recent observability blog post](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
 
 ## Observing the WebFlux app
 
-We now can execute the application as-is:
+Execute the application as-is:
 
 ```shell
 mvn spring-boot:run
 ```
 
-Once the application is started, a number of metrics will be populated because of scraping activity from Prometheus to the `/actuator/prometheus` endpoint. To add our own service activity, lets create some traffic.
+Prometheus will scrape the  `/actuator/prometheus` endpoint, populating the metrics when the application starts. But first, let's create some traffic.
 
 ```bash
 while true; do http :8787/hello/spring-boot-3 ; sleep 1; done
 ```
 
-This will call our endpoint every second. Allow it run for a minute or two so Prometheus can collect metrics. Then browse over to `http://localhost:3000/dashboards` and select 'General', then 'Logs, Traces, Metrics' dashboard. You would be facing a screen similar to the following screenshot:
+Run that on your local Unix-compatible shell. You could use tools like `ab` alternatively. The script uses `curl` to call our endpoint every second. Allow it to run for a minute or two so Prometheus can collect metrics. Then go to `http://localhost:3000/dashboards` and select `General`, then select the  `Logs, Traces, Metrics` dashboard. You'll see something like this:
 
 ![dashboard 1st](images/first-dashboard-screen.png)
 
-Notice, we have a several gray squares - these are the `exemplars` correlating metrics with traces. The exemplar data is located by hovering over a square and revealing the popup DIV. 
+Notice that we have several gray squares - these are the `exemplars` correlating metrics with traces. The exemplar data is located by hovering over a square and revealing the popup DIV. 
 
 <img src="images/exemplar-data.png" alt="exemplar" width="480">
 
- The trace can be searched for in Loki at the top of this dashboard, for which Tempo data will be displayed. Clicking on 'Query with Tempo' will produce similar information.
+Search for the trace in Loki at the top of the dashboard. Tempo data will display. Click on  `Query with Tempo` to produce similar information.
 
 ![dashboard 2nd](images/second-dashboard-screen.png)
 
-A full trace view can be expanded. Note we also see the trace generated through our service
-call - the reactive stream observation made as a child trace to the main HTTP request.
+The full trace view can be expanded. Note we also see the trace generated through our service call - the reactive stream observation made as a child trace to the main HTTP request.
 
 ![dashboard full](images/full-trace-view.png)
 
 ## Conclusion
 
-We learned to configure Spring Boot 3 reactive apps with Micrometer. With additional supports,
-we were able to broaden the scope of our monitoring objectives and provide tracing and distributed logging alongside metrics. Furthermore tying concerns together allowed us to demonstrate the powerful `exemplar` feature in Prometheus. 
+We learned to configure Spring Boot 3 reactive apps with Micrometer. With additional support, we broadened the scope of our monitoring objectives and provided tracing and distributed logging alongside metrics. Furthermore, tying concerns together allowed us to demonstrate Prometheus's powerful `exemplar` feature. 
 
-As we learned, project reactor comes with baked-in support for micrometer instrumentation through opt-in API dependencies.  A fully observed reactive application can be brought up in just a few minutes with Spring Boot 3!
+Project Reactor comes with baked-in support for Micrometer instrumentation, allowing us to stand up a fully observed, reactive Spring Boot 3 application in just a few minutes!
 
 ## Links and Readings
 
