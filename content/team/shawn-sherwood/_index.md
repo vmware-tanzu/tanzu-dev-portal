@@ -4,6 +4,7 @@ description: "Staff Solution Engineer"
 roles: ["guest"]
 skills: ""
 location: ""
+hidden: true
 
 # Social Media
 twitter: "shawn_sherwood"

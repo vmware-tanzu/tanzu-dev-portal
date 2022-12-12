@@ -49,3 +49,46 @@ other = "Create documentation issue"
 other = "Create project issue"
 [post_posts_in]
 other = "Posts in"
+
+# Practices
+[why_do_it]
+other = "Why do it?"
+
+[when_to_do_it]
+other = "When to do it?"
+
+[what_supplies_are_needed]
+other = "What supplies are needed?"
+
+[how_to_use_this_method_remotely_title]
+other = "How to use this method remotely?"
+
+[how_to_use_this_method_remotely_text]
+other = "There is currently a remote template available in Miro. Here you will find step instructions on how to conduct this practice remotely including general tips and info."
+
+[open_miro]
+other = "Open Miro. In the side menu, select 'Templates'"
+
+[search_for_tanzu]
+other = "2. Search for \"Tanzu\" to see all, or"
+
+[click_here]
+other = "click here"
+
+[to_use_this_template]
+other = "to use this template"
+
+[suggested_time]
+other = "Suggested Time"
+
+[participants]
+other = "Participants"
+
+[phases]
+other = "Phases"
+
+[filter]
+other = "Filter"
+
+[view_all]
+other = "View all"

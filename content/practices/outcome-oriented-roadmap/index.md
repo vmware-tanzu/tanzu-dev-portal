@@ -24,7 +24,7 @@ when:
 - You’ve started development but don’t have a roadmap
 - During development, you need a way to align your backlog with your goals and metrics
 - Product sponsors and stakeholders ask for more visibility into the product direction
-  and your progre
+  and your progress
 why:
 - Align our day-to-day work with the product vision and strategy
 - Keep focused on one goal at a time, and move metrics incrementally

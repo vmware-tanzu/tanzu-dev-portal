@@ -4,6 +4,7 @@ description: "Vice President of Developer Relations"
 roles: ["guest"]
 skills: ["Event-Driven Architecture"]
 location: "Littleton, Colorado"
+external: true
 
 # Social Media
 twitter: "@tlberglund"

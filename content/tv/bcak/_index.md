@@ -6,15 +6,15 @@ streaming: "twitch"
 id: "bcak"
 image: "bcak.jpg"
 og_image: "/images/og/TanzuTV-ChairKeyboard.png"
-weight: 6
+weight: 4
 menu:
     main:
         parent: "tv"
-        weight: 6
+        weight: 4
 # Text that appears on show index page under show name
 description: Nate Schutta hosts discussions with interesting people in software.
 # Text that appears highlighted in green on show index page above show name
-teaser: Live Most Mondays at 10am PT
+teaser: Join Nate Schutta and a special guest
 # Text that shows on show page under show name
 subheader: Join Nate Schutta and a special guest on Twitch, most Mondays at 10am PT.
 # Any content below here shows up above episode index

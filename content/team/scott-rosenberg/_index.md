@@ -4,6 +4,7 @@ description: "Practice Leader, Cloud technologies and Automation at TeraSky"
 roles: ["guest"]
 skills: ["Kubernetes", "Cloud Technologies"]
 location: "Israel"
+external: true
 
 # Social Media 
 twitter: "vrabbi_il"

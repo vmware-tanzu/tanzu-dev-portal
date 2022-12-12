@@ -4,6 +4,7 @@ description: "Sr. Product Marketing Manager"
 roles: ["author"]
 skills: []
 location: "Seattle, WA"
+hidden: true
 
 # Social Media 
 twitter: "anthonyjvetter"

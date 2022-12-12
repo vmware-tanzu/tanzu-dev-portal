@@ -4,17 +4,13 @@ id: "springone-tour"
 image: "springone-tour.png"
 og_image: "/images/og/s1t_2022_og.png"
 notwitchicon: true
-menu:
-    main:
-        parent: "community"
-        weight: 4
 aliases:
 - /tv/springone-tour/0016/
 # Text that appears on show index page under show name
 # Text that appears highlighted in green on show index page above show name
-<!-- teaser: Live Every Month -->
+#teaser: Live Every Month
 # Text that shows on show page under show name
-<!-- subheader: SpringOne Tour is back, in person, and coming to a city near you! -->
+#subheader: SpringOne Tour is back, in person, and coming to a city near you!
 # Text that appears on single episode page under show name
 description_episodes:
 # Any content below here shows up above episode index

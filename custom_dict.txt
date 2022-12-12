@@ -115,10 +115,12 @@ Antrea
 AOT
 Apdex
 api
+api-auto-registration
 Apigee
 APIPort
 ApiResponse
 APIs?
+Apiumhub
 APM
 APM[s]
 App-Config
@@ -126,6 +128,7 @@ AppArmor
 AppD
 AppDev
 AppDomain
+appDomain
 AppDynamics
 Appel
 appender
@@ -138,6 +141,8 @@ Applitools
 AppSec
 AppServer
 AppsManager
+appsso
+appSSO(IssuerURI|Name|RedirectURI)
 Apress
 AquaSecurity
 Aravena
@@ -188,6 +193,7 @@ AuthorizationPolicy
 authorizer
 Authorizer
 authorizers
+authserver
 AuthZ
 AUTO_DEVOPS_CHART(_REPOSITORY)?(_NAME)?
 [Aa]uto-reconfiguration
@@ -325,6 +331,7 @@ Campuzano
 Canz
 Cao
 Capili
+cardinality
 Carducci
 Carta
 Cartographer
@@ -348,6 +355,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chainguard
 Chander
 changeAlertLevel
 [Cc]hangemaker(s)
@@ -367,6 +375,7 @@ CIDR(s)?
 CIO
 CircleCI
 CIS
+CISOs
 CKtaKhKOo-Y
 classpath
 clearNotifications
@@ -379,6 +388,7 @@ client-auth
 client[_-]golang
 ClientMetadataService
 ClientProxyMembershipID
+ClientRegistration
 Clojure
 closeRegion
 CloudConnectors
@@ -409,6 +419,7 @@ ClusterTemplate
 CMD
 cmdlet
 Cmdlets
+CMO
 CMS
 CN
 CNAME
@@ -607,6 +618,7 @@ Desgber
 DestinationRule
 [Dd]ev(s)?
 [Dd]ev[Rr]el
+devDefaultAccount(Password|Username)
 developer-centric
 DevIntersection
 DevNexus
@@ -675,6 +687,7 @@ Documentum
 Doerr
 Dokuka
 Dolan
+domainName
 donut
 DoSec
 dotnet
@@ -713,6 +726,7 @@ EFS
 eg
 eg.
 egoless
+Ekaterina
 EKS
 Elahn
 elasticloadbalancing
@@ -755,6 +769,7 @@ ETag
 etcd(ctl)?
 Ethereum
 [Ee]thernet(s)?
+Etienne
 ETL
 EventID
 [Ee]venting
@@ -934,6 +949,7 @@ GitLabCI
 Gitops
 GITOPS-SECRET
 GitOps(-type)?
+gitOps(Repo|Secret)
 Gitrepo
 GKE
 Glênio
@@ -1153,6 +1169,7 @@ isFullyAuthenticated
 isRememberMe
 ISTIO_MUTUAL
 ISTIO_PROMETHEUS_ANNOTATIONS
+Istio-based
 istio-cni
 istio-ingressgateway
 istio-init
@@ -1211,6 +1228,7 @@ JetBrains
 Jetbrains
 jetbrains
 Jetstack
+Jfokus
 JFrog
 JHipster
 Jiang
@@ -1287,6 +1305,7 @@ Kaniko
 kapp-controller
 [Kk]app(-controller(.|'s)?|.)?
 Karavi
+Karlsson
 Kaspersky
 Kat
 [Kk]ata(s)?
@@ -1315,6 +1334,7 @@ KMS
 (KMS|kms)-plugin(s)?
 knative
 KNative
+knative-(eventing|sources)
 Knative-serving
 Knative-Serving
 knative-serving
@@ -1338,6 +1358,7 @@ KStream
 KTable
 [kK]ube
 kube_pod_container_status_restarts_total
+kube-(node-lease|public)
 kube-apiserver
 kube-controller(-manager)?
 kube-prometheus
@@ -1439,6 +1460,8 @@ LogPartitionedRegionBucketDetailsFunction
 logQueue
 [lL]ogrus
 Logstash
+loki
+loki4j
 Lombok
 lookups
 lookups.
@@ -1491,18 +1514,21 @@ matcher
 matchers
 matchings
 Matskas
+Mattias
 mattstratton
 [Mm]atty
 maxUtilization
 Mayers
 MBeans
 MBeanServer
+McDermott
 McGraw-Hill
 McLuckie
 MDAC
 MDC
 MDN
 Mehmandarov
+mentee(s)?
 [Mm]entorship
 MeshAdmin
 Mesos
@@ -1513,6 +1539,7 @@ MessagingBase
 metac
 MetaConference
 [Mm]etacontroller
+MeterObservationHandler
 MeterRegistry
 MetricsProvider
 MetricsPublishingService
@@ -1579,6 +1606,7 @@ multibranch
 multicast
 [Mm]ulticloud
 multicluster
+Multicluster
 Multipass
 [Mm]ultitenan(t|cy)
 [Mm]ultiuser
@@ -1655,7 +1683,9 @@ nonblocking
 [Nn]orming
 NoSQL
 NotificationListener
+Novoseltseva
 npm
+ns
 NSX(-T|-SM)?
 NTP
 [Nn]uget
@@ -1669,6 +1699,8 @@ OAuth2?
 ObjectFilter
 ObjectGraphSizer
 [Oo]bservability
+ObservationHandler
+ObservationTextPublisher
 OCI(-compliant)?
 Octant
 OCTO
@@ -1933,6 +1965,7 @@ Pulkit
 pullPolicy
 Pulumi
 pushable
+Pushgateway
 putAll
 PuTTYgen
 PVC?s?
@@ -1991,6 +2024,7 @@ Recommender
 [Rr]eddit
 RedirectUri
 [rR]edis
+redisPassword
 redistributable
 [Rr]edline(s)?
 RedMonk('s)?
@@ -2043,6 +2077,7 @@ RequestAuthentication
 requestor
 Resilience4J
 ResourceClaim
+ResourceClaims
 ResourcePermission
 ResourceQuota(s)?
 [Rr]estag(e|ed|ing)
@@ -2104,6 +2139,7 @@ Ruckle
 Rudd
 Rumans
 RunAs
+RunCluster(01|02)
 runnable
 Runtimes
 runtimes?
@@ -2192,6 +2228,7 @@ ServiceEntry
 ServiceInfo(Creator)?
 ServiceMonitor
 serviceName=backend
+servicesNamespace
 servicexen
 [Ss]ervlets?
 setValue(Template)?s
@@ -2212,6 +2249,7 @@ Shopen
 Siddiq
 SIG-(Network|Runtime|Security|Storage)
 SIG(KILL|TERM)?
+SignalListener
 siloed
 simonbrown
 SingleMemberRegionSize
@@ -2309,6 +2347,7 @@ Strangeloop
 strategizing
 Strategyzer
 Stratton
+StreamListener
 StringBuilder
 Strobl
 stroopwafels
@@ -2353,6 +2392,9 @@ Szul
 tabpane
 Talkshow
 [Tt]anzu
+tanzu-cluster-essentials
+tanzu-package-repo-global
+tanzu-system-ingress
 Tanzu(Developer|'s)?
 tanzuignore
 TanzuNet
@@ -2438,6 +2480,7 @@ totalQueueTime
 totalTransmissionTime
 TraceReactorAutoConfiguration
 traceroute
+TracingAwareMeteredObservationHandler
 TracingRSocketConnectorConfigurer
 tradeoff(s)?
 Tradeoffs
@@ -2446,6 +2489,7 @@ transactional
 transformational
 transmittedEvents
 Trello
+triggermesh
 Trivy(.)?
 TRS-80
 trustfile
@@ -2480,6 +2524,7 @@ uncheck
 Uncomment
 uncomment
 undersample
+underserved
 underutilization
 unencoded
 unencrypted
@@ -2523,7 +2568,7 @@ UserDetails
 Util(s)?
 UX
 UX/UI
-v[0-9]
+v[0-9]\.*[0-9]*
 [Vv][123]
 Vaadin
 ValidatingAdmissionWebhook
@@ -2578,6 +2623,7 @@ VMCachedDeserializable
 VMs?
 VMSS
 VMware
+vmware-sources
 vmware-tanzu-labs
 VMware(-hosted|'s|Tanzu)?
 VMworld
@@ -2624,6 +2670,8 @@ WebClient
 WebClient's
 WeBeFoods
 WebFlux
+Webflux
+WebFluxObservationAutoConfiguration
 WebForm(s)?
 [Ww]ebforms
 [Ww]ebhook(-based|s)?
@@ -2634,7 +2682,10 @@ WebRequest
 WebSocket
 WebSphere
 WeChat
+Wegner
 well-intentioned
+Wenger
+Wenger-Trayner
 Wes
 Westrum
 WF
@@ -2656,6 +2707,7 @@ WomenOfDotNet
 [wW]ordpress
 WORKDIR
 WorkloadEndpoint
+workloadNamespace
 workspaces
 [Ww]orkstream(s)?
 writeout

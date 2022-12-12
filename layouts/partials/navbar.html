@@ -30,7 +30,7 @@
 				{{ end }}
 
 				<li class="nav-item mr-xl-4 mr-2 mb-0 mobile-search-link" style="display: none;">
-					<a class="nav-link" href="{{ "/search" | relURL }}"><span>Search</span></a>
+					<a class="nav-link" href="{{ "search" | relURL }}"><span>Search</span></a>
 				</li>
 				
 				<li class="search remove-menu search_icon">
@@ -114,7 +114,7 @@
 
 		<div id="search-nav" role="search">
 			<div class="container relative">
-			<form id="searchheaderform" action='{{ "/search" | relURL }}' accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+			<form id="searchheaderform" action='{{ "search" | relURL }}' accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
 			<input type="text" name="q" id="searchheaderinput" autocomplete="off" placeholder="Search for guides, videos, code samples, posts, and more...">
 			<input type="submit" value="" id="searchheadersubmit" data-disable-with="">
 			</form>

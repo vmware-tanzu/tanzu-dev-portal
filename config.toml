@@ -45,6 +45,16 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
+[languages]
+  [languages.en]
+    contentDir = 'content'
+    languageName = "English"
+    weight = 1
+  [languages.kr]
+    contentDir = "content/kr"
+    languageName = "Korean"
+    weight = 2
+
 # Language configuration
 #[languages]
 #[languages.en]

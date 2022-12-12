@@ -4,6 +4,7 @@ description: "Distinguished Engineer"
 roles: ["guest"]
 skills: ["Java"]
 location: "New York"
+external: true
 
 # Social Media
 twitter: "@ebullientworks"

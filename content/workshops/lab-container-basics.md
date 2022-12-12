@@ -4,7 +4,7 @@ description: Learn the basics of how to build container images and run them usin
 summary: Learn the basics of how to build container images and run them using Docker.
 lab: lab-container-basics
 length: 30
-logo: /images/workshops/logo-docker.png
+logo: images/workshops/logo-docker.png
 tags:
   - Containers
   - Docker

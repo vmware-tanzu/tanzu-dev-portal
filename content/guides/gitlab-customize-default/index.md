@@ -28,7 +28,7 @@ level2: CI/CD, Release Pipelines
 
 Bitnami also provides [Helm charts](https://github.com/bitnami/charts) for common applications. These charts make it easy to run applications on Kubernetes and are secure, up-to-date and built in conformance with current best practices. By combining these Helm charts with GitLab's CI/CD system, developers can quickly create custom deployment pipelines on Kubernetes infrastructure for development, testing and production scenarios.
 
-This guide shows you how to integrate Bitnami's Helm charts with GitLab's Auto DevOps pipeline and create custom deployments on Kubernetes. With this configuration, every change to the application code in GitLab is automatically built as a Docker container and deployed to the Kubernetes cluster using [Bitnami's Node.js Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/node). Bitnami's Helm charts support a number of additional parameters to ease this integration, including the ability to configure each deployment such that it is available at a public IP address for review and test. 
+This guide shows you how to integrate Bitnami's Helm charts with GitLab's Auto [DevOps](https://tanzu.vmware.com/devops) pipeline and create custom deployments on Kubernetes. With this configuration, every change to the application code in GitLab is automatically built as a Docker container and deployed to the Kubernetes cluster using [Bitnami's Node.js Helm chart](https://github.com/bitnami/charts/tree/master/bitnami/node). Bitnami's Helm charts support a number of additional parameters to ease this integration, including the ability to configure each deployment such that it is available at a public IP address for review and test. 
 
 ## Assumptions and prerequisites
 

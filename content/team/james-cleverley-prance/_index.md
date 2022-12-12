@@ -2,6 +2,7 @@
 name: James Cleverley-Prance
 roles: ["guest"]
 skills: ["Security", "Kubernetes"]
+external: true
 
 # Social Media
 twitter: "jpts_"

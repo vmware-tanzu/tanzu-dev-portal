@@ -85,7 +85,7 @@ function isTvShowLive(showName) {
       startTime: new Date({{ .Params.Date }}),
       endTime: new Date(new Date({{ .Params.Date }}).getTime() + ({{ default 60 .Params.minutes }} * 60000)),
       show: "{{ .Parent.Title }}",
-      link: "{{ .Permalink | relURL }}"
+      link: "{{ .RelPermalink }}"
     };
 
     // Determine if it's a livestream or a YouTube video
