@@ -48,7 +48,7 @@ There are a lot of "rules", so to speak, to defining and maintaining a ubiquitou
 ## The importance
 So why is it important that we all speak the same language?  For decades, huge organizations have adopted the "waterfall" mentality of distilling a business domain into a set of requirements by requirements writers, which were then translated by architects into develop high level architectures, which were then translated by senior software engineers into lower level software designs, which were then translated and implemented by software engineers on a number of teams throughout the organization.  Ultimately turning the software development process into a huge game of telephone.
 
-(telephone image here)
+![img.png](./images/telephone.png)
 
 Some domain terms may have made it from the requirements into the software but a large majority didn't.  This model primarily breaks down when there is an expectation of bidirectional, or skip-level, communication.  The reality we live in is that software development isn't as simple as requirements to architecture to design to code. In order to build software, especially in an "agile" or "lean" manner, especially on a balanced team, we empower all roles to engage with the business. It isn't just the PMs responsibility to learn and understand the business context, but everyone's. In order for this to happen effectively, individuals must communicate.  That communication goes a lot more smoothly if the words that the engineers are using have the same meaning as those translating the business domain to write stories.
 
