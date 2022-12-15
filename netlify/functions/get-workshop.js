@@ -3,21 +3,13 @@ const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const got = require('got');
 const Sentry = require('@sentry/serverless');
-
 const { getSiteURL } = require('./util/auth');
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require('./util/config');
 
-let baseurl;
-let apikey;
+const baseURL = process.env.LOOKUP_SERVICE_URL;
+const apiKey = process.env.LOOKUP_SERVICE_API_KEY;
 
-if (config.context === 'production' || config.context === 'deploy-preview') {
-    baseurl = process.env.PROD_LOOKUP_SERVICE_URL;
-    apikey = process.env.PROD_LOOKUP_SERVICE_API_KEY;
-} else {
-    baseurl = process.env.DEV_LOOKUP_SERVICE_URL;
-    apikey = process.env.DEV_LOOKUP_SERVICE_API_KEY;
-}
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_GET_WORKSHOP,
@@ -38,11 +30,11 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     const decodedToken = jwt.decode(cookies.nf_jwt);
 
     try {
-        const remoteUrl = `${baseurl}/${ws}`;
+        const remoteUrl = `${baseURL}/${ws}`;
         console.log("Useing remoteUrl: %s", remoteUrl);
         const availability = await got.get(remoteUrl, {
             headers: {
-                Authorization: `Api-Key ${apikey}`,
+                Authorization: `Api-Key ${apiKey}`,
                 'Content-Type': undefined,
             },
         });
@@ -75,7 +67,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             };
         }
         const { body, statusCode } = await got.post(remoteUrl, {
-            headers: { Authorization: `Api-Key ${apikey}` },
+            headers: { Authorization: `Api-Key ${apiKey}` },
             json: { refer: getSiteURL() + '/developer/workshops', user: decodedToken.id },
         });
         if (statusCode !== 200 || body.error) {

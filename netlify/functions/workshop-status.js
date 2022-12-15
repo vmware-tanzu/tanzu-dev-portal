@@ -1,18 +1,11 @@
 /* eslint-disable no-console */
 const Amplitude = require('@amplitude/node');
 const Sentry = require('@sentry/serverless');
-
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require('./util/config');
 
-const amplitudeKey =
-  config.context === 'production'
-    ? process.env.PROD_AMPLITUDE_API_KEY
-    : process.env.DEV_AMPLITUDE_API_KEY;
-
-const amplitudeClient = Amplitude.init(amplitudeKey);
+const amplitudeClient = Amplitude.init(process.env.AMPLITUDE_API_KEY);
 const analyticsToken = process.env.ANALYTICS_TOKEN;
-
 const eventTypes = [
   'Workshop/Start',
   'Workshop/View',

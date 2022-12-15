@@ -4,7 +4,7 @@ const { AuthorizationCode } = require("simple-oauth2");
 const got = require('got');
 const jwt = require('jsonwebtoken');
 
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require("./config");
 
 const base =
