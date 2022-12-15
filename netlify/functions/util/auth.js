@@ -13,7 +13,6 @@ function makeAuth() {
     if (!espClientId) {
         throw new Error("Missing client ID");
     }
-
     // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
     const authConfig = {
         client: {
@@ -31,7 +30,6 @@ function makeAuth() {
             bodyFormat: 'json',
         },
     };
-
     return new AuthorizationCode(authConfig);
 }
 
@@ -41,15 +39,11 @@ function getDiscoveryUrl(params) {
 }
 
 function getSiteURL() {
-    return config.context !== "production"
-        ? config.deployPrimeURL
-        : "https://tanzu.vmware.com";
+    return config.context !== 'production' ? config.deployPrimeURL : 'https://tanzu.vmware.com';
 }
 
-function getRedirectURI(){
-    return config.context === "production"
-        ? "https://tanzu.vmware.com/developer/auth-callback"
-        : `${config.deployPrimeURL}/.netlify/functions/auth-callback`;
+function getRedirectURI() {
+    return config.context !== 'production' ? `${config.deployPrimeURL}/.netlify/functions/auth-callback` : 'https://tanzu.vmware.com/developer/auth-callback';
 }
 
 function randomToken() {

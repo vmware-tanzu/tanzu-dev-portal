@@ -102,12 +102,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             jwtToken.sub = decoded.payload.sub;
         }
 
-        let jwtSecret = "secret"; // use default secret for local dev context
-        if (config.context === "production" || config.context === "deploy-preview") {
-            jwtSecret = process.env.JWT_SIGNING_SECRET;
-        }
-
-        const netlifyJwt = jwt.sign(jwtToken, jwtSecret, {
+        const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SECRET, {
             algorithm: 'HS256',
         });
 

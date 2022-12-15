@@ -1,7 +1,6 @@
 const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
-const jwt = require('jsonwebtoken');
-
+// const jwt = require('jsonwebtoken');
 const {
     getDiscoveryUrl,
     espClientId,
@@ -10,7 +9,7 @@ const {
     randomToken,
 } = require('./util/auth');
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require("./util/config");
 
 Sentry.AWSLambda.init({
