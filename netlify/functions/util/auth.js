@@ -3,35 +3,32 @@
 const { AuthorizationCode } = require("simple-oauth2");
 const got = require('got');
 const jwt = require('jsonwebtoken');
-
 // eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require("./config");
 
-const base =
-  config.context === "production" || config.context === "deploy-preview"
-      ? "https://auth.esp.vmware.com/api/auth/v1"
-      : "https://auth.esp-staging.vmware-aws.com/api/auth/v1";
+const authURL = process.env.ESP_AUTH_URL
+const espClientId = process.env.ESP_CLIENT_ID
 
-function makeAuth(clientId) {
-    if (!clientId) {
+function makeAuth() {
+    if (!espClientId) {
         throw new Error("Missing client ID");
     }
 
     // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
     const authConfig = {
         client: {
-            id: clientId,
+            id: espClientId,
         },
         auth: {
-            tokenHost: `${base}`,
-            tokenPath: `${base}/tokens`,
+            tokenHost: `${authURL}`,
+            tokenPath: `${authURL}/tokens`,
         },
         http: {
             json: true,
         },
         options: {
-            authorizationMethod: "body",
-            bodyFormat: "json",
+            authorizationMethod: 'body',
+            bodyFormat: 'json',
         },
     };
 
@@ -40,13 +37,7 @@ function makeAuth(clientId) {
 
 function getDiscoveryUrl(params) {
     const qs = (new URLSearchParams(params)).toString();
-    return `${base}/authorize?${qs}`;
-}
-
-function getClientId() {
-    return config.context === "production" || config.context === "deploy-preview"
-        ? process.env.PROD_CLIENT_ID
-        : process.env.DEV_CLIENT_ID;
+    return `${authURL}/authorize?${qs}`;
 }
 
 function getSiteURL() {
@@ -71,9 +62,7 @@ function randomToken() {
 
 async function tokenIsValid(tokenStr) {
     try {
-        const req = await got.get(
-            base+'/tokens/public-key',
-        );
+        const req = await got.get(`${authURL}/tokens/public-key`);
         const key = JSON.parse(req.body);
         const convertKey = key.key.replace(/RSA /gi, '');
         jwt.verify(tokenStr, convertKey, { algorithms: [key.alg] });
@@ -86,7 +75,7 @@ async function tokenIsValid(tokenStr) {
 module.exports = {
     makeAuth,
     getDiscoveryUrl,
-    getClientId,
+    espClientId,
     getSiteURL,
     getRedirectURI,
     randomToken,

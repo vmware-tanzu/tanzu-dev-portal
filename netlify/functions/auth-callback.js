@@ -2,22 +2,18 @@
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const Sentry = require('@sentry/serverless');
-
 const {
     makeAuth,
-    getClientId,
     getSiteURL,
     getRedirectURI,
     randomToken,
     tokenIsValid
 } = require('./util/auth');
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require("./util/config");
 
 const netlifyCookieName = 'nf_jwt';
-
-
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_AUTH_CALLBACK,
@@ -55,7 +51,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             };
         }
 
-        const oauth = makeAuth(getClientId());
+        const oauth = makeAuth();
         const tokenResponse = await oauth.getToken({
             code,
             redirect_uri: getRedirectURI(),
