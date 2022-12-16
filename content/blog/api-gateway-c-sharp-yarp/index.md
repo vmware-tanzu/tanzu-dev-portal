@@ -16,7 +16,7 @@ Consider an API gateway to be a virtual "garden gate" to all your backend servic
 ![Cover image of a gateway silhouetted by the sun](images/cover.jpg)
 
 
-There are many paid for services that offer API management but they can be costly and you may not need all the features they offer.
+There are many paid for services that offer [API management](https://tanzu.vmware.com/api-management) but they can be costly and you may not need all the features they offer.
 
 In this tutorial, you will build a basic API Gateway using [YARP](https://microsoft.github.io/reverse-proxy/) or "Yet Another Reverse Proxy". YARP is an open-source library built by developers from within Microsoft. It’s highly customisable, but you are just going to use a simple implementation today.
 

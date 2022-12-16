@@ -22,7 +22,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-With the adoption of API-enabled microservices increasing at a rapid rate, centrally-managed enterprise services are having a hard time keeping up. More and more, development teams are performing quick API releases, straining central API management approaches, and leading to days and weeks of delay.  That’s why enterprises must harness the agility that distributed source control and API management can provide.
+With the adoption of API-enabled microservices increasing at a rapid rate, centrally-managed enterprise services are having a hard time keeping up. More and more, development teams are performing quick API releases, straining central [API management](https://tanzu.vmware.com/api-management) approaches, and leading to days and weeks of delay.  That’s why enterprises must harness the agility that distributed source control and API management can provide.
 
 In this webinar, we’ll cover:
 - Utilizing [GitOps](https://tanzu.vmware.com/gitops) for releases through continuously integrated and delivered software processes.

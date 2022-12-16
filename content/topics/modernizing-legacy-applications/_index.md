@@ -17,4 +17,4 @@ menu:
     weight: 2
 ---
 
-Break down the monolith, or build up the environment around your code. Building modern applications doesn't always mean starting from scratch.
+Break down the monolith, or build up the environment around your code. Building [modern applications](https://tanzu.vmware.com/what-is-application-modernization) doesn't always mean starting from scratch.
