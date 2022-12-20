@@ -32,7 +32,7 @@ amount of time and staff you’re able to dedicate to security, and your company
 particular compliance requirements.
 
 Kubernetes provides several mechanisms to enforce security within the cluster.
-These range from API security controls, down to container isolation, resource
+These range from [API security](https://tanzu.vmware.com/api-security) controls, down to container isolation, resource
 limiting, and network policy control.
 
 ## General points
