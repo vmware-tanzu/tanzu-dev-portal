@@ -41,7 +41,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     // redirect the user to the ESP discovery endpoint for authentication
     const params = {
         response_type: 'code',
-        client_id: getClientID,
+        client_id: getClientID(),
         redirect_uri: getRedirectURI(),
         state: base64.urlEncode(
             `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`,
