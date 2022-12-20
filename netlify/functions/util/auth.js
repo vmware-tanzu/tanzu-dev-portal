@@ -7,16 +7,16 @@ const jwt = require('jsonwebtoken');
 const config = require("./config");
 
 const authURL = process.env.ESP_AUTH_URL
-const espClientId = process.env.ESP_CLIENT_ID
+const clientID = process.env.ESP_CLIENT_ID
 
 function makeAuth() {
-    if (!espClientId) {
+    if (!clientID) {
         throw new Error("Missing client ID");
     }
     // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
     const authConfig = {
         client: {
-            id: espClientId,
+            id: clientID,
         },
         auth: {
             tokenHost: `${authURL}`,
@@ -31,6 +31,10 @@ function makeAuth() {
         },
     };
     return new AuthorizationCode(authConfig);
+}
+
+function getClientID() {
+    return clientID
 }
 
 function getDiscoveryUrl(params) {
@@ -69,7 +73,7 @@ async function tokenIsValid(tokenStr) {
 module.exports = {
     makeAuth,
     getDiscoveryUrl,
-    espClientId,
+    getClientID,
     getSiteURL,
     getRedirectURI,
     randomToken,
