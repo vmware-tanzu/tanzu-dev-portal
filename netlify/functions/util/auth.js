@@ -1,30 +1,26 @@
 /* eslint-disable no-console */
 /* eslint-disable no-bitwise */
-const { AuthorizationCode } = require("simple-oauth2");
+const { AuthorizationCode } = require('simple-oauth2');
 const got = require('got');
 const jwt = require('jsonwebtoken');
 // eslint-disable-next-line import/extensions,import/no-unresolved
-const config = require("./config");
+const config = require('./config');
 
-const authURL = process.env.ESP_AUTH_URL
-const clientID = process.env.ESP_CLIENT_ID
+const authURL = process.env.ESP_AUTH_URL;
+const clientID = process.env.ESP_CLIENT_ID;
 
 function makeAuth() {
     if (!clientID) {
-        throw new Error("Missing client ID");
+        throw new Error('Missing client ID');
     }
     // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
     const authConfig = {
-        client: {
-            id: clientID,
-        },
+        client: { id: clientID },
         auth: {
             tokenHost: `${authURL}`,
             tokenPath: `${authURL}/tokens`,
         },
-        http: {
-            json: true,
-        },
+        http: { json: true },
         options: {
             authorizationMethod: 'body',
             bodyFormat: 'json',
@@ -34,11 +30,11 @@ function makeAuth() {
 }
 
 function getClientID() {
-    return clientID
+    return clientID;
 }
 
 function getDiscoveryUrl(params) {
-    const qs = (new URLSearchParams(params)).toString();
+    const qs = new URLSearchParams(params).toString();
     return `${authURL}/authorize?${qs}`;
 }
 
@@ -77,5 +73,5 @@ module.exports = {
     getSiteURL,
     getRedirectURI,
     randomToken,
-    tokenIsValid
+    tokenIsValid,
 };

@@ -1,16 +1,10 @@
 const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
 // const jwt = require('jsonwebtoken');
-const {
-    getDiscoveryUrl,
-    getClientID,
-    getSiteURL,
-    getRedirectURI,
-    randomToken,
-} = require('./util/auth');
+const { getDiscoveryUrl, getClientID, getSiteURL, getRedirectURI, randomToken } = require('./util/auth');
 const base64 = require('./util/base64');
 // eslint-disable-next-line import/extensions,import/no-unresolved
-const config = require("./util/config");
+const config = require('./util/config');
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_AUTH_START,
@@ -34,8 +28,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         maxAge: 600,
     };
     // don't add the domain parameter for localhost dev, only add if there's a url
-    if (config.context === "production" || config.context === "deploy-preview")
-        cookieParams.domain = getSiteURL().replace('https://', '');
+    if (config.context === 'production' || config.context === 'deploy-preview') cookieParams.domain = getSiteURL().replace('https://', '');
     const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
 
     // redirect the user to the ESP discovery endpoint for authentication
@@ -43,16 +36,14 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         response_type: 'code',
         client_id: getClientID(),
         redirect_uri: getRedirectURI(),
-        state: base64.urlEncode(
-            `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`,
-        ),
+        state: base64.urlEncode(`csrf=${csrf}&path=${path}&referer=${event.headers.referer}`),
     };
     return {
         statusCode: 302,
         headers: {
             Location: getDiscoveryUrl(params),
             'Cache-Control': 'no-cache',
-            'Set-Cookie': c
+            'Set-Cookie': c,
         },
         body: '',
     };
