@@ -99,7 +99,7 @@ public class ObservationApplication {
 
 A few things are happening in this code: 
  1. Create an instance of `Observation` and bind it to an `ObservationRegistry` as stated in [the Micrometer documentation](https://micrometer.io/docs/observation).
- 2. To better observe our invocation - to be able to filter it later - add _low cardinality_ keys. These are keys whose value will have a bounded number of possibile values. For _high cardinality_ keys - having an unbounded possible values - use the `.highCardinalityKeyValue()` method.
+ 2. To better observe our invocation, add low cardinality keys. These are keys whose value will have a bounded number of possible values. For high cardinality keys - having unbounded possible values - use the `.highCardinalityKeyValue()` method.
  3. Rather than manually calling `.start()` and `.stop()`, use the `observe(Runnable)` method to isolate the monitored code in its own `Runnable` closure. You can also use the `observeChecked(CheckedRunnable)` for methods that throw Exceptions.
 
 ## How Micrometer observation works
@@ -128,9 +128,9 @@ The state diagram for observation scopes:
  Scope Started ─────────────────► Scope Finished
 ```
 
-> **_NOTE:_** Access to the [Observation Docs](https://micrometer.io/docs/observation) is important to gain more details as your needs evolve.
+> **_NOTE:_** Access to the [Observation Docs](https://micrometer.io/docs/observation) is essential to gain more details as your needs evolve.
 
-The Spring Boot autoconfiguration creates an `ObservationRegistry` responsible for configuration and propagation of Observations. Additionally, we get multiple `ObservationHandlers` that handle various instrumentation objectives (e.g., tracing, metrics, logging, etc..). As an example, the [DefaultMeterObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-core/src/main/java/io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.java#L23) provides micrometer [Timer](https://micrometer.io/docs/concepts#_timers) and [Counter](https://micrometer.io/docs/concepts#_counters) metrics to observations. 
+The Spring Boot autoconfiguration creates an `ObservationRegistry` responsible for the configuration and propagation of Observations. Additionally, we get multiple `ObservationHandlers` that handle various instrumentation objectives (e.g., tracing, metrics, logging, etc..). As an example, the [DefaultMeterObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-core/src/main/java/io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.java#L23) provides micrometer [Timer](https://micrometer.io/docs/concepts#_timers) and [Counter](https://micrometer.io/docs/concepts#_counters) metrics to observations. 
 
 Additionally, non-auto-configured handlers exist, such as the [ObservationTextPublisher](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationTextPublisher.java#L24). This handler logs the context during each handled event.
 
@@ -168,9 +168,9 @@ INFO 90538 --- [ main] i.m.o.ObservationTextPublisher : STOP - name='server.job'
 INFO 90538 --- [ main] c.e.o.ObservationApplication : Result was: SOMETHING
 ```
 
-The `ObservationTextPublisher` shows each stage that  this Observation went through, along with some metadata. 
+The `ObservationTextPublisher` shows each stage an Observation went through, along with some metadata. 
 
-Now that we have reviewed the basics, lets move on to put togehter an example using the reactive Spring WebFlux and Micrometer.
+Now that we have reviewed the basics, let's move on and put together an example using the reactive Spring WebFlux and Micrometer.
 
 ## The reactive sample setup
 
@@ -236,7 +236,7 @@ Greeting.java:
 record Greeting(String name) {}
 ```
 
-The service class uses a latency generator to add some dimension to the latency graph we will see later. 
+The service class uses a latency generator to add dimension to the latency graph seen later. 
 
 GreetingService.java:
 ```java
@@ -424,7 +424,7 @@ Place `logback-spring.xml` into `src/main/resources` of the project and ensure t
 </configuration>
 ```
 
-> **_WARNING:_** For illustrative purposes, this log configuration includes the 'traceID' label which holds lots of values. The [Loki Doc](https://grafana.com/docs/loki/latest/fundamentals/labels/) states: "High cardinality causes Loki to build a huge index (read: expensive!) and to flush thousands of tiny chunks to the object store (read: slow).". Therefore, this isn't recommended for production uses.
+> **_WARNING:_** For illustrative purposes, this log configuration includes the 'traceID' label representing many values. The [Loki Doc](https://grafana.com/docs/loki/latest/fundamentals/labels/) states: "High cardinality causes Loki to build a huge index (read: expensive!) and to flush thousands of tiny chunks to the object store (read: slow).". Therefore, do not use this configuration in production.
 
 ### Tempo configuration
 
@@ -510,7 +510,7 @@ datasources:
                   url: $${__value.raw}
 ```
 
-This dashboard configuration, located at [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) is called `logs_traces_metrics`. This dashboard code is borrowed thanks to this [observability blog post on spring.io](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
+This dashboard configuration, located at [infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json](https://raw.githubusercontent.com/marios-code-path/path-to-springboot-3/main/infra/docker/grafana/provisioning/dashboards/logs_traces_metrics.json) is called `logs_traces_metrics`. The code to this dashboard code was borrowed from the [observability blog post on spring.io](https://spring.io/blog/2022/10/12/observability-with-spring-boot-3).
 
 ```yaml
 {
@@ -789,7 +789,7 @@ Run that on your local Unix-compatible shell. You could use tools like [ab](http
 
 ![dashboard 1st](images/first-dashboard-screen.png)
 
-Look under 'latency for all' to see the observed latencies. There are free floating yellow/green X's, some which are circled in red - these are the Prometheus Exemplars correlating metrics with traces. The Prometheus Exemplar data is located by hovering over an 'X' and revealing the Exemplar view box. 
+Look under 'latency for all' to see the observed latencies. There are free-floating yellow/green X's, some are circled in red - these are the Prometheus Exemplars correlating metrics with traces. The Prometheus Exemplar data is located by hovering over an 'X' and revealing the Exemplar view box. 
 
 <img src="images/exemplar-data.png" alt="exemplar" width="480">
 
@@ -805,7 +805,7 @@ Finally, we can see that the Greeting service call has its distinct span tied to
 
 ## Conclusion
 
-You configured a Spring Boot 3 reactive application with Micrometer. You learned how Micrometer 'observes' method calls and Reactive stream subscriptions in order to derive metric and trace data. An Open Source dashboard stack allows us to demonstrate the effectiveness of this configuration. Micrometer now supports both metrics and traces. In addition, you integrated Prometheus Exemplars.
+You configured a Spring Boot 3 reactive application with Micrometer. You learned how Micrometer 'observes' method calls and Reactive stream subscriptions to derive metric and trace data. An Open Source dashboard stack allows us to demonstrate the effectiveness of this configuration. Micrometer now supports both metrics and traces. In addition, you integrated Prometheus Exemplars.
 
 ## Links and Readings
 
