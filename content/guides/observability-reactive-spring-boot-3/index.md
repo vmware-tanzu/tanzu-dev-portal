@@ -799,7 +799,7 @@ The 'Trace View' panel displays trace details correlated by the searched trace I
 
 ![dashboard 2nd](images/second-dashboard-screen.png)
 
-Finally, the service call has it's own distinct span that gets tied to the parent HTTP request.
+Finally, we can see that the Greeting service call has its distinct span tied to the parent HTTP request.
 
 ![dashboard full](images/full-trace-view.png)
 
