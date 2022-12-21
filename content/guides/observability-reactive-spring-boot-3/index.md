@@ -325,7 +325,7 @@ Read more about Micrometer Metrics in streams in the [Micrometer Observation Doc
 
 ## Building an OSS observability stack
 
-There are many pre-existing SAAS observability suites out there, of which VMWare's Wavefront is one good option. In addition, SAAS observability suites are easier to set up and integrate. But, in the interest of exploration, we're going to manually assemble a solution using open-source components: Tempo, Loki, Grafana, and Prometheus.
+There are many pre-existing SAAS observability suites out there, of which VMWare's [Wavefront](https://www.vmware.com/products/aria-operations-for-applications.html) is one good option. In addition, SAAS observability suites are easier to set up and integrate. But, in the interest of exploration, we're going to manually assemble a solution using open-source components: Tempo, Loki, Grafana, and Prometheus.
 
 Next, configure a Grafana dashboard to view logs, traces, and metrics in one location. The following additional projects are required to get started:
 
@@ -785,19 +785,21 @@ Prometheus scrapes the `/actuator/prometheus` endpoint, populating metrics when 
 while true; do http :8787/hello/spring-boot-3 ; sleep 1; done
 ```
 
-Run that on your local Unix-compatible shell. You could use tools like [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) alternatively. This script uses `curl` to call the `/hello` endpoint every second. Allow it to run for a minute or two so Prometheus can collect metrics. Go to `http://localhost:3000/dashboards` and select `General`, then select the `Logs, Traces, Metrics` dashboard. You will see something like this:
+Run that on your local Unix-compatible shell. You could use tools like [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) alternatively. This script uses `curl` to call the `/hello` endpoint every second. Allow it to run for a minute or two so Prometheus can collect metrics. Go to `http://localhost:3000/dashboards` and select `General`, then select the `Logs, Traces, Metrics` dashboard. You will see a screen resembling the following:
 
 ![dashboard 1st](images/first-dashboard-screen.png)
 
-Look under 'latency for all' to see the observed latencies. There are free floating yellow/green X's, some which are circled in red - these are the Prometheus Exemplars correlating metrics with traces. The Prometheus Exemplar data is located by hovering over a X and revealing the Exemplar view box. 
+Look under 'latency for all' to see the observed latencies. There are free floating yellow/green X's, some which are circled in red - these are the Prometheus Exemplars correlating metrics with traces. The Prometheus Exemplar data is located by hovering over an 'X' and revealing the Exemplar view box. 
 
 <img src="images/exemplar-data.png" alt="exemplar" width="480">
 
-The Tempo panel displays trace information correlated by a `traceId`.
+Rather than clicking 'Query with Tempo,' enter a trace ID in the text box labeled 'Trace ID' to reveal logs and traces correlated to that trace ID.
+
+The 'Trace View' panel displays trace details correlated by the searched trace ID. The 'Logs with trace ID' panel displays logs having that trace ID.
 
 ![dashboard 2nd](images/second-dashboard-screen.png)
 
-The service call has it's own distinct span that gets tied to the parent HTTP request.
+Finally, the service call has it's own distinct span that gets tied to the parent HTTP request.
 
 ![dashboard full](images/full-trace-view.png)
 
