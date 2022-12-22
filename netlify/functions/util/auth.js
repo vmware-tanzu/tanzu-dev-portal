@@ -1,67 +1,49 @@
 /* eslint-disable no-console */
 /* eslint-disable no-bitwise */
-const { AuthorizationCode } = require("simple-oauth2");
+const { AuthorizationCode } = require('simple-oauth2');
 const got = require('got');
 const jwt = require('jsonwebtoken');
+// eslint-disable-next-line import/extensions,import/no-unresolved
+const config = require('./config');
 
-// eslint-disable-next-line import/no-unresolved
-const config = require("./config");
+const authURL = process.env.ESP_AUTH_URL;
+const prodBaseURL = 'https://tanzu.vmware.com';
 
-const base =
-  config.context === "production" || config.context === "deploy-preview"
-      ? "https://auth.esp.vmware.com/api/auth/v1"
-      : "https://auth.esp-staging.vmware-aws.com/api/auth/v1";
-
-function makeAuth(clientId) {
-    if (!clientId) {
-        throw new Error("Missing client ID");
+function makeAuth() {
+    const clientID = process.env.ESP_CLIENT_ID;
+    if (!clientID) {
+        throw new Error('Missing client ID');
     }
-
     // See: https://github.com/lelylan/simple-oauth2/blob/master/API.md#options
     const authConfig = {
-        client: {
-            id: clientId,
-        },
+        client: { id: clientID },
         auth: {
-            tokenHost: `${base}`,
-            tokenPath: `${base}/tokens`,
+            tokenHost: `${authURL}`,
+            tokenPath: `${authURL}/tokens`,
         },
-        http: {
-            json: true,
-        },
+        http: { json: true },
         options: {
-            authorizationMethod: "body",
-            bodyFormat: "json",
+            authorizationMethod: 'body',
+            bodyFormat: 'json',
         },
     };
-
     return new AuthorizationCode(authConfig);
 }
 
 function getDiscoveryUrl(params) {
-    const qs = (new URLSearchParams(params)).toString();
-    return `${base}/authorize?${qs}`;
-}
-
-function getClientId() {
-    return config.context === "production" || config.context === "deploy-preview"
-        ? process.env.PROD_CLIENT_ID
-        : process.env.DEV_CLIENT_ID;
+    const queryStr = new URLSearchParams(params).toString();
+    return `${authURL}/authorize?${queryStr}`;
 }
 
 function getSiteURL() {
-    return config.context !== "production"
-        ? config.deployPrimeURL
-        : "https://tanzu.vmware.com";
+    return config.context !== 'production' ? config.deployPrimeURL : prodBaseURL;
 }
 
-function getRedirectURI(){
-    return config.context === "production"
-        ? "https://tanzu.vmware.com/developer/auth-callback"
-        : `${config.deployPrimeURL}/.netlify/functions/auth-callback`;
+function getRedirectURI() {
+    return config.context !== 'production' ? `${config.deployPrimeURL}/.netlify/functions/auth-callback` : `${prodBaseURL}/developer/auth-callback`;
 }
 
-function randomToken() {
+function getRandomToken() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
         const r = (Math.random() * 16) | 0;
         const v = c === 'x' ? r : (r & 0x3) | 0x8;
@@ -71,9 +53,7 @@ function randomToken() {
 
 async function tokenIsValid(tokenStr) {
     try {
-        const req = await got.get(
-            base+'/tokens/public-key',
-        );
+        const req = await got.get(`${authURL}/tokens/public-key`);
         const key = JSON.parse(req.body);
         const convertKey = key.key.replace(/RSA /gi, '');
         jwt.verify(tokenStr, convertKey, { algorithms: [key.alg] });
@@ -83,12 +63,12 @@ async function tokenIsValid(tokenStr) {
         return false;
     }
 }
+
 module.exports = {
     makeAuth,
     getDiscoveryUrl,
-    getClientId,
     getSiteURL,
     getRedirectURI,
-    randomToken,
-    tokenIsValid
+    getRandomToken,
+    tokenIsValid,
 };

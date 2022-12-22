@@ -17,6 +17,9 @@
     "url": "https://github.com/vmware-tanzu/tanzu-dev-portal/issues"
   },
   "homepage": "https://github.com/vmware-tanzu/tanzu-dev-portal#readme",
+  "engines": {
+    "node": ">=16 <17"
+  },
   "dependencies": {
     "@amplitude/node": "^1.8.0",
     "@sentry/serverless": "^6.11.0",
