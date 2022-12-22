@@ -7,9 +7,10 @@ const jwt = require('jsonwebtoken');
 const config = require('./config');
 
 const authURL = process.env.ESP_AUTH_URL;
-const clientID = process.env.ESP_CLIENT_ID;
+const prodBaseURL = 'https://tanzu.vmware.com';
 
 function makeAuth() {
+    const clientID = process.env.ESP_CLIENT_ID;
     if (!clientID) {
         throw new Error('Missing client ID');
     }
@@ -29,24 +30,20 @@ function makeAuth() {
     return new AuthorizationCode(authConfig);
 }
 
-function getClientID() {
-    return clientID;
-}
-
 function getDiscoveryUrl(params) {
-    const qs = new URLSearchParams(params).toString();
-    return `${authURL}/authorize?${qs}`;
+    const queryStr = new URLSearchParams(params).toString();
+    return `${authURL}/authorize?${queryStr}`;
 }
 
 function getSiteURL() {
-    return config.context !== 'production' ? config.deployPrimeURL : 'https://tanzu.vmware.com';
+    return config.context !== 'production' ? config.deployPrimeURL : prodBaseURL;
 }
 
 function getRedirectURI() {
-    return config.context !== 'production' ? `${config.deployPrimeURL}/.netlify/functions/auth-callback` : 'https://tanzu.vmware.com/developer/auth-callback';
+    return config.context !== 'production' ? `${config.deployPrimeURL}/.netlify/functions/auth-callback` : `${prodBaseURL}/developer/auth-callback`;
 }
 
-function randomToken() {
+function getRandomToken() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
         const r = (Math.random() * 16) | 0;
         const v = c === 'x' ? r : (r & 0x3) | 0x8;
@@ -66,12 +63,12 @@ async function tokenIsValid(tokenStr) {
         return false;
     }
 }
+
 module.exports = {
     makeAuth,
     getDiscoveryUrl,
-    getClientID,
     getSiteURL,
     getRedirectURI,
-    randomToken,
+    getRandomToken,
     tokenIsValid,
 };

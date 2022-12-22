@@ -6,7 +6,7 @@ const {
     makeAuth,
     getSiteURL,
     getRedirectURI,
-    randomToken,
+    getRandomToken,
     tokenIsValid
 } = require('./util/auth');
 const redirectTemplate = require('./util/redirectTemplate')
@@ -90,7 +90,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         if (oneTrustCookieParsed && oneTrustCookieParsed.groups){
             const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
             if (oneTrustCookieParsed.groups[groupposition] === '0') {
-                jwtToken.id = randomToken();
+                jwtToken.id = getRandomToken();
             }else {
                 jwtToken.name = decoded.payload.username;
                 jwtToken.id = decoded.payload.username;
