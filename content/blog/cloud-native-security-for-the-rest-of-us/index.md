@@ -30,7 +30,7 @@ So where should we start?
 
 In this first blog, we'll talk about the framework of the “4 C's of Cloud Native Security” and discuss how to secure the lower layers of the stack: our cloud platform and Kubernetes clusters.
 
-Then, in a second one, we will talk about securing our applications themselves; in particular in their usage of Kubernetes APIs, but also in the way that they're built.
+Then, in a [second one](/blog/cloud-native-security-for-the-rest-of-us-p2/), we will talk about securing our applications themselves; in particular in their usage of Kubernetes APIs, but also in the way that they're built.
 
 
 ## 4 C’s of Cloud Native Security
@@ -171,4 +171,6 @@ You can also go the extra mile and use tools like [Cilium](https://cilium.io/) t
 ### What's next?
 We covered a lot of ground in this first post. This is definitely a lot of information! If you appreciate that form factor and were able to follow along all these explanations, fantastic! We hope you'll enjoy the next blog post just as much. As a reminder, you would like a lighter version of that content, check out the Open Source Summit [recording](https://www.youtube.com/watch?v=jWz-faPWmzE) and/or [slides](https://speakerdeck.com/tiffanyfay/cloud-native-security-for-the-rest-of-us); but these long-form blog posts carry *many* more details. One last thing: Kubernetes evolves constantly, and so does our knowledge about it; so if you are a reader from the future, keep in mind that most of this was written at the end of 2022, just before the release of Kubernetes 1.26.
 
-*In the second part of this series, we'll move away from the platform and closer to our applications and talk about managing permissions, secrets, and much more!*
+*In the [second part](/blog/cloud-native-security-for-the-rest-of-us-p2/) of this series, we'll move away from the platform and closer to our applications and talk about managing permissions, secrets, and much more!*
+
+[**→ PART 2**](/blog/cloud-native-security-for-the-rest-of-us-p2/)
