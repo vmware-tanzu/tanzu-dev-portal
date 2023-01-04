@@ -68,7 +68,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         }
         const { body, statusCode } = await got.post(remoteUrl, {
             headers: { Authorization: `Api-Key ${apiKey}` },
-            json: { refer: getSiteURL() + '/developer/workshops', user: decodedToken.id },
+            json: { refer: `${getSiteURL()}/developer/workshops`, user: decodedToken.id },
         });
         if (statusCode !== 200 || body.error) {
             throw new Error(
