@@ -15,7 +15,7 @@ minutes: 120
 episode: "73"
 explicit: "yes"
 title: "The one with Michael Feathers"
-#youtube: ""
+youtube: "zOSrZ4-Hm0c"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
