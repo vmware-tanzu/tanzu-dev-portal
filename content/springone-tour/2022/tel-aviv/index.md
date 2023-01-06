@@ -207,6 +207,7 @@ It’s time to take your existing applications to the next level.
 <div class="sponsor-container">
 <img id="terasky-sponsor" src="../../images/logo-terasky.svg" style="height:40px" class="mr-5 mb-5 d-block d-lg-inline">
 <img id="dell-sponsor" src="../../images/logo-dell-technologies.svg" style="height:40px; transform: translateY(5px)" class="mb-5 d-block d-lg-inline">
+<img id="intel-sponsor" src="../../images/logo-intel.svg" style="height:40px" class="mb-5 d-block d-lg-inline">
 </div>
 
 <br>
