@@ -16,7 +16,7 @@ instagram: ""
 youtube: ""
 ---
 
-Tiffany is a senior developer advocate at VMware and is focused on Kubernetes. She previously worked as a software developer and developer advocate (nerd whisperer) for containers at Amazon. She also formerly worked at Docker and Intel. Prior to that, she graduated from Georgia Tech with a degree in electrical engineering. In her free time she likes to spend time with her fiancé, family, and friends, as well as dabble in photography. You can find her on Twitter [@tiffanyfayj](https://twitter.com/tiffanyfayj).
+Tiffany is a senior developer advocate at VMware and is focused on Kubernetes. She previously worked as a software developer and developer advocate (nerd whisperer) for containers at Amazon. She also formerly worked at Docker and Intel. Prior to that, she graduated from Georgia Tech with a degree in electrical engineering. In her free time she really likes to travel and dabble in photography. You can find her on Twitter [@tiffanyfayj](https://twitter.com/tiffanyfayj).
 
 <!--more-->
 ### Talk Abstracts
@@ -43,3 +43,12 @@ If you’re working with just a few containers, managing them is not too complic
 
 {{< youtube id="wX6m6G5CMSI" class="youtube-video-shortcode" >}} 
 
+#### Cloud Native Security for the Rest of Us
+Your mission is to secure the vast tracts of land of the Cloud Native security landscape. Where do you even start?!? It would be preposterous to cover that whole topic in a single session, but we can at least map it out. Our plan is to break it down into three key areas and review each in turn.
+- Platform - securing and upgrading our control planes and nodes; isolating compute, storage, and network resources; managing privileges and secrets.
+- User management and permissions - various ways to authenticate and authorize user access; leveraging tools like RBAC and Namespaces, and some common "gotchas".
+- Software supply chain - what that means; some actual threat models are; how to mitigate them.
+
+You will leave this session with a stronger understanding of the breadth and depth of Cloud Native security and resources to further develop your knowledge.
+
+{{< youtube id="jWz-faPWmzE" class="youtube-video-shortcode" >}} 
