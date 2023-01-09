@@ -7,7 +7,7 @@ aliases:
 - /tv/code/66
 type: "tv-episode"
 # TODO
-title: "Spring Rest Docs"
+title: "2023.1 Spring Rest Docs"
 # TODO
 image: /tv/code/images/mario-gray.jpg
 episode: '66'
@@ -17,9 +17,9 @@ hosts:
 - Mario Gray
 # guests:
 # -
-minutes: 120
+minutes: 150
 # TODO YouTube ID after posted
-youtube: ""
+youtube: "UUS2qHihwwo"
 twitch:  "vmwaretanzu"
 ---
 
