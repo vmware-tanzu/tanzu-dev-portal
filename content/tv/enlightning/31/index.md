@@ -1,9 +1,9 @@
 ---
-Date: '2023-01-26T08:00:00-08:00'
+Date: '2023-02-09T08:00:00-08:00'
 Description: "You're at the Helm"
-PublishDate: '2023-01-26T00:00:00-08:00'
-date: '2023-01-26'
-episode: '30'
+PublishDate: '2023-02-09T00:00:00-08:00'
+date: '2023-02-09'
+episode: '31'
 explicit: 'no'
 guests:
 - Andrew Block
