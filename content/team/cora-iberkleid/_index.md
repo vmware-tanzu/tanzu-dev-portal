@@ -15,16 +15,14 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041 MD001 MD022 MD033-->
 Cora Iberkleid is a Developer Advocate for <a href="https://tanzu.vmware.com/modern-apps">Modern Applications at VMware Tanzu</a>, helping developers and enterprises navigate modern practices and technologies, focusing on cloud native architecture, modern CI/CD, Spring, and Kubernetes.
 
 Prior to joining VMware, Cora was an Advisory Solutions Engineer at Pivotal. She also spent nearly a decade at Sun Microsystems and Oracle, helping customers design and build enterprise integration applications. Through this experience, she developed an understanding and empathy for complex organizational challenges, and she strives to incorporate this empathy into her everyday work.
 
-
 <!--more-->
 
 ## Highlights
-
 #### Build Images with Confidence and Ease with Cloud Native Buildpacks
 ###### @ Spring Live 2020
 
@@ -56,6 +54,7 @@ This talk will help enterprises overcome the entry barrier to put modern CI/CD i
 Software delivery is a key capability that is often treated as an afterthought, resulting in a rigid, fragile, and inefficient process that is difficult to maintain and evolve and that can even limit developer agility. In this talk, we will explore the burgeoning topics of delivery as code, distributed ownership of jobs/stages, and the importance of testing the pipeline itself. These practices aim to make pipelines easier to create and manage over time and at scale. We will also cover best practices to incorporate into our delivery pipelines so that developers can change and test applications more frequently and effectively, positioning us to produce better software faster.
 
 Learning outcomes from this talk include:
+
 - An appreciation for the value that some key best practices can provide for developer agility
 - An understanding of the recent hot topic of software-defined delivery, and some of the nuances in different approaches
 
