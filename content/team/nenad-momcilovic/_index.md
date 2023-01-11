@@ -15,5 +15,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
+<!-- markdownlint-disable MD041-->
 Nenad Momcilovic is a Tanzu Solution Engineer at VMware based in Vienna, Austria.
-
