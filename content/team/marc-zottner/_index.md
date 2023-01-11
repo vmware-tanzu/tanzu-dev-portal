@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Marc is a French technologist living in Germany with over 15 years of experience gathered in many projects for more than 60 customers in over 12 countries in the finance, software, retail, energy, medical, public, manufacturing and telecommunications sectors.  
 
 Passionate about **application modernization**, his main interests gravitate towards architecture, security, platform as a service, user experience, front-end technologies, open-source software, and Java enterprise.
