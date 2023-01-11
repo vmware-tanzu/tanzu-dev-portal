@@ -16,5 +16,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Jared works in product marketing at VMware. There, he focuses on go-to-market efforts for Tanzu, the company’s portfolio of products for modern application development.

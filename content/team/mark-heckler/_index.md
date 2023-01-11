@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 [Mark Heckler](https://thehecklers.com/) is a software developer and Spring developer advocate at VMware, conference speaker, published author, and Java Champion focusing upon developing innovative production-ready software at velocity for the cloud. His latest book, _[Spring Boot: Up & Running!](https://learning.oreilly.com/library/view/spring-boot-up/9781492076971/)_ (O'Reilly Media, 2021), is available for early access **now** and is scheduled for publication February 2021.
 
 As an engineer and an MBA, Mark has worked with key players in the manufacturing, retail, medical, scientific, telecom, and financial industries as well as various public sector organizations to develop and deliver critical capabilities on time and on budget. He is a committed open source contributor and author/curator of a developer-focused [blog](https://www.thehecklers.com) and an occasionally interesting [Twitter account](https://twitter.com/mkheck).
@@ -27,6 +27,7 @@ As an engineer and an MBA, Mark has worked with key players in the manufacturing
 
 Below are a few recent sessions Mark has delivered. For more options, please visit his [Current Abstracts repo on Github](https://github.com/mkheck/current-abstracts).
 
+<!-- markdownlint-disable-next-line MD001-->
 #### Supercharge Application Security with Spring Security, OpenID Connect, & OAuth2
 
 Topics: Spring, Security, OpenID Connect, OAuth2
@@ -37,7 +38,6 @@ Defense is a multi-faceted topic, and your systems' security is central to it al
 
 This session is a live-coding "lock it down" exploration of how to secure your apps  and assets now and maintain their security over time using 100 percent open source software.
 
-
 {{< youtube id="8VJNjMD9TG8" class="youtube-video-shortcode" >}}
 
 #### Game of Streams, Extended Edition
@@ -45,7 +45,6 @@ This session is a live-coding "lock it down" exploration of how to secure your a
 Most mission-critical systems have distributed elements or are entirely distributed, resulting in a number of challenges: performance, scalability, reliability, resilience...the eight fallacies of distributed computing are alive and well!
 
 Messaging platforms are often used to solve these problems, but they don't come without a few complexities of their own. In this session, Mark explains not only how to use open source solutions like Spring Cloud Stream, RabbitMQ, and Apache Kafka to maximize your distributed systems' capabilities while minimizing complexity...but also how to **really** use them! There be dragons when dealing with messaging platforms, but Mark shows you several ways to tame and harness them for maximum fire and altitude. All examples are coded **live and in real time.**
-
 
 {{< youtube id="mmH4M6gS0pY" class="youtube-video-shortcode" >}}
 
@@ -65,6 +64,7 @@ Mark codes all examples using 100 percent open source software, live and in real
 
 {{< youtube id="x4PImMjPa7k" class="youtube-video-shortcode" >}}
 
+<!-- markdownlint-disable-next-line MD026-->
 ### Spring Boot: Up & Running!
 
 Early access is now available for _[Spring Boot: Up & Running!](https://learning.oreilly.com/library/view/spring-boot-up/9781492076971/)_ (O'Reilly Media, 2021).

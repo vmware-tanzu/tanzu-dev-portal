@@ -15,6 +15,6 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Tasha leads a global group of Technical Advocates at VMware Tanzu where she inputs her vision and strategy for advocacy and empowers her team to deliver on them. She is a fearless advocate for her team, and for the various technical communities they support. Tasha resides in Pittsburgh, Pennsylvania with her amazing husband and wonderful 2 girls.
 <!--more-->

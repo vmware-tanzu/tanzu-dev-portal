@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Application developer and UX impassioned engineer by heart - disguised as a Public Sector Solutions Engineer by day.
 
 <!--more-->

@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Paul Czarkowski is a long-time practitioner of the dark arts of DevOps. Hailing from Australia, he moved to Austin,Texas to help build and run one of the largest and most successful online games. Now at VMware, Paul works to improve the operator experience by taking cloud native software development concepts and applying them to operations to create platforms that reduce toil and improve software delivery.
 
 <!--more-->
@@ -35,6 +35,7 @@ Paul can speak or host workshops on the following topics, both from VMware produ
 
 ## Highlights
 
+<!-- markdownlint-disable-next-line MD001-->
 #### Cloud Native Operations with Kubernetes
 
 Paul will talk through how Kubernetes enables a new, cloud native way of operating software---part DevOps, part SRE, and all awesome! As Paul introduces the audience to the concepts of cloud native operations, he will put it to action,  building out a cloud native CI/CD stack and showing how to deploy and upgrade an application from source all the way to production on Kubernetes.

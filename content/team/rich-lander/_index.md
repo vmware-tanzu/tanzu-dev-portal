@@ -16,5 +16,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Rich is a Staff Field Engineer at VMware.  He was an early adopter of Docker and Kubernetes and has been running containers in production and helping enterprises do the same since 2015.

@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Mario is a principal technologist at VMware with more than 20 years of experience in software development and software architecture. He is co-author of _Pro Spring Integration_ (Apress, 2011). He’s helped organizations large and small build service-based architectures in a number of different runtimes and platforms over the decades, but adopting Spring in 2004, and using it whenever possible since, was a no-brainer that culminated in joining the Spring team in 2017. As a Spring developer advocate, Mario loves to engage and inspire developers and businesses in the Pivotal ecosystem.
 
 <!--more-->
@@ -41,7 +41,7 @@ Implementing a reactive application with Redis 5.0 is made easier using the [Spr
 
 #### Bootiful Testing with TDD
 
-Join us for an exploration of testing a reactive Spring Boot 2.x application. Test-driven development gives us the confidence necessary to improve our code faster, safely. But how do you test components and services, as well as integrations across distributed systems, while maintaining fast feedback loops, and how do you do all of this within the context of reactive Java? In this talk, we'll look at how to test imperative components, reactive data flows, and mocks. We’ll examine how to take advantage of test slices and how to test web applications. We'll look at how to ensure that API producers and consumers work well together using consumer-driven contract testing without sacrificing the testing pyramid for end-to-end integration tests. 
+Join us for an exploration of testing a reactive Spring Boot 2.x application. Test-driven development gives us the confidence necessary to improve our code faster, safely. But how do you test components and services, as well as integrations across distributed systems, while maintaining fast feedback loops, and how do you do all of this within the context of reactive Java? In this talk, we'll look at how to test imperative components, reactive data flows, and mocks. We’ll examine how to take advantage of test slices and how to test web applications. We'll look at how to ensure that API producers and consumers work well together using consumer-driven contract testing without sacrificing the testing pyramid for end-to-end integration tests.
 
 {{< youtube id="1W5_tOiwEAc" class="youtube-video-shortcode" >}}
 

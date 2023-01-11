@@ -4,6 +4,7 @@ description: "Software Engineer"
 roles: ["guest"]
 skills: ""
 location: ""
+external: true
 
 # Social Media
 twitter: ""

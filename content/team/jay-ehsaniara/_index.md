@@ -15,5 +15,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
-Jay is a Solutions Architect at VMware (Tanzu Labs). He is focused on App Modernization, Kubernetes, Event Driven and Service Mesh architecture. He has 20 years of experience in software development and architecture in various industries, including but not limited to gaming, financial, healthcare and telematics. 
+<!-- markdownlint-disable MD041-->
+Jay is a Solutions Architect at VMware (Tanzu Labs). He is focused on App Modernization, Kubernetes, Event Driven and Service Mesh architecture. He has 20 years of experience in software development and architecture in various industries, including but not limited to gaming, financial, healthcare and telematics.
