@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Nick is a Senior Technical Marketing Architect at VMware, focused on the Tanzu Application Service.
 
 <!--more-->

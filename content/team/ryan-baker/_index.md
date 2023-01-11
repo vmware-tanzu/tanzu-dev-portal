@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Ryan is a Senior Technical Marketing Architect at VMware, focused on the Tanzu Application Platform
 
 <!--more-->

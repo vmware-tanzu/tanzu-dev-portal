@@ -17,11 +17,10 @@ instagram: ""
 youtube: ""
 twitch: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Vincent is a French developer 🐻, Gopher 🐹, sysadmin 🐺, factotum 🦁, free-software fan 👼 and Unicode lover 🐸. He is working at Red Hat 🎩 as a senior principal software engineer, previously at Docker 🐳 and Zenika 🐯. He is a maintainer of the docker project (moby/moby, docker/cli, …), the TektonCD project (tektoncd/*) and a tiny bit of NixOS.
 
 <!--more-->
-
 
 ## Highlights
 

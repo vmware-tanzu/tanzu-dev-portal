@@ -14,5 +14,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 As part of the Spring Data engineering team at VMware, Christoph Strobl maintains and contributes to the modules around JPA, Redis and MongoDB.

@@ -98,7 +98,8 @@ practice.%:
 
 #team: @ creates a new team page. example: make team.firstname-lastname
 team.%:
-	hugo new team/$(call word-dot,$*,1)/_index.md -k team-member
+	@hugo new team/$(call word-dot,$*,1)/_index.md -k team-member
+	@mkdir content/team/$(call word-dot,$*,1)/images
 
 #audit: @ runs a content audit on all guides and blogs. example: make audit
 audit:

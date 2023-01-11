@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Author of books on testing and video courses. Lead of Spring Cloud Sleuth, Spring Cloud Contract projects at VMware.
 
 <!--more-->

@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Art Fewell is a Sr. Technical Marketing Manager at VMware focused on Education and Enablement for the Tanzu Portfolio.
 
 <!--more-->

@@ -20,10 +20,10 @@ tiktok: "laylacodesit"
 include_host:
 - dotnet-wild
 ---
+<!-- markdownlint-disable MD041-->
+[Layla (@LaylaCodesIt)](https://twitter.com/laylacodesit) is a Developer Advocate at VMware serving the .NET community.
 
-[Layla (@LaylaCodesIt)](https://twitter.com/laylacodesit) is a Developer Advocate at VMware serving the .NET community. 
-
-She is a Live Coder on [Twitch](https://twitch.tv/laylacodesit), a Microsoft MVP, A GitHub Star, former director of the board - The .NET Foundation, and the founder of the [#WomenOfDotNet](https://womenofdot.net) Initiative. 
+She is a Live Coder on [Twitch](https://twitch.tv/laylacodesit), a Microsoft MVP, A GitHub Star, former director of the board - The .NET Foundation, and the founder of the [#WomenOfDotNet](https://womenofdot.net) Initiative.
 
 Layla loves sharing knowledge whilst having fun. No question is stupid and beginners are always welcome.
 
@@ -43,7 +43,6 @@ Layla is comfortable giving talks both in person and virtually. All technical ta
 - ASP.NET Basics for Experts - can be given solo or collaboratively with Jakub Pilimon with a Spring twist
 
 To see where Layla is speaking next, checkout her up-to-date schedule [here](https://www.layla.dev/#Appearances)
-
 
 ## Hosting and emcee
 

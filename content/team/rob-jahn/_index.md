@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Rob Jahn is a Sr. Technical Partner Manager at [Dynatrace](https://www.dynatrace.com/) and supports technical partnerships with leading cloud providers and DevSecOps solutions. He very active with open source projects such as [Keptn](https://keptn.sh/) and develops technical workshops, videos, industry presentations, and blogs.  He is a passionate technology evangelist, helping companies get the best integrations and enablement for flawless and secure digital interactions.
 
 <!--more-->
