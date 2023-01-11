@@ -16,5 +16,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Eric is a product designer at VMware Tanzu Labs where he uses his design, product management, and consulting skills to help clients build experiences that are both meaningful and delightful. Prior to that he spent over a decade working at organizations like Teach For America, IBM, and Amplify to tackle educational problems using technology.
