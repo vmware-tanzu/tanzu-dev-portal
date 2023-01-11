@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
-Mike has over 25 years in the application development space and currently leads the field working group at VMware as a liaison between customer and product development in the area of Edge computing for modern applications. 
+<!-- markdownlint-disable MD041-->
+Mike has over 25 years in the application development space and currently leads the field working group at VMware as a liaison between customer and product development in the area of Edge computing for modern applications.
 
 <!--more-->

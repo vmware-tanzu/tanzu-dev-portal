@@ -15,8 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Madhura Bhave is a software engineer at VMware on the Spring Boot team. Before joining the Spring Boot team, Madhura worked on the UAA (Authentication and Authorization component for Cloud Foundry).
 
 <!--more-->
-

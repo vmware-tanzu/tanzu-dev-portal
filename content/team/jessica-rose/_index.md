@@ -16,14 +16,11 @@ instagram: ""
 youtube: ""
 twitch: "jesslynnrose"
 ---
-
-Jessica Rose is a developer outreach strategist obsessed with fostering more equitable access 
-to technical education and meaningful work in tech. She works at [n8n](https://n8n.io/), runs large scale [free 
-developer bootcamps](https://www.freecodecamp.org/news/author/jessica/) and always wants to hear about the projects that you're excited about.
+<!-- markdownlint-disable MD041-->
+Jessica Rose is a developer outreach strategist obsessed with fostering more equitable access to technical education and meaningful work in tech. She works at [n8n](https://n8n.io/), runs large scale [free developer bootcamps](https://www.freecodecamp.org/news/author/jessica/) and always wants to hear about the projects that you're excited about.
 
 <!--more-->
 
 ## Highlights
 
 {{< youtube id="r_SPWqB1l-c" class="youtube-video-shortcode" >}}
-

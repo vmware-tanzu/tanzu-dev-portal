@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Myles is a Staff Technical Marketing Architect at VMware, focused on the Tanzu Portfolio and the intersection between apps and infrastructure, with a background in enterprise storage and network architecture.
 
 <!--more-->

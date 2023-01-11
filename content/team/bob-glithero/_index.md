@@ -3,6 +3,7 @@ name: Bob Glithero
 description: "Senior Manager, Product Marketing"
 roles: ["guest"]
 skills: []
+hidden: true
 
 # Social Media
 twitter: ""
@@ -13,9 +14,8 @@ github: ""
 pinterest: ""
 instagram: ""
 youtube: ""
-hidden: true
 ---
-
+<!-- markdownlint-disable MD041-->
 Bob is Senior Manager, Product Marketing for VMware Tanzu Data Services
 
 <!--more-->

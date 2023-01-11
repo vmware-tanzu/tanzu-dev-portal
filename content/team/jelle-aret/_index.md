@@ -15,9 +15,8 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
-Jelle is a Solution Architect within VMware Tanzu Labs, stationed in The Netherlands, where he is helping
-client teams in how they can streamline their software engineering process.
+<!-- markdownlint-disable MD041-->
+Jelle is a Solution Architect within VMware Tanzu Labs, stationed in The Netherlands, where he is helping client teams in how they can streamline their software engineering process.
 
 Before joining VMware, he was active at several companies as Solution Architect, Software Engineer and Team Lead.
 

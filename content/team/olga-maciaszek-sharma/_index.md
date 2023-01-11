@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Olga Maciaszek-Sharma is a software engineer in Spring Cloud Team at VMware, where she works primarily on Spring Cloud LoadBalancer, Spring Cloud Contract (of which she was the first user and one of the first contributors), Spring Cloud OpenFeign and Spring Cloud Netflix projects.
 
 <!--more-->
