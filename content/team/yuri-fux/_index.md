@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Yuri is a highly experienced software development executive, with a proven ability to lead employees and managers with determination to achieve goals and continuously improve work processes and deliver high-quality projects in accordance with the business strategy.
 
 He has extensive Experience in Developing complex and mission critical IT systems, using AGILE and DevOps Methodologies with a demonstrated history of leading big R&D units, complex operational teams, applications, products, services, production, infrastructure and P&L.
