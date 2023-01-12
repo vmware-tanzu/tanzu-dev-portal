@@ -13,11 +13,10 @@ team:
 
 Good communication is one of the hardest things to be effective at. In relationships, in business, in teams, communication has and continues to be at the top of the list when it comes to what makes them good or bad.  Core to communication in general, is the ability to speak the same language.  On a software team, this can be accomplished by speaking a language that is **_ubiquitous_**.  
 
-> <span style="font-size: 50px; line-height: 50px">Ubiquitous</span>
-> <br/>
-> &nbsp;&nbsp;[yoo-**bik**-wi-_tuhs_] *adjective*
+> # **Ubiquitous**
+> [yoo-**bik**-wi-_tuhs_] *adjective*
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;present, appearing, or **found everywhere**
+> present, appearing, or **found everywhere**
 
 How can a "ubiquitous" language help how you talk to your teams, your users, and the business (stakeholders and end-users)?  What do you need to do to discover it, and how should it be used to be most effective?  Before you dive into the answers to these questions, let's start with the basics.
 
