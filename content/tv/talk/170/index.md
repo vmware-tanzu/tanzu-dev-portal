@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "🔐Open source security isn’t as important as this…"
-description: "🔐Open source security isn’t as important as this…"
+title: "🔐Open source security isn’t as important as this… - Tanzu Talk"
+description: "🔐Open source security isn’t as important as this… - Tanzu Talk"
 episode: "170"
 aliases: ["0170"]
 publishdate: "2020-04-01T00:00:00-07:00"
