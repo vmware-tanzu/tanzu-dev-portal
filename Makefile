@@ -79,17 +79,10 @@ spell: npm
 netlify-dev: function-config
 	hugo server -w -b ${local_url}
 
-#deploy-preview: @ (Netlify Use Only) Command used for Netlify deploy preview builds
-deploy-preview: git-submodule npm config.js
-	hugo -F -b ${DEPLOY_PRIME_URL}/developer
+#netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
+netlify-deploy: git-submodule npm config.js
+	hugo -F -b ${config_url}/developer
 	cp public/developer/_redirects public/redirects
-	cat public/redirects
-
-#production: @ (Netlify Use Only) Command used for netlify production builds
-production: git-submodule npm config.js
-	hugo -F -b ${URL} --minify
-	cp public/developer/_redirects public/redirects
-
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
