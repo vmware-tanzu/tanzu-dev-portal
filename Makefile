@@ -75,20 +75,21 @@ clean:
 spell: npm
 	act -j spell-check
 
-#local: @ Runs a local Netlify Dev server
-local: function-config
+#netlify-dev: @ (Netlify Use Only) Command used for Netlify dev local builds
+netlify-dev: function-config
 	hugo server -w -b ${local_url}
-
-#production: @ (Netlify Use Only) Command used for netlify production builds
-production: git-submodule npm config.js
-	hugo -F -b ${URL} --minify
-	cp public/developer/_redirects public/redirects
 
 #deploy-preview: @ (Netlify Use Only) Command used for Netlify deploy preview builds
 deploy-preview: git-submodule npm config.js
 	hugo -F -b ${DEPLOY_PRIME_URL}/developer
 	cp public/developer/_redirects public/redirects
 	cat public/redirects
+
+#production: @ (Netlify Use Only) Command used for netlify production builds
+production: git-submodule npm config.js
+	hugo -F -b ${URL} --minify
+	cp public/developer/_redirects public/redirects
+
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
