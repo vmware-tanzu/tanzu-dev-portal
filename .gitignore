@@ -15,7 +15,7 @@
 /audit
 
 # function config
-/netlify/functions/util/config.js
+/netlify/functions/config/config.js
 
 # Local Dev Netlify folder
 .netlify
