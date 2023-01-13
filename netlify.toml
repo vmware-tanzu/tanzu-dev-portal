@@ -1,19 +1,14 @@
 # Default build settings
-[context.production]
+[build]
   publish = "public"
-  command = "make production"
+  command = "make netlify-deploy"
+
+[build.environment]
+  HUGO_VERSION = "0.107.0"
+  TZ='America/Los_Angeles'
 
 [context.production.environment]
-  HUGO_VERSION = "0.107.0"
   HUGO_ENV = "production"
-  TZ='America/Los_Angeles'
-
-[context.deploy-preview]
-  command = "make deploy-preview"
-  
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.107.0"
-  TZ='America/Los_Angeles'
 
 [dev]
   command = "make local"
