@@ -588,6 +588,7 @@ de-risked
 Debroy
 debuggable
 [Dd]eclaratively
+deconflicted
 decrypt(ed|ing)?
 [Dd]eduplicate
 defaultRolePrefix
@@ -848,6 +849,7 @@ frictionless
 [fF]rontend(-green)?
 Frontstage
 Fu
+fu
 FullFrameworkWebApi
 fullnameOverride
 fully-deserialized
@@ -1183,6 +1185,7 @@ istioctl
 istiod(-1-7-3)?
 IstioOperator
 ISV(s)
+ItemList
 iteratively
 iTerm2
 ITQ
@@ -1327,6 +1330,7 @@ keySetOnServer
 keySets
 keyspace
 Keytool
+Khononov
 KIAM
 Kibana
 KitchenService
@@ -1396,6 +1400,7 @@ kubeseal
 Kubeseal
 KUDO
 Kung
+kung
 [kK]ustomize
 KUTTL
 KVM2
@@ -1579,6 +1584,7 @@ moby
 Mockito
 MockMvc
 [Mm]ockup(s)?
+modelled
 [Mm]odelling
 [Mm]odularity
 Momcilovic
