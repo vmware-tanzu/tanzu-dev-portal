@@ -442,6 +442,7 @@ CodeOne
 CoffeeOps
 cognisant
 Cohn
+Coimbra
 colocated
 COMClient
 commonName(.)?
@@ -480,6 +481,7 @@ coroutine
 Corry
 CORS
 cortado
+Cortez
 CORTX
 Cosgrove
 Coté('s)?
@@ -1250,6 +1252,7 @@ JmxNotificationClient
 JmxNotificationHandler
 JMXNotificationHandler
 JmxNotificationsAccessor
+JNation
 JNDI
 johnharris85
 Jonatan
@@ -2110,6 +2113,7 @@ rkt
 RMIT
 [Rr]oadmap(s)?
 [Rr]oadmapping
+Roberto
 RocksDB
 Rockstar
 Rodislav
