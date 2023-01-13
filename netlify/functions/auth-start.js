@@ -2,8 +2,7 @@ const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
 const { getDiscoveryUrl, getSiteURL, getRedirectURI, getRandomToken } = require('./util/auth');
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/extensions,import/no-unresolved
-const config = require('./util/config');
+const { config } = require('./config/config');
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_AUTH_START,

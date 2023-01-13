@@ -11,8 +11,7 @@ const {
 } = require('./util/auth');
 const redirectTemplate = require('./util/redirectTemplate')
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/extensions,import/no-unresolved
-const config = require("./util/config");
+const { config } = require("./config/config");
 
 const netlifyCookieName = 'nf_jwt';
 
