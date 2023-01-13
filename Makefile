@@ -93,8 +93,8 @@ production: git-submodule npm config.js
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | \
-	awk -v a="${config_url}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
+	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/config/config.js.ph | \
+	awk -v a="${config_url}" '{gsub(/SITE_URL_PLACEHOLDER/,a)}1' > netlify/functions/config/config.js
 
 
 #guide.wi: @ Creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
