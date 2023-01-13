@@ -1,7 +1,7 @@
 ---
 title: The Importance of Ubiquitous Language
 description: Exploration of Ubiquitous Language - What it means, how it helps, and how it is discovered and maintained.
-date: '2023-01-12'
+date: '2023-01-13'
 slug: ubiquitous-language
 tags:
 - team
