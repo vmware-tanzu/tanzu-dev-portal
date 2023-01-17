@@ -15,7 +15,7 @@ minutes: 120
 episode: "74"
 explicit: "yes"
 title: "The one with Roberto Cortez"
-#youtube: "zOSrZ4-Hm0c"
+youtube: "C9yf_RgAbdU"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
