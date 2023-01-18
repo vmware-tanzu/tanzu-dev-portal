@@ -19,7 +19,7 @@ hosts:
 # -
 minutes: 120
 # TODO YouTube ID after posted
-youtube: ""
+youtube: "UUS2qHihwwo"
 twitch:  "vmwaretanzu"
 ---
 
