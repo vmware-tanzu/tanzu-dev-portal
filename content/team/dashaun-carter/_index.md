@@ -17,7 +17,7 @@ twitch: "javagrunt"
 include_host:
 - spring-office-hours
 ---
-
+<!-- markdownlint-disable MD041-->
 DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu.
 Deliberately practicing to build, manage, and run, better software, faster.
 
@@ -38,19 +38,29 @@ DaShaun has a variety of talks and workshops on the following topics:
 
 ## Upcoming Appearances
 
-### VMware Explore Europe 2022
-**2022-11-7** - Barcelona, Spain
-
-### SpringOne Tour Tel Aviv 2022
-**2022-11-17** - Tel Aviv, Israel
-
-### SpringOne 2022
-**2022-12-6** - San Francisco, California
-
 ### CodeMash 2023
+
 **2023-1-11** - Sandusky, Ohio
 
+### SpringOne Essentials
+
+**2023-1-24** - San Francisco, CA
+
+### VMware vForum Technology Event
+
+**2023-2-21** - Tel Aviv, Israel
+
+### Devnexus
+
+**2023-4-4** - Atlanta, GA
+
+### Philadelphia Emerging Technologies for the Enterprise
+
+**2023-4-11** - Philadelphia, PA
+
 ## Highlights
+
+{{< youtube id="H6HwoWZtngs" class="youtube-video-shortcode" >}}
 
 {{< youtube id="yDpRDh9Lt_A" class="youtube-video-shortcode" >}}
 
@@ -65,5 +75,8 @@ DaShaun has a variety of talks and workshops on the following topics:
 ## Recent Blog Posts
 
 # [GraalVM with Spring](https://tanzu.vmware.com/developer/guides/graalvm-with-spring/)
-* [Spring Native Edge RPi](https://dev.to/dashaun/spring-native-edge-rpi-5c7) (2022-04-18)
-* [iSCSI boot with Raspberry Pi](https://dev.to/dashaun/raspberry-pi-3b-iscsi-boot-with-raspios-arm64-a2a) (2022-02-11)
+
+- [Multi-Architecture Cloud Native Buildpack](https://dashaun.com/posts/teamwork-makes-the-dream-work-for-multiarch-builder/)(2022-12-12)
+- [Testing Spring Cloud Gateway native-image with Testcontainers](https://dashaun.com/posts/spring-cloud-gateway-4-0-0-rc2-native-example-with-testcontainers/)(2022-12-8)
+- [Spring Native Edge RPi](https://dev.to/dashaun/spring-native-edge-rpi-5c7) (2022-04-18)
+- [iSCSI boot with Raspberry Pi](https://dev.to/dashaun/raspberry-pi-3b-iscsi-boot-with-raspios-arm64-a2a) (2022-02-11)

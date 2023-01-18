@@ -16,5 +16,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
-Senior IT Director specializing in solution development and delivery. Unique cross functional IT background including solution development, pricing, delivery, and Information Security management supported by both Systems Administration and Development experience. Is working to attract, grow and empower women to build careers in IT. 
+<!-- markdownlint-disable MD041-->
+Senior IT Director specializing in solution development and delivery. Unique cross functional IT background including solution development, pricing, delivery, and Information Security management supported by both Systems Administration and Development experience. Is working to attract, grow and empower women to build careers in IT.
