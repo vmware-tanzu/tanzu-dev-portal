@@ -411,13 +411,13 @@ body {
   .btn {
     background: $link;
     text-transform: uppercase;
-    color: white;
+    color: $dark !important;
     border-radius: 4px;
     padding: 10px 25px;
     font-size: 12px;
     transition: background-color .2s;
     letter-spacing: 1px;
-    -webkit-font-smoothing: auto;
+    font-weight: 500 !important;
 
     &.btn-small {
       padding: 8px 25px;
@@ -425,8 +425,7 @@ body {
     }
     &:hover,
     &:focus {
-      background-color: $link-hover-color;
-      color: white;
+      background-color: white !important;
     }
   }
   .cta-btn-wrapper {
@@ -572,6 +571,9 @@ body {
   }
 
   .mktoForm {
+      * {
+      font-family: $font-family-sans-serif !important;
+    }
     .mktoFormRow:nth-child(3) {
       display: none;
     }
