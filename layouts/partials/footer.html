@@ -68,7 +68,7 @@
   {{ range . }}
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="{{ .name }}" aria-label="{{ .name }}">
     <a class="text-white" target="_blank" href="{{ .url }}">
-      <i class="{{ .icon }}"></i>
+      <i class="{{ .icon }}" alt="{{ .name }} icon"></i>
     </a>
   </li>
   {{ end }}
