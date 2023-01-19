@@ -344,6 +344,45 @@ limitations under the License.
     $("#menu-toggle").click(function () {
       $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
     });
+    $("#menu-bars").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
+        $("#menu-close").focus();
+      }
+      if (event.which == 9) {
+        event.preventDefault();
+        if ($(".promo-nav-banner a[href]").length) {
+          $(".promo-nav-banner a[href]").focus();
+        } else {
+          $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+        }
+      }
+    });
+    $("#menu-close").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
+        $("#menu-bars").focus();
+      }
+    });
+
+    //Capture shift+tab from main content to menu
+    if ($(".promo-nav-banner a[href]").length) {
+      $(".promo-nav-banner a[href]").keydown(function(e){
+        if (e.shiftKey && e.which == "9") {
+          e.preventDefault();
+          $("#theme-select").focus();
+          $("#menu-bars").focus();
+        }
+      });
+    } else {
+      $("header").nextAll().find("a[href]:not([href*='#'])").first().keydown(function(e){
+        if (e.shiftKey && e.which == "9") {
+          e.preventDefault();
+          $("#theme-select").focus();
+          $("#menu-bars").focus();
+        }
+      });
+    }
   });
 
   var check = isTvShowLive();
