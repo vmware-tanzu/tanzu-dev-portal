@@ -71,13 +71,13 @@
 
   .homepage-banner {
     height: 50px;
-    color: white;
+    color: $gray-900;
     background-color: #6db33f;
     transition: all .2s ease-out;
   }
   .homepage-banner:hover {
     background-color: #80ea6e;
-    color: white;
+    // color: white;
     transition: all .2s ease-out;
   }
 
