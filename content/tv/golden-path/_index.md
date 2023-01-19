@@ -3,8 +3,8 @@ title: "The Golden Path to SpringOne"
 type: "tv-show"
 streaming: "twitch"
 id: "golden-path-to-springone"
-image: "enlightning.jpg"
-og_image: "/images/og/TanzuTV-Enlightning.jpg"
+image: "golden-path.jpg"
+og_image: "/images/og/TanzuTV-Golden-Path.jpg"
 weight: 1
 menu:
     main:

@@ -12,8 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Deploying Spring Boot Apps to Kubernetes with GitHub Actions and Feature Flags"
 twitch: vmwaretanzu
-youtube: 
-noyoutubestreamlink: 'yes'
+linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 

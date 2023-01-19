@@ -12,8 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Spring Cloud Gateway: Resilience, Security, and Observability"
 twitch: vmwaretanzu
-youtube: 
-noyoutubestreamlink: 'yes'
+linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 

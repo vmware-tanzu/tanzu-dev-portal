@@ -12,8 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Concurrency Control in Event-Driven Architectures"
 twitch: vmwaretanzu
-youtube: 
-noyoutubestreamlink: 'yes'
+linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 

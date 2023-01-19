@@ -12,8 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Happy Agents = Happy Customers: Empower Your Customer Service Team to Lead the Way"
 twitch: vmwaretanzu
-youtube: 
-noyoutubestreamlink: 'yes'
+linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 
