@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 [Erin Schnabel](https://twitter.com/ebullientworks) is a Distinguished Engineer and maker of things
 at Red Hat. She is a Java Champion, with over 25 years under her belt as a developer, technical 
 leader, architect and advocate, and she strongly prefers being up to her elbows in code. Erin 

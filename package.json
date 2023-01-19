@@ -17,14 +17,17 @@
     "url": "https://github.com/vmware-tanzu/tanzu-dev-portal/issues"
   },
   "homepage": "https://github.com/vmware-tanzu/tanzu-dev-portal#readme",
+  "engines": {
+    "node": ">=16 <17"
+  },
   "dependencies": {
     "@amplitude/node": "^1.8.0",
     "@sentry/serverless": "^6.11.0",
     "autoprefixer": "^10.3.1",
     "cookie": "^0.4.1",
-    "got": "^11.8.5",
-    "jsonwebtoken": "^8.5.1",
-    "postcss": "^8.3.6",
+    "got": "^11.8.6",
+    "jsonwebtoken": "^9.0.0",
+    "postcss": "^8.4.21",
     "postcss-cli": "^8.3.1",
     "simple-oauth2": "^4.2.0"
   },
@@ -40,12 +43,12 @@
   ],
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^4.0.3",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.1",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^7.0.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.8.2"
   }
 }

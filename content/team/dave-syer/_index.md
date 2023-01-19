@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Founder of Spring Cloud, Spring Boot, Spring Batch, and an active contributor to Spring Integration, Spring Framework, Spring AMQP, Spring Security.
 
 <!--more-->

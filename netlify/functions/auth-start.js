@@ -1,17 +1,9 @@
 const cookie = require('cookie');
 const Sentry = require('@sentry/serverless');
-const jwt = require('jsonwebtoken');
-
-const {
-    getDiscoveryUrl,
-    getClientId,
-    getSiteURL,
-    getRedirectURI,
-    randomToken,
-} = require('./util/auth');
+const { getDiscoveryUrl, getSiteURL, getRedirectURI, getRandomToken } = require('./util/auth');
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/no-unresolved
-const config = require("./util/config");
+// eslint-disable-next-line import/extensions,import/no-unresolved
+const config = require('./util/config');
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_AUTH_START,
@@ -20,40 +12,34 @@ Sentry.AWSLambda.init({
 });
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
-    let path = '';
-    if (event.path === '/.netlify/functions/auth-start') {
-        path = 'developer/';
-    } else {
-        path = event.path;
-    }
-    // store a random string in a cookie that we can verify in the callback
-    const csrf = randomToken();
+    const path = event.path === './netlify/functions/auth-start' ? 'developer' : event.path;
+    // random string stored in cookie that is verified in auth-callback
+    const cookieKey = 'content-lib-csrf';
+    const cookieVal = getRandomToken();
     const cookieParams = {
         secure: true,
         httpOnly: true,
         path: '/',
         maxAge: 600,
     };
-    // don't add the domain parameter for localhost dev, only add if there's a url
-    if (config.context === "production" || config.context === "deploy-preview")
+    if (config.context === 'production' || config.context === 'deploy-preview') {
         cookieParams.domain = getSiteURL().replace('https://', '');
-    const c = cookie.serialize('content-lib-csrf', csrf, cookieParams);
+    }
 
-    // redirect the user to the ESP discovery endpoint for authentication
-    const params = {
+    // redirects the user to the ESP discovery endpoint for authentication
+    const espParams = {
         response_type: 'code',
-        client_id: getClientId(),
+        client_id: process.env.ESP_CLIENT_ID,
         redirect_uri: getRedirectURI(),
-        state: base64.urlEncode(
-            `csrf=${csrf}&path=${path}&referer=${event.headers.referer}`,
-        ),
+        state: base64.urlEncode(`csrf=${cookieVal}&path=${path}&referer=${event.headers.referer}`),
     };
+
     return {
         statusCode: 302,
         headers: {
-            Location: getDiscoveryUrl(params),
+            Location: getDiscoveryUrl(espParams),
             'Cache-Control': 'no-cache',
-            'Set-Cookie': c
+            'Set-Cookie': cookie.serialize(cookieKey, cookieVal, cookieParams),
         },
         body: '',
     };

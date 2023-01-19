@@ -2,28 +2,26 @@
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const Sentry = require('@sentry/serverless');
-
 const {
     makeAuth,
-    getClientId,
     getSiteURL,
     getRedirectURI,
-    randomToken,
+    getRandomToken,
     tokenIsValid
 } = require('./util/auth');
+const redirectTemplate = require('./util/redirectTemplate')
 const base64 = require('./util/base64');
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions,import/no-unresolved
 const config = require("./util/config");
 
 const netlifyCookieName = 'nf_jwt';
-
-
 
 Sentry.AWSLambda.init({
     dsn: process.env.SENTRY_DSN_AUTH_CALLBACK,
     environment: config.context,
     tracesSampleRate: 1.0,
 });
+
 
 exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
     // we should only get here via a redirect from ESP, which would have
@@ -55,7 +53,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             };
         }
 
-        const oauth = makeAuth(getClientId());
+        const oauth = makeAuth();
         const tokenResponse = await oauth.getToken({
             code,
             redirect_uri: getRedirectURI(),
@@ -92,7 +90,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         if (oneTrustCookieParsed && oneTrustCookieParsed.groups){
             const groupposition = oneTrustCookieParsed.groups.search('C0002:') + 6;
             if (oneTrustCookieParsed.groups[groupposition] === '0') {
-                jwtToken.id = randomToken();
+                jwtToken.id = getRandomToken();
             }else {
                 jwtToken.name = decoded.payload.username;
                 jwtToken.id = decoded.payload.username;
@@ -106,12 +104,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             jwtToken.sub = decoded.payload.sub;
         }
 
-        let jwtSecret = "secret"; // use default secret for local dev context
-        if (config.context === "production" || config.context === "deploy-preview") {
-            jwtSecret = process.env.JWT_SECRET;
-        }
-
-        const netlifyJwt = jwt.sign(jwtToken, jwtSecret, {
+        const netlifyJwt = jwt.sign(jwtToken, process.env.JWT_SECRET, {
             algorithm: 'HS256',
         });
 
@@ -134,7 +127,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
             ? `${getSiteURL()}${parsed.path}?src=${parsed.referer}`
             : `${getSiteURL()}${parsed.path || ''}`;
 
-        var redirectBody = redirectTemplate.replace("REDIRECT_URL", redirect)
+        const redirectBody = redirectTemplate.replace("REDIRECT_URL", redirect)
         
         return {
             statusCode: 200,
@@ -152,43 +145,3 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event) => {
         };
     }
 });
-
-
-var redirectTemplate = `<html>
-<head>
-    <script>
-        function getCookie(e) {
-            var t = document.cookie,
-                n = e + "=",
-                o = t.indexOf("; " + n);
-            if (-1 == o) {
-                if (0 != (o = t.indexOf(n))) return null;
-            } else {
-                o += 2;
-                var i = document.cookie.indexOf(";", o);
-                -1 == i && (i = t.length);
-            }
-            return decodeURI(t.substring(o + n.length, i));
-        }
-        function setGTM(e, t, n, o, i) {
-            (e[o] = e[o] || []), e[o].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var r = t.getElementsByTagName(n)[0],
-                a = t.createElement(n),
-                s = "dataLayer" != o ? "&l=" + o : "";
-            (a.async = !0), (a.src = "https://www.googletagmanager.com/gtm.js?id=" + i + s), r.parentNode.insertBefore(a, r);
-        }
-        var timer;
-        function waitForOnetrustActiveGroups() {
-            document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1
-                ? (clearTimeout(timer), setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K"))
-                : (timer = setTimeout(waitForOnetrustActiveGroups, 250));
-        }
-        document.cookie.indexOf("OptanonConsent") > -1 && document.cookie.indexOf("groups=") > -1 ? setGTM(window, document, "script", "dataLayer", "GTM-TQ9H33K") : waitForOnetrustActiveGroups(),
-            dataLayer.push({ event: "setUserId", userId: JSON.parse(atob(getCookie("nf_jwt").split(".")[1])).id });
-    </script>
-    <title>Redirect</title>
-    <meta http-equiv="refresh" content="0;url=REDIRECT_URL" />
-</head>
-<body></body>
-</html>
-`

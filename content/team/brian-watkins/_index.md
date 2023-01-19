@@ -15,5 +15,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Brian has been a member of the Tanzu Labs team since 2015.

@@ -16,5 +16,5 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Oleg Šelajev is a developer advocate at AtomicJar working integration tests with Testcontainers better for everyone in the community. VirtualJUG leader. In 2017 became a Java Champion.

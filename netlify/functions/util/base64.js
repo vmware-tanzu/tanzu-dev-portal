@@ -9,13 +9,9 @@
 
 const base64 = exports;
 
-base64.encode = (unencoded) => {
-    return new Buffer.from(unencoded || '').toString('base64');
-};
+base64.encode = (unencoded) => new Buffer.from(unencoded || '').toString('base64');
 
-base64.decode = (encoded) => {
-    return new Buffer.from(encoded || '', 'base64').toString('utf8');
-};
+base64.decode = (encoded) => new Buffer.from(encoded || '', 'base64').toString('utf8');
 
 base64.urlEncode = (unencoded) => {
     const encoded = base64.encode(unencoded);
