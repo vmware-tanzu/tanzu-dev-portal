@@ -30,6 +30,25 @@ limitations under the License.
     }
   }
 
+
+  // Skip to main content
+  $("#skip-link").focus(function(e){
+    $(this).addClass("active");
+  });
+
+  $(".navbar-brand").focus(function(e){
+    $("#skip-link").removeClass("active");
+  });
+
+  const skipLink = document.getElementById("skip-link");
+  skipLink.addEventListener("keydown", function(event) {
+    if (event.which == 13 || event.which == 32) {
+      $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+      $("#skip-link").removeClass("active");
+    }
+  });
+
+
   // Dim body div when nav is activated
   function dimBody () {
     $("header + .container-fluid").addClass("dim");
