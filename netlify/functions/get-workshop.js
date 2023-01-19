@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const got = require('got');
 const Sentry = require('@sentry/serverless');
 const { getSiteURL } = require('./util/auth');
-const { config } = require('./config/config');
+const { config } = require('./util/config');
 
 const baseURL = process.env.LOOKUP_SERVICE_URL;
 const apiKey = process.env.LOOKUP_SERVICE_API_KEY;

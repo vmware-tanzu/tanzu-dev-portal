@@ -3,7 +3,7 @@
 const { AuthorizationCode } = require('simple-oauth2');
 const got = require('got');
 const jwt = require('jsonwebtoken');
-const { config } = require('../config/config');
+const { config } = require('./config');
 
 const authURL = process.env.ESP_AUTH_URL;
 const prodURL = 'https://tanzu.vmware.com';

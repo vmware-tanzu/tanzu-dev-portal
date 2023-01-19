@@ -11,7 +11,7 @@ const {
 } = require('./util/auth');
 const redirectTemplate = require('./util/redirectTemplate')
 const base64 = require('./util/base64');
-const { config } = require("./config/config");
+const { config } = require("./util/config");
 
 const netlifyCookieName = 'nf_jwt';
 

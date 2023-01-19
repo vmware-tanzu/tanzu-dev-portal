@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const Amplitude = require('@amplitude/node');
 const Sentry = require('@sentry/serverless');
-const { config } = require('./config/config');
+const { config } = require('./util/config');
 
 const amplitudeClient = Amplitude.init(process.env.AMPLITUDE_API_KEY);
 const analyticsToken = process.env.ANALYTICS_TOKEN;
