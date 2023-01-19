@@ -181,6 +181,12 @@ limitations under the License.
     $(".scroll-to-bottom").click(function () {
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     });
+    $(".click-to-show").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $(this).hide();
+        $(".hidden").slideToggle();
+      }
+    });
 
     // Team Index Page
     //// Make social links works inside clickable div
