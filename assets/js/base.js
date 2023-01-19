@@ -123,7 +123,6 @@ limitations under the License.
       });
     }
 
-
     if (event.which == "27") {
       removeNavClasses();
     }
@@ -496,6 +495,8 @@ limitations under the License.
   $("#search-nav").on('keydown', function(event) {
     if (event.key == "Escape") {
       $("#search-nav").slideToggle();
+      $("header li .search-icon").focus();
+      removeNavClasses();
     }
   });
 
@@ -503,6 +504,15 @@ limitations under the License.
     $("#search-nav").slideToggle();
     $(this).toggleClass("close");
     $("#searchheaderform input").focus();
+  });
+
+  $(".search-hide svg").keypress(function (event) {
+    if (event.which === 13 || event.which === 32) {
+      $("#search-nav").slideToggle();
+      $(this).parent().toggleClass("close");
+      $("header li .search-icon").focus();
+      removeNavClasses();
+    }
   });
 
   // Featured Learning paths
