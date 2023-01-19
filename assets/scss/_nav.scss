@@ -62,6 +62,9 @@
     .nav-link {
         text-transform: none;
         font-weight: $font-weight-normal;
+        &:focus {
+            color: white !important;
+        }
     }
 
     @include media-breakpoint-down(md) {

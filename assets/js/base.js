@@ -82,6 +82,28 @@ limitations under the License.
   });
 
 
+  // Tab nav
+  const mainNavbar = document.getElementById("main_navbar");
+  mainNavbar.addEventListener("keyup", function(event) {
+
+    if (event.which == 13 || event.which == 32) {
+
+      const targetKey = event.target.getAttribute("data-menu");
+
+      if (!$('#' + targetKey).hasClass('show')) {
+        removeNavClasses();
+        $('#scope').addClass(targetKey + '-scope');
+        $('#' + targetKey).addClass('show');
+        dimBody();
+      } else {
+        removeNavClasses();
+      }
+
+    }
+  });
+
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
