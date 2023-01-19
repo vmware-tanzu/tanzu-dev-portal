@@ -197,6 +197,35 @@ limitations under the License.
       }
     });
 
+    $("#theme-select").keyup(function (event) {
+      if (event.which == 13 || event.which == 32) {
+
+        if ($("html").hasClass("light-mode")) {
+          var iframe = document.getElementById("auth-iframe");
+
+          if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage("dark", "*");
+          }
+          changeTheme('dark');
+          localStorage.setItem("light-dark-mode-storage", "dark");
+
+          $("html").removeClass("light-mode");
+          document.getElementById("light-theme").remove();
+
+        }  else {
+          localStorage.setItem("light-dark-mode-storage", "light");
+          var iframe = document.getElementById("auth-iframe");
+
+          $("html").addClass("light-mode");
+          changeTheme("light");
+
+        }
+
+        $("header + .container-fluid").removeClass("dim");
+
+      }
+    });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
