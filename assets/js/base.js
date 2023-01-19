@@ -226,6 +226,17 @@ limitations under the License.
       }
     });
 
+    $("#theme-select").keydown(function (e) {
+      if (e.which == 9) {
+        e.preventDefault();
+        if ($(".promo-nav-banner a[href]").length) {
+          $(".promo-nav-banner a[href]").focus();
+        } else {
+          $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+        }
+      }
+    });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
