@@ -544,6 +544,15 @@ limitations under the License.
     }
   });
 
+  $(".search-hide svg").keydown(function (e) {
+    if (e.which === 9) {
+      $(".nav-link[data-menu='community']").focus();
+      $("#search-nav").slideToggle();
+      $(this).parent().toggleClass("close");
+      removeNavClasses();
+    }
+  });
+
   // Featured Learning paths
   $( ".learning-path-card" ).mouseenter(function() {
     $(".learning-path-card").removeClass("active");
