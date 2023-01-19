@@ -21,7 +21,7 @@ team:
 
 > The more your tests resemble the way your software is used, the more confidence they can give you. - Kent C. Dodds
 
-When developers wade into the waters of test driven development, they are quickly met with the challenge of how to test interactions with external dependencies. For database integrations, some frameworks will provide you with an in-memory database to test against. In the case of interacting with caches or APIs, developers will often choose to mock the interface that calls the underlying dependency. These are both quick ways to get the expectations codified in our test to pass, but do these approaches reflect reality? Often, an in-memory database might not implement all of the behavior that the production database has, or the mock that was created for that API or cache might not cover the nuances of network interactions. This often leaves us with tests that don't resemble the way our software is used. This can be a worrisome spot to be in before deploying to production. How can we gain confidence that our code will work as expected when deployed? By using Testcontainers, developers can create a test environment with external dependencies that closely resemble production and inspire confidence in their integrations.
+When developers wade into the waters of test driven development, they are quickly met with the challenge of how to test interactions with external dependencies. For database integrations, some frameworks will provide you with an in-memory database to test against. In the case of interacting with caches or APIs, developers will often choose to mock the interface that calls the underlying dependency. These are both quick ways to get the expectations codified in our test to pass, but do these approaches reflect reality? Often, an in-memory database might not implement all of the behavior present in the production database, or the mock that was created for that API or cache might not cover the nuances of network interactions. This often leaves us with tests that don't resemble the way our software is used. This can be a worrisome spot to be in before deploying to production. How can we gain confidence that our code will work as expected when deployed? By using Testcontainers, developers can create a test environment with external dependencies that closely resemble production and inspire confidence in their integrations.
 
 
 ## What is Testcontainers?
@@ -116,7 +116,7 @@ public class BookmarkRepositoryTests {
 }
 ```
 
-When executing the tests, the logs should show output indicating that the container specified is being spun up. If you are using Docker, you can also observe the containers being started and stopped by running a `watch docker ps` command in your terminal while the test is running. 
+When executing the tests, the test logs should show the container specified is being spun up. If you are using Docker, you can also observe the containers being started and stopped by running a `watch docker ps` command in your terminal while the test is running. 
 
 Let's go a little more in-depth by going through some realistic test examples with a Spring Boot application.
 
@@ -480,4 +480,4 @@ However, using Testcontainers does not come without some downsides:
 
 ## Reporting Issues
 
-If you have found any issues with the sample code from the walkthrough, feel free to open a GitHub issue [here](https://github.com/ahaldeman/spring-testcontainers/issues)!
+If you have found any issues with the sample code from the walkthrough, feel free to open a GitHub issue [here](https://github.com/ahaldeman/spring-testcontainers/issues) or submit a [PR](https://github.com/ahaldeman/spring-testcontainers/pulls)!
