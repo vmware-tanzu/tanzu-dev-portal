@@ -84,11 +84,11 @@ limitations under the License.
 
   // Tab nav
   const mainNavbar = document.getElementById("main_navbar");
-  mainNavbar.addEventListener("keyup", function(event) {
+  mainNavbar.addEventListener("keydown", function(event) {
+
+    const targetKey = event.target.getAttribute("data-menu");
 
     if (event.which == 13 || event.which == 32) {
-
-      const targetKey = event.target.getAttribute("data-menu");
 
       if (!$('#' + targetKey).hasClass('show')) {
         removeNavClasses();
@@ -100,6 +100,34 @@ limitations under the License.
       }
 
     }
+
+    if ($('#' + targetKey).hasClass('show') && event.which == "9") {
+      event.preventDefault();
+      const firstLink = $('#' + targetKey).find("a").first();
+      firstLink.focus();
+      const firstLinkHref = firstLink.attr("href");
+
+      const thisMenu = document.getElementById(targetKey);
+      thisMenu.addEventListener("keydown", function(e) {
+        if (e.shiftKey && e.which == "9") {
+          if (e.target.getAttribute("href") == firstLinkHref) {
+            e.preventDefault();
+            $(event.target).focus();
+            removeNavClasses();
+          }
+        }
+        if (e.which == "27") {
+          removeNavClasses();
+          $(event.target).focus();
+        }
+      });
+    }
+
+
+    if (event.which == "27") {
+      removeNavClasses();
+    }
+
   });
 
 
