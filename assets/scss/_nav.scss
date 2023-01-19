@@ -126,6 +126,7 @@
                 height: 19px;
                 @media(max-width: 450px) {
                     height: 15px;
+                    max-width: 80%;
                 }
                 @media(max-width: 350px) {
                     height: 12px;
