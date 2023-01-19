@@ -267,6 +267,18 @@ limitations under the License.
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
     $("a[href*='rss']").attr("target", "_blank");
 
+    // External link notification on tab
+    const blankTargets = document.querySelectorAll("a[target*='blank']");
+    blankTargets.forEach(function(elem) {
+      elem.addEventListener("keyup", function(event) {
+          $(event.target).addClass("external-link");
+      });
+      elem.addEventListener("keydown", function(event) {
+          $(event.target).removeClass("external-link");
+      });
+    });
+
+
     //Open youtube links with class 'lightbox' in lightbox
     $("a.lightbox[href*=youtube]").click(function () {
       var href = $(this).attr("href");

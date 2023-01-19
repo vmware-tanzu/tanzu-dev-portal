@@ -1050,3 +1050,24 @@ body#s1t-index #s1t-destinations-2022 {
     color: #1D428A !important
   }
 }
+
+a.external-link {
+  position: relative;
+  &:before {
+    content: "Opens a new window";
+    color: $dark;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: white;
+    border: 1px solid grey;
+    padding: 0 5px;
+    z-index: 11;
+  }
+}
