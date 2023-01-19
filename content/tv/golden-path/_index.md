@@ -6,6 +6,7 @@ id: "golden-path-to-springone"
 image: "golden-path.jpg"
 og_image: "/images/og/TanzuTV-Golden-Path.jpg"
 weight: 1
+noPast: true
 menu:
     main:
         parent: "tv"
