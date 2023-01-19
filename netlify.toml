@@ -11,12 +11,11 @@
   HUGO_ENV = "production"
 
 [dev]
-  command = "make local"
+  command = "make netlify-dev"
   publish = "public/developer"
   framework = "#custom"
   targetPort = 1313
   autoLaunch = false
-  # jwtSecret = ""
 
  # File-based installation of plugins # ref https://docs.netlify.com/configure-builds/file-based-configuration/
 [[plugins]]
