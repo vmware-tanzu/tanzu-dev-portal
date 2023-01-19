@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := help
-.PHONY: build clean clean-submodule git-submodule preview preview-ip spell test
+.PHONY: help clean-submodule git-submodule npm hugo-version-check preview preview-ip build test clean spell netlify-dev netlify-deploy
 get-file-name = $(word $2,$(subst ., ,$1))
 hugo_prod := 0.107.0
 hugo_local := $(shell hugo version | awk -F v '{print substr($$2,1,7)}')
-
+local_url := http://localhost:1313/developer
 # Conditionally sets build variables for rules
 CONTEXT ?= dev
 ifeq "$(CONTEXT)" "production"
@@ -12,7 +12,6 @@ else
 ifeq "$(CONTEXT)" "deploy-preview"
 config_url := $(DEPLOY_PRIME_URL)
 else
-local_url := http://localhost:1313/developer
 config_url := http://localhost:8888
 endif
 endif
@@ -76,7 +75,7 @@ spell: npm
 	act -j spell-check
 
 #netlify-dev: @ (Netlify Use Only) Command used for Netlify dev local builds
-netlify-dev: function-config
+netlify-dev: config.js
 	hugo server -w -b ${local_url}
 
 #netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
@@ -86,8 +85,8 @@ netlify-deploy: git-submodule npm config.js
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/config/config.js.ph | \
-	awk -v a="${config_url}" '{gsub(/SITE_URL_PLACEHOLDER/,a)}1' > netlify/functions/config/config.js
+	@awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | \
+	awk -v a="${config_url}" '{gsub(/SITE_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
 
 
 #guide.wi: @ Creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
