@@ -15,7 +15,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 [Jakub Pilimon](https://twitter.com/JakubPilimon) is a Staff Technologist at [VMware](https://vmware.com), blogger, programmer, and trainer. His main duty is to tackle complex enterprises with Domain-Driven Design and to propose a model and architecture that solves a problem. Sometimes he is involved in refactoring projects. When he isn’t coding, you can find him riding his bike, reading, or practicing kitesurfing.
 
 Jakub's pet projects can be found at [https://github.com/ddd-by-examples](https://github.com/ddd-by-examples).
@@ -42,6 +42,7 @@ Jakub can host a modelling session or architecture review using:
 
 ## Highlights
 
+<!-- markdownlint-disable-next-line MD001-->
 #### State or Events---Which Shall I Keep?
 
 Tired of fancy abstractions without actual down-to-earth implementation? In this talk we will go through both benefits and drawbacks of an event-sourced model by implementing a real world example. No slides, just live coding. We will develop features in parallel: one in a classic, ORM-based way and the other using event sourcing. We are going to tackle the problems step by step in both solutions, and from various perspectives. From the point of view of the stakeholders, our software should have a quick time-to-market timeline, the ability to do complex data reporting, and provide a fast way to extend and deploy new features. On the other hand, our fellow developers would be interested in the difficulty of learning event sourcing and how it affects things like unit testing. At the end of each step it will be clear what kind of problems/benefits we have using one of two models. The talk is going to cover a broad set of buzzwords, popular phrases, and frameworks, such as event sourcing, CQRS, distributed systems, Spring Cloud Stream, eventual consistency, unit testing, and zero downtime deployments.

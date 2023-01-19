@@ -4,6 +4,7 @@ description: "Staff Engineer"
 roles: ["author"]
 skills: ["Kubernetes", "Docker", "CI/CD", "DevOps","Architecture","Microservices","Frameworks","Spring Boot","Containerization"]
 location: "Miami, FL"
+hidden: true
 
 # Social Media 
 twitter: "AKalashnykov"
@@ -14,9 +15,8 @@ github: "AndriyKalashnykov"
 pinterest: ""
 instagram: ""
 youtube: ""
-hidden: true
 ---
-
+<!-- markdownlint-disable MD041-->
 Andriy Kalashnykov is a cloud technologist, architect and coder in the VMware Tanzu Labs team, helping developers, architects and enterprises adopt modern patterns, practices and technologies including Tanzu, Kubernetes, Spring, CI/CD, Tanzu Build Service, Tanzu Application Accelerator, Tanzu Cloud Gateway and more.
 Previously he was a Principal Consultant at Red Hat helping Fortune 100 customers design, develop and implement and deploy various business applications utilizing full project life cycle approach atop of OpenShift. Passionate about cloud native infrastructure, Kubernetes, containers, building and leveraging services. Extensive track record leading teams of engineers and consultants:
 

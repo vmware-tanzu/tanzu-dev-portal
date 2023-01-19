@@ -19,13 +19,11 @@ twitch: ""
 
 
 ---
-
+<!-- markdownlint-disable MD041-->
 Paris has spent the last 20 years helping communities grow and flourish — from building hometown Baltimore tech communities to driving belonging and sustainability in massive open source ecosystems like Kubernetes. Paris serves as the Kubernetes representative on the Cloud Native Computing Foundation (CNCF) Governing Board, Kubernetes Steering Committee Member, and emeritus Special Interest Group (SIG) Contributor Experience Chair during exponential growth.
 
 <!--more-->
 
-
 ## Highlights
 
 {{< youtube id="qeW9epuirzU" class="youtube-video-shortcode" >}}
-

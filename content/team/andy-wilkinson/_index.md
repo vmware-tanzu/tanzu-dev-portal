@@ -14,7 +14,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Andy is a software developer on the Spring team at VMware. When he's not working with server-side Java, Andy enjoys the different challenges presented by developing for iOS.
 
 <!--more-->

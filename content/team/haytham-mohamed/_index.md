@@ -16,7 +16,7 @@ pinterest: ""
 instagram: ""
 youtube: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Haytham is a senior technologist and open-source committer works as advisory architect with the global Spring team at VMware. Has designed and built enterprise software solutions for clients worldwide and worked in different industries such as finance, telecommunications, and technology. Haytham loves learning and experimenting with new technologies, and more importantly sharing the lessons learned along the way.
 
 <!--more-->

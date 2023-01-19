@@ -17,11 +17,10 @@ instagram: ""
 youtube: ""
 twitch: ""
 ---
-
+<!-- markdownlint-disable MD041-->
 Priyanka “Pinky” Ravi is a Developer Experience Engineer at Weaveworks. She has worked on a multitude of topics including front end development, UI automation for testing, and API development. Previously she was a software developer at State Farm where she was on the delivery engineering team working on GitOps enablement. She was instrumental in the multi-tenancy migration to utilize [Flux](https://fluxcd.io/) for an internal Kubernetes offering.
 
 <!--more-->
-
 
 ## Highlights
 
