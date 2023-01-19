@@ -6,11 +6,11 @@ streaming: "twitch"
 id: "code"
 image: "code.jpg"
 og_image: "/images/og/TanzuTV-Code.png"
-weight: 5
+weight: 6
 menu:
     main:
         parent: "tv"
-        weight: 5
+        weight: 6
 # Text that appears on show index page under show name
 description: Watch our Developer Advocates code live
 # Text that appears highlighted in green on show index page above show name

@@ -80,7 +80,13 @@
             <div class="play-icon float-left"></div>
             <div class="float-left ml-3 pl-1">
               <a href='{{ $.Scratch.Get "twitchUrl" }}'>Watch on Twitch</a><br/>
-              <a href='{{ $.Scratch.Get "youtubeUrl" }}'>Watch on YouTube</a><br/>
+
+              {{ if .Params.noyoutubestreamlink}}
+                <a href='https://www.youtube.com/@VMwareTanzu'>Watch on YouTube</a><br/>
+              {{ else }}
+                <a href='{{ $.Scratch.Get "youtubeUrl" }}'>Watch on YouTube</a><br/>
+              {{ end }}
+
               <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
             </div>
           {{ else }}

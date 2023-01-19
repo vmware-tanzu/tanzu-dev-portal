@@ -4,7 +4,7 @@ type: "tv-show"
 streaming: "twitch"
 # noPast: true
 id: "cloud-stream"
-weight: 6
+weight: 7
 hidden: true
 #menu:
 #    main:
