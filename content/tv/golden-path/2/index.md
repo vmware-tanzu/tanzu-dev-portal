@@ -5,6 +5,7 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-02'
 episode: '2'
 explicit: 'no'
+calendar: true
 guests:
 - Abhinav Rau
 - Madhav Sathe

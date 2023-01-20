@@ -233,7 +233,30 @@
         {{ end }}
       {{ end }}
       {{ if .Params.calendar }}
-        <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-multiple.min.js" type="text/javascript"></script>
+        <script src="https://d1fto35gcfffzn.cloudfront.net/calendar/ics-updated.js" type="text/javascript"></script>
+        <strong><a class='lightbox antialiased' href='#reminder'><i class='fa fa-calendar-check mr-1'></i>Add to calendar</a></strong>
+        <div id='reminder' class='p-5' style='display: none'>
+          <h3 class='-text-white mb-3 text-center'>Add to calendar</h3>
+          <div style="display:flex">
+              <script type="text/javascript">
+                  const eventStartTimeDate = new Date(startTime);
+                  const eventStartTimeDateUTC = eventStartTimeDate.toISOString();
+                  const eventEndTimeDate = new Date(endTime);
+                  const eventEndTimeDateUTC = eventEndTimeDate.toISOString();
+                  cal_single = ics();
+                  cal_single.addEvent({{ .Params.title }}, 'https://www.twitch.tv/vmwaretanzu', 'Twitch', eventStartTimeDateUTC, eventEndTimeDateUTC);
+                  const gCalTitle = ({{ .Params.title }}).replaceAll(" ","+");
+                  const gCalStartTime = eventStartTimeDateUTC.replaceAll("-","").replaceAll(":","").replace(".000","");
+                  const gCalEndTime = eventEndTimeDateUTC.replaceAll("-","").replaceAll(":","").replace(".000","");
+                  const gCalLink = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + gCalTitle + "&details=https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&location=Twitch&dates=" + gCalStartTime + "%2F" + gCalEndTime;
+              </script>
+              <a href="#"
+                 onclick="javascript:cal_single.download({{ .Params.title }})"
+                 class='btn mr-2 mb-2'>Outlook/iCal</a><a href="#"
+                  onclick="window.open(gCalLink,'_blank')"
+                  class='btn mb-2'>Google&nbsp;Calendar</a>
+          </div>
+        </div>
       {{ end }}
       {{ .Content }}
     </div>

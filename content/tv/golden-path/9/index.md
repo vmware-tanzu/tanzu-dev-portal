@@ -5,6 +5,7 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-28'
 episode: '9'
 explicit: 'no'
+calendar: true
 guests:
 - Matt Raible
 hosts:
