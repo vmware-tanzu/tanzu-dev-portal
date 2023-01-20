@@ -10,7 +10,7 @@
                     <p class='h5 text-uppercase text-white'>{{ .Params.teaser }} </p>
                 </div>
                 <div class='row d-flex justify-content-between mb-5 episodes'>
-                    {{ if .Params.allfuture }}
+                    {{ if .Params.allFuture }}
                         {{ range last 3 (sort .RegularPages ".Date" "desc") }}
                             <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
                                 <div class='thumbnail-gradient position-absolute'></div>
