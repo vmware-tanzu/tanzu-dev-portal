@@ -8,6 +8,8 @@ og_image: "/images/og/TanzuTV-Golden-Path.jpg"
 weight: 1
 allFuture: true
 noPast: true
+aliases: 
+    - golden-path-to-springone
 menu:
     main:
         parent: "tv"

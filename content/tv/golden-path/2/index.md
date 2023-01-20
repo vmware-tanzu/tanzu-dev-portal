@@ -13,7 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "It Takes Two to SLSA: Sigstore and Tekton to Secure Your Supply Chain"
 twitch: vmwaretanzu
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 

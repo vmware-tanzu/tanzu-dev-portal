@@ -12,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Weathering The Cloud Storm: Building Resilient Geo-Distributed Apps with Spring Cloud"
 twitch: vmwaretanzu
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 

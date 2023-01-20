@@ -12,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "What’s new with VMware Tanzu Application Service"
 twitch: vmwaretanzu
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 

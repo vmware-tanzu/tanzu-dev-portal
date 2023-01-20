@@ -12,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Reactive Microservices with Spring Boot and JHipster"
 twitch: vmwaretanzu
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
