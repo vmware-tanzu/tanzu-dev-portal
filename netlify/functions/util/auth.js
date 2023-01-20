@@ -3,11 +3,10 @@
 const { AuthorizationCode } = require('simple-oauth2');
 const got = require('got');
 const jwt = require('jsonwebtoken');
-// eslint-disable-next-line import/extensions,import/no-unresolved
-const config = require('./config');
+const { config } = require('./config');
 
 const authURL = process.env.ESP_AUTH_URL;
-const prodBaseURL = 'https://tanzu.vmware.com';
+const prodURL = 'https://tanzu.vmware.com';
 
 function makeAuth() {
     const clientID = process.env.ESP_CLIENT_ID;
@@ -36,11 +35,11 @@ function getDiscoveryUrl(params) {
 }
 
 function getSiteURL() {
-    return config.context !== 'production' ? config.deployPrimeURL : prodBaseURL;
+    return config.context === 'production' ? prodURL : config.siteURL;
 }
 
 function getRedirectURI() {
-    return config.context !== 'production' ? `${config.deployPrimeURL}/.netlify/functions/auth-callback` : `${prodBaseURL}/developer/auth-callback`;
+    return config.context === 'production' ? `${prodURL}/developer/auth-callback` : `${config.siteURL}/.netlify/functions/auth-callback`;
 }
 
 function getRandomToken() {

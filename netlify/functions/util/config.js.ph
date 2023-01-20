@@ -1,4 +1,4 @@
-module.exports = {
-  deployPrimeURL: "DEPLOY_PRIME_URL_PLACEHOLDER",
+exports.config = {
+  siteURL: "SITE_URL_PLACEHOLDER",
   context: "CONTEXT_PLACEHOLDER"
 };
