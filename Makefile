@@ -1,28 +1,46 @@
 .DEFAULT_GOAL := help
-.PHONY: test preview build theme spell node_modules
-
-word-dot = $(word $2,$(subst ., ,$1))
+.PHONY: help clean-submodule git-submodule npm hugo-version-check preview preview-ip build test clean spell netlify-dev netlify-deploy
+get-file-name = $(word $2,$(subst ., ,$1))
 hugo_prod := 0.107.0
 hugo_local := $(shell hugo version | awk -F v '{print substr($$2,1,7)}')
+local_url := http://localhost:1313/developer
+# Conditionally sets build variables for rules
+CONTEXT ?= dev
+ifeq "$(CONTEXT)" "production"
+config_url := $(URL)
+else
+ifeq "$(CONTEXT)" "deploy-preview"
+config_url := $(DEPLOY_PRIME_URL)
+else
+config_url := http://localhost:8888
+endif
+endif
 
 #help: @ List available tasks on this project
 help:
-	@echo "user tasks:"
-	@grep -E '[a-zA-Z\.\-]+:.*?@ .*$$' $(MAKEFILE_LIST)| tr -d '#' | awk 'BEGIN {FS = ":.*?@ "}; {printf "\t\033[32m%-30s\033[0m %s\n", $$1, $$2}'
-	@echo
+	@echo $$(for i in {1..100}; do printf -; done); echo Available Rules:
+	@grep -E '[a-zA-Z\.\-]+:.*?@ .*$$' $(MAKEFILE_LIST) | tr -d '#' | sort | \
+	awk 'BEGIN {FS = ":.*?@ "}; \
+	{printf "\t\033[32m%-30s\033[0m %s\n", $$1, $$2}'
+	@echo $$(for i in {1..100}; do printf -; done);
 
-#theme: @ runs git module to update the theme
-theme:
-	if [ -d ".git/modules/themes/docsy/assets/" ]; then rm -rf .git/modules && rm -rf themes/docsy && mkdir themes/docsy; fi
-	git submodule update --init --recursive
+#clean-submodule: @ Deletes submodule files for fresh initialization
+clean-submodule:
+	@echo "Removing modules"
+	@rm -rf .git/modules
+	@rm -rf themes/docsy
+	@mkdir themes/docsy
 
-#npm: @ runs npm ci to install dependencies from package-lock.json
-npm: theme
+#git-submodule: @ Initializes and recursively updates git submodules
+git-submodule:
+	git submodule update -f --init --recursive
+
+#npm: @ Runs npm ci for clean install of dependencies from package-lock.json
+npm: git-submodule
 	npm ci
 
-
-#hugo-check: @ checks system version of hugo 
-hugo-check:
+#hugo-version-check: @ Checks system version of hugo 
+hugo-version-check:
 ifeq ($(hugo_local),$(hugo_prod))
 	@echo hugo $(hugo_local) validated
 else
@@ -31,77 +49,76 @@ else
 	@exit 1
 endif
 
-#preview: @ preview hugo
-preview: hugo-check npm
-	ulimit -n 65535; hugo server -b http://localhost:1313/developer
+#preview: @ Preview a local site
+preview: hugo-version-check npm
+	ulimit -n 65535; hugo server -b ${local_url}
 
-#preview-ip: @ preview hugo with IP
+#preview-ip: @ Preview a local site using an IP
 preview-ip: npm
 	ulimit -n 65535; hugo server --panicOnWarning --bind 0.0.0.0 -b http://${MYIP}:1313/developer
 
-#build: @ build site into `public` directory
-build: hugo-check npm
+#build: @ Build site into `public` directory
+build: hugo-version-check npm
 	hugo -b http://localhost:1313/developer
 
-#test: @ runs act to simulate a github pull request test suite
+#test: @ Runs act to simulate a github pull request test suite
 test: npm
 	act pull_request
 
-#clean: @ Remove /public, test containers, etc
+#clean: @ Clean hugo build files and docker files
 clean:
 	rm -rf public
 	docker rmi -f act-github-actions-topic-check-dockeraction act-github-actions-link-check-dockeraction act-github-actions-spell-check-dockeraction catthehacker/ubuntu:act-latest
 	
-#spell: @ runs act to perform spellcheck
+#spell: @ Runs act to perform spellcheck
 spell: npm
 	act -j spell-check
 
-#local: @ used for running local netlify dev server
-local: function-config
-	hugo server -w -b http://localhost:1313/developer
+#netlify-dev: @ (Netlify Use Only) Command used for Netlify dev local builds
+netlify-dev: config.js
+	hugo server -w -b ${local_url}
 
-#function-config: @ sets the function config variables during build
-function-config: npm
-ifeq ($(CONTEXT), production)
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
-else
-ifeq ($(CONTEXT), deploy-preview)
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="${DEPLOY_PRIME_URL}" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
-else
-	awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | awk -v a="http://localhost:8888" '{gsub(/DEPLOY_PRIME_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
-endif
-endif
+#netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
+netlify-deploy: git-submodule npm config.js
+	hugo -F -b ${config_url}/developer
+	cp public/developer/_redirects public/redirects
 
-#guide.wi: @ creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
+#config.js: @ Creates the config.js file for Netlify functions during build time
+config.js: npm
+	@awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | \
+	awk -v a="${config_url}" '{gsub(/SITE_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
+
+
+#guide.wi: @ Creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
-	hugo new guides/$(call word-dot,$*,1)/$(call word-dot,$*,2).md -k guide-what-is
+	hugo new guides/$(call get-file-name,$*,1)/$(call get-file-name,$*,2).md -k guide-what-is
 
-#guide.gs: @ creates a getting started guide. example: make guide.gs.spring.spring-boot-gs
+#guide.gs: @ Creates a getting started guide. example: make guide.gs.spring.spring-boot-gs
 guide.gs.%:
-	hugo new guides/$(call word-dot,$*,1)/$(call word-dot,$*,2).md -k guide-gs
+	hugo new guides/$(call get-file-name,$*,1)/$(call get-file-name,$*,2).md -k guide-gs
 
-#blog: @ creates a blog post. example: make blog.writing-makefiles
+#blog: @ Creates a blog post. example: make blog.writing-makefiles
 blog.%:
-	hugo new blog/$(call word-dot,$*,1).md -k blog-post
+	hugo new blog/$(call get-file-name,$*,1).md -k blog-post
 
-#sample: @ creates a sample. example: make sample.example-makefile
+#sample: @ Creates a sample. example: make sample.example-makefile
 sample.%:
-	hugo new samples/$(call word-dot,$*,1).md -k sample
+	hugo new samples/$(call get-file-name,$*,1).md -k sample
 
-#video: @ creates a video. example: make video.demo-writing-makefiles
+#video: @ Creates a video. example: make video.demo-writing-makefiles
 video.%:
-	hugo new videos/$(call word-dot,$*,1).md -k video
+	hugo new videos/$(call get-file-name,$*,1).md -k video
 
-#practice: @ creates a new agile practice. example: make practice.makefile-workshop
+#practice: @ Creates a new agile practice. example: make practice.makefile-workshop
 practice.%:
-	hugo new practices/$(call word-dot,$*,1)/index.md -k practices
+	hugo new practices/$(call get-file-name,$*,1)/index.md -k practices
 
-#team: @ creates a new team page. example: make team.firstname-lastname
+#team: @ Creates a new team page. example: make team.firstname-lastname
 team.%:
-	@hugo new team/$(call word-dot,$*,1)/_index.md -k team-member
-	@mkdir content/team/$(call word-dot,$*,1)/images
+	@hugo new team/$(call get-file-name,$*,1)/_index.md -k team-member
+	@mkdir content/team/$(call get-file-name,$*,1)/images
 
-#audit: @ runs a content audit on all guides and blogs. example: make audit
+#audit: @ Runs a content audit on all guides and blogs. example: make audit
 audit:
 	cd .github/actions/audit/src && bundle install
 	mkdir audit
