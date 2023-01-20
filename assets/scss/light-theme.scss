@@ -230,6 +230,7 @@ body.blog #contact .mktoForm select {
 .mktoForm .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton,
 .btn:not(.countdown) {
    background: #1d428a !important;
+   color: white !important;
 
   &:hover, &:focus {
    background: #0E2B65 !important;

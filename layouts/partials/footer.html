@@ -31,7 +31,7 @@
         {{ if not (eq .Params.hide_newsletter true) }}
           <div class="newsletter mb-5">
             <p class="text-white">Sign up for the developer newsletter</p>
-            <div class='btn btn-small click-to-show scroll-to-bottom'>Subscribe</div>
+            <div class='btn btn-small click-to-show scroll-to-bottom' tabindex="0">Subscribe</div>
             <script src="https://connect.tanzu.vmware.com/js/forms2/js/forms2.min.js"></script>
             <form id="mktoForm_1609" class="hidden float-lg-right"></form>
             <script>
@@ -68,7 +68,7 @@
   {{ range . }}
   <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="{{ .name }}" aria-label="{{ .name }}">
     <a class="text-white" target="_blank" href="{{ .url }}">
-      <i class="{{ .icon }}"></i>
+      <i class="{{ .icon }}" alt="{{ .name }} icon"></i>
     </a>
   </li>
   {{ end }}
