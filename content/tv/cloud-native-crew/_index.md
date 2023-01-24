@@ -9,7 +9,7 @@ weight: 9
 menu:
     main:
         parent: "tv"
-        weight: 9
+        weight: 10
 # Text that appears on show index page under show name
 description: Explore all things cloud native
 # Text that appears highlighted in green on show index page above show name

@@ -39,7 +39,12 @@
       </div>
       <div class='col-lg-3 px-0'>
         {{ if (isset .Params "streaming") }}
-          {{ if not .Params.notwitchicon }}
+          {{ if .Params.linktwitchyoutubechannels }}
+            <div class="float-right" style="max-width: 200px;">
+              <a class="btn px-4 mt-lg-5 mt-4 mb-2 w-100" href="https://twitch.com/vmwaretanzu">Watch on Twitch</a>
+              <a class="btn px-4 w-100 mb-2" href="https://www.youtube.com/@VMwareTanzu">Watch on YouTube</a>
+            </div>
+          {{ else if not .Params.notwitchicon }}
             <a class="btn px-4 float-lg-right mt-lg-5 mt-4 mb-2" href="{{with .Params.channel }}{{.}}{{else}}https://twitch.com/vmwaretanzu{{end}}">Watch on {{ .Params.streaming }}</a>
           {{ end }}
         {{ end }}
