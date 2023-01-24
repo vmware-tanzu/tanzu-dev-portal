@@ -5,11 +5,11 @@ streaming: "twitch"
 id: "spring-office-hours"
 #image: "enlightning.jpg"
 og_image: "/images/og/TanzuTV.png"
-weight: 2
+weight: 3
 menu:
     main:
         parent: "tv"
-        weight: 2
+        weight: 3
 # Text that appears on show index page under show name
 description: Explore what’s new in Spring and get your questions answered
 # Text that appears highlighted in green on show index page above show name

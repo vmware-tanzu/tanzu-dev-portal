@@ -2,6 +2,31 @@
 // Main navbar
 //
 
+#skip-link {
+    cursor: pointer;
+    position: absolute;
+    padding: 2px 4px 0;
+    line-height: 1.5em;
+    z-index: 11;
+    @media(min-width: 1600px) {
+        left: 71px;
+    }
+    @media(min-width: 992px) {
+        top: -40px;
+        &.active {
+            top: -2px;
+        }
+    }
+    @media(max-width: 991px) {
+        font-size: 0.8em;
+        top: -80px;
+        &.active {
+            top: -2px;
+            left: 14px;
+        }
+    }
+}
+
 .td-navbar-cover {
     background: $primary;
 
@@ -62,6 +87,9 @@
     .nav-link {
         text-transform: none;
         font-weight: $font-weight-normal;
+        &:focus {
+            color: white !important;
+        }
     }
 
     @include media-breakpoint-down(md) {
@@ -98,6 +126,7 @@
                 height: 19px;
                 @media(max-width: 450px) {
                     height: 15px;
+                    max-width: 80%;
                 }
                 @media(max-width: 350px) {
                     height: 12px;
@@ -341,8 +370,8 @@ nav {
         }
         &.tanzutv-scope {
             left: 87px;
-            width: 296px;
-            height: 350px;
+            width: 320px;
+            height: 380px;
         }
         &.community-scope {
             left: 247px;            

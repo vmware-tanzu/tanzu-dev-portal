@@ -5,11 +5,11 @@ streaming: "twitch"
 id: "enlightning"
 image: "enlightning.jpg"
 og_image: "/images/og/TanzuTV-Enlightning.jpg"
-weight: 1
+weight: 2
 menu:
     main:
         parent: "tv"
-        weight: 1
+        weight: 2
 # Text that appears on show index page under show name
 description: Learn cloud concepts with Whitney and her lightboard ϟ
 # Text that appears highlighted in green on show index page above show name

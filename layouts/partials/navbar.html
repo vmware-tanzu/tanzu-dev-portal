@@ -1,13 +1,14 @@
 {{ $cover := .HasShortcode "blocks/cover" }}
-<nav id="navbar" class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
+<nav id="navbar" class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar" aria-label="nav" role="navigation">
 	<div class="container justify-space-between">
-		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}" tabindex="1">
+		<a id="skip-link" tabindex="0">Skip to main content</a>
+		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 		</a>
 		<div id="menu-toggle" class="d-block d-lg-none">
 			<span>
-				<div id="menu-bars"><div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div></div>
-				<svg id="menu-close" viewBox="0 0 18.33 18.33" xmlns="http://www.w3.org/2000/svg"><line class="a" x1="1" x2="17.33" y1="1" y2="17.33"></line><line class="a" x1="17.33" x2="1" y1="1" y2="17.33"></line></svg>
+				<div id="menu-bars" tabindex="0" aria-label="Hamburger menu button" role="navigation" aria-expanded="false"><div class="menu-bar"></div><div class="menu-bar"></div><div class="menu-bar"></div></div>
+				<svg id="menu-close" tabindex="0" viewBox="0 0 18.33 18.33" xmlns="http://www.w3.org/2000/svg"><line class="a" x1="1" x2="17.33" y1="1" y2="17.33"></line><line class="a" x1="17.33" x2="1" y1="1" y2="17.33"></line></svg>
 			</span>
 		</div>
 		<div class="position-relative d-lg-block d-none" id="main_navbar">
@@ -22,7 +23,7 @@
 				{{ $url := urls.Parse .RelPermalink }}
 				{{ $baseurl := urls.Parse $.Site.Params.Baseurl }}
 				{{ range .Site.Menus.main }}
-				<li class="mb-0 mr-5 nav-link">
+				<li data-menu="{{ lower (replace .Name "." "") }}" class="mb-0 mr-5 nav-link" tabindex="0">
 					{{ .Name }}
 					<div class="nav-arrow"></div>
 				</li>
@@ -34,7 +35,7 @@
 				</li>
 				
 				<li class="search remove-menu search_icon">
-					<div class="search-icon d-flex align-items-center relative z-1" tabindex="2">
+					<div class="search-icon d-flex align-items-center relative z-1" tabindex="0" role="Search" aria-label="Search">
 						<svg id="search-svg" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="6.08696" cy="6.08696" r="5.33696" stroke="white" stroke-width="1.5"/>
 							<path d="M9.13049 10.3478L14.0001 15.2173" stroke="white" stroke-width="1.5"/>
@@ -42,7 +43,7 @@
 					</div>
 				</li>
 
-				<li id="theme-select" class="nav-item ml-lg-2 ml-1 mb-0 position-relative text-nowrap">
+				<li id="theme-select" class="nav-item ml-lg-2 ml-1 mb-0 position-relative text-nowrap" tabindex="0" aria-label="Theme toggle">
 					<div id="theme-square"></div>
 					<!-- <div id="dark-select" class="nav-select"></div>
 					<div id="light-select" class="nav-select"></div> -->
@@ -120,7 +121,7 @@
 			</form>
 			
 			<div class="search-icon search-hide">
-			<svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+			<svg tabindex="0" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
 			<path class="b" d="M19.41,18l7.29-7.29a1,1,0,0,0-1.41-1.41L18,16.59,10.71,9.29a1,1,0,0,0-1.41,1.41L16.59,18,9.29,25.29a1,1,0,1,0,1.41,1.41L18,19.41l7.29,7.29a1,1,0,0,0,1.41-1.41Z"></path>
 			</svg>
 			</div>

@@ -30,6 +30,25 @@ limitations under the License.
     }
   }
 
+
+  // Skip to main content
+  $("#skip-link").focus(function(e){
+    $(this).addClass("active");
+  });
+
+  $(".navbar-brand").focus(function(e){
+    $("#skip-link").removeClass("active");
+  });
+
+  const skipLink = document.getElementById("skip-link");
+  skipLink.addEventListener("keydown", function(event) {
+    if (event.which == 13 || event.which == 32) {
+      $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+      $("#skip-link").removeClass("active");
+    }
+  });
+
+
   // Dim body div when nav is activated
   function dimBody () {
     $("header + .container-fluid").addClass("dim");
@@ -82,6 +101,55 @@ limitations under the License.
   });
 
 
+  // Tab nav
+  const mainNavbar = document.getElementById("main_navbar");
+  mainNavbar.addEventListener("keydown", function(event) {
+
+    const targetKey = event.target.getAttribute("data-menu");
+
+    if (event.which == 13 || event.which == 32) {
+
+      if (!$('#' + targetKey).hasClass('show')) {
+        removeNavClasses();
+        $('#scope').addClass(targetKey + '-scope');
+        $('#' + targetKey).addClass('show');
+        dimBody();
+      } else {
+        removeNavClasses();
+      }
+
+    }
+
+    if ($('#' + targetKey).hasClass('show') && event.which == "9") {
+      event.preventDefault();
+      const firstLink = $('#' + targetKey).find("a").first();
+      firstLink.focus();
+      const firstLinkHref = firstLink.attr("href");
+
+      const thisMenu = document.getElementById(targetKey);
+      thisMenu.addEventListener("keydown", function(e) {
+        if (e.shiftKey && e.which == "9") {
+          if (e.target.getAttribute("href") == firstLinkHref) {
+            e.preventDefault();
+            $(event.target).focus();
+            removeNavClasses();
+          }
+        }
+        if (e.which == "27") {
+          removeNavClasses();
+          $(event.target).focus();
+        }
+      });
+    }
+
+    if (event.which == "27") {
+      removeNavClasses();
+    }
+
+  });
+
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
@@ -112,6 +180,12 @@ limitations under the License.
     });
     $(".scroll-to-bottom").click(function () {
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    });
+    $(".click-to-show").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $(this).hide();
+        $(".hidden").slideToggle();
+      }
     });
 
     // Team Index Page
@@ -148,10 +222,62 @@ limitations under the License.
       }
     });
 
+    $("#theme-select").keyup(function (event) {
+      if (event.which == 13 || event.which == 32) {
+
+        if ($("html").hasClass("light-mode")) {
+          var iframe = document.getElementById("auth-iframe");
+
+          if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage("dark", "*");
+          }
+          changeTheme('dark');
+          localStorage.setItem("light-dark-mode-storage", "dark");
+
+          $("html").removeClass("light-mode");
+          document.getElementById("light-theme").remove();
+
+        }  else {
+          localStorage.setItem("light-dark-mode-storage", "light");
+          var iframe = document.getElementById("auth-iframe");
+
+          $("html").addClass("light-mode");
+          changeTheme("light");
+
+        }
+
+        $("header + .container-fluid").removeClass("dim");
+
+      }
+    });
+
+    $("#theme-select").keydown(function (e) {
+      if (e.which == 9) {
+        e.preventDefault();
+        if ($(".promo-nav-banner a[href]").length) {
+          $(".promo-nav-banner a[href]").focus();
+        } else {
+          $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+        }
+      }
+    });
+
     //Open external links/rss in new tab, tvc links in same tab
     $("a[href^='http']").attr("target", "_blank");
     $("a[href^='https://tanzu.vmware.com/developer']").attr("target", "_self");
     $("a[href*='rss']").attr("target", "_blank");
+
+    // External link notification on tab
+    const blankTargets = document.querySelectorAll("a[target*='blank']");
+    blankTargets.forEach(function(elem) {
+      elem.addEventListener("keyup", function(event) {
+          $(event.target).addClass("external-link");
+      });
+      elem.addEventListener("keydown", function(event) {
+          $(event.target).removeClass("external-link");
+      });
+    });
+
 
     //Open youtube links with class 'lightbox' in lightbox
     $("a.lightbox[href*=youtube]").click(function () {
@@ -230,6 +356,45 @@ limitations under the License.
     $("#menu-toggle").click(function () {
       $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
     });
+    $("#menu-bars").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
+        $("#menu-close").focus();
+      }
+      if (event.which == 9) {
+        event.preventDefault();
+        if ($(".promo-nav-banner a[href]").length) {
+          $(".promo-nav-banner a[href]").focus();
+        } else {
+          $("header").nextAll().find("a[href]:not([href*='#'])").first().focus();
+        }
+      }
+    });
+    $("#menu-close").keydown(function(event){
+      if (event.which == 13 || event.which == 32) {
+        $("#mobile-nav, #menu-toggle, body, nav").toggleClass("isOpen");
+        $("#menu-bars").focus();
+      }
+    });
+
+    //Capture shift+tab from main content to menu
+    if ($(".promo-nav-banner a[href]").length) {
+      $(".promo-nav-banner a[href]").keydown(function(e){
+        if (e.shiftKey && e.which == "9") {
+          e.preventDefault();
+          $("#theme-select").focus();
+          $("#menu-bars").focus();
+        }
+      });
+    } else {
+      $("header").nextAll().find("a[href]:not([href*='#'])").first().keydown(function(e){
+        if (e.shiftKey && e.which == "9") {
+          e.preventDefault();
+          $("#theme-select").focus();
+          $("#menu-bars").focus();
+        }
+      });
+    }
   });
 
   var check = isTvShowLive();
@@ -446,6 +611,8 @@ limitations under the License.
   $("#search-nav").on('keydown', function(event) {
     if (event.key == "Escape") {
       $("#search-nav").slideToggle();
+      $("header li .search-icon").focus();
+      removeNavClasses();
     }
   });
 
@@ -453,6 +620,24 @@ limitations under the License.
     $("#search-nav").slideToggle();
     $(this).toggleClass("close");
     $("#searchheaderform input").focus();
+  });
+
+  $(".search-hide svg").keypress(function (event) {
+    if (event.which === 13 || event.which === 32) {
+      $("#search-nav").slideToggle();
+      $(this).parent().toggleClass("close");
+      $("header li .search-icon").focus();
+      removeNavClasses();
+    }
+  });
+
+  $(".search-hide svg").keydown(function (e) {
+    if (e.which === 9) {
+      $(".nav-link[data-menu='community']").focus();
+      $("#search-nav").slideToggle();
+      $(this).parent().toggleClass("close");
+      removeNavClasses();
+    }
   });
 
   // Featured Learning paths
