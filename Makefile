@@ -53,7 +53,7 @@ endif
 
 #preview: @ Preview a local site
 preview: hugo-version-check npm
-	ulimit -n 65535; hugo server -b ${local_url}
+	ulimit -n 65535; hugo server -b ${deploy_url}
 
 #preview-ip: @ Preview a local site using an IP
 preview-ip: npm
