@@ -24,4 +24,4 @@ subheader: Expert talks on the tools and processes devs need to know
 # Any content below here shows up above episode index
 ---
 
-Join a rotating lineup of speakers, including experts from VMware and beyond, as they present on a wide array of important and timely topics in the dev space. Talks cover everything from Spring, programming tools, platforms, and tech stacks to the people, processes, culture changes, and real-world stories that will empower today’s developers to do more. New shows air every Tuesday and Thursday at 2pm ET, every week until we see you at SpringOne at VMware Explore in August 2023.
+Join a rotating lineup of speakers, including experts from VMware and beyond, as they present on a wide array of important and timely topics in the dev space. Talks cover everything from Spring, programming tools, platforms, and tech stacks to the people, processes, culture changes, and real-world stories that will empower today’s developers to do more. New shows air every Tuesday and Thursday at 2pm ET until we see you at SpringOne at VMware Explore in August 2023.
