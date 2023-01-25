@@ -3,15 +3,17 @@
 get-file-name = $(word $2,$(subst ., ,$1))
 hugo_prod := 0.107.0
 hugo_local := $(shell hugo version | awk -F v '{print substr($$2,1,7)}')
-local_url := http://localhost:1313/developer
 # Conditionally sets build variables for rules
 CONTEXT ?= dev
 ifeq "$(CONTEXT)" "production"
+deploy_url := https://tanzu.vmware.com/developer
 config_url := $(URL)
 else
 ifeq "$(CONTEXT)" "deploy-preview"
+deploy_url := $(DEPLOY_PRIME_URL)/developer
 config_url := $(DEPLOY_PRIME_URL)
 else
+deploy_url := http://localhost:1313/developer
 config_url := http://localhost:8888
 endif
 endif
@@ -59,7 +61,7 @@ preview-ip: npm
 
 #build: @ Build site into `public` directory
 build: hugo-version-check npm
-	hugo -b http://localhost:1313/developer
+	hugo -b ${deploy_url}
 
 #test: @ Runs act to simulate a github pull request test suite
 test: npm
@@ -76,11 +78,12 @@ spell: npm
 
 #netlify-dev: @ (Netlify Use Only) Command used for Netlify dev local builds
 netlify-dev: config.js
-	hugo server -w -b ${local_url}
+	@echo Netlify Dev building with ${CONTEXT} context
+	hugo server -w -b ${deploy_url}
 
 #netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
 netlify-deploy: git-submodule npm config.js
-	hugo -F -b ${config_url}/developer
+	hugo -F -b ${deploy_url}
 	cp public/developer/_redirects public/redirects
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
