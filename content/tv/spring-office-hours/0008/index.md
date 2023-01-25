@@ -16,7 +16,9 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
+## Recap
+
+Dan Vega and DaShaun discuss their experience at Spring One Tour Seattle. They mention that they learned a lot, with DaShaun mentioning that a big question that came up was how to do configuration correctly and the idea of moving things towards the cloud and scaling out to the cloud. Dan Vega talks about his talk on TestContainers. They mention that the Q&A session for his talk was the best one they've had on the Spring One Tour so far.  DaShaun delivers a demo of adding Spring Cloud Config server and the Spring Boot actuator to a project. DaShaun demonstrates how to run things with properties and configure the configuration server. They encourage people to watch these videos and follow them on Twitter to stay up to date with new information and developments in the Spring ecosystem. They also discuss the importance of continuously learning and staying current in order to stay competitive. DaShaun also mentions that sometimes it can be beneficial to revisit information or resources multiple times in order to gain new insights and takeaways. Dan Vega discusses how to simplify the process of running two separate applications, a Spring Boot application and a JavaScript project.
 
 ## Show Notes
 
