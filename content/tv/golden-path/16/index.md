@@ -1,5 +1,5 @@
 ---
-Date: '2023-03-23T11:00:00-08:00'
+Date: '2023-03-23T11:00:00-07:00'
 Description: "A Paved Path to Production on Kubernetes"
 PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-23'

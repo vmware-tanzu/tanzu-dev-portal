@@ -1,6 +1,6 @@
 ---
 name: Mark Heckler
-description: "Principal Cloud Advocate, Java/JVM Languages at Microsoft"
+description: "Principal Cloud Advocate at Microsoft"
 roles: ["guest"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
 location: "St. Louis, MO"
