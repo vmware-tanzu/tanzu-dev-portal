@@ -4,7 +4,6 @@ description: "Developer Advocate"
 roles: ["advocate"]
 skills: ["Spring", "RabbitMQ", "Kafka", "Reactive programming", "Kotlin", "Kubernetes"]
 location: "St. Louis, MO"
-hidden: true
 
 # Social Media 
 twitter: "mkheck"
