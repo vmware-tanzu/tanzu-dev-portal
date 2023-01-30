@@ -19,7 +19,7 @@ twitch: ""
 ---
 
 <!-- markdownlint-disable MD041-->
-Ashley Davis (aka SgtCoDFish) is a cert-manager maintainer and a Senior Software Engineer at Jetstack by Venafi. Ashley has a background in TLS and applied public key cryptography and is keenly interested in using, building, and promoting open source solutions which we can all rely on to be as secure and stable as possible.
+Ashley Davis (aka SgtCoDFish) is a [cert-manager](https://cert-manager.io/) maintainer and a Senior Software Engineer at [Jetstack](https://www.jetstack.io/) by Venafi. Ashley has a background in TLS and applied public key cryptography and is keenly interested in using, building, and promoting open source solutions which we can all rely on to be as secure and stable as possible.
 
 When not trying to encrypt the web, Ashley can usually be found watching sports (Let's go Blue Jays!), cooking, or wandering through the hills of Lancashire!
 
