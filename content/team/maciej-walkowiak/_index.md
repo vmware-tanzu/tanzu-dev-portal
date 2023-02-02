@@ -1,6 +1,6 @@
 ---
 name: Maciej Walkowiak
-description: "Software Consultant, Self employed"
+description: "Software Consultant"
 roles: ["guest"]
 external: true
 # Social Media 
