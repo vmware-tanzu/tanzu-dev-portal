@@ -94,7 +94,7 @@
             {{ $noUpcoming := true }}
         {{ end }}
 
-        <div class="px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5">
+        <div class="px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5 past-episodes">
             {{ if (isset .Params "streaming") }}
             {{ if not .Params.noPast }}
             <h3 class="mb-4">Watch Past Episodes</h3>
