@@ -56,6 +56,8 @@
                                     <p></p>
                                 {{ else if .Params.linktwitchyoutubechannels }}
                                     <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on Twitch & YouTube</p>
+                                {{ else if .Params.linkyoutubechannel }}
+                                    <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on YouTube</p>
                                 {{ else }}
                                     <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
                                 {{ end }}
