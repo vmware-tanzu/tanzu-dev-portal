@@ -17,4 +17,4 @@ youtube: '-HoVLS8NFeg'
 twitch:  'vmwaretanzu'
 ---
 
-Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
+In this episode, Dan Vega and DaShaun Carter recap 2022. They answer questions about Spring Integration, metrics, the data transfer object (DTO) pattern, Spring Security, AOT processing, and Spring Cloud Config. Dan covers JEE 9 vs JEE 10 and the move to Jakarta, and DaShaun answers questions about GraalVM support. They also make some predictions for the Spring ecosystem in 2023.
