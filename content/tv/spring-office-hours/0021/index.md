@@ -11,7 +11,7 @@ hosts:
     - Dan Vega
 guests:
 minutes: 60
-youtube: ''
+youtube: 'IJcR8Rgg6dw'
 twitch: 'vmwaretanzu'
 ---
 
