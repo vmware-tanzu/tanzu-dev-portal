@@ -7,8 +7,8 @@ title: 'Spring Boot 3: First Look'
 episode: '0021'
 explicit: 'no'
 hosts:
-    - DaShaun Carter
-    - Dan Vega
+- DaShaun Carter
+- Dan Vega
 guests:
 minutes: 60
 youtube: 'IJcR8Rgg6dw'
