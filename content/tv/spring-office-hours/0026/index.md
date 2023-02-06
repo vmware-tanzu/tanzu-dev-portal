@@ -4,19 +4,14 @@ Date: '2023-01-17T12:30:00-08:00'
 lastmod: '2023-01-17'
 PublishDate: '2023-01-17'
 type: 'tv-episode'
-# TODO
 title: 'CodeMash 2023 Recap'
-# TODO
 episode: '0026'
 explicit: 'no'
 hosts:
-    - DaShaun Carter
-    - Dan Vega
-# guests:
-# -
+- DaShaun Carter
+- Dan Vega
 minutes: 60
-# TODO YouTube ID after posted
-youtube: ''
+youtube: 'JzPDlwLsUoY'
 twitch: 'vmwaretanzu'
 ---
 
