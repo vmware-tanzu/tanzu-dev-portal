@@ -90,6 +90,12 @@
               <a href='https://www.youtube.com/@VMwareTanzu'>Watch on YouTube</a><br/>
               <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
             </div>
+          {{ else if .Params.linkyoutubechannel }}
+            <div class="play-icon float-left"></div>
+            <div class="float-left ml-3 pl-1">
+              <a href='https://www.youtube.com/@VMwareTanzu'>Watch on YouTube</a><br/>
+              <span class="text-white">{{ .Params.Date.Local.Format "3:04 PM MST" }} on {{ .Params.Date.Format "Monday, Jan 02, 2006" }}</span>
+            </div>
           {{ else }}
             <a class="play-icon float-left" href='{{ $.Scratch.Get "streamUrl" }}'></a>
             <div class="float-left ml-3 pl-1">
