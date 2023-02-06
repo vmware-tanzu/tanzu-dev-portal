@@ -12,7 +12,7 @@ hosts:
 guests:
   - Glenn Renfro
 minutes: 60
-youtube: ''
+youtube: '9eHEZOK39Lo'
 twitch: 'vmwaretanzu'
 ---
 

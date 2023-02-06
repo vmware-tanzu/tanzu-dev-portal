@@ -7,11 +7,11 @@ title: 'Getting Started with Spring Boot'
 episode: '0022'
 explicit: 'no'
 hosts:
-    - DaShaun Carter
-    - Dan Vega
+- DaShaun Carter
+- Dan Vega
 guests:
 minutes: 60
-youtube: ''
+youtube: 'AbCFvxUxtiI'
 twitch: 'vmwaretanzu'
 ---
 
