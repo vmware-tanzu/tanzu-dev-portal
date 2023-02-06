@@ -18,7 +18,7 @@ type: tv-episode
 
 ## Recap
 
-Dan Vega and DaShaun discuss their experience at the Spring One Tour Seattle conference. They learned a lot, with DaShaun mentioning a big question that came up was how to correctly configure things and move towards the cloud for scaling. Dan Vega talks about his presentation on TestContainers and mentions that the Q&A session for his talk was the best one they've had on the Spring One Tour so far. DaShaun demonstrates adding the Spring Cloud Config server and Spring Boot actuator to a project, showing how to run things with properties and configure the configuration server. Dan Vega also explains how to simplify the process of running two separate applications, a Spring Boot application and a JavaScript project, with Intellij.
+In this episode, Dan Vega and DaShaun Carter discuss their experience at the SpringOne Tour Seattle conference. They learned a lot, with DaShaun saying a big question that came up was how to correctly configure things and move toward the cloud for scaling. Dan talks about his presentation on TestContainers and mentions that the Q&A session for his talk was the best one they’ve had on the SpringOne Tour so far. DaShaun demonstrates adding the Spring Cloud Config server and Spring Boot actuator to a project, showing how to run things with properties and configure the configuration server. Dan also explains how to simplify the process of running two separate applications, a Spring Boot application and a JavaScript project, with Intellij.
 
 ## Show Notes
 
