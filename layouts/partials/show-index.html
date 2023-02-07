@@ -10,9 +10,9 @@
                     <p class='h5 text-uppercase text-white'>{{ .Params.teaser }} </p>
                 </div>
                 <div class='row d-flex justify-content-between mb-5 episodes'>
-                    {{ if .Params.allFuture }}
-                        {{ range last 3 (sort .RegularPages ".Date" "desc") }}
-                            <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative' href="{{ .RelPermalink }}">
+                    {{ if eq .Params.id "golden-path-to-springone"  }}
+                        {{ range (sort .RegularPages ".Date" "desc") }}
+                            <a class='col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative golden-path episode' href="{{ .RelPermalink }}">
                                 <div class='thumbnail-gradient position-absolute'></div>
                                 <img alt="{{ .Title }}" src="{{ partial "tv-image-src" . }}" />
                                 {{ if gt (len .Title) 70}}
@@ -52,7 +52,7 @@
                         {{ end }}
                     {{ end }}
                 </div>
-        {{ end }}
+            {{ end }}
         {{ end }}
 
         </div>
@@ -69,7 +69,6 @@
                 var diffDays = Math.floor(diffTime / (1000 * 3600 * 24)); 
                 var whenLive = "in " + diffDays + " days";
                 if (diffDays == 0) whenLive = "today";
-                console.log(diffDays);
                 value.nextElementSibling.innerHTML = "Live " + whenLive;
                 var elementPosition = value.parentNode 
                 value.parentNode.style.order = -1-i;
@@ -78,5 +77,21 @@
                 value.nextElementSibling.style.display = 'none';
             }
         });
+
+        // Arrange Golden Path episodes differently
+        const elements = document.querySelectorAll('.golden-path.episode');
+        const elementsArray = Array.from(elements);
+
+        // sort elements by flex-order in descending order
+        elementsArray.sort((a, b) => {
+            const orderA = parseInt(getComputedStyle(a).order);
+            const orderB = parseInt(getComputedStyle(b).order);
+            return orderA - orderB;
+        });
+
+        // remove all elements except the first three
+        for (let i = 3; i < elementsArray.length; i++) {
+            elementsArray[i].remove();
+        }
     </script>
 </div>

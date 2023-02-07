@@ -56,6 +56,8 @@
                                     <p></p>
                                 {{ else if .Params.linktwitchyoutubechannels }}
                                     <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on Twitch & YouTube</p>
+                                {{ else if .Params.linkyoutubechannel }}
+                                    <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} on YouTube</p>
                                 {{ else }}
                                     <p class="teaser auto mt-4 pt-3">Streaming {{ .Params.Date.Format "January 2" }} {{ print ($.Scratch.Get "streamName") }}</p>
                                 {{ end }}
@@ -92,7 +94,7 @@
             {{ $noUpcoming := true }}
         {{ end }}
 
-        <div class="px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5">
+        <div class="px-lg-0 pt-4 {{ if $noUpcoming }} border-top{{ end }} mb-5 past-episodes">
             {{ if (isset .Params "streaming") }}
             {{ if not .Params.noPast }}
             <h3 class="mb-4">Watch Past Episodes</h3>

@@ -17,7 +17,7 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
+In this episode, Dan Vega and DaShaun Carter discuss Spring Boot and Spring Cloud. Topics include: Spring Security, JSON Web Tokens (JWTs), OAuth, REST APIs, and Kubernetes. Dan introduces his guide for security with Spring for GraphQL.
 
 ## Show Notes
 

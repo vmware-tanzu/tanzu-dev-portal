@@ -7,11 +7,11 @@ title: 'Spring Security with Daniel Garnier-Moiroux'
 episode: '0020'
 explicit: 'no'
 hosts:
-    - Dan Vega
-    - Daniel Garnier-Moiroux
+- Dan Vega
+- Daniel Garnier-Moiroux
 guests:
 minutes: 60
-youtube: ''
+youtube: '0RI5EbmPdfo'
 twitch: 'vmwaretanzu'
 ---
 
