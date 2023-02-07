@@ -7,12 +7,12 @@ title: 'Getting Started with Spring Boot Part 2'
 episode: '0023'
 explicit: 'no'
 hosts:
-    - DaShaun Carter
-    - Dan Vega
+- DaShaun Carter
+- Dan Vega
 guests:
 minutes: 60
-youtube: ''
+youtube: 'QyxSO7eqnPM'
 twitch: 'vmwaretanzu'
 ---
 
-Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have. 
+In this episode, Dan Vega and DaShaun Carter give a preview of their upcoming workshop on Spring. They answer a question about how to get started with Spring and give an overview of the relationships and release order dependencies among various Spring projects. Dan showcases a demo of reCAPTCHA and elaborates on the concepts of records and serialization.
