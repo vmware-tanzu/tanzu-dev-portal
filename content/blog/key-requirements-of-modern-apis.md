@@ -1,4 +1,5 @@
 ---
+canonical: https://blogs.vmware.com/security/2022/10/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation.html
 date: "2022-10-28"
 description: 
 lastmod: "2022-10-28"

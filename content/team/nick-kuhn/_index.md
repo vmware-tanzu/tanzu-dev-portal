@@ -3,7 +3,6 @@ name: "Nick Kuhn"
 description: "Senior Technical Marketing Architect"
 roles: ["guest"]
 skills: []
-aliases: ["/team/nick-khun"]
 
 # Social Media
 twitter: "@tehkuhnz"
