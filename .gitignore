@@ -22,3 +22,5 @@
 
 # Hugo lock file
 .hugo_build.lock
+
+spring-shell.log
