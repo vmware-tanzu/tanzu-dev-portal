@@ -27,11 +27,11 @@ what:
 
 1. Create templates in a remote whiteboard, a physical whiteboard, or on paper. Include each question as well as a place to paste or sketch pictures.
 
-   ![Personal User Manual Template](images/image1.png)
+   ![Personal User Manual Template](images/image2.png)
 
 1. Create an example for a made-up persona to talk through with the team.
 
-   ![Personal User Manual Example](images/image2.png)
+   ![Personal User Manual Example](images/image1.png)
 
 1. Schedule a workshop that everyone on the team can attend. Plan for 5 minutes intro, 10 minutes for manual creation, and around 3 minutes per person to discuss.
 
@@ -44,9 +44,8 @@ what:
 1. Give the group 10 minutes to create their own manuals.
 
 1. Share and discuss the user manuals. Two good ways of doing this:
-
-  1. Go through the group one by one and have each person read through and discuss their “personal user manual.” Let people ask questions after each one.
-  1. Give the team a few minutes to silently add comments and questions to each other’s manuals, then give each person a chance to respond out loud to the comments on their manual. 
+   - Go through the group one by one and have each person read through and discuss their “personal user manual.” Let people ask questions after each one.
+   - Give the team a few minutes to silently add comments and questions to each other’s manuals, then give each person a chance to respond out loud to the comments on their manual. 
 
 1. Discuss your takeaways as a group. Look for patterns that might inform your team norms.
 
