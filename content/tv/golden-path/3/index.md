@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-07'
 episode: '3'
 explicit: 'no'
-calendar: true
 guests:
 - Kat Gaines
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Happy Agents = Happy Customers: Empower Your Customer Service Team to Lead the Way"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: GzLShdHljP4
 type: tv-episode
 ---
 
