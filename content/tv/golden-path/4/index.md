@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-09'
 episode: '4'
 explicit: 'no'
-calendar: true
 guests:
 - Gerard Klijs
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Concurrency Control in Event-Driven Architectures"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: hZ57CO7khvo
 type: tv-episode
 ---
 
