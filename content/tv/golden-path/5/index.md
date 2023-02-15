@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-14'
 episode: '5'
 explicit: 'no'
-calendar: true
 guests:
 - Denis Magda
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Weathering The Cloud Storm: Building Resilient Geo-Distributed Apps with Spring Cloud"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: ZE3diG65N-s
 type: tv-episode
 ---
 
