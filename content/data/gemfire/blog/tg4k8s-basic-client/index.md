@@ -1,5 +1,5 @@
 ---
-title: "Creating and Configurating an Ecrypted GemFire Client in Java"
+title: "Creating and Configuring an Encrypted GemFire Client in Java"
 description: > 
     Creating and connecting a GemFire client to a TLS-secured GemFire cluster in Kubernetes can be a breeze, this tutorial will show you how
 date: 2023-02-08
