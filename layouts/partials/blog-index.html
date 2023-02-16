@@ -23,8 +23,9 @@
                 {{ if eq .Parent $parent }}
                 <div class="item mb-3 position-relative" >
                     <div class='gradient-edge-top'></div>
-                    <div class='border p-4 bg-gray-dark '>
+                    <div class='border p-4 bg-gray-dark'>
                         <h2 class="pt-0"><a class="h3" href="{{ .RelPermalink }}">{{- .Title -}}</a></h2>
+                        <p>{{ .Description }}</p>
                         {{ partial "byline" (dict "context" . "withdate" true) }}
 
                         <p>{{ .Content | markdownify | truncate 1400 }}</p>
