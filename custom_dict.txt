@@ -2402,6 +2402,7 @@ Syslog
 SystemAdmin
 Szul
 tabpane
+talentstack
 Talkshow
 [Tt]anzu
 tanzu-cluster-essentials
