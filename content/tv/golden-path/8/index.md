@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-23'
 episode: '8'
 explicit: 'no'
-calendar: true
 guests:
 - Thomas Vitale
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Spring Cloud Gateway: Resilience, Security, and Observability"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: SyM6moBYL7s
 type: tv-episode
 ---
 
