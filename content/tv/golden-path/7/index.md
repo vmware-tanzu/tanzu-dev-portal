@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-21'
 episode: '7'
 explicit: 'no'
-calendar: true
 guests:
 - Brian Benz
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Deploying Spring Boot Apps to Kubernetes with GitHub Actions and Feature Flags"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: q5bJfFpqgH4
 type: tv-episode
 ---
 
