@@ -16,7 +16,9 @@ when:
 what:
 - 'Whiteboard or digital version like [Miro](https://miro.com/)'
 - Paper, pens if in person
-
+miro_template_url: https://miro.com/miroverse/atlassian-team-plays-retrospective/
+remote: true
+miro_template_url: "https://miro.com/miroverse/personal-user-manual/" 
 ---
 
 ## How to Use this Method
@@ -24,6 +26,10 @@ what:
 {{% section %}}
 ### Preparation
 1. Choose 6-12 questions you want to ask. Aim for a balance between fun, icebreaker-style questions and ones that are more targeted towards working together and conflict management.
+
+   {{% callout %}}
+   **Tip**: Use the [Personal User Manual **Miro Template**](https://miro.com/miroverse/personal-user-manual/) to help facilitate this session.
+   {{% /callout %}}
 
 1. Create templates in a remote whiteboard, a physical whiteboard, or on paper. Include each question as well as a place to paste or sketch pictures.
 

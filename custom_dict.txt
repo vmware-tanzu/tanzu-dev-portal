@@ -2182,6 +2182,7 @@ Sardana
 Sarella
 SAT(s)?
 Sathe
+Saus
 Savla
 SBDG
 scaffolded
@@ -2535,6 +2536,7 @@ UNC
 uncheck
 Uncomment
 uncomment
+underrecognized
 undersample
 underserved
 underutilization
