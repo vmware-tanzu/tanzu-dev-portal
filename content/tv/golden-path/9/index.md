@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-28'
 episode: '9'
 explicit: 'no'
-calendar: true
 guests:
 - Matt Raible
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Reactive Microservices with Spring Boot and JHipster"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: ECZvGkzOsbQ
 type: tv-episode
 ---
 
