@@ -1430,6 +1430,15 @@ body {
     }
   }
 
+  body.tv-show {
+    #hero.td-box--gray-dark p > a {
+      color: $link;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
   body.tv-episode {
     .fancybox-inner {
       background: $gray-800;
