@@ -50,6 +50,13 @@ The entry point for the `maven-compiler-plugin` is specified by the `mainClass` 
 
 ```xml
 ...
+<repositories>
+    <repository>
+        <id>gemfire-release-repo</id>
+        <name>Pivotal GemFire Release Repository</name>
+        <url>https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire</url>
+    </repository>
+</repositories>
 <build>
    <plugins>
        <plugin>
@@ -77,12 +84,41 @@ The entry point for the `maven-compiler-plugin` is specified by the `mainClass` 
 </build>
 ...
 <dependencies>
-   <dependency>
-       <groupId>org.apache.geode</groupId>
-       <artifactId>geode-core</artifactId>
-       <version>1.15.0</version>
-   </dependency>
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>geode-core</artifactId>
+        <version>9.15.4</version>
+    </dependency>
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>geode-wan</artifactId>
+        <version>9.15.4</version>
+    </dependency>
+    <dependency>
+        <groupId>com.vmware.gemfire</groupId>
+        <artifactId>geode-cq</artifactId>
+        <version>9.15.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>2.1</version>
+        <type>pom</type>
+    </dependency>
 </dependencies>
+```
+
+To access these dependencies, you must add an entry with valid credentials to the GemFire Release Repository to your .m2/settings.xml file, as shown below. For more details see [Obtaining VMware GemFire from a Maven Repository](https://docs.vmware.com/en/VMware-Tanzu-GemFire/9.15/tgf/GUID-getting_started-installation-obtain_gemfire_maven.html)
+```xml
+<settings>
+    <servers>
+        <server>
+            <id>gemfire-release-repo</id>
+            <username>MY-USERNAME@example.com</username>
+            <password>MY-PLAINTEXT-PASSWORD</password>
+        </server>
+    </servers>
+</settings>
 ```
 
 To build the executable jar with dependencies included, run:
@@ -90,10 +126,7 @@ To build the executable jar with dependencies included, run:
 mvn clean compile assembly:single
 ```
 
-That command places the jar in the auto-generated *target* directory. The jar can then be run by executing:
-```bash
-java -jar target/gemfireclient-1.0-SNAPSHOT-jar-with-dependencies.jar
-```
+That command places the jar in the auto-generated *target* directory.
 
 ### Writing the BasicGemFireClient
 
@@ -161,9 +194,9 @@ Properties props = new Properties();
  
 props.setProperty("ssl-enabled-components", "all");
 props.setProperty("ssl-endpoint-identification-enabled", "true");
-props.setProperty("ssl-keystore", "./certs/keystore.p12");
+props.setProperty("ssl-keystore", "/certs/keystore.p12");
 props.setProperty("ssl-keystore-password", TRUST_PSWD);
-props.setProperty("ssl-truststore", "./certs/truststore.p12");
+props.setProperty("ssl-truststore", "/certs/truststore.p12");
 props.setProperty("ssl-truststore-password", TRUST_PSWD);
  
 // connect to the locator using default port 10334
