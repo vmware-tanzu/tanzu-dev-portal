@@ -10,7 +10,7 @@ twitter: "dashaun"
 website: "https://dashaun.com"
 linkedin: "dashaun"
 github: "dashaun"
-youtube: "channel/UCuGoHRQbVXa4LxepmPOdUfQ"
+youtube: "@dashaun"
 twitch: "javagrunt"
 
 # Metadata
@@ -38,17 +38,13 @@ DaShaun has a variety of talks and workshops on the following topics:
 
 ## Upcoming Appearances
 
-### CodeMash 2023
+### VMware Technology Event
 
-**2023-1-11** - Sandusky, Ohio
+**2023-3-19** - Bucharest, Romania
 
-### SpringOne Essentials
+### VMware Technology Event
 
-**2023-1-24** - San Francisco, CA
-
-### VMware vForum Technology Event
-
-**2023-2-21** - Tel Aviv, Israel
+**2023-3-21** - Athens, Greece
 
 ### Devnexus
 

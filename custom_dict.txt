@@ -1937,6 +1937,7 @@ PreemptLowerPriority
 PreferBytesCachedDeserializable
 prefilled
 preload
+premortem
 prepaved
 prepend
 prepending
@@ -2181,6 +2182,7 @@ Sardana
 Sarella
 SAT(s)?
 Sathe
+Saus
 Savla
 SBDG
 scaffolded
@@ -2400,6 +2402,7 @@ Syslog
 SystemAdmin
 Szul
 tabpane
+talentstack
 Talkshow
 [Tt]anzu
 tanzu-cluster-essentials
@@ -2533,6 +2536,7 @@ UNC
 uncheck
 Uncomment
 uncomment
+underrecognized
 undersample
 underserved
 underutilization

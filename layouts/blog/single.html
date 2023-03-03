@@ -6,7 +6,7 @@
 			{{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
 			<br/>
 			<h1>{{ .Title }}</h1>
-			<!--<p>{{ .Description }}</p>-->
+			<p>{{ .Description }}</p>
 
 			{{ partial "byline" (dict "context" . "withdate" "true") }}
 			

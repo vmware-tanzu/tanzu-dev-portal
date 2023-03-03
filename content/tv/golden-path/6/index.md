@@ -5,12 +5,11 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-02-16'
 episode: '6'
 explicit: 'no'
-calendar: true
 guests:
 - Timothy Spann
 lastmod: '2020-10-09'
 title: "Let's Keep It Simple and Streaming"
-linkyoutubechannel: 'yes'
+youtube: m7Xe6ZddSFg
 type: tv-episode
 ---
 
