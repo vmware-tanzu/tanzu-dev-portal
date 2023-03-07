@@ -3,7 +3,6 @@ date: '2023-3-07'
 lastmod: '2023-3-07'
 team:
 - Layla Porter
-- Cal Kadourah
 title: "The circuit breaker pattern for a more resilient app"
 languages:
 - dotnet
