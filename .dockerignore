@@ -1,0 +1,14 @@
+# Config files
+.eslintrc.json
+.gitignore
+.gitmodules
+.hugo_build.lock
+.prettierignore
+.prettierrc
+
+# Node and other directories
+node_modules
+resources
+themes
+.netlify
+.vscod
