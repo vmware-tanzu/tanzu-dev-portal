@@ -108,6 +108,13 @@ docker.devbox:
 docker.preview: npm
 	docker run -v "$(DEV_CONTAINER_DIR)":/tdc -p 1313:1313 $(DEV_CONTAINER_TAGS) hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
 
+.PHONY: docker.shell
+#docker.shell: @ Connect to the docker container to run commands
+docker.shell:
+	@echo "Starting and attaching to container using $(DEV_CONTAINER_TAGS) image"
+	@echo "Type 'make' for help"
+	@docker run -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 -ti $(DEV_CONTAINER_TAGS)
+
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
 	@awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | \
