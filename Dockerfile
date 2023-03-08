@@ -17,7 +17,7 @@ RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug
 # Act install
 RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Linux_x86_64.tar.gz \
     && gzip -d act_Linux_x86_64.tar.gz \
-    && tar x -f act_Linux_x86_64.tar \
+    && tar --exclude="LICENSE" --exclude="README.md" -xf act_Linux_x86_64.tar \
     && rm -rf act_Linux_x86_64.tar \
     && mv act /usr/local/bin
 
