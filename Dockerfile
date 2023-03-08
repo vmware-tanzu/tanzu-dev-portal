@@ -5,11 +5,9 @@ ENV ACT_VERSION=0.2.20
 
 WORKDIR "/tdc"
 
-VOLUME [ "$PWD:/tdc" ]
-
 # Dependencies and tools
 RUN apk update \
-    && apk add make git docker docker-compose libc6-compat dpkg
+    && apk add bash make git docker docker-compose libc6-compat dpkg
 # Hugo install
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
     && dpkg -i --force-architecture hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -24,4 +22,4 @@ RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Lin
 EXPOSE 1313 8888
 
 
-CMD [ "/bin/sh" ]
+CMD [ "/bin/bash" ]
