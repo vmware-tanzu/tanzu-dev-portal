@@ -10,8 +10,8 @@ hosts:
     - DaShaun Carter
     - Dan Vega
 minutes: 60
-youtube: ''
+youtube: '/gLtqc5Yet6A'
 twitch: 'vmwaretanzu'
 ---
 
-Welcome to Springtime with Dan Vega and DaShaun Carter! Tune in to stay up to date on the latest and greatest with the Spring Framework, related projects, and the community. On this show, Dan and DaShaun will present you with the current news, and answer any questions you may have. Get ready to learn something new and be a part of the conversation!
+Welcome to Spring Office Hours with Dan Vega and DaShaun Carter! Tune in to stay up to date on the latest and greatest with the Spring Framework, related projects, and the community. On this show, Dan and DaShaun will present you with the current news, and answer any questions you may have. Get ready to learn something new and be a part of the conversation!
