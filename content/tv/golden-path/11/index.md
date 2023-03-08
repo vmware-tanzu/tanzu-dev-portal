@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-07'
 episode: '11'
 explicit: 'no'
-calendar: true
 guests:
 - Aaron Wanjala 
 - Dan Dobrin 
@@ -14,7 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Spring Boot + Google Cloud Java Client Libraries – Now with Support for Native Image Compilation"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: Bl2pAd6hBW4
 type: tv-episode
 ---
 
