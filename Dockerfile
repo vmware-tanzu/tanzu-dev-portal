@@ -1,9 +1,11 @@
 FROM node:16-alpine3.17
 
 ENV HUGO_VERSION=0.107.0
-ENV ACT_VERSION=2.20.0
+ENV ACT_VERSION=0.2.20
 
-VOLUME [ "/tdc" ]
+WORKDIR "/tdc"
+
+VOLUME [ "$PWD:/tdc" ]
 
 # Dependencies and tools
 RUN apk update \
