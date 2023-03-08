@@ -14,7 +14,7 @@ DEPLOY_URL := http://localhost:1313/developer
 CONFIG_URL := http://localhost:8888
 endif
 endif
-DEV_CONTAINER_TAGS := "tdc:0.0.0"
+DEV_CONTAINER_TAGS := "tdc:devbox"
 DEV_CONTAINER_DIR := $$(pwd)
 
 .PHONY: help
@@ -60,11 +60,6 @@ endif
 preview: hugo-version-check npm
 	ulimit -n 65535; hugo server -b ${DEPLOY_URL}
 
-.PHONY: docker-preview
-#docker-preview: @ Preview a local site using the Dev container
-docker-preview:
-	docker run -v "$(DEV_CONTAINER_DIR)":/tdc -p 1313:1313 $(DEV_CONTAINER_TAGS) make preview
-
 .PHONY: preview-ip
 #preview-ip: @ Preview a local site using an IP
 preview-ip: npm
@@ -103,10 +98,15 @@ netlify-deploy: git-submodule npm config.js
 	hugo -F -b ${DEPLOY_URL}
 	cp public/developer/_redirects public/redirects
 
-.PHONY: dev-container
-#dev-container: @ Builds the docker image for the dev container
-dev-container:
+.PHONY: docker.devbox
+#docker.devbox: @ Builds the docker image for the dev container
+docker.devbox:
 	docker build -t ${DEV_CONTAINER_TAGS} .
+
+.PHONY: docker.preview
+#docker.preview: @ Preview a local site using the Dev container
+docker.preview: npm
+	docker run -v "$(DEV_CONTAINER_DIR)":/tdc -p 1313:1313 $(DEV_CONTAINER_TAGS) hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
