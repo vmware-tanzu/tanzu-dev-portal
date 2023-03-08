@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-02'
 episode: '10'
 explicit: 'no'
-calendar: true
 guests:
 - Marco Behler
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Why You Don't Need to Worry About Scaling Your Spring Web App"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 9pYoMCTbHZA
 type: tv-episode
 ---
 
