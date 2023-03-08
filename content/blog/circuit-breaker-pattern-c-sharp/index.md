@@ -1,6 +1,6 @@
 ---
-date: '2023-3-07'
-lastmod: '2023-3-07'
+date: '2023-03-07'
+lastmod: '2023-03-07'
 team:
 - Layla Porter
 title: "The circuit breaker pattern for a more resilient app"
