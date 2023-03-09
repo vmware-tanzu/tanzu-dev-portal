@@ -14,7 +14,8 @@ DEPLOY_URL := http://localhost:1313/developer
 CONFIG_URL := http://localhost:8888
 endif
 endif
-DEV_CONTAINER_TAGS := "tdc:devbox"
+DEV_CONTAINER_NAME := "tdc-dev"
+DEV_CONTAINER_TAGS := "tdc:dev"
 DEV_CONTAINER_DIR := $$(pwd)
 
 .PHONY: help
@@ -98,22 +99,34 @@ netlify-deploy: git-submodule npm config.js
 	hugo -F -b ${DEPLOY_URL}
 	cp public/developer/_redirects public/redirects
 
-.PHONY: docker.devbox
-#docker.devbox: @ Builds the docker image for the dev container
-docker.devbox:
+.PHONY: dev-container
+#dev-container: @ Builds the docker image and container 
+dev-container:
 	docker build -t ${DEV_CONTAINER_TAGS} .
+	docker create --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS)
 
-.PHONY: docker.preview
-#docker.preview: @ Preview a local site using the Dev container
-docker.preview: npm
-	docker run -v "$(DEV_CONTAINER_DIR)":/tdc -p 1313:1313 $(DEV_CONTAINER_TAGS) hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
+.PHONY: dev-container.start
+#dev-container.start: @ Starts the dev container
+dev-container.start:
+	@docker start $(DEV_CONTAINER_NAME) > /dev/null
+	@echo "$(DEV_CONTAINER_NAME) container started in docker. The site preview will be available at $(DEPLOY_URL) after hugo finishes the build."
 
-.PHONY: docker.shell
-#docker.shell: @ Connect to the docker container to run commands
-docker.shell:
-	@echo "Starting and attaching to container using $(DEV_CONTAINER_TAGS) image"
-	@echo "Type 'make' for help"
-	@docker run -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 -ti $(DEV_CONTAINER_TAGS)
+.PHONY: dev-container.stop
+#dev-container.stop: @ Stops the dev container
+dev-container.stop:
+	@docker stop $(DEV_CONTAINER_NAME) > /dev/null
+	@echo "$(DEV_CONTAINER_NAME) container stopped."
+
+.PHONY: dev-container.shell
+#dev-container.shell: @ Connect to the dev container to run commands
+dev-container.shell: dev-container.start
+	@docker exec -it $(DEV_CONTAINER_NAME) /bin/bash
+
+.PHONY: dev-container.clean
+#dev-container.clean: @ Removes dev container and image
+dev-container.clean:
+	@docker rm $(DEV_CONTAINER_NAME)
+	@docker rmi $(DEV_CONTAINER_TAGS)
 
 #config.js: @ Creates the config.js file for Netlify functions during build time
 config.js: npm
