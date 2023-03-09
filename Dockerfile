@@ -20,7 +20,6 @@ RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Lin
     && rm -rf act_Linux_x86_64.tar \
     && mv act /usr/local/bin
 
-RUN make npm
 
 EXPOSE 1313 8888
 

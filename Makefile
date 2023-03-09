@@ -38,12 +38,14 @@ clean-submodule:
 .PHONY: git-submodule
 #git-submodule: @ Initializes and recursively updates git submodules
 git-submodule:
-	git submodule update -f --init --recursive
+	@echo Initializing/Updating git submodules...
+	@git submodule update -f --init --recursive
 
 .PHONY: npm
 #npm: @ Runs npm ci for clean install of dependencies from package-lock.json
 npm: git-submodule
-	npm ci
+	@echo Installing git dependencies...
+	@npm ci
 
 .PHONY: hugo-version-check
 #hugo-version-check: @ Checks system version of hugo 
@@ -102,8 +104,11 @@ netlify-deploy: git-submodule npm config.js
 .PHONY: dev-container
 #dev-container: @ Builds the docker image and container 
 dev-container:
-	docker build -t ${DEV_CONTAINER_TAGS} .
-	docker create --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS)
+	@echo Building Docker $(DEV_CONTAINER_TAGS) image...
+	@docker build -t ${DEV_CONTAINER_TAGS} .
+	@echo Creating Docker $(DEV_CONTAINER_NAME) container...
+	@docker create --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS)
+	@docker run -v "$(DEV_CONTAINER_DIR)":/tdc --rm $(DEV_CONTAINER_TAGS) make npm
 
 .PHONY: dev-container.start
 #dev-container.start: @ Starts the dev container
