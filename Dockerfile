@@ -2,6 +2,7 @@ FROM node:16-alpine3.17
 
 ENV HUGO_VERSION=0.107.0
 ENV ACT_VERSION=0.2.20
+ENV DEPLOY_URL=http://localhost:1313/developer
 
 WORKDIR "/tdc"
 
@@ -19,7 +20,9 @@ RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Lin
     && rm -rf act_Linux_x86_64.tar \
     && mv act /usr/local/bin
 
+RUN make npm
+
 EXPOSE 1313 8888
 
 
-CMD [ "/bin/bash" ]
+CMD hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
