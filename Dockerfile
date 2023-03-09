@@ -24,4 +24,4 @@ RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Lin
 EXPOSE 1313 8888
 
 
-CMD hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
+CMD [ "/bin/bash" ]

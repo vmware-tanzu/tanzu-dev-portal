@@ -107,8 +107,7 @@ dev-container:
 	@echo Building Docker $(DEV_CONTAINER_TAGS) image...
 	@docker build -t ${DEV_CONTAINER_TAGS} .
 	@echo Creating Docker $(DEV_CONTAINER_NAME) container...
-	@docker create --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS)
-	@docker run -v "$(DEV_CONTAINER_DIR)":/tdc --rm $(DEV_CONTAINER_TAGS) make npm
+	@docker run --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -i -t -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS) make npm
 
 .PHONY: dev-container.start
 #dev-container.start: @ Starts the dev container
