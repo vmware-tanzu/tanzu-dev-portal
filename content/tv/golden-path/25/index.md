@@ -1,24 +1,24 @@
 ---
-Date: '2023-04-20T11:00:00-07:00'
-Description: "Automated Refactoring for Spring-Based Applications"
+Date: '2023-04-25T11:00:00-07:00'
+Description: "How to Swim in an Issue Flow"
 PublishDate: '2023-01-18T00:00:00-08:00'
-date: '2023-04-20'
+date: '2023-04-25'
 episode: '25'
 explicit: 'no'
 calendar: true
 guests:
-- Jonathan Schneider
+- Tatiana Krupenya
 hosts:
-- Cora Iberkleid
+- Tiffany Jernigan
 lastmod: '2020-10-09'
-title: "Automated Refactoring for Spring-Based Applications"
+title: "How to Swim in an Issue Flow"
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
-This talk will focus on how engineering teams can leverage automated refactoring originated at Netflix to greatly reduce the time and effort required to migrate to new versions of Spring and Spring Boot.
+Do you know why a lot of popular open source projects die? Their owners and maintainers just burn out. The number of issues is growing together with the number of users. But your resources are limited. One day you wake up and understand that you’ll never close all of these tickets. The situation looks hopeless. But it’s not.
 
-OpenRewrite is an open source ecosystem that specializes in mass, automated refactoring with a bench-strength in Java source code, Maven build files, XML, YAML, and property files. We’ll discuss the technology behind automated code migration, how the ecosystem delivers composable, prepackaged recipes that can be used to automate common framework migration, and how these recipes can be integrated into both Maven and Gradle builds.
+In DBeaver, we have a small development team and more than 6 million users. We know this problem very well. In this talk, I’d like to share some tips on how to manage the vast issues flow, deliver products on time, and not go crazy. 
 
-This talk will include some live demonstrations of automated migrations on real-world Java applications and libraries.
+Even if you work for a big enterprise, your project challenges are not really different. Management always has limitations related to people, time, and money. Our experience is specific but can be easily applied to any project.
