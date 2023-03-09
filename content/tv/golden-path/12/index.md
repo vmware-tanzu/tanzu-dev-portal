@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-09'
 episode: '12'
 explicit: 'no'
-calendar: true
 guests:
 - Oleg Selajev
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Mastering Testcontainers for Better Integration Tests"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 9_XG_v3MwKk
 type: tv-episode
 ---
 
