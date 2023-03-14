@@ -10,7 +10,7 @@ hosts:
     - DaShaun Carter
     - Dan Vega
 minutes: 60
-youtube: 'E76APgbIkIY'
+youtube: 'KGSfbKRLnKg'
 twitch: 'vmwaretanzu'
 ---
 
