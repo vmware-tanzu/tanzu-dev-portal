@@ -20,7 +20,7 @@ twitch: ""
 
 <!-- markdownlint-disable MD041-->
 
-Alice Wasko is a maintainer of the [Emissary-ingress](https://github.com/emissary-ingress/emissary) incubating CNCF project and Envoy Gateway. Her technical expertise focuses on API Gateway development, Kubernetes networking, and developer/operator experience. Alice is a Go enthusiast and is currently working as a software engineer at [Ambassador Labs](https://www.getambassador.io/)
+Alice Wasko is a maintainer of the [Emissary-ingress](https://github.com/emissary-ingress/emissary) incubating CNCF project and Envoy Gateway. Her technical expertise focuses on API Gateway development, Kubernetes networking, and developer/operator experience. Alice is a Go enthusiast and is currently working as a software engineer at [Ambassador Labs](https://www.getambassador.io/).
 
 <!--more-->
 
