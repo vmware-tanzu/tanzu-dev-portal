@@ -1,7 +1,7 @@
 ---
-Date: '2023-03-23T08:00:00-08:00'
+Date: '2023-03-23T08:00:00-07:00'
 Description: "Signed, Sealed, Delivered, I’m Yours! An Introduction to Sigstore"
-PublishDate: '2023-03-23T00:00:00-08:00'
+PublishDate: '2023-03-23T00:00:00-07:00'
 date: '2023-03-23'
 episode: '39'
 explicit: 'no'
