@@ -1,7 +1,7 @@
 ---
-Date: '2023-03-17T08:00:00-08:00'
+Date: '2023-03-17T08:00:00-07:00'
 Description: "Develop at Lightning Speed on Kubernetes with DevSpace"
-PublishDate: '2023-03-17T00:00:00-08:00'
+PublishDate: '2023-03-17T00:00:00-07:00'
 date: '2023-03-17'
 episode: '38'
 explicit: 'no'

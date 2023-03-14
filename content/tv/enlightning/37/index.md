@@ -1,7 +1,7 @@
 ---
-Date: '2023-03-16T08:00:00-08:00'
+Date: '2023-03-16T08:00:00-07:00'
 Description: "Self-Service Traffic Management with Emissary-ingress"
-PublishDate: '2023-03-16T00:00:00-08:00'
+PublishDate: '2023-03-16T00:00:00-07:00'
 date: '2023-03-16'
 episode: '37'
 explicit: 'no'
