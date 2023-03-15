@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-14'
 episode: '13'
 explicit: 'no'
-calendar: true
 guests:
 - Heidi Waterhouse 
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Safe and Sensible: Deployment and Launch with Reduced Risks"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: xGQqpny7mwI
 type: tv-episode
 ---
 
