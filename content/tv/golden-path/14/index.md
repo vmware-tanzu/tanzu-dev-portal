@@ -12,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Seamlessly Adopt GraalVM Native Image in Your Applications"
 twitch: vmwaretanzu
-youtube: IDMKzgWMXPU
+youtube: lDMKzgWMXPU
 type: tv-episode
 ---
 
