@@ -17,6 +17,8 @@ endif
 DEV_CONTAINER_NAME := "tdc-dev"
 DEV_CONTAINER_TAGS := "tdc:dev"
 DEV_CONTAINER_DIR := $$(pwd)
+SUBMODULE_STATUS := $(strip $(shell git submodule status | head -1 | cut -c 1-7))
+SUBMODULE_HASH := efdc5b
 
 .PHONY: help
 #help: @ List available tasks on this project
@@ -38,8 +40,15 @@ clean-submodule:
 .PHONY: git-submodule
 #git-submodule: @ Initializes and recursively updates git submodules
 git-submodule:
-	@echo Initializing/Updating git submodules...
+	@echo Checking submodule status
+	@echo $(SUBMODULE_HASH)
+	@echo $(SUBMODULE_STATUS)
+ifeq ($(SUBMODULE_STATUS),$(SUBMODULE_HASH))
+	@echo Submodules are initialized
+else
+	@echo Initializing git submodules...
 	@git submodule update -f --init --recursive
+endif
 
 .PHONY: npm
 #npm: @ Runs npm ci for clean install of dependencies from package-lock.json
