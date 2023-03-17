@@ -40,9 +40,7 @@ clean-submodule:
 .PHONY: git-submodule
 #git-submodule: @ Initializes and recursively updates git submodules
 git-submodule:
-	@echo Checking submodule status
-	@echo $(SUBMODULE_HASH)
-	@echo $(SUBMODULE_STATUS)
+	@echo Checking submodule status...
 ifeq ($(SUBMODULE_STATUS),$(SUBMODULE_HASH))
 	@echo Submodules are initialized
 else
@@ -53,8 +51,14 @@ endif
 .PHONY: npm
 #npm: @ Runs npm ci for clean install of dependencies from package-lock.json
 npm: git-submodule
-	@echo Installing git dependencies...
-	@npm ci
+	@echo Checking for node dependencies...
+	@if [ ! -d node_modules ]; then \
+		echo "Installing node dependencies..."; \
+		npm ci; \
+	else \
+		npm ls; \
+		echo Node dependencies are installed and verified; \
+	fi
 
 .PHONY: hugo-version-check
 #hugo-version-check: @ Checks system version of hugo 
