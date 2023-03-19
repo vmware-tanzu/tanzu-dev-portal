@@ -2,7 +2,7 @@
 name: Lian Li
 description: "Developer Advocate at Loft Labs"
 roles: ["guest"]
-skills: ["Kubernetes", "VCluster"]
+skills: ["Kubernetes", "DevSpace", "VCluster"]
 location: "Amsterdam"
 external: true
 
@@ -27,5 +27,7 @@ Currently, Lian lives in Amsterdam and works as Developer Advocate at [Loft Labs
 <!--more-->
 
 ## Highlights
+
+{{< youtube id="_xIm10LkmMk" class="youtube-video-shortcode" >}}
 
 {{< youtube id="wMmUmjSB6hw" class="youtube-video-shortcode" >}}
