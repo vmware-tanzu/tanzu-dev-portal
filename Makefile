@@ -94,9 +94,20 @@ test: npm
 .PHONY: clean
 #clean: @ Clean hugo build files and docker files
 clean:
-	rm -rf public
-	docker rmi -f act-github-actions-topic-check-dockeraction act-github-actions-link-check-dockeraction act-github-actions-spell-check-dockeraction catthehacker/ubuntu:act-latest
-	
+	@if [ -d public ]; then \
+	  echo Cleaning hugo build directories and files; \
+	  rm -rf public; \
+	fi
+	@catthehacker_status=$$(docker image ls ghcr.io/catthehacker/ubuntu --format "{{.Tag}}"); \
+	if [ -n "$$catthehacker_status" ]; then \
+	  if [ "$$catthehacker_status" == "act-latest" ]; then \
+	    echo Cleaning hugo build directories and files; \
+	    docker rmi -f ghcr.io/catthehacker/ubuntu:act-latest; \
+	  fi; \
+	fi
+	@if [ -n "$$(docker images -q "act-github-actions-*")" ]; then docker rmi $$(docker images -q "act-github-actions-*"); fi
+	@echo Files and images cleaned up.
+
 .PHONY: spell
 #spell: @ Runs act to perform spellcheck
 spell: npm
@@ -115,33 +126,50 @@ netlify-deploy: git-submodule npm config.js
 	cp public/developer/_redirects public/redirects
 
 .PHONY: dev-container
-#dev-container: @ Builds the docker image and container 
+#dev-container: @ Builds image, starts a new container, and connects to bash shell
 dev-container:
 	@echo Building Docker $(DEV_CONTAINER_TAGS) image...
 	@docker build -t ${DEV_CONTAINER_TAGS} .
 	@echo Creating Docker $(DEV_CONTAINER_NAME) container...
-	@docker run --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -i -t -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS) make npm
+	@docker run --name $(DEV_CONTAINER_NAME) -v "$(DEV_CONTAINER_DIR)":/tdc -v /var/run/docker.sock:/var/run/docker.sock -i -t -p 1313:1313 -p 8888:8888 $(DEV_CONTAINER_TAGS) 
 
 .PHONY: dev-container.start
-#dev-container.start: @ Starts the dev container
+#dev-container.start: @ Starts the dev container in docker
 dev-container.start:
+	@echo Starting $(DEV_CONTAINER_NAME) in docker...
 	@docker start $(DEV_CONTAINER_NAME) > /dev/null
-	@echo "$(DEV_CONTAINER_NAME) container started in docker. The site preview will be available at $(DEPLOY_URL) after hugo finishes the build."
 
 .PHONY: dev-container.stop
-#dev-container.stop: @ Stops the dev container
+#dev-container.stop: @ Stops the dev container in docker
 dev-container.stop:
 	@docker stop $(DEV_CONTAINER_NAME) > /dev/null
 	@echo "$(DEV_CONTAINER_NAME) container stopped."
 
+.PHONY: dev-container.status
+#dev-container.status: @ Show the status of dev container in docker
+dev-container.status:
+	@docker ps -af name=$(DEV_CONTAINER_NAME) --format "{{.Names}}\t{{.Status}}"
+
 .PHONY: dev-container.shell
-#dev-container.shell: @ Connect to the dev container to run commands
+#dev-container.shell: @ Starts a bash shell in the dev container
 dev-container.shell: dev-container.start
 	@docker exec -it $(DEV_CONTAINER_NAME) /bin/bash
 
-.PHONY: dev-container.clean
-#dev-container.clean: @ Removes dev container and image
-dev-container.clean:
+.PHONY: dev-container.connect
+#dev-container.connect: @ Connects to a running dev container
+dev-container.connect:
+	@docker attach $(DEV_CONTAINER_NAME)
+
+.PHONY: dev-container.pr-tests
+#dev-container.pr-tests: @ Runs pull requests tests locally in the dev container
+dev-container.pr-tests: dev-container.start
+	@echo Running PR checks with act using dev container...
+	@docker exec -it $(DEV_CONTAINER_NAME) make test
+	
+
+.PHONY: dev-container.delete
+#dev-container.delete: @ Removes dev container and image
+dev-container.delete:
 	@docker rm $(DEV_CONTAINER_NAME)
 	@docker rmi $(DEV_CONTAINER_TAGS)
 
