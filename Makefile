@@ -74,7 +74,7 @@ endif
 .PHONY: preview
 #preview: @ Preview a local site
 preview: hugo-version-check npm
-	ulimit -n 65535; hugo server -b ${DEPLOY_URL}
+	ulimit -n 65535; hugo server -b ${DEPLOY_URL} --bind 0.0.0.0
 
 .PHONY: preview-ip
 #preview-ip: @ Preview a local site using an IP
