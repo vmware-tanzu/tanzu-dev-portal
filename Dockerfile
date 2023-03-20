@@ -1,7 +1,7 @@
 FROM node:16-alpine3.17
 
 ENV HUGO_VERSION=0.107.0
-ENV ACT_VERSION=0.2.20
+ENV ACT_VERSION=0.2.43
 ENV DEPLOY_URL=http://localhost:1313/developer
 
 # Dependencies and tools
@@ -16,7 +16,11 @@ RUN wget https://github.com/nektos/act/releases/download/v${ACT_VERSION}/act_Lin
     && gzip -d act_Linux_x86_64.tar.gz \
     && tar --exclude="LICENSE" --exclude="README.md" -xf act_Linux_x86_64.tar \
     && rm -rf act_Linux_x86_64.tar \
-    && mv act /usr/local/bin
+    && mv act /usr/local/bin \
+    && touch ~/.actrc \
+    && echo "-P ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-latest" >> ~/.actrc \
+    && echo "-P ubuntu-20.04=ghcr.io/catthehacker/ubuntu:act-20.04" >> ~/.actrc \
+    && echo "-P ubuntu-18.04=ghcr.io/catthehacker/ubuntu:act-18.04" >> ~/.actrc
 # Bash autocompletion setup
 WORKDIR "/etc/profile.d"
 RUN touch bash_completion.sh \
