@@ -1,10 +1,10 @@
 #!/bin/bash
 
-LOCAL_HOST="http://localhost:1313/developer"
+LOCAL_HOST="http://localhost:1314/developer"
 MAX_WAIT_TIME=600 # 5 min
 
 # Provide default options if none are provided
-HUGO_OPTIONS="${HUGO_OPTIONS:=-b http://localhost:1313/developer}"
+HUGO_OPTIONS="${HUGO_OPTIONS:=-b http://localhost:1314/developer}"
 MUFFET_OPTIONS="${MUFFET_OPTIONS:=-t 30 -e 'https?' -e 'https?:\/\/localhost.*' --exclude='/developer/get-workshop'}"
 
 # Ensure that the git log can be pulled
