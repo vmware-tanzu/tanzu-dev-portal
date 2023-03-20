@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-16'
 episode: '14'
 explicit: 'no'
-calendar: true
 guests:
 - Christian Wimmer
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Seamlessly Adopt GraalVM Native Image in Your Applications"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: lDMKzgWMXPU
 type: tv-episode
 ---
 
