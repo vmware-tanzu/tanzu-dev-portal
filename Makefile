@@ -106,6 +106,8 @@ clean:
 	  fi; \
 	fi
 	@if [ -n "$$(docker images -q "act-github-actions-*")" ]; then docker rmi $$(docker images -q "act-github-actions-*"); fi
+	@if [ -n "$$(docker images -q ruby:3.0-alpine)" ]; then docker rmi ruby:3.0-alpine; fi 
+	@if [ -n "$$(docker images -q alpine:3.16.0)" ]; then docker rmi alpine:3.16.0; fi 
 	@echo Files and images cleaned up.
 
 .PHONY: spell
