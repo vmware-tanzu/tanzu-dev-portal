@@ -37,7 +37,7 @@ jobs:
       - uses: ./.github/actions/link-check
         name: Link Check
         env:
-          HUGO_OPTIONS: "-b http://localhost:1314/developer" #"--buildDrafts"
+          HUGO_OPTIONS: "-b http://localhost/developer -p 1314" #"--buildDrafts"
           MUFFET_OPTIONS: "-t 30 -e 'https?' --exclude='/developer/get-workshop'" # Excludes external links
   topic-check:
       runs-on: ubuntu-latest
