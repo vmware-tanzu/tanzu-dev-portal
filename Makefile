@@ -162,16 +162,16 @@ dev-container.shell: dev-container.start
 dev-container.connect:
 	@docker attach $(DEV_CONTAINER_NAME)
 
-.PHONY: dev-container.pr-tests
-#dev-container.pr-tests: @ Runs pull requests tests locally in the dev container
-dev-container.pr-tests: dev-container.start
+.PHONY: dev-container.pr-test
+#dev-container.pr-test: @ Runs pull requests tests locally in the dev container
+dev-container.pr-test: dev-container.start
 	@echo Running PR checks with act using dev container...
 	@docker exec -it $(DEV_CONTAINER_NAME) make test
 	
 
 .PHONY: dev-container.delete
 #dev-container.delete: @ Removes dev container and image
-dev-container.delete:
+dev-container.delete: dev-container.stop
 	@docker rm $(DEV_CONTAINER_NAME)
 	@docker rmi $(DEV_CONTAINER_TAGS)
 
