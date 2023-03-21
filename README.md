@@ -1,10 +1,9 @@
 # ![VMware](./assets/icons/logo.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/b28c2754-da62-4450-951b-d4dbd97710d1/deploy-status)](https://app.netlify.com/sites/tanzu-dev-portal/deploys)
 
 - [About The Project](#about-the-project)
-  - [Build Requirements](#requirements-for-local-development--build)
 - [Getting Started Building a Local Deployment of the Tanzu Developer Center](#getting-started-building-a-local-deployment-of-the-tanzu-developer-center)
-  - [Software Installation Prerequisites](#software-installation-prerequisites)
-  - [Run a Local Copy of the Tanzu Developer Center](#run-a-local-copy-of-the-tanzu-developer-center)
+  - [Using the Dev Container](#option-1-using-the-dev-container)
+  - [Local Build Environment Setup](#option-2-setup-a-local-build-environment)
 - [Troubleshooting](#troubleshooting)
   - [Q. I'm receiving an error about cloning `themes/docsy`](#q-im-receiving-an-error-about-cloning-themesdocsy)
   - [Q. `make preview` is throwing a `fatal error: pipe failed` error](#q-make-preview-is-throwing-a-fatal-error-pipe-failed-error)
@@ -26,11 +25,75 @@ Our guiding principle is to ensure readers have free, immediate access to all th
 
 ## Getting Started Building a Local Deployment of the Tanzu Developer Center
 
-Before you can build a local copy of the Tanzu Developer Center, there are software prerequisites that you’re going to need to install.
+### Clone this repository
 
-_Note: The instructions below are primarily designed for Mac users. While you should be able to make things work on Windows as well, it may require a few additional steps. (For example, using `make` should work natively on a Mac with Xcode dev tools installed, but requires a [special installation](https://gnuwin32.sourceforge.net/packages/make.htm) for Windows._
+```sh
+    git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal.git
+```
 
-### Requirements for Local Development / Build
+_These options help speed up the repo setup by initializing submodules during the clone process._
+
+There are two available options for building and running a local preview of the Tanzu Developer Center:
+
+1. [Using the dev container](#option-1-using-the-dev-container)
+2. [Setup a local build environment](#option-2-setup-a-local-build-environment)
+
+### Option 1: Using The Dev Container
+
+The Dev Container is offered to simplify a local environment setup for those working with and contributing to the Tanzu Developer Center.
+
+This method requires the following software be installed:
+
+- [GNU make](https://www.gnu.org/software/make/#download) (_Note: `make` should be available on a Mac with Xcode dev tools installed. Linux users can use their distribution's application manager (e.g. apt install make) or follow the manual steps specified by [make](https://www.gnu.org/software/make/). Windows requires [special installation](https://gnuwin32.sourceforge.net/packages/make.htm) to use make._)
+- [Docker](https://docs.docker.com/get-docker/) (Testing was done with docker desktop installed via `brew install --cask docker`)
+
+An alternative option if make is unavailable is to utilize `docker` cli commands to setup the dev-container and work with `make` from there.
+
+#### Building the Dev Container Image and Container
+
+_(Note: The docker daemon must be running)_:
+
+```sh
+make dev-container
+```
+
+This will connect to a bash shell in the container immediately after it has finished the build process.
+
+The default working directory in the shell will be the Tanzu Developer Center git repo directory _(it is mounted as a volume in the container)_. All file edits/additions made from within the container are persistent and saved on the host system.
+
+The container is configured to replicate a fully functional local developer setup.
+From within the Dev Container shell prompt, run `make help` to see a list of available actions.
+
+#### Interacting With Dev Container
+
+The Makefile includes several actions to interact with the dev container.
+All of the commands are in the following format:
+
+```sh
+make dev-container.<action>
+```
+
+_Use `make help` to see the full list of actions_
+
+Some examples:
+
+```sh
+make dev-container.pr-test # Simulates all github pull request checks using the container in docker and act
+```
+
+```sh
+make dev-container.shell # Starts the container and connects to a bash shell
+```
+
+From the container shell, a preview of the site can be built using:
+
+```sh
+make preview
+```
+
+### Option 2: Setup A Local Build Environment
+
+These are the software prerequisites needed to build a local preview of the Tanzu Developer Center site.
 
 - [Hugo](https://gohugo.io)
 - [Netlify](https://www.netlify.com)
@@ -40,6 +103,8 @@ _Note: The instructions below are primarily designed for Mac users. While you sh
 - [make](https://www.gnu.org/software/make/)
 
 ### Software Installation Prerequisites
+
+_Note: These instructions were designed for Mac users. Linux and Windows users without access to `make` and `brew` will need to manually install the prerequisites._
 
 - **Install Hugo** — The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with support for SCSS/SASS. This site pins `hugo` to a specific version (currently **0.107.0**) to build so if you're using a different version, your experience may vary. To install `hugo`, follow the instructions for your specific environment as detailed in the [hugo documentation](https://gohugo.io/installation/). Ultimately, you have two main options:
 
@@ -68,21 +133,7 @@ _Note: The reason the .nvmrc is required even though the default should already 
 
     _Note: Mac OS X requires Docker Desktop 2.4 or later_
 
-### Run a Local Copy of the Tanzu Developer Center
-
-To get a local copy of the Tanzu Developer Center up and running, follow these steps:
-
-1. Clone the repository.
-
-     ```sh
-     git clone --recurse-submodules https://github.com/vmware-tanzu/tanzu-dev-portal.git
-     ```
-
-2. Build a preview of the website. The website will be available at [`http://localhost:1313/developer`](http://localhost:1313/developer).
-
-     ```sh
-     make preview
-     ```
+With all the dependencies installed, use `make help` to see the available actions.
 
 ## Troubleshooting
 
