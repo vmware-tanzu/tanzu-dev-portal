@@ -85,6 +85,12 @@ make dev-container.pr-test # Simulates all github pull request checks using the 
 make dev-container.shell # Starts the container and connects to a bash shell
 ```
 
+From the container shell, a preview of the site can be built using:
+
+```sh
+make preview
+```
+
 ### Option 2: Setup A Local Build Environment
 
 These are the software prerequisites needed to build a local preview of the Tanzu Developer Center site.
@@ -127,6 +133,7 @@ _Note: The reason the .nvmrc is required even though the default should already 
 
     _Note: Mac OS X requires Docker Desktop 2.4 or later_
 
+With all the dependencies installed, use `make help` to see the available actions.
 
 ## Troubleshooting
 
