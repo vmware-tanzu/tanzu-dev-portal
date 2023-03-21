@@ -1,7 +1,7 @@
 ---
-Date: '2023-03-21T12:30:00-07:00'
-lastmod: '2023-03-14'
-PublishDate: '2023-03-14'
+Date: '2023-03-28T12:30:00-07:00'
+lastmod: '2023-03-21'
+PublishDate: '2023-03-21'
 type: 'tv-episode'
 title: 'Episode 34: Spring Cloud Kubernetes'
 episode: '34'
