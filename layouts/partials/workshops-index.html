@@ -25,16 +25,8 @@
 </a>
 {{ end }} {{ end }}
 <div class="d-flex container flex-wrap">
-    <div class="sidebar col-lg-3 col-0 pl-0 pr-3">
-        <h3>Filter</h3>
-        <br />
-        <ul class="filters">
-            <li class="filter active" filter="all">View all</li>
-            {{ partial "section-tags.html" . }}
-        </ul>
-    </div>
     <div id="workshops-index" class="section-index flex-1">
-        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+        {{ $pages := (where (where .Site.Pages "Section" .Section) ".Params.archive" "!=" true).ByWeight }}
         {{ $parent := .Page }}
         <div class="row">{{ range $pages }} {{ if eq .Parent $parent }} {{ template "workshopCard" . }} {{ end }} {{ end }}</div>
     </div>
