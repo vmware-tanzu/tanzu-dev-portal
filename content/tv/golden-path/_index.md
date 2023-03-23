@@ -14,7 +14,7 @@ menu:
         parent: "tv"
         weight: 1
 # Text that appears on show index page under show name
-description: Expert talks on the tools and processes devs need to know.&nbsp; [Submit your talk for SpringOne@Explore by March 31 >](https://event.vmware.com/flow/vmware/explore2023lv/cfp)
+description: Expert talks on the tools and processes devs need to know.&nbsp; [Submit your talk for SpringOne@Explore by April 14 >](https://event.vmware.com/flow/vmware/explore2023lv/cfp)
 # Text that appears highlighted in green on show index page above show name
 teaser: Expert talks on the tools and processes devs need to know
 # Text that shows on show page under show name
@@ -22,4 +22,4 @@ subheader: Expert talks on the tools and processes devs need to know
 # Any content below here shows up above episode index
 ---
 
-Join a rotating lineup of speakers, including experts from VMware and beyond, as they present on a wide array of important and timely topics in the dev space. Talks cover everything from Spring, programming tools, platforms, and tech stacks to the people, processes, culture changes, and real-world stories that will empower today’s developers to do more. New shows air every Tuesday and Thursday at 2pm ET until we see you at SpringOne at VMware Explore in August 2023.  [Submit your talk for SpringOne@Explore by March 31 >](https://event.vmware.com/flow/vmware/explore2023lv/cfp)
+Join a rotating lineup of speakers, including experts from VMware and beyond, as they present on a wide array of important and timely topics in the dev space. Talks cover everything from Spring, programming tools, platforms, and tech stacks to the people, processes, culture changes, and real-world stories that will empower today’s developers to do more. New shows air every Tuesday and Thursday at 2pm ET until we see you at SpringOne at VMware Explore in August 2023.  [Submit your talk for SpringOne@Explore by April 14 >](https://event.vmware.com/flow/vmware/explore2023lv/cfp)
