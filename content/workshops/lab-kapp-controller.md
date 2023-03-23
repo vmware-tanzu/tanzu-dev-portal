@@ -14,4 +14,5 @@ aliases:
   - '/workshops/lab-tce-dependencies'
   - '/workshops/lab-tce-deploy'
 weight: 6
+archive: true
 ---

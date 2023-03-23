@@ -14,4 +14,5 @@ tags:
 weight: 4
 aliases:
   - /workshops/lab-getting-started-with-carvel
+archive: true
 ---

@@ -14,4 +14,5 @@ tags:
 weight: 8
 aliases:
   - '/workshops/lab-microservice'
+archive: true
 ---
