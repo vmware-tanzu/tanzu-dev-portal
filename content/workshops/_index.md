@@ -1,8 +1,8 @@
 ---
 title: Hands-On Workshops
 linkTitle: Workshops
-metaTitle: Developer Hands-On Workshops
-description: From container basics to Kubernetes and Docker introductions, VMware Tanzu provides developers hands-on, self-paced workshops to strengthen industry skills.
+metaTitle: Hands-On Workshops for Platform Engineers
+description: Start your learning journey today or enhance your industry skills by completing hands-on, self-paced workshops.
 aliases:
 - "/learn/"
 menu:
