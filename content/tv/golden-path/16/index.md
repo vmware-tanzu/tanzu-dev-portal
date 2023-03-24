@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-23'
 episode: '16'
 explicit: 'no'
-calendar: true
 guests:
 - Thomas Vitale
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "A Paved Path to Production on Kubernetes"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: KqtGSZVzP7A
 type: tv-episode
 ---
 

@@ -10,7 +10,7 @@ Description: "Nate Schutta and Chelsea Troy have a conversation"
 hosts: ["Nate Schutta"]
 guests: ["Chelsea Troy"]
 PublishDate: "2023-02-19T00:00:00-06:00"
-Date: "2023-02-20T12:00:00-05:00"
+Date: "2023-02-27T12:00:00-05:00"
 minutes: 120
 episode: "76"
 explicit: "yes"

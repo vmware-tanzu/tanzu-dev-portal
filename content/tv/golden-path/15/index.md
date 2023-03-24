@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-21'
 episode: '15'
 explicit: 'no'
-calendar: true
 guests:
 - Maciej Walkowiak
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "What’s New in Spring Cloud AWS 3.0?"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: i_7oPX9RnJ4
 type: tv-episode
 ---
 

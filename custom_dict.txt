@@ -477,6 +477,7 @@ core-dns
 CoreCLR
 CoreDNS
 CoreOS
+Corneil
 coroutine
 Corry
 CORS
@@ -703,6 +704,7 @@ Dropwizard
 Drotbohm
 DSL(s)?
 DSN
+du
 Dubois
 duplicative
 durations
@@ -1259,6 +1261,7 @@ Jonatan
 jonatan_ivanov
 JOP
 Joram
+Jozi
 JPA
 JProfiler
 JRE
@@ -1873,6 +1876,7 @@ PKI
 PKS
 plaintext
 PlatformAP
+Plessis
 pluggability
 Pluggable
 pluggable
