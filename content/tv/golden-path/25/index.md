@@ -9,6 +9,7 @@ calendar: true
 guests:
 - Tatiana Krupenya
 hosts:
+- Nate Schutta
 lastmod: '2020-10-09'
 title: "How to Swim in an Issue Flow"
 twitch: vmwaretanzu
