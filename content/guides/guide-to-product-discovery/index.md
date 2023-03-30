@@ -6,7 +6,7 @@ linkTitle: A Guide to Product Discovery
 subsection: Spring Cloud
 featured: true
 alises:
-- /guides/guide-to-discovery-and-framing
+    - /guides/guide-to-discovery-and-framing
 team:
     - Luke Malcher
 title: A Guide to Product Discovery
@@ -14,16 +14,21 @@ level1: Agile Transformation and Practices
 level2: Agile Development
 ---
 
-![alt_text](images/image2.png 'image_tooltip')
+![A diagram showing the progression of a Product Discovery. The first stage is Problem Discovery, which is represented by a diamond. The next stage is Solution Framing, which is also represented by a diamond. After that there is a series of cycles which represent product iterations during the Delivery phase.](images/image2.png 'double diamond')
 
-Product Discovery is a set of activities that enables a product team to reduce risk before starting delivery. The goal is to learn enough to start building a product that is valuable, usable, and feasible.
+Most new ideas for products and features come with a set of built-in assumptions. We hope the new product will be adopted and loved by our customers. We want it to deliver certain outcomes or value for our business or organization. And we assume that it can be built by a team given a certain amount of time and investment.
 
-As the name suggests, it is divided into two stages:
+Wherever products fail or feature launches fall flat (and they often do), it is usually because those assumptions - and their risks - went unchallenged.
 
-1. During Problem Discovery, the team focuses on comprehensively understanding the problem space. This is followed by activities that prioritize which user problem to solve first.
-2. In Solution Framing, the team focuses on reducing risk by validating a solution. During Solution Framing, the team again goes wide and explores a range of possible solutions before using prioritization, concept testing, and experiments to iterate and focus down on a viable starting point.
+Product Discovery is a set of activities a product team can use to reduce those risks before starting the process of building software. In product discovery, the goal is to learn enough to start building a product that is valuable, usable, and feasible.
 
-Product Discovery is often represented with a “double diamond” diagram which shows how teams pass through these different stages of _divergent_ and _convergent_ thinking.
+It often helps to divide product discovery into two stages:
+
+1. During the Problem Discovery stage , the team focuses on comprehensively understanding the problem space. This is followed by activities that prioritize which user problem to solve first.
+
+1. In the Solution Framing stage the team focuses on validating a solution. The team explores a range of possible solutions before using prioritization, concept testing, and experiments to focus down on a valuable starting point.
+
+The two-stages are often represented with a “double diamond” diagram which shows how teams pass through these different stages of divergent and convergent thinking.
 
 ## Who takes part in Product Discovery
 
@@ -39,7 +44,7 @@ In parallel to the product discovery phase mentioned here, it might be valuable 
 
 ## Problem Discovery
 
-![alt_text](images/image4.png 'image_tooltip')
+![A diagram summarizing the main stages and activities of Problem Discovery. The main activities listed are assumptions, proto-personas, user interviews, journey map, service blueprint, research synthesis and problem prioritization.](images/image4.png 'problem discovery')
 
 The goal of the Problem Discovery phase is to clearly define an important problem that, if solved, will deliver the highest business and user value. Problem Discovery typically happens over a fast-paced, two to three week period during which you’ll extensively learn about your users, problem space, the business drivers, and any existing technology or technical constraints.
 
@@ -85,7 +90,7 @@ This ruthless prioritization of a single problem over all others can feel like a
 
 ## Solution Framing
 
-![alt_text](images/image3.png 'image_tooltip')
+![A diagram summarizing the main activities of Problem Discovery. The main activities listed are solution brainstorming, design studio, design critique, solution prioritization, lean experiments, lean business canvas and user story mapping.](images/image3.png 'solution framing')
 
 During Solution Framing, your team’s goal is to determine a suitable starting point for building your product based on the problems you’ve identified in Problem Discovery. During this stage you’ll explore, evaluate, and iterate on potential solutions.
 
