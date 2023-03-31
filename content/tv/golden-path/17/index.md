@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-03-28'
 episode: '17'
 explicit: 'no'
-calendar: true
 guests:
 - João Pereira 
 - Vinay Thakkar
@@ -14,7 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Tuning the Streams for Music Artists"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 9XkqqrK1oUw
 type: tv-episode
 ---
 
