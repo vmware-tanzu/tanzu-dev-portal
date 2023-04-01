@@ -1,7 +1,5 @@
 {{ define "episodeCard" }}
-    {{ $parentDir := path.Base .Parent.Path }}
-    {{ $isGoldenPath := cond (eq $parentDir "golden-path" ) true false }}
-    <a class="col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative {{ cond $isGoldenPath `golden-path episode` `` }}" href="{{ .RelPermalink }}">
+    <a class="col-4-thumbnail flex-315 col-lg-4 col-12 overflow-hidden mb-4 position-relative }}" href="{{ .RelPermalink }}">
         <div class="thumbnail-gradient position-absolute"></div>
         <img alt="{{ .Title }}" src="{{ partial `tv-image-src` . }}" />
         <div class="video-description d-flex flex-column justify-content-between">
@@ -16,7 +14,8 @@
     <div>
         <div class="px-0 mb-5 shows">
             {{ range sort .Sections }} {{ if not .Params.hidden }}
-            {{ $pages := cond ( eq .Params.id "golden-path-to-springone" ) (sort .RegularPages ".Date" "desc" ) (first 3 (sort .RegularPages ".Date" "desc" )) }}
+            {{ $sortedPages := (sort .RegularPages ".Date" "desc" )}}
+            {{ $pages := cond ( eq .Params.id "golden-path-to-springone" ) $sortedPages (first 3 $sortedPages) }}
             <div class="row d-flex justify-content-between align-items-baseline mb-3">
                 <h2 class="h4">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -42,7 +41,6 @@
                     const daysUntilLive = Math.round((episodeTime - currentTime) / (1000 * 3600 * 24))
                     const liveText = daysUntilLive == 0 ? "today" : `in ${daysUntilLive} days`;
                     episode.nextElementSibling.innerHTML = `Live ${liveText}`
-                    {{/*  episode.parentNode.style.order = -1 - i;  */}}
                 }else{
                     episode.nextElementSibling.style.display = "none";
                 }
