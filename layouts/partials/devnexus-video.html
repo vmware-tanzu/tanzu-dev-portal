@@ -1,0 +1,27 @@
+<div class="mr-0 mr-lg-3 mb-lg-3 mb-2">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}</p>
+    <ul class="list-unstyled">
+        <li>
+            <strong>Speaker</strong>:
+            <a href="{{ .Site.BaseURL }}/team/{{ .Params.speaker | urlize }}" class="mr-5 py-2 d-indine-block">{{ .Params.speaker }}</a>
+        </li>
+        <li>
+        {{ if .Params.github_repo }}
+            <a href="https://github.com/{{ .Params.github_repo }}"><i class="fab fa-github mr-2"></i></a>
+        {{ end }}
+            <a href="https://youtu.be/{{ .Params.youtube_id }}" target="_blank"><i class="fab fa-youtube mr-2"></i>
+        </li>
+    </ul>
+    <a class="youtube-container w-100 h-100">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/{{ .Params.youtube_id }}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+    </a>
+</div>

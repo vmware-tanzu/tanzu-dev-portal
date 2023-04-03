@@ -1,0 +1,8 @@
+{{ define "main" }} {{ partial "hero.html" . }}
+<div class="td-content">
+    <div class="row justify-content-center"><div class="col-6">
+        {{ range .Pages.ByWeight }} {{ partial "devnexus-video.html" . }} {{ end }}</div>
+    </div>
+</div>
+
+{{ end }}
