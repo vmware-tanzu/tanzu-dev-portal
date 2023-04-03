@@ -12,8 +12,7 @@ hosts:
 - DaShaun Carter
 lastmod: '2020-10-09'
 title: "People, Process, and Technology: The Winning Formula to Execute the Next-Gen Wealth Management Product at Northern Trust"
-twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 
