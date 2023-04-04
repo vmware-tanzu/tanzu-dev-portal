@@ -180,7 +180,7 @@
 nav {
     z-index: 1000 !important;
 
-    #theme-select {
+    #theme-slider {
         align-self: center;
         cursor: pointer;
         display: inline-block;
@@ -215,6 +215,17 @@ nav {
         i {
             color: #1B2A32;
         }
+    }
+    #theme-toggle {
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        border-radius: 5px;
+        color: red;
+        background: red;
+        opacity: .5;
+        top: -10px;
+        left: -3px;
     }
     > .container {
         opacity: 0;
@@ -377,7 +388,7 @@ nav {
         -webkit-font-smoothing: antialiased;
     }
     @media(max-width: 991.98px){
-        #theme-select {
+        #theme-slider {
             display: none !important;
         }
     }
