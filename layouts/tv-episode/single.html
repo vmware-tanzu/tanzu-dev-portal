@@ -250,11 +250,11 @@
                   const eventEndTimeDate = new Date(endTime);
                   const eventEndTimeDateUTC = eventEndTimeDate.toISOString();
                   cal_single = ics();
-                  cal_single.addEvent({{ .Params.title }}, 'https://www.twitch.tv/vmwaretanzu', 'Twitch', eventStartTimeDateUTC, eventEndTimeDateUTC);
+                  cal_single.addEvent({{ .Params.title }}, 'https://tanzu.vmware.com/developer/tv/', 'Virtual', eventStartTimeDateUTC, eventEndTimeDateUTC);
                   const gCalTitle = ({{ .Params.title }}).replaceAll(" ","+");
                   const gCalStartTime = eventStartTimeDateUTC.replaceAll("-","").replaceAll(":","").replace(".000","");
                   const gCalEndTime = eventEndTimeDateUTC.replaceAll("-","").replaceAll(":","").replace(".000","");
-                  const gCalLink = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + gCalTitle + "&details=https%3A%2F%2Fwww.twitch.tv%2Fvmwaretanzu&location=Twitch&dates=" + gCalStartTime + "%2F" + gCalEndTime;
+                  const gCalLink = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + gCalTitle + "&details=https%3A%2F%2Ftanzu.vmware.com%2Fdeveloper%2Ftv%2F&location=Virtual&dates=" + gCalStartTime + "%2F" + gCalEndTime;
               </script>
               <a href="#"
                  onclick="javascript:cal_single.download({{ .Params.title }})"
