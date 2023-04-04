@@ -1,0 +1,8 @@
+{{ define "main" }} {{ partial "hero.html" . }}
+<div class="section-index">
+    <div class="container episodes">
+        <div class="row px-lg-0 pt-4 align-items-baseline mb-5">{{ range .Pages.ByWeight }} {{ partial "devnexus-video.html" . }} {{ end }}</div>
+    </div>
+</div>
+
+{{ end }}

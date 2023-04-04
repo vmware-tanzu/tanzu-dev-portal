@@ -123,7 +123,9 @@ netlify-dev: config.js
 
 .PHONY: netlify-deploy
 #netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
-netlify-deploy: git-submodule npm config.js
+netlify-deploy: npm config.js
+	@echo Force install submodule update
+	@git submodule update -f --init --recursive
 	hugo -F -b ${DEPLOY_URL}
 	cp public/developer/_redirects public/redirects
 
