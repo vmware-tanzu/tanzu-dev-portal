@@ -54,42 +54,38 @@ body {
       #scope {
         background: $gray-800;
       }
-      #theme-select {
-        padding: 5px;
-        background-color: $primary;
-      }
     }
-    #theme-select {
-      padding: 5px;
-      background-color: #1B2A32;
-      transition: background-color .2s;
-      z-index: 100;
-    }
-    .nav-select {
-      height: 70%;
-      width: 41%;
-      position: absolute;
-      top: 5px;
-      z-index: 0;
+    // #theme-select {
+    //   padding: 5px;
+    //   background-color: #1B2A32;
+    //   transition: background-color .2s;
+    //   z-index: 100;
+    // }
+    // .nav-select {
+    //   height: 70%;
+    //   width: 41%;
+    //   position: absolute;
+    //   top: 5px;
+    //   z-index: 0;
 
-      &:nth-child(1) {
-        left: 5px;
-      }
-      &:nth-child(2) {
-        left: 35px;
-        background-color: #1B2A32 !important;
-        display: none;
-      }
-    }
-    i {
-      color: white;
-    }
-    #toggle-dark-mode {
-      left: 2px;
-      i {
-        color: #1B2A32;
-      }
-    }
+    //   &:nth-child(1) {
+    //     left: 5px;
+    //   }
+    //   &:nth-child(2) {
+    //     left: 35px;
+    //     background-color: #1B2A32 !important;
+    //     display: none;
+    //   }
+    // }
+    // i {
+    //   color: white;
+    // }
+    // #toggle-dark-mode {
+    //   left: 2px;
+    //   i {
+    //     color: #1B2A32;
+    //   }
+    // }
   }
   .transition-all {
     transition: all .2s ease-out;
@@ -556,15 +552,15 @@ body {
     }
   }
 
-  #toggle-dark-mode,
-  #toggle-light-mode {
-    background: none !important;
-    border-radius: 50px;
-    display: inline-block;
-    padding: 1px 3px;
-    text-align: right;
-    cursor: pointer;
-  }
+//   #toggle-dark-mode,
+//   #toggle-light-mode {
+//     background: none !important;
+//     border-radius: 50px;
+//     display: inline-block;
+//     padding: 1px 3px;
+//     text-align: right;
+//     cursor: pointer;
+//   }
 
   .newsletter .hidden {
     display: none;
@@ -1660,15 +1656,6 @@ body {
       display: none;
     }
   }
-
-  a i.fa, a i.fas {
-    margin-right: 5px;
-
-    &.fa-moon {
-      transform: translateX(-2px);
-    }
-  }
-
   .opacity-4 {
     opacity: 80%;
   }

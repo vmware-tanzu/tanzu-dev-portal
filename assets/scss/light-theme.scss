@@ -285,39 +285,38 @@ body.blog #contact .mktoForm select {
     background-color: white !important;
 }
 
-nav #theme-select {
-  background-color: #ADBBC4 !important;
-  
-  .fa-sun {
-    color: #1B2A32 !important;
-  }
-  #dark-select {
-    background-color: transparent !important;
-  }
-  #theme-square {
-    transform: translateX(36px);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  }
-  .nav-select {
-    transition: opacity .2s;
-    &:nth-child(1) {
-      display: none;
+nav {
+    #theme-select {
+        background-color: #ADBBC4 !important;
+        transition: background-color .2s;
     }
-    &:nth-child(2) {
-      display: block;
+    #theme-icon-circle {
+        transform: translateX(15px);
+        background: #1B2A32;
     }
-    &:nth-child(3) {
-      display: none;
+    #theme-icon i {
+        color: #f0f4f7
     }
-  }
+    //   .nav-select {
+    //     transition: opacity .2s;
+    //     &:nth-child(1) {
+    //       display: none;
+    //     }
+    //     &:nth-child(2) {
+    //       display: block;
+    //     }
+    //     &:nth-child(3) {
+    //       display: none;
+    //     }
+    //   }
 }
 #featured-paths,
 #live-notify .btn {
   background-color: white !important;
 }
-#toggle-dark-mode i {
-  color: white !important;
-}
+// #toggle-dark-mode i {
+//   color: white !important;
+// }
 #menu-toggle .menu-bar {
    background: #61717d !important;
 }

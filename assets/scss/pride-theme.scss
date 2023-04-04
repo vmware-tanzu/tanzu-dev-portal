@@ -36,20 +36,20 @@ html  {
 }
 nav .nav-item:last-child {
   background-color: transparent !important;
-  .nav-select {
-    &:nth-child(1) {
-      display: none;
-    }
-    &:nth-child(2) {
-      display: none;
-    }
-    &:nth-child(3) {
-      display: block;
-    }
-  }
-  i {
-    color: white !important;
-  }
+//   .nav-select {
+//     &:nth-child(1) {
+//       display: none;
+//     }
+//     &:nth-child(2) {
+//       display: none;
+//     }
+//     &:nth-child(3) {
+//       display: block;
+//     }
+//   }
+//   i {
+//     color: white !important;
+//   }
 }
 #gradient-one,
 #gradient-two,

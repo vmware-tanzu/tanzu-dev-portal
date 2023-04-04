@@ -181,22 +181,39 @@ nav {
     z-index: 1000 !important;
 
     #theme-select {
-        width: 72px;
-        height: 36px;
-        padding: 0px !important;
-
-        a {
-            height: 36px !important;
-            width: 36px !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            left: 0 !important;
-            text-align: center !important;
-
-            i.fas.fa-moon {
-                transform: translate(0) !important;
-                margin-right: 0 !important;
-            }
+        align-self: center;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        width: 36px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #1b2a32;
+        padding: 5px;
+        transition: background-color .2s;
+        z-index: 100;
+    }
+    #theme-icon-circle {
+        left: 0px;
+        top: -7px;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        background: $gray-200;
+        border-radius: 100%;
+        transform: translateX(0px);
+        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
+        transition: transform .2s ease-in;
+    }
+    #theme-icon {
+        position: relative;
+        top: 3px;
+        left: 5px;
+        i {
+            color: #1B2A32;
         }
     }
     > .container {
@@ -230,38 +247,6 @@ nav {
         }
     }
     
-    #theme-square {
-        left: 0;
-        top: 0;
-        height: 37px;
-        width: 36px;
-        position: absolute;
-        background: $gray-200;
-        transform: translateX(0px);
-        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
-        transition: transform .2s ease-in;
-    }
-    i {
-        color: white;
-    }
-    #toggle-pride-mode {
-        cursor: pointer;
-        img {
-            height: 22px;
-        }
-    }
-    
-    #toggle-dark-mode {
-        left: 2px;
-        i {
-            color: #1B2A32;
-        }
-    }
-    @media(max-width: 991.98px){
-        #theme-select {
-            display: none !important;
-        }
-    }
     .nav-arrow {
         transform: rotate(45deg) translateY(-6px);
         -webkit-transform: rotate(45deg) translateY(-6px);
@@ -390,6 +375,11 @@ nav {
     b {
         font-weight: 500 !important;
         -webkit-font-smoothing: antialiased;
+    }
+    @media(max-width: 991.98px){
+        #theme-select {
+            display: none !important;
+        }
     }
 }
 #mobile-nav {
