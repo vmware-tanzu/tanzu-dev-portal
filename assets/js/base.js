@@ -197,63 +197,16 @@ limitations under the License.
       e.stopPropagation();
     });
 
-    //Light toggle
-    $("#toggle-light-mode").click(function () {
-      localStorage.setItem("light-dark-mode-storage", "light");
-      var iframe = document.getElementById("auth-iframe");
-
-      $("html").addClass("light-mode");
-      changeTheme("light");
-    });
-
-    // Dark toggle
-    $("#toggle-dark-mode").click(function () {
-      var iframe = document.getElementById("auth-iframe");
-
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage("dark", "*");
-      }
-      changeTheme('dark');
-      localStorage.setItem("light-dark-mode-storage", "dark");
-
-      if ($("html").hasClass("light-mode")) {
-        $("html").removeClass("light-mode");
-        document.getElementById("light-theme").remove();
-      }
-    });
-
-    $("#theme-select").keyup(function (event) {
-      if (event.which == 13 || event.which == 32) {
-
-        if ($("html").hasClass("light-mode")) {
-          var iframe = document.getElementById("auth-iframe");
-
-          if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage("dark", "*");
-          }
-          changeTheme('dark');
-          localStorage.setItem("light-dark-mode-storage", "dark");
-
-          $("html").removeClass("light-mode");
-          document.getElementById("light-theme").remove();
-
-        }  else {
-          localStorage.setItem("light-dark-mode-storage", "light");
-          var iframe = document.getElementById("auth-iframe");
-
-          $("html").addClass("light-mode");
-          changeTheme("light");
-
-        }
-
+    // Theme Toggle Section
+    $("#theme-toggle").click(()=>{setTheme(toggle=true)})
+    $("#theme-toggle").keyup((e) => {
+      if (e.which == 13 || e.which == 32) {
+        setTheme(toggle=true)
         $("header + .container-fluid").removeClass("dim");
-
       }
     });
-
-    $("#theme-select").keydown(function (e) {
+    $("#theme-toggle").keydown(function (e) {
       if (e.which == 9) {
-        e.preventDefault();
         if ($(".promo-nav-banner a[href]").length) {
           $(".promo-nav-banner a[href]").focus();
         } else {

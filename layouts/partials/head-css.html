@@ -1,31 +1,32 @@
 {{ define "changeTheme" }}
 <script>
-var savedTheme = localStorage.getItem("light-dark-mode-storage") || "dark";
-changeTheme(savedTheme, true);
-function changeTheme(mode, firstLoad) {
-  sendAmplitudeUserProps({"latest saved theme": mode}); 
-  if (!firstLoad) sendAmplitudeEvent("toggled theme", {"mode": mode});
-
-  if (mode === "light") {
-    var iframe = document.getElementById('auth-iframe');
-    var head = document.head;
-    var link = document.createElement("link");
-
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = "{{ .cssLight.RelPermalink }}";
-    link.id = "light-theme"
-
-    head.append(link);
-    if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.postMessage('light', '*');
+    const setTheme = (toggle, firstLoad) => {
+        let themeSetting
+        if(toggle){
+            themeSetting = localStorage.getItem("tdc-theme-setting") === "dark" ? "light" : "dark"
+            localStorage.setItem("tdc-theme-setting", themeSetting)
+        }else {
+            themeSetting = localStorage.getItem("tdc-theme-setting")
+        }
+        sendAmplitudeUserProps({ "latest saved theme": themeSetting });
+        if (!firstLoad) sendAmplitudeEvent("toggled theme", { "mode": themeSetting });
+        if (themeSetting === "light") {
+            let lightModeElement = document.createElement("link");
+            lightModeElement.setAttribute("type", "text/css");
+            lightModeElement.setAttribute("rel", "stylesheet");
+            lightModeElement.setAttribute("href", "/developer/css/light-theme.css");
+            lightModeElement.setAttribute("id", "light-theme");
+            document.head.append(lightModeElement);
+            $("html").addClass("light-mode")
+            $("#theme-icon i").addClass("fa-sun")
+        } else {
+            $("html").removeClass("light-mode");
+            $("#light-theme").remove()
+            $("#theme-icon i").removeClass("fa-sun")
+        }
     }
-    document.documentElement.classList.add('light-mode')
-  } 
-  if (mode === "dark") {
-    localStorage.clear();
-  }
-}
+    $().ready(()=>{
+        setTheme(toggle = false, firstLoad = true)});
 </script>
 {{ end }}
 

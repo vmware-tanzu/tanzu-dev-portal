@@ -211,7 +211,7 @@ nav {
     #theme-icon {
         position: relative;
         top: 3px;
-        left: 5px;
+        left: 6px;
         i {
             color: #1B2A32;
         }
@@ -221,9 +221,7 @@ nav {
         width: 40px;
         height: 30px;
         border-radius: 5px;
-        color: red;
-        background: red;
-        opacity: .5;
+        opacity: 0;
         top: -10px;
         left: -3px;
     }
