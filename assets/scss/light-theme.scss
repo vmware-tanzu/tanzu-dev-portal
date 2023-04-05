@@ -294,8 +294,11 @@ nav {
         transform: translateX(12px);
         background: #1B2A32;
     }
-    #theme-icon i {
-        color: #f0f4f7
+    #light-theme-icon {
+        display: block;
+    }
+    #dark-theme-icon {
+        display: none;
     }
     //   .nav-select {
     //     transition: opacity .2s;

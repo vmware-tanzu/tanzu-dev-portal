@@ -208,12 +208,21 @@ nav {
         box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
         transition: transform .2s ease-in;
     }
-    #theme-icon {
+    #dark-theme-icon {
         position: relative;
         top: 3px;
         left: 6px;
         i {
             color: #1B2A32;
+        }
+    }
+    #light-theme-icon {
+        position: relative;
+        top: 3px;
+        left: 6px;
+        display: none;
+        i {
+            color: #f0f4f7
         }
     }
     #theme-toggle {
