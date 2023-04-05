@@ -198,10 +198,10 @@ limitations under the License.
     });
 
     // Theme Toggle Section
-    $("#theme-toggle").click(()=>{setTheme(toggle=true)})
+    $("#theme-toggle").click(()=>{toggleTheme()})
     $("#theme-toggle").keyup((e) => {
       if (e.which == 13 || e.which == 32) {
-        setTheme(toggle=true)
+        toggleTheme()
         $("header + .container-fluid").removeClass("dim");
       }
     });
