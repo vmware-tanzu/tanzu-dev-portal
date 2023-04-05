@@ -1,6 +1,6 @@
 ---
 Title: Spring Boot 3
-speaker: Dan Vega
+speaker: Josh Long
 github_repo: coffee-software-show/spring-boot-3-in-5
 youtube_id: XDjhwBp7DZM
 weight: 3
