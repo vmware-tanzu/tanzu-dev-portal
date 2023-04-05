@@ -18,14 +18,12 @@
         lightModeElement.setAttribute("id", "light-theme");
         document.head.append(lightModeElement);
         $("html").addClass("light-mode")
-        $("#theme-icon i").addClass("fa-sun")
     }
 
     const setDarkMode = () => {
         localStorage.setItem('tdc-theme-setting', 'dark')
         $("html").removeClass("light-mode");
         $("#light-theme").remove()
-        $("#theme-icon i").removeClass("fa-sun")
     }
 
     const toggleTheme = () => {
