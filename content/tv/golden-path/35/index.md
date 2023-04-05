@@ -4,7 +4,7 @@ date: '2023-05-30'
 Description: Why Spring Belongs in Your Data Stream (from Edge to Multi-Cloud)
 title: Why Spring Belongs in Your Data Stream (from Edge to Multi-Cloud)
 PublishDate: '2023-04-04T00:00:00-07:00'
-episode: '34'
+episode: '35'
 explicit: 'no'
 calendar: true
 guests:

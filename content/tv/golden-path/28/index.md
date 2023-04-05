@@ -1,23 +1,19 @@
 ---
-Date: '2023-05-09T11:00:00-07:00'
-date: '2023-05-09'
-Description: Five Simple Rules about Problems
-title: Five Simple Rules about Problems
+Date: '2023-05-04T11:00:00-07:00'
+date: '2023-05-04'
+Description: Securing the Service-to-Service Call Chain Patterns and Protocols
+title: Securing the Service-to-Service Call Chain Patterns and Protocols
 PublishDate: '2023-04-04T00:00:00-07:00'
 episode: '28'
 explicit: 'no'
 calendar: true
 guests:
-- Kevin Clark
+- Adib Saikali
 hosts:
-- Tiffany Jernigan
+- DaShaun Carter
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
-Problem solving is central to an agile product team. But how do you know which problems to solve? More importantly, how can you tell which problems you shouldn't? Lean product management is all about reducing waste and maximizing value. But waste still abounds. Features are built that never ship. Architecture-up-front prepares teams for a future of scale that never happens. Or, long after the performance problem has been addressed, a performance team is still laser-focused on improving a number that’s been good enough for a year.
-
-The easiest way to reduce waste is that you find work that doesn’t need to be done, and then you don’t do it. 
-
-In this talk, you’ll hear stories of work that didn’t need to be done, and learn five rules that would’ve helped. Each rule is short, simple, and memorable, ensuring ease of use in planning conversations. You’ll learn how to apply these rules in any business context, and save yourself time and money.
+A single request arriving at a service can spawn many requests to downstream services. Securing the service-to-service call chain is a critical but challenging problem. This talk covers the key patterns for securing the service-to-service call chain and the technologies required to implement them. We explore patterns for using API Gateways, Service Mesh, SPIFFE, mTLS, JWT, and OpenID Connect using Spring-based demo apps. By the end of the talk, you’ll be familiar with all the key patterns along with technical and security tradeoffs for each of the patterns, allowing you to choose the patterns that will best fit your specific requirements. We’ll provide a GitHub repo containing implementations of all the patterns discussed in the talk, so you can apply what you learn on your projects.
