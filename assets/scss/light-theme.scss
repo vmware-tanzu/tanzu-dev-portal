@@ -120,7 +120,6 @@ footer li.list-inline-item .text-white {
  body .border-top {
    border-color: #d9e4ea !important;
 }
-// body a:hover, body a:focus,
 .language-hero .lead a,
 body a code,
 body .td-box--gray-850 p > a, 
@@ -300,26 +299,11 @@ nav {
     #dark-theme-icon {
         display: none;
     }
-    //   .nav-select {
-    //     transition: opacity .2s;
-    //     &:nth-child(1) {
-    //       display: none;
-    //     }
-    //     &:nth-child(2) {
-    //       display: block;
-    //     }
-    //     &:nth-child(3) {
-    //       display: none;
-    //     }
-    //   }
 }
 #featured-paths,
 #live-notify .btn {
   background-color: white !important;
 }
-// #toggle-dark-mode i {
-//   color: white !important;
-// }
 #menu-toggle .menu-bar {
    background: #61717d !important;
 }
