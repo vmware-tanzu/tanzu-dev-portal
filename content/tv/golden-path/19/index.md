@@ -14,6 +14,7 @@ lastmod: '2020-10-09'
 title: "Spring Deployment to Kubernetes with CF Korifi"
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
+youtube: 7DBxMWpNJXg
 type: tv-episode
 ---
 

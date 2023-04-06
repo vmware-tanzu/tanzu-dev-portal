@@ -13,6 +13,7 @@ title: "Who Should Use Kubernetes?"
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
 type: tv-episode
+youtube: ed5zYmf-hYw
 ---
 
 Who should use Kubernetes? Like, who is Kubernetes for? Kubernetes can be difficult to install and complicated to use and manage. What are the benefits of Kubernetes, and at what point do these benefits outweigh the operational complexity? Join Whitney for a fun and fast-paced talk about the benefits and drawbacks of Kubernetes, and why the main advantage of Kubernetes adoption is not what you think!
