@@ -1,0 +1,48 @@
+<script>
+    const setTheme = () => {
+        const localSetting = localStorage.getItem("tdc-theme-setting")
+        const theme = localSetting === '' ? "dark" : localSetting
+        if (theme === "light"){
+            setLightMode()
+        } else {
+            setDarkMode()
+        }
+    }
+
+    const setLightMode = () => {
+        localStorage.setItem('tdc-theme-setting', 'light')
+        let lightModeElement = document.createElement("link");
+        lightModeElement.setAttribute("type", "text/css");
+        lightModeElement.setAttribute("rel", "stylesheet");
+        lightModeElement.setAttribute("href", "{{ .cssLight.RelPermalink }}");
+        lightModeElement.setAttribute("id", "light-theme");
+        document.head.append(lightModeElement);
+        $("html").addClass("light-mode")
+    }
+
+    const setDarkMode = () => {
+        localStorage.setItem('tdc-theme-setting', 'dark')
+        $("html").removeClass("light-mode");
+        $("#light-theme").remove()
+    }
+
+    const toggleTheme = () => {
+        let newTheme = ''
+        const currentTheme = localStorage.getItem('tdc-theme-setting')
+        if (currentTheme === '' || currentTheme === 'dark'){
+            newTheme = "light"
+        } else {
+            newTheme = "dark"
+        }
+        sendAmplitudeUserProps({ "latest saved theme": currentTheme });
+        localStorage.setItem("tdc-theme-setting", newTheme)
+        if (newTheme === "light") {
+            setLightMode()
+        } else {
+            setDarkMode()
+        }
+        sendAmplitudeEvent("toggled theme", { "mode": newTheme });
+    }
+
+    setTheme();
+</script>
