@@ -13,6 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "People, Process, and Technology: The Winning Formula to Execute the Next-Gen Wealth Management Product at Northern Trust"
 linkyoutubechannel: 'yes'
+youtube: h5jarvnVhkM
 type: tv-episode
 ---
 
