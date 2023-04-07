@@ -1,6 +1,6 @@
 ---
 name: Marc Zottner
-description: "Field Principal, VMware OCTO"
+description: "Global Application Modernization Lead, VMware"
 roles: ["guest"]
 skills: ""
 location: "Stuttgart, Germany"
@@ -16,8 +16,6 @@ instagram: ""
 youtube: ""
 ---
 <!-- markdownlint-disable MD041-->
-Marc is a French technologist living in Germany with over 15 years of experience gathered in many projects for more than 60 customers in over 12 countries in the finance, software, retail, energy, medical, public, manufacturing and telecommunications sectors.  
-
-Passionate about **application modernization**, his main interests gravitate towards architecture, security, platform as a service, user experience, front-end technologies, open-source software, and Java enterprise.
+Over the past sixteen years, Marc has spent most of his time supporting large companies to modernize their strategic applications at scale. At VMware Tanzu Labs, he is the global application modernization lead. Former transformation program lead, consulting architect, middleware specialist, and trainer, Marc has extensive experience in the application ecosystem. Transformation, security, platform, open-source, and architecture are his favorite topics.
 
 <!--more-->
