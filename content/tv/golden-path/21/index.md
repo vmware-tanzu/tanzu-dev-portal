@@ -5,13 +5,11 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-11'
 episode: '21'
 explicit: 'no'
-calendar: true
 guests:
 - Whitney Lee
 lastmod: '2020-10-09'
 title: "Who Should Use Kubernetes?"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
 type: tv-episode
 youtube: ed5zYmf-hYw
 ---
