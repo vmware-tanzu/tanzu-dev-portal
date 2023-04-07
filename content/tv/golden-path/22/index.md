@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-13'
 episode: '22'
 explicit: 'no'
-calendar: true
 guests:
 - Pavan Yadlapalli
 hosts:
@@ -13,7 +12,6 @@ hosts:
 lastmod: '2020-10-09'
 title: "Avoid Downtime During Migrations Using Feature Flags"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
 type: tv-episode
 youtube: 8oIbgsVSKnk
 ---
