@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-04'
 episode: '19'
 explicit: 'no'
-calendar: true
 guests:
 - Ram Iyengar
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Spring Deployment to Kubernetes with CF Korifi"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 7DBxMWpNJXg
 type: tv-episode
 ---
 
