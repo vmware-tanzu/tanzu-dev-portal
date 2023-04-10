@@ -14,6 +14,7 @@ lastmod: '2020-10-09'
 title: "How Netflix Really Uses Java Today"
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
+youtube: YlJrl0nDPaQ
 type: tv-episode
 ---
 
