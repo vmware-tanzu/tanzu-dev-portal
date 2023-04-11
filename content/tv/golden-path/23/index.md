@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-18'
 episode: '23'
 explicit: 'no'
-calendar: true
 guests:
 - Paul Bakker
 hosts:
@@ -13,7 +12,6 @@ hosts:
 lastmod: '2020-10-09'
 title: "How Netflix Really Uses Java Today"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
 youtube: YlJrl0nDPaQ
 type: tv-episode
 ---
