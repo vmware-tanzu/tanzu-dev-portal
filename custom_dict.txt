@@ -2047,6 +2047,7 @@ RedMonk('s)?
 Reenvisioning
 Reetro
 refactorings?
+Regas
 RegExMethodAuthorizer
 RegionEntries
 RegionEntry
