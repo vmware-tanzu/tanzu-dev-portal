@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-20'
 episode: '24'
 explicit: 'no'
-calendar: true
 guests:
 - Jonathan Schneider
 hosts:
@@ -13,7 +12,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Automated Refactoring for Spring-Based Applications"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 9v927WQ7NWM
 type: tv-episode
 ---
 
