@@ -1,7 +1,6 @@
 {{ define "main" }}
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
-<a id="td-block" class="td-offset-anchor"></a>
 <section id="hero" class="td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
 	<div class="container row py-5 px-0">
 		<div class="col-12 mx-auto col-lg-6">
@@ -9,7 +8,7 @@
 				{{ .Params.tagline }}
 			</h1>
             <p class="h4">The VMware Tanzu Developer Center provides you with everything you need to build, run, and deploy.</p>
-            <a href={{ "learn" | relURL }} class="cta-btn-wrapper my-5 overflow-hidden d-flex justify-content-between align-items-center position-relative">
+            <a href='{{ "learn" | relURL }}' class="cta-btn-wrapper my-5 overflow-hidden d-flex justify-content-between align-items-center position-relative">
                 <div class="solid-rect position-absolute"></div>
                 <div class="cta-btn p-4 m-0 d-inline-block text-uppercase fs-80">Get started with Tanzu</div>
                 <div class="arrow-box d-inline-block d-flex justify-content-center align-items-center">
@@ -31,7 +30,6 @@
 {{ end }}
 
 <!-- Topics -->
-<a id="td-block" class="td-offset-anchor"></a>
 <section id="home-topics" class="td-box">
     <div id="topics-row-outer" class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative transition-all">
         {{ range $topicgroups }}
@@ -40,7 +38,7 @@
                 <h2>{{ . }}</h2>
             </div>
             <div class="col-xl-9 col-12 mb-xl-0 mb-lg-4 mb-2">
-                <div id="{{ lower (replace . " " "-")}}-row" class="row justify-content-between w-100 td-box topics-row">
+                <div id='{{ lower (replace . " " "-")}}-row' class="row justify-content-between w-100 td-box topics-row">
                     {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
                         <div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
                             <a href="{{ .RelPermalink }}" class="h-100 d-flex flex-column justify-content-center align-items-center py-4 py-lg-5 px-3">
@@ -63,7 +61,6 @@
 
 
 <!-- Featured Learning Paths -->
-<a id="td-block" class="td-offset-anchor"></a>
 <section id="featured-paths" class="row mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto pb-0">
 	
     <div class="row justify-content-center w-100">
@@ -74,7 +71,7 @@
 
     <div class="row justify-content-center flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
-        {{ range first 5 $learningpaths }} <!-- TODO: Get featured learning paths -->
+        {{ range first 5 $learningpaths }}
             {{ partial "learningpaths-card-home.html" . }}
         {{ end }}
 
