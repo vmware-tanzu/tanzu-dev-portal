@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-06'
 episode: '20'
 explicit: 'no'
-calendar: true
 guests:
 - Subbarao Mandavilli
 hosts:
