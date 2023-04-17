@@ -1,12 +1,12 @@
 {{ define "featuredCard" }}
 <div class="col-12 col-lg-4 mb-4">
     <a href="{{ .RelPermalink }}">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title text-dark">{{ .Title }}</h5>
-            <p class="card-text">{{ .Description }}</p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-dark">{{ .Title }}</h5>
+                <p class="card-text">{{ .Description }}</p>
+            </div>
         </div>
-    </div>
     </a>
 </div>
 {{ end }}
@@ -16,14 +16,20 @@
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
 <section id="hero" class="td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
-    <h1 class="text-center">{{ .Params.tagline }}</h1>
-    <div class="container py-5 px-0">
-        <div class="row mx-auto">
-            {{ range .Params.featured }}
-            {{ with $.Site.GetPage .name }}
-            {{ template "featuredCard" . }}
-            {{ end }}
-            {{ end }}
+    <div class="container">
+        <div class="container row">
+
+            <h1 class="text-center">{{ .Params.tagline }}</h1>
+            <p>{{ .Params.description }}</p>
+            <div class="container py-5 px-0">
+                <div class="row mx-auto">
+                    {{ range .Params.featured }}
+                    {{ with $.Site.GetPage .name }}
+                    {{ template "featuredCard" . }}
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -34,8 +40,30 @@
 {{ $topicgroups = union $topicgroups ( slice .Title )}}
 {{ end }}
 
+
 <!-- Topics -->
-<section id="home-topics" class="td-box">
+<section id="expertise-tab" class="td-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        {{ range $topicgroups }}
+                        <button class="nav-link active" id="nav-{{ . }}-tab" data-toggle="tab"
+                            data-target="#nav-{{ . }}" type="button" role="tab" aria-controls="nav-{{ . }}"
+                            aria-selected="true">{{ . }}</button>
+                        {{ end }}
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    {{ range $topicgroups }}
+                    <div class="tab-pane fade show active" id="nav-{{ . }}" role="tabpanel"
+                        aria-labelledby="nav-home-tab">{{ . }} </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="topics-row-outer"
         class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative transition-all">
         {{ range $topicgroups }}
