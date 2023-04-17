@@ -44,55 +44,25 @@
 <!-- Topics -->
 <section id="expertise-tab" class="td-box">
     <div class="container">
-        <div class="row">
+        <div id="topics-row-outer" class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
             <div class="col-12 text-center">
                 <nav>
                     <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
                         {{ range $topicgroups }}
-                        <button class="nav-link active" id="nav-{{ . }}-tab" data-toggle="tab"
-                            data-target="#nav-{{ . }}" type="button" role="tab" aria-controls="nav-{{ . }}"
+                        <button class='nav-link {{ if eq . "Modern Applications" }} {{ printf "active" }} {{ end }} col-4' id="nav-{{ . | urlize }}-tab" data-toggle="tab"
+                            data-target="#nav-{{ . | urlize }}" type="button" role="tab" aria-controls="nav-{{ . | urlize }}"
                             aria-selected="true">{{ . }}</button>
                         {{ end }}
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     {{ range $topicgroups }}
-                    <div class="tab-pane fade show active" id="nav-{{ . }}" role="tabpanel"
+                    <div class='tab-pane fade show {{ if eq . "Modern Applications" }} active {{ end }}' id="nav-{{ . | urlize }}" role="tabpanel"
                         aria-labelledby="nav-home-tab">{{ . }} </div>
                     {{ end }}
                 </div>
             </div>
         </div>
-    </div>
-    <div id="topics-row-outer"
-        class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative transition-all">
-        {{ range $topicgroups }}
-        <div class="row mb-5 transition-all">
-            <div class="col-xl-3 col-12 d-flex d-xl-block justify-content-center mb-xl-0 mb-4">
-                <h2>{{ . }}</h2>
-            </div>
-            <div class="col-xl-9 col-12 mb-xl-0 mb-lg-4 mb-2">
-                <div id='{{ lower (replace . " " "-")}}-row'
-                    class="row justify-content-between w-100 td-box topics-row">
-                    {{ range where (($.Site.GetPage "taxonomyTerm" "topics").Pages) ".Params.topicgroups" . }}
-                    <div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
-                        <a href="{{ .RelPermalink }}"
-                            class="h-100 d-flex flex-column justify-content-center align-items-center py-4 py-lg-5 px-3">
-                            <img alt="" class="mb-2"
-                                src='{{ printf "%s%s%s" "images/icons/new-icon-" .Params.icon ".svg" | relURL }}'>
-                            <h3 class="h3 pt-0 link mt-3 text-white mb-0">
-                                {{ .Params.grouptitle }}
-                            </h3>
-                            <p class="mb-2 mb-lg-4 text-left text-center py-0 px-2">
-                                {{ .Description }}
-                            </p>
-                        </a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-        {{ end }}
     </div>
 </section>
 

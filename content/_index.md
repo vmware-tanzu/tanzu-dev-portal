@@ -7,8 +7,4 @@ featured:
 - {"section": "guide", "name": "spring-webclient-gs"}
 - {"section": "tv", "name": "enlightning"}
 - {"section": "blog", "name": "circuit-breaker-pattern-c-sharp"}
-expertise:
-- {"section": "guide", "page": "spring-webclient-gs"}
-- {"section": "guide", "page": "spring-webclient-gs"}
-- {"section": "guide", "page": "spring-webclient-gs"}
 ---
