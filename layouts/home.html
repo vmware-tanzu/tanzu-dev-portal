@@ -2,6 +2,8 @@
 <div class="col-12 col-lg-4 mb-4">
     <a href="{{ .RelPermalink }}">
         <div class="card">
+            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}" alt=""><span
+                    class="h5">TODO</span></div>
             <div class="card-body">
                 <h5 class="card-title text-dark">{{ .Title }}</h5>
                 <p class="card-text">{{ .Description }}</p>
@@ -44,7 +46,7 @@
 {{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
 
 {{/* Topics */}}
-<section id="expertise-tab" class="td-box">
+<section id="expertise-tabs" class="td-box">
     <div class="container">
         <div id="topics-row-outer"
             class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
@@ -64,11 +66,21 @@
                     {{ range $topicgroups }}
                     <div class='tab-pane fade {{ if eq . "Modern Applications" }} show active {{ end }}'
                         id="nav-{{ . | urlize }}" role="tabpanel" aria-labelledby="nav-home-tab">
-                        {{ range $advocatePages }}
-                        <div class="col-12 col-lg-4">
-                            {{ partial "team-member.html" (dict "context" . "display" "summary") }}
+                        <div class="row">
+                            {{ range where $advocatePages "Params.homePageExpertiseSort" "intersect" (slice .) }}
+                            <div class="col-12 col-lg-4">
+                                <div class="card">
+                                    <img src="{{ partial `team-photo-src.html` . }}" alt="{{ .Params.name }} Image"
+                                        class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
+                                        <p class="card-text">{{ .Params.description }}</p>
+                                        <a href="{{ .RelPermalink }}" class="btn btn-primary">TODO</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
                         </div>
-                        {{ end }}
                     </div>
                     {{ end }}
                 </div>
@@ -95,6 +107,19 @@
 
     </div>
 </section>
+
+<script>
+    {{/*  TODO  */}}
+    $("#nav-modern-applications-tab").hover((e) => {
+        $("#nav-modern-applications-tab").tab("show");
+    });
+    $("#nav-application-development-tab").hover((e) => {
+        $("#nav-application-development-tab").tab("show");
+    });
+    $("#nav-kubernetes-platform-tab").hover((e) => {
+        $("#nav-kubernetes-platform-tab").tab("show");
+    });
+</script>
 
 <script>sendAmplitudeEventOnLoad('home viewed', { 'url path': window.location.pathname });</script>
 

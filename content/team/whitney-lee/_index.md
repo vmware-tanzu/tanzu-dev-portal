@@ -4,7 +4,7 @@ description: "Developer Advocate"
 roles: ["advocate"]
 homePageExpertiseSort: 
 - "Modern Applications"
-- "Kuberenetes Platform"
+- "Kubernetes Platform"
 skills: ["Kubernetes"]
 location: "Austin"
 

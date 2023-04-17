@@ -4,7 +4,7 @@ description: "Developer Advocate"
 roles: ["advocate"]
 homePageExpertiseSort: 
 - "Application Development"
-- "Kuberenetes Platform"
+- "Kubernetes Platform"
 skills: ["Spring", "kotlin", "TDD", "Security", "Services", "functional", "Kubernetes"]
 location: "Santa Monica, CA"
 
