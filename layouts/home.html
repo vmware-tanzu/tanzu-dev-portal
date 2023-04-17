@@ -34,31 +34,42 @@
     </div>
 </section>
 
-<!-- Gather topic groups -->
+{{/* Gather topic groups */}}
 {{ $topicgroups := (slice) }}
 {{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
 {{ $topicgroups = union $topicgroups ( slice .Title )}}
 {{ end }}
 
+{{/* Gather Advocates */}}
+{{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
 
-<!-- Topics -->
+{{/* Topics */}}
 <section id="expertise-tab" class="td-box">
     <div class="container">
-        <div id="topics-row-outer" class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
+        <div id="topics-row-outer"
+            class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
             <div class="col-12 text-center">
                 <nav>
                     <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
                         {{ range $topicgroups }}
-                        <button class='nav-link {{ if eq . "Modern Applications" }} {{ printf "active" }} {{ end }} col-4' id="nav-{{ . | urlize }}-tab" data-toggle="tab"
-                            data-target="#nav-{{ . | urlize }}" type="button" role="tab" aria-controls="nav-{{ . | urlize }}"
-                            aria-selected="true">{{ . }}</button>
+                        <button
+                            class='nav-link {{ if eq . "Modern Applications" }} {{ printf "active" }} {{ end }} col-4'
+                            id="nav-{{ . | urlize }}-tab" data-toggle="tab" data-target="#nav-{{ . | urlize }}"
+                            type="button" role="tab" aria-controls="nav-{{ . | urlize }}" aria-selected="true">{{ .
+                            }}</button>
                         {{ end }}
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     {{ range $topicgroups }}
-                    <div class='tab-pane fade show {{ if eq . "Modern Applications" }} active {{ end }}' id="nav-{{ . | urlize }}" role="tabpanel"
-                        aria-labelledby="nav-home-tab">{{ . }} </div>
+                    <div class='tab-pane fade {{ if eq . "Modern Applications" }} show active {{ end }}'
+                        id="nav-{{ . | urlize }}" role="tabpanel" aria-labelledby="nav-home-tab">
+                        {{ range $advocatePages }}
+                        <div class="col-12 col-lg-4">
+                            {{ partial "team-member.html" (dict "context" . "display" "summary") }}
+                        </div>
+                        {{ end }}
+                    </div>
                     {{ end }}
                 </div>
             </div>
