@@ -2,6 +2,9 @@
 name: Nate Schutta
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Application Development"
+- "Kuberenetes Platform"
 skills: ["Architecture", "Domain-Driven Design", "Microservices", "Usability", "Refactoring", "Spring", "Kubernetes", "Cloud Native Computing", "Architect as a Service"]
 location: "Minnesota"
 

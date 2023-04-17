@@ -2,6 +2,9 @@
 name: Whitney Lee
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Modern Applications"
+- "Kuberenetes Platform"
 skills: ["Kubernetes"]
 location: "Austin"
 

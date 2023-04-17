@@ -2,6 +2,9 @@
 name: Josh Long
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Modern Applications"
+- "Application Development"
 skills: ["Spring", "Microservices", "Kubernetes", "CloudFoundry", "EAI", "Cloud Computing", "YAML", "Spring","Java","Architecture","Cloud","Full Stack"]
 location: "San Francisco, CA"
 

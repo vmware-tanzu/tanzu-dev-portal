@@ -2,6 +2,9 @@
 name: Layla Porter
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Modern Applications"
+- "Application Development"
 skills: [".NET", "Microservices", "Solution Architecture", "TDD", "JavaScript", "Unity3D", "Azure Functions"]
 location: "Milton Keynes, UK"
 photo: "layla-porter.png"

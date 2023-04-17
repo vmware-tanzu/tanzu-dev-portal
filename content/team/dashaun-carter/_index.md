@@ -2,6 +2,8 @@
 name: DaShaun Carter
 description: "Spring Developer Advocate, VMware Tanzu"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Application Development"
 skills: ["Spring","Kubernetes","Azure","Redis","Terraform"]
 location: "Kansas City, MO USA"
 
