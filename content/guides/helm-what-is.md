@@ -21,7 +21,7 @@ level2: Preparing and Deploying Kubernetes Workloads
 
 [Helm](https://helm.sh) is a tool to help you define, install, and upgrade applications running on Kubernetes. At its most basic, Helm is a templating engine that creates Kubernetes manifests. What makes Helm more than that is it can upgrade and scale applications as well.
 
-## Why Is It Important?
+## Why Is Helm Important?
 
 Helm reduces the amount of work you need to do to deploy, upgrade, and manage an application to Kubernetes. This helps limit human error and also creates a more declarative configuration to enable workflows like [GitOps](https://www.weave.works/blog/what-is-gitops-really).
 
@@ -37,12 +37,12 @@ Helm installs _charts_ into Kubernetes, creating a new _release_ for each instal
 
 You can read more about the [Helm architecture here.](https://helm.sh/docs/topics/architecture/)
 
-## How Does Helm Work?
+## What Does Helm Do?
 
 Helm combines the templates and default values in a chart with values you've supplied, along with information from your cluster to deploy and update applications. You can use charts directly from repos, charts you've downloaded, or charts you've created yourself. Helm uses the [Go templating engine](https://golang.org/pkg/text/template/), so if you're familiar with that, you'll understand how the charts work.
 
 As of Helm 3, all of the necessary data is stored locally in your Helm client config or in the cluster where the releases are installed. In previous versions of Helm, it required a component called `tiller` installed on the cluster. That component is no longer needed so Helm is now easier to install and use.
 
-## How Can I Use It?
+## How Can I Use Helm?
 
 If you're ready to start using Helm, check out our guide on [Getting Started With Helm](../helm-gs).

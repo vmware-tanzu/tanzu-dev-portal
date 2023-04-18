@@ -3,7 +3,7 @@ date: '2022-03-9'
 lastmod: '2022-03-01'
 team:
 - Layla Porter
-title: "Build an API gateway with .NET 6, C# and YARP"
+title: "Build an API Gateway with YARP, C# and .NET 6 "
 languages:
 - dotnet
 url: "/blog/build-api-gateway-csharp-yarp"
@@ -103,7 +103,7 @@ The repository already has a "Gateway" project ready for you to use. Open the "G
 </Project>
 ```
 
-## Using YARP as a gateway
+## Using the YARP API Gateway
 
 Now that you have the YARP library available in the application you can set it up with just a few lines of code.
 Open the "Program.cs" file in the "Gateway" project. You will be deleting a lot of the code as it will no longer be required. Below is the complete "Program.cs" file with all the updates and the addition of the code relating to YARP (all the `ReverseProxy` references).
@@ -143,7 +143,7 @@ Yarp is now almost ready to use, you just need to add in the configuration. Ther
 For this post, you will be adding configuration in the "appsettings.json".
 
 
-## Gateway Configuration
+## YARP API Gateway Configuration
 
 When using an API gateway, you’ll have a downstream URL address to an application and an upstream.
 The downstream address is the actual address of the service, with or without endpoints.
