@@ -5,7 +5,6 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-06'
 episode: '20'
 explicit: 'no'
-calendar: true
 guests:
 - Subbarao Mandavilli
 hosts:
@@ -17,8 +16,8 @@ youtube: h5jarvnVhkM
 type: tv-episode
 ---
 
-Years ago, when we built a desktop and mobile applications to support conversations between Northern Trust’s most important clients and their advisors, it was initially seen as innovative. But since then, our competitors have caught up, and our clients’ expectations around these interactions have changed, too.
+Years ago, when Northern Trust built desktop and mobile applications to support conversations between important clients and their advisors, it was seen as innovative. But since then, competitors have caught up, and clients’ expectations around these interactions have changed.
 
-Yet, it was challenging to make the necessary changes to adapt to this new landscape due to this application’s monolithic architecture and aging technologies. In response, we decided to rewrite our existing software and create a new streamlined web application. Existing consultancy firms couldn’t transform; we hired another consultancy to build it, but they weren’t able to deliver. 
+However, monolithic architecture and aging technologies made it difficult to adapt to this new landscape. Northern Trust knew it needed to rewrite its existing software and create a new, streamlined web application. But its existing consultancy firms couldn’t manage the transformation, and yet another consultancy wasn’t able to deliver a solution.
 
-As the expression goes, “Third time’s a charm,” and we’ve finally found the winning formula in our modernization approach. In this session, we’ll talk about the people, process, and technology changes we implemented that have allowed us to build the working software to meet our business’ needs.
+As the expression goes, “Third time’s a charm,” and Northern Trust finally found the winning formula for its modernization approach. In this session, Subbarao Mandavilli, senior vice president of wealth management, talks about the people, process, and technology changes that allowed Northern Trust to build the working software to meet business needs.

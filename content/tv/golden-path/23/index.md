@@ -5,6 +5,7 @@ PublishDate: '2023-01-18T00:00:00-08:00'
 date: '2023-04-18'
 episode: '23'
 explicit: 'no'
+calendar: true
 guests:
 - Paul Bakker
 hosts:
