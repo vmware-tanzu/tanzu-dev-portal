@@ -2,8 +2,8 @@
 <div class="col-12 col-lg-4 mb-4">
     <a href="{{ .RelPermalink }}">
         <div class="card">
-            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}" alt=""><span
-                    class="h5">TODO</span></div>
+            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}"
+                    alt=""><span class="h5">{{ .contentType }}</span></div>
             <div class="card-body">
                 <h5 class="card-title text-dark">{{ .Title }}</h5>
                 <p class="card-text">{{ .Description }}</p>
@@ -13,21 +13,33 @@
 </div>
 {{ end }}
 
+{{ define "advocateCard" }}
+<div class="card card-body">Advocate Info here</div>
+{{ end }}
+
 {{ define "main" }}
+{{/* Vars */}}
+{{ $topicgroups := (slice) }}
+{{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
+{{ $topicgroups = union $topicgroups ( slice .Title )}}
+{{ end }}
+{{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
+
 
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
 <section id="hero" class="td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
-    <div class="container">
-        <div class="container row">
-
+    <div id="home-featured" class="container">
+        <div class="row">
             <h1 class="text-center">{{ .Params.tagline }}</h1>
             <p>{{ .Params.description }}</p>
             <div class="container py-5 px-0">
                 <div class="row mx-auto">
                     {{ range .Params.featured }}
+                    {{ $contentType := .contentType}}
                     {{ with $.Site.GetPage .name }}
-                    {{ template "featuredCard" . }}
+                    {{ template "featuredCard" (dict "Title" .Title "Description" .Description "contentType"
+                    $contentType) }}
                     {{ end }}
                     {{ end }}
                 </div>
@@ -36,16 +48,6 @@
     </div>
 </section>
 
-{{/* Gather topic groups */}}
-{{ $topicgroups := (slice) }}
-{{ range (.Site.GetPage "taxonomyTerm" "topicgroups").Pages }}
-{{ $topicgroups = union $topicgroups ( slice .Title )}}
-{{ end }}
-
-{{/* Gather Advocates */}}
-{{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
-
-{{/* Topics */}}
 <section id="expertise-tabs" class="td-box">
     <div class="container">
         <div id="topics-row-outer"
@@ -90,16 +92,16 @@
 </section>
 
 
-<!-- Featured Learning Paths -->
-<section id="featured-paths" class="row mx-0 td-box td-box--gray-dark td-box--gradient td-box--height-auto pb-0">
-
-    <div class="row justify-content-center w-100">
-        <div class="col-sm-12 pb-4 mb-lg-5 mb-3">
-            <h2 class="text-center">Featured Learning Paths</h2>
+{{/* Advocate List */}}
+<section id="advocate-slider" class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+    <div class="container">
+        <div class="row justify-content-center w-100">
+            <div class="col-sm-12 pb-4 mb-lg-5 mb-3">
+                <h2 class="text-center">Developer Advocates</h2>
+            </div>
         </div>
     </div>
-
-    <div class="row justify-content-center flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
+    <div class="row flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
         {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
         {{ range first 5 $learningpaths }}
         {{ partial "learningpaths-card-home.html" . }}
@@ -109,7 +111,7 @@
 </section>
 
 <script>
-    {{/*  TODO  */}}
+    { {/*  TODO  */ } }
     $("#nav-modern-applications-tab").hover((e) => {
         $("#nav-modern-applications-tab").tab("show");
     });
