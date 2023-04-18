@@ -14,7 +14,18 @@
 {{ end }}
 
 {{ define "advocateCard" }}
-<div class="card card-body">Advocate Info here</div>
+<div class="col-12 col-lg-4">
+    <div class="card">
+        <img src="{{ partial `team-photo-src.html` . }}" alt="{{ .Params.name }} Image" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
+            <p class="card-text">{{ .Params.description }}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{ range .Params.skills }}{{ . }} {{ end }}</small> {{/*TODO Add icons for skills in footer Or remove footer altogether?*/}}
+        </div>
+    </div>
+</div>
 {{ end }}
 
 {{ define "main" }}
@@ -24,6 +35,7 @@
 {{ $topicgroups = union $topicgroups ( slice .Title )}}
 {{ end }}
 {{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
+{{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
 
 
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
@@ -48,10 +60,9 @@
     </div>
 </section>
 
-<section id="expertise-tabs" class="td-box">
+<section id="level-one-tabs" class="td-box">
     <div class="container">
-        <div id="topics-row-outer"
-            class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
+        <div class="row td-box tdbox--gradient td-box--height-auto pt-0 position-relative transition-all">
             <div class="col-12 text-center">
                 <nav>
                     <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
@@ -71,15 +82,6 @@
                         <div class="row">
                             {{ range where $advocatePages "Params.homePageExpertiseSort" "intersect" (slice .) }}
                             <div class="col-12 col-lg-4">
-                                <div class="card">
-                                    <img src="{{ partial `team-photo-src.html` . }}" alt="{{ .Params.name }} Image"
-                                        class="card-img-top">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
-                                        <p class="card-text">{{ .Params.description }}</p>
-                                        <a href="{{ .RelPermalink }}" class="btn btn-primary">TODO</a>
-                                    </div>
-                                </div>
                             </div>
                             {{ end }}
                         </div>
@@ -94,19 +96,14 @@
 
 {{/* Advocate List */}}
 <section id="advocate-slider" class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+    <h2 class="text-center">Developer Advocates</h2>
     <div class="container">
-        <div class="row justify-content-center w-100">
-            <div class="col-sm-12 pb-4 mb-lg-5 mb-3">
-                <h2 class="text-center">Developer Advocates</h2>
-            </div>
+        <div class="row d-flex flex-row flex-nowrap overflow-auto">
+            {{ range $advocatePages }}
+            {{ template "advocateCard" . }}
+            {{ end }}
         </div>
     </div>
-    <div class="row flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
-        {{ $learningpaths := where (where .Site.Pages "Section" "learningpaths") ".Params.featured" true }}
-        {{ range first 5 $learningpaths }}
-        {{ partial "learningpaths-card-home.html" . }}
-        {{ end }}
-
     </div>
 </section>
 
