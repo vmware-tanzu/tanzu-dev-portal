@@ -8,10 +8,8 @@ explicit: 'no'
 calendar: true
 guests:
 - Ankur Kumar
-hosts:
-- Nate Schutta
 title: Transformation Journey of a Wealth Management Portal Towards a Modern Cloud Native Architecture
-linkyoutubechannel: 'yes'
+youtube: guuhX9ampOY
 type: tv-episode
 ---
 

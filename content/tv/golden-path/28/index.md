@@ -12,7 +12,7 @@ guests:
 hosts:
 - DaShaun Carter
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: dXKnlaX56Ao
 type: tv-episode
 ---
 

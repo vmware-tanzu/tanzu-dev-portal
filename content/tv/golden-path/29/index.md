@@ -12,7 +12,7 @@ guests:
 hosts:
 - Tiffany Jernigan
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: C5YKkEiDfjA
 type: tv-episode
 ---
 

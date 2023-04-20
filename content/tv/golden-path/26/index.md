@@ -13,7 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "Distributed Systems Patterns – What is Possible with eBPF Compared to Spring Cloud, Kubernetes, and Service Meshes"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: r0jpL76EZ_A
 type: tv-episode
 ---
 

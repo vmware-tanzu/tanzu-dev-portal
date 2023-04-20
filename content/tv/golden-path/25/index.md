@@ -13,7 +13,7 @@ hosts:
 lastmod: '2020-10-09'
 title: "How to Swim in an Issue Flow"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: WzcwCloZQsg
 type: tv-episode
 ---
 
