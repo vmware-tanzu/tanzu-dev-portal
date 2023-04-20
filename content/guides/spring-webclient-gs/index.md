@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Spring WebClient
-description: How to setup and use the Spring WebClient to make Rest calls.
+description: Learn how to setup and use the Spring WebClient to make REST calls. Explore everything from basic calls to custom return items.
 date: '2022-01-11'
 lastmod: '2022-01-11'
 level1: Building Modern Applications
@@ -122,7 +122,7 @@ this.webClient = WebClient.builder()
 
 For this guide, just put `this.webClient = WebClient.create("url of service");` in the constructor of the `ReactiveWebClient` class.
 
-### Making calls
+### Making calls with WebClient
 
 Let's look at how to make a basic call with the `webClient` we just created. Place this method in your `ReactiveWebClient` class.
 
@@ -178,7 +178,7 @@ public Mono<ReturnObject> defaultStatus(){
 At this point if we start up the dummy wait app and our reactive example app, we should be able to make a simple call to our service that will return us a list of UUIDs. This should contain a single UUID since that's all we coded above.
 ![img](images/basicCall.png)
 
-### Handling custom return items and errors
+### Custom return items and WebClient error handling
 
 Well, we got the basic call down, but if you've been developing for a while, you'll note that there are plenty of times where we'll want to return some custom headers or handle errors to return something useful to our callers. Let's start with how to customize our return status and headers.
 
@@ -304,6 +304,8 @@ public Mono<ReturnedItem> nonStatusError(){
 
 Then add the following method into the `ReactiveWebClient` class.
 
+##### WebClient .onErrorMap() method
+
 ```java
 public Mono<ReturnedItem> nonStatusError(String host, int port, String path){
         return webClient.get().uri(uriBuilder -> uriBuilder.host(host).port(port).path(path).build()).retrieve()
@@ -369,6 +371,6 @@ And here's what we get:
 
 Just as expected, even though we have error mapping at the end of our call, our `BadRequestException` has made it out of the call chain unchanged.
 
-### Wrapping up
+### Wrapping up Spring WebClient
 
 You should now have a good understanding of how to use the Spring WebClient class to make REST calls in your services. From here, you should play around with the methods in the WebClient to see how to make either a PUT or POST call (hint: look up the `.bodyValue()` method). Also, due to the change from the normal synchronous style of old I'd recommend working with the Mono class to get a feel for how that works. It's a different mind-set and will require new ways to unit test and understanding how to make sure you get the most out of using non-blocking code.

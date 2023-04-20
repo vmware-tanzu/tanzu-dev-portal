@@ -1,7 +1,6 @@
 ---
 date: '2020-04-16'
-description: Discover the basics and importance of Spring Cloud Gateway, a library
-  for building API gateways on top of Spring and Java.
+description: Discover the basics and importance of Spring Cloud Gateway, a library for building API gateways on top of Spring and Java.
 lastmod: '2021-03-23'
 linkTitle: Spring Cloud Gateway
 patterns:
@@ -15,6 +14,7 @@ tags:
 team:
 - Brian McClain
 title: What is Spring Cloud Gateway?
+metaTitle: What is Spring Cloud Gateway? Exploring the API Library
 oldPath: "/content/guides/spring/scg-what-is.md"
 aliases:
 - "/guides/spring/scg-what-is"
@@ -24,7 +24,7 @@ level2: Frameworks and Languages
 
 Spring Cloud Gateway provides a library for building API gateways on top of Spring and Java. It provides a flexible way of routing requests based on a number of criteria, as well as focuses on cross-cutting concerns such as security, resiliency, and monitoring.
 
-## Why Is It Important? 
+## Why Is Spring Cloud Gateway Important?
 
 An API gateway can help simplify the communication between a client and a service, whether that be between a user's web browser and a server miles away, or between a frontend application and the backend services that it relies on.
 
@@ -34,7 +34,7 @@ An API gateway allows you to implement the complexity separately from the client
 
 As luck would have it, [Spring Cloud Gateway](https://tanzu.vmware.com/content/blog/microservices-essentials-getting-started-with-spring-cloud-gateway) benefits from the entirety of the Spring ecosystem. Even better, the Spring ecosystem has done a lot of work to handle this sort of complexity. From security to stability to monitoring, the Spring ecosystem can do a lot for you and your API gateway.
 
-## How Does It Work? 
+## How Spring Cloud Gateway Architecture Works
 
 Spring Cloud Gateway is a library for building an API gateway, so it looks like any another Spring Boot application. If you're a Spring developer, you'll find it's very easy to [get started with Spring Cloud Gateway](../scg-gs) with just a few lines of code.
 

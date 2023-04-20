@@ -1,7 +1,6 @@
 ---
 date: 2020-03-11
-description: Use Thanos and Grafana to collect metrics from Prometheus on multiple
-  Kubernetes clusters.
+description: Discover how to implement multi-cluster monitoring with Prometheus. Our developer guide covers best practices and tips for success.
 lastmod: '2021-02-24'
 linkTitle: Multi-Cluster Monitoring
 parent: Platform Observability
@@ -19,6 +18,7 @@ team:
 - Vikram Vaswani
 - Juan Ariza
 title: Create a Multi-Cluster Monitoring Dashboard with Thanos, Grafana and Prometheus
+metaTitle: Multi-Cluster Monitoring with Prometheus, Thanos & Grafana
 weight: 1800
 oldPath: "/content/guides/kubernetes/prometheus-multicluster-monitoring.md"
 aliases:
@@ -157,7 +157,7 @@ Repeat the steps shown above for the second "data producer" cluster. Use a
 different value for the *prometheus.externalLabels.cluster* parameter, such as
 *data-producer-1*.
 
-## Step 2: Install and configure Thanos
+## Step 2: Install and configure Thanos on your Kubernetes cluster
 
 The next step is to install Thanos in the "data aggregator" cluster and
 integrate it with Alertmanager and MinIO as the object store.
@@ -227,7 +227,7 @@ integrate it with Alertmanager and MinIO as the object store.
 
   Confirm also that each service displays a unique *cluster* labelset, as configured in [Step 1](#step-1-install-the-prometheus-operator-on-each-cluster).
 
-## Step 3: Install Grafana
+## Step 3: Install Grafana on the same "data aggregator" cluster
 
 The next step is to install Grafana, also on the same "data aggregator" cluster
 as Thanos.
@@ -276,7 +276,7 @@ Follow these steps:
   ![Grafana test](images/grafana-success.png)
 
 
-## Step 5: Test the system
+## Step 5: Test the multi-cluster monitoring system
 
 At this point, you can start deploying applications into your "data producer"
 clusters and collating the metrics in Thanos and Grafana. For demonstration
