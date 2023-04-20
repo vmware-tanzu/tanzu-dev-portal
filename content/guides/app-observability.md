@@ -15,7 +15,7 @@ tags:
 - Kubernetes
 ---
 
-The term "observability" in control theory states that the system is observable
+The term "[observability](https://tanzu.vmware.com/what-is-observability)" in control theory states that the system is observable
 if the internal states of the system and its behavior can be determined by only
 looking at its inputs and outputs.
 

@@ -4,7 +4,7 @@ description: Discover how to gather both standard and custom metrics from Spring
   using Prometheus and visualize them in Grafana.
 lastmod: '2021-03-07'
 linkTitle: Prometheus and Grafana
-metaTitle: Gather Metrics with Spring Boot using Prometheus & Grafana
+metaTitle: Monitor Spring Boot Metrics with Prometheus & Grafana
 patterns:
 - Observability
 tags:
@@ -92,7 +92,7 @@ That’s it! Upon running your application, you’ll see a new endpoint availabl
 
 Once started, you’ll find a huge list of metrics made available at [http://localhost:8080/actuator/prometheus](http://localhost:8080/actuator/prometheus)!
 
-## Adding a Custom Metric
+## Adding a Custom Spring Boot Metric with Prometheus
 
 Insight into the machine running your application and the JVM it’s on is a great start. But what if you want to track custom metrics? If your application is running a website, maybe you want to track how many page hits certain endpoints are receiving, or how many times a resource with a specific ID is requested. 
 

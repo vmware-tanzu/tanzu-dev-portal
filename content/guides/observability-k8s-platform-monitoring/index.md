@@ -17,7 +17,7 @@ level2: Monitoring and Observing Kubernetes
 tags: []
 ---
 
-This document details platform monitoring and alerting for Kubernetes clusters,
+This document details [platform monitoring and alerting for Kubernetes](https://tanzu.vmware.com/kubernetes-monitoring) clusters,
 such as those provided by Tanzu Kubernetes Grid (TKG). It covers architectural
 considerations, best practices, and will provide guidance for offering alerting
 and monitoring to resident applications . This document represents how the

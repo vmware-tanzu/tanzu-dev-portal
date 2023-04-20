@@ -1,9 +1,9 @@
 ---
 date: '2021-10-22'
 lastmod: '2021-10-22'
-title: Working With the Spring Distributed Lock
+title: How To Implement a Spring Distributed Lock
 linkTitle: Working With the Spring Distributed Lock
-description: A simple demonstration of how to implement a Spring Distributed Lock with in your Spring application
+description: Run through a simple demonstration of how to implement a Spring Distributed Lock within your Spring application.
 patterns:
   - API
 tags:
@@ -38,7 +38,7 @@ Before you begin, you are going to need the following:
 
 Here is a [completed example on GitHub](https://github.com/estand64/distributed-lock) for you to view.
 
-## Package Imports
+## Package Spring Integration Lock Imports
 
 To package imports, do the following:
 
@@ -107,7 +107,7 @@ To package imports, do the following:
 
 Once you import the necessary packages, you can start setting up your code. The first order of business is to create the lock repository beans that will be used to grab the locks later.
 
-### Redis
+### Redis Lock for Spring Boot
 
 With the Redis version, you need to create a `String` name to represent the `LockRegistry`. To learn more about how the `@Bean` provides access to an object [look here](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-spring-beans-and-dependency-injection.html).
 
@@ -120,7 +120,7 @@ public RedisLockRegistry redisLockRegistry(RedisConnectionFactory redisConnectio
 }
 ```
 
-### JDBC
+### Java (JDBC) Lock for Spring Boot
 
 Do the following:
 
@@ -333,7 +333,7 @@ With this being the output in the logs:
 
 Here we can see that one of threads was able to grab the lock where then the other failed since it timed out.
 
-## Testing
+## Testing your Spring Distributed Lock
 
 Mocking these out is easy. The only thing to remember is that you also need a mocked lock to give back to the call of `.obtain()`.
 

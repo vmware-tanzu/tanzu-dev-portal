@@ -1,9 +1,8 @@
 ---
 date: '2022-12-21'
-description: This guide will introduce you to Micrometer in Spring Boot 3, gathering metrics from WebFlux, Reactive streams, and producing output to a host of observation infrastructure.
+description: Learn how to build observable, reactive Spring Boot applications. Our developer guide covers key concepts and best practices.
 lastmod: '2022-12-21'
 linkTitle: Reactive Micrometer Observability with Spring Boot 3
-metaTitle: Using the Micrometer Observation API in a reactive Spring Boot 3 application
 patterns:
 - API
 tags:
@@ -19,7 +18,7 @@ tags:
 - Prometheus
 team:
 - Mario Gray
-title: Reactive Observability in Spring Boot 3
+title: Reactive Observability in Spring Boot 3 with Micrometer
 oldPath: "/content/guides/spring/observability-reactive-spring-boot-3.md"
 aliases:
 - "/guides/microservices/observability-reactive-spring-boot-3"
@@ -102,7 +101,7 @@ A few things are happening in this code:
  2. To better observe our invocation, add low cardinality keys. These are keys whose value will have a bounded number of possible values. For high cardinality keys - having unbounded possible values - use the `.highCardinalityKeyValue()` method.
  3. Rather than manually calling `.start()` and `.stop()`, use the `observe(Runnable)` method to isolate the monitored code in its own `Runnable` closure. You can also use the `observeChecked(CheckedRunnable)` for methods that throw Exceptions.
 
-## How Micrometer observation works
+## How Micrometer tracing and observation works
 
 An [ObservationHandler](https://github.com/micrometer-metrics/micrometer/blob/main/micrometer-observation/src/main/java/io/micrometer/observation/ObservationHandler.java) wraps the `Observation` lifecycle and execute its methods on lifecycle events. An `ObservationHandler` reacts only to supported implementations of an `Observation.Context` - this context passes state between handler methods - and can create all kinds of instrumentation like metrics, spans, or logs by reacting to the lifecycle events of an observation, such as:
 
@@ -172,7 +171,7 @@ The `ObservationTextPublisher` shows each stage an Observation went through, alo
 
 Now that we have reviewed the basics, let's move on and put together an example using the reactive Spring WebFlux and Micrometer.
 
-## The reactive sample setup
+## The reactive Spring Boot 3 sample setup
 
 Let's create an HTTP Controller application. But, first, go to our second favorite website, the Spring Initializr - [start dot spring dot io](https://start.spring.io), and make the following selections:
 
@@ -284,7 +283,7 @@ class GreetingController {
 
 > **_TIP:_** [WebFluxObservationAutoConfiguration](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-actuator-autoconfigure/src/main/java/org/springframework/boot/actuate/autoconfigure/observation/web/reactive/WebFluxObservationAutoConfiguration.java) is the autoconfiguration class for observation in WebFlux. It includes all of the `ObservationHandler` and `WebFilter` instances needed to observe (draw traces and meters from) HTTP requests and responses.
 
-## Reactive stream observation
+## Reactive stream observation with reactor-core-micrometer
 
 Project reactor comes with [built-in support for Micrometer](https://github.com/reactor/reactor-core/blob/main/docs/asciidoc/metrics.adoc) instrumentation implementations.
 
