@@ -90,20 +90,27 @@
                         <th scope="col">Level 1</th>
                         <th scope="col">Level 2</th>
                         <th scope="col">Tags</th>
+                        <th scope="col">Url</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {{ range $topicGroups }}
+                    {{ $topicName := .name }}
                     {{ range $.Site.Pages }}
+                    {{ if or (eq .Params.level1 $topicName) (eq .Params.level2 $topicName)}}
                     <tr>
                         <th scope="row">{{ .Title }}</th>
                         <td>{{ .Params.level1 }}</td>
                         <td>{{ .Params.level2 }}</td>
                         <td>{{ .Params }}</td>
+                        <td>{{ .Permalink }}</td>
                     </tr>
+                    {{ end }}
+                    {{ end }}
                     {{ end }}
                 </tbody>
             </table>
-            {{ range $topicGroups }}
+            {{/*  {{ range $topicGroups }}
             <div class="row mb-5 transition-all">
                 <div class="col-xl-3 col-12 d-flex d-xl-block justify-content-center mb-xl-0 mb-4">
                     <h2>{{ .name }}</h2>
@@ -115,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            {{ end }}
+            {{ end }}  */}}
         </div>
     </div>
 </section>
