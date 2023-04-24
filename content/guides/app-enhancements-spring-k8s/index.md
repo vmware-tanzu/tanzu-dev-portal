@@ -9,7 +9,9 @@ tags:
 - Microservices
 team:
 - Andriy Kalashnykov
-title: Microservices with Spring Cloud Kubernetes Reference Architecture
+title: A Microservices Guide for Spring Cloud Kubernetes Reference Architecture
+metaTitle: Spring Cloud Kubernetes Reference Architecture Guide
+description: Discover how to enhance your Spring applications for Kubernetes. Get the most out of your deployments with our expert developer guide.
 oldPath: "/content/guides/kubernetes/app-enhancements-spring-k8s.md"
 aliases:
 - "/guides/kubernetes/app-enhancements-spring-k8s"

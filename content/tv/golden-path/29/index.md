@@ -12,8 +12,10 @@ guests:
 hosts:
 - Tiffany Jernigan
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: C5YKkEiDfjA
 type: tv-episode
+linktwitchyoutubechannels: yes
+
 ---
 
 Problem solving is central to an agile product team. But how do you know which problems to solve? More importantly, how can you tell which problems you shouldn't? Lean product management is all about reducing waste and maximizing value. But waste still abounds. Features are built that never ship. Architecture-up-front prepares teams for a future of scale that never happens. Or, long after the performance problem has been addressed, a performance team is still laser-focused on improving a number that’s been good enough for a year.

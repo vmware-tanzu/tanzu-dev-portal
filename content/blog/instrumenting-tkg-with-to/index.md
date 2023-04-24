@@ -10,7 +10,7 @@ date: '2022-05-24'
 publishDate: '2022-05-24'
 ---
 
-Tanzu Observability enables you to monitor your Kubernetes infrastructure metrics (e.g., containers, pods, etc.) from Wavefront dashboards, as well as create alerts from those dashboards. You can also automatically collect metrics from applications and workloads using built-in plug-ins such as Prometheus, Telegraf, etc. 
+Tanzu Observability enables you to [monitor your Kubernetes infrastructure](https://tanzu.vmware.com/kubernetes-monitoring) metrics (e.g., containers, pods, etc.) from Wavefront dashboards, as well as create alerts from those dashboards. You can also automatically collect metrics from applications and workloads using built-in plug-ins such as Prometheus, Telegraf, etc. 
 
 Tanzu Observability recognizes Tanzu Kubernetes Grid (TKG) clusters just like any other Kubernetes cluster. For more information, read this [documentation](https://docs.wavefront.com/wavefront_kubernetes.html).
 

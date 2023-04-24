@@ -14,7 +14,7 @@ team:
 languages:
 ---
 
-In the [first part of this series](/blog/cloud-native-security-for-the-rest-of-us-p1/), we introduced some concepts specific to Cloud Native security, in particular the "4 C's of Cloud Native security". We gave a number of leads and insights about securing Kubernetes as a platform. In this next part, we're going to roll on with the security topics, and tackle permission management, secrets management, and more!
+In the [first part of this series](/blog/cloud-native-security-for-the-rest-of-us-p1/), we introduced some concepts specific to [Cloud Native security](https://tanzu.vmware.com/cloud-native-security), in particular the "4 C's of Cloud Native security". We gave a number of leads and insights about securing Kubernetes as a platform. In this next part, we're going to roll on with the security topics, and tackle permission management, secrets management, and more!
 
 ## User Management and Permissions
 When we develop with a local Kubernetes cluster like minikube or KinD, we usually don't have to worry too much about permissions. In these clusters, we typically have access to everything. We are `cluster-admin` or `kubernetes-admin` or some equivalent of the good old `root` user on UNIX systems. (Technically, we belong to the `system:masters` group, which is granted the `cluster-admin` role.)

@@ -15,7 +15,7 @@ tags:
 - Kubernetes
 ---
 
-Observability is crucial for successfully operating a complex software system
+[Observability](https://tanzu.vmware.com/what-is-observability) is crucial for successfully operating a complex software system
 such as Kubernetes. With this in mind, Kubernetes offers multiple facilities
 that enable operators to observe the system at runtime. With that said, the onus
 is on the platform operator to consume, evaluate, and act on the information

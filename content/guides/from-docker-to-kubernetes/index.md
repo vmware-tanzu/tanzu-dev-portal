@@ -3,7 +3,8 @@ date: '2021-02-26'
 lastmod: '2021-02-26'
 linkTitle: From Docker to Kubernetes
 parent: What is Kubernetes?
-title: Getting Started with Docker Containers on Kubernetes
+title: Getting Started with Deploying Docker Containers to Kubernetes
+metaTitle: How to Deploy Docker Containers to Kubernetes
 tags:
 - Getting Started
 - Kubernetes
@@ -14,7 +15,7 @@ aliases:
 - "/guides/kubernetes/from-docker-to-kubernetes"
 level1: Modern App Basics
 level2: Kubernetes Platform
-description: Build your first container and deploy it to Kubernetes
+description: Explore how to containerize a simple application with Docker and deploy it on Kubernetes. Discover the basics today.
 faqs:
   faq:
   - question: What is Docker?
@@ -50,7 +51,7 @@ A **Docker container image** is a lightweight, standalone, executable software p
 * The environment in which the image is executed
 * A set of instructions for running the image
 
-## Docker and Kubernetes
+## How to Run a Docker Container in Kubernetes
 
 A containerized application image along with a set of declarative instructions can be passed to Kubernetes to deploy an application. The containerized app instance running on the Kubernetes node derives the container runtime from the Kubernetes node along with compute, network, and storage resources, if needed.
 

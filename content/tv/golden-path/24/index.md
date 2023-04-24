@@ -13,8 +13,10 @@ hosts:
 lastmod: '2020-10-09'
 title: "Automated Refactoring for Spring-Based Applications"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: 9v927WQ7NWM
 type: tv-episode
+linktwitchyoutubechannels: yes
+
 ---
 
 This talk will focus on how engineering teams can leverage automated refactoring originated at Netflix to greatly reduce the time and effort required to migrate to new versions of Spring and Spring Boot.
