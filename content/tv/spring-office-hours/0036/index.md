@@ -9,7 +9,7 @@ explicit: 'no'
 hosts:
     - DaShaun Carter
 minutes: 60
-youtube: 'db7GW2rIblM'
+youtube: 'p3usW1LpauI'
 twitch: 'vmwaretanzu'
 ---
 
