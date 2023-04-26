@@ -2,6 +2,7 @@
 title: 'Spring Office Hours'
 type: 'tv-show'
 streaming: 'youtube'
+channel: 'https://www.youtube.com/@SpringSourceDev'
 id: 'spring-office-hours'
 og_image: '/images/og/TanzuTV.png'
 weight: 3
