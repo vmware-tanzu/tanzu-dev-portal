@@ -1,7 +1,7 @@
 ---
 name: "{{ replace .Name "-" " " | title }}"
 description: "Job Title"
-photo: ""
+# photo: "" # Optional - Use photo name (e.g. first-last.png) and store in images/ directory at root of team member directory (i.e. content/team/first-last/images/first-last.png)
 roles: ["author","advocate"]
 skills: ["Spring", "Kubernetes"]
 location: ""
