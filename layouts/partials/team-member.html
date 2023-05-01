@@ -37,15 +37,15 @@
         {{ end }}
 
         {{ if eq .display "summary" }}
-            <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             {{ .context.Summary }}
         {{ else if eq .display "tv" }}
             {{ if not .context.Params.hidden }}
                 {{ .context.Summary }} 
-                <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+                <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             {{ end }}
         {{ else }}
-            <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             <div class='team-body-copy'>
                 {{ .context.Content }}
             </div>
