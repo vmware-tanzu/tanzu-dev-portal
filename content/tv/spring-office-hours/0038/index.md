@@ -22,3 +22,4 @@ Immerse yourself in this interactive experience by tuning in live on YouTube, wh
 -   [SpringOne Registration](https://springone.io/)
 -   [Spring Release Calendar](https://calendar.spring.io/)
 -   [AWS Lambda now supports Java 17](https://aws.amazon.com/blogs/compute/java-17-runtime-now-available-on-aws-lambda/)
+-   [Spring Session](https://docs.spring.io/spring-session/reference/)
