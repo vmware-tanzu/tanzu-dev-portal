@@ -1,21 +1,44 @@
 {{ define "main" }}
-
 {{ partial "hero.html" . }}
-
 <div class="td-content">
-	<div class='container'>
-		{{ .Content }}
-		<br/>
-	        {{ partial "team-index.html" . }}
-		{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
-			{{ partial "feedback.html" .Site.Params.ui.feedback }}
-			<br />
-		{{ end }}
-		{{ if (.Site.DisqusShortname) }}
-			<br />
-			{{ partial "disqus-comment.html" . }}
-		{{ end }}
-		<div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
-	</div>
+    <div class='container'>
+        <div class="section-index">
+            {{ $pages := sort (where .Site.Pages "Section" "team") "Params.name" }}
+            {{ $parent := .Page }}
+            <div class="row">
+                {{ range $pages }}
+                {{ if and .Params.name (not .Params.external) (not .Params.hidden) }}
+                <div class="person col-lg-4 mb-0 mb-lg-4 mb-3 col-md-6 col-12">
+                    <div class="h-100 card py-3 px-4 text-left text-white rounded-0 bg-gray-dark d-inline-block w-100">
+                        <div class="row">
+                            <div class="col-3 pr-0">
+                                <a onclick="" href="{{ .RelPermalink }}">
+                                    <div class=''
+                                        style='background-image: url({{ partial "team-photo-src.html" . }}); height:69px;background-size:cover;background-position:center' />
+                            </div>
+                            </a>
+                        </div>
+                        <div class="col-9 pr-0 pl-3">
+                            <h2 class="h4 pt-0"><a href="{{ .RelPermalink }}">{{- .Params.name -}}</a></h2>
+                            <p class="job">{{- .Params.description -}}</p>
+                            <p class="location mb-2">{{- .Params.location -}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    {{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) }}
+    {{ partial "feedback.html" .Site.Params.ui.feedback }}
+    <br />
+    {{ end }}
+    {{ if (.Site.DisqusShortname) }}
+    <br />
+    {{ partial "disqus-comment.html" . }}
+    {{ end }}
+    <div class="text-muted mt-5 pt-3">{{ partial "page-meta-lastmod.html" . }}</div>
+</div>
 </div>
 {{ end }}
