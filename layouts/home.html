@@ -21,7 +21,7 @@
 {{ else }}
 {{ $image = .Resources.Get (print "images/" (urlize .Params.name) ".jpg") }}
 {{ end }}
-{{ $image = $image.Resize "400x400" }}
+{{ $image = $image.Resize "600x600" }}
 <div class="col-12 col-lg-4">
     <div class="card">
         <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }} Image" class="card-img-top">
@@ -113,19 +113,6 @@
     </div>
     </div>
 </section>
-
-<script>
-    { {/*  TODO  */ } }
-    $("#nav-modern-applications-tab").hover((e) => {
-        $("#nav-modern-applications-tab").tab("show");
-    });
-    $("#nav-application-development-tab").hover((e) => {
-        $("#nav-application-development-tab").tab("show");
-    });
-    $("#nav-kubernetes-platform-tab").hover((e) => {
-        $("#nav-kubernetes-platform-tab").tab("show");
-    });
-</script>
 
 <script>sendAmplitudeEventOnLoad('home viewed', { 'url path': window.location.pathname });</script>
 
