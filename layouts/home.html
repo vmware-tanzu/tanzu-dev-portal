@@ -38,17 +38,17 @@
 </div>
 {{ end }}
 
-{{ define "topicCard" }}
-<div class="topic-card flex-315 td-box td-box-dark mb-lg-0 mb-3">
-    <a href="{{ .RelPermalink }}"
-        class="h-100 d-flex flex-column justify-content-center align-items-center py-4 py-lg-5 px-3">
-        <img src="/developer/images/icons/new-icon-{{ .Params.icon }}.svg" alt="" class="mb-2">
-        <h3 class="h3 pt-0 link mt-3 text-white mb-0">
-            {{ .Params.grouptitle }}
-        </h3>
-        <p class="mb-2 mb-lg-4 text-left text-center py-0 px-2">
-            {{ .Description }}
-        </p>
+{{ define "latestCard" }}
+<div class="col-12 col-lg-4 mb-4">
+    <a href="{{ .RelPermalink }}">
+        <div class="card">
+            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}"
+                    alt=""><span class="h5">{{ .Type }}</span></div>
+            <div class="card-body">
+                <h5 class="card-title text-dark">{{ .Title }}</h5>
+                <p class="card-text">{{ .Description }}</p>
+            </div>
+        </div>
     </a>
 </div>
 {{ end }}
@@ -57,7 +57,11 @@
 
 {{/* VARS */}}
 {{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
-{{ $topicsPages := (.Site.GetPage "taxonomyTerm" "topics").Pages }}
+{{ $advocates := slice }}
+{{ range $advocatePages }}
+{{ $advocates = $advocates | append .Params.name }}
+{{ end }}
+{{ $latestPages := first 3 (sort (where $.Site.RegularPages "Params.team" "intersect" $advocates) "Date" "desc" ) }}
 
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
@@ -83,28 +87,19 @@
     </div>
 </section>
 
-<section id="home-topics" class="td-box">
-    <div id="topics-row-outer"
-        class="row td-box td-box--gradient td-box--height-auto pt-0 position-relative transition-all">
-        {{ range .Params.topicGroups }}
-        <div class="row mb-5 transition-all">
-            <div class="col-xl-3 col-12 d-flex d-xl-block justify-content-center mb-xl-0 mb-4">
-                <h2>{{ .name }}</h2>
-            </div>
-            <div class="col-xl-9 col-12 mb-xl-0 mb-lx-4 mb-2">
-                <div id="{{ .name | urlize }}" class="row justify-content-between w-100 td-box topics-row">
-                    {{ range where $topicsPages "Params.topicgroups" .name }}
-                    {{ template "topicCard" . }}
-                    {{ end }}
-                </div>
-            </div>
+<section id="home-latest" class="td-box">
+    <div id="home-latest" class="container">
+        <h2 class="text-center">Latest Advocate Content</h2>
+        <div class="row d-flex flex-row flex-nowrap">
+            {{ range $latestPages }}
+            {{ template "latestCard" . }}
+            {{ end }}
         </div>
-        {{ end }}
     </div>
 </section>
 
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-    <h2 id="home-advocates" class="text-center">Developer Advocates</h2>
+    <h2 id="home-advocates" class="text-center">Our Developer Advocates</h2>
     <div class="container-fluid">
         <div class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
