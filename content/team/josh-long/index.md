@@ -17,9 +17,6 @@ facebook: ""
 pinterest: ""
 instagram: ""
 youtube: "UCg6OxemHTt-gKawaohgA00w"
-# Metadata
-include_host:
-- cloud-native-crew
 ---
 <!-- markdownlint-disable MD041 MD033-->
 [Josh (@starbuxman)](https://twitter.com/starbuxman) became the first Spring Developer Advocate in 2010 and hasn't looked back! He contributes (bugs, mostly..) to _numerous_ open source projects, including Spring Boot and Spring Cloud.
