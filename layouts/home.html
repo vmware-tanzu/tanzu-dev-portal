@@ -1,17 +1,4 @@
 {{/* TEMPLATES */}}
-{{ define "showsCard" }}
-<div class="col-12 col-lg-4 mb-4">
-    <a href="{{ .RelPermalink }}">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title text-dark">{{ .Title }}</h5>
-                <p class="card-text">{{ .Description }}</p>
-            </div>
-        </div>
-    </a>
-</div>
-{{ end }}
-
 {{ define "advocateCard" }}
 {{ $image := "" }}
 {{ if .Params.photo }}
@@ -30,21 +17,6 @@
             <div class="card-footer">
                 <small class="text-muted">{{ range .Params.skills }}{{ . }} {{ end }}</small> {{/*TODO Add icons for
                 skills in footer Or remove footer altogether?*/}}
-            </div>
-        </div>
-    </a>
-</div>
-{{ end }}
-
-{{ define "contentCard" }}
-<div class="col-12 col-lg-4 mb-4">
-    <a href="{{ .RelPermalink }}">
-        <div class="card">
-            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}"
-                    alt=""><span class="h5">{{ .Type }}</span></div>
-            <div class="card-body">
-                <h5 class="card-title text-dark">{{ .Title }}</h5>
-                <p class="card-text">{{ .Description }}</p>
             </div>
         </div>
     </a>
@@ -75,9 +47,9 @@
             </div>
             <p>{{ .Params.description }}</p>
             <div class="container py-5 px-0">
-                <div class="row mx-auto">
+                <div class="row">
                     {{ range $showPages }}
-                    {{ template "showsCard" . }}
+                    {{ partial "tv-card" . }}
                     {{ end }}
                 </div>
             </div>
@@ -86,11 +58,12 @@
 </section>
 
 <section id="home-latest" class="td-box">
+    <h2 class="text-center">Latest Advocate Content</h2>
     <div id="home-latest" class="container">
-        <h2 class="text-center">Latest Advocate Content</h2>
         <div class="row d-flex flex-row flex-nowrap">
             {{ range $contentPages }}
-            {{ template "contentCard" . }}
+            {{ partial (printf "%s-card.html" .Section) . }}
+            {{ .Params.team }}
             {{ end }}
         </div>
     </div>
