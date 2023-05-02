@@ -25,6 +25,6 @@ Whether you're a software engineer, an architect, or a business leader looking t
 
 More
 
-Read the original blog post: https://tanzu.vmware.com/content/blog/architecture-path-to-mainframe-modernization
+Read the original blog post: https://tanzu.vmware.com/content/blog/architecture-path-to-mainframe-modernization?utm_source=cote&utm_campaign=devrel&utm_content=TanzuTalk20230428_MF
 Fouad’s Blog: https://www.fouadhamdi.com/
 Fouad in LinkedIn: https://www.linkedin.com/in/hamdifouad/
