@@ -11,9 +11,17 @@
                         <div class="row">
                             <div class="col-3 pr-0">
                                 <a onclick="" href="{{ .RelPermalink }}">
-                                    <div class=''
-                                        style="background-image: url('{{ partial `team-photo-src.html` . }}'); height:69px;background-size:cover;background-position:center" />
-                            </div>
+                                    {{ $image := "" }}
+                                    {{ if isset .Params "photo" }}
+                                    {{ $image = .Resources.Get (print "images/" .Params.photo) }}
+                                    {{ else }}
+                                    {{ $image = .Resources.Get (print "images/" (urlize .Params.name) ".jpg") }}
+                                    {{ end }}
+                                    {{ $image := $image.Fill "300x290"}}
+                                    <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }}">
+                                    {{/*  <div class=''
+                                        style="background-image: url('{{ $image.RelPermalink }}'); height:69px;background-size:cover;background-position:center" />
+                            </div>  */}}
                             </a>
                         </div>
                         <div class="col-9 pr-0 pl-3">
