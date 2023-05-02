@@ -23,17 +23,18 @@
 {{ end }}
 {{ $image = $image.Resize "600x600" }}
 <div class="col-12 col-lg-4">
-    <div class="card">
-        <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }} Image" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
-            <p class="card-text">{{ .Params.description }}</p>
+    <a href="{{ .RelPermalink }}">
+        <div class="card">
+            <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }} Image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{ range .Params.skills }}{{ . }} {{ end }}</small> {{/*TODO Add icons for
+                skills in footer Or remove footer altogether?*/}}
+            </div>
         </div>
-        <div class="card-footer">
-            <small class="text-muted">{{ range .Params.skills }}{{ . }} {{ end }}</small> {{/*TODO Add icons for skills
-            in footer Or remove footer altogether?*/}}
-        </div>
-    </div>
+    </a>
 </div>
 {{ end }}
 
