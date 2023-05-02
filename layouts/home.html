@@ -1,10 +1,8 @@
 {{/* TEMPLATES */}}
-{{ define "featuredCard" }}
+{{ define "showsCard" }}
 <div class="col-12 col-lg-4 mb-4">
     <a href="{{ .RelPermalink }}">
         <div class="card">
-            <div class="card-type-id"><img class="d-inline-block" src="{{ `images/icons/icon-book.svg` | relURL }}"
-                    alt=""><span class="h5">{{ .contentType }}</span></div>
             <div class="card-body">
                 <h5 class="card-title text-dark">{{ .Title }}</h5>
                 <p class="card-text">{{ .Description }}</p>
@@ -38,7 +36,7 @@
 </div>
 {{ end }}
 
-{{ define "latestCard" }}
+{{ define "contentCard" }}
 <div class="col-12 col-lg-4 mb-4">
     <a href="{{ .RelPermalink }}">
         <div class="card">
@@ -61,7 +59,11 @@
 {{ range $advocatePages }}
 {{ $advocates = $advocates | append .Params.name }}
 {{ end }}
-{{ $latestPages := first 3 (sort (where $.Site.RegularPages "Params.team" "intersect" $advocates) "Date" "desc" ) }}
+{{ $showPages := sort (where (where .Site.RegularPages "Section" "tv") "Params.hosts" "intersect" $advocates) "Date"
+"desc" }}
+{{ $showPages = where $showPages "Date" "le" now }}
+{{ $showPages = first 3 $showPages }}
+{{ $contentPages := first 3 (sort (where $.Site.RegularPages "Params.team" "intersect" $advocates) "Date" "desc" ) }}
 
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
@@ -74,12 +76,8 @@
             <p>{{ .Params.description }}</p>
             <div class="container py-5 px-0">
                 <div class="row mx-auto">
-                    {{ range .Params.featured }}
-                    {{ $contentType := .contentType}}
-                    {{ with $.Site.GetPage .name }}
-                    {{ template "featuredCard" (dict "Title" .Title "Description" .Description "contentType"
-                    $contentType) }}
-                    {{ end }}
+                    {{ range $showPages }}
+                    {{ template "showsCard" . }}
                     {{ end }}
                 </div>
             </div>
@@ -91,8 +89,8 @@
     <div id="home-latest" class="container">
         <h2 class="text-center">Latest Advocate Content</h2>
         <div class="row d-flex flex-row flex-nowrap">
-            {{ range $latestPages }}
-            {{ template "latestCard" . }}
+            {{ range $contentPages }}
+            {{ template "contentCard" . }}
             {{ end }}
         </div>
     </div>
