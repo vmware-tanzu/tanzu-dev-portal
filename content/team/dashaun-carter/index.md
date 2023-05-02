@@ -13,9 +13,6 @@ github: "dashaun"
 youtube: "@dashaun"
 twitch: "javagrunt"
 
-# Metadata
-include_host:
-- spring-office-hours
 ---
 <!-- markdownlint-disable MD041-->
 DaShaun is a husband, father of four, volunteer, struggling athlete and Spring Developer Advocate at VMware Tanzu.

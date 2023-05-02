@@ -208,7 +208,7 @@ practice.%:
 
 #team: @ Creates a new team page. example: make team.firstname-lastname
 team.%:
-	@hugo new team/$(call GET_FILE_NAME,$*,1)/_index.md -k team-member
+	@hugo new team/$(call GET_FILE_NAME,$*,1)/index.md -k team-member
 	@mkdir content/team/$(call GET_FILE_NAME,$*,1)/images
 
 #audit: @ Runs a content audit on all guides and blogs. example: make audit

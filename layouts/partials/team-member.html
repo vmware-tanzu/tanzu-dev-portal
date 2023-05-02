@@ -1,5 +1,12 @@
 <div class="row team-member">
     <div class="col-lg-3 col-md-3 mr-4 mb-5">
+        {{ $image := "" }}
+        {{ if isset .context.Params "photo" }}
+            {{ $image = .context.Resources.Get (print "images/" .context.Params.photo) }}
+        {{ else }}
+            {{ $image = .context.Resources.Get (print "images/" (urlize .context.Params.name) ".jpg") }}
+        {{ end }}
+        {{ $image := $image.Fill "600x600"}}
         {{ if and (or (eq .display "summary") (eq .display "tv")) (not .context.Params.hidden) }}
             {{ if eq .conf "beyond" }}
                 {{if not (modBool .index 2)}}
@@ -8,10 +15,10 @@
                     <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (urlize .context.Params.name) "-beyond-blue.png" }}'/></a>
                 {{end}}
             {{ else }}
-                <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-src.html" .context }}'/></a>
+                <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ $image.RelPermalink }}'/></a>
             {{ end }}
         {{ else }}
-            <img alt="{{ .context.Params.name }}" class='' src='{{ partial "team-photo-src.html" .context }}'/>
+            <img alt="{{ .context.Params.name }}" class='' src='{{ $image.RelPermalink }}'/>
         {{ end }}
     </div>
     <div class="col-lg-8 col-md-8">
@@ -37,15 +44,15 @@
         {{ end }}
 
         {{ if eq .display "summary" }}
-            <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             {{ .context.Summary }}
         {{ else if eq .display "tv" }}
             {{ if not .context.Params.hidden }}
                 {{ .context.Summary }} 
-                <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+                <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             {{ end }}
         {{ else }}
-            <p class="mt-2 mb-4">{{ .context.Render "social" }}</p>
+            <p class="mt-2 mb-4">{{ partial "social-media-links.html" .context }}</p>
             <div class='team-body-copy'>
                 {{ .context.Content }}
             </div>
