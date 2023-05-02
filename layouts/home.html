@@ -15,9 +15,16 @@
 {{ end }}
 
 {{ define "advocateCard" }}
+{{ $image := "" }}
+{{ if .Params.photo }}
+{{ $image = .Resources.Get (print "images/" (.Params.photo)) }}
+{{ else }}
+{{ $image = .Resources.Get (print "images/" (urlize .Params.name) ".jpg") }}
+{{ end }}
+{{ $image = $image.Resize "400x400" }}
 <div class="col-12 col-lg-4">
     <div class="card">
-        <img src="{{ partial `team-photo-src.html` . }}" alt="{{ .Params.name }} Image" class="card-img-top">
+        <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }} Image" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
             <p class="card-text">{{ .Params.description }}</p>
