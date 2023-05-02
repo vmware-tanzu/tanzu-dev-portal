@@ -60,10 +60,16 @@
 <section id="home-latest" class="td-box">
     <h2 class="text-center">Latest Advocate Content</h2>
     <div id="home-latest" class="container">
-        <div class="row d-flex flex-row flex-nowrap">
+        <div class="row">
             {{ range $contentPages }}
-            {{ partial (printf "%s-card.html" .Section) . }}
-            {{ .Params.team }}
+            <div class="col-4">
+                {{ partial (printf "%s-card.html" .Section) . }}
+                {{ range .Params.team }}
+                {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
+                {{ .Params.name }}
+                {{ end }}
+                {{ end }}
+            </div>
             {{ end }}
         </div>
     </div>
