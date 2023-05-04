@@ -22,7 +22,7 @@ enableGitInfo = true
 featured = "featured"
 topicgroup = "topicgroups"
 tag = "tags"
-team = "team"
+# team = "team"
 
 # Configure how URLs look like per section.
 [permalinks]

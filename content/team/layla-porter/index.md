@@ -17,8 +17,6 @@ instagram: ""
 youtube: ""
 twitch: "laylacodesit"
 tiktok: "laylacodesit"
-include_host:
-- dotnet-wild
 ---
 <!-- markdownlint-disable MD041-->
 [Layla (@LaylaCodesIt)](https://twitter.com/laylacodesit) is a Developer Advocate at VMware serving the .NET community.
