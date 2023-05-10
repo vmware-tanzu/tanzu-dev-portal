@@ -1,27 +1,37 @@
 ---
 name: Whitney Lee
-description: "Developer Advocate"
-roles: ["advocate"]
-skills: ["Kubernetes"]
-location: "Austin"
+description: 'Developer Advocate'
+roles: ['advocate']
+skills: ['Kubernetes']
+location: 'Austin'
 
-# Social Media 
-twitter: "wiggitywhitney"
-website: ""
-facebook: ""
-linkedin: "whitneylee"
-github: ""
-pinterest: ""
-instagram: ""
-youtube: "channel/UCaGYZkSCN3MPwqRpt24KBKA"
-twitch: "wiggitywhitney"
+# Social Media
+twitter: 'wiggitywhitney'
+website: ''
+facebook: ''
+linkedin: 'whitneylee'
+github: ''
+pinterest: ''
+instagram: ''
+youtube: 'channel/UCaGYZkSCN3MPwqRpt24KBKA'
+twitch: 'wiggitywhitney'
 
 # Customization
-filterShows: ["Enlightning", "SpringOne"]
-featuredLinks: ["Enlightning", "You Choose"]
-
+filterShows: ['Enlightning', 'SpringOne']
+featuredLinks:
+    [
+        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'LEARN CLOUD CONCEPTS WITH WHITNEY AND HER LIGHTBOARD' },
+        {
+            name: 'You Choose',
+            url: 'https://www.youtube.com/playlist?list=PLyicRj904Z9-FzCPvGpVHgRQVYJpVmx3Z',
+            image: 'you-choose-logo.png',
+            tagline: ' In this ‘Choose Your Own Adventure’-style journey, Whitney and Viktor will present a linear view of all of the choices that an anthropomorphized application must make as they try to find their way to the fabled land of production.',
+        },
+    ]
 ---
+
 <!-- markdownlint-disable MD041-->
+
 Whitney is a full stack developer who enjoys understanding and using tools in the cloud native landscape. Creative and driven, Whitney recently pivoted from an art-related career to one in tech. She is active in the open source community, especially around CNCF projects focused on developer productivity. You can catch her lightboard streaming show [ϟ Enlightning](https://tanzu.vmware.com/developer/tv/enlightning/) on Tanzu.TV. And not only does she rock at tech - she literally has toured playing in the band [Mutual Benefit](https://www.mutualbenef.it/) on keyboards and vocals.
 
 <!--more-->
