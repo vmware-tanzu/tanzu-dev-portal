@@ -41,26 +41,26 @@
 
 <section id="hero" class="td-box td-box--primary position-relative td-box--height-auto overflow-hidden">
     <div id="home-featured" class="container">
-        <div class="row text-center">
+        <div class="row">
             <div class="col-12">
-                <h1>{{ .Params.tagline }}</h1>
+                <h1 class="m-4">{{ .Params.tagline }}</h1>
             </div>
-            <p>{{ .Params.description }}</p>
+            <p class="m-4">{{ .Params.description }}</p>
             <div class="container py-5 px-0">
-                <div class="row">
+                <div class="row m-4">
                     {{ range $showPages }}
                     <div class="col-12 col-lg-4 td-box--gray-dark subtopic mr-3 mb-3 flex-315 transition-all">
+                        <div class="gradient-edge-left"></div>
                         <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
-                            <div class="gradient-edge-left"></div>
                             <img src="https://img.youtube.com/vi/{{ .Params.youtube }}/hqdefault.jpg">
                             <div class="card-type-id">
-                                <img alt="" class="d-inline-block" src='{{ "images/icons/icon-videos-label.svg" | relURL }}'>
+                                <img alt="" class="d-inline-block"
+                                    src='{{ "images/icons/icon-videos-label.svg" | relURL }}'>
                                 <span class="h5">TV</span>
                             </div>
                             <p class="link">{{ .Title }}</p>
                         </a>
-                    </div>  
-                    {{/*  {{ partial "tv-card" . }}  */}}
+                    </div>
                     {{ end }}
                 </div>
             </div>
@@ -69,16 +69,18 @@
 </section>
 
 <section id="home-latest" class="td-box">
-    <h2 class="text-center">Latest Advocate Content</h2>
     <div id="home-latest" class="container">
-        <div class="row">
+        <div class="col-12">
+            <h2 class="m-4 pb-4">Latest Advocate Content</h2>
+        </div>
+        <div class="row mt-5">
             {{ range $contentPages }}
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 pb-4">
                 {{ partial (printf "%s-card.html" .Section) . }}
                 {{ range .Params.team }}
                 {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
                 <img src='{{ partial "image-src.html" (dict "context" . "size" "150x150") }}' alt="{{ .Params.name }}"
-                    class="d-inline-block rounded-circle w-25 mr-4">
+                    class="rounded-circle w-25 mr-4 mt-4">
                 <p class="d-inline-block">{{ .Params.name }}</p>
                 {{ end }}
                 {{ end }}
