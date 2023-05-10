@@ -1,13 +1,33 @@
-const advocatePanel = document.getElementById('advocate-panel');
+function autoScroll(element) {
+    let scrollSpeed = 0;
+    const maxSpeed = 20;
+    const center = {
+        x: element.offsetLeft + element.offsetWidth / 2,
+        y: element.offsetTop + element.offsetHeight / 2,
+    };
 
-advocatePanel.addEventListener('mousemove', (e) => {
-    const width = advocatePanel.offsetWidth;
-    let mouseX = e.clientX - advocatePanel.offsetLeft;
-    let offset = (mouseX / width) * 100 - 50;
-    let speed = (mouseX / width - 0.5) * 2;
+    function handleMouseMove(event) {
+        const distanceFromCenterX = Math.abs(event.clientX - center.x);
+        const distanceFromEdgeX = Math.max(distanceFromCenterX - 100, 0);
+        const scrollX = (event.clientX > center.x ? 1 : -1) * (distanceFromEdgeX / (element.offsetWidth / 2)) * maxSpeed;
 
-    advocatePanel.style.transform = `translateX(${offset}px)`;
-    advocatePanel.style.transitionDuration = `${0.5 - Math.abs(speed) * 0.5}s`;
-    advocatePanel.style.transitionTimingFunction = 'linear';
-    advocatePanel.scrollLeft += speed * 10;
-});
+        element.scrollLeft += scrollX;
+
+        scrollSpeed = Math.min(Math.abs(scrollX), maxSpeed);
+    }
+
+    element.addEventListener('mousemove', handleMouseMove);
+
+    function handleScroll() {
+        if (scrollSpeed > 0) {
+            scrollSpeed *= 0.9;
+            if (scrollSpeed < 0.1) {
+                scrollSpeed = 0;
+            }
+        }
+    }
+
+    element.addEventListener('scroll', handleScroll);
+}
+
+autoScroll(document.getElementById('advocate-panel'));
