@@ -78,7 +78,7 @@
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
     <h2 id="home-advocates" class="text-center">Our Developer Advocates</h2>
     <div class="container-fluid">
-        <div class="row d-flex flex-row flex-nowrap overflow-auto">
+        <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
             {{ template "advocateCard" . }}
             {{ end }}
@@ -86,6 +86,8 @@
     </div>
     </div>
 </section>
+{{ $carouselScript := resources.Get "js/carousel.js" }}
+<script src="{{ $carouselScript.RelPermalink }}"></script>
 
 <script>sendAmplitudeEventOnLoad('home viewed', { 'url path': window.location.pathname });</script>
 
