@@ -1,0 +1,10 @@
+{{ $page := .Site.GetPage (.Get "page" ) }}
+<div class="container">
+    <div class="row">
+        {{ range $page.Params.featuredLinks }}
+        <div class="col-12 col-lg-6">
+            This is a ext link thing {{ . }}
+        </div>
+        {{ end }}
+    </div>
+</div>
