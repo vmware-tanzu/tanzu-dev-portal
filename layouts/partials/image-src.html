@@ -1,0 +1,8 @@
+{{- $image := "" -}}
+{{- if isset .context.Params "photo" -}}
+{{- $image = .context.Resources.Get (print "images/" .context.Params.photo) -}}
+{{- else -}}
+{{- $image = .context.Resources.Get (print "images/" (urlize .context.Params.name) ".jpg") -}}
+{{- end -}}
+{{- $image := $image.Fill .size -}}
+{{- print $image.RelPermalink -}}
