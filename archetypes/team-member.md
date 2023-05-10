@@ -16,10 +16,13 @@ pinterest: ""
 instagram: ""
 youtube: ""
 
-# Bio Page TV Show Filter
-# tanzuTVShows: [""] # Optional - Use the TV Show name(s) (e.g. ["TanzuTalks", "TanzuTalks LIVE", "Tanzu Tuesdays"]) to filter the TV Show(s) on the Bio page
+# Customization - Optional section for customizing the team member page
+# filterShows: [""] # Optional - Used to filter the TV shows that will populate on Bio page. Use the TV Show name(s) (e.g. ["TanzuTalks", "TanzuTalks LIVE", "Tanzu Tuesdays"]).
+# featuredLinks: [{ name: "", url: "", image: "", tagline: "" }] # Optional - Used with bio-featured-links shortcode to display featured links on the Bio page. Separate each link with a comma, leave url blank for links to local resources. (e.g. [{ name: "Page on TDC", url: "", image: "image-name.ext", tagline: "A cool show" }, { name: "External Page", url:"https://path-to-external", image"image-name.ext", tagline: "Another cool show" }])
 ---
+
 <!-- markdownlint-disable MD041-->
+
 Short Bio.
 
 <!-- more -->
