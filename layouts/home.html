@@ -49,7 +49,18 @@
             <div class="container py-5 px-0">
                 <div class="row">
                     {{ range $showPages }}
-                    {{ partial "tv-card" . }}
+                    <div class="col-12 col-lg-4 td-box--gray-dark subtopic mr-3 mb-3 flex-315 transition-all">
+                        <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
+                            <div class="gradient-edge-left"></div>
+                            <img src="https://img.youtube.com/vi/{{ .Params.youtube }}/hqdefault.jpg">
+                            <div class="card-type-id">
+                                <img alt="" class="d-inline-block" src='{{ "images/icons/icon-videos-label.svg" | relURL }}'>
+                                <span class="h5">TV</span>
+                            </div>
+                            <p class="link">{{ .Title }}</p>
+                        </a>
+                    </div>  
+                    {{/*  {{ partial "tv-card" . }}  */}}
                     {{ end }}
                 </div>
             </div>
@@ -62,11 +73,13 @@
     <div id="home-latest" class="container">
         <div class="row">
             {{ range $contentPages }}
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 {{ partial (printf "%s-card.html" .Section) . }}
                 {{ range .Params.team }}
                 {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
-                <img src='{{ partial "image-src.html" (dict "context" . "size" "150x150") }}' alt="{{ .Params.name }}" class="d-inline-block rounded-circle w-25 mr-4"><p class="d-inline-block">{{ .Params.name }}</p>
+                <img src='{{ partial "image-src.html" (dict "context" . "size" "150x150") }}' alt="{{ .Params.name }}"
+                    class="d-inline-block rounded-circle w-25 mr-4">
+                <p class="d-inline-block">{{ .Params.name }}</p>
                 {{ end }}
                 {{ end }}
             </div>
