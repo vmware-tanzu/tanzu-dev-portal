@@ -1,0 +1,29 @@
+<div class="col-lg-4 col-12 mb-5 px-0">
+    <a class="youtube-container">
+        <div class="youtube-overlay"></div>
+        <iframe
+            class="youtube-small"
+            type="text/html"
+            src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?wmode=transparent&amp;rel=0&amp;modestbranding=1"
+            wmode="Opaque"
+            frameborder="0"
+            allowfullscreen="true"
+        ></iframe>
+    </a>
+    <div style="width: 85%">
+    <h2>{{ .Title }}</h2>
+    <p class="">{{ .Content }}</p>
+    <ul class="list-unstyled">
+        <li>
+            <strong>Speaker</strong>:
+            <a href="{{ .Site.BaseURL }}/team/{{ .Params.speaker | urlize }}" class="mr-5 py-2 d-indine-block">{{ .Params.speaker }}</a>
+        </li>
+        <li>
+        {{ if .Params.github_repo }}
+            <a href="https://github.com/{{ .Params.github_repo }}"><i class="fab fa-github mr-2"></i></a>
+        {{ end }}
+            <a href="https://youtu.be/{{ .Params.youtube_id }}" target="_blank"><i class="fab fa-youtube mr-2"></i>
+        </li>
+    </ul>
+    </div>
+</div>

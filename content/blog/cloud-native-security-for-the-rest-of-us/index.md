@@ -28,7 +28,7 @@ Of course, there are entire parts of the security landscape that change drastica
 
 So where should we start?
 
-In this first blog, we'll talk about the framework of the “4 C's of Cloud Native Security” and discuss how to secure the lower layers of the stack: our cloud platform and Kubernetes clusters.
+In this first blog, we'll talk about the framework of the “4 C's of [Cloud Native Security](https://tanzu.vmware.com/cloud-native-security)” and discuss how to secure the lower layers of the stack: our cloud platform and Kubernetes clusters.
 
 Then, in a [second one](/blog/cloud-native-security-for-the-rest-of-us-p2/), we will talk about securing our applications themselves; in particular in their usage of Kubernetes APIs, but also in the way that they're built.
 

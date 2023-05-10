@@ -10,12 +10,13 @@ tags:
 - Observability
 - Spring
 featured: true
-title: Request/Response Logging in a Spring Boot Application
+title: How to Log Request & Response in Spring Boot Applications
+metaTitle: Spring Boot Log Request & Response Guide
 weight: 2
 oldPath: "/content/guides/spring/request-response-logging.md"
 aliases:
 - "/guides/spring/request-response-logging"
-description: Collect full request/response payloads in a Spring Boot application
+description: Discover the importance of request and response logging in modern application development. Our guide covers best practices and tools.
 faqs:
   faq:
   - question: How do log requests and responses in Spring Boot work?

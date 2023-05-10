@@ -93,8 +93,6 @@
     }
 
     @include media-breakpoint-down(md) {
-        // padding-right: .5rem;
-        // padding-left: .75rem;
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
@@ -180,24 +178,58 @@
 nav {
     z-index: 1000 !important;
 
-    #theme-select {
-        width: 72px;
-        height: 36px;
-        padding: 0px !important;
-
-        a {
-            height: 36px !important;
-            width: 36px !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            left: 0 !important;
-            text-align: center !important;
-
-            i.fas.fa-moon {
-                transform: translate(0) !important;
-                margin-right: 0 !important;
-            }
+    #theme-slider {
+        align-self: center;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        width: 36px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #1b2a32;
+        padding: 5px;
+        transition: background-color .2s;
+        z-index: 100;
+    }
+    #theme-icon-circle {
+        left: 0px;
+        top: -7px;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        background: $gray-200;
+        border-radius: 100%;
+        transform: translateX(0px);
+        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
+        transition: transform .2s ease-in;
+    }
+    #dark-theme-icon {
+        position: relative;
+        top: 3px;
+        left: 6px;
+        i {
+            color: #1B2A32;
         }
+    }
+    #light-theme-icon {
+        position: relative;
+        top: 3px;
+        left: 6px;
+        display: none;
+        i {
+            color: #f0f4f7
+        }
+    }
+    #theme-toggle {
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        border-radius: 5px;
+        top: -10px;
+        left: -3px;
     }
     > .container {
         opacity: 0;
@@ -230,38 +262,6 @@ nav {
         }
     }
     
-    #theme-square {
-        left: 0;
-        top: 0;
-        height: 37px;
-        width: 36px;
-        position: absolute;
-        background: $gray-200;
-        transform: translateX(0px);
-        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1 );
-        transition: transform .2s ease-in;
-    }
-    i {
-        color: white;
-    }
-    #toggle-pride-mode {
-        cursor: pointer;
-        img {
-            height: 22px;
-        }
-    }
-    
-    #toggle-dark-mode {
-        left: 2px;
-        i {
-            color: #1B2A32;
-        }
-    }
-    @media(max-width: 991.98px){
-        #theme-select {
-            display: none !important;
-        }
-    }
     .nav-arrow {
         transform: rotate(45deg) translateY(-6px);
         -webkit-transform: rotate(45deg) translateY(-6px);
@@ -301,7 +301,7 @@ nav {
 
         .drop-menu {
             width: 530px;
-            left: -170px;
+            left: -175px;
             
             .menu-split-left {
                 width: 320px;
@@ -316,11 +316,11 @@ nav {
         width: 135px;
     }
     #tanzutv {
-        right: 300px;
+        right: 303px;
         width: 149px;
     }
     #community {
-        right: 139px;
+        right: 94px;
         width: 156px; 
     }
     .drop-target {
@@ -364,17 +364,17 @@ nav {
         position: absolute;
         
         &.learn-scope {
-            left: -227px;
+            left: -267px;
             width: 580px;
             height: 485px;
         }
         &.tanzutv-scope {
-            left: 87px;
+            left: 60px;
             width: 320px;
             height: 380px;
         }
         &.community-scope {
-            left: 247px;            
+            left: 270px;            
             width: 150px;
             height: 120px;
         }
@@ -390,6 +390,11 @@ nav {
     b {
         font-weight: 500 !important;
         -webkit-font-smoothing: antialiased;
+    }
+    @media(max-width: 991.98px){
+        #theme-slider {
+            display: none !important;
+        }
     }
 }
 #mobile-nav {

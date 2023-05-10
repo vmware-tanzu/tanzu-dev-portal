@@ -11,7 +11,7 @@ youtube: "xq6E6t-PwII"
 draft: "False"
 ---
 
-Coté talks with Darran Rice about his experience and other's with building and sustaining platform engineering teams.
+Coté talks with Darran Rice about his experience and other's with building and sustaining [platform engineering](https://tanzu.vmware.com/platform-engineering) teams.
 
 Darran's advice on KPIs: https://tanzu.vmware.com/content/blog/kpis-drive-behavior?utm_source=cote&utm_campaign=devrel&utm_content=TanzuTalk
 

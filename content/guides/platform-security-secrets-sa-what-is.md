@@ -3,11 +3,10 @@ aliases:
 - guides/kubernetes/k8s-secrets-sa-what-is/
 - "/guides/kubernetes/platform-security-secrets-sa-what-is"
 date: '2021-02-24'
-description: Kubernetes Secrets are a collection of keys and values that let you store
-  sensitive information and a service account describes the set of permissions.
+description: Learn how to create and manage Kubernetes secrets for service accounts. Explore platform security best practices in our developer guide.
 lastmod: '2021-03-07'
 linkTitle: Secrets and Service Accounts
-metaTitle: Kubernetes Secrets and Service Accounts
+metaTitle: Create Kubernetes Secrets for Service Accounts
 parent: Platform Security
 patterns:
 - Deployment
@@ -16,7 +15,7 @@ tags:
 team:
 - Brian McClain
 - Tiffany Jernigan
-title: What are Kubernetes Secrets and Service Accounts?
+title: How to Create Kubernetes Secrets and Service Accounts
 weight: 2
 oldPath: "/content/guides/kubernetes/platform-security-secrets-sa-what-is.md"
 level1: Securing Kubernetes
@@ -29,7 +28,7 @@ addresses, or more sensitive data, such as usernames and passwords, OAuth tokens
 or TLS certificates. In Kubernetes, these are referred to as
 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-## Secrets
+## What are Kubernetes Secrets and How do you Create Them?
 
 It’s worth noting that while the name “secret” may imply “secure”, there are
 some qualifiers. By default, all secrets are stored unencrypted in `etcd`. As of
@@ -212,7 +211,7 @@ myusername
 As you can see, the value of your secret is stored in the `$SECRET_USERNAME`
 environment variable as defined!
 
-## Service Accounts
+## Creating Kubernetes Service Accounts with Secrets
 
 When you interact directly with Kubernetes, using `kubectl` for example, you’re
 using a user account. When processes in pods need to interact with Kubernetes

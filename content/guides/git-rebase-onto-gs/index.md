@@ -1,6 +1,7 @@
 ---
-title: "Getting Started with Git Rebase --onto"
-description: Many moderate users of git will likely be familiar with `git rebase` and a command to effectively rebase one branch onto another. But what if you need to be a little more specific about that rebase? In this guide, you will learn the basics of `git rebase --onto`, and when and how to use it.
+title: Getting Started with Git Rebase --onto for Specific Commits
+metaTitle: Using Git Rebase --onto for Specific Commits
+description: Learn how to use git rebase onto in your workflow. Our developer guide covers best practices and step-by-step instructions.
 date: 2022-03-03
 level1: Agile Transformation and Practices
 level2: Agile Development

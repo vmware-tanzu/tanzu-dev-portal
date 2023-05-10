@@ -10,7 +10,8 @@ tags:
 - Testing
 - Spring
 - Microservices
-title: Spring Boot Testing Best Practices
+title: Best Practices for How to Test Spring Boot Applications
+description: Get familiar with writing tests for Spring Boot applications that are fast, independent, repeatable, self-validating, and timely.
 weight: 3
 oldPath: "/content/guides/spring/spring-boot-testing.md"
 aliases:

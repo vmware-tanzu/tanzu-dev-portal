@@ -9,12 +9,14 @@ calendar: true
 guests:
 - Tatiana Krupenya
 hosts:
-- Tiffany Jernigan
+- Nate Schutta
 lastmod: '2020-10-09'
 title: "How to Swim in an Issue Flow"
 twitch: vmwaretanzu
-linktwitchyoutubechannels: 'yes'
+youtube: WzcwCloZQsg
 type: tv-episode
+linktwitchyoutubechannels: yes
+
 ---
 
 Do you know why a lot of popular open source projects die? Their owners and maintainers just burn out. The number of issues is growing together with the number of users. But your resources are limited. One day you wake up and understand that you’ll never close all of these tickets. The situation looks hopeless. But it’s not.
