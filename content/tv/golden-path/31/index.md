@@ -9,7 +9,6 @@ explicit: 'no'
 calendar: true
 guests:
 - Dariusz Jędrzejczyk
-- Rossen Stoyanchev
 hosts:
 - Cora Iberkleid
 twitch: vmwaretanzu
