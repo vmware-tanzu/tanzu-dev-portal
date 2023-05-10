@@ -1,9 +1,8 @@
 function autoScroll(element) {
     let scrollSpeed = 0;
-    const maxSpeed = 20;
+    const maxSpeed = 10;
     const center = {
         x: element.offsetLeft + element.offsetWidth / 2,
-        y: element.offsetTop + element.offsetHeight / 2,
     };
 
     function handleMouseMove(event) {
