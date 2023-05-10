@@ -17,10 +17,10 @@ youtube: 'channel/UCaGYZkSCN3MPwqRpt24KBKA'
 twitch: 'wiggitywhitney'
 
 # Customization
-filterShows: ['Enlightning', 'SpringOne']
+filterShows: ['Enlightning', 'The Golden Path to SpringOne']
 featuredLinks:
     [
-        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'LEARN CLOUD CONCEPTS WITH WHITNEY AND HER LIGHTBOARD' },
+        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'Learn cloud concepts with Whitney and her lightboard.' },
         {
             name: 'You Choose',
             url: 'https://www.youtube.com/playlist?list=PLyicRj904Z9-FzCPvGpVHgRQVYJpVmx3Z',
