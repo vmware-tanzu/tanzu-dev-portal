@@ -13,8 +13,7 @@
 {{ $speakers := where (where .Site.RegularPages "Section" "tv") "Params.speakers" "intersect" (slice .Params.name)}}
 {{ $hosts := where (where .Site.RegularPages "Section" "tv") "Params.hosts" "intersect" (slice .Params.name)}}
 {{ $tanzuTV = $tanzuTV | append $guests | append $speakers | append $hosts }}
-{{ $tanzuTV = $tanzuTV | uniq }}
-
+{{ $tanzuTV = (cond ( isset .Params "filtershows" ) (where $tanzuTV ".Parent.Title" "in" .Params.filterShows) $tanzuTV) | uniq }}
 <div class="container-fluid td-outer">
     <div class="td-main">
         <div class="mt-lg-5 mt-0 py-lg-5 py-2">
