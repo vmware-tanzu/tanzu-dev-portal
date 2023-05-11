@@ -11,7 +11,7 @@ guests:
 - Marc Zottner
 - Michael Coté
 hosts:
-linkyoutubechannel: 'yes'
+youtube: FamiRgICSp0
 type: tv-episode
 ---
 
