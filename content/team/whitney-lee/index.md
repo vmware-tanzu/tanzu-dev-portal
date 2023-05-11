@@ -20,12 +20,12 @@ twitch: 'wiggitywhitney'
 filterShows: ['Enlightning', 'The Golden Path to SpringOne']
 featuredLinks:
     [
-        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'Learn cloud concepts with Whitney and her lightboard.' },
+        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'Learn CNCF projects with Whitney and her lightboard.' },
         {
             name: 'You Choose',
             url: 'https://www.youtube.com/playlist?list=PLyicRj904Z9-FzCPvGpVHgRQVYJpVmx3Z',
             image: 'you-choose-logo.png',
-            tagline: ' In this ‘Choose Your Own Adventure’-style journey, Whitney and Viktor will present a linear view of all of the choices that an anthropomorphized application must make as they try to find their way to the fabled land of production.',
+            tagline: "A 'Choose Your Own Adventure'-style journey through the cloud native landscape with Whitney and her co-host Viktor Farcic.",
         },
     ]
 ---
@@ -39,6 +39,8 @@ Whitney is a full stack developer who enjoys understanding and using tools in th
 ## Featured
 
 {{< link-card title="VMware’s Inspirational Women: Spotlight on Whitney Lee" link="https://blogs.vmware.com/opensource/2022/10/20/inspirational-women-in-open-source-spotlight-on-whitney-lee/" description="An interview with Whitney Lee, Staff Technical Advocate for the VMware Tanzu Team, who funnels her insatiable appetite for all things cloud and passion for teaching others into streaming ⚡Enlightning lightboard videos on subjects such as Kubernetes, Knative and Infrastructure as Code." imageURL="https://blogs.vmware.com/opensource/files/2022/09/Picture1-576x324.jpg">}}
+
+### Streaming Shows
 
 {{< bio-featured-links page="whitney-lee" >}}
 
