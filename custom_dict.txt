@@ -1774,6 +1774,7 @@ optionality
 OQL
 orchestrator(s)?
 OrderService
+Oredev
 org(s)?
 ORM(-based)?
 ORM(s)?
@@ -2768,6 +2769,7 @@ Zalando
 ZDNet
 Zenika
 Zhen
+Zhurakousky
 Zino
 [Zz]ipkin
 ZipkinSenderProperties
