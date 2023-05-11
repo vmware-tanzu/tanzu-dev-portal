@@ -1,16 +1,9 @@
 {{/* TEMPLATES */}}
 {{ define "advocateCard" }}
-{{ $image := "" }}
-{{ if .Params.photo }}
-{{ $image = .Resources.Get (print "images/" (.Params.photo)) }}
-{{ else }}
-{{ $image = .Resources.Get (print "images/" (urlize .Params.name) ".jpg") }}
-{{ end }}
-{{ $image = $image.Resize "600x600" }}
 <div class="col-12 col-lg-4">
     <a href="{{ .RelPermalink }}">
         <div class="card">
-            <img src="{{ $image.RelPermalink }}" alt="{{ .Params.name }} Image" class="card-img-top">
+            <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}" alt="{{ .Params.name }} Image" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
             </div>
@@ -79,7 +72,7 @@
                 {{ partial (printf "%s-card.html" .Section) . }}
                 {{ range .Params.team }}
                 {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
-                <img src='{{ partial "image-src.html" (dict "context" . "size" "150x150") }}' alt="{{ .Params.name }}"
+                <img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "150x150") }}' alt="{{ .Params.name }}"
                     class="rounded-circle w-25 mr-4 mt-4">
                 <p class="d-inline-block">{{ .Params.name }}</p>
                 {{ end }}
