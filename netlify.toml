@@ -125,6 +125,18 @@
   force = true
   status = 301
 
+[[redirects]]
+  from = "/developer/springone-tour/"
+  to = "/developer/tv/golden-path/"
+  force = true
+  status = 301
+
+[[redirects]]
+  from = "/developer/springone-tour/*"
+  to = "/developer/tv/golden-path/"
+  force = true
+  status = 301
+
 # Global 404 handler
 [[redirects]]
   from = "/*"
