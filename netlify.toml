@@ -137,14 +137,14 @@
   force = true
   status = 301
 
+[[redirects]]
+  from = "/developer/guides/container-networking/"
+  to = "/developer/guides/"
+  force = true
+  status = 301
+
 # Global 404 handler
 [[redirects]]
   from = "/*"
   to = "/developer/404.html"
   status = 404
-
-[[redirects]]
-  from = "/developer/guides/container-networking"
-  to = "/developer/guides"
-  force = true
-  status = 301
