@@ -132,7 +132,7 @@
   status = 404
 
 [[redirects]]
-  from = "/developer/container-networking"
+  from = "/developer/guides/container-networking"
   to = "/developer/guides"
   force = true
   status = 301
