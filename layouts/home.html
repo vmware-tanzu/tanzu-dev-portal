@@ -1,21 +1,3 @@
-{{/* TEMPLATES */}}
-{{ define "advocateCard" }}
-<div class="col-12 col-lg-4">
-    <a href="{{ .RelPermalink }}">
-        <div class="card">
-            <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}" alt="{{ .Params.name }} Image" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title" style="color:black">{{ .Params.name }}</h5>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">{{ range .Params.skills }}{{ . }} {{ end }}</small> {{/*TODO Add icons for
-                skills in footer Or remove footer altogether?*/}}
-            </div>
-        </div>
-    </a>
-</div>
-{{ end }}
-
 {{ define "main" }}
 
 {{/* VARS */}}
@@ -72,8 +54,8 @@
                 {{ partial (printf "%s-card.html" .Section) . }}
                 {{ range .Params.team }}
                 {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
-                <img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "150x150") }}' alt="{{ .Params.name }}"
-                    class="rounded-circle w-25 mr-4 mt-4">
+                <img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "150x150") }}'
+                    alt="{{ .Params.name }}" class="rounded-circle w-25 mr-4 mt-4">
                 <p class="d-inline-block">{{ .Params.name }}</p>
                 {{ end }}
                 {{ end }}
@@ -84,11 +66,19 @@
 </section>
 
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-    <h2 id="home-advocates" class="text-center">Our Developer Advocates</h2>
+    <h2 id="home-advocates" class="text-center mb-4">Our Developer Advocates</h2>
     <div class="container-fluid">
         <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
-            {{ template "advocateCard" . }}
+            <div class="col-12 col-lg-4 td-box--gray-dark mr-3 mb-3 flex-315 transition-all">
+                <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
+                    <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
+                        alt="{{ .Params.name }} Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:white">{{ .Params.name }}</h5>
+                    </div>
+                </a>
+            </div>
             {{ end }}
         </div>
     </div>
