@@ -1,3 +1,13 @@
+{{ define "advocate-icon-images" }}
+{{ range cond (not (eq .Section "tv")) .Params.team .Params.hosts }}
+{{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
+<img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "45x45") }}' alt="{{ .Params.name }}"
+    class="rounded-circle m-1">
+<p class="d-inline-block">{{ .Params.name }}</p>
+{{ end }}
+{{ end }}
+{{ end }}
+
 {{ define "main" }}
 
 {{/* VARS */}}
@@ -6,7 +16,8 @@
 {{ range $advocatePages }}
 {{ $advocates = $advocates | append .Params.name }}
 {{ end }}
-{{ $latestContent := sort (where .Site.RegularPages "Params.hosts" "intersect" $advocates | union (where .Site.RegularPages "Params.team" "intersect" $advocates) ) "Date"
+{{ $latestContent := sort (where .Site.RegularPages "Params.hosts" "intersect" $advocates | union (where
+.Site.RegularPages "Params.team" "intersect" $advocates) ) "Date"
 "desc" }}
 {{ $latestContent = where $latestContent "Date" "le" now }}
 {{ $latestContent = first 3 $latestContent }}
@@ -35,6 +46,7 @@
                             </div>
                             <p class="link">{{ .Title }}</p>
                         </a>
+                        {{ template "advocate-icon-images" .}}
                     </div>
                     {{ end }}
                     {{ end }}
@@ -53,13 +65,7 @@
             {{ range $latestContent }}
             <div class="col-12 col-lg-4 pb-4">
                 {{ partial (printf "%s-card.html" .Section) . }}
-                {{ range cond (not (eq .Section "tv")) .Params.team .Params.hosts }}
-                {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
-                <img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "150x150") }}'
-                    alt="{{ .Params.name }}" class="rounded-circle w-25 mr-4 mt-4">
-                <p class="d-inline-block">{{ .Params.name }}</p>
-                {{ end }}
-                {{ end }}
+                {{ template "advocate-icon-images" .}}
             </div>
             {{ end }}
         </div>
@@ -67,7 +73,8 @@
 </section>
 
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-    <h2 id="home-advocates" class="text-center mb-4">Our Developer <a href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
+    <h2 id="home-advocates" class="text-center mb-4">Our Developer <a
+            href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
     <div class="container-fluid">
         <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
