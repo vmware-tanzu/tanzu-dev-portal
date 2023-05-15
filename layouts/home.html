@@ -6,11 +6,10 @@
 {{ range $advocatePages }}
 {{ $advocates = $advocates | append .Params.name }}
 {{ end }}
-{{ $showPages := sort (where (where .Site.RegularPages "Section" "tv") "Params.hosts" "intersect" $advocates) "Date"
+{{ $latestContent := sort (where .Site.RegularPages "Params.hosts" "intersect" $advocates | union (where .Site.RegularPages "Params.team" "intersect" $advocates) ) "Date"
 "desc" }}
-{{ $showPages = where $showPages "Date" "le" now }}
-{{ $showPages = first 3 $showPages }}
-{{ $contentPages := first 3 (sort (where $.Site.RegularPages "Params.team" "intersect" $advocates) "Date" "desc" ) }}
+{{ $latestContent = where $latestContent "Date" "le" now }}
+{{ $latestContent = first 3 $latestContent }}
 
 <h1 class='d-none'>{{ .Title }} Homepage</h1>
 
@@ -18,24 +17,26 @@
     <div id="home-featured" class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="m-4">{{ .Params.tagline }}</h1>
+                <h1 class="text-center m-4">{{ .Params.tagline }}</h1>
             </div>
-            <p class="m-4">{{ .Params.description }}</p>
+            <p class="mt-4">{{ .Params.description }}</p>
             <div class="container py-5 px-0">
-                <div class="row m-4">
-                    {{ range $showPages }}
+                <h2 class="text-center">Featured</h2>
+                <div class="row mt-4">
+                    {{ range .Params.featured }}
+                    {{ with $.Site.GetPage (print .) }}
                     <div class="col-12 col-lg-4 td-box--gray-dark subtopic mr-3 mb-3 flex-315 transition-all">
                         <div class="gradient-edge-left"></div>
                         <a class="linked-box td-box--gray-dark p-4 position-relative" href="{{ .RelPermalink }}">
-                            <img src="https://img.youtube.com/vi/{{ .Params.youtube }}/hqdefault.jpg">
                             <div class="card-type-id">
                                 <img alt="" class="d-inline-block"
-                                    src='{{ "images/icons/icon-videos-label.svg" | relURL }}'>
-                                <span class="h5">TV</span>
+                                    src='{{ printf "images/icons/icon-%s-label.svg" .Type | relURL }}'>
+                                <span class="h5">{{ .Section }}</span>
                             </div>
                             <p class="link">{{ .Title }}</p>
                         </a>
                     </div>
+                    {{ end }}
                     {{ end }}
                 </div>
             </div>
@@ -46,13 +47,13 @@
 <section id="home-latest" class="td-box">
     <div id="home-latest" class="container">
         <div class="col-12">
-            <h2 class="m-4 pb-4">Latest Advocate Content</h2>
+            <h2 class="text-center m-4 pb-4">Latest Content</h2>
         </div>
         <div class="row mt-5">
-            {{ range $contentPages }}
+            {{ range $latestContent }}
             <div class="col-12 col-lg-4 pb-4">
                 {{ partial (printf "%s-card.html" .Section) . }}
-                {{ range .Params.team }}
+                {{ range cond (not (eq .Section "tv")) .Params.team .Params.hosts }}
                 {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
                 <img src='{{ partial "image-src.html" (dict "context" . "process" "fill" "size" "150x150") }}'
                     alt="{{ .Params.name }}" class="rounded-circle w-25 mr-4 mt-4">
@@ -66,7 +67,7 @@
 </section>
 
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
-    <h2 id="home-advocates" class="text-center mb-4">Our Developer Advocates</h2>
+    <h2 id="home-advocates" class="text-center mb-4">Our Developer <a href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
     <div class="container-fluid">
         <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
