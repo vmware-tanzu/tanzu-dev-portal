@@ -84,7 +84,7 @@
     </div>
     </div>
 </section>
-{{ $carouselScript := resources.Get "js/carousel.js" }}
+{{ $carouselScript := resources.Get "js/home_carousel.js" }}
 <script src="{{ $carouselScript.RelPermalink }}"></script>
 
 <script>sendAmplitudeEventOnLoad('home viewed', { 'url path': window.location.pathname });</script>
