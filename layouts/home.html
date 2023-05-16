@@ -75,7 +75,7 @@
 <section class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
     <h2 id="home-advocates" class="text-center mb-4">Our Developer <a
             href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
         <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
             {{ range $advocatePages }}
             <div class="col-12 col-lg-4 td-box--gray-dark mr-3 mb-3 flex-315 transition-all">
@@ -88,6 +88,10 @@
                 </a>
             </div>
             {{ end }}
+        </div>
+        <div class="row scroll-arrows position-absolute">
+            <div class="arrow-left"><i class="fas fa-chevron-left"></i></div>
+            <div class="arrow-right"><i class="fas fa-chevron-right"></i></div>
         </div>
     </div>
     </div>
