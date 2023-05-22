@@ -6,7 +6,7 @@ skills: ["ingress-ngnix"]
 location: ""
 external: true
 # Social Media 
-twitter: "fstrongjz"
+twitter: "strongjz"
 website: ""
 facebook: ""
 linkedin: "strongjz"
