@@ -11,10 +11,10 @@ menu:
         parent: "tv"
         weight: 2
 # Text that appears on show index page under show name
-description: Learn cloud concepts with Whitney and her lightboard ϟ
+description: Learn CNCF projects with Whitney and her lightboard ⚡️
 # Text that appears highlighted in green on show index page above show name
-teaser: Learn cloud concepts with Whitney and her lightboard
+teaser: Learn CNCF projects with Whitney and her lightboard
 # Text that shows on show page under show name
-subheader: Learn cloud concepts with Whitney and her lightboard
+subheader: Learn CNCF projects with Whitney and her lightboard
 # Any content below here shows up above episode index
 ---
