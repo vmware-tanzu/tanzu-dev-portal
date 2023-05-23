@@ -4,7 +4,7 @@ date: '2023-05-23'
 Description: Breeding 10x Developers with Developer Productivity Engineering
 title: Breeding 10x Developers with Developer Productivity Engineering
 PublishDate: '2023-04-04T00:00:00-07:00'
-episode: '32'
+episode: '33'
 explicit: 'no'
 calendar: true
 guests:
@@ -12,6 +12,7 @@ guests:
 hosts:
 - Nate Schutta
 linktwitchyoutubechannels: 'yes'
+youtube: wmnh2VvdCtA
 type: tv-episode
 ---
 
