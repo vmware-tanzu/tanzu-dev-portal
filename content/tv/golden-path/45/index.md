@@ -1,19 +1,21 @@
 ---
 Date: '2023-07-06T11:00:00-07:00'
 date: '2023-07-06'
-Description: Spring Data JDBC Batching Enhancements
-title: Spring Data JDBC Batching Enhancements
+Description: "Spring Cloud Function and AWS: Performance, Portability, and Productivity"
+title: "Spring Cloud Function and AWS: Performance, Portability, and Productivity"
 PublishDate: '2023-05-23T00:00:00-07:00'
 episode: '45'
 explicit: 'no'
 calendar: true
 guests:
-- Chirag Tailor
+- Mark Sailes
+- Oleg Zhurakousky
 hosts:
-linkyoutubechannel: 'yes'
+- Cora Iberkleid
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
-Spring Data JDBC has recently been enhanced with improved writing strategies to offer long-awaited support for batch operations. These updates deliver significant performance improvements to nearly all write operations by minimizing the number of roundtrips to the database.
+Spring Cloud Functions enables you to write simple Java Functions that, combined with Spring Boot, can easily be realized in a serverless environment such as AWS Lambda. Implementing business logic as functions is a perfect fit for AWS Lambda's event-driven architecture. How to get the most from both of these technologies and its features? Are there any useful tricks? What about Spring Native and AOT?
 
-Whether you’re currently using the module or looking for a reason to try it out, come to hear all about these new enhancements. You’ll learn about the kinds of database operations that are batched, what it even means for them to be batched, the dialects that are supported, and what you need to do to start reaping the benefits on your projects.
+In this session (50/50 presentation/demo), Oleg (Spring) and Mark (AWS) will discuss and demonstrate these features and enhancements with a single function handling 10,000 requests a second.

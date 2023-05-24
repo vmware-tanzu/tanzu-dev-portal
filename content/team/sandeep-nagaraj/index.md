@@ -16,6 +16,6 @@ twitch: ""
 ---
 
 <!-- markdownlint-disable MD041-->
-Sandeep is currently working with Spring Boot Migrator at VMware. Previously, he worked on business problems associated with media, from microservices that transcode media formats to building middleware for set top boxes.\r\n\r\nHe is from Bangalore now living in U.K.
+Sandeep is currently working with Spring Boot Migrator at VMware. Previously, he worked on business problems associated with media, from microservices that transcode media formats to building middleware for set top boxes. He is from Bangalore now living in U.K.
 
 <!--more-->
