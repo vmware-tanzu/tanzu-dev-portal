@@ -1,6 +1,6 @@
 ---
 Date: '2023-06-01T11:00:00-07:00'
-date: '2023-006-01'
+date: '2023-06-01'
 Description: Spring Data JDBC Batching Enhancements
 title: Spring Data JDBC Batching Enhancements
 PublishDate: '2023-05-23T00:00:00-07:00'
