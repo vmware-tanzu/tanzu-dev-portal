@@ -4,7 +4,7 @@ date: '2023-006-01'
 Description: Spring Data JDBC Batching Enhancements
 title: Spring Data JDBC Batching Enhancements
 PublishDate: '2023-05-23T00:00:00-07:00'
-episode: '45'
+episode: '36'
 explicit: 'no'
 calendar: true
 guests:
