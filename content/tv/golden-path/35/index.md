@@ -11,7 +11,7 @@ guests:
 - Timothy Spann 
 - David Kjerrumgaard
 hosts:
-linkyoutubechannel: 'yes'
+youtube: UZRvUyjNWmg
 type: tv-episode
 ---
 
