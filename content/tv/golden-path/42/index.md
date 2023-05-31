@@ -1,10 +1,10 @@
 ---
-Date: '2023-06-22T11:00:00-07:00'
-date: '2023-06-22'
+Date: '2023-06-08T11:00:00-07:00'
+date: '2023-06-08'
 Description: Automated Upgrades and Migrations with Spring Boot Migrator
 title: Automated Upgrades and Migrations with Spring Boot Migrator
 PublishDate: '2023-05-23T00:00:00-07:00'
-episode: '42'
+episode: '38'
 explicit: 'no'
 calendar: true
 guests:

@@ -1,16 +1,16 @@
 ---
-Date: '2023-06-08T11:00:00-07:00'
-date: '2023-06-08'
+Date: '2023-06-22T11:00:00-07:00'
+date: '2023-06-22'
 Description: What's New in Spring Batch 5?
 title: What's New in Spring Batch 5?
 PublishDate: '2023-05-23T00:00:00-07:00'
-episode: '38'
+episode: '42'
 explicit: 'no'
 calendar: true
 guests:
 - Mahmoud Ben Hassine
 hosts:
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
