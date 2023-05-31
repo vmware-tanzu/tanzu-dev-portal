@@ -10,7 +10,7 @@ calendar: true
 guests:
 - Chirag Tailor
 hosts:
-linkyoutubechannel: 'yes'
+youtube: yP0st6UkM84
 type: tv-episode
 ---
 
