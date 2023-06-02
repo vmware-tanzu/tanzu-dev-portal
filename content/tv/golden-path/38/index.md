@@ -10,7 +10,7 @@ calendar: true
 guests:
 - Mahmoud Ben Hassine
 hosts:
-linkyoutubechannel: 'yes'
+linktwitchyoutubechannels: 'yes'
 type: tv-episode
 ---
 
