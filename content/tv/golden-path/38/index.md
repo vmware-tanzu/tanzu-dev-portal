@@ -1,21 +1,20 @@
 ---
 Date: '2023-06-08T11:00:00-07:00'
 date: '2023-06-08'
-Description: What's New in Spring Batch 5?
-title: What's New in Spring Batch 5?
+Description: Automated Upgrades and Migrations with Spring Boot Migrator
+title: Automated Upgrades and Migrations with Spring Boot Migrator
 PublishDate: '2023-05-23T00:00:00-07:00'
 episode: '38'
 explicit: 'no'
 calendar: true
 guests:
-- Mahmoud Ben Hassine
+- Sandeep Nagaraj
 hosts:
 linkyoutubechannel: 'yes'
 type: tv-episode
 ---
 
-Spring Batch 5 is the culmination of two years of work, including dozens of improvements, features, and bug fixes by more than 50 contributors!
-
-In this talk, we share with you the major changes in this new generation of the framework. We also walk through some ideas and guidelines about how to migrate from a previous version to this major release.
-
-If you use Spring Batch or are just curious about what’s included in this new release, this talk is definitely for you.
+Upgrading your Spring Boot applications is often tedious and time consuming. This is a required and important investment but doesn’t bring immediate value to your customers.
+What if these migrations could be automated to a large extent?
+You could spend this time delivering value to your customers instead!
+Join this talk to get an overview of how Spring Boot Migrator can help you with these and other migration tasks by offering a set of recipes for automated code migrations.
