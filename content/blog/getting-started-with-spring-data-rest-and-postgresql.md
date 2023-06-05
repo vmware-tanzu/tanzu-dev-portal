@@ -44,7 +44,7 @@ Next, you'll need to set up your Spring Boot application. You can do this using 
 - **Java** – 11 (17 or 20 is also fine)
 - **Dependencies** – Spring Web, Spring Data JPA, PostgreSQL Driver, Spring Data REST
 
-Once you've generated the project, extract the contents and open it in your preferred IDE. I am an Intellij fan.
+Once you've generated the project, extract the contents and open it in your preferred IDE. I am an IntelliJ fan.
 
 Go to your `application.properties` file in src/main/java/resources and add the following configuration for your PostgreSQL database:
 
