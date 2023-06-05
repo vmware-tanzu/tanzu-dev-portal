@@ -1,32 +1,29 @@
-function autoScroll(element) {
-    let scrollSpeed = 0;
-    const maxSpeed = 10;
-
-    function handleMouseMove(event) {
-        const center = {
-            x: element.offsetLeft + element.offsetWidth / 2,
-        };
-        const distanceFromCenterX = Math.abs(event.clientX - center.x);
-        const distanceFromEdgeX = Math.max(distanceFromCenterX - 100, 0);
-        const scrollX = (event.clientX > center.x ? 1 : -1) * (distanceFromEdgeX / (element.offsetWidth / 2)) * maxSpeed;
-
-        element.scrollLeft += scrollX;
-
-        scrollSpeed = Math.min(Math.abs(scrollX), maxSpeed);
+function scrollPanel (event) {
+    let amount = 0;
+    let directionModifier;
+    const $carousel = $('#advocate-panel');
+    const scrollOffset = $carousel.scrollLeft();
+    if ($(event.target).closest('div').hasClass('arrow-left')) {
+        amount = $carousel.width() / 2 - scrollOffset;
+        directionModifier = -1;
+    } else {
+        amount = $carousel.width() / 2 + scrollOffset;
+        directionModifier = 1;
     }
-
-    element.addEventListener('mousemove', handleMouseMove);
-
-    function handleScroll() {
-        if (scrollSpeed > 0) {
-            scrollSpeed *= 0.9;
-            if (scrollSpeed < 0.1) {
-                scrollSpeed = 0;
-            }
-        }
-    }
-
-    element.addEventListener('scroll', handleScroll);
+    $carousel.animate({ scrollLeft: amount * directionModifier }, 1000);
 }
 
-autoScroll(document.getElementById('advocate-panel'));
+function debounceLeading(func, timeout = 800) {
+    let timer;
+    return (...args) => {
+        if (!timer) {
+            func.apply(this, args);
+        }
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            timer = undefined;
+        }, timeout);
+    };
+}
+
+$('div.arrow-left i, div.arrow-right i').on('click', debounceLeading((event) => scrollPanel(event)));
