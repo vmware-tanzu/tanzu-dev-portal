@@ -1,0 +1,19 @@
+{{ $page := .Site.GetPage (.Get "page" ) }}
+{{ .Scratch.Set "page" $page }}
+<div class="container mt-4 mb-4">
+    <div class="row">
+        {{ range $page.Params.featuredLinks }}
+        {{ $url := cond (eq .url "") (($.Site.GetPage (urlize .name)).RelPermalink) .url }}
+        {{ $image := ($.Scratch.Get "page").Resources.Get (print "images/" .image) }}
+        {{ $image = $image.Fit "300x200" }}
+        <div class="col-12 col-lg-6">
+            <a href="{{ $url }}" alt="{{ .name }}" class="mb-3 mb-lg-4 px-0 mr-lg-4">
+                <img src="{{ $image.RelPermalink }}" alt="{{ .name }}" class="d-block m-auto">
+            </a>
+        </div>
+        <div class="col-12 col-lg-6 m-auto p-0">
+            <p class="text-left">{{ .tagline }}</p>
+        </div>
+        {{ end }}
+    </div>
+</div>

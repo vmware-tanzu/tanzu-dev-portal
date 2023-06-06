@@ -1,4 +1,5 @@
 ---
+draft: true
 date: '2021-02-24'
 lastmod: '2021-02-26'
 subsection: Container Networking
@@ -71,6 +72,41 @@ that can be used in Kubernetes have all sorts of routing features such as:
 
 ## Popular Tooling and Approaches
 
+### Antrea
+
+Antrea provides container networking based on Open vSwitch. Using Open vSwitch,
+Antrea is capable of offering overlays via VXLAN, Geneve, GRE, or STT
+encapsulation methods. Unlike Calico, Antrea can enforce networking rules inside
+Open vSwitch, which should provide more performant policy enforcement relative
+to IPtables.
+
+![Antrea](images/antrea.png)
+
+Those familiar with Open vSwitch are likely to find Antrea a very compelling
+option. Antrea is the default and recomended option with Tanzu.
+
+**Pros:**
+
+- Support many encapsulation protocols.
+  - VXLAN
+  - Geneve
+  - GRE
+  - STT
+- Routed mode support.
+- Familiar to users of Open vSwitch.
+- Better integration with external Load Balancers using NodePortLocal.
+- Windows Support
+- Advanced Security and Network Policy
+- VMware NSX Integration.
+- Traffic Encryption with IPSec.
+- Performant network policy enforcement.
+- [Octant](https://github.com/vmware-tanzu/octant) UI support.
+- Break-fix support from VMware.
+
+**Cons:**
+
+- Must have Open vSwitch kernel module.
+
 ### Calico
 
 Calico has been one of the predominant CNI-plugins since Kubernetes became
@@ -129,60 +165,27 @@ CNI-plugin.
 - BGP might not be possible in your environment
   - If so, Calico's VXLAN mode does not use BGP.
 
-### Antrea
-
-Antrea provides container networking based on Open vSwitch. Using Open vSwitch,
-Antrea is capable of offering routing via VXLAN, Geneve, GRE, or STT
-encapsulation methods. Unlike Calico, Antrea can enforce networking rules inside
-Open vSwitch, which should provide more performant policy enforcement relative
-to IPtables.
-
-![Antrea](images/antrea.png)
-
-Those familiar with Open vSwitch are likely to find Antrea a very compelling
-option. Since Antrea is still in pre-release, we don't recommend it for
-production use cases at this time.
-
-**Pros:**
-
-- Support many encapsulation protocols.
-  - VXLAN
-  - Geneve
-  - GRE
-  - STT
-- Familiar to users of Open vSwitch.
-- Performant network policy enforcement.
-- [Octant](https://github.com/vmware-tanzu/octant) UI support.
-- Break-fix support from VMware.
-
-**Cons:**
-
-- Must have Open vSwitch kernel module.
-
-### NSX-T
+### NSX
 
 NSX-T is an extremely capable network virtualization technology. It is used to
 facilitate networking in datacenters around the world. As such, it is very
-uncommon to see the NSX-T CNI plugin used unless an existing NSX-T deployment
-exists. Introducing a net new NSX-T deployment for a Kubernetes platform
+uncommon to see the NSX CNI plugin used unless an existing NSX deployment
+exists. Introducing a net new NSX deployment for a Kubernetes platform
 introduces a lot of operational overhead. It is also common for teams running
-Kubernetes on top of [vSphere](https://core.vmware.com/vmware-vsphere-tanzu) + NSX-T to run a different CNI-plugin (such as
+Kubernetes on top of [vSphere](https://core.vmware.com/vmware-vsphere-tanzu) + NSX to run a different CNI-plugin (such as
 Calico or Flannel) on top of it.
 
-With this in mind, we only recommend considering the NSX-T CNI plugin if there
-is an existing NSX-T deployment and a strong desire to integrate container
-networking with it directly.
+With this in mind, we recommend using NSX as a CNI plugin with vSphere with Tanzu for unified Pods and VMs Networking and Security.
 
 **Pros:**
 
-- NSX-T is familiar to many VI Admins.
-- NSX-T makes container networking feel more like normal VM networking.
+- NSX is familiar to many VI Admins.
+- NSX makes container networking feel more like normal VM networking.
   - e.g. Namespaces are assigned their own subnets.
 
 **Cons:**
 
-- Architecting, Deploying, and Operating NSX-T is a non-trivial task.
-  - It can be overkill for just container networking.
+- Architecting, Deploying, and Operating NSX is a non-trivial task.
 - Unlike most plugins, you're not running the pod network on top of another.
   - You're instead using the existing network to run the pod network.
 

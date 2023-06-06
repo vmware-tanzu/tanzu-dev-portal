@@ -14,6 +14,7 @@ hosts:
 - Cora Iberkleid
 twitch: vmwaretanzu
 linktwitchyoutubechannels: 'yes'
+youtube: UGsfmKUCJzQ
 type: tv-episode
 ---
 
