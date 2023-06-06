@@ -10,7 +10,7 @@ calendar: true
 guests:
 - Sandeep Nagaraj
 hosts:
-linkyoutubechannel: 'yes'
+youtube: vcv4HJZIMG4
 type: tv-episode
 ---
 
