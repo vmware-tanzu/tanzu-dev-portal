@@ -16,7 +16,7 @@ I just want to get it out there&mdash;once I grokked [Spring Data REST](https://
 
 Having used it a bit more, I need to temper this enthusiasm. SDR enforces HATEOAS by default and you have to put in extra work to turn it off. I feel like HATEOAS is great in theory, and not practical in practice, especially when other humans are programming against your REST API. 
 
-To be more precise, when I talk about REST in this blog post I am referring to Level 2 maturity in [Richardson’s model](https://martinfowler.com/articles/richardsonMaturityModel.html) of API maturity. In my work, and in talking with other developers, the [Fielding level of REST](https://en.wikipedia.org/wiki/Representational_state_transfer), while interesting, is not really practical in a lot of their use cases. There are few clients, especially in the major web and mobile frameworks, working with a Level 2 API. The benefit from implementing the full REST mantra provides minimal value compared to the extra effort needed to implement it. 
+To be more precise, when I talk about REST in this blog post I am referring to Level 2 maturity in [Richardson’s model](https://martinfowler.com/articles/richardsonMaturityModel.html) of API maturity. In my work, and in talking with other developers, the [Fielding level of REST](https://en.wikipedia.org/wiki/Representational_state_transfer), while interesting, is not really practical in a lot of their use cases. There are few clients, especially in the major web and mobile frameworks, working with a Level 3 API. The benefit from implementing the full REST mantra provides minimal value compared to the extra effort needed to implement it. 
 
 This is a long way of saying, be ready for a HATEOAS API, and know that you will have to put in a little work to get it return object IDs.
 
@@ -44,7 +44,7 @@ Next, you'll need to set up your Spring Boot application. You can do this using 
 - **Java** – 11 (17 or 20 is also fine)
 - **Dependencies** – Spring Web, Spring Data JPA, PostgreSQL Driver, Spring Data REST
 
-Once you've generated the project, extract the contents and open it in your preferred IDE. I am an IntelliJ fan.
+Once you've generated the project, extract the contents and open it in your preferred IDE. I am an [IntelliJ](https://www.jetbrains.com/idea/) fan.
 
 Go to your `application.properties` file in src/main/java/resources and add the following configuration for your PostgreSQL database:
 
@@ -55,7 +55,7 @@ spring.datasource.password=your_password_here
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
 
-Make sure to replace `your_password_here` with the password for your PostgreSQL database. In this case and for convenience sake, we are using the `postgres` user, which is the root user for the database. **Note: ** DO NOT DO THIS IN PRODUCTION. 
+Make sure to replace `your_password_here` with the password for your PostgreSQL database. In this case and for convenience sake, we are using the `postgres` user, which is the root user for the database. **Note:** DO NOT DO THIS IN PRODUCTION. 
 
 ## Let’s write some code
 
