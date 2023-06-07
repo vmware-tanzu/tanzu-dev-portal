@@ -11,7 +11,7 @@ guests:
 - Eric Murphy
 - Firat Kucuk
 hosts:
-linkyoutubechannel: 'yes'
+youtube: _s848_mBMrU
 type: tv-episode
 ---
 
