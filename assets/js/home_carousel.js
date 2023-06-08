@@ -26,4 +26,4 @@ function debounceLeading(func, timeout = 800) {
     };
 }
 
-$('div.arrow-left i, div.arrow-right i').on('click', debounceLeading((event) => scrollPanel(event)));
+$('div.arrow-left, div.arrow-right').on('click', debounceLeading((event) => scrollPanel(event)));
