@@ -9,7 +9,8 @@
 {{ end }}
 
 {{ define "home-card" }}
-<a class="col-12 col-lg-4 subtopic mr-3 mb-3 flex-315 transition-all td-box--gray-850 px-5 py-4" href="{{ .RelPermalink }}">
+<a class="col-12 col-lg-4 subtopic mr-3 mb-3 flex-315 transition-all td-box--gray-850 px-5 py-4"
+    href="{{ .RelPermalink }}">
     <div class="gradient-edge-left"></div>
     <h5 class="mb-3 text-white">{{ singularize .Section }}</h5>
     <h4 class="h4 text-white limiter limiter-2" style="min-height: 48px">{{ .Title }}</h4>
@@ -72,22 +73,23 @@
     <h2 id="home-advocates" class="text-center mb-4">Our Developer <a
             href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
     <div class="container-fluid position-relative">
-        <div id="advocate-panel" class="row d-flex flex-row flex-nowrap overflow-auto">
+        <div class="row">
+        <div class="arrow-left justify-content-center"><i class="fas fa-chevron-left"></i></div>
+        <div id="advocate-panel" class="col p-0 d-flex flex-nowrap overflow-auto">
             {{ range $advocatePages }}
             <div class="col-12 col-lg-4 td-box--gray-dark mr-3 mb-3 flex-315 transition-all">
                 <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
                     <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
                         alt="{{ .Params.name }} Image" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title" style="color:white">{{ .Params.name }}</h5>
+                        <h5 class="card-title text-center" style="color:white">{{ .Params.name }}</h5>
                     </div>
                 </a>
             </div>
             {{ end }}
         </div>
-        <div class="row scroll-arrows position-absolute">
-            <div class="arrow-left"><i class="fas fa-chevron-left"></i></div>
-            <div class="arrow-right"><i class="fas fa-chevron-right"></i></div>
+        <div class="arrow-right justify-content-center"><i class="fas fa-chevron-right"></i></div>
+        </div>
         </div>
     </div>
     </div>

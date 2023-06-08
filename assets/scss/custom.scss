@@ -1072,33 +1072,21 @@ a.external-link {
     z-index: 11;
   }
 }
-div.scroll-arrows {
-    position: absolute;
-    top:40%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+div.arrow-left, div.arrow-right {
+    height: 447px;
+    width: 40px;
+    color: #ffffff;
+    font-size: 2rem;
     display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    .arrow-left, .arrow-right {
-        width: 40px;
-        height: 40px;
-        // background-color: #000000;
-        color: #ffffff;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        :hover {
-            cursor: pointer;
-        }
-    }
+    align-items: center;
+    transition: transform 0.25s;
 }
-.light-mode div.scroll-arrows {
-    .arrow-left, .arrow-right {
-        color: #000000;
-    }
+div.arrow-left:hover, div.arrow-right:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.light-mode div.arrow-left, .light-mode div.arrow-right {
+    color: #000000;
 }
 
 .td-home-card {
