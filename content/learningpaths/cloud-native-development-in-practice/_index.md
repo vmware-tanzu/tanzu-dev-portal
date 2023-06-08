@@ -74,7 +74,7 @@ After completing the learning path, you will be able to
 
 ## The Cloud Native Developer
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
 | Prerequisites | | [Lab](./prereq/) |
@@ -82,7 +82,7 @@ After completing the learning path, you will be able to
 
 ### Build a greenfield app
 
-{{< table "table" >}}
+{{< table "table"/ >}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
 | Initialize an app | | [Lab](./spring-boot-app-build/) | |
@@ -95,7 +95,7 @@ After completing the learning path, you will be able to
 
 ### Run it in production
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
 | Health Monitoring |[App Ops](https://docs.google.com/presentation/d/142gpNZqTNHT3YcaOB3pJeXUM9Q8BrwULmoKwJ344RuM/present#slide=id.ge9cac6b3d8_0_0) | [Lab](./health-monitoring/) | |
@@ -107,7 +107,7 @@ After completing the learning path, you will be able to
 
 ## Evolving your app
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
 | Application Evolution | [App Continuum](https://courses.education.pivotal.io/appcontinuum) | | | |
@@ -115,7 +115,7 @@ After completing the learning path, you will be able to
 
 ## Advanced topics
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Lesson | Intro | Lab | Wrap |
 | ------- | ---------- | ---------- | ---------- |
 | Service Discovery and Client Side Load Balancing |[Concepts](https://docs.google.com/presentation/d/14P89lCFrS5Jcql1HA1lxrspMUGKnsc8R1VOQWcMUPLs/present#slide=id.ge9ceda5589_0_0) | [Lab](./service-discovery/) | [Implementations](https://docs.google.com/presentation/d/1DncxQ8_EXbhUO284pnojaC7Z_DYnGIQ5AaU8OulUrMM/present#slide=id.ge9ceda5589_0_0) |

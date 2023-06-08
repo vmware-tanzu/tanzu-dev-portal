@@ -89,7 +89,7 @@ The Kubernetes API can be queried with the `kubectl` client to list specific
 components with specific labels. There are three operators that can be used to
 perform these queries: `=`, `==`, and `!=`.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Operator | Description |
 | -------- | ----------- |
 | =        | equal to or is |
@@ -127,7 +127,7 @@ locating and managing components easier in the long run.
 Some recommended labels per the
 [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 include:
-{{< table "table" >}}
+{{< table "table" />}}
 | Key | Description | Example |
 | --- | --- | --- |
 | name | The name of the application | mysql |
@@ -140,7 +140,7 @@ include:
 
 VMware recommends you extend the above labels with the following, where relevant.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Key | Description | Example |
 | --- | --- | --- |
 | tier | The tier in the overall application architecture | frontend |

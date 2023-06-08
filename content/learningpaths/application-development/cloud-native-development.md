@@ -61,7 +61,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 
 ### Application architecture {id=app-archi}
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Concept | Definition | 
 | ------- | ---------- |
 | Twelve-factor application | A set of [twelve principles and practices](https://12factor.net/) that developers follow to construct applications optimized for modern cloud environments. Those twelve factors are often used to determine how well an application leverages cloud native technologies.
@@ -73,7 +73,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 
 ### Application life-cycle {id=sw-life-cycle}
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Concept | Definition | 
 | ------- | ---------- |
 | DevOps | A collaborative mindset consolidating practices, cultural philosophies, tools, and patterns designed to break down the organizational barriers between development and operations departments along application life-cycles. Breaking down silos empower organizations to:<br/><br/><ul><li>Deliver new features faster and more often in production.</li><li>Have a more reliable operating environment.</li><li>Improve communication and collaboration.</li></ul>With an initial focus on software developers and operation engineers, DevOps has quickly evolved to include other departments and functions: security (DevSecOps), finance (FinOps), network (NetOps), and business.
@@ -84,7 +84,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 
 ### Supporting infrastructure {id=support-infra}
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Concept | Definition | 
 | ------- | ---------- |
 | Container | A standard unit of software that packages code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers are typically lighter weight than full systems. They make applications more atomic and portable across environments.
@@ -98,7 +98,7 @@ Cloud native concepts are numerous. The following ones are the most common. They
 
 ### Team culture {id=culture}
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Concept | Definition | 
 | ------- | ---------- |
 | Generative culture | As defined by professor and sociologist Ron Westrum, leaders in a generative company culture emphasize the importance of accomplishing the organization’s goals and missions on-time, rather than on personal gain or rules. New ideas are welcome. Members are proactive and focused on getting information to the right people by any means necessary. In essence, when it comes to cloud-native culture, what we are talking about is being generative. |

@@ -36,7 +36,7 @@ Below is a list of interview dos and don’ts that you can go over with your tea
 
 Starting with easy topics will help people get relaxed, comfortable, and talking.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Question | Bad Question | 
 | ---- | ---- |
 | Tell me a little bit about what you do? | You answered that you hate __ in our recruiting survey. Why do you hate ___ ? |
@@ -49,7 +49,7 @@ Starting with easy topics will help people get relaxed, comfortable, and talking
 
 The goal is to hear people speak in their own words as much as possible. It’s very easy for people to say they would buy your product until they actually have to pay. Past behavior is the best predictor of future behavior.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Question | Bad Question | 
 | ---- | ---- |
 | How are you doing? | Are you having a good day? |
@@ -64,7 +64,7 @@ The goal is to hear people speak in their own words as much as possible. It’s 
 
 The goal is to understand what happened in their past to give us clues about why they think or feel things today.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Question | Bad Question | 
 | ---- | ---- |
 | Can you talk about the last time you used this? | Do you typically do this? |
@@ -79,7 +79,7 @@ The goal is to understand what happened in their past to give us clues about why
 
 The goal is to give people space to think because being interviewed is difficult. You can also use silence as a way to extract even more information that people may be hesitant to give. Related, also feel free to move forward if the conversation is digressing or come back to the question if someone is having a hard time answering.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Behavior | Bad Behavior | 
 | ---- | ---- |
 | _Silence_ | Interrupting while interviewee is speaking |
@@ -91,7 +91,7 @@ The goal is to give people space to think because being interviewed is difficult
 
 The goal is to get people speaking as honestly as possible and to encourage them to feel it’s okay when they don’t understand how to use something in an interview. Correcting interviewees makes them feel that they are being tested and they can easily become afraid to speak their mind for fear of looking dumb.
 
-{{< table "table" >}}
+{{< table "table"/ >}}
 | Good Interviewer Behavior |Bad Interviewer Behavior |
 | ---- | ---- |
 | User: This part doesn’t make sense. Is it supposed to do that?<br><br>Interviewer: What do you think it should do?<br><br>User: I think it would swap out all the pictures.<br><br>Interviewer: There is no actual answer here, we want to learn about what you expect. Thanks! | User: This part doesn’t make sense. Is it supposed to do that?<br><br>Interviewer: Oh, it's a slideshow and it's just broken in the prototype. You’re supposed to tap on the arrow and the next image should enter the page.<br><br>User: Oh I didn’t see that, sorry. |
@@ -104,7 +104,7 @@ The goal is to get people speaking as honestly as possible and to encourage them
 
 The goal is to pay attention to the user as they are speaking and feel comfortable going off script when you see or hear something interesting. It can be easy to read straight off the script without asking follow up questions but it means that we miss out on something that may be valuable for us to know.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Interviewer Behavior | Bad Interviewer Behavior |
 | ---- | ---- |
 | Interviewer: What do you think this page does?<br><br> User: Oh! I like that. Anyway, I think this page tells me my sleep duration.<br><br> Interviewer: Let’s rewind for a second, what did you mean by “Oh! I like that.”? | Interviewer: What do you think this page does?<br><br> User: Oh! I like that. Anyway, I think this page tells me my sleep duration.<br><br> Interviewer: Great, what would you do next? |
@@ -116,7 +116,7 @@ The goal is to pay attention to the user as they are speaking and feel comfortab
 
 The goal with research is to have as unbiased feedback as possible. For example, interviewees should feel . Talking about your opinion, or even telling them what the product is supposed to do will subtly encourage interviewees to agree with you. Interviewees will feel inclined to be polite and make you feel good about your product to begin with.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Interviewer Behavior | Bad Interviewer Behavior |
 | ---- | ---- |
 | Interviewer: We’re interested in having you test drive an idea that's related to sleep cycles. | Interviewer: We’re working on this mobile app that gives you an easy way to look at how much sleep you’re getting at night. | 
@@ -127,7 +127,7 @@ The goal with research is to have as unbiased feedback as possible. For example,
 ##### Don’t wrap up without having interviewees reflect on their experience.
 Interviewees will have more to say. You can capture many interesting insights during the wrap-up.
 
-{{< table "table" >}}
+{{< table "table" />}}
 | Good Interviewer Behavior | Bad Interviewer Behavior |
 | ---- | ---- |
 | How was this experience for you? Is there anything else pertaining to sleep that you’ve been thinking about lately? | We’ve got no more questions for you. Thanks, bye! |

@@ -71,7 +71,7 @@ _What we mean_
 Fully adopting an existing open-source system and staying largely (or entirely) within the lanes it provides. For example: [Google Material](https://material.io/design/introduction), [IBM Carbon](https://www.carbondesignsystem.com/), [VMware Clarity](https://clarity.design/) or [Microsoft Fluent](https://www.microsoft.com/design/fluent/#/).
 
 
-{{< table "table" >}}
+{{< table "table" / / / >}}
 | Pros | Cons |
 | ---- | ---- |
 | Low cost | Low brand differentiation. | 
@@ -90,7 +90,7 @@ _What we mean_
 
 Starting with an open-source system as a foundation, but building custom translation layers for things like themes or domain-specific components. For example: Layering a set of branded themes built on a [Material UI](https://mui.com/') foundation.
 
-{{< table "table" >}}
+{{< table "table" / >}}
 | Pros | Cons |
 | ---- | ---- |
 | Provides a <em>little</em> more customization and differentiation than straight adopting. | Higher cost than adopting a system. |
@@ -104,7 +104,7 @@ _What we mean_
 
 Taking the DIY option and creating a custom system entirely from scratch. From color choices to browser compatibility, type scale to responsive grids, design assets, coded components, and contribution and maintenance processes. Everything according to your needs and vision. 
 
-{{< table "table" >}}
+{{< table "table"  / >}}
 | Pros | Cons |
 | ---- | ---- |
 | Full customization. | Likely requires a dedicated team. |
@@ -121,7 +121,7 @@ _What we mean_
 
 Taking the option to skip a design system entirely or to let one evolve from an organic need. Maybe a key stakeholder loves the Craigslist look and you can meet their needs without any fancy UI. More likely than the Craigslist lover, you might have a young portfolio of apps who choose to start with only common styles—as they grow together, they can then identify valuable places for consistency and create a shared library of common components over time, if doing so would provide needed value.
 
-{{< table "table" >}}
+{{< table "table"  / >}}
 | Pros | Cons |
 | ---- | ---- |
 | Cheaper than starting off with a design system | Scaling is not trivial |
