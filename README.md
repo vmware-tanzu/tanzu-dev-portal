@@ -124,6 +124,7 @@ _Note: The reason the .nvmrc is required even though the default should already 
      ```sh
      brew install act
      ```
+     Hugo Server
 
 - **Install Docker** — The `act` tool depends upon Docker to build images for local automated tests. You can download [Docker Desktop](https://www.docker.com/products/docker-desktop/) or use `brew`:
 
