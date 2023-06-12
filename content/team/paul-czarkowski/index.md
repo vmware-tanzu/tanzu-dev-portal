@@ -1,7 +1,7 @@
 ---
 name: Paul Czarkowski
 description: "Developer Advocate"
-roles: ["advocate","author"]
+roles: ["author"]
 skills: ["Spring", "Kubernetes"]
 location: "Austin, TX"
 hidden: true
