@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "As developers manage kubernetes less, their productivity goes up - State of Kubernetes Survey"
-description: "As developers manage kubernetes less, their productivity goes up - State of Kubernetes Survey"
+title: "As developers manage kubernetes less, their productivity goes up - State of Kubernetes Survey 2023"
+description: "As developers manage kubernetes less, their productivity goes up - State of Kubernetes Survey 2023"
 episode: "185"
 aliases: ["0185"]
 publishdate: "2020-04-01T00:00:00-07:00"
