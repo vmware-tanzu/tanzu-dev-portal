@@ -271,7 +271,7 @@
   <!-- Determine if bios exist for each guest -->
   {{ $guests := slice }}
   {{ range .Params.guests }}
-    {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+    {{ with $.Site.GetPage (print "/team/" ( . | anchorize | urlize )) }}
       {{ $guests = $guests | append . }}
     {{ end }}
   {{ end }}
@@ -283,7 +283,7 @@
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Guests</h3>
         {{ range $i, $e := $.Params.guests }}
-          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          {{ with $.Site.GetPage (print "/team/" ( . | anchorize | urlize )) }}
             <div class=" mb-4 pb-5">
               {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
@@ -314,7 +314,7 @@
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Hosts</h3>
         {{ range $i, $e := $.Params.hosts }}
-          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          {{ with $.Site.GetPage (print "/team/" ( . | anchorize | urlize )) }}
             <div class="mb-4">
             {{ partial "team-member.html" (dict "context" . "display" "tv" "conf" "beyond" "index" $i) }}
             </div>
@@ -329,7 +329,7 @@
       <div class="col-lg-9 col-12 px-0">
         <h3 class="mb-3">Hosts</h3>
         {{ range . }}
-          {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+          {{ with $.Site.GetPage (print "/team/" ( . | anchorize | urlize )) }}
             <div class="mb-4">
             {{ partial "team-member.html" (dict "context" . "display" "tv") }}
             </div>
@@ -346,7 +346,7 @@
     <div class="col-lg-9 col-12 px-0">
       <h3 class="mb-3">Speakers</h3>
       {{ range . }}
-        {{ with $.Site.GetPage (print "/team/" ( . | urlize )) }}
+        {{ with $.Site.GetPage (print "/team/" ( . | anchorize | urlize )) }}
           <div class="mb-4">
           {{ partial "team-member.html" (dict "context" . "display" "tv") }}
           </div>
