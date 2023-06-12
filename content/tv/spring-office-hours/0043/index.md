@@ -12,8 +12,7 @@ hosts:
 # guests:
 # -
 minutes: 60
-# TODO YouTube ID after posted
-youtube: ""
+youtube: "H13dYhWP78g"
 ---
 
 Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. In this episode we will look at 'scaling to zero' with Spring, and answer any questions you might have.
