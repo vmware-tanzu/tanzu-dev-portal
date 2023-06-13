@@ -12,6 +12,7 @@ guests:
 - Josh Long
 hosts:
 linktwitchyoutubechannels: 'yes'
+youtube: HFRDpCp_4bg
 type: tv-episode
 ---
 
