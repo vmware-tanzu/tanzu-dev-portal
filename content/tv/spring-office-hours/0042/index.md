@@ -21,10 +21,10 @@ Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Sp
 
 ## Show Notes
 
--   [SpringOne Registration](https://springone.io/)
--   [Spring Release Calendar](https://calendar.spring.io/)
--   [Spring HTTP Interface Request Headers](https://youtu.be/AOJzm7yFOl0)
--   [New GraalVM Release Stream](https://twitter.com/graalvm/status/1666766487699292162)
--   [Spring Cloud Kubernetes with Spring Boot 3](https://piotrminkowski.com/2023/06/08/spring-cloud-kubernetes-with-spring-boot-3/)
+- [SpringOne Registration](https://springone.io/)
+- [Spring Release Calendar](https://calendar.spring.io/)
+- [Spring HTTP Interface Request Headers](https://youtu.be/AOJzm7yFOl0)
+- [New GraalVM Release Stream](https://twitter.com/graalvm/status/1666766487699292162)
+- [Spring Cloud Kubernetes with Spring Boot 3](https://piotrminkowski.com/2023/06/08/spring-cloud-kubernetes-with-spring-boot-3/)
 - [Netflix's Overall Architecture](https://twitter.com/alexxubyte/status/1668281751133900801)
 - [Virtual Threads in Spring](https://youtu.be/Is5HXJhC3jE)
