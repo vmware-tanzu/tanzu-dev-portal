@@ -20,6 +20,7 @@
 {{/* VARS */}}
 {{ $advocatePages := where (where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate"))
 "Params.skills" "ne" nil}}
+{{ $advocatePages = sort $advocatePages "Params.name" "asc" }}
 {{ $advocates := slice }}
 {{ range $advocatePages }}
 {{ $advocates = $advocates | append .Params.name }}
@@ -75,7 +76,7 @@
             <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
                 <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
                     alt="{{ .Params.name }} Image" class="card-img-top">
-            <h5 class="text-center p-3" style="color:white">{{ .Params.name }}</h5>
+                <h5 class="text-center p-3" style="color:white">{{ .Params.name }}</h5>
             </a>
         </div>
         {{ end }}
