@@ -22,7 +22,8 @@
 {{ define "main" }}
 
 {{/* VARS */}}
-{{ $advocatePages := where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate")}}
+{{ $advocatePages := where (where (where .Site.Pages "Section" "team") "Params.roles" "intersect" (slice "advocate"))
+"Params.skills" "ne" nil}}
 {{ $advocates := slice }}
 {{ range $advocatePages }}
 {{ $advocates = $advocates | append .Params.name }}
@@ -90,6 +91,23 @@
             </div>
             <div class="arrow-right justify-content-center"><i class="fas fa-chevron-right"></i></div>
         </div>
+    </div>
+</section>
+<section id="home-advocates" class="td-box td-box--gray-dark td-box--gradient td-box--height-auto">
+    <h2 class="text-center">Our Developer <a href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a>
+    </h2>
+    <div class="row justify-content-center flex-lg-nowrap w-100 mw-100 overflow-hidden px-2 px-lg-0">
+        {{ range $advocatePages }}
+        <div class="learning-path-card mb-2 mb-lg-0 mx-0 position-relative w-100 p-0">
+            <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
+                <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
+                    alt="{{ .Params.name }} Image" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-center" style="color:white">{{ .Params.name }}</h5>
+                </div>
+            </a>
+        </div>
+        {{ end }}
     </div>
 </section>
 {{ $carouselScript := resources.Get "js/home_carousel.js" }}

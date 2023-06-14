@@ -594,9 +594,11 @@ limitations under the License.
   });
 
   // Featured Learning paths
-  $( ".learning-path-card" ).mouseenter(function() {
-    $(".learning-path-card").removeClass("active");
-    $(this).addClass("active");
+  $('.learning-path-card').on('mouseenter', function () {
+      $(this).addClass('active');
+  });
+  $('.learning-path-card').on('mouseleave', function () {
+      $(this).removeClass('active');
   });
 
   // Beyond Agenda Toggle

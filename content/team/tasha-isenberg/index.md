@@ -2,9 +2,7 @@
 name: Tasha Isenberg
 description: "Developer Advocacy Manager"
 roles: ["advocate","author"]
-homePageExpertiseSort: 
-- "Kubernetes Platform"
-skills: []
+# skills: []
 location: "Pittsburgh, PA"
 
 # Social Media 
