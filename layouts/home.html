@@ -74,24 +74,22 @@
             href="{{ (.Site.GetPage `advocates`).RelPermalink }}">Advocates</a></h2>
     <div class="container-fluid position-relative">
         <div class="row">
-        <div class="arrow-left justify-content-center"><i class="fas fa-chevron-left"></i></div>
-        <div id="advocate-panel" class="col p-0 d-flex flex-nowrap overflow-auto">
-            {{ range $advocatePages }}
-            <div class="col-12 col-lg-4 td-box--gray-dark mr-3 mb-3 flex-315 transition-all">
-                <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
-                    <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
-                        alt="{{ .Params.name }} Image" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" style="color:white">{{ .Params.name }}</h5>
-                    </div>
-                </a>
+            <div class="arrow-left justify-content-center"><i class="fas fa-chevron-left"></i></div>
+            <div id="advocate-panel" class="col p-0 d-flex flex-nowrap overflow-auto">
+                {{ range $advocatePages }}
+                <div class="col-12 col-lg-4 td-box--gray-dark mr-3 mb-3 flex-315 transition-all">
+                    <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
+                        <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
+                            alt="{{ .Params.name }} Image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="color:white">{{ .Params.name }}</h5>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
             </div>
-            {{ end }}
+            <div class="arrow-right justify-content-center"><i class="fas fa-chevron-right"></i></div>
         </div>
-        <div class="arrow-right justify-content-center"><i class="fas fa-chevron-right"></i></div>
-        </div>
-        </div>
-    </div>
     </div>
 </section>
 {{ $carouselScript := resources.Get "js/home_carousel.js" }}
