@@ -368,8 +368,15 @@
   opacity: 0;
   animation: fadeIn 1s ease-out .3s forwards;
 
+  .row {
+    max-width: 1500px;
+  }
+  @media (max-width: 991px) {
+    max-width: 510px;
+    margin:auto;
+  }
   .learning-path-card {
-    height: 320px;
+    height: 260px;
     transition: all .2s ease-out;
 
     .learning-path-description {
@@ -411,15 +418,6 @@
     }
     &:nth-child(5) {
       background: #1f3442;
-    }
-    @media(max-width:1440px) {
-      height: 350px;
-    }
-    @media(max-width:1300px) {
-      height: 400px;
-    }
-    @media(max-width:1140px) {
-      height: 450px;
     }
     @media(max-width:991px) {
       height: auto;
