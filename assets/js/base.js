@@ -594,10 +594,10 @@ limitations under the License.
   });
 
   // Featured Learning paths
-  $('.learning-path-card').on('mouseenter', function () {
+  $('.advocate-card').on('mouseenter', function () {
       $(this).addClass('active');
   });
-  $('.learning-path-card').on('mouseleave', function () {
+  $('.advocate-card').on('mouseleave', function () {
       $(this).removeClass('active');
   });
 
