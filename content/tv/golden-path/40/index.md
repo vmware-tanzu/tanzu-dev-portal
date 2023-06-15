@@ -10,7 +10,7 @@ calendar: true
 guests:
 - Elinor Swery
 hosts:
-linkyoutubechannel: 'yes'
+youtube: AoxFGOSR6z0
 type: tv-episode
 ---
 
