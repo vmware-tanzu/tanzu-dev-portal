@@ -72,7 +72,13 @@
     </h5>
     <div class="row justify-content-center flex-lg-nowrap overflow-hidden px-2 px-lg-0">
         {{ range $advocatePages }}
-        <div class="advocate-card mb-2 mb-lg-0 mx-0 position-relative w-100 p-0">
+        {{ $tooltipTitle := "" }}
+        {{ $last := len .Params.skills }}
+        {{ range $index, $skill := .Params.skills }}
+        {{ $tooltipTitle = printf "%s%s%s" $tooltipTitle (cond (and (ne $index $last ) (ne $index 0)) ", " "") $skill }}
+        {{ end }}
+        <div class="advocate-card mb-2 mb-lg-0 mx-0 position-relative w-100 p-0" data-toggle="tooltip"
+            data-placement="top" title="{{ $tooltipTitle }}">
             <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
                 <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
                     alt="{{ .Params.name }} Image" class="card-img-top">
