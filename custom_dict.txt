@@ -355,6 +355,7 @@ CF_API_ENDPOINT_URL
 (CF|cf)(-for-k8s)?
 cfapps
 [Cc]group(s)?
+Chacko
 Chainguard
 Chander
 changeAlertLevel
@@ -2304,6 +2305,7 @@ Snapchat
 SNAPe
 SNI
 Snyk
+Soby
 SolidFire
 solutioning
 Soluto('s)?
