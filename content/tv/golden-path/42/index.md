@@ -12,6 +12,7 @@ guests:
 hosts:
 - Tiffany Jernigan
 linktwitchyoutubechannels: 'yes'
+youtube: p6jWhPe8SxQ
 type: tv-episode
 ---
 
