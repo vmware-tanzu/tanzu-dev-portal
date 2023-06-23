@@ -3,7 +3,7 @@ Date: "2023-06-13T12:30:00-07:00"
 lastmod: "2023-06-13"
 PublishDate: "2023-06-13"
 type: "tv-episode"
-title: "Virtual Threads"
+title: "Spring Office Hours: Episode 42 - Virtual Threads"
 episode: "0042"
 explicit: 'no'
 hosts:
