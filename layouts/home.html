@@ -1,14 +1,16 @@
 {{ define "home-card" }}
-<a class="col-12 col-lg-4 subtopic mr-3 mb-3 flex-315 transition-all td-box--gray-850 px-5 py-4"
+<a class="mr-3 mb-3 flex-315 transition-all td-box--gray-850 px-5 py-4"
     href="{{ .RelPermalink }}">
     <div class="gradient-edge-left"></div>
     <h5 class="mb-3 text-white">{{ singularize .Section }}</h5>
     <h4 class="h4 text-white limiter limiter-2" style="min-height: 48px">{{ .Title }}</h4>
     {{ range cond (not (eq .Section "tv")) .Params.team .Params.hosts }}
     {{ with $.Site.GetPage (print "/team/" (urlize .) ) }}
-    <img src='{{ partial "image-src.html" (dict "context" . "process" "resize" "size" "175x175") }}'
-        alt="{{ .Params.name }}" class="rounded w-25 mr-2">
-    <p class="d-inline-block">{{ .Params.name }}</p>
+    <div class="mb-2">
+        <img src='{{ partial "image-src.html" (dict "context" . "process" "resize" "size" "175x175") }}'
+            alt="{{ .Params.name }}" class="rounded w-25 mr-2">
+        <p class="d-inline-block">{{ .Params.name }}</p>
+    </div>
     {{ end }}
     {{ end }}
 </a>
@@ -82,7 +84,7 @@
             <a href="{{ .RelPermalink }}" class="linked-box td-box--gray-dark">
                 <img src="{{ partial `image-src.html` (dict `context` . `process` `resize` `size` `600x600`) }}"
                     alt="{{ .Params.name }} Image" class="card-img-top">
-                <h5 class="text-center p-3" style="color:white">{{ .Params.name }}</h5>
+                <h5 class="text-center pt-3" style="color:white">{{ .Params.name }}</h5>
             </a>
         </div>
         {{ end }}
