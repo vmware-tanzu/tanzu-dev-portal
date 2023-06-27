@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Avoid cloud lock-in with Kubernetes, findings from the 2023 VMware State of Kubernetes Survey 📊"
-description: "Avoid cloud lock-in with Kubernetes, findings from the 2023 VMware State of Kubernetes Survey 📊"
+title: "Avoid Cloud Lock-in with Kubernetes, Findings from the 2023 VMware State of Kubernetes Survey 📊"
+description: "Avoid Cloud Lock-in with Kubernetes, Findings from the 2023 VMware State of Kubernetes Survey 📊"
 episode: "190"
 aliases: ["0190"]
 publishdate: "2020-04-01T00:00:00-07:00"
