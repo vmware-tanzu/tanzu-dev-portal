@@ -12,7 +12,7 @@ guests:
 - Michiko Stas
 - Moni Gmitro
 hosts:
-linkyoutubechannel: 'yes'
+youtube: 0JO3MDpvQrQ
 type: tv-episode
 ---
 
