@@ -2,7 +2,7 @@
 name: Dan Vega
 description: "Spring Developer Advocate, VMware Tanzu"
 roles: ["advocate"]
-skills: ["Spring","Java","Architecture","Cloud","Microservices","Full Stack"]
+skills: ["Spring","Java","GraphQL","Cloud","Microservices","Serverless","Full Stack"]
 location: "Cleveland, OH USA"
 
 # Social Media
@@ -27,17 +27,18 @@ Dan has a variety of talks and workshops on the following topics:
 
 - Spring Boot
 - Spring Cloud
-- Architecture
+- GraphQL
+- Serverless
 - Microservices
 - Full Stack Java Development
 
 ## Highlights
 
-### Full-Stack Development with Spring Boot and Vue
+### Spring Boot Tutorial for Beginners
 
-Are you interested in building full-stack web applications with Spring Boot and Vue? If so, this session is going to give you everything you need to get started. First, you will dive into some of the challenges of building full-stack applications. Next, you will look at some different approaches you can take depending on the types of applications you’re building along with the makeup of your team. Finally, you will spend most of the session building a sample application so that when you leave this session, you’ll have everything you need to start building full-stack web applications with Spring Boot and Vue.
+Welcome to this Spring Boot Crash Course! In this video, you'll gain the foundational knowledge of Spring Boot and how to hit the ground running with the Spring Framework. We'll discuss key concepts of the Spring Framework such as Beans, Application Context, Inversion of Control, Dependency Injection, and more. You will learn how to build a new Spring Boot application and utilize some of the most popular projects of the Spring ecosystem like Spring MVC and Spring Data. By the end of this tutorial, you will be able to create a REST API with Spring Boot and be familiar with deploying your application to production. So, grab a cup of your favorite drink, relax, and prepare to take your first steps into the world of Spring Boot development.
 
-{{< youtube id="VkrGHqwSPVA" class="youtube-video-shortcode" >}}
+{{< youtube id="UgX5lgv4uVM" class="youtube-video-shortcode" >}}
 
 ### Building REST APIs in Spring Boot
 
@@ -51,11 +52,23 @@ In this session, you will learn the basics of how to create a new web applicatio
 
 {{< youtube id="q_RLfOB7axQ" class="youtube-video-shortcode" >}}
 
+### Spring Boot 3 - What’s new in Spring Framework 6 and Spring Boot 3.0
+
+In this tutorial you will learn about some of the new features in Spring Framework 6 and Spring Boot 3.
+
+{{< youtube id="TR254zh-f3c" class="youtube-video-shortcode" >}}
+
 ### What’s new in Spring Boot 2.6
 
 In this tutorial, you will learn about what is new in Spring Boot 2.6. The release notes are a great way to get caught up with what has changed and what is new in each release. You will learn about some of the changes and new features in Spring Boot 2.6 by going through some examples.
 
 {{< youtube id="4L4LEnawcO8" class="youtube-video-shortcode" >}}
+
+### Full-Stack Development with Spring Boot and Vue
+
+Are you interested in building full-stack web applications with Spring Boot and Vue? If so, this session is going to give you everything you need to get started. First, you will dive into some of the challenges of building full-stack applications. Next, you will look at some different approaches you can take depending on the types of applications you’re building along with the makeup of your team. Finally, you will spend most of the session building a sample application so that when you leave this session, you’ll have everything you need to start building full-stack web applications with Spring Boot and Vue.
+
+{{< youtube id="VkrGHqwSPVA" class="youtube-video-shortcode" >}}
 
 ### How to create your First Spring Application (without Spring Boot)
 
