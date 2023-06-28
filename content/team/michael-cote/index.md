@@ -2,9 +2,6 @@
 name: Michael Coté
 description: "Developer Advocate"
 roles: ["advocate"]
-homePageExpertiseSort: 
-- "Modern Applications"
-- "Kubernetes Platform"
 skills: ["Digital Transformation", "DevOps"]
 location: "Austin, TX"
 
