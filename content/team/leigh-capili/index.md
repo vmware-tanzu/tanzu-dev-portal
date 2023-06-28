@@ -2,6 +2,8 @@
 name: Leigh Capili
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Kubernetes Platform"
 skills: ["Kubernetes", "GitOps", "Continous Delivery", "Developer Experience"]
 location: "Denver, CO USA"
 weight: 1

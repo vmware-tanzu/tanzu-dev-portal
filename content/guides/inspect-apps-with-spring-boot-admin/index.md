@@ -14,7 +14,7 @@ tags:
 - Spring
 - Spring Boot
 - Microservices
-- Kuberenetes
+- Kubernetes
 - Cloud 
 team:
 - Ben Wilcock

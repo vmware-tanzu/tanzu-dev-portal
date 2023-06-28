@@ -4,21 +4,30 @@
         {{ if isset .context.Params "photo" }}
             {{ $image = .context.Resources.Get (print "images/" .context.Params.photo) }}
         {{ else }}
-            {{ $image = .context.Resources.Get (print "images/" (urlize .context.Params.name) ".jpg") }}
+            {{ $image = .context.Resources.Get (print "images/" (anchorize (urlize .context.Params.name)) ".jpg") }}
+            {{ if eq $image nil }}
+                {{ $image = .context.Resources.Get (print "images/" (anchorize (urlize .context.Params.name)) ".png") }}
+            {{ end }}
         {{ end }}
-        {{ $image := $image.Fill "600x600"}}
+        {{ if ne $image nil }}
+            {{ $image := $image.Fill "600x600" }}
+        {{ end }}
         {{ if and (or (eq .display "summary") (eq .display "tv")) (not .context.Params.hidden) }}
             {{ if eq .conf "beyond" }}
                 {{if not (modBool .index 2)}}
-                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (urlize .context.Params.name) "-beyond-red.png" }}'/></a>
+                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (anchorize (urlize .context.Params.name)) "-beyond-red.png" }}'/></a>
                 {{ else }}
-                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (urlize .context.Params.name) "-beyond-blue.png" }}'/></a>
+                    <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ print .context.RelPermalink "images/" (anchorize (urlize .context.Params.name)) "-beyond-blue.png" }}'/></a>
                 {{end}}
             {{ else }}
+                {{ if ne $image nil }}
                 <a href="{{ .context.RelPermalink }}"><img alt="{{ .context.Params.name }}" class='' src='{{ $image.RelPermalink }}'/></a>
+                {{ end }}
             {{ end }}
         {{ else }}
+            {{ if ne $image nil }}
             <img alt="{{ .context.Params.name }}" class='' src='{{ $image.RelPermalink }}'/>
+            {{ end }}
         {{ end }}
     </div>
     <div class="col-lg-8 col-md-8">

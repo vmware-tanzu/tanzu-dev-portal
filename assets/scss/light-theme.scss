@@ -303,7 +303,6 @@ nav {
         display: none;
     }
 }
-#featured-paths,
 #live-notify .btn {
   background-color: white !important;
 }
@@ -399,31 +398,6 @@ div.aside div.aside-content {
 #hero .product-links > .linked-box {
   background: #D9E4EA !important;
 }
-
-#featured-paths .row .learning-path-card {
-  .learning-path-description {
-    color: black !important;
-  }
-  &:nth-child(1) {
-    background: #f4f8fa;
-  }
-  &:nth-child(2) {
-    background: #f0f4f7;
-
-  }
-  &:nth-child(3) {
-    background: #e9edf0;
-
-  }
-  &:nth-child(4) {
-    background: #e6ebee;
-
-  }
-  &:nth-child(5) {
-    background: #e2eaee;
-  }
-}
-
 
 .nav.nav-tabs {
   border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;

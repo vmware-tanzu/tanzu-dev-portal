@@ -2,6 +2,9 @@
 name: Cora Iberkleid
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Modern Applications"
+- "Application Development"
 skills: ["Spring", "Kubernetes", "Architecture", "Microservices"]
 location: "New York, NY"
 
