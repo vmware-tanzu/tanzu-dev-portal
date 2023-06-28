@@ -2,6 +2,9 @@
 name: Jakub Pilimon
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Application Development"
+- "Kubernetes Platform"
 skills: ["Architecture", "Domain-Driven Design", "Unit testing", "Refactoring", "Spring"]
 location: "Poland"
 

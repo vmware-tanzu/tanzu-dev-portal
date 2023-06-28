@@ -2,6 +2,8 @@
 name: Dan Vega
 description: "Spring Developer Advocate, VMware Tanzu"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Application Development"
 skills: ["Spring","Java","Architecture","Cloud","Microservices","Full Stack"]
 location: "Cleveland, OH USA"
 

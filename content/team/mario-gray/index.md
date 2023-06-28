@@ -2,6 +2,9 @@
 name: Mario Gray
 description: "Developer Advocate"
 roles: ["advocate"]
+homePageExpertiseSort: 
+- "Application Development"
+- "Kubernetes Platform"
 skills: ["Spring", "kotlin", "TDD", "Security", "Services", "functional", "Kubernetes"]
 location: "Santa Monica, CA"
 

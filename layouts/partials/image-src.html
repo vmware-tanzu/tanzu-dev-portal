@@ -1,0 +1,16 @@
+{{- $image := "" -}}
+{{- if isset .context.Params "photo" -}}
+{{- $image = .context.Resources.Get (print "images/" .context.Params.photo) -}}
+{{- else -}}
+{{- $image = .context.Resources.Get (print "images/" (urlize .context.Params.name) ".jpg") -}}
+{{- end -}}
+{{- if eq .process "resize" -}}
+{{- $image = $image.Resize .size -}}
+{{- else if eq .process "fit" -}}
+{{- $image = $image.Fit .size -}}
+{{- else if eq .process "fill" -}}
+{{- $image = $image.Fill .size -}}
+{{- else if eq .process "crop" -}}
+{{- $image = $image.Crop .size -}}
+{{- end -}}
+{{- print $image.RelPermalink -}}

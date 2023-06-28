@@ -9,7 +9,7 @@ tags:
 - Bitnami
 - Docker
 - Containers
-- Kuberenetes
+- Kubernetes
 - Security
 team:
 - Carlos Rodriguez Hernandez
