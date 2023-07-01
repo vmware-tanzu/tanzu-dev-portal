@@ -104,6 +104,9 @@
       &.learningpaths-hero {
         background-image: url('{{ "images/backgrounds/background-patterns.svg" | relURL }}');
       }
+      &.workshops-hero {
+        background-image: url('{{ "images/backgrounds/background-community.svg" | relURL }}');
+      }
       &.samples-hero {
         background-image: url('{{ "images/backgrounds/background-samples.svg" | relURL }}');
       }

@@ -12,4 +12,5 @@ tags:
 - Docker
 - kpack
 weight: 7
+archive: true
 ---

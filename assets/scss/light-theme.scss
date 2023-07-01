@@ -236,27 +236,30 @@ body.blog #contact .mktoForm select {
   }
 }
 #hero.guides-hero {
-   background-image: url({{ "images/backgrounds/background-guides-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-guides-light.svg" | relURL }}') !important;
+ }
+ #hero.workshops-hero {
+    background-image: url('{{ "images/backgrounds/background-community-light.svg" | relURL }}') !important;
  }
  #hero.outcomes-hero {
-   background-image: url({{ "images/backgrounds/background-patterns-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-patterns-light.svg" | relURL }}') !important;
  }
  #hero.samples-hero {
-   background-image: url({{ "images/backgrounds/background-samples-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-samples-light.svg" | relURL }}') !important;
  }
  #hero.videos-hero {
-   background-image: url({{ "images/backgrounds/background-video-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-video-light.svg" | relURL }}') !important;
  }
  #hero.data-hero,
  #hero.community-hero {
-   background-image: url({{ "images/backgrounds/background-community-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-community-light.svg" | relURL }}') !important;
  }
  #hero.practices-hero {
-   background-image: url({{ "images/backgrounds/background-practices-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/background-practices-light.svg" | relURL }}') !important;
  }
  @media(max-width: 1300px) {
   body #hero.data-hero {
-    background-image: url({{ "images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
+    background-image: url('{{ "images/backgrounds/header-mobile-light.svg" | relURL }}') !important;
   }
  }
 @media(max-width: 991px) {
@@ -266,7 +269,7 @@ body.blog #contact .mktoForm select {
   body #hero.videos-hero,
   body #hero.community-hero,
   body #hero.practices-hero {
-   background-image: url({{ "images/backgrounds/header-mobile-light.svg" | relURL }}) !important;
+   background-image: url('{{ "images/backgrounds/header-mobile-light.svg" | relURL }}') !important;
   }
 }
 
@@ -380,7 +383,7 @@ div.aside div.aside-content {
 
 .guide .td-sidebar-nav h5 a:before {
   padding-right: 10px;
-  content: url({{ "images/icons/arrow-left-black.svg" | relURL }}) !important;
+  content: url('{{ "images/icons/arrow-left-black.svg" | relURL }}') !important;
   width: 16px;
   height: 12px;
 }

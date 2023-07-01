@@ -10,4 +10,5 @@ tags:
   - Kubernetes
   - Carvel
 weight: 5
+archive: true
 ---

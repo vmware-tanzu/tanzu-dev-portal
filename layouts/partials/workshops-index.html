@@ -1,41 +1,27 @@
 {{ define "workshopCard" }}{{ if not .Params.hidden }}
 <a
-    href="{{ print `get-workshop/` .Params.lab | relURL }}"
+    href="{{ print .Params.canonical }}"
     class="col-12 workshop-box filter-item mb-3 mb-lg-4 flex-305 px-0 mr-lg-4 {{ range .Params.tags }}{{ . | lower | urlize }} {{ end }} "
 >
     <div class="workshop-hero row align-items-center justify-content-center td-box-dark">
         <div class="thumbnail-gradient position-absolute"></div>
-        <img alt="" src="{{ .Params.logo | relURL }}" />
+        <img alt="" src="{{ .Params.logo | relURL }}" class="h-25" />
     </div>
-    <div class="description flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
+    <div class="flex-grow-1 px-4 d-flex flex-column justify-content-between py-4 td-box-dark">
         <div>
-            <h4 class="workshop-title link">{{- .Title -}}</h4>
-            {{ if gt (len .Description) 90 }}
-            <p class="workshop-text text-light">{{ print (substr .Description 0 90) "..." }}</p>
-            {{ else }}
-            <p class="workshop-text text-light">{{ .Description | markdownify }}</p>
-            {{ end }}
-            <h5 class="fs-80 opacity-4 mb-4">
-                <i class="fa fa-hourglass-half mr-1"></i>
-                <span>{{ .Params.length }} minutes</span>
-            </h5>
+            <h4 class="link">{{- .Description -}}</h4>
+            <p class="text-light {{ if lt (len .Summary) 104 }} pt-4 {{ end }}">{{ .Summary | markdownify }}</p>
         </div>
-        <div class="btn btn-small mb-2 mt-3 d-inline-block align-self-start">Start Workshop</div>
+        <div class="row justify-content-center">
+            <div class="btn btn-small mb-2 mt-3 d-inline-block align-self-start">Visit Academy</div>
+        </div>
     </div>
 </a>
 {{ end }} {{ end }}
 <div class="d-flex container flex-wrap">
-    <div class="sidebar col-lg-3 col-0 pl-0 pr-3">
-        <h3>Filter</h3>
-        <br />
-        <ul class="filters">
-            <li class="filter active" filter="all">View all</li>
-            {{ partial "section-tags.html" . }}
-        </ul>
-    </div>
     <div id="workshops-index" class="section-index flex-1">
-        {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+        {{ $pages := (where (where .Site.Pages "Section" .Section) ".Params.archive" "!=" true).ByWeight }}
         {{ $parent := .Page }}
-        <div class="row">{{ range $pages }} {{ if eq .Parent $parent }} {{ template "workshopCard" . }} {{ end }} {{ end }}</div>
+        <div class="row justify-content-center">{{ range $pages }} {{ if eq .Parent $parent }} {{ template "workshopCard" . }} {{ end }} {{ end }}</div>
     </div>
 </div>
