@@ -3,7 +3,7 @@
 	<div class="container justify-space-between">
 		<a id="skip-link" tabindex="0">Skip to main content</a>
 		<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
-			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/rainbow-logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
+			<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ .Content | safeHTML }}{{ end }}{{ end }}</span>
 		</a>
 		<div id="menu-toggle" class="d-block d-lg-none">
 			<span>
