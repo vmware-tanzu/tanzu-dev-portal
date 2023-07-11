@@ -4,14 +4,11 @@ HUGO_LOCAL := $(shell hugo version | awk -F v '{print substr($$2,1,7)}')
 CONTEXT ?= dev
 ifeq "$(CONTEXT)" "production"
 DEPLOY_URL := https://tanzu.vmware.com/developer
-CONFIG_URL := $(URL)
 else
 ifeq "$(CONTEXT)" "deploy-preview"
 DEPLOY_URL := $(DEPLOY_PRIME_URL)/developer
-CONFIG_URL := $(DEPLOY_PRIME_URL)
 else
 DEPLOY_URL := http://localhost:1313/developer
-CONFIG_URL := http://localhost:8888
 endif
 endif
 DEV_CONTAINER_NAME := "tdc-dev"
@@ -117,13 +114,13 @@ spell: npm
 
 .PHONY: netlify-dev
 #netlify-dev: @ (Netlify Use Only) Command used for Netlify dev local builds
-netlify-dev: config.js
+netlify-dev:
 	@echo Netlify Dev building with ${CONTEXT} context
 	hugo server -w -b ${DEPLOY_URL}
 
 .PHONY: netlify-deploy
 #netlify-deploy: @ (Netlify Use Only) Command used for Netlify deployments
-netlify-deploy: npm config.js
+netlify-deploy: npm 
 	@echo Force install submodule update
 	@git submodule update -f --init --recursive
 	hugo -F -b ${DEPLOY_URL}
@@ -176,11 +173,6 @@ dev-container.pr-test: dev-container.start
 dev-container.delete: dev-container.stop
 	@docker rm $(DEV_CONTAINER_NAME)
 	@docker rmi $(DEV_CONTAINER_TAGS)
-
-#config.js: @ Creates the config.js file for Netlify functions during build time
-config.js: npm
-	@awk -v a="${CONTEXT}" '{gsub(/CONTEXT_PLACEHOLDER/,a)}1' netlify/functions/util/config.js.ph | \
-	awk -v a="${CONFIG_URL}" '{gsub(/SITE_URL_PLACEHOLDER/,a)}1' > netlify/functions/util/config.js
 
 #guide.wi: @ Creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
