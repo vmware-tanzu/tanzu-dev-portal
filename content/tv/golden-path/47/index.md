@@ -11,6 +11,7 @@ guests:
 - Craig Walls
 hosts:
 linktwitchyoutubechannels: 'yes'
+youtube: YF6WJUraT_s
 type: tv-episode
 ---
 
