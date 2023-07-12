@@ -60,12 +60,13 @@ contentPath = File.join(options[:source], "/content/")
 
 contentFiles = Dir.glob(File.join(contentPath, "/blog/*.md")) 
 contentFiles += Dir.glob(File.join(contentPath, "/guides/**/*.md")) 
-contentFiles += Dir.glob(File.join(contentPath, "/outcomes/**/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/learningpaths/**/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/practices/**/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/samples/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/tv/**/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/videos/*.md"))
 contentFiles += Dir.glob(File.join(contentPath, "/workshops/*.md"))
+contentFiles += Dir.glob(File.join(contentPath, "/data/**/*.md")) 
 
 # Prepare the markdown renderer 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
