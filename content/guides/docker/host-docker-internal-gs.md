@@ -18,7 +18,10 @@ team:
 - Andre Browne
 - Liam Morley
 featured: false
+level1: Building Modern Applications
+level2: Modern Development Practices
 ---
+
 Imagine you're working on a service within a [cloud native](https://tanzu.vmware.com/developer/guides/what-is-cloud-native/) distributed system, but acceptance testing is taking forever! You'd like to know if your changes work in harmony with other services, but running everything on your machine will potentially require numerous compilation tools and eat through your system's resources. You could deploy your service to a cloud-based environment, but that would take a long time. What should you do? You can't just skip testing, you're a responsible developer!
 
 ## Approaches to developing in a multi-service ecosystem 
@@ -57,7 +60,7 @@ To illustrate communication between local and containerized services, this guide
 
 This guide illustrates running two of these services on your local computer, and the third service virtually, demonstrating communication between both local and virtual systems.
 
-> ___NOTE:___ While this guide can work within any operating system, the commands below assume a Mac or Linux environment. If you're running on Windows or any other operating system, you may need to tweak commands to suit your needs.
+> ___NOTE:___ While the steps in this guide work with any operating system, the commands below assume a Mac or Linux environment. If you're running on Windows or any other operating system, you may need to tweak commands to suit your needs.
 
 You are ready to start!
 
@@ -167,6 +170,8 @@ Developing Cloud Native applications provides many benefits and some challenges.
 
 Today, you learned how to configure and use Docker to support your development efforts while minimizing, or potentially even eliminating, the need to understand how to configure and run every dependency required to test and validate your application.
 
+>___NOTE:___ Due to Docker’s licensing requirements and some compatibility issues with Apple’s silicon (e.g. M1, M2), the approach we describe in this guide may be inaccessible for some. Luckily, [Podman](https://podman.io) is a very capable alternative for container and image management while providing similar network configuration.
+
 ## Credits
 
 Thanks to Amanda White, Brian Watkins, Will Sather, Al Bonney, and Chris Gunadi, who contributed their time and insights in support of this guide.
@@ -182,3 +187,9 @@ Thanks to Amanda White, Brian Watkins, Will Sather, Al Bonney, and Chris Gunadi,
 [Docker Docs - I want to connect from a container to a service on the host](https://docs.docker.com/desktop/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host)
 
 [Tanzu Developer Center - Secure Software Supply Chains Learning Path](https://tanzu.vmware.com/developer/learningpaths/secure-software-supply-chain/)
+
+[Podman - Installation Instructions](https://podman.io/docs/installation)
+
+[Podman - Getting Started](https://podman.io/get-started)
+
+[Podman - Basic Networking](https://github.com/containers/podman/blob/main/docs/tutorials/basic_networking.md)
