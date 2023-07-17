@@ -15,7 +15,7 @@
         <div class="px-0 mb-5 shows">
             {{ range sort .Sections }} {{ if not .Params.hidden }}
             {{ $sortedPages := (sort .RegularPages ".Date" "desc" )}}
-            {{ $pages := cond ( eq .Params.id "golden-path-to-springone" ) $sortedPages (first 3 $sortedPages) }}
+            {{ $pages := first 3 $sortedPages }}
             <div class="row d-flex justify-content-between align-items-baseline mb-3">
                 <h2 class="h4">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -23,9 +23,7 @@
                 <p class="h5 text-uppercase text-white">{{ .Params.teaser }}</p>
             </div>
             <div class="row d-flex justify-content-between mb-5 episodes">
-                {{ if eq .Params.id "golden-path-to-springone" }}{{ $upcomingPages := last 3 ( where $pages "Date.Unix" ">" now.Unix ) }}
-                {{ range cond (gt (len $upcomingPages) 0 ) (sort $upcomingPages ".Date" "asce") (first 3 $pages) }}{{ template "episodeCard" . }}{{ end }}
-                {{ else }} {{ range $pages }}{{ template "episodeCard" . }}{{ end }}{{ end }}
+                {{ range $pages }}{{ template "episodeCard" . }}{{ end }}
             </div>
             {{ end }} {{ end }}
         </div>
