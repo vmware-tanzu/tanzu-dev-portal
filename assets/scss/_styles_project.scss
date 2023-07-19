@@ -1389,6 +1389,12 @@ body {
     }
   }
 
+
+ div.newsletter a.td-box--gray-dark h2.link {
+   color: $link;
+ }
+
+
   body.tv-episode {
     .fancybox-inner {
       background: $gray-800;
