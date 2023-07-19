@@ -1,10 +1,10 @@
 ---
 type: newsletter
-date: "2023-07-14"
-title: Welcome
+date: "2023-07-19"
+title: Hooked on .NET - The inaugural edition
 description: The inaugural edition includes suggestions for the latest blogs to read, podcasts to listen to and videos to watch. 
-link: https://laylacodesit.substack.com/p/welcome
-canonical: https://laylacodesit.substack.com/p/welcome
+link: https://laylacodesit.substack.com/p/hooked-on-net?sd=pf
+canonical: https://laylacodesit.substack.com/p/hooked-on-net?sd=pf 
 team: 
 - Layla Porter
 ---
@@ -16,11 +16,11 @@ My name's [Layla](https://layla.dev), but most peeps know me as *LaylaCodesIt* o
 
 For my crimes, I'm a 5 times Microsoft MVP, GitHub Star, Progress Ninja, and the founder of the #WomenOfDotNet Initiative.
 
-This newsletter will have a tendency towards enterprise software development, but in truth, we'll cover all aspects of software development as we can learn something from everything.
+This newsletter will tend to enterprise software development, but we'll cover all aspects of software development as we can learn something from everything.
 
 ## What's new and exciting?
 
-- [Introducing the New T4 Command-Line Tool for .NET](https://devblogs.microsoft.com/dotnet/t4-command-line-tool-for-dotnet/) - Martez Killens, a solution engineer at VMware, is excited to see the powerful T4 tooling getting a new lease of life.
+- [Introducing the New T4 Command-Line Tool for .NET](https://devblogs.microsoft.com/dotnet/t4-command-line-tool-for-dotnet/) - Martez Killens, a solution engineer at VMware, is excited by this as it brings Distroless concepts to the .NET ecosystem.  Allowing for container images with a small memory footprint, faster load times and smaller security surface area.
 
 - [Improved F# hints in Visual Studio](https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/) - F# enthusiast, [Mårten Rånge](https://twitter.com/range_marten) believes type-hints are perhaps extra useful in a language like F# where, thanks to type inference, explicit types can be and often are omitted.
 
