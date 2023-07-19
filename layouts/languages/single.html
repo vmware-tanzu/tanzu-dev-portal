@@ -45,6 +45,32 @@
                 <!-- Track what pieces of content are rendered so they're not shown in latest content -->
                 {{ $rendered := slice }}
 
+                <!-- Newsletter -->
+                {{ range .Sections }}
+                    {{ if (strings.Contains .CurrentSection.File.Dir "newsletter") }} 
+                        <div class="container py-5">
+                            <div class="container mb-5 newsletter">
+                                <h2 class="mb-4">{{ print .Title }}</h2>
+                                <a href='https://{{ print .Params.substack }}.substack.com/'><h4 class="mb-4">See All</h4></a>
+                                <div class='row justify-content-between'>
+                                    {{ range first 2 .Pages }} 
+                                        {{ $rendered = $rendered | append . }}
+                                        <a class='td-box--gray-dark subtopic mr-0 mb-4 flex-315 transition-all position-relative' href="{{ .RelPermalink }}">
+                                            <img alt="{{ .Title }}" src='{{ print .Parent.RelPermalink "images/" .Parent.Params.banner }}' />
+                                            <div class='p-4 td-box--gray-dark d-flex flex-column justify-content-between'>
+                                                <h2 class="link mt-3 h4 pt-0">{{ .Title }}</h2>
+                                                <p>{{ .Description }}</p>
+                                            </div>
+                                        </a>
+                                    {{ end }}
+                                    <div class="td-box--gray-dark subtopic mr-0 mb-3 flex-315 transition-all">
+                                        <iframe src="https://{{ print .Params.substack }}.substack.com/embed" width="100%" height="290" frameborder="0" scrolling="no"></iframe>
+                                    </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+
                 <!-- Blog -->
                 {{ $blogs := where (where .Site.Pages "Section" "blog") ".Params.languages" "intersect" (slice .Params.label) }}
                 {{ if gt (len $blogs) 0 }}

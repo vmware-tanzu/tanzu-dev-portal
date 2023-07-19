@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="td-main newsletter">
+	<div class="mt-lg-5 mt-md-5 mt-4 pt-lg-5 pt-md-5 pb-2">
+		<div class='container pt-2'>
+			<h1>{{ .Title }}</h1>
+			<p>{{ .Description }}</p>
+
+			{{ partial "byline" (dict "context" .) }}
+			
+			<div class="short-gradient-line  mb-3"></div>
+
+			<a href="{{ print .Params.link }}">Read on Substack</a>
+
+		</div>
+	</div>
+	<div class="container py-2">
+		<div class="col-lg-9 px-0">
+				{{ .Content }}
+		</div>
+
+</div>
+{{ end }}

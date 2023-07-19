@@ -5,6 +5,7 @@ on:
       - "main"
     paths:
       - "**content**"
+  workflow_dispatch:
 jobs:
   generate-audit:
     if: github.repository == 'vmware-tanzu/tanzu-dev-portal'
