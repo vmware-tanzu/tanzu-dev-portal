@@ -1,5 +1,5 @@
 ---
-title: Improving your Local DevX With Virtualization
+title: Improving your Local DevX With Containerization
 description: Using Docker to reduce development environment complexity when building application services locally
 date: "2023-02-23"
 lastmod: "2023-02-23"
@@ -31,9 +31,9 @@ There are a few approaches to solving this problem, each having their own tradeo
 * __Running your services locally.__ This entails building and running multiple services directly on your workstation. This requires disk space, memory, CPU, and eventually might consume enough resources to render the workstation inoperable. In addition, it can require compilation tools and run-time environments for any of the first-party services. Furthermore, any third-party services (e.g. databases, message queues) will need to be set up in order to run everything locally.
 * __Running your services in the cloud.__ This entails deploying one or more services to the cloud every time you want feedback. This approach enables you to validate your services in an environment that more closely resembles your production environment. However, it might be the most time intensive, and will require infrastructure to support deploying your services.
 * __A hybrid of local and cloud.__ This entails configuring any locally running services to communicate with the services that you have deployed to the cloud. The hybrid approach has some of the advantages and disadvantages of the previous two approaches, and also can require managing proxying, firewall, and other network configuration.
-* __A hybrid of local and virtualization.__ Virtualization allows you to run services on a virtual machine in a custom environment pre-configured for each service. This approach removes some of the complexities and disadvantages of the other approaches, allows you to test your service locally, abstracts away the configuration and dependencies of each service, and mitigates some of the resource impacts of running all services locally.
+* __A hybrid of local and containerization.__ Containerization allows you to run services on a virtual machine in a custom environment pre-configured for each service. This approach removes some of the complexities and disadvantages of the other approaches, allows you to test your service locally, abstracts away the configuration and dependencies of each service, and mitigates some of the resource impacts of running all services locally.
 
-This guide covers the hybrid of local and virtualization using __Docker__ as our virtual environment. You can use Docker to put your dependencies (e.g. compilers, runtimes, even entire databases) in a box, called a container, so that your only dependency is on Docker itself, and not the myriad of dependencies that each individual application service might have.
+This guide covers the hybrid of local and Containerization using __Docker__ as our virtual environment. You can use Docker to put your dependencies (e.g. compilers, runtimes, even entire databases) in a box, called a container, so that your only dependency is on Docker itself, and not the myriad of dependencies that each individual application service might have.
 
 Whether you're brand new to Docker, or have worked with it for decades, there are some questions you inevitably run into: how do I create these containers? And where can I put them? A popular method is to build the containers using an [automated CI/CD pipeline](https://tanzu.vmware.com/developer/learningpaths/secure-software-supply-chain/what-is-ci-cd/), and then store them in a [container registry](https://tanzu.vmware.com/developer/learningpaths/secure-software-supply-chain/container-registry/). Container Management is an extensive topic, and out of scope for this guide. This guide uses basic containers, with some basic build dependencies, and without any customization.
 
@@ -76,7 +76,11 @@ You are ready to start!
    ERROR: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
    ```
 
-1. Clone the repository, located at <https://github.com/vmware-tanzu-labs/bank-of-virtualization>
+1. Clone the repository, located at <https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo>:
+   ```shell
+   git clone https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo
+   ```
+
 1. Run the Account Service inside a virtual environment using the following command:
 
    ```shell
@@ -141,9 +145,9 @@ You are ready to start!
 
 After completing the steps above the Account Service, running as a containerized service in Docker, communicated with the Audit Service, running locally on your workstation. But how does this work?
 
-![Service Architecture](images/service-architecture.png)
+![Service Architecture](./images/service-architecture.png)
 
-In Step 5 you executed a command that started the Account Service. This application, like the others that run locally, requires configuration. The [docker-compose.yml](https://github.com/vmware-tanzu-labs/bank-of-virtualization/docker-compose.yml) file stores this configuration for the Account Service container in the `account-service` section of `services`. It looks like this:
+In Step 5 you executed a command that started the Account Service. This application, like the others that run locally, requires configuration. The [docker-compose.yml](https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo/docker-compose.yml) file stores this configuration for the Account Service container in the `account-service` section of `services`. It looks like this:
 
 ```yaml
 services:
@@ -162,11 +166,11 @@ services:
 
 By configuring the `AUDIT_SERVICE_URL` as `host.docker.internal:8888`, this allows the containerized application to communicate with the applications running locally. __Herein lies the magic!__ The domain `host.docker.internal` maps to a special network address provided by Docker to allow containers to access the host network on the workstation.
 
->___NOTE:___ `host.docker.internal` is a specific Docker feature available only for Windows and MacOS. Docker for Linux provides access to the host network via [a different mechanism](https://docs.docker.com/network/host/).
+>___NOTE:___ `host.docker.internal` is a specific Docker feature available only for Windows and MacOS. Docker for Linux provides access to the host network via [a different mechanism](https://docs.docker.com/network/drivers/host/).
 
 ## Conclusion
 
-Developing Cloud Native applications provides many benefits and some challenges. As your suite of Cloud Native applications and their associated service dependencies grow this can also impact your [Developer Experience (DevX)](https://tanzu.vmware.com/developer-experience) in undesirable ways.
+Developing Cloud Native applications provides many benefits and some challenges. As your suite of Cloud Native applications and their associated service dependencies grow this can also impact your [Developer Experience (DevX)](https://via.vmw.com/MFrAK3) in undesirable ways.
 
 Today, you learned how to configure and use Docker to support your development efforts while minimizing, or potentially even eliminating, the need to understand how to configure and run every dependency required to test and validate your application.
 
