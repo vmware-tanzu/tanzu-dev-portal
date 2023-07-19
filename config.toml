@@ -94,9 +94,6 @@ time_format_default = "January 2, 2006"
 # Sections to publish in the main RSS feed.
 rss_sections = ["blog","tv-episode"]
 
-workshops_url_prod = "https://workshop-auth.esp.vmware.com/workshop/tanzu_devportal/"
-workshops_url_staging = "https://workshop-auth.esp-staging.vmware-aws.com/workshop/tanzu_devportal/"
-
 copyright = "VMware, Inc"
 privacy_policy = "https://www.vmware.com/help/privacy.html"
 terms_of_use = "https://www.vmware.com/help/legal.html"

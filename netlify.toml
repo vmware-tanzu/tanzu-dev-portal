@@ -40,58 +40,42 @@
 
 [[redirects]]
   from = "/developer/get-workshop/*"
-  #to = "/.netlify/functions/get-workshop/:splat"
   to = "/developer/workshops/"
   force = true
   status = 200
-  #conditions = {Role = ["user"]}
 
 [[redirects]]
   from = "/developer/workshop-live"
-  #to = "/developer/workshop-live/"
   to = "/developer/workshops/"
   force = true
   status = 200
-  #conditions = {Role = ["user"]}
 
 [[redirects]]
   from = "/developer/workshop-live/"
-  #to = "/developer/workshop-live/"
-  to = "/developer/workshops/"
-  force = true
-  status = 200
-  #conditions = {Role = ["user"]}
-
-[[redirects]]
-  from = "/developer/get-workshop/*"
-  #to = "/.netlify/functions/auth-start/:splat"
-  to = "/developer/workshops/"
-  force = true
-  status = 200
-
-[[redirects]]
-  from = "/developer/auth-callback/*"
-  #to = "/.netlify/functions/auth-callback/:splat"
-  to = "/developer/workshops/"
-  force = true
-  status = 200
-
-[[redirects]]
-  from = "/developer/workshops/*"
-  #to = "/.netlify/functions/auth-callback/:splat"
   to = "/developer/workshops/"
   force = true
   status = 200
 
 [[redirects]]
   from = "/developer/workshop-live/*"
-  to = "/developer/404.html"
+  to = "/developer/workshops/"
   force = true
-  status = 404
+  status = 200
+
+[[redirects]]
+  from = "/developer/auth-callback/*"
+  to = "/developer/workshops/"
+  force = true
+  status = 200
+
+[[redirects]]
+  from = "/developer/workshops/*"
+  to = "/developer/workshops/"
+  force = true
+  status = 200
 
 [[redirects]]
   from = "/developer/workshop-status/*"
-  #to = "/.netlify/functions/workshop-status/:splat"
   to = "/developer/workshops/"
   force = true
   status = 200
