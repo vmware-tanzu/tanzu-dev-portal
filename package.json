@@ -38,7 +38,7 @@
     "Safari >= 6"
   ],
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^4.0.3",
+    "@netlify/plugin-lighthouse": "^5.0.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
