@@ -158,7 +158,7 @@ limitations under the License.
       trigger: "focus",
     });
 
-    //Samples and Workshop page filters
+    //Samples page filters
     $(".filters .filter").click(function () {
       if (this.classList.contains("active")) {
         this.classList.remove("active");
@@ -533,16 +533,6 @@ limitations under the License.
             });
           }
         }
-      }
-      if ($("body.workshop-live").length > 0) {
-        var pageTitle = document.title.substring(
-          0,
-          document.title.indexOf("|") - 1
-        );
-        sendAmplitudeEvent("workshop session ended", {
-          "workshop name": pageTitle,
-          "url path": window.location.pathname,
-        });
       }
     });
   });

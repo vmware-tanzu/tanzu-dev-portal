@@ -24,7 +24,7 @@ level2: Modern Development Practices
 
 Imagine you're working on a service within a [cloud native](https://tanzu.vmware.com/developer/guides/what-is-cloud-native/) distributed system, but acceptance testing is taking forever! You'd like to know if your changes work in harmony with other services, but running everything on your machine will potentially require numerous compilation tools and eat through your system's resources. You could deploy your service to a cloud-based environment, but that would take a long time. What should you do? You can't just skip testing, you're a responsible developer!
 
-## Approaches to developing in a multi-service ecosystem 
+## Approaches to developing in a multi-service ecosystem
 
 There are a few approaches to solving this problem, each having their own tradeoffs:
 
