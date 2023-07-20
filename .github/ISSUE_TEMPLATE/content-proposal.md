@@ -32,7 +32,7 @@ Level of content as it pertains to the topic proposed. Delete those not applicab
 6. [ ] My content has beed reviewed and edited by a copy editor. See [Editing Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Editing-Content-(GitHub-and-Google-Docs-Method))
 7. [ ] **If applicable**: My content has gone through a legal review (**VMware Employees Only**). See [Editing Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Editing-Content-(GitHub-and-Google-Docs-Method))
 8. [ ] **If applicable**: I have tested my content locally and everything passes. See [Testing Content](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Testing-Content-(GitHub-Method))
-9. [ ] **Optional**: I have filled out the [Social Media request form](https://docs.google.com/forms/d/e/1FAIpQLSfyWYEL6XvDRfMRW1GBfYKV4Aq3Li2EzBz0HY8fE37Y2tSoRw/viewform) (optional) (**VMware Employees Only**). See [Next Steps](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Next-Steps)
+9. [ ] **Optional**: I have filled out the [Social Media request form](https://forms.clickup.com/43297829/f/199b15-138700/CJJZ3KDCSF6KSGWRXD) (optional) (**VMware Employees Only**). See [Next Steps](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Next-Steps)
 10. [ ] **If applicable**: I have created an author page and opened a pull request to get it added. See [Next Steps](https://github.com/vmware-tanzu/tanzu-dev-portal/wiki/Contribution,-Next-Steps)
 
 
