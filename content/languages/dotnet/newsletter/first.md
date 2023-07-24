@@ -20,7 +20,7 @@ This newsletter will tend to enterprise software development, but we'll cover al
 
 ## What's new and exciting?
 
-- [Introducing the New T4 Command-Line Tool for .NET](https://devblogs.microsoft.com/dotnet/t4-command-line-tool-for-dotnet/) - Martez Killens, a solution engineer at VMware, is excited by this as it brings Distroless concepts to the .NET ecosystem.  Allowing for container images with a small memory footprint, faster load times and smaller security surface area.
+- [Migrate .NET to chiselled Ubuntu containers](https://ubuntu.com/containers/chiselled/dotnet) - Martez Killens, a solution engineer at VMware, is excited by this as it brings Distroless concepts to the .NET ecosystem.  Allowing for container images with a small memory footprint, faster load times and smaller security surface area.
 
 - [Improved F# hints in Visual Studio](https://devblogs.microsoft.com/dotnet/improved-fsharp-hints-in-visual-studio/) - F# enthusiast, [Mårten Rånge](https://twitter.com/range_marten) believes type-hints are perhaps extra useful in a language like F# where, thanks to type inference, explicit types can be and often are omitted.
 
