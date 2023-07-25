@@ -5,7 +5,7 @@ MAX_WAIT_TIME=600 # 5 min
 
 # Provide default options if none are provided
 HUGO_OPTIONS="${HUGO_OPTIONS:=-b http://localhost/developer -p 1314}"
-MUFFET_OPTIONS="${MUFFET_OPTIONS:=-t 30 -e 'https?' -e 'https?:\/\/localhost.*' --exclude='/developer/get-workshop'}"
+MUFFET_OPTIONS="${MUFFET_OPTIONS:=-t 30 -e 'https?' -e 'https?:\/\/localhost.*' -e '/developer/get-workshop'}"
 
 # Ensure that the git log can be pulled
 git config --global --add safe.directory /github/workspace
