@@ -14,6 +14,8 @@ topics:
 - Docker
 - Docker Compose
 - DevEx
+- DevX
+- DX
 team:
 - Andre Browne
 - Liam Morley
@@ -145,7 +147,7 @@ You are ready to start!
 
 After completing the steps above the Account Service, running as a containerized service in Docker, communicated with the Audit Service, running locally on your workstation. But how does this work?
 
-![Service Architecture](./images/service-architecture.png)
+![Service Architecture](images/diagrams/service-architecture.png 'Service Architecture')
 
 In Step 5 you executed a command that started the Account Service. This application, like the others that run locally, requires configuration. The [docker-compose.yml](https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo/docker-compose.yml) file stores this configuration for the Account Service container in the `account-service` section of `services`. It looks like this:
 
