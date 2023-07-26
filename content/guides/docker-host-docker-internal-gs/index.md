@@ -149,7 +149,7 @@ After completing the steps above the Account Service, running as a containerized
 
 ![Service Architecture](images/diagrams/service-architecture.png 'Service Architecture')
 
-In Step 5 you executed a command that started the Account Service. This application, like the others that run locally, requires configuration. The [docker-compose.yml](https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo/docker-compose.yml) file stores this configuration for the Account Service container in the `account-service` section of `services`. It looks like this:
+In Step 5 you executed a command that started the Account Service. This application, like the others that run locally, requires configuration. The [docker-compose.yml](https://github.com/vmware-tanzu-labs/simple-distributed-bank-services-demo/blob/main/docker-compose.yml) file stores this configuration for the Account Service container in the `account-service` section of `services`. It looks like this:
 
 ```yaml
 services:
