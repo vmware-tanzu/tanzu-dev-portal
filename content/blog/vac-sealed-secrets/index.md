@@ -72,7 +72,7 @@ The following steps describe how to navigate to [VMware Application Catalog](htt
      --from-literal=mariadb-replication-password=REPLICATION_PASSWORD \ 
      --from-literal=mariadb-password=SOME_PASSWORD \ 
      -o yaml | kubeseal --controller-name=CONTROLLER_NAME \ 
-     --controller-name=CONTROLLER_NAMESPACE \ 
+     --controller-namespace=CONTROLLER_NAMESPACE \ 
      --format yaml > mariadb-sealedsecret.yaml 
    ```
    {{% callout %}} Remember to replace the `ROOT_PASSWORD`, `REPLICATION_PASSWORD` and `SOME_PASSWORD` placeholders with the passwords that you want to use to configure MariaDB. Also, replace the `CONTROLLER_NAME` and `CONTROLLER_NAMESPACE` with the name and namespace of your Sealed Secrets controller, respectively. This information is available in the `NOTES` section when installing the Sealed Secret chart. {{% /callout %}}
