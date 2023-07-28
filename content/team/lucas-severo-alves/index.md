@@ -1,5 +1,5 @@
 ---
-name: Lucas Severo Alvez
+name: Lucas Severo Alves
 description: ""
 roles: ["guest"]
 skills: ["External Secrets Operator"]
