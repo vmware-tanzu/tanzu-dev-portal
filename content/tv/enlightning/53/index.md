@@ -6,7 +6,7 @@ date: '2023-06-30'
 episode: '53'
 explicit: 'no'
 guests:
-- Lucas Severo Alvez
+- Lucas Severo Alves
 - Moritz Johner
 hosts:
 - Whitney Lee
