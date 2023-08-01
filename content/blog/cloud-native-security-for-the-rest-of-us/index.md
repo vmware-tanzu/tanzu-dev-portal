@@ -134,7 +134,7 @@ As mentioned earlier, minor release upgrades require a bit more planning. First,
 
 This means that before upgrading their cluster, one should make sure that they don't use API groups that are about to be deprecated. This is made abundantly clear when you e.g. `kubectl apply` some manifests: you will get explicit warning messages telling you if the manifest is deprecated, and if so, in which version its support will be removed.
 
-As an example, let's look at what happened when Ingress ressources evolved from `networking.k8s.io/v1beta1` to `networking.k8s.io/v1`.
+As an example, let's look at what happened when Ingress resources evolved from `networking.k8s.io/v1beta1` to `networking.k8s.io/v1`.
 
 The stable version (`networking.k8s.io/v1`) was introduced in Kubernetes 1.19, and from that version, using the old version (`networking.k8s.io/v1beta1`) would give a big heavy warning:
 ```
