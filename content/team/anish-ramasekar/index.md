@@ -1,8 +1,8 @@
 ---
-name: Anish Ramasekar
-description: "Secrets Store CSI Driver"
+name: Duffie
+description: "Software Engineer at Microsoft"
 roles: ["guest"]
-skills: [""]
+skills: ["Secrets Store CSI Driver"]
 location: ""
 external: true
 # Social Media 
