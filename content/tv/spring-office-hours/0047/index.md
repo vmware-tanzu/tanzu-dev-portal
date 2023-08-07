@@ -15,4 +15,4 @@ minutes: 60
 youtube: "2HGYuoEY6eQ"
 ---
 
-Join Dan Vega and DaShaun Carter as they explore what’s new in the world of Spring. This is your chance to stay connected to what’s happening with the Spring Framework, related projects, and the community. During this live show, Dan and DaShaun will review the current news, demo a Spring related project they find interesting and answer any questions you might have.
+Join DaShaun Carter and special guest Thomas Schuhly as they explore what's new in the world of Spring.  This is your chance to stay connected to what's happening with the Spring Framework, related projects and the community.  In this episode we will look at frontend options to use with Spring Boot and talk about a cool new project from Thomas!
