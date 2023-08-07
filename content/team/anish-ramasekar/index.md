@@ -1,5 +1,5 @@
 ---
-name: Duffie
+name: Anish Ramasekar
 description: "Software Engineer at Microsoft"
 roles: ["guest"]
 skills: ["Secrets Store CSI Driver"]
