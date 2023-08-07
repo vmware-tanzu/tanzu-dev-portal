@@ -8,9 +8,8 @@ episode: "0047"
 explicit: 'no'
 hosts:
 - DaShaun Carter
-- Dan Vega
-# guests:
-# -
+guests:
+- Thomas Schühly
 minutes: 60
 youtube: "2HGYuoEY6eQ"
 ---
