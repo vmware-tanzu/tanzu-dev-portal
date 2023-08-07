@@ -21,6 +21,6 @@ twitch: ""
 Duffie is CNCF Technical Oversight Committee member and an Ambassador. He is focused on helping folks find success with Cilium and modern security tooling. Duffie has been working with all things systems and networking for 20 years and remembers most of it. A student of perspective, he is always interested in working through problems and design choices from more than one perspective. He grew up in Maui and likes big cats. You can find him everywhere as @mauilion.
 
 <!--more-->
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="vOJK2BwR3zc" class="youtube-video-shortcode" >}} -->
+{{< youtube id="BMG3LK-q88Y" class="youtube-video-shortcode" >}}
