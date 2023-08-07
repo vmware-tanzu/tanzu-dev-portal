@@ -15,7 +15,7 @@ jobs:
       name: Checkout
     - uses: ./.github/actions/audit
       name: Generate Audit
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       name: Upload artifact
       with:
         name: audit-output
