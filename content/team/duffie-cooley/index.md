@@ -23,4 +23,4 @@ Duffie is CNCF Technical Oversight Committee member and an Ambassador. He is foc
 <!--more-->
 ## Highlights
 
-{{< youtube id="BMG3LK-q88Y" class="youtube-video-shortcode" >}}
+{{< youtube id="V9ItB3u4UaA" class="youtube-video-shortcode" >}}
