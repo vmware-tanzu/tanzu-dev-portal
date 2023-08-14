@@ -25,8 +25,6 @@ She is a Live Coder on [Twitch](https://twitch.tv/laylacodesit), a Microsoft MVP
 
 Layla loves sharing knowledge whilst having fun. No question is stupid and beginners are always welcome.
 
-<!--more-->
-
 ## Layla's current talks
 
 Layla is comfortable giving talks both in person and virtually. All technical talks are focussed around the .NET ecosystem.
