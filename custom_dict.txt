@@ -1035,6 +1035,7 @@ HashiCorp('s)?
 hasPermission
 hasResult
 hasRole
+Hassine
 HATEOAS
 Hayk
 Haytham
@@ -1511,6 +1512,7 @@ Maciaszek-Sharma
 MacronutrientsProvider
 Madhav
 Madhura
+Mahmoud
 Mahoney
 Majumder
 [mM]akefile

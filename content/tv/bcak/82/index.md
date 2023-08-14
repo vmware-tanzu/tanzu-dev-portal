@@ -15,7 +15,7 @@ minutes: 120
 episode: "82"
 explicit: "yes"
 title: "The one with Soby Chacko"
-youtube: "hIRsDsYvkDo)"
+youtube: "hIRsDsYvkDo"
 truncate: ""
 twitch: "vmwaretanzu"
 draft: false
