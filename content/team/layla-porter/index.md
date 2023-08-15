@@ -43,3 +43,9 @@ To see where Layla is speaking next, checkout her up-to-date schedule [here](htt
 ## Hosting and emcee
 
 Layla has hosted events both virtually and in-person including high profile events such as _Microsoft .NET Conf_ and _Twilio Signal Developer Conference_.
+
+{{% bio-section section="languages" type="newsletter" %}}
+
+## Hooked On .NET Newsletter
+
+{{% /bio-section %}}
