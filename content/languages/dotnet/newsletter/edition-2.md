@@ -28,6 +28,8 @@ Contrary to popular belief, gRPC is not here to replace RESTful APIs as we all k
 
 Among other things, I recently started playing with 11ty(Eleventy)- a static site generator - for a few personal projects and I am really asking myself why I didn’t find this sooner. A static website can really give you the flexibility to have a lightning-fast website and if you host it in Azure, you can back that up with an Azure function as an API, and pay almost nothing. This is ideal for personal projects or blogs, since it can have 2 custom domains, it has free SSL.
 
+Update: Irina’s [book](https://link.springer.com/book/10.1007/978-1-4842-9348-5) is now published and available to purchase!
+
 ### Irina's recommendations
 
 - [11ty](https://www.11ty.dev/)
@@ -63,9 +65,9 @@ Among other things, I recently started playing with 11ty(Eleventy)- a static sit
 
 [The BEST Moq Alternatives: NSubstitute vs FakeItEasy](https://youtu.be/hE1_ByNG2J0) - If you haven't already checked out Gui based on Irina's recommendations, here is another reminder. Gui has just celebrated one year of content creation and in this video he discusses the MOQ alternatives for use in your tests.
 
-[Beautiful UI Controls for .NET MAUI with Telerik UI](https://www.youtube.com/watch?v=DzD0ucPldeM&ab_channel=dotnet) - Sam Basu from Telerik is on the On .NET  show to demo beautiful UI controls for .NET MAUI using Telerik UI.
+[Beautiful UI Controls for .NET MAUI with Telerik UI](https://www.youtube.com/watch?v=DzD0ucPldeM&ab_channel=dotnet) - Sam Basu from Progress is on the On .NET  show to demo beautiful UI controls for .NET MAUI using Telerik UI.
 
-[The Blazor Power Hour: Static Rendering with .NET 8](https://youtu.be/BZW5Dd6L0y4) - and continuing with lovely folks from Telerik, Ed Charbenaeu is showing us the latest .NET 8 and Blazor feature, static rendering.
+[The Blazor Power Hour: Static Rendering with .NET 8](https://youtu.be/BZW5Dd6L0y4) - and continuing with lovely folks from Progress, Ed Charbenaeu is showing us the latest .NET 8 and Blazor feature, static rendering.
 
 ## Before you go 👋
 We do hope you've enjoyed the articles, videos, and podcasts we've shared with you. If you have an article you'd like us to include in the newsletter, then please complete this [form](https://forms.gle/WJM3F7STnSiVdysy5).
