@@ -174,6 +174,13 @@ dev-container.delete: dev-container.stop
 	@docker rm $(DEV_CONTAINER_NAME)
 	@docker rmi $(DEV_CONTAINER_TAGS)
 
+#newsletter: @ Creates a new Hooked on .NET newsletter. example: make newsletter
+newsletter:
+	@directory="languages/dotnet/newsletter"; \
+	next_number=$$(ls -d content/$$directory/[0-9]* | tail -n 1 | awk -F'/' '{print $$NF}' | awk '{print $$0+1}'); \
+	hugo new $$directory/$$(printf "%02d" "$$next_number") --kind newsletter; \
+	mkdir content/$$directory/$$(printf "%02d" "$$next_number")/images
+
 #guide.wi: @ Creates a what-is guide. example: make guide.wi.spring.spring-boot-what-is
 guide.wi.%:
 	hugo new guides/$(call GET_FILE_NAME,$*,1)/$(call GET_FILE_NAME,$*,2).md -k guide-what-is
