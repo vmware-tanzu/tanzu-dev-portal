@@ -64,6 +64,4 @@ Lastly, don't forget to subscribe to the newsletter and share it with your frien
 
 Thanks for reading!
 
-<div class="text-center">
-<iframe src="https://laylacodesit.substack.com/embed" width="30%" height="100%" frameborder="0" scrolling="no"></iframe>
-</div>
+
