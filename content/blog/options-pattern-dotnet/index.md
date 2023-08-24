@@ -6,7 +6,6 @@ team:
 title: "Demystifying the Options Pattern in .NET"
 languages:
 - dotnet
-url: "/blog/options-pattern-dotnet/index.md"
 description: "Layla explains the Options pattern using a multi-bit screwdriver."
 
 ---
