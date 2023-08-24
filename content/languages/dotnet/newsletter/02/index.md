@@ -15,7 +15,7 @@ I am delighted to have our very first newsletter guest this month, my good frien
 
 Irina is a Microsoft MVP for Developer Technologies, a Software Architect, and a Microsoft Certified Trainer (MCT). In this role, she has provided more than 2000 hours of training, classes, workshops, and presentations. Twice annually, for five-month periods, she teaches .NET and C# to people who either want to get into software development or simply learn new things. Irina is passionate about Microsoft developer topics and is always on a quest to try out the latest trends and best practices in architecture, .NET, and the world around it. Irina is active in the community, having founded the DotNet Iasi User Group and the https://dotnetdays.ro conference where she brings together like-minded developers willing to share their knowledge with others. Her articles can be found at http://irina.codes.
 
-{{< figure src="/developer/languages/dotnet/newsletter/02/images/irina-scurtu.jpeg" alt="A black and white protrait of Irina" height=756 width=726 class="text-center">}}
+{{< figure src="/developer/languages/dotnet/newsletter/02/images/irina-scurtu.jpeg" alt="A black and white protrait of Irina" height="100%" width="100%" >}}
 
 ## Irina's thoughts
 
