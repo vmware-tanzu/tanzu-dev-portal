@@ -14,10 +14,6 @@ This is the first edition of this newsletter, titled "Hooked on .NET", where eve
 
 My name's [Layla](https://layla.dev), but most peeps know me as *LaylaCodesIt* on the interweb, and I'll be your editor on this endeavour. I'm a developer advocate at VMware Tanzu focused on the .NET community.
 
-<div class="text-center">
-<iframe src="https://laylacodesit.substack.com/embed" width="30%" height="100%" frameborder="0" scrolling="no"></iframe>
-</div>
-
 For my crimes, I'm a 5 times Microsoft MVP, GitHub Star, Progress Ninja, and the founder of the #WomenOfDotNet Initiative.
 
 This newsletter will tend to enterprise software development, but we'll cover all aspects of software development as we can learn something from everything.
@@ -67,3 +63,7 @@ If you have any comments or suggestions or just want to reach out then feel free
 Lastly, don't forget to subscribe to the newsletter and share it with your friends!
 
 Thanks for reading!
+
+<div class="text-center">
+<iframe src="https://laylacodesit.substack.com/embed" width="30%" height="100%" frameborder="0" scrolling="no"></iframe>
+</div>
