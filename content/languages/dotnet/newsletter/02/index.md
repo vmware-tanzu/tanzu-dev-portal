@@ -15,14 +15,13 @@ I am delighted to have our very first newsletter guest this month, my good frien
 
 Irina is a Microsoft MVP for Developer Technologies, a Software Architect, and a Microsoft Certified Trainer (MCT). In this role, she has provided more than 2000 hours of training, classes, workshops, and presentations. Twice annually, for five-month periods, she teaches .NET and C# to people who either want to get into software development or simply learn new things. Irina is passionate about Microsoft developer topics and is always on a quest to try out the latest trends and best practices in architecture, .NET, and the world around it. Irina is active in the community, having founded the DotNet Iasi User Group and the https://dotnetdays.ro conference where she brings together like-minded developers willing to share their knowledge with others. Her articles can be found at http://irina.codes.
 
-
-![A black and white portrait of Irina](images/irina-scurtu.jpg)
+![A black and white portrait of Irina](images/irina-scurtu.jpeg)
 
 ## Irina's thoughts
 
-I am currently waiting for my WEB API book to be published to be able to smell the printed pages and talk about it. 
+I am currently waiting for my WEB API book to be published to be able to smell the printed pages and talk about it.
 
-Currently, I am still trying to find ways to integrate gRPC into my .NET projects, as well as improving the workshop I created on this topic. I really love gRPC and this is a technology that is here to stay we should give it more credit. We can use gRPC in many cases and benefit from what it has to offer. 
+Currently, I am still trying to find ways to integrate gRPC into my .NET projects, as well as improving the workshop I created on this topic. I really love gRPC and this is a technology that is here to stay we should give it more credit. We can use gRPC in many cases and benefit from what it has to offer.
 
 Contrary to popular belief, gRPC is not here to replace RESTful APIs as we all know and write, and we shouldn’t have REST vs gRPC debates. It is just another tool in our toolbelt that we have to know when, and how to use because it has its particularities. For example, we will have to manage special files written in a syntax called Protocol Buffers. In these files, we define what the consumer can use, and what the server exposes and ultimately implements. These files become the source for the code-generation that is done by the compiler for us. In C# we will obtain C# types that have the methods that we defined, and we provide logic for them. Unlike REST, when we consume gRPC services we have a more call-a-method approach. We call methods, we don’t make requests to endpoints, although that happens behind the scenes, and it can be a bit confusing at first. It can really make a distributed-system feel like a monolith because of that.
 
@@ -38,7 +37,6 @@ Update: Irina’s [book](https://link.springer.com/book/10.1007/978-1-4842-9348-
 - [Gui Ferreira's YouTube](https://www.youtube.com/@gui.ferreira)
 - [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3)
 
-
 ## What's new and exciting?
 
 - [.NET 8 preview 7](https://devblogs.microsoft.com/dotnet/announcing-dotnet-8-preview-7/) - Gosh, the releases are coming thick and fast. This is the final preview release, next up will be the release candidates!
@@ -53,13 +51,11 @@ Update: Irina’s [book](https://link.springer.com/book/10.1007/978-1-4842-9348-
 
 [Struct memory layout and memory optimizations](https://ayende.com/blog/199777-A/struct-memory-layout-and-memory-optimizations?key=bb987d033f60428698a31b9a4a1b1e58) - as I mentioned earlier, I have been dabbling with Unity. Most recently with [Unity DOTS](https://unity.com/dots) which stands for data-oriented technology stack. It is all about utilising memory efficiently and thinking in a different way. In this article, Oren Eini, talks about how they have saved 66% of memory space by considering struct memory layouts and this totally reminded me of DOTS. It's a fascinating approach to programming which most web developers don't often consider.
 
-
 ## What to listen to 🗣
 
 [Breaking Up with Tech Debt: A Love Story with M. Scott Ford](https://dotnetcore.show/episode-124-breaking-up-with-tech-debt-a-love-story-with-m-scott-ford/) - on episode 124 of the Modern .NET Show podcast, Jamie is joined by M. Scott Ford. The discussion covered technical debt and the tools Scott has used to vizualise it, and the importance of incremental changes to keep on top of codebases and their dependencies.
 
 [The Ingredients to a Life in Tech with Corey Weathers](https://hanselminutes.com/904/the-ingredients-to-a-life-in-tech-with-corey-weathers) - my totally awesome friend and former co-worker, Corey Weathers, hopped on the Hanselminutes podcast. Corey is such an insightful, level individual. Go give it a listen.
-
 
 ## What to watch 📺
 
@@ -70,6 +66,7 @@ Update: Irina’s [book](https://link.springer.com/book/10.1007/978-1-4842-9348-
 [The Blazor Power Hour: Static Rendering with .NET 8](https://youtu.be/BZW5Dd6L0y4) - and continuing with lovely folks from Progress, Ed Charbenaeu is showing us the latest .NET 8 and Blazor feature, static rendering.
 
 ## Before you go 👋
+
 We do hope you've enjoyed the articles, videos, and podcasts we've shared with you. If you have an article you'd like us to include in the newsletter, then please complete this [form](https://forms.gle/WJM3F7STnSiVdysy5).
 
 If you have any comments or suggestions or just want to reach out then feel free to complete this [contact form](https://forms.gle/TNMj6mMtUxDFXP8v6) to reach me, Layla.
@@ -79,4 +76,3 @@ Lastly, don't forget to subscribe to the newsletter and share it with your frien
 Thanks for reading!
 
 Layla.
-

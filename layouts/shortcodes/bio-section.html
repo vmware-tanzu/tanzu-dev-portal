@@ -1,0 +1,9 @@
+{{ $section := .Get "section" }}
+{{ $type := .Get "type" }}
+{{ $listContent := where .Site.RegularPages "Section" $section }}
+{{ $listContent = where $listContent "Type" $type }}
+{{ .Inner | markdownify }}
+{{ range where $listContent "Params.hidden" "!=" true }}
+<h5 class="mt-4">{{ .Date.Format "January 2, 2006" }}</h5>
+<a class="d-block mb-4" href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{ end }}
