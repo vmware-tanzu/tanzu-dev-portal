@@ -1,7 +1,7 @@
 ---
 type: "tv-episode"
-title: "Lessons from 5 years of agile transformation at Jaguar Land Rover, with Mike Skaife - Tanzu Talk"
-description: "Lessons from 5 years of agile transformation at Jaguar Land Rover, with Mike Skaife - Tanzu Talk"
+title: "Lessons from 5 Years of Agile Transformation at Jaguar Land Rover, with Mike Skaife – Tanzu Talk"
+description: "Lessons from 5 Years of Agile Transformation at Jaguar Land Rover, with Mike Skaife – Tanzu Talk"
 episode: "198"
 aliases: ["0198"]
 publishdate: "2020-04-01T00:00:00-07:00"
@@ -11,9 +11,9 @@ youtube: "YD54_XZJTRw"
 draft: "False"
 ---
 
-What does a car manufacture need to do to speed up their software delivery cycle? Manufacturing is often finely tuned following lean and other principles, but the software development and delivery process, oddly, is not. In this episode, we talk about he last five years of software transformation at Jaguar Land Rover (JLR).
+What does a car manufacturer need to do to speed up their software delivery cycle? Manufacturing is often finely tuned following lean and other principles, but the software development and delivery process, oddly, is not. In this episode, we talk about his last five years of software transformation at Jaguar Land Rover (JLR).
 
-@bryanrossuk and @thecote  talk with Mike Skaife about the type of software JLR creates for itself, the need to change to transform (driven by quality and speed of delivery), putting CI/CD in place, challenges to change management (mostly about people), and the mismatch between finance and software.
+@bryanrossuk and @thecote talk with Mike Skaife about the type of software JLR creates for itself, the need to change to transform (driven by quality and speed of delivery), putting CI/CD in place, challenges to change management (mostly relating to people), and the mismatch between finance and software.
 
 Check out Mike in LinkedIn: https://www.linkedin.com/in/mikeskaife/
 
