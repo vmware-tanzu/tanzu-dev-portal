@@ -25,8 +25,6 @@ She is a Live Coder on [Twitch](https://twitch.tv/laylacodesit), a Microsoft MVP
 
 Layla loves sharing knowledge whilst having fun. No question is stupid and beginners are always welcome.
 
-<!--more-->
-
 ## Layla's current talks
 
 Layla is comfortable giving talks both in person and virtually. All technical talks are focussed around the .NET ecosystem.
@@ -45,3 +43,9 @@ To see where Layla is speaking next, checkout her up-to-date schedule [here](htt
 ## Hosting and emcee
 
 Layla has hosted events both virtually and in-person including high profile events such as _Microsoft .NET Conf_ and _Twilio Signal Developer Conference_.
+
+{{% bio-section section="languages" type="newsletter" %}}
+
+## Hooked On .NET Newsletter
+
+{{% /bio-section %}}
