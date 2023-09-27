@@ -15,3 +15,11 @@ youtube: "aIuZySWPNI4"
 ---
 
 Join Dan Vega and special guest Ted Young as we discuss how to structure your Spring Boot applications. In this episode, we will explore various options for organizing your code, such as package by layer, package by feature, onion architecture, and hexagonal architecture. Join us live and don't forget to bring your questions!
+
+## Show Notes
+
+- [SpringOne Tour](https://springonetour.io/)
+- [Ted Young on Twitter](https://twitter.com/jitterted)
+- [Ted's Websites](https://ted.dev/ )
+- [TDD Game](https://ted.dev/products/jitterted-tdd-game.html )
+- [Ensembler Source Code](https://github.com/jitterted/ensembler)
