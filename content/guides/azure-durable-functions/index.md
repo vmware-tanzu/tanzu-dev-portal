@@ -33,7 +33,7 @@ Durable Functions leverage generator functions as orchestrator functions, partic
 
 ## Implementing Polling via a Monitor Pattern
 
-In this scenario, you will create an API that transforms an asynchronous operation into a synchronous one.
+In this scenario, we will create an API that transforms an asynchronous operation into a synchronous one.
 
 For this example, we will be using the v4 programming model. You can find details on migrating from v3 to v4 in [this article](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-node-model-upgrade?tabs=nodejs-v4&pivots=programming-language-javascript).
 
@@ -81,7 +81,7 @@ Here's how it works:
 
 ## Unit Testing of the Monitor Orchestrator Function
 
-To test the orchestrator function, you will call the `monitorOrchestrator` function with a mock `OrchestrationContext`. This provides an instance of a `Generator` that you can use to execute the business logic by calling the `next()` method.
+To test the orchestrator function, call the `monitorOrchestrator` function with a mock `OrchestrationContext`. This provides an instance of a `Generator` that you can use to execute the business logic by calling the `next()` method.
 
 ```typescript
 describe("monitor orchestrator", () => {
@@ -122,35 +122,35 @@ describe("monitor orchestrator", () => {
 
 Let's walk through the steps in the test and how they execute different parts of the generator function:
 
-**Step 1:** First, you create the generator function. Note that the function code hasn't been executed yet.
+**Step 1:** First, create the generator function. Note that the function code hasn't been executed yet.
 
 **Step 2:** This step executes the function code until it reaches the first `yield` statement. In this case, it's the first invocation of the status check activity.
 
 <p align="center">
-<img src="images/monitorOrchestratorTest_step2.png" alt="monitor pattern unit testing: step 2" width="550"/>
+<img src="images/monitorOrchestratorTest_step2.png" alt="monitor pattern unit testing: step 2" width="700"/>
 </p>
 
-**Step 3:** Here, you call `next()` on the generator, passing a value of `PENDING`. This resumes execution from the previous step, giving `status` a yielded value of `PENDING`. The function continues until it encounters the next `yield` statement, which is the timer.
+**Step 3:** Here, call `next()` on the generator, passing a value of `PENDING`. This resumes execution from the previous step, giving `status` a yielded value of `PENDING`. The function continues until it encounters the next `yield` statement, which is the `createTimer()`. The timer is mocked in this test, but will pause the execution for 5 seconds in production.
 
 <p align="center">
-<img src="images/monitorOrchestratorTest_step3.png" alt="monitor pattern unit testing: step 3" width="550"/>
+<img src="images/monitorOrchestratorTest_step3.png" alt="monitor pattern unit testing: step 3" width="700"/>
 </p>
 
-**Step 4:** You call `next()` again on the generator, this time without parameters, as there's no need to yield any values from `createTimer()`. The function proceeds with execution. Since we're still in the while loop, we'll pause again at the `yield` statement of `callActivity()`, with an increased `polledTimes`. Note that the value of `status` remains `PENDING` from the previous loop.
+**Step 4:** To resume with the function's execution, call `next()` again on the generator, this time without parameters, as there's no need to yield any values from `createTimer()`. The execution will pause again at the `yield` statement of `callActivity()` at the top of the while loop. Note that the value of `status` remains `PENDING` from the previous iteration.
 
 <p align="center">
-<img src="images/monitorOrchestratorTest_step4.png" alt="monitor pattern unit testing: step 4" width="550"/>
+<img src="images/monitorOrchestratorTest_step4.png" alt="monitor pattern unit testing: step 4" width="700"/>
 </p>
 
-**Step 5:** Now, you call `next()` with a yielded value of `DONE`. This makes the function break out of the loop and completes the execution. This completes the test, passing the final assertion.
+**Step 5:** Now, call `next()` with a yielded value of `DONE`. This makes the function break out of the loop and finishes the execution. This completes the test, passing the final assertion.
 
 <p align="center">
-<img src="images/monitorOrchestratorTest_step5.png" alt="monitor pattern unit testing: step 5" width="550"/>
+<img src="images/monitorOrchestratorTest_step5.png" alt="monitor pattern unit testing: step 5" width="700"/>
 </p>
 
 ## Implementing Parallel Function Execution
 
-In this scenario, we have an orchestrator that initiates multiple tasks running in parallel. Each task doubles the input value and returns it as a result. The orchestrator then waits for all tasks to complete, adds their results, and returns the sum.
+In this scenario, we have an orchestrator that initiates multiple tasks running in parallel. Each task doubles the input value and returns it as a result. The orchestrator then pauses until all tasks are completed, adds their results, and returns the sum.
 
 ```typescript
 export const parallelOrchestrator: OrchestrationHandler = function* (
@@ -175,7 +175,7 @@ export const parallelOrchestrator: OrchestrationHandler = function* (
 
 Here's the breakdown:
 
-1. The orchestrator starts 5 tasks by calling `callActivity()` in a loop, assigning each of them an initial input from 0 to 4. Notice that we don't use the `yield` keyword when starting the tasks, allowing them to run in parallel.
+1. The orchestrator starts 5 tasks by calling `callActivity()` in a loop, assigning each of them an initial input from 0 to 4. Notice that the `yield` keyword is not used when starting the tasks, allowing them to run in parallel.
 
 2. We pass the array of tasks to `Task.all()` and use `yield` on it. This pauses the durable function's execution until all tasks are completed. Their results are assigned to the `results` variable, similar to how `Promise.all()` works.
 
@@ -183,7 +183,7 @@ Here's the breakdown:
 
 ## Unit Testing of Parallel Function Execution
 
-To test this scenario, follow a similar approach as in the previous example. Create the generator function and use `next()` to provide values to the yield statements. In this case, there's only one `yield` statement pausing until all tasks are completed.
+To test this scenario, follow a similar approach as in the previous example. Create the generator function and use `next()` to provide values to the yield statements. In this case, there's only one `yield` statement that pauses the execution until all tasks are completed.
 
 ```typescript
 describe("parallel orchestrator", () => {
@@ -214,13 +214,13 @@ describe("parallel orchestrator", () => {
 **Step 1:** After creating the generator function, this step executes the function code until it reaches the first `yield` statement, which pauses until all tasks are complete.
 
 <p align="center">
-<img src="images/parallelOrchestratorTest_step1.png" alt="parallel pattern unit testing: step 1" width="550"/>
+<img src="images/parallelOrchestratorTest_step1.png" alt="parallel pattern unit testing: step 1" width="700"/>
 </p>
 
-**Step 2:** Here, you call `next()` again to yield the return values of all 5 tasks, which are `[1, 2, 3, 4, 5]`. This array is used to calculate the sum, resulting in the final output string, "_The sum is 15_".
+**Step 2:** Here, call `next()` again to yield the return values of all 5 tasks, which are `[1, 2, 3, 4, 5]`. This array is used to calculate the sum, resulting in the final output string, "_The sum is 15_".
 
 <p align="center">
-<img src="images/parallelOrchestratorTest_step2.png" alt="parallel pattern unit testing: step 2" width="550"/>
+<img src="images/parallelOrchestratorTest_step2.png" alt="parallel pattern unit testing: step 2" width="700"/>
 </p>
 
 ## Code Repository
