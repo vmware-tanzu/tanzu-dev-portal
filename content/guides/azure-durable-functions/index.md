@@ -77,7 +77,7 @@ Here's how it works:
 
 3. If the status is `DONE`, we break out of the loop and complete the orchestration.
 
-4. While the status is not 'DONE' and loop continues, we create a timer and use `yield` to pause execution until the timer elapses.
+4. While the status is not `DONE` and loop continues, we create a timer and use `yield` to pause execution until the timer elapses.
 
 ## Unit Testing of the Monitor Orchestrator Function
 
