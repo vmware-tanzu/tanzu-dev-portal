@@ -11,7 +11,7 @@ tags:
   - Testing
   - Azure Functions
 team:
-  - Adria Navarro
+  - Adrià Navarro
   - Xiaonan Wei
 level1: Building Modern Applications
 level2: Frameworks and Languages

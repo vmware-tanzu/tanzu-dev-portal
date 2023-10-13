@@ -1,5 +1,5 @@
 ---
-name: "Adria Navarro"
+name: "Adrià Navarro"
 description: "Staff Software Engineer"
 roles: ["author"]
 skills: ["Agile", "Java", "Javascript", "React", "Flutter", "Angular", "iOS", "Android", "Spring Boot", "Typescript", "Dart", "Node"]
