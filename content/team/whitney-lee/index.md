@@ -27,6 +27,12 @@ featuredLinks:
             image: 'you-choose-logo.png',
             tagline: "A 'Choose Your Own Adventure'-style journey through the cloud native landscape with Whitney and her co-host Viktor Farcic.",
         },
+        {
+            name: 'Cloud Native Live',
+            url: 'https://www.youtube.com/playlist?list=PLBexUsYDijawgCdEqEDBj3cUCovUS1MM5',
+            image: 'cncf-icon-color.png',
+            tagline: "Dive into the code behind cloud native technologies",
+        },
     ]
 ---
 
