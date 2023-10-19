@@ -20,18 +20,18 @@ twitch: 'wiggitywhitney'
 filterShows: ['Enlightning', 'The Golden Path to SpringOne']
 featuredLinks:
     [
-        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'Learn CNCF projects with Whitney and her lightboard.' },
+        { name: 'Enlightning', url: '', image: 'enlightning-logo.png', tagline: 'Enlightning - Learn CNCF projects with Whitney and her lightboard.' },
         {
             name: 'You Choose',
             url: 'https://www.youtube.com/playlist?list=PLyicRj904Z9-FzCPvGpVHgRQVYJpVmx3Z',
             image: 'you-choose-logo.png',
-            tagline: "A 'Choose Your Own Adventure'-style journey through the cloud native landscape with Whitney and her co-host Viktor Farcic.",
+            tagline: "You Choose - A 'Choose Your Own Adventure'-style journey through the cloud native landscape with Whitney and her co-host Viktor Farcic.",
         },
         {
             name: 'Cloud Native Live',
             url: 'https://www.youtube.com/playlist?list=PLBexUsYDijawgCdEqEDBj3cUCovUS1MM5',
             image: 'cncf-icon-color.png',
-            tagline: "Dive into the code behind cloud native technologies",
+            tagline: "Cloud Native Live - Dive into the code behind cloud native technologies",
         },
     ]
 ---
