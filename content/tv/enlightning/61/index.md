@@ -16,6 +16,6 @@ twitch: vmwaretanzu
 type: tv-episode
 ---
 
-Now that we have learned so much about networking and service mesh solutions, let’s look at what Cilium can do. Cilium has an answer for each use case that folks adopt a service mesh for, as well as all of the needed capabilities to improve operational understanding in your environments greatly - from networking all the way to the application layer!
+Now that we have learned so much about networking and service mesh solutions, let’s look at what [Cilium](https://cilium.io/) can do. Cilium has an answer for each use case that folks adopt a service mesh for, as well as all of the needed capabilities to improve operational understanding in your environments greatly - from networking all the way to the application layer!
 
 \\(^-^)/
