@@ -1,0 +1,21 @@
+---
+Date: '2023-11-02T08:00:00-07:00'
+Description: "Cilium Networking, Security and Observability"
+PublishDate: '2023-11-02T00:00:00-07:00'
+date: '2023-11-02'
+episode: '61'
+explicit: 'no'
+guests:
+- Duffie Cooley
+hosts:
+- Whitney Lee
+youtube: "NA7cfE9tvAQ"
+lastmod: '2020-10-09'
+title: "Cilium Networking, Security and Observability"
+twitch: vmwaretanzu
+type: tv-episode
+---
+
+Now that we have learned so much about networking and service mesh solutions, let’s look at what Cilium can do. Cilium has an answer for each use case that folks adopt a service mesh for, as well as all of the needed capabilities to improve operational understanding in your environments greatly - from networking all the way to the application layer!
+
+\\(^-^)/
