@@ -124,7 +124,7 @@ netlify-deploy: npm
 	@echo Force install submodule update
 	@git submodule update -f --init --recursive
 	hugo -F -b ${DEPLOY_URL}
-	cp public/developer/_redirects public/redirects
+	cp public/developer/_redirects public/_redirects
 
 .PHONY: dev-container
 #dev-container: @ Builds image, starts a new container, and connects to bash shell
