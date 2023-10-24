@@ -1,7 +1,7 @@
-# Generate a Netlify _redirects file so that aliases redirect via a 301 instead of a meta refresh
+# Generate a Netlify _redirects file
 
+## Redirect aliases via a 301 instead of a meta refresh
 {{ printf "\n" }}
-
 {{- range $p := .Site.Pages -}}
     {{- range .Aliases -}}
         {{- $from := . -}}
@@ -17,3 +17,75 @@
         {{ end }}
     {{- end -}}
 {{- end -}}
+
+## Redirect to external or Academy sites for duplicate or retired guides or blogs
+/developer/guides/an-introduction-to-vmware-marketplace https://docs.vmware.com/en/VMware-Marketplace/ .html 301!
+/developer/guides/api-gateway-pattern https://spring.io/projects/spring-cloud-gateway 301!
+/developer/guides/assign-pods-to-nodes-with-bitnami-helm-chart-affinity-rules/ https://docs.bitnami.com/tutorials/assign-pod-nodes-helm-affinity-rules/ 301!
+/developer/guides/cnbp-knative-argocd/ https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-pack-spring-boot-kpack-and-paketo-buildpacks 301!
+/developer/guides/backup-restore-data-kafka-kubernetes/ https://docs.bitnami.com/tutorials/backup-restore-data-kafka-kubernetes/ 301!
+/developer/guides/production-ready-helm https://docs.bitnami.com/tutorials/production-ready-charts/ 301!
+/developer/guides/security-best-practices https://docs.bitnami.com/tutorials/bitnami-best-practices-hardening-containers/ 301!
+/developer/guides/kafka-mongodb/ https://docs.bitnami.com/tutorials/build-messaging-cluster-apache-kafka-mongodb-kubernetes/ 301!
+/developer/guides/spring-build-api/ https://spring.io/guides/gs/rest-service/ 301!
+/developer/guides/express-app-bitnami-skaffold-octant/ https://docs.bitnami.com/tutorials/continuously-develop-express-application-kubernetes-bitnami-skaffold-octant/ 301!
+/developer/guides/spring-batch https://spring.io/guides/gs/batch-processing/ 301!
+/developer/guides/create-helm-chart/ https://kube.academy/courses/helm-101 301!
+/developer/guides/spring-boot-actuator https://spring.io/guides/gs/actuator-service/ 301!
+/developer/guides/gitlab-customize-default/ https://docs.bitnami.com/tutorials/customize-ci-cd-pipeline-gitlab-bitnami-charts/ 301!
+/developer/guides/deploy-custom-nodejs-app-bitnami-containers/ https://docs.bitnami.com/tutorials/deploy-custom-nodejs-app-bitnami-containers/ 301!
+/developer/guides/deploy-rest-api-nodejs-mongodb-charts/ https://docs.bitnami.com/tutorials/develop-rest-api-nodejs-mongodb-containers/ 301!
+/developer/guides/kubeapps-private-repo/ https://kubeapps.dev/docs/latest/howto/private-app-repository/ 301!
+/developer/guides/deploy-locally-spring-boot-application-docker/ https://docs.bitnami.com/tutorials/deploy-locally-spring-boot-application-docker/ 301!
+/developer/guides/deploying-to-kubernetes-using-tap-tsm/ https://tanzu.academy/courses/tap-platform-overview 301!
+/developer/guides/develop-rest-api-nodejs-mongodb-containers/ https://docs.bitnami.com/tutorials/develop-rest-api-nodejs-mongodb-containers/ 301!
+/developer/guides/develop-aspnet-application-bitnami-containers/ https://docs.bitnami.com/tutorials/develop-aspnet-application-bitnami-containers/ 301!
+/developer/guides/extended-workload-capabilities-on-tanzu-application-platform/ https://tanzu.academy/courses/tap-platform-overview 301!
+/developer/guides/cf4k8s-gs https://tanzu.academy/courses/tas-icm 301!
+/developer/guides/from-docker-to-kubernetes/ https://kube.academy/courses/hands-on-with-kubernetes-and-containers 301!
+/developer/guides/kafka-gs https://spring.io/projects/spring-kafka 301!
+/developer/guides/cnb-gs-kpack https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-pack-spring-boot-kpack-and-paketo-buildpacks 301!
+/developer/guides/kubeapps-gs/ https://kubeapps.dev/docs/latest/tutorials/getting-started/ 301!
+/developer/guides/rabbitmq-gs https://spring.academy/guides/messaging-with-rabbitmq 301!
+/developer/guides/scs-gs/ https://spring.io/guides/gs/spring-cloud-stream/ 301!
+/developer/guides/spring-for-graphql/ https://spring.io/guides/gs/graphql-server/ 301!
+/developer/guides/tekton-gs-p1 https://tekton.dev/docs/getting-started/ 301!
+/developer/guides/tekton-gs-p2 https://tekton.dev/docs/getting-started/ 301!
+/developer/guides/cnb-gs-pack https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-the-cloud-native-buildpacks-project 301!
+/developer/guides/helm-gs https://kube.academy/courses/helm-101 301!
+/developer/guides/gs-tap-on-kind-pt1 https://tanzu.academy/courses?tags=tanzu-application-platform 301!
+/developer/guides/gs-tap-on-kind-final-pt2/ https://tanzu.academy/courses?tags=tanzu-application-platform 301!
+/developer/guides/tanzu-application-platform-gs/ https://tanzu.academy/courses?tags=tanzu-application-platform 301!
+/developer/guides/spring-wavefront-gs/ https://tanzu.academy/courses/aria-applications-fundamentals 301!
+/developer/guides/distributed-tracing/ https://spring.io/projects/spring-cloud-sleuth 301!
+/developer/guides/tanzu-application-platform-inner-loop/ https://tanzu.academy/courses/tap-platform-overview 301!
+/developer/guides/consumer-driven-contracts https://spring.io/guides/gs/contract-rest/ 301!
+/developer/guides/monitoring-at-scale-wavefront https://tanzu.academy/courses/aria-applications-fundamentals 301!
+/developer/guides/deploy-spring-boot-application-production-helm/ https://docs.bitnami.com/tutorials/deploy-locally-spring-boot-application-docker/ 301!
+/developer/guides/rbac-for-tap-on-tkg https://tanzu.academy/courses/tanzu-application-platform-installation 301!
+/developer/guides/tanzu-application-platform-local-devloper-install/ https://tanzu.academy/courses/tap-platform-overview 301!
+/developer/guides/spring-cloud-config-set-up https://spring.io/guides/gs/centralized-configuration/ 301!
+/developer/guides/supply-chain-choreography/ https://tanzu.academy/courses/tap-supply-chains 301!
+/developer/guides/spring-circuit-breaker/ https://spring.io/guides/gs/cloud-circuit-breaker/ 301!
+/developer/guides/spring-cloud-stream-kafka-p2/ https://spring.io/guides/gs/spring-cloud-stream/ 301!
+/developer/guides/spring-cloud-stream-kafka-p3/ https://spring.io/guides/gs/spring-cloud-stream/ 301!
+/developer/guides/spring-for-graphql-security/ https://spring.io/guides/gs/graphql-server/ 301!
+/developer/guides/tanzu-application-platform-can-leverage-cartographer-to-automate-cicd/ https://tanzu.academy/courses/tap-supply-chains 301!
+/developer/guides/spring-rest-docs https://spring.io/guides/gs/testing-restdocs/ 301!
+/developer/guides/vs-code-debugging-on-tap/ https://tanzu.academy/courses/tap-portal 301!
+/developer/guides/cnb-what-is/ https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-the-cloud-native-buildpacks-project 301!
+/developer/guides/what-are-containers/ https://kube.academy/courses/containers-101 OR https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/spring-cloud-connectors https://spring.io/projects/spring-cloud-connectors 301!
+/developer/guides/what-is-bitnami https://docs.bitnami.com/ 301!
+/developer/guides/ci-cd-what-is https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/what-is-cloud-native https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/helm-what-is https://kube.academy/courses/helm-101 301!
+/developer/guides/what-is-kubernetes https://kube.academy/courses/kubernetes-101 OR https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/what-is-microservices-architecture https://spring.io/microservices 301!
+/developer/guides/what-is-reactive-programming https://spring.io/reactive 301!
+/developer/guides/scs-what-is/ https://spring.io/guides/gs/spring-cloud-stream/ 301!
+/developer/guides/tekton-what-is https://tekton.dev/docs/getting-started/ 301!
+/developer/blog/understanding-the-differences-between-rabbitmq-vs-kafka/ https://tanzu.vmware.com/content/blog/understanding-the-differences-between-rabbitmq-vs-kafka 301!
+
+## Redirect to Academy sites for migrated guides
+#### Will add to this list as articles are migrated...
