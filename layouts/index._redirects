@@ -18,7 +18,18 @@
     {{- end -}}
 {{- end -}}
 
+## Fixes for retired URL paths
+/developer/data/tanzu-gemfire/* /developer/data/gemfire/:splat 301!
+/developer/data/tanzu-rabbitmq/* /developer/data/rabbitmq/:splat" 301!
+/developer/data/tanzu-sql/* /developer/data/sql/:splat 301!
+/developer/data/tanzu-greenplum/* https://tanzu.vmware.com/greenplum 301!
+/developer/springone-tour/* /developer/tv/golden-path/ 301!
+/developer/guides/container-networking/ /developer/guides/ 301!
+
 ## Redirect to external or Academy sites for duplicate or retired guides or blogs
+/developer/blog/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation/ https://blogs.vmware.com/security/2022/10/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation.html 301!
+/developer/guides/tanzu-application-platform-deploying-a-workload/ https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html 301!
+/developer/learningpaths/inner-loop-dev-with-vmware-tanzu-application-platform/tanzu-application-platform-deploying-a-workload/ https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-getting-started-deploy-first-app.html 301!
 /developer/guides/an-introduction-to-vmware-marketplace https://docs.vmware.com/en/VMware-Marketplace/index.html  301!
 /developer/guides/api-gateway-pattern https://spring.io/projects/spring-cloud-gateway 301!
 /developer/guides/assign-pods-to-nodes-with-bitnami-helm-chart-affinity-rules/ https://docs.bitnami.com/tutorials/assign-pod-nodes-helm-affinity-rules/ 301!
