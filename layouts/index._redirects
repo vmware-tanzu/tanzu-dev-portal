@@ -19,7 +19,7 @@
 {{- end -}}
 
 ## Redirect to external or Academy sites for duplicate or retired guides or blogs
-/developer/guides/an-introduction-to-vmware-marketplace https://docs.vmware.com/en/VMware-Marketplace/ .html 301!
+/developer/guides/an-introduction-to-vmware-marketplace https://docs.vmware.com/en/VMware-Marketplace/index.html  301!
 /developer/guides/api-gateway-pattern https://spring.io/projects/spring-cloud-gateway 301!
 /developer/guides/assign-pods-to-nodes-with-bitnami-helm-chart-affinity-rules/ https://docs.bitnami.com/tutorials/assign-pod-nodes-helm-affinity-rules/ 301!
 /developer/guides/cnbp-knative-argocd/ https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-pack-spring-boot-kpack-and-paketo-buildpacks 301!
@@ -74,13 +74,13 @@
 /developer/guides/spring-rest-docs https://spring.io/guides/gs/testing-restdocs/ 301!
 /developer/guides/vs-code-debugging-on-tap/ https://tanzu.academy/courses/tap-portal 301!
 /developer/guides/cnb-what-is/ https://kube.academy/courses/building-images/lessons/building-images-with-buildpacks-the-cloud-native-buildpacks-project 301!
-/developer/guides/what-are-containers/ https://kube.academy/courses/containers-101 OR https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/what-are-containers/ https://kube.academy/courses/containers-101 301!
 /developer/guides/spring-cloud-connectors https://spring.io/projects/spring-cloud-connectors 301!
 /developer/guides/what-is-bitnami https://docs.bitnami.com/ 301!
 /developer/guides/ci-cd-what-is https://kube.academy/courses/frequently-asked-questions 301!
 /developer/guides/what-is-cloud-native https://kube.academy/courses/frequently-asked-questions 301!
 /developer/guides/helm-what-is https://kube.academy/courses/helm-101 301!
-/developer/guides/what-is-kubernetes https://kube.academy/courses/kubernetes-101 OR https://kube.academy/courses/frequently-asked-questions 301!
+/developer/guides/what-is-kubernetes https://kube.academy/courses/kubernetes-101 301!
 /developer/guides/what-is-microservices-architecture https://spring.io/microservices 301!
 /developer/guides/what-is-reactive-programming https://spring.io/reactive 301!
 /developer/guides/scs-what-is/ https://spring.io/guides/gs/spring-cloud-stream/ 301!
