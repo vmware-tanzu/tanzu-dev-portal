@@ -19,8 +19,6 @@
 
  # File-based installation of plugins # ref https://docs.netlify.com/configure-builds/file-based-configuration/
 [[plugins]]
-  package = "@sentry/netlify-build-plugin" # ref https://github.com/getsentry/sentry-netlify-build-plugin#readme
-
   [plugins.inputs]
     deployPreviews = false
 
