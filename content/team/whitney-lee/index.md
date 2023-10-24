@@ -1,8 +1,8 @@
 ---
 name: Whitney Lee
-description: 'Developer Advocate'
+description: ['Developer Advocate', CNCF Ambassador]
 roles: ['advocate']
-skills: ['Kubernetes', 'CNCF']
+skills: ['Kubernetes', 'CNCF Ecosystem']
 location: 'Austin'
 
 # Social Media
