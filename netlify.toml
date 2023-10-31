@@ -22,7 +22,7 @@
   package = "@netlify/plugin-lighthouse" # ref https://github.com/netlify/netlify-plugin-lighthouse#readme
 
   [[context.deploy-preview.plugins.inputs.audits]]
-    path = "developer"
+    path = "developer/"
     # you can specify output_path per audit, relative to the path
     output_path = "lighthouse/index.html"
 
