@@ -17,11 +17,6 @@
   targetPort = 1313
   autoLaunch = false
 
- # File-based installation of plugins # ref https://docs.netlify.com/configure-builds/file-based-configuration/
-[[plugins]]
-  [plugins.inputs]
-    deployPreviews = false
-
 # Deploy Preview context only
 [[context.deploy-preview.plugins]]
   package = "@netlify/plugin-lighthouse" # ref https://github.com/netlify/netlify-plugin-lighthouse#readme
