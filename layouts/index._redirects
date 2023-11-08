@@ -27,15 +27,15 @@
 /developer/guides/container-networking/ /developer/guides/ 301!
 
 ## Redirects for data 
-/developer/data/gemfire/ https://gemfire.dev/ 301!
 /developer/data/gemfire/guides/spring-for-vmware-gemfire/* https://gemfire.dev/tutorials/spring-for-gemfire/sbgf-basics/ 301!
-/developer/data/gemfire/guides/node-js/* https://gemfire.dev/tutorials/node-js/get-started-locally-node-js/ 301!
+/developer/data/gemfire/guides/* https://gemfire.dev/tutorials/ 301!
 /developer/data/gemfire/videos/* https://gemfire.dev/videos/ 301!
 /developer/data/gemfire/code-samples/* https://gemfire.dev/examples/ 301!
 /developer/data/gemfire/blog/* https://gemfire.dev/blog/ 301!
-/developer/data/ https://tanzu.vmware.com/data 301!
+/developer/data/gemfire/* https://gemfire.dev/ 301!
 /developer/data/sql/* https://tanzu.vmware.com/postgres 301!
 /developer/data/rabbitmq/* https://tanzu.vmware.com/rabbitmq 301!
+/developer/data/ https://tanzu.vmware.com/data 301!
 
 ## Redirect to external or Academy sites for duplicate or retired guides or blogs
 /developer/blog/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation/ https://blogs.vmware.com/security/2022/10/key-requirements-of-modern-apis-for-an-end-to-end-api-lifecycle-implementation.html 301!
