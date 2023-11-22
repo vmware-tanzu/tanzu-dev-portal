@@ -76,7 +76,8 @@
         svg {
             display: inline-block;
             margin: 0;
-            height: 20px;
+            height: 30px;
+            margin-top: 10px;
 
             @media(max-width:991px) {
                 margin: 0 10px;

@@ -7,11 +7,11 @@
         <a class="tvc-link h4 text-white" href="https://tanzu.vmware.com"><img alt="VMware Tanzu" class="icon mr-2" src='{{ "images/icons/icon-tanzu.svg" | relURL }}'/> VMware Tanzu</a>
 
         <div class='copyright-legal-links mt-3'>
-          {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} VMware, Inc </small>{{ end }}
-          {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
-          {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
-          {{ with .Site.Params.california_privacy_rights }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_california_privacy_rights" }}</a></small>{{ end }}
-          <small class="ml-1"><a href="javascript:void(0);" class="ot-sdk-show-settings" style="cursor:pointer;">Cookie Settings</a></small>
+          {{ with .Site.Params.copyright }}<small class="text-white">Copyright &copy; 2005&ndash;{{ now.Year}} <span id='year'></span> Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries. </small><br/>{{ end }}
+          {{ with .Site.Params.terms_of_use }}<small class="mr-1"><a href="{{ . }}" target="_blank">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
+          {{ with .Site.Params.privacy_policy }}<small class="mr-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
+          {{ with .Site.Params.california_privacy_rights }}<small class="mr-1"><a href="{{ . }}" target="_blank">{{ T "footer_california_privacy_rights" }}</a></small>{{ end }}
+          <small><a href="javascript:void(0);" class="ot-sdk-show-settings" style="cursor:pointer;">Cookie Settings</a></small>
         </div>
 
         <div>
