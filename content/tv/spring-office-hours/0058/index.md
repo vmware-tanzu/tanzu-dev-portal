@@ -1,6 +1,6 @@
 ---
-Date: "2023-11-28T12:30:00-08:00"
-lastmod: "2023-11-13"
+Date: "2023-11-28T11:30:00-08:00"
+lastmod: "2023-11-27"
 PublishDate: "2023-11-13"
 type: "tv-episode"
 title: "Spring Office Hours: Episode 58 - Spring Boot 3.2"
@@ -17,4 +17,5 @@ Join Dan Vega and DaShaun Carter as they keep you up to date with everything hap
 
 ## Show Notes
 
+- [Spring Boot Support](https://spring.io/projects/spring-boot#support)
 - [Spring Boot 3.2 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes)
