@@ -18,4 +18,3 @@ Join Dan Vega and DaShaun Carter as they keep you up to date with everything hap
 ## Show Notes
 
 - [Spring Boot Support](https://spring.io/projects/spring-boot#support)
-- [Spring Boot 3.2 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.2-Release-Notes)
