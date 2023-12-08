@@ -1,7 +1,7 @@
 ---
-Date: '2023-12-15T08:00:00-07:00'
+Date: '2023-12-15T08:00:00-08:00'
 Description: "What Is Dex?"
-PublishDate: '2023-12-15T00:00:00-07:00'
+PublishDate: '2023-12-15T08:00:00-08:00'
 date: '2023-12-15'
 episode: '62'
 explicit: 'no'
