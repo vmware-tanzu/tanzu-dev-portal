@@ -2,7 +2,7 @@
 name: Maksim Nabokikh
 description: "Platform Architect"
 roles: ["guest"]
-skills: ["Dex, Kubernetes"]
+skills: ["Dex", "Kubernetes"]
 location: ""
 external: true
 # Social Media 
