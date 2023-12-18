@@ -2,7 +2,10 @@
 
 ```bash
 hugo new --kind soh tv/spring-office-hours/####
-soh-cli "Episode ####: Title text" "tv/spring-office-hours/####.png"
+```
+or
+```bash
+soh:> show --episodeNumber #### --title "Show Title" --date "2023-10-31" --youTubeId "YouTubeID"
 ```
 
 # Dev center
