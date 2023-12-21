@@ -17,5 +17,11 @@ Join Dan Vega and DaShaun Carter as they keep you up to date with everything hap
 
 ## Show Notes
 
-- [Lawrence Lockhart on Twitter](https://twitter.com/LawrenceDCodes)
+
+- Lawrence
+    - [Twitter](https://twitter.com/LawrenceDCodes)
+    - [He learned to code in his 40s!? | Lawrence LockHart | Chris Sean Talks Podcast](https://www.youtube.com/watch?v=zF3dYQGGLkM)
 - [Vaadin](https://vaadin.com/)
+- [Vaadin Documentation](https://vaadin.com/docs/latest)
+- [Hilla](https://hilla.dev/)
+- [Hilla Documentation](https://hilla.dev/docs)
