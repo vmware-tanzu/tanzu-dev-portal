@@ -24,6 +24,6 @@ Prior to joining Auth0 to work on authorization, Raghd's background was in sever
 
 
 <!--more-->
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="kz2JXQCdE2w" class="youtube-video-shortcode" >}} -->
+{{< youtube id="yTgtAzhvC28" class="youtube-video-shortcode" >}}
