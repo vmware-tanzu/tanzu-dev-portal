@@ -10,7 +10,7 @@ twitter: "edwarnicke"
 website: ""
 facebook: ""
 linkedin: "edwarnicke"
-github: ""
+github: "edwarnicke"
 pinterest: ""
 instagram: ""
 youtube: ""
@@ -22,6 +22,6 @@ Ed Warnicke is a Distinguished Engineer at Cisco Systems. He has been working fo
 
 
 <!--more-->
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="kz2JXQCdE2w" class="youtube-video-shortcode" >}} -->
+{{< youtube id="nyfeysBlO5c" class="youtube-video-shortcode" >}}
