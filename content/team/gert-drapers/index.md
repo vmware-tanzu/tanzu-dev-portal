@@ -22,6 +22,6 @@ Gert Drapers is the co-founder & CTO of [Aserto](https://aserto.com). A widely r
 
 
 <!--more-->
-<!-- ## Highlights
+## Highlights
 
-{{< youtube id="yTgtAzhvC28" class="youtube-video-shortcode" >}} -->
+{{< youtube id="eYUmBeVCYxQ" class="youtube-video-shortcode" >}}

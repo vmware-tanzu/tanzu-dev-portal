@@ -9,7 +9,7 @@ guests:
 - Gert Drapers
 hosts:
 - Whitney Lee
-youtube: ""
+youtube: "eYUmBeVCYxQ"
 lastmod: '2020-10-09'
 title: "Open Policy Containers: The What, Why, and How"
 twitch: vmwaretanzu
