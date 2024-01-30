@@ -5,12 +5,20 @@ body {
    background-color: white !important;
    color: #61717d !important;
 }
- body .navbar-dark .navbar-brand .navbar-logo svg .cls-1 {
-   fill: #717074 !important;
-}
-body .navbar-dark .navbar-brand .navbar-logo svg path,
-body .navbar-dark .navbar-brand .navbar-logo svg #by-broadcom .cls-1 {
+body .navbar-dark .navbar-brand .navbar-logo svg path:not(.st) {
   fill: #000000 !important;
+}
+body .navbar-dark .navbar-brand .navbar-logo svg path.st0 {
+  fill: #61A60E !important;
+}
+body .navbar-dark .navbar-brand .navbar-logo svg path.st1 {
+  fill: #6C4B94 !important;
+}
+body .navbar-dark .navbar-brand .navbar-logo svg path.st2 {
+  fill: #0098C7 !important;
+}
+body .navbar-dark .navbar-brand .navbar-logo svg path.st3 {
+  fill: #005C8A !important;
 }
 nav{
     &.isOpen {
