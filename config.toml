@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "VMware Tanzu Developer Center"
+title = "Tanzu Developer Center"
 publishDir = "public/developer"
 contentDir = "content"
 canonifyURLs = false

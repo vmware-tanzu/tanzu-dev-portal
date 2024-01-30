@@ -1,7 +1,7 @@
 ---
-title: "VMware Data Solutions"
+title: "Tanzu Data Services"
 linkTitle: "Data"
-description: "VMware Data Solutions for modern applications."
+description: "Tanzu Data Services for modern applications."
 menu:
     main:
         parent: "sections"

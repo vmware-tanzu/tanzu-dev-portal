@@ -1,5 +1,5 @@
 ---
-title: VMware GemFire
+title: Tanzu GemFire
 linkTitle: VMware GemFire
 type: data-services
 icon: tanzu-gemfire

@@ -19,7 +19,7 @@
 
 ![Tanzu Developer Center Screen Shot](static/images/github/homepage-screenshot.png)
 
-The VMware Tanzu Developer Center is a site specifically built to be a great resource for software development teams. The contributions on the Tanzu Developer Center are from teams across VMware, as well as individuals without.
+The Tanzu Developer Center is a site specifically built to be a great resource for software development teams. The contributions on the Tanzu Developer Center are from teams across VMware, as well as individuals without.
 
 Our guiding principle is to ensure readers have free, immediate access to all the content on the Tanzu Developer Center. No purchase is ever necessary to access content on the Tanzu Developer Center because it is either open source or an easily accessible trial.
 
@@ -106,7 +106,7 @@ These are the software prerequisites needed to build a local preview of the Tanz
 
 _Note: These instructions were designed for Mac users. Linux and Windows users without access to `make` and `brew` will need to manually install the prerequisites._
 
-- **Install Hugo** — The VMware Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with support for SCSS/SASS. This site pins `hugo` to a specific version (currently **0.107.0**) to build so if you're using a different version, your experience may vary. To install `hugo`, follow the instructions for your specific environment as detailed in the [hugo documentation](https://gohugo.io/installation/). Ultimately, you have two main options:
+- **Install Hugo** — The Tanzu Developer Center uses [Hugo](https://gohugo.io/) to build the site from Markdown files. You'll need to [get Hugo](https://gohugo.io/getting-started/installing/) if you want to build and run the site locally. Make sure you install the extended version with support for SCSS/SASS. This site pins `hugo` to a specific version (currently **0.107.0**) to build so if you're using a different version, your experience may vary. To install `hugo`, follow the instructions for your specific environment as detailed in the [hugo documentation](https://gohugo.io/installation/). Ultimately, you have two main options:
 
   - Download the correct **extended** binary for your OS from [gohugo GitHub releases page for 0.107.0](https://github.com/gohugoio/hugo/releases/tag/v0.107.0) and then move the `hugo` binary to an appropriate location (ie. `sudo cp hugo /usr/local/bin`) and/or add it to your `PATH`.
   - Use `brew install hugo` and `brew pin hugo` to pin it to the correct version (0.107.0). (MacOS only.)

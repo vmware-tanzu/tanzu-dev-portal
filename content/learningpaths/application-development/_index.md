@@ -6,7 +6,7 @@ featuredspot: 1
 level1: Building Modern Applications
 layout: intro
 description: Learn how we approach modern application development practices, teaming,
-  culture, and technology at VMware Tanzu Labs.
+  culture, and technology at Tanzu Labs.
 team:
 - VMware Tanzu Labs
 tags:

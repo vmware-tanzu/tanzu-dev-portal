@@ -6,7 +6,7 @@ featured: true
 featuredspot: 2
 level1: Building Modern Applications
 layout: intro
-description: Engineering Leadership at VMware Tanzu Labs
+description: Engineering Leadership at Tanzu Labs
 team:
 - VMware Tanzu Labs
 tags:
