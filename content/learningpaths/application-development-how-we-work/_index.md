@@ -1,5 +1,5 @@
 ---
-title: How VMware Tanzu Labs Works and Why
+title: How Tanzu Labs Works and Why
 weight: 1
 featured: true
 featuredspot: 5

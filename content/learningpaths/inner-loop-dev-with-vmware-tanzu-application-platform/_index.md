@@ -1,6 +1,6 @@
 ---
-title: Inner-Loop Development with VMware Tanzu Application Platform
-description: This Learning Path walks you through deploying and using VMware Tanzu Application Platform, a platform for developers, built on top of Kubernetes. 
+title: Inner-Loop Development with Tanzu Application Platform
+description: This Learning Path walks you through deploying and using Tanzu Application Platform, a platform for developers, built on top of Kubernetes. 
 weight: 1
 featured: true
 duration: 180

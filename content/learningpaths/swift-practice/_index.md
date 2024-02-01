@@ -4,7 +4,7 @@ weight: -1
 duration: 30
 experience: Beginner
 layout: intro
-description: The Swift Method, developed by VMware Tanzu Labs, is a set of lightweight techniques that reduce the burdens and risks of modernization. In this series, we’ll dive into how a balanced team of architects, developers, and product managers approach modernizing monoliths using the Swift Method.
+description: The Swift Method, developed by Tanzu Labs, is a set of lightweight techniques that reduce the burdens and risks of modernization. In this series, we’ll dive into how a balanced team of architects, developers, and product managers approach modernizing monoliths using the Swift Method.
 team:
 - Matthew Wei
 - Asif Sajjad

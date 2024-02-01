@@ -1,7 +1,7 @@
 ---
 title: "Developer Advocates"
 linkTitle: "Advocates"
-description: "The Technical Advocacy team serves as a public face for VMware Tanzu. We are respected experts in the IT community, speak frequently, create relevant content, and offer  feedback for our customers, developers, ops people, etc. on the topics of: developers, operators, open source, and digital transformation."
+description: "The Technical Advocacy team serves as a public face for Tanzu. We are respected experts in the IT community, speak frequently, create relevant content, and offer  feedback for our customers, developers, ops people, etc. on the topics of: developers, operators, open source, and digital transformation."
 contact: "Interested? Please email [Tasha Isenberg](mailto:tisenberg@vmware.com) with your event date, location, topic, and type of interaction (workshop, exec briefing, internal customer event, etc.)."
 menu:
     main:
@@ -13,7 +13,7 @@ menu:
 
 - Experts in our field (DevSecOps, TAS, TKG, Spring, domain driven development, test driven development, Kubernetes, architecture, microservices, containers, Java, digital transformation, software supply chains, cloud native data)
 - Dedicated open source maintainers and contributors
-- Respected inside and outside of VMware
+- Respected inside and outside of Broadcom
 - Experienced conference keynote speakers and presenters
 - Kind of a big deal (just ask us), popular on social media and the tech scene in general
 - Published authors (books, blogs, podcasts)
@@ -26,11 +26,11 @@ menu:
 
 - Conduct deep-dive, technical workshops for technical staff (devs, ops, product managers, testers, security, and all of the intersections of these disciplines)
 - Lead or support executive briefings, meetings, executive dinners, etc.
-- Explain VMware Tanzu and provide related use case stories to audiences
-- Provide input to vision, campaigns, and content both inside and outside of VMware
+- Explain Tanzu and provide related use case stories to audiences
+- Provide input to vision, campaigns, and content both inside and outside of Broadcom
 - Participate in casual conversational meetings, such as over lunch or dinner
 - Host or speak at meetups (CF, CN, Spring, JUG, DevOps, management/executives)
-- Provide a conduit for you to have an impact on VMware Tanzu products
+- Provide a conduit for you to have an impact on Tanzu products
 - Help you tell a story across many mediums
 
-_Virtually or in person, VMware Tanzu specific or Open source ecosystem._ 
+_Virtually or in person, Tanzu specific or Open source ecosystem._ 

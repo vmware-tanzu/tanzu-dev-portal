@@ -7,7 +7,7 @@ tags:
 - All Roles
 - Applications
 experience: Beginner
-description: Learn how we approach developer productivity practices at VMware Tanzu
+description: Learn how we approach developer productivity practices at Tanzu
   Labs.
 team:
 - VMware Tanzu Labs
