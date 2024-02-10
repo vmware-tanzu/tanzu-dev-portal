@@ -2,7 +2,7 @@
 name: Andrew Block
 description: "Distinguished Architec at Red Hat"
 roles: ["guest"]
-skills: ["Kubernetes", "Helm"]
+skills: ["Kubernetes", "Helm", "SOPS"]
 location: "Amsterdam"
 external: true
 
@@ -24,5 +24,7 @@ Andrew Block is a Distinguished Architect at Red Hat who works with organization
 
 
 ## Highlights
+
+{{< youtube id="RAmbUFdBGXk" class="youtube-video-shortcode" >}}
 
 {{< youtube id="oPIiX6vyih8" class="youtube-video-shortcode" >}}
