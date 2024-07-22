@@ -1,7 +1,5 @@
 name: Get Latest TGIK Episodes
 on:
-  schedule:
-    - cron: "0 16 * * 2,3,5"
   workflow_dispatch:
 jobs:
   get-episodes:
